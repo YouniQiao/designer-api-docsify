@@ -35,6 +35,7 @@ Called to notify the ArkWeb engine of the buffer time when the buffer time chang
 **Examples**
 
 For details about the sample code, see [onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer).
+- simpleType:
 
 ## handleDurationChanged
 
@@ -59,6 +60,7 @@ Called to notify the ArkWeb engine of the total duration of the media.
 **Examples**
 
 For details about the sample code, see [onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer).
+- simpleType:
 
 ## handleEnded
 
@@ -77,6 +79,7 @@ When media playback ends, this method is called to notify the ArkWeb kernel of t
 **Examples**
 
 For details about the sample code, see [onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer).
+- simpleType:
 
 ## handleError
 
@@ -102,6 +105,7 @@ When an error occurs in the player, this method is called to notify the ArkWeb k
 **Examples**
 
 For details about the sample code, see [onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer).
+- simpleType:
 
 ## handleFullscreenChanged
 
@@ -126,6 +130,7 @@ Called to notify the ArkWeb engine of the full screen status of the player when 
 **Examples**
 
 For details about the sample code, see [onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer).
+- simpleType:
 
 ## handleMutedChanged
 
@@ -150,6 +155,7 @@ Called to notify the ArkWeb engine of the muted status of the player when the mu
 **Examples**
 
 For details about the sample code, see [onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer).
+- simpleType:
 
 ## handleNetworkStateChanged
 
@@ -174,6 +180,7 @@ Called to notify the ArkWeb engine of the network status of the player when the 
 **Examples**
 
 For details about the sample code, see [onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer).
+- simpleType:
 
 ## handlePlaybackRateChanged
 
@@ -198,6 +205,7 @@ When the playback rate of the player changes, this method is called to notify th
 **Examples**
 
 For details about the sample code, see [onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer).
+- simpleType:
 
 ## handleReadyStateChanged
 
@@ -222,6 +230,7 @@ Called to notify the ArkWeb engine of the cache status of the player when the ca
 **Examples**
 
 For details about the sample code, see [onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer).
+- simpleType:
 
 ## handleSeekFinished
 
@@ -240,6 +249,7 @@ When the player completes seeking, this method is called to notify the ArkWeb ke
 **Examples**
 
 For details about the sample code, see [onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer).
+- simpleType:
 
 ## handleSeeking
 
@@ -258,6 +268,7 @@ When the player enters the seek state, this method is called to notify the ArkWe
 **Examples**
 
 For details about the sample code, see [onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer).
+- simpleType:
 
 ## handleStatusChanged
 
@@ -282,6 +293,7 @@ Called to notify the ArkWeb engine of the playback status of the player when the
 **Examples**
 
 For details about the sample code, see [onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer).
+- simpleType:
 
 ## handleTimeUpdate
 
@@ -306,6 +318,7 @@ Called to notify the ArkWeb engine of the playback progress when the playback pr
 **Examples**
 
 For details about the sample code, see [onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer).
+- simpleType:
 
 ## handleVideoSizeChanged
 
@@ -331,6 +344,7 @@ When the player parses the video dimensions, this method is called to notify the
 **Examples**
 
 For details about the sample code, see [onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer).
+- simpleType:
 
 ## handleVolumeChanged
 
@@ -355,3 +369,4 @@ Called to notify the ArkWeb engine of the volume of the player when the volume c
 **Examples**
 
 For details about the sample code, see [onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer).
+- simpleType:

@@ -14,4 +14,4 @@ declare type SizeT<T> = import('../api/arkui/Graphics').SizeT<T>
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-**属性类型：** import('../api/arkui/Graphics').SizeT&lt;T&gt;
+**类型：** import('../api/arkui/Graphics').SizeT&lt;T&gt;

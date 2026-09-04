@@ -40,7 +40,7 @@ getResultSet(predicates: dataSharePredicates.DataSharePredicates, callback: Asyn
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| predicates | dataSharePredicates.DataSharePredicates | 是 | 指示筛选条件，不允许为null。 |
+| predicates | [dataSharePredicates.DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | 是 | 指示筛选条件，不允许为null。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[KVStoreResultSet](arkts-arkdata-distributedkvstore-kvstoreresultset-i.md)&gt; | 是 | Promise对象。返回KVStoreResultSet对象。 |
 
 **错误码：**
@@ -568,7 +568,7 @@ getResultSet(predicates: dataSharePredicates.DataSharePredicates): Promise<KVSto
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| predicates | dataSharePredicates.DataSharePredicates | 是 | 指示筛选条件，不允许为null。 |
+| predicates | [dataSharePredicates.DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | 是 | 指示筛选条件，不允许为null。 |
 
 **返回值：**
 
@@ -611,7 +611,7 @@ getResultSet(deviceId: string, predicates: dataSharePredicates.DataSharePredicat
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | deviceId | string | 是 | Indicates the ID of the device to which the results belong. |
-| predicates | dataSharePredicates.DataSharePredicates | 是 | 指示筛选条件，不允许为null。 |
+| predicates | [dataSharePredicates.DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | 是 | 指示筛选条件，不允许为null。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[KVStoreResultSet](arkts-arkdata-distributedkvstore-kvstoreresultset-i.md)&gt; | 是 | 回调函数，获取与指定Predicates对象匹配的KVStoreResultSet对象。 |
 
 **错误码：**
@@ -649,7 +649,7 @@ getResultSet(deviceId: string, predicates: dataSharePredicates.DataSharePredicat
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | deviceId | string | 是 | Indicates the ID of the device to which the results belong. |
-| predicates | dataSharePredicates.DataSharePredicates | 是 | 指示筛选条件，不允许为null。 |
+| predicates | [dataSharePredicates.DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | 是 | 指示筛选条件，不允许为null。 |
 
 **返回值：**
 

@@ -58,6 +58,8 @@ Initiates a drag action, with the object to be dragged and the drag information 
 **Examples**
 
 > NOTE
+> 
+> You are advised to use [getDragController](arkts-arkui-arkui-uicontext-uicontext-c.md#getdragcontroller) in [UIContext](arkts-apis-uicontext-uicontext.md) to obtain the DragController object associated with the current UI context.
 
 ```TypeScript
 import { dragController } from '@kit.ArkUI';

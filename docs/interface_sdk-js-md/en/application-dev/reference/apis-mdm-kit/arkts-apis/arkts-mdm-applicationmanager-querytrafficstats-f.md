@@ -50,13 +50,13 @@ Queries the data usage of a specified application within a specified period for 
 | bundleName | string | Yes | Bundle name of the application. |
 | appIndex | number | Yes | Index of the application clone. The value is an integer greater than or equal to 0. You can call [getAppCloneIdentity](../../apis-ability-kit/arkts-apis/arkts-ability-bundlemanager-getappcloneidentity-f.md) of @ohos.bundle.bundleManager to obtain the index. |
 | accountId | number | Yes | Account ID. The value is an integer greater than or equal to 0. You can call [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) of @ohos.account.osAccount to obtain the ID. |
-| networkInfo | statistics.NetworkInfo | Yes | Network information. |
+| networkInfo | [statistics.NetworkInfo](../../apis-network-kit/arkts-apis/arkts-network-statistics-networkinfo-i.md) | Yes | Network information. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;statistics.NetStatsInfo&gt; | Promise used to return the historical traffic information object. |
+| Promise&lt;[statistics.NetStatsInfo](../../apis-network-kit/arkts-apis/arkts-network-statistics-netstatsinfo-i.md)&gt; | Promise used to return the historical traffic information object. |
 
 **Error codes:**
 

@@ -29,7 +29,7 @@ function execute(param: ExecuteParam, callback: AsyncCallback<insightIntent.Exec
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | param | [ExecuteParam](arkts-ability-insightintentdriver-executeparam-i-sys.md) | 是 | 执行意图调用的参数。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;insightIntent.ExecuteResult&gt; | 是 | 回调函数，返回意图调用执行结果。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[insightIntent.ExecuteResult](arkts-ability-insightintent-executeresult-i.md)&gt; | 是 | 回调函数，返回意图调用执行结果。 |
 
 **错误码：**
 
@@ -118,7 +118,7 @@ function execute(param: ExecuteParam): Promise<insightIntent.ExecuteResult>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;insightIntent.ExecuteResult&gt; | Promise used to return the intent call execution result. |
+| Promise&lt;[insightIntent.ExecuteResult](arkts-ability-insightintent-executeresult-i.md)&gt; | Promise used to return the intent call execution result. |
 
 **错误码：**
 

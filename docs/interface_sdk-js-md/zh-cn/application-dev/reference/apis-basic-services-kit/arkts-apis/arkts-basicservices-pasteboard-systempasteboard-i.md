@@ -685,7 +685,7 @@ getUnifiedData(): Promise<unifiedDataChannel.UnifiedData>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;unifiedDataChannel.UnifiedData&gt; | Promise对象，返回系统剪贴板数据。 |
+| Promise&lt;[unifiedDataChannel.UnifiedData](../../apis-arkdata/arkts-apis/arkts-arkdata-unifieddatachannel-unifieddata-c.md)&gt; | Promise对象，返回系统剪贴板数据。 |
 
 **错误码：**
 
@@ -736,7 +736,7 @@ getUnifiedDataSync(): unifiedDataChannel.UnifiedData
 
 | 类型 | 说明 |
 | --- | --- |
-| unifiedDataChannel.UnifiedData | 返回系统剪贴板数据。 |
+| [unifiedDataChannel.UnifiedData](../../apis-arkdata/arkts-apis/arkts-arkdata-unifieddatachannel-unifieddata-c.md) | 返回系统剪贴板数据。 |
 
 **错误码：**
 
@@ -1534,7 +1534,7 @@ setUnifiedData(data: unifiedDataChannel.UnifiedData): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| data | unifiedDataChannel.UnifiedData | 是 | 需要写入剪贴板中的数据。调用本接口前，需确保无其他拷贝或粘贴操作正在进行。 |
+| data | [unifiedDataChannel.UnifiedData](../../apis-arkdata/arkts-apis/arkts-arkdata-unifieddatachannel-unifieddata-c.md) | 是 | 需要写入剪贴板中的数据。调用本接口前，需确保无其他拷贝或粘贴操作正在进行。 |
 
 **返回值：**
 
@@ -1595,7 +1595,7 @@ setUnifiedDataSync(data: unifiedDataChannel.UnifiedData): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| data | unifiedDataChannel.UnifiedData | 是 | 需要写入剪贴板中的数据内容。支持跨应用数据交换，其他应用可通过统一数据结构读取该内容。 |
+| data | [unifiedDataChannel.UnifiedData](../../apis-arkdata/arkts-apis/arkts-arkdata-unifieddatachannel-unifieddata-c.md) | 是 | 需要写入剪贴板中的数据内容。支持跨应用数据交换，其他应用可通过统一数据结构读取该内容。 |
 
 **错误码：**
 

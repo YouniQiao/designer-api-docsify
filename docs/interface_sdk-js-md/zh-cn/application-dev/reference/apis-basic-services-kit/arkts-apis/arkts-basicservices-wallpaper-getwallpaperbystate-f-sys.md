@@ -34,7 +34,7 @@ function getWallpaperByState(wallpaperType: WallpaperType, foldState: FoldState,
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;image.PixelMap&gt; | Promise对象，返回壁纸图片的像素图对象。 |
+| Promise&lt;[image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)&gt; | Promise对象，返回壁纸图片的像素图对象。 |
 
 **错误码：**
 

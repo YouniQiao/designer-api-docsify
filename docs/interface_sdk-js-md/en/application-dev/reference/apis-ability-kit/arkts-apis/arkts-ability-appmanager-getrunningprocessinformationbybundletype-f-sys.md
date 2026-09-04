@@ -27,7 +27,7 @@ Obtains the information about the running process based on the bundle type. This
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleType | bundleManager.BundleType | Yes | Bundle type. |
+| bundleType | [bundleManager.BundleType](arkts-ability-bundlemanager-bundletype-e.md) | Yes | Bundle type. |
 
 **Return value:**
 

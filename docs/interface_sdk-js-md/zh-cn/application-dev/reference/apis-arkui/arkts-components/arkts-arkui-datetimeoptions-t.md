@@ -14,4 +14,4 @@ declare type DateTimeOptions = import('../api/@ohos.intl').default.DateTimeOptio
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-**属性类型：** import('../api/@ohos.intl').default.DateTimeOptions
+**类型：** import('../api/@ohos.intl').default.DateTimeOptions

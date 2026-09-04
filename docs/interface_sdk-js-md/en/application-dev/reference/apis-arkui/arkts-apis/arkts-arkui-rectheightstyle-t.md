@@ -14,4 +14,4 @@ Enumerates the rectangle height styles.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** import('../api/@ohos.graphics.text').default.RectHeightStyle
+**Type:** import('../api/@ohos.graphics.text').default.RectHeightStyle

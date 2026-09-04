@@ -36,7 +36,7 @@ rect: common2D.Rect
 
 矩形区域信息，单位为物理像素px。
 
-**类型：** common2D.Rect
+**类型：** [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md)
 
 **起始版本：** 12
 

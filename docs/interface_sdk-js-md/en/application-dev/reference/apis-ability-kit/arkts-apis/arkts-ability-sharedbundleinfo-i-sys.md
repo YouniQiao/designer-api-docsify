@@ -16,7 +16,7 @@ readonly compatiblePolicy: bundleManager.CompatiblePolicy
 
 Compatibility type of the shared bundle.
 
-**Type:** bundleManager.CompatiblePolicy
+**Type:** [bundleManager.CompatiblePolicy](arkts-ability-bundlemanager-compatiblepolicy-e.md)
 
 **Since:** 10
 

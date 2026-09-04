@@ -14,4 +14,4 @@ declare type ReusableComponentConstructor = Function
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-**属性类型：** Function
+**类型：** Function

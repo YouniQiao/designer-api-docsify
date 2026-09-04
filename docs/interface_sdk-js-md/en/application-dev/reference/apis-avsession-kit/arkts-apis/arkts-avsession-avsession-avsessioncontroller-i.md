@@ -456,7 +456,7 @@ Get the playlist of the current session
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;[AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)&gt;&gt; | (Array&lt;AVQueueItem&gt;) returned through promise |
+| Promise&lt;Array&lt;[AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)&gt;&gt; | (Array&lt;[AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)&gt;) returned through promise |
 
 **Error codes:**
 
@@ -492,7 +492,7 @@ Get the playlist of the current session
 
 | Type | Description |
 | --- | --- |
-| Array&lt;[AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)&gt; | (Array&lt;AVQueueItem&gt;) returned |
+| Array&lt;[AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)&gt; | (Array&lt;[AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)&gt;) returned |
 
 **Error codes:**
 

@@ -4,6 +4,8 @@ Enumerates the methods used to add the network packets.
 
 **Since:** 10
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **System API:** This is a system API.

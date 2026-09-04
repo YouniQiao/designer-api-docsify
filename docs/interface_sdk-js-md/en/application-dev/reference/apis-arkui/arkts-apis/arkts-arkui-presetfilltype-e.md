@@ -6,6 +6,8 @@ Specify the number of columns for different responsive breakpoints.
 
 **Since:** 22
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## BREAKPOINT_DEFAULT

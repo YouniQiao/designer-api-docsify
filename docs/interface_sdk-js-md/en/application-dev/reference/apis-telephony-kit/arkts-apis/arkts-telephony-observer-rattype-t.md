@@ -10,4 +10,4 @@ Enumerates the radio access technologies.
 
 **System capability:** SystemCapability.Telephony.StateRegistry
 
-**Property type:** radio.RadioTechnology
+**Type:** [radio.RadioTechnology](arkts-telephony-radio-radiotechnology-e.md)

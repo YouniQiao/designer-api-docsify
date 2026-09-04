@@ -604,7 +604,7 @@ Obtains the media key system information of the media asset that is being played
 
 | Type | Description |
 | --- | --- |
-| Array&lt;drm.MediaKeySystemInfo&gt; | Array of MediaKeySystemInfo objects, each of which contains the **uuid** and **pssh** properties. If the return value is undefined, the mediaKeySystemInfoUpdate event is not triggered. |
+| Array&lt;[drm.MediaKeySystemInfo](../../apis-drm-kit/arkts-apis/arkts-drm-drm-mediakeysysteminfo-i.md)&gt; | Array of MediaKeySystemInfo objects, each of which contains the **uuid** and **pssh** properties. If the return value is undefined, the mediaKeySystemInfoUpdate event is not triggered. |
 
 **Examples**
 
@@ -1128,7 +1128,7 @@ Unsubscribes from media key system information changes.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'mediaKeySystemInfoUpdate' | Yes | Event type, which is **'mediaKeySystemInfoUpdate'** in this case. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;drm.MediaKeySystemInfo&gt;&gt; | No | Callback invoked when the event is triggered. It reports a **MediaKeySystemInfo** array. If this parameter is specified, only the specified callback is unregistered. Otherwise, all callbacks associated with the **mediaKeySystemInfoUpdate** event will be unregistered.<br>**Since:** 12 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[drm.MediaKeySystemInfo](../../apis-drm-kit/arkts-apis/arkts-drm-drm-mediakeysysteminfo-i.md)&gt;&gt; | No | Callback invoked when the event is triggered. It reports a **MediaKeySystemInfo** array. If this parameter is specified, only the specified callback is unregistered. Otherwise, all callbacks associated with the **mediaKeySystemInfoUpdate** event will be unregistered.<br>**Since:** 12 |
 
 ## off('stateChange')
 
@@ -1401,7 +1401,7 @@ Unsubscribes from the audio interruption event.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'audioInterrupt' | Yes | Event type, which is **'audioInterrupt'** in this case. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;audio.InterruptEvent&gt; | No | Callback invoked when the event is triggered. If this parameter is specified, only the specified callback is unregistered. Otherwise, all callbacks associated with the **audioInterrupt** event will be unregistered.<br>**Since:** 12 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[audio.InterruptEvent](../../apis-audio-kit/arkts-apis/arkts-audio-audio-interruptevent-i.md)&gt; | No | Callback invoked when the event is triggered. If this parameter is specified, only the specified callback is unregistered. Otherwise, all callbacks associated with the **audioInterrupt** event will be unregistered.<br>**Since:** 12 |
 
 ## off('availableBitrates')
 
@@ -1464,7 +1464,7 @@ Unsubscribes from audio stream output device changes and reasons. This API uses 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'audioOutputDeviceChangeWithInfo' | Yes | Event type, which is **'audioOutputDeviceChangeWithInfo'** in this case. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;audio.AudioStreamDeviceChangeInfo&gt; | No | Callback used to return the output device descriptor of the current audio stream and the change reason. If this parameter is specified, only the specified callback is unregistered. Otherwise, all callbacks associated with the **audioOutputDeviceChangeWithInfo** event will be unregistered. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[audio.AudioStreamDeviceChangeInfo](../../apis-audio-kit/arkts-apis/arkts-audio-audio-audiostreamdevicechangeinfo-i.md)&gt; | No | Callback used to return the output device descriptor of the current audio stream and the change reason. If this parameter is specified, only the specified callback is unregistered. Otherwise, all callbacks associated with the **audioOutputDeviceChangeWithInfo** event will be unregistered. |
 
 **Error codes:**
 
@@ -1710,7 +1710,7 @@ Subscribes to media key system information changes.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'mediaKeySystemInfoUpdate' | Yes | Event type, which is **'mediaKeySystemInfoUpdate'** in this case. This event is triggered when the copyright protection information of the media asset being played changes. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;drm.MediaKeySystemInfo&gt;&gt; | Yes | Callback invoked when the event is triggered. It reports a **MediaKeySystemInfo** array.<br>**Since:** 12 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[drm.MediaKeySystemInfo](../../apis-drm-kit/arkts-apis/arkts-drm-drm-mediakeysysteminfo-i.md)&gt;&gt; | Yes | Callback invoked when the event is triggered. It reports a **MediaKeySystemInfo** array.<br>**Since:** 12 |
 
 ## on('stateChange')
 
@@ -1996,7 +1996,7 @@ Subscribes to the audio interruption event. When multiple audio and video assets
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'audioInterrupt' | Yes | Event type, which is **'audioInterrupt'** in this case. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;audio.InterruptEvent&gt; | Yes | Callback invoked when the event is triggered.<br>**Since:** 12 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[audio.InterruptEvent](../../apis-audio-kit/arkts-apis/arkts-audio-audio-interruptevent-i.md)&gt; | Yes | Callback invoked when the event is triggered.<br>**Since:** 12 |
 
 ## on('availableBitrates')
 
@@ -2088,7 +2088,7 @@ When subscribing to this event, you are advised to implement the player behavior
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'audioOutputDeviceChangeWithInfo' | Yes | Event type, which is **'audioOutputDeviceChangeWithInfo'** in this case. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;audio.AudioStreamDeviceChangeInfo&gt; | Yes | Callback used to return the output device descriptor of the current audio stream and the change reason. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[audio.AudioStreamDeviceChangeInfo](../../apis-audio-kit/arkts-apis/arkts-audio-audio-audiostreamdevicechangeinfo-i.md)&gt; | Yes | Callback used to return the output device descriptor of the current audio stream and the change reason. |
 
 **Error codes:**
 
@@ -3385,7 +3385,7 @@ Sets the decryption configuration. When receiving an on('mediaKeySystemInfoUpdat
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mediaKeySession | drm.MediaKeySession | Yes | Decryption session. |
+| mediaKeySession | [drm.MediaKeySession](../../apis-drm-kit/arkts-apis/arkts-drm-drm-mediakeysession-i.md) | Yes | Decryption session. |
 | secureVideoPath | boolean | Yes | Secure video channel. **true** if a secure video channel is selected, **false** otherwise. |
 
 **Error codes:**
@@ -4113,7 +4113,7 @@ audioEffectMode ?: audio.AudioEffectMode
 
 Audio effect mode. The audio effect mode is a dynamic property and is restored to the default value **EFFECT_DEFAULT** when **usage** of **audioRendererInfo** is changed. It can be set only when the AVPlayer is in the prepared, playing, paused, or completed state.
 
-**Type:** audio.AudioEffectMode
+**Type:** [audio.AudioEffectMode](../../apis-audio-kit/arkts-apis/arkts-audio-audio-audioeffectmode-e.md)
 
 **Since:** 10
 
@@ -4133,7 +4133,7 @@ and can be set only when the AVPlayer is in the prepared, playing, paused, or co
 
 To take effect, this property must be set before [play()](#play) is called for the first time.
 
-**Type:** audio.InterruptMode
+**Type:** [audio.InterruptMode](../../apis-audio-kit/arkts-apis/arkts-audio-audio-interruptmode-e.md)
 
 **Since:** 9
 
@@ -4153,7 +4153,7 @@ This parameter can be set only when the AVPlayer is in the initialized state.
 
 To take effect, this property must be set before [prepare()](#prepare) is called for the first time.
 
-**Type:** audio.AudioRendererInfo
+**Type:** [audio.AudioRendererInfo](../../apis-audio-kit/arkts-apis/arkts-audio-audio-audiorendererinfo-i.md)
 
 **Since:** 10
 
@@ -4341,7 +4341,7 @@ privacyType?: audio.AudioPrivacyType
 
 Audio privacy configuration. For more information, see [AudioPrivacyType](../../apis-audio-kit/arkts-apis/arkts-audio-audio-audioprivacytype-e.md). Default value: PRIVACY_TYPE_PUBLIC.
 
-**Type:** audio.AudioPrivacyType
+**Type:** [audio.AudioPrivacyType](../../apis-audio-kit/arkts-apis/arkts-audio-audio-audioprivacytype-e.md)
 
 **Since:** 26.0.0
 

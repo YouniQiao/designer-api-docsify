@@ -4,6 +4,8 @@ Enumerates the properties available for the metadata of a HEIFS image.
 
 **Since:** 23
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## HEIFS_DELAY_TIME

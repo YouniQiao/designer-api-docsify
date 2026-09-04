@@ -14,4 +14,4 @@ Intention corresponding to the key.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** import('../api/@ohos.multimodalInput.intentionCode').IntentionCode
+**Type:** import('../api/@ohos.multimodalInput.intentionCode').IntentionCode

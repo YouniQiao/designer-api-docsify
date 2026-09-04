@@ -30,7 +30,7 @@ enhanceDetail(sourceImage: image.PixelMap, width: number, height: number, level?
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| sourceImage | image.PixelMap | 是 | 源PixelMap。 |
+| sourceImage | [image.PixelMap](arkts-image-image-pixelmap-i.md) | 是 | 源PixelMap。 |
 | width | number | 是 | 缩放后的宽度。 |
 | height | number | 是 | 缩放后的高度。 |
 | level | QualityLevel | 否 | 处理质量等级。 |
@@ -39,7 +39,7 @@ enhanceDetail(sourceImage: image.PixelMap, width: number, height: number, level?
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;image.PixelMap&gt; | Promise对象，用于返回处理后的PixelMap对象。 |
+| Promise&lt;[image.PixelMap](arkts-image-image-pixelmap-i.md)&gt; | Promise对象，用于返回处理后的PixelMap对象。 |
 
 **错误码：**
 
@@ -81,7 +81,7 @@ enhanceDetail(sourceImage: image.PixelMap, scale: number, level?: QualityLevel):
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| sourceImage | image.PixelMap | 是 | 源PixelMap。 |
+| sourceImage | [image.PixelMap](arkts-image-image-pixelmap-i.md) | 是 | 源PixelMap。 |
 | scale | number | 是 | 缩放比例。 |
 | level | QualityLevel | 否 | 处理质量等级。 |
 
@@ -89,7 +89,7 @@ enhanceDetail(sourceImage: image.PixelMap, scale: number, level?: QualityLevel):
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;image.PixelMap&gt; | Promise对象，用于返回处理后的PixelMap对象。 |
+| Promise&lt;[image.PixelMap](arkts-image-image-pixelmap-i.md)&gt; | Promise对象，用于返回处理后的PixelMap对象。 |
 
 **错误码：**
 
@@ -131,7 +131,7 @@ enhanceDetailSync(sourceImage: image.PixelMap, width: number, height: number, le
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| sourceImage | image.PixelMap | 是 | 源PixelMap。 |
+| sourceImage | [image.PixelMap](arkts-image-image-pixelmap-i.md) | 是 | 源PixelMap。 |
 | width | number | 是 | 缩放后的宽度。 |
 | height | number | 是 | 缩放后的高度。 |
 | level | QualityLevel | 否 | 处理质量等级。 |
@@ -140,7 +140,7 @@ enhanceDetailSync(sourceImage: image.PixelMap, width: number, height: number, le
 
 | 类型 | 说明 |
 | --- | --- |
-| image.PixelMap | 操作成功时返回处理后的PixelMap对象，否则返回undefined。 |
+| [image.PixelMap](arkts-image-image-pixelmap-i.md) | 操作成功时返回处理后的PixelMap对象，否则返回undefined。 |
 
 **错误码：**
 
@@ -183,7 +183,7 @@ enhanceDetailSync(sourceImage: image.PixelMap, scale: number, level?: QualityLev
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| sourceImage | image.PixelMap | 是 | 源PixelMap。 |
+| sourceImage | [image.PixelMap](arkts-image-image-pixelmap-i.md) | 是 | 源PixelMap。 |
 | scale | number | 是 | 缩放比例。 |
 | level | QualityLevel | 否 | 处理质量等级。 |
 
@@ -191,7 +191,7 @@ enhanceDetailSync(sourceImage: image.PixelMap, scale: number, level?: QualityLev
 
 | 类型 | 说明 |
 | --- | --- |
-| image.PixelMap | 操作成功时返回处理后的PixelMap对象，否则返回undefined。 |
+| [image.PixelMap](arkts-image-image-pixelmap-i.md) | 操作成功时返回处理后的PixelMap对象，否则返回undefined。 |
 
 **错误码：**
 

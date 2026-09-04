@@ -2,9 +2,7 @@
 
 气泡文本的样式。
 
-@interface PopupMessageOptions
-
-**起始版本：** 11
+**起始版本：** 10
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

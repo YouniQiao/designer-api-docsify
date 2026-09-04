@@ -236,7 +236,7 @@ getBounds(glyphs: Array<number>): Array<common2D.Rect>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;common2D.Rect&gt; | 返回字形边界矩形数组。 |
+| Array&lt;[common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md)&gt; | 返回字形边界矩形数组。 |
 
 **示例**
 

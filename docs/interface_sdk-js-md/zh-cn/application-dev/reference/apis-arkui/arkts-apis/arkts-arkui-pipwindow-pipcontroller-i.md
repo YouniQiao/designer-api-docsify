@@ -705,7 +705,7 @@ updateContentNode(contentNode: typeNode.XComponent): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| contentNode | typeNode.XComponent | 是 | 用于渲染画中画窗口中的内容。该参数不能为空。 |
+| contentNode | [typeNode.XComponent](arkts-arkui-typenode-xcomponent-t.md) | 是 | 用于渲染画中画窗口中的内容。该参数不能为空。 |
 
 **返回值：**
 

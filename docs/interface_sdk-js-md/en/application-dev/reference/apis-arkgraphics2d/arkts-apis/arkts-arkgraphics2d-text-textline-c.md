@@ -221,7 +221,7 @@ Obtains the image boundaries of this text line. The image boundaries, equivalent
 
 | Type | Description |
 | --- | --- |
-| common2D.Rect | Image boundary of a text line, in physical pixels (px). |
+| [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) | Image boundary of a text line, in physical pixels (px). |
 
 **Examples**
 
@@ -283,7 +283,7 @@ Obtains the index of a character at the specified position in the original strin
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| point | common2D.Point | Yes | Coordinate position for finding the character index. The coordinates are relative to the top-left origin of the text line, in physical pixels (px). x indicates the horizontal coordinate, and y indicates the vertical coordinate. |
+| point | [common2D.Point](arkts-arkgraphics2d-common2d-point-i.md) | Yes | Coordinate position for finding the character index. The coordinates are relative to the top-left origin of the text line, in physical pixels (px). x indicates the horizontal coordinate, and y indicates the vertical coordinate. |
 
 **Return value:**
 
@@ -410,7 +410,7 @@ Paints this text line on the canvas with the coordinate point (x, y) as the uppe
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| canvas | drawing.Canvas | Yes | Target canvas. |
+| canvas | [drawing.Canvas](arkts-arkgraphics2d-drawing-canvas-c.md) | Yes | Target canvas. |
 | x | number | Yes | Horizontal coordinate of the upper left corner, which is a floating-point value, in physical pixels (px). |
 | y | number | Yes | Vertical coordinate of the upper left corner, which is a floating-point value, in physical pixels (px). |
 

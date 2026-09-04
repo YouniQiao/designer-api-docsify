@@ -161,7 +161,7 @@ createModuleResourceManager(bundleName: string, moduleName: string): resmgr.Reso
 
 | 类型 | 说明 |
 | --- | --- |
-| resmgr.ResourceManager | 资源管理对象。 |
+| [resmgr.ResourceManager](../../apis-localization-kit/arkts-apis/arkts-localization-resourcemanager-resourcemanager-i.md) | 资源管理对象。 |
 
 **错误码：**
 
@@ -218,7 +218,7 @@ createSystemHspModuleResourceManager(bundleName: string, moduleName: string): re
 
 | 类型 | 说明 |
 | --- | --- |
-| resmgr.ResourceManager | 系统HSP模块资源管理对象。 |
+| [resmgr.ResourceManager](../../apis-localization-kit/arkts-apis/arkts-localization-resourcemanager-resourcemanager-i.md) | 系统HSP模块资源管理对象。 |
 
 **错误码：**
 

@@ -12,4 +12,4 @@ type RingtonePlayer = _RingtonePlayer
 
 **系统接口：** 此接口为系统接口。
 
-**属性类型：** _RingtonePlayer
+**类型：** _RingtonePlayer

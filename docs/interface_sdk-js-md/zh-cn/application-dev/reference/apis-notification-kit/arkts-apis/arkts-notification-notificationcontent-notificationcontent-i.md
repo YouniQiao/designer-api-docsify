@@ -14,7 +14,7 @@ contentType?: notification.ContentType
 
 通知内容类型。
 
-**类型：** notification.ContentType
+**类型：** [notification.ContentType](arkts-notification-notification-contenttype-depr-e.md)
 
 **起始版本：** 7
 
@@ -74,7 +74,7 @@ notificationContentType?: notificationManager.ContentType
 
 通知内容类型，用于指定通知的内容布局类型，决定了通知在通知中心中的展示样式。需与对应类型的通知内容对象配合使用，例如设置为NOTIFICATION_CONTENT_BASIC_TEXT时需同时填充normal字段。
 
-**类型：** notificationManager.ContentType
+**类型：** [notificationManager.ContentType](arkts-notification-notificationmanager-contenttype-e.md)
 
 **起始版本：** 11
 

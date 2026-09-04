@@ -4,6 +4,8 @@ Enum for automotive camera position.
 
 **Since:** 26.0.0
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 ## AUTOMOTIVE_CAMERA_POSITION_EXTERIOR_OTHER

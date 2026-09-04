@@ -10,4 +10,4 @@ type AudioCapturerChangeInfoArray = Array<Readonly<AudioCapturerChangeInfo>>
 
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
-**属性类型：** Array&lt;Readonly&lt;[AudioCapturerChangeInfo](arkts-audio-audio-audiocapturerchangeinfo-i.md)&gt;&gt;
+**类型：** Array&lt;Readonly&lt;[AudioCapturerChangeInfo](arkts-audio-audio-audiocapturerchangeinfo-i.md)&gt;&gt;

@@ -12,4 +12,4 @@ Defines the level-2 module DataAbilityResult.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
-**Property type:** _DataAbilityResult
+**Type:** _DataAbilityResult

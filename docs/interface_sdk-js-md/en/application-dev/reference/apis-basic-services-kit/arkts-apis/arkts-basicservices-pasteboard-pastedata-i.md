@@ -310,7 +310,7 @@ Obtains the PixelMap of the primary record.
 
 | Type | Description |
 | --- | --- |
-| image.PixelMap | PixelMap. |
+| [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | PixelMap. |
 
 **Examples**
 

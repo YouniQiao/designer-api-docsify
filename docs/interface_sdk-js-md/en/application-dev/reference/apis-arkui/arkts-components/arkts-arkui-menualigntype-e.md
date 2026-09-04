@@ -4,6 +4,8 @@ Enumerates drop-down menu alignment modes.
 
 **Since:** 10
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## START

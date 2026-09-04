@@ -14,4 +14,4 @@ Indicate the profile connection state.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
-**Property type:** constant.ProfileConnectionState
+**Type:** [constant.ProfileConnectionState](arkts-connectivity-constant-profileconnectionstate-e.md)

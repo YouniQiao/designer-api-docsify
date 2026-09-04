@@ -4,6 +4,8 @@ Defines the type of the **onFinish** callback.
 
 **Since:** 11
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## REMOVED

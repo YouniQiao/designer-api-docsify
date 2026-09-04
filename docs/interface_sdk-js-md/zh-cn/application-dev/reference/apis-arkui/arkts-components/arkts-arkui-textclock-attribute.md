@@ -201,7 +201,7 @@ fontWeight(value: number | FontWeight | string)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number \| FontWeight \| string | 是 | 文本的字体粗细，number类型取值范围为[100, 900]，取值间隔为100，取值越大，字体越粗。number类型取值范围外的默认值为400。string类型支持：number类型取值的字符串形式（如400），以及枚举值'lighter'（对应300）、'regular'（对应400）、'medium'（对应500）、'bold'（对应700）、'bolder'（对应900），分别对应FontWeight中相应的枚举值。默认值：FontWeight.Normal |
+| value | number \| FontWeight \| string | 是 | [文本的字体粗细，number类型取值范围为[100, 900]，取值间隔为100，取值越大，字体越粗。number类型取值范围外的默认值为400。string类型支持：number类型取值的字符串形式（如400），以及枚举值'lighter'（对应300）、'regular'（对应400）、'medium'（对应500）、'bold'（对应700）、'bolder'（对应900），分别对应FontWeight中相应的枚举值。默认值：FontWeight.Normal](arkts-arkui-itemstate-e.md) |
 
 ## format
 

@@ -59,7 +59,7 @@ arrowPosition(value: ArrowPosition)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ArrowPosition](arkts-arkui-arrowposition-e.md) | 是 | 下拉菜单项的文本与箭头之间的对齐方式。默认值：ArrowPosition.END |
+| value | [ArrowPosition](arkts-arkui-arrowposition-e.md) | 是 | [下拉菜单项的文本与箭头之间的对齐方式。默认值：ArrowPosition.END](arkts-arkui-localizedbarrierdirection-e.md) |
 
 ## arrowPosition
 
@@ -81,7 +81,7 @@ arrowPosition(position: Optional<ArrowPosition>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| position | [Optional](arkts-arkui-optional-t.md)&lt;[ArrowPosition](arkts-arkui-arrowposition-e.md)&gt; | 是 | 下拉菜单项的文本与箭头之间的对齐方式。当position的值为undefined时，默认值：ArrowPosition.END |
+| position | [Optional](arkts-arkui-optional-t.md)&lt;[ArrowPosition](arkts-arkui-arrowposition-e.md)&gt; | 是 | [下拉菜单项的文本与箭头之间的对齐方式。当position的值为undefined时，默认值：ArrowPosition.END](arkts-arkui-localizedbarrierdirection-e.md) |
 
 ## avoidance
 
@@ -103,7 +103,7 @@ avoidance(mode: AvoidanceMode)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mode | [AvoidanceMode](arkts-arkui-avoidancemode-e.md) | 是 | 设置下拉菜单的避让模式。默认值：AvoidanceMode.COVER_TARGET |
+| mode | [AvoidanceMode](arkts-arkui-avoidancemode-e.md) | 是 | [设置下拉菜单的避让模式。默认值：AvoidanceMode.COVER_TARGET](arkts-arkui-avoidancemode-e.md) |
 
 ## controlSize
 
@@ -125,7 +125,7 @@ controlSize(value: ControlSize)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ControlSize](arkts-arkui-controlsize-e.md) | 是 | Select组件的尺寸。默认值：ControlSize.NORMAL |
+| value | [ControlSize](arkts-arkui-controlsize-e.md) | 是 | [Select组件的尺寸。默认值：ControlSize.NORMAL](../arkts-apis/arkts-arkui-superscriptstyle-e.md) |
 
 ## controlSize
 
@@ -319,7 +319,7 @@ menuAlign(alignType: MenuAlignType, offset?: Offset)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| alignType | [MenuAlignType](arkts-arkui-menualigntype-e.md) | 是 | 对齐方式类型。默认值：MenuAlignType.START |
+| alignType | [MenuAlignType](arkts-arkui-menualigntype-e.md) | 是 | [对齐方式类型。默认值：MenuAlignType.START](arkts-arkui-localizedbarrierdirection-e.md) |
 | offset | Offset | 否 | 按照对齐类型对齐后，下拉菜单相对下拉按钮的偏移量。dx控制水平方向偏移，dy控制垂直方向偏移。默认值：{dx: 0, dy: 0} |
 
 ## menuAlign
@@ -342,7 +342,7 @@ menuAlign(alignType: Optional<MenuAlignType>, offset?: Offset)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| alignType | [Optional](arkts-arkui-optional-t.md)&lt;[MenuAlignType](arkts-arkui-menualigntype-e.md)&gt; | 是 | 对齐方式类型。当alignType的值为undefined时，默认值：MenuAlignType.START |
+| alignType | [Optional](arkts-arkui-optional-t.md)&lt;[MenuAlignType](arkts-arkui-menualigntype-e.md)&gt; | 是 | [对齐方式类型。当alignType的值为undefined时，默认值：MenuAlignType.START](arkts-arkui-localizedbarrierdirection-e.md) |
 | offset | Offset | 否 | 按照对齐类型对齐后，下拉菜单相对下拉按钮的偏移量。默认值：{dx: 0, dy: 0} |
 
 ## menuBackgroundBlurStyle
@@ -369,7 +369,7 @@ menuBackgroundBlurStyle(value: BlurStyle)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | BlurStyle | 是 | 下拉菜单的背景模糊材质。默认值：BlurStyle.COMPONENT_ULTRA_THICK |
+| value | BlurStyle | 是 | [下拉菜单的背景模糊材质。默认值：BlurStyle.COMPONENT_ULTRA_THICK](arkts-arkui-blurstyle-e.md) |
 
 ## menuBackgroundBlurStyle
 
@@ -391,7 +391,7 @@ menuBackgroundBlurStyle(style: Optional<BlurStyle>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style | [Optional](arkts-arkui-optional-t.md)&lt;BlurStyle&gt; | 是 | 下拉菜单的背景模糊材质。当style的值为undefined时，默认值：BlurStyle.COMPONENT_ULTRA_THICK |
+| style | [Optional](arkts-arkui-optional-t.md)&lt;BlurStyle&gt; | 是 | [下拉菜单的背景模糊材质。当style的值为undefined时，默认值：BlurStyle.COMPONENT_ULTRA_THICK](arkts-arkui-blurstyle-e.md) |
 
 ## menuBackgroundBlurStyleOptions
 

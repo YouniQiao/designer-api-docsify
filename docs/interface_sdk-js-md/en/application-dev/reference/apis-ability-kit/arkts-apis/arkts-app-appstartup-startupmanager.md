@@ -8,8 +8,6 @@ The module provides the capability to manage startup tasks in [AppStartup](../..
 
 **Since:** 12
 
-**Model restriction:** This API can be used only in the stage model.
-
 **System capability:** SystemCapability.Ability.AppStartup
 
 ## Modules to Import

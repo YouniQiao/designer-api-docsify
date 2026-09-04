@@ -112,7 +112,7 @@ readonly notificationSlotType: notificationManager.SlotType
 
 通知渠道类型，标识通知所属的渠道分类（如社交通讯、服务提醒等）。不同渠道类型对应不同的提醒方式。
 
-**类型：** notificationManager.SlotType
+**类型：** [notificationManager.SlotType](arkts-notification-notificationmanager-slottype-e.md)
 
 **起始版本：** 22
 

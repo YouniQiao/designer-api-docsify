@@ -4,6 +4,8 @@ Enumerates the selected state types of the chip. It allows you to specify how ac
 
 **Since:** 14
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## CLICKED

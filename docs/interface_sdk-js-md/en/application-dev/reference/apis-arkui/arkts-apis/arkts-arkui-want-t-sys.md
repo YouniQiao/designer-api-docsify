@@ -14,4 +14,4 @@ Indicates want.
 
 **System API:** This is a system API.
 
-**Property type:** import('../api/@ohos.app.ability.Want').default
+**Type:** import('../api/@ohos.app.ability.Want').default

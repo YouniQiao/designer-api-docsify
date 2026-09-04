@@ -33,6 +33,7 @@ getFrameUrl(): string
 **示例**
 
 完整示例代码参考[onRequestStart](./arkts-apis-webview-WebSchemeHandler.md#onrequeststart)。
+- simpleType:
 
 ## getHeader
 
@@ -57,6 +58,7 @@ getHeader(): Array<WebHeader>
 **示例**
 
 完整示例代码参考[onRequestStart](./arkts-apis-webview-WebSchemeHandler.md#onrequeststart)。
+- simpleType:
 
 ## getHttpBodyStream
 
@@ -81,6 +83,7 @@ getHttpBodyStream(): WebHttpBodyStream | null
 **示例**
 
 完整示例代码参考[onRequestStart](./arkts-apis-webview-WebSchemeHandler.md#onrequeststart)。
+- simpleType:
 
 ## getReferrer
 
@@ -105,6 +108,7 @@ getReferrer(): string
 **示例**
 
 完整示例代码参考[onRequestStart](./arkts-apis-webview-WebSchemeHandler.md#onrequeststart)。
+- simpleType:
 
 ## getRequestMethod
 
@@ -129,6 +133,7 @@ getRequestMethod(): string
 **示例**
 
 完整示例代码参考[onRequestStart](./arkts-apis-webview-WebSchemeHandler.md#onrequeststart)。
+- simpleType:
 
 ## getRequestResourceType
 
@@ -151,6 +156,7 @@ getRequestResourceType(): WebResourceType
 **示例**
 
 完整示例代码参考[onRequestStart](./arkts-apis-webview-WebSchemeHandler.md#onrequeststart)。
+- simpleType:
 
 ## getRequestUrl
 
@@ -175,6 +181,7 @@ getRequestUrl(): string
 **示例**
 
 完整示例代码参考[onRequestStart](./arkts-apis-webview-WebSchemeHandler.md#onrequeststart)。
+- simpleType:
 
 ## hasGesture
 
@@ -199,6 +206,7 @@ hasGesture(): boolean
 **示例**
 
 完整示例代码参考[onRequestStart](./arkts-apis-webview-WebSchemeHandler.md#onrequeststart)。
+- simpleType:
 
 ## isMainFrame
 
@@ -223,3 +231,4 @@ isMainFrame(): boolean
 **示例**
 
 完整示例代码参考[onRequestStart](./arkts-apis-webview-WebSchemeHandler.md#onrequeststart)。
+- simpleType:

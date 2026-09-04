@@ -6,6 +6,8 @@ Enumeration type of scene.
 
 **Since:** 23
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## GRID_TO_PHOTO_BROWSER

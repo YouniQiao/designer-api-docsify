@@ -4,6 +4,8 @@ Enum for provides MSTensor format
 
 **Since:** 10
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.AI.MindSporeLite
 
 ## DEFAULT_FORMAT

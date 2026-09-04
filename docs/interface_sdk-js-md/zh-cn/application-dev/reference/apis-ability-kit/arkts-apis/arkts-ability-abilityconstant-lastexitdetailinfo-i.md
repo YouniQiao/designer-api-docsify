@@ -110,7 +110,7 @@ processState?: appManager.ProcessState
 
 Ability上次退出时的进程状态。
 
-**类型：** appManager.ProcessState
+**类型：** [appManager.ProcessState](arkts-ability-appmanager-processstate-e.md)
 
 **起始版本：** 20
 

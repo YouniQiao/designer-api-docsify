@@ -14,4 +14,4 @@ declare type DrawingCanvas = import('../api/@ohos.graphics.drawing').default.Can
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-**属性类型：** import('../api/@ohos.graphics.drawing').default.Canvas
+**类型：** import('../api/@ohos.graphics.drawing').default.Canvas

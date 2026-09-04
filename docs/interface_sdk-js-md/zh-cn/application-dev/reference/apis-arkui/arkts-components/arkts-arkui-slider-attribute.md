@@ -225,7 +225,7 @@ digitalCrownSensitivity(sensitivity: Optional<CrownSensitivity>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| sensitivity | [Optional](arkts-arkui-optional-t.md)&lt;[CrownSensitivity](../arkts-apis/arkts-arkui-crownsensitivity-e.md)&gt; | 是 | 旋转表冠灵敏度。默认值：CrownSensitivity.MEDIUM |
+| sensitivity | [Optional](arkts-arkui-optional-t.md)&lt;[CrownSensitivity](../arkts-apis/arkts-arkui-crownsensitivity-e.md)&gt; | 是 | [旋转表冠灵敏度。默认值：CrownSensitivity.MEDIUM](arkts-arkui-sheetsize-e.md) |
 
 ## enableHapticFeedback
 

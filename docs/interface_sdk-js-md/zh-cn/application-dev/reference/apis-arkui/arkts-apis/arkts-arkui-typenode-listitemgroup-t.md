@@ -14,4 +14,4 @@ ListItemGroup类型的FrameNode节点类型。只允许添加ListItem类型子�
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-**属性类型：** [TypedFrameNode](arkts-arkui-framenode-typedframenode-i.md)&lt;ListItemGroupInterface, [ListItemGroupAttribute](../arkts-components/arkts-arkui-listitemgroup-attribute.md)&gt;
+**类型：** [TypedFrameNode](arkts-arkui-framenode-typedframenode-i.md)&lt;ListItemGroupInterface, [ListItemGroupAttribute](../arkts-components/arkts-arkui-listitemgroup-attribute.md)&gt;

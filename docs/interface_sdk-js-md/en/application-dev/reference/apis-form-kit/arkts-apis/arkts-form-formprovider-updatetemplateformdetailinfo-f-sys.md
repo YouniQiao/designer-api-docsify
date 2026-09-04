@@ -26,7 +26,7 @@ Updates the static configuration information of a specified template widget on t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| templateFormInfo | Array&lt;formInfo.TemplateFormDetailInfo&gt; | Yes | Static configuration information of a specified template widget. |
+| templateFormInfo | Array&lt;[formInfo.TemplateFormDetailInfo](arkts-form-forminfo-templateformdetailinfo-i-sys.md)&gt; | Yes | Static configuration information of a specified template widget. |
 
 **Return value:**
 

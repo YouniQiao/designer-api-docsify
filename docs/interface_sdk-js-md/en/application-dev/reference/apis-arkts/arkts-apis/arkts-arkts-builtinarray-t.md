@@ -14,4 +14,4 @@ The built-in Array type.
 
 **System capability:** SystemCapability.Utils.Lang
 
-**Property type:** Array&lt;T&gt;
+**Type:** Array&lt;T&gt;

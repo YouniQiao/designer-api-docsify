@@ -12,4 +12,4 @@ Return value type of the accessibility node query. For details, see [FocusMoveRe
 
 **System API:** This is a system API.
 
-**Property type:** _FocusMoveResult
+**Type:** _FocusMoveResult

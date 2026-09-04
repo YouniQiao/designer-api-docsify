@@ -6,6 +6,8 @@ The following table lists default aspect ratio breakpoint thresholds for typical
 
 **Since:** 13
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## HEIGHT_SM

@@ -8,6 +8,6 @@ type Record<K extends keyof any, T> = {
 
 Construct a type with a set of properties K of type T
 
-**Property type:** {
+**Type:** {
     [P in K]: T;
 }

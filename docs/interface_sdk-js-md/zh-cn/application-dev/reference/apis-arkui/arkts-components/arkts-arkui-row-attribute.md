@@ -35,7 +35,7 @@ alignItems(value: VerticalAlign)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [VerticalAlign](../arkts-apis/arkts-arkui-verticalalign-e.md) | 是 | 子组件在垂直方向上的对齐格式。默认值：VerticalAlign.Center |
+| value | [VerticalAlign](../arkts-apis/arkts-arkui-verticalalign-e.md) | 是 | [子组件在垂直方向上的对齐格式。默认值：VerticalAlign.Center](arkts-arkui-listitemalign-e.md) |
 
 ## justifyContent
 

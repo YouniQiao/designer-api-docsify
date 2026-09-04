@@ -29,7 +29,7 @@ Updates a widget by cross bundle. This API uses a promise to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | formId | string | Yes | ID of the widget to update. |
-| formBindingData | formBindingData.FormBindingData | Yes | Data to be used for the update. |
+| formBindingData | [formBindingData.FormBindingData](arkts-form-formbindingdata-formbindingdata-i.md) | Yes | Data to be used for the update. |
 
 **Return value:**
 

@@ -14,4 +14,4 @@ Provides the context for the ability or application, which can be used to access
 
 **System capability:** SystemCapability.Security.AccessToken
 
-**Property type:** _Context
+**Type:** _Context

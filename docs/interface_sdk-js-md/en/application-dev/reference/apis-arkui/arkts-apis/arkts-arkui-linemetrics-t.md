@@ -14,4 +14,4 @@ Describes the measurement information of a single line in the text layout.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** import('../api/@ohos.graphics.text').default.LineMetrics
+**Type:** import('../api/@ohos.graphics.text').default.LineMetrics

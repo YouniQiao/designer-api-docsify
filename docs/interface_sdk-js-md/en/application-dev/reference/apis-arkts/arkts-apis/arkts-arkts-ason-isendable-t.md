@@ -12,4 +12,4 @@ Redefines ISendable for convenience.
 
 **System capability:** SystemCapability.Utils.Lang
 
-**Property type:** lang.ISendable
+**Type:** [lang.ISendable](arkts-arkts-lang-isendable-i.md)

@@ -14,4 +14,4 @@ Defines the custom data.
 
 **System API:** This is a system API.
 
-**Property type:** _CustomData.default
+**Type:** _CustomData.default

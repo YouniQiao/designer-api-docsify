@@ -14,4 +14,4 @@ Indicates restricted worker for run abc.
 
 **System API:** This is a system API.
 
-**Property type:** import('../api/@ohos.worker').default.RestrictedWorker
+**Type:** import('../api/@ohos.worker').default.RestrictedWorker

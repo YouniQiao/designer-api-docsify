@@ -2576,7 +2576,7 @@ Verifies the signature of the X.509 CRL. The RSA algorithm is supported. This AP
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | cryptoFramework.PubKey | Yes | Public key used for signature verification. |
+| key | [cryptoFramework.PubKey](../../apis-crypto-architecture-kit/arkts-apis/arkts-cryptoarchitecture-cryptoframework-pubkey-i.md) | Yes | Public key used for signature verification. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
@@ -2915,7 +2915,7 @@ Verifies the signature of the X.509 CRL. The RSA algorithm is supported. This AP
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | cryptoFramework.PubKey | Yes | Public key used for signature verification. |
+| key | [cryptoFramework.PubKey](../../apis-crypto-architecture-kit/arkts-apis/arkts-cryptoarchitecture-cryptoframework-pubkey-i.md) | Yes | Public key used for signature verification. |
 
 **Return value:**
 

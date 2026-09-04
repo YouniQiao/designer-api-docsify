@@ -20,7 +20,7 @@ readonly streamInfos: Array<audio.AudioStreamInfo>
 
 Audio stream information.
 
-**Type:** Array&lt;audio.AudioStreamInfo&gt;
+**Type:** Array&lt;[audio.AudioStreamInfo](../../apis-audio-kit/arkts-apis/arkts-audio-audio-audiostreaminfo-i.md)&gt;
 
 **Since:** 20
 

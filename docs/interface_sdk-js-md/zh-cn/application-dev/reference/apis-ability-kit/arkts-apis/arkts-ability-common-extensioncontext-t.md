@@ -14,4 +14,4 @@ export type ExtensionContext = _ExtensionContext.default
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
-**属性类型：** _ExtensionContext.default
+**类型：** _ExtensionContext.default

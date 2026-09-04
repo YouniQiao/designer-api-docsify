@@ -12,4 +12,4 @@ SystemTone player object.
 
 **System API:** This is a system API.
 
-**Property type:** _SystemTonePlayer
+**Type:** _SystemTonePlayer

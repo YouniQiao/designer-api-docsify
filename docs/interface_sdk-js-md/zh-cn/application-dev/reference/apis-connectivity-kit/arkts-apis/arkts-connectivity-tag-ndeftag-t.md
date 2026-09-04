@@ -12,4 +12,4 @@ export type NdefTag = _NdefTag
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
-**属性类型：** _NdefTag
+**类型：** _NdefTag

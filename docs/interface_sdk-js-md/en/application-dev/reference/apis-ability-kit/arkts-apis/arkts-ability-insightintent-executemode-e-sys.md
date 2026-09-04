@@ -4,6 +4,8 @@ Enumerates the intent execution modes. It specifies the mode of execution passed
 
 **Since:** 11
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## SERVICE_EXTENSION_ABILITY

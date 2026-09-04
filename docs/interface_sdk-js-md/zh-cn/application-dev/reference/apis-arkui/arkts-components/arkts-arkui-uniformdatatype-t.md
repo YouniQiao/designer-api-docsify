@@ -14,4 +14,4 @@ declare type UniformDataType = import('../api/@ohos.data.uniformTypeDescriptor')
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-**属性类型：** import('../api/@ohos.data.uniformTypeDescriptor').default.UniformDataType
+**类型：** import('../api/@ohos.data.uniformTypeDescriptor').default.UniformDataType

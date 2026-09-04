@@ -12,4 +12,4 @@ export type NfcBTag = _NfcBTag
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
-**属性类型：** _NfcBTag
+**类型：** _NfcBTag

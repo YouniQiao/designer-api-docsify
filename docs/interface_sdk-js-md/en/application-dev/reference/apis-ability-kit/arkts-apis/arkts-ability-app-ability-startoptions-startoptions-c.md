@@ -174,7 +174,7 @@ Process mode of the UIAbility after it is started.
 [UIAbilityContext.startAbility](arkts-ability-uiabilitycontext-c.md#startability).
 3. **processMode** and **startupVisibility** must be set in pair.
 
-**Type:** contextConstant.ProcessMode
+**Type:** [contextConstant.ProcessMode](arkts-ability-contextconstant-processmode-e.md)
 
 **Since:** 12
 
@@ -190,7 +190,7 @@ splitRatio?: window.SplitRatioPreference
 
 The type of split ratio preference.
 
-**Type:** window.SplitRatioPreference
+**Type:** [window.SplitRatioPreference](../../apis-arkui/arkts-apis/arkts-arkui-window-splitratiopreference-e.md)
 
 **Since:** 26.0.0
 
@@ -213,7 +213,7 @@ Visibility status of the UIAbility after it is started. If the target UIAbility 
 [UIAbilityContext.startAbility](arkts-ability-uiabilitycontext-c.md#startability).
 3. **processMode** and **startupVisibility** must be set in pair.
 
-**Type:** contextConstant.StartupVisibility
+**Type:** [contextConstant.StartupVisibility](arkts-ability-contextconstant-startupvisibility-e.md)
 
 **Since:** 12
 
@@ -260,7 +260,7 @@ Icon displayed on the starting window for the UIAbility of the current applicati
 [UIAbilityContext.startAbility](arkts-ability-uiabilitycontext-c.md#startability).  
 - The maximum size of an image used as the startup icon is 600 MB.
 
-**Type:** image.PixelMap
+**Type:** [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)
 
 **Since:** 14
 
@@ -287,7 +287,7 @@ When **FULL_SCREEN** and **SPLIT** are both configured for a [freeform window](.
 
 <!--RP1-->This property takes effect only on 2-in-1 devices and tablets.<!--RP1End-->
 
-**Type:** Array&lt;bundleManager.SupportWindowMode&gt;
+**Type:** Array&lt;[bundleManager.SupportWindowMode](arkts-ability-bundlemanager-supportwindowmode-e.md)&gt;
 
 **Since:** 14
 
@@ -303,7 +303,7 @@ windowCreateParams?: window.WindowCreateParams
 
 Parameters for the window for the UIAbility upon startup.
 
-**Type:** window.WindowCreateParams
+**Type:** [window.WindowCreateParams](../../apis-arkui/arkts-apis/arkts-arkui-window-windowcreateparams-i.md)
 
 **Since:** 20
 

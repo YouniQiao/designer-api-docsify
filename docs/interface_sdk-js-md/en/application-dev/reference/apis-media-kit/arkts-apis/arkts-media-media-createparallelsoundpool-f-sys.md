@@ -27,7 +27,7 @@ If a **SoundPool** instance created using [createSoundPool](arkts-media-media-cr
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | maxStreams | number | Yes | Maximum number of streams that can be played by the **SoundPool** instance. The value is an integer ranging from 1 to 32. |
-| audioRenderInfo | audio.AudioRendererInfo | Yes | Audio renderer parameters. |
+| audioRenderInfo | [audio.AudioRendererInfo](../../apis-audio-kit/arkts-apis/arkts-audio-audio-audiorendererinfo-i.md) | Yes | Audio renderer parameters. |
 
 **Return value:**
 

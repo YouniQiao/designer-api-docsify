@@ -10,4 +10,4 @@ Describes the notification progress.
 
 **System capability:** SystemCapability.Notification.Notification
 
-**Property type:** _NotificationProgress
+**Type:** _NotificationProgress

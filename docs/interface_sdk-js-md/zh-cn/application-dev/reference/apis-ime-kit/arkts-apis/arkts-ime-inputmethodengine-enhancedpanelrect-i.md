@@ -58,7 +58,7 @@ landscapeInputRegion?: Array<window.Rect>
 - 数组大小限制为[1, 4]。默认值为横屏时的面板大小。  
 - 传入的热区位置是相对于输入法面板窗口左顶点的位置。
 
-**类型：** Array&lt;window.Rect&gt;
+**类型：** Array&lt;[window.Rect](../../apis-arkui/arkts-apis/arkts-arkui-window-rect-i.md)&gt;
 
 **起始版本：** 15
 
@@ -73,7 +73,7 @@ landscapeRect?: window.Rect
 横屏状态时输入法面板窗口的位置大小。  
 - 当fullScreenMode不填写或值为false时，此属性为必选。
 
-**类型：** window.Rect
+**类型：** [window.Rect](../../apis-arkui/arkts-apis/arkts-arkui-window-rect-i.md)
 
 **起始版本：** 15
 
@@ -107,7 +107,7 @@ portraitInputRegion?: Array<window.Rect>
 - 数组大小限制为[1, 4]。默认值为竖屏时的面板大小。  
 - 传入的热区位置是相对于输入法面板窗口左顶点的位置。
 
-**类型：** Array&lt;window.Rect&gt;
+**类型：** Array&lt;[window.Rect](../../apis-arkui/arkts-apis/arkts-arkui-window-rect-i.md)&gt;
 
 **起始版本：** 15
 
@@ -122,7 +122,7 @@ portraitRect?: window.Rect
 竖屏状态时，输入法面板窗口的位置大小。  
 - 当fullScreenMode不填写或值为false时，此属性为必选。
 
-**类型：** window.Rect
+**类型：** [window.Rect](../../apis-arkui/arkts-apis/arkts-arkui-window-rect-i.md)
 
 **起始版本：** 15
 

@@ -4,6 +4,8 @@ Enumerates the attributes of a window for a UI ServiceExtensionAbility.
 
 **Since:** 14
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.Window.SessionManager
 
 **System API:** This is a system API.

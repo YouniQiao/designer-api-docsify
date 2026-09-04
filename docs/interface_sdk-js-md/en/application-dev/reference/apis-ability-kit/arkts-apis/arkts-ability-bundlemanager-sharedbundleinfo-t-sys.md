@@ -12,4 +12,4 @@ Defines the shared bundle information.
 
 **System API:** This is a system API.
 
-**Property type:** _SharedBundleInfo
+**Type:** _SharedBundleInfo

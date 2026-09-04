@@ -14,4 +14,4 @@ Enumerates the affinity modes.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** import('../api/@ohos.graphics.text').default.Affinity
+**Type:** import('../api/@ohos.graphics.text').default.Affinity

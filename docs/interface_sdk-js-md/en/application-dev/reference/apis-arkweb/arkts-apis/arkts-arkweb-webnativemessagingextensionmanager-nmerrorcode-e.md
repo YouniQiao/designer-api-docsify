@@ -4,6 +4,8 @@ Provides the native messaging error codes.
 
 **Since:** 21
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## PERMISSION_DENY

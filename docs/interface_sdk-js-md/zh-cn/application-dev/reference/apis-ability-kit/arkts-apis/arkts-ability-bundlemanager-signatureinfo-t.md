@@ -12,4 +12,4 @@ export type SignatureInfo = _BundleInfo.SignatureInfo
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
-**属性类型：** _BundleInfo.SignatureInfo
+**类型：** [_BundleInfo.SignatureInfo](arkts-ability-bundleinfo-signatureinfo-i.md)

@@ -10,4 +10,4 @@ type NonSendableValues = Array<relationalStore.ValueType>
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
-**属性类型：** Array&lt;relationalStore.ValueType&gt;
+**类型：** Array&lt;[relationalStore.ValueType](arkts-arkdata-relationalstore-valuetype-t.md)&gt;

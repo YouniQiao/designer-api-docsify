@@ -14,4 +14,4 @@ type ProfileConnectionState = constant.ProfileConnectionState
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
-**属性类型：** constant.ProfileConnectionState
+**类型：** [constant.ProfileConnectionState](arkts-connectivity-constant-profileconnectionstate-e.md)

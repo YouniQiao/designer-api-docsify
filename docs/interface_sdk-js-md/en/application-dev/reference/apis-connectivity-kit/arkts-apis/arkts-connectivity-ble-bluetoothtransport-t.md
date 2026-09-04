@@ -14,4 +14,4 @@ Indicate the transport of a remote device.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
-**Property type:** connection.BluetoothTransport
+**Type:** [connection.BluetoothTransport](arkts-connectivity-connection-bluetoothtransport-e.md)

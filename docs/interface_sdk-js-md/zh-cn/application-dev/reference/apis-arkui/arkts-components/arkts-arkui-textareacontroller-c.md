@@ -76,7 +76,7 @@ setTextSelection(selectionStart: number, selectionEnd: number, options?: Selecti
 | --- | --- | --- | --- |
 | selectionStart | number | 是 | 文本选择区域起始位置，文本框中文字的起始位置为0。当selectionStart小于0时，按0处理；当selectionStart大于文字最大长度时，按照文字最大长度处理。 |
 | selectionEnd | number | 是 | 文本选择区域结束位置。当selectionEnd小于0时，按0处理；当selectionEnd大于文字最大长度时，按照文字最大长度处理。 |
-| options | [SelectionOptions](arkts-arkui-selectionoptions-i.md) | 否 | 选中文字时的配置。默认值：MenuPolicy.DEFAULT<br>**起始版本：** 12 |
+| options | [SelectionOptions](arkts-arkui-selectionoptions-i.md) | 否 | [选中文字时的配置。默认值：MenuPolicy.DEFAULT](../arkts-apis/arkts-arkui-textmenushowmode-e.md)<br>**起始版本：** 12 |
 
 ## stopEditing
 

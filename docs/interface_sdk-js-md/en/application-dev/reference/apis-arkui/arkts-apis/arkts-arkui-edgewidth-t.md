@@ -14,4 +14,4 @@ Defines the border width property.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** EdgeWidths
+**Type:** EdgeWidths

@@ -4,6 +4,8 @@ This module specifies how the autofill service is triggered, based on different 
 
 **Since:** 26.0.0
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 ## AUTO_REQUEST

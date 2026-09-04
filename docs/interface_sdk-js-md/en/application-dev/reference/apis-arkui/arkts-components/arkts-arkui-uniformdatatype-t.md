@@ -14,4 +14,4 @@ Import the UniformDataType type object for ui component.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** import('../api/@ohos.data.uniformTypeDescriptor').default.UniformDataType
+**Type:** import('../api/@ohos.data.uniformTypeDescriptor').default.UniformDataType

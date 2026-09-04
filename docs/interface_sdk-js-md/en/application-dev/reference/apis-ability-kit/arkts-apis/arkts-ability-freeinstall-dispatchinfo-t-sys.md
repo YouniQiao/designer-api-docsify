@@ -12,4 +12,4 @@ Defines the installation-free structure and API version information.
 
 **System API:** This is a system API.
 
-**Property type:** _DispatchInfo
+**Type:** _DispatchInfo

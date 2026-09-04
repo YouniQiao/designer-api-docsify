@@ -12,4 +12,4 @@ export type EnterpriseAdminExtensionContext = _EnterpriseAdminExtensionContext.d
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
-**Property type:** _EnterpriseAdminExtensionContext.default
+**Type:** _EnterpriseAdminExtensionContext.default

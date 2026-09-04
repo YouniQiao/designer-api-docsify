@@ -10,4 +10,4 @@ Defines the observer used to listen for application state changes.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
-**Property type:** _ApplicationStateObserver.default
+**Type:** _ApplicationStateObserver.default

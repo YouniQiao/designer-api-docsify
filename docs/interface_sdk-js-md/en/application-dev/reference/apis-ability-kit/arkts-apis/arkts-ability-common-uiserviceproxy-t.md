@@ -14,4 +14,4 @@ Defines the capability for data communication with the UIServiceExtensionAbility
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
-**Property type:** _UIServiceProxy.default
+**Type:** _UIServiceProxy.default

@@ -4,6 +4,8 @@ WindowStage生命周期的状态类型枚举。
 
 **起始版本：** 20
 
+**模型约束：** 此接口仅可在Stage模型下使用。
+
 **系统能力：** SystemCapability.Window.SessionManager
 
 ## SHOWN

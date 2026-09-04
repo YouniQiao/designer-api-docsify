@@ -6,8 +6,6 @@ typeNode提供创建具体类型的FrameNode能力，可通过FrameNode的基础
 
 **起始版本：** 12
 
-**模型约束：** 此接口仅可在Stage模型下使用。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 汇总

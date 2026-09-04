@@ -239,7 +239,7 @@ UIServiceExtension创建后回调。UIServiceExtension服务创建窗口成功�
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| window | window.Window | 是 | 表示已创建的Window。 |
+| window | [window.Window](../../apis-arkui/arkts-apis/arkts-arkui-window-window-i.md) | 是 | 表示已创建的Window。 |
 
 **示例**
 
@@ -274,7 +274,7 @@ UIServiceExtension窗体创建前的回调。前台应用把要创建windows的�
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| config | window.ExtensionWindowConfig | 是 | UIServiceExtension窗体配置信息。 |
+| config | [window.ExtensionWindowConfig](../../apis-arkui/arkts-apis/arkts-arkui-window-extensionwindowconfig-i-sys.md) | 是 | UIServiceExtension窗体配置信息。 |
 
 **示例**
 

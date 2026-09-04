@@ -14,4 +14,4 @@ SymbolGlyphModifier类型，用于设置自定义图标小符号。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-**属性类型：** import('../api/arkui/SymbolGlyphModifier').SymbolGlyphModifier
+**类型：** import('../api/arkui/SymbolGlyphModifier').SymbolGlyphModifier

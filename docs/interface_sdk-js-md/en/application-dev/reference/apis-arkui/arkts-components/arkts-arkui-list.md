@@ -122,6 +122,7 @@ Creates a list container.
 ## Examples
 
 In this example, a vertical list is implemented, and a callback is invoked when the first or last item displayed in the list changes.
+ListDataSource implements the LazyForEach data source API [IDataSource](ts-rendering-control-lazyforeach.md#idatasource), which is used to provide child components for List through LazyForEach.
 
 ```TypeScript
 // ListDataSource.ets
@@ -245,6 +246,7 @@ struct ListExample {
 ```
 
 This example showcases the alignment effects of child elements in the cross-axis direction of the List component using different ListItemAlign enumeration values.
+For details about ListDataSource and the complete code, see [Example 1: Adding a Scroll Event](#example-1-adding-a-scroll-event).
 
 ```TypeScript
 // xxx.ets
@@ -295,6 +297,7 @@ struct ListLanesExample {
 ```
 
 This example shows how to control the display and hiding of the delete button through a custom state variable and update the data source in the click event of the delete button to implement the list item deletion effect.
+For details about ListDataSource and the complete code, see [Example 1: Adding a Scroll Event](#example-1-adding-a-scroll-event).
 
 ```TypeScript
 // xxx.ets
@@ -353,6 +356,7 @@ struct ListExample {
 ```
 
 This example shows how to configure the List component to align the scroll snap position to the center.
+For details about ListDataSource and the complete code, see [Example 1: Adding a Scroll Event](#example-1-adding-a-scroll-event).
 
 ```TypeScript
 // xxx.ets
@@ -406,6 +410,8 @@ struct ListExample {
 ```
 
 This example shows that, by setting the [childrenMainSize](#childrenmainsize12) attribute, the list can jump to an exact specific location when the scrollTo API is called, even when the heights of the child components are inconsistent.
+For usage with state management V2, see [List and makeObserved](../../../ui/state-management/arkts-v1-v2-migration-inner-object.md#scrollable-component).
+For details about ListDataSource and the complete code, see [Example 1: Adding a Scroll Event](#example-1-adding-a-scroll-event).
 
 ```TypeScript
 // xxx.ets
@@ -635,6 +641,7 @@ interface TimeTable {
 ```
 
 This example demonstrates how to implement a List component with an edge fading effect and set the length of the fading edge.
+For details about ListDataSource and the complete code, see [Example 1: Adding a Scroll Event](#example-1-adding-a-scroll-event).
 
 ```TypeScript
 import { LengthMetrics } from '@kit.ArkUI'
@@ -668,6 +675,7 @@ struct ListExample {
 ```
 
 This example demonstrates how to set a single-side edge effect for the List component using the edgeEffect API.
+For details about ListDataSource and the complete code, see [Example 1: Adding a Scroll Event](#example-1-adding-a-scroll-event).
 
 ```TypeScript
 // xxx.ets
@@ -744,6 +752,7 @@ struct ListExample {
 ```
 
 This example uses the maintainVisibleContentPosition API to implement infinite loading of historical messages when the screen is swiped up.
+For details about ListDataSource and the complete code, see [Example 1: Adding a Scroll Event](#example-1-adding-a-scroll-event).
 
 ```TypeScript
 import { ListDataSource } from './ListDataSource';
@@ -864,6 +873,7 @@ struct ForEachSort {
 ```
 
 In API version 22 and later versions, this example shows how to configure lanes in the List component based on breakpoints.
+For details about ListDataSource and the complete code, see [Example 1: Adding a Scroll Event](#example-1-adding-a-scroll-event).
 
 ```TypeScript
 // xxx.ets
@@ -1172,6 +1182,8 @@ struct ContactsList {
 ```
 
 This example demonstrates how to gather selected list items in the visible area when a long press is performed on list items using [bindContextMenu](ts-universal-attributes-menu.md#bindcontextmenu8), with the multi-selection gather animation switch enabled for List.
+Since API version 23, the [editModeOptions](#editmodeoptions23) API is added to the List component  to set the multi-selection gather animation switch.
+For details about ListDataSource and the complete code, see [Example 1: Adding a Scroll Event](#example-1-adding-a-scroll-event).
 
 ```TypeScript
 // xxx.ets
@@ -1263,6 +1275,8 @@ struct ListExample {
 ```
 
 This example implements the finger-swipe multi-select effect on List by using the [enableEditMode](#enableeditmode) API and the [onEditModeChange](#oneditmodechange) event.
+Since API version 26.0.0, the List component adds the enableEditMode API and the onEditModeChange event.
+For details about ListDataSource and the complete code, see [Example 1: Adding a Scroll Event](#example-1-adding-a-scroll-event).
 
 ```TypeScript
 // xxx.ets

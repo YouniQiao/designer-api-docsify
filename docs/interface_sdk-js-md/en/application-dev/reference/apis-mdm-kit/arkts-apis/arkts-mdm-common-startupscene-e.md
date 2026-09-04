@@ -4,6 +4,8 @@ Startup wizard completion scenario. When the initial switch to a sub-user (only 
 
 **Since:** 24
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## USER_SETUP

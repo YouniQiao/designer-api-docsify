@@ -182,7 +182,7 @@ backgroundSystemMaterial?: uiMaterial.Material
 
 从API版本26.0.0开始，除胶囊类多选分段按钮（即type为"capsule"且multiply为true）外，backgroundSystemMaterial设置自动反色的系统材质时，fontColor和selectedFontColor使用支持反色的特殊系统资源，颜色自动适配到材质背景色的反色。
 
-**类型：** uiMaterial.Material
+**类型：** [uiMaterial.Material](arkts-arkui-uimaterial-material-c.md)
 
 **起始版本：** 26.0.0
 

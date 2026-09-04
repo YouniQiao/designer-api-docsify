@@ -79,7 +79,7 @@ level?: notification.SlotLevel
 
 Notification level.
 
-**Type:** notification.SlotLevel
+**Type:** [notification.SlotLevel](arkts-notification-notification-slotlevel-depr-e.md)
 
 **Since:** 7
 
@@ -142,7 +142,7 @@ notificationLevel?: notificationManager.SlotLevel
 
 Notification level, which is used to describe the display priority and alert intensity of notifications of this channel type.
 
-**Type:** notificationManager.SlotLevel
+**Type:** [notificationManager.SlotLevel](arkts-notification-notificationmanager-slotlevel-e.md)
 
 **Since:** 20
 
@@ -156,7 +156,7 @@ notificationType?: notificationManager.SlotType
 
 Slot type. Different slot types have different notification reminder types.
 
-**Type:** notificationManager.SlotType
+**Type:** [notificationManager.SlotType](arkts-notification-notificationmanager-slottype-e.md)
 
 **Since:** 11
 
@@ -184,7 +184,7 @@ type?: notification.SlotType
 
 Channel type.
 
-**Type:** notification.SlotType
+**Type:** [notification.SlotType](arkts-notification-notification-slottype-depr-e.md)
 
 **Since:** 7
 

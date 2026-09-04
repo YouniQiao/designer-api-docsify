@@ -4,6 +4,8 @@ Enumerates the drop-down menu avoidance modes.
 
 **Since:** 19
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## COVER_TARGET

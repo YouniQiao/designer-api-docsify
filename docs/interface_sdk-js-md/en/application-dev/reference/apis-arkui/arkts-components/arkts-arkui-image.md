@@ -262,6 +262,7 @@ struct ImageExample1 {
 ```
 
 The default timeout is 5 minutes for loading online images. When using an online image, you are advised to use alt to configure a placeholder image displayed during loading. You can use [HTTP](../../../network/http-request.md) to send a network request, and then decode the returned data into a PixelMap object for the Image component. Note that a GIF image loaded into a PixelMap object will be displayed as a static image. For details about image development, see the [Image Kit](../../../media/image/image-overview.md) overview.
+The ohos.permission.INTERNET permission is required for using online images. For details about how to apply for a permission, see [Declaring Permissions](../../../security/AccessToken/declare-permissions.md).
 
 ```TypeScript
 import { http } from '@kit.NetworkKit';
@@ -321,6 +322,7 @@ struct ImageExample2 {
 ```
 
 This example shows how to use the cacheDownload.download API to download online GIF images.
+The ohos.permission.INTERNET permission is required for using online images. For details about how to apply for a permission, see [Declaring Permissions](../../../security/AccessToken/declare-permissions.md).
 
 ```TypeScript
 import { cacheDownload } from '@kit.BasicServicesKit';
@@ -867,6 +869,7 @@ struct ImageExample11 {
 ```
 
 This example demonstrates how to apply rotation and translation effects to an image using the [imageMatrix](#imagematrix15) and [objectFit](#objectfit) attributes.
+The imageMatrix attribute is added since API version 15.
 
 ```TypeScript
 import { matrix4 } from '@kit.ArkUI';
@@ -1052,6 +1055,7 @@ struct Index {
 ```
 
 This example demonstrates how to adjust the HDR image brightness using the [hdrBrightness](#hdrbrightness19) attribute, changing the value from 0 to 1.
+The hdrBrightness attribute is added since API version 19.
 
 ```TypeScript
 import { image } from '@kit.ImageKit';
@@ -1445,6 +1449,7 @@ struct Index {
 ```
 
 In this example, the [supportSvg2](#supportsvg221) attribute is set to enable the enhanced SVG tag parsing feature.
+The supportSvg2 attribute is added since API version 21.
 
 ```TypeScript
 @Entry
@@ -1540,6 +1545,7 @@ struct ImageExample {
 ```
 
 This example demonstrates how to obtain detailed download information ([ImageError](arkts-arkui-imageerror-i.md)) when an online image fails to load via the [onError](#onerror9) callback. When image loading fails, you can obtain detailed online image download information through the downloadInfo attribute in ImageError, including download resource information, network request information, and performance statistics. This helps quickly identify the cause of network exceptions or resource errors.
+The downloadInfo attribute is added to ImageError since API version 23.
 
 ```TypeScript
 @Entry
@@ -1561,6 +1567,7 @@ struct Index {
 ```
 
 This example demonstrates how to enable the anti-aliasing feature for pixel map image edges by setting the [antialiased](arkts-arkui-image-attribute.md#antialiased) API.
+The [antialiased](arkts-arkui-image-attribute.md#antialiased) API is added since API version 23.
 
 ```TypeScript
 @Entry

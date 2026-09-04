@@ -309,7 +309,7 @@ Called when the DND time settings are changed.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | notificationManager.DoNotDisturbDate | Yes |  |
+| mode | [notificationManager.DoNotDisturbDate](arkts-notification-notificationmanager-donotdisturbdate-i-sys.md) | Yes |  |
 
 **Examples**
 
@@ -354,7 +354,7 @@ Called when the DND time settings are changed.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | notification.DoNotDisturbDate | Yes |  |
+| mode | [notification.DoNotDisturbDate](arkts-notification-notification-donotdisturbdate-depr-i-sys.md) | Yes |  |
 
 **Examples**
 

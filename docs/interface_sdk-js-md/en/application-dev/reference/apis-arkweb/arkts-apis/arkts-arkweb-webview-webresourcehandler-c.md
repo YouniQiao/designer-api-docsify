@@ -44,6 +44,7 @@ Notifies the ArkWeb kernel that the intercepted request will fail and ends the n
 **Examples**
 
 For details about the example, see [OnRequestStart](./arkts-apis-webview-WebSchemeHandler.md#onrequeststart).
+- simpleType:
 
 ## didFail
 
@@ -174,6 +175,7 @@ Notify that this request should be failed.
 **Examples**
 
 For details about the example, see [OnRequestStart](./arkts-apis-webview-WebSchemeHandler.md#onrequeststart).
+- simpleType:
 
 ```TypeScript
 // xxx.ets
@@ -270,6 +272,7 @@ Notifies the **Web** component that the intercepted request is complete and no m
 **Examples**
 
 For details about the example, see [OnRequestStart](./arkts-apis-webview-WebSchemeHandler.md#onrequeststart).
+- simpleType:
 
 ## didReceiveResponse
 
@@ -301,6 +304,7 @@ Passes the constructed response header to the intercepted request. This API must
 **Examples**
 
 For details about the example, see [OnRequestStart](./arkts-apis-webview-WebSchemeHandler.md#onrequeststart).
+- simpleType:
 
 ## didReceiveResponseBody
 
@@ -332,3 +336,4 @@ Passes the constructed response body to the intercepted request. This API must b
 **Examples**
 
 For details about the example, see [OnRequestStart](./arkts-apis-webview-WebSchemeHandler.md#onrequeststart).
+- simpleType:

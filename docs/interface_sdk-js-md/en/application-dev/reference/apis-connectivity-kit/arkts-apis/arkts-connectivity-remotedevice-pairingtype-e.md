@@ -4,6 +4,8 @@ Enumerates the NearLink pairing types.
 
 **Since:** 26.0.0
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.Communication.NearLink.Base
 
 ## NO_PASSKEY_CONFIRMATION

@@ -12,4 +12,4 @@ export type UsedScene = _BundleInfo.UsedScene
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
-**属性类型：** _BundleInfo.UsedScene
+**类型：** [_BundleInfo.UsedScene](arkts-ability-bundleinfo-usedscene-i.md)

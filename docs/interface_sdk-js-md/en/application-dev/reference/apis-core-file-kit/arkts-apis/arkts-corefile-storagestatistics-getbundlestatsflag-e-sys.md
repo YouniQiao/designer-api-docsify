@@ -4,6 +4,8 @@ Enumerates the flags for obtaining the bundle statistics.
 
 **Since:** 26.1.0
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.FileManagement.StorageService.SpatialStatistics
 
 **System API:** This is a system API.

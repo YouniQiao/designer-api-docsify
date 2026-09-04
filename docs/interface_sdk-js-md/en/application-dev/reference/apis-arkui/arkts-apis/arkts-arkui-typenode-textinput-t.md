@@ -14,4 +14,4 @@ Represents a FrameNode of the **TextInput** type.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** [TypedFrameNode](arkts-arkui-framenode-typedframenode-i.md)&lt;TextInputInterface, [TextInputAttribute](../arkts-components/arkts-arkui-textinput-attribute.md)&gt;
+**Type:** [TypedFrameNode](arkts-arkui-framenode-typedframenode-i.md)&lt;TextInputInterface, [TextInputAttribute](../arkts-components/arkts-arkui-textinput-attribute.md)&gt;

@@ -4,6 +4,8 @@ Defines the usage scope of the certificate to be installed.
 
 **Since:** 14
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.Security.CertificateManagerDialog
 
 ## NOT_SPECIFIED

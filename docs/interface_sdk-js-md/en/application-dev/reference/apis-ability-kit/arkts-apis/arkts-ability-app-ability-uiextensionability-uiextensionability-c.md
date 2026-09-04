@@ -61,7 +61,7 @@ Called when a UIExtensionAbility instance is created. You can execute initializa
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| launchParam | AbilityConstant.LaunchParam | Yes | Parameters for application launch, including the reason for application launch and the reason for the last application exit.<br>**Since:** 12 |
+| launchParam | [AbilityConstant.LaunchParam](arkts-ability-abilityconstant-launchparam-i.md) | Yes | Parameters for application launch, including the reason for application launch and the reason for the last application exit.<br>**Since:** 12 |
 
 **Examples**
 

@@ -21,4 +21,4 @@ declare type PointerStyle = import('../api/@ohos.multimodalInput.pointer').defau
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-**属性类型：** import('../api/@ohos.multimodalInput.pointer').default.PointerStyle
+**类型：** import('../api/@ohos.multimodalInput.pointer').default.PointerStyle

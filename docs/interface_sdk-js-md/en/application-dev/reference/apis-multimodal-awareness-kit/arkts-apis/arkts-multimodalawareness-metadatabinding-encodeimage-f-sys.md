@@ -24,14 +24,14 @@ Encodes metadata into an image. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| srcImage | image.PixelMap | Yes | Source image. |
+| srcImage | [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | Yes | Source image. |
 | metadata | string | Yes | Metadata to be encoded. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;image.PixelMap&gt; | Promise object, which is used to return the image with encoded metadata. |
+| Promise&lt;[image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)&gt; | Promise object, which is used to return the image with encoded metadata. |
 
 **Error codes:**
 

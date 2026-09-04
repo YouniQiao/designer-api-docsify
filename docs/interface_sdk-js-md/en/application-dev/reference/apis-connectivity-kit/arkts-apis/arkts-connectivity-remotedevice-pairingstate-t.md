@@ -12,4 +12,4 @@ Enumerates the pairing statuses with a remote device.
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 
-**Property type:** nearlinkConstant.PairingState
+**Type:** [nearlinkConstant.PairingState](arkts-connectivity-nearlinkconstant-pairingstate-e.md)

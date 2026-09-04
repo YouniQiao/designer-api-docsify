@@ -76,7 +76,7 @@ readonly bundleType: bundleManager.BundleType
 
 Bundle type, which can be **APP** (application) or **ATOMIC_SERVICE** (atomic service).
 
-**Type:** bundleManager.BundleType
+**Type:** [bundleManager.BundleType](arkts-ability-bundlemanager-bundletype-e.md)
 
 **Since:** 9
 

@@ -42,7 +42,7 @@ colorSpaceConversionTarget?: colorSpaceManager.ColorSpace
 
 The target color space for conversion. Currently, only BT709_LIMIT is supported. If the video format on the sender side is HDR and needs to be converted to SDR during transmission, this parameter should be set.
 
-**Type:** colorSpaceManager.ColorSpace
+**Type:** [colorSpaceManager.ColorSpace](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-colorspacemanager-colorspace-e.md)
 
 **Since:** 18
 

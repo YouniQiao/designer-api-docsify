@@ -36,7 +36,7 @@ adOptions: advertising.AdOptions
 
 Ad configuration options.
 
-**Type:** advertising.AdOptions
+**Type:** [advertising.AdOptions](arkts-ads-advertising-adoptions-i.md)
 
 **Since:** 11
 
@@ -52,7 +52,7 @@ adParam: advertising.AdRequestParams
 
 Ad request parameters.
 
-**Type:** advertising.AdRequestParams
+**Type:** [advertising.AdRequestParams](arkts-ads-advertising-adrequestparams-i.md)
 
 **Since:** 11
 
@@ -68,7 +68,7 @@ displayOptions: advertising.AdDisplayOptions
 
 Ad display parameters.
 
-**Type:** advertising.AdDisplayOptions
+**Type:** [advertising.AdDisplayOptions](arkts-ads-advertising-addisplayoptions-i.md)
 
 **Since:** 11
 
@@ -84,7 +84,7 @@ interactionListener: advertising.AdInteractionListener
 
 Ad status change callback.
 
-**Type:** advertising.AdInteractionListener
+**Type:** [advertising.AdInteractionListener](arkts-ads-advertising-adinteractionlistener-i.md)
 
 **Since:** 11
 

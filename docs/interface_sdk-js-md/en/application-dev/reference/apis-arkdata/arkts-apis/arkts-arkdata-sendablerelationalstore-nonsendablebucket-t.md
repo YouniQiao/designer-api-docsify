@@ -10,4 +10,4 @@ Represents the KV pair that cannot be passed across threads.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
-**Property type:** relationalStore.ValuesBucket
+**Type:** [relationalStore.ValuesBucket](arkts-arkdata-relationalstore-valuesbucket-t.md)

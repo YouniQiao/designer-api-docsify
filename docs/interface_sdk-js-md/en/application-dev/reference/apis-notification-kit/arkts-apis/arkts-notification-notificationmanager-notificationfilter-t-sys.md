@@ -12,4 +12,4 @@ Describes the filter criteria for querying the live view.
 
 **System API:** This is a system API.
 
-**Property type:** _NotificationFilter
+**Type:** _NotificationFilter

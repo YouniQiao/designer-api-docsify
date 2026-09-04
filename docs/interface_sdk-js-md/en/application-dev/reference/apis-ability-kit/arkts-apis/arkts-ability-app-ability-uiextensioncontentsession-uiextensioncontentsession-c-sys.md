@@ -32,7 +32,7 @@ Obtains the window object corresponding to the current UIExtension to notify the
 
 | Type | Description |
 | --- | --- |
-| uiExtensionHost.UIExtensionHostWindowProxy | Window information of the host application. |
+| [uiExtensionHost.UIExtensionHostWindowProxy](../../apis-arkui/arkts-apis/arkts-arkui-uiextensionhost-uiextensionhostwindowproxy-i-sys.md) | Window information of the host application. |
 
 **Error codes:**
 

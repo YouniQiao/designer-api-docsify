@@ -4,6 +4,8 @@ Enumerates the Hyper Snap error type.
 
 **Since:** 26.1.0
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## CREATE_SNAPSHOT

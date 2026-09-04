@@ -30,7 +30,7 @@ Creates a RemoteObject instance based on a CloudDB instance. The system uses thi
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;rpc.RemoteObject&gt; | Promise used to return the rpc.RemoteObject instance of CloudDB. |
+| Promise&lt;[rpc.RemoteObject](../../apis-ipc-kit/arkts-apis/arkts-ipc-rpc-remoteobject-c.md)&gt; | Promise used to return the rpc.RemoteObject instance of CloudDB. |
 
 **Examples**
 

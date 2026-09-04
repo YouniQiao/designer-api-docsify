@@ -4,8 +4,6 @@ appMemoryOptimizer提供应用内存优化的能力，包括释放指定文件�
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
-
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## 导入模块

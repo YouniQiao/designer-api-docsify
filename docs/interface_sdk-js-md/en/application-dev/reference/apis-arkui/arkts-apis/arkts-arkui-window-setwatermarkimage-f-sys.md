@@ -24,7 +24,7 @@ Controls whether a watermark image is displayed on the screen. This API uses a p
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pixelMap | image.PixelMap | Yes | Watermark image, which can be obtained by calling [createPixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-createpixelmap-f.md). |
+| pixelMap | [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | Yes | Watermark image, which can be obtained by calling [createPixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-createpixelmap-f.md). |
 | enable | boolean | Yes | Whether to display the watermark image. **true** to display, **false** otherwise. After the watermark image is displayed, you need to set this parameter to **false** to disable the watermark display. |
 
 **Return value:**
@@ -93,7 +93,7 @@ Set watermark image.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pixelMap | image.PixelMap | Yes | Watermark image. |
+| pixelMap | [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | Yes | Watermark image. |
 | enable | boolean | Yes | Show watermark if true. |
 | priority | number | Yes | Specifies the priority level for the incoming watermark image to take effect. A smaller value of this parameter indicates a higher priority. The value range must be greater than or equal to 0. |
 
@@ -160,7 +160,7 @@ Controls whether a watermark image is displayed on the screen. This API uses an 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pixelMap | image.PixelMap | Yes | Watermark image, which can be obtained by calling [createPixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-createpixelmap-f.md). |
+| pixelMap | [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | Yes | Watermark image, which can be obtained by calling [createPixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-createpixelmap-f.md). |
 | enable | boolean | Yes | Whether to display the watermark image. **true** to display, **false** otherwise. After the watermark image is displayed, you need to set this parameter to **false** to disable the watermark display. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 

@@ -354,6 +354,7 @@ struct SubHeaderExample {
 ```
 
 在获焦状态下，该示例通过设置SubHeader的右侧按钮属性defaultFocus使其默认获焦。
+从API version 18开始，在[OperationOption](arkts-arkui-arkui-advanced-subheader-operationoption-c.md)中新增defaultFocus接口。
 
 ```TypeScript
 import { Prompt, OperationType, SubHeader } from '@kit.ArkUI';

@@ -4,6 +4,8 @@ Enumerates the word selection panel types, which defines the two-level architect
 
 **Since:** 24
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.SelectionInput.Selection
 
 ## MENU_PANEL

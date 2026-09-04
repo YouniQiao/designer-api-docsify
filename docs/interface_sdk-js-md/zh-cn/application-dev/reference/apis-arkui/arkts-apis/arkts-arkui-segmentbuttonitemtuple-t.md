@@ -16,6 +16,6 @@ declare type SegmentButtonItemTuple = ItemRestriction<SegmentButtonTextItem> | I
 
 | 类型 | 说明 |
 | --- | --- |
-| ItemRestriction&lt;SegmentButtonTextItem&gt; | 仅文本按钮信息的元组。 |
-| ItemRestriction&lt;SegmentButtonIconItem&gt; | 仅图标按钮信息的元组。 |
-| ItemRestriction&lt;SegmentButtonIconTextItem&gt; | 图标+文本按钮信息的元组。 |
+| [ItemRestriction](arkts-arkui-itemrestriction-t.md)&lt;[SegmentButtonTextItem](arkts-arkui-arkui-advanced-segmentbutton-segmentbuttontextitem-i.md)&gt; | 仅文本按钮信息的元组。 |
+| [ItemRestriction](arkts-arkui-itemrestriction-t.md)&lt;[SegmentButtonIconItem](arkts-arkui-arkui-advanced-segmentbutton-segmentbuttoniconitem-i.md)&gt; | 仅图标按钮信息的元组。 |
+| [ItemRestriction](arkts-arkui-itemrestriction-t.md)&lt;[SegmentButtonIconTextItem](arkts-arkui-arkui-advanced-segmentbutton-segmentbuttonicontextitem-i.md)&gt; | 图标+文本按钮信息的元组。 |

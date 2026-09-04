@@ -66,7 +66,7 @@ getHapticsFeature(): systemSoundManager.ToneHapticsFeature
 
 | 类型 | 说明 |
 | --- | --- |
-| systemSoundManager.ToneHapticsFeature | 振动风格。 |
+| [systemSoundManager.ToneHapticsFeature](arkts-audio-systemsoundmanager-tonehapticsfeature-e-sys.md) | 振动风格。 |
 
 **错误码：**
 
@@ -107,7 +107,7 @@ getSupportedHapticsFeatures(): Promise<Array<systemSoundManager.ToneHapticsFeatu
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;systemSoundManager.ToneHapticsFeature&gt;&gt; | Promise对象，返回当前支持的振动风格。 |
+| Promise&lt;Array&lt;[systemSoundManager.ToneHapticsFeature](arkts-audio-systemsoundmanager-tonehapticsfeature-e-sys.md)&gt;&gt; | Promise对象，返回当前支持的振动风格。 |
 
 **错误码：**
 
@@ -486,7 +486,7 @@ setHapticsFeature(hapticsFeature: systemSoundManager.ToneHapticsFeature): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| hapticsFeature | systemSoundManager.ToneHapticsFeature | 是 | 振动风格。 |
+| hapticsFeature | [systemSoundManager.ToneHapticsFeature](arkts-audio-systemsoundmanager-tonehapticsfeature-e-sys.md) | 是 | 振动风格。 |
 
 **错误码：**
 

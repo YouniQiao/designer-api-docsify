@@ -10,4 +10,4 @@ Enumerates carrier call states.
 
 **System capability:** SystemCapability.Telephony.StateRegistry
 
-**Property type:** call.CCallState
+**Type:** [call.CCallState](arkts-telephony-call-ccallstate-e.md)

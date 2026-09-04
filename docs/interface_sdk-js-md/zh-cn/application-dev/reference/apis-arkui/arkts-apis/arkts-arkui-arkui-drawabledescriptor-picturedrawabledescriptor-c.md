@@ -34,7 +34,7 @@ PictureDrawableDescriptor的构造函数。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| src | image.Picture | 是 | 用于创建PictureDrawableDescriptor的Picture对象。 |
+| src | [image.Picture](../../apis-image-kit/arkts-apis/arkts-image-image-picture-i.md) | 是 | 用于创建PictureDrawableDescriptor的Picture对象。 |
 
 **示例**
 

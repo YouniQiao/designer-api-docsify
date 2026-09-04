@@ -10,4 +10,4 @@ export type NotificationSlot = _NotificationSlot
 
 **系统能力：** SystemCapability.Notification.Notification
 
-**属性类型：** _NotificationSlot
+**类型：** _NotificationSlot

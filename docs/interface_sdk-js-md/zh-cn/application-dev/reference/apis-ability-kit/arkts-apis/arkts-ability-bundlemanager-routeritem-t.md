@@ -12,4 +12,4 @@ export type RouterItem = _HapModuleInfo.RouterItem
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
-**属性类型：** _HapModuleInfo.RouterItem
+**类型：** [_HapModuleInfo.RouterItem](arkts-ability-hapmoduleinfo-routeritem-i.md)

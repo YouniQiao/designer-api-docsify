@@ -40,7 +40,7 @@ Creates a **ShadowLayer** object.
 | blurRadius | number | Yes | Radius of the shadow layer. The value must be a floating point number greater than 0. |
 | x | number | Yes | Offset on the X axis. The value is a floating point number. |
 | y | number | Yes | Offset on the Y axis. The value is a floating point number. |
-| color | common2D.Color | Yes | Color in ARGB format. The value of each color channel is an integer ranging from 0 to 255. |
+| color | [common2D.Color](arkts-arkgraphics2d-common2d-color-i.md) | Yes | Color in ARGB format. The value of each color channel is an integer ranging from 0 to 255. |
 
 **Return value:**
 
@@ -88,7 +88,7 @@ Creates a **ShadowLayer** object.
 | blurRadius | number | Yes | Radius of the shadow layer. The value must be a floating point number greater than 0. |
 | x | number | Yes | Offset on the X axis. The value is a floating point number. |
 | y | number | Yes | Offset on the Y axis. The value is a floating point number. |
-| color | common2D.Color \| number | Yes | Color, represented by an unsigned integer in hexadecimal ARGB format. |
+| color | [common2D.Color](arkts-arkgraphics2d-common2d-color-i.md) \| number | Yes | Color, represented by an unsigned integer in hexadecimal ARGB format. |
 
 **Return value:**
 

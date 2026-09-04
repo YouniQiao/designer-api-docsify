@@ -14,4 +14,4 @@ Navigation首页名字。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-**属性类型：** 'navBar'
+**类型：** 'navBar'

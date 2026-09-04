@@ -35,7 +35,7 @@ edgeAlign(alignType: CalendarAlign, offset?: Offset)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| alignType | [CalendarAlign](arkts-arkui-calendaralign-e.md) | 是 | 对齐方式的类型。默认值：CalendarAlign.END |
+| alignType | [CalendarAlign](arkts-arkui-calendaralign-e.md) | 是 | [对齐方式的类型。默认值：CalendarAlign.END](arkts-arkui-localizedbarrierdirection-e.md) |
 | offset | Offset | 否 | 按照对齐方式对齐后，选择器相对入口组件的偏移量。默认值：{dx: 0, dy: 0} 单位：vp |
 
 ## edgeAlign

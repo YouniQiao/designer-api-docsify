@@ -32,7 +32,7 @@ This method is used to change color space of PixelMap. Pixel data will be change
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| targetColorSpace | colorSpaceManager.ColorSpaceManager | 是 | The color space for pixelmap. |
+| targetColorSpace | [colorSpaceManager.ColorSpaceManager](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-colorspacemanager-colorspacemanager-i.md) | 是 | The color space for pixelmap. |
 
 **返回值：**
 
@@ -165,7 +165,7 @@ Crop the image. This method uses a promise to return the result.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| region | image.Region | 是 | The region to crop. |
+| region | [image.Region](arkts-image-image-region-i.md) | 是 | The region to crop. |
 
 **返回值：**
 
@@ -207,7 +207,7 @@ Crop the image.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| region | image.Region | 是 | The region to crop. |
+| region | [image.Region](arkts-image-image-region-i.md) | 是 | The region to crop. |
 
 **错误码：**
 
@@ -367,7 +367,7 @@ Get color space of pixelmap.
 
 | 类型 | 说明 |
 | --- | --- |
-| colorSpaceManager.ColorSpaceManager | If the operation fails, an error message is returned. |
+| [colorSpaceManager.ColorSpaceManager](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-colorspacemanager-colorspacemanager-i.md) | If the operation fails, an error message is returned. |
 
 **错误码：**
 
@@ -543,7 +543,7 @@ Marshalling PixelMap and write into MessageSequence.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| sequence | rpc.MessageSequence | 是 | rpc.MessageSequence parameter. |
+| sequence | [rpc.MessageSequence](../../apis-ipc-kit/arkts-apis/arkts-ipc-rpc-messagesequence-c.md) | 是 | rpc.MessageSequence parameter. |
 
 **错误码：**
 
@@ -711,7 +711,7 @@ Reads image pixelmap data in an area. This method uses a promise to return the d
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| area | image.PositionArea | 是 | Area from which the image pixelmap data will be read. |
+| area | [image.PositionArea](arkts-image-image-positionarea-i.md) | 是 | Area from which the image pixelmap data will be read. |
 
 **返回值：**
 
@@ -774,7 +774,7 @@ Reads image pixelmap data in an area.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| area | image.PositionArea | 是 | Area from which the image pixelmap data will be read. |
+| area | [image.PositionArea](arkts-image-image-positionarea-i.md) | 是 | Area from which the image pixelmap data will be read. |
 
 **错误码：**
 
@@ -1171,7 +1171,7 @@ This method is only used to set the colorspace property of PixelMap, while all p
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| colorSpace | colorSpaceManager.ColorSpaceManager | 是 | The color space for pixelmap. |
+| colorSpace | [colorSpaceManager.ColorSpaceManager](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-colorspacemanager-colorspacemanager-i.md) | 是 | The color space for pixelmap. |
 
 **错误码：**
 
@@ -1304,7 +1304,7 @@ Creates a PixelMap object based on MessageSequence parameter.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| sequence | rpc.MessageSequence | 是 | rpc.MessageSequence parameter. |
+| sequence | [rpc.MessageSequence](../../apis-ipc-kit/arkts-apis/arkts-ipc-rpc-messagesequence-c.md) | 是 | rpc.MessageSequence parameter. |
 
 **返回值：**
 
@@ -1487,7 +1487,7 @@ Writes image pixelmap data to the specified area. This method uses a promise to 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| area | image.PositionArea | 是 | Area to which the image pixelmap data will be written. |
+| area | [image.PositionArea](arkts-image-image-positionarea-i.md) | 是 | Area to which the image pixelmap data will be written. |
 
 **返回值：**
 
@@ -1556,7 +1556,7 @@ Writes image pixelmap data to the specified area.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| area | image.PositionArea | 是 | Area to which the image pixelmap data will be written. |
+| area | [image.PositionArea](arkts-image-image-positionarea-i.md) | 是 | Area to which the image pixelmap data will be written. |
 
 **错误码：**
 

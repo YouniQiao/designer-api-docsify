@@ -12,4 +12,4 @@ export type WindowSize = _AbilityInfo.WindowSize
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
-**属性类型：** _AbilityInfo.WindowSize
+**类型：** [_AbilityInfo.WindowSize](arkts-ability-abilityinfo-windowsize-i.md)

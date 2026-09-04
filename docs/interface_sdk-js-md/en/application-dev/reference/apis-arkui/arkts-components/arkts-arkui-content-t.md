@@ -14,4 +14,4 @@ Defines a base class for **ComponentContent** and **NodeContent**.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** import('../api/@ohos.arkui.node').Content
+**Type:** import('../api/@ohos.arkui.node').Content

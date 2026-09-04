@@ -10,4 +10,4 @@ type RatType = radio.RadioTechnology
 
 **系统能力：** SystemCapability.Telephony.StateRegistry
 
-**属性类型：** radio.RadioTechnology
+**类型：** [radio.RadioTechnology](arkts-telephony-radio-radiotechnology-e.md)

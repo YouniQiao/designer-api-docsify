@@ -14,4 +14,4 @@ declare type SpringLoadingContext = import('../api/@ohos.arkui.dragController').
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-**属性类型：** import('../api/@ohos.arkui.dragController').default.SpringLoadingContext
+**类型：** import('../api/@ohos.arkui.dragController').default.SpringLoadingContext

@@ -14,4 +14,4 @@ export type InteropAbilityMonitor = _InteropAbilityMonitor
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
-**属性类型：** _InteropAbilityMonitor
+**类型：** _InteropAbilityMonitor

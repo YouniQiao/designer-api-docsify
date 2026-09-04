@@ -61,7 +61,7 @@ onCreate(launchParam: AbilityConstant.LaunchParam): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| launchParam | AbilityConstant.LaunchParam | 是 | 应用启动参数，包含应用启动原因、应用上次退出原因等。<br>**起始版本：** 12 |
+| launchParam | [AbilityConstant.LaunchParam](arkts-ability-abilityconstant-launchparam-i.md) | 是 | 应用启动参数，包含应用启动原因、应用上次退出原因等。<br>**起始版本：** 12 |
 
 **示例**
 

@@ -113,6 +113,7 @@ export function bindController(node: FrameNode, controller: SwiperController, no
 **示例**
 
 请参考createNode('Swiper')12+示例。
+- simpleType:
 
 
 ## bindController

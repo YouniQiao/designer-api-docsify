@@ -29,7 +29,7 @@ Compared with [config.enableAbilityWithCallback](arkts-accessibility-config-enab
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the accessibility extension app, in the format of 'bundleName/abilityName'. |
-| capability | Array&lt;accessibility.Capability&gt; | Yes | Capability attributes of the accessibility extension app. |
+| capability | Array&lt;[accessibility.Capability](arkts-accessibility-accessibility-capability-t.md)&gt; | Yes | Capability attributes of the accessibility extension app. |
 
 **Return value:**
 
@@ -91,7 +91,7 @@ Compared with [config.enableAbilityWithCallback](arkts-accessibility-config-enab
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the accessibility extension app, in the format of 'bundleName/abilityName'. |
-| capability | Array&lt;accessibility.Capability&gt; | Yes | Capability attribute of the accessibility extension app. |
+| capability | Array&lt;[accessibility.Capability](arkts-accessibility-accessibility-capability-t.md)&gt; | Yes | Capability attribute of the accessibility extension app. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the accessibility extension is enabled successfully, **err** is undefined; otherwise, **err** is an error object. |
 
 **Error codes:**

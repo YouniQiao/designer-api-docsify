@@ -4,6 +4,8 @@ Enumerates the assertion result for different user operations.
 
 **Since:** 12
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.

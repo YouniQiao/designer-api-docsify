@@ -14,4 +14,4 @@ declare type InputMethodExtraConfig = import('../api/@ohos.inputMethod.ExtraConf
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-**属性类型：** import('../api/@ohos.inputMethod.ExtraConfig').InputMethodExtraConfig
+**类型：** import('../api/@ohos.inputMethod.ExtraConfig').InputMethodExtraConfig

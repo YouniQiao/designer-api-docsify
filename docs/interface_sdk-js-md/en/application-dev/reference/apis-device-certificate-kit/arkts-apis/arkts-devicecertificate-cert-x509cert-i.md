@@ -2019,7 +2019,7 @@ Obtains the public key of this X.509 certificate.
 
 | Type | Description |
 | --- | --- |
-| cryptoFramework.PubKey | Public key of the X.509 certificate obtained. This object is used only for **verify()** of **X509Cert**. |
+| [cryptoFramework.PubKey](../../apis-crypto-architecture-kit/arkts-apis/arkts-cryptoarchitecture-cryptoframework-pubkey-i.md) | Public key of the X.509 certificate obtained. This object is used only for **verify()** of **X509Cert**. |
 
 **Error codes:**
 
@@ -4069,7 +4069,7 @@ Verifies the certificate signature. This API uses an asynchronous callback to re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | cryptoFramework.PubKey | Yes | Public key used for signature verification. |
+| key | [cryptoFramework.PubKey](../../apis-crypto-architecture-kit/arkts-apis/arkts-cryptoarchitecture-cryptoframework-pubkey-i.md) | Yes | Public key used for signature verification. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
@@ -4401,7 +4401,7 @@ Verifies the certificate signature. This API uses a promise to return the result
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | cryptoFramework.PubKey | Yes | Public key used for signature verification. |
+| key | [cryptoFramework.PubKey](../../apis-crypto-architecture-kit/arkts-apis/arkts-cryptoarchitecture-cryptoframework-pubkey-i.md) | Yes | Public key used for signature verification. |
 
 **Return value:**
 

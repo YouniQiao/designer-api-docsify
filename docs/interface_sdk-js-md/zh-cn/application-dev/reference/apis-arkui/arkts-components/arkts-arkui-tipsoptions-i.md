@@ -63,7 +63,7 @@ appearingTimeWithContinuousOperation?: number
 arrowHeight?: Dimension
 ```
 
-The height of the arrow.
+设置气泡箭头高度。默认值：8单位：vp说明：不支持设置百分比。
 
 **类型：** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
 
@@ -103,7 +103,7 @@ arrowPointPosition?: ArrowPointPosition
 arrowWidth?: Dimension
 ```
 
-The width of the arrow.
+设置气泡箭头宽度。若所设置的宽度超过所在边的长度减去两倍的气泡圆角大小，则不绘制气泡箭头。默认值：16单位：vp说明：不支持设置百分比。
 
 **类型：** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
 

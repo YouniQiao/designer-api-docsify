@@ -18,7 +18,7 @@ status: bundle.InstallErrorCode
 
 表示安装或卸载错误状态码。取值范围：枚举值[InstallErrorCode](arkts-ability-bundle-installerrorcode-e.md)。
 
-**类型：** bundle.InstallErrorCode
+**类型：** [bundle.InstallErrorCode](arkts-ability-bundle-installerrorcode-e.md)
 
 **默认值：** Indicates the install or uninstall error code
 

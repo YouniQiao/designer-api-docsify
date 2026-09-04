@@ -14,4 +14,4 @@ Defines the angle property with number in units of deg.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** `${number}deg`
+**Type:** `${number}deg`

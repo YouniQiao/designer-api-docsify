@@ -6,6 +6,8 @@ Enum for identification result inside and outside the door
 
 **Since:** 23
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.MultimodalAwareness.DistanceMeasurement
 
 **System API:** This is a system API.

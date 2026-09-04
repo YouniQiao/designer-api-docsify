@@ -39,7 +39,7 @@ Connects to an asset loader by obtaining a RemoteObject instance of AssetLoader,
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;rpc.RemoteObject&gt; | Promise used to return the RemoteObject instance of AssetLoader. |
+| Promise&lt;[rpc.RemoteObject](../../apis-ipc-kit/arkts-apis/arkts-ipc-rpc-remoteobject-c.md)&gt; | Promise used to return the RemoteObject instance of AssetLoader. |
 
 **Examples**
 
@@ -85,7 +85,7 @@ Connects to a cloud database by obtaining a RemoteObject instance of CloudDB, wh
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;rpc.RemoteObject&gt; | Promise used to return the RemoteObject instance of CloudDB. |
+| Promise&lt;[rpc.RemoteObject](../../apis-ipc-kit/arkts-apis/arkts-ipc-rpc-remoteobject-c.md)&gt; | Promise used to return the RemoteObject instance of CloudDB. |
 
 **Examples**
 
@@ -131,7 +131,7 @@ Connects to ShareCenter by obtaining a RemoteObject instance of ShareCenter, whi
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;rpc.RemoteObject&gt; | Promise used to return the RemoteObject instance of ShareCenter. |
+| Promise&lt;[rpc.RemoteObject](../../apis-ipc-kit/arkts-apis/arkts-ipc-rpc-remoteobject-c.md)&gt; | Promise used to return the RemoteObject instance of ShareCenter. |
 
 **Examples**
 

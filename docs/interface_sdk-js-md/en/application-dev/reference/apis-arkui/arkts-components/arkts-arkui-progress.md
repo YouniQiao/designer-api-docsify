@@ -340,6 +340,7 @@ struct ProgressExample {
 ```
 
 This example demonstrates how to set the border radius of the capsule progress indicator using the input parameter borderRadius of [CapsuleStyleOptions](arkts-arkui-capsulestyleoptions-i.md).
+The borderRadius attribute is supported since API version 18.
 
 ```TypeScript
 import { LengthMetrics } from '@kit.ArkUI';

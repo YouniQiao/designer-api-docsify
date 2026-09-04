@@ -134,7 +134,7 @@ Clears the canvas with a given color. This API has the same effect as [drawColor
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | common2D.Color | Yes | Color in ARGB format. The value of each color channel is an integer ranging from 0 to 255. |
+| color | [common2D.Color](arkts-arkgraphics2d-common2d-color-i.md) | Yes | Color in ARGB format. The value of each color channel is an integer ranging from 0 to 255. |
 
 **Error codes:**
 
@@ -173,7 +173,7 @@ Clears the canvas with a given color.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | common2D.Color \| number | Yes | Color, represented by an unsigned integer in hexadecimal ARGB format. |
+| color | [common2D.Color](arkts-arkgraphics2d-common2d-color-i.md) \| number | Yes | Color, represented by an unsigned integer in hexadecimal ARGB format. |
 
 **Examples**
 
@@ -251,7 +251,7 @@ Clips the drawable area of the canvas using a rectangle.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rect | common2D.Rect | Yes | Rectangle. |
+| rect | [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) | Yes | Rectangle. |
 | clipOp | [ClipOp](arkts-arkgraphics2d-drawing-clipop-e.md) | No | Clip mode. The default value is **INTERSECT**. |
 | doAntiAlias | boolean | No | Whether to enable anti-aliasing. The value **true** means to enable anti- aliasing, and **false** means the opposite. Default value: **false**. |
 
@@ -422,7 +422,7 @@ Creates a **Canvas** object that uses a **PixelMap** as the drawing target.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pixelmap | image.PixelMap | Yes | PixelMap** used to create the object. |
+| pixelmap | [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | Yes | PixelMap** used to create the object. |
 
 **Error codes:**
 
@@ -527,7 +527,7 @@ Draws an arc on the canvas. with the start angle and sweep angle specified. If t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| arc | common2D.Rect | Yes | Rectangular boundary that encapsulates the oval including the arc. |
+| arc | [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) | Yes | Rectangular boundary that encapsulates the oval including the arc. |
 | startAngle | number | Yes | Start angle, in degrees. The value is a floating point number. When the degree is **0**, the start point is located at the right end of the oval. A positive number indicates that the start point is placed clockwise, and a negative number indicates that the start point is placed counterclockwise. |
 | sweepAngle | number | Yes | Angle to sweep, in degrees. The value is a floating point number. A positive number indicates a clockwise sweep, and a negative value indicates a counterclockwise swipe. The valid range is from -360 degrees to 360 degrees. If the absolute value of the sweep angle exceeds 360 degrees, an ellipse is drawn. |
 
@@ -574,7 +574,7 @@ Draws an arc on the canvas. It enables you to define the start angle, sweep angl
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| arc | common2D.Rect | Yes | Rectangular boundary that encapsulates the oval including the arc. |
+| arc | [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) | Yes | Rectangular boundary that encapsulates the oval including the arc. |
 | startAngle | number | Yes | Start angle, in degrees. The value is a floating point number. When the degree is **0**, the start point is located at the right end of the oval. A positive number indicates that the start point is placed clockwise, and a negative number indicates that the start point is placed counterclockwise. |
 | sweepAngle | number | Yes | Angle to sweep, in degrees. The value is a floating point number. A positive number indicates a clockwise sweep, and a negative value indicates a counterclockwise swipe. The swipe angle can exceed 360 degrees, and a complete ellipse is drawn. |
 | useCenter | boolean | Yes | Whether the start point and end point of the arc are connected to its center. The value **true** means that they are connected to the center; the value **false** means the opposite. |
@@ -702,7 +702,7 @@ Fills the drawable area of the canvas with the specified color and [BlendMode](a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | common2D.Color | Yes | Color in ARGB format. The value of each color channel is an integer ranging from 0 to 255. |
+| color | [common2D.Color](arkts-arkgraphics2d-common2d-color-i.md) | Yes | Color in ARGB format. The value of each color channel is an integer ranging from 0 to 255. |
 | blendMode | BlendMode | No | Blend mode. The default mode is **SRC_OVER**. |
 
 **Error codes:**
@@ -833,7 +833,7 @@ Draws the array of glyphs with specified font. Nothing is drawn if glyphCount is
 | --- | --- | --- | --- |
 | glyphIds | Array&lt;number&gt; | Yes | Indicates an array of glyph IDs. |
 | glyphIdOffset | number | Yes | Indicates the number of elements to skip before drawing in glyphIds array. |
-| positions | Array&lt;common2D.Point&gt; | Yes | Indicates an array of positions. |
+| positions | Array&lt;[common2D.Point](arkts-arkgraphics2d-common2d-point-i.md)&gt; | Yes | Indicates an array of positions. |
 | positionOffset | number | Yes | Indicates the number of elements to skip before drawing in positions. |
 | glyphCount | number | Yes | Indicates the number of glyphs to be drawn. |
 | font | Font | Yes | Indicates the font used for drawing. |
@@ -888,7 +888,7 @@ Draws an image. The coordinates of the upper left corner of the image are (left,
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pixelmap | image.PixelMap | Yes | PixelMap** of an image. |
+| pixelmap | [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | Yes | PixelMap** of an image. |
 | left | number | Yes | X coordinate of the upper left corner of the image. The value is a floating point number. |
 | top | number | Yes | Y coordinate of the upper left corner of the image. The value is a floating point number. |
 | samplingOptions | [SamplingOptions](arkts-arkgraphics2d-drawing-samplingoptions-c.md) | No | Sampling options. By default, the **SamplingOptions** object created using the no-argument constructor is used.<br>**Since:** 12 |
@@ -956,9 +956,9 @@ The intersections of even-numbered rows and columns (starting from 0) are fixed 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pixelmap | image.PixelMap | Yes | PixelMap** to draw. |
+| pixelmap | [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | Yes | PixelMap** to draw. |
 | lattice | [Lattice](arkts-arkgraphics2d-drawing-lattice-c.md) | Yes | Lattice object. |
-| dstRect | common2D.Rect | Yes | Target rectangle. |
+| dstRect | [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) | Yes | Target rectangle. |
 | filterMode | [FilterMode](arkts-arkgraphics2d-drawing-filtermode-e.md) | Yes | Filter mode. |
 
 **Error codes:**
@@ -1044,9 +1044,9 @@ If the four corner sections are smaller than the target rectangle, they will be 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pixelmap | image.PixelMap | Yes | PixelMap** to draw. |
-| center | common2D.Rect | Yes | Central rectangle that divides the image into nine sections by extending its four edges. |
-| dstRect | common2D.Rect | Yes | Target rectangle drawn on the canvas. |
+| pixelmap | [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | Yes | PixelMap** to draw. |
+| center | [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) | Yes | Central rectangle that divides the image into nine sections by extending its four edges. |
+| dstRect | [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) | Yes | Target rectangle drawn on the canvas. |
 | filterMode | [FilterMode](arkts-arkgraphics2d-drawing-filtermode-e.md) | Yes | Filter mode. |
 
 **Error codes:**
@@ -1127,8 +1127,8 @@ Draws an image onto a specified area of the canvas.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pixelmap | image.PixelMap | Yes | PixelMap** of an image. |
-| dstRect | common2D.Rect | Yes | Rectangle** object, which specifies the area of the canvas onto which the image will be drawn. |
+| pixelmap | [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | Yes | PixelMap** of an image. |
+| dstRect | [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) | Yes | Rectangle** object, which specifies the area of the canvas onto which the image will be drawn. |
 | samplingOptions | [SamplingOptions](arkts-arkgraphics2d-drawing-samplingoptions-c.md) | No | Sampling options. By default, the **SamplingOptions** object created using the no-argument constructor is used. |
 
 **Error codes:**
@@ -1193,9 +1193,9 @@ Draws a portion of an image onto a specified area of the canvas.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pixelmap | image.PixelMap | Yes | PixelMap** of an image. |
-| srcRect | common2D.Rect | Yes | Rectangle** object, which specifies the portion of the image to draw. |
-| dstRect | common2D.Rect | Yes | Rectangle** object, which specifies the area of the canvas onto which the image will be drawn. |
+| pixelmap | [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | Yes | PixelMap** of an image. |
+| srcRect | [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) | Yes | Rectangle** object, which specifies the portion of the image to draw. |
+| dstRect | [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) | Yes | Rectangle** object, which specifies the area of the canvas onto which the image will be drawn. |
 | samplingOptions | [SamplingOptions](arkts-arkgraphics2d-drawing-samplingoptions-c.md) | No | Sampling options. By default, the **SamplingOptions** object created using the no-argument constructor is used. |
 | constraint | [SrcRectConstraint](arkts-arkgraphics2d-drawing-srcrectconstraint-e.md) | No | Constraint type of the source rectangle. The default value is **STRICT**. |
 
@@ -1351,7 +1351,7 @@ Draws an oval on the canvas, where the shape and position of the oval are define
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| oval | common2D.Rect | Yes | Rectangle. The oval inscribed within the rectangle is the oval to draw. |
+| oval | [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) | Yes | Rectangle. The oval inscribed within the rectangle is the oval to draw. |
 
 **Error codes:**
 
@@ -1444,7 +1444,7 @@ Draws a **PixelMap** based on a mesh, with the mesh vertices evenly distributed 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pixelmap | image.PixelMap | Yes | PixelMap** to draw. |
+| pixelmap | [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | Yes | PixelMap** to draw. |
 | meshWidth | number | Yes | Number of columns in the mesh. The value is an integer greater than 0. |
 | meshHeight | number | Yes | Number of rows in the mesh. The value is an integer greater than 0. |
 | vertices | Array&lt;number&gt; | Yes | Array of vertices, which specify the position to draw. The value is a floating-point array and the size must be ((meshWidth+1) * (meshHeight+1) + vertOffset) * 2. |
@@ -1559,7 +1559,7 @@ Draws a group of points, line segments, or polygons on the canvas, with the spec
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| points | Array&lt;common2D.Point&gt; | Yes | Array that holds the points to draw. The length cannot be **0**. |
+| points | Array&lt;[common2D.Point](arkts-arkgraphics2d-common2d-point-i.md)&gt; | Yes | Array that holds the points to draw. The length cannot be **0**. |
 | mode | [PointMode](arkts-arkgraphics2d-drawing-pointmode-e.md) | No | Mode in which the points are drawn. The default value is **drawing.PointMode.POINTS**. |
 
 **Error codes:**
@@ -1624,7 +1624,7 @@ Draws a rectangle. By default, black is used for filling.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rect | common2D.Rect | Yes | Rectangle to draw. |
+| rect | [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) | Yes | Rectangle to draw. |
 
 **Error codes:**
 
@@ -1801,11 +1801,11 @@ Draws a spot shadow and uses a given path to outline the ambient shadow.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | path | Path | Yes | Path** object, which is used to outline the shadow. |
-| planeParams | common2D.Point3d | Yes | 3D vector, which is used to determine the z-axis offset of an occluder relative to the canvas, based on its x and y coordinates. |
-| devLightPos | common2D.Point3d | Yes | Position of the light relative to the canvas. |
+| planeParams | [common2D.Point3d](arkts-arkgraphics2d-common2d-point3d-i.md) | Yes | 3D vector, which is used to determine the z-axis offset of an occluder relative to the canvas, based on its x and y coordinates. |
+| devLightPos | [common2D.Point3d](arkts-arkgraphics2d-common2d-point3d-i.md) | Yes | Position of the light relative to the canvas. |
 | lightRadius | number | Yes | Radius of the light. The value is a floating point number. |
-| ambientColor | common2D.Color | Yes | Color of the ambient shadow. |
-| spotColor | common2D.Color | Yes | Color of the spot shadow. |
+| ambientColor | [common2D.Color](arkts-arkgraphics2d-common2d-color-i.md) | Yes | Color of the ambient shadow. |
+| spotColor | [common2D.Color](arkts-arkgraphics2d-common2d-color-i.md) | Yes | Color of the spot shadow. |
 | flag | [ShadowFlag](arkts-arkgraphics2d-drawing-shadowflag-e.md) | Yes | Defines an enum for the shadow flags. |
 
 **Error codes:**
@@ -1863,11 +1863,11 @@ Draws a spot shadow and uses a given path to outline the ambient shadow.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | path | Path | Yes | Path** object, which is used to outline the shadow. |
-| planeParams | common2D.Point3d | Yes | 3D vector, which is used to calculate the offset in the Z axis. |
-| devLightPos | common2D.Point3d | Yes | Position of the light relative to the canvas. |
+| planeParams | [common2D.Point3d](arkts-arkgraphics2d-common2d-point3d-i.md) | Yes | 3D vector, which is used to calculate the offset in the Z axis. |
+| devLightPos | [common2D.Point3d](arkts-arkgraphics2d-common2d-point3d-i.md) | Yes | Position of the light relative to the canvas. |
 | lightRadius | number | Yes | Radius of the light. The value is a floating point number. |
-| ambientColor | common2D.Color \| number | Yes | Ambient shadow color, represented by a 32-bit unsigned integer in hexadecimal ARGB format. |
-| spotColor | common2D.Color \| number | Yes | Spot shadow color, represented by a 32-bit unsigned integer in hexadecimal ARGB format. |
+| ambientColor | [common2D.Color](arkts-arkgraphics2d-common2d-color-i.md) \| number | Yes | Ambient shadow color, represented by a 32-bit unsigned integer in hexadecimal ARGB format. |
+| spotColor | [common2D.Color](arkts-arkgraphics2d-common2d-color-i.md) \| number | Yes | Spot shadow color, represented by a 32-bit unsigned integer in hexadecimal ARGB format. |
 | flag | [ShadowFlag](arkts-arkgraphics2d-drawing-shadowflag-e.md) | Yes | Defines an enum for the shadow flags. |
 
 **Error codes:**
@@ -2061,8 +2061,8 @@ Draws a triangle mesh described by the vertex array.
 | --- | --- | --- | --- |
 | vertexMode | [VertexMode](arkts-arkgraphics2d-drawing-vertexmode-e.md) | Yes | Connection mode of the vertex to be drawn. |
 | vertexCount | number | Yes | Number of elements in the vertex array. The value is an integer greater than or equal to 3. |
-| positions | Array&lt;common2D.Point&gt; | Yes | Array that holds the position of every vertex. The array cannot be null and its length must be equal to the value of **vertexCount**. |
-| texs | Array&lt;common2D.Point&gt; \| null | Yes | Array of texture space coordinates corresponding to the vertices. This array can be null, which indicates that the texture space is invalid. If not null, the length of the array must be equal to the value of **vertexCount**. |
+| positions | Array&lt;[common2D.Point](arkts-arkgraphics2d-common2d-point-i.md)&gt; | Yes | Array that holds the position of every vertex. The array cannot be null and its length must be equal to the value of **vertexCount**. |
+| texs | Array&lt;[common2D.Point](arkts-arkgraphics2d-common2d-point-i.md)&gt; \| null | Yes | Array of texture space coordinates corresponding to the vertices. This array can be null, which indicates that the texture space is invalid. If not null, the length of the array must be equal to the value of **vertexCount**. |
 | colors | Array&lt;number&gt; \| null | Yes | Array of colors corresponding to the vertices, which is used for interpolation in triangles. This array can be null, which indicates that the color effect is the default color set by the user. If not null, the length of the array must be equal to the value of **vertexCount**. |
 | indexCount | number | Yes | Number of indices. The value can be **0** or a value greater than or equal to 3. If the value is not **0**, the value must be an integer greater than or equal to 3. |
 | indices | Array&lt;number&gt; \| null | Yes | Array of vertex indices. The value can be null. In this case, the value of **indexCount** is ignored (an integer greater than or equal to 3 or equal to 0). If not null, the value length must be the same as that of **indexCount**. |
@@ -2153,7 +2153,7 @@ Obtains the bounds of the cropping region of the canvas.
 
 | Type | Description |
 | --- | --- |
-| common2D.Rect | Bounds of the cropping region. |
+| [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) | Bounds of the cropping region. |
 
 **Examples**
 
@@ -2428,7 +2428,7 @@ Checks whether the rectangle is not intersecting with the canvas area. The canva
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rect | common2D.Rect | Yes | Describes a rectangle. |
+| rect | [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) | Yes | Describes a rectangle. |
 
 **Return value:**
 
@@ -2690,7 +2690,7 @@ Saves the matrix and cropping region of the canvas, and allocates a **PixelMap**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rect | common2D.Rect \| null | No | Rect** object, which is used to limit the size of the graphics layer. The default value is the current canvas size. |
+| rect | [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) \| null | No | Rect** object, which is used to limit the size of the graphics layer. The default value is the current canvas size. |
 | brush | [Brush](arkts-arkgraphics2d-drawing-brush-c.md) \| null | No | Brush** object. The alpha value, filter effect, and blend mode of the brush are applied when the **PixelMap** is drawn. If null is passed in, no effect is applied. |
 
 **Return value:**

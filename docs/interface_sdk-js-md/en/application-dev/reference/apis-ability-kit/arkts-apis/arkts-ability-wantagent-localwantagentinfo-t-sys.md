@@ -12,4 +12,4 @@ Provides the information required to create a local WantAgent.
 
 **System API:** This is a system API.
 
-**Property type:** _LocalWantAgentInfo
+**Type:** _LocalWantAgentInfo

@@ -29,7 +29,7 @@ function createRdbPredicates(name: string, dataAbilityPredicates: DataAbilityPre
 
 | 类型 | 说明 |
 | --- | --- |
-| rdb.RdbPredicates | 返回RdbPredicates对象。 |
+| [rdb.RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | 返回RdbPredicates对象。 |
 
 **示例**
 

@@ -14,4 +14,4 @@ export type BorderRadiuses = Corners<number>
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-**属性类型：** [Corners](arkts-arkui-graphics-corners-i.md)&lt;number&gt;
+**类型：** [Corners](arkts-arkui-graphics-corners-i.md)&lt;number&gt;

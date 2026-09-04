@@ -4,6 +4,8 @@ Enumerates the actions triggered when an application is closed by the user. You 
 
 **Since:** 15
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## TERMINATE_IMMEDIATELY

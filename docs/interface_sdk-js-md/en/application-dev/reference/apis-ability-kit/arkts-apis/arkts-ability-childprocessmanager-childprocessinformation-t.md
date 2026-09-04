@@ -12,4 +12,4 @@ Defines the child process information.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
-**Property type:** _ChildProcessInformation
+**Type:** _ChildProcessInformation

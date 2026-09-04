@@ -12,4 +12,4 @@ Mission snapshot corresponding to mission.
 
 **System API:** This is a system API.
 
-**Property type:** _MissionSnapshot
+**Type:** _MissionSnapshot

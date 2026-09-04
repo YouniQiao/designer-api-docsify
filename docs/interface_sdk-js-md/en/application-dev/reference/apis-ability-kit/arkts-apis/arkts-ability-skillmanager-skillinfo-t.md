@@ -14,4 +14,4 @@ Provides information about a skill, including skill name, type, and associated m
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
-**Property type:** _SkillInfo
+**Type:** _SkillInfo

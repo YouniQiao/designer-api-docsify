@@ -360,7 +360,7 @@ function createImageSource(rawfile: resourceManager.RawFileDescriptor, options?:
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| rawfile | resourceManager.RawFileDescriptor | 是 | 图像资源文件的RawFileDescriptor。 |
+| rawfile | [resourceManager.RawFileDescriptor](../../apis-localization-kit/arkts-apis/arkts-localization-resourcemanager-rawfiledescriptor-t.md) | 是 | 图像资源文件的RawFileDescriptor。 |
 | options | [SourceOptions](arkts-image-image-sourceoptions-i.md) | 否 | 图片属性，包括图片像素密度、像素格式和图片尺寸。 |
 
 **返回值：**

@@ -14,4 +14,4 @@ Defines drag-related data.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** import('../api/@ohos.data.unifiedDataChannel').default.UnifiedData
+**Type:** import('../api/@ohos.data.unifiedDataChannel').default.UnifiedData

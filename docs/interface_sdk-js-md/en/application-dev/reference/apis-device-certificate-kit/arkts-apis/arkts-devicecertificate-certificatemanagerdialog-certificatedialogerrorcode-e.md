@@ -4,6 +4,8 @@ Enumerates the error codes reported when the certificate management dialog box A
 
 **Since:** 13
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.Security.CertificateManagerDialog
 
 ## ERROR_GENERIC

@@ -6,6 +6,8 @@ Enumeration of flags used to control what content is populated in a SkillInfo. M
 
 **Since:** 26.0.0
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 ## GET_SKILL_INFO_DEFAULT

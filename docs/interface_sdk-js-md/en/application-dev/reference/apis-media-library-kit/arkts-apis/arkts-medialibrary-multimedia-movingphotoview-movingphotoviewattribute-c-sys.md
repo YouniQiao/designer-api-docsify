@@ -36,7 +36,7 @@ Sets playback strategy.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| strategy | media.PlaybackStrategy | Yes | playback strategy |
+| strategy | [media.PlaybackStrategy](../../apis-media-kit/arkts-apis/arkts-media-media-playbackstrategy-i.md) | Yes | playback strategy |
 
 **Return value:**
 

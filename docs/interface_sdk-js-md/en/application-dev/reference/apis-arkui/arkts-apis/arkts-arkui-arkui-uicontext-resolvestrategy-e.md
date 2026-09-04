@@ -4,6 +4,8 @@ Enumerates resolution strategies for **UIContext** objects.
 
 **Since:** 22
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## CALLING_SCOPE

@@ -4,6 +4,8 @@ Supported background play mode definitions.
 
 **Since:** 24
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 ## ENABLE_BACKGROUND_PLAY

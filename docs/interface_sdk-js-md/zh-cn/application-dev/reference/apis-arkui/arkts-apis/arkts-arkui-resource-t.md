@@ -14,4 +14,4 @@ Defines the data type of the interface restriction.
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-**属性类型：** import('../api/global/resource').Resource
+**类型：** import('../api/global/resource').Resource

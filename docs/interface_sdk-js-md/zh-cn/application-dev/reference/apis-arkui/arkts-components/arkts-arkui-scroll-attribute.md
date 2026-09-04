@@ -33,7 +33,7 @@ edgeEffect(edgeEffect: EdgeEffect, options?: EdgeEffectOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| edgeEffect | [EdgeEffect](../arkts-apis/arkts-arkui-edgeeffect-e.md) | 是 | Scroll组件的边缘滑动效果，支持弹簧效果和阴影效果。默认值：EdgeEffect.None |
+| edgeEffect | [EdgeEffect](../arkts-apis/arkts-arkui-edgeeffect-e.md) | 是 | [Scroll组件的边缘滑动效果，支持弹簧效果和阴影效果。默认值：EdgeEffect.None](arkts-arkui-imageinterpolation-e.md) |
 | options | [EdgeEffectOptions](arkts-arkui-edgeeffectoptions-i.md) | 否 | 组件内容大小小于组件自身时，是否开启滑动效果。设置为{ alwaysEnabled: true }会开启滑动效果，{ alwaysEnabled: false }不开启；不传入时使用默认值。默认值：{ alwaysEnabled: true }<br>**起始版本：** 11 |
 
 ## enableBouncesZoom
@@ -529,7 +529,7 @@ scrollable(value: ScrollDirection)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ScrollDirection](arkts-arkui-scrolldirection-e.md) | 是 | 滚动方向。默认值：ScrollDirection.Vertical |
+| value | [ScrollDirection](arkts-arkui-scrolldirection-e.md) | 是 | [滚动方向。默认值：ScrollDirection.Vertical](arkts-arkui-scrolldirection-e.md) |
 
 ## scrollBar
 
@@ -551,7 +551,7 @@ scrollBar(barState: BarState)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| barState | [BarState](../arkts-apis/arkts-arkui-barstate-e.md) | 是 | 滚动条状态。默认值：BarState.Auto |
+| barState | [BarState](../arkts-apis/arkts-arkui-barstate-e.md) | 是 | [滚动条状态。默认值：BarState.Auto](arkts-arkui-navigationmode-e.md) |
 
 ## scrollBarColor
 

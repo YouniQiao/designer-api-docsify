@@ -14,4 +14,4 @@ Defines the callback for an automatic or a manual saving request.
 
 **System API:** This is a system API.
 
-**Property type:** _AutoFillRequest.SaveRequestCallback
+**Type:** [_AutoFillRequest.SaveRequestCallback](arkts-ability-autofillrequest-saverequestcallback-i-sys.md)

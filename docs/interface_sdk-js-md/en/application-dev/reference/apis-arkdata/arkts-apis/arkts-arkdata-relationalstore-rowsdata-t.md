@@ -12,4 +12,4 @@ Indicates multiple rows of data with an array.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
-**Property type:** Array&lt;[RowData](arkts-arkdata-relationalstore-rowdata-t.md)&gt;
+**Type:** Array&lt;[RowData](arkts-arkdata-relationalstore-rowdata-t.md)&gt;

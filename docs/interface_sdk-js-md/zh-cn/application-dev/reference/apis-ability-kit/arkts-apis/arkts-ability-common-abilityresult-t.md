@@ -14,4 +14,4 @@ export type AbilityResult = _AbilityResult
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
-**属性类型：** _AbilityResult
+**类型：** _AbilityResult

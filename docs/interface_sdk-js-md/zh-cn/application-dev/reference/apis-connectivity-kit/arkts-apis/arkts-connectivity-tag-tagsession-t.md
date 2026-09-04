@@ -14,4 +14,4 @@ export type TagSession = _TagSession
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
-**属性类型：** _TagSession
+**类型：** _TagSession

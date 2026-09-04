@@ -36,7 +36,7 @@ continuationMode?: continuationManager.ContinuationMode
 
 Continuation mode.
 
-**Type:** continuationManager.ContinuationMode
+**Type:** [continuationManager.ContinuationMode](arkts-ability-continuationmanager-continuationmode-e.md)
 
 **Since:** 8
 

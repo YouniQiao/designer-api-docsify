@@ -52,6 +52,7 @@ Sets the gesture event consumption result.
 **Examples**
 
 For details, see [onNativeEmbedGestureEvent](./arkts-basic-components-web-events.md#onnativeembedgestureevent).
+- simpleType:
 
 ## setGestureEventResult
 
@@ -75,6 +76,7 @@ Sets the gesture event consumption result and bubbling control.
 **Examples**
 
 For details, see [onNativeEmbedGestureEvent](./arkts-basic-components-web-events.md#onnativeembedgestureevent).
+- simpleType:
 
 ## setMouseEventResult
 
@@ -98,3 +100,4 @@ Sets the mouse event consumption result and bubbling control.
 **Examples**
 
 For details about the sample code of the mouse event, see [onNativeEmbedMouseEvent](./arkts-basic-components-web-events.md#onnativeembedmouseevent).
+- simpleType:

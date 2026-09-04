@@ -12,4 +12,4 @@ export type BundleInfo = _BundleInfo.BundleInfo
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
-**属性类型：** _BundleInfo.BundleInfo
+**类型：** [_BundleInfo.BundleInfo](arkts-ability-bundleinfo-i.md)

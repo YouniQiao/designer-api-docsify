@@ -23,7 +23,7 @@ colorMode?: ConfigurationConstant.ColorMode
 
 表示深浅色模式，取值范围：浅色模式（COLOR_MODE_LIGHT），深色模式（COLOR_MODE_DARK）。默认为浅色。
 
-**类型：** ConfigurationConstant.ColorMode
+**类型：** [ConfigurationConstant.ColorMode](arkts-ability-configurationconstant-colormode-depr-e.md)
 
 **起始版本：** 8
 

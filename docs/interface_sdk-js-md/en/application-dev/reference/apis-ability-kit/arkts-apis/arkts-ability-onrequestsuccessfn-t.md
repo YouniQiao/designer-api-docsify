@@ -23,3 +23,4 @@ Defines the callback for successful ability launches.
 **Examples**
 
 See [OnRequestFailureFn](arkts-ability-onrequestfailurefn-t.md).
+- simpleType:

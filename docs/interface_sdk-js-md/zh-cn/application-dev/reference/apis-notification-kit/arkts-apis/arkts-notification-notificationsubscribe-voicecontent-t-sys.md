@@ -14,4 +14,4 @@ export type VoiceContent = _VoiceContent
 
 **系统接口：** 此接口为系统接口。
 
-**属性类型：** _VoiceContent
+**类型：** _VoiceContent

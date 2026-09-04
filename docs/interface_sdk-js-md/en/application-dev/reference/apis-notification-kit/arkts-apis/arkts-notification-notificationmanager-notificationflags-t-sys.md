@@ -12,4 +12,4 @@ Defines the notification flags.
 
 **System API:** This is a system API.
 
-**Property type:** _NotificationFlags
+**Type:** _NotificationFlags

@@ -12,4 +12,4 @@ Array of StreamUsages.
 
 **System API:** This is a system API.
 
-**Property type:** Array&lt;[StreamUsage](arkts-audio-audio-streamusage-e.md)&gt;
+**Type:** Array&lt;[StreamUsage](arkts-audio-audio-streamusage-e.md)&gt;

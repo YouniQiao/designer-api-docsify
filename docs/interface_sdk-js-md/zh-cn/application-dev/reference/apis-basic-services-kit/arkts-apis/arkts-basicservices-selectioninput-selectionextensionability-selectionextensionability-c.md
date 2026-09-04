@@ -45,7 +45,7 @@ onConnect(want: Want): rpc.RemoteObject
 
 | 类型 | 说明 |
 | --- | --- |
-| rpc.RemoteObject | RemoteObject通信桩对象，开发者需实现该对象的远程消息处理方法（如onRemoteMessageRequest），系统将此对象传递给客户端用于IPC通信。 |
+| [rpc.RemoteObject](../../apis-ipc-kit/arkts-apis/arkts-ipc-rpc-remoteobject-c.md) | RemoteObject通信桩对象，开发者需实现该对象的远程消息处理方法（如onRemoteMessageRequest），系统将此对象传递给客户端用于IPC通信。 |
 
 **示例**
 

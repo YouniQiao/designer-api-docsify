@@ -503,7 +503,7 @@ navBarPosition(value: NavBarPosition)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [NavBarPosition](arkts-arkui-navbarposition-e.md) | 是 | 导航页位置。默认值：NavBarPosition.Start |
+| value | [NavBarPosition](arkts-arkui-navbarposition-e.md) | 是 | [导航页位置。默认值：NavBarPosition.Start](arkts-arkui-navbarposition-e.md) |
 
 ## navBarWidth
 
@@ -811,7 +811,7 @@ titleMode(value: NavigationTitleMode)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [NavigationTitleMode](arkts-arkui-navigationtitlemode-e.md) | 是 | 页面标题栏显示模式。默认值：NavigationTitleMode.Free |
+| value | [NavigationTitleMode](arkts-arkui-navigationtitlemode-e.md) | 是 | [页面标题栏显示模式。默认值：NavigationTitleMode.Free](arkts-arkui-scrolldirection-e.md) |
 
 ## toolBar
 

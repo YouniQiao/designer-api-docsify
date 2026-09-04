@@ -4,6 +4,8 @@ Defines the CPU level of the efficiency resource.
 
 **Since:** 23
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.EfficiencyResourcesApply
 
 **System API:** This is a system API.

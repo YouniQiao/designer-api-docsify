@@ -67,3 +67,4 @@ gravityIntensity?: number
 **示例**
 
 示例请参考[UnionEffectContainer示例](ts-container-unioneffectcomponent-sys.md#示例)。
+- simpleType:

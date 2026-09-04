@@ -28,7 +28,7 @@ Converts the array data that cannot be passed across threads into the data that 
 
 | Type | Description |
 | --- | --- |
-| collections.Array&lt;ValueType&gt; | Array data that can be passed across threads. |
+| [collections.Array](../../apis-arkts/arkts-apis/arkts-arkts-collections-array-c.md)&lt;ValueType&gt; | Array data that can be passed across threads. |
 
 **Error codes:**
 

@@ -14,4 +14,4 @@ Defines the size and position information of an auto-fill pop-up.
 
 **System API:** This is a system API.
 
-**Property type:** _AutoFillPopupConfig.default
+**Type:** _AutoFillPopupConfig.default

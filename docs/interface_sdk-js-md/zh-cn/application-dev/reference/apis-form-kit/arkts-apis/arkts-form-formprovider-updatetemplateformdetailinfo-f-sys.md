@@ -26,7 +26,7 @@ function updateTemplateFormDetailInfo(templateFormInfo: Array<formInfo.TemplateF
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| templateFormInfo | Array&lt;formInfo.TemplateFormDetailInfo&gt; | 是 | 指定的模板卡片静态配置信息。 |
+| templateFormInfo | Array&lt;[formInfo.TemplateFormDetailInfo](arkts-form-forminfo-templateformdetailinfo-i-sys.md)&gt; | 是 | 指定的模板卡片静态配置信息。 |
 
 **返回值：**
 

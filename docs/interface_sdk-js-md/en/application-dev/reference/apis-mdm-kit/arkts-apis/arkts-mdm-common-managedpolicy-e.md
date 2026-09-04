@@ -4,6 +4,8 @@ Enumerates enterprise device management policies.
 
 **Since:** 22
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## DEFAULT

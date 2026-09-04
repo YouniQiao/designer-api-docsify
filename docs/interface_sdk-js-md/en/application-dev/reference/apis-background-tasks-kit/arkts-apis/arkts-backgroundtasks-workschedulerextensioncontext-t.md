@@ -12,4 +12,4 @@ WorkSchedulerExtensionContext represents the context of WorkSchedulerExtensionAb
 
 **System capability:** SystemCapability.ResourceSchedule.WorkScheduler
 
-**Property type:** _WorkSchedulerExtensionContext
+**Type:** _WorkSchedulerExtensionContext

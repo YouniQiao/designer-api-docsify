@@ -31,7 +31,7 @@ Caller UIAbility向Callee UIAbility发送双方约定好的序列化的数据。
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | method | string | 是 | 由Caller和Callee双方约定好的方法名，Callee方通过该字段区分消息类型。 |
-| data | rpc.Parcelable | 是 | 由Caller向Callee发送的消息内容，消息内容是序列化的数据。 |
+| data | [rpc.Parcelable](../../apis-ipc-kit/arkts-apis/arkts-ipc-rpc-parcelable-i.md) | 是 | 由Caller向Callee发送的消息内容，消息内容是序列化的数据。 |
 
 **返回值：**
 
@@ -126,13 +126,13 @@ Caller UIAbility向Callee UIAbility发送消息，Callee UIAbility处理完成�
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | method | string | 是 | 由Caller和Callee双方约定好的方法名，Callee方通过该字段区分消息类型。 |
-| data | rpc.Parcelable | 是 | 由Caller向Callee发送的消息内容，消息内容是序列化的数据。 |
+| data | [rpc.Parcelable](../../apis-ipc-kit/arkts-apis/arkts-ipc-rpc-parcelable-i.md) | 是 | 由Caller向Callee发送的消息内容，消息内容是序列化的数据。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;rpc.MessageSequence&gt; | Promise对象，返回Callee UIAbility的应答数据。 |
+| Promise&lt;[rpc.MessageSequence](../../apis-ipc-kit/arkts-apis/arkts-ipc-rpc-messagesequence-c.md)&gt; | Promise对象，返回Callee UIAbility的应答数据。 |
 
 **错误码：**
 

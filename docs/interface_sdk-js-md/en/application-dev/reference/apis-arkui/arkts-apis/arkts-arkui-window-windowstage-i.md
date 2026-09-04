@@ -1703,7 +1703,7 @@ Sets the image displayed in the multitasking view and on dock hover. This API us
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| imageResource | number \| image.PixelMap | Yes | imageResourceId or pixelMap for recent image. imageResourceId Value Range: [0x1000000, 0xffffffff]. |
+| imageResource | number \| [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | Yes | imageResourceId or pixelMap for recent image. imageResourceId Value Range: [0x1000000, 0xffffffff]. |
 | value | ImageFit | Yes | Sets the zoom type of an image. |
 
 **Return value:**
@@ -1803,7 +1803,7 @@ Sets the supported window modes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| supportedWindowModes | Array&lt;bundleManager.SupportWindowMode&gt; | Yes | The supported modes of window. |
+| supportedWindowModes | Array&lt;[bundleManager.SupportWindowMode](../../apis-ability-kit/arkts-apis/arkts-ability-bundlemanager-supportwindowmode-e.md)&gt; | Yes | The supported modes of window. |
 
 **Return value:**
 
@@ -1867,7 +1867,7 @@ Sets the supported window modes of the main window.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| supportedWindowModes | Array&lt;bundleManager.SupportWindowMode&gt; | Yes | The supported modes of window. |
+| supportedWindowModes | Array&lt;[bundleManager.SupportWindowMode](../../apis-ability-kit/arkts-apis/arkts-ability-bundlemanager-supportwindowmode-e.md)&gt; | Yes | The supported modes of window. |
 | grayOutMaximizeButton | boolean | Yes | Whether to gray out the window maximize button. The value true means to gray out the button, and false means the opposite. |
 
 **Return value:**

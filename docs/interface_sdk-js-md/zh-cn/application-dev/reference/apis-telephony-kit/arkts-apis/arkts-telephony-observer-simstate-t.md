@@ -10,4 +10,4 @@ SIM卡状态。
 
 **系统能力：** SystemCapability.Telephony.StateRegistry
 
-**属性类型：** sim.SimState
+**类型：** [sim.SimState](arkts-telephony-sim-simstate-e.md)

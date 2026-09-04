@@ -14,4 +14,4 @@ export type ContinueMissionInfo = _ContinueMissionInfo
 
 **系统接口：** 此接口为系统接口。
 
-**属性类型：** _ContinueMissionInfo
+**类型：** _ContinueMissionInfo

@@ -220,7 +220,7 @@ layoutDirection(value: FlexDirection)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [FlexDirection](../arkts-apis/arkts-arkui-flexdirection-e.md) | 是 | 布局的主轴方向。默认值：FlexDirection.Column |
+| value | [FlexDirection](../arkts-apis/arkts-arkui-flexdirection-e.md) | 是 | [布局的主轴方向。默认值：FlexDirection.Column](../arkts-apis/arkts-arkui-typenode-column-t.md) |
 
 ## nestedScroll
 

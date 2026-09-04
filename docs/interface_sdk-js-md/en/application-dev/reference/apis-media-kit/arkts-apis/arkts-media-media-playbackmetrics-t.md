@@ -10,4 +10,4 @@ Describes the container for the key-value pairs of playback metrics.
 
 **System capability:** SystemCapability.Multimedia.Media.Core
 
-**Property type:** Record&lt;[PlaybackMetricsKey](arkts-media-media-playbackmetricskey-e.md), Object&gt;
+**Type:** Record&lt;[PlaybackMetricsKey](arkts-media-media-playbackmetricskey-e.md), Object&gt;

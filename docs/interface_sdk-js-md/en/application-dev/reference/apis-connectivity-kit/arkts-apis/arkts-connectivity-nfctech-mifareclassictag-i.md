@@ -514,7 +514,7 @@ Obtains the type of this MIFARE Classic tag.
 
 | Type | Description |
 | --- | --- |
-| tag.MifareClassicType | Type of the MIFARE Classic tag obtained. |
+| [tag.MifareClassicType](arkts-connectivity-tag-mifareclassictype-e.md) | Type of the MIFARE Classic tag obtained. |
 
 **Examples**
 

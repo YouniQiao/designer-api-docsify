@@ -10,6 +10,8 @@ Adding services has requirements on the scenarios supported by the server device
 
 **Since:** 23
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.UserIAM.UserAuth.CompanionDeviceAuth
 
 **System API:** This is a system API.

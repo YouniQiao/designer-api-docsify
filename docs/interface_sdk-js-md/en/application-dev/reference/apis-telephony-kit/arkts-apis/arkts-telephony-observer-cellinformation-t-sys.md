@@ -12,4 +12,4 @@ Describes current cell information.
 
 **System API:** This is a system API.
 
-**Property type:** radio.CellInformation
+**Type:** [radio.CellInformation](arkts-telephony-radio-cellinformation-i.md)

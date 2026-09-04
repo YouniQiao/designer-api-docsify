@@ -53,7 +53,7 @@ Obtains the size, position, translation, scaling, rotation, and affine matrix in
 
 | Type | Description |
 | --- | --- |
-| componentUtils.ComponentInfo | Size, position, translation, scaling, rotation, and affine matrix information of the component. |
+| [componentUtils.ComponentInfo](arkts-arkui-componentutils-componentinfo-i.md) | Size, position, translation, scaling, rotation, and affine matrix information of the component. |
 
 **Error codes:**
 

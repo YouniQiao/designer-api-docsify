@@ -12,4 +12,4 @@ export type HapModuleInfo = _HapModuleInfo.HapModuleInfo
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
-**属性类型：** _HapModuleInfo.HapModuleInfo
+**类型：** [_HapModuleInfo.HapModuleInfo](arkts-ability-hapmoduleinfo-i.md)

@@ -4,6 +4,8 @@ Enumerates the reasons for changes in the rectangle (position and size) of the c
 
 **Since:** 14
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## HOST_WINDOW_RECT_CHANGE

@@ -12,4 +12,4 @@ Defines a key-value pair data structure that conforms to JSON format.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** { [key: string]: number | string | boolean | [] | KVObject }
+**Type:** { [key: string]: number | string | boolean | [] | KVObject }

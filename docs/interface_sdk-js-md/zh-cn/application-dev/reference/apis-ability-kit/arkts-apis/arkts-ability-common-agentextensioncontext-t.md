@@ -14,7 +14,7 @@ agent service ability的上下文。
 
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
 
-**属性类型：** _AgentExtensionContext
+**类型：** _AgentExtensionContext
 
 **示例**
 

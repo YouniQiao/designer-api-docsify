@@ -14,4 +14,4 @@ declare type PositionT<T> = import('../api/arkui/Graphics').PositionT<T>
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-**属性类型：** import('../api/arkui/Graphics').PositionT&lt;T&gt;
+**类型：** import('../api/arkui/Graphics').PositionT&lt;T&gt;

@@ -4,6 +4,8 @@ The mode of adjusting the text font size to adapt to the layout.
 
 **Since:** 10
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## MAX_LINES_FIRST

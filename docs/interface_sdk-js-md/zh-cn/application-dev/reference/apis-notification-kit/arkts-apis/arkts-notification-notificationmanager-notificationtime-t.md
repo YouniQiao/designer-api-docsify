@@ -10,4 +10,4 @@ export type NotificationTime = _NotificationTime
 
 **系统能力：** SystemCapability.Notification.Notification
 
-**属性类型：** _NotificationTime
+**类型：** _NotificationTime

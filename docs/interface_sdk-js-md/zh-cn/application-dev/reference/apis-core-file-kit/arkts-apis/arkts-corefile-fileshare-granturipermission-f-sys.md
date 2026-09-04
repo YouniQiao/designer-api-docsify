@@ -33,7 +33,7 @@ function grantUriPermission(
 | --- | --- | --- | --- |
 | uri | string | 是 | 公共目录文件URI。 |
 | bundleName | string | 是 | 分享目标的包名。 |
-| flag | wantConstant.Flags | 是 | 授权的权限，可取wantConstant.Flags.FLAG_AUTH_READ_URI_PERMISSION或wantConstant.Flags.FLAG_AUTH_WRITE_URI_PERMISSION。 |
+| flag | [wantConstant.Flags](../../apis-ability-kit/arkts-apis/arkts-ability-wantconstant-flags-depr-e.md) | 是 | 授权的权限，可取wantConstant.Flags.FLAG_AUTH_READ_URI_PERMISSION或wantConstant.Flags.FLAG_AUTH_WRITE_URI_PERMISSION。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 异步授权之后的回调。 |
 
 **错误码：**
@@ -93,7 +93,7 @@ function grantUriPermission(uri: string, bundleName: string, flag: wantConstant.
 | --- | --- | --- | --- |
 | uri | string | 是 | 公共目录文件URI。 |
 | bundleName | string | 是 | 分享目标的包名。 |
-| flag | wantConstant.Flags | 是 | 授权的权限，可取wantConstant.Flags.FLAG_AUTH_READ_URI_PERMISSION或wantConstant.Flags.FLAG_AUTH_WRITE_URI_PERMISSION。 |
+| flag | [wantConstant.Flags](../../apis-ability-kit/arkts-apis/arkts-ability-wantconstant-flags-depr-e.md) | 是 | 授权的权限，可取wantConstant.Flags.FLAG_AUTH_READ_URI_PERMISSION或wantConstant.Flags.FLAG_AUTH_WRITE_URI_PERMISSION。 |
 
 **返回值：**
 

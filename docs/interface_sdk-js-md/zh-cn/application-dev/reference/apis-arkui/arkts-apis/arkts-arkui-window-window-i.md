@@ -7403,7 +7403,7 @@ setDialogBackGestureEnabled(enabled: boolean): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| enabled | boolean | 是 | 是否响应手势返回事件。true表示响应手势返回事件，触发onBackPress回调；false表示不响应手势返回事件，不触发onBackPress回调。&lt;/br &gt; |
+| enabled | boolean | 是 | 是否响应手势返回事件。true表示响应手势返回事件，触发onBackPress回调；false表示不响应手势返回事件，不触发onBackPress回调。&lt;/br&gt; |
 
 **返回值：**
 
@@ -13069,7 +13069,7 @@ snapshot(callback: AsyncCallback<image.PixelMap>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;image.PixelMap&gt; | 是 | 回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)&gt; | 是 | 回调函数。 |
 
 **错误码：**
 
@@ -13112,7 +13112,7 @@ snapshot(): Promise<image.PixelMap>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;image.PixelMap&gt; | Promise used to return the window screenshot. |
+| Promise&lt;[image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)&gt; | Promise used to return the window screenshot. |
 
 **错误码：**
 
@@ -13153,7 +13153,7 @@ snapshotIgnorePrivacy(): Promise<image.PixelMap>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;image.PixelMap&gt; | Promise used to return the window screenshot. |
+| Promise&lt;[image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)&gt; | Promise used to return the window screenshot. |
 
 **错误码：**
 
@@ -13195,7 +13195,7 @@ Stage模型下，该接口需要在[loadContent()](#loadcontent)或[setUIContent
 
 | 类型 | 说明 |
 | --- | --- |
-| image.PixelMap | Window screenshot. |
+| [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | Window screenshot. |
 
 **错误码：**
 

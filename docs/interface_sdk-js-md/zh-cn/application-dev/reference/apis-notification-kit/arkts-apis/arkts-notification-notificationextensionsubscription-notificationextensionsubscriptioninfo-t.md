@@ -10,4 +10,4 @@ export type NotificationExtensionSubscriptionInfo = _NotificationExtensionSubscr
 
 **系统能力：** SystemCapability.Notification.Notification
 
-**属性类型：** _NotificationExtensionSubscriptionInfo
+**类型：** _NotificationExtensionSubscriptionInfo

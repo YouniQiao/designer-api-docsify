@@ -12,4 +12,4 @@ Obtains an **IsoDepTag** object.
 
 **System capability:** SystemCapability.Communication.NFC.Tag
 
-**Property type:** _IsoDepTag
+**Type:** _IsoDepTag

@@ -12,4 +12,4 @@ export type ChainContinue = boolean
 
 **系统能力：** SystemCapability.Communication.NetStack
 
-**属性类型：** boolean
+**类型：** boolean

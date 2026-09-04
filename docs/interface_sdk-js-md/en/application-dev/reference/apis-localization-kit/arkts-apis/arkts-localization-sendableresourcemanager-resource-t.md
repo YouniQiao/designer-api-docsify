@@ -12,4 +12,4 @@ Represents resource-related information, including the application bundle name, 
 
 **System capability:** SystemCapability.Global.ResourceManager
 
-**Property type:** _Resource
+**Type:** _Resource

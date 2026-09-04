@@ -26,7 +26,7 @@ Converts a Context object to a SendableContext object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | common.Context | Yes |  |
+| context | [common.Context](arkts-ability-common-context-t.md) | Yes |  |
 
 **Return value:**
 

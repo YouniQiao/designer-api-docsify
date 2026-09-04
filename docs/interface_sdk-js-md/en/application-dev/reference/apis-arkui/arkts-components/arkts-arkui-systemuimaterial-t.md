@@ -16,4 +16,4 @@ Base class for system material objects.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** import('../api/@ohos.arkui.uiMaterial').default.Material
+**Type:** import('../api/@ohos.arkui.uiMaterial').default.Material

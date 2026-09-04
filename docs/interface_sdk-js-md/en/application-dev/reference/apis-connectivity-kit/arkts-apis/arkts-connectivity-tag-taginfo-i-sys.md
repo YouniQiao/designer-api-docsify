@@ -38,7 +38,7 @@ remoteTagService: rpc.RemoteObject
 
 Remote object of the NFC service process used for interface communication between the client and the service.
 
-**Type:** rpc.RemoteObject
+**Type:** [rpc.RemoteObject](../../apis-ipc-kit/arkts-apis/arkts-ipc-rpc-remoteobject-c.md)
 
 **Since:** 9
 

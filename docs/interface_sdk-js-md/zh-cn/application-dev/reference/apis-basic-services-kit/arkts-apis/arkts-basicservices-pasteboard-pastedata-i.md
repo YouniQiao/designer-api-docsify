@@ -310,7 +310,7 @@ getPrimaryPixelMap(): image.PixelMap
 
 | 类型 | 说明 |
 | --- | --- |
-| image.PixelMap | PixelMap内容。剪贴板内容对象中没有PixelMap内容时，默认返回为undefined。 |
+| [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | PixelMap内容。剪贴板内容对象中没有PixelMap内容时，默认返回为undefined。 |
 
 **示例**
 

@@ -12,4 +12,4 @@ Defines the remote ability information.
 
 **System API:** This is a system API.
 
-**Property type:** _RemoteAbilityInfo
+**Type:** _RemoteAbilityInfo

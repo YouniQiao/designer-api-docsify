@@ -26,7 +26,7 @@ function openCertificateDetailDialog(context: common.Context,cert: Uint8Array, p
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | common.Context | 是 | 表示应用的上下文信息。 |
+| context | [common.Context](../../apis-ability-kit/arkts-apis/arkts-ability-common-context-t.md) | 是 | 表示应用的上下文信息。 |
 | cert | Uint8Array | 是 | 表示证书数据。 |
 | property | [CertificateDialogProperty](arkts-devicecertificate-certificatemanagerdialog-certificatedialogproperty-i.md) | 是 | 表示打开证书管理对话框的属性。 |
 

@@ -52,6 +52,7 @@ setGestureEventResult(result: boolean): void
 **示例**
 
 触摸事件示例代码参考[onNativeEmbedGestureEvent](./arkts-basic-components-web-events.md#onnativeembedgestureevent)。
+- simpleType:
 
 ## setGestureEventResult
 
@@ -75,6 +76,7 @@ setGestureEventResult(result: boolean, stopPropagation: boolean): void
 **示例**
 
 触摸事件示例代码参考[onNativeEmbedGestureEvent](./arkts-basic-components-web-events.md#onnativeembedgestureevent)。
+- simpleType:
 
 ## setMouseEventResult
 
@@ -98,3 +100,4 @@ setMouseEventResult(result: boolean, stopPropagation?: boolean): void
 **示例**
 
 鼠标事件示例代码参考[onNativeEmbedMouseEvent](./arkts-basic-components-web-events.md#onnativeembedmouseevent)。
+- simpleType:

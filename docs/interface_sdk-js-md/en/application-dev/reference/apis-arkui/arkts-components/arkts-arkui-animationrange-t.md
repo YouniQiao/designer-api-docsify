@@ -14,4 +14,4 @@ Sets the relative scale ratio at the start and end of the animation compared to 
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** [from: T, to: T]
+**Type:** [from: T, to: T]

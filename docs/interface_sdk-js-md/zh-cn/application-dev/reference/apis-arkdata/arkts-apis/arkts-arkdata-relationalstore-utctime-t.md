@@ -10,4 +10,4 @@ type UTCTime = Date
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
-**属性类型：** Date
+**类型：** Date

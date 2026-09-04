@@ -14,4 +14,4 @@ Provide methods for matching monitored Ability objects that meet specified condi
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
-**Property type:** _InteropAbilityMonitor
+**Type:** _InteropAbilityMonitor

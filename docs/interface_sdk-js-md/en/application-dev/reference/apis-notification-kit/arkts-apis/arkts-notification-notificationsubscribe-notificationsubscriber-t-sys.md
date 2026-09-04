@@ -12,4 +12,4 @@ Provides callback methods for subscribers to receive and cancel notifications.
 
 **System API:** This is a system API.
 
-**Property type:** _NotificationSubscriber
+**Type:** _NotificationSubscriber

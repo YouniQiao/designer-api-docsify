@@ -301,6 +301,7 @@ checkAccountLabels(name: string, labels: Array<string>, callback: AuthCallback):
 **示例**
 
 接口需组合使用，请查看[getRemoteObject](#getremoteobject)中的示例。
+- simpleType:
 
 ## checkAccountRemovable
 
@@ -324,6 +325,7 @@ checkAccountRemovable(name: string, callback: AuthCallback): void
 **示例**
 
 接口需组合使用，请查看[getRemoteObject](#getremoteobject)中的示例。
+- simpleType:
 
 ## createAccountImplicitly
 
@@ -452,7 +454,7 @@ getRemoteObject(): rpc.RemoteObject
 
 | 类型 | 说明 |
 | --- | --- |
-| rpc.RemoteObject | 认证器Authenticator的远程对象。用于跨进程通信。 |
+| [rpc.RemoteObject](../../apis-ipc-kit/arkts-apis/arkts-ipc-rpc-remoteobject-c.md) | 认证器Authenticator的远程对象。用于跨进程通信。 |
 
 **示例**
 
@@ -549,6 +551,7 @@ setProperties(options: SetPropertiesOptions, callback: AuthCallback): void
 **示例**
 
 接口需组合使用，请查看[getRemoteObject](#getremoteobject)中的示例。
+- simpleType:
 
 ## verifyCredential
 
@@ -573,3 +576,4 @@ verifyCredential(name: string, options: VerifyCredentialOptions, callback: AuthC
 **示例**
 
 接口需组合使用，请查看[getRemoteObject](#getremoteobject)中的示例。
+- simpleType:

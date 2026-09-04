@@ -14,4 +14,4 @@ Sets the rotation angle of the component.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** [Vector3](arkts-arkui-graphics-vector3-i.md)
+**Type:** [Vector3](arkts-arkui-graphics-vector3-i.md)

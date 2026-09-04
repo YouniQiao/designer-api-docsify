@@ -115,6 +115,8 @@ class AnimatorState {
 ```
 
 > NOTE
+> 
+> For precise UI context management, use the createAnimator API in [UIContext](arkts-apis-uicontext-uicontext.md) to specify the execution context.
 
 ```TypeScript
 import { AnimatorResult } from '@kit.ArkUI';

@@ -149,7 +149,7 @@ privacyType?: audio.AudioPrivacyType
 
 音频隐私设置。如需更多信息，请参阅 [AudioPrivacyType](../../apis-audio-kit/arkts-apis/arkts-audio-audio-audioprivacytype-e.md).默认值: PRIVACY_TYPE_PUBLIC.
 
-**类型：** audio.AudioPrivacyType
+**类型：** [audio.AudioPrivacyType](../../apis-audio-kit/arkts-apis/arkts-audio-audio-audioprivacytype-e.md)
 
 **起始版本：** 26.0.0
 

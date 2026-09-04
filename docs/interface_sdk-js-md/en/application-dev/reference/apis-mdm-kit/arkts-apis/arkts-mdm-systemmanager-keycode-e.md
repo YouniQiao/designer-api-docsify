@@ -4,6 +4,8 @@ Key code. The [addKeyEventPolicies](arkts-mdm-systemmanager-addkeyeventpolicies-
 
 **Since:** 23
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## POWER

@@ -14,4 +14,4 @@ Defines LengthMetrics.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** import('../api/arkui/Graphics').LengthMetrics
+**Type:** import('../api/arkui/Graphics').LengthMetrics

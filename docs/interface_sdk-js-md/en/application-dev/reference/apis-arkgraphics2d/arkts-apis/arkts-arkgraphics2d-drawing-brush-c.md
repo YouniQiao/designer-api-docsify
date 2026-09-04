@@ -160,7 +160,7 @@ Obtains the color of this brush.
 
 | Type | Description |
 | --- | --- |
-| common2D.Color | Color of the brush. |
+| [common2D.Color](arkts-arkgraphics2d-common2d-color-i.md) | Color of the brush. |
 
 **Examples**
 
@@ -198,7 +198,7 @@ Obtains the brush color. The difference between this method and [getColor](#getc
 
 | Type | Description |
 | --- | --- |
-| common2D.Color4f | Color of the brush. |
+| [common2D.Color4f](arkts-arkgraphics2d-common2d-color4f-i.md) | Color of the brush. |
 
 **Examples**
 
@@ -516,7 +516,7 @@ Sets a color for this brush.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | common2D.Color | Yes | Color in ARGB format. The value of each color channel is an integer ranging from 0 to 255. |
+| color | [common2D.Color](arkts-arkgraphics2d-common2d-color-i.md) | Yes | Color in ARGB format. The value of each color channel is an integer ranging from 0 to 255. |
 
 **Error codes:**
 
@@ -641,8 +641,8 @@ Sets the color and standard color gamut for this brush. The difference between t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color4f | common2D.Color4f | Yes | Color in the ARGB format. The value of each color channel is a floating point number ranging from 0.0 to 1.0. Values above 1.0 default to **1.0**, and values below 0.0 default to **0.0**. |
-| colorSpace | colorSpaceManager.ColorSpaceManager \| null | Yes | Standard color gamut object. **null** indicates SRGB. |
+| color4f | [common2D.Color4f](arkts-arkgraphics2d-common2d-color4f-i.md) | Yes | Color in the ARGB format. The value of each color channel is a floating point number ranging from 0.0 to 1.0. Values above 1.0 default to **1.0**, and values below 0.0 default to **0.0**. |
+| colorSpace | [colorSpaceManager.ColorSpaceManager](arkts-arkgraphics2d-colorspacemanager-colorspacemanager-i.md) \| null | Yes | Standard color gamut object. **null** indicates SRGB. |
 
 **Examples**
 

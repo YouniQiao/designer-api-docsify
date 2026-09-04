@@ -48,7 +48,7 @@ data?: unifiedDataChannel.UnifiedData
 
 默认值：空
 
-**类型：** unifiedDataChannel.UnifiedData
+**类型：** [unifiedDataChannel.UnifiedData](../../apis-arkdata/arkts-apis/arkts-arkdata-unifieddatachannel-unifieddata-c.md)
 
 **起始版本：** 10
 
@@ -68,7 +68,7 @@ dataLoadParams?: unifiedDataChannel.DataLoadParams
 
 默认值：空
 
-**类型：** unifiedDataChannel.DataLoadParams
+**类型：** [unifiedDataChannel.DataLoadParams](../../apis-arkdata/arkts-apis/arkts-arkdata-unifieddatachannel-dataloadparams-i.md)
 
 **起始版本：** 20
 
@@ -155,6 +155,7 @@ touchPoint?: TouchPoint
 **示例**
 
 该示例通过[DragInfo](#draginfo)的autoHideComponentUniqueIds属性，在主动拖拽成功发起后自动隐藏指定组件。
+从API版本26.0.0开始，DragInfo新增autoHideComponentUniqueIds属性。
 
 ```TypeScript
 import { dragController } from '@kit.ArkUI';

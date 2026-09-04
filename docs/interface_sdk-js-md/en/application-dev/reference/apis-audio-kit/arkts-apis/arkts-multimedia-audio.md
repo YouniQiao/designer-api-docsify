@@ -28,7 +28,7 @@ import { audio } from '@kit.AudioKit';
 | --- | --- |
 | [createAudioCapturer](arkts-audio-audio-createaudiocapturer-f.md) | Creates an AudioCapturer instance. This API uses an asynchronous callback to return the result. |
 | [createAudioCapturer](arkts-audio-audio-createaudiocapturer-f.md) | Creates an AudioCapturer instance. This API uses a promise to return the result. |
-| [createAudioLoopback](arkts-audio-audio-createaudioloopback-f.md) | Creates an &lt;b&gt;AudioLoopback&lt;/b&gt; instance, which provides low-latency in-ear monitoring using a fast capturer and renderer. |
+| [createAudioLoopback](arkts-audio-audio-createaudioloopback-f.md) | Creates an&lt;b&gt;AudioLoopback&lt;/b&gt; instance, which provides low-latency in-ear monitoring using a fast capturer and renderer. |
 | [createAudioRenderer](arkts-audio-audio-createaudiorenderer-f.md) | Obtains an [AudioRenderer](arkts-audio-audio-audiorenderer-i.md) instance. This method uses a promise to return the renderer instance. |
 | [createAudioRenderer](arkts-audio-audio-createaudiorenderer-f.md) | Obtains an [AudioRenderer](arkts-audio-audio-audiorenderer-i.md) instance. This method uses a promise to return the renderer instance. |
 | [getAudioManager](arkts-audio-audio-getaudiomanager-f.md) | Obtains an AudioManager instance. |

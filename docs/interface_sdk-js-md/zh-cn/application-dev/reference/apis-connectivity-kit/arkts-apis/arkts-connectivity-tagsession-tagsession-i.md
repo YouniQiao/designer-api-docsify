@@ -227,7 +227,7 @@ getTagInfo(): tag.TagInfo
 
 | 类型 | 说明 |
 | --- | --- |
-| tag.TagInfo | NFC服务所提供的Tag数据对象。 |
+| [tag.TagInfo](arkts-connectivity-tag-taginfo-i.md) | NFC服务所提供的Tag数据对象。 |
 
 **示例**
 

@@ -38,7 +38,7 @@ public photoSubType?: photoAccessHelper.PhotoSubtype
 
 PhotoSubtype. Asset subtype, non-special type images default to DEFAULT(0).
 
-**Type:** photoAccessHelper.PhotoSubtype
+**Type:** [photoAccessHelper.PhotoSubtype](arkts-medialibrary-photoaccesshelper-photosubtype-e.md)
 
 **Since:** 26.1.0
 

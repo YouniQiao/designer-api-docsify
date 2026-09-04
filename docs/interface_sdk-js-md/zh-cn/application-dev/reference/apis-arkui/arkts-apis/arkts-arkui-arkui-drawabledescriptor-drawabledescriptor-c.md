@@ -32,7 +32,7 @@ getPixelMap(): image.PixelMap
 
 | 类型 | 说明 |
 | --- | --- |
-| image.PixelMap | PixelMap |
+| [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | PixelMap |
 
 **错误码：**
 
@@ -43,6 +43,7 @@ getPixelMap(): image.PixelMap
 **示例**
 
 示例请参考[LayeredDrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-layereddrawabledescriptor-c.md)中的示例代码。
+- simpleType:
 
 ## invalidate
 
@@ -112,6 +113,7 @@ load(): Promise<DrawableDescriptorLoadedResult>
 **示例**
 
 示例请参考[DrawableDescriptorLoadedResult](arkts-arkui-arkui-drawabledescriptor-drawabledescriptorloadedresult-i.md)中的示例代码。
+- simpleType:
 
 ## loadSync
 
@@ -143,6 +145,7 @@ loadSync(): DrawableDescriptorLoadedResult
 **示例**
 
 示例请参考[DrawableDescriptorLoadedResult](arkts-arkui-arkui-drawabledescriptor-drawabledescriptorloadedresult-i.md)中的示例代码。
+- simpleType:
 
 ## release
 

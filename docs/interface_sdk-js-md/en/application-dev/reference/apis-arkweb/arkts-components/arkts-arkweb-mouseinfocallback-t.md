@@ -19,3 +19,4 @@ This callback is triggered when a same-layer tag is clicked using the mouse or t
 **Examples**
 
 For details about the sample code, see [onNativeEmbedMouseEvent](./arkts-basic-components-web-events.md#onnativeembedmouseevent).
+- simpleType:

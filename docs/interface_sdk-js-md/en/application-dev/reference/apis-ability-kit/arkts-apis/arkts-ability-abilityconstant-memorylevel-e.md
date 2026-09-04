@@ -15,6 +15,8 @@ Enumerates the memory levels of the entire device. You can use it in [onMemoryLe
 
 **Since:** 9
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## MEMORY_LEVEL_MODERATE

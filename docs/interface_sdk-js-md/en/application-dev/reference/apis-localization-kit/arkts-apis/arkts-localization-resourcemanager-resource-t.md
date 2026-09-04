@@ -12,4 +12,4 @@ Describes the resource information, including the application package name, appl
 
 **System capability:** SystemCapability.Global.ResourceManager
 
-**Property type:** _Resource
+**Type:** _Resource

@@ -12,4 +12,4 @@ Defines the level-2 module ExtensionRunningInfo.
 
 **System API:** This is a system API.
 
-**Property type:** _ExtensionRunningInfo
+**Type:** _ExtensionRunningInfo

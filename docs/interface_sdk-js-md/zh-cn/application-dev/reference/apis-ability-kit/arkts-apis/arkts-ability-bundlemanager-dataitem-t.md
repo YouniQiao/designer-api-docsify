@@ -12,4 +12,4 @@ export type DataItem = _HapModuleInfo.DataItem
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
-**属性类型：** _HapModuleInfo.DataItem
+**类型：** [_HapModuleInfo.DataItem](arkts-ability-hapmoduleinfo-dataitem-i.md)

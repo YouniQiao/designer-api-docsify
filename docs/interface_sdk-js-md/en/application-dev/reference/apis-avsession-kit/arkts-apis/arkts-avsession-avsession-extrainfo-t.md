@@ -10,4 +10,4 @@ The extra info object.
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
-**Property type:** {[key: string]: Object; }
+**Type:** {[key: string]: Object; }

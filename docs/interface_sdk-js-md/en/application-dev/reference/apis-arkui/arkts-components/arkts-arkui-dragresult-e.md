@@ -4,6 +4,8 @@ Defines the result of a drag operation and the drop-selection state of a compone
 
 **Since:** 10
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## UNKNOWN

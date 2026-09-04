@@ -12,4 +12,4 @@ Defines the element name.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
-**Property type:** _ElementName
+**Type:** _ElementName

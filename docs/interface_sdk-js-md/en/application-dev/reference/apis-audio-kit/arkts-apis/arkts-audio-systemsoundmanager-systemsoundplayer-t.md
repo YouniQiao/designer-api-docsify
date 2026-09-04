@@ -10,4 +10,4 @@ Represents the system sound effect player object.
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
-**Property type:** _SystemSoundPlayer
+**Type:** _SystemSoundPlayer

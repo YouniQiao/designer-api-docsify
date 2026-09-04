@@ -3772,7 +3772,7 @@ insertSync(table: string, values: sendableRelationalStore.ValuesBucket, conflict
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | table | string | 是 | 指定的目标表名，不能为空字符串。 |
-| values | sendableRelationalStore.ValuesBucket | 是 | 表示要插入到表中的可跨线程传递数据。 |
+| values | [sendableRelationalStore.ValuesBucket](arkts-arkdata-sendablerelationalstore-valuesbucket-t.md) | 是 | 表示要插入到表中的可跨线程传递数据。 |
 | conflict | ConflictResolution | 否 | 指定冲突解决模式。默认值是relationalStore.ConflictResolution.ON_CONFLICT_NONE。 |
 
 **返回值：**

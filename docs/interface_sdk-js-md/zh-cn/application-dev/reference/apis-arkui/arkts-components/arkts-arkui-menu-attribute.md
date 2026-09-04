@@ -171,7 +171,7 @@ subMenuExpandingMode(mode: SubMenuExpandingMode)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mode | [SubMenuExpandingMode](arkts-arkui-submenuexpandingmode-e.md) | 是 | Menu子菜单展开样式。默认值：SubMenuExpandingMode.SIDE_EXPAND |
+| mode | [SubMenuExpandingMode](arkts-arkui-submenuexpandingmode-e.md) | 是 | [Menu子菜单展开样式。默认值：SubMenuExpandingMode.SIDE_EXPAND](arkts-arkui-submenuexpandingmode-e.md) |
 
 ## subMenuExpandSymbol
 

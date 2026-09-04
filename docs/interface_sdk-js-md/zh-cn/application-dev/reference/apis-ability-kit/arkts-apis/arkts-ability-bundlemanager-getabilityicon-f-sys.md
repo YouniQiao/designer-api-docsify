@@ -41,7 +41,7 @@ function getAbilityIcon(bundleName: string, moduleName: string, abilityName: str
 | bundleName | string | 是 | 要查询的应用Bundle名称。 |
 | moduleName | string | 是 | 要查询的应用Module名称。 |
 | abilityName | string | 是 | 要查询的Ability组件名。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;image.PixelMap&gt; | 是 | 回调函数，返回指定[PixelMap](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md)，作为程序启动时的入参。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)&gt; | 是 | 回调函数，返回指定[PixelMap](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md)，作为程序启动时的入参。 |
 
 **错误码：**
 
@@ -123,7 +123,7 @@ function getAbilityIcon(bundleName: string, moduleName: string, abilityName: str
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;image.PixelMap&gt; | Promise used to return PixelMap. |
+| Promise&lt;[image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)&gt; | Promise used to return PixelMap. |
 
 **错误码：**
 

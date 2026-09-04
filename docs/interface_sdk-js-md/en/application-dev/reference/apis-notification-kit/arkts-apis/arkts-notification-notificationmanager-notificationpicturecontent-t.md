@@ -10,4 +10,4 @@ Describes the picture-attached notification.
 
 **System capability:** SystemCapability.Notification.Notification
 
-**Property type:** _NotificationPictureContent
+**Type:** _NotificationPictureContent

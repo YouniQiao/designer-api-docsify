@@ -12,8 +12,6 @@ This module applies to the following scenarios:
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
-
 **System capability:** SystemCapability.UserIAM.UserAuth.CompanionDeviceAuth
 
 **System API:** This is a system API.

@@ -347,13 +347,13 @@ mapPoints(src: Array<common2D.Point>): Array<common2D.Point>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| src | Array&lt;common2D.Point&gt; | 是 | 源点数组，作为矩阵变换的输入点。 |
+| src | Array&lt;[common2D.Point](arkts-arkgraphics2d-common2d-point-i.md)&gt; | 是 | 源点数组，作为矩阵变换的输入点。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;common2D.Point&gt; | 源点数组经矩阵变换后的点数组。 |
+| Array&lt;[common2D.Point](arkts-arkgraphics2d-common2d-point-i.md)&gt; | 源点数组经矩阵变换后的点数组。 |
 
 **错误码：**
 
@@ -429,8 +429,8 @@ mapRect(dst: common2D.Rect, src: common2D.Rect): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| dst | common2D.Rect | 是 | 目标矩形对象，用于存储源矩形经矩阵变换后的图形的外接矩形。 |
-| src | common2D.Rect | 是 | 源矩形对象。 |
+| dst | [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) | 是 | 目标矩形对象，用于存储源矩形经矩阵变换后的图形的外接矩形。 |
+| src | [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) | 是 | 源矩形对象。 |
 
 **返回值：**
 
@@ -1010,8 +1010,8 @@ setPolyToPoly(src: Array<common2D.Point>, dst: Array<common2D.Point>, count: num
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| src | Array&lt;common2D.Point&gt; | 是 | 源点数组，长度必须为count。 |
-| dst | Array&lt;common2D.Point&gt; | 是 | 目标点数组，长度必须为count。 |
+| src | Array&lt;[common2D.Point](arkts-arkgraphics2d-common2d-point-i.md)&gt; | 是 | 源点数组，长度必须为count。 |
+| dst | Array&lt;[common2D.Point](arkts-arkgraphics2d-common2d-point-i.md)&gt; | 是 | 目标点数组，长度必须为count。 |
 | count | number | 是 | src和dst中点的数量，取值范围为[0, 4]，该参数为整数。 |
 
 **返回值：**
@@ -1055,8 +1055,8 @@ setRectToRect(src: common2D.Rect, dst: common2D.Rect, scaleToFit: ScaleToFit): b
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| src | common2D.Rect | 是 | 源矩形，用于指定映射的源区域。 |
-| dst | common2D.Rect | 是 | 目标矩形，用于指定映射的目标区域。 |
+| src | [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) | 是 | 源矩形，用于指定映射的源区域。 |
+| dst | [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) | 是 | 目标矩形，用于指定映射的目标区域。 |
 | scaleToFit | [ScaleToFit](arkts-arkgraphics2d-drawing-scaletofit-e.md) | 是 | 源矩形到目标矩形的映射方式。 |
 
 **返回值：**

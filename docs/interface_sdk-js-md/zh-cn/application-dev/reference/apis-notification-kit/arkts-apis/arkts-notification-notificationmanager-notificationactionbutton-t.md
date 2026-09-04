@@ -10,4 +10,4 @@ export type NotificationActionButton = _NotificationActionButton
 
 **系统能力：** SystemCapability.Notification.Notification
 
-**属性类型：** _NotificationActionButton
+**类型：** _NotificationActionButton

@@ -4,6 +4,8 @@ Enumerates icon styles of the **SaveButton** component.
 
 **Since:** 10
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## FULL_FILLED

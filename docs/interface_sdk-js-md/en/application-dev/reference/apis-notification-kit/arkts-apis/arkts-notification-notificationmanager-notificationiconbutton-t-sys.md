@@ -12,4 +12,4 @@ System notification button.
 
 **System API:** This is a system API.
 
-**Property type:** _NotificationIconButton
+**Type:** _NotificationIconButton

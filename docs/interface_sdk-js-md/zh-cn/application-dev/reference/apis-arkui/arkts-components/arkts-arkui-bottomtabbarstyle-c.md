@@ -136,7 +136,7 @@ layoutMode(value: LayoutMode): BottomTabBarStyle
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [LayoutMode](arkts-arkui-layoutmode-e.md) | 是 | 底部页签的图片、文字排布的方式，具体参照LayoutMode枚举。默认值：LayoutMode.VERTICAL |
+| value | [LayoutMode](arkts-arkui-layoutmode-e.md) | 是 | [底部页签的图片、文字排布的方式，具体参照LayoutMode枚举。默认值：LayoutMode.VERTICAL](../arkts-apis/arkts-arkui-arkui-advanced-composelistitem-icontype-e.md) |
 
 **返回值：**
 
@@ -249,7 +249,7 @@ verticalAlign(value: VerticalAlign): BottomTabBarStyle
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [VerticalAlign](../arkts-apis/arkts-arkui-verticalalign-e.md) | 是 | 底部页签的图片、文字在垂直方向上的对齐格式。默认值：VerticalAlign.Center |
+| value | [VerticalAlign](../arkts-apis/arkts-arkui-verticalalign-e.md) | 是 | [底部页签的图片、文字在垂直方向上的对齐格式。默认值：VerticalAlign.Center](arkts-arkui-listitemalign-e.md) |
 
 **返回值：**
 

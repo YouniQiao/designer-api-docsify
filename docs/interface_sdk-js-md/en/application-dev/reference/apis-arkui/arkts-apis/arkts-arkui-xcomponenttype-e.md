@@ -6,6 +6,8 @@ The type of XComponent
 
 **Since:** 12
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## SURFACE

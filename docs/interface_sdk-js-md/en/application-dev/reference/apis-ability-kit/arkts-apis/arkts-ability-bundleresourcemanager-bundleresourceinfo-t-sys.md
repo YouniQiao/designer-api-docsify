@@ -12,4 +12,4 @@ Defines the icon and name of an application.
 
 **System API:** This is a system API.
 
-**Property type:** _BundleResourceInfo
+**Type:** _BundleResourceInfo

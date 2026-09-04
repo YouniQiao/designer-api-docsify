@@ -14,4 +14,4 @@ declare type WindowStatusType = import('../api/@ohos.window').default.WindowStat
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-**属性类型：** import('../api/@ohos.window').default.WindowStatusType
+**类型：** import('../api/@ohos.window').default.WindowStatusType

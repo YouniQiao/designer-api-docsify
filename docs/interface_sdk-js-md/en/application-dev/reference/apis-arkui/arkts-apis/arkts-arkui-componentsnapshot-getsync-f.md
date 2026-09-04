@@ -38,7 +38,7 @@ Obtains the snapshot of a component that has been loaded based on the provided c
 
 | Type | Description |
 | --- | --- |
-| image.PixelMap | Promise used to return the result. |
+| [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | Promise used to return the result. |
 
 **Error codes:**
 

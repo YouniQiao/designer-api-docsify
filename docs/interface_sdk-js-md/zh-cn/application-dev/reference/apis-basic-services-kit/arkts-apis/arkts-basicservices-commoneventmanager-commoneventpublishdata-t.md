@@ -12,4 +12,4 @@ export type CommonEventPublishData = _CommonEventPublishData
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
-**属性类型：** _CommonEventPublishData
+**类型：** _CommonEventPublishData

@@ -137,7 +137,7 @@ Binds the modal window to the target window. After the binding is successful, th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| token | rpc.RemoteObject | Yes | Token of the target window. |
+| token | [rpc.RemoteObject](../../apis-ipc-kit/arkts-apis/arkts-ipc-rpc-remoteobject-c.md) | Yes | Token of the target window. |
 | deathCallback | [Callback](arkts-arkui-window-callback-i.md)&lt;void&gt; | Yes | Callback used to listen for modal window destruction events. |
 
 **Return value:**
@@ -225,7 +225,7 @@ Binds the modal window to the target window. After the binding is successful, th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| token | rpc.RemoteObject | Yes | Token of the target window. |
+| token | [rpc.RemoteObject](../../apis-ipc-kit/arkts-apis/arkts-ipc-rpc-remoteobject-c.md) | Yes | Token of the target window. |
 | deathCallback | [Callback](arkts-arkui-window-callback-i.md)&lt;void&gt; | Yes | Callback used to listen for modal window destruction events. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
@@ -310,7 +310,7 @@ Binds the modal window to the target window. After the binding is successful, th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| requestInfo | dialogRequest.RequestInfo | Yes | RequestInfo** of the target window. |
+| requestInfo | [dialogRequest.RequestInfo](../../apis-ability-kit/arkts-apis/arkts-ability-dialogrequest-requestinfo-i.md) | Yes | RequestInfo** of the target window. |
 | deathCallback | [Callback](arkts-arkui-window-callback-i.md)&lt;void&gt; | Yes | Callback used to listen for modal window destruction events. |
 
 **Return value:**
@@ -386,7 +386,7 @@ Binds the modal window to the target window. After the binding is successful, th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| requestInfo | dialogRequest.RequestInfo | Yes | RequestInfo** of the target window. |
+| requestInfo | [dialogRequest.RequestInfo](../../apis-ability-kit/arkts-apis/arkts-ability-dialogrequest-requestinfo-i.md) | Yes | RequestInfo** of the target window. |
 | deathCallback | [Callback](arkts-arkui-window-callback-i.md)&lt;void&gt; | Yes | Callback used to listen for modal window destruction events. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 

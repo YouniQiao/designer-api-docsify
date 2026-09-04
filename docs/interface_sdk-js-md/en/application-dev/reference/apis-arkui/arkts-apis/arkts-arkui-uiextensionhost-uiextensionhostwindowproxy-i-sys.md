@@ -35,13 +35,13 @@ Creates a subwindow for this **UIExtensionHostWindowProxy** instance. This API u
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the subwindow. |
-| subWindowOptions | window.SubWindowOptions | Yes | Parameters used for creating the subwindow. |
+| subWindowOptions | [window.SubWindowOptions](arkts-arkui-window-subwindowoptions-i.md) | Yes | Parameters used for creating the subwindow. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;window.Window&gt; | Promise used to return the subwindow created. |
+| Promise&lt;[window.Window](arkts-arkui-window-window-i.md)&gt; | Promise used to return the subwindow created. |
 
 **Error codes:**
 
@@ -121,14 +121,14 @@ Create subwindow.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the subwindow. |
-| subWindowConfig | window.SubWindowOptions | Yes | Configuration parameters for creating the subwindow. |
+| subWindowConfig | [window.SubWindowOptions](arkts-arkui-window-subwindowoptions-i.md) | Yes | Configuration parameters for creating the subwindow. |
 | followCreatorLifecycle | boolean | Yes | Whether the lifecycle of the subwindow follows creator of subwindow. If true, when the creator goes to background, the subwindow will also go to background, when the creator returns to foreground, the subwindow will also return to foreground. If false, the subwindow will not change when the creator goes to background or returns to foreground. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;window.Window&gt; | Promise used to return the subwindow. |
+| Promise&lt;[window.Window](arkts-arkui-window-window-i.md)&gt; | Promise used to return the subwindow. |
 
 **Error codes:**
 
@@ -205,13 +205,13 @@ Obtains the area where this window cannot be displayed, for example, the system 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | window.AvoidAreaType | Yes | Type of the avoidance area. |
+| type | [window.AvoidAreaType](arkts-arkui-window-avoidareatype-e.md) | Yes | Type of the avoidance area. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| window.AvoidArea | Avoidance area for the content of the host window. |
+| [window.AvoidArea](arkts-arkui-window-avoidarea-i.md) | Avoidance area for the content of the host window. |
 
 **Error codes:**
 
@@ -406,7 +406,7 @@ Unsubscribes from events of system avoidance area changes.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'avoidAreaChange' | Yes | Event type. The value is fixed at **'avoidAreaChange'**, indicating the event of changes to the area where the window cannot be displayed. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ type: window.AvoidAreaType, area: window.AvoidArea }&gt; | No |  |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[{ type: window.AvoidAreaType](arkts-arkui-window-avoidareatype-e.md), area: window.AvoidArea }&gt; | No |  |
 
 **Error codes:**
 
@@ -451,7 +451,7 @@ Unsubscribes from size change events of the component (**EmbeddedComponent** or 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'windowSizeChange' | Yes | Event type. The value is fixed at **'windowSizeChange'**, indicating the component (**EmbeddedComponent** or **UIExtensionComponent**) size change events. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;window.Size&gt; | No | Callback used to return the size of the current component (**EmbeddedComponent** or **UIExtensionComponent**). If a value is passed in, the corresponding subscription is canceled. If no value is passed in, all subscriptions to the specified event are canceled. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[window.Size](arkts-arkui-window-size-i.md)&gt; | No | Callback used to return the size of the current component (**EmbeddedComponent** or **UIExtensionComponent**). If a value is passed in, the corresponding subscription is canceled. If no value is passed in, all subscriptions to the specified event are canceled. |
 
 **Error codes:**
 
@@ -496,7 +496,7 @@ Subscribes to events of system avoidance area changes.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'avoidAreaChange' | Yes | Event type. The value is fixed at **'avoidAreaChange'**, indicating the event of changes to the area where the window cannot be displayed. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ type: window.AvoidAreaType, area: window.AvoidArea }&gt; | Yes |  |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[{ type: window.AvoidAreaType](arkts-arkui-window-avoidareatype-e.md), area: window.AvoidArea }&gt; | Yes |  |
 
 **Error codes:**
 
@@ -543,7 +543,7 @@ Subscribes to size change events of the component (**EmbeddedComponent** or **UI
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'windowSizeChange' | Yes | Event type. The value is fixed at **'windowSizeChange'**, indicating the component (**EmbeddedComponent** or **UIExtensionComponent**) size change events. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;window.Size&gt; | Yes | Callback function that receives the current component size as the input parameter. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[window.Size](arkts-arkui-window-size-i.md)&gt; | Yes | Callback function that receives the current component size as the input parameter. |
 
 **Error codes:**
 

@@ -30,13 +30,13 @@ Obtains the RunningFormInfo objects by FormProviderFilter.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| formProviderFilter | formInfo.FormProviderFilter | Yes | Indicates the form provider app info. |
+| formProviderFilter | [formInfo.FormProviderFilter](arkts-form-forminfo-formproviderfilter-i-sys.md) | Yes | Indicates the form provider app info. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;formInfo.RunningFormInfo&gt;&gt; | The promise returned by the function. |
+| Promise&lt;Array&lt;[formInfo.RunningFormInfo](arkts-form-forminfo-runningforminfo-i.md)&gt;&gt; | The promise returned by the function. |
 
 **Error codes:**
 
@@ -103,8 +103,8 @@ Obtains the RunningFormInfo objects by FormProviderFilter.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| formProviderFilter | formInfo.FormProviderFilter | Yes | Indicates the form provider app info. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;formInfo.RunningFormInfo&gt;&gt; | Yes | The callback of getFormInstancesByFilter. |
+| formProviderFilter | [formInfo.FormProviderFilter](arkts-form-forminfo-formproviderfilter-i-sys.md) | Yes | Indicates the form provider app info. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[formInfo.RunningFormInfo](arkts-form-forminfo-runningforminfo-i.md)&gt;&gt; | Yes | The callback of getFormInstancesByFilter. |
 
 **Error codes:**
 

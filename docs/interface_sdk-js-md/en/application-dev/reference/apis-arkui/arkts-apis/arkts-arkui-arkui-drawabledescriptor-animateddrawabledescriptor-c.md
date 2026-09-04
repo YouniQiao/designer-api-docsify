@@ -34,7 +34,7 @@ A constructor used to create an **AnimatedDrawableDescriptor** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pixelMaps | Array&lt;image.PixelMap&gt; | Yes | PixelMap** image data. |
+| pixelMaps | Array&lt;[image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)&gt; | Yes | PixelMap** image data. |
 | options | [AnimationOptions](arkts-arkui-arkui-drawabledescriptor-animationoptions-i.md) | No | Animation options. |
 
 **Examples**
@@ -113,7 +113,7 @@ A constructor used to create an **AnimatedDrawableDescriptor** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| src | [ResourceStr](arkts-arkui-resourcestr-t.md) \| Array&lt;image.PixelMap&gt; | Yes | Animated image source address or [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) array.The address (**ResourceStr**) supports the following formats: application resources (**Resource**), sandbox path (file://&lt;bundleName&gt;/&lt;sandboxPath&gt;), and Base64 string. |
+| src | [ResourceStr](arkts-arkui-resourcestr-t.md) \| Array&lt;[image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)&gt; | Yes | Animated image source address or [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) array.The address (**ResourceStr**) supports the following formats: application resources (**Resource**), sandbox path (file://&lt;bundleName&gt;/&lt;sandboxPath&gt;), and Base64 string. |
 | options | [AnimationOptions](arkts-arkui-arkui-drawabledescriptor-animationoptions-i.md) | No | Animation playback configuration. |
 
 **Examples**

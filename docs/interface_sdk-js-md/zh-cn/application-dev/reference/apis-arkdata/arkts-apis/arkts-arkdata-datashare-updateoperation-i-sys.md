@@ -22,7 +22,7 @@ predicates: dataSharePredicates.DataSharePredicates
 
 筛选条件。
 
-**类型：** dataSharePredicates.DataSharePredicates
+**类型：** [dataSharePredicates.DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md)
 
 **起始版本：** 12
 

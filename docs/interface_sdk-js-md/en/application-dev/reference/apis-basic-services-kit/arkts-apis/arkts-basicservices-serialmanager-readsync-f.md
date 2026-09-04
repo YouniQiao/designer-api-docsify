@@ -46,6 +46,8 @@ Reads data from the serial port device synchronously.
 **Examples**
 
 > NOTE
+> 
+> The following sample code shows the basic process for calling the readSync API and it needs to be executed in a specific method. In actual calling, you must comply with the device-related protocols.
 
 ```TypeScript
 import { JSON } from '@kit.ArkTS';

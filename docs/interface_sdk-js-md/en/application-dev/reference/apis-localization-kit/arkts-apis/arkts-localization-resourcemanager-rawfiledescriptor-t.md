@@ -12,4 +12,4 @@ Describes the file descriptor information of the HAP where the rawfile is locate
 
 **System capability:** SystemCapability.Global.ResourceManager
 
-**Property type:** _RawFileDescriptor
+**Type:** _RawFileDescriptor

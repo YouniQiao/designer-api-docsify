@@ -10,4 +10,4 @@ type ValuesBucket = collections.Map<string, ValueType>
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
-**属性类型：** collections.Map&lt;string, ValueType&gt;
+**类型：** [collections.Map](../../apis-arkts/arkts-apis/arkts-arkts-collections-map-c.md)&lt;string, ValueType&gt;

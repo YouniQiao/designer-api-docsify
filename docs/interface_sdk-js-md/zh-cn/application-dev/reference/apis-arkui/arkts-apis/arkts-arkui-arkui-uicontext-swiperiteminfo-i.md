@@ -1,6 +1,6 @@
 # SwiperItemInfo
 
-Swiper子组件的信息。
+Swiper子组件的信息，包含子组件的唯一标识符和索引，可通过SwiperContentInfo获取。
 
 **起始版本：** 22
 
@@ -21,7 +21,7 @@ import { BackPressActionProposal, BaseGestureHandlingProposal, ClickActionPropos
 index: number
 ```
 
-Swiper子组件在Swiper中的索引。
+Swiper子组件在Swiper中的索引，取值从0开始，最大值为Swiper子组件数量-1。
 
 **类型：** number
 
@@ -39,7 +39,7 @@ Swiper子组件在Swiper中的索引。
 uniqueId: number
 ```
 
-SwiperItem的uniqueId值。
+Swiper子组件的唯一标识符。
 
 **类型：** number
 

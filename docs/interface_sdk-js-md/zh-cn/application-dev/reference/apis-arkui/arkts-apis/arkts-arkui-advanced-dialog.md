@@ -1,5 +1,16 @@
 # @ohos.arkui.advanced.Dialog(Dialog)
 
+弹出框是一种模态窗口，用于临时展示用户需关注的信息或待处理的操作，同时保持当前上下文环境。用户必须完成交互才能退出该模式。
+ > **说明：**
+ >
+ > - 该组件从API version 10开始支持。后续版本如有新增内容，则采用上角标单独标记该内容的起始版本。
+ >
+ > - 该组件仅可在Stage模型下使用。
+ >
+ > - 如果Dialog设置通用属性和通用事件，编译工具链会额外生
+ > 成节点__Common__，并将通用属性或通用事件挂载在__Common__上，而不是直接应用到Dialog本身。这可能导致开发者设置的通用属性或通用事件不生效或不符合预期，因此，不建议Dialog设置通用属性和通用事件。
+
+
 ## 导入模块
 
 ```TypeScript
@@ -22,7 +33,7 @@ import { AlertDialog, ButtonOptions, ConfirmDialog, LoadingDialog, SelectDialog,
 | [ConfirmDialog](arkts-arkui-arkui-advanced-dialog-confirmdialog-s.md) | 信息确认类弹出框，用于在操作未正确执行（如网络错误、电池电量过低），或未正确操作时（如指纹录入）反馈错误或提示信息。 |
 | [CustomContentDialog](arkts-arkui-arkui-advanced-dialog-customcontentdialog-s.md) | 自定义内容区弹出框，同时支持定义操作区按钮样式。 |
 | [LoadingDialog](arkts-arkui-arkui-advanced-dialog-loadingdialog-s.md) | 进度加载类弹出框，用于显示操作执行中的提示信息。 |
-| [PopoverDialog](arkts-arkui-arkui-advanced-dialog-popoverdialog-s.md) | 弹出框是一种模态窗口，用于临时展示用户需关注的信息或待处理的操作，同时保持当前上下文环境。用户必须完成交互才能退出该模式。 |
+| [PopoverDialog](arkts-arkui-arkui-advanced-dialog-popoverdialog-s.md) | 跟手弹出框，基于目标组件位置弹出，上述的TipsDialog、SelectDialog、ConfirmDialog、AlertDialog、LoadingDialog、CustomContentDialog都可作为弹出框内容。 |
 | [SelectDialog](arkts-arkui-arkui-advanced-dialog-selectdialog-s.md) | 选择类弹出框，弹框中以列表或网格的形式提供可选的内容。 |
 | [TipsDialog](arkts-arkui-arkui-advanced-dialog-tipsdialog-s.md) | 提示弹出框，用于提醒用户关注特定事项或进行确认操作。 |
 

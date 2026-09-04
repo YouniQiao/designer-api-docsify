@@ -12,4 +12,4 @@ ISendable是所有Sendable类型（除null和undefined）的父类型。自身�
 
 **系统能力：** SystemCapability.Utils.Lang
 
-**属性类型：** lang.ISendable
+**类型：** [lang.ISendable](arkts-arkts-lang-isendable-i.md)

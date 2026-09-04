@@ -4,6 +4,8 @@ Enum for distance measurement result reporting modes. @enum { number } Reporting
 
 **Since:** 23
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.MultimodalAwareness.DistanceMeasurement
 
 **System API:** This is a system API.

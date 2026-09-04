@@ -12,4 +12,4 @@ Describes the content and properties of a common event.
 
 **System capability:** SystemCapability.Notification.CommonEvent
 
-**Property type:** _CommonEventPublishData
+**Type:** _CommonEventPublishData

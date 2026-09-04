@@ -14,4 +14,4 @@ Defines the width and height of an auto-fill pop-up.
 
 **System API:** This is a system API.
 
-**Property type:** _AutoFillPopupConfig.PopupSize
+**Type:** [_AutoFillPopupConfig.PopupSize](arkts-ability-autofillpopupconfig-popupsize-i-sys.md)

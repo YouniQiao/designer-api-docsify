@@ -4,6 +4,8 @@ Enum for the charge state.
 
 **Since:** 12
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## DEVICE_NORMAL_CHARGE_NOT_CHARGED

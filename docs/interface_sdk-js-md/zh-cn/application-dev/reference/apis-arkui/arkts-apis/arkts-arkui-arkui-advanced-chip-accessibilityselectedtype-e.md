@@ -4,6 +4,8 @@ AccessibilitySelectedType定义Chip可指定的选中态类型，用于控制无
 
 **起始版本：** 14
 
+**模型约束：** 此接口仅可在Stage模型下使用。
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## CLICKED

@@ -12,4 +12,4 @@ The **NotificationSubscribeInfo** module provides APIs for defining the informat
 
 **System API:** This is a system API.
 
-**Property type:** _NotificationSubscribeInfo
+**Type:** _NotificationSubscribeInfo

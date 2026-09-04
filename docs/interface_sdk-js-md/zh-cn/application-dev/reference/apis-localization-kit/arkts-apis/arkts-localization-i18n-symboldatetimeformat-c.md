@@ -34,7 +34,7 @@ public constructor(locale?: Intl.Locale, options?: SymbolDateTimeFormatOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| locale | Intl.Locale | 否 | 区域对象。默认值：系统区域对象。 |
+| locale | [Intl.Locale](arkts-localization-intl-locale-c.md) | 否 | 区域对象。默认值：系统区域对象。 |
 | options | [SymbolDateTimeFormatOptions](arkts-localization-i18n-symboldatetimeformatoptions-i.md) | 否 | 自定义符号时间日期格式化的配置项。默认值：区域对象默认的符号。 |
 
 **错误码：**

@@ -26,7 +26,7 @@ Image decoding information for preview in the page of ImageGeneratorDialog.
 
 <p>**NOTE：**: Displayed within the canvas in the ImageGeneratorDialog; if not provided, the image will be decoded from the url. </p>
 
-**Type:** image.PixelMap
+**Type:** [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)
 
 **Since:** 23
 
@@ -66,7 +66,7 @@ The size and position of the container used to display images in the preview can
 
 <p>**NOTE：**: it is recommended to be provided in multi-image fusion scenarios to achieve better results. </p>
 
-**Type:** common2D.Rect
+**Type:** [common2D.Rect](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-common2d-rect-i.md)
 
 **Since:** 23
 
@@ -86,7 +86,7 @@ The rotation of the container used to display images in the preview canvas.
 
 <p>**NOTE：**: it is recommended to be provided in multi-image fusion scenarios to achieve better results. </p>
 
-**Type:** componentUtils.Rotation2D
+**Type:** [componentUtils.Rotation2D](arkts-arkui-componentutils-rotation2d-i-sys.md)
 
 **Since:** 23
 

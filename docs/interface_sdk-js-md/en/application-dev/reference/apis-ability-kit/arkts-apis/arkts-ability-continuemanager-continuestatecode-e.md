@@ -4,6 +4,8 @@ Enumerates the status codes of the quick start result.
 
 **Since:** 18
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Mission
 
 ## SUCCESS

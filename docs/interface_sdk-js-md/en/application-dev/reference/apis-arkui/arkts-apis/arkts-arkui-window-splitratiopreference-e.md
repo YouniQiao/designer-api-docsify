@@ -6,6 +6,8 @@ Describes the type of split ratio preference.
 
 **Since:** 26.0.0
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 ## EQUAL

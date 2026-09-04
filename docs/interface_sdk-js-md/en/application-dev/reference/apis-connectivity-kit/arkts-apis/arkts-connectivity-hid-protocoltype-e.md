@@ -4,6 +4,8 @@ Describe the protocol type.
 
 **Since:** 23
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## PROTOCOL_BOOT_MODE

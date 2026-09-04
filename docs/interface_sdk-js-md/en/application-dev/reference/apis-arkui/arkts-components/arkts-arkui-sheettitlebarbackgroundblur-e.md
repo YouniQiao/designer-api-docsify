@@ -4,6 +4,8 @@ Enum of title bar background blur styles.
 
 **Since:** 26.1.0
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## NONE

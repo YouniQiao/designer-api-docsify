@@ -10,4 +10,4 @@ type ExtraInfo = {[key: string]: Object; }
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
-**属性类型：** {[key: string]: Object; }
+**类型：** {[key: string]: Object; }

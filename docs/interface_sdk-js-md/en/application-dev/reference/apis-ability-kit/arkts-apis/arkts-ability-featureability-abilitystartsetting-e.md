@@ -6,6 +6,8 @@ The value is obtained through **featureAbility.AbilityStartSetting**.
 
 **Since:** 7
 
+**Model restriction:** This API can be used only in the FA model.
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
 ## BOUNDS_KEY

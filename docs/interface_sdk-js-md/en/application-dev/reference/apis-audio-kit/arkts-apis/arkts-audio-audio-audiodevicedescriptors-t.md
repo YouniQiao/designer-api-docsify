@@ -12,4 +12,4 @@ Defines an [AudioDeviceDescriptor](arkts-audio-audio-audiodevicedescriptor-i.md)
 
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
-**Property type:** Array&lt;Readonly&lt;[AudioDeviceDescriptor](arkts-audio-audio-audiodevicedescriptor-i.md)&gt;&gt;
+**Type:** Array&lt;Readonly&lt;[AudioDeviceDescriptor](arkts-audio-audio-audiodevicedescriptor-i.md)&gt;&gt;

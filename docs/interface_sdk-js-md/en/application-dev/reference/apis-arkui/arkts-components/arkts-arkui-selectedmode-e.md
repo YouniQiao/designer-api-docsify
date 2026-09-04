@@ -4,6 +4,8 @@ Enumerates the display modes of selected subtabs.
 
 **Since:** 10
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## INDICATOR

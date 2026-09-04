@@ -29,15 +29,15 @@ Requests to publish a form to the form host service of the remote device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| peerServiceInfo | formInfo.PeerFormHostServiceInfo | Yes | The peer form host service information. |
+| peerServiceInfo | [formInfo.PeerFormHostServiceInfo](arkts-form-forminfo-peerformhostserviceinfo-i-sys.md) | Yes | The peer form host service information. |
 | want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | Publish request, which must contain the following fields:    **bundleName**: bundle name of the target form.    **abilityName**: ability of the target form. parameters:    - **ohos.extra.param.key.form_dimension**: dimension of the target form.    - **ohos.extra.param.key.form_name**: name of the target form.    - **ohos.extra.param.key.module_name**: module name of the target form. |
-| formBindingData | formBindingData.FormBindingData | No | Data to be used for the update. |
+| formBindingData | [formBindingData.FormBindingData](arkts-form-formbindingdata-formbindingdata-i.md) | No | Data to be used for the update. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;formInfo.PublishFormCrossDeviceResult&gt; | Promise used to return the result of publishing the form across device. |
+| Promise&lt;[formInfo.PublishFormCrossDeviceResult](arkts-form-forminfo-publishformcrossdeviceresult-i-sys.md)&gt; | Promise used to return the result of publishing the form across device. |
 
 **Error codes:**
 

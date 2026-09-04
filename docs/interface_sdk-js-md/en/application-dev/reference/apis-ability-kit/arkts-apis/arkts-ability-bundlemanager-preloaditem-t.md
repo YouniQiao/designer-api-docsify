@@ -12,4 +12,4 @@ Defines the preloaded module information in the atomic service.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
-**Property type:** _HapModuleInfo.PreloadItem
+**Type:** [_HapModuleInfo.PreloadItem](arkts-ability-hapmoduleinfo-preloaditem-i.md)

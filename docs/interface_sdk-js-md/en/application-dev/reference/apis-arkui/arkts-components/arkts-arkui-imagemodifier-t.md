@@ -14,4 +14,4 @@ ImageModifier
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** import('../api/arkui/ImageModifier').ImageModifier
+**Type:** import('../api/arkui/ImageModifier').ImageModifier

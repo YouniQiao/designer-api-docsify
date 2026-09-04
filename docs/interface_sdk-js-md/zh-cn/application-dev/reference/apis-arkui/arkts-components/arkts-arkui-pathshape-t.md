@@ -16,4 +16,4 @@ declare type PathShape = import('../api/@ohos.arkui.shape').PathShape
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-**属性类型：** import('../api/@ohos.arkui.shape').PathShape
+**类型：** import('../api/@ohos.arkui.shape').PathShape

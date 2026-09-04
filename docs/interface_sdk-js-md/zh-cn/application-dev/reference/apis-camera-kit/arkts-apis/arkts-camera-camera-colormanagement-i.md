@@ -34,7 +34,7 @@ getActiveColorSpace(): colorSpaceManager.ColorSpace
 
 | 类型 | 说明 |
 | --- | --- |
-| colorSpaceManager.ColorSpace | 当前设置的色彩空间。 |
+| [colorSpaceManager.ColorSpace](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-colorspacemanager-colorspace-e.md) | 当前设置的色彩空间。 |
 
 **错误码：**
 
@@ -114,7 +114,7 @@ CAMERA_FORMAT_YCBCR_P010时，色彩空间默认为BT2020_HLG。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| colorSpace | colorSpaceManager.ColorSpace | 是 | The type of color space. |
+| colorSpace | [colorSpaceManager.ColorSpace](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-colorspacemanager-colorspace-e.md) | 是 | The type of color space. |
 
 **错误码：**
 

@@ -12,4 +12,4 @@ Defines the information about a preinstalled application that can be restored af
 
 **System API:** This is a system API.
 
-**Property type:** _RecoverableApplicationInfo
+**Type:** _RecoverableApplicationInfo

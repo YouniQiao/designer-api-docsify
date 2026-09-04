@@ -18,8 +18,6 @@ RDB store and KV store are called. In this scenario, use the corresponding predi
 
 **Since:** 10
 
-**Model restriction:** This API can be used only in the stage model.
-
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core
 
 ## Modules to Import

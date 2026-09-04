@@ -46,6 +46,8 @@ Requests a USB data transfer.
 **Examples**
 
 > NOTE
+> 
+> The following sample code shows the basic process for calling the usbSubmitTransfer API and it needs to be executed in a specific method. In actual calling, you must comply with the device-related protocols to ensure correct data transfer and device compatibility.
 
 ```TypeScript
 // Call usbManager.getDevices to obtain a data set. Then, obtain a USB device and its access permission.

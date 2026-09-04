@@ -11,8 +11,6 @@ Intended only for the **UIExtensionComponent** that has process isolation requir
 
 **Since:** 11
 
-**Model restriction:** This API can be used only in the stage model.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -37,6 +35,7 @@ import { uiExtensionHost } from '@kit.ArkUI';
 ## Examples
 
 This example shows how to use all the available APIs in the UIExtensionAbility. The bundle name of the sample application, which requires a system signature, is com.example.uiextensiondemo, and the UIExtensionAbility to start is ExampleUIExtensionAbility.
+The EntryAbility (UIAbility) of the sample application loads the pages/Index.ets file, whose content is as follows:
 
 ```TypeScript
 // The UIAbility loads pages/Index.ets when started.

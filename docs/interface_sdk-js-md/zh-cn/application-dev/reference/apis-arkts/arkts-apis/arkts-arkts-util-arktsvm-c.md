@@ -90,6 +90,7 @@ try {
 ```
 
 可能出现的问题：
+如果之前内存泄漏的对象被继续使用，使用enableLocalHandleDetection接口后，系统会回收内存泄漏对象。继续使用该对象会导致内存泄漏问题转变为稳定性问题。
 
 ```TypeScript
 napi_value global_js_object;

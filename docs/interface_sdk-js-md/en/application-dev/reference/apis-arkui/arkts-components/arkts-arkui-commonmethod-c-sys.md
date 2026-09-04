@@ -232,6 +232,7 @@ Specify whether the current component participates in the fusion effect of the a
 **Examples**
 
 For details, see [UnionEffectContainer Example](ts-container-unioneffectcomponent-sys.md#example).
+- simpleType:
 
 ## useUnionEffect
 

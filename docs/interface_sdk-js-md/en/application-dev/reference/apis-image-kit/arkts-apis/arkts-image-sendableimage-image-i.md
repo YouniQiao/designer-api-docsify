@@ -34,13 +34,13 @@ Obtains the component buffer from the Image instance based on the color componen
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| componentType | image.ComponentType | Yes | Color component type of the image. |
+| componentType | [image.ComponentType](arkts-image-image-componenttype-e.md) | Yes | Color component type of the image. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;image.Component&gt; | Promise used to return the component buffer. |
+| Promise&lt;[image.Component](arkts-image-image-component-i.md)&gt; | Promise used to return the component buffer. |
 
 **Examples**
 

@@ -14,7 +14,7 @@ actionFlags?: Array<abilityWantAgent.WantAgentFlags>
 
 Array of flags for using the WantAgent object.
 
-**Type:** Array&lt;abilityWantAgent.WantAgentFlags&gt;
+**Type:** Array&lt;[abilityWantAgent.WantAgentFlags](arkts-ability-wantagent-wantagentflags-depr-e.md)&gt;
 
 **Since:** 11
 
@@ -30,7 +30,7 @@ actionType?: abilityWantAgent.OperationType
 
 Operation type.
 
-**Type:** abilityWantAgent.OperationType
+**Type:** [abilityWantAgent.OperationType](arkts-ability-wantagent-operationtype-depr-e.md)
 
 **Since:** 11
 
@@ -80,7 +80,7 @@ Operation type.
 
 This attribute is supported since API version 7 and deprecated since API version 11. You are advised to use actionType&lt;sup&gt;11+&lt;/sup&gt; instead.
 
-**Type:** wantAgent.OperationType
+**Type:** [wantAgent.OperationType](arkts-ability-wantagent-operationtype-depr-e.md)
 
 **Since:** 7
 
@@ -118,7 +118,7 @@ Array of flags for using the WantAgent object.
 
 This attribute is supported since API version 7 and deprecated since API version 11. You are advised to use actionFlags&lt;sup&gt;11+&lt;/sup&gt; instead.
 
-**Type:** Array&lt;wantAgent.WantAgentFlags&gt;
+**Type:** Array&lt;[wantAgent.WantAgentFlags](arkts-ability-wantagent-wantagentflags-depr-e.md)&gt;
 
 **Since:** 7
 

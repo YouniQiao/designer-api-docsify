@@ -10,4 +10,4 @@ Defines the level-2 module AbilityStateData.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
-**Property type:** _AbilityStateData.default
+**Type:** _AbilityStateData.default

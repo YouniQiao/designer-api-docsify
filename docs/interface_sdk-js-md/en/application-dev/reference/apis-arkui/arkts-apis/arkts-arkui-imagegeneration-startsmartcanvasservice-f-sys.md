@@ -27,7 +27,7 @@ Start the smart canvas service.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | common.ServiceExtensionContext \| common.UIAbilityContext \| common.UIExtensionContext | Yes | different ability context. |
+| context | [common.ServiceExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-common-serviceextensioncontext-t-sys.md) \| [common.UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-common-uiabilitycontext-t.md) \| [common.UIExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-common-uiextensioncontext-t.md) | Yes | different ability context. |
 
 **Return value:**
 

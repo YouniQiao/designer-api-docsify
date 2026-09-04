@@ -14,4 +14,4 @@ Defines the border width property.
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-**属性类型：** EdgeWidths
+**类型：** EdgeWidths

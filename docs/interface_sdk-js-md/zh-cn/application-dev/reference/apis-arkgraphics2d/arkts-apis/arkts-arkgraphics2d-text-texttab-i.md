@@ -47,3 +47,4 @@ location: number
 **示例**
 
 alignment为CENTER，location为200，文本为"12/t345"：
+- simpleType:

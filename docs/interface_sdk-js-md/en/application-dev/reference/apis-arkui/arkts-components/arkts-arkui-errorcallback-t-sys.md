@@ -14,4 +14,4 @@ Defines the error callback type, which is used to receive exception information.
 
 **System API:** This is a system API.
 
-**Property type:** import('../api/@ohos.base').ErrorCallback
+**Type:** import('../api/@ohos.base').ErrorCallback

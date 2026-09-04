@@ -12,4 +12,4 @@ Indicates a row of data with an array.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
-**Property type:** Array&lt;ValueType&gt;
+**Type:** Array&lt;ValueType&gt;

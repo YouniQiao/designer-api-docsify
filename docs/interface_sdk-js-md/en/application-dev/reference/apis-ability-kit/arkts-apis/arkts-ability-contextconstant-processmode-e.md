@@ -4,6 +4,8 @@ Enumerates the process modes of the UIAbility after it is started. As a property
 
 **Since:** 12
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## NEW_PROCESS_ATTACH_TO_PARENT

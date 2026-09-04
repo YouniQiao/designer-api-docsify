@@ -14,4 +14,4 @@ Defines the angle property with number in units of deg.
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-**属性类型：** `${number}deg`
+**类型：** `${number}deg`

@@ -14,4 +14,4 @@ Represents the current matrix object.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** import ('../api/@ohos.matrix4').default.Matrix4Transit
+**Type:** import ('../api/@ohos.matrix4').default.Matrix4Transit

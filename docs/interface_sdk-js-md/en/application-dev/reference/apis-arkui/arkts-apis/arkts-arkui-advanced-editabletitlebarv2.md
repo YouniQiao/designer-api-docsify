@@ -51,6 +51,7 @@ import { EditableLeftIconTypeV2, EditableTitleBarV2, EditableLeftIconV2, Editabl
 ## Examples
 
 This example uses the EditableTitleBarV2 API to display the left icon, main title, and custom right icon area of an editable title bar.
+EditableTitleBarV2 is supported since API version 26.0.0.
 
 ```TypeScript
 import { Prompt } from '@kit.ArkUI';
@@ -119,6 +120,7 @@ struct EditableTitleBarV2Demo01 {
 ```
 
 This example uses the EditableTitleBarV2 interfaces such as leftIcon, title, and saveButton to implement an editable title bar with blur background, avatar display, hidden right-side save button and custom title bar margins.
+EditableTitleBarV2 is supported since API version 26.0.0.
 
 ```TypeScript
 import { LengthMetrics, Prompt } from '@kit.ArkUI';
@@ -261,6 +263,7 @@ struct EditableTitleBarV2Demo02 {
 ```
 
 This example uses the right-side custom button attributes such as accessibilityText and accessibilityDescription of the EditableTitleBarV2 API to customize the screen reader announcement text of the editable title bar.
+The EditableTitleBarV2 API is supported since API version 26.0.0.
 
 ```TypeScript
 import { Prompt } from '@kit.ArkUI';
@@ -336,6 +339,7 @@ struct EditableTitleBarV2Demo03 {
 ```
 
 In the focus state, this example uses the defaultFocus attribute of [EditableLeftIconV2](arkts-arkui-arkui-advanced-editabletitlebarv2-editablelefticonv2-c.md) configured through the EditableTitleBarV2 API to enable the left icon on the editable title bar to obtain focus by default.
+The EditableTitleBarV2 API is supported since API version 26.0.0.
 
 ```TypeScript
 import { Prompt } from '@kit.ArkUI';
@@ -367,6 +371,7 @@ struct EditableTitleBarV2Demo04 {
 ```
 
 In the focus state, this example uses the right icon attribute defaultFocus of EditableTitleBarV2 to enable the right icon on the editable title bar to obtain focus by default.
+The EditableTitleBarV2 API is supported since API version 26.0.0.
 
 ```TypeScript
 import { Prompt } from '@kit.ArkUI';
@@ -421,6 +426,7 @@ struct EditableTitleBarV2Demo05 {
 ```
 
 This example implements the custom symbol icon feature of the editable title bar through the symbolStyle attribute of the EditableTitleBarV2 component.
+The EditableTitleBarV2 API is supported since API version 26.0.0.
 
 ```TypeScript
 import { Prompt, SymbolGlyphModifier } from '@kit.ArkUI';

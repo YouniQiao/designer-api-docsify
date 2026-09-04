@@ -55,6 +55,7 @@ A custom tokenizer is used. Chinese (simplified and traditional), English, and A
 **Examples**
 
 For details about the definition of this.context in the sample code, see the application [context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) of the stage model.
+The following is an example of the table creation statement when ICU_TOKENIZER is used:
 
 ```TypeScript
 import { relationalStore } from '@kit.ArkData'; // Import modules.

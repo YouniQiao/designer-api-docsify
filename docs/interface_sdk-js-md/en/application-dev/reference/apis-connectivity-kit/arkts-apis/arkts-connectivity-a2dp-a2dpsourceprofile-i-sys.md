@@ -187,7 +187,7 @@ Restriction devices to play music within `duration` milliseconds of connection.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | deviceId | string | Yes | Indicates device ID. For example, "11:22:33:AA:BB:FF". |
-| duration | number | Yes | Restricted duration &lt;milliseconds&gt;. Valid range is from 3000ms to 20000ms. |
+| duration | number | Yes | Restricted duration&lt;milliseconds&gt;. Valid range is from 3000ms to 20000ms. |
 
 **Return value:**
 
@@ -455,7 +455,7 @@ Obtains the duration for which automatic playback is disabled.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Returns the duration &lt;milliseconds&gt;; If returns { |
+| Promise&lt;number&gt; | Returns the duration&lt;milliseconds&gt;; If returns { |
 
 **Error codes:**
 

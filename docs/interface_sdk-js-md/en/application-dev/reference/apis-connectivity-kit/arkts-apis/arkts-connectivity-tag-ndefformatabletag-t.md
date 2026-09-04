@@ -12,4 +12,4 @@ Obtains a **NdefFormatableTag** object.
 
 **System capability:** SystemCapability.Communication.NFC.Tag
 
-**Property type:** _NdefFormatableTag
+**Type:** _NdefFormatableTag

@@ -221,7 +221,7 @@ getImageBounds(): common2D.Rect
 
 | 类型 | 说明 |
 | --- | --- |
-| common2D.Rect | 文本行的图像边界，单位为物理像素px。 |
+| [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) | 文本行的图像边界，单位为物理像素px。 |
 
 **示例**
 
@@ -283,7 +283,7 @@ getStringIndexForPosition(point: common2D.Point): number
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| point | common2D.Point | 是 | 要查找字符索引的坐标位置，坐标相对于文本行的左上角原点，单位为物理像素px。其中x为水平坐标，y为垂直坐标。 |
+| point | [common2D.Point](arkts-arkgraphics2d-common2d-point-i.md) | 是 | 要查找字符索引的坐标位置，坐标相对于文本行的左上角原点，单位为物理像素px。其中x为水平坐标，y为垂直坐标。 |
 
 **返回值：**
 
@@ -411,7 +411,7 @@ paint(canvas: drawing.Canvas, x: number, y: number): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| canvas | drawing.Canvas | 是 | 绘制的目标canvas。 |
+| canvas | [drawing.Canvas](arkts-arkgraphics2d-drawing-canvas-c.md) | 是 | 绘制的目标canvas。 |
 | x | number | 是 | 绘制的左上角位置的横坐标，浮点数，单位为物理像素px。 |
 | y | number | 是 | 绘制的左上角位置的纵坐标，浮点数，单位为物理像素px。 |
 

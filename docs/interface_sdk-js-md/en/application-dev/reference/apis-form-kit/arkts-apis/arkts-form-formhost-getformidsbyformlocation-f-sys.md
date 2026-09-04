@@ -28,7 +28,7 @@ Obtains the list of widget IDs at a specified location on the device. This API u
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| location | formInfo.FormLocation | Yes | Widget location. |
+| location | [formInfo.FormLocation](arkts-form-forminfo-formlocation-e.md) | Yes | Widget location. |
 
 **Return value:**
 

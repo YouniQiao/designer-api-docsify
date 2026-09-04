@@ -52,7 +52,7 @@ deviceClass?: nearlinkConstant.DeviceClass
 
 表示扫描到的设备类型。设备广播未携带设备类型信息时该字段不返回。
 
-**类型：** nearlinkConstant.DeviceClass
+**类型：** [nearlinkConstant.DeviceClass](arkts-connectivity-nearlinkconstant-deviceclass-e.md)
 
 **起始版本：** 26.0.0
 

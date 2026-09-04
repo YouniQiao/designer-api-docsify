@@ -14,4 +14,4 @@ Represents a FrameNode of the **Rating** type.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** [TypedFrameNode](arkts-arkui-framenode-typedframenode-i.md)&lt;RatingInterface, [RatingAttribute](../arkts-components/arkts-arkui-rating-attribute.md)&gt;
+**Type:** [TypedFrameNode](arkts-arkui-framenode-typedframenode-i.md)&lt;RatingInterface, [RatingAttribute](../arkts-components/arkts-arkui-rating-attribute.md)&gt;

@@ -387,7 +387,7 @@ Marshals this Picture object and writes it to a MessageSequence object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sequence | rpc.MessageSequence | Yes | MessageSequence object. |
+| sequence | [rpc.MessageSequence](../../apis-ipc-kit/arkts-apis/arkts-ipc-rpc-messagesequence-c.md) | Yes | MessageSequence object. |
 
 **Error codes:**
 

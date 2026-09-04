@@ -12,4 +12,4 @@ WebGL 2.0
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
-**Property type:** number
+**Type:** number

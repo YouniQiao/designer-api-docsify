@@ -32,7 +32,7 @@ Creates a **NumberFormat** object for the specified locale.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| numberFormat | Intl.NumberFormat | Yes | Indicates the number format object that used to format number. |
+| numberFormat | [Intl.NumberFormat](arkts-localization-intl-numberformat-c.md) | Yes | Indicates the number format object that used to format number. |
 | options | [AdvancedMeasureFormatOptions](arkts-localization-i18n-advancedmeasureformatoptions-i.md) | No |  |
 
 **Examples**

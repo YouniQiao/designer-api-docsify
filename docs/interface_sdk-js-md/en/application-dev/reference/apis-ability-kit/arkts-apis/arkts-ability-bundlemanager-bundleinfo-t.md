@@ -12,4 +12,4 @@ Defines the bundle information.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
-**Property type:** _BundleInfo.BundleInfo
+**Type:** [_BundleInfo.BundleInfo](arkts-ability-bundleinfo-i.md)

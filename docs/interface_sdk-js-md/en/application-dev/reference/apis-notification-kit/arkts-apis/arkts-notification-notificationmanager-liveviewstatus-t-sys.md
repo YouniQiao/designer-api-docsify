@@ -12,4 +12,4 @@ Enumerates the statuses of the common live view.
 
 **System API:** This is a system API.
 
-**Property type:** _LiveViewStatus
+**Type:** _LiveViewStatus

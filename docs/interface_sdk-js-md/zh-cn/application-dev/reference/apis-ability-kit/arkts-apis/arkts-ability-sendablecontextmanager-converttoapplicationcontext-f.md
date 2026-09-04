@@ -32,7 +32,7 @@ function convertToApplicationContext(sendableContext: SendableContext): common.A
 
 | 类型 | 说明 |
 | --- | --- |
-| common.ApplicationContext | [ApplicationContext]{ |
+| [common.ApplicationContext](arkts-ability-common-applicationcontext-t.md) | [ApplicationContext]{ |
 
 **错误码：**
 

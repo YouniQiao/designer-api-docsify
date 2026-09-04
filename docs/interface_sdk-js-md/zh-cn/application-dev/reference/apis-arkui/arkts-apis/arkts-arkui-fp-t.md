@@ -16,4 +16,4 @@ declare type FP = `${number}fp`
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-**属性类型：** `${number}fp`
+**类型：** `${number}fp`

@@ -36,7 +36,7 @@ Called following **onCreate()** when a DriverExtensionAbility is started by call
 
 | Type | Description |
 | --- | --- |
-| rpc.RemoteObject \| Promise&lt;rpc.RemoteObject&gt; | RemoteObject** object used for communication between the server and client, or promise used to return the value. |
+| [rpc.RemoteObject](../../apis-ipc-kit/arkts-apis/arkts-ipc-rpc-remoteobject-c.md) \| Promise&lt;[rpc.RemoteObject](../../apis-ipc-kit/arkts-apis/arkts-ipc-rpc-remoteobject-c.md)&gt; | RemoteObject** object used for communication between the server and client, or promise used to return the value. |
 
 **Examples**
 

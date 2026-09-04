@@ -4,8 +4,6 @@ The particleAbility module provides APIs for operating a DataAbility and Service
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
 ## Modules to Import

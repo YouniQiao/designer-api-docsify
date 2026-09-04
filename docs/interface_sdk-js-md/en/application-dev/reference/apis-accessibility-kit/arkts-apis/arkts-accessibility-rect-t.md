@@ -10,7 +10,7 @@ Defines a rectangle. For details, see [Rect](arkts-accessibility-accessibilityex
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
-**Property type:** _Rect
+**Type:** _Rect
 
 **Examples**
 

@@ -30,7 +30,7 @@ Obtains a snapshot of the same size as the specified window. This API uses a pro
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;image.PixelMap&gt; | Promise that returns no value. |
+| Promise&lt;[image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)&gt; | Promise that returns no value. |
 
 **Error codes:**
 

@@ -4,6 +4,8 @@ The enum of ranging stopped causes.
 
 **Since:** 26.0.0
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.Communication.FusionConnectivity.Core
 
 ## NO_ERROR

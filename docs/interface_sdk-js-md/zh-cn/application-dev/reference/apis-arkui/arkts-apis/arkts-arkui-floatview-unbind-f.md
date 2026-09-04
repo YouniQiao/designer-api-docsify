@@ -26,7 +26,7 @@ function unbind(floatViewController: FloatViewController,
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | floatViewController | [FloatViewController](arkts-arkui-floatview-floatviewcontroller-i.md) | 是 | 标准悬浮窗控制器。 |
-| floatingBallController | floatingBall.FloatingBallController | 是 | 闪控球控制器。 |
+| floatingBallController | [floatingBall.FloatingBallController](arkts-arkui-floatingball-floatingballcontroller-i.md) | 是 | 闪控球控制器。 |
 
 **返回值：**
 

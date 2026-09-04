@@ -215,6 +215,8 @@ sendResponse(responseApdu: number[]): void
 **示例**
 
 ArkTS示例：
+示例请参见[transmit](#transmit)接口的示例。
+JS示例：
 
 ```TypeScript
 <!-- 适用于轻量级智能穿戴设备 -->
@@ -346,6 +348,8 @@ startHCE(aidList: string[]): boolean
 **示例**
 
 ArkTS示例：
+示例请参见on接口的示例。
+JS示例：
 
 ```TypeScript
 <!-- 适用于轻量级智能穿戴设备 -->
@@ -463,6 +467,8 @@ stopHCE(): boolean
 **示例**
 
 ArkTS示例：
+示例请参见on接口的示例。
+JS示例：
 
 ```TypeScript
 <!-- 适用于轻量级智能穿戴设备 -->

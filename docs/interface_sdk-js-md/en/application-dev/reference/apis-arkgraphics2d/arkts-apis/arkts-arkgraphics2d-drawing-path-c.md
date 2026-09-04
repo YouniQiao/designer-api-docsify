@@ -39,7 +39,7 @@ In other cases, this API adds an arc by applying the result of **sweepAngle** mo
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rect | common2D.Rect | Yes | Rectangular boundary that encapsulates the oval including the arc. |
+| rect | [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) | Yes | Rectangular boundary that encapsulates the oval including the arc. |
 | startAngle | number | Yes | Start angle of the arc, in degrees. The value 0 indicates the positive direction of the X axis. The value is a floating point number. |
 | sweepAngle | number | Yes | Angle to sweep, in degrees. A positive value indicates a clockwise sweep, and a negative value indicates a counterclockwise sweep. The value is a floating point number. |
 
@@ -111,7 +111,7 @@ Adds the inscribed ellipse of a rectangle to this path in the specified directio
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rect | common2D.Rect | Yes | Rectangular boundary of the oval. |
+| rect | [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) | Yes | Rectangular boundary of the oval. |
 | start | number | Yes | Start point of the oval, where 0, 1, 2, and 3 correspond to the upper, right, lower, and left points, respectively. The value is an integer greater than or equal to 0. If the value is greater than or equal to 4, the remainder of 4 is used. |
 | pathDirection | [PathDirection](arkts-arkgraphics2d-drawing-pathdirection-e.md) | No | Direction of the path. The default direction is clockwise. |
 
@@ -186,7 +186,7 @@ Adds a polygon to this path.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| points | Array&lt;common2D.Point&gt; | Yes | Array that holds the vertex coordinates of the polygon. |
+| points | Array&lt;[common2D.Point](arkts-arkgraphics2d-common2d-point-i.md)&gt; | Yes | Array that holds the vertex coordinates of the polygon. |
 | close | boolean | Yes | Whether to close the path, that is, whether to add a line segment from the start point to the end point of the path. The value **true** means to close the path, and **false** means the opposite. |
 
 **Error codes:**
@@ -229,7 +229,7 @@ Adds a rectangle to a path in the specified direction. The start point is the up
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rect | common2D.Rect | Yes | Rectangle. |
+| rect | [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) | Yes | Rectangle. |
 | pathDirection | [PathDirection](arkts-arkgraphics2d-drawing-pathdirection-e.md) | No | Direction of the path. The default direction is clockwise. |
 
 **Error codes:**
@@ -704,7 +704,7 @@ Obtains the minimum bounding rectangle that encloses this path.
 
 | Type | Description |
 | --- | --- |
-| common2D.Rect | Minimum bounding rectangle. |
+| [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) | Minimum bounding rectangle. |
 
 **Examples**
 
@@ -794,7 +794,7 @@ Gets the last point of the path.
 
 | Type | Description |
 | --- | --- |
-| common2D.Point | Returns the last point of the path. |
+| [common2D.Point](arkts-arkgraphics2d-common2d-point-i.md) | Returns the last point of the path. |
 
 ## getLength
 
@@ -923,7 +923,7 @@ Gets path point data.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;common2D.Point&gt; | path points array. |
+| Array&lt;[common2D.Point](arkts-arkgraphics2d-common2d-point-i.md)&gt; | path points array. |
 
 ## getPositionAndTangent
 
@@ -943,8 +943,8 @@ Obtains the coordinates and tangent at a distance from the start point of this p
 | --- | --- | --- | --- |
 | forceClosed | boolean | Yes | Whether the path is measured as a closed path. The value **true** means that the path is considered closed during measurement, and **false** means that the path is measured based on the actual closed status. |
 | distance | number | Yes | Distance from the start point. If a negative number is passed in, the value **0** is used. If a value greater than the path length is passed in, the path length is used. The value is a floating point number. |
-| position | common2D.Point | Yes | Coordinates obtained. |
-| tangent | common2D.Point | Yes | Tangent obtained, where **tangent.x** and **tangent.y** represent the cosine and sine of the tangent of the point, respectively. |
+| position | [common2D.Point](arkts-arkgraphics2d-common2d-point-i.md) | Yes | Coordinates obtained. |
+| tangent | [common2D.Point](arkts-arkgraphics2d-common2d-point-i.md) | Yes | Tangent obtained, where **tangent.x** and **tangent.y** represent the cosine and sine of the tangent of the point, respectively. |
 
 **Return value:**
 
@@ -1351,7 +1351,7 @@ Checks whether a path forms a rectangle.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rect | common2D.Rect \| null | Yes | Rectangle object, which is used as an output parameter. If the path forms a rectangle, the rectangle object is overwritten with the rectangle represented by the path. Otherwise, the rectangle object remains unchanged. The value can be **null**, indicating that the rectangle represented by the path does not need to be obtained. |
+| rect | [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) \| null | Yes | Rectangle object, which is used as an output parameter. If the path forms a rectangle, the rectangle object is overwritten with the rectangle represented by the path. Otherwise, the rectangle object remains unchanged. The value can be **null**, indicating that the rectangle represented by the path does not need to be obtained. |
 
 **Return value:**
 

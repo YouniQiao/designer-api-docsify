@@ -4,4 +4,4 @@
 type ArrayBufferLike = ArrayBufferTypes[keyof ArrayBufferTypes]
 ```
 
-**Property type:** ArrayBufferTypes[keyof ArrayBufferTypes]
+**Type:** ArrayBufferTypes[keyof ArrayBufferTypes]

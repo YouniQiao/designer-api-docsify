@@ -37,6 +37,7 @@ getPosition(): number
 **示例**
 
 完整示例代码参考[initialize](#initialize)。
+- simpleType:
 
 ## getSize
 
@@ -61,6 +62,7 @@ getSize(): number
 **示例**
 
 完整示例代码参考[initialize](#initialize)。
+- simpleType:
 
 ## initialize
 
@@ -193,6 +195,7 @@ WebHttpBodyStream是否采用分块传输。
 **示例**
 
 完整示例代码参考[initialize](#initialize)。
+- simpleType:
 
 ## isEof
 
@@ -217,6 +220,7 @@ isEof(): boolean
 **示例**
 
 完整示例代码参考[initialize](#initialize)。
+- simpleType:
 
 ## isInMemory
 
@@ -241,6 +245,7 @@ isInMemory(): boolean
 **示例**
 
 完整示例代码参考[initialize](#initialize)。
+- simpleType:
 
 ## read
 
@@ -277,3 +282,4 @@ read(size: number): Promise<ArrayBuffer>
 **示例**
 
 完整示例代码参考[initialize](#initialize)。
+- simpleType:

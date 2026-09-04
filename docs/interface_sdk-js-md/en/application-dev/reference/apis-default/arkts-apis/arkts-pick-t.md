@@ -8,6 +8,6 @@ type Pick<T, K extends keyof T> = {
 
 From T, pick a set of properties whose keys are in the union K
 
-**Property type:** {
+**Type:** {
     [P in K]: T[P];
 }

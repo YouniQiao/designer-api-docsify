@@ -10,4 +10,4 @@ Defines the information about the launcher ability.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Launcher
 
-**Property type:** _LauncherAbilityInfo
+**Type:** _LauncherAbilityInfo

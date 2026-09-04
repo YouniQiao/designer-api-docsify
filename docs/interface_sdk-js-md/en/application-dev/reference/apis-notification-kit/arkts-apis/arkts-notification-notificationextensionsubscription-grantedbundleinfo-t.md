@@ -10,4 +10,4 @@ Describes the bundle information of the authorized application.
 
 **System capability:** SystemCapability.Notification.Notification
 
-**Property type:** _GrantedBundleInfo
+**Type:** _GrantedBundleInfo

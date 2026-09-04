@@ -4,6 +4,8 @@ UIAbility启动后是否可见。当用户设置目标UIAbility为不可见时�
 
 **起始版本：** 12
 
+**模型约束：** 此接口仅可在Stage模型下使用。
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## STARTUP_HIDE
@@ -37,3 +39,4 @@ STARTUP_SHOW = 1
 **示例**
 
 参见ContextConstant.ProcessMode。
+- simpleType:

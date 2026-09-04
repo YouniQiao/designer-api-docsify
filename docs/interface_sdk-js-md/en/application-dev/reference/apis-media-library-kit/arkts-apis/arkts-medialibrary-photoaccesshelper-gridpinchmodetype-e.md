@@ -6,6 +6,8 @@ Enumeration type of grid pinch mode.
 
 **Since:** 23
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## FULL_FUNCTION_GRID

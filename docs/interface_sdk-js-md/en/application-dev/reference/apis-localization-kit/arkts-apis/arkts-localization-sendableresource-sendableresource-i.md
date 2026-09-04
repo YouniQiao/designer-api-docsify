@@ -66,7 +66,7 @@ params?: collections.Array <string | number>
 
 Resource parameters, including the resource name (string type), replacement values for formatting APIs (string or number in the order of placeholders), and plural quantifier (number type, indicating the quantity). The replacement value of the formatting API is used for parameter substitution during string formatting, while the quantifier of the plural API is used to select the plural form in multilingual environments.
 
-**Type:** collections.Array&lt;string \| number&gt;
+**Type:** [collections.Array](../../apis-arkts/arkts-apis/arkts-arkts-collections-array-c.md)&lt;string \| number&gt;
 
 **Since:** 12
 

@@ -10,4 +10,4 @@ Defines an AudioRendererChangeInfo array, which is read-only.
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
-**Property type:** Array&lt;Readonly&lt;[AudioRendererChangeInfo](arkts-audio-audio-audiorendererchangeinfo-i.md)&gt;&gt;
+**Type:** Array&lt;Readonly&lt;[AudioRendererChangeInfo](arkts-audio-audio-audiorendererchangeinfo-i.md)&gt;&gt;

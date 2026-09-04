@@ -64,7 +64,7 @@ constructor(rect: common2D.Rect, xRadii: number, yRadii: number)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| rect | common2D.Rect | 是 | 需要创建的圆角矩形区域。 |
+| rect | [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) | 是 | 需要创建的圆角矩形区域。 |
 | xRadii | number | 是 | x轴方向的圆角半径，该参数为浮点数，取值大于0时圆角生效，小于等于0时圆角不生效。单位为物理像素px。 |
 | yRadii | number | 是 | y轴方向的圆角半径，该参数为浮点数，取值大于0时圆角生效，小于等于0时圆角不生效。单位为物理像素px。 |
 
@@ -105,7 +105,7 @@ getCorner(pos: CornerPos): common2D.Point
 
 | 类型 | 说明 |
 | --- | --- |
-| common2D.Point | 返回一个点，其横坐标表示圆角x轴方向上的半径，纵坐标表示y轴方向上的半径。 |
+| [common2D.Point](arkts-arkgraphics2d-common2d-point-i.md) | 返回一个点，其横坐标表示圆角x轴方向上的半径，纵坐标表示y轴方向上的半径。 |
 
 **错误码：**
 

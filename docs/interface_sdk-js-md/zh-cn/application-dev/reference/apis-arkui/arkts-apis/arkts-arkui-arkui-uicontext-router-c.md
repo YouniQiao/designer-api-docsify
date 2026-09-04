@@ -35,7 +35,7 @@ Returns to the previous page or a specified page.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | router.RouterOptions | 否 | Description of the target page. The **url** parameter specifies the URL of the page to return to. If the page with the specified URL does not exist in the navigation stack, no action is performed. If the navigation stack contains the corresponding URL, the application returns to the page with. the largest index.If no URL is set, the application returns to the previous page, and the page is not rebuilt. The page in the page stack is not reclaimed. It will be reclaimed after being popped up. |
+| options | [router.RouterOptions](arkts-arkui-router-routeroptions-i.md) | 否 | Description of the target page. The **url** parameter specifies the URL of the page to return to. If the page with the specified URL does not exist in the navigation stack, no action is performed. If the navigation stack contains the corresponding URL, the application returns to the page with. the largest index.If no URL is set, the application returns to the previous page, and the page is not rebuilt. The page in the page stack is not reclaimed. It will be reclaimed after being popped up. |
 
 **示例**
 
@@ -260,7 +260,7 @@ Obtains information about the current page state.
 
 | 类型 | 说明 |
 | --- | --- |
-| router.RouterState | Page routing state. |
+| [router.RouterState](arkts-arkui-router-routerstate-i.md) | Page routing state. |
 
 **示例**
 
@@ -305,7 +305,7 @@ Obtains page information by index.
 
 | 类型 | 说明 |
 | --- | --- |
-| router.RouterState \| undefined | State information about the target page. **undefined** if the specified index does not exist. |
+| [router.RouterState](arkts-arkui-router-routerstate-i.md) \| undefined | State information about the target page. **undefined** if the specified index does not exist. |
 
 **示例**
 
@@ -351,7 +351,7 @@ Obtains page information by url.
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;router.RouterState&gt; | Page routing state. |
+| Array&lt;[router.RouterState](arkts-arkui-router-routerstate-i.md)&gt; | Page routing state. |
 
 **示例**
 
@@ -418,7 +418,7 @@ Navigates to a page using the named route. This API uses a promise to return the
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | router.NamedRouterOptions | 是 | Page routing parameters. |
+| options | [router.NamedRouterOptions](arkts-arkui-router-namedrouteroptions-i.md) | 是 | Page routing parameters. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | Callback for the router navigation result.   If the navigation succeeds, **error** is **undefined**. If the navigation fails, **error** is the error object returned by the system. |
 
 **错误码：**
@@ -497,7 +497,7 @@ Navigates to a page using the named route. This API uses a promise to return the
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | router.NamedRouterOptions | 是 | Page routing parameters. |
+| options | [router.NamedRouterOptions](arkts-arkui-router-namedrouteroptions-i.md) | 是 | Page routing parameters. |
 
 **返回值：**
 
@@ -580,8 +580,8 @@ Navigates to a page using the named route. This API uses a promise to return the
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | router.NamedRouterOptions | 是 | Page routing parameters. |
-| mode | router.RouterMode | 是 | Routing mode. |
+| options | [router.NamedRouterOptions](arkts-arkui-router-namedrouteroptions-i.md) | 是 | Page routing parameters. |
+| mode | [router.RouterMode](arkts-arkui-router-routermode-e.md) | 是 | Routing mode. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | Callback for the router navigation result.   If the navigation succeeds, **error** is **undefined**. If the navigation fails, **error** is the error object returned by the system. |
 
 **错误码：**
@@ -667,8 +667,8 @@ Navigates to a page using the named route. This API uses a promise to return the
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | router.NamedRouterOptions | 是 | Page routing parameters. |
-| mode | router.RouterMode | 是 | Routing mode. |
+| options | [router.NamedRouterOptions](arkts-arkui-router-namedrouteroptions-i.md) | 是 | Page routing parameters. |
+| mode | [router.RouterMode](arkts-arkui-router-routermode-e.md) | 是 | Routing mode. |
 
 **返回值：**
 
@@ -756,7 +756,7 @@ Navigates to a specified page in the application.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | router.RouterOptions | 是 | Page routing parameters. |
+| options | [router.RouterOptions](arkts-arkui-router-routeroptions-i.md) | 是 | Page routing parameters. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | Callback for the router navigation result.   If the navigation succeeds, **error** is **undefined**. If the navigation fails, **error** is the error object returned by the system. |
 
 **错误码：**
@@ -836,7 +836,7 @@ Navigates to a specified page in the application. This API uses a promise to ret
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | router.RouterOptions | 是 | Page routing parameters. |
+| options | [router.RouterOptions](arkts-arkui-router-routeroptions-i.md) | 是 | Page routing parameters. |
 
 **返回值：**
 
@@ -983,8 +983,8 @@ Navigates to a specified page in the application.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | router.RouterOptions | 是 | Page routing parameters. |
-| mode | router.RouterMode | 是 | Routing mode. |
+| options | [router.RouterOptions](arkts-arkui-router-routeroptions-i.md) | 是 | Page routing parameters. |
+| mode | [router.RouterMode](arkts-arkui-router-routermode-e.md) | 是 | Routing mode. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | Callback for the router navigation result.   If the navigation succeeds, **error** is **undefined**. If the navigation fails, **error** is the error object returned by the system. |
 
 **错误码：**
@@ -1070,8 +1070,8 @@ Navigates to a specified page in the application. This API uses a promise to ret
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | router.RouterOptions | 是 | Page routing parameters. |
-| mode | router.RouterMode | 是 | Routing mode. |
+| options | [router.RouterOptions](arkts-arkui-router-routeroptions-i.md) | 是 | Page routing parameters. |
+| mode | [router.RouterMode](arkts-arkui-router-routermode-e.md) | 是 | Routing mode. |
 
 **返回值：**
 
@@ -1161,7 +1161,7 @@ Replaces the current page with another one in the application. The current page 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | router.NamedRouterOptions | 是 | Description of the new page. |
+| options | [router.NamedRouterOptions](arkts-arkui-router-namedrouteroptions-i.md) | 是 | Description of the new page. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | Callback for the router navigation result.   If the navigation succeeds, **error** is **undefined**. If the navigation fails, **error** is the error object returned by the system. |
 
 **错误码：**
@@ -1236,7 +1236,7 @@ Replaces the current page with another one in the application. The current page 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | router.NamedRouterOptions | 是 | Description of the new page. |
+| options | [router.NamedRouterOptions](arkts-arkui-router-namedrouteroptions-i.md) | 是 | Description of the new page. |
 
 **返回值：**
 
@@ -1315,8 +1315,8 @@ Replaces the current page with another one in the application. The current page 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | router.NamedRouterOptions | 是 | Description of the new page. |
-| mode | router.RouterMode | 是 | Routing mode. |
+| options | [router.NamedRouterOptions](arkts-arkui-router-namedrouteroptions-i.md) | 是 | Description of the new page. |
+| mode | [router.RouterMode](arkts-arkui-router-routermode-e.md) | 是 | Routing mode. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | Callback for the router navigation result.   If the navigation succeeds, **error** is **undefined**. If the navigation fails, **error** is the error object returned by the system. |
 
 **错误码：**
@@ -1398,8 +1398,8 @@ replaceNamedRoute(options: router.NamedRouterOptions, mode: router.RouterMode): 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | router.NamedRouterOptions | 是 | 替换页面描述信息。 |
-| mode | router.RouterMode | 是 | 跳转页面使用的模式。 |
+| options | [router.NamedRouterOptions](arkts-arkui-router-namedrouteroptions-i.md) | 是 | 替换页面描述信息。 |
+| mode | [router.RouterMode](arkts-arkui-router-routermode-e.md) | 是 | 跳转页面使用的模式。 |
 
 **返回值：**
 
@@ -1484,7 +1484,7 @@ Replaces the current page with another one in the application. The current page 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | router.RouterOptions | 是 | Description of the new page. |
+| options | [router.RouterOptions](arkts-arkui-router-routeroptions-i.md) | 是 | Description of the new page. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | Callback for the router navigation result.   If the navigation succeeds, **error** is **undefined**. If the navigation fails, **error** is the error object returned by the system. |
 
 **错误码：**
@@ -1559,7 +1559,7 @@ Replaces the current page with another one in the application. The current page 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | router.RouterOptions | 是 | Description of the new page. |
+| options | [router.RouterOptions](arkts-arkui-router-routeroptions-i.md) | 是 | Description of the new page. |
 
 **返回值：**
 
@@ -1638,8 +1638,8 @@ Replaces the current page with another one in the application. The current page 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | router.RouterOptions | 是 | Description of the new page. |
-| mode | router.RouterMode | 是 | Routing mode. |
+| options | [router.RouterOptions](arkts-arkui-router-routeroptions-i.md) | 是 | Description of the new page. |
+| mode | [router.RouterMode](arkts-arkui-router-routermode-e.md) | 是 | Routing mode. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | Callback for the router navigation result.   If the navigation succeeds, **error** is **undefined**. If the navigation fails, **error** is the error object returned by the system. |
 
 **错误码：**
@@ -1721,8 +1721,8 @@ Replaces the current page with another one in the application. The current page 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | router.RouterOptions | 是 | Description of the new page. |
-| mode | router.RouterMode | 是 | Routing mode. |
+| options | [router.RouterOptions](arkts-arkui-router-routeroptions-i.md) | 是 | Description of the new page. |
+| mode | [router.RouterMode](arkts-arkui-router-routermode-e.md) | 是 | Routing mode. |
 
 **返回值：**
 
@@ -1807,7 +1807,7 @@ Pop up alert dialog to ask whether to back.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | router.EnableAlertOptions | 是 | Description of the dialog box. |
+| options | [router.EnableAlertOptions](arkts-arkui-router-enablealertoptions-i.md) | 是 | Description of the dialog box. |
 
 **错误码：**
 

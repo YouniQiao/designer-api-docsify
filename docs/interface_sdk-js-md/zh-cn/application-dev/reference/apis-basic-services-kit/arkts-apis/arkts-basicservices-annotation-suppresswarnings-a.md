@@ -39,6 +39,12 @@ rules: Array<SuppressWarningsType>
 **示例**
 
 兼容性告警消除预置条件：OpenHarmony工程根目录下，build-profile.json5文件设置的compatibleSdkVersion值为20。
+权限告警消除预置条件：module.json5配置文件的requestPermissions标签中没有申请权限。
+> 说明：
+> 
+> 用于容器节点时，会屏蔽节点下子节点产生的告警。
+> 
+> 重复规则屏蔽时，仅生效代码位置上距离最近且符合规则的屏蔽类型。当多个不同类型的抑制实例同时存在时，各类型独立生效。
 
 ```TypeScript
 import { SuppressWarnings, SuppressWarningsType, systemDateTime } from '@kit.BasicServicesKit';
@@ -82,6 +88,17 @@ async function savePhotoToGallerySuppress(context: common.UIAbilityContext) {
 ```
 
 // @SuppressWarnings <SuppressWarningsType>
+本功能支持以单行注释形式快速抑制告警。在触发告警的代码行上方添加注释后，编译器将根据规则自动屏蔽对应的告警信息。注释中的标识符与SuppressWarningsType枚举值对应（如compatibility对应COMPATIBILITY），仅对紧随其后的代码行生效。
+> 说明：
+> 
+> 仅支持单行注释(//)格式，示例：// @SuppressWarnings compatibility
+> 
+> 不支持多行注释(/**/)格式，示例：/* @SuppressWarnings compatibility */
+> 
+> 不支持屏蔽容器节点下的子节点
+
+兼容性告警消除预置条件：OpenHarmony工程根目录下，build-profile.json5文件设置的compatibleSdkVersion值为20。
+权限告警消除预置条件：module.json5配置文件的requestPermissions标签中没有申请权限。
 
 ```TypeScript
 import { systemDateTime } from '@kit.BasicServicesKit';

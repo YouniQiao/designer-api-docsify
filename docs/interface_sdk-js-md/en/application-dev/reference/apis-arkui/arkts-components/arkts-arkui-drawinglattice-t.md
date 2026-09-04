@@ -14,4 +14,4 @@ Represents a matrix grid object that divides an image into a rectangular grid.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** import('../api/@ohos.graphics.drawing').default.Lattice
+**Type:** import('../api/@ohos.graphics.drawing').default.Lattice

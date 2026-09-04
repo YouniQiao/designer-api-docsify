@@ -12,4 +12,4 @@ Defines the SkillUri information.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
-**Property type:** _Skill.SkillUri
+**Type:** [_Skill.SkillUri](arkts-ability-skill-skilluri-i.md)

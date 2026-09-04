@@ -4,6 +4,8 @@ Enumerates the page types of the certificate management dialog box.
 
 **Since:** 13
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.Security.CertificateManagerDialog
 
 ## PAGE_MAIN

@@ -28,7 +28,7 @@ Get available form host service info list.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;formInfo.PeerFormHostServiceInfo&gt;&gt; | Promise used to return the peer form host service info list. |
+| Promise&lt;Array&lt;[formInfo.PeerFormHostServiceInfo](arkts-form-forminfo-peerformhostserviceinfo-i-sys.md)&gt;&gt; | Promise used to return the peer form host service info list. |
 
 **Error codes:**
 

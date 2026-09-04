@@ -32,7 +32,7 @@ Sets the return mode of the intent execution result. This API is applicable to i
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| returnMode | insightIntent.ReturnMode | Yes | Return mode of the intent execution result. |
+| returnMode | [insightIntent.ReturnMode](arkts-ability-insightintent-returnmode-e.md) | Yes | Return mode of the intent execution result. |
 
 **Error codes:**
 
@@ -103,7 +103,7 @@ Sets the return mode of the intent execution result. This API is applicable to i
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| returnMode | insightIntent.ReturnMode | Yes | Return mode of the intent execution result. |
+| returnMode | [insightIntent.ReturnMode](arkts-ability-insightintent-returnmode-e.md) | Yes | Return mode of the intent execution result. |
 
 **Error codes:**
 

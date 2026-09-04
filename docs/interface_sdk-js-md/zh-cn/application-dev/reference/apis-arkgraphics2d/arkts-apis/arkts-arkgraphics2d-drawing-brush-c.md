@@ -159,7 +159,7 @@ getColor(): common2D.Color
 
 | 类型 | 说明 |
 | --- | --- |
-| common2D.Color | 返回画刷的颜色，为ARGB格式的颜色对象，包含alpha、red、green、blue四个通道值，每个通道取值范围为[0, 255]的整数。 |
+| [common2D.Color](arkts-arkgraphics2d-common2d-color-i.md) | 返回画刷的颜色，为ARGB格式的颜色对象，包含alpha、red、green、blue四个通道值，每个通道取值范围为[0, 255]的整数。 |
 
 **示例**
 
@@ -197,7 +197,7 @@ getColor4f(): common2D.Color4f
 
 | 类型 | 说明 |
 | --- | --- |
-| common2D.Color4f | 返回画刷的颜色，为浮点数格式的ARGB颜色对象，每个通道值为[0.0, 1.0]之间的浮点数。 |
+| [common2D.Color4f](arkts-arkgraphics2d-common2d-color4f-i.md) | 返回画刷的颜色，为浮点数格式的ARGB颜色对象，每个通道值为[0.0, 1.0]之间的浮点数。 |
 
 **示例**
 
@@ -515,7 +515,7 @@ setColor(color: common2D.Color): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| color | common2D.Color | 是 | ARGB格式的颜色，每个颜色通道的取值范围为[0, 255]的整数，传入范围内的浮点数会向下取整。 |
+| color | [common2D.Color](arkts-arkgraphics2d-common2d-color-i.md) | 是 | ARGB格式的颜色，每个颜色通道的取值范围为[0, 255]的整数，传入范围内的浮点数会向下取整。 |
 
 **错误码：**
 
@@ -640,8 +640,8 @@ setColor4f(color4f: common2D.Color4f, colorSpace: colorSpaceManager.ColorSpaceMa
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| color4f | common2D.Color4f | 是 | ARGB格式的颜色，每个颜色通道的值是0.0-1.0之间的浮点数，大于1.0时，取1.0，小于0.0时，取0.0。颜色值在colorSpace参数指定的色域下进行映射。 |
-| colorSpace | colorSpaceManager.ColorSpaceManager \| null | 是 | 标准色域对象，需通过[colorSpaceManager.create()](arkts-arkgraphics2d-colorspacemanager-create-f.md)方法创建，与color4f配合使用，决定color4f颜色值的映射色域。null表示使用sRGB色域。 |
+| color4f | [common2D.Color4f](arkts-arkgraphics2d-common2d-color4f-i.md) | 是 | ARGB格式的颜色，每个颜色通道的值是0.0-1.0之间的浮点数，大于1.0时，取1.0，小于0.0时，取0.0。颜色值在colorSpace参数指定的色域下进行映射。 |
+| colorSpace | [colorSpaceManager.ColorSpaceManager](arkts-arkgraphics2d-colorspacemanager-colorspacemanager-i.md) \| null | 是 | 标准色域对象，需通过[colorSpaceManager.create()](arkts-arkgraphics2d-colorspacemanager-create-f.md)方法创建，与color4f配合使用，决定color4f颜色值的映射色域。null表示使用sRGB色域。 |
 
 **示例**
 

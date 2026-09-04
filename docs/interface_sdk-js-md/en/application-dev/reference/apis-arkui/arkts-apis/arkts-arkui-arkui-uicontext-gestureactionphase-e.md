@@ -4,6 +4,8 @@ Enumerates triggering phases of gesture callbacks, corresponding to the action c
 
 **Since:** 20
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## WILL_START

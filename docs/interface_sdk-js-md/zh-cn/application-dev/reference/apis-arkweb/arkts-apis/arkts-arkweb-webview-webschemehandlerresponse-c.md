@@ -95,6 +95,7 @@ getCustomErrorCode(): number
 **示例**
 
 完整示例代码参考[constructor](#constructor)。
+- simpleType:
 
 ## getEncoding
 
@@ -119,6 +120,7 @@ getEncoding(): string
 **示例**
 
 完整示例代码参考[constructor](#constructor)。
+- simpleType:
 
 ## getHeaderByName
 
@@ -149,6 +151,7 @@ getHeaderByName(name: string): string
 **示例**
 
 完整示例代码参考[constructor](#constructor)。
+- simpleType:
 
 ## getMimeType
 
@@ -222,6 +225,7 @@ struct WebComponent {
 ```
 
 完整示例代码参考[constructor](#constructor)。
+- simpleType:
 
 ## getNetErrorCode
 
@@ -246,6 +250,7 @@ getNetErrorCode(): WebNetErrorList
 **示例**
 
 完整示例代码参考[constructor](#constructor)。
+- simpleType:
 
 ## getStatus
 
@@ -270,6 +275,7 @@ getStatus(): number
 **示例**
 
 完整示例代码参考[constructor](#constructor)。
+- simpleType:
 
 ## getStatusText
 
@@ -294,6 +300,7 @@ getStatusText(): string
 **示例**
 
 完整示例代码参考[constructor](#constructor)。
+- simpleType:
 
 ## getUrl
 
@@ -320,6 +327,7 @@ getUrl(): string
 **示例**
 
 完整示例代码参考[removeProxyOverride](./arkts-apis-webview-ProxyController.md#removeproxyoverride)。
+- simpleType:
 
 ```TypeScript
 // xxx.ets
@@ -371,6 +379,7 @@ struct WebComponent {
 ```
 
 完整示例代码参考[constructor](#constructor)。
+- simpleType:
 
 ```TypeScript
 // xxx.ets
@@ -422,6 +431,7 @@ setCustomErrorCode(customErrorCode: number): void
 **示例**
 
 完整示例代码参考[constructor](#constructor)。
+- simpleType:
 
 ## setEncoding
 
@@ -452,6 +462,7 @@ setEncoding(encoding: string): void
 **示例**
 
 完整示例代码参考[constructor](#constructor)。
+- simpleType:
 
 ## setHeaderByName
 
@@ -484,6 +495,7 @@ setHeaderByName(name: string, value: string, overwrite: boolean): void
 **示例**
 
 完整示例代码参考[constructor](#constructor)。
+- simpleType:
 
 ## setMimeType
 
@@ -514,6 +526,7 @@ setMimeType(type: string): void
 **示例**
 
 完整示例代码参考[constructor](#constructor)。
+- simpleType:
 
 ## setNetErrorCode
 
@@ -544,6 +557,7 @@ setNetErrorCode(code: WebNetErrorList): void
 **示例**
 
 完整示例代码参考[constructor](#constructor)。
+- simpleType:
 
 ## setStatus
 
@@ -574,6 +588,7 @@ setStatus(code: number): void
 **示例**
 
 完整示例代码参考[constructor](#constructor)。
+- simpleType:
 
 ## setStatusText
 
@@ -604,6 +619,7 @@ setStatusText(text: string): void
 **示例**
 
 完整示例代码参考[constructor](#constructor)。
+- simpleType:
 
 ## setUrl
 
@@ -634,3 +650,4 @@ setUrl(url: string): void
 **示例**
 
 完整示例代码参考[constructor](#constructor)。
+- simpleType:

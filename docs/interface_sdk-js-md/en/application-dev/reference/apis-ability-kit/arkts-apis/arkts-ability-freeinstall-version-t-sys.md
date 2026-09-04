@@ -12,4 +12,4 @@ Defines the version in the **pack.info** file.
 
 **System API:** This is a system API.
 
-**Property type:** _PackInfo.Version
+**Type:** [_PackInfo.Version](arkts-ability-bundlepackinfo-version-i-sys.md)

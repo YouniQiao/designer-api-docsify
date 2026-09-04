@@ -67,7 +67,7 @@ The SVG tags are supported since API version 10. The used version is (SVG) 1.1, 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | Image path. Currently, only the application sandbox path is supported. The following formats are supported: .jpg,png,gif,bmp,webp,dng,heic&lt;sup&gt;12+&lt;/sup&gt; (depending on the hardware),svg&lt;sup&gt;10+&lt;/sup&gt;, and .ico&lt;sup&gt;11+&lt;/sup&gt;. |
+| uri | string | Yes | Image path. Currently, only the application sandbox path is supported. The following formats are supported: .jpg,png,gif,bmp,webp,dng,heic&lt;[sup](../../apis-default/arkts-apis/arkts-lib-es2015-core-string-i.md)&gt;12+&lt;/sup&gt; (depending on the hardware),svg&lt;sup&gt;10+&lt;/sup&gt;, and .ico&lt;sup&gt;11+&lt;/sup&gt;. |
 
 **Return value:**
 
@@ -149,7 +149,7 @@ The SVG tags are supported since API version 10. The used version is (SVG) 1.1, 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | Image path. Currently, only the application sandbox path is supported. The following formats are supported: .jpg,png,gif,bmp,webp,dng,heic&lt;sup&gt;12+&lt;/sup&gt; (depending on the hardware),svg&lt;sup&gt;10+&lt;/sup&gt; and .ico&lt;sup&gt;11+&lt;/sup&gt;. |
+| uri | string | Yes | Image path. Currently, only the application sandbox path is supported. The following formats are supported: .jpg,png,gif,bmp,webp,dng,heic&lt;[sup](../../apis-default/arkts-apis/arkts-lib-es2015-core-string-i.md)&gt;12+&lt;/sup&gt; (depending on the hardware),svg&lt;sup&gt;10+&lt;/sup&gt; and .ico&lt;sup&gt;11+&lt;/sup&gt;. |
 | options | [SourceOptions](arkts-image-image-sourceoptions-i.md) | Yes | Image properties, including the image pixel density, pixel format, and image size. |
 
 **Return value:**
@@ -354,7 +354,7 @@ Creates an ImageSource instance based on the raw file descriptor of an image res
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rawfile | resourceManager.RawFileDescriptor | Yes | Raw file descriptor of the image resource file. |
+| rawfile | [resourceManager.RawFileDescriptor](../../apis-localization-kit/arkts-apis/arkts-localization-resourcemanager-rawfiledescriptor-t.md) | Yes | Raw file descriptor of the image resource file. |
 | options | [SourceOptions](arkts-image-image-sourceoptions-i.md) | No | Image properties, including the image pixel density, pixel format, and image size. |
 
 **Return value:**

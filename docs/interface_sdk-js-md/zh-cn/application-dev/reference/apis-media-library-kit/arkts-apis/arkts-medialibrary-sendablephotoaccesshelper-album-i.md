@@ -115,7 +115,7 @@ convertToPhotoAlbum(): photoAccessHelper.Album
 
 | 类型 | 说明 |
 | --- | --- |
-| photoAccessHelper.Album | 返回非Sendable类型的Album。 |
+| [photoAccessHelper.Album](arkts-medialibrary-photoaccesshelper-album-i.md) | 返回非Sendable类型的Album。 |
 
 **错误码：**
 

@@ -4,6 +4,8 @@ Enumerates loop mode keys for playback.
 
 **Since:** 26.0.0
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.Multimedia.Media.Core
 
 ## PLAYLIST_LOOP_MODE_ALL

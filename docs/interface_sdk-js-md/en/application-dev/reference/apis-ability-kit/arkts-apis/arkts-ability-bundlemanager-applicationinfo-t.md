@@ -12,4 +12,4 @@ Defines the application information.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
-**Property type:** _ApplicationInfo
+**Type:** _ApplicationInfo

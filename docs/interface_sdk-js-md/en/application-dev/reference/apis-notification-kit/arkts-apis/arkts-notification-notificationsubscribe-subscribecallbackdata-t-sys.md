@@ -12,4 +12,4 @@ Provides methods that will be called back when the subscriber receives a new not
 
 **System API:** This is a system API.
 
-**Property type:** _SubscribeCallbackData
+**Type:** _SubscribeCallbackData

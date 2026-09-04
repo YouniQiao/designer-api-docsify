@@ -10,4 +10,4 @@ Defines the VPN extension context. It allows access to serviceExtension-specific
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
-**Property type:** _VpnExtensionContext
+**Type:** _VpnExtensionContext

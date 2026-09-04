@@ -4,8 +4,6 @@ The ContextConstant module defines context-related enums, including the file enc
 
 **Since:** 9
 
-**Model restriction:** This API can be used only in the stage model.
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## Modules to Import

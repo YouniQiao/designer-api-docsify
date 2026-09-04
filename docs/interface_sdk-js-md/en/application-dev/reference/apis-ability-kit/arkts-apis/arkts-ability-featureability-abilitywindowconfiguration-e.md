@@ -4,6 +4,8 @@ Defines the window configuration corresponding to this ability. The configuratio
 
 **Since:** 7
 
+**Model restriction:** This API can be used only in the FA model.
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
 ## WINDOW_MODE_UNDEFINED

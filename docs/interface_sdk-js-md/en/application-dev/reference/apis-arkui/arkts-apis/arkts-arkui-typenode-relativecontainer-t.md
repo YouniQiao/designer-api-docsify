@@ -14,4 +14,4 @@ Represents a FrameNode of the **RelativeContainer** type.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** [TypedFrameNode](arkts-arkui-framenode-typedframenode-i.md)&lt;RelativeContainerInterface, [RelativeContainerAttribute](../arkts-components/arkts-arkui-relativecontainer-attribute.md)&gt;
+**Type:** [TypedFrameNode](arkts-arkui-framenode-typedframenode-i.md)&lt;RelativeContainerInterface, [RelativeContainerAttribute](../arkts-components/arkts-arkui-relativecontainer-attribute.md)&gt;

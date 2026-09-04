@@ -12,4 +12,4 @@ Describes the badge number of the application has changed.
 
 **System API:** This is a system API.
 
-**Property type:** _BadgeNumberCallbackData
+**Type:** _BadgeNumberCallbackData

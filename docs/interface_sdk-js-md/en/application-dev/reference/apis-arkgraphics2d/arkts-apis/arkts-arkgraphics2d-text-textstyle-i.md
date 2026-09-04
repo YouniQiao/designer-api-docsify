@@ -84,7 +84,7 @@ color?: common2D.Color
 
 Text color. The default color is white.
 
-**Type:** common2D.Color
+**Type:** [common2D.Color](arkts-arkgraphics2d-common2d-color-i.md)
 
 **Since:** 12
 
@@ -148,7 +148,7 @@ fontEdging?: drawing.FontEdging
 
 Edge processing mode for drawing texts. The default value is **ANTI_ALIAS**.
 
-**Type:** drawing.FontEdging
+**Type:** [drawing.FontEdging](arkts-arkgraphics2d-drawing-fontedging-e.md)
 
 **Since:** 24
 
@@ -232,7 +232,7 @@ Array of specified typesetting font objects, used to prioritize the specified fo
 
 When fontTypefaces is set together with [TextStyle](arkts-arkgraphics2d-text-textstyle-i.md).fontFamilies, fontTypefaces takes precedence.
 
-**Type:** Array&lt;drawing.Typeface&gt;
+**Type:** Array&lt;[drawing.Typeface](arkts-arkgraphics2d-drawing-typeface-c.md)&gt;
 
 **Since:** 26.0.0
 

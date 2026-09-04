@@ -32,7 +32,7 @@ Shows a full-screen ad.
 | --- | --- | --- | --- |
 | ad | Advertisement | Yes | Ad object. |
 | options | [AdDisplayOptions](arkts-ads-advertising-addisplayoptions-i.md) | Yes | Ad display parameters. |
-| context | common.UIAbilityContext | No | Context of the UIAbility. If this parameter is not set, the value is obtained from @ohos.app.ability.common.<br>**Since:** 12 |
+| context | [common.UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-common-uiabilitycontext-t.md) | No | Context of the UIAbility. If this parameter is not set, the value is obtained from @ohos.app.ability.common.<br>**Since:** 12 |
 
 **Error codes:**
 

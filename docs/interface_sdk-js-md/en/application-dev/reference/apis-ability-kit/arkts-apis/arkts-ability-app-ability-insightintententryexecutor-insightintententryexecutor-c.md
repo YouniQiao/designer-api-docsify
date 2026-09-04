@@ -34,7 +34,7 @@ Called when insight intent execute.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;insightIntent.IntentResult&lt;T&gt;&gt; | The result of insight intent execution, support promise. |
+| Promise&lt;[insightIntent.IntentResult](arkts-ability-insightintent-intentresult-i.md)&lt;T&gt;&gt; | The result of insight intent execution, support promise. |
 
 **Examples**
 
@@ -123,7 +123,7 @@ executeMode: insightIntent.ExecuteMode
 
 The insight intent execute mode.
 
-**Type:** insightIntent.ExecuteMode
+**Type:** [insightIntent.ExecuteMode](arkts-ability-insightintent-executemode-e.md)
 
 **Since:** 20
 
@@ -159,7 +159,7 @@ windowStage?: window.WindowStage
 
 The window stage.
 
-**Type:** window.WindowStage
+**Type:** [window.WindowStage](../../apis-arkui/arkts-apis/arkts-arkui-window-windowstage-i.md)
 
 **Since:** 20
 

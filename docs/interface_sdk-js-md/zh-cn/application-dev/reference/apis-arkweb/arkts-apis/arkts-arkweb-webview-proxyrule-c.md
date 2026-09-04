@@ -37,6 +37,7 @@ getSchemeFilter(): ProxySchemeFilter
 **示例**
 
 完整示例代码参考[removeProxyOverride](./arkts-apis-webview-ProxyController.md#removeproxyoverride)。
+- simpleType:
 
 ## getUrl
 
@@ -61,6 +62,7 @@ getUrl(): string
 **示例**
 
 完整示例代码参考[removeProxyOverride](./arkts-apis-webview-ProxyController.md#removeproxyoverride)。
+- simpleType:
 
 ```TypeScript
 // xxx.ets
@@ -112,6 +114,7 @@ struct WebComponent {
 ```
 
 完整示例代码参考constructor。
+- simpleType:
 
 ```TypeScript
 // xxx.ets

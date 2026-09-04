@@ -10,4 +10,4 @@ type NetworkState = radio.NetworkState
 
 **系统能力：** SystemCapability.Telephony.StateRegistry
 
-**属性类型：** radio.NetworkState
+**类型：** [radio.NetworkState](arkts-telephony-radio-networkstate-i.md)

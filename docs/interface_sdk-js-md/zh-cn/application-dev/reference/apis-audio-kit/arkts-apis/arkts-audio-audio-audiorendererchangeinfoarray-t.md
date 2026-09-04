@@ -10,4 +10,4 @@ type AudioRendererChangeInfoArray = Array<Readonly<AudioRendererChangeInfo>>
 
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
-**属性类型：** Array&lt;Readonly&lt;[AudioRendererChangeInfo](arkts-audio-audio-audiorendererchangeinfo-i.md)&gt;&gt;
+**类型：** Array&lt;Readonly&lt;[AudioRendererChangeInfo](arkts-audio-audio-audiorendererchangeinfo-i.md)&gt;&gt;

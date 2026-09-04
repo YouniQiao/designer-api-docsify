@@ -12,4 +12,4 @@ Defines the skill information.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
-**Property type:** _Skill.Skill
+**Type:** [_Skill.Skill](arkts-ability-skill-i.md)

@@ -30,7 +30,7 @@ add a watermark for the AVScreenCaptureRecorder. This API uses a promise to retu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| watermark | image.PixelMap | Yes | : Watermark image. |
+| watermark | [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | Yes | : Watermark image. |
 | config | [WatermarkConfiguration](arkts-media-media-watermarkconfiguration-i.md) | Yes | : Configuration of the watermark. |
 
 **Return value:**

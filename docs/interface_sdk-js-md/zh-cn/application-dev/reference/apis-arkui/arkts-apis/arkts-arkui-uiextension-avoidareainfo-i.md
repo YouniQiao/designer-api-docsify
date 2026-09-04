@@ -20,7 +20,7 @@ area: window.AvoidArea
 
 窗口内容避让区域。
 
-**类型：** window.AvoidArea
+**类型：** [window.AvoidArea](arkts-arkui-window-avoidarea-i.md)
 
 **起始版本：** 12
 
@@ -38,7 +38,7 @@ type: window.AvoidAreaType
 
 窗口避让区类型。
 
-**类型：** window.AvoidAreaType
+**类型：** [window.AvoidAreaType](arkts-arkui-window-avoidareatype-e.md)
 
 **起始版本：** 12
 

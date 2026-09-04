@@ -4,8 +4,6 @@ AbilityConstant provides enums related to abilities, including the window mode.
 
 **Since:** 9
 
-**Model restriction:** This API can be used only in the stage model.
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## Modules to Import

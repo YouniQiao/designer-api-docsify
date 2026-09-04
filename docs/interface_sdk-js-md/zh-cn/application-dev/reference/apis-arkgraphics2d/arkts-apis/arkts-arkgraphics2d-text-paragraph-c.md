@@ -192,7 +192,7 @@ getCharacterPositionAtCoordinate(x: number, y: number, encoding: drawing.TextEnc
 | --- | --- | --- | --- |
 | x | number | 是 | 文本排版区域内的水平坐标，单位为物理像素（px）。相对于文本排版区域左上角的x偏移量，向右为正方向。支持浮点数，可取负值（表示在文本区域左侧）。坐标超出文本区域范围时，将返回最近的字符位置。可通过触摸事件或点击事件获取。 |
 | y | number | 是 | 文本排版区域内的垂直坐标，单位为物理像素（px）。相对于文本排版区域左上角的y偏移量，向下为正方向。支持浮点数，可取负值（表示在文本区域上方）。坐标超出文本区域范围时，将返回最近的字符位置。可通过触摸事件或点击事件获取。 |
-| encoding | drawing.TextEncoding | 是 | 文本编码类型。目前仅支持UTF-8和UTF-16编码类型。对于UTF-8编码，返回的字符位置表示字节偏移量。对于UTF-16编码，返回的字符位置表示UTF-16编码单元偏移量。 |
+| encoding | [drawing.TextEncoding](arkts-arkgraphics2d-drawing-textencoding-e.md) | 是 | 文本编码类型。目前仅支持UTF-8和UTF-16编码类型。对于UTF-8编码，返回的字符位置表示字节偏移量。对于UTF-16编码，返回的字符位置表示UTF-16编码单元偏移量。 |
 
 **返回值：**
 
@@ -263,7 +263,7 @@ getCharacterRangeForGlyphRange(glyphRange: Range, encoding: drawing.TextEncoding
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | glyphRange | Range | 是 | 字形范围。 |
-| encoding | drawing.TextEncoding | 是 | 文本编码类型。目前仅支持UTF-8和UTF-16编码类型。对于UTF-8编码，返回的字符范围表示字节范围。对于UTF-16编码，返回的字符范围表示UTF-16编码单元范围。 |
+| encoding | [drawing.TextEncoding](arkts-arkgraphics2d-drawing-textencoding-e.md) | 是 | 文本编码类型。目前仅支持UTF-8和UTF-16编码类型。对于UTF-8编码，返回的字符范围表示字节范围。对于UTF-16编码，返回的字符范围表示UTF-16编码单元范围。 |
 
 **返回值：**
 
@@ -366,7 +366,7 @@ getGlyphRangeForCharacterRange(characterRange: Range, encoding: drawing.TextEnco
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | characterRange | Range | 是 | 字符范围。 |
-| encoding | drawing.TextEncoding | 是 | 文本编码类型。目前仅支持UTF-8和UTF-16编码类型。对于UTF-8编码，返回的实际字符范围表示字节范围。对于UTF-16编码，返回的实际字符范围表示UTF-16编码单元范围。 |
+| encoding | [drawing.TextEncoding](arkts-arkgraphics2d-drawing-textencoding-e.md) | 是 | 文本编码类型。目前仅支持UTF-8和UTF-16编码类型。对于UTF-8编码，返回的实际字符范围表示字节范围。对于UTF-16编码，返回的实际字符范围表示UTF-16编码单元范围。 |
 
 **返回值：**
 
@@ -1277,7 +1277,7 @@ paint(canvas: drawing.Canvas, x: number, y: number): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| canvas | drawing.Canvas | 是 | 绘制的目标画布。 |
+| canvas | [drawing.Canvas](arkts-arkgraphics2d-drawing-canvas-c.md) | 是 | 绘制的目标画布。 |
 | x | number | 是 | 绘制的左上角位置的横坐标，浮点数，单位为物理像素px。 |
 | y | number | 是 | 绘制的左上角位置的纵坐标，浮点数，单位为物理像素px。 |
 
@@ -1370,8 +1370,8 @@ paintOnPath(canvas: drawing.Canvas, path: drawing.Path, hOffset: number, vOffset
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| canvas | drawing.Canvas | 是 | 绘制的目标画布。 |
-| path | drawing.Path | 是 | 确认文字位置的路径。 |
+| canvas | [drawing.Canvas](arkts-arkgraphics2d-drawing-canvas-c.md) | 是 | 绘制的目标画布。 |
+| path | [drawing.Path](arkts-arkgraphics2d-drawing-path-c.md) | 是 | 确认文字位置的路径。 |
 | hOffset | number | 是 | 沿路径方向偏置，从路径起点向前为正，向后为负，单位为物理像素px。 |
 | vOffset | number | 是 | 沿路径垂直方向偏置，沿路径方向左侧为负，右侧为正，单位为物理像素px。 |
 
@@ -1405,7 +1405,7 @@ updateColor(color: common2D.Color): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| color | common2D.Color | 是 | 更新后的字体色。 |
+| color | [common2D.Color](arkts-arkgraphics2d-common2d-color-i.md) | 是 | 更新后的字体色。 |
 
 **示例**
 

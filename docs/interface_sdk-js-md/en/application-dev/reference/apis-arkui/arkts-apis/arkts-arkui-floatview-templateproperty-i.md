@@ -20,7 +20,7 @@ size: window.Size
 
 Window size required for updating the template type.
 
-**Type:** window.Size
+**Type:** [window.Size](arkts-arkui-window-size-i.md)
 
 **Since:** 26.0.0
 

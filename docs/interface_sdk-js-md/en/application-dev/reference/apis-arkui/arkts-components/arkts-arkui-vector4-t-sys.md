@@ -14,4 +14,4 @@ Defines the four-dimensional vector, which contains x, y, z, and w coordinates t
 
 **System API:** This is a system API.
 
-**Property type:** import('../api/arkui/Graphics').Vector4
+**Type:** import('../api/arkui/Graphics').Vector4

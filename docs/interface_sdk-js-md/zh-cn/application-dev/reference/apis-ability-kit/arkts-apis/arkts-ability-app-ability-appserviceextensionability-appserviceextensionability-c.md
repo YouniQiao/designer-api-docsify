@@ -42,7 +42,7 @@ onConnect(want: Want): rpc.RemoteObject
 
 | 类型 | 说明 |
 | --- | --- |
-| rpc.RemoteObject | 一个RemoteObject对象，用于客户端和服务端进行通信。 |
+| [rpc.RemoteObject](../../apis-ipc-kit/arkts-apis/arkts-ipc-rpc-remoteobject-c.md) | 一个RemoteObject对象，用于客户端和服务端进行通信。 |
 
 **示例**
 

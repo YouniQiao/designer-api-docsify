@@ -14,4 +14,4 @@ The context of form extension. It allows access to formExtension-specific resour
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
-**Property type:** _FormExtensionContext.default
+**Type:** _FormExtensionContext.default

@@ -213,6 +213,8 @@ Value range: [1, 9], with intervals of 1, corresponding to the values in the [Fo
 **Examples**
 
 > NOTE
+> 
+> Directly using font can lead to the issue of [ambiguous UI context](../../../ui/arkts-global-interface.md#ambiguous-ui-context). To avoid this, obtain the [Font](arkts-apis-uicontext-font.md) object associated with the current UI context by using the [getFont](./arkts-apis-uicontext-uicontext.md#getfont) API in [UIContext](./arkts-apis-uicontext-uicontext.md).
 
 ```TypeScript
 // xxx.ets

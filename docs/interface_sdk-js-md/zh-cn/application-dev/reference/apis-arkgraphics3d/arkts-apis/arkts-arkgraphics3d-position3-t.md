@@ -10,4 +10,4 @@ export type Position3 = Vec3
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
-**属性类型：** [Vec3](arkts-arkgraphics3d-scenetypes-vec3-i.md)
+**类型：** [Vec3](arkts-arkgraphics3d-scenetypes-vec3-i.md)

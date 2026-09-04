@@ -10,7 +10,7 @@ export type AccessibilityElement = _AccessibilityElement
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
-**属性类型：** _AccessibilityElement
+**类型：** _AccessibilityElement
 
 **示例**
 

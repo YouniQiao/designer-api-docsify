@@ -30,7 +30,7 @@ Adds a Bezier curve deformation effect to the component. This effect achieves pr
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| controlPoints | Array&lt;common2D.Point&gt; | Yes | 12 Bezier deformation control points. The array length must be 12. Changing the positions of the control points changes the shape of the curves forming the edges, thereby distorting the image. The control point coordinates use a normalized coordinate system (default range [0, 1]), and coordinate values can be greater than 1 or less than 0. If the array length is not 12, the effect will not take effect. |
+| controlPoints | Array&lt;[common2D.Point](arkts-arkgraphics2d-common2d-point-i.md)&gt; | Yes | 12 Bezier deformation control points. The array length must be 12. Changing the positions of the control points changes the shape of the curves forming the edges, thereby distorting the image. The control point coordinates use a normalized coordinate system (default range [0, 1]), and coordinate values can be greater than 1 or less than 0. If the array length is not 12, the effect will not take effect. |
 
 **Return value:**
 
@@ -168,7 +168,7 @@ Adds a color gradient effect to the component content.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | colors | Array&lt;Color&gt; | Yes | The color array for multi-color gradient. The array length range is [0, 12], and each color value must be greater than or equal to 0. If the array length is 0 or greater than 12, or if the array lengths of colors, positions, and strengths are not equal, the effect will not take effect. |
-| positions | Array&lt;common2D.Point&gt; | Yes | The position array, corresponding to the distribution positions of colors. The array length range is [0, 12]. If the array length is 0 or greater than 12, or if the array lengths of colors, positions, and strengths are not equal, the effect will not take effect. |
+| positions | Array&lt;[common2D.Point](arkts-arkgraphics2d-common2d-point-i.md)&gt; | Yes | The position array, corresponding to the distribution positions of colors. The array length range is [0, 12]. If the array length is 0 or greater than 12, or if the array lengths of colors, positions, and strengths are not equal, the effect will not take effect. |
 | strengths | Array&lt;number&gt; | Yes | The strength array, corresponding to the diffusion strength of colors. The array length range is [0, 12], and each strength value must be greater than or equal to 0. If the array length is 0 or greater than 12, or if the array lengths of colors, positions, and strengths are not equal, the effect will not take effect. |
 | alphaMask | [Mask](arkts-arkgraphics2d-uieffect-mask-c-sys.md) | No | The mask that controls the transparency distribution of the gradient effect. A Mask instance can be created through Mask creation methods (such as createRippleMask, createRadialGradientMask, etc.). Pass this parameter when you need to control the transparency distribution of the color gradient effect (such as local transparency or dynamic transparency effects). If not set, the transparency of the color gradient effect is entirely determined by the colors parameter. |
 
@@ -234,8 +234,8 @@ Adds a 3D lighting effect to the component content.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| lightPosition | common2D.Point3d | Yes | The position of the light source in the component space. [-1, -1, 0] is the top-left corner of the component, [1, 1, 0] is the bottom-right corner of the component. The larger the z-axis component, the farther the light source is from the component plane, and the larger the illuminated area. The x component range is [-10, 10], the y component range is [-10, 10], and the z component range is [0, 10]. Values outside the range will be automatically clamped. |
-| lightColor | common2D.Color | Yes | The color of the light source. The RGBA components range from [0, 1]. Values outside the range will be automatically clamped. |
+| lightPosition | [common2D.Point3d](arkts-arkgraphics2d-common2d-point3d-i.md) | Yes | The position of the light source in the component space. [-1, -1, 0] is the top-left corner of the component, [1, 1, 0] is the bottom-right corner of the component. The larger the z-axis component, the farther the light source is from the component plane, and the larger the illuminated area. The x component range is [-10, 10], the y component range is [-10, 10], and the z component range is [0, 10]. Values outside the range will be automatically clamped. |
+| lightColor | [common2D.Color](arkts-arkgraphics2d-common2d-color-i.md) | Yes | The color of the light source. The RGBA components range from [0, 1]. Values outside the range will be automatically clamped. |
 | lightIntensity | number | Yes | The intensity of the light source. The value range is [0, 1]. A larger value indicates a brighter light source. Values outside the range will be automatically clamped. |
 | displacementMap | [Mask](arkts-arkgraphics2d-uieffect-mask-c-sys.md) | No | The displacement map parameter. This parameter is not currently effective and is not recommended to be passed in. Not setting it has no effect on the functionality. |
 
@@ -309,7 +309,7 @@ Provides a Mask-based and directional light lighting effect for the component co
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| direction | common2D.Point3d | Yes | The direction of the incident light, represented by three-dimensional coordinates indicating the direction of the light rays. |
+| direction | [common2D.Point3d](arkts-arkgraphics2d-common2d-point3d-i.md) | Yes | The direction of the incident light, represented by three-dimensional coordinates indicating the direction of the light rays. |
 | color | Color | Yes | The light color. |
 | intensity | number | Yes | The light intensity. The value range is [0, +∞). A larger value indicates a brighter light source. |
 | mask | [Mask](arkts-arkgraphics2d-uieffect-mask-c-sys.md) | No | The displacement map, used to describe the three-dimensional details of the two-dimensional image surface. A Mask instance can be created through Mask creation methods (such as createRippleMask, createRadialGradientMask, etc.). Pass this parameter when you need to enhance local details and lighting reflection effects (such as relief, bump textures). Implemented through normal maps or height maps; if a height map is input, it needs to be used with the factor parameter. If not set, the default is empty, resulting in a global flat lighting effect without details. |
@@ -940,7 +940,7 @@ Applies a spin blur effect to the image, creating rotational motion trails aroun
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| center | common2D.Point | Yes | Specifies the blur center in normalized coordinates. [0, 0] represents the top-left corner, [0.5, 0.5] the center, and [1, 1] the bottom-right corner. |
+| center | [common2D.Point](arkts-arkgraphics2d-common2d-point-i.md) | Yes | Specifies the blur center in normalized coordinates. [0, 0] represents the top-left corner, [0.5, 0.5] the center, and [1, 1] the bottom-right corner. |
 | angle | number | Yes | Specifies the angular range of the spin blur in radians. The value is unrestricted, with a recommended range of [-2π, 2π]. Positive values rotate clockwise, while negative values rotate counterclockwise. |
 | samples | number | Yes | Specifies the number of samples used for the spin blur. The value is clamped to the range [0, 128]. Higher values produce smoother results but increase processing cost; 32 is usually sufficient. |
 

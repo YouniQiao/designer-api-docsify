@@ -14,4 +14,4 @@ Represents a filter object.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** import('../api/@ohos.graphics.uiEffect').default.Filter
+**Type:** import('../api/@ohos.graphics.uiEffect').default.Filter

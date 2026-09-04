@@ -6,7 +6,7 @@ Enumerates the state types of the input method panel.
 | ------------ | -- | ------------------ |  
 | [FLG_FIXED](arkts-ime-inputmethodengine-panelflag-e.md) | 0 | Fixed state type.|
 | [FLG_FLOATING](arkts-ime-inputmethodengine-panelflag-e.md) | 1 | Floating state type.|
-| FLAG_CANDIDATE&lt;sup&gt;15+&lt;/sup&gt; | 2 | Candidate state type.|
+| FLAG_CANDIDATE&lt;[sup](../../apis-default/arkts-apis/arkts-lib-es2015-core-string-i.md)&gt;15+&lt;/sup&gt; | 2 | Candidate state type.|
 
 **Since:** 10
 

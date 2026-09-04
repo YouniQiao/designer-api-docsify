@@ -12,4 +12,4 @@ export type CommonEventSubscriber = _CommonEventSubscriber
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
-**属性类型：** _CommonEventSubscriber
+**类型：** _CommonEventSubscriber

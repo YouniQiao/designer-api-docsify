@@ -8,6 +8,8 @@ Enumerates the properties available for the metadata of a PNG image.
 
 **Since:** 26.0.0
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## X_PIXELS_PER_METER

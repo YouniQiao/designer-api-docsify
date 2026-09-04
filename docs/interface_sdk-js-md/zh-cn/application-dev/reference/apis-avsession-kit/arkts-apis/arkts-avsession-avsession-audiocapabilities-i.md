@@ -20,7 +20,7 @@ readonly streamInfos: Array<audio.AudioStreamInfo>
 
 音频能力参数的列表。
 
-**类型：** Array&lt;audio.AudioStreamInfo&gt;
+**类型：** Array&lt;[audio.AudioStreamInfo](../../apis-audio-kit/arkts-apis/arkts-audio-audio-audiostreaminfo-i.md)&gt;
 
 **起始版本：** 20
 

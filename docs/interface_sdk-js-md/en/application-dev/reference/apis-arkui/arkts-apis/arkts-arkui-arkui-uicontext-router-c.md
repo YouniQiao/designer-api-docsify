@@ -41,7 +41,7 @@ Returns to the previous page or a specified page.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | router.RouterOptions | No | Description of the target page. The **url** parameter specifies the URL of the page to return to. If the page with the specified URL does not exist in the navigation stack, no action is performed. If the navigation stack contains the corresponding URL, the application returns to the page with. the largest index.If no URL is set, the application returns to the previous page, and the page is not rebuilt. The page in the page stack is not reclaimed. It will be reclaimed after being popped up. |
+| options | [router.RouterOptions](arkts-arkui-router-routeroptions-i.md) | No | Description of the target page. The **url** parameter specifies the URL of the page to return to. If the page with the specified URL does not exist in the navigation stack, no action is performed. If the navigation stack contains the corresponding URL, the application returns to the page with. the largest index.If no URL is set, the application returns to the previous page, and the page is not rebuilt. The page in the page stack is not reclaimed. It will be reclaimed after being popped up. |
 
 **Examples**
 
@@ -268,7 +268,7 @@ Obtains state information about the current page.
 
 | Type | Description |
 | --- | --- |
-| router.RouterState | Page routing state. |
+| [router.RouterState](arkts-arkui-router-routerstate-i.md) | Page routing state. |
 
 **Examples**
 
@@ -313,7 +313,7 @@ Obtains the status information about a page by its index.
 
 | Type | Description |
 | --- | --- |
-| router.RouterState \| undefined | State information about the target page. **undefined** if the specified index does not exist. |
+| [router.RouterState](arkts-arkui-router-routerstate-i.md) \| undefined | State information about the target page. **undefined** if the specified index does not exist. |
 
 **Examples**
 
@@ -359,7 +359,7 @@ Obtains the status information about a page by its URL.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;router.RouterState&gt; | Page routing state. |
+| Array&lt;[router.RouterState](arkts-arkui-router-routerstate-i.md)&gt; | Page routing state. |
 
 **Examples**
 
@@ -426,7 +426,7 @@ Navigates to a page using the named route. This API uses an asynchronous callbac
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | router.NamedRouterOptions | Yes | Page routing parameters. |
+| options | [router.NamedRouterOptions](arkts-arkui-router-namedrouteroptions-i.md) | Yes | Page routing parameters. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback for the router navigation result.   If the navigation succeeds, **error** is **undefined**. If the navigation fails, **error** is the error object returned by the system. |
 
 **Error codes:**
@@ -505,7 +505,7 @@ Navigates to a page using the named route. This API uses a promise to return the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | router.NamedRouterOptions | Yes | Page routing parameters. |
+| options | [router.NamedRouterOptions](arkts-arkui-router-namedrouteroptions-i.md) | Yes | Page routing parameters. |
 
 **Return value:**
 
@@ -588,8 +588,8 @@ Navigates to a page using the named route. This API uses an asynchronous callbac
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | router.NamedRouterOptions | Yes | Page routing parameters. |
-| mode | router.RouterMode | Yes | Routing mode. |
+| options | [router.NamedRouterOptions](arkts-arkui-router-namedrouteroptions-i.md) | Yes | Page routing parameters. |
+| mode | [router.RouterMode](arkts-arkui-router-routermode-e.md) | Yes | Routing mode. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback for the router navigation result.   If the navigation succeeds, **error** is **undefined**. If the navigation fails, **error** is the error object returned by the system. |
 
 **Error codes:**
@@ -675,8 +675,8 @@ Navigates to a page using the named route. This API uses a promise to return the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | router.NamedRouterOptions | Yes | Page routing parameters. |
-| mode | router.RouterMode | Yes | Routing mode. |
+| options | [router.NamedRouterOptions](arkts-arkui-router-namedrouteroptions-i.md) | Yes | Page routing parameters. |
+| mode | [router.RouterMode](arkts-arkui-router-routermode-e.md) | Yes | Routing mode. |
 
 **Return value:**
 
@@ -764,7 +764,7 @@ Navigates to a specified page in the application. This API uses an asynchronous 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | router.RouterOptions | Yes | Page routing parameters. |
+| options | [router.RouterOptions](arkts-arkui-router-routeroptions-i.md) | Yes | Page routing parameters. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback for the router navigation result.   If the navigation succeeds, **error** is **undefined**. If the navigation fails, **error** is the error object returned by the system. |
 
 **Error codes:**
@@ -844,7 +844,7 @@ Navigates to a specified page in the application. This API uses a promise to ret
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | router.RouterOptions | Yes | Page routing parameters. |
+| options | [router.RouterOptions](arkts-arkui-router-routeroptions-i.md) | Yes | Page routing parameters. |
 
 **Return value:**
 
@@ -991,8 +991,8 @@ Navigates to a specified page in the application. This API uses an asynchronous 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | router.RouterOptions | Yes | Page routing parameters. |
-| mode | router.RouterMode | Yes | Routing mode. |
+| options | [router.RouterOptions](arkts-arkui-router-routeroptions-i.md) | Yes | Page routing parameters. |
+| mode | [router.RouterMode](arkts-arkui-router-routermode-e.md) | Yes | Routing mode. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback for the router navigation result.   If the navigation succeeds, **error** is **undefined**. If the navigation fails, **error** is the error object returned by the system. |
 
 **Error codes:**
@@ -1078,8 +1078,8 @@ Navigates to a specified page in the application. This API uses a promise to ret
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | router.RouterOptions | Yes | Page routing parameters. |
-| mode | router.RouterMode | Yes | Routing mode. |
+| options | [router.RouterOptions](arkts-arkui-router-routeroptions-i.md) | Yes | Page routing parameters. |
+| mode | [router.RouterMode](arkts-arkui-router-routermode-e.md) | Yes | Routing mode. |
 
 **Return value:**
 
@@ -1169,7 +1169,7 @@ Replaces the current page with another one using the named route and destroys th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | router.NamedRouterOptions | Yes | Description of the new page. |
+| options | [router.NamedRouterOptions](arkts-arkui-router-namedrouteroptions-i.md) | Yes | Description of the new page. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback for the router navigation result.   If the navigation succeeds, **error** is **undefined**. If the navigation fails, **error** is the error object returned by the system. |
 
 **Error codes:**
@@ -1244,7 +1244,7 @@ Replaces the current page with another one using the named route and destroys th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | router.NamedRouterOptions | Yes | Description of the new page. |
+| options | [router.NamedRouterOptions](arkts-arkui-router-namedrouteroptions-i.md) | Yes | Description of the new page. |
 
 **Return value:**
 
@@ -1323,8 +1323,8 @@ Replaces the current page with another one using the named route and destroys th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | router.NamedRouterOptions | Yes | Description of the new page. |
-| mode | router.RouterMode | Yes | Routing mode. |
+| options | [router.NamedRouterOptions](arkts-arkui-router-namedrouteroptions-i.md) | Yes | Description of the new page. |
+| mode | [router.RouterMode](arkts-arkui-router-routermode-e.md) | Yes | Routing mode. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback for the router navigation result.   If the navigation succeeds, **error** is **undefined**. If the navigation fails, **error** is the error object returned by the system. |
 
 **Error codes:**
@@ -1406,8 +1406,8 @@ Replaces the current page with another one using the named route and destroys th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | router.NamedRouterOptions | Yes | Description of the new page. |
-| mode | router.RouterMode | Yes | Routing mode. |
+| options | [router.NamedRouterOptions](arkts-arkui-router-namedrouteroptions-i.md) | Yes | Description of the new page. |
+| mode | [router.RouterMode](arkts-arkui-router-routermode-e.md) | Yes | Routing mode. |
 
 **Return value:**
 
@@ -1492,7 +1492,7 @@ Replaces the current page with another one in the application and destroys the c
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | router.RouterOptions | Yes | Description of the new page. |
+| options | [router.RouterOptions](arkts-arkui-router-routeroptions-i.md) | Yes | Description of the new page. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback for the router navigation result.   If the navigation succeeds, **error** is **undefined**. If the navigation fails, **error** is the error object returned by the system. |
 
 **Error codes:**
@@ -1567,7 +1567,7 @@ Replaces the current page with another one in the application and destroys the c
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | router.RouterOptions | Yes | Description of the new page. |
+| options | [router.RouterOptions](arkts-arkui-router-routeroptions-i.md) | Yes | Description of the new page. |
 
 **Return value:**
 
@@ -1646,8 +1646,8 @@ Replaces the current page with another one in the application and destroys the c
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | router.RouterOptions | Yes | Description of the new page. |
-| mode | router.RouterMode | Yes | Routing mode. |
+| options | [router.RouterOptions](arkts-arkui-router-routeroptions-i.md) | Yes | Description of the new page. |
+| mode | [router.RouterMode](arkts-arkui-router-routermode-e.md) | Yes | Routing mode. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback for the router navigation result.   If the navigation succeeds, **error** is **undefined**. If the navigation fails, **error** is the error object returned by the system. |
 
 **Error codes:**
@@ -1729,8 +1729,8 @@ Replaces the current page with another one in the application and destroys the c
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | router.RouterOptions | Yes | Description of the new page. |
-| mode | router.RouterMode | Yes | Routing mode. |
+| options | [router.RouterOptions](arkts-arkui-router-routeroptions-i.md) | Yes | Description of the new page. |
+| mode | [router.RouterMode](arkts-arkui-router-routermode-e.md) | Yes | Routing mode. |
 
 **Return value:**
 
@@ -1815,7 +1815,7 @@ Enables the display of a confirm dialog box before returning to the previous pag
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | router.EnableAlertOptions | Yes | Description of the dialog box. |
+| options | [router.EnableAlertOptions](arkts-arkui-router-enablealertoptions-i.md) | Yes | Description of the dialog box. |
 
 **Error codes:**
 

@@ -1724,7 +1724,7 @@ Binds a context menu to the component, whose visibility is subject to the isShow
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isShown | boolean | Yes | true means display content, false means hide content, default is false. <p>&lt;strong&gt;NOTE&lt;/strong&gt;: The menu can be displayed properly only when the related page has been constructed. If this parameter is set to true before the construction is complete, display issues, such as misplacement, distortion, or failure to pop up, may occur. To trigger dragging by number presses is not supported. </p> |
+| isShown | boolean | Yes | true means display content, false means hide content, default is false.<p>&lt;strong&gt;NOTE&lt;/strong&gt;: The menu can be displayed properly only when the related page has been constructed. If this parameter is set to true before the construction is complete, display issues, such as misplacement, distortion, or failure to pop up, may occur. To trigger dragging by number presses is not supported. </p> |
 | content | [CustomBuilder](arkts-arkui-custombuilder-t.md) | Yes | Indicates the content of context menu. |
 | options | [ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md) | No | Indicates the options of context menu. |
 
@@ -1754,7 +1754,7 @@ Binds a context menu to the component, whose visibility is subject to the isShow
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isShow | boolean | Yes | true means display content, false means hide content, default is false. <p>&lt;strong&gt;NOTE&lt;/strong&gt;: The menu can be displayed properly only when the related page has been constructed. If this parameter is set to true before the construction is complete, display issues, such as misplacement, distortion, or failure to pop up, may occur. Dragging via number press is not supported. </p>. |
+| isShow | boolean | Yes | true means display content, false means hide content, default is false.<p>&lt;strong&gt;NOTE&lt;/strong&gt;: The menu can be displayed properly only when the related page has been constructed. If this parameter is set to true before the construction is complete, display issues, such as misplacement, distortion, or failure to pop up, may occur. Dragging via number press is not supported. </p>. |
 | content | [CustomBuilder](arkts-arkui-custombuilder-t.md) \| Array&lt;[MenuElement](arkts-arkui-menuelement-i.md)&gt; | Yes | Indicates the content of context menu. |
 | options | [ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md) | No | Indicates the options of context menu. |
 
@@ -2480,6 +2480,7 @@ Since API version 23, dynamic configuration via [attributeModifier](#attributemo
 **Examples**
 
 For details, see [Example 10: Setting Component Weights in a Chain](ts-container-relativecontainer.md#example-10-setting-component-weights-in-a-chain).
+- simpleType:
 
 ## clickEffect
 

@@ -21,7 +21,7 @@ globalConnect的入参泛型，用于定义globalConnect支持的持久化集合
 | Map&lt;string |  |
 | number, S&gt; |  |
 | Set&lt;S&gt; | 表示值类型为Set类型。 |
-| collections.Array&lt;S&gt; | 表示值类型为collections.Array类型。 |
+| [collections.Array](../../apis-arkts/arkts-apis/arkts-arkts-collections-array-c.md)&lt;S&gt; | 表示值类型为collections.Array类型。 |
 | collections.Map&lt;string |  |
 | number, S&gt; |  |
-| collections.Set&lt;S&gt; | 表示值类型为collections.Set类型。 |
+| [collections.Set](../../apis-arkts/arkts-apis/arkts-arkts-collections-set-c.md)&lt;S&gt; | 表示值类型为collections.Set类型。 |

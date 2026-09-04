@@ -16,4 +16,4 @@ declare type FontVariation = import('../api/@ohos.graphics.text').default.FontVa
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-**属性类型：** import('../api/@ohos.graphics.text').default.FontVariation
+**类型：** import('../api/@ohos.graphics.text').default.FontVariation

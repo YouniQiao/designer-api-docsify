@@ -4,6 +4,8 @@ Enumerates the display styles of the tab bar.
 
 **Since:** 26.2.0
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## BOTTOM

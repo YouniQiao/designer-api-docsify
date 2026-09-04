@@ -14,4 +14,4 @@ declare type RestrictedWorker = import('../api/@ohos.worker').default.Restricted
 
 **系统接口：** 此接口为系统接口。
 
-**属性类型：** import('../api/@ohos.worker').default.RestrictedWorker
+**类型：** import('../api/@ohos.worker').default.RestrictedWorker

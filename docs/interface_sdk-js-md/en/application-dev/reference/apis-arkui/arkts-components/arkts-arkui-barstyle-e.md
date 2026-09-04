@@ -4,6 +4,8 @@ Enumerates the layout styles of the title bar and toolbar. Note that this API is
 
 **Since:** 12
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## STANDARD

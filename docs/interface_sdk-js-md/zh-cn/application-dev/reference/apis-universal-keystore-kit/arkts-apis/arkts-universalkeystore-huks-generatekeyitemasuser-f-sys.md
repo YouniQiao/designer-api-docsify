@@ -59,6 +59,7 @@ function generateKeyItemAsUser(userId: number, keyAlias: string, huksOptions: Hu
 **示例**
 
 以下代码示例接口调用的前置条件：
+调用方必须是运行在User0~99（包含0和99）用户身份下的系统应用，同时需要申请ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS权限。允许应用安装到User0的配置指导，请参考[singleton|bool|false|是否允许应用安装到单用户下(U0)](../../../../../zh-cn/device-dev/subsystems/subsys-app-privilege-config-guide.md#可由设备厂商配置的特权)
 
 ```TypeScript
 /* 以生成AES密钥为例 */

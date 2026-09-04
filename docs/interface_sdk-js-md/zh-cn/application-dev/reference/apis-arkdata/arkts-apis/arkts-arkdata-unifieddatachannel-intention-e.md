@@ -4,6 +4,8 @@ UDMF已经支持的数据通路枚举类型。其主要用途是标识各种UDMF
 
 **起始版本：** 10
 
+**模型约束：** 此接口仅可在Stage模型下使用。
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## DATA_HUB

@@ -4,8 +4,6 @@ The **certificateManagerDialog** module provides APIs for opening the certificat
 
 **Since:** 13
 
-**Model restriction:** This API can be used only in the stage model.
-
 **System capability:** SystemCapability.Security.CertificateManagerDialog
 
 ## Modules to Import

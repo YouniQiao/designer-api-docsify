@@ -20,7 +20,7 @@ fontMetrics: drawing.FontMetrics
 
 Font measurement information.
 
-**Type:** drawing.FontMetrics
+**Type:** [drawing.FontMetrics](arkts-arkgraphics2d-drawing-fontmetrics-i.md)
 
 **Since:** 12
 

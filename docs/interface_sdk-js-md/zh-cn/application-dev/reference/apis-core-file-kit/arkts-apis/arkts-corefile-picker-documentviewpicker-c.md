@@ -161,7 +161,7 @@ constructor(context: Context, window: window.Window)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | 是 | 应用上下文（仅支持UIAbilityContext）。Stage模型的应用Context定义见Context。 |
-| window | window.Window | 是 | 应用创建的窗口实例。 |
+| window | [window.Window](../../apis-arkui/arkts-apis/arkts-arkui-window-window-i.md) | 是 | 应用创建的窗口实例。 |
 
 **示例**
 

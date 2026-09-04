@@ -14,4 +14,4 @@ Define the cli event callback function.
 
 **System API:** This is a system API.
 
-**Property type:** _ToolEventCallback
+**Type:** _ToolEventCallback

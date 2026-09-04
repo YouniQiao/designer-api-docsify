@@ -12,4 +12,4 @@ Describes the bundle options used to set or query application information.
 
 **System API:** This is a system API.
 
-**Property type:** _BundleInfo.BundleOptions
+**Type:** [_BundleInfo.BundleOptions](arkts-ability-bundleinfo-bundleoptions-i-sys.md)

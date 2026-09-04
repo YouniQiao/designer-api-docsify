@@ -8,6 +8,6 @@ type Required<T> = {
 
 Make all properties in T required
 
-**Property type:** {
+**Type:** {
     [P in keyof T]-?: T[P];
 }

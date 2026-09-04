@@ -12,4 +12,4 @@ SkillUri信息。
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
-**属性类型：** _Skill.SkillUri
+**类型：** [_Skill.SkillUri](arkts-ability-skill-skilluri-i.md)

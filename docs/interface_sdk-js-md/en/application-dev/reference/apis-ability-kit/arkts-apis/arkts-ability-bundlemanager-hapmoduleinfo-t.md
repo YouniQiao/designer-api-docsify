@@ -12,4 +12,4 @@ Defines the module information.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
-**Property type:** _HapModuleInfo.HapModuleInfo
+**Type:** [_HapModuleInfo.HapModuleInfo](arkts-ability-hapmoduleinfo-i.md)

@@ -4,8 +4,6 @@ The **BackgroundLoader** module provides the APIs for registering, unregistering
 
 **Since:** 26.1.0
 
-**Model restriction:** This API can be used only in the stage model.
-
 **System capability:** SystemCapability.ResourceSchedule.WorkScheduler
 
 ## Modules to Import

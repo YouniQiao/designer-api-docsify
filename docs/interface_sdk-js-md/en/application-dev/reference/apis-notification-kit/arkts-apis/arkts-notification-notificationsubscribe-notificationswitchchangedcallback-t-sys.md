@@ -14,4 +14,4 @@ Register the callback function type for notification switch state changes set by
 
 **System API:** This is a system API.
 
-**Property type:** _NotificationSwitchChangedCallback
+**Type:** _NotificationSwitchChangedCallback

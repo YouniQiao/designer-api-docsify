@@ -12,4 +12,4 @@ Defines the window animation curve param.
 
 **System capability:** SystemCapability.Window.SessionManager
 
-**Property type:** Array&lt;number&gt;
+**Type:** Array&lt;number&gt;

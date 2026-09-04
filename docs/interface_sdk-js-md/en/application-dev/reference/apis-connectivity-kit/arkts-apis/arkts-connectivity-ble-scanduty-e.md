@@ -4,6 +4,8 @@ The enum of scan duty.
 
 **Since:** 10
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## SCAN_MODE_LOW_POWER

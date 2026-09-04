@@ -28,7 +28,7 @@ Register the form host service info.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| service | formInfo.FormHostServiceInfo | Yes | Identifies service info registered to form management service. |
+| service | [formInfo.FormHostServiceInfo](arkts-form-forminfo-formhostserviceinfo-i-sys.md) | Yes | Identifies service info registered to form management service. |
 
 **Return value:**
 

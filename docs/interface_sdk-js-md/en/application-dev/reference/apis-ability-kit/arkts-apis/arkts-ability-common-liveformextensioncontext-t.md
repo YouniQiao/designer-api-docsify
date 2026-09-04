@@ -14,7 +14,7 @@ The context of live form extension. It allows access to liveFormExtension-specif
 
 **System capability:** SystemCapability.Ability.Form
 
-**Property type:** _LiveFormExtensionContext.default
+**Type:** _LiveFormExtensionContext.default
 
 **Examples**
 

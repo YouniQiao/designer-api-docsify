@@ -26,7 +26,7 @@ Opens the Certificate Management Install Certificate dialog box. After the certi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | common.Context | Yes | Context of the application. |
+| context | [common.Context](../../apis-ability-kit/arkts-apis/arkts-ability-common-context-t.md) | Yes | Context of the application. |
 | certType | [CertificateType](arkts-devicecertificate-certificatemanagerdialog-certificatetype-e.md) | Yes | Type of the certificate to install. **CA_CERT**, **CREDENTIAL_USER**, and **CREDENTIAL_SYSTEM** are currently supported. |
 | certScope | [CertificateScope](arkts-devicecertificate-certificatemanagerdialog-certificatescope-e.md) | Yes | Usage scope of the certificate to install. **CURRENT_USER** and **NOT_SPECIFIED** are currently supported. |
 | cert | Uint8Array | Yes | The certificate data. The size cannot exceed 8 KB. When certType is set to CA_CERT, the certificate data must be in PEM or DER format. When certType is set to CREDENTIAL_USER or CREDENTIAL_SYSTEM, the value must be in the P12 encoding format. |

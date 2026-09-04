@@ -14,5 +14,5 @@ Defines the image container type, which is used to obtain full-quality images or
 
 | Type | Description |
 | --- | --- |
-| image.Image | Image container type that obtains full-quality images. |
-| image.Picture | Image container type that obtains uncompressed images (YUV). |
+| [image.Image](../../apis-image-kit/arkts-apis/arkts-image-image-image-i.md) | Image container type that obtains full-quality images. |
+| [image.Picture](../../apis-image-kit/arkts-apis/arkts-image-image-picture-i.md) | Image container type that obtains uncompressed images (YUV). |

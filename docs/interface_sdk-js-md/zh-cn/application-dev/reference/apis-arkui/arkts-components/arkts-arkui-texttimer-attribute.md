@@ -123,7 +123,7 @@ fontStyle(value: FontStyle)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | FontStyle | 是 | 字体样式，例如斜体的字体样式。默认值：FontStyle.Normal |
+| value | FontStyle | 是 | [字体样式，例如斜体的字体样式。默认值：FontStyle.Normal](arkts-arkui-itemstate-e.md) |
 
 ## fontWeight
 

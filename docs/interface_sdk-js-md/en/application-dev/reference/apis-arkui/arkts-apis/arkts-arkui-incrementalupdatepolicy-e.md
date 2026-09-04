@@ -4,6 +4,8 @@ Defines incremental update policies for text rendering.
 
 **Since:** 26.0.0
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## NONE

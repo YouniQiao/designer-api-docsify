@@ -41,6 +41,7 @@ Marquee(options: MarqueeOptions)
 ## 示例
 
 该示例展示了跑马灯内容动态更新时的运行效果，主要涉及start、step、loop、fromStart、src等属性以及[marqueeUpdateStrategy](#marqueeupdatestrategy12)属性的设置。
+从API version 23开始，[MarqueeOptions](#marqueeoptions18对象说明)新增spacing、delay属性。
 
 ```TypeScript
 import { LengthMetrics } from '@kit.ArkUI';
@@ -121,6 +122,7 @@ struct MarqueeExample {
 ```
 
 该示例通过变更跑马灯状态来触发onStop回调，回调触发后使停止计数器numberStop的值加1。
+从API版本26.0.0开始，新增[onStop](#onstop)接口。
 
 ```TypeScript
 // xxx.ets

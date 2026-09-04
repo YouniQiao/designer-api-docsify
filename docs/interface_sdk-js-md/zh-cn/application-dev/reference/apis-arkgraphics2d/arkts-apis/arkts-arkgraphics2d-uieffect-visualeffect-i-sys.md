@@ -71,8 +71,8 @@ borderLight(lightPosition: common2D.Point3d, lightColor: common2D.Color, lightIn
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| lightPosition | common2D.Point3d | 是 | 光源在组件空间的3D位置，[-1, -1, 0]为组件左上角，[1, 1, 0]为组件的右下角，z轴分量越大，光源离组件平面越远，可照射区域越大。x轴分量取值范围为[-10, 10]，y轴分量取值范围为[-10, 10]，z轴分量取值范围为[0, 10]，超出范围会自动截断。 |
-| lightColor | common2D.Color | 是 | 光源颜色，各元素取值范围为[0, 1]，超出范围会自动截断。 |
+| lightPosition | [common2D.Point3d](arkts-arkgraphics2d-common2d-point3d-i.md) | 是 | 光源在组件空间的3D位置，[-1, -1, 0]为组件左上角，[1, 1, 0]为组件的右下角，z轴分量越大，光源离组件平面越远，可照射区域越大。x轴分量取值范围为[-10, 10]，y轴分量取值范围为[-10, 10]，z轴分量取值范围为[0, 10]，超出范围会自动截断。 |
+| lightColor | [common2D.Color](arkts-arkgraphics2d-common2d-color-i.md) | 是 | 光源颜色，各元素取值范围为[0, 1]，超出范围会自动截断。 |
 | lightIntensity | number | 是 | 光源强度，取值范围为[0, 1]，数值越大光源亮度越大，超出范围会自动截断。 |
 | borderWidth | number | 是 | 组件边框的受光宽度，取值范围为[0.0, 30.0]，超出范围会自动截断。设置为0.0时，组件边框无光照效果，数值越大，光可照亮的区域越宽。 |
 
@@ -151,7 +151,7 @@ colorGradient(colors: Array<Color>, positions: Array<common2D.Point>, strengths:
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | colors | Array&lt;Color&gt; | 是 | 颜色数组，用于实现多颜色渐变。数组长度范围0到12，每个颜色值取值范围需大于等于0。数组长度为0或大于12，或colors、positions和strengths的数组长度不一致，则无颜色渐变效果。 |
-| positions | Array&lt;common2D.Point&gt; | 是 | 位置数组，颜色对应的位置。数组长度范围为0到12。数组长度为0或大于12，或colors、positions和strengths的数组长度不一致，则无颜色渐变效果。 |
+| positions | Array&lt;[common2D.Point](arkts-arkgraphics2d-common2d-point-i.md)&gt; | 是 | 位置数组，颜色对应的位置。数组长度范围为0到12。数组长度为0或大于12，或colors、positions和strengths的数组长度不一致，则无颜色渐变效果。 |
 | strengths | Array&lt;number&gt; | 是 | 强度数组，表示颜色对应的强度。数组长度范围为0到12，每一个强度值需大于等于0。数组长度为0或大于12，或colors、positions和strengths的数组长度不一致时，则无颜色渐变效果。 |
 | alphaMask | [Mask](arkts-arkgraphics2d-uieffect-mask-c-sys.md) | 否 | 遮罩alpha，颜色对应的alpha遮罩。可通过Mask类的创建方法（如createRippleMask、createRadialGradientMask等）创建Mask实例。当需要控制颜色渐变效果的透明度分布（如局部透明或动态透明效果）时传入此参数。不设置时，颜色渐变效果的透明度完全由colors参数决定。 |
 

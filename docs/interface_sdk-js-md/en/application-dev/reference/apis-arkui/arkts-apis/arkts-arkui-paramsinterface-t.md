@@ -16,6 +16,6 @@ List of routing parameters.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** {
+**Type:** {
   [key: string]: Object;
 }

@@ -425,7 +425,7 @@ Obtains the details of a batch download for cloud media assets. This API uses a 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| predicates | dataSharePredicates.DataSharePredicates | Yes | Predicates that specify the fetch criteria. |
+| predicates | [dataSharePredicates.DataSharePredicates](../../apis-arkdata/arkts-apis/arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | Yes | Predicates that specify the fetch criteria. |
 
 **Return value:**
 
@@ -481,7 +481,7 @@ Obtains the number of batch download tasks for cloud media assets. This API uses
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| predicates | dataSharePredicates.DataSharePredicates | Yes | Predicates that specify the fetch criteria. |
+| predicates | [dataSharePredicates.DataSharePredicates](../../apis-arkdata/arkts-apis/arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | Yes | Predicates that specify the fetch criteria. |
 
 **Return value:**
 

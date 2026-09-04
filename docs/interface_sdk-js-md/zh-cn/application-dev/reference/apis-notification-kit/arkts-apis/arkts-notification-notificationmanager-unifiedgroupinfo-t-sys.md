@@ -12,4 +12,4 @@ export type UnifiedGroupInfo = _UnifiedGroupInfo
 
 **系统接口：** 此接口为系统接口。
 
-**属性类型：** _UnifiedGroupInfo
+**类型：** _UnifiedGroupInfo

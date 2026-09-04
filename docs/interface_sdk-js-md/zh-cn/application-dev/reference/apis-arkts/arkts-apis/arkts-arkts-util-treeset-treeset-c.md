@@ -162,7 +162,7 @@ TreeSet的构造函数，支持通过比较函数对元素进行升序或降序�
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| comparator | (firstValue: T, secondValue: T) =&gt; boolean | 否 | 用户自定义的比较函数，可通过比较关系对元素排序。默认值为null，表示不提供比较函数。取值原则：比较函数返回值决定排序方向，返回firstValue &lt; secondValue为升序排序，返回firstValue &gt; secondValue为降序排序。firstValue（必填）比较函数中的第一个比较元素，与secondValue比较后决定排序方向。secondValue（必填）比较函数中的第二个比较元素，与firstValue比较后决定排序方向。 |
+| comparator | (firstValue: T, secondValue: T) =&gt; boolean | 否 | 用户自定义的比较函数，可通过比较关系对元素排序。默认值为null，表示不提供比较函数。取值原则：比较函数返回值决定排序方向，返回firstValue&lt;secondValue为升序排序，返回firstValue&gt; secondValue为降序排序。firstValue（必填）比较函数中的第一个比较元素，与secondValue比较后决定排序方向。secondValue（必填）比较函数中的第二个比较元素，与firstValue比较后决定排序方向。 |
 
 **错误码：**
 

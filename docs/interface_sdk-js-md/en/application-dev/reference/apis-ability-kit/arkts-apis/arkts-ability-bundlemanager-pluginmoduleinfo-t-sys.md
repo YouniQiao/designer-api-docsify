@@ -12,4 +12,4 @@ Defines the module information of a plugin.
 
 **System API:** This is a system API.
 
-**Property type:** _PluginModuleInfo
+**Type:** _PluginModuleInfo

@@ -102,7 +102,7 @@ Performs inertial scrolling based on the initial velocity passed in.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| velocity | number | Yes | Initial velocity of inertial scrolling. Unit: vp/s &lt;em&gt;NOTE&lt;/em&gt; If the value specified is 0, it is considered as invalid, and the scrolling for this instance will not take effect. A positive value indicates scrolling towards the top, while a negative value indicates scrolling towards the bottom. |
+| velocity | number | Yes | Initial velocity of inertial scrolling. Unit: vp/s&lt;em&gt;NOTE&lt;/em&gt; If the value specified is 0, it is considered as invalid, and the scrolling for this instance will not take effect. A positive value indicates scrolling towards the top, while a negative value indicates scrolling towards the bottom. |
 
 **Error codes:**
 
@@ -297,7 +297,7 @@ Scrolls to the edge of the container, regardless of the scroll axis direction. B
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Edge](../arkts-apis/arkts-arkui-edge-e.md) | Yes | Edge position to scroll to. &lt;em&gt;Atomic service API&lt;/em&gt;: This API can be used in atomic services since API version 11. |
+| value | [Edge](../arkts-apis/arkts-arkui-edge-e.md) | Yes | Edge position to scroll to.&lt;em&gt;Atomic service API&lt;/em&gt;: This API can be used in atomic services since API version 11. |
 | options | [ScrollEdgeOptions](arkts-arkui-scrolledgeoptions-i.md) | No | Mode of scrolling to the edge position. &lt;em&gt;Atomic service API&lt;/em&gt;: This API can be used in atomic services since API version 12.<br>**Since:** 12 |
 
 ## scrollPage
@@ -340,7 +340,7 @@ Scrolls to the next or previous page.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | { next: boolean; direction?: Axis } | Yes | next: Whether to turn to the next page. The value &lt;em&gt;true&lt;/em&gt; means to scroll to the next page, and &lt;em&gt;false&lt;/em&gt; means to scroll to the previous page. direction: Scrolling direction: horizontal or vertical. |
+| value | { next: boolean; direction?: Axis } | Yes | next: Whether to turn to the next page. The value&lt;em&gt;true&lt;/em&gt; means to scroll to the next page, and &lt;em&gt;false&lt;/em&gt; means to scroll to the previous page. direction: Scrolling direction: horizontal or vertical. |
 
 ## scrollTo
 
@@ -387,7 +387,7 @@ Scrolls to a specified index, with support for setting an extra offset for the s
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | Index of the item to be scrolled to in the container. &lt;em&gt;NOTE&lt;/em&gt; If the value set is a negative value or greater than the maximum index of the items in the container, the value is deemed abnormal, and no scrolling will be performed. |
+| value | number | Yes | Index of the item to be scrolled to in the container.&lt;em&gt;NOTE&lt;/em&gt; If the value set is a negative value or greater than the maximum index of the items in the container, the value is deemed abnormal, and no scrolling will be performed. |
 | smooth | boolean | No | Whether to enable the smooth animation for scrolling to the item with the specified index. The value &lt;em&gt;true&lt;/em&gt; means to enable that the smooth animation, and &lt;em&gt;false&lt;/em&gt; means the opposite.Default value: &lt;em&gt;false&lt;/em&gt;<br>**Since:** 12 |
 | align | [ScrollAlign](arkts-arkui-scrollalign-e.md) | No | How the list item to scroll to is aligned with the container. Default value when the container is &lt;em&gt;List&lt;/em&gt;: &lt;em&gt;ScrollAlign.START&lt;/em&gt; Default value when the container is &lt;em&gt;Grid&lt;/em&gt;: &lt;em&gt;ScrollAlign.AUTO&lt;/em&gt; Default value when the container is &lt;em&gt;WaterFlow&lt;/em&gt;: &lt;em&gt;ScrollAlign.START&lt;/em&gt; &lt;em&gt;NOTE&lt;/em&gt; This parameter is only available for the &lt;em&gt;List&lt;/em&gt;, &lt;em&gt;Grid&lt;/em&gt;, and &lt;em&gt;WaterFlow&lt;/em&gt; components.<br>**Since:** 12 |
 | options | [ScrollToIndexOptions](arkts-arkui-scrolltoindexoptions-i.md) | No | Options for scrolling to a specified index, for example, an extra offset for the scroll.Default value: &lt;em&gt;0&lt;/em&gt;, in vp<br>**Since:** 12 |

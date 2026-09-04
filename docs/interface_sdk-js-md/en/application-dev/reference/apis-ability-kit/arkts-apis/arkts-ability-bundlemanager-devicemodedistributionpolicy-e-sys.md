@@ -4,6 +4,8 @@ Define the enumeration of device mode distribution policies, which is used to sp
 
 **Since:** 26.1.0
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 **System API:** This is a system API.

@@ -14,4 +14,4 @@ Function for initializing the reusable custom component.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** Function
+**Type:** Function

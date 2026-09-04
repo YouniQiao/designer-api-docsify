@@ -36,7 +36,7 @@ createPixelMap(options?: image.DecodingOptions): Promise<PixelMap>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | image.DecodingOptions | 否 | 解码参数。 |
+| options | [image.DecodingOptions](arkts-image-image-decodingoptions-i.md) | 否 | 解码参数。 |
 
 **返回值：**
 

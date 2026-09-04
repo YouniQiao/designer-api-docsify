@@ -4,6 +4,8 @@ Enumerates polymorphic style states, which are used to process polymorphic style
 
 **Since:** 20
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## NORMAL

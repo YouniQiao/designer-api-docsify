@@ -34,7 +34,7 @@ Obtains the KVStoreResultSet object matching the local device ID and specified p
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| predicates | dataSharePredicates.DataSharePredicates | Yes | Indicates the datasharePredicates. |
+| predicates | [dataSharePredicates.DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | Yes | Indicates the datasharePredicates. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[KVStoreResultSet](arkts-arkdata-distributedkvstore-kvstoreresultset-i.md)&gt; | Yes | {KVStoreResultSet}: the `KVStoreResultSet` object matching the local device ID and specified `dataSharePredicates.DataSharePredicates` object. |
 
 **Error codes:**
@@ -562,7 +562,7 @@ Obtains the KVStoreResultSet object matching the local device ID and specified p
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| predicates | dataSharePredicates.DataSharePredicates | Yes | Indicates the datasharePredicates. |
+| predicates | [dataSharePredicates.DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | Yes | Indicates the datasharePredicates. |
 
 **Return value:**
 
@@ -605,7 +605,7 @@ Obtains the KVStoreResultSet object matching a specified Device ID and Predicate
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | deviceId | string | Yes | Indicates the ID of the device to which the results belong. |
-| predicates | dataSharePredicates.DataSharePredicates | Yes | Indicates the dataSharePredicates. |
+| predicates | [dataSharePredicates.DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | Yes | Indicates the dataSharePredicates. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[KVStoreResultSet](arkts-arkdata-distributedkvstore-kvstoreresultset-i.md)&gt; | Yes | {KVStoreResultSet}: the `KVStoreResultSet` object matching the specified deviceId and `dataSharePredicates.DataSharePredicates` object. |
 
 **Error codes:**
@@ -643,7 +643,7 @@ Obtains the KVStoreResultSet object matching a specified Device ID and Predicate
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | deviceId | string | Yes | Indicates the ID of the device to which the results belong. |
-| predicates | dataSharePredicates.DataSharePredicates | Yes | Indicates the dataSharePredicates. |
+| predicates | [dataSharePredicates.DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | Yes | Indicates the dataSharePredicates. |
 
 **Return value:**
 

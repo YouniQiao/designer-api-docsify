@@ -16,4 +16,4 @@ Define the FontVariation type.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** import('../api/@ohos.graphics.text').default.FontVariation
+**Type:** import('../api/@ohos.graphics.text').default.FontVariation

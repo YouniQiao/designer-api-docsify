@@ -43,7 +43,7 @@ Converts a color value of the **ResourceColor** type to a **common2D.Color** obj
 
 | Type | Description |
 | --- | --- |
-| common2D.Color | Common2D.Color** object. If the conversion fails, a null pointer is returned. |
+| [common2D.Color](arkts-arkgraphics2d-common2d-color-i.md) | Common2D.Color** object. If the conversion fails, a null pointer is returned. |
 
 **Error codes:**
 

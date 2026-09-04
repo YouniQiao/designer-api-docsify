@@ -12,4 +12,4 @@ Defines the signature information of the bundle.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
-**Property type:** _BundleInfo.SignatureInfo
+**Type:** [_BundleInfo.SignatureInfo](arkts-ability-bundleinfo-signatureinfo-i.md)

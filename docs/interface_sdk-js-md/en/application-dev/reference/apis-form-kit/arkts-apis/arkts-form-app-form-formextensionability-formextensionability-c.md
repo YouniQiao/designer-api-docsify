@@ -38,7 +38,7 @@ Called to notify the widget provider that the widget host is requesting the widg
 
 | Type | Description |
 | --- | --- |
-| formInfo.FormState | Enumerated values of the current widget status. |
+| [formInfo.FormState](arkts-form-forminfo-formstate-e.md) | Enumerated values of the current widget status. |
 
 **Examples**
 
@@ -80,7 +80,7 @@ Called to notify the widget provider that a widget is being created.
 
 | Type | Description |
 | --- | --- |
-| formBindingData.FormBindingData | A **formBindingData.FormBindingData** object containing the data to be displayed on the widget. |
+| [formBindingData.FormBindingData](arkts-form-formbindingdata-formbindingdata-i.md) | A **formBindingData.FormBindingData** object containing the data to be displayed on the widget. |
 
 **Examples**
 
@@ -286,7 +286,7 @@ Called when the widget location changes.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | formId | string | Yes | Widget ID. |
-| newFormLocation | formInfo.FormLocation | Yes | Enumerated value of the latest widget location. |
+| newFormLocation | [formInfo.FormLocation](arkts-form-forminfo-formlocation-e.md) | Yes | Enumerated value of the latest widget location. |
 
 **Examples**
 
@@ -362,8 +362,8 @@ Called when the widget size changes.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | formId | string | Yes | Widget ID. |
-| newDimension | formInfo.FormDimension | Yes | Widget dimension. For example, **Dimension_1_2** indicates a 1 x 2 widget. |
-| newRect | formInfo.Rect | Yes | Widget position information, including the X and Y coordinates of the widget's top- left corner, as well as its width and height. |
+| newDimension | [formInfo.FormDimension](arkts-form-forminfo-formdimension-e.md) | Yes | Widget dimension. For example, **Dimension_1_2** indicates a 1 x 2 widget. |
+| newRect | [formInfo.Rect](arkts-form-forminfo-rect-i.md) | Yes | Widget position information, including the X and Y coordinates of the widget's top- left corner, as well as its width and height. |
 
 **Examples**
 

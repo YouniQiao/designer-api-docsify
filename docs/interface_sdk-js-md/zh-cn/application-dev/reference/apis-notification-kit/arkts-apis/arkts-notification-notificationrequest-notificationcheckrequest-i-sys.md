@@ -16,7 +16,7 @@ contentType: notificationManager.ContentType
 
 通知类型。
 
-**类型：** notificationManager.ContentType
+**类型：** [notificationManager.ContentType](arkts-notification-notificationmanager-contenttype-e.md)
 
 **起始版本：** 11
 
@@ -48,7 +48,7 @@ slotType: notificationManager.SlotType
 
 渠道类型。
 
-**类型：** notificationManager.SlotType
+**类型：** [notificationManager.SlotType](arkts-notification-notificationmanager-slottype-e.md)
 
 **起始版本：** 11
 

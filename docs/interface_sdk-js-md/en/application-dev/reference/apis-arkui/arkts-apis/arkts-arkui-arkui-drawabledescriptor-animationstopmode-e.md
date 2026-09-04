@@ -4,6 +4,8 @@ Enumerates the stop modes of an animation.
 
 **Since:** 24
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## FIRST_FRAME

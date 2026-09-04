@@ -12,4 +12,4 @@ Defines the WantAgentInfo object.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
-**Property type:** _WantAgentInfo
+**Type:** _WantAgentInfo

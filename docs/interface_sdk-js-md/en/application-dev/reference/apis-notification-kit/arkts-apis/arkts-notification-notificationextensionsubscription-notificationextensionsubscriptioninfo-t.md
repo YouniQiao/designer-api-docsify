@@ -10,4 +10,4 @@ Describes the information about the notification extension subscription.
 
 **System capability:** SystemCapability.Notification.Notification
 
-**Property type:** _NotificationExtensionSubscriptionInfo
+**Type:** _NotificationExtensionSubscriptionInfo

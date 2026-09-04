@@ -12,4 +12,4 @@ SOCKS5代理配置信息。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
-**属性类型：** connection.Socks5Proxy
+**类型：** [connection.Socks5Proxy](arkts-network-connection-socks5proxy-i.md)

@@ -10,4 +10,4 @@ Describes the key-value pair used to store GC statistics. This type does not sup
 
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
-**Property type:** Record&lt;string, number&gt;
+**Type:** Record&lt;string, number&gt;

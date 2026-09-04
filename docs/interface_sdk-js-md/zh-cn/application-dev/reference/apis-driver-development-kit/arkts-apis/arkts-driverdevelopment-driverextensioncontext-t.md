@@ -10,4 +10,4 @@ DriverExtensionAbility的上下文环境，继承自ExtensionContext，其具体
 
 **系统能力：** SystemCapability.Driver.ExternalDevice
 
-**属性类型：** _DriverExtensionContext
+**类型：** _DriverExtensionContext

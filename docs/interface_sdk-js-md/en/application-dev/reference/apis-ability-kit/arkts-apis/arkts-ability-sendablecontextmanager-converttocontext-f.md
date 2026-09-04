@@ -32,7 +32,7 @@ Converts a SendableContext object to a Context object.
 
 | Type | Description |
 | --- | --- |
-| common.Context | [Context]{ |
+| [common.Context](arkts-ability-common-context-t.md) | [Context]{ |
 
 **Error codes:**
 

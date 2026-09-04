@@ -10,4 +10,4 @@ type AppStatsMap = Record<string, Array<BundleStatsInfo>>
 
 **系统接口：** 此接口为系统接口。
 
-**属性类型：** Record&lt;string, Array&lt;BundleStatsInfo&gt;&gt;
+**类型：** Record&lt;string, Array&lt;BundleStatsInfo&gt;&gt;

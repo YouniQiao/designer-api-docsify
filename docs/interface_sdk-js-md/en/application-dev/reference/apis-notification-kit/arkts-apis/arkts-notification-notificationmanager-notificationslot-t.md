@@ -10,4 +10,4 @@ Describes the notification slot.
 
 **System capability:** SystemCapability.Notification.Notification
 
-**Property type:** _NotificationSlot
+**Type:** _NotificationSlot

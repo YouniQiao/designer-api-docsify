@@ -32,7 +32,7 @@ Obtains the PixelMap of a thumbnail. This API uses a promise to return the resul
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;image.PixelMap&gt; | PixelMap of the thumbnail. |
+| Promise&lt;[image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)&gt; | PixelMap of the thumbnail. |
 
 **错误码：**
 

@@ -18,4 +18,4 @@ Defines the extra parameters required by the device selection module in the cont
 
 **System capability:** SystemCapability.Ability.DistributedAbilityManager
 
-**Property type:** _ContinuationExtraParams
+**Type:** _ContinuationExtraParams

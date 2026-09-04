@@ -10,4 +10,4 @@ export type DistributedOptions = _DistributedOptions
 
 **系统能力：** SystemCapability.Notification.Notification
 
-**属性类型：** _DistributedOptions
+**类型：** _DistributedOptions

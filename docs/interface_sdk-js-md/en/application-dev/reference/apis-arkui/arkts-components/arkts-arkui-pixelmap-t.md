@@ -12,4 +12,4 @@ Defines the PixelMap type object for ui component.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** import('../api/@ohos.multimedia.image').default.PixelMap
+**Type:** import('../api/@ohos.multimedia.image').default.PixelMap

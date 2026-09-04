@@ -12,4 +12,4 @@ Ability信息。
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
-**属性类型：** _AbilityInfo.AbilityInfo
+**类型：** [_AbilityInfo.AbilityInfo](arkts-ability-abilityinfo-i.md)

@@ -6,6 +6,8 @@ Pixel Round Mode
 
 **Since:** 18
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## PIXEL_ROUND_ON_LAYOUT_FINISH

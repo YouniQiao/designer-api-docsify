@@ -16,4 +16,4 @@ declare type RectShape = import('../api/@ohos.arkui.shape').RectShape
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-**属性类型：** import('../api/@ohos.arkui.shape').RectShape
+**类型：** import('../api/@ohos.arkui.shape').RectShape

@@ -504,8 +504,8 @@ Synchronizes data of a specified application on the device to the cloud. This AP
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Name of the application to sync. |
 | storeId | string | Yes | Name of the database to sync. |
-| mode | relationalStore.SyncMode | Yes | Device-cloud sync mode. |
-| progress | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;relationalStore.ProgressDetails&gt; | Yes | Callback used to return the sync progress. |
+| mode | [relationalStore.SyncMode](arkts-arkdata-relationalstore-syncmode-e.md) | Yes | Device-cloud sync mode. |
+| progress | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[relationalStore.ProgressDetails](arkts-arkdata-relationalstore-progressdetails-i.md)&gt; | Yes | Callback used to return the sync progress. |
 
 **Return value:**
 
@@ -569,8 +569,8 @@ Sync data to cloud. This API uses a promise to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleInfo | BundleInfo | Yes | BundleInfo configuration. the instance object of [BundleInfo](arkts-arkdata-clouddata-bundleinfo-i-sys.md) |
-| config | relationalStore.CloudSyncConfig | Yes | Indicates cloud sync configuration. the instance object of [CloudSyncConfig](arkts-arkdata-relationalstore-cloudsyncconfig-i.md) |
-| progress | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;relationalStore.ProgressDetails&gt; | Yes | Callback used to return the sync progress. |
+| config | [relationalStore.CloudSyncConfig](arkts-arkdata-relationalstore-cloudsyncconfig-i.md) | Yes | Indicates cloud sync configuration. the instance object of [CloudSyncConfig](arkts-arkdata-relationalstore-cloudsyncconfig-i.md) |
+| progress | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[relationalStore.ProgressDetails](arkts-arkdata-relationalstore-progressdetails-i.md)&gt; | Yes | Callback used to return the sync progress. |
 
 **Return value:**
 
@@ -872,7 +872,7 @@ Notifies the data changes in the cloud. This API uses a promise to return the re
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, which is usually returned by &lt;b&gt;VerifyAccessToken&lt;/b&gt;. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, which is usually returned by&lt;b&gt;VerifyAccessToken&lt;/b&gt;. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
@@ -926,7 +926,7 @@ Notifies the data changes in the cloud with the specified information, such as t
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, which is usually returned by &lt;b&gt;VerifyAccessToken&lt;/b&gt;. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, which is usually returned by&lt;b&gt;VerifyAccessToken&lt;/b&gt;. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
@@ -982,7 +982,7 @@ Notifies the data changes of a user in the cloud. This API uses an asynchronous 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, which is usually returned by &lt;b&gt;VerifyAccessToken&lt;/b&gt;. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, which is usually returned by&lt;b&gt;VerifyAccessToken&lt;/b&gt;. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
@@ -1398,7 +1398,7 @@ Sets a global device-cloud sync strategy. This API uses a promise to return the 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | strategy | [StrategyType](arkts-arkdata-clouddata-strategytype-e.md) | Yes | Type of the strategy to set. |
-| param | Array&lt;commonType.ValueType&gt; | No | Strategy parameters to set. If this parameter is not specified, the strategy configuration is deleted by default. |
+| param | Array&lt;[commonType.ValueType](arkts-arkdata-commontype-valuetype-t.md)&gt; | No | Strategy parameters to set. If this parameter is not specified, the strategy configuration is deleted by default. |
 
 **Return value:**
 

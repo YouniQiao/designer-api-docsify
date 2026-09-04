@@ -1147,7 +1147,7 @@ Starts a ServiceExtensionAbility that supports modal dialog boxes. After the Ser
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want information for starting the ServiceExtensionAbility. |
-| result | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;dialogRequest.RequestResult&gt; | Yes | Callback used to return the result. If the API call is successful, **code** in **err** is **0** and **data** the result of the request for a modal dialog box. Otherwise, **err** contains the corresponding error code and error information. |
+| result | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[dialogRequest.RequestResult](arkts-ability-dialogrequest-requestresult-i.md)&gt; | Yes | Callback used to return the result. If the API call is successful, **code** in **err** is **0** and **data** the result of the request for a modal dialog box. Otherwise, **err** contains the corresponding error code and error information. |
 
 **Error codes:**
 
@@ -1234,7 +1234,7 @@ Starts a ServiceExtensionAbility that supports modal dialog boxes. After the Ser
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;dialogRequest.RequestResult&gt; | Promise that returns no value. |
+| Promise&lt;[dialogRequest.RequestResult](arkts-ability-dialogrequest-requestresult-i.md)&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -1466,6 +1466,12 @@ When the first UIAbility launched under a module needs to redirect to another UI
 **Examples**
 
 Set a DelegatorAbility.
+Configure abilitySrcEntryDelegator and abilityStageSrcEntryDelegator in the [module.json5](../../../quick-start/module-configuration-file.md) file. When the first UIAbility of the module is cold started, the system preferentially starts the UIAbility specified by abilitySrcEntryDelegator.
+> NOTE
+> 
+> If the UIAbility is started by calling [startAbilityByCall](#startabilitybycall), the system ignores abilitySrcEntryDelegator and abilityStageSrcEntryDelegator configured in the [module.json5](../../../quick-start/module-configuration-file.md) file.
+> 
+> The module name specified by abilityStageSrcEntryDelegator must be different from the current module name.
 
 ```TypeScript
 {
@@ -1517,7 +1523,7 @@ Sets the icon and label for this UIAbility. The icon and label can be displayed 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | label | string | Yes | New icon label. The label cannot be an empty string, and can contain a maximum of 1024 bytes. |
-| icon | image.PixelMap | Yes | Icon. The recommended icon size is 512 px * 512 px. |
+| icon | [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | Yes | Icon. The recommended icon size is 512 px * 512 px. |
 
 **Return value:**
 
@@ -1612,7 +1618,7 @@ Sets the dark/light color mode for this UIAbility. Before calling this API, ensu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| colorMode | ConfigurationConstant.ColorMode | Yes | Color mode. The options are as follows:    - **COLOR_MODE_DARK**: dark mode.    - **COLOR_MODE_LIGHT**: light mode.    - **COLOR_MODE_NOT_SET**: not set (following the system or application). |
+| colorMode | [ConfigurationConstant.ColorMode](arkts-ability-configurationconstant-colormode-e.md) | Yes | Color mode. The options are as follows:    - **COLOR_MODE_DARK**: dark mode.    - **COLOR_MODE_LIGHT**: light mode.    - **COLOR_MODE_NOT_SET**: not set (following the system or application). |
 
 **Error codes:**
 
@@ -1661,7 +1667,7 @@ Sets the mission continuation state of this UIAbility. This API uses an asynchro
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| state | AbilityConstant.ContinueState | Yes | Mission continuation state. |
+| state | [AbilityConstant.ContinueState](arkts-ability-abilityconstant-continuestate-e.md) | Yes | Mission continuation state. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the API call is successful, **code** in **err** is **0**. Otherwise, **err** contains the corresponding error code and error information. |
 
 **Error codes:**
@@ -1707,7 +1713,7 @@ Sets the mission continuation state of this UIAbility. This API uses a promise t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| state | AbilityConstant.ContinueState | Yes | Mission continuation state. |
+| state | [AbilityConstant.ContinueState](arkts-ability-abilityconstant-continuestate-e.md) | Yes | Mission continuation state. |
 
 **Return value:**
 
@@ -1869,7 +1875,7 @@ Sets the icon for this UIAbility, which is displayed in the application window, 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| windowIcon | image.PixelMap | Yes | Icon of the UIAbility displayed in the application window, application card in the mission center, and window snapshot in the shortcut bar. The icon must be a square and its size must not exceed 128 MB. Otherwise, error code 401 is returned. |
+| windowIcon | [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | Yes | Icon of the UIAbility displayed in the application window, application card in the mission center, and window snapshot in the shortcut bar. The icon must be a square and its size must not exceed 128 MB. Otherwise, error code 401 is returned. |
 
 **Return value:**
 
@@ -3912,7 +3918,7 @@ windowStage: window.WindowStage
 
 WindowStage object. It can be called only on the main thread.
 
-**Type:** window.WindowStage
+**Type:** [window.WindowStage](../../apis-arkui/arkts-apis/arkts-arkui-window-windowstage-i.md)
 
 **Since:** 12
 

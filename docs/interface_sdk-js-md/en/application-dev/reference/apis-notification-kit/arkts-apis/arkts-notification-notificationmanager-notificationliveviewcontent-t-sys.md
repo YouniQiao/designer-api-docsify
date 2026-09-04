@@ -12,4 +12,4 @@ Describes the common live view.
 
 **System API:** This is a system API.
 
-**Property type:** _NotificationLiveViewContent
+**Type:** _NotificationLiveViewContent

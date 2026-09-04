@@ -14,4 +14,4 @@ Theme.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** import('../api/@ohos.arkui.theme').Theme
+**Type:** import('../api/@ohos.arkui.theme').Theme

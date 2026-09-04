@@ -10,4 +10,4 @@ Defines the level-2 module AbilityRunningInfo.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
-**Property type:** _AbilityRunningInfo
+**Type:** _AbilityRunningInfo

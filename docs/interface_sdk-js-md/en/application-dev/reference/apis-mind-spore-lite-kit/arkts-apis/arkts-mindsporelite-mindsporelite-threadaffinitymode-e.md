@@ -4,6 +4,8 @@ Enum for provides CPU thread affinity mode
 
 **Since:** 10
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.AI.MindSporeLite
 
 ## NO_AFFINITIES

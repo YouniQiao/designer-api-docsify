@@ -1422,7 +1422,7 @@ Updates the hot zone on the input method panel in the current state.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| inputRegion | Array&lt;window.Rect&gt; | Yes | Region for receiving input events.    - The array size is limited to [1, 4].    - The input hot zone is relative to the left vertex of the input method panel window. |
+| inputRegion | Array&lt;[window.Rect](../../apis-arkui/arkts-apis/arkts-arkui-window-rect-i.md)&gt; | Yes | Region for receiving input events.    - The array size is limited to [1, 4].    - The input hot zone is relative to the left vertex of the input method panel window. |
 
 **Error codes:**
 

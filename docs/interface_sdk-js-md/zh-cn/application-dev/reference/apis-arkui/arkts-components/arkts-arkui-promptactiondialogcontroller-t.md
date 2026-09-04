@@ -14,4 +14,4 @@ declare type PromptActionDialogController = import('../api/@ohos.promptAction').
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-**属性类型：** import('../api/@ohos.promptAction').promptAction.DialogController
+**类型：** import('../api/@ohos.promptAction').promptAction.DialogController

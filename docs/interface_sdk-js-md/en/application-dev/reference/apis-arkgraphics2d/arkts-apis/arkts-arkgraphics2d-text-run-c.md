@@ -38,7 +38,7 @@ Obtains the glyph width array of each glyph within the specified range of the ru
 
 | Type | Description |
 | --- | --- |
-| Array&lt;common2D.Point&gt; | Returns the glyph width array of each glyph in the run unit relative to the horizontal direction. In [common2D.Point]{ |
+| Array&lt;[common2D.Point](arkts-arkgraphics2d-common2d-point-i.md)&gt; | Returns the glyph width array of each glyph in the run unit relative to the horizontal direction. In [common2D.Point]{ |
 
 **Examples**
 
@@ -67,7 +67,7 @@ Obtains the **Font** object of this run.
 
 | Type | Description |
 | --- | --- |
-| drawing.Font | Font** object of this run. |
+| [drawing.Font](arkts-arkgraphics2d-drawing-font-c.md) | Font** object of this run. |
 
 **Examples**
 
@@ -213,7 +213,7 @@ Obtains the image boundaries of the typographic unit. Equivalent to visual bound
 
 | Type | Description |
 | --- | --- |
-| common2D.Rect | Image boundary of the layout unit, in physical pixels (px). |
+| [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) | Image boundary of the layout unit, in physical pixels (px). |
 
 **Examples**
 
@@ -243,7 +243,7 @@ Obtains the offset of each glyph in this run relative to its index.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;common2D.Point&gt; | Array holding the offset of each glyph in the run relative to its index. |
+| Array&lt;[common2D.Point](arkts-arkgraphics2d-common2d-point-i.md)&gt; | Array holding the offset of each glyph in the run relative to its index. |
 
 **Examples**
 
@@ -269,7 +269,7 @@ Obtains the position of each glyph relative to the respective line in this run.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;common2D.Point&gt; | Array holding the position of each glyph relative to the respective line in the run. |
+| Array&lt;[common2D.Point](arkts-arkgraphics2d-common2d-point-i.md)&gt; | Array holding the position of each glyph relative to the respective line in the run. |
 
 **Examples**
 
@@ -301,7 +301,7 @@ Obtains the position array of each glyph relative to the respective line within 
 
 | Type | Description |
 | --- | --- |
-| Array&lt;common2D.Point&gt; | Array holding the position of each glyph relative to the respective line in the run. |
+| Array&lt;[common2D.Point](arkts-arkgraphics2d-common2d-point-i.md)&gt; | Array holding the position of each glyph relative to the respective line in the run. |
 
 **Examples**
 
@@ -580,7 +580,7 @@ Paints this run on the canvas with the coordinate point (x, y) as the upper left
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| canvas | drawing.Canvas | Yes | Target canvas. |
+| canvas | [drawing.Canvas](arkts-arkgraphics2d-drawing-canvas-c.md) | Yes | Target canvas. |
 | x | number | Yes | Horizontal coordinate of the upper left corner, which is a floating-point value, in physical pixels (px). |
 | y | number | Yes | Vertical coordinate of the upper left corner, which is a floating-point value, in physical pixels (px). |
 

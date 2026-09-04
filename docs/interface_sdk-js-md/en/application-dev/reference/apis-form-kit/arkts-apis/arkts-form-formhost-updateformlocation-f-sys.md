@@ -29,7 +29,7 @@ Updates the widget location.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | formId | string | Yes | Widget ID. |
-| location | formInfo.FormLocation | Yes | Widget location. |
+| location | [formInfo.FormLocation](arkts-form-forminfo-formlocation-e.md) | Yes | Widget location. |
 
 **Error codes:**
 

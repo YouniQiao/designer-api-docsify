@@ -1367,7 +1367,7 @@ Sets the text stroke width.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| width | [Optional](arkts-arkui-optional-t.md)&lt;LengthMetrics&gt; | Yes | Text stroke width. When the unit of **LengthMetrics** is px:Values &lt;0: solid text.Values &gt; 0: outlined text.Default value: **0** (no stroke) |
+| width | [Optional](arkts-arkui-optional-t.md)&lt;LengthMetrics&gt; | Yes | Text stroke width. When the unit of **LengthMetrics** is px:Values&lt;0: solid text.Values&gt; 0: outlined text.Default value: **0** (no stroke) |
 
 ## textAlign
 

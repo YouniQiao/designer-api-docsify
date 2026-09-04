@@ -22,7 +22,7 @@ codeData?: image.PixelMap
 
 QR code image.
 
-**Type:** image.PixelMap
+**Type:** [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)
 
 **Since:** 23
 
@@ -70,7 +70,7 @@ icon?: image.PixelMap
 
 The icon of the app associated with the QR code, such as a QR code for logging in via WeChat, should be the WeChat icon.
 
-**Type:** image.PixelMap
+**Type:** [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)
 
 **Since:** 23
 

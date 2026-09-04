@@ -10,4 +10,4 @@ export type NotificationUserInput = _NotificationUserInput
 
 **系统能力：** SystemCapability.Notification.Notification
 
-**属性类型：** _NotificationUserInput
+**类型：** _NotificationUserInput

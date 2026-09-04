@@ -12,4 +12,4 @@ Defines the LoopObserver module. It can be used as a parameter of **errormanager
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
-**Property type:** _LoopObserver
+**Type:** _LoopObserver

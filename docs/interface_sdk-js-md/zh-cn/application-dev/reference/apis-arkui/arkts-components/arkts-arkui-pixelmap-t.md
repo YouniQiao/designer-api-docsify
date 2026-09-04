@@ -12,4 +12,4 @@ Defines the PixelMap type object for ui component.
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-**属性类型：** import('../api/@ohos.multimedia.image').default.PixelMap
+**类型：** import('../api/@ohos.multimedia.image').default.PixelMap

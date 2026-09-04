@@ -10,7 +10,7 @@ Indicates the context of the accessibility extension. For details, see [Accessib
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
-**Property type:** _AccessibilityExtensionContext.default
+**Type:** _AccessibilityExtensionContext.default
 
 **Examples**
 

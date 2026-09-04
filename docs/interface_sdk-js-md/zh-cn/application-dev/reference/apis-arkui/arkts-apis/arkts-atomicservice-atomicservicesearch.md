@@ -190,6 +190,8 @@ struct Index {
 ```
 
 该示例通过onWillInsert、onDidInsert、onWillDelete、onDidDelete接口实现了插入和删除的功能。
+通过onSubmit接口实现了搜索区内容提交的功能。
+通过onChange接口实现了监听搜索区内容变化的功能。
 
 ```TypeScript
 import { AtomicServiceSearch } from '@kit.ArkUI';

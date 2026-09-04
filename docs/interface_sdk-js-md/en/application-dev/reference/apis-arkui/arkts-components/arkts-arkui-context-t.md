@@ -14,7 +14,7 @@ Get context.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** import('../api/application/Context').default
+**Type:** import('../api/application/Context').default
 
 **Examples**
 

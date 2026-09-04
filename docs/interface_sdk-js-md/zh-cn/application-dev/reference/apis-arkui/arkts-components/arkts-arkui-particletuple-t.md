@@ -14,4 +14,4 @@ declare type ParticleTuple<T1, T2> = [T1, T2]
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-**属性类型：** [T1, T2]
+**类型：** [T1, T2]

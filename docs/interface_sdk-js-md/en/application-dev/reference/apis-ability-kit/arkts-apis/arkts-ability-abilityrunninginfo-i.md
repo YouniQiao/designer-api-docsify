@@ -30,7 +30,7 @@ abilityState: abilityManager.AbilityState
 
 Ability state.
 
-**Type:** abilityManager.AbilityState
+**Type:** [abilityManager.AbilityState](arkts-ability-abilitymanager-abilitystate-e.md)
 
 **Default:** Enumerates state of the ability state info
 

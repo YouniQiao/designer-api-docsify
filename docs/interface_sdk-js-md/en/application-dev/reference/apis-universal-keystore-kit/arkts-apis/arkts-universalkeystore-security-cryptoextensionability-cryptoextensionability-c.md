@@ -30,7 +30,7 @@ Callback to be called to verify PIN of the provider handle.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | handle | string | Yes | handle indicates the handle opened by onOpenResource. |
-| params | Array&lt;huksExternalCrypto.HuksExternalCryptoParam&gt; \| [HuksCryptoExtensionParam](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionparam-i.md)[] | Yes | params indicates the properties of the operation<br>**Since:** 26.0.0 |
+| params | Array&lt;[huksExternalCrypto.HuksExternalCryptoParam](arkts-universalkeystore-huksexternalcrypto-huksexternalcryptoparam-i.md)&gt; \| [HuksCryptoExtensionParam](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionparam-i.md)[] | Yes | params indicates the properties of the operation<br>**Since:** 26.0.0 |
 
 **Return value:**
 
@@ -75,7 +75,7 @@ Callback to clear the PIN auth state of the provider handle.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | handle | string | Yes | handle indicates the handle opened by onOpenResource. |
-| params | Array&lt;huksExternalCrypto.HuksExternalCryptoParam&gt; \| [HuksCryptoExtensionParam](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionparam-i.md)[] | Yes | params indicates the properties of the operation<br>**Since:** 26.0.0 |
+| params | Array&lt;[huksExternalCrypto.HuksExternalCryptoParam](arkts-universalkeystore-huksexternalcrypto-huksexternalcryptoparam-i.md)&gt; \| [HuksCryptoExtensionParam](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionparam-i.md)[] | Yes | params indicates the properties of the operation<br>**Since:** 26.0.0 |
 
 **Return value:**
 
@@ -118,7 +118,7 @@ Callback to be called to close the resource handle.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | handle | string | Yes | handle indicates the handle opened by onOpenResource. |
-| params | Array&lt;huksExternalCrypto.HuksExternalCryptoParam&gt; \| [HuksCryptoExtensionParam](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionparam-i.md)[] | Yes | params indicates the properties of the operation<br>**Since:** 26.0.0 |
+| params | Array&lt;[huksExternalCrypto.HuksExternalCryptoParam](arkts-universalkeystore-huksexternalcrypto-huksexternalcryptoparam-i.md)&gt; \| [HuksCryptoExtensionParam](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionparam-i.md)[] | Yes | params indicates the properties of the operation<br>**Since:** 26.0.0 |
 
 **Return value:**
 
@@ -161,7 +161,7 @@ Callback to list all certificates of the provider.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| params | Array&lt;huksExternalCrypto.HuksExternalCryptoParam&gt; \| [HuksCryptoExtensionParam](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionparam-i.md)[] | No | params indicates the properties of the operation<br>**Since:** 26.0.0 |
+| params | Array&lt;[huksExternalCrypto.HuksExternalCryptoParam](arkts-universalkeystore-huksexternalcrypto-huksexternalcryptoparam-i.md)&gt; \| [HuksCryptoExtensionParam](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionparam-i.md)[] | No | params indicates the properties of the operation<br>**Since:** 26.0.0 |
 
 **Return value:**
 
@@ -207,7 +207,7 @@ Callback to export certificates specified by the resource id.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resourceId | string | Yes | resourceId indicates the resource id of the extension. |
-| params | Array&lt;huksExternalCrypto.HuksExternalCryptoParam&gt; \| [HuksCryptoExtensionParam](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionparam-i.md)[] | No | params indicates the properties of the operation<br>**Since:** 26.0.0 |
+| params | Array&lt;[huksExternalCrypto.HuksExternalCryptoParam](arkts-universalkeystore-huksexternalcrypto-huksexternalcryptoparam-i.md)&gt; \| [HuksCryptoExtensionParam](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionparam-i.md)[] | No | params indicates the properties of the operation<br>**Since:** 26.0.0 |
 
 **Return value:**
 
@@ -308,7 +308,7 @@ Callback to do the finish operation.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | initHandle | string | Yes | initHandle indicates the handle returned by onInitSession. |
-| params | huks.HuksOptions \| [HuksCryptoExtensionParams](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionparams-i.md) | Yes | params indicates the properties of the operation<br>**Since:** 26.0.0 |
+| params | [huks.HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) \| [HuksCryptoExtensionParams](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionparams-i.md) | Yes | params indicates the properties of the operation<br>**Since:** 26.0.0 |
 
 **Return value:**
 
@@ -417,7 +417,7 @@ Callback to be called to do general get operations of the provider.
 | --- | --- | --- | --- |
 | handle | string | Yes | handle indicates the handle opened by onOpenResource. |
 | propertyId | string | Yes | propertyId indicates the name of the property function to be operated as defined in GMT 0016-2023. |
-| params | Array&lt;huksExternalCrypto.HuksExternalCryptoParam&gt; \| [HuksCryptoExtensionParam](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionparam-i.md)[] | Yes | params indicates the properties of the operation<br>**Since:** 26.0.0 |
+| params | Array&lt;[huksExternalCrypto.HuksExternalCryptoParam](arkts-universalkeystore-huksexternalcrypto-huksexternalcryptoparam-i.md)&gt; \| [HuksCryptoExtensionParam](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionparam-i.md)[] | Yes | params indicates the properties of the operation<br>**Since:** 26.0.0 |
 
 **Return value:**
 
@@ -507,7 +507,7 @@ Callback to get the PIN auth state of the provider handle.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | handle | string | Yes | handle indicates the handle opened by onOpenResource. |
-| params | Array&lt;huksExternalCrypto.HuksExternalCryptoParam&gt; \| [HuksCryptoExtensionParam](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionparam-i.md)[] | Yes | params indicates the properties of the operation<br>**Since:** 26.0.0 |
+| params | Array&lt;[huksExternalCrypto.HuksExternalCryptoParam](arkts-universalkeystore-huksexternalcrypto-huksexternalcryptoparam-i.md)&gt; \| [HuksCryptoExtensionParam](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionparam-i.md)[] | Yes | params indicates the properties of the operation<br>**Since:** 26.0.0 |
 
 **Return value:**
 
@@ -667,7 +667,7 @@ Callback to do the initialize operation.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | handle | string | Yes | handle indicates the handle opened by onOpenResource. |
-| params | huks.HuksOptions \| [HuksCryptoExtensionParams](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionparams-i.md) | Yes | params indicates the properties of the operation<br>**Since:** 26.0.0 |
+| params | [huks.HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) \| [HuksCryptoExtensionParams](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionparams-i.md) | Yes | params indicates the properties of the operation<br>**Since:** 26.0.0 |
 
 **Return value:**
 
@@ -711,7 +711,7 @@ Callback to be called to open the resource handle before crypto operations. NOTE
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resourceId | string | Yes | resourceId indicates the resource id of the provider. |
-| params | Array&lt;huksExternalCrypto.HuksExternalCryptoParam&gt; \| [HuksCryptoExtensionParam](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionparam-i.md)[] | Yes | params indicates the properties of the operation<br>**Since:** 26.0.0 |
+| params | Array&lt;[huksExternalCrypto.HuksExternalCryptoParam](arkts-universalkeystore-huksexternalcrypto-huksexternalcryptoparam-i.md)&gt; \| [HuksCryptoExtensionParam](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionparam-i.md)[] | Yes | params indicates the properties of the operation<br>**Since:** 26.0.0 |
 
 **Return value:**
 
@@ -803,7 +803,7 @@ Callback to do update operation.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | initHandle | string | Yes | initHandle indicates the handle returned by onInitSession. |
-| params | huks.HuksOptions \| [HuksCryptoExtensionParams](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionparams-i.md) | Yes | params indicates the properties of the operation<br>**Since:** 26.0.0 |
+| params | [huks.HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) \| [HuksCryptoExtensionParams](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionparams-i.md) | Yes | params indicates the properties of the operation<br>**Since:** 26.0.0 |
 
 **Return value:**
 

@@ -14,4 +14,4 @@ type BuiltinArray<T> = Array<T>
 
 **系统能力：** SystemCapability.Utils.Lang
 
-**属性类型：** Array&lt;T&gt;
+**类型：** Array&lt;T&gt;

@@ -12,4 +12,4 @@ Defines the pointer style.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
-**Property type:** pointer.PointerStyle
+**Type:** [pointer.PointerStyle](../../apis-input-kit/arkts-apis/arkts-input-pointer-pointerstyle-e.md)

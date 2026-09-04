@@ -12,4 +12,4 @@ Defines methods for the web controller.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-**Property type:** import('../api/@ohos.web.webview').default.WebviewController
+**Type:** import('../api/@ohos.web.webview').default.WebviewController

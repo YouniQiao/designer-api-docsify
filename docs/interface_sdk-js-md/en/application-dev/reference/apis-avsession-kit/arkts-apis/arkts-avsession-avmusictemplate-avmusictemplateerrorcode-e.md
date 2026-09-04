@@ -6,6 +6,8 @@ Enumeration ErrorCode types, returns in BusinessError.code.
 
 **Since:** 23
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 ## ERR_CODE_CREATE_AV_MUSIC_TEMPLATE_FAILED

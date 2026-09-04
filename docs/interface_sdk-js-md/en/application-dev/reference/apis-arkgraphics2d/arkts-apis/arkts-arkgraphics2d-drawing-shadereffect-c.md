@@ -120,9 +120,9 @@ Creates a **ShaderEffect** object that generates a conical gradient between two 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| startPt | common2D.Point | Yes | Center of the start circle of the gradient. |
+| startPt | [common2D.Point](arkts-arkgraphics2d-common2d-point-i.md) | Yes | Center of the start circle of the gradient. |
 | startRadius | number | Yes | Radius of the start circle of the gradient. A negative number is invalid. The value is a floating point number. |
-| endPt | common2D.Point | Yes | Center of the end circle of the gradient. |
+| endPt | [common2D.Point](arkts-arkgraphics2d-common2d-point-i.md) | Yes | Center of the end circle of the gradient. |
 | endRadius | number | Yes | Radius of the end circle of the gradient. A negative value is invalid. The value is a floating point number. |
 | colors | Array&lt;number&gt; | Yes | Array of colors to distribute between the start circle and end circle. The values in the array are 32-bit (ARGB) unsigned integers. |
 | mode | TileMode | Yes | Tile mode of the shader effect. |
@@ -168,7 +168,7 @@ Creates a shader based on an image. You are advised not to use the function for 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pixelmap | image.PixelMap | Yes | Image object to be sampled. |
+| pixelmap | [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | Yes | Image object to be sampled. |
 | tileX | TileMode | Yes | Tile mode in the horizontal direction. |
 | tileY | TileMode | Yes | Tile mode in the vertical direction. |
 | samplingOptions | [SamplingOptions](arkts-arkgraphics2d-drawing-samplingoptions-c.md) | Yes | Image sampling options. |
@@ -243,8 +243,8 @@ Creates a **ShaderEffect** object that generates a linear gradient between two p
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| startPt | common2D.Point | Yes | Start point. |
-| endPt | common2D.Point | Yes | End point. |
+| startPt | [common2D.Point](arkts-arkgraphics2d-common2d-point-i.md) | Yes | Start point. |
+| endPt | [common2D.Point](arkts-arkgraphics2d-common2d-point-i.md) | Yes | End point. |
 | colors | Array&lt;number&gt; | Yes | Array of colors to distribute between the two points. The values in the array are 32-bit (ARGB) unsigned integers. |
 | mode | TileMode | Yes | Tile mode of the shader effect. |
 | pos | Array&lt;number&gt; \| null | No | Relative position of each color in the color array. The array length must be the same as that of **colors**. The first element in the array must be 0.0, the last element must be 1.0, and the middle elements must be between 0.0 and 1.0 and increase by index. The default value is null, indicating that colors are evenly distributed between the two points. |
@@ -289,7 +289,7 @@ Creates a **ShaderEffect** object that generates a radial gradient based on the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| centerPt | common2D.Point | Yes | Center of the circle. |
+| centerPt | [common2D.Point](arkts-arkgraphics2d-common2d-point-i.md) | Yes | Center of the circle. |
 | radius | number | Yes | Radius of the gradient. A negative number is invalid. The value is a floating point number. |
 | colors | Array&lt;number&gt; | Yes | Array of colors to distribute between the center and ending shape of the circle. The values in the array are 32-bit (ARGB) unsigned integers. |
 | mode | TileMode | Yes | Tile mode of the shader effect. |
@@ -335,7 +335,7 @@ Creates a **ShaderEffect** object that generates a color sweep gradient around a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| centerPt | common2D.Point | Yes | Center of the circle. |
+| centerPt | [common2D.Point](arkts-arkgraphics2d-common2d-point-i.md) | Yes | Center of the circle. |
 | colors | Array&lt;number&gt; | Yes | Array of colors to distribute between the start angle and end angle. The values in the array are 32-bit (ARGB) unsigned integers. |
 | mode | TileMode | Yes | Tile mode of the shader effect. |
 | startAngle | number | Yes | Start angle of the sweep gradient, in degrees. The value 0 indicates the positive direction of the X axis. A positive number indicates an offset towards the positive direction, and a negative number indicates an offset towards the negative direction. The value is a floating point number. |

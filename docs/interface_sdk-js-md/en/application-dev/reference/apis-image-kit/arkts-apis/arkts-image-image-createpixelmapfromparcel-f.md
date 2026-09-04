@@ -22,7 +22,7 @@ Creates a PixelMap object based on MessageSequence parameter.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sequence | rpc.MessageSequence | Yes | rpc.MessageSequence parameter. |
+| sequence | [rpc.MessageSequence](../../apis-ipc-kit/arkts-apis/arkts-ipc-rpc-messagesequence-c.md) | Yes | rpc.MessageSequence parameter. |
 
 **Return value:**
 

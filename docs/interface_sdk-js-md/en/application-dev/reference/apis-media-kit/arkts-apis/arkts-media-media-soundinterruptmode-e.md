@@ -4,6 +4,8 @@ Enumerates the interruption modes of the audio files with the same ID in SoundPo
 
 **Since:** 23
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
 ## NO_INTERRUPT

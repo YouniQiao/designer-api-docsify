@@ -14,4 +14,4 @@ Defines the overlay effect for the dialog box.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** import('../api/@ohos.promptAction').ImmersiveMode
+**Type:** import('../api/@ohos.promptAction').ImmersiveMode

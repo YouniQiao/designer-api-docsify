@@ -12,4 +12,4 @@ export type ModuleMetadata = _ModuleMetadata
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
-**属性类型：** _ModuleMetadata
+**类型：** _ModuleMetadata

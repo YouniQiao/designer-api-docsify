@@ -12,4 +12,4 @@ export type Resource = _Resource
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
-**属性类型：** _Resource
+**类型：** _Resource

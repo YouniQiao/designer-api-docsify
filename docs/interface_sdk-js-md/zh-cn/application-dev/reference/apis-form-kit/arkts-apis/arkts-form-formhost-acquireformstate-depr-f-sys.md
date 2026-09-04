@@ -30,7 +30,7 @@ function acquireFormState(want: Want, callback: AsyncCallback<formInfo.FormState
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 查询卡片状态时携带的want信息。需要包含bundle名、ability名、module名、卡片名、卡片规格等。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;formInfo.FormStateInfo&gt; | 是 | 回调函数。当获取卡片状态成功，error为undefined，data为获取到的卡片状态；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[formInfo.FormStateInfo](arkts-form-forminfo-formstateinfo-i.md)&gt; | 是 | 回调函数。当获取卡片状态成功，error为undefined，data为获取到的卡片状态；否则为错误对象。 |
 
 **示例**
 
@@ -89,7 +89,7 @@ function acquireFormState(want: Want): Promise<formInfo.FormStateInfo>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;formInfo.FormStateInfo&gt; | Promise对象。返回卡片状态。 |
+| Promise&lt;[formInfo.FormStateInfo](arkts-form-forminfo-formstateinfo-i.md)&gt; | Promise对象。返回卡片状态。 |
 
 **示例**
 

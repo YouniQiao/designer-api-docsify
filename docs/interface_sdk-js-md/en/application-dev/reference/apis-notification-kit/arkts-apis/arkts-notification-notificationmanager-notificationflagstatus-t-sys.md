@@ -12,4 +12,4 @@ Enumerates the notification flag states.
 
 **System API:** This is a system API.
 
-**Property type:** _NotificationFlagStatus
+**Type:** _NotificationFlagStatus

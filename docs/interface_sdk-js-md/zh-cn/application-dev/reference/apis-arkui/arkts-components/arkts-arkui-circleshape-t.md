@@ -16,4 +16,4 @@ declare type CircleShape = import('../api/@ohos.arkui.shape').CircleShape
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-**属性类型：** import('../api/@ohos.arkui.shape').CircleShape
+**类型：** import('../api/@ohos.arkui.shape').CircleShape

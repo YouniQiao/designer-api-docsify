@@ -16,4 +16,4 @@ Blender
 
 **System API:** This is a system API.
 
-**Property type:** import('../api/@ohos.graphics.uiEffect').default.Blender
+**Type:** import('../api/@ohos.graphics.uiEffect').default.Blender

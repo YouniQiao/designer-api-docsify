@@ -10,7 +10,7 @@ export type ElementAttributeKeys = keyof ElementAttributeValues
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
-**属性类型：** keyof ElementAttributeValues
+**类型：** keyof ElementAttributeValues
 
 **示例**
 

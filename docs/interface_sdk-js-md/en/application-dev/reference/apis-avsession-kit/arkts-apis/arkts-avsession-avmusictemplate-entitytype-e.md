@@ -6,6 +6,8 @@ Enumeration of media resource type.
 
 **Since:** 23
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 ## UNKNOWN

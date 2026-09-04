@@ -4,8 +4,6 @@ Provides basic profile methods.
 
 **Since:** 10
 
-**Model restriction:** This API can be used only in the stage model.
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## Modules to Import

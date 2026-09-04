@@ -30,7 +30,7 @@ getSupportedColorSpaces(): Array<colorSpaceManager.ColorSpace>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;colorSpaceManager.ColorSpace&gt; | 支持的色彩空间列表。若接口调用失败，返回undefined。 |
+| Array&lt;[colorSpaceManager.ColorSpace](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-colorspacemanager-colorspace-e.md)&gt; | 支持的色彩空间列表。若接口调用失败，返回undefined。 |
 
 **错误码：**
 

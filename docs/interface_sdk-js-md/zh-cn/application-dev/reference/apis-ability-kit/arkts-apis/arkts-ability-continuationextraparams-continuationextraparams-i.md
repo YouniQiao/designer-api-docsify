@@ -36,7 +36,7 @@ continuationMode?: continuationManager.ContinuationMode
 
 表示协同的模式。
 
-**类型：** continuationManager.ContinuationMode
+**类型：** [continuationManager.ContinuationMode](arkts-ability-continuationmanager-continuationmode-e.md)
 
 **起始版本：** 8
 

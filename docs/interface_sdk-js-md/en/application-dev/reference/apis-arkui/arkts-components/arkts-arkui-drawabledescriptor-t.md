@@ -14,4 +14,4 @@ Defines the input parameter object of the **drawable** attribute in the **Drawab
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** import ('../api/@ohos.arkui.drawableDescriptor').DrawableDescriptor
+**Type:** import ('../api/@ohos.arkui.drawableDescriptor').DrawableDescriptor

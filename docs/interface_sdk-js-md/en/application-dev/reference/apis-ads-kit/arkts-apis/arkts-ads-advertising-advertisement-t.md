@@ -12,4 +12,4 @@ Defines the requested ad content.
 
 **System capability:** SystemCapability.Advertising.Ads
 
-**Property type:** _Advertisement
+**Type:** _Advertisement

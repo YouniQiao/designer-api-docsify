@@ -30,7 +30,7 @@ Negates the point's coordinates.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| point | common2D.Point | Yes | Specifies the point to be negated. |
+| point | [common2D.Point](arkts-arkgraphics2d-common2d-point-i.md) | Yes | Specifies the point to be negated. |
 
 ## offset
 
@@ -50,7 +50,7 @@ Offsets the point's coordinates by dx, dy.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| point | common2D.Point | Yes | Specifies the point to be offset. |
+| point | [common2D.Point](arkts-arkgraphics2d-common2d-point-i.md) | Yes | Specifies the point to be offset. |
 | dx | number | Yes | Indicates the distance to offset on the x-axis in pixels. |
 | dy | number | Yes | Indicates the distance to offset on the y-axis in pixels. |
 

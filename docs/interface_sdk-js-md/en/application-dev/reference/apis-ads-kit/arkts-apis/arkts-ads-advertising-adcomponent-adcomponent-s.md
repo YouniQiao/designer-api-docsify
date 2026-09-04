@@ -63,7 +63,7 @@ Array of ad objects.
 
 NOTE: For non-roll ad types, the component only displays the first data in the array.
 
-**Type:** advertising.Advertisement[]
+**Type:** [advertising.Advertisement](arkts-ads-advertising-advertisement-t.md)[]
 
 **Since:** 11
 
@@ -79,7 +79,7 @@ displayOptions: advertising.AdDisplayOptions
 
 Ad display parameters.
 
-**Type:** advertising.AdDisplayOptions
+**Type:** [advertising.AdDisplayOptions](arkts-ads-advertising-addisplayoptions-i.md)
 
 **Since:** 11
 
@@ -95,7 +95,7 @@ interactionListener: advertising.AdInteractionListener
 
 Callback for ad status changes.
 
-**Type:** advertising.AdInteractionListener
+**Type:** [advertising.AdInteractionListener](arkts-ads-advertising-adinteractionlistener-i.md)
 
 **Since:** 11
 

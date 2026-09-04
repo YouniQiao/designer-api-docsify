@@ -14,4 +14,4 @@ Defines LengthMetrics.
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-**属性类型：** import('../api/arkui/Graphics').LengthMetrics
+**类型：** import('../api/arkui/Graphics').LengthMetrics

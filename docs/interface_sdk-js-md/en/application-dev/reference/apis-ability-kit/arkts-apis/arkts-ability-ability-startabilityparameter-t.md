@@ -12,7 +12,7 @@ Defines the level-2 module StartAbilityParameter.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
-**Property type:** _StartAbilityParameter
+**Type:** _StartAbilityParameter
 
 **Examples**
 

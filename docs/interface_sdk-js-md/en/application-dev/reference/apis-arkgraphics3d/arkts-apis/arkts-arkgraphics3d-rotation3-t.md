@@ -10,4 +10,4 @@ Rotation of an object in 3D space. The type is a three-dimensional vector in the
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
-**Property type:** [Vec3](arkts-arkgraphics3d-scenetypes-vec3-i.md)
+**Type:** [Vec3](arkts-arkgraphics3d-scenetypes-vec3-i.md)

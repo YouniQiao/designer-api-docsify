@@ -12,4 +12,4 @@ Describes partial information about the **wantAgent** in the notification reques
 
 **System capability:** SystemCapability.Notification.Notification
 
-**Property type:** _NotificationParameters
+**Type:** _NotificationParameters

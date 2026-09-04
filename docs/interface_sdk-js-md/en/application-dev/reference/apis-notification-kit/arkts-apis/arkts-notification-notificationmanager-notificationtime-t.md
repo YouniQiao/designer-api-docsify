@@ -10,4 +10,4 @@ Describes the notification timing information.
 
 **System capability:** SystemCapability.Notification.Notification
 
-**Property type:** _NotificationTime
+**Type:** _NotificationTime

@@ -14,4 +14,4 @@ Defines the callback for an auto-fill request, which is used to automatically fi
 
 **System API:** This is a system API.
 
-**Property type:** _AutoFillRequest.FillRequestCallback
+**Type:** [_AutoFillRequest.FillRequestCallback](arkts-ability-autofillrequest-fillrequestcallback-i-sys.md)

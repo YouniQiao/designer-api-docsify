@@ -115,4 +115,4 @@ type(value: NavigationType)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [NavigationType](arkts-arkui-navigationtype-e.md) | 是 | 路由跳转方式。默认值：NavigationType.Push |
+| value | [NavigationType](arkts-arkui-navigationtype-e.md) | 是 | [路由跳转方式。默认值：NavigationType.Push](arkts-arkui-navigationtype-e.md) |

@@ -14,4 +14,4 @@ Enumerates the coordinate systems of a geofence.
 
 **System API:** This is a system API.
 
-**Property type:** _CoordinateSystemType
+**Type:** _CoordinateSystemType

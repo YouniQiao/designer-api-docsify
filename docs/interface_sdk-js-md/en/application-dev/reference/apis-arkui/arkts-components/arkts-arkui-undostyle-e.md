@@ -4,6 +4,8 @@ Enumerates the options for whether to retain the original style during undo/redo
 
 **Since:** 20
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## CLEAR_STYLE

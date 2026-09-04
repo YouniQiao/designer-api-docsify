@@ -14,4 +14,4 @@ Enumerates the event types of monitoring a geofence.
 
 **System API:** This is a system API.
 
-**Property type:** _MonitorEvent
+**Type:** _MonitorEvent

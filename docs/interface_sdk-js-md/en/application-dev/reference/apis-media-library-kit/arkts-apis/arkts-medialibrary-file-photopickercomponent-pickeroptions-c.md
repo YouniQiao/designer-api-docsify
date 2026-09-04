@@ -126,7 +126,7 @@ contextRecoveryInfo?: photoAccessHelper.ContextRecoveryInfo
 
 Information for restoring the PhotoPicker's state from the last exit.
 
-**Type:** photoAccessHelper.ContextRecoveryInfo
+**Type:** [photoAccessHelper.ContextRecoveryInfo](arkts-medialibrary-photoaccesshelper-contextrecoveryinfo-c.md)
 
 **Since:** 26.0.0
 

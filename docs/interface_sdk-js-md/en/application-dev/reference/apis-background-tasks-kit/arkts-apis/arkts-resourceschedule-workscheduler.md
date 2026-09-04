@@ -4,8 +4,6 @@ The **workScheduler** module provides the APIs for registering, canceling, and q
 
 **Since:** 9
 
-**Model restriction:** This API can be used only in the stage model.
-
 **System capability:** SystemCapability.ResourceSchedule.WorkScheduler
 
 ## Modules to Import

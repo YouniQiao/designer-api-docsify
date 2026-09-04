@@ -32,7 +32,7 @@ getColorSpaceName(): colorSpaceManager.ColorSpace
 
 | 类型 | 说明 |
 | --- | --- |
-| colorSpaceManager.ColorSpace | 返回色域类型枚举值。 |
+| [colorSpaceManager.ColorSpace](arkts-arkgraphics2d-colorspacemanager-colorspace-e.md) | 返回色域类型枚举值。 |
 
 **错误码：**
 
@@ -94,7 +94,7 @@ getWhitePoint(): collections.Array<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| collections.Array&lt;number&gt; | 返回色域白点值[x, y]。 |
+| [collections.Array](../../apis-arkts/arkts-apis/arkts-arkts-collections-array-c.md)&lt;number&gt; | 返回色域白点值[x, y]。 |
 
 **错误码：**
 

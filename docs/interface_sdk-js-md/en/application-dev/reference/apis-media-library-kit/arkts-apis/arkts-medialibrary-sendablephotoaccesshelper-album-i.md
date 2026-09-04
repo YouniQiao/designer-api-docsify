@@ -113,7 +113,7 @@ Converts this Sendable album to a non-Sendable album.
 
 | Type | Description |
 | --- | --- |
-| photoAccessHelper.Album | Album of the non-Sendable type. |
+| [photoAccessHelper.Album](arkts-medialibrary-photoaccesshelper-album-i.md) | Album of the non-Sendable type. |
 
 **Error codes:**
 

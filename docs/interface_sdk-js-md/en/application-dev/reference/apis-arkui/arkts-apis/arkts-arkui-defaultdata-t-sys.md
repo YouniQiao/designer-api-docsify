@@ -14,4 +14,4 @@ Used for ide.
 
 **System API:** This is a system API.
 
-**Property type:** object
+**Type:** object

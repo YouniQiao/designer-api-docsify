@@ -14,4 +14,4 @@ declare type AnimationRange<T> = [from: T, to: T]
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-**属性类型：** [from: T, to: T]
+**类型：** [from: T, to: T]

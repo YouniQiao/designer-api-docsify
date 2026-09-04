@@ -32,7 +32,7 @@ Obtains the screenshots of one or more main windows specified by **windowId**. T
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;image.PixelMap \| undefined&gt;&gt; | Promise used to return an array of PixelMap objects of the screenshots, representing the screenshots, in the order of the provided window ID array. If a window ID is valid but the corresponding main window cannot be found, undefined is returned. |
+| Promise&lt;Array&lt;[image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) \| undefined&gt;&gt; | Promise used to return an array of PixelMap objects of the screenshots, representing the screenshots, in the order of the provided window ID array. If a window ID is valid but the corresponding main window cannot be found, undefined is returned. |
 
 **Error codes:**
 

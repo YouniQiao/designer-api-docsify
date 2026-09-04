@@ -6,8 +6,6 @@ When **typeNode** is used to create Text, Image, Select, or Toggle nodes, if the
 
 **Since:** 12
 
-**Model restriction:** This API can be used only in the stage model.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Summary

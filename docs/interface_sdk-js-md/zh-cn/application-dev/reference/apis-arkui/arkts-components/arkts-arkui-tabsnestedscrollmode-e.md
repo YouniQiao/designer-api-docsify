@@ -4,6 +4,8 @@ Tabs组件和父组件的嵌套滚动模式枚举。
 
 **起始版本：** 24
 
+**模型约束：** 此接口仅可在Stage模型下使用。
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## SELF_ONLY

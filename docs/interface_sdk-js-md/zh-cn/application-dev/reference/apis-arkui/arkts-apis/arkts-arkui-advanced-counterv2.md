@@ -42,6 +42,7 @@ import { CounterV2Component, CounterV2Options, CounterV2DateData, CounterV2Type 
 ## 示例
 
 该示例通过设置[CounterV2Type](arkts-arkui-arkui-advanced-counterv2-counterv2type-e.md).LIST和配置[CounterV2Options](arkts-arkui-arkui-advanced-counterv2-counterv2options-c.md)的numberOptions属性，实现了列表型CounterV2。
+从API版本26.0.0开始，[CounterV2Options](arkts-arkui-arkui-advanced-counterv2-counterv2options-c.md)支持numberOptions属性。
 
 ```TypeScript
 import { CounterV2Type, CounterV2Component } from '@kit.ArkUI';
@@ -69,6 +70,7 @@ struct ListCounterExample {
 ```
 
 该示例通过设置[CounterV2Type](arkts-arkui-arkui-advanced-counterv2-counterv2type-e.md).COMPACT和配置[CounterV2Options](arkts-arkui-arkui-advanced-counterv2-counterv2options-c.md)的numberOptions属性，实现紧凑型CounterV2。
+从API版本26.0.0开始，[CounterV2Options](arkts-arkui-arkui-advanced-counterv2-counterv2options-c.md)支持numberOptions属性。
 
 ```TypeScript
 import { CounterV2Type, CounterV2Component } from '@kit.ArkUI';
@@ -97,6 +99,7 @@ struct CompactCounterExample {
 ```
 
 该示例通过设置[CounterV2Type](arkts-arkui-arkui-advanced-counterv2-counterv2type-e.md).INLINE和配置[CounterV2Options](arkts-arkui-arkui-advanced-counterv2-counterv2options-c.md)的inlineOptions属性，实现数值内联型CounterV2。
+从API版本26.0.0开始，[CounterV2Options](arkts-arkui-arkui-advanced-counterv2-counterv2options-c.md)支持inlineOptions属性。
 
 ```TypeScript
 import { CounterV2Type, CounterV2Component } from '@kit.ArkUI';
@@ -128,6 +131,7 @@ struct NumberStyleExample {
 ```
 
 该示例通过设置[CounterV2Type](arkts-arkui-arkui-advanced-counterv2-counterv2type-e.md).INLINE_DATE和配置[CounterV2Options](arkts-arkui-arkui-advanced-counterv2-counterv2options-c.md)的dateOptions属性，实现日期内联型CounterV2。
+从API版本26.0.0开始，[CounterV2Options](arkts-arkui-arkui-advanced-counterv2-counterv2options-c.md)支持dateOptions属性。
 
 ```TypeScript
 import { CounterV2Type, CounterV2Component, CounterV2DateData } from '@kit.ArkUI';
@@ -155,6 +159,7 @@ struct DateStyleExample {
 ```
 
 该示例通过设置[CounterV2Options](arkts-arkui-arkui-advanced-counterv2-counterv2options-c.md)的direction属性，实现列表型、紧凑型、数值内联型、日期内联型CounterV2的镜像布局。
+从API版本26.0.0开始，[CounterV2Options](arkts-arkui-arkui-advanced-counterv2-counterv2options-c.md)支持direction属性。
 
 ```TypeScript
 import { CounterV2Type, CounterV2Component, CounterV2DateData } from '@kit.ArkUI';

@@ -12,4 +12,4 @@ Defines the detailed information of the permissions to request from the system.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
-**Property type:** _BundleInfo.ReqPermissionDetail
+**Type:** [_BundleInfo.ReqPermissionDetail](arkts-ability-bundleinfo-reqpermissiondetail-i.md)

@@ -162,6 +162,7 @@ The background luminance is divided into three ranges based on the luminance thr
 **Examples**
 
 For details, see the example of [offBackgroundLuminanceChange](#offbackgroundluminancechange).
+- simpleType:
 
 ## setBackgroundLuminanceSamplingConfigs
 
@@ -194,3 +195,4 @@ Sets the color picking parameters. If the luminance threshold is not within the 
 **Examples**
 
 For details, see the example of [offBackgroundLuminanceChange](#offbackgroundluminancechange).
+- simpleType:

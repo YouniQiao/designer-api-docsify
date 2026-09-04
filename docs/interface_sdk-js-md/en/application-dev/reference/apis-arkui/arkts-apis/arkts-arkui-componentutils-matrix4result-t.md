@@ -31,7 +31,7 @@ The matrix is column-first fourth-order matrix.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** [
+**Type:** [
     number,
     number,
     number,

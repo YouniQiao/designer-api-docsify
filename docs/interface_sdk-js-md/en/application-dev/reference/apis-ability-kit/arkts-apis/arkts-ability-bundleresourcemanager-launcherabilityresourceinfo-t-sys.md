@@ -14,4 +14,4 @@ Defines the entry icon and name of an application.
 
 **System API:** This is a system API.
 
-**Property type:** _LauncherAbilityResourceInfo
+**Type:** _LauncherAbilityResourceInfo

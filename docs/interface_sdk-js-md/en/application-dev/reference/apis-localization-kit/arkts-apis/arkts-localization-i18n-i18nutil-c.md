@@ -297,7 +297,7 @@ For example, "/data/out/tmp" is changed to "tmp/out/data/" after localization.
 | --- | --- | --- | --- |
 | path | string | Yes | Path to mirror, for example, "/data/out/tmp". |
 | delimiter | string | No | Path delimiter. The default value is "/". |
-| locale | Intl.Locale | No | Locale** object. The default value is the current system locale. |
+| locale | [Intl.Locale](arkts-localization-intl-locale-c.md) | No | Locale** object. The default value is the current system locale. |
 
 **Return value:**
 
@@ -355,7 +355,7 @@ For example, "/data/out/tmp" is changed to "tmp/out/data/" after localization.
 | --- | --- | --- | --- |
 | path | string | Yes | Path to mirror, for example, "/data/out/tmp". |
 | delimiter | string | No | Path delimiter. The default value is "/". |
-| locale | intl.Locale | No | Locale** object. The default value is the current system locale. |
+| locale | [intl.Locale](arkts-localization-intl-locale-c.md) | No | Locale** object. The default value is the current system locale. |
 
 **Return value:**
 

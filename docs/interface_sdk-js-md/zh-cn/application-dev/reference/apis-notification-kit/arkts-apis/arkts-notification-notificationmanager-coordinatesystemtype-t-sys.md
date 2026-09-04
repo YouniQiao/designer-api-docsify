@@ -14,4 +14,4 @@ export type CoordinateSystemType = _CoordinateSystemType
 
 **系统接口：** 此接口为系统接口。
 
-**属性类型：** _CoordinateSystemType
+**类型：** _CoordinateSystemType

@@ -14,4 +14,4 @@ Level-2 module UIServiceExtensionContext.
 
 **System API:** This is a system API.
 
-**Property type:** _UIServiceExtensionContext.default
+**Type:** _UIServiceExtensionContext.default

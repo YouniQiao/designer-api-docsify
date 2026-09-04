@@ -14,4 +14,4 @@ Represents a FrameNode of the **Column** type.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** [TypedFrameNode](arkts-arkui-framenode-typedframenode-i.md)&lt;ColumnInterface, [ColumnAttribute](../arkts-components/arkts-arkui-column-attribute.md)&gt;
+**Type:** [TypedFrameNode](arkts-arkui-framenode-typedframenode-i.md)&lt;ColumnInterface, [ColumnAttribute](../arkts-components/arkts-arkui-column-attribute.md)&gt;

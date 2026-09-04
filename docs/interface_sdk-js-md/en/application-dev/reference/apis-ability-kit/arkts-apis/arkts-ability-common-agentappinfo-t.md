@@ -14,4 +14,4 @@ Application-related information for the agent.
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
-**Property type:** _AgentAppInfo
+**Type:** _AgentAppInfo

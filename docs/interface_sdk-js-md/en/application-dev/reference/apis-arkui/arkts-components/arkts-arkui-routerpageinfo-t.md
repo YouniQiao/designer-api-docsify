@@ -14,4 +14,4 @@ The router page information.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** import('../api/@ohos.arkui.observer').default.RouterPageInfo
+**Type:** import('../api/@ohos.arkui.observer').default.RouterPageInfo

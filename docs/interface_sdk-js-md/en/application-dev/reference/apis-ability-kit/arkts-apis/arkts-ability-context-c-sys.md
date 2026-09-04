@@ -172,7 +172,7 @@ Creates a resource management object for a module.
 
 | Type | Description |
 | --- | --- |
-| resmgr.ResourceManager | Object for resource management. |
+| [resmgr.ResourceManager](../../apis-localization-kit/arkts-apis/arkts-localization-resourcemanager-resourcemanager-i.md) | Object for resource management. |
 
 **Error codes:**
 
@@ -229,7 +229,7 @@ Creates a [resource manager](../../apis-localization-kit/arkts-apis/arkts-locali
 
 | Type | Description |
 | --- | --- |
-| resmgr.ResourceManager | Returns the system HSP module resource manager. |
+| [resmgr.ResourceManager](../../apis-localization-kit/arkts-apis/arkts-localization-resourcemanager-resourcemanager-i.md) | Returns the system HSP module resource manager. |
 
 **Error codes:**
 

@@ -47,7 +47,7 @@ bindSelectionMenu(spanType: Optional<TextSpanType>, content: Optional<CustomBuil
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| spanType | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[TextSpanType](../arkts-components/arkts-arkui-textspantype-e.md)&gt; | 是 | 选择菜单的类型。默认值为TextSpanType.TEXT |
+| spanType | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[TextSpanType](../arkts-components/arkts-arkui-textspantype-e.md)&gt; | 是 | [选择菜单的类型。默认值为TextSpanType.TEXT](../arkts-components/arkts-arkui-textspantype-e.md) |
 | content | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md)&gt; | 是 | 指示选择菜单的内容 |
 | responseType | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[TextResponseType](../arkts-components/arkts-arkui-textresponsetype-e.md)&gt; | 是 | 选择菜单响应类型。默认值为TextResponseType.LONG_press |
 | options | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[SelectionContainerMenuOptions](arkts-arkui-arkui-components-selectioncontainer-selectioncontainermenuoptions-i.md)&gt; | 否 | 指示选择菜单的选项 |

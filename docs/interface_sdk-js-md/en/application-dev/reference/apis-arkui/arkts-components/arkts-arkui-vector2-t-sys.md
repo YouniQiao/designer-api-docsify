@@ -14,4 +14,4 @@ Defines the two-dimensional vector, which contains the x and y coordinates and i
 
 **System API:** This is a system API.
 
-**Property type:** import('../api/arkui/Graphics').Vector2
+**Type:** import('../api/arkui/Graphics').Vector2

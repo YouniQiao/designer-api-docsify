@@ -4,6 +4,8 @@ Defines the style of elements in the operation area.
 
 **Since:** 18
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## TEXT_ARROW

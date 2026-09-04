@@ -10,4 +10,4 @@ export type GrantedBundleInfo = _GrantedBundleInfo
 
 **系统能力：** SystemCapability.Notification.Notification
 
-**属性类型：** _GrantedBundleInfo
+**类型：** _GrantedBundleInfo

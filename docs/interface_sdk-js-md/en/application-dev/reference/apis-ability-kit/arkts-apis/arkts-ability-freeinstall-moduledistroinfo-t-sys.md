@@ -12,4 +12,4 @@ Defines the distribution information of the module.
 
 **System API:** This is a system API.
 
-**Property type:** _PackInfo.ModuleDistroInfo
+**Type:** [_PackInfo.ModuleDistroInfo](arkts-ability-bundlepackinfo-moduledistroinfo-i-sys.md)

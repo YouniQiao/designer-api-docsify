@@ -486,7 +486,7 @@ This API is used when the file owner decides to disable the DLP protection for a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| plaintextFd | number | Yes | FD of the target plaintext file. The value range is [0, 2&lt;sup&gt;31&lt;/sup&gt;-1]. If the value of **fd** is less than 0, an error log is generated, and the function stops running. If the value of **fd** is greater than 2&lt;sup&gt;31&lt;/sup&gt;-1, the excess part will be truncated. |
+| plaintextFd | number | Yes | FD of the target plaintext file. The value range is [0, 2&lt;[sup](../../apis-default/arkts-apis/arkts-lib-es2015-core-string-i.md)&gt;31&lt;/sup&gt;-1]. If the value of **fd** is less than 0, an error log is generated, and the function stops running. If the value of **fd** is greater than 2&lt;sup&gt;31&lt;/sup&gt;-1, the excess part will be truncated. |
 
 **Return value:**
 
@@ -570,7 +570,7 @@ This API is used when the file owner decides to disable the DLP protection for a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| plaintextFd | number | Yes | FD of the target plaintext file. The value range is [0, 2&lt;sup&gt;31&lt;/sup&gt;-1]. If the value of **fd** is less than 0, an error log is generated, and the function stops running. If the value of **fd** is greater than 2&lt;sup&gt;31&lt;/sup&gt;-1, the excess part will be truncated. |
+| plaintextFd | number | Yes | FD of the target plaintext file. The value range is [0, 2&lt;[sup](../../apis-default/arkts-apis/arkts-lib-es2015-core-string-i.md)&gt;31&lt;/sup&gt;-1]. If the value of **fd** is less than 0, an error log is generated, and the function stops running. If the value of **fd** is greater than 2&lt;sup&gt;31&lt;/sup&gt;-1, the excess part will be truncated. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to receive the result of recovering the plaintext of a DLP file. The callback parameter is **err**. **err** is **undefined** when the operation is successful; otherwise, **err** is an error object. |
 
 **Error codes:**

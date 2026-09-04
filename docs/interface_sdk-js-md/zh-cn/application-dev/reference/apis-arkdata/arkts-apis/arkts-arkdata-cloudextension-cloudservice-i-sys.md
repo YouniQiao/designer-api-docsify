@@ -39,7 +39,7 @@ connectAssetLoader(bundleName: string, database: Database): Promise<rpc.RemoteOb
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;rpc.RemoteObject&gt; | Promise对象，返回[AssetLoader]{ |
+| Promise&lt;[rpc.RemoteObject](../../apis-ipc-kit/arkts-apis/arkts-ipc-rpc-remoteobject-c.md)&gt; | Promise对象，返回[AssetLoader]{ |
 
 **示例**
 
@@ -85,7 +85,7 @@ connectDB(bundleName: string, database: Database): Promise<rpc.RemoteObject>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;rpc.RemoteObject&gt; | Promise对象，返回[CloudDB]{ |
+| Promise&lt;[rpc.RemoteObject](../../apis-ipc-kit/arkts-apis/arkts-ipc-rpc-remoteobject-c.md)&gt; | Promise对象，返回[CloudDB]{ |
 
 **示例**
 
@@ -131,7 +131,7 @@ connectShareCenter(userId: number, bundleName: string): Promise<rpc.RemoteObject
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;rpc.RemoteObject&gt; | Promise对象，返回[ShareCenter]{ |
+| Promise&lt;[rpc.RemoteObject](../../apis-ipc-kit/arkts-apis/arkts-ipc-rpc-remoteobject-c.md)&gt; | Promise对象，返回[ShareCenter]{ |
 
 **示例**
 

@@ -40,7 +40,7 @@ Changes the confirmation state of a share invitation. This API uses a promise to
 | userId | number | Yes | User ID. |
 | bundleName | string | Yes | Bundle name of the application. |
 | sharingResource | string | Yes | Shared resource ID. |
-| state | cloudData.sharing.State | Yes | New confirmation state. |
+| state | [cloudData.sharing.State](arkts-arkdata-sharing-state-e-sys.md) | Yes | New confirmation state. |
 
 **Return value:**
 
@@ -96,13 +96,13 @@ Changes the privilege (operation permissions) on the shared data. This API uses 
 | userId | number | Yes | User ID. |
 | bundleName | string | Yes | Bundle name of the application. |
 | sharingResource | string | Yes | Shared resource ID. |
-| participants | Array&lt;cloudData.sharing.Participant&gt; | Yes | Participants of the share. |
+| participants | Array&lt;[cloudData.sharing.Participant](arkts-arkdata-sharing-participant-i-sys.md)&gt; | Yes | Participants of the share. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Result&lt;Array&lt;Result&lt;cloudData.sharing.Participant&gt;&gt;&gt;&gt; | Promise used to return the result. |
+| Promise&lt;Result&lt;Array&lt;Result&lt;[cloudData.sharing.Participant](arkts-arkdata-sharing-participant-i-sys.md)&gt;&gt;&gt;&gt; | Promise used to return the result. |
 
 **Examples**
 
@@ -162,7 +162,7 @@ Confirms the invitation for a share. This API uses a promise to return the resul
 | userId | number | Yes | User ID. |
 | bundleName | string | Yes | Bundle name of the application. |
 | invitationCode | string | Yes | Invitation code for the share. |
-| state | cloudData.sharing.State | Yes | Confirmation state of the invitation. |
+| state | [cloudData.sharing.State](arkts-arkdata-sharing-state-e-sys.md) | Yes | Confirmation state of the invitation. |
 
 **Return value:**
 
@@ -273,7 +273,7 @@ Queries the participants of a share. This API uses a promise to return the resul
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Result&lt;Array&lt;cloudData.sharing.Participant&gt;&gt;&gt; | Promise used to return the participants obtained. |
+| Promise&lt;Result&lt;Array&lt;[cloudData.sharing.Participant](arkts-arkdata-sharing-participant-i-sys.md)&gt;&gt;&gt; | Promise used to return the participants obtained. |
 
 **Examples**
 
@@ -357,7 +357,7 @@ Queries the participants of a share based on the invitation code. This API uses 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Result&lt;Array&lt;cloudData.sharing.Participant&gt;&gt;&gt; | Promise used to return the participants obtained. |
+| Promise&lt;Result&lt;Array&lt;[cloudData.sharing.Participant](arkts-arkdata-sharing-participant-i-sys.md)&gt;&gt;&gt; | Promise used to return the participants obtained. |
 
 **Examples**
 
@@ -437,13 +437,13 @@ Shares data. This API uses a promise to return the result. The application that 
 | userId | number | Yes | User ID. |
 | bundleName | string | Yes | Bundle name of the application. |
 | sharingResource | string | Yes | Shared resource ID. |
-| participants | Array&lt;cloudData.sharing.Participant&gt; | Yes | Participants of the share. |
+| participants | Array&lt;[cloudData.sharing.Participant](arkts-arkdata-sharing-participant-i-sys.md)&gt; | Yes | Participants of the share. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Result&lt;Array&lt;Result&lt;cloudData.sharing.Participant&gt;&gt;&gt;&gt; | Promise used to return the result. |
+| Promise&lt;Result&lt;Array&lt;Result&lt;[cloudData.sharing.Participant](arkts-arkdata-sharing-participant-i-sys.md)&gt;&gt;&gt;&gt; | Promise used to return the result. |
 
 **Examples**
 
@@ -503,13 +503,13 @@ Unshares data. This API uses a promise to return the result. The application, sh
 | userId | number | Yes | User ID. |
 | bundleName | string | Yes | Bundle name of the application. |
 | sharingResource | string | Yes | Shared resource ID. |
-| participants | Array&lt;cloudData.sharing.Participant&gt; | Yes | Participants of the share. |
+| participants | Array&lt;[cloudData.sharing.Participant](arkts-arkdata-sharing-participant-i-sys.md)&gt; | Yes | Participants of the share. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Result&lt;Array&lt;Result&lt;cloudData.sharing.Participant&gt;&gt;&gt;&gt; | Promise used to return the result. |
+| Promise&lt;Result&lt;Array&lt;Result&lt;[cloudData.sharing.Participant](arkts-arkdata-sharing-participant-i-sys.md)&gt;&gt;&gt;&gt; | Promise used to return the result. |
 
 **Examples**
 

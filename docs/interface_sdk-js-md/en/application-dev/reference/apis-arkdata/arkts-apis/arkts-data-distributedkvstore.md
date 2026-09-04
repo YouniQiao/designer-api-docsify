@@ -14,8 +14,6 @@ synchronizing data across devices. This class inherits from [SingleKVStore](arkt
 
 **Since:** 9
 
-**Model restriction:** This API can be used only in the stage model.
-
 **System capability:** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
 
 ## Modules to Import

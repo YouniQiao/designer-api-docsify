@@ -12,4 +12,4 @@ FA模型的使用信息属性集合。
 
 **系统接口：** 此接口为系统接口。
 
-**属性类型：** Record&lt;string, BundleStatsInfo&gt;
+**类型：** Record&lt;string, BundleStatsInfo&gt;

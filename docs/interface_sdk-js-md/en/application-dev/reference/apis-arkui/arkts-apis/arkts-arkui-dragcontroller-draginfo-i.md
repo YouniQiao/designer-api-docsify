@@ -48,7 +48,7 @@ Data carried in the dragging process.
 
 The default value is null.
 
-**Type:** unifiedDataChannel.UnifiedData
+**Type:** [unifiedDataChannel.UnifiedData](../../apis-arkdata/arkts-apis/arkts-arkdata-unifieddatachannel-unifieddata-c.md)
 
 **Since:** 10
 
@@ -68,7 +68,7 @@ Parameters for deferred data loading from the drag source. This API provides dat
 
 The default value is null.
 
-**Type:** unifiedDataChannel.DataLoadParams
+**Type:** [unifiedDataChannel.DataLoadParams](../../apis-arkdata/arkts-apis/arkts-arkdata-unifieddatachannel-dataloadparams-i.md)
 
 **Since:** 20
 
@@ -155,6 +155,7 @@ Coordinates of the touch point. If this parameter is not set, the touch point is
 **Examples**
 
 In this example, the autoHideComponentUniqueIds attribute of [DragInfo](#draginfo) is used to automatically hide the specified component after the proactive dragging is successfully initiated.
+The autoHideComponentUniqueIds attribute is added for DragInfo since API version 26.0.0.
 
 ```TypeScript
 import { dragController } from '@kit.ArkUI';

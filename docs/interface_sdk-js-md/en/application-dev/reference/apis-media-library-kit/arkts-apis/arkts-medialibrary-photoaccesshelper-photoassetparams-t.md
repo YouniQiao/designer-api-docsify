@@ -10,4 +10,4 @@ Defines the array of record types that map file property names to their values.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
-**Property type:** Record&lt;string, MemberType&gt;[]
+**Type:** Record&lt;string, MemberType&gt;[]

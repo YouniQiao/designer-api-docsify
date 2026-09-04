@@ -12,4 +12,4 @@ type HttpRequest = http.HttpRequest
 
 **系统能力：** SystemCapability.Communication.NetStack
 
-**属性类型：** http.HttpRequest
+**类型：** [http.HttpRequest](arkts-network-http-httprequest-i.md)

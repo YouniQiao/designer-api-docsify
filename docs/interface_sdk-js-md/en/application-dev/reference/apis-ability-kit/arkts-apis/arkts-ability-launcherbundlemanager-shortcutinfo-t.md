@@ -10,4 +10,4 @@ Defines the shortcut information defined in the [module.json5](../../../quick-st
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Launcher
 
-**Property type:** _ShortcutInfo
+**Type:** _ShortcutInfo

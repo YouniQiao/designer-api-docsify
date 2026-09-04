@@ -14,4 +14,4 @@ Defines the parameters required for mission synchronization. It is used an input
 
 **System API:** This is a system API.
 
-**Property type:** _MissionParameter
+**Type:** _MissionParameter

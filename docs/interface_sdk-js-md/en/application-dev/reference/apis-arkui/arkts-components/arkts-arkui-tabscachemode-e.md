@@ -4,6 +4,8 @@ Enumerates the caching modes for child components.
 
 **Since:** 19
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## CACHE_BOTH_SIDE

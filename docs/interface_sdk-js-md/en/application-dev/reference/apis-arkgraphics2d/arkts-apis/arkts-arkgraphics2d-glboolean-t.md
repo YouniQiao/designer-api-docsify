@@ -12,4 +12,4 @@ WebGL 1.0
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
-**Property type:** boolean
+**Type:** boolean

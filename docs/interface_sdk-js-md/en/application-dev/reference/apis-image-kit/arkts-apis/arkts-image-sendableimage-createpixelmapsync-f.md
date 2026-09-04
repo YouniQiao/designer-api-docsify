@@ -23,7 +23,7 @@ Create PixelMap by data buffer.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | colors | ArrayBuffer | Yes | The image color buffer. |
-| options | image.InitializationOptions | Yes | Initialization options for PixelMap. |
+| options | [image.InitializationOptions](arkts-image-image-initializationoptions-i.md) | Yes | Initialization options for PixelMap. |
 
 **Return value:**
 

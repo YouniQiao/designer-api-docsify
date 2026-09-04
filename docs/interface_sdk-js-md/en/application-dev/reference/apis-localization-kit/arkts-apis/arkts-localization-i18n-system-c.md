@@ -468,7 +468,7 @@ Obtains the current system locale. To listen for system locale changes, enable l
 
 | Type | Description |
 | --- | --- |
-| Intl.Locale | the locale object currently used by the system. |
+| [Intl.Locale](arkts-localization-intl-locale-c.md) | the locale object currently used by the system. |
 
 **Examples**
 

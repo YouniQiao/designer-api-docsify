@@ -176,7 +176,7 @@ UIAbility启动后的进程模式。
 
 3.processMode和startupVisibility必须同时设置。
 
-**类型：** contextConstant.ProcessMode
+**类型：** [contextConstant.ProcessMode](arkts-ability-contextconstant-processmode-e.md)
 
 **起始版本：** 12
 
@@ -192,7 +192,7 @@ splitRatio?: window.SplitRatioPreference
 
 分屏比首选项的类型。
 
-**类型：** window.SplitRatioPreference
+**类型：** [window.SplitRatioPreference](../../apis-arkui/arkts-apis/arkts-arkui-window-splitratiopreference-e.md)
 
 **起始版本：** 26.0.0
 
@@ -216,7 +216,7 @@ UIAbility启动后的可见性。当用户设置目标UIAbility为不可见时�
 
 3.processMode和startupVisibility必须同时设置。
 
-**类型：** contextConstant.StartupVisibility
+**类型：** [contextConstant.StartupVisibility](arkts-ability-contextconstant-startupvisibility-e.md)
 
 **起始版本：** 12
 
@@ -261,7 +261,7 @@ startWindowIcon?: image.PixelMap
 - 仅在[UIAbilityContext.startAbility](arkts-ability-uiabilitycontext-c.md#startability)中生效。  
 - 图片数据大小限制为600MB。
 
-**类型：** image.PixelMap
+**类型：** [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)
 
 **起始版本：** 14
 
@@ -288,7 +288,7 @@ supportWindowModes?: Array<bundleManager.SupportWindowMode>
 
 <!--RP1-->该功能仅在2in1和Tablet设备上生效。<!--RP1End-->
 
-**类型：** Array&lt;bundleManager.SupportWindowMode&gt;
+**类型：** Array&lt;[bundleManager.SupportWindowMode](arkts-ability-bundlemanager-supportwindowmode-e.md)&gt;
 
 **起始版本：** 14
 
@@ -304,7 +304,7 @@ windowCreateParams?: window.WindowCreateParams
 
 启动UIAbility时的窗口参数。
 
-**类型：** window.WindowCreateParams
+**类型：** [window.WindowCreateParams](../../apis-arkui/arkts-apis/arkts-arkui-window-windowcreateparams-i.md)
 
 **起始版本：** 20
 

@@ -4,6 +4,8 @@ Current lifecycle status of a custom component.
 
 **Since:** 23
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## INIT

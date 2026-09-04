@@ -12,4 +12,4 @@ export type ApplicationInfo = _ApplicationInfo
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
-**属性类型：** _ApplicationInfo
+**类型：** _ApplicationInfo

@@ -14,4 +14,4 @@ Defines the name of the navigation home page.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** 'navBar'
+**Type:** 'navBar'

@@ -14,4 +14,4 @@ declare type DragSpringLoadingConfiguration = import('../api/@ohos.arkui.dragCon
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-**属性类型：** import('../api/@ohos.arkui.dragController').default.DragSpringLoadingConfiguration
+**类型：** import('../api/@ohos.arkui.dragController').default.DragSpringLoadingConfiguration

@@ -12,4 +12,4 @@ Provides parameter values for specific settings when an accessibility node eleme
 
 **System API:** This is a system API.
 
-**Property type:** _Parameter
+**Type:** _Parameter

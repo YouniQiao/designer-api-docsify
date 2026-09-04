@@ -6,4 +6,4 @@ type ThisParameterType<T> = T extends (this: infer U, ...args: never) => any ? U
 
 Extracts the type of the 'this' parameter of a function type, or 'unknown' if the function type has no 'this' parameter.
 
-**Property type:** T extends (this: infer U, ...args: never) =&gt; any ? U : unknown
+**Type:** T extends (this: infer U, ...args: never) =&gt; any ? U : unknown

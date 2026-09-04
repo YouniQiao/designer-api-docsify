@@ -4,6 +4,8 @@ Enumerates the intent types defined by the intent decorator. You can obtain the 
 
 **Since:** 20
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.

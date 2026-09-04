@@ -12,4 +12,4 @@ Defines the listener for the state of application launch and exit.
 
 **System API:** This is a system API.
 
-**Property type:** _AppForegroundStateObserver.default
+**Type:** _AppForegroundStateObserver.default

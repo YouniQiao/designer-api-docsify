@@ -33,7 +33,7 @@ photo?: image.PixelMap
 
 PixelMap格式的联系人头像。
 
-**类型：** image.PixelMap
+**类型：** [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)
 
 **起始版本：** 22
 

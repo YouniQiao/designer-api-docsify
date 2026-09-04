@@ -14,4 +14,4 @@ Skills in an AgentCard represent the specific abilities, expertise, and proficie
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
-**Property type:** _AgentSkill
+**Type:** _AgentSkill

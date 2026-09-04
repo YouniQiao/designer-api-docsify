@@ -10,4 +10,4 @@ export type NotificationTemplate = _NotificationTemplate
 
 **系统能力：** SystemCapability.Notification.Notification
 
-**属性类型：** _NotificationTemplate
+**类型：** _NotificationTemplate

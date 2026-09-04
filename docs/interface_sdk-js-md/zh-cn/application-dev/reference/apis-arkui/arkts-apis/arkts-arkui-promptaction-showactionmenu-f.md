@@ -47,6 +47,19 @@ function showActionMenu(options: ActionMenuOptions, callback: AsyncCallback<Acti
 **示例**
 
 showActionMenu(options: ActionMenuOptions, callback: AsyncCallback<ActionMenuSuccessResponse>):void
+创建并显示操作菜单，菜单响应结果使用callback异步回调返回。
+> 说明：
+> 
+> 从API version 9开始支持，从API version 18开始废弃，建议使用showActionMenu替代。showActionMenu需先通过[UIContext](arkts-apis-uicontext-uicontext.md)中的[getPromptAction](arkts-arkui-arkui-uicontext-uicontext-c.md#getpromptaction)方法获取[PromptAction](arkts-apis-uicontext-promptaction.md)对象，然后通过该对象进行调用。且直接使用showActionMenu可能导致[UI上下文不明确](../../../ui/arkts-global-interface.md#ui上下文不明确)的问题。
+> 
+> 从API version 11开始，可以通过使用[UIContext](arkts-apis-uicontext-uicontext.md)中的[getPromptAction](arkts-arkui-arkui-uicontext-uicontext-c.md#getpromptaction)方法获取当前UI上下文关联的[PromptAction](arkts-apis-uicontext-promptaction.md)对象。
+
+原子化服务API： 从API version 11开始，该接口支持在原子化服务中使用。
+系统能力： SystemCapability.ArkUI.ArkUI.Full。
+参数：
+错误码：
+以下错误码的详细介绍请参见[通用错误码](../../errorcode-universal.md)和[接口调用异常错误码](../errorcode-internal.md)。
+示例：1
 
 ```TypeScript
 import { promptAction } from '@kit.ArkUI';
@@ -80,6 +93,8 @@ try {
 ```
 
 zh-cn_image_0005
+示例：2
+从API version 19开始，该示例通过调用ActionMenuOptions中的onDidAppear、onDidDisappear、onWillAppear和onWillDisappear属性展示了操作菜单生命周期相关接口的使用方法。
 
 ```TypeScript
 import { promptAction } from '@kit.ArkUI';
@@ -197,6 +212,19 @@ function showActionMenu(options: ActionMenuOptions): Promise<ActionMenuSuccessRe
 **示例**
 
 showActionMenu(options: ActionMenuOptions): Promise<ActionMenuSuccessResponse>
+创建并显示操作菜单，菜单响应后通过Promise返回结果。
+> 说明：
+> 
+> 从API version 9开始支持，从API version 18开始废弃，建议使用showActionMenu替代。showActionMenu需先通过[UIContext](arkts-apis-uicontext-uicontext.md)中的[getPromptAction](arkts-arkui-arkui-uicontext-uicontext-c.md#getpromptaction)方法获取[PromptAction](arkts-apis-uicontext-promptaction.md)对象，然后通过该对象进行调用。且直接使用showActionMenu可能导致[UI上下文不明确](../../../ui/arkts-global-interface.md#ui上下文不明确)的问题。
+> 
+> 从API version 10开始，可以通过使用[UIContext](arkts-apis-uicontext-uicontext.md)中的[getPromptAction](arkts-arkui-arkui-uicontext-uicontext-c.md#getpromptaction)方法获取当前UI上下文关联的[PromptAction](arkts-apis-uicontext-promptaction.md)对象。
+
+原子化服务API： 从API version 11开始，该接口支持在原子化服务中使用。
+系统能力： SystemCapability.ArkUI.ArkUI.Full
+参数：
+返回值：
+错误码：
+以下错误码的详细介绍请参见[通用错误码](../../errorcode-universal.md)和[接口调用异常错误码](../errorcode-internal.md)。
 
 ```TypeScript
 import { promptAction } from '@kit.ArkUI';

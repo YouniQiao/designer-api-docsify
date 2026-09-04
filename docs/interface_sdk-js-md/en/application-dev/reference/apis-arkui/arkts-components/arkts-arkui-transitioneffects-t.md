@@ -28,7 +28,7 @@ Defines all transition effects.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** {
+**Type:** {
   identity: undefined;
   opacity: number;
   slideSwitch: undefined;

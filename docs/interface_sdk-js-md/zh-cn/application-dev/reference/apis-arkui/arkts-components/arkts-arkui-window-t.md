@@ -12,4 +12,4 @@ type window = import('../api/@ohos.window').default
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
-**属性类型：** import('../api/@ohos.window').default
+**类型：** import('../api/@ohos.window').default

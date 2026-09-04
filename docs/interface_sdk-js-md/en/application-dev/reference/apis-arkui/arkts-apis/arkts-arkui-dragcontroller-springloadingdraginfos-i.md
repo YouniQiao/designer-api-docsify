@@ -20,7 +20,7 @@ dataSummary?: unifiedDataChannel.Summary
 
 Summary of the dragged data. The default value is null.
 
-**Type:** unifiedDataChannel.Summary
+**Type:** [unifiedDataChannel.Summary](../../apis-arkdata/arkts-apis/arkts-arkdata-unifieddatachannel-summary-c.md)
 
 **Since:** 20
 

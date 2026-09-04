@@ -36,7 +36,7 @@ color?: common2D.Color
 
 Color of the text shadow. The default value is black Color(255, 0, 0, 0).
 
-**Type:** common2D.Color
+**Type:** [common2D.Color](arkts-arkgraphics2d-common2d-color-i.md)
 
 **Since:** 12
 
@@ -52,7 +52,7 @@ point?: common2D.Point
 
 Offset position of the text shadow relative to the current text. The horizontal and vertical coordinates must be greater than or equal to 0, in physical pixels (px). The default value is common2D.Point(0, 0).
 
-**Type:** common2D.Point
+**Type:** [common2D.Point](arkts-arkgraphics2d-common2d-point-i.md)
 
 **Since:** 12
 

@@ -32,7 +32,7 @@ getUIExtensionHostWindowProxy(): uiExtensionHost.UIExtensionHostWindowProxy
 
 | 类型 | 说明 |
 | --- | --- |
-| uiExtensionHost.UIExtensionHostWindowProxy | 宿主应用窗口信息。 |
+| [uiExtensionHost.UIExtensionHostWindowProxy](../../apis-arkui/arkts-apis/arkts-arkui-uiextensionhost-uiextensionhostwindowproxy-i-sys.md) | 宿主应用窗口信息。 |
 
 **错误码：**
 

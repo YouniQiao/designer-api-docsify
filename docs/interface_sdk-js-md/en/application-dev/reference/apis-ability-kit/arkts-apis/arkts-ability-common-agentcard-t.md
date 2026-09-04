@@ -14,4 +14,4 @@ The AgentCard information describes the basic information and capabilities provi
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
-**Property type:** _AgentCard
+**Type:** _AgentCard

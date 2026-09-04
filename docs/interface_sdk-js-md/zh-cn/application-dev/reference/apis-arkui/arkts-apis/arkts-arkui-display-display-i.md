@@ -418,7 +418,7 @@ colorSpaces: Array<colorSpaceManager.ColorSpace>
 
 SystemCapability.WindowManager.WindowManager.Core
 
-**类型：** Array&lt;colorSpaceManager.ColorSpace&gt;
+**类型：** Array&lt;[colorSpaceManager.ColorSpace](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-colorspacemanager-colorspace-e.md)&gt;
 
 **起始版本：** 11
 
@@ -474,7 +474,7 @@ hdrFormats: Array<hdrCapability.HDRFormat>
 
 SystemCapability.WindowManager.WindowManager.Core
 
-**类型：** Array&lt;hdrCapability.HDRFormat&gt;
+**类型：** Array&lt;[hdrCapability.HDRFormat](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-hdrcapability-hdrformat-e.md)&gt;
 
 **起始版本：** 11
 

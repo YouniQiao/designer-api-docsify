@@ -23,7 +23,7 @@ Creates a PixelMap object from surface id.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | surfaceId | string | Yes | surface id. |
-| region | image.Region | Yes | The region to surface. |
+| region | [image.Region](arkts-image-image-region-i.md) | Yes | The region to surface. |
 
 **Return value:**
 

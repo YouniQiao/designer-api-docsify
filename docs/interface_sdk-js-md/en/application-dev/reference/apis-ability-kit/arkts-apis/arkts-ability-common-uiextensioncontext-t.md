@@ -12,4 +12,4 @@ Defines the context environment for the [UIExtensionAbility](arkts-ability-app-a
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
-**Property type:** _UIExtensionContext.default
+**Type:** _UIExtensionContext.default

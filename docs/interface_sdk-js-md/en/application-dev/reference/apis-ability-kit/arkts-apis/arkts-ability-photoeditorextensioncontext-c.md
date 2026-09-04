@@ -26,8 +26,8 @@ Save image data by image pixmap.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pixeMap | image.PixelMap | Yes | Image pixmap. |
-| option | image.PackingOption | Yes | Option for image packing. |
+| pixeMap | [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | Yes | Image pixmap. |
+| option | [image.PackingOption](../../apis-image-kit/arkts-apis/arkts-image-image-packingoption-i.md) | Yes | Option for image packing. |
 
 **Return value:**
 

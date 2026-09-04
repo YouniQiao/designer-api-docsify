@@ -12,4 +12,4 @@ Defines the widget information.
 
 **System API:** This is a system API.
 
-**Property type:** _PackInfo.AbilityFormInfo
+**Type:** [_PackInfo.AbilityFormInfo](arkts-ability-bundlepackinfo-abilityforminfo-i-sys.md)

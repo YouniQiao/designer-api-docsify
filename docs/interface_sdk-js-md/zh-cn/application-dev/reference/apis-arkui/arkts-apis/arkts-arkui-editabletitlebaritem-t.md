@@ -14,4 +14,4 @@ Declaration of the image item .
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-**属性类型：** [EditableTitleBarMenuItem](arkts-arkui-arkui-advanced-editabletitlebar-editabletitlebarmenuitem-c.md)
+**类型：** [EditableTitleBarMenuItem](arkts-arkui-arkui-advanced-editabletitlebar-editabletitlebarmenuitem-c.md)

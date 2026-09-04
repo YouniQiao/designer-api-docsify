@@ -14,4 +14,4 @@ Defines the context environment for the [EmbeddableUIAbility](arkts-ability-app-
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
-**Property type:** _EmbeddableUIAbilityContext.default
+**Type:** _EmbeddableUIAbilityContext.default

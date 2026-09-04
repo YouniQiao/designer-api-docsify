@@ -1,12 +1,14 @@
 # ContextMenuController
 
-class ContextMenuController
-
-提供控制菜单关闭的能力。
+提供控制菜单关闭的能力。开发者可以通过此接口在特定场景下（如定时关闭、点击外部区域关闭等）主动关闭菜单。
 
 > **说明：**
 > 
+> - 本模块首批接口从API version 10开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。
+> 
 > - 本Class首批接口从API version 12开始支持。
+> 
+> - 本模块接口仅可在Stage模型下使用。
 
 > - 以下API需先使用UIContext中的[getContextMenuController()](arkts-arkui-arkui-uicontext-uicontext-c.md#getcontextmenucontroller)方法获取
 > ContextMenuController实例，再通过此实例调用对应方法。
@@ -30,7 +32,7 @@ import { BackPressActionProposal, BaseGestureHandlingProposal, ClickActionPropos
 close(): void
 ```
 
-关闭菜单
+关闭当前通过bindContextMenu展示的菜单。若当前无菜单展示，调用本方法无效果。
 
 **起始版本：** 12
 

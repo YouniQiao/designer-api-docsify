@@ -14,4 +14,4 @@ Touch tap position. For details, see [TouchPosition](arkts-accessibility-accessi
 
 **System API:** This is a system API.
 
-**Property type:** _TouchPosition
+**Type:** _TouchPosition

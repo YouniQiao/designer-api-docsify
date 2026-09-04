@@ -455,7 +455,7 @@ mode(value: NavDestinationMode)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [NavDestinationMode](arkts-arkui-navdestinationmode-e.md) | 是 | NavDestination类型。默认值：NavDestinationMode.STANDARD |
+| value | [NavDestinationMode](arkts-arkui-navdestinationmode-e.md) | 是 | [NavDestination类型。默认值：NavDestinationMode.STANDARD](arkts-arkui-dynamicrangemode-e.md) |
 
 ## onActive
 
@@ -918,7 +918,7 @@ systemTransition(type: NavigationSystemTransitionType)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | [NavigationSystemTransitionType](arkts-arkui-navigationsystemtransitiontype-e.md) | 是 | 系统转场动画类型。默认值：NavigationSystemTransitionType.DEFAULT |
+| type | [NavigationSystemTransitionType](arkts-arkui-navigationsystemtransitiontype-e.md) | 是 | [系统转场动画类型。默认值：NavigationSystemTransitionType.DEFAULT](../arkts-apis/arkts-arkui-textmenushowmode-e.md) |
 
 ## title
 

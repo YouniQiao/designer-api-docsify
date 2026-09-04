@@ -4,8 +4,6 @@ The **uniformTypeDescriptor** module abstracts and defines uniform data types.
 
 **Since:** 10
 
-**Model restriction:** This API can be used only in the stage model.
-
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## Modules to Import

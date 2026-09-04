@@ -4,6 +4,8 @@ Enumerates the strategies for the hierarchical position movement of **in** / **o
 
 **Since:** 12
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.

@@ -425,7 +425,7 @@ queryDownloadSpecificCloudMediaDetails(predicates: dataSharePredicates.DataShare
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| predicates | dataSharePredicates.DataSharePredicates | 是 | 谓词查询，显示过滤条件。 |
+| predicates | [dataSharePredicates.DataSharePredicates](../../apis-arkdata/arkts-apis/arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | 是 | 谓词查询，显示过滤条件。 |
 
 **返回值：**
 
@@ -481,7 +481,7 @@ queryDownloadSpecificCloudMediaTaskCount(predicates: dataSharePredicates.DataSha
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| predicates | dataSharePredicates.DataSharePredicates | 是 | 谓词查询，显示过滤条件。 |
+| predicates | [dataSharePredicates.DataSharePredicates](../../apis-arkdata/arkts-apis/arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | 是 | 谓词查询，显示过滤条件。 |
 
 **返回值：**
 

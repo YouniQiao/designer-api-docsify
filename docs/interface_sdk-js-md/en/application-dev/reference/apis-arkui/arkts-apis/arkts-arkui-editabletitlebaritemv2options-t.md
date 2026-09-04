@@ -14,4 +14,4 @@ Indicates the options of the image item.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** [EditableTitleBarMenuItemV2Options](arkts-arkui-arkui-advanced-editabletitlebarv2-editabletitlebarmenuitemv2options-i.md)
+**Type:** [EditableTitleBarMenuItemV2Options](arkts-arkui-arkui-advanced-editabletitlebarv2-editabletitlebarmenuitemv2options-i.md)

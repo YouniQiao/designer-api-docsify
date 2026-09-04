@@ -10,4 +10,4 @@ type UDPSocket = socket.UDPSocket
 
 **系统能力：** SystemCapability.Communication.NetStack
 
-**属性类型：** socket.UDPSocket
+**类型：** [socket.UDPSocket](arkts-network-socket-udpsocket-i.md)

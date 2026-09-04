@@ -86,3 +86,4 @@ on(type: 'change', callback: Callback<MediaQueryResult>): void
 **示例**
 
 详见[off('change')](#offchange)示例。
+- simpleType:

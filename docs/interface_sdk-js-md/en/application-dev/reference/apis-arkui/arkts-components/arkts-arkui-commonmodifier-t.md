@@ -14,4 +14,4 @@ Defines a parameter object for the **Tabs** component.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** import('../api/arkui/CommonModifier').CommonModifier
+**Type:** import('../api/arkui/CommonModifier').CommonModifier

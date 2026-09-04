@@ -14,4 +14,4 @@ Level-2 module AutoStartupInfo.
 
 **System API:** This is a system API.
 
-**Property type:** _AutoStartupInfo
+**Type:** _AutoStartupInfo

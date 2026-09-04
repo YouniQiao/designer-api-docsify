@@ -60,7 +60,7 @@ imageSize: image.Size
 
 the size information of AI-generated image in one task.
 
-**Type:** image.Size
+**Type:** [image.Size](../../apis-image-kit/arkts-apis/arkts-image-image-size-i.md)
 
 **Since:** 23
 
@@ -78,7 +78,7 @@ positionImage?: image.PixelMap
 
 Location reference map for multi-image generated tasks.
 
-**Type:** image.PixelMap
+**Type:** [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)
 
 **Since:** 23
 
@@ -114,7 +114,7 @@ selectPath?: Array<common2D.Point>
 
 Path information for lasso selection in AI-generated image tasks.
 
-**Type:** Array&lt;common2D.Point&gt;
+**Type:** Array&lt;[common2D.Point](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-common2d-point-i.md)&gt;
 
 **Since:** 23
 

@@ -14,4 +14,4 @@ Import the frame node type object for Canvas.
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-**属性类型：** import('../api/arkui/FrameNode').FrameNode
+**类型：** import('../api/arkui/FrameNode').FrameNode

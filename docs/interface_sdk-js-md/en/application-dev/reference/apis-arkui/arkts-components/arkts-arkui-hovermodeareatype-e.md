@@ -4,6 +4,8 @@ Enumerates the type of area in hover mode.
 
 **Since:** 14
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## TOP_SCREEN

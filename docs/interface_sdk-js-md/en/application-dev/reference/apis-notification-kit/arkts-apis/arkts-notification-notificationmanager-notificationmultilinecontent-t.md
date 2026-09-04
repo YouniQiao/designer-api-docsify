@@ -10,4 +10,4 @@ Describes the multi-line text notification.
 
 **System capability:** SystemCapability.Notification.Notification
 
-**Property type:** _NotificationMultiLineContent
+**Type:** _NotificationMultiLineContent

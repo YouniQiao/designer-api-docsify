@@ -14,4 +14,4 @@ Defines the configuration parameters for drag hover detection.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** import('../api/@ohos.arkui.dragController').default.DragSpringLoadingConfiguration
+**Type:** import('../api/@ohos.arkui.dragController').default.DragSpringLoadingConfiguration

@@ -155,6 +155,12 @@ struct AddColorStop {
 ```
 
 addColorStop
+以下示例演示SDR与HDR渐变的亮度差异。通过ColorMetrics可以构造BT2020色域的HDR颜色，颜色分量值可以超过1.0，超过1.0的部分用于表现超出普通屏幕亮度范围的高亮效果。左侧使用sRGB色域的红->白->绿渐变，右侧使用BT2020色域的HDR颜色且高光白色亮度倍数达到1.5，在支持HDR的屏幕上右侧高光区域明显比左侧更亮。
+> 说明：
+> 
+> 使用HDR颜色时，需要将Canvas组件所在窗口的色域模式通过[setWindowColorSpace](../arkts-apis-window-Window.md#setwindowcolorspace)方法设置为广色域模式（WIDE_GAMUT），否则HDR提亮效果不会生效。
+
+从API版本26.0.0开始，[addColorStop](#addcolorstop)接口新增支持通过ColorMetrics类型入参进行HDR提亮。
 
 ```TypeScript
 // xxx.ets

@@ -10,4 +10,4 @@ Represents the [ValueType](arkts-arkdata-relationalstore-valuetype-t.md) array t
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
-**Property type:** Array&lt;relationalStore.ValueType&gt;
+**Type:** Array&lt;[relationalStore.ValueType](arkts-arkdata-relationalstore-valuetype-t.md)&gt;

@@ -12,4 +12,4 @@ export type EnabledPriorityNotificationCallbackData = _EnabledPriorityNotificati
 
 **系统接口：** 此接口为系统接口。
 
-**属性类型：** _EnabledPriorityNotificationCallbackData
+**类型：** _EnabledPriorityNotificationCallbackData

@@ -12,4 +12,4 @@ export type ValuesBucket = Record<string, ValueType | Uint8Array | null>
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
-**属性类型：** Record&lt;string, [ValueType](arkts-arkdata-valuetype-t.md) | Uint8Array | null&gt;
+**类型：** Record&lt;string, [ValueType](arkts-arkdata-valuetype-t.md) | Uint8Array | null&gt;

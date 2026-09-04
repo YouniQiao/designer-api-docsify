@@ -14,4 +14,4 @@ Defines a pair of given type for particle.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** [T1, T2]
+**Type:** [T1, T2]

@@ -56,7 +56,7 @@ bundleType: bundleManager.BundleType
 
 当前进程运行的包类型。
 
-**类型：** bundleManager.BundleType
+**类型：** [bundleManager.BundleType](arkts-ability-bundlemanager-bundletype-e.md)
 
 **起始版本：** 12
 
@@ -122,7 +122,7 @@ state: appManager.ProcessState
 
 当前进程运行状态。
 
-**类型：** appManager.ProcessState
+**类型：** [appManager.ProcessState](arkts-ability-appmanager-processstate-e.md)
 
 **起始版本：** 10
 

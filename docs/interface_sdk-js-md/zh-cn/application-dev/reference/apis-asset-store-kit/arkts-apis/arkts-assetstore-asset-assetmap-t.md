@@ -12,4 +12,4 @@ type AssetMap = Map<Tag, Value>
 
 **系统能力：** SystemCapability.Security.Asset
 
-**属性类型：** Map&lt;[Tag](arkts-assetstore-asset-tag-e.md), Value&gt;
+**类型：** Map&lt;[Tag](arkts-assetstore-asset-tag-e.md), Value&gt;

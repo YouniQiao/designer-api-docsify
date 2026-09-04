@@ -329,7 +329,7 @@ sideBarPosition(value: SideBarPosition)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [SideBarPosition](arkts-arkui-sidebarposition-e.md) | 是 | 侧边栏显示位置。默认值：SideBarPosition.Start |
+| value | [SideBarPosition](arkts-arkui-sidebarposition-e.md) | 是 | [侧边栏显示位置。默认值：SideBarPosition.Start](arkts-arkui-navbarposition-e.md) |
 
 ## sideBarWidth
 

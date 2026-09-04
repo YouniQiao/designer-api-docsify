@@ -676,6 +676,7 @@ struct Index {
 ```
 
 本示例展示了链中节点使用[chainWeight](ts-universal-attributes-location.md#chainweight14)设置尺寸权重的用法。
+必须先通过alignRules设置子组件的链式对齐规则（确保组件在水平或垂直方向形成链），再通过chainMode设置链样式（如SPREAD、SPREAD_INSIDE、PACKED），chainWeight仅在链模式下生效。
 
 ```TypeScript
 @Entry

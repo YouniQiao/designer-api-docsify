@@ -36,6 +36,8 @@ Enumerates the flags of intent information ([InsightIntentInfo](arkts-ability-in
 
 **Since:** 20
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.

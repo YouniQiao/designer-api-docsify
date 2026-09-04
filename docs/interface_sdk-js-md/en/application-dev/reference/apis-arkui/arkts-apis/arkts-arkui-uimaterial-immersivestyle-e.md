@@ -4,6 +4,8 @@ Enumerates immersive material styles. Different material styles correspond to di
 
 **Since:** 26.0.0
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## ULTRA_THIN

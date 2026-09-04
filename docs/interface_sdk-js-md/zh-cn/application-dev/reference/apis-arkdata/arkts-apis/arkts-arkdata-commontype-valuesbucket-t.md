@@ -10,4 +10,4 @@ type ValuesBucket = Record<string, ValueType>
 
 **系统能力：** SystemCapability.DistributedDataManager.CommonType
 
-**属性类型：** Record&lt;string, ValueType&gt;
+**类型：** Record&lt;string, ValueType&gt;

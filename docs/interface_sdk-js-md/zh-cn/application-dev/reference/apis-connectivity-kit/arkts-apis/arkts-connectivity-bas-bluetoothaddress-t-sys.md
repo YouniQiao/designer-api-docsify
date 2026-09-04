@@ -14,4 +14,4 @@ type BluetoothAddress = common.BluetoothAddress
 
 **系统接口：** 此接口为系统接口。
 
-**属性类型：** common.BluetoothAddress
+**类型：** [common.BluetoothAddress](arkts-connectivity-common-bluetoothaddress-i.md)

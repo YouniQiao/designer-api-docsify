@@ -14,4 +14,4 @@ declare type SystemBarStyle = import('../api/@ohos.window').default.SystemBarSty
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-**属性类型：** import('../api/@ohos.window').default.SystemBarStyle
+**类型：** import('../api/@ohos.window').default.SystemBarStyle

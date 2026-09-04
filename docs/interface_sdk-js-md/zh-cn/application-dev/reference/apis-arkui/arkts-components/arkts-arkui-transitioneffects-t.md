@@ -28,7 +28,7 @@ declare type TransitionEffects = {
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-**属性类型：** {
+**类型：** {
   identity: undefined;
   opacity: number;
   slideSwitch: undefined;

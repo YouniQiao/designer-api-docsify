@@ -12,4 +12,4 @@ Defines the context environment for the [AppServiceExtensionAbility](../../../re
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
-**Property type:** _AppServiceExtensionContext.default
+**Type:** _AppServiceExtensionContext.default

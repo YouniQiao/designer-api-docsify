@@ -237,7 +237,7 @@ Obtains the rectangular bounding box of each glyph in an array.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;common2D.Rect&gt; | Array that holds the rectangular bounding boxes. |
+| Array&lt;[common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md)&gt; | Array that holds the rectangular bounding boxes. |
 
 **Examples**
 

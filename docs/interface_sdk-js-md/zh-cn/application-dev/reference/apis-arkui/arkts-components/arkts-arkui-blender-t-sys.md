@@ -16,4 +16,4 @@ Blender
 
 **系统接口：** 此接口为系统接口。
 
-**属性类型：** import('../api/@ohos.graphics.uiEffect').default.Blender
+**类型：** import('../api/@ohos.graphics.uiEffect').default.Blender

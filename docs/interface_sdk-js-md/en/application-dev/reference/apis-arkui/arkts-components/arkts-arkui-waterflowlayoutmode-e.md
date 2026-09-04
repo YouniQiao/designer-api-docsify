@@ -4,6 +4,8 @@ Enumerates the layout modes of the **WaterFlow** component.
 
 **Since:** 12
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## ALWAYS_TOP_DOWN

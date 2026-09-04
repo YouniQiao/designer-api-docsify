@@ -35,7 +35,7 @@ Creates a **ColorFilter** object with a given color and blend mode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | common2D.Color | Yes | Color in ARGB format. The value of each color channel is an integer ranging from 0 to 255. |
+| color | [common2D.Color](arkts-arkgraphics2d-common2d-color-i.md) | Yes | Color in ARGB format. The value of each color channel is an integer ranging from 0 to 255. |
 | mode | BlendMode | Yes | Blend mode. |
 
 **Return value:**
@@ -75,7 +75,7 @@ Creates a **ColorFilter** object with a given color and blend mode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | common2D.Color \| number | Yes | Color, represented by an unsigned integer in hexadecimal ARGB format. |
+| color | [common2D.Color](arkts-arkgraphics2d-common2d-color-i.md) \| number | Yes | Color, represented by an unsigned integer in hexadecimal ARGB format. |
 | mode | BlendMode | Yes | Blend mode. |
 
 **Return value:**
@@ -156,8 +156,8 @@ Creates a lighting color filter. It multiplies the RGB channel values by one col
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mutColor | common2D.Color \| number | Yes | Color used for multiplication. The value is in the ARGB format, and each color channel is an integer ranging from 0 to 255. If the value is of the number type, it must be an unsigned integer in the hexadecimal ARGB format. |
-| addColor | common2D.Color \| number | Yes | Color used for addition. The value is in the ARGB format, and each color channel is an integer ranging from 0 to 255. If the value is of the number type, it must be an unsigned integer in the hexadecimal ARGB format. |
+| mutColor | [common2D.Color](arkts-arkgraphics2d-common2d-color-i.md) \| number | Yes | Color used for multiplication. The value is in the ARGB format, and each color channel is an integer ranging from 0 to 255. If the value is of the number type, it must be an unsigned integer in the hexadecimal ARGB format. |
+| addColor | [common2D.Color](arkts-arkgraphics2d-common2d-color-i.md) \| number | Yes | Color used for addition. The value is in the ARGB format, and each color channel is an integer ranging from 0 to 255. If the value is of the number type, it must be an unsigned integer in the hexadecimal ARGB format. |
 
 **Return value:**
 

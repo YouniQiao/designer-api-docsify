@@ -135,7 +135,7 @@ bindDialogTarget(token: rpc.RemoteObject, deathCallback: Callback<void>): Promis
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| token | rpc.RemoteObject | 是 | 目标窗口token值。 |
+| token | [rpc.RemoteObject](../../apis-ipc-kit/arkts-apis/arkts-ipc-rpc-remoteobject-c.md) | 是 | 目标窗口token值。 |
 | deathCallback | [Callback](arkts-arkui-window-callback-i.md)&lt;void&gt; | 是 | 目标窗口销毁监听。 |
 
 **返回值：**
@@ -223,7 +223,7 @@ bindDialogTarget(token: rpc.RemoteObject, deathCallback: Callback<void>, callbac
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| token | rpc.RemoteObject | 是 | 目标窗口token值。 |
+| token | [rpc.RemoteObject](../../apis-ipc-kit/arkts-apis/arkts-ipc-rpc-remoteobject-c.md) | 是 | 目标窗口token值。 |
 | deathCallback | [Callback](arkts-arkui-window-callback-i.md)&lt;void&gt; | 是 | 目标窗口销毁监听。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
 
@@ -308,7 +308,7 @@ bindDialogTarget(requestInfo: dialogRequest.RequestInfo, deathCallback: Callback
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| requestInfo | dialogRequest.RequestInfo | 是 | 目标窗口RequestInfo值。 |
+| requestInfo | [dialogRequest.RequestInfo](../../apis-ability-kit/arkts-apis/arkts-ability-dialogrequest-requestinfo-i.md) | 是 | 目标窗口RequestInfo值。 |
 | deathCallback | [Callback](arkts-arkui-window-callback-i.md)&lt;void&gt; | 是 | 目标窗口销毁监听。 |
 
 **返回值：**
@@ -384,7 +384,7 @@ bindDialogTarget(requestInfo: dialogRequest.RequestInfo, deathCallback: Callback
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| requestInfo | dialogRequest.RequestInfo | 是 | 目标窗口RequestInfo值。 |
+| requestInfo | [dialogRequest.RequestInfo](../../apis-ability-kit/arkts-apis/arkts-ability-dialogrequest-requestinfo-i.md) | 是 | 目标窗口RequestInfo值。 |
 | deathCallback | [Callback](arkts-arkui-window-callback-i.md)&lt;void&gt; | 是 | 目标窗口销毁监听。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
 

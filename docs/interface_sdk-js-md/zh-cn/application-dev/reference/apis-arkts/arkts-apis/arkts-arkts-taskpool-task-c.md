@@ -195,6 +195,8 @@ function inspectStatus(arg: number): number {
 ```
 
 > 说明：
+> 
+> isCanceled方法需要和taskpool.cancel方法搭配使用，如果不调用cancel方法，isCanceled方法默认返回false。
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

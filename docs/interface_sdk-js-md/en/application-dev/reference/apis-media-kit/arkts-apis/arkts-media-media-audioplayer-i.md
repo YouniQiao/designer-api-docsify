@@ -621,7 +621,7 @@ audioInterruptMode?: audio.InterruptMode
 
 Audio interruption mode.
 
-**Type:** audio.InterruptMode
+**Type:** [audio.InterruptMode](../../apis-audio-kit/arkts-apis/arkts-audio-audio-interruptmode-e.md)
 
 **Since:** 9
 

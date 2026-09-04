@@ -39,7 +39,7 @@ alignStyle(value: IndexerAlign, offset?: Length)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [IndexerAlign](arkts-arkui-indexeralign-e.md) | 是 | 索引条提示弹窗的对齐样式，支持弹窗显示在索引条右侧和左侧。默认值：IndexerAlign.END |
+| value | [IndexerAlign](arkts-arkui-indexeralign-e.md) | 是 | [索引条提示弹窗的对齐样式，支持弹窗显示在索引条右侧和左侧。默认值：IndexerAlign.END](arkts-arkui-localizedbarrierdirection-e.md) |
 | offset | [Length](../arkts-apis/arkts-arkui-length-t.md) | 否 | 提示弹窗与索引条之间间距，大于等于0为有效值，在不设置或设置为小于0的情况下间距与popupPosition.x相同。与[popupPosition](#popupposition)同时设置时，水平方向上offset生效，竖直方向上popupPosition.y生效。<br>**起始版本：** 10 |
 
 ## autoCollapse
@@ -132,7 +132,7 @@ font(value: Font)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | Font | 是 | 未选中索引项文本样式。默认值：API version 11及以前：{size:'12.0fp',style: FontStyle.Normal,weight:FontWeight.Regular,family:'HarmonyOS Sans'}API version 12及以后：&lt;br/ &gt;{size:'10.0vp',style:FontStyle.Normal,weight:FontWeight.Medium,family:'HarmonyOS Sans'&lt; br/&gt;} |
+| value | Font | 是 | 未选中索引项文本样式。默认值：API version 11及以前：{size:'12.0fp',style: FontStyle.Normal,weight:FontWeight.Regular,family:'HarmonyOS Sans'}API version 12及以后：<br/>{size:'10.0vp',style:FontStyle.Normal,weight:FontWeight.Medium,family:'HarmonyOS Sans'&lt; br/&gt;} |
 
 ## itemBorderRadius
 
@@ -584,7 +584,7 @@ selectedFont(value: Font)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | Font | 是 | 选中项文本样式。默认值：API version 11及以前：{size:'12.0fp',style: FontStyle.Normal,weight:FontWeight.Regular,family:'HarmonyOS Sans'}API version 12及以后：&lt;br/ &gt;{size:'10.0vp',style:FontStyle.Normal,weight:FontWeight.Medium,family:'HarmonyOS Sans'&lt; br/&gt;} |
+| value | Font | 是 | 选中项文本样式。默认值：API version 11及以前：{size:'12.0fp',style: FontStyle.Normal,weight:FontWeight.Regular,family:'HarmonyOS Sans'}API version 12及以后：<br/>{size:'10.0vp',style:FontStyle.Normal,weight:FontWeight.Medium,family:'HarmonyOS Sans'&lt; br/&gt;} |
 
 ## usingPopup
 

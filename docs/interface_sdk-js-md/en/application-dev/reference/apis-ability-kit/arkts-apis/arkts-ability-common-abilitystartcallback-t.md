@@ -14,4 +14,4 @@ Defines the callback invoked to return the UIExtensionAbility startup result. It
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
-**Property type:** _AbilityStartCallback
+**Type:** _AbilityStartCallback

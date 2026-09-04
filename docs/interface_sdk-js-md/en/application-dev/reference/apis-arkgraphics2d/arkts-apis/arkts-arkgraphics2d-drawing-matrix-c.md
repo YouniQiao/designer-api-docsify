@@ -379,13 +379,13 @@ Maps a source point array to a destination point array by means of matrix transf
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| src | Array&lt;common2D.Point&gt; | Yes | Array of source points. |
+| src | Array&lt;[common2D.Point](arkts-arkgraphics2d-common2d-point-i.md)&gt; | Yes | Array of source points. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;common2D.Point&gt; | Array of points obtained. |
+| Array&lt;[common2D.Point](arkts-arkgraphics2d-common2d-point-i.md)&gt; | Array of points obtained. |
 
 **Error codes:**
 
@@ -459,8 +459,8 @@ Sets the destination rectangle to the bounding rectangle of the shape obtained a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dst | common2D.Rect | Yes | Rectangle** object, which is used to store the bounding rectangle. |
-| src | common2D.Rect | Yes | Source rectangle. |
+| dst | [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) | Yes | Rectangle** object, which is used to store the bounding rectangle. |
+| src | [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) | Yes | Source rectangle. |
 
 **Return value:**
 
@@ -1039,8 +1039,8 @@ Sets this matrix to a transformation matrix that maps the source point array to 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| src | Array&lt;common2D.Point&gt; | Yes | Array of source points. The array length must be the same as the value of **count**. |
-| dst | Array&lt;common2D.Point&gt; | Yes | Array of destination points. The array length must be the same as the value of **count**. |
+| src | Array&lt;[common2D.Point](arkts-arkgraphics2d-common2d-point-i.md)&gt; | Yes | Array of source points. The array length must be the same as the value of **count**. |
+| dst | Array&lt;[common2D.Point](arkts-arkgraphics2d-common2d-point-i.md)&gt; | Yes | Array of destination points. The array length must be the same as the value of **count**. |
 | count | number | Yes | Number of points in each array. The value is an integer. |
 
 **Return value:**
@@ -1084,8 +1084,8 @@ Sets this matrix to a transformation matrix that maps a source rectangle to a de
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| src | common2D.Rect | Yes | Source rectangle. |
-| dst | common2D.Rect | Yes | Destination rectangle. |
+| src | [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) | Yes | Source rectangle. |
+| dst | [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) | Yes | Destination rectangle. |
 | scaleToFit | [ScaleToFit](arkts-arkgraphics2d-drawing-scaletofit-e.md) | Yes | Mapping mode from the source rectangle to the target rectangle. |
 
 **Return value:**

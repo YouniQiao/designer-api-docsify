@@ -51,6 +51,7 @@ applyChanges(mediaChangeRequest: MediaChangeRequest): Promise<void>
 **示例**
 
 该接口依赖于[MediaChangeRequest](arkts-apis-photoAccessHelper-i.md#mediachangerequest)对象，详细代码示例请参见[MediaAssetChangeRequest](arkts-apis-photoAccessHelper-MediaAssetChangeRequest.md)和[MediaAlbumChangeRequest](arkts-apis-photoAccessHelper-MediaAlbumChangeRequest.md)中的接口示例。
+- simpleType:
 
 ## checkPhotoUrisReadPermission
 

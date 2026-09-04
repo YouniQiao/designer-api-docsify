@@ -145,7 +145,7 @@ Sets the custom cursor style.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | image.PixelMap | Yes | Pixel map of the custom mouse cursor style. |
+| value | [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | Yes | Pixel map of the custom mouse cursor style. |
 | focusX | number | No | X coordinate of the custom cursor's hotspot. The hotspot refers to the actual location where the click occurs.Default value: **0**Unit: px Value range: [0, +∞) |
 | focusY | number | No | Y coordinate of the custom cursor's hotspot.Default value: **0**Unit: px Value range: [0, +∞) |
 

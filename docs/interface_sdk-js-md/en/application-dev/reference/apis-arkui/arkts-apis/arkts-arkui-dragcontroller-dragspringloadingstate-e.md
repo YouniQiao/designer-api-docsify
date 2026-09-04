@@ -4,6 +4,8 @@ Enumerates hover detection states during drag operations. Under default system c
 
 **Since:** 20
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## BEGIN

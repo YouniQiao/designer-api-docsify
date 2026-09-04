@@ -14,4 +14,4 @@ Defines the PositionT type.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** import('../api/arkui/Graphics').PositionT&lt;T&gt;
+**Type:** import('../api/arkui/Graphics').PositionT&lt;T&gt;

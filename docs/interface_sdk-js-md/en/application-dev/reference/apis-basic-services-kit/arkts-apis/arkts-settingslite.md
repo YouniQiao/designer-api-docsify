@@ -4,8 +4,6 @@ Defines the lite settings capability for wearables.
 
 **Since:** 24
 
-**Model restriction:** This API can be used only in the FA model.
-
 **System capability:** SystemCapability.Applications.Settings.Core.Lite
 
 ## Modules to Import

@@ -4,6 +4,8 @@ Enumerates the system sound effect types.
 
 **Since:** 23
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
 ## PHOTO_SHUTTER

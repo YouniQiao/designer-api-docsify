@@ -4,6 +4,8 @@ Defines the warning types that support suppression. Developers can selectively s
 
 **Since:** 23
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.Base
 
 ## COMPATIBILITY

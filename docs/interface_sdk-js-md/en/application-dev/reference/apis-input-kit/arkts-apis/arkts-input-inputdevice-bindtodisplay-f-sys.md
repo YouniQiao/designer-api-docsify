@@ -45,5 +45,5 @@ Bind input devices to a display group. Only external USB and Bluetooth mice, tou
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied. Called by non-system application. |
 | [3800001](../errorcode-infraredemitter.md#3800001-multimodal-input-service-internal-error) | Input service exception. |
 | [3900001](../errorcode-inputdevice.md#3900001-device-not-exist) | The specified input device does not exist. |
-| 3900004 | The specified display does not exist. |
-| 3900005 | Unsupported input device. |
+| [3900004](../errorcode-inputdevice.md#3900004-specified-display-does-not-exist) | The specified display does not exist. |
+| [3900005](../errorcode-inputdevice.md#3900005-unsupported-input-device) | Unsupported input device. |

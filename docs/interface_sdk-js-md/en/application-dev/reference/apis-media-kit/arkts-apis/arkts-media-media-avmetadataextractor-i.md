@@ -62,7 +62,7 @@ Obtains the cover of the audio album. This API uses an asynchronous callback to 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;image.PixelMap&gt; | Yes | Callback used to return the album cover. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)&gt; | Yes | Callback used to return the album cover. |
 
 **Error codes:**
 
@@ -109,7 +109,7 @@ Obtains the cover of the audio album. This API uses a promise to return the resu
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;image.PixelMap&gt; | Promise used to return the album cover. |
+| Promise&lt;[image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)&gt; | Promise used to return the album cover. |
 
 **Error codes:**
 
@@ -162,7 +162,7 @@ Obtains a video thumbnail. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;image.PixelMap&gt; | Promise used to return the video thumbnail. |
+| Promise&lt;[image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)&gt; | Promise used to return the video thumbnail. |
 
 **Error codes:**
 
@@ -268,7 +268,7 @@ Obtains a video thumbnail. You can set the maximum timeout interval (**timeoutMs
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;image.PixelMap \| undefined&gt; | Promise used to return the video thumbnail. |
+| Promise&lt;[image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) \| undefined&gt; | Promise used to return the video thumbnail. |
 
 **Error codes:**
 

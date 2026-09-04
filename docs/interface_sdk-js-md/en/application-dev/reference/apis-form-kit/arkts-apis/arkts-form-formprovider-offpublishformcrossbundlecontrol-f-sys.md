@@ -28,7 +28,7 @@ Unsubscribes from controls on cross-bundle widget addition to the home screen. T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | formInfo.PublishFormCrossBundleControlCallback | No | Callback function used to return the control result on cross-bundle widget addition to the home screen. |
+| callback | [formInfo.PublishFormCrossBundleControlCallback](arkts-form-forminfo-publishformcrossbundlecontrolcallback-t-sys.md) | No | Callback function used to return the control result on cross-bundle widget addition to the home screen. |
 
 **Error codes:**
 

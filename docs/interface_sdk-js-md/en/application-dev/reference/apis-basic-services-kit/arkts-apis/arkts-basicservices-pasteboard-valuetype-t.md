@@ -15,6 +15,6 @@ Indicates type of value.
 | Type | Description |
 | --- | --- |
 | string | The value is of the string type. |
-| image.PixelMap | The value is of the [image.PixelMap]{ |
+| [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | The value is of the [image.PixelMap]{ |
 | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | The value is of the [Want]{ |
 | ArrayBuffer | The value is of the **ArrayBuffer** type. |

@@ -24,8 +24,8 @@ Images occupy a large amount of memory. When you finish using an ImageReceiver i
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| size | image.Size | Yes | Default size of the image. |
-| format | image.ImageFormat | Yes | Image format, which is a constant of **image.ImageFormat**. (Currently, only **ImageFormat:JPEG** is supported.) |
+| size | [image.Size](arkts-image-image-size-i.md) | Yes | Default size of the image. |
+| format | [image.ImageFormat](arkts-image-image-imageformat-e.md) | Yes | Image format, which is a constant of **image.ImageFormat**. (Currently, only **ImageFormat:JPEG** is supported.) |
 | capacity | number | Yes | Maximum number of images that can be accessed at the same time. This parameter is used only as an expected value. The actual capacity is determined by the device hardware. |
 
 **Return value:**

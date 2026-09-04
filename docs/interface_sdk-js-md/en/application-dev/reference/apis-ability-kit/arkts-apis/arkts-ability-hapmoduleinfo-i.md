@@ -332,7 +332,7 @@ readonly type: bundleManager.ModuleType
 
 Type of the module.
 
-**Type:** bundleManager.ModuleType
+**Type:** [bundleManager.ModuleType](arkts-ability-bundlemanager-moduletype-e.md)
 
 **Since:** 9
 

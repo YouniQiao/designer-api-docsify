@@ -42,7 +42,7 @@ predicates: dataSharePredicates.DataSharePredicates
 
 Predicates that specify the fetch criteria.
 
-**Type:** dataSharePredicates.DataSharePredicates
+**Type:** [dataSharePredicates.DataSharePredicates](../../apis-arkdata/arkts-apis/arkts-arkdata-datasharepredicates-datasharepredicates-c.md)
 
 **Since:** 10
 

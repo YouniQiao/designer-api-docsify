@@ -34,7 +34,7 @@ bounds(): common2D.Rect
 
 | 类型 | 说明 |
 | --- | --- |
-| common2D.Rect | 文字边界框的矩形区域。 |
+| [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) | 文字边界框的矩形区域。 |
 
 **示例**
 
@@ -65,7 +65,7 @@ static makeFromPosText(text: string, len: number, points: common2D.Point[], font
 | --- | --- | --- | --- |
 | text | string | 是 | 绘制字形的文本内容。 |
 | len | number | 是 | 字形个数，由[countText](arkts-arkgraphics2d-drawing-font-c.md#counttext)获取，该参数为整数。 |
-| points | common2D.Point[] | 是 | 点数组，用于指定每个字形的坐标，长度必须为len。 |
+| points | [common2D.Point](arkts-arkgraphics2d-common2d-point-i.md)[] | 是 | 点数组，用于指定每个字形的坐标，长度必须为len。 |
 | font | Font | 是 | 字型对象。 |
 
 **返回值：**
@@ -121,7 +121,7 @@ static makeFromRunBuffer(pos: Array<TextBlobRunBuffer>, font: Font, bounds?: com
 | --- | --- | --- | --- |
 | pos | Array&lt;[TextBlobRunBuffer](arkts-arkgraphics2d-drawing-textblobrunbuffer-i.md)&gt; | 是 | TextBlobRunBuffer数组，每个元素包含字形ID及位置坐标信息。 |
 | font | Font | 是 | 字型对象。 |
-| bounds | common2D.Rect | 否 | 文字边界框的矩形区域；如果不设置，则不预设边界框。 |
+| bounds | [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) | 否 | 文字边界框的矩形区域；如果不设置，则不预设边界框。 |
 
 **返回值：**
 

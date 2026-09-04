@@ -12,4 +12,4 @@ Obtains a **MifareClassicTag** object.
 
 **System capability:** SystemCapability.Communication.NFC.Tag
 
-**Property type:** _MifareClassicTag
+**Type:** _MifareClassicTag

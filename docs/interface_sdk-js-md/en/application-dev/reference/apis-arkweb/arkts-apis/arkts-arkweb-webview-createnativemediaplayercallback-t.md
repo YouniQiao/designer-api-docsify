@@ -29,3 +29,4 @@ Parameter of the [onCreateNativeMediaPlayer](arkts-arkweb-webview-webviewcontrol
 **Examples**
 
 For details about the sample code, see [onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer).
+- simpleType:

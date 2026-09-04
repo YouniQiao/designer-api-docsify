@@ -14,7 +14,7 @@ UIContext
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** import('../api/@ohos.arkui.UIContext').UIContext
+**Type:** import('../api/@ohos.arkui.UIContext').UIContext
 
 **Examples**
 

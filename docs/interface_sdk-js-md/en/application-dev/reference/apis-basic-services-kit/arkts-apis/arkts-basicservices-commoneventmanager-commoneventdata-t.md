@@ -12,4 +12,4 @@ Describes the data of a common event.
 
 **System capability:** SystemCapability.Notification.CommonEvent
 
-**Property type:** _CommonEventData
+**Type:** _CommonEventData

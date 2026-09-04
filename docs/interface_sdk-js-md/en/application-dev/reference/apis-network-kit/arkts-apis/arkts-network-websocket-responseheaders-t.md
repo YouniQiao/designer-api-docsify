@@ -12,6 +12,6 @@ Enumerates the response headers sent by the server.
 
 **System capability:** SystemCapability.Communication.NetStack
 
-**Property type:** {
+**Type:** {
     [k: string]: string | string[] | undefined;
   }

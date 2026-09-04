@@ -16,4 +16,4 @@ Defines the length property with number in units of fp.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** `${number}fp`
+**Type:** `${number}fp`

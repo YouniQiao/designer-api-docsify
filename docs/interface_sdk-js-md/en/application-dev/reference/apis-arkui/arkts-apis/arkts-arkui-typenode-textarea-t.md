@@ -14,4 +14,4 @@ Represents a FrameNode of the **TextArea** type.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** [TypedFrameNode](arkts-arkui-framenode-typedframenode-i.md)&lt;TextAreaInterface, [TextAreaAttribute](../arkts-components/arkts-arkui-textarea-attribute.md)&gt;
+**Type:** [TypedFrameNode](arkts-arkui-framenode-typedframenode-i.md)&lt;TextAreaInterface, [TextAreaAttribute](../arkts-components/arkts-arkui-textarea-attribute.md)&gt;

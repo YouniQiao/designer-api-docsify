@@ -374,7 +374,7 @@ setBlendMode(mode: drawing.BlendMode): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mode | drawing.BlendMode | 是 | 混合模式。 |
+| mode | [drawing.BlendMode](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-drawing-blendmode-e.md) | 是 | 混合模式。 |
 
 **示例**
 

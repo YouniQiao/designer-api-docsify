@@ -60,7 +60,7 @@ shapePath: Array<common2D.Point>
 
 表示路径的点信息
 
-**类型：** Array&lt;common2D.Point&gt;
+**类型：** Array&lt;[common2D.Point](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-common2d-point-i.md)&gt;
 
 **起始版本：** 23
 

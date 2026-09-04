@@ -12,4 +12,4 @@ type PartnerAgentExtensionAbilityDestroyReason = partnerAgent.PartnerAgentExtens
 
 **系统能力：** SystemCapability.Communication.FusionConnectivity.Core
 
-**属性类型：** partnerAgent.PartnerAgentExtensionAbilityDestroyReason
+**类型：** [partnerAgent.PartnerAgentExtensionAbilityDestroyReason](arkts-connectivity-partneragent-partneragentextensionabilitydestroyreason-e.md)

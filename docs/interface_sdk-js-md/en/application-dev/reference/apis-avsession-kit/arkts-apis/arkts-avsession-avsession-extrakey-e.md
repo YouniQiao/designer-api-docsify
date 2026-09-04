@@ -4,6 +4,8 @@ Define some common extra keys used in different scenarios.
 
 **Since:** 26.0.0
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 ## REQUIRE_ABILITY_LIST

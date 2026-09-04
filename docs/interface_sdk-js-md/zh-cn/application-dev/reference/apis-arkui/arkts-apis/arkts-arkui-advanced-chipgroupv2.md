@@ -108,6 +108,7 @@ struct Index {
 ```
 
 该示例通过设置suffix参数，实现了[ChipGroupV2](arkts-arkui-arkui-advanced-chipgroupv2-chipgroupv2-s.md)最右侧的自定义组件效果。
+从API版本26.0.0开始，ChipGroupV2新增suffix属性。
 
 ```TypeScript
 import { ChipV2Size, ChipGroupV2, ChipGroupV2Items, ChipGroupV2IconGroupSuffix, ChipGroupV2ItemStyle, ChipGroupV2Space, ChipGroupV2Padding, ColorMetrics, LengthMetrics } from '@kit.ArkUI';
@@ -200,6 +201,7 @@ struct Index {
 ```
 
 该示例通过[SymbolGlyphModifier](ts-universal-attributes-attribute-symbolglyphmodifier.md#symbolglyphmodifier)实现了[ChipGroupV2IconGroupSuffix](arkts-arkui-arkui-advanced-chipgroupv2-chipgroupv2icongroupsuffix-s.md)和[ChipGroupV2](arkts-arkui-arkui-advanced-chipgroupv2-chipgroupv2-s.md)设置Symbol类型图标。
+从API版本26.0.0开始，新增ChipGroupV2IconGroupSuffix和ChipGroupV2。
 
 ```TypeScript
 import { ChipV2Size, ChipGroupV2, ChipGroupV2Items, ChipGroupV2IconGroupSuffix, SymbolGlyphModifier, ChipGroupV2ItemStyle, ChipGroupV2Space, ChipGroupV2Padding, ColorMetrics } from '@kit.ArkUI';
@@ -296,6 +298,7 @@ struct Index {
 ```
 
 [ChipGroupV2Items](arkts-arkui-arkui-advanced-chipgroupv2-chipgroupv2items-c.md)、[ChipGroupV2Item](arkts-arkui-arkui-advanced-chipgroupv2-chipgroupv2item-c.md)、[ChipGroupV2ItemStyle](arkts-arkui-arkui-advanced-chipgroupv2-chipgroupv2itemstyle-c.md)等类使用了@ObservedV2装饰器，ChipGroupV2组件通过@Param接收各属性参数。对于@Trace装饰的基本类型属性（如ChipGroupV2Space的itemSpace等），@Param已能观测到属性变化并触发UI刷新，无需额外处理。但对于这些类中对象类型属性（如ChipGroupV2Item中prefixIcon的size）的内部属性，这些对象类型本身未被@ObservedV2装饰，其内部属性变化无法被@Param感知，导致修改内部属性时UI不会自动刷新。使用makeObserved接口对对象类型属性进行包裹，可以为该对象的内部属性补充深度观察能力。makeObserved接口的详细说明请参考[makeObserved接口：将非观察数据变为可观察数据](../../../ui/state-management/arkts-new-makeObserved.md)。
+以下示例对比了两种场景：点击“修改itemSpace间距”按钮修改chipGroupSpace的itemSpace属性（@Trace装饰的基本类型属性，已支持观测），UI自动刷新；点击“修改图标大小”按钮修改ChipGroupV2Item中prefixIcon的size内部属性（对象类型属性的内部属性，需通过UIUtils.makeObserved包裹size才能观测），UI同样自动刷新。
 
 ```TypeScript
 import {

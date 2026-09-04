@@ -32,7 +32,7 @@ Creates and returns an XmlSAXParser instance.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| inputStream | stream.Readable | Yes | An instance, of stream.Readable for the new XmlSAXParser. |
+| inputStream | [stream.Readable](arkts-arkts-stream-readable-c.md) | Yes | An instance, of stream.Readable for the new XmlSAXParser. |
 | encoding | string | No | [encoding='utf8'] this is its encoding. |
 
 **Examples**

@@ -34,7 +34,7 @@ mode: bundleManager.AppClonePreferenceMode
 
 Preference mode for application cloning.
 
-**Type:** bundleManager.AppClonePreferenceMode
+**Type:** [bundleManager.AppClonePreferenceMode](arkts-ability-bundlemanager-appclonepreferencemode-e-sys.md)
 
 **Since:** 26.0.0
 

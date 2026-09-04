@@ -58,10 +58,10 @@ Captures a snapshot of an offscreen-rendered component created from a [CustomBui
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | builder | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | Yes | Builder of the custom component.Note: The global builder is not supported.If the root component of the builder has a width or height of zero, the snapshot operation will fail with error code 100001. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;image.PixelMap&gt; | Yes | Callback used to return the result. If the snapshot capture is successful, **err** is **undefined**, and **data** contains the resulting [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md). Otherwise, **err** provides detailed error information. The coordinates and size of the offscreen component's drawing area can be obtained through the callback. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)&gt; | Yes | Callback used to return the result. If the snapshot capture is successful, **err** is **undefined**, and **data** contains the resulting [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md). Otherwise, **err** provides detailed error information. The coordinates and size of the offscreen component's drawing area can be obtained through the callback. |
 | delay | number | No | Delay time for triggering the screenshot command. When the layout includes an image component, it is necessary to set a delay time to allow the system to decode the image resources. The decoding time is subject to the resource size. In light of this, whenever possible, use pixel map resources that do not require decoding.When PixelMap resources are used or when syncLoad is set to **true** for the **Image** component, you can set **delay** to **0** to forcibly capture snapshots without waiting. This delay time does not refer to the time from the API call to the return: As the system needs to temporarily construct the passed-in **builder** offscreen, the return time is usually longer than this delay.Note: In the **builder** passed in, state variables should not be used to control the construction of child components. If they are used, they should not change when the API is called, so as to avoid unexpected snapshot results.Default value: **300**Unit: ms Value range: [0, +∞). If the value is less than 0, the default value is used. |
 | checkImageStatus | boolean | No | Whether to verify the image decoding status before taking a snapshot. If the value is **true**, the system checks whether all **Image** components have been decoded before taking the snapshot. If the check is not completed, the system aborts the snapshot and returns an exception.Default value: **false**. |
-| options | componentSnapshot.SnapshotOptions | No | Custom settings of the snapshot. |
+| options | [componentSnapshot.SnapshotOptions](arkts-arkui-componentsnapshot-snapshotoptions-i.md) | No | Custom settings of the snapshot. |
 
 **Error codes:**
 
@@ -163,13 +163,13 @@ Captures a snapshot of an offscreen-rendered component created from a [CustomBui
 | builder | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | Yes | Builder of the custom component.Note: The global builder is not supported.If the root component of the builder has a width or height of zero, the snapshot operation will fail with error code 100001. |
 | delay | number | No | Delay time for triggering the screenshot command. When the layout includes an image component, it is necessary to set a delay time to allow the system to decode the image resources. The decoding time is subject to the resource size. In light of this, whenever possible, use pixel map resources that do not require decoding.When PixelMap resources are used or when syncLoad is set to **true** for the **Image** component, you can set **delay** to **0** to forcibly capture snapshots without waiting. This delay time does not refer to the time from the API call to the return: As the system needs to temporarily construct the passed-in **builder** offscreen, the return time is usually longer than this delay.Note: In the **builder** passed in, state variables should not be used to control the construction of child components. If they are used, they should not change when the API is called, so as to avoid unexpected snapshot results.Default value: **300**Unit: ms Value range: [0, +∞). If the value is less than 0, the default value is used. |
 | checkImageStatus | boolean | No | Whether to verify the image decoding status before taking a snapshot. If the value is **true**, the system checks whether all **Image** components have been decoded before taking the snapshot. If the check is not completed, the system aborts the snapshot and returns an exception.Default value: **false**. |
-| options | componentSnapshot.SnapshotOptions | No | Custom settings of the snapshot. |
+| options | [componentSnapshot.SnapshotOptions](arkts-arkui-componentsnapshot-snapshotoptions-i.md) | No | Custom settings of the snapshot. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;image.PixelMap&gt; | Promise used to return the snapshot object. |
+| Promise&lt;[image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)&gt; | Promise used to return the snapshot object. |
 
 **Error codes:**
 
@@ -261,13 +261,13 @@ Captures a snapshot of the provided component content. This API uses a promise t
 | content | [ComponentContent](arkts-arkui-componentcontent-c.md)&lt;T&gt; | Yes | Component content to be captured. This is the content currently displayed in the **UIContext**. |
 | delay | number | No | Delay time for triggering the screenshot command. When the layout includes an image component, it is necessary to set a delay time to allow the system to decode the image resources. The decoding time is subject to the resource size. In light of this, whenever possible, use pixel map resources that do not require decoding.When PixelMap resources are used or when syncLoad is set to **true** for the **Image** component, you can set **delay** to **0** to forcibly capture snapshots without waiting. This delay time does not refer to the time from the API call to the return: As the system needs to temporarily construct the passed-in **builder** offscreen, the return time is usually longer than this delay.Note: In the **builder** passed in, state variables should not be used to control the construction of child components. If they are used, they should not change when the API is called, so as to avoid unexpected snapshot results.Value range: [0, +∞). If the value is less than 0, the default value is used.Default value: **300**Unit: ms |
 | checkImageStatus | boolean | No | Whether to verify the image decoding status before taking a snapshot. If the value is **true**, the system checks whether all **Image** components have been decoded before taking the snapshot. If the check is not completed, the system aborts the snapshot and returns an exception.Default value: **false**. |
-| options | componentSnapshot.SnapshotOptions | No | Custom settings of the snapshot. You can specify the scale ratio for the pixelmap during rendering and whether to force the system to complete all rendering commands before taking the snapshot. |
+| options | [componentSnapshot.SnapshotOptions](arkts-arkui-componentsnapshot-snapshotoptions-i.md) | No | Custom settings of the snapshot. You can specify the scale ratio for the pixelmap during rendering and whether to force the system to complete all rendering commands before taking the snapshot. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;image.PixelMap&gt; | Promise used to return the snapshot object. |
+| Promise&lt;[image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)&gt; | Promise used to return the snapshot object. |
 
 **Error codes:**
 
@@ -385,8 +385,8 @@ Obtains the snapshot of a component that has been loaded based on the provided [
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | id | string | Yes | [ID](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md) of the target component.Note: Off-screen or cached components not mounted in the component tree are not supported. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;image.PixelMap&gt; | Yes | Callback used to return the result. If the snapshot capture is successful, **err** is **undefined**, and **data** contains the resulting [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md). Otherwise, **err** provides detailed error information. |
-| options | componentSnapshot.SnapshotOptions | No | Custom settings of the snapshot. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)&gt; | Yes | Callback used to return the result. If the snapshot capture is successful, **err** is **undefined**, and **data** contains the resulting [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md). Otherwise, **err** provides detailed error information. |
+| options | [componentSnapshot.SnapshotOptions](arkts-arkui-componentsnapshot-snapshotoptions-i.md) | No | Custom settings of the snapshot. |
 
 **Error codes:**
 
@@ -465,13 +465,13 @@ Obtains the snapshot of a component that has been loaded based on the provided [
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | id | string | Yes | [ID](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md) of the target component.Note: Off-screen or cached components not mounted in the component tree are not supported. |
-| options | componentSnapshot.SnapshotOptions | No | Custom settings of the snapshot. |
+| options | [componentSnapshot.SnapshotOptions](arkts-arkui-componentsnapshot-snapshotoptions-i.md) | No | Custom settings of the snapshot. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;image.PixelMap&gt; | Promise used to return the snapshot object. |
+| Promise&lt;[image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)&gt; | Promise used to return the snapshot object. |
 
 **Error codes:**
 
@@ -545,7 +545,7 @@ Obtains the size limit of a component screenshot.
 
 | Type | Description |
 | --- | --- |
-| componentSnapshot.SnapshotSizeLimitation | Size limit of a component screenshot. |
+| [componentSnapshot.SnapshotSizeLimitation](arkts-arkui-componentsnapshot-snapshotsizelimitation-i.md) | Size limit of a component screenshot. |
 
 **Examples**
 
@@ -621,13 +621,13 @@ Obtains the snapshot of a component that has been loaded based on the provided [
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | id | string | Yes | [ID](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md) of the target component.Note: Off-screen or cached components not mounted in the component tree are not supported. |
-| options | componentSnapshot.SnapshotOptions | No | Custom settings of the snapshot. |
+| options | [componentSnapshot.SnapshotOptions](arkts-arkui-componentsnapshot-snapshotoptions-i.md) | No | Custom settings of the snapshot. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| image.PixelMap | Promise used to return the result. |
+| [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | Promise used to return the result. |
 
 **Error codes:**
 
@@ -705,13 +705,13 @@ Obtains the snapshot of a component that has been loaded based on the provided *
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uniqueId | number | Yes | Unique ID of the target component. The unique ID of the **FrameNode** can be obtained via the [getUniqueId](arkts-arkui-framenode-c.md#getuniqueid) API.Note: Off-screen or cached components not mounted in the component tree are not supported. |
-| options | componentSnapshot.SnapshotOptions | No | Custom settings of the snapshot. |
+| options | [componentSnapshot.SnapshotOptions](arkts-arkui-componentsnapshot-snapshotoptions-i.md) | No | Custom settings of the snapshot. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| image.PixelMap | Promise used to return the result. |
+| [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | Promise used to return the result. |
 
 **Error codes:**
 
@@ -806,13 +806,13 @@ Obtains the snapshot of a component that has been loaded based on the provided *
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uniqueId | number | Yes | Unique ID of the target component. The unique ID of the **FrameNode** can be obtained via the [getUniqueId](arkts-arkui-framenode-c.md#getuniqueid) API.Note: Off-screen or cached components not mounted in the component tree are not supported. |
-| options | componentSnapshot.SnapshotOptions | No | Custom settings of the snapshot. |
+| options | [componentSnapshot.SnapshotOptions](arkts-arkui-componentsnapshot-snapshotoptions-i.md) | No | Custom settings of the snapshot. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;image.PixelMap&gt; | Promise used to return the snapshot object. |
+| Promise&lt;[image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)&gt; | Promise used to return the snapshot object. |
 
 **Error codes:**
 

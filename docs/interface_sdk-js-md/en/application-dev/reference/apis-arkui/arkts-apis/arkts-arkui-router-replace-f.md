@@ -31,6 +31,13 @@ Replaces the current page with another one in the application and destroys the c
 **Examples**
 
 replace(options: RouterOptions): void
+Replaces the current page with a page within the application and destroys the current page. Page transition animation is not supported. If you need to set the animation, you are advised to use the [Navigation](../../../ui/arkts-navigation-architecture.md) component.
+> NOTE
+> 
+> This API is supported since API version 8 and deprecated since API version 9. You are advised to use replaceUrl(options: router.RouterOptions) instead.
+
+System capability: SystemCapability.ArkUI.ArkUI.Lite
+Parameters
 
 ```TypeScript
 import { router } from '@kit.ArkUI';

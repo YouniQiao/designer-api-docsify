@@ -15,6 +15,6 @@ type ValueType = string | image.PixelMap | Want | ArrayBuffer
 | 类型 | 说明 |
 | --- | --- |
 | string | 表示string的类型。 |
-| image.PixelMap | 表示[image.PixelMap]{ |
+| [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | 表示[image.PixelMap]{ |
 | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 表示[Want]{ |
 | ArrayBuffer | 表示ArrayBuffer的类型。 |

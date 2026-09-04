@@ -8,6 +8,8 @@ Enumerates the EAP authentication methods.
 
 **Since:** 12
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## EAP_NONE

@@ -14,4 +14,4 @@ Continuable information corresponding to ability.
 
 **System API:** This is a system API.
 
-**Property type:** _ContinuableInfo
+**Type:** _ContinuableInfo

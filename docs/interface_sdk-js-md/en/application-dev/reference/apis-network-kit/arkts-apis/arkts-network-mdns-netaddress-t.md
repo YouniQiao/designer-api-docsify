@@ -12,4 +12,4 @@ Obtains the network address.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
-**Property type:** connection.NetAddress
+**Type:** [connection.NetAddress](arkts-network-connection-netaddress-i.md)

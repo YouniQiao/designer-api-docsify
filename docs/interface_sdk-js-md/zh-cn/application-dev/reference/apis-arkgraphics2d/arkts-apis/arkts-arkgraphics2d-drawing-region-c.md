@@ -208,7 +208,7 @@ getBounds(): common2D.Rect
 
 | 类型 | 说明 |
 | --- | --- |
-| common2D.Rect | 返回当前区域的边界矩形。 |
+| [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) | 返回当前区域的边界矩形。 |
 
 **示例**
 

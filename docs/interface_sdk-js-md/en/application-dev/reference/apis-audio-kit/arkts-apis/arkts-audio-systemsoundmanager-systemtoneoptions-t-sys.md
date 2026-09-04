@@ -12,4 +12,4 @@ System tone options.
 
 **System API:** This is a system API.
 
-**Property type:** _SystemToneOptions
+**Type:** _SystemToneOptions

@@ -10,4 +10,4 @@ type NetBearType = connection.NetBearType
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
-**属性类型：** connection.NetBearType
+**类型：** [connection.NetBearType](arkts-network-connection-netbeartype-e.md)

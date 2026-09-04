@@ -16,4 +16,4 @@ declare type PX = `${number}px`
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-**属性类型：** `${number}px`
+**类型：** `${number}px`

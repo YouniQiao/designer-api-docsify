@@ -24,11 +24,11 @@
 **表3：enableArrow为true且placement未设置或者值为非法值的菜单默认位置**  
 | 接口 | 菜单默认位置 |  
 |------|-------------|  
-| [bindMenu](arkts-arkui-commonmethod-c.md#bindmenu) | Placement.BottomLeft |
-| [bindMenu&lt;sup&gt;11+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#bindmenu) | Placement.BottomLeft |
-| [bindContextMenu&lt;sup&gt;8+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#bindcontextmenu) | Placement.Top |
-| [bindContextMenu&lt;sup&gt;12+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#bindcontextmenu) | Placement.BottomLeft |
-| [bindContextMenuWithResponse&lt;sup&gt;23+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#bindcontextmenuwithresponse) | Placement.Top |
+| [bindMenu](arkts-arkui-commonmethod-c.md#bindmenu) | [Placement.BottomLeft](../arkts-apis/arkts-arkui-placement-e.md) |
+| [bindMenu&lt;sup&gt;11+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#bindmenu) | [Placement.BottomLeft](../arkts-apis/arkts-arkui-placement-e.md) |
+| [bindContextMenu&lt;sup&gt;8+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#bindcontextmenu) | [Placement.Top](../arkts-apis/arkts-arkui-dialogalignment-e.md) |
+| [bindContextMenu&lt;sup&gt;12+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#bindcontextmenu) | [Placement.BottomLeft](../arkts-apis/arkts-arkui-placement-e.md) |
+| [bindContextMenuWithResponse&lt;sup&gt;23+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#bindcontextmenuwithresponse) | [Placement.Top](../arkts-apis/arkts-arkui-dialogalignment-e.md) |
 
 **起始版本：** 10
 

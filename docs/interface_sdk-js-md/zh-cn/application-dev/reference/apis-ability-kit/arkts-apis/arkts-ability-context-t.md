@@ -14,4 +14,4 @@ export type Context = _Context
 
 **系统能力：** SystemCapability.Security.AccessToken
 
-**属性类型：** _Context
+**类型：** _Context

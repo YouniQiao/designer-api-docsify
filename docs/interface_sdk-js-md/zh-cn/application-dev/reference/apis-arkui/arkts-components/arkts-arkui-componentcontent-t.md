@@ -14,4 +14,4 @@ declare type ComponentContent<T = Object> = import('../api/arkui/ComponentConten
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-**属性类型：** import('../api/arkui/ComponentContent').ComponentContent&lt;T&gt;
+**类型：** import('../api/arkui/ComponentContent').ComponentContent&lt;T&gt;

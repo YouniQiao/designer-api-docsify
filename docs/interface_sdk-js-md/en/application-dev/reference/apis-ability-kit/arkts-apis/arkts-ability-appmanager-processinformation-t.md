@@ -12,4 +12,4 @@ Defines the process information.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
-**Property type:** _ProcessInformation
+**Type:** _ProcessInformation

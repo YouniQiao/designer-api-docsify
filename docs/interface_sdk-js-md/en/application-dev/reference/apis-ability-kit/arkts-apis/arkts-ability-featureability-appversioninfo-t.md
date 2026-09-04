@@ -12,4 +12,4 @@ Defines an AppVersionInfo object.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
-**Property type:** _AppVersionInfo
+**Type:** _AppVersionInfo

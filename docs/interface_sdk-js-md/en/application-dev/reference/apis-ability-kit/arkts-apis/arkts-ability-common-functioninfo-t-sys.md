@@ -14,4 +14,4 @@ Describes the basic information of a function.
 
 **System API:** This is a system API.
 
-**Property type:** _FunctionInfo
+**Type:** _FunctionInfo

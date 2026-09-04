@@ -25,7 +25,7 @@ Parses and processes the body of an ad response (this API is only open to some p
 | --- | --- | --- | --- |
 | adResponse | string | Yes | Ad response body. |
 | listener | [MultiSlotsAdLoadListener](arkts-ads-advertising-multislotsadloadlistener-i.md) | Yes | Callback listener for ad requests. |
-| context | common.UIAbilityContext | Yes | Context of the UIAbility. |
+| context | [common.UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-common-uiabilitycontext-t.md) | Yes | Context of the UIAbility. |
 
 **Error codes:**
 

@@ -12,4 +12,4 @@ export type ResultSet = _ResultSet
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
-**属性类型：** _ResultSet
+**类型：** _ResultSet

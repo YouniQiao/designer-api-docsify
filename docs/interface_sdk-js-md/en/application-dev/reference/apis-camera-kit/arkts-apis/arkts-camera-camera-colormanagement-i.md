@@ -34,7 +34,7 @@ Obtains the color space in use.
 
 | Type | Description |
 | --- | --- |
-| colorSpaceManager.ColorSpace | Color space. |
+| [colorSpaceManager.ColorSpace](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-colorspacemanager-colorspace-e.md) | Color space. |
 
 **Error codes:**
 
@@ -112,7 +112,7 @@ Recording mode:
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| colorSpace | colorSpaceManager.ColorSpace | Yes | The type of color space. |
+| colorSpace | [colorSpaceManager.ColorSpace](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-colorspacemanager-colorspace-e.md) | Yes | The type of color space. |
 
 **Error codes:**
 

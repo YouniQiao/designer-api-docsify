@@ -12,4 +12,4 @@ Describes the information about the dynamic icon of an application.
 
 **System API:** This is a system API.
 
-**Property type:** _BundleInfo.DynamicIconInfo
+**Type:** [_BundleInfo.DynamicIconInfo](arkts-ability-bundleinfo-dynamiciconinfo-i-sys.md)

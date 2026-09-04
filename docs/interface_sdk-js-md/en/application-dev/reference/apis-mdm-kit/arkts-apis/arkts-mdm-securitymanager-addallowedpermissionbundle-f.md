@@ -48,7 +48,7 @@ Adds an application to the permission usage exception list. Applications in the 
 | --- | --- | --- | --- |
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
 | permission | string | Yes | Name of the permission. |
-| applicationInstance | common.ApplicationInstance | Yes | Information about the application instance to be added to the permission exception list. |
+| applicationInstance | [common.ApplicationInstance](arkts-mdm-common-applicationinstance-i.md) | Yes | Information about the application instance to be added to the permission exception list. |
 
 **Error codes:**
 

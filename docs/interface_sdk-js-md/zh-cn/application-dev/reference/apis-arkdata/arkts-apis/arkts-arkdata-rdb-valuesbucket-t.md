@@ -14,4 +14,4 @@ type ValuesBucket = { [key: string]: ValueType | Uint8Array | null }
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
-**属性类型：** { [key: string]: ValueType | Uint8Array | null }
+**类型：** { [key: string]: ValueType | Uint8Array | null }

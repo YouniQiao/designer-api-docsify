@@ -14,4 +14,4 @@ Represents a FrameNode of the **Progress** type. This type of node does not allo
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** [TypedFrameNode](arkts-arkui-framenode-typedframenode-i.md)&lt;ProgressInterface, [ProgressAttribute](../arkts-components/arkts-arkui-progress-attribute.md)&gt;
+**Type:** [TypedFrameNode](arkts-arkui-framenode-typedframenode-i.md)&lt;ProgressInterface, [ProgressAttribute](../arkts-components/arkts-arkui-progress-attribute.md)&gt;

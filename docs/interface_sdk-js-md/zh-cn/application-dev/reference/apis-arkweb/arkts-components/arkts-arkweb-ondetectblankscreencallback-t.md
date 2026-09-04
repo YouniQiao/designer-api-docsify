@@ -19,3 +19,4 @@ type OnDetectBlankScreenCallback = (event: BlankScreenDetectionEventInfo) => voi
 **示例**
 
 完整示例代码参考[onDetectedBlankScreen](./arkts-basic-components-web-events.md#ondetectedblankscreen)。
+- simpleType:

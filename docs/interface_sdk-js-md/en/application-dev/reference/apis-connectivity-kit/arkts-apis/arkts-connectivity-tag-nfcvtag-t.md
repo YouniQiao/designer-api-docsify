@@ -12,4 +12,4 @@ Obtains an **NfcVTag** object.
 
 **System capability:** SystemCapability.Communication.NFC.Tag
 
-**Property type:** _NfcVTag
+**Type:** _NfcVTag

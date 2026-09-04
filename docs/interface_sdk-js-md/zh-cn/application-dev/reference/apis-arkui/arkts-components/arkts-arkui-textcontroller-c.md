@@ -114,4 +114,4 @@ setTextSelection(selectionStart: number | undefined, selectionEnd: number | unde
 | --- | --- | --- | --- |
 | selectionStart | number \| undefined | 是 | 文本选择区域起始位置。取值范围：[0, +∞），值为负数或undefined时按0处理。 |
 | selectionEnd | number \| undefined | 是 | 文本选择区域结束位置。取值范围：[0, +∞），值为负数或undefined时按0处理。 |
-| options | [SelectionOptions](arkts-arkui-selectionoptions-i.md) | 否 | 选中文字时的配置。默认值：SelectionOptions中MenuPolicy.DEFAULT |
+| options | [SelectionOptions](arkts-arkui-selectionoptions-i.md) | 否 | [选中文字时的配置。默认值：SelectionOptions中MenuPolicy.DEFAULT](../arkts-apis/arkts-arkui-textmenushowmode-e.md) |

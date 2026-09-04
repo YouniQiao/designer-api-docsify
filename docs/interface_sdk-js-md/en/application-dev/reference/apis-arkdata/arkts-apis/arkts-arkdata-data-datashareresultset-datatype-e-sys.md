@@ -4,6 +4,8 @@ Enumerates the data types.
 
 **Since:** 9
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core
 
 **System API:** This is a system API.

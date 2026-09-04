@@ -256,7 +256,7 @@ Get supported hdr capabilities of remote player.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;hdrCapability.HDRFormat&gt;&gt; | HDRFormat returned through promise |
+| Promise&lt;Array&lt;[hdrCapability.HDRFormat](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-hdrcapability-hdrformat-e.md)&gt;&gt; | HDRFormat returned through promise |
 
 **Error codes:**
 

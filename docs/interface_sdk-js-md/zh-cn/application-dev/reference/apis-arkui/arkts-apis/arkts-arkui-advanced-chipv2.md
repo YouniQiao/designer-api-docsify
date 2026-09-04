@@ -57,6 +57,7 @@ import { ChipV2Size, ChipV2AccessibilitySelectedType, ChipV2ImageIconConfig, Chi
 ## 示例
 
 该示例通过ChipV2Options的prefixIcon、suffixIcon属性设置了自定义图标。
+从API版本26.0.0开始，ChipV2Options新增prefixIcon、suffixIcon属性。
 
 ```TypeScript
 import { ChipV2, ChipV2Options, ChipV2Label, ChipV2PrefixImageIcon, ChipV2SuffixImageIcon, LengthMetrics, ColorMetrics } from '@kit.ArkUI';
@@ -109,6 +110,7 @@ struct Index {
 ```
 
 该示例通过ChipV2Options的activated属性设置了[ChipV2](arkts-arkui-arkui-advanced-chipv2-chipv2-s.md)的激活状态。
+从API版本26.0.0开始，ChipV2Options新增activated属性。
 
 ```TypeScript
 import { ChipV2, ChipV2Options, ChipV2Label, ChipV2PrefixImageIcon, ChipV2CloseIcon, LengthMetrics, ColorMetrics } from '@kit.ArkUI';
@@ -168,6 +170,7 @@ struct Index {
 ```
 
 该示例通过[SymbolGlyphModifier](ts-universal-attributes-attribute-symbolglyphmodifier.md#symbolglyphmodifier)实现了[ChipV2](arkts-arkui-arkui-advanced-chipv2-chipv2-s.md)设置Symbol类型图标。
+从API版本26.0.0开始，新增ChipV2。
 
 ```TypeScript
 import { ChipV2, ChipV2Options, ChipV2Label, ChipV2PrefixSymbolIcon, SymbolGlyphModifier, LengthMetrics, ColorMetrics } from '@kit.ArkUI';
@@ -221,6 +224,7 @@ struct Index {
 ```
 
 ChipV2Options使用了@ObservedV2装饰器，[ChipV2](arkts-arkui-arkui-advanced-chipv2-chipv2-s.md)组件通过@Param接收ChipV2Options对象。对于@Trace装饰的基本类型属性，@Param已能观测到属性变化并触发UI刷新。但对于对象类型属性（如padding、label的labelMargin等）的内部属性（如padding的start、end），这些对象类型本身未被@ObservedV2装饰。因此其内部属性变化无法被@Param感知，修改内部属性时UI不会自动刷新。使用makeObserved对对象类型属性（如padding）进行包裹，可为其内部属性补充深度观察能力。这样修改内部属性（如start、end）时，框架能监听到变化并触发UI刷新。makeObserved接口的详细说明请参考[makeObserved接口：将非观察数据变为可观察数据](../../../ui/state-management/arkts-new-makeObserved.md)。
+以下示例使用makeObserved包裹padding，并通过Button修改padding的start和end属性，验证对象类型属性内部属性变化能够触发ChipV2的UI刷新。
 
 ```TypeScript
 import { ChipV2, ChipV2Options, ChipV2Label, LengthMetrics, ColorMetrics, UIUtils } from '@kit.ArkUI';

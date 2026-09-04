@@ -14,4 +14,4 @@ declare type ResponsiveFillType = PresetFillType
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-**属性类型：** [PresetFillType](arkts-arkui-presetfilltype-e.md)
+**类型：** [PresetFillType](arkts-arkui-presetfilltype-e.md)

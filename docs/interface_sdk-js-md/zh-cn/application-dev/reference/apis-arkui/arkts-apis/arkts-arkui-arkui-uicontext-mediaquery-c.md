@@ -41,8 +41,9 @@ matchMediaSync(condition: string): mediaQuery.MediaQueryListener
 
 | 类型 | 说明 |
 | --- | --- |
-| mediaQuery.MediaQueryListener | 媒体事件监听句柄，用于注册和去注册监听回调。 |
+| [mediaQuery.MediaQueryListener](arkts-arkui-mediaquery-mediaquerylistener-i.md) | 媒体事件监听句柄，用于注册和去注册监听回调。 |
 
 **示例**
 
 完整示例请参考mediaquery示例。
+- simpleType:

@@ -111,7 +111,7 @@ barBackgroundBlurStyle(value: BlurStyle)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | BlurStyle | 是 | TabBar的背景模糊材质。默认值：BlurStyle.NONE |
+| value | BlurStyle | 是 | [TabBar的背景模糊材质。默认值：BlurStyle.NONE](../arkts-apis/arkts-arkui-autocapitalizationmode-e.md) |
 
 ## barBackgroundBlurStyle
 
@@ -332,7 +332,7 @@ barMode(value: BarMode, options?: ScrollableBarModeOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [BarMode](arkts-arkui-barmode-e.md) | 是 | 布局模式。默认值：BarMode.Fixed |
+| value | [BarMode](arkts-arkui-barmode-e.md) | 是 | [布局模式。默认值：BarMode.Fixed](arkts-arkui-barmode-e.md) |
 | options | [ScrollableBarModeOptions](arkts-arkui-scrollablebarmodeoptions-i.md) | 否 | Scrollable模式下的TabBar的布局样式。   **说明：** 仅Scrollable且水平模式下有效。<br>**起始版本：** 10 |
 
 ## barOverlap
@@ -418,7 +418,7 @@ cachedMaxCount(count: number, mode: TabsCacheMode)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | count | number | 是 | 子组件的最大缓存个数。取值范围：[0, +∞)。设置为小于0的值时，子组件不受缓存管理。超出缓存个数时自动释放不再需要的子组件。 |
-| mode | [TabsCacheMode](arkts-arkui-tabscachemode-e.md) | 是 | 子组件的缓存模式。默认值：TabsCacheMode.CACHE_BOTH_SIDE |
+| mode | [TabsCacheMode](arkts-arkui-tabscachemode-e.md) | 是 | [子组件的缓存模式。默认值：TabsCacheMode.CACHE_BOTH_SIDE](arkts-arkui-tabscachemode-e.md) |
 
 ## customContentTransition
 
@@ -503,7 +503,7 @@ edgeEffect(edgeEffect: Optional<EdgeEffect>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| edgeEffect | [Optional](arkts-arkui-optional-t.md)&lt;[EdgeEffect](../arkts-apis/arkts-arkui-edgeeffect-e.md)&gt; | 是 | 边缘滑动效果。默认值：EdgeEffect.Spring |
+| edgeEffect | [Optional](arkts-arkui-optional-t.md)&lt;[EdgeEffect](../arkts-apis/arkts-arkui-edgeeffect-e.md)&gt; | 是 | [边缘滑动效果。默认值：EdgeEffect.Spring](arkts-arkui-swipeedgeeffect-e.md) |
 
 ## fadingEdge
 
@@ -829,7 +829,7 @@ pageFlipMode(mode: Optional<PageFlipMode>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mode | [Optional](arkts-arkui-optional-t.md)&lt;[PageFlipMode](../arkts-apis/arkts-arkui-pageflipmode-e.md)&gt; | 是 | 鼠标滚轮翻页模式。默认值：PageFlipMode.CONTINUOUS |
+| mode | [Optional](arkts-arkui-optional-t.md)&lt;[PageFlipMode](../arkts-apis/arkts-arkui-pageflipmode-e.md)&gt; | 是 | [鼠标滚轮翻页模式。默认值：PageFlipMode.CONTINUOUS](arkts-arkui-scrollsizemode-e.md) |
 
 ## scrollable
 

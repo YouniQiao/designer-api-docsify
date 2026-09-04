@@ -35,6 +35,7 @@ Obtains the architecture type of the platform. If the corresponding [setArchitec
 **Examples**
 
 For details about the sample code, see [setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled).
+- simpleType:
 
 ## getBitness
 
@@ -59,6 +60,7 @@ Obtains the bitness type of the platform. If the corresponding [setBitness](#set
 **Examples**
 
 For details about the sample code, see [setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled).
+- simpleType:
 
 ## getBrandVersionList
 
@@ -83,6 +85,7 @@ Obtains the brand and version information list. If the corresponding [setBrandVe
 **Examples**
 
 For details about the sample code, see [setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled).
+- simpleType:
 
 ## getFormFactors
 
@@ -107,6 +110,7 @@ Obtains the device form factor information, such as phone and tablet. If the cor
 **Examples**
 
 For details about the sample code, see [setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled).
+- simpleType:
 
 ## getFullVersion
 
@@ -131,6 +135,7 @@ Obtains the full version number. If the corresponding [setFullVersion](#setfullv
 **Examples**
 
 For details about the sample code, see [setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled).
+- simpleType:
 
 ## getMobile
 
@@ -155,6 +160,7 @@ Obtains whether the device is a mobile device. If the corresponding [setMobile](
 **Examples**
 
 For details about the sample code, see [setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled).
+- simpleType:
 
 ## getModel
 
@@ -179,6 +185,7 @@ Obtains the device model. If the corresponding [setModel](#setmodel) is not call
 **Examples**
 
 For details about the sample code, see [setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled).
+- simpleType:
 
 ## getPlatform
 
@@ -203,6 +210,7 @@ Obtains the operating system name. If the corresponding [setPlatform](#setplatfo
 **Examples**
 
 For details about the sample code, see [setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled).
+- simpleType:
 
 ## getPlatformVersion
 
@@ -227,6 +235,7 @@ Obtains the operating system version number. If the corresponding [setPlatformVe
 **Examples**
 
 For details about the sample code, see [setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled).
+- simpleType:
 
 ## getWow64
 
@@ -251,6 +260,7 @@ Obtains whether the binary file is running in 32-bit mode on 64-bit Windows. If 
 **Examples**
 
 For details about the sample code, see [setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled).
+- simpleType:
 
 ## setArchitecture
 
@@ -275,6 +285,7 @@ Sets the architecture type of the platform.
 **Examples**
 
 For details about the sample code, see [setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled).
+- simpleType:
 
 ## setBitness
 
@@ -299,6 +310,7 @@ Sets the bitness type of the platform.
 **Examples**
 
 For details about the sample code, see [setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled).
+- simpleType:
 
 ## setBrandVersionList
 
@@ -323,6 +335,7 @@ Sets the brand and version information.
 **Examples**
 
 For details about the sample code, see [setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled).
+- simpleType:
 
 ## setFormFactors
 
@@ -347,6 +360,7 @@ Sets the device form, such as the mobile phone or tablet.
 **Examples**
 
 For details about the sample code, see [setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled).
+- simpleType:
 
 ## setFullVersion
 
@@ -371,6 +385,7 @@ Sets the full version number.
 **Examples**
 
 For details about the sample code, see [setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled).
+- simpleType:
 
 ## setMobile
 
@@ -395,6 +410,7 @@ Sets whether the device is a mobile device.
 **Examples**
 
 For details about the sample code, see [setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled).
+- simpleType:
 
 ## setModel
 
@@ -419,6 +435,7 @@ Sets the device model.
 **Examples**
 
 For details about the sample code, see [setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled).
+- simpleType:
 
 ## setPlatform
 
@@ -443,6 +460,7 @@ Sets the OS name.
 **Examples**
 
 For details about the sample code, see [setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled).
+- simpleType:
 
 ## setPlatformVersion
 
@@ -467,6 +485,7 @@ Sets the OS version.
 **Examples**
 
 For details about the sample code, see [setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled).
+- simpleType:
 
 ## setWow64
 
@@ -491,3 +510,4 @@ Sets whether the binary file runs in 32-bit mode on a 64-bit Windows.
 **Examples**
 
 For details about the sample code, see [setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled).
+- simpleType:

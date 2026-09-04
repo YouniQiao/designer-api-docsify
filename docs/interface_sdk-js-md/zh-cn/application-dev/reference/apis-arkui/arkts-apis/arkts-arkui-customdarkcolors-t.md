@@ -14,4 +14,4 @@ export declare type CustomDarkColors = Partial<Colors>
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-**属性类型：** Partial&lt;[Colors](arkts-arkui-arkui-theme-colors-i.md)&gt;
+**类型：** Partial&lt;[Colors](arkts-arkui-arkui-theme-colors-i.md)&gt;

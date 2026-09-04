@@ -28,7 +28,7 @@ type: notificationExtensionSubscription.SubscribeType
 
 订阅的类型，指定通知扩展的订阅方式。当前仅支持`SubscribeType.BLUETOOTH`，表示通过蓝牙订阅通知。
 
-**类型：** notificationExtensionSubscription.SubscribeType
+**类型：** [notificationExtensionSubscription.SubscribeType](arkts-notification-notificationextensionsubscription-subscribetype-e.md)
 
 **起始版本：** 22
 

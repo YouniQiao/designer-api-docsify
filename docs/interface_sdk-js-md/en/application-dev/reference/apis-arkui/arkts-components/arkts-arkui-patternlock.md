@@ -78,6 +78,8 @@ struct PatternLockExample {
 ```
 
 This example demonstrates how to use the [sideLength](arkts-arkui-patternlock-attribute.md#sidelength) attribute to set the grid size, how to use the [circleRadius](arkts-arkui-patternlock-attribute.md#circleradius) attribute to set the grid dot style, and how to use the [onPatternComplete](arkts-arkui-patternlock-attribute.md#onpatterncomplete) attribute to set the callback for password input.
+When the user completes the password input, different responses are given based on the input:- If the password length is less than 5, a message is displayed to prompt the user to re-enter the password.- After the first input, a message is displayed to prompt the user to enter the password again.- After the second input, the system checks whether the two inputs match. If they match, a message is displayed to indicate that the password setup is successful; otherwise, the user is prompted to re-enter the password.
+The user can click Reset PatternLock to reset the password lock.
 
 ```TypeScript
 // xxx.ets

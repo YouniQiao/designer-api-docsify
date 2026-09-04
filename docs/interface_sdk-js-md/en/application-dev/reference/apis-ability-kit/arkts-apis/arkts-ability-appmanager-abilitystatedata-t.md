@@ -10,4 +10,4 @@ Defines the ability state data.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
-**Property type:** _AbilityStateData.default
+**Type:** _AbilityStateData.default

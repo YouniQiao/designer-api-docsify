@@ -4,6 +4,8 @@ Defines the icon type of the element on the left of the **ComposeListItem** comp
 
 **Since:** 10
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## BADGE

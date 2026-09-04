@@ -14,4 +14,4 @@ Represents a FrameNode of the **Text** type. This type of node does not allow ch
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** [TypedFrameNode](arkts-arkui-framenode-typedframenode-i.md)&lt;TextInterface, [TextAttribute](../arkts-components/arkts-arkui-text-attribute.md)&gt;
+**Type:** [TypedFrameNode](arkts-arkui-framenode-typedframenode-i.md)&lt;TextInterface, [TextAttribute](../arkts-components/arkts-arkui-text-attribute.md)&gt;

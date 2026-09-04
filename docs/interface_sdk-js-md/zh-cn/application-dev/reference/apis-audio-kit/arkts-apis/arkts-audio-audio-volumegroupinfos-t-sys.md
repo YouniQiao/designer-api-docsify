@@ -10,4 +10,4 @@ type VolumeGroupInfos = Array<Readonly<VolumeGroupInfo>>
 
 **系统接口：** 此接口为系统接口。
 
-**属性类型：** Array&lt;Readonly&lt;[VolumeGroupInfo](arkts-audio-audio-volumegroupinfo-i-sys.md)&gt;&gt;
+**类型：** Array&lt;Readonly&lt;[VolumeGroupInfo](arkts-audio-audio-volumegroupinfo-i-sys.md)&gt;&gt;

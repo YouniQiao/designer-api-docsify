@@ -16,4 +16,4 @@ Defines the length property with number in units of px.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** `${number}px`
+**Type:** `${number}px`

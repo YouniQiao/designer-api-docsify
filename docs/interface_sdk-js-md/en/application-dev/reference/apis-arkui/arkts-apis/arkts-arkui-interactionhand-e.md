@@ -4,6 +4,8 @@ Enumerates how an input event is triggered.
 
 **Since:** 15
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## NONE

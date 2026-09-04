@@ -103,6 +103,7 @@ Creates a **Swiper** component.
 ## Examples
 
 In this example, the [changeIndex](#changeindex15) API is used to set the [SwiperAnimationMode](arkts-arkui-swiperanimationmode-e.md) animation effect to jump to a specified page, and the [onScrollStateChanged](arkts-arkui-swiper-attribute.md#onscrollstatechanged) callback is used to listen for the scrolling state changes.
+The onScrollStateChanged event is supported since API version 20.
 
 ```TypeScript
 // xxx.ets
@@ -320,6 +321,7 @@ struct SwiperExample {
 ```
 
 This example demonstrates how to implement the group-based page turning effect using the [displayCount](arkts-arkui-swiper-attribute.md#displaycount) attribute.
+Since API version 24, the [CachedCountOptions](arkts-arkui-cachedcountoptions-i.md) parameter is added to decouple the number of cached nodes from the number of nodes displayed by group in the displayCount attribute.
 
 ```TypeScript
 // xxx.ets
@@ -989,6 +991,7 @@ struct SwiperExample {
 ```
 
 This example demonstrates how to set the number of elements displayed in the Swiper viewport based on breakpoints.
+Since API version 22, the [displaycount](arkts-arkui-swiper-attribute.md#displaycount) API is added to set the number of elements displayed in the Swiper viewport.
 
 ```TypeScript
 class MyDataSource implements IDataSource {
@@ -1045,6 +1048,7 @@ struct SwiperExample {
 ```
 
 This example shows how to implement drag simulation using the Swiper component. If the component itself does not respond to the drag event, the child component Column invokes the Swiper API based on the touch event information to implement a similar effect to that of dragging.
+Since API version 23, the [startFakeDrag](arkts-arkui-swipercontroller-c.md#startfakedrag), [fakeDragBy](arkts-arkui-swipercontroller-c.md#fakedragby), [stopFakeDrag](arkts-arkui-swipercontroller-c.md#stopfakedrag), and [isFakeDragging](arkts-arkui-swipercontroller-c.md#isfakedragging) APIs are added to implement drag simulation.
 
 ```TypeScript
 // SwiperFakeDragExample.ets
@@ -1103,6 +1107,7 @@ struct SwiperFakeDragExample {
 ```
 
 This example shows how to configure the navigation dot icon of the Swiper component by setting the indicatorIcon API.
+Since API version 26.0.0, the [indicatorIcon](arkts-arkui-dotindicator-c.md#indicatoricon) API is added.
 
 ```TypeScript
 // swiperIndicatorIcon.ets

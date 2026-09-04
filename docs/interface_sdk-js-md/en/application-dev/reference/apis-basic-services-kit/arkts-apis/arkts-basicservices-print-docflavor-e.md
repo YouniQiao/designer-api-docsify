@@ -4,6 +4,8 @@ Enumerates the data source types for printing.
 
 **Since:** 23
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.Print.PrintFramework
 
 ## FILE_DESCRIPTOR

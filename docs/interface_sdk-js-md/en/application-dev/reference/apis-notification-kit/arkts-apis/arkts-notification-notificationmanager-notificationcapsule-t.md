@@ -10,4 +10,4 @@ Describes the notification capsule.
 
 **System capability:** SystemCapability.Notification.Notification
 
-**Property type:** _NotificationCapsule
+**Type:** _NotificationCapsule

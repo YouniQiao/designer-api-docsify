@@ -14,4 +14,4 @@ declare type Worker = import('../api/@ohos.worker').default.Worker
 
 **系统接口：** 此接口为系统接口。
 
-**属性类型：** import('../api/@ohos.worker').default.Worker
+**类型：** import('../api/@ohos.worker').default.Worker

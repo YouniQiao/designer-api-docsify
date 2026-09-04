@@ -4,6 +4,8 @@ Defines the vertical alignment mode of text. The default value is **BASELINE** (
 
 **Since:** 20
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## BASELINE

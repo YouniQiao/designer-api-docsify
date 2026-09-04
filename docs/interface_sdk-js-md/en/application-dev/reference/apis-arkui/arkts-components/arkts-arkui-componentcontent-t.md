@@ -14,4 +14,4 @@ Represents a constructor used to create a **ComponentContent** object.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** import('../api/arkui/ComponentContent').ComponentContent&lt;T&gt;
+**Type:** import('../api/arkui/ComponentContent').ComponentContent&lt;T&gt;

@@ -16,4 +16,4 @@ Defines the CircleShape type.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** import('../api/@ohos.arkui.shape').CircleShape
+**Type:** import('../api/@ohos.arkui.shape').CircleShape

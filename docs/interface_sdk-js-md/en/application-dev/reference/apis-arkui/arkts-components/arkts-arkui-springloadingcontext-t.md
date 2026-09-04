@@ -14,4 +14,4 @@ Defines callback context information, which is passed to the application in the 
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** import('../api/@ohos.arkui.dragController').default.SpringLoadingContext
+**Type:** import('../api/@ohos.arkui.dragController').default.SpringLoadingContext

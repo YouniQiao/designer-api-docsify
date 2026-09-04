@@ -16,4 +16,4 @@ Describes the download information when an online image fails to load or encount
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** import('../api/@ohos.request.cacheDownload').default.DownloadInfo
+**Type:** import('../api/@ohos.request.cacheDownload').default.DownloadInfo

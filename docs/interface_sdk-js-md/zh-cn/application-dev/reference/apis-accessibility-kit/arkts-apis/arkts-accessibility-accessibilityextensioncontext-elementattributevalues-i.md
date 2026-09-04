@@ -698,7 +698,7 @@ textMoveUnit: accessibility.TextMoveUnit
 
 文本被读取时的移动粒度。
 
-**类型：** accessibility.TextMoveUnit
+**类型：** [accessibility.TextMoveUnit](arkts-accessibility-accessibility-textmoveunit-t.md)
 
 **起始版本：** 9
 
@@ -726,7 +726,7 @@ triggerAction: accessibility.Action
 
 触发元素事件的动作。
 
-**类型：** accessibility.Action
+**类型：** [accessibility.Action](arkts-accessibility-accessibility-action-t.md)
 
 **起始版本：** 9
 

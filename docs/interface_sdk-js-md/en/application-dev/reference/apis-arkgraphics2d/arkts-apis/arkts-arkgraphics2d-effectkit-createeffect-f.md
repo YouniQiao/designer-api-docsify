@@ -26,7 +26,7 @@ Creates a Filter instance based on the input PixelMap. You can then add various 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| source | image.PixelMap | Yes | PixelMap instance created by the image module. An instance can be obtained by decoding an image or directly created. For details, see Introduction to Image Kit. |
+| source | [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | Yes | PixelMap instance created by the image module. An instance can be obtained by decoding an image or directly created. For details, see Introduction to Image Kit. |
 
 **Return value:**
 

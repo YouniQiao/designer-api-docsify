@@ -60,7 +60,7 @@ digitalCrownSensitivity(sensitivity: Optional<CrownSensitivity>): ArcSwiperAttri
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| sensitivity | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[CrownSensitivity](arkts-arkui-crownsensitivity-e.md)&gt; | 是 | 旋转表冠的灵敏度。设置不同灵敏度级别可调整表冠滚动的响应速度。默认值：CrownSensitivity.MEDIUM |
+| sensitivity | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[CrownSensitivity](arkts-arkui-crownsensitivity-e.md)&gt; | 是 | [旋转表冠的灵敏度。设置不同灵敏度级别可调整表冠滚动的响应速度。默认值：CrownSensitivity.MEDIUM](../arkts-components/arkts-arkui-sheetsize-e.md) |
 
 **返回值：**
 
@@ -164,7 +164,7 @@ effectMode(edgeEffect: Optional<EdgeEffect>): ArcSwiperAttribute
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| edgeEffect | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[EdgeEffect](arkts-arkui-edgeeffect-e.md)&gt; | 是 | 边缘滑动效果。通过ArcSwiperController接口控制翻页时，回弹效果不生效。默认值：EdgeEffect.Spring |
+| edgeEffect | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[EdgeEffect](arkts-arkui-edgeeffect-e.md)&gt; | 是 | [边缘滑动效果。通过ArcSwiperController接口控制翻页时，回弹效果不生效。默认值：EdgeEffect.Spring](../arkts-components/arkts-arkui-swipeedgeeffect-e.md) |
 
 **返回值：**
 

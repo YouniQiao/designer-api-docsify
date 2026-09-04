@@ -4,6 +4,8 @@ Enumerates the text that can be displayed on the save button.
 
 **Since:** 10
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## DOWNLOAD

@@ -323,7 +323,7 @@ Obtains image.PixelMap of the source image to which the effect chain has been ad
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;image.PixelMap&gt; | Promise used to return the image.PixelMap of the source image with the effect chain applied. |
+| Promise&lt;[image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)&gt; | Promise used to return the image.PixelMap of the source image with the effect chain applied. |
 
 **Examples**
 
@@ -381,7 +381,7 @@ Obtains image.PixelMap of the source image with the linked list effect. The rend
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;image.PixelMap&gt; | Promise used to return image.PixelMap of the source image. |
+| Promise&lt;[image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)&gt; | Promise used to return image.PixelMap of the source image. |
 
 **Examples**
 
@@ -433,7 +433,7 @@ Obtains image.PixelMap of the source image to which the effect chain has been ad
 
 | Type | Description |
 | --- | --- |
-| image.PixelMap | image.PixelMap of the source image with the effect chain applied. |
+| [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | image.PixelMap of the source image with the effect chain applied. |
 
 **Examples**
 

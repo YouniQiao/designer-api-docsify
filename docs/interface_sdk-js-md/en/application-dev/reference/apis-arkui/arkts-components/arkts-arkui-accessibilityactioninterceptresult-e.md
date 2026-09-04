@@ -4,6 +4,8 @@ Enum for the result of accessibility action intercept function
 
 **Since:** 20
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## ACTION_INTERCEPT

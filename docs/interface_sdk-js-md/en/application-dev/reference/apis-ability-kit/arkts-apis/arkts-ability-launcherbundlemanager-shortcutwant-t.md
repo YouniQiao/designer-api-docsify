@@ -10,4 +10,4 @@ Defines the target [wants](../../../quick-start/module-configuration-file.md#wan
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Launcher
 
-**Property type:** _ShortcutWant
+**Type:** _ShortcutWant

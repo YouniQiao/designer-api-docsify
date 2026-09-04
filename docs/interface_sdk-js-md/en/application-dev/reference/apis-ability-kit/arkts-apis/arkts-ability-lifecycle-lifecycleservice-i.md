@@ -58,7 +58,7 @@ Called back when a Service ability is first connected to an ability.
 
 | Type | Description |
 | --- | --- |
-| rpc.RemoteObject | Returns the proxy of the Service ability. |
+| [rpc.RemoteObject](../../apis-ipc-kit/arkts-apis/arkts-ipc-rpc-remoteobject-c.md) | Returns the proxy of the Service ability. |
 
 ## onDisconnect
 

@@ -14,4 +14,4 @@ declare type UIMaterial = import('../api/@ohos.arkui.uiMaterial').uiMaterial
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-**属性类型：** import('../api/@ohos.arkui.uiMaterial').uiMaterial
+**类型：** import('../api/@ohos.arkui.uiMaterial').uiMaterial

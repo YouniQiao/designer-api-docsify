@@ -26,7 +26,7 @@ function setImage(source: string | image.PixelMap, wallpaperType: WallpaperType,
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| source | string \| image.PixelMap | 是 | JPEG或PNG文件的Uri路径，或者PNG格式文件的位图。 |
+| source | string \| [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | 是 | JPEG或PNG文件的Uri路径，或者PNG格式文件的位图。 |
 | wallpaperType | [WallpaperType](arkts-basicservices-wallpaper-wallpapertype-e.md) | 是 | 壁纸类型。 |
 | callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当设置壁纸成功，err为undefined，否则为错误对象。 |
 
@@ -96,7 +96,7 @@ function setImage(source: string | image.PixelMap, wallpaperType: WallpaperType)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| source | string \| image.PixelMap | 是 | JPEG或PNG文件的Uri路径，或者PNG格式文件的位图。 |
+| source | string \| [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | 是 | JPEG或PNG文件的Uri路径，或者PNG格式文件的位图。 |
 | wallpaperType | [WallpaperType](arkts-basicservices-wallpaper-wallpapertype-e.md) | 是 | 壁纸类型。 |
 
 **返回值：**

@@ -14,4 +14,4 @@ Defines the custom group notification information.
 
 **System API:** This is a system API.
 
-**Property type:** _GroupInfo
+**Type:** _GroupInfo

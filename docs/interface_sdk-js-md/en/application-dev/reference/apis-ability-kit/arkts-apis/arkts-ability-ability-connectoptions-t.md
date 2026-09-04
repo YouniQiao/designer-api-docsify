@@ -12,4 +12,4 @@ Defines the level-2 module ConnectOptions.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
-**Property type:** _ConnectOptions
+**Type:** _ConnectOptions

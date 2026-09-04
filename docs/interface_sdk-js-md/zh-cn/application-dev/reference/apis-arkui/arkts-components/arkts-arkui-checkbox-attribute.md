@@ -269,7 +269,7 @@ shape(value: CheckBoxShape)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [CheckBoxShape](../arkts-apis/arkts-arkui-checkboxshape-e.md) | 是 | Checkbox组件形状，包括圆形和圆角方形。默认值：CheckBoxShape.CIRCLE |
+| value | [CheckBoxShape](../arkts-apis/arkts-arkui-checkboxshape-e.md) | 是 | [Checkbox组件形状，包括圆形和圆角方形。默认值：CheckBoxShape.CIRCLE](arkts-arkui-particleemittershape-e.md) |
 
 ## shape
 

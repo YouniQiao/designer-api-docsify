@@ -16,4 +16,4 @@ Contains basic Ability information, which uniquely identifies a launcher StatusC
 
 **System API:** This is a system API.
 
-**Property type:** _BundleStatusCallback
+**Type:** _BundleStatusCallback

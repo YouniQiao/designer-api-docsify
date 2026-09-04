@@ -100,6 +100,7 @@ It is incorrect to use AppStorage to read environment variables without calling 
 **Examples**
 
 For details about how to use envProp, see [Accessing Environment Parameters from the UI](../../../ui/state-management/arkts-environment.md#accessing-environment-parameters-from-the-ui).
+- simpleType:
 
 ## EnvProps
 

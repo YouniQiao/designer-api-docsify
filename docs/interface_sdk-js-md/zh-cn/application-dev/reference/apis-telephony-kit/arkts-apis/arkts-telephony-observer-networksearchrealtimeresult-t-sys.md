@@ -12,4 +12,4 @@ Callback when the network state corresponding to the default sim card is updated
 
 **系统接口：** 此接口为系统接口。
 
-**属性类型：** radio.NetworkSearchRealTimeResult
+**类型：** [radio.NetworkSearchRealTimeResult](arkts-telephony-radio-networksearchrealtimeresult-i-sys.md)

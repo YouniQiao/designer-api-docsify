@@ -351,6 +351,7 @@ Bind tabs to nested scrollable container components to automatically hide tab ba
 **示例**
 
 参考[bindTabsToScrollable](#bindtabstoscrollable)接口示例。
+- simpleType:
 
 ## bindTabsToScrollable
 
@@ -844,7 +845,7 @@ static createUIContextWithoutWindow(context: common.UIAbilityContext | common.Ex
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | common.UIAbilityContext \| common.ExtensionContext | 是 | [UIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md)或[ExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-extensionability-extensionability-c.md)所对应的上下文环境。 |
+| context | [common.UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-common-uiabilitycontext-t.md) \| [common.ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-common-extensioncontext-t.md) | 是 | [UIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md)或[ExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-extensionability-extensionability-c.md)所对应的上下文环境。 |
 
 **返回值：**
 
@@ -1368,6 +1369,7 @@ getComponentSnapshot(): ComponentSnapshot
 **示例**
 
 完整示例请参考[ComponentSnapshot](arkts-apis-uicontext-componentsnapshot.md)中的示例。
+- simpleType:
 
 ## getComponentUtils
 
@@ -1394,6 +1396,7 @@ get object ComponentUtils.
 **示例**
 
 完整示例请参考示例1（获取ComponentUtils对象）。
+- simpleType:
 
 ## getContextMenuController
 
@@ -1442,6 +1445,7 @@ Get object cursor controller.
 **示例**
 
 完整示例请参考[CursorController](arkts-apis-uicontext-cursorcontroller.md)中的示例。
+- simpleType:
 
 ## getDialogPresenter
 
@@ -1468,6 +1472,7 @@ getDialogPresenter(): DialogPresenter
 **示例**
 
 完整示例请参考[DialogPresenter](arkts-apis-uicontext-dialogpresenter.md)中的示例。
+- simpleType:
 
 ## getDragController
 
@@ -1494,6 +1499,7 @@ Get DragController.
 **示例**
 
 完整示例请参考[DragController](./arkts-apis-uicontext-dragcontroller.md)中的示例。
+- simpleType:
 
 ## getFilteredInspectorTree
 
@@ -1701,6 +1707,7 @@ getFocusController(): FocusController
 **示例**
 
 完整示例请参考[FocusController](arkts-apis-uicontext-focuscontroller.md)中的示例。
+- simpleType:
 
 ## getFont
 
@@ -1727,6 +1734,7 @@ getFont(): Font
 **示例**
 
 完整示例请参考[Font](arkts-apis-uicontext-font.md)中的示例。
+- simpleType:
 
 ## getFrameNodeById
 
@@ -1759,6 +1767,7 @@ getFrameNodeById(id: string): FrameNode | null
 **示例**
 
 完整示例请参考获取根节点示例。
+- simpleType:
 
 ## getFrameNodeByUniqueId
 
@@ -2077,6 +2086,7 @@ getMagnifier(): Magnifier
 **示例**
 
 参考[Magnifier](arkts-apis-uicontext-magnifier.md)的bind接口示例。
+- simpleType:
 
 ## getMaxFontScale
 
@@ -2143,6 +2153,7 @@ getMeasureUtils(): MeasureUtils
 **示例**
 
 完整示例请参考[MeasureUtils](arkts-apis-uicontext-measureutils.md)中的示例。
+- simpleType:
 
 ## getMediaQuery
 
@@ -2169,6 +2180,7 @@ get object mediaQuery.
 **示例**
 
 完整示例请参考mediaquery示例。
+- simpleType:
 
 ## getNavigationInfoByUniqueId
 
@@ -2196,11 +2208,12 @@ Get navigation information of the frameNode with uniqueId.
 
 | 类型 | 说明 |
 | --- | --- |
-| observer.NavigationInfo \| undefined | The navigation information of the frameNode with the target uniqueId, or undefined if the frameNode is not existed or does not have navigation information. |
+| [observer.NavigationInfo](arkts-arkui-uiobserver-navigationinfo-i.md) \| undefined | The navigation information of the frameNode with the target uniqueId, or undefined if the frameNode is not existed or does not have navigation information. |
 
 **示例**
 
 请参考[getPageInfoByUniqueId](#getpageinfobyuniqueid)的示例。
+- simpleType:
 
 ## getOverlayManager
 
@@ -2227,6 +2240,7 @@ Obtains the OverlayManager object.
 **示例**
 
 完整示例请参考[OverlayManager](arkts-apis-uicontext-overlaymanager.md)中的示例。
+- simpleType:
 
 ## getOverlayManagerOptions
 
@@ -2253,6 +2267,7 @@ Get object OverlayManagerOptions.
 **示例**
 
 完整示例请参考[OverlayManager](arkts-apis-uicontext-overlaymanager.md)中的示例。
+- simpleType:
 
 ## getPageInfoByUniqueId
 
@@ -2546,6 +2561,7 @@ get object PromptAction.
 **示例**
 
 完整示例请参考[PromptAction](arkts-apis-uicontext-promptaction.md)中的示例。
+- simpleType:
 
 ## getRouter
 
@@ -2572,6 +2588,7 @@ Obtains a Router object.
 **示例**
 
 完整示例请参考pushUrl。
+- simpleType:
 
 ## getSharedLocalStorage
 
@@ -2663,6 +2680,7 @@ getSmartGestureController(): SmartGestureController
 **示例**
 
 参考智慧手势控制器示例1（启用智慧手势并自定义动作处理）。
+- simpleType:
 
 ## getTextMenuController
 
@@ -2689,6 +2707,7 @@ getTextMenuController(): TextMenuController
 **示例**
 
 参考[TextMenuController](arkts-apis-uicontext-textmenucontroller.md)接口示例。
+- simpleType:
 
 ## getUIInspector
 
@@ -2715,6 +2734,7 @@ getUIInspector(): UIInspector
 **示例**
 
 完整示例请参考[UIInspector](./arkts-apis-uicontext-uiinspector.md)中的示例。
+- simpleType:
 
 ## getUIObserver
 
@@ -4309,6 +4329,7 @@ Init OverlayManager.
 **示例**
 
 完整示例请参考[OverlayManager](arkts-apis-uicontext-overlaymanager.md)中的示例。
+- simpleType:
 
 ## setPixelRoundMode
 
@@ -4862,6 +4883,7 @@ Unbind tabs from nested scrollable container components.
 **示例**
 
 参考[bindTabsToScrollable](#bindtabstoscrollable)接口示例。
+- simpleType:
 
 ## unbindTabsFromScrollable
 
@@ -4889,6 +4911,7 @@ Unbind tabs from scrollable container component.
 **示例**
 
 参考[bindTabsToScrollable](#bindtabstoscrollable)接口示例。
+- simpleType:
 
 ## updateBindSheet
 

@@ -4,6 +4,8 @@ Enumerates the errors codes available for failures in launching an atomic servic
 
 **Since:** 20
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## FAILURE_CODE_SYSTEM_MALFUNCTION

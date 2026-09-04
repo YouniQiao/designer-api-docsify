@@ -35,7 +35,7 @@ AppearSymbolEffect的构造函数，出现动效。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| scope | [EffectScope](arkts-arkui-effectscope-e.md) | 否 | 动效范围。具体枚举值及说明请参考EffectScope枚举说明。默认值：EffectScope.LAYER |
+| scope | [EffectScope](arkts-arkui-effectscope-e.md) | 否 | [动效范围。具体枚举值及说明请参考EffectScope枚举说明。默认值：EffectScope.LAYER](arkts-arkui-effectscope-e.md) |
 
 ## constructor
 
@@ -59,8 +59,8 @@ ReplaceSymbolEffect的构造函数，替换动效。支持指定具体的替换�
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| scope | [EffectScope](arkts-arkui-effectscope-e.md) | 否 | 动效范围。默认值：EffectScope.LAYER |
-| replaceType | [ReplaceEffectType](arkts-arkui-replaceeffecttype-e.md) | 否 | 替换动效类型。默认值：ReplaceEffectType.SEQUENTIAL |
+| scope | [EffectScope](arkts-arkui-effectscope-e.md) | 否 | [动效范围。默认值：EffectScope.LAYER](arkts-arkui-effectscope-e.md) |
+| replaceType | [ReplaceEffectType](arkts-arkui-replaceeffecttype-e.md) | 否 | [替换动效类型。默认值：ReplaceEffectType.SEQUENTIAL](arkts-arkui-replaceeffecttype-e.md) |
 
 ## replaceType
 

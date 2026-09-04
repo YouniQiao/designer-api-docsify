@@ -14,4 +14,4 @@ The context of live form extension. It allows access to liveFormExtension-specif
 
 **系统能力：** SystemCapability.Ability.Form
 
-**属性类型：** _LiveFormExtensionContext.default
+**类型：** _LiveFormExtensionContext.default

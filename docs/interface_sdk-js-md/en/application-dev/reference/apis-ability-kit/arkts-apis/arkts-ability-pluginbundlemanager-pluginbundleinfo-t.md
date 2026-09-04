@@ -12,4 +12,4 @@ Indicates the information about a plugin.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
-**Property type:** _PluginBundleInfo
+**Type:** _PluginBundleInfo

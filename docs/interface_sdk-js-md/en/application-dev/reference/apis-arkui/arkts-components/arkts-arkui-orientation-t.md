@@ -14,4 +14,4 @@ Defines an instance object of the Orientation type.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** import('../api/@ohos.window').default.Orientation
+**Type:** import('../api/@ohos.window').default.Orientation

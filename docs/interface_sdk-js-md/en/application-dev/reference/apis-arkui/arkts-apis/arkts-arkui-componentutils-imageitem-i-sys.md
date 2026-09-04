@@ -24,7 +24,7 @@ image: image.PixelMap
 
 Image Decoding Information.
 
-**Type:** image.PixelMap
+**Type:** [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)
 
 **Since:** 23
 
@@ -42,7 +42,7 @@ rect: common2D.Rect
 
 Information about the position and size of the box which displays the image.
 
-**Type:** common2D.Rect
+**Type:** [common2D.Rect](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-common2d-rect-i.md)
 
 **Since:** 23
 

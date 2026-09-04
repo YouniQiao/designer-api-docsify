@@ -12,4 +12,4 @@ Defines the preinstalled application information.
 
 **System API:** This is a system API.
 
-**Property type:** _PreinstalledApplicationInfo
+**Type:** _PreinstalledApplicationInfo

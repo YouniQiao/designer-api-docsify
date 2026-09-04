@@ -27,7 +27,7 @@ Send image data.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | sessionId | number | Yes | Ability connection Session id. |
-| image | image.PixelMap | Yes | image data to be sent. |
+| image | [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | Yes | image data to be sent. |
 | quality | number | No | image compression quality, range 0~100, default 30. |
 
 **Return value:**

@@ -6,6 +6,8 @@ The following table lists the common uniform data types.
 
 **Since:** 10
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## ENTITY

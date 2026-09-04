@@ -20,7 +20,7 @@ appWindow?: window.Window
 
 应用窗口对象。用于以模应用弹窗方式显示身份认证对话框，适用于需要通过窗口对象控制认证对话框显示的场景。如果已提供此参数，则uiContext将被忽略；若不传入此参数，则认证界面的显示由uiContext控制。
 
-**类型：** window.Window
+**类型：** [window.Window](../../apis-arkui/arkts-apis/arkts-arkui-window-window-i.md)
 
 **起始版本：** 26.0.0
 

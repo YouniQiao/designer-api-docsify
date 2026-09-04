@@ -14,4 +14,4 @@ Defines the callback invoked after synchronization starts. It is used as an inpu
 
 **System API:** This is a system API.
 
-**Property type:** _MissionCallback
+**Type:** _MissionCallback

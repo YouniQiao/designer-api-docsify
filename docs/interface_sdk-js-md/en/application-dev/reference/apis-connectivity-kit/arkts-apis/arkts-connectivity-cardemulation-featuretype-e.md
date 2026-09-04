@@ -13,6 +13,8 @@ Enumerates the NFC card emulation types.
 
 **Substitutes:** [hasHceCapability](arkts-connectivity-cardemulation-hashcecapability-f.md)
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.Communication.NFC.CardEmulation
 
 ## HCE

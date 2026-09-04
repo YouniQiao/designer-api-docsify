@@ -14,4 +14,4 @@ declare type FractionStop = [ number, number ]
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-**属性类型：** [ number, number ]
+**类型：** [ number, number ]

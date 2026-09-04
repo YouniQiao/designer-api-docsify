@@ -14,4 +14,4 @@ Defines the details for triggering a geofence.
 
 **System API:** This is a system API.
 
-**Property type:** _Trigger
+**Type:** _Trigger

@@ -476,7 +476,7 @@ Sets an icon for this UIAbility in the mission. The maximum size of the icon is 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| icon | image.PixelMap | Yes | Icon of the UIAbility to set. |
+| icon | [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | Yes | Icon of the UIAbility to set. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the API call is successful, **code** in **err** is **0**. Otherwise, **err** contains the corresponding error code and error information. |
 
 **Error codes:**
@@ -544,7 +544,7 @@ Sets an icon for this UIAbility in the mission. The maximum size of the icon is 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| icon | image.PixelMap | Yes | Icon of the UIAbility to set. |
+| icon | [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | Yes | Icon of the UIAbility to set. |
 
 **Return value:**
 

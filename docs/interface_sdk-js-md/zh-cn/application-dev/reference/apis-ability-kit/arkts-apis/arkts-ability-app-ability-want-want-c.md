@@ -259,6 +259,7 @@ export default class EntryAbility extends UIAbility {
 ```
 
 目前支持的数据类型有：字符串、数字、布尔、对象、数组和文件描述符等。
+字符串（String）
 
 ```TypeScript
 import { UIAbility, Want } from '@kit.AbilityKit';

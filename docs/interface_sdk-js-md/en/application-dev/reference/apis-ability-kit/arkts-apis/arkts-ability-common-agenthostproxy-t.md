@@ -14,4 +14,4 @@ The AgentHostProxy is a proxy object for the client connected to the Agent, thro
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
-**Property type:** _AgentHostProxy
+**Type:** _AgentHostProxy

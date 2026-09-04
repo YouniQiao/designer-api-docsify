@@ -12,4 +12,4 @@ export type PreloadItem = _HapModuleInfo.PreloadItem
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
-**属性类型：** _HapModuleInfo.PreloadItem
+**类型：** [_HapModuleInfo.PreloadItem](arkts-ability-hapmoduleinfo-preloaditem-i.md)

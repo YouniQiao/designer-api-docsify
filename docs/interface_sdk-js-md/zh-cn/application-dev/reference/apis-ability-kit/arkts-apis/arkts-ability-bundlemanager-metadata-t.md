@@ -12,4 +12,4 @@ export type Metadata = _Metadata
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
-**属性类型：** _Metadata
+**类型：** _Metadata

@@ -1551,7 +1551,7 @@ A single string field supports a maximum of 8 MB data. If the data exceeds 8 MB,
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | table | string | Yes | Name of the target table. |
-| values | ValuesBucket \| sendableRelationalStore.ValuesBucket | Yes | Row of data to insert. |
+| values | ValuesBucket \| [sendableRelationalStore.ValuesBucket](arkts-arkdata-sendablerelationalstore-valuesbucket-t.md) | Yes | Row of data to insert. |
 | conflict | ConflictResolution | No | Resolution used to resolve the conflict. Default value: **relationalStore.ConflictResolution.ON_CONFLICT_NONE**. |
 
 **Return value:**

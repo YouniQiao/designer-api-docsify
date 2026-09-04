@@ -4,6 +4,8 @@ Enumerates the Wi-Fi security types.
 
 **Since:** 12
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## WIFI_SEC_TYPE_INVALID

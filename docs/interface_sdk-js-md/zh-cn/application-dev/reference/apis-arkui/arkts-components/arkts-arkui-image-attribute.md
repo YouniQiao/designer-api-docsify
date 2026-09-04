@@ -254,7 +254,7 @@ copyOption(value: CopyOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | CopyOptions | 是 | 图片是否可复制。默认值：CopyOptions.None |
+| value | CopyOptions | 是 | [图片是否可复制。默认值：CopyOptions.None](arkts-arkui-imageinterpolation-e.md) |
 
 ## draggable
 
@@ -298,7 +298,7 @@ dynamicRangeMode(value: DynamicRangeMode)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [DynamicRangeMode](arkts-arkui-dynamicrangemode-e.md) | 是 | 图像显示的动态范围。默认值：DynamicRangeMode.STANDARD |
+| value | [DynamicRangeMode](arkts-arkui-dynamicrangemode-e.md) | 是 | [图像显示的动态范围。默认值：DynamicRangeMode.STANDARD](arkts-arkui-dynamicrangemode-e.md) |
 
 ## enableAnalyzer
 
@@ -582,7 +582,7 @@ objectRepeat(value: ImageRepeat)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ImageRepeat](../arkts-apis/arkts-arkui-imagerepeat-e.md) | 是 | 图片的重复样式。默认值：ImageRepeat.NoRepeat |
+| value | [ImageRepeat](../arkts-apis/arkts-arkui-imagerepeat-e.md) | 是 | [图片的重复样式。默认值：ImageRepeat.NoRepeat](../arkts-apis/arkts-arkui-imagerepeat-e.md) |
 
 ## onComplete
 
@@ -1006,7 +1006,7 @@ renderMode(value: ImageRenderMode)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ImageRenderMode](arkts-arkui-imagerendermode-e.md) | 是 | 图片的渲染模式为原色或黑白。默认值：ImageRenderMode.Original |
+| value | [ImageRenderMode](arkts-arkui-imagerendermode-e.md) | 是 | [图片的渲染模式为原色或黑白。默认值：ImageRenderMode.Original](arkts-arkui-imagerendermode-e.md) |
 
 ## resizable
 

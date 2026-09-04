@@ -65,6 +65,7 @@ Import Wrapped Key As User.
 **示例**
 
 以下代码示例接口调用的前置条件同上文generateKeyItemAsUser的前置条件。
+注意：下文密码学相关的变量（如initializationVector、associatedData、nonce）赋值，均为参考样例，不能直接适用于业务功能逻辑。开发者需要根据自身场景使用合适的初始值。
 
 ```TypeScript
 /* 以ECDH协商安全导入AES密钥为例 */

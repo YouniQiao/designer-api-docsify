@@ -12,4 +12,4 @@ type NetAddress = connection.NetAddress
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
-**属性类型：** connection.NetAddress
+**类型：** [connection.NetAddress](arkts-network-connection-netaddress-i.md)

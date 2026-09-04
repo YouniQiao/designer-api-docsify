@@ -28,7 +28,7 @@ colorMode?: ConfigurationConstant.ColorMode
 - COLOR_MODE_LIGHT：浅色模式  
 - COLOR_MODE_DARK：深色模式
 
-**类型：** ConfigurationConstant.ColorMode
+**类型：** [ConfigurationConstant.ColorMode](arkts-ability-configurationconstant-colormode-e.md)
 
 **起始版本：** 9
 
@@ -52,7 +52,7 @@ direction?: ConfigurationConstant.Direction
 
 该环境变量支持在[UIAbility](arkts-ability-app-ability-uiability-uiability-c.md)组件和[UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md)组件中订阅，不支持在[ApplicationContext](arkts-ability-applicationcontext-c.md)和[AbilityStage](arkts-ability-app-ability-abilitystage-abilitystage-c.md)组件容器中订阅。
 
-**类型：** ConfigurationConstant.Direction
+**类型：** [ConfigurationConstant.Direction](arkts-ability-configurationconstant-direction-e.md)
 
 **起始版本：** 9
 
@@ -174,7 +174,7 @@ locale?: Intl.Locale
 
 应用会根据当前的区域设置自动调整其行为，以符合用户的本地化需求。该属性可以通过设置系统语言、设置系统地区和设置应用偏好语言等方式设置。
 
-**类型：** Intl.Locale
+**类型：** [Intl.Locale](../../apis-localization-kit/arkts-apis/arkts-localization-intl-locale-c.md)
 
 **起始版本：** 20
 
@@ -236,7 +236,7 @@ screenDensity?: ConfigurationConstant.ScreenDensity
 
 该环境变量支持在[UIAbility](arkts-ability-app-ability-uiability-uiability-c.md)组件和[UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md)组件中订阅，不支持在[ApplicationContext](arkts-ability-applicationcontext-c.md)和[AbilityStage](arkts-ability-app-ability-abilitystage-abilitystage-c.md)组件容器中订阅。
 
-**类型：** ConfigurationConstant.ScreenDensity
+**类型：** [ConfigurationConstant.ScreenDensity](arkts-ability-configurationconstant-screendensity-e.md)
 
 **起始版本：** 9
 

@@ -4,6 +4,8 @@ Defines the input method immersive mode in the WebView, which controls the displ
 
 **Since:** 26.0.0
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## NONE_IMMERSIVE

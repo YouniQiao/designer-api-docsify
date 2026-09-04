@@ -14,4 +14,4 @@ export type SaveRequest = _AutoFillRequest.SaveRequest
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
-**属性类型：** _AutoFillRequest.SaveRequest
+**类型：** [_AutoFillRequest.SaveRequest](arkts-ability-autofillrequest-saverequest-i-sys.md)

@@ -47,3 +47,4 @@ Alignment position of the text following the tab character. The value is a float
 **Examples**
 
 alignment is CENTER, location is 200, and the text is "12/t345".
+- simpleType:

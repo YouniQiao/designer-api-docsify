@@ -59,7 +59,7 @@ Subscribes to the interactive widget animation request event. This API uses an a
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'formOverflow' | Yes | Event callback. The supported event is **'formOverflow'**, indicating the interactive widget animation request. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;formInfo.OverflowRequest&gt; | Yes | Callback used by the widget host to process the animation request. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[formInfo.OverflowRequest](arkts-form-forminfo-overflowrequest-i-sys.md)&gt; | Yes | Callback used by the widget host to process the animation request. |
 
 **Error codes:**
 
@@ -103,7 +103,7 @@ Subscribes to the event of switching the interactive widget state. An interactiv
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'changeSceneAnimationState' | Yes | Event type. The event **'changeSceneAnimationState'** is triggered when the interactive widget state is switched. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;formInfo.ChangeSceneAnimationStateRequest&gt; | Yes | Callback function, which is used by the widget host to process the state switching request. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[formInfo.ChangeSceneAnimationStateRequest](arkts-form-forminfo-changesceneanimationstaterequest-i-sys.md)&gt; | Yes | Callback function, which is used by the widget host to process the state switching request. |
 
 **Error codes:**
 
@@ -146,7 +146,7 @@ Subscribes to the event of requesting widget position and dimension. This API us
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'getFormRect' | Yes | Event callback type. The supported event is **'getFormRect'**, indicating requesting widget position and dimension. |
-| callback | formInfo.GetFormRectInfoCallback | Yes | Callback function used by the widget host to process the request and return the position and dimension of the widget relative to the upper-left corner of the screen. The unit is vp. |
+| callback | [formInfo.GetFormRectInfoCallback](arkts-form-forminfo-getformrectinfocallback-t-sys.md) | Yes | Callback function used by the widget host to process the request and return the position and dimension of the widget relative to the upper-left corner of the screen. The unit is vp. |
 
 **Error codes:**
 
@@ -199,7 +199,7 @@ Listens to the event of get live form status.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'getLiveFormStatus' | Yes | Indicates event type. |
-| callback | formInfo.GetLiveFormStatusCallback | Yes | The callback of get live form status. |
+| callback | [formInfo.GetLiveFormStatusCallback](arkts-form-forminfo-getliveformstatuscallback-t-sys.md) | Yes | The callback of get live form status. |
 
 **Error codes:**
 

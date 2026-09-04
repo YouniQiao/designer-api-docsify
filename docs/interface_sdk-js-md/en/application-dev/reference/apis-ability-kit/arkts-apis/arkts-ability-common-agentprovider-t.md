@@ -14,4 +14,4 @@ The Provider in an AgentCard refers to the organization or platform that issues 
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
-**Property type:** _AgentProvider
+**Type:** _AgentProvider

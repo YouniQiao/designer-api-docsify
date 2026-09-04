@@ -19,3 +19,4 @@ type MouseInfoCallback = (event: NativeEmbedMouseInfo) => void
 **示例**
 
 完整示例代码参考[onNativeEmbedMouseEvent](./arkts-basic-components-web-events.md#onnativeembedmouseevent)。
+- simpleType:

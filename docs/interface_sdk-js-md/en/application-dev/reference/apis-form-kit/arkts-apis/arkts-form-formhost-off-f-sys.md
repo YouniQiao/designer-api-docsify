@@ -59,7 +59,7 @@ Unsubscribes from the interactive widget animation request event. This API uses 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'formOverflow' | Yes | Event callback. The supported event is **'formOverflow'**, indicating the interactive widget animation request. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;formInfo.OverflowRequest&gt; | No | Callback function, which corresponds to the subscribed interactive widget animation request. By default, all registered interactive widget animation request events are deregistered. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[formInfo.OverflowRequest](arkts-form-forminfo-overflowrequest-i-sys.md)&gt; | No | Callback function, which corresponds to the subscribed interactive widget animation request. By default, all registered interactive widget animation request events are deregistered. |
 
 **Error codes:**
 
@@ -103,7 +103,7 @@ Unsubscribes from the event of switching the interactive widget state. An intera
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'changeSceneAnimationState' | Yes | Event type. The event **'changeSceneAnimationState'** is triggered when the interactive widget state is switched. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;formInfo.ChangeSceneAnimationStateRequest&gt; | No | Callback function, which corresponds to the request for switching the state of a subscribed interactive widget. By default, all registered interactive widget state switching events are deregistered. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[formInfo.ChangeSceneAnimationStateRequest](arkts-form-forminfo-changesceneanimationstaterequest-i-sys.md)&gt; | No | Callback function, which corresponds to the request for switching the state of a subscribed interactive widget. By default, all registered interactive widget state switching events are deregistered. |
 
 **Error codes:**
 
@@ -146,7 +146,7 @@ Unsubscribes from the event of requesting widget position and dimension. This AP
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'getFormRect' | Yes | Event callback type. The supported event is **'getFormRect'**, indicating requesting widget position and dimension. |
-| callback | formInfo.GetFormRectInfoCallback | No | Callback function, corresponding to the subscribed widget position and dimension request. By default, all registered widget position and dimension request event callbacks are deregistered. |
+| callback | [formInfo.GetFormRectInfoCallback](arkts-form-forminfo-getformrectinfocallback-t-sys.md) | No | Callback function, corresponding to the subscribed widget position and dimension request. By default, all registered widget position and dimension request event callbacks are deregistered. |
 
 **Error codes:**
 
@@ -188,7 +188,7 @@ Cancels Listening to the event of get live form status.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'getLiveFormStatus' | Yes | Indicates event type. |
-| callback | formInfo.GetLiveFormStatusCallback | No | The callback of get live form status. |
+| callback | [formInfo.GetLiveFormStatusCallback](arkts-form-forminfo-getliveformstatuscallback-t-sys.md) | No | The callback of get live form status. |
 
 **Error codes:**
 

@@ -18,7 +18,7 @@ import { infraredEmitter } from '@kit.InputKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [getInfraredFrequencies](arkts-input-infraredemitter-getinfraredfrequencies-f.md) | 查询设备支持的红外信号的频率范围。建议先使用[hasIrEmitter]接口查询设备是否支持红外发射器。 |
+| [getInfraredFrequencies](arkts-input-infraredemitter-getinfraredfrequencies-f.md) | 查询设备支持的红外信号的频率范围。建议先使用[hasIrEmitter](arkts-input-infraredemitter-hasiremitter-f.md)接口查询设备是否支持红外发射器。 |
 | [hasIrEmitter](arkts-input-infraredemitter-hasiremitter-f.md) | 查询设备是否配备红外发射器。使用Promise异步回调。 |
 | [transmitInfrared](arkts-input-infraredemitter-transmitinfrared-f.md) | 产生特定频率和特定电平大小的红外信号。 |
 

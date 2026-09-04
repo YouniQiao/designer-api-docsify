@@ -14,4 +14,4 @@ Defines a gradient blur stop.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** [ number, number ]
+**Type:** [ number, number ]

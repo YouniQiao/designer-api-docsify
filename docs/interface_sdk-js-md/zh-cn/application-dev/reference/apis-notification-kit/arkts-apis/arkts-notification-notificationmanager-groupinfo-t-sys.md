@@ -14,4 +14,4 @@ export type GroupInfo = _GroupInfo
 
 **系统接口：** 此接口为系统接口。
 
-**属性类型：** _GroupInfo
+**类型：** _GroupInfo

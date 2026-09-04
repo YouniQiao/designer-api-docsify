@@ -12,4 +12,4 @@ WorkSchedulerExtensionContext是WorkSchedulerExtensionAbility的上下文环境�
 
 **系统能力：** SystemCapability.ResourceSchedule.WorkScheduler
 
-**属性类型：** _WorkSchedulerExtensionContext
+**类型：** _WorkSchedulerExtensionContext

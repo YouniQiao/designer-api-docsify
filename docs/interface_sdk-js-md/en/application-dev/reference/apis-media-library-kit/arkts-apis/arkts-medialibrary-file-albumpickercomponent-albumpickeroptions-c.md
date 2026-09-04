@@ -20,7 +20,7 @@ filterType?: photoAccessHelper.PhotoViewMIMETypes
 
 Type of the filter. You can use it to display images, videos, or both. If this parameter is not specified, images and videos are displayed in a specific album.
 
-**Type:** photoAccessHelper.PhotoViewMIMETypes
+**Type:** [photoAccessHelper.PhotoViewMIMETypes](arkts-medialibrary-photoaccesshelper-photoviewmimetypes-e.md)
 
 **Since:** 13
 

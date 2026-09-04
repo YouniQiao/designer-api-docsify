@@ -12,4 +12,4 @@ Describes the bundle switch state for priority notification.
 
 **System API:** This is a system API.
 
-**Property type:** _EnabledPriorityNotificationByBundleCallbackData
+**Type:** _EnabledPriorityNotificationByBundleCallbackData

@@ -25,7 +25,7 @@ Exports contacts as a vcard file (VCF). This API uses an asynchronous callback t
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | context | Context | Yes | Application context. |
-| predicates | dataSharePredicates.DataSharePredicates | Yes | Query statement. |
+| predicates | [dataSharePredicates.DataSharePredicates](../../apis-arkdata/arkts-apis/arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | Yes | Query statement. |
 | options | [VCardBuilderOptions](arkts-telephony-vcard-vcardbuilderoptions-i.md) | Yes | VCard version and encoding type. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to Address of the generated vcard file (VCF). |
 
@@ -84,7 +84,7 @@ Exports contacts as a vcard file (VCF). This API uses a promise to return the re
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | context | Context | Yes | Application context. |
-| predicates | dataSharePredicates.DataSharePredicates | Yes | Query statement. |
+| predicates | [dataSharePredicates.DataSharePredicates](../../apis-arkdata/arkts-apis/arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | Yes | Query statement. |
 | options | [VCardBuilderOptions](arkts-telephony-vcard-vcardbuilderoptions-i.md) | No | VCard version and encoding type. |
 
 **Return value:**
@@ -150,7 +150,7 @@ Exports contacts as a vcard file (VCF). This API uses an asynchronous callback t
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | context | Context | Yes | Application context. |
-| predicates | dataSharePredicates.DataSharePredicates | Yes | Query statement. |
+| predicates | [dataSharePredicates.DataSharePredicates](../../apis-arkdata/arkts-apis/arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | Yes | Query statement. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to Address of the generated vcard file (VCF). |
 
 **Error codes:**

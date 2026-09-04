@@ -77,6 +77,8 @@ Creates a **WaterFlow** component.
 ## Examples
 
 This example demonstrates the basic usage of the WaterFlow component, including data loading, attribute setting, and event callbacks.
+WaterFlowDataSource implements the [IDataSource](ts-rendering-control-lazyforeach.md#idatasource) data source interface of [LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md), and is used to provide child components to WaterFlow through LazyForEach.
+When a field that affects the width and height of FlowItem in the [LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md) data changes, you need to notify [DataChangeListener](ts-rendering-control-lazyforeach.md#datachangelistener) after modifying the data, for example, by calling [onDataChange](ts-rendering-control-lazyforeach.md#ondatachange8) or [onDataReloaded](ts-rendering-control-lazyforeach.md#ondatareloaded). If only the data content is modified without triggering a data change notification, LazyForEach may not refresh the corresponding FlowItem.
 
 ```TypeScript
 // WaterFlowDataSource.ets
@@ -364,6 +366,7 @@ struct WaterFlowDemo {
 ```
 
 This example showcases how to implement automatic column count calculation using the auto-fill feature.
+For details about WaterFlowDataSource and the complete code, see [Example 1: Using a Basic WaterFlow Component](#example-1-using-a-basic-waterflow-component).
 
 ```TypeScript
 // Index.ets
@@ -430,6 +433,8 @@ struct WaterFlowDemo {
 ```
 
 This example demonstrates the initialization of groups and the different effects of the splice, update, values, and length APIs.
+For usage with state management V2, see [WaterFlow and makeObserved](../../../ui/state-management/arkts-v1-v2-migration-inner-object.md#scrollable-component).
+For details about WaterFlowDataSource and the complete code, see [Example 1: Using a Basic WaterFlow Component](#example-1-using-a-basic-waterflow-component).
 
 ```TypeScript
 // Index.ets
@@ -679,6 +684,7 @@ struct WaterFlowDemo {
 ```
 
 This example demonstrates how to use [priorityGesture](ts-gesture-settings.md#prioritygesture) and [PinchGesture](ts-basic-gestures-pinchgesture.md) to implement the feature of using a pinch gesture to change the number of columns in a layout.
+For details about WaterFlowDataSource and the complete code, see [Example 1: Using a Basic WaterFlow Component](#example-1-using-a-basic-waterflow-component).
 
 ```TypeScript
 // Index.ets
@@ -875,6 +881,7 @@ struct WaterFlowDemo {
 ```
 
 This example demonstrates how to enable the edge fading effect for the WaterFlow component using the [fadingEdge](ts-container-scrollable-common.md#fadingedge14) API and set the length of the fading edge using the fadingEdgeLength parameter.
+For details about WaterFlowDataSource and the complete code, see [Example 1: Using a Basic WaterFlow Component](#example-1-using-a-basic-waterflow-component).
 
 ```TypeScript
 // Index.ets
@@ -942,6 +949,7 @@ struct WaterFlowDemo {
 ```
 
 This example uses the [edgeEffect](ts-container-scrollable-common.md#edgeeffect11) API to set the single-side edge effect for the WaterFlow component.
+For details about WaterFlowDataSource and the complete code, see [Example 1: Using a Basic WaterFlow Component](#example-1-using-a-basic-waterflow-component).
 
 ```TypeScript
 // Index.ets
@@ -1009,6 +1017,7 @@ struct WaterFlowDemo {
 ```
 
 In API version 18 and later versions, this example demonstrates how to set the footer component in the WaterFlow component using the footerContent API of [WaterFlowOptions](arkts-arkui-waterflowoptions-i.md). The footer component is updated using the update function of ComponentContent.
+For details about WaterFlowDataSource and the complete code, see [Example 1: Using a Basic WaterFlow Component](#example-1-using-a-basic-waterflow-component).
 
 ```TypeScript
 // Index.ets
@@ -1114,6 +1123,7 @@ struct Index {
 ```
 
 This example demonstrates how to implement the pull-to-refresh function for the data source of the WaterFlow component via [Refresh](ts-container-refresh.md).
+For details about WaterFlowDataSource and the complete code, see [Example 1: Using a Basic WaterFlow Component](#example-1-using-a-basic-waterflow-component).
 
 ```TypeScript
 // Index.ets
@@ -1265,6 +1275,7 @@ struct WaterFlowDemo {
 ```
 
 From API version 22, this example uses the WaterFlow component to obtain the content height.
+For details about WaterFlowDataSource and the complete code, see [Example 1: Using a Basic WaterFlow Component](#example-1-using-a-basic-waterflow-component).
 
 ```TypeScript
 // Index.ets
@@ -1364,6 +1375,7 @@ struct WaterFlowContentSizeDemo {
 ```
 
 This example obtains a [UIWaterFlowEvent](arkts-arkui-uiwaterflowevent-i.md) instance via getEvent('WaterFlow') on a FrameNode and sets scroll event callbacks for a WaterFlow component. This approach is intended for scenarios where the page code cannot be directly modified to use declarative callbacks.
+The UIWaterFlowEvent API is added since API version 19.
 
 ```TypeScript
 import { NodeController, FrameNode, typeNode } from '@kit.ArkUI';

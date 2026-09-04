@@ -12,4 +12,4 @@ The context of vpn extension. It allows access to vpnExtension-specific resource
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
-**属性类型：** _VpnExtensionContext.default
+**类型：** _VpnExtensionContext.default

@@ -36,6 +36,8 @@
 ## 示例
 
 设置局部深浅色模式时，需要添加dark.json资源文件，深浅色模式才会生效。
+resources_dark
+dark.json数据示例：
 
 ```TypeScript
 {

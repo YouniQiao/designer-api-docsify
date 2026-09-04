@@ -383,6 +383,7 @@ export function getAttribute(node: FrameNode, nodeType: 'Swiper'): SwiperAttribu
 **示例**
 
 请参考createNode('Swiper')12+示例。
+- simpleType:
 
 
 ## getAttribute
@@ -486,6 +487,7 @@ function getAttribute(node: FrameNode, nodeType: 'Scroll'): ScrollAttribute | un
 **示例**
 
 完整示例请参考createNode('Scroll')的示例。
+- simpleType:
 
 
 ## getAttribute
@@ -733,6 +735,7 @@ export function getAttribute(node: FrameNode, nodeType: 'List'): ListAttribute |
 **示例**
 
 完整示例请参考createNode('List')的示例。
+- simpleType:
 
 
 ## getAttribute
@@ -767,6 +770,7 @@ export function getAttribute(node: FrameNode, nodeType: 'ListItem'): ListItemAtt
 **示例**
 
 完整示例请参考createNode('List')的示例。
+- simpleType:
 
 
 ## getAttribute
@@ -977,6 +981,7 @@ export function getAttribute(node: FrameNode, nodeType: 'WaterFlow'): WaterFlowA
 **示例**
 
 完整示例请参考createNode('WaterFlow')的示例。
+- simpleType:
 
 
 ## getAttribute
@@ -1011,6 +1016,7 @@ export function getAttribute(node: FrameNode, nodeType: 'FlowItem'): FlowItemAtt
 **示例**
 
 完整示例请参考createNode('WaterFlow')的示例。
+- simpleType:
 
 
 ## getAttribute
@@ -1435,6 +1441,7 @@ export function getAttribute(node: FrameNode, nodeType: 'Grid'): GridAttribute |
 **示例**
 
 完整示例请参考createNode('Grid')的示例。
+- simpleType:
 
 
 ## getAttribute
@@ -1469,3 +1476,4 @@ export function getAttribute(node: FrameNode, nodeType: 'GridItem'): GridItemAtt
 **示例**
 
 完整示例请参考createNode('Grid')的示例。
+- simpleType:

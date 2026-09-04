@@ -12,4 +12,4 @@ type PairingState = nearlinkConstant.PairingState
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
-**属性类型：** nearlinkConstant.PairingState
+**类型：** [nearlinkConstant.PairingState](arkts-connectivity-nearlinkconstant-pairingstate-e.md)

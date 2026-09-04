@@ -12,4 +12,4 @@ Defines the level-2 module AbilityResult.
 
 **System capability:** SystemCapability.Ability.AbilityBase
 
-**Property type:** _AbilityResult
+**Type:** _AbilityResult

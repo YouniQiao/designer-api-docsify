@@ -66,7 +66,7 @@ Obtains the haptics style of the ringtone. This API returns the result synchrono
 
 | Type | Description |
 | --- | --- |
-| systemSoundManager.ToneHapticsFeature | Haptics style. |
+| [systemSoundManager.ToneHapticsFeature](arkts-audio-systemsoundmanager-tonehapticsfeature-e-sys.md) | Haptics style. |
 
 **Error codes:**
 
@@ -107,7 +107,7 @@ Obtains the supported haptics styles. This API uses a promise to return the resu
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;systemSoundManager.ToneHapticsFeature&gt;&gt; | Promise used to return an array of the supported haptics styles. |
+| Promise&lt;Array&lt;[systemSoundManager.ToneHapticsFeature](arkts-audio-systemsoundmanager-tonehapticsfeature-e-sys.md)&gt;&gt; | Promise used to return an array of the supported haptics styles. |
 
 **Error codes:**
 
@@ -486,7 +486,7 @@ Before calling this API, call [getSupportedHapticsFeatures](#getsupportedhaptics
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| hapticsFeature | systemSoundManager.ToneHapticsFeature | Yes | Haptics style. |
+| hapticsFeature | [systemSoundManager.ToneHapticsFeature](arkts-audio-systemsoundmanager-tonehapticsfeature-e-sys.md) | Yes | Haptics style. |
 
 **Error codes:**
 

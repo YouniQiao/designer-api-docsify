@@ -4,6 +4,8 @@ Enumerates the actual display modes of the tab bar under different Tabs containe
 
 **Since:** 26.2.0
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## BOTTOM_TABBAR

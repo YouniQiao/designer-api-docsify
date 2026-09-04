@@ -4,6 +4,8 @@ Enumerates the states of a page during routing. **RouterPageState** is used in [
 
 **Since:** 11
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## ABOUT_TO_APPEAR

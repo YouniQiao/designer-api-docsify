@@ -6,6 +6,8 @@ Page flip mode of Swiper and Tabs on mouse wheel event.
 
 **Since:** 15
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## CONTINUOUS

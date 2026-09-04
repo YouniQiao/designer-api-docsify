@@ -14,4 +14,4 @@ export type Rotation = Vector3
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-**属性类型：** [Vector3](arkts-arkui-graphics-vector3-i.md)
+**类型：** [Vector3](arkts-arkui-graphics-vector3-i.md)

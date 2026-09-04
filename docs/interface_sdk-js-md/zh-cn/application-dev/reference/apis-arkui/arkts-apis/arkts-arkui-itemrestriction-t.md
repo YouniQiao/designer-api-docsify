@@ -18,4 +18,4 @@ declare type ItemRestriction<T> = [T, T, T?, T?, T?]
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-**属性类型：** [T, T, T?, T?, T?]
+**类型：** [T, T, T?, T?, T?]

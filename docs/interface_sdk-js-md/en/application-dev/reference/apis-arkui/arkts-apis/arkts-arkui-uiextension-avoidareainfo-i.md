@@ -20,7 +20,7 @@ area: window.AvoidArea
 
 Avoidance area for the content of the window.
 
-**Type:** window.AvoidArea
+**Type:** [window.AvoidArea](arkts-arkui-window-avoidarea-i.md)
 
 **Since:** 12
 
@@ -38,7 +38,7 @@ type: window.AvoidAreaType
 
 Type of the avoidance area of the window.
 
-**Type:** window.AvoidAreaType
+**Type:** [window.AvoidAreaType](arkts-arkui-window-avoidareatype-e.md)
 
 **Since:** 12
 

@@ -10,7 +10,7 @@ export type AccessibilityExtensionContext = _AccessibilityExtensionContext.defau
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
-**属性类型：** _AccessibilityExtensionContext.default
+**类型：** _AccessibilityExtensionContext.default
 
 **示例**
 

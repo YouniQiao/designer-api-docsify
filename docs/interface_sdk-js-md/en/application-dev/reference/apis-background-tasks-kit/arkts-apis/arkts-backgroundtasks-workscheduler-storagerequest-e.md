@@ -4,6 +4,8 @@ Enumerates the storage status that triggers the deferred task callback.
 
 **Since:** 9
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.ResourceSchedule.WorkScheduler
 
 ## STORAGE_LEVEL_LOW

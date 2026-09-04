@@ -43,7 +43,7 @@ createComponentObserver(id: string): inspector.ComponentObserver
 
 | 类型 | 说明 |
 | --- | --- |
-| inspector.ComponentObserver | 组件回调事件监听句柄，用于注册和取消注册监听回调。 |
+| [inspector.ComponentObserver](arkts-arkui-inspector-componentobserver-i.md) | 组件回调事件监听句柄，用于注册和取消注册监听回调。 |
 
 **示例**
 
@@ -114,7 +114,7 @@ createComponentObserver(id: string | number): inspector.ComponentObserver
 
 | 类型 | 说明 |
 | --- | --- |
-| inspector.ComponentObserver | 组件回调事件监听句柄，用于注册和取消注册监听回调。 |
+| [inspector.ComponentObserver](arkts-arkui-inspector-componentobserver-i.md) | 组件回调事件监听句柄，用于注册和取消注册监听回调。 |
 
 **示例**
 

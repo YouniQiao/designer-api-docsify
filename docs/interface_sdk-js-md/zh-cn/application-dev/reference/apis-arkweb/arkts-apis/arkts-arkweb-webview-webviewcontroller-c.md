@@ -1000,6 +1000,7 @@ closeCamera(): void
 **示例**
 
 完整示例代码参考[startCamera](#startcamera)。
+- simpleType:
 
 ## constructor
 
@@ -1323,6 +1324,7 @@ createWebMessagePorts(isExtentionType?: boolean): Array<WebMessagePort>
 **示例**
 
 完整示例代码参考[onMessageEventExt](./arkts-apis-webview-WebMessagePort.md#onmessageeventext)。
+- simpleType:
 
 ## createWebPrintDocumentAdapter
 
@@ -1346,7 +1348,7 @@ createWebPrintDocumentAdapter(jobName: string): print.PrintDocumentAdapter
 
 | 类型 | 说明 |
 | --- | --- |
-| print.PrintDocumentAdapter | 打印文档的适配器，用于控制打印行为和打印任务，可通过打印服务打印当前网页内容。 |
+| [print.PrintDocumentAdapter](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-print-printdocumentadapter-i.md) | 打印文档的适配器，用于控制打印行为和打印任务，可通过打印服务打印当前网页内容。 |
 
 **错误码：**
 
@@ -2134,6 +2136,7 @@ static getActiveWebEngineVersion(): ArkWebEngineVersion
 **示例**
 
 请参考[setActiveWebEngineVersion](#setactivewebengineversion)。
+- simpleType:
 
 ## getAttachState
 
@@ -2312,7 +2315,7 @@ getCertificate(): Promise<Array<cert.X509Cert>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;cert.X509Cert&gt;&gt; | Promise实例，用于获取当前加载的https网站的X509格式证书数组。 |
+| Promise&lt;Array&lt;[cert.X509Cert](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-cert-x509cert-i.md)&gt;&gt; | Promise实例，用于获取当前加载的https网站的X509格式证书数组。 |
 
 **错误码：**
 
@@ -2477,7 +2480,7 @@ getCertificate(callback: AsyncCallback<Array<cert.X509Cert>>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;cert.X509Cert&gt;&gt; | 是 | 通过AsyncCallback异步返回当前网站的X509格式证书。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[cert.X509Cert](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-cert-x509cert-i.md)&gt;&gt; | 是 | 通过AsyncCallback异步返回当前网站的X509格式证书。 |
 
 **错误码：**
 
@@ -2787,7 +2790,7 @@ getFavicon(): image.PixelMap
 
 | 类型 | 说明 |
 | --- | --- |
-| image.PixelMap | 页面favicon图标的PixelMap对象。 |
+| [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | 页面favicon图标的PixelMap对象。 |
 
 **错误码：**
 
@@ -3871,6 +3874,7 @@ getSubframeErrorPageEnabled(): boolean
 **示例**
 
 完整示例代码参考[setErrorPageEnabled](#seterrorpageenabled)。
+- simpleType:
 
 ## getSurfaceId
 
@@ -4018,6 +4022,7 @@ getUrl(): string
 **示例**
 
 完整示例代码参考[removeProxyOverride](./arkts-apis-webview-ProxyController.md#removeproxyoverride)。
+- simpleType:
 
 ```TypeScript
 // xxx.ets
@@ -4069,6 +4074,7 @@ struct WebComponent {
 ```
 
 完整示例代码参考[constructor](#constructor)。
+- simpleType:
 
 ```TypeScript
 // xxx.ets
@@ -4208,6 +4214,7 @@ static getUserAgentClientHintsEnabled(): boolean
 **示例**
 
 完整示例代码参考[setUserAgentClientHintsEnabled](#setuseragentclienthintsenabled)。
+- simpleType:
 
 ## getUserAgentMetadata
 
@@ -4236,6 +4243,7 @@ getUserAgentMetadata(userAgent: string): UserAgentMetadata
 **示例**
 
 完整示例代码参考[setUserAgentClientHintsEnabled](#setuseragentclienthintsenabled)。
+- simpleType:
 
 ## getWebId
 
@@ -4489,6 +4497,7 @@ injectOfflineResources(resourceMaps: Array<OfflineResourceMap>): void
 **示例**
 
 接口推荐配合动态组件使用，使用离线的Web组件用于将资源注入到内核的内存缓存中，并在适当的时机加载业务用Web组件使用这些资源。下方是代码示例：
+首先，在EntryAbility中将[UIContext](../apis-arkui/arkts-apis-uicontext-uicontext.md)存到[localStorage](../../../ui/state-management/arkts-localstorage.md)中。
 
 ```TypeScript
 // EntryAbility.ets
@@ -5437,6 +5446,7 @@ struct WebComponent {
 ```
 
 加载本地网页，加载本地资源文件有三种方式。
+1.$rawfile方式。
 
 ```TypeScript
 // xxx.ets
@@ -5466,6 +5476,7 @@ struct WebComponent {
 ```
 
 2.resource协议。
+使用  协议前缀可以避免常规  方式在处理带有“#”路由链接时URL会被“#”截断的问题。当URL中包含“#”号时，“#”后面的内容会被视为锚点（fragment）。
 
 ```TypeScript
 // xxx.ets
@@ -5526,6 +5537,7 @@ struct WebComponent {
 ```
 
 3.通过沙箱路径加载本地文件，可以参考[web](../../../web/web-page-loading-with-web-components.md#加载本地页面)加载沙箱路径的示例代码。
+加载的html文件。
 
 ```TypeScript
 <!-- index.html -->
@@ -6233,6 +6245,7 @@ pauseMicrophone(): void
 **示例**
 
 完整示例代码参考[resumeMicrophone](#resumemicrophone)。
+- simpleType:
 
 ## postMessage
 
@@ -6514,6 +6527,7 @@ precompileJavaScript(url: string, script: string | Uint8Array, cacheOptions: Cac
 **示例**
 
 接口推荐配合动态组件使用，使用离线的Web组件用于生成字节码缓存，并在适当的时机加载业务用Web组件使用这些字节码缓存。下方是代码示例：
+首先，在EntryAbility中将[UIContext](../apis-arkui/arkts-apis-uicontext-uicontext.md)存到[localStorage](../../../ui/state-management/arkts-localstorage.md)中。
 
 ```TypeScript
 // EntryAbility.ets
@@ -6634,6 +6648,7 @@ async function readRawFile(path: string, context: UIContext) {
 ```
 
 JavaScript资源的获取方式也可通过[数据请求](../../apis-network-kit/arkts-apis/arkts-net-http.md)的方式获取，但此方法获取到的HTTP响应头非标准HTTP响应头格式，需额外将响应头转换成标准HTTP响应头格式后使用。如通过数据请求获取到的响应头是e-tag，则需要将其转换成E-Tag后使用。
+编写业务用组件代码。
 
 ```TypeScript
 // BusinessWebview.ets
@@ -7559,6 +7574,7 @@ struct WebComponent {
 ```
 
 2.修改EntryAbility.ets。
+获取应用缓存文件路径。
 
 ```TypeScript
 // xxx.ets
@@ -8952,6 +8968,7 @@ struct WebComponent {
 ```
 
 2.修改EntryAbility.ets。
+获取应用缓存文件路径。
 
 ```TypeScript
 // xxx.ets
@@ -9870,6 +9887,7 @@ static setHostIP(hostName: string, address: string, aliveTime: number): void
 **示例**
 
 请参考[clearHostIP](#clearhostip)。
+- simpleType:
 
 ## setHttpDns
 
@@ -10970,6 +10988,7 @@ setUserAgentMetadata(userAgent: string, metaData: UserAgentMetadata): void
 **示例**
 
 完整示例代码参考[setUserAgentClientHintsEnabled](#setuseragentclienthintsenabled)。
+- simpleType:
 
 ## setWebDebuggingAccess
 
@@ -11111,7 +11130,7 @@ static setWebDestroyMode(mode: WebDestroyMode): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mode | [WebDestroyMode](arkts-arkweb-webview-webdestroymode-e.md) | 是 | 设置Web组件的销毁模式。默认值：WebDestroyMode.NORMAL_MODE |
+| mode | [WebDestroyMode](arkts-arkweb-webview-webdestroymode-e.md) | 是 | [设置Web组件的销毁模式。默认值：WebDestroyMode.NORMAL_MODE](arkts-arkweb-webview-webdestroymode-e.md) |
 
 **示例**
 
@@ -11582,6 +11601,7 @@ stopCamera(): void
 **示例**
 
 完整示例代码参考[startCamera](#startcamera)。
+- simpleType:
 
 ## stopMicrophone
 
@@ -11604,6 +11624,7 @@ stopMicrophone(): void
 **示例**
 
 完整示例代码参考[resumeMicrophone](#resumemicrophone)。
+- simpleType:
 
 ## storeWebArchive
 

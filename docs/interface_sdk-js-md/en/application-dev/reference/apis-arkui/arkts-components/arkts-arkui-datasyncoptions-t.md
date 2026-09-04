@@ -14,4 +14,4 @@ Defines the input parameter object for **startDataLoading**.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** import('../api/@ohos.data.unifiedDataChannel').default.GetDataParams
+**Type:** import('../api/@ohos.data.unifiedDataChannel').default.GetDataParams

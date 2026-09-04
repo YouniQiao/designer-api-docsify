@@ -14,4 +14,4 @@ The built-in Map type.
 
 **System capability:** SystemCapability.Utils.Lang
 
-**Property type:** Map&lt;K, V&gt;
+**Type:** Map&lt;K, V&gt;

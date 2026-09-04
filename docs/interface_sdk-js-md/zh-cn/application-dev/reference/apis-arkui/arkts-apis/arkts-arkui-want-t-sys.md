@@ -14,4 +14,4 @@ declare type Want = import('../api/@ohos.app.ability.Want').default
 
 **系统接口：** 此接口为系统接口。
 
-**属性类型：** import('../api/@ohos.app.ability.Want').default
+**类型：** import('../api/@ohos.app.ability.Want').default

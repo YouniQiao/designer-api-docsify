@@ -113,6 +113,7 @@ Binds a [SwiperController](../arkts-components/arkts-arkui-swipercontroller-c.md
 **Examples**
 
 See the example for createNode('Swiper')12+.
+- simpleType:
 
 
 ## bindController

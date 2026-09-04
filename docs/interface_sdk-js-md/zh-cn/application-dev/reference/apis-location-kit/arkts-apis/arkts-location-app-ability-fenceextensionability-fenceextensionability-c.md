@@ -57,7 +57,7 @@ onFenceStatusChange(transition: geoLocationManager.GeofenceTransition, additions
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| transition | geoLocationManager.GeofenceTransition | 是 | 地理围栏事件信息；包含地理围栏ID和具体的地理围栏事件。 |
+| transition | [geoLocationManager.GeofenceTransition](arkts-location-geolocationmanager-geofencetransition-i.md) | 是 | 地理围栏事件信息；包含地理围栏ID和具体的地理围栏事件。 |
 | additions | Record&lt;string, string&gt; | 是 | 附加信息 |
 
 **示例**

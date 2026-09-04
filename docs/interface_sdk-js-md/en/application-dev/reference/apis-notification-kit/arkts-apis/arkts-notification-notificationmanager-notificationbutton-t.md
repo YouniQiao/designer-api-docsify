@@ -10,4 +10,4 @@ Describes the notification button.
 
 **System capability:** SystemCapability.Notification.Notification
 
-**Property type:** _NotificationButton
+**Type:** _NotificationButton

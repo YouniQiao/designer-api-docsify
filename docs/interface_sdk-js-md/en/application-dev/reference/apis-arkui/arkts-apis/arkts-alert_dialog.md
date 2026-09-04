@@ -458,6 +458,7 @@ struct AlertDialogLifecycleExample {
 ```
 
 This example demonstrates how to customize the background blur effect by setting backgroundBlurStyleOptions in [AlertDialogParam](arkts-arkui-alertdialogparam-i.md).
+The backgroundBlurStyleOptions attribute is added to AlertDialogParam since API version 19.
 
 ```TypeScript
 @Entry
@@ -503,6 +504,7 @@ struct AlertDialogExample {
 ```
 
 This example demonstrates how to customize the background effect by setting backgroundEffect in [AlertDialogParam](arkts-arkui-alertdialogparam-i.md).
+The backgroundEffect attribute is added to AlertDialogParam since API version 19.
 
 ```TypeScript
 @Entry
@@ -549,6 +551,7 @@ struct AlertDialogExample {
 ```
 
 This example implements the system material effect by configuring the systemMaterial attribute in [AlertDialogParam](arkts-arkui-alertdialogparam-i.md).
+Since API version 26.0.0, the systemMaterial attribute is added to AlertDialogParam.
 
 ```TypeScript
 import { uiMaterial } from '@kit.ArkUI';

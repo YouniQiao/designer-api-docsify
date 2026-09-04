@@ -687,7 +687,7 @@ While most applications must [request permissions to access the pasteboard](../.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;unifiedDataChannel.UnifiedData&gt; | Promise used to return the system PasteData. |
+| Promise&lt;[unifiedDataChannel.UnifiedData](../../apis-arkdata/arkts-apis/arkts-arkdata-unifieddatachannel-unifieddata-c.md)&gt; | Promise used to return the system PasteData. |
 
 **Error codes:**
 
@@ -738,7 +738,7 @@ While most applications must [request permissions to access the pasteboard](../.
 
 | Type | Description |
 | --- | --- |
-| unifiedDataChannel.UnifiedData | Data in the system pasteboard. |
+| [unifiedDataChannel.UnifiedData](../../apis-arkdata/arkts-apis/arkts-arkdata-unifieddatachannel-unifieddata-c.md) | Data in the system pasteboard. |
 
 **Error codes:**
 
@@ -1511,7 +1511,7 @@ Writes a **PasteData** object to the system pasteboard. This API uses a promise 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | unifiedDataChannel.UnifiedData | Yes | Data to be written to the pasteboard. |
+| data | [unifiedDataChannel.UnifiedData](../../apis-arkdata/arkts-apis/arkts-arkdata-unifieddatachannel-unifieddata-c.md) | Yes | Data to be written to the pasteboard. |
 
 **Return value:**
 
@@ -1572,7 +1572,7 @@ Writes data to the system pasteboard. This API returns the result synchronously.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | unifiedDataChannel.UnifiedData | Yes | Data to be written to the pasteboard. |
+| data | [unifiedDataChannel.UnifiedData](../../apis-arkdata/arkts-apis/arkts-arkdata-unifieddatachannel-unifieddata-c.md) | Yes | Data to be written to the pasteboard. |
 
 **Error codes:**
 

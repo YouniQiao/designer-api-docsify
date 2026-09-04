@@ -12,4 +12,4 @@ Indicates permissions.
 
 **System capability:** SystemCapability.Security.AccessToken
 
-**Property type:** string
+**Type:** string

@@ -10,8 +10,6 @@ This module provides the input method system panel management functions, which a
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
-
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **System API:** This is a system API.

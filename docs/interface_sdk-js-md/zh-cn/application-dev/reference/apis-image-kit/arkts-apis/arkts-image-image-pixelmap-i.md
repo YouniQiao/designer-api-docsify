@@ -28,7 +28,7 @@ Performs color space conversion (CSC) on the image pixel color based on a given 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| targetColorSpace | colorSpaceManager.ColorSpaceManager | 是 | Target color space. SRGB, DCI_P3, DISPLAY_P3, and ADOBE_RGB_1998 are supported. |
+| targetColorSpace | [colorSpaceManager.ColorSpaceManager](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-colorspacemanager-colorspacemanager-i.md) | 是 | Target color space. SRGB, DCI_P3, DISPLAY_P3, and ADOBE_RGB_1998 are supported. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **错误码：**
@@ -75,7 +75,7 @@ Performs Color Space Converters (CSC) on the image pixel color based on a given 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| targetColorSpace | colorSpaceManager.ColorSpaceManager | 是 | Target color space. SRGB, DCI_P3, DISPLAY_P3, and ADOBE_RGB_1998 are supported. |
+| targetColorSpace | [colorSpaceManager.ColorSpaceManager](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-colorspacemanager-colorspacemanager-i.md) | 是 | Target color space. SRGB, DCI_P3, DISPLAY_P3, and ADOBE_RGB_1998 are supported. |
 
 **返回值：**
 
@@ -1596,7 +1596,7 @@ Obtains the color space of this image.
 
 | 类型 | 说明 |
 | --- | --- |
-| colorSpaceManager.ColorSpaceManager | Color space obtained. |
+| [colorSpaceManager.ColorSpaceManager](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-colorspacemanager-colorspacemanager-i.md) | Color space obtained. |
 
 **错误码：**
 
@@ -1964,7 +1964,7 @@ Marshals this PixelMap object and writes it to a MessageSequence object.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| sequence | rpc.MessageSequence | 是 | MessageSequence object. |
+| sequence | [rpc.MessageSequence](../../apis-ipc-kit/arkts-apis/arkts-ipc-rpc-messagesequence-c.md) | 是 | MessageSequence object. |
 
 **错误码：**
 
@@ -3417,7 +3417,7 @@ This method is only used to set the colorspace property of pixelmap, while all p
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| colorSpace | colorSpaceManager.ColorSpaceManager | 是 | The color space for pixel map. |
+| colorSpace | [colorSpaceManager.ColorSpaceManager](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-colorspacemanager-colorspacemanager-i.md) | 是 | The color space for pixel map. |
 
 **错误码：**
 
@@ -3935,7 +3935,7 @@ Unmarshals a MessageSequence object to obtain a PixelMap object. To create a Pix
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| sequence | rpc.MessageSequence | 是 | MessageSequence object that stores the PixelMap information. |
+| sequence | [rpc.MessageSequence](../../apis-ipc-kit/arkts-apis/arkts-ipc-rpc-messagesequence-c.md) | 是 | MessageSequence object that stores the PixelMap information. |
 
 **返回值：**
 

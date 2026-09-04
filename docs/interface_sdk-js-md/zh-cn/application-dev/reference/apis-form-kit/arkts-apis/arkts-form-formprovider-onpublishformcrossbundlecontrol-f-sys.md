@@ -28,7 +28,7 @@ function onPublishFormCrossBundleControl(callback: formInfo.PublishFormCrossBund
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | formInfo.PublishFormCrossBundleControlCallback | 是 | 跨应用加桌管控的回调函数。 |
+| callback | [formInfo.PublishFormCrossBundleControlCallback](arkts-form-forminfo-publishformcrossbundlecontrolcallback-t-sys.md) | 是 | 跨应用加桌管控的回调函数。 |
 
 **错误码：**
 

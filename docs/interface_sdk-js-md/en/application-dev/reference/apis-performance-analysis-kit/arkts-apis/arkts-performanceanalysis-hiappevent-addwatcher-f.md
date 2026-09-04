@@ -46,6 +46,7 @@ Adds an event watcher. You can use the callback of the event watcher to subscrib
 **Examples**
 
 Based on the type of the event watcher, the following methods are available:
+Method 1: Set triggerCondition to implement the onTrigger() callback. When the callback conditions are met, the system automatically triggers the callback.
 
 ```TypeScript
 import { hilog } from '@kit.PerformanceAnalysisKit';
@@ -86,6 +87,8 @@ hiAppEvent.addWatcher({
 ```
 
 Method 2: If the triggerCondition parameter is not set, use the holder object returned by the event subscription to obtain the subscribed event.
+For crash events (hiAppEvent.event.APP_CRASH) and freeze events (hiAppEvent.event.APP_FREEZE) generated during abnormal exits, the system needs time to capture debug logs. Typically, capture completes within 30 seconds; in extreme cases, it may take up to about 2 minutes.
+When the subscription data holder is used to manually process subscription events, the events may not be generated or the log capture is not complete. Therefore, you are advised to call takeNext() to obtain such events again after the process is started.
 
 ```TypeScript
 import { hilog } from '@kit.PerformanceAnalysisKit';

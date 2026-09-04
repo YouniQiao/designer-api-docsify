@@ -4,6 +4,8 @@ Enumerates the disconnection reasons.
 
 **Since:** 18
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
 
 ## PEER_APP_CLOSE_COLLABORATION

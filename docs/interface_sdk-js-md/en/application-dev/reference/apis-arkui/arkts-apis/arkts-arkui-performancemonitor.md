@@ -11,8 +11,6 @@ The **performanceMonitor** module provides APIs for monitoring performance metri
 
 **Since:** 10
 
-**Model restriction:** This API can be used only in the stage model.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.

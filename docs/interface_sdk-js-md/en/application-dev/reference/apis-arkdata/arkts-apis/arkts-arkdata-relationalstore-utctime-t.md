@@ -10,4 +10,4 @@ The time is in UTC format.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
-**Property type:** Date
+**Type:** Date

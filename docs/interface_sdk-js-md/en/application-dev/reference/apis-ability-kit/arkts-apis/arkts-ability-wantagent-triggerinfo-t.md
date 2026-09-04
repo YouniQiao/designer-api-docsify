@@ -12,4 +12,4 @@ Defines the TriggerInfo object.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
-**Property type:** _TriggerInfo
+**Type:** _TriggerInfo

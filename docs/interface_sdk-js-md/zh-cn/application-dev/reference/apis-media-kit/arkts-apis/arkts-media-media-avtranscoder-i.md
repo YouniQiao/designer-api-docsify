@@ -36,7 +36,7 @@ addWatermark(watermark: image.PixelMap, config: WatermarkConfiguration): Promise
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| watermark | image.PixelMap | 是 | : 水印图像。 |
+| watermark | [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | 是 | : 水印图像。 |
 | config | [WatermarkConfiguration](arkts-media-media-watermarkconfiguration-i.md) | 是 | : 水印配置参数。 |
 
 **返回值：**

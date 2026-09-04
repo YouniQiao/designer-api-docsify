@@ -233,7 +233,7 @@ delete(table: string, predicates: dataSharePredicates.DataSharePredicates, callb
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | table | string | 是 | 指定的目标表名，不能为空字符串。 |
-| predicates | dataSharePredicates.DataSharePredicates | 是 | DataSharePredicates的实例对象指定的删除条件。 |
+| predicates | [dataSharePredicates.DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | 是 | DataSharePredicates的实例对象指定的删除条件。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数。当删除数据成功，err为undefined，data为受影响的行数量；否则为错误对象。 |
 
 **错误码：**
@@ -336,7 +336,7 @@ delete(table: string, predicates: dataSharePredicates.DataSharePredicates): Prom
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | table | string | 是 | 指定的目标表名，不能为空字符串。 |
-| predicates | dataSharePredicates.DataSharePredicates | 是 | DataSharePredicates的实例对象指定的删除条件。 |
+| predicates | [dataSharePredicates.DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | 是 | DataSharePredicates的实例对象指定的删除条件。 |
 
 **返回值：**
 
@@ -425,7 +425,7 @@ query(table: string, predicates: dataSharePredicates.DataSharePredicates, callba
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | table | string | 是 | 指定的目标表名，不能为空字符串。 |
-| predicates | dataSharePredicates.DataSharePredicates | 是 | DataSharePredicates的实例对象指定的查询条件。 |
+| predicates | [dataSharePredicates.DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | 是 | DataSharePredicates的实例对象指定的查询条件。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ResultSet&gt; | 是 | 回调函数。返回ResultSet对象。 |
 
 **错误码：**
@@ -586,7 +586,7 @@ query(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | table | string | 是 | 指定的目标表名，不能为空字符串。 |
-| predicates | dataSharePredicates.DataSharePredicates | 是 | DataSharePredicates的实例对象指定的查询条件。 |
+| predicates | [dataSharePredicates.DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | 是 | DataSharePredicates的实例对象指定的查询条件。 |
 | columns | Array&lt;string&gt; | 是 | 表示要查询的列。如果值为空，则查询应用于所有列。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ResultSet&gt; | 是 | 回调函数。返回ResultSet对象。 |
 
@@ -629,7 +629,7 @@ query(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | table | string | 是 | 指定的目标表名，不能为空字符串。 |
-| predicates | dataSharePredicates.DataSharePredicates | 是 | DataSharePredicates的实例对象指定的查询条件。 |
+| predicates | [dataSharePredicates.DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | 是 | DataSharePredicates的实例对象指定的查询条件。 |
 | columns | Array&lt;string&gt; | 否 | 表示要查询的列。如果值为空，则查询应用于所有列。 |
 
 **返回值：**
@@ -977,7 +977,7 @@ update(
 | --- | --- | --- | --- |
 | table | string | 是 | 指定的目标表名，不能为空字符串。 |
 | values | ValuesBucket | 是 | values指示数据库中要更新的数据行。键值对与数据库表的列名相关联。 |
-| predicates | dataSharePredicates.DataSharePredicates | 是 | DataSharePredicates的实例对象指定的更新条件。 |
+| predicates | [dataSharePredicates.DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | 是 | DataSharePredicates的实例对象指定的更新条件。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数。返回受影响的行数。 |
 
 **错误码：**
@@ -1215,7 +1215,7 @@ update(table: string, values: ValuesBucket, predicates: dataSharePredicates.Data
 | --- | --- | --- | --- |
 | table | string | 是 | 指定的目标表名，不能为空字符串。 |
 | values | ValuesBucket | 是 | values指示数据库中要更新的数据行。键值对与数据库表的列名相关联。 |
-| predicates | dataSharePredicates.DataSharePredicates | 是 | DataSharePredicates的实例对象指定的更新条件。 |
+| predicates | [dataSharePredicates.DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | 是 | DataSharePredicates的实例对象指定的更新条件。 |
 
 **返回值：**
 

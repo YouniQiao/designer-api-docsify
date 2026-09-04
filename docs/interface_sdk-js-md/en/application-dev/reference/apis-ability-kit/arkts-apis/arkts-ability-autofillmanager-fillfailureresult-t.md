@@ -14,4 +14,4 @@ The interface of filling failure result.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
-**Property type:** _FillFailureResult
+**Type:** _FillFailureResult

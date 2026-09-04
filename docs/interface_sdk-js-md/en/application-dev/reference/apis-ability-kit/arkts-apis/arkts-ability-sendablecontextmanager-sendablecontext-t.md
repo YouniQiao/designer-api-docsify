@@ -14,4 +14,4 @@ Level-2 module SendableContext.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
-**Property type:** _SendableContext
+**Type:** _SendableContext

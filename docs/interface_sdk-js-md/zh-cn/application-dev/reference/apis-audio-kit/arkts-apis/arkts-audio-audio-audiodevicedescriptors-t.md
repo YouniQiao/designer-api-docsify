@@ -12,4 +12,4 @@ type AudioDeviceDescriptors = Array<Readonly<AudioDeviceDescriptor>>
 
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
-**属性类型：** Array&lt;Readonly&lt;[AudioDeviceDescriptor](arkts-audio-audio-audiodevicedescriptor-i.md)&gt;&gt;
+**类型：** Array&lt;Readonly&lt;[AudioDeviceDescriptor](arkts-audio-audio-audiodevicedescriptor-i.md)&gt;&gt;

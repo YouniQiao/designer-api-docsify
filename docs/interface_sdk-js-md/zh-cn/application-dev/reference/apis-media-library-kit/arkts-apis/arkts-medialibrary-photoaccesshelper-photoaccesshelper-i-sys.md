@@ -5215,7 +5215,7 @@ startThumbnailCreationTask(predicate: dataSharePredicates.DataSharePredicates, c
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| predicate | dataSharePredicates.DataSharePredicates | 是 | 生成缩略图选项。 |
+| predicate | [dataSharePredicates.DataSharePredicates](../../apis-arkdata/arkts-apis/arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | 是 | 生成缩略图选项。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当成功时标识通知任务结束，err为undefined，否则为错误对象。 |
 
 **返回值：**
@@ -5278,7 +5278,7 @@ startThumbnailCreationTask(predicate: dataSharePredicates.DataSharePredicates, c
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| predicate | dataSharePredicates.DataSharePredicates | 是 | 用于生成缩略图的查询条件。 |
+| predicate | [dataSharePredicates.DataSharePredicates](../../apis-arkdata/arkts-apis/arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | 是 | 用于生成缩略图的查询条件。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当操作成功完成时通知任务结束。 |
 | response | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数。返回是否有未生成的缩略图，返回1表示所有缩略图已生成完成，返回0表示未生成完成。 |
 

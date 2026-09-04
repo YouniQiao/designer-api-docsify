@@ -142,7 +142,7 @@ Requests an image quickly. This API uses a promise to return the result.
 | context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | Yes | Context of the ability instance. |
 | asset | PhotoAsset | Yes | Image to request. |
 | requestOptions | [RequestOptions](arkts-medialibrary-photoaccesshelper-requestoptions-i.md) | Yes | Options for requesting the image. |
-| dataHandler | [QuickImageDataHandler](arkts-medialibrary-photoaccesshelper-quickimagedatahandler-i.md)&lt;image.Picture&gt; | Yes | Media asset handler, which invokes a callback to return the image when the requested image is ready. |
+| dataHandler | [QuickImageDataHandler](arkts-medialibrary-photoaccesshelper-quickimagedatahandler-i.md)&lt;[image.Picture](../../apis-image-kit/arkts-apis/arkts-image-image-picture-i.md)&gt; | Yes | Media asset handler, which invokes a callback to return the image when the requested image is ready. |
 
 **Return value:**
 
@@ -219,7 +219,7 @@ Requests an image. This API uses a promise to return the result.
 | context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | Yes | Context of the ability instance. |
 | asset | PhotoAsset | Yes | Image to request. |
 | requestOptions | [RequestOptions](arkts-medialibrary-photoaccesshelper-requestoptions-i.md) | Yes | Options for requesting the image. |
-| dataHandler | [MediaAssetDataHandler](arkts-medialibrary-photoaccesshelper-mediaassetdatahandler-i.md)&lt;image.ImageSource&gt; | Yes | Media asset handler, which invokes a callback to return the image when the requested image is ready. |
+| dataHandler | [MediaAssetDataHandler](arkts-medialibrary-photoaccesshelper-mediaassetdatahandler-i.md)&lt;[image.ImageSource](../../apis-image-kit/arkts-apis/arkts-image-image-imagesource-i.md)&gt; | Yes | Media asset handler, which invokes a callback to return the image when the requested image is ready. |
 
 **Return value:**
 

@@ -4,6 +4,8 @@ Swiper组件翻页至指定页面的动效模式。
 
 **起始版本：** 15
 
+**模型约束：** 此接口仅可在Stage模型下使用。
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## NO_ANIMATION

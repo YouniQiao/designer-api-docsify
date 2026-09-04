@@ -14,4 +14,4 @@ Describes the properties of the voice content options for notification subscript
 
 **System API:** This is a system API.
 
-**Property type:** _VoiceContentOptions
+**Type:** _VoiceContentOptions

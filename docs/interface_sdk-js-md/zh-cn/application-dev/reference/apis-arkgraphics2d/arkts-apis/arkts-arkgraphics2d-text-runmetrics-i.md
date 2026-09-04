@@ -20,7 +20,7 @@ fontMetrics: drawing.FontMetrics
 
 字体度量信息。
 
-**类型：** drawing.FontMetrics
+**类型：** [drawing.FontMetrics](arkts-arkgraphics2d-drawing-fontmetrics-i.md)
 
 **起始版本：** 12
 

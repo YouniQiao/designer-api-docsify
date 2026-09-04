@@ -22,7 +22,7 @@ contentFormData: uniformDataStruct.ContentForm
 
 内容卡片数据，用于设置卡片展示的标题、描述、应用图标、应用名称、跳转链接或内容图片等信息。
 
-**类型：** uniformDataStruct.ContentForm
+**类型：** [uniformDataStruct.ContentForm](arkts-arkdata-uniformdatastruct-contentform-i.md)
 
 **起始版本：** 20
 

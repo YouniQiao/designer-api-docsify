@@ -16,7 +16,7 @@ readonly enableStatus: notificationManager.SwitchState
 
 Notification switch state.
 
-**Type:** notificationManager.SwitchState
+**Type:** [notificationManager.SwitchState](arkts-notification-notificationmanager-switchstate-e-sys.md)
 
 **Since:** 26.0.0
 

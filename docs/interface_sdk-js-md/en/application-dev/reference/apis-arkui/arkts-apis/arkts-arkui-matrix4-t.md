@@ -41,7 +41,7 @@ const transform: Matrix4 = [
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** [
+**Type:** [
   number,
   number,
   number,

@@ -10,4 +10,4 @@ type Assets = collections.Array<Asset>
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
-**属性类型：** collections.Array&lt;Asset&gt;
+**类型：** [collections.Array](../../apis-arkts/arkts-apis/arkts-arkts-collections-array-c.md)&lt;Asset&gt;

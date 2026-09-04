@@ -14,4 +14,4 @@ declare type DataLoadParams = import('../api/@ohos.data.unifiedDataChannel').def
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-**属性类型：** import('../api/@ohos.data.unifiedDataChannel').default.DataLoadParams
+**类型：** import('../api/@ohos.data.unifiedDataChannel').default.DataLoadParams

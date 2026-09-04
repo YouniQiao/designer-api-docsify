@@ -10,4 +10,4 @@ Describes the connection status of a cellular data link.
 
 **System capability:** SystemCapability.Telephony.StateRegistry
 
-**Property type:** data.DataConnectState
+**Type:** [data.DataConnectState](arkts-telephony-data-dataconnectstate-e.md)

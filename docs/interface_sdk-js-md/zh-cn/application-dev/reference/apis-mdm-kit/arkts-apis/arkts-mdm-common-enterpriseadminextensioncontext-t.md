@@ -12,4 +12,4 @@ EnterpriseAdminExtensionContext是[EnterpriseAdminExtensionAbility](arkts-mdm-en
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
-**属性类型：** _EnterpriseAdminExtensionContext.default
+**类型：** _EnterpriseAdminExtensionContext.default

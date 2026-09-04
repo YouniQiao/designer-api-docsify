@@ -12,4 +12,4 @@ Describes the main switch state for priority notification.
 
 **System API:** This is a system API.
 
-**Property type:** _EnabledPriorityNotificationCallbackData
+**Type:** _EnabledPriorityNotificationCallbackData

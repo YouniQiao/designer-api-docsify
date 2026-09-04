@@ -63,6 +63,9 @@ TabContent()
 ## 示例
 
 本示例通过[onAnimationStart](ts-container-tabs.md#onanimationstart11)、[onChange](ts-container-tabs.md#onchange)实现切换时自定义tabBar和TabContent的联动。
+> 说明
+> 
+> 此示例的资源不在src > main > resource目录下，从DevEco Studio 6.0.0 Beta2开始，新建工程或者模块时，默认创建的模块不会对非resources目录下的资源进行打包，需使能相关开关：模块的build-profile.json5中buildOptions > resOptions > copyCodeResource > enable设置为true，详见[resOptions](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/ide-hvigor-build-profile#section754823013348)中相关介绍。
 
 ```TypeScript
 // xxx.ets
@@ -182,6 +185,9 @@ struct TabContentExample {
 ```
 
 本示例通过[vertical](./ts-container-tabs.md#vertical)、[barPosition](./ts-container-tabs.md#barposition9)实现侧边页签。
+> 说明
+> 
+> 此示例的资源不在src > main > resource目录下，从DevEco Studio 6.0.0 Beta2开始，新建工程或者模块时，默认创建的模块不会对非resources目录下的资源进行打包，需使能相关开关：模块的build-profile.json5中buildOptions > resOptions > copyCodeResource > enable设置为true，详见[resOptions](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/ide-hvigor-build-profile#section754823013348)中相关介绍。
 
 ```TypeScript
 // xxx.ets
@@ -888,6 +894,10 @@ struct TabContentExample6 {
 ```
 
 本示例通过[LabelStyle](#labelstyle10对象说明)中的unselectedColor和selectedColor改变底部页签以及子页签的文本颜色。
+通过[iconStyle](#iconstyle12)中的unselectedColor和selectedColor改变底部页签的图标颜色。
+> 说明
+> 
+> 此示例的资源不在src > main > resource目录下，从DevEco Studio 6.0.0 Beta2开始，新建工程或者模块时，默认创建的模块不会对非resources目录下的资源进行打包，需使能相关开关：模块的build-profile.json5中buildOptions > resOptions > copyCodeResource > enable设置为true，详见[resOptions](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/ide-hvigor-build-profile#section754823013348)中相关介绍。
 
 ```TypeScript
 // xxx.ets
@@ -1332,6 +1342,7 @@ struct MyComponent {
 ```
 
 该示例通过SubTabBarStyle中的[indicator](#indicator22)属性，实现了图片格式的子页签下划线风格。
+从API version 22开始，新增了入参类型包含图片的indicator属性。
 
 ```TypeScript
 import { DrawableDescriptor } from '@kit.ArkUI';

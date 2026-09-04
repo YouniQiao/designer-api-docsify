@@ -4,6 +4,8 @@ Enumerates the audio latency types.
 
 **Since:** 23
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
 ## LATENCY_TYPE_ALL

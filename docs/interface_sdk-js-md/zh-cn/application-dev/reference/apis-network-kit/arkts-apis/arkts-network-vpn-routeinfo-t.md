@@ -10,4 +10,4 @@ export type RouteInfo = connection.RouteInfo
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
-**属性类型：** connection.RouteInfo
+**类型：** [connection.RouteInfo](arkts-network-connection-routeinfo-i.md)

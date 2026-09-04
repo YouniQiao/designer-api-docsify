@@ -116,7 +116,7 @@ Converts a Sendable PhotoAsset object to a non-Sendable PhotoAsset object.
 
 | Type | Description |
 | --- | --- |
-| photoAccessHelper.PhotoAsset | [PhotoAsset]{ |
+| [photoAccessHelper.PhotoAsset](arkts-medialibrary-photoaccesshelper-photoasset-i.md) | [PhotoAsset]{ |
 
 **Error codes:**
 
@@ -173,7 +173,7 @@ Obtains a **PhotoAsset** member parameter.
 
 | Type | Description |
 | --- | --- |
-| photoAccessHelper.MemberType | PhotoAsset** member parameter obtained. |
+| [photoAccessHelper.MemberType](arkts-medialibrary-photoaccesshelper-membertype-t.md) | PhotoAsset** member parameter obtained. |
 
 **Error codes:**
 
@@ -230,13 +230,13 @@ Obtains the file thumbnail of the given size. This API uses a promise to return 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| size | image.Size | No | Size of the thumbnail. |
+| size | [image.Size](../../apis-image-kit/arkts-apis/arkts-image-image-size-i.md) | No | Size of the thumbnail. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;image.PixelMap&gt; | Promise used to return the PixelMap of the thumbnail. |
+| Promise&lt;[image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)&gt; | Promise used to return the PixelMap of the thumbnail. |
 
 **Error codes:**
 

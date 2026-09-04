@@ -4,6 +4,8 @@ The maximum length of [value](arkts-arkdata-datashare-proxydata-i.md#value), [va
 
 **Since:** 26.0.0
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
 
 ## MAX_LENGTH_4K

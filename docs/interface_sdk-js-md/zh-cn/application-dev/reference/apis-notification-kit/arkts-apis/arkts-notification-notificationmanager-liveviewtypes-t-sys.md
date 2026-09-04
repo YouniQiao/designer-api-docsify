@@ -12,4 +12,4 @@ export type LiveViewTypes = _LiveViewTypes
 
 **系统接口：** 此接口为系统接口。
 
-**属性类型：** _LiveViewTypes
+**类型：** _LiveViewTypes

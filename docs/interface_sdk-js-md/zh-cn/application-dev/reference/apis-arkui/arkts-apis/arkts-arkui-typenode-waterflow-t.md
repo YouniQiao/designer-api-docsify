@@ -14,4 +14,4 @@ WaterFlow类型的FrameNode节点类型。只允许添加FlowItem类型子组件
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-**属性类型：** [TypedFrameNode](arkts-arkui-framenode-typedframenode-i.md)&lt;WaterFlowInterface, [WaterFlowAttribute](../arkts-components/arkts-arkui-waterflow-attribute.md)&gt;
+**类型：** [TypedFrameNode](arkts-arkui-framenode-typedframenode-i.md)&lt;WaterFlowInterface, [WaterFlowAttribute](../arkts-components/arkts-arkui-waterflow-attribute.md)&gt;

@@ -12,4 +12,4 @@ Defines the validity period in the configuration file.
 
 **System API:** This is a system API.
 
-**Property type:** _AppProvisionInfo.Validity
+**Type:** [_AppProvisionInfo.Validity](arkts-ability-appprovisioninfo-validity-i-sys.md)

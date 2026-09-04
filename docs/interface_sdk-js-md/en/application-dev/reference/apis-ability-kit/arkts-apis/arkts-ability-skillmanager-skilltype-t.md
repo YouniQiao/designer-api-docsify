@@ -14,4 +14,4 @@ Enumerates the skill types.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
-**Property type:** _SkillType
+**Type:** _SkillType

@@ -12,4 +12,4 @@ export type RawFileDescriptor = _RawFileDescriptor
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
-**属性类型：** _RawFileDescriptor
+**类型：** _RawFileDescriptor

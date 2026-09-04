@@ -4,6 +4,8 @@ Enumerates interaction event types that can be queried.
 
 **Since:** 19
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## ON_CLICK

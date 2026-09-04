@@ -31,7 +31,7 @@ Creates an object for formatting the time and date that need to be displayed in 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dateTimeFormat | Intl.DateTimeFormat \| [SimpleDateTimeFormat](arkts-localization-i18n-simpledatetimeformat-c.md) | Yes | Object used to format the date and time. |
+| dateTimeFormat | [Intl.DateTimeFormat](arkts-localization-intl-datetimeformat-c.md) \| [SimpleDateTimeFormat](arkts-localization-i18n-simpledatetimeformat-c.md) | Yes | Object used to format the date and time. |
 | options | [StyledDateTimeFormatOptions](arkts-localization-i18n-styleddatetimeformatoptions-i.md) | No |  |
 
 **Examples**

@@ -12,4 +12,4 @@ declare type WebviewController = import('../api/@ohos.web.webview').default.Webv
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
-**属性类型：** import('../api/@ohos.web.webview').default.WebviewController
+**类型：** import('../api/@ohos.web.webview').default.WebviewController

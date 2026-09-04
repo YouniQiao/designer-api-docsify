@@ -323,7 +323,7 @@ getEffectPixelMap(): Promise<image.PixelMap>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;image.PixelMap&gt; | Promise对象。返回已添加链表效果的源图像的image.PixelMap。 |
+| Promise&lt;[image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)&gt; | Promise对象。返回已添加链表效果的源图像的image.PixelMap。 |
 
 **示例**
 
@@ -381,7 +381,7 @@ getEffectPixelMap(useCpuRender : boolean): Promise<image.PixelMap>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;image.PixelMap&gt; | Promise对象。返回已添加链表效果的源图像的image.PixelMap。 |
+| Promise&lt;[image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)&gt; | Promise对象。返回已添加链表效果的源图像的image.PixelMap。 |
 
 **示例**
 
@@ -433,7 +433,7 @@ getPixelMap(): image.PixelMap
 
 | 类型 | 说明 |
 | --- | --- |
-| image.PixelMap | 已添加效果的源图像的image.PixelMap。 |
+| [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | 已添加效果的源图像的image.PixelMap。 |
 
 **示例**
 

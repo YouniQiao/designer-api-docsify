@@ -12,4 +12,4 @@ Indicates the result of network search.
 
 **System API:** This is a system API.
 
-**Property type:** radio.NetworkSearchRealTimeResult
+**Type:** [radio.NetworkSearchRealTimeResult](arkts-telephony-radio-networksearchrealtimeresult-i-sys.md)

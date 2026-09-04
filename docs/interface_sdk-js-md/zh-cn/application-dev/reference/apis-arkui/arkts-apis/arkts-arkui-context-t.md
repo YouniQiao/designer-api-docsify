@@ -14,4 +14,4 @@ export type Context = common.Context
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
-**属性类型：** common.Context
+**类型：** [common.Context](../../apis-ability-kit/arkts-apis/arkts-ability-common-context-t.md)

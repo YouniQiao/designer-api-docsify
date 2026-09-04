@@ -91,7 +91,7 @@ RichEditor滚动条的显示模式。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| state | [BarState](../arkts-apis/arkts-arkui-barstate-e.md) | 是 | RichEditor滚动条的显示模式。默认值：BarState.Auto |
+| state | [BarState](../arkts-apis/arkts-arkui-barstate-e.md) | 是 | [RichEditor滚动条的显示模式。默认值：BarState.Auto](arkts-arkui-navigationmode-e.md) |
 
 ## bindSelectionMenu
 
@@ -114,9 +114,9 @@ bindSelectionMenu(spanType: RichEditorSpanType, content: CustomBuilder, response
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| spanType | [RichEditorSpanType](arkts-arkui-richeditorspantype-e.md) | 是 | 菜单的类型。默认值：RichEditorSpanType.TEXT |
+| spanType | [RichEditorSpanType](arkts-arkui-richeditorspantype-e.md) | 是 | [菜单的类型。默认值：RichEditorSpanType.TEXT](arkts-arkui-textspantype-e.md) |
 | content | [CustomBuilder](arkts-arkui-custombuilder-t.md) | 是 | 菜单的内容。 |
-| responseType | [ResponseType](../arkts-apis/arkts-arkui-responsetype-e.md) \| [RichEditorResponseType](arkts-arkui-richeditorresponsetype-e.md) | 是 | 菜单的响应类型。默认值：ResponseType.LongPress<br>**起始版本：** 11 |
+| responseType | [ResponseType](../arkts-apis/arkts-arkui-responsetype-e.md) \| [RichEditorResponseType](arkts-arkui-richeditorresponsetype-e.md) | 是 | [菜单的响应类型。默认值：ResponseType.LongPress](../arkts-apis/arkts-arkui-responsetype-e.md)<br>**起始版本：** 11 |
 | options | [SelectionMenuOptions](arkts-arkui-selectionmenuoptions-i.md) | 否 | 菜单的选项。当需要自定义菜单弹出/关闭回调、指定菜单类型等信息时传入此参数；不传入时，使用默认选择菜单选项配置。 |
 
 ## caretColor
@@ -201,7 +201,7 @@ copyOptions不为CopyOptions.None时，长按组件内容，会弹出文本选�
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | CopyOptions | 是 | 文本内容是否支持复制和粘贴。默认值：CopyOptions.LocalDevice |
+| value | CopyOptions | 是 | [文本内容是否支持复制和粘贴。默认值：CopyOptions.LocalDevice](../arkts-apis/arkts-arkui-copyoptions-e.md) |
 
 ## customKeyboard
 

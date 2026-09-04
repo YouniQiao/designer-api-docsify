@@ -12,4 +12,4 @@ Describes the **BundleOption** information, that is, the bundle information of a
 
 **System API:** This is a system API.
 
-**Property type:** _BundleOption
+**Type:** _BundleOption

@@ -32,7 +32,7 @@ setReturnModeForUIAbilityForeground(returnMode: insightIntent.ReturnMode): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| returnMode | insightIntent.ReturnMode | 是 | 意图执行结果的返回形式。 |
+| returnMode | [insightIntent.ReturnMode](arkts-ability-insightintent-returnmode-e.md) | 是 | 意图执行结果的返回形式。 |
 
 **错误码：**
 
@@ -103,7 +103,7 @@ setReturnModeForUIExtensionAbility(returnMode: insightIntent.ReturnMode): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| returnMode | insightIntent.ReturnMode | 是 | 意图执行结果的返回形式。 |
+| returnMode | [insightIntent.ReturnMode](arkts-ability-insightintent-returnmode-e.md) | 是 | 意图执行结果的返回形式。 |
 
 **错误码：**
 

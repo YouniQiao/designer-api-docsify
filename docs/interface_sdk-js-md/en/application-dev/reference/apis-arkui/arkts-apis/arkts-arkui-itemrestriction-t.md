@@ -18,4 +18,4 @@ Tuple type that stores button information.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** [T, T, T?, T?, T?]
+**Type:** [T, T, T?, T?, T?]

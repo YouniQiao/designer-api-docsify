@@ -14,5 +14,5 @@ type ImageType = image.Image | image.Picture
 
 | 类型 | 说明 |
 | --- | --- |
-| image.Image | 图片容器类型，用于获取全质量图。 |
-| image.Picture | 图片容器类型，用于获取未压缩图(YUV)。 |
+| [image.Image](../../apis-image-kit/arkts-apis/arkts-image-image-image-i.md) | 图片容器类型，用于获取全质量图。 |
+| [image.Picture](../../apis-image-kit/arkts-apis/arkts-image-image-picture-i.md) | 图片容器类型，用于获取未压缩图(YUV)。 |

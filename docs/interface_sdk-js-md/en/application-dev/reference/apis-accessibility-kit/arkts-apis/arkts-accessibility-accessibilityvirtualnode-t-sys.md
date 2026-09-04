@@ -14,4 +14,4 @@ Defines an accessibility virtual node. For details, see [AccessibilityVirtualNod
 
 **System API:** This is a system API.
 
-**Property type:** _AccessibilityVirtualNode
+**Type:** _AccessibilityVirtualNode

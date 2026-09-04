@@ -40,7 +40,7 @@ readonly executeMode: insightIntent.ExecuteMode[]
 
 意图调用执行模式。即拉起绑定的Ability时支持的执行模式。
 
-**类型：** insightIntent.ExecuteMode[]
+**类型：** [insightIntent.ExecuteMode](arkts-ability-insightintent-executemode-e.md)[]
 
 **起始版本：** 20
 

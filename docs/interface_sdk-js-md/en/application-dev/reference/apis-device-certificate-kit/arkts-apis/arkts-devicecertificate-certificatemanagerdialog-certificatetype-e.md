@@ -4,6 +4,8 @@ Enumerates the types of the certificate to be installed.
 
 **Since:** 14
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.Security.CertificateManagerDialog
 
 ## CA_CERT

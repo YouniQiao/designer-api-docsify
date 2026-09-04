@@ -14,4 +14,4 @@ Level-2 module ServiceExtensionContext.
 
 **System API:** This is a system API.
 
-**Property type:** _ServiceExtensionContext.default
+**Type:** _ServiceExtensionContext.default

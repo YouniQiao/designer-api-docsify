@@ -14,4 +14,4 @@ Permission request result object, containing information such as the list of req
 
 **System capability:** SystemCapability.Security.AccessToken
 
-**Property type:** _PermissionRequestResult
+**Type:** _PermissionRequestResult

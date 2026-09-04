@@ -32,7 +32,7 @@ Obtains the type of this MIFARE Ultralight tag.
 
 | Type | Description |
 | --- | --- |
-| tag.MifareUltralightType | Type of the MIFARE Ultralight tag obtained. |
+| [tag.MifareUltralightType](arkts-connectivity-tag-mifareultralighttype-e.md) | Type of the MIFARE Ultralight tag obtained. |
 
 **Examples**
 

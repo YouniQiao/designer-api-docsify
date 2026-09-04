@@ -14,4 +14,4 @@ declare type PromptActionCommonState = import('../api/@ohos.promptAction').promp
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-**属性类型：** import('../api/@ohos.promptAction').promptAction.CommonState
+**类型：** import('../api/@ohos.promptAction').promptAction.CommonState

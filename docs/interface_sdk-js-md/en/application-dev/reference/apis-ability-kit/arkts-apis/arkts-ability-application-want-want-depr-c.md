@@ -214,6 +214,7 @@ onCreate(want: Want, launchParam: AbilityConstant.LaunchParam){
 ```
 
 Data is transferred through user-defined fields. The following data types are supported (called in a UIAbility object, where context in the example is the context object of the UIAbility):
+String
 
 ```TypeScript
 import Want from '@ohos.application.Want';

@@ -14,4 +14,4 @@ AgentCard中的技能表示特定的 skills、专业知识和熟练程度用于�
 
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
 
-**属性类型：** _AgentSkill
+**类型：** _AgentSkill

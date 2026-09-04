@@ -612,6 +612,7 @@ Invoked when the custom component needs to determine the positions of its child 
 **Examples**
 
 For an example, see [Custom Layout Code Example](#example-1-implementing-a-custom-layout).
+- simpleType:
 
 ## onWillApplyTheme
 

@@ -40,7 +40,7 @@ predicates: dataSharePredicates.DataSharePredicates
 
 谓词查询，显示过滤条件。
 
-**类型：** dataSharePredicates.DataSharePredicates
+**类型：** [dataSharePredicates.DataSharePredicates](../../apis-arkdata/arkts-apis/arkts-arkdata-datasharepredicates-datasharepredicates-c.md)
 
 **起始版本：** 10
 

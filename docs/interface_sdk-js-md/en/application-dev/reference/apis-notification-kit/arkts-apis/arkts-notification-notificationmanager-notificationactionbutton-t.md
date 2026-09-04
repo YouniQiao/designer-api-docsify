@@ -10,4 +10,4 @@ Describes the operation button displayed in the notification.
 
 **System capability:** SystemCapability.Notification.Notification
 
-**Property type:** _NotificationActionButton
+**Type:** _NotificationActionButton

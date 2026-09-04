@@ -14,4 +14,4 @@ Defines a canvas object for drawing content on the **XComponent** component.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** import('../api/@ohos.graphics.drawing').default.Canvas
+**Type:** import('../api/@ohos.graphics.drawing').default.Canvas

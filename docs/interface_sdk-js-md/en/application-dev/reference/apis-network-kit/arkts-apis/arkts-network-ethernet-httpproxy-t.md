@@ -10,4 +10,4 @@ Defines the network proxy configuration.
 
 **System capability:** SystemCapability.Communication.NetManager.Ethernet
 
-**Property type:** connection.HttpProxy
+**Type:** [connection.HttpProxy](arkts-network-connection-httpproxy-i.md)

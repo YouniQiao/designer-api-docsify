@@ -8,6 +8,6 @@ type Partial<T> = {
 
 Make all properties in T optional
 
-**Property type:** {
+**Type:** {
     [P in keyof T]?: T[P];
 }

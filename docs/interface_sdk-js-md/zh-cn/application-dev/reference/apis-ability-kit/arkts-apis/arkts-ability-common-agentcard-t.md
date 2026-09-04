@@ -14,4 +14,4 @@ AgentCard在系统中显示agent的配置文件和联系信息。
 
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
 
-**属性类型：** _AgentCard
+**类型：** _AgentCard

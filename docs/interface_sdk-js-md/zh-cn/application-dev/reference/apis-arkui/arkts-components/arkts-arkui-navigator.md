@@ -30,7 +30,7 @@ Navigator(value?: { target: string; type?: NavigationType })
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | { target: string; type?: NavigationType } | 否 | 跳转页面的信息。target：指定跳转目标页面的路径。type：指定路由方式。默认值：NavigationType.Push |
+| value | { target: string; type?: NavigationType } | 否 | [跳转页面的信息。target：指定跳转目标页面的路径。type：指定路由方式。默认值：NavigationType.Push](arkts-arkui-navigationtype-e.md) |
 
 ## Navigator
 

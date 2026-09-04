@@ -32,7 +32,7 @@ function showAd(ad: Advertisement, options: AdDisplayOptions, context?: common.U
 | --- | --- | --- | --- |
 | ad | Advertisement | 是 | 广告对象。 |
 | options | [AdDisplayOptions](arkts-ads-advertising-addisplayoptions-i.md) | 是 | 广告展示参数。 |
-| context | common.UIAbilityContext | 否 | UIAbility的上下文环境，不设置从api: [@ohos.app.ability.common](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/ js-apis-app-ability-common)中获取。<br>**起始版本：** 12 |
+| context | [common.UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-common-uiabilitycontext-t.md) | 否 | UIAbility的上下文环境，不设置从api: [@ohos.app.ability.common](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/ js-apis-app-ability-common)中获取。<br>**起始版本：** 12 |
 
 **错误码：**
 

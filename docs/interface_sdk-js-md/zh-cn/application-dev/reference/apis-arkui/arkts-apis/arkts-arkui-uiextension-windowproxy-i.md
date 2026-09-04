@@ -33,13 +33,13 @@ createSubWindowWithOptions(name: string, subWindowOptions: window.SubWindowOptio
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | name | string | 是 | 子窗口的名字。 |
-| subWindowOptions | window.SubWindowOptions | 是 | 子窗口参数。 |
+| subWindowOptions | [window.SubWindowOptions](arkts-arkui-window-subwindowoptions-i.md) | 是 | 子窗口参数。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;window.Window&gt; | Promise used to return the subwindow created. |
+| Promise&lt;[window.Window](arkts-arkui-window-window-i.md)&gt; | Promise used to return the subwindow created. |
 
 **错误码：**
 
@@ -117,14 +117,14 @@ createSubWindowWithOptions(name: string, subWindowConfig: window.SubWindowOption
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | name | string | 是 | 子窗口的名字。 |
-| subWindowConfig | window.SubWindowOptions | 是 | 子窗口参数。 |
+| subWindowConfig | [window.SubWindowOptions](arkts-arkui-window-subwindowoptions-i.md) | 是 | 子窗口参数。 |
 | followCreatorLifecycle | boolean | 是 | 子窗生命周期是否跟组件（EmbeddedComponent或UIExtensionComponent）保持同步。true表示该组件隐藏时，子窗隐藏，该组件显示时子窗显示，false表示子窗的显隐不跟随该组件变化。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;window.Window&gt; | Promise used to return the subwindow. |
+| Promise&lt;[window.Window](arkts-arkui-window-window-i.md)&gt; | Promise used to return the subwindow. |
 
 **错误码：**
 
@@ -201,13 +201,13 @@ getWindowAvoidArea(type: window.AvoidAreaType): window.AvoidArea
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | window.AvoidAreaType | 是 | 表示避让区类型。 |
+| type | [window.AvoidAreaType](arkts-arkui-window-avoidareatype-e.md) | 是 | 表示避让区类型。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| window.AvoidArea | Avoidance area for the content of the host window. |
+| [window.AvoidArea](arkts-arkui-window-avoidarea-i.md) | Avoidance area for the content of the host window. |
 
 **错误码：**
 
@@ -361,7 +361,7 @@ off(type: 'windowSizeChange', callback?: Callback<window.Size>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'windowSizeChange' | 是 | 注销的事件类型，固定值：'windowSizeChange'，即组件（EmbeddedComponent或UIExtensionComponent）尺寸变化事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;window.Size&gt; | 否 | 回调函数。返回当前的组件（EmbeddedComponent或UIExtensionComponent）尺寸。如果传入该参数，则关闭该监听。如果未传入参数，则关闭组件（EmbeddedComponent或UIExtensionComponent）尺寸变化的监听。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[window.Size](arkts-arkui-window-size-i.md)&gt; | 否 | 回调函数。返回当前的组件（EmbeddedComponent或UIExtensionComponent）尺寸。如果传入该参数，则关闭该监听。如果未传入参数，则关闭组件（EmbeddedComponent或UIExtensionComponent）尺寸变化的监听。 |
 
 **错误码：**
 
@@ -500,7 +500,7 @@ on(type: 'windowSizeChange', callback: Callback<window.Size>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'windowSizeChange' | 是 | 监听的事件类型，固定为'windowSizeChange'，即组件（EmbeddedComponent或UIExtensionComponent）尺寸变化事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;window.Size&gt; | 是 | 回调函数：入参用于接收当前组件（EmbeddedComponent或UIExtensionComponent）的尺寸。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[window.Size](arkts-arkui-window-size-i.md)&gt; | 是 | 回调函数：入参用于接收当前组件（EmbeddedComponent或UIExtensionComponent）的尺寸。 |
 
 **错误码：**
 

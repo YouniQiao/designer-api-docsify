@@ -4,6 +4,8 @@ An enumeration type that identifies the current node's rendering state. The UI c
 
 **Since:** 20
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## ABOUT_TO_RENDER_IN

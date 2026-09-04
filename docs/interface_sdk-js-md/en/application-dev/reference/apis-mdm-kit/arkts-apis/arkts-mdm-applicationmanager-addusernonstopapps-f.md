@@ -35,7 +35,7 @@ Since API version 26.0.0, if you call [setDisallowedPolicyForAccount](arkts-mdm-
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
-| applicationInstances | Array&lt;common.ApplicationInstance&gt; | Yes | Array of non-stoppable applications. A maximum of 10 applications can be added to the non-stoppable application list. This limit is not divided among users. Specifically, the total number of such applications added by all users cannot exceed 10. For example, if there are already 3 applications in the current list, a maximum of 7 more can be added for a specified user via this API. |
+| applicationInstances | Array&lt;[common.ApplicationInstance](arkts-mdm-common-applicationinstance-i.md)&gt; | Yes | Array of non-stoppable applications. A maximum of 10 applications can be added to the non-stoppable application list. This limit is not divided among users. Specifically, the total number of such applications added by all users cannot exceed 10. For example, if there are already 3 applications in the current list, a maximum of 7 more can be added for a specified user via this API. |
 
 **Error codes:**
 

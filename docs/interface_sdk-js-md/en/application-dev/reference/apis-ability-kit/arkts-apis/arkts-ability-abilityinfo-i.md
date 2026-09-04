@@ -226,7 +226,7 @@ readonly launchType: bundleManager.LaunchType
 
 Ability launch mode, that is, whether it can be started in multiton mode. For details, see [LaunchType](arkts-ability-bundlemanager-launchtype-e.md).
 
-**Type:** bundleManager.LaunchType
+**Type:** [bundleManager.LaunchType](arkts-ability-bundlemanager-launchtype-e.md)
 
 **Since:** 9
 
@@ -290,7 +290,7 @@ readonly orientation: bundleManager.DisplayOrientation
 
 Ability display orientation. It is derived from the **orientation** field under **abilities** in the [module.json5](../../../quick-start/module-configuration-file.md) file. If **orientation** in the file is set to an enumerated value, this property is a non-zero value. For details about the available values, see [displayOrientation](arkts-ability-bundlemanager-displayorientation-e.md). If **orientation** in the file is set to a resource index, the value of this property is **0**.
 
-**Type:** bundleManager.DisplayOrientation
+**Type:** [bundleManager.DisplayOrientation](arkts-ability-bundlemanager-displayorientation-e.md)
 
 **Since:** 9
 
@@ -388,7 +388,7 @@ readonly supportWindowModes: Array<bundleManager.SupportWindowMode>
 
 Window modes supported by the ability.
 
-**Type:** Array&lt;bundleManager.SupportWindowMode&gt;
+**Type:** Array&lt;[bundleManager.SupportWindowMode](arkts-ability-bundlemanager-supportwindowmode-e.md)&gt;
 
 **Since:** 9
 
@@ -406,7 +406,7 @@ Ability type.
 
 **Model restriction**: This API can be used only in the FA model.
 
-**Type:** bundleManager.AbilityType
+**Type:** [bundleManager.AbilityType](arkts-ability-bundlemanager-abilitytype-e.md)
 
 **Since:** 9
 

@@ -245,7 +245,7 @@ Defines the policy change event. The super device administrator application can 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | common.PolicyChangedEvent | Yes | Policy change event, which contains detailed information about the policy change, such as the changed bundle name (**bundleName**), changed function name (**functionName**), changed parameters (**parameters**), and change time (**time**). The super device administrator application can perform policy audit or synchronization based on this information. |
+| event | [common.PolicyChangedEvent](arkts-mdm-common-policychangedevent-i.md) | Yes | Policy change event, which contains detailed information about the policy change, such as the changed bundle name (**bundleName**), changed function name (**functionName**), changed parameters (**parameters**), and change time (**time**). The super device administrator application can perform policy audit or synchronization based on this information. |
 
 **Examples**
 
@@ -736,7 +736,7 @@ Long-press event. When a single key or key combination is pressed for an extende
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| keyEvent | systemManager.KeyEvent | Yes | Information about the current key event, including the key code (**keyCode**), key action (**keyAction**, such as press or release), trigger time (**actionTime**), and list of pressed keys (**keyItems**). This information is used to identify and process key operations performed by the user. |
+| keyEvent | [systemManager.KeyEvent](arkts-mdm-systemmanager-keyevent-i.md) | Yes | Information about the current key event, including the key code (**keyCode**), key action (**keyAction**, such as press or release), trigger time (**actionTime**), and list of pressed keys (**keyItems**). This information is used to identify and process key operations performed by the user. |
 
 **Examples**
 
@@ -931,7 +931,7 @@ Callback triggered upon completion of log collection, after a log collection tas
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| result | common.Result | Yes | Log collection result, used to indicate whether log collection was successful. Common values are **SUCCESS** or **FAIL**. You can use this result to determine whether to proceed with subsequent log retrieval operations. |
+| result | [common.Result](arkts-mdm-common-result-e.md) | Yes | Log collection result, used to indicate whether log collection was successful. Common values are **SUCCESS** or **FAIL**. You can use this result to determine whether to proceed with subsequent log retrieval operations. |
 
 **Examples**
 
@@ -994,7 +994,7 @@ Called when an application is installed via the [bundleManager.installMarketApps
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Application bundle name on AppGallery. |
-| result | common.InstallationResult | Yes | Installation status of an application on AppGallery, including the installation success or failure. |
+| result | [common.InstallationResult](arkts-mdm-common-installationresult-i.md) | Yes | Installation status of an application on AppGallery, including the installation success or failure. |
 
 **Examples**
 
@@ -1052,7 +1052,7 @@ Callback for the startup wizard completion event. You can receive this callback 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scene | common.StartupScene | Yes | Specific scenario type that triggers the callback in the device setup wizard completion scenario, such as user setup completion (**USER_SETUP**), OTA upgrade completion (**OTA**), or device provisioning completion (**DEVICE_PROVISION**). You can execute corresponding service logic based on different scenarios. |
+| scene | [common.StartupScene](arkts-mdm-common-startupscene-e.md) | Yes | Specific scenario type that triggers the callback in the device setup wizard completion scenario, such as user setup completion (**USER_SETUP**), OTA upgrade completion (**OTA**), or device provisioning completion (**DEVICE_PROVISION**). You can execute corresponding service logic based on different scenarios. |
 
 **Examples**
 
@@ -1105,7 +1105,7 @@ Called to report a system update event. You should register the **MANAGED_EVENT_
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| systemUpdateInfo | systemManager.SystemUpdateInfo | Yes | System update information, which is used to notify the device administrator application of the system version update information. |
+| systemUpdateInfo | [systemManager.SystemUpdateInfo](arkts-mdm-systemmanager-systemupdateinfo-i.md) | Yes | System update information, which is used to notify the device administrator application of the system version update information. |
 
 **Examples**
 

@@ -14,4 +14,4 @@ export type UidNetStatsInfo = Record<number, NetStatsInfo>
 
 **系统接口：** 此接口为系统接口。
 
-**属性类型：** Record&lt;number, [NetStatsInfo](arkts-network-statistics-netstatsinfo-i.md)&gt;
+**类型：** Record&lt;number, [NetStatsInfo](arkts-network-statistics-netstatsinfo-i.md)&gt;

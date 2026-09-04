@@ -26,7 +26,7 @@ Obtains the template widget information provided by all applications on the devi
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;formInfo.FormInfo&gt;&gt; | Promise used to return the information obtained. |
+| Promise&lt;Array&lt;[formInfo.FormInfo](arkts-form-forminfo-forminfo-i.md)&gt;&gt; | Promise used to return the information obtained. |
 
 **Error codes:**
 

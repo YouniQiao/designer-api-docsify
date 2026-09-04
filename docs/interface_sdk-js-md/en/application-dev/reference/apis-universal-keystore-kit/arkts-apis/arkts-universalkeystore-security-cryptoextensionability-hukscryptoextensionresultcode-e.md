@@ -4,6 +4,8 @@ Enum for crypto extension ability result code, used by HuksCryptoExtensionResult
 
 **Since:** 22
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.Security.Huks.CryptoExtension
 
 ## HUKS_CRYPTO_EXTENSION_ERR_EXTENSION_FAIL

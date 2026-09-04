@@ -12,4 +12,4 @@ Mission information corresponding to ability.
 
 **System API:** This is a system API.
 
-**Property type:** _MissionInfo
+**Type:** _MissionInfo

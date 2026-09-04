@@ -19,3 +19,4 @@ This callback is triggered when the first screen rendering is detected to be com
 **Examples**
 
 For details about the complete sample code, see [onFirstScreenPaint](./arkts-basic-components-web-events.md#onfirstscreenpaint).
+- simpleType:

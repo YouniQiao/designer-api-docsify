@@ -36,7 +36,7 @@ desiredColorSpace?: colorSpaceManager.ColorSpaceManager
 
 目标色彩空间。默认值为UNKNOWN。
 
-**类型：** colorSpaceManager.ColorSpaceManager
+**类型：** [colorSpaceManager.ColorSpaceManager](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-colorspacemanager-colorspacemanager-i.md)
 
 **起始版本：** 11
 

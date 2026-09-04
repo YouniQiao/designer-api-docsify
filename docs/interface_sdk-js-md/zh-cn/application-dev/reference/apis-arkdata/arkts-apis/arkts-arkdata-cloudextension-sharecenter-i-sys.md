@@ -40,7 +40,7 @@ changeConfirmation(
 | userId | number | 是 | 表示用户账号ID。 |
 | bundleName | string | 是 | 应用包名。 |
 | sharingResource | string | 是 | 端云共享资源标识。 |
-| state | cloudData.sharing.State | 是 | 共享邀请的更改状态。 |
+| state | [cloudData.sharing.State](arkts-arkdata-sharing-state-e-sys.md) | 是 | 共享邀请的更改状态。 |
 
 **返回值：**
 
@@ -96,13 +96,13 @@ changePrivilege(
 | userId | number | 是 | 表示用户账号ID。 |
 | bundleName | string | 是 | 应用包名。 |
 | sharingResource | string | 是 | 端云共享资源标识。 |
-| participants | Array&lt;cloudData.sharing.Participant&gt; | 是 | 端云共享参与者。 |
+| participants | Array&lt;[cloudData.sharing.Participant](arkts-arkdata-sharing-participant-i-sys.md)&gt; | 是 | 端云共享参与者。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Result&lt;Array&lt;Result&lt;cloudData.sharing.Participant&gt;&gt;&gt;&gt; | Promise对象，返回更改权限的结果。 |
+| Promise&lt;Result&lt;Array&lt;Result&lt;[cloudData.sharing.Participant](arkts-arkdata-sharing-participant-i-sys.md)&gt;&gt;&gt;&gt; | Promise对象，返回更改权限的结果。 |
 
 **示例**
 
@@ -162,7 +162,7 @@ confirmInvitation(
 | userId | number | 是 | 表示用户账号ID。 |
 | bundleName | string | 是 | 应用包名。 |
 | invitationCode | string | 是 | 端云共享邀请码。 |
-| state | cloudData.sharing.State | 是 | 共享邀请的确认状态。 |
+| state | [cloudData.sharing.State](arkts-arkdata-sharing-state-e-sys.md) | 是 | 共享邀请的确认状态。 |
 
 **返回值：**
 
@@ -273,7 +273,7 @@ queryParticipants(
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Result&lt;Array&lt;cloudData.sharing.Participant&gt;&gt;&gt; | Promise对象，返回查询共享参与者的结果。 |
+| Promise&lt;Result&lt;Array&lt;[cloudData.sharing.Participant](arkts-arkdata-sharing-participant-i-sys.md)&gt;&gt;&gt; | Promise对象，返回查询共享参与者的结果。 |
 
 **示例**
 
@@ -357,7 +357,7 @@ queryParticipantsByInvitation(
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Result&lt;Array&lt;cloudData.sharing.Participant&gt;&gt;&gt; | Promise对象，返回根据邀请码查询共享参与者的结果。 |
+| Promise&lt;Result&lt;Array&lt;[cloudData.sharing.Participant](arkts-arkdata-sharing-participant-i-sys.md)&gt;&gt;&gt; | Promise对象，返回根据邀请码查询共享参与者的结果。 |
 
 **示例**
 
@@ -437,13 +437,13 @@ share(
 | userId | number | 是 | 表示用户账号ID。 |
 | bundleName | string | 是 | 应用包名。 |
 | sharingResource | string | 是 | 端云共享资源的标识。 |
-| participants | Array&lt;cloudData.sharing.Participant&gt; | 是 | 端云共享参与者。 |
+| participants | Array&lt;[cloudData.sharing.Participant](arkts-arkdata-sharing-participant-i-sys.md)&gt; | 是 | 端云共享参与者。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Result&lt;Array&lt;Result&lt;cloudData.sharing.Participant&gt;&gt;&gt;&gt; | Promise对象，返回发起共享的结果。 |
+| Promise&lt;Result&lt;Array&lt;Result&lt;[cloudData.sharing.Participant](arkts-arkdata-sharing-participant-i-sys.md)&gt;&gt;&gt;&gt; | Promise对象，返回发起共享的结果。 |
 
 **示例**
 
@@ -503,13 +503,13 @@ unshare(
 | userId | number | 是 | 表示用户账号ID。 |
 | bundleName | string | 是 | 应用包名。 |
 | sharingResource | string | 是 | 端云共享数据的资源标识。 |
-| participants | Array&lt;cloudData.sharing.Participant&gt; | 是 | 端云共享参与者。 |
+| participants | Array&lt;[cloudData.sharing.Participant](arkts-arkdata-sharing-participant-i-sys.md)&gt; | 是 | 端云共享参与者。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Result&lt;Array&lt;Result&lt;cloudData.sharing.Participant&gt;&gt;&gt;&gt; | Promise对象，返回取消共享的结果。 |
+| Promise&lt;Result&lt;Array&lt;Result&lt;[cloudData.sharing.Participant](arkts-arkdata-sharing-participant-i-sys.md)&gt;&gt;&gt;&gt; | Promise对象，返回取消共享的结果。 |
 
 **示例**
 

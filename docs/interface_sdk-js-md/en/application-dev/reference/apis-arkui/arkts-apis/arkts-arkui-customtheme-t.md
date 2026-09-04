@@ -14,4 +14,4 @@ Defines a custom theme.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** import('../api/@ohos.arkui.theme').CustomTheme
+**Type:** import('../api/@ohos.arkui.theme').CustomTheme

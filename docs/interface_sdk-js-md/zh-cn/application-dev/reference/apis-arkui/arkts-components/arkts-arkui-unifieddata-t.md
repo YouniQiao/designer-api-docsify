@@ -14,4 +14,4 @@ declare type UnifiedData = import('../api/@ohos.data.unifiedDataChannel').defaul
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-**属性类型：** import('../api/@ohos.data.unifiedDataChannel').default.UnifiedData
+**类型：** import('../api/@ohos.data.unifiedDataChannel').default.UnifiedData

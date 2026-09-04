@@ -10,4 +10,4 @@ Define a DriverExtensionContext for store context.
 
 **System capability:** SystemCapability.Driver.ExternalDevice
 
-**Property type:** _DriverExtensionContext
+**Type:** _DriverExtensionContext

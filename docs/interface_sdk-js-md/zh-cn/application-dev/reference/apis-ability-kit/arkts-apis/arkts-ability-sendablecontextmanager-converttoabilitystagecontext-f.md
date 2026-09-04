@@ -32,7 +32,7 @@ function convertToAbilityStageContext(sendableContext: SendableContext): common.
 
 | 类型 | 说明 |
 | --- | --- |
-| common.AbilityStageContext | [AbilityStageContext]{ |
+| [common.AbilityStageContext](arkts-ability-common-abilitystagecontext-t.md) | [AbilityStageContext]{ |
 
 **错误码：**
 

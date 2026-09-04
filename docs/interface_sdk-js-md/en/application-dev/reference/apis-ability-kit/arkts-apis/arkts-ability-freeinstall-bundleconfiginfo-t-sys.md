@@ -12,4 +12,4 @@ Defines the bundle configuration information.
 
 **System API:** This is a system API.
 
-**Property type:** _PackInfo.BundleConfigInfo
+**Type:** [_PackInfo.BundleConfigInfo](arkts-ability-bundlepackinfo-bundleconfiginfo-i-sys.md)

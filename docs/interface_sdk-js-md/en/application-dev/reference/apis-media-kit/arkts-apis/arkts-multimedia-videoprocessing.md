@@ -4,8 +4,6 @@ Provides the VideoProcessor type, including AIHDR related functions.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
-
 **System capability:** SystemCapability.Multimedia.VideoProcessingEngine
 
 ## Modules to Import

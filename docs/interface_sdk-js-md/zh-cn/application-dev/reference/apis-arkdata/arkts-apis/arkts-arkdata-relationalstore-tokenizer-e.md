@@ -55,6 +55,7 @@ CUSTOM_TOKENIZER = 2
 **示例**
 
 示例代码中this.context定义见Stage模型的应用[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md)。
+使用ICU_TOKENIZER分词器时，创建表的示例：
 
 ```TypeScript
 import { relationalStore } from '@kit.ArkData'; // 导入模块

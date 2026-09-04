@@ -4,6 +4,8 @@ Enumerates the same-page modes for cross-process embedded components and their h
 
 **Since:** 18
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## SEMI_SILENT

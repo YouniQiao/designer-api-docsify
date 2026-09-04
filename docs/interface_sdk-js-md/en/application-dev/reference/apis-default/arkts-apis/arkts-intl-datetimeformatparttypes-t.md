@@ -4,4 +4,4 @@
 type DateTimeFormatPartTypes = keyof DateTimeFormatPartTypesRegistry
 ```
 
-**Property type:** keyof DateTimeFormatPartTypesRegistry
+**Type:** keyof DateTimeFormatPartTypesRegistry

@@ -192,7 +192,7 @@ Obtains the character position information closest to the given coordinates.
 | --- | --- | --- | --- |
 | x | number | Yes | Horizontal coordinate in the text layout area, in physical pixels (px). X offset relative to the top-left corner of the text layout area, with the right direction as positive. Supports floating-point values and accepts negative values, which indicate positions to the left of the text layout area. If the coordinates are beyond the text layout area, the nearest character position is returned. It can be obtained through a touch event or click event. |
 | y | number | Yes | Vertical coordinate in the text layout area, in physical pixels (px). Y offset relative to the top-left corner of the text layout area, with the downward direction as positive. Supports floating-point values and accepts negative values, which indicate positions above the text layout area. If the coordinates are beyond the text layout area, the nearest character position is returned. It can be obtained through a touch event or click event. |
-| encoding | drawing.TextEncoding | Yes | Text encoding type. Currently, only UTF-8 and UTF-16 encoding types are supported. For UTF-8 encoding, the returned character position indicates the byte offset. For UTF-16 encoding, the returned character position indicates the UTF-16 encoding unit offset. |
+| encoding | [drawing.TextEncoding](arkts-arkgraphics2d-drawing-textencoding-e.md) | Yes | Text encoding type. Currently, only UTF-8 and UTF-16 encoding types are supported. For UTF-8 encoding, the returned character position indicates the byte offset. For UTF-16 encoding, the returned character position indicates the UTF-16 encoding unit offset. |
 
 **Return value:**
 
@@ -263,7 +263,7 @@ Obtains the character range corresponding to the specified glyph range.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | glyphRange | Range | Yes | Glyph range. |
-| encoding | drawing.TextEncoding | Yes | Text encoding type. Currently, only UTF-8 and UTF-16 encoding types are supported. For UTF-8 encoding, the returned character range indicates the byte range. For UTF-16 encoding, the returned character range indicates the UTF-16 encoding unit range. |
+| encoding | [drawing.TextEncoding](arkts-arkgraphics2d-drawing-textencoding-e.md) | Yes | Text encoding type. Currently, only UTF-8 and UTF-16 encoding types are supported. For UTF-8 encoding, the returned character range indicates the byte range. For UTF-16 encoding, the returned character range indicates the UTF-16 encoding unit range. |
 
 **Return value:**
 
@@ -366,7 +366,7 @@ Obtains the glyph range corresponding to the specified character range.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | characterRange | Range | Yes | Character range. |
-| encoding | drawing.TextEncoding | Yes | Text encoding type. Currently, only UTF-8 and UTF-16 encoding types are supported. For UTF-8 encoding, the returned actual character range indicates the byte range. For UTF-16 encoding, the returned actual character range indicates the UTF-16 encoding unit range. |
+| encoding | [drawing.TextEncoding](arkts-arkgraphics2d-drawing-textencoding-e.md) | Yes | Text encoding type. Currently, only UTF-8 and UTF-16 encoding types are supported. For UTF-8 encoding, the returned actual character range indicates the byte range. For UTF-16 encoding, the returned actual character range indicates the UTF-16 encoding unit range. |
 
 **Return value:**
 
@@ -1032,11 +1032,11 @@ The returned range depends on the specific truncation of the paragraph (for exam
 |---|---|  
 | Text is not truncated.| The range includes all typeset text.|
 | Only maxLines truncation is set (no ellipsis).| the text from the first line to the end of the maxLines line.|
-| EllipsisMode.END| The range is the text before the ellipsis.|
-| EllipsisMode.START| The value is the text after the ellipsis.|
-| EllipsisMode.MIDDLE| the text range before and after the ellipsis is returned.|
-| EllipsisMode.MULTILINE_START| the text range before and after the ellipsis is returned.|
-| EllipsisMode.MULTILINE_MIDDLE| the text range before and after the ellipsis is returned.|
+| [EllipsisMode.END](arkts-arkgraphics2d-text-textalign-e.md) | The range is the text before the ellipsis.|
+| [EllipsisMode.START](arkts-arkgraphics2d-text-textalign-e.md) | The value is the text after the ellipsis.|
+| [EllipsisMode.MIDDLE](arkts-arkgraphics2d-text-ellipsismode-e.md) | the text range before and after the ellipsis is returned.|
+| [EllipsisMode.MULTILINE_START](arkts-arkgraphics2d-text-ellipsismode-e.md) | the text range before and after the ellipsis is returned.|
+| [EllipsisMode.MULTILINE_MIDDLE](arkts-arkgraphics2d-text-ellipsismode-e.md) | the text range before and after the ellipsis is returned.|
 
 **Since:** 26.0.0
 
@@ -1278,7 +1278,7 @@ Draws text on the canvas with (x, y) as the upper-left corner. You must call [la
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| canvas | drawing.Canvas | Yes | Target canvas. |
+| canvas | [drawing.Canvas](arkts-arkgraphics2d-drawing-canvas-c.md) | Yes | Target canvas. |
 | x | number | Yes | Horizontal coordinate of the upper left corner, which is a floating-point value, in physical pixels (px). |
 | y | number | Yes | Vertical coordinate of the upper left corner, which is a floating-point value, in physical pixels (px). |
 
@@ -1371,8 +1371,8 @@ Draws text along a path on the canvas. You must call [layout()](#layout) for typ
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| canvas | drawing.Canvas | Yes | Target canvas. |
-| path | drawing.Path | Yes | Path along which the text is drawn. |
+| canvas | [drawing.Canvas](arkts-arkgraphics2d-drawing-canvas-c.md) | Yes | Target canvas. |
+| path | [drawing.Path](arkts-arkgraphics2d-drawing-path-c.md) | Yes | Path along which the text is drawn. |
 | hOffset | number | Yes | Offset along the path direction. Positive values extend forward from the path start point, and negative values extend backward. Unit: physical pixels (px). |
 | vOffset | number | Yes | Offset along the vertical direction of the path. Positive values extend to the right along the path, and negative values extend to the left. Unit: physical pixels (px). |
 
@@ -1406,7 +1406,7 @@ Updates the color of the entire text span. This API call also updates the decora
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | common2D.Color | Yes | Updated font color. |
+| color | [common2D.Color](arkts-arkgraphics2d-common2d-color-i.md) | Yes | Updated font color. |
 
 **Examples**
 

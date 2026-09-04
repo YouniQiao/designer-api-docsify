@@ -14,4 +14,4 @@ Represents a visual effect configuration object.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** import('../api/@ohos.graphics.uiEffect').default.VisualEffect
+**Type:** import('../api/@ohos.graphics.uiEffect').default.VisualEffect

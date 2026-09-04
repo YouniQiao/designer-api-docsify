@@ -1066,6 +1066,7 @@ struct Index {
 ```
 
 For details, see [isDisposed](#isdisposed).
+This example demonstrates how to verify a ReactiveBuilderNode's state using the [isDisposed](#isdisposed) API before and after node release. This API returns false before node release and true after node release.
 
 ```TypeScript
 import { FrameNode, NodeController, ReactiveBuilderNode } from '@kit.ArkUI';
@@ -1247,8 +1248,10 @@ Posts the input event to the target node managed by the **ReactiveBuilderNode**.
 **Examples**
 
 See Example 1: Handling Mouse Events in BuilderNode, Example 2: Handling Touch Events in BuilderNode, and Example 3: Handling Axis Events in BuilderNode.
+- simpleType:
 
 For details, see Example 13: Handling Mouse Events in ReactiveBuilderNode, Example 14: Handling Touch Events in ReactiveBuilderNode, and Example 15: Handling Axis Events in ReactiveBuilderNode.
+- simpleType:
 
 ## postInputEventWithStrategy
 
@@ -1311,6 +1314,7 @@ Before calling this API, you need to convert the value of **event** to the corre
 **Examples**
 
 For details, see Example 16: Handling Mouse Events with Competition Strategies in BuilderNode, Example 17: Handling Touch Events with Competition Strategies in BuilderNode, and Example 18: Handling Axis Events with Competition Strategies in BuilderNode.
+- simpleType:
 
 ## postTouchEvent
 
@@ -1450,6 +1454,7 @@ struct MyComponent {
 ```
 
 The following example demonstrates coordinate conversion and cross-node transfer of the touch event in the custom node through the linkage between the button component constructed by ReactiveBuilderNode and the touch event of the external container.
+When the blue area is touched, the touch event is transferred to the ReactiveBuilderNode button after coordinate conversion. The touch feedback and log output of the button are triggered, implementing accurate cross-node transfer of the touch event.
 
 ```TypeScript
 import { NodeController, ReactiveBuilderNode, FrameNode, UIContext } from '@kit.ArkUI';
@@ -1749,6 +1754,7 @@ struct Index {
 ```
 
 recycle
+Since API version 26.0.0, custom components in the ReactiveBuilderNode support V2 component reuse.
 
 ```TypeScript
 import { FrameNode, NodeController, ReactiveBuilderNode, UIContext } from '@kit.ArkUI';
@@ -1959,6 +1965,7 @@ ReactiveBuilderNode completes the reuse event transfer between internal and exte
 **Examples**
 
 For details, see the example in [recycle](#recycle).
+- simpleType:
 
 ## updateConfiguration
 

@@ -1435,6 +1435,7 @@ ReactiveComponentContent通过reuse和[recycle](#recycle)接口完成其内外�
 **示例**
 
 请参考[recycle](#recycle)中的示例。
+- simpleType:
 
 ## updateConfiguration
 

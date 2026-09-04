@@ -40,7 +40,7 @@ executeMode?: insightIntent.ExecuteMode[]
 
 The execute mode of the intent. For UIAbility, the parameter can be set to insightIntent.ExecuteMode.UI_ABILITY_FOREGROUND or insightIntent.ExecuteMode.UI_ABILITY_UI_ABILITY_BACKGROUND or both of them.
 
-**类型：** insightIntent.ExecuteMode[]
+**类型：** [insightIntent.ExecuteMode](arkts-ability-insightintent-executemode-e.md)[]
 
 **起始版本：** 20
 

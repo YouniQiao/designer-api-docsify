@@ -1,8 +1,14 @@
 # FocusController
 
-提供控制焦点的能力，如清除、移动和激活焦点等功能。
+提供控制焦点的能力，如清除、移动和激活焦点等功能，适用于需要管理页面或组件焦点状态、控制焦点流转的场景，可帮助开发者优化键盘等输入方式下的焦点交互体验。
 
 > **说明：**
+
+> - 本模块首批接口从API version 10开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。
+> 
+> - 本Class首批接口从API version 12开始支持。
+> 
+> - 本模块接口仅可在Stage模型下使用。
 > 
 > 以下API需先使用UIContext中的[getFocusController()](arkts-arkui-arkui-uicontext-uicontext-c.md#getfocuscontroller)方法获取FocusController实例，再通过该实例调用对应方法。
 
@@ -151,7 +157,7 @@ struct ClearFocusExample {
 isActive(): boolean
 ```
 
-返回UI实例的焦点激活态。
+返回UI实例的焦点激活态。适用于需要根据当前焦点激活状态决定是否启用方向键走焦或更新焦点提示的场景。
 
 焦点激活态可参考[基础概念：焦点激活态](../../../ui/arkts-common-events-focus-event.md#基础概念)。
 
@@ -225,7 +231,7 @@ struct IsActiveExample {
 requestFocus(key: string): void
 ```
 
-通过组件的id将焦点转移到组件树对应的实体节点，当前帧生效。
+通过组件的id将焦点转移到组件树对应的实体节点，当前帧生效，适用于需要在表单校验、页面初始化或键盘操作流程中主动将焦点定位到指定组件的场景。
 
 **起始版本：** 12
 
@@ -385,7 +391,7 @@ struct CustomDialogUser {
 setKeyProcessingMode(mode: KeyProcessingMode): void
 ```
 
-设置按键事件处理的优先级。
+设置按键事件处理的优先级，适用于父子组件都需要处理按键事件时，开发者需要控制按键事件优先分发策略的场景。
 
 **起始版本：** 15
 

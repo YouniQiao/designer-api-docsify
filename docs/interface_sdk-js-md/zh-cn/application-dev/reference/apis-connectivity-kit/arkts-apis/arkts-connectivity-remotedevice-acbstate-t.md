@@ -12,4 +12,4 @@ type AcbState = nearlinkConstant.AcbState
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
-**属性类型：** nearlinkConstant.AcbState
+**类型：** [nearlinkConstant.AcbState](arkts-connectivity-nearlinkconstant-acbstate-e.md)

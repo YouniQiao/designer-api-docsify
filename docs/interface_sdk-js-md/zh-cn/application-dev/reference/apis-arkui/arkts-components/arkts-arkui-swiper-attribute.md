@@ -383,7 +383,7 @@ displayMode(value: SwiperDisplayMode)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [SwiperDisplayMode](arkts-arkui-swiperdisplaymode-e.md) | 是 | 主轴方向上元素排列的模式。默认值：SwiperDisplayMode.STRETCH |
+| value | [SwiperDisplayMode](arkts-arkui-swiperdisplaymode-e.md) | 是 | [主轴方向上元素排列的模式。默认值：SwiperDisplayMode.STRETCH](arkts-arkui-swiperdisplaymode-e.md) |
 
 ## duration
 
@@ -429,7 +429,7 @@ effectMode(value: EdgeEffect)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [EdgeEffect](../arkts-apis/arkts-arkui-edgeeffect-e.md) | 是 | 边缘滑动效果。默认值：EdgeEffect.Spring |
+| value | [EdgeEffect](../arkts-apis/arkts-arkui-edgeeffect-e.md) | 是 | [边缘滑动效果。默认值：EdgeEffect.Spring](arkts-arkui-swipeedgeeffect-e.md) |
 
 ## index
 

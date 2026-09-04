@@ -27,7 +27,7 @@ function getRunningProcessInformationByBundleType(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| bundleType | bundleManager.BundleType | 是 | 表示要查询的包类型。 |
+| bundleType | [bundleManager.BundleType](arkts-ability-bundlemanager-bundletype-e.md) | 是 | 表示要查询的包类型。 |
 
 **返回值：**
 

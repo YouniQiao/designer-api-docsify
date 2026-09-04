@@ -118,7 +118,7 @@ userProfile: image.PixelMap
 
 用户头像图片。
 
-**类型：** image.PixelMap
+**类型：** [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)
 
 **起始版本：** 11
 

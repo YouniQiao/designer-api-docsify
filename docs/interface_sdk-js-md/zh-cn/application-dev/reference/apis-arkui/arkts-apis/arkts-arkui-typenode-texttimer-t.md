@@ -14,4 +14,4 @@ TextTimer类型的FrameNode节点类型。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-**属性类型：** [TypedFrameNode](arkts-arkui-framenode-typedframenode-i.md)&lt;TextTimerInterface, [TextTimerAttribute](../arkts-components/arkts-arkui-texttimer-attribute.md)&gt;
+**类型：** [TypedFrameNode](arkts-arkui-framenode-typedframenode-i.md)&lt;TextTimerInterface, [TextTimerAttribute](../arkts-components/arkts-arkui-texttimer-attribute.md)&gt;

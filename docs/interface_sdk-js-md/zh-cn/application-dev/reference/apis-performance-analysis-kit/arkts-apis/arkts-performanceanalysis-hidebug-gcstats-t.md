@@ -10,4 +10,4 @@ type GcStats = Record<string, number>
 
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
-**属性类型：** Record&lt;string, number&gt;
+**类型：** Record&lt;string, number&gt;

@@ -60,7 +60,7 @@ shapePath: Array<common2D.Point>
 
 Indicates the path points information.
 
-**Type:** Array&lt;common2D.Point&gt;
+**Type:** Array&lt;[common2D.Point](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-common2d-point-i.md)&gt;
 
 **Since:** 23
 

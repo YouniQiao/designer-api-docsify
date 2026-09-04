@@ -45,7 +45,7 @@ GestureType：手势事件类型；
 
 PageUpdateType：页面更新类型。
 
-**类型：** accessibility.EventType \| accessibility.WindowUpdateType \| [TouchGuideType](arkts-accessibility-touchguidetype-t.md) \| [GestureType](arkts-accessibility-gesturetype-t.md) \| [PageUpdateType](arkts-accessibility-pageupdatetype-t.md)
+**类型：** [accessibility.EventType](arkts-accessibility-accessibility-eventtype-t.md) \| [accessibility.WindowUpdateType](arkts-accessibility-accessibility-windowupdatetype-t.md) \| [TouchGuideType](arkts-accessibility-touchguidetype-t.md) \| [GestureType](arkts-accessibility-gesturetype-t.md) \| [PageUpdateType](arkts-accessibility-pageupdatetype-t.md)
 
 **起始版本：** 9
 

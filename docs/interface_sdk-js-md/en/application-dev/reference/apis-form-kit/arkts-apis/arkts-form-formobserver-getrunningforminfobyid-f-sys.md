@@ -34,7 +34,7 @@ Obtains the RunningFormInfo object by formId.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;formInfo.RunningFormInfo&gt; | The promise returned by the function. |
+| Promise&lt;[formInfo.RunningFormInfo](arkts-form-forminfo-runningforminfo-i.md)&gt; | The promise returned by the function. |
 
 **Error codes:**
 
@@ -95,7 +95,7 @@ Obtains the RunningFormInfo object by formId.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;formInfo.RunningFormInfo&gt; | The promise returned by the function. |
+| Promise&lt;[formInfo.RunningFormInfo](arkts-form-forminfo-runningforminfo-i.md)&gt; | The promise returned by the function. |
 
 **Error codes:**
 
@@ -150,7 +150,7 @@ Obtains the RunningFormInfo object by formId.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | formId | string | Yes | Indicates the form provider formId. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;formInfo.RunningFormInfo&gt; | Yes | The callback of getFormInstancesById. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[formInfo.RunningFormInfo](arkts-form-forminfo-runningforminfo-i.md)&gt; | Yes | The callback of getFormInstancesById. |
 
 **Error codes:**
 
@@ -212,7 +212,7 @@ Obtains the RunningFormInfo object by formId.
 | --- | --- | --- | --- |
 | formId | string | Yes | Indicates the form provider formId. |
 | isUnusedIncluded | boolean | Yes | Indicates whether to include unused form. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;formInfo.RunningFormInfo&gt; | Yes | The callback of getFormInstancesById. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[formInfo.RunningFormInfo](arkts-form-forminfo-runningforminfo-i.md)&gt; | Yes | The callback of getFormInstancesById. |
 
 **Error codes:**
 

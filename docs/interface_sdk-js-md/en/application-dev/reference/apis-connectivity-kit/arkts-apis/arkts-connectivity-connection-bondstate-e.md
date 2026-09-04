@@ -4,6 +4,8 @@ The enum of bond state.
 
 **Since:** 10
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## BOND_STATE_INVALID

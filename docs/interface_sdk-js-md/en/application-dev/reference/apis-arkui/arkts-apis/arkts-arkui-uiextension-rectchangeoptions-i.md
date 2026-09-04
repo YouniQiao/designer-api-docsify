@@ -38,7 +38,7 @@ rect: window.Rect
 
 New values of the rectangle of the component after the change.
 
-**Type:** window.Rect
+**Type:** [window.Rect](arkts-arkui-window-rect-i.md)
 
 **Since:** 14
 

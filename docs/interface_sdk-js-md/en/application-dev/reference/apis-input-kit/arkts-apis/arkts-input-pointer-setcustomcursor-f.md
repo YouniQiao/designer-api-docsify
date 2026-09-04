@@ -23,7 +23,7 @@ Sets a custom pointer style for a specified window. This API can set only the cu
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | windowId | number | Yes | Window ID. |
-| pixelMap | image.PixelMap | Yes | Custom cursor resource. |
+| pixelMap | [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | Yes | Custom cursor resource. |
 | focusX | number | No | Custom cursor focus X, in px. The value must be greater than or equal to 0. The default value is **0**. |
 | focusY | number | No | Custom cursor focus Y, in px. The value must be greater than or equal to 0. The default value is **0**. |
 

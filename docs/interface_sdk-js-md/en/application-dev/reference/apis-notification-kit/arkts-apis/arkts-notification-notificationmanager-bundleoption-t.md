@@ -10,4 +10,4 @@ Describes the bundle information of an application.
 
 **System capability:** SystemCapability.Notification.Notification
 
-**Property type:** _BundleOption
+**Type:** _BundleOption

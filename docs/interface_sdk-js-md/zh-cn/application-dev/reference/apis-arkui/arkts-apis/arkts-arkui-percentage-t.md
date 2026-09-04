@@ -16,4 +16,4 @@ declare type Percentage = `${number}%`
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-**属性类型：** `${number}%`
+**类型：** `${number}%`

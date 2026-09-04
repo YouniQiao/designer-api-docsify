@@ -14,4 +14,4 @@ Describes the rectangle that contains the text.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** import('../api/@ohos.graphics.text').default.TextBox
+**Type:** import('../api/@ohos.graphics.text').default.TextBox

@@ -34,7 +34,7 @@ public constructor(locale?: Intl.Locale, options?: SymbolNumberFormatOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| locale | Intl.Locale | 否 | 区域对象。默认值：系统区域对象。 |
+| locale | [Intl.Locale](arkts-localization-intl-locale-c.md) | 否 | 区域对象。默认值：系统区域对象。 |
 | options | [SymbolNumberFormatOptions](arkts-localization-i18n-symbolnumberformatoptions-i.md) | 否 | 自定义数字格式化符号的配置项。默认值：区域默认的符号。 |
 
 **示例**

@@ -55,13 +55,13 @@ Captures a snapshot of the area between two specified components. This API uses 
 | start | [NodeIdentity](arkts-arkui-nodeidentity-t.md) | Yes | ID of the component marking the start of the capture range. |
 | end | [NodeIdentity](arkts-arkui-nodeidentity-t.md) | Yes | ID of the component marking the end of the capture range. |
 | isStartRect | boolean | Yes | Whether to use the bounding rectangle of the **start** component to determine the capture range.   **true**: Use the bounding rectangle of the **start** component. **false**: Use the bounding rectangle of the **end** component.Default value: **true**. |
-| options | componentSnapshot.SnapshotOptions | No | Custom snapshot configuration options. The **region** parameter is not supported. |
+| options | [componentSnapshot.SnapshotOptions](arkts-arkui-componentsnapshot-snapshotoptions-i.md) | No | Custom snapshot configuration options. The **region** parameter is not supported. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;image.PixelMap&gt; | Result of the snapshot. |
+| Promise&lt;[image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)&gt; | Result of the snapshot. |
 
 **Error codes:**
 

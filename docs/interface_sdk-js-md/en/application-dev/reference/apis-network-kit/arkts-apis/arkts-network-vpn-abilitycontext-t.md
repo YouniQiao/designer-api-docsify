@@ -10,4 +10,4 @@ The context of an ability. It allows access to ability-specific resources.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
-**Property type:** _AbilityContext
+**Type:** _AbilityContext

@@ -38,6 +38,10 @@ Applies a foreground color animation to the drag preview. This API does not work
 **Examples**
 
 > NOTE
+> 
+> You are advised to use [getDragController](arkts-arkui-arkui-uicontext-uicontext-c.md#getdragcontroller) in [UIContext](arkts-apis-uicontext-uicontext.md) to obtain the DragController object associated with the current UI context.
+
+In the EntryAbility.ets file, obtain the UI context and save it to LocalStorage.
 
 ```TypeScript
 import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
@@ -198,3 +202,4 @@ Sets the foreground color of the drag preview. This API does not work in the **O
 **Examples**
 
 See [animate](#animate).
+- simpleType:

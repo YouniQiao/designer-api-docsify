@@ -12,4 +12,4 @@ Provides methods for controlling the 3d scene
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
-**Property type:** import('../api/@ohos.graphics.scene').Scene
+**Type:** import('../api/@ohos.graphics.scene').Scene

@@ -255,6 +255,7 @@ Hide all ComponentContents on the OverlayManager.
 **示例**
 
 请参考[addComponentContent](#addcomponentcontent)示例。
+- simpleType:
 
 ## hideComponentContent
 
@@ -281,6 +282,7 @@ Hide the ComponentContent.
 **示例**
 
 请参考[addComponentContent](#addcomponentcontent)示例。
+- simpleType:
 
 ## openOrderOverlay
 
@@ -392,6 +394,7 @@ Removes a specified ComponentContent node from the OverlayManager
 **示例**
 
 请参考[addComponentContent](#addcomponentcontent)示例。
+- simpleType:
 
 ## showAllComponentContents
 
@@ -412,6 +415,7 @@ Show all ComponentContents on the OverlayManager.
 **示例**
 
 请参考[addComponentContent](#addcomponentcontent)示例。
+- simpleType:
 
 ## showComponentContent
 
@@ -438,3 +442,4 @@ Show the ComponentContent.
 **示例**
 
 请参考[addComponentContent](#addcomponentcontent)示例。
+- simpleType:

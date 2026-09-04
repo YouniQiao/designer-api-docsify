@@ -14,4 +14,4 @@ Triggered to encapsulate the data sent by the started ability.
 
 **System API:** This is a system API.
 
-**Property type:** import('../api/@ohos.base').Callback&lt;Record&lt;string, Object&gt;&gt;
+**Type:** import('../api/@ohos.base').Callback&lt;Record&lt;string, Object&gt;&gt;

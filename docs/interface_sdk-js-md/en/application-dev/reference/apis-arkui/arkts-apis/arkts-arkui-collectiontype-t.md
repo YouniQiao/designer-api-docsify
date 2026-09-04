@@ -21,7 +21,7 @@ Defines the types of persistent collection data supported by **globalConnect** u
 | Map&lt;string |  |
 | number, S&gt; |  |
 | Set&lt;S&gt; | The value is of the Set type. |
-| collections.Array&lt;S&gt; | The value is of the collections.Array type. |
+| [collections.Array](../../apis-arkts/arkts-apis/arkts-arkts-collections-array-c.md)&lt;S&gt; | The value is of the collections.Array type. |
 | collections.Map&lt;string |  |
 | number, S&gt; |  |
-| collections.Set&lt;S&gt; | The value is of the collections.Set type. |
+| [collections.Set](../../apis-arkts/arkts-apis/arkts-arkts-collections-set-c.md)&lt;S&gt; | The value is of the collections.Set type. |

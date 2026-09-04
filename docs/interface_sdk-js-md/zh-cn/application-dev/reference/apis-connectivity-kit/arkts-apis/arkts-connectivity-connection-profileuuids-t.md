@@ -12,4 +12,4 @@ type ProfileUuids = constant.ProfileUuids
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
-**属性类型：** constant.ProfileUuids
+**类型：** [constant.ProfileUuids](arkts-connectivity-constant-profileuuids-e.md)

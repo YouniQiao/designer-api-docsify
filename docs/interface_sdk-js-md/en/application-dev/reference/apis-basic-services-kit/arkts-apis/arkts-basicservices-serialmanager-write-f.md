@@ -46,6 +46,8 @@ Writes data to the serial port device asynchronously. The length of data written
 **Examples**
 
 > NOTE
+> 
+> The following sample code shows the basic process for calling the write API and it needs to be executed in a specific method. In actual calling, you must comply with the device-related protocols.
 
 ```TypeScript
 import { JSON } from '@kit.ArkTS';

@@ -14,4 +14,4 @@ Import the DialogController type from promptAction.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** import('../api/@ohos.promptAction').promptAction.DialogController
+**Type:** import('../api/@ohos.promptAction').promptAction.DialogController

@@ -4,8 +4,6 @@ The **abilityConnectionManager** module provides APIs for cross-device connectio
 
 **Since:** 18
 
-**Model restriction:** This API can be used only in the stage model.
-
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
 
 ## Modules to Import

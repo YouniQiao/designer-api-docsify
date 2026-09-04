@@ -58,7 +58,7 @@ function on(type: 'formOverflow', callback: Callback<formInfo.OverflowRequest>):
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'formOverflow' | 是 | 事件回调类型，支持的事件为'formOverflow'，表示互动卡片动效请求。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;formInfo.OverflowRequest&gt; | 是 | 回调函数，用于卡片使用方对动效请求进行处理。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[formInfo.OverflowRequest](arkts-form-forminfo-overflowrequest-i-sys.md)&gt; | 是 | 回调函数，用于卡片使用方对动效请求进行处理。 |
 
 **错误码：**
 
@@ -102,7 +102,7 @@ function on(type: 'changeSceneAnimationState',
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'changeSceneAnimationState' | 是 | 事件回调类型，支持的事件为'changeSceneAnimationState'，表示互动卡片状态切换。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;formInfo.ChangeSceneAnimationStateRequest&gt; | 是 | 回调函数，用于卡片使用方处理状态切换请求。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[formInfo.ChangeSceneAnimationStateRequest](arkts-form-forminfo-changesceneanimationstaterequest-i-sys.md)&gt; | 是 | 回调函数，用于卡片使用方处理状态切换请求。 |
 
 **错误码：**
 
@@ -145,7 +145,7 @@ function on(type: 'getFormRect', callback: formInfo.GetFormRectInfoCallback): vo
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'getFormRect' | 是 | 事件回调类型，支持的事件为'getFormRect'，表示卡片位置尺寸查询。 |
-| callback | formInfo.GetFormRectInfoCallback | 是 | 回调函数，卡片使用方对查询请求进行处理，返回卡片相对屏幕左上角的位置信息和卡片尺寸信息。 |
+| callback | [formInfo.GetFormRectInfoCallback](arkts-form-forminfo-getformrectinfocallback-t-sys.md) | 是 | 回调函数，卡片使用方对查询请求进行处理，返回卡片相对屏幕左上角的位置信息和卡片尺寸信息。 |
 
 **错误码：**
 
@@ -198,7 +198,7 @@ Listens to the event of get live form status.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'getLiveFormStatus' | 是 | Indicates event type. |
-| callback | formInfo.GetLiveFormStatusCallback | 是 | The callback of get live form status. |
+| callback | [formInfo.GetLiveFormStatusCallback](arkts-form-forminfo-getliveformstatuscallback-t-sys.md) | 是 | The callback of get live form status. |
 
 **错误码：**
 

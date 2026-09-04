@@ -23,7 +23,7 @@ colorMode?: ConfigurationConstant.ColorMode
 
 Color mode, which can be **COLOR_MODE_LIGHT** or **COLOR_MODE_DARK**. The default value is **COLOR_MODE_LIGHT**.
 
-**Type:** ConfigurationConstant.ColorMode
+**Type:** [ConfigurationConstant.ColorMode](arkts-ability-configurationconstant-colormode-depr-e.md)
 
 **Since:** 8
 

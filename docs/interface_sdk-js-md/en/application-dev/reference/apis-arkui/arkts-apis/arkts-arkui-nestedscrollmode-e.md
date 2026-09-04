@@ -4,6 +4,8 @@ Nested scroll nested mode
 
 **Since:** 10
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## SELF_ONLY

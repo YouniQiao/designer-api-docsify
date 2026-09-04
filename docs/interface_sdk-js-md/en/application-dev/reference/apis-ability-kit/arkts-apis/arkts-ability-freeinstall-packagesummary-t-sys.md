@@ -12,4 +12,4 @@ Defines the package summary information in the **pack.info** file.
 
 **System API:** This is a system API.
 
-**Property type:** _PackInfo.PackageSummary
+**Type:** [_PackInfo.PackageSummary](arkts-ability-bundlepackinfo-packagesummary-i-sys.md)

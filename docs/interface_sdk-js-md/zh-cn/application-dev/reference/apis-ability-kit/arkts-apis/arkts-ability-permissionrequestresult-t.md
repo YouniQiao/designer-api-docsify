@@ -14,4 +14,4 @@ export type PermissionRequestResult = _PermissionRequestResult
 
 **系统能力：** SystemCapability.Security.AccessToken
 
-**属性类型：** _PermissionRequestResult
+**类型：** _PermissionRequestResult

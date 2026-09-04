@@ -4,6 +4,8 @@ SOCKS5代理的DNS查询策略配置信息。
 
 **起始版本：** 26.0.0
 
+**模型约束：** 此接口仅可在Stage模型下使用。
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 ## SYSTEM_MODE

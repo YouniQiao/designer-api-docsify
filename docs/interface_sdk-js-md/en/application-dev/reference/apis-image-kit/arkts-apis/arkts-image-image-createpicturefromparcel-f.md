@@ -24,7 +24,7 @@ Images occupy a large amount of memory. When you finish using a Picture instance
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sequence | rpc.MessageSequence | Yes | MessageSequence object that stores the Picture information. |
+| sequence | [rpc.MessageSequence](../../apis-ipc-kit/arkts-apis/arkts-ipc-rpc-messagesequence-c.md) | Yes | MessageSequence object that stores the Picture information. |
 
 **Return value:**
 

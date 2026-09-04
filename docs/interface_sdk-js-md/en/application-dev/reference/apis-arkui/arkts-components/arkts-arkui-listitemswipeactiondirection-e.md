@@ -4,6 +4,8 @@ Enumerates the swipe action menu display directions for ListItem components.
 
 **Since:** 21
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## START

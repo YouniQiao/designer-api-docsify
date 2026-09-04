@@ -14,4 +14,4 @@ Defines the display order of the dialog box.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** import('../api/@ohos.promptAction').LevelOrder
+**Type:** import('../api/@ohos.promptAction').LevelOrder

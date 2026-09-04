@@ -14,4 +14,4 @@ declare type RectHeightStyle = import('../api/@ohos.graphics.text').default.Rect
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-**属性类型：** import('../api/@ohos.graphics.text').default.RectHeightStyle
+**类型：** import('../api/@ohos.graphics.text').default.RectHeightStyle

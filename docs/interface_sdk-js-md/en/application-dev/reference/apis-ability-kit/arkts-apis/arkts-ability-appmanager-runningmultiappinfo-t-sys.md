@@ -12,4 +12,4 @@ Defines the information of an application in multi-app mode in the running state
 
 **System API:** This is a system API.
 
-**Property type:** _RunningMultiAppInfo
+**Type:** _RunningMultiAppInfo

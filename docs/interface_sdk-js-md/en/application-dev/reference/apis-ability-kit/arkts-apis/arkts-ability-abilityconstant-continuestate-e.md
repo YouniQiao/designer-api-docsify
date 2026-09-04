@@ -4,6 +4,8 @@ Enumerates the mission continuation states of the application. It is used in the
 
 **Since:** 10
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## ACTIVE

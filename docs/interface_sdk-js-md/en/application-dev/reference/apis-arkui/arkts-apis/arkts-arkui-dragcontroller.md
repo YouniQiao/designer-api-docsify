@@ -12,8 +12,6 @@ This module provides APIs for initiating drag actions. When receiving a gesture 
 
 **Since:** 10
 
-**Model restriction:** This API can be used only in the stage model.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import

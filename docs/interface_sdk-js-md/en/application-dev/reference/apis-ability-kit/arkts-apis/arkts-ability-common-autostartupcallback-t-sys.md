@@ -14,4 +14,4 @@ Level-2 module AutoStartupCallback.
 
 **System API:** This is a system API.
 
-**Property type:** _AutoStartupCallback
+**Type:** _AutoStartupCallback

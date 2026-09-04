@@ -34,7 +34,7 @@ Obtains the default pixel map of a wallpaper of the specified device type. Retur
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;image.PixelMap&gt; | the promise returned by the function. |
+| Promise&lt;[image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)&gt; | the promise returned by the function. |
 
 **Error codes:**
 

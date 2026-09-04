@@ -12,4 +12,4 @@ The context of an photo editor extension ability.
 
 **系统能力：** SystemCapability.Ability.AppExtension.PhotoEditorExtension
 
-**属性类型：** _PhotoEditorExtensionContext.default
+**类型：** _PhotoEditorExtensionContext.default

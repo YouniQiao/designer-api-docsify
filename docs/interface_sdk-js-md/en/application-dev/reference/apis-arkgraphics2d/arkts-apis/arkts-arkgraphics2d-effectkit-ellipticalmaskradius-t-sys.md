@@ -17,7 +17,7 @@ Defines the radius of the elliptical mask.
 
 **System API:** This is a system API.
 
-**Property type:** [
+**Type:** [
   number,
   number
 ]

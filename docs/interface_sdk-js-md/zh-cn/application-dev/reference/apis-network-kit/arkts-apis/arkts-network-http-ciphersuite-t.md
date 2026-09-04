@@ -12,4 +12,4 @@ export type CipherSuite = TlsV13CipherSuite
 
 **系统能力：** SystemCapability.Communication.NetStack
 
-**属性类型：** [TlsV13CipherSuite](arkts-network-http-tlsv13ciphersuite-t.md)
+**类型：** [TlsV13CipherSuite](arkts-network-http-tlsv13ciphersuite-t.md)

@@ -13,4 +13,4 @@ Defines the level-2 module PacMap.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
-**Property type:** _PacMap
+**Type:** _PacMap

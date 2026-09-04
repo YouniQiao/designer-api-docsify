@@ -62,7 +62,7 @@ readonly backgroundSystemMaterial?: uiMaterial.Material
 
 该成员只读，不支持更改。
 
-**类型：** uiMaterial.Material
+**类型：** [uiMaterial.Material](arkts-arkui-uimaterial-material-c.md)
 
 **起始版本：** 26.0.0
 

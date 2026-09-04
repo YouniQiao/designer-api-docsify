@@ -14,7 +14,7 @@ Get context.
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-**属性类型：** import('../api/application/Context').default
+**类型：** import('../api/application/Context').default
 
 **示例**
 

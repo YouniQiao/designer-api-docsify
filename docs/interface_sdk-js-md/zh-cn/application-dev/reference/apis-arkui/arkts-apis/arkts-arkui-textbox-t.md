@@ -14,4 +14,4 @@ declare type TextBox = import('../api/@ohos.graphics.text').default.TextBox
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-**属性类型：** import('../api/@ohos.graphics.text').default.TextBox
+**类型：** import('../api/@ohos.graphics.text').default.TextBox

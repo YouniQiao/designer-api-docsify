@@ -22,7 +22,7 @@ Creates a sendable image PixelMap from image PixelMap.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| pixelmap | image.PixelMap | 是 | the src pixelmap. |
+| pixelmap | [image.PixelMap](arkts-image-image-pixelmap-i.md) | 是 | the src pixelmap. |
 
 **返回值：**
 

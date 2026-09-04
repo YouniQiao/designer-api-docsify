@@ -60,7 +60,7 @@ MIMEType?: photoAccessHelper.PhotoViewMIMETypes
 
 Types of the file displayed. The default value is **PhotoViewMIMETypes.IMAGE_VIDEO_TYPE**.
 
-**Type:** photoAccessHelper.PhotoViewMIMETypes
+**Type:** [photoAccessHelper.PhotoViewMIMETypes](arkts-medialibrary-photoaccesshelper-photoviewmimetypes-e.md)
 
 **Since:** 12
 

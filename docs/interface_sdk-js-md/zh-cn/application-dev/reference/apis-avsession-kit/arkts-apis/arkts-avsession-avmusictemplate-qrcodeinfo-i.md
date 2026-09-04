@@ -22,7 +22,7 @@ codeData?: image.PixelMap
 
 二维码图片。
 
-**类型：** image.PixelMap
+**类型：** [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)
 
 **起始版本：** 23
 
@@ -70,7 +70,7 @@ icon?: image.PixelMap
 
 与二维码关联的应用图标，用于应用登录的二维码应显示目标应用的图标。
 
-**类型：** image.PixelMap
+**类型：** [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)
 
 **起始版本：** 23
 

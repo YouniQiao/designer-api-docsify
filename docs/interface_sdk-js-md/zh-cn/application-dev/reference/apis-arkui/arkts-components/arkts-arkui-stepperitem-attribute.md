@@ -97,4 +97,4 @@ status(value?: ItemState)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ItemState](arkts-arkui-itemstate-e.md) | 否 | 步骤导航器nextLabel的显示状态。默认值：ItemState.Normal |
+| value | [ItemState](arkts-arkui-itemstate-e.md) | 否 | [步骤导航器nextLabel的显示状态。默认值：ItemState.Normal](arkts-arkui-itemstate-e.md) |

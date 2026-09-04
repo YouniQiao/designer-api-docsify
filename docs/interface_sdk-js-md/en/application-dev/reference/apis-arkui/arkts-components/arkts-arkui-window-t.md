@@ -14,4 +14,4 @@ The type for window.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
-**Property type:** import('../api/@ohos.window').default
+**Type:** import('../api/@ohos.window').default

@@ -14,4 +14,4 @@ Enumerates the connection intervals.
 
 **System API:** This is a system API.
 
-**Property type:** nearlinkConstant.ConnectionInterval
+**Type:** [nearlinkConstant.ConnectionInterval](arkts-connectivity-nearlinkconstant-connectioninterval-e-sys.md)

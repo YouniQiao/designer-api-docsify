@@ -10,4 +10,4 @@ SoundPool, which provides APIs for loading, unloading, playing, and stopping pla
 
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
-**Property type:** _SoundPool
+**Type:** _SoundPool

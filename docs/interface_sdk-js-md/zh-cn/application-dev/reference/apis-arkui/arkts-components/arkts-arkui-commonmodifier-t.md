@@ -14,4 +14,4 @@ CommonModifier类型用于设置Tabs组件参数。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-**属性类型：** import('../api/arkui/CommonModifier').CommonModifier
+**类型：** import('../api/arkui/CommonModifier').CommonModifier

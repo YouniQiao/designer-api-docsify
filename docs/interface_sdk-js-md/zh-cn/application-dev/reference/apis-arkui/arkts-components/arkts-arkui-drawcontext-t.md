@@ -14,4 +14,4 @@ DrawContext
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-**属性类型：** import('../api/arkui/Graphics').DrawContext
+**类型：** import('../api/arkui/Graphics').DrawContext

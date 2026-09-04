@@ -14,4 +14,4 @@ Defines a callback function to listen for the enabling state changes of the appl
 
 **System API:** This is a system API.
 
-**Property type:** _EnabledSilentReminderChangedCallback
+**Type:** _EnabledSilentReminderChangedCallback

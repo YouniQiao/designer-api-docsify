@@ -12,4 +12,4 @@ Defines the API version of the module.
 
 **System API:** This is a system API.
 
-**Property type:** _PackInfo.ApiVersion
+**Type:** [_PackInfo.ApiVersion](arkts-ability-bundlepackinfo-apiversion-i-sys.md)

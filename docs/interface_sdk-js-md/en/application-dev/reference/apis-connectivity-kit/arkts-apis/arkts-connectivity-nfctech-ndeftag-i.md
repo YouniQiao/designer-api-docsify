@@ -101,7 +101,7 @@ Obtains the NDEF tag type.
 
 | Type | Description |
 | --- | --- |
-| tag.NfcForumType | NDEF tag type obtained. It can be NFC FORUM TYPE 1, 2, 3, or 4. |
+| [tag.NfcForumType](arkts-connectivity-tag-nfcforumtype-e.md) | NDEF tag type obtained. It can be NFC FORUM TYPE 1, 2, 3, or 4. |
 
 **Examples**
 
@@ -131,7 +131,7 @@ Converts an NFC Forum Type tag to a string defined in the NFC Forum.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | tag.NfcForumType | Yes | NDEF tag type. It can be NFC FORUM type 1, 2, 3, or 4. |
+| type | [tag.NfcForumType](arkts-connectivity-tag-nfcforumtype-e.md) | Yes | NDEF tag type. It can be NFC FORUM type 1, 2, 3, or 4. |
 
 **Return value:**
 

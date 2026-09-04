@@ -14,4 +14,4 @@ Represents a FrameNode of the **Button** type. When created in child component m
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** [TypedFrameNode](arkts-arkui-framenode-typedframenode-i.md)&lt;ButtonInterface, [ButtonAttribute](../arkts-components/arkts-arkui-button-attribute.md)&gt;
+**Type:** [TypedFrameNode](arkts-arkui-framenode-typedframenode-i.md)&lt;ButtonInterface, [ButtonAttribute](../arkts-components/arkts-arkui-button-attribute.md)&gt;

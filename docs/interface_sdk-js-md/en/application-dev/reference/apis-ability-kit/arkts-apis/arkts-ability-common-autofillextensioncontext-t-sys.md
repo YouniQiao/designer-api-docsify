@@ -14,4 +14,4 @@ Level-2 module AutoFillExtensionContext.
 
 **System API:** This is a system API.
 
-**Property type:** _AutoFillExtensionContext.default
+**Type:** _AutoFillExtensionContext.default

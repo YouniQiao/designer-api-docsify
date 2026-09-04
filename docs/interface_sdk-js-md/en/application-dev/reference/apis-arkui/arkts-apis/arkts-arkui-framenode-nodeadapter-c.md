@@ -256,8 +256,10 @@ Checks whether the NodeAdapter's backend reference has been released. Frontend n
 **Examples**
 
 See [FrameNode Validity Check Example.
+- simpleType:
 
 See NodeAdapter Validity Check Example.
+- simpleType:
 
 ## moveItem
 
@@ -520,3 +522,4 @@ Get the total number of node count.
 **Examples**
 
 See the example for [NodeAdapter Usage Example.
+- simpleType:

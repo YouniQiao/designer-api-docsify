@@ -28,7 +28,7 @@ readonly multiAppModeType: bundleManager.MultiAppModeType
 
 Indicates the multiAppModeType of the bundle
 
-**Type:** bundleManager.MultiAppModeType
+**Type:** [bundleManager.MultiAppModeType](arkts-ability-bundlemanager-multiappmodetype-e.md)
 
 **Since:** 12
 

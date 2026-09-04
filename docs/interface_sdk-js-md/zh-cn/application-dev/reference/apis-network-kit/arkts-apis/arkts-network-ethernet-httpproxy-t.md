@@ -10,4 +10,4 @@ type HttpProxy = connection.HttpProxy
 
 **系统能力：** SystemCapability.Communication.NetManager.Ethernet
 
-**属性类型：** connection.HttpProxy
+**类型：** [connection.HttpProxy](arkts-network-connection-httpproxy-i.md)

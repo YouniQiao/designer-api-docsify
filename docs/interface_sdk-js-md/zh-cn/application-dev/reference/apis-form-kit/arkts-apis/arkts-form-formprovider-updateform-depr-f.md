@@ -30,7 +30,7 @@ function updateForm(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | formId | string | 是 | 请求更新的卡片标识。 |
-| formBindingData | formBindingData.FormBindingData | 是 | 用于更新的数据。 |
+| formBindingData | [formBindingData.FormBindingData](arkts-form-formbindingdata-formbindingdata-depr-i.md) | 是 | 用于更新的数据。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
 
 **示例**
@@ -75,7 +75,7 @@ function updateForm(formId: string, formBindingData: formBindingData.FormBinding
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | formId | string | 是 | 请求更新的卡片标识。 |
-| formBindingData | formBindingData.FormBindingData | 是 | 用于更新的数据。 |
+| formBindingData | [formBindingData.FormBindingData](arkts-form-formbindingdata-formbindingdata-depr-i.md) | 是 | 用于更新的数据。 |
 
 **返回值：**
 

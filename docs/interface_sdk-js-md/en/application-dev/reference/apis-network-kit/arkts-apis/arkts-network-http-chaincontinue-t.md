@@ -12,4 +12,4 @@ Specifies whether to continue to process the interceptor chain.
 
 **System capability:** SystemCapability.Communication.NetStack
 
-**Property type:** boolean
+**Type:** boolean

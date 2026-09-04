@@ -14,4 +14,4 @@ Sets the translation amount of the component.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** [Vector2](arkts-arkui-graphics-vector2-i.md)
+**Type:** [Vector2](arkts-arkui-graphics-vector2-i.md)

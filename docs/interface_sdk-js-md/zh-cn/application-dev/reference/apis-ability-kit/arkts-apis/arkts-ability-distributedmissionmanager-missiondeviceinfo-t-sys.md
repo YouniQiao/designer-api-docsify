@@ -14,4 +14,4 @@ export type MissionDeviceInfo = _MissionDeviceInfo
 
 **系统接口：** 此接口为系统接口。
 
-**属性类型：** _MissionDeviceInfo
+**类型：** _MissionDeviceInfo

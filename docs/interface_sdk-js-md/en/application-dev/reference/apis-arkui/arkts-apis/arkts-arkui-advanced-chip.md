@@ -645,6 +645,7 @@ struct ChipAccessibilityExample {
 ```
 
 This example implements the system material style by configuring backgroundSystemMaterial and activatedBackgroundSystemMaterial, and enables the auto-invert feature to adapt the label text color.
+Starting from API version 26.0.0, the backgroundSystemMaterial and activatedBackgroundSystemMaterial attributes are added to [ChipOptions](arkts-arkui-arkui-advanced-chip-chipoptions-i.md).
 
 ```TypeScript
 import { Chip, ChipOptions, uiMaterial } from '@kit.ArkUI';

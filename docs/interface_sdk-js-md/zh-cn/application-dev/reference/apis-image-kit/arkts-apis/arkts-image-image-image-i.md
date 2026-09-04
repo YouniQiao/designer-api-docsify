@@ -410,7 +410,7 @@ readonly colorSpace: colorSpaceManager.ColorSpace
 
 图像色彩空间，色域枚举类型。
 
-**类型：** colorSpaceManager.ColorSpace
+**类型：** [colorSpaceManager.ColorSpace](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-colorspacemanager-colorspace-e.md)
 
 **起始版本：** 23
 

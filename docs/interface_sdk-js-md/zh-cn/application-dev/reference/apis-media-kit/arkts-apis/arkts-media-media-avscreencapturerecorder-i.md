@@ -38,7 +38,7 @@ addWatermark(watermark: image.PixelMap, config: WatermarkConfiguration): Promise
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| watermark | image.PixelMap | 是 | : 水印图像，取值原则：PixelMap对象不能为空。支持透明度设置。图像格式和尺寸要求请参考 |
+| watermark | [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | 是 | : 水印图像，取值原则：PixelMap对象不能为空。支持透明度设置。图像格式和尺寸要求请参考 |
 | config | [WatermarkConfiguration](arkts-media-media-watermarkconfiguration-i.md) | 是 | : 配置视频录制水印的相关参数。各字段取值范围请参考WatermarkConfiguration定义。需在调用startRecording接口前设置。 |
 
 **返回值：**

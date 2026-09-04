@@ -12,4 +12,4 @@ Defines the ExtensionAbility configuration information.
 
 **System API:** This is a system API.
 
-**Property type:** _PackInfo.ExtensionAbility
+**Type:** [_PackInfo.ExtensionAbility](arkts-ability-bundlepackinfo-extensionability-i-sys.md)

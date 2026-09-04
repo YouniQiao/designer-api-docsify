@@ -69,7 +69,7 @@ pictureInfo?: Record<string, Array<image.PixelMap>>
 
 Extra image information of the live view. This parameter is left empty by default.
 
-**Type:** Record&lt;string, Array&lt;image.PixelMap&gt;&gt;
+**Type:** Record&lt;string, Array&lt;[image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)&gt;&gt;
 
 **Since:** 11
 

@@ -14,4 +14,4 @@ declare type DrawableDescriptor = import ('../api/@ohos.arkui.drawableDescriptor
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-**属性类型：** import ('../api/@ohos.arkui.drawableDescriptor').DrawableDescriptor
+**类型：** import ('../api/@ohos.arkui.drawableDescriptor').DrawableDescriptor

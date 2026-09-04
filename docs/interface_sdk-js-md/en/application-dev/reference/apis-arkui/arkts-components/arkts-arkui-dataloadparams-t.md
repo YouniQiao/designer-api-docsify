@@ -14,4 +14,4 @@ Defines the data loading parameters used during a drop operation.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** import('../api/@ohos.data.unifiedDataChannel').default.DataLoadParams
+**Type:** import('../api/@ohos.data.unifiedDataChannel').default.DataLoadParams

@@ -4,6 +4,8 @@ Marquee的滚动方式，可选择默认持续滚动或条件触发滚动。
 
 **起始版本：** 18
 
+**模型约束：** 此接口仅可在Stage模型下使用。
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## DEFAULT

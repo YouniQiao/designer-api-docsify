@@ -26,7 +26,7 @@ Unbinds the float view and floating ball. The unbinding can be performed only af
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | floatViewController | [FloatViewController](arkts-arkui-floatview-floatviewcontroller-i.md) | Yes | Float view controller. |
-| floatingBallController | floatingBall.FloatingBallController | Yes | Floating ball controller. |
+| floatingBallController | [floatingBall.FloatingBallController](arkts-arkui-floatingball-floatingballcontroller-i.md) | Yes | Floating ball controller. |
 
 **Return value:**
 

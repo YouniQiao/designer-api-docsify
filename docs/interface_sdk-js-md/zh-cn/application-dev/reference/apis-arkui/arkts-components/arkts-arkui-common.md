@@ -56,9 +56,9 @@ Common()
 | [CrownEvent](arkts-arkui-crownevent-i.md) | 组件接收表冠事件的数据结构。内容包括时间戳、旋转角速度、旋转角度、表冠动作和阻止事件冒泡。 |
 | [CustomPopupOptions](arkts-arkui-custompopupoptions-i.md) | 弹出自定义气泡的信息。 |
 | [DateRange](arkts-arkui-daterange-i.md) | Defines a range of dates. |
-| [DepthColorRGB](arkts-arkui-depthcolorrgb-i-sys.md) | 深度空间中的RGB颜色。 |
-| [DepthVector3](arkts-arkui-depthvector3-i-sys.md) | 深度空间中的三维向量。 |
-| [DepthVector4](arkts-arkui-depthvector4-i-sys.md) | 深度空间中的4D向量。 |
+| [DepthColorRGB](arkts-arkui-depthcolorrgb-i-sys.md) | 深度空间中的RGB颜色。用于为组件设置空间效果参数。 |
+| [DepthVector3](arkts-arkui-depthvector3-i-sys.md) | 深度空间中的三维向量。用于为组件设置空间效果参数。 |
+| [DepthVector4](arkts-arkui-depthvector4-i-sys.md) | 深度空间中的4D向量。用于为组件设置空间效果参数。 |
 | [DismissContentCoverAction](arkts-arkui-dismisscontentcoveraction-i.md) |  |
 | [DismissPopupAction](arkts-arkui-dismisspopupaction-i.md) | 气泡关闭的信息。 |
 | [DismissSheetAction](arkts-arkui-dismisssheetaction-i.md) | 半模态关闭前的回调。 |
@@ -156,8 +156,8 @@ Common()
 | [SheetTitleOptions](arkts-arkui-sheettitleoptions-i.md) | 半模态面板的标题。 |
 | [SizeResult](arkts-arkui-sizeresult-i.md) | 组件尺寸信息。 |
 | [SmartGestureShortcutOptions](arkts-arkui-smartgestureshortcutoptions-i.md) | 智慧手势响应行为配置对象。 |
-| [SpatialEffectParams](arkts-arkui-spatialeffectparams-i-sys.md) | 空间效果选项。 |
-| [SpatialPosition](arkts-arkui-spatialposition-i-sys.md) | 三维空间中的空间角位置。 |
+| [SpatialEffectParams](arkts-arkui-spatialeffectparams-i-sys.md) | 空间效果选项。用于为组件设置空间效果参数。 |
+| [SpatialPosition](arkts-arkui-spatialposition-i-sys.md) | 三维空间中的空间角位置。用于为组件设置空间效果参数。 |
 | [SpringBackAction](arkts-arkui-springbackaction-i.md) | 控制半模态关闭前的回弹。 |
 | [StateStyles](arkts-arkui-statestyles-i.md) | 组件不同状态下的样式。 |
 | [SweepGradientOptions](arkts-arkui-sweepgradientoptions-i.md) | 角度渐变参数。 |
@@ -337,6 +337,7 @@ struct ForegroundBlurStyleDemo {
 ```
 
 以下示例通过设置edgeLightMode属性开启边缘光效动画，同时使用[SheetOptions](ts-universal-attributes-sheet-transition.md#sheetoptions)中的systemMaterial接口实现了半透明材质效果。
+从API版本26.0.0开始，[SheetOptions](arkts-arkui-sheetoptions-i.md)新增edgeLightMode属性。
 
 ```TypeScript
 // xxx.ets
@@ -389,6 +390,7 @@ struct SheetMaterialExample {
 ```
 
 以下示例通过设置blurSnapshot属性开启模糊优化。当使用[SheetOptions](ts-universal-attributes-sheet-transition.md#sheetoptions)中的systemMaterial接口设置材质效果或使用[SheetOptions](ts-universal-attributes-sheet-transition.md#sheetoptions)中的blurStyle接口设置模糊时发现功耗明显增加时，可以尝试开启模糊优化。
+从API版本26.0.0开始，[SheetOptions](arkts-arkui-sheetoptions-i.md)新增blurSnapshot属性。
 
 ```TypeScript
 // xxx.ets
@@ -509,6 +511,7 @@ struct MotionBlurTest {
 ```
 
 该示例通过[onNeedSoftkeyboard](arkts-arkui-commonmethod-c.md#onneedsoftkeyboard)接口，设置按钮需要键盘。在从输入框拉起键盘后，点击按钮使焦点切换到按钮，此时键盘将不会收起，再次点击输入框可继续输入。
+从API version 24开始，新增[onNeedSoftkeyboard](arkts-arkui-commonmethod-c.md#onneedsoftkeyboard)接口。
 
 ```TypeScript
 @Entry
@@ -2531,6 +2534,7 @@ struct TabStop {
 ```
 
 从API version 18开始，该示例通过配置[nextFocus](arkts-arkui-commonmethod-c.md#nextfocus)实现自定义走焦规则。
+如果不配置[nextFocus](arkts-arkui-commonmethod-c.md#nextfocus)，默认的按下Tab键的走焦顺序为：M->A->B->C->D->E->F；配置了[nextFocus](arkts-arkui-commonmethod-c.md#nextfocus)以后，走焦顺序变更为：M->D->F->B->C。
 
 ```TypeScript
 class MyButtonModifier implements AttributeModifier<ButtonAttribute> {
@@ -2646,6 +2650,7 @@ struct AreaExample {
 ```
 
 该示例通过设置[expectedUpdateInterval](arkts-arkui-areachangeoptions-i.md)，当Text布局变化时可以触发[onAreaChange](arkts-arkui-commonmethod-c.md#onareachange)事件，达到间隔回调的效果。
+从API版本26.0.0开始，新增[onAreaChange](arkts-arkui-commonmethod-c.md#onareachange)、[AreaChangeCallback](arkts-arkui-areachangecallback-t.md)和[AreaChangeOptions](arkts-arkui-areachangeoptions-i.md)。
 
 ```TypeScript
 // xxx.ets
@@ -3230,6 +3235,7 @@ struct ChildComponent {
 ```
 
 该示例通过Button绑定Modifier实现了鼠标悬浮态的效果。当鼠标移动到Button上时，Button的背景颜色变为红色，此时为悬浮态效果；当鼠标离开Button时，Button的背景颜色变为黑色，此时为普通态效果；同时通过[applyHoveredAttribute](arkts-arkui-attributemodifier-i.md#applyhoveredattribute)接口设置悬浮态样式。
+从API版本26.0.0开始，新增[applyHoveredAttribute](arkts-arkui-attributemodifier-i.md#applyhoveredattribute)接口。
 
 ```TypeScript
 // xxx.ets
@@ -3464,6 +3470,7 @@ struct Index {
 ```
 
 该示例演示在组件的属性动画场景下，如何通过使用节点组剔除属性[excludeFromRenderGroup](arkts-arkui-commonmethod-c-sys.md#excludefromrendergroup)，避免节点组缓存反复失效。
+从API version 22开始，新增[excludeFromRenderGroup](arkts-arkui-commonmethod-c-sys.md#excludefromrendergroup)属性。
 
 ```TypeScript
 // xxx.ets
@@ -3575,6 +3582,7 @@ struct Index {
 ```
 
 该示例主要演示如何通过[edgeLight](#edgelight)给组件添加边缘流光效果。
+从API版本26.0.0开始，新增edgeLight方法。
 
 ```TypeScript
 // xxx.ets
@@ -3726,6 +3734,8 @@ struct TipsExample {
 ```
 
 该示例通过[TipsOptions](#tipsoptions类型说明)中的systemMaterial属性设置组件的系统材质，实现了bindTips的沉浸光感视效。
+组件沉浸光感效果会根据设备算力与用户在系统中设置的沉浸光感效果自适应调整，开发者无需额外适配。
+从API版本26.0.0开始，在TipsOptions中新增了systemMaterial属性。
 
 ```TypeScript
 // xxx.ets
@@ -4520,6 +4530,7 @@ struct Index {
 ```
 
 以下示例中，可复用自定义组件ReusableComponent通过[ReusableOptions](arkts-arkui-reusableoptions-i.md)的memoryOptimizationStrategy属性使用了自动内存优化策略。点击Recycle按钮，可触发ReusableComponent组件回收。之后应用退后台，可触发复用池缓存释放。
+从API版本26.0.0开始，新增ReusableOptions接口。
 
 ```TypeScript
 @Reusable({ memoryOptimizationStrategy: ReusableMemOptStrategy.ENABLE_AUTO_CACHE_OPTIMIZATION }) // 使用自动内存优化策略
@@ -4828,6 +4839,7 @@ struct ProgressMaskExample {
 ```
 
 该示例通过配置enableClickSoundEffect属性，实现组件禁用默认点击音效，开发者可以在onClick回调中调用音频相关接口自定义发音。自定义发音可参考[SoundPool播放短音频指南](../../../media/media/using-soundpool-for-playback.md)。
+从API version 24开始，新增[enableClickSoundEffect](arkts-arkui-commonmethod-c.md#enableclicksoundeffect)属性。
 
 ```TypeScript
 @Entry
@@ -5274,6 +5286,7 @@ struct Index {
 ```
 
 该示例主要通过[accessibilityStateDescription](#accessibilitystatedescription23)接口修改组件的状态播报。在开启无障碍功能后，组件发生聚焦或者点击后，屏幕朗读进行组件的状态信息播报。
+从API version 23开始，新增accessibilityStateDescription接口。
 
 ```TypeScript
 // xxx.ets
@@ -5298,6 +5311,7 @@ struct Index {
 ```
 
 本示例主要演示如何通过[accessibilityActionOptions](ts-types.md#accessibilityactionoptions23对象说明)中的scrollStep参数，自定义组件的滑动步数。以下将以slider组件在屏幕朗读场景下滑动距离变化为例进行说明。
+从API version 23开始，新增AccessibilityActionOptions。
 
 ```TypeScript
 // xxx.ets
@@ -5324,6 +5338,7 @@ struct Index {
 ```
 
 本示例主要演示如何使用[accessibilityCustomActions](arkts-arkui-commonmethod-c.md#accessibilitycustomactions)为组件设置自定义无障碍操作。开发者可以按操作名为组件进行自定义操作的回调绑定。
+从API版本26.0.0开始，新增accessibilityCustomActions。
 
 ```TypeScript
 // xxx.ets
@@ -5370,6 +5385,7 @@ struct Index {
 ```
 
 该示例展示了[stateStyles](#statestyles)设置状态为hovered、pressed和disabled时Text组件的样式变化。
+从API版本26.0.0开始，[stateStyles](#statestyles)新增hovered属性。
 
 ```TypeScript
 // xxx.ets
@@ -5911,6 +5927,9 @@ struct SheetTransitionExample {
 ```
 
 使用bindSheet的detents属性设置三个不同高度的挡位。
+dragBar控制条只在多个挡位高度时生效；
+区别于height属性在不同时刻设置不同挡位的能力，多挡位能力有手势切换挡位高度的效果，且更适合固定高度区间的场景；
+若高度范围不确定，且可能存在大于3个不同高度的场景，不建议使用detents属性。
 
 ```TypeScript
 // xxx.ets
@@ -6056,6 +6075,7 @@ struct BindSheetExample {
 ```
 
 ScrollSizeMode.CONTINUOUS持续更新内容适合detents多挡位切换场景。
+建议在builder内减少UI加载耗时的操作，滑动时内容实时刷新对性能要求较高。
 
 ```TypeScript
 // xxx.ets
@@ -6213,6 +6233,7 @@ struct ListenKeyboardHeightChange {
 ```
 
 此示例为说明镜像场景而设置了不同的圆角半径，通常不建议开发者设置不同的值，会造成视觉体验不佳。
+其中，从API version 15开始，半模态的radius属性值使用LocalizedBorderRadiuses类型。
 
 ```TypeScript
 import { LengthMetrics } from '@kit.ArkUI';
@@ -6415,6 +6436,7 @@ struct ContentCoverExample {
 ```
 
 该示例通过半模态systemMaterial属性设置系统材质。
+从API版本26.0.0开始，[SheetOptions](arkts-arkui-sheetoptions-i.md)新增systemMaterial属性。
 
 ```TypeScript
 // xxx.ets
@@ -6472,6 +6494,7 @@ struct SheetMaterialExample {
 ```
 
 该示例通过设置[enableScrollInteraction](#enablescrollinteraction11)属性，实现了使用手势滚动纵向列表，并在当前显示界面发生改变时回调索引。
+ListDataSource说明及完整代码参考[示例1（添加滚动事件）](./ts-container-list.md#示例1添加滚动事件)。
 
 ```TypeScript
 // xxx.ets
@@ -6535,6 +6558,7 @@ struct ListExample {
 ```
 
 该示例通过设置[fadingEdge](#fadingedge14)属性，实现了[List](ts-container-list.md)组件开启边缘渐隐效果并设置边缘渐隐长度。
+ListDataSource说明及完整代码参考[示例1（添加滚动事件）](./ts-container-list.md#示例1添加滚动事件)。
 
 ```TypeScript
 // xxx.ets
@@ -6631,6 +6655,7 @@ struct ScrollExample {
 ```
 
 从API version 20开始，该示例通过设置[scrollBarMargin](#scrollbarmargin20)属性，调整滚动组件的滚动条边距。
+ListDataSource说明及完整代码参考[示例1（添加滚动事件）](./ts-container-list.md#示例1添加滚动事件)。
 
 ```TypeScript
 // xxx.ets
@@ -6729,6 +6754,7 @@ struct Index {
 ```
 
 该示例通过配置[PopupOptions](#popupoptions类型说明)或[CustomPopupOptions](#custompopupoptions8类型说明)中的keyboardAvoidMode属性，设置气泡是否避让软键盘。
+从API version 15开始，分别在PopupOptions和CustomPopupOptions中新增了keyboardAvoidMode属性。
 
 ```TypeScript
 // xxx.ets
@@ -7068,6 +7094,7 @@ struct PopupExample {
 ```
 
 该示例通过配置[PopupOptions](#popupoptions类型说明)中的outlineWidth、borderWidth、outlineLinearGradient、borderLinearGradient属性，为气泡设置内外描边线性渐变的颜色和方向。
+从API version 20开始，在PopupOptions中新增了outlineWidth、borderWidth、outlineLinearGradient、borderLinearGradient属性。
 
 ```TypeScript
 // xxx.ets
@@ -7113,6 +7140,7 @@ struct PopupExample {
 ```
 
 该示例通过配置[PopupOptions](#popupoptions类型说明)的avoidTarget属性，实现气泡对其绑定组件的避让。
+从API version 20开始，在PopupOptions中新增了avoidTarget属性。
 
 ```TypeScript
 // xxx.ets
@@ -7140,6 +7168,8 @@ struct PopupExample {
 ```
 
 该示例通过[PopupOptions](#popupoptions类型说明)中的systemMaterial属性设置组件的系统材质，实现了Popup的沉浸光感视效。
+组件沉浸光感效果会根据设备算力与用户在系统中设置的沉浸光感效果自适应调整，开发者无需额外适配。
+从API版本26.0.0开始，在PopupOptions中新增了systemMaterial属性。
 
 ```TypeScript
 import { uiMaterial } from '@kit.ArkUI';
@@ -7181,6 +7211,7 @@ struct PopupExample {
 ```
 
 该示例通过配置[PopupOptions](#popupoptions类型说明)的backgroundBlurStyleOptions和backgroundEffect属性，实现自定义气泡背景效果。
+从API版本26.0.0开始，在PopupOptions中新增了backgroundBlurStyleOptions和backgroundEffect属性。
 
 ```TypeScript
 // xxx.ets
@@ -7247,6 +7278,7 @@ struct PopupExample {
 ```
 
 该示例通过配置[PopupOptions](#popupoptions类型说明)的levelMode属性，实现气泡在页面内嵌入显示。点击按钮后页面级的气泡不会显示在下一个路由页面中。
+从API版本26.0.0开始，在PopupOptions中新增了levelMode属性。
 
 ```TypeScript
 import { LevelMode } from '@kit.ArkUI';
@@ -7335,6 +7367,7 @@ struct AxisEventExample {
 ```
 
 该示例通过[getCurrentLocalPosition](#getcurrentlocalposition)方法获取鼠标光标位置相对于当前组件实时位置左上角的坐标。
+从API版本26.0.0开始，新增支持getCurrentLocalPosition接口。
 
 ```TypeScript
 // xxx.ets
@@ -7579,6 +7612,13 @@ struct PreImeEventExample {
 ```
 
 该示例使用stopPropagation阻止事件冒泡。即，通过在Button的onKeyEvent回调中加入event.stopPropagation()方法，达到“仅Button响应键盘事件，Column不响应”的效果。
+> 说明：
+> 
+> onKeyEvent事件默认是冒泡的。
+> 
+> 事件冒泡：在一个树形结构中，当子节点处理完一个事件后，再将该事件交给它的父节点处理。
+> 
+> 可以在[onKeyEvent15+](#onkeyevent15)中，通过返回true消费按键事件阻止冒泡，效果等同于stopPropagation。
 
 ```TypeScript
 @Entry
@@ -9458,6 +9498,7 @@ struct DragPreviewOptionsDemo {
 ```
 
 示例7展示了不同图片（在线图片资源、本地图片资源和PixelMap）在拖拽时组件的设置。
+使用网络图片时，需要申请权限ohos.permission.INTERNET。具体申请方式请参考[声明权限](../../../security/AccessToken/declare-permissions.md)。
 
 ```TypeScript
 // xxx.ets
@@ -10115,6 +10156,7 @@ struct CustomCard {
 ```
 
 该示例通过配置[ImageModifier](arkts-arkui-imagemodifier-t.md)中的[systemMaterial](ts-universal-attributes-image-effect.md#systemmaterial)属性，设置拖拽背板的材质效果。
+从API版本26.0.0开始，[DragPreviewOptions](#dragpreviewoptions11-1)接口中的modifier参数新增支持[systemMaterial](ts-universal-attributes-image-effect.md#systemmaterial)属性。
 
 ```TypeScript
 // xxx.ets
@@ -10404,6 +10446,7 @@ struct TouchTargetExample {
 ```
 
 该示例通过[responseRegionList](arkts-arkui-commonmethod-c.md#responseregionlist)设置按钮的触摸热区以响应点击事件。
+从API version 22开始，新增responseRegionList接口。
 
 ```TypeScript
 // xxx.ets
@@ -10586,6 +10629,9 @@ struct ObscuredExample {
 ```
 
 设置不同设备类型下的栅格配置。gridSpan和gridOffset用于设置默认占用列数和偏移列数，仅在useSizeType未配置对应尺寸时生效。示例中useSizeType配置了sm尺寸的值（span: 2, offset: 1），若要在其他未配置的尺寸下实现相同的栅格效果，可通过gridSpan和gridOffset设置默认值。
+> 说明：
+> 
+> 本示例展示的是已废弃接口的用法。建议使用新组件[GridCol](ts-container-gridcol.md)、[GridRow](ts-container-gridrow.md)来实现栅格布局。
 
 ```TypeScript
 // xxx.ets
@@ -11910,6 +11956,7 @@ struct OnAccessibilityHoverEventExample {
 ```
 
 该示例代码在无障碍模式下通过onAccessibilityHoverTransparent接口捕获无法无障碍聚焦的组件的触摸事件，最后再将事件信息显示在组件下方的文本中。
+从API version 20开始，新增了[onAccessibilityHoverTransparent](arkts-arkui-commonmethod-c.md#onaccessibilityhovertransparent)接口。
 
 ```TypeScript
 @Entry
@@ -13227,6 +13274,7 @@ struct Index {
 ```
 
 该示例为bindMenu通过配置[ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md)中的backgroundBlurStyleOptions属性，实现了自定义菜单背景模糊效果。
+从API version 18开始，在ContextMenuOptions中新增了backgroundBlurStyleOptions属性。
 
 ```TypeScript
 @Entry
@@ -13272,6 +13320,7 @@ struct MenuExample {
 ```
 
 该示例为bindMenu通过配置[ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md)中的backgroundEffect属性，实现了自定义菜单背景效果。
+从API version 18开始，在ContextMenuOptions中新增了backgroundEffect属性。
 
 ```TypeScript
 @Entry
@@ -13318,6 +13367,7 @@ struct MenuExample {
 ```
 
 该示例通过为bindContextMenu配置[ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md)中的previewAnimationOptions属性实现了一镜到底过渡动效的同时，再配置hoverScaleInterruption控制是否允许长按抬手取消菜单弹出。
+从API version 20开始，在previewAnimationOptions的类型[ContextMenuAnimationOptions](arkts-arkui-contextmenuanimationoptions-i.md)中新增了hoverScaleInterruption属性。
 
 ```TypeScript
 @Entry
@@ -13371,6 +13421,7 @@ struct Index {
 ```
 
 该示例通过bindContextMenu配置[responseType](ts-appendix-enums.md#responsetype8).LongPress来实现功能。同时，在[ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md)中配置preview属性的[MenuPreviewMode](arkts-arkui-menupreviewmode-e.md)类型来设置菜单预览样式。最后，通过设置previewBorderRadius来实现预览图边框的圆角半径。
+从API version 19开始，在[ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md)中新增了previewBorderRadius属性。
 
 ```TypeScript
 @Entry
@@ -13412,6 +13463,7 @@ struct Index {
 ```
 
 该示例为bindMenu11+配置生命周期回调。
+从API version 20开始，在[ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md)中新增了onWillAppear、onDidAppear、onWillDisappear和onDidDisappear属性。
 
 ```TypeScript
 @Entry
@@ -13482,6 +13534,7 @@ struct Index {
 ```
 
 该示例为bindMenu通过配置mask属性设置菜单蒙层。
+从API version 20开始，在[ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md)中新增了mask属性。
 
 ```TypeScript
 import { SymbolGlyphModifier } from '@kit.ArkUI';
@@ -13524,6 +13577,7 @@ struct Index {
 ```
 
 该示例为bindMenu通过配置outlineWidth和outlineColor属性设置下拉菜单外描边样式。
+从API version 20开始，在[ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md)中新增了outlineWidth和outlineColor属性。
 
 ```TypeScript
 @Entry
@@ -13608,6 +13662,7 @@ struct Index {
 ```
 
 该示例通过在[bindContextMenuWithResponse](arkts-arkui-commonmethod-c.md#bindcontextmenuwithresponse)中传入CustomBuilderT<ResponseType>给目标组件绑定菜单，组件会在UI函数中返回弹出菜单的触发方式，开发者可根据返回的触发方式实现差异化显示。
+从API version 23开始，新增了bindContextMenuWithResponse的接口。
 
 ```TypeScript
 @Entry
@@ -13653,6 +13708,7 @@ struct Index {
 ```
 
 该示例通过在bindMenu中配置keyboardAvoidMode设置菜单避让软键盘，通过minKeyboardAvoidDistance设置菜单避让软键盘的最小距离。
+从API version 23开始，[ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md)中新增keyboardAvoidMode、minKeyboardAvoidDistance属性。
 
 ```TypeScript
 import { inputMethod } from '@kit.IMEKit';
@@ -13713,6 +13769,7 @@ struct Index {
 ```
 
 该示例通过设置[ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md)中的anchorPosition属性，实现了菜单相对于绑定组件左上角弹出的效果。
+从API version 20开始，在ContextMenuOptions中新增了anchorPosition属性。
 
 ```TypeScript
 @Entry
@@ -13780,6 +13837,8 @@ struct Index {
 ```
 
 该示例为bindContextMenu通过配置[ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md)中的maxHeight属性，设置菜单的最大高度。
+未设置maxHeight属性时，默认按照菜单的最大高度（可用高度的80%），可展示全部列表项，通过设置最大高度为窗口可用高度的50%时，仅能显示8个列表项。
+从API版本26.0.0开始，在ContextMenuOptions中新增了maxHeight属性。
 
 ```TypeScript
 import { LengthMetrics } from '@kit.ArkUI';
@@ -13828,6 +13887,7 @@ struct Index {
 ```
 
 该示例通过设置[ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md)中的targetSpace属性，介绍如何增加菜单与目标组件之间的间距。
+从API版本26.0.0开始，在ContextMenuOptions中新增了targetSpace属性。
 
 ```TypeScript
 import { LengthMetrics } from '@kit.ArkUI';
@@ -13871,6 +13931,8 @@ struct Alone {
 ```
 
 该示例通过[ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md)中的systemMaterial属性设置组件的系统材质，实现了菜单的沉浸光感视效。
+组件沉浸光感效果会根据设备算力与用户在系统中设置的沉浸光感效果自适应调整，开发者无需额外适配。
+从API版本26.0.0开始，在ContextMenuOptions中新增了systemMaterial属性。
 
 ```TypeScript
 import { uiMaterial } from '@kit.ArkUI';
@@ -13905,6 +13967,7 @@ struct Index {
 ```
 
 该示例展示了如何在[bindContextMenuByIsShow](arkts-arkui-commonmethod-c.md#bindcontextmenubyisshow)中使用gridStyle设置栅格菜单样式。通过设置count、horizontalSize和position属性，可以自定义菜单的栅格布局。
+从API版本26.0.0开始，新增了[bindContextMenuByIsShow](arkts-arkui-commonmethod-c.md#bindcontextmenubyisshow)的接口；在[ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md)中新增了gridStyle属性。
 
 ```TypeScript
 @Entry
@@ -13952,6 +14015,7 @@ struct ContextMenuGridStyleExample {
 ```
 
 该示例通过按钮设置了鼠标事件，通过鼠标点击按钮可以触发[onMouse](#onmouse)事件，获取鼠标事件相关参数。从API version 15开始，可以获取鼠标事件[MouseEvent](#mouseevent对象说明)的targetDisplayId、rawDeltaX、rawDeltaY、pressedButtons等参数。
+鼠标滚轮的处理请参考[轴事件示例](ts-universal-events-axis.md#示例)。
 
 ```TypeScript
 // xxx.ets
@@ -14043,6 +14107,7 @@ struct MouseEventExample {
 ```
 
 该示例通过调用[getHistoricalPoints](#gethistoricalpoints)接口，获取当前帧的历史点，可以用来实现更平滑的绘制等操作。
+从API版本26.0.0开始，新增getHistoricalPoints接口。
 
 ```TypeScript
 @Entry
@@ -14080,6 +14145,7 @@ struct HistoricalPointsExample {
 ```
 
 该示例通过[getCurrentLocalPosition](#getcurrentlocalposition)方法获取鼠标位置相对于当前组件实时位置左上角的坐标。
+从API版本26.0.0开始，新增支持getCurrentLocalPosition接口。
 
 ```TypeScript
 // xxx.ets
@@ -14524,6 +14590,7 @@ struct ClickExample {
 ```
 
 该示例通过[getCurrentLocalPosition](#getcurrentlocalposition)方法获取当前组件基于其实时位置的左上角坐标。
+从API版本26.0.0开始，新增支持getCurrentLocalPosition接口。
 
 ```TypeScript
 // xxx.ets
@@ -14952,6 +15019,7 @@ struct FatherControlChild {
 ```
 
 本示例通过将参数exposeInnerGesture设置为true，实现了一级Tabs容器在嵌套二级Tabs的场景下，能够屏蔽二级Tabs内置Swiper的滑动手势，从而触发一级Tabs内置Swiper滑动手势的功能。
+开发者自行定义变量记录内层Tabs的索引值，并通过该索引值判断滑动是否达到内层Tabs的边界。达到边界时，触发回调返回拒绝结果，屏蔽内层Tabs的滑动手势，使外层Tabs产生滑动手势。
 
 ```TypeScript
 // xxx.ets
@@ -15398,6 +15466,7 @@ struct TouchTestDoneExample {
 ```
 
 该示例通过配置[onGestureCollectIntercept](arkts-arkui-commonmethod-c.md#ongesturecollectintercept)指定手势识别器或者触摸识别器是否透传到其他节点。点击button2时，不透传触摸事件到Column。点击button1时，透传触摸事件到Column，Column变色。
+从API版本26.0.0开始，新增onGestureCollectIntercept接口。
 
 ```TypeScript
 // xxx.ets
@@ -15491,6 +15560,7 @@ graph TD
 ```
 
 该示例通过[shouldRecognizerParallelWith](arkts-arkui-commonmethod-c.md#shouldrecognizerparallelwith)和[onGestureRecognizerJudgeBegin](arkts-arkui-commonmethod-c.md#ongesturerecognizerjudgebegin)实现了嵌套滚动的功能。内部组件优先响应滑动手势，当内部组件滑动至顶部或底部时，外部组件能够接替滑动。
+从API版本26.0.0开始，新增shouldRecognizerParallelWith接口。
 
 ```TypeScript
 // xxx.ets
@@ -15624,6 +15694,7 @@ struct FatherControlChild {
 ```
 
 该示例通过设置[dragAnimationType](#属性)为FOLLOW_HAND_MORPH实现跟手变形拖拽动画效果，并在拖拽结束时通过[executeFollowHandMorphDropAnimation](arkts-arkui-dragevent-i-sys.md#executefollowhandmorphdropanimation)执行自定义落位动效。
+从API版本26.0.0开始，新增[dragAnimationType](#属性)属性、[executeFollowHandMorphDropAnimation](arkts-arkui-dragevent-i-sys.md#executefollowhandmorphdropanimation)方法、[interruptFollowHandMorphDropAnimation](../arkts-apis/arkts-arkui-arkui-uicontext-dragcontroller-c-sys.md#interruptfollowhandmorphdropanimation)方法。
 
 ```TypeScript
 // xxx.ets
@@ -15814,6 +15885,7 @@ struct TouchExample {
 ```
 
 该示例通过[getCurrentLocalPosition](#getcurrentlocalposition)方法获取触摸位置相对于当前组件实时位置左上角的坐标。
+从API版本26.0.0开始，新增支持getCurrentLocalPosition接口。
 
 ```TypeScript
 // xxx.ets
@@ -16107,6 +16179,10 @@ struct OverlayContentPage {
 ```
 
 > 说明：
+> 
+> 直接使用animateTo可能导致[UI上下文不明确](../../../ui/arkts-global-interface.md#ui上下文不明确)的问题，建议使用getUIContext()获取[UIContext](../arkts-apis-uicontext-uicontext.md)实例，并使用[animateTo](../arkts-apis-uicontext-uicontext.md#animateto)调用绑定实例的animateTo。
+
+该示例通过在onAppear方法中创建组件出现时的动画效果。
 
 ```TypeScript
 // xxx.ets
@@ -16753,6 +16829,7 @@ struct Index {
 ```
 
 该示例主要演示通过[doubleSided](arkts-arkui-commonmethod-c.md#doublesided)来设置组件是否双面绘制。
+从API版本26.0.0开始，新增doubleSided方法。
 
 ```TypeScript
 // xxx.ets
@@ -17874,6 +17951,7 @@ struct VideoExample {
 ```
 
 该示例通过DragEvent的[autoHideComponentUniqueIds](#属性)属性，在拖拽成功发起后自动隐藏指定组件。
+从API版本26.0.0开始，DragEvent新增autoHideComponentUniqueIds属性。
 
 ```TypeScript
 import { unifiedDataChannel } from '@kit.ArkData';

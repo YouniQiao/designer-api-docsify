@@ -36,7 +36,7 @@ desiredColorSpace?: colorSpaceManager.ColorSpaceManager
 
 Target color space. The default value is **UNKNOWN**.
 
-**Type:** colorSpaceManager.ColorSpaceManager
+**Type:** [colorSpaceManager.ColorSpaceManager](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-colorspacemanager-colorspacemanager-i.md)
 
 **Since:** 11
 

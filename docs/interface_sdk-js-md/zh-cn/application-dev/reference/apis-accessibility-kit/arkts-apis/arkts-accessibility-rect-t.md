@@ -10,7 +10,7 @@ export type Rect = _Rect
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
-**属性类型：** _Rect
+**类型：** _Rect
 
 **示例**
 

@@ -514,7 +514,7 @@ getType(): tag.MifareClassicType
 
 | 类型 | 说明 |
 | --- | --- |
-| tag.MifareClassicType | MifareClassic标签的类型。 |
+| [tag.MifareClassicType](arkts-connectivity-tag-mifareclassictype-e.md) | MifareClassic标签的类型。 |
 
 **示例**
 

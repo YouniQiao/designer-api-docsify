@@ -41,7 +41,7 @@ Registers a callback for layout and drawing display completion notifications for
 
 | Type | Description |
 | --- | --- |
-| inspector.ComponentObserver | Component observer, which is used to register or unregister listeners for completion of component layout or drawing display. |
+| [inspector.ComponentObserver](arkts-arkui-inspector-componentobserver-i.md) | Component observer, which is used to register or unregister listeners for completion of component layout or drawing display. |
 
 **Examples**
 
@@ -112,7 +112,7 @@ Registers a callback for layout and drawing display completion notifications for
 
 | Type | Description |
 | --- | --- |
-| inspector.ComponentObserver | Component observer, which is used to register or unregister listeners for completion of component layout or drawing display. |
+| [inspector.ComponentObserver](arkts-arkui-inspector-componentobserver-i.md) | Component observer, which is used to register or unregister listeners for completion of component layout or drawing display. |
 
 **Examples**
 

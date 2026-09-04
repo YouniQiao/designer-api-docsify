@@ -6,4 +6,4 @@ type InstanceType<T extends abstract new (...args: any) => any> = T extends abst
 
 Obtain the return type of a constructor function type
 
-**Property type:** T extends abstract new (...args: any) =&gt; infer R ? R : any
+**Type:** T extends abstract new (...args: any) =&gt; infer R ? R : any

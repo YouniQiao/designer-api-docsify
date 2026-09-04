@@ -31,7 +31,7 @@ Used by a Caller UIAbility to send serialized data, as agreed upon by both parti
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | method | string | Yes | Method name agreed upon by the Caller UIAbility and Callee UIAbility, used by the Callee UIAbility to identify the type of message. |
-| data | rpc.Parcelable | Yes | Message content sent from the Caller UIAbility to the Callee UIAbility, which is in serialized form. |
+| data | [rpc.Parcelable](../../apis-ipc-kit/arkts-apis/arkts-ipc-rpc-parcelable-i.md) | Yes | Message content sent from the Caller UIAbility to the Callee UIAbility, which is in serialized form. |
 
 **Return value:**
 
@@ -125,13 +125,13 @@ Used by a Caller UIAbility to send serialized data to a Callee UIAbility and ret
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | method | string | Yes | Method name agreed upon by the Caller UIAbility and Callee UIAbility, used by the Callee UIAbility to identify the type of message. |
-| data | rpc.Parcelable | Yes | Message content sent from the Caller UIAbility to the Callee UIAbility, which is in serialized form. |
+| data | [rpc.Parcelable](../../apis-ipc-kit/arkts-apis/arkts-ipc-rpc-parcelable-i.md) | Yes | Message content sent from the Caller UIAbility to the Callee UIAbility, which is in serialized form. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;rpc.MessageSequence&gt; | Promise used to return the response data from the Callee UIAbility. |
+| Promise&lt;[rpc.MessageSequence](../../apis-ipc-kit/arkts-apis/arkts-ipc-rpc-messagesequence-c.md)&gt; | Promise used to return the response data from the Callee UIAbility. |
 
 **Error codes:**
 

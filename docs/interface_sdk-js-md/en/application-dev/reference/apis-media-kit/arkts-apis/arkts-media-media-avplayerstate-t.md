@@ -15,7 +15,7 @@ Describes the state of the [AVPlayer](arkts-multimedia-media.md). Your applicati
 | Type | Description |
 | --- | --- |
 | 'idle' | The AVPlayer enters this state after [createAVPlayer()]{ |
-| 'initialized' | The AVPlayer enters this state after **url&lt;sup&gt;9+&lt;/sup&gt;** or **fdSrc&lt;sup&gt;9+&lt;/sup&gt;** property is set in the idle state. In this case, you can configure static properties such as the window and audio. |
+| 'initialized' | The AVPlayer enters this state after **url&lt;[sup](../../apis-default/arkts-apis/arkts-lib-es2015-core-string-i.md)&gt;9+&lt;/sup&gt;** or **fdSrc&lt;sup&gt;9+&lt;/sup&gt;** property is set in the idle state. In this case, you can configure static properties such as the window and audio. |
 | 'prepared' | The AVPlayer enters this state when [prepare()]{ |
 | 'playing' | The AVPlayer enters this state when [play()]{ |
 | 'paused' | The AVPlayer enters this state when **pause()** is called in the playing state. |

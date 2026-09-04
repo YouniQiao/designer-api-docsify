@@ -16,4 +16,4 @@ declare type EllipseShape = import('../api/@ohos.arkui.shape').EllipseShape
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-**属性类型：** import('../api/@ohos.arkui.shape').EllipseShape
+**类型：** import('../api/@ohos.arkui.shape').EllipseShape

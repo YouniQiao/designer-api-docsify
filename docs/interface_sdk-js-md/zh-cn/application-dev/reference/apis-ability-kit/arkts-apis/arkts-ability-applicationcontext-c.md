@@ -86,7 +86,7 @@ clearUpApplicationData(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | 是 | Callback used to return the result. If the application data is cleared up, &lt;code&gt;error&lt;/code&gt; is &lt;code&gt;undefined&lt;/code&gt;; otherwise, &lt;code&gt;error&lt;/code&gt; is an error object. |
+| callback | AsyncCallback&lt;void&gt; | 是 | Callback used to return the result. If the application data is cleared up,&lt;code&gt;error&lt;/code&gt; is &lt;code&gt;undefined&lt;/code&gt;; otherwise, &lt;code&gt;error&lt;/code&gt; is an error object. |
 
 **错误码：**
 
@@ -187,7 +187,7 @@ getAllWindowStages(): Promise<Array<window.WindowStage>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;window.WindowStage&gt;&gt; | Promise used to return all WindowStage objects in the current application process. |
+| Promise&lt;Array&lt;[window.WindowStage](../../apis-arkui/arkts-apis/arkts-arkui-window-windowstage-i.md)&gt;&gt; | Promise used to return all WindowStage objects in the current application process. |
 
 **示例**
 
@@ -888,7 +888,7 @@ offSystemConfigurationUpdated(callback?: systemConfiguration.UpdatedCallback): v
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | systemConfiguration.UpdatedCallback | 否 | 回调函数。取值可以为使用[ApplicationContext.onSystemConfigurationUpdated](../../../reference/apis-ability-kit/js-apis-inner-application-applicationContext.md#applicationcontextonsystemconfigurationupdated24)方法注册的callback回调，也可以为空。   -&nbsp;如果传入已定义的回调，则取消该监听。    -&nbsp;如果未传入参数，则取消所有已注册的监听。 |
+| callback | [systemConfiguration.UpdatedCallback](arkts-ability-systemconfiguration-updatedcallback-i.md) | 否 | 回调函数。取值可以为使用[ApplicationContext.onSystemConfigurationUpdated](../../../reference/apis-ability-kit/js-apis-inner-application-applicationContext.md#applicationcontextonsystemconfigurationupdated24)方法注册的callback回调，也可以为空。   -&nbsp;如果传入已定义的回调，则取消该监听。    -&nbsp;如果未传入参数，则取消所有已注册的监听。 |
 
 **示例**
 
@@ -1248,7 +1248,7 @@ onSystemConfigurationUpdated(callback: systemConfiguration.UpdatedCallback): voi
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | systemConfiguration.UpdatedCallback | 是 | 系统环境变化时触发的回调方法。 |
+| callback | [systemConfiguration.UpdatedCallback](arkts-ability-systemconfiguration-updatedcallback-i.md) | 是 | 系统环境变化时触发的回调方法。 |
 
 **示例**
 
@@ -1429,7 +1429,7 @@ setColorMode(colorMode: ConfigurationConstant.ColorMode): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| colorMode | ConfigurationConstant.ColorMode | 是 | 深浅色模式，包括：深色模式、浅色模式、未设置颜色模式（默认）。 |
+| colorMode | [ConfigurationConstant.ColorMode](arkts-ability-configurationconstant-colormode-depr-e.md) | 是 | 深浅色模式，包括：深色模式、浅色模式、未设置颜色模式（默认）。 |
 
 **错误码：**
 
@@ -1660,7 +1660,7 @@ setSupportedProcessCache(isSupported : boolean): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| isSupported | boolean | 是 | Whether process cache is supported. The value &lt;code&gt;true&lt;/code&gt; means that process cache is supported, and &lt;code&gt;false&lt;/code&gt; means the opposite. |
+| isSupported | boolean | 是 | Whether process cache is supported. The value&lt;code&gt;true&lt;/code&gt; means that process cache is supported, and &lt;code&gt;false&lt;/code&gt; means the opposite. |
 
 **错误码：**
 

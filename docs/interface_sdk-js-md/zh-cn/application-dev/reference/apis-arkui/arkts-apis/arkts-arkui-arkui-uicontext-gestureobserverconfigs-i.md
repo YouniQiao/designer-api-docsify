@@ -1,6 +1,6 @@
 # GestureObserverConfigs
 
-该参数用于指定需要监听的手势回调阶段（传入空数组将无效），仅当手势触发指定阶段时才会发送通知。
+该参数用于指定需要监听的手势回调阶段（传入空数组时不监听任何手势回调阶段），仅当手势触发指定阶段时才会发送通知。
 
 **起始版本：** 20
 
@@ -21,7 +21,7 @@ import { BackPressActionProposal, BaseGestureHandlingProposal, ClickActionPropos
 actionPhases: Array<GestureActionPhase>
 ```
 
-手势事件对象。
+需要监听的手势回调阶段。传入空数组将无效，仅当手势触发指定阶段时才会发送通知。
 
 **类型：** Array&lt;[GestureActionPhase](arkts-arkui-arkui-uicontext-gestureactionphase-e.md)&gt;
 

@@ -14,4 +14,4 @@ export type EmbeddableUIAbilityContext = _EmbeddableUIAbilityContext.default
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
-**属性类型：** _EmbeddableUIAbilityContext.default
+**类型：** _EmbeddableUIAbilityContext.default

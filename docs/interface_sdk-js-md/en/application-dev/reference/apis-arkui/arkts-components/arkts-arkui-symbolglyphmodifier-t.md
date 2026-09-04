@@ -14,4 +14,4 @@ Defines custom icon symbol configurations.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** import('../api/arkui/SymbolGlyphModifier').SymbolGlyphModifier
+**Type:** import('../api/arkui/SymbolGlyphModifier').SymbolGlyphModifier

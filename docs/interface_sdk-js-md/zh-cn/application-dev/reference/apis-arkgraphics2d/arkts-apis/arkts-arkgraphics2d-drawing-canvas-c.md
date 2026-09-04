@@ -131,7 +131,7 @@ clear(color: common2D.Color): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| color | common2D.Color | 是 | ARGB格式的颜色，每个颜色通道的取值范围为[0, 255]的整数。 |
+| color | [common2D.Color](arkts-arkgraphics2d-common2d-color-i.md) | 是 | ARGB格式的颜色，每个颜色通道的取值范围为[0, 255]的整数。 |
 
 **错误码：**
 
@@ -170,7 +170,7 @@ clear(color: common2D.Color | number): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| color | common2D.Color \| number | 是 | 颜色，可以用16进制ARGB格式的32位无符号整数表示，例如：0xAARRGGBB。 |
+| color | [common2D.Color](arkts-arkgraphics2d-common2d-color-i.md) \| number | 是 | 颜色，可以用16进制ARGB格式的32位无符号整数表示，例如：0xAARRGGBB。 |
 
 **示例**
 
@@ -248,7 +248,7 @@ clipRect(rect: common2D.Rect, clipOp?: ClipOp, doAntiAlias?: boolean): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| rect | common2D.Rect | 是 | 需要裁剪的矩形区域。 |
+| rect | [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) | 是 | 需要裁剪的矩形区域。 |
 | clipOp | [ClipOp](arkts-arkgraphics2d-drawing-clipop-e.md) | 否 | 裁剪方式。默认值为INTERSECT。 |
 | doAntiAlias | boolean | 否 | 表示是否使用抗锯齿绘制。true表示使用，false表示不使用。默认值为false。 |
 
@@ -419,7 +419,7 @@ constructor(pixelmap: image.PixelMap)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| pixelmap | image.PixelMap | 是 | 作为Canvas绘制目标的PixelMap对象。 |
+| pixelmap | [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | 是 | 作为Canvas绘制目标的PixelMap对象。 |
 
 **错误码：**
 
@@ -524,7 +524,7 @@ drawArc(arc: common2D.Rect, startAngle: number, sweepAngle: number): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| arc | common2D.Rect | 是 | 包含要绘制的圆弧的椭圆的矩形边界。 |
+| arc | [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) | 是 | 包含要绘制的圆弧的椭圆的矩形边界。 |
 | startAngle | number | 是 | 弧的起始角度，单位为度，该参数为浮点数。0度时起始点位于椭圆的右端点，正数时以顺时针方向放置起始点，负数时以逆时针方向放置起始点。 |
 | sweepAngle | number | 是 | 弧的扫描角度，单位为度，该参数为浮点数。为正数时顺时针扫描，为负数时逆时针扫描。它的有效范围在-360度到360度之间，当绝对值大于360度时，该方法绘制的是一个椭圆。 |
 
@@ -571,7 +571,7 @@ drawArcWithCenter(arc: common2D.Rect, startAngle: number, sweepAngle: number, us
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| arc | common2D.Rect | 是 | 包含要绘制的圆弧的椭圆的矩形边界。 |
+| arc | [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) | 是 | 包含要绘制的圆弧的椭圆的矩形边界。 |
 | startAngle | number | 是 | 弧的起始角度，单位为度，该参数为浮点数。0度时起始点位于椭圆的右端点，为正数时以顺时针方向放置起始点，为负数时以逆时针方向放置起始点。 |
 | sweepAngle | number | 是 | 弧的扫描角度，单位为度，该参数为浮点数。为正数时顺时针扫描，为负数时逆时针扫描。扫描角度可以超过360度，超过360度时将绘制一个完整的椭圆。 |
 | useCenter | boolean | 是 | 绘制时弧形的起点和终点是否连接弧形的中心点。true表示连接，false表示不连接。 |
@@ -699,7 +699,7 @@ drawColor(color: common2D.Color, blendMode?: BlendMode): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| color | common2D.Color | 是 | ARGB格式的颜色，每个颜色通道的取值范围为[0, 255]的整数。 |
+| color | [common2D.Color](arkts-arkgraphics2d-common2d-color-i.md) | 是 | ARGB格式的颜色，每个颜色通道的取值范围为[0, 255]的整数。 |
 | blendMode | BlendMode | 否 | 颜色混合模式，用于指定绘制颜色与画布已有内容的混合方式。当需要自定义颜色叠加效果时传入此参数，不传入时默认模式为SRC_OVER。 |
 
 **错误码：**
@@ -830,7 +830,7 @@ drawGlyphs(glyphIds: Array<number>, glyphIdOffset: number, positions: Array<comm
 | --- | --- | --- | --- |
 | glyphIds | Array&lt;number&gt; | 是 | 字形ID的数组。数组成员取值限定为整数，输入浮点数则仅保留整数部分。 |
 | glyphIdOffset | number | 是 | 在绘制字形ID数组之前要跳过的元素的数量。 取值限定为整数，输入浮点数则仅保留整数部分。如果glyphCount为n，跳过长度为m，则有效glyphIds数组的范围为[glyphIds[m], glyphIds[m+n])。如果glyphIds数组长度小于“glyphIdOffset + glyphCount”则抛出错误码25900001。如果glyphIdOffset小于0则抛出错误码25900001。 |
-| positions | Array&lt;common2D.Point&gt; | 是 | 每个字形对应的绘制位置坐标数组。如果glyphCount为n，跳过长度为m，则有效positions数组范围为[positions[m], positions[m+n])。 |
+| positions | Array&lt;[common2D.Point](arkts-arkgraphics2d-common2d-point-i.md)&gt; | 是 | 每个字形对应的绘制位置坐标数组。如果glyphCount为n，跳过长度为m，则有效positions数组范围为[positions[m], positions[m+n])。 |
 | positionOffset | number | 是 | 在绘制位置数组之前要跳过的元素的数量。取值限定为整数，输入浮点数则仅保留整数部分。如果glyphCount为n，跳过长度为m，则有效positions数组的范围为[positions[m], positions[m+n])。如果positions数组长度小于“positionOffset + glyphCount”则抛出错误码25900001。如果positionOffset小于0则抛出错误码25900001。 |
 | glyphCount | number | 是 | 要绘制的字形的数目。数目小于或等于0，则不绘制任何内容，并抛出错误码25900001。如果glyphCount与glyphIdOffset的和，或者glyphCount与positionOffset的和大于0x7FFFFFFF，则该计算结果按0x7FFFFFFF处理。 |
 | font | Font | 是 | 用于绘图的字体。 |
@@ -885,7 +885,7 @@ drawImage(pixelmap: image.PixelMap, left: number, top: number, samplingOptions?:
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| pixelmap | image.PixelMap | 是 | 图片的PixelMap。 |
+| pixelmap | [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | 是 | 图片的PixelMap。 |
 | left | number | 是 | 图片位置的左上角x轴坐标，该参数为浮点数。单位为物理像素px。 |
 | top | number | 是 | 图片位置的左上角y轴坐标，该参数为浮点数。单位为物理像素px。 |
 | samplingOptions | [SamplingOptions](arkts-arkgraphics2d-drawing-samplingoptions-c.md) | 否 | 采样选项对象，默认为不使用任何参数构造的原始采样选项对象。<br>**起始版本：** 12 |
@@ -953,9 +953,9 @@ drawImageLattice(pixelmap: image.PixelMap, lattice: Lattice, dstRect: common2D.R
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| pixelmap | image.PixelMap | 是 | 用于绘制网格的像素图。 |
+| pixelmap | [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | 是 | 用于绘制网格的像素图。 |
 | lattice | [Lattice](arkts-arkgraphics2d-drawing-lattice-c.md) | 是 | 矩形网格对象。 |
-| dstRect | common2D.Rect | 是 | 目标矩形区域。 |
+| dstRect | [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) | 是 | 目标矩形区域。 |
 | filterMode | [FilterMode](arkts-arkgraphics2d-drawing-filtermode-e.md) | 是 | 过滤模式。 |
 
 **错误码：**
@@ -1041,9 +1041,9 @@ drawImageNine(pixelmap: image.PixelMap, center: common2D.Rect, dstRect: common2D
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| pixelmap | image.PixelMap | 是 | 用于绘制网格的像素图。 |
-| center | common2D.Rect | 是 | 分割图像的中心矩形。矩形四条边所在的直线将图像分成了9个部分。 |
-| dstRect | common2D.Rect | 是 | 在画布上绘制的目标矩形区域。 |
+| pixelmap | [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | 是 | 用于绘制网格的像素图。 |
+| center | [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) | 是 | 分割图像的中心矩形。矩形四条边所在的直线将图像分成了9个部分。 |
+| dstRect | [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) | 是 | 在画布上绘制的目标矩形区域。 |
 | filterMode | [FilterMode](arkts-arkgraphics2d-drawing-filtermode-e.md) | 是 | 过滤模式。 |
 
 **错误码：**
@@ -1124,8 +1124,8 @@ drawImageRect(pixelmap: image.PixelMap, dstRect: common2D.Rect, samplingOptions?
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| pixelmap | image.PixelMap | 是 | 图片的PixelMap。 |
-| dstRect | common2D.Rect | 是 | 矩形对象，用于指定画布上图片的绘制区域。 |
+| pixelmap | [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | 是 | 图片的PixelMap。 |
+| dstRect | [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) | 是 | 矩形对象，用于指定画布上图片的绘制区域。 |
 | samplingOptions | [SamplingOptions](arkts-arkgraphics2d-drawing-samplingoptions-c.md) | 否 | 采样选项对象，默认为不使用任何参数构造的原始采样选项对象。 |
 
 **错误码：**
@@ -1190,9 +1190,9 @@ drawImageRectWithSrc(pixelmap: image.PixelMap, srcRect: common2D.Rect, dstRect: 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| pixelmap | image.PixelMap | 是 | 图片的PixelMap。 |
-| srcRect | common2D.Rect | 是 | 矩形对象，用于指定图片的待绘制区域。 |
-| dstRect | common2D.Rect | 是 | 矩形对象，用于指定画布上图片的绘制区域。 |
+| pixelmap | [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | 是 | 图片的PixelMap。 |
+| srcRect | [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) | 是 | 矩形对象，用于指定图片的待绘制区域。 |
+| dstRect | [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) | 是 | 矩形对象，用于指定画布上图片的绘制区域。 |
 | samplingOptions | [SamplingOptions](arkts-arkgraphics2d-drawing-samplingoptions-c.md) | 否 | 采样选项对象，默认为不使用任何参数构造的原始采样选项对象。 |
 | constraint | [SrcRectConstraint](arkts-arkgraphics2d-drawing-srcrectconstraint-e.md) | 否 | 源矩形区域约束类型，默认为STRICT。 |
 
@@ -1348,7 +1348,7 @@ drawOval(oval: common2D.Rect): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| oval | common2D.Rect | 是 | 矩形区域，该矩形的内切椭圆即为待绘制椭圆。 |
+| oval | [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) | 是 | 矩形区域，该矩形的内切椭圆即为待绘制椭圆。 |
 
 **错误码：**
 
@@ -1441,7 +1441,7 @@ drawPixelMapMesh(pixelmap: image.PixelMap, meshWidth: number, meshHeight: number
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| pixelmap | image.PixelMap | 是 | 用于绘制网格的像素图。 |
+| pixelmap | [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | 是 | 用于绘制网格的像素图。 |
 | meshWidth | number | 是 | 网格中的列数，大于0的整数。 |
 | meshHeight | number | 是 | 网格中的行数，大于0的整数。 |
 | vertices | Array&lt;number&gt; | 是 | 顶点数组，指定网格的绘制位置，该参数为浮点数组，单位为物理像素px。大小必须为((meshWidth+1) * (meshHeight+1) + vertOffset) * 2。 |
@@ -1556,7 +1556,7 @@ drawPoints(points: Array<common2D.Point>, mode?: PointMode): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| points | Array&lt;common2D.Point&gt; | 是 | 要绘制的点的数组。长度不能为0。 |
+| points | Array&lt;[common2D.Point](arkts-arkgraphics2d-common2d-point-i.md)&gt; | 是 | 要绘制的点的数组。长度不能为0。 |
 | mode | [PointMode](arkts-arkgraphics2d-drawing-pointmode-e.md) | 否 | 绘制数组中的点的方式。默认值为drawing.PointMode.POINTS。 |
 
 **错误码：**
@@ -1621,7 +1621,7 @@ drawRect(rect: common2D.Rect): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| rect | common2D.Rect | 是 | 绘制的矩形区域。 |
+| rect | [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) | 是 | 绘制的矩形区域。 |
 
 **错误码：**
 
@@ -1798,11 +1798,11 @@ drawShadow(path: Path, planeParams: common2D.Point3d, devLightPos: common2D.Poin
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | path | Path | 是 | 路径对象，可生成阴影。 |
-| planeParams | common2D.Point3d | 是 | 表示一个三维向量，用于计算遮挡物相对于画布在z轴上的偏移量，偏移量的值由该向量的x坐标与y坐标计算得出。 |
-| devLightPos | common2D.Point3d | 是 | 光线相对于画布的位置。 |
+| planeParams | [common2D.Point3d](arkts-arkgraphics2d-common2d-point3d-i.md) | 是 | 表示一个三维向量，用于计算遮挡物相对于画布在z轴上的偏移量，偏移量的值由该向量的x坐标与y坐标计算得出。 |
+| devLightPos | [common2D.Point3d](arkts-arkgraphics2d-common2d-point3d-i.md) | 是 | 光线相对于画布的位置。 |
 | lightRadius | number | 是 | 圆形灯半径，取值范围&gt;0，该参数为浮点数。单位为物理像素px。 |
-| ambientColor | common2D.Color | 是 | 环境阴影颜色。 |
-| spotColor | common2D.Color | 是 | 点阴影颜色。 |
+| ambientColor | [common2D.Color](arkts-arkgraphics2d-common2d-color-i.md) | 是 | 环境阴影颜色。 |
+| spotColor | [common2D.Color](arkts-arkgraphics2d-common2d-color-i.md) | 是 | 点阴影颜色。 |
 | flag | [ShadowFlag](arkts-arkgraphics2d-drawing-shadowflag-e.md) | 是 | 阴影标志，用于控制阴影的绘制方式。 |
 
 **错误码：**
@@ -1862,11 +1862,11 @@ drawShadow(path: Path, planeParams: common2D.Point3d, devLightPos: common2D.Poin
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | path | Path | 是 | 路径对象，可生成阴影。 |
-| planeParams | common2D.Point3d | 是 | 表示一个三维向量，用于计算遮挡物相对于画布在z轴上的偏移量，偏移量的值由该向量的x坐标与y坐标计算得出。 |
-| devLightPos | common2D.Point3d | 是 | 光线相对于画布的位置。 |
+| planeParams | [common2D.Point3d](arkts-arkgraphics2d-common2d-point3d-i.md) | 是 | 表示一个三维向量，用于计算遮挡物相对于画布在z轴上的偏移量，偏移量的值由该向量的x坐标与y坐标计算得出。 |
+| devLightPos | [common2D.Point3d](arkts-arkgraphics2d-common2d-point3d-i.md) | 是 | 光线相对于画布的位置。 |
 | lightRadius | number | 是 | 圆形灯半径，该参数为浮点数。单位为物理像素px。 |
-| ambientColor | common2D.Color \| number | 是 | 环境阴影颜色，可以用16进制ARGB格式的32位无符号整数表示。 |
-| spotColor | common2D.Color \| number | 是 | 点阴影颜色，可以用16进制ARGB格式的32位无符号整数表示。 |
+| ambientColor | [common2D.Color](arkts-arkgraphics2d-common2d-color-i.md) \| number | 是 | 环境阴影颜色，可以用16进制ARGB格式的32位无符号整数表示。 |
+| spotColor | [common2D.Color](arkts-arkgraphics2d-common2d-color-i.md) \| number | 是 | 点阴影颜色，可以用16进制ARGB格式的32位无符号整数表示。 |
 | flag | [ShadowFlag](arkts-arkgraphics2d-drawing-shadowflag-e.md) | 是 | 阴影标志，用于控制阴影的绘制方式。 |
 
 **错误码：**
@@ -2060,8 +2060,8 @@ drawVertices(vertexMode: VertexMode, vertexCount: number, positions: Array<commo
 | --- | --- | --- | --- |
 | vertexMode | [VertexMode](arkts-arkgraphics2d-drawing-vertexmode-e.md) | 是 | 绘制顶点的连接方式。 |
 | vertexCount | number | 是 | 顶点数组元素的数量，值为大于等于3的整数，输入浮点数则仅保留整数部分。 |
-| positions | Array&lt;common2D.Point&gt; | 是 | 描述顶点位置的数组，不能为空，其长度必须等于vertexCount。 |
-| texs | Array&lt;common2D.Point&gt; \| null | 是 | 描述顶点对应纹理空间坐标的数组。其可以为空，表明纹理空间失效；若不为空，其长度必须等于vertexCount。 |
+| positions | Array&lt;[common2D.Point](arkts-arkgraphics2d-common2d-point-i.md)&gt; | 是 | 描述顶点位置的数组，不能为空，其长度必须等于vertexCount。 |
+| texs | Array&lt;[common2D.Point](arkts-arkgraphics2d-common2d-point-i.md)&gt; \| null | 是 | 描述顶点对应纹理空间坐标的数组。其可以为空，表明纹理空间失效；若不为空，其长度必须等于vertexCount。 |
 | colors | Array&lt;number&gt; \| null | 是 | 描述顶点对应颜色的数组，用于在三角形中进行插值，每个颜色值用16进制ARGB格式的32位无符号整数表示，例如：0xAARRGGBB。其可以为空，表明不使用顶点颜色插值，颜色效果取决于当前画布绑定的画刷或画笔所设置的颜色；若不为空其长度必须等于vertexCount。 |
 | indexCount | number | 是 | 索引的数量。其值可以为0，且indices数组长度为0时可以画图；若不为0，则值必须为大于等于3的整数，输入浮点数则仅保留整数部分。 |
 | indices | Array&lt;number&gt; \| null | 是 | 描述顶点对应索引的数组。其可以为空，此时将忽略indexCount的合理传值（大于等于3的整数或等于0）；若不为空其长度必须等于indexCount。 |
@@ -2152,7 +2152,7 @@ getLocalClipBounds(): common2D.Rect
 
 | 类型 | 说明 |
 | --- | --- |
-| common2D.Rect | 返回画布裁剪区域的矩形边界。 |
+| [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) | 返回画布裁剪区域的矩形边界。 |
 
 **示例**
 
@@ -2427,7 +2427,7 @@ quickRejectRect(rect: common2D.Rect): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| rect | common2D.Rect | 是 | 矩形区域。 |
+| rect | [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) | 是 | 矩形区域。 |
 
 **返回值：**
 
@@ -2689,7 +2689,7 @@ saveLayer(rect?: common2D.Rect | null, brush?: Brush | null): number
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| rect | common2D.Rect \| null | 否 | 矩形对象，用于限制图层大小，默认为当前画布大小。 |
+| rect | [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) \| null | 否 | 矩形对象，用于限制图层大小，默认为当前画布大小。 |
 | brush | [Brush](arkts-arkgraphics2d-drawing-brush-c.md) \| null | 否 | 画刷对象，绘制位图时会应用画刷对象的透明度、颜色滤波器效果和混合模式，默认不设置额外效果。 |
 
 **返回值：**

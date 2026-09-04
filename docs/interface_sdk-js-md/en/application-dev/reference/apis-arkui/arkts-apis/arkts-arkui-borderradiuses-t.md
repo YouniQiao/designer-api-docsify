@@ -14,4 +14,4 @@ Sets the uniform radius of the four corners.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** [Corners](arkts-arkui-graphics-corners-i.md)&lt;number&gt;
+**Type:** [Corners](arkts-arkui-graphics-corners-i.md)&lt;number&gt;

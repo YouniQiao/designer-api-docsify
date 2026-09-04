@@ -28,7 +28,7 @@ The options are as follows:
 - **COLOR_MODE_LIGHT**: light mode.  
 - **COLOR_MODE_DARK**: dark mode.
 
-**Type:** ConfigurationConstant.ColorMode
+**Type:** [ConfigurationConstant.ColorMode](arkts-ability-configurationconstant-colormode-e.md)
 
 **Since:** 9
 
@@ -52,7 +52,7 @@ The options are as follows:
 
 You can subscribe to changes to this environment variable in the [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) and [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md), but not in the [ApplicationContext](arkts-ability-applicationcontext-c.md) or [AbilityStage](arkts-ability-app-ability-abilitystage-abilitystage-c.md).
 
-**Type:** ConfigurationConstant.Direction
+**Type:** [ConfigurationConstant.Direction](arkts-ability-configurationconstant-direction-e.md)
 
 **Since:** 9
 
@@ -236,7 +236,7 @@ The font size is positively correlated with the screen pixel density. By monitor
 
 You can subscribe to changes to this environment variable in the [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) and [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md), but not in the [ApplicationContext](arkts-ability-applicationcontext-c.md) or [AbilityStage](arkts-ability-app-ability-abilitystage-abilitystage-c.md).
 
-**Type:** ConfigurationConstant.ScreenDensity
+**Type:** [ConfigurationConstant.ScreenDensity](arkts-ability-configurationconstant-screendensity-e.md)
 
 **Since:** 9
 

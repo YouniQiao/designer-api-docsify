@@ -10,4 +10,4 @@ type SystemSoundPlayer = _SystemSoundPlayer
 
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
-**属性类型：** _SystemSoundPlayer
+**类型：** _SystemSoundPlayer

@@ -36,7 +36,7 @@ pixelMap: image.PixelMap
 
 PixelMap object of the captured image.
 
-**Type:** image.PixelMap
+**Type:** [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)
 
 **Since:** 12
 

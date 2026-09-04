@@ -14,4 +14,4 @@ Defines the rectangle used for auto-fill.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
-**Property type:** _AutoFillRect.default
+**Type:** _AutoFillRect.default

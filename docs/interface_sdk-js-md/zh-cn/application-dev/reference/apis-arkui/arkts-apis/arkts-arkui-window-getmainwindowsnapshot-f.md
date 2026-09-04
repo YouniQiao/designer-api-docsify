@@ -32,7 +32,7 @@ function getMainWindowSnapshot(windowId: Array<number>, config: WindowSnapshotCo
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;image.PixelMap \| undefined&gt;&gt; | Promise对象。截图的PixelMap列表，按传入的窗口ID数组的顺序排列。当窗口ID合法但无法找到对应的主窗口时，返回undefined。 |
+| Promise&lt;Array&lt;[image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) \| undefined&gt;&gt; | Promise对象。截图的PixelMap列表，按传入的窗口ID数组的顺序排列。当窗口ID合法但无法找到对应的主窗口时，返回undefined。 |
 
 **错误码：**
 

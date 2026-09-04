@@ -4,6 +4,8 @@ Describes the desired display orientation for image content.
 
 **Since:** 14
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## AUTO

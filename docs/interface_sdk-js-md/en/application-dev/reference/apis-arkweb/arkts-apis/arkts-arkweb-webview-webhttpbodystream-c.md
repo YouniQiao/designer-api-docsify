@@ -37,6 +37,7 @@ Reads the current read position in this **WebHttpBodyStream** instance.
 **Examples**
 
 For the complete sample code, see [initialize](#initialize).
+- simpleType:
 
 ## getSize
 
@@ -61,6 +62,7 @@ Obtains the size of data in this **WebHttpBodyStream** instance. This API always
 **Examples**
 
 For the complete sample code, see [initialize](#initialize).
+- simpleType:
 
 ## initialize
 
@@ -193,6 +195,7 @@ Checks whether this **WebHttpBodyStream** instance is transmitted by chunk.
 **Examples**
 
 For the complete sample code, see [initialize](#initialize).
+- simpleType:
 
 ## isEof
 
@@ -217,6 +220,7 @@ Checks whether all data in this **WebHttpBodyStream** instance has been read.
 **Examples**
 
 For the complete sample code, see [initialize](#initialize).
+- simpleType:
 
 ## isInMemory
 
@@ -241,6 +245,7 @@ Checks whether the uploaded data in this **WebHttpBodyStream** instance is in me
 **Examples**
 
 For the complete sample code, see [initialize](#initialize).
+- simpleType:
 
 ## read
 
@@ -277,3 +282,4 @@ Reads data from this **WebHttpBodyStream** instance.
 **Examples**
 
 For the complete sample code, see [initialize](#initialize).
+- simpleType:

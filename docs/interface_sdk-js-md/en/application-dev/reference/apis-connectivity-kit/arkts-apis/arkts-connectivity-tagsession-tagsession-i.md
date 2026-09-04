@@ -249,7 +249,7 @@ Obtains the **tagInfo** object provided by the NFC service when the tag is dispa
 
 | Type | Description |
 | --- | --- |
-| tag.TagInfo | Taginfo** object obtained. |
+| [tag.TagInfo](arkts-connectivity-tag-taginfo-i.md) | Taginfo** object obtained. |
 
 **Examples**
 

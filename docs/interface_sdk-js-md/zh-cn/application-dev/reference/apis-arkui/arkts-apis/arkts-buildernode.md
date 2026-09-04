@@ -532,6 +532,10 @@ struct Index {
 ```
 
 > 说明：
+> 
+> 从API version 23开始，支持跨BuilderNode配对@Provider和@Consumer。
+
+设置BuilderNode的[BuildOptions](arkts-arkui-buildernode-buildoptions-i.md)中enableProvideConsumeCrossing为true，以实现BuilderNode内部自定义组件的@Consumer变量与所在自定义组件的@Provider装饰的状态变量双向同步。
 
 ```TypeScript
 import { BuilderNode, FrameNode, NodeController } from '@kit.ArkUI';
@@ -615,6 +619,10 @@ struct AddChild {
 ```
 
 > 说明：
+> 
+> 从API version 23开始，支持跨BuilderNode配对@Provider和@Consumer。
+
+该示例演示了BuilderNode挂载到组件树和从组件树卸载时，@Consumer与@Provider的同步关系变化。
 
 ```TypeScript
 import { BuilderNode, FrameNode, NodeController } from '@kit.ArkUI';
@@ -733,6 +741,10 @@ struct TestRemove {
 ```
 
 > 说明：
+> 
+> 从API version 23开始，支持跨BuilderNode配对@Provider和@Consumer。
+
+该示例演示了BuilderNode挂载到组件树后，再挂载到另一个组件树时，@Consumer与@Provider的同步关系变化。
 
 ```TypeScript
 import { BuilderNode, FrameNode, NodeController } from '@kit.ArkUI';
@@ -870,6 +882,10 @@ struct ConsumerChild {
 ```
 
 > 说明：
+> 
+> 从API version 23开始，支持跨BuilderNode配对@Provider和@Consumer。
+
+该示例演示了BuilderNode互相嵌套场景下@Consumer和@Provider的同步关系变化。
 
 ```TypeScript
 import { BuilderNode, FrameNode, NodeContent, NodeController } from '@kit.ArkUI';
@@ -994,6 +1010,10 @@ struct BuildNodeToBuildNodeChild {
 ```
 
 > 说明：
+> 
+> 从API version 23开始，支持跨BuilderNode配对@Provider和@Consumer。
+
+该示例演示了当@Consumer所在的自定义组件在BuilderNode下且该自定义组件存在子组件时，@Consumer和@Provider之间的同步关系。
 
 ```TypeScript
 import { BuilderNode, FrameNode, NodeController } from '@kit.ArkUI';
@@ -1137,6 +1157,10 @@ struct NestedComponentChildChild {
 ```
 
 > 说明：
+> 
+> 从API version 23开始，支持跨BuilderNode配对@Provider和@Consumer。
+
+该示例演示了组件树为@Provider-@Consumer-BuilderNode-@Consumer的情况时，@Consumer和@Provider之间的同步关系。
 
 ```TypeScript
 import { BuilderNode, FrameNode, NodeController } from '@kit.ArkUI';
@@ -1292,6 +1316,10 @@ struct NestedComponentChild {
 ```
 
 > 说明：
+> 
+> 从API version 23开始，支持跨BuilderNode配对@Provider和@Consumer。
+
+该示例演示了组件树为@Provider-BuilderNode-@Provider-@Consumer的情况时，@Consumer和@Provider之间的同步关系。
 
 ```TypeScript
 import { BuilderNode, FrameNode, NodeController } from '@kit.ArkUI';
@@ -1449,6 +1477,7 @@ struct DefaultConsumer {
 ```
 
 从API version 22版本开始支持。
+该示例演示了在自定义组件中截获鼠标事件并进行坐标转换的完整流程。组件通过[onMouse](../arkui-ts/ts-universal-mouse-key.md#onmouse)回调读取本地x/y坐标，再结合FrameNode.getPositionToParent()得到的偏移量，调用[vp2px](./arkts-apis-uicontext-uicontext.md#vp2px12)将相对坐标转换为像素坐标，更新[MouseEvent](../arkui-ts/ts-universal-mouse-key.md#mouseevent对象说明)的windowX/windowY、displayX/displayY。最后通过rootNode.postInputEvent将转换后的鼠标事件分发给子节点进行处理。
 
 ```TypeScript
 import { NodeController, ReactiveBuilderNode, FrameNode, PromptAction, UIContext, InputEventType } from '@kit.ArkUI';
@@ -1589,6 +1618,7 @@ struct MyComponent {
 ```
 
 从API version 22版本开始支持。
+该示例演示了在自定义组件中截获触摸事件并对触点坐标进行转换的完整流程。在[onTouch](../arkui-ts/ts-universal-events-touch.md#ontouch)回调中，遍历[TouchEvent](../arkui-ts/ts-universal-events-touch.md#touchevent对象说明)的changedTouches和touches数组，对每个触点的x/y坐标加上组件偏移量并调用[vp2px](./arkts-apis-uicontext-uicontext.md#vp2px12)转换为像素，更新各自的windowX/windowY、displayX/displayY。最后同样通过rootNode.postInputEvent将转换后的触摸事件分发给子节点处理。
 
 ```TypeScript
 import { NodeController, ReactiveBuilderNode, FrameNode, UIContext, PromptAction, InputEventType } from '@kit.ArkUI';
@@ -1697,6 +1727,7 @@ struct MyComponent {
 ```
 
 从API version 22版本开始支持。
+该示例演示了在自定义组件中截获滚轮或触控板轴事件并进行坐标转换的完整流程。在[onAxisEvent](../arkui-ts/ts-universal-events-axis.md#onaxisevent)回调中，先获取事件的相对x/y坐标，再加上组件偏移量后调用[vp2px](./arkts-apis-uicontext-uicontext.md#vp2px12)转换为像素，更新AxisEvent的windowX/windowY、displayX/displayY，最后通过rootNode.postInputEvent将转换后的轴事件分发给子节点进行处理。
 
 ```TypeScript
 import { NodeController, ReactiveBuilderNode, FrameNode, UIContext, PromptAction, InputEventType } from '@kit.ArkUI';
@@ -1792,6 +1823,7 @@ struct MyComponent {
 ```
 
 从API version 24开始，新增postInputEventWithStrategy接口。
+该示例演示了在自定义组件中截获鼠标事件并进行坐标转换的完整流程。组件通过[onMouse](../arkui-ts/ts-universal-mouse-key.md#onmouse)回调读取当前触点坐标x/y，再结合FrameNode.getPositionToParent得到的偏移量，调用[vp2px](./arkts-apis-uicontext-uicontext.md#vp2px12)将相对坐标转换为像素坐标，更新[MouseEvent](../arkui-ts/ts-universal-mouse-key.md#mouseevent对象说明)的windowX/windowY、displayX/displayY。选择不同的手势竞争策略[CompetitionStrategy](../arkui-ts/ts-appendix-enums.md#competitionstrategy24)，最后通过rootNode.postInputEventWithStrategy将转换后的鼠标事件分发给子节点进行处理。
 
 ```TypeScript
 import { NodeController, BuilderNode, FrameNode, PromptAction, UIContext, InputEventType } from '@kit.ArkUI';
@@ -2044,6 +2076,7 @@ struct MyComponent {
 ```
 
 从API version 24开始，新增postInputEventWithStrategy接口。
+该示例演示了在自定义组件中截获触摸事件并对触点坐标进行转换的完整流程。在[onTouch](../arkui-ts/ts-universal-events-touch.md#ontouch)回调中，遍历[TouchEvent](../arkui-ts/ts-universal-events-touch.md#touchevent对象说明)的changedTouches和touches数组，对每个触点的x/y加上组件偏移量并调用[vp2px](./arkts-apis-uicontext-uicontext.md#vp2px12)转换为像素，更新每个触点的windowX/windowY、displayX/displayY。选择不同的手势竞争策略[CompetitionStrategy](../arkui-ts/ts-appendix-enums.md#competitionstrategy24)，最后同样通过rootNode.postInputEventWithStrategy将转换后的触摸事件分发给子节点处理。
 
 ```TypeScript
 import { NodeController, BuilderNode, FrameNode, PromptAction, UIContext, InputEventType } from '@kit.ArkUI';
@@ -2327,6 +2360,7 @@ struct MyComponent {
 ```
 
 从API version 24开始，新增postInputEventWithStrategy接口。
+该示例演示了在自定义组件中截获滚轮或触控板轴事件并进行坐标转换的完整流程。在[onAxisEvent](../arkui-ts/ts-universal-events-axis.md#onaxisevent)回调中，先获取事件的相对x/y，再加上组件偏移量后调用[vp2px](./arkts-apis-uicontext-uicontext.md#vp2px12)转换为像素，更新AxisEvent的windowX/windowY、displayX/displayY，选择不同的手势竞争策略[CompetitionStrategy](../arkui-ts/ts-appendix-enums.md#competitionstrategy24)，最后通过rootNode.postInputEventWithStrategy将转换后的轴事件分发给子节点进行处理。
 
 ```TypeScript
 import { NodeController, BuilderNode, FrameNode, UIContext, PromptAction, InputEventType } from '@kit.ArkUI';

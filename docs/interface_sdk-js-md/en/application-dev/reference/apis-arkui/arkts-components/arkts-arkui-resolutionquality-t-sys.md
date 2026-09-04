@@ -14,4 +14,4 @@ Enumerates all the levels available for the image resolution quality.
 
 **System API:** This is a system API.
 
-**Property type:** import('../api/@ohos.multimedia.image').default.ResolutionQuality
+**Type:** import('../api/@ohos.multimedia.image').default.ResolutionQuality

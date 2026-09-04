@@ -1,6 +1,14 @@
 # DepthVector3（系统接口）
 
-深度空间中的三维向量。
+深度空间中的三维向量。用于为组件设置空间效果参数。
+
+> **说明：**
+> 
+> - 空间效果仅作用于[DepthComponent](./ts-basic-components-depthcomponent-sys.md)的子组件，且仅当DepthComponent相关参数设置正确才能生效。
+> 
+> - 空间效果不支持[Web](../../../web/web-component-overview.md)、[XComponent](./ts-basic-components-xcomponent.md)、[RichEditor](./ts-basic-components-richeditor.md)、[RichText](./ts-basic-components-richtext.md)、[Video](./ts-media-components-video.md)、[Component3D](./ts-basic-components-component3d.md)、[EmbeddedComponent](./ts-container-embedded-component.md)组件。
+> 
+> - 本模块为系统接口。
 
 @interface DepthVector3
 

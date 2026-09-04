@@ -41,7 +41,7 @@ Sets the style and primacy for the button. The system automatically adjusts the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ButtonStyleMode](arkts-arkui-buttonstylemode-e.md) | Yes | Style and primacy of the button Default value: **ButtonStyleMode.EMPHASIZED |
+| value | [ButtonStyleMode](arkts-arkui-buttonstylemode-e.md) | Yes | [Style and primacy of the button Default value: **ButtonStyleMode.EMPHASIZED](arkts-arkui-buttonstylemode-e.md) |
 
 ## contentModifier
 

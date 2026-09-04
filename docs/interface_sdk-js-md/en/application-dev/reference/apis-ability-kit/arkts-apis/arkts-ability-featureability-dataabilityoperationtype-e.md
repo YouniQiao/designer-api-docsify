@@ -4,6 +4,8 @@ Enumerates the operation types of a DataAbility. The DataAbility can use an enum
 
 **Since:** 7
 
+**Model restriction:** This API can be used only in the FA model.
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
 ## TYPE_INSERT

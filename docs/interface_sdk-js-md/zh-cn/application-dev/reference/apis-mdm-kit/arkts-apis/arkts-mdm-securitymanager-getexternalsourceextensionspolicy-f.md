@@ -32,7 +32,7 @@ function getExternalSourceExtensionsPolicy(admin: Want): common.ManagedPolicy
 
 | 类型 | 说明 |
 | --- | --- |
-| common.ManagedPolicy | 返回ManagedPolicy枚举类型的管控策略。 |
+| [common.ManagedPolicy](arkts-mdm-common-managedpolicy-e.md) | 返回ManagedPolicy枚举类型的管控策略。 |
 
 **错误码：**
 
@@ -90,7 +90,7 @@ function getExternalSourceExtensionsPolicy(admin: Want | null): common.ManagedPo
 
 | 类型 | 说明 |
 | --- | --- |
-| common.ManagedPolicy | 返回ManagedPolicy枚举类型的管控策略。 |
+| [common.ManagedPolicy](arkts-mdm-common-managedpolicy-e.md) | 返回ManagedPolicy枚举类型的管控策略。 |
 
 **错误码：**
 

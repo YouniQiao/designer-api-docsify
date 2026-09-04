@@ -12,4 +12,4 @@ Describes the alternate icon information of an application.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
-**Property type:** _BundleInfo.AlternateIconInfo
+**Type:** [_BundleInfo.AlternateIconInfo](arkts-ability-bundleinfo-alternateiconinfo-i.md)

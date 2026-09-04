@@ -12,4 +12,4 @@ Defines the Context module.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
-**Property type:** _Context
+**Type:** _Context

@@ -4,6 +4,8 @@ Enumerates the types of pages in **MultiNavigation**.
 
 **Since:** 14
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## HOME_PAGE

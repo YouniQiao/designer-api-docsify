@@ -14,4 +14,4 @@ type BuiltinMap<K, V> = Map<K, V>
 
 **系统能力：** SystemCapability.Utils.Lang
 
-**属性类型：** Map&lt;K, V&gt;
+**类型：** Map&lt;K, V&gt;

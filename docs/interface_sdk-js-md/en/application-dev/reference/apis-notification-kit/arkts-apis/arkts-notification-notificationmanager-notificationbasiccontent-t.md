@@ -10,4 +10,4 @@ Describes the normal text notification.
 
 **System capability:** SystemCapability.Notification.Notification
 
-**Property type:** _NotificationBasicContent
+**Type:** _NotificationBasicContent

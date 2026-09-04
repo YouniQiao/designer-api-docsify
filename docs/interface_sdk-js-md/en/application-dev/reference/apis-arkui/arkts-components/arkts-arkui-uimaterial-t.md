@@ -14,4 +14,4 @@ UIMaterial
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** import('../api/@ohos.arkui.uiMaterial').uiMaterial
+**Type:** import('../api/@ohos.arkui.uiMaterial').uiMaterial

@@ -28,7 +28,7 @@ lockscreenPicture?: image.PixelMap
 
 Picture displayed on the lock screen. This parameter is left empty by default. Currently, only the live view notification is supported. The total number of the icon pixel bytes cannot exceed 192 KB (which is obtained through getPixelBytesNumber). The recommended icon size is 128 x 128 pixels. The display effect depends on the device capability and notification center UI style.
 
-**Type:** image.PixelMap
+**Type:** [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)
 
 **Since:** 12
 

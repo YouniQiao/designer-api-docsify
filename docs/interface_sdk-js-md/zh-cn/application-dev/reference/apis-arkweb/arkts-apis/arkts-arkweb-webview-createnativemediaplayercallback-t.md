@@ -29,3 +29,4 @@ type CreateNativeMediaPlayerCallback =
 **示例**
 
 完整示例代码参考[onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer)。
+- simpleType:

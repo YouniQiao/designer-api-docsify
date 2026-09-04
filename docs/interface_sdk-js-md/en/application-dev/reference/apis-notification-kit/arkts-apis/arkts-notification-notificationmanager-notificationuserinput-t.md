@@ -10,4 +10,4 @@ Describes the user input for the notification.
 
 **System capability:** SystemCapability.Notification.Notification
 
-**Property type:** _NotificationUserInput
+**Type:** _NotificationUserInput

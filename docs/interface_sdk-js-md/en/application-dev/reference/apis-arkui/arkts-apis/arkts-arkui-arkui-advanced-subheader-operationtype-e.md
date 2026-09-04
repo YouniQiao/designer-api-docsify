@@ -4,6 +4,8 @@ Defines the style of elements in the subheader operation area.
 
 **Since:** 10
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## TEXT_ARROW

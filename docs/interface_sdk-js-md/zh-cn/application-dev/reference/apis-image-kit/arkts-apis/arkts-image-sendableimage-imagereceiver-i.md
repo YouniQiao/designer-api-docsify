@@ -290,7 +290,7 @@ readonly format: image.ImageFormat
 
 图像格式。
 
-**类型：** image.ImageFormat
+**类型：** [image.ImageFormat](arkts-image-image-imageformat-e.md)
 
 **起始版本：** 12
 
@@ -304,7 +304,7 @@ readonly size: image.Size
 
 图片大小。
 
-**类型：** image.Size
+**类型：** [image.Size](arkts-image-image-size-i.md)
 
 **起始版本：** 12
 

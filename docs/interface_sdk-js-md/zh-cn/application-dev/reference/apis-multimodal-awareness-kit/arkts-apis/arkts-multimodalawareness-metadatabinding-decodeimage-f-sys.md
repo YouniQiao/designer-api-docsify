@@ -24,7 +24,7 @@ function decodeImage(encodedImage: image.PixelMap): Promise<string>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| encodedImage | image.PixelMap | 是 | 带有信息的图片，需为通过encodeImage接口处理过的编码图片。 |
+| encodedImage | [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | 是 | 带有信息的图片，需为通过encodeImage接口处理过的编码图片。 |
 
 **返回值：**
 

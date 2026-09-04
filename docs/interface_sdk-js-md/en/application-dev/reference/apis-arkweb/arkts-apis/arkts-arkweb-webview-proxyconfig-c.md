@@ -29,6 +29,7 @@ Hostnames without a period character will bypass the proxy and directly connect 
 **Examples**
 
 For details about the sample code, see [removeProxyOverride](./arkts-apis-webview-ProxyController.md#removeproxyoverride).
+- simpleType:
 
 ## clearImplicitRules
 
@@ -47,6 +48,7 @@ Overrides the default behavior and forcibly sends the local host address or loca
 **Examples**
 
 For details about the sample code, see [removeProxyOverride](./arkts-apis-webview-ProxyController.md#removeproxyoverride).
+- simpleType:
 
 ## enableReverseBypass
 
@@ -77,6 +79,7 @@ Reverses the bypass rule.
 **Examples**
 
 For details about the sample code, see [removeProxyOverride](./arkts-apis-webview-ProxyController.md#removeproxyoverride).
+- simpleType:
 
 ## getBypassRules
 
@@ -101,6 +104,7 @@ Obtains the list of URLs that do not use the proxy.
 **Examples**
 
 For details about the sample code, see [removeProxyOverride](./arkts-apis-webview-ProxyController.md#removeproxyoverride).
+- simpleType:
 
 ## getProxyRules
 
@@ -125,6 +129,7 @@ Obtains proxy rules.
 **Examples**
 
 For details about the sample code, see [removeProxyOverride](./arkts-apis-webview-ProxyController.md#removeproxyoverride).
+- simpleType:
 
 ## insertBypassRule
 
@@ -155,6 +160,7 @@ Inserts a bypass rule, specifying which URLs should bypass the proxy and directl
 **Examples**
 
 For details about the sample code, see [removeProxyOverride](./arkts-apis-webview-ProxyController.md#removeproxyoverride).
+- simpleType:
 
 ## insertDirectRule
 
@@ -194,6 +200,7 @@ Inserts a direct rule, specifying that URLs matching the schemeFilter condition 
 **Examples**
 
 For details about the sample code, see [removeProxyOverride](./arkts-apis-webview-ProxyController.md#removeproxyoverride).
+- simpleType:
 
 ## insertProxyRule
 
@@ -243,6 +250,7 @@ For example:
 **Examples**
 
 For details about the sample code, see [removeProxyOverride](./arkts-apis-webview-ProxyController.md#removeproxyoverride).
+- simpleType:
 
 ## isReverseBypassEnabled
 
@@ -267,3 +275,4 @@ Obtains the value of [enableReverseBypass](#enablereversebypass). For details, s
 **Examples**
 
 For details about the sample code, see [removeProxyOverride](./arkts-apis-webview-ProxyController.md#removeproxyoverride).
+- simpleType:

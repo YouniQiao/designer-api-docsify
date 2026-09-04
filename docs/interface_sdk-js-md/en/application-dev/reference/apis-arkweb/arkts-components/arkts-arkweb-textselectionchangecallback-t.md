@@ -19,3 +19,4 @@ Callback for onTextSelectionChange. Triggered when the text selection content ch
 **Examples**
 
 For details about the complete sample code, see [onTextSelectionChange](./arkts-basic-components-web-events.md#ontextselectionchange23).
+- simpleType:

@@ -35,7 +35,7 @@ alignListItem(value: ListItemAlign)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ListItemAlign](arkts-arkui-listitemalign-e.md) | 是 | 交叉轴方向的布局方式。默认值：ListItemAlign.Start |
+| value | [ListItemAlign](arkts-arkui-listitemalign-e.md) | 是 | [交叉轴方向的布局方式。默认值：ListItemAlign.Start](arkts-arkui-navbarposition-e.md) |
 
 ## backPressBehavior
 
@@ -374,7 +374,7 @@ edgeEffect(value: EdgeEffect, options?: EdgeEffectOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [EdgeEffect](../arkts-apis/arkts-arkui-edgeeffect-e.md) | 是 | List组件的边缘滑动效果，支持弹簧效果和阴影效果。默认值：EdgeEffect.Spring |
+| value | [EdgeEffect](../arkts-apis/arkts-arkui-edgeeffect-e.md) | 是 | [List组件的边缘滑动效果，支持弹簧效果和阴影效果。默认值：EdgeEffect.Spring](arkts-arkui-swipeedgeeffect-e.md) |
 | options | [EdgeEffectOptions](arkts-arkui-edgeeffectoptions-i.md) | 否 | 组件内容大小小于组件自身时，是否开启滑动效果。设置为{ alwaysEnabled: true }会开启滑动效果，{ alwaysEnabled: false }不开启。默认值：{ alwaysEnabled: false }<br>**起始版本：** 11 |
 
 ## editMode
@@ -589,7 +589,7 @@ listDirection(value: Axis)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | Axis | 是 | 组件的排列方向。默认值：Axis.Vertical |
+| value | Axis | 是 | [组件的排列方向。默认值：Axis.Vertical](arkts-arkui-scrolldirection-e.md) |
 
 ## maintainVisibleContentPosition
 
@@ -1095,7 +1095,7 @@ scrollSnapAlign(value: ScrollSnapAlign)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ScrollSnapAlign](arkts-arkui-scrollsnapalign-e.md) | 是 | 列表项滚动结束对齐效果。默认值：ScrollSnapAlign.NONE |
+| value | [ScrollSnapAlign](arkts-arkui-scrollsnapalign-e.md) | 是 | [列表项滚动结束对齐效果。默认值：ScrollSnapAlign.NONE](../arkts-apis/arkts-arkui-autocapitalizationmode-e.md) |
 
 ## scrollSnapAnimationSpeed
 
@@ -1117,7 +1117,7 @@ scrollSnapAnimationSpeed(speed: ScrollSnapAnimationSpeed)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| speed | [ScrollSnapAnimationSpeed](arkts-arkui-scrollsnapanimationspeed-e.md) | 是 | 列表滚动限位动画速度。默认值：ScrollSnapAnimationSpeed.NORMAL |
+| speed | [ScrollSnapAnimationSpeed](arkts-arkui-scrollsnapanimationspeed-e.md) | 是 | [列表滚动限位动画速度。默认值：ScrollSnapAnimationSpeed.NORMAL](../arkts-apis/arkts-arkui-superscriptstyle-e.md) |
 
 ## stackFromEnd
 
@@ -1165,7 +1165,7 @@ sticky(value: StickyStyle)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [StickyStyle](arkts-arkui-stickystyle-e.md) | 是 | ListItemGroup吸顶或吸底效果。默认值：StickyStyle.None |
+| value | [StickyStyle](arkts-arkui-stickystyle-e.md) | 是 | [ListItemGroup吸顶或吸底效果。默认值：StickyStyle.None](arkts-arkui-imageinterpolation-e.md) |
 
 ## supportEmptyBranchInLazyLoading
 

@@ -14,4 +14,4 @@ type BluetoothTransport = connection.BluetoothTransport
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
-**属性类型：** connection.BluetoothTransport
+**类型：** [connection.BluetoothTransport](arkts-connectivity-connection-bluetoothtransport-e.md)

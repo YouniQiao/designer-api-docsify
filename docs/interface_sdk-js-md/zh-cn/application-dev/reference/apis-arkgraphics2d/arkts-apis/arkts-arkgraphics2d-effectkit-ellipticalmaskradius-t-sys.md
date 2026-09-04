@@ -17,7 +17,7 @@ type EllipticalMaskRadius = [
 
 **系统接口：** 此接口为系统接口。
 
-**属性类型：** [
+**类型：** [
   number,
   number
 ]

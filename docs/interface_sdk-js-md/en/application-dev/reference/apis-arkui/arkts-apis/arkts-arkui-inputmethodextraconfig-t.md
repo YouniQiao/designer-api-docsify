@@ -14,4 +14,4 @@ Represents the extension configuration of an input method.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** import('../api/@ohos.inputMethod.ExtraConfig').InputMethodExtraConfig
+**Type:** import('../api/@ohos.inputMethod.ExtraConfig').InputMethodExtraConfig

@@ -146,7 +146,7 @@ static quickRequestImage(
 | context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | 是 | 传入Ability实例的上下文。 |
 | asset | PhotoAsset | 是 | 待请求的媒体文件对象。 |
 | requestOptions | [RequestOptions](arkts-medialibrary-photoaccesshelper-requestoptions-i.md) | 是 | 图片请求策略模式配置项。 |
-| dataHandler | [QuickImageDataHandler](arkts-medialibrary-photoaccesshelper-quickimagedatahandler-i.md)&lt;image.Picture&gt; | 是 | 媒体资源处理器，当所请求的图片资源准备完成时会触发回调。 |
+| dataHandler | [QuickImageDataHandler](arkts-medialibrary-photoaccesshelper-quickimagedatahandler-i.md)&lt;[image.Picture](../../apis-image-kit/arkts-apis/arkts-image-image-picture-i.md)&gt; | 是 | 媒体资源处理器，当所请求的图片资源准备完成时会触发回调。 |
 
 **返回值：**
 
@@ -227,7 +227,7 @@ static requestImage(
 | context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | 是 | 传入Ability实例的上下文。 |
 | asset | PhotoAsset | 是 | 待请求的媒体文件对象。 |
 | requestOptions | [RequestOptions](arkts-medialibrary-photoaccesshelper-requestoptions-i.md) | 是 | 图片请求策略模式配置项。 |
-| dataHandler | [MediaAssetDataHandler](arkts-medialibrary-photoaccesshelper-mediaassetdatahandler-i.md)&lt;image.ImageSource&gt; | 是 | 媒体资源处理器，请求完成时触发回调。 |
+| dataHandler | [MediaAssetDataHandler](arkts-medialibrary-photoaccesshelper-mediaassetdatahandler-i.md)&lt;[image.ImageSource](../../apis-image-kit/arkts-apis/arkts-image-image-imagesource-i.md)&gt; | 是 | 媒体资源处理器，请求完成时触发回调。 |
 
 **返回值：**
 

@@ -10,6 +10,8 @@ Enumerates the word selection types.
 
 **Since:** 24
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.SelectionInput.Selection
 
 ## MOUSE_MOVE

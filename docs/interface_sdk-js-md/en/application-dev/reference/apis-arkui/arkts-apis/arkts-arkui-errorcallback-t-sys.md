@@ -14,4 +14,4 @@ Indicates error callback.
 
 **System API:** This is a system API.
 
-**Property type:** import('../api/@ohos.base').ErrorCallback
+**Type:** import('../api/@ohos.base').ErrorCallback

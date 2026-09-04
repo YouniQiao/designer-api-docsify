@@ -326,7 +326,7 @@ Obtains the current display orientation of this ability.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;bundle.DisplayOrientation&gt; | Yes | Indicates the realistic direction of the screen. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[bundle.DisplayOrientation](arkts-ability-bundle-displayorientation-e.md)&gt; | Yes | Indicates the realistic direction of the screen. |
 
 ## getDisplayOrientation
 
@@ -346,7 +346,7 @@ Obtains the current display orientation of this ability.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;bundle.DisplayOrientation&gt; | Indicates the screen display direction. |
+| Promise&lt;[bundle.DisplayOrientation](arkts-ability-bundle-displayorientation-e.md)&gt; | Indicates the screen display direction. |
 
 ## getElementName
 
@@ -823,7 +823,7 @@ Sets the display orientation of the current ability.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| orientation | bundle.DisplayOrientation | Yes | Indicates the new orientation for the current ability. |
+| orientation | [bundle.DisplayOrientation](arkts-ability-bundle-displayorientation-e.md) | Yes | Indicates the new orientation for the current ability. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Indicates the realistic direction of the screen. |
 
 ## setDisplayOrientation
@@ -844,7 +844,7 @@ Sets the display orientation of the current ability.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| orientation | bundle.DisplayOrientation | Yes | Indicates the new orientation for the current ability. |
+| orientation | [bundle.DisplayOrientation](arkts-ability-bundle-displayorientation-e.md) | Yes | Indicates the new orientation for the current ability. |
 
 **Return value:**
 

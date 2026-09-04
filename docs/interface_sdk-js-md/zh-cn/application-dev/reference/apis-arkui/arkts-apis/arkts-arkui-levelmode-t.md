@@ -14,4 +14,4 @@ declare type LevelMode = import('../api/@ohos.promptAction').LevelMode
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-**属性类型：** import('../api/@ohos.promptAction').LevelMode
+**类型：** import('../api/@ohos.promptAction').LevelMode

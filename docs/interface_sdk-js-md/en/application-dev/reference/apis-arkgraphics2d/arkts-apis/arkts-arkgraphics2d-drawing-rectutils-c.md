@@ -40,7 +40,7 @@ Obtains the X coordinate of the rectangle center.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rect | common2D.Rect | Yes | Rectangle object. |
+| rect | [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) | Yes | Rectangle object. |
 
 **Return value:**
 
@@ -73,7 +73,7 @@ Obtains the Y coordinate of the rectangle center.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rect | common2D.Rect | Yes | Rectangle object. |
+| rect | [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) | Yes | Rectangle object. |
 
 **Return value:**
 
@@ -106,8 +106,8 @@ Checks whether a rectangle completely contains another rectangle.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rect | common2D.Rect | Yes | Rectangle object. |
-| other | common2D.Rect | Yes | Another rectangle object. |
+| rect | [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) | Yes | Rectangle object. |
+| other | [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) | Yes | Another rectangle object. |
 
 **Return value:**
 
@@ -142,7 +142,7 @@ Checks whether a rectangle completely contains another rectangle (which is marke
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rect | common2D.Rect | Yes | Rectangle object. |
+| rect | [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) | Yes | Rectangle object. |
 | left | number | Yes | X coordinate of the upper left corner of the rectangle. The value is a floating point number. **0** indicates the coordinate origin. A positive value places the point to the right of the coordinate origin, while a negative value places the point to the left. |
 | top | number | Yes | Y coordinate of the upper left corner of the rectangle. The value is a floating point number. **0** indicates the coordinate origin. A positive value places the point below the coordinate origin, while a negative value places the point above the coordinate origin. |
 | right | number | Yes | X coordinate of the lower right corner of the rectangle. The value is a floating point number. **0** indicates the coordinate origin. A positive value places the point to the right of the coordinate origin, while a negative value places the point to the left. |
@@ -180,7 +180,7 @@ Checks whether a rectangle completely contains a specified point.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rect | common2D.Rect | Yes | Rectangle object. |
+| rect | [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) | Yes | Rectangle object. |
 | x | number | Yes | X coordinate of a point. The value is a floating point number. **0** indicates the coordinate origin. A positive value places the point to the right of the coordinate origin, while a negative value places the point to the left. |
 | y | number | Yes | Y coordinate of a point. The value is a floating point number. **0** indicates the coordinate origin. A positive value places the point below the coordinate origin, while a negative value places the point above the coordinate origin. |
 
@@ -216,7 +216,7 @@ Obtains the height of a rectangle.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rect | common2D.Rect | Yes | Rectangle object. |
+| rect | [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) | Yes | Rectangle object. |
 
 **Return value:**
 
@@ -249,7 +249,7 @@ Obtains the width of a rectangle.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rect | common2D.Rect | Yes | Rectangle object. |
+| rect | [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) | Yes | Rectangle object. |
 
 **Return value:**
 
@@ -283,7 +283,7 @@ Adds the input left, top, right, and bottom values to the left, top, right, and 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rect | common2D.Rect | Yes | Rectangle object. |
+| rect | [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) | Yes | Rectangle object. |
 | left | number | Yes | Value to be added to the left boundary of the rectangle (X coordinate of the upper left corner of the rectangle). The value is a floating point number. **0** indicates that no operation is performed. A positive number indicates addition, and a negative number indicates subtraction. |
 | top | number | Yes | Value to be added to the top boundary of the rectangle (Y coordinate of the upper left corner of the rectangle). The value is a floating point number. **0** indicates that no operation is performed. A positive number indicates addition, and a negative number indicates subtraction. |
 | right | number | Yes | Value to be added to the right boundary of the rectangle (X coordinate of the lower right corner of the rectangle). The value is a floating point number. **0** indicates that no operation is performed. A positive number indicates addition, and a negative number indicates subtraction. |
@@ -318,8 +318,8 @@ Calculates the intersection of two rectangles and updates the intersection resul
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rect | common2D.Rect | Yes | Original rectangle used to calculate the intersection. |
-| other | common2D.Rect | Yes | Another rectangle used to calculate the intersection. |
+| rect | [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) | Yes | Original rectangle used to calculate the intersection. |
+| other | [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) | Yes | Another rectangle used to calculate the intersection. |
 
 **Return value:**
 
@@ -358,7 +358,7 @@ Checks whether a rectangle is empty (the left boundary is greater than or equal 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rect | common2D.Rect | Yes | Rectangle object to be checked. |
+| rect | [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) | Yes | Rectangle object to be checked. |
 
 **Return value:**
 
@@ -395,8 +395,8 @@ Checks whether two rectangles are equal.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rect | common2D.Rect | Yes | Original rectangle. |
-| other | common2D.Rect | Yes | Another rectangle. |
+| rect | [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) | Yes | Original rectangle. |
+| other | [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) | Yes | Another rectangle. |
 
 **Return value:**
 
@@ -431,8 +431,8 @@ Checks whether two rectangles intersect.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rect | common2D.Rect | Yes | Original rectangle used to calculate the intersection. |
-| other | common2D.Rect | Yes | Another rectangle used to calculate the intersection. |
+| rect | [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) | Yes | Original rectangle used to calculate the intersection. |
+| other | [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) | Yes | Another rectangle used to calculate the intersection. |
 
 **Return value:**
 
@@ -467,13 +467,13 @@ Copies a rectangle.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| src | common2D.Rect | Yes | Rectangle to be copied. |
+| src | [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) | Yes | Rectangle to be copied. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| common2D.Rect | Created rectangle. |
+| [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) | Created rectangle. |
 
 **Examples**
 
@@ -504,7 +504,7 @@ Creates a rectangle with the top, bottom, left, and right boundary coordinates a
 
 | Type | Description |
 | --- | --- |
-| common2D.Rect | Created rectangle object. |
+| [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) | Created rectangle object. |
 
 **Examples**
 
@@ -539,7 +539,7 @@ Creates a rectangle with specified top, bottom, left, and right boundaries.
 
 | Type | Description |
 | --- | --- |
-| common2D.Rect | Created rectangle. |
+| [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) | Created rectangle. |
 
 **Examples**
 
@@ -565,7 +565,7 @@ Translates a rectangle.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rect | common2D.Rect | Yes | Rectangle to be translated. |
+| rect | [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) | Yes | Rectangle to be translated. |
 | dx | number | Yes | Horizontal translation distance. The value is a floating point number. **0** indicates no translation. A negative value indicates translation to the left, and a positive value indicates translation to the right. |
 | dy | number | Yes | Vertical translation distance. The value is a floating point number. **0** indicates no translation. A negative value indicates translation upwards, and a positive value indicates translation downwards. |
 
@@ -598,7 +598,7 @@ Translates a rectangle to a specified position.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rect | common2D.Rect | Yes | Rectangle to be translated. |
+| rect | [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) | Yes | Rectangle to be translated. |
 | newLeft | number | Yes | X coordinate of the position to which the rectangle is translated. The value is a floating point number. **0** indicates the coordinate origin. A positive value places the point to the right of the coordinate origin, while a negative value places the point to the left. |
 | newTop | number | Yes | Y coordinate of the position to which the rectangle is translated. The value is a floating point number. **0** indicates the coordinate origin. A positive value places the point below the coordinate origin, while a negative value places the point above the coordinate origin. |
 
@@ -631,7 +631,7 @@ Sets the left, right, top, and bottom boundaries of the rectangle to **0**.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rect | common2D.Rect | Yes | Empty rectangle object. |
+| rect | [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) | Yes | Empty rectangle object. |
 
 **Examples**
 
@@ -662,7 +662,7 @@ Updates the top, bottom, left, and right boundary values of the existing rectang
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rect | common2D.Rect | Yes | Rectangle object. |
+| rect | [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) | Yes | Rectangle object. |
 | left | number | Yes | X coordinate of the upper left corner of the rectangle. The value is a floating point number. **0** indicates the coordinate origin. A positive value places the point to the right of the coordinate origin, while a negative value places the point to the left. |
 | top | number | Yes | Y coordinate of the upper left corner of the rectangle. The value is a floating point number. **0** indicates the coordinate origin. A positive value places the point below the coordinate origin, while a negative value places the point above the coordinate origin. |
 | right | number | Yes | X coordinate of the lower right corner of the rectangle. The value is a floating point number. **0** indicates the coordinate origin. A positive value places the point to the right of the coordinate origin, while a negative value places the point to the left. |
@@ -697,8 +697,8 @@ Assigns the existing rectangle with another rectangle.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rect | common2D.Rect | Yes | Original rectangle. |
-| other | common2D.Rect | Yes | Another rectangle. |
+| rect | [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) | Yes | Original rectangle. |
+| other | [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) | Yes | Another rectangle. |
 
 **Examples**
 
@@ -730,7 +730,7 @@ If the rectangle is reversed (that is, the left boundary is greater than the rig
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rect | common2D.Rect | Yes | Rectangle object. |
+| rect | [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) | Yes | Rectangle object. |
 
 **Examples**
 
@@ -761,8 +761,8 @@ Calculates the union of two rectangles and updates the union result to the recta
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rect | common2D.Rect | Yes | Original rectangle used to calculate the union. |
-| other | common2D.Rect | Yes | Another rectangle used to calculate the union. |
+| rect | [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) | Yes | Original rectangle used to calculate the union. |
+| other | [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) | Yes | Another rectangle used to calculate the union. |
 
 **Examples**
 

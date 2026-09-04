@@ -14,4 +14,4 @@ Parameters corresponding to continue mission.
 
 **System API:** This is a system API.
 
-**Property type:** _ContinueMissionInfo
+**Type:** _ContinueMissionInfo

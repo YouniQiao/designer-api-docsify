@@ -14,4 +14,4 @@ export type Rect = common2D.Rect
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-**属性类型：** common2D.Rect
+**类型：** [common2D.Rect](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-common2d-rect-i.md)

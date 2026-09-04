@@ -10,7 +10,7 @@ Indicates an accessibility element. For details, see [AccessibilityElement](arkt
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
-**Property type:** _AccessibilityElement
+**Type:** _AccessibilityElement
 
 **Examples**
 

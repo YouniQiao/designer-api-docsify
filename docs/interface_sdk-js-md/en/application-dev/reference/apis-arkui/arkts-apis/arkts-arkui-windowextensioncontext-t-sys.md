@@ -16,4 +16,4 @@ The context of window extension. It allows access to windowExtension-specific re
 
 **System API:** This is a system API.
 
-**Property type:** _WindowExtensionContext
+**Type:** _WindowExtensionContext

@@ -36,7 +36,7 @@ pixelMap: image.PixelMap
 
 表示截取的图像PixelMap对象。
 
-**类型：** image.PixelMap
+**类型：** [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)
 
 **起始版本：** 12
 

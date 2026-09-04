@@ -1438,6 +1438,7 @@ Triggers component reuse for custom components under this **ReactiveComponentCon
 **Examples**
 
 For details, see the example in [recycle](#recycle).
+- simpleType:
 
 ## updateConfiguration
 

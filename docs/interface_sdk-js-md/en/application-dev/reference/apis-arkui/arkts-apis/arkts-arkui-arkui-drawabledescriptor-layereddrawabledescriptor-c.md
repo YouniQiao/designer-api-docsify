@@ -374,7 +374,7 @@ Sets the blend mode of **LayeredDrawableDescriptor**. If this API is called for 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | drawing.BlendMode | Yes | Blend mode. |
+| mode | [drawing.BlendMode](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-drawing-blendmode-e.md) | Yes | Blend mode. |
 
 **Examples**
 

@@ -12,4 +12,4 @@ Obtains a **MifareUltralightTag** object.
 
 **System capability:** SystemCapability.Communication.NFC.Tag
 
-**Property type:** _MifareUltralightTag
+**Type:** _MifareUltralightTag

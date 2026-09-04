@@ -150,7 +150,7 @@ slotType?: notification.SlotType
 
 Type of the slot used by the reminder.
 
-**Type:** notification.SlotType
+**Type:** [notification.SlotType](../../apis-notification-kit/arkts-apis/arkts-notification-notification-slottype-depr-e.md)
 
 **Since:** 7
 

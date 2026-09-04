@@ -12,4 +12,4 @@ Defines the metadata.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
-**Property type:** _Metadata
+**Type:** _Metadata

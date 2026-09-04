@@ -4,6 +4,8 @@ Enumerates the trigger modes for user scenes (typically scenes involving animati
 
 **Since:** 10
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.

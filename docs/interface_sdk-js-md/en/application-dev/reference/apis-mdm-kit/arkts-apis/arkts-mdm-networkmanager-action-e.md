@@ -4,6 +4,8 @@ Enumerates the actions that can be taken for data packets.
 
 **Since:** 12
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## ALLOW

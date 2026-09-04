@@ -16,4 +16,4 @@ declare type RequestDownloadInfo = import('../api/@ohos.request.cacheDownload').
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-**属性类型：** import('../api/@ohos.request.cacheDownload').default.DownloadInfo
+**类型：** import('../api/@ohos.request.cacheDownload').default.DownloadInfo

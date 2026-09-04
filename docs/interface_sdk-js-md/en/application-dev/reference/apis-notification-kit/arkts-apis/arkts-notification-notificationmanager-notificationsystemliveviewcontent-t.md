@@ -10,4 +10,4 @@ Describes the system live view notification.
 
 **System capability:** SystemCapability.Notification.Notification
 
-**Property type:** _NotificationSystemLiveViewContent
+**Type:** _NotificationSystemLiveViewContent

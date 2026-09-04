@@ -4,6 +4,8 @@ Enumerates the modes that define how the execution result of an intent is return
 
 **Since:** 23
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## CALLBACK

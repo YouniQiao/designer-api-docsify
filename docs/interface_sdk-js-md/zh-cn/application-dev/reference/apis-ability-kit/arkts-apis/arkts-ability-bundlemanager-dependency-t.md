@@ -12,4 +12,4 @@ export type Dependency = _HapModuleInfo.Dependency
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
-**属性类型：** _HapModuleInfo.Dependency
+**类型：** [_HapModuleInfo.Dependency](arkts-ability-hapmoduleinfo-dependency-i.md)

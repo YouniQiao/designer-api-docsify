@@ -12,4 +12,4 @@ type MajorClass = constant.MajorClass
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
-**属性类型：** constant.MajorClass
+**类型：** [constant.MajorClass](arkts-connectivity-constant-majorclass-e.md)

@@ -17,7 +17,7 @@ Returns a string representation appropriate to the host environment's current lo
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| locales | Intl.LocalesArgument | No |  |
+| locales | [Intl.LocalesArgument](arkts-intl-localesargument-t.md) | No |  |
 | options | [BigIntToLocaleStringOptions](arkts-lib-es2020-bigint-biginttolocalestringoptions-i.md) | No |  |
 
 **Return value:**

@@ -14,4 +14,4 @@ Describes the switch state for silent reminder notification.
 
 **System API:** This is a system API.
 
-**Property type:** _EnabledSilentReminderCallbackData
+**Type:** _EnabledSilentReminderCallbackData

@@ -26,7 +26,7 @@ function openAuthorizeDialog(context: common.Context): Promise<string>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | common.Context | 是 | 表示应用的上下文信息。 |
+| context | [common.Context](../../apis-ability-kit/arkts-apis/arkts-ability-common-context-t.md) | 是 | 表示应用的上下文信息。 |
 
 **返回值：**
 
@@ -89,7 +89,7 @@ function openAuthorizeDialog(context: common.Context, authorizeRequest: Authoriz
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | common.Context | 是 | 表示应用的上下文信息。 |
+| context | [common.Context](../../apis-ability-kit/arkts-apis/arkts-ability-common-context-t.md) | 是 | 表示应用的上下文信息。 |
 | authorizeRequest | [AuthorizeRequest](arkts-devicecertificate-certificatemanagerdialog-authorizerequest-i.md) | 是 | 表示授权请求信息。 |
 
 **返回值：**

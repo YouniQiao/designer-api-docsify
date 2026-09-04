@@ -10,4 +10,4 @@ type Assets = Array<Asset>
 
 **系统能力：** SystemCapability.DistributedDataManager.CommonType
 
-**属性类型：** Array&lt;Asset&gt;
+**类型：** Array&lt;Asset&gt;

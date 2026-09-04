@@ -12,4 +12,4 @@ Defines the kiosk status information, including whether the system is in kiosk m
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
-**Property type:** _KioskStatus
+**Type:** _KioskStatus

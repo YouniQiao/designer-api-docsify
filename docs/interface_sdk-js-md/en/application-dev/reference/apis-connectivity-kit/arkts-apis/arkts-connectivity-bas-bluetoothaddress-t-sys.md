@@ -14,4 +14,4 @@ Bluetooth device address.
 
 **System API:** This is a system API.
 
-**Property type:** common.BluetoothAddress
+**Type:** [common.BluetoothAddress](arkts-connectivity-common-bluetoothaddress-i.md)

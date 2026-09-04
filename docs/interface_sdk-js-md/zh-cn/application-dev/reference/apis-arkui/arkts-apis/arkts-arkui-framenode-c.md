@@ -75,6 +75,7 @@ addSupportedUIStates(uiStates: number, statesChangeHandler: UIStatesChangeHandle
 **示例**
 
 请参考组件设置和删除多态样式状态示例。
+- simpleType:
 
 ## adoptChild
 
@@ -107,6 +108,7 @@ adoptChild(child: FrameNode): void
 **示例**
 
 完整示例请参考接纳为附属节点示例。
+- simpleType:
 
 ## appendChild
 
@@ -140,6 +142,7 @@ appendChild(node: FrameNode): void
 **示例**
 
 请参考节点操作示例。
+- simpleType:
 
 ## cancelAnimations
 
@@ -172,6 +175,7 @@ cancelAnimations(properties: AnimationPropertyType[]): boolean
 **示例**
 
 请参考动画创建与取消示例。
+- simpleType:
 
 ## clearChildren
 
@@ -198,6 +202,7 @@ clearChildren(): void
 **示例**
 
 请参考节点操作示例。
+- simpleType:
 
 ## constructor
 
@@ -365,6 +370,7 @@ convertPositionFromWindow(positionByWindow: Position): Position
 **示例**
 
 请参考局部与窗口坐标转换示例。
+- simpleType:
 
 ## convertPositionToWindow
 
@@ -404,6 +410,7 @@ convertPositionToWindow(positionByLocal: Position): Position
 **示例**
 
 请参考局部与窗口坐标转换示例。
+- simpleType:
 
 ## createAnimation
 
@@ -439,6 +446,7 @@ createAnimation(property: AnimationPropertyType, startValue: Optional<number[]>,
 **示例**
 
 请参考动画创建与取消示例。
+- simpleType:
 
 ## createFrameNodes
 
@@ -843,6 +851,7 @@ getChild(index: number): FrameNode | null
 **示例**
 
 请参考节点操作示例。
+- simpleType:
 
 ## getChild
 
@@ -865,7 +874,7 @@ getChild(index: number, expandMode?: ExpandMode): FrameNode | null
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | index | number | 是 | 需要查询的子节点的序列号。index取值范围为[0, +∞)，若当前节点有n个子节点，index取值有效范围为[0, n-1]。 |
-| expandMode | [ExpandMode](arkts-arkui-framenode-expandmode-e.md) | 否 | 指定子节点展开模式。默认值：ExpandMode.EXPAND |
+| expandMode | [ExpandMode](arkts-arkui-framenode-expandmode-e.md) | 否 | [指定子节点展开模式。默认值：ExpandMode.EXPAND](arkts-arkui-framenode-expandmode-e.md) |
 
 **返回值：**
 
@@ -876,6 +885,7 @@ getChild(index: number, expandMode?: ExpandMode): FrameNode | null
 **示例**
 
 请参考LazyForEach场景节点操作示例。
+- simpleType:
 
 ## getChildrenCount
 
@@ -902,6 +912,7 @@ getChildrenCount(): number
 **示例**
 
 请参考节点操作示例。
+- simpleType:
 
 ## getChildrenCount
 
@@ -1181,6 +1192,7 @@ getCrossLanguageOptions(): CrossLanguageOptions
 **示例**
 
 请参考节点操作示例。
+- simpleType:
 
 ## getCustomProperty
 
@@ -1213,6 +1225,7 @@ getCustomProperty(name: string): Object | undefined
 **示例**
 
 请参考节点操作示例。
+- simpleType:
 
 ## getFirstChild
 
@@ -1239,6 +1252,7 @@ getFirstChild(): FrameNode | null
 **示例**
 
 请参考节点操作示例。
+- simpleType:
 
 ## getFirstChildIndexWithoutExpand
 
@@ -1265,6 +1279,7 @@ getFirstChildIndexWithoutExpand(): number
 **示例**
 
 请参考LazyForEach场景节点操作示例。
+- simpleType:
 
 ## getFrameNodeById
 
@@ -1458,6 +1473,7 @@ getGlobalPositionOnDisplay(): Position
 **示例**
 
 请参考节点操作示例。
+- simpleType:
 
 ## getId
 
@@ -1484,6 +1500,7 @@ getId(): string
 **示例**
 
 请参考节点操作示例。
+- simpleType:
 
 ## getInspectorInfo
 
@@ -1514,6 +1531,7 @@ getInspectorInfo(): Object
 **示例**
 
 请参考节点操作示例。
+- simpleType:
 
 ## getInteractionEventBindingInfo
 
@@ -1546,6 +1564,7 @@ getInteractionEventBindingInfo(eventType: EventQueryType): InteractionEventBindi
 **示例**
 
 请参考节点操作示例。
+- simpleType:
 
 ## getLastChildIndexWithoutExpand
 
@@ -1572,6 +1591,7 @@ getLastChildIndexWithoutExpand(): number
 **示例**
 
 请参考LazyForEach场景节点操作示例。
+- simpleType:
 
 ## getLayoutPosition
 
@@ -1598,6 +1618,7 @@ getLayoutPosition(): Position
 **示例**
 
 请参考节点操作示例。
+- simpleType:
 
 ## getMeasuredSize
 
@@ -1624,6 +1645,7 @@ getMeasuredSize(): Size
 **示例**
 
 请参考节点操作示例。
+- simpleType:
 
 ## getNextSibling
 
@@ -1650,6 +1672,7 @@ getNextSibling(): FrameNode | null
 **示例**
 
 请参考节点操作示例。
+- simpleType:
 
 ## getNodePropertyValue
 
@@ -1682,6 +1705,7 @@ getNodePropertyValue(property: AnimationPropertyType): number[]
 **示例**
 
 请参考动画创建与取消示例。
+- simpleType:
 
 ## getNodeType
 
@@ -1708,6 +1732,7 @@ getNodeType(): string
 **示例**
 
 请参考节点操作示例。
+- simpleType:
 
 ## getOpacity
 
@@ -1734,6 +1759,7 @@ getOpacity(): number
 **示例**
 
 请参考节点操作示例。
+- simpleType:
 
 ## getParent
 
@@ -1760,6 +1786,7 @@ getParent(): FrameNode | null
 **示例**
 
 请参考节点操作示例和获取根节点示例。
+- simpleType:
 
 ## getPositionToParent
 
@@ -2300,6 +2327,7 @@ getPreviousSibling(): FrameNode | null
 **示例**
 
 请参考节点操作示例。
+- simpleType:
 
 ## getRenderNode
 
@@ -2384,6 +2412,7 @@ getUniqueId(): number
 **示例**
 
 请参考节点操作示例。
+- simpleType:
 
 ## getUserConfigBorderWidth
 
@@ -2410,6 +2439,7 @@ getUserConfigBorderWidth(): Edges<LengthMetrics>
 **示例**
 
 请参考节点操作示例。
+- simpleType:
 
 ## getUserConfigMargin
 
@@ -2436,6 +2466,7 @@ getUserConfigMargin(): Edges<LengthMetrics>
 **示例**
 
 请参考节点操作示例。
+- simpleType:
 
 ## getUserConfigPadding
 
@@ -2462,6 +2493,7 @@ getUserConfigPadding(): Edges<LengthMetrics>
 **示例**
 
 请参考节点操作示例。
+- simpleType:
 
 ## getUserConfigSize
 
@@ -2488,6 +2520,7 @@ getUserConfigSize(): SizeT<LengthMetrics>
 **示例**
 
 请参考节点操作示例。
+- simpleType:
 
 ## insertChildAfter
 
@@ -2522,6 +2555,7 @@ insertChildAfter(child: FrameNode, sibling: FrameNode | null): void
 **示例**
 
 请参考节点操作示例。
+- simpleType:
 
 ## invalidate
 
@@ -2688,6 +2722,7 @@ isAttached(): boolean
 **示例**
 
 请参考节点操作示例。
+- simpleType:
 
 ## isClipToFrame
 
@@ -2714,6 +2749,7 @@ isClipToFrame(): boolean
 **示例**
 
 请参考节点操作示例。
+- simpleType:
 
 ## isDisposed
 
@@ -2740,8 +2776,10 @@ isDisposed(): boolean
 **示例**
 
 请参考检验FrameNode是否有效示例。
+- simpleType:
 
 请参考检验NodeAdapter是否有效示例。
+- simpleType:
 
 ## isInRenderState
 
@@ -2857,6 +2895,7 @@ isModifiable(): boolean
 **示例**
 
 请参考节点操作示例。
+- simpleType:
 
 ## isOnMainTree
 
@@ -3458,6 +3497,7 @@ isVisible(): boolean
 **示例**
 
 请参考节点操作示例。
+- simpleType:
 
 ## layout
 
@@ -3484,6 +3524,7 @@ layout(position: Position): void
 **示例**
 
 请参考节点自定义示例。
+- simpleType:
 
 ## measure
 
@@ -3510,6 +3551,7 @@ measure(constraint: LayoutConstraint): void
 **示例**
 
 请参考节点自定义示例。
+- simpleType:
 
 ## moveTo
 
@@ -3541,7 +3583,7 @@ moveTo(targetParent: FrameNode, index?: number): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | targetParent | [FrameNode](arkts-arkui-framenode-c.md) | 是 | 目标父节点。targetParent节点不可以为声明式创建的节点，即不可修改的FrameNode。若目标父节点不符合规格，则抛出异常信息。 |
-| index | number | 否 | 子节点序列号。当前FrameNode将被添加到目标FrameNode对应序列号的子节点之前，若目标FrameNode有n个节点，index取值范围为[0, n-1]。&lt;br/ &gt;若参数无效或不指定，则添加到目标FrameNode的最后。默认值：-1 |
+| index | number | 否 | 子节点序列号。当前FrameNode将被添加到目标FrameNode对应序列号的子节点之前，若目标FrameNode有n个节点，index取值范围为[0, n-1]。<br/>若参数无效或不指定，则添加到目标FrameNode的最后。默认值：-1 |
 
 **错误码：**
 
@@ -3553,6 +3595,7 @@ moveTo(targetParent: FrameNode, index?: number): void
 **示例**
 
 请参考节点操作示例。
+- simpleType:
 
 ## onDraw
 
@@ -3581,6 +3624,7 @@ FrameNode的自绘制方法，该方法会重写默认绘制方法，在FrameNod
 **示例**
 
 请参考节点自定义示例。
+- simpleType:
 
 ## onLayout
 
@@ -3607,6 +3651,7 @@ FrameNode的自定义布局方法，该方法会重写默认布局方法，在Fr
 **示例**
 
 请参考节点自定义示例。
+- simpleType:
 
 ## onMeasure
 
@@ -3633,6 +3678,7 @@ FrameNode的自定义测量方法，该方法会重写默认测量方法，在Fr
 **示例**
 
 请参考节点自定义示例。
+- simpleType:
 
 ## recycle
 
@@ -3653,6 +3699,7 @@ recycle(): void
 **示例**
 
 请参考节点复用回收使用示例。
+- simpleType:
 
 ## removeAdoptedChild
 
@@ -3685,6 +3732,7 @@ removeAdoptedChild(child: FrameNode): void
 **示例**
 
 完整示例请参考接纳为附属节点示例。
+- simpleType:
 
 ## removeChild
 
@@ -3717,6 +3765,7 @@ removeChild(node: FrameNode): void
 **示例**
 
 请参考节点操作示例。
+- simpleType:
 
 ## removeSupportedUIStates
 
@@ -3743,6 +3792,7 @@ removeSupportedUIStates(uiStates: number): void
 **示例**
 
 请参考组件设置和删除多态样式状态示例。
+- simpleType:
 
 ## reuse
 
@@ -3763,6 +3813,7 @@ reuse(): void
 **示例**
 
 请参考节点复用回收使用示例。
+- simpleType:
 
 ## setCrossLanguageOptions
 
@@ -3808,6 +3859,7 @@ setCrossLanguageOptions(options: CrossLanguageOptions): void
 **示例**
 
 请参考节点操作示例。
+- simpleType:
 
 ## setLayoutPosition
 
@@ -3834,6 +3886,7 @@ setLayoutPosition(position: Position): void
 **示例**
 
 请参考节点自定义示例。
+- simpleType:
 
 ## setMeasuredSize
 
@@ -3860,6 +3913,7 @@ setMeasuredSize(size: Size): void
 **示例**
 
 请参考节点自定义示例。
+- simpleType:
 
 ## setNeedsLayout
 
@@ -3880,6 +3934,7 @@ setNeedsLayout(): void
 **示例**
 
 请参考节点自定义示例。
+- simpleType:
 
 ## commonAttribute
 
@@ -3911,6 +3966,7 @@ get commonAttribute(): CommonAttribute
 **示例**
 
 请参考基础事件示例。
+- simpleType:
 
 ## commonEvent
 
@@ -3935,6 +3991,7 @@ LazyForEach场景下，由于存在节点的销毁重建，对于重建的节点
 **示例**
 
 请参考基础事件示例和LazyForEach场景基础事件使用示例。
+- simpleType:
 
 ## gestureEvent
 
@@ -3959,3 +4016,4 @@ LazyForEach场景下，由于存在节点的销毁重建，对于重建的节点
 **示例**
 
 请参考手势事件示例。
+- simpleType:

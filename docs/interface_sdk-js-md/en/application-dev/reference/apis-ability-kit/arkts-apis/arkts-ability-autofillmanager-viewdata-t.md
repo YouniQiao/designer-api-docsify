@@ -14,4 +14,4 @@ Defines the view data used for auto-fill.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
-**Property type:** _ViewData.default
+**Type:** _ViewData.default

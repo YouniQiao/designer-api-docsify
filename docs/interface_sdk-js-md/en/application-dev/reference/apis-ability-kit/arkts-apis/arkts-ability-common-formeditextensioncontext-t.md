@@ -14,4 +14,4 @@ The context of form edit extension. It allows access to formEditExtension-specif
 
 **System capability:** SystemCapability.Ability.Form
 
-**Property type:** _FormEditExtensionContext.default
+**Type:** _FormEditExtensionContext.default

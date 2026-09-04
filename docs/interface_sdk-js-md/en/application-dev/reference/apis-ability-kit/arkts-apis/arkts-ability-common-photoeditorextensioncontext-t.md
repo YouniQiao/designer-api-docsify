@@ -12,4 +12,4 @@ The context of an photo editor extension ability.
 
 **System capability:** SystemCapability.Ability.AppExtension.PhotoEditorExtension
 
-**Property type:** _PhotoEditorExtensionContext.default
+**Type:** _PhotoEditorExtensionContext.default

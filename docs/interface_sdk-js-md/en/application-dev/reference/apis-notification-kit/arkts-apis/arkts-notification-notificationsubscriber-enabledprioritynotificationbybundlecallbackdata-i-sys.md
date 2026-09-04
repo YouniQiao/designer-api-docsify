@@ -32,7 +32,7 @@ readonly enableStatus: notificationManager.PriorityEnableStatus
 
 Whether the priority notification for an application is enabled.
 
-**Type:** notificationManager.PriorityEnableStatus
+**Type:** [notificationManager.PriorityEnableStatus](arkts-notification-notificationmanager-priorityenablestatus-e-sys.md)
 
 **Since:** 23
 

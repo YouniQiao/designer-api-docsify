@@ -12,4 +12,4 @@ type ProfileId = constant.ProfileId
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
-**属性类型：** constant.ProfileId
+**类型：** [constant.ProfileId](arkts-connectivity-constant-profileid-e.md)

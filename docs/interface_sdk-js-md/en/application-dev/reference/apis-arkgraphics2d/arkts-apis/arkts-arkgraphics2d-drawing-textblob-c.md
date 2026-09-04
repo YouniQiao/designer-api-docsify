@@ -35,7 +35,7 @@ Obtains the rectangular bounding box of the text blob.
 
 | Type | Description |
 | --- | --- |
-| common2D.Rect | Rectangular bounding box. |
+| [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) | Rectangular bounding box. |
 
 **Examples**
 
@@ -66,7 +66,7 @@ Creates a **TextBlob** object from the text. The coordinates of each font in the
 | --- | --- | --- | --- |
 | text | string | Yes | Content to be used for drawing the text blob. |
 | len | number | Yes | Number of glyphs, which is an integer obtained from [countText](arkts-arkgraphics2d-drawing-font-c.md#counttext). |
-| points | common2D.Point[] | Yes | Array of points, which are used to specify the coordinates of each font. The array length must be the same as the value of **len**. |
+| points | [common2D.Point](arkts-arkgraphics2d-common2d-point-i.md)[] | Yes | Array of points, which are used to specify the coordinates of each font. The array length must be the same as the value of **len**. |
 | font | Font | Yes | Font** object. |
 
 **Return value:**
@@ -122,7 +122,7 @@ Creates a **TextBlob** object based on the **RunBuffer** information.
 | --- | --- | --- | --- |
 | pos | Array&lt;[TextBlobRunBuffer](arkts-arkgraphics2d-drawing-textblobrunbuffer-i.md)&gt; | Yes | TextBlobRunBuffer** array. |
 | font | Font | Yes | Font** object. |
-| bounds | common2D.Rect | No | Bounding box. If this parameter is not set, there is no bounding box. |
+| bounds | [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) | No | Bounding box. If this parameter is not set, there is no bounding box. |
 
 **Return value:**
 

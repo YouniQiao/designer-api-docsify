@@ -12,4 +12,4 @@ Indicate the phone book access authorization.
 
 **System API:** This is a system API.
 
-**Property type:** constant.AccessAuthorization
+**Type:** [constant.AccessAuthorization](arkts-connectivity-constant-accessauthorization-e-sys.md)

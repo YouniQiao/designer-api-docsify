@@ -4,6 +4,8 @@ GATT connection parameters.
 
 **Since:** 22
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## LOW_POWER

@@ -14,4 +14,4 @@ Sets the pivot of the component. As the rotation or scaling center of the compon
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** [Vector2](arkts-arkui-graphics-vector2-i.md)
+**Type:** [Vector2](arkts-arkui-graphics-vector2-i.md)

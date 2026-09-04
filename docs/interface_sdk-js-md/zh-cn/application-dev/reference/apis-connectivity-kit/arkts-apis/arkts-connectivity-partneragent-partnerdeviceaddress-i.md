@@ -20,7 +20,7 @@ bluetoothAddress?: common.BluetoothAddress
 
 该设备的蓝牙地址信息。
 
-**类型：** common.BluetoothAddress
+**类型：** [common.BluetoothAddress](arkts-connectivity-common-bluetoothaddress-i.md)
 
 **起始版本：** 23
 

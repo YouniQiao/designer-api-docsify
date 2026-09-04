@@ -24,9 +24,9 @@ Sets buffer data
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| target | webgl.GLenum | Yes | Buffer target |
-| size | webgl.GLsizeiptr | Yes | Buffer size |
-| usage | webgl.GLenum | Yes | Buffer usage |
+| target | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Buffer target |
+| size | [webgl.GLsizeiptr](arkts-arkgraphics2d-glsizeiptr-t.md) | Yes | Buffer size |
+| usage | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Buffer usage |
 
 ## bufferData
 
@@ -46,9 +46,9 @@ Sets buffer data from BufferSource
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| target | webgl.GLenum | Yes | Buffer target |
+| target | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Buffer target |
 | srcData | BufferSource \| null | Yes | Buffer data |
-| usage | webgl.GLenum | Yes | Buffer usage |
+| usage | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Buffer usage |
 
 ## bufferData
 
@@ -74,11 +74,11 @@ Sets buffer data from ArrayBufferView with offset
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| target | webgl.GLenum | Yes | Buffer target |
+| target | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Buffer target |
 | srcData | [ArrayBufferView](../../apis-default/arkts-apis/arkts-lib-es5-arraybufferview-i.md) | Yes | Source data |
-| usage | webgl.GLenum | Yes | Buffer usage |
-| srcOffset | webgl.GLuint | Yes | Source offset |
-| length | webgl.GLuint | No | [Length](../../apis-arkui/arkts-apis/arkts-arkui-length-t.md) |
+| usage | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Buffer usage |
+| srcOffset | [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md) | Yes | Source offset |
+| length | [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md) | No | [Length](../../apis-arkui/arkts-apis/arkts-arkui-length-t.md) |
 
 ## bufferSubData
 
@@ -98,8 +98,8 @@ Sets buffer sub data
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| target | webgl.GLenum | Yes | Buffer target |
-| dstByteOffset | webgl.GLintptr | Yes | Destination byte offset |
+| target | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Buffer target |
+| dstByteOffset | [webgl.GLintptr](arkts-arkgraphics2d-glintptr-t.md) | Yes | Destination byte offset |
 | srcData | BufferSource | Yes | Source data |
 
 ## bufferSubData
@@ -126,11 +126,11 @@ Sets buffer sub data with offset
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| target | webgl.GLenum | Yes | Buffer target |
-| dstByteOffset | webgl.GLintptr | Yes | Destination byte offset |
+| target | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Buffer target |
+| dstByteOffset | [webgl.GLintptr](arkts-arkgraphics2d-glintptr-t.md) | Yes | Destination byte offset |
 | srcData | [ArrayBufferView](../../apis-default/arkts-apis/arkts-lib-es5-arraybufferview-i.md) | Yes | Source data |
-| srcOffset | webgl.GLuint | Yes | Source offset |
-| length | webgl.GLuint | No | [Length](../../apis-arkui/arkts-apis/arkts-arkui-length-t.md) |
+| srcOffset | [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md) | Yes | Source offset |
+| length | [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md) | No | [Length](../../apis-arkui/arkts-apis/arkts-arkui-length-t.md) |
 
 ## compressedTexImage2D
 
@@ -159,14 +159,14 @@ Compressed texture image 2D from PBO offset
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| target | webgl.GLenum | Yes | Texture target |
-| level | webgl.GLint | Yes | Mipmap level |
-| internalformat | webgl.GLenum | Yes | Internal format |
-| width | webgl.GLsizei | Yes | Width |
-| height | webgl.GLsizei | Yes | Height |
-| border | webgl.GLint | Yes | Border |
-| imageSize | webgl.GLsizei | Yes | Image size |
-| offset | webgl.GLintptr | Yes | Offset |
+| target | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Texture target |
+| level | [webgl.GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Mipmap level |
+| internalformat | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Internal format |
+| width | [webgl.GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Width |
+| height | [webgl.GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Height |
+| border | [webgl.GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Border |
+| imageSize | [webgl.GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Image size |
+| offset | [webgl.GLintptr](arkts-arkgraphics2d-glintptr-t.md) | Yes | Offset |
 
 ## compressedTexImage2D
 
@@ -196,15 +196,15 @@ Compressed texture image 2D from ArrayBufferView
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| target | webgl.GLenum | Yes | Texture target |
-| level | webgl.GLint | Yes | Mipmap level |
-| internalformat | webgl.GLenum | Yes | Internal format |
-| width | webgl.GLsizei | Yes | Width |
-| height | webgl.GLsizei | Yes | Height |
-| border | webgl.GLint | Yes | Border |
+| target | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Texture target |
+| level | [webgl.GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Mipmap level |
+| internalformat | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Internal format |
+| width | [webgl.GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Width |
+| height | [webgl.GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Height |
+| border | [webgl.GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Border |
 | srcData | [ArrayBufferView](../../apis-default/arkts-apis/arkts-lib-es5-arraybufferview-i.md) | Yes | Source data |
-| srcOffset | webgl.GLuint | No | Source offset |
-| srcLengthOverride | webgl.GLuint | No | Source length override |
+| srcOffset | [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md) | No | Source offset |
+| srcLengthOverride | [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md) | No | Source length override |
 
 ## compressedTexSubImage2D
 
@@ -234,15 +234,15 @@ Compressed texture sub image 2D from PBO offset
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| target | webgl.GLenum | Yes | Texture target |
-| level | webgl.GLint | Yes | Mipmap level |
-| xoffset | webgl.GLint | Yes | X offset |
-| yoffset | webgl.GLint | Yes | Y offset |
-| width | webgl.GLsizei | Yes | Width |
-| height | webgl.GLsizei | Yes | Height |
-| format | webgl.GLenum | Yes | [Format](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-format-e.md) |
-| imageSize | webgl.GLsizei | Yes | Image size |
-| offset | webgl.GLintptr | Yes | Offset |
+| target | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Texture target |
+| level | [webgl.GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Mipmap level |
+| xoffset | [webgl.GLint](arkts-arkgraphics2d-glint-t.md) | Yes | X offset |
+| yoffset | [webgl.GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Y offset |
+| width | [webgl.GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Width |
+| height | [webgl.GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Height |
+| format | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | [Format](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-format-e.md) |
+| imageSize | [webgl.GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Image size |
+| offset | [webgl.GLintptr](arkts-arkgraphics2d-glintptr-t.md) | Yes | Offset |
 
 ## compressedTexSubImage2D
 
@@ -273,16 +273,16 @@ Compressed texture sub image 2D from ArrayBufferView
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| target | webgl.GLenum | Yes | Texture target |
-| level | webgl.GLint | Yes | Mipmap level |
-| xoffset | webgl.GLint | Yes | X offset |
-| yoffset | webgl.GLint | Yes | Y offset |
-| width | webgl.GLsizei | Yes | Width |
-| height | webgl.GLsizei | Yes | Height |
-| format | webgl.GLenum | Yes | [Format](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-format-e.md) |
+| target | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Texture target |
+| level | [webgl.GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Mipmap level |
+| xoffset | [webgl.GLint](arkts-arkgraphics2d-glint-t.md) | Yes | X offset |
+| yoffset | [webgl.GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Y offset |
+| width | [webgl.GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Width |
+| height | [webgl.GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Height |
+| format | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | [Format](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-format-e.md) |
 | srcData | [ArrayBufferView](../../apis-default/arkts-apis/arkts-lib-es5-arraybufferview-i.md) | Yes | Source data |
-| srcOffset | webgl.GLuint | No | Source offset |
-| srcLengthOverride | webgl.GLuint | No | Source length override |
+| srcOffset | [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md) | No | Source offset |
+| srcLengthOverride | [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md) | No | Source length override |
 
 ## readPixels
 
@@ -310,12 +310,12 @@ Reads pixels from the framebuffer to ArrayBufferView
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| x | webgl.GLint | Yes | X coordinate |
-| y | webgl.GLint | Yes | Y coordinate |
-| width | webgl.GLsizei | Yes | Width |
-| height | webgl.GLsizei | Yes | Height |
-| format | webgl.GLenum | Yes | Pixel format |
-| type | webgl.GLenum | Yes | Pixel type |
+| x | [webgl.GLint](arkts-arkgraphics2d-glint-t.md) | Yes | X coordinate |
+| y | [webgl.GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Y coordinate |
+| width | [webgl.GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Width |
+| height | [webgl.GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Height |
+| format | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Pixel format |
+| type | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Pixel type |
 | dstData | [ArrayBufferView](../../apis-default/arkts-apis/arkts-lib-es5-arraybufferview-i.md) \| null | Yes | Destination data |
 
 ## readPixels
@@ -344,13 +344,13 @@ Reads pixels from the framebuffer to PBO offset
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| x | webgl.GLint | Yes | X coordinate |
-| y | webgl.GLint | Yes | Y coordinate |
-| width | webgl.GLsizei | Yes | Width |
-| height | webgl.GLsizei | Yes | Height |
-| format | webgl.GLenum | Yes | Pixel format |
-| type | webgl.GLenum | Yes | Pixel type |
-| offset | webgl.GLintptr | Yes | Offset |
+| x | [webgl.GLint](arkts-arkgraphics2d-glint-t.md) | Yes | X coordinate |
+| y | [webgl.GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Y coordinate |
+| width | [webgl.GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Width |
+| height | [webgl.GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Height |
+| format | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Pixel format |
+| type | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Pixel type |
+| offset | [webgl.GLintptr](arkts-arkgraphics2d-glintptr-t.md) | Yes | Offset |
 
 ## readPixels
 
@@ -379,14 +379,14 @@ Reads pixels from the framebuffer to ArrayBufferView with offset
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| x | webgl.GLint | Yes | X coordinate |
-| y | webgl.GLint | Yes | Y coordinate |
-| width | webgl.GLsizei | Yes | Width |
-| height | webgl.GLsizei | Yes | Height |
-| format | webgl.GLenum | Yes | Pixel format |
-| type | webgl.GLenum | Yes | Pixel type |
+| x | [webgl.GLint](arkts-arkgraphics2d-glint-t.md) | Yes | X coordinate |
+| y | [webgl.GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Y coordinate |
+| width | [webgl.GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Width |
+| height | [webgl.GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Height |
+| format | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Pixel format |
+| type | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Pixel type |
 | dstData | [ArrayBufferView](../../apis-default/arkts-apis/arkts-lib-es5-arraybufferview-i.md) | Yes | Destination data |
-| dstOffset | webgl.GLuint | Yes | Destination offset |
+| dstOffset | [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md) | Yes | Destination offset |
 
 ## texImage2D
 
@@ -416,14 +416,14 @@ Sets texture image 2D from pixels
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| target | webgl.GLenum | Yes | Texture target |
-| level | webgl.GLint | Yes | Mipmap level |
-| internalformat | webgl.GLint | Yes | Internal format |
-| width | webgl.GLsizei | Yes | Width |
-| height | webgl.GLsizei | Yes | Height |
-| border | webgl.GLint | Yes | Border |
-| format | webgl.GLenum | Yes | Pixel format |
-| type | webgl.GLenum | Yes | Pixel type |
+| target | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Texture target |
+| level | [webgl.GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Mipmap level |
+| internalformat | [webgl.GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Internal format |
+| width | [webgl.GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Width |
+| height | [webgl.GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Height |
+| border | [webgl.GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Border |
+| format | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Pixel format |
+| type | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Pixel type |
 | pixels | [ArrayBufferView](../../apis-default/arkts-apis/arkts-lib-es5-arraybufferview-i.md) \| null | Yes | Pixel data |
 
 ## texImage2D
@@ -451,12 +451,12 @@ Sets texture image 2D from TexImageSource
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| target | webgl.GLenum | Yes | Texture target |
-| level | webgl.GLint | Yes | Mipmap level |
-| internalformat | webgl.GLint | Yes | Internal format |
-| format | webgl.GLenum | Yes | Pixel format |
-| type | webgl.GLenum | Yes | Pixel type |
-| source | webgl.TexImageSource | Yes | Image source |
+| target | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Texture target |
+| level | [webgl.GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Mipmap level |
+| internalformat | [webgl.GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Internal format |
+| format | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Pixel format |
+| type | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Pixel type |
+| source | [webgl.TexImageSource](arkts-arkgraphics2d-teximagesource-t.md) | Yes | Image source |
 
 ## texImage2D
 
@@ -486,15 +486,15 @@ Sets texture image 2D from PBO offset
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| target | webgl.GLenum | Yes | Texture target |
-| level | webgl.GLint | Yes | Mipmap level |
-| internalformat | webgl.GLint | Yes | Internal format |
-| width | webgl.GLsizei | Yes | Width |
-| height | webgl.GLsizei | Yes | Height |
-| border | webgl.GLint | Yes | Border |
-| format | webgl.GLenum | Yes | Pixel format |
-| type | webgl.GLenum | Yes | Pixel type |
-| pboOffset | webgl.GLintptr | Yes | PBO offset |
+| target | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Texture target |
+| level | [webgl.GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Mipmap level |
+| internalformat | [webgl.GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Internal format |
+| width | [webgl.GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Width |
+| height | [webgl.GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Height |
+| border | [webgl.GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Border |
+| format | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Pixel format |
+| type | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Pixel type |
+| pboOffset | [webgl.GLintptr](arkts-arkgraphics2d-glintptr-t.md) | Yes | PBO offset |
 
 ## texImage2D
 
@@ -524,15 +524,15 @@ Sets texture image 2D from TexImageSource
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| target | webgl.GLenum | Yes | Texture target |
-| level | webgl.GLint | Yes | Mipmap level |
-| internalformat | webgl.GLint | Yes | Internal format |
-| width | webgl.GLsizei | Yes | Width |
-| height | webgl.GLsizei | Yes | Height |
-| border | webgl.GLint | Yes | Border |
-| format | webgl.GLenum | Yes | Pixel format |
-| type | webgl.GLenum | Yes | Pixel type |
-| source | webgl.TexImageSource | Yes | Image source |
+| target | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Texture target |
+| level | [webgl.GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Mipmap level |
+| internalformat | [webgl.GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Internal format |
+| width | [webgl.GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Width |
+| height | [webgl.GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Height |
+| border | [webgl.GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Border |
+| format | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Pixel format |
+| type | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Pixel type |
+| source | [webgl.TexImageSource](arkts-arkgraphics2d-teximagesource-t.md) | Yes | Image source |
 
 ## texImage2D
 
@@ -563,16 +563,16 @@ Sets texture image 2D from ArrayBufferView with offset
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| target | webgl.GLenum | Yes | Texture target |
-| level | webgl.GLint | Yes | Mipmap level |
-| internalformat | webgl.GLint | Yes | Internal format |
-| width | webgl.GLsizei | Yes | Width |
-| height | webgl.GLsizei | Yes | Height |
-| border | webgl.GLint | Yes | Border |
-| format | webgl.GLenum | Yes | Pixel format |
-| type | webgl.GLenum | Yes | Pixel type |
+| target | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Texture target |
+| level | [webgl.GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Mipmap level |
+| internalformat | [webgl.GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Internal format |
+| width | [webgl.GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Width |
+| height | [webgl.GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Height |
+| border | [webgl.GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Border |
+| format | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Pixel format |
+| type | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Pixel type |
 | srcData | [ArrayBufferView](../../apis-default/arkts-apis/arkts-lib-es5-arraybufferview-i.md) | Yes | Source data |
-| srcOffset | webgl.GLuint | Yes | Source offset |
+| srcOffset | [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md) | Yes | Source offset |
 
 ## texSubImage2D
 
@@ -602,14 +602,14 @@ Sets texture sub image 2D from pixels
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| target | webgl.GLenum | Yes | Texture target |
-| level | webgl.GLint | Yes | Mipmap level |
-| xoffset | webgl.GLint | Yes | X offset |
-| yoffset | webgl.GLint | Yes | Y offset |
-| width | webgl.GLsizei | Yes | Width |
-| height | webgl.GLsizei | Yes | Height |
-| format | webgl.GLenum | Yes | Pixel format |
-| type | webgl.GLenum | Yes | Pixel type |
+| target | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Texture target |
+| level | [webgl.GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Mipmap level |
+| xoffset | [webgl.GLint](arkts-arkgraphics2d-glint-t.md) | Yes | X offset |
+| yoffset | [webgl.GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Y offset |
+| width | [webgl.GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Width |
+| height | [webgl.GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Height |
+| format | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Pixel format |
+| type | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Pixel type |
 | pixels | [ArrayBufferView](../../apis-default/arkts-apis/arkts-lib-es5-arraybufferview-i.md) \| null | Yes | Pixel data |
 
 ## texSubImage2D
@@ -638,13 +638,13 @@ Sets texture sub image 2D from TexImageSource
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| target | webgl.GLenum | Yes | Texture target |
-| level | webgl.GLint | Yes | Mipmap level |
-| xoffset | webgl.GLint | Yes | X offset |
-| yoffset | webgl.GLint | Yes | Y offset |
-| format | webgl.GLenum | Yes | Pixel format |
-| type | webgl.GLenum | Yes | Pixel type |
-| source | webgl.TexImageSource | Yes | Image source |
+| target | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Texture target |
+| level | [webgl.GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Mipmap level |
+| xoffset | [webgl.GLint](arkts-arkgraphics2d-glint-t.md) | Yes | X offset |
+| yoffset | [webgl.GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Y offset |
+| format | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Pixel format |
+| type | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Pixel type |
+| source | [webgl.TexImageSource](arkts-arkgraphics2d-teximagesource-t.md) | Yes | Image source |
 
 ## texSubImage2D
 
@@ -674,15 +674,15 @@ Sets texture sub image 2D from PBO offset
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| target | webgl.GLenum | Yes | Texture target |
-| level | webgl.GLint | Yes | Mipmap level |
-| xoffset | webgl.GLint | Yes | X offset |
-| yoffset | webgl.GLint | Yes | Y offset |
-| width | webgl.GLsizei | Yes | Width |
-| height | webgl.GLsizei | Yes | Height |
-| format | webgl.GLenum | Yes | Pixel format |
-| type | webgl.GLenum | Yes | Pixel type |
-| pboOffset | webgl.GLintptr | Yes | PBO offset |
+| target | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Texture target |
+| level | [webgl.GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Mipmap level |
+| xoffset | [webgl.GLint](arkts-arkgraphics2d-glint-t.md) | Yes | X offset |
+| yoffset | [webgl.GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Y offset |
+| width | [webgl.GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Width |
+| height | [webgl.GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Height |
+| format | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Pixel format |
+| type | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Pixel type |
+| pboOffset | [webgl.GLintptr](arkts-arkgraphics2d-glintptr-t.md) | Yes | PBO offset |
 
 ## texSubImage2D
 
@@ -712,15 +712,15 @@ Sets texture sub image 2D from TexImageSource
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| target | webgl.GLenum | Yes | Texture target |
-| level | webgl.GLint | Yes | Mipmap level |
-| xoffset | webgl.GLint | Yes | X offset |
-| yoffset | webgl.GLint | Yes | Y offset |
-| width | webgl.GLsizei | Yes | Width |
-| height | webgl.GLsizei | Yes | Height |
-| format | webgl.GLenum | Yes | Pixel format |
-| type | webgl.GLenum | Yes | Pixel type |
-| source | webgl.TexImageSource | Yes | Image source |
+| target | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Texture target |
+| level | [webgl.GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Mipmap level |
+| xoffset | [webgl.GLint](arkts-arkgraphics2d-glint-t.md) | Yes | X offset |
+| yoffset | [webgl.GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Y offset |
+| width | [webgl.GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Width |
+| height | [webgl.GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Height |
+| format | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Pixel format |
+| type | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Pixel type |
+| source | [webgl.TexImageSource](arkts-arkgraphics2d-teximagesource-t.md) | Yes | Image source |
 
 ## texSubImage2D
 
@@ -751,16 +751,16 @@ Sets texture sub image 2D from ArrayBufferView with offset
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| target | webgl.GLenum | Yes | Texture target |
-| level | webgl.GLint | Yes | Mipmap level |
-| xoffset | webgl.GLint | Yes | X offset |
-| yoffset | webgl.GLint | Yes | Y offset |
-| width | webgl.GLsizei | Yes | Width |
-| height | webgl.GLsizei | Yes | Height |
-| format | webgl.GLenum | Yes | Pixel format |
-| type | webgl.GLenum | Yes | Pixel type |
+| target | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Texture target |
+| level | [webgl.GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Mipmap level |
+| xoffset | [webgl.GLint](arkts-arkgraphics2d-glint-t.md) | Yes | X offset |
+| yoffset | [webgl.GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Y offset |
+| width | [webgl.GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Width |
+| height | [webgl.GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Height |
+| format | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Pixel format |
+| type | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Pixel type |
 | srcData | [ArrayBufferView](../../apis-default/arkts-apis/arkts-lib-es5-arraybufferview-i.md) | Yes | Source data |
-| srcOffset | webgl.GLuint | Yes | Source offset |
+| srcOffset | [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md) | Yes | Source offset |
 
 ## uniform1fv
 
@@ -785,10 +785,10 @@ Sets uniform1fv value
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| location | webgl.WebGLUniformLocation \| null | Yes | Uniform location |
-| data | webgl.Float32List | Yes | Data |
-| srcOffset | webgl.GLuint | No | Source offset |
-| srcLength | webgl.GLuint | No | Source length |
+| location | [webgl.WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | Yes | Uniform location |
+| data | [webgl.Float32List](arkts-arkgraphics2d-float32list-t.md) | Yes | Data |
+| srcOffset | [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md) | No | Source offset |
+| srcLength | [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md) | No | Source length |
 
 ## uniform1iv
 
@@ -813,10 +813,10 @@ Sets uniform1iv value
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| location | webgl.WebGLUniformLocation \| null | Yes | Uniform location |
-| data | webgl.Int32List | Yes | Data |
-| srcOffset | webgl.GLuint | No | Source offset |
-| srcLength | webgl.GLuint | No | Source length |
+| location | [webgl.WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | Yes | Uniform location |
+| data | [webgl.Int32List](arkts-arkgraphics2d-int32list-t.md) | Yes | Data |
+| srcOffset | [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md) | No | Source offset |
+| srcLength | [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md) | No | Source length |
 
 ## uniform2fv
 
@@ -841,10 +841,10 @@ Sets uniform2fv value
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| location | webgl.WebGLUniformLocation \| null | Yes | Uniform location |
-| data | webgl.Float32List | Yes | Data |
-| srcOffset | webgl.GLuint | No | Source offset |
-| srcLength | webgl.GLuint | No | Source length |
+| location | [webgl.WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | Yes | Uniform location |
+| data | [webgl.Float32List](arkts-arkgraphics2d-float32list-t.md) | Yes | Data |
+| srcOffset | [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md) | No | Source offset |
+| srcLength | [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md) | No | Source length |
 
 ## uniform2iv
 
@@ -869,10 +869,10 @@ Sets uniform2iv value
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| location | webgl.WebGLUniformLocation \| null | Yes | Uniform location |
-| data | webgl.Int32List | Yes | Data |
-| srcOffset | webgl.GLuint | No | Source offset |
-| srcLength | webgl.GLuint | No | Source length |
+| location | [webgl.WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | Yes | Uniform location |
+| data | [webgl.Int32List](arkts-arkgraphics2d-int32list-t.md) | Yes | Data |
+| srcOffset | [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md) | No | Source offset |
+| srcLength | [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md) | No | Source length |
 
 ## uniform3fv
 
@@ -897,10 +897,10 @@ Sets uniform3fv value
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| location | webgl.WebGLUniformLocation \| null | Yes | Uniform location |
-| data | webgl.Float32List | Yes | Data |
-| srcOffset | webgl.GLuint | No | Source offset |
-| srcLength | webgl.GLuint | No | Source length |
+| location | [webgl.WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | Yes | Uniform location |
+| data | [webgl.Float32List](arkts-arkgraphics2d-float32list-t.md) | Yes | Data |
+| srcOffset | [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md) | No | Source offset |
+| srcLength | [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md) | No | Source length |
 
 ## uniform3iv
 
@@ -925,10 +925,10 @@ Sets uniform3iv value
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| location | webgl.WebGLUniformLocation \| null | Yes | Uniform location |
-| data | webgl.Int32List | Yes | Data |
-| srcOffset | webgl.GLuint | No | Source offset |
-| srcLength | webgl.GLuint | No | Source length |
+| location | [webgl.WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | Yes | Uniform location |
+| data | [webgl.Int32List](arkts-arkgraphics2d-int32list-t.md) | Yes | Data |
+| srcOffset | [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md) | No | Source offset |
+| srcLength | [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md) | No | Source length |
 
 ## uniform4fv
 
@@ -953,10 +953,10 @@ Sets uniform4fv value
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| location | webgl.WebGLUniformLocation \| null | Yes | Uniform location |
-| data | webgl.Float32List | Yes | Data |
-| srcOffset | webgl.GLuint | No | Source offset |
-| srcLength | webgl.GLuint | No | Source length |
+| location | [webgl.WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | Yes | Uniform location |
+| data | [webgl.Float32List](arkts-arkgraphics2d-float32list-t.md) | Yes | Data |
+| srcOffset | [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md) | No | Source offset |
+| srcLength | [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md) | No | Source length |
 
 ## uniform4iv
 
@@ -981,10 +981,10 @@ Sets uniform4iv value
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| location | webgl.WebGLUniformLocation \| null | Yes | Uniform location |
-| data | webgl.Int32List | Yes | Data |
-| srcOffset | webgl.GLuint | No | Source offset |
-| srcLength | webgl.GLuint | No | Source length |
+| location | [webgl.WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | Yes | Uniform location |
+| data | [webgl.Int32List](arkts-arkgraphics2d-int32list-t.md) | Yes | Data |
+| srcOffset | [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md) | No | Source offset |
+| srcLength | [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md) | No | Source length |
 
 ## uniformMatrix2fv
 
@@ -1010,11 +1010,11 @@ Sets uniformMatrix2fv value
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| location | webgl.WebGLUniformLocation \| null | Yes | Uniform location |
-| transpose | webgl.GLboolean | Yes | Transpose |
-| data | webgl.Float32List | Yes | Data |
-| srcOffset | webgl.GLuint | No | Source offset |
-| srcLength | webgl.GLuint | No | Source length |
+| location | [webgl.WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | Yes | Uniform location |
+| transpose | [webgl.GLboolean](arkts-arkgraphics2d-glboolean-t.md) | Yes | Transpose |
+| data | [webgl.Float32List](arkts-arkgraphics2d-float32list-t.md) | Yes | Data |
+| srcOffset | [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md) | No | Source offset |
+| srcLength | [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md) | No | Source length |
 
 ## uniformMatrix3fv
 
@@ -1040,11 +1040,11 @@ Sets uniformMatrix3fv value
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| location | webgl.WebGLUniformLocation \| null | Yes | Uniform location |
-| transpose | webgl.GLboolean | Yes | Transpose |
-| data | webgl.Float32List | Yes | Data |
-| srcOffset | webgl.GLuint | No | Source offset |
-| srcLength | webgl.GLuint | No | Source length |
+| location | [webgl.WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | Yes | Uniform location |
+| transpose | [webgl.GLboolean](arkts-arkgraphics2d-glboolean-t.md) | Yes | Transpose |
+| data | [webgl.Float32List](arkts-arkgraphics2d-float32list-t.md) | Yes | Data |
+| srcOffset | [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md) | No | Source offset |
+| srcLength | [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md) | No | Source length |
 
 ## uniformMatrix4fv
 
@@ -1070,8 +1070,8 @@ Sets uniformMatrix4fv value
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| location | webgl.WebGLUniformLocation \| null | Yes | Uniform location |
-| transpose | webgl.GLboolean | Yes | Transpose |
-| data | webgl.Float32List | Yes | Data |
-| srcOffset | webgl.GLuint | No | Source offset |
-| srcLength | webgl.GLuint | No | Source length |
+| location | [webgl.WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | Yes | Uniform location |
+| transpose | [webgl.GLboolean](arkts-arkgraphics2d-glboolean-t.md) | Yes | Transpose |
+| data | [webgl.Float32List](arkts-arkgraphics2d-float32list-t.md) | Yes | Data |
+| srcOffset | [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md) | No | Source offset |
+| srcLength | [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md) | No | Source length |

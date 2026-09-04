@@ -14,4 +14,4 @@ Describes the notification switch state changes callback data.
 
 **System API:** This is a system API.
 
-**Property type:** _NotificationSwitchChangedCallbackData
+**Type:** _NotificationSwitchChangedCallbackData

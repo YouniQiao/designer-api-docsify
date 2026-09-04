@@ -14,4 +14,4 @@ Defines the types of the key and value in a KV pair.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
-**Property type:** { [key: string]: ValueType | Uint8Array | null }
+**Type:** { [key: string]: ValueType | Uint8Array | null }

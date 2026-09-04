@@ -26,7 +26,7 @@ function convertFromContext(context: common.Context): SendableContext
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | common.Context | 是 |  |
+| context | [common.Context](arkts-ability-common-context-t.md) | 是 |  |
 
 **返回值：**
 

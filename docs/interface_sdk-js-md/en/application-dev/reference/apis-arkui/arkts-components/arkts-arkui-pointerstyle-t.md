@@ -22,4 +22,4 @@ Defines the pointer style.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** import('../api/@ohos.multimodalInput.pointer').default.PointerStyle
+**Type:** import('../api/@ohos.multimodalInput.pointer').default.PointerStyle

@@ -99,7 +99,7 @@ Runs startup tasks or loads .so files. You can specify [AbilityStageContext](ark
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | startupTasks | Array&lt;string&gt; | Yes | Array of [StartupTask](arkts-ability-app-appstartup-startuptask-startuptask-c.md) names or names of .so files to be preloaded. |
-| context | common.AbilityStageContext | Yes | AbilityStage context that executes the [StartupTask](arkts-ability-app-appstartup-startuptask-startuptask-c.md). It is passed as an input parameter to [init](arkts-ability-app-appstartup-startuptask-startuptask-c.md#init) of the task. |
+| context | [common.AbilityStageContext](arkts-ability-common-abilitystagecontext-t.md) | Yes | AbilityStage context that executes the [StartupTask](arkts-ability-app-appstartup-startuptask-startuptask-c.md). It is passed as an input parameter to [init](arkts-ability-app-appstartup-startuptask-startuptask-c.md#init) of the task. |
 | config | [StartupConfig](arkts-ability-app-appstartup-startupconfig-startupconfig-i.md) | Yes | Configuration for the timeout duration and listener of startup tasks in AppStartup. |
 
 **Return value:**

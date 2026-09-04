@@ -10,4 +10,4 @@ type ISendable = lang.ISendable
 
 **系统能力：** SystemCapability.Graphic.Graphic2D.ColorManager.Core
 
-**属性类型：** lang.ISendable
+**类型：** [lang.ISendable](../../apis-arkts/arkts-apis/arkts-arkts-lang-isendable-i.md)

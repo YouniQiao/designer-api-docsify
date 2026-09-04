@@ -12,4 +12,4 @@ type DeviceTypeArray = Array<DeviceType>
 
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
-**属性类型：** Array&lt;DeviceType&gt;
+**类型：** Array&lt;DeviceType&gt;

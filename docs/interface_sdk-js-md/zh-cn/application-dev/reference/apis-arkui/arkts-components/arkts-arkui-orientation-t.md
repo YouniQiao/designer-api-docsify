@@ -14,4 +14,4 @@ declare type Orientation = import('../api/@ohos.window').default.Orientation
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-**属性类型：** import('../api/@ohos.window').default.Orientation
+**类型：** import('../api/@ohos.window').default.Orientation

@@ -306,7 +306,7 @@ readonly launchMode: bundle.LaunchMode
 
 Ability的启动模式。
 
-**类型：** bundle.LaunchMode
+**类型：** [bundle.LaunchMode](arkts-ability-bundle-launchmode-e.md)
 
 **默认值：** Enumerates ability launch modes
 
@@ -388,7 +388,7 @@ readonly orientation: bundle.DisplayOrientation
 
 Ability的显示模式。
 
-**类型：** bundle.DisplayOrientation
+**类型：** [bundle.DisplayOrientation](arkts-ability-bundle-displayorientation-e.md)
 
 **默认值：** Enumerates ability display orientations
 
@@ -474,7 +474,7 @@ Ability中枚举使用的模板的子类型。
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
-**类型：** bundle.AbilitySubType
+**类型：** [bundle.AbilitySubType](arkts-ability-bundle-abilitysubtype-e.md)
 
 **默认值：** Enumerates the subType of templates used by an ability
 
@@ -518,7 +518,7 @@ Ability类型。
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
-**类型：** bundle.AbilityType
+**类型：** [bundle.AbilityType](arkts-ability-bundle-abilitytype-e.md)
 
 **默认值：** Enumerates types of templates that can be used by an ability
 

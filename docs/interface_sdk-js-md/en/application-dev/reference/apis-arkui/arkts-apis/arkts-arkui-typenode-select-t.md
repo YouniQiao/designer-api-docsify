@@ -14,4 +14,4 @@ Represents a FrameNode of the **Select** type.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** [TypedFrameNode](arkts-arkui-framenode-typedframenode-i.md)&lt;SelectInterface, [SelectAttribute](../arkts-components/arkts-arkui-select-attribute.md)&gt;
+**Type:** [TypedFrameNode](arkts-arkui-framenode-typedframenode-i.md)&lt;SelectInterface, [SelectAttribute](../arkts-components/arkts-arkui-select-attribute.md)&gt;

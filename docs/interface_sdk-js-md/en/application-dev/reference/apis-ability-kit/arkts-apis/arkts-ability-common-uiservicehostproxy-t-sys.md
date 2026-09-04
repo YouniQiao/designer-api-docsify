@@ -14,7 +14,7 @@ Level-2 module UIServiceHostProxy.
 
 **System API:** This is a system API.
 
-**Property type:** _UIServiceHostProxy.default
+**Type:** _UIServiceHostProxy.default
 
 **Examples**
 

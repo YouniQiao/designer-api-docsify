@@ -12,4 +12,4 @@ Configure RdbPredicates to match the specified field whose data type is ValueTyp
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
-**Property type:** _ResultSet
+**Type:** _ResultSet

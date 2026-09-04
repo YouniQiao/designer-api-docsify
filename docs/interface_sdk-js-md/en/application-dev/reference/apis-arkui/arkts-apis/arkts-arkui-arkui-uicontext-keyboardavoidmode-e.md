@@ -4,6 +4,8 @@ Enumerates the modes in which the layout responds when the keyboard is displayed
 
 **Since:** 11
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## OFFSET

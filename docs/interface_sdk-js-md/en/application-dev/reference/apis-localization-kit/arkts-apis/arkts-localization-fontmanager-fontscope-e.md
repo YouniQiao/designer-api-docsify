@@ -4,6 +4,8 @@ Enumerates the font scopes.
 
 **Since:** 26.1.0
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.Global.FontManager
 
 ## APP

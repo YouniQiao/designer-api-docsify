@@ -12,4 +12,4 @@ export type PointerStyle = pointer.PointerStyle
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
-**属性类型：** pointer.PointerStyle
+**类型：** [pointer.PointerStyle](../../apis-input-kit/arkts-apis/arkts-input-pointer-pointerstyle-e.md)

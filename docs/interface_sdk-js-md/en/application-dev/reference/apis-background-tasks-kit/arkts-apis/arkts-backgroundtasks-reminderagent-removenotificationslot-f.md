@@ -26,7 +26,7 @@ Removes a notification slot of a specified type. This API uses an asynchronous c
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotType | notification.SlotType | Yes | Type of the reminder notification slot to remove. |
+| slotType | [notification.SlotType](../../apis-notification-kit/arkts-apis/arkts-notification-notification-slottype-depr-e.md) | Yes | Type of the reminder notification slot to remove. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Examples**
@@ -62,7 +62,7 @@ Removes a notification slot of a specified type. This API uses a promise to retu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotType | notification.SlotType | Yes | Type of the reminder notification slot to remove. |
+| slotType | [notification.SlotType](../../apis-notification-kit/arkts-apis/arkts-notification-notification-slottype-depr-e.md) | Yes | Type of the reminder notification slot to remove. |
 
 **Return value:**
 

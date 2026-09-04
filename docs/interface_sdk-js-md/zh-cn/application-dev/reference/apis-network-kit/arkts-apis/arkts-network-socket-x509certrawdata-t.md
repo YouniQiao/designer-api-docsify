@@ -10,4 +10,4 @@ export type X509CertRawData = cert.EncodingBlob
 
 **系统能力：** SystemCapability.Communication.NetStack
 
-**属性类型：** cert.EncodingBlob
+**类型：** [cert.EncodingBlob](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-cert-encodingblob-i.md)

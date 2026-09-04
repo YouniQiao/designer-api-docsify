@@ -30,7 +30,7 @@ public onCancelPrintJob(jobInfo: print.PrintJob): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| jobInfo | print.PrintJob | 是 | 表示打印任务的信息，包含任务ID、打印机ID、文档信息等详细配置和状态，需为已通过onStartPrintJob启动的打印任务，用于取消打印任务时定位目标任务。 |
+| jobInfo | [print.PrintJob](arkts-basicservices-print-printjob-i.md) | 是 | 表示打印任务的信息，包含任务ID、打印机ID、文档信息等详细配置和状态，需为已通过onStartPrintJob启动的打印任务，用于取消打印任务时定位目标任务。 |
 
 **错误码：**
 
@@ -201,7 +201,7 @@ public onRequestPrinterCapability(printerId: number): print.PrinterCapability
 
 | 类型 | 说明 |
 | --- | --- |
-| print.PrinterCapability | printer capability. |
+| [print.PrinterCapability](arkts-basicservices-print-printercapability-i.md) | printer capability. |
 
 **错误码：**
 
@@ -273,7 +273,7 @@ public onStartPrintJob(jobInfo: print.PrintJob): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| jobInfo | print.PrintJob | 是 | 表示打印任务的信息，包含任务ID、打印机ID、文档信息等详细配置和状态，用于指定要开始的打印任务。 |
+| jobInfo | [print.PrintJob](arkts-basicservices-print-printjob-i.md) | 是 | 表示打印任务的信息，包含任务ID、打印机ID、文档信息等详细配置和状态，用于指定要开始的打印任务。 |
 
 **错误码：**
 

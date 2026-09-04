@@ -14,4 +14,4 @@ Defines the data type of the interface restriction.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** import('../api/global/resource').Resource
+**Type:** import('../api/global/resource').Resource

@@ -79,7 +79,7 @@ level?: notification.SlotLevel
 
 通知级别。
 
-**类型：** notification.SlotLevel
+**类型：** [notification.SlotLevel](arkts-notification-notification-slotlevel-depr-e.md)
 
 **起始版本：** 7
 
@@ -142,7 +142,7 @@ notificationLevel?: notificationManager.SlotLevel
 
 通知级别，用于描述该渠道类型通知的显示优先级和提醒强度。
 
-**类型：** notificationManager.SlotLevel
+**类型：** [notificationManager.SlotLevel](arkts-notification-notificationmanager-slotlevel-e.md)
 
 **起始版本：** 20
 
@@ -156,7 +156,7 @@ notificationType?: notificationManager.SlotType
 
 渠道类型。不同渠道类型的通知提醒方式不同。
 
-**类型：** notificationManager.SlotType
+**类型：** [notificationManager.SlotType](arkts-notification-notificationmanager-slottype-e.md)
 
 **起始版本：** 11
 
@@ -184,7 +184,7 @@ type?: notification.SlotType
 
 渠道类型。
 
-**类型：** notification.SlotType
+**类型：** [notification.SlotType](arkts-notification-notification-slottype-depr-e.md)
 
 **起始版本：** 7
 

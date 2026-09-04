@@ -20,7 +20,7 @@ color?: common2D.Color
 
 装饰线颜色，默认为跟随文本颜色。
 
-**类型：** common2D.Color
+**类型：** [common2D.Color](arkts-arkgraphics2d-common2d-color-i.md)
 
 **起始版本：** 12
 

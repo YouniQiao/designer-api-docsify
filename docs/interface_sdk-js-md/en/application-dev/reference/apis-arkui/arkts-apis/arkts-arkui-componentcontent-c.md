@@ -1490,6 +1490,7 @@ Triggers component reuse for custom components under this **ComponentContent**. 
 **Examples**
 
 For details, see the example in [recycle](#recycle).
+- simpleType:
 
 ## update
 

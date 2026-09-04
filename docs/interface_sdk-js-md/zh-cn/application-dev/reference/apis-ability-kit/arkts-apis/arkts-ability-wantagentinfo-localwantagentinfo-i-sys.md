@@ -16,7 +16,7 @@ operationType?: abilityWantAgent.OperationType
 
 将被执行的动作类型。
 
-**类型：** abilityWantAgent.OperationType
+**类型：** [abilityWantAgent.OperationType](arkts-ability-wantagent-operationtype-depr-e.md)
 
 **起始版本：** 20
 

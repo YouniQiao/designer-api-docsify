@@ -40,7 +40,7 @@ distributedInfo?: distributedAccount.DistributedInfo
 
 系统账号子身份资料绑定的分布式账号信息，默认为undefined。
 
-**类型：** distributedAccount.DistributedInfo
+**类型：** [distributedAccount.DistributedInfo](arkts-basicservices-distributedaccount-distributedinfo-i.md)
 
 **起始版本：** 26.0.0
 

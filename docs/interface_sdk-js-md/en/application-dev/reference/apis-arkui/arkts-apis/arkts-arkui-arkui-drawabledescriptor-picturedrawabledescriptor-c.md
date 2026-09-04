@@ -34,7 +34,7 @@ A constructor used to create a **PictureDrawableDescriptor** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| src | image.Picture | Yes | Picture** object for creating **PictureDrawableDescriptor**. |
+| src | [image.Picture](../../apis-image-kit/arkts-apis/arkts-image-image-picture-i.md) | Yes | Picture** object for creating **PictureDrawableDescriptor**. |
 
 **Examples**
 

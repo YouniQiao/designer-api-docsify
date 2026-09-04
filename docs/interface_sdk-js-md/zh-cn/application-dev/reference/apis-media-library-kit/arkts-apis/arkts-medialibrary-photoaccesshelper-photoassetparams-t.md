@@ -10,4 +10,4 @@ type PhotoAssetParams = Record<string, MemberType>[]
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
-**属性类型：** Record&lt;string, [MemberType](arkts-medialibrary-photoaccesshelper-membertype-t.md)&gt;[]
+**类型：** Record&lt;string, [MemberType](arkts-medialibrary-photoaccesshelper-membertype-t.md)&gt;[]

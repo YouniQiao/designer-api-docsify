@@ -21,8 +21,6 @@ This module provides word selection management capabilities, including creating,
 
 **Since:** 24
 
-**Model restriction:** This API can be used only in the stage model.
-
 **System capability:** SystemCapability.SelectionInput.Selection
 
 ## Modules to Import

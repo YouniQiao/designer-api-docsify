@@ -211,7 +211,7 @@ Obtains the boundaries of the existing region.
 
 | Type | Description |
 | --- | --- |
-| common2D.Rect | Bounding rectangle of this region. |
+| [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) | Bounding rectangle of this region. |
 
 **Examples**
 

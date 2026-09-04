@@ -46,7 +46,7 @@ Called when a scrollable container is set.
 | [OnScrollEdgeCallback](arkts-arkui-onscrolledgecallback-t.md) | Represents the callback triggered when scrolling reaches an edge. |
 | [OnScrollFrameBeginCallback](arkts-arkui-onscrollframebegincallback-t.md) | Represents the callback triggered before each frame scrolling starts. |
 | [ScrollOnDidZoomCallback](arkts-arkui-scrollondidzoomcallback-t.md) | callback of Scroll, using in onDidZoom. |
-| [ScrollOnScrollCallback](arkts-arkui-scrollonscrollcallback-t.md) | Represents the callback triggered when the &lt;em&gt;Scroll&lt;/em&gt; component scrolls. |
+| [ScrollOnScrollCallback](arkts-arkui-scrollonscrollcallback-t.md) | Represents the callback triggered when the&lt;em&gt;Scroll&lt;/em&gt; component scrolls. |
 | [ScrollOnWillScrollCallback](arkts-arkui-scrollonwillscrollcallback-t.md) | Called before scroll to allow developer to control real offset the Scroll can scroll. |
 
 ### Enums
@@ -760,6 +760,7 @@ struct ScrollExample1 {
 ```
 
 This example obtains a [UIScrollEvent](arkts-arkui-uiscrollevent-i.md) instance via getEvent('Scroll') on a FrameNode and sets scroll event callbacks for a Scroll component. This approach is intended for scenarios where the page code cannot be directly modified to use declarative callbacks.
+The UIScrollEvent API is supported since API version 19.
 
 ```TypeScript
 import { NodeController, FrameNode, typeNode } from '@kit.ArkUI';

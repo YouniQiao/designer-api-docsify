@@ -274,7 +274,7 @@ The following table shows how different settings of **format** work out.
 | aa hh:mm | AM 5:00 |
 | hh:mm | 5:00 |
 | mm:ss | 00:04 |
-| mm:ss.SS | 00:04.91 |
+| [mm:ss.SS](../../apis-performance-analysis-kit/arkts-apis/arkts-performanceanalysis-hitracechain-hitracetracepointtype-e.md) | 00:04.91 |
 | mm:ss.SSS | 00:04.536 |
 | hh:mm:ss aa | 5:00:04 AM |
 | HH | 17 |

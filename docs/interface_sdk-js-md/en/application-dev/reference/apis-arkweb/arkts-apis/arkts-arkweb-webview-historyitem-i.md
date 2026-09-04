@@ -54,7 +54,7 @@ icon: image.PixelMap
 
 **PixelMap** object of the icon on the historical page.
 
-**Type:** image.PixelMap
+**Type:** [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)
 
 **Since:** 9
 

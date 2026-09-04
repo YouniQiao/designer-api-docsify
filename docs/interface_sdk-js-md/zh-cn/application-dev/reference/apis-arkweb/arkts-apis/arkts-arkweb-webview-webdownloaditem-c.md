@@ -627,6 +627,7 @@ struct WebComponent {
 ```
 
 完整示例代码参考constructor。
+- simpleType:
 
 ## getOriginalUrl
 
@@ -1176,6 +1177,7 @@ getUrl(): string
 **示例**
 
 完整示例代码参考[removeProxyOverride](./arkts-apis-webview-ProxyController.md#removeproxyoverride)。
+- simpleType:
 
 ```TypeScript
 // xxx.ets
@@ -1227,6 +1229,7 @@ struct WebComponent {
 ```
 
 完整示例代码参考constructor。
+- simpleType:
 
 ```TypeScript
 // xxx.ets
@@ -1278,6 +1281,7 @@ pause(): void
 **示例**
 
 完整示例代码参考[onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer)。
+- simpleType:
 
 ```TypeScript
 // xxx.ets

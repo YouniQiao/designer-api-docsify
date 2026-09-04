@@ -24,7 +24,7 @@ Begins a query
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| target | webgl.GLenum | Yes | Target |
+| target | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Target |
 | query | [WebGLQuery](arkts-arkgraphics2d-webgl2-webglquery-i.md) | Yes | Query |
 
 ## beginTransformFeedback
@@ -45,7 +45,7 @@ Begins transform feedback
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| primitiveMode | webgl.GLenum | Yes | Primitive mode |
+| primitiveMode | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Primitive mode |
 
 ## bindBufferBase
 
@@ -65,9 +65,9 @@ Binds buffer base
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| target | webgl.GLenum | Yes | Target |
-| index | webgl.GLuint | Yes | Index |
-| buffer | webgl.WebGLBuffer \| null | Yes | Buffer |
+| target | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Target |
+| index | [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md) | Yes | Index |
+| buffer | [webgl.WebGLBuffer](arkts-arkgraphics2d-webgl-webglbuffer-i.md) \| null | Yes | Buffer |
 
 ## bindBufferRange
 
@@ -93,11 +93,11 @@ Binds buffer range
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| target | webgl.GLenum | Yes | Target |
-| index | webgl.GLuint | Yes | Index |
-| buffer | webgl.WebGLBuffer \| null | Yes | Buffer |
-| offset | webgl.GLintptr | Yes | Offset |
-| size | webgl.GLsizeiptr | Yes | Size |
+| target | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Target |
+| index | [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md) | Yes | Index |
+| buffer | [webgl.WebGLBuffer](arkts-arkgraphics2d-webgl-webglbuffer-i.md) \| null | Yes | Buffer |
+| offset | [webgl.GLintptr](arkts-arkgraphics2d-glintptr-t.md) | Yes | Offset |
+| size | [webgl.GLsizeiptr](arkts-arkgraphics2d-glsizeiptr-t.md) | Yes | Size |
 
 ## bindSampler
 
@@ -117,7 +117,7 @@ Binds a sampler
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| unit | webgl.GLuint | Yes | Texture unit |
+| unit | [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md) | Yes | Texture unit |
 | sampler | [WebGLSampler](arkts-arkgraphics2d-webgl2-webglsampler-i.md) \| null | Yes | [Sampler](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-sceneresources-sampler-i.md) |
 
 ## bindTransformFeedback
@@ -138,7 +138,7 @@ Binds a transform feedback
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| target | webgl.GLenum | Yes | Target |
+| target | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Target |
 | tf | [WebGLTransformFeedback](arkts-arkgraphics2d-webgl2-webgltransformfeedback-i.md) \| null | Yes | Transform feedback |
 
 ## bindVertexArray
@@ -190,16 +190,16 @@ Blits framebuffer
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| srcX0 | webgl.GLint | Yes | Source X0 |
-| srcY0 | webgl.GLint | Yes | Source Y0 |
-| srcX1 | webgl.GLint | Yes | Source X1 |
-| srcY1 | webgl.GLint | Yes | Source Y1 |
-| dstX0 | webgl.GLint | Yes | Destination X0 |
-| dstY0 | webgl.GLint | Yes | Destination Y0 |
-| dstX1 | webgl.GLint | Yes | Destination X1 |
-| dstY1 | webgl.GLint | Yes | Destination Y1 |
-| mask | webgl.GLbitfield | Yes | [Mask](arkts-arkgraphics2d-uieffect-mask-c-sys.md) |
-| filter | webgl.GLenum | Yes | Filter |
+| srcX0 | [webgl.GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Source X0 |
+| srcY0 | [webgl.GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Source Y0 |
+| srcX1 | [webgl.GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Source X1 |
+| srcY1 | [webgl.GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Source Y1 |
+| dstX0 | [webgl.GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Destination X0 |
+| dstY0 | [webgl.GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Destination Y0 |
+| dstX1 | [webgl.GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Destination X1 |
+| dstY1 | [webgl.GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Destination Y1 |
+| mask | [webgl.GLbitfield](arkts-arkgraphics2d-glbitfield-t.md) | Yes | [Mask](arkts-arkgraphics2d-uieffect-mask-c-sys.md) |
+| filter | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Filter |
 
 ## clearBufferfi
 
@@ -219,10 +219,10 @@ Clears bufferfi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| buffer | webgl.GLenum | Yes | Buffer |
-| drawbuffer | webgl.GLint | Yes | Draw buffer |
-| depth | webgl.GLfloat | Yes | Depth |
-| stencil | webgl.GLint | Yes | Stencil |
+| buffer | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Buffer |
+| drawbuffer | [webgl.GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Draw buffer |
+| depth | [webgl.GLfloat](arkts-arkgraphics2d-glfloat-t.md) | Yes | Depth |
+| stencil | [webgl.GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Stencil |
 
 ## clearBufferfv
 
@@ -247,10 +247,10 @@ Clears bufferfv
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| buffer | webgl.GLenum | Yes | Buffer |
-| drawbuffer | webgl.GLint | Yes | Draw buffer |
-| values | webgl.Float32List | Yes | Values |
-| srcOffset | webgl.GLuint | No | Source offset |
+| buffer | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Buffer |
+| drawbuffer | [webgl.GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Draw buffer |
+| values | [webgl.Float32List](arkts-arkgraphics2d-float32list-t.md) | Yes | Values |
+| srcOffset | [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md) | No | Source offset |
 
 ## clearBufferiv
 
@@ -275,10 +275,10 @@ Clears bufferiv
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| buffer | webgl.GLenum | Yes | Buffer |
-| drawbuffer | webgl.GLint | Yes | Draw buffer |
-| values | webgl.Int32List | Yes | Values |
-| srcOffset | webgl.GLuint | No | Source offset |
+| buffer | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Buffer |
+| drawbuffer | [webgl.GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Draw buffer |
+| values | [webgl.Int32List](arkts-arkgraphics2d-int32list-t.md) | Yes | Values |
+| srcOffset | [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md) | No | Source offset |
 
 ## clearBufferuiv
 
@@ -298,10 +298,10 @@ Clears bufferuiv
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| buffer | webgl.GLenum | Yes | Buffer |
-| drawbuffer | webgl.GLint | Yes | Draw buffer |
+| buffer | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Buffer |
+| drawbuffer | [webgl.GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Draw buffer |
 | values | [Uint32List](arkts-arkgraphics2d-uint32list-t.md) | Yes | Values |
-| srcOffset | webgl.GLuint | No | Source offset |
+| srcOffset | [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md) | No | Source offset |
 
 ## clientWaitSync
 
@@ -322,14 +322,14 @@ Client waits for sync object
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | sync | [WebGLSync](arkts-arkgraphics2d-webgl2-webglsync-i.md) | Yes | Sync object |
-| flags | webgl.GLbitfield | Yes | Flags |
+| flags | [webgl.GLbitfield](arkts-arkgraphics2d-glbitfield-t.md) | Yes | Flags |
 | timeout | [GLuint64](arkts-arkgraphics2d-gluint64-t.md) | Yes | Timeout |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| webgl.GLenum | Result |
+| [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Result |
 
 ## compressedTexImage3D
 
@@ -359,15 +359,15 @@ Compressed texture image 3D from PBO offset
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| target | webgl.GLenum | Yes | Texture target |
-| level | webgl.GLint | Yes | Mipmap level |
-| internalformat | webgl.GLenum | Yes | Internal format |
-| width | webgl.GLsizei | Yes | Width |
-| height | webgl.GLsizei | Yes | Height |
-| depth | webgl.GLsizei | Yes | Depth |
-| border | webgl.GLint | Yes | Border |
-| imageSize | webgl.GLsizei | Yes | Image size |
-| offset | webgl.GLintptr | Yes | Offset |
+| target | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Texture target |
+| level | [webgl.GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Mipmap level |
+| internalformat | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Internal format |
+| width | [webgl.GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Width |
+| height | [webgl.GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Height |
+| depth | [webgl.GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Depth |
+| border | [webgl.GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Border |
+| imageSize | [webgl.GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Image size |
+| offset | [webgl.GLintptr](arkts-arkgraphics2d-glintptr-t.md) | Yes | Offset |
 
 ## compressedTexImage3D
 
@@ -398,16 +398,16 @@ Compressed texture image 3D from ArrayBufferView
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| target | webgl.GLenum | Yes | Texture target |
-| level | webgl.GLint | Yes | Mipmap level |
-| internalformat | webgl.GLenum | Yes | Internal format |
-| width | webgl.GLsizei | Yes | Width |
-| height | webgl.GLsizei | Yes | Height |
-| depth | webgl.GLsizei | Yes | Depth |
-| border | webgl.GLint | Yes | Border |
+| target | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Texture target |
+| level | [webgl.GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Mipmap level |
+| internalformat | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Internal format |
+| width | [webgl.GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Width |
+| height | [webgl.GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Height |
+| depth | [webgl.GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Depth |
+| border | [webgl.GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Border |
 | srcData | [ArrayBufferView](../../apis-default/arkts-apis/arkts-lib-es5-arraybufferview-i.md) | Yes | Source data |
-| srcOffset | webgl.GLuint | No | Source offset |
-| srcLengthOverride | webgl.GLuint | No | Source length override |
+| srcOffset | [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md) | No | Source offset |
+| srcLengthOverride | [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md) | No | Source length override |
 
 ## compressedTexSubImage3D
 
@@ -439,17 +439,17 @@ Compressed texture sub image 3D from PBO offset
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| target | webgl.GLenum | Yes | Texture target |
-| level | webgl.GLint | Yes | Mipmap level |
-| xoffset | webgl.GLint | Yes | X offset |
-| yoffset | webgl.GLint | Yes | Y offset |
-| zoffset | webgl.GLint | Yes | Z offset |
-| width | webgl.GLsizei | Yes | Width |
-| height | webgl.GLsizei | Yes | Height |
-| depth | webgl.GLsizei | Yes | Depth |
-| format | webgl.GLenum | Yes | [Format](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-format-e.md) |
-| imageSize | webgl.GLsizei | Yes | Image size |
-| offset | webgl.GLintptr | Yes | Offset |
+| target | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Texture target |
+| level | [webgl.GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Mipmap level |
+| xoffset | [webgl.GLint](arkts-arkgraphics2d-glint-t.md) | Yes | X offset |
+| yoffset | [webgl.GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Y offset |
+| zoffset | [webgl.GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Z offset |
+| width | [webgl.GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Width |
+| height | [webgl.GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Height |
+| depth | [webgl.GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Depth |
+| format | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | [Format](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-format-e.md) |
+| imageSize | [webgl.GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Image size |
+| offset | [webgl.GLintptr](arkts-arkgraphics2d-glintptr-t.md) | Yes | Offset |
 
 ## compressedTexSubImage3D
 
@@ -482,18 +482,18 @@ Compressed texture sub image 3D from ArrayBufferView
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| target | webgl.GLenum | Yes | Texture target |
-| level | webgl.GLint | Yes | Mipmap level |
-| xoffset | webgl.GLint | Yes | X offset |
-| yoffset | webgl.GLint | Yes | Y offset |
-| zoffset | webgl.GLint | Yes | Z offset |
-| width | webgl.GLsizei | Yes | Width |
-| height | webgl.GLsizei | Yes | Height |
-| depth | webgl.GLsizei | Yes | Depth |
-| format | webgl.GLenum | Yes | [Format](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-format-e.md) |
+| target | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Texture target |
+| level | [webgl.GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Mipmap level |
+| xoffset | [webgl.GLint](arkts-arkgraphics2d-glint-t.md) | Yes | X offset |
+| yoffset | [webgl.GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Y offset |
+| zoffset | [webgl.GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Z offset |
+| width | [webgl.GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Width |
+| height | [webgl.GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Height |
+| depth | [webgl.GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Depth |
+| format | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | [Format](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-format-e.md) |
 | srcData | [ArrayBufferView](../../apis-default/arkts-apis/arkts-lib-es5-arraybufferview-i.md) | Yes | Source data |
-| srcOffset | webgl.GLuint | No | Source offset |
-| srcLengthOverride | webgl.GLuint | No | Source length override |
+| srcOffset | [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md) | No | Source offset |
+| srcLengthOverride | [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md) | No | Source length override |
 
 ## copyBufferSubData
 
@@ -519,11 +519,11 @@ Copies data from one buffer to another
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| readTarget | webgl.GLenum | Yes | Read buffer target |
-| writeTarget | webgl.GLenum | Yes | Write buffer target |
-| readOffset | webgl.GLintptr | Yes | Read offset |
-| writeOffset | webgl.GLintptr | Yes | Write offset |
-| size | webgl.GLsizeiptr | Yes | Size to copy |
+| readTarget | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Read buffer target |
+| writeTarget | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Write buffer target |
+| readOffset | [webgl.GLintptr](arkts-arkgraphics2d-glintptr-t.md) | Yes | Read offset |
+| writeOffset | [webgl.GLintptr](arkts-arkgraphics2d-glintptr-t.md) | Yes | Write offset |
+| size | [webgl.GLsizeiptr](arkts-arkgraphics2d-glsizeiptr-t.md) | Yes | Size to copy |
 
 ## copyTexSubImage3D
 
@@ -553,15 +553,15 @@ Copies a portion of a 3D texture image
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| target | webgl.GLenum | Yes | Texture target |
-| level | webgl.GLint | Yes | Mipmap level |
-| xoffset | webgl.GLint | Yes | X offset |
-| yoffset | webgl.GLint | Yes | Y offset |
-| zoffset | webgl.GLint | Yes | Z offset |
-| x | webgl.GLint | Yes | X coordinate |
-| y | webgl.GLint | Yes | Y coordinate |
-| width | webgl.GLsizei | Yes | Width |
-| height | webgl.GLsizei | Yes | Height |
+| target | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Texture target |
+| level | [webgl.GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Mipmap level |
+| xoffset | [webgl.GLint](arkts-arkgraphics2d-glint-t.md) | Yes | X offset |
+| yoffset | [webgl.GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Y offset |
+| zoffset | [webgl.GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Z offset |
+| x | [webgl.GLint](arkts-arkgraphics2d-glint-t.md) | Yes | X coordinate |
+| y | [webgl.GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Y coordinate |
+| width | [webgl.GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Width |
+| height | [webgl.GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Height |
 
 ## createQuery
 
@@ -766,10 +766,10 @@ Draws arrays instanced
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | webgl.GLenum | Yes | [Mode](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-agent-mode-e.md) |
-| first | webgl.GLint | Yes | First |
-| count | webgl.GLsizei | Yes | Count |
-| instanceCount | webgl.GLsizei | Yes | Instance count |
+| mode | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | [Mode](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-agent-mode-e.md) |
+| first | [webgl.GLint](arkts-arkgraphics2d-glint-t.md) | Yes | First |
+| count | [webgl.GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Count |
+| instanceCount | [webgl.GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Instance count |
 
 ## drawBuffers
 
@@ -789,7 +789,7 @@ Sets draw buffers
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| buffers | webgl.GLenum[] | Yes | Buffers |
+| buffers | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)[] | Yes | Buffers |
 
 ## drawElementsInstanced
 
@@ -815,11 +815,11 @@ Draws elements instanced
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | webgl.GLenum | Yes | [Mode](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-agent-mode-e.md) |
-| count | webgl.GLsizei | Yes | Count |
-| type | webgl.GLenum | Yes | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| offset | webgl.GLintptr | Yes | Offset |
-| instanceCount | webgl.GLsizei | Yes | Instance count |
+| mode | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | [Mode](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-agent-mode-e.md) |
+| count | [webgl.GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Count |
+| type | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| offset | [webgl.GLintptr](arkts-arkgraphics2d-glintptr-t.md) | Yes | Offset |
+| instanceCount | [webgl.GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Instance count |
 
 ## drawRangeElements
 
@@ -846,12 +846,12 @@ Draws range elements
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | webgl.GLenum | Yes | [Mode](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-agent-mode-e.md) |
-| start | webgl.GLuint | Yes | Start |
-| end | webgl.GLuint | Yes | End |
-| count | webgl.GLsizei | Yes | Count |
-| type | webgl.GLenum | Yes | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| offset | webgl.GLintptr | Yes | Offset |
+| mode | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | [Mode](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-agent-mode-e.md) |
+| start | [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md) | Yes | Start |
+| end | [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md) | Yes | End |
+| count | [webgl.GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Count |
+| type | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| offset | [webgl.GLintptr](arkts-arkgraphics2d-glintptr-t.md) | Yes | Offset |
 
 ## endQuery
 
@@ -871,7 +871,7 @@ Ends a query
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| target | webgl.GLenum | Yes | Target |
+| target | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Target |
 
 ## endTransformFeedback
 
@@ -905,8 +905,8 @@ Creates a sync object
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| condition | webgl.GLenum | Yes | Condition |
-| flags | webgl.GLbitfield | Yes | Flags |
+| condition | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Condition |
+| flags | [webgl.GLbitfield](arkts-arkgraphics2d-glbitfield-t.md) | Yes | Flags |
 
 **Return value:**
 
@@ -938,11 +938,11 @@ Attaches a texture layer to a framebuffer
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| target | webgl.GLenum | Yes | Framebuffer target |
-| attachment | webgl.GLenum | Yes | Attachment point |
-| texture | webgl.WebGLTexture \| null | Yes | Texture |
-| level | webgl.GLint | Yes | Mipmap level |
-| layer | webgl.GLint | Yes | Layer |
+| target | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Framebuffer target |
+| attachment | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Attachment point |
+| texture | [webgl.WebGLTexture](arkts-arkgraphics2d-webgl-webgltexture-i.md) \| null | Yes | Texture |
+| level | [webgl.GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Mipmap level |
+| layer | [webgl.GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Layer |
 
 ## getActiveUniformBlockName
 
@@ -962,8 +962,8 @@ Gets active uniform block name
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| program | webgl.WebGLProgram | Yes | Program |
-| uniformBlockIndex | webgl.GLuint | Yes | Uniform block index |
+| program | [webgl.WebGLProgram](arkts-arkgraphics2d-webgl-webglprogram-i.md) | Yes | Program |
+| uniformBlockIndex | [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md) | Yes | Uniform block index |
 
 **Return value:**
 
@@ -993,9 +993,9 @@ Gets active uniform block parameter
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| program | webgl.WebGLProgram | Yes | Program |
-| uniformBlockIndex | webgl.GLuint | Yes | Uniform block index |
-| pname | webgl.GLenum | Yes | Parameter name |
+| program | [webgl.WebGLProgram](arkts-arkgraphics2d-webgl-webglprogram-i.md) | Yes | Program |
+| uniformBlockIndex | [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md) | Yes | Uniform block index |
+| pname | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Parameter name |
 
 **Return value:**
 
@@ -1021,9 +1021,9 @@ Gets active uniforms
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| program | webgl.WebGLProgram | Yes | Program |
-| uniformIndices | webgl.GLuint[] | Yes | Uniform indices |
-| pname | webgl.GLenum | Yes | Parameter name |
+| program | [webgl.WebGLProgram](arkts-arkgraphics2d-webgl-webglprogram-i.md) | Yes | Program |
+| uniformIndices | [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md)[] | Yes | Uniform indices |
+| pname | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Parameter name |
 
 **Return value:**
 
@@ -1055,11 +1055,11 @@ Gets buffer sub data
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| target | webgl.GLenum | Yes | Buffer target |
-| srcByteOffset | webgl.GLintptr | Yes | Source byte offset |
+| target | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Buffer target |
+| srcByteOffset | [webgl.GLintptr](arkts-arkgraphics2d-glintptr-t.md) | Yes | Source byte offset |
 | dstBuffer | [ArrayBufferView](../../apis-default/arkts-apis/arkts-lib-es5-arraybufferview-i.md) | Yes | Destination buffer |
-| dstOffset | webgl.GLuint | No | Destination offset |
-| length | webgl.GLuint | No | [Length](../../apis-arkui/arkts-apis/arkts-arkui-length-t.md) |
+| dstOffset | [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md) | No | Destination offset |
+| length | [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md) | No | [Length](../../apis-arkui/arkts-apis/arkts-arkui-length-t.md) |
 
 ## getFragDataLocation
 
@@ -1079,14 +1079,14 @@ Gets fragment data location
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| program | webgl.WebGLProgram | Yes | Program |
+| program | [webgl.WebGLProgram](arkts-arkgraphics2d-webgl-webglprogram-i.md) | Yes | Program |
 | name | string | Yes | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| webgl.GLint | Location |
+| [webgl.GLint](arkts-arkgraphics2d-glint-t.md) | Location |
 
 ## getIndexedParameter
 
@@ -1106,8 +1106,8 @@ Gets indexed parameter
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| target | webgl.GLenum | Yes | Target |
-| index | webgl.GLuint | Yes | Index |
+| target | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Target |
+| index | [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md) | Yes | Index |
 
 **Return value:**
 
@@ -1133,9 +1133,9 @@ Gets internal format parameter
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| target | webgl.GLenum | Yes | Target |
-| internalformat | webgl.GLenum | Yes | Internal format |
-| pname | webgl.GLenum | Yes | Parameter name |
+| target | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Target |
+| internalformat | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Internal format |
+| pname | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Parameter name |
 
 **Return value:**
 
@@ -1161,8 +1161,8 @@ Gets a query
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| target | webgl.GLenum | Yes | Target |
-| pname | webgl.GLenum | Yes | Parameter name |
+| target | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Target |
+| pname | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Parameter name |
 
 **Return value:**
 
@@ -1189,7 +1189,7 @@ Gets query parameter
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | query | [WebGLQuery](arkts-arkgraphics2d-webgl2-webglquery-i.md) | Yes | Query |
-| pname | webgl.GLenum | Yes | Parameter name |
+| pname | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Parameter name |
 
 **Return value:**
 
@@ -1216,7 +1216,7 @@ Gets sampler parameter
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | sampler | [WebGLSampler](arkts-arkgraphics2d-webgl2-webglsampler-i.md) | Yes | [Sampler](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-sceneresources-sampler-i.md) |
-| pname | webgl.GLenum | Yes | Parameter name |
+| pname | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Parameter name |
 
 **Return value:**
 
@@ -1243,7 +1243,7 @@ Gets sync parameter
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | sync | [WebGLSync](arkts-arkgraphics2d-webgl2-webglsync-i.md) | Yes | Sync object |
-| pname | webgl.GLenum | Yes | Parameter name |
+| pname | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Parameter name |
 
 **Return value:**
 
@@ -1269,14 +1269,14 @@ Gets transform feedback varying
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| program | webgl.WebGLProgram | Yes | Program |
-| index | webgl.GLuint | Yes | Index |
+| program | [webgl.WebGLProgram](arkts-arkgraphics2d-webgl-webglprogram-i.md) | Yes | Program |
+| index | [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md) | Yes | Index |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| webgl.WebGLActiveInfo \| null | Active info |
+| [webgl.WebGLActiveInfo](arkts-arkgraphics2d-webgl-webglactiveinfo-i.md) \| null | Active info |
 
 ## getUniformBlockIndex
 
@@ -1296,14 +1296,14 @@ Gets uniform block index
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| program | webgl.WebGLProgram | Yes | Program |
+| program | [webgl.WebGLProgram](arkts-arkgraphics2d-webgl-webglprogram-i.md) | Yes | Program |
 | uniformBlockName | string | Yes | Uniform block name |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| webgl.GLuint | Uniform block index |
+| [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md) | Uniform block index |
 
 ## getUniformIndices
 
@@ -1323,14 +1323,14 @@ Gets uniform indices
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| program | webgl.WebGLProgram | Yes | Program |
+| program | [webgl.WebGLProgram](arkts-arkgraphics2d-webgl-webglprogram-i.md) | Yes | Program |
 | uniformNames | string[] | Yes | Uniform names |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| webgl.GLuint[] \| null | Uniform indices |
+| [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md)[] \| null | Uniform indices |
 
 ## invalidateFramebuffer
 
@@ -1350,8 +1350,8 @@ Invalidates framebuffer attachments
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| target | webgl.GLenum | Yes | Framebuffer target |
-| attachments | webgl.GLenum[] | Yes | Attachments to invalidate |
+| target | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Framebuffer target |
+| attachments | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)[] | Yes | Attachments to invalidate |
 
 ## invalidateSubFramebuffer
 
@@ -1378,12 +1378,12 @@ Invalidates sub framebuffer attachments
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| target | webgl.GLenum | Yes | Framebuffer target |
-| attachments | webgl.GLenum[] | Yes | Attachments to invalidate |
-| x | webgl.GLint | Yes | X coordinate |
-| y | webgl.GLint | Yes | Y coordinate |
-| width | webgl.GLsizei | Yes | Width |
-| height | webgl.GLsizei | Yes | Height |
+| target | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Framebuffer target |
+| attachments | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)[] | Yes | Attachments to invalidate |
+| x | [webgl.GLint](arkts-arkgraphics2d-glint-t.md) | Yes | X coordinate |
+| y | [webgl.GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Y coordinate |
+| width | [webgl.GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Width |
+| height | [webgl.GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Height |
 
 ## isQuery
 
@@ -1409,7 +1409,7 @@ Returns whether a query is valid
 
 | Type | Description |
 | --- | --- |
-| webgl.GLboolean | Whether the query is valid |
+| [webgl.GLboolean](arkts-arkgraphics2d-glboolean-t.md) | Whether the query is valid |
 
 ## isSampler
 
@@ -1435,7 +1435,7 @@ Returns whether a sampler is valid
 
 | Type | Description |
 | --- | --- |
-| webgl.GLboolean | Whether the sampler is valid |
+| [webgl.GLboolean](arkts-arkgraphics2d-glboolean-t.md) | Whether the sampler is valid |
 
 ## isSync
 
@@ -1461,7 +1461,7 @@ Returns whether a sync object is valid
 
 | Type | Description |
 | --- | --- |
-| webgl.GLboolean | Whether the sync is valid |
+| [webgl.GLboolean](arkts-arkgraphics2d-glboolean-t.md) | Whether the sync is valid |
 
 ## isTransformFeedback
 
@@ -1487,7 +1487,7 @@ Returns whether a transform feedback is valid
 
 | Type | Description |
 | --- | --- |
-| webgl.GLboolean | Whether the transform feedback is valid |
+| [webgl.GLboolean](arkts-arkgraphics2d-glboolean-t.md) | Whether the transform feedback is valid |
 
 ## isVertexArray
 
@@ -1513,7 +1513,7 @@ Returns whether a vertex array is valid
 
 | Type | Description |
 | --- | --- |
-| webgl.GLboolean | Whether the vertex array is valid |
+| [webgl.GLboolean](arkts-arkgraphics2d-glboolean-t.md) | Whether the vertex array is valid |
 
 ## pauseTransformFeedback
 
@@ -1547,7 +1547,7 @@ Sets the read buffer
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| src | webgl.GLenum | Yes | Read buffer |
+| src | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Read buffer |
 
 ## renderbufferStorageMultisample
 
@@ -1573,11 +1573,11 @@ Sets renderbuffer storage with multisampling
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| target | webgl.GLenum | Yes | Renderbuffer target |
-| samples | webgl.GLsizei | Yes | Number of samples |
-| internalformat | webgl.GLenum | Yes | Internal format |
-| width | webgl.GLsizei | Yes | Width |
-| height | webgl.GLsizei | Yes | Height |
+| target | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Renderbuffer target |
+| samples | [webgl.GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Number of samples |
+| internalformat | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Internal format |
+| width | [webgl.GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Width |
+| height | [webgl.GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Height |
 
 ## resumeTransformFeedback
 
@@ -1612,8 +1612,8 @@ Sets sampler parameterf
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | sampler | [WebGLSampler](arkts-arkgraphics2d-webgl2-webglsampler-i.md) | Yes | [Sampler](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-sceneresources-sampler-i.md) |
-| pname | webgl.GLenum | Yes | Parameter name |
-| param | webgl.GLfloat | Yes | Parameter value |
+| pname | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Parameter name |
+| param | [webgl.GLfloat](arkts-arkgraphics2d-glfloat-t.md) | Yes | Parameter value |
 
 ## samplerParameteri
 
@@ -1634,8 +1634,8 @@ Sets sampler parameteri
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | sampler | [WebGLSampler](arkts-arkgraphics2d-webgl2-webglsampler-i.md) | Yes | [Sampler](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-sceneresources-sampler-i.md) |
-| pname | webgl.GLenum | Yes | Parameter name |
-| param | webgl.GLint | Yes | Parameter value |
+| pname | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Parameter name |
+| param | [webgl.GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Parameter value |
 
 ## texImage3D
 
@@ -1666,16 +1666,16 @@ Sets texture image 3D from PBO offset
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| target | webgl.GLenum | Yes | Texture target |
-| level | webgl.GLint | Yes | Mipmap level |
-| internalformat | webgl.GLint | Yes | Internal format |
-| width | webgl.GLsizei | Yes | Width |
-| height | webgl.GLsizei | Yes | Height |
-| depth | webgl.GLsizei | Yes | Depth |
-| border | webgl.GLint | Yes | Border |
-| format | webgl.GLenum | Yes | [Format](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-format-e.md) |
-| type | webgl.GLenum | Yes | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| pboOffset | webgl.GLintptr | Yes | PBO offset |
+| target | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Texture target |
+| level | [webgl.GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Mipmap level |
+| internalformat | [webgl.GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Internal format |
+| width | [webgl.GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Width |
+| height | [webgl.GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Height |
+| depth | [webgl.GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Depth |
+| border | [webgl.GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Border |
+| format | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | [Format](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-format-e.md) |
+| type | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| pboOffset | [webgl.GLintptr](arkts-arkgraphics2d-glintptr-t.md) | Yes | PBO offset |
 
 ## texImage3D
 
@@ -1706,16 +1706,16 @@ Sets texture image 3D from TexImageSource
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| target | webgl.GLenum | Yes | Texture target |
-| level | webgl.GLint | Yes | Mipmap level |
-| internalformat | webgl.GLint | Yes | Internal format |
-| width | webgl.GLsizei | Yes | Width |
-| height | webgl.GLsizei | Yes | Height |
-| depth | webgl.GLsizei | Yes | Depth |
-| border | webgl.GLint | Yes | Border |
-| format | webgl.GLenum | Yes | [Format](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-format-e.md) |
-| type | webgl.GLenum | Yes | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| source | webgl.TexImageSource | Yes | Image source |
+| target | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Texture target |
+| level | [webgl.GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Mipmap level |
+| internalformat | [webgl.GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Internal format |
+| width | [webgl.GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Width |
+| height | [webgl.GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Height |
+| depth | [webgl.GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Depth |
+| border | [webgl.GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Border |
+| format | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | [Format](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-format-e.md) |
+| type | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| source | [webgl.TexImageSource](arkts-arkgraphics2d-teximagesource-t.md) | Yes | Image source |
 
 ## texImage3D
 
@@ -1746,15 +1746,15 @@ Sets texture image 3D from ArrayBufferView
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| target | webgl.GLenum | Yes | Texture target |
-| level | webgl.GLint | Yes | Mipmap level |
-| internalformat | webgl.GLint | Yes | Internal format |
-| width | webgl.GLsizei | Yes | Width |
-| height | webgl.GLsizei | Yes | Height |
-| depth | webgl.GLsizei | Yes | Depth |
-| border | webgl.GLint | Yes | Border |
-| format | webgl.GLenum | Yes | [Format](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-format-e.md) |
-| type | webgl.GLenum | Yes | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| target | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Texture target |
+| level | [webgl.GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Mipmap level |
+| internalformat | [webgl.GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Internal format |
+| width | [webgl.GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Width |
+| height | [webgl.GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Height |
+| depth | [webgl.GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Depth |
+| border | [webgl.GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Border |
+| format | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | [Format](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-format-e.md) |
+| type | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | srcData | [ArrayBufferView](../../apis-default/arkts-apis/arkts-lib-es5-arraybufferview-i.md) \| null | Yes | Source data |
 
 ## texImage3D
@@ -1787,17 +1787,17 @@ Sets texture image 3D from ArrayBufferView with offset
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| target | webgl.GLenum | Yes | Texture target |
-| level | webgl.GLint | Yes | Mipmap level |
-| internalformat | webgl.GLint | Yes | Internal format |
-| width | webgl.GLsizei | Yes | Width |
-| height | webgl.GLsizei | Yes | Height |
-| depth | webgl.GLsizei | Yes | Depth |
-| border | webgl.GLint | Yes | Border |
-| format | webgl.GLenum | Yes | [Format](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-format-e.md) |
-| type | webgl.GLenum | Yes | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| target | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Texture target |
+| level | [webgl.GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Mipmap level |
+| internalformat | [webgl.GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Internal format |
+| width | [webgl.GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Width |
+| height | [webgl.GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Height |
+| depth | [webgl.GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Depth |
+| border | [webgl.GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Border |
+| format | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | [Format](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-format-e.md) |
+| type | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | srcData | [ArrayBufferView](../../apis-default/arkts-apis/arkts-lib-es5-arraybufferview-i.md) | Yes | Source data |
-| srcOffset | webgl.GLuint | Yes | Source offset |
+| srcOffset | [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md) | Yes | Source offset |
 
 ## texStorage2D
 
@@ -1823,11 +1823,11 @@ Sets texture storage 2D
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| target | webgl.GLenum | Yes | Texture target |
-| levels | webgl.GLsizei | Yes | Number of levels |
-| internalformat | webgl.GLenum | Yes | Internal format |
-| width | webgl.GLsizei | Yes | Width |
-| height | webgl.GLsizei | Yes | Height |
+| target | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Texture target |
+| levels | [webgl.GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Number of levels |
+| internalformat | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Internal format |
+| width | [webgl.GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Width |
+| height | [webgl.GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Height |
 
 ## texStorage3D
 
@@ -1854,12 +1854,12 @@ Sets texture storage 3D
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| target | webgl.GLenum | Yes | Texture target |
-| levels | webgl.GLsizei | Yes | Number of levels |
-| internalformat | webgl.GLenum | Yes | Internal format |
-| width | webgl.GLsizei | Yes | Width |
-| height | webgl.GLsizei | Yes | Height |
-| depth | webgl.GLsizei | Yes | Depth |
+| target | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Texture target |
+| levels | [webgl.GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Number of levels |
+| internalformat | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Internal format |
+| width | [webgl.GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Width |
+| height | [webgl.GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Height |
+| depth | [webgl.GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Depth |
 
 ## texSubImage3D
 
@@ -1891,17 +1891,17 @@ Sets texture sub image 3D from PBO offset
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| target | webgl.GLenum | Yes | Texture target |
-| level | webgl.GLint | Yes | Mipmap level |
-| xoffset | webgl.GLint | Yes | X offset |
-| yoffset | webgl.GLint | Yes | Y offset |
-| zoffset | webgl.GLint | Yes | Z offset |
-| width | webgl.GLsizei | Yes | Width |
-| height | webgl.GLsizei | Yes | Height |
-| depth | webgl.GLsizei | Yes | Depth |
-| format | webgl.GLenum | Yes | [Format](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-format-e.md) |
-| type | webgl.GLenum | Yes | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| pboOffset | webgl.GLintptr | Yes | PBO offset |
+| target | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Texture target |
+| level | [webgl.GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Mipmap level |
+| xoffset | [webgl.GLint](arkts-arkgraphics2d-glint-t.md) | Yes | X offset |
+| yoffset | [webgl.GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Y offset |
+| zoffset | [webgl.GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Z offset |
+| width | [webgl.GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Width |
+| height | [webgl.GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Height |
+| depth | [webgl.GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Depth |
+| format | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | [Format](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-format-e.md) |
+| type | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| pboOffset | [webgl.GLintptr](arkts-arkgraphics2d-glintptr-t.md) | Yes | PBO offset |
 
 ## texSubImage3D
 
@@ -1933,17 +1933,17 @@ Sets texture sub image 3D from TexImageSource
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| target | webgl.GLenum | Yes | Texture target |
-| level | webgl.GLint | Yes | Mipmap level |
-| xoffset | webgl.GLint | Yes | X offset |
-| yoffset | webgl.GLint | Yes | Y offset |
-| zoffset | webgl.GLint | Yes | Z offset |
-| width | webgl.GLsizei | Yes | Width |
-| height | webgl.GLsizei | Yes | Height |
-| depth | webgl.GLsizei | Yes | Depth |
-| format | webgl.GLenum | Yes | [Format](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-format-e.md) |
-| type | webgl.GLenum | Yes | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| source | webgl.TexImageSource | Yes | Image source |
+| target | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Texture target |
+| level | [webgl.GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Mipmap level |
+| xoffset | [webgl.GLint](arkts-arkgraphics2d-glint-t.md) | Yes | X offset |
+| yoffset | [webgl.GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Y offset |
+| zoffset | [webgl.GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Z offset |
+| width | [webgl.GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Width |
+| height | [webgl.GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Height |
+| depth | [webgl.GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Depth |
+| format | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | [Format](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-format-e.md) |
+| type | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| source | [webgl.TexImageSource](arkts-arkgraphics2d-teximagesource-t.md) | Yes | Image source |
 
 ## texSubImage3D
 
@@ -1976,18 +1976,18 @@ Sets texture sub image 3D from ArrayBufferView
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| target | webgl.GLenum | Yes | Texture target |
-| level | webgl.GLint | Yes | Mipmap level |
-| xoffset | webgl.GLint | Yes | X offset |
-| yoffset | webgl.GLint | Yes | Y offset |
-| zoffset | webgl.GLint | Yes | Z offset |
-| width | webgl.GLsizei | Yes | Width |
-| height | webgl.GLsizei | Yes | Height |
-| depth | webgl.GLsizei | Yes | Depth |
-| format | webgl.GLenum | Yes | [Format](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-format-e.md) |
-| type | webgl.GLenum | Yes | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| target | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Texture target |
+| level | [webgl.GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Mipmap level |
+| xoffset | [webgl.GLint](arkts-arkgraphics2d-glint-t.md) | Yes | X offset |
+| yoffset | [webgl.GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Y offset |
+| zoffset | [webgl.GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Z offset |
+| width | [webgl.GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Width |
+| height | [webgl.GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Height |
+| depth | [webgl.GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Depth |
+| format | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | [Format](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-format-e.md) |
+| type | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | srcData | [ArrayBufferView](../../apis-default/arkts-apis/arkts-lib-es5-arraybufferview-i.md) \| null | Yes | Source data |
-| srcOffset | webgl.GLuint | No | Source offset |
+| srcOffset | [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md) | No | Source offset |
 
 ## transformFeedbackVaryings
 
@@ -2007,9 +2007,9 @@ Sets transform feedback varyings
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| program | webgl.WebGLProgram | Yes | Program |
+| program | [webgl.WebGLProgram](arkts-arkgraphics2d-webgl-webglprogram-i.md) | Yes | Program |
 | varyings | string[] | Yes | Varyings |
-| bufferMode | webgl.GLenum | Yes | Buffer mode |
+| bufferMode | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Buffer mode |
 
 ## uniform1ui
 
@@ -2029,8 +2029,8 @@ Sets uniform1ui value
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| location | webgl.WebGLUniformLocation \| null | Yes | Uniform location |
-| v0 | webgl.GLuint | Yes | Value |
+| location | [webgl.WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | Yes | Uniform location |
+| v0 | [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md) | Yes | Value |
 
 ## uniform1uiv
 
@@ -2055,10 +2055,10 @@ Sets uniform1uiv value
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| location | webgl.WebGLUniformLocation \| null | Yes | Uniform location |
+| location | [webgl.WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | Yes | Uniform location |
 | data | [Uint32List](arkts-arkgraphics2d-uint32list-t.md) | Yes | Data |
-| srcOffset | webgl.GLuint | No | Source offset |
-| srcLength | webgl.GLuint | No | Source length |
+| srcOffset | [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md) | No | Source offset |
+| srcLength | [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md) | No | Source length |
 
 ## uniform2ui
 
@@ -2078,9 +2078,9 @@ Sets uniform2ui value
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| location | webgl.WebGLUniformLocation \| null | Yes | Uniform location |
-| v0 | webgl.GLuint | Yes | X value |
-| v1 | webgl.GLuint | Yes | Y value |
+| location | [webgl.WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | Yes | Uniform location |
+| v0 | [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md) | Yes | X value |
+| v1 | [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md) | Yes | Y value |
 
 ## uniform2uiv
 
@@ -2105,10 +2105,10 @@ Sets uniform2uiv value
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| location | webgl.WebGLUniformLocation \| null | Yes | Uniform location |
+| location | [webgl.WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | Yes | Uniform location |
 | data | [Uint32List](arkts-arkgraphics2d-uint32list-t.md) | Yes | Data |
-| srcOffset | webgl.GLuint | No | Source offset |
-| srcLength | webgl.GLuint | No | Source length |
+| srcOffset | [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md) | No | Source offset |
+| srcLength | [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md) | No | Source length |
 
 ## uniform3ui
 
@@ -2128,10 +2128,10 @@ Sets uniform3ui value
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| location | webgl.WebGLUniformLocation \| null | Yes | Uniform location |
-| v0 | webgl.GLuint | Yes | X value |
-| v1 | webgl.GLuint | Yes | Y value |
-| v2 | webgl.GLuint | Yes | Z value |
+| location | [webgl.WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | Yes | Uniform location |
+| v0 | [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md) | Yes | X value |
+| v1 | [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md) | Yes | Y value |
+| v2 | [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md) | Yes | Z value |
 
 ## uniform3uiv
 
@@ -2156,10 +2156,10 @@ Sets uniform3uiv value
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| location | webgl.WebGLUniformLocation \| null | Yes | Uniform location |
+| location | [webgl.WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | Yes | Uniform location |
 | data | [Uint32List](arkts-arkgraphics2d-uint32list-t.md) | Yes | Data |
-| srcOffset | webgl.GLuint | No | Source offset |
-| srcLength | webgl.GLuint | No | Source length |
+| srcOffset | [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md) | No | Source offset |
+| srcLength | [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md) | No | Source length |
 
 ## uniform4ui
 
@@ -2185,11 +2185,11 @@ Sets uniform4ui value
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| location | webgl.WebGLUniformLocation \| null | Yes | Uniform location |
-| v0 | webgl.GLuint | Yes | X value |
-| v1 | webgl.GLuint | Yes | Y value |
-| v2 | webgl.GLuint | Yes | Z value |
-| v3 | webgl.GLuint | Yes | W value |
+| location | [webgl.WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | Yes | Uniform location |
+| v0 | [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md) | Yes | X value |
+| v1 | [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md) | Yes | Y value |
+| v2 | [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md) | Yes | Z value |
+| v3 | [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md) | Yes | W value |
 
 ## uniform4uiv
 
@@ -2214,10 +2214,10 @@ Sets uniform4uiv value
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| location | webgl.WebGLUniformLocation \| null | Yes | Uniform location |
+| location | [webgl.WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | Yes | Uniform location |
 | data | [Uint32List](arkts-arkgraphics2d-uint32list-t.md) | Yes | Data |
-| srcOffset | webgl.GLuint | No | Source offset |
-| srcLength | webgl.GLuint | No | Source length |
+| srcOffset | [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md) | No | Source offset |
+| srcLength | [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md) | No | Source length |
 
 ## uniformBlockBinding
 
@@ -2241,9 +2241,9 @@ Sets uniform block binding
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| program | webgl.WebGLProgram | Yes | Program |
-| uniformBlockIndex | webgl.GLuint | Yes | Uniform block index |
-| uniformBlockBinding | webgl.GLuint | Yes | Uniform block binding |
+| program | [webgl.WebGLProgram](arkts-arkgraphics2d-webgl-webglprogram-i.md) | Yes | Program |
+| uniformBlockIndex | [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md) | Yes | Uniform block index |
+| uniformBlockBinding | [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md) | Yes | Uniform block binding |
 
 ## uniformMatrix2x3fv
 
@@ -2269,11 +2269,11 @@ Sets uniformMatrix2x3fv value
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| location | webgl.WebGLUniformLocation \| null | Yes | Uniform location |
-| transpose | webgl.GLboolean | Yes | Transpose |
-| data | webgl.Float32List | Yes | Data |
-| srcOffset | webgl.GLuint | No | Source offset |
-| srcLength | webgl.GLuint | No | Source length |
+| location | [webgl.WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | Yes | Uniform location |
+| transpose | [webgl.GLboolean](arkts-arkgraphics2d-glboolean-t.md) | Yes | Transpose |
+| data | [webgl.Float32List](arkts-arkgraphics2d-float32list-t.md) | Yes | Data |
+| srcOffset | [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md) | No | Source offset |
+| srcLength | [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md) | No | Source length |
 
 ## uniformMatrix2x4fv
 
@@ -2299,11 +2299,11 @@ Sets uniformMatrix2x4fv value
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| location | webgl.WebGLUniformLocation \| null | Yes | Uniform location |
-| transpose | webgl.GLboolean | Yes | Transpose |
-| data | webgl.Float32List | Yes | Data |
-| srcOffset | webgl.GLuint | No | Source offset |
-| srcLength | webgl.GLuint | No | Source length |
+| location | [webgl.WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | Yes | Uniform location |
+| transpose | [webgl.GLboolean](arkts-arkgraphics2d-glboolean-t.md) | Yes | Transpose |
+| data | [webgl.Float32List](arkts-arkgraphics2d-float32list-t.md) | Yes | Data |
+| srcOffset | [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md) | No | Source offset |
+| srcLength | [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md) | No | Source length |
 
 ## uniformMatrix3x2fv
 
@@ -2329,11 +2329,11 @@ Sets uniformMatrix3x2fv value
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| location | webgl.WebGLUniformLocation \| null | Yes | Uniform location |
-| transpose | webgl.GLboolean | Yes | Transpose |
-| data | webgl.Float32List | Yes | Data |
-| srcOffset | webgl.GLuint | No | Source offset |
-| srcLength | webgl.GLuint | No | Source length |
+| location | [webgl.WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | Yes | Uniform location |
+| transpose | [webgl.GLboolean](arkts-arkgraphics2d-glboolean-t.md) | Yes | Transpose |
+| data | [webgl.Float32List](arkts-arkgraphics2d-float32list-t.md) | Yes | Data |
+| srcOffset | [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md) | No | Source offset |
+| srcLength | [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md) | No | Source length |
 
 ## uniformMatrix3x4fv
 
@@ -2359,11 +2359,11 @@ Sets uniformMatrix3x4fv value
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| location | webgl.WebGLUniformLocation \| null | Yes | Uniform location |
-| transpose | webgl.GLboolean | Yes | Transpose |
-| data | webgl.Float32List | Yes | Data |
-| srcOffset | webgl.GLuint | No | Source offset |
-| srcLength | webgl.GLuint | No | Source length |
+| location | [webgl.WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | Yes | Uniform location |
+| transpose | [webgl.GLboolean](arkts-arkgraphics2d-glboolean-t.md) | Yes | Transpose |
+| data | [webgl.Float32List](arkts-arkgraphics2d-float32list-t.md) | Yes | Data |
+| srcOffset | [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md) | No | Source offset |
+| srcLength | [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md) | No | Source length |
 
 ## uniformMatrix4x2fv
 
@@ -2389,11 +2389,11 @@ Sets uniformMatrix4x2fv value
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| location | webgl.WebGLUniformLocation \| null | Yes | Uniform location |
-| transpose | webgl.GLboolean | Yes | Transpose |
-| data | webgl.Float32List | Yes | Data |
-| srcOffset | webgl.GLuint | No | Source offset |
-| srcLength | webgl.GLuint | No | Source length |
+| location | [webgl.WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | Yes | Uniform location |
+| transpose | [webgl.GLboolean](arkts-arkgraphics2d-glboolean-t.md) | Yes | Transpose |
+| data | [webgl.Float32List](arkts-arkgraphics2d-float32list-t.md) | Yes | Data |
+| srcOffset | [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md) | No | Source offset |
+| srcLength | [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md) | No | Source length |
 
 ## uniformMatrix4x3fv
 
@@ -2419,11 +2419,11 @@ Sets uniformMatrix4x3fv value
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| location | webgl.WebGLUniformLocation \| null | Yes | Uniform location |
-| transpose | webgl.GLboolean | Yes | Transpose |
-| data | webgl.Float32List | Yes | Data |
-| srcOffset | webgl.GLuint | No | Source offset |
-| srcLength | webgl.GLuint | No | Source length |
+| location | [webgl.WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | Yes | Uniform location |
+| transpose | [webgl.GLboolean](arkts-arkgraphics2d-glboolean-t.md) | Yes | Transpose |
+| data | [webgl.Float32List](arkts-arkgraphics2d-float32list-t.md) | Yes | Data |
+| srcOffset | [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md) | No | Source offset |
+| srcLength | [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md) | No | Source length |
 
 ## vertexAttribDivisor
 
@@ -2443,8 +2443,8 @@ Sets vertex attrib divisor
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | webgl.GLuint | Yes | Vertex attribute index |
-| divisor | webgl.GLuint | Yes | Divisor |
+| index | [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md) | Yes | Vertex attribute index |
+| divisor | [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md) | Yes | Divisor |
 
 ## vertexAttribI4i
 
@@ -2464,11 +2464,11 @@ Sets vertex attrib I4i value
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | webgl.GLuint | Yes | Vertex attribute index |
-| x | webgl.GLint | Yes | X value |
-| y | webgl.GLint | Yes | Y value |
-| z | webgl.GLint | Yes | Z value |
-| w | webgl.GLint | Yes | W value |
+| index | [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md) | Yes | Vertex attribute index |
+| x | [webgl.GLint](arkts-arkgraphics2d-glint-t.md) | Yes | X value |
+| y | [webgl.GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Y value |
+| z | [webgl.GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Z value |
+| w | [webgl.GLint](arkts-arkgraphics2d-glint-t.md) | Yes | W value |
 
 ## vertexAttribI4iv
 
@@ -2488,8 +2488,8 @@ Sets vertex attrib I4iv value
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | webgl.GLuint | Yes | Vertex attribute index |
-| values | webgl.Int32List | Yes | Values |
+| index | [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md) | Yes | Vertex attribute index |
+| values | [webgl.Int32List](arkts-arkgraphics2d-int32list-t.md) | Yes | Values |
 
 ## vertexAttribI4ui
 
@@ -2509,11 +2509,11 @@ Sets vertex attrib I4ui value
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | webgl.GLuint | Yes | Vertex attribute index |
-| x | webgl.GLuint | Yes | X value |
-| y | webgl.GLuint | Yes | Y value |
-| z | webgl.GLuint | Yes | Z value |
-| w | webgl.GLuint | Yes | W value |
+| index | [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md) | Yes | Vertex attribute index |
+| x | [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md) | Yes | X value |
+| y | [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md) | Yes | Y value |
+| z | [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md) | Yes | Z value |
+| w | [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md) | Yes | W value |
 
 ## vertexAttribI4uiv
 
@@ -2533,7 +2533,7 @@ Sets vertex attrib I4uiv value
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | webgl.GLuint | Yes | Vertex attribute index |
+| index | [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md) | Yes | Vertex attribute index |
 | values | [Uint32List](arkts-arkgraphics2d-uint32list-t.md) | Yes | Values |
 
 ## vertexAttribIPointer
@@ -2560,11 +2560,11 @@ Sets vertex attrib integer pointer
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | webgl.GLuint | Yes | Vertex attribute index |
-| size | webgl.GLint | Yes | Size |
-| type | webgl.GLenum | Yes | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| stride | webgl.GLsizei | Yes | Stride |
-| offset | webgl.GLintptr | Yes | Offset |
+| index | [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md) | Yes | Vertex attribute index |
+| size | [webgl.GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Size |
+| type | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| stride | [webgl.GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Stride |
+| offset | [webgl.GLintptr](arkts-arkgraphics2d-glintptr-t.md) | Yes | Offset |
 
 ## waitSync
 
@@ -2585,7 +2585,7 @@ Waits for sync object
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | sync | [WebGLSync](arkts-arkgraphics2d-webgl2-webglsync-i.md) | Yes | Sync object |
-| flags | webgl.GLbitfield | Yes | Flags |
+| flags | [webgl.GLbitfield](arkts-arkgraphics2d-glbitfield-t.md) | Yes | Flags |
 | timeout | [GLint64](arkts-arkgraphics2d-glint64-t.md) | Yes | Timeout |
 
 ## ACTIVE_UNIFORM_BLOCKS
@@ -2596,7 +2596,7 @@ readonly ACTIVE_UNIFORM_BLOCKS: webgl.GLenum
 
 Active Uniform Blocks
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -2612,7 +2612,7 @@ readonly ALREADY_SIGNALED: webgl.GLenum
 
 Already Signaled
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -2628,7 +2628,7 @@ readonly ANY_SAMPLES_PASSED: webgl.GLenum
 
 Any Samples Passed
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -2644,7 +2644,7 @@ readonly ANY_SAMPLES_PASSED_CONSERVATIVE: webgl.GLenum
 
 Any Samples Passed Conservative
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -2660,7 +2660,7 @@ readonly COLOR: webgl.GLenum
 
 Buffer: color
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -2676,7 +2676,7 @@ readonly COLOR_ATTACHMENT1: webgl.GLenum
 
 Color Attachment1
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -2692,7 +2692,7 @@ readonly COLOR_ATTACHMENT10: webgl.GLenum
 
 Color Attachment10
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -2708,7 +2708,7 @@ readonly COLOR_ATTACHMENT11: webgl.GLenum
 
 Color Attachment11
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -2724,7 +2724,7 @@ readonly COLOR_ATTACHMENT12: webgl.GLenum
 
 Color Attachment12
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -2740,7 +2740,7 @@ readonly COLOR_ATTACHMENT13: webgl.GLenum
 
 Color Attachment13
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -2756,7 +2756,7 @@ readonly COLOR_ATTACHMENT14: webgl.GLenum
 
 Color Attachment14
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -2772,7 +2772,7 @@ readonly COLOR_ATTACHMENT15: webgl.GLenum
 
 Color Attachment15
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -2788,7 +2788,7 @@ readonly COLOR_ATTACHMENT2: webgl.GLenum
 
 Color Attachment2
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -2804,7 +2804,7 @@ readonly COLOR_ATTACHMENT3: webgl.GLenum
 
 Color Attachment3
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -2820,7 +2820,7 @@ readonly COLOR_ATTACHMENT4: webgl.GLenum
 
 Color Attachment4
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -2836,7 +2836,7 @@ readonly COLOR_ATTACHMENT5: webgl.GLenum
 
 Color Attachment5
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -2852,7 +2852,7 @@ readonly COLOR_ATTACHMENT6: webgl.GLenum
 
 Color Attachment6
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -2868,7 +2868,7 @@ readonly COLOR_ATTACHMENT7: webgl.GLenum
 
 Color Attachment7
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -2884,7 +2884,7 @@ readonly COLOR_ATTACHMENT8: webgl.GLenum
 
 Color Attachment8
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -2900,7 +2900,7 @@ readonly COLOR_ATTACHMENT9: webgl.GLenum
 
 Color Attachment9
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -2916,7 +2916,7 @@ readonly COMPARE_REF_TO_TEXTURE: webgl.GLenum
 
 Compare Ref To Texture
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -2932,7 +2932,7 @@ readonly CONDITION_SATISFIED: webgl.GLenum
 
 Condition Satisfied
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -2948,7 +2948,7 @@ readonly COPY_READ_BUFFER: webgl.GLenum
 
 Copy Read Buffer
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -2964,7 +2964,7 @@ readonly COPY_READ_BUFFER_BINDING: webgl.GLenum
 
 Copy Read Buffer Binding
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -2980,7 +2980,7 @@ readonly COPY_WRITE_BUFFER: webgl.GLenum
 
 Copy Write Buffer
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -2996,7 +2996,7 @@ readonly COPY_WRITE_BUFFER_BINDING: webgl.GLenum
 
 Copy Write Buffer Binding
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -3012,7 +3012,7 @@ readonly CURRENT_QUERY: webgl.GLenum
 
 Current query
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -3028,7 +3028,7 @@ readonly DEPTH: webgl.GLenum
 
 Buffer: depth
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -3044,7 +3044,7 @@ readonly DEPTH24_STENCIL8: webgl.GLenum
 
 Depth24 Stencil8
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -3060,7 +3060,7 @@ readonly DEPTH32F_STENCIL8: webgl.GLenum
 
 Depth32F Stencil8
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -3076,7 +3076,7 @@ readonly DEPTH_COMPONENT24: webgl.GLenum
 
 Internal format: depth component24
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -3092,7 +3092,7 @@ readonly DEPTH_COMPONENT32F: webgl.GLenum
 
 Depth Component32F
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -3108,7 +3108,7 @@ readonly DRAW_BUFFER0: webgl.GLenum
 
 Draw buffer 0
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -3124,7 +3124,7 @@ readonly DRAW_BUFFER1: webgl.GLenum
 
 Draw buffer 1
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -3140,7 +3140,7 @@ readonly DRAW_BUFFER10: webgl.GLenum
 
 Draw Buffer10
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -3156,7 +3156,7 @@ readonly DRAW_BUFFER11: webgl.GLenum
 
 Draw Buffer11
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -3172,7 +3172,7 @@ readonly DRAW_BUFFER12: webgl.GLenum
 
 Draw Buffer12
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -3188,7 +3188,7 @@ readonly DRAW_BUFFER13: webgl.GLenum
 
 Draw Buffer13
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -3204,7 +3204,7 @@ readonly DRAW_BUFFER14: webgl.GLenum
 
 Draw Buffer14
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -3220,7 +3220,7 @@ readonly DRAW_BUFFER15: webgl.GLenum
 
 Draw Buffer15
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -3236,7 +3236,7 @@ readonly DRAW_BUFFER2: webgl.GLenum
 
 Draw buffer 2
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -3252,7 +3252,7 @@ readonly DRAW_BUFFER3: webgl.GLenum
 
 Draw buffer 3
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -3268,7 +3268,7 @@ readonly DRAW_BUFFER4: webgl.GLenum
 
 Draw buffer 4
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -3284,7 +3284,7 @@ readonly DRAW_BUFFER5: webgl.GLenum
 
 Draw Buffer5
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -3300,7 +3300,7 @@ readonly DRAW_BUFFER6: webgl.GLenum
 
 Draw Buffer6
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -3316,7 +3316,7 @@ readonly DRAW_BUFFER7: webgl.GLenum
 
 Draw Buffer7
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -3332,7 +3332,7 @@ readonly DRAW_BUFFER8: webgl.GLenum
 
 Draw Buffer8
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -3348,7 +3348,7 @@ readonly DRAW_BUFFER9: webgl.GLenum
 
 Draw Buffer9
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -3364,7 +3364,7 @@ readonly DRAW_FRAMEBUFFER: webgl.GLenum
 
 Draw Framebuffer
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -3380,7 +3380,7 @@ readonly DRAW_FRAMEBUFFER_BINDING: webgl.GLenum
 
 Draw Framebuffer Binding
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -3396,7 +3396,7 @@ readonly DYNAMIC_COPY: webgl.GLenum
 
 Buffer usage: dynamic copy
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -3412,7 +3412,7 @@ readonly DYNAMIC_READ: webgl.GLenum
 
 Buffer usage: dynamic read
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -3428,7 +3428,7 @@ readonly FLOAT_32_UNSIGNED_INT_24_8_REV: webgl.GLenum
 
 Float 32 Unsigned Int 24 8 Rev
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -3444,7 +3444,7 @@ readonly FLOAT_MAT2x3: webgl.GLenum
 
 Float Mat2X3
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -3460,7 +3460,7 @@ readonly FLOAT_MAT2x4: webgl.GLenum
 
 Float Mat2X4
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -3476,7 +3476,7 @@ readonly FLOAT_MAT3x2: webgl.GLenum
 
 Float Mat3X2
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -3492,7 +3492,7 @@ readonly FLOAT_MAT3x4: webgl.GLenum
 
 Float Mat3X4
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -3508,7 +3508,7 @@ readonly FLOAT_MAT4x2: webgl.GLenum
 
 Float Mat4X2
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -3524,7 +3524,7 @@ readonly FLOAT_MAT4x3: webgl.GLenum
 
 Float Mat4X3
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -3540,7 +3540,7 @@ readonly FRAGMENT_SHADER_DERIVATIVE_HINT: webgl.GLenum
 
 Fragment Shader Derivative Hint
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -3556,7 +3556,7 @@ readonly FRAMEBUFFER_ATTACHMENT_ALPHA_SIZE: webgl.GLenum
 
 Framebuffer Attachment Alpha Size
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -3572,7 +3572,7 @@ readonly FRAMEBUFFER_ATTACHMENT_BLUE_SIZE: webgl.GLenum
 
 Framebuffer Attachment Blue Size
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -3588,7 +3588,7 @@ readonly FRAMEBUFFER_ATTACHMENT_COLOR_ENCODING: webgl.GLenum
 
 Framebuffer Attachment Color Encoding
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -3604,7 +3604,7 @@ readonly FRAMEBUFFER_ATTACHMENT_COMPONENT_TYPE: webgl.GLenum
 
 Framebuffer Attachment Component Type
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -3620,7 +3620,7 @@ readonly FRAMEBUFFER_ATTACHMENT_DEPTH_SIZE: webgl.GLenum
 
 Framebuffer Attachment Depth Size
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -3636,7 +3636,7 @@ readonly FRAMEBUFFER_ATTACHMENT_GREEN_SIZE: webgl.GLenum
 
 Framebuffer Attachment Green Size
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -3652,7 +3652,7 @@ readonly FRAMEBUFFER_ATTACHMENT_RED_SIZE: webgl.GLenum
 
 Framebuffer Attachment Red Size
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -3668,7 +3668,7 @@ readonly FRAMEBUFFER_ATTACHMENT_STENCIL_SIZE: webgl.GLenum
 
 Framebuffer Attachment Stencil Size
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -3684,7 +3684,7 @@ readonly FRAMEBUFFER_ATTACHMENT_TEXTURE_LAYER: webgl.GLenum
 
 Framebuffer Attachment Texture Layer
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -3700,7 +3700,7 @@ readonly FRAMEBUFFER_DEFAULT: webgl.GLenum
 
 Framebuffer Default
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -3716,7 +3716,7 @@ readonly FRAMEBUFFER_INCOMPLETE_MULTISAMPLE: webgl.GLenum
 
 Framebuffer Incomplete Multisample
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -3732,7 +3732,7 @@ readonly HALF_FLOAT: webgl.GLenum
 
 Half Float
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -3748,7 +3748,7 @@ readonly INT_2_10_10_10_REV: webgl.GLenum
 
 Data type: INT 2_10_10_10_REV
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -3764,7 +3764,7 @@ readonly INT_SAMPLER_2D: webgl.GLenum
 
 Int Sampler 2D
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -3780,7 +3780,7 @@ readonly INT_SAMPLER_2D_ARRAY: webgl.GLenum
 
 Int Sampler 2D Array
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -3796,7 +3796,7 @@ readonly INT_SAMPLER_3D: webgl.GLenum
 
 Int Sampler 3D
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -3812,7 +3812,7 @@ readonly INT_SAMPLER_CUBE: webgl.GLenum
 
 Int Sampler Cube
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -3828,7 +3828,7 @@ readonly INTERLEAVED_ATTRIBS: webgl.GLenum
 
 Interleaved Attribs
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -3844,7 +3844,7 @@ readonly INVALID_INDEX: webgl.GLenum
 
 Invalid Index
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -3860,7 +3860,7 @@ readonly MAX: webgl.GLenum
 
 Max value
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -3876,7 +3876,7 @@ readonly MAX_3D_TEXTURE_SIZE: webgl.GLenum
 
 Max 3D texture size
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -3892,7 +3892,7 @@ readonly MAX_ARRAY_TEXTURE_LAYERS: webgl.GLenum
 
 Max Array Texture Layers
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -3908,7 +3908,7 @@ readonly MAX_CLIENT_WAIT_TIMEOUT_WEBGL: webgl.GLenum
 
 Max client wait timeout WebGL
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -3924,7 +3924,7 @@ readonly MAX_COLOR_ATTACHMENTS: webgl.GLenum
 
 Max Color Attachments
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -3940,7 +3940,7 @@ readonly MAX_COMBINED_FRAGMENT_UNIFORM_COMPONENTS: webgl.GLenum
 
 Max Combined Fragment Uniform Components
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -3956,7 +3956,7 @@ readonly MAX_COMBINED_UNIFORM_BLOCKS: webgl.GLenum
 
 Max Combined Uniform Blocks
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -3972,7 +3972,7 @@ readonly MAX_COMBINED_VERTEX_UNIFORM_COMPONENTS: webgl.GLenum
 
 Max Combined Vertex Uniform Components
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -3988,7 +3988,7 @@ readonly MAX_DRAW_BUFFERS: webgl.GLenum
 
 Max draw buffers
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -4004,7 +4004,7 @@ readonly MAX_ELEMENT_INDEX: webgl.GLenum
 
 Max element index
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -4020,7 +4020,7 @@ readonly MAX_ELEMENTS_INDICES: webgl.GLenum
 
 Max elements indices
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -4036,7 +4036,7 @@ readonly MAX_ELEMENTS_VERTICES: webgl.GLenum
 
 Max elements vertices
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -4052,7 +4052,7 @@ readonly MAX_FRAGMENT_INPUT_COMPONENTS: webgl.GLenum
 
 Max Fragment Input Components
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -4068,7 +4068,7 @@ readonly MAX_FRAGMENT_UNIFORM_BLOCKS: webgl.GLenum
 
 Max Fragment Uniform Blocks
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -4084,7 +4084,7 @@ readonly MAX_FRAGMENT_UNIFORM_COMPONENTS: webgl.GLenum
 
 Max Fragment Uniform Components
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -4100,7 +4100,7 @@ readonly MAX_PROGRAM_TEXEL_OFFSET: webgl.GLenum
 
 Max Program Texel Offset
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -4116,7 +4116,7 @@ readonly MAX_SAMPLES: webgl.GLenum
 
 Max Samples
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -4132,7 +4132,7 @@ readonly MAX_SERVER_WAIT_TIMEOUT: webgl.GLenum
 
 Max Server Wait Timeout
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -4148,7 +4148,7 @@ readonly MAX_TEXTURE_LOD_BIAS: webgl.GLenum
 
 Max texture LOD bias
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -4164,7 +4164,7 @@ readonly MAX_TRANSFORM_FEEDBACK_INTERLEAVED_COMPONENTS: webgl.GLenum
 
 Max Transform Feedback Interleaved Components
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -4180,7 +4180,7 @@ readonly MAX_TRANSFORM_FEEDBACK_SEPARATE_ATTRIBS: webgl.GLenum
 
 Max Transform Feedback Separate Attribs
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -4196,7 +4196,7 @@ readonly MAX_TRANSFORM_FEEDBACK_SEPARATE_COMPONENTS: webgl.GLenum
 
 Max Transform Feedback Separate Components
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -4212,7 +4212,7 @@ readonly MAX_UNIFORM_BLOCK_SIZE: webgl.GLenum
 
 Max Uniform Block Size
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -4228,7 +4228,7 @@ readonly MAX_UNIFORM_BUFFER_BINDINGS: webgl.GLenum
 
 Max Uniform Buffer Bindings
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -4244,7 +4244,7 @@ readonly MAX_VARYING_COMPONENTS: webgl.GLenum
 
 Max Varying Components
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -4260,7 +4260,7 @@ readonly MAX_VERTEX_OUTPUT_COMPONENTS: webgl.GLenum
 
 Max Vertex Output Components
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -4276,7 +4276,7 @@ readonly MAX_VERTEX_UNIFORM_BLOCKS: webgl.GLenum
 
 Max Vertex Uniform Blocks
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -4292,7 +4292,7 @@ readonly MAX_VERTEX_UNIFORM_COMPONENTS: webgl.GLenum
 
 Max Vertex Uniform Components
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -4308,7 +4308,7 @@ readonly MIN: webgl.GLenum
 
 Min value
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -4324,7 +4324,7 @@ readonly MIN_PROGRAM_TEXEL_OFFSET: webgl.GLenum
 
 Min Program Texel Offset
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -4340,7 +4340,7 @@ readonly OBJECT_TYPE: webgl.GLenum
 
 Object Type
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -4356,7 +4356,7 @@ readonly PACK_ROW_LENGTH: webgl.GLenum
 
 Pack row length
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -4372,7 +4372,7 @@ readonly PACK_SKIP_PIXELS: webgl.GLenum
 
 Pack skip pixels
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -4388,7 +4388,7 @@ readonly PACK_SKIP_ROWS: webgl.GLenum
 
 Pack skip rows
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -4404,7 +4404,7 @@ readonly PIXEL_PACK_BUFFER: webgl.GLenum
 
 Pixel Pack Buffer
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -4420,7 +4420,7 @@ readonly PIXEL_PACK_BUFFER_BINDING: webgl.GLenum
 
 Pixel Pack Buffer Binding
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -4436,7 +4436,7 @@ readonly PIXEL_UNPACK_BUFFER: webgl.GLenum
 
 Pixel Unpack Buffer
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -4452,7 +4452,7 @@ readonly PIXEL_UNPACK_BUFFER_BINDING: webgl.GLenum
 
 Pixel Unpack Buffer Binding
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -4468,7 +4468,7 @@ readonly QUERY_RESULT: webgl.GLenum
 
 Query result
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -4484,7 +4484,7 @@ readonly QUERY_RESULT_AVAILABLE: webgl.GLenum
 
 Query result available
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -4500,7 +4500,7 @@ readonly R11F_G11F_B10F: webgl.GLenum
 
 R11F G11F B10F
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -4516,7 +4516,7 @@ readonly R16F: webgl.GLenum
 
 R16F
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -4532,7 +4532,7 @@ readonly R16I: webgl.GLenum
 
 R16I
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -4548,7 +4548,7 @@ readonly R16UI: webgl.GLenum
 
 R16Ui
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -4564,7 +4564,7 @@ readonly R32F: webgl.GLenum
 
 R32F
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -4580,7 +4580,7 @@ readonly R32I: webgl.GLenum
 
 R32I
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -4596,7 +4596,7 @@ readonly R32UI: webgl.GLenum
 
 R32Ui
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -4612,7 +4612,7 @@ readonly R8: webgl.GLenum
 
 R8
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -4628,7 +4628,7 @@ readonly R8_SNORM: webgl.GLenum
 
 R8 Snorm
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -4644,7 +4644,7 @@ readonly R8I: webgl.GLenum
 
 R8I
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -4660,7 +4660,7 @@ readonly R8UI: webgl.GLenum
 
 R8Ui
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -4676,7 +4676,7 @@ readonly RASTERIZER_DISCARD: webgl.GLenum
 
 Rasterizer Discard
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -4692,7 +4692,7 @@ readonly READ_BUFFER: webgl.GLenum
 
 Read buffer
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -4708,7 +4708,7 @@ readonly READ_FRAMEBUFFER: webgl.GLenum
 
 Read Framebuffer
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -4724,7 +4724,7 @@ readonly READ_FRAMEBUFFER_BINDING: webgl.GLenum
 
 Read Framebuffer Binding
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -4740,7 +4740,7 @@ readonly RED: webgl.GLenum
 
 Pixel format: red
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -4756,7 +4756,7 @@ readonly RED_INTEGER: webgl.GLenum
 
 Red Integer
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -4772,7 +4772,7 @@ readonly RENDERBUFFER_SAMPLES: webgl.GLenum
 
 Renderbuffer Samples
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -4788,7 +4788,7 @@ readonly RG: webgl.GLenum
 
 Rg
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -4804,7 +4804,7 @@ readonly RG16F: webgl.GLenum
 
 Rg16F
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -4820,7 +4820,7 @@ readonly RG16I: webgl.GLenum
 
 Rg16I
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -4836,7 +4836,7 @@ readonly RG16UI: webgl.GLenum
 
 Rg16Ui
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -4852,7 +4852,7 @@ readonly RG32F: webgl.GLenum
 
 Rg32F
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -4868,7 +4868,7 @@ readonly RG32I: webgl.GLenum
 
 Rg32I
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -4884,7 +4884,7 @@ readonly RG32UI: webgl.GLenum
 
 Rg32Ui
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -4900,7 +4900,7 @@ readonly RG8: webgl.GLenum
 
 Rg8
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -4916,7 +4916,7 @@ readonly RG8_SNORM: webgl.GLenum
 
 Rg8 Snorm
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -4932,7 +4932,7 @@ readonly RG8I: webgl.GLenum
 
 Rg8I
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -4948,7 +4948,7 @@ readonly RG8UI: webgl.GLenum
 
 Rg8Ui
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -4964,7 +4964,7 @@ readonly RG_INTEGER: webgl.GLenum
 
 Rg Integer
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -4980,7 +4980,7 @@ readonly RGB10_A2: webgl.GLenum
 
 Internal format: RGB10_A2
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -4996,7 +4996,7 @@ readonly RGB10_A2UI: webgl.GLenum
 
 Internal format: RGB10_A2UI
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -5012,7 +5012,7 @@ readonly RGB16F: webgl.GLenum
 
 Rgb16F
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -5028,7 +5028,7 @@ readonly RGB16I: webgl.GLenum
 
 Rgb16I
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -5044,7 +5044,7 @@ readonly RGB16UI: webgl.GLenum
 
 Rgb16Ui
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -5060,7 +5060,7 @@ readonly RGB32F: webgl.GLenum
 
 Rgb32F
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -5076,7 +5076,7 @@ readonly RGB32I: webgl.GLenum
 
 Rgb32I
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -5092,7 +5092,7 @@ readonly RGB32UI: webgl.GLenum
 
 Rgb32Ui
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -5108,7 +5108,7 @@ readonly RGB8: webgl.GLenum
 
 Internal format: RGB8
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -5124,7 +5124,7 @@ readonly RGB8_SNORM: webgl.GLenum
 
 Rgb8 Snorm
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -5140,7 +5140,7 @@ readonly RGB8I: webgl.GLenum
 
 Rgb8I
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -5156,7 +5156,7 @@ readonly RGB8UI: webgl.GLenum
 
 Rgb8Ui
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -5172,7 +5172,7 @@ readonly RGB9_E5: webgl.GLenum
 
 Rgb9 E5
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -5188,7 +5188,7 @@ readonly RGB_INTEGER: webgl.GLenum
 
 Rgb Integer
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -5204,7 +5204,7 @@ readonly RGBA16F: webgl.GLenum
 
 Rgba16F
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -5220,7 +5220,7 @@ readonly RGBA16I: webgl.GLenum
 
 Rgba16I
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -5236,7 +5236,7 @@ readonly RGBA16UI: webgl.GLenum
 
 Rgba16Ui
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -5252,7 +5252,7 @@ readonly RGBA32F: webgl.GLenum
 
 Rgba32F
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -5268,7 +5268,7 @@ readonly RGBA32I: webgl.GLenum
 
 Rgba32I
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -5284,7 +5284,7 @@ readonly RGBA32UI: webgl.GLenum
 
 Rgba32Ui
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -5300,7 +5300,7 @@ readonly RGBA8: webgl.GLenum
 
 Internal format: RGBA8
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -5316,7 +5316,7 @@ readonly RGBA8_SNORM: webgl.GLenum
 
 Rgba8 Snorm
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -5332,7 +5332,7 @@ readonly RGBA8I: webgl.GLenum
 
 Rgba8I
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -5348,7 +5348,7 @@ readonly RGBA8UI: webgl.GLenum
 
 Rgba8Ui
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -5364,7 +5364,7 @@ readonly RGBA_INTEGER: webgl.GLenum
 
 Rgba Integer
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -5380,7 +5380,7 @@ readonly SAMPLER_2D_ARRAY: webgl.GLenum
 
 Sampler 2D Array
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -5396,7 +5396,7 @@ readonly SAMPLER_2D_ARRAY_SHADOW: webgl.GLenum
 
 Sampler 2D Array Shadow
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -5412,7 +5412,7 @@ readonly SAMPLER_2D_SHADOW: webgl.GLenum
 
 Sampler 2D Shadow
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -5428,7 +5428,7 @@ readonly SAMPLER_3D: webgl.GLenum
 
 Sampler 3D
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -5444,7 +5444,7 @@ readonly SAMPLER_BINDING: webgl.GLenum
 
 Sampler Binding
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -5460,7 +5460,7 @@ readonly SAMPLER_CUBE_SHADOW: webgl.GLenum
 
 Sampler Cube Shadow
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -5476,7 +5476,7 @@ readonly SEPARATE_ATTRIBS: webgl.GLenum
 
 Separate Attribs
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -5492,7 +5492,7 @@ readonly SIGNALED: webgl.GLenum
 
 Signaled
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -5508,7 +5508,7 @@ readonly SIGNED_NORMALIZED: webgl.GLenum
 
 Signed Normalized
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -5524,7 +5524,7 @@ readonly SRGB: webgl.GLenum
 
 Srgb
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -5540,7 +5540,7 @@ readonly SRGB8: webgl.GLenum
 
 Srgb8
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -5556,7 +5556,7 @@ readonly SRGB8_ALPHA8: webgl.GLenum
 
 Srgb8 Alpha8
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -5572,7 +5572,7 @@ readonly STATIC_COPY: webgl.GLenum
 
 Buffer usage: static copy
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -5588,7 +5588,7 @@ readonly STATIC_READ: webgl.GLenum
 
 Buffer usage: static read
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -5604,7 +5604,7 @@ readonly STENCIL: webgl.GLenum
 
 Buffer: stencil
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -5620,7 +5620,7 @@ readonly STREAM_COPY: webgl.GLenum
 
 Buffer usage: stream copy
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -5636,7 +5636,7 @@ readonly STREAM_READ: webgl.GLenum
 
 Buffer usage: stream read
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -5652,7 +5652,7 @@ readonly SYNC_CONDITION: webgl.GLenum
 
 Sync Condition
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -5668,7 +5668,7 @@ readonly SYNC_FENCE: webgl.GLenum
 
 Sync Fence
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -5684,7 +5684,7 @@ readonly SYNC_FLAGS: webgl.GLenum
 
 Sync Flags
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -5700,7 +5700,7 @@ readonly SYNC_FLUSH_COMMANDS_BIT: webgl.GLenum
 
 Sync Flush Commands Bit
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -5716,7 +5716,7 @@ readonly SYNC_GPU_COMMANDS_COMPLETE: webgl.GLenum
 
 Sync Gpu Commands Complete
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -5732,7 +5732,7 @@ readonly SYNC_STATUS: webgl.GLenum
 
 Sync Status
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -5748,7 +5748,7 @@ readonly TEXTURE_2D_ARRAY: webgl.GLenum
 
 Texture 2D Array
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -5764,7 +5764,7 @@ readonly TEXTURE_3D: webgl.GLenum
 
 Texture target: 3D
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -5780,7 +5780,7 @@ readonly TEXTURE_BASE_LEVEL: webgl.GLenum
 
 Texture base level
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -5796,7 +5796,7 @@ readonly TEXTURE_BINDING_2D_ARRAY: webgl.GLenum
 
 Texture Binding 2D Array
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -5812,7 +5812,7 @@ readonly TEXTURE_BINDING_3D: webgl.GLenum
 
 Texture binding 3D
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -5828,7 +5828,7 @@ readonly TEXTURE_COMPARE_FUNC: webgl.GLenum
 
 Texture compare function
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -5844,7 +5844,7 @@ readonly TEXTURE_COMPARE_MODE: webgl.GLenum
 
 Texture compare mode
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -5860,7 +5860,7 @@ readonly TEXTURE_IMMUTABLE_FORMAT: webgl.GLenum
 
 Texture immutable format
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -5876,7 +5876,7 @@ readonly TEXTURE_IMMUTABLE_LEVELS: webgl.GLenum
 
 Texture immutable levels
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -5892,7 +5892,7 @@ readonly TEXTURE_MAX_LEVEL: webgl.GLenum
 
 Texture max level
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -5908,7 +5908,7 @@ readonly TEXTURE_MAX_LOD: webgl.GLenum
 
 Texture max LOD
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -5924,7 +5924,7 @@ readonly TEXTURE_MIN_LOD: webgl.GLenum
 
 Texture min LOD
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -5940,7 +5940,7 @@ readonly TEXTURE_WRAP_R: webgl.GLenum
 
 Texture wrap: R
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -5956,7 +5956,7 @@ readonly TIMEOUT_EXPIRED: webgl.GLenum
 
 Timeout Expired
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -5988,7 +5988,7 @@ readonly TRANSFORM_FEEDBACK: webgl.GLenum
 
 Transform feedback target
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -6004,7 +6004,7 @@ readonly TRANSFORM_FEEDBACK_ACTIVE: webgl.GLenum
 
 Transform feedback active
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -6020,7 +6020,7 @@ readonly TRANSFORM_FEEDBACK_BINDING: webgl.GLenum
 
 Transform feedback binding
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -6036,7 +6036,7 @@ readonly TRANSFORM_FEEDBACK_BUFFER: webgl.GLenum
 
 Transform Feedback Buffer
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -6052,7 +6052,7 @@ readonly TRANSFORM_FEEDBACK_BUFFER_BINDING: webgl.GLenum
 
 Transform Feedback Buffer Binding
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -6068,7 +6068,7 @@ readonly TRANSFORM_FEEDBACK_BUFFER_MODE: webgl.GLenum
 
 Transform Feedback Buffer Mode
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -6084,7 +6084,7 @@ readonly TRANSFORM_FEEDBACK_BUFFER_SIZE: webgl.GLenum
 
 Transform Feedback Buffer Size
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -6100,7 +6100,7 @@ readonly TRANSFORM_FEEDBACK_BUFFER_START: webgl.GLenum
 
 Transform Feedback Buffer Start
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -6116,7 +6116,7 @@ readonly TRANSFORM_FEEDBACK_PAUSED: webgl.GLenum
 
 Transform feedback paused
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -6132,7 +6132,7 @@ readonly TRANSFORM_FEEDBACK_PRIMITIVES_WRITTEN: webgl.GLenum
 
 Transform Feedback Primitives Written
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -6148,7 +6148,7 @@ readonly TRANSFORM_FEEDBACK_VARYINGS: webgl.GLenum
 
 Transform Feedback Varyings
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -6164,7 +6164,7 @@ readonly UNIFORM_ARRAY_STRIDE: webgl.GLenum
 
 Uniform Array Stride
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -6180,7 +6180,7 @@ readonly UNIFORM_BLOCK_ACTIVE_UNIFORM_INDICES: webgl.GLenum
 
 Uniform Block Active Uniform Indices
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -6196,7 +6196,7 @@ readonly UNIFORM_BLOCK_ACTIVE_UNIFORMS: webgl.GLenum
 
 Uniform Block Active Uniforms
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -6212,7 +6212,7 @@ readonly UNIFORM_BLOCK_BINDING: webgl.GLenum
 
 Uniform Block Binding
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -6228,7 +6228,7 @@ readonly UNIFORM_BLOCK_DATA_SIZE: webgl.GLenum
 
 Uniform Block Data Size
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -6244,7 +6244,7 @@ readonly UNIFORM_BLOCK_INDEX: webgl.GLenum
 
 Uniform Block Index
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -6260,7 +6260,7 @@ readonly UNIFORM_BLOCK_REFERENCED_BY_FRAGMENT_SHADER: webgl.GLenum
 
 Uniform Block Referenced By Fragment Shader
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -6276,7 +6276,7 @@ readonly UNIFORM_BLOCK_REFERENCED_BY_VERTEX_SHADER: webgl.GLenum
 
 Uniform Block Referenced By Vertex Shader
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -6292,7 +6292,7 @@ readonly UNIFORM_BUFFER: webgl.GLenum
 
 Uniform Buffer
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -6308,7 +6308,7 @@ readonly UNIFORM_BUFFER_BINDING: webgl.GLenum
 
 Uniform Buffer Binding
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -6324,7 +6324,7 @@ readonly UNIFORM_BUFFER_OFFSET_ALIGNMENT: webgl.GLenum
 
 Uniform Buffer Offset Alignment
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -6340,7 +6340,7 @@ readonly UNIFORM_BUFFER_SIZE: webgl.GLenum
 
 Uniform Buffer Size
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -6356,7 +6356,7 @@ readonly UNIFORM_BUFFER_START: webgl.GLenum
 
 Uniform Buffer Start
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -6372,7 +6372,7 @@ readonly UNIFORM_IS_ROW_MAJOR: webgl.GLenum
 
 Uniform Is Row Major
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -6388,7 +6388,7 @@ readonly UNIFORM_MATRIX_STRIDE: webgl.GLenum
 
 Uniform Matrix Stride
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -6404,7 +6404,7 @@ readonly UNIFORM_OFFSET: webgl.GLenum
 
 Uniform Offset
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -6420,7 +6420,7 @@ readonly UNIFORM_SIZE: webgl.GLenum
 
 Uniform Size
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -6436,7 +6436,7 @@ readonly UNIFORM_TYPE: webgl.GLenum
 
 Uniform Type
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -6452,7 +6452,7 @@ readonly UNPACK_IMAGE_HEIGHT: webgl.GLenum
 
 Unpack image height
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -6468,7 +6468,7 @@ readonly UNPACK_ROW_LENGTH: webgl.GLenum
 
 Unpack row length
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -6484,7 +6484,7 @@ readonly UNPACK_SKIP_IMAGES: webgl.GLenum
 
 Unpack skip images
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -6500,7 +6500,7 @@ readonly UNPACK_SKIP_PIXELS: webgl.GLenum
 
 Unpack skip pixels
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -6516,7 +6516,7 @@ readonly UNPACK_SKIP_ROWS: webgl.GLenum
 
 Unpack skip rows
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -6532,7 +6532,7 @@ readonly UNSIGNALED: webgl.GLenum
 
 Unsignaled
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -6548,7 +6548,7 @@ readonly UNSIGNED_INT_10F_11F_11F_REV: webgl.GLenum
 
 Unsigned Int 10F 11F 11F Rev
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -6564,7 +6564,7 @@ readonly UNSIGNED_INT_24_8: webgl.GLenum
 
 Unsigned Int 24 8
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -6580,7 +6580,7 @@ readonly UNSIGNED_INT_2_10_10_10_REV: webgl.GLenum
 
 Data type: unsigned number 2_10_10_10 rev
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -6596,7 +6596,7 @@ readonly UNSIGNED_INT_5_9_9_9_REV: webgl.GLenum
 
 Unsigned Int 5 9 9 9 Rev
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -6612,7 +6612,7 @@ readonly UNSIGNED_INT_SAMPLER_2D: webgl.GLenum
 
 Unsigned Int Sampler 2D
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -6628,7 +6628,7 @@ readonly UNSIGNED_INT_SAMPLER_2D_ARRAY: webgl.GLenum
 
 Unsigned Int Sampler 2D Array
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -6644,7 +6644,7 @@ readonly UNSIGNED_INT_SAMPLER_3D: webgl.GLenum
 
 Unsigned Int Sampler 3D
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -6660,7 +6660,7 @@ readonly UNSIGNED_INT_SAMPLER_CUBE: webgl.GLenum
 
 Unsigned Int Sampler Cube
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -6676,7 +6676,7 @@ readonly UNSIGNED_INT_VEC2: webgl.GLenum
 
 Unsigned Int Vec2
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -6692,7 +6692,7 @@ readonly UNSIGNED_INT_VEC3: webgl.GLenum
 
 Unsigned Int Vec3
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -6708,7 +6708,7 @@ readonly UNSIGNED_INT_VEC4: webgl.GLenum
 
 Unsigned Int Vec4
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -6724,7 +6724,7 @@ readonly UNSIGNED_NORMALIZED: webgl.GLenum
 
 Unsigned Normalized
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -6740,7 +6740,7 @@ readonly VERTEX_ARRAY_BINDING: webgl.GLenum
 
 Vertex Array Binding
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -6756,7 +6756,7 @@ readonly VERTEX_ATTRIB_ARRAY_DIVISOR: webgl.GLenum
 
 Vertex Attrib Array Divisor
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -6772,7 +6772,7 @@ readonly VERTEX_ATTRIB_ARRAY_INTEGER: webgl.GLenum
 
 Vertex Attrib Array Integer
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 
@@ -6788,7 +6788,7 @@ readonly WAIT_FAILED: webgl.GLenum
 
 Wait Failed
 
-**Type:** webgl.GLenum
+**Type:** [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)
 
 **Since:** 7
 

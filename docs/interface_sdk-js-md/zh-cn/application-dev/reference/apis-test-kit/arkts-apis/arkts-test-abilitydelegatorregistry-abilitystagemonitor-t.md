@@ -12,4 +12,4 @@ AbilityStageMonitor模块。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
-**属性类型：** _AbilityStageMonitor
+**类型：** _AbilityStageMonitor

@@ -10,4 +10,4 @@ Describes the notification template.
 
 **System capability:** SystemCapability.Notification.Notification
 
-**Property type:** _NotificationTemplate
+**Type:** _NotificationTemplate

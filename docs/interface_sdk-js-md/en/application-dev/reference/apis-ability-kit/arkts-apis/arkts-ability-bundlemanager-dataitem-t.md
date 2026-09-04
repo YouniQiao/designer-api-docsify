@@ -12,4 +12,4 @@ Defines the user-defined data in the routing table configuration of the module.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
-**Property type:** _HapModuleInfo.DataItem
+**Type:** [_HapModuleInfo.DataItem](arkts-ability-hapmoduleinfo-dataitem-i.md)

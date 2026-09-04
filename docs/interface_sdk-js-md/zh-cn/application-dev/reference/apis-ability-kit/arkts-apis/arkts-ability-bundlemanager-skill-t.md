@@ -12,4 +12,4 @@ skill信息。
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
-**属性类型：** _Skill.Skill
+**类型：** [_Skill.Skill](arkts-ability-skill-i.md)

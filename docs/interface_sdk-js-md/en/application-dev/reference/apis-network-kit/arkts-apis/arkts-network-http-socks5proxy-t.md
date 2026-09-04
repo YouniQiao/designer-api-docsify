@@ -12,4 +12,4 @@ Socks5 Proxy Configuration Information.
 
 **System capability:** SystemCapability.Communication.NetStack
 
-**Property type:** connection.Socks5Proxy
+**Type:** [connection.Socks5Proxy](arkts-network-connection-socks5proxy-i.md)

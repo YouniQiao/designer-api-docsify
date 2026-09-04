@@ -12,4 +12,4 @@ Defines a ProcessInfo object.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
-**Property type:** _ProcessInfo
+**Type:** _ProcessInfo

@@ -10,4 +10,4 @@ export type NotificationBasicContent = _NotificationBasicContent
 
 **系统能力：** SystemCapability.Notification.Notification
 
-**属性类型：** _NotificationBasicContent
+**类型：** _NotificationBasicContent

@@ -12,4 +12,4 @@ Defines the level-2 module DataAbilityHelper.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
-**Property type:** _DataAbilityHelper
+**Type:** _DataAbilityHelper

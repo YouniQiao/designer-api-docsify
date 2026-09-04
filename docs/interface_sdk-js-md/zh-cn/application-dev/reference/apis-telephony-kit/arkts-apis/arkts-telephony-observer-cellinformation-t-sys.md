@@ -12,4 +12,4 @@ Describes current cell information.
 
 **系统接口：** 此接口为系统接口。
 
-**属性类型：** radio.CellInformation
+**类型：** [radio.CellInformation](arkts-telephony-radio-cellinformation-i.md)

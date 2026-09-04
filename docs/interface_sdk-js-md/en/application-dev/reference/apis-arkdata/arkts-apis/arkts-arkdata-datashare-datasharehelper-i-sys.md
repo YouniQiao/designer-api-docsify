@@ -357,7 +357,7 @@ In silent scenarios, the total size of the **uri** and **predicates** parameters
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uri | string | Yes | URI of the data to delete. |
-| predicates | dataSharePredicates.DataSharePredicates | Yes | Conditions for deleting data.The predicate methods supported by **delete()** vary depending on the database in use. For example, the KVDB supports only **inKeys**. If this parameter is left empty, the entire table will be deleted by default. |
+| predicates | [dataSharePredicates.DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | Yes | Conditions for deleting data.The predicate methods supported by **delete()** vary depending on the database in use. For example, the KVDB supports only **inKeys**. If this parameter is left empty, the entire table will be deleted by default. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the number of deleted data records. Otherwise, **err** is an error object.The number of deleted data records is not returned if the APIs of the database in use (for example, KVDB) do not support this return. |
 
 **Error codes:**
@@ -419,7 +419,7 @@ In silent scenarios, the total size of the **uri** and **predicates** parameters
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uri | string | Yes | URI of the data to delete. |
-| predicates | dataSharePredicates.DataSharePredicates | Yes | Conditions for deleting data.The predicate methods supported by **delete()** vary depending on the database in use. For example, the KVDB supports only **inKeys**. If this parameter is left empty, the entire table will be deleted by default. |
+| predicates | [dataSharePredicates.DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | Yes | Conditions for deleting data.The predicate methods supported by **delete()** vary depending on the database in use. For example, the KVDB supports only **inKeys**. If this parameter is left empty, the entire table will be deleted by default. |
 
 **Return value:**
 
@@ -1741,7 +1741,7 @@ When this API is used to query database data, if the query content exceeds the r
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uri | string | Yes | URI of the data to query. |
-| predicates | dataSharePredicates.DataSharePredicates | Yes | Conditions for querying data.The predicate methods supported by **query()** vary depending on the database used. For example, the KVDB supports only **inKeys** and **prefixKey**. If this parameter is left empty, the entire table will be queried by default. |
+| predicates | [dataSharePredicates.DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | Yes | Conditions for querying data.The predicate methods supported by **query()** vary depending on the database used. For example, the KVDB supports only **inKeys** and **prefixKey**. If this parameter is left empty, the entire table will be queried by default. |
 | columns | Array&lt;string&gt; | Yes | Column to query. If this parameter is left empty, all columns will be queried. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[DataShareResultSet](arkts-arkdata-data-datashareresultset-datashareresultset-i-sys.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the result set obtained. Otherwise, **err** is an error object. |
 
@@ -1811,7 +1811,7 @@ When this API is used to query database data, if the query content exceeds the r
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uri | string | Yes | URI of the data to query. |
-| predicates | dataSharePredicates.DataSharePredicates | Yes | Conditions for querying data.The predicate methods supported by **query()** vary depending on the database used. For example, the KVDB supports only **inKeys** and **prefixKey**. If this parameter is left empty, the entire table will be queried by default. |
+| predicates | [dataSharePredicates.DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | Yes | Conditions for querying data.The predicate methods supported by **query()** vary depending on the database used. For example, the KVDB supports only **inKeys** and **prefixKey**. If this parameter is left empty, the entire table will be queried by default. |
 | columns | Array&lt;string&gt; | Yes | Column to query. If this parameter is left empty, all columns will be queried. |
 
 **Return value:**
@@ -1883,7 +1883,7 @@ In silent scenarios, the total size of the **uri**, **predicates**, and **value*
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uri | string | Yes | URI of the data to update. |
-| predicates | dataSharePredicates.DataSharePredicates | Yes | Conditions for updating data.The predicate methods supported by **update()** vary depending on the database in use. For example, only the relational database (RDB) supports predicates. If this parameter is left empty, the entire table will be updated by default. |
+| predicates | [dataSharePredicates.DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | Yes | Conditions for updating data.The predicate methods supported by **update()** vary depending on the database in use. For example, only the relational database (RDB) supports predicates. If this parameter is left empty, the entire table will be updated by default. |
 | value | [ValuesBucket](arkts-arkdata-valuesbucket-t.md) | Yes | Value of the data to update. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the number of updated data records. Otherwise, **err** is an error object.The number of updated data records is not returned if the APIs of the database in use (for example, KVDB) do not support this return. |
 
@@ -1957,7 +1957,7 @@ In silent scenarios, the total size of the **uri**, **predicates**, and **value*
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uri | string | Yes | URI of the data to update. |
-| predicates | dataSharePredicates.DataSharePredicates | Yes | Conditions for updating data.The predicate methods supported by **update()** vary depending on the database in use. For example, only the relational database (RDB) supports predicates. If this parameter is left empty, the entire table will be updated by default. |
+| predicates | [dataSharePredicates.DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | Yes | Conditions for updating data.The predicate methods supported by **update()** vary depending on the database in use. For example, only the relational database (RDB) supports predicates. If this parameter is left empty, the entire table will be updated by default. |
 | value | [ValuesBucket](arkts-arkdata-valuesbucket-t.md) | Yes | Value of the data to update. |
 
 **Return value:**

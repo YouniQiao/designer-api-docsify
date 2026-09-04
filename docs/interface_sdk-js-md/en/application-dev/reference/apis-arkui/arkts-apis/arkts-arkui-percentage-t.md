@@ -16,4 +16,4 @@ Defines the length property with number in units of Percentage.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** `${number}%`
+**Type:** `${number}%`

@@ -94,7 +94,7 @@ Obtains the RAT used in the CS and PS domains for the SIM card in the specified 
 | Type | Description |
 | --- | --- |
 | Promise&lt;{psRadioTech: RadioTechnology, csRadioTech: RadioTechnology | > } Promise used to return the result. The CS domain refers to the Circuit Switched domain, and the PS domain refers to the Packet Switched domain.<br>**Applicable version:** 6 - 10 |
-| Promise&lt;[NetworkRadioTech](arkts-telephony-radio-networkradiotech-i.md)&gt; | Returns the RAT of PS domain and CS domain of registered network. The values of RAT are as follows: &lt;ul&gt; &lt;li&gt;{ |
+| Promise&lt;[NetworkRadioTech](arkts-telephony-radio-networkradiotech-i.md)&gt; | Returns the RAT of PS domain and CS domain of registered network. The values of RAT are as follows:&lt;ul&gt; &lt;li&gt;{ |
 
 **Error codes:**
 

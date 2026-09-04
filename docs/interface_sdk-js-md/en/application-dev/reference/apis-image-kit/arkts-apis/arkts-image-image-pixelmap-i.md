@@ -28,7 +28,7 @@ Performs color space conversion (CSC) on the image pixel color based on a given 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| targetColorSpace | colorSpaceManager.ColorSpaceManager | Yes | Target color space. SRGB, DCI_P3, DISPLAY_P3, and ADOBE_RGB_1998 are supported. |
+| targetColorSpace | [colorSpaceManager.ColorSpaceManager](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-colorspacemanager-colorspacemanager-i.md) | Yes | Target color space. SRGB, DCI_P3, DISPLAY_P3, and ADOBE_RGB_1998 are supported. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
@@ -75,7 +75,7 @@ Performs Color Space Converters (CSC) on the image pixel color based on a given 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| targetColorSpace | colorSpaceManager.ColorSpaceManager | Yes | Target color space. SRGB, DCI_P3, DISPLAY_P3, and ADOBE_RGB_1998 are supported. |
+| targetColorSpace | [colorSpaceManager.ColorSpaceManager](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-colorspacemanager-colorspacemanager-i.md) | Yes | Target color space. SRGB, DCI_P3, DISPLAY_P3, and ADOBE_RGB_1998 are supported. |
 
 **Return value:**
 
@@ -1592,7 +1592,7 @@ Obtains the color space of this image.
 
 | Type | Description |
 | --- | --- |
-| colorSpaceManager.ColorSpaceManager | Color space obtained. |
+| [colorSpaceManager.ColorSpaceManager](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-colorspacemanager-colorspacemanager-i.md) | Color space obtained. |
 
 **Error codes:**
 
@@ -1960,7 +1960,7 @@ Marshals this PixelMap object and writes it to a MessageSequence object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sequence | rpc.MessageSequence | Yes | MessageSequence object. |
+| sequence | [rpc.MessageSequence](../../apis-ipc-kit/arkts-apis/arkts-ipc-rpc-messagesequence-c.md) | Yes | MessageSequence object. |
 
 **Error codes:**
 
@@ -3416,7 +3416,7 @@ This method is only used to set the colorspace property of pixelmap, while all p
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| colorSpace | colorSpaceManager.ColorSpaceManager | Yes | The color space for pixel map. |
+| colorSpace | [colorSpaceManager.ColorSpaceManager](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-colorspacemanager-colorspacemanager-i.md) | Yes | The color space for pixel map. |
 
 **Error codes:**
 
@@ -3934,7 +3934,7 @@ Unmarshals a MessageSequence object to obtain a PixelMap object. To create a Pix
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sequence | rpc.MessageSequence | Yes | MessageSequence object that stores the PixelMap information. |
+| sequence | [rpc.MessageSequence](../../apis-ipc-kit/arkts-apis/arkts-ipc-rpc-messagesequence-c.md) | Yes | MessageSequence object that stores the PixelMap information. |
 
 **Return value:**
 

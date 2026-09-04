@@ -112,7 +112,7 @@ API10-17，非法字符包括： . .. \ / : * ? " ' ` &lt; &gt; | { } [ ]
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | displayName | string | 是 | 创建的图片或者视频文件名。 |
-| options | photoAccessHelper.PhotoCreateOptions | 是 | 图片或视频的创建选项。 |
+| options | [photoAccessHelper.PhotoCreateOptions](arkts-medialibrary-photoaccesshelper-photocreateoptions-i-sys.md) | 是 | 图片或视频的创建选项。 |
 
 **返回值：**
 
@@ -175,8 +175,8 @@ getHiddenAlbums(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mode | photoAccessHelper.HiddenPhotosDisplayMode | 是 | 隐藏文件显示模式。 |
-| options | photoAccessHelper.FetchOptions | 否 | 检索选项，不填时默认根据隐藏文件显示模式检索。 |
+| mode | [photoAccessHelper.HiddenPhotosDisplayMode](arkts-medialibrary-photoaccesshelper-hiddenphotosdisplaymode-e-sys.md) | 是 | 隐藏文件显示模式。 |
+| options | [photoAccessHelper.FetchOptions](arkts-medialibrary-photoaccesshelper-fetchoptions-i.md) | 否 | 检索选项，不填时默认根据隐藏文件显示模式检索。 |
 
 **返回值：**
 
@@ -269,7 +269,7 @@ getPhotoAssets(assetsData: photoAccessHelper.ValuesBucket[]): Promise<PhotoAsset
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| assetsData | photoAccessHelper.ValuesBucket[] | 是 | 资产记录的数组。数组中的每个元素包含资产的列名称及其对应的值。数组的大小不能超过500个。数组中的每个元素必须包含以下资产列信息：file_id、data、display_name、media_type、subtype。 |
+| assetsData | [photoAccessHelper.ValuesBucket](arkts-medialibrary-photoaccesshelper-valuesbucket-t-sys.md)[] | 是 | 资产记录的数组。数组中的每个元素包含资产的列名称及其对应的值。数组的大小不能超过500个。数组中的每个元素必须包含以下资产列信息：file_id、data、display_name、media_type、subtype。 |
 
 **返回值：**
 
@@ -333,7 +333,7 @@ Fetch shared photo assets.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | photoAccessHelper.FetchOptions | 是 | Fetch options. |
+| options | [photoAccessHelper.FetchOptions](arkts-medialibrary-photoaccesshelper-fetchoptions-i.md) | 是 | Fetch options. |
 
 **返回值：**
 

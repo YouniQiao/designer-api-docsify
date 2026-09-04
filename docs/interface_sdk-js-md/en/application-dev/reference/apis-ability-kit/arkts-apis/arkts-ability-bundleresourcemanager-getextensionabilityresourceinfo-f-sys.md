@@ -27,7 +27,7 @@ Obtains the ExtensionAbility resource information of an application based on the
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name of the application. |
-| extensionAbilityType | bundleManager.ExtensionAbilityType | Yes | ExtensionAbility type. Only **ExtensionAbilityType.INPUT_METHOD**, **ExtensionAbilityType.SHARE** and **ExtensionAbilityType.ACTION** are supported. |
+| extensionAbilityType | [bundleManager.ExtensionAbilityType](arkts-ability-bundlemanager-extensionabilitytype-e.md) | Yes | ExtensionAbility type. Only **ExtensionAbilityType.INPUT_METHOD**, **ExtensionAbilityType.SHARE** and **ExtensionAbilityType.ACTION** are supported. |
 | resourceFlags | number | Yes | Resource information flags, which indicate the type of resource information to obtain. |
 | appIndex | number | No | ID of the application clone. The default value is **0**. The value ranges from 0 to 5. The value **0** indicates the main application. |
 

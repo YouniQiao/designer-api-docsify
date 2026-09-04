@@ -10,4 +10,4 @@ type TCPSocket = socket.TCPSocket
 
 **系统能力：** SystemCapability.Communication.NetStack
 
-**属性类型：** socket.TCPSocket
+**类型：** [socket.TCPSocket](arkts-network-socket-tcpsocket-i.md)

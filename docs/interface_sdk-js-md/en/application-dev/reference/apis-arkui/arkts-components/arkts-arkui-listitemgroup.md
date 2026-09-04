@@ -66,6 +66,7 @@ Creates a **ListItemGroup** component.
 ## Examples
 
 This example uses [sticky](ts-container-list.md#sticky9) to implement the sticky header and footer.
+ListDataSource implements the LazyForEach data source API [IDataSource](ts-rendering-control-lazyforeach.md#idatasource), which is used to provide child components for List and ListItemGroup through LazyForEach.
 
 ```TypeScript
 // ListDataSource.ets
@@ -274,6 +275,7 @@ interface ArrObject {
 ```
 
 This example uses ComponentContent to set the header and footer.
+For details about ListDataSource and the complete code, see [Example 1: Setting a Sticky Header and Footer](#example-1-setting-a-sticky-header-and-footer).
 
 ```TypeScript
 // xxx.ets
@@ -406,6 +408,7 @@ struct ListItemGroupExample {
 ```
 
 This example shows how ListItemGroup is used in a multi-column layout. The multi-column layout is implemented by setting the [lanes](ts-container-list.md#lanes9) attribute of the List component.
+For details about ListDataSource and the complete code, see [Example 1: Setting a Sticky Header and Footer](#example-1-setting-a-sticky-header-and-footer).
 
 ```TypeScript
 // xxx.ets

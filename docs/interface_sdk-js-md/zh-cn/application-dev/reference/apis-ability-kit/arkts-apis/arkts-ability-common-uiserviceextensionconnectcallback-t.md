@@ -14,4 +14,4 @@ export type UIServiceExtensionConnectCallback = _UIServiceExtensionConnectCallba
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
-**属性类型：** _UIServiceExtensionConnectCallback.default
+**类型：** _UIServiceExtensionConnectCallback.default

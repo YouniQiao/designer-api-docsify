@@ -4,6 +4,8 @@ Enumerates the animation types used when the floating ball text is updated.
 
 **Since:** 26.0.0
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.Window.SessionManager
 
 ## ANIMATION_NONE

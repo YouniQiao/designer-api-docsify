@@ -24,8 +24,8 @@ function createImageReceiver(size: image.Size, format: image.ImageFormat, capaci
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| size | image.Size | 是 | 图像的默认大小。 |
-| format | image.ImageFormat | 是 | 图像格式，取值为image.ImageFormat常量，目前仅支持 ImageFormat:JPEG。 |
+| size | [image.Size](arkts-image-image-size-i.md) | 是 | 图像的默认大小。 |
+| format | [image.ImageFormat](arkts-image-image-imageformat-e.md) | 是 | 图像格式，取值为image.ImageFormat常量，目前仅支持 ImageFormat:JPEG。 |
 | capacity | number | 是 | 同时访问的最大图像数。该参数仅作为期望值，实际capacity由设备硬件决定。 |
 
 **返回值：**

@@ -14,4 +14,4 @@ Represents the AgentProxy type.
 
 **System API:** This is a system API.
 
-**Property type:** _AgentProxy
+**Type:** _AgentProxy

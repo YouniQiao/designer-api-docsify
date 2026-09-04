@@ -84,7 +84,7 @@ color?: common2D.Color
 
 文字颜色，默认为白色。
 
-**类型：** common2D.Color
+**类型：** [common2D.Color](arkts-arkgraphics2d-common2d-color-i.md)
 
 **起始版本：** 12
 
@@ -148,7 +148,7 @@ fontEdging?: drawing.FontEdging
 
 绘制文本的边缘处理方式，默认值为ANTI_ALIAS。
 
-**类型：** drawing.FontEdging
+**类型：** [drawing.FontEdging](arkts-arkgraphics2d-drawing-fontedging-e.md)
 
 **起始版本：** 24
 
@@ -232,7 +232,7 @@ fontTypefaces?: Array<drawing.Typeface>
 
 当fontTypefaces与[TextStyle](arkts-arkgraphics2d-text-textstyle-i.md).fontFamilies同时设置时，fontTypefaces优先级更高。
 
-**类型：** Array&lt;drawing.Typeface&gt;
+**类型：** Array&lt;[drawing.Typeface](arkts-arkgraphics2d-drawing-typeface-c.md)&gt;
 
 **起始版本：** 26.0.0
 

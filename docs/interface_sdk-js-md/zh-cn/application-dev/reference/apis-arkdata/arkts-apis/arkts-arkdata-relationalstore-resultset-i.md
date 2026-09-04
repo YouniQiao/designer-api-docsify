@@ -1227,7 +1227,7 @@ getSendableRow(): sendableRelationalStore.ValuesBucket
 
 | 类型 | 说明 |
 | --- | --- |
-| sendableRelationalStore.ValuesBucket | 当前行数据的sendable形式，用于跨线程传递。 |
+| [sendableRelationalStore.ValuesBucket](arkts-arkdata-sendablerelationalstore-valuesbucket-t.md) | 当前行数据的sendable形式，用于跨线程传递。 |
 
 **错误码：**
 

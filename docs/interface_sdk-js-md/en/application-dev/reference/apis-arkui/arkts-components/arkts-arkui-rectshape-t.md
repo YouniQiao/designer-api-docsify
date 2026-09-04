@@ -16,4 +16,4 @@ Defines the RectShape type.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** import('../api/@ohos.arkui.shape').RectShape
+**Type:** import('../api/@ohos.arkui.shape').RectShape

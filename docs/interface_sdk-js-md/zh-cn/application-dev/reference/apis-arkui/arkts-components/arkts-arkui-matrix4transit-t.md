@@ -14,4 +14,4 @@ declare type Matrix4Transit = import('../api/@ohos.matrix4').default.Matrix4Tran
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-**属性类型：** import('../api/@ohos.matrix4').default.Matrix4Transit
+**类型：** import('../api/@ohos.matrix4').default.Matrix4Transit

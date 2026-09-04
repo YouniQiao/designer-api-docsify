@@ -34,7 +34,7 @@ addArc(rect: common2D.Rect, startAngle: number, sweepAngle: number): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| rect | common2D.Rect | 是 | 包含弧的椭圆的矩形边界。 |
+| rect | [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) | 是 | 包含弧的椭圆的矩形边界。 |
 | startAngle | number | 是 | 弧的起始角度，单位为度，0°为x轴正方向，该参数为浮点数。当对90取余接近于0且sweepAngle不在(-360, 360)区间内时，将添加整个椭圆而非圆弧。 |
 | sweepAngle | number | 是 | 扫描角度，单位为度。正数表示顺时针方向，负数表示逆时针方向。当参数不在(-360, 360)区间内且startAngle对90取余接近于0时，将添加整个椭圆而非圆弧；其余情况下实际扫描角度为该入参对360取余的结果。该参数为浮点数。 |
 
@@ -106,7 +106,7 @@ addOval(rect: common2D.Rect, start: number, pathDirection?: PathDirection): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| rect | common2D.Rect | 是 | 椭圆的矩形边界。 |
+| rect | [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) | 是 | 椭圆的矩形边界。 |
 | start | number | 是 | 表示椭圆初始点的索引，取值范围为不小于0的整数，0、1、2、3分别对应椭圆的上端点、右端点、下端点、左端点，大于等于4时会对4取余。 |
 | pathDirection | [PathDirection](arkts-arkgraphics2d-drawing-pathdirection-e.md) | 否 | 表示路径方向。不传入时默认为顺时针方向。 |
 
@@ -181,7 +181,7 @@ addPolygon(points: Array<common2D.Point>, close: boolean): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| points | Array&lt;common2D.Point&gt; | 是 | 多边形各顶点的坐标点数组，按数组顺序依次连接各点形成连续线段。 |
+| points | Array&lt;[common2D.Point](arkts-arkgraphics2d-common2d-point-i.md)&gt; | 是 | 多边形各顶点的坐标点数组，按数组顺序依次连接各点形成连续线段。 |
 | close | boolean | 是 | 表示是否将路径闭合，即是否添加路径起始点到终点的连线。true表示将路径闭合，false表示不将路径闭合。 |
 
 **错误码：**
@@ -224,7 +224,7 @@ addRect(rect: common2D.Rect, pathDirection?: PathDirection): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| rect | common2D.Rect | 是 | 向路径中添加的矩形轮廓，rect参数需为有效的common2D.Rect对象，left需小于right、top需小于bottom。 |
+| rect | [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) | 是 | 向路径中添加的矩形轮廓，rect参数需为有效的common2D.Rect对象，left需小于right、top需小于bottom。 |
 | pathDirection | [PathDirection](arkts-arkgraphics2d-drawing-pathdirection-e.md) | 否 | 表示路径方向。不传入时默认为顺时针方向。 |
 
 **错误码：**
@@ -708,7 +708,7 @@ getBounds(): common2D.Rect
 
 | 类型 | 说明 |
 | --- | --- |
-| common2D.Rect | 包含路径的最小矩形区域。 |
+| [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) | 包含路径的最小矩形区域。 |
 
 **示例**
 
@@ -820,7 +820,7 @@ getLastPoint(): common2D.Point
 
 | 类型 | 说明 |
 | --- | --- |
-| common2D.Point | 路径最后点位置坐标。如果路径为空，则返回undefined。 |
+| [common2D.Point](arkts-arkgraphics2d-common2d-point-i.md) | 路径最后点位置坐标。如果路径为空，则返回undefined。 |
 
 **示例**
 
@@ -973,7 +973,7 @@ getPointData(): Array<common2D.Point>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;common2D.Point&gt; | 返回路径的点数据数组，每个元素为common2D.Point对象，其x、y坐标为浮点数。理论取值范围为全体实数，但实际受限于渲染坐标系的有效范围（如-2^31到2^31-1或屏幕可见区域）；超出范围可能导致图形不可见或裁剪。 |
+| Array&lt;[common2D.Point](arkts-arkgraphics2d-common2d-point-i.md)&gt; | 返回路径的点数据数组，每个元素为common2D.Point对象，其x、y坐标为浮点数。理论取值范围为全体实数，但实际受限于渲染坐标系的有效范围（如-2^31到2^31-1或屏幕可见区域）；超出范围可能导致图形不可见或裁剪。 |
 
 **示例**
 
@@ -1007,8 +1007,8 @@ getPositionAndTangent(forceClosed: boolean, distance: number, position: common2D
 | --- | --- | --- | --- |
 | forceClosed | boolean | 是 | 表示是否按照闭合路径测量，true表示测量时路径会被强制视为已闭合，false表示会根据路径的实际闭合状态测量。 |
 | distance | number | 是 | 表示与路径起始点的距离，小于0时会被视作0，大于路径长度时会被视作路径长度。该参数为浮点数。单位为物理像素px。 |
-| position | common2D.Point | 是 | 存储获取到的距离路径起始点distance处的点的坐标。 |
-| tangent | common2D.Point | 是 | 存储获取到的距离路径起始点distance处的点的切线值，tangent.x表示该点切线的余弦值，tangent.y表示该点切线的正弦值。 |
+| position | [common2D.Point](arkts-arkgraphics2d-common2d-point-i.md) | 是 | 存储获取到的距离路径起始点distance处的点的坐标。 |
+| tangent | [common2D.Point](arkts-arkgraphics2d-common2d-point-i.md) | 是 | 存储获取到的距离路径起始点distance处的点的切线值，tangent.x表示该点切线的余弦值，tangent.y表示该点切线的正弦值。 |
 
 **返回值：**
 
@@ -1403,7 +1403,7 @@ isRect(rect: common2D.Rect | null): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| rect | common2D.Rect \| null | 是 | 矩形对象，作为出参使用，路径构成矩形时，会被改写为路径表示的矩形，否则不会改变。可以为null，表示无需获取路径表示的矩形。 |
+| rect | [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) \| null | 是 | 矩形对象，作为出参使用，路径构成矩形时，会被改写为路径表示的矩形，否则不会改变。可以为null，表示无需获取路径表示的矩形。 |
 
 **返回值：**
 

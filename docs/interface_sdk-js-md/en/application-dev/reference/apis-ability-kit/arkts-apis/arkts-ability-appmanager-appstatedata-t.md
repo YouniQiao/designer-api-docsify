@@ -10,4 +10,4 @@ Defines the application state data.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
-**Property type:** _AppStateData.default
+**Type:** _AppStateData.default

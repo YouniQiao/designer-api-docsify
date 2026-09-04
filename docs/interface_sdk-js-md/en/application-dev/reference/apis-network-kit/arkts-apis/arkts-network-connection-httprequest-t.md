@@ -12,4 +12,4 @@ Defines an HTTP request, which can be created using [http.createHttp](arkts-netw
 
 **System capability:** SystemCapability.Communication.NetStack
 
-**Property type:** http.HttpRequest
+**Type:** [http.HttpRequest](arkts-network-http-httprequest-i.md)

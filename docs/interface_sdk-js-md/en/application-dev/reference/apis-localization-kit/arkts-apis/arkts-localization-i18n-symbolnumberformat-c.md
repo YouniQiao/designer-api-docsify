@@ -34,7 +34,7 @@ A constructor used to create a SymbolNumberFormat object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| locale | Intl.Locale | No | Locale object used for formatting the date time value. The default value is the current system locale. Default value:The default is the current system locale. Default Value: System Locale. Region object. |
+| locale | [Intl.Locale](arkts-localization-intl-locale-c.md) | No | Locale object used for formatting the date time value. The default value is the current system locale. Default value:The default is the current system locale. Default Value: System Locale. Region object. |
 | options | [SymbolNumberFormatOptions](arkts-localization-i18n-symbolnumberformatoptions-i.md) | No | Indicates the symbols used to replace. Such as zero, nan, positiveInfinity, etc. Symbol Number Formatting Options. |
 
 **Examples**
@@ -491,7 +491,7 @@ Formats a number range into parts.
 
 | Type | Description |
 | --- | --- |
-| Intl.NumberFormatPart[] | Locale formatted NumberFormatPart array. |
+| [Intl.NumberFormatPart](../../apis-default/arkts-apis/arkts-intl-numberformatpart-i.md)[] | Locale formatted NumberFormatPart array. |
 
 **Examples**
 
@@ -546,7 +546,7 @@ Formats a number into parts.
 
 | Type | Description |
 | --- | --- |
-| Intl.NumberFormatPart[] | Locale formatted NumberFormatPart array. |
+| [Intl.NumberFormatPart](../../apis-default/arkts-apis/arkts-intl-numberformatpart-i.md)[] | Locale formatted NumberFormatPart array. |
 
 **Examples**
 

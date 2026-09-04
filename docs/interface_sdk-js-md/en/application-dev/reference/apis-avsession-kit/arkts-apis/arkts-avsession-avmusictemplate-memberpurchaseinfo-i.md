@@ -38,7 +38,7 @@ diagramData?: image.PixelMap
 
 Member purchase diagram.
 
-**Type:** image.PixelMap
+**Type:** [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)
 
 **Since:** 23
 

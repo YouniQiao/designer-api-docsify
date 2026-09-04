@@ -47,6 +47,19 @@ Creates and displays an action menu. This API uses an asynchronous callback to r
 **Examples**
 
 showActionMenu(options: ActionMenuOptions, callback: AsyncCallback<ActionMenuSuccessResponse>):void
+Creates and displays an action menu. This API uses an asynchronous callback to return the result.
+> NOTE
+> 
+> This API is supported since API version 9 and deprecated since API version 18. You are advised to use showActionMenu instead. Before calling this API, you need to obtain the [PromptAction](arkts-apis-uicontext-promptaction.md) object using the [getPromptAction](arkts-arkui-arkui-uicontext-uicontext-c.md#getpromptaction) method in [UIContext](arkts-apis-uicontext-uicontext.md). Directly using showActionMenu can lead to the issue of [ambiguous UI context](../../../ui/arkts-global-interface.md#ambiguous-ui-context).
+> 
+> Since API version 11, you can use the [getPromptAction](arkts-arkui-arkui-uicontext-uicontext-c.md#getpromptaction) API in [UIContext](arkts-apis-uicontext-uicontext.md) to obtain the [PromptAction](arkts-apis-uicontext-promptaction.md) object associated with the current UI context.
+
+Atomic service API: This API can be used in atomic services since API version 11.
+System capability: SystemCapability.ArkUI.ArkUI.Full
+Parameters
+Error codes
+For details about the error codes, see [Universal Error Codes](../../errorcode-universal.md) and [API Call Error Codes](../errorcode-internal.md).
+Example 1
 
 ```TypeScript
 import { promptAction } from '@kit.ArkUI';
@@ -80,6 +93,8 @@ try {
 ```
 
 en-us_image_0005
+Example 2
+This example demonstrates how to use the onDidAppear, onDidDisappear, onWillAppear, and onWillDisappear properties of ActionMenuOptions to implement the action menu lifecycle callbacks, supported since API version 19.
 
 ```TypeScript
 import { promptAction } from '@kit.ArkUI';
@@ -197,6 +212,19 @@ Creates and displays an action menu in the given settings. This API uses a promi
 **Examples**
 
 showActionMenu(options: ActionMenuOptions): Promise<ActionMenuSuccessResponse>
+Creates and displays an action menu in the given settings. This API uses a promise to return the result.
+> NOTE
+> 
+> This API is supported since API version 9 and deprecated since API version 18. You are advised to use showActionMenu instead. Before calling this API, you need to obtain the [PromptAction](arkts-apis-uicontext-promptaction.md) object using the [getPromptAction](arkts-arkui-arkui-uicontext-uicontext-c.md#getpromptaction) method in [UIContext](arkts-apis-uicontext-uicontext.md). Directly using showActionMenu can lead to the issue of [ambiguous UI context](../../../ui/arkts-global-interface.md#ambiguous-ui-context).
+> 
+> Since API version 10, you can use the [getPromptAction](arkts-arkui-arkui-uicontext-uicontext-c.md#getpromptaction) API in [UIContext](arkts-apis-uicontext-uicontext.md) to obtain the [PromptAction](arkts-apis-uicontext-promptaction.md) object associated with the current UI context.
+
+Atomic service API: This API can be used in atomic services since API version 11.
+System capability: SystemCapability.ArkUI.ArkUI.Full
+Parameters
+Return value
+Error codes
+For details about the error codes, see [Universal Error Codes](../../errorcode-universal.md) and [API Call Error Codes](../errorcode-internal.md).
 
 ```TypeScript
 import { promptAction } from '@kit.ArkUI';

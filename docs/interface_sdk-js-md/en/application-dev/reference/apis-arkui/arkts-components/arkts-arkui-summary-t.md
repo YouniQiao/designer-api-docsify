@@ -14,4 +14,4 @@ Provides a summary of drag-related data.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** import('../api/@ohos.data.unifiedDataChannel').default.Summary
+**Type:** import('../api/@ohos.data.unifiedDataChannel').default.Summary

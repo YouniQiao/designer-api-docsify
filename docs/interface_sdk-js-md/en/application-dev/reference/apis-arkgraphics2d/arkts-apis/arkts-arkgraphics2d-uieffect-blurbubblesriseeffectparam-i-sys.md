@@ -40,7 +40,7 @@ maskImage: image.PixelMap
 
 The mask image for the blur bubbles rise effect, controlling the blur bubbles area. The masked area has a blur effect, while the unmasked area has no blur effect.
 
-**Type:** image.PixelMap
+**Type:** [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)
 
 **Since:** 26.0.0
 

@@ -12,4 +12,4 @@ export type BundleOption = _BundleOption
 
 **系统接口：** 此接口为系统接口。
 
-**属性类型：** _BundleOption
+**类型：** _BundleOption

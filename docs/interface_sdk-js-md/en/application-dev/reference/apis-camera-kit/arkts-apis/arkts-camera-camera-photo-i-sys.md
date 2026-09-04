@@ -36,7 +36,7 @@ raw?: image.Image
 
 Raw image.
 
-**Type:** image.Image
+**Type:** [image.Image](../../apis-image-kit/arkts-apis/arkts-image-image-image-i.md)
 
 **Since:** 12
 

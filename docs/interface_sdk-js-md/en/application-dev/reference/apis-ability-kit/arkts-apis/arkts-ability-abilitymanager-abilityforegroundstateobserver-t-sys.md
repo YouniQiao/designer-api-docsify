@@ -12,4 +12,4 @@ Defines the level-2 module AbilityForegroundStateObserver.
 
 **System API:** This is a system API.
 
-**Property type:** _AbilityForegroundStateObserver.default
+**Type:** _AbilityForegroundStateObserver.default

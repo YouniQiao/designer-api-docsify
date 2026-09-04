@@ -10,4 +10,4 @@ Describes the notification information delivered to the [onReceiveMessage](arkts
 
 **System capability:** SystemCapability.Notification.Notification
 
-**Property type:** _NotificationInfo
+**Type:** _NotificationInfo

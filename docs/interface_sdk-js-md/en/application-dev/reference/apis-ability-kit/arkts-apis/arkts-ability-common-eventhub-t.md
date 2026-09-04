@@ -14,4 +14,4 @@ Defines EventHub, which is an event communication mechanism based on the publish
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
-**Property type:** _EventHub.default
+**Type:** _EventHub.default

@@ -4,6 +4,8 @@ Enumerates user setting items.
 
 **Since:** 26.0.0
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## MODIFY_WALLPAPER

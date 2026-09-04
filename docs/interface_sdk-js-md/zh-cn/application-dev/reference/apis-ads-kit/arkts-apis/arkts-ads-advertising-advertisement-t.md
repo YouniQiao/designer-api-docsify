@@ -12,4 +12,4 @@ export type Advertisement = _Advertisement
 
 **系统能力：** SystemCapability.Advertising.Ads
 
-**属性类型：** _Advertisement
+**类型：** _Advertisement

@@ -22,7 +22,7 @@ imageTags?: image.PixelMap[]
 
 设置内容的图片标签数组。
 
-**类型：** image.PixelMap[]
+**类型：** [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)[]
 
 **起始版本：** 23
 

@@ -12,4 +12,4 @@ Represents the **ShellCmdResult** module.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
-**Property type:** _ShellCmdResult
+**Type:** _ShellCmdResult

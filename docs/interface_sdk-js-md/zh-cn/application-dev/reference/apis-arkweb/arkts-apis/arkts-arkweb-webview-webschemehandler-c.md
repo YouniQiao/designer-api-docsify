@@ -174,3 +174,4 @@ onRequestStop(callback: Callback<WebSchemeHandlerRequest>): void
 **示例**
 
 完整示例代码参考[onRequestStart](#onrequeststart)。
+- simpleType:

@@ -10,4 +10,4 @@ export type NotificationMultiLineContent = _NotificationMultiLineContent
 
 **系统能力：** SystemCapability.Notification.Notification
 
-**属性类型：** _NotificationMultiLineContent
+**类型：** _NotificationMultiLineContent

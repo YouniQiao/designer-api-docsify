@@ -10,4 +10,4 @@ type NetHandle = connection.NetHandle
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
-**属性类型：** connection.NetHandle
+**类型：** [connection.NetHandle](arkts-network-connection-nethandle-i.md)

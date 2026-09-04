@@ -10,4 +10,4 @@ type DataConnectState = data.DataConnectState
 
 **系统能力：** SystemCapability.Telephony.StateRegistry
 
-**属性类型：** data.DataConnectState
+**类型：** [data.DataConnectState](arkts-telephony-data-dataconnectstate-e.md)

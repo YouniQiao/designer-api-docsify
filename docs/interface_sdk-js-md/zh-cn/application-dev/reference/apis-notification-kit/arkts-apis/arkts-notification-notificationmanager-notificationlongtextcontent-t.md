@@ -10,4 +10,4 @@ export type NotificationLongTextContent = _NotificationLongTextContent
 
 **系统能力：** SystemCapability.Notification.Notification
 
-**属性类型：** _NotificationLongTextContent
+**类型：** _NotificationLongTextContent

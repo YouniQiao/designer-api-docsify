@@ -16,4 +16,4 @@ Defines the length property with number in units of lpx.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** `${number}lpx`
+**Type:** `${number}lpx`

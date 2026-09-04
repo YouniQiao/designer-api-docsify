@@ -12,4 +12,4 @@ Defines the information about the dynamic shared libraries on which the module d
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
-**Property type:** _HapModuleInfo.Dependency
+**Type:** [_HapModuleInfo.Dependency](arkts-ability-hapmoduleinfo-dependency-i.md)

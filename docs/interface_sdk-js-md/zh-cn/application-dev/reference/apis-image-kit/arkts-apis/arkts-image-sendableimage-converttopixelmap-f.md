@@ -28,7 +28,7 @@ Creates a image PixelMap from sendable image PixelMap.
 
 | 类型 | 说明 |
 | --- | --- |
-| image.PixelMap | Returns the instance if the operation is successful. Otherwise, an exception will be thrown. |
+| [image.PixelMap](arkts-image-image-pixelmap-i.md) | Returns the instance if the operation is successful. Otherwise, an exception will be thrown. |
 
 **错误码：**
 

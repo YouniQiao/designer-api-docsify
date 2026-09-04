@@ -10,4 +10,4 @@ type NonSendableBucket = relationalStore.ValuesBucket
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
-**属性类型：** relationalStore.ValuesBucket
+**类型：** [relationalStore.ValuesBucket](arkts-arkdata-relationalstore-valuesbucket-t.md)

@@ -14,4 +14,4 @@ export type UIAbilityContext = _UIAbilityContext.default
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
-**属性类型：** _UIAbilityContext.default
+**类型：** _UIAbilityContext.default

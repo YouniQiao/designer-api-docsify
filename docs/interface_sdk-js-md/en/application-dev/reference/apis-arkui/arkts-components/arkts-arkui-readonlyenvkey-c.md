@@ -19,7 +19,7 @@ static readonly WINDOW_AVOID_AREA: ReadonlySystemEnvKey<window.UIEnvWindowAvoidA
 
 System environment avoidarea key that is used to obtain the avoid area of the window, measured in vp.
 
-**Type:** [ReadonlySystemEnvKey](arkts-arkui-readonlysystemenvkey-c.md)&lt;window.UIEnvWindowAvoidAreaInfoVP&gt;
+**Type:** [ReadonlySystemEnvKey](arkts-arkui-readonlysystemenvkey-c.md)&lt;[window.UIEnvWindowAvoidAreaInfoVP](../arkts-apis/arkts-arkui-window-uienvwindowavoidareainfovp-i.md)&gt;
 
 **Since:** 26.0.0
 
@@ -37,7 +37,7 @@ static readonly WINDOW_AVOID_AREA_PX: ReadonlySystemEnvKey<window.UIEnvWindowAvo
 
 System environment avoidarea key that is used to obtain the avoid area of the window, measured in px.
 
-**Type:** [ReadonlySystemEnvKey](arkts-arkui-readonlysystemenvkey-c.md)&lt;window.UIEnvWindowAvoidAreaInfoPX&gt;
+**Type:** [ReadonlySystemEnvKey](arkts-arkui-readonlysystemenvkey-c.md)&lt;[window.UIEnvWindowAvoidAreaInfoPX](../arkts-apis/arkts-arkui-window-uienvwindowavoidareainfopx-i.md)&gt;
 
 **Since:** 26.0.0
 
@@ -105,7 +105,7 @@ static readonly WINDOW_SIZE: ReadonlySystemEnvKey<window.SizeInVP>
 
 System environment windowsize key that is used to obtain the size of the window, measured in vp.
 
-**Type:** [ReadonlySystemEnvKey](arkts-arkui-readonlysystemenvkey-c.md)&lt;window.SizeInVP&gt;
+**Type:** [ReadonlySystemEnvKey](arkts-arkui-readonlysystemenvkey-c.md)&lt;[window.SizeInVP](../arkts-apis/arkts-arkui-window-sizeinvp-i.md)&gt;
 
 **Since:** 26.0.0
 
@@ -123,7 +123,7 @@ static readonly WINDOW_SIZE_PX: ReadonlySystemEnvKey<window.Size>
 
 System environment windowsize key that is used to obtain the size of the window, measured in px.
 
-**Type:** [ReadonlySystemEnvKey](arkts-arkui-readonlysystemenvkey-c.md)&lt;window.Size&gt;
+**Type:** [ReadonlySystemEnvKey](arkts-arkui-readonlysystemenvkey-c.md)&lt;[window.Size](../arkts-apis/arkts-arkui-window-size-i.md)&gt;
 
 **Since:** 26.0.0
 

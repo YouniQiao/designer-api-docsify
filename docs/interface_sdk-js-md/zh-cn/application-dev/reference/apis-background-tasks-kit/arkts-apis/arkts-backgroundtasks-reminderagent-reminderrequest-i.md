@@ -150,7 +150,7 @@ slotType?: notification.SlotType
 
 指明提醒的slot类型。
 
-**类型：** notification.SlotType
+**类型：** [notification.SlotType](../../apis-notification-kit/arkts-apis/arkts-notification-notification-slottype-depr-e.md)
 
 **起始版本：** 7
 

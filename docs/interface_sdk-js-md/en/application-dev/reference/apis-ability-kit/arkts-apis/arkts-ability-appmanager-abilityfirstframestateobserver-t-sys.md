@@ -12,4 +12,4 @@ Defines the listener for the completion of the first frame rendering of the UIAb
 
 **System API:** This is a system API.
 
-**Property type:** _AbilityFirstFrameStateObserver.default
+**Type:** _AbilityFirstFrameStateObserver.default

@@ -6,8 +6,6 @@ The module provides the capability to interact with cli tools in the system.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
-
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
 **System API:** This is a system API.

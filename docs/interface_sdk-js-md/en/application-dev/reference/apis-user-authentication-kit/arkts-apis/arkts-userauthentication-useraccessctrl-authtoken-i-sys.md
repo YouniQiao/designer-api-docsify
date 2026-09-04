@@ -22,7 +22,7 @@ authTrustLevel: userAuth.AuthTrustLevel
 
 Authentication trust level. It indicates the security strength level of the current authentication. The value can be **ATL1 (10000)**, **ATL2 (20000)**, **ATL3 (30000)**, or **ATL4 (40000)**. A higher level indicates a stronger liveness detection capability and more accurate identity recognition.
 
-**Type:** userAuth.AuthTrustLevel
+**Type:** [userAuth.AuthTrustLevel](arkts-userauthentication-userauth-authtrustlevel-e.md)
 
 **Since:** 18
 
@@ -38,7 +38,7 @@ authType: userAuth.UserAuthType
 
 Credential type for the identity authentication. It indicates the authentication mode used for the current authentication, such as **PIN (1)**, **FACE (2)**, and **FINGERPRINT (4)**.
 
-**Type:** userAuth.UserAuthType
+**Type:** [userAuth.UserAuthType](arkts-userauthentication-userauth-userauthtype-e.md)
 
 **Since:** 18
 

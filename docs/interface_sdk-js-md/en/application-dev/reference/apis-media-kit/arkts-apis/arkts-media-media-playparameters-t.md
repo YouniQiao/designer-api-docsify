@@ -10,4 +10,4 @@ Describes the playback parameters of the sound pool.
 
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
-**Property type:** _PlayParameters
+**Type:** _PlayParameters

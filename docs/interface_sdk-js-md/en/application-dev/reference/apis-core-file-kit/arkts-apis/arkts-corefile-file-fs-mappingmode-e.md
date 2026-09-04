@@ -4,6 +4,8 @@ Enumerated type of the file memory mapping mode, which can be used by the mmap A
 
 **Since:** 26.0.0
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 ## READ_ONLY

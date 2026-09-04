@@ -10,4 +10,4 @@ Defines an array that contains the audio effect mode corresponding to a specific
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
-**Property type:** Array&lt;Readonly&lt;[AudioEffectMode](arkts-audio-audio-audioeffectmode-e.md)&gt;&gt;
+**Type:** Array&lt;Readonly&lt;[AudioEffectMode](arkts-audio-audio-audioeffectmode-e.md)&gt;&gt;

@@ -102,6 +102,8 @@ class BackupExt extends BackupExtensionAbility {
 ```
 
 > 说明：
+> 
+> 异步处理业务场景中，推荐使用示例如下。
 
 ```TypeScript
 import { BackupExtensionAbility } from '@kit.CoreFileKit';
@@ -400,6 +402,8 @@ class BackupExt extends BackupExtensionAbility {
 ```
 
 > 说明：
+> 
+> 同步处理业务场景中，推荐使用示例如下。
 
 ```TypeScript
 import { BackupExtensionAbility, BundleVersion } from '@kit.CoreFileKit';

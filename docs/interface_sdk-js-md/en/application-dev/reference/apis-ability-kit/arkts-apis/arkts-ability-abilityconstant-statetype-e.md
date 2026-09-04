@@ -4,6 +4,8 @@ Enumerates the scenarios for saving application data. You can use it in [onSaveS
 
 **Since:** 9
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## CONTINUATION

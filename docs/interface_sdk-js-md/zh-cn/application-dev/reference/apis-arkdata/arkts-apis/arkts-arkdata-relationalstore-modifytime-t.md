@@ -10,4 +10,4 @@ type ModifyTime = Map<PRIKeyType, UTCTime>
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
-**属性类型：** Map&lt;[PRIKeyType](arkts-arkdata-relationalstore-prikeytype-t.md), [UTCTime](arkts-arkdata-relationalstore-utctime-t.md)&gt;
+**类型：** Map&lt;[PRIKeyType](arkts-arkdata-relationalstore-prikeytype-t.md), [UTCTime](arkts-arkdata-relationalstore-utctime-t.md)&gt;

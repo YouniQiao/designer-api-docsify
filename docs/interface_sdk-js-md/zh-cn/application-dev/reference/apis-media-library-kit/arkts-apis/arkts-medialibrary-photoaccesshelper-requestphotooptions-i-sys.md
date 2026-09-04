@@ -38,7 +38,7 @@ size?: image.Size
 
 获取缩略图的尺寸。
 
-**类型：** image.Size
+**类型：** [image.Size](../../apis-image-kit/arkts-apis/arkts-image-image-size-i.md)
 
 **起始版本：** 11
 

@@ -566,7 +566,7 @@ Sets the size of the float view. You are advised to call the [getFloatViewLimits
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| size | window.Size | Yes | Window size. It is recommended that the size meet the limits returned by the [getFloatViewLimits](arkts-arkui-floatview-getfloatviewlimits-f.md) API. |
+| size | [window.Size](arkts-arkui-window-size-i.md) | Yes | Window size. It is recommended that the size meet the limits returned by the [getFloatViewLimits](arkts-arkui-floatview-getfloatviewlimits-f.md) API. |
 
 **Return value:**
 

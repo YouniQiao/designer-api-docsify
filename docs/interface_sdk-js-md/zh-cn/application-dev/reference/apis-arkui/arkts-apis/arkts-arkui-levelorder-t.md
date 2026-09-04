@@ -14,4 +14,4 @@ declare type LevelOrder = import('../api/@ohos.promptAction').LevelOrder
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-**属性类型：** import('../api/@ohos.promptAction').LevelOrder
+**类型：** import('../api/@ohos.promptAction').LevelOrder

@@ -8,6 +8,6 @@ type Readonly<T> = {
 
 Make all properties in T readonly
 
-**Property type:** {
+**Type:** {
     readonly [P in keyof T]: T[P];
 }

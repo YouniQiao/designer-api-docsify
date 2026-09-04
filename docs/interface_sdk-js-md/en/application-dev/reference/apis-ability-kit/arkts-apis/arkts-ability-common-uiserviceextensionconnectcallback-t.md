@@ -14,4 +14,4 @@ Defines the connection callback. It is used as an input parameter for connection
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
-**Property type:** _UIServiceExtensionConnectCallback.default
+**Type:** _UIServiceExtensionConnectCallback.default

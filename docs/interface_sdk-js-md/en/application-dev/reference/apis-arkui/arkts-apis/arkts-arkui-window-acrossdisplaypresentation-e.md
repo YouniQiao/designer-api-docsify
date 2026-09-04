@@ -4,6 +4,8 @@ Enum for across-display policy used when maximizing in the half-folded state of 
 
 **Since:** 26.0.0
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.Window.SessionManager
 
 ## FOLLOW_ACROSS_DISPLAY_SETTING

@@ -14,4 +14,4 @@ export type UpdateOperation = dataShare.UpdateOperation
 
 **系统接口：** 此接口为系统接口。
 
-**属性类型：** dataShare.UpdateOperation
+**类型：** [dataShare.UpdateOperation](arkts-arkdata-datashare-updateoperation-i-sys.md)

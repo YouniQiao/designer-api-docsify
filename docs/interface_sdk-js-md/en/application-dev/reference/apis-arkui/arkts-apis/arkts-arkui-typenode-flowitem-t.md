@@ -14,4 +14,4 @@ Represents a FrameNode of the **FlowItem** type. This type of node allows only o
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** [TypedFrameNode](arkts-arkui-framenode-typedframenode-i.md)&lt;FlowItemInterface, [FlowItemAttribute](../arkts-components/arkts-arkui-flowitem-attribute.md)&gt;
+**Type:** [TypedFrameNode](arkts-arkui-framenode-typedframenode-i.md)&lt;FlowItemInterface, [FlowItemAttribute](../arkts-components/arkts-arkui-flowitem-attribute.md)&gt;

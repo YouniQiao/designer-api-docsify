@@ -20,7 +20,7 @@ contentType: notificationManager.ContentType
 
 长时任务通知的内容类型。
 
-**类型：** notificationManager.ContentType
+**类型：** [notificationManager.ContentType](../../apis-notification-kit/arkts-apis/arkts-notification-notificationmanager-contenttype-e.md)
 
 **起始版本：** 12
 
@@ -70,7 +70,7 @@ slotType: notificationManager.SlotType
 
 **说明：** 长时任务申请或更新成功后不支持提示音。
 
-**类型：** notificationManager.SlotType
+**类型：** [notificationManager.SlotType](../../apis-notification-kit/arkts-apis/arkts-notification-notificationmanager-slottype-e.md)
 
 **起始版本：** 12
 

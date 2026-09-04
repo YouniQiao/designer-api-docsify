@@ -219,7 +219,7 @@ Deletes data from the database based on a specified instance object of RdbPredic
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | table | string | Yes | Indicates the target table. |
-| predicates | dataSharePredicates.DataSharePredicates | Yes | The specified delete condition by the instance object of [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md). |
+| predicates | [dataSharePredicates.DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | Yes | The specified delete condition by the instance object of [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md). |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | The number of affected rows. |
 
 **Error codes:**
@@ -322,7 +322,7 @@ Deletes data from the database based on a specified instance object of RdbPredic
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | table | string | Yes | Indicates the target table. |
-| predicates | dataSharePredicates.DataSharePredicates | Yes | The specified delete condition by the instance object of [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md). |
+| predicates | [dataSharePredicates.DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | Yes | The specified delete condition by the instance object of [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md). |
 
 **Return value:**
 
@@ -407,7 +407,7 @@ Queries data in the database based on specified conditions.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | table | string | Yes | Indicates the target table. |
-| predicates | dataSharePredicates.DataSharePredicates | Yes | The specified query condition by the instance object of [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md). |
+| predicates | [dataSharePredicates.DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | Yes | The specified query condition by the instance object of [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md). |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ResultSet&gt; | Yes | The [ResultSet](arkts-arkdata-relationalstore-resultset-i.md) object if the operation is successful. |
 
 **Error codes:**
@@ -568,7 +568,7 @@ Queries data in the database based on specified conditions.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | table | string | Yes | Indicates the target table. |
-| predicates | dataSharePredicates.DataSharePredicates | Yes | The specified query condition by the instance object of [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md). |
+| predicates | [dataSharePredicates.DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | Yes | The specified query condition by the instance object of [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md). |
 | columns | Array&lt;string&gt; | Yes | The columns to query. If the value is empty array, the query applies to all columns. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ResultSet&gt; | Yes | The [ResultSet](arkts-arkdata-relationalstore-resultset-i.md) object if the operation is successful. |
 
@@ -611,7 +611,7 @@ Queries data in the database based on specified conditions.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | table | string | Yes | Indicates the target table. |
-| predicates | dataSharePredicates.DataSharePredicates | Yes | The specified query condition by the instance object of [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md). |
+| predicates | [dataSharePredicates.DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | Yes | The specified query condition by the instance object of [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md). |
 | columns | Array&lt;string&gt; | No | The columns to query. If the value is null, the query applies to all columns. |
 
 **Return value:**
@@ -945,7 +945,7 @@ Updates data in the database based on a specified instance object of RdbPredicat
 | --- | --- | --- | --- |
 | table | string | Yes | Indicates the target table. |
 | values | ValuesBucket | Yes | Indicates the row of data to be updated in the database. The key-value pairs are associated with column names of the database table. |
-| predicates | dataSharePredicates.DataSharePredicates | Yes | Indicates the specified update condition by the instance object of [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md). |
+| predicates | [dataSharePredicates.DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | Yes | Indicates the specified update condition by the instance object of [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md). |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | The number of affected rows. |
 
 **Error codes:**
@@ -1183,7 +1183,7 @@ Updates data in the database based on a specified instance object of RdbPredicat
 | --- | --- | --- | --- |
 | table | string | Yes | Indicates the target table. |
 | values | ValuesBucket | Yes | Indicates the row of data to be updated in the database. The key-value pairs are associated with column names of the database table. |
-| predicates | dataSharePredicates.DataSharePredicates | Yes | Indicates the specified update condition by the instance object of [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md). |
+| predicates | [dataSharePredicates.DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | Yes | Indicates the specified update condition by the instance object of [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md). |
 
 **Return value:**
 

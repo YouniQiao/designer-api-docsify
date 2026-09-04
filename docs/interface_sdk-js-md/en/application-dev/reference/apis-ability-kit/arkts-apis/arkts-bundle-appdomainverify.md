@@ -6,8 +6,6 @@ This module provides app domain verification info.
 
 **Since:** 13
 
-**Model restriction:** This API can be used only in the stage model.
-
 **System capability:** SystemCapability.BundleManager.AppDomainVerify
 
 **System API:** This is a system API.

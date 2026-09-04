@@ -4,8 +4,6 @@ You can use this module to create a [Context](../../../application-models/applic
 
 **Since:** 12
 
-**Model restriction:** This API can be used only in the stage model.
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## Modules to Import

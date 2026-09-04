@@ -20,8 +20,8 @@
 | [ListElement](arkts-arkui-viewmodel-listelement-i.md) | List element @interface ListElement |
 | [ListScrollToOptions](arkts-arkui-viewmodel-listscrolltooptions-i.md) | List scroll to options @interface ListScrollToOptions |
 | [Options](arkts-arkui-viewmodel-options-i.md) | Options type @interface Options |
-| [PickerElement](arkts-arkui-viewmodel-pickerelement-i.md) | The &lt;picker&gt; component supports common, date, time, and multi-column text. |
-| [SwiperElement](arkts-arkui-viewmodel-swiperelement-i.md) | The &lt;swiper&gt; component provides a swiper container. |
+| [PickerElement](arkts-arkui-viewmodel-pickerelement-i.md) | The&lt;[picker](../../apis-core-file-kit/arkts-apis/arkts-file-picker.md)&gt; component supports common, date, time, and multi-column text. |
+| [SwiperElement](arkts-arkui-viewmodel-swiperelement-i.md) | The&lt;swiper&gt; component provides a swiper container. |
 | [ViewModel](arkts-arkui-viewmodel-viewmodel-i.md) | View model @interface ViewModel |
 
 <!--Del-->

@@ -14,4 +14,4 @@ agent的应用程序相关信息。
 
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
 
-**属性类型：** _AgentAppInfo
+**类型：** _AgentAppInfo

@@ -210,9 +210,9 @@ Creates an image filter from a given image. You are advised not to use the funct
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pixelmap | image.PixelMap | Yes | Image object. |
-| srcRect | common2D.Rect \| null | No | (Optional) Pixel area of the image to be applied to the filter. This parameter is left empty by default, which means that the entire **PixelMap** area is applied. |
-| dstRect | common2D.Rect \| null | No | (Optional) Area to be rendered. This parameter is left empty by default, which means that the value is the same as that of **srcRect**. |
+| pixelmap | [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | Yes | Image object. |
+| srcRect | [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) \| null | No | (Optional) Pixel area of the image to be applied to the filter. This parameter is left empty by default, which means that the entire **PixelMap** area is applied. |
+| dstRect | [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) \| null | No | (Optional) Area to be rendered. This parameter is left empty by default, which means that the value is the same as that of **srcRect**. |
 
 **Return value:**
 

@@ -1233,7 +1233,7 @@ Obtains the sendable data from the current row. The sendable data can be passed 
 
 | Type | Description |
 | --- | --- |
-| sendableRelationalStore.ValuesBucket | Sendable data obtained for cross-thread transfer. |
+| [sendableRelationalStore.ValuesBucket](arkts-arkdata-sendablerelationalstore-valuesbucket-t.md) | Sendable data obtained for cross-thread transfer. |
 
 **Error codes:**
 

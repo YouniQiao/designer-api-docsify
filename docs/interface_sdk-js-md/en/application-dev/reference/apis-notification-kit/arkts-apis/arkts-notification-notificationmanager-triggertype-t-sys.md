@@ -14,4 +14,4 @@ Enumerates the trigger types.
 
 **System API:** This is a system API.
 
-**Property type:** _TriggerType
+**Type:** _TriggerType

@@ -12,4 +12,4 @@ Defines the metadata of a module.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
-**Property type:** _ModuleMetadata
+**Type:** _ModuleMetadata

@@ -12,4 +12,4 @@ TriggerInfo对象。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
-**属性类型：** _TriggerInfo
+**类型：** _TriggerInfo

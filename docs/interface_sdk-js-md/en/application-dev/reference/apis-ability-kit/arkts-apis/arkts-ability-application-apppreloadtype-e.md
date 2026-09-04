@@ -4,6 +4,8 @@ Enumerates the preloading types of the current application process.
 
 **Since:** 22
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## UNSPECIFIED

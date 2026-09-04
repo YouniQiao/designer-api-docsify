@@ -10,4 +10,4 @@ export type NotificationSystemLiveViewContent = _NotificationSystemLiveViewConte
 
 **系统能力：** SystemCapability.Notification.Notification
 
-**属性类型：** _NotificationSystemLiveViewContent
+**类型：** _NotificationSystemLiveViewContent

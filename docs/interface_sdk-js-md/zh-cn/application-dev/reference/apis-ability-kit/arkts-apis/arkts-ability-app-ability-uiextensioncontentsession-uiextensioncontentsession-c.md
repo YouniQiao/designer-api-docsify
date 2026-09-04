@@ -30,7 +30,7 @@ getUIExtensionWindowProxy(): uiExtension.WindowProxy
 
 | 类型 | 说明 |
 | --- | --- |
-| uiExtension.WindowProxy | UIExtensionAbility组件的宿主应用窗口代理。 |
+| [uiExtension.WindowProxy](../../apis-arkui/arkts-apis/arkts-arkui-uiextension-windowproxy-i.md) | UIExtensionAbility组件的宿主应用窗口代理。 |
 
 **错误码：**
 

@@ -108,6 +108,7 @@ struct Index {
 ```
 
 This example implements the rightmost custom component effect of [ChipGroupV2](arkts-arkui-arkui-advanced-chipgroupv2-chipgroupv2-s.md) by setting the suffix parameter.
+Since API version 26.0.0, ChipGroupV2 supports the suffix attribute.
 
 ```TypeScript
 import { ChipV2Size, ChipGroupV2, ChipGroupV2Items, ChipGroupV2IconGroupSuffix, ChipGroupV2ItemStyle, ChipGroupV2Space, ChipGroupV2Padding, ColorMetrics, LengthMetrics } from '@kit.ArkUI';
@@ -200,6 +201,7 @@ struct Index {
 ```
 
 This example uses [SymbolGlyphModifier](ts-universal-attributes-attribute-symbolglyphmodifier.md#symbolglyphmodifier) to set symbol icons for [ChipGroupV2IconGroupSuffix](arkts-arkui-arkui-advanced-chipgroupv2-chipgroupv2icongroupsuffix-s.md) and [ChipGroupV2](arkts-arkui-arkui-advanced-chipgroupv2-chipgroupv2-s.md).
+Since API version 26.0.0, ChipGroupV2IconGroupSuffix and ChipGroupV2 are added.
 
 ```TypeScript
 import { ChipV2Size, ChipGroupV2, ChipGroupV2Items, ChipGroupV2IconGroupSuffix, SymbolGlyphModifier, ChipGroupV2ItemStyle, ChipGroupV2Space, ChipGroupV2Padding, ColorMetrics } from '@kit.ArkUI';
@@ -296,6 +298,7 @@ struct Index {
 ```
 
 Classes such as [ChipGroupV2Items](arkts-arkui-arkui-advanced-chipgroupv2-chipgroupv2items-c.md), [ChipGroupV2Item](arkts-arkui-arkui-advanced-chipgroupv2-chipgroupv2item-c.md), and [ChipGroupV2ItemStyle](arkts-arkui-arkui-advanced-chipgroupv2-chipgroupv2itemstyle-c.md) are decorated with @ObservedV2, and the ChipGroupV2 component receives attribute parameters through @Param. For primitive-type attributes decorated with @Trace (such as itemSpace of ChipGroupV2Space), @Param can already observe attribute changes and trigger UI refresh without additional processing. However, for internal attributes of object-type attributes in these classes (such as the size of prefixIcon in ChipGroupV2Item), the object types themselves are not decorated with @ObservedV2, so their internal attribute changes cannot be perceived by @Param, causing the UI not to refresh automatically when internal attributes are modified. Using the makeObserved API to wrap object-type attributes can supplement deep observation capability for the internal attributes of the object. For details about the makeObserved API, see [makeObserved API: Changing Unobservable Data to Observable Data](../../../ui/state-management/arkts-new-makeObserved.md).
+The following example compares two scenarios: when the Change itemSpace button is tapped to modify the itemSpace attribute of chipGroupSpace (a primitive-type attribute decorated with @Trace, which already supports observation), the UI refreshes automatically; when the Change icon size button is tapped to modify the internal attribute for size of prefixIcon in ChipGroupV2Item (an internal attribute of an object-type attribute, which is observable when size is wrapped with UIUtils.makeObserved), the UI also refreshes automatically.
 
 ```TypeScript
 import {

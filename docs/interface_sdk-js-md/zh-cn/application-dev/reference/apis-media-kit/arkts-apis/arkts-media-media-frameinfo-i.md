@@ -36,7 +36,7 @@ image?: image.PixelMap
 
 从视频中输出缩略图的格式参数。
 
-**类型：** image.PixelMap
+**类型：** [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)
 
 **起始版本：** 23
 

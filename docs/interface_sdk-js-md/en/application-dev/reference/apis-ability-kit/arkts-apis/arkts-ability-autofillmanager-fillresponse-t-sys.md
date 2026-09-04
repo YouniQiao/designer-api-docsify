@@ -14,4 +14,4 @@ Defines the information about the response to an auto-fill request.
 
 **System API:** This is a system API.
 
-**Property type:** _AutoFillRequest.FillResponse
+**Type:** [_AutoFillRequest.FillResponse](arkts-ability-autofillrequest-fillresponse-i-sys.md)

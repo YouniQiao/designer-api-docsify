@@ -12,4 +12,4 @@ Defines the package configuration information in the **pack.info** file.
 
 **System API:** This is a system API.
 
-**Property type:** _PackInfo.PackageConfig
+**Type:** [_PackInfo.PackageConfig](arkts-ability-bundlepackinfo-packageconfig-i-sys.md)

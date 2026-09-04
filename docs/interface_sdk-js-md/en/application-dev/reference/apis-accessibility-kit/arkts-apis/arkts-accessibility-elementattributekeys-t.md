@@ -10,7 +10,7 @@ Describes the attribute name of [ElementAttributeValues](arkts-accessibility-acc
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
-**Property type:** keyof ElementAttributeValues
+**Type:** keyof ElementAttributeValues
 
 **Examples**
 

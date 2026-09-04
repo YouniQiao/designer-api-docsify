@@ -25,7 +25,7 @@ Inserts multiple data records into the database. This API uses an asynchronous c
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uri | string | Yes | URI of the data to insert. |
-| valuesBuckets | Array&lt;rdb.ValuesBucket&gt; | Yes | Data records to insert. |
+| valuesBuckets | Array&lt;[rdb.ValuesBucket](../../apis-arkdata/arkts-apis/arkts-arkdata-rdb-valuesbucket-t.md)&gt; | Yes | Data records to insert. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the number of inserted data records. |
 
 **Examples**
@@ -69,7 +69,7 @@ Inserts multiple data records into the database. This API uses a promise to retu
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uri | string | Yes | URI of the data to insert. |
-| valuesBuckets | Array&lt;rdb.ValuesBucket&gt; | Yes | Data records to insert. |
+| valuesBuckets | Array&lt;[rdb.ValuesBucket](../../apis-arkdata/arkts-apis/arkts-arkdata-rdb-valuesbucket-t.md)&gt; | Yes | Data records to insert. |
 
 **Return value:**
 
@@ -204,7 +204,7 @@ Deletes one or more data records from the database. This API uses an asynchronou
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uri | string | Yes | URI of the data to delete. |
-| predicates | dataAbility.DataAbilityPredicates | Yes | Filter criteria. You should define the processing logic when this parameter is null. |
+| predicates | [dataAbility.DataAbilityPredicates](../../apis-arkdata/arkts-apis/arkts-arkdata-dataability-dataabilitypredicates-c.md) | Yes | Filter criteria. You should define the processing logic when this parameter is null. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the number of deleted data records. |
 
 **Examples**
@@ -246,7 +246,7 @@ Deletes one or more data records from the database. This API uses a promise to r
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uri | string | Yes | URI of the data to delete. |
-| predicates | dataAbility.DataAbilityPredicates | No | Filter criteria. You should define the processing logic when this parameter is null. |
+| predicates | [dataAbility.DataAbilityPredicates](../../apis-arkdata/arkts-apis/arkts-arkdata-dataability-dataabilitypredicates-c.md) | No | Filter criteria. You should define the processing logic when this parameter is null. |
 
 **Return value:**
 
@@ -659,7 +659,7 @@ Inserts a single data record into the database. This API uses an asynchronous ca
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uri | string | Yes | URI of the data to insert. |
-| valuesBucket | rdb.ValuesBucket | Yes | Data record to insert. If this parameter is null, a blank row will be inserted. |
+| valuesBucket | [rdb.ValuesBucket](../../apis-arkdata/arkts-apis/arkts-arkdata-rdb-valuesbucket-t.md) | Yes | Data record to insert. If this parameter is null, a blank row will be inserted. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the index of the inserted data record. |
 
 **Examples**
@@ -725,7 +725,7 @@ Inserts a single data record into the database. This API uses a promise to retur
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uri | string | Yes | URI of the data to insert. |
-| valuesBucket | rdb.ValuesBucket | Yes | Data record to insert. If this parameter is null, a blank row will be inserted. |
+| valuesBucket | [rdb.ValuesBucket](../../apis-arkdata/arkts-apis/arkts-arkdata-rdb-valuesbucket-t.md) | Yes | Data record to insert. If this parameter is null, a blank row will be inserted. |
 
 **Return value:**
 
@@ -1089,7 +1089,7 @@ Queries data in the database. This API uses an asynchronous callback to return t
 | --- | --- | --- | --- |
 | uri | string | Yes | URI of the data to query. |
 | columns | Array&lt;string&gt; | Yes | Columns to query. If this parameter is null, all columns will be queried. |
-| predicates | dataAbility.DataAbilityPredicates | Yes | Filter criteria. When null is passed in, you need to customize the logic for querying data in the database. |
+| predicates | [dataAbility.DataAbilityPredicates](../../apis-arkdata/arkts-apis/arkts-arkdata-dataability-dataabilitypredicates-c.md) | Yes | Filter criteria. When null is passed in, you need to customize the logic for querying data in the database. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ResultSet](../../apis-arkdata/arkts-apis/arkts-arkdata-resultset-resultset-depr-i.md)&gt; | Yes | Callback used to return the result. |
 
 **Examples**
@@ -1212,7 +1212,7 @@ Queries data in the database. This API uses an asynchronous callback to return t
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uri | string | Yes | URI of the data to query. |
-| predicates | dataAbility.DataAbilityPredicates | Yes | Filter criteria. When null is passed in, you need to customize the logic for querying data in the database. |
+| predicates | [dataAbility.DataAbilityPredicates](../../apis-arkdata/arkts-apis/arkts-arkdata-dataability-dataabilitypredicates-c.md) | Yes | Filter criteria. When null is passed in, you need to customize the logic for querying data in the database. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ResultSet](../../apis-arkdata/arkts-apis/arkts-arkdata-resultset-resultset-depr-i.md)&gt; | Yes | Callback used to return the result. |
 
 **Examples**
@@ -1255,7 +1255,7 @@ Queries data in the database. This API uses a promise to return the result.
 | --- | --- | --- | --- |
 | uri | string | Yes | URI of the data to query. |
 | columns | Array&lt;string&gt; | No | Columns to query. If this parameter is null, all columns will be queried. |
-| predicates | dataAbility.DataAbilityPredicates | No | Filter criteria. When null is passed in, you need to customize the logic for querying data in the database. |
+| predicates | [dataAbility.DataAbilityPredicates](../../apis-arkdata/arkts-apis/arkts-arkdata-dataability-dataabilitypredicates-c.md) | No | Filter criteria. When null is passed in, you need to customize the logic for querying data in the database. |
 
 **Return value:**
 
@@ -1304,8 +1304,8 @@ Updates data in the database. This API uses an asynchronous callback to return t
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uri | string | Yes | URI of the data to update. |
-| valuesBucket | rdb.ValuesBucket | Yes | New values. |
-| predicates | dataAbility.DataAbilityPredicates | Yes | Filter criteria. You should define the processing logic when this parameter is null. |
+| valuesBucket | [rdb.ValuesBucket](../../apis-arkdata/arkts-apis/arkts-arkdata-rdb-valuesbucket-t.md) | Yes | New values. |
+| predicates | [dataAbility.DataAbilityPredicates](../../apis-arkdata/arkts-apis/arkts-arkdata-dataability-dataabilitypredicates-c.md) | Yes | Filter criteria. You should define the processing logic when this parameter is null. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the number of updated data records. |
 
 **Examples**
@@ -1354,8 +1354,8 @@ Updates data in the database. This API uses a promise to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uri | string | Yes | URI of the data to update. |
-| valuesBucket | rdb.ValuesBucket | Yes | New values. |
-| predicates | dataAbility.DataAbilityPredicates | No | Filter criteria. You should define the processing logic when this parameter is null. |
+| valuesBucket | [rdb.ValuesBucket](../../apis-arkdata/arkts-apis/arkts-arkdata-rdb-valuesbucket-t.md) | Yes | New values. |
+| predicates | [dataAbility.DataAbilityPredicates](../../apis-arkdata/arkts-apis/arkts-arkdata-dataability-dataabilitypredicates-c.md) | No | Filter criteria. You should define the processing logic when this parameter is null. |
 
 **Return value:**
 
@@ -1405,7 +1405,7 @@ Uses a custom processing logic to update data records in the database. This API 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uri | string | Yes | URI of the data to update. |
-| valuesBucket | rdb.ValuesBucket | Yes | New values. |
+| valuesBucket | [rdb.ValuesBucket](../../apis-arkdata/arkts-apis/arkts-arkdata-rdb-valuesbucket-t.md) | Yes | New values. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the number of updated data records. |
 
 **Examples**

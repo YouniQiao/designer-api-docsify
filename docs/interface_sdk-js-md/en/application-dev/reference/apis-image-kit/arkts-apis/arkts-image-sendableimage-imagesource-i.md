@@ -36,7 +36,7 @@ Images occupy a large amount of memory. When you finish using a PixelMap instanc
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | image.DecodingOptions | No | Decoding options. |
+| options | [image.DecodingOptions](arkts-image-image-decodingoptions-i.md) | No | Decoding options. |
 
 **Return value:**
 

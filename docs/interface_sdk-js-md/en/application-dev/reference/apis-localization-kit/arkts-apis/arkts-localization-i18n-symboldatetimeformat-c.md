@@ -34,7 +34,7 @@ A constructor used to create a SymbolDateTimeFormat object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| locale | Intl.Locale | No | Locale object used for formatting the date time value. The default value is the current system locale. |
+| locale | [Intl.Locale](arkts-localization-intl-locale-c.md) | No | Locale object used for formatting the date time value. The default value is the current system locale. |
 | options | [SymbolDateTimeFormatOptions](arkts-localization-i18n-symboldatetimeformatoptions-i.md) | No | Indicates the symbols used to replace. The symbols that support replacement are "AM" and "PM". |
 
 **Error codes:**
@@ -498,7 +498,7 @@ Formats a date time range to Parts.
 
 | Type | Description |
 | --- | --- |
-| Intl.DateTimeRangeFormatPart[] | Locale formatted DateTimeRangeFormatPart array. |
+| [Intl.DateTimeRangeFormatPart](../../apis-default/arkts-apis/arkts-intl-datetimerangeformatpart-i.md)[] | Locale formatted DateTimeRangeFormatPart array. |
 
 **Examples**
 
@@ -553,7 +553,7 @@ Formats a date to parts.
 
 | Type | Description |
 | --- | --- |
-| Intl.DateTimeFormatPart[] | Locale formatted DateTimeFormatPart array. |
+| [Intl.DateTimeFormatPart](../../apis-default/arkts-apis/arkts-intl-datetimeformatpart-i.md)[] | Locale formatted DateTimeFormatPart array. |
 
 **Examples**
 

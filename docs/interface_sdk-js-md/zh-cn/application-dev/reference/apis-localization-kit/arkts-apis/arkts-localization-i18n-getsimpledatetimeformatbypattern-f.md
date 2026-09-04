@@ -25,7 +25,7 @@ export function getSimpleDateTimeFormatByPattern(pattern: string, locale?: Intl.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | pattern | string | 是 | 合法的模式字符串，支持[日期字段符号表](https://www.unicode.org/reports/tr35/tr35-dates.html#Date_Field_Symbol_Table)中Field Patterns值的自由组合。同时，pattern支持传入自定义文本，文本内容以`''`标识。 |
-| locale | Intl.Locale | 否 | 区域对象。默认值：系统区域对象。 |
+| locale | [Intl.Locale](arkts-localization-intl-locale-c.md) | 否 | 区域对象。默认值：系统区域对象。 |
 
 **返回值：**
 
@@ -78,7 +78,7 @@ export function getSimpleDateTimeFormatByPattern(pattern: string, locale?: intl.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | pattern | string | 是 | 合法的模式字符串，支持[日期字段符号表](https://www.unicode.org/reports/tr35/tr35-dates.html#Date_Field_Symbol_Table)中Field Patterns值的自由组合。同时，pattern支持传入自定义文本，文本内容以`''`标识。 |
-| locale | intl.Locale | 否 | 区域对象。默认值：系统区域对象。 |
+| locale | [intl.Locale](arkts-localization-intl-locale-c.md) | 否 | 区域对象。默认值：系统区域对象。 |
 
 **返回值：**
 

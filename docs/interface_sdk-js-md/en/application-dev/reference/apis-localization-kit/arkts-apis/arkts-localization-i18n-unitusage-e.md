@@ -4,6 +4,8 @@ Enumerates unit formatting scenarios.
 
 **Since:** 23
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.Global.I18n
 
 ## AREA_LAND_AGRICULT

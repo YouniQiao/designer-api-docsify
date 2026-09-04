@@ -12,4 +12,4 @@ Represents Sendable resource-related information for cross-thread transmission, 
 
 **System capability:** SystemCapability.Global.ResourceManager
 
-**Property type:** _SendableResource
+**Type:** _SendableResource

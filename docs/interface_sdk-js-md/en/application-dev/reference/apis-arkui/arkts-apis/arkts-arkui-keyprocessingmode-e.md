@@ -4,6 +4,8 @@ Enumerates the modes for processing key events.
 
 **Since:** 15
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## FOCUS_NAVIGATION

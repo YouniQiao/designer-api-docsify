@@ -19,3 +19,4 @@ onTextSelectionChange的回调，选区内容改变时触发。
 **示例**
 
 完整示例代码参考[onTextSelectionChange](./arkts-basic-components-web-events.md#ontextselectionchange23)。
+- simpleType:

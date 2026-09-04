@@ -8,6 +8,8 @@ Enumerates the file open modes.
 
 **Substitutes:** [OpenMode](arkts-corefile-fileio-openmode-n.md)
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.FileManagement.UserFileService
 
 **System API:** This is a system API.

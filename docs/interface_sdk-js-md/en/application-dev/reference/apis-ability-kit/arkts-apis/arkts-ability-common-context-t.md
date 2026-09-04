@@ -14,4 +14,4 @@ Defines the context base class for the [stage model](../../../application-models
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
-**Property type:** _Context.default
+**Type:** _Context.default

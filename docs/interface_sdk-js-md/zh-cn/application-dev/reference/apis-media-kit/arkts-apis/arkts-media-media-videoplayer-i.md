@@ -1780,7 +1780,7 @@ audioInterruptMode?: audio.InterruptMode
 
 音频焦点模式。
 
-**类型：** audio.InterruptMode
+**类型：** [audio.InterruptMode](../../apis-audio-kit/arkts-apis/arkts-audio-audio-interruptmode-e.md)
 
 **起始版本：** 9
 

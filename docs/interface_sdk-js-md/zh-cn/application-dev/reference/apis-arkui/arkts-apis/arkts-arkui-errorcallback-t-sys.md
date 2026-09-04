@@ -14,4 +14,4 @@ declare type ErrorCallback = import('../api/@ohos.base').ErrorCallback
 
 **系统接口：** 此接口为系统接口。
 
-**属性类型：** import('../api/@ohos.base').ErrorCallback
+**类型：** import('../api/@ohos.base').ErrorCallback

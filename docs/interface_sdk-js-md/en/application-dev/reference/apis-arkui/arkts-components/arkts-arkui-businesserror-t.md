@@ -18,4 +18,4 @@ The table below describes the **ImageError** error codes. The **error** property
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** import('../api/@ohos.base').BusinessError&lt;T&gt;
+**Type:** import('../api/@ohos.base').BusinessError&lt;T&gt;

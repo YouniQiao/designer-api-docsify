@@ -12,4 +12,4 @@ Defines the connection options. It is used as an input parameter for connection 
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
-**Property type:** _ConnectOptions
+**Type:** _ConnectOptions

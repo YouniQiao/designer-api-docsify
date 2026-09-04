@@ -74,7 +74,7 @@ Extension生命周期回调，如果是connectAbility拉起的服务，会在onC
 
 | 类型 | 说明 |
 | --- | --- |
-| rpc.RemoteObject \| Promise&lt;rpc.RemoteObject&gt; | RemoteObject or Promise used to return a RemoteObject, which is used for communication between the client and server. |
+| [rpc.RemoteObject](../../apis-ipc-kit/arkts-apis/arkts-ipc-rpc-remoteobject-c.md) \| Promise&lt;[rpc.RemoteObject](../../apis-ipc-kit/arkts-apis/arkts-ipc-rpc-remoteobject-c.md)&gt; | RemoteObject or Promise used to return a RemoteObject, which is used for communication between the client and server. |
 
 **示例**
 

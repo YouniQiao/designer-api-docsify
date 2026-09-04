@@ -90,7 +90,7 @@ Clears up all data in the application file path and revokes the permissions that
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the application data is cleared up, &lt;code&gt;error&lt;/code&gt; is &lt;code&gt;undefined&lt;/code&gt;; otherwise, &lt;code&gt;error&lt;/code&gt; is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the application data is cleared up,&lt;code&gt;error&lt;/code&gt; is &lt;code&gt;undefined&lt;/code&gt;; otherwise, &lt;code&gt;error&lt;/code&gt; is an error object. |
 
 **Error codes:**
 
@@ -245,7 +245,7 @@ This API is used to manage multiple windows in an application that contains seve
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;window.WindowStage&gt;&gt; | Promise used to return all WindowStage objects in the current application process. |
+| Promise&lt;Array&lt;[window.WindowStage](../../apis-arkui/arkts-apis/arkts-arkui-window-windowstage-i.md)&gt;&gt; | Promise used to return all WindowStage objects in the current application process. |
 
 **Examples**
 
@@ -989,7 +989,7 @@ unregisters a listener for system configuration updated.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | systemConfiguration.UpdatedCallback | No | The system configuration updated callback. If a defined callback is passed in, the listener for that callback is unregistered. If no value is passed in, all the listeners for the corresponding event are unregistered. |
+| callback | [systemConfiguration.UpdatedCallback](arkts-ability-systemconfiguration-updatedcallback-i.md) | No | The system configuration updated callback. If a defined callback is passed in, the listener for that callback is unregistered. If no value is passed in, all the listeners for the corresponding event are unregistered. |
 
 ## on('abilityLifecycle')
 
@@ -1249,7 +1249,7 @@ Registers a listener for system configuration updated.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | systemConfiguration.UpdatedCallback | Yes | The system configuration updated callback. |
+| callback | [systemConfiguration.UpdatedCallback](arkts-ability-systemconfiguration-updatedcallback-i.md) | Yes | The system configuration updated callback. |
 
 ## restartApp
 
@@ -1368,7 +1368,7 @@ Sets the dark/light color mode for the application. This API can be called only 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| colorMode | ConfigurationConstant.ColorMode | Yes | Dark/light color mode, which can be dark mode, light mode, or follow-system mode (default). |
+| colorMode | [ConfigurationConstant.ColorMode](arkts-ability-configurationconstant-colormode-e.md) | Yes | Dark/light color mode, which can be dark mode, light mode, or follow-system mode (default). |
 
 **Error codes:**
 
@@ -1601,7 +1601,7 @@ This API can be properly called only on phones and 2-in-1 devices. If it is call
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isSupported | boolean | Yes | Whether process cache is supported. The value &lt;code&gt;true&lt;/code&gt; means that process cache is supported, and &lt;code&gt;false&lt;/code&gt; means the opposite. |
+| isSupported | boolean | Yes | Whether process cache is supported. The value&lt;code&gt;true&lt;/code&gt; means that process cache is supported, and &lt;code&gt;false&lt;/code&gt; means the opposite. |
 
 **Error codes:**
 

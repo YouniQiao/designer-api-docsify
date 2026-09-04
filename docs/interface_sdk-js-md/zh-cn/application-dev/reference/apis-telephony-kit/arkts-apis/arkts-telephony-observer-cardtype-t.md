@@ -10,4 +10,4 @@ type CardType = sim.CardType
 
 **系统能力：** SystemCapability.Telephony.StateRegistry
 
-**属性类型：** sim.CardType
+**类型：** [sim.CardType](arkts-telephony-sim-cardtype-e.md)

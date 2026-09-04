@@ -14,4 +14,4 @@ Describes the properties of the voice content of the received notification.
 
 **System API:** This is a system API.
 
-**Property type:** _VoiceContent
+**Type:** _VoiceContent

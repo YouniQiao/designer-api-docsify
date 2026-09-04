@@ -12,4 +12,4 @@ Defines the types of the key and value in a KV pair. This type is not multi-thre
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core
 
-**Property type:** Record&lt;string, [ValueType](arkts-arkdata-valuetype-t.md) | Uint8Array | null&gt;
+**Type:** Record&lt;string, [ValueType](arkts-arkdata-valuetype-t.md) | Uint8Array | null&gt;

@@ -14,4 +14,4 @@ Defines the context environment for the [ExtensionAbility](arkts-ability-app-abi
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
-**Property type:** _ExtensionContext.default
+**Type:** _ExtensionContext.default

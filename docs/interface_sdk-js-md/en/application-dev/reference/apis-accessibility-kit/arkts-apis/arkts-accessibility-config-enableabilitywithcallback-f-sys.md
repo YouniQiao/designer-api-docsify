@@ -35,7 +35,7 @@ When the accessibility extension process is abnormally disconnected, the onDisco
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the accessibility extension ability, in the format of 'bundleName/abilityName'. |
-| capability | Array&lt;accessibility.Capability&gt; | Yes | Capabilities of the auxiliary extension ability. |
+| capability | Array&lt;[accessibility.Capability](arkts-accessibility-accessibility-capability-t.md)&gt; | Yes | Capabilities of the auxiliary extension ability. |
 | connectCallback | [ConnectCallback](arkts-accessibility-config-connectcallback-i-sys.md) | Yes | Callback invoked when an accessibility extension app is disconnected, used to listen for disconnection events of the accessibility extension. |
 
 **Return value:**

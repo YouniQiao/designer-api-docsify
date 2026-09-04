@@ -12,6 +12,6 @@ export type ResponseHeaders = {
 
 **系统能力：** SystemCapability.Communication.NetStack
 
-**属性类型：** {
+**类型：** {
     [k: string]: string | string[] | undefined;
   }

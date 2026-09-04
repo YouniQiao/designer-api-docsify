@@ -14,4 +14,4 @@ declare type DataSyncOptions = import('../api/@ohos.data.unifiedDataChannel').de
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-**属性类型：** import('../api/@ohos.data.unifiedDataChannel').default.GetDataParams
+**类型：** import('../api/@ohos.data.unifiedDataChannel').default.GetDataParams

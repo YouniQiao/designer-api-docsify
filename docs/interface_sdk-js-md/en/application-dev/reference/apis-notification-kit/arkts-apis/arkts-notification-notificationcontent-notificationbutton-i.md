@@ -18,7 +18,7 @@ icons?: Array<image.PixelMap>
 
 List of button icons, corresponding one-to-one with **names**, with each icon displayed on its corresponding button. A maximum of 3 icons is supported. The total bytes of icon pixels does not exceed 192 KB (the total bytes of icon pixels is obtained through getPixelBytesNumber). It is recommended that the icon pixel dimensions be 128 x 128. The value defaults to empty. This parameter is mutually exclusive with **iconsResource**; only one of them can be used.
 
-**Type:** Array&lt;image.PixelMap&gt;
+**Type:** Array&lt;[image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)&gt;
 
 **Since:** 11
 

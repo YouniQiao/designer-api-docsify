@@ -27,7 +27,7 @@ Send execute result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | instanceId | number | Yes | The insight intent instance ID. It is from InsightIntentExecutor.context.instanceId. |
-| result | insightIntent.ExecuteResult | Yes | The result of insight intent execution. |
+| result | [insightIntent.ExecuteResult](arkts-ability-insightintent-executeresult-i.md) | Yes | The result of insight intent execution. |
 
 **Return value:**
 

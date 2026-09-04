@@ -41,6 +41,7 @@ hilog.flush();
 ```
 
 Log result:
+Sandbox log output.
 
 ```TypeScript
 05-15 16:57:04.238 40518 40518 I A00001/testTag: sandbox log to share sandbox only

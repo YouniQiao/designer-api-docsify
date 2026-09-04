@@ -4,6 +4,8 @@ Define the resource types of the application.
 
 **Since:** 24
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 ## PSS_MEMORY

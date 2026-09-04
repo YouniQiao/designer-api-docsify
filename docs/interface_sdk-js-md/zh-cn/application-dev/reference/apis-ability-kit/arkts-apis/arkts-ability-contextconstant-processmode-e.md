@@ -4,6 +4,8 @@ UIAbility启动后的进程模式。ProcessMode作为[StartOptions](arkts-abilit
 
 **起始版本：** 12
 
+**模型约束：** 此接口仅可在Stage模型下使用。
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## NEW_PROCESS_ATTACH_TO_PARENT

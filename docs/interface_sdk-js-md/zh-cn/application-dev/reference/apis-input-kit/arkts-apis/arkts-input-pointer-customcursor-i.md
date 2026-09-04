@@ -48,7 +48,7 @@ pixelMap: image.PixelMap
 
 自定义光标。最小限制为资源图本身的最小限制。最大限制为256 x 256px。
 
-**类型：** image.PixelMap
+**类型：** [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)
 
 **起始版本：** 15
 

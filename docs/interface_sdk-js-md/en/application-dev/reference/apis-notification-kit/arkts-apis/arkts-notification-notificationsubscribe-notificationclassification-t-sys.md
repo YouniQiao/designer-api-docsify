@@ -14,4 +14,4 @@ Describes the notification classification information.
 
 **System API:** This is a system API.
 
-**Property type:** _NotificationClassification
+**Type:** _NotificationClassification

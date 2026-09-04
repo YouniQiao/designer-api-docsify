@@ -38,7 +38,7 @@ iconBackgroundSystemMaterial?: uiMaterial.Material
 
 IconGroupSuffix background system material.
 
-**Type:** uiMaterial.Material
+**Type:** [uiMaterial.Material](arkts-arkui-uimaterial-material-c.md)
 
 **Since:** 26.0.0
 

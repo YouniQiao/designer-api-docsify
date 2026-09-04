@@ -14,4 +14,4 @@ AgentCard中的功能表示特定的skills、服务和功能agent可以在系统
 
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
 
-**属性类型：** _AgentCapabilities
+**类型：** _AgentCapabilities

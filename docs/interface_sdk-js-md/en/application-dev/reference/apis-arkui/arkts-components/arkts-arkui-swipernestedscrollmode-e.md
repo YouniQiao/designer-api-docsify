@@ -4,6 +4,8 @@ Enumerates the nested scrolling modes of the **Swiper** component and its parent
 
 **Since:** 11
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## SELF_ONLY

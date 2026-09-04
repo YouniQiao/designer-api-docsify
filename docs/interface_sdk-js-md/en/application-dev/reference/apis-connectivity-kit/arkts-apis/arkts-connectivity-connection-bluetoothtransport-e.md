@@ -4,6 +4,8 @@ Enum for the transport of a remote device
 
 **Since:** 10
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## TRANSPORT_BR_EDR

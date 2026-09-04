@@ -14,4 +14,4 @@ Defines the AppClonePreference information.
 
 **System API:** This is a system API.
 
-**Property type:** _BundleInfo.AppClonePreference
+**Type:** [_BundleInfo.AppClonePreference](arkts-ability-bundleinfo-appclonepreference-i-sys.md)

@@ -430,7 +430,7 @@ scrollBar(status: Optional<BarState>): ArcListAttribute
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| status | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[BarState](arkts-arkui-barstate-e.md)&gt; | 是 | 滚动条状态。默认值：BarState.Auto |
+| status | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[BarState](arkts-arkui-barstate-e.md)&gt; | 是 | [滚动条状态。默认值：BarState.Auto](../arkts-components/arkts-arkui-navigationmode-e.md) |
 
 **返回值：**
 

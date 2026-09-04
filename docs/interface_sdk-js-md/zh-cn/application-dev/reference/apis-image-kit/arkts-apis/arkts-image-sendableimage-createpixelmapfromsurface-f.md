@@ -23,7 +23,7 @@ Creates a PixelMap object from surface id.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | surfaceId | string | 是 | surface id. |
-| region | image.Region | 是 | The region to surface. |
+| region | [image.Region](arkts-image-image-region-i.md) | 是 | The region to surface. |
 
 **返回值：**
 

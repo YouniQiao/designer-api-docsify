@@ -12,4 +12,4 @@ Defines the ability information of the module.
 
 **System API:** This is a system API.
 
-**Property type:** _PackInfo.ModuleAbilityInfo
+**Type:** [_PackInfo.ModuleAbilityInfo](arkts-ability-bundlepackinfo-moduleabilityinfo-i-sys.md)

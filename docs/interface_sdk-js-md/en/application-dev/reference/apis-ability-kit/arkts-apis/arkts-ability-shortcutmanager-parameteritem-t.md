@@ -10,4 +10,4 @@ Defines the custom data in the shortcut configuration.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Launcher
 
-**Property type:** _ParameterItem
+**Type:** _ParameterItem

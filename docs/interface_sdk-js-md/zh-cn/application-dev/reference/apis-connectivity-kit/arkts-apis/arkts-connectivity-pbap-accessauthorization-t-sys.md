@@ -12,4 +12,4 @@ type AccessAuthorization = constant.AccessAuthorization
 
 **系统接口：** 此接口为系统接口。
 
-**属性类型：** constant.AccessAuthorization
+**类型：** [constant.AccessAuthorization](arkts-connectivity-constant-accessauthorization-e-sys.md)

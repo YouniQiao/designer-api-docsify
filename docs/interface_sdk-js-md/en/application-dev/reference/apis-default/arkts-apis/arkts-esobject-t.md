@@ -4,4 +4,4 @@
 type ESObject = any
 ```
 
-**Property type:** any
+**Type:** any

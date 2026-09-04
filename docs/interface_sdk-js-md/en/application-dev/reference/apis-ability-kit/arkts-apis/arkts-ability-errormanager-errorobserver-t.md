@@ -12,4 +12,4 @@ Defines the ErrorObserver module.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
-**Property type:** _ErrorObserver.default
+**Type:** _ErrorObserver.default

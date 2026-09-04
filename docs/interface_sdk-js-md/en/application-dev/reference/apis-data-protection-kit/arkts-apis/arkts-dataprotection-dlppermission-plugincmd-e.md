@@ -4,6 +4,8 @@ Enumerates command codes for the plugin of an enterprise security application.
 
 **Since:** 26.1.0
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.Security.DataLossPrevention
 
 ## CMD_BASE_INSTALL_PLUGIN

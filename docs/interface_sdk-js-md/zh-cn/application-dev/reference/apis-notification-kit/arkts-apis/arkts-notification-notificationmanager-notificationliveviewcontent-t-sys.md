@@ -12,4 +12,4 @@ export type NotificationLiveViewContent = _NotificationLiveViewContent
 
 **系统接口：** 此接口为系统接口。
 
-**属性类型：** _NotificationLiveViewContent
+**类型：** _NotificationLiveViewContent

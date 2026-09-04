@@ -6,8 +6,6 @@ Unlike the system's auto-save feature that triggers during page transitions, thi
 
 **Since:** 11
 
-**Model restriction:** This API can be used only in the stage model.
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 ## Modules to Import

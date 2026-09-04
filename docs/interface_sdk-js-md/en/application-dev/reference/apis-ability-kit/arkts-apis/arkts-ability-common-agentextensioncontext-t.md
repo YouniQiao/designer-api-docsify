@@ -14,4 +14,4 @@ The context of the agent service ability.
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
-**Property type:** _AgentExtensionContext
+**Type:** _AgentExtensionContext

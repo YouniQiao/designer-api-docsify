@@ -14,4 +14,4 @@ The navigation destination information.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** import('../api/@ohos.arkui.observer').default.NavDestinationInfo
+**Type:** import('../api/@ohos.arkui.observer').default.NavDestinationInfo

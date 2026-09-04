@@ -2,8 +2,6 @@
 
 气泡关闭的信息。
 
-@interface DismissPopupAction
-
 **起始版本：** 12
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full

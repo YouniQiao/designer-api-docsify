@@ -42,6 +42,8 @@ Create TextClock component.
 ## Examples
 
 This example demonstrates the basic usage of the TextClock component, setting the clock display format using the [format](#format) attribute.
+Clicking "start TextClock" triggers the callback to invoke TextClockController and initiate the clock. Clicking "stop TextClock" to invoke TextClockController and stop the clock.
+This example uses the [onDateChange](#ondatechange) callback to update accumulateTime whenever the text clock refreshes.
 
 ```TypeScript
 @Entry

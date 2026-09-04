@@ -12,4 +12,4 @@ Describes the properties of the application that the permission to send notifica
 
 **System API:** This is a system API.
 
-**Property type:** _EnabledNotificationCallbackData
+**Type:** _EnabledNotificationCallbackData

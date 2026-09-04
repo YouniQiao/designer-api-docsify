@@ -14,4 +14,4 @@ AgentHostProxy是连接到Agent的客户端的代理对象，通过它可以与a
 
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
 
-**属性类型：** _AgentHostProxy
+**类型：** _AgentHostProxy

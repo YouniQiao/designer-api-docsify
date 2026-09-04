@@ -4,6 +4,8 @@ Represents the Bluetooth protocol type.
 
 **Since:** 20
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## GATT

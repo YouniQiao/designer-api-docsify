@@ -4,6 +4,8 @@ Enumerates the listening types of tree view nodes.
 
 **Since:** 10
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## NODE_CLICK

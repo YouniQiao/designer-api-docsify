@@ -14,4 +14,4 @@ export type AbilityStageContext = _AbilityStageContext.default
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
-**属性类型：** _AbilityStageContext.default
+**类型：** _AbilityStageContext.default

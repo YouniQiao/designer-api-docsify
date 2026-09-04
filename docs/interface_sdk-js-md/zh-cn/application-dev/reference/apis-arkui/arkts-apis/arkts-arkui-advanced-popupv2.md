@@ -24,6 +24,7 @@ import { PopupV2, PopupV2InitInfo, PopupV2Button } from '@kit.ArkUI';
 ## 示例
 
 该示例通过配置[titleModifier](arkts-arkui-arkui-advanced-popupv2-popupv2initinfo-i.md)、[messageModifier](arkts-arkui-arkui-advanced-popupv2-popupv2initinfo-i.md)、[PopupV2Button](arkts-arkui-arkui-advanced-popupv2-popupv2button-i.md)实现气泡样式。
+从API版本26.0.0开始，新增titleModifier、messageModifier、PopupV2Button。
 
 ```TypeScript
 // xxx.ets
@@ -74,6 +75,7 @@ struct PopupExample {
 ```
 
 该示例通过配置[direction](arkts-arkui-arkui-advanced-popupv2-popupv2initinfo-i.md)实现镜像布局效果，适用于国际化场景下的RTL（从右到左）布局需求。
+从API版本26.0.0开始，新增direction参数。
 
 ```TypeScript
 // xxx.ets
@@ -124,6 +126,7 @@ struct PopupExample {
 ```
 
 该示例通过配置[maxWidth](arkts-arkui-arkui-advanced-popupv2-popupv2initinfo-i.md)实现自定义宽度效果，适用于内容较长的消息通知等需要调整显示宽度的场景。
+从API版本26.0.0开始，新增maxWidth参数。
 
 ```TypeScript
 // xxx.ets

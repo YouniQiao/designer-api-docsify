@@ -14,4 +14,4 @@ declare type IntentionCode = import('../api/@ohos.multimodalInput.intentionCode'
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-**属性类型：** import('../api/@ohos.multimodalInput.intentionCode').IntentionCode
+**类型：** import('../api/@ohos.multimodalInput.intentionCode').IntentionCode

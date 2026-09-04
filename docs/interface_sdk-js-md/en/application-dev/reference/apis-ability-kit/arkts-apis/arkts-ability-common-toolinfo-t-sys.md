@@ -14,4 +14,4 @@ Define basic information about the CLI tool.
 
 **System API:** This is a system API.
 
-**Property type:** _ToolInfo
+**Type:** _ToolInfo

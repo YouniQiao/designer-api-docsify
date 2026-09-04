@@ -12,4 +12,4 @@ Defines the data structure reported when the first frame rendering of the UIAbil
 
 **System API:** This is a system API.
 
-**Property type:** _AbilityFirstFrameStateData.default
+**Type:** _AbilityFirstFrameStateData.default

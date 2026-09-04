@@ -25,7 +25,7 @@ function exportVCard(context: Context, predicates: dataSharePredicates.DataShare
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | context | Context | 是 | 应用上下文。 |
-| predicates | dataSharePredicates.DataSharePredicates | 是 | 查询语句。 |
+| predicates | [dataSharePredicates.DataSharePredicates](../../apis-arkdata/arkts-apis/arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | 是 | 查询语句。 |
 | options | [VCardBuilderOptions](arkts-telephony-vcard-vcardbuilderoptions-i.md) | 是 | VCard版本与编码类型。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数。生成的 VCF(vcard file)文件地址。 |
 
@@ -84,7 +84,7 @@ function exportVCard(context: Context, predicates: dataSharePredicates.DataShare
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | context | Context | 是 | 应用上下文。 |
-| predicates | dataSharePredicates.DataSharePredicates | 是 | 查询语句。 |
+| predicates | [dataSharePredicates.DataSharePredicates](../../apis-arkdata/arkts-apis/arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | 是 | 查询语句。 |
 | options | [VCardBuilderOptions](arkts-telephony-vcard-vcardbuilderoptions-i.md) | 否 | VCard版本与编码类型。 |
 
 **返回值：**
@@ -150,7 +150,7 @@ function exportVCard(context: Context, predicates: dataSharePredicates.DataShare
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | context | Context | 是 | 应用上下文。 |
-| predicates | dataSharePredicates.DataSharePredicates | 是 | 查询语句。 |
+| predicates | [dataSharePredicates.DataSharePredicates](../../apis-arkdata/arkts-apis/arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | 是 | 查询语句。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数。生成的 VCF(vcard file)文件地址。 |
 
 **错误码：**

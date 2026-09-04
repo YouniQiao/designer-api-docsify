@@ -1523,6 +1523,7 @@ inflateBackInit()函数分配的所有内存都被释放。使用Promise异步�
 **示例**
 
 参考[inflateBack](#inflateback)中的示例代码。
+- simpleType:
 
 ## inflateBackInit
 
@@ -1562,6 +1563,7 @@ inflateBackInit(strm: ZStream, windowBits: number, window: ArrayBuffer): Promise
 **示例**
 
 参考[inflateBack](#inflateback)中的示例代码。
+- simpleType:
 
 ## inflateCodesUsed
 

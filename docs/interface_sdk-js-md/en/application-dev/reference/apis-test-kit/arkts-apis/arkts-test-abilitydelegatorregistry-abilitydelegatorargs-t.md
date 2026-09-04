@@ -12,4 +12,4 @@ Represents the **AbilityDelegatorArgs** module.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
-**Property type:** _AbilityDelegatorArgs
+**Type:** _AbilityDelegatorArgs

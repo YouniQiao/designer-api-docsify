@@ -14,4 +14,4 @@ Defines the context environment for the [AbilityStage](arkts-ability-app-ability
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
-**Property type:** _AbilityStageContext.default
+**Type:** _AbilityStageContext.default

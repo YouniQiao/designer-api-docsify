@@ -10,7 +10,7 @@ The process data.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
-**Property type:** _ProcessData.default
+**Type:** _ProcessData.default
 
 **Examples**
 

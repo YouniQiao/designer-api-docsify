@@ -43,7 +43,7 @@ static centerX(rect: common2D.Rect): number
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| rect | common2D.Rect | 是 | 需要获取中心x轴坐标的矩形对象。 |
+| rect | [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) | 是 | 需要获取中心x轴坐标的矩形对象。 |
 
 **返回值：**
 
@@ -76,7 +76,7 @@ static centerY(rect: common2D.Rect): number
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| rect | common2D.Rect | 是 | 需要获取中心y轴坐标的矩形对象。 |
+| rect | [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) | 是 | 需要获取中心y轴坐标的矩形对象。 |
 
 **返回值：**
 
@@ -109,8 +109,8 @@ static contains(rect: common2D.Rect, other: common2D.Rect): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| rect | common2D.Rect | 是 | 用于判断是否包含其他矩形的矩形对象。 |
-| other | common2D.Rect | 是 | 判断是否被包含的矩形对象。 |
+| rect | [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) | 是 | 用于判断是否包含其他矩形的矩形对象。 |
+| other | [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) | 是 | 判断是否被包含的矩形对象。 |
 
 **返回值：**
 
@@ -145,7 +145,7 @@ static contains(rect: common2D.Rect, left: number, top: number, right: number, b
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| rect | common2D.Rect | 是 | 用于判断是否包含由左上右下坐标组成的矩形的原矩形对象。 |
+| rect | [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) | 是 | 用于判断是否包含由左上右下坐标组成的矩形的原矩形对象。 |
 | left | number | 是 | 矩形的左上角x轴坐标，该参数为浮点数。0表示坐标原点，负数表示位于坐标原点左侧，正数表示位于坐标原点右侧。单位为物理像素px。 |
 | top | number | 是 | 矩形的左上角y轴坐标，该参数为浮点数。0表示坐标原点，负数表示位于坐标原点上侧，正数表示位于坐标原点下侧。单位为物理像素px。 |
 | right | number | 是 | 矩形的右下角x轴坐标，该参数为浮点数。0表示坐标原点，负数表示位于坐标原点左侧，正数表示位于坐标原点右侧。单位为物理像素px。 |
@@ -183,7 +183,7 @@ static contains(rect: common2D.Rect, x: number, y: number): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| rect | common2D.Rect | 是 | 用于判断是否包含指定点的原矩形对象。 |
+| rect | [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) | 是 | 用于判断是否包含指定点的原矩形对象。 |
 | x | number | 是 | 要判断点的x轴坐标，该参数为浮点数。0表示坐标原点，负数表示位于坐标原点左侧，正数表示位于坐标原点右侧。单位为物理像素px。 |
 | y | number | 是 | 要判断点的y轴坐标，该参数为浮点数。0表示坐标原点，负数表示位于坐标原点上侧，正数表示位于坐标原点下侧。单位为物理像素px。 |
 
@@ -219,7 +219,7 @@ static getHeight(rect: common2D.Rect): number
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| rect | common2D.Rect | 是 | 需要获取高度的矩形对象。 |
+| rect | [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) | 是 | 需要获取高度的矩形对象。 |
 
 **返回值：**
 
@@ -252,7 +252,7 @@ static getWidth(rect: common2D.Rect): number
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| rect | common2D.Rect | 是 | 需要获取宽度的矩形对象。 |
+| rect | [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) | 是 | 需要获取宽度的矩形对象。 |
 
 **返回值：**
 
@@ -286,7 +286,7 @@ static inset(rect: common2D.Rect, left: number, top: number, right: number, bott
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| rect | common2D.Rect | 是 | 需要进行边界调整的原矩形对象。 |
+| rect | [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) | 是 | 需要进行边界调整的原矩形对象。 |
 | left | number | 是 | 添加到矩形左边界的值（矩形左上角x轴坐标），该参数为浮点数。0表示不进行任何运算，正数表示进行相加运算，负数表示相减运算。单位为物理像素px。 |
 | top | number | 是 | 添加到矩形上边界的值（矩形左上角y轴坐标），该参数为浮点数。0表示不进行任何运算，正数表示进行相加运算，负数表示相减运算。单位为物理像素px。 |
 | right | number | 是 | 添加到矩形右边界的值（矩形右下角x轴坐标），该参数为浮点数。0表示不进行任何运算，正数表示进行相加运算，负数表示相减运算。单位为物理像素px。 |
@@ -321,8 +321,8 @@ static intersect(rect: common2D.Rect, other: common2D.Rect): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| rect | common2D.Rect | 是 | 用于计算交集的原矩形。 |
-| other | common2D.Rect | 是 | 用于计算交集的另一个矩形。 |
+| rect | [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) | 是 | 用于计算交集的原矩形。 |
+| other | [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) | 是 | 用于计算交集的另一个矩形。 |
 
 **返回值：**
 
@@ -361,7 +361,7 @@ static isEmpty(rect: common2D.Rect): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| rect | common2D.Rect | 是 | 用于判断是否为空的矩形对象。 |
+| rect | [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) | 是 | 用于判断是否为空的矩形对象。 |
 
 **返回值：**
 
@@ -398,8 +398,8 @@ static isEqual(rect: common2D.Rect, other: common2D.Rect): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| rect | common2D.Rect | 是 | 需要判断是否相等的原矩形。 |
-| other | common2D.Rect | 是 | 需要判断是否相等的另一个矩形。 |
+| rect | [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) | 是 | 需要判断是否相等的原矩形。 |
+| other | [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) | 是 | 需要判断是否相等的另一个矩形。 |
 
 **返回值：**
 
@@ -434,8 +434,8 @@ static isIntersect(rect: common2D.Rect, other: common2D.Rect): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| rect | common2D.Rect | 是 | 用于判断是否相交的原矩形。 |
-| other | common2D.Rect | 是 | 用于判断是否相交的另一个矩形。 |
+| rect | [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) | 是 | 用于判断是否相交的原矩形。 |
+| other | [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) | 是 | 用于判断是否相交的另一个矩形。 |
 
 **返回值：**
 
@@ -470,13 +470,13 @@ static makeCopy(src: common2D.Rect): common2D.Rect
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| src | common2D.Rect | 是 | 用于拷贝的矩形。 |
+| src | [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) | 是 | 用于拷贝的矩形。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| common2D.Rect | 创建的新矩形。 |
+| [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) | 创建的新矩形。 |
 
 **示例**
 
@@ -507,7 +507,7 @@ static makeEmpty(): common2D.Rect
 
 | 类型 | 说明 |
 | --- | --- |
-| common2D.Rect | 创建的矩形对象。 |
+| [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) | 创建的矩形对象。 |
 
 **示例**
 
@@ -542,7 +542,7 @@ static makeLtrb(left: number, top: number, right: number, bottom: number): commo
 
 | 类型 | 说明 |
 | --- | --- |
-| common2D.Rect | 创建的矩形。 |
+| [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) | 创建的矩形。 |
 
 **示例**
 
@@ -568,7 +568,7 @@ static offset(rect: common2D.Rect, dx: number, dy: number): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| rect | common2D.Rect | 是 | 发生平移的矩形区域。 |
+| rect | [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) | 是 | 发生平移的矩形区域。 |
 | dx | number | 是 | 水平方向平移的距离，该参数为浮点数。0表示不平移，负数表示向左平移，正数表示向右平移。单位为物理像素px。 |
 | dy | number | 是 | 竖直方向平移的距离，该参数为浮点数。0表示不平移，负数表示向上平移，正数表示向下平移。单位为物理像素px。 |
 
@@ -601,7 +601,7 @@ static offsetTo(rect: common2D.Rect, newLeft: number, newTop: number): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| rect | common2D.Rect | 是 | 发生平移的矩形区域。 |
+| rect | [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) | 是 | 发生平移的矩形区域。 |
 | newLeft | number | 是 | 要平移到的对应位置的x轴坐标，该参数为浮点数。0表示坐标原点，负数表示位于坐标原点左侧，正数表示位于坐标原点右侧。单位为物理像素px。 |
 | newTop | number | 是 | 要平移到的对应位置的y轴坐标，该参数为浮点数。0表示坐标原点，负数表示位于坐标原点上侧，正数表示位于坐标原点下侧。单位为物理像素px。 |
 
@@ -634,7 +634,7 @@ static setEmpty(rect: common2D.Rect): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| rect | common2D.Rect | 是 | 用于设置为空的矩形对象。 |
+| rect | [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) | 是 | 用于设置为空的矩形对象。 |
 
 **示例**
 
@@ -665,7 +665,7 @@ static setLtrb(rect: common2D.Rect, left: number, top: number, right: number, bo
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| rect | common2D.Rect | 是 | 需要更新边界值的原矩形对象。 |
+| rect | [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) | 是 | 需要更新边界值的原矩形对象。 |
 | left | number | 是 | 矩形的左上角x轴坐标，该参数为浮点数。0表示坐标原点，负数表示位于坐标原点左侧，正数表示位于坐标原点右侧。单位为物理像素px。 |
 | top | number | 是 | 矩形的左上角y轴坐标，该参数为浮点数。0表示坐标原点，负数表示位于坐标原点上侧，正数表示位于坐标原点下侧。单位为物理像素px。 |
 | right | number | 是 | 矩形的右下角x轴坐标，该参数为浮点数。0表示坐标原点，负数表示位于坐标原点左侧，正数表示位于坐标原点右侧。单位为物理像素px。 |
@@ -700,8 +700,8 @@ static setRect(rect: common2D.Rect, other: common2D.Rect): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| rect | common2D.Rect | 是 | 需要被赋值的原矩形对象。 |
-| other | common2D.Rect | 是 | 用于赋值的矩形。 |
+| rect | [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) | 是 | 需要被赋值的原矩形对象。 |
+| other | [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) | 是 | 用于赋值的矩形。 |
 
 **示例**
 
@@ -735,7 +735,7 @@ static sort(rect: common2D.Rect): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| rect | common2D.Rect | 是 | 待进行边界排序的矩形对象。 |
+| rect | [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) | 是 | 待进行边界排序的矩形对象。 |
 
 **示例**
 
@@ -766,8 +766,8 @@ static union(rect: common2D.Rect, other: common2D.Rect): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| rect | common2D.Rect | 是 | 用于计算并集的原矩形。 |
-| other | common2D.Rect | 是 | 用于计算并集的另一个矩形。 |
+| rect | [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) | 是 | 用于计算并集的原矩形。 |
+| other | [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) | 是 | 用于计算并集的另一个矩形。 |
 
 **示例**
 

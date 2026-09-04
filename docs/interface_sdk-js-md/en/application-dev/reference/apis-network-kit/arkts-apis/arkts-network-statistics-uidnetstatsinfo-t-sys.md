@@ -12,6 +12,6 @@ export type UidNetStatsInfo = {
 
 **System API:** This is a system API.
 
-**Property type:** {
+**Type:** {
     [uid: number]: NetStatsInfo;
   }

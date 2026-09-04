@@ -311,7 +311,7 @@ pixelMap: image.PixelMap
 
 PixelMap内容。对此属性的修改无效，如需刷新属性值，请使用[addEntry](#addentry)。
 
-**类型：** image.PixelMap
+**类型：** [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)
 
 **起始版本：** 9
 

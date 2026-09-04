@@ -36,7 +36,7 @@ raw?: image.Image
 
 Raw image.
 
-**类型：** image.Image
+**类型：** [image.Image](../../apis-image-kit/arkts-apis/arkts-image-image-image-i.md)
 
 **起始版本：** 12
 

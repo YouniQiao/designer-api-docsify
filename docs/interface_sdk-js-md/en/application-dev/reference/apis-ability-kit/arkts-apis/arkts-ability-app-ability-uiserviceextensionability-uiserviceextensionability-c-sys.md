@@ -243,7 +243,7 @@ Called when a window is created for the [UIServiceExtensionAbility](arkts-abilit
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| window | window.Window | Yes | Window object created. |
+| window | [window.Window](../../apis-arkui/arkts-apis/arkts-arkui-window-window-i.md) | Yes | Window object created. |
 
 **Examples**
 
@@ -278,7 +278,7 @@ Called when a window will be created for the [UIServiceExtensionAbility](arkts-a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | window.ExtensionWindowConfig | Yes | Window configuration information. |
+| config | [window.ExtensionWindowConfig](../../apis-arkui/arkts-apis/arkts-arkui-window-extensionwindowconfig-i-sys.md) | Yes | Window configuration information. |
 
 **Examples**
 

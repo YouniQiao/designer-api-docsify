@@ -14,4 +14,4 @@ Defines the display level mode for the dialog box.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** import('../api/@ohos.promptAction').LevelMode
+**Type:** import('../api/@ohos.promptAction').LevelMode

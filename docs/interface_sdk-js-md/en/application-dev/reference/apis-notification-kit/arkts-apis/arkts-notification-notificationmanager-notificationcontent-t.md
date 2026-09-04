@@ -10,4 +10,4 @@ Describes the notification content.
 
 **System capability:** SystemCapability.Notification.Notification
 
-**Property type:** _NotificationContent
+**Type:** _NotificationContent

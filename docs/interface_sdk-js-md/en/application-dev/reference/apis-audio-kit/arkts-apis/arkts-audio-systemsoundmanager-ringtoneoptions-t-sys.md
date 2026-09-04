@@ -12,4 +12,4 @@ Interface for ringtone options.
 
 **System API:** This is a system API.
 
-**Property type:** _RingtoneOptions
+**Type:** _RingtoneOptions

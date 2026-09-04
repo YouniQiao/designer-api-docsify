@@ -48,7 +48,7 @@ notificationKey: notificationSubscribe.NotificationKey
 
 通知信息，包含通知ID和通知标签。
 
-**类型：** notificationSubscribe.NotificationKey
+**类型：** [notificationSubscribe.NotificationKey](arkts-notification-notificationsubscribe-notificationkey-i-sys.md)
 
 **起始版本：** 11
 

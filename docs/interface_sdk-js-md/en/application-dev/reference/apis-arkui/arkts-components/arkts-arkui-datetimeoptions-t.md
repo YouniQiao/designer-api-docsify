@@ -14,4 +14,4 @@ Defines the options for a **DateTimeOptions** object.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** import('../api/@ohos.intl').default.DateTimeOptions
+**Type:** import('../api/@ohos.intl').default.DateTimeOptions

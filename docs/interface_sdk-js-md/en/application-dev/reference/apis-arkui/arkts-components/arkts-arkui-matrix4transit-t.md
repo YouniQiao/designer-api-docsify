@@ -14,4 +14,4 @@ Import the Matrix4Transit type object for common method.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** import('../api/@ohos.matrix4').default.Matrix4Transit
+**Type:** import('../api/@ohos.matrix4').default.Matrix4Transit

@@ -4,6 +4,8 @@ Enumerates the arrangement modes of the sensor color filter.
 
 **Since:** 24
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 ## BGGR

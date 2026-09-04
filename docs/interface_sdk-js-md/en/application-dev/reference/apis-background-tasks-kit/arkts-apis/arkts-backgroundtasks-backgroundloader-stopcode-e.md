@@ -4,6 +4,8 @@ Enumerates the stop code, which is used to ON_STOP function.
 
 **Since:** 26.1.0
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.ResourceSchedule.WorkScheduler
 
 ## SUCCESS

@@ -14,4 +14,4 @@ Obtains a **TagSession** object.
 
 **System capability:** SystemCapability.Communication.NFC.Tag
 
-**Property type:** _TagSession
+**Type:** _TagSession

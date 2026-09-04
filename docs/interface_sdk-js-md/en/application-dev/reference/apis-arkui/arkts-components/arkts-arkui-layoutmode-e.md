@@ -4,6 +4,8 @@ Enumerates the layout modes of the images and texts on the bottom tabs.
 
 **Since:** 10
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## AUTO

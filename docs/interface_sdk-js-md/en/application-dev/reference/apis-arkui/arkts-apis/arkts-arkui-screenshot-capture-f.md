@@ -36,7 +36,7 @@ This API allows you to take screenshots of different screens by setting various 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;image.PixelMap&gt; | Promise used to return a PixelMap object. |
+| Promise&lt;[image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)&gt; | Promise used to return a PixelMap object. |
 
 **Error codes:**
 

@@ -12,4 +12,4 @@ Indicate the major minor class of a bluetooth device.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
-**Property type:** constant.MajorMinorClass
+**Type:** [constant.MajorMinorClass](arkts-connectivity-constant-majorminorclass-e.md)

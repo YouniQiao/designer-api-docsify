@@ -14,4 +14,4 @@ declare type ImmersiveMode = import('../api/@ohos.promptAction').ImmersiveMode
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-**属性类型：** import('../api/@ohos.promptAction').ImmersiveMode
+**类型：** import('../api/@ohos.promptAction').ImmersiveMode

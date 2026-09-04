@@ -4,6 +4,8 @@ Enumerates the specific error codes for ability launch failures.
 
 **Since:** 21
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## FAILURE_CODE_SYSTEM_MALFUNCTION

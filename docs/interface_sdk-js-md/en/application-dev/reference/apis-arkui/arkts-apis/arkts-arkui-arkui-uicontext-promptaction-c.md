@@ -341,6 +341,7 @@ Closes the popup corresponding to the provided **content**. This API uses a prom
 **Examples**
 
 See the example for [openPopup](#openpopup).
+- simpleType:
 
 ## closeToast
 
@@ -375,6 +376,7 @@ Closes the specified toast.
 **Examples**
 
 See the example for [openToast18](#opentoast).
+- simpleType:
 
 ## getBottomOrder
 
@@ -567,7 +569,7 @@ Opens a custom dialog box corresponding to **dialogContent**. This API uses a pr
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | dialogContent | [ComponentContent](arkts-arkui-componentcontent-c.md)&lt;T&gt; | Yes | Content of the custom dialog box. |
-| options | promptAction.BaseDialogOptions | No | Dialog box style.Note: If both [isModal](arkts-arkui-promptaction-basedialogoptions-i.md) and [showInSubWindow](arkts-arkui-promptaction-basedialogoptions-i.md) in **BaseDialogOptions** are set to **true**, only **showInSubWindow** takes effect. In this case, the non-modal dialog box is displayed without mask in the subwindow. |
+| options | [promptAction.BaseDialogOptions](arkts-arkui-promptaction-basedialogoptions-i.md) | No | Dialog box style.Note: If both [isModal](arkts-arkui-promptaction-basedialogoptions-i.md) and [showInSubWindow](arkts-arkui-promptaction-basedialogoptions-i.md) in **BaseDialogOptions** are set to **true**, only **showInSubWindow** takes effect. In this case, the non-modal dialog box is displayed without mask in the subwindow. |
 
 **Return value:**
 
@@ -703,7 +705,7 @@ Creates and displays a custom dialog box. This API uses a promise to return the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | promptAction.CustomDialogOptions | Yes | Content of the custom dialog box.+ * Note: If both [isModal](arkts-arkui-promptaction-basedialogoptions-i.md) + * and [showInSubWindow](arkts-arkui-promptaction-basedialogoptions-i.md) in **BaseDialogOptions** are set to **true**, + * only **showInSubWindow** takes effect. In this case, the non-modal dialog box is displayed without mask in the subwindow. + |
+| options | [promptAction.CustomDialogOptions](arkts-arkui-promptaction-customdialogoptions-i.md) | Yes | Content of the custom dialog box.+ * Note: If both [isModal](arkts-arkui-promptaction-basedialogoptions-i.md) + * and [showInSubWindow](arkts-arkui-promptaction-basedialogoptions-i.md) in **BaseDialogOptions** are set to **true**, + * only **showInSubWindow** takes effect. In this case, the non-modal dialog box is displayed without mask in the subwindow. + |
 
 **Return value:**
 
@@ -817,8 +819,8 @@ The dialog box displayed through this API has its content fully following style 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | dialogContent | [ComponentContent](arkts-arkui-componentcontent-c.md)&lt;T&gt; | Yes | Content of the custom dialog box. |
-| controller | promptAction.DialogController | Yes | Controller of the custom dialog box. |
-| options | promptAction.BaseDialogOptions | No | Style of the custom dialog box.Note: If both [isModal](arkts-arkui-promptaction-basedialogoptions-i.md) and [showInSubWindow](arkts-arkui-promptaction-basedialogoptions-i.md) in **BaseDialogOptions** are set to **true**, only **showInSubWindow** takes effect. In this case, the non-modal dialog box is displayed without mask in the subwindow. |
+| controller | [promptAction.DialogController](arkts-arkui-promptaction-dialogcontroller-c.md) | Yes | Controller of the custom dialog box. |
+| options | [promptAction.BaseDialogOptions](arkts-arkui-promptaction-basedialogoptions-i.md) | No | Style of the custom dialog box.Note: If both [isModal](arkts-arkui-promptaction-basedialogoptions-i.md) and [showInSubWindow](arkts-arkui-promptaction-basedialogoptions-i.md) in **BaseDialogOptions** are set to **true**, only **showInSubWindow** takes effect. In this case, the non-modal dialog box is displayed without mask in the subwindow. |
 
 **Return value:**
 
@@ -1166,7 +1168,7 @@ Displays a toast. This API uses a promise to return the toast ID for use with **
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | promptAction.ShowToastOptions | Yes | Toast configuration options. |
+| options | [promptAction.ShowToastOptions](arkts-arkui-promptaction-showtoastoptions-i.md) | Yes | Toast configuration options. |
 
 **Return value:**
 
@@ -1251,8 +1253,8 @@ The dialog box ID can be included in the dialog box content for related operatio
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | builder | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) \| [CustomBuilderWithId](arkts-arkui-custombuilderwithid-t.md) | Yes | Content of the custom dialog box. |
-| controller | promptAction.DialogController | No | Controller of the custom dialog box. |
-| options | promptAction.DialogOptions | No | Style of the custom dialog box.Note: If both [isModal](arkts-arkui-promptaction-basedialogoptions-i.md) and [showInSubWindow](arkts-arkui-promptaction-basedialogoptions-i.md) in **BaseDialogOptions** are set to **true**, only **showInSubWindow** takes effect. In this case, the non-modal dialog box is displayed without mask in the subwindow. |
+| controller | [promptAction.DialogController](arkts-arkui-promptaction-dialogcontroller-c.md) | No | Controller of the custom dialog box. |
+| options | [promptAction.DialogOptions](arkts-arkui-promptaction-dialogoptions-i.md) | No | Style of the custom dialog box.Note: If both [isModal](arkts-arkui-promptaction-basedialogoptions-i.md) and [showInSubWindow](arkts-arkui-promptaction-basedialogoptions-i.md) in **BaseDialogOptions** are set to **true**, only **showInSubWindow** takes effect. In this case, the non-modal dialog box is displayed without mask in the subwindow. |
 
 **Return value:**
 
@@ -1367,8 +1369,8 @@ Shows an action menu in the given settings. This API uses an asynchronous callba
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | promptAction.ActionMenuOptions | Yes | Action menu options. |
-| callback | promptAction.ActionMenuSuccessResponse | Yes | Callback used to return the action menu response result. |
+| options | [promptAction.ActionMenuOptions](arkts-arkui-promptaction-actionmenuoptions-i.md) | Yes | Action menu options. |
+| callback | [promptAction.ActionMenuSuccessResponse](arkts-arkui-promptaction-actionmenusuccessresponse-i.md) | Yes | Callback used to return the action menu response result. |
 
 **Error codes:**
 
@@ -1522,8 +1524,8 @@ Creates and displays an action menu. This API uses an asynchronous callback to r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | promptAction.ActionMenuOptions | Yes | Action menu options. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;promptAction.ActionMenuSuccessResponse&gt; | Yes | Callback used to return the result. On success, **err** is **undefined** and **data** contains the action menu response. On failure, **err** provides error details. |
+| options | [promptAction.ActionMenuOptions](arkts-arkui-promptaction-actionmenuoptions-i.md) | Yes | Action menu options. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[promptAction.ActionMenuSuccessResponse](arkts-arkui-promptaction-actionmenusuccessresponse-i.md)&gt; | Yes | Callback used to return the result. On success, **err** is **undefined** and **data** contains the action menu response. On failure, **err** provides error details. |
 
 **Error codes:**
 
@@ -1556,13 +1558,13 @@ Creates and displays an action menu. This API uses a promise to return the resul
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | promptAction.ActionMenuOptions | Yes | Action menu options. |
+| options | [promptAction.ActionMenuOptions](arkts-arkui-promptaction-actionmenuoptions-i.md) | Yes | Action menu options. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;promptAction.ActionMenuSuccessResponse&gt; | callback - Promise that returns the action menu response. |
+| Promise&lt;[promptAction.ActionMenuSuccessResponse](arkts-arkui-promptaction-actionmenusuccessresponse-i.md)&gt; | callback - Promise that returns the action menu response. |
 
 **Error codes:**
 
@@ -1631,8 +1633,8 @@ Creates and displays a dialog box. This API uses an asynchronous callback to ret
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | promptAction.ShowDialogOptions | Yes | Dialog box configuration options. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;promptAction.ShowDialogSuccessResponse&gt; | Yes | Callback used to return the result. On success, **err** is **undefined** and **data** contains the dialog box response. On failure, **err** provides error details. |
+| options | [promptAction.ShowDialogOptions](arkts-arkui-promptaction-showdialogoptions-i.md) | Yes | Dialog box configuration options. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[promptAction.ShowDialogSuccessResponse](arkts-arkui-promptaction-showdialogsuccessresponse-i.md)&gt; | Yes | Callback used to return the result. On success, **err** is **undefined** and **data** contains the dialog box response. On failure, **err** provides error details. |
 
 **Error codes:**
 
@@ -1710,13 +1712,13 @@ Creates and displays a dialog box. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | promptAction.ShowDialogOptions | Yes | Dialog box configuration options. |
+| options | [promptAction.ShowDialogOptions](arkts-arkui-promptaction-showdialogoptions-i.md) | Yes | Dialog box configuration options. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;promptAction.ShowDialogSuccessResponse&gt; | Promise that returns the dialog box response. |
+| Promise&lt;[promptAction.ShowDialogSuccessResponse](arkts-arkui-promptaction-showdialogsuccessresponse-i.md)&gt; | Promise that returns the dialog box response. |
 
 **Error codes:**
 
@@ -1787,7 +1789,7 @@ Creates and displays a toast.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | promptAction.ShowToastOptions | Yes | Toast configuration options |
+| options | [promptAction.ShowToastOptions](arkts-arkui-promptaction-showtoastoptions-i.md) | Yes | Toast configuration options |
 
 **Error codes:**
 
@@ -1850,7 +1852,7 @@ Updates a custom dialog box corresponding to **dialogContent**. This API uses a 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | dialogContent | [ComponentContent](arkts-arkui-componentcontent-c.md)&lt;T&gt; | Yes | Content of the custom dialog box. |
-| options | promptAction.BaseDialogOptions | Yes | Dialog box style. Currently, only **alignment**, **offset**, **autoCancel**, and **maskColor** can be updated. |
+| options | [promptAction.BaseDialogOptions](arkts-arkui-promptaction-basedialogoptions-i.md) | Yes | Dialog box style. Currently, only **alignment**, **offset**, **autoCancel**, and **maskColor** can be updated. |
 
 **Return value:**
 
@@ -2083,3 +2085,4 @@ Updates the style of the popup corresponding to the provided **content**. This A
 **Examples**
 
 See the example for [openPopup](#openpopup).
+- simpleType:

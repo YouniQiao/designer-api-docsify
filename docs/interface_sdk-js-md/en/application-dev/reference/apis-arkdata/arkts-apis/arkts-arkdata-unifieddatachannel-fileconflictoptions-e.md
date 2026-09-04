@@ -4,6 +4,8 @@ Enumerates the options for resolving file copy conflicts.
 
 **Since:** 15
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## OVERWRITE

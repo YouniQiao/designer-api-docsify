@@ -30,7 +30,7 @@ onWorkStart(work: workScheduler.WorkInfo): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| work | workScheduler.WorkInfo | 是 | 要添加到执行队列的任务。 |
+| work | [workScheduler.WorkInfo](arkts-backgroundtasks-workscheduler-workinfo-i.md) | 是 | 要添加到执行队列的任务。 |
 
 **示例**
 
@@ -64,7 +64,7 @@ onWorkStop(work: workScheduler.WorkInfo): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| work | workScheduler.WorkInfo | 是 | 执行队列中要结束回调的任务。 |
+| work | [workScheduler.WorkInfo](arkts-backgroundtasks-workscheduler-workinfo-i.md) | 是 | 执行队列中要结束回调的任务。 |
 
 **示例**
 

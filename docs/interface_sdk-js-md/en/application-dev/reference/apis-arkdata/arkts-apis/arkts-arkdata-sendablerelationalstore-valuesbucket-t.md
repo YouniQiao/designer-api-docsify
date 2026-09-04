@@ -10,4 +10,4 @@ Represents the KV pair of the [ValueType](arkts-arkdata-sendablerelationalstore-
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
-**Property type:** collections.Map&lt;string, ValueType&gt;
+**Type:** [collections.Map](../../apis-arkts/arkts-apis/arkts-arkts-collections-map-c.md)&lt;string, ValueType&gt;

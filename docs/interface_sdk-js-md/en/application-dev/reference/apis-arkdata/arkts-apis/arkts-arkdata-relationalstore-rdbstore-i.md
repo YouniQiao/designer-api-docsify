@@ -3539,7 +3539,7 @@ Inserts a row of data into the target table with sync interface.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | table | string | Yes | Indicates the target table. |
-| values | sendableRelationalStore.ValuesBucket | Yes | Indicates the row of data ValuesBucket to be inserted into the table. |
+| values | [sendableRelationalStore.ValuesBucket](arkts-arkdata-sendablerelationalstore-valuesbucket-t.md) | Yes | Indicates the row of data ValuesBucket to be inserted into the table. |
 | conflict | ConflictResolution | No | Indicates the [ConflictResolution](arkts-arkdata-relationalstore-conflictresolution-e.md) to insert data into the table. |
 
 **Return value:**

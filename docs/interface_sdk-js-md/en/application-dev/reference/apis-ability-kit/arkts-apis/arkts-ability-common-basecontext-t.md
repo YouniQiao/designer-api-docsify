@@ -14,4 +14,4 @@ Defines the parent class of all context types.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
-**Property type:** _BaseContext.default
+**Type:** _BaseContext.default

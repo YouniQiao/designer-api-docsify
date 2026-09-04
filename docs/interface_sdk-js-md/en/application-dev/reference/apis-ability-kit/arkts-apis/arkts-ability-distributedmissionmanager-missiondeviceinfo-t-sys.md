@@ -14,4 +14,4 @@ Defines the parameters required for registering a listener. It is used as an inp
 
 **System API:** This is a system API.
 
-**Property type:** _MissionDeviceInfo
+**Type:** _MissionDeviceInfo

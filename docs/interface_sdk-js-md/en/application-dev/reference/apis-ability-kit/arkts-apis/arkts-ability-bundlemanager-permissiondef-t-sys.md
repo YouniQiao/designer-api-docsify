@@ -12,4 +12,4 @@ Defines the detailed information about the permissions defined in the [module.js
 
 **System API:** This is a system API.
 
-**Property type:** _PermissionDef
+**Type:** _PermissionDef

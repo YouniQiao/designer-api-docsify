@@ -49,7 +49,7 @@ Obtains information about a system font based on the font name.
 
 | Type | Description |
 | --- | --- |
-| font.FontInfo | Detailed information of the font. |
+| [font.FontInfo](arkts-arkui-font-fontinfo-i.md) | Detailed information of the font. |
 
 **Examples**
 
@@ -162,7 +162,7 @@ This API is asynchronous and does not support concurrent calls.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | font.FontOptions | Yes | Information about the custom font to register.   **NOTE：**When setting the path to the font file, you are advised to use a string with the **file://** path prefix for resources within the system sandbox path. Ensure that the file exists in the sandbox directory path and has read permissions. |
+| options | [font.FontOptions](arkts-arkui-font-fontoptions-i.md) | Yes | Information about the custom font to register.   **NOTE：**When setting the path to the font file, you are advised to use a string with the **file://** path prefix for resources within the system sandbox path. Ensure that the file exists in the sandbox directory path and has read permissions. |
 
 **Examples**
 

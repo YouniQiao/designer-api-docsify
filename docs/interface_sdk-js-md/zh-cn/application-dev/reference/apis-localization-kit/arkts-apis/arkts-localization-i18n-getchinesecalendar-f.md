@@ -26,7 +26,7 @@ export function getChineseCalendar(locale?: Intl.Locale): ChineseCalendar
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| locale | Intl.Locale | 否 | 区域对象，默认值：系统区域对象。 |
+| locale | [Intl.Locale](arkts-localization-intl-locale-c.md) | 否 | 区域对象，默认值：系统区域对象。 |
 
 **返回值：**
 

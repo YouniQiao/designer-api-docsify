@@ -34,7 +34,7 @@ Obtains the list of applications in the permission exception list.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;common.ApplicationInstance&gt; | List of applications in the permission exception list. |
+| Array&lt;[common.ApplicationInstance](arkts-mdm-common-applicationinstance-i.md)&gt; | List of applications in the permission exception list. |
 
 **Error codes:**
 

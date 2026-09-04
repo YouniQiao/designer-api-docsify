@@ -10,4 +10,4 @@ Describes the notification request.
 
 **System capability:** SystemCapability.Notification.Notification
 
-**Property type:** _NotificationRequest
+**Type:** _NotificationRequest

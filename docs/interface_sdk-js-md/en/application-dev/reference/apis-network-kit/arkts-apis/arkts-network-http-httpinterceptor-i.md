@@ -42,6 +42,11 @@ Intercepts the HTTP processing and modifies it as required.
 **Examples**
 
 interceptorHandle(reqContext: HttpRequestContext, rspContext: HttpResponse): Promise<ChainContinue>
+Intercepts the HTTP processing and modifies it as required.
+Atomic service API: This API can be used in atomic services since API version 22.
+System capability: SystemCapability.Communication.NetStack
+Parameters
+Return value
 
 ```TypeScript
 import { http } from '@kit.NetworkKit';

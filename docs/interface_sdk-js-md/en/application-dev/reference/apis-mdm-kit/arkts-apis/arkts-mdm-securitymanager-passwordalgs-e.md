@@ -4,6 +4,8 @@ Enumerates the encryption algorithms used to process password data.
 
 **Since:** 26.0.0
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## SCRYPT_HKDF_AES

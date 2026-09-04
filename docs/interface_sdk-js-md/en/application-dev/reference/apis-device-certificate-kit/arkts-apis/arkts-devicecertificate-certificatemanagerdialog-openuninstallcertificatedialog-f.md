@@ -26,7 +26,7 @@ Open the Certificate Management Uninstall Certificate dialog. The corresponding 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | common.Context | Yes | Context of the application. |
+| context | [common.Context](../../apis-ability-kit/arkts-apis/arkts-ability-common-context-t.md) | Yes | Context of the application. |
 | certType | [CertificateType](arkts-devicecertificate-certificatemanagerdialog-certificatetype-e.md) | Yes | The type of the certificate to uninstall, only CA_CERT is supported. Currently, only the CA_CERT type is supported. |
 | certUri | string | Yes | Unique identifier of the certificate to uninstall. You can obtain the certUri by using the API for installing a CA certificate or querying the CA certificate list. |
 

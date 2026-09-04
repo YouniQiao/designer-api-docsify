@@ -18,4 +18,4 @@ Defines the device information returned by the continuation management entry.
 
 **System capability:** SystemCapability.Ability.DistributedAbilityManager
 
-**Property type:** _ContinuationResult
+**Type:** _ContinuationResult

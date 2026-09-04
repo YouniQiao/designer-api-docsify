@@ -12,4 +12,4 @@ export type ReqPermissionDetail = _BundleInfo.ReqPermissionDetail
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
-**属性类型：** _BundleInfo.ReqPermissionDetail
+**类型：** [_BundleInfo.ReqPermissionDetail](arkts-ability-bundleinfo-reqpermissiondetail-i.md)

@@ -16,4 +16,4 @@ Defines length metrics unit.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** import('../api/arkui/Graphics').LengthMetricsUnit
+**Type:** import('../api/arkui/Graphics').LengthMetricsUnit

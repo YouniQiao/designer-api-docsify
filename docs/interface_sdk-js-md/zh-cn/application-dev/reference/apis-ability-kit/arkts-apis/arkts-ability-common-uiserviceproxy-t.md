@@ -14,4 +14,4 @@ UIServiceProxy提供了与UIServiceExtensionAbility服务端数据通信的能�
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
-**属性类型：** _UIServiceProxy.default
+**类型：** _UIServiceProxy.default

@@ -6,6 +6,8 @@ The following table lists default width breakpoint thresholds for typical device
 
 **Since:** 13
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## WIDTH_XS

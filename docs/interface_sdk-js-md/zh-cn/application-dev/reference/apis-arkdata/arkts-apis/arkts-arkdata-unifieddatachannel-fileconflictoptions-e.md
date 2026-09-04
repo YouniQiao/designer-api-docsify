@@ -4,6 +4,8 @@
 
 **起始版本：** 15
 
+**模型约束：** 此接口仅可在Stage模型下使用。
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## OVERWRITE

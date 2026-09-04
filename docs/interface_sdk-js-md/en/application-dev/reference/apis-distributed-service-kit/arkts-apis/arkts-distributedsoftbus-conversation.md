@@ -8,8 +8,6 @@ The DSoftBus module **conversation** provides APIs for cross-device interaction 
 
 **Since:** 26.1.0
 
-**Model restriction:** This API can be used only in the stage model.
-
 **System capability:** SystemCapability.Communication.SoftBus.Core
 
 **System API:** This is a system API.

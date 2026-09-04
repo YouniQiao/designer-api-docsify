@@ -12,4 +12,4 @@ export type LiveViewStatus = _LiveViewStatus
 
 **系统接口：** 此接口为系统接口。
 
-**属性类型：** _LiveViewStatus
+**类型：** _LiveViewStatus

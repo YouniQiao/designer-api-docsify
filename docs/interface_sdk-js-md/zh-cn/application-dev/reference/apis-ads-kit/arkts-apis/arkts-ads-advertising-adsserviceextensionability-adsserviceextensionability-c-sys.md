@@ -32,8 +32,8 @@ onLoadAd(adParam: advertising.AdRequestParams, adOptions: advertising.AdOptions,
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| adParam | advertising.AdRequestParams | 是 | 广告请求参数。 |
-| adOptions | advertising.AdOptions | 是 | 广告配置参数。 |
+| adParam | [advertising.AdRequestParams](arkts-ads-advertising-adrequestparams-i.md) | 是 | 广告请求参数。 |
+| adOptions | [advertising.AdOptions](arkts-ads-advertising-adoptions-i.md) | 是 | 广告配置参数。 |
 | respCallback | [RespCallback](arkts-ads-advertising-adsserviceextensionability-respcallback-i.md) | 是 | 广告请求回调。 |
 
 **示例**
@@ -70,8 +70,8 @@ onLoadAdWithMultiSlots(adParams: advertising.AdRequestParams[], adOptions: adver
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| adParams | advertising.AdRequestParams[] | 是 | 广告请求参数。 |
-| adOptions | advertising.AdOptions | 是 | 广告配置参数。 |
+| adParams | [advertising.AdRequestParams](arkts-ads-advertising-adrequestparams-i.md)[] | 是 | 广告请求参数。 |
+| adOptions | [advertising.AdOptions](arkts-ads-advertising-adoptions-i.md) | 是 | 广告配置参数。 |
 | respCallback | [RespCallback](arkts-ads-advertising-adsserviceextensionability-respcallback-i.md) | 是 | 广告请求回调。 |
 
 **示例**

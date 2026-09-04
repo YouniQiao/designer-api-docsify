@@ -12,4 +12,4 @@ Obtains a **BarcodeTag** object.
 
 **System capability:** SystemCapability.Communication.NFC.Tag
 
-**Property type:** _BarcodeTag
+**Type:** _BarcodeTag

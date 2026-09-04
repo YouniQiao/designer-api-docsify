@@ -14,4 +14,4 @@ Import the frame node type object for Canvas.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** import('../api/arkui/FrameNode').FrameNode
+**Type:** import('../api/arkui/FrameNode').FrameNode

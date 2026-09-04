@@ -10,4 +10,4 @@ type SoundPool = _SoundPool
 
 **系统能力：** SystemCapability.Multimedia.Media.SoundPool
 
-**属性类型：** _SoundPool
+**类型：** _SoundPool

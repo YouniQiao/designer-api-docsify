@@ -1026,6 +1026,7 @@ struct StyledStringSetLineheightParagraphstyleDemo {
 ```
 
 从API version 12开始，该示例通过[CustomSpan](arkts-arkui-customspan-c.md)接口和[measureTextSize](../arkts-apis-uicontext-measureutils.md#measuretextsize12)实现属性字符串设置自定义绘制Span。
+从API版本26.0.0开始，CustomSpanMeasureInfo新增maxWidth、layoutPolicy属性。
 
 ```TypeScript
 // xxx.ets
@@ -1398,6 +1399,7 @@ struct StyledStringModifyDemo {
 ```
 
 从API version 20开始，该示例通过TextStyle设置strokeWidth和strokeColor接口实现属性字符串的文本描边。
+从API版本26.0.0开始，TextStyle新增strokeJoinStyle接口实现文本拐角描边样式。
 
 ```TypeScript
 // xxx.ets
@@ -1876,6 +1878,7 @@ struct StyledStringProcessDemo {
 ```
 
 该示例通过TextStyleInterface中的[fontConfigs](ts-text-common.md#fontconfigs24对象说明)实现属性字符串的字体配置。
+从API version 24开始，TextStyleInterface新增fontConfigs属性。
 
 ```TypeScript
 // xxx.ets
@@ -1978,6 +1981,7 @@ struct StyledStringFontConfigsDemo {
 ```
 
 该示例通过[fromHtml](arkts-arkui-styledstring-c.md#fromhtml)接口，将HTML中<cite>、<dfn>、<small>、<h1>、<h2>、<h3>、<h4>、<h5>、<h6>、<ol>、<ul>、<li>标签转换为属性字符串。
+从API版本26.0.0开始，fromHtml新增支持<cite>、<dfn>、<small>、<h1>、<h2>、<h3>、<h4>、<h5>、<h6>、<ol>、<ul>、<li>标签。
 
 ```TypeScript
 @Entry
@@ -2007,6 +2011,7 @@ struct html_convert_demo {
 ```
 
 该示例通过TextStyle的fontVariations属性设置可变字体的属性。
+从API版本26.0.0开始，TextStyle新增了fontVariations属性。
 
 ```TypeScript
 // xxx.ets
@@ -2052,6 +2057,7 @@ struct StyledStringExample {
 ```
 
 该示例通过ParagraphStyle中shaderStyle接口实现文本着色效果。
+从API版本26.0.0开始，ParagraphStyle新增shaderStyle接口。
 
 ```TypeScript
 @Entry
@@ -2176,6 +2182,7 @@ struct ShaderColorStyle {
 ```
 
 该示例通过ParagraphStyle中的tailIndents属性，为属性字符串设置文本尾部缩进。
+从API版本26.0.0开始，ParagraphStyle接口新增tailIndents属性。
 
 ```TypeScript
 import { LengthMetrics } from '@kit.ArkUI';

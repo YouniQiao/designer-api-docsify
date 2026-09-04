@@ -38,7 +38,7 @@ rect: window.Rect
 
 组件矩形变化后的值。
 
-**类型：** window.Rect
+**类型：** [window.Rect](arkts-arkui-window-rect-i.md)
 
 **起始版本：** 14
 

@@ -39,7 +39,7 @@ function grantUriPermission(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | uri | string | 是 | 指向文件的URI，scheme固定为"file"，参考[FileUri](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-fileuri-c.md#constructor)。 |
-| flag | wantConstant.Flags | 是 | URI的读权限或写权限。 |
+| flag | [wantConstant.Flags](arkts-ability-wantconstant-flags-e.md) | 是 | URI的读权限或写权限。 |
 | targetBundleName | string | 是 | 被授权URI的应用包名。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数。返回0表示有权限，返回-1表示无权限。 |
 
@@ -113,7 +113,7 @@ function grantUriPermission(uri: string, flag: wantConstant.Flags, targetBundleN
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | uri | string | 是 | 指向文件的URI，scheme固定为"file"，参考[FileUri](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-fileuri-c.md#constructor)。 |
-| flag | wantConstant.Flags | 是 | URI的读权限或写权限。 |
+| flag | [wantConstant.Flags](arkts-ability-wantconstant-flags-e.md) | 是 | URI的读权限或写权限。 |
 | targetBundleName | string | 是 | 被授权URI的应用包名。 |
 
 **返回值：**
@@ -194,7 +194,7 @@ function grantUriPermission(uri: string, flag: wantConstant.Flags, targetBundleN
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | uri | string | 是 | 指向文件的URI，scheme固定为"file"，参考[FileUri](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-fileuri-c.md#constructor)。 |
-| flag | wantConstant.Flags | 是 | URI的读权限或写权限。 |
+| flag | [wantConstant.Flags](arkts-ability-wantconstant-flags-e.md) | 是 | URI的读权限或写权限。 |
 | targetBundleName | string | 是 | 被授权应用的应用包名。 |
 | appCloneIndex | number | 是 | 被授权应用的分身索引，有效范围为[0, 1000], 取值为0时表示主应用。 |
 

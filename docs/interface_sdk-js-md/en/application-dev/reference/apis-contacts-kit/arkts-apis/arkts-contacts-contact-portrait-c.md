@@ -34,7 +34,7 @@ photo?: image.PixelMap
 
 Contact portrait in PixelMap format.
 
-**Type:** image.PixelMap
+**Type:** [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)
 
 **Since:** 22
 

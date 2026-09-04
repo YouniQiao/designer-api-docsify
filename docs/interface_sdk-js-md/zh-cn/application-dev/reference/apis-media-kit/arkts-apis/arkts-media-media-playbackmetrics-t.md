@@ -10,4 +10,4 @@ type PlaybackMetrics = Record<PlaybackMetricsKey, Object>
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
-**属性类型：** Record&lt;[PlaybackMetricsKey](arkts-media-media-playbackmetricskey-e.md), Object&gt;
+**类型：** Record&lt;[PlaybackMetricsKey](arkts-media-media-playbackmetricskey-e.md), Object&gt;

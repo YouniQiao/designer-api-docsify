@@ -36,7 +36,7 @@ formBindingData?: formBindingData.FormBindingData
 
 Indicates the form data.
 
-**Type:** formBindingData.FormBindingData
+**Type:** [formBindingData.FormBindingData](../../apis-form-kit/arkts-apis/arkts-form-formbindingdata-formbindingdata-i.md)
 
 **Since:** 12
 

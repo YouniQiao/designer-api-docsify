@@ -4,8 +4,6 @@ This module provides APIs for system materials. Different system materials corre
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -117,6 +115,7 @@ struct SystemMaterialPage {
 ```
 
 This example shows how to set [uiMaterial.ImmersiveMaterial](arkts-arkui-uimaterial-immersivematerial-c.md) on [EffectComponent](../arkui-ts/ts-container-effectcomponent-sys.md) and its child components, including directly using EC-style materials and applying the materials after conversion through [uiMaterial.convertToECMaterial](arkts-arkui-uimaterial-converttoecmaterial-f-sys.md) and [uiMaterial.convertToECSubMaterial](arkts-arkui-uimaterial-converttoecsubmaterial-f-sys.md).
+Since API version 26.0.0, the uiMaterial.convertToECMaterial and uiMaterial.convertToECSubMaterial APIs are added.
 
 ```TypeScript
 import { uiMaterial } from '@kit.ArkUI';

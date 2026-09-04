@@ -10,4 +10,4 @@ type Image = string
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
-**属性类型：** string
+**类型：** string

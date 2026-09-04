@@ -14,4 +14,4 @@ Describes the properties of the status bar. These properties are valid for the p
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** import('../api/@ohos.window').default.SystemBarStyle
+**Type:** import('../api/@ohos.window').default.SystemBarStyle

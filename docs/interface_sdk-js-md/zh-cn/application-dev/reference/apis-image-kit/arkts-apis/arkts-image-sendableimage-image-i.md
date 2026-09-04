@@ -32,13 +32,13 @@ getComponent(componentType: image.ComponentType): Promise<image.Component>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| componentType | image.ComponentType | 是 | 图像的组件类型。 |
+| componentType | [image.ComponentType](arkts-image-image-componenttype-e.md) | 是 | 图像的组件类型。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;image.Component&gt; | Promise实例，用于异步返回组件缓冲区。 |
+| Promise&lt;[image.Component](arkts-image-image-component-i.md)&gt; | Promise实例，用于异步返回组件缓冲区。 |
 
 **示例**
 

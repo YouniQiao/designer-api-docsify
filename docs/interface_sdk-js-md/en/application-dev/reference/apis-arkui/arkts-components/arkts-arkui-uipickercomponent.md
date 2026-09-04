@@ -796,6 +796,14 @@ struct UIPickerComponentExample {
 ```
 
 Since API version 22, this example implements a time picker with the following features: setting whether to loop scrolling, whether to display seconds, whether to use the 24-hour format, and whether to display leading zeros. It can also display content in the language corresponding to the current system language and adjust the display order of each column based on language habits.
+> NOTE
+> 
+> In this example, the content of each column of the time picker is displayed in the language corresponding to the system language. For example, an English system displays AM/PM, while a Chinese system displays morning/afternoon.
+> 
+> In this example, the display order of each column of the time picker is adjusted according to the system language. For example, an English system displays hour/minute/second/AMPM, while a Chinese system displays morning/afternoon/hour/minute/second.
+
+To make "morning/afternoon" switch with the system language, you need to add the corresponding language translations in the resource directory of the project. For example:
+Chinese (default): Create a base directory under the resource directory, create an element directory under the base directory, and add a string.json file under the element directory (if the file already exists, append the following "name"-"value" key-value pairs to the file instead of overwriting the original file). The file content is as follows:
 
 ```TypeScript
 {
@@ -859,6 +867,7 @@ Arabic: Create the ar directory under the resource directory, create the element
 ```
 
 The same applies to other languages.
+The sample code is as follows:
 
 ```TypeScript
 // xxx.ets
@@ -1257,6 +1266,7 @@ struct TimeUIPickerComponentExample {
 ```
 
 This example uses [itemHeight](#itemheight) to set the item height of the UIPickerComponent container.
+Since API version 26.0.0, the [itemHeight](#itemheight) attribute is added.
 
 ```TypeScript
 // xxx.ets
@@ -1315,6 +1325,7 @@ struct UIPickerComponentItemHeightExample {
 ```
 
 This example uses [displayedItemCount](arkts-arkui-uipickercomponent-attribute.md#displayeditemcount) to set the number of visible items in the UIPickerComponent container.
+Since API version 26.0.0, the [displayedItemCount](arkts-arkui-uipickercomponent-attribute.md#displayeditemcount) attribute is added.
 
 ```TypeScript
 // xxx.ets

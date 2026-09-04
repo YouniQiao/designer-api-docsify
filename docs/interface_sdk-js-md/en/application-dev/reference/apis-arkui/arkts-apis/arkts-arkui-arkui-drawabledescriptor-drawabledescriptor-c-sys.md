@@ -104,4 +104,4 @@ set svg resource limit level.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| limit | image.SVGResourceLimitLevel | Yes | svg resource limit level. |
+| limit | [image.SVGResourceLimitLevel](../../apis-image-kit/arkts-apis/arkts-image-image-svgresourcelimitlevel-e-sys.md) | Yes | svg resource limit level. |

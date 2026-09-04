@@ -15,4 +15,4 @@ Defines the container of basic data types.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
-**Property type:** _PacMap
+**Type:** _PacMap

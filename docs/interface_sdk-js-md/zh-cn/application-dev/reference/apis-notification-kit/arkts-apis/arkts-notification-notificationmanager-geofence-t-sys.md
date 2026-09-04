@@ -14,4 +14,4 @@ export type Geofence = _Geofence
 
 **系统接口：** 此接口为系统接口。
 
-**属性类型：** _Geofence
+**类型：** _Geofence

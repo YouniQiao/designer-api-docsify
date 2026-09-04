@@ -14,4 +14,4 @@ declare type Filter = import('../api/@ohos.graphics.uiEffect').default.Filter
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-**属性类型：** import('../api/@ohos.graphics.uiEffect').default.Filter
+**类型：** import('../api/@ohos.graphics.uiEffect').default.Filter

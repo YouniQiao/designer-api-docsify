@@ -4,6 +4,8 @@ Indicates the screen lock authentication policy used to unlock the screen.
 
 **Since:** 26.0.0
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.MiscServices.ScreenLock
 
 **System API:** This is a system API.

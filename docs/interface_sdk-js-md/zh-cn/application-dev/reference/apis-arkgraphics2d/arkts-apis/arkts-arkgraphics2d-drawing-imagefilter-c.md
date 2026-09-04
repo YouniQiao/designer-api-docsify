@@ -209,9 +209,9 @@ static createFromImage(pixelmap: image.PixelMap, srcRect?: common2D.Rect | null,
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| pixelmap | image.PixelMap | 是 | 图像对象。 |
-| srcRect | common2D.Rect \| null | 否 | 可选参数，默认为null。此滤波器要使用的图像的像素区域，如果为null，则使用pixelmap全部区域。 |
-| dstRect | common2D.Rect \| null | 否 | 可选参数，默认为null。要进行渲染的区域，如果为null，则和srcRect保持一致。 |
+| pixelmap | [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | 是 | 图像对象。 |
+| srcRect | [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) \| null | 否 | 可选参数，默认为null。此滤波器要使用的图像的像素区域，如果为null，则使用pixelmap全部区域。 |
+| dstRect | [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) \| null | 否 | 可选参数，默认为null。要进行渲染的区域，如果为null，则和srcRect保持一致。 |
 
 **返回值：**
 

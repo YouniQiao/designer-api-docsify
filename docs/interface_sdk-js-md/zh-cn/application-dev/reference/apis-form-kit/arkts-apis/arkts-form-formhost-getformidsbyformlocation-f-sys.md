@@ -28,7 +28,7 @@ function getFormIdsByFormLocation(location: formInfo.FormLocation): Promise<Arra
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| location | formInfo.FormLocation | 是 | 卡片位置。 |
+| location | [formInfo.FormLocation](arkts-form-forminfo-formlocation-e.md) | 是 | 卡片位置。 |
 
 **返回值：**
 

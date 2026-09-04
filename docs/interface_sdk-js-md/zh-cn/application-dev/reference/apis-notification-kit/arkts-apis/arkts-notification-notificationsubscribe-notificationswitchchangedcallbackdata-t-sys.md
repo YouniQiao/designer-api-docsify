@@ -14,4 +14,4 @@ export type NotificationSwitchChangedCallbackData = _NotificationSwitchChangedCa
 
 **系统接口：** 此接口为系统接口。
 
-**属性类型：** _NotificationSwitchChangedCallbackData
+**类型：** _NotificationSwitchChangedCallbackData

@@ -48,7 +48,7 @@ readonly businessType: businessAbilityRouter.BusinessType
 
 Enumerates types of the business ability info
 
-**Type:** businessAbilityRouter.BusinessType
+**Type:** [businessAbilityRouter.BusinessType](arkts-ability-businessabilityrouter-businesstype-e-sys.md)
 
 **Since:** 10
 

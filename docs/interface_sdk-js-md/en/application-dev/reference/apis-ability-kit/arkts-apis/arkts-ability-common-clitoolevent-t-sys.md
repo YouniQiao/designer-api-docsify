@@ -14,4 +14,4 @@ The event data of cli execute.
 
 **System API:** This is a system API.
 
-**Property type:** _CliToolEvent
+**Type:** _CliToolEvent

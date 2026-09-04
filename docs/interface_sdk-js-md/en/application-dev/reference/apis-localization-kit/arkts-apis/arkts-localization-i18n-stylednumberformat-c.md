@@ -30,7 +30,7 @@ Creates a **NumberFormat** object for rich text display.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| numberFormat | Intl.NumberFormat \| [SimpleNumberFormat](arkts-localization-i18n-simplenumberformat-c.md) | Yes | NumberFormat** object. |
+| numberFormat | [Intl.NumberFormat](arkts-localization-intl-numberformat-c.md) \| [SimpleNumberFormat](arkts-localization-i18n-simplenumberformat-c.md) | Yes | NumberFormat** object. |
 | options | [StyledNumberFormatOptions](arkts-localization-i18n-stylednumberformatoptions-i.md) | No |  |
 
 **Examples**
@@ -91,7 +91,7 @@ Creates a **NumberFormat** object for rich text display.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| numberFormat | intl.NumberFormat \| [SimpleNumberFormat](arkts-localization-i18n-simplenumberformat-c.md) | Yes | NumberFormat** object. |
+| numberFormat | [intl.NumberFormat](arkts-localization-intl-numberformat-c.md) \| [SimpleNumberFormat](arkts-localization-i18n-simplenumberformat-c.md) | Yes | NumberFormat** object. |
 | options | [StyledNumberFormatOptions](arkts-localization-i18n-stylednumberformatoptions-i.md) | No |  |
 
 **Examples**

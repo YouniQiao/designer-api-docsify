@@ -12,4 +12,4 @@ Describes the user authorization settings.
 
 **System capability:** SystemCapability.Notification.Notification
 
-**Property type:** _UserGrantSetting
+**Type:** _UserGrantSetting

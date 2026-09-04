@@ -14,4 +14,4 @@ The context of form edit extension. It allows access to formEditExtension-specif
 
 **系统能力：** SystemCapability.Ability.Form
 
-**属性类型：** _FormEditExtensionContext.default
+**类型：** _FormEditExtensionContext.default

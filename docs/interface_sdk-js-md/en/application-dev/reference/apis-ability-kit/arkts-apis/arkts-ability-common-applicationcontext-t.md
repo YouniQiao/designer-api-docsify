@@ -14,4 +14,4 @@ Defines the application context. It inherits from Context.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
-**Property type:** _ApplicationContext.default
+**Type:** _ApplicationContext.default

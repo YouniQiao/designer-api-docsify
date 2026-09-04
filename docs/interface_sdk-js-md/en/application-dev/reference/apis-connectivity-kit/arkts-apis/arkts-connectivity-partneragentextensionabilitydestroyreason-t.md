@@ -12,4 +12,4 @@ The reasons for destroying partner agent extension ability.
 
 **System capability:** SystemCapability.Communication.FusionConnectivity.Core
 
-**Property type:** partnerAgent.PartnerAgentExtensionAbilityDestroyReason
+**Type:** [partnerAgent.PartnerAgentExtensionAbilityDestroyReason](arkts-connectivity-partneragent-partneragentextensionabilitydestroyreason-e.md)

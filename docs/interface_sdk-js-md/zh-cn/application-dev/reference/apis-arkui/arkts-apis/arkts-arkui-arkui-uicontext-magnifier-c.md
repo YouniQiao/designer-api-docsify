@@ -122,6 +122,7 @@ show(x: number, y: number): void
 **示例**
 
 请参考[bind](#bind)示例。
+- simpleType:
 
 ## unbind
 
@@ -142,3 +143,4 @@ unbind(): void
 **示例**
 
 请参考[bind](#bind)示例。
+- simpleType:

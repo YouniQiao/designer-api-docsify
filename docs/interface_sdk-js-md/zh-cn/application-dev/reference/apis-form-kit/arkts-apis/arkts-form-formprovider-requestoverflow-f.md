@@ -32,7 +32,7 @@ function requestOverflow(formId: string, overflowInfo: formInfo.OverflowInfo): P
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | formId | string | 是 | 卡片标识。 |
-| overflowInfo | formInfo.OverflowInfo | 是 | 动效请求参数信息。 |
+| overflowInfo | [formInfo.OverflowInfo](arkts-form-forminfo-overflowinfo-i.md) | 是 | 动效请求参数信息。 |
 
 **返回值：**
 

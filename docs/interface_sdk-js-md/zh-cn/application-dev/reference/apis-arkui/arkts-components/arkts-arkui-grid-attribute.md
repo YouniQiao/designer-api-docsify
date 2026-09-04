@@ -35,7 +35,7 @@ alignItems(alignment: Optional<GridItemAlignment>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| alignment | [Optional](arkts-arkui-optional-t.md)&lt;[GridItemAlignment](arkts-arkui-griditemalignment-e.md)&gt; | 是 | 设置Grid中GridItem的对齐方式。默认值：GridItemAlignment.DEFAULT |
+| alignment | [Optional](arkts-arkui-optional-t.md)&lt;[GridItemAlignment](arkts-arkui-griditemalignment-e.md)&gt; | 是 | [设置Grid中GridItem的对齐方式。默认值：GridItemAlignment.DEFAULT](../arkts-apis/arkts-arkui-textmenushowmode-e.md) |
 
 ## cachedCount
 
@@ -217,7 +217,7 @@ edgeEffect(value: EdgeEffect, options?: EdgeEffectOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [EdgeEffect](../arkts-apis/arkts-arkui-edgeeffect-e.md) | 是 | Grid组件的边缘滑动效果，支持弹簧效果和阴影效果。默认值：EdgeEffect.None |
+| value | [EdgeEffect](../arkts-apis/arkts-arkui-edgeeffect-e.md) | 是 | [Grid组件的边缘滑动效果，支持弹簧效果和阴影效果。默认值：EdgeEffect.None](arkts-arkui-imageinterpolation-e.md) |
 | options | [EdgeEffectOptions](arkts-arkui-edgeeffectoptions-i.md) | 否 | 组件内容大小小于组件自身时，是否开启滑动效果。设置为{ alwaysEnabled: true }会开启滑动效果，{ alwaysEnabled: false }不开启。默认值：{ alwaysEnabled: false }<br>**起始版本：** 11 |
 
 ## editMode
@@ -376,7 +376,7 @@ layoutDirection(value: GridDirection)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [GridDirection](arkts-arkui-griddirection-e.md) | 是 | 布局的主轴方向。默认值：GridDirection.Row |
+| value | [GridDirection](arkts-arkui-griddirection-e.md) | 是 | [布局的主轴方向。默认值：GridDirection.Row](../arkts-apis/arkts-arkui-typenode-row-t.md) |
 
 ## maxCount
 

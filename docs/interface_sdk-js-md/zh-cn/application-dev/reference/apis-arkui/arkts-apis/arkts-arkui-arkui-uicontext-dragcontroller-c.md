@@ -73,13 +73,13 @@ createDragAction(customArray: Array<CustomBuilder | DragItemInfo>, dragInfo: dra
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | customArray | Array&lt;[CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) \| [DragItemInfo](../arkts-components/arkts-arkui-dragiteminfo-i.md)&gt; | 是 | 拖拽发起后跟手效果所拖拽的对象。 |
-| dragInfo | dragController.DragInfo | 是 | 拖拽信息。 |
+| dragInfo | [dragController.DragInfo](arkts-arkui-dragcontroller-draginfo-i.md) | 是 | 拖拽信息。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| dragController.DragAction | DragAction** object, which is used to subscribe to drag state changes and start the drag service. |
+| [dragController.DragAction](arkts-arkui-dragcontroller-dragaction-i.md) | DragAction** object, which is used to subscribe to drag state changes and start the drag service. |
 
 **错误码：**
 
@@ -259,6 +259,7 @@ enableDropDisallowedBadge(enabled: boolean): void
 **示例**
 
 该示例通过enableDropDisallowedBadge接口实现了拖拽对象经过不允许落入的目标区域时显示拖拽禁止角标的功能。
+在EntryAbility.ets中调用enableDropDisallowedBadge接口，设置enabled参数为true。
 
 ```TypeScript
 import { UIAbility } from '@kit.AbilityKit';
@@ -329,8 +330,8 @@ executeDrag(custom: CustomBuilder | DragItemInfo, dragInfo: dragController.DragI
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | custom | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) \| [DragItemInfo](../arkts-components/arkts-arkui-dragiteminfo-i.md) | 是 | 拖拽发起后跟手效果所拖拽的对象。    **说明：** 不支持全局builder。如果builder中使用了[Image](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md)组件，应尽量开启同步加载，即配置Image的syncLoad为true。该builder只用于生成当次拖拽中显示的图片。builder的根组件宽高为0时，无法生成拖拽显示的图片导致拖拽失败。builder的修改不会同步到当前正在拖拽的图片，对builder的修改需要在下一次拖拽时生效。 |
-| dragInfo | dragController.DragInfo | 是 | 拖拽信息。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;dragController.DragEventParam&gt; | 是 | 拖拽结束返回结果的回调   - event：拖拽事件信息，仅包括拖拽结果。   - extraParams：拖拽事件额外信息。<br>**起始版本：** 12 |
+| dragInfo | [dragController.DragInfo](arkts-arkui-dragcontroller-draginfo-i.md) | 是 | 拖拽信息对象，用于指定发起拖拽的触摸点、拖拽过程中携带的数据、额外信息等拖拽配置信息。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[dragController.DragEventParam](arkts-arkui-dragcontroller-drageventparam-i.md)&gt; | 是 | 拖拽结束返回结果的回调，回调参数包括err和data：err表示错误信息，data表示拖拽事件结果；data.event为拖拽事件信息，仅包括拖拽结果，data.extraParams为拖拽事件额外信息。<br>**起始版本：** 12 |
 
 **错误码：**
 
@@ -419,15 +420,15 @@ executeDrag(custom: CustomBuilder | DragItemInfo, dragInfo: dragController.DragI
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| custom | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) \| [DragItemInfo](../arkts-components/arkts-arkui-dragiteminfo-i.md) | 是 | 拖拽发起后跟手效果所拖拽的对象。 |
-| dragInfo | dragController.DragInfo | 是 | 拖拽信息。 |
+| custom | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) \| [DragItemInfo](../arkts-components/arkts-arkui-dragiteminfo-i.md) | 是 | 拖拽发起后跟手效果所拖拽的对象。当仅需通过builder生成当次拖拽中显示的图片时，使用CustomBuilder；当需要同时提供pixelMap、builder或extraInfo等拖拽项信息时，使用DragItemInfo。   **说明：** CustomBuilder不支持全局builder。如果builder中使用了Image组件，应尽量开启同步加载，即配置Image的syncLoad为true。该builder只用于生成当次拖拽中显示的图片。builder的根组件宽高为0时，无法生成拖拽显示的图片导致拖拽失败。builder的修改不会同步到当前正在拖拽的图片，对builder的修改需要在下一次拖拽时生效。 |
+| dragInfo | [dragController.DragInfo](arkts-arkui-dragcontroller-draginfo-i.md) | 是 | 拖拽信息对象。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
 | Promise&lt;{ event: DragEvent, extraParams: string | > } Callback used to return the result. |
-| Promise&lt;dragController.DragEventParam&gt; | A Promise with the drag event information.<br>**适用版本：** 12+ |
+| Promise&lt;[dragController.DragEventParam](arkts-arkui-dragcontroller-drageventparam-i.md)&gt; | Promise对象。resolve返回拖拽结束结果： |
 
 **错误码：**
 
@@ -542,11 +543,12 @@ getDragPreview(): dragController.DragPreview
 
 | 类型 | 说明 |
 | --- | --- |
-| dragController.DragPreview | DragPreview** object. It provides the API for setting the preview style. It does not work in the **OnDrop** and **OnDragEnd** callbacks. |
+| [dragController.DragPreview](arkts-arkui-dragcontroller-dragpreview-c.md) | DragPreview** object. It provides the API for setting the preview style. It does not work in the **OnDrop** and **OnDragEnd** callbacks. |
 
 **示例**
 
 请参考[animate](arkts-arkui-dragcontroller-dragpreview-c.md#animate)示例。
+- simpleType:
 
 ## notifyDragStartRequest
 
@@ -568,7 +570,7 @@ notifyDragStartRequest(requestStatus: dragController.DragStartRequestStatus): vo
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| requestStatus | dragController.DragStartRequestStatus | 是 | 定义应用是否可以发起拖拽。 |
+| requestStatus | [dragController.DragStartRequestStatus](arkts-arkui-dragcontroller-dragstartrequeststatus-e.md) | 是 | 定义应用是否可以发起拖拽。 |
 
 **示例**
 

@@ -14,4 +14,4 @@ export type SkillType = _SkillType
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
-**属性类型：** _SkillType
+**类型：** _SkillType

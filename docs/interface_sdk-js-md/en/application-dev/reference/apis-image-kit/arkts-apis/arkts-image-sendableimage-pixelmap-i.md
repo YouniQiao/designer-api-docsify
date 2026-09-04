@@ -32,7 +32,7 @@ This method is used to change color space of PixelMap. Pixel data will be change
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| targetColorSpace | colorSpaceManager.ColorSpaceManager | Yes | The color space for pixelmap. |
+| targetColorSpace | [colorSpaceManager.ColorSpaceManager](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-colorspacemanager-colorspacemanager-i.md) | Yes | The color space for pixelmap. |
 
 **Return value:**
 
@@ -160,7 +160,7 @@ Crop the image. This method uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| region | image.Region | Yes | The region to crop. |
+| region | [image.Region](arkts-image-image-region-i.md) | Yes | The region to crop. |
 
 **Return value:**
 
@@ -206,7 +206,7 @@ Crop the image.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| region | image.Region | Yes | The region to crop. |
+| region | [image.Region](arkts-image-image-region-i.md) | Yes | The region to crop. |
 
 **Error codes:**
 
@@ -364,7 +364,7 @@ Get color space of pixelmap.
 
 | Type | Description |
 | --- | --- |
-| colorSpaceManager.ColorSpaceManager | If the operation fails, an error message is returned. |
+| [colorSpaceManager.ColorSpaceManager](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-colorspacemanager-colorspacemanager-i.md) | If the operation fails, an error message is returned. |
 
 **Error codes:**
 
@@ -541,7 +541,7 @@ Marshalling PixelMap and write into MessageSequence.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sequence | rpc.MessageSequence | Yes | rpc.MessageSequence parameter. |
+| sequence | [rpc.MessageSequence](../../apis-ipc-kit/arkts-apis/arkts-ipc-rpc-messagesequence-c.md) | Yes | rpc.MessageSequence parameter. |
 
 **Error codes:**
 
@@ -712,7 +712,7 @@ Reads image pixelmap data in an area. This method uses a promise to return the d
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| area | image.PositionArea | Yes | Area from which the image pixelmap data will be read. |
+| area | [image.PositionArea](arkts-image-image-positionarea-i.md) | Yes | Area from which the image pixelmap data will be read. |
 
 **Return value:**
 
@@ -762,7 +762,7 @@ Reads image pixelmap data in an area.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| area | image.PositionArea | Yes | Area from which the image pixelmap data will be read. |
+| area | [image.PositionArea](arkts-image-image-positionarea-i.md) | Yes | Area from which the image pixelmap data will be read. |
 
 **Error codes:**
 
@@ -1157,7 +1157,7 @@ This method is only used to set the colorspace property of PixelMap, while all p
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| colorSpace | colorSpaceManager.ColorSpaceManager | Yes | The color space for pixelmap. |
+| colorSpace | [colorSpaceManager.ColorSpaceManager](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-colorspacemanager-colorspacemanager-i.md) | Yes | The color space for pixelmap. |
 
 **Error codes:**
 
@@ -1285,7 +1285,7 @@ Creates a PixelMap object based on MessageSequence parameter.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sequence | rpc.MessageSequence | Yes | rpc.MessageSequence parameter. |
+| sequence | [rpc.MessageSequence](../../apis-ipc-kit/arkts-apis/arkts-ipc-rpc-messagesequence-c.md) | Yes | rpc.MessageSequence parameter. |
 
 **Return value:**
 
@@ -1472,7 +1472,7 @@ Writes image pixelmap data to the specified area. This method uses a promise to 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| area | image.PositionArea | Yes | Area to which the image pixelmap data will be written. |
+| area | [image.PositionArea](arkts-image-image-positionarea-i.md) | Yes | Area to which the image pixelmap data will be written. |
 
 **Return value:**
 
@@ -1526,7 +1526,7 @@ Writes image pixelmap data to the specified area.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| area | image.PositionArea | Yes | Area to which the image pixelmap data will be written. |
+| area | [image.PositionArea](arkts-image-image-positionarea-i.md) | Yes | Area to which the image pixelmap data will be written. |
 
 **Error codes:**
 

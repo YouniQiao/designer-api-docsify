@@ -32,7 +32,7 @@ Converts a SendableContext object to an AbilityStageContext object.
 
 | Type | Description |
 | --- | --- |
-| common.AbilityStageContext | [AbilityStageContext]{ |
+| [common.AbilityStageContext](arkts-ability-common-abilitystagecontext-t.md) | [AbilityStageContext]{ |
 
 **Error codes:**
 

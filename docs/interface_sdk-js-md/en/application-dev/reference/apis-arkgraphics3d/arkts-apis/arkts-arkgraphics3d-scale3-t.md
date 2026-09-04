@@ -10,4 +10,4 @@ Scaling of an object in 3D space. The value is of the Vec3 type. Any 3D vector.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
-**Property type:** [Vec3](arkts-arkgraphics3d-scenetypes-vec3-i.md)
+**Type:** [Vec3](arkts-arkgraphics3d-scenetypes-vec3-i.md)

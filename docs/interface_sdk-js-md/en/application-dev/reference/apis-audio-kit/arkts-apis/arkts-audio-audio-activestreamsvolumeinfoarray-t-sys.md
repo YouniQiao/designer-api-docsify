@@ -14,4 +14,4 @@ ActiveStreamVolumeInfo array.
 
 **System API:** This is a system API.
 
-**Property type:** Array&lt;Readonly&lt;[ActiveStreamVolumeInfo](arkts-audio-audio-activestreamvolumeinfo-i-sys.md)&gt;&gt;
+**Type:** Array&lt;Readonly&lt;[ActiveStreamVolumeInfo](arkts-audio-audio-activestreamvolumeinfo-i-sys.md)&gt;&gt;

@@ -26,7 +26,7 @@ Creates a ColorPicker instance based on a pixel map. This API uses a promise to 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| source | image.PixelMap | Yes | PixelMap instance created by the image module. An instance can be obtained by decoding an image or directly created. For details, see Introduction to Image Kit. |
+| source | [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | Yes | PixelMap instance created by the image module. An instance can be obtained by decoding an image or directly created. For details, see Introduction to Image Kit. |
 
 **Return value:**
 
@@ -91,7 +91,7 @@ Creates a ColorPicker instance for the selected region based on a pixel map. Thi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| source | image.PixelMap | Yes | PixelMap instance created by the image module. An instance can be obtained by decoding an image or directly created. For details, see Introduction to Image Kit. |
+| source | [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | Yes | PixelMap instance created by the image module. An instance can be obtained by decoding an image or directly created. For details, see Introduction to Image Kit. |
 | region | Array&lt;number&gt; | Yes | Color picking region of the image. The array contains four elements, with a value range of [0, 1]. Values outside this range are automatically truncated during implementation. The four elements represent the left, top, right, and bottom positions of the image region, respectively. The leftmost and topmost edges correspond to position 0, and the rightmost and bottommost edges correspond to position 1. The third element must be greater than the first element, and the fourth element must be greater than the second element. |
 
 **Return value:**
@@ -157,7 +157,7 @@ Creates a ColorPicker instance based on a pixel map. This API uses an asynchrono
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| source | image.PixelMap | Yes | PixelMap instance created by the image module. An instance can be obtained by decoding an image or directly created. For details, see Introduction to Image Kit. |
+| source | [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | Yes | PixelMap instance created by the image module. An instance can be obtained by decoding an image or directly created. For details, see Introduction to Image Kit. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ColorPicker](arkts-arkgraphics2d-effectkit-colorpicker-i.md)&gt; | Yes | Callback used to return the ColorPicker instance created. |
 
 **Error codes:**
@@ -217,7 +217,7 @@ Creates a ColorPicker instance for the selected region based on a pixel map. Thi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| source | image.PixelMap | Yes | PixelMap instance created by the image module. An instance can be obtained by decoding an image or directly created. For details, see Introduction to Image Kit. |
+| source | [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | Yes | PixelMap instance created by the image module. An instance can be obtained by decoding an image or directly created. For details, see Introduction to Image Kit. |
 | region | Array&lt;number&gt; | Yes | Color picking region of the image. The array contains four elements, with a value range of [0, 1]. Values outside this range are automatically truncated during implementation. The four elements represent the left, top, right, and bottom positions of the image region, respectively. The leftmost and topmost edges correspond to position 0, and the rightmost and bottommost edges correspond to position 1. The third element must be greater than the first element, and the fourth element must be greater than the second element. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ColorPicker](arkts-arkgraphics2d-effectkit-colorpicker-i.md)&gt; | Yes | Callback used to return the ColorPicker instance created. |
 

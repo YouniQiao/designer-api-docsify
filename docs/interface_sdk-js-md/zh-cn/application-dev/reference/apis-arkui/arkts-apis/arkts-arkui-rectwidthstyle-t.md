@@ -14,4 +14,4 @@ declare type RectWidthStyle = import('../api/@ohos.graphics.text').default.RectW
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-**属性类型：** import('../api/@ohos.graphics.text').default.RectWidthStyle
+**类型：** import('../api/@ohos.graphics.text').default.RectWidthStyle

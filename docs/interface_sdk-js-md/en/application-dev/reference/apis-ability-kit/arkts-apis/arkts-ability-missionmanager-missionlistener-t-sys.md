@@ -12,4 +12,4 @@ MissionListener registered by app.
 
 **System API:** This is a system API.
 
-**Property type:** _MissionListener
+**Type:** _MissionListener

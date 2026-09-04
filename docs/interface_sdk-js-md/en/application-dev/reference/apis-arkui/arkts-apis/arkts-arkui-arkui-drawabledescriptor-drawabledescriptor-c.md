@@ -32,7 +32,7 @@ Obtains this **PixelMap** instance.
 
 | Type | Description |
 | --- | --- |
-| image.PixelMap | PixelMap** object. |
+| [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | PixelMap** object. |
 
 **Error codes:**
 
@@ -43,6 +43,7 @@ Obtains this **PixelMap** instance.
 **Examples**
 
 For details, see [LayeredDrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-layereddrawabledescriptor-c.md).
+- simpleType:
 
 ## invalidate
 
@@ -115,6 +116,7 @@ Asynchronously loads the image resource and returns the loading result. This API
 **Examples**
 
 For details, see [DrawableDescriptorLoadedResult](arkts-arkui-arkui-drawabledescriptor-drawabledescriptorloadedresult-i.md).
+- simpleType:
 
 ## loadSync
 
@@ -148,6 +150,7 @@ Synchronously loads the image resource and returns the loading result.
 **Examples**
 
 For details, see [DrawableDescriptorLoadedResult](arkts-arkui-arkui-drawabledescriptor-drawabledescriptorloadedresult-i.md).
+- simpleType:
 
 ## release
 

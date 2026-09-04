@@ -14,4 +14,4 @@ type ConnectionInterval = nearlinkConstant.ConnectionInterval
 
 **系统接口：** 此接口为系统接口。
 
-**属性类型：** nearlinkConstant.ConnectionInterval
+**类型：** [nearlinkConstant.ConnectionInterval](arkts-connectivity-nearlinkconstant-connectioninterval-e-sys.md)

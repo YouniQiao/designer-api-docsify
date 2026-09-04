@@ -14,4 +14,4 @@ Represents a FrameNode of the **Search** type.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** [TypedFrameNode](arkts-arkui-framenode-typedframenode-i.md)&lt;SearchInterface, [SearchAttribute](../arkts-components/arkts-arkui-search-attribute.md)&gt;
+**Type:** [TypedFrameNode](arkts-arkui-framenode-typedframenode-i.md)&lt;SearchInterface, [SearchAttribute](../arkts-components/arkts-arkui-search-attribute.md)&gt;

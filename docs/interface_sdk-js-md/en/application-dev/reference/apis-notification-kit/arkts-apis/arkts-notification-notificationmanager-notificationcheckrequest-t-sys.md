@@ -12,4 +12,4 @@ Describes the notification authentication information.
 
 **System API:** This is a system API.
 
-**Property type:** _NotificationCheckRequest
+**Type:** _NotificationCheckRequest

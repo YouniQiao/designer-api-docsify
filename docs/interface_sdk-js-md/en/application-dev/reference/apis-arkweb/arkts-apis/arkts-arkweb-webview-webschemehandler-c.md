@@ -175,3 +175,4 @@ Called when the request is complete. This callback is triggered only when the on
 **Examples**
 
 For the complete sample code, see [onRequestStart](#onrequeststart).
+- simpleType:

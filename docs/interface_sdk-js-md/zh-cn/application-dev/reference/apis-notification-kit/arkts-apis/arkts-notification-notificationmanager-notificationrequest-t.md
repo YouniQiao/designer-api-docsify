@@ -10,4 +10,4 @@ export type NotificationRequest = _NotificationRequest
 
 **系统能力：** SystemCapability.Notification.Notification
 
-**属性类型：** _NotificationRequest
+**类型：** _NotificationRequest

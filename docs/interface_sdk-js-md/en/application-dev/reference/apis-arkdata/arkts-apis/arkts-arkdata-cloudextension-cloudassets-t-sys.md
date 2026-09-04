@@ -12,4 +12,4 @@ Represents an array of CloudAsset.
 
 **System API:** This is a system API.
 
-**Property type:** Array&lt;[CloudAsset](arkts-arkdata-cloudextension-cloudasset-i-sys.md)&gt;
+**Type:** Array&lt;[CloudAsset](arkts-arkdata-cloudextension-cloudasset-i-sys.md)&gt;

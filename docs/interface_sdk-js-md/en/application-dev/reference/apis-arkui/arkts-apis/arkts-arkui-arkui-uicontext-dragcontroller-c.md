@@ -74,13 +74,13 @@ Creates a drag action object for initiating drag and drop operations. You need t
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | customArray | Array&lt;[CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) \| [DragItemInfo](../arkts-components/arkts-arkui-dragiteminfo-i.md)&gt; | Yes | Object to be dragged. |
-| dragInfo | dragController.DragInfo | Yes | Drag information. |
+| dragInfo | [dragController.DragInfo](arkts-arkui-dragcontroller-draginfo-i.md) | Yes | Drag information. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| dragController.DragAction | DragAction** object, which is used to subscribe to drag state changes and start the drag service. |
+| [dragController.DragAction](arkts-arkui-dragcontroller-dragaction-i.md) | DragAction** object, which is used to subscribe to drag state changes and start the drag service. |
 
 **Error codes:**
 
@@ -260,6 +260,7 @@ Specifies whether to enable the display of a disallowed badge when dragged conte
 **Examples**
 
 This example demonstrates the function of displaying a drag-disallowed badge when a drag object passes over a target area where dropping is not allowed, implemented via the enableDropDisallowedBadge API.
+Call the enableDropDisallowedBadge API in EntryAbility.ets and set the enabled parameter to true.
 
 ```TypeScript
 import { UIAbility } from '@kit.AbilityKit';
@@ -330,8 +331,8 @@ Initiates a drag action, with the object to be dragged and the drag information 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | custom | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) \| [DragItemInfo](../arkts-components/arkts-arkui-dragiteminfo-i.md) | Yes | Object to be dragged.   **NOTE：**The global builder is not supported. If the [Image](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md) component is used in the builder, enable synchronous loading, that is, set the syncLoad attribute of the component to **true**. The builder is used only to generate the image displayed during the current dragging. If the root component of the builder has zero width or height, it will cause failure in drag image generation, which in turn breaks the entire drag operation. Changes to the builder, if any, apply to the next dragging, but not to the current dragging. |
-| dragInfo | dragController.DragInfo | Yes | Drag information. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;dragController.DragEventParam&gt; | Yes | Callback used to return the result.   - **event**: drag event information that includes only the drag result.   - **extraParams**: extra information about the drag event.<br>**Since:** 12 |
+| dragInfo | [dragController.DragInfo](arkts-arkui-dragcontroller-draginfo-i.md) | Yes | Drag information. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[dragController.DragEventParam](arkts-arkui-dragcontroller-drageventparam-i.md)&gt; | Yes | Callback used to return the result.   - **event**: drag event information that includes only the drag result.   - **extraParams**: extra information about the drag event.<br>**Since:** 12 |
 
 **Error codes:**
 
@@ -421,14 +422,14 @@ Initiates a drag action, with the object to be dragged and the drag information 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | custom | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) \| [DragItemInfo](../arkts-components/arkts-arkui-dragiteminfo-i.md) | Yes | Object to be dragged. |
-| dragInfo | dragController.DragInfo | Yes | Drag information. |
+| dragInfo | [dragController.DragInfo](arkts-arkui-dragcontroller-draginfo-i.md) | Yes | Drag information. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
 | Promise&lt;{ event: DragEvent, extraParams: string | > } Callback used to return the result. |
-| Promise&lt;dragController.DragEventParam&gt; | A Promise with the drag event information.<br>**Applicable version:** 12 and later |
+| Promise&lt;[dragController.DragEventParam](arkts-arkui-dragcontroller-drageventparam-i.md)&gt; | A Promise with the drag event information.<br>**Applicable version:** 12 and later |
 
 **Error codes:**
 
@@ -543,11 +544,12 @@ Obtains the **DragPreview** object, which represents the preview displayed durin
 
 | Type | Description |
 | --- | --- |
-| dragController.DragPreview | DragPreview** object. It provides the API for setting the preview style. It does not work in the **OnDrop** and **OnDragEnd** callbacks. |
+| [dragController.DragPreview](arkts-arkui-dragcontroller-dragpreview-c.md) | DragPreview** object. It provides the API for setting the preview style. It does not work in the **OnDrop** and **OnDragEnd** callbacks. |
 
 **Examples**
 
 See the example for animate.
+- simpleType:
 
 ## notifyDragStartRequest
 
@@ -569,7 +571,7 @@ Controls whether the application can initiate a drag operation.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| requestStatus | dragController.DragStartRequestStatus | Yes | Whether the application can initiate a drag operation. |
+| requestStatus | [dragController.DragStartRequestStatus](arkts-arkui-dragcontroller-dragstartrequeststatus-e.md) | Yes | Whether the application can initiate a drag operation. |
 
 **Examples**
 

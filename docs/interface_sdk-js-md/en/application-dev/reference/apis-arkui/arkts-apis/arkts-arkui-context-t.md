@@ -14,4 +14,4 @@ The base context of an ability or an application. It allows access to applicatio
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
-**Property type:** common.Context
+**Type:** [common.Context](../../apis-ability-kit/arkts-apis/arkts-ability-common-context-t.md)

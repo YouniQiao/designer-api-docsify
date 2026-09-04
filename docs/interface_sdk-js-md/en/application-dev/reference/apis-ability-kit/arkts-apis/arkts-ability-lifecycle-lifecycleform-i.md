@@ -37,7 +37,7 @@ Called to return a FormState object. <p>You must override this callback if you w
 
 | Type | Description |
 | --- | --- |
-| formInfo.FormState | Returns the { |
+| [formInfo.FormState](../../apis-form-kit/arkts-apis/arkts-form-forminfo-formstate-e.md) | Returns the { |
 
 ## onCastToNormal
 
@@ -83,7 +83,7 @@ Called to return a FormBindingData object.
 
 | Type | Description |
 | --- | --- |
-| formBindingData.FormBindingData | Returns the created { |
+| [formBindingData.FormBindingData](../../apis-form-kit/arkts-apis/arkts-form-formbindingdata-formbindingdata-depr-i.md) | Returns the created { |
 
 ## onDestroy
 

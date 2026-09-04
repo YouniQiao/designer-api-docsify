@@ -414,7 +414,7 @@ colorSpaces: Array<colorSpaceManager.ColorSpace>
 
 All color spaces supported by the display.
 
-**Type:** Array&lt;colorSpaceManager.ColorSpace&gt;
+**Type:** Array&lt;[colorSpaceManager.ColorSpace](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-colorspacemanager-colorspace-e.md)&gt;
 
 **Since:** 11
 
@@ -462,7 +462,7 @@ hdrFormats: Array<hdrCapability.HDRFormat>
 
 All HDR formats supported by the display.
 
-**Type:** Array&lt;hdrCapability.HDRFormat&gt;
+**Type:** Array&lt;[hdrCapability.HDRFormat](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-hdrcapability-hdrformat-e.md)&gt;
 
 **Since:** 11
 

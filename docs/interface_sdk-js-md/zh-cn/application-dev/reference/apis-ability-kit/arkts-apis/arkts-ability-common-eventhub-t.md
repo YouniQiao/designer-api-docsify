@@ -14,4 +14,4 @@ EventHub是系统提供的基于发布-订阅模式实现的事件通信机制�
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
-**属性类型：** _EventHub.default
+**类型：** _EventHub.default

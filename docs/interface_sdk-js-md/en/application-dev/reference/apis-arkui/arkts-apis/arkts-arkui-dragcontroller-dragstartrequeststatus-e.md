@@ -4,6 +4,8 @@ Enumerates the states defining whether an application can initiate a drag operat
 
 **Since:** 18
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## WAITING

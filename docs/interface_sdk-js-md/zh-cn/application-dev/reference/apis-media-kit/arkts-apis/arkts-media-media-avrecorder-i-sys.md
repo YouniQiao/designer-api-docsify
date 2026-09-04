@@ -109,7 +109,7 @@ setWatermark(watermark: image.PixelMap, config: WatermarkConfig): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| watermark | image.PixelMap | 是 | 水印图片。 |
+| watermark | [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | 是 | 水印图片。 |
 | config | [WatermarkConfig](arkts-media-media-watermarkconfig-i-sys.md) | 是 | 水印配置。 |
 
 **返回值：**

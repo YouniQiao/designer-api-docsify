@@ -6,8 +6,6 @@ This module provides the capability to media enhancement
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
-
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 ## Modules to Import

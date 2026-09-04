@@ -63,6 +63,9 @@ hilog.info(0x0001, "testTag", 'this is an info level log, id: %{public}d', 5);
 ```
 
 The first log is printed properly because the global log level is INFO.
+When the minimum log level of the process is set to WARN and the PREFER_OPEN_LOG is strategy selected, the actual minimum log level is INFO. Therefore, the second and third logs can be printed properly.
+When the minimum log level of the process is set to DEBUG and the PREFER_CLOSE_LOG strategy is selected (equivalent to hilog.setMinLogLevel(hilog.LogLevel.DEBUG)), the fourth log cannot be printed because the global log level is INFO. The fifth log can be printed.
+The log result is as follows:
 
 ```TypeScript
 08-07 23:50:01.532   13694-13694   A00001/testTag                  com.example.hilogDemo  I     this is an info level log, id: 1

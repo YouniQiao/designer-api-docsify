@@ -4,6 +4,8 @@ Enumerates the file encryption levels, which are used to ensure data security fo
 
 **Since:** 9
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## EL1

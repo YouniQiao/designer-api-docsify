@@ -71,7 +71,7 @@ function getDsdsMode(): Promise<DsdsMode>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[DsdsMode](arkts-telephony-sim-dsdsmode-e-sys.md)&gt; | Returns one of the following dsds mode states: &lt;ul&gt; &lt;li&gt;{ |
+| Promise&lt;[DsdsMode](arkts-telephony-sim-dsdsmode-e-sys.md)&gt; | Returns one of the following dsds mode states:&lt;ul&gt; &lt;li&gt;{ |
 
 **错误码：**
 

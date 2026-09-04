@@ -10,4 +10,4 @@ Describes the number text notification.
 
 **System capability:** SystemCapability.Notification.Notification
 
-**Property type:** _NotificationLongTextContent
+**Type:** _NotificationLongTextContent

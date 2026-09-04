@@ -12,4 +12,4 @@ Enumerates the connection states with a remote device.
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 
-**Property type:** nearlinkConstant.ConnectionState
+**Type:** [nearlinkConstant.ConnectionState](arkts-connectivity-nearlinkconstant-connectionstate-e.md)

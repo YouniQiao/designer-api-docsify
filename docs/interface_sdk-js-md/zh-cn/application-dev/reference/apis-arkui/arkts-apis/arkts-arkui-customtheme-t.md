@@ -14,4 +14,4 @@ declare type CustomTheme = import('../api/@ohos.arkui.theme').CustomTheme
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-**属性类型：** import('../api/@ohos.arkui.theme').CustomTheme
+**类型：** import('../api/@ohos.arkui.theme').CustomTheme

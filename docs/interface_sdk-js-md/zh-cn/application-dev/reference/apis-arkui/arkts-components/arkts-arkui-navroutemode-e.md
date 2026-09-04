@@ -8,6 +8,8 @@
 
 **替代接口：** [NavPathStack](arkts-arkui-navpathstack-c.md)
 
+**模型约束：** 此接口仅可在Stage模型下使用。
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## PUSH_WITH_RECREATE

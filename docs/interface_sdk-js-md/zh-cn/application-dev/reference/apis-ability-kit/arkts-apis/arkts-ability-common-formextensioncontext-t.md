@@ -14,4 +14,4 @@ The context of form extension. It allows access to formExtension-specific resour
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
-**属性类型：** _FormExtensionContext.default
+**类型：** _FormExtensionContext.default

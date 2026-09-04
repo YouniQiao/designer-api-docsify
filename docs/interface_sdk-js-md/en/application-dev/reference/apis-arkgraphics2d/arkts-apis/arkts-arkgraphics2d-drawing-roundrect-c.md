@@ -65,7 +65,7 @@ A constructor used to create a **RoundRect** object. A rounded rectangle is crea
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rect | common2D.Rect | Yes | Rectangle that encloses the rounded rectangle to create. |
+| rect | [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) | Yes | Rectangle that encloses the rounded rectangle to create. |
 | xRadii | number | Yes | Radius of the rounded corner on the X axis. The value is a floating point number. A negative number is invalid. |
 | yRadii | number | Yes | Radius of the rounded corner on the Y axis. The value is a floating point number. A negative number is invalid. |
 
@@ -106,7 +106,7 @@ Obtains the radii of the specified rounded corner in this rounded rectangle.
 
 | Type | Description |
 | --- | --- |
-| common2D.Point | Point. The horizontal coordinate indicates the radius of the rounded corner on the X axis, and the vertical coordinate indicates the radius on the Y axis. |
+| [common2D.Point](arkts-arkgraphics2d-common2d-point-i.md) | Point. The horizontal coordinate indicates the radius of the rounded corner on the X axis, and the vertical coordinate indicates the radius on the Y axis. |
 
 **Error codes:**
 

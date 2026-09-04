@@ -197,7 +197,7 @@ Obtains the color of this pen.
 
 | Type | Description |
 | --- | --- |
-| common2D.Color | Color of the pen. |
+| [common2D.Color](arkts-arkgraphics2d-common2d-color-i.md) | Color of the pen. |
 
 **Examples**
 
@@ -235,7 +235,7 @@ Obtains the pen color. The difference between this method and [getColor](#getcol
 
 | Type | Description |
 | --- | --- |
-| common2D.Color4f | Color of the pen. |
+| [common2D.Color4f](arkts-arkgraphics2d-common2d-color4f-i.md) | Color of the pen. |
 
 **Examples**
 
@@ -741,7 +741,7 @@ Sets a color for this pen.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | common2D.Color | Yes | Color in ARGB format. The value of each color channel is an integer ranging from 0 to 255. |
+| color | [common2D.Color](arkts-arkgraphics2d-common2d-color-i.md) | Yes | Color in ARGB format. The value of each color channel is an integer ranging from 0 to 255. |
 
 **Error codes:**
 
@@ -860,8 +860,8 @@ Sets the color and standard color gamut for this pen. The difference between thi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color4f | common2D.Color4f | Yes | Color in the ARGB format. The value of each color channel is a floating point number ranging from 0.0 to 1.0. Values above 1.0 default to **1.0**, and values below 0.0 default to **0.0**. |
-| colorSpace | colorSpaceManager.ColorSpaceManager \| null | Yes | Standard color gamut object. **null** indicates SRGB. |
+| color4f | [common2D.Color4f](arkts-arkgraphics2d-common2d-color4f-i.md) | Yes | Color in the ARGB format. The value of each color channel is a floating point number ranging from 0.0 to 1.0. Values above 1.0 default to **1.0**, and values below 0.0 default to **0.0**. |
+| colorSpace | [colorSpaceManager.ColorSpaceManager](arkts-arkgraphics2d-colorspacemanager-colorspacemanager-i.md) \| null | Yes | Standard color gamut object. **null** indicates SRGB. |
 
 **Examples**
 

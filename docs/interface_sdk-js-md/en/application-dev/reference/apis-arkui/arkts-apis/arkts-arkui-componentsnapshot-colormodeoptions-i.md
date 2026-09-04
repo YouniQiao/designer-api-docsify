@@ -28,7 +28,7 @@ Default value: **SRGB**
 
 If the value is **undefined**, **null**, or not set, the default value is used. If an abnormal value is used, snapshot capture fails and the error code 160003 is returned.
 
-**Type:** colorSpaceManager.ColorSpace
+**Type:** [colorSpaceManager.ColorSpace](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-colorspacemanager-colorspace-e.md)
 
 **Since:** 23
 

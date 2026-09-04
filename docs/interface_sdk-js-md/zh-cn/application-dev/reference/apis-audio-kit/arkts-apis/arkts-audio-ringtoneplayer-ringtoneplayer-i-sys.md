@@ -111,7 +111,7 @@ getAudioRendererInfo(callback: AsyncCallback<audio.AudioRendererInfo>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;audio.AudioRendererInfo&gt; | 是 | 回调函数。当获取音频渲染器信息成功，err为undefined data为获取到的音频渲染器信息；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[audio.AudioRendererInfo](arkts-audio-audio-audiorendererinfo-i.md)&gt; | 是 | 回调函数。当获取音频渲染器信息成功，err为undefined data为获取到的音频渲染器信息；否则为错误对象。 |
 
 **示例**
 
@@ -149,7 +149,7 @@ getAudioRendererInfo(): Promise<audio.AudioRendererInfo>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;audio.AudioRendererInfo&gt; | Promise对象，返回获取的音频渲染器信息。 |
+| Promise&lt;[audio.AudioRendererInfo](arkts-audio-audio-audiorendererinfo-i.md)&gt; | Promise对象，返回获取的音频渲染器信息。 |
 
 **示例**
 
@@ -285,7 +285,7 @@ on(type: 'audioInterrupt', callback: Callback<audio.InterruptEvent>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'audioInterrupt' | 是 | 事件回调类型，支持的事件为'audioInterrupt'，当音频焦点状态发生变化时，触发该事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;audio.InterruptEvent&gt; | 是 | 回调函数，返回中断事件信息。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[audio.InterruptEvent](arkts-audio-audio-interruptevent-i.md)&gt; | 是 | 回调函数，返回中断事件信息。 |
 
 **错误码：**
 
@@ -550,7 +550,7 @@ readonly state: media.AVPlayerState
 
 音频渲染器的状态。
 
-**类型：** media.AVPlayerState
+**类型：** [media.AVPlayerState](../../apis-media-kit/arkts-apis/arkts-media-media-avplayerstate-t.md)
 
 **起始版本：** 10
 

@@ -12,4 +12,4 @@ Enumerates live view types.
 
 **System API:** This is a system API.
 
-**Property type:** _LiveViewTypes
+**Type:** _LiveViewTypes

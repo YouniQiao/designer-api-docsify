@@ -14,4 +14,4 @@ Represents a color filter object.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** import('../api/@ohos.graphics.drawing').default.ColorFilter
+**Type:** import('../api/@ohos.graphics.drawing').default.ColorFilter

@@ -12,4 +12,4 @@ type SystemToneOptions = _SystemToneOptions
 
 **系统接口：** 此接口为系统接口。
 
-**属性类型：** _SystemToneOptions
+**类型：** _SystemToneOptions

@@ -12,4 +12,4 @@ The **NotificationSorting** module provides APIs for defining the sorting inform
 
 **System API:** This is a system API.
 
-**Property type:** _NotificationSorting
+**Type:** _NotificationSorting

@@ -14,4 +14,4 @@ Represents the AgentExtensionConnectCallback type.
 
 **System API:** This is a system API.
 
-**Property type:** _AgentExtensionConnectCallback
+**Type:** _AgentExtensionConnectCallback

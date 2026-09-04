@@ -14,4 +14,4 @@ Defines the page node information used for auto-fill.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
-**Property type:** _PageNodeInfo.default
+**Type:** _PageNodeInfo.default

@@ -112,7 +112,7 @@ Called back when window is created.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| window | window.Window | Yes | Current Window instance. |
+| window | [window.Window](arkts-arkui-window-window-i.md) | Yes | Current Window instance. |
 
 **Examples**
 

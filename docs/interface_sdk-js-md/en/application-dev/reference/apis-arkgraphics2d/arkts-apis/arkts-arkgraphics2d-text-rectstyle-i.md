@@ -20,7 +20,7 @@ color: common2D.Color
 
 Color of the rectangle.
 
-**Type:** common2D.Color
+**Type:** [common2D.Color](arkts-arkgraphics2d-common2d-color-i.md)
 
 **Since:** 12
 

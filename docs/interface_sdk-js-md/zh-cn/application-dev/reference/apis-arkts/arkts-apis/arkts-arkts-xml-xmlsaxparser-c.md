@@ -42,7 +42,7 @@ constructor(inputStream: stream.Readable, encoding?: string)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| inputStream | stream.Readable | 是 | 用于读取XML数据的可读流实例。 |
+| inputStream | [stream.Readable](arkts-arkts-stream-readable-c.md) | 是 | 用于读取XML数据的可读流实例。 |
 | encoding | string | 否 | 编码格式，默认为'utf-8'（目前仅支持'utf-8'）。 |
 
 **示例**

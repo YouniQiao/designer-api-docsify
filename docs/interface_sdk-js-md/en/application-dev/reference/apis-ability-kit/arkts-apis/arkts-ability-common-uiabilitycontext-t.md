@@ -14,4 +14,4 @@ Defines the context environment for the [UIAbility](arkts-ability-app-ability-ui
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
-**Property type:** _UIAbilityContext.default
+**Type:** _UIAbilityContext.default

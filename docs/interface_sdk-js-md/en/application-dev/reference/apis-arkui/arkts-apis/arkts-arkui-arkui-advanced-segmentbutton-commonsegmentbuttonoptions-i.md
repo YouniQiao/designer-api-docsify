@@ -94,7 +94,7 @@ backgroundSystemMaterial?: uiMaterial.Material
 
 Set system-styled materials for the component. Different materials have different effects, which can influence the backgroundColor, border, shadow, and other visual attributes of the component.
 
-**Type:** uiMaterial.Material
+**Type:** [uiMaterial.Material](arkts-arkui-uimaterial-material-c.md)
 
 **Since:** 26.0.0
 

@@ -4,6 +4,8 @@ Defines the AI image analysis type. If it is not set, subject recognition and te
 
 **Since:** 12
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## SUBJECT

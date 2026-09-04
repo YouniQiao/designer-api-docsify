@@ -62,6 +62,7 @@ ListItemGroup(options?: ListItemGroupOptions)
 ## 示例
 
 该示例通过[sticky](ts-container-list.md#sticky9)实现了Header吸顶和Footer吸底的效果。
+ListDataSource实现了LazyForEach数据源接口[IDataSource](ts-rendering-control-lazyforeach.md#idatasource)，用于通过LazyForEach给List和ListItemGroup提供子组件。
 
 ```TypeScript
 // ListDataSource.ets
@@ -270,6 +271,7 @@ interface ArrObject {
 ```
 
 该示例通过ComponentContent设置Header/Footer。
+ListDataSource说明及完整代码参考[示例1（设置吸顶/吸底）](#示例1设置吸顶吸底)。
 
 ```TypeScript
 // xxx.ets
@@ -402,6 +404,7 @@ struct ListItemGroupExample {
 ```
 
 该示例展示了ListItemGroup在多列布局中的使用，通过设置List组件的[lanes](ts-container-list.md#lanes9)属性实现多列布局。
+ListDataSource说明及完整代码参考[示例1（设置吸顶/吸底）](#示例1设置吸顶吸底)。
 
 ```TypeScript
 // xxx.ets

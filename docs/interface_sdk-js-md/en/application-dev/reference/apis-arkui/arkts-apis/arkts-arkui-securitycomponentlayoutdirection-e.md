@@ -4,6 +4,8 @@ Enumerates the layout directions of the icon and text on a security component.
 
 **Since:** 10
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## HORIZONTAL

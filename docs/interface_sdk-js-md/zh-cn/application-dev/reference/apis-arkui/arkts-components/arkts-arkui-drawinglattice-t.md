@@ -14,4 +14,4 @@ declare type DrawingLattice = import('../api/@ohos.graphics.drawing').default.La
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-**属性类型：** import('../api/@ohos.graphics.drawing').default.Lattice
+**类型：** import('../api/@ohos.graphics.drawing').default.Lattice

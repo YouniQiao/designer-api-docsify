@@ -504,8 +504,8 @@ static cloudSync(
 | --- | --- | --- | --- |
 | bundleName | string | 是 | 待端云同步数据的应用包名。 |
 | storeId | string | 是 | 待端云同步的数据库名。 |
-| mode | relationalStore.SyncMode | 是 | 端云同步类型。 |
-| progress | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;relationalStore.ProgressDetails&gt; | 是 | 同步进度回调。返回ProgressDetails实例对象。 |
+| mode | [relationalStore.SyncMode](arkts-arkdata-relationalstore-syncmode-e.md) | 是 | 端云同步类型。 |
+| progress | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[relationalStore.ProgressDetails](arkts-arkdata-relationalstore-progressdetails-i.md)&gt; | 是 | 同步进度回调。返回ProgressDetails实例对象。 |
 
 **返回值：**
 
@@ -569,8 +569,8 @@ static cloudSyncEx(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | bundleInfo | BundleInfo | 是 | 应用包信息配置。BundleInfo的实例对象。 |
-| config | relationalStore.CloudSyncConfig | 是 | 云同步配置。 |
-| progress | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;relationalStore.ProgressDetails&gt; | 是 | 进度回调函数。返回ProgressDetails实例对象。 |
+| config | [relationalStore.CloudSyncConfig](arkts-arkdata-relationalstore-cloudsyncconfig-i.md) | 是 | 云同步配置。 |
+| progress | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[relationalStore.ProgressDetails](arkts-arkdata-relationalstore-progressdetails-i.md)&gt; | 是 | 进度回调函数。返回ProgressDetails实例对象。 |
 
 **返回值：**
 
@@ -872,7 +872,7 @@ static notifyDataChange(extInfo: ExtraData, userId?: number): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, which is usually returned by &lt;b&gt;VerifyAccessToken&lt;/b&gt;. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, which is usually returned by&lt;b&gt;VerifyAccessToken&lt;/b&gt;. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
@@ -926,7 +926,7 @@ static notifyDataChange(extInfo: ExtraData, callback: AsyncCallback<void>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, which is usually returned by &lt;b&gt;VerifyAccessToken&lt;/b&gt;. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, which is usually returned by&lt;b&gt;VerifyAccessToken&lt;/b&gt;. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
@@ -982,7 +982,7 @@ static notifyDataChange(extInfo: ExtraData, userId: number, callback: AsyncCallb
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, which is usually returned by &lt;b&gt;VerifyAccessToken&lt;/b&gt;. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, which is usually returned by&lt;b&gt;VerifyAccessToken&lt;/b&gt;. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
@@ -1398,7 +1398,7 @@ static setGlobalCloudStrategy(strategy: StrategyType, param?: Array<commonType.V
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | strategy | [StrategyType](arkts-arkdata-clouddata-strategytype-e.md) | 是 | 配置的策略类型。 |
-| param | Array&lt;commonType.ValueType&gt; | 否 | 策略参数。不填写时默认为空，默认取消所有配置。 |
+| param | Array&lt;[commonType.ValueType](arkts-arkdata-commontype-valuetype-t.md)&gt; | 否 | 策略参数。不填写时默认为空，默认取消所有配置。 |
 
 **返回值：**
 

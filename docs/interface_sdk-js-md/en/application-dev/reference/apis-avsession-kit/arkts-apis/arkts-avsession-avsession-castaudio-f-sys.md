@@ -27,7 +27,7 @@ Cast Audio to the remote devices or cast back local device
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | session | [SessionToken](arkts-avsession-avsession-sessiontoken-i-sys.md) \| 'all' | Yes | Specifies the sessionId which to send to remote. |
-| audioDevices | Array&lt;audio.AudioDeviceDescriptor&gt; | Yes | Specifies the audio devices to cast. |
+| audioDevices | Array&lt;[audio.AudioDeviceDescriptor](../../apis-audio-kit/arkts-apis/arkts-audio-audio-audiodevicedescriptor-i.md)&gt; | Yes | Specifies the audio devices to cast. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The asyncCallback triggered when the command is executed successfully'all' means cast all the media audio of this device to remote. |
 
 **Error codes:**
@@ -82,7 +82,7 @@ Cast Audio to the remote devices or cast back local device
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | session | [SessionToken](arkts-avsession-avsession-sessiontoken-i-sys.md) \| 'all' | Yes | Specifies the sessionId which to send to remote. |
-| audioDevices | Array&lt;audio.AudioDeviceDescriptor&gt; | Yes | Specifies the audio devices to cast. |
+| audioDevices | Array&lt;[audio.AudioDeviceDescriptor](../../apis-audio-kit/arkts-apis/arkts-audio-audio-audiodevicedescriptor-i.md)&gt; | Yes | Specifies the audio devices to cast. |
 
 **Return value:**
 

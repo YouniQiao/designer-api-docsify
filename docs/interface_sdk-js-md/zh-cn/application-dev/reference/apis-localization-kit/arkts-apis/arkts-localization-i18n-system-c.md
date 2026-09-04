@@ -470,7 +470,7 @@ static getSystemLocaleInstance(): Intl.Locale
 
 | 类型 | 说明 |
 | --- | --- |
-| Intl.Locale | 系统区域对象。 |
+| [Intl.Locale](arkts-localization-intl-locale-c.md) | 系统区域对象。 |
 
 **示例**
 

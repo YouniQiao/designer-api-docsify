@@ -14,4 +14,4 @@ Enumerates the window modes.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** import('../api/@ohos.window').default.WindowStatusType
+**Type:** import('../api/@ohos.window').default.WindowStatusType

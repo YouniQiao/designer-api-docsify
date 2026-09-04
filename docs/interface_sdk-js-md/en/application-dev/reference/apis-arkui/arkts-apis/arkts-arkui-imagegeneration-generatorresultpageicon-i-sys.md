@@ -42,7 +42,7 @@ image: image.PixelMap | string | Resource
 
 Icon image information.
 
-**Type:** image.PixelMap \| string \| Resource
+**Type:** [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) \| string \| Resource
 
 **Since:** 23
 

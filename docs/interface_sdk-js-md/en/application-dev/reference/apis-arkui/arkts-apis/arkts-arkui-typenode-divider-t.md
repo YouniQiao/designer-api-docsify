@@ -14,4 +14,4 @@ Represents a FrameNode of the **Divider** type. This type of node does not allow
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** [TypedFrameNode](arkts-arkui-framenode-typedframenode-i.md)&lt;DividerInterface, [DividerAttribute](../arkts-components/arkts-arkui-divider-attribute.md)&gt;
+**Type:** [TypedFrameNode](arkts-arkui-framenode-typedframenode-i.md)&lt;DividerInterface, [DividerAttribute](../arkts-components/arkts-arkui-divider-attribute.md)&gt;

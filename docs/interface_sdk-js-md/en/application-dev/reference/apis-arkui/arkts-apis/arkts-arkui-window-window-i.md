@@ -9520,7 +9520,7 @@ Sets the supported window modes of the app window.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| supportedWindowModes | Array&lt;bundleManager.SupportWindowMode&gt; | Yes | The supported modes of the window. |
+| supportedWindowModes | Array&lt;[bundleManager.SupportWindowMode](../../apis-ability-kit/arkts-apis/arkts-ability-bundlemanager-supportwindowmode-e.md)&gt; | Yes | The supported modes of the window. |
 
 **Return value:**
 
@@ -12880,7 +12880,7 @@ Captures this window. This API uses an asynchronous callback to return the resul
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;image.PixelMap&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -12923,7 +12923,7 @@ Captures this window. If privacy mode is enabled for the current window (using [
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;image.PixelMap&gt; | Promise used to return the window screenshot. |
+| Promise&lt;[image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)&gt; | Promise used to return the window screenshot. |
 
 **Error codes:**
 
@@ -12964,7 +12964,7 @@ Captures this window. This API can be called to obtain the screenshot of the cur
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;image.PixelMap&gt; | Promise used to return the window screenshot. |
+| Promise&lt;[image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)&gt; | Promise used to return the window screenshot. |
 
 **Error codes:**
 
@@ -13006,7 +13006,7 @@ In the stage model, this API must be used after the call of [loadContent](#loadc
 
 | Type | Description |
 | --- | --- |
-| image.PixelMap | Window screenshot. |
+| [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | Window screenshot. |
 
 **Error codes:**
 

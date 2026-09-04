@@ -12,4 +12,4 @@ Describes the fields of notification intelligent unification information.
 
 **System API:** This is a system API.
 
-**Property type:** _UnifiedGroupInfo
+**Type:** _UnifiedGroupInfo

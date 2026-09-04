@@ -38,7 +38,7 @@ foldStatus: display.FoldStatus
 
 Fold status of the device.
 
-**Type:** display.FoldStatus
+**Type:** [display.FoldStatus](arkts-arkui-display-foldstatus-e.md)
 
 **Since:** 12
 
@@ -74,7 +74,7 @@ windowStatusType: window.WindowStatusType
 
 Window mode.
 
-**Type:** window.WindowStatusType
+**Type:** [window.WindowStatusType](arkts-arkui-window-windowstatustype-e.md)
 
 **Since:** 12
 

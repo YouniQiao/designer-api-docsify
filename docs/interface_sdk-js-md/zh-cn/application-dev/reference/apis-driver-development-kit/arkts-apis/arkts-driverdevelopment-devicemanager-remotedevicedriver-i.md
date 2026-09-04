@@ -34,7 +34,7 @@ remote: rpc.IRemoteObject
 
 远程驱动通信对象。
 
-**类型：** rpc.IRemoteObject
+**类型：** [rpc.IRemoteObject](../../apis-ipc-kit/arkts-apis/arkts-ipc-rpc-iremoteobject-c.md)
 
 **起始版本：** 11
 

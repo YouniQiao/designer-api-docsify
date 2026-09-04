@@ -14,4 +14,4 @@ Capabilities in an AgentCard represent the specific skills, services, and functi
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
-**Property type:** _AgentCapabilities
+**Type:** _AgentCapabilities

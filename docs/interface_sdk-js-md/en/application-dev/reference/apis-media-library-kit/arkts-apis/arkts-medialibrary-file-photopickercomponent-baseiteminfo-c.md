@@ -40,7 +40,7 @@ Dynamic range type of the media file. The options are **HDR** and **SDR**.
 
 For moving photos, this parameter specifies the dynamic range type of the cover image.
 
-**Type:** photoAccessHelper.DynamicRangeType
+**Type:** [photoAccessHelper.DynamicRangeType](arkts-medialibrary-photoaccesshelper-dynamicrangetype-e.md)
 
 **Since:** 21
 
@@ -96,7 +96,7 @@ State of the moving photo badge.
 
 This parameter is supported only when [ItemType](arkts-medialibrary-file-photopickercomponent-itemtype-e.md) is set to **THUMBNAIL**. Otherwise, it is left empty.
 
-**Type:** photoAccessHelper.MovingPhotoBadgeStateType
+**Type:** [photoAccessHelper.MovingPhotoBadgeStateType](arkts-medialibrary-photoaccesshelper-movingphotobadgestatetype-e.md)
 
 **Since:** 22
 
@@ -148,7 +148,7 @@ Subtype of the photo. The options are **DEFAULT**, **MOVING_PHOTO**, and **BURST
 
 The default value is **DEFAULT (0)**.
 
-**Type:** photoAccessHelper.PhotoSubtype
+**Type:** [photoAccessHelper.PhotoSubtype](arkts-medialibrary-photoaccesshelper-photosubtype-e.md)
 
 **Since:** 21
 
@@ -206,7 +206,7 @@ videoMode?: photoAccessHelper.VideoMode
 
 Log mode of a video file.
 
-**Type:** photoAccessHelper.VideoMode
+**Type:** [photoAccessHelper.VideoMode](arkts-medialibrary-photoaccesshelper-videomode-e.md)
 
 **Since:** 22
 

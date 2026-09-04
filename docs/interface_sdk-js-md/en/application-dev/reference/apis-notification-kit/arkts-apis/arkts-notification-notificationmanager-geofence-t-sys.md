@@ -14,4 +14,4 @@ Defines the configuration of a geofence.
 
 **System API:** This is a system API.
 
-**Property type:** _Geofence
+**Type:** _Geofence

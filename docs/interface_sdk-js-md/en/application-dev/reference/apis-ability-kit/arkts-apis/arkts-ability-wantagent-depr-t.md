@@ -16,4 +16,4 @@ Defines the WantAgent object.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
-**Property type:** object
+**Type:** object

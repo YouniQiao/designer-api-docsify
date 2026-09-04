@@ -16,7 +16,7 @@ readonly enableStatus: notificationManager.SwitchState
 
 通知开关状态。
 
-**类型：** notificationManager.SwitchState
+**类型：** [notificationManager.SwitchState](arkts-notification-notificationmanager-switchstate-e-sys.md)
 
 **起始版本：** 26.0.0
 

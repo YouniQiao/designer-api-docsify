@@ -4,6 +4,8 @@ Enumerates the types of axis actions for axis events.
 
 **Since:** 17
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## NONE

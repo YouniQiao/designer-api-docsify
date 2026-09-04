@@ -38,7 +38,7 @@ If you do not have the **ohos.permission.WRITE_IMAGEVIDEO** permission, you can 
 | --- | --- | --- | --- |
 | photoType | PhotoType | Yes | Type of the file to create, which can be **IMAGE** or **VIDEO**. |
 | extension | string | Yes | File name extension, for example, **'jpg'**. The string length ranges from 1 to 255. |
-| options | photoAccessHelper.CreateOptions | No | Options for creating the media asset, for example, **{title: 'testPhoto'}**. The file name must not contain any invalid characters. Starting from API version 18, the following characters are considered invalid: \ / : * ? " &lt; &gt; \| For API versions 10 to 17, the following characters are considered invalid: . .. \ / : * ? " ' ` &lt; &gt; \| { } [ ] |
+| options | [photoAccessHelper.CreateOptions](arkts-medialibrary-photoaccesshelper-createoptions-i.md) | No | Options for creating the media asset, for example, **{title: 'testPhoto'}**. The file name must not contain any invalid characters. Starting from API version 18, the following characters are considered invalid: \ / : * ? "&lt;&gt; \ | For API versions 10 to 17, the following characters are considered invalid: . .. \ / : * ? " ' ` &lt; &gt; \| { } [ ] |
 
 **Return value:**
 
@@ -98,7 +98,7 @@ Before the operation, ensure that the albums to obtain exist.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | photoAccessHelper.FetchOptions | Yes | Retrieval options. |
+| options | [photoAccessHelper.FetchOptions](arkts-medialibrary-photoaccesshelper-fetchoptions-i.md) | Yes | Retrieval options. |
 
 **Return value:**
 
@@ -172,7 +172,7 @@ Before the operation, ensure that the albums to obtain exist.
 | --- | --- | --- | --- |
 | type | AlbumType | Yes | Album type. |
 | subtype | AlbumSubtype | Yes | Subtype of the album. |
-| options | photoAccessHelper.FetchOptions | No | Retrieval options. If this parameter is not specified, the albums are obtained based on the album type by default. |
+| options | [photoAccessHelper.FetchOptions](arkts-medialibrary-photoaccesshelper-fetchoptions-i.md) | No | Retrieval options. If this parameter is not specified, the albums are obtained based on the album type by default. |
 
 **Return value:**
 
@@ -238,7 +238,7 @@ Obtains image and video assets. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | photoAccessHelper.FetchOptions | Yes | Retrieval options. |
+| options | [photoAccessHelper.FetchOptions](arkts-medialibrary-photoaccesshelper-fetchoptions-i.md) | Yes | Retrieval options. |
 
 **Return value:**
 
@@ -331,7 +331,7 @@ Obtains resources of burst photos. This API uses a promise to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | burstKey | string | Yes | Universally Unique Identifier (UUID) of a group of burst photos, that is, **BURST_KEY** of [PhotoKeys](arkts-medialibrary-photoaccesshelper-photokeys-e.md). The string contains 36 bytes. |
-| options | photoAccessHelper.FetchOptions | Yes | Retrieval options. |
+| options | [photoAccessHelper.FetchOptions](arkts-medialibrary-photoaccesshelper-fetchoptions-i.md) | Yes | Retrieval options. |
 
 **Return value:**
 

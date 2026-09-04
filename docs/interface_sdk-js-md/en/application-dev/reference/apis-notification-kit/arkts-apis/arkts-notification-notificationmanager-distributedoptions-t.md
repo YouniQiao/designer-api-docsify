@@ -10,4 +10,4 @@ Describes distributed notification options.
 
 **System capability:** SystemCapability.Notification.Notification
 
-**Property type:** _DistributedOptions
+**Type:** _DistributedOptions

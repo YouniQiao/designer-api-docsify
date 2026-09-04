@@ -12,4 +12,4 @@ declare type Scene = import('../api/@ohos.graphics.scene').Scene
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
-**属性类型：** import('../api/@ohos.graphics.scene').Scene
+**类型：** import('../api/@ohos.graphics.scene').Scene

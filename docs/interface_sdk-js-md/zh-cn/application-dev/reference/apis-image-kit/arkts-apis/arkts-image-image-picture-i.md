@@ -391,7 +391,7 @@ marshalling(sequence: rpc.MessageSequence): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| sequence | rpc.MessageSequence | 是 | 新创建的MessageSequence。 |
+| sequence | [rpc.MessageSequence](../../apis-ipc-kit/arkts-apis/arkts-ipc-rpc-messagesequence-c.md) | 是 | 新创建的MessageSequence。 |
 
 **错误码：**
 

@@ -12,4 +12,4 @@ Represents the **AbilityMonitor** module.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
-**Property type:** _AbilityMonitor
+**Type:** _AbilityMonitor

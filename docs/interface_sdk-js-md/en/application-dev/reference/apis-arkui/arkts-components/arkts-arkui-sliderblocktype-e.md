@@ -10,6 +10,8 @@ Enumerates the types of the slider in the block direction.
 
 **Since:** 10
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## DEFAULT

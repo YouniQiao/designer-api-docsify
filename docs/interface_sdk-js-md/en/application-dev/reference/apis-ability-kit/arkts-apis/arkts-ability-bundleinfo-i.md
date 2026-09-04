@@ -146,7 +146,7 @@ readonly permissionGrantStates: Array<bundleManager.PermissionGrantState>
 
 Permission grant state. The information can be obtained by passing in **GET_BUNDLE_INFO_WITH_REQUESTED_PERMISSION** to the **bundleFlags** parameter of [getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md). The indices of the **reqPermissionDetails** array and the **permissionGrantStates** array are in one-to-one correspondence, meaning that the authorization status of **reqPermissionDetails[2]** is **permissionGrantStates[2]**.
 
-**Type:** Array&lt;bundleManager.PermissionGrantState&gt;
+**Type:** Array&lt;[bundleManager.PermissionGrantState](arkts-ability-bundlemanager-permissiongrantstate-e.md)&gt;
 
 **Since:** 9
 

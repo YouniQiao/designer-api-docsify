@@ -32,7 +32,7 @@ getType(): tag.MifareUltralightType
 
 | 类型 | 说明 |
 | --- | --- |
-| tag.MifareUltralightType | MIFARE Ultralight标签的类型。 |
+| [tag.MifareUltralightType](arkts-connectivity-tag-mifareultralighttype-e.md) | MIFARE Ultralight标签的类型。 |
 
 **示例**
 

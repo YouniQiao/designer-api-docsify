@@ -30,10 +30,10 @@ Defines the callback of Callee.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| indata | rpc.MessageSequence | Yes | Data to be transferred. |
+| indata | [rpc.MessageSequence](../../apis-ipc-kit/arkts-apis/arkts-ipc-rpc-messagesequence-c.md) | Yes | Data to be transferred. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| rpc.Parcelable | Returned data object. |
+| [rpc.Parcelable](../../apis-ipc-kit/arkts-apis/arkts-ipc-rpc-parcelable-i.md) | Returned data object. |

@@ -14,4 +14,4 @@ Badge类型的FrameNode节点类型。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-**属性类型：** [TypedFrameNode](arkts-arkui-framenode-typedframenode-i.md)&lt;BadgeInterface, [BadgeAttribute](../arkts-components/arkts-arkui-badge-attribute.md)&gt;
+**类型：** [TypedFrameNode](arkts-arkui-framenode-typedframenode-i.md)&lt;BadgeInterface, [BadgeAttribute](../arkts-components/arkts-arkui-badge-attribute.md)&gt;

@@ -41,7 +41,7 @@ buttonStyle(value: ButtonStyleMode)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ButtonStyleMode](arkts-arkui-buttonstylemode-e.md) | 是 | Button组件的样式和重要程度。默认值：ButtonStyleMode.EMPHASIZED |
+| value | [ButtonStyleMode](arkts-arkui-buttonstylemode-e.md) | 是 | [Button组件的样式和重要程度。默认值：ButtonStyleMode.EMPHASIZED](arkts-arkui-buttonstylemode-e.md) |
 
 ## contentModifier
 
@@ -91,7 +91,7 @@ controlSize(value: ControlSize)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ControlSize](arkts-arkui-controlsize-e.md) | 是 | Button组件的尺寸。默认值：ControlSize.NORMAL |
+| value | [ControlSize](arkts-arkui-controlsize-e.md) | 是 | [Button组件的尺寸。默认值：ControlSize.NORMAL](../arkts-apis/arkts-arkui-superscriptstyle-e.md) |
 
 ## fontColor
 
@@ -179,7 +179,7 @@ fontStyle(value: FontStyle)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | FontStyle | 是 | 文本的字体样式。默认值：FontStyle.Normal |
+| value | FontStyle | 是 | [文本的字体样式。默认值：FontStyle.Normal](arkts-arkui-itemstate-e.md) |
 
 ## fontWeight
 
@@ -291,7 +291,7 @@ role(value: ButtonRole)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ButtonRole](arkts-arkui-buttonrole-e.md) | 是 | Button组件的角色。默认值：ButtonRole.NORMAL |
+| value | [ButtonRole](arkts-arkui-buttonrole-e.md) | 是 | [Button组件的角色。默认值：ButtonRole.NORMAL](../arkts-apis/arkts-arkui-superscriptstyle-e.md) |
 
 ## stateEffect
 

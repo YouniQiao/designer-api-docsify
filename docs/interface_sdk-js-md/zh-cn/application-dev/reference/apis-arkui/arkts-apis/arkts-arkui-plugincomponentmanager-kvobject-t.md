@@ -12,4 +12,4 @@ type KVObject = { [key: string]: number | string | boolean | [] | KVObject }
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-**属性类型：** { [key: string]: number | string | boolean | [] | KVObject }
+**类型：** { [key: string]: number | string | boolean | [] | KVObject }

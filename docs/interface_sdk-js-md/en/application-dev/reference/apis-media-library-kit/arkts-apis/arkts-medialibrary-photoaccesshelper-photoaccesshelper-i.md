@@ -51,6 +51,7 @@ Applies media changes. This API uses a promise to return the result.
 **Examples**
 
 This API depends on the [MediaChangeRequest](arkts-apis-photoAccessHelper-i.md#mediachangerequest) object. For details about the sample code, see the examples of [MediaAssetChangeRequest](arkts-apis-photoAccessHelper-MediaAssetChangeRequest.md) and [MediaAlbumChangeRequest](arkts-apis-photoAccessHelper-MediaAlbumChangeRequest.md).
+- simpleType:
 
 ## checkPhotoUrisReadPermission
 

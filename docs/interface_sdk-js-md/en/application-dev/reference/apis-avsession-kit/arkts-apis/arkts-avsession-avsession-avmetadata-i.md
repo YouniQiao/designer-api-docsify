@@ -98,7 +98,7 @@ avQueueImage?: image.PixelMap | string
 
 The artwork of play list as a PixelMap or an uri formatted String,
 
-**Type:** image.PixelMap \| string
+**Type:** [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) \| string
 
 **Since:** 11
 
@@ -126,7 +126,7 @@ readonly bundleIcon?: image.PixelMap
 
 The image of the bundle icon as a PixelMap, no need to be set by application.
 
-**Type:** image.PixelMap
+**Type:** [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)
 
 **Since:** 18
 
@@ -260,7 +260,7 @@ mediaImage?: image.PixelMap | string
 
 The image of the media as a PixelMap or an uri formatted String, used to display in media center.
 
-**Type:** image.PixelMap \| string
+**Type:** [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) \| string
 
 **Since:** 10
 

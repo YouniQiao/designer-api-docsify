@@ -29,7 +29,7 @@ Sets the result for the operation of adding a widget to the home screen.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | formId | string | Yes | Widget ID. |
-| result | formInfo.PublishFormResult | Yes | Result of the operation. |
+| result | [formInfo.PublishFormResult](arkts-form-forminfo-publishformresult-i-sys.md) | Yes | Result of the operation. |
 
 **Error codes:**
 

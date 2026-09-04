@@ -4,6 +4,8 @@ The Profile of the BLE protocol.
 
 **Since:** 21
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## GATT

@@ -12,4 +12,4 @@ Defines the window size.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
-**Property type:** _AbilityInfo.WindowSize
+**Type:** [_AbilityInfo.WindowSize](arkts-ability-abilityinfo-windowsize-i.md)

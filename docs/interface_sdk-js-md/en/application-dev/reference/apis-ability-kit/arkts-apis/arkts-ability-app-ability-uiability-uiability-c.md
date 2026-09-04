@@ -71,7 +71,7 @@ will be moved to the background and will not be destroyed.
 
 | Type | Description |
 | --- | --- |
-| boolean | The value &lt;code&gt;true&lt;/code&gt; means that the UIAbility instance will be moved to the background and will not be destroyed, and &lt;code&gt;false&lt;/code&gt; means that the UIAbility instance will be destroyed. |
+| boolean | The value&lt;code&gt;true&lt;/code&gt; means that the UIAbility instance will be moved to the background and will not be destroyed, and &lt;code&gt;false&lt;/code&gt; means that the UIAbility instance will be destroyed. |
 
 **Examples**
 
@@ -126,7 +126,7 @@ Callback invoked to return the collaboration result in multi-device collaboratio
 
 | Type | Description |
 | --- | --- |
-| AbilityConstant.CollaborateResult | Whether the coordinator accepts the collaboration result. |
+| [AbilityConstant.CollaborateResult](arkts-ability-abilityconstant-collaborateresult-e.md) | Whether the coordinator accepts the collaboration result. |
 
 **Examples**
 
@@ -172,8 +172,8 @@ Called when a UIAbility is to be migrated across devices. You can save service d
 
 | Type | Description |
 | --- | --- |
-| AbilityConstant.OnContinueResult | Return the result of onContinue.<br>**Applicable version:** 9 - 11 |
-| AbilityConstant.OnContinueResult \| Promise&lt;AbilityConstant.OnContinueResult&gt; | Whether the migration is accepted. The options are as follows: |
+| [AbilityConstant.OnContinueResult](arkts-ability-abilityconstant-oncontinueresult-e.md) | Return the result of onContinue.<br>**Applicable version:** 9 - 11 |
+| [AbilityConstant.OnContinueResult](arkts-ability-abilityconstant-oncontinueresult-e.md) \| Promise&lt;[AbilityConstant.OnContinueResult](arkts-ability-abilityconstant-oncontinueresult-e.md)&gt; | Whether the migration is accepted. The options are as follows: |
 
 **Examples**
 
@@ -237,7 +237,7 @@ This API returns the result synchronously and does not support asynchronous call
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Data passed by the caller when launching the UIAbility. |
-| launchParam | AbilityConstant.LaunchParam | Yes | Parameters for application launch, including the reason for application launch and the reason for the last application exit. |
+| launchParam | [AbilityConstant.LaunchParam](arkts-ability-abilityconstant-launchparam-i.md) | Yes | Parameters for application launch, including the reason for application launch and the reason for the last application exit. |
 
 **Examples**
 
@@ -402,6 +402,7 @@ This API returns the result synchronously and does not support asynchronous call
 **Examples**
 
 For details, see [onWillForeground](#onwillforeground).
+- simpleType:
 
 ## onDump
 
@@ -498,7 +499,7 @@ This API returns the result synchronously and does not support asynchronous call
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Data passed by the caller when re-launching the UIAbility. |
-| launchParam | AbilityConstant.LaunchParam | Yes | UIAbility launch parameters, including the launch reason. |
+| launchParam | [AbilityConstant.LaunchParam](arkts-ability-abilityconstant-launchparam-i.md) | Yes | UIAbility launch parameters, including the launch reason. |
 
 **Examples**
 
@@ -665,14 +666,14 @@ This API must be used with [appRecovery](arkts-app-ability-apprecovery.md). When
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| reason | AbilityConstant.StateType | Yes | Reason for triggering the application to save its state. Currently, only **APP_RECOVERY** (fault recovery scenario) is supported. |
+| reason | [AbilityConstant.StateType](arkts-ability-abilityconstant-statetype-e.md) | Yes | Reason for triggering the application to save its state. Currently, only **APP_RECOVERY** (fault recovery scenario) is supported. |
 | wantParam | Record&lt;string, Object&gt; | Yes | Custom application state data, which is stored in **Want.parameters** in [onCreate](#oncreate) when the application restarts.<br>**Since:** 11 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| AbilityConstant.OnSaveResult | An object indicating the data-saving policy (for example, all denied, all allowed, or only allowed in fault recovery scenarios). |
+| [AbilityConstant.OnSaveResult](arkts-ability-abilityconstant-onsaveresult-e.md) | An object indicating the data-saving policy (for example, all denied, all allowed, or only allowed in fault recovery scenarios). |
 
 **Examples**
 
@@ -708,14 +709,14 @@ This API must be used with [appRecovery](arkts-app-ability-apprecovery.md). When
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| stateType | AbilityConstant.StateType | Yes | Reason for triggering the application to save its state. Currently, only **APP_RECOVERY** (fault recovery scenario) is supported. |
+| stateType | [AbilityConstant.StateType](arkts-ability-abilityconstant-statetype-e.md) | Yes | Reason for triggering the application to save its state. Currently, only **APP_RECOVERY** (fault recovery scenario) is supported. |
 | wantParam | Record&lt;string, Object&gt; | Yes | Custom application state data, which is stored in **Want.parameters** in [onCreate](#oncreate) when the application restarts. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;AbilityConstant.OnSaveResult&gt; | Promise used to return the result. An object indicating the data -saving policy (for example, all denied, all allowed, or only allowed in fault recovery scenarios). |
+| Promise&lt;[AbilityConstant.OnSaveResult](arkts-ability-abilityconstant-onsaveresult-e.md)&gt; | Promise used to return the result. An object indicating the data -saving policy (for example, all denied, all allowed, or only allowed in fault recovery scenarios). |
 
 **Examples**
 
@@ -908,7 +909,7 @@ Called when a [WindowStage](../../apis-arkui/arkts-apis/arkts-arkui-window-n.md)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| windowStage | window.WindowStage | Yes | WindowStage instance. |
+| windowStage | [window.WindowStage](../../apis-arkui/arkts-apis/arkts-arkui-window-windowstage-i.md) | Yes | WindowStage instance. |
 
 **Examples**
 
@@ -991,7 +992,7 @@ Called when the page stack is restored for the target UIAbility during cross-dev
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| windowStage | window.WindowStage | Yes | WindowStage instance. |
+| windowStage | [window.WindowStage](../../apis-arkui/arkts-apis/arkts-arkui-window-windowstage-i.md) | Yes | WindowStage instance. |
 
 **Examples**
 
@@ -1027,7 +1028,7 @@ Called when the WindowStage instance is about to be destroyed. You can cancel th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| windowStage | window.WindowStage | Yes | WindowStage instance. |
+| windowStage | [window.WindowStage](../../apis-arkui/arkts-apis/arkts-arkui-window-windowstage-i.md) | Yes | WindowStage instance. |
 
 **Examples**
 

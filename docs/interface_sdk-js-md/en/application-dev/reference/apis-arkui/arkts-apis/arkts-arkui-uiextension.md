@@ -4,8 +4,6 @@ The **uiExtension** module provides APIs for the [EmbeddedUIExtensionAbility](..
 
 **Since:** 12
 
-**Model restriction:** This API can be used only in the stage model.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -43,6 +41,7 @@ import { uiExtension } from '@kit.ArkUI';
 ## Examples
 
 This example shows how to use all the available APIs in the [EmbeddedUIExtensionAbility](../../../application-models/embeddeduiextensionability.md). The bundle name of the sample application is com.example.embeddeddemo, and the EmbeddedUIExtensionAbility to start is ExampleEmbeddedAbility.
+The EntryAbility (UIAbility) of the sample application loads the pages/Index.ets file, whose content is as follows:
 
 ```TypeScript
 // The UIAbility loads pages/Index.ets when started.

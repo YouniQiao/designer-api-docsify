@@ -4,6 +4,8 @@ Enum of TextSelectionClearPolicy
 
 **Since:** 26.0.0
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## KEEP_SELECTED_TEXT_ON_EXTERNAL_TOUCH

@@ -588,7 +588,7 @@ Only visible ASCII characters are supported. Spaces, newlines, tabs, and other c
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7900201](../errorcode-image.md#7900201-invalid-parameter) | Invalid parameter. Possible causes: &lt;ol&gt;&lt;li&gt;Name is empty.&lt;/li&gt; &lt;li&gt;Name contains no visible characters after filtering.&lt;/li&gt; &lt;li&gt;The length of name exceeds 256 bytes.&lt;/li&gt; &lt;li&gt;Ensure the name parameter contains visible ASCII characters.&lt;/li&gt;&lt;/ol&gt; |
+| [7900201](../errorcode-image.md#7900201-invalid-parameter) | Invalid parameter. Possible causes:&lt;ol&gt;&lt;li&gt;Name is empty.&lt;/li&gt; &lt;li&gt;Name contains no visible characters after filtering.&lt;/li&gt; &lt;li&gt;The length of name exceeds 256 bytes.&lt;/li&gt; &lt;li&gt;Ensure the name parameter contains visible ASCII characters.&lt;/li&gt;&lt;/ol&gt; |
 
 ## capacity
 

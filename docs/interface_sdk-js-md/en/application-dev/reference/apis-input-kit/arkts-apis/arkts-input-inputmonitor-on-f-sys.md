@@ -147,7 +147,7 @@ Enables listening for mouse events. When the mouse pointer moves to the specifie
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'mouse' | Yes | Event type. This field has a fixed value of **mouse**. |
-| rect | display.Rect[] | Yes | Rectangular area where a callback is triggered. One or two rectangular areas can be specified. |
+| rect | [display.Rect](../../apis-arkui/arkts-apis/arkts-arkui-display-rect-i.md)[] | Yes | Rectangular area where a callback is triggered. One or two rectangular areas can be specified. |
 | receiver | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MouseEvent](arkts-input-multimodalinput-mouseevent-mouseevent-i.md)&gt; | Yes | Callback used to return the mouse input event. |
 
 **Error codes:**

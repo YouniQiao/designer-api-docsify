@@ -29,6 +29,7 @@ enterFullscreen(): void
 **示例**
 
 完整示例代码参考[onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer)。
+- simpleType:
 
 ## exitFullscreen
 
@@ -47,6 +48,7 @@ exitFullscreen(): void
 **示例**
 
 完整示例代码参考[onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer)。
+- simpleType:
 
 ## pause
 
@@ -65,6 +67,7 @@ pause(): void
 **示例**
 
 完整示例代码参考[onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer)。
+- simpleType:
 
 ```TypeScript
 // xxx.ets
@@ -161,6 +164,7 @@ play(): void
 **示例**
 
 完整示例代码参考[onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer)。
+- simpleType:
 
 ## release
 
@@ -179,6 +183,7 @@ release(): void
 **示例**
 
 完整示例代码参考[onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer)。
+- simpleType:
 
 ## resumePlayer
 
@@ -195,6 +200,7 @@ resumePlayer?(): void
 **示例**
 
 完整示例代码参考[onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer)。
+- simpleType:
 
 ## seek
 
@@ -219,6 +225,7 @@ seek(targetTime: number): void
 **示例**
 
 完整示例代码参考[onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer)。
+- simpleType:
 
 ## setMuted
 
@@ -243,6 +250,7 @@ setMuted(muted: boolean): void
 **示例**
 
 完整示例代码参考[onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer)。
+- simpleType:
 
 ## setPlaybackRate
 
@@ -267,6 +275,7 @@ setPlaybackRate(playbackRate: number): void
 **示例**
 
 完整示例代码参考[onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer)。
+- simpleType:
 
 ## setVolume
 
@@ -291,6 +300,7 @@ setVolume(volume: number): void
 **示例**
 
 完整示例代码参考[onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer)。
+- simpleType:
 
 ## suspendPlayer
 
@@ -313,6 +323,7 @@ suspendPlayer?(type: SuspendType): void
 **示例**
 
 完整示例代码参考[onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer)。
+- simpleType:
 
 ## updateRect
 
@@ -340,3 +351,4 @@ updateRect(x: number, y: number, width: number, height: number): void
 **示例**
 
 完整示例代码参考[onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer)。
+- simpleType:

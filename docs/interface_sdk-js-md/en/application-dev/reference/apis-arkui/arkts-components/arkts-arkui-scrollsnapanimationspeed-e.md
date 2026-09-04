@@ -4,6 +4,8 @@ Enumerates the speeds of the snap animation for list scrolling.
 
 **Since:** 22
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## NORMAL

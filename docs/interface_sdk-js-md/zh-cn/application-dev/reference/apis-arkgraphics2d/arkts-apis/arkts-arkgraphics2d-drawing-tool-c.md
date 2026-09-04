@@ -42,7 +42,7 @@ static makeColorFromResourceColor(resourceColor: ResourceColor): common2D.Color
 
 | 类型 | 说明 |
 | --- | --- |
-| common2D.Color | 转换后的common2D.Color颜色对象，若转换失败则返回undefined。 |
+| [common2D.Color](arkts-arkgraphics2d-common2d-color-i.md) | 转换后的common2D.Color颜色对象，若转换失败则返回undefined。 |
 
 **错误码：**
 

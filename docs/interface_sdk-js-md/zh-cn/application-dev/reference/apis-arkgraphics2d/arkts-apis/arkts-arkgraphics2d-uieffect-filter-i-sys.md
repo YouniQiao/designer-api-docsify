@@ -30,7 +30,7 @@ bezierWarp(controlPoints: Array<common2D.Point>): Filter
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| controlPoints | Array&lt;common2D.Point&gt; | 是 | 12个贝塞尔形变控制点，数组长度必须为12，更改控制点的位置可改变形成边缘的曲线形状，从而扭曲图像。控制点坐标使用归一化坐标系（默认范围为[0, 1]），且坐标值可大于1或小于0。数组长度不为12时效果不生效。 |
+| controlPoints | Array&lt;[common2D.Point](arkts-arkgraphics2d-common2d-point-i.md)&gt; | 是 | 12个贝塞尔形变控制点，数组长度必须为12，更改控制点的位置可改变形成边缘的曲线形状，从而扭曲图像。控制点坐标使用归一化坐标系（默认范围为[0, 1]），且坐标值可大于1或小于0。数组长度不为12时效果不生效。 |
 
 **返回值：**
 
@@ -168,7 +168,7 @@ colorGradient(colors: Array<Color>, positions: Array<common2D.Point>, strengths:
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | colors | Array&lt;Color&gt; | 是 | 颜色数组，多个颜色的渐变。数组长度取值范围为[0, 12], 每一个颜色值取值范围需大于等于0。数组长度等于0或大于12时无效果，colors、positions和strengths的数组长度不相等时无效果。 |
-| positions | Array&lt;common2D.Point&gt; | 是 | 位置数组，颜色对应的分布位置。数组长度取值范围为[0, 12]。数组长度等于0或大于12时无效果，colors、positions和strengths的数组长度不相等时无效果。 |
+| positions | Array&lt;[common2D.Point](arkts-arkgraphics2d-common2d-point-i.md)&gt; | 是 | 位置数组，颜色对应的分布位置。数组长度取值范围为[0, 12]。数组长度等于0或大于12时无效果，colors、positions和strengths的数组长度不相等时无效果。 |
 | strengths | Array&lt;number&gt; | 是 | 强度数组，颜色对应的扩散强度。数组长度取值范围为[0, 12], 每一个强度值取值范围需大于等于0。数组长度等于0或大于12时无效果，colors、positions和strengths的数组长度不相等时无效果。 |
 | alphaMask | [Mask](arkts-arkgraphics2d-uieffect-mask-c-sys.md) | 否 | 控制渐变效果透明度分布的遮罩。可通过Mask类的创建方法（如createRippleMask、createRadialGradientMask等）创建Mask实例。当需要控制颜色渐变效果的透明度分布（如局部透明或动态透明效果）时传入此参数。不设置时，颜色渐变效果的透明度完全由colors参数决定。 |
 
@@ -235,8 +235,8 @@ contentLight(lightPosition: common2D.Point3d, lightColor: common2D.Color, lightI
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| lightPosition | common2D.Point3d | 是 | 光源在组件空间的位置，[-1, -1, 0]为组件左上角，[1, 1, 0]为组件的右下角，z轴分量越大光源离组件平面越远，可照射区域越大。x分量取值范围为[-10, 10]，y分量取值范围为[-10, 10]，z分量取值范围为[0, 10]，超出范围会自动截断。 |
-| lightColor | common2D.Color | 是 | 光源颜色，RGBA各分量取值范围为[0, 1]，超出范围会自动截断。 |
+| lightPosition | [common2D.Point3d](arkts-arkgraphics2d-common2d-point3d-i.md) | 是 | 光源在组件空间的位置，[-1, -1, 0]为组件左上角，[1, 1, 0]为组件的右下角，z轴分量越大光源离组件平面越远，可照射区域越大。x分量取值范围为[-10, 10]，y分量取值范围为[-10, 10]，z分量取值范围为[0, 10]，超出范围会自动截断。 |
+| lightColor | [common2D.Color](arkts-arkgraphics2d-common2d-color-i.md) | 是 | 光源颜色，RGBA各分量取值范围为[0, 1]，超出范围会自动截断。 |
 | lightIntensity | number | 是 | 光源强度，取值范围为[0, 1]，数值越大光源亮度越大，超出范围会自动截断。 |
 | displacementMap | [Mask](arkts-arkgraphics2d-uieffect-mask-c-sys.md) | 否 | 置换贴图参数，该参数暂不生效，不建议传入。不设置时对功能无影响。 |
 
@@ -310,7 +310,7 @@ directionLight(direction: common2D.Point3d, color: Color, intensity: number, mas
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| direction | common2D.Point3d | 是 | 入射光的方向，通过三维坐标表示光线的入射方向。 |
+| direction | [common2D.Point3d](arkts-arkgraphics2d-common2d-point3d-i.md) | 是 | 入射光的方向，通过三维坐标表示光线的入射方向。 |
 | color | Color | 是 | 光照颜色。 |
 | intensity | number | 是 | 光照强度，取值范围为[0, +∞)，数值越大光源亮度越大。 |
 | mask | [Mask](arkts-arkgraphics2d-uieffect-mask-c-sys.md) | 否 | 置换贴图，用于描述二维图像表面的三维细节。可通过Mask类的创建方法（如createRippleMask、createRadialGradientMask等）创建Mask实例。当需要增强局部细节和光照反射效果（如浮雕、凹凸纹理）时传入此参数。通过法线或高度图实现，若输入为高度图需与factor参数配合使用。不设置时默认为空，表现为全局无细节的平面光照效果。 |
@@ -941,7 +941,7 @@ spinBlur(center: common2D.Point, angle: number, samples: number): Filter
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| center | common2D.Point | 是 | 以归一化坐标指定模糊中心点。[0, 0] 表示左上角，[0.5, 0.5] 表示中心，[1, 1] 表示右下角。 |
+| center | [common2D.Point](arkts-arkgraphics2d-common2d-point-i.md) | 是 | 以归一化坐标指定模糊中心点。[0, 0] 表示左上角，[0.5, 0.5] 表示中心，[1, 1] 表示右下角。 |
 | angle | number | 是 | 以弧度指定旋转模糊的角度范围。该值无限制，推荐范围为 [-2π, 2π]。正值表示顺时针旋转，负值表示逆时针旋转。 |
 | samples | number | 是 | 指定旋转模糊的采样数量。该值会被截断到 [0, 128] 范围内。值越大效果越平滑，但处理开销也越大；通常 32 即可满足需求。 |
 

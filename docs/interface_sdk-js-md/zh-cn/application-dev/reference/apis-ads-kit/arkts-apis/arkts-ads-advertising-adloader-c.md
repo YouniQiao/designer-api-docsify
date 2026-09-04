@@ -30,7 +30,7 @@ constructor(context: common.Context)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | common.Context | 是 | ability或application的上下文环境。 |
+| context | [common.Context](../../apis-ability-kit/arkts-apis/arkts-ability-common-context-t.md) | 是 | ability或application的上下文环境。 |
 
 **示例**
 

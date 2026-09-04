@@ -276,7 +276,7 @@ getSupportedHdrCapabilities(): Promise<Array<hdrCapability.HDRFormat>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;hdrCapability.HDRFormat&gt;&gt; | Promise对象。返回远端设备所支持的HDR能力。 |
+| Promise&lt;Array&lt;[hdrCapability.HDRFormat](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-hdrcapability-hdrformat-e.md)&gt;&gt; | Promise对象。返回远端设备所支持的HDR能力。 |
 
 **错误码：**
 

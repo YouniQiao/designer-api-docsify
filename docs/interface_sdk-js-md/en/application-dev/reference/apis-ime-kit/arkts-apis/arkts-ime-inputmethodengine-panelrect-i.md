@@ -20,7 +20,7 @@ landscapeRect: window.Rect
 
 Size of the input method panel window in landscape mode.
 
-**Type:** window.Rect
+**Type:** [window.Rect](../../apis-arkui/arkts-apis/arkts-arkui-window-rect-i.md)
 
 **Since:** 12
 
@@ -34,7 +34,7 @@ portraitRect: window.Rect
 
 Size of the input method panel window in portrait mode.
 
-**Type:** window.Rect
+**Type:** [window.Rect](../../apis-arkui/arkts-apis/arkts-arkui-window-rect-i.md)
 
 **Since:** 12
 

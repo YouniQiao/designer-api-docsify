@@ -22,7 +22,7 @@ getNdefRecords(): tag.NdefRecord[]
 
 | 类型 | 说明 |
 | --- | --- |
-| tag.NdefRecord[] | NDEF标签的Record列表，详见NDEF技术规范《NFCForum-TS-NDEF_1.0》。 |
+| [tag.NdefRecord](arkts-connectivity-tag-ndefrecord-i.md)[] | NDEF标签的Record列表，详见NDEF技术规范《NFCForum-TS-NDEF_1.0》。 |
 
 **示例**
 

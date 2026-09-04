@@ -12,4 +12,4 @@ Ringtone player object.
 
 **System API:** This is a system API.
 
-**Property type:** _RingtonePlayer
+**Type:** _RingtonePlayer

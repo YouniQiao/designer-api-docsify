@@ -1659,7 +1659,7 @@ updateRegion(inputRegion: Array<window.Rect>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| inputRegion | Array&lt;window.Rect&gt; | 是 | 面板内接收输入事件的区域。   - 数组大小限制为[1, 4]。   - 传入的热区位置是相对于输入法面板窗口左顶点的位置。 |
+| inputRegion | Array&lt;[window.Rect](../../apis-arkui/arkts-apis/arkts-arkui-window-rect-i.md)&gt; | 是 | 面板内接收输入事件的区域。   - 数组大小限制为[1, 4]。   - 传入的热区位置是相对于输入法面板窗口左顶点的位置。 |
 
 **错误码：**
 

@@ -4,6 +4,8 @@ Frame interpolation status of blankless loading.
 
 **Since:** 23
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## FRAME_INTERPOLATION_SUCCEEDED

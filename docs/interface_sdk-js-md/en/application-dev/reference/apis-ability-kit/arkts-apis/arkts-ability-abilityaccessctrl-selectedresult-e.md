@@ -4,6 +4,8 @@ Enumerates the results of the dialog box for redirection to the settings page.
 
 **Since:** 22
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.Security.AccessToken
 
 ## REJECTED

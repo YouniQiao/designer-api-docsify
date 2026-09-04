@@ -24,7 +24,7 @@ function parseAdResponse(adResponse: string, listener: MultiSlotsAdLoadListener,
 | --- | --- | --- | --- |
 | adResponse | string | 是 | 广告响应体。 |
 | listener | [MultiSlotsAdLoadListener](arkts-ads-advertising-multislotsadloadlistener-i.md) | 是 | 请求广告回调监听。 |
-| context | common.UIAbilityContext | 是 | UIAbility的上下文环境。 |
+| context | [common.UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-common-uiabilitycontext-t.md) | 是 | UIAbility的上下文环境。 |
 
 **错误码：**
 

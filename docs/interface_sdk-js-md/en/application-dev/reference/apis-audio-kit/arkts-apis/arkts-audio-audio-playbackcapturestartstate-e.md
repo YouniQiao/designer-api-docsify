@@ -4,6 +4,8 @@ Defines the playback capture start state, which is returned asynchronously after
 
 **Since:** 26.0.0
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.Multimedia.Audio.PlaybackCapture
 
 ## STATE_SUCCESS

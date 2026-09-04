@@ -6,6 +6,8 @@ Enumerates display modes for toasts. By default, the toast is displayed within t
 
 **Since:** 11
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## DEFAULT

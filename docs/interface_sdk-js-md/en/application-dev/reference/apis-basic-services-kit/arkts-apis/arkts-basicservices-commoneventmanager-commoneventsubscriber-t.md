@@ -12,4 +12,4 @@ Describes the subscriber of a common event.
 
 **System capability:** SystemCapability.Notification.CommonEvent
 
-**Property type:** _CommonEventSubscriber
+**Type:** _CommonEventSubscriber

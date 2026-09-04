@@ -14,4 +14,4 @@ Defines the result code and data returned when a started ability is terminated.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
-**Property type:** _AbilityResult
+**Type:** _AbilityResult

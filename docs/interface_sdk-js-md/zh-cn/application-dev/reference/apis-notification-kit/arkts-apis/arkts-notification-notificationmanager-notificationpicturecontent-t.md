@@ -10,4 +10,4 @@ export type NotificationPictureContent = _NotificationPictureContent
 
 **系统能力：** SystemCapability.Notification.Notification
 
-**属性类型：** _NotificationPictureContent
+**类型：** _NotificationPictureContent

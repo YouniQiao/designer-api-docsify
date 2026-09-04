@@ -12,7 +12,7 @@ import { infraredEmitter } from '@kit.InputKit';
 function getInfraredFrequencies(): Array<InfraredFrequency>
 ```
 
-查询设备支持的红外信号的频率范围。建议先使用[hasIrEmitter]接口查询设备是否支持红外发射器。
+查询设备支持的红外信号的频率范围。建议先使用[hasIrEmitter](arkts-input-infraredemitter-hasiremitter-f.md)接口查询设备是否支持红外发射器。
 
 **起始版本：** 15
 

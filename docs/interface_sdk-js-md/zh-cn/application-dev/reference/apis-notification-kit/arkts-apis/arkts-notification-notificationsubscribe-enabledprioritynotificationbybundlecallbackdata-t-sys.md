@@ -12,4 +12,4 @@ export type EnabledPriorityNotificationByBundleCallbackData = _EnabledPriorityNo
 
 **系统接口：** 此接口为系统接口。
 
-**属性类型：** _EnabledPriorityNotificationByBundleCallbackData
+**类型：** _EnabledPriorityNotificationByBundleCallbackData

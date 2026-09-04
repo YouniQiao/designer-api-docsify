@@ -14,4 +14,4 @@ declare type LineMetrics = import('../api/@ohos.graphics.text').default.LineMetr
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-**属性类型：** import('../api/@ohos.graphics.text').default.LineMetrics
+**类型：** import('../api/@ohos.graphics.text').default.LineMetrics

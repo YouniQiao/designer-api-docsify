@@ -10,4 +10,4 @@ type PlayParameters = _PlayParameters
 
 **系统能力：** SystemCapability.Multimedia.Media.SoundPool
 
-**属性类型：** _PlayParameters
+**类型：** _PlayParameters

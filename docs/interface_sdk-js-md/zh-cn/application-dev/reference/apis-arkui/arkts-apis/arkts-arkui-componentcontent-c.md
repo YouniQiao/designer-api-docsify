@@ -1487,6 +1487,7 @@ reuse(param?: Object): void
 **示例**
 
 请参考[recycle](#recycle)中的示例。
+- simpleType:
 
 ## update
 

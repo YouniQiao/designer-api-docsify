@@ -14,4 +14,4 @@ DrawContext
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** import('../api/arkui/Graphics').DrawContext
+**Type:** import('../api/arkui/Graphics').DrawContext

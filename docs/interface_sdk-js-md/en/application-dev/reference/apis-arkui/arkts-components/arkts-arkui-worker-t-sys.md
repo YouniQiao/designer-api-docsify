@@ -14,4 +14,4 @@ Defines the worker thread object for running the .abc file.
 
 **System API:** This is a system API.
 
-**Property type:** import('../api/@ohos.worker').default.Worker
+**Type:** import('../api/@ohos.worker').default.Worker

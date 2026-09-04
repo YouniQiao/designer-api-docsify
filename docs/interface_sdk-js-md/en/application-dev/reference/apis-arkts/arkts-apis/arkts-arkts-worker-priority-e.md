@@ -4,6 +4,8 @@ Enumerates the priorities available for EventHandler. For details about the mapp
 
 **Since:** 26.0.0
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.Utils.Lang
 
 ## IMMEDIATE

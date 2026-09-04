@@ -12,4 +12,4 @@ Defines the level-2 module DataAbilityOperation.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
-**Property type:** _DataAbilityOperation
+**Type:** _DataAbilityOperation

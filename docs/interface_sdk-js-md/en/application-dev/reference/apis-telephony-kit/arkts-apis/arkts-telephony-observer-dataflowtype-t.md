@@ -10,4 +10,4 @@ Defines the cellular data flow type.
 
 **System capability:** SystemCapability.Telephony.StateRegistry
 
-**Property type:** data.DataFlowType
+**Type:** [data.DataFlowType](arkts-telephony-data-dataflowtype-e.md)

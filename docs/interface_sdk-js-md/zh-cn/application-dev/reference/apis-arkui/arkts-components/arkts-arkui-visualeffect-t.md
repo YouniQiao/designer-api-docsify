@@ -14,4 +14,4 @@ declare type VisualEffect = import('../api/@ohos.graphics.uiEffect').default.Vis
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-**属性类型：** import('../api/@ohos.graphics.uiEffect').default.VisualEffect
+**类型：** import('../api/@ohos.graphics.uiEffect').default.VisualEffect

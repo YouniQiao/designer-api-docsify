@@ -14,4 +14,4 @@ ContinueCallback registered for notify continue result.
 
 **System API:** This is a system API.
 
-**Property type:** _ContinueCallback
+**Type:** _ContinueCallback

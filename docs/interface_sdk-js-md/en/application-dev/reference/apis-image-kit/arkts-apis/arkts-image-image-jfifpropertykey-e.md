@@ -4,6 +4,8 @@ Enumerates the properties available for the metadata of a JFIF image.
 
 **Since:** 26.0.0
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## X_DENSITY

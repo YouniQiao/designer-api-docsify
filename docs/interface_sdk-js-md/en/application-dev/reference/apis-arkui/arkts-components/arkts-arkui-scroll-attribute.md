@@ -31,7 +31,7 @@ Sets the effect used when the scroll boundary is reached.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| edgeEffect | [EdgeEffect](../arkts-apis/arkts-arkui-edgeeffect-e.md) | Yes | Effect used when the scroll boundary is reached. The spring and shadow effects are supported. Default value: &lt;em&gt;EdgeEffect.None&lt;/em&gt; |
+| edgeEffect | [EdgeEffect](../arkts-apis/arkts-arkui-edgeeffect-e.md) | Yes | Effect used when the scroll boundary is reached. The spring and shadow effects are supported. Default value:&lt;em&gt;EdgeEffect.None&lt;/em&gt; |
 | options | [EdgeEffectOptions](arkts-arkui-edgeeffectoptions-i.md) | No | Whether to enable the scroll effect when the component content is smaller than the component itself. The value &lt;em&gt;{ alwaysEnabled: true }&lt;/em&gt; means to enable the scroll effect, and &lt;em&gt;{ alwaysEnabled: false } &lt;/em&gt; means the opposite. Default value: &lt;em&gt;{ alwaysEnabled: true }&lt;/em&gt;<br>**Since:** 11 |
 
 ## enableBouncesZoom
@@ -76,7 +76,7 @@ Sets whether to enable the swipe-to-turn-pages feature. If both &lt;em&gt;enable
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean | Yes | Whether to enable the swipe-to-turn-pages feature. Default value: false. The value &lt;em&gt;true&lt;/em&gt; means to enable the swipe-to-turn-pages feature, and &lt;em&gt;false&lt;/em&gt; means the opposite. |
+| value | boolean | Yes | Whether to enable the swipe-to-turn-pages feature. Default value: false. The value&lt;em&gt;true&lt;/em&gt; means to enable the swipe-to-turn-pages feature, and &lt;em&gt;false&lt;/em&gt; means the opposite. |
 
 ## enableScrollInteraction
 
@@ -98,7 +98,7 @@ Sets whether to support scroll gestures. When this attribute is set to &lt;em&gt
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean | Yes | Whether to support scroll gestures.Default value: &lt;em&gt;true&lt;/em&gt; |
+| value | boolean | Yes | Whether to support scroll gestures.Default value:&lt;em&gt;true&lt;/em&gt; |
 
 ## friction
 
@@ -120,7 +120,7 @@ Sets the friction coefficient. It applies only to gestures in the scrolling area
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number \| Resource | Yes | Friction coefficient. Default value: &lt;em&gt;0.9&lt;/em&gt; for wearable devices and &lt;em&gt;0.6&lt;/em&gt; for non-wearable devices Since API version 11, the default value for non-wearable devices is &lt;em&gt;0.7&lt;/em&gt;. Since API version 12, the default value for non-wearable devices is &lt;em&gt;0.75&lt;/em&gt;. |
+| value | number \| Resource | Yes | Friction coefficient. Default value:&lt;em&gt;0.9&lt;/em&gt; for wearable devices and &lt;em&gt;0.6&lt;/em&gt; for non-wearable devices Since API version 11, the default value for non-wearable devices is &lt;em&gt;0.7&lt;/em&gt;. Since API version 12, the default value for non-wearable devices is &lt;em&gt;0.75&lt;/em&gt;. |
 
 ## initialOffset
 
@@ -142,7 +142,7 @@ Sets the initial scrolling offset. This attribute takes effect only during the i
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [OffsetOptions](arkts-arkui-offsetoptions-i.md) | Yes | Initial scrolling offset. When the value specified is a percentage, the initial scrolling offset is calculated as the product of the &lt;em&gt;Scroll&lt;/em&gt; component's size in the main axis direction and the percentage value. |
+| value | [OffsetOptions](arkts-arkui-offsetoptions-i.md) | Yes | Initial scrolling offset. When the value specified is a percentage, the initial scrolling offset is calculated as the product of the&lt;em&gt;Scroll&lt;/em&gt; component's size in the main axis direction and the percentage value. |
 
 ## maxZoomScale
 
@@ -186,7 +186,7 @@ Set minimum zoom scale. Setting either &lt;em&gt;maxZoomScale&lt;/em&gt; and &lt
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scale | number | Yes | Set minimum zoom scale. Default value: 1. Value range: (0, maxZoomScale]. If the value is greater than &lt;em&gt;maxZoomScale&lt;/em&gt;, &lt;em&gt;maxZoomScale&lt;/em&gt; is used. |
+| scale | number | Yes | Set minimum zoom scale. Default value: 1. Value range: (0, maxZoomScale]. If the value is greater than&lt;em&gt;maxZoomScale&lt;/em&gt;, &lt;em&gt;maxZoomScale&lt;/em&gt; is used. |
 
 ## nestedScroll
 
@@ -208,7 +208,7 @@ Sets the nested scrolling options. You can set the nested scrolling mode in the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [NestedScrollOptions](arkts-arkui-nestedscrolloptions-i.md) | Yes | Nested scrolling options. Default value: &lt;em&gt;{ scrollForward: NestedScrollMode.SELF_ONLY, scrollBackward: NestedScrollMode.SELF_ONLY}&lt;/em&gt; |
+| value | [NestedScrollOptions](arkts-arkui-nestedscrolloptions-i.md) | Yes | Nested scrolling options. Default value:&lt;em&gt;{ scrollForward: NestedScrollMode.SELF_ONLY, scrollBackward: NestedScrollMode.SELF_ONLY}&lt;/em&gt; |
 
 ## onDidScroll
 
@@ -235,7 +235,7 @@ Triggered when the Scroll component scrolls.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| handler | [ScrollOnScrollCallback](arkts-arkui-scrollonscrollcallback-t.md) | Yes | Callback triggered when the &lt;em&gt;Scroll&lt;/em&gt; component scrolls. |
+| handler | [ScrollOnScrollCallback](arkts-arkui-scrollonscrollcallback-t.md) | Yes | Callback triggered when the&lt;em&gt;Scroll&lt;/em&gt; component scrolls. |
 
 ## onDidZoom
 
@@ -505,7 +505,7 @@ Sets the scrolling direction. The scroll offset is reset when this value is chan
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ScrollDirection](arkts-arkui-scrolldirection-e.md) | Yes | Scrolling direction.Default value: &lt;em&gt;ScrollDirection.Vertical&lt;/em&gt; |
+| value | [ScrollDirection](arkts-arkui-scrolldirection-e.md) | Yes | Scrolling direction.Default value:&lt;em&gt;ScrollDirection.Vertical&lt;/em&gt; |
 
 ## scrollBar
 
@@ -525,7 +525,7 @@ Sets the scrollbar state. If the container component cannot be scrolled, the scr
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| barState | [BarState](../arkts-apis/arkts-arkui-barstate-e.md) | Yes | Scrollbar state.Default value: &lt;em&gt;BarState.Auto&lt;/em&gt; |
+| barState | [BarState](../arkts-apis/arkts-arkui-barstate-e.md) | Yes | Scrollbar state.Default value:&lt;em&gt;BarState.Auto&lt;/em&gt; |
 
 ## scrollBarColor
 
@@ -545,7 +545,7 @@ Sets the scrollbar color.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | Color \| number \| string | Yes | Scrollbar color.Default value: &lt;em&gt;'\#182431'&lt;/em&gt; (40% opacity) |
+| color | Color \| number \| string | Yes | Scrollbar color.Default value:&lt;em&gt;'\#182431'&lt;/em&gt; (40% opacity) |
 
 ## scrollBarColor
 
@@ -567,7 +567,7 @@ Sets the scrollbar color.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | Color \| number \| string \| Resource | Yes | Scrollbar color. Default value: &lt;em&gt;'\#182431'&lt;/em&gt; (40% opacity) A number value indicates a HEX color in RGB or ARGB format, for example, &lt;em&gt;0xffffff&lt;/em&gt;. A string value indicates a color in RGB or ARGB format, for example, &lt;em&gt;'#ffffff'&lt;/em&gt;. |
+| color | Color \| number \| string \| Resource | Yes | Scrollbar color. Default value:&lt;em&gt;'\#182431'&lt;/em&gt; (40% opacity) A number value indicates a HEX color in RGB or ARGB format, for example, &lt;em&gt;0xffffff&lt;/em&gt;. A string value indicates a color in RGB or ARGB format, for example, &lt;em&gt;'#ffffff'&lt;/em&gt;. |
 
 ## scrollBarWidth
 
@@ -587,7 +587,7 @@ Sets the scrollbar width.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number \| string | Yes | Scrollbar width.Default value: &lt;em&gt;4&lt;/em&gt; Unit: vp Values less than 0 are treated as the default value. The value &lt;em&gt;0&lt;/em&gt; means not to show the scrollbar. |
+| value | number \| string | Yes | Scrollbar width.Default value:&lt;em&gt;4&lt;/em&gt; Unit: vp Values less than 0 are treated as the default value. The value &lt;em&gt;0&lt;/em&gt; means not to show the scrollbar. |
 
 ## scrollBarWidth
 
@@ -609,7 +609,7 @@ Sets the scrollbar width.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number \| string \| Resource | Yes | Scrollbar width. Unit: vp Default value: &lt;em&gt;4&lt;/em&gt; If this parameter is set to a value less than or equal to 0, the default value is used. The value &lt;em&gt;0&lt;/em&gt; means not to show the scrollbar. |
+| value | number \| string \| Resource | Yes | Scrollbar width. Unit: vp Default value:&lt;em&gt;4&lt;/em&gt; If this parameter is set to a value less than or equal to 0, the default value is used. The value &lt;em&gt;0&lt;/em&gt; means not to show the scrollbar. |
 
 ## scrollSnap
 
