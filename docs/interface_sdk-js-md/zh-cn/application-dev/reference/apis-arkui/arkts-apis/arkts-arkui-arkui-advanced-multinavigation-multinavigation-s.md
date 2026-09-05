@@ -11,6 +11,10 @@ MultiNavigation是一个支持分栏导航的组件，提供多层页面栈管�
 
 > MultiNavigation在深层嵌套场景下，可能存在路由动效异常的问题。
 
+## 子组件
+
+不可以包含子组件。
+
 @struct { MultiNavigation }
 
 **起始版本：** 14

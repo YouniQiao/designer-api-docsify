@@ -63,7 +63,7 @@
 | [Margin](arkts-arkui-margin-t.md) | Defines the margin property. |
 | [Percentage](arkts-arkui-percentage-t.md) | 定义长度属性，单位为百分比。 |
 | [PX](arkts-arkui-px-t.md) | 定义长度属性，单位为像素（px）。 |
-| [Resource](arkts-arkui-resource-t.md) | Defines the data type of the interface restriction. |
+| [Resource](arkts-arkui-resource-t.md) | 定义接口限制的数据类型。 |
 | [ResourceColor](arkts-arkui-resourcecolor-t.md) | Defines the color which can use resource. |
 | [ResourceStr](arkts-arkui-resourcestr-t.md) | Defines the string which can use resource. |
 | [ResponsiveFillType](arkts-arkui-responsivefilltype-t.md) | 定义一个响应式item填充模式，可以在WaterFlow、Grid、List和Swiper组件中使用。 |

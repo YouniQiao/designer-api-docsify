@@ -43,7 +43,7 @@ Common()
 | [BlurStyleOptions](arkts-arkui-blurstyleoptions-i.md) | 模糊样式选项，用于配置模糊效果的深浅色模式、取色模式、灰阶模糊参数和模糊程度。 |
 | [BorderImageOption](arkts-arkui-borderimageoption-i.md) | Border image option |
 | [Callback](arkts-arkui-callback-i.md) | 定义基础的回调函数。 |
-| [CaretOffset](arkts-arkui-caretoffset-i.md) | CaretOffset info. |
+| [CaretOffset](arkts-arkui-caretoffset-i.md) | 光标相对输入框的位置信息。 |
 | [ClickEffect](arkts-arkui-clickeffect-i.md) | 定义点击回弹效果。 |
 | [ClickEvent](arkts-arkui-clickevent-i.md) | 继承于[BaseEvent](arkts-arkui-baseevent-i.md)。 |
 | [CommonConfiguration](arkts-arkui-commonconfiguration-i.md) | 开发者需要自定义class实现ContentModifier接口。 |
@@ -88,7 +88,7 @@ Common()
 | [ICurve](arkts-arkui-icurve-i.md) | 曲线对象。 |
 | [IMonitor](arkts-arkui-imonitor-i.md) | 当监听的状态变量变化时，状态管理框架侧将回调开发者注册的函数，并传入变化信息。变化信息的类型为IMonitor。 |
 | [IMonitorValue](arkts-arkui-imonitorvalue-i.md) | @Monitor监听状态变量变化的具体信息，通过IMonitor的value接口获取。T为状态变量类型。 |
-| [InputCounterOptions](arkts-arkui-inputcounteroptions-i.md) | Define the ratio of characters entered by the the percentage of InputCounterOptions. |
+| [InputCounterOptions](arkts-arkui-inputcounteroptions-i.md) | 计数器的配置项。 |
 | [InputEventInterceptResult](arkts-arkui-inputeventinterceptresult-i.md) | 输入事件拦截结果接口，用于监听器回调[InputEventListener](arkts-arkui-inputeventlistener-t.md)返回是否拦截的决策。 |
 | [InputEventMonitor](arkts-arkui-inputeventmonitor-i.md) | 输入事件监听器标识对象。 |
 | [InvertOptions](arkts-arkui-invertoptions-i.md) | 前景智能取反色。基于灰度阈值区间决定反色取值，参见[invert](arkts-arkui-commonmethod-c.md#invert)中的详细机制说明。 |
@@ -148,7 +148,7 @@ Common()
 | [RotateAngleOptions](arkts-arkui-rotateangleoptions-i.md) | 指定各轴旋转角的旋转参数选项。 |
 | [RotateOptions](arkts-arkui-rotateoptions-i.md) | 组件旋转参数。 |
 | [ScaleOptions](arkts-arkui-scaleoptions-i.md) | 定义缩放选项。 |
-| [SelectionOptions](arkts-arkui-selectionoptions-i.md) | Defines the selection options. |
+| [SelectionOptions](arkts-arkui-selectionoptions-i.md) | setTextSelection选中文字时的配置。 |
 | [ShadowOptions](arkts-arkui-shadowoptions-i.md) | 阴影属性集合，用于设置阴影的模糊半径、阴影的颜色、X轴和Y轴的偏移量。 |
 | [sharedTransitionOptions](arkts-arkui-sharedtransitionoptions-i.md) | 共享元素转场动效参数。 |
 | [SheetDismiss](arkts-arkui-sheetdismiss-i.md) | 控制半模态的关闭。 |
@@ -162,8 +162,8 @@ Common()
 | [StateStyles](arkts-arkui-statestyles-i.md) | 组件不同状态下的样式。 |
 | [SweepGradientOptions](arkts-arkui-sweepgradientoptions-i.md) | 角度渐变参数。 |
 | [SystemAdaptiveOptions](arkts-arkui-systemadaptiveoptions-i.md) | 系统自适应调节参数，系统会默认开启根据芯片算力进行自适应效果调节的能力。 |
-| [TextContentControllerOptions](arkts-arkui-textcontentcontrolleroptions-i.md) | Defines the span options of TextContentController. |
-| [TextDecorationOptions](arkts-arkui-textdecorationoptions-i.md) | Defines the options of decoration. |
+| [TextContentControllerOptions](arkts-arkui-textcontentcontrolleroptions-i.md) | 用于设置输入框插入字符时的配置选项。 |
+| [TextDecorationOptions](arkts-arkui-textdecorationoptions-i.md) | 文本装饰线的配置项。 |
 | [TipsOptions](arkts-arkui-tipsoptions-i.md) | 悬浮气泡自定义参数。 |
 | [TouchEvent](arkts-arkui-touchevent-i.md) | 继承于[BaseEvent](arkts-arkui-baseevent-i.md)。在非事件注入场景下，changedTouches是按屏幕刷新率重采样的点，而touches是按器件刷新率上报的点，因此changedTouches与touches的数据可能不同。 |
 | [TouchObject](arkts-arkui-touchobject-i.md) | 触摸事件类型。 |
@@ -285,7 +285,7 @@ Common()
 | [LayoutSafeAreaType](arkts-arkui-layoutsafeareatype-e.md) | 扩展布局安全区域的枚举类型。 |
 | [MenuGridPosition](arkts-arkui-menugridposition-e.md) | 栅格菜单在菜单中的位置枚举值。 |
 | [MenuKeyboardAvoidMode](arkts-arkui-menukeyboardavoidmode-e.md) | 菜单避让软键盘的模式。 |
-| [MenuPolicy](arkts-arkui-menupolicy-e.md) | Define the menu pop-up policy |
+| [MenuPolicy](arkts-arkui-menupolicy-e.md) | 菜单弹出的策略。 |
 | [MenuPreviewMode](arkts-arkui-menupreviewmode-e.md) | 菜单的预览样式。 |
 | [ModalMode](arkts-arkui-modalmode-e.md) | 子窗菜单的模态模式。 |
 | [ModalTransition](arkts-arkui-modaltransition-e.md) | 全屏模态转场方式枚举类型，用于设置全屏模态转场类型。 |

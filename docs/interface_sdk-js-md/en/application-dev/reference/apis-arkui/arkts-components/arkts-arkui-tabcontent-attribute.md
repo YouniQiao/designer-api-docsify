@@ -150,3 +150,37 @@ If the content exceeds the space provided by the tab bar, it will be clipped.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | content | ComponentContent \| [SubTabBarStyle](arkts-arkui-subtabbarstyle-c.md) \| [BottomTabBarStyle](arkts-arkui-bottomtabbarstyle-c.md) \| string \| Resource \| [CustomBuilder](arkts-arkui-custombuilder-t.md) \| [TabBarOptions](arkts-arkui-tabbaroptions-i.md) | Yes | Content displayed on the tab bar.   **ComponentContent**: encapsulation of the component content, which can be customized.   **SubTabBarStyle**: subtab style.   **BottomTabBarStyle**: style of the bottom and side tabs. The bottom style does not have the underline effect.   **string**: string type.   **Resource**: resource reference for importing strings from system or application resources.   **CustomBuilder**: builder that can take components as arguments.   **TabBarOptions**: options for configuring images and text content on the tabs. |
+
+## tabBarVisibility
+
+```TypeScript
+tabBarVisibility(visibility: TabVisibility, displayMode?: TabBarDisplayMode)
+```
+
+Sets the default visibility of the tab.
+
+> **NOTE：**
+> 
+> - When **visibility** is **TabVisibility.HIDDEN** and **displayMode** is **TabBarDisplayMode.SIDEBAR**, the tab
+> is not displayed in the sidebar but remains visible in the bottom tab bar.
+> - When **visibility** is **TabVisibility.HIDDEN** and **displayMode** is **TabBarDisplayMode.BOTTOM_TABBAR**, the
+> tab is not displayed in the bottom tab bar but remains visible in the sidebar.
+> - When **visibility** is **TabVisibility.HIDDEN** and **displayMode** is not set, the tab is not displayed in
+> both display modes.
+> - Hidden tab content can still be switched and displayed using **TabsController.changeIndex()** or by modifying
+> the **index** state variable.
+
+**Since:** 26.2.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.2.0.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| visibility | [TabVisibility](arkts-arkui-tabvisibility-e.md) | Yes | Visibility of the tab. Default value: **TabVisibility.VISIBLE**. |
+| displayMode | [TabBarDisplayMode](arkts-arkui-tabbardisplaymode-e.md) | No | Display mode corresponding to the visibility.When not set, **visibility** applies to both the sidebar and bottom tab bar.When set to **TabBarDisplayMode.SIDEBAR**, **visibility** applies only to the sidebar.When set to **TabBarDisplayMode.BOTTOM_TABBAR**, **visibility** applies only to the bottom tab bar. |

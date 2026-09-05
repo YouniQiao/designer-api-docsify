@@ -10,6 +10,14 @@
 > ，编译工具链会额外生成节点__Common__，并将通用属性或通用事件挂载在__Common__上，而不是直接应用到EditableTitleBar本身。这可能导致开发者设置的通用属性或通用事件不生效或不符合预期，因此，不建议
 > EditableTitleBar设置通用属性和通用事件。
 
+## 子组件
+
+无
+
+## EditableTitleBarAttribute
+
+不支持通用事件。
+
 **起始版本：** 10
 
 **装饰器类型：** @Component

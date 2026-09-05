@@ -17,7 +17,7 @@
 ALWAYS_DARK = 0
 ```
 
-Always display with dark mode.
+系统始终为深色。
 
 **起始版本：** 20
 
@@ -29,7 +29,7 @@ Always display with dark mode.
 ALWAYS_LIGHT = 1
 ```
 
-Always display with light mode.
+系统始终为浅色。
 
 **起始版本：** 20
 

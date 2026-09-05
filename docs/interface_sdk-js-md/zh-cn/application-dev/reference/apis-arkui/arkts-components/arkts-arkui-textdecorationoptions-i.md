@@ -1,8 +1,6 @@
 # TextDecorationOptions
 
-Defines the options of decoration.
-
-@interface TextDecorationOptions
+文本装饰线的配置项。
 
 **起始版本：** 12
 
@@ -19,7 +17,7 @@ Defines the options of decoration.
 color?: ResourceColor
 ```
 
-Sets the color of decoration.
+设置文本装饰线颜色。默认值：Color.Black。
 
 **类型：** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
@@ -37,7 +35,7 @@ Sets the color of decoration.
 style?: TextDecorationStyle
 ```
 
-The style value of decoration.
+设置文本装饰线样式。默认值：TextDecorationStyle.SOLID。
 
 **类型：** TextDecorationStyle
 
@@ -55,7 +53,8 @@ The style value of decoration.
 thicknessScale?: number
 ```
 
-装饰线粗细。
+设置文本装饰线的粗细缩放比例。默认值：1.0 取值范围：[0, +∞)   
+**说明：** 负值按默认值处理。
 
 **类型：** number
 
@@ -73,7 +72,7 @@ thicknessScale?: number
 type: TextDecorationType
 ```
 
-The decoration type.
+设置文本装饰线类型。
 
 **类型：** TextDecorationType
 

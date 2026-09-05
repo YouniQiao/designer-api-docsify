@@ -1183,6 +1183,7 @@
   - [DrawableDescriptor](arkts-arkui-drawabledescriptor-t.md)
   - [LayoutMode](arkts-arkui-layoutmode-e.md)
   - [SelectedMode](arkts-arkui-selectedmode-e.md)
+  - [TabVisibility](arkts-arkui-tabvisibility-e.md)
   - [BottomTabBarStyle](arkts-arkui-bottomtabbarstyle-c.md)
   - [SubTabBarStyle](arkts-arkui-subtabbarstyle-c.md)
   - [TabBarSymbol](arkts-arkui-tabbarsymbol-c.md)

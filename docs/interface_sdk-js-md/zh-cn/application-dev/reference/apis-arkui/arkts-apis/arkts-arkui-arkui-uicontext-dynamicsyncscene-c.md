@@ -1,6 +1,18 @@
 # DynamicSyncScene
 
-Represents a dynamic synchronization scene.
+提供组件自定义场景下相关帧率的配置。
+
+> **说明：**
+> 
+> - 本模块首批接口从API version 10开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。
+> 
+> - 本Class首批接口从API version 12开始支持。
+> 
+> - 本模块接口仅可在Stage模型下使用。
+> 
+> - 以下接口需先使用UIContext中的
+> [requireDynamicSyncScene](arkts-arkui-arkui-uicontext-uicontext-c.md#requiredynamicsyncscene)方法获取DynamicSyncScene对象，
+> 再通过此实例调用对应方法。
 
 **起始版本：** 12
 
@@ -21,7 +33,7 @@ import { BackPressActionProposal, BaseGestureHandlingProposal, ClickActionPropos
 getFrameRateRange(): ExpectedFrameRateRange
 ```
 
-Gets the FrameRateRange of the DynamicSyncScene.
+获取期望帧率范围。
 
 **起始版本：** 12
 
@@ -95,7 +107,9 @@ struct Frame {
 setFrameRateRange(range: ExpectedFrameRateRange): void
 ```
 
-Sets the FrameRateRange of the DynamicSyncScene.
+设置期望帧率范围。
+
+最终结果不一定是设置的帧率，会由系统能力做综合决策，尽量满足开发者的设置帧率。
 
 **起始版本：** 12
 

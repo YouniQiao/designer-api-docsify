@@ -56,6 +56,7 @@ Creates the **TabContent** component, which represents the content associated wi
 | --- | --- |
 | [LayoutMode](arkts-arkui-layoutmode-e.md) | Enumerates the layout modes of the images and texts on the bottom tabs. |
 | [SelectedMode](arkts-arkui-selectedmode-e.md) | Enumerates the display modes of selected subtabs. |
+| [TabVisibility](arkts-arkui-tabvisibility-e.md) | Enumerates the visibility of the tab. |
 
 ## Examples
 

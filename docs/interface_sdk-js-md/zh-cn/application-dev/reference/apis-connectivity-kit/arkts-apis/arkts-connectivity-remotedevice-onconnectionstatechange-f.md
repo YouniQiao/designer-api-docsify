@@ -26,7 +26,7 @@ function onConnectionStateChange(callback: Callback<ConnectionStateParam>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ConnectionStateParam](arkts-connectivity-remotedevice-connectionstateparam-i.md)&gt; | 是 | 回调函数，返回订阅的连接状态变化事件上报结果。 |
+| callback | Callback&lt;[ConnectionStateParam](arkts-connectivity-remotedevice-connectionstateparam-i.md)&gt; | 是 | 回调函数，返回订阅的连接状态变化事件上报结果。 |
 
 **错误码：**
 

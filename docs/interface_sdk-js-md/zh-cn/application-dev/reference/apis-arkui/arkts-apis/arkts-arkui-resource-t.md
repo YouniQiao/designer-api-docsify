@@ -4,7 +4,7 @@
 declare type Resource = import('../api/global/resource').Resource
 ```
 
-Defines the data type of the interface restriction.
+定义接口限制的数据类型。
 
 **起始版本：** 11
 

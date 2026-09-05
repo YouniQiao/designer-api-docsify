@@ -1,8 +1,6 @@
 # MenuPolicy
 
-Define the menu pop-up policy
-
-@enum { number }
+菜单弹出的策略。
 
 **起始版本：** 12
 
@@ -16,7 +14,7 @@ Define the menu pop-up policy
 DEFAULT = 0
 ```
 
-Default value. The default logic of whether to pop up a menu depends on the scene.
+按照底层默认逻辑决定是否弹出菜单。
 
 **起始版本：** 12
 
@@ -32,7 +30,7 @@ Default value. The default logic of whether to pop up a menu depends on the scen
 HIDE = 1
 ```
 
-Hide pop up menu.
+始终不弹出菜单。
 
 **起始版本：** 12
 
@@ -48,7 +46,7 @@ Hide pop up menu.
 SHOW = 2
 ```
 
-Show pop up menu.
+始终弹出菜单。
 
 **起始版本：** 12
 

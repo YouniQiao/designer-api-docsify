@@ -74,7 +74,7 @@ color(color: Optional<ColorMetrics>): ArcAlphabetIndexerAttribute
 font(font: Optional<Font>): ArcAlphabetIndexerAttribute
 ```
 
-设置弧形字母索引条默认字体样式。
+设置弧形字母索引条默认字体样式，即未选中状态下索引项的字体样式。
 
 **起始版本：** 18
 
