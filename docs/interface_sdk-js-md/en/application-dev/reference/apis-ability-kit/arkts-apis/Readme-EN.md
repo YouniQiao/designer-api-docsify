@@ -1309,6 +1309,8 @@
   <!--Del-->
   - [getDefaultApplication(system api)](arkts-ability-defaultappmanager-getdefaultapplication-f-sys.md)<!--DelEnd-->
   <!--Del-->
+  - [getDefaultApplicationCandidates(system api)](arkts-ability-defaultappmanager-getdefaultapplicationcandidates-f-sys.md)<!--DelEnd-->
+  <!--Del-->
   - [getDefaultApplicationSync(system api)](arkts-ability-defaultappmanager-getdefaultapplicationsync-f-sys.md)<!--DelEnd-->
   - [isDefaultApplication](arkts-ability-defaultappmanager-isdefaultapplication-f.md)
   - [isDefaultApplicationSync](arkts-ability-defaultappmanager-isdefaultapplicationsync-f.md)

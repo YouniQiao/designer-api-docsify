@@ -4,7 +4,7 @@ UIExtensionContext是[UIExtensionAbility](arkts-ability-app-ability-uiextensiona
 
 **继承/实现关系：** UIExtensionContext extends [ExtensionContext](arkts-ability-extensioncontext-c.md)
 
-**起始版本：** 10
+**起始版本：** 12
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -86,7 +86,7 @@ setHostPageOverlayForbidden(isForbidden: boolean) : void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| isForbidden | boolean | 是 | 是否允许[UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md)拉起的页面被使用方的页面覆盖。true表示不允许，false表示允许。 |
+| isForbidden | boolean | 是 | 设置是否禁止[UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md)拉起的页面被使用方的页面覆盖。true表示禁止，false表示允许。 |
 
 **错误码：**
 
@@ -111,7 +111,8 @@ startAbilityForResultAsCaller(want: Want, options?: StartOptions): Promise<Abili
 
 > **说明：**
 > 
-> 组件启动规则详见：[组件启动规则（Stage模型）](../../../application-models/component-startup-rules.md)。
+> 组件启动规则详见：[设备内组件启动规则（仅对系统应用开放）](../../../application-models/component-startup-rules-inner-device-sys.md)
+> 和[跨设备组件启动规则（仅对系统应用开放）](../../../application-models/component-startup-rules-cross-device-sys.md)。
 
 **起始版本：** 12
 
@@ -161,7 +162,7 @@ startAbilityForResultAsCaller(want: Want, options?: StartOptions): Promise<Abili
 startServiceExtensionAbility(want: Want): Promise<void>
 ```
 
-启动一个ServiceExtensionAbility。使用Promise异步回调。
+启动一个ServiceExtensionAbility，用于提供后台服务能力。使用Promise异步回调。
 
 **起始版本：** 18
 
@@ -209,11 +210,12 @@ startServiceExtensionAbility(want: Want): Promise<void>
 startServiceExtensionAbilityWithAccount(want: Want, accountId: number): Promise<void>
 ```
 
-启动一个指定系统账号下的ServiceExtensionAbility。使用Promise异步回调。
+启动一个指定系统账号下的ServiceExtensionAbility，用于提供后台服务能力。使用Promise异步回调。
 
 > **说明：**
 > 
-> 组件启动规则详见：[组件启动规则（Stage模型）](../../../application-models/component-startup-rules.md)。
+> 组件启动规则详见：[设备内组件启动规则（仅对系统应用开放）](../../../application-models/component-startup-rules-inner-device-sys.md)
+> 和[跨设备组件启动规则（仅对系统应用开放）](../../../application-models/component-startup-rules-cross-device-sys.md)。
 > 
 > 当accountId为当前用户时，无需进行权限校验。
 

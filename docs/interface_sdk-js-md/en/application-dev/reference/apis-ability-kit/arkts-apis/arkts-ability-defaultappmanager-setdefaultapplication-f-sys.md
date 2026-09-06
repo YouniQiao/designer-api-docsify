@@ -12,7 +12,7 @@ import { defaultAppManager } from '@kit.AbilityKit';
 function setDefaultApplication(type: string, elementName: ElementName, userId: number, callback: AsyncCallback<void>) : void
 ```
 
-Sets the default application for a user based on a system-defined application type, a file type that complies with the media type format (either specified by **type** or **subtype**), or a [uniform data type](../../apis-arkdata/arkts-apis/arkts-data-uniformtypedescriptor.md). This API uses an asynchronous callback to return the result.
+Sets the default application for a user based on a system-defined application type, a file type that complies with the media type format (either specified by **type** or **subtype**), or a [uniform data type](../../apis-arkdata/arkts-apis/arkts-data-uniformtypedescriptor.md). This API uses an asynchronous callback to return the result. To set an application as the default browser, the target application must have been granted the ohos.permission.DEFAULT_WEB_BROWSER permission. Otherwise, error 18000001 is returned. [since 26.1.0]
 
 **Since:** 9
 
@@ -42,6 +42,7 @@ Sets the default application for a user based on a system-defined application ty
 | [17700004](../errorcode-bundle.md#17700004-user-id-does-not-exist) | The specified user ID is not found. |
 | [17700025](../errorcode-bundle.md#17700025-invalid-type) | The specified type is invalid. |
 | [17700028](../errorcode-bundle.md#17700028-mismatch-between-ability-and-type) | The specified ability does not match the type. |
+| 18000001 | The specified type is Web Browser and the specified application does not have the ohos.permission.DEFAULT_WEB_BROWSER permission.<br>**Applicable version:** 26.1.0 and later |
 
 **Examples**
 
@@ -95,7 +96,7 @@ defaultAppManager.setDefaultApplication(uniformTypeDescriptor.UniformDataType.AV
 function setDefaultApplication(type: string, elementName: ElementName, callback: AsyncCallback<void>) : void
 ```
 
-Sets the default application based on a system-defined application type, a file type that complies with the media type format (either specified by **type** or **subtype**), or a [uniform data type](../../apis-arkdata/arkts-apis/arkts-data-uniformtypedescriptor.md). This API uses an asynchronous callback to return the result.
+Sets the default application based on a system-defined application type, a file type that complies with the media type format (either specified by **type** or **subtype**), or a [uniform data type](../../apis-arkdata/arkts-apis/arkts-data-uniformtypedescriptor.md). This API uses an asynchronous callback to return the result. To set an application as the default browser, the target application must have been granted the ohos.permission.DEFAULT_WEB_BROWSER permission. Otherwise, error 18000001 is returned. [since 26.1.0]
 
 **Since:** 9
 
@@ -123,6 +124,7 @@ Sets the default application based on a system-defined application type, a file 
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [17700025](../errorcode-bundle.md#17700025-invalid-type) | The specified type is invalid. |
 | [17700028](../errorcode-bundle.md#17700028-mismatch-between-ability-and-type) | The specified ability does not match the type. |
+| 18000001 | The specified type is Web Browser and the specified application does not have the ohos.permission.DEFAULT_WEB_BROWSER permission.<br>**Applicable version:** 26.1.0 and later |
 
 **Examples**
 
@@ -175,7 +177,7 @@ defaultAppManager.setDefaultApplication(uniformTypeDescriptor.UniformDataType.AV
 function setDefaultApplication(type: string, elementName: ElementName, userId?: number) : Promise<void>
 ```
 
-Sets the default application based on a system-defined application type, a file type that complies with the media type format (either specified by **type** or **subtype**), or a [uniform data type](../../apis-arkdata/arkts-apis/arkts-data-uniformtypedescriptor.md). This API uses a promise to return the result.
+Sets the default application based on a system-defined application type, a file type that complies with the media type format (either specified by **type** or **subtype**), or a [uniform data type](../../apis-arkdata/arkts-apis/arkts-data-uniformtypedescriptor.md). This API uses a promise to return the result. To set an application as the default browser, the target application must have been granted the ohos.permission.DEFAULT_WEB_BROWSER permission. Otherwise, error 18000001 is returned. [since 26.1.0]
 
 **Since:** 9
 
@@ -210,6 +212,7 @@ Sets the default application based on a system-defined application type, a file 
 | [17700004](../errorcode-bundle.md#17700004-user-id-does-not-exist) | The specified user ID is not found. |
 | [17700025](../errorcode-bundle.md#17700025-invalid-type) | The specified type is invalid. |
 | [17700028](../errorcode-bundle.md#17700028-mismatch-between-ability-and-type) | The specified ability does not match the type. |
+| 18000001 | The specified type is Web Browser and the specified application does not have the ohos.permission.DEFAULT_WEB_BROWSER permission.<br>**Applicable version:** 26.1.0 and later |
 
 **Examples**
 

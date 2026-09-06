@@ -198,7 +198,7 @@ getApplicationContext(): ApplicationContext
 
 | 类型 | 说明 |
 | --- | --- |
-| [ApplicationContext](arkts-ability-applicationcontext-c.md) | 应用上下文。 |
+| [ApplicationContext](arkts-ability-applicationcontext-c.md) | 应用上下文，提供应用级别的上下文能力，包括应用生命周期管理、环境变量配置等。 |
 
 **错误码：**
 
@@ -607,7 +607,7 @@ resourceDir: string
 
 > **说明：**
 > 
-> 需要开发者手动在`\&lt;module-name&gt;\resource`路径下创建`resfile`目录。创建的`resfile`目录仅支持以只读方式访问。
+> 需要开发者手动在`\&lt;module-name&gt;\resources`路径下创建`resfile`目录。创建的`resfile`目录仅支持以只读方式访问。
 
 **类型：** string
 

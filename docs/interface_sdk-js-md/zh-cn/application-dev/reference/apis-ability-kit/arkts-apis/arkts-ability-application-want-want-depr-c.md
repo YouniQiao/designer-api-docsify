@@ -157,7 +157,7 @@ ohos.aafwk.param.callerUid 表示bundleInfo中的uid，应用包里应用程序�
 type?: string
 ```
 
-表示MIME type类型描述，打开文件的类型，主要用于文管打开文件。比如：'text/xml' 、 'image/*'等，MIME定义参考：https://www.iana.org/assignments/media-types /media-types.xhtml?utm_source=ld246.com。
+表示MIME type类型描述，打开文件的类型，主要用于文管打开文件。比如：'text/xml' 、 'image/*'等，MIME定义参考：https://www.iana.org/assignments/media-types/media-types.xhtml?utm_source=ld246.com。
 
 **类型：** string
 

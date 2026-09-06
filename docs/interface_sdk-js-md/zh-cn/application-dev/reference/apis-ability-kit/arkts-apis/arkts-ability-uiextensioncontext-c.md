@@ -4,7 +4,7 @@ UIExtensionContext是[UIExtensionAbility](arkts-ability-app-ability-uiextensiona
 
 **继承/实现关系：** UIExtensionContext extends [ExtensionContext](arkts-ability-extensioncontext-c.md)
 
-**起始版本：** 10
+**起始版本：** 12
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -352,7 +352,7 @@ setColorMode(colorMode: ConfigurationConstant.ColorMode): void
 
 > **说明：**
 > 
-> - 调用该接口后会创建新的资源管理器对象，如果此前有缓存资源管理器，需要进行更新。
+> - 调用该接口后会创建新的资源管理器对象，如果此前有缓存资源管理器，开发者需要更新缓存的资源管理器引用，以使用新创建的资源管理器对象。
 > 
 > - 深浅色模式生效的优先级：UIExtensionAbility的深浅色模式
 > 应用的深浅色模式（
@@ -518,7 +518,7 @@ startAbility(want: Want, options?: StartOptions): Promise<void>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 | 启动UIAbility时必要的Want，包含待启动UIAbility的名称等信息。 |
-| options | [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c.md) | 否 | 启动UIAbility所携带的额外参数。 |
+| options | [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c.md) | 否 | 启动UIAbility所携带的额外参数，用于自定义启动行为（如指定显示屏幕ID、窗口模式等）。当需要自定义启动配置时传入此参数，不传入时使用系统默认启动配置。 |
 
 **返回值：**
 

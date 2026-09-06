@@ -14,7 +14,7 @@ AbilityStageContext是AbilityStage的上下文环境，继承自Context。Abilit
 config: Configuration
 ```
 
-环境变量。
+环境配置对象。
 
 **类型：** [Configuration](arkts-ability-app-ability-configuration-configuration-i.md)
 
@@ -32,7 +32,7 @@ config: Configuration
 currentHapModuleInfo: HapModuleInfo
 ```
 
-AbilityStage对应的ModuleInfo对象。
+AbilityStage对应的HapModuleInfo对象，可用来获取当前模块的名称、路径等信息。
 
 **类型：** [HapModuleInfo](arkts-ability-hapmoduleinfo-i.md)
 
@@ -50,7 +50,7 @@ AbilityStage对应的ModuleInfo对象。
 launchElement?: ElementName
 ```
 
-启动能力Stage的ElementName对象。
+创建AbilityStage时的元素名称信息。
 
 **类型：** [ElementName](arkts-ability-elementname-i.md)
 

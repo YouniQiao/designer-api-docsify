@@ -151,7 +151,9 @@ connectServiceExtensionAbility(want: Want, options: ConnectOptions): number
 
 > **说明：**
 > 
-> 组件启动规则详见：[组件启动规则（Stage模型）](../../../application-models/component-startup-rules.md)。
+> 组件启动规则详见：[设备内组件启动规则](../../../application-models/component-startup-rules-inner-device.md)、
+> [跨设备组件启动规则](../../../application-models/component-startup-rules-cross-device.md)。
+> 该接口不支持连接分身应用的ServiceExtensionAbility。
 
 **起始版本：** 9
 
