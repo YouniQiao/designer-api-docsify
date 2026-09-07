@@ -102,7 +102,7 @@ closeKVStore(appId: string, storeId: string, kvConfig?: Options): Promise<void>
 | --- | --- | --- | --- |
 | appId | string | 是 | 应用的BundleName，不可为空且长度范围为1-256字节。 |
 | storeId | string | 是 | 要关闭的数据库唯一标识符，长度范围为1-[MAX_STORE_ID_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md)，且只能包含字母数字或下划线_。 |
-| kvConfig | Options | 否 | 要关闭的数据库的配置信息，默认为空。<br>**起始版本：** 24 |
+| kvConfig | Options | 否 | 要关闭的数据库的配置信息，默认为空。<br>**适用版本：** 24 |
 
 **返回值：**
 
@@ -249,7 +249,7 @@ deleteKVStore(appId: string, storeId: string, kvConfig?: Options): Promise<void>
 | --- | --- | --- | --- |
 | appId | string | 是 | 应用的BundleName，不可为空且长度范围为1-256字节。 |
 | storeId | string | 是 | 要删除的数据库唯一标识符，长度范围为1-[MAX_STORE_ID_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md)，且只能包含字母数字或下划线_。 |
-| kvConfig | Options | 否 | 要删除的数据库的配置信息，默认为空。<br>**起始版本：** 24 |
+| kvConfig | Options | 否 | 要删除的数据库的配置信息，默认为空。<br>**适用版本：** 24 |
 
 **返回值：**
 

@@ -2121,7 +2121,7 @@ textMoveUnit?: accessibility.TextMoveUnit
 
 默认值：char。
 
-**类型：** [accessibility.TextMoveUnit](arkts-accessibility-accessibility-textmoveunit-t.md)
+**类型：** accessibility.TextMoveUnit
 
 **起始版本：** 20
 

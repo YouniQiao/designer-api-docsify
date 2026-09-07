@@ -16,7 +16,7 @@ function execute(func: Function, ...args: Object[]): Promise<Object>
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -32,7 +32,7 @@ function execute(func: Function, ...args: Object[]): Promise<Object>
 | 类型 | 说明 |
 | --- | --- |
 | Promise&lt;unknown&gt; | <br>**适用版本：** 9 - 11 |
-| Promise&lt;Object&gt; | Promise对象，返回任务函数的执行结果。<br>**适用版本：** 11+ |
+| Promise&lt;Object&gt; | Promise对象，返回任务函数的执行结果。<br>**适用版本：** 11 |
 
 **错误码：**
 
@@ -67,7 +67,7 @@ function execute<A extends Array<Object>, R>(func: (...args: A) => R | Promise<R
 
 **起始版本：** 13
 
-**原子化服务API：** 从API版本13开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本13开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -139,7 +139,7 @@ function execute(task: Task, priority?: Priority): Promise<Object>
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -155,7 +155,7 @@ function execute(task: Task, priority?: Priority): Promise<Object>
 | 类型 | 说明 |
 | --- | --- |
 | Promise&lt;unknown&gt; | <br>**适用版本：** 9 - 17 |
-| Promise&lt;Object&gt; | Promise对象，返回任务函数的执行结果。<br>**适用版本：** 11+ |
+| Promise&lt;Object&gt; | Promise对象，返回任务函数的执行结果。<br>**适用版本：** 11 |
 
 **错误码：**
 
@@ -235,7 +235,7 @@ function execute<A extends Array<Object>, R>(task: GenericsTask<A, R>, priority?
 
 **起始版本：** 13
 
-**原子化服务API：** 从API版本13开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本13开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -295,7 +295,7 @@ function execute(group: TaskGroup, priority?: Priority): Promise<Object[]>
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -383,7 +383,7 @@ function execute(task: Task, configs: Configs): Promise<Object>
 
 **起始版本：** 24
 
-**原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本24开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -471,7 +471,7 @@ function execute<A extends Array<Object>, R>(task: GenericsTask<A, R>, configs: 
 
 **起始版本：** 24
 
-**原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本24开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -541,7 +541,7 @@ function execute(group: TaskGroup, configs: Configs): Promise<Object[]>
 
 **起始版本：** 24
 
-**原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本24开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 

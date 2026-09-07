@@ -18,7 +18,7 @@ Queries all applications that have created contacts. This API uses an asynchrono
 
 **Deprecated since:** 10
 
-**Substitutes:** [queryHolders](#queryholders)(context: Context, callback: AsyncCallback&lt;Array&lt;Holder&gt;&gt;)
+**Substitutes:** [queryHolders](#queryholders-1)(context: Context, callback: AsyncCallback&lt;Array&lt;Holder&gt;&gt;)
 
 **Required permissions:** ohos.permission.READ_CONTACTS
 
@@ -77,8 +77,6 @@ Queries all applications that have created contacts. This API uses an asynchrono
 **Examples**
 
 > NOTE
-> 
-> In the examples in this document, this.context is used to obtain the UIAbilityContext, where this represents a UIAbility instance inherited from UIAbility. To use the capabilities provided by UIAbilityContext in a page, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -109,7 +107,7 @@ Queries all applications that have created contacts. This API uses a promise to 
 
 **Deprecated since:** 10
 
-**Substitutes:** [queryHolders](#queryholders)(context: Context)
+**Substitutes:** [queryHolders](#queryholders-3)(context: Context)
 
 **Required permissions:** ohos.permission.READ_CONTACTS
 
@@ -169,8 +167,6 @@ Queries all applications that have created contacts. This API uses a promise to 
 **Examples**
 
 > NOTE
-> 
-> In the examples in this document, this.context is used to obtain the UIAbilityContext, where this represents a UIAbility instance inherited from UIAbility. If you need to use the capabilities provided by UIAbilityContext in a page, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
 ```TypeScript
 import { common } from '@kit.AbilityKit';

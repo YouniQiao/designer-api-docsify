@@ -18,7 +18,7 @@ function createMac(algName: string): Mac
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Mac
@@ -71,7 +71,7 @@ function createMac(macSpec: MacSpec): Mac
 
 **起始版本：** 18
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Security.CryptoFramework.Mac
 

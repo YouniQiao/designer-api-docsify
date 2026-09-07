@@ -4,8 +4,6 @@ Enumerates reasons for the activation state changes of the **NavDestination** co
 
 **Since:** 17
 
-**Model restriction:** This API can be used only in the stage model.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## TRANSITION

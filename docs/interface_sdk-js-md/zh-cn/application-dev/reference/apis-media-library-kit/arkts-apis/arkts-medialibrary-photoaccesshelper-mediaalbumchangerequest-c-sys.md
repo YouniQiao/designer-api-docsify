@@ -647,8 +647,8 @@ operateAttribute(operation: AlbumOperation): void
 **起始版本：** 26.0.0
 
 **需要权限：** 
-- API版本26.0.0：ohos.permission.ACCESS_MEDIALIB_THUMB_DB
-- API版本26.1.0+：ohos.permission.ACCESS_MEDIALIB_THUMB_DB or ohos.permission.WRITE_IMAGEVIDEO
+- API版本26：ohos.permission.ACCESS_MEDIALIB_THUMB_DB
+- API版本26+：ohos.permission.ACCESS_MEDIALIB_THUMB_DB or ohos.permission.WRITE_IMAGEVIDEO
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

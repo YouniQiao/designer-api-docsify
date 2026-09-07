@@ -24,7 +24,7 @@ Adds an HTML record to the PasteData, and adds **MIMETYPE_TEXT_HTML** to **mimeT
 
 **Deprecated since:** 9
 
-**Substitutes:** [addRecord](#addrecord)(mimeType: string, value: ValueType)
+**Substitutes:** [addRecord](#addrecord-1)(mimeType: string, value: ValueType)
 
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
@@ -124,7 +124,7 @@ Adds a plain text record to the PasteData, and adds **MIMETYPE_TEXT_PLAIN** to *
 
 **Deprecated since:** 9
 
-**Substitutes:** [addRecord](#addrecord)(mimeType: string, value: ValueType)
+**Substitutes:** [addRecord](#addrecord-1)(mimeType: string, value: ValueType)
 
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
@@ -153,7 +153,7 @@ Adds a URI record to the PasteData, and adds **MIMETYPE_TEXT_URI** to **mimeType
 
 **Deprecated since:** 9
 
-**Substitutes:** [addRecord](#addrecord)(mimeType: string, value: ValueType)
+**Substitutes:** [addRecord](#addrecord-1)(mimeType: string, value: ValueType)
 
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
@@ -182,7 +182,7 @@ Adds a Want record to the PasteData, and adds **MIMETYPE_TEXT_WANT** to **mimeTy
 
 **Deprecated since:** 9
 
-**Substitutes:** [addRecord](#addrecord)(mimeType: string, value: ValueType)
+**Substitutes:** [addRecord](#addrecord-1)(mimeType: string, value: ValueType)
 
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
@@ -310,7 +310,7 @@ Obtains the PixelMap of the primary record.
 
 | Type | Description |
 | --- | --- |
-| [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | PixelMap. |
+| image.PixelMap | PixelMap. |
 
 **Examples**
 

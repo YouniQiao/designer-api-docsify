@@ -215,6 +215,20 @@ try{
 ## belongingToTypes
 
 ```TypeScript
+get belongingToTypes(): Array<string>
+```
+
+Uniform data type IDs that the uniform data type belongs to.
+
+**Type:** Array&lt;string&gt;
+
+**Since:** 11
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.DistributedDataManager.UDMF.Core
+
+```TypeScript
 set belongingToTypes(value: Array<string>)
 ```
 
@@ -229,6 +243,20 @@ Uniform data type IDs that the uniform data type belongs to.
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## description
+
+```TypeScript
+get description(): string
+```
+
+A textual description for the uniform data type.
+
+**Type:** string
+
+**Since:** 11
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
 ```TypeScript
 set description(value: string)
@@ -247,6 +275,20 @@ A textual description for the uniform data type.
 ## filenameExtensions
 
 ```TypeScript
+get filenameExtensions(): Array<string>
+```
+
+File name extensions for the uniform data type.
+
+**Type:** Array&lt;string&gt;
+
+**Since:** 12
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.DistributedDataManager.UDMF.Core
+
+```TypeScript
 set filenameExtensions(value: Array<string>)
 ```
 
@@ -261,6 +303,20 @@ File name extensions for the uniform data type.
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## iconFile
+
+```TypeScript
+get iconFile(): string
+```
+
+Default icon file path for the uniform data type.
+
+**Type:** string
+
+**Since:** 11
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
 ```TypeScript
 set iconFile(value: string)
@@ -279,6 +335,20 @@ Default icon file path for the uniform data type.
 ## mimeTypes
 
 ```TypeScript
+get mimeTypes(): Array<string>
+```
+
+MIMETypes of the uniform data type.
+
+**Type:** Array&lt;string&gt;
+
+**Since:** 12
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.DistributedDataManager.UDMF.Core
+
+```TypeScript
 set mimeTypes(value: Array<string>)
 ```
 
@@ -295,6 +365,20 @@ MIMETypes of the uniform data type.
 ## referenceURL
 
 ```TypeScript
+get referenceURL(): string
+```
+
+Reference URL for the uniform data type, which describes the detail information of the type.
+
+**Type:** string
+
+**Since:** 11
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.DistributedDataManager.UDMF.Core
+
+```TypeScript
 set referenceURL(value: string)
 ```
 
@@ -309,6 +393,20 @@ Reference URL for the uniform data type, which describes the detail information 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## typeId
+
+```TypeScript
+get typeId(): string
+```
+
+Type ID of the uniform data type, which corresponds to the enum string in the `UniformDataType`.
+
+**Type:** string
+
+**Since:** 11
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
 ```TypeScript
 set typeId(value: string)

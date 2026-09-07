@@ -116,7 +116,7 @@ dataSrc?: media.AVDataSrcDescriptor
 
 DataSource descriptor. The caller ensures the fileSize and callback are valid.
 
-**Type:** [media.AVDataSrcDescriptor](../../apis-media-kit/arkts-apis/arkts-media-media-avdatasrcdescriptor-i.md)
+**Type:** media.AVDataSrcDescriptor
 
 **Since:** 12
 
@@ -206,7 +206,7 @@ fdSrc?: media.AVFileDescriptor
 
 Media file descriptor.
 
-**Type:** [media.AVFileDescriptor](../../apis-media-kit/arkts-apis/arkts-media-media-avfiledescriptor-i.md)
+**Type:** media.AVFileDescriptor
 
 **Since:** 10
 
@@ -270,7 +270,7 @@ mediaImage?: image.PixelMap | string
 
 The image of this media asset displayed in the media center. It can be a PixelMap or a URI formatted string,
 
-**Type:** [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) \| string
+**Type:** image.PixelMap \| string
 
 **Since:** 10
 

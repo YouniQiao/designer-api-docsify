@@ -12,4 +12,4 @@ Defines the information in the [HarmonyAppProvision configuration file](../../..
 
 **System API:** This is a system API.
 
-**Type:** [_AppProvisionInfo.AppProvisionInfo](arkts-ability-appprovisioninfo-i-sys.md)
+**Type:** _AppProvisionInfo.AppProvisionInfo

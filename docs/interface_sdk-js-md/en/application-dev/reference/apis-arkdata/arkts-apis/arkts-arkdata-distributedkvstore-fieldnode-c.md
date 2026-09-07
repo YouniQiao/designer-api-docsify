@@ -129,6 +129,20 @@ Indicates the default value of field node.
 ## nullable
 
 ```TypeScript
+get nullable(): boolean
+```
+
+Get the nullable of database field.
+
+**Type:** boolean
+
+**Since:** 9
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
+
+```TypeScript
 set nullable(isnullable: boolean)
 ```
 
@@ -143,6 +157,20 @@ Set the nullable of database field.
 **System capability:** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
 
 ## type
+
+```TypeScript
+get type(): number
+```
+
+Get the type of value.
+
+**Type:** number
+
+**Since:** 9
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
 
 ```TypeScript
 set type(type: number)

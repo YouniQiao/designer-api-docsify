@@ -20,7 +20,7 @@
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
-**测试接口：** 本接口仅在自动化测试脚本中使用。
+**测试接口：** 此接口仅在自动化测试脚本中使用。
 
 ## 导入模块
 
@@ -42,7 +42,7 @@ addResource(path: string) : void
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -90,11 +90,11 @@ closeRawFd(path: string, callback: _AsyncCallback<void>): void
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
-**测试接口：** 本接口仅在自动化测试脚本中使用。
+**测试接口：** 此接口仅在自动化测试脚本中使用。
 
 **参数：**
 
@@ -148,11 +148,11 @@ closeRawFd(path: string): Promise<void>
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
-**测试接口：** 本接口仅在自动化测试脚本中使用。
+**测试接口：** 此接口仅在自动化测试脚本中使用。
 
 **参数：**
 
@@ -206,11 +206,11 @@ closeRawFdSync(path: string): void
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
-**测试接口：** 本接口仅在自动化测试脚本中使用。
+**测试接口：** 此接口仅在自动化测试脚本中使用。
 
 **参数：**
 
@@ -265,7 +265,7 @@ closeRawFileDescriptor(path: string, callback: AsyncCallback<void>): void
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
-**测试接口：** 本接口仅在自动化测试脚本中使用。
+**测试接口：** 此接口仅在自动化测试脚本中使用。
 
 **参数：**
 
@@ -300,11 +300,11 @@ closeRawFileDescriptor(path: string): Promise<void>
 
 **废弃版本：** 9
 
-**替代接口：** [closeRawFd](#closerawfd)(path: string)
+**替代接口：** [closeRawFd](#closerawfd-1)(path: string)
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
-**测试接口：** 本接口仅在自动化测试脚本中使用。
+**测试接口：** 此接口仅在自动化测试脚本中使用。
 
 **参数：**
 
@@ -338,7 +338,7 @@ getBoolean(resId: number): boolean
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -413,7 +413,7 @@ getBoolean(resource: Resource): boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -482,7 +482,7 @@ getBooleanByName(resName: string): boolean
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -551,7 +551,7 @@ getColor(resId: number, callback: _AsyncCallback<number>): void
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -652,7 +652,7 @@ getColor(resId: number): Promise<number>
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -726,7 +726,7 @@ getColor(resource: Resource, callback: _AsyncCallback<number>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -791,11 +791,11 @@ getColor(resource: Resource): Promise<number>
 
 **废弃版本：** 20
 
-**替代接口：** [getColor](#getcolor)(resId: long)
+**替代接口：** [getColor](#getcolor-1)(resId: long)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -863,7 +863,7 @@ getColorByName(resName: string, callback: _AsyncCallback<number>): void
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -926,7 +926,7 @@ getColorByName(resName: string): Promise<number>
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -994,7 +994,7 @@ getColorByNameSync(resName: string) : number
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -1063,7 +1063,7 @@ getColorSync(resId: number) : number
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -1138,7 +1138,7 @@ getColorSync(resource: Resource) : number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -1207,7 +1207,7 @@ getConfiguration(callback: _AsyncCallback<Configuration>): void
 
 **起始版本：** 6
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -1252,7 +1252,7 @@ getConfiguration(): Promise<Configuration>
 
 **起始版本：** 6
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -1295,7 +1295,7 @@ getConfigurationSync(): Configuration
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -1333,7 +1333,7 @@ getDeviceCapability(callback: _AsyncCallback<DeviceCapability>): void
 
 **起始版本：** 6
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -1378,7 +1378,7 @@ getDeviceCapability(): Promise<DeviceCapability>
 
 **起始版本：** 6
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -1421,7 +1421,7 @@ getDeviceCapabilitySync(): DeviceCapability
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -1466,7 +1466,7 @@ getDoublePluralStringByNameSync(resName: string, num: number, ...args: Array<str
 
 **起始版本：** 18
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -1555,7 +1555,7 @@ getDoublePluralStringValueSync(resId: number, num: number, ...args: Array<string
 
 **起始版本：** 18
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -1648,7 +1648,7 @@ getDoublePluralStringValueSync(resource: Resource, num: number, ...args: Array<s
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -1731,7 +1731,7 @@ getDrawableDescriptor(resId: number, density?: number, type?: number): DrawableD
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -1810,7 +1810,7 @@ getDrawableDescriptor(resource: Resource, density?: number, type?: number): Draw
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -1881,7 +1881,7 @@ getDrawableDescriptorByName(resName: string, density?: number, type?: number): D
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -1961,7 +1961,7 @@ getIntPluralStringByNameSync(resName: string, num: number, ...args: Array<string
 
 **起始版本：** 18
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -2050,7 +2050,7 @@ getIntPluralStringValueSync(resId: number, num: number,...args: Array<string | n
 
 **起始版本：** 18
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -2143,7 +2143,7 @@ getIntPluralStringValueSync(resource: Resource, num: number, ...args: Array<stri
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -2226,7 +2226,7 @@ getLocales(includeSystem?: boolean): Array<string>
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -2296,7 +2296,7 @@ getMedia(resId: number, callback: AsyncCallback<Uint8Array>): void
 
 **废弃版本：** 9
 
-**替代接口：** [getMediaContent](#getmediacontent)(resId: long, callback: _AsyncCallback&lt;Uint8Array&gt;)
+**替代接口：** [getMediaContent](#getmediacontent-4)(resId: long, callback: _AsyncCallback&lt;Uint8Array&gt;)
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -2333,7 +2333,7 @@ getMedia(resId: number): Promise<Uint8Array>
 
 **废弃版本：** 9
 
-**替代接口：** [getMediaContent](#getmediacontent)(resId: long)
+**替代接口：** [getMediaContent](#getmediacontent-6)(resId: long)
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -2452,7 +2452,7 @@ getMediaBase64ByName(resName: string, callback: _AsyncCallback<string>): void
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -2507,7 +2507,7 @@ getMediaBase64ByName(resName: string, density: number, callback: _AsyncCallback<
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -2563,7 +2563,7 @@ getMediaBase64ByName(resName: string): Promise<string>
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -2621,7 +2621,7 @@ getMediaBase64ByName(resName: string, density: number): Promise<string>
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -2680,7 +2680,7 @@ getMediaBase64ByNameSync(resName: string, density?: number): string
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -2744,7 +2744,7 @@ getMediaByName(resName: string, callback: _AsyncCallback<Uint8Array>): void
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -2799,7 +2799,7 @@ getMediaByName(resName: string, density: number, callback: _AsyncCallback<Uint8A
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -2855,7 +2855,7 @@ getMediaByName(resName: string): Promise<Uint8Array>
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -2913,7 +2913,7 @@ getMediaByName(resName: string, density: number): Promise<Uint8Array>
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -2972,7 +2972,7 @@ getMediaByNameSync(resName: string, density?: number): Uint8Array
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -3038,11 +3038,11 @@ getMediaContent(resource: Resource, callback: _AsyncCallback<Uint8Array>): void
 
 **废弃版本：** 20
 
-**替代接口：** [getMediaContent](#getmediacontent)(resId: long, callback: _AsyncCallback&lt;Uint8Array&gt;)
+**替代接口：** [getMediaContent](#getmediacontent-4)(resId: long, callback: _AsyncCallback&lt;Uint8Array&gt;)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -3099,11 +3099,11 @@ getMediaContent(resource: Resource, density: number, callback: _AsyncCallback<Ui
 
 **废弃版本：** 20
 
-**替代接口：** [getMediaContent](#getmediacontent)(resId: long, density: int, callback: _AsyncCallback&lt;Uint8Array&gt;)
+**替代接口：** [getMediaContent](#getmediacontent-5)(resId: long, density: int, callback: _AsyncCallback&lt;Uint8Array&gt;)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -3161,11 +3161,11 @@ getMediaContent(resource: Resource): Promise<Uint8Array>
 
 **废弃版本：** 20
 
-**替代接口：** [getMediaContent](#getmediacontent)(resId: long)
+**替代接口：** [getMediaContent](#getmediacontent-6)(resId: long)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -3225,11 +3225,11 @@ getMediaContent(resource: Resource, density: number): Promise<Uint8Array>
 
 **废弃版本：** 20
 
-**替代接口：** [getMediaContent](#getmediacontent)(resId: long, density: int)
+**替代接口：** [getMediaContent](#getmediacontent-7)(resId: long, density: int)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -3288,7 +3288,7 @@ getMediaContent(resId: number, callback: _AsyncCallback<Uint8Array>): void
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -3344,7 +3344,7 @@ getMediaContent(resId: number, density: number, callback: _AsyncCallback<Uint8Ar
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -3400,7 +3400,7 @@ getMediaContent(resId: number): Promise<Uint8Array>
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -3458,7 +3458,7 @@ getMediaContent(resId: number, density: number): Promise<Uint8Array>
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -3523,7 +3523,7 @@ getMediaContentBase64(resource: Resource, callback: _AsyncCallback<string>): voi
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -3584,7 +3584,7 @@ getMediaContentBase64(resource: Resource, density: number, callback: _AsyncCallb
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -3646,7 +3646,7 @@ getMediaContentBase64(resource: Resource): Promise<string>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -3710,7 +3710,7 @@ getMediaContentBase64(resource: Resource, density: number): Promise<string>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -3769,7 +3769,7 @@ getMediaContentBase64(resId: number, callback: _AsyncCallback<string>): void
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -3824,7 +3824,7 @@ getMediaContentBase64(resId: number, density: number, callback: _AsyncCallback<s
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -3880,7 +3880,7 @@ getMediaContentBase64(resId: number): Promise<string>
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -3938,7 +3938,7 @@ getMediaContentBase64(resId: number, density: number): Promise<string>
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -3997,7 +3997,7 @@ getMediaContentBase64Sync(resId: number, density?: number): string
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -4067,7 +4067,7 @@ getMediaContentBase64Sync(resource: Resource, density?: number): string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -4130,7 +4130,7 @@ getMediaContentSync(resId: number, density?: number): Uint8Array
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -4200,7 +4200,7 @@ getMediaContentSync(resource: Resource, density?: number): Uint8Array
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -4263,7 +4263,7 @@ getNumber(resId: number): number
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -4364,7 +4364,7 @@ getNumber(resource: Resource): number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -4434,7 +4434,7 @@ getNumberByName(resName: string): number
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -4531,7 +4531,7 @@ getOverrideConfiguration(): Configuration
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -4576,7 +4576,7 @@ getOverrideResourceManager(configuration?: Configuration): ResourceManager
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -4638,7 +4638,7 @@ getPluralString(resId: number, num: number, callback: AsyncCallback<string>): vo
 
 **废弃版本：** 9
 
-**替代接口：** [getPluralStringValue](#getpluralstringvalue)(resId: number, num: number, callback: _AsyncCallback&lt;string&gt;)
+**替代接口：** [getPluralStringValue](#getpluralstringvalue-2)(resId: number, num: number, callback: _AsyncCallback&lt;string&gt;)
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -4683,7 +4683,7 @@ getPluralString(resId: number, num: number): Promise<string>
 
 **废弃版本：** 9
 
-**替代接口：** [getPluralStringValue](#getpluralstringvalue)(resId: number, num: number)
+**替代接口：** [getPluralStringValue](#getpluralstringvalue-3)(resId: number, num: number)
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -4733,7 +4733,7 @@ getPluralStringByName(resName: string, num: number, callback: _AsyncCallback<str
 
 **替代接口：** [getIntPluralStringByNameSync](#getintpluralstringbynamesync)(resName: string, num: number, ...args: Array&lt;string | number&gt;)
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -4811,7 +4811,7 @@ getPluralStringByName(resName: string, num: number): Promise<string>
 
 **替代接口：** [getIntPluralStringByNameSync](#getintpluralstringbynamesync)(resName: string, num: number, ...args: Array&lt;string | number&gt;)
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -4894,7 +4894,7 @@ getPluralStringByNameSync(resName: string, num: number): string
 
 **替代接口：** [getIntPluralStringByNameSync](#getintpluralstringbynamesync)(resName: string, num: number, ...args: Array&lt;string | number&gt;)
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -4980,7 +4980,7 @@ getPluralStringValue(resource: Resource, num: number, callback: _AsyncCallback<s
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -5067,7 +5067,7 @@ getPluralStringValue(resource: Resource, num: number): Promise<string>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -5156,7 +5156,7 @@ getPluralStringValue(resId: number, num: number, callback: _AsyncCallback<string
 
 **替代接口：** [getIntPluralStringValueSync](#getintpluralstringvaluesync)(resId: number, num: number,...args: Array&lt;string | number&gt;)
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -5235,7 +5235,7 @@ getPluralStringValue(resId: number, num: number): Promise<string>
 
 **替代接口：** [getIntPluralStringValueSync](#getintpluralstringvaluesync)(resId: number, num: number,...args: Array&lt;string | number&gt;)
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -5318,7 +5318,7 @@ getPluralStringValueSync(resId: number, num: number): string
 
 **替代接口：** [getIntPluralStringValueSync](#getintpluralstringvaluesync)(resId: number, num: number,...args: Array&lt;string | number&gt;)
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -5404,7 +5404,7 @@ getPluralStringValueSync(resource: Resource, num: number): string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -5491,11 +5491,11 @@ getRawFd(path: string, callback: _AsyncCallback<RawFileDescriptor>): void
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
-**测试接口：** 本接口仅在自动化测试脚本中使用。
+**测试接口：** 此接口仅在自动化测试脚本中使用。
 
 **参数：**
 
@@ -5556,11 +5556,11 @@ getRawFd(path: string): Promise<RawFileDescriptor>
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
-**测试接口：** 本接口仅在自动化测试脚本中使用。
+**测试接口：** 此接口仅在自动化测试脚本中使用。
 
 **参数：**
 
@@ -5624,11 +5624,11 @@ getRawFdSync(path: string): RawFileDescriptor
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
-**测试接口：** 本接口仅在自动化测试脚本中使用。
+**测试接口：** 此接口仅在自动化测试脚本中使用。
 
 **参数：**
 
@@ -5685,7 +5685,7 @@ getRawFile(path: string, callback: AsyncCallback<Uint8Array>): void
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
-**测试接口：** 本接口仅在自动化测试脚本中使用。
+**测试接口：** 此接口仅在自动化测试脚本中使用。
 
 **参数：**
 
@@ -5722,11 +5722,11 @@ getRawFile(path: string): Promise<Uint8Array>
 
 **废弃版本：** 9
 
-**替代接口：** [getRawFileContent](#getrawfilecontent)(path: string)
+**替代接口：** [getRawFileContent](#getrawfilecontent-1)(path: string)
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
-**测试接口：** 本接口仅在自动化测试脚本中使用。
+**测试接口：** 此接口仅在自动化测试脚本中使用。
 
 **参数：**
 
@@ -5764,11 +5764,11 @@ getRawFileContent(path: string, callback: _AsyncCallback<Uint8Array>): void
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
-**测试接口：** 本接口仅在自动化测试脚本中使用。
+**测试接口：** 此接口仅在自动化测试脚本中使用。
 
 **参数：**
 
@@ -5820,11 +5820,11 @@ getRawFileContent(path: string): Promise<Uint8Array>
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
-**测试接口：** 本接口仅在自动化测试脚本中使用。
+**测试接口：** 此接口仅在自动化测试脚本中使用。
 
 **参数：**
 
@@ -5879,11 +5879,11 @@ getRawFileContentSync(path: string): Uint8Array
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
-**测试接口：** 本接口仅在自动化测试脚本中使用。
+**测试接口：** 此接口仅在自动化测试脚本中使用。
 
 **参数：**
 
@@ -5940,7 +5940,7 @@ getRawFileDescriptor(path: string, callback: AsyncCallback<RawFileDescriptor>): 
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
-**测试接口：** 本接口仅在自动化测试脚本中使用。
+**测试接口：** 此接口仅在自动化测试脚本中使用。
 
 **参数：**
 
@@ -5979,11 +5979,11 @@ getRawFileDescriptor(path: string): Promise<RawFileDescriptor>
 
 **废弃版本：** 9
 
-**替代接口：** [getRawFd](#getrawfd)(path: string)
+**替代接口：** [getRawFd](#getrawfd-1)(path: string)
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
-**测试接口：** 本接口仅在自动化测试脚本中使用。
+**测试接口：** 此接口仅在自动化测试脚本中使用。
 
 **参数：**
 
@@ -6027,7 +6027,7 @@ getRawFileList(path: string, callback: _AsyncCallback<Array<string>>): void
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -6081,7 +6081,7 @@ getRawFileList(path: string): Promise<Array<string>>
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -6140,7 +6140,7 @@ getRawFileListSync(path: string): Array<string>
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -6198,7 +6198,7 @@ getResourceName(resId: number): string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -6266,7 +6266,7 @@ getString(resId: number, callback: AsyncCallback<string>): void
 
 **废弃版本：** 9
 
-**替代接口：** [getStringValue](#getstringvalue)(resId: long, callback: _AsyncCallback&lt;string&gt;)
+**替代接口：** [getStringValue](#getstringvalue-2)(resId: long, callback: _AsyncCallback&lt;string&gt;)
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -6303,7 +6303,7 @@ getString(resId: number): Promise<string>
 
 **废弃版本：** 9
 
-**替代接口：** [getStringValue](#getstringvalue)(resId: long)
+**替代接口：** [getStringValue](#getstringvalue-3)(resId: long)
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -6345,7 +6345,7 @@ getStringArray(resId: number, callback: AsyncCallback<Array<string>>): void
 
 **废弃版本：** 9
 
-**替代接口：** [getStringArrayValue](#getstringarrayvalue)(resId: long, callback: _AsyncCallback&lt;Array&lt;string&gt;&gt;)
+**替代接口：** [getStringArrayValue](#getstringarrayvalue-2)(resId: long, callback: _AsyncCallback&lt;Array&lt;string&gt;&gt;)
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -6382,7 +6382,7 @@ getStringArray(resId: number): Promise<Array<string>>
 
 **废弃版本：** 9
 
-**替代接口：** [getStringArrayValue](#getstringarrayvalue)(resId: long)
+**替代接口：** [getStringArrayValue](#getstringarrayvalue-3)(resId: long)
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -6422,7 +6422,7 @@ getStringArrayByName(resName: string, callback: _AsyncCallback<Array<string>>): 
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -6490,7 +6490,7 @@ getStringArrayByName(resName: string): Promise<Array<string>>
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -6562,7 +6562,7 @@ getStringArrayByNameSync(resName: string): Array<string>
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -6637,11 +6637,11 @@ getStringArrayValue(resource: Resource, callback: _AsyncCallback<Array<string>>)
 
 **废弃版本：** 20
 
-**替代接口：** [getStringArrayValue](#getstringarrayvalue)(resId: long, callback: _AsyncCallback&lt;Array&lt;string&gt;&gt;)
+**替代接口：** [getStringArrayValue](#getstringarrayvalue-2)(resId: long, callback: _AsyncCallback&lt;Array&lt;string&gt;&gt;)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -6710,11 +6710,11 @@ getStringArrayValue(resource: Resource): Promise<Array<string>>
 
 **废弃版本：** 20
 
-**替代接口：** [getStringArrayValue](#getstringarrayvalue)(resId: long)
+**替代接口：** [getStringArrayValue](#getstringarrayvalue-3)(resId: long)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -6786,7 +6786,7 @@ getStringArrayValue(resId: number, callback: _AsyncCallback<Array<string>>): voi
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -6854,7 +6854,7 @@ getStringArrayValue(resId: number): Promise<Array<string>>
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -6926,7 +6926,7 @@ getStringArrayValueSync(resId: number): Array<string>
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -7005,7 +7005,7 @@ getStringArrayValueSync(resource: Resource): Array<string>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -7078,7 +7078,7 @@ getStringByName(resName: string, callback: _AsyncCallback<string>): void
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -7141,7 +7141,7 @@ getStringByName(resName: string): Promise<string>
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -7207,7 +7207,7 @@ getStringByNameSync(resName: string): string
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -7276,7 +7276,7 @@ getStringByNameSync(resName: string, ...args: Array<string | number>): string
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -7347,7 +7347,7 @@ getStringSync(resId: number): string
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -7416,7 +7416,7 @@ getStringSync(resId: number, ...args: Array<string | number>): string
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -7493,7 +7493,7 @@ getStringSync(resource: Resource): string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -7564,11 +7564,11 @@ getStringSync(resource: Resource, ...args: Array<string | number>): string
 
 **废弃版本：** 20
 
-**替代接口：** [getStringSync](#getstringsync)(resId: number, ...args: Array&lt;string | number&gt;)
+**替代接口：** [getStringSync](#getstringsync-1)(resId: number, ...args: Array&lt;string | number&gt;)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -7641,11 +7641,11 @@ getStringValue(resource: Resource, callback: _AsyncCallback<string>): void
 
 **废弃版本：** 20
 
-**替代接口：** [getStringValue](#getstringvalue)(resId: long, callback: _AsyncCallback&lt;string&gt;)
+**替代接口：** [getStringValue](#getstringvalue-2)(resId: long, callback: _AsyncCallback&lt;string&gt;)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -7710,11 +7710,11 @@ getStringValue(resource: Resource): Promise<string>
 
 **废弃版本：** 20
 
-**替代接口：** [getStringValue](#getstringvalue)(resId: long)
+**替代接口：** [getStringValue](#getstringvalue-3)(resId: long)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -7770,7 +7770,7 @@ getStringValue(resId: number, callback: _AsyncCallback<string>): void
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -7850,7 +7850,7 @@ getStringValue(resId: number): Promise<string>
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -7916,7 +7916,7 @@ getSymbol(resId: number) : number
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -7979,7 +7979,7 @@ getSymbol(resource: Resource) : number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -8036,7 +8036,7 @@ getSymbolByName(resName: string) : number
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -8093,11 +8093,11 @@ isRawDir(path: string): boolean
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
-**测试接口：** 本接口仅在自动化测试脚本中使用。
+**测试接口：** 此接口仅在自动化测试脚本中使用。
 
 **参数：**
 
@@ -8159,7 +8159,7 @@ release()
 
 **废弃版本：** 12
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -8187,7 +8187,7 @@ removeResource(path: string) : void
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -8237,7 +8237,7 @@ updateOverrideConfiguration(configuration: Configuration): void
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Global.ResourceManager
 

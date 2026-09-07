@@ -4,8 +4,6 @@ Enumerates the network types that trigger deferred task callback.
 
 **Since:** 9
 
-**Model restriction:** This API can be used only in the stage model.
-
 **System capability:** SystemCapability.ResourceSchedule.WorkScheduler
 
 ## NETWORK_TYPE_ANY

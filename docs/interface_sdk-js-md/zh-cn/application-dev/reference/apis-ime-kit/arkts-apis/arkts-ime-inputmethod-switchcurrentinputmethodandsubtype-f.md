@@ -21,7 +21,8 @@ function switchCurrentInputMethodAndSubtype(
 **起始版本：** 9
 
 **需要权限：** 
-- API版本9 - 10：ohos.permission.CONNECT_IME_ABILITY
+- API版本11+：N/A
+- API版本9-10：ohos.permission.CONNECT_IME_ABILITY
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -78,7 +79,8 @@ function switchCurrentInputMethodAndSubtype(
 **起始版本：** 9
 
 **需要权限：** 
-- API版本9 - 10：ohos.permission.CONNECT_IME_ABILITY
+- API版本11+：N/A
+- API版本9-10：ohos.permission.CONNECT_IME_ABILITY
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 

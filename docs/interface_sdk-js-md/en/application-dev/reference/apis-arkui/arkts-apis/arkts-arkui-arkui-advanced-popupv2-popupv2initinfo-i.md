@@ -68,7 +68,7 @@ iconModifier?: ImageModifier
 
 The icon attributes of Popup.
 
-**Type:** [ImageModifier](arkts-arkui-imagemodifier-c.md)
+**Type:** ImageModifier
 
 **Since:** 26.0.0
 
@@ -116,7 +116,7 @@ messageModifier?: TextModifier
 
 The message attributes of Popup.
 
-**Type:** [TextModifier](arkts-arkui-textmodifier-c.md)
+**Type:** TextModifier
 
 **Since:** 26.0.0
 
@@ -180,7 +180,7 @@ titleModifier?: TextModifier
 
 The title attributes of Popup.
 
-**Type:** [TextModifier](arkts-arkui-textmodifier-c.md)
+**Type:** TextModifier
 
 **Since:** 26.0.0
 

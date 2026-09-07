@@ -24,7 +24,7 @@ direction: TextDirection
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -36,10 +36,10 @@ rect: common2D.Rect
 
 矩形区域信息，单位为物理像素px。
 
-**类型：** [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md)
+**类型：** common2D.Rect
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Graphics.Drawing

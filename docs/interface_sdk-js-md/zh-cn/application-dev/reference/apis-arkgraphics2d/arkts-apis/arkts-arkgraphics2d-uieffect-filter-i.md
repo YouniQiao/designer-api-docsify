@@ -88,6 +88,7 @@ hdrBrightnessRatio(ratio: number): Filter
 
 **需要权限：** 
 - API版本24+：ohos.permission.HDR_BRIGHTNESS
+- API版本20-23：N/A
 
 **系统能力：** SystemCapability.Graphics.Drawing
 

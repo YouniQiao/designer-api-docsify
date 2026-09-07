@@ -42,7 +42,7 @@ windowRect: window.Rect
 
 Rectangle area of the float view.
 
-**Type:** [window.Rect](arkts-arkui-window-rect-i.md)
+**Type:** window.Rect
 
 **Since:** 26.0.0
 

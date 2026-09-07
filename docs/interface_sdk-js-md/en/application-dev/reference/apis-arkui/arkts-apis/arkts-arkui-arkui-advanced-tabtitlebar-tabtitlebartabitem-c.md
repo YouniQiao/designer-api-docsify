@@ -38,7 +38,7 @@ symbolStyle?: SymbolGlyphModifier
 
 Symbol icon of the tab, which has higher priority than **icon**.
 
-**Type:** SymbolGlyphModifier
+**Type:** [SymbolGlyphModifier](../arkts-components/arkts-arkui-symbolglyphmodifier-t.md)
 
 **Since:** 18
 

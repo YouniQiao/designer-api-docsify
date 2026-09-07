@@ -26,6 +26,7 @@ Switches to another input method. This API uses an asynchronous callback to retu
 **Since:** 9
 
 **Required permissions:** 
+- API version 11 and later: N/A
 - API versions 9 to 10: ohos.permission.CONNECT_IME_ABILITY
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -86,6 +87,7 @@ Switches to another input method. This API uses a promise to return the result.
 **Since:** 9
 
 **Required permissions:** 
+- API version 11 and later: N/A
 - API versions 9 to 10: ohos.permission.CONNECT_IME_ABILITY
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework

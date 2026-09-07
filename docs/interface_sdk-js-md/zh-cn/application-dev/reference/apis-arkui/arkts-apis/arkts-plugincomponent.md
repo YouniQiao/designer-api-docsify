@@ -7,11 +7,11 @@
 **external.json**文件由开发者创建。该文件以键值对形式存储组件名称和模板路径。组件名称作为关键字，对应的模板路径作为值。  
  **示例**  
  ```json
- {
- "PluginProviderExample": "ets/pages/PluginProviderExample.js",
- "plugintemplate2": "ets/pages/plugintemplate2.js"
- }
- ```
+{
+  "PluginProviderExample": "ets/pages/PluginProviderExample.js",
+  "plugintemplate2": "ets/pages/plugintemplate2.js"
+}
+```
 
 ## 导入模块
 

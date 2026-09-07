@@ -4,6 +4,8 @@ This module provides basic definitions of the [InsightIntent framework](../../..
 
 **Since:** 11
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## Modules to Import

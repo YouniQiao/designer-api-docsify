@@ -18,6 +18,7 @@ Enables a device to enter the sleep state.
 
 **Required permissions:** 
 - API version 19 and later: ohos.permission.POWER_MANAGER
+- API versions 9 to 18: N/A
 
 **System capability:** SystemCapability.PowerManager.PowerManager.Core
 

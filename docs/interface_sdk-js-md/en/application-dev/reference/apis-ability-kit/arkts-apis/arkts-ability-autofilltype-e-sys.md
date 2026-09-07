@@ -4,8 +4,6 @@ AutoFillType enumerates the types of elements to be automatically filled in.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 ## FULL_STREET_ADDRESS

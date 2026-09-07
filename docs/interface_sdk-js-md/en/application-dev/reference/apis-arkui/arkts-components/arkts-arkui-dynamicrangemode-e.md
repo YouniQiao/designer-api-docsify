@@ -4,8 +4,6 @@ Describes the dynamic range of the image to be displayed.
 
 **Since:** 12
 
-**Model restriction:** This API can be used only in the stage model.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## HIGH

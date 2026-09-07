@@ -23,7 +23,7 @@ connect(): void
 
 **需要权限：** ohos.permission.NFC_TAG
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
@@ -135,7 +135,7 @@ getMaxTransmitSize(): number
 
 **需要权限：** ohos.permission.NFC_TAG
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
@@ -227,7 +227,7 @@ getTagInfo(): tag.TagInfo
 
 | 类型 | 说明 |
 | --- | --- |
-| [tag.TagInfo](arkts-connectivity-tag-taginfo-i.md) | NFC服务所提供的Tag数据对象。 |
+| tag.TagInfo | NFC服务所提供的Tag数据对象。 |
 
 **示例**
 
@@ -253,7 +253,7 @@ getTimeout(): number
 
 **需要权限：** ohos.permission.NFC_TAG
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
@@ -297,7 +297,7 @@ isConnected(): boolean
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
@@ -404,7 +404,7 @@ resetConnection(): void
 
 **需要权限：** ohos.permission.NFC_TAG
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
@@ -597,7 +597,7 @@ setTimeout(timeout: number): void
 
 **需要权限：** ohos.permission.NFC_TAG
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
@@ -645,7 +645,7 @@ transmit(data: number[]): Promise<number[]>
 
 **需要权限：** ohos.permission.NFC_TAG
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
@@ -717,7 +717,7 @@ transmit(data: number[], callback: AsyncCallback<number[]>): void
 
 **需要权限：** ohos.permission.NFC_TAG
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
 

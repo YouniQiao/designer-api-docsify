@@ -10,4 +10,4 @@ export type LinkAddress = connection.LinkAddress
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
-**类型：** [connection.LinkAddress](arkts-network-connection-linkaddress-i.md)
+**类型：** connection.LinkAddress

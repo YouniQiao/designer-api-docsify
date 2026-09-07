@@ -16,7 +16,7 @@ OPTIONS方法描述了目标资源的通信选项。
 
 **起始版本：** 6
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -30,7 +30,7 @@ GET方法请求指定资源的表示。使用GET的请求应该只检索数据�
 
 **起始版本：** 6
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -44,7 +44,7 @@ HEAD方法请求与GET请求相同的响应，但没有响应主体。
 
 **起始版本：** 6
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -58,7 +58,7 @@ POST方法将实体提交给指定的资源，通常会导致服务器上的状�
 
 **起始版本：** 6
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -72,7 +72,7 @@ PUT方法将目标资源的所有当前表示替换为请求内容。
 
 **起始版本：** 6
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -86,7 +86,7 @@ DELETE方法用于删除指定的资源。
 
 **起始版本：** 6
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -100,7 +100,7 @@ TRACE方法沿到达目标资源的路径执行消息环回测试。
 
 **起始版本：** 6
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -114,7 +114,7 @@ CONNECT方法建立到由目标资源标识的服务器的隧道。
 
 **起始版本：** 6
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Communication.NetStack
 

@@ -17,6 +17,22 @@ import { unifiedDataChannel } from '@kit.ArkData';
 ## rawData
 
 ```TypeScript
+get rawData(): Uint8Array
+```
+
+Indicates the raw data of pixel map
+
+**Type:** Uint8Array
+
+**Since:** 10
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+**System capability:** SystemCapability.DistributedDataManager.UDMF.Core
+
+```TypeScript
 set rawData(value: Uint8Array)
 ```
 

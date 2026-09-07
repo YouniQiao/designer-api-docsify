@@ -4,8 +4,6 @@ Enumerates connection error codes.
 
 **Since:** 18
 
-**Model restriction:** This API can be used only in the stage model.
-
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
 
 ## CONNECTED_SESSION_EXISTS

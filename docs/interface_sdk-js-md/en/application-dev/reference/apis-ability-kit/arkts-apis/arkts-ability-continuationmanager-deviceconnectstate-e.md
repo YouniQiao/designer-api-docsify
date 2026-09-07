@@ -6,8 +6,6 @@ Device connection state.
 
 **Deprecated since:** 22
 
-**Model restriction:** This API can be used only in the stage model.
-
 **System capability:** SystemCapability.Ability.DistributedAbilityManager
 
 ## IDLE

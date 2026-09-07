@@ -6,8 +6,6 @@ Enumerates the continuation modes provided by the device selection module.
 
 **Deprecated since:** 22
 
-**Model restriction:** This API can be used only in the stage model.
-
 **System capability:** SystemCapability.Ability.DistributedAbilityManager
 
 ## COLLABORATION_SINGLE

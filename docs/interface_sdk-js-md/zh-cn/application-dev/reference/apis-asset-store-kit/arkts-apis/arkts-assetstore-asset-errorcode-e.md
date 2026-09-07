@@ -40,7 +40,7 @@ INVALID_ARGUMENT = 401
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本14开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Security.Asset
 
@@ -54,7 +54,7 @@ SERVICE_UNAVAILABLE = 24000001
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本14开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Security.Asset
 
@@ -68,7 +68,7 @@ NOT_FOUND = 24000002
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本14开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Security.Asset
 
@@ -82,7 +82,7 @@ DUPLICATED = 24000003
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本14开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Security.Asset
 
@@ -96,7 +96,7 @@ ACCESS_DENIED = 24000004
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本14开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Security.Asset
 
@@ -110,7 +110,7 @@ STATUS_MISMATCH = 24000005
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本14开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Security.Asset
 
@@ -124,7 +124,7 @@ OUT_OF_MEMORY = 24000006
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本14开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Security.Asset
 
@@ -138,7 +138,7 @@ DATA_CORRUPTED = 24000007
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本14开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Security.Asset
 
@@ -152,7 +152,7 @@ DATABASE_ERROR = 24000008
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本14开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Security.Asset
 
@@ -166,7 +166,7 @@ CRYPTO_ERROR = 24000009
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本14开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Security.Asset
 
@@ -180,7 +180,7 @@ IPC_ERROR = 24000010
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本14开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Security.Asset
 
@@ -194,7 +194,7 @@ BMS_ERROR = 24000011
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本14开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Security.Asset
 
@@ -208,7 +208,7 @@ ACCOUNT_ERROR = 24000012
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本14开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Security.Asset
 
@@ -222,7 +222,7 @@ ACCESS_TOKEN_ERROR = 24000013
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本14开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Security.Asset
 
@@ -236,7 +236,7 @@ FILE_OPERATION_ERROR = 24000014
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本14开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Security.Asset
 
@@ -250,7 +250,7 @@ GET_SYSTEM_TIME_ERROR = 24000015
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本14开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Security.Asset
 
@@ -264,7 +264,7 @@ LIMIT_EXCEEDED = 24000016
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本14开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Security.Asset
 
@@ -278,7 +278,7 @@ UNSUPPORTED = 24000017
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本14开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Security.Asset
 
@@ -292,7 +292,7 @@ PARAM_VERIFICATION_FAILED = 24000018
 
 **起始版本：** 20
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Security.Asset
 
@@ -308,6 +308,6 @@ INCONSISTENT_ATTRIBUTE = 24000019
 
 **起始版本：** 26.0.0
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Security.Asset

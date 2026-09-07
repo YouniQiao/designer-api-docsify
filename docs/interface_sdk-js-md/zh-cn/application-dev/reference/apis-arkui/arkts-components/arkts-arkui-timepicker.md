@@ -18,7 +18,7 @@ TimePicker(options?: TimePickerOptions)
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -236,7 +236,6 @@ struct TimePickerExample {
 ```
 
 该示例通过配置[enableCascade](#enablecascade18)、[loop](#loop11)实现12小时制时上午/下午跟随时间联动。
-从API version 18开始，新增enableCascade接口。
 
 ```TypeScript
 // xxx.ets

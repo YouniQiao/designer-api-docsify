@@ -12,4 +12,4 @@ Obtains business ability info.
 
 **System API:** This is a system API.
 
-**Type:** [_BusinessAbilityInfo.BusinessAbilityInfo](arkts-ability-businessabilityinfo-i-sys.md)
+**Type:** _BusinessAbilityInfo.BusinessAbilityInfo

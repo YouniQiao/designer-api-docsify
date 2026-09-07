@@ -20,11 +20,11 @@ function startAdvertising(setting: AdvertiseSetting, advData: AdvertiseData, adv
 
 **需要权限：** 
 - API版本23+：ohos.permission.ACCESS_BLUETOOTH or (ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH_ADVERTISER_NAME)
-- API版本10 - 22：ohos.permission.ACCESS_BLUETOOTH
+- API版本10-22：ohos.permission.ACCESS_BLUETOOTH
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -113,7 +113,7 @@ function startAdvertising(advertisingParams: AdvertisingParams, callback: AsyncC
 
 **需要权限：** 
 - API版本23+：ohos.permission.ACCESS_BLUETOOTH or (ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH_ADVERTISER_NAME)
-- API版本11 - 22：ohos.permission.ACCESS_BLUETOOTH
+- API版本11-22：ohos.permission.ACCESS_BLUETOOTH
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -217,7 +217,7 @@ function startAdvertising(advertisingParams: AdvertisingParams): Promise<number>
 
 **需要权限：** 
 - API版本23+：ohos.permission.ACCESS_BLUETOOTH or (ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH_ADVERTISER_NAME)
-- API版本11 - 22：ohos.permission.ACCESS_BLUETOOTH
+- API版本11-22：ohos.permission.ACCESS_BLUETOOTH
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

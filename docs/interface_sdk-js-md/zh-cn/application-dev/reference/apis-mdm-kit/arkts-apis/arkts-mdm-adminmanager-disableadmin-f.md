@@ -18,8 +18,8 @@ function disableAdmin(admin: Want, userId?: number): Promise<void>
 
 **需要权限：** 
 - API版本23+：ohos.permission.MANAGE_ENTERPRISE_DEVICE_ADMIN or ohos.permission.START_PROVISIONING_MESSAGE or ohos.permission.ENTERPRISE_DEACTIVATE_DEVICE_ADMIN
-- API版本20 - 22：ohos.permission.MANAGE_ENTERPRISE_DEVICE_ADMIN or ohos.permission.START_PROVISIONING_MESSAGE
-- API版本12 - 19：ohos.permission.MANAGE_ENTERPRISE_DEVICE_ADMIN
+- API版本20-22：ohos.permission.MANAGE_ENTERPRISE_DEVICE_ADMIN or ohos.permission.START_PROVISIONING_MESSAGE
+- API版本12-19：ohos.permission.MANAGE_ENTERPRISE_DEVICE_ADMIN
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

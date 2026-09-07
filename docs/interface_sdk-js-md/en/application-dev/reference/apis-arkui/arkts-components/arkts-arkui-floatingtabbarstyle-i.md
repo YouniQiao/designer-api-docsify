@@ -129,7 +129,7 @@ systemMaterial?: UIMaterial.ImmersiveMaterial
 
 The style of the material.
 
-**Type:** [UIMaterial.ImmersiveMaterial](../arkts-apis/arkts-arkui-uimaterial-immersivematerial-c.md)
+**Type:** UIMaterial.ImmersiveMaterial
 
 **Since:** 26.0.0
 

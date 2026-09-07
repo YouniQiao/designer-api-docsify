@@ -10,4 +10,4 @@ Defines the network route information.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
-**Type:** [connection.RouteInfo](arkts-network-connection-routeinfo-i.md)
+**Type:** connection.RouteInfo

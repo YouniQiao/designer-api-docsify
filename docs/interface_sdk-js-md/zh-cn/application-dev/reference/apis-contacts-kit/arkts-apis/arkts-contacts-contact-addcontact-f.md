@@ -18,7 +18,7 @@ function addContact(contact: Contact, callback: AsyncCallback<number>): void
 
 **废弃版本：** 10
 
-**替代接口：** [addContact](#addcontact)(context: Context, contact: Contact, callback: AsyncCallback&lt;number&gt;)
+**替代接口：** [addContact](#addcontact-1)(context: Context, contact: Contact, callback: AsyncCallback&lt;number&gt;)
 
 **需要权限：** ohos.permission.WRITE_CONTACTS
 
@@ -69,7 +69,7 @@ function addContact(context: Context, contact: Contact, callback: AsyncCallback<
 
 **需要权限：** ohos.permission.WRITE_CONTACTS
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
@@ -91,8 +91,6 @@ function addContact(context: Context, contact: Contact, callback: AsyncCallback<
 **示例**
 
 > 说明：
-> 
-> 在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在界面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -130,7 +128,7 @@ function addContact(contact: Contact): Promise<number>
 
 **废弃版本：** 10
 
-**替代接口：** [addContact](#addcontact)(context: Context, contact: Contact)
+**替代接口：** [addContact](#addcontact-3)(context: Context, contact: Contact)
 
 **需要权限：** ohos.permission.WRITE_CONTACTS
 
@@ -181,7 +179,7 @@ function addContact(context: Context, contact: Contact): Promise<number>
 
 **需要权限：** ohos.permission.WRITE_CONTACTS
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
@@ -208,8 +206,6 @@ function addContact(context: Context, contact: Contact): Promise<number>
 **示例**
 
 > 说明：
-> 
-> 在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在界面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
 
 ```TypeScript
 import { contact } from '@kit.ContactsKit';

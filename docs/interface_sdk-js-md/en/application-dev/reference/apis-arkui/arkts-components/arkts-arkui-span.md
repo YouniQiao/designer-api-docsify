@@ -313,7 +313,6 @@ struct SpanExample {
 ```
 
 This example demonstrates how to set text font variations using [fontVariations](#fontvariations).
-The [fontVariations](#fontvariations) API is added since API version 26.0.0.
 
 ```TypeScript
 // xxx.ets

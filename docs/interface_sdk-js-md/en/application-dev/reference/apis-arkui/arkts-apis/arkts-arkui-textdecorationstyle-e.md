@@ -4,8 +4,6 @@ The style of the text decoration.
 
 **Since:** 12
 
-**Model restriction:** This API can be used only in the stage model.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## SOLID

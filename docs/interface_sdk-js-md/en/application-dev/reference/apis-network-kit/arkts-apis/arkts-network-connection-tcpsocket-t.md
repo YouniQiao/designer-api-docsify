@@ -10,4 +10,4 @@ Defines a TCPSocket object, which can be created using [socket.constructTCPSocke
 
 **System capability:** SystemCapability.Communication.NetStack
 
-**Type:** [socket.TCPSocket](arkts-network-socket-tcpsocket-i.md)
+**Type:** socket.TCPSocket

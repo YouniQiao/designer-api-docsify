@@ -4,8 +4,6 @@ Enumerates the data channel types supported by the UDMF. It is used to identify 
 
 **Since:** 10
 
-**Model restriction:** This API can be used only in the stage model.
-
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## DATA_HUB

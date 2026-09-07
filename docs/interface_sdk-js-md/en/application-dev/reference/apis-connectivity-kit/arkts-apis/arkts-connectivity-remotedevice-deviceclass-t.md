@@ -12,4 +12,4 @@ Enumerates the device types.
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 
-**Type:** [nearlinkConstant.DeviceClass](arkts-connectivity-nearlinkconstant-deviceclass-e.md)
+**Type:** nearlinkConstant.DeviceClass

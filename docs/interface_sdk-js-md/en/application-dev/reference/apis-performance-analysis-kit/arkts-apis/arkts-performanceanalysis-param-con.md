@@ -8,6 +8,8 @@ const DISTRIBUTED_SERVICE_INSTANCE_ID: string
 
 Distributed service instance ID.
 
+**Type:** string
+
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -22,6 +24,8 @@ const DISTRIBUTED_SERVICE_NAME: string
 
 Distributed service name.
 
+**Type:** string
+
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -35,6 +39,8 @@ const USER_ID: string
 ```
 
 Custom user ID.
+
+**Type:** string
 
 **Since:** 9
 

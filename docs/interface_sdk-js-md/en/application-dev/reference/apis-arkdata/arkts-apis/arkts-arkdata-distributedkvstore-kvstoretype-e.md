@@ -10,8 +10,6 @@ Enumerates the distributed KV store types.
 
 **Since:** 9
 
-**Model restriction:** This API can be used only in the stage model.
-
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
 ## DEVICE_COLLABORATION

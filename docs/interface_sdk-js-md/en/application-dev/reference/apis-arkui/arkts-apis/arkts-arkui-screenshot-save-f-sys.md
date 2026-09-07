@@ -17,7 +17,8 @@ Obtains a screenshot. This API uses an asynchronous callback to return the resul
 **Since:** 7
 
 **Required permissions:** 
-- API version 26.0.0 and later: ohos.permission.CUSTOM_SCREEN_CAPTURE or ohos.permission.CAPTURE_SCREEN or ohos.permission.CUSTOM_SCREEN_RECORDING
+- API version 26 and later: ohos.permission.CUSTOM_SCREEN_CAPTURE or ohos.permission.CAPTURE_SCREEN or ohos.permission.CUSTOM_SCREEN_RECORDING
+- API version 25: N/A
 - API versions 22 to 24: ohos.permission.CAPTURE_SCREEN or ohos.permission.CUSTOM_SCREEN_RECORDING
 - API versions 7 to 21: ohos.permission.CAPTURE_SCREEN
 
@@ -30,7 +31,7 @@ Obtains a screenshot. This API uses an asynchronous callback to return the resul
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | options | [ScreenshotOptions](arkts-arkui-screenshot-screenshotoptions-i-sys.md) | Yes | Information about the snapshot. If the screen to capture is a virtual screen, the snapshot is a white screen. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)&gt; | Yes | Callback used to return a PixelMap object. The size of the PixelMap object is **imageSize**. If **imageSize** is not specified, the size of the logical screen associated with the specified display ID is used. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;image.PixelMap&gt; | Yes | Callback used to return a PixelMap object. The size of the PixelMap object is **imageSize**. If **imageSize** is not specified, the size of the logical screen associated with the specified display ID is used. |
 
 **Error codes:**
 
@@ -83,7 +84,8 @@ Obtains a screenshot. This API uses an asynchronous callback to return the resul
 **Since:** 7
 
 **Required permissions:** 
-- API version 26.0.0 and later: ohos.permission.CUSTOM_SCREEN_CAPTURE or ohos.permission.CAPTURE_SCREEN or ohos.permission.CUSTOM_SCREEN_RECORDING
+- API version 26 and later: ohos.permission.CUSTOM_SCREEN_CAPTURE or ohos.permission.CAPTURE_SCREEN or ohos.permission.CUSTOM_SCREEN_RECORDING
+- API version 25: N/A
 - API versions 22 to 24: ohos.permission.CAPTURE_SCREEN or ohos.permission.CUSTOM_SCREEN_RECORDING
 - API versions 7 to 21: ohos.permission.CAPTURE_SCREEN
 
@@ -95,7 +97,7 @@ Obtains a screenshot. This API uses an asynchronous callback to return the resul
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)&gt; | Yes | Callback used to return a PixelMap object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;image.PixelMap&gt; | Yes | Callback used to return a PixelMap object. |
 
 **Error codes:**
 
@@ -133,7 +135,8 @@ Obtains a screenshot. This API uses a promise to return the result.
 **Since:** 7
 
 **Required permissions:** 
-- API version 26.0.0 and later: ohos.permission.CUSTOM_SCREEN_CAPTURE or ohos.permission.CAPTURE_SCREEN or ohos.permission.CUSTOM_SCREEN_RECORDING
+- API version 26 and later: ohos.permission.CUSTOM_SCREEN_CAPTURE or ohos.permission.CAPTURE_SCREEN or ohos.permission.CUSTOM_SCREEN_RECORDING
+- API version 25: N/A
 - API versions 22 to 24: ohos.permission.CAPTURE_SCREEN or ohos.permission.CUSTOM_SCREEN_RECORDING
 - API versions 7 to 21: ohos.permission.CAPTURE_SCREEN
 
@@ -151,7 +154,7 @@ Obtains a screenshot. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)&gt; | Promise used to return a PixelMap object. |
+| Promise&lt;image.PixelMap&gt; | Promise used to return a PixelMap object. |
 
 **Error codes:**
 

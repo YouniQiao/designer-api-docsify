@@ -18,7 +18,7 @@ function queryContactsByPhoneNumber(phoneNumber: string, callback: AsyncCallback
 
 **废弃版本：** 10
 
-**替代接口：** [queryContactsByPhoneNumber](#querycontactsbyphonenumber)(context: Context, phoneNumber: string, callback: AsyncCallback&lt;Array&lt;Contact&gt;&gt;)
+**替代接口：** [queryContactsByPhoneNumber](#querycontactsbyphonenumber-1)(context: Context, phoneNumber: string, callback: AsyncCallback&lt;Array&lt;Contact&gt;&gt;)
 
 **需要权限：** ohos.permission.READ_CONTACTS
 
@@ -80,8 +80,6 @@ function queryContactsByPhoneNumber(context: Context, phoneNumber: string, callb
 **示例**
 
 > 说明：
-> 
-> 在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在界面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -112,7 +110,7 @@ function queryContactsByPhoneNumber(phoneNumber: string, holder: Holder, callbac
 
 **废弃版本：** 10
 
-**替代接口：** [queryContactsByPhoneNumber](#querycontactsbyphonenumber)(context: Context, phoneNumber: string, holder: Holder, callback: AsyncCallback&lt;Array&lt;Contact&gt;&gt;)
+**替代接口：** [queryContactsByPhoneNumber](#querycontactsbyphonenumber-3)(context: Context, phoneNumber: string, holder: Holder, callback: AsyncCallback&lt;Array&lt;Contact&gt;&gt;)
 
 **需要权限：** ohos.permission.READ_CONTACTS
 
@@ -180,8 +178,6 @@ function queryContactsByPhoneNumber(context: Context, phoneNumber: string, holde
 **示例**
 
 > 说明：
-> 
-> 在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在界面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -216,7 +212,7 @@ function queryContactsByPhoneNumber(phoneNumber: string, attrs: ContactAttribute
 
 **废弃版本：** 10
 
-**替代接口：** [queryContactsByPhoneNumber](#querycontactsbyphonenumber)(context: Context, phoneNumber: string, attrs: ContactAttributes, callback: AsyncCallback&lt;Array&lt;Contact&gt;&gt;)
+**替代接口：** [queryContactsByPhoneNumber](#querycontactsbyphonenumber-5)(context: Context, phoneNumber: string, attrs: ContactAttributes, callback: AsyncCallback&lt;Array&lt;Contact&gt;&gt;)
 
 **需要权限：** ohos.permission.READ_CONTACTS
 
@@ -281,8 +277,6 @@ function queryContactsByPhoneNumber(context: Context, phoneNumber: string, attrs
 **示例**
 
 > 说明：
-> 
-> 在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在界面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -315,7 +309,7 @@ function queryContactsByPhoneNumber(phoneNumber: string, holder: Holder, attrs: 
 
 **废弃版本：** 10
 
-**替代接口：** [queryContactsByPhoneNumber](#querycontactsbyphonenumber)(context: Context, phoneNumber: string, holder: Holder, attrs: ContactAttributes, callback: AsyncCallback&lt;Array&lt;Contact&gt;&gt;)
+**替代接口：** [queryContactsByPhoneNumber](#querycontactsbyphonenumber-7)(context: Context, phoneNumber: string, holder: Holder, attrs: ContactAttributes, callback: AsyncCallback&lt;Array&lt;Contact&gt;&gt;)
 
 **需要权限：** ohos.permission.READ_CONTACTS
 
@@ -387,8 +381,6 @@ function queryContactsByPhoneNumber(context: Context, phoneNumber: string, holde
 **示例**
 
 > 说明：
-> 
-> 在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在界面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -425,7 +417,7 @@ function queryContactsByPhoneNumber(phoneNumber: string, holder?: Holder, attrs?
 
 **废弃版本：** 10
 
-**替代接口：** [queryContactsByPhoneNumber](#querycontactsbyphonenumber)(context: Context, phoneNumber: string, holder?: Holder, attrs?: ContactAttributes)
+**替代接口：** [queryContactsByPhoneNumber](#querycontactsbyphonenumber-9)(context: Context, phoneNumber: string, holder?: Holder, attrs?: ContactAttributes)
 
 **需要权限：** ohos.permission.READ_CONTACTS
 
@@ -502,8 +494,6 @@ function queryContactsByPhoneNumber(context: Context, phoneNumber: string, holde
 **示例**
 
 > 说明：
-> 
-> 在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在界面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
 
 ```TypeScript
 import { contact } from '@kit.ContactsKit';

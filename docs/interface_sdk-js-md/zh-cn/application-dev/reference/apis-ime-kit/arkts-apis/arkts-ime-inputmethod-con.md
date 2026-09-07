@@ -8,6 +8,8 @@ const MAX_TYPE_NUM: number
 
 可支持的最大输入法个数。
 
+**类型：** number
+
 **起始版本：** 8
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework

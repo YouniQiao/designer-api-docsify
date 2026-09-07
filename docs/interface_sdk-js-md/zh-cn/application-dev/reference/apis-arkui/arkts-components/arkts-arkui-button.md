@@ -18,7 +18,7 @@ Button()
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
 
@@ -34,7 +34,7 @@ Button(options: ButtonOptions)
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
 
@@ -58,7 +58,7 @@ Button(label: ResourceStr, options?: ButtonOptions)
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
 
@@ -387,7 +387,6 @@ struct ButtonExample {
 ```
 
 该示例通过配置[LabelStyle](#labelstyle10对象说明)的textAlign，设置文本对齐方式。
-从API version 23开始，新增textAlign接口。
 
 ```TypeScript
 @Entry
@@ -408,8 +407,6 @@ struct Index {
 ```
 
 该示例使用通用属性[systemMaterial](ts-universal-attributes-image-effect.md#systemmaterial)接口来设置组件的系统材质，以实现沉浸光感效果。
-组件沉浸光感效果会根据设备算力与用户在系统中设置的沉浸光感效果自适应调整，开发者无需额外适配。
-从API版本26.0.0开始，新增systemMaterial属性。
 
 ```TypeScript
 import { uiMaterial } from '@kit.ArkUI';

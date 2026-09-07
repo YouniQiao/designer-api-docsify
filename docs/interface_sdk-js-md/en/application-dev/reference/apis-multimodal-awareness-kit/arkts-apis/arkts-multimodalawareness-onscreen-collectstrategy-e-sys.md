@@ -4,8 +4,6 @@ Defines a page information collection policy.
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
-
 **System capability:** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
 **System API:** This is a system API.

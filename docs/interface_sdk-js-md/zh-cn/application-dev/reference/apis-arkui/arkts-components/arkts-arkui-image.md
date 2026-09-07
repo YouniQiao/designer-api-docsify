@@ -50,7 +50,7 @@ Image加载成功且组件不设置宽高时，其显示大小自适应父组件
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
 
@@ -74,7 +74,7 @@ src新增[ImageContent](arkts-arkui-imagecontent-e.md)类型，可指定对应�
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
 
@@ -98,7 +98,7 @@ Image(src: PixelMap | ResourceStr | DrawableDescriptor | ImageContent, reloadKey
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本26.0.0开始，该接口支持在ArkTS卡片中使用。
 
@@ -123,7 +123,7 @@ Image新增[ImageAIOptions](../arkts-apis/arkts-arkui-imageaioptions-i.md)参数
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -147,7 +147,7 @@ Image(src: PixelMap | ResourceStr | DrawableDescriptor,
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -235,7 +235,6 @@ struct ImageExample1 {
 ```
 
 加载网络图片时，默认网络超时是5分钟，建议使用alt配置加载时的占位图。使用[HTTP](../../../network/http-request.md)工具包发送网络请求，接着将返回的数据解码为Image组件中的，加载gif到时，gif显示为静态图。图片开发可参考[Image Kit简介](../../../media/image/image-overview.md)。
-使用网络图片时，需要申请权限ohos.permission.INTERNET。具体申请方式请参考[声明权限](../../../security/AccessToken/declare-permissions.md)。
 
 ```TypeScript
 import { http } from '@kit.NetworkKit';
@@ -296,7 +295,6 @@ struct ImageExample2 {
 ```
 
 该示例使用cacheDownload.download接口下载网络gif图片。
-使用网络图片时，需要申请权限ohos.permission.INTERNET。具体申请方式请参考[声明权限](../../../security/AccessToken/declare-permissions.md)。
 
 ```TypeScript
 import { cacheDownload } from '@kit.BasicServicesKit';
@@ -844,7 +842,6 @@ struct ImageExample11 {
 ```
 
 该示例通过[imageMatrix](#imagematrix15)和[objectFit](#objectfit)属性，为图片添加旋转和平移的效果。
-从API version 15开始，新增imageMatrix属性。
 
 ```TypeScript
 import { matrix4 } from '@kit.ArkUI';
@@ -1027,7 +1024,6 @@ struct Index {
 ```
 
 该示例通过[hdrBrightness](#hdrbrightness19)属性调整HDR图源的亮度，将hdrBrightness从0调整到1。
-从API version 19开始，新增hdrBrightness属性。
 
 ```TypeScript
 import { image } from '@kit.ImageKit';
@@ -1422,7 +1418,6 @@ struct Index {
 ```
 
 该示例通过设置[supportSvg2](#supportsvg221)属性，使SVG标签解析能力增强功能生效。
-从API version 21开始，新增supportSvg2属性。
 
 ```TypeScript
 @Entry
@@ -1518,7 +1513,6 @@ struct ImageExample {
 ```
 
 该示例演示如何通过[onError](#onerror9)回调获取网络图片加载异常时的详细下载信息[ImageError](arkts-arkui-imageerror-i.md)。当图片加载失败时，可通过ImageError中的downloadInfo属性获取网络图片下载的详细信息，包括下载的资源信息、网络请求信息以及性能统计信息，有助于快速定位网络异常或资源错误原因。
-从API version 23开始，ImageError新增downloadInfo属性。
 
 ```TypeScript
 @Entry
@@ -1540,7 +1534,6 @@ struct Index {
 ```
 
 该示例演示了如何通过设置[antialiased](arkts-arkui-image-attribute.md#antialiased)接口开启位图图片边缘的抗锯齿功能。
-从API version 23开始，新增[antialiased](arkts-arkui-image-attribute.md#antialiased)接口。
 
 ```TypeScript
 @Entry

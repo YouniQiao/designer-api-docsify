@@ -4,8 +4,6 @@ Enumerates the bundle flags, which indicate the type of bundle information to ob
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
-
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## DEFAULT

@@ -161,7 +161,6 @@ onBackgroundLuminanceChange(samplingCallback: Callback<number>): void
 **示例**
 
 参考[offBackgroundLuminanceChange](#offbackgroundluminancechange)的示例。
-- simpleType:
 
 ## setBackgroundLuminanceSamplingConfigs
 
@@ -194,4 +193,3 @@ setBackgroundLuminanceSamplingConfigs(configs: BackgroundLuminanceSamplingConfig
 **示例**
 
 参考[offBackgroundLuminanceChange](#offbackgroundluminancechange)的示例。
-- simpleType:

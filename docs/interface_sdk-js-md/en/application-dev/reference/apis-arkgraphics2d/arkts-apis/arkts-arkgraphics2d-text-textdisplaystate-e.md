@@ -4,8 +4,6 @@ Enumerates text display states. Native result after text typesetting, which is i
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
-
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## UNKNOWN

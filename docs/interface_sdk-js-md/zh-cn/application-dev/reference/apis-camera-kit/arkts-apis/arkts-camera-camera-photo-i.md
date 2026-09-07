@@ -22,7 +22,7 @@ Releases output resources. This API uses a promise to return the result.
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -112,10 +112,10 @@ main: image.Image
 
 Full-quality image.
 
-**类型：** [image.Image](../../apis-image-kit/arkts-apis/arkts-image-image-image-i.md)
+**类型：** image.Image
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core

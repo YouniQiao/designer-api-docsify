@@ -40,7 +40,7 @@ Swiper(controller?: SwiperController)
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本10开始，该接口支持在ArkTS卡片中使用。
 
@@ -90,7 +90,6 @@ Swiper(controller?: SwiperController)
 ## 示例
 
 该示例通过[changeIndex](#changeindex15)接口设置[SwiperAnimationMode](#swiperanimationmode15枚举说明)动效以跳转指定页面，并使用[onScrollStateChanged](arkts-arkui-swiper-attribute.md#onscrollstatechanged)回调监听滑动状态的变化。
-从API version 20开始，新增onScrollStateChanged事件。
 
 ```TypeScript
 // xxx.ets
@@ -308,7 +307,6 @@ struct SwiperExample {
 ```
 
 该示例通过[displayCount](arkts-arkui-swiper-attribute.md#displaycount)属性实现了按组翻页效果。
-从API version 24开始，新增[CachedCountOptions](#cachedcountoptions24对象说明)参数，通过该参数实现缓存的节点个数和displayCount的按组显示数量解耦。
 
 ```TypeScript
 // xxx.ets
@@ -978,7 +976,6 @@ struct SwiperExample {
 ```
 
 该示例展示了Swiper组件基于断点配置显示个数的效果。
-从API version 22开始，新增[displayCount](arkts-arkui-swiper-attribute.md#displaycount)接口，用于设置Swiper视窗内元素显示个数。
 
 ```TypeScript
 class MyDataSource implements IDataSource {
@@ -1035,7 +1032,6 @@ struct SwiperExample {
 ```
 
 该示例展示了Swiper组件如何实现模拟拖拽。在自身不响应拖拽事件的情况下，子组件Column通过触摸事件的信息调用Swiper接口，实现类似跟手拖拽的效果。
-从API version 23开始，新增[startFakeDrag](arkts-arkui-swipercontroller-c.md#startfakedrag)接口、[fakeDragBy](arkts-arkui-swipercontroller-c.md#fakedragby)接口、[stopFakeDrag](arkts-arkui-swipercontroller-c.md#stopfakedrag)接口、[isFakeDragging](arkts-arkui-swipercontroller-c.md#isfakedragging)接口，用于实现模拟拖拽。
 
 ```TypeScript
 // SwiperFakeDragExample.ets
@@ -1094,7 +1090,6 @@ struct SwiperFakeDragExample {
 ```
 
 该示例通过设置indicatorIcon接口，展示了Swiper组件如何配置导航点图标。
-从API版本26.0.0开始，新增[indicatorIcon](arkts-arkui-dotindicator-c.md#indicatoricon)接口。
 
 ```TypeScript
 // swiperIndicatorIcon.ets

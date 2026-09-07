@@ -26,7 +26,7 @@ commitModify(): Promise<void>
 
 **需要权限：** ohos.permission.WRITE_IMAGEVIDEO
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -118,7 +118,7 @@ convertToPhotoAsset(): photoAccessHelper.PhotoAsset
 
 | 类型 | 说明 |
 | --- | --- |
-| [photoAccessHelper.PhotoAsset](arkts-medialibrary-photoaccesshelper-photoasset-i.md) | 返回非Sendable类型的[PhotoAsset]{ |
+| photoAccessHelper.PhotoAsset | 返回非Sendable类型的[PhotoAsset]{ |
 
 **错误码：**
 
@@ -175,7 +175,7 @@ get(member: string): photoAccessHelper.MemberType
 
 | 类型 | 说明 |
 | --- | --- |
-| [photoAccessHelper.MemberType](arkts-medialibrary-photoaccesshelper-membertype-t.md) | 获取PhotoAsset成员参数的值。 |
+| photoAccessHelper.MemberType | 获取PhotoAsset成员参数的值。 |
 
 **错误码：**
 
@@ -232,13 +232,13 @@ getThumbnail(size?: image.Size): Promise<image.PixelMap>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| size | [image.Size](../../apis-image-kit/arkts-apis/arkts-image-image-size-i.md) | 否 | 缩略图尺寸。 |
+| size | image.Size | 否 | 缩略图尺寸。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)&gt; | Promise对象，返回缩略图的PixelMap。 |
+| Promise&lt;image.PixelMap&gt; | Promise对象，返回缩略图的PixelMap。 |
 
 **错误码：**
 
@@ -372,6 +372,6 @@ readonly uri: string
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core

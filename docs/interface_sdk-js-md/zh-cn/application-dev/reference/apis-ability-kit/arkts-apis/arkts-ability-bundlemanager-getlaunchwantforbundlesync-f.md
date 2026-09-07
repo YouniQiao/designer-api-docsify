@@ -18,7 +18,7 @@ function getLaunchWantForBundleSync(bundleName: string, userId?: number): Want
 
 **需要权限：** 
 - API版本24+：ohos.permission.GET_BUNDLE_INFO_PRIVILEGED or (ohos.permission.GET_BUNDLE_INFO_PRIVILEGED and ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS)
-- API版本10 - 23：ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
+- API版本10-23：ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 

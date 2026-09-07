@@ -18,7 +18,7 @@ ABILITY_BACK_TO_OTHER_MISSION_STACK = 'ability.params.backToOtherMissionStack'
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Ability.AbilityBase
 
@@ -32,7 +32,7 @@ ABILITY_RECOVERY_RESTART = 'ohos.ability.params.abilityRecoveryRestart'
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Ability.AbilityBase
 
@@ -48,7 +48,7 @@ CONTENT_TITLE_KEY = 'ohos.extra.param.key.contentTitle'
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Ability.AbilityBase
 
@@ -64,7 +64,7 @@ SHARE_ABSTRACT_KEY = 'ohos.extra.param.key.shareAbstract'
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Ability.AbilityBase
 
@@ -80,7 +80,7 @@ SHARE_URL_KEY = 'ohos.extra.param.key.shareUrl'
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Ability.AbilityBase
 
@@ -94,7 +94,7 @@ SUPPORT_CONTINUE_PAGE_STACK_KEY = 'ohos.extra.param.key.supportContinuePageStack
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Ability.AbilityBase
 
@@ -108,7 +108,7 @@ SUPPORT_CONTINUE_SOURCE_EXIT_KEY = 'ohos.extra.param.key.supportContinueSourceEx
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Ability.AbilityBase
 
@@ -122,7 +122,7 @@ SHOW_MODE_KEY = 'ohos.extra.param.key.showMode'
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Ability.AbilityBase
 
@@ -136,7 +136,7 @@ PARAMS_STREAM = 'ability.params.stream'
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Ability.AbilityBase
 
@@ -150,7 +150,7 @@ APP_CLONE_INDEX_KEY = 'ohos.extra.param.key.appCloneIndex'
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Ability.AbilityBase
 
@@ -166,7 +166,7 @@ CALLER_REQUEST_CODE = 'ohos.extra.param.key.callerRequestCode'
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Ability.AbilityBase
 
@@ -182,7 +182,7 @@ PAGE_PATH = 'ohos.param.atomicservice.pagePath'
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Ability.AbilityBase
 
@@ -198,7 +198,7 @@ ROUTER_NAME = 'ohos.param.atomicservice.routerName'
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Ability.AbilityBase
 
@@ -214,7 +214,7 @@ PAGE_SOURCE_FILE = 'ohos.param.atomicservice.pageSourceFile'
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Ability.AbilityBase
 
@@ -230,7 +230,7 @@ BUILD_FUNCTION = 'ohos.param.atomicservice.buildFunction'
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Ability.AbilityBase
 
@@ -246,7 +246,7 @@ SUB_PACKAGE_NAME = 'ohos.param.atomicservice.subpackageName'
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Ability.AbilityBase
 
@@ -314,7 +314,7 @@ APP_LAUNCH_TRUSTLIST = 'ohos.params.appLaunchTrustList'
 
 **起始版本：** 17
 
-**原子化服务API：** 从API版本17开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本17开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Ability.AbilityBase
 
@@ -330,7 +330,7 @@ ATOMIC_SERVICE_SHARE_ROUTER = 'ohos.params.atomicservice.shareRouter'
 
 **起始版本：** 20
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Ability.AbilityBase
 
@@ -352,7 +352,7 @@ LAUNCH_REASON_MESSAGE = 'ohos.params.launchReasonMessage'
 
 **起始版本：** 18
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Ability.AbilityBase
 
@@ -368,6 +368,6 @@ ABILITY_UNIFIED_DATA_KEY = 'ohos.param.ability.udKey'
 
 **起始版本：** 20
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Ability.AbilityBase

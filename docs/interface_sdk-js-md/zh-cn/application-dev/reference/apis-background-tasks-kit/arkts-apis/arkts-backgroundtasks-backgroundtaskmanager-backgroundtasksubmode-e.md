@@ -28,7 +28,7 @@ SUBMODE_NORMAL_NOTIFICATION = 2
 
 **起始版本：** 21
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
@@ -54,7 +54,7 @@ SUBMODE_AUDIO_PLAYBACK_NORMAL_NOTIFICATION = 4
 
 **起始版本：** 22
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
@@ -68,7 +68,7 @@ SUBMODE_AVSESSION_AUDIO_PLAYBACK = 5
 
 **起始版本：** 22
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 

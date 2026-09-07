@@ -18,7 +18,7 @@ function updatePrinterInformation(printerInformation: PrinterInformation): Promi
 
 **需要权限：** 
 - API版本24+：ohos.permission.MANAGE_PRINT_JOB or ohos.permission.ENTERPRISE_MANAGE_PRINT
-- API版本18 - 23：ohos.permission.MANAGE_PRINT_JOB
+- API版本18-23：ohos.permission.MANAGE_PRINT_JOB
 
 **系统能力：** SystemCapability.Print.PrintFramework
 

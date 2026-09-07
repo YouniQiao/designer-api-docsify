@@ -77,7 +77,7 @@ Modifier for the toolbar header divider, which can be used to customize the divi
 
 Default value: system default value
 
-**Type:** [DividerModifier](arkts-arkui-dividermodifier-c.md)
+**Type:** DividerModifier
 
 **Since:** 13
 

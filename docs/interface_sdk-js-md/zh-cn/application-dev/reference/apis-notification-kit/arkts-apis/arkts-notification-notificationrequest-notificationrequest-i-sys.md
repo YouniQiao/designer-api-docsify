@@ -169,6 +169,7 @@ isRemoveAllowed?: boolean
 
 **需要权限：** 
 - API版本11+：ohos.permission.SET_UNREMOVABLE_NOTIFICATION
+- API版本8-10：N/A
 
 **系统能力：** SystemCapability.Notification.Notification
 

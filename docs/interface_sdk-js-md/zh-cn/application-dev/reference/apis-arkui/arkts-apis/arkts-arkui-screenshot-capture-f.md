@@ -20,9 +20,9 @@ function capture(options?: CaptureOption): Promise<image.PixelMap>
 
 **需要权限：** 
 - API版本22+：ohos.permission.CUSTOM_SCREEN_CAPTURE or ohos.permission.CUSTOM_SCREEN_RECORDING
-- API版本14 - 21：ohos.permission.CUSTOM_SCREEN_CAPTURE
+- API版本14-21：ohos.permission.CUSTOM_SCREEN_CAPTURE
 
-**原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本14开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -30,13 +30,13 @@ function capture(options?: CaptureOption): Promise<image.PixelMap>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [CaptureOption](arkts-arkui-screenshot-captureoption-i.md) | 否 | 截取图像的相关信息。此参数不填时，默认截取displayId为0的屏幕截图。<br>**起始版本：** 22 |
+| options | [CaptureOption](arkts-arkui-screenshot-captureoption-i.md) | 否 | 截取图像的相关信息。此参数不填时，默认截取displayId为0的屏幕截图。<br>**适用版本：** 22 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)&gt; | Promise used to return a PixelMap object. |
+| Promise&lt;image.PixelMap&gt; | Promise used to return a PixelMap object. |
 
 **错误码：**
 

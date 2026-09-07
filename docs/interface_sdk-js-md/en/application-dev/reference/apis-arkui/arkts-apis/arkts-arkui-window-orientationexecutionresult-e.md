@@ -4,8 +4,6 @@ Type of execution result of setting preferred orientation
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
-
 **System capability:** SystemCapability.Window.SessionManager
 
 ## ORIENTATION_APPLIED

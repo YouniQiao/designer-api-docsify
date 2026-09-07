@@ -12,4 +12,4 @@ export type Version = _PackInfo.Version
 
 **系统接口：** 此接口为系统接口。
 
-**类型：** [_PackInfo.Version](arkts-ability-bundlepackinfo-version-i-sys.md)
+**类型：** _PackInfo.Version

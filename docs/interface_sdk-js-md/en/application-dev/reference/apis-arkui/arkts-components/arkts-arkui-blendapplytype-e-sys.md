@@ -4,8 +4,6 @@ Defines how to apply the specified blend mode to the content of a view.
 
 **Since:** 11
 
-**Model restriction:** This API can be used only in the stage model.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## OFFSCREEN_WITH_BACKGROUND

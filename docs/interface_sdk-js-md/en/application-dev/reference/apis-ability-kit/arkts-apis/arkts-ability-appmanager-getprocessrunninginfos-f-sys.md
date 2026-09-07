@@ -21,6 +21,7 @@ Obtains information about the running processes of the current application. This
 **Substitutes:** [getRunningProcessInformation](arkts-ability-appmanager-getrunningprocessinformation-f.md)
 
 **Required permissions:** 
+- API version 11 and later: N/A
 - API versions 9 to 10: ohos.permission.GET_RUNNING_INFO
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -55,6 +56,7 @@ Obtains information about the running processes of the current application. This
 **Substitutes:** [getRunningProcessInformation](arkts-ability-appmanager-getrunningprocessinformation-f.md)
 
 **Required permissions:** 
+- API version 11 and later: N/A
 - API versions 9 to 10: ohos.permission.GET_RUNNING_INFO
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core

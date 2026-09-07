@@ -24,7 +24,7 @@ getSchemeFilter(): ProxySchemeFilter
 
 **起始版本：** 15
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -37,7 +37,6 @@ getSchemeFilter(): ProxySchemeFilter
 **示例**
 
 完整示例代码参考[removeProxyOverride](./arkts-apis-webview-ProxyController.md#removeproxyoverride)。
-- simpleType:
 
 ## getUrl
 
@@ -49,7 +48,7 @@ getUrl(): string
 
 **起始版本：** 15
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -62,7 +61,6 @@ getUrl(): string
 **示例**
 
 完整示例代码参考[removeProxyOverride](./arkts-apis-webview-ProxyController.md#removeproxyoverride)。
-- simpleType:
 
 ```TypeScript
 // xxx.ets
@@ -114,7 +112,6 @@ struct WebComponent {
 ```
 
 完整示例代码参考constructor。
-- simpleType:
 
 ```TypeScript
 // xxx.ets

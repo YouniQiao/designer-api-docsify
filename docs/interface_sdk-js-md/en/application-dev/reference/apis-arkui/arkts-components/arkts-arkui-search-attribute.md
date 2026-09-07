@@ -1191,7 +1191,7 @@ The default icon size on wearable devices is 16 vp.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [IconOptions](arkts-arkui-iconoptions-i.md) \| SymbolGlyphModifier | Yes | Style of the search icon on the left.<!--RP1-->Default value in light mode:{size: '16vp',color: '#99182431',src: ' '}Default value in dark mode:{size: '16vp',color: '#99ffffff',src: ' '} <!--RP1End--><br>**Since:** 12 |
+| value | [IconOptions](arkts-arkui-iconoptions-i.md) \| [SymbolGlyphModifier](arkts-arkui-symbolglyphmodifier-t.md) | Yes | Style of the search icon on the left.<!--RP1-->Default value in light mode:{size: '16vp',color: '#99182431',src: ' '}Default value in dark mode:{size: '16vp',color: '#99ffffff',src: ' '} <!--RP1End--><br>**Since:** 12 |
 
 ## selectedBackgroundColor
 
@@ -1367,7 +1367,7 @@ Sets the text stroke width.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| width | [Optional](arkts-arkui-optional-t.md)&lt;LengthMetrics&gt; | Yes | Text stroke width. When the unit of **LengthMetrics** is px:Values&lt;0: solid text.Values&gt; 0: outlined text.Default value: **0** (no stroke) |
+| width | [Optional](arkts-arkui-optional-t.md)&lt;LengthMetrics&gt; | Yes | Text stroke width. When the unit of **LengthMetrics** is px:Values &lt;0: solid text.Values &gt; 0: outlined text.Default value: **0** (no stroke) |
 
 ## textAlign
 

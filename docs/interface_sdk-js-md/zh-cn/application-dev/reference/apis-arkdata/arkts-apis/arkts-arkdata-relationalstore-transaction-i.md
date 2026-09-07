@@ -1277,7 +1277,7 @@ execute(sql: string, args?: Array<ValueType>): Promise<ValueType>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | sql | string | 是 | 指定要执行的SQL语句，不能为空字符串。 |
-| args | Array&lt;ValueType&gt; | 否 | SQL语句中参数的值。该值与sql参数语句中的占位符相对应。当sql参数语句完整时，该参数不填。<br>**起始版本：** 20 |
+| args | Array&lt;ValueType&gt; | 否 | SQL语句中参数的值。该值与sql参数语句中的占位符相对应。当sql参数语句完整时，该参数不填。<br>**适用版本：** 20 |
 
 **返回值：**
 
@@ -1603,7 +1603,7 @@ insertSync(table: string, values: ValuesBucket | sendableRelationalStore.ValuesB
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | table | string | 是 | 指定的目标表名，不能为空字符串。 |
-| values | ValuesBucket \| [sendableRelationalStore.ValuesBucket](arkts-arkdata-sendablerelationalstore-valuesbucket-t.md) | 是 | 表示要插入到表中的数据行。 |
+| values | ValuesBucket \| sendableRelationalStore.ValuesBucket | 是 | 表示要插入到表中的数据行。 |
 | conflict | ConflictResolution | 否 | 指定冲突解决模式。默认值是relationalStore.ConflictResolution.ON_CONFLICT_NONE。 |
 
 **返回值：**

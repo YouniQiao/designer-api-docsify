@@ -20,7 +20,7 @@ cameraPosition: camera.CameraPosition
 
 Camera position.
 
-**Type:** [camera.CameraPosition](arkts-camera-camera-cameraposition-e.md)
+**Type:** camera.CameraPosition
 
 **Since:** 11
 

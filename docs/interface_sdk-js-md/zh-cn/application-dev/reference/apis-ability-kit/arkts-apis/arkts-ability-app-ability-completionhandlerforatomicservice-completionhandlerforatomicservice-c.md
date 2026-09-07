@@ -24,7 +24,7 @@ onAtomicServiceRequestFailure(appId: string, failureCode: FailureCode, failureMe
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -39,7 +39,6 @@ onAtomicServiceRequestFailure(appId: string, failureCode: FailureCode, failureMe
 **示例**
 
 参见CompletionHandlerForAtomicService示例。
-- simpleType:
 
 ## onAtomicServiceRequestSuccess
 
@@ -53,7 +52,7 @@ onAtomicServiceRequestSuccess(appId: string): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -66,4 +65,3 @@ onAtomicServiceRequestSuccess(appId: string): void
 **示例**
 
 参见CompletionHandlerForAtomicService示例。
-- simpleType:

@@ -26,7 +26,7 @@ off(type: 'change', callback?: Callback<MediaQueryResult>): void
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
 
@@ -70,7 +70,7 @@ on(type: 'change', callback: Callback<MediaQueryResult>): void
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
 
@@ -86,4 +86,3 @@ on(type: 'change', callback: Callback<MediaQueryResult>): void
 **示例**
 
 详见[off('change')](#offchange)示例。
-- simpleType:

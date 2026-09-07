@@ -49,7 +49,7 @@ total?: number
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
 
@@ -67,11 +67,11 @@ type?: Type
 
 **说明：** 不同的type需分别对应相应的[style](arkts-arkui-progress-attribute.md#style)属性设置，详细映射关系参考[ProgressStyleMap](arkts-arkui-progressstylemap-i.md)。
 
-**类型：** [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md)
+**类型：** Type
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
 
@@ -93,7 +93,7 @@ value: number
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
 

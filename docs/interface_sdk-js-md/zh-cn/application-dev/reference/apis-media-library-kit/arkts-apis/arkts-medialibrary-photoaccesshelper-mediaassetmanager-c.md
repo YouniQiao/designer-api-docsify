@@ -81,7 +81,7 @@ static loadMovingPhoto(
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本14开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -146,7 +146,7 @@ static quickRequestImage(
 | context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | 是 | 传入Ability实例的上下文。 |
 | asset | PhotoAsset | 是 | 待请求的媒体文件对象。 |
 | requestOptions | [RequestOptions](arkts-medialibrary-photoaccesshelper-requestoptions-i.md) | 是 | 图片请求策略模式配置项。 |
-| dataHandler | [QuickImageDataHandler](arkts-medialibrary-photoaccesshelper-quickimagedatahandler-i.md)&lt;[image.Picture](../../apis-image-kit/arkts-apis/arkts-image-image-picture-i.md)&gt; | 是 | 媒体资源处理器，当所请求的图片资源准备完成时会触发回调。 |
+| dataHandler | [QuickImageDataHandler](arkts-medialibrary-photoaccesshelper-quickimagedatahandler-i.md)&lt;image.Picture&gt; | 是 | 媒体资源处理器，当所请求的图片资源准备完成时会触发回调。 |
 
 **返回值：**
 
@@ -227,7 +227,7 @@ static requestImage(
 | context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | 是 | 传入Ability实例的上下文。 |
 | asset | PhotoAsset | 是 | 待请求的媒体文件对象。 |
 | requestOptions | [RequestOptions](arkts-medialibrary-photoaccesshelper-requestoptions-i.md) | 是 | 图片请求策略模式配置项。 |
-| dataHandler | [MediaAssetDataHandler](arkts-medialibrary-photoaccesshelper-mediaassetdatahandler-i.md)&lt;[image.ImageSource](../../apis-image-kit/arkts-apis/arkts-image-image-imagesource-i.md)&gt; | 是 | 媒体资源处理器，请求完成时触发回调。 |
+| dataHandler | [MediaAssetDataHandler](arkts-medialibrary-photoaccesshelper-mediaassetdatahandler-i.md)&lt;image.ImageSource&gt; | 是 | 媒体资源处理器，请求完成时触发回调。 |
 
 **返回值：**
 
@@ -485,7 +485,7 @@ static requestVideoFile(
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
-**测试接口：** 本接口仅在自动化测试脚本中使用。
+**测试接口：** 此接口仅在自动化测试脚本中使用。
 
 **参数：**
 

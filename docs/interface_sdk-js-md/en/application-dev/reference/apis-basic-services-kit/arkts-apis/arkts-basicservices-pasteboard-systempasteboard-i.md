@@ -295,6 +295,7 @@ While most applications must [request permissions to access the pasteboard](../.
 
 **Required permissions:** 
 - API version 12 and later: ohos.permission.READ_PASTEBOARD
+- API versions 9 to 11: N/A
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -346,6 +347,7 @@ While most applications must [request permissions to access the pasteboard](../.
 
 **Required permissions:** 
 - API version 12 and later: ohos.permission.READ_PASTEBOARD
+- API versions 9 to 11: N/A
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -434,6 +436,7 @@ While most applications must [request permissions to access the pasteboard](../.
 
 **Required permissions:** 
 - API version 12 and later: ohos.permission.READ_PASTEBOARD
+- API version 11: N/A
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -687,7 +690,7 @@ While most applications must [request permissions to access the pasteboard](../.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[unifiedDataChannel.UnifiedData](../../apis-arkdata/arkts-apis/arkts-arkdata-unifieddatachannel-unifieddata-c.md)&gt; | Promise used to return the system PasteData. |
+| Promise&lt;unifiedDataChannel.UnifiedData&gt; | Promise used to return the system PasteData. |
 
 **Error codes:**
 
@@ -738,7 +741,7 @@ While most applications must [request permissions to access the pasteboard](../.
 
 | Type | Description |
 | --- | --- |
-| [unifiedDataChannel.UnifiedData](../../apis-arkdata/arkts-apis/arkts-arkdata-unifieddatachannel-unifieddata-c.md) | Data in the system pasteboard. |
+| unifiedDataChannel.UnifiedData | Data in the system pasteboard. |
 
 **Error codes:**
 
@@ -1207,6 +1210,7 @@ Deletes the global pasteable range of the application.
 
 **Required permissions:** 
 - API version 14 and later: ohos.permission.MANAGE_PASTEBOARD_APP_SHARE_OPTION
+- API versions 12 to 13: N/A
 
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
@@ -1241,6 +1245,7 @@ Sets pasteable range of PasteData for application.
 
 **Required permissions:** 
 - API version 14 and later: ohos.permission.MANAGE_PASTEBOARD_APP_SHARE_OPTION
+- API versions 12 to 13: N/A
 
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
@@ -1463,7 +1468,7 @@ Writes a **PasteData** object to the system pasteboard. This API uses a promise 
 
 **Deprecated since:** 9
 
-**Substitutes:** [setData](#setdata)(data: PasteData)
+**Substitutes:** [setData](#setdata-1)(data: PasteData)
 
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
@@ -1511,7 +1516,7 @@ Writes a **PasteData** object to the system pasteboard. This API uses a promise 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | [unifiedDataChannel.UnifiedData](../../apis-arkdata/arkts-apis/arkts-arkdata-unifieddatachannel-unifieddata-c.md) | Yes | Data to be written to the pasteboard. |
+| data | unifiedDataChannel.UnifiedData | Yes | Data to be written to the pasteboard. |
 
 **Return value:**
 
@@ -1572,7 +1577,7 @@ Writes data to the system pasteboard. This API returns the result synchronously.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | [unifiedDataChannel.UnifiedData](../../apis-arkdata/arkts-apis/arkts-arkdata-unifieddatachannel-unifieddata-c.md) | Yes | Data to be written to the pasteboard. |
+| data | unifiedDataChannel.UnifiedData | Yes | Data to be written to the pasteboard. |
 
 **Error codes:**
 

@@ -110,7 +110,7 @@ symbolStyle?: SymbolGlyphModifier
 
 SymbolGlyphModifier of PromptOptions.
 
-**Type:** SymbolGlyphModifier
+**Type:** [SymbolGlyphModifier](../arkts-components/arkts-arkui-symbolglyphmodifier-t.md)
 
 **Since:** 22
 

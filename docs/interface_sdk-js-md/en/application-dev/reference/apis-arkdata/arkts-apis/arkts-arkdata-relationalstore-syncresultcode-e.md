@@ -4,8 +4,6 @@ Describes the status of device sync.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
-
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## SUCCESS

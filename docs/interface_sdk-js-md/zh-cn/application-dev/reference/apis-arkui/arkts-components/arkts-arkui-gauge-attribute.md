@@ -35,7 +35,7 @@ colors(colors: ResourceColor | LinearGradient | Array<[ResourceColor | LinearGra
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
 
@@ -45,7 +45,7 @@ colors(colors: ResourceColor | LinearGradient | Array<[ResourceColor | LinearGra
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| colors | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) \| LinearGradient \| Array&lt;[ResourceColor \| LinearGradient, number]&gt; | 是 | 量规图的颜色，支持分段颜色设置。API version 9 默认值：Color.Black API version 11默认值：若不传颜色，或者数组为空，无法确定圆环类型及颜色，则圆环颜色为"0xFF64BB5C"、"0xFFF7CE00"、"0xFFE84026"的渐变环。若传入颜色，但颜色值有误，则该颜色为"0xFFE84026"。若对应颜色的比重为0，则该颜色在圆环中不显示。若所有颜色比重均为0，圆环不显示。从API version 10开始，支持Array&lt;ResourceColor, number&gt;类型。从API version 11开始，新增支持LinearGradient和Array&lt;LinearGradient, number&gt;类型。<br>**起始版本：** 11 |
+| colors | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) \| LinearGradient \| Array&lt;[ResourceColor \| LinearGradient, number]&gt; | 是 | 量规图的颜色，支持分段颜色设置。API version 9 默认值：Color.Black API version 11默认值：若不传颜色，或者数组为空，无法确定圆环类型及颜色，则圆环颜色为"0xFF64BB5C"、"0xFFF7CE00"、"0xFFE84026"的渐变环。若传入颜色，但颜色值有误，则该颜色为"0xFFE84026"。若对应颜色的比重为0，则该颜色在圆环中不显示。若所有颜色比重均为0，圆环不显示。从API version 10开始，支持Array&lt;ResourceColor, number&gt;类型。从API version 11开始，新增支持LinearGradient和Array&lt;LinearGradient, number&gt;类型。<br>**适用版本：** 11 |
 
 ## contentModifier
 
@@ -59,7 +59,7 @@ contentModifier(modifier: ContentModifier<GaugeConfiguration>)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -81,7 +81,7 @@ description(value: CustomBuilder)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本23开始，该接口支持在ArkTS卡片中使用。
 
@@ -103,7 +103,7 @@ endAngle(angle: number)
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
 
@@ -127,7 +127,7 @@ indicator(value: GaugeIndicatorOptions)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本23开始，该接口支持在ArkTS卡片中使用。
 
@@ -155,7 +155,7 @@ privacySensitive(isPrivacySensitiveMode: Optional<boolean>)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
 
@@ -177,7 +177,7 @@ startAngle(angle: number)
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
 
@@ -199,7 +199,7 @@ strokeWidth(length: Length)
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
 
@@ -223,7 +223,7 @@ trackShadow(value: GaugeShadowOptions)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本23开始，该接口支持在ArkTS卡片中使用。
 
@@ -245,7 +245,7 @@ value(value: number)
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
 

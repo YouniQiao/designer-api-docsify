@@ -34,11 +34,11 @@ addResource(type: ResourceType, fileUri: string): void
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
-**测试接口：** 本接口仅在自动化测试脚本中使用。
+**测试接口：** 此接口仅在自动化测试脚本中使用。
 
 **参数：**
 
@@ -92,7 +92,7 @@ addResource(type: ResourceType, data: ArrayBuffer): void
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -142,7 +142,7 @@ constructor(asset: PhotoAsset)
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -189,7 +189,7 @@ static createAssetRequest(context: Context, photoType: PhotoType, extension: str
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -252,11 +252,11 @@ static createImageAssetRequest(context: Context, fileUri: string): MediaAssetCha
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
-**测试接口：** 本接口仅在自动化测试脚本中使用。
+**测试接口：** 此接口仅在自动化测试脚本中使用。
 
 **参数：**
 
@@ -312,7 +312,7 @@ static createVideoAssetRequest(context: Context, fileUri: string): MediaAssetCha
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
-**测试接口：** 本接口仅在自动化测试脚本中使用。
+**测试接口：** 此接口仅在自动化测试脚本中使用。
 
 **参数：**
 
@@ -530,7 +530,7 @@ getAsset(): PhotoAsset
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -823,7 +823,7 @@ setTitle(title: string): void
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -884,6 +884,6 @@ readonly comment: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core

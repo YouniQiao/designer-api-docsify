@@ -112,7 +112,7 @@ Sets the video playback position.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | Video playback position.Value range: [0, [duration](arkts-arkui-preparedinfo-i.md)]When the set value is greater than the duration, the progress will jump to the end; when the set value is less than 0, no progress jump will occur.Unit: second Since API version 8, seek mode configuration is supported. For details, see [setCurrentTime&lt;sup&gt;8+&lt;/sup&gt;](#setcurrenttime). |
+| value | number | Yes | Video playback position.Value range: [0, [duration](arkts-arkui-preparedinfo-i.md)]When the set value is greater than the duration, the progress will jump to the end; when the set value is less than 0, no progress jump will occur.Unit: second Since API version 8, seek mode configuration is supported. For details, see [setCurrentTime&lt;sup&gt;8+&lt;/sup&gt;](#setcurrenttime-1). |
 
 ## setCurrentTime
 

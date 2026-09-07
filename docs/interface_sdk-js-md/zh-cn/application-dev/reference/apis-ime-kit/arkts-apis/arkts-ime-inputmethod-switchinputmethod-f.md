@@ -17,7 +17,8 @@ function switchInputMethod(target: InputMethodProperty, callback: AsyncCallback<
 **起始版本：** 9
 
 **需要权限：** 
-- API版本9 - 10：ohos.permission.CONNECT_IME_ABILITY
+- API版本11+：N/A
+- API版本9-10：ohos.permission.CONNECT_IME_ABILITY
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -68,7 +69,8 @@ function switchInputMethod(target: InputMethodProperty): Promise<boolean>
 **起始版本：** 9
 
 **需要权限：** 
-- API版本9 - 10：ohos.permission.CONNECT_IME_ABILITY
+- API版本11+：N/A
+- API版本9-10：ohos.permission.CONNECT_IME_ABILITY
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 

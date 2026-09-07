@@ -18,7 +18,7 @@ function stopDiscoverPrinter(callback: AsyncCallback<void>): void
 
 **需要权限：** 
 - API版本20+：ohos.permission.MANAGE_PRINT_JOB or ohos.permission.PRINT
-- API版本10 - 19：ohos.permission.MANAGE_PRINT_JOB
+- API版本10-19：ohos.permission.MANAGE_PRINT_JOB
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
@@ -63,7 +63,7 @@ function stopDiscoverPrinter(): Promise<void>
 
 **需要权限：** 
 - API版本20+：ohos.permission.MANAGE_PRINT_JOB or ohos.permission.PRINT
-- API版本10 - 19：ohos.permission.MANAGE_PRINT_JOB
+- API版本10-19：ohos.permission.MANAGE_PRINT_JOB
 
 **系统能力：** SystemCapability.Print.PrintFramework
 

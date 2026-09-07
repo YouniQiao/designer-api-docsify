@@ -66,10 +66,6 @@ Disables the cache and deletes the data in it. This API uses an asynchronous cal
 **Examples**
 
 delete(callback: AsyncCallback<void>): void
-Disables the cache and deletes the data in it. This API uses an asynchronous callback to return the result.
-Atomic service API: This API can be used in atomic services since API version 11.
-System capability: SystemCapability.Communication.NetStack
-Parameters
 
 ```TypeScript
 import { http } from '@kit.NetworkKit';
@@ -118,10 +114,6 @@ Disables the cache and deletes the data in it. This API uses a promise to return
 **Examples**
 
 delete(): Promise<void>
-Disables the cache and deletes the data in it. This API uses a promise to return the result.
-Atomic service API: This API can be used in atomic services since API version 11.
-System capability: SystemCapability.Communication.NetStack
-Return value
 
 ```TypeScript
 import { http } from '@kit.NetworkKit';
@@ -164,10 +156,6 @@ Flushes data in the cache to the file system so that the cached data can be acce
 **Examples**
 
 flush(callback: AsyncCallback<void>): void
-Flushes data in the cache to the file system so that the cached data can be accessed in the next HTTP request. This API uses an asynchronous callback to return the result. Cached data includes the response header (header), response body (result), cookies, request time (requestTime), and response time (responseTime).
-Atomic service API: This API can be used in atomic services since API version 11.
-System capability: SystemCapability.Communication.NetStack
-Parameters
 
 ```TypeScript
 import { http } from '@kit.NetworkKit';
@@ -215,10 +203,6 @@ Flushes data in the cache to the file system so that the cached data can be acce
 **Examples**
 
 flush(): Promise<void>
-Flushes data in the cache to the file system so that the cached data can be accessed in the next HTTP request. This API uses a promise to return the result.
-Atomic service API: This API can be used in atomic services since API version 11.
-System capability: SystemCapability.Communication.NetStack
-Return value
 
 ```TypeScript
 import { http } from '@kit.NetworkKit';

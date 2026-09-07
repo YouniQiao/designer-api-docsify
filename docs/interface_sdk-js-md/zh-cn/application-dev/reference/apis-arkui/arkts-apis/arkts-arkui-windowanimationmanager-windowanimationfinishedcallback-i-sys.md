@@ -31,4 +31,3 @@ onAnimationFinish(): void
 **示例**
 
 请参考windowAnimationManager.setController的示例代码。
-- simpleType:

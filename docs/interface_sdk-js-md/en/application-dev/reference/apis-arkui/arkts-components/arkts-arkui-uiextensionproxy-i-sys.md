@@ -153,8 +153,8 @@ Synchronously sends data from the component host to the started UIExtensionAbili
 
 | Type | Description |
 | --- | --- |
-| object | data - data transferred from the UIExtensionAbility<br>**Applicable version:** 11 - 17 |
-| Record&lt;string, Object&gt; | data - Data transferred from the UIExtensionAbility.<br>**Applicable version:** 18 and later |
+| object | data - data transferred from the UIExtensionAbility<br>**Since:** 11 - 17 |
+| Record&lt;string, Object&gt; | data - Data transferred from the UIExtensionAbility.<br>**Since:** 18 |
 
 **Error codes:**
 

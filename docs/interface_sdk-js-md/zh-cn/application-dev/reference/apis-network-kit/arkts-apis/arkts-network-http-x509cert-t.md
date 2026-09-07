@@ -12,4 +12,4 @@ X509证书
 
 **系统能力：** SystemCapability.Communication.NetStack
 
-**类型：** [cert.X509Cert](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-cert-x509cert-i.md)
+**类型：** cert.X509Cert

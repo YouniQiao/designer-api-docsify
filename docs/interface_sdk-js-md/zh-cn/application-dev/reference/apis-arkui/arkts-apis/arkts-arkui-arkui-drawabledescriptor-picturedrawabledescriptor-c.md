@@ -26,7 +26,7 @@ PictureDrawableDescriptor的构造函数。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -34,7 +34,7 @@ PictureDrawableDescriptor的构造函数。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| src | [image.Picture](../../apis-image-kit/arkts-apis/arkts-image-image-picture-i.md) | 是 | 用于创建PictureDrawableDescriptor的Picture对象。 |
+| src | image.Picture | 是 | 用于创建PictureDrawableDescriptor的Picture对象。 |
 
 **示例**
 
@@ -104,7 +104,7 @@ setHdrComposition(config: HdrCompositionConfig): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

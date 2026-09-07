@@ -6,7 +6,7 @@
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 本接口仅在自动化测试脚本中使用。
+**测试接口：** 此接口仅在自动化测试脚本中使用。
 
 ## 导入模块
 
@@ -25,11 +25,11 @@ static create(fingers: number, steps: number): PointerMatrix
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 本接口仅在自动化测试脚本中使用。
+**测试接口：** 此接口仅在自动化测试脚本中使用。
 
 **参数：**
 
@@ -71,11 +71,11 @@ setPoint(finger: number, step: number, point: Point): void
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 本接口仅在自动化测试脚本中使用。
+**测试接口：** 此接口仅在自动化测试脚本中使用。
 
 **参数：**
 

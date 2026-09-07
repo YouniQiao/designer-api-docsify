@@ -4,8 +4,6 @@ Enumerates USB descriptors.
 
 **Since:** 14
 
-**Model restriction:** This API can be used only in the stage model.
-
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## INTERFACE

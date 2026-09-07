@@ -8,6 +8,8 @@ const TONE_CATEGORY_ALARM: number
 
 Define the alarm tone category.
 
+**Type:** number
+
 **Since:** 12
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
@@ -38,6 +40,8 @@ const TONE_CATEGORY_NOTIFICATION: number
 
 Define the notification tone category.
 
+**Type:** number
+
 **Since:** 12
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
@@ -51,6 +55,8 @@ const TONE_CATEGORY_NOTIFICATION_APP: number
 ```
 
 Define the app notification tone category.
+
+**Type:** number
 
 **Since:** 22
 
@@ -66,6 +72,8 @@ const TONE_CATEGORY_RINGTONE: number
 
 Define the ringtone category.
 
+**Type:** number
+
 **Since:** 12
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
@@ -79,6 +87,8 @@ const TONE_CATEGORY_TEXT_MESSAGE: number
 ```
 
 Define the text message tone category.
+
+**Type:** number
 
 **Since:** 12
 

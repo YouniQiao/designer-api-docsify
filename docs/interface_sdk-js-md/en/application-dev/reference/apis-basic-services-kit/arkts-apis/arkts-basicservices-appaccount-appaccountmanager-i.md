@@ -69,7 +69,7 @@ Adds an application account name and additional information. This API uses an as
 
 **Deprecated since:** 9
 
-**Substitutes:** [createAccount](#createaccount)(name: string, options: CreateAccountOptions, callback: AsyncCallback&lt;void&gt;)
+**Substitutes:** [createAccount](#createaccount-1)(name: string, options: CreateAccountOptions, callback: AsyncCallback&lt;void&gt;)
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -101,14 +101,14 @@ Adds an application account name and additional information. This API uses a pro
 
 > **NOTE：**
 > This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [createAccount](#createaccount)
+> [createAccount](#createaccount-2)
 > instead.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [createAccount](#createaccount)(name: string, options?: CreateAccountOptions)
+**Substitutes:** [createAccount](#createaccount-2)(name: string, options?: CreateAccountOptions)
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -728,13 +728,13 @@ Checks whether data synchronization is enabled for an application account. This 
 > **NOTE：**
 > 
 > This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [checkDataSyncEnabled](#checkdatasyncenabled) instead.
+> [checkDataSyncEnabled](#checkdatasyncenabled-1) instead.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [checkDataSyncEnabled](#checkdatasyncenabled)(name: string)
+**Substitutes:** [checkDataSyncEnabled](#checkdatasyncenabled-1)(name: string)
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -1034,14 +1034,14 @@ Checks the visibility of an authorization token of the specified authentication 
 > **NOTE：**
 > 
 > This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [checkAuthTokenVisibility](#checkauthtokenvisibility)
+> [checkAuthTokenVisibility](#checkauthtokenvisibility-1)
 > instead.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [checkAuthTokenVisibility](#checkauthtokenvisibility)(name: string, authType: string, bundleName: string)
+**Substitutes:** [checkAuthTokenVisibility](#checkauthtokenvisibility-1)(name: string, authType: string, bundleName: string)
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -1438,14 +1438,14 @@ Deletes an application account. This API uses a promise to return the result.
 > **NOTE：**
 > 
 > This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [removeAccount](#removeaccount)
+> [removeAccount](#removeaccount-1)
 > instead.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [removeAccount](#removeaccount)(name: string)
+**Substitutes:** [removeAccount](#removeaccount-1)(name: string)
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -1738,14 +1738,14 @@ Deletes the authorization token of the specified authentication type for an appl
 > **NOTE：**
 > 
 > This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [deleteAuthToken](#deleteauthtoken)
+> [deleteAuthToken](#deleteauthtoken-1)
 > instead.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [deleteAuthToken](#deleteauthtoken)(name: string, owner: string, authType: string, token: string)
+**Substitutes:** [deleteAuthToken](#deleteauthtoken-1)(name: string, owner: string, authType: string, token: string)
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -1827,14 +1827,14 @@ Disables an application account from accessing an application. This API uses a p
 > **NOTE：**
 > 
 > This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [setAppAccess](#setappaccess)
+> [setAppAccess](#setappaccess-1)
 > instead.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [setAppAccess](#setappaccess)(name: string, bundleName: string, isAccessible: boolean)
+**Substitutes:** [setAppAccess](#setappaccess-1)(name: string, bundleName: string, isAccessible: boolean)
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -1918,14 +1918,14 @@ Enables an application to access an application account. This API uses a promise
 > **NOTE：**
 > 
 > This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [setAppAccess](#setappaccess)
+> [setAppAccess](#setappaccess-1)
 > instead.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [setAppAccess](#setappaccess)(name: string, bundleName: string, isAccessible: boolean)
+**Substitutes:** [setAppAccess](#setappaccess-1)(name: string, bundleName: string, isAccessible: boolean)
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -2009,14 +2009,14 @@ Obtains the credential of an application account. This API uses a promise to ret
 > **NOTE：**
 > 
 > This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [getCredential](#getcredential)
+> [getCredential](#getcredential-1)
 > instead.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [getCredential](#getcredential)(name: string, credentialType: string)
+**Substitutes:** [getCredential](#getcredential-1)(name: string, credentialType: string)
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -2099,13 +2099,13 @@ Obtains additional information of an application account. Additional information
 > **NOTE：**
 > 
 > This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [getCustomData](#getcustomdata) instead.
+> [getCustomData](#getcustomdata-1) instead.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [getCustomData](#getcustomdata)(name: string, key: string)
+**Substitutes:** [getCustomData](#getcustomdata-1)(name: string, key: string)
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -2457,13 +2457,13 @@ Obtains the application accounts that can be accessed by the invoker based on th
 > **NOTE：**
 > 
 > This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [getAccountsByOwner](#getaccountsbyowner) instead.
+> [getAccountsByOwner](#getaccountsbyowner-1) instead.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [getAccountsByOwner](#getaccountsbyowner)(owner: string)
+**Substitutes:** [getAccountsByOwner](#getaccountsbyowner-1)(owner: string)
 
 **Required permissions:** ohos.permission.GET_ALL_APP_ACCOUNTS
 
@@ -2651,13 +2651,13 @@ Obtains all tokens visible to the invoker for an application account. This API u
 > **NOTE：**
 > 
 > This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [getAllAuthTokens](#getallauthtokens) instead.
+> [getAllAuthTokens](#getallauthtokens-1) instead.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [getAllAuthTokens](#getallauthtokens)(name: string, owner: string)
+**Substitutes:** [getAllAuthTokens](#getallauthtokens-1)(name: string, owner: string)
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -2742,13 +2742,13 @@ Obtains data to be associated with an application account. This API uses a promi
 > **NOTE：**
 > 
 > This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [getCustomData](#getcustomdata) instead.
+> [getCustomData](#getcustomdata-1) instead.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [getCustomData](#getcustomdata)(name: string, key: string)
+**Substitutes:** [getCustomData](#getcustomdata-1)(name: string, key: string)
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -2972,13 +2972,13 @@ Obtains the authenticator callback for an authentication session. This API uses 
 > **NOTE：**
 > 
 > This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [getAuthCallback](#getauthcallback) instead.
+> [getAuthCallback](#getauthcallback-1) instead.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [getAuthCallback](#getauthcallback)(sessionId: string)
+**Substitutes:** [getAuthCallback](#getauthcallback-1)(sessionId: string)
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -3073,13 +3073,13 @@ Obtains the authenticator information of an application. This API uses a promise
 > **NOTE：**
 > 
 > This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [queryAuthenticatorInfo](#queryauthenticatorinfo) instead.
+> [queryAuthenticatorInfo](#queryauthenticatorinfo-1) instead.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [queryAuthenticatorInfo](#queryauthenticatorinfo)(owner: string)
+**Substitutes:** [queryAuthenticatorInfo](#queryauthenticatorinfo-1)(owner: string)
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -3619,13 +3619,13 @@ Obtains the authorization list of the specified authentication type for an appli
 > **NOTE：**
 > 
 > This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [getAuthList](#getauthlist) instead.
+> [getAuthList](#getauthlist-1) instead.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [getAuthList](#getauthlist)(name: string, authType: string)
+**Substitutes:** [getAuthList](#getauthlist-1)(name: string, authType: string)
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -3711,14 +3711,14 @@ Obtains the authorization token of the specified authentication type for an appl
 > **NOTE：**
 > 
 > This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [getAuthToken](#getauthtoken)
+> [getAuthToken](#getauthtoken-1)
 > instead.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [getAuthToken](#getauthtoken)(name: string, owner: string, authType: string)
+**Substitutes:** [getAuthToken](#getauthtoken-1)(name: string, owner: string, authType: string)
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -4298,14 +4298,14 @@ Sets a credential for an application account. This API uses a promise to return 
 > **NOTE：**
 > 
 > This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [setCredential](#setcredential)
+> [setCredential](#setcredential-1)
 > instead.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [setCredential](#setcredential)(name: string, credentialType: string, credential: string)
+**Substitutes:** [setCredential](#setcredential-1)(name: string, credentialType: string, credential: string)
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -4390,14 +4390,14 @@ Sets additional information for an application account. This API uses a promise 
 > **NOTE：**
 > 
 > This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [setCustomData](#setcustomdata)
+> [setCustomData](#setcustomdata-1)
 > instead.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [setCustomData](#setcustomdata)(name: string, key: string, value: string)
+**Substitutes:** [setCustomData](#setcustomdata-1)(name: string, key: string, value: string)
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -4586,14 +4586,14 @@ Sets data synchronization for an application account. This API uses a promise to
 > **NOTE：**
 > 
 > This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [setDataSyncEnabled](#setdatasyncenabled)
+> [setDataSyncEnabled](#setdatasyncenabled-1)
 > instead.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [setDataSyncEnabled](#setdatasyncenabled)(name: string, isEnabled: boolean)
+**Substitutes:** [setDataSyncEnabled](#setdatasyncenabled-1)(name: string, isEnabled: boolean)
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -4680,14 +4680,14 @@ Sets data to be associated with an application account. This API uses a promise 
 > **NOTE：**
 > 
 > This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [setCustomData](#setcustomdata)
+> [setCustomData](#setcustomdata-1)
 > instead.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [setCustomData](#setcustomdata)(name: string, key: string, value: string)
+**Substitutes:** [setCustomData](#setcustomdata-1)(name: string, key: string, value: string)
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -5404,14 +5404,14 @@ Sets an authorization token of the specific authentication type for an applicati
 > **NOTE：**
 > 
 > This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [setAuthToken](#setauthtoken)
+> [setAuthToken](#setauthtoken-1)
 > instead.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [setAuthToken](#setauthtoken)(name: string, authType: string, token: string)
+**Substitutes:** [setAuthToken](#setauthtoken-1)(name: string, authType: string, token: string)
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -5505,14 +5505,14 @@ Sets the visibility of an authorization token to an application. This API uses a
 > **NOTE：**
 > 
 > This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [setAuthTokenVisibility](#setauthtokenvisibility)
+> [setAuthTokenVisibility](#setauthtokenvisibility-1)
 > instead.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [setAuthTokenVisibility](#setauthtokenvisibility)(name: string, authType: string, bundleName: string, isVisible: boolean)
+**Substitutes:** [setAuthTokenVisibility](#setauthtokenvisibility-1)(name: string, authType: string, bundleName: string, isVisible: boolean)
 
 **System capability:** SystemCapability.Account.AppAccount
 

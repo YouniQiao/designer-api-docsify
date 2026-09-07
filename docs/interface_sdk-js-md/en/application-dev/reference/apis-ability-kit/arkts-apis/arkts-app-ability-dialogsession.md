@@ -4,6 +4,8 @@ The dialogSession module provides APIs related to the dialog box.
 
 **Since:** 11
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.

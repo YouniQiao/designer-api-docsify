@@ -32,7 +32,7 @@ snapshot: image.PixelMap
 
 Snapshot of the mission.
 
-**Type:** [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)
+**Type:** image.PixelMap
 
 **Since:** 8
 

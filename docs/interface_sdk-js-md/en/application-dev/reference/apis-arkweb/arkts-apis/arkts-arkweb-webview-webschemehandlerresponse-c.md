@@ -113,7 +113,6 @@ Obtains the character encoding format of the response.
 **Examples**
 
 For details about the sample code, see [constructor](#constructor).
-- simpleType:
 
 ## getHeaderByName
 
@@ -144,7 +143,6 @@ Obtains the value of a response header field by name.
 **Examples**
 
 For details about the sample code, see [constructor](#constructor).
-- simpleType:
 
 ## getMimeType
 
@@ -218,7 +216,6 @@ struct WebComponent {
 ```
 
 For details about the sample code, see [constructor](#constructor).
-- simpleType:
 
 ## getNetErrorCode
 
@@ -243,7 +240,6 @@ Obtains the network error code of the response.
 **Examples**
 
 For details about the sample code, see [constructor](#constructor).
-- simpleType:
 
 ## getStatus
 
@@ -268,7 +264,6 @@ Obtains the HTTP status code of the response.
 **Examples**
 
 For details about the sample code, see [constructor](#constructor).
-- simpleType:
 
 ## getStatusText
 
@@ -293,7 +288,6 @@ Obtains the status text of this response.
 **Examples**
 
 For details about the sample code, see [constructor](#constructor).
-- simpleType:
 
 ## getUrl
 
@@ -320,7 +314,6 @@ Risk warning: To obtain a URL for JavaScriptProxy communication API authenticati
 **Examples**
 
 For details about the sample code, see [removeProxyOverride](./arkts-apis-webview-ProxyController.md#removeproxyoverride).
-- simpleType:
 
 ```TypeScript
 // xxx.ets
@@ -372,7 +365,6 @@ struct WebComponent {
 ```
 
 For details about the sample code, see [constructor](#constructor).
-- simpleType:
 
 ```TypeScript
 // xxx.ets
@@ -450,7 +442,6 @@ Sets the character encoding format for the current response.
 **Examples**
 
 For details about the sample code, see [constructor](#constructor).
-- simpleType:
 
 ## setHeaderByName
 
@@ -483,7 +474,6 @@ Sets the header information for this response.
 **Examples**
 
 For details about the sample code, see [constructor](#constructor).
-- simpleType:
 
 ## setMimeType
 
@@ -514,7 +504,6 @@ Sets the MIME type for the current response. For example, set it to text/html wh
 **Examples**
 
 For details about the sample code, see [constructor](#constructor).
-- simpleType:
 
 ## setNetErrorCode
 
@@ -545,7 +534,6 @@ Sets the network error code for this response.
 **Examples**
 
 For details about the sample code, see [constructor](#constructor).
-- simpleType:
 
 ## setStatus
 
@@ -576,7 +564,6 @@ Sets the HTTP status code for this response.
 **Examples**
 
 For details about the sample code, see [constructor](#constructor).
-- simpleType:
 
 ## setStatusText
 
@@ -607,7 +594,6 @@ Sets the status text for this response.
 **Examples**
 
 For details about the sample code, see [constructor](#constructor).
-- simpleType:
 
 ## setUrl
 
@@ -638,4 +624,3 @@ Sets the redirection URL or the URL changed due to HSTS for this response. After
 **Examples**
 
 For details about the sample code, see [constructor](#constructor).
-- simpleType:

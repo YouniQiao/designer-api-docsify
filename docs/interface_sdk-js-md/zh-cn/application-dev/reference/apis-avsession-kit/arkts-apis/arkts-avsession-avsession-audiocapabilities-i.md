@@ -20,10 +20,10 @@ readonly streamInfos: Array<audio.AudioStreamInfo>
 
 音频能力参数的列表。
 
-**类型：** Array&lt;[audio.AudioStreamInfo](../../apis-audio-kit/arkts-apis/arkts-audio-audio-audiostreaminfo-i.md)&gt;
+**类型：** Array&lt;audio.AudioStreamInfo&gt;
 
 **起始版本：** 20
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast

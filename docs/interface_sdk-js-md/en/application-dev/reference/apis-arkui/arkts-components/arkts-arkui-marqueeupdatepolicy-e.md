@@ -4,8 +4,6 @@ Sets the scrolling policy of the marquee after its attributes are updated.
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## DEFAULT

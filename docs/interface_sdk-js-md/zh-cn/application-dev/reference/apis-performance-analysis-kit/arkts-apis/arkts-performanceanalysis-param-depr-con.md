@@ -8,6 +8,8 @@ const DISTRIBUTED_SERVICE_INSTANCE_ID: string
 
 分布式服务实例ID。
 
+**类型：** string
+
 **起始版本：** 7
 
 **废弃版本：** 9
@@ -24,6 +26,8 @@ const DISTRIBUTED_SERVICE_NAME: string
 
 分布式服务名称。
 
+**类型：** string
+
 **起始版本：** 7
 
 **废弃版本：** 9
@@ -39,6 +43,8 @@ const USER_ID: string
 ```
 
 用户自定义ID。
+
+**类型：** string
 
 **起始版本：** 7
 

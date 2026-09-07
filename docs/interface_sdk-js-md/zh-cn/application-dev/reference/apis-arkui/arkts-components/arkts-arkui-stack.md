@@ -25,7 +25,7 @@ Stack(options?: StackOptions)
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
 
@@ -48,7 +48,6 @@ Stack(options?: StackOptions)
 ## 示例
 
 当Stack的[alignContent](#aligncontent)属性设为Alignment.Bottom，且[syncLoad](#syncload)为true时，其子组件的显示效果表现为在Stack组件底部横向居中并且所有子组件在同一帧内加载完成。
-从API版本26.0.0开始，新增syncLoad属性。
 
 ```TypeScript
 // xxx.ets

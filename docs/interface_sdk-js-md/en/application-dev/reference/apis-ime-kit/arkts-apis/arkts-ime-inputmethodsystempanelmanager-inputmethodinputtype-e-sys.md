@@ -4,8 +4,6 @@ Enumerates input types, which are used to identify the input modes supported by 
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
-
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **System API:** This is a system API.

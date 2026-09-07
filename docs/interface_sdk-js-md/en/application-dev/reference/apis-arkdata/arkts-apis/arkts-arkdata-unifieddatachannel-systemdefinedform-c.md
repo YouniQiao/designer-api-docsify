@@ -17,6 +17,22 @@ import { unifiedDataChannel } from '@kit.ArkData';
 ## abilityName
 
 ```TypeScript
+get abilityName(): string
+```
+
+Indicates the ability name of form
+
+**Type:** string
+
+**Since:** 10
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+**System capability:** SystemCapability.DistributedDataManager.UDMF.Core
+
+```TypeScript
 set abilityName(value: string)
 ```
 
@@ -33,6 +49,22 @@ Indicates the ability name of form.
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## bundleName
+
+```TypeScript
+get bundleName(): string
+```
+
+Indicates the bundle name of form
+
+**Type:** string
+
+**Since:** 10
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+**System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
 ```TypeScript
 set bundleName(value: string)
@@ -53,6 +85,22 @@ Indicates the bundle name of form
 ## formId
 
 ```TypeScript
+get formId(): number
+```
+
+Indicates the id of form
+
+**Type:** number
+
+**Since:** 10
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+**System capability:** SystemCapability.DistributedDataManager.UDMF.Core
+
+```TypeScript
 set formId(value: number)
 ```
 
@@ -71,6 +119,22 @@ Indicates the id of form
 ## formName
 
 ```TypeScript
+get formName(): string
+```
+
+Indicates the name of form
+
+**Type:** string
+
+**Since:** 10
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+**System capability:** SystemCapability.DistributedDataManager.UDMF.Core
+
+```TypeScript
 set formName(value: string)
 ```
 
@@ -87,6 +151,22 @@ Indicates the name of form
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## module
+
+```TypeScript
+get module(): string
+```
+
+Indicates the module of form
+
+**Type:** string
+
+**Since:** 10
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+**System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
 ```TypeScript
 set module(value: string)

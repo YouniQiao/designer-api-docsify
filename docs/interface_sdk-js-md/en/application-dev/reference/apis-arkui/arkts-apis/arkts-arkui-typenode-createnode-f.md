@@ -1246,7 +1246,6 @@ Creates a FrameNode of the **ListItem** type.
 **Examples**
 
 See the example for createNode('List').
-- simpleType:
 
 
 ## createNode
@@ -1418,7 +1417,6 @@ Creates a FrameNode of the **ListItemGroup** type.
 **Examples**
 
 See the example for createNode('List').
-- simpleType:
 
 
 ## createNode
@@ -1546,7 +1544,6 @@ Creates a FrameNode of the **FlowItem** type.
 **Examples**
 
 See the example for createNode('WaterFlow').
-- simpleType:
 
 
 ## createNode
@@ -2716,4 +2713,3 @@ Creates a FrameNode of the **GridItem** type.
 **Examples**
 
 See the example for createNode('Grid').
-- simpleType:

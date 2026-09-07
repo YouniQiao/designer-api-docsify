@@ -71,7 +71,7 @@ build(builder: WrappedBuilder<Args>, arg?: Object): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -231,7 +231,7 @@ build(builder: WrappedBuilder<Args>, arg: Object, options: BuildOptions): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -318,7 +318,7 @@ constructor(uiContext: UIContext, options?: RenderOptions)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -347,7 +347,7 @@ dispose(): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -460,7 +460,7 @@ getFrameNode(): FrameNode | null
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -582,7 +582,7 @@ inheritFreezeOptions(enabled: boolean): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1034,7 +1034,7 @@ isDisposed(): boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1159,7 +1159,6 @@ struct Index {
 ```
 
 参考[isDisposed](#isdisposed)示例。
-该示例演示了ReactiveBuilderNode释放节点前后分别使用[isDisposed](#isdisposed)接口验证节点的状态，释放节点前节点调用isDisposed接口返回false，释放节点后节点调用isDisposed接口返回true。
 
 ```TypeScript
 import { FrameNode, NodeController, ReactiveBuilderNode } from '@kit.ArkUI';
@@ -1311,7 +1310,7 @@ offsetA为builderNode相对于父组件的偏移，offsetB为命中位置相对�
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1330,10 +1329,8 @@ offsetA为builderNode相对于父组件的偏移，offsetB为命中位置相对�
 **示例**
 
 请参考示例1（BuilderNode中鼠标事件）、示例2（BuilderNode中触摸事件）、示例3（BuilderNode中轴事件）。
-- simpleType:
 
 请参考示例13（ReactiveBuilderNode中鼠标事件）、示例14（ReactiveBuilderNode中触摸事件）、示例15（ReactiveBuilderNode中轴事件）。
-- simpleType:
 
 ## postInputEventWithStrategy
 
@@ -1373,7 +1370,7 @@ postInputEventWithStrategy(event: InputEventType, competitionStrategy?: Competit
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本24开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1393,7 +1390,6 @@ postInputEventWithStrategy(event: InputEventType, competitionStrategy?: Competit
 **示例**
 
 请参考示例16（BuilderNode中带竞争策略的鼠标事件）、示例17（BuilderNode中带竞争策略的触摸事件）、示例18（BuilderNode中带竞争策略的轴事件）。
-- simpleType:
 
 ## postTouchEvent
 
@@ -1421,7 +1417,7 @@ offsetA为builderNode相对于父组件的偏移量，可以通过FrameNode中�
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1531,7 +1527,6 @@ struct MyComponent {
 ```
 
 该示例实现了通过ReactiveBuilderNode构建的按钮组件与外部容器的触摸事件联动，演示了自定义节点中触摸事件的坐标转换与跨节点传递机制。
-当触摸下方蓝色区域时，触摸事件会经过坐标转换后传递给上方的ReactiveBuilderNode按钮，触发按钮的触摸反馈和日志输出，实现了触摸事件的跨节点精准传递。
 
 ```TypeScript
 import { NodeController, ReactiveBuilderNode, FrameNode, UIContext } from '@kit.ArkUI';
@@ -1638,7 +1633,7 @@ recycle(): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1834,7 +1829,6 @@ struct Index {
 ```
 
 recycle
-从API版本26.0.0开始，ReactiveBuilderNode中的自定义组件支持V2组件复用。
 
 ```TypeScript
 import { FrameNode, NodeController, ReactiveBuilderNode, UIContext } from '@kit.ArkUI';
@@ -2032,7 +2026,7 @@ BuilderNode通过reuse和[recycle](#recycle)完成其内外自定义组件之间
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -2045,7 +2039,6 @@ BuilderNode通过reuse和[recycle](#recycle)完成其内外自定义组件之间
 **示例**
 
 请参考[recycle](#recycle)中的示例。
-- simpleType:
 
 ## update
 
@@ -2059,7 +2052,7 @@ update(arg: Object): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -2183,7 +2176,7 @@ updateConfiguration(): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

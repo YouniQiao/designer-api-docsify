@@ -1,6 +1,6 @@
 # AVRecorder
 
-AVRecorder是音视频录制管理类，用于音视频录制的全流程管理，支持音频录制、视频录制及音视频混合录制，可灵活配置编码参数、添加水印、设置元数据、监听录制状态和错误事件等。适用于录制音视频并保存到文件的场景，包括需要在音频流打断期间保持录制连续性、实时监控音频振幅等场景。在调用AVRecorder的方法前，需要先调用[createAVRecorder](arkts-media-media-createavrecorder-f.md)接口构建一个AVRecorder实例。典型录制流程：[createAVRecorder](arkts-media-media-createavrecorder-f.md) → [prepare](#prepare) → [getInputSurface](#getinputsurface)（纯视频/音视频录制时） → [start](#start) → [pause](#pause)/[resume](#resume) → [stop](#stop) → [release](#release)。
+AVRecorder是音视频录制管理类，用于音视频录制的全流程管理，支持音频录制、视频录制及音视频混合录制，可灵活配置编码参数、添加水印、设置元数据、监听录制状态和错误事件等。适用于录制音视频并保存到文件的场景，包括需要在音频流打断期间保持录制连续性、实时监控音频振幅等场景。在调用AVRecorder的方法前，需要先调用[createAVRecorder](arkts-media-media-createavrecorder-f.md)接口构建一个AVRecorder实例。典型录制流程：[createAVRecorder](arkts-media-media-createavrecorder-f.md) → [prepare](#prepare-1) → [getInputSurface](#getinputsurface)（纯视频/音视频录制时） → [start](#start) → [pause](#pause)/[resume](#resume) → [stop](#stop) → [release](#release)。
 
 音视频录制示例可参考：[音频录制开发指导](../../../media/media/using-avrecorder-for-recording.md)、[视频录制开发指导](../../../media/media/video-recording.md)。
 
@@ -28,7 +28,7 @@ addWatermark(watermark: image.PixelMap, config: WatermarkConfiguration): Promise
 添加自定义水印图像到录制视频中。适用于需要在录制视频中嵌入品牌标识、版权信息或时间戳等水印的场景。使用Promise异步回调。  
 > **说明：**
 > - 应用最多可添加5个水印。
-> - 必须在[prepare](#prepare)之前调用。
+> - 必须在[prepare](#prepare-1)之前调用。
 
 **起始版本：** 26.0.0
 
@@ -40,7 +40,7 @@ addWatermark(watermark: image.PixelMap, config: WatermarkConfiguration): Promise
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| watermark | [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | 是 | 水印图像。该图像将作为水印叠加到录制的视频中。 |
+| watermark | image.PixelMap | 是 | 水印图像。该图像将作为水印叠加到录制的视频中。 |
 | config | [WatermarkConfiguration](arkts-media-media-watermarkconfiguration-i.md) | 是 | 配置视频录制水印的相关参数。 |
 
 **返回值：**
@@ -177,7 +177,7 @@ avRecorder.getAudioCapturerMaxAmplitude((err: BusinessError, amplitude: number) 
 getAudioCapturerMaxAmplitude(): Promise<number>
 ```
 
-获取当前音频最大振幅。适用于需要实时监控音频振幅的场景，如录音音量可视化显示、音频质量检测等。使用Promise异步回调。必须在[prepare](#prepare)和[stop](#stop)之间调用。调用接口时，获取到的返回值是上一次获取最大振幅的时刻到当前这段区间内的音频最大振幅。例如，在1s时获取了一次最大振幅，到2s时再获取到的最大振幅是1-2s这个区间内的最大值。
+获取当前音频最大振幅。适用于需要实时监控音频振幅的场景，如录音音量可视化显示、音频质量检测等。使用Promise异步回调。必须在[prepare](#prepare-1)和[stop](#stop)之间调用。调用接口时，获取到的返回值是上一次获取最大振幅的时刻到当前这段区间内的音频最大振幅。例如，在1s时获取了一次最大振幅，到2s时再获取到的最大振幅是1-2s这个区间内的最大值。
 
 **起始版本：** 11
 
@@ -356,7 +356,7 @@ getAVRecorderConfig(): Promise<AVRecorderConfig>
 
 获取实时的配置参数。适用于需要确认录制配置是否正确应用的场景，如调试录制参数、验证配置生效情况等。使用Promise异步回调。
 
-必须在[prepare](#prepare)之后调用。
+必须在[prepare](#prepare-1)之后调用。
 
 **起始版本：** 11
 
@@ -408,7 +408,7 @@ getCurrentAudioCapturerInfo(callback: AsyncCallback<audio.AudioCapturerChangeInf
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[audio.AudioCapturerChangeInfo](../../apis-audio-kit/arkts-apis/arkts-audio-audio-audiocapturerchangeinfo-i.md)&gt; | 是 | 回调函数。当获取音频采集参数成功时，err为undefined，data为获取到的audio.AudioCapturerChangeInfo，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;audio.AudioCapturerChangeInfo&gt; | 是 | 回调函数。当获取音频采集参数成功时，err为undefined，data为获取到的audio.AudioCapturerChangeInfo，否则为错误对象。 |
 
 **错误码：**
 
@@ -442,7 +442,7 @@ avRecorder.getCurrentAudioCapturerInfo((err: BusinessError, capturerInfo: audio.
 getCurrentAudioCapturerInfo(): Promise<audio.AudioCapturerChangeInfo>
 ```
 
-获取当前音频采集参数。适用于需要确认当前音频采集设备类型或验证音频配置的场景。使用Promise异步回调。必须在[prepare](#prepare)和[stop](#stop)之间调用。
+获取当前音频采集参数。适用于需要确认当前音频采集设备类型或验证音频配置的场景。使用Promise异步回调。必须在[prepare](#prepare-1)和[stop](#stop)之间调用。
 
 **起始版本：** 11
 
@@ -452,7 +452,7 @@ getCurrentAudioCapturerInfo(): Promise<audio.AudioCapturerChangeInfo>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[audio.AudioCapturerChangeInfo](../../apis-audio-kit/arkts-apis/arkts-audio-audio-audiocapturerchangeinfo-i.md)&gt; | Promise对象，返回获取的当前音频采集参数。 |
+| Promise&lt;audio.AudioCapturerChangeInfo&gt; | Promise对象，返回获取的当前音频采集参数。 |
 
 **错误码：**
 
@@ -543,7 +543,7 @@ avRecorder.getInputSurface((err: BusinessError, surfaceId: string) => {
 getInputSurface(): Promise<string>
 ```
 
-获得录制需要的surface。适用于纯视频或音视频录制时需要获取surface传递视频数据的场景。相机视频录制功能需配合相机模块使用，详情请参考[相机管理](../apis-camera-kit/arkts-apis-camera.md)。使用callback异步回调。开发者从此surface中获取surfaceBuffer，填入待录制的视频数据。填入视频数据时需携带时间戳（单位ns）和buffer size。时间戳的起始时间以系统启动时间为基准。必须在[prepare](#prepare)和[start](#start)之间调用。
+获得录制需要的surface。适用于纯视频或音视频录制时需要获取surface传递视频数据的场景。相机视频录制功能需配合相机模块使用，详情请参考[相机管理](../apis-camera-kit/arkts-apis-camera.md)。使用callback异步回调。开发者从此surface中获取surfaceBuffer，填入待录制的视频数据。填入视频数据时需携带时间戳（单位ns）和buffer size。时间戳的起始时间以系统启动时间为基准。必须在[prepare](#prepare-1)和[start](#start)之间调用。
 
 **起始版本：** 9
 
@@ -602,7 +602,7 @@ off(type: 'stateChange', callback?: OnAVRecorderStateChangeHandler): void
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder
 
@@ -623,7 +623,7 @@ off(type: 'error', callback?: ErrorCallback): void
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder
 
@@ -651,7 +651,7 @@ off(type: 'audioCapturerChange', callback?: Callback<audio.AudioCapturerChangeIn
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'audioCapturerChange' | 是 | 录音配置变化的回调类型，支持的事件：'audioCapturerChange'。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[audio.AudioCapturerChangeInfo](../../apis-audio-kit/arkts-apis/arkts-audio-audio-audiocapturerchangeinfo-i.md)&gt; | 否 | 回调函数，用于接收变化后的录音配置全量信息。如果指定参数则取消对应callback（callback对象不能是匿名函数），否则取消所有callback。从API version 12开始支持此参数。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;audio.AudioCapturerChangeInfo&gt; | 否 | 回调函数，用于接收变化后的录音配置全量信息。如果指定参数则取消对应callback（callback对象不能是匿名函数），否则取消所有callback。从API version 12开始支持此参数。 |
 
 ## off('photoAssetAvailable')
 
@@ -670,7 +670,7 @@ off(type: 'photoAssetAvailable', callback?: Callback<photoAccessHelper.PhotoAsse
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'photoAssetAvailable' | 是 | 媒体资源创建完成的回调类型，支持的事件：'photoAssetAvailable'。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[photoAccessHelper.PhotoAsset](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoasset-i.md)&gt; | 否 | 回调函数，用于接收系统创建的资源文件对应的PhotoAsset对象。如果指定参数则取消对应callback（callback对象不能是匿名函数），否则取消所有callback。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;photoAccessHelper.PhotoAsset&gt; | 否 | 回调函数，用于接收系统创建的资源文件对应的PhotoAsset对象。如果指定参数则取消对应callback（callback对象不能是匿名函数），否则取消所有callback。 |
 
 ## on('audioCapturerChange')
 
@@ -689,7 +689,7 @@ on(type: 'audioCapturerChange', callback: Callback<audio.AudioCapturerChangeInfo
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'audioCapturerChange' | 是 | 录音配置变化的回调类型，支持的事件：'audioCapturerChange'。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[audio.AudioCapturerChangeInfo](../../apis-audio-kit/arkts-apis/arkts-audio-audio-audiocapturerchangeinfo-i.md)&gt; | 是 | 回调函数，用于接收变化后的录音配置全量信息。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;audio.AudioCapturerChangeInfo&gt; | 是 | 回调函数，用于接收变化后的录音配置全量信息。 |
 
 **错误码：**
 
@@ -714,7 +714,7 @@ on(type: 'photoAssetAvailable', callback: Callback<photoAccessHelper.PhotoAsset>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'photoAssetAvailable' | 是 | 媒体资源创建完成的回调类型，支持的事件：'photoAssetAvailable'。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[photoAccessHelper.PhotoAsset](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoasset-i.md)&gt; | 是 | 回调函数，用于接收系统创建的资源文件对应的PhotoAsset对象。需在prepare配置中将FileGenerationMode设置为系统创建媒体文件模式，stop结束后才会触发此回调。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;photoAccessHelper.PhotoAsset&gt; | 是 | 回调函数，用于接收系统创建的资源文件对应的PhotoAsset对象。需在prepare配置中将FileGenerationMode设置为系统创建媒体文件模式，stop结束后才会触发此回调。 |
 
 **错误码：**
 
@@ -733,7 +733,7 @@ on(type: 'stateChange', callback: OnAVRecorderStateChangeHandler): void
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder
 
@@ -742,7 +742,7 @@ on(type: 'stateChange', callback: OnAVRecorderStateChangeHandler): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'stateChange' | 是 | 录制状态机切换的回调类型，支持的事件：'stateChange'，用户操作和系统都会触发此事件。 |
-| callback | [OnAVRecorderStateChangeHandler](arkts-media-media-onavrecorderstatechangehandler-t.md) | 是 | 回调函数，用于接收录制状态机切换事件。回调参数包括：state（录制状态，类型为AVRecorderState）和reason（状态切换原因，类型为StateChangeReason）。<br>**起始版本：** 12 |
+| callback | [OnAVRecorderStateChangeHandler](arkts-media-media-onavrecorderstatechangehandler-t.md) | 是 | 回调函数，用于接收录制状态机切换事件。回调参数包括：state（录制状态，类型为AVRecorderState）和reason（状态切换原因，类型为StateChangeReason）。<br>**适用版本：** 12 |
 
 **错误码：**
 
@@ -761,7 +761,7 @@ on(type: 'error', callback: ErrorCallback): void
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder
 
@@ -878,7 +878,7 @@ pause(): Promise<void>
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder
 
@@ -1040,7 +1040,7 @@ prepare(config: AVRecorderConfig): Promise<void>
 
 **需要权限：** ohos.permission.MICROPHONE
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder
 
@@ -1233,7 +1233,7 @@ release(): Promise<void>
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder
 
@@ -1458,7 +1458,7 @@ videoPlayer.reset((err: BusinessError) => {
 reset(): Promise<void>
 ```
 
-重置音视频录制，将录制器恢复至初始状态以便重新配置参数。使用Promise异步回调。必须在非released状态下调用，调用成功后进入idle状态。纯音频录制时，需要重新调用[prepare](#prepare)接口才能重新录制。纯视频录制、音视频录制时，需要重新调用[prepare](#prepare)和[getInputSurface](#getinputsurface)接口才能重新录制。
+重置音视频录制，将录制器恢复至初始状态以便重新配置参数。使用Promise异步回调。必须在非released状态下调用，调用成功后进入idle状态。纯音频录制时，需要重新调用[prepare](#prepare-1)接口才能重新录制。纯视频录制、音视频录制时，需要重新调用[prepare](#prepare-1)和[getInputSurface](#getinputsurface)接口才能重新录制。
 
 **起始版本：** 9
 
@@ -1588,7 +1588,7 @@ resume(): Promise<void>
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder
 
@@ -1651,7 +1651,7 @@ async function test() {
 setMetadata(metadata: Record<string, string>): void
 ```
 
-设置录制的元数据信息。适用于需要在录制文件中嵌入自定义元数据（如作者、标题、标签等）的场景。如果metadata参数与config.metadata.customInfo（参考[prepare()](#prepare)和[AVRecorderConfig](arkts-media-media-avrecorderconfig-i.md)）中存在相同的键，前者的对应值将覆盖后者。必须在[prepare()](#prepare)和[stop()](#stop)之间调用。
+设置录制的元数据信息。适用于需要在录制文件中嵌入自定义元数据（如作者、标题、标签等）的场景。如果metadata参数与config.metadata.customInfo（参考[prepare()](#prepare-1)和[AVRecorderConfig](arkts-media-media-avrecorderconfig-i.md)）中存在相同的键，前者的对应值将覆盖后者。必须在[prepare()](#prepare-1)和[stop()](#stop)之间调用。
 
 **起始版本：** 26.0.0
 
@@ -1697,7 +1697,7 @@ try {
 setWillMuteWhenInterrupted(muteWhenInterrupted: boolean): Promise<void>
 ```
 
-设置当前录制音频流是否启用静音打断模式。启用后，录制音频流被更高优先级音频打断时将录制静音而非停止录制，适用于需要在打断期间保持录制连续性的场景（如会议录音、语音备忘）。不启用则保持默认打断模式（音频流被打断时停止录制）。使用Promise异步回调。必须在[prepare()](#prepare)之前调用。
+设置当前录制音频流是否启用静音打断模式。启用后，录制音频流被更高优先级音频打断时将录制静音而非停止录制，适用于需要在打断期间保持录制连续性的场景（如会议录音、语音备忘）。不启用则保持默认打断模式（音频流被打断时停止录制）。使用Promise异步回调。必须在[prepare()](#prepare-1)之前调用。
 
 **起始版本：** 20
 
@@ -1794,11 +1794,11 @@ avRecorder.start((err: BusinessError) => {
 start(): Promise<void>
 ```
 
-开始录制。使用Promise异步回调。必须在[prepare](#prepare)之后调用，调用成功后进入started状态。录制视频时，还需在[getInputSurface](#getinputsurface)接口调用成功后，才能调用此接口。
+开始录制。使用Promise异步回调。必须在[prepare](#prepare-1)之后调用，调用成功后进入started状态。录制视频时，还需在[getInputSurface](#getinputsurface)接口调用成功后，才能调用此接口。
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder
 
@@ -1942,11 +1942,11 @@ videoPlayer.stop((err: BusinessError) => {
 stop(): Promise<void>
 ```
 
-停止录制。使用Promise异步回调。必须在[start](#start)或[pause](#pause)之后调用，调用成功后进入stopped状态。当prepare配置中将FileGenerationMode设置为系统创建媒体文件模式时，本接口调用结束后会触发on('photoAssetAvailable')回调。纯音频录制时，需要重新调用[prepare](#prepare)接口才能重新录制；纯视频录制、音视频录制时，需要重新调用[prepare](#prepare)和[getInputSurface](#getinputsurface)接口才能重新录制。
+停止录制。使用Promise异步回调。必须在[start](#start)或[pause](#pause)之后调用，调用成功后进入stopped状态。当prepare配置中将FileGenerationMode设置为系统创建媒体文件模式时，本接口调用结束后会触发on('photoAssetAvailable')回调。纯音频录制时，需要重新调用[prepare](#prepare-1)接口才能重新录制；纯视频录制、音视频录制时，需要重新调用[prepare](#prepare-1)和[getInputSurface](#getinputsurface)接口才能重新录制。
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder
 
@@ -2018,7 +2018,7 @@ videoPlayer.stop().then(() => {
 updateRotation(rotation: number): Promise<void>
 ```
 
-更新视频旋转角度。适用于设备方向发生变化（如横竖屏切换）时需要动态调整录制视频旋转角度的场景。使用Promise异步回调。必须在[prepare](#prepare)和[start](#start)之间调用。
+更新视频旋转角度。适用于设备方向发生变化（如横竖屏切换）时需要动态调整录制视频旋转角度的场景。使用Promise异步回调。必须在[prepare](#prepare-1)和[start](#start)之间调用。
 
 **起始版本：** 12
 
@@ -2074,6 +2074,6 @@ readonly state: AVRecorderState
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder

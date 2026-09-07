@@ -99,7 +99,7 @@ symbolEndIcon?: SymbolGlyphModifier
 
 Symbol icon at the end of a menu item. When this parameter is set, the icon set through **endIcon** is not displayed.
 
-**Type:** SymbolGlyphModifier
+**Type:** [SymbolGlyphModifier](arkts-arkui-symbolglyphmodifier-t.md)
 
 **Since:** 12
 
@@ -117,7 +117,7 @@ symbolStartIcon?: SymbolGlyphModifier
 
 Symbol icon at the start of a menu item. When this parameter is set, the icon set through **startIcon** is not displayed.
 
-**Type:** SymbolGlyphModifier
+**Type:** [SymbolGlyphModifier](arkts-arkui-symbolglyphmodifier-t.md)
 
 **Since:** 12
 

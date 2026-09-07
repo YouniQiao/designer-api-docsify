@@ -16,7 +16,7 @@ Progress(options: ProgressOptions<Type>)
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
 
@@ -26,7 +26,7 @@ Progress(options: ProgressOptions<Type>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [ProgressOptions](arkts-arkui-progressoptions-i.md)&lt;[Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md)&gt; | 是 | 按进度条类型不同，设置不同属性的进度条组件参数。 |
+| options | [ProgressOptions](arkts-arkui-progressoptions-i.md)&lt;Type&gt; | 是 | 按进度条类型不同，设置不同属性的进度条组件参数。 |
 
 ## 汇总
 
@@ -339,7 +339,6 @@ struct ProgressExample {
 ```
 
 该示例通过[CapsuleStyleOptions](arkts-arkui-capsulestyleoptions-i.md)的入参borderRadius，实现了Capsule类型进度条圆角半径设置。
-从API version 18开始，新增borderRadius属性。
 
 ```TypeScript
 import { LengthMetrics } from '@kit.ArkUI';

@@ -148,6 +148,8 @@ const RTD_TEXT: number[]
 
 NDEF record of the text type. For details, see **NFCForum-TS-NDEF_1.0**.
 
+**Type:** number[]
+
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -161,6 +163,8 @@ const RTD_URI: number[]
 ```
 
 NDEF record of the URI type. For details, see **NFCForum-TS-NDEF_1.0**.
+
+**Type:** number[]
 
 **Since:** 9
 

@@ -10,4 +10,4 @@ Defines the network link address information.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
-**Type:** [connection.LinkAddress](arkts-network-connection-linkaddress-i.md)
+**Type:** connection.LinkAddress

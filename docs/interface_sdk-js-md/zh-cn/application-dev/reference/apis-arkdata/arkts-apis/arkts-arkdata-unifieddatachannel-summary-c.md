@@ -26,11 +26,27 @@ get overview(): Record<string, number>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## summary
+
+```TypeScript
+get summary(): Record<string, number>
+```
+
+是一个字典类型对象，key表示数据类型（见[UniformDataType](arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md)），value为统一数据对象中该类型记录大小总和（单位：Byte）。
+
+**类型：** Record&lt;string, number&gt;
+
+**起始版本：** 10
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+**系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ```TypeScript
 set summary(value: Record<string, number>)
@@ -44,11 +60,27 @@ set summary(value: Record<string, number>)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## totalSize
+
+```TypeScript
+get totalSize(): number
+```
+
+统一数据对象内记录总大小（单位：Byte）。
+
+**类型：** number
+
+**起始版本：** 10
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+**系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ```TypeScript
 set totalSize(value: number)
@@ -62,7 +94,7 @@ set totalSize(value: number)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 

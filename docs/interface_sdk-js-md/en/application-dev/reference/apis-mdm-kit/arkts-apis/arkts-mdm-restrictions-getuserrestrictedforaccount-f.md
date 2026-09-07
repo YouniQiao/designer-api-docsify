@@ -18,7 +18,7 @@ Obtains the disabled status of a setting item for a specified user.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [getUserRestrictedForAccount](#getuserrestrictedforaccount)(admin: Want | null, settingsItem: SettingsForAccount, accountId: int)
+**Substitutes:** [getUserRestrictedForAccount](#getuserrestrictedforaccount-1)(admin: Want | null, settingsItem: SettingsForAccount, accountId: int)
 
 **Required permissions:** ohos.permission.ENTERPRISE_SET_USER_RESTRICTION
 

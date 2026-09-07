@@ -19,4 +19,3 @@ type OnFirstScreenPaintCallback = (firstScreenPaint: FirstScreenPaint) => void
 **示例**
 
 完整示例代码参考[onFirstScreenPaint](./arkts-basic-components-web-events.md#onfirstscreenpaint)。
-- simpleType:

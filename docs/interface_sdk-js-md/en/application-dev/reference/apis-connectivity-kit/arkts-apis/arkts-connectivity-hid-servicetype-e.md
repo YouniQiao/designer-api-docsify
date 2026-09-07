@@ -4,8 +4,6 @@ Describe the l2cap service type.
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## SERVICE_NO_TRAFFIC

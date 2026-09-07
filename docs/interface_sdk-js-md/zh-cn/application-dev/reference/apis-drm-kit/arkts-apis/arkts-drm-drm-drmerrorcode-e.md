@@ -16,7 +16,7 @@ ERROR_UNKNOWN = 24700101
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本14开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Multimedia.Drm.Core
 
@@ -30,7 +30,7 @@ MediaKeySystem实例数量超过上限（64个）。请调用[destroy](arkts-drm
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本14开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Multimedia.Drm.Core
 
@@ -44,7 +44,7 @@ MediaKeySession实例数量超过上限（64个）。请调用[destroy](arkts-dr
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本14开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Multimedia.Drm.Core
 
@@ -58,6 +58,6 @@ DRM服务异常，当DRM服务发生致命错误时返回。可能原因：系�
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本14开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Multimedia.Drm.Core

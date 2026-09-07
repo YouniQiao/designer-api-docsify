@@ -48,7 +48,7 @@ primaryKey: commonType.ValuesBucket
 
 Primary key of the target asset in the RDB store.
 
-**Type:** [commonType.ValuesBucket](arkts-arkdata-commontype-valuesbucket-t.md)
+**Type:** commonType.ValuesBucket
 
 **Since:** 11
 

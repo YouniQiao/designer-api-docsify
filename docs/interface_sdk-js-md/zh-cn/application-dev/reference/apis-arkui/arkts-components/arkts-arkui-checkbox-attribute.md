@@ -27,7 +27,7 @@ contentModifier(modifier: ContentModifier<CheckBoxConfiguration>)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -49,7 +49,7 @@ contentModifier(modifier: Optional<ContentModifier<CheckBoxConfiguration>>)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -71,7 +71,7 @@ mark(value: MarkStyle)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -93,7 +93,7 @@ mark(style: Optional<MarkStyle>)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -113,7 +113,7 @@ onChange(callback: OnCheckboxChangeCallback)
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
 
@@ -123,7 +123,7 @@ onChange(callback: OnCheckboxChangeCallback)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [OnCheckboxChangeCallback](arkts-arkui-oncheckboxchangecallback-t.md) | 是 | 返回选中的状态，true表示已选中，false表示未选中。<br>**起始版本：** 18 |
+| callback | [OnCheckboxChangeCallback](arkts-arkui-oncheckboxchangecallback-t.md) | 是 | 返回选中的状态，true表示已选中，false表示未选中。<br>**适用版本：** 18 |
 
 ## onChange
 
@@ -137,7 +137,7 @@ onChange(callback: Optional<OnCheckboxChangeCallback>)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本18开始，该接口支持在ArkTS卡片中使用。
 
@@ -163,7 +163,7 @@ select(value: boolean)
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
 
@@ -189,7 +189,7 @@ select(isSelected: Optional<boolean>)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本18开始，该接口支持在ArkTS卡片中使用。
 
@@ -211,7 +211,7 @@ selectedColor(value: ResourceColor)
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
 
@@ -235,7 +235,7 @@ selectedColor(resColor: Optional<ResourceColor>)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本18开始，该接口支持在ArkTS卡片中使用。
 
@@ -259,7 +259,7 @@ shape(value: CheckBoxShape)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本11开始，该接口支持在ArkTS卡片中使用。
 
@@ -269,7 +269,7 @@ shape(value: CheckBoxShape)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [CheckBoxShape](../arkts-apis/arkts-arkui-checkboxshape-e.md) | 是 | [Checkbox组件形状，包括圆形和圆角方形。默认值：CheckBoxShape.CIRCLE](arkts-arkui-particleemittershape-e.md) |
+| value | [CheckBoxShape](../arkts-apis/arkts-arkui-checkboxshape-e.md) | 是 | Checkbox组件形状，包括圆形和圆角方形。默认值：CheckBoxShape.CIRCLE |
 
 ## shape
 
@@ -283,7 +283,7 @@ shape(shape: Optional<CheckBoxShape>)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本18开始，该接口支持在ArkTS卡片中使用。
 
@@ -307,7 +307,7 @@ unselectedColor(value: ResourceColor)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -329,7 +329,7 @@ unselectedColor(resColor: Optional<ResourceColor>)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

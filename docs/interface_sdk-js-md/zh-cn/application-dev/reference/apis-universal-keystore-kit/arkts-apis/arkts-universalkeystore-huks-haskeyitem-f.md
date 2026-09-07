@@ -18,7 +18,7 @@ function hasKeyItem(keyAlias: string, options: HuksOptions, callback: AsyncCallb
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Security.Huks.Core
 
@@ -81,7 +81,7 @@ function hasKeyItem(keyAlias: string, options: HuksOptions): Promise<boolean>
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Security.Huks.Extension
 

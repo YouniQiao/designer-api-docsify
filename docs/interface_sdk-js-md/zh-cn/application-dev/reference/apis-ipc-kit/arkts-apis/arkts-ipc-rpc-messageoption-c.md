@@ -22,7 +22,7 @@ MessageOption构造函数。
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -55,7 +55,7 @@ MessageOption构造函数。
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -87,7 +87,7 @@ getFlags(): number
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -127,7 +127,7 @@ getWaitTime(): number
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -165,7 +165,7 @@ isAsync(): boolean
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -199,7 +199,7 @@ setAsync(isAsync: boolean): void
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -233,7 +233,7 @@ setFlags(flags: number): void
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -270,7 +270,7 @@ setWaitTime(waitTime: number): void
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -310,7 +310,7 @@ static readonly TF_ACCEPT_FDS: number
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -328,7 +328,7 @@ static readonly TF_ASYNC: number
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -346,7 +346,7 @@ static readonly TF_SYNC: number
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -364,6 +364,6 @@ RPC等待时间（单位：秒），IPC场景下无效。默认等待为8秒（�
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Communication.IPC.Core

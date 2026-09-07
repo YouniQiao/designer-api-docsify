@@ -18,7 +18,7 @@ function updateContact(contact: Contact, callback: AsyncCallback<void>): void
 
 **废弃版本：** 10
 
-**替代接口：** [updateContact](#updatecontact)(context: Context, contact: Contact, callback: AsyncCallback&lt;void&gt;)
+**替代接口：** [updateContact](#updatecontact-1)(context: Context, contact: Contact, callback: AsyncCallback&lt;void&gt;)
 
 **需要权限：** ohos.permission.WRITE_CONTACTS
 
@@ -90,8 +90,6 @@ function updateContact(context: Context, contact: Contact, callback: AsyncCallba
 **示例**
 
 > 说明：
-> 
-> 在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在界面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -134,7 +132,7 @@ function updateContact(contact: Contact, attrs: ContactAttributes, callback: Asy
 
 **废弃版本：** 10
 
-**替代接口：** [updateContact](#updatecontact)(context: Context, contact: Contact, attrs: ContactAttributes, callback: AsyncCallback&lt;void&gt;)
+**替代接口：** [updateContact](#updatecontact-3)(context: Context, contact: Contact, attrs: ContactAttributes, callback: AsyncCallback&lt;void&gt;)
 
 **需要权限：** ohos.permission.WRITE_CONTACTS
 
@@ -211,8 +209,6 @@ function updateContact(context: Context, contact: Contact, attrs: ContactAttribu
 **示例**
 
 > 说明：
-> 
-> 在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在界面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -256,7 +252,7 @@ function updateContact(contact: Contact, attrs?: ContactAttributes): Promise<voi
 
 **废弃版本：** 10
 
-**替代接口：** [updateContact](#updatecontact)(context: Context, contact: Contact, attrs?: ContactAttributes)
+**替代接口：** [updateContact](#updatecontact-5)(context: Context, contact: Contact, attrs?: ContactAttributes)
 
 **需要权限：** ohos.permission.WRITE_CONTACTS
 
@@ -338,8 +334,6 @@ function updateContact(context: Context, contact: Contact, attrs?: ContactAttrib
 **示例**
 
 > 说明：
-> 
-> 在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在界面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
 
 ```TypeScript
 import { contact } from '@kit.ContactsKit';

@@ -1,9 +1,0 @@
-# SymbolSpanModifier
-
-## Summary
-
-### Classes
-
-| Name | Description |
-| --- | --- |
-| [SymbolSpanModifier](arkts-arkui-symbolspanmodifier-c.md) | Defines SymbolSpan Modifier. Provided for use by the SymbolSpan component |

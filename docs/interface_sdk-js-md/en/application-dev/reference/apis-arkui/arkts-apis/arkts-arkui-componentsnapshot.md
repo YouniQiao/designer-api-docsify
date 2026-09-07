@@ -23,6 +23,8 @@ For typical use cases (for example, number screenshots) and best practices of co
 
 **Since:** 10
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import

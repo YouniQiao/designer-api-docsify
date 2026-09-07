@@ -32,7 +32,7 @@ Obtains the management policy for extensions from external sources.
 
 | Type | Description |
 | --- | --- |
-| [common.ManagedPolicy](arkts-mdm-common-managedpolicy-e.md) | Management policy obtained. |
+| common.ManagedPolicy | Management policy obtained. |
 
 **Error codes:**
 
@@ -90,7 +90,7 @@ Obtains the management policy for extensions from external sources.
 
 | Type | Description |
 | --- | --- |
-| [common.ManagedPolicy](arkts-mdm-common-managedpolicy-e.md) | Management policy obtained. |
+| common.ManagedPolicy | Management policy obtained. |
 
 **Error codes:**
 

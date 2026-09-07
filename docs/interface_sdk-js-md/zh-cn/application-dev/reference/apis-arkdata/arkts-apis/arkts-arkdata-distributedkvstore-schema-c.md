@@ -53,6 +53,20 @@ schema.skip = 0;
 ## indexes
 
 ```TypeScript
+get indexes(): Array<string>
+```
+
+获取索引字段定义。
+
+**类型：** Array&lt;string&gt;
+
+**起始版本：** 9
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**系统能力：** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
+
+```TypeScript
 set indexes(indexes: Array<string>)
 ```
 
@@ -67,6 +81,20 @@ set indexes(indexes: Array<string>)
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
 
 ## mode
+
+```TypeScript
+get mode(): number
+```
+
+获取Schema的模式。
+
+**类型：** number
+
+**起始版本：** 9
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**系统能力：** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
 
 ```TypeScript
 set mode(mode: number)
@@ -85,6 +113,20 @@ set mode(mode: number)
 ## root
 
 ```TypeScript
+get root(): FieldNode
+```
+
+获取Value中所有字段的定义。
+
+**类型：** FieldNode
+
+**起始版本：** 9
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**系统能力：** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
+
+```TypeScript
 set root(root: FieldNode)
 ```
 
@@ -99,6 +141,20 @@ set root(root: FieldNode)
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
 
 ## skip
+
+```TypeScript
+get skip(): number
+```
+
+获取跳过的字节数。
+
+**类型：** number
+
+**起始版本：** 9
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**系统能力：** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
 
 ```TypeScript
 set skip(skip: number)

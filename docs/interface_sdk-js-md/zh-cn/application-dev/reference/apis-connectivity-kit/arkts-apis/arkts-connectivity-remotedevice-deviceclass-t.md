@@ -12,4 +12,4 @@ type DeviceClass = nearlinkConstant.DeviceClass
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
-**类型：** [nearlinkConstant.DeviceClass](arkts-connectivity-nearlinkconstant-deviceclass-e.md)
+**类型：** nearlinkConstant.DeviceClass

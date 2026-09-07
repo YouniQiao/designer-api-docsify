@@ -30,7 +30,7 @@ off(event: 'progress', callback?: (progress: Progress) => void): void
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
@@ -62,7 +62,7 @@ off(event: 'completed', callback?: (progress: Progress) => void): void
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
@@ -94,7 +94,7 @@ off(event: 'failed', callback?: (progress: Progress) => void): void
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
@@ -213,7 +213,7 @@ off(event: 'response', callback?: Callback<HttpResponse>): void
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
@@ -302,7 +302,7 @@ on(event: 'progress', callback: (progress: Progress) => void): void
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
@@ -334,7 +334,7 @@ on(event: 'completed', callback: (progress: Progress) => void): void
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
@@ -366,7 +366,7 @@ on(event: 'failed', callback: (progress: Progress) => void): void
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
@@ -485,7 +485,7 @@ on(event: 'response', callback: Callback<HttpResponse>): void
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
@@ -985,7 +985,7 @@ start(callback: AsyncCallback<void>): void
 
 **需要权限：** ohos.permission.INTERNET
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
@@ -1068,7 +1068,7 @@ start(): Promise<void>
 
 **需要权限：** ohos.permission.INTERNET
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
@@ -1138,7 +1138,7 @@ stop(callback: AsyncCallback<void>): void
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
@@ -1214,7 +1214,7 @@ stop(): Promise<void>
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
@@ -1290,7 +1290,7 @@ config: Config
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
@@ -1306,6 +1306,6 @@ readonly tid: string
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Request.FileTransferAgent

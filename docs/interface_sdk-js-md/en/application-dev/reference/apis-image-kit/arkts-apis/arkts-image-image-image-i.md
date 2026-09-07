@@ -405,7 +405,7 @@ readonly colorSpace: colorSpaceManager.ColorSpace
 
 Color space of the image.
 
-**Type:** [colorSpaceManager.ColorSpace](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-colorspacemanager-colorspace-e.md)
+**Type:** colorSpaceManager.ColorSpace
 
 **Since:** 23
 

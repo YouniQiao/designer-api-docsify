@@ -17,6 +17,7 @@ Remove a beacon fence.
 **Since:** 20
 
 **Required permissions:** 
+- API version 25 and later: N/A
 - API versions 20 to 24: ohos.permission.LOCATION and ohos.permission.APPROXIMATELY_LOCATION
 
 **Atomic service API:** This API can be used in atomic services since API version 20.

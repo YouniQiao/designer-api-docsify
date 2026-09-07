@@ -18,7 +18,7 @@ function queryContactsByEmail(email: string, callback: AsyncCallback<Array<Conta
 
 **废弃版本：** 10
 
-**替代接口：** [queryContactsByEmail](#querycontactsbyemail)(context: Context, email: string, callback: AsyncCallback&lt;Array&lt;Contact&gt;&gt;)
+**替代接口：** [queryContactsByEmail](#querycontactsbyemail-1)(context: Context, email: string, callback: AsyncCallback&lt;Array&lt;Contact&gt;&gt;)
 
 **需要权限：** ohos.permission.READ_CONTACTS
 
@@ -79,8 +79,6 @@ function queryContactsByEmail(context: Context, email: string, callback: AsyncCa
 **示例**
 
 > 说明：
-> 
-> 在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在界面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -111,7 +109,7 @@ function queryContactsByEmail(email: string, holder: Holder, callback: AsyncCall
 
 **废弃版本：** 10
 
-**替代接口：** [queryContactsByEmail](#querycontactsbyemail)(context: Context, email: string, holder: Holder, callback: AsyncCallback&lt;Array&lt;Contact&gt;&gt;)
+**替代接口：** [queryContactsByEmail](#querycontactsbyemail-3)(context: Context, email: string, holder: Holder, callback: AsyncCallback&lt;Array&lt;Contact&gt;&gt;)
 
 **需要权限：** ohos.permission.READ_CONTACTS
 
@@ -179,8 +177,6 @@ function queryContactsByEmail(context: Context, email: string, holder: Holder,
 **示例**
 
 > 说明：
-> 
-> 在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在界面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -215,7 +211,7 @@ function queryContactsByEmail(email: string, attrs: ContactAttributes, callback:
 
 **废弃版本：** 10
 
-**替代接口：** [queryContactsByEmail](#querycontactsbyemail)(context: Context, email: string, attrs: ContactAttributes, callback: AsyncCallback&lt;Array&lt;Contact&gt;&gt;)
+**替代接口：** [queryContactsByEmail](#querycontactsbyemail-5)(context: Context, email: string, attrs: ContactAttributes, callback: AsyncCallback&lt;Array&lt;Contact&gt;&gt;)
 
 **需要权限：** ohos.permission.READ_CONTACTS
 
@@ -281,8 +277,6 @@ function queryContactsByEmail(context: Context, email: string, attrs: ContactAtt
 **示例**
 
 > 说明：
-> 
-> 在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在界面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -315,7 +309,7 @@ function queryContactsByEmail(email: string, holder: Holder, attrs: ContactAttri
 
 **废弃版本：** 10
 
-**替代接口：** [queryContactsByEmail](#querycontactsbyemail)(context: Context, email: string, holder: Holder, attrs: ContactAttributes, callback: AsyncCallback&lt;Array&lt;Contact&gt;&gt;)
+**替代接口：** [queryContactsByEmail](#querycontactsbyemail-7)(context: Context, email: string, holder: Holder, attrs: ContactAttributes, callback: AsyncCallback&lt;Array&lt;Contact&gt;&gt;)
 
 **需要权限：** ohos.permission.READ_CONTACTS
 
@@ -386,8 +380,6 @@ function queryContactsByEmail(context: Context, email: string, holder: Holder, a
 **示例**
 
 > 说明：
-> 
-> 在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在界面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -424,7 +416,7 @@ function queryContactsByEmail(email: string, holder?: Holder, attrs?: ContactAtt
 
 **废弃版本：** 10
 
-**替代接口：** [queryContactsByEmail](#querycontactsbyemail)(context: Context, email: string, holder?: Holder, attrs?: ContactAttributes)
+**替代接口：** [queryContactsByEmail](#querycontactsbyemail-9)(context: Context, email: string, holder?: Holder, attrs?: ContactAttributes)
 
 **需要权限：** ohos.permission.READ_CONTACTS
 
@@ -501,8 +493,6 @@ function queryContactsByEmail(context: Context, email: string, holder?: Holder, 
 **示例**
 
 > 说明：
-> 
-> 在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在界面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
 
 ```TypeScript
 import { common } from '@kit.AbilityKit';

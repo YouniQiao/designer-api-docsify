@@ -18,7 +18,7 @@ function on(type: 'wifiStateChange', callback: Callback<number>): void
 
 **需要权限：** ohos.permission.GET_WIFI_INFO
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -51,7 +51,7 @@ function on(type: 'wifiConnectionChange', callback: Callback<number>): void
 
 **需要权限：** ohos.permission.GET_WIFI_INFO
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -84,7 +84,7 @@ function on(type: 'wifiScanStateChange', callback: Callback<number>): void
 
 **需要权限：** ohos.permission.GET_WIFI_INFO
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -186,7 +186,7 @@ function on(type: 'p2pStateChange', callback: Callback<number>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'p2pStateChange' | 是 | 固定填"p2pStateChange"字符串。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 是 | 状态改变回调函数。返回状态值枚举：   - 1: 空闲。   - 2: 打开中。   - 3: 已打开。   - 4: 关闭中。<br/>- 5: 已关闭。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 是 | 状态改变回调函数。返回状态值枚举：   - 1: 空闲。   - 2: 打开中。   - 3: 已打开。   - 4: 关闭中。&lt;br/ &gt;- 5: 已关闭。 |
 
 **错误码：**
 

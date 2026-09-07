@@ -31,7 +31,7 @@ aboutToDelete(callback: Callback<RichEditorDeleteValue, boolean>)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -39,7 +39,7 @@ aboutToDelete(callback: Callback<RichEditorDeleteValue, boolean>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | Callback&lt;[RichEditorDeleteValue](arkts-arkui-richeditordeletevalue-i.md), boolean&gt; | 是 | [RichEditorDeleteValue](arkts-arkui-richeditordeletevalue-i.md)为准备删除的内容所在的文本或者图片Span信息。true表示组件执行删除操作，false表示组件不执行删除操作。输入法删除内容前的回调，英文预上屏点击候选词时会执行该回调。<br>**起始版本：** 12 |
+| callback | Callback&lt;[RichEditorDeleteValue](arkts-arkui-richeditordeletevalue-i.md), boolean&gt; | 是 | [RichEditorDeleteValue](arkts-arkui-richeditordeletevalue-i.md)为准备删除的内容所在的文本或者图片Span信息。true表示组件执行删除操作，false表示组件不执行删除操作。输入法删除内容前的回调，英文预上屏点击候选词时会执行该回调。<br>**适用版本：** 12 |
 
 ## aboutToIMEInput
 
@@ -57,7 +57,7 @@ aboutToIMEInput(callback: Callback<RichEditorInsertValue, boolean>)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -65,7 +65,7 @@ aboutToIMEInput(callback: Callback<RichEditorInsertValue, boolean>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | Callback&lt;[RichEditorInsertValue](arkts-arkui-richeditorinsertvalue-i.md), boolean&gt; | 是 | [RichEditorInsertValue](arkts-arkui-richeditorinsertvalue-i.md)为输入法将要输入内容信息。true表示组件执行添加内容操作，false表示组件不执行添加内容操作。输入法输入内容前的回调。<br>**起始版本：** 12 |
+| callback | Callback&lt;[RichEditorInsertValue](arkts-arkui-richeditorinsertvalue-i.md), boolean&gt; | 是 | [RichEditorInsertValue](arkts-arkui-richeditorinsertvalue-i.md)为输入法将要输入内容信息。true表示组件执行添加内容操作，false表示组件不执行添加内容操作。输入法输入内容前的回调。<br>**适用版本：** 12 |
 
 ## barState
 
@@ -83,7 +83,7 @@ RichEditor滚动条的显示模式。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本13开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本13开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -91,7 +91,7 @@ RichEditor滚动条的显示模式。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| state | [BarState](../arkts-apis/arkts-arkui-barstate-e.md) | 是 | [RichEditor滚动条的显示模式。默认值：BarState.Auto](arkts-arkui-navigationmode-e.md) |
+| state | [BarState](../arkts-apis/arkts-arkui-barstate-e.md) | 是 | RichEditor滚动条的显示模式。默认值：BarState.Auto |
 
 ## bindSelectionMenu
 
@@ -106,7 +106,7 @@ bindSelectionMenu(spanType: RichEditorSpanType, content: CustomBuilder, response
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -114,9 +114,9 @@ bindSelectionMenu(spanType: RichEditorSpanType, content: CustomBuilder, response
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| spanType | [RichEditorSpanType](arkts-arkui-richeditorspantype-e.md) | 是 | [菜单的类型。默认值：RichEditorSpanType.TEXT](arkts-arkui-textspantype-e.md) |
+| spanType | [RichEditorSpanType](arkts-arkui-richeditorspantype-e.md) | 是 | 菜单的类型。默认值：RichEditorSpanType.TEXT |
 | content | [CustomBuilder](arkts-arkui-custombuilder-t.md) | 是 | 菜单的内容。 |
-| responseType | [ResponseType](../arkts-apis/arkts-arkui-responsetype-e.md) \| [RichEditorResponseType](arkts-arkui-richeditorresponsetype-e.md) | 是 | [菜单的响应类型。默认值：ResponseType.LongPress](../arkts-apis/arkts-arkui-responsetype-e.md)<br>**起始版本：** 11 |
+| responseType | [ResponseType](../arkts-apis/arkts-arkui-responsetype-e.md) \| [RichEditorResponseType](arkts-arkui-richeditorresponsetype-e.md) | 是 | 菜单的响应类型。默认值：ResponseType.LongPress<br>**适用版本：** 11 |
 | options | [SelectionMenuOptions](arkts-arkui-selectionmenuoptions-i.md) | 否 | 菜单的选项。当需要自定义菜单弹出/关闭回调、指定菜单类型等信息时传入此参数；不传入时，使用默认选择菜单选项配置。 |
 
 ## caretColor
@@ -131,7 +131,7 @@ caretColor(value: ResourceColor)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -161,7 +161,7 @@ compressLeadingPunctuation(enabled: Optional<boolean>)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -193,7 +193,7 @@ copyOptions不为CopyOptions.None时，长按组件内容，会弹出文本选�
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -201,7 +201,7 @@ copyOptions不为CopyOptions.None时，长按组件内容，会弹出文本选�
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | CopyOptions | 是 | [文本内容是否支持复制和粘贴。默认值：CopyOptions.LocalDevice](../arkts-apis/arkts-arkui-copyoptions-e.md) |
+| value | CopyOptions | 是 | 文本内容是否支持复制和粘贴。默认值：CopyOptions.LocalDevice |
 
 ## customKeyboard
 
@@ -230,7 +230,7 @@ customKeyboard(value: CustomBuilder | ComponentContent | undefined,
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -238,8 +238,8 @@ customKeyboard(value: CustomBuilder | ComponentContent | undefined,
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [CustomBuilder](arkts-arkui-custombuilder-t.md) \| ComponentContent \| undefined | 是 | 自定义键盘。 传入undefined时默认使用系统键盘。<br>**起始版本：** 23 |
-| options | [KeyboardOptions](arkts-arkui-keyboardoptions-i.md) \| undefined | 否 | 设置自定义键盘是否支持避让功能。传入undefined或省略时默认不支持避让。<br>**起始版本：** 23 |
+| value | [CustomBuilder](arkts-arkui-custombuilder-t.md) \| ComponentContent \| undefined | 是 | 自定义键盘。 传入undefined时默认使用系统键盘。<br>**适用版本：** 23 |
+| options | [KeyboardOptions](arkts-arkui-keyboardoptions-i.md) \| undefined | 否 | 设置自定义键盘是否支持避让功能。传入undefined或省略时默认不支持避让。<br>**适用版本：** 23 |
 
 ## dataDetectorConfig
 
@@ -261,7 +261,7 @@ dataDetectorConfig(config: TextDataDetectorConfig)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -291,7 +291,7 @@ editMenuOptions(editMenu: EditMenuOptions)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -313,7 +313,7 @@ enableAutoSpacing(enable: Optional<boolean>)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -347,7 +347,7 @@ enableDataDetector(enable: boolean)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -373,7 +373,7 @@ enableHapticFeedback(isEnabled: boolean)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本13开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本13开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -399,7 +399,7 @@ enableKeyboardOnFocus(isEnabled: boolean)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -427,7 +427,7 @@ enablePreviewText(enable: boolean)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -457,7 +457,7 @@ AI菜单生效时，选中范围内需包括且仅包括一个完整的AI实体�
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -481,7 +481,7 @@ enterKeyType(value: EnterKeyType)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -507,7 +507,7 @@ fallbackLineSpacing(enabled: Optional<boolean>)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -529,7 +529,7 @@ horizontalScrolling(enabled: Optional<boolean>)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -551,7 +551,7 @@ includeFontPadding(include: Optional<boolean>)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -575,7 +575,7 @@ keyboardAppearance(appearance: Optional<KeyboardAppearance>)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本15开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -597,7 +597,7 @@ maxLength(maxLength: Optional<number>)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -619,7 +619,7 @@ maxLines(maxLines: Optional<number>)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -643,7 +643,7 @@ onCopy(callback: Callback<CopyEvent>)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -667,7 +667,7 @@ onCut(callback: Callback<CutEvent>)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -691,7 +691,7 @@ onDeleteComplete(callback: Callback<void>)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -699,7 +699,7 @@ onDeleteComplete(callback: Callback<void>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | Callback&lt;void&gt; | 是 | 订阅输入法完成删除内容的回调。<br>**起始版本：** 12 |
+| callback | Callback&lt;void&gt; | 是 | 订阅输入法完成删除内容的回调。<br>**适用版本：** 12 |
 
 ## onDidChange
 
@@ -719,7 +719,7 @@ onDidChange(callback: OnDidChangeCallback) : RichEditorAttribute
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -747,7 +747,7 @@ onDidIMEInput(callback: Callback<TextRange>)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -769,7 +769,7 @@ onEditingChange(callback: Callback<boolean>)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -795,7 +795,7 @@ onIMEInputComplete(callback: Callback<RichEditorTextSpanResult>)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -803,7 +803,7 @@ onIMEInputComplete(callback: Callback<RichEditorTextSpanResult>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | Callback&lt;[RichEditorTextSpanResult](arkts-arkui-richeditortextspanresult-i.md)&gt; | 是 | [RichEditorTextSpanResult](arkts-arkui-richeditortextspanresult-i.md)为输入法完成输入后的文本Span信息。输入法完成输入后的回调。<br>**起始版本：** 12 |
+| callback | Callback&lt;[RichEditorTextSpanResult](arkts-arkui-richeditortextspanresult-i.md)&gt; | 是 | [RichEditorTextSpanResult](arkts-arkui-richeditortextspanresult-i.md)为输入法完成输入后的文本Span信息。输入法完成输入后的回调。<br>**适用版本：** 12 |
 
 ## onPaste
 
@@ -819,7 +819,7 @@ onPaste(callback: PasteEventCallback)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -827,7 +827,7 @@ onPaste(callback: PasteEventCallback)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [PasteEventCallback](arkts-arkui-pasteeventcallback-t.md) | 是 | 订阅粘贴时的回调。<br>**起始版本：** 12 |
+| callback | [PasteEventCallback](arkts-arkui-pasteeventcallback-t.md) | 是 | 订阅粘贴时的回调。<br>**适用版本：** 12 |
 
 ## onReady
 
@@ -841,7 +841,7 @@ onReady(callback: Callback<void>)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -849,7 +849,7 @@ onReady(callback: Callback<void>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | Callback&lt;void&gt; | 是 | 订阅富文本组件初始化完成的回调。<br>**起始版本：** 12 |
+| callback | Callback&lt;void&gt; | 是 | 订阅富文本组件初始化完成的回调。<br>**适用版本：** 12 |
 
 ## onSelect
 
@@ -869,7 +869,7 @@ onSelect(callback: Callback<RichEditorSelection>)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -877,7 +877,7 @@ onSelect(callback: Callback<RichEditorSelection>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | Callback&lt;[RichEditorSelection](arkts-arkui-richeditorselection-i.md)&gt; | 是 | [RichEditorSelection](arkts-arkui-richeditorselection-i.md)为选中的所有span信息。选择时触发的回调。<br>**起始版本：** 12 |
+| callback | Callback&lt;[RichEditorSelection](arkts-arkui-richeditorselection-i.md)&gt; | 是 | [RichEditorSelection](arkts-arkui-richeditorselection-i.md)为选中的所有span信息。选择时触发的回调。<br>**适用版本：** 12 |
 
 ## onSelectionChange
 
@@ -891,7 +891,7 @@ onSelectionChange(callback: Callback<RichEditorRange>)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -913,7 +913,7 @@ onSubmit(callback: SubmitCallback)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -943,7 +943,7 @@ onWillAttachIME(callback: Callback<IMEClient> | undefined)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -971,7 +971,7 @@ onWillChange(callback: Callback<RichEditorChangeValue, boolean>) : RichEditorAtt
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -995,7 +995,7 @@ orphanCharOptimization(enabled: Optional<boolean>)
 
 **起始版本：** 26.0.0
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1023,7 +1023,7 @@ placeholder(value: ResourceStr, style?: PlaceholderStyle)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1048,7 +1048,7 @@ punctuationOverflow(enabled: Optional<boolean>)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1070,7 +1070,7 @@ scrollBarColor(color: Optional<ColorMetrics>)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本21开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本21开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1092,7 +1092,7 @@ selectedBackgroundColor(value: ResourceColor)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1114,7 +1114,7 @@ selectedDragPreviewStyle(value: SelectedDragPreviewStyle | undefined)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1140,7 +1140,7 @@ singleLine(isEnable: boolean | undefined)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1162,7 +1162,7 @@ stopBackPress(isStopped: Optional<boolean>)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1186,7 +1186,7 @@ undoStyle(style: Optional<UndoStyle>)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

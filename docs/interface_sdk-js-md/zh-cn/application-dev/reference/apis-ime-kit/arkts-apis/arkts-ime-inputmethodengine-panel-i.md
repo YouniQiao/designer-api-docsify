@@ -122,9 +122,9 @@ adjustPanelRect(flag: PanelFlag, rect: EnhancedPanelRect): void
    
 > 此接口为同步接口，接口返回成功仅代表系统侧收到设置的请求，不代表设置完成。如果需要感知执行过程中的异常，建议使用
    
-> [updatePanelRect](#updatepanelrect)或
+> [updatePanelRect](#updatepanelrect-1)或
    
-> [updatePanelRectSync](#updatepanelrectsync)
+> [updatePanelRectSync](#updatepanelrectsync-1)
    
 > 。
    
@@ -594,7 +594,7 @@ off(type: 'sizeChange', callback?: SizeChangeCallback): void
    
 > - 从API version 15起，调用
    
-> [adjustPanelRect](#adjustpanelrect)接口后，此
+> [adjustPanelRect](#adjustpanelrect-1)接口后，此
    
 > 接口回调函数增加[KeyboardArea](arkts-ime-inputmethodengine-keyboardarea-i.md)类型的可选参数。
 
@@ -607,7 +607,7 @@ off(type: 'sizeChange', callback?: SizeChangeCallback): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'sizeChange' | 是 | 监听当前面板的大小是否产生变化，固定取值为'sizeChange'。 |
-| callback | SizeChangeCallback | 否 | 回调函数。返回当前软键盘面板的大小，包含宽度和高度值。参数不填写时，取消订阅type对应的所有回调事件。<br>**起始版本：** 15 |
+| callback | SizeChangeCallback | 否 | 回调函数。返回当前软键盘面板的大小，包含宽度和高度值。参数不填写时，取消订阅type对应的所有回调事件。<br>**适用版本：** 15 |
 
 **示例**
 
@@ -696,7 +696,7 @@ on(type: 'sizeChange', callback: SizeChangeCallback): void
    
 > - 从API version 15起，调用
    
-> [adjustPanelRect](#adjustpanelrect)接口后，此
+> [adjustPanelRect](#adjustpanelrect-1)接口后，此
    
 > 接口回调函数增加[KeyboardArea](arkts-ime-inputmethodengine-keyboardarea-i.md)类型的可选参数。
 
@@ -709,7 +709,7 @@ on(type: 'sizeChange', callback: SizeChangeCallback): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'sizeChange' | 是 | 监听当前面板的大小是否产生变化，固定值为'sizeChange'。 |
-| callback | SizeChangeCallback | 是 | 回调函数。返回当前软键盘面板的大小，包含宽度和高度值。<br>**起始版本：** 15 |
+| callback | SizeChangeCallback | 是 | 回调函数。返回当前软键盘面板的大小，包含宽度和高度值。<br>**适用版本：** 15 |
 
 **示例**
 
@@ -844,7 +844,7 @@ setImmersiveEffect(effect: ImmersiveEffect): void
 - 只有系统应用才能设置流光模式。  
 - 必须先调用以下任一接口，才能调用当前接口：  
  - [adjustPanelRect](#adjustpanelrect)(支持API version 12)   
- - [adjustPanelRect](#adjustpanelrect)(支持API version 15)   
+ - [adjustPanelRect](#adjustpanelrect-1)(支持API version 15)   
  - [resize](#resize)(支持API version 10)
 
 **起始版本：** 20
@@ -1659,7 +1659,7 @@ updateRegion(inputRegion: Array<window.Rect>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| inputRegion | Array&lt;[window.Rect](../../apis-arkui/arkts-apis/arkts-arkui-window-rect-i.md)&gt; | 是 | 面板内接收输入事件的区域。   - 数组大小限制为[1, 4]。   - 传入的热区位置是相对于输入法面板窗口左顶点的位置。 |
+| inputRegion | Array&lt;window.Rect&gt; | 是 | 面板内接收输入事件的区域。   - 数组大小限制为[1, 4]。   - 传入的热区位置是相对于输入法面板窗口左顶点的位置。 |
 
 **错误码：**
 

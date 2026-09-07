@@ -33,7 +33,7 @@ dismiss(target: number | ComponentContent<Object>): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -68,7 +68,7 @@ present(options?: dialog.DialogStyleOptions): Promise<DialogResult>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -76,7 +76,7 @@ present(options?: dialog.DialogStyleOptions): Promise<DialogResult>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [dialog.DialogStyleOptions](arkts-arkui-dialog-dialogstyleoptions-i.md) | 否 | 固定样式弹出框的配置选项，用于配置弹出框的标题、副标题、消息、按钮及工作表项等内容。弹出框样式（背景、对齐、蒙层、避让等）继承自[dialog.DialogBaseOptions](arkts-arkui-dialog-dialogbaseoptions-i.md)。   **说明：** dialog.DialogBaseOptions中的isModal与showInSubWindow不能同时设置为true。 |
+| options | dialog.DialogStyleOptions | 否 | 固定样式弹出框的配置选项，用于配置弹出框的标题、副标题、消息、按钮及工作表项等内容。弹出框样式（背景、对齐、蒙层、避让等）继承自[dialog.DialogBaseOptions](arkts-arkui-dialog-dialogbaseoptions-i.md)。   **说明：** dialog.DialogBaseOptions中的isModal与showInSubWindow不能同时设置为true。 |
 
 **返回值：**
 
@@ -103,7 +103,7 @@ present(content: CustomBuilder | CustomBuilderWithId | ComponentContent<Object>,
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -112,7 +112,7 @@ present(content: CustomBuilder | CustomBuilderWithId | ComponentContent<Object>,
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | content | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) \| [CustomBuilderWithId](arkts-arkui-custombuilderwithid-t.md) \| [ComponentContent](arkts-arkui-componentcontent-c.md)&lt;Object&gt; | 是 | 自定义弹出框内容，支持三种类型：CustomBuilder（自定义内容的生成器函数）、CustomBuilderWithId（支持传入ID的生成器函数）、ComponentContent（支持状态驱动更新的组件内容）。 |
-| options | [dialog.DialogCustomOptions](arkts-arkui-dialog-dialogcustomoptions-i.md) | 否 | 自定义弹出框的配置选项，用于配置弹出框的背景、对齐、蒙层、避让等样式，继承自dialog.DialogBaseOptions。 |
+| options | dialog.DialogCustomOptions | 否 | 自定义弹出框的配置选项，用于配置弹出框的背景、对齐、蒙层、避让等样式，继承自dialog.DialogBaseOptions。 |
 
 **返回值：**
 
@@ -141,7 +141,7 @@ update(content: ComponentContent<Object>, options?: dialog.DialogBaseOptions): P
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -150,7 +150,7 @@ update(content: ComponentContent<Object>, options?: dialog.DialogBaseOptions): P
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | content | [ComponentContent](arkts-arkui-componentcontent-c.md)&lt;Object&gt; | 是 | 用于标识弹出框的组件内容。 |
-| options | [dialog.DialogBaseOptions](arkts-arkui-dialog-dialogbaseoptions-i.md) | 否 | 要更新的弹出框选项。目前仅支持更新alignment、offset、autoCancel、maskColor。 |
+| options | dialog.DialogBaseOptions | 否 | 要更新的弹出框选项。目前仅支持更新alignment、offset、autoCancel、maskColor。 |
 
 **返回值：**
 

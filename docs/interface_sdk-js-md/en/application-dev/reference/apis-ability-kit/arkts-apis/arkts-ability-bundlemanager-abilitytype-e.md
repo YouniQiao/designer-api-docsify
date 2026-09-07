@@ -4,8 +4,6 @@ Enumerates the types of ability components.
 
 **Since:** 9
 
-**Model restriction:** This API can be used only in the FA model.
-
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 ## PAGE

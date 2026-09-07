@@ -29,7 +29,7 @@
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -37,7 +37,7 @@
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [TapGestureParameters](arkts-arkui-tapgestureparameters-i.md) | 否 | 点击手势的相关参数。<br>**起始版本：** 12 |
+| value | [TapGestureParameters](arkts-arkui-tapgestureparameters-i.md) | 否 | 点击手势的相关参数。<br>**适用版本：** 12 |
 
 **返回值：**
 
@@ -55,7 +55,7 @@ onAction(event: (event: GestureEvent) => void): TapGestureInterface
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

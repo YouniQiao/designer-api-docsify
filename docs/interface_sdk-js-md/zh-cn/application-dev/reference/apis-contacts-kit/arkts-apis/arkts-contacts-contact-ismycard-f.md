@@ -18,7 +18,7 @@ function isMyCard(id: number, callback: AsyncCallback<boolean>): void
 
 **废弃版本：** 10
 
-**替代接口：** [isMyCard](#ismycard)(context: Context, id: number, callback: AsyncCallback&lt;boolean&gt;)
+**替代接口：** [isMyCard](#ismycard-1)(context: Context, id: number, callback: AsyncCallback&lt;boolean&gt;)
 
 **需要权限：** ohos.permission.READ_CONTACTS
 
@@ -80,8 +80,6 @@ function isMyCard(context: Context, id: number, callback: AsyncCallback<boolean>
 **示例**
 
 > 说明：
-> 
-> 在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在界面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -112,7 +110,7 @@ function isMyCard(id: number): Promise<boolean>
 
 **废弃版本：** 10
 
-**替代接口：** [isMyCard](#ismycard)(context: Context, id: number)
+**替代接口：** [isMyCard](#ismycard-3)(context: Context, id: number)
 
 **需要权限：** ohos.permission.READ_CONTACTS
 
@@ -180,8 +178,6 @@ function isMyCard(context: Context, id: number): Promise<boolean>
 **示例**
 
 > 说明：
-> 
-> 在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在界面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
 
 ```TypeScript
 import { contact } from '@kit.ContactsKit';

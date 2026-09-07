@@ -23,7 +23,7 @@ contentModifier(modifier: ContentModifier<RatingConfiguration>)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -45,7 +45,7 @@ contentModifier(modifier: Optional<ContentModifier<RatingConfiguration>>)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -65,7 +65,7 @@ onChange(callback: (value: number) => void)
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
 
@@ -89,7 +89,7 @@ onChange(callback: Optional<OnRatingChangeCallback>)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本18开始，该接口支持在ArkTS卡片中使用。
 
@@ -111,7 +111,7 @@ stars(value: number)
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
 
@@ -135,7 +135,7 @@ stars(starCount: Optional<number>)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本18开始，该接口支持在ArkTS卡片中使用。
 
@@ -161,7 +161,7 @@ starStyle(options: StarStyleOptions)
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
 
@@ -171,7 +171,7 @@ starStyle(options: StarStyleOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [StarStyleOptions](arkts-arkui-starstyleoptions-i.md) | 是 | 评分的样式。   **说明：** 当backgroundUri、foregroundUri或secondaryUri设置的图片路径错误时，图片将保持上次的图片显示结果。如果首次设置错误，则不显示图片。当backgroundUri或foregroundUri设置为undefined或空字符串时，Rating组件将加载系统默认星型图源。当secondaryUri未设置或设置为undefined或空字符串时，将优先使用backgroundUri，效果等同于仅设置foregroundUri和backgroundUri。<br>**起始版本：** 18 |
+| options | [StarStyleOptions](arkts-arkui-starstyleoptions-i.md) | 是 | 评分的样式。   **说明：** 当backgroundUri、foregroundUri或secondaryUri设置的图片路径错误时，图片将保持上次的图片显示结果。如果首次设置错误，则不显示图片。当backgroundUri或foregroundUri设置为undefined或空字符串时，Rating组件将加载系统默认星型图源。当secondaryUri未设置或设置为undefined或空字符串时，将优先使用backgroundUri，效果等同于仅设置foregroundUri和backgroundUri。<br>**适用版本：** 18 |
 
 ## starStyle
 
@@ -191,7 +191,7 @@ starStyle(options: Optional<StarStyleOptions>)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本18开始，该接口支持在ArkTS卡片中使用。
 
@@ -213,7 +213,7 @@ stepSize(value: number)
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
 
@@ -237,7 +237,7 @@ stepSize(size: Optional<number>)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本18开始，该接口支持在ArkTS卡片中使用。
 

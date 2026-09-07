@@ -8,101 +8,101 @@
 
 Before developing an application related to HCE, you must declare NFC-related attributes in the **module.json5**file.  
  ```json5
- // Applicable to devices other than lite wearables
- {
- "module": {
- // Other declared attributes
- "abilities": [
- {
- // Other declared attributes
- "skills": [
- {
- "actions": [
- "ohos.nfc.cardemulation.action.HOST_APDU_SERVICE"
- ]
- }
- ],
- "metadata": [
- {
- "name": "payment-aid",
- "value": "your payment aid"
- },
- {
- "name": "other-aid",
- "value": "your other aid"
- }
- ]
- }
- ],
- "requestPermissions": [
- {
- "name": "ohos.permission.NFC_CARD_EMULATION",
- // Set reason to card_emulation_reason.
- "reason": "\$string:card_emulation_reason"
- }
- ]
- }
- }
- ```  
+// Applicable to devices other than lite wearables
+{
+  "module": {
+    // Other declared attributes
+    "abilities": [
+      {
+        // Other declared attributes
+        "skills": [
+          {
+            "actions": [
+              "ohos.nfc.cardemulation.action.HOST_APDU_SERVICE"
+            ]
+          }
+        ],
+        "metadata": [
+          {
+            "name": "payment-aid",
+            "value": "your payment aid"
+          },
+          {
+            "name": "other-aid",
+            "value": "your other aid"
+          }
+        ]
+      }
+    ],
+    "requestPermissions": [
+      {
+        "name": "ohos.permission.NFC_CARD_EMULATION",
+        // Set reason to card_emulation_reason.
+        "reason": "\$string:card_emulation_reason"
+      }
+    ]
+  }
+}
+```  
  ```json5
- // Applicable to lite wearables
- {
- "module": {
- // Other declared attributes
- "abilities": [
- {
- // Other declared attributes
- "metaData": {
- "customizeData": [
- {
- "name": "paymentAid",
- "value": "A0000000041012"
- },
- {
- "name": "otherAid",
- "value": "A0000000041010"
- }
- ]
- },
- "skills": [
- {
- "entities": [
- "ohos.nfc.cardemulation.action.HOST_APDU_SERVICE"
- ],
- "actions": [
- "ohos.nfc.cardemulation.action.HOST_APDU_SERVICE"
- ]
- }
- ]
- }
- ],
- "reqPermissions": [
- {
- "name": "ohos.permission.NFC_CARD_EMULATION",
- // Set reason to card_emulation_reason.
- "reason": "\$string:card_emulation_reason",
- "usedScene":{
- "ability":[
- "FormAbility"
- ],
- "when":"always"
- }
- },
- {
- "name": "ohos.permission.NFC_TAG",
- // Set reason to card_emulation_reason.
- "reason": "\$string:card_emulation_reason",
- "usedScene":{
- "ability":[
- "FormAbility"
- ],
- "when":"always"
- }
- }
- ]
- }
- }
- ```  
+// Applicable to lite wearables
+{
+  "module": {
+    // Other declared attributes
+    "abilities": [
+      {
+        // Other declared attributes
+        "metaData": {
+          "customizeData": [
+            {
+              "name": "paymentAid",
+              "value": "A0000000041012"
+            },
+            {
+              "name": "otherAid",
+              "value": "A0000000041010"
+            }
+          ]
+        },
+        "skills": [
+          {
+            "entities": [
+              "ohos.nfc.cardemulation.action.HOST_APDU_SERVICE"
+            ],
+            "actions": [
+              "ohos.nfc.cardemulation.action.HOST_APDU_SERVICE"
+            ]
+          }
+        ]
+      }
+    ],
+    "reqPermissions": [
+      {
+        "name": "ohos.permission.NFC_CARD_EMULATION",
+        // Set reason to card_emulation_reason.
+        "reason": "\$string:card_emulation_reason",
+        "usedScene": {
+          "ability": [
+            "FormAbility"
+          ],
+          "when": "always"
+        }
+      },
+      {
+        "name": "ohos.permission.NFC_TAG",
+        // Set reason to card_emulation_reason.
+        "reason": "\$string:card_emulation_reason",
+        "usedScene": {
+          "ability": [
+            "FormAbility"
+          ],
+          "when": "always"
+        }
+      }
+    ]
+  }
+}
+```  
 > **NOTE：**
 > 
    

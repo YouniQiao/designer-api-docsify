@@ -44,7 +44,6 @@ Called on application transition.
 **Examples**
 
 For details, see the sample code under windowAnimationManager.setController.
-- simpleType:
 
 ## onCloseWindow
 
@@ -72,7 +71,6 @@ Called on closing a window.
 **Examples**
 
 For details, see the sample code under windowAnimationManager.setController.
-- simpleType:
 
 ## onMinimizeWindow
 
@@ -101,7 +99,6 @@ Called on minimizing a window.
 **Examples**
 
 For details, see the sample code under windowAnimationManager.setController.
-- simpleType:
 
 ## onScreenUnlock
 
@@ -128,7 +125,6 @@ Called on unlocking the screen.
 **Examples**
 
 For details, see the sample code under windowAnimationManager.setController.
-- simpleType:
 
 ## onStartAppFromLauncher
 
@@ -157,7 +153,6 @@ Called on starting an application form launcher.
 **Examples**
 
 For details, see the sample code under windowAnimationManager.setController.
-- simpleType:
 
 ## onStartAppFromOther
 
@@ -186,7 +181,6 @@ Called on starting an application form other.
 **Examples**
 
 For details, see the sample code under windowAnimationManager.setController.
-- simpleType:
 
 ## onStartAppFromRecent
 
@@ -215,7 +209,6 @@ Called on starting an application form recent.
 **Examples**
 
 For details, see the sample code under windowAnimationManager.setController.
-- simpleType:
 
 ## onWindowAnimationTargetsUpdate
 
@@ -244,4 +237,3 @@ Called on window animation targets update.
 **Examples**
 
 For details, see the sample code under windowAnimationManager.setController.
-- simpleType:

@@ -3772,7 +3772,7 @@ insertSync(table: string, values: sendableRelationalStore.ValuesBucket, conflict
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | table | string | 是 | 指定的目标表名，不能为空字符串。 |
-| values | [sendableRelationalStore.ValuesBucket](arkts-arkdata-sendablerelationalstore-valuesbucket-t.md) | 是 | 表示要插入到表中的可跨线程传递数据。 |
+| values | sendableRelationalStore.ValuesBucket | 是 | 表示要插入到表中的可跨线程传递数据。 |
 | conflict | ConflictResolution | 否 | 指定冲突解决模式。默认值是relationalStore.ConflictResolution.ON_CONFLICT_NONE。 |
 
 **返回值：**
@@ -4158,7 +4158,7 @@ off(event: string, interProcess: boolean, observer?: Callback<void>): void
 | --- | --- | --- | --- |
 | event | string | 是 | 取消订阅事件名称。事件名称与on接口调用时订阅事件的名称一致。 |
 | interProcess | boolean | 是 | 指定是进程间还是本进程取消订阅。true：进程间。false：本进程。 |
-| observer | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 | 该参数存在，则取消指定Callback监听回调，否则取消该event事件的所有监听回调。<br>**起始版本：** 12 |
+| observer | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 | 该参数存在，则取消指定Callback监听回调，否则取消该event事件的所有监听回调。<br>**适用版本：** 12 |
 
 **错误码：**
 

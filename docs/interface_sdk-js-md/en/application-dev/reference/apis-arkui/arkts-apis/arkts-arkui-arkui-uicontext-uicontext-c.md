@@ -388,7 +388,6 @@ Bind tabs to nested scrollable container components to automatically hide tab ba
 **Examples**
 
 See the example for [bindTabsToScrollable](#bindtabstoscrollable).
-- simpleType:
 
 ## bindTabsToScrollable
 
@@ -884,7 +883,7 @@ Creates a UI instance that does not depend on a window and returns its UI contex
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [common.UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-common-uiabilitycontext-t.md) \| [common.ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-common-extensioncontext-t.md) | Yes | Context corresponding to [UIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md) or [ExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-extensionability-extensionability-c.md). |
+| context | common.UIAbilityContext \| common.ExtensionContext | Yes | Context corresponding to [UIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md) or [ExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-extensionability-extensionability-c.md). |
 
 **Return value:**
 
@@ -1400,7 +1399,6 @@ Get ComponentSnapshot.
 **Examples**
 
 See the example for [ComponentSnapshot](arkts-apis-uicontext-componentsnapshot.md).
-- simpleType:
 
 ## getComponentUtils
 
@@ -1427,7 +1425,6 @@ get object ComponentUtils.
 **Examples**
 
 For the complete example, see Example 1: Obtaining the ComponentUtils Object.
-- simpleType:
 
 ## getContextMenuController
 
@@ -1476,7 +1473,6 @@ Get object cursor controller.
 **Examples**
 
 See the example for [CursorController](arkts-apis-uicontext-cursorcontroller.md).
-- simpleType:
 
 ## getDialogPresenter
 
@@ -1503,7 +1499,6 @@ Get the Dialog object.
 **Examples**
 
 See the example for [DialogPresenter](arkts-apis-uicontext-dialogpresenter.md).
-- simpleType:
 
 ## getDragController
 
@@ -1530,7 +1525,6 @@ Get DragController.
 **Examples**
 
 See the example for [DragController](./arkts-apis-uicontext-dragcontroller.md).
-- simpleType:
 
 ## getFilteredInspectorTree
 
@@ -1738,7 +1732,6 @@ Get FocusController.
 **Examples**
 
 See the example for [FocusController](arkts-apis-uicontext-focuscontroller.md).
-- simpleType:
 
 ## getFont
 
@@ -1765,7 +1758,6 @@ Obtains a **Font** object.
 **Examples**
 
 See the example for [Font](arkts-apis-uicontext-font.md).
-- simpleType:
 
 ## getFrameNodeById
 
@@ -1798,7 +1790,6 @@ Get FrameNode by id.
 **Examples**
 
 See Example of Obtaining the Root Node.
-- simpleType:
 
 ## getFrameNodeByUniqueId
 
@@ -2116,7 +2107,6 @@ Obtains a [Magnifier](arkts-arkui-arkui-uicontext-magnifier-c.md) object, which 
 **Examples**
 
 See the example of the bind API in [Magnifier](arkts-apis-uicontext-magnifier.md).
-- simpleType:
 
 ## getMaxFontScale
 
@@ -2183,7 +2173,6 @@ Obtains a **MeasureUtils** object for text calculation.
 **Examples**
 
 See the example for [MeasureUtils](arkts-apis-uicontext-measureutils.md).
-- simpleType:
 
 ## getMediaQuery
 
@@ -2210,7 +2199,6 @@ get object mediaQuery.
 **Examples**
 
 See the mediaquery Example.
-- simpleType:
 
 ## getNavigationInfoByUniqueId
 
@@ -2238,12 +2226,11 @@ Get navigation information of the frameNode with uniqueId.
 
 | Type | Description |
 | --- | --- |
-| [observer.NavigationInfo](../arkts-components/arkts-arkui-navigationinfo-t.md) \| undefined | The navigation information of the frameNode with the target uniqueId, or undefined if the frameNode is not existed or does not have navigation information. |
+| observer.NavigationInfo \| undefined | The navigation information of the frameNode with the target uniqueId, or undefined if the frameNode is not existed or does not have navigation information. |
 
 **Examples**
 
 See the example of [getPageInfoByUniqueId](#getpageinfobyuniqueid).
-- simpleType:
 
 ## getOverlayManager
 
@@ -2270,7 +2257,6 @@ Obtains the OverlayManager object.
 **Examples**
 
 See the example for [OverlayManager](arkts-apis-uicontext-overlaymanager.md).
-- simpleType:
 
 ## getOverlayManagerOptions
 
@@ -2297,7 +2283,6 @@ Get object OverlayManagerOptions.
 **Examples**
 
 See the example for [OverlayManager](arkts-apis-uicontext-overlaymanager.md).
-- simpleType:
 
 ## getPageInfoByUniqueId
 
@@ -2591,7 +2576,6 @@ Obtains a PromptAction object.
 **Examples**
 
 See the example for [PromptAction](arkts-apis-uicontext-promptaction.md).
-- simpleType:
 
 ## getRouter
 
@@ -2618,7 +2602,6 @@ Obtains a Router object.
 **Examples**
 
 See the example for pushUrl.
-- simpleType:
 
 ## getSharedLocalStorage
 
@@ -2710,7 +2693,6 @@ Get object smart gesture controller.
 **Examples**
 
 For details, see Example 1: Enabling Smart Gestures and Customizing Action Handling.
-- simpleType:
 
 ## getTextMenuController
 
@@ -2737,7 +2719,6 @@ Obtains a [TextMenuController](arkts-arkui-arkui-uicontext-textmenucontroller-c.
 **Examples**
 
 See the example for [TextMenuController](arkts-apis-uicontext-textmenucontroller.md).
-- simpleType:
 
 ## getUIInspector
 
@@ -2764,7 +2745,6 @@ Obtains the **UIInspector** object.
 **Examples**
 
 See the example for [UIInspector](./arkts-apis-uicontext-uiinspector.md).
-- simpleType:
 
 ## getUIObserver
 
@@ -4342,7 +4322,6 @@ Init OverlayManager.
 **Examples**
 
 See the example for [OverlayManager](arkts-apis-uicontext-overlaymanager.md).
-- simpleType:
 
 ## setPixelRoundMode
 
@@ -4896,7 +4875,6 @@ Unbind tabs from nested scrollable container components.
 **Examples**
 
 See the example for [bindTabsToScrollable](#bindtabstoscrollable).
-- simpleType:
 
 ## unbindTabsFromScrollable
 
@@ -4924,7 +4902,6 @@ Unbind tabs from scrollable container component.
 **Examples**
 
 See the example for [bindTabsToScrollable](#bindtabstoscrollable).
-- simpleType:
 
 ## updateBindSheet
 

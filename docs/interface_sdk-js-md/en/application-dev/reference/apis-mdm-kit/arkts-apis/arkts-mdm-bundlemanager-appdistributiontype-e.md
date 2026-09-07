@@ -4,8 +4,6 @@ Defines the distribution type of the application signing certificate. For detail
 
 **Since:** 20
 
-**Model restriction:** This API can be used only in the stage model.
-
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## APP_GALLERY

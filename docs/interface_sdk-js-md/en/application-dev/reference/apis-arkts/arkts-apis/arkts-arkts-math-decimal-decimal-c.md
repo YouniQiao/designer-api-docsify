@@ -2060,8 +2060,8 @@ Return the sign of the passed value to the method. 1 if x &gt; 0, -1 if x &lt; 0
 
 | Type | Description |
 | --- | --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type<br>**Applicable version:** 12 - 17 |
-| number | the Decimal type<br>**Applicable version:** 18 and later |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type<br>**Since:** 12 - 17 |
+| number | the Decimal type<br>**Since:** 18 |
 
 **Error codes:**
 

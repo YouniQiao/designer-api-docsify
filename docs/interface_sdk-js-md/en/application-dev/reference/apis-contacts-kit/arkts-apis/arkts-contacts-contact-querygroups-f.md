@@ -18,7 +18,7 @@ Queries all groups of a contact. This API uses an asynchronous callback to retur
 
 **Deprecated since:** 10
 
-**Substitutes:** [queryGroups](#querygroups)(context: Context, callback: AsyncCallback&lt;Array&lt;Group&gt;&gt;)
+**Substitutes:** [queryGroups](#querygroups-1)(context: Context, callback: AsyncCallback&lt;Array&lt;Group&gt;&gt;)
 
 **Required permissions:** ohos.permission.READ_CONTACTS
 
@@ -77,8 +77,6 @@ Queries all groups of a contact. This API uses an asynchronous callback to retur
 **Examples**
 
 > NOTE
-> 
-> In the examples in this document, this.context is used to obtain the UIAbilityContext, where this represents a UIAbility instance that inherits from UIAbility. To use the capabilities provided by UIAbilityContext in the UI, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -109,7 +107,7 @@ Queries all groups of a contact based on the specified holder. This API uses an 
 
 **Deprecated since:** 10
 
-**Substitutes:** [queryGroups](#querygroups)(context: Context, holder: Holder, callback: AsyncCallback&lt;Array&lt;Group&gt;&gt;)
+**Substitutes:** [queryGroups](#querygroups-3)(context: Context, holder: Holder, callback: AsyncCallback&lt;Array&lt;Group&gt;&gt;)
 
 **Required permissions:** ohos.permission.READ_CONTACTS
 
@@ -174,8 +172,6 @@ Queries all groups of a contact based on the specified holder. This API uses an 
 **Examples**
 
 > NOTE
-> 
-> In the examples of this document, UIAbilityContext is obtained through this.context, where this represents a UIAbility instance inherited from UIAbility. To use the capabilities provided by UIAbilityContext in the UI, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -210,7 +206,7 @@ Queries all groups of a contact based on the specified holder. This API uses a p
 
 **Deprecated since:** 10
 
-**Substitutes:** [queryGroups](#querygroups)(context: Context, holder?: Holder)
+**Substitutes:** [queryGroups](#querygroups-5)(context: Context, holder?: Holder)
 
 **Required permissions:** ohos.permission.READ_CONTACTS
 
@@ -281,8 +277,6 @@ Queries all groups of a contact based on the specified holder. This API uses a p
 **Examples**
 
 > NOTE
-> 
-> In the examples in this document, this.context is used to obtain UIAbilityContext, where this refers to a UIAbility instance inherited from UIAbility. If you need to use the capabilities provided by UIAbilityContext in the UI, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
 ```TypeScript
 import { common } from '@kit.AbilityKit';

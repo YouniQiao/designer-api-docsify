@@ -12,4 +12,4 @@ type ISendable = lang.ISendable
 
 **System capability:** SystemCapability.Utils.Lang
 
-**Type:** [lang.ISendable](arkts-arkts-lang-isendable-i.md)
+**Type:** lang.ISendable

@@ -10,6 +10,8 @@ The **file.trash** module provides APIs for querying, recovering, or permanently
 
 **Deprecated since:** 23
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.FileManagement.UserFileService
 
 **System API:** This is a system API.

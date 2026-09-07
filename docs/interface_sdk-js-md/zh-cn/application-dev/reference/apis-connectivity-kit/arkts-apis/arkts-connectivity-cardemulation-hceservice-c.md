@@ -24,7 +24,7 @@ off(type: 'hceCmd', callback?: AsyncCallback<number[]>): void
 
 **需要权限：** ohos.permission.NFC_CARD_EMULATION
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Communication.NFC.CardEmulation
 
@@ -89,7 +89,7 @@ on(type: 'hceCmd', callback: AsyncCallback<number[]>): void
 
 **需要权限：** ohos.permission.NFC_CARD_EMULATION
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Communication.NFC.CardEmulation
 
@@ -215,8 +215,6 @@ sendResponse(responseApdu: number[]): void
 **示例**
 
 ArkTS示例：
-示例请参见[transmit](#transmit)接口的示例。
-JS示例：
 
 ```TypeScript
 <!-- 适用于轻量级智能穿戴设备 -->
@@ -293,7 +291,7 @@ start(elementName: ElementName, aidList: string[]): void
 
 **需要权限：** ohos.permission.NFC_CARD_EMULATION
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Communication.NFC.CardEmulation
 
@@ -348,8 +346,6 @@ startHCE(aidList: string[]): boolean
 **示例**
 
 ArkTS示例：
-示例请参见on接口的示例。
-JS示例：
 
 ```TypeScript
 <!-- 适用于轻量级智能穿戴设备 -->
@@ -419,7 +415,7 @@ stop(elementName: ElementName): void
 
 **需要权限：** ohos.permission.NFC_CARD_EMULATION
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Communication.NFC.CardEmulation
 
@@ -467,8 +463,6 @@ stopHCE(): boolean
 **示例**
 
 ArkTS示例：
-示例请参见on接口的示例。
-JS示例：
 
 ```TypeScript
 <!-- 适用于轻量级智能穿戴设备 -->
@@ -536,7 +530,7 @@ transmit(response: number[]): Promise<void>
 
 **需要权限：** ohos.permission.NFC_CARD_EMULATION
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Communication.NFC.CardEmulation
 
@@ -607,7 +601,7 @@ transmit(response: number[], callback: AsyncCallback<void>): void
 
 **需要权限：** ohos.permission.NFC_CARD_EMULATION
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Communication.NFC.CardEmulation
 

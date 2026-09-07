@@ -30,7 +30,7 @@ Default value: The prefix or suffix icon is not displayed.
 
 If the value is **undefined**, the default value is used.
 
-**Type:** [SymbolGlyphModifier](arkts-arkui-symbolglyphmodifier-c.md)
+**Type:** SymbolGlyphModifier
 
 **Since:** 12
 
@@ -52,7 +52,7 @@ Default value: The prefix or suffix icon is not displayed.
 
 If the value is **undefined**, the default value is used.
 
-**Type:** [SymbolGlyphModifier](arkts-arkui-symbolglyphmodifier-c.md)
+**Type:** SymbolGlyphModifier
 
 **Since:** 12
 

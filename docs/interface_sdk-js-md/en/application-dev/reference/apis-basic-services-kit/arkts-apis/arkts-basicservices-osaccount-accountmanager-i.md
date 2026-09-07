@@ -1614,7 +1614,7 @@ Obtains the OS account ID based on the SN. This API uses a promise to return the
 
 **Deprecated since:** 9
 
-**Substitutes:** [getOsAccountLocalIdForSerialNumber](#getosaccountlocalidforserialnumber)(serialNumber: long)
+**Substitutes:** [getOsAccountLocalIdForSerialNumber](#getosaccountlocalidforserialnumber-1)(serialNumber: long)
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -2073,14 +2073,14 @@ Obtains the OS account ID based on the domain account information. This API uses
 > **NOTE：**
 > 
 > This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [getOsAccountLocalIdForDomain](#getosaccountlocalidfordomain)
+> [getOsAccountLocalIdForDomain](#getosaccountlocalidfordomain-1)
 > instead.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [getOsAccountLocalIdForDomain](#getosaccountlocalidfordomain)(domainInfo: DomainAccountInfo)
+**Substitutes:** [getOsAccountLocalIdForDomain](#getosaccountlocalidfordomain-1)(domainInfo: DomainAccountInfo)
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
@@ -2259,7 +2259,7 @@ Obtains the OS account ID based on the process UID. This API uses a promise to r
 
 **Deprecated since:** 9
 
-**Substitutes:** [getOsAccountLocalIdForUid](#getosaccountlocalidforuid)(uid: int)
+**Substitutes:** [getOsAccountLocalIdForUid](#getosaccountlocalidforuid-1)(uid: int)
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -2671,7 +2671,7 @@ Obtains the SN of an OS account based on the account ID. This API uses a promise
 
 **Deprecated since:** 9
 
-**Substitutes:** [getSerialNumberForOsAccountLocalId](#getserialnumberforosaccountlocalid)(localId: int)
+**Substitutes:** [getSerialNumberForOsAccountLocalId](#getserialnumberforosaccountlocalid-1)(localId: int)
 
 **System capability:** SystemCapability.Account.OsAccount
 

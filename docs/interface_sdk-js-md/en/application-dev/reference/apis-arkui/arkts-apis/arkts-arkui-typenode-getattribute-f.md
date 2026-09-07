@@ -383,7 +383,6 @@ Obtains the attributes of a **Swiper** node. If the node is not created using Ar
 **Examples**
 
 See the example for createNode('Swiper')12+.
-- simpleType:
 
 
 ## getAttribute
@@ -487,7 +486,6 @@ Obtains the attributes of a **Scroll** node. If the node is not created using Ar
 **Examples**
 
 See the example for createNode('Scroll').
-- simpleType:
 
 
 ## getAttribute
@@ -735,7 +733,6 @@ Obtains the attributes of a **List** node. If the node is not created using ArkT
 **Examples**
 
 See the example for createNode('List').
-- simpleType:
 
 
 ## getAttribute
@@ -770,7 +767,6 @@ Obtains the attributes of a **ListItem** node. If the node is not created using 
 **Examples**
 
 See the example for createNode('List').
-- simpleType:
 
 
 ## getAttribute
@@ -981,7 +977,6 @@ Obtains the attributes of a **WaterFlow** node. If the node is not created using
 **Examples**
 
 See the example for createNode('WaterFlow').
-- simpleType:
 
 
 ## getAttribute
@@ -1016,7 +1011,6 @@ Obtains the attributes of a **FlowItem** node. If the node is not created using 
 **Examples**
 
 See the example for createNode('WaterFlow').
-- simpleType:
 
 
 ## getAttribute
@@ -1441,7 +1435,6 @@ Obtains the attributes of a **Grid** node. If the node is not created using ArkT
 **Examples**
 
 See the example for createNode('Grid').
-- simpleType:
 
 
 ## getAttribute
@@ -1476,4 +1469,3 @@ Obtains the attributes of a **GridItem** node. If the node is not created using 
 **Examples**
 
 See the example for createNode('Grid').
-- simpleType:

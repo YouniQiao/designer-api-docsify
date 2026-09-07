@@ -34,8 +34,9 @@ connectServer(requestId: string, requestData: string, callback: Callback<string>
 **起始版本：** 21
 
 **需要权限：** 
-- API版本26.0.0+：ohos.permission.ENTERPRISE_ACCESS_DLP_FILE or ohos.permission.ACCESS_DLP_SERVICE
-- API版本21 - 24：ohos.permission.ENTERPRISE_ACCESS_DLP_FILE
+- API版本26+：ohos.permission.ENTERPRISE_ACCESS_DLP_FILE or ohos.permission.ACCESS_DLP_SERVICE
+- API版本25：N/A
+- API版本21-24：ohos.permission.ENTERPRISE_ACCESS_DLP_FILE
 
 **系统能力：** SystemCapability.Security.DataLossPrevention
 

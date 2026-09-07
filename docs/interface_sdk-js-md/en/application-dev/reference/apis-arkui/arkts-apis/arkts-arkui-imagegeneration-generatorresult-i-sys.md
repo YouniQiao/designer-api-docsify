@@ -24,7 +24,7 @@ image?: image.PixelMap
 
 Decoded data of AI-generated images.
 
-**Type:** [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)
+**Type:** image.PixelMap
 
 **Since:** 23
 

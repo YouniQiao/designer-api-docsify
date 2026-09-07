@@ -32,7 +32,6 @@ Obtains the **UIScrollEvent** object associated with the **Scroll** node for con
 **Examples**
 
 See Scroll Event Example.
-- simpleType:
 
 
 ## getEvent
@@ -67,7 +66,6 @@ Obtains the **UIListEvent** object associated with the **List** node for configu
 **Examples**
 
 See Scroll Event Example.
-- simpleType:
 
 
 ## getEvent
@@ -102,7 +100,6 @@ Obtains the **UIWaterFlowEvent** object associated with the [WaterFlow](arkts-ar
 **Examples**
 
 See Scroll Event Example.
-- simpleType:
 
 
 ## getEvent
@@ -137,4 +134,3 @@ Obtains the **UIGridEvent** object associated with the **Grid** node for configu
 **Examples**
 
 See Scroll Event Example.
-- simpleType:

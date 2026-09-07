@@ -15,4 +15,3 @@ type OnInputmethodAttachedCallback = () => void
 **示例**
 
 完整示例代码参考[onInputmethodAttached](./arkts-basic-components-web-events.md#oninputmethodattached)。
-- simpleType:

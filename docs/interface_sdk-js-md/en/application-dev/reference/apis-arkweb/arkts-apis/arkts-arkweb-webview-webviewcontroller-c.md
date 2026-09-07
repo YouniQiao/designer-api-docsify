@@ -1009,7 +1009,6 @@ Disables the camera capture of the current web page.
 **Examples**
 
 For the complete sample code, see [startCamera](#startcamera).
-- simpleType:
 
 ## constructor
 
@@ -1337,7 +1336,6 @@ Creates web message ports.
 **Examples**
 
 For details about the sample code, see [onMessageEventExt](./arkts-apis-webview-WebMessagePort.md#onmessageeventext).
-- simpleType:
 
 ## createWebPrintDocumentAdapter
 
@@ -1361,7 +1359,7 @@ Creates a **PrintDocumentAdapter** instance to provide content for printing.
 
 | Type | Description |
 | --- | --- |
-| [print.PrintDocumentAdapter](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-print-printdocumentadapter-i.md) | Adapter for the print document, which controls the print behavior and print task. It can print the current web page content through the print service. |
+| print.PrintDocumentAdapter | Adapter for the print document, which controls the print behavior and print task. It can print the current web page content through the print service. |
 
 **Error codes:**
 
@@ -2150,7 +2148,6 @@ Obtains the current ArkWeb kernel version.
 **Examples**
 
 For details, see [setActiveWebEngineVersion](#setactivewebengineversion).
-- simpleType:
 
 ## getAttachState
 
@@ -2340,7 +2337,7 @@ Obtains the certificate information of this website. When the **Web** component 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;[cert.X509Cert](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-cert-x509cert-i.md)&gt;&gt; | Promise used to obtain the X.509 certificate array of the current HTTPS website. |
+| Promise&lt;Array&lt;cert.X509Cert&gt;&gt; | Promise used to obtain the X.509 certificate array of the current HTTPS website. |
 
 **Error codes:**
 
@@ -2505,7 +2502,7 @@ Obtains the certificate information of the current website. When the **Web** com
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[cert.X509Cert](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-cert-x509cert-i.md)&gt;&gt; | Yes | Callback used to obtain the X.509 certificate array of the current website. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;cert.X509Cert&gt;&gt; | Yes | Callback used to obtain the X.509 certificate array of the current website. |
 
 **Error codes:**
 
@@ -2815,7 +2812,7 @@ Obtains the favicon of this page.
 
 | Type | Description |
 | --- | --- |
-| [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | PixelMap** object of the favicon of the page. |
+| image.PixelMap | PixelMap** object of the favicon of the page. |
 
 **Error codes:**
 
@@ -4072,7 +4069,6 @@ Obtains the URL of the current page.
 **Examples**
 
 For details about the sample code, see [removeProxyOverride](./arkts-apis-webview-ProxyController.md#removeproxyoverride).
-- simpleType:
 
 ```TypeScript
 // xxx.ets
@@ -4124,7 +4120,6 @@ struct WebComponent {
 ```
 
 For details about the sample code, see [constructor](#constructor).
-- simpleType:
 
 ```TypeScript
 // xxx.ets
@@ -4264,7 +4259,6 @@ Queries whether the User-Agent Client Hints feature is currently enabled.
 **Examples**
 
 For details about the sample code, see [setUserAgentClientHintsEnabled](#setuseragentclienthintsenabled).
-- simpleType:
 
 ## getUserAgentMetadata
 
@@ -4293,7 +4287,6 @@ Obtains the UserAgentMetadata information of a user agent.
 **Examples**
 
 For details about the sample code, see [setUserAgentClientHintsEnabled](#setuseragentclienthintsenabled).
-- simpleType:
 
 ## getWebId
 
@@ -4547,7 +4540,6 @@ After **webview.WebviewController.SetRenderProcessMode(webview.RenderProcessMode
 **Examples**
 
 When appropriate, use this API in conjunction with dynamic components. Offline Web components are used to inject resources into the engine's memory cache, and at the appropriate time, the service Web components load and utilize these resources. The following is a code example:
-First, store the [UIContext](../apis-arkui/arkts-apis-uicontext-uicontext.md) in [localStorage](../../../ui/state-management/arkts-localstorage.md) in EntryAbility.
 
 ```TypeScript
 // EntryAbility.ets
@@ -5500,7 +5492,6 @@ struct WebComponent {
 ```
 
 There are three methods for loading local resource files:
-Using $rawfile.
 
 ```TypeScript
 // xxx.ets
@@ -5530,7 +5521,6 @@ struct WebComponent {
 ```
 
 Resource protocol.
-Using the  protocol prefix can avoid the issue where the URL is truncated by the number sign (#) when the conventional  method is used to handle URLs containing "#" for routing. When a URL contains a "#", the content following the "#" is treated as a fragment.
 
 ```TypeScript
 // xxx.ets
@@ -5591,7 +5581,6 @@ Create an index.html file in src/main/resources/rawfile.
 ```
 
 Load the local file through the sandbox path. For details, see the sample code for loading the sandbox path in [Loading Web Pages](../../../web/web-page-loading-with-web-components.md#loading-local-pages).
-HTML file to be loaded:
 
 ```TypeScript
 <!-- index.html -->
@@ -6300,7 +6289,6 @@ Pauses microphone capture on the current web page.
 **Examples**
 
 For the complete sample code, see [resumeMicrophone](#resumemicrophone).
-- simpleType:
 
 ## postMessage
 
@@ -6582,7 +6570,6 @@ The API determines whether to update the existing bytecode cache based on the pr
 **Examples**
 
 The API is recommended for use in conjunction with dynamic components. Employ offline Web components to generate bytecode caches, and at the appropriate time, load service Web components to utilize these bytecode caches. The following is a code example:
-First, store the [UIContext](../apis-arkui/arkts-apis-uicontext-uicontext.md) in [localStorage](../../../ui/state-management/arkts-localstorage.md) in EntryAbility.
 
 ```TypeScript
 // EntryAbility.ets
@@ -6703,7 +6690,6 @@ async function readRawFile(path: string, context: UIContext) {
 ```
 
 JavaScript resources can also be obtained through [data request](../../apis-network-kit/arkts-apis/arkts-net-http.md). However, the HTTP response headers obtained through this method are not in the standard HTTP response header format. You need to convert the response headers to the standard HTTP response header format before use. For example, if the response header obtained through data request is e-tag, it needs to be converted to E-Tag before use.
-Compile the code of the service component.
 
 ```TypeScript
 // BusinessWebview.ets
@@ -7637,7 +7623,6 @@ struct WebComponent {
 ```
 
 Modify the EntryAbility.ets file.
-Obtain the path of the application cache file.
 
 ```TypeScript
 // xxx.ets
@@ -9041,7 +9026,6 @@ struct WebComponent {
 ```
 
 Modify the EntryAbility.ets file.
-Obtain the path of the application cache file.
 
 ```TypeScript
 // xxx.ets
@@ -9967,7 +9951,6 @@ Sets the IP address of the host after domain name resolution.
 **Examples**
 
 For details, see [clearHostIP](#clearhostip).
-- simpleType:
 
 ## setHttpDns
 
@@ -11080,7 +11063,6 @@ Sets the **UserAgentMetadata** corresponding to the **User-Agent**.
 **Examples**
 
 For details about the sample code, see [setUserAgentClientHintsEnabled](#setuseragentclienthintsenabled).
-- simpleType:
 
 ## setWebDebuggingAccess
 
@@ -11696,7 +11678,6 @@ Stops the camera capture of the current web page.
 **Examples**
 
 For the complete sample code, see [startCamera](#startcamera).
-- simpleType:
 
 ## stopMicrophone
 
@@ -11719,7 +11700,6 @@ Stops microphone capture on the current web page.
 **Examples**
 
 For the complete sample code, see [resumeMicrophone](#resumemicrophone).
-- simpleType:
 
 ## storeWebArchive
 

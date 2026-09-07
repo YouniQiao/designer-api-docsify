@@ -24,7 +24,7 @@ NDEF Record的ID，每个number十六进制表示，范围是0x00~0xFF。
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
@@ -40,7 +40,7 @@ NDEF Record的PAYLOAD，每个number十六进制表示，范围是0x00~0xFF。
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
@@ -56,7 +56,7 @@ NDEF Record的RTD(Record Type Definition)类型值，每个number十六进制表
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
@@ -72,6 +72,6 @@ NDEF Record的TNF(Type Name Field)。
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Communication.NFC.Tag

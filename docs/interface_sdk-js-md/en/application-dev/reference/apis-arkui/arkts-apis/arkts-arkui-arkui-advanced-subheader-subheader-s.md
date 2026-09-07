@@ -250,7 +250,7 @@ Text attributes of the primary title, such as the font color, font size, and fon
 
 Default value: **undefined**, indicating that the default style is used.
 
-**Type:** [TextModifier](arkts-arkui-textmodifier-c.md)
+**Type:** TextModifier
 
 **Since:** 12
 
@@ -292,7 +292,7 @@ Text attributes of the secondary title, such as the font color, font size, and f
 
 Default value: **undefined**, indicating that the default style is used.
 
-**Type:** [TextModifier](arkts-arkui-textmodifier-c.md)
+**Type:** TextModifier
 
 **Since:** 12
 

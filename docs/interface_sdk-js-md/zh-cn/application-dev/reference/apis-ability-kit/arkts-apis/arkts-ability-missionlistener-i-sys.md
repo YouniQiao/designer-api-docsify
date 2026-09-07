@@ -98,7 +98,6 @@ onMissionCreated(mission: number): void
 **示例**
 
 详细示例请见[onMissionClosed](#onmissionclosed)。
-- simpleType:
 
 ## onMissionDestroyed
 
@@ -123,7 +122,6 @@ onMissionDestroyed(mission: number): void
 **示例**
 
 详细示例请见[onMissionClosed](#onmissionclosed)。
-- simpleType:
 
 ## onMissionIconUpdated
 
@@ -144,12 +142,11 @@ onMissionIconUpdated(mission: number, icon: image.PixelMap): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | mission | number | 是 | 表示任务ID。 |
-| icon | [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | 是 | 表示更新的任务图标。 |
+| icon | image.PixelMap | 是 | 表示更新的任务图标。 |
 
 **示例**
 
 详细示例请见[onMissionClosed](#onmissionclosed)。
-- simpleType:
 
 ## onMissionLabelUpdated
 
@@ -174,7 +171,6 @@ onMissionLabelUpdated(mission: number): void
 **示例**
 
 详细示例请见[onMissionClosed](#onmissionclosed)。
-- simpleType:
 
 ## onMissionMovedToFront
 
@@ -199,7 +195,6 @@ onMissionMovedToFront(mission: number): void
 **示例**
 
 详细示例请见[onMissionClosed](#onmissionclosed)。
-- simpleType:
 
 ## onMissionSnapshotChanged
 
@@ -224,4 +219,3 @@ onMissionSnapshotChanged(mission: number): void
 **示例**
 
 详细示例请见[onMissionClosed](#onmissionclosed)。
-- simpleType:

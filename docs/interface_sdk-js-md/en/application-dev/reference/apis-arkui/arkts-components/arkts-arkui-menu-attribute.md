@@ -191,4 +191,4 @@ Sets the submenu expand symbol of the menu.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| symbol | SymbolGlyphModifier | Yes | Submenu expand symbol of the menu. 1. **SubMenuExpandingMode.SIDE_EXPAND**: The expand symbol is not displayed. 2. **SubMenuExpandingMode.EMBEDDED_EXPAND**: The symbol rotates 180° clockwise upon expansion. Default value: **\\$r('sys.symbol.chevron_down').fontSize('24vp')** 3. **SubMenuExpandingMode.STACK_EXPAND**: The symbol rotates 90° clockwise upon expansion. Default value: **\\$r('sys.symbol.chevron_forward').fontSize('20vp').padding('2vp') |
+| symbol | [SymbolGlyphModifier](arkts-arkui-symbolglyphmodifier-t.md) | Yes | Submenu expand symbol of the menu. 1. **SubMenuExpandingMode.SIDE_EXPAND**: The expand symbol is not displayed. 2. **SubMenuExpandingMode.EMBEDDED_EXPAND**: The symbol rotates 180° clockwise upon expansion. Default value: **\\$r('sys.symbol.chevron_down').fontSize('24vp')** 3. **SubMenuExpandingMode.STACK_EXPAND**: The symbol rotates 90° clockwise upon expansion. Default value: **\\$r('sys.symbol.chevron_forward').fontSize('20vp').padding('2vp') |

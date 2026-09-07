@@ -39,7 +39,6 @@ Called when the atomic service fails to be launched.
 **Examples**
 
 For details, see CompletionHandlerForAtomicService Usage Example.
-- simpleType:
 
 ## onAtomicServiceRequestSuccess
 
@@ -66,4 +65,3 @@ Called when the atomic service is successfully launched.
 **Examples**
 
 For details, see CompletionHandlerForAtomicService Usage Example.
-- simpleType:

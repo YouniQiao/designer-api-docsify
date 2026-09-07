@@ -31,7 +31,7 @@ active(value: boolean)
 
 **替代接口：** Navigation
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -57,7 +57,7 @@ params(value: object)
 
 **替代接口：** param
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -81,7 +81,7 @@ target(value: string)
 
 **替代接口：** Navigation
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -107,7 +107,7 @@ type(value: NavigationType)
 
 **替代接口：** Navigation
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -115,4 +115,4 @@ type(value: NavigationType)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [NavigationType](arkts-arkui-navigationtype-e.md) | 是 | [路由跳转方式。默认值：NavigationType.Push](arkts-arkui-navigationtype-e.md) |
+| value | [NavigationType](arkts-arkui-navigationtype-e.md) | 是 | 路由跳转方式。默认值：NavigationType.Push |

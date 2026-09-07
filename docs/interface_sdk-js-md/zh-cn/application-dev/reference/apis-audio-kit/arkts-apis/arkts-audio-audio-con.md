@@ -8,6 +8,8 @@ const DEFAULT_INTERRUPT_GROUP_ID: number
 
 默认焦点组ID。
 
+**类型：** number
+
 **起始版本：** 9
 
 **系统能力：** SystemCapability.Multimedia.Audio.Interrupt
@@ -19,6 +21,8 @@ const DEFAULT_VOLUME_GROUP_ID: number
 ```
 
 默认音量组ID。
+
+**类型：** number
 
 **起始版本：** 9
 

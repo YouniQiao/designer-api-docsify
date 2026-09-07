@@ -117,6 +117,7 @@ Obtains the tethering enable or disable. On API 10 and above, the permission req
 
 **Required permissions:** 
 - API version 10 and later: ohos.permission.ACCESS_BLUETOOTH
+- API version 9: N/A
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 

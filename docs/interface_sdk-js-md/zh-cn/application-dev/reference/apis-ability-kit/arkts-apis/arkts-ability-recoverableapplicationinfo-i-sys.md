@@ -36,7 +36,7 @@ readonly bundleType: bundleManager.BundleType
 
 标识应用类型。
 
-**类型：** [bundleManager.BundleType](arkts-ability-bundlemanager-bundletype-e.md)
+**类型：** bundleManager.BundleType
 
 **起始版本：** 12
 

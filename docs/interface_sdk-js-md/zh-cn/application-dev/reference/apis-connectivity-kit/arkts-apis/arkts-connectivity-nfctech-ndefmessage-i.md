@@ -14,7 +14,7 @@ getNdefRecords(): tag.NdefRecord[]
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
@@ -22,7 +22,7 @@ getNdefRecords(): tag.NdefRecord[]
 
 | 类型 | 说明 |
 | --- | --- |
-| [tag.NdefRecord](arkts-connectivity-tag-ndefrecord-i.md)[] | NDEF标签的Record列表，详见NDEF技术规范《NFCForum-TS-NDEF_1.0》。 |
+| tag.NdefRecord[] | NDEF标签的Record列表，详见NDEF技术规范《NFCForum-TS-NDEF_1.0》。 |
 
 **示例**
 

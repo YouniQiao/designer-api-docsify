@@ -38,8 +38,8 @@ Called when the system acquire the form data.
 
 | Type | Description |
 | --- | --- |
-| object | Returns the wantParams object.<br>**Applicable version:** 10 |
-| Record&lt;string, Object&gt; | Returns the wantParams object.<br>**Applicable version:** 11 and later |
+| object | Returns the wantParams object.<br>**Since:** 10 |
+| Record&lt;string, Object&gt; | Returns the wantParams object.<br>**Since:** 11 |
 
 **Examples**
 
@@ -84,8 +84,8 @@ Called when the system shares the form.
 
 | Type | Description |
 | --- | --- |
-| object | Returns the wantParams object.<br>**Applicable version:** 9 - 10 |
-| Record&lt;string, Object&gt; | Returns the wantParams object.<br>**Applicable version:** 11 and later |
+| object | Returns the wantParams object.<br>**Since:** 9 - 10 |
+| Record&lt;string, Object&gt; | Returns the wantParams object.<br>**Since:** 11 |
 
 **Examples**
 

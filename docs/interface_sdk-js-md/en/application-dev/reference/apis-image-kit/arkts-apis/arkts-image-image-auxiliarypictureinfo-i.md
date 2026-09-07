@@ -34,7 +34,7 @@ colorSpace: colorSpaceManager.ColorSpaceManager
 
 Color space.
 
-**Type:** [colorSpaceManager.ColorSpaceManager](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-colorspacemanager-colorspacemanager-i.md)
+**Type:** colorSpaceManager.ColorSpaceManager
 
 **Since:** 13
 

@@ -34,7 +34,7 @@ adRenderer?: () => void
 
 **装饰器类型：** @BuilderParam
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Advertising.Ads
 
@@ -48,7 +48,7 @@ build(): void
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Advertising.Ads
 
@@ -62,11 +62,11 @@ ads: advertising.Advertisement[]
 
 说明：非贴片广告类型，组件只展示数组第一个数据。
 
-**类型：** [advertising.Advertisement](arkts-ads-advertising-advertisement-t.md)[]
+**类型：** advertising.Advertisement[]
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Advertising.Ads
 
@@ -78,11 +78,11 @@ displayOptions: advertising.AdDisplayOptions
 
 广告展示参数。
 
-**类型：** [advertising.AdDisplayOptions](arkts-ads-advertising-addisplayoptions-i.md)
+**类型：** advertising.AdDisplayOptions
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Advertising.Ads
 
@@ -94,11 +94,11 @@ interactionListener: advertising.AdInteractionListener
 
 广告状态变化回调。
 
-**类型：** [advertising.AdInteractionListener](arkts-ads-advertising-adinteractionlistener-i.md)
+**类型：** advertising.AdInteractionListener
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Advertising.Ads
 
@@ -116,6 +116,6 @@ rollPlayState?: number
 
 **装饰器类型：** @Prop
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Advertising.Ads

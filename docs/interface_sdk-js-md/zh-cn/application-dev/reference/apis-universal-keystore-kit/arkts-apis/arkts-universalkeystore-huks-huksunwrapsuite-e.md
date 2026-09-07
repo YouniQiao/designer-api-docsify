@@ -18,7 +18,7 @@ HUKS_UNWRAP_SUITE_X25519_AES_256_GCM_NOPADDING = 1
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.Huks.Core
@@ -34,7 +34,7 @@ HUKS_UNWRAP_SUITE_ECDH_AES_256_GCM_NOPADDING = 2
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.Huks.Core
@@ -50,6 +50,6 @@ HUKS_UNWRAP_SUITE_SM2_SM4_ECB_NOPADDING = 5
 
 **起始版本：** 23
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Security.Huks.Core

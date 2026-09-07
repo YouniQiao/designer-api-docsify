@@ -4,8 +4,6 @@ Describes the setting item list.
 
 **Since:** 24
 
-**Model restriction:** This API can be used only in the stage model.
-
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## ACCOUNT_ID

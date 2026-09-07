@@ -218,6 +218,7 @@ Authenticates a domain account in a pop-up window.
 **Since:** 10
 
 **Required permissions:** 
+- API version 11 and later: N/A
 - API version 10: ohos.permission.ACCESS_USER_AUTH_INTERNAL
 
 **System capability:** SystemCapability.Account.OsAccount
@@ -278,6 +279,7 @@ Authenticates a domain account in a pop-up window.
 **Since:** 10
 
 **Required permissions:** 
+- API version 11 and later: N/A
 - API version 10: ohos.permission.ACCESS_USER_AUTH_INTERNAL
 
 **System capability:** SystemCapability.Account.OsAccount

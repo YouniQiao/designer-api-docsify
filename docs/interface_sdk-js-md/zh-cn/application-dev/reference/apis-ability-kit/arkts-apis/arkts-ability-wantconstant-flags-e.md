@@ -16,7 +16,7 @@ FLAG_AUTH_READ_URI_PERMISSION = 0x00000001
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Ability.AbilityBase
 
@@ -30,7 +30,7 @@ FLAG_AUTH_WRITE_URI_PERMISSION = 0x00000002
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Ability.AbilityBase
 
@@ -59,7 +59,7 @@ FLAG_INSTALL_ON_DEMAND = 0x00000800
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Ability.AbilityBase
 

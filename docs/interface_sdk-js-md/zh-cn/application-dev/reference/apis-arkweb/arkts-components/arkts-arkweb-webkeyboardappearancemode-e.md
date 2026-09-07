@@ -4,8 +4,6 @@ WebView中输入法沉浸模式，用于控制软键盘的显示风格，帮助�
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
-
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## NONE_IMMERSIVE

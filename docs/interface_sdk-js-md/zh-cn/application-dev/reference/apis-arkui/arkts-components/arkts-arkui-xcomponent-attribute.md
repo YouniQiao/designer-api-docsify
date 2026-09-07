@@ -32,7 +32,7 @@ enableAnalyzer(enable: boolean)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -59,7 +59,7 @@ enableSecure(isSecure: boolean)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本13开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本13开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -81,7 +81,7 @@ hdrBrightness(brightness: number)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -103,7 +103,7 @@ hdrBrightness(brightness: number, type?: HdrType)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本24开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -112,7 +112,7 @@ hdrBrightness(brightness: number, type?: HdrType)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | brightness | number | 是 | HDR视频的亮度。默认值：1.0取值范围：[0.0, 1.0]。小于0.0的值按0.0处理，大于1.0的值按1.0处理，其他异常值按1.0处理。 0.0表示视频按照SDR亮度显示，1.0表示视频按照当前允许的最高HDR亮度显示。 |
-| type | [HdrType](arkts-arkui-hdrtype-e.md) | 否 | [显示HDR内容时的HDR类型。默认值：**HdrType.DEFAULT](../arkts-apis/arkts-arkui-textmenushowmode-e.md) |
+| type | [HdrType](arkts-arkui-hdrtype-e.md) | 否 | 显示HDR内容时的HDR类型。默认值：**HdrType.DEFAULT |
 
 ## onDestroy
 
@@ -124,7 +124,7 @@ Native卸载完成时回调事件。与onSurfaceDestroyed的区别：onDestroy�
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -132,7 +132,7 @@ Native卸载完成时回调事件。与onSurfaceDestroyed的区别：onDestroy�
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | [VoidCallback](../arkts-apis/arkts-arkui-voidcallback-t.md) | 是 | Native卸载完成时回调事件。<br>**起始版本：** 18 |
+| event | [VoidCallback](../arkts-apis/arkts-arkui-voidcallback-t.md) | 是 | Native卸载完成时回调事件。<br>**适用版本：** 18 |
 
 ## onLoad
 
@@ -144,7 +144,7 @@ Native加载完成时回调事件。
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -152,4 +152,4 @@ Native加载完成时回调事件。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [OnNativeLoadCallback](arkts-arkui-onnativeloadcallback-t.md) | 是 | Native加载完成时回调事件，用于获取XComponent实例对象的context。<br>**起始版本：** 18 |
+| callback | [OnNativeLoadCallback](arkts-arkui-onnativeloadcallback-t.md) | 是 | Native加载完成时回调事件，用于获取XComponent实例对象的context。<br>**适用版本：** 18 |

@@ -24,7 +24,7 @@ static applyProxyOverride(proxyConfig: ProxyConfig, callback: OnProxyConfigChang
 
 **起始版本：** 15
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -44,7 +44,6 @@ static applyProxyOverride(proxyConfig: ProxyConfig, callback: OnProxyConfigChang
 **示例**
 
 完整示例代码参考[removeProxyOverride](./arkts-apis-webview-ProxyController.md#removeproxyoverride)。
-- simpleType:
 
 ## removeProxyOverride
 
@@ -56,7 +55,7 @@ static removeProxyOverride(callback: OnProxyConfigChangeCallback): void
 
 **起始版本：** 15
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 

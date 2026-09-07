@@ -18,7 +18,7 @@ SymbolGlyph(value?: Resource)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
 
@@ -367,7 +367,6 @@ struct Index {
 ```
 
 该示例通过[fontColor](#fontcolor-1)属性传入ColorMetrics类型参数，设置SymbolGlyph组件的颜色。
-从API版本26.0.0开始，新增支持[fontColor](#fontcolor-1)。
 
 ```TypeScript
 // xxx.ets
@@ -413,7 +412,6 @@ struct Index {
 ```
 
 该示例通过[fontWeight](#fontweight-1)属性展示SymbolGlyph不同粗细配置下的效果：第一行图标小符号展示启用可变字重后，分别设置字重值为220和660的效果；第二行图标小符号展示在将设备的系统字体粗细设置为粗体后，分别设置跟随和不跟随设备的字体粗细级别自动更新的效果。
-从API版本26.0.0开始，新增[fontWeight](#fontweight-1)属性。
 
 ```TypeScript
 // xxx.ets

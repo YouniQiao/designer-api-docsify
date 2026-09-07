@@ -6,6 +6,8 @@ Provides APIs for managing partner agents.
 
 **Since:** 23
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.Communication.FusionConnectivity.Core
 
 ## Modules to Import

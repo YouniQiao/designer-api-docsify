@@ -34,6 +34,7 @@ Unsubscribe the event reported when the profile connection state changes. On API
 
 **Required permissions:** 
 - API version 10 and later: ohos.permission.ACCESS_BLUETOOTH
+- API version 9: N/A
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -67,6 +68,7 @@ Subscribe the event reported when the profile connection state changes. On API 1
 
 **Required permissions:** 
 - API version 10 and later: ohos.permission.ACCESS_BLUETOOTH
+- API version 9: N/A
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 

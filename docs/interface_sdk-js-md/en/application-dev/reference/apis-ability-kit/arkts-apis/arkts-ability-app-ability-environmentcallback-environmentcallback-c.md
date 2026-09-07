@@ -37,7 +37,6 @@ Called when the system configuration changes, after [a listener has been registe
 **Examples**
 
 See Usage of EnvironmentCallback.
-- simpleType:
 
 ## onMemoryLevel
 
@@ -59,9 +58,8 @@ Called when the system memory level changes, after [a listener has been register
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| level | [AbilityConstant.MemoryLevel](arkts-ability-abilityconstant-memorylevel-e.md) | Yes | Memory level, indicating the available memory of the entire device. |
+| level | AbilityConstant.MemoryLevel | Yes | Memory level, indicating the available memory of the entire device. |
 
 **Examples**
 
 See Usage of EnvironmentCallback.
-- simpleType:

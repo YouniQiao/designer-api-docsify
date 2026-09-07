@@ -43,10 +43,6 @@ Resolves an MDNS service. This API uses an asynchronous callback to return the r
 **Examples**
 
 > NOTE
-> 
-> In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
-
-Stage model:
 
 ```TypeScript
 import { mdns } from '@kit.NetworkKit';
@@ -114,10 +110,6 @@ Resolves an MDNS service. This API uses a promise to return the result.
 **Examples**
 
 > NOTE
-> 
-> In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
-
-Stage model:
 
 ```TypeScript
 import { mdns } from '@kit.NetworkKit';

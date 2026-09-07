@@ -629,7 +629,6 @@ struct WebComponent {
 ```
 
 For details about the sample code, see constructor.
-- simpleType:
 
 ## getOriginalUrl
 
@@ -1179,7 +1178,6 @@ Obtains the download request URL.
 **Examples**
 
 For details about the sample code, see [removeProxyOverride](./arkts-apis-webview-ProxyController.md#removeproxyoverride).
-- simpleType:
 
 ```TypeScript
 // xxx.ets
@@ -1231,7 +1229,6 @@ struct WebComponent {
 ```
 
 For details about the sample code, see constructor.
-- simpleType:
 
 ```TypeScript
 // xxx.ets
@@ -1283,7 +1280,6 @@ Pauses the download task.
 **Examples**
 
 For details about the sample code, see [onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer).
-- simpleType:
 
 ```TypeScript
 // xxx.ets

@@ -10,12 +10,12 @@ declare type SegmentButtonItemTuple = ItemRestriction<SegmentButtonTextItem> | I
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 | 类型 | 说明 |
 | --- | --- |
-| [ItemRestriction](arkts-arkui-itemrestriction-t.md)&lt;[SegmentButtonTextItem](arkts-arkui-arkui-advanced-segmentbutton-segmentbuttontextitem-i.md)&gt; | 仅文本按钮信息的元组。 |
-| [ItemRestriction](arkts-arkui-itemrestriction-t.md)&lt;[SegmentButtonIconItem](arkts-arkui-arkui-advanced-segmentbutton-segmentbuttoniconitem-i.md)&gt; | 仅图标按钮信息的元组。 |
-| [ItemRestriction](arkts-arkui-itemrestriction-t.md)&lt;[SegmentButtonIconTextItem](arkts-arkui-arkui-advanced-segmentbutton-segmentbuttonicontextitem-i.md)&gt; | 图标+文本按钮信息的元组。 |
+| ItemRestriction&lt;SegmentButtonTextItem&gt; | 仅文本按钮信息的元组。 |
+| ItemRestriction&lt;SegmentButtonIconItem&gt; | 仅图标按钮信息的元组。 |
+| ItemRestriction&lt;SegmentButtonIconTextItem&gt; | 图标+文本按钮信息的元组。 |

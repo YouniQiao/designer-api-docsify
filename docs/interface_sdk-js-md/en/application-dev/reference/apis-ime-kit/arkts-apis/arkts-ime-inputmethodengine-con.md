@@ -8,6 +8,8 @@ const CURSOR_DOWN: number
 
 The caret moves downward.
 
+**Type:** number
+
 **Since:** 9
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -19,6 +21,8 @@ const CURSOR_LEFT: number
 ```
 
 The caret moves leftward.
+
+**Type:** number
 
 **Since:** 9
 
@@ -32,6 +36,8 @@ const CURSOR_RIGHT: number
 
 The caret moves rightward.
 
+**Type:** number
+
 **Since:** 9
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -43,6 +49,8 @@ const CURSOR_UP: number
 ```
 
 The caret moves upward.
+
+**Type:** number
 
 **Since:** 9
 
@@ -56,6 +64,8 @@ const DISPLAY_MODE_FULL: number
 
 The edit box is displayed in full screen.
 
+**Type:** number
+
 **Since:** 8
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -67,6 +77,8 @@ const DISPLAY_MODE_PART: number
 ```
 
 The edit box is displayed in half-screen mode.
+
+**Type:** number
 
 **Since:** 8
 
@@ -80,6 +92,8 @@ const ENTER_KEY_TYPE_DONE: number
 
 Key that indicates that a task or input is complete.
 
+**Type:** number
+
 **Since:** 8
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -91,6 +105,8 @@ const ENTER_KEY_TYPE_GO: number
 ```
 
 Key that executes a command or navigates to a specific location.
+
+**Type:** number
 
 **Since:** 8
 
@@ -104,6 +120,8 @@ const ENTER_KEY_TYPE_NEWLINE: number
 
 Key that inserts a new line.
 
+**Type:** number
+
 **Since:** 12
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -115,6 +133,8 @@ const ENTER_KEY_TYPE_NEXT: number
 ```
 
 Key that moves the focus to the next item in a sequence.
+
+**Type:** number
 
 **Since:** 8
 
@@ -128,6 +148,8 @@ const ENTER_KEY_TYPE_PREVIOUS: number
 
 Key that moves the focus to the previous item in a sequence.
 
+**Type:** number
+
 **Since:** 8
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -139,6 +161,8 @@ const ENTER_KEY_TYPE_SEARCH: number
 ```
 
 Key that initiates a search operation.
+
+**Type:** number
 
 **Since:** 8
 
@@ -152,6 +176,8 @@ const ENTER_KEY_TYPE_SEND: number
 
 Key that sends the text to its target.
 
+**Type:** number
+
 **Since:** 8
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -163,6 +189,8 @@ const ENTER_KEY_TYPE_UNSPECIFIED: number
 ```
 
 No function is specified for the key.
+
+**Type:** number
 
 **Since:** 8
 
@@ -176,6 +204,8 @@ const FLAG_SELECTING: number
 
 The edit box is being selected.
 
+**Type:** number
+
 **Since:** 8
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -187,6 +217,8 @@ const FLAG_SINGLE_LINE: number
 ```
 
 The edit box allows only single-line input.
+
+**Type:** number
 
 **Since:** 8
 
@@ -200,6 +232,8 @@ const OPTION_ASCII: number
 
 ASCII values are allowed.
 
+**Type:** number
+
 **Since:** 8
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -211,6 +245,8 @@ const OPTION_AUTO_CAP_CHARACTERS: number
 ```
 
 Characters are allowed.
+
+**Type:** number
 
 **Since:** 8
 
@@ -224,6 +260,8 @@ const OPTION_AUTO_CAP_SENTENCES: number
 
 Sentences are allowed.
 
+**Type:** number
+
 **Since:** 8
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -235,6 +273,8 @@ const OPTION_AUTO_WORDS: number
 ```
 
 Words are allowed.
+
+**Type:** number
 
 **Since:** 8
 
@@ -248,6 +288,8 @@ const OPTION_MULTI_LINE: number
 
 Multiple lines are allowed.
 
+**Type:** number
+
 **Since:** 8
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -259,6 +301,8 @@ const OPTION_NO_FULLSCREEN: number
 ```
 
 Half-screen style.
+
+**Type:** number
 
 **Since:** 8
 
@@ -272,6 +316,8 @@ const OPTION_NONE: number
 
 No input attribute is specified.
 
+**Type:** number
+
 **Since:** 8
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -283,6 +329,8 @@ const PATTERN_DATETIME: number
 ```
 
 Date edit box.
+
+**Type:** number
 
 **Since:** 8
 
@@ -296,6 +344,8 @@ const PATTERN_EMAIL: number
 
 Email edit box.
 
+**Type:** number
+
 **Since:** 8
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -307,6 +357,8 @@ const PATTERN_NEW_PASSWORD: number
 ```
 
 New password edit box.
+
+**Type:** number
 
 **Since:** 20
 
@@ -322,6 +374,8 @@ const PATTERN_NULL: number
 
 Any type of edit box.
 
+**Type:** number
+
 **Since:** 8
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -334,6 +388,8 @@ const PATTERN_NUMBER: number
 
 Number edit box.
 
+**Type:** number
+
 **Since:** 8
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -345,6 +401,8 @@ const PATTERN_NUMBER_DECIMAL: number
 ```
 
 Edit box for numbers with decimal points.
+
+**Type:** number
 
 **Since:** 20
 
@@ -360,6 +418,8 @@ const PATTERN_ONE_TIME_CODE: number
 
 Verification code edit box.
 
+**Type:** number
+
 **Since:** 20
 
 **Model restriction:** This API can be used only in the stage model.
@@ -374,6 +434,8 @@ const PATTERN_PASSWORD: number
 
 Password edit box.
 
+**Type:** number
+
 **Since:** 8
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -385,6 +447,8 @@ const PATTERN_PASSWORD_NUMBER: number
 ```
 
 Numeric password edit box.
+
+**Type:** number
 
 **Since:** 11
 
@@ -398,6 +462,8 @@ const PATTERN_PASSWORD_SCREEN_LOCK: number
 
 Screen lock password edit box.
 
+**Type:** number
+
 **Since:** 11
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -409,6 +475,8 @@ const PATTERN_PHONE: number
 ```
 
 Phone number edit box.
+
+**Type:** number
 
 **Since:** 8
 
@@ -422,6 +490,8 @@ const PATTERN_TEXT: number
 
 Text edit box.
 
+**Type:** number
+
 **Since:** 8
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -434,6 +504,8 @@ const PATTERN_URI: number
 
 URI edit box.
 
+**Type:** number
+
 **Since:** 8
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -445,6 +517,8 @@ const PATTERN_USER_NAME: number
 ```
 
 User name edit box.
+
+**Type:** number
 
 **Since:** 20
 
@@ -459,6 +533,8 @@ const WINDOW_TYPE_INPUT_METHOD_FLOAT: number
 ```
 
 The input method is displayed in a floating window.
+
+**Type:** number
 
 **Since:** 9
 

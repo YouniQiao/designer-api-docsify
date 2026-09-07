@@ -18,6 +18,7 @@ function removeAppShareOptions(intention: Intention): void
 
 **需要权限：** 
 - API版本14+：ohos.permission.MANAGE_UDMF_APP_SHARE_OPTION
+- API版本12-13：N/A
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

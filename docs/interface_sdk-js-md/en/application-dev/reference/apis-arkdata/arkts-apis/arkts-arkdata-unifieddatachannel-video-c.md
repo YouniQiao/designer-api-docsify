@@ -17,6 +17,22 @@ import { unifiedDataChannel } from '@kit.ArkData';
 ## videoUri
 
 ```TypeScript
+get videoUri(): string
+```
+
+Indicates the uri of video
+
+**Type:** string
+
+**Since:** 10
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+**System capability:** SystemCapability.DistributedDataManager.UDMF.Core
+
+```TypeScript
 set videoUri(value: string)
 ```
 

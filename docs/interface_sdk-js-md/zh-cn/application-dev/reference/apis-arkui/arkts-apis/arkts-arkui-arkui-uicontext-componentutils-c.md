@@ -40,7 +40,7 @@ getRectangleById(id: string): componentUtils.ComponentInfo
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -54,7 +54,7 @@ getRectangleById(id: string): componentUtils.ComponentInfo
 
 | 类型 | 说明 |
 | --- | --- |
-| [componentUtils.ComponentInfo](arkts-arkui-componentutils-componentinfo-i.md) | 组件大小、位置、平移、缩放、旋转及仿射矩阵属性信息。 |
+| componentUtils.ComponentInfo | 组件大小、位置、平移、缩放、旋转及仿射矩阵属性信息。 |
 
 **错误码：**
 

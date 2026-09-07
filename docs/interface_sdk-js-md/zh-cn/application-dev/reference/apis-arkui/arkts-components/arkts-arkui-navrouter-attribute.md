@@ -33,7 +33,7 @@ mode(mode: NavRouteMode)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -41,7 +41,7 @@ mode(mode: NavRouteMode)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mode | [NavRouteMode](arkts-arkui-navroutemode-e.md) | 是 | [指定点击NavRouter跳转到NavDestination页面时，使用的路由模式。默认值：NavRouteMode.PUSH_WITH_RECREATE](arkts-arkui-navroutemode-e.md) |
+| mode | [NavRouteMode](arkts-arkui-navroutemode-e.md) | 是 | 指定点击NavRouter跳转到NavDestination页面时，使用的路由模式。默认值：NavRouteMode.PUSH_WITH_RECREATE |
 
 ## onStateChange
 
@@ -57,7 +57,7 @@ onStateChange(callback: (isActivated: boolean) => void)
 
 **替代接口：** [onShown](arkts-arkui-navdestination-attribute.md#onshown)
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

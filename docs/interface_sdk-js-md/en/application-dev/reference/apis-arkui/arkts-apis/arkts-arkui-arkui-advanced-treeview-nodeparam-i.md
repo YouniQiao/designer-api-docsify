@@ -208,7 +208,7 @@ Symbol edit icon, which has a higher priority than **editIcon**.
 
 Default value: **undefined**
 
-**Type:** SymbolGlyphModifier
+**Type:** [SymbolGlyphModifier](../arkts-components/arkts-arkui-symbolglyphmodifier-t.md)
 
 **Since:** 18
 
@@ -228,7 +228,7 @@ Symbol icon, which has higher priority than **icon**.
 
 Default value: **undefined**
 
-**Type:** SymbolGlyphModifier
+**Type:** [SymbolGlyphModifier](../arkts-components/arkts-arkui-symbolglyphmodifier-t.md)
 
 **Since:** 18
 
@@ -248,7 +248,7 @@ Symbol icon of the selected node., which has higher priority than **selectedIcon
 
 Default value: **undefined**
 
-**Type:** SymbolGlyphModifier
+**Type:** [SymbolGlyphModifier](../arkts-components/arkts-arkui-symbolglyphmodifier-t.md)
 
 **Since:** 18
 

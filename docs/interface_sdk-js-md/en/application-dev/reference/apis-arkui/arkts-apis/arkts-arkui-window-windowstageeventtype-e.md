@@ -4,8 +4,6 @@ Enumerates the lifecycle event types of a WindowStage.
 
 **Since:** 9
 
-**Model restriction:** This API can be used only in the stage model.
-
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 ## SHOWN

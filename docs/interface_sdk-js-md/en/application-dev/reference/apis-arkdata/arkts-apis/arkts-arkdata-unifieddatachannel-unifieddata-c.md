@@ -338,6 +338,22 @@ let hasLink = unifiedData.hasType(uniformTypeDescriptor.UniformDataType.HYPERLIN
 ## properties
 
 ```TypeScript
+get properties(): UnifiedDataProperties
+```
+
+UnifiedData properties.
+
+**Type:** [UnifiedDataProperties](arkts-arkdata-unifieddatachannel-unifieddataproperties-c.md)
+
+**Since:** 12
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+**System capability:** SystemCapability.DistributedDataManager.UDMF.Core
+
+```TypeScript
 set properties(value: UnifiedDataProperties)
 ```
 

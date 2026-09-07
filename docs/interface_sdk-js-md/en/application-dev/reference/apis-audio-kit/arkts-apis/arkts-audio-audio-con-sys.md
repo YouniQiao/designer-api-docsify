@@ -8,6 +8,8 @@ const LOCAL_NETWORK_ID: string
 
 Define local device network id for audio.
 
+**Type:** string
+
 **Since:** 9
 
 **System capability:** SystemCapability.Multimedia.Audio.Device

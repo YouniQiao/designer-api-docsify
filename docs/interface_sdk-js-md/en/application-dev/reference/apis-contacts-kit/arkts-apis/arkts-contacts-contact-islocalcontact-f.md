@@ -18,7 +18,7 @@ Checks whether the ID of this contact is in the local address book. This API use
 
 **Deprecated since:** 10
 
-**Substitutes:** [isLocalContact](#islocalcontact)(context: Context, id: number, callback: AsyncCallback&lt;boolean&gt;)
+**Substitutes:** [isLocalContact](#islocalcontact-1)(context: Context, id: number, callback: AsyncCallback&lt;boolean&gt;)
 
 **Required permissions:** ohos.permission.READ_CONTACTS
 
@@ -80,8 +80,6 @@ Checks whether the ID of this contact is in the local address book. This API use
 **Examples**
 
 > NOTE
-> 
-> In the examples in this document, this.context is used to obtain the UIAbilityContext, where this represents a UIAbility instance that inherits from UIAbility. To use the capabilities provided by UIAbilityContext in the UI, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -112,7 +110,7 @@ Checks whether the ID of this contact is in the local address book. This API use
 
 **Deprecated since:** 10
 
-**Substitutes:** [isLocalContact](#islocalcontact)(context: Context, id: number)
+**Substitutes:** [isLocalContact](#islocalcontact-3)(context: Context, id: number)
 
 **Required permissions:** ohos.permission.READ_CONTACTS
 
@@ -180,8 +178,6 @@ Checks whether the ID of this contact is in the local address book. This API use
 **Examples**
 
 > NOTE
-> 
-> In the examples in this document, this.context is used to obtain the UIAbilityContext, where this represents a UIAbility instance inherited from UIAbility. If you need to use the capabilities provided by UIAbilityContext in the UI, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
 ```TypeScript
 import { contact } from '@kit.ContactsKit';

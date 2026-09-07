@@ -10,4 +10,4 @@ Defines the network type.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
-**Type:** [connection.NetBearType](arkts-network-connection-netbeartype-e.md)
+**Type:** connection.NetBearType

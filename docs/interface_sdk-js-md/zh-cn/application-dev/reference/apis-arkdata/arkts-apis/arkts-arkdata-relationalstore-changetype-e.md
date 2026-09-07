@@ -17,7 +17,8 @@ DATA_CHANGE = 0
 **起始版本：** 10
 
 **需要权限：** 
-- API版本10 - 11：ohos.permission.DISTRIBUTED_DATASYNC
+- API版本12+：N/A
+- API版本10-11：ohos.permission.DISTRIBUTED_DATASYNC
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -32,6 +33,7 @@ ASSET_CHANGE = 1
 **起始版本：** 10
 
 **需要权限：** 
-- API版本10 - 11：ohos.permission.DISTRIBUTED_DATASYNC
+- API版本12+：N/A
+- API版本10-11：ohos.permission.DISTRIBUTED_DATASYNC
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core

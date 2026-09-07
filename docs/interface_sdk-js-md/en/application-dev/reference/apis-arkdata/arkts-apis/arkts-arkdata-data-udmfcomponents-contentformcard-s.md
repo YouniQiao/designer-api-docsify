@@ -22,7 +22,7 @@ contentFormData: uniformDataStruct.ContentForm
 
 Data of the form card.
 
-**Type:** [uniformDataStruct.ContentForm](arkts-arkdata-uniformdatastruct-contentform-i.md)
+**Type:** uniformDataStruct.ContentForm
 
 **Since:** 20
 

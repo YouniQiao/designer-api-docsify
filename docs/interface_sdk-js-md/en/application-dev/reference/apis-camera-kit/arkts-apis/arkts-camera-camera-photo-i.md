@@ -112,7 +112,7 @@ main: image.Image
 
 Full-quality image.
 
-**Type:** [image.Image](../../apis-image-kit/arkts-apis/arkts-image-image-image-i.md)
+**Type:** image.Image
 
 **Since:** 11
 

@@ -10,6 +10,8 @@ Application binary interface (Abi) list.
 
 Example: arm64-v8a
 
+**Type:** string
+
 **Since:** 6
 
 **System capability:** SystemCapability.Startup.SystemInfo
@@ -23,6 +25,8 @@ const bootCount: number
 Number of device reboots. If the number cannot be obtained, **-1** is returned.
 
 Example: 100
+
+**Type:** number
 
 **Since:** 21
 
@@ -38,6 +42,8 @@ Bootloader version, which identifies the version of the device bootloader.
 
 Example: bootloader
 
+**Type:** string
+
 **Since:** 6
 
 **System capability:** SystemCapability.Startup.SystemInfo
@@ -49,6 +55,8 @@ const brand: string
 ```
 
 Device brand.
+
+**Type:** string
 
 **Since:** 6
 
@@ -66,6 +74,8 @@ Build host.
 
 Example: default
 
+**Type:** string
+
 **Since:** 6
 
 **System capability:** SystemCapability.Startup.SystemInfo
@@ -79,6 +89,8 @@ const buildRootHash: string
 Build root hash.
 
 Example: default
+
+**Type:** string
 
 **Since:** 6
 
@@ -94,6 +106,8 @@ Build time.
 
 Example: default
 
+**Type:** string
+
 **Since:** 6
 
 **System capability:** SystemCapability.Startup.SystemInfo
@@ -107,6 +121,8 @@ const buildType: string
 Build type.
 
 Example: default
+
+**Type:** string
 
 **Since:** 6
 
@@ -122,6 +138,8 @@ Build user.
 
 Example: default
 
+**Type:** string
+
 **Since:** 6
 
 **System capability:** SystemCapability.Startup.SystemInfo
@@ -135,6 +153,8 @@ const buildVersion: number
 Build version number. The value is the fourth digit in **osFullName**. You are advised to use **deviceInfo.buildVersion** instead of parsing **osFullName** to obtain the value, facilitating efficiency improvement.
 
 Example: 1
+
+**Type:** number
 
 **Since:** 6
 
@@ -150,6 +170,8 @@ Obtains the device CPU chipType by a string.
 
 Example: xxxxx
 
+**Type:** string
+
 **Since:** 21
 
 **System capability:** SystemCapability.Startup.SystemInfo
@@ -161,6 +183,8 @@ const deviceColor: string
 ```
 
 Device color. If the value cannot be obtained, an empty string is returned.
+
+**Type:** string
 
 **Since:** 26.0.0
 
@@ -177,6 +201,8 @@ const deviceType: string
 Device type. For details, see [deviceTypes tag](../../../quick-start/module-configuration-file.md#devicetypes).
 
 Example: <!--RP1-->wearable<!--RP1End-->
+
+**Type:** string
 
 **Since:** 6
 
@@ -200,6 +226,8 @@ ohos.permission.ACCESS_DISK_PHY_INFO
 
 Example: 2502EM400567
 
+**Type:** string
+
 **Since:** 15
 
 **Required permissions:** ohos.permission.ACCESS_DISK_PHY_INFO
@@ -216,6 +244,8 @@ Product version.
 
 Example: <!--RP8-->XXX X.X.X.X<!--RP8End-->
 
+**Type:** string
+
 **Since:** 6
 
 **System capability:** SystemCapability.Startup.SystemInfo
@@ -227,6 +257,8 @@ const distributionOSApiName: string
 ```
 
 Distribution OS API name.<!--Del--> It is defined by the issuer.<!--DelEnd-->
+
+**Type:** string
 
 **Since:** 13
 
@@ -242,6 +274,8 @@ Distribution OS API version.<!--Del--> It is defined by the issuer.<!--DelEnd-->
 
 Example: 50001
 
+**Type:** number
+
 **Since:** 10
 
 **System capability:** SystemCapability.Startup.SystemInfo
@@ -255,6 +289,8 @@ const distributionOSName: string
 Distribution OS name.<!--Del--> It is defined by the issuer.<!--DelEnd-->
 
 Example: OpenHarmony
+
+**Type:** string
 
 **Since:** 10
 
@@ -270,6 +306,8 @@ Distribution OS release type.<!--Del--> It is defined by the issuer.<!--DelEnd--
 
 Example: Release
 
+**Type:** string
+
 **Since:** 10
 
 **System capability:** SystemCapability.Startup.SystemInfo
@@ -283,6 +321,8 @@ const distributionOSVersion: string
 Distribution OS version.<!--Del--> It is defined by the issuer.<!--DelEnd--><!--RP11--><!--RP11End-->
 
 Example: 5.0.0
+
+**Type:** string
 
 **Since:** 10
 
@@ -298,6 +338,8 @@ Feature version number. The value is the third digit in **osFullName**. You are 
 
 Example: 0
 
+**Type:** number
+
 **Since:** 6
 
 **System capability:** SystemCapability.Startup.SystemInfo
@@ -312,6 +354,8 @@ First API version.
 
 Example: 3
 
+**Type:** number
+
 **Since:** 6
 
 **System capability:** SystemCapability.Startup.SystemInfo
@@ -325,6 +369,8 @@ const hardwareModel: string
 Hardware model.
 
 Example: <!--RP6-->TASA00CVN1<!--RP6End-->
+
+**Type:** string
 
 **Since:** 6
 
@@ -344,6 +390,8 @@ This API is supported since API version 6 and deprecated since API version 9. Yo
 
 Example: default
 
+**Type:** string
+
 **Since:** 6
 
 **Deprecated since:** 9
@@ -360,6 +408,8 @@ Incremental version, which is the Ohos version number generated during compilati
 
 Example: default
 
+**Type:** string
+
 **Since:** 6
 
 **System capability:** SystemCapability.Startup.SystemInfo
@@ -374,6 +424,8 @@ Major version number, which increments with the main version. The value is the f
 
 Example: 5
 
+**Type:** number
+
 **Since:** 6
 
 **System capability:** SystemCapability.Startup.SystemInfo
@@ -385,6 +437,8 @@ const manufacture: string
 ```
 
 Device manufacturer.
+
+**Type:** string
 
 **Since:** 6
 
@@ -399,6 +453,8 @@ const marketName: string
 Marketing name.
 
 Example: <!--RP2-->Mate XX<!--RP2End-->
+
+**Type:** string
 
 **Since:** 6
 
@@ -436,6 +492,8 @@ The data length is 37 bytes (including the terminator).
 
 Example: 1234a567-XXXX-XXXX-XXXX-XXXXXXXXXXXX
 
+**Type:** string
+
 **Since:** 12
 
 **System capability:** SystemCapability.Startup.SystemInfo
@@ -449,6 +507,8 @@ const osFullName: string
 System version. The version number is in the format of **<!--RP12-->OpenHarmony-x.x.x.x**, where **x** is a placeholder for digits. <!--RP12End-->To obtain the value of a segment in the version number, you are advised to use **majorVersion**, **seniorVersion**, **featureVersion**, or **buildVersion**, which can improve efficiency. Parsing **osFullName** is not recommended.
 
 Example: <!--RP10-->Openharmony-5.0.0.1<!--RP10End-->
+
+**Type:** string
 
 **Since:** 6
 
@@ -472,6 +532,8 @@ of instability.
 
 Example: <!--RP9-->Canary/Beta/Release<!--RP9End-->
 
+**Type:** string
+
 **Since:** 6
 
 **System capability:** SystemCapability.Startup.SystemInfo
@@ -486,6 +548,8 @@ Device capability level, which is evaluated based on factors such as CPU, memory
 
 Example: 0
 
+**Type:** [PerformanceClassLevel](arkts-basicservices-deviceinfo-performanceclasslevel-e.md)
+
 **Since:** 19
 
 **System capability:** SystemCapability.Startup.SystemInfo
@@ -499,6 +563,8 @@ const productModel: string
 Product model.
 
 Example: <!--RP4-->TAS-AL00<!--RP4End-->
+
+**Type:** string
 
 **Since:** 6
 
@@ -516,6 +582,8 @@ Product model alias.
 
 Example: TAS-AL00
 
+**Type:** string
+
 **Since:** 14
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
@@ -532,6 +600,8 @@ Product series.
 
 Example: <!--RP3-->TAS<!--RP3End-->
 
+**Type:** string
+
 **Since:** 6
 
 **System capability:** SystemCapability.Startup.SystemInfo
@@ -545,6 +615,8 @@ const sdkApiVersion: number
 SDK API version.
 
 Example: 12
+
+**Type:** number
 
 **Since:** 6
 
@@ -561,6 +633,8 @@ const sdkMinorApiVersion: number
 Starting from API version 26.0.0, the minor version is introduced as part of semantic versioning. It is the middle field in the semantic version and is an integer. The complete API version is represented by sdkApiVersion.sdkMinorApiVersion.sdkPatchApiVersion.
 
 Example: If the API version of the system software is 26.0.1, sdkMinorApiVersion is 0. If the API version of the system software is 26.1.0, sdkMinorApiVersion is 1.
+
+**Type:** number
 
 **Since:** 26.0.0
 
@@ -580,6 +654,8 @@ Starting from API version 26.0.0, the patch version is introduced as part of sem
 
 Example: If the API version of the system software is 26.0.1, sdkPatchApiVersion is 1. If the API version of the system software is 26.1.0, sdkPatchApiVersion is 0.
 
+**Type:** number
+
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
@@ -598,6 +674,8 @@ Security patch tag.
 
 Example: <!--RP7-->2021/01/01<!--RP7End-->
 
+**Type:** string
+
 **Since:** 6
 
 **System capability:** SystemCapability.Startup.SystemInfo
@@ -611,6 +689,8 @@ const seniorVersion: number
 Senior version number, which increments with architecture and feature updates. The value is the second digit in **osFullName**. You are advised to use **deviceInfo.seniorVersion** instead of parsing **osFullName** to obtain the value, facilitating efficiency improvement.
 
 Example: 0
+
+**Type:** number
 
 **Since:** 6
 
@@ -632,6 +712,8 @@ The device SN can be used as the unique identifier of a device.
 
 Example: The SN varies with the device.
 
+**Type:** string
+
 **Since:** 6
 
 **Required permissions:** ohos.permission.sec.ACCESS_UDID
@@ -647,6 +729,8 @@ const softwareModel: string
 Software model.
 
 Example: <!--RP5-->TAS-AL00<!--RP5End-->
+
+**Type:** string
 
 **Since:** 6
 
@@ -668,6 +752,8 @@ The data length is 65 bytes. The UDID can be used as the unique identifier of a 
 
 Example: 9D6AABD147XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXE5536412
 
+**Type:** string
+
 **Since:** 7
 
 **Required permissions:** ohos.permission.sec.ACCESS_UDID
@@ -681,6 +767,8 @@ const versionId: string
 ```
 
 Version ID, which is a concatenation of **deviceType**, **manufacture**, **brand**, **productSeries**, **osFullName**, **productModel**, **softwareModel**, **sdkApiVersion**, **incrementalVersion**, and **buildType**. To obtain a specific field value, you are advised to use the corresponding field directly (such as **deviceType** and **manufacture**) instead of parsing **versionId**, facilitating efficiency improvement.
+
+**Type:** string
 
 **Since:** 6
 

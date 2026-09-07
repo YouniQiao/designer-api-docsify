@@ -25,6 +25,7 @@ Obtains information about the running processes of the current application. This
 **Since:** 9
 
 **Required permissions:** 
+- API version 11 and later: N/A
 - API versions 9 to 10: ohos.permission.GET_RUNNING_INFO
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -76,6 +77,7 @@ Obtains information about the running processes of the current application. This
 **Since:** 9
 
 **Required permissions:** 
+- API version 11 and later: N/A
 - API versions 9 to 10: ohos.permission.GET_RUNNING_INFO
 
 **Atomic service API:** This API can be used in atomic services since API version 11.

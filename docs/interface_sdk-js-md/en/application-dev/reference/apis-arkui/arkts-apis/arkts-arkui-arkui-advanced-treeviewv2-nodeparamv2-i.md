@@ -180,7 +180,7 @@ symbolEditIconStyle?: SymbolGlyphModifier
 
 Set edit symbol resource.
 
-**Type:** SymbolGlyphModifier
+**Type:** [SymbolGlyphModifier](../arkts-components/arkts-arkui-symbolglyphmodifier-t.md)
 
 **Since:** 26.0.0
 
@@ -198,7 +198,7 @@ symbolIconStyle?: SymbolGlyphModifier
 
 Set the symbol resource.
 
-**Type:** SymbolGlyphModifier
+**Type:** [SymbolGlyphModifier](../arkts-components/arkts-arkui-symbolglyphmodifier-t.md)
 
 **Since:** 26.0.0
 
@@ -216,7 +216,7 @@ symbolSelectedIconStyle?: SymbolGlyphModifier
 
 Set selected symbol resource.
 
-**Type:** SymbolGlyphModifier
+**Type:** [SymbolGlyphModifier](../arkts-components/arkts-arkui-symbolglyphmodifier-t.md)
 
 **Since:** 26.0.0
 

@@ -33,4 +33,3 @@ The function of window animation finished callback.
 **Examples**
 
 For details, see the sample code under windowAnimationManager.setController.
-- simpleType:

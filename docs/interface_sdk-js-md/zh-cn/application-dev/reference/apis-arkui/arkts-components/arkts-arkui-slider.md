@@ -16,7 +16,7 @@ Slider(options?: SliderOptions)
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
 
@@ -906,7 +906,6 @@ struct SliderExample {
 ```
 
 通过[trackColorMetrics](arkts-arkui-slider-attribute.md#trackcolormetrics)设置指定色域的渐变断点值。示例中的colorSpace使用了ColorSpace.DISPLAY_P3类型，需要对应窗口调用setWindowColorSpace接口，将当前窗口设置为广色域模式，设置窗口色域模式为广色域参照方法[setWindowColorSpace](../arkts-apis-window-Window.md#setwindowcolorspace)。
-从API version 23开始，新增trackColorMetrics接口。
 
 ```TypeScript
 // xxx.ets
@@ -945,8 +944,6 @@ struct SliderExample {
 ```
 
 该示例通过通用属性[systemMaterial](ts-universal-attributes-image-effect.md#systemmaterial)设置滑动条的系统材质，实现沉浸光感效果。设置系统材质后，Slider滑动过程中会产生粒子动画效果。
-组件沉浸光感效果会根据设备算力与用户在系统中设置的沉浸光感效果自适应调整，开发者无需额外适配。
-从API版本26.0.0开始，新增systemMaterial接口。
 
 ```TypeScript
 // xxx.ets

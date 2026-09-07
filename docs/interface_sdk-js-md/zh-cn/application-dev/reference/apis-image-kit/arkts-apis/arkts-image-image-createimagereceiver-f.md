@@ -24,7 +24,7 @@ function createImageReceiver(width: number, height: number, format: number, capa
 
 **废弃版本：** 11
 
-**替代接口：** [createImageReceiver](#createimagereceiver)(size: Size, format: ImageFormat, capacity: int)
+**替代接口：** [createImageReceiver](#createimagereceiver-1)(size: Size, format: ImageFormat, capacity: int)
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageReceiver
 

@@ -24,7 +24,7 @@ static convertCanonicalLocaleIdentifier(locale: string): string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -56,7 +56,7 @@ static getBestMatchLocale(locale: string, localeList: string[]): string
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -105,7 +105,7 @@ static getDateOrder(locale: string): string
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -141,7 +141,7 @@ static getThreeLetterLanguage(locale: string): string
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -190,7 +190,7 @@ static getThreeLetterRegion(locale: string): string
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -237,7 +237,7 @@ static getTimePeriodName(hour:number, locale?: string): string
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -287,7 +287,7 @@ static getUnicodeWrappedFilePath(path: string, delimiter?: string, locale?: Intl
 
 **起始版本：** 20
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -297,7 +297,7 @@ static getUnicodeWrappedFilePath(path: string, delimiter?: string, locale?: Intl
 | --- | --- | --- | --- |
 | path | string | 是 | 待处理的路径，如：/data/out/tmp。 |
 | delimiter | string | 否 | 路径分隔符，默认值：/。 |
-| locale | [Intl.Locale](arkts-localization-intl-locale-c.md) | 否 | 区域对象，默认值：系统区域对象。 |
+| locale | Intl.Locale | 否 | 区域对象，默认值：系统区域对象。 |
 
 **返回值：**
 
@@ -345,7 +345,7 @@ static getUnicodeWrappedFilePath(path: string, delimiter?: string, locale?: intl
 
 **替代接口：** [getUnicodeWrappedFilePath](#getunicodewrappedfilepath)(path: string, delimiter?: string, locale?: Intl.Locale)
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -355,7 +355,7 @@ static getUnicodeWrappedFilePath(path: string, delimiter?: string, locale?: intl
 | --- | --- | --- | --- |
 | path | string | 是 | 待处理的路径，如：/data/out/tmp。 |
 | delimiter | string | 否 | 路径分隔符，默认值：/。 |
-| locale | [intl.Locale](arkts-localization-intl-locale-c.md) | 否 | 区域对象，默认值：系统区域对象。 |
+| locale | intl.Locale | 否 | 区域对象，默认值：系统区域对象。 |
 
 **返回值：**
 
@@ -403,7 +403,7 @@ static setUnicodeWrappedBidiDirection(text: string, direction: 'RTL' | 'LTR'): s
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -446,7 +446,7 @@ static unitConvert(fromUnit: UnitInfo, toUnit: UnitInfo, value: number, locale: 
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Global.I18n
 

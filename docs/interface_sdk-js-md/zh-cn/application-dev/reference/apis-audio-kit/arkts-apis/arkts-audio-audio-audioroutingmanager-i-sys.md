@@ -27,7 +27,8 @@ excludeOutputDevices(usage: DeviceUsage, devices: AudioDeviceDescriptors): Promi
 **起始版本：** 18
 
 **需要权限：** 
-- API版本18 - 22：ohos.permission.MANAGE_AUDIO_CONFIG
+- API版本23+：N/A
+- API版本18-22：ohos.permission.MANAGE_AUDIO_CONFIG
 
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
@@ -1049,7 +1050,8 @@ unexcludeOutputDevices(usage: DeviceUsage, devices: AudioDeviceDescriptors): Pro
 **起始版本：** 18
 
 **需要权限：** 
-- API版本18 - 22：ohos.permission.MANAGE_AUDIO_CONFIG
+- API版本23+：N/A
+- API版本18-22：ohos.permission.MANAGE_AUDIO_CONFIG
 
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
@@ -1119,7 +1121,8 @@ unexcludeOutputDevices(usage: DeviceUsage): Promise<void>
 **起始版本：** 18
 
 **需要权限：** 
-- API版本18 - 22：ohos.permission.MANAGE_AUDIO_CONFIG
+- API版本23+：N/A
+- API版本18-22：ohos.permission.MANAGE_AUDIO_CONFIG
 
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 

@@ -16,7 +16,7 @@ function getPublishedRunningFormInfos(): Promise<Array<formInfo.RunningFormInfo>
 
 **起始版本：** 20
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Ability.Form
 
@@ -24,7 +24,7 @@ function getPublishedRunningFormInfos(): Promise<Array<formInfo.RunningFormInfo>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;[formInfo.RunningFormInfo](arkts-form-forminfo-runningforminfo-i.md)&gt;&gt; | Promise对象。返回符合条件的卡片信息。 |
+| Promise&lt;Array&lt;formInfo.RunningFormInfo&gt;&gt; | Promise对象。返回符合条件的卡片信息。 |
 
 **错误码：**
 

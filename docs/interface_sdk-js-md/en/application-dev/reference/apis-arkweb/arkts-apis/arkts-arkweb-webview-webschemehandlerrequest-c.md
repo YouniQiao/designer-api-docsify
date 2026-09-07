@@ -33,7 +33,6 @@ Obtains the URL of the frame that triggers this request.
 **Examples**
 
 For the complete sample code, see [onRequestStart](./arkts-apis-webview-WebSchemeHandler.md#onrequeststart).
-- simpleType:
 
 ## getHeader
 
@@ -58,7 +57,6 @@ Obtains the information about the resource request header.
 **Examples**
 
 For the complete sample code, see [onRequestStart](./arkts-apis-webview-WebSchemeHandler.md#onrequeststart).
-- simpleType:
 
 ## getHttpBodyStream
 
@@ -83,7 +81,6 @@ Obtains the **WebHttpBodyStream** instance in this resource request.
 **Examples**
 
 For the complete sample code, see [onRequestStart](./arkts-apis-webview-WebSchemeHandler.md#onrequeststart).
-- simpleType:
 
 ## getReferrer
 
@@ -108,7 +105,6 @@ Obtains the referrer.
 **Examples**
 
 For the complete sample code, see [onRequestStart](./arkts-apis-webview-WebSchemeHandler.md#onrequeststart).
-- simpleType:
 
 ## getRequestMethod
 
@@ -133,7 +129,6 @@ Obtains the request method.
 **Examples**
 
 For the complete sample code, see [onRequestStart](./arkts-apis-webview-WebSchemeHandler.md#onrequeststart).
-- simpleType:
 
 ## getRequestResourceType
 
@@ -156,7 +151,6 @@ Obtains the resource type of this resource request.
 **Examples**
 
 For the complete sample code, see [onRequestStart](./arkts-apis-webview-WebSchemeHandler.md#onrequeststart).
-- simpleType:
 
 ## getRequestUrl
 
@@ -181,7 +175,6 @@ Obtains the URL of the resource request.
 **Examples**
 
 For the complete sample code, see [onRequestStart](./arkts-apis-webview-WebSchemeHandler.md#onrequeststart).
-- simpleType:
 
 ## hasGesture
 
@@ -206,7 +199,6 @@ Checks whether the resource request is associated with a gesture (for example, a
 **Examples**
 
 For the complete sample code, see [onRequestStart](./arkts-apis-webview-WebSchemeHandler.md#onrequeststart).
-- simpleType:
 
 ## isMainFrame
 
@@ -231,4 +223,3 @@ Checks whether the resource request is from the main frame.
 **Examples**
 
 For the complete sample code, see [onRequestStart](./arkts-apis-webview-WebSchemeHandler.md#onrequeststart).
-- simpleType:

@@ -14,4 +14,4 @@ Defines the information about an auto-fill request.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
-**Type:** [_AutoFillRequest.FillRequest](arkts-ability-autofillrequest-fillrequest-i.md)
+**Type:** _AutoFillRequest.FillRequest

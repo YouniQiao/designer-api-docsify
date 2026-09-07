@@ -570,7 +570,7 @@ When **stop()** is called, the current file download process terminates, and dow
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | uri | string | 是 | 待下载文件uri。 |
-| needClean | boolean | 否 | 是否删除已下载的文件。默认值为false表示不删除；true表示删除。从API version12开始支持该参数。<br>**起始版本：** 12 |
+| needClean | boolean | 否 | 是否删除已下载的文件。默认值为false表示不删除；true表示删除。从API version12开始支持该参数。<br>**适用版本：** 12 |
 
 **返回值：**
 

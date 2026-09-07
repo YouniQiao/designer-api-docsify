@@ -1504,8 +1504,6 @@ readException(): void
 **示例**
 
 > 说明：
-> 
-> 在本文档的示例中，通过this.getUIContext().getHostContext()来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在页面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
 
 ```TypeScript
 // FA模型需要从@kit.AbilityKit导入featureAbility
@@ -1877,7 +1875,7 @@ readInt(): number
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -3011,7 +3009,7 @@ readString(): string
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -4060,7 +4058,7 @@ writeInt(val: number): void
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -4832,7 +4830,7 @@ writeString(val: string): void
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 

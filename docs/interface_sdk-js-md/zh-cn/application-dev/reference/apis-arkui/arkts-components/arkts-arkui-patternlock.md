@@ -18,7 +18,7 @@ PatternLock(controller?: PatternLockController)
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -77,8 +77,6 @@ struct PatternLockExample {
 ```
 
 该示例通过[sideLength](arkts-arkui-patternlock-attribute.md#sidelength)属性设置九宫格的大小、[circleRadius](arkts-arkui-patternlock-attribute.md#circleradius)属性设置宫格中圆点的半径、[onPatternComplete](arkts-arkui-patternlock-attribute.md#onpatterncomplete)属性设置密码输入完成时的回调。
-当用户密码输入完成后，按输入的密码不同，给予不同的回应：输入的密码长度小于5时，提示重新输入；第一次输入完成后，提示第二次输入密码；第二次输入完成后，判断两次输入的密码是否相同，相同则提示密码设置成功，否则提示重新输入。
-通过'Reset PatternLock'按钮，用户可以重置密码锁。
 
 ```TypeScript
 // xxx.ets

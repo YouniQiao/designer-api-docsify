@@ -24,7 +24,7 @@ didFail(code: WebNetErrorList): void
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -44,7 +44,6 @@ didFail(code: WebNetErrorList): void
 **示例**
 
 示例请参考[OnRequestStart](./arkts-apis-webview-WebSchemeHandler.md#onrequeststart)。
-- simpleType:
 
 ## didFail
 
@@ -236,7 +235,7 @@ didFinish(): void
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -249,7 +248,6 @@ didFinish(): void
 **示例**
 
 示例请参考[OnRequestStart](./arkts-apis-webview-WebSchemeHandler.md#onrequeststart)。
-- simpleType:
 
 ## didReceiveResponse
 
@@ -261,7 +259,7 @@ didReceiveResponse(response: WebSchemeHandlerResponse): void
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -281,7 +279,6 @@ didReceiveResponse(response: WebSchemeHandlerResponse): void
 **示例**
 
 示例请参考[OnRequestStart](./arkts-apis-webview-WebSchemeHandler.md#onrequeststart)。
-- simpleType:
 
 ## didReceiveResponseBody
 
@@ -293,7 +290,7 @@ didReceiveResponseBody(data: ArrayBuffer): void
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -313,4 +310,3 @@ didReceiveResponseBody(data: ArrayBuffer): void
 **示例**
 
 示例请参考[OnRequestStart](./arkts-apis-webview-WebSchemeHandler.md#onrequeststart)。
-- simpleType:

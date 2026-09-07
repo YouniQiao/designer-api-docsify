@@ -28,11 +28,11 @@ colorMode?: ConfigurationConstant.ColorMode
 - COLOR_MODE_LIGHT：浅色模式  
 - COLOR_MODE_DARK：深色模式
 
-**类型：** [ConfigurationConstant.ColorMode](arkts-ability-configurationconstant-colormode-e.md)
+**类型：** ConfigurationConstant.ColorMode
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Ability.AbilityBase
 
@@ -52,11 +52,11 @@ direction?: ConfigurationConstant.Direction
 
 该环境变量支持在[UIAbility](arkts-ability-app-ability-uiability-uiability-c.md)组件和[UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md)组件中订阅，不支持在[ApplicationContext](arkts-ability-applicationcontext-c.md)和[AbilityStage](arkts-ability-app-ability-abilitystage-abilitystage-c.md)组件容器中订阅。
 
-**类型：** [ConfigurationConstant.Direction](arkts-ability-configurationconstant-direction-e.md)
+**类型：** ConfigurationConstant.Direction
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Ability.AbilityBase
 
@@ -74,7 +74,7 @@ displayId?: number
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Ability.AbilityBase
 
@@ -90,7 +90,7 @@ fontId?: string
 
 **起始版本：** 14
 
-**原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本14开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Ability.AbilityBase
 
@@ -108,7 +108,7 @@ fontSizeScale?: number
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Ability.AbilityBase
 
@@ -124,7 +124,7 @@ fontWeightScale?: number
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Ability.AbilityBase
 
@@ -140,7 +140,7 @@ hasPointerDevice?: boolean
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Ability.AbilityBase
 
@@ -160,7 +160,7 @@ language?: string
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Ability.AbilityBase
 
@@ -174,11 +174,11 @@ locale?: Intl.Locale
 
 应用会根据当前的区域设置自动调整其行为，以符合用户的本地化需求。该属性可以通过设置系统语言、设置系统地区和设置应用偏好语言等方式设置。
 
-**类型：** [Intl.Locale](../../apis-localization-kit/arkts-apis/arkts-localization-intl-locale-c.md)
+**类型：** Intl.Locale
 
 **起始版本：** 20
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Ability.AbilityBase
 
@@ -194,7 +194,7 @@ mcc?: string
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Ability.AbilityBase
 
@@ -210,7 +210,7 @@ mnc?: string
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Ability.AbilityBase
 
@@ -236,11 +236,11 @@ screenDensity?: ConfigurationConstant.ScreenDensity
 
 该环境变量支持在[UIAbility](arkts-ability-app-ability-uiability-uiability-c.md)组件和[UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md)组件中订阅，不支持在[ApplicationContext](arkts-ability-applicationcontext-c.md)和[AbilityStage](arkts-ability-app-ability-abilitystage-abilitystage-c.md)组件容器中订阅。
 
-**类型：** [ConfigurationConstant.ScreenDensity](arkts-ability-configurationconstant-screendensity-e.md)
+**类型：** ConfigurationConstant.ScreenDensity
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Ability.AbilityBase
 

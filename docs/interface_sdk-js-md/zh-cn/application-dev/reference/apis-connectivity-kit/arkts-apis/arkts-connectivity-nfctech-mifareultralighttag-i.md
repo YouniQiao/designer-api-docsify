@@ -24,7 +24,7 @@ getType(): tag.MifareUltralightType
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
@@ -32,7 +32,7 @@ getType(): tag.MifareUltralightType
 
 | 类型 | 说明 |
 | --- | --- |
-| [tag.MifareUltralightType](arkts-connectivity-tag-mifareultralighttype-e.md) | MIFARE Ultralight标签的类型。 |
+| tag.MifareUltralightType | MIFARE Ultralight标签的类型。 |
 
 **示例**
 
@@ -64,7 +64,7 @@ readMultiplePages(pageIndex: number): Promise<number[]>
 
 **需要权限：** ohos.permission.NFC_TAG
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
@@ -131,7 +131,7 @@ readMultiplePages(pageIndex: number, callback: AsyncCallback<number[]>): void
 
 **需要权限：** ohos.permission.NFC_TAG
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
@@ -195,7 +195,7 @@ writeSinglePage(pageIndex: number, data: number[]): Promise<void>
 
 **需要权限：** ohos.permission.NFC_TAG
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
@@ -264,7 +264,7 @@ writeSinglePage(pageIndex: number, data: number[], callback: AsyncCallback<void>
 
 **需要权限：** ohos.permission.NFC_TAG
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
 

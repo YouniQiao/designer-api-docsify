@@ -38,7 +38,7 @@ add a watermark for the AVRecorder. This API uses a promise to return the result
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| watermark | [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | Yes | : Watermark image. |
+| watermark | image.PixelMap | Yes | : Watermark image. |
 | config | [WatermarkConfiguration](arkts-media-media-watermarkconfiguration-i.md) | Yes | : Configuration of the watermark. |
 
 **Return value:**
@@ -329,7 +329,7 @@ getAVRecorderConfig(): Promise<AVRecorderConfig>
 
 Obtains the real-time configuration of this AVRecorder. This API uses a promise to return the result.
 
-This API can be called only after [prepare()](#prepare) is called.
+This API can be called only after [prepare()](#prepare-1) is called.
 
 **Since:** 11
 
@@ -383,7 +383,7 @@ This API can be called only after the [prepare()](#prepare) API is called. If th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[audio.AudioCapturerChangeInfo](../../apis-audio-kit/arkts-apis/arkts-audio-audio-audiocapturerchangeinfo-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the audio.AudioCapturerChangeInfo object obtained; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;audio.AudioCapturerChangeInfo&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the audio.AudioCapturerChangeInfo object obtained; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -429,7 +429,7 @@ This API can be called only after the [prepare()](#prepare) API is called. If th
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[audio.AudioCapturerChangeInfo](../../apis-audio-kit/arkts-apis/arkts-audio-audio-audiocapturerchangeinfo-i.md)&gt; | Promise used to return the audio capturer information. |
+| Promise&lt;audio.AudioCapturerChangeInfo&gt; | Promise used to return the audio capturer information. |
 
 **Error codes:**
 
@@ -532,7 +532,7 @@ The caller obtains the surface buffer from this surface and fills in the corresp
 
 Note that the video data must carry the timestamp (in ns) and buffer size, and the start time of the timestamp must be based on the system startup time.
 
-This API can be called only after the [prepare()](#prepare) API is called.
+This API can be called only after the [prepare()](#prepare-1) API is called.
 
 **Since:** 9
 
@@ -640,7 +640,7 @@ Subscribes to audio capturer configuration changes. This API uses an asynchronou
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'audioCapturerChange' | Yes | Event type, which is **'audioCapturerChange'** in this case. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[audio.AudioCapturerChangeInfo](../../apis-audio-kit/arkts-apis/arkts-audio-audio-audiocapturerchangeinfo-i.md)&gt; | No | Callback used to return the changed audio capturer configuration. If this parameter is specified, the subscription to the specified event with the specified callback is canceled. (The callback object cannot be an anonymous function.) Otherwise, the subscriptions to the specified event with all the callbacks are canceled.This parameter is supported since API version 12.<br>**Since:** 12 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;audio.AudioCapturerChangeInfo&gt; | No | Callback used to return the changed audio capturer configuration. If this parameter is specified, the subscription to the specified event with the specified callback is canceled. (The callback object cannot be an anonymous function.) Otherwise, the subscriptions to the specified event with all the callbacks are canceled.This parameter is supported since API version 12.<br>**Since:** 12 |
 
 ## off('photoAssetAvailable')
 
@@ -659,7 +659,7 @@ Unsubscribes from media asset callback events. This API uses an asynchronous cal
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'photoAssetAvailable' | Yes | Event type, which is **'photoAssetAvailable'** in this case. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[photoAccessHelper.PhotoAsset](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoasset-i.md)&gt; | No | Callback used to return the PhotoAsset object corresponding to the resource file created by the system. If this parameter is specified, the subscription to the specified event with the specified callback is canceled. (The callback object cannot be an anonymous function.) Otherwise, the subscriptions to the specified event with all the callbacks are canceled. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;photoAccessHelper.PhotoAsset&gt; | No | Callback used to return the PhotoAsset object corresponding to the resource file created by the system. If this parameter is specified, the subscription to the specified event with the specified callback is canceled. (The callback object cannot be an anonymous function.) Otherwise, the subscriptions to the specified event with all the callbacks are canceled. |
 
 ## on('audioCapturerChange')
 
@@ -680,7 +680,7 @@ When the application initiates multiple subscriptions to this event, the last su
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'audioCapturerChange' | Yes | Event type, which is **'audioCapturerChange'** in this case. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[audio.AudioCapturerChangeInfo](../../apis-audio-kit/arkts-apis/arkts-audio-audio-audiocapturerchangeinfo-i.md)&gt; | Yes | Callback used to return the changed audio capturer configuration. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;audio.AudioCapturerChangeInfo&gt; | Yes | Callback used to return the changed audio capturer configuration. |
 
 **Error codes:**
 
@@ -707,7 +707,7 @@ When the application initiates multiple subscriptions to this event, the last su
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'photoAssetAvailable' | Yes | Event type, which is **'photoAssetAvailable'** in this case. The event is triggered when a photo asset is available. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[photoAccessHelper.PhotoAsset](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoasset-i.md)&gt; | Yes | Callback used to return the PhotoAsset object corresponding to the resource file created by the system. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;photoAccessHelper.PhotoAsset&gt; | Yes | Callback used to return the PhotoAsset object corresponding to the resource file created by the system. |
 
 **Error codes:**
 
@@ -1470,7 +1470,7 @@ reset(): Promise<void>
 
 Resets audio and video recording. This API uses a promise to return the result.
 
-For audio-only recording, you can call [prepare()](#prepare) again for re-recording. For video-only recording or audio and video recording, you can call [prepare()](#prepare) and [getInputSurface()](#getinputsurface) again for re-recording.
+For audio-only recording, you can call [prepare()](#prepare-1) again for re-recording. For video-only recording or audio and video recording, you can call [prepare()](#prepare-1) and [getInputSurface()](#getinputsurface) again for re-recording.
 
 **Since:** 9
 
@@ -1813,7 +1813,7 @@ start(): Promise<void>
 
 Starts video recording. This API uses a promise to return the result.
 
-For audio-only recording, this API can be called only after the [prepare()](#prepare) API is called. For video-only recording, this API can be called only after the [getInputSurface()](#getinputsurface) API is called.
+For audio-only recording, this API can be called only after the [prepare()](#prepare-1) API is called. For video-only recording, this API can be called only after the [getInputSurface()](#getinputsurface) API is called.
 
 **Since:** 9
 
@@ -1969,7 +1969,7 @@ Stops video recording. This API uses a promise to return the result.
 
 This API can be called only after the [start()](#start) or [pause()](#pause) API is called.
 
-For audio-only recording, you can call [prepare()](#prepare) again for re-recording. For video-only recording or audio and video recording, you can call [prepare()](#prepare) and [getInputSurface()](#getinputsurface) again for re-recording.
+For audio-only recording, you can call [prepare()](#prepare-1) again for re-recording. For video-only recording or audio and video recording, you can call [prepare()](#prepare-1) and [getInputSurface()](#getinputsurface) again for re-recording.
 
 **Since:** 9
 
@@ -2047,7 +2047,7 @@ updateRotation(rotation: number): Promise<void>
 
 Updates the video rotation angle, in degrees. This API uses a promise to return the result.
 
-This API can be called only after the [prepare()](#prepare) event is triggered and before the [start()](#start) API is called.
+This API can be called only after the [prepare()](#prepare-1) event is triggered and before the [start()](#start) API is called.
 
 **Since:** 12
 

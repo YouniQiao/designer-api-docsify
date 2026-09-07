@@ -22,7 +22,7 @@ uiExtensionHostWindowProxyRect: window.Rect
 
 UIExtensionComponent的位置和宽高。
 
-**类型：** [window.Rect](arkts-arkui-window-rect-i.md)
+**类型：** window.Rect
 
 **起始版本：** 11
 

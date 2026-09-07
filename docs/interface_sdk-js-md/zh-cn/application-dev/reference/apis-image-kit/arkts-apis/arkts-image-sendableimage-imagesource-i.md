@@ -26,7 +26,7 @@ createPixelMap(options?: image.DecodingOptions): Promise<PixelMap>
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
 
@@ -36,7 +36,7 @@ createPixelMap(options?: image.DecodingOptions): Promise<PixelMap>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [image.DecodingOptions](arkts-image-image-decodingoptions-i.md) | 否 | 解码参数。 |
+| options | image.DecodingOptions | 否 | 解码参数。 |
 
 **返回值：**
 

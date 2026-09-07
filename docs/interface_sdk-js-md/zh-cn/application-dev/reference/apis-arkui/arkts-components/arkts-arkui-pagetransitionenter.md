@@ -12,7 +12,7 @@ PageTransitionEnter(value: PageTransitionOptions)
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -32,7 +32,7 @@ PageTransitionEnter(event: PageTransitionCallback)
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -151,7 +151,6 @@ struct Page1 {
 ```
 
 pageTransition1
-自定义方式2：配置了当前页面的入场动画为从左侧滑入，退场为平移加透明度变化。
 
 ```TypeScript
 // Index.ets 
@@ -292,7 +291,6 @@ struct Page1 {
 ```
 
 pageTransition1
-自定义方式2：使用系统默认的退入场效果，将系统语言排版模式改为RTL。
 
 ```TypeScript
 // Index.ets

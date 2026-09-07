@@ -17,6 +17,22 @@ import { unifiedDataChannel } from '@kit.ArkData';
 ## applicationDefinedType
 
 ```TypeScript
+get applicationDefinedType(): string
+```
+
+应用自定义类型标识符，必须以'ApplicationDefined'开头。
+
+**类型：** string
+
+**起始版本：** 10
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+**系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
+
+```TypeScript
 set applicationDefinedType(value: string)
 ```
 
@@ -28,11 +44,27 @@ set applicationDefinedType(value: string)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## rawData
+
+```TypeScript
+get rawData(): Uint8Array
+```
+
+应用自定义数据类型的二进制数据。
+
+**类型：** Uint8Array
+
+**起始版本：** 10
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+**系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ```TypeScript
 set rawData(value: Uint8Array)
@@ -46,7 +78,7 @@ set rawData(value: Uint8Array)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 

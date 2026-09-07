@@ -43,7 +43,7 @@ Menu()
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -302,7 +302,6 @@ struct Index {
 ```
 
 该示例通过设置subMenuBuilder属性为自定义菜单项添加多级菜单。
-从API版本26.0.0开始，新增[subMenuBuilder](ts-basic-components-menuitem.md#submenubuilder)属性。
 
 ```TypeScript
 import { LengthMetrics } from '@kit.ArkUI';

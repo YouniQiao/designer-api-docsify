@@ -14,4 +14,4 @@ Defines the information about an auto-save request.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
-**Type:** [_AutoFillRequest.SaveRequest](arkts-ability-autofillrequest-saverequest-i.md)
+**Type:** _AutoFillRequest.SaveRequest

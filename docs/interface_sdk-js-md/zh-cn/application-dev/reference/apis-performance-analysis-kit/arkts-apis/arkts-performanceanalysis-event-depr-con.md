@@ -8,6 +8,8 @@ const DISTRIBUTED_SERVICE_START: string
 
 分布式服务启动事件。
 
+**类型：** string
+
 **起始版本：** 7
 
 **废弃版本：** 9
@@ -24,6 +26,8 @@ const USER_LOGIN: string
 
 用户登录事件。
 
+**类型：** string
+
 **起始版本：** 7
 
 **废弃版本：** 9
@@ -39,6 +43,8 @@ const USER_LOGOUT: string
 ```
 
 用户登出事件。
+
+**类型：** string
 
 **起始版本：** 7
 

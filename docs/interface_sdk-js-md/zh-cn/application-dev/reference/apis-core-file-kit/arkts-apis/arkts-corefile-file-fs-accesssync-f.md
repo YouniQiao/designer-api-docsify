@@ -18,7 +18,7 @@ declare function accessSync(path: string, mode?: AccessModeType): boolean
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -27,7 +27,7 @@ declare function accessSync(path: string, mode?: AccessModeType): boolean
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | path | string | 是 | 文件或目录的应用沙箱路径。 |
-| mode | [AccessModeType](arkts-corefile-file-fs-accessmodetype-e.md) | 否 | 文件或目录校验的权限。不填该参数则默认校验文件或目录是否存在。<br>**起始版本：** 12 |
+| mode | [AccessModeType](arkts-corefile-file-fs-accessmodetype-e.md) | 否 | 文件或目录校验的权限。不填该参数则默认校验文件或目录是否存在。<br>**适用版本：** 12 |
 
 **返回值：**
 

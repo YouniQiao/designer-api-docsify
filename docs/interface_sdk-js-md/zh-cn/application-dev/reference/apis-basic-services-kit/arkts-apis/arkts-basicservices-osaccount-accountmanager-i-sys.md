@@ -348,7 +348,7 @@ createOsAccount(localName: string, type: OsAccountType, options?: CreateOsAccoun
 | --- | --- | --- | --- |
 | localName | string | 是 | 创建的系统账号的名称。 |
 | type | [OsAccountType](arkts-basicservices-osaccount-osaccounttype-e.md) | 是 | 创建的系统账号的类型。 |
-| options | [CreateOsAccountOptions](arkts-basicservices-osaccount-createosaccountoptions-i-sys.md) | 否 | 创建系统账号的选项，默认为空。<br>**起始版本：** 12 |
+| options | [CreateOsAccountOptions](arkts-basicservices-osaccount-createosaccountoptions-i-sys.md) | 否 | 创建系统账号的选项，默认为空。<br>**适用版本：** 12 |
 
 **返回值：**
 
@@ -485,7 +485,7 @@ createOsAccountForDomain(type: OsAccountType, domainInfo: DomainAccountInfo, opt
 | --- | --- | --- | --- |
 | type | [OsAccountType](arkts-basicservices-osaccount-osaccounttype-e.md) | 是 | 创建的系统账号的类型。 |
 | domainInfo | [DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i.md) | 是 | 域账号信息。 |
-| options | [CreateOsAccountForDomainOptions](arkts-basicservices-osaccount-createosaccountfordomainoptions-i-sys.md) | 否 | 创建账号的可选参数，默认为空。<br>**起始版本：** 12 |
+| options | [CreateOsAccountForDomainOptions](arkts-basicservices-osaccount-createosaccountfordomainoptions-i-sys.md) | 否 | 创建账号的可选参数，默认为空。<br>**适用版本：** 12 |
 
 **返回值：**
 
@@ -1590,7 +1590,7 @@ off(type: 'switching', callback?: Callback<OsAccountSwitchEventData>): void
 
 **需要权限：** 
 - API版本23+：ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
-- API版本12 - 22：ohos.permission.MANAGE_LOCAL_ACCOUNTS
+- API版本12-22：ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -1638,7 +1638,7 @@ off(type: 'switched', callback?: Callback<OsAccountSwitchEventData>): void
 
 **需要权限：** 
 - API版本23+：ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
-- API版本12 - 22：ohos.permission.MANAGE_LOCAL_ACCOUNTS
+- API版本12-22：ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -1830,7 +1830,7 @@ on(type: 'switching', callback: Callback<OsAccountSwitchEventData>): void
 
 **需要权限：** 
 - API版本23+：ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
-- API版本12 - 22：ohos.permission.MANAGE_LOCAL_ACCOUNTS
+- API版本12-22：ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -1883,7 +1883,7 @@ on(type: 'switched', callback: Callback<OsAccountSwitchEventData>): void
 
 **需要权限：** 
 - API版本23+：ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
-- API版本12 - 22：ohos.permission.MANAGE_LOCAL_ACCOUNTS
+- API版本12-22：ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
 **系统能力：** SystemCapability.Account.OsAccount
 

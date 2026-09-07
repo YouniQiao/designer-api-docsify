@@ -20,7 +20,7 @@ Refresh(value: RefreshOptions)
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -684,7 +684,6 @@ struct RefreshExample {
 ```
 
 该示例通过[pullUpToCancelRefresh](arkts-arkui-refresh-attribute.md#pulluptocancelrefresh)接口设置上滑不取消刷新。
-从API version 23开始，新增pullUpToCancelRefresh接口。
 
 ```TypeScript
 // xxx.ets

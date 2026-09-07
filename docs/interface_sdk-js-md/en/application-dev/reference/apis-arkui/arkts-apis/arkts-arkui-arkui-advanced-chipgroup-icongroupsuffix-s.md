@@ -27,7 +27,7 @@ iconBackgroundSystemMaterial?: uiMaterial.Material
 
 Set system-styled materials for the component. Different materials have different effects, which can influence the backgroundColor, border, shadow, and other visual attributes of the component.
 
-**Type:** [uiMaterial.Material](arkts-arkui-uimaterial-material-c.md)
+**Type:** uiMaterial.Material
 
 **Since:** 26.0.0
 
@@ -47,7 +47,7 @@ items: Array<IconItemOptions | SymbolGlyphModifier | SymbolItemOptions>
 
 Custom builder items.
 
-**Type:** Array&lt;[IconItemOptions](arkts-arkui-arkui-advanced-chipgroup-iconitemoptions-i.md) \| [SymbolGlyphModifier](arkts-arkui-symbolglyphmodifier-c.md) \| [SymbolItemOptions](arkts-arkui-arkui-advanced-chipgroup-symbolitemoptions-i.md)&gt;
+**Type:** Array&lt;[IconItemOptions](arkts-arkui-arkui-advanced-chipgroup-iconitemoptions-i.md) \| SymbolGlyphModifier \| [SymbolItemOptions](arkts-arkui-arkui-advanced-chipgroup-symbolitemoptions-i.md)&gt;
 
 **Since:** 12
 

@@ -26,7 +26,7 @@ activateAudioSession(strategy: AudioSessionStrategy): Promise<void>
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -113,7 +113,7 @@ deactivateAudioSession(): Promise<void>
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -348,7 +348,7 @@ isAudioSessionActivated(): boolean
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -400,7 +400,7 @@ off(type: 'audioSessionDeactivated', callback?: Callback<AudioSessionDeactivated
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -530,7 +530,7 @@ on(type: 'audioSessionDeactivated', callback: Callback<AudioSessionDeactivatedEv
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 

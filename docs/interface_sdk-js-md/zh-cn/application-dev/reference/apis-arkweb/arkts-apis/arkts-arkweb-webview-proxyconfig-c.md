@@ -22,14 +22,13 @@ bypassHostnamesWithoutPeriod(): void
 
 **起始版本：** 15
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **示例**
 
 完整示例代码参考[removeProxyOverride](./arkts-apis-webview-ProxyController.md#removeproxyoverride)。
-- simpleType:
 
 ## clearImplicitRules
 
@@ -41,14 +40,13 @@ clearImplicitRules(): void
 
 **起始版本：** 15
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **示例**
 
 完整示例代码参考[removeProxyOverride](./arkts-apis-webview-ProxyController.md#removeproxyoverride)。
-- simpleType:
 
 ## enableReverseBypass
 
@@ -60,7 +58,7 @@ enableReverseBypass(reverse: boolean): void
 
 **起始版本：** 15
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -79,7 +77,6 @@ enableReverseBypass(reverse: boolean): void
 **示例**
 
 完整示例代码参考[removeProxyOverride](./arkts-apis-webview-ProxyController.md#removeproxyoverride)。
-- simpleType:
 
 ## getBypassRules
 
@@ -91,7 +88,7 @@ getBypassRules(): Array<string>
 
 **起始版本：** 15
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -104,7 +101,6 @@ getBypassRules(): Array<string>
 **示例**
 
 完整示例代码参考[removeProxyOverride](./arkts-apis-webview-ProxyController.md#removeproxyoverride)。
-- simpleType:
 
 ## getProxyRules
 
@@ -116,7 +112,7 @@ getProxyRules(): Array<ProxyRule>
 
 **起始版本：** 15
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -129,7 +125,6 @@ getProxyRules(): Array<ProxyRule>
 **示例**
 
 完整示例代码参考[removeProxyOverride](./arkts-apis-webview-ProxyController.md#removeproxyoverride)。
-- simpleType:
 
 ## insertBypassRule
 
@@ -141,7 +136,7 @@ insertBypassRule(bypassRule: string): void
 
 **起始版本：** 15
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -160,7 +155,6 @@ insertBypassRule(bypassRule: string): void
 **示例**
 
 完整示例代码参考[removeProxyOverride](./arkts-apis-webview-ProxyController.md#removeproxyoverride)。
-- simpleType:
 
 ## insertDirectRule
 
@@ -179,7 +173,7 @@ insertDirectRule(schemeFilter?: ProxySchemeFilter): void
 
 **起始版本：** 15
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -198,7 +192,6 @@ insertDirectRule(schemeFilter?: ProxySchemeFilter): void
 **示例**
 
 完整示例代码参考[removeProxyOverride](./arkts-apis-webview-ProxyController.md#removeproxyoverride)。
-- simpleType:
 
 ## insertProxyRule
 
@@ -228,7 +221,7 @@ host是带括号的IPv6字面量、IPv4字面量或由点分隔的一个或多�
 
 **起始版本：** 15
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -248,7 +241,6 @@ host是带括号的IPv6字面量、IPv4字面量或由点分隔的一个或多�
 **示例**
 
 完整示例代码参考[removeProxyOverride](./arkts-apis-webview-ProxyController.md#removeproxyoverride)。
-- simpleType:
 
 ## isReverseBypassEnabled
 
@@ -260,7 +252,7 @@ isReverseBypassEnabled(): boolean
 
 **起始版本：** 15
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -273,4 +265,3 @@ isReverseBypassEnabled(): boolean
 **示例**
 
 完整示例代码参考[removeProxyOverride](./arkts-apis-webview-ProxyController.md#removeproxyoverride)。
-- simpleType:

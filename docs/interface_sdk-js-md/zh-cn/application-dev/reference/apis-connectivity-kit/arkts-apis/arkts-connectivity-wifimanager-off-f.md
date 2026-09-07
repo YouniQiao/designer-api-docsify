@@ -18,7 +18,7 @@ function off(type: 'wifiStateChange', callback?: Callback<number>): void
 
 **需要权限：** ohos.permission.GET_WIFI_INFO
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -67,7 +67,7 @@ function off(type: 'wifiConnectionChange', callback?: Callback<number>): void
 
 **需要权限：** ohos.permission.GET_WIFI_INFO
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -116,7 +116,7 @@ function off(type: 'wifiScanStateChange', callback?: Callback<number>): void
 
 **需要权限：** ohos.permission.GET_WIFI_INFO
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -352,6 +352,7 @@ function off(type: 'p2pDeviceChange', callback?: Callback<WifiP2pDevice>): void
 **起始版本：** 9
 
 **需要权限：** 
+- API版本10+：N/A
 - API版本9：ohos.permission.LOCATION and ohos.permission.APPROXIMATELY_LOCATION
 
 **系统能力：** SystemCapability.Communication.WiFi.P2P
@@ -400,6 +401,7 @@ function off(type: 'p2pPeerDeviceChange', callback?: Callback<WifiP2pDevice[]>):
 **起始版本：** 9
 
 **需要权限：** 
+- API版本10+：N/A
 - API版本9：ohos.permission.LOCATION and ohos.permission.APPROXIMATELY_LOCATION
 
 **系统能力：** SystemCapability.Communication.WiFi.P2P

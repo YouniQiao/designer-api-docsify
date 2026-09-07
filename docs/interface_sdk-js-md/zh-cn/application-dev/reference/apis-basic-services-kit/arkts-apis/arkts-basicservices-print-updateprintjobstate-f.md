@@ -19,7 +19,7 @@ function updatePrintJobState(jobId: string, state: PrintJobState, subState: Prin
 
 **需要权限：** 
 - API版本24+：ohos.permission.MANAGE_PRINT_JOB or ohos.permission.ENTERPRISE_MANAGE_PRINT
-- API版本10 - 23：ohos.permission.MANAGE_PRINT_JOB
+- API版本10-23：ohos.permission.MANAGE_PRINT_JOB
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
@@ -72,7 +72,7 @@ function updatePrintJobState(jobId: string, state: PrintJobState, subState: Prin
 
 **需要权限：** 
 - API版本24+：ohos.permission.MANAGE_PRINT_JOB or ohos.permission.ENTERPRISE_MANAGE_PRINT
-- API版本10 - 23：ohos.permission.MANAGE_PRINT_JOB
+- API版本10-23：ohos.permission.MANAGE_PRINT_JOB
 
 **系统能力：** SystemCapability.Print.PrintFramework
 

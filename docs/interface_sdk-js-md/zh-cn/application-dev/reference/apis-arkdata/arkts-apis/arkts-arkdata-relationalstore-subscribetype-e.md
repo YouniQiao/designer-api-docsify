@@ -29,7 +29,8 @@ SUBSCRIBE_TYPE_CLOUD = 1
 **起始版本：** 10
 
 **需要权限：** 
-- API版本10 - 11：ohos.permission.DISTRIBUTED_DATASYNC
+- API版本12+：N/A
+- API版本10-11：ohos.permission.DISTRIBUTED_DATASYNC
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Client
 
@@ -44,7 +45,8 @@ SUBSCRIBE_TYPE_CLOUD_DETAILS = 2
 **起始版本：** 10
 
 **需要权限：** 
-- API版本10 - 11：ohos.permission.DISTRIBUTED_DATASYNC
+- API版本12+：N/A
+- API版本10-11：ohos.permission.DISTRIBUTED_DATASYNC
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Client
 

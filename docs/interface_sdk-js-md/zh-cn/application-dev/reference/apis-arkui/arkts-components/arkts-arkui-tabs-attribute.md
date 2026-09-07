@@ -27,7 +27,7 @@ animationCurve(curve: Curve | ICurve)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -51,7 +51,7 @@ animationCurve不设置时，由于滑动TabContent翻页动画曲线interpolati
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -77,7 +77,7 @@ animationMode(mode: Optional<AnimationMode>)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -103,7 +103,7 @@ barBackgroundBlurStyle(value: BlurStyle)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -111,7 +111,7 @@ barBackgroundBlurStyle(value: BlurStyle)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | BlurStyle | 是 | [TabBar的背景模糊材质。默认值：BlurStyle.NONE](../arkts-apis/arkts-arkui-autocapitalizationmode-e.md) |
+| value | BlurStyle | 是 | TabBar的背景模糊材质。默认值：BlurStyle.NONE |
 
 ## barBackgroundBlurStyle
 
@@ -125,7 +125,7 @@ barBackgroundBlurStyle(style: BlurStyle, options: BackgroundBlurStyleOptions)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -148,7 +148,7 @@ barBackgroundColor(value: ResourceColor)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -170,7 +170,7 @@ barBackgroundEffect(options: BackgroundEffectOptions)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -192,7 +192,7 @@ barFloatingStyle(style: Optional<FloatingTabBarStyle>)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -214,7 +214,7 @@ barGridAlign(value: BarGridColumnOptions)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -236,7 +236,7 @@ API version 14之前的版本，若设置barHeight为固定值后，TabBar无法
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -244,7 +244,7 @@ API version 14之前的版本，若设置barHeight为固定值后，TabBar无法
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | 是 | TabBar的高度值。默认值：未设置样式或者通过CustomBuilder设置自定义样式的TabBar且vertical属性为false时，默认值为56vp。未设置样式或者通过CustomBuilder设置自定义样式的TabBar且vertical属性为true时，默认值为Tabs的高度。设置[SubTabBarStyle](arkts-arkui-subtabbarstyle-c.md)样式且vertical属性为false时，默认值为56vp。设置SubTabBarStyle样式且vertical属性为true时，默认值为Tabs的高度。设置[BottomTabBarStyle](arkts-arkui-bottomtabbarstyle-c.md)样式且vertical属性为true时，默认值为Tabs的高度。设置BottomTabBarStyle样式且vertical属性为false时，默认值为56vp，从API version 12开始，默认值变更为48vp。<br>**起始版本：** 8 |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | 是 | TabBar的高度值。默认值：未设置样式或者通过CustomBuilder设置自定义样式的TabBar且vertical属性为false时，默认值为56vp。未设置样式或者通过CustomBuilder设置自定义样式的TabBar且vertical属性为true时，默认值为Tabs的高度。设置[SubTabBarStyle](arkts-arkui-subtabbarstyle-c.md)样式且vertical属性为false时，默认值为56vp。设置SubTabBarStyle样式且vertical属性为true时，默认值为Tabs的高度。设置[BottomTabBarStyle](arkts-arkui-bottomtabbarstyle-c.md)样式且vertical属性为true时，默认值为Tabs的高度。设置BottomTabBarStyle样式且vertical属性为false时，默认值为56vp，从API version 12开始，默认值变更为48vp。<br>**适用版本：** 8 |
 
 ## barHeight
 
@@ -258,7 +258,7 @@ barHeight(height: Length, noMinHeightLimit: boolean)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -281,7 +281,7 @@ barMode(value: BarMode.Fixed)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -303,7 +303,7 @@ barMode(value: BarMode.Scrollable, options: ScrollableBarModeOptions)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -324,7 +324,7 @@ barMode(value: BarMode, options?: ScrollableBarModeOptions)
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -332,8 +332,8 @@ barMode(value: BarMode, options?: ScrollableBarModeOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [BarMode](arkts-arkui-barmode-e.md) | 是 | [布局模式。默认值：BarMode.Fixed](arkts-arkui-barmode-e.md) |
-| options | [ScrollableBarModeOptions](arkts-arkui-scrollablebarmodeoptions-i.md) | 否 | Scrollable模式下的TabBar的布局样式。   **说明：** 仅Scrollable且水平模式下有效。<br>**起始版本：** 10 |
+| value | [BarMode](arkts-arkui-barmode-e.md) | 是 | 布局模式。默认值：BarMode.Fixed |
+| options | [ScrollableBarModeOptions](arkts-arkui-scrollablebarmodeoptions-i.md) | 否 | Scrollable模式下的TabBar的布局样式。   **说明：** 仅Scrollable且水平模式下有效。<br>**适用版本：** 10 |
 
 ## barOverlap
 
@@ -347,7 +347,7 @@ barOverlap(value: boolean)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -367,7 +367,7 @@ barPosition(value: BarPosition)
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -387,7 +387,7 @@ barWidth(value: Length)
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -395,7 +395,7 @@ barWidth(value: Length)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | 是 | TabBar的宽度值。默认值：未设置[SubTabBarStyle](arkts-arkui-subtabbarstyle-c.md)和[BottomTabBarStyle](arkts-arkui-bottomtabbarstyle-c.md)的TabBar且vertical属性为false时，默认值为Tabs的宽度。未设置SubTabBarStyle和BottomTabBarStyle的TabBar且vertical属性为true时，默认值为56vp。设置SubTabBarStyle样式且vertical属性为false时，默认值为Tabs的宽度。设置SubTabBarStyle样式且vertical属性为true时，默认值为56vp。设置BottomTabBarStyle样式且vertical属性为true时，默认值为96vp。设置BottomTabBarStyle样式且vertical属性为false时，默认值为Tabs的宽度。<br>**起始版本：** 8 |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | 是 | TabBar的宽度值。默认值：未设置[SubTabBarStyle](arkts-arkui-subtabbarstyle-c.md)和[BottomTabBarStyle](arkts-arkui-bottomtabbarstyle-c.md)的TabBar且vertical属性为false时，默认值为Tabs的宽度。未设置SubTabBarStyle和BottomTabBarStyle的TabBar且vertical属性为true时，默认值为56vp。设置SubTabBarStyle样式且vertical属性为false时，默认值为Tabs的宽度。设置SubTabBarStyle样式且vertical属性为true时，默认值为56vp。设置BottomTabBarStyle样式且vertical属性为true时，默认值为96vp。设置BottomTabBarStyle样式且vertical属性为false时，默认值为Tabs的宽度。<br>**适用版本：** 8 |
 
 ## cachedMaxCount
 
@@ -409,7 +409,7 @@ cachedMaxCount(count: number, mode: TabsCacheMode)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -418,7 +418,7 @@ cachedMaxCount(count: number, mode: TabsCacheMode)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | count | number | 是 | 子组件的最大缓存个数。取值范围：[0, +∞)。设置为小于0的值时，子组件不受缓存管理。超出缓存个数时自动释放不再需要的子组件。 |
-| mode | [TabsCacheMode](arkts-arkui-tabscachemode-e.md) | 是 | [子组件的缓存模式。默认值：TabsCacheMode.CACHE_BOTH_SIDE](arkts-arkui-tabscachemode-e.md) |
+| mode | [TabsCacheMode](arkts-arkui-tabscachemode-e.md) | 是 | 子组件的缓存模式。默认值：TabsCacheMode.CACHE_BOTH_SIDE |
 
 ## customContentTransition
 
@@ -447,7 +447,7 @@ customContentTransition(delegate: TabsCustomContentTransitionCallback)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -455,7 +455,7 @@ customContentTransition(delegate: TabsCustomContentTransitionCallback)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| delegate | [TabsCustomContentTransitionCallback](arkts-arkui-tabscustomcontenttransitioncallback-t.md) | 是 | 自定义Tabs页面切换动画开始时触发的回调。<br>**起始版本：** 18 |
+| delegate | [TabsCustomContentTransitionCallback](arkts-arkui-tabscustomcontenttransitioncallback-t.md) | 是 | 自定义Tabs页面切换动画开始时触发的回调。<br>**适用版本：** 18 |
 
 ## divider
 
@@ -469,7 +469,7 @@ divider(value: DividerStyle | null)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -495,7 +495,7 @@ edgeEffect(edgeEffect: Optional<EdgeEffect>)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -503,7 +503,7 @@ edgeEffect(edgeEffect: Optional<EdgeEffect>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| edgeEffect | [Optional](arkts-arkui-optional-t.md)&lt;[EdgeEffect](../arkts-apis/arkts-arkui-edgeeffect-e.md)&gt; | 是 | [边缘滑动效果。默认值：EdgeEffect.Spring](arkts-arkui-swipeedgeeffect-e.md) |
+| edgeEffect | [Optional](arkts-arkui-optional-t.md)&lt;[EdgeEffect](../arkts-apis/arkts-arkui-edgeeffect-e.md)&gt; | 是 | 边缘滑动效果。默认值：EdgeEffect.Spring |
 
 ## fadingEdge
 
@@ -517,7 +517,7 @@ fadingEdge(value: boolean)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -539,7 +539,7 @@ nestedScroll(value: TabsNestedScrollMode | undefined)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本24开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -561,7 +561,7 @@ onAnimationEnd(handler: OnTabsAnimationEndCallback)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -569,7 +569,7 @@ onAnimationEnd(handler: OnTabsAnimationEndCallback)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| handler | [OnTabsAnimationEndCallback](arkts-arkui-ontabsanimationendcallback-t.md) | 是 | 切换动画结束时触发的回调。<br>**起始版本：** 18 |
+| handler | [OnTabsAnimationEndCallback](arkts-arkui-ontabsanimationendcallback-t.md) | 是 | 切换动画结束时触发的回调。<br>**适用版本：** 18 |
 
 ## onAnimationStart
 
@@ -583,7 +583,7 @@ onAnimationStart(handler: OnTabsAnimationStartCallback)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -591,7 +591,7 @@ onAnimationStart(handler: OnTabsAnimationStartCallback)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| handler | [OnTabsAnimationStartCallback](arkts-arkui-ontabsanimationstartcallback-t.md) | 是 | 切换动画开始时触发的回调。<br>**起始版本：** 18 |
+| handler | [OnTabsAnimationStartCallback](arkts-arkui-ontabsanimationstartcallback-t.md) | 是 | 切换动画开始时触发的回调。<br>**适用版本：** 18 |
 
 ## onChange
 
@@ -621,7 +621,7 @@ Tab页签切换后触发的事件。
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -629,7 +629,7 @@ Tab页签切换后触发的事件。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | Callback&lt;number&gt; | 是 | 当前显示页签的索引值，从0开始计算。<br>**起始版本：** 18 |
+| event | Callback&lt;number&gt; | 是 | 当前显示页签的索引值，从0开始计算。<br>**适用版本：** 18 |
 
 ## onContentDidScroll
 
@@ -645,7 +645,7 @@ onContentDidScroll(handler: OnTabsContentDidScrollCallback | undefined)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -683,7 +683,7 @@ onContentWillChange(handler: OnTabsContentWillChangeCallback)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -691,7 +691,7 @@ onContentWillChange(handler: OnTabsContentWillChangeCallback)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| handler | [OnTabsContentWillChangeCallback](arkts-arkui-ontabscontentwillchangecallback-t.md) | 是 | 自定义Tabs页面切换拦截事件能力，新页面即将显示时触发的回调。<br>**起始版本：** 18 |
+| handler | [OnTabsContentWillChangeCallback](arkts-arkui-ontabscontentwillchangecallback-t.md) | 是 | 自定义Tabs页面切换拦截事件能力，新页面即将显示时触发的回调。<br>**适用版本：** 18 |
 
 ## onGestureSwipe
 
@@ -705,7 +705,7 @@ onGestureSwipe(handler: OnTabsGestureSwipeCallback)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -713,7 +713,7 @@ onGestureSwipe(handler: OnTabsGestureSwipeCallback)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| handler | [OnTabsGestureSwipeCallback](arkts-arkui-ontabsgestureswipecallback-t.md) | 是 | 在页面跟手滑动过程中，逐帧触发，用于监听当前显示页面的实时滑动状态。<br>**起始版本：** 18 |
+| handler | [OnTabsGestureSwipeCallback](arkts-arkui-ontabsgestureswipecallback-t.md) | 是 | 在页面跟手滑动过程中，逐帧触发，用于监听当前显示页面的实时滑动状态。<br>**适用版本：** 18 |
 
 ## onSelected
 
@@ -741,7 +741,7 @@ onSelected(event: Callback<number>)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -763,7 +763,7 @@ Tab页签点击后触发的事件。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -771,7 +771,7 @@ Tab页签点击后触发的事件。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | Callback&lt;number&gt; | 是 | 被点击页签的索引值，从0开始计算。<br>**起始版本：** 18 |
+| event | Callback&lt;number&gt; | 是 | 被点击页签的索引值，从0开始计算。<br>**适用版本：** 18 |
 
 ## onUnselected
 
@@ -799,7 +799,7 @@ onUnselected(event: Callback<number>)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -821,7 +821,7 @@ pageFlipMode(mode: Optional<PageFlipMode>)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本15开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -829,7 +829,7 @@ pageFlipMode(mode: Optional<PageFlipMode>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mode | [Optional](arkts-arkui-optional-t.md)&lt;[PageFlipMode](../arkts-apis/arkts-arkui-pageflipmode-e.md)&gt; | 是 | [鼠标滚轮翻页模式。默认值：PageFlipMode.CONTINUOUS](arkts-arkui-scrollsizemode-e.md) |
+| mode | [Optional](arkts-arkui-optional-t.md)&lt;[PageFlipMode](../arkts-apis/arkts-arkui-pageflipmode-e.md)&gt; | 是 | 鼠标滚轮翻页模式。默认值：PageFlipMode.CONTINUOUS |
 
 ## scrollable
 
@@ -841,7 +841,7 @@ scrollable(value: boolean)
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -861,7 +861,7 @@ vertical(value: boolean)
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

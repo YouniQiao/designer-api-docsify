@@ -20,7 +20,7 @@ color?: common2D.Color
 
 Color of the decoration. The default value is the text color.
 
-**Type:** [common2D.Color](arkts-arkgraphics2d-common2d-color-i.md)
+**Type:** common2D.Color
 
 **Since:** 12
 

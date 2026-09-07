@@ -22,7 +22,7 @@ constructor(country: string, options?: PhoneNumberFormatOptions)
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -56,7 +56,7 @@ format(phoneNumber: string): string
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -64,7 +64,7 @@ format(phoneNumber: string): string
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| phoneNumber | string | 是 | 待格式化的电话号码。<br>**起始版本：** 12 |
+| phoneNumber | string | 是 | 待格式化的电话号码。<br>**适用版本：** 12 |
 
 **返回值：**
 
@@ -106,7 +106,7 @@ getLocationName(phoneNumber: string, locale: string): string
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -114,7 +114,7 @@ getLocationName(phoneNumber: string, locale: string): string
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| phoneNumber | string | 是 | 电话号码。获取其他地区电话号码的归属地时，需要在电话号码前加00+国际区号。<br>**起始版本：** 12 |
+| phoneNumber | string | 是 | 电话号码。获取其他地区电话号码的归属地时，需要在电话号码前加00+国际区号。<br>**适用版本：** 12 |
 | locale | string | 是 | [表示区域ID的字符串](../../../internationalization/i18n-locale-culture.md#实现原理)，由语言、脚本、国家地区组成。 |
 
 **返回值：**
@@ -154,7 +154,7 @@ isValidNumber(phoneNumber: string): boolean
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -162,7 +162,7 @@ isValidNumber(phoneNumber: string): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| phoneNumber | string | 是 | 待判断的电话号码。<br>**起始版本：** 12 |
+| phoneNumber | string | 是 | 待判断的电话号码。<br>**适用版本：** 12 |
 
 **返回值：**
 

@@ -29,6 +29,7 @@ Exclude output devices. After calling this function successfully, audio will not
 **Since:** 18
 
 **Required permissions:** 
+- API version 23 and later: N/A
 - API versions 18 to 22: ohos.permission.MANAGE_AUDIO_CONFIG
 
 **System capability:** SystemCapability.Multimedia.Audio.Device
@@ -1039,6 +1040,7 @@ Unexclude output devices. This function will unexclude target output devices bel
 **Since:** 18
 
 **Required permissions:** 
+- API version 23 and later: N/A
 - API versions 18 to 22: ohos.permission.MANAGE_AUDIO_CONFIG
 
 **System capability:** SystemCapability.Multimedia.Audio.Device
@@ -1109,6 +1111,7 @@ Unexclude output devices. This function will unexclude all output devices belong
 **Since:** 18
 
 **Required permissions:** 
+- API version 23 and later: N/A
 - API versions 18 to 22: ohos.permission.MANAGE_AUDIO_CONFIG
 
 **System capability:** SystemCapability.Multimedia.Audio.Device

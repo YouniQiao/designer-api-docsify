@@ -10,4 +10,4 @@ Defines the certificate raw data.
 
 **System capability:** SystemCapability.Communication.NetStack
 
-**Type:** [cert.EncodingBlob](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-cert-encodingblob-i.md)
+**Type:** cert.EncodingBlob

@@ -190,8 +190,6 @@ struct Index {
 ```
 
 This example demonstrates how to use the onWillInsert, onDidInsert, onWillDelete, and onDidDelete APIs to implement insert and delete operations.
-The onSubmit API is used to submit content in the search area.
-The onChange API is used to listen for the content changes in the search area.
 
 ```TypeScript
 import { AtomicServiceSearch } from '@kit.ArkUI';

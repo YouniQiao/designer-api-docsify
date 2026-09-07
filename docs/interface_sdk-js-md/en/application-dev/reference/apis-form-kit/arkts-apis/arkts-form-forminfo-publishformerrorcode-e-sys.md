@@ -4,8 +4,6 @@ Enumerates the result codes that may be used for the operation of adding a widge
 
 **Since:** 12
 
-**Model restriction:** This API can be used only in the stage model.
-
 **System capability:** SystemCapability.Ability.Form
 
 **System API:** This is a system API.

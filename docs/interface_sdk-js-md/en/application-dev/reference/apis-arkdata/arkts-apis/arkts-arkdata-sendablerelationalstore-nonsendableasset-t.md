@@ -10,4 +10,4 @@ Represents the asset (such as a document, image, or video) that cannot be passed
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
-**Type:** [relationalStore.Asset](arkts-arkdata-relationalstore-asset-i.md)
+**Type:** relationalStore.Asset

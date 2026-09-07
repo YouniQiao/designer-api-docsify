@@ -305,7 +305,6 @@ Checks the account labels. This API uses an asynchronous callback to return the 
 **Examples**
 
 This API must be used together with the getRemoteObject API. For details, see the example of the [getRemoteObject](#getremoteobject) API.
-- simpleType:
 
 ## checkAccountRemovable
 
@@ -329,7 +328,6 @@ Checks whether an application account can be deleted. This API uses an asynchron
 **Examples**
 
 This API must be used together with the getRemoteObject API. For details, see the example of the [getRemoteObject](#getremoteobject) API.
-- simpleType:
 
 ## createAccountImplicitly
 
@@ -458,7 +456,7 @@ Obtains the remote object of an authenticator. This API cannot be overloaded.
 
 | Type | Description |
 | --- | --- |
-| [rpc.RemoteObject](../../apis-ipc-kit/arkts-apis/arkts-ipc-rpc-remoteobject-c.md) | Remote object of the authenticator, which is used for inter-process communication. |
+| rpc.RemoteObject | Remote object of the authenticator, which is used for inter-process communication. |
 
 **Examples**
 
@@ -531,7 +529,6 @@ Sets the authenticator properties. This API uses an asynchronous callback to ret
 **Examples**
 
 This API must be used together with the getRemoteObject API. For details, see the example of the [getRemoteObject](#getremoteobject) API.
-- simpleType:
 
 ## verifyCredential
 
@@ -556,4 +553,3 @@ Verifies the credential of an application account. This API uses an asynchronous
 **Examples**
 
 This API must be used together with the getRemoteObject API. For details, see the example of the [getRemoteObject](#getremoteobject) API.
-- simpleType:

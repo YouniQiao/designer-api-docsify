@@ -32,7 +32,7 @@ This method is used to change color space of PixelMap. Pixel data will be change
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| targetColorSpace | [colorSpaceManager.ColorSpaceManager](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-colorspacemanager-colorspacemanager-i.md) | 是 | The color space for pixelmap. |
+| targetColorSpace | colorSpaceManager.ColorSpaceManager | 是 | The color space for pixelmap. |
 
 **返回值：**
 
@@ -76,7 +76,7 @@ Obtains new pixelmap with alpha information. This method uses a promise to retur
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -110,7 +110,7 @@ Obtains new pixelmap with alpha information.
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -157,7 +157,7 @@ Crop the image. This method uses a promise to return the result.
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -165,7 +165,7 @@ Crop the image. This method uses a promise to return the result.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| region | [image.Region](arkts-image-image-region-i.md) | 是 | The region to crop. |
+| region | image.Region | 是 | The region to crop. |
 
 **返回值：**
 
@@ -199,7 +199,7 @@ Crop the image.
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -207,7 +207,7 @@ Crop the image.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| region | [image.Region](arkts-image-image-region-i.md) | 是 | The region to crop. |
+| region | image.Region | 是 | The region to crop. |
 
 **错误码：**
 
@@ -244,7 +244,7 @@ Image flipping. This method uses a promise to return the result.
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -287,7 +287,7 @@ Image flipping.
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -333,7 +333,7 @@ Obtains the number of bytes in each line of the image pixelmap.
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -367,7 +367,7 @@ Get color space of pixelmap.
 
 | 类型 | 说明 |
 | --- | --- |
-| [colorSpaceManager.ColorSpaceManager](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-colorspacemanager-colorspacemanager-i.md) | If the operation fails, an error message is returned. |
+| colorSpaceManager.ColorSpaceManager | If the operation fails, an error message is returned. |
 
 **错误码：**
 
@@ -403,7 +403,7 @@ Obtains the density of the image pixelmap.
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -431,7 +431,7 @@ Obtains pixelmap information about this image. This method uses a promise to ret
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -466,7 +466,7 @@ Get image information from image source.
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
@@ -509,7 +509,7 @@ Obtains the total number of bytes of the image pixelmap.
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -543,7 +543,7 @@ Marshalling PixelMap and write into MessageSequence.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| sequence | [rpc.MessageSequence](../../apis-ipc-kit/arkts-apis/arkts-ipc-rpc-messagesequence-c.md) | 是 | rpc.MessageSequence parameter. |
+| sequence | rpc.MessageSequence | 是 | rpc.MessageSequence parameter. |
 
 **错误码：**
 
@@ -618,7 +618,7 @@ Set the transparent rate of pixelmap. This method uses a promise to return the r
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -659,7 +659,7 @@ Set the transparent rate of pixelmap.
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -703,7 +703,7 @@ Reads image pixelmap data in an area. This method uses a promise to return the d
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -711,7 +711,7 @@ Reads image pixelmap data in an area. This method uses a promise to return the d
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| area | [image.PositionArea](arkts-image-image-positionarea-i.md) | 是 | Area from which the image pixelmap data will be read. |
+| area | image.PositionArea | 是 | Area from which the image pixelmap data will be read. |
 
 **返回值：**
 
@@ -766,7 +766,7 @@ Reads image pixelmap data in an area.
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -774,7 +774,7 @@ Reads image pixelmap data in an area.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| area | [image.PositionArea](arkts-image-image-positionarea-i.md) | 是 | Area from which the image pixelmap data will be read. |
+| area | image.PositionArea | 是 | Area from which the image pixelmap data will be read. |
 
 **错误码：**
 
@@ -816,7 +816,7 @@ Reads image pixelmap data and writes the data to an ArrayBuffer. This method use
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -857,7 +857,7 @@ Reads image pixelmap data and writes the data to an ArrayBuffer.
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -901,7 +901,7 @@ Releases this PixelMap object. This method uses a promise to return the result.
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -989,7 +989,7 @@ Image rotation. This method uses a promise to return the result.
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1030,7 +1030,7 @@ Image rotation.
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1074,7 +1074,7 @@ Image zoom in width and height. This method uses a promise to return the result.
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1117,7 +1117,7 @@ Image zoom in width and height.
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1171,7 +1171,7 @@ This method is only used to set the colorspace property of PixelMap, while all p
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| colorSpace | [colorSpaceManager.ColorSpaceManager](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-colorspacemanager-colorspacemanager-i.md) | 是 | The color space for pixelmap. |
+| colorSpace | colorSpaceManager.ColorSpaceManager | 是 | The color space for pixelmap. |
 
 **错误码：**
 
@@ -1209,7 +1209,7 @@ Image position transformation. This method uses a promise to return the result.
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1252,7 +1252,7 @@ Image position transformation.
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1304,7 +1304,7 @@ Creates a PixelMap object based on MessageSequence parameter.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| sequence | [rpc.MessageSequence](../../apis-ipc-kit/arkts-apis/arkts-ipc-rpc-messagesequence-c.md) | 是 | rpc.MessageSequence parameter. |
+| sequence | rpc.MessageSequence | 是 | rpc.MessageSequence parameter. |
 
 **返回值：**
 
@@ -1386,7 +1386,7 @@ Reads image data in an ArrayBuffer and writes the data to a PixelMap object. Thi
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1431,7 +1431,7 @@ Reads image data in an ArrayBuffer and writes the data to a PixelMap object.
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1479,7 +1479,7 @@ Writes image pixelmap data to the specified area. This method uses a promise to 
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1487,7 +1487,7 @@ Writes image pixelmap data to the specified area. This method uses a promise to 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| area | [image.PositionArea](arkts-image-image-positionarea-i.md) | 是 | Area to which the image pixelmap data will be written. |
+| area | image.PositionArea | 是 | Area to which the image pixelmap data will be written. |
 
 **返回值：**
 
@@ -1548,7 +1548,7 @@ Writes image pixelmap data to the specified area.
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1556,7 +1556,7 @@ Writes image pixelmap data to the specified area.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| area | [image.PositionArea](arkts-image-image-positionarea-i.md) | 是 | Area to which the image pixelmap data will be written. |
+| area | image.PositionArea | 是 | Area to which the image pixelmap data will be written. |
 
 **错误码：**
 
@@ -1604,7 +1604,7 @@ Whether the image pixelmap can be edited.
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 

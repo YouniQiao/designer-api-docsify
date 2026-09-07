@@ -29,7 +29,7 @@ createComponentObserver(id: string): inspector.ComponentObserver
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -43,7 +43,7 @@ createComponentObserver(id: string): inspector.ComponentObserver
 
 | 类型 | 说明 |
 | --- | --- |
-| [inspector.ComponentObserver](arkts-arkui-inspector-componentobserver-i.md) | 组件回调事件监听句柄，用于注册和取消注册监听回调。 |
+| inspector.ComponentObserver | 组件回调事件监听句柄，用于注册和取消注册监听回调。 |
 
 **示例**
 
@@ -100,7 +100,7 @@ createComponentObserver(id: string | number): inspector.ComponentObserver
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -114,7 +114,7 @@ createComponentObserver(id: string | number): inspector.ComponentObserver
 
 | 类型 | 说明 |
 | --- | --- |
-| [inspector.ComponentObserver](arkts-arkui-inspector-componentobserver-i.md) | 组件回调事件监听句柄，用于注册和取消注册监听回调。 |
+| inspector.ComponentObserver | 组件回调事件监听句柄，用于注册和取消注册监听回调。 |
 
 **示例**
 

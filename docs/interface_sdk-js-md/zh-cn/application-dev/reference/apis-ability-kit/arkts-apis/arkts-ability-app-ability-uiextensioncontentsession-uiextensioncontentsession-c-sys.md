@@ -32,7 +32,7 @@ getUIExtensionHostWindowProxy(): uiExtensionHost.UIExtensionHostWindowProxy
 
 | 类型 | 说明 |
 | --- | --- |
-| [uiExtensionHost.UIExtensionHostWindowProxy](../../apis-arkui/arkts-apis/arkts-arkui-uiextensionhost-uiextensionhostwindowproxy-i-sys.md) | 宿主应用窗口信息。 |
+| uiExtensionHost.UIExtensionHostWindowProxy | 宿主应用窗口信息。 |
 
 **错误码：**
 
@@ -107,7 +107,7 @@ sendData(data: Record<string, Object>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| data | Record&lt;string, Object&gt; | 是 | 发送给UIExtensionComponent控件的数据参数。<br>**起始版本：** 11 |
+| data | Record&lt;string, Object&gt; | 是 | 发送给UIExtensionComponent控件的数据参数。<br>**适用版本：** 11 |
 
 **错误码：**
 

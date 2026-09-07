@@ -168,7 +168,7 @@ columnsTemplate(value: string | ItemFillPolicy)
 
 Number of columns in the current grid layout. If this attribute is not set, one column will be used.
 
-When the value is of the string type, refer to [columnsTemplate(value: string)](#columnstemplate) for the usage.
+When the value is of the string type, refer to [columnsTemplate(value: string)](#columnstemplate-1) for the usage.
 
 When the value is of the **ItemFillPolicy** type, the number of columns is determined based on the [breakpoint type](../../../ui/arkts-layout-development-grid-layout.md#breakpoints) corresponding to the width of the **Grid** component.
 

@@ -147,7 +147,6 @@ disconnectServiceExtensionAbility(connection: number): Promise<void>
 **示例**
 
 参见[connectServiceExtensionAbility](#connectserviceextensionability)。
-- simpleType:
 
 ## startAbility
 

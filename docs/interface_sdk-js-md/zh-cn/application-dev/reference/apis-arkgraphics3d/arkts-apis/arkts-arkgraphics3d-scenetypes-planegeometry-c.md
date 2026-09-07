@@ -13,6 +13,20 @@
 ## size
 
 ```TypeScript
+get size(): Vec2
+```
+
+平面的宽、高，表示平面的大小，单位为世界坐标系下的场景单位（比如cm、m、km等）。
+
+@return { Vec2 }
+
+**类型：** [Vec2](arkts-arkgraphics3d-scenetypes-vec2-i.md)
+
+**起始版本：** 18
+
+**系统能力：** SystemCapability.ArkUi.Graphics3D
+
+```TypeScript
 set size(value: Vec2)
 ```
 

@@ -27,7 +27,7 @@ function off(type: 'netStatsChange', callback?: Callback<NetStatsChangeInfo>): v
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'netStatsChange' | 是 | 注销订阅事件，固定为'netStatsChange'。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[NetStatsChangeInfo](arkts-network-statistics-netstatschangeinfo-i-sys.md)&gt; | 否 | 当流量有改变时触发回调函数。<br>**起始版本：** 11 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[NetStatsChangeInfo](arkts-network-statistics-netstatschangeinfo-i-sys.md)&gt; | 否 | 当流量有改变时触发回调函数。<br>**适用版本：** 11 |
 
 **错误码：**
 

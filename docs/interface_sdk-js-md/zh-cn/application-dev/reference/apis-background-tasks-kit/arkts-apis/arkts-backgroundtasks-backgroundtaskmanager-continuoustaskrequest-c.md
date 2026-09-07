@@ -152,7 +152,7 @@ isModeSupported(): boolean
 
 **需要权限：** ohos.permission.KEEP_BACKGROUND_RUNNING
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
@@ -322,6 +322,22 @@ export default class EntryAbility extends UIAbility {
 ## backgroundTaskModes
 
 ```TypeScript
+get backgroundTaskModes(): BackgroundTaskMode[]
+```
+
+长时任务主类型
+
+**说明：** 主类型与子类型必须匹配。
+
+**类型：** [BackgroundTaskMode](arkts-backgroundtasks-backgroundtaskmanager-backgroundtaskmode-e.md)[]
+
+**起始版本：** 21
+
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+**系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
+
+```TypeScript
 set backgroundTaskModes(value: BackgroundTaskMode[])
 ```
 
@@ -333,11 +349,27 @@ set backgroundTaskModes(value: BackgroundTaskMode[])
 
 **起始版本：** 21
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
 ## backgroundTaskSubmodes
+
+```TypeScript
+get backgroundTaskSubmodes(): BackgroundTaskSubmode[]
+```
+
+长时任务子类型。
+
+**说明：** 主类型与子类型必须匹配。
+
+**类型：** [BackgroundTaskSubmode](arkts-backgroundtasks-backgroundtaskmanager-backgroundtasksubmode-e.md)[]
+
+**起始版本：** 21
+
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+**系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
 ```TypeScript
 set backgroundTaskSubmodes(value: BackgroundTaskSubmode[])
@@ -351,7 +383,7 @@ set backgroundTaskSubmodes(value: BackgroundTaskSubmode[])
 
 **起始版本：** 21
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
@@ -369,7 +401,7 @@ combinedTaskNotification?: boolean
 
 **起始版本：** 21
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
@@ -391,7 +423,7 @@ continuousTaskId?: number
 
 **起始版本：** 21
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
@@ -414,6 +446,22 @@ progressInfo?: ProgressInfo
 ## wantAgent
 
 ```TypeScript
+get wantAgent(): WantAgent
+```
+
+通知参数，用于指定点击长时任务通知后跳转的界面。
+
+**类型：** [WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-depr-t.md)
+
+**起始版本：** 21
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+**系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
+
+```TypeScript
 set wantAgent(value: WantAgent)
 ```
 
@@ -423,6 +471,6 @@ set wantAgent(value: WantAgent)
 
 **起始版本：** 21
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask

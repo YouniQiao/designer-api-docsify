@@ -18,7 +18,7 @@ function getAbilityInfo(uri: string, abilityFlags: number): Promise<Array<Abilit
 
 **需要权限：** ohos.permission.GET_ABILITY_INFO
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 

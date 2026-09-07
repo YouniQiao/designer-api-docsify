@@ -6,8 +6,6 @@ Enumerates the screenshot display intent type.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
-
 **System capability:** SystemCapability.Window.SessionManager
 
 **System API:** This is a system API.

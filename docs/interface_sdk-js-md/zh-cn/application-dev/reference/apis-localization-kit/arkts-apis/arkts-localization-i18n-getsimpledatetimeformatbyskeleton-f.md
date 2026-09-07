@@ -16,7 +16,7 @@ export function getSimpleDateTimeFormatBySkeleton(skeleton: string, locale?: Int
 
 **起始版本：** 20
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -25,7 +25,7 @@ export function getSimpleDateTimeFormatBySkeleton(skeleton: string, locale?: Int
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | skeleton | string | 是 | 合法的框架字符串，支持[日期字段符号表](https://www.unicode.org/reports/tr35/tr35-dates.html#Date_Field_Symbol_Table)中Field Patterns值的自由组合。skeleton不支持传入自定义文本。 |
-| locale | [Intl.Locale](arkts-localization-intl-locale-c.md) | 否 | 区域对象。默认值：系统区域对象。 |
+| locale | Intl.Locale | 否 | 区域对象。默认值：系统区域对象。 |
 
 **返回值：**
 
@@ -69,7 +69,7 @@ export function getSimpleDateTimeFormatBySkeleton(skeleton: string, locale?: int
 
 **替代接口：** [getSimpleDateTimeFormatBySkeleton](arkts-localization-i18n-getsimpledatetimeformatbyskeleton-f.md)(skeleton: string, locale?: Intl.Locale)
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -78,7 +78,7 @@ export function getSimpleDateTimeFormatBySkeleton(skeleton: string, locale?: int
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | skeleton | string | 是 | 合法的框架字符串，支持[日期字段符号表](https://www.unicode.org/reports/tr35/tr35-dates.html#Date_Field_Symbol_Table)中Field Patterns值的自由组合。skeleton不支持传入自定义文本。 |
-| locale | [intl.Locale](arkts-localization-intl-locale-c.md) | 否 | 区域对象。默认值：系统区域对象。 |
+| locale | intl.Locale | 否 | 区域对象。默认值：系统区域对象。 |
 
 **返回值：**
 

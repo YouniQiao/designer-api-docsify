@@ -15,4 +15,3 @@ Callback invoked when the proxy configuration changes. A successful callback ind
 **Examples**
 
 For details about the sample code, see [removeProxyOverride](./arkts-apis-webview-ProxyController.md#removeproxyoverride).
-- simpleType:

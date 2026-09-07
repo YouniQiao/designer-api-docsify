@@ -36,7 +36,7 @@ readonly bundleType: bundleManager.BundleType
 
 Bundle type.
 
-**Type:** [bundleManager.BundleType](arkts-ability-bundlemanager-bundletype-e.md)
+**Type:** bundleManager.BundleType
 
 **Since:** 12
 

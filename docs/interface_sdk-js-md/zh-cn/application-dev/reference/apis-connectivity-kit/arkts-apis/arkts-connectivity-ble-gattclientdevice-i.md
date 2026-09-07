@@ -28,7 +28,7 @@ close(): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -80,7 +80,7 @@ client端主动发起和server蓝牙设备的GATT协议连接。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -122,7 +122,7 @@ client可通过订阅on('BLEConnectionStateChange')事件来感知断连是否�
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -208,7 +208,7 @@ client获取server端设备名称。使用Callback异步回调。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -268,7 +268,7 @@ client获取server端设备名称。使用Promise异步回调。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -328,7 +328,7 @@ client端获取GATT连接链路信号强度 (Received Signal Strength Indication
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -382,7 +382,7 @@ client端获取GATT连接链路信号强度 (Received Signal Strength Indication
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -446,7 +446,7 @@ setCharacteristicChangeIndication
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -515,7 +515,7 @@ client端获取server端支持的所有服务能力，即服务发现流程。�
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -572,7 +572,7 @@ client端取消订阅server端特征值变化事件。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -617,7 +617,7 @@ client端取消订阅GATT profile协议的连接状态变化事件。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -662,7 +662,7 @@ client端取消订阅MTU（最大传输单元）大小变更事件。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -813,7 +813,7 @@ client端订阅server端特征值变化事件。使用Callback异步回调。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -863,7 +863,7 @@ client端订阅GATT profile协议的连接状态变化事件。使用Callback异
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -912,7 +912,7 @@ client端订阅MTU（最大传输单元）大小变更事件。使用Callback异
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -1065,7 +1065,7 @@ client端从指定的server端特征值读取数据。使用Callback异步回调
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -1144,7 +1144,7 @@ client端从指定的server端特征值读取数据。使用Promise异步回调�
 
 **需要权限：** ohos.permission.ACCESS_BLUETOOTH
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -1219,7 +1219,7 @@ client端从指定的server端描述符读取数据。使用Callback异步回调
 
 **需要权限：** ohos.permission.ACCESS_BLUETOOTH
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -1291,7 +1291,7 @@ client端从指定的server端描述符读取数据。使用Promise异步回调�
 
 **需要权限：** ohos.permission.ACCESS_BLUETOOTH
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -1408,7 +1408,7 @@ client端同server端协商MTU（最大传输单元）大小。与[setBLEMtuSize
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -1463,7 +1463,7 @@ client端同server端协商MTU（最大传输单元）大小。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -1515,7 +1515,7 @@ client端启用或者禁用接收server端特征值内容变更指示的能力�
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -1585,7 +1585,7 @@ client端启用或者禁用接收server端特征值内容变更指示的能力�
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -1658,7 +1658,7 @@ client端启用或者禁用接收server端特征值内容变更通知的能力�
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -1728,7 +1728,7 @@ client端启用或者禁用接收server端特征值内容变更通知的能力�
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -1909,7 +1909,7 @@ client端向指定的server端特征值写入数据。使用Callback异步回调
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -1987,7 +1987,7 @@ client端向指定的server端特征值写入数据。使用Promise异步回调�
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -2064,7 +2064,7 @@ client端向指定的server端描述符写入数据。使用Callback异步回调
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -2135,7 +2135,7 @@ client端向指定的server端描述符写入数据。使用Promise异步回调�
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 

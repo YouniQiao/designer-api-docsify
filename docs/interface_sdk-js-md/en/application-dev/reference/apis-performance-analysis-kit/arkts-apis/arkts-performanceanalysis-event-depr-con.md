@@ -8,6 +8,8 @@ const DISTRIBUTED_SERVICE_START: string
 
 Distributed service event.
 
+**Type:** string
+
 **Since:** 7
 
 **Deprecated since:** 9
@@ -24,6 +26,8 @@ const USER_LOGIN: string
 
 User login event.
 
+**Type:** string
+
 **Since:** 7
 
 **Deprecated since:** 9
@@ -39,6 +43,8 @@ const USER_LOGOUT: string
 ```
 
 User logout event.
+
+**Type:** string
 
 **Since:** 7
 

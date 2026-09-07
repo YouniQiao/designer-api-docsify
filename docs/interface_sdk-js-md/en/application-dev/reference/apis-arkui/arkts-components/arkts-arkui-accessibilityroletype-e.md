@@ -4,8 +4,6 @@ Enumerates the component role types used by screen readers. @enum { number }
 
 **Since:** 18
 
-**Model restriction:** This API can be used only in the stage model.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## ACTION_SHEET

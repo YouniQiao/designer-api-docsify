@@ -18,6 +18,7 @@ Sets the screen-off timeout duration, in unit of ms.
 
 **Required permissions:** 
 - API version 19 and later: ohos.permission.POWER_MANAGER
+- API versions 12 to 18: N/A
 
 **System capability:** SystemCapability.PowerManager.PowerManager.Core
 

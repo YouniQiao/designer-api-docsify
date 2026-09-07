@@ -30,8 +30,8 @@ Receives a function that uses the error-first callback mode, that is, uses `(err
 
 | Type | Description |
 | --- | --- |
-| [function](arkts-arkts-taskpool-task-c.md) | Return a function that returns promises<br>**Applicable version:** 9 - 11 |
-| Function | Promise function.<br>**Applicable version:** 10 and later |
+| [function](arkts-arkts-taskpool-task-c.md) | Return a function that returns promises<br>**Since:** 9 - 11 |
+| Function | Promise function.<br>**Since:** 10 |
 
 **Examples**
 

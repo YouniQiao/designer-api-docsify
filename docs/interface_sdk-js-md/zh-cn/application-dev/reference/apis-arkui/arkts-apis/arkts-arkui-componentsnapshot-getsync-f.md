@@ -22,7 +22,7 @@ function getSync(id: string, options?: SnapshotOptions): image.PixelMap
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -37,7 +37,7 @@ function getSync(id: string, options?: SnapshotOptions): image.PixelMap
 
 | 类型 | 说明 |
 | --- | --- |
-| [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | 截图返回的结果。 |
+| image.PixelMap | 截图返回的结果。 |
 
 **错误码：**
 

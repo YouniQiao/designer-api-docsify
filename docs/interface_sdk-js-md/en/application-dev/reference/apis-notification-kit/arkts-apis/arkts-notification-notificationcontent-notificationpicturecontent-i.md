@@ -58,7 +58,7 @@ picture: image.PixelMap
 
 Picture content displayed after the notification is expanded. The total bytes of the image pixels (obtained through getPixelBytesNumber) cannot exceed 2 MB.
 
-**Type:** [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)
+**Type:** image.PixelMap
 
 **Since:** 7
 

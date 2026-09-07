@@ -31,7 +31,7 @@ autoPlay(value: boolean)
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本10开始，该接口支持在ArkTS卡片中使用。
 
@@ -57,7 +57,7 @@ autoPlay(autoPlay: boolean, options: AutoPlayOptions)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本18开始，该接口支持在ArkTS卡片中使用。
 
@@ -89,7 +89,7 @@ cachedCount(value: number)
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本10开始，该接口支持在ArkTS卡片中使用。
 
@@ -117,7 +117,7 @@ cachedCount(count: number, isShown: boolean)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本15开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本15开始，该接口支持在ArkTS卡片中使用。
 
@@ -141,7 +141,7 @@ cachedCount(count: number, options: CachedCountOptions)
 > **说明：**
 
 > - 当options的independent设置为true时，预加载子组件个数按count个数计算，与
-> [displayCount](#displaycount)
+> [displayCount](#displaycount-1)
 > 的分组swipeByGroup计算解耦。例如cachedCount的count为1时，会将当前显示子节点的前一个和后一个子组件预加载。
 > 
 > - 当displayCount的swipeByGroup参数设为true，且options的independent为false（默认值）时，预加载子组件个数以组为基本单位。例如cachedCount的count为1，
@@ -154,7 +154,7 @@ cachedCount(count: number, options: CachedCountOptions)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本24开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本24开始，该接口支持在ArkTS卡片中使用。
 
@@ -177,7 +177,7 @@ curve(value: Curve | string | ICurve)
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本10开始，该接口支持在ArkTS卡片中使用。
 
@@ -187,7 +187,7 @@ curve(value: Curve | string | ICurve)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | Curve \| string \| ICurve | 是 | Swiper的动画曲线。string类型来源[curves.init](../arkts-apis/arkts-arkui-curves-init-f.md)，[curves.steps](../arkts-apis/arkts-arkui-curves-steps-f.md)，[curves.cubicBezier](../arkts-apis/arkts-arkui-curves-cubicbezier-f.md)，[curves.spring](../arkts-apis/arkts-arkui-curves-spring-f.md)函数从API version 9开始废弃，推荐使用Curve和ICurve类型。默认值：[interpolatingSpring](../arkts-apis/arkts-arkui-curves-interpolatingspring-f.md)(-1, 1, 328, 34)<br>**起始版本：** 8 - 9 |
+| value | Curve \| string \| ICurve | 是 | Swiper的动画曲线。string类型来源[curves.init](../arkts-apis/arkts-arkui-curves-init-f.md)，[curves.steps](../arkts-apis/arkts-arkui-curves-steps-f.md)，[curves.cubicBezier](../arkts-apis/arkts-arkui-curves-cubicbezier-f.md)，[curves.spring](../arkts-apis/arkts-arkui-curves-spring-f.md)函数从API version 9开始废弃，推荐使用Curve和ICurve类型。默认值：[interpolatingSpring](../arkts-apis/arkts-arkui-curves-interpolatingspring-f.md)(-1, 1, 328, 34)<br>**适用版本：** 8 - 9 |
 
 ## customContentTransition
 
@@ -212,7 +212,7 @@ customContentTransition(transition: SwiperContentAnimatedTransition)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本26.0.0开始，该接口支持在ArkTS卡片中使用。
 
@@ -234,7 +234,7 @@ disableSwipe(value: boolean)
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本10开始，该接口支持在ArkTS卡片中使用。
 
@@ -262,7 +262,7 @@ displayArrow(value: ArrowStyle | boolean, isHoverShow?: boolean)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -315,7 +315,7 @@ displayCount(value: number | string | SwiperAutoFill, swipeByGroup?: boolean)
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本10开始，该接口支持在ArkTS卡片中使用。
 
@@ -325,8 +325,8 @@ displayCount(value: number | string | SwiperAutoFill, swipeByGroup?: boolean)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number \| string \| [SwiperAutoFill](arkts-arkui-swiperautofill-i.md) | 是 | 视窗内显示的子元素个数。默认值：1取值范围：(0, +∞)，设置小于等于0的值时，按照默认值处理。<br>**起始版本：** 8 - 9 |
-| swipeByGroup | boolean | 否 | 是否按组进行翻页。如果设为true，在翻页时会按组进行翻页，每组内子元素的数量为displayCount value的值；如果为false，则为默认翻页行为，即按照子元素进行翻页。默认值：false<br>**起始版本：** 11 |
+| value | number \| string \| [SwiperAutoFill](arkts-arkui-swiperautofill-i.md) | 是 | 视窗内显示的子元素个数。默认值：1取值范围：(0, +∞)，设置小于等于0的值时，按照默认值处理。<br>**适用版本：** 8 - 9 |
+| swipeByGroup | boolean | 否 | 是否按组进行翻页。如果设为true，在翻页时会按组进行翻页，每组内子元素的数量为displayCount value的值；如果为false，则为默认翻页行为，即按照子元素进行翻页。默认值：false<br>**适用版本：** 11 |
 
 ## displayCount
 
@@ -350,7 +350,7 @@ displayCount(value: number | string | SwiperAutoFill | ItemFillPolicy, swipeByGr
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本22开始，该接口支持在ArkTS卡片中使用。
 
@@ -373,7 +373,7 @@ displayMode(value: SwiperDisplayMode)
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本10开始，该接口支持在ArkTS卡片中使用。
 
@@ -383,7 +383,7 @@ displayMode(value: SwiperDisplayMode)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [SwiperDisplayMode](arkts-arkui-swiperdisplaymode-e.md) | 是 | [主轴方向上元素排列的模式。默认值：SwiperDisplayMode.STRETCH](arkts-arkui-swiperdisplaymode-e.md) |
+| value | [SwiperDisplayMode](arkts-arkui-swiperdisplaymode-e.md) | 是 | 主轴方向上元素排列的模式。默认值：SwiperDisplayMode.STRETCH |
 
 ## duration
 
@@ -399,7 +399,7 @@ curve默认曲线为[interpolatingSpring](../arkts-apis/arkts-arkui-curves-inter
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -419,7 +419,7 @@ effectMode(value: EdgeEffect)
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本10开始，该接口支持在ArkTS卡片中使用。
 
@@ -429,7 +429,7 @@ effectMode(value: EdgeEffect)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [EdgeEffect](../arkts-apis/arkts-arkui-edgeeffect-e.md) | 是 | [边缘滑动效果。默认值：EdgeEffect.Spring](arkts-arkui-swipeedgeeffect-e.md) |
+| value | [EdgeEffect](../arkts-apis/arkts-arkui-edgeeffect-e.md) | 是 | 边缘滑动效果。默认值：EdgeEffect.Spring |
 
 ## index
 
@@ -443,7 +443,7 @@ index(value: number)
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本10开始，该接口支持在ArkTS卡片中使用。
 
@@ -465,7 +465,7 @@ indicator(value: DotIndicator | DigitIndicator | boolean)
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本10开始，该接口支持在ArkTS卡片中使用。
 
@@ -475,7 +475,7 @@ indicator(value: DotIndicator | DigitIndicator | boolean)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [DotIndicator](arkts-arkui-dotindicator-c.md) \| [DigitIndicator](arkts-arkui-digitindicator-c.md) \| boolean | 是 | 导航点指示器样式。    - DotIndicator：圆点指示器样式，适用于展示简洁的位置提示。    - DigitIndicator：数字指示器样式，适用于需要明确显示当前位置的场景。    - boolean：是否启用导航点指示器。设置为true启用，false不启用。   默认值：true默认类型：DotIndicator<br>**起始版本：** 7 - 9 |
+| value | [DotIndicator](arkts-arkui-dotindicator-c.md) \| [DigitIndicator](arkts-arkui-digitindicator-c.md) \| boolean | 是 | 导航点指示器样式。    - DotIndicator：圆点指示器样式，适用于展示简洁的位置提示。    - DigitIndicator：数字指示器样式，适用于需要明确显示当前位置的场景。    - boolean：是否启用导航点指示器。设置为true启用，false不启用。   默认值：true默认类型：DotIndicator<br>**适用版本：** 7 - 9 |
 
 ## indicator
 
@@ -493,7 +493,7 @@ indicator(indicator: IndicatorComponentController | DotIndicator | DigitIndicato
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本15开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本15开始，该接口支持在ArkTS卡片中使用。
 
@@ -517,7 +517,7 @@ indicatorInteractive(value: boolean)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -564,7 +564,7 @@ interval(value: number)
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本10开始，该接口支持在ArkTS卡片中使用。
 
@@ -588,7 +588,7 @@ itemSpace(value: number | string)
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本10开始，该接口支持在ArkTS卡片中使用。
 
@@ -610,7 +610,7 @@ loop(value: boolean)
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本10开始，该接口支持在ArkTS卡片中使用。
 
@@ -636,7 +636,7 @@ maintainVisibleContentPosition(enabled: boolean)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本20开始，该接口支持在ArkTS卡片中使用。
 
@@ -665,7 +665,7 @@ nestedScroll(value: SwiperNestedScrollMode)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -697,7 +697,7 @@ nextMargin(value: Length, ignoreBlank?: boolean)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -706,7 +706,7 @@ nextMargin(value: Length, ignoreBlank?: boolean)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | value | [Length](../arkts-apis/arkts-arkui-length-t.md) | 是 | 后边距。不支持设置百分比。默认值：0 |
-| ignoreBlank | boolean | 否 | 非loop场景下尾页不显示nextMargin。在非loop场景下，设置为true时，尾页不显示空白的nextMargin，尾页的右边缘与Swiper视窗右边缘对齐；设置false时，尾页显示空白nextMargin，尾页的右边缘与Swiper视窗右边缘的距离为nextMargin。默认值：false    **说明：**尾页场景下，prevMargin和nextMargin的值相加作为左边边距显示前一个页面。<br>**起始版本：** 12 |
+| ignoreBlank | boolean | 否 | 非loop场景下尾页不显示nextMargin。在非loop场景下，设置为true时，尾页不显示空白的nextMargin，尾页的右边缘与Swiper视窗右边缘对齐；设置false时，尾页显示空白nextMargin，尾页的右边缘与Swiper视窗右边缘的距离为nextMargin。默认值：false    **说明：**尾页场景下，prevMargin和nextMargin的值相加作为左边边距显示前一个页面。<br>**适用版本：** 12 |
 
 ## onAnimationEnd
 
@@ -720,7 +720,7 @@ onAnimationEnd(event: OnSwiperAnimationEndCallback)
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本10开始，该接口支持在ArkTS卡片中使用。
 
@@ -730,7 +730,7 @@ onAnimationEnd(event: OnSwiperAnimationEndCallback)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | [OnSwiperAnimationEndCallback](arkts-arkui-onswiperanimationendcallback-t.md) | 是 | 切换动画结束时触发的回调。<br>**起始版本：** 18 |
+| event | [OnSwiperAnimationEndCallback](arkts-arkui-onswiperanimationendcallback-t.md) | 是 | 切换动画结束时触发的回调。<br>**适用版本：** 18 |
 
 ## onAnimationStart
 
@@ -750,7 +750,7 @@ onAnimationStart(event: OnSwiperAnimationStartCallback)
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本10开始，该接口支持在ArkTS卡片中使用。
 
@@ -760,7 +760,7 @@ onAnimationStart(event: OnSwiperAnimationStartCallback)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | [OnSwiperAnimationStartCallback](arkts-arkui-onswiperanimationstartcallback-t.md) | 是 | 切换动画开始时触发的回调。<br>**起始版本：** 18 |
+| event | [OnSwiperAnimationStartCallback](arkts-arkui-onswiperanimationstartcallback-t.md) | 是 | 切换动画开始时触发的回调。<br>**适用版本：** 18 |
 
 ## onChange
 
@@ -779,7 +779,7 @@ Swiper组件结合LazyForEach使用时，不能在onChange事件里触发子页�
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本10开始，该接口支持在ArkTS卡片中使用。
 
@@ -789,7 +789,7 @@ Swiper组件结合LazyForEach使用时，不能在onChange事件里触发子页�
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | Callback&lt;number&gt; | 是 | 当前显示元素的索引。<br>**起始版本：** 18 |
+| event | Callback&lt;number&gt; | 是 | 当前显示元素的索引。<br>**适用版本：** 18 |
 
 ## onContentDidScroll
 
@@ -811,7 +811,7 @@ onContentDidScroll(handler: ContentDidScrollCallback)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -839,7 +839,7 @@ Swiper滑动行为拦截事件，在滑动前触发。Swiper会依据该事件�
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本15开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本15开始，该接口支持在ArkTS卡片中使用。
 
@@ -863,7 +863,7 @@ onGestureSwipe(event: OnSwiperGestureSwipeCallback)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -871,7 +871,7 @@ onGestureSwipe(event: OnSwiperGestureSwipeCallback)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | [OnSwiperGestureSwipeCallback](arkts-arkui-onswipergestureswipecallback-t.md) | 是 | 在页面跟手滑动过程中，逐帧触发的回调。onGestureSwipe回调触发时机在onTouch之后，如果需要在离手后执行操作建议使用[onAnimationStart](#onanimationstart)。<br>**起始版本：** 18 |
+| event | [OnSwiperGestureSwipeCallback](arkts-arkui-onswipergestureswipecallback-t.md) | 是 | 在页面跟手滑动过程中，逐帧触发的回调。onGestureSwipe回调触发时机在onTouch之后，如果需要在离手后执行操作建议使用[onAnimationStart](#onanimationstart)。<br>**适用版本：** 18 |
 
 ## onScrollStateChanged
 
@@ -885,7 +885,7 @@ Swiper滑动状态变化事件回调，在跟手滑动、离手动画、停止�
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本20开始，该接口支持在ArkTS卡片中使用。
 
@@ -909,7 +909,7 @@ onSelected(event: Callback<number>)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本18开始，该接口支持在ArkTS卡片中使用。
 
@@ -933,7 +933,7 @@ onUnselected(event: Callback<number>)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本18开始，该接口支持在ArkTS卡片中使用。
 
@@ -957,7 +957,7 @@ pageFlipMode(mode: Optional<PageFlipMode>)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本15开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本15开始，该接口支持在ArkTS卡片中使用。
 
@@ -991,7 +991,7 @@ prevMargin(value: Length, ignoreBlank?: boolean)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1000,7 +1000,7 @@ prevMargin(value: Length, ignoreBlank?: boolean)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | value | [Length](../arkts-apis/arkts-arkui-length-t.md) | 是 | 前边距。不支持设置百分比。默认值：0 |
-| ignoreBlank | boolean | 否 | 非loop场景下首页不显示prevMargin。在非loop场景下，设置为true时，首页不显示空白的prevMargin，首页的左边缘与Swiper视窗左边缘对齐；设置false时，首页显示空白prevMargin，首页的左边缘与Swiper视窗左边缘的距离为prevMargin。默认值：false    **说明：**首页场景下，prevMargin和nextMargin的值相加作为右边边距显示后一个页面。<br>**起始版本：** 12 |
+| ignoreBlank | boolean | 否 | 非loop场景下首页不显示prevMargin。在非loop场景下，设置为true时，首页不显示空白的prevMargin，首页的左边缘与Swiper视窗左边缘对齐；设置false时，首页显示空白prevMargin，首页的左边缘与Swiper视窗左边缘的距离为prevMargin。默认值：false    **说明：**首页场景下，prevMargin和nextMargin的值相加作为右边边距显示后一个页面。<br>**适用版本：** 12 |
 
 ## vertical
 
@@ -1012,7 +1012,7 @@ vertical(value: boolean)
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本10开始，该接口支持在ArkTS卡片中使用。
 

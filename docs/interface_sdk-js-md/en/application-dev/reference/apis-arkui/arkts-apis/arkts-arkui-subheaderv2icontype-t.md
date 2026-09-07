@@ -17,4 +17,4 @@ SubHeaderV2IconType
 | Type | Description |
 | --- | --- |
 | [ResourceStr](arkts-arkui-resourcestr-t.md) |  |
-| SymbolGlyphModifier |  |
+| [SymbolGlyphModifier](../arkts-components/arkts-arkui-symbolglyphmodifier-t.md) |  |

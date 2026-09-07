@@ -18,7 +18,7 @@ Creates an ImageReceiver instance by specifying the image width, height, format,
 
 **Deprecated since:** 11
 
-**Substitutes:** [createImageReceiver](#createimagereceiver)(size: Size, format: ImageFormat, capacity: int)
+**Substitutes:** [createImageReceiver](#createimagereceiver-1)(size: Size, format: ImageFormat, capacity: int)
 
 **System capability:** SystemCapability.Multimedia.Image.ImageReceiver
 

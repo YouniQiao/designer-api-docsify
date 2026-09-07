@@ -4,6 +4,8 @@ The FeatureAbility module provides APIs that enable user interaction. You can us
 
 **Since:** 6
 
+**Model restriction:** This API can be used only in the FA model.
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
 ## Modules to Import

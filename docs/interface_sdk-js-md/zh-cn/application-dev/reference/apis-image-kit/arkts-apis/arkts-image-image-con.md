@@ -190,6 +190,8 @@ const DUBLIN_CORE: XMPNamespace
 
 Dublin Core元数据命名空间。Namespace uri: 'http://purl.org/dc/elements/1.1/', prefix: 'dc'
 
+**类型：** [XMPNamespace](arkts-image-image-xmpnamespace-i.md)
+
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -204,6 +206,8 @@ const EXIF: XMPNamespace
 
 EXIF元数据命名空间。Namespace uri: 'http://ns.adobe.com/exif/1.0/', prefix: 'exif'
 
+**类型：** [XMPNamespace](arkts-image-image-xmpnamespace-i.md)
+
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -217,6 +221,8 @@ const TIFF: XMPNamespace
 ```
 
 TIFF图像格式参数命名空间。Namespace uri: 'http://ns.adobe.com/tiff/1.0/', prefix: 'tiff'
+
+**类型：** [XMPNamespace](arkts-image-image-xmpnamespace-i.md)
 
 **起始版本：** 26.0.0
 
@@ -260,6 +266,8 @@ const XMP_BASIC: XMPNamespace
 
 XMP基础命名空间。Namespace uri: 'http://ns.adobe.com/xap/1.0/', prefix: 'xmp'
 
+**类型：** [XMPNamespace](arkts-image-image-xmpnamespace-i.md)
+
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -273,6 +281,8 @@ const XMP_RIGHTS: XMPNamespace
 ```
 
 XMP版权与权限命名空间。Namespace uri: 'http://ns.adobe.com/xap/1.0/rights/', prefix: 'xmpRights'
+
+**类型：** [XMPNamespace](arkts-image-image-xmpnamespace-i.md)
 
 **起始版本：** 26.0.0
 

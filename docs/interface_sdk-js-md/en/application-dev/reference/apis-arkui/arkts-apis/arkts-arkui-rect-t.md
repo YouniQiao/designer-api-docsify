@@ -14,4 +14,4 @@ Describes a rectangle.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Type:** [common2D.Rect](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-common2d-rect-i.md)
+**Type:** common2D.Rect

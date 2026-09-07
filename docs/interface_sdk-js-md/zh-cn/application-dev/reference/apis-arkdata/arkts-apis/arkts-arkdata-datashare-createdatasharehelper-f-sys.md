@@ -171,7 +171,7 @@ function createDataShareHelper(
 | --- | --- | --- | --- |
 | context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | 是 | 应用的上下文环境。 |
 | uri | string | 是 | 要连接的服务端应用的路径。 |
-| options | [DataShareHelperOptions](arkts-arkdata-datashare-datasharehelperoptions-i-sys.md) | 否 | 可选配置。指定[DataShareHelper](arkts-arkdata-datashare-datasharehelper-i-sys.md)是否在代理模式下，指定非静默访问时的等待启动时间。如果不设置，则表示[DataShareHelper](arkts-arkdata-datashare-datasharehelper-i-sys.md)不在代理模式下，且非静默访问时的等待启动时间为2秒。如果uri以datashareproxy为开头，则必须设置options的isProxy参数，否则DataShareHelper创建失败返回错误。<br>**起始版本：** 10 |
+| options | [DataShareHelperOptions](arkts-arkdata-datashare-datasharehelperoptions-i-sys.md) | 否 | 可选配置。指定[DataShareHelper](arkts-arkdata-datashare-datasharehelper-i-sys.md)是否在代理模式下，指定非静默访问时的等待启动时间。如果不设置，则表示[DataShareHelper](arkts-arkdata-datashare-datasharehelper-i-sys.md)不在代理模式下，且非静默访问时的等待启动时间为2秒。如果uri以datashareproxy为开头，则必须设置options的isProxy参数，否则DataShareHelper创建失败返回错误。<br>**适用版本：** 10 |
 
 **返回值：**
 

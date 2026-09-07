@@ -33,7 +33,7 @@ nextLabel(value: string)
 
 **替代接口：** showNext
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -61,7 +61,7 @@ prevLabel(value: string)
 
 **替代接口：** showPrevious
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -89,7 +89,7 @@ status(value?: ItemState)
 
 **替代接口：** [indicatorInteractive](arkts-arkui-swiper-attribute.md#indicatorinteractive)
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -97,4 +97,4 @@ status(value?: ItemState)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ItemState](arkts-arkui-itemstate-e.md) | 否 | [步骤导航器nextLabel的显示状态。默认值：ItemState.Normal](arkts-arkui-itemstate-e.md) |
+| value | [ItemState](arkts-arkui-itemstate-e.md) | 否 | 步骤导航器nextLabel的显示状态。默认值：ItemState.Normal |

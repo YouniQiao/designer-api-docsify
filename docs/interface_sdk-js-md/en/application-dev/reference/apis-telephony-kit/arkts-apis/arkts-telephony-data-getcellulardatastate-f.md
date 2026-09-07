@@ -20,6 +20,7 @@ Obtains the cellular data connection status. This API uses an asynchronous callb
 
 **Required permissions:** 
 - API version 22 and later: ohos.permission.GET_NETWORK_INFO
+- API versions 7 to 21: N/A
 
 **System capability:** SystemCapability.Telephony.CellularData
 
@@ -65,6 +66,7 @@ Obtains the cellular data connection status. This API uses a promise to return t
 
 **Required permissions:** 
 - API version 22 and later: ohos.permission.GET_NETWORK_INFO
+- API versions 7 to 21: N/A
 
 **System capability:** SystemCapability.Telephony.CellularData
 

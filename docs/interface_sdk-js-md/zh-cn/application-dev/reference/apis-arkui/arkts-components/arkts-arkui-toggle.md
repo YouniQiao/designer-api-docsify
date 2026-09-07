@@ -18,7 +18,7 @@ Toggle(options: ToggleOptions)
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
 
@@ -209,11 +209,6 @@ struct Index {
 ```
 
 该示例展示了Toggle组件Switch类型在开启沉浸光感前后的效果对比，包括不设置系统材质、设置undefined、设置系统材质以及设置系统材质并配合[switchPointColor](arkts-arkui-toggle-attribute.md#switchpointcolor)设置点光源颜色的效果。示例使用通用属性[systemMaterial](ts-universal-attributes-image-effect.md#systemmaterial)接口来实现沉浸光感效果。
-组件沉浸光感效果会根据设备算力与用户在系统中设置的沉浸光感效果自适应调整，开发者无需额外适配。
-从API版本26.0.0开始，新增systemMaterial属性。
-> 说明：
-> 
-> 系统材质的实际显示效果与设备的算力档位相关，相同的代码在不同算力档位的设备上显示效果存在差异，低算力设备上会显示简化后的材质效果。算力档位由系统根据设备硬件能力自动划分和管理，应用无需感知，也无需进行额外设置，系统会根据当前设备的算力档位自动适配材质的显示效果。
 
 ```TypeScript
 import { uiMaterial } from '@kit.ArkUI';

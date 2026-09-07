@@ -18,7 +18,7 @@ function createController(sessionId: string): Promise<AVSessionController>
 
 **需要权限：** 
 - API版本23+：ohos.permission.MANAGE_MEDIA_RESOURCES or ohos.permission.MANAGE_MEDIA_RESOURCES_FOR_PUBLIC
-- API版本9 - 22：ohos.permission.MANAGE_MEDIA_RESOURCES
+- API版本9-22：ohos.permission.MANAGE_MEDIA_RESOURCES
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Manager
 

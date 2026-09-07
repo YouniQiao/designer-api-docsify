@@ -323,6 +323,22 @@ export default class EntryAbility extends UIAbility {
 ## backgroundTaskModes
 
 ```TypeScript
+get backgroundTaskModes(): BackgroundTaskMode[]
+```
+
+Main type of a continuous task.
+
+Note: The main type must match the subtype.
+
+**Type:** [BackgroundTaskMode](arkts-backgroundtasks-backgroundtaskmanager-backgroundtaskmode-e.md)[]
+
+**Since:** 21
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+**System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
+
+```TypeScript
 set backgroundTaskModes(value: BackgroundTaskMode[])
 ```
 
@@ -339,6 +355,22 @@ Note: The main type must match the subtype.
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
 ## backgroundTaskSubmodes
+
+```TypeScript
+get backgroundTaskSubmodes(): BackgroundTaskSubmode[]
+```
+
+Subtype of a continuous task.
+
+Note: The main type must match the subtype.
+
+**Type:** [BackgroundTaskSubmode](arkts-backgroundtasks-backgroundtaskmanager-backgroundtasksubmode-e.md)[]
+
+**Since:** 21
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+**System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
 ```TypeScript
 set backgroundTaskSubmodes(value: BackgroundTaskSubmode[])
@@ -413,6 +445,22 @@ Notify progress data.
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
 ## wantAgent
+
+```TypeScript
+get wantAgent(): WantAgent
+```
+
+Notification parameters, which are used to specify the target page that is redirected to when a continuous task notification is clicked.
+
+**Type:** [WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-depr-t.md)
+
+**Since:** 21
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+**System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
 ```TypeScript
 set wantAgent(value: WantAgent)

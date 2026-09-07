@@ -16,7 +16,7 @@ abortSession终止密钥操作。使用callback异步回调。
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Security.Huks.Core
 
@@ -115,9 +115,6 @@ async function huksAbort() {
 ```
 
 JS示例：
-> 说明
-> 
-> JS示例代码仅供轻量级设备使用。
 
 ```TypeScript
 <stack class="container">
@@ -434,7 +431,7 @@ abortSession终止密钥操作。使用Promise异步回调。
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Security.Huks.Extension
 

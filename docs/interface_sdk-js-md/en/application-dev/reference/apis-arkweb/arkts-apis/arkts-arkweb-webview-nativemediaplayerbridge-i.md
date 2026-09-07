@@ -29,7 +29,6 @@ Enables the player to enter full screen mode.
 **Examples**
 
 For details about the sample code, see [onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer).
-- simpleType:
 
 ## exitFullscreen
 
@@ -48,7 +47,6 @@ Enables the player to exit full screen mode.
 **Examples**
 
 For details about the sample code, see [onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer).
-- simpleType:
 
 ## pause
 
@@ -67,7 +65,6 @@ Pauses playback.
 **Examples**
 
 For details about the sample code, see [onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer).
-- simpleType:
 
 ```TypeScript
 // xxx.ets
@@ -164,7 +161,6 @@ Plays the media.
 **Examples**
 
 For details about the sample code, see [onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer).
-- simpleType:
 
 ## release
 
@@ -183,7 +179,6 @@ Releases this player.
 **Examples**
 
 For details about the sample code, see [onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer).
-- simpleType:
 
 ## resumePlayer
 
@@ -200,7 +195,6 @@ Notifies the app to rebuild the player and restore its status information. This 
 **Examples**
 
 For details about the sample code, see [onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer).
-- simpleType:
 
 ## seek
 
@@ -225,7 +219,6 @@ Seeks to a specific time point in the media.
 **Examples**
 
 For details about the sample code, see [onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer).
-- simpleType:
 
 ## setMuted
 
@@ -250,7 +243,6 @@ Sets the muted status.
 **Examples**
 
 For details about the sample code, see [onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer).
-- simpleType:
 
 ## setPlaybackRate
 
@@ -275,7 +267,6 @@ Sets the playback rate.
 **Examples**
 
 For details about the sample code, see [onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer).
-- simpleType:
 
 ## setVolume
 
@@ -300,7 +291,6 @@ Sets the playback volume.
 **Examples**
 
 For details about the sample code, see [onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer).
-- simpleType:
 
 ## suspendPlayer
 
@@ -323,7 +313,6 @@ Notifies the app to destroy the player and save its status information. This met
 **Examples**
 
 For details about the sample code, see [onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer).
-- simpleType:
 
 ## updateRect
 
@@ -351,4 +340,3 @@ Notifies the app of the surface position information. This method is called back
 **Examples**
 
 For details about the sample code, see [onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer).
-- simpleType:

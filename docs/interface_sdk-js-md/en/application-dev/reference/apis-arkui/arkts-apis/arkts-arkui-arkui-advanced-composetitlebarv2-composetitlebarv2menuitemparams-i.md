@@ -130,7 +130,7 @@ symbolStyle?: SymbolGlyphModifier
 
 Symbol icon resource for this menu item, which has higher priority than value.
 
-**Type:** SymbolGlyphModifier
+**Type:** [SymbolGlyphModifier](../arkts-components/arkts-arkui-symbolglyphmodifier-t.md)
 
 **Since:** 26.0.0
 

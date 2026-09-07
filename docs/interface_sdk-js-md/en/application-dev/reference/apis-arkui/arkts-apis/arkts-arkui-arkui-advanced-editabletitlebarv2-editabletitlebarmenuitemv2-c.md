@@ -188,7 +188,7 @@ public symbolStyle?: SymbolGlyphModifier
 
 Symbol icon style modifier.
 
-**Type:** SymbolGlyphModifier
+**Type:** [SymbolGlyphModifier](../arkts-components/arkts-arkui-symbolglyphmodifier-t.md)
 
 **Since:** 26.0.0
 

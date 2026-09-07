@@ -10,6 +10,8 @@ The module provides APIs for executing intent calls. The system executes intent 
 
 **Since:** 11
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.

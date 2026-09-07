@@ -10,4 +10,4 @@ SIM card state.
 
 **System capability:** SystemCapability.Telephony.StateRegistry
 
-**Type:** [sim.SimState](arkts-telephony-sim-simstate-e.md)
+**Type:** sim.SimState

@@ -4,8 +4,6 @@ Describes the control type.
 
 **Since:** 15
 
-**Model restriction:** This API can be used only in the stage model.
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **System API:** This is a system API.

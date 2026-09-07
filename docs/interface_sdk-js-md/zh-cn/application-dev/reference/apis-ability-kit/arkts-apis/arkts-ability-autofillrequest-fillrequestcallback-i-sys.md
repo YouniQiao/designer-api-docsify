@@ -28,7 +28,7 @@ onCancel(fillContent?: string): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| fillContent | string | 否 | 表示通知自动填充取消后，返回给输入法框架的填充内容。<br>**起始版本：** 12 |
+| fillContent | string | 否 | 表示通知自动填充取消后，返回给输入法框架的填充内容。<br>**适用版本：** 12 |
 
 **错误码：**
 

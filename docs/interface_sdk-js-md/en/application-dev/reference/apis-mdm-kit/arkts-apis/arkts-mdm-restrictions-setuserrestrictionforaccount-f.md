@@ -18,7 +18,7 @@ Sets restrictions on specified user behaviors.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [setUserRestrictionForAccount](#setuserrestrictionforaccount)(admin: Want, settingsItem: SettingsForAccount, accountId: int, restricted: boolean)
+**Substitutes:** [setUserRestrictionForAccount](#setuserrestrictionforaccount-1)(admin: Want, settingsItem: SettingsForAccount, accountId: int, restricted: boolean)
 
 **Required permissions:** ohos.permission.ENTERPRISE_SET_USER_RESTRICTION
 

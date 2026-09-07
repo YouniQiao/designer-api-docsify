@@ -24,7 +24,7 @@ off(type: 'layout', callback?: () => void): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -32,7 +32,7 @@ off(type: 'layout', callback?: () => void): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'layout' | 是 | 必须填写字符串'layout'。layout：组件布局完成。<br>**起始版本：** 12 |
+| type | 'layout' | 是 | 必须填写字符串'layout'。layout：组件布局完成。<br>**适用版本：** 12 |
 | callback | () =&gt; void | 否 | 需要取消注册的回调，如果参数缺省则取消注册该句柄下所有的回调。callback需要和on('layout')方法中的callback为相同对象时才能取消回调成功。 |
 
 ## off('draw')
@@ -47,7 +47,7 @@ off(type: 'draw', callback?: () => void): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -55,7 +55,7 @@ off(type: 'draw', callback?: () => void): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'draw' | 是 | 必须填写字符串'layout'。layout：组件布局完成。<br>**起始版本：** 12 |
+| type | 'draw' | 是 | 必须填写字符串'layout'。layout：组件布局完成。<br>**适用版本：** 12 |
 | callback | () =&gt; void | 否 | 需要取消注册的回调，如果参数缺省则取消注册该句柄下所有的回调。callback需要和on('layout')方法中的callback为相同对象时才能取消回调成功。 |
 
 ## off('drawChildren')
@@ -70,7 +70,7 @@ off(type: 'drawChildren', callback?: Callback<void>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -93,7 +93,7 @@ offDrawChildren(callback?: Callback<number[]>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本24开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -152,7 +152,7 @@ offLayoutChildren(callback?: Callback<void>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -243,7 +243,7 @@ on(type: 'layout', callback: () => void): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -251,8 +251,8 @@ on(type: 'layout', callback: () => void): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'layout' | 是 | 必须填写字符串'layout'。layout：组件布局完成。<br>**起始版本：** 12 |
-| callback | () =&gt; void | 是 | 监听layout的回调。<br>**起始版本：** 12 |
+| type | 'layout' | 是 | 必须填写字符串'layout'。layout：组件布局完成。<br>**适用版本：** 12 |
+| callback | () =&gt; void | 是 | 监听layout的回调。<br>**适用版本：** 12 |
 
 ## on('draw')
 
@@ -266,7 +266,7 @@ on(type: 'draw', callback: () => void): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -274,8 +274,8 @@ on(type: 'draw', callback: () => void): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'draw' | 是 | 必须填写字符串'layout'。layout：组件布局完成。<br>**起始版本：** 12 |
-| callback | () =&gt; void | 是 | 监听layout的回调。<br>**起始版本：** 12 |
+| type | 'draw' | 是 | 必须填写字符串'layout'。layout：组件布局完成。<br>**适用版本：** 12 |
+| callback | () =&gt; void | 是 | 监听layout的回调。<br>**适用版本：** 12 |
 
 ## on('drawChildren')
 
@@ -289,7 +289,7 @@ on(type: 'drawChildren', callback: Callback<void>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -312,7 +312,7 @@ onDrawChildren(callback: Callback<number[]>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本24开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -371,7 +371,7 @@ onLayoutChildren(callback: Callback<void>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

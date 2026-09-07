@@ -8,6 +8,8 @@ const estimatedRemainingChargeTime: number
 
 表示当前设备充满电的预估时间，单位毫秒。此接口为系统接口。
 
+**类型：** number
+
 **起始版本：** 9
 
 **系统能力：** SystemCapability.PowerManager.BatteryManager.Core
@@ -22,6 +24,8 @@ const remainingEnergy: number
 
 表示当前设备电池的剩余容量，单位毫安时。此接口为系统接口。
 
+**类型：** number
+
 **起始版本：** 9
 
 **系统能力：** SystemCapability.PowerManager.BatteryManager.Core
@@ -35,6 +39,8 @@ const totalEnergy: number
 ```
 
 表示当前设备电池的总容量，单位毫安时。此接口为系统接口。
+
+**类型：** number
 
 **起始版本：** 9
 

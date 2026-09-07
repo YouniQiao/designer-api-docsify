@@ -144,7 +144,7 @@ public symbolStyle?: SymbolGlyphModifier
 
 Sets the symbol.
 
-**Type:** SymbolGlyphModifier
+**Type:** [SymbolGlyphModifier](../arkts-components/arkts-arkui-symbolglyphmodifier-t.md)
 
 **Since:** 26.0.0
 

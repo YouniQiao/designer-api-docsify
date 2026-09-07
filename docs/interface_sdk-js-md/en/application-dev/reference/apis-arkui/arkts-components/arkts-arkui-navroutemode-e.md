@@ -10,8 +10,6 @@ Defines the routing policy.
 
 **Substitutes:** [NavPathStack](arkts-arkui-navpathstack-c.md)
 
-**Model restriction:** This API can be used only in the stage model.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## PUSH_WITH_RECREATE

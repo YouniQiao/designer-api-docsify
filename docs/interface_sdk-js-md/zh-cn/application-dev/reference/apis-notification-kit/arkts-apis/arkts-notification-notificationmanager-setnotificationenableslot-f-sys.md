@@ -194,7 +194,7 @@ function setNotificationEnableSlot(bundle: BundleOption, type: SlotType, enable:
 | bundle | BundleOption | 是 | 应用的包信息。 |
 | type | SlotType | 是 | 渠道类型。 |
 | enable | boolean | 是 | 使能状态（true：使能，false：禁止）。 |
-| isForceControl | boolean | 否 | 渠道开关是否受通知总开关影响（false：受总开关影响，true：不受总开关影响）。默认为false。<br>**起始版本：** 11 |
+| isForceControl | boolean | 否 | 渠道开关是否受通知总开关影响（false：受总开关影响，true：不受总开关影响）。默认为false。<br>**适用版本：** 11 |
 
 **返回值：**
 

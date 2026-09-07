@@ -17,6 +17,7 @@ Obtains the product ID of a remote device.
 **Since:** 11
 
 **Required permissions:** 
+- API version 16 and later: N/A
 - API versions 11 to 15: ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
 
 **Model restriction:** This API can be used only in the stage model.

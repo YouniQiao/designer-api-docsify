@@ -4,8 +4,6 @@ Enumerates the data formats.
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
-
 **System capability:** SystemCapability.Print.PrintFramework
 
 ## DOCUMENT_FORMAT_AUTO

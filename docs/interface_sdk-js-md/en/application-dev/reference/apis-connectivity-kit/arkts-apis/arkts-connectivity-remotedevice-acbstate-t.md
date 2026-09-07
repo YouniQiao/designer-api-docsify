@@ -12,4 +12,4 @@ Enumerates the logical link connection states with a remote device.
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 
-**Type:** [nearlinkConstant.AcbState](arkts-connectivity-nearlinkconstant-acbstate-e.md)
+**Type:** nearlinkConstant.AcbState

@@ -12,4 +12,4 @@ Defines the network proxy configuration.
 
 **System capability:** SystemCapability.Communication.NetStack
 
-**Type:** [connection.HttpProxy](arkts-network-connection-httpproxy-i.md)
+**Type:** connection.HttpProxy

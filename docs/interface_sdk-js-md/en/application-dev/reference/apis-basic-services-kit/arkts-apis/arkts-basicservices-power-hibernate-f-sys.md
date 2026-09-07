@@ -18,6 +18,7 @@ Hibernates a device.
 
 **Required permissions:** 
 - API version 19 and later: ohos.permission.POWER_MANAGER
+- API versions 12 to 18: N/A
 
 **System capability:** SystemCapability.PowerManager.PowerManager.Core
 

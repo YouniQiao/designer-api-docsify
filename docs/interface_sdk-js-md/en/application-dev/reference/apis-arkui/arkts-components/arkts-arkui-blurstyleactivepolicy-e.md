@@ -6,8 +6,6 @@ Enumerates the policies for activating the blur style.
 
 **Since:** 14
 
-**Model restriction:** This API can be used only in the stage model.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## FOLLOWS_WINDOW_ACTIVE_STATE

@@ -10,4 +10,4 @@ Represent an array of [Assets](arkts-arkdata-sendablerelationalstore-asset-i.md)
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
-**Type:** [collections.Array](../../apis-arkts/arkts-apis/arkts-arkts-collections-array-c.md)&lt;Asset&gt;
+**Type:** collections.Array&lt;Asset&gt;

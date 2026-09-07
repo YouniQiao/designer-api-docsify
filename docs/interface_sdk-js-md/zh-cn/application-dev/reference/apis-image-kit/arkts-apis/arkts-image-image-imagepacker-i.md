@@ -186,7 +186,7 @@ packing(source: ImageSource, option: PackingOption, callback: AsyncCallback<Arra
 
 **替代接口：** [packToData](#packtodata)
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.ImagePacker
 
@@ -237,7 +237,7 @@ packing(source: ImageSource, option: PackingOption): Promise<ArrayBuffer>
 
 **替代接口：** [packToData](#packtodata)
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.ImagePacker
 
@@ -296,7 +296,7 @@ packing(source: PixelMap, option: PackingOption, callback: AsyncCallback<ArrayBu
 
 **替代接口：** [packToData](#packtodata)
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.ImagePacker
 
@@ -354,7 +354,7 @@ packing(source: PixelMap, option: PackingOption): Promise<ArrayBuffer>
 
 **替代接口：** [packToData](#packtodata)
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.ImagePacker
 
@@ -467,7 +467,7 @@ packToData(source: ImageSource, options: PackingOption): Promise<ArrayBuffer>
 
 **起始版本：** 13
 
-**原子化服务API：** 从API版本13开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本13开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.ImagePacker
 
@@ -532,7 +532,7 @@ packToData(source: PixelMap, options: PackingOption): Promise<ArrayBuffer>
 
 **起始版本：** 13
 
-**原子化服务API：** 从API版本13开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本13开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.ImagePacker
 

@@ -242,8 +242,6 @@ getDescriptor(): string
 **示例**
 
 > 说明：
-> 
-> 在本文档的示例中，通过this.getUIContext().getHostContext()来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在页面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
 
 ```TypeScript
 // FA模型需要从@kit.AbilityKit导入featureAbility
@@ -350,8 +348,6 @@ getInterfaceDescriptor(): string
 **示例**
 
 > 说明：
-> 
-> 在本文档的示例中，通过this.getUIContext().getHostContext()来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在页面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
 
 ```TypeScript
 // FA模型需要从@kit.AbilityKit导入featureAbility
@@ -558,7 +554,7 @@ sendMessageRequest请求的响应处理函数，服务端在该函数里同步�
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -935,8 +931,6 @@ sendMessageRequest(
 **示例**
 
 > 说明：
-> 
-> 在本文档的示例中，通过this.getUIContext().getHostContext()来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在页面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
 
 ```TypeScript
 // FA模型需要从@kit.AbilityKit导入featureAbility
@@ -1127,8 +1121,6 @@ sendRequest(code: number, data: MessageParcel, reply: MessageParcel, options: Me
 **示例**
 
 > 说明：
-> 
-> 在本文档的示例中，通过this.getUIContext().getHostContext()来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在页面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
 
 ```TypeScript
 // FA模型需要从@kit.AbilityKit导入featureAbility
@@ -1269,8 +1261,6 @@ sendRequest(
 **示例**
 
 > 说明：
-> 
-> 在本文档的示例中，通过this.getUIContext().getHostContext()来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在页面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
 
 ```TypeScript
 // FA模型需要从@kit.AbilityKit导入featureAbility
@@ -1425,8 +1415,6 @@ sendRequest(
 **示例**
 
 > 说明：
-> 
-> 在本文档的示例中，通过this.getUIContext().getHostContext()来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在页面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
 
 ```TypeScript
 // FA模型需要从@kit.AbilityKit导入featureAbility

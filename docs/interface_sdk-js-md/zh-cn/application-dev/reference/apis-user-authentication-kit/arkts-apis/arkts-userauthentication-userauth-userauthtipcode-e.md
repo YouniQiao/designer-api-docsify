@@ -16,7 +16,7 @@ COMPARE_FAILURE = 1
 
 **起始版本：** 20
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
@@ -30,7 +30,7 @@ TIMEOUT = 2
 
 **起始版本：** 20
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
@@ -44,7 +44,7 @@ TEMPORARILY_LOCKED = 3
 
 **起始版本：** 20
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
@@ -58,7 +58,7 @@ PERMANENTLY_LOCKED = 4
 
 **起始版本：** 20
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
@@ -72,7 +72,7 @@ WIDGET_LOADED = 5
 
 **起始版本：** 20
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
@@ -86,7 +86,7 @@ WIDGET_RELEASED = 6
 
 **起始版本：** 20
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
@@ -100,6 +100,6 @@ COMPARE_FAILURE_WITH_FROZEN = 7
 
 **起始版本：** 20
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core

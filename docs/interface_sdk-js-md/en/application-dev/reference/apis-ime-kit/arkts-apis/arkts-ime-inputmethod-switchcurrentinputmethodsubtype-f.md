@@ -30,6 +30,7 @@ Switches to another subtype of this input method. This API uses an asynchronous 
 **Since:** 9
 
 **Required permissions:** 
+- API version 11 and later: N/A
 - API versions 9 to 10: ohos.permission.CONNECT_IME_ABILITY
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -105,6 +106,7 @@ Switches to another subtype of this input method. This API uses a promise to ret
 **Since:** 9
 
 **Required permissions:** 
+- API version 11 and later: N/A
 - API versions 9 to 10: ohos.permission.CONNECT_IME_ABILITY
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework

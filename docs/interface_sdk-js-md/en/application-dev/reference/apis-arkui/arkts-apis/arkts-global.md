@@ -16,9 +16,9 @@
 | [setMonitorForCrownEvents](arkts-arkui-global-setmonitorforcrownevents-f.md) | Sets a digital crown events listener for current page, only be supported on the devices supporting digital crown. Please be awared, the listener will be removed automaticlly if the current page is pushed back or replaced, so it's recommaned to call this function in the onShow lifecycle callback of the page. And only one listener can be set for current page, the system will use the listener passed in through the latest calling of this function. Do not use this function in app.js, the behavior is undefined. |
 | [setTimeout](arkts-arkui-global-settimeout-f.md) | Sets a timer after which a function will be executed. |
 
-### Properties
+### Constants
 
 | Name | Description |
 | --- | --- |
-| [LITE](arkts-arkui-global-p.md) | Conditional compilation for lite equipment |
-| [STANDARD](arkts-arkui-global-p.md) | Conditional compilation for rich equipment |
+| [LITE](arkts-arkui-global-con.md#lite) | Conditional compilation for lite equipment |
+| [STANDARD](arkts-arkui-global-con.md#standard) | Conditional compilation for rich equipment |

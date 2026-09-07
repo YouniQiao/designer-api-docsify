@@ -18,7 +18,7 @@ DatePicker(options?: DatePickerOptions)
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -110,7 +110,6 @@ struct DatePickerExample {
 ```
 
 该示例通过配置mode参数实现显示年、月和月、日列。
-从API version 18开始，新增了[DatePickerOptions](#datepickeroptions对象说明)的mode属性。
 
 ```TypeScript
 // xxx.ets

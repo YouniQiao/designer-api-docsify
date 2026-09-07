@@ -21,7 +21,7 @@ WebResourceError的构造函数，创建WebResourceError对象，用于封装Web
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -46,7 +46,6 @@ getCustomErrorCode(): number
 **示例**
 
 完整示例代码参考[onErrorReceive事件](./arkts-basic-components-web-events.md#onerrorreceive)。
-- simpleType:
 
 ## getErrorCode
 
@@ -58,7 +57,7 @@ getErrorCode(): number
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -78,7 +77,7 @@ getErrorInfo(): string
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 

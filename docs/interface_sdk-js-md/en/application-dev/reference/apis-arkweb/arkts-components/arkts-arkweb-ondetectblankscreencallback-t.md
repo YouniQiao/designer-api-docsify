@@ -19,4 +19,3 @@ Defines a callback triggered when a blank screen is detected.
 **Examples**
 
 For details about the sample code, see [onDetectedBlankScreen](./arkts-basic-components-web-events.md#ondetectedblankscreen).
-- simpleType:

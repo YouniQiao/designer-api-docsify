@@ -38,7 +38,7 @@ tabIcon?: image.PixelMap
 
 The tab page icon, main page required.
 
-**Type:** [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)
+**Type:** image.PixelMap
 
 **Since:** 23
 

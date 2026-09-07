@@ -10,4 +10,4 @@ Defines the handle of the data network. Before calling the **NetHandle** functio
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
-**Type:** [connection.NetHandle](arkts-network-connection-nethandle-i.md)
+**Type:** connection.NetHandle

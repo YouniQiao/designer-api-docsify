@@ -22,7 +22,7 @@ function showAd(ad: Advertisement, options: AdDisplayOptions, context?: common.U
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Advertising.Ads
 
@@ -32,7 +32,7 @@ function showAd(ad: Advertisement, options: AdDisplayOptions, context?: common.U
 | --- | --- | --- | --- |
 | ad | Advertisement | 是 | 广告对象。 |
 | options | [AdDisplayOptions](arkts-ads-advertising-addisplayoptions-i.md) | 是 | 广告展示参数。 |
-| context | [common.UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-common-uiabilitycontext-t.md) | 否 | UIAbility的上下文环境，不设置从api: [@ohos.app.ability.common](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/ js-apis-app-ability-common)中获取。<br>**起始版本：** 12 |
+| context | common.UIAbilityContext | 否 | UIAbility的上下文环境，不设置从api: [@ohos.app.ability.common](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/ js-apis-app-ability-common)中获取。<br>**适用版本：** 12 |
 
 **错误码：**
 

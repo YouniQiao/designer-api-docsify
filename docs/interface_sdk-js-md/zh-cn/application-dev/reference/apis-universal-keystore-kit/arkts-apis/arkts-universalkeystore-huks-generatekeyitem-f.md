@@ -22,7 +22,7 @@ function generateKeyItem(keyAlias: string, options: HuksOptions, callback: Async
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Security.Huks.Core
 
@@ -101,9 +101,6 @@ huks.generateKeyItem(keyAlias, options, (error) => {
 ```
 
 JS示例：
-> 说明
-> 
-> JS示例代码仅供轻量级设备使用。
 
 ```TypeScript
 <stack class="container">
@@ -203,7 +200,7 @@ function generateKeyItem(keyAlias: string, options: HuksOptions): Promise<void>
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Security.Huks.Extension
 

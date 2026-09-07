@@ -1368,7 +1368,6 @@ struct TabsExample {
 ```
 
 This example uses the barModifier in [TabsOptions](arkts-arkui-tabsoptions-i.md) to set the clip attribute of the TabBar to display tabs beyond the tab bar area.
-Since API version 15, the barModifier API has been added to TabsOptions.
 
 ```TypeScript
 // xxx.ets
@@ -1455,7 +1454,6 @@ struct TabsBarModifierExample {
 ```
 
 This example uses the barModifier in [TabsOptions](arkts-arkui-tabsoptions-i.md) to set the align attribute of the TabBar to implement the tab alignment layout effect.
-Since API version 15, the barModifier API is added to TabsOptions.
 
 ```TypeScript
 // xxx.ets
@@ -1555,7 +1553,6 @@ struct TabsBarModifierExample {
 ```
 
 This example uses the [onSelected](#onselected18) API to implement synchronized switching between Tabs and TabBar.
-Since API version 18, the onSelected API is added.
 
 ```TypeScript
 // xxx.ets
@@ -1628,7 +1625,6 @@ struct TabsExample {
 ```
 
 This example releases the child components of Tabs by setting the [cachedMaxCount](arkts-arkui-tabs-attribute.md#cachedmaxcount) attribute.
-Since API version 19, the cachedMaxCount API is added.
 
 ```TypeScript
 @Entry
@@ -1681,7 +1677,6 @@ struct MyComponent {
 ```
 
 This example sets the background blur style and effect of the tab bar through [barBackgroundBlurStyle](arkts-arkui-tabs-attribute.md#barbackgroundblurstyle) and [barBackgroundEffect](arkts-arkui-tabs-attribute.md#barbackgroundeffect), respectively.
-Since API version 18, the barBackgroundBlurStyle and barBackgroundEffect APIs are added.
 
 ```TypeScript
 // xxx.ets
@@ -1801,7 +1796,6 @@ struct TabsExample {
 ```
 
 This example shows how to set the page switching animation curve of Tabs through the [animationCurve](arkts-arkui-tabs-attribute.md#animationcurve) API, and set the duration of the page switching animation in combination with animationDuration.
-Since API version 20, the animationCurve API is added.
 
 ```TypeScript
 import { curves } from '@kit.ArkUI';
@@ -1888,7 +1882,6 @@ struct TabsExample {
 ```
 
 This example shows how to set a callback for Tabs swiping through the [onContentDidScroll](#oncontentdidscroll23) API.
-Since API version 23, the onContentDidScroll API is added.
 
 ```TypeScript
 // xxx.ets
@@ -1984,7 +1977,6 @@ struct TabsDidScrollExample {
 ```
 
 This example shows how to set the nested scrolling effect of Tabs through the [nestedScroll](#nestedscroll24) API.
-Since API version 24, the nestedScroll API is added.
 
 ```TypeScript
 // xxx.ets
@@ -2047,7 +2039,6 @@ struct TabsExample {
 ```
 
 This example shows how to set the floating style and immersive material of the back panel for the tab bar through the [barFloatingStyle](arkts-arkui-tabs-attribute.md#barfloatingstyle) API.
-Since API version 26.0.0, the barFloatingStyle API is added.
 
 ```TypeScript
 // xxx.ets

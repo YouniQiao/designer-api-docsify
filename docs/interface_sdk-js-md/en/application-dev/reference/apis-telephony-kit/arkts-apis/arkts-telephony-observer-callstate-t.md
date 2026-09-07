@@ -10,4 +10,4 @@ Enumerates call states.
 
 **System capability:** SystemCapability.Telephony.StateRegistry
 
-**Type:** [call.CallState](arkts-telephony-call-callstate-e.md)
+**Type:** call.CallState

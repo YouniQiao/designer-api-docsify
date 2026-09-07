@@ -580,7 +580,7 @@ Default value in light mode: **{size: '16vp', color: '#99182431', src:' '}**.
 
 Default value in dark mode: **{size: '16vp', color: '#99ffffff', src:' '}**.
 
-**Type:** IconOptions \| SymbolGlyphModifier
+**Type:** IconOptions \| [SymbolGlyphModifier](../arkts-components/arkts-arkui-symbolglyphmodifier-t.md)
 
 **Since:** 18
 

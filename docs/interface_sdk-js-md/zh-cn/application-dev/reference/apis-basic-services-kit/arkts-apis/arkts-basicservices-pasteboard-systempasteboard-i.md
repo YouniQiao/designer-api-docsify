@@ -98,7 +98,7 @@ clearData(callback: AsyncCallback<void>): void
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.MiscServices.Pasteboard
 
@@ -139,7 +139,7 @@ clearData(): Promise<void>
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.MiscServices.Pasteboard
 
@@ -172,7 +172,7 @@ clearDataSync(): void
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.MiscServices.Pasteboard
 
@@ -257,7 +257,7 @@ getChangeCount(): number
 
 **起始版本：** 18
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.MiscServices.Pasteboard
 
@@ -295,8 +295,9 @@ getData(callback: AsyncCallback<PasteData>): void
 
 **需要权限：** 
 - API版本12+：ohos.permission.READ_PASTEBOARD
+- API版本9-11：N/A
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.MiscServices.Pasteboard
 
@@ -346,8 +347,9 @@ getData(): Promise<PasteData>
 
 **需要权限：** 
 - API版本12+：ohos.permission.READ_PASTEBOARD
+- API版本9-11：N/A
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.MiscServices.Pasteboard
 
@@ -390,7 +392,7 @@ getDataSource(): string
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.MiscServices.Pasteboard
 
@@ -432,8 +434,9 @@ getDataSync(): PasteData
 
 **需要权限：** 
 - API版本12+：ohos.permission.READ_PASTEBOARD
+- API版本11：N/A
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.MiscServices.Pasteboard
 
@@ -476,7 +479,7 @@ getDataWithProgress(params: GetDataParams): Promise<PasteData>
 
 **需要权限：** ohos.permission.READ_PASTEBOARD
 
-**原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本15开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.MiscServices.Pasteboard
 
@@ -556,7 +559,7 @@ getMimeTypes(): Promise<Array<string>>
 
 **起始版本：** 14
 
-**原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本14开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.MiscServices.Pasteboard
 
@@ -677,7 +680,7 @@ getUnifiedData(): Promise<unifiedDataChannel.UnifiedData>
 
 **需要权限：** ohos.permission.READ_PASTEBOARD
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.MiscServices.Pasteboard
 
@@ -685,7 +688,7 @@ getUnifiedData(): Promise<unifiedDataChannel.UnifiedData>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[unifiedDataChannel.UnifiedData](../../apis-arkdata/arkts-apis/arkts-arkdata-unifieddatachannel-unifieddata-c.md)&gt; | Promise对象，返回系统剪贴板数据。 |
+| Promise&lt;unifiedDataChannel.UnifiedData&gt; | Promise对象，返回系统剪贴板数据。 |
 
 **错误码：**
 
@@ -728,7 +731,7 @@ getUnifiedDataSync(): unifiedDataChannel.UnifiedData
 
 **需要权限：** ohos.permission.READ_PASTEBOARD
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.MiscServices.Pasteboard
 
@@ -736,7 +739,7 @@ getUnifiedDataSync(): unifiedDataChannel.UnifiedData
 
 | 类型 | 说明 |
 | --- | --- |
-| [unifiedDataChannel.UnifiedData](../../apis-arkdata/arkts-apis/arkts-arkdata-unifieddatachannel-unifieddata-c.md) | 返回系统剪贴板数据。 |
+| unifiedDataChannel.UnifiedData | 返回系统剪贴板数据。 |
 
 **错误码：**
 
@@ -769,7 +772,7 @@ hasData(callback: AsyncCallback<boolean>): void
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.MiscServices.Pasteboard
 
@@ -810,7 +813,7 @@ hasData(): Promise<boolean>
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.MiscServices.Pasteboard
 
@@ -843,7 +846,7 @@ hasDataSync(): boolean
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.MiscServices.Pasteboard
 
@@ -881,7 +884,7 @@ hasDataType(mimeType: string): boolean
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.MiscServices.Pasteboard
 
@@ -1004,7 +1007,7 @@ hasRemoteData(): boolean
 
 **起始版本：** 24
 
-**原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本24开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.MiscServices.Pasteboard
 
@@ -1033,7 +1036,7 @@ isRemoteData(): boolean
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.MiscServices.Pasteboard
 
@@ -1226,6 +1229,7 @@ removeAppShareOptions(): void
 
 **需要权限：** 
 - API版本14+：ohos.permission.MANAGE_PASTEBOARD_APP_SHARE_OPTION
+- API版本12-13：N/A
 
 **系统能力：** SystemCapability.MiscServices.Pasteboard
 
@@ -1264,6 +1268,7 @@ setAppShareOptions(shareOptions: ShareOption): void
 
 **需要权限：** 
 - API版本14+：ohos.permission.MANAGE_PASTEBOARD_APP_SHARE_OPTION
+- API版本12-13：N/A
 
 **系统能力：** SystemCapability.MiscServices.Pasteboard
 
@@ -1304,7 +1309,7 @@ setData(data: PasteData, callback: AsyncCallback<void>): void
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.MiscServices.Pasteboard
 
@@ -1350,7 +1355,7 @@ setData(data: PasteData): Promise<void>
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.MiscServices.Pasteboard
 
@@ -1401,7 +1406,7 @@ setDataSync(data: PasteData): void
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.MiscServices.Pasteboard
 
@@ -1486,7 +1491,7 @@ setPasteData(data: PasteData): Promise<void>
 
 **废弃版本：** 9
 
-**替代接口：** [setData](#setdata)(data: PasteData)
+**替代接口：** [setData](#setdata-1)(data: PasteData)
 
 **系统能力：** SystemCapability.MiscServices.Pasteboard
 
@@ -1526,7 +1531,7 @@ setUnifiedData(data: unifiedDataChannel.UnifiedData): Promise<void>
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.MiscServices.Pasteboard
 
@@ -1534,7 +1539,7 @@ setUnifiedData(data: unifiedDataChannel.UnifiedData): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| data | [unifiedDataChannel.UnifiedData](../../apis-arkdata/arkts-apis/arkts-arkdata-unifieddatachannel-unifieddata-c.md) | 是 | 需要写入剪贴板中的数据。调用本接口前，需确保无其他拷贝或粘贴操作正在进行。 |
+| data | unifiedDataChannel.UnifiedData | 是 | 需要写入剪贴板中的数据。调用本接口前，需确保无其他拷贝或粘贴操作正在进行。 |
 
 **返回值：**
 
@@ -1587,7 +1592,7 @@ setUnifiedDataSync(data: unifiedDataChannel.UnifiedData): void
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.MiscServices.Pasteboard
 
@@ -1595,7 +1600,7 @@ setUnifiedDataSync(data: unifiedDataChannel.UnifiedData): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| data | [unifiedDataChannel.UnifiedData](../../apis-arkdata/arkts-apis/arkts-arkdata-unifieddatachannel-unifieddata-c.md) | 是 | 需要写入剪贴板中的数据内容。支持跨应用数据交换，其他应用可通过统一数据结构读取该内容。 |
+| data | unifiedDataChannel.UnifiedData | 是 | 需要写入剪贴板中的数据内容。支持跨应用数据交换，其他应用可通过统一数据结构读取该内容。 |
 
 **错误码：**
 

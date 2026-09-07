@@ -32,7 +32,7 @@ accessBackward(): boolean
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -89,7 +89,7 @@ accessForward(): boolean
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -144,7 +144,7 @@ accessStep(step: number): boolean
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -207,7 +207,7 @@ static addIntelligentTrackingPreventionBypassingList(hostList: Array<string>): v
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -336,7 +336,7 @@ backOrForward(step: number): void
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -392,7 +392,7 @@ backward(): void
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -499,7 +499,7 @@ clearClientAuthenticationCache(): void
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -547,7 +547,7 @@ clearHistory(): void
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -595,7 +595,7 @@ static clearHostIP(hostName: string): void
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -658,7 +658,7 @@ static clearIntelligentTrackingPreventionBypassingList(): void
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -701,7 +701,7 @@ clearMatches(): void
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -749,7 +749,7 @@ static clearPrefetchedResource(cacheKeyList: Array<string>): void
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -806,7 +806,7 @@ static clearServiceWorkerWebSchemeHandler(): void
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -843,7 +843,7 @@ clearSslCache(): void
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -891,7 +891,7 @@ clearWebSchemeHandler(): void
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -939,7 +939,7 @@ closeAllMediaPresentations(): void
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -987,7 +987,7 @@ closeCamera(): void
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -1000,7 +1000,6 @@ closeCamera(): void
 **示例**
 
 完整示例代码参考[startCamera](#startcamera)。
-- simpleType:
 
 ## constructor
 
@@ -1025,7 +1024,7 @@ constructor(webTag?: string)
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -1126,7 +1125,7 @@ createPdf(configuration: PdfConfiguration, callback: AsyncCallback<PdfData>): vo
 
 **起始版本：** 14
 
-**原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本14开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -1212,7 +1211,7 @@ createPdf(configuration: PdfConfiguration): Promise<PdfData>
 
 **起始版本：** 14
 
-**原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本14开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -1298,7 +1297,7 @@ createWebMessagePorts(isExtentionType?: boolean): Array<WebMessagePort>
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -1306,7 +1305,7 @@ createWebMessagePorts(isExtentionType?: boolean): Array<WebMessagePort>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| isExtentionType | boolean | 否 | 是否使用扩展增强接口。true表示使用扩展增强接口，false表示不使用扩展增强接口。默认值：false。传入undefined或null会抛出异常错误码401。<br>**起始版本：** 10 |
+| isExtentionType | boolean | 否 | 是否使用扩展增强接口。true表示使用扩展增强接口，false表示不使用扩展增强接口。默认值：false。传入undefined或null会抛出异常错误码401。<br>**适用版本：** 10 |
 
 **返回值：**
 
@@ -1324,7 +1323,6 @@ createWebMessagePorts(isExtentionType?: boolean): Array<WebMessagePort>
 **示例**
 
 完整示例代码参考[onMessageEventExt](./arkts-apis-webview-WebMessagePort.md#onmessageeventext)。
-- simpleType:
 
 ## createWebPrintDocumentAdapter
 
@@ -1348,7 +1346,7 @@ createWebPrintDocumentAdapter(jobName: string): print.PrintDocumentAdapter
 
 | 类型 | 说明 |
 | --- | --- |
-| [print.PrintDocumentAdapter](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-print-printdocumentadapter-i.md) | 打印文档的适配器，用于控制打印行为和打印任务，可通过打印服务打印当前网页内容。 |
+| print.PrintDocumentAdapter | 打印文档的适配器，用于控制打印行为和打印任务，可通过打印服务打印当前网页内容。 |
 
 **错误码：**
 
@@ -1396,7 +1394,7 @@ static customizeSchemes(schemes: Array<WebCustomScheme>): void
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -1461,7 +1459,7 @@ static customizeSchemes(schemes: Array<WebCustomScheme>, lazyInitWebEngine: bool
 
 **起始版本：** 21
 
-**原子化服务API：** 从API版本21开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本21开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -1521,7 +1519,7 @@ deleteJavaScriptRegister(name: string): void
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -1635,7 +1633,7 @@ enableAdsBlock(enable: boolean): void
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -1793,7 +1791,7 @@ enableIntelligentTrackingPrevention(enable: boolean): void
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -1902,7 +1900,7 @@ enableSafeBrowsing(enable: boolean): void
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -1957,7 +1955,7 @@ static enableWholeWebPageDrawing(): void
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -2077,7 +2075,7 @@ forward(): void
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -2136,7 +2134,6 @@ static getActiveWebEngineVersion(): ArkWebEngineVersion
 **示例**
 
 请参考[setActiveWebEngineVersion](#setactivewebengineversion)。
-- simpleType:
 
 ## getAttachState
 
@@ -2171,7 +2168,7 @@ getBackForwardEntries(): BackForwardList
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -2307,7 +2304,7 @@ getCertificate(): Promise<Array<cert.X509Cert>>
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -2315,7 +2312,7 @@ getCertificate(): Promise<Array<cert.X509Cert>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;[cert.X509Cert](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-cert-x509cert-i.md)&gt;&gt; | Promise实例，用于获取当前加载的https网站的X509格式证书数组。 |
+| Promise&lt;Array&lt;cert.X509Cert&gt;&gt; | Promise实例，用于获取当前加载的https网站的X509格式证书数组。 |
 
 **错误码：**
 
@@ -2472,7 +2469,7 @@ getCertificate(callback: AsyncCallback<Array<cert.X509Cert>>): void
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -2480,7 +2477,7 @@ getCertificate(callback: AsyncCallback<Array<cert.X509Cert>>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[cert.X509Cert](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-cert-x509cert-i.md)&gt;&gt; | 是 | 通过AsyncCallback异步返回当前网站的X509格式证书。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;cert.X509Cert&gt;&gt; | 是 | 通过AsyncCallback异步返回当前网站的X509格式证书。 |
 
 **错误码：**
 
@@ -2640,7 +2637,7 @@ getCustomUserAgent(): string
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -2782,7 +2779,7 @@ getFavicon(): image.PixelMap
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -2790,7 +2787,7 @@ getFavicon(): image.PixelMap
 
 | 类型 | 说明 |
 | --- | --- |
-| [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | 页面favicon图标的PixelMap对象。 |
+| image.PixelMap | 页面favicon图标的PixelMap对象。 |
 
 **错误码：**
 
@@ -2842,7 +2839,7 @@ getHitTest(): WebHitTestType
 
 **替代接口：** [getLastHitTest](#getlasthittest)
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -2901,7 +2898,7 @@ getHitTestValue(): HitTestValue
 
 **替代接口：** [getLastHitTest](#getlasthittest)
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -3011,7 +3008,7 @@ getLastJavascriptProxyCallingFrameUrl(): string
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -3162,7 +3159,7 @@ getMediaPlaybackState(): MediaPlaybackState
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -3218,7 +3215,7 @@ getOriginalUrl(): string
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -3322,7 +3319,7 @@ getPageHeight(): number
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -3462,7 +3459,7 @@ getPrintBackground(): boolean
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -3562,7 +3559,7 @@ static getRenderProcessMode(): RenderProcessMode
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -3606,7 +3603,7 @@ getScrollable(): boolean
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -3661,7 +3658,7 @@ getScrollOffset(): ScrollOffset
 
 **起始版本：** 13
 
-**原子化服务API：** 从API版本13开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本13开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -3761,7 +3758,7 @@ getSecurityLevel(): SecurityLevel
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -3874,7 +3871,6 @@ getSubframeErrorPageEnabled(): boolean
 **示例**
 
 完整示例代码参考[setErrorPageEnabled](#seterrorpageenabled)。
-- simpleType:
 
 ## getSurfaceId
 
@@ -3890,7 +3886,7 @@ getSurfaceId(): string
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -3948,7 +3944,7 @@ getTitle(): string
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -4003,7 +3999,7 @@ getUrl(): string
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -4022,7 +4018,6 @@ getUrl(): string
 **示例**
 
 完整示例代码参考[removeProxyOverride](./arkts-apis-webview-ProxyController.md#removeproxyoverride)。
-- simpleType:
 
 ```TypeScript
 // xxx.ets
@@ -4074,7 +4069,6 @@ struct WebComponent {
 ```
 
 完整示例代码参考[constructor](#constructor)。
-- simpleType:
 
 ```TypeScript
 // xxx.ets
@@ -4115,7 +4109,7 @@ getUserAgent(): string
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -4214,7 +4208,6 @@ static getUserAgentClientHintsEnabled(): boolean
 **示例**
 
 完整示例代码参考[setUserAgentClientHintsEnabled](#setuseragentclienthintsenabled)。
-- simpleType:
 
 ## getUserAgentMetadata
 
@@ -4243,7 +4236,6 @@ getUserAgentMetadata(userAgent: string): UserAgentMetadata
 **示例**
 
 完整示例代码参考[setUserAgentClientHintsEnabled](#setuseragentclienthintsenabled)。
-- simpleType:
 
 ## getWebId
 
@@ -4255,7 +4247,7 @@ getWebId(): number
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -4310,7 +4302,7 @@ hasImage(): Promise<boolean>
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -4369,7 +4361,7 @@ hasImage(callback: AsyncCallback<boolean>): void
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -4436,7 +4428,7 @@ static initializeWebEngine(): void
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -4497,7 +4489,6 @@ injectOfflineResources(resourceMaps: Array<OfflineResourceMap>): void
 **示例**
 
 接口推荐配合动态组件使用，使用离线的Web组件用于将资源注入到内核的内存缓存中，并在适当的时机加载业务用Web组件使用这些资源。下方是代码示例：
-首先，在EntryAbility中将[UIContext](../apis-arkui/arkts-apis-uicontext-uicontext.md)存到[localStorage](../../../ui/state-management/arkts-localstorage.md)中。
 
 ```TypeScript
 // EntryAbility.ets
@@ -4788,7 +4779,7 @@ isAdsBlockEnabled(): boolean
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -4845,7 +4836,7 @@ isAdsBlockEnabledForCurPage(): boolean
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -4945,7 +4936,7 @@ isIncognitoMode(): boolean
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -5000,7 +4991,7 @@ isIntelligentTrackingPreventionEnabled(): boolean
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -5110,7 +5101,7 @@ isSafeBrowsingEnabled(): boolean
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -5171,7 +5162,7 @@ data数据必须使用base64编码或将内容中的任何#字符编码为%23。
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -5369,7 +5360,7 @@ loadUrl(url: string | Resource, headers?: Array<WebHeader>): void
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -5446,7 +5437,6 @@ struct WebComponent {
 ```
 
 加载本地网页，加载本地资源文件有三种方式。
-1.$rawfile方式。
 
 ```TypeScript
 // xxx.ets
@@ -5476,7 +5466,6 @@ struct WebComponent {
 ```
 
 2.resource协议。
-使用  协议前缀可以避免常规  方式在处理带有“#”路由链接时URL会被“#”截断的问题。当URL中包含“#”号时，“#”后面的内容会被视为锚点（fragment）。
 
 ```TypeScript
 // xxx.ets
@@ -5537,7 +5526,6 @@ struct WebComponent {
 ```
 
 3.通过沙箱路径加载本地文件，可以参考[web](../../../web/web-page-loading-with-web-components.md#加载本地页面)加载沙箱路径的示例代码。
-加载的html文件。
 
 ```TypeScript
 <!-- index.html -->
@@ -5601,7 +5589,7 @@ onActive(): void
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -5651,7 +5639,7 @@ onCreateNativeMediaPlayer(callback: CreateNativeMediaPlayerCallback): void
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -5881,7 +5869,7 @@ onInactive(): void
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -5929,7 +5917,7 @@ pageDown(bottom: boolean): void
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -6019,7 +6007,7 @@ pageUp(top: boolean): void
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -6107,7 +6095,7 @@ pauseAllMedia(): void
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -6155,7 +6143,7 @@ static pauseAllTimers(): void
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -6245,7 +6233,6 @@ pauseMicrophone(): void
 **示例**
 
 完整示例代码参考[resumeMicrophone](#resumemicrophone)。
-- simpleType:
 
 ## postMessage
 
@@ -6257,7 +6244,7 @@ postMessage(name: string, ports: Array<WebMessagePort>, uri: string): void
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -6424,7 +6411,7 @@ postUrl(url: string, postData: ArrayBuffer): void
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -6527,7 +6514,6 @@ precompileJavaScript(url: string, script: string | Uint8Array, cacheOptions: Cac
 **示例**
 
 接口推荐配合动态组件使用，使用离线的Web组件用于生成字节码缓存，并在适当的时机加载业务用Web组件使用这些字节码缓存。下方是代码示例：
-首先，在EntryAbility中将[UIContext](../apis-arkui/arkts-apis-uicontext-uicontext.md)存到[localStorage](../../../ui/state-management/arkts-localstorage.md)中。
 
 ```TypeScript
 // EntryAbility.ets
@@ -6648,7 +6634,6 @@ async function readRawFile(path: string, context: UIContext) {
 ```
 
 JavaScript资源的获取方式也可通过[数据请求](../../apis-network-kit/arkts-apis/arkts-net-http.md)的方式获取，但此方法获取到的HTTP响应头非标准HTTP响应头格式，需额外将响应头转换成标准HTTP响应头格式后使用。如通过数据请求获取到的响应头是e-tag，则需要将其转换成E-Tag后使用。
-编写业务用组件代码。
 
 ```TypeScript
 // BusinessWebview.ets
@@ -6758,7 +6743,7 @@ prefetchPage(url: string, additionalHeaders?: Array<WebHeader>): void
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -6888,7 +6873,7 @@ static prefetchResource(request: RequestInfo, additionalHeaders?: Array<WebHeade
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -6947,7 +6932,7 @@ static prepareForPageLoad(url: string, preconnectable: boolean, numSockets: numb
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -6995,7 +6980,7 @@ refresh(): void
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -7115,7 +7100,7 @@ registerJavaScriptProxy提供了应用与Web组件加载的网页之间强大的
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -7126,8 +7111,8 @@ registerJavaScriptProxy提供了应用与Web组件加载的网页之间强大的
 | jsObject | object | 是 | 参与注册的应用侧JavaScript对象。可以单独声明方法和属性，但无法同时进行注册与使用。对象只包含属性时，H5可以访问对象中的属性。对象只包含方法时，H5可以访问对象中的方法。 1. 方法的参数和返回类型可以为string，number，boolean。 2. 方法的参数和返回类型支持Dictionary，Array，最多嵌套10层，每层1w个数据。 3. 方法的参数和返回类型支持Object，需要在Object里添加属性methodNameListForJsProxy:[fun1, fun2]，fun1和fun2为可被调用的方法。 4. 方法的参数支持Function，Promise，它们的Callback不能有返回值。 5. 方法的返回类型支持Promise，Promise的Callback不能有返回值。 |
 | name | string | 是 | 注册对象的名称，与window中调用的对象名一致。注册后window对象可以通过此名字访问应用侧JavaScript对象。 |
 | methodList | Array&lt;string&gt; | 是 | 参与注册的应用侧JavaScript对象的同步方法。 |
-| asyncMethodList | Array&lt;string&gt; | 否 | 参与注册的应用侧JavaScript对象的异步方法，默认为空。异步方法无法获取返回值。传入undefined或null会抛出异常错误码401。<br>**起始版本：** 12 |
-| permission | string | 否 | JSON字符串，默认为空，通过该字符串配置JSBridge的权限管控，可以定义object和method级别的URL白名单。 1. scheme（协议）和host（域名）参数不可为空，且host不支持通配符，只能填写完整的host。 2. 可以仅配置object级别的白名单，该白名单对所有JSBridge方法生效。 3. 若JSBridge方法A设置了method级别的白名单，那么方法A最终的白名单是object级别白名单与method级别白名单的交集。 传入undefined或null会抛出异常错误码401。<br>**起始版本：** 12 |
+| asyncMethodList | Array&lt;string&gt; | 否 | 参与注册的应用侧JavaScript对象的异步方法，默认为空。异步方法无法获取返回值。传入undefined或null会抛出异常错误码401。<br>**适用版本：** 12 |
+| permission | string | 否 | JSON字符串，默认为空，通过该字符串配置JSBridge的权限管控，可以定义object和method级别的URL白名单。 1. scheme（协议）和host（域名）参数不可为空，且host不支持通配符，只能填写完整的host。 2. 可以仅配置object级别的白名单，该白名单对所有JSBridge方法生效。 3. 若JSBridge方法A设置了method级别的白名单，那么方法A最终的白名单是object级别白名单与method级别白名单的交集。 传入undefined或null会抛出异常错误码401。<br>**适用版本：** 12 |
 
 **错误码：**
 
@@ -7347,7 +7332,7 @@ removeCache(clearRom: boolean): void
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -7402,7 +7387,7 @@ static removeIntelligentTrackingPreventionBypassingList(hostList: Array<string>)
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -7458,7 +7443,7 @@ requestFocus(): void
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -7508,7 +7493,7 @@ restoreWebState(state: Uint8Array) : void
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -7574,7 +7559,6 @@ struct WebComponent {
 ```
 
 2.修改EntryAbility.ets。
-获取应用缓存文件路径。
 
 ```TypeScript
 // xxx.ets
@@ -7598,7 +7582,7 @@ resumeAllMedia(): void
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -7646,7 +7630,7 @@ static resumeAllTimers(): void
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -7871,7 +7855,7 @@ runJavaScript(script: string): Promise<string>
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -7975,7 +7959,7 @@ runJavaScript(script: string, callback: AsyncCallback<string>): void
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -8072,7 +8056,7 @@ runJavaScriptExt(script: string | ArrayBuffer): Promise<JsMessageExt>
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -8080,7 +8064,7 @@ runJavaScriptExt(script: string | ArrayBuffer): Promise<JsMessageExt>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| script | string \| ArrayBuffer | 是 | JavaScript脚本。<br>**起始版本：** 12 |
+| script | string \| ArrayBuffer | 是 | JavaScript脚本。<br>**适用版本：** 12 |
 
 **返回值：**
 
@@ -8294,7 +8278,7 @@ runJavaScriptExt(script: string | ArrayBuffer, callback: AsyncCallback<JsMessage
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -8302,7 +8286,7 @@ runJavaScriptExt(script: string | ArrayBuffer, callback: AsyncCallback<JsMessage
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| script | string \| ArrayBuffer | 是 | JavaScript脚本。<br>**起始版本：** 12 |
+| script | string \| ArrayBuffer | 是 | JavaScript脚本。<br>**适用版本：** 12 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[JsMessageExt](arkts-arkweb-webview-jsmessageext-c.md)&gt; | 是 | 回调执行JavaScript脚本结果。 |
 
 **错误码：**
@@ -8520,7 +8504,7 @@ scrollBy(deltaX: number, deltaY: number, duration?: number): void
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -8530,7 +8514,7 @@ scrollBy(deltaX: number, deltaY: number, duration?: number): void
 | --- | --- | --- | --- |
 | deltaX | number | 是 | 水平偏移量，其中水平向右为正方向。单位：vp。 |
 | deltaY | number | 是 | 垂直偏移量，其中垂直向下为正方向。单位：vp。 |
-| duration | number | 否 | 滚动动画时间。单位：ms。不传入为无动画，当传入数值为负数或传入0时，按照不传入处理。传入null或undefined时会抛出异常错误码401。<br>**起始版本：** 14 |
+| duration | number | 否 | 滚动动画时间。单位：ms。不传入为无动画，当传入数值为负数或传入0时，按照不传入处理。传入null或undefined时会抛出异常错误码401。<br>**适用版本：** 14 |
 
 **错误码：**
 
@@ -8694,7 +8678,7 @@ scrollTo(x: number, y: number, duration?: number): void
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -8704,7 +8688,7 @@ scrollTo(x: number, y: number, duration?: number): void
 | --- | --- | --- | --- |
 | x | number | 是 | 绝对位置的水平坐标，当传入数值为负数时，按照传入0处理。单位：vp。 |
 | y | number | 是 | 绝对位置的垂直坐标，当传入数值为负数时，按照传入0处理。单位：vp。 |
-| duration | number | 否 | 滚动动画时间。单位：ms。不传入为无动画，当传入数值为负数或传入0时，按照不传入处理。传入null或undefined时会抛出异常错误码401。<br>**起始版本：** 14 |
+| duration | number | 否 | 滚动动画时间。单位：ms。不传入为无动画，当传入数值为负数或传入0时，按照不传入处理。传入null或undefined时会抛出异常错误码401。<br>**适用版本：** 14 |
 
 **错误码：**
 
@@ -8783,7 +8767,7 @@ searchAllAsync(searchString: string): void
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -8857,7 +8841,7 @@ searchNext(forward: boolean): void
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -8912,7 +8896,7 @@ serializeWebState() : Uint8Array
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -8968,7 +8952,6 @@ struct WebComponent {
 ```
 
 2.修改EntryAbility.ets。
-获取应用缓存文件路径。
 
 ```TypeScript
 // xxx.ets
@@ -9090,7 +9073,7 @@ setAudioMuted(mute: boolean): void
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -9458,7 +9441,7 @@ static setConnectionTimeout(timeout: number): void
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -9530,7 +9513,7 @@ setCustomUserAgent(userAgent: string): void
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -9587,7 +9570,7 @@ setDownloadDelegate(delegate: WebDownloadDelegate): void
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -9866,7 +9849,7 @@ static setHostIP(hostName: string, address: string, aliveTime: number): void
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -9887,7 +9870,6 @@ static setHostIP(hostName: string, address: string, aliveTime: number): void
 **示例**
 
 请参考[clearHostIP](#clearhostip)。
-- simpleType:
 
 ## setHttpDns
 
@@ -9899,7 +9881,7 @@ static setHttpDns(secureDnsMode: SecureDnsMode, secureDnsConfig: string): void
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -9949,7 +9931,7 @@ setNetworkAvailable(enable: boolean): void
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -10170,7 +10152,7 @@ setPrintBackground(enable: boolean): void
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -10224,7 +10206,7 @@ static setRenderProcessMode(mode: RenderProcessMode): void
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -10278,7 +10260,7 @@ setScrollable(enable: boolean, type?: ScrollType): void
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -10407,7 +10389,7 @@ static setServiceWorkerWebSchemeHandler(scheme: string, handler: WebSchemeHandle
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -10605,7 +10587,7 @@ setUrlTrustList(urlTrustList: string): void
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -10988,7 +10970,6 @@ setUserAgentMetadata(userAgent: string, metaData: UserAgentMetadata): void
 **示例**
 
 完整示例代码参考[setUserAgentClientHintsEnabled](#setuseragentclienthintsenabled)。
-- simpleType:
 
 ## setWebDebuggingAccess
 
@@ -11002,7 +10983,7 @@ static setWebDebuggingAccess(webDebuggingAccess: boolean): void
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -11130,7 +11111,7 @@ static setWebDestroyMode(mode: WebDestroyMode): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mode | [WebDestroyMode](arkts-arkweb-webview-webdestroymode-e.md) | 是 | [设置Web组件的销毁模式。默认值：WebDestroyMode.NORMAL_MODE](arkts-arkweb-webview-webdestroymode-e.md) |
+| mode | [WebDestroyMode](arkts-arkweb-webview-webdestroymode-e.md) | 是 | 设置Web组件的销毁模式。默认值：WebDestroyMode.NORMAL_MODE |
 
 **示例**
 
@@ -11160,7 +11141,7 @@ setWebSchemeHandler(scheme: string, handler: WebSchemeHandler): void
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -11217,7 +11198,7 @@ slideScroll(vx: number, vy: number): void
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -11297,7 +11278,7 @@ startCamera(): void
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -11428,7 +11409,7 @@ startDownload(url: string): void
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -11492,7 +11473,7 @@ stop(): void
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -11540,7 +11521,7 @@ stopAllMedia(): void
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -11588,7 +11569,7 @@ stopCamera(): void
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -11601,7 +11582,6 @@ stopCamera(): void
 **示例**
 
 完整示例代码参考[startCamera](#startcamera)。
-- simpleType:
 
 ## stopMicrophone
 
@@ -11624,7 +11604,6 @@ stopMicrophone(): void
 **示例**
 
 完整示例代码参考[resumeMicrophone](#resumemicrophone)。
-- simpleType:
 
 ## storeWebArchive
 
@@ -11636,7 +11615,7 @@ storeWebArchive(baseName: string, autoName: boolean): Promise<string>
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -11707,7 +11686,7 @@ storeWebArchive(baseName: string, autoName: boolean, callback: AsyncCallback<str
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -11823,7 +11802,7 @@ static trimMemoryByPressureLevel(level: PressureLevel): void
 
 **起始版本：** 14
 
-**原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本14开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -11943,7 +11922,7 @@ static warmupServiceWorker(url: string): void
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -11996,7 +11975,7 @@ webPageSnapshot(info: SnapshotInfo, callback: AsyncCallback<SnapshotResult>): vo
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -12054,7 +12033,7 @@ zoom(factor: number): void
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -12112,7 +12091,7 @@ zoomIn(): void
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -12161,7 +12140,7 @@ zoomOut(): void
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 

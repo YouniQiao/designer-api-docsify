@@ -33,7 +33,6 @@ getFrameUrl(): string
 **示例**
 
 完整示例代码参考[onRequestStart](./arkts-apis-webview-WebSchemeHandler.md#onrequeststart)。
-- simpleType:
 
 ## getHeader
 
@@ -45,7 +44,7 @@ getHeader(): Array<WebHeader>
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -58,7 +57,6 @@ getHeader(): Array<WebHeader>
 **示例**
 
 完整示例代码参考[onRequestStart](./arkts-apis-webview-WebSchemeHandler.md#onrequeststart)。
-- simpleType:
 
 ## getHttpBodyStream
 
@@ -70,7 +68,7 @@ getHttpBodyStream(): WebHttpBodyStream | null
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -83,7 +81,6 @@ getHttpBodyStream(): WebHttpBodyStream | null
 **示例**
 
 完整示例代码参考[onRequestStart](./arkts-apis-webview-WebSchemeHandler.md#onrequeststart)。
-- simpleType:
 
 ## getReferrer
 
@@ -95,7 +92,7 @@ getReferrer(): string
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -108,7 +105,6 @@ getReferrer(): string
 **示例**
 
 完整示例代码参考[onRequestStart](./arkts-apis-webview-WebSchemeHandler.md#onrequeststart)。
-- simpleType:
 
 ## getRequestMethod
 
@@ -120,7 +116,7 @@ getRequestMethod(): string
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -133,7 +129,6 @@ getRequestMethod(): string
 **示例**
 
 完整示例代码参考[onRequestStart](./arkts-apis-webview-WebSchemeHandler.md#onrequeststart)。
-- simpleType:
 
 ## getRequestResourceType
 
@@ -156,7 +151,6 @@ getRequestResourceType(): WebResourceType
 **示例**
 
 完整示例代码参考[onRequestStart](./arkts-apis-webview-WebSchemeHandler.md#onrequeststart)。
-- simpleType:
 
 ## getRequestUrl
 
@@ -168,7 +162,7 @@ getRequestUrl(): string
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -181,7 +175,6 @@ getRequestUrl(): string
 **示例**
 
 完整示例代码参考[onRequestStart](./arkts-apis-webview-WebSchemeHandler.md#onrequeststart)。
-- simpleType:
 
 ## hasGesture
 
@@ -193,7 +186,7 @@ hasGesture(): boolean
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -206,7 +199,6 @@ hasGesture(): boolean
 **示例**
 
 完整示例代码参考[onRequestStart](./arkts-apis-webview-WebSchemeHandler.md#onrequeststart)。
-- simpleType:
 
 ## isMainFrame
 
@@ -218,7 +210,7 @@ isMainFrame(): boolean
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -231,4 +223,3 @@ isMainFrame(): boolean
 **示例**
 
 完整示例代码参考[onRequestStart](./arkts-apis-webview-WebSchemeHandler.md#onrequeststart)。
-- simpleType:

@@ -48,7 +48,7 @@ notificationKey: notificationSubscribe.NotificationKey
 
 Notification information, including the notification ID and label.
 
-**Type:** [notificationSubscribe.NotificationKey](arkts-notification-notificationsubscribe-notificationkey-i-sys.md)
+**Type:** notificationSubscribe.NotificationKey
 
 **Since:** 11
 

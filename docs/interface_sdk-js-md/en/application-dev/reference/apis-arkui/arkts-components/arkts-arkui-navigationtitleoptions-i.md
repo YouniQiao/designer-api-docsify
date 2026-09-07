@@ -159,7 +159,7 @@ For example, if the modifier is used to set font size attributes, such as **font
 3. In [Free](arkts-arkui-navigationtitlemode-e.md) mode, setting the font size will disable the effect where the main title's
 size changes in response to content scrolling.
 
-**Type:** [TextModifier](../arkts-apis/arkts-arkui-textmodifier-c.md)
+**Type:** TextModifier
 
 **Since:** 13
 
@@ -259,7 +259,7 @@ Subtitle attribute modifier.
 For example, if the modifier is used to set font size attributes, such as **fontSize**, **maxFontSize**, and **minFontSize**, the settings will take precedence over the system's default settings for size-related attributes.
 2. If no modifier is used or an invalid value is set, the system reverts to its default settings.
 
-**Type:** [TextModifier](../arkts-apis/arkts-arkui-textmodifier-c.md)
+**Type:** TextModifier
 
 **Since:** 13
 

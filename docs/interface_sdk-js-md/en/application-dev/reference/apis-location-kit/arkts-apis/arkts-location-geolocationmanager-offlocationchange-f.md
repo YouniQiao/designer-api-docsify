@@ -17,6 +17,7 @@ Unsubscribe location changed.
 **Since:** 26.0.0
 
 **Required permissions:** 
+- API version 25 and later: N/A
 - API versions 23 to 24: ohos.permission.APPROXIMATELY_LOCATION
 
 **System capability:** 

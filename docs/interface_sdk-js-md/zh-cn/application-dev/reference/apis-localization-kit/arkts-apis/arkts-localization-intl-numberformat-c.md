@@ -22,7 +22,7 @@ constructor()
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -82,7 +82,7 @@ constructor(locale: string | Array<string>, options?: NumberOptions)
 
 **起始版本：** 6
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -112,7 +112,7 @@ format(num: number): string
 
 **起始版本：** 6
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -120,7 +120,7 @@ format(num: number): string
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| num | number | 是 | 数字对象。<br>**起始版本：** 12 |
+| num | number | 是 | 数字对象。<br>**适用版本：** 12 |
 
 **返回值：**
 
@@ -155,7 +155,7 @@ formatRange(startRange: number, endRange: number): string
 
 **起始版本：** 18
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -191,7 +191,7 @@ resolvedOptions(): NumberOptions
 
 **起始版本：** 6
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Global.I18n
 

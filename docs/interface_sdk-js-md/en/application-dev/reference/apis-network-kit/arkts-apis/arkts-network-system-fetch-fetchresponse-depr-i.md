@@ -62,7 +62,6 @@ All headers in the response from the server.
 **Examples**
 
 ArkTS example:
-- simpleType:
 
 ```TypeScript
 fetch.fetch({
@@ -143,8 +142,6 @@ export default {
 ```
 
 > NOTEHTTPS is supported by default. To support HTTP, you need to add "network" to the config.json file, and set the attribute "cleartextTraffic" to true.
-
-- simpleType:
 
 ```TypeScript
 {

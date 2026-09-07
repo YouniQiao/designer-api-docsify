@@ -4,8 +4,6 @@ Enumerates the collaboration request results. You can use it in multi-device col
 
 **Since:** 18
 
-**Model restriction:** This API can be used only in the stage model.
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## ACCEPT

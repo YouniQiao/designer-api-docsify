@@ -147,7 +147,6 @@ Disconnects this AppServiceExtensionAbility from a ServiceExtensionAbility. This
 **Examples**
 
 For details, see [connectServiceExtensionAbility](#connectserviceextensionability).
-- simpleType:
 
 ## startAbility
 

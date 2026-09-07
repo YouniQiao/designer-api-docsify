@@ -519,6 +519,20 @@ get animations(): Animation[]
 ## environment
 
 ```TypeScript
+get environment(): Environment
+```
+
+环境对象。
+
+@return { Environment }
+
+**类型：** [Environment](arkts-arkgraphics3d-sceneresources-environment-i.md)
+
+**起始版本：** 12
+
+**系统能力：** SystemCapability.ArkUi.Graphics3D
+
+```TypeScript
 set environment(value: Environment)
 ```
 

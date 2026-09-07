@@ -596,7 +596,7 @@ struct Index {
 static getLifecycle<T extends BaseCustomComponent>(customComponent: T): CustomComponentLifecycle
 ```
 
-Obtains the lifecycle of a custom component.
+Obtains the [lifecycle of a custom component](arkts-arkui-arkui-statemanagement-componentinit-d.md#componentinit).
 
 **Since:** 23
 

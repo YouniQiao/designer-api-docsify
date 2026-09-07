@@ -42,7 +42,7 @@ Add a printer to system.
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
-| [13100003](../errorcode-print.md#13100003-print-service-error) | Add the printer to system failed. |
+| [13100003](../errorcode-print.md#13100003-print-service-exception) | Add the printer to system failed. |
 
 **Examples**
 

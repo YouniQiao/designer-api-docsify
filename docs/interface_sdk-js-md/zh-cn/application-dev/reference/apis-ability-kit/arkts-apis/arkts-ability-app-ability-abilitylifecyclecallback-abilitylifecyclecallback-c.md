@@ -24,7 +24,7 @@ onAbilityBackground(ability: UIAbility): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -37,7 +37,6 @@ onAbilityBackground(ability: UIAbility): void
 **示例**
 
 参见AbilityLifecycleCallback使用示例。
-- simpleType:
 
 ## onAbilityContinue
 
@@ -51,7 +50,7 @@ onAbilityContinue(ability: UIAbility): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -64,7 +63,6 @@ onAbilityContinue(ability: UIAbility): void
 **示例**
 
 参见AbilityLifecycleCallback使用示例。
-- simpleType:
 
 ## onAbilityCreate
 
@@ -78,7 +76,7 @@ onAbilityCreate(ability: UIAbility): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -91,7 +89,6 @@ onAbilityCreate(ability: UIAbility): void
 **示例**
 
 参见AbilityLifecycleCallback使用示例。
-- simpleType:
 
 ## onAbilityDestroy
 
@@ -105,7 +102,7 @@ onAbilityDestroy(ability: UIAbility): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -118,7 +115,6 @@ onAbilityDestroy(ability: UIAbility): void
 **示例**
 
 参见AbilityLifecycleCallback使用示例。
-- simpleType:
 
 ## onAbilityForeground
 
@@ -132,7 +128,7 @@ onAbilityForeground(ability: UIAbility): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -145,7 +141,6 @@ onAbilityForeground(ability: UIAbility): void
 **示例**
 
 参见AbilityLifecycleCallback使用示例。
-- simpleType:
 
 ## onAbilitySaveState
 
@@ -159,7 +154,7 @@ onAbilitySaveState?(ability: UIAbility): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -172,7 +167,6 @@ onAbilitySaveState?(ability: UIAbility): void
 **示例**
 
 参见AbilityLifecycleCallback使用示例。
-- simpleType:
 
 ## onAbilityWillBackground
 
@@ -186,7 +180,7 @@ onAbilityWillBackground?(ability: UIAbility): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -199,7 +193,6 @@ onAbilityWillBackground?(ability: UIAbility): void
 **示例**
 
 参见AbilityLifecycleCallback使用示例。
-- simpleType:
 
 ## onAbilityWillContinue
 
@@ -213,7 +206,7 @@ onAbilityWillContinue?(ability: UIAbility): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -226,7 +219,6 @@ onAbilityWillContinue?(ability: UIAbility): void
 **示例**
 
 参见AbilityLifecycleCallback使用示例。
-- simpleType:
 
 ## onAbilityWillCreate
 
@@ -240,7 +232,7 @@ onAbilityWillCreate?(ability: UIAbility): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -253,7 +245,6 @@ onAbilityWillCreate?(ability: UIAbility): void
 **示例**
 
 参见AbilityLifecycleCallback使用示例。
-- simpleType:
 
 ## onAbilityWillDestroy
 
@@ -267,7 +258,7 @@ onAbilityWillDestroy?(ability: UIAbility): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -280,7 +271,6 @@ onAbilityWillDestroy?(ability: UIAbility): void
 **示例**
 
 参见AbilityLifecycleCallback使用示例。
-- simpleType:
 
 ## onAbilityWillForeground
 
@@ -294,7 +284,7 @@ onAbilityWillForeground?(ability: UIAbility): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -307,7 +297,6 @@ onAbilityWillForeground?(ability: UIAbility): void
 **示例**
 
 参见AbilityLifecycleCallback使用示例。
-- simpleType:
 
 ## onAbilityWillSaveState
 
@@ -321,7 +310,7 @@ onAbilityWillSaveState?(ability: UIAbility): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -334,7 +323,6 @@ onAbilityWillSaveState?(ability: UIAbility): void
 **示例**
 
 参见AbilityLifecycleCallback使用示例。
-- simpleType:
 
 ## onNewWant
 
@@ -348,7 +336,7 @@ onNewWant?(ability: UIAbility): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -361,7 +349,6 @@ onNewWant?(ability: UIAbility): void
 **示例**
 
 参见AbilityLifecycleCallback使用示例。
-- simpleType:
 
 ## onWillNewWant
 
@@ -375,7 +362,7 @@ onWillNewWant?(ability: UIAbility): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -388,7 +375,6 @@ onWillNewWant?(ability: UIAbility): void
 **示例**
 
 参见AbilityLifecycleCallback使用示例。
-- simpleType:
 
 ## onWindowStageActive
 
@@ -402,7 +388,7 @@ onWindowStageActive(ability: UIAbility, windowStage: window.WindowStage): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -411,12 +397,11 @@ onWindowStageActive(ability: UIAbility, windowStage: window.WindowStage): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | 是 | 回调事件对应的UIAbility对象。 |
-| windowStage | [window.WindowStage](../../apis-arkui/arkts-apis/arkts-arkui-window-windowstage-i.md) | 是 | 回调事件对应的UIAbility主窗管理器。 |
+| windowStage | window.WindowStage | 是 | 回调事件对应的UIAbility主窗管理器。 |
 
 **示例**
 
 参见AbilityLifecycleCallback使用示例。
-- simpleType:
 
 ## onWindowStageCreate
 
@@ -430,7 +415,7 @@ onWindowStageCreate(ability: UIAbility, windowStage: window.WindowStage): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -439,12 +424,11 @@ onWindowStageCreate(ability: UIAbility, windowStage: window.WindowStage): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | 是 | 回调事件对应的UIAbility对象。 |
-| windowStage | [window.WindowStage](../../apis-arkui/arkts-apis/arkts-arkui-window-windowstage-i.md) | 是 | 回调事件对应的UIAbility主窗管理器。 |
+| windowStage | window.WindowStage | 是 | 回调事件对应的UIAbility主窗管理器。 |
 
 **示例**
 
 参见AbilityLifecycleCallback使用示例。
-- simpleType:
 
 ## onWindowStageDestroy
 
@@ -458,7 +442,7 @@ onWindowStageDestroy(ability: UIAbility, windowStage: window.WindowStage): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -467,12 +451,11 @@ onWindowStageDestroy(ability: UIAbility, windowStage: window.WindowStage): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | 是 | 回调事件对应的UIAbility对象 |
-| windowStage | [window.WindowStage](../../apis-arkui/arkts-apis/arkts-arkui-window-windowstage-i.md) | 是 | 回调事件对应的UIAbility主窗管理器。 |
+| windowStage | window.WindowStage | 是 | 回调事件对应的UIAbility主窗管理器。 |
 
 **示例**
 
 参见AbilityLifecycleCallback使用示例。
-- simpleType:
 
 ## onWindowStageInactive
 
@@ -486,7 +469,7 @@ onWindowStageInactive(ability: UIAbility, windowStage: window.WindowStage): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -495,12 +478,11 @@ onWindowStageInactive(ability: UIAbility, windowStage: window.WindowStage): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | 是 | 回调事件对应的UIAbility对象。 |
-| windowStage | [window.WindowStage](../../apis-arkui/arkts-apis/arkts-arkui-window-windowstage-i.md) | 是 | 回调事件对应的UIAbility主窗管理器。 |
+| windowStage | window.WindowStage | 是 | 回调事件对应的UIAbility主窗管理器。 |
 
 **示例**
 
 参见AbilityLifecycleCallback使用示例。
-- simpleType:
 
 ## onWindowStageRestore
 
@@ -514,7 +496,7 @@ onWindowStageRestore?(ability: UIAbility, windowStage: window.WindowStage): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -523,12 +505,11 @@ onWindowStageRestore?(ability: UIAbility, windowStage: window.WindowStage): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | 是 | 回调事件对应的UIAbility对象。 |
-| windowStage | [window.WindowStage](../../apis-arkui/arkts-apis/arkts-arkui-window-windowstage-i.md) | 是 | 回调事件对应的UIAbility主窗管理器。 |
+| windowStage | window.WindowStage | 是 | 回调事件对应的UIAbility主窗管理器。 |
 
 **示例**
 
 参见AbilityLifecycleCallback使用示例。
-- simpleType:
 
 ## onWindowStageWillCreate
 
@@ -542,7 +523,7 @@ onWindowStageWillCreate?(ability: UIAbility, windowStage: window.WindowStage): v
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -551,12 +532,11 @@ onWindowStageWillCreate?(ability: UIAbility, windowStage: window.WindowStage): v
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | 是 | 回调事件对应的UIAbility对象。 |
-| windowStage | [window.WindowStage](../../apis-arkui/arkts-apis/arkts-arkui-window-windowstage-i.md) | 是 | 回调事件对应的UIAbility主窗管理器。 |
+| windowStage | window.WindowStage | 是 | 回调事件对应的UIAbility主窗管理器。 |
 
 **示例**
 
 参见AbilityLifecycleCallback使用示例。
-- simpleType:
 
 ## onWindowStageWillDestroy
 
@@ -570,7 +550,7 @@ onWindowStageWillDestroy?(ability: UIAbility, windowStage: window.WindowStage): 
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -579,12 +559,11 @@ onWindowStageWillDestroy?(ability: UIAbility, windowStage: window.WindowStage): 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | 是 | 回调事件对应的UIAbility对象。 |
-| windowStage | [window.WindowStage](../../apis-arkui/arkts-apis/arkts-arkui-window-windowstage-i.md) | 是 | 回调事件对应的UIAbility主窗管理器。 |
+| windowStage | window.WindowStage | 是 | 回调事件对应的UIAbility主窗管理器。 |
 
 **示例**
 
 参见AbilityLifecycleCallback使用示例。
-- simpleType:
 
 ## onWindowStageWillRestore
 
@@ -598,7 +577,7 @@ onWindowStageWillRestore?(ability: UIAbility, windowStage: window.WindowStage): 
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -607,9 +586,8 @@ onWindowStageWillRestore?(ability: UIAbility, windowStage: window.WindowStage): 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | 是 | 回调事件对应的UIAbility对象。 |
-| windowStage | [window.WindowStage](../../apis-arkui/arkts-apis/arkts-arkui-window-windowstage-i.md) | 是 | 回调事件对应的UIAbility主窗管理器。 |
+| windowStage | window.WindowStage | 是 | 回调事件对应的UIAbility主窗管理器。 |
 
 **示例**
 
 参见AbilityLifecycleCallback使用示例。
-- simpleType:

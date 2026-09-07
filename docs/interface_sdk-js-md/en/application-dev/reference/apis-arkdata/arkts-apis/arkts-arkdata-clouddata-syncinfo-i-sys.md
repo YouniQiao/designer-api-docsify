@@ -22,7 +22,7 @@ code: relationalStore.ProgressCode
 
 Result of the last device-cloud sync.
 
-**Type:** [relationalStore.ProgressCode](arkts-arkdata-relationalstore-progresscode-e.md)
+**Type:** relationalStore.ProgressCode
 
 **Since:** 12
 

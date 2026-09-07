@@ -220,6 +220,20 @@ try {
 ## belongingToTypes
 
 ```TypeScript
+get belongingToTypes(): Array<string>
+```
+
+标准化数据类型所归属的类型typeId列表。
+
+**类型：** Array&lt;string&gt;
+
+**起始版本：** 11
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
+
+```TypeScript
 set belongingToTypes(value: Array<string>)
 ```
 
@@ -234,6 +248,20 @@ set belongingToTypes(value: Array<string>)
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## description
+
+```TypeScript
+get description(): string
+```
+
+标准化数据类型的简要说明。
+
+**类型：** string
+
+**起始版本：** 11
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ```TypeScript
 set description(value: string)
@@ -252,6 +280,20 @@ set description(value: string)
 ## filenameExtensions
 
 ```TypeScript
+get filenameExtensions(): Array<string>
+```
+
+标准化数据类型所关联的文件名后缀列表。
+
+**类型：** Array&lt;string&gt;
+
+**起始版本：** 12
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
+
+```TypeScript
 set filenameExtensions(value: Array<string>)
 ```
 
@@ -266,6 +308,20 @@ set filenameExtensions(value: Array<string>)
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## iconFile
+
+```TypeScript
+get iconFile(): string
+```
+
+标准化数据类型的默认图标文件路径，可能为空字符串（即没有默认图标），应用可以自行决定是否使用该默认图标。
+
+**类型：** string
+
+**起始版本：** 11
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ```TypeScript
 set iconFile(value: string)
@@ -284,6 +340,20 @@ set iconFile(value: string)
 ## mimeTypes
 
 ```TypeScript
+get mimeTypes(): Array<string>
+```
+
+标准化数据类型所关联的多用途互联网邮件扩展类型列表。
+
+**类型：** Array&lt;string&gt;
+
+**起始版本：** 12
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
+
+```TypeScript
 set mimeTypes(value: Array<string>)
 ```
 
@@ -300,6 +370,20 @@ set mimeTypes(value: Array<string>)
 ## referenceURL
 
 ```TypeScript
+get referenceURL(): string
+```
+
+标准化数据类型的参考链接URL，用于描述类型的详细信息。
+
+**类型：** string
+
+**起始版本：** 11
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
+
+```TypeScript
 set referenceURL(value: string)
 ```
 
@@ -314,6 +398,20 @@ set referenceURL(value: string)
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## typeId
+
+```TypeScript
+get typeId(): string
+```
+
+标准化数据类型的ID（即`UniformDataType`中各类型对应的UTD-ID），也可以是自定义UTD。自定义UTD建议使用反向域名格式（如'com.example.mytype'）。
+
+**类型：** string
+
+**起始版本：** 11
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ```TypeScript
 set typeId(value: string)

@@ -78,7 +78,6 @@ Adds the polymorphic style states supported by the component.
 **Examples**
 
 See Example of Setting and Deleting a Polymorphic Style State.
-- simpleType:
 
 ## adoptChild
 
@@ -111,7 +110,6 @@ Adopts the target node as an affiliated node. The adopted node must not have an 
 **Examples**
 
 See Example of Adopting a Node as an Affiliate.
-- simpleType:
 
 ## appendChild
 
@@ -145,7 +143,6 @@ Appends a child node to the end of this FrameNode. If this FrameNode is not modi
 **Examples**
 
 See Example of Node Operations.
-- simpleType:
 
 ## cancelAnimations
 
@@ -178,7 +175,6 @@ Cancels all animations for specified properties on the FrameNode. This API execu
 **Examples**
 
 See Example of Creating and Canceling an Animation.
-- simpleType:
 
 ## clearChildren
 
@@ -205,7 +201,6 @@ Clears all child nodes of this FrameNode. If this FrameNode is not modifiable, a
 **Examples**
 
 See Example of Node Operations.
-- simpleType:
 
 ## constructor
 
@@ -373,7 +368,6 @@ Converts the coordinates of a point from the coordinate system of the window whe
 **Examples**
 
 See Example of Converting Between Local Coordinates and Window Coordinates.
-- simpleType:
 
 ## convertPositionToWindow
 
@@ -413,7 +407,6 @@ Converts the coordinates of a point from the coordinate system of the current no
 **Examples**
 
 See Example of Converting Between Local Coordinates and Window Coordinates.
-- simpleType:
 
 ## createAnimation
 
@@ -449,7 +442,6 @@ Creates a property animation for the FrameNode.
 **Examples**
 
 See Example of Creating and Canceling an Animation.
-- simpleType:
 
 ## createFrameNodes
 
@@ -856,7 +848,6 @@ Obtains the child node in the specified position of this node.
 **Examples**
 
 See Example of Node Operations.
-- simpleType:
 
 ## getChild
 
@@ -890,7 +881,6 @@ Obtains a child node at a specified index from this FrameNode, with optional sup
 **Examples**
 
 See Example of Node Operations in the LazyForEach Scenario.
-- simpleType:
 
 ## getChildrenCount
 
@@ -917,7 +907,6 @@ Obtains the number of child nodes of this FrameNode.
 **Examples**
 
 See Example of Node Operations.
-- simpleType:
 
 ## getChildrenCount
 
@@ -1197,7 +1186,6 @@ Obtains the cross-language access options for this FrameNode. For example, for n
 **Examples**
 
 See Example of Node Operations.
-- simpleType:
 
 ## getCustomProperty
 
@@ -1230,7 +1218,6 @@ Obtains the component's custom property by its name.
 **Examples**
 
 See Example of Node Operations.
-- simpleType:
 
 ## getFirstChild
 
@@ -1257,7 +1244,6 @@ Obtains the first child node of this FrameNode.
 **Examples**
 
 See Example of Node Operations.
-- simpleType:
 
 ## getFirstChildIndexWithoutExpand
 
@@ -1284,7 +1270,6 @@ Obtains the sequence number of the first child node of this node that is in the 
 **Examples**
 
 See Example of Node Operations in the LazyForEach Scenario.
-- simpleType:
 
 ## getFrameNodeById
 
@@ -1478,7 +1463,6 @@ Obtains the position offset of this FrameNode relative to the global display, in
 **Examples**
 
 See Example of Node Operations.
-- simpleType:
 
 ## getId
 
@@ -1505,7 +1489,6 @@ Obtains the node ID set by the user, which is the same as the value of the compo
 **Examples**
 
 See Example of Node Operations.
-- simpleType:
 
 ## getInspectorInfo
 
@@ -1537,7 +1520,6 @@ Obtains the structure information of the node, which is consistent with what is 
 **Examples**
 
 See Example of Node Operations.
-- simpleType:
 
 ## getInteractionEventBindingInfo
 
@@ -1570,7 +1552,6 @@ Obtains the event binding information for the target node. Returns **undefined**
 **Examples**
 
 See Example of Node Operations.
-- simpleType:
 
 ## getLastChildIndexWithoutExpand
 
@@ -1597,7 +1578,6 @@ Obtains the sequence number of the last child node of this node that is in the m
 **Examples**
 
 See Example of Node Operations in the LazyForEach Scenario.
-- simpleType:
 
 ## getLayoutPosition
 
@@ -1624,7 +1604,6 @@ Obtains the position offset of this FrameNode relative to the parent component a
 **Examples**
 
 See Example of Node Operations.
-- simpleType:
 
 ## getMeasuredSize
 
@@ -1651,7 +1630,6 @@ Obtains the measured size of this FrameNode, in px.
 **Examples**
 
 See Example of Node Operations.
-- simpleType:
 
 ## getNextSibling
 
@@ -1678,7 +1656,6 @@ Obtains the next sibling node of this FrameNode.
 **Examples**
 
 See Example of Node Operations.
-- simpleType:
 
 ## getNodePropertyValue
 
@@ -1711,7 +1688,6 @@ Obtains the property value of the FrameNode.
 **Examples**
 
 See Example of Creating and Canceling an Animation.
-- simpleType:
 
 ## getNodeType
 
@@ -1738,7 +1714,6 @@ Obtains the type of the node. For built-in components, the node type corresponds
 **Examples**
 
 See Example of Node Operations.
-- simpleType:
 
 ## getOpacity
 
@@ -1765,7 +1740,6 @@ Obtains the opacity of the node. The minimum value is 0, and the maximum value i
 **Examples**
 
 See Example of Node Operations.
-- simpleType:
 
 ## getParent
 
@@ -1792,7 +1766,6 @@ Obtains the parent node of this FrameNode.
 **Examples**
 
 See Example of Node Operations and Example of Obtaining the Root Node.
-- simpleType:
 
 ## getPositionToParent
 
@@ -2333,7 +2306,6 @@ Obtains the previous sibling node of this FrameNode.
 **Examples**
 
 See Example of Node Operations.
-- simpleType:
 
 ## getRenderNode
 
@@ -2418,7 +2390,6 @@ Obtains the system-assigned unique ID of the node.
 **Examples**
 
 See Example of Node Operations.
-- simpleType:
 
 ## getUserConfigBorderWidth
 
@@ -2445,7 +2416,6 @@ Obtains the border width set by the user.
 **Examples**
 
 See Example of Node Operations.
-- simpleType:
 
 ## getUserConfigMargin
 
@@ -2472,7 +2442,6 @@ Obtains the margin set by the user.
 **Examples**
 
 See Example of Node Operations.
-- simpleType:
 
 ## getUserConfigPadding
 
@@ -2499,7 +2468,6 @@ Obtains the padding set by the user.
 **Examples**
 
 See Example of Node Operations.
-- simpleType:
 
 ## getUserConfigSize
 
@@ -2526,7 +2494,6 @@ Obtains the width and height set by the user.
 **Examples**
 
 See Example of Node Operations.
-- simpleType:
 
 ## insertChildAfter
 
@@ -2561,7 +2528,6 @@ Inserts a child node after the specified child node of this FrameNode. If this F
 **Examples**
 
 See Example of Node Operations.
-- simpleType:
 
 ## invalidate
 
@@ -2728,7 +2694,6 @@ Obtains whether the node is mounted to the main node tree.
 **Examples**
 
 See Example of Node Operations.
-- simpleType:
 
 ## isClipToFrame
 
@@ -2755,7 +2720,6 @@ Checks whether the node is clipped to the component area. This API returns **tru
 **Examples**
 
 See Example of Node Operations.
-- simpleType:
 
 ## isDisposed
 
@@ -2782,10 +2746,8 @@ Checks whether this FrameNode object has released its reference to its backend e
 **Examples**
 
 See FrameNode Validity Check Example.
-- simpleType:
 
 See NodeAdapter Validity Check Example.
-- simpleType:
 
 ## isInRenderState
 
@@ -2901,7 +2863,6 @@ Checks whether this FrameNode is modifiable.
 **Examples**
 
 See Example of Node Operations.
-- simpleType:
 
 ## isOnMainTree
 
@@ -3503,7 +3464,6 @@ Obtains whether the node is visible.
 **Examples**
 
 See Example of Node Operations.
-- simpleType:
 
 ## layout
 
@@ -3530,7 +3490,6 @@ Lays out this FrameNode, specifying the layout positions for the FrameNode and i
 **Examples**
 
 See Example of Customizing a Node.
-- simpleType:
 
 ## measure
 
@@ -3557,7 +3516,6 @@ Measures this FrameNode and calculates its size based on the layout constraints 
 **Examples**
 
 See Example of Customizing a Node.
-- simpleType:
 
 ## moveTo
 
@@ -3603,7 +3561,6 @@ Moves this FrameNode to a specified position within the target FrameNode. If thi
 **Examples**
 
 See Example of Node Operations.
-- simpleType:
 
 ## onDraw
 
@@ -3632,7 +3589,6 @@ Note: The Canvas provided in the [DrawContext](arkts-arkui-graphics-drawcontext-
 **Examples**
 
 See Example of Customizing a Node.
-- simpleType:
 
 ## onLayout
 
@@ -3659,7 +3615,6 @@ Called when this FrameNode needs to determine its layout. This API provides cust
 **Examples**
 
 See Example of Customizing a Node.
-- simpleType:
 
 ## onMeasure
 
@@ -3686,7 +3641,6 @@ Called when this FrameNode needs to determine its size. This API provides custom
 **Examples**
 
 See Example of Customizing a Node.
-- simpleType:
 
 ## recycle
 
@@ -3707,7 +3661,6 @@ Triggers child component recycling in global reuse scenarios and fully releases 
 **Examples**
 
 See Example of Reusing and Recycling Nodes.
-- simpleType:
 
 ## removeAdoptedChild
 
@@ -3740,7 +3693,6 @@ Removes a previously-adopted affiliated node.
 **Examples**
 
 See Example of Adopting a Node as an Affiliate.
-- simpleType:
 
 ## removeChild
 
@@ -3773,7 +3725,6 @@ Deletes the specified child node from this FrameNode. If this FrameNode is not m
 **Examples**
 
 See Example of Node Operations.
-- simpleType:
 
 ## removeSupportedUIStates
 
@@ -3800,7 +3751,6 @@ Removes the state processing registration from the component.
 **Examples**
 
 See Example of Setting and Deleting a Polymorphic Style State.
-- simpleType:
 
 ## reuse
 
@@ -3821,7 +3771,6 @@ Triggers child component reuse in global reuse scenarios to recycle FrameNode ba
 **Examples**
 
 See Example of Reusing and Recycling Nodes.
-- simpleType:
 
 ## setCrossLanguageOptions
 
@@ -3868,7 +3817,6 @@ Sets the cross-language access options for this FrameNode. For example, for node
 **Examples**
 
 See Example of Node Operations.
-- simpleType:
 
 ## setLayoutPosition
 
@@ -3895,7 +3843,6 @@ Sets the position of this FrameNode after layout. The default unit is PX.
 **Examples**
 
 See Example of Customizing a Node.
-- simpleType:
 
 ## setMeasuredSize
 
@@ -3922,7 +3869,6 @@ Sets the measured size of this FrameNode. The default unit is PX. If the configu
 **Examples**
 
 See Example of Customizing a Node.
-- simpleType:
 
 ## setNeedsLayout
 
@@ -3943,7 +3889,6 @@ Marks this FrameNode as needing layout, so that it will be relaid out in the nex
 **Examples**
 
 See Example of Customizing a Node.
-- simpleType:
 
 ## commonAttribute
 
@@ -3976,7 +3921,6 @@ Note that only the attributes of a custom node can be modified.
 **Examples**
 
 See Basic Event Example.
-- simpleType:
 
 ## commonEvent
 
@@ -4001,7 +3945,6 @@ In scenarios involving **LazyForEach**, where nodes may be destroyed and reconst
 **Examples**
 
 See Basic Event Example and Example of Using Basic Events in the LazyForEach Scenario.
-- simpleType:
 
 ## gestureEvent
 
@@ -4024,4 +3967,3 @@ Obtains the **UIGestureEvent** object held by this FrameNode, which is used to s
 **Examples**
 
 For details, see Gesture Event Example.
-- simpleType:

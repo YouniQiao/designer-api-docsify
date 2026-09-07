@@ -12,4 +12,4 @@ Defines the use scenario and timing for using the permission.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
-**Type:** [_BundleInfo.UsedScene](arkts-ability-bundleinfo-usedscene-i.md)
+**Type:** _BundleInfo.UsedScene

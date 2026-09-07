@@ -24,7 +24,7 @@ static detectEncoding(bytes: Uint8Array): EncodingInfo
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -59,7 +59,7 @@ static getType(ch: string): string
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -67,7 +67,7 @@ static getType(ch: string): string
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| ch | string | 是 | 输入的字符。如果输入的是字符串，则只判断首字符的类别。<br>**起始版本：** 12 |
+| ch | string | 是 | 输入的字符。如果输入的是字符串，则只判断首字符的类别。<br>**适用版本：** 12 |
 
 **返回值：**
 
@@ -93,7 +93,7 @@ static isDigit(ch: string): boolean
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -101,7 +101,7 @@ static isDigit(ch: string): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| ch | string | 是 | 输入的字符。如果输入的是字符串，则只判断首字符的类别。<br>**起始版本：** 12 |
+| ch | string | 是 | 输入的字符。如果输入的是字符串，则只判断首字符的类别。<br>**适用版本：** 12 |
 
 **返回值：**
 
@@ -127,7 +127,7 @@ static isIdeograph(ch: string): boolean
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -135,7 +135,7 @@ static isIdeograph(ch: string): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| ch | string | 是 | 输入的字符。如果输入的是字符串，则只判断首字符的类别。<br>**起始版本：** 12 |
+| ch | string | 是 | 输入的字符。如果输入的是字符串，则只判断首字符的类别。<br>**适用版本：** 12 |
 
 **返回值：**
 
@@ -161,7 +161,7 @@ static isLetter(ch: string): boolean
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -169,7 +169,7 @@ static isLetter(ch: string): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| ch | string | 是 | 输入的字符。如果输入的是字符串，则只判断首字符的类别。<br>**起始版本：** 12 |
+| ch | string | 是 | 输入的字符。如果输入的是字符串，则只判断首字符的类别。<br>**适用版本：** 12 |
 
 **返回值：**
 
@@ -195,7 +195,7 @@ static isLowerCase(ch: string): boolean
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -203,7 +203,7 @@ static isLowerCase(ch: string): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| ch | string | 是 | 输入的字符。如果输入的是字符串，则只判断首字符的类别。<br>**起始版本：** 12 |
+| ch | string | 是 | 输入的字符。如果输入的是字符串，则只判断首字符的类别。<br>**适用版本：** 12 |
 
 **返回值：**
 
@@ -229,7 +229,7 @@ static isRTL(ch: string): boolean
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -237,7 +237,7 @@ static isRTL(ch: string): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| ch | string | 是 | 输入的字符。如果输入的是字符串，则只判断首字符的类别。<br>**起始版本：** 12 |
+| ch | string | 是 | 输入的字符。如果输入的是字符串，则只判断首字符的类别。<br>**适用版本：** 12 |
 
 **返回值：**
 
@@ -263,7 +263,7 @@ static isSpaceChar(ch: string): boolean
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -271,7 +271,7 @@ static isSpaceChar(ch: string): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| ch | string | 是 | 输入的字符。如果输入的是字符串，则只判断首字符的类别。<br>**起始版本：** 12 |
+| ch | string | 是 | 输入的字符。如果输入的是字符串，则只判断首字符的类别。<br>**适用版本：** 12 |
 
 **返回值：**
 
@@ -297,7 +297,7 @@ static isUpperCase(ch: string): boolean
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -305,7 +305,7 @@ static isUpperCase(ch: string): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| ch | string | 是 | 输入的字符。如果输入的是字符串，则只判断首字符的类别。<br>**起始版本：** 12 |
+| ch | string | 是 | 输入的字符。如果输入的是字符串，则只判断首字符的类别。<br>**适用版本：** 12 |
 
 **返回值：**
 
@@ -331,7 +331,7 @@ static isWhitespace(ch: string): boolean
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -339,7 +339,7 @@ static isWhitespace(ch: string): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| ch | string | 是 | 输入的字符。如果输入的是字符串，则只判断首字符的类别。<br>**起始版本：** 12 |
+| ch | string | 是 | 输入的字符。如果输入的是字符串，则只判断首字符的类别。<br>**适用版本：** 12 |
 
 **返回值：**
 

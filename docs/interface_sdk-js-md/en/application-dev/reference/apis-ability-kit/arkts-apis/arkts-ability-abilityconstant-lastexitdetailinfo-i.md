@@ -110,7 +110,7 @@ processState?: appManager.ProcessState
 
 Process status of the ability when it last exited.
 
-**Type:** [appManager.ProcessState](arkts-ability-appmanager-processstate-e.md)
+**Type:** appManager.ProcessState
 
 **Since:** 20
 

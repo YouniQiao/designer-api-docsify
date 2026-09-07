@@ -733,7 +733,7 @@ textMoveUnit: accessibility.TextMoveUnit
 
 Granularity of movement when the text is read.
 
-**Type:** [accessibility.TextMoveUnit](arkts-accessibility-accessibility-textmoveunit-t.md)
+**Type:** accessibility.TextMoveUnit
 
 **Since:** 9
 
@@ -761,7 +761,7 @@ triggerAction: accessibility.Action
 
 Action that triggers the element event.
 
-**Type:** [accessibility.Action](arkts-accessibility-accessibility-action-t.md)
+**Type:** accessibility.Action
 
 **Since:** 9
 

@@ -191,8 +191,6 @@ function inspectStatus(arg: number): number {
 ```
 
 > NOTE
-> 
-> isCanceled must be used together with taskpool.cancel. If cancel is not called, isCanceled returns false by default.
 
 ```TypeScript
 @Concurrent

@@ -38,7 +38,7 @@ avQueueImage: image.PixelMap | string
 
 The artwork of play list, can be a PixelMap or a URI formatted string,
 
-**Type:** [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) \| string
+**Type:** image.PixelMap \| string
 
 **Since:** 11
 

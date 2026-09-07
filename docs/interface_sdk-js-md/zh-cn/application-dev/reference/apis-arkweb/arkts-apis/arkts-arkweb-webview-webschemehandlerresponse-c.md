@@ -24,7 +24,7 @@ Response的构造函数。
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -95,7 +95,6 @@ getCustomErrorCode(): number
 **示例**
 
 完整示例代码参考[constructor](#constructor)。
-- simpleType:
 
 ## getEncoding
 
@@ -107,7 +106,7 @@ getEncoding(): string
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -120,7 +119,6 @@ getEncoding(): string
 **示例**
 
 完整示例代码参考[constructor](#constructor)。
-- simpleType:
 
 ## getHeaderByName
 
@@ -132,7 +130,7 @@ getHeaderByName(name: string): string
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -151,7 +149,6 @@ getHeaderByName(name: string): string
 **示例**
 
 完整示例代码参考[constructor](#constructor)。
-- simpleType:
 
 ## getMimeType
 
@@ -163,7 +160,7 @@ getMimeType(): string
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -225,7 +222,6 @@ struct WebComponent {
 ```
 
 完整示例代码参考[constructor](#constructor)。
-- simpleType:
 
 ## getNetErrorCode
 
@@ -237,7 +233,7 @@ getNetErrorCode(): WebNetErrorList
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -250,7 +246,6 @@ getNetErrorCode(): WebNetErrorList
 **示例**
 
 完整示例代码参考[constructor](#constructor)。
-- simpleType:
 
 ## getStatus
 
@@ -262,7 +257,7 @@ getStatus(): number
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -275,7 +270,6 @@ getStatus(): number
 **示例**
 
 完整示例代码参考[constructor](#constructor)。
-- simpleType:
 
 ## getStatusText
 
@@ -287,7 +281,7 @@ getStatusText(): string
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -300,7 +294,6 @@ getStatusText(): string
 **示例**
 
 完整示例代码参考[constructor](#constructor)。
-- simpleType:
 
 ## getUrl
 
@@ -314,7 +307,7 @@ getUrl(): string
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -327,7 +320,6 @@ getUrl(): string
 **示例**
 
 完整示例代码参考[removeProxyOverride](./arkts-apis-webview-ProxyController.md#removeproxyoverride)。
-- simpleType:
 
 ```TypeScript
 // xxx.ets
@@ -379,7 +371,6 @@ struct WebComponent {
 ```
 
 完整示例代码参考[constructor](#constructor)。
-- simpleType:
 
 ```TypeScript
 // xxx.ets
@@ -431,7 +422,6 @@ setCustomErrorCode(customErrorCode: number): void
 **示例**
 
 完整示例代码参考[constructor](#constructor)。
-- simpleType:
 
 ## setEncoding
 
@@ -443,7 +433,7 @@ setEncoding(encoding: string): void
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -462,7 +452,6 @@ setEncoding(encoding: string): void
 **示例**
 
 完整示例代码参考[constructor](#constructor)。
-- simpleType:
 
 ## setHeaderByName
 
@@ -474,7 +463,7 @@ setHeaderByName(name: string, value: string, overwrite: boolean): void
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -495,7 +484,6 @@ setHeaderByName(name: string, value: string, overwrite: boolean): void
 **示例**
 
 完整示例代码参考[constructor](#constructor)。
-- simpleType:
 
 ## setMimeType
 
@@ -507,7 +495,7 @@ setMimeType(type: string): void
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -526,7 +514,6 @@ setMimeType(type: string): void
 **示例**
 
 完整示例代码参考[constructor](#constructor)。
-- simpleType:
 
 ## setNetErrorCode
 
@@ -538,7 +525,7 @@ setNetErrorCode(code: WebNetErrorList): void
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -557,7 +544,6 @@ setNetErrorCode(code: WebNetErrorList): void
 **示例**
 
 完整示例代码参考[constructor](#constructor)。
-- simpleType:
 
 ## setStatus
 
@@ -569,7 +555,7 @@ setStatus(code: number): void
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -588,7 +574,6 @@ setStatus(code: number): void
 **示例**
 
 完整示例代码参考[constructor](#constructor)。
-- simpleType:
 
 ## setStatusText
 
@@ -600,7 +585,7 @@ setStatusText(text: string): void
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -619,7 +604,6 @@ setStatusText(text: string): void
 **示例**
 
 完整示例代码参考[constructor](#constructor)。
-- simpleType:
 
 ## setUrl
 
@@ -631,7 +615,7 @@ setUrl(url: string): void
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -650,4 +634,3 @@ setUrl(url: string): void
 **示例**
 
 完整示例代码参考[constructor](#constructor)。
-- simpleType:

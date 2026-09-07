@@ -154,7 +154,7 @@ symbolStyle?: SymbolGlyphModifier
 
 Symbol icon resource, which has higher priority than **value**. This parameter is not available for the **item** attribute.
 
-**Type:** SymbolGlyphModifier
+**Type:** [SymbolGlyphModifier](../arkts-components/arkts-arkui-symbolglyphmodifier-t.md)
 
 **Since:** 18
 

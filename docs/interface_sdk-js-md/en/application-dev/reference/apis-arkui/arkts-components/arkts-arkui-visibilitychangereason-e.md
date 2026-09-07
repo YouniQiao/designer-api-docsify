@@ -4,8 +4,6 @@ Enumerates reasons for **NavDestination** visibility changes.
 
 **Since:** 21
 
-**Model restriction:** This API can be used only in the stage model.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## TRANSITION

@@ -144,7 +144,7 @@ Sets the number of child components to be prloaded and configuration options.
 > 
 > - When **independent** in options is set to **true**, the number of preloaded child components is calculated
 > based on the value of **count**, which is decoupled from the **swipeByGroup** calculation of
-> [displayCount](#displaycount).
+> [displayCount](#displaycount-1).
 > For example, if the value of **count** in **cachedCount** is **1**, the previous and next child components of the
 > current child node are preloaded.
 > 

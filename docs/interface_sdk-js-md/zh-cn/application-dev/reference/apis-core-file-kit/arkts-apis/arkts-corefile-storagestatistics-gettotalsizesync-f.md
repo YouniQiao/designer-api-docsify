@@ -17,7 +17,8 @@ function getTotalSizeSync(): number
 **起始版本：** 15
 
 **需要权限：** 
-- API版本10 - 14：ohos.permission.STORAGE_MANAGER
+- API版本15+：N/A
+- API版本10-14：ohos.permission.STORAGE_MANAGER
 
 **系统能力：** SystemCapability.FileManagement.StorageService.SpatialStatistics
 

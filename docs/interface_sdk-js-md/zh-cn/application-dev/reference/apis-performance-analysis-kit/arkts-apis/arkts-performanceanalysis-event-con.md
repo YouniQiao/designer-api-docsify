@@ -10,9 +10,11 @@ const ADDRESS_SANITIZER: string
 
 **原子化服务API：** 从API version 12开始，该参数支持在原子化服务中使用。
 
+**类型：** string
+
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
@@ -26,9 +28,11 @@ const APP_CRASH: string
 
 **原子化服务API：** 从API version 11开始，该参数支持在原子化服务中使用。
 
+**类型：** string
+
 **起始版本：** 11
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
@@ -42,9 +46,11 @@ const APP_FREEZE: string
 
 **原子化服务API：** 从API version 11开始，该参数支持在原子化服务中使用。
 
+**类型：** string
+
 **起始版本：** 11
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
@@ -58,9 +64,11 @@ const APP_HICOLLIE: string
 
 **原子化服务API：** 从API version 21开始，该参数支持在原子化服务中使用。
 
+**类型：** string
+
 **起始版本：** 21
 
-**原子化服务API：** 从API版本21开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本21开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
@@ -74,9 +82,11 @@ const APP_KILLED: string
 
 **原子化服务API：** 从API version 20开始，该参数支持在原子化服务中使用。
 
+**类型：** string
+
 **起始版本：** 20
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
@@ -90,9 +100,11 @@ const APP_LAUNCH: string
 
 **原子化服务API：** 从API version 12开始，该参数支持在原子化服务中使用。
 
+**类型：** string
+
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
@@ -110,11 +122,13 @@ const appFreezeWarning: string
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
+**类型：** string
+
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
@@ -128,9 +142,11 @@ const AUDIO_JANK_FRAME: string
 
 **原子化服务API：** 从API version 21开始，该参数支持在原子化服务中使用。
 
+**类型：** string
+
 **起始版本：** 21
 
-**原子化服务API：** 从API版本21开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本21开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
@@ -144,9 +160,11 @@ const BATTERY_USAGE: string
 
 **原子化服务API：** 从API version 12开始，该参数支持在原子化服务中使用。
 
+**类型：** string
+
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
@@ -160,9 +178,11 @@ const CPU_USAGE_HIGH: string
 
 **原子化服务API：** 从API version 12开始，该参数支持在原子化服务中使用。
 
+**类型：** string
+
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
@@ -176,9 +196,11 @@ const DISTRIBUTED_SERVICE_START: string
 
 **原子化服务API：** 从API version 11开始，该参数支持在原子化服务中使用。
 
+**类型：** string
+
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
@@ -192,9 +214,11 @@ const MAIN_THREAD_JANK: string
 
 **原子化服务API：** 从API version 12开始，该参数支持在原子化服务中使用。
 
+**类型：** string
+
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
@@ -208,9 +232,11 @@ const RESOURCE_OVERLIMIT: string
 
 **原子化服务API：** 从API version 12开始，该参数支持在原子化服务中使用。
 
+**类型：** string
+
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
@@ -224,9 +250,11 @@ ArkWeb抛滑丢帧事件。系统事件名称常量。
 
 **原子化服务API：** 从API version 23开始，该参数支持在原子化服务中使用。
 
+**类型：** string
+
 **起始版本：** 23
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
@@ -240,9 +268,11 @@ const SCROLL_JANK: string
 
 **原子化服务API：** 从API version 12开始，该参数支持在原子化服务中使用。
 
+**类型：** string
+
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
@@ -256,9 +286,11 @@ const USER_LOGIN: string
 
 **原子化服务API：** 从API version 11开始，该参数支持在原子化服务中使用。
 
+**类型：** string
+
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
@@ -272,8 +304,10 @@ const USER_LOGOUT: string
 
 **原子化服务API：** 从API version 11开始，该参数支持在原子化服务中使用。
 
+**类型：** string
+
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent

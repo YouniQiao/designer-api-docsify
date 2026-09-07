@@ -48,9 +48,9 @@
 <!--DelEnd-->
 
 <!--Del-->
-### Properties(System API)
+### Constants(System API)
 
 | Name | Description |
 | --- | --- |
-| [appStorage](arkts-arkui-commontsetsapi-p-sys.md) | Defines the application-level storage. |
+| [appStorage](arkts-arkui-commontsetsapi-con-sys.md#appstorage) | Defines the application-level storage. |
 <!--DelEnd-->

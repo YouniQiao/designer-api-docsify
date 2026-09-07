@@ -17,6 +17,7 @@ Unsubscribe the event reported when the Bluetooth state changes.
 **Since:** 10
 
 **Required permissions:** 
+- API version 18 and later: N/A
 - API versions 10 to 17: ohos.permission.ACCESS_BLUETOOTH
 
 **Atomic service API:** This API can be used in atomic services since API version 12.

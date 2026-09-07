@@ -10,4 +10,4 @@ type NonSendableAsset = relationalStore.Asset
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
-**类型：** [relationalStore.Asset](arkts-arkdata-relationalstore-asset-i.md)
+**类型：** relationalStore.Asset

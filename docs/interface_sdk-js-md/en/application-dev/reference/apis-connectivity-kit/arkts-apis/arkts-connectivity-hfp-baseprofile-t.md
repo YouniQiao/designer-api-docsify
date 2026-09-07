@@ -10,4 +10,4 @@ Base interface of profile.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
-**Type:** [baseProfile.BaseProfile](arkts-connectivity-baseprofile-baseprofile-i.md)
+**Type:** baseProfile.BaseProfile

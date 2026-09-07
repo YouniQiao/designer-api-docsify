@@ -19,7 +19,7 @@ function getBundleName(agent: WantAgent, callback: AsyncCallback<string>): void
 
 **替代接口：** [getBundleName](arkts-ability-wantagent-getbundlename-f.md)
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -99,7 +99,7 @@ function getBundleName(agent: WantAgent): Promise<string>
 
 **替代接口：** [getBundleName](arkts-ability-wantagent-getbundlename-f.md)
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 

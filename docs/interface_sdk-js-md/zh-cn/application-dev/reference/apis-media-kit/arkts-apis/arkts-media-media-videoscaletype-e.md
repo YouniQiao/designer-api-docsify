@@ -16,7 +16,7 @@ VIDEO_SCALE_TYPE_FIT = 0
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Multimedia.Media.VideoPlayer
 
@@ -30,7 +30,7 @@ VIDEO_SCALE_TYPE_FIT_CROP = 1
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Multimedia.Media.VideoPlayer
 
@@ -44,6 +44,6 @@ VIDEO_SCALE_TYPE_SCALED_ASPECT = 2
 
 **起始版本：** 20
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Multimedia.Media.VideoPlayer

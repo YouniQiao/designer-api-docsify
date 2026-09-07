@@ -18,7 +18,7 @@ Queries all contacts. This API uses an asynchronous callback to return the resul
 
 **Deprecated since:** 10
 
-**Substitutes:** [queryContacts](#querycontacts)(context: Context, callback: AsyncCallback&lt;Array&lt;Contact&gt;&gt;)
+**Substitutes:** [queryContacts](#querycontacts-1)(context: Context, callback: AsyncCallback&lt;Array&lt;Contact&gt;&gt;)
 
 **Required permissions:** ohos.permission.READ_CONTACTS
 
@@ -78,8 +78,6 @@ Queries all contacts. This API uses an asynchronous callback to return the resul
 **Examples**
 
 > NOTE
-> 
-> In the examples in this document, this.context is used to obtain the UIAbilityContext, where this represents the UIAbility instance inherited from UIAbility. To use the capabilities provided by UIAbilityContext in the UI, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -110,7 +108,7 @@ Queries all contacts based on the specified holder. This API uses an asynchronou
 
 **Deprecated since:** 10
 
-**Substitutes:** [queryContacts](#querycontacts)(context: Context, holder: Holder, callback: AsyncCallback&lt;Array&lt;Contact&gt;&gt;)
+**Substitutes:** [queryContacts](#querycontacts-3)(context: Context, holder: Holder, callback: AsyncCallback&lt;Array&lt;Contact&gt;&gt;)
 
 **Required permissions:** ohos.permission.READ_CONTACTS
 
@@ -176,8 +174,6 @@ Queries all contacts based on the specified holder. This API uses an asynchronou
 **Examples**
 
 > NOTE
-> 
-> In the examples in this document, this.context is used to obtain the UIAbilityContext, where this represents a UIAbility instance inherited from UIAbility. To use the capabilities provided by UIAbilityContext in the UI, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -212,7 +208,7 @@ Queries all contacts based on the specified attributes. This API uses an asynchr
 
 **Deprecated since:** 10
 
-**Substitutes:** [queryContacts](#querycontacts)(context: Context, attrs: ContactAttributes, callback: AsyncCallback&lt;Array&lt;Contact&gt;&gt;)
+**Substitutes:** [queryContacts](#querycontacts-5)(context: Context, attrs: ContactAttributes, callback: AsyncCallback&lt;Array&lt;Contact&gt;&gt;)
 
 **Required permissions:** ohos.permission.READ_CONTACTS
 
@@ -276,8 +272,6 @@ Queries all contacts based on the specified attributes. This API uses an asynchr
 **Examples**
 
 > NOTE
-> 
-> In the examples in this document, UIAbilityContext is obtained through this.context, where this represents a UIAbility instance inherited from UIAbility. If you need to use the capabilities provided by UIAbilityContext in the UI, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -310,7 +304,7 @@ Queries all contacts based on the specified holder and attributes. This API uses
 
 **Deprecated since:** 10
 
-**Substitutes:** [queryContacts](#querycontacts)(context: Context, holder: Holder, attrs: ContactAttributes, callback: AsyncCallback&lt;Array&lt;Contact&gt;&gt;)
+**Substitutes:** [queryContacts](#querycontacts-7)(context: Context, holder: Holder, attrs: ContactAttributes, callback: AsyncCallback&lt;Array&lt;Contact&gt;&gt;)
 
 **Required permissions:** ohos.permission.READ_CONTACTS
 
@@ -380,8 +374,6 @@ Queries all contacts based on the specified holder and attributes. This API uses
 **Examples**
 
 > NOTE
-> 
-> In the examples of this document, this.context is used to obtain the UIAbilityContext, where this represents a UIAbility instance inherited from UIAbility. To use the capabilities provided by UIAbilityContext in a page, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -418,7 +410,7 @@ Queries all contacts based on the specified holder and attributes. This API uses
 
 **Deprecated since:** 10
 
-**Substitutes:** [queryContacts](#querycontacts)(context: Context, holder?: Holder, attrs?: ContactAttributes)
+**Substitutes:** [queryContacts](#querycontacts-9)(context: Context, holder?: Holder, attrs?: ContactAttributes)
 
 **Required permissions:** ohos.permission.READ_CONTACTS
 
@@ -494,8 +486,6 @@ Queries all contacts based on the specified holder and attributes. This API uses
 **Examples**
 
 > NOTE
-> 
-> In the examples in this document, this.context is used to obtain the UIAbilityContext, where this represents the UIAbility instance inherited from UIAbility. If you need to use the capabilities provided by UIAbilityContext in a page, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
 ```TypeScript
 import { contact } from '@kit.ContactsKit';

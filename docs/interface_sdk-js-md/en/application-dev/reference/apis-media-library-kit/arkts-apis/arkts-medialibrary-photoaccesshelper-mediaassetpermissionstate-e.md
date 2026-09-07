@@ -4,8 +4,6 @@ Enumeration of permission level for an application to access asset.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
-
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## URI_FORMAT_ERROR

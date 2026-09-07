@@ -19,7 +19,8 @@ function isNotificationEnabled(callback: AsyncCallback<boolean>): void
 **起始版本：** 11
 
 **需要权限：** 
-- API版本9 - 10：ohos.permission.NOTIFICATION_CONTROLLER
+- API版本11+：N/A
+- API版本9-10：ohos.permission.NOTIFICATION_CONTROLLER
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -72,7 +73,8 @@ function isNotificationEnabled(): Promise<boolean>
 **起始版本：** 11
 
 **需要权限：** 
-- API版本9 - 10：ohos.permission.NOTIFICATION_CONTROLLER
+- API版本11+：N/A
+- API版本9-10：ohos.permission.NOTIFICATION_CONTROLLER
 
 **系统能力：** SystemCapability.Notification.Notification
 

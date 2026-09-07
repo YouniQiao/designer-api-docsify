@@ -114,7 +114,7 @@ symbol: SymbolGlyphModifier
 
 Settings of the trailing symbol item.
 
-**Type:** [SymbolGlyphModifier](arkts-arkui-symbolglyphmodifier-c.md)
+**Type:** SymbolGlyphModifier
 
 **Since:** 14
 

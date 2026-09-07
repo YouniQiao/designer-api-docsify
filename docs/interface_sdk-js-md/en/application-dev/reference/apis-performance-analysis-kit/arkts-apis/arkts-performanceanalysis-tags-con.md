@@ -8,6 +8,8 @@ const ABILITY_MANAGER: number
 
 Capability management. The corresponding HiTrace command is **tagName:ability**.
 
+**Type:** number
+
 **Since:** 12
 
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
@@ -19,6 +21,8 @@ const ARK: number
 ```
 
 JSVM VM. The corresponding HiTrace command is **tagName:ark**.
+
+**Type:** number
 
 **Since:** 12
 
@@ -32,6 +36,8 @@ const ARKUI: number
 
 ArkUI development framework. The corresponding HiTrace command is **tagName:ace**.
 
+**Type:** number
+
 **Since:** 12
 
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
@@ -43,6 +49,8 @@ const AUDIO: number
 ```
 
 Audio module. The corresponding HiTrace command is **tagName:zaudio**.
+
+**Type:** number
 
 **Since:** 12
 
@@ -56,6 +64,8 @@ const BLUETOOTH: number
 
 Bluetooth. The corresponding HiTrace command is **tagName:bluetooth**.
 
+**Type:** number
+
 **Since:** 12
 
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
@@ -67,6 +77,8 @@ const CAMERA: number
 ```
 
 Camera module. The corresponding HiTrace command is **tagName:zcamera**.
+
+**Type:** number
 
 **Since:** 12
 
@@ -80,6 +92,8 @@ const COMMON_LIBRARY: number
 
 Common library subsystem. The corresponding HiTrace command is **tagName:commonlibrary**.
 
+**Type:** number
+
 **Since:** 12
 
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
@@ -91,6 +105,8 @@ const DISTRIBUTED_AUDIO: number
 ```
 
 Distributed audio. The corresponding HiTrace command is **tagName:daudio**.
+
+**Type:** number
 
 **Since:** 12
 
@@ -104,6 +120,8 @@ const DISTRIBUTED_CAMERA: number
 
 Distributed camera. The corresponding HiTrace command is **tagName:dcamera**.
 
+**Type:** number
+
 **Since:** 12
 
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
@@ -115,6 +133,8 @@ const DISTRIBUTED_DATA: number
 ```
 
 Distributed data management. The corresponding HiTrace command is **tagName:distributeddatamgr**.
+
+**Type:** number
 
 **Since:** 12
 
@@ -128,6 +148,8 @@ const DISTRIBUTED_HARDWARE_DEVICE_MANAGER: number
 
 Distributed hardware device management. The corresponding HiTrace command is **tagName:devicemanager**.
 
+**Type:** number
+
 **Since:** 12
 
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
@@ -139,6 +161,8 @@ const DISTRIBUTED_HARDWARE_FRAMEWORK: number
 ```
 
 Distributed hardware framework. The corresponding HiTrace command is **tagName:dhfwk**.
+
+**Type:** number
 
 **Since:** 12
 
@@ -152,6 +176,8 @@ const DISTRIBUTED_INPUT: number
 
 Distributed input. The corresponding HiTrace command is **tagName:dinput**.
 
+**Type:** number
+
 **Since:** 12
 
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
@@ -163,6 +189,8 @@ const DISTRIBUTED_SCHEDULER: number
 ```
 
 Distributed scheduler. The corresponding HiTrace command is **tagName:dsched**.
+
+**Type:** number
 
 **Since:** 12
 
@@ -176,6 +204,8 @@ const DISTRIBUTED_SCREEN: number
 
 Distributed screen. The corresponding HiTrace command is **tagName:dscreen**.
 
+**Type:** number
+
 **Since:** 12
 
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
@@ -187,6 +217,8 @@ const FFRT: number
 ```
 
 FFRT task. The corresponding HiTrace command is **tagName:ffrt**.
+
+**Type:** number
 
 **Since:** 12
 
@@ -200,6 +232,8 @@ const FILE_MANAGEMENT: number
 
 File management system. The corresponding HiTrace command is **tagName:filemanagement**.
 
+**Type:** number
+
 **Since:** 12
 
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
@@ -211,6 +245,8 @@ const GLOBAL_RESOURCE_MANAGER: number
 ```
 
 Global resource management. The corresponding HiTrace command is **tagName:gresource**.
+
+**Type:** number
 
 **Since:** 12
 
@@ -224,6 +260,8 @@ const GRAPHICS: number
 
 Graphics module. The corresponding HiTrace command is **tagName:graphic**.
 
+**Type:** number
+
 **Since:** 12
 
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
@@ -235,6 +273,8 @@ const HDF: number
 ```
 
 HDF subsystem. The corresponding HiTrace command is **tagName:hdf**.
+
+**Type:** number
 
 **Since:** 12
 
@@ -248,6 +288,8 @@ const IMAGE: number
 
 Image module. The corresponding HiTrace command is **tagName:zimage**.
 
+**Type:** number
+
 **Since:** 12
 
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
@@ -259,6 +301,8 @@ const MEDIA: number
 ```
 
 Media module. The corresponding HiTrace command is **tagName:zmedia**.
+
+**Type:** number
 
 **Since:** 12
 
@@ -272,6 +316,8 @@ const MISC: number
 
 MISC module. The corresponding HiTrace command is **tagName:misc**.
 
+**Type:** number
+
 **Since:** 12
 
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
@@ -283,6 +329,8 @@ const MULTIMODAL_INPUT: number
 ```
 
 Multi-modal input module. The corresponding HiTrace command is **tagName:multimodalinput**.
+
+**Type:** number
 
 **Since:** 12
 
@@ -296,6 +344,8 @@ const NET: number
 
 Network. The corresponding HiTrace command is **tagName:net**.
 
+**Type:** number
+
 **Since:** 12
 
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
@@ -307,6 +357,8 @@ const NOTIFICATION: number
 ```
 
 Notification module. The corresponding HiTrace command is **tagName:notification**.
+
+**Type:** number
 
 **Since:** 12
 
@@ -320,6 +372,8 @@ const NWEB: number
 
 Nweb. The corresponding HiTrace command is **tagName:nweb**.
 
+**Type:** number
+
 **Since:** 12
 
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
@@ -331,6 +385,8 @@ const OHOS: number
 ```
 
 OHOS. The corresponding HiTrace command is **tagName:ohos**.
+
+**Type:** number
 
 **Since:** 12
 
@@ -344,6 +400,8 @@ const POWER_MANAGER: number
 
 Power management. The corresponding HiTrace command is **tagName:power**.
 
+**Type:** number
+
 **Since:** 12
 
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
@@ -355,6 +413,8 @@ const RPC: number
 ```
 
 RPC. The corresponding HiTrace command is **tagName:rpc**.
+
+**Type:** number
 
 **Since:** 12
 
@@ -368,6 +428,8 @@ const SAMGR: number
 
 System capability management. The corresponding HiTrace command is **tagName:samgr**.
 
+**Type:** number
+
 **Since:** 12
 
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
@@ -379,6 +441,8 @@ const WINDOW_MANAGER: number
 ```
 
 Window management. The corresponding HiTrace command is **tagName:window**.
+
+**Type:** number
 
 **Since:** 12
 

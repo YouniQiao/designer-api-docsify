@@ -18,6 +18,7 @@ function getCellularDataFlowType(callback: AsyncCallback<DataFlowType>): void
 
 **需要权限：** 
 - API版本22+：ohos.permission.GET_NETWORK_INFO
+- API版本7-21：N/A
 
 **系统能力：** SystemCapability.Telephony.CellularData
 
@@ -61,6 +62,7 @@ function getCellularDataFlowType(): Promise<DataFlowType>
 
 **需要权限：** 
 - API版本22+：ohos.permission.GET_NETWORK_INFO
+- API版本7-21：N/A
 
 **系统能力：** SystemCapability.Telephony.CellularData
 

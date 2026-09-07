@@ -18,6 +18,7 @@ Set the configuration parameters for location simulation.
 
 **Required permissions:** 
 - API version 20 and later: ohos.permission.MOCK_LOCATION
+- API versions 9 to 19: N/A
 
 **System capability:** SystemCapability.Location.Location.Core
 

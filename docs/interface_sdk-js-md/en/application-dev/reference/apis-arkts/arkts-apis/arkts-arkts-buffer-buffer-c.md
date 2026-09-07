@@ -140,8 +140,8 @@ Creates and returns an iterator that contains key-value pairs of this **Buffer**
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](../../apis-default/arkts-apis/arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;[number, number]&gt; | Iterator that contains the key and value, both of which are of the number type.<br>**Applicable version:** 9 - 10 |
-| [IterableIterator](../../apis-default/arkts-apis/arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;[number, number]&gt; | <br>**Applicable version:** 11 and later |
+| [IterableIterator](../../apis-default/arkts-apis/arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;[number, number]&gt; | Iterator that contains the key and value, both of which are of the number type.<br>**Since:** 9 - 10 |
+| [IterableIterator](../../apis-default/arkts-apis/arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;[number, number]&gt; | <br>**Since:** 11 |
 
 **Examples**
 

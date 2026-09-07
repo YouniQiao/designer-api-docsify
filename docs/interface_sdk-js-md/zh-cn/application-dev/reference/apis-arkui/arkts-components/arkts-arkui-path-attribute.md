@@ -23,7 +23,7 @@ commands(value: ResourceStr)
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
 
@@ -33,4 +33,4 @@ commands(value: ResourceStr)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | 是 | 路径绘制的命令字符串，需符合SVG路径描述规范，单位为px。默认值：空字符串异常值undefined和null按照默认值处理。<br>**起始版本：** 20 |
+| value | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | 是 | 路径绘制的命令字符串，需符合SVG路径描述规范，单位为px。默认值：空字符串异常值undefined和null按照默认值处理。<br>**适用版本：** 20 |

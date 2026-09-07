@@ -19,4 +19,3 @@ Defines a callback triggered when the **param** element embedded in the same-lay
 **Examples**
 
 For details about the sample code, see [onNativeEmbedObjectParamChange](./arkts-basic-components-web-events.md#onnativeembedobjectparamchange).
-- simpleType:

@@ -218,6 +218,7 @@ static authWithPopup(callback: IUserAuthCallback): void
 **起始版本：** 10
 
 **需要权限：** 
+- API版本11+：N/A
 - API版本10：ohos.permission.ACCESS_USER_AUTH_INTERNAL
 
 **系统能力：** SystemCapability.Account.OsAccount
@@ -278,6 +279,7 @@ static authWithPopup(localId: number, callback: IUserAuthCallback): void
 **起始版本：** 10
 
 **需要权限：** 
+- API版本11+：N/A
 - API版本10：ohos.permission.ACCESS_USER_AUTH_INTERNAL
 
 **系统能力：** SystemCapability.Account.OsAccount

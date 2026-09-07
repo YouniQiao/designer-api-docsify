@@ -24,7 +24,7 @@ Note:
 
 On the page loaded by [setUIContext](arkts-arkui-floatview-floatviewcontroller-i.md#setuicontext), components in the avoid area do not respond to gesture events. When adding components that require gesture response events, avoid the area.
 
-**Type:** [window.AvoidArea](arkts-arkui-window-avoidarea-i.md)
+**Type:** window.AvoidArea
 
 **Since:** 26.0.0
 
@@ -104,7 +104,7 @@ windowRect: window.Rect
 
 Rectangle area of the float view.
 
-**Type:** [window.Rect](arkts-arkui-window-rect-i.md)
+**Type:** window.Rect
 
 **Since:** 26.0.0
 

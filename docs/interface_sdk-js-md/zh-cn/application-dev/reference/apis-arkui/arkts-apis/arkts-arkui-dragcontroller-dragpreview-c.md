@@ -24,7 +24,7 @@ animate(options: AnimationOptions, handler: () =>void): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -38,10 +38,6 @@ animate(options: AnimationOptions, handler: () =>void): void
 **示例**
 
 > 说明：
-> 
-> 推荐通过使用[UIContext](arkts-apis-uicontext-uicontext.md)中的[getDragController](arkts-arkui-arkui-uicontext-uicontext-c.md#getdragcontroller)方法获取当前UI上下文关联的DragController对象。
-
-在EntryAbility.ets中获取UI上下文并保存至LocalStorage中。
 
 ```TypeScript
 import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
@@ -189,7 +185,7 @@ setForegroundColor(color: ResourceColor): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -202,4 +198,3 @@ setForegroundColor(color: ResourceColor): void
 **示例**
 
 请参考[animate](#animate)。
-- simpleType:

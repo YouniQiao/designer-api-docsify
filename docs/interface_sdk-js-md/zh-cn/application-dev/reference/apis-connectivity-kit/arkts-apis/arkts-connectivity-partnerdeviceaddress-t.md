@@ -12,4 +12,4 @@ type PartnerDeviceAddress = partnerAgent.PartnerDeviceAddress
 
 **系统能力：** SystemCapability.Communication.FusionConnectivity.Core
 
-**类型：** [partnerAgent.PartnerDeviceAddress](arkts-connectivity-partneragent-partnerdeviceaddress-i.md)
+**类型：** partnerAgent.PartnerDeviceAddress

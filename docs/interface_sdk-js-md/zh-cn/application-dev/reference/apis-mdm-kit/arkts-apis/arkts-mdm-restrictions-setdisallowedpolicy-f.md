@@ -23,12 +23,12 @@ function setDisallowedPolicy(admin: Want, feature: string, disallow: boolean): v
 
 **废弃版本：** 26.0.0
 
-**替代接口：** [setDisallowedPolicy](#setdisallowedpolicy)(admin: Want, feature: FeatureForDevice, disallow: boolean)
+**替代接口：** [setDisallowedPolicy](#setdisallowedpolicy-1)(admin: Want, feature: FeatureForDevice, disallow: boolean)
 
 **需要权限：** 
 - API版本20+：ohos.permission.ENTERPRISE_MANAGE_RESTRICTIONS or ohos.permission.PERSONAL_MANAGE_RESTRICTIONS or ohos.permission.ENTERPRISE_MANAGE_NETWORK
-- API版本15 - 19：ohos.permission.ENTERPRISE_MANAGE_RESTRICTIONS or ohos.permission.PERSONAL_MANAGE_RESTRICTIONS
-- API版本12 - 14：ohos.permission.ENTERPRISE_MANAGE_RESTRICTIONS
+- API版本15-19：ohos.permission.ENTERPRISE_MANAGE_RESTRICTIONS or ohos.permission.PERSONAL_MANAGE_RESTRICTIONS
+- API版本12-14：ohos.permission.ENTERPRISE_MANAGE_RESTRICTIONS
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

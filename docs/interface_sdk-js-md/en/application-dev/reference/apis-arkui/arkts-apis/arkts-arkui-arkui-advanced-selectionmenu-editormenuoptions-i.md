@@ -70,7 +70,7 @@ symbolStyle?: SymbolGlyphModifier
 
 Symbol icon resource, which has higher priority than **icon**.
 
-**Type:** SymbolGlyphModifier
+**Type:** [SymbolGlyphModifier](../arkts-components/arkts-arkui-symbolglyphmodifier-t.md)
 
 **Since:** 18
 

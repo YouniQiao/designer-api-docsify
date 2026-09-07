@@ -18,6 +18,7 @@ function injectKeyEvent(keyEvent: KeyEventData): void
 
 **需要权限：** 
 - API版本12+：ohos.permission.INJECT_INPUT_EVENT
+- API版本11：N/A
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputSimulator
 

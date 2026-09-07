@@ -8,6 +8,8 @@ const ABILITY_MANAGER: number
 
 能力管理标签，hitrace命令行工具对应tagName:ability。
 
+**类型：** number
+
 **起始版本：** 12
 
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
@@ -19,6 +21,8 @@ const ARK: number
 ```
 
 JSVM虚拟机标签，hitrace命令行工具对应tagName:ark。
+
+**类型：** number
 
 **起始版本：** 12
 
@@ -32,6 +36,8 @@ const ARKUI: number
 
 ArkUI开发框架标签，hitrace命令行工具对应tagName:ace。
 
+**类型：** number
+
 **起始版本：** 12
 
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
@@ -43,6 +49,8 @@ const AUDIO: number
 ```
 
 音频模块标签，hitrace命令行工具对应tagName:zaudio。
+
+**类型：** number
 
 **起始版本：** 12
 
@@ -56,6 +64,8 @@ const BLUETOOTH: number
 
 蓝牙标签，hitrace命令行工具对应tagName:bluetooth。
 
+**类型：** number
+
 **起始版本：** 12
 
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
@@ -67,6 +77,8 @@ const CAMERA: number
 ```
 
 相机模块标签，hitrace命令行工具对应tagName:zcamera。
+
+**类型：** number
 
 **起始版本：** 12
 
@@ -80,6 +92,8 @@ const COMMON_LIBRARY: number
 
 公共库子系统标签，hitrace命令行工具对应tagName:commonlibrary。
 
+**类型：** number
+
 **起始版本：** 12
 
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
@@ -91,6 +105,8 @@ const DISTRIBUTED_AUDIO: number
 ```
 
 分布式音频标签，hitrace命令行工具对应tagName:daudio。
+
+**类型：** number
 
 **起始版本：** 12
 
@@ -104,6 +120,8 @@ const DISTRIBUTED_CAMERA: number
 
 分布式相机标签，hitrace命令行工具对应tagName:dcamera。
 
+**类型：** number
+
 **起始版本：** 12
 
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
@@ -115,6 +133,8 @@ const DISTRIBUTED_DATA: number
 ```
 
 分布式数据管理模块标签，hitrace命令行工具对应tagName:distributeddatamgr。
+
+**类型：** number
 
 **起始版本：** 12
 
@@ -128,6 +148,8 @@ const DISTRIBUTED_HARDWARE_DEVICE_MANAGER: number
 
 分布式硬件设备管理标签，hitrace命令行工具对应tagName:devicemanager。
 
+**类型：** number
+
 **起始版本：** 12
 
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
@@ -139,6 +161,8 @@ const DISTRIBUTED_HARDWARE_FRAMEWORK: number
 ```
 
 分布式硬件框架标签，hitrace命令行工具对应tagName:dhfwk。
+
+**类型：** number
 
 **起始版本：** 12
 
@@ -152,6 +176,8 @@ const DISTRIBUTED_INPUT: number
 
 分布式输入标签，hitrace命令行工具对应tagName:dinput。
 
+**类型：** number
+
 **起始版本：** 12
 
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
@@ -163,6 +189,8 @@ const DISTRIBUTED_SCHEDULER: number
 ```
 
 分布式调度器标签，hitrace命令行工具对应tagName:dsched。
+
+**类型：** number
 
 **起始版本：** 12
 
@@ -176,6 +204,8 @@ const DISTRIBUTED_SCREEN: number
 
 分布式屏幕标签，hitrace命令行工具对应tagName:dscreen。
 
+**类型：** number
+
 **起始版本：** 12
 
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
@@ -187,6 +217,8 @@ const FFRT: number
 ```
 
 FFRT任务标签，hitrace命令行工具对应tagName:ffrt。
+
+**类型：** number
 
 **起始版本：** 12
 
@@ -200,6 +232,8 @@ const FILE_MANAGEMENT: number
 
 文件管理系统标签，hitrace命令行工具对应tagName:filemanagement。
 
+**类型：** number
+
 **起始版本：** 12
 
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
@@ -211,6 +245,8 @@ const GLOBAL_RESOURCE_MANAGER: number
 ```
 
 全局资源管理标签，hitrace命令行工具对应tagName:gresource。
+
+**类型：** number
 
 **起始版本：** 12
 
@@ -224,6 +260,8 @@ const GRAPHICS: number
 
 图形模块标签，hitrace命令行工具对应tagName:graphic。
 
+**类型：** number
+
 **起始版本：** 12
 
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
@@ -235,6 +273,8 @@ const HDF: number
 ```
 
 HDF子系统标签，hitrace命令行工具对应tagName:hdf。
+
+**类型：** number
 
 **起始版本：** 12
 
@@ -248,6 +288,8 @@ const IMAGE: number
 
 图片模块标签，hitrace命令行工具对应tagName:zimage。
 
+**类型：** number
+
 **起始版本：** 12
 
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
@@ -259,6 +301,8 @@ const MEDIA: number
 ```
 
 媒体模块标签，hitrace命令行工具对应tagName:zmedia。
+
+**类型：** number
 
 **起始版本：** 12
 
@@ -272,6 +316,8 @@ const MISC: number
 
 MISC模块标签，hitrace命令行工具对应tagName:misc。
 
+**类型：** number
+
 **起始版本：** 12
 
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
@@ -283,6 +329,8 @@ const MULTIMODAL_INPUT: number
 ```
 
 多模态输入模块标签，hitrace命令行工具对应tagName:multimodalinput。
+
+**类型：** number
 
 **起始版本：** 12
 
@@ -296,6 +344,8 @@ const NET: number
 
 网络标签，hitrace命令行工具对应tagName:net。
 
+**类型：** number
+
 **起始版本：** 12
 
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
@@ -307,6 +357,8 @@ const NOTIFICATION: number
 ```
 
 通知模块标签，hitrace命令行工具对应tagName:notification。
+
+**类型：** number
 
 **起始版本：** 12
 
@@ -320,6 +372,8 @@ const NWEB: number
 
 Nweb标签，hitrace命令行工具对应tagName:nweb。
 
+**类型：** number
+
 **起始版本：** 12
 
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
@@ -331,6 +385,8 @@ const OHOS: number
 ```
 
 OHOS通用标签，hitrace命令行工具对应tagName:ohos。
+
+**类型：** number
 
 **起始版本：** 12
 
@@ -344,6 +400,8 @@ const POWER_MANAGER: number
 
 电源管理标签，hitrace命令行工具对应tagName:power。
 
+**类型：** number
+
 **起始版本：** 12
 
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
@@ -355,6 +413,8 @@ const RPC: number
 ```
 
 RPC标签，hitrace命令行工具对应tagName:rpc。
+
+**类型：** number
 
 **起始版本：** 12
 
@@ -368,6 +428,8 @@ const SAMGR: number
 
 系统能力管理标签，hitrace命令行工具对应tagName:samgr。
 
+**类型：** number
+
 **起始版本：** 12
 
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
@@ -379,6 +441,8 @@ const WINDOW_MANAGER: number
 ```
 
 窗口管理标签，hitrace命令行工具对应tagName:window。
+
+**类型：** number
 
 **起始版本：** 12
 

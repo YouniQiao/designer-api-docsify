@@ -24,8 +24,9 @@ addEvent(event: Event): Promise<number>
 
 **需要权限：** 
 - API版本23+：ohos.permission.WRITE_CALENDAR or ohos.permission.WRITE_WHOLE_CALENDAR
+- API版本10-22：N/A
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Applications.CalendarData
 
@@ -92,8 +93,9 @@ addEvent(event: Event, callback: AsyncCallback<number>): void
 
 **需要权限：** 
 - API版本23+：ohos.permission.WRITE_CALENDAR or ohos.permission.WRITE_WHOLE_CALENDAR
+- API版本10-22：N/A
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Applications.CalendarData
 
@@ -155,6 +157,7 @@ addEvents(events: Event[]): Promise<void>
 
 **需要权限：** 
 - API版本23+：ohos.permission.WRITE_CALENDAR or ohos.permission.WRITE_WHOLE_CALENDAR
+- API版本10-22：N/A
 
 **系统能力：** SystemCapability.Applications.CalendarData
 
@@ -228,6 +231,7 @@ addEvents(events: Event[], callback: AsyncCallback<void>): void
 
 **需要权限：** 
 - API版本23+：ohos.permission.WRITE_CALENDAR or ohos.permission.WRITE_WHOLE_CALENDAR
+- API版本10-22：N/A
 
 **系统能力：** SystemCapability.Applications.CalendarData
 
@@ -360,7 +364,7 @@ deleteEvent(id: number, callback: AsyncCallback<void>): void
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本21开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本21开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Applications.CalendarData
 
@@ -500,7 +504,7 @@ deleteEvents(ids: number[], callback: AsyncCallback<void>): void
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本21开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本21开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Applications.CalendarData
 
@@ -658,6 +662,7 @@ getEvents(eventFilter?: EventFilter, eventKey?: (keyof Event)[]): Promise<Event[
 
 **需要权限：** 
 - API版本23+：ohos.permission.READ_CALENDAR or ohos.permission.READ_WHOLE_CALENDAR
+- API版本10-22：N/A
 
 **系统能力：** SystemCapability.Applications.CalendarData
 
@@ -734,6 +739,7 @@ getEvents(eventFilter: EventFilter, eventKey: (keyof Event)[], callback: AsyncCa
 
 **需要权限：** 
 - API版本23+：ohos.permission.READ_CALENDAR or ohos.permission.READ_WHOLE_CALENDAR
+- API版本10-22：N/A
 
 **系统能力：** SystemCapability.Applications.CalendarData
 
@@ -820,6 +826,7 @@ getEvents(callback: AsyncCallback<Event[]>):void
 
 **需要权限：** 
 - API版本23+：ohos.permission.READ_CALENDAR or ohos.permission.READ_WHOLE_CALENDAR
+- API版本10-22：N/A
 
 **系统能力：** SystemCapability.Applications.CalendarData
 
@@ -875,7 +882,7 @@ Opens the event edit page.
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Applications.CalendarData
 
@@ -961,8 +968,9 @@ queryEventInstances(start: number, end: number, ids?: number[], eventKey?: (keyo
 
 **需要权限：** 
 - API版本23+：ohos.permission.READ_CALENDAR or ohos.permission.READ_WHOLE_CALENDAR
+- API版本18-22：N/A
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Applications.CalendarData
 
@@ -1286,6 +1294,6 @@ readonly id: number
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Applications.CalendarData

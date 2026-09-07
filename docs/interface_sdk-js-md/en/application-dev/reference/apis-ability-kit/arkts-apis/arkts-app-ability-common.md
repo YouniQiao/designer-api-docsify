@@ -4,6 +4,9 @@ You can use this module to reference the ability public module class.
 
 **Since:** 9
 
+**Model restriction:** 
+- API version 11 and later: This API can be used in both the stage model and FA model.
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## Modules to Import

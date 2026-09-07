@@ -16,7 +16,7 @@ function alloc(size: number, fill?: string | Buffer | number | number | number, 
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -25,7 +25,7 @@ function alloc(size: number, fill?: string | Buffer | number | number | number, 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | size | number | 是 | 指定的Buffer对象长度，单位：字节。取值为正整数，最大值为2^32-1，即4294967295。 |
-| fill | string \| Buffer \| number \| number \| number | 否 | 填充至新缓冲区的值。默认值：0。<br>**起始版本：** 9 - 10 |
+| fill | string \| Buffer \| number \| number \| number | 否 | 填充至新缓冲区的值。默认值：0。<br>**适用版本：** 9 - 10 |
 | encoding | BufferEncoding | 否 | 编码格式（当fill为string时，才有意义）。默认值：'utf8'。 |
 
 **返回值：**

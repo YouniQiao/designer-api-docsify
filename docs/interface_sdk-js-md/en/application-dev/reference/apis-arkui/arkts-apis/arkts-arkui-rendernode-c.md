@@ -1188,10 +1188,10 @@ struct Index {
 ## backgroundBlur
 
 ```TypeScript
-get backgroundBlur(): BackgroundBlur
+set backgroundBlur(blurValue: BackgroundBlur | undefined)
 ```
 
-Get the background blur effect.
+Sets a background blur effect.
 
 **Type:** [BackgroundBlur](arkts-arkui-graphics-backgroundblur-i.md)
 
@@ -1287,17 +1287,35 @@ struct Index {
 }
 ```
 
+```TypeScript
+get backgroundBlur(): BackgroundBlur
+```
+
+Get the background blur effect.
+
+**Type:** [BackgroundBlur](arkts-arkui-graphics-backgroundblur-i.md)
+
+**Since:** 26.0.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Examples**
+
+See [backgroundBlur](#backgroundblur)
+
 ## backgroundColor
 
 ```TypeScript
-get backgroundColor(): number
+set backgroundColor(color: number)
 ```
 
-Get the background color of the RenderNode.
+Sets the background color for this RenderNode.
 
 **Type:** number
-
-**Default:** 0X00000000 [since 11 - 11]
 
 **Since:** 11
 
@@ -1347,17 +1365,37 @@ struct Index {
 }
 ```
 
+```TypeScript
+get backgroundColor(): number
+```
+
+Get the background color of the RenderNode.
+
+**Type:** number
+
+**Default:** 0X00000000 [since 11 - 11]
+
+**Since:** 11
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Examples**
+
+See [backgroundColor](#backgroundcolor)
+
 ## borderColor
 
 ```TypeScript
-get borderColor(): Edges<number>
+set borderColor(color: Edges<number>)
 ```
 
-Get border color of the RenderNode.
+Sets the border color for this RenderNode.
 
 **Type:** [Edges](arkts-arkui-graphics-edges-i.md)&lt;number&gt;
-
-**Default:** 0XFF000000
 
 **Since:** 12
 
@@ -1411,17 +1449,37 @@ struct Index {
 }
 ```
 
+```TypeScript
+get borderColor(): Edges<number>
+```
+
+Get border color of the RenderNode.
+
+**Type:** [Edges](arkts-arkui-graphics-edges-i.md)&lt;number&gt;
+
+**Default:** 0XFF000000
+
+**Since:** 12
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Examples**
+
+See [borderColor](#bordercolor)
+
 ## borderRadius
 
 ```TypeScript
-get borderRadius(): BorderRadiuses
+set borderRadius(radius: BorderRadiuses)
 ```
 
-Get border radius of the RenderNode.
+Sets the border corner radius for this RenderNode.
 
 **Type:** [BorderRadiuses](arkts-arkui-borderradiuses-t.md)
-
-**Default:** 0
 
 **Since:** 12
 
@@ -1474,13 +1532,35 @@ struct Index {
 }
 ```
 
+```TypeScript
+get borderRadius(): BorderRadiuses
+```
+
+Get border radius of the RenderNode.
+
+**Type:** [BorderRadiuses](arkts-arkui-borderradiuses-t.md)
+
+**Default:** 0
+
+**Since:** 12
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Examples**
+
+See [borderRadius](#borderradius)
+
 ## borderStyle
 
 ```TypeScript
-get borderStyle(): Edges<BorderStyle>
+set borderStyle(style: Edges<BorderStyle>)
 ```
 
-Get border style of the RenderNode.
+Sets the border style for this RenderNode.
 
 **Type:** [Edges](arkts-arkui-graphics-edges-i.md)&lt;[BorderStyle](arkts-arkui-borderstyle-e.md)&gt;
 
@@ -1541,17 +1621,35 @@ struct Index {
 }
 ```
 
+```TypeScript
+get borderStyle(): Edges<BorderStyle>
+```
+
+Get border style of the RenderNode.
+
+**Type:** [Edges](arkts-arkui-graphics-edges-i.md)&lt;[BorderStyle](arkts-arkui-borderstyle-e.md)&gt;
+
+**Since:** 12
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Examples**
+
+See [borderStyle](#borderstyle)
+
 ## borderWidth
 
 ```TypeScript
-get borderWidth(): Edges<number>
+set borderWidth(width: Edges<number>)
 ```
 
-Get border width of the RenderNode.
+Sets the border width for this RenderNode.
 
 **Type:** [Edges](arkts-arkui-graphics-edges-i.md)&lt;number&gt;
-
-**Default:** 0
 
 **Since:** 12
 
@@ -1604,17 +1702,37 @@ struct Index {
 }
 ```
 
+```TypeScript
+get borderWidth(): Edges<number>
+```
+
+Get border width of the RenderNode.
+
+**Type:** [Edges](arkts-arkui-graphics-edges-i.md)&lt;number&gt;
+
+**Default:** 0
+
+**Since:** 12
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Examples**
+
+See [borderWidth](#borderwidth)
+
 ## clipToFrame
 
 ```TypeScript
-get clipToFrame(): boolean
+set clipToFrame(useClip: boolean)
 ```
 
-Get whether the RenderNode clip to frame.
+Sets whether to clip this RenderNode. The value **true** means to clip the RenderNode to its set size.
 
 **Type:** boolean
-
-**Default:** true [since 11 - 11]
 
 **Since:** 11
 
@@ -1671,13 +1789,35 @@ struct Index {
 }
 ```
 
+```TypeScript
+get clipToFrame(): boolean
+```
+
+Get whether the RenderNode clip to frame.
+
+**Type:** boolean
+
+**Default:** true [since 11 - 11]
+
+**Since:** 11
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Examples**
+
+See [clipToFrame](#cliptoframe)
+
 ## contentBlur
 
 ```TypeScript
-get contentBlur(): ContentBlur
+set contentBlur(blurValue: ContentBlur | undefined)
 ```
 
-Get the content blur effect.
+Sets a content blur effect.
 
 **Type:** [ContentBlur](arkts-arkui-graphics-contentblur-i.md)
 
@@ -1773,13 +1913,33 @@ struct Index {
 }
 ```
 
+```TypeScript
+get contentBlur(): ContentBlur
+```
+
+Get the content blur effect.
+
+**Type:** [ContentBlur](arkts-arkui-graphics-contentblur-i.md)
+
+**Since:** 26.0.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Examples**
+
+See [contentBlur](#contentblur)
+
 ## foregroundBlur
 
 ```TypeScript
-get foregroundBlur(): ForegroundBlur
+set foregroundBlur(blurValue: ForegroundBlur | undefined)
 ```
 
-Get the foreground blur effect.
+Sets a foreground blur effect.
 
 **Type:** [ForegroundBlur](arkts-arkui-graphics-foregroundblur-i.md)
 
@@ -1874,17 +2034,35 @@ struct Index {
 }
 ```
 
+```TypeScript
+get foregroundBlur(): ForegroundBlur
+```
+
+Get the foreground blur effect.
+
+**Type:** [ForegroundBlur](arkts-arkui-graphics-foregroundblur-i.md)
+
+**Since:** 26.0.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Examples**
+
+See [foregroundBlur](#foregroundblur)
+
 ## frame
 
 ```TypeScript
-get frame(): Frame
+set frame(frame: Frame)
 ```
 
-Get frame info of the RenderNode.
+Sets the size and position for this RenderNode. When this parameter is used together with position and size, the one that is set later in time is prioritized.
 
 **Type:** [Frame](arkts-arkui-graphics-frame-i.md)
-
-**Default:** Frame { x: 0, y: 0, width: 0, height: 0 } [since 11 - 11]
 
 **Since:** 11
 
@@ -1935,13 +2113,35 @@ struct Index {
 }
 ```
 
+```TypeScript
+get frame(): Frame
+```
+
+Get frame info of the RenderNode.
+
+**Type:** [Frame](arkts-arkui-graphics-frame-i.md)
+
+**Default:** Frame { x: 0, y: 0, width: 0, height: 0 } [since 11 - 11]
+
+**Since:** 11
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Examples**
+
+See [frame](#frame)
+
 ## label
 
 ```TypeScript
-get label(): string
+set label(label: string)
 ```
 
-Get label of the RenderNode.
+Sets the label for this RenderNode. If the RenderNode was created with **new**, the set label will appear in the node Inspector information.
 
 **Type:** string
 
@@ -1996,17 +2196,35 @@ struct Index {
 }
 ```
 
+```TypeScript
+get label(): string
+```
+
+Get label of the RenderNode.
+
+**Type:** string
+
+**Since:** 12
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Examples**
+
+See [label](#label)
+
 ## lengthMetricsUnit
 
 ```TypeScript
-get lengthMetricsUnit(): LengthMetricsUnit
+set lengthMetricsUnit(unit: LengthMetricsUnit)
 ```
 
-Get the length metrics unit of RenderNode.
+Sets the metric unit used by attributes of this RenderNode.
 
 **Type:** [LengthMetricsUnit](arkts-arkui-graphics-lengthmetricsunit-e.md)
-
-**Default:** LengthMetricsUnit.DEFAULT
 
 **Since:** 12
 
@@ -2075,17 +2293,39 @@ struct Index {
 }
 ```
 
+```TypeScript
+get lengthMetricsUnit(): LengthMetricsUnit
+```
+
+Get the length metrics unit of RenderNode.
+
+**Type:** [LengthMetricsUnit](arkts-arkui-graphics-lengthmetricsunit-e.md)
+
+**Default:** LengthMetricsUnit.DEFAULT
+
+**Since:** 12
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Examples**
+
+See [lengthMetricsUnit](#lengthmetricsunit)
+
 ## markNodeGroup
 
 ```TypeScript
-get markNodeGroup(): boolean
+set markNodeGroup(isNodeGroup: boolean)
 ```
 
-Get whether to preferentially draw the node and its children.
+Sets whether to enable drawing priority for this node and its child nodes. When this feature is enabled, visual attributes like opacity are applied during composition after drawing completes. The configuration result is as follows.
+
+
 
 **Type:** boolean
-
-**Default:** false
 
 **Since:** 12
 
@@ -2156,17 +2396,37 @@ struct Index {
 }
 ```
 
+```TypeScript
+get markNodeGroup(): boolean
+```
+
+Get whether to preferentially draw the node and its children.
+
+**Type:** boolean
+
+**Default:** false
+
+**Since:** 12
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Examples**
+
+See [markNodeGroup](#marknodegroup)
+
 ## opacity
 
 ```TypeScript
-get opacity(): number
+set opacity(value: number)
 ```
 
-Get opacity of the RenderNode.
+Sets the opacity for this RenderNode. If the value passed in is less than **0**, the opacity is set to **0**. If the value passed in is greater than **1**, the opacity is set to **1**.
 
 **Type:** number
-
-**Default:** 1 [since 11 - 11]
 
 **Since:** 11
 
@@ -2218,17 +2478,37 @@ struct Index {
 }
 ```
 
+```TypeScript
+get opacity(): number
+```
+
+Get opacity of the RenderNode.
+
+**Type:** number
+
+**Default:** 1 [since 11 - 11]
+
+**Since:** 11
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Examples**
+
+See [opacity](#opacity)
+
 ## pivot
 
 ```TypeScript
-get pivot(): Pivot
+set pivot(pivot: Pivot)
 ```
 
-Get pivot vector of the RenderNode.
+Sets the pivot for this RenderNode, which affects the scaling and rotation effects of the RenderNode.
 
 **Type:** [Pivot](arkts-arkui-pivot-t.md)
-
-**Default:** Pivot { x: 0.5, y: 0.5 } [since 11 - 11]
 
 **Since:** 11
 
@@ -2282,17 +2562,37 @@ struct Index {
 }
 ```
 
+```TypeScript
+get pivot(): Pivot
+```
+
+Get pivot vector of the RenderNode.
+
+**Type:** [Pivot](arkts-arkui-pivot-t.md)
+
+**Default:** Pivot { x: 0.5, y: 0.5 } [since 11 - 11]
+
+**Since:** 11
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Examples**
+
+See [pivot](#pivot)
+
 ## position
 
 ```TypeScript
-get position(): Position
+set position(position: Position)
 ```
 
-Get frame position of the RenderNode.
+Sets the position for this RenderNode.
 
 **Type:** [Position](arkts-arkui-position-t.md)
-
-**Default:** Position { x: 0, y: 0 } [since 11 - 11]
 
 **Since:** 11
 
@@ -2344,17 +2644,37 @@ struct Index {
 }
 ```
 
+```TypeScript
+get position(): Position
+```
+
+Get frame position of the RenderNode.
+
+**Type:** [Position](arkts-arkui-position-t.md)
+
+**Default:** Position { x: 0, y: 0 } [since 11 - 11]
+
+**Since:** 11
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Examples**
+
+See [position](#position)
+
 ## rotation
 
 ```TypeScript
-get rotation(): Rotation
+set rotation(rotation: Rotation)
 ```
 
-Get rotation vector of the RenderNode.
+Sets the rotation angle for this RenderNode.
 
 **Type:** [Rotation](arkts-arkui-rotation-t.md)
-
-**Default:** Rotation { x: 0, y: 0, z: 0 } [since 11 - 11]
 
 **Since:** 11
 
@@ -2406,17 +2726,37 @@ struct Index {
 }
 ```
 
+```TypeScript
+get rotation(): Rotation
+```
+
+Get rotation vector of the RenderNode.
+
+**Type:** [Rotation](arkts-arkui-rotation-t.md)
+
+**Default:** Rotation { x: 0, y: 0, z: 0 } [since 11 - 11]
+
+**Since:** 11
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Examples**
+
+See [rotation](#rotation)
+
 ## scale
 
 ```TypeScript
-get scale(): Scale
+set scale(scale: Scale)
 ```
 
-Get scale vector of the RenderNode.
+Sets the scale factor for this RenderNode.
 
 **Type:** [Scale](arkts-arkui-scale-t.md)
-
-**Default:** Scale { x: 1, y: 1 } [since 11 - 11]
 
 **Since:** 11
 
@@ -2468,17 +2808,37 @@ struct Index {
 }
 ```
 
+```TypeScript
+get scale(): Scale
+```
+
+Get scale vector of the RenderNode.
+
+**Type:** [Scale](arkts-arkui-scale-t.md)
+
+**Default:** Scale { x: 1, y: 1 } [since 11 - 11]
+
+**Since:** 11
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Examples**
+
+See [scale](#scale)
+
 ## shadowAlpha
 
 ```TypeScript
-get shadowAlpha(): number
+set shadowAlpha(alpha: number)
 ```
 
-Get shadow alpha of the RenderNode.
+Sets the alpha value of the shadow color for this RenderNode.
 
 **Type:** number
-
-**Default:** 0 [since 11 - 11]
 
 **Since:** 11
 
@@ -2533,17 +2893,37 @@ struct Index {
 }
 ```
 
-## shadowColor
-
 ```TypeScript
-get shadowColor(): number
+get shadowAlpha(): number
 ```
 
-Get shadow color of the RenderNode.
+Get shadow alpha of the RenderNode.
 
 **Type:** number
 
-**Default:** 0X00000000 [since 11 - 11]
+**Default:** 0 [since 11 - 11]
+
+**Since:** 11
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Examples**
+
+See [shadowAlpha](#shadowalpha)
+
+## shadowColor
+
+```TypeScript
+set shadowColor(color: number)
+```
+
+Sets the shadow color for this RenderNode, in ARGB format. If shadowAlpha is set, the opacity is subject to **shadowAlpha**.
+
+**Type:** number
 
 **Since:** 11
 
@@ -2596,17 +2976,37 @@ struct Index {
 }
 ```
 
-## shadowElevation
-
 ```TypeScript
-get shadowElevation(): number
+get shadowColor(): number
 ```
 
-Get shadow elevation of the RenderNode.
+Get shadow color of the RenderNode.
 
 **Type:** number
 
-**Default:** 0 [since 11 - 11]
+**Default:** 0X00000000 [since 11 - 11]
+
+**Since:** 11
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Examples**
+
+See [shadowColor](#shadowcolor)
+
+## shadowElevation
+
+```TypeScript
+set shadowElevation(elevation: number)
+```
+
+Sets the shadow elevation for this RenderNode.
+
+**Type:** number
 
 **Since:** 11
 
@@ -2660,17 +3060,37 @@ struct Index {
 }
 ```
 
+```TypeScript
+get shadowElevation(): number
+```
+
+Get shadow elevation of the RenderNode.
+
+**Type:** number
+
+**Default:** 0 [since 11 - 11]
+
+**Since:** 11
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Examples**
+
+See [shadowElevation](#shadowelevation)
+
 ## shadowOffset
 
 ```TypeScript
-get shadowOffset(): Offset
+set shadowOffset(offset: Offset)
 ```
 
-Get shadow offset of the RenderNode.
+Sets the shadow offset for this RenderNode.
 
 **Type:** [Offset](arkts-arkui-offset-t.md)
-
-**Default:** Offset { x: 0, y: 0 } [since 11 - 11]
 
 **Since:** 11
 
@@ -2724,17 +3144,37 @@ struct Index {
 }
 ```
 
+```TypeScript
+get shadowOffset(): Offset
+```
+
+Get shadow offset of the RenderNode.
+
+**Type:** [Offset](arkts-arkui-offset-t.md)
+
+**Default:** Offset { x: 0, y: 0 } [since 11 - 11]
+
+**Since:** 11
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Examples**
+
+See [shadowOffset](#shadowoffset)
+
 ## shadowRadius
 
 ```TypeScript
-get shadowRadius(): number
+set shadowRadius(radius: number)
 ```
 
-Get shadow radius of the RenderNode.
+Sets the shadow blur radius for this RenderNode.
 
 **Type:** number
-
-**Default:** 0 [since 11 - 11]
 
 **Since:** 11
 
@@ -2794,13 +3234,35 @@ struct Index {
 }
 ```
 
+```TypeScript
+get shadowRadius(): number
+```
+
+Get shadow radius of the RenderNode.
+
+**Type:** number
+
+**Default:** 0 [since 11 - 11]
+
+**Since:** 11
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Examples**
+
+See [shadowRadius](#shadowradius)
+
 ## shapeClip
 
 ```TypeScript
-get shapeClip(): ShapeClip
+set shapeClip(shapeClip: ShapeClip)
 ```
 
-Get shape clip of the RenderNode.
+Sets the clipping shape for this RenderNode.
 
 **Type:** [ShapeClip](arkts-arkui-graphics-shapeclip-c.md)
 
@@ -2912,13 +3374,33 @@ struct Index {
 }
 ```
 
+```TypeScript
+get shapeClip(): ShapeClip
+```
+
+Get shape clip of the RenderNode.
+
+**Type:** [ShapeClip](arkts-arkui-graphics-shapeclip-c.md)
+
+**Since:** 12
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Examples**
+
+See [shapeClip](#shapeclip)
+
 ## shapeMask
 
 ```TypeScript
-get shapeMask(): ShapeMask
+set shapeMask(shapeMask: ShapeMask)
 ```
 
-Get shape mask of the RenderNode.
+Sets the mask for this RenderNode.
 
 **Type:** [ShapeMask](arkts-arkui-graphics-shapemask-c.md)
 
@@ -2980,17 +3462,35 @@ struct Index {
 }
 ```
 
+```TypeScript
+get shapeMask(): ShapeMask
+```
+
+Get shape mask of the RenderNode.
+
+**Type:** [ShapeMask](arkts-arkui-graphics-shapemask-c.md)
+
+**Since:** 12
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Examples**
+
+See [shapeMask](#shapemask)
+
 ## size
 
 ```TypeScript
-get size(): Size
+set size(size: Size)
 ```
 
-Get frame size of the RenderNode.
+Sets the size for this RenderNode.
 
 **Type:** Size
-
-**Default:** Size { width: 0, height: 0 } [since 11 - 11]
 
 **Since:** 11
 
@@ -3041,17 +3541,37 @@ struct Index {
 }
 ```
 
+```TypeScript
+get size(): Size
+```
+
+Get frame size of the RenderNode.
+
+**Type:** Size
+
+**Default:** Size { width: 0, height: 0 } [since 11 - 11]
+
+**Since:** 11
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Examples**
+
+See [size](#size)
+
 ## transform
 
 ```TypeScript
-get transform(): Matrix4
+set transform(transform: Matrix4)
 ```
 
-Get transform info of the RenderNode.
+Sets the transformation matrix for this RenderNode.
 
 **Type:** [Matrix4](arkts-arkui-matrix4-t.md)
-
-**Default:** Matrix4 [ 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1 ] [since 11 - 11]
 
 **Since:** 11
 
@@ -3108,17 +3628,37 @@ struct Index {
 }
 ```
 
+```TypeScript
+get transform(): Matrix4
+```
+
+Get transform info of the RenderNode.
+
+**Type:** [Matrix4](arkts-arkui-matrix4-t.md)
+
+**Default:** Matrix4 [ 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1 ] [since 11 - 11]
+
+**Since:** 11
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Examples**
+
+See [transform](#transform)
+
 ## translation
 
 ```TypeScript
-get translation(): Translation
+set translation(translation: Translation)
 ```
 
-Get translation vector of the RenderNode.
+Sets the translation amount for this RenderNode.
 
 **Type:** [Translation](arkts-arkui-translation-t.md)
-
-**Default:** Translation { x: 0, y: 0 } [since 11 - 11]
 
 **Since:** 11
 
@@ -3169,3 +3709,25 @@ struct Index {
   }
 }
 ```
+
+```TypeScript
+get translation(): Translation
+```
+
+Get translation vector of the RenderNode.
+
+**Type:** [Translation](arkts-arkui-translation-t.md)
+
+**Default:** Translation { x: 0, y: 0 } [since 11 - 11]
+
+**Since:** 11
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Examples**
+
+See [translation](#translation)

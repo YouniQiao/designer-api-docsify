@@ -8,6 +8,8 @@ const TONE_CATEGORY_ALARM: number
 
 闹钟铃声类别。
 
+**类型：** number
+
 **起始版本：** 12
 
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
@@ -38,6 +40,8 @@ const TONE_CATEGORY_NOTIFICATION: number
 
 通知铃声类别。
 
+**类型：** number
+
 **起始版本：** 12
 
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
@@ -51,6 +55,8 @@ const TONE_CATEGORY_NOTIFICATION_APP: number
 ```
 
 应用级通知铃声类别。
+
+**类型：** number
 
 **起始版本：** 22
 
@@ -66,6 +72,8 @@ const TONE_CATEGORY_RINGTONE: number
 
 铃声类别。
 
+**类型：** number
+
 **起始版本：** 12
 
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
@@ -79,6 +87,8 @@ const TONE_CATEGORY_TEXT_MESSAGE: number
 ```
 
 短信铃声类别。
+
+**类型：** number
 
 **起始版本：** 12
 

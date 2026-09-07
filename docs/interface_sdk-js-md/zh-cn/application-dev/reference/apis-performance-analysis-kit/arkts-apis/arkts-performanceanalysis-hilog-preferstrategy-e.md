@@ -16,7 +16,7 @@ UNSET_LOGLEVEL = 0
 
 **起始版本：** 21
 
-**原子化服务API：** 从API版本21开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本21开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.HiviewDFX.HiLog
 
@@ -30,7 +30,7 @@ PREFER_CLOSE_LOG = 1
 
 **起始版本：** 21
 
-**原子化服务API：** 从API版本21开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本21开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.HiviewDFX.HiLog
 
@@ -44,7 +44,7 @@ PREFER_OPEN_LOG = 2
 
 **起始版本：** 21
 
-**原子化服务API：** 从API版本21开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本21开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.HiviewDFX.HiLog
 
@@ -63,9 +63,6 @@ hilog.info(0x0001, "testTag", 'this is an info level log, id: %{public}d', 5);
 ```
 
 由于全局日志起始为INFO，第一条日志可以正常打印。
-在设置进程最低日志级别为WARN，并选择策略PREFER_OPEN_LOG后，实际生效的最低日志级别是全局日志级别INFO，所以第二条和第三条日志均可正常打印。
-在设置进程最低日志级别为DEBUG，并选择策略PREFER_CLOSE_LOG后（等同于hilog.setMinLogLevel(hilog.LogLevel.DEBUG)），但是此时全局日志级别为INFO，所以第四条日志不满足全局日志级别，打印失败，第五条日志可以打印。
-最终打印结果如下所示：
 
 ```TypeScript
 08-07 23:50:01.532   13694-13694   A00001/testTag                  com.example.hilogDemo  I     this is an info level log, id: 1

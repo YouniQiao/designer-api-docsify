@@ -143,7 +143,6 @@ touchMove(touch: TouchPoint): Promise<void>
 **示例**
 
 参见[touchDown](#touchdown)示例。
-- simpleType:
 
 ## touchUp
 
@@ -184,4 +183,3 @@ touchUp(touch: TouchPoint): Promise<void>
 **示例**
 
 参见[touchDown](#touchdown)示例。
-- simpleType:

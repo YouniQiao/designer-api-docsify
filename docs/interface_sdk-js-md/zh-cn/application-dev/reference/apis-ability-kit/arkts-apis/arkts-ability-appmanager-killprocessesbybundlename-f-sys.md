@@ -18,7 +18,7 @@ function killProcessesByBundleName(bundleName: string): Promise<void>
 
 **需要权限：** 
 - API版本14+：ohos.permission.KILL_APP_PROCESSES or ohos.permission.CLEAN_BACKGROUND_PROCESSES
-- API版本9 - 13：ohos.permission.CLEAN_BACKGROUND_PROCESSES
+- API版本9-13：ohos.permission.CLEAN_BACKGROUND_PROCESSES
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -79,7 +79,7 @@ function killProcessesByBundleName(bundleName: string, callback: AsyncCallback<v
 
 **需要权限：** 
 - API版本14+：ohos.permission.KILL_APP_PROCESSES or ohos.permission.CLEAN_BACKGROUND_PROCESSES
-- API版本9 - 13：ohos.permission.CLEAN_BACKGROUND_PROCESSES
+- API版本9-13：ohos.permission.CLEAN_BACKGROUND_PROCESSES
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 

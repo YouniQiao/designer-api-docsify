@@ -37,7 +37,7 @@ Symbol icon of drop-down menu option.
 
 **symbolIcon** takes precedence over **icon**.
 
-**Type:** SymbolGlyphModifier
+**Type:** [SymbolGlyphModifier](arkts-arkui-symbolglyphmodifier-t.md)
 
 **Since:** 12
 

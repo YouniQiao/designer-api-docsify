@@ -16,7 +16,7 @@ INTENTION_UNKNOWN = -1
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -30,7 +30,7 @@ INTENTION_UP = 1
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -44,7 +44,7 @@ INTENTION_DOWN = 2
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -58,7 +58,7 @@ INTENTION_LEFT = 3
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -72,7 +72,7 @@ INTENTION_RIGHT = 4
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -86,7 +86,7 @@ INTENTION_SELECT = 5
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -100,7 +100,7 @@ INTENTION_ESCAPE = 6
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -114,7 +114,7 @@ INTENTION_BACK = 7
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -128,7 +128,7 @@ INTENTION_FORWARD = 8
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -142,7 +142,7 @@ INTENTION_MENU = 9
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -156,7 +156,7 @@ INTENTION_PAGE_UP = 11
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -170,7 +170,7 @@ INTENTION_PAGE_DOWN = 12
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -184,7 +184,7 @@ INTENTION_ZOOM_OUT = 13
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -198,6 +198,6 @@ INTENTION_ZOOM_IN = 14
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core

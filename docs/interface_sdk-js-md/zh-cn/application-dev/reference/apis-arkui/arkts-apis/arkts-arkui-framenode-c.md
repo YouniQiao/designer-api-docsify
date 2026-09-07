@@ -32,7 +32,7 @@ addComponentContent<T>(content: ComponentContent<T> | ReactiveComponentContent<T
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -40,7 +40,7 @@ addComponentContent<T>(content: ComponentContent<T> | ReactiveComponentContent<T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| content | [ComponentContent](arkts-arkui-componentcontent-c.md)&lt;T&gt; \| [ReactiveComponentContent](arkts-arkui-componentcontent-reactivecomponentcontent-c.md)&lt;T&gt; | 是 | FrameNode节点中显示的组件内容。<br>**起始版本：** 22 |
+| content | [ComponentContent](arkts-arkui-componentcontent-c.md)&lt;T&gt; \| [ReactiveComponentContent](arkts-arkui-componentcontent-reactivecomponentcontent-c.md)&lt;T&gt; | 是 | FrameNode节点中显示的组件内容。<br>**适用版本：** 22 |
 
 **错误码：**
 
@@ -60,7 +60,7 @@ addSupportedUIStates(uiStates: number, statesChangeHandler: UIStatesChangeHandle
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -75,7 +75,6 @@ addSupportedUIStates(uiStates: number, statesChangeHandler: UIStatesChangeHandle
 **示例**
 
 请参考组件设置和删除多态样式状态示例。
-- simpleType:
 
 ## adoptChild
 
@@ -87,7 +86,7 @@ adoptChild(child: FrameNode): void
 
 **起始版本：** 22
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -108,7 +107,6 @@ adoptChild(child: FrameNode): void
 **示例**
 
 完整示例请参考接纳为附属节点示例。
-- simpleType:
 
 ## appendChild
 
@@ -122,7 +120,7 @@ appendChild(node: FrameNode): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -142,7 +140,6 @@ appendChild(node: FrameNode): void
 **示例**
 
 请参考节点操作示例。
-- simpleType:
 
 ## cancelAnimations
 
@@ -156,7 +153,7 @@ cancelAnimations(properties: AnimationPropertyType[]): boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -175,7 +172,6 @@ cancelAnimations(properties: AnimationPropertyType[]): boolean
 **示例**
 
 请参考动画创建与取消示例。
-- simpleType:
 
 ## clearChildren
 
@@ -189,7 +185,7 @@ clearChildren(): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -202,7 +198,6 @@ clearChildren(): void
 **示例**
 
 请参考节点操作示例。
-- simpleType:
 
 ## constructor
 
@@ -216,7 +211,7 @@ FrameNode的构造函数。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -238,7 +233,7 @@ convertPosition(position: Position, targetNode: FrameNode): Position
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -344,7 +339,7 @@ convertPositionFromWindow(positionByWindow: Position): Position
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -370,7 +365,6 @@ convertPositionFromWindow(positionByWindow: Position): Position
 **示例**
 
 请参考局部与窗口坐标转换示例。
-- simpleType:
 
 ## convertPositionToWindow
 
@@ -384,7 +378,7 @@ convertPositionToWindow(positionByLocal: Position): Position
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -410,7 +404,6 @@ convertPositionToWindow(positionByLocal: Position): Position
 **示例**
 
 请参考局部与窗口坐标转换示例。
-- simpleType:
 
 ## createAnimation
 
@@ -424,7 +417,7 @@ createAnimation(property: AnimationPropertyType, startValue: Optional<number[]>,
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -446,7 +439,6 @@ createAnimation(property: AnimationPropertyType, startValue: Optional<number[]>,
 **示例**
 
 请参考动画创建与取消示例。
-- simpleType:
 
 ## createFrameNodes
 
@@ -460,7 +452,7 @@ static createFrameNodes(uiContext: UIContext, count: number): FrameNode[]
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -533,7 +525,7 @@ dispose(): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -637,7 +629,7 @@ disposeTree(): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -832,7 +824,7 @@ getChild(index: number): FrameNode | null
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -851,7 +843,6 @@ getChild(index: number): FrameNode | null
 **示例**
 
 请参考节点操作示例。
-- simpleType:
 
 ## getChild
 
@@ -865,7 +856,7 @@ getChild(index: number, expandMode?: ExpandMode): FrameNode | null
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本15开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -874,7 +865,7 @@ getChild(index: number, expandMode?: ExpandMode): FrameNode | null
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | index | number | 是 | 需要查询的子节点的序列号。index取值范围为[0, +∞)，若当前节点有n个子节点，index取值有效范围为[0, n-1]。 |
-| expandMode | [ExpandMode](arkts-arkui-framenode-expandmode-e.md) | 否 | [指定子节点展开模式。默认值：ExpandMode.EXPAND](arkts-arkui-framenode-expandmode-e.md) |
+| expandMode | [ExpandMode](arkts-arkui-framenode-expandmode-e.md) | 否 | 指定子节点展开模式。默认值：ExpandMode.EXPAND |
 
 **返回值：**
 
@@ -885,7 +876,6 @@ getChild(index: number, expandMode?: ExpandMode): FrameNode | null
 **示例**
 
 请参考LazyForEach场景节点操作示例。
-- simpleType:
 
 ## getChildrenCount
 
@@ -899,7 +889,7 @@ getChildrenCount(): number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -912,7 +902,6 @@ getChildrenCount(): number
 **示例**
 
 请参考节点操作示例。
-- simpleType:
 
 ## getChildrenCount
 
@@ -926,7 +915,7 @@ getChildrenCount(countMode?: ChildrenCountMode): number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1179,7 +1168,7 @@ getCrossLanguageOptions(): CrossLanguageOptions
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本15开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1192,7 +1181,6 @@ getCrossLanguageOptions(): CrossLanguageOptions
 **示例**
 
 请参考节点操作示例。
-- simpleType:
 
 ## getCustomProperty
 
@@ -1206,7 +1194,7 @@ getCustomProperty(name: string): Object | undefined
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1225,7 +1213,6 @@ getCustomProperty(name: string): Object | undefined
 **示例**
 
 请参考节点操作示例。
-- simpleType:
 
 ## getFirstChild
 
@@ -1239,7 +1226,7 @@ getFirstChild(): FrameNode | null
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1252,7 +1239,6 @@ getFirstChild(): FrameNode | null
 **示例**
 
 请参考节点操作示例。
-- simpleType:
 
 ## getFirstChildIndexWithoutExpand
 
@@ -1266,7 +1252,7 @@ getFirstChildIndexWithoutExpand(): number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本15开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1279,7 +1265,6 @@ getFirstChildIndexWithoutExpand(): number
 **示例**
 
 请参考LazyForEach场景节点操作示例。
-- simpleType:
 
 ## getFrameNodeById
 
@@ -1293,7 +1278,7 @@ getFrameNodeById(id: string): FrameNode | null
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1376,7 +1361,7 @@ getFrameNodeByUniqueId(id: number): FrameNode | null
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1460,7 +1445,7 @@ getGlobalPositionOnDisplay(): Position
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1473,7 +1458,6 @@ getGlobalPositionOnDisplay(): Position
 **示例**
 
 请参考节点操作示例。
-- simpleType:
 
 ## getId
 
@@ -1487,7 +1471,7 @@ getId(): string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1500,7 +1484,6 @@ getId(): string
 **示例**
 
 请参考节点操作示例。
-- simpleType:
 
 ## getInspectorInfo
 
@@ -1518,7 +1501,7 @@ getInspectorInfo(): Object
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1531,7 +1514,6 @@ getInspectorInfo(): Object
 **示例**
 
 请参考节点操作示例。
-- simpleType:
 
 ## getInteractionEventBindingInfo
 
@@ -1545,7 +1527,7 @@ getInteractionEventBindingInfo(eventType: EventQueryType): InteractionEventBindi
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1564,7 +1546,6 @@ getInteractionEventBindingInfo(eventType: EventQueryType): InteractionEventBindi
 **示例**
 
 请参考节点操作示例。
-- simpleType:
 
 ## getLastChildIndexWithoutExpand
 
@@ -1578,7 +1559,7 @@ getLastChildIndexWithoutExpand(): number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本15开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1591,7 +1572,6 @@ getLastChildIndexWithoutExpand(): number
 **示例**
 
 请参考LazyForEach场景节点操作示例。
-- simpleType:
 
 ## getLayoutPosition
 
@@ -1605,7 +1585,7 @@ getLayoutPosition(): Position
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1618,7 +1598,6 @@ getLayoutPosition(): Position
 **示例**
 
 请参考节点操作示例。
-- simpleType:
 
 ## getMeasuredSize
 
@@ -1632,7 +1611,7 @@ getMeasuredSize(): Size
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1645,7 +1624,6 @@ getMeasuredSize(): Size
 **示例**
 
 请参考节点操作示例。
-- simpleType:
 
 ## getNextSibling
 
@@ -1659,7 +1637,7 @@ getNextSibling(): FrameNode | null
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1672,7 +1650,6 @@ getNextSibling(): FrameNode | null
 **示例**
 
 请参考节点操作示例。
-- simpleType:
 
 ## getNodePropertyValue
 
@@ -1686,7 +1663,7 @@ getNodePropertyValue(property: AnimationPropertyType): number[]
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1705,7 +1682,6 @@ getNodePropertyValue(property: AnimationPropertyType): number[]
 **示例**
 
 请参考动画创建与取消示例。
-- simpleType:
 
 ## getNodeType
 
@@ -1719,7 +1695,7 @@ getNodeType(): string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1732,7 +1708,6 @@ getNodeType(): string
 **示例**
 
 请参考节点操作示例。
-- simpleType:
 
 ## getOpacity
 
@@ -1746,7 +1721,7 @@ getOpacity(): number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1759,7 +1734,6 @@ getOpacity(): number
 **示例**
 
 请参考节点操作示例。
-- simpleType:
 
 ## getParent
 
@@ -1773,7 +1747,7 @@ getParent(): FrameNode | null
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1786,7 +1760,6 @@ getParent(): FrameNode | null
 **示例**
 
 请参考节点操作示例和获取根节点示例。
-- simpleType:
 
 ## getPositionToParent
 
@@ -1800,7 +1773,7 @@ getPositionToParent(): Position
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1886,7 +1859,7 @@ getPositionToParentWithTransform(): Position
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1972,7 +1945,7 @@ getPositionToScreen(): Position
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -2058,7 +2031,7 @@ getPositionToScreenWithTransform(): Position
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -2144,7 +2117,7 @@ getPositionToWindow(): Position
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -2229,7 +2202,7 @@ getPositionToWindowWithTransform(): Position
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -2314,7 +2287,7 @@ getPreviousSibling(): FrameNode | null
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -2327,7 +2300,6 @@ getPreviousSibling(): FrameNode | null
 **示例**
 
 请参考节点操作示例。
-- simpleType:
 
 ## getRenderNode
 
@@ -2341,7 +2313,7 @@ getRenderNode(): RenderNode | null
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -2399,7 +2371,7 @@ getUniqueId(): number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -2412,7 +2384,6 @@ getUniqueId(): number
 **示例**
 
 请参考节点操作示例。
-- simpleType:
 
 ## getUserConfigBorderWidth
 
@@ -2426,7 +2397,7 @@ getUserConfigBorderWidth(): Edges<LengthMetrics>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -2439,7 +2410,6 @@ getUserConfigBorderWidth(): Edges<LengthMetrics>
 **示例**
 
 请参考节点操作示例。
-- simpleType:
 
 ## getUserConfigMargin
 
@@ -2453,7 +2423,7 @@ getUserConfigMargin(): Edges<LengthMetrics>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -2466,7 +2436,6 @@ getUserConfigMargin(): Edges<LengthMetrics>
 **示例**
 
 请参考节点操作示例。
-- simpleType:
 
 ## getUserConfigPadding
 
@@ -2480,7 +2449,7 @@ getUserConfigPadding(): Edges<LengthMetrics>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -2493,7 +2462,6 @@ getUserConfigPadding(): Edges<LengthMetrics>
 **示例**
 
 请参考节点操作示例。
-- simpleType:
 
 ## getUserConfigSize
 
@@ -2507,7 +2475,7 @@ getUserConfigSize(): SizeT<LengthMetrics>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -2520,7 +2488,6 @@ getUserConfigSize(): SizeT<LengthMetrics>
 **示例**
 
 请参考节点操作示例。
-- simpleType:
 
 ## insertChildAfter
 
@@ -2534,7 +2501,7 @@ insertChildAfter(child: FrameNode, sibling: FrameNode | null): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -2555,7 +2522,6 @@ insertChildAfter(child: FrameNode, sibling: FrameNode | null): void
 **示例**
 
 请参考节点操作示例。
-- simpleType:
 
 ## invalidate
 
@@ -2569,7 +2535,7 @@ invalidate(): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -2589,7 +2555,7 @@ invalidateAttributes(): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本21开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本21开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -2709,7 +2675,7 @@ isAttached(): boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -2722,7 +2688,6 @@ isAttached(): boolean
 **示例**
 
 请参考节点操作示例。
-- simpleType:
 
 ## isClipToFrame
 
@@ -2736,7 +2701,7 @@ isClipToFrame(): boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -2749,7 +2714,6 @@ isClipToFrame(): boolean
 **示例**
 
 请参考节点操作示例。
-- simpleType:
 
 ## isDisposed
 
@@ -2763,7 +2727,7 @@ isDisposed(): boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -2776,10 +2740,8 @@ isDisposed(): boolean
 **示例**
 
 请参考检验FrameNode是否有效示例。
-- simpleType:
 
 请参考检验NodeAdapter是否有效示例。
-- simpleType:
 
 ## isInRenderState
 
@@ -2793,7 +2755,7 @@ isInRenderState(): boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -2882,7 +2844,7 @@ isModifiable(): boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -2895,7 +2857,6 @@ isModifiable(): boolean
 **示例**
 
 请参考节点操作示例。
-- simpleType:
 
 ## isOnMainTree
 
@@ -2909,7 +2870,7 @@ isOnMainTree(): boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -3458,7 +3419,7 @@ isTransferred(): boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -3484,7 +3445,7 @@ isVisible(): boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -3497,7 +3458,6 @@ isVisible(): boolean
 **示例**
 
 请参考节点操作示例。
-- simpleType:
 
 ## layout
 
@@ -3511,7 +3471,7 @@ layout(position: Position): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -3524,7 +3484,6 @@ layout(position: Position): void
 **示例**
 
 请参考节点自定义示例。
-- simpleType:
 
 ## measure
 
@@ -3538,7 +3497,7 @@ measure(constraint: LayoutConstraint): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -3551,7 +3510,6 @@ measure(constraint: LayoutConstraint): void
 **示例**
 
 请参考节点自定义示例。
-- simpleType:
 
 ## moveTo
 
@@ -3574,7 +3532,7 @@ moveTo(targetParent: FrameNode, index?: number): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -3583,7 +3541,7 @@ moveTo(targetParent: FrameNode, index?: number): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | targetParent | [FrameNode](arkts-arkui-framenode-c.md) | 是 | 目标父节点。targetParent节点不可以为声明式创建的节点，即不可修改的FrameNode。若目标父节点不符合规格，则抛出异常信息。 |
-| index | number | 否 | 子节点序列号。当前FrameNode将被添加到目标FrameNode对应序列号的子节点之前，若目标FrameNode有n个节点，index取值范围为[0, n-1]。<br/>若参数无效或不指定，则添加到目标FrameNode的最后。默认值：-1 |
+| index | number | 否 | 子节点序列号。当前FrameNode将被添加到目标FrameNode对应序列号的子节点之前，若目标FrameNode有n个节点，index取值范围为[0, n-1]。&lt;br/ &gt;若参数无效或不指定，则添加到目标FrameNode的最后。默认值：-1 |
 
 **错误码：**
 
@@ -3595,7 +3553,6 @@ moveTo(targetParent: FrameNode, index?: number): void
 **示例**
 
 请参考节点操作示例。
-- simpleType:
 
 ## onDraw
 
@@ -3611,7 +3568,7 @@ FrameNode的自绘制方法，该方法会重写默认绘制方法，在FrameNod
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -3624,7 +3581,6 @@ FrameNode的自绘制方法，该方法会重写默认绘制方法，在FrameNod
 **示例**
 
 请参考节点自定义示例。
-- simpleType:
 
 ## onLayout
 
@@ -3638,7 +3594,7 @@ FrameNode的自定义布局方法，该方法会重写默认布局方法，在Fr
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -3651,7 +3607,6 @@ FrameNode的自定义布局方法，该方法会重写默认布局方法，在Fr
 **示例**
 
 请参考节点自定义示例。
-- simpleType:
 
 ## onMeasure
 
@@ -3665,7 +3620,7 @@ FrameNode的自定义测量方法，该方法会重写默认测量方法，在Fr
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -3678,7 +3633,6 @@ FrameNode的自定义测量方法，该方法会重写默认测量方法，在Fr
 **示例**
 
 请参考节点自定义示例。
-- simpleType:
 
 ## recycle
 
@@ -3692,14 +3646,13 @@ recycle(): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **示例**
 
 请参考节点复用回收使用示例。
-- simpleType:
 
 ## removeAdoptedChild
 
@@ -3711,7 +3664,7 @@ removeAdoptedChild(child: FrameNode): void
 
 **起始版本：** 22
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -3732,7 +3685,6 @@ removeAdoptedChild(child: FrameNode): void
 **示例**
 
 完整示例请参考接纳为附属节点示例。
-- simpleType:
 
 ## removeChild
 
@@ -3746,7 +3698,7 @@ removeChild(node: FrameNode): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -3765,7 +3717,6 @@ removeChild(node: FrameNode): void
 **示例**
 
 请参考节点操作示例。
-- simpleType:
 
 ## removeSupportedUIStates
 
@@ -3779,7 +3730,7 @@ removeSupportedUIStates(uiStates: number): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -3792,7 +3743,6 @@ removeSupportedUIStates(uiStates: number): void
 **示例**
 
 请参考组件设置和删除多态样式状态示例。
-- simpleType:
 
 ## reuse
 
@@ -3806,14 +3756,13 @@ reuse(): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **示例**
 
 请参考节点复用回收使用示例。
-- simpleType:
 
 ## setCrossLanguageOptions
 
@@ -3840,7 +3789,7 @@ setCrossLanguageOptions(options: CrossLanguageOptions): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本15开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -3859,7 +3808,6 @@ setCrossLanguageOptions(options: CrossLanguageOptions): void
 **示例**
 
 请参考节点操作示例。
-- simpleType:
 
 ## setLayoutPosition
 
@@ -3873,7 +3821,7 @@ setLayoutPosition(position: Position): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -3886,7 +3834,6 @@ setLayoutPosition(position: Position): void
 **示例**
 
 请参考节点自定义示例。
-- simpleType:
 
 ## setMeasuredSize
 
@@ -3900,7 +3847,7 @@ setMeasuredSize(size: Size): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -3913,7 +3860,6 @@ setMeasuredSize(size: Size): void
 **示例**
 
 请参考节点自定义示例。
-- simpleType:
 
 ## setNeedsLayout
 
@@ -3927,14 +3873,13 @@ setNeedsLayout(): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **示例**
 
 请参考节点自定义示例。
-- simpleType:
 
 ## commonAttribute
 
@@ -3959,14 +3904,13 @@ get commonAttribute(): CommonAttribute
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **示例**
 
 请参考基础事件示例。
-- simpleType:
 
 ## commonEvent
 
@@ -3984,14 +3928,13 @@ LazyForEach场景下，由于存在节点的销毁重建，对于重建的节点
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **示例**
 
 请参考基础事件示例和LazyForEach场景基础事件使用示例。
-- simpleType:
 
 ## gestureEvent
 
@@ -4009,11 +3952,10 @@ LazyForEach场景下，由于存在节点的销毁重建，对于重建的节点
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本14开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **示例**
 
 请参考手势事件示例。
-- simpleType:

@@ -18,7 +18,7 @@ Creates an ImageCreator instance by specifying the image width, height, format, 
 
 **Deprecated since:** 11
 
-**Substitutes:** [createImageCreator](#createimagecreator)(size: Size, format: ImageFormat, capacity: int)
+**Substitutes:** [createImageCreator](#createimagecreator-1)(size: Size, format: ImageFormat, capacity: int)
 
 **System capability:** SystemCapability.Multimedia.Image.ImageCreator
 

@@ -18,6 +18,7 @@ function enableLocationMock(): void
 
 **需要权限：** 
 - API版本20+：ohos.permission.MOCK_LOCATION
+- API版本9-19：N/A
 
 **系统能力：** SystemCapability.Location.Location.Core
 

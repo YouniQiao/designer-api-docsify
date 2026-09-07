@@ -4,8 +4,6 @@ Enumerates the text layout directions.
 
 **Since:** 22
 
-**Model restriction:** This API can be used only in the stage model.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## LTR

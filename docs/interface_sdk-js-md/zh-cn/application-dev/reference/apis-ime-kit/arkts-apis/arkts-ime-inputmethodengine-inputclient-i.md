@@ -1210,7 +1210,7 @@ insertTextSync(text: string): void
    
 > 同步接口阻塞主线程，容易影响UI交互，需谨慎使用。建议优先使用对应的异步接口
    
-> [insertText](#inserttext)。
+> [insertText](#inserttext-1)。
 
 **起始版本：** 10
 
@@ -1589,7 +1589,7 @@ selectByMovementSync(movement: Movement): void
    
 > 同步接口阻塞主线程，容易影响UI交互，需谨慎使用。建议优先使用对应的异步接口
    
-> [selectByMovement](#selectbymovement)。
+> [selectByMovement](#selectbymovement-1)。
 
 **起始版本：** 10
 

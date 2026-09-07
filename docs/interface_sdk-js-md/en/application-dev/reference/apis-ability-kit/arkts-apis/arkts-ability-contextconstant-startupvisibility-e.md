@@ -4,8 +4,6 @@ Enumerates the visibility statuses of the UIAbility after it is started. If the 
 
 **Since:** 12
 
-**Model restriction:** This API can be used only in the stage model.
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## STARTUP_HIDE
@@ -39,4 +37,3 @@ The target UIAbility is displayed normally after it is started in the new proces
 **Examples**
 
 See ContextConstant.ProcessMode.
-- simpleType:

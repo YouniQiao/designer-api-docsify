@@ -163,7 +163,7 @@ Sets whether to display the selected icon when the menu item is selected.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| SymbolGlyphModifier | Yes | Whether to display the selected icon when the menu item is selected.   **true**: Display the default check mark icon. **false**: Hide the selected state icon.   **ResourceStr**: Display the specified custom icon resource.   **SymbolGlyphModifier**: Display the specified HMSymbol icon.Default value: **false**.<br>**Since:** 12 |
+| value | boolean \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| [SymbolGlyphModifier](arkts-arkui-symbolglyphmodifier-t.md) | Yes | Whether to display the selected icon when the menu item is selected.   **true**: Display the default check mark icon. **false**: Hide the selected state icon.   **ResourceStr**: Display the specified custom icon resource.   **SymbolGlyphModifier**: Display the specified HMSymbol icon.Default value: **false**.<br>**Since:** 12 |
 
 ## subMenuBuilder
 

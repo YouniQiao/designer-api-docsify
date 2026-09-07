@@ -37,7 +37,6 @@ Obtains the **ProxySchemeFilter** information in the proxy rule.
 **Examples**
 
 For details about the sample code, see [removeProxyOverride](./arkts-apis-webview-ProxyController.md#removeproxyoverride).
-- simpleType:
 
 ## getUrl
 
@@ -62,7 +61,6 @@ Obtains the URL specified in the proxy rule.
 **Examples**
 
 For details about the sample code, see [removeProxyOverride](./arkts-apis-webview-ProxyController.md#removeproxyoverride).
-- simpleType:
 
 ```TypeScript
 // xxx.ets
@@ -114,7 +112,6 @@ struct WebComponent {
 ```
 
 For details about the sample code, see constructor.
-- simpleType:
 
 ```TypeScript
 // xxx.ets

@@ -80,7 +80,7 @@ KEYCODE_PLAYPAUSE是较早的定义，KEYCODE_MEDIA_PLAY_PAUSE为现代媒体键
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -94,7 +94,7 @@ KEYCODE_MEDIA_STOP = 11
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -108,7 +108,7 @@ KEYCODE_MEDIA_NEXT = 12
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -122,7 +122,7 @@ KEYCODE_MEDIA_PREVIOUS = 13
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -136,7 +136,7 @@ KEYCODE_MEDIA_REWIND = 14
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -150,7 +150,7 @@ KEYCODE_MEDIA_FAST_FORWARD = 15
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -1280,7 +1280,7 @@ KEYCODE_MEDIA_PLAY = 2085
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -1294,7 +1294,7 @@ KEYCODE_MEDIA_PAUSE = 2086
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 

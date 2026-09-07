@@ -25,7 +25,7 @@ font(value: Font)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -47,7 +47,7 @@ fontColor(value: ResourceColor)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -97,7 +97,7 @@ startMargin + endMargin超过组件宽度后startMargin和endMargin会被置0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -119,7 +119,7 @@ menuItemGroupDivider(options: DividerStyleOptions | undefined)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -141,7 +141,7 @@ radius(value: Dimension | BorderRadiuses)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -163,7 +163,7 @@ subMenuExpandingMode(mode: SubMenuExpandingMode)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -171,7 +171,7 @@ subMenuExpandingMode(mode: SubMenuExpandingMode)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mode | [SubMenuExpandingMode](arkts-arkui-submenuexpandingmode-e.md) | 是 | [Menu子菜单展开样式。默认值：SubMenuExpandingMode.SIDE_EXPAND](arkts-arkui-submenuexpandingmode-e.md) |
+| mode | [SubMenuExpandingMode](arkts-arkui-submenuexpandingmode-e.md) | 是 | Menu子菜单展开样式。默认值：SubMenuExpandingMode.SIDE_EXPAND |
 
 ## subMenuExpandSymbol
 
@@ -185,7 +185,7 @@ subMenuExpandSymbol(symbol: SymbolGlyphModifier)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -193,4 +193,4 @@ subMenuExpandSymbol(symbol: SymbolGlyphModifier)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| symbol | SymbolGlyphModifier | 是 | Menu子菜单展开符号。1、子菜单的展开样式为SubMenuExpandingMode.SIDE_EXPAND时，不显示展开符号。2、子菜单的展开样式为SubMenuExpandingMode.EMBEDDED_EXPAND时，展开时展开符号会顺时针旋转180°。默认值：`\\$r('sys.symbol.chevron_down').fontSize('24vp')` 3、子菜单的展开样式为SubMenuExpandingMode.STACK_EXPAND时，展开时展开符号会顺时针旋转90°。默认值：`\\$r('sys.symbol.chevron_forward').fontSize('20vp').padding('2vp')` |
+| symbol | [SymbolGlyphModifier](arkts-arkui-symbolglyphmodifier-t.md) | 是 | Menu子菜单展开符号。1、子菜单的展开样式为SubMenuExpandingMode.SIDE_EXPAND时，不显示展开符号。2、子菜单的展开样式为SubMenuExpandingMode.EMBEDDED_EXPAND时，展开时展开符号会顺时针旋转180°。默认值：`\\$r('sys.symbol.chevron_down').fontSize('24vp')` 3、子菜单的展开样式为SubMenuExpandingMode.STACK_EXPAND时，展开时展开符号会顺时针旋转90°。默认值：`\\$r('sys.symbol.chevron_forward').fontSize('20vp').padding('2vp')` |

@@ -17,6 +17,7 @@ Obtains the sandbox path of the pre-authorized **Download** directory.
 **Since:** 11
 
 **Required permissions:** 
+- API version 12 and later: N/A
 - API version 11: ohos.permission.READ_WRITE_DOWNLOAD_DIRECTORY
 
 **System capability:** SystemCapability.FileManagement.File.Environment.FolderObtain

@@ -4,8 +4,6 @@ Enumerates the spatial audio source type.
 
 **Since:** 24
 
-**Model restriction:** This API can be used only in the stage model.
-
 **System capability:** SystemCapability.Multimedia.Audio.Spatialization
 
 **System API:** This is a system API.

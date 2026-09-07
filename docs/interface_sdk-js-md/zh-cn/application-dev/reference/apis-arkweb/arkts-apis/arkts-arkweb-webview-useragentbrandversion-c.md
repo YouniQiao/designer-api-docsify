@@ -37,7 +37,6 @@ getBrand(): string
 **示例**
 
 完整示例代码参考[setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled)。
-- simpleType:
 
 ## getFullVersion
 
@@ -62,7 +61,6 @@ getFullVersion(): string
 **示例**
 
 完整示例代码参考[setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled)。
-- simpleType:
 
 ## getMajorVersion
 
@@ -87,7 +85,6 @@ getMajorVersion(): string
 **示例**
 
 完整示例代码参考[setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled)。
-- simpleType:
 
 ## setBrand
 
@@ -112,7 +109,6 @@ setBrand(brand: string): void
 **示例**
 
 完整示例代码参考[setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled)。
-- simpleType:
 
 ## setFullVersion
 
@@ -137,7 +133,6 @@ setFullVersion(fullVersion: string): void
 **示例**
 
 完整示例代码参考[setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled)。
-- simpleType:
 
 ## setMajorVersion
 
@@ -162,4 +157,3 @@ setMajorVersion(majorVersion: string): void
 **示例**
 
 完整示例代码参考[setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled)。
-- simpleType:

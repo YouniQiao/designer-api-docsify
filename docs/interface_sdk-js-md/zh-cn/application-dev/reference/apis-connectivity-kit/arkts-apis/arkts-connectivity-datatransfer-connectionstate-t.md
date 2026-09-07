@@ -12,4 +12,4 @@ type ConnectionState = nearlinkConstant.ConnectionState
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
-**类型：** [nearlinkConstant.ConnectionState](arkts-connectivity-nearlinkconstant-connectionstate-e.md)
+**类型：** nearlinkConstant.ConnectionState

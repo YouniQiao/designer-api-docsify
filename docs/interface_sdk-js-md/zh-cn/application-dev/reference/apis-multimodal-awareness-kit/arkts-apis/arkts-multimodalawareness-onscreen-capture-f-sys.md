@@ -18,8 +18,9 @@ function capture(capability: OnscreenAwarenessCap,
 **起始版本：** 23
 
 **需要权限：** 
-- API版本26.0.0+：ohos.permission.GET_SCREEN_CONTENT or ohos.permission.ONSCREEN_AWARENESS
-- API版本23 - 24：ohos.permission.GET_SCREEN_CONTENT
+- API版本26+：ohos.permission.GET_SCREEN_CONTENT or ohos.permission.ONSCREEN_AWARENESS
+- API版本25：N/A
+- API版本23-24：ohos.permission.GET_SCREEN_CONTENT
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

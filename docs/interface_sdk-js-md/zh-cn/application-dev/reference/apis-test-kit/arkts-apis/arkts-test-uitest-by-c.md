@@ -24,7 +24,7 @@ By类提供的所有API均为同步接口，建议使用者通过静态构造器
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 本接口仅在自动化测试脚本中使用。
+**测试接口：** 此接口仅在自动化测试脚本中使用。
 
 ## 导入模块
 
@@ -53,7 +53,7 @@ clickable(b?: boolean): By
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 本接口仅在自动化测试脚本中使用。
+**测试接口：** 此接口仅在自动化测试脚本中使用。
 
 **参数：**
 
@@ -96,7 +96,7 @@ enabled(b?: boolean): By
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 本接口仅在自动化测试脚本中使用。
+**测试接口：** 此接口仅在自动化测试脚本中使用。
 
 **参数：**
 
@@ -139,7 +139,7 @@ focused(b?: boolean): By
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 本接口仅在自动化测试脚本中使用。
+**测试接口：** 此接口仅在自动化测试脚本中使用。
 
 **参数：**
 
@@ -182,7 +182,7 @@ id(id: number): By
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 本接口仅在自动化测试脚本中使用。
+**测试接口：** 此接口仅在自动化测试脚本中使用。
 
 **参数：**
 
@@ -225,7 +225,7 @@ isAfter(by: By): By
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 本接口仅在自动化测试脚本中使用。
+**测试接口：** 此接口仅在自动化测试脚本中使用。
 
 **参数：**
 
@@ -269,7 +269,7 @@ isBefore(by: By): By
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 本接口仅在自动化测试脚本中使用。
+**测试接口：** 此接口仅在自动化测试脚本中使用。
 
 **参数：**
 
@@ -313,7 +313,7 @@ key(key: string): By
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 本接口仅在自动化测试脚本中使用。
+**测试接口：** 此接口仅在自动化测试脚本中使用。
 
 **参数：**
 
@@ -356,7 +356,7 @@ scrollable(b?: boolean): By
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 本接口仅在自动化测试脚本中使用。
+**测试接口：** 此接口仅在自动化测试脚本中使用。
 
 **参数：**
 
@@ -399,7 +399,7 @@ selected(b?: boolean): By
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 本接口仅在自动化测试脚本中使用。
+**测试接口：** 此接口仅在自动化测试脚本中使用。
 
 **参数：**
 
@@ -442,7 +442,7 @@ text(txt: string, pattern?: MatchPattern): By
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 本接口仅在自动化测试脚本中使用。
+**测试接口：** 此接口仅在自动化测试脚本中使用。
 
 **参数：**
 
@@ -486,7 +486,7 @@ type(tp: string): By
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 本接口仅在自动化测试脚本中使用。
+**测试接口：** 此接口仅在自动化测试脚本中使用。
 
 **参数：**
 

@@ -548,7 +548,7 @@ Disables listening for the panel size change. This API uses an asynchronous call
    
 > 
    
-> - Since API version 15, after the [adjustPanelRect](#adjustpanelrect) API is called, an optional parameter of the [KeyboardArea](arkts-ime-inputmethodengine-keyboardarea-i.md) type is added to the callback function of this API.
+> - Since API version 15, after the [adjustPanelRect](#adjustpanelrect-1) API is called, an optional parameter of the [KeyboardArea](arkts-ime-inputmethodengine-keyboardarea-i.md) type is added to the callback function of this API.
 
 **Since:** 12
 
@@ -646,7 +646,7 @@ Enables listening for the panel size change. This API uses an asynchronous callb
    
 > 
    
-> - Since API version 15, after the [adjustPanelRect](#adjustpanelrect) API is called, an optional parameter of the [KeyboardArea](arkts-ime-inputmethodengine-keyboardarea-i.md) type is added to the callback function of this API.
+> - Since API version 15, after the [adjustPanelRect](#adjustpanelrect-1) API is called, an optional parameter of the [KeyboardArea](arkts-ime-inputmethodengine-keyboardarea-i.md) type is added to the callback function of this API.
 
 **Since:** 12
 
@@ -788,7 +788,7 @@ Sets the immersive effect of the input method application.
 - Only system applications can set the fluid light mode.   
 - The current API can be called only after any of the following APIs is called:   
  - [adjustPanelRect](#adjustpanelrect) (available since API version 12)   
- - [adjustPanelRect](#adjustpanelrect) (available since API version 15)   
+ - [adjustPanelRect](#adjustpanelrect-1) (available since API version 15)   
  - [resize](#resize) (available since API version 10)
 
 **Since:** 20
@@ -1422,7 +1422,7 @@ Updates the hot zone on the input method panel in the current state.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| inputRegion | Array&lt;[window.Rect](../../apis-arkui/arkts-apis/arkts-arkui-window-rect-i.md)&gt; | Yes | Region for receiving input events.    - The array size is limited to [1, 4].    - The input hot zone is relative to the left vertex of the input method panel window. |
+| inputRegion | Array&lt;window.Rect&gt; | Yes | Region for receiving input events.    - The array size is limited to [1, 4].    - The input hot zone is relative to the left vertex of the input method panel window. |
 
 **Error codes:**
 

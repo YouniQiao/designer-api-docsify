@@ -44,7 +44,7 @@ Add a printer to cups.
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application. |
-| [13100003](../errorcode-print.md#13100003-print-service-error) | Add a printer to cups failed. |
+| [13100003](../errorcode-print.md#13100003-print-service-exception) | Add a printer to cups failed. |
 
 **Examples**
 

@@ -24,7 +24,8 @@ function revokeUriPermission(uri: string, targetBundleName: string, callback: As
 **起始版本：** 10
 
 **需要权限：** 
-- API版本10 - 11：ohos.permission.PROXY_AUTHORIZATION_URI
+- API版本12+：N/A
+- API版本10-11：ohos.permission.PROXY_AUTHORIZATION_URI
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -86,7 +87,8 @@ function revokeUriPermission(uri: string, targetBundleName: string): Promise<num
 **起始版本：** 10
 
 **需要权限：** 
-- API版本10 - 11：ohos.permission.PROXY_AUTHORIZATION_URI
+- API版本12+：N/A
+- API版本10-11：ohos.permission.PROXY_AUTHORIZATION_URI
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 

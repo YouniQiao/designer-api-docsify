@@ -18,6 +18,7 @@ function wakeup(detail: string): void
 
 **需要权限：** 
 - API版本19+：ohos.permission.POWER_MANAGER
+- API版本9-18：N/A
 
 **系统能力：** SystemCapability.PowerManager.PowerManager.Core
 

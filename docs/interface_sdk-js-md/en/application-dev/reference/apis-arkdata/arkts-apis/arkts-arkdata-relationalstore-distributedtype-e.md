@@ -33,6 +33,7 @@ SystemCapability.DistributedDataManager.CloudSync.Client
 **Since:** 10
 
 **Required permissions:** 
+- API version 12 and later: N/A
 - API versions 10 to 11: ohos.permission.DISTRIBUTED_DATASYNC
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Client

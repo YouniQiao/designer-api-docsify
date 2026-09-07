@@ -12,4 +12,4 @@ type BluetoothAddress = common.BluetoothAddress
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
-**类型：** [common.BluetoothAddress](arkts-connectivity-common-bluetoothaddress-i.md)
+**类型：** common.BluetoothAddress

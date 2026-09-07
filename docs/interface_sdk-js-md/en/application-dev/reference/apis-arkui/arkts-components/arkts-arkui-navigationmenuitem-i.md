@@ -67,7 +67,7 @@ symbolIcon?: SymbolGlyphModifier
 
 Symbol icon for a single option on the menu bar. It has higher priority than **icon**.
 
-**Type:** SymbolGlyphModifier
+**Type:** [SymbolGlyphModifier](arkts-arkui-symbolglyphmodifier-t.md)
 
 **Since:** 12
 

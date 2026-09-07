@@ -69,7 +69,7 @@ addAccount(name: string, extraInfo: string, callback: AsyncCallback<void>): void
 
 **废弃版本：** 9
 
-**替代接口：** [createAccount](#createaccount)(name: string, options: CreateAccountOptions, callback: AsyncCallback&lt;void&gt;)
+**替代接口：** [createAccount](#createaccount-1)(name: string, options: CreateAccountOptions, callback: AsyncCallback&lt;void&gt;)
 
 **系统能力：** SystemCapability.Account.AppAccount
 
@@ -101,14 +101,14 @@ addAccount(name: string, extraInfo?: string): Promise<void>
 
 > **说明：**
 > 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [createAccount](#createaccount)
+> [createAccount](#createaccount-2)
 > 替代。
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** [createAccount](#createaccount)(name: string, options?: CreateAccountOptions)
+**替代接口：** [createAccount](#createaccount-2)(name: string, options?: CreateAccountOptions)
 
 **系统能力：** SystemCapability.Account.AppAccount
 
@@ -728,13 +728,13 @@ checkAppAccountSyncEnable(name: string): Promise<boolean>
 > **说明：**
 > 
 > 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [checkDataSyncEnabled](#checkdatasyncenabled)替代。
+> [checkDataSyncEnabled](#checkdatasyncenabled-1)替代。
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** [checkDataSyncEnabled](#checkdatasyncenabled)(name: string)
+**替代接口：** [checkDataSyncEnabled](#checkdatasyncenabled-1)(name: string)
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -1034,14 +1034,14 @@ checkOAuthTokenVisibility(name: string, authType: string, bundleName: string): P
 > **说明：**
 > 
 > 从API version 8开始支持，从API version 9开始废弃。建议使用
-> [checkAuthTokenVisibility](#checkauthtokenvisibility)
+> [checkAuthTokenVisibility](#checkauthtokenvisibility-1)
 > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [checkAuthTokenVisibility](#checkauthtokenvisibility)(name: string, authType: string, bundleName: string)
+**替代接口：** [checkAuthTokenVisibility](#checkauthtokenvisibility-1)(name: string, authType: string, bundleName: string)
 
 **系统能力：** SystemCapability.Account.AppAccount
 
@@ -1438,14 +1438,14 @@ deleteAccount(name: string): Promise<void>
 > **说明：**
 > 
 > 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [removeAccount](#removeaccount)替
+> [removeAccount](#removeaccount-1)替
 > 代。
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** [removeAccount](#removeaccount)(name: string)
+**替代接口：** [removeAccount](#removeaccount-1)(name: string)
 
 **系统能力：** SystemCapability.Account.AppAccount
 
@@ -1738,14 +1738,14 @@ deleteOAuthToken(name: string, owner: string, authType: string, token: string): 
 > **说明：**
 > 
 > 从API version 8开始支持，从API version 9开始废弃。建议使用
-> [deleteAuthToken](#deleteauthtoken)
+> [deleteAuthToken](#deleteauthtoken-1)
 > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [deleteAuthToken](#deleteauthtoken)(name: string, owner: string, authType: string, token: string)
+**替代接口：** [deleteAuthToken](#deleteauthtoken-1)(name: string, owner: string, authType: string, token: string)
 
 **系统能力：** SystemCapability.Account.AppAccount
 
@@ -1827,14 +1827,14 @@ disableAppAccess(name: string, bundleName: string): Promise<void>
 > **说明：**
 > 
 > 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [setAppAccess](#setappaccess)
+> [setAppAccess](#setappaccess-1)
 > 替代。
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** [setAppAccess](#setappaccess)(name: string, bundleName: string, isAccessible: boolean)
+**替代接口：** [setAppAccess](#setappaccess-1)(name: string, bundleName: string, isAccessible: boolean)
 
 **系统能力：** SystemCapability.Account.AppAccount
 
@@ -1918,14 +1918,14 @@ enableAppAccess(name: string, bundleName: string): Promise<void>
 > **说明：**
 > 
 > 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [setAppAccess](#setappaccess)
+> [setAppAccess](#setappaccess-1)
 > 替代。
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** [setAppAccess](#setappaccess)(name: string, bundleName: string, isAccessible: boolean)
+**替代接口：** [setAppAccess](#setappaccess-1)(name: string, bundleName: string, isAccessible: boolean)
 
 **系统能力：** SystemCapability.Account.AppAccount
 
@@ -2009,13 +2009,13 @@ getAccountCredential(name: string, credentialType: string): Promise<string>
 > **说明：**
 > 
 > 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [getCredential](#getcredential)替代。
+> [getCredential](#getcredential-1)替代。
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** [getCredential](#getcredential)(name: string, credentialType: string)
+**替代接口：** [getCredential](#getcredential-1)(name: string, credentialType: string)
 
 **系统能力：** SystemCapability.Account.AppAccount
 
@@ -2098,13 +2098,13 @@ getAccountExtraInfo(name: string): Promise<string>
 > **说明：**
 > 
 > 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [getCustomData](#getcustomdata)替代。
+> [getCustomData](#getcustomdata-1)替代。
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** [getCustomData](#getcustomdata)(name: string, key: string)
+**替代接口：** [getCustomData](#getcustomdata-1)(name: string, key: string)
 
 **系统能力：** SystemCapability.Account.AppAccount
 
@@ -2456,13 +2456,13 @@ getAllAccounts(owner: string): Promise<Array<AppAccountInfo>>
 > **说明：**
 > 
 > 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [getAccountsByOwner](#getaccountsbyowner)替代。
+> [getAccountsByOwner](#getaccountsbyowner-1)替代。
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** [getAccountsByOwner](#getaccountsbyowner)(owner: string)
+**替代接口：** [getAccountsByOwner](#getaccountsbyowner-1)(owner: string)
 
 **需要权限：** ohos.permission.GET_ALL_APP_ACCOUNTS
 
@@ -2650,13 +2650,13 @@ getAllOAuthTokens(name: string, owner: string): Promise<Array<OAuthTokenInfo>>
 > **说明：**
 > 
 > 从API version 8开始支持，从API version 9开始废弃。建议使用
-> [getAllAuthTokens](#getallauthtokens)替代。
+> [getAllAuthTokens](#getallauthtokens-1)替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [getAllAuthTokens](#getallauthtokens)(name: string, owner: string)
+**替代接口：** [getAllAuthTokens](#getallauthtokens-1)(name: string, owner: string)
 
 **系统能力：** SystemCapability.Account.AppAccount
 
@@ -2741,13 +2741,13 @@ getAssociatedData(name: string, key: string): Promise<string>
 > **说明：**
 > 
 > 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [getCustomData](#getcustomdata)替代。
+> [getCustomData](#getcustomdata-1)替代。
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** [getCustomData](#getcustomdata)(name: string, key: string)
+**替代接口：** [getCustomData](#getcustomdata-1)(name: string, key: string)
 
 **系统能力：** SystemCapability.Account.AppAccount
 
@@ -2971,13 +2971,13 @@ getAuthenticatorCallback(sessionId: string): Promise<AuthenticatorCallback>
 > **说明：**
 > 
 > 从API version 8开始支持，从API version 9开始废弃。建议使用
-> [getAuthCallback](#getauthcallback)替代。
+> [getAuthCallback](#getauthcallback-1)替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [getAuthCallback](#getauthcallback)(sessionId: string)
+**替代接口：** [getAuthCallback](#getauthcallback-1)(sessionId: string)
 
 **系统能力：** SystemCapability.Account.AppAccount
 
@@ -3072,13 +3072,13 @@ getAuthenticatorInfo(owner: string): Promise<AuthenticatorInfo>
 > **说明：**
 > 
 > 从API version 8开始支持，从API version 9开始废弃。建议使用
-> [queryAuthenticatorInfo](#queryauthenticatorinfo)替代。
+> [queryAuthenticatorInfo](#queryauthenticatorinfo-1)替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [queryAuthenticatorInfo](#queryauthenticatorinfo)(owner: string)
+**替代接口：** [queryAuthenticatorInfo](#queryauthenticatorinfo-1)(owner: string)
 
 **系统能力：** SystemCapability.Account.AppAccount
 
@@ -3618,13 +3618,13 @@ getOAuthList(name: string, authType: string): Promise<Array<string>>
 > **说明：**
 > 
 > 从API version 8开始支持，从API version 9开始废弃。建议使用
-> [getAuthList](#getauthlist)替代。
+> [getAuthList](#getauthlist-1)替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [getAuthList](#getauthlist)(name: string, authType: string)
+**替代接口：** [getAuthList](#getauthlist-1)(name: string, authType: string)
 
 **系统能力：** SystemCapability.Account.AppAccount
 
@@ -3710,13 +3710,13 @@ getOAuthToken(name: string, owner: string, authType: string): Promise<string>
 > **说明：**
 > 
 > 从API version 8开始支持，从API version 9开始废弃。建议使用
-> [getAuthToken](#getauthtoken)替代。
+> [getAuthToken](#getauthtoken-1)替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [getAuthToken](#getauthtoken)(name: string, owner: string, authType: string)
+**替代接口：** [getAuthToken](#getauthtoken-1)(name: string, owner: string, authType: string)
 
 **系统能力：** SystemCapability.Account.AppAccount
 
@@ -4296,14 +4296,14 @@ setAccountCredential(name: string, credentialType: string, credential: string): 
 > **说明：**
 > 
 > 从API version 7开始支持，从API version 9开始废弃，建议使用
-> [setCredential](#setcredential)
+> [setCredential](#setcredential-1)
 > 替代。
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** [setCredential](#setcredential)(name: string, credentialType: string, credential: string)
+**替代接口：** [setCredential](#setcredential-1)(name: string, credentialType: string, credential: string)
 
 **系统能力：** SystemCapability.Account.AppAccount
 
@@ -4388,13 +4388,13 @@ setAccountExtraInfo(name: string, extraInfo: string): Promise<void>
 > **说明：**
 > 
 > 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [setCustomData](#setcustomdata)替代。
+> [setCustomData](#setcustomdata-1)替代。
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** [setCustomData](#setcustomdata)(name: string, key: string, value: string)
+**替代接口：** [setCustomData](#setcustomdata-1)(name: string, key: string, value: string)
 
 **系统能力：** SystemCapability.Account.AppAccount
 
@@ -4583,13 +4583,13 @@ setAppAccountSyncEnable(name: string, isEnable: boolean): Promise<void>
 > **说明：**
 > 
 > 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [setDataSyncEnabled](#setdatasyncenabled)替代。
+> [setDataSyncEnabled](#setdatasyncenabled-1)替代。
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** [setDataSyncEnabled](#setdatasyncenabled)(name: string, isEnabled: boolean)
+**替代接口：** [setDataSyncEnabled](#setdatasyncenabled-1)(name: string, isEnabled: boolean)
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -4676,13 +4676,13 @@ setAssociatedData(name: string, key: string, value: string): Promise<void>
 > **说明：**
 > 
 > 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [setCustomData](#setcustomdata)替代。
+> [setCustomData](#setcustomdata-1)替代。
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** [setCustomData](#setcustomdata)(name: string, key: string, value: string)
+**替代接口：** [setCustomData](#setcustomdata-1)(name: string, key: string, value: string)
 
 **系统能力：** SystemCapability.Account.AppAccount
 
@@ -5399,13 +5399,13 @@ setOAuthToken(name: string, authType: string, token: string): Promise<void>
 > **说明：**
 > 
 > 从API version 8开始支持，从API version 9开始废弃。建议使用
-> [setAuthToken](#setauthtoken)替代。
+> [setAuthToken](#setauthtoken-1)替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [setAuthToken](#setauthtoken)(name: string, authType: string, token: string)
+**替代接口：** [setAuthToken](#setauthtoken-1)(name: string, authType: string, token: string)
 
 **系统能力：** SystemCapability.Account.AppAccount
 
@@ -5499,14 +5499,14 @@ setOAuthTokenVisibility(name: string, authType: string, bundleName: string, isVi
 > **说明：**
 > 
 > 从API version 8开始支持，从API version 9开始废弃。建议使用
-> [setAuthTokenVisibility](#setauthtokenvisibility)
+> [setAuthTokenVisibility](#setauthtokenvisibility-1)
 > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [setAuthTokenVisibility](#setauthtokenvisibility)(name: string, authType: string, bundleName: string, isVisible: boolean)
+**替代接口：** [setAuthTokenVisibility](#setauthtokenvisibility-1)(name: string, authType: string, bundleName: string, isVisible: boolean)
 
 **系统能力：** SystemCapability.Account.AppAccount
 

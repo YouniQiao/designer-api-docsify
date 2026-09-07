@@ -33,7 +33,7 @@ getFontByName(fontName: string): font.FontInfo
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -47,7 +47,7 @@ getFontByName(fontName: string): font.FontInfo
 
 | 类型 | 说明 |
 | --- | --- |
-| [font.FontInfo](arkts-arkui-font-fontinfo-i.md) | 字体的详细信息。 |
+| font.FontInfo | 字体的详细信息。 |
 
 **示例**
 
@@ -102,7 +102,7 @@ getSystemFontList(): Array<string>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -155,7 +155,7 @@ registerFont(options: font.FontOptions): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -163,7 +163,7 @@ registerFont(options: font.FontOptions): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [font.FontOptions](arkts-arkui-font-fontoptions-i.md) | 是 | 注册的自定义字体信息。   **说明：**设置注册字体文件的路径，读取系统沙箱路径内的资源时，建议使用file://路径前缀的字符串，需要确保沙箱目录路径下的文件存在并且有可读权限。 |
+| options | font.FontOptions | 是 | 注册的自定义字体信息。   **说明：**设置注册字体文件的路径，读取系统沙箱路径内的资源时，建议使用file://路径前缀的字符串，需要确保沙箱目录路径下的文件存在并且有可读权限。 |
 
 **示例**
 

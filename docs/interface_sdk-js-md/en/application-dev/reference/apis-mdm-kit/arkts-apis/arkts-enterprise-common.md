@@ -8,6 +8,8 @@ The module provides pure type definitions for common capabilities within MDM Kit
 
 **Since:** 22
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## Modules to Import

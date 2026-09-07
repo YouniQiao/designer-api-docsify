@@ -8,6 +8,8 @@ const CURSOR_DOWN: number
 
 光标下移。
 
+**类型：** number
+
 **起始版本：** 9
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
@@ -19,6 +21,8 @@ const CURSOR_LEFT: number
 ```
 
 光标左移。
+
+**类型：** number
 
 **起始版本：** 9
 
@@ -32,6 +36,8 @@ const CURSOR_RIGHT: number
 
 光标右移。
 
+**类型：** number
+
 **起始版本：** 9
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
@@ -43,6 +49,8 @@ const CURSOR_UP: number
 ```
 
 光标上移。
+
+**类型：** number
 
 **起始版本：** 9
 
@@ -56,6 +64,8 @@ const DISPLAY_MODE_FULL: number
 
 编辑框显示为全屏。
 
+**类型：** number
+
 **起始版本：** 8
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
@@ -67,6 +77,8 @@ const DISPLAY_MODE_PART: number
 ```
 
 编辑框显示为半屏。
+
+**类型：** number
 
 **起始版本：** 8
 
@@ -80,6 +92,8 @@ const ENTER_KEY_TYPE_DONE: number
 
 “回车”功能键。
 
+**类型：** number
+
 **起始版本：** 8
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
@@ -91,6 +105,8 @@ const ENTER_KEY_TYPE_GO: number
 ```
 
 “前往”功能键。
+
+**类型：** number
 
 **起始版本：** 8
 
@@ -104,6 +120,8 @@ const ENTER_KEY_TYPE_NEWLINE: number
 
 “换行”功能键。
 
+**类型：** number
+
 **起始版本：** 12
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
@@ -115,6 +133,8 @@ const ENTER_KEY_TYPE_NEXT: number
 ```
 
 “下一个”功能键。
+
+**类型：** number
 
 **起始版本：** 8
 
@@ -128,6 +148,8 @@ const ENTER_KEY_TYPE_PREVIOUS: number
 
 “前一个”功能键。
 
+**类型：** number
+
 **起始版本：** 8
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
@@ -139,6 +161,8 @@ const ENTER_KEY_TYPE_SEARCH: number
 ```
 
 “搜索”功能键。
+
+**类型：** number
 
 **起始版本：** 8
 
@@ -152,6 +176,8 @@ const ENTER_KEY_TYPE_SEND: number
 
 “发送”功能键。
 
+**类型：** number
+
 **起始版本：** 8
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
@@ -163,6 +189,8 @@ const ENTER_KEY_TYPE_UNSPECIFIED: number
 ```
 
 无功能键。
+
+**类型：** number
 
 **起始版本：** 8
 
@@ -176,6 +204,8 @@ const FLAG_SELECTING: number
 
 编辑框处于选择状态。
 
+**类型：** number
+
 **起始版本：** 8
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
@@ -187,6 +217,8 @@ const FLAG_SINGLE_LINE: number
 ```
 
 编辑框为单行。
+
+**类型：** number
 
 **起始版本：** 8
 
@@ -200,6 +232,8 @@ const OPTION_ASCII: number
 
 允许输入ASCII值。
 
+**类型：** number
+
 **起始版本：** 8
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
@@ -211,6 +245,8 @@ const OPTION_AUTO_CAP_CHARACTERS: number
 ```
 
 允许输入字符。
+
+**类型：** number
 
 **起始版本：** 8
 
@@ -224,6 +260,8 @@ const OPTION_AUTO_CAP_SENTENCES: number
 
 允许输入句子。
 
+**类型：** number
+
 **起始版本：** 8
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
@@ -235,6 +273,8 @@ const OPTION_AUTO_WORDS: number
 ```
 
 允许输入单词。
+
+**类型：** number
 
 **起始版本：** 8
 
@@ -248,6 +288,8 @@ const OPTION_MULTI_LINE: number
 
 允许输入多行。
 
+**类型：** number
+
 **起始版本：** 8
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
@@ -259,6 +301,8 @@ const OPTION_NO_FULLSCREEN: number
 ```
 
 半屏样式。
+
+**类型：** number
 
 **起始版本：** 8
 
@@ -272,6 +316,8 @@ const OPTION_NONE: number
 
 不指定编辑框输入属性。
 
+**类型：** number
+
 **起始版本：** 8
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
@@ -283,6 +329,8 @@ const PATTERN_DATETIME: number
 ```
 
 日期编辑框。
+
+**类型：** number
 
 **起始版本：** 8
 
@@ -296,6 +344,8 @@ const PATTERN_EMAIL: number
 
 邮件编辑框。
 
+**类型：** number
+
 **起始版本：** 8
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
@@ -307,6 +357,8 @@ const PATTERN_NEW_PASSWORD: number
 ```
 
 新密码编辑框。
+
+**类型：** number
 
 **起始版本：** 20
 
@@ -322,6 +374,8 @@ const PATTERN_NULL: number
 
 无特殊性编辑框。
 
+**类型：** number
+
 **起始版本：** 8
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
@@ -334,6 +388,8 @@ const PATTERN_NUMBER: number
 
 数字编辑框。
 
+**类型：** number
+
 **起始版本：** 8
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
@@ -345,6 +401,8 @@ const PATTERN_NUMBER_DECIMAL: number
 ```
 
 带小数点的数字编辑框。
+
+**类型：** number
 
 **起始版本：** 20
 
@@ -360,6 +418,8 @@ const PATTERN_ONE_TIME_CODE: number
 
 验证码编辑框。
 
+**类型：** number
+
 **起始版本：** 20
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -374,6 +434,8 @@ const PATTERN_PASSWORD: number
 
 密码编辑框。
 
+**类型：** number
+
 **起始版本：** 8
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
@@ -385,6 +447,8 @@ const PATTERN_PASSWORD_NUMBER: number
 ```
 
 数字密码编辑框。
+
+**类型：** number
 
 **起始版本：** 11
 
@@ -398,6 +462,8 @@ const PATTERN_PASSWORD_SCREEN_LOCK: number
 
 锁屏密码编辑框。
 
+**类型：** number
+
 **起始版本：** 11
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
@@ -409,6 +475,8 @@ const PATTERN_PHONE: number
 ```
 
 电话号码编辑框。
+
+**类型：** number
 
 **起始版本：** 8
 
@@ -422,6 +490,8 @@ const PATTERN_TEXT: number
 
 文本编辑框。
 
+**类型：** number
+
 **起始版本：** 8
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
@@ -434,6 +504,8 @@ const PATTERN_URI: number
 
 超链接编辑框。
 
+**类型：** number
+
 **起始版本：** 8
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
@@ -445,6 +517,8 @@ const PATTERN_USER_NAME: number
 ```
 
 用户名编辑框。
+
+**类型：** number
 
 **起始版本：** 20
 
@@ -459,6 +533,8 @@ const WINDOW_TYPE_INPUT_METHOD_FLOAT: number
 ```
 
 输入法应用窗口风格标识。
+
+**类型：** number
 
 **起始版本：** 9
 

@@ -106,7 +106,7 @@ type: bundle.ExtensionAbilityType
 
 ExtensionAbility type.
 
-**Type:** [bundle.ExtensionAbilityType](arkts-ability-bundlemanager-extensionabilitytype-e.md)
+**Type:** bundle.ExtensionAbilityType
 
 **Default:** Enumerates types of the extension info
 

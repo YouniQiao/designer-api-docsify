@@ -10,4 +10,4 @@ type CallState = call.CallState
 
 **系统能力：** SystemCapability.Telephony.StateRegistry
 
-**类型：** [call.CallState](arkts-telephony-call-callstate-e.md)
+**类型：** call.CallState

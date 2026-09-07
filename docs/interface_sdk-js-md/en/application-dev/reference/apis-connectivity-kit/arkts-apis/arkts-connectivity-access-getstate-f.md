@@ -17,6 +17,7 @@ Obtains the Bluetooth status of a device.
 **Since:** 10
 
 **Required permissions:** 
+- API version 13 and later: N/A
 - API versions 10 to 12: ohos.permission.ACCESS_BLUETOOTH
 
 **Atomic service API:** This API can be used in atomic services since API version 11.

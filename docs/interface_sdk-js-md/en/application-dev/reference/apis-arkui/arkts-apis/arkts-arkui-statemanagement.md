@@ -17,6 +17,20 @@ import { AppStorageV2, PersistenceV2, Type, UIUtils, ConnectOptions, Binding, Mu
 
 ## Summary
 
+### Decorators
+
+| Name | Description |
+| --- | --- |
+| [@ComponentActive](arkts-arkui-arkui-statemanagement-componentactive-d.md#componentactive) | The function decorated is invoked before a custom component becomes active. |
+| [@ComponentAppear](arkts-arkui-arkui-statemanagement-componentappear-d.md#componentappear) | Decorates a function that is called after a new instance of the custom component is created and before the **build()** function is executed. This callback is similar to **aboutToAppear**. The difference is that the **@ComponentAppear** callback is triggered only when the custom component is in the **[CustomComponentLifecycleState](arkts-arkui-arkui-statemanagement-customcomponentlifecyclestate-e.md).INIT** state. The state variable can be changed in **@ComponentAppear**. The change will take effect in the subsequent **build()** function execution. |
+| [@ComponentBuilt](arkts-arkui-arkui-statemanagement-componentbuilt-d.md#componentbuilt) | Decorates a function that is called after the **build()** function of the custom component is executed for the first time, that is, when the component status changes from **CustomComponentLifecycleState.APPEARED** to **CustomComponentLifecycleState.BUILT**. You can use this callback for actions that do not affect the UI, such as tracking data reporting. |
+| [@ComponentDisappear](arkts-arkui-arkui-statemanagement-componentdisappear-d.md#componentdisappear) | Decorates a function that is called when the custom component is destructed. You are advised not to change state variables in this function. Modifying the **@Link** decorated variable may lead to unstable application behavior. |
+| [@ComponentInactive](arkts-arkui-arkui-statemanagement-componentinactive-d.md#componentinactive) | The function decorated is invoked before a custom component becomes inactive. |
+| [@ComponentInit](arkts-arkui-arkui-statemanagement-componentinit-d.md#componentinit) | Decorates a function that is called when the initialization of a custom component is about to complete. You can register a listener at this time. |
+| [@ComponentRecycle](arkts-arkui-arkui-statemanagement-componentrecycle-d.md#componentrecycle) | Decorates a function that is called when the necessary recycling operations defined in the application are performed. That is, this function is triggered when the component status changes from **CustomComponentLifecycleState.BUILT** to **CustomComponentLifecycleState.RECYCLED**. At last, the function decorated by **@ComponentRecycle** recursively traverses all child components, and the **@ComponentRecycle** decorated function in each recycled child component will be called. |
+| [@ComponentReuse](arkts-arkui-arkui-statemanagement-componentreuse-d.md#componentreuse) | Decorates a function that is called when a reusable custom component is re-added to the node tree from the cache, that is, when the component status changes from the **CustomComponentLifecycleState.RECYCLED** to **CustomComponentLifecycleState.BUILT** phase, to receive the constructor parameters. At last, the function decorated by **@ComponentReuse** recursively traverses all child components, and the **@ComponentReuse** decorated function in each reused child component will be called. |
+| [@Type](arkts-arkui-arkui-statemanagement-type-d.md#type) | Define Type PropertyDecorator, adds type information to an object. |
+
 ### Classes
 
 | Name | Description |

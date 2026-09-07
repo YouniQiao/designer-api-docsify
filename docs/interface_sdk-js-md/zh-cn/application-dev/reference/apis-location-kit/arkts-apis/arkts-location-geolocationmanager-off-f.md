@@ -17,9 +17,10 @@ function off(type: 'locationChange', callback?: Callback<Location>): void
 **起始版本：** 9
 
 **需要权限：** 
-- API版本9 - 24：ohos.permission.APPROXIMATELY_LOCATION
+- API版本25+：N/A
+- API版本9-24：ohos.permission.APPROXIMATELY_LOCATION
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Location.Location.Core
 
@@ -76,7 +77,7 @@ function off(type: 'locationError', callback?: Callback<LocationError>): void
 
 **需要权限：** ohos.permission.APPROXIMATELY_LOCATION
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Location.Location.Core
 
@@ -324,7 +325,8 @@ function off(type: 'gnssFenceStatusChange', request: GeofenceRequest, want: Want
 **起始版本：** 9
 
 **需要权限：** 
-- API版本9 - 24：ohos.permission.APPROXIMATELY_LOCATION
+- API版本25+：N/A
+- API版本9-24：ohos.permission.APPROXIMATELY_LOCATION
 
 **系统能力：** SystemCapability.Location.Location.Geofence
 

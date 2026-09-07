@@ -256,10 +256,8 @@ Checks whether the NodeAdapter's backend reference has been released. Frontend n
 **Examples**
 
 See [FrameNode Validity Check Example.
-- simpleType:
 
 See NodeAdapter Validity Check Example.
-- simpleType:
 
 ## moveItem
 
@@ -504,6 +502,22 @@ Removes a specified number of items starting from a specific index.
 ## totalNodeCount
 
 ```TypeScript
+set totalNodeCount(count: number)
+```
+
+Sets the total number of items in this node.
+
+**Type:** number
+
+**Since:** 12
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+```TypeScript
 get totalNodeCount(): number
 ```
 
@@ -522,4 +536,3 @@ Get the total number of node count.
 **Examples**
 
 See the example for [NodeAdapter Usage Example.
-- simpleType:

@@ -18,7 +18,7 @@ function queryGroups(callback: AsyncCallback<Array<Group>>): void
 
 **废弃版本：** 10
 
-**替代接口：** [queryGroups](#querygroups)(context: Context, callback: AsyncCallback&lt;Array&lt;Group&gt;&gt;)
+**替代接口：** [queryGroups](#querygroups-1)(context: Context, callback: AsyncCallback&lt;Array&lt;Group&gt;&gt;)
 
 **需要权限：** ohos.permission.READ_CONTACTS
 
@@ -77,8 +77,6 @@ function queryGroups(context: Context, callback: AsyncCallback<Array<Group>>): v
 **示例**
 
 > 说明：
-> 
-> 在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在界面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -109,7 +107,7 @@ function queryGroups(holder: Holder, callback: AsyncCallback<Array<Group>>): voi
 
 **废弃版本：** 10
 
-**替代接口：** [queryGroups](#querygroups)(context: Context, holder: Holder, callback: AsyncCallback&lt;Array&lt;Group&gt;&gt;)
+**替代接口：** [queryGroups](#querygroups-3)(context: Context, holder: Holder, callback: AsyncCallback&lt;Array&lt;Group&gt;&gt;)
 
 **需要权限：** ohos.permission.READ_CONTACTS
 
@@ -174,8 +172,6 @@ function queryGroups(context: Context, holder: Holder, callback: AsyncCallback<A
 **示例**
 
 > 说明：
-> 
-> 在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在界面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -210,7 +206,7 @@ function queryGroups(holder?: Holder): Promise<Array<Group>>
 
 **废弃版本：** 10
 
-**替代接口：** [queryGroups](#querygroups)(context: Context, holder?: Holder)
+**替代接口：** [queryGroups](#querygroups-5)(context: Context, holder?: Holder)
 
 **需要权限：** ohos.permission.READ_CONTACTS
 
@@ -281,8 +277,6 @@ function queryGroups(context: Context, holder?: Holder): Promise<Array<Group>>
 **示例**
 
 > 说明：
-> 
-> 在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在界面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
 
 ```TypeScript
 import { common } from '@kit.AbilityKit';

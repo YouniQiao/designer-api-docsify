@@ -18,7 +18,7 @@ function enableLocation(callback: AsyncCallback<void>): void
 
 **需要权限：** 
 - API版本20+：ohos.permission.MANAGE_SECURE_SETTINGS and ohos.permission.CONTROL_LOCATION_SWITCH
-- API版本9 - 19：ohos.permission.MANAGE_SECURE_SETTINGS
+- API版本9-19：ohos.permission.MANAGE_SECURE_SETTINGS
 
 **系统能力：** SystemCapability.Location.Location.Core
 
@@ -69,7 +69,7 @@ function enableLocation(): Promise<void>
 
 **需要权限：** 
 - API版本20+：ohos.permission.MANAGE_SECURE_SETTINGS and ohos.permission.CONTROL_LOCATION_SWITCH
-- API版本9 - 19：ohos.permission.MANAGE_SECURE_SETTINGS
+- API版本9-19：ohos.permission.MANAGE_SECURE_SETTINGS
 
 **系统能力：** SystemCapability.Location.Location.Core
 

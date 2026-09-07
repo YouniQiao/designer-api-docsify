@@ -192,6 +192,7 @@ off(type: 'connectionStateChange', callback?: Callback<StateChangeParam>): void
 
 **需要权限：** 
 - API版本10+：ohos.permission.ACCESS_BLUETOOTH
+- API版本9：N/A
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -227,6 +228,7 @@ on(type: 'connectionStateChange', callback: Callback<StateChangeParam>): void
 
 **需要权限：** 
 - API版本10+：ohos.permission.ACCESS_BLUETOOTH
+- API版本9：N/A
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 

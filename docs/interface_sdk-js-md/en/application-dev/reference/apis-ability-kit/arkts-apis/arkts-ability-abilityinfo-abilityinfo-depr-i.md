@@ -307,7 +307,7 @@ readonly launchMode: bundle.LaunchMode
 
 Ability launch mode.
 
-**Type:** [bundle.LaunchMode](arkts-ability-bundle-launchmode-e.md)
+**Type:** bundle.LaunchMode
 
 **Default:** Enumerates ability launch modes
 
@@ -389,7 +389,7 @@ readonly orientation: bundle.DisplayOrientation
 
 Ability display orientation.
 
-**Type:** [bundle.DisplayOrientation](arkts-ability-bundle-displayorientation-e.md)
+**Type:** bundle.DisplayOrientation
 
 **Default:** Enumerates ability display orientations
 
@@ -475,7 +475,7 @@ Subtype of the template that can be used by the ability.
 
 **Model restriction**: This API can be used only in the FA model.
 
-**Type:** [bundle.AbilitySubType](arkts-ability-bundle-abilitysubtype-e.md)
+**Type:** bundle.AbilitySubType
 
 **Default:** Enumerates the subType of templates used by an ability
 
@@ -519,7 +519,7 @@ Ability type.
 
 **Model restriction**: This API can be used only in the FA model.
 
-**Type:** [bundle.AbilityType](arkts-ability-bundle-abilitytype-e.md)
+**Type:** bundle.AbilityType
 
 **Default:** Enumerates types of templates that can be used by an ability
 

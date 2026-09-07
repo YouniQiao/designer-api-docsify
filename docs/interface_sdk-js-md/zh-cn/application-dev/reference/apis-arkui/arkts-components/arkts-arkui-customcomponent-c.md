@@ -34,7 +34,7 @@ aboutToReuse?(params: Record<string, Object | undefined | null>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -42,7 +42,7 @@ aboutToReuse?(params: Record<string, Object | undefined | null>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| params | Record&lt;string, Object \| undefined \| null&gt; | 是 | 自定义组件的构造参数。其中key为复用时外部传入的组件成员变量名，value为复用时外部传入的对应参数值。<br>**起始版本：** 20 |
+| params | Record&lt;string, Object \| undefined \| null&gt; | 是 | 自定义组件的构造参数。其中key为复用时外部传入的组件成员变量名，value为复用时外部传入的对应参数值。<br>**适用版本：** 20 |
 
 ## onLayout
 

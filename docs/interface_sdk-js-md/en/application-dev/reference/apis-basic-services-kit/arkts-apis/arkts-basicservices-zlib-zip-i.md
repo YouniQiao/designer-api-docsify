@@ -1523,7 +1523,6 @@ Releases all memory allocated by the **inflateBackInit()** function. This API us
 **Examples**
 
 For details about the sample code, see [inflateBack](#inflateback).
-- simpleType:
 
 ## inflateBackInit
 
@@ -1563,7 +1562,6 @@ Initializes the internal stream state for decompression before using the **infla
 **Examples**
 
 For details about the sample code, see [inflateBack](#inflateback).
-- simpleType:
 
 ## inflateCodesUsed
 

@@ -12,4 +12,4 @@ module发行版信息。
 
 **系统接口：** 此接口为系统接口。
 
-**类型：** [_PackInfo.ModuleDistroInfo](arkts-ability-bundlepackinfo-moduledistroinfo-i-sys.md)
+**类型：** _PackInfo.ModuleDistroInfo

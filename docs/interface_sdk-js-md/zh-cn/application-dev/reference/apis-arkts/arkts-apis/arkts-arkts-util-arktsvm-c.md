@@ -90,7 +90,6 @@ try {
 ```
 
 可能出现的问题：
-如果之前内存泄漏的对象被继续使用，使用enableLocalHandleDetection接口后，系统会回收内存泄漏对象。继续使用该对象会导致内存泄漏问题转变为稳定性问题。
 
 ```TypeScript
 napi_value global_js_object;
@@ -234,7 +233,7 @@ static setMultithreadingDetectionEnabled(enabled: boolean, options?: Multithread
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | enabled | boolean | 是 | 控制是否开启多线程安全检测。**true** 表示开启检测，**false** 表示关闭检测。 |
-| options | [MultithreadingDetectionOptions](arkts-arkts-util-multithreadingdetectionoptions-i.md) | 否 | 多线程安全检测的参数配置，此参数不填时，对应各属性取MultithreadingDetectionOptions的默认值。<br>**起始版本：** 26.0.0 |
+| options | [MultithreadingDetectionOptions](arkts-arkts-util-multithreadingdetectionoptions-i.md) | 否 | 多线程安全检测的参数配置，此参数不填时，对应各属性取MultithreadingDetectionOptions的默认值。<br>**适用版本：** 26.0.0 |
 
 **示例**
 

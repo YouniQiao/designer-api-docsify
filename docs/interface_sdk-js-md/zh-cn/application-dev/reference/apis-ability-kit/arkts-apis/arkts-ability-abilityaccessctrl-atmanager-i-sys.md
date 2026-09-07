@@ -813,7 +813,6 @@ requestPermissionsFromUserWithWindowId(
 **示例**
 
 下述示例中context的获取方式请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
-关于向用户申请授权的完整流程及示例，请参见[向用户申请授权](../../../security/AccessToken/request-user-authorization.md)。
 
 ```TypeScript
 import { abilityAccessCtrl, Context, PermissionRequestResult } from '@kit.AbilityKit';
@@ -865,7 +864,7 @@ revokePermission(
 | tokenID | number | 是 | 目标应用的身份标识。可通过应用BundleInfo中的ApplicationInfo中的[accessTokenId]{@link./bundleManager/ApplicationInfo:ApplicationInfo.accessTokenId}字段获取。传入无效值时返回错误码12100001。取值限定为整数。取值约束：该参数必须为大于0的整数。BundleInfo获取可参考：[bundleManager.getBundleInfoSync](arkts-ability-bundlemanager-getbundleinfosync-f.md)。 |
 | permissionName | Permissions | 是 | 被撤销的权限名称。传入无效值时返回错误码12100001。取值约束：权限名长度不能超过256个字符。 |
 | permissionFlags | number | 是 | 授权选项。取值限定为整数。   - 1表示当次用户若选择禁止该权限，下次权限弹窗仍可以弹出申请用户授权。   - 2表示当次用户若选择禁止该权限，下次不会再弹出权限弹窗，用户需要在系统设置的权限管理中进行授权。   - 64表示当次用户若选择仅本次允许，权限仅本次授权。应用切换后台状态或退出后取消授权。 |
-| killProcess | boolean | 否 | 是否终止应用进程。   - true表示终止应用进程。   - false表示不终止应用进程。   - 默认值为true。<br>**起始版本：** 26.0.0 |
+| killProcess | boolean | 否 | 是否终止应用进程。   - true表示终止应用进程。   - false表示不终止应用进程。   - 默认值为true。<br>**适用版本：** 26.0.0 |
 
 **返回值：**
 

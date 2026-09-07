@@ -6,6 +6,8 @@ Kiosk mode is a dedicated device lockdown mode that ensures the device UI serves
 
 **Since:** 20
 
+**Model restriction:** This API can be used only in the stage model.
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## Modules to Import

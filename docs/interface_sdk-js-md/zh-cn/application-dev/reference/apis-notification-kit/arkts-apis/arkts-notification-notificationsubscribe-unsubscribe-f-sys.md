@@ -17,7 +17,8 @@ function unsubscribe(subscriber: NotificationSubscriber, callback: AsyncCallback
 **起始版本：** 9
 
 **需要权限：** 
-- API版本9 - 19：ohos.permission.NOTIFICATION_CONTROLLER
+- API版本20+：N/A
+- API版本9-19：ohos.permission.NOTIFICATION_CONTROLLER
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -74,7 +75,8 @@ function unsubscribe(subscriber: NotificationSubscriber): Promise<void>
 **起始版本：** 9
 
 **需要权限：** 
-- API版本9 - 19：ohos.permission.NOTIFICATION_CONTROLLER
+- API版本20+：N/A
+- API版本9-19：ohos.permission.NOTIFICATION_CONTROLLER
 
 **系统能力：** SystemCapability.Notification.Notification
 

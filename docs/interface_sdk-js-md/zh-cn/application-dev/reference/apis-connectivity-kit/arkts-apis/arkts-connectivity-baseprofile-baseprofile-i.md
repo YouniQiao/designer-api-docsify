@@ -23,8 +23,9 @@ getConnectedDevices(): Array<string>
 **起始版本：** 10
 
 **需要权限：** 
-- API版本26.0.0+：ohos.permission.ACCESS_BLUETOOTH or (ohos.permission.ACCESS_BLUETOOTH and ohos.permission.GET_BLUETOOTH_PEERS_MAC)
-- API版本10 - 24：ohos.permission.ACCESS_BLUETOOTH
+- API版本26+：ohos.permission.ACCESS_BLUETOOTH or (ohos.permission.ACCESS_BLUETOOTH and ohos.permission.GET_BLUETOOTH_PEERS_MAC)
+- API版本25：N/A
+- API版本10-24：ohos.permission.ACCESS_BLUETOOTH
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -159,8 +160,9 @@ on(type: 'connectionStateChange', callback: Callback<StateChangeParam>): void
 **起始版本：** 10
 
 **需要权限：** 
-- API版本26.0.0+：ohos.permission.ACCESS_BLUETOOTH or (ohos.permission.ACCESS_BLUETOOTH and ohos.permission.GET_BLUETOOTH_PEERS_MAC)
-- API版本10 - 24：ohos.permission.ACCESS_BLUETOOTH
+- API版本26+：ohos.permission.ACCESS_BLUETOOTH or (ohos.permission.ACCESS_BLUETOOTH and ohos.permission.GET_BLUETOOTH_PEERS_MAC)
+- API版本25：N/A
+- API版本10-24：ohos.permission.ACCESS_BLUETOOTH
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

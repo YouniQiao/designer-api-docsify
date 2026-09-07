@@ -98,7 +98,6 @@ struct FormLinkDemo {
 ```
 
 FormLink
-The following is an example of uris configuration in the [module.json5](../../../quick-start/module-configuration-file.md#skills) file of the target application:
 
 ```TypeScript
 "abilities": [

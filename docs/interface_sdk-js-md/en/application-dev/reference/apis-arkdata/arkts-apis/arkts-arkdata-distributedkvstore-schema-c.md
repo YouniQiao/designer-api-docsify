@@ -49,6 +49,20 @@ schema.skip = 0;
 ## indexes
 
 ```TypeScript
+get indexes(): Array<string>
+```
+
+Get the string array of json.
+
+**Type:** Array&lt;string&gt;
+
+**Since:** 9
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
+
+```TypeScript
 set indexes(indexes: Array<string>)
 ```
 
@@ -63,6 +77,20 @@ Set the string array of json.
 **System capability:** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
 
 ## mode
+
+```TypeScript
+get mode(): number
+```
+
+Get the mode of schema.
+
+**Type:** number
+
+**Since:** 9
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
 
 ```TypeScript
 set mode(mode: number)
@@ -81,6 +109,20 @@ Set the mode of schema.
 ## root
 
 ```TypeScript
+get root(): FieldNode
+```
+
+Get the root json object.
+
+**Type:** FieldNode
+
+**Since:** 9
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
+
+```TypeScript
 set root(root: FieldNode)
 ```
 
@@ -95,6 +137,20 @@ Set the root json object.
 **System capability:** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
 
 ## skip
+
+```TypeScript
+get skip(): number
+```
+
+Get the skip size of schema.
+
+**Type:** number
+
+**Since:** 9
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
 
 ```TypeScript
 set skip(skip: number)

@@ -27,7 +27,7 @@ Default value:
 
 **fontSize**: **24vp**
 
-**Type:** SymbolGlyphModifier
+**Type:** [SymbolGlyphModifier](arkts-arkui-symbolglyphmodifier-t.md)
 
 **Since:** 12
 
@@ -53,7 +53,7 @@ Default value:
 
 **fontSize**: **24vp**
 
-**Type:** SymbolGlyphModifier
+**Type:** [SymbolGlyphModifier](arkts-arkui-symbolglyphmodifier-t.md)
 
 **Since:** 12
 

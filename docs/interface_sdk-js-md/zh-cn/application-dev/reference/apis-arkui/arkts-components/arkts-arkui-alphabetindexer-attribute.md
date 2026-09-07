@@ -31,7 +31,7 @@ alignStyle(value: IndexerAlign, offset?: Length)
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -39,8 +39,8 @@ alignStyle(value: IndexerAlign, offset?: Length)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [IndexerAlign](arkts-arkui-indexeralign-e.md) | 是 | [索引条提示弹窗的对齐样式，支持弹窗显示在索引条右侧和左侧。默认值：IndexerAlign.END](arkts-arkui-localizedbarrierdirection-e.md) |
-| offset | [Length](../arkts-apis/arkts-arkui-length-t.md) | 否 | 提示弹窗与索引条之间间距，大于等于0为有效值，在不设置或设置为小于0的情况下间距与popupPosition.x相同。与[popupPosition](#popupposition)同时设置时，水平方向上offset生效，竖直方向上popupPosition.y生效。<br>**起始版本：** 10 |
+| value | [IndexerAlign](arkts-arkui-indexeralign-e.md) | 是 | 索引条提示弹窗的对齐样式，支持弹窗显示在索引条右侧和左侧。默认值：IndexerAlign.END |
+| offset | [Length](../arkts-apis/arkts-arkui-length-t.md) | 否 | 提示弹窗与索引条之间间距，大于等于0为有效值，在不设置或设置为小于0的情况下间距与popupPosition.x相同。与[popupPosition](#popupposition)同时设置时，水平方向上offset生效，竖直方向上popupPosition.y生效。<br>**适用版本：** 10 |
 
 ## autoCollapse
 
@@ -62,7 +62,7 @@ autoCollapse(value: boolean)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -82,7 +82,7 @@ color(value: ResourceColor)
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -104,7 +104,7 @@ enableHapticFeedback(value: boolean)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -124,7 +124,7 @@ font(value: Font)
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -132,7 +132,7 @@ font(value: Font)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | Font | 是 | 未选中索引项文本样式。默认值：API version 11及以前：{size:'12.0fp',style: FontStyle.Normal,weight:FontWeight.Regular,family:'HarmonyOS Sans'}API version 12及以后：<br/>{size:'10.0vp',style:FontStyle.Normal,weight:FontWeight.Medium,family:'HarmonyOS Sans'&lt; br/&gt;} |
+| value | Font | 是 | 未选中索引项文本样式。默认值：API version 11及以前：{size:'12.0fp',style: FontStyle.Normal,weight:FontWeight.Regular,family:'HarmonyOS Sans'}API version 12及以后：&lt;br/ &gt;{size:'10.0vp',style:FontStyle.Normal,weight:FontWeight.Medium,family:'HarmonyOS Sans'&lt; br/&gt;} |
 
 ## itemBorderRadius
 
@@ -146,7 +146,7 @@ itemBorderRadius(value: number)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -166,7 +166,7 @@ itemSize(value: string | number)
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -186,7 +186,7 @@ onPopupSelect(callback: OnAlphabetIndexerPopupSelectCallback)
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -194,7 +194,7 @@ onPopupSelect(callback: OnAlphabetIndexerPopupSelectCallback)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [OnAlphabetIndexerPopupSelectCallback](arkts-arkui-onalphabetindexerpopupselectcallback-t.md) | 是 | 回调函数，用于处理提示弹窗二级索引选中事件。需先设置[usingPopup](#usingpopup)为true。<br>**起始版本：** 18 |
+| callback | [OnAlphabetIndexerPopupSelectCallback](arkts-arkui-onalphabetindexerpopupselectcallback-t.md) | 是 | 回调函数，用于处理提示弹窗二级索引选中事件。需先设置[usingPopup](#usingpopup)为true。<br>**适用版本：** 18 |
 
 ## onRequestPopupData
 
@@ -206,7 +206,7 @@ onRequestPopupData(callback: OnAlphabetIndexerRequestPopupDataCallback)
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -214,7 +214,7 @@ onRequestPopupData(callback: OnAlphabetIndexerRequestPopupDataCallback)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [OnAlphabetIndexerRequestPopupDataCallback](arkts-arkui-onalphabetindexerrequestpopupdatacallback-t.md) | 是 | 回调函数，用于提供提示弹窗二级索引项内容。需先设置[usingPopup](#usingpopup)为true。<br>**起始版本：** 18 |
+| callback | [OnAlphabetIndexerRequestPopupDataCallback](arkts-arkui-onalphabetindexerrequestpopupdatacallback-t.md) | 是 | 回调函数，用于提供提示弹窗二级索引项内容。需先设置[usingPopup](#usingpopup)为true。<br>**适用版本：** 18 |
 
 ## onSelect
 
@@ -226,7 +226,7 @@ onSelect(callback: OnAlphabetIndexerSelectCallback)
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -234,7 +234,7 @@ onSelect(callback: OnAlphabetIndexerSelectCallback)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [OnAlphabetIndexerSelectCallback](arkts-arkui-onalphabetindexerselectcallback-t.md) | 是 | 回调函数，用于处理索引项选中事件。<br>**起始版本：** 18 |
+| callback | [OnAlphabetIndexerSelectCallback](arkts-arkui-onalphabetindexerselectcallback-t.md) | 是 | 回调函数，用于处理索引项选中事件。<br>**适用版本：** 18 |
 
 ## onSelected
 
@@ -280,7 +280,7 @@ API version 11及以前版本，提示弹窗背景颜色默认为0xFFFFFFFF，�
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -302,7 +302,7 @@ popupBackgroundBlurStyle(value: BlurStyle)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -322,7 +322,7 @@ popupColor(value: ResourceColor)
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -342,7 +342,7 @@ popupFont(value: Font)
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -364,7 +364,7 @@ popupItemBackgroundColor(value: ResourceColor)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -386,7 +386,7 @@ popupItemBorderRadius(value: number)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -408,7 +408,7 @@ popupItemFont(value: Font)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -428,7 +428,7 @@ popupPosition(value: Position)
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -450,7 +450,7 @@ popupSelectedColor(value: ResourceColor)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -472,7 +472,7 @@ popupTitleBackground(value: ResourceColor)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -494,7 +494,7 @@ popupUnselectedColor(value: ResourceColor)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -516,7 +516,7 @@ selected(index: number)
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -536,7 +536,7 @@ selectedBackgroundColor(value: ResourceColor)
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -556,7 +556,7 @@ selectedColor(value: ResourceColor)
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -576,7 +576,7 @@ selectedFont(value: Font)
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -584,7 +584,7 @@ selectedFont(value: Font)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | Font | 是 | 选中项文本样式。默认值：API version 11及以前：{size:'12.0fp',style: FontStyle.Normal,weight:FontWeight.Regular,family:'HarmonyOS Sans'}API version 12及以后：<br/>{size:'10.0vp',style:FontStyle.Normal,weight:FontWeight.Medium,family:'HarmonyOS Sans'&lt; br/&gt;} |
+| value | Font | 是 | 选中项文本样式。默认值：API version 11及以前：{size:'12.0fp',style: FontStyle.Normal,weight:FontWeight.Regular,family:'HarmonyOS Sans'}API version 12及以后：&lt;br/ &gt;{size:'10.0vp',style:FontStyle.Normal,weight:FontWeight.Medium,family:'HarmonyOS Sans'&lt; br/&gt;} |
 
 ## usingPopup
 
@@ -596,7 +596,7 @@ usingPopup(value: boolean)
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

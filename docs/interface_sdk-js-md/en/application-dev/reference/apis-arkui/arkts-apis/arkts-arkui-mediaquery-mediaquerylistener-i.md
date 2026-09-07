@@ -86,4 +86,3 @@ Registers a media query listener. The callback is triggered when the media attri
 **Examples**
 
 For details, see [off('change')](#offchange).
-- simpleType:

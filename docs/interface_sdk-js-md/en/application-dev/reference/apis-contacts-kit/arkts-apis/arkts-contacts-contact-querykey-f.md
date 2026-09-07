@@ -18,7 +18,7 @@ Queries the key of a contact based on the specified contact ID. This API uses an
 
 **Deprecated since:** 10
 
-**Substitutes:** [queryKey](#querykey)(context: Context, id: number, callback: AsyncCallback&lt;string&gt;)
+**Substitutes:** [queryKey](#querykey-1)(context: Context, id: number, callback: AsyncCallback&lt;string&gt;)
 
 **Required permissions:** ohos.permission.READ_CONTACTS
 
@@ -79,8 +79,6 @@ Queries the key of a contact based on the specified contact ID. This API uses an
 **Examples**
 
 > NOTE
-> 
-> In the examples in this document, this.context is used to obtain the UIAbilityContext, where this represents a UIAbility instance inherited from UIAbility. To use the capabilities provided by UIAbilityContext in the UI, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -111,7 +109,7 @@ Queries the key of a contact based on the specified contact ID and holder. This 
 
 **Deprecated since:** 10
 
-**Substitutes:** [queryKey](#querykey)(context: Context, id: number, holder: Holder, callback: AsyncCallback&lt;string&gt;)
+**Substitutes:** [queryKey](#querykey-3)(context: Context, id: number, holder: Holder, callback: AsyncCallback&lt;string&gt;)
 
 **Required permissions:** ohos.permission.READ_CONTACTS
 
@@ -178,8 +176,6 @@ Queries the key of a contact based on the specified contact ID and holder. This 
 **Examples**
 
 > NOTE
-> 
-> In the examples in this document, this.context is used to obtain the UIAbilityContext, where this represents a UIAbility instance inherited from UIAbility. To use the capabilities provided by UIAbilityContext in the UI, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -214,7 +210,7 @@ Queries the key of a contact based on the specified contact ID and holder. This 
 
 **Deprecated since:** 10
 
-**Substitutes:** [queryKey](#querykey)(context: Context, id: number, holder?: Holder)
+**Substitutes:** [queryKey](#querykey-5)(context: Context, id: number, holder?: Holder)
 
 **Required permissions:** ohos.permission.READ_CONTACTS
 
@@ -287,8 +283,6 @@ Queries the key of a contact based on the specified contact ID and holder. This 
 **Examples**
 
 > NOTE
-> 
-> In the examples in this document, this.context is used to obtain the UIAbilityContext, where this represents a UIAbility instance inherited from UIAbility. If you need to use the capabilities provided by UIAbilityContext in the UI, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
 ```TypeScript
 import { common } from '@kit.AbilityKit';

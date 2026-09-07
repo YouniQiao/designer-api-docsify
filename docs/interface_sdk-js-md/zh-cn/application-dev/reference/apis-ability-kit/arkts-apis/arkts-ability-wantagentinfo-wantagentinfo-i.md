@@ -14,11 +14,11 @@ actionFlags?: Array<abilityWantAgent.WantAgentFlags>
 
 动作执行属性。不设置时无执行属性。
 
-**类型：** Array&lt;[abilityWantAgent.WantAgentFlags](arkts-ability-wantagent-wantagentflags-depr-e.md)&gt;
+**类型：** Array&lt;abilityWantAgent.WantAgentFlags&gt;
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -30,11 +30,11 @@ actionType?: abilityWantAgent.OperationType
 
 动作类型。
 
-**类型：** [abilityWantAgent.OperationType](arkts-ability-wantagent-operationtype-depr-e.md)
+**类型：** abilityWantAgent.OperationType
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -50,7 +50,7 @@ extraInfo?: { [key: string]: any }
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -66,7 +66,7 @@ extraInfos?: Record<string, Object>
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -80,7 +80,7 @@ operationType?: wantAgent.OperationType
 
 从API version 7 开始支持，从API version 11 开始废弃，建议使用actionType&lt;sup&gt;11+&lt;/sup&gt;替代。
 
-**类型：** [wantAgent.OperationType](arkts-ability-wantagent-operationtype-depr-e.md)
+**类型：** wantAgent.OperationType
 
 **起始版本：** 7
 
@@ -88,7 +88,7 @@ operationType?: wantAgent.OperationType
 
 **替代接口：** [actionType](#actiontype)
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -104,7 +104,7 @@ requestCode: number
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -118,7 +118,7 @@ wantAgentFlags?: Array<wantAgent.WantAgentFlags>
 
 从API version 7 开始支持，从API version 11 开始废弃，建议使用actionFlags&lt;sup&gt;11+&lt;/sup&gt;替代。
 
-**类型：** Array&lt;[wantAgent.WantAgentFlags](arkts-ability-wantagent-wantagentflags-depr-e.md)&gt;
+**类型：** Array&lt;wantAgent.WantAgentFlags&gt;
 
 **起始版本：** 7
 
@@ -126,7 +126,7 @@ wantAgentFlags?: Array<wantAgent.WantAgentFlags>
 
 **替代接口：** [actionFlags](#actionflags)
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -142,6 +142,6 @@ wants: Array<Want>
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core

@@ -18,7 +18,7 @@ function getP2pLocalDevice(): Promise<WifiP2pDevice>
 
 **需要权限：** 
 - API版本11+：ohos.permission.GET_WIFI_INFO
-- API版本9 - 10：ohos.permission.GET_WIFI_INFO and ohos.permission.GET_WIFI_CONFIG
+- API版本9-10：ohos.permission.GET_WIFI_INFO and ohos.permission.GET_WIFI_CONFIG
 
 **系统能力：** SystemCapability.Communication.WiFi.P2P
 
@@ -67,7 +67,7 @@ function getP2pLocalDevice(callback: AsyncCallback<WifiP2pDevice>): void
 
 **需要权限：** 
 - API版本11+：ohos.permission.GET_WIFI_INFO
-- API版本9 - 10：ohos.permission.GET_WIFI_INFO and ohos.permission.GET_WIFI_CONFIG
+- API版本9-10：ohos.permission.GET_WIFI_INFO and ohos.permission.GET_WIFI_CONFIG
 
 **系统能力：** SystemCapability.Communication.WiFi.P2P
 

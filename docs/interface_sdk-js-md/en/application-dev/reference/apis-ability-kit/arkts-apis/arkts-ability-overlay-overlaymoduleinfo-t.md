@@ -10,4 +10,4 @@ Defines the information about a module with the overlay feature.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Overlay
 
-**Type:** [_OverlayModuleInfo.OverlayModuleInfo](arkts-ability-overlaymoduleinfo-i.md)
+**Type:** _OverlayModuleInfo.OverlayModuleInfo

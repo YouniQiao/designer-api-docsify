@@ -4,8 +4,6 @@ Defines mode for playback capture, each mode means different target streams to c
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
-
 **System capability:** SystemCapability.Multimedia.Audio.PlaybackCapture
 
 ## MODE_ONLY_VOIP

@@ -27,7 +27,7 @@ NavDestination()
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -588,7 +588,6 @@ struct HomeBody {
 ```
 
 以下示例主要演示每个NavDestination可以配置[preferredOrientation](arkts-arkui-navdestination-attribute.md#preferredorientation)指定的页面方向和状态栏，导航条显隐状态。
-从API version 19开始，新增了preferredOrientation属性。
 
 ```TypeScript
 import { window } from '@kit.ArkUI';

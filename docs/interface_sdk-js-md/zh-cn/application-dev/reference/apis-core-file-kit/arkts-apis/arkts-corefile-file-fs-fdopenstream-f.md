@@ -16,7 +16,7 @@ declare function fdopenStream(fd: number, mode: string): Promise<Stream>
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -93,7 +93,7 @@ declare function fdopenStream(fd: number, mode: string, callback: AsyncCallback<
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 

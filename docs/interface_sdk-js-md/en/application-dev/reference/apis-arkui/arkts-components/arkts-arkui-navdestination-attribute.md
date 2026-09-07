@@ -43,7 +43,7 @@ Sets the icon of the back button on the title bar.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| PixelMap \| SymbolGlyphModifier | Yes | Icon of the back button on the title bar.<br>**Since:** 12 |
+| value | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| PixelMap \| [SymbolGlyphModifier](arkts-arkui-symbolglyphmodifier-t.md) | Yes | Icon of the back button on the title bar.<br>**Since:** 12 |
 
 ## backButtonIcon
 
@@ -73,7 +73,7 @@ Sets the icon and accessibility text for the back button on the title bar.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| icon | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| PixelMap \| SymbolGlyphModifier | Yes | Icon of the back button on the title bar. |
+| icon | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| PixelMap \| [SymbolGlyphModifier](arkts-arkui-symbolglyphmodifier-t.md) | Yes | Icon of the back button on the title bar. |
 | accessibilityText | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | No | Accessibility text for the back button.Default value: **back** when the system language is English. |
 
 ## bindToNestedScrollable

@@ -33,6 +33,22 @@ Indicates the overview information of unifiedData.
 ## summary
 
 ```TypeScript
+get summary(): Record<string, number>
+```
+
+A map for each type and data size, key is data type, value is the corresponding data size
+
+**Type:** Record&lt;string, number&gt;
+
+**Since:** 10
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+**System capability:** SystemCapability.DistributedDataManager.UDMF.Core
+
+```TypeScript
 set summary(value: Record<string, number>)
 ```
 
@@ -49,6 +65,22 @@ A map for each type and data size, key is data type, value is the corresponding 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## totalSize
+
+```TypeScript
+get totalSize(): number
+```
+
+Total data size of data in Bytes
+
+**Type:** number
+
+**Since:** 10
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+**System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
 ```TypeScript
 set totalSize(value: number)

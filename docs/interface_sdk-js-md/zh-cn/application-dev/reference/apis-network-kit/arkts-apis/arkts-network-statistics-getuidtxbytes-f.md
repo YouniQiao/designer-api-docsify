@@ -21,7 +21,8 @@ function getUidTxBytes(uid: number, callback: AsyncCallback<number>): void
 **起始版本：** 10
 
 **需要权限：** 
-- API版本26.0.0+：ohos.permission.GET_NETWORK_STATS
+- API版本26+：ohos.permission.GET_NETWORK_STATS
+- API版本10-25：N/A
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
@@ -75,7 +76,8 @@ function getUidTxBytes(uid: number): Promise<number>
 **起始版本：** 10
 
 **需要权限：** 
-- API版本26.0.0+：ohos.permission.GET_NETWORK_STATS
+- API版本26+：ohos.permission.GET_NETWORK_STATS
+- API版本10-25：N/A
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 

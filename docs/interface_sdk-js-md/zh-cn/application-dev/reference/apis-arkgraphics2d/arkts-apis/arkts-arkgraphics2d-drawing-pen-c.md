@@ -194,7 +194,7 @@ getColor(): common2D.Color
 
 | 类型 | 说明 |
 | --- | --- |
-| [common2D.Color](arkts-arkgraphics2d-common2d-color-i.md) | 返回画笔当前设置的颜色。 |
+| common2D.Color | 返回画笔当前设置的颜色。 |
 
 **示例**
 
@@ -232,7 +232,7 @@ getColor4f(): common2D.Color4f
 
 | 类型 | 说明 |
 | --- | --- |
-| [common2D.Color4f](arkts-arkgraphics2d-common2d-color4f-i.md) | 返回画笔当前设置的颜色，为ARGB格式的浮点数表示，每个颜色通道的取值范围为[0.0, 1.0]。 |
+| common2D.Color4f | 返回画笔当前设置的颜色，为ARGB格式的浮点数表示，每个颜色通道的取值范围为[0.0, 1.0]。 |
 
 **示例**
 
@@ -738,7 +738,7 @@ setColor(color: common2D.Color): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| color | [common2D.Color](arkts-arkgraphics2d-common2d-color-i.md) | 是 | ARGB格式的颜色，每个颜色通道的值是0到255之间的整数。 |
+| color | common2D.Color | 是 | ARGB格式的颜色，每个颜色通道的值是0到255之间的整数。 |
 
 **错误码：**
 
@@ -857,8 +857,8 @@ setColor4f(color4f: common2D.Color4f, colorSpace: colorSpaceManager.ColorSpaceMa
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| color4f | [common2D.Color4f](arkts-arkgraphics2d-common2d-color4f-i.md) | 是 | ARGB格式的颜色，浮点数，每个颜色通道值的范围为[0.0, 1.0]，超出范围的值会被截断到0.0或1.0。 |
-| colorSpace | [colorSpaceManager.ColorSpaceManager](arkts-arkgraphics2d-colorspacemanager-colorspacemanager-i.md) \| null | 是 | 标准色域对象，null表示使用SRGB色域。 |
+| color4f | common2D.Color4f | 是 | ARGB格式的颜色，浮点数，每个颜色通道值的范围为[0.0, 1.0]，超出范围的值会被截断到0.0或1.0。 |
+| colorSpace | colorSpaceManager.ColorSpaceManager \| null | 是 | 标准色域对象，null表示使用SRGB色域。 |
 
 **示例**
 
@@ -896,7 +896,7 @@ setColorFilter(filter: ColorFilter | null): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| filter | ColorFilter \| null | 是 | 颜色滤波器。null表示清空颜色滤波器。<br>**起始版本：** 20 |
+| filter | ColorFilter \| null | 是 | 颜色滤波器。null表示清空颜色滤波器。<br>**适用版本：** 20 |
 
 **错误码：**
 
@@ -1057,7 +1057,7 @@ setMaskFilter(filter: MaskFilter | null): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| filter | [MaskFilter](arkts-arkgraphics2d-drawing-maskfilter-c.md) \| null | 是 | 蒙版滤镜。null表示清空蒙版滤镜。<br>**起始版本：** 20 |
+| filter | [MaskFilter](arkts-arkgraphics2d-drawing-maskfilter-c.md) \| null | 是 | 蒙版滤镜。null表示清空蒙版滤镜。<br>**适用版本：** 20 |
 
 **错误码：**
 
@@ -1144,7 +1144,7 @@ setPathEffect(effect: PathEffect | null): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| effect | [PathEffect](arkts-arkgraphics2d-drawing-patheffect-c.md) \| null | 是 | 路径效果对象，用于设置虚线、转角等路径绘制样式。null表示清空路径效果。<br>**起始版本：** 20 |
+| effect | [PathEffect](arkts-arkgraphics2d-drawing-patheffect-c.md) \| null | 是 | 路径效果对象，用于设置虚线、转角等路径绘制样式。null表示清空路径效果。<br>**适用版本：** 20 |
 
 **错误码：**
 
@@ -1186,7 +1186,7 @@ setShaderEffect(shaderEffect: ShaderEffect | null): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| shaderEffect | [ShaderEffect](arkts-arkgraphics2d-drawing-shadereffect-c.md) \| null | 是 | 着色器效果对象。null表示清空着色器效果。<br>**起始版本：** 20 |
+| shaderEffect | [ShaderEffect](arkts-arkgraphics2d-drawing-shadereffect-c.md) \| null | 是 | 着色器效果对象。null表示清空着色器效果。<br>**适用版本：** 20 |
 
 **错误码：**
 
@@ -1228,7 +1228,7 @@ setShadowLayer(shadowLayer: ShadowLayer | null): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| shadowLayer | [ShadowLayer](arkts-arkgraphics2d-drawing-shadowlayer-c.md) \| null | 是 | 阴影层对象。null表示清空阴影层效果。<br>**起始版本：** 20 |
+| shadowLayer | [ShadowLayer](arkts-arkgraphics2d-drawing-shadowlayer-c.md) \| null | 是 | 阴影层对象。null表示清空阴影层效果。<br>**适用版本：** 20 |
 
 **错误码：**
 

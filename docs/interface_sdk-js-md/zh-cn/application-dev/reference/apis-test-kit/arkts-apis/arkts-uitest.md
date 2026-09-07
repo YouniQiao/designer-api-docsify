@@ -74,9 +74,9 @@ import { UiComponent, UiDriver, BY, By } from '@kit.TestKit';
 | [WindowChangeType](arkts-test-uitest-windowchangetype-e.md) | 支持监听的窗口变化事件类型。 |
 | [WindowMode](arkts-test-uitest-windowmode-e.md) | 窗口的窗口模式。 |
 
-### 属性
+### 常量
 
 | 名称 | 说明 |
 | --- | --- |
-| [BY](arkts-test-ohosuitest-p.md) | 用于便捷构造[By](arkts-test-uitest-by-c.md)对象的静态构造器，使用示例：BY.text('txt').enabled(true)。 |
-| [ON](arkts-test-ohosuitest-p.md) | 用于便捷构造[On](arkts-test-uitest-on-c.md)对象的静态构造器，使用示例：ON.text('txt').enabled(true)。 |
+| [BY](arkts-test-uitest-con.md#by) | 用于便捷构造[By](arkts-test-uitest-by-c.md)对象的静态构造器，使用示例：BY.text('txt').enabled(true)。 |
+| [ON](arkts-test-uitest-con.md#on) | 用于便捷构造[On](arkts-test-uitest-on-c.md)对象的静态构造器，使用示例：ON.text('txt').enabled(true)。 |

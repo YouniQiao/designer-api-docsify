@@ -10,4 +10,4 @@ type BaseProfile = baseProfile.BaseProfile
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
-**类型：** [baseProfile.BaseProfile](arkts-connectivity-baseprofile-baseprofile-i.md)
+**类型：** baseProfile.BaseProfile

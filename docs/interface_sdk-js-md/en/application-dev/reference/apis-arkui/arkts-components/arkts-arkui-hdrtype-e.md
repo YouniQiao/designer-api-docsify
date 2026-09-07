@@ -4,8 +4,6 @@ Sets the HDR type of the XComponent.
 
 **Since:** 24
 
-**Model restriction:** This API can be used only in the stage model.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## DEFAULT

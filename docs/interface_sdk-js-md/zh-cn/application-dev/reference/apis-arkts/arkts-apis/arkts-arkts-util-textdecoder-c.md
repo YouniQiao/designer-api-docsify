@@ -22,7 +22,7 @@ constructor()
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -94,7 +94,7 @@ static create(encoding?: string, options?: TextDecoderOptions): TextDecoder
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -102,8 +102,8 @@ static create(encoding?: string, options?: TextDecoderOptions): TextDecoder
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| encoding | string | 否 | 编码格式。默认格式为 **'utf-8'**。<br>**起始版本：** 11 |
-| options | [TextDecoderOptions](arkts-arkts-util-textdecoderoptions-i.md) | 否 | 解码相关的选项，包含 **fatal** 和 **ignoreBOM**。<br>**起始版本：** 11 |
+| encoding | string | 否 | 编码格式。默认格式为 **'utf-8'**。<br>**适用版本：** 11 |
+| options | [TextDecoderOptions](arkts-arkts-util-textdecoderoptions-i.md) | 否 | 解码相关的选项，包含 **fatal** 和 **ignoreBOM**。<br>**适用版本：** 11 |
 
 **返回值：**
 
@@ -184,7 +184,7 @@ decodeToString(input: Uint8Array, options?: DecodeToStringOptions): string
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -252,7 +252,7 @@ decodeWithStream(input: Uint8Array, options?: DecodeWithStreamOptions): string
 
 **替代接口：** [decodeToString](#decodetostring)
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -261,7 +261,7 @@ decodeWithStream(input: Uint8Array, options?: DecodeWithStreamOptions): string
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | input | Uint8Array | 是 | 要解码的 Uint8Array 对象。 |
-| options | [DecodeWithStreamOptions](arkts-arkts-util-decodewithstreamoptions-i.md) | 否 | 解码相关的选项。<br>**起始版本：** 11 |
+| options | [DecodeWithStreamOptions](arkts-arkts-util-decodewithstreamoptions-i.md) | 否 | 解码相关的选项。<br>**适用版本：** 11 |
 
 **返回值：**
 
@@ -306,7 +306,7 @@ readonly encoding: string
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -322,7 +322,7 @@ readonly fatal: boolean
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -338,6 +338,6 @@ readonly ignoreBOM = false
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Utils.Lang

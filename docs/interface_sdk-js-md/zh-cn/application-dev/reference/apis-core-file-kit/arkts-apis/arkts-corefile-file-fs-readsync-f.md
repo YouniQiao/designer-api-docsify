@@ -20,7 +20,7 @@ declare function readSync(
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -30,7 +30,7 @@ declare function readSync(
 | --- | --- | --- | --- |
 | fd | number | 是 | 已打开的文件描述符fd。 |
 | buffer | ArrayBuffer | 是 | 用于保存读取到的文件数据的缓冲区。 |
-| options | [ReadOptions](arkts-corefile-file-fs-readoptions-i.md) | 否 | 支持如下选项：   - offset，number类型，表示期望读取文件的位置，单位为Byte。可选，默认从当前位置开始读。   - length，number类型，表示期望读取数据的长度，单位为Byte。可选，默认缓冲区长度。<br>**起始版本：** 11 |
+| options | [ReadOptions](arkts-corefile-file-fs-readoptions-i.md) | 否 | 支持如下选项：   - offset，number类型，表示期望读取文件的位置，单位为Byte。可选，默认从当前位置开始读。   - length，number类型，表示期望读取数据的长度，单位为Byte。可选，默认缓冲区长度。<br>**适用版本：** 11 |
 
 **返回值：**
 

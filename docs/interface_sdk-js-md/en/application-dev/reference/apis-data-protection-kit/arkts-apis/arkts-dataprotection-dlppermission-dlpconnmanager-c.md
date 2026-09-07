@@ -28,7 +28,8 @@ Represents a constructor for instantiating [DlpConnManager](arkts-dataprotection
 **Since:** 21
 
 **Required permissions:** 
-- API version 26.0.0 and later: ohos.permission.ENTERPRISE_ACCESS_DLP_FILE or ohos.permission.ACCESS_DLP_SERVICE
+- API version 26 and later: ohos.permission.ENTERPRISE_ACCESS_DLP_FILE or ohos.permission.ACCESS_DLP_SERVICE
+- API version 25: N/A
 - API versions 21 to 24: ohos.permission.ENTERPRISE_ACCESS_DLP_FILE
 
 **System capability:** SystemCapability.Security.DataLossPrevention
@@ -63,7 +64,8 @@ Registers a callback with the SA.
 **Since:** 21
 
 **Required permissions:** 
-- API version 26.0.0 and later: ohos.permission.ENTERPRISE_ACCESS_DLP_FILE or ohos.permission.ACCESS_DLP_SERVICE
+- API version 26 and later: ohos.permission.ENTERPRISE_ACCESS_DLP_FILE or ohos.permission.ACCESS_DLP_SERVICE
+- API version 25: N/A
 - API versions 21 to 24: ohos.permission.ENTERPRISE_ACCESS_DLP_FILE
 
 **System capability:** SystemCapability.Security.DataLossPrevention
@@ -78,7 +80,7 @@ Registers a callback with the SA.
 
 | Type | Description |
 | --- | --- |
-| number | Registration result. The unique ID of the callback is returned. The value range is [0, 2&lt;[sup](../../apis-default/arkts-apis/arkts-lib-es2015-core-string-i.md)&gt;53&lt;/sup&gt;-1]. |
+| number | Registration result. The unique ID of the callback is returned. The value range is [0, 2&lt;sup&gt;53&lt;/sup&gt;-1]. |
 
 **Error codes:**
 
@@ -133,7 +135,8 @@ This API unregisters a callback and releases resources when an application exits
 **Since:** 21
 
 **Required permissions:** 
-- API version 26.0.0 and later: ohos.permission.ENTERPRISE_ACCESS_DLP_FILE or ohos.permission.ACCESS_DLP_SERVICE
+- API version 26 and later: ohos.permission.ENTERPRISE_ACCESS_DLP_FILE or ohos.permission.ACCESS_DLP_SERVICE
+- API version 25: N/A
 - API versions 21 to 24: ohos.permission.ENTERPRISE_ACCESS_DLP_FILE
 
 **System capability:** SystemCapability.Security.DataLossPrevention

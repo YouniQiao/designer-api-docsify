@@ -34,8 +34,9 @@ function setUsbStorageDeviceAccessPolicy(admin: Want, usbPolicy: UsbPolicy): voi
 **起始版本：** 12
 
 **需要权限：** 
-- API版本26.0.0+：ohos.permission.ENTERPRISE_MANAGE_USB or ohos.permission.PERSONAL_MANAGE_RESTRICTIONS
-- API版本12 - 24：ohos.permission.ENTERPRISE_MANAGE_USB
+- API版本26+：ohos.permission.ENTERPRISE_MANAGE_USB or ohos.permission.PERSONAL_MANAGE_RESTRICTIONS
+- API版本25：N/A
+- API版本12-24：ohos.permission.ENTERPRISE_MANAGE_USB
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

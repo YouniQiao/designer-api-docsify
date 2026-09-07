@@ -18,7 +18,7 @@ TextTimer(options?: TextTimerOptions)
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本10开始，该接口支持在ArkTS卡片中使用。
 
@@ -42,7 +42,6 @@ TextTimer(options?: TextTimerOptions)
 ## 示例
 
 该示例展示了TextTimer组件的基本使用方法，通过[format](#format)属性设置计时器的文本显示格式。
-用户可以通过点击"start"、"pause"、"reset"按钮，开启、暂停、重置计时器。
 
 ```TypeScript
 // xxx.ets
@@ -275,7 +274,6 @@ struct TextTimerDemo {
 ```
 
 该示例通过[TextTimerOptions](#texttimeroptions对象说明)的startTime属性设置计时器初始计时时间。
-从API版本26.0.0开始，[TextTimerOptions](#texttimeroptions对象说明)新增了startTime属性。
 
 ```TypeScript
 // xxx.ets

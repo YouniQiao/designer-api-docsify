@@ -19,7 +19,8 @@ function offLocationChange(callback?: Callback<Location>): void
 **起始版本：** 26.0.0
 
 **需要权限：** 
-- API版本23 - 24：ohos.permission.APPROXIMATELY_LOCATION
+- API版本25+：N/A
+- API版本23-24：ohos.permission.APPROXIMATELY_LOCATION
 
 **系统能力：** 
 - API版本23+：SystemCapability.Location.Location.Core
@@ -28,7 +29,7 @@ function offLocationChange(callback?: Callback<Location>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Location&gt; | 否 | 需要取消订阅的回调函数。该回调函数需要与onLocationChange接口传入的回调函数保持一致，否则将抛出401错误码。若无此参数，则取消所有订阅。<br>**起始版本：** 23 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Location&gt; | 否 | 需要取消订阅的回调函数。该回调函数需要与onLocationChange接口传入的回调函数保持一致，否则将抛出401错误码。若无此参数，则取消所有订阅。<br>**适用版本：** 23 |
 
 **错误码：**
 

@@ -4,8 +4,6 @@ Enumerates the scenarios where the [onNewWant](arkts-ability-app-ability-uiabili
 
 **Since:** 20
 
-**Model restriction:** This API can be used only in the stage model.
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## SCENARIO_MOVE_MISSION_TO_FRONT

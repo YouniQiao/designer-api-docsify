@@ -8,11 +8,11 @@ The **PluginComponentManager** module provides APIs for the **PluginComponent** 
 The **external.json** file is created by developers. It stores component names and template paths in key-value pairs.The component name is used as the keyword, and the corresponding template path is used as the value.  
  **Example**  
  ```json
- {
- "PluginProviderExample": "ets/pages/PluginProviderExample.js",
- "plugintemplate2": "ets/pages/plugintemplate2.js"
- }
- ```
+{
+  "PluginProviderExample": "ets/pages/PluginProviderExample.js",
+  "plugintemplate2": "ets/pages/plugintemplate2.js"
+}
+```
 
 ## Modules to Import
 

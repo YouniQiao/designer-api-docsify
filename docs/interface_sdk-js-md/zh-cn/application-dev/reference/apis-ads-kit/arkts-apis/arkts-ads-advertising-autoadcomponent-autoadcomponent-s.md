@@ -24,7 +24,7 @@ build(): void
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Advertising.Ads
 
@@ -36,11 +36,11 @@ adOptions: advertising.AdOptions
 
 广告配置参数。
 
-**类型：** [advertising.AdOptions](arkts-ads-advertising-adoptions-i.md)
+**类型：** advertising.AdOptions
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Advertising.Ads
 
@@ -52,11 +52,11 @@ adParam: advertising.AdRequestParams
 
 广告请求参数。
 
-**类型：** [advertising.AdRequestParams](arkts-ads-advertising-adrequestparams-i.md)
+**类型：** advertising.AdRequestParams
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Advertising.Ads
 
@@ -68,11 +68,11 @@ displayOptions: advertising.AdDisplayOptions
 
 广告展示参数。
 
-**类型：** [advertising.AdDisplayOptions](arkts-ads-advertising-addisplayoptions-i.md)
+**类型：** advertising.AdDisplayOptions
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Advertising.Ads
 
@@ -84,10 +84,10 @@ interactionListener: advertising.AdInteractionListener
 
 广告状态变化回调。
 
-**类型：** [advertising.AdInteractionListener](arkts-ads-advertising-adinteractionlistener-i.md)
+**类型：** advertising.AdInteractionListener
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Advertising.Ads

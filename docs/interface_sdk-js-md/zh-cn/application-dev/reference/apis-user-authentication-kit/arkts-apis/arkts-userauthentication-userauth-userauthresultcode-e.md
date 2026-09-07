@@ -16,7 +16,7 @@ SUCCESS = 12500000
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
@@ -30,7 +30,7 @@ FAIL = 12500001
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
@@ -44,7 +44,7 @@ GENERAL_ERROR = 12500002
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
@@ -58,7 +58,7 @@ CANCELED = 12500003
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
@@ -72,7 +72,7 @@ TIMEOUT = 12500004
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
@@ -86,7 +86,7 @@ TYPE_NOT_SUPPORT = 12500005
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
@@ -100,7 +100,7 @@ TRUST_LEVEL_NOT_SUPPORT = 12500006
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
@@ -114,7 +114,7 @@ BUSY = 12500007
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
@@ -128,7 +128,7 @@ INVALID_PARAMETERS = 12500008
 
 **起始版本：** 20
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
@@ -142,7 +142,7 @@ LOCKED = 12500009
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
@@ -156,7 +156,7 @@ NOT_ENROLLED = 12500010
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
@@ -170,7 +170,7 @@ CANCELED_FROM_WIDGET = 12500011
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
@@ -184,6 +184,6 @@ PIN_EXPIRED = 12500013
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core

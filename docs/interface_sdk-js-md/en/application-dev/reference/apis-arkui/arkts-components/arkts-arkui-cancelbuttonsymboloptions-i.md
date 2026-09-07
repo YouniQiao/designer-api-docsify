@@ -19,7 +19,7 @@ icon?: SymbolGlyphModifier
 
 Symbol icon of the Cancel button on the right.
 
-**Type:** SymbolGlyphModifier
+**Type:** [SymbolGlyphModifier](arkts-arkui-symbolglyphmodifier-t.md)
 
 **Since:** 12
 

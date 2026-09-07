@@ -24,7 +24,7 @@ MDNS服务设备的IP地址。采用设备的IP，添加服务和移除服务时
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Communication.NetManager.MDNS
 
@@ -40,7 +40,7 @@ MDNS服务的端口号。取值范围[0，65535]。
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Communication.NetManager.MDNS
 
@@ -56,7 +56,7 @@ MDNS服务属性信息。
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Communication.NetManager.MDNS
 
@@ -72,7 +72,7 @@ MDNS服务的名字。
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Communication.NetManager.MDNS
 
@@ -88,6 +88,6 @@ MDNS服务的类型。格式：_&lt;name&gt;.&lt;_tcp/_udp&gt;，name长度小�
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Communication.NetManager.MDNS

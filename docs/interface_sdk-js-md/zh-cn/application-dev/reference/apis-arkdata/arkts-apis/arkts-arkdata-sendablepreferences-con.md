@@ -8,9 +8,11 @@ const MAX_KEY_LENGTH: number
 
 Key的最大长度限制为1024个字节。
 
+**类型：** number
+
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.Preferences.Core
 
@@ -22,8 +24,10 @@ const MAX_VALUE_LENGTH: number
 
 Value的最大长度限制为16MB。
 
+**类型：** number
+
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.Preferences.Core

@@ -10,4 +10,4 @@ type DataFlowType = data.DataFlowType
 
 **系统能力：** SystemCapability.Telephony.StateRegistry
 
-**类型：** [data.DataFlowType](arkts-telephony-data-dataflowtype-e.md)
+**类型：** data.DataFlowType

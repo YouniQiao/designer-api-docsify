@@ -122,8 +122,6 @@ client.close().then(() => {
 ```
 
 > NOTE
-> 
-> In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';
@@ -601,8 +599,6 @@ tcpServer.listen(listenAddr, (err: BusinessError) => {
 ```
 
 > NOTE
-> 
-> In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';
@@ -631,8 +627,6 @@ client.getSocketFd().then((data: number) => {
 ```
 
 > NOTE
-> 
-> In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';
@@ -658,8 +652,6 @@ server.listen(listenAddr).then(() => {
 ```
 
 > NOTE
-> 
-> In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';
@@ -1060,8 +1052,6 @@ tcpServer.getState().then((data: socket.SocketStateBase) => {
 ```
 
 > NOTE
-> 
-> In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';
@@ -1090,8 +1080,6 @@ client.connect(connectOpt).then(() => {
 ```
 
 > NOTE
-> 
-> In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';

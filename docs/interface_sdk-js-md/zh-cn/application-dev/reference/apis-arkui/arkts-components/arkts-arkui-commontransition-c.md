@@ -21,7 +21,7 @@ constructor()
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -35,7 +35,7 @@ opacity(value: number): T
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -61,7 +61,7 @@ scale(value: ScaleOptions): T
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -69,7 +69,7 @@ scale(value: ScaleOptions): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | ScaleOptions | 是 | 设置页面转场时的缩放效果，为入场时起点和退场时终点的值。   - x：横向放大倍数（或缩小比例）。   - y：纵向放大倍数（或缩小比例）。   - z：竖向放大倍数（或缩小比例）。   - centerX、centerY缩放中心点。centerX和centerY默认值是"50%"，即默认以页面的中心点为缩放中心点。   - 中心点为(0, 0)代表页面的左上角。<br>**起始版本：** 18 |
+| value | ScaleOptions | 是 | 设置页面转场时的缩放效果，为入场时起点和退场时终点的值。   - x：横向放大倍数（或缩小比例）。   - y：纵向放大倍数（或缩小比例）。   - z：竖向放大倍数（或缩小比例）。   - centerX、centerY缩放中心点。centerX和centerY默认值是"50%"，即默认以页面的中心点为缩放中心点。   - 中心点为(0, 0)代表页面的左上角。<br>**适用版本：** 18 |
 
 **返回值：**
 
@@ -87,7 +87,7 @@ slide(value: SlideEffect): T
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -113,7 +113,7 @@ translate(value: TranslateOptions): T
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -121,7 +121,7 @@ translate(value: TranslateOptions): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | TranslateOptions | 是 | 设置页面转场时的平移效果，为入场时起点和退场时终点的值，和slide同时设置时默认生效slide。   - x：横向的平移距离。   - y：纵向的平移距离。   - z：竖向的平移距离。<br>**起始版本：** 18 |
+| value | TranslateOptions | 是 | 设置页面转场时的平移效果，为入场时起点和退场时终点的值，和slide同时设置时默认生效slide。   - x：横向的平移距离。   - y：纵向的平移距离。   - z：竖向的平移距离。<br>**适用版本：** 18 |
 
 **返回值：**
 

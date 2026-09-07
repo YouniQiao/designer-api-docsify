@@ -121,7 +121,6 @@ Sets the position of the component content displayed by the magnifier relative t
 **Examples**
 
 For details, see the [bind](#bind) example.
-- simpleType:
 
 ## unbind
 
@@ -142,4 +141,3 @@ Unbinds the magnifier from the current component.
 **Examples**
 
 For details, see the [bind](#bind) example.
-- simpleType:

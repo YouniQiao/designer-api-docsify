@@ -877,7 +877,7 @@ Checks whether the immersive layout is enabled for this window.
 
 This API can be called only by the main window and child windows.
 
-The return value is consistent with the settings applied via [setImmersiveModeEnabledState()](#setimmersivemodeenabledstate) and [setWindowLayoutFullScreen()](#setwindowlayoutfullscreen). If neither of these APIs has been called, the default return value is **false**.
+The return value is consistent with the settings applied via [setImmersiveModeEnabledState()](#setimmersivemodeenabledstate) and [setWindowLayoutFullScreen()](#setwindowlayoutfullscreen-1). If neither of these APIs has been called, the default return value is **false**.
 
 **Since:** 12
 
@@ -2442,7 +2442,7 @@ Checks whether this window supports the wide-gamut color space. This API uses an
 
 **Deprecated since:** 9
 
-**Substitutes:** [isWindowSupportWideGamut](#iswindowsupportwidegamut)(callback: AsyncCallback&lt;boolean&gt;)
+**Substitutes:** [isWindowSupportWideGamut](#iswindowsupportwidegamut-1)(callback: AsyncCallback&lt;boolean&gt;)
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -2951,7 +2951,7 @@ Loads content from a page to this window. This API uses a promise to return the 
 
 **Deprecated since:** 9
 
-**Substitutes:** [setUIContent](#setuicontent)(path: string)
+**Substitutes:** [setUIContent](#setuicontent-1)(path: string)
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -3634,7 +3634,7 @@ This operation is not supported in a window in full-screen mode.
 
 **Deprecated since:** 9
 
-**Substitutes:** [moveWindowTo](#movewindowto)(x: int, y: int, callback: AsyncCallback&lt;void&gt;)
+**Substitutes:** [moveWindowTo](#movewindowto-1)(x: int, y: int, callback: AsyncCallback&lt;void&gt;)
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -6306,7 +6306,7 @@ This operation is not supported in a window in full-screen mode.
 
 **Deprecated since:** 9
 
-**Substitutes:** [resize](#resize)(width: int, height: int, callback: AsyncCallback&lt;void&gt;)
+**Substitutes:** [resize](#resize-1)(width: int, height: int, callback: AsyncCallback&lt;void&gt;)
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -7037,7 +7037,7 @@ When the screen brightness setting for the window takes effect, Control Panel ca
 
 **Deprecated since:** 9
 
-**Substitutes:** [setWindowBrightness](#setwindowbrightness)(brightness: double, callback: AsyncCallback&lt;void&gt;)
+**Substitutes:** [setWindowBrightness](#setwindowbrightness-1)(brightness: double, callback: AsyncCallback&lt;void&gt;)
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -7117,7 +7117,7 @@ Sets a color space for this window. This API uses an asynchronous callback to re
 
 **Deprecated since:** 9
 
-**Substitutes:** [setWindowColorSpace](#setwindowcolorspace)(colorSpace:ColorSpace, callback: AsyncCallback&lt;void&gt;)
+**Substitutes:** [setWindowColorSpace](#setwindowcolorspace-1)(colorSpace:ColorSpace, callback: AsyncCallback&lt;void&gt;)
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -7690,7 +7690,7 @@ Sets whether this window is focusable, that is, whether the window can gain focu
 
 **Deprecated since:** 9
 
-**Substitutes:** [setWindowFocusable](#setwindowfocusable)(isFocusable: boolean, callback: AsyncCallback&lt;void&gt;)
+**Substitutes:** [setWindowFocusable](#setwindowfocusable-1)(isFocusable: boolean, callback: AsyncCallback&lt;void&gt;)
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -7871,14 +7871,14 @@ Non-full-screen mode means that the layout avoids the status bar and <!--RP15-->
 > 
 > This API is supported since API version 6 and deprecated since API version 9. You are advised to use
 > [setWindowSystemBarEnable()](#setwindowsystembarenable)
-> and [setWindowLayoutFullScreen()](#setwindowlayoutfullscreen)
+> and [setWindowLayoutFullScreen()](#setwindowlayoutfullscreen-1)
 > to implement the full-screen mode.
 
 **Since:** 6
 
 **Deprecated since:** 9
 
-**Substitutes:** [setWindowSystemBarEnable](#setwindowsystembarenable)(names: Array&lt;'status' | 'navigation'&gt;)
+**Substitutes:** [setWindowSystemBarEnable](#setwindowsystembarenable-1)(names: Array&lt;'status' | 'navigation'&gt;)
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -7939,14 +7939,14 @@ Non-full-screen mode means that the layout avoids the status bar and <!--RP15-->
 > 
 > This API is supported since API version 6 and deprecated since API version 9. You are advised to use
 > [setWindowSystemBarEnable()](#setwindowsystembarenable)
-> and [setWindowLayoutFullScreen()](#setwindowlayoutfullscreen)
+> and [setWindowLayoutFullScreen()](#setwindowlayoutfullscreen-1)
 > to implement the full-screen mode.
 
 **Since:** 6
 
 **Deprecated since:** 9
 
-**Substitutes:** [setWindowSystemBarEnable](#setwindowsystembarenable)(names: Array&lt;'status' | 'navigation'&gt;)
+**Substitutes:** [setWindowSystemBarEnable](#setwindowsystembarenable-1)(names: Array&lt;'status' | 'navigation'&gt;)
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -8166,7 +8166,7 @@ Sets whether to keep the screen always on. This API uses an asynchronous callbac
 
 **Deprecated since:** 9
 
-**Substitutes:** [setWindowKeepScreenOn](#setwindowkeepscreenon)(isKeepScreenOn: boolean, callback: AsyncCallback&lt;void&gt;)
+**Substitutes:** [setWindowKeepScreenOn](#setwindowkeepscreenon-1)(isKeepScreenOn: boolean, callback: AsyncCallback&lt;void&gt;)
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -8209,7 +8209,7 @@ A non-immersive layout means that the layout avoids the status bar and <!--RP15-
 
 **Deprecated since:** 9
 
-**Substitutes:** [setWindowLayoutFullScreen](#setwindowlayoutfullscreen)(isLayoutFullScreen: boolean)
+**Substitutes:** [setWindowLayoutFullScreen](#setwindowlayoutfullscreen-1)(isLayoutFullScreen: boolean)
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -8270,7 +8270,7 @@ A non-immersive layout means that the layout avoids the status bar and <!--RP15-
 
 **Deprecated since:** 9
 
-**Substitutes:** [setWindowLayoutFullScreen](#setwindowlayoutfullscreen)(isLayoutFullScreen: boolean)
+**Substitutes:** [setWindowLayoutFullScreen](#setwindowlayoutfullscreen-1)(isLayoutFullScreen: boolean)
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -8727,7 +8727,7 @@ Sets whether this window is in privacy mode. This API uses an asynchronous callb
 
 **Deprecated since:** 9
 
-**Substitutes:** [setWindowPrivacyMode](#setwindowprivacymode)(isPrivacyMode: boolean, callback: AsyncCallback&lt;void&gt;)
+**Substitutes:** [setWindowPrivacyMode](#setwindowprivacymode-1)(isPrivacyMode: boolean, callback: AsyncCallback&lt;void&gt;)
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -9520,7 +9520,7 @@ Sets the supported window modes of the app window.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| supportedWindowModes | Array&lt;[bundleManager.SupportWindowMode](../../apis-ability-kit/arkts-apis/arkts-ability-bundlemanager-supportwindowmode-e.md)&gt; | Yes | The supported modes of the window. |
+| supportedWindowModes | Array&lt;bundleManager.SupportWindowMode&gt; | Yes | The supported modes of the window. |
 
 **Return value:**
 
@@ -9670,7 +9670,7 @@ The return value does not indicate that the status bar and <!--RP15-->three-butt
 
 **Deprecated since:** 9
 
-**Substitutes:** [setWindowSystemBarEnable](#setwindowsystembarenable)(names: Array&lt;'status'|'navigation'&gt;)
+**Substitutes:** [setWindowSystemBarEnable](#setwindowsystembarenable-1)(names: Array&lt;'status'|'navigation'&gt;)
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -9732,7 +9732,7 @@ The return value does not indicate that the status bar and <!--RP15-->three-butt
 
 **Deprecated since:** 9
 
-**Substitutes:** [setWindowSystemBarEnable](#setwindowsystembarenable)(names: Array&lt;'status'|'navigation'&gt;)
+**Substitutes:** [setWindowSystemBarEnable](#setwindowsystembarenable-1)(names: Array&lt;'status'|'navigation'&gt;)
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -9795,7 +9795,7 @@ This API does not take effect when it is called by a child window. The configura
 
 **Deprecated since:** 9
 
-**Substitutes:** [setWindowSystemBarProperties](#setwindowsystembarproperties)(systemBarProperties: SystemBarProperties)
+**Substitutes:** [setWindowSystemBarProperties](#setwindowsystembarproperties-1)(systemBarProperties: SystemBarProperties)
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -9860,7 +9860,7 @@ This API does not take effect when it is called by a child window.
 
 **Deprecated since:** 9
 
-**Substitutes:** [setWindowSystemBarProperties](#setwindowsystembarproperties)(systemBarProperties: SystemBarProperties)
+**Substitutes:** [setWindowSystemBarProperties](#setwindowsystembarproperties-1)(systemBarProperties: SystemBarProperties)
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -10041,7 +10041,7 @@ Sets whether this window is touchable. This API uses an asynchronous callback to
 
 **Deprecated since:** 9
 
-**Substitutes:** [setWindowTouchable](#setwindowtouchable)(isTouchable: boolean, callback: AsyncCallback&lt;void&gt;)
+**Substitutes:** [setWindowTouchable](#setwindowtouchable-1)(isTouchable: boolean, callback: AsyncCallback&lt;void&gt;)
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -10079,7 +10079,8 @@ Sets the touchable areas for this window. By default, the entire window is touch
 **Since:** 26.0.0
 
 **Required permissions:** 
-- API version 26.0.0 and later: ohos.permission.SET_WINDOW_TOUCH_AREAS
+- API version 26 and later: ohos.permission.SET_WINDOW_TOUCH_AREAS
+- API versions 12 to 25: N/A
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -10095,7 +10096,7 @@ Sets the touchable areas for this window. By default, the entire window is touch
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value.<br>**Applicable version:** 26.0.0 and later |
+| Promise&lt;void&gt; | Promise that returns no value.<br>**Since:** 26.0.0 |
 
 **Error codes:**
 
@@ -10625,7 +10626,8 @@ The background color you set here covers the entire window, including both the t
 **Since:** 26.0.0
 
 **Required permissions:** 
-- API version 26.0.0 and later: ohos.permission.SET_WINDOW_ALPHA
+- API version 26 and later: ohos.permission.SET_WINDOW_ALPHA
+- API versions 20 to 25: N/A
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -11171,7 +11173,7 @@ A non-immersive layout means that the layout avoids the status bar and <!--RP15-
 
 **Deprecated since:** 12
 
-**Substitutes:** [setWindowLayoutFullScreen](#setwindowlayoutfullscreen)(isLayoutFullScreen: boolean)
+**Substitutes:** [setWindowLayoutFullScreen](#setwindowlayoutfullscreen-1)(isLayoutFullScreen: boolean)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -11777,7 +11779,7 @@ The return value does not indicate that the status bar and <!--RP15-->three-butt
 
 **Deprecated since:** 12
 
-**Substitutes:** [setWindowSystemBarEnable](#setwindowsystembarenable)(names: Array&lt;'status' | 'navigation'&gt;)
+**Substitutes:** [setWindowSystemBarEnable](#setwindowsystembarenable-1)(names: Array&lt;'status' | 'navigation'&gt;)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -11924,7 +11926,7 @@ This API does not take effect when it is called by a child window.
 
 **Deprecated since:** 12
 
-**Substitutes:** [setWindowSystemBarProperties](#setwindowsystembarproperties)(systemBarProperties: SystemBarProperties)
+**Substitutes:** [setWindowSystemBarProperties](#setwindowsystembarproperties-1)(systemBarProperties: SystemBarProperties)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -12603,7 +12605,7 @@ Shows this window. This API uses an asynchronous callback to return the result. 
 > 
 > Before calling this API, you are advised to load the page by using
 > [loadContent](#loadcontent) or
-> [setUIContent](#setuicontent). If the main window has not
+> [setUIContent](#setuicontent-1). If the main window has not
 > finished loading and you call this API directly, the starting window keeps showing. Similarly, if the system
 > window, application child window, modal window, or global floating window has finished loading and you call
 > this API directly, the window is in the foreground but is not visible.
@@ -12690,7 +12692,7 @@ Shows this window. This API uses a promise to return the result. This API takes 
 > 
 > Before calling this API, you are advised to load the page by using
 > [loadContent](#loadcontent) or
-> [setUIContent](#setuicontent). If the main window has not
+> [setUIContent](#setuicontent-1). If the main window has not
 > finished loading and you call this API directly, the starting window keeps showing. Similarly, if the system
 > window, application child window, modal window, or global floating window has finished loading and you call
 > this API directly, the window is in the foreground but is not visible.
@@ -12778,7 +12780,7 @@ This API can be used only for application child windows, application main window
 > 
 > Before calling this API, you are advised to load the page by using
 > [loadContent](#loadcontent) or
-> [setUIContent](#setuicontent). If the main window has not
+> [setUIContent](#setuicontent-1). If the main window has not
 > finished loading and you call this API directly, the starting window keeps showing. Similarly, if the system
 > window, application child window, or global floating window has finished loading and you call this API directly
 > , the window is in the foreground but is not visible.
@@ -12880,7 +12882,7 @@ Captures this window. This API uses an asynchronous callback to return the resul
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;image.PixelMap&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -12923,7 +12925,7 @@ Captures this window. If privacy mode is enabled for the current window (using [
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)&gt; | Promise used to return the window screenshot. |
+| Promise&lt;image.PixelMap&gt; | Promise used to return the window screenshot. |
 
 **Error codes:**
 
@@ -12964,7 +12966,7 @@ Captures this window. This API can be called to obtain the screenshot of the cur
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)&gt; | Promise used to return the window screenshot. |
+| Promise&lt;image.PixelMap&gt; | Promise used to return the window screenshot. |
 
 **Error codes:**
 
@@ -13006,7 +13008,7 @@ In the stage model, this API must be used after the call of [loadContent](#loadc
 
 | Type | Description |
 | --- | --- |
-| [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | Window screenshot. |
+| image.PixelMap | Window screenshot. |
 
 **Error codes:**
 

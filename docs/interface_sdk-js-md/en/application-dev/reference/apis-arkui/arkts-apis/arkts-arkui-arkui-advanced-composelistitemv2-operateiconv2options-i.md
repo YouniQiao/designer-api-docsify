@@ -92,7 +92,7 @@ symbolStyle?: SymbolGlyphModifier
 
 The content of text or the address of symbol
 
-**Type:** SymbolGlyphModifier
+**Type:** [SymbolGlyphModifier](../arkts-components/arkts-arkui-symbolglyphmodifier-t.md)
 
 **Since:** 26.0.0
 

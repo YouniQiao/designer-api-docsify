@@ -4,8 +4,6 @@ Enumerates the text encoding types supported by text layout query APIs.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## TEXT_ENCODING_UTF8

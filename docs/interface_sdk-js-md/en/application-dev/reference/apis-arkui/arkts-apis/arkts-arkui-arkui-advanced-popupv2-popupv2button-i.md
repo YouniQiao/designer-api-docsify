@@ -36,7 +36,7 @@ buttonTextModifier?: TextModifier
 
 The button text attributes of Popup.
 
-**Type:** [TextModifier](arkts-arkui-textmodifier-c.md)
+**Type:** TextModifier
 
 **Since:** 26.0.0
 

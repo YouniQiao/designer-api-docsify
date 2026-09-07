@@ -18,7 +18,7 @@ Checks whether distributed notification is enabled for a specified application. 
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [isDistributedEnabledByBundle](#isdistributedenabledbybundle)(bundle: BundleOption, deviceType: string)
+**Substitutes:** [isDistributedEnabledByBundle](#isdistributedenabledbybundle-2)(bundle: BundleOption, deviceType: string)
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -78,7 +78,7 @@ Checks whether distributed notification is enabled for a specified application. 
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [isDistributedEnabledByBundle](#isdistributedenabledbybundle)(bundle: BundleOption, deviceType: string)
+**Substitutes:** [isDistributedEnabledByBundle](#isdistributedenabledbybundle-2)(bundle: BundleOption, deviceType: string)
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 

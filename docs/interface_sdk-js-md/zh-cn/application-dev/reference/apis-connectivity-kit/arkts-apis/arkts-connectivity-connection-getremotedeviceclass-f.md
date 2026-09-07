@@ -19,7 +19,8 @@ function getRemoteDeviceClass(deviceId: string): DeviceClass
 **起始版本：** 10
 
 **需要权限：** 
-- API版本10 - 17：ohos.permission.ACCESS_BLUETOOTH
+- API版本18+：N/A
+- API版本10-17：ohos.permission.ACCESS_BLUETOOTH
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

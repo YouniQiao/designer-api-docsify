@@ -16,7 +16,7 @@ function getFormRect(formId: string): Promise<formInfo.Rect>
 
 **起始版本：** 20
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Ability.Form
 
@@ -30,7 +30,7 @@ function getFormRect(formId: string): Promise<formInfo.Rect>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[formInfo.Rect](arkts-form-forminfo-rect-i.md)&gt; | Promise对象，返回卡片相对屏幕左上角的位置信息和卡片尺寸信息。 |
+| Promise&lt;formInfo.Rect&gt; | Promise对象，返回卡片相对屏幕左上角的位置信息和卡片尺寸信息。 |
 
 **错误码：**
 

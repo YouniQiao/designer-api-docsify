@@ -44,7 +44,7 @@ XComponent(value: { id: string; type: XComponentType; libraryname?: string; cont
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -66,7 +66,7 @@ XComponent(options: XComponentOptions)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -88,7 +88,7 @@ XComponent(params: NativeXComponentParameters)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -125,9 +125,6 @@ XComponent(params: NativeXComponentParameters)
 ## 示例
 
 使用enableAnalyzer属性开启图像AI分析功能。可通过XComponentController控制开始、停止图像AI分析。
-> 说明：
-> 
-> 本示例画图逻辑具体实现（和nativeRender相关的函数实现）可以参考[ArkTS XComponent示例](https://gitcode.com/openharmony/applications_app_samples/tree/master/code/DocsSample/ArkUISample/ArkTSXComponent)。
 
 ```TypeScript
 // xxx.ets
@@ -252,9 +249,6 @@ struct XComponentExample {
 ```
 
 通过setXComponentSurfaceRotation设置Surface在屏幕旋转过程中锁定方向，不跟随屏幕进行旋转。
-> 说明：
-> 
-> 本示例画图逻辑具体实现（和nativeRender相关的函数实现）可以参考[ArkTS XComponent示例](https://gitcode.com/openharmony/applications_app_samples/tree/master/code/DocsSample/ArkUISample/ArkTSXComponent)。
 
 ```TypeScript
 // xxx.ets
@@ -401,9 +395,6 @@ struct Index {
 ```
 
 从API version 22开始，该示例通过调用[setXComponentSurfaceConfig](arkts-arkui-xcomponentcontroller-c.md#setxcomponentsurfaceconfig)接口设置XComponent持有的Surface在渲染时是否需要被视为不透明。
-> 说明：
-> 
-> 本示例画图逻辑具体实现（和nativeRender相关的函数实现）可以参考[ArkTS XComponent示例](https://gitcode.com/openharmony/applications_app_samples/tree/master/code/DocsSample/ArkUISample/ArkTSXComponent)。
 
 ```TypeScript
 // xxx.ets

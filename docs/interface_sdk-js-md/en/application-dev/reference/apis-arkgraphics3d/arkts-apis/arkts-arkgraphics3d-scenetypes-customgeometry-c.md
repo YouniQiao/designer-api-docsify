@@ -87,6 +87,20 @@ Array of UV coordinates for the vertices. The default value is undefined.
 ## vertices
 
 ```TypeScript
+get vertices(): Vec3[]
+```
+
+Array of vertices that make up the model.
+
+@return { Vec3[] }
+
+**Type:** [Vec3](arkts-arkgraphics3d-scenetypes-vec3-i.md)[]
+
+**Since:** 18
+
+**System capability:** SystemCapability.ArkUi.Graphics3D
+
+```TypeScript
 set vertices(value: Vec3[])
 ```
 

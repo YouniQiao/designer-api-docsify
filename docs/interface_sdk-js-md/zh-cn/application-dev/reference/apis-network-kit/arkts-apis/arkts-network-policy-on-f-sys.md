@@ -27,7 +27,7 @@ function on(type: 'netUidPolicyChange', callback: Callback<NetUidPolicyInfo>): v
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'netUidPolicyChange' | 是 | 订阅的事件类型。'netUidPolicyChange'：注册policy发生改变事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[NetUidPolicyInfo](arkts-network-policy-netuidpolicyinfo-i-sys.md)&gt; | 是 | 回调函数。注册 policy 发生改变时调用。<br>**起始版本：** 11 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[NetUidPolicyInfo](arkts-network-policy-netuidpolicyinfo-i-sys.md)&gt; | 是 | 回调函数。注册 policy 发生改变时调用。<br>**适用版本：** 11 |
 
 **错误码：**
 
@@ -62,7 +62,7 @@ function on(type: 'netUidRuleChange', callback: Callback<NetUidRuleInfo>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'netUidRuleChange' | 是 | 订阅的事件类型。'netUidRuleChange'：注册rule发生改变事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[NetUidRuleInfo](arkts-network-policy-netuidruleinfo-i-sys.md)&gt; | 是 | 回调函数。注册 rule 发生改变时的调用。<br>**起始版本：** 11 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[NetUidRuleInfo](arkts-network-policy-netuidruleinfo-i-sys.md)&gt; | 是 | 回调函数。注册 rule 发生改变时的调用。<br>**适用版本：** 11 |
 
 **错误码：**
 

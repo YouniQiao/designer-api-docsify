@@ -37,7 +37,7 @@ Creates an arrow modifier to customize the drop-down arrow icon style of the **S
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| modifier | [Optional](arkts-arkui-optional-t.md)&lt;SymbolGlyphModifier&gt; | Yes | Arrow modifier to apply to the **Select** button for customizing the drop-down arrow icon style. |
+| modifier | [Optional](arkts-arkui-optional-t.md)&lt;[SymbolGlyphModifier](arkts-arkui-symbolglyphmodifier-t.md)&gt; | Yes | Arrow modifier to apply to the **Select** button for customizing the drop-down arrow icon style. |
 
 ## arrowPosition
 
@@ -853,7 +853,7 @@ If both [optionFont](#optionfont) and **Font** of **optionTextModifier** are set
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| modifier | [Optional](arkts-arkui-optional-t.md)&lt;[TextModifier](../arkts-apis/arkts-arkui-textmodifier-c.md)&gt; | Yes | Option text modifier to apply to the **Select** component for customizing the text style of unselected options in the drop-down menu. |
+| modifier | [Optional](arkts-arkui-optional-t.md)&lt;TextModifier&gt; | Yes | Option text modifier to apply to the **Select** component for customizing the text style of unselected options in the drop-down menu. |
 
 ## optionWidth
 
@@ -1107,7 +1107,7 @@ If both [selectedOptionFont](#selectedoptionfont) and **Font** of **selectedOpti
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| modifier | [Optional](arkts-arkui-optional-t.md)&lt;[TextModifier](../arkts-apis/arkts-arkui-textmodifier-c.md)&gt; | Yes | Selected-option text modifier to apply to the **Select** component for customizing the text style of selected options in the drop-down menu.You can manage and maintain the text style as needed. |
+| modifier | [Optional](arkts-arkui-optional-t.md)&lt;TextModifier&gt; | Yes | Selected-option text modifier to apply to the **Select** component for customizing the text style of selected options in the drop-down menu.You can manage and maintain the text style as needed. |
 
 ## showDefaultSelectedIcon
 
@@ -1221,7 +1221,7 @@ Creates a text modifier to customize the text style of the **Select** button. Af
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| modifier | [Optional](arkts-arkui-optional-t.md)&lt;[TextModifier](../arkts-apis/arkts-arkui-textmodifier-c.md)&gt; | Yes | Text modifier to apply to the **Select** button for customizing the text style. |
+| modifier | [Optional](arkts-arkui-optional-t.md)&lt;TextModifier&gt; | Yes | Text modifier to apply to the **Select** button for customizing the text style. |
 
 ## value
 

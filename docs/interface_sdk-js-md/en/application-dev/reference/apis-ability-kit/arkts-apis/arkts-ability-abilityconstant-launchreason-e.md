@@ -4,8 +4,6 @@ Enumerates the ability launch reasons. You can use it together with the value of
 
 **Since:** 9
 
-**Model restriction:** This API can be used only in the stage model.
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## UNKNOWN

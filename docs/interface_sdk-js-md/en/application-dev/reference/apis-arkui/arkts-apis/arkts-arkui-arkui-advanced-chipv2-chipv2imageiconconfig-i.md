@@ -56,7 +56,7 @@ modifier?: ImageModifier
 
 Modifier for the icon.
 
-**Type:** [ImageModifier](arkts-arkui-imagemodifier-c.md)
+**Type:** ImageModifier
 
 **Since:** 26.0.0
 

@@ -27,7 +27,7 @@ Adds a specified ComponentContent node to the OverlayManager.
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -144,7 +144,7 @@ Creates a floating layer node with the specified display order. This API allows 
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -248,14 +248,13 @@ Hide all ComponentContents on the OverlayManager.
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **示例**
 
 请参考[addComponentContent](#addcomponentcontent)示例。
-- simpleType:
 
 ## hideComponentContent
 
@@ -269,7 +268,7 @@ Hide the ComponentContent.
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -282,7 +281,6 @@ Hide the ComponentContent.
 **示例**
 
 请参考[addComponentContent](#addcomponentcontent)示例。
-- simpleType:
 
 ## openOrderOverlay
 
@@ -296,7 +294,7 @@ openOrderOverlay(content: ComponentContent, options?: OrderOverlayOptions): Prom
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -381,7 +379,7 @@ Removes a specified ComponentContent node from the OverlayManager
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -394,7 +392,6 @@ Removes a specified ComponentContent node from the OverlayManager
 **示例**
 
 请参考[addComponentContent](#addcomponentcontent)示例。
-- simpleType:
 
 ## showAllComponentContents
 
@@ -408,14 +405,13 @@ Show all ComponentContents on the OverlayManager.
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **示例**
 
 请参考[addComponentContent](#addcomponentcontent)示例。
-- simpleType:
 
 ## showComponentContent
 
@@ -429,7 +425,7 @@ Show the ComponentContent.
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -442,4 +438,3 @@ Show the ComponentContent.
 **示例**
 
 请参考[addComponentContent](#addcomponentcontent)示例。
-- simpleType:

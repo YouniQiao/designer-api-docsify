@@ -4,8 +4,6 @@ Enumerates the options for using **UnifiedData** in a device.
 
 **Since:** 12
 
-**Model restriction:** This API can be used only in the stage model.
-
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## IN_APP

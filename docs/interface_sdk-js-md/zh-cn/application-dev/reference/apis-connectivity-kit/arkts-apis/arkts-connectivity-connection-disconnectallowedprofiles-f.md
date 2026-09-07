@@ -19,8 +19,9 @@ function disconnectAllowedProfiles(deviceId: string): Promise<void>
 **起始版本：** 26.0.0
 
 **需要权限：** 
-- API版本26.0.0+：ohos.permission.ACCESS_BLUETOOTH
-- API版本11 - 24：ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
+- API版本26+：ohos.permission.ACCESS_BLUETOOTH
+- API版本25：N/A
+- API版本11-24：ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

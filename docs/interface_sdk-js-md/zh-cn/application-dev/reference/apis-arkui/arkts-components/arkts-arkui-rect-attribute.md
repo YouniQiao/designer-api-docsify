@@ -23,7 +23,7 @@ radius(value: Length | Array<any>)
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
 
@@ -33,7 +33,7 @@ radius(value: Length | Array<any>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [Length](../arkts-apis/arkts-arkui-length-t.md) \| Array&lt;any&gt; | 是 | 圆角半径大小。默认值：0 默认单位：vp 异常值undefined、null、NaN和Infinity按照[[0, 0], [0, 0], [0, 0], [0, 0]]处理。<br>**起始版本：** 20 |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) \| Array&lt;any&gt; | 是 | 圆角半径大小。默认值：0 默认单位：vp 异常值undefined、null、NaN和Infinity按照[[0, 0], [0, 0], [0, 0], [0, 0]]处理。<br>**适用版本：** 20 |
 
 ## radiusHeight
 
@@ -45,7 +45,7 @@ radiusHeight(value: Length)
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
 
@@ -55,7 +55,7 @@ radiusHeight(value: Length)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | 是 | 圆角的高度，取值范围≥0。默认值：0 默认单位：vp。异常值undefined、null、NaN和Infinity按照默认值处理。<br>**起始版本：** 20 |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | 是 | 圆角的高度，取值范围≥0。默认值：0 默认单位：vp。异常值undefined、null、NaN和Infinity按照默认值处理。<br>**适用版本：** 20 |
 
 ## radiusWidth
 
@@ -67,7 +67,7 @@ radiusWidth(value: Length)
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
 
@@ -77,4 +77,4 @@ radiusWidth(value: Length)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | 是 | 圆角的宽度，取值范围≥0。默认值：0 默认单位：vp。异常值undefined、null、NaN和Infinity按照默认值处理。<br>**起始版本：** 20 |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | 是 | 圆角的宽度，取值范围≥0。默认值：0 默认单位：vp。异常值undefined、null、NaN和Infinity按照默认值处理。<br>**适用版本：** 20 |

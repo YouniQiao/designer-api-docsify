@@ -10,6 +10,8 @@ Application address sanitizer event. This is a system event name constant.
 
 **Atomic service API**: This parameter can be used in atomic services since API version 12.
 
+**Type:** string
+
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -25,6 +27,8 @@ const APP_CRASH: string
 Application crash event. This is a system event name constant.
 
 **Atomic service API**: This parameter can be used in atomic services since API version 11.
+
+**Type:** string
 
 **Since:** 11
 
@@ -42,6 +46,8 @@ Application freeze event. This is a system event name constant.
 
 **Atomic service API**: This parameter can be used in atomic services since API version 11.
 
+**Type:** string
+
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -57,6 +63,8 @@ const APP_HICOLLIE: string
 Application task execution timeout event. This is a system event name constant.
 
 **Atomic service API**: This parameter can be used in atomic services since API version 21.
+
+**Type:** string
 
 **Since:** 21
 
@@ -74,6 +82,8 @@ Application killed event. This is a system event name constant.
 
 **Atomic service API**: This parameter can be used in atomic services since API version 20.
 
+**Type:** string
+
 **Since:** 20
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -90,6 +100,8 @@ Event indicating the application launch duration. This is a system event name co
 
 **Atomic service API**: This parameter can be used in atomic services since API version 12.
 
+**Type:** string
+
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -105,6 +117,8 @@ const appFreezeWarning: string
 Application freeze warning event. This is a system event name constant.
 
 **Model restriction**: This API can be used only in the stage model. **Atomic service API**: This parameter can be used in atomic services since API version 26.0.0.
+
+**Type:** string
 
 **Since:** 26.0.0
 
@@ -124,6 +138,8 @@ Audio jank event. This is a system event name constant.
 
 **Atomic service API**: This parameter can be used in atomic services since API version 21.
 
+**Type:** string
+
 **Since:** 21
 
 **Atomic service API:** This API can be used in atomic services since API version 21.
@@ -139,6 +155,8 @@ const BATTERY_USAGE: string
 Event indicating battery usage statistics. This is a system event name constant.
 
 **Atomic service API**: This parameter can be used in atomic services since API version 12.
+
+**Type:** string
 
 **Since:** 12
 
@@ -156,6 +174,8 @@ Event indicating a high CPU usage. This is a system event name constant.
 
 **Atomic service API**: This parameter can be used in atomic services since API version 12.
 
+**Type:** string
+
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -171,6 +191,8 @@ const DISTRIBUTED_SERVICE_START: string
 Distributed service startup event. This is a reserved application event name constant.
 
 **Atomic service API**: This parameter can be used in atomic services since API version 11.
+
+**Type:** string
 
 **Since:** 9
 
@@ -188,6 +210,8 @@ Main thread jank event. This is a system event name constant.
 
 **Atomic service API**: This parameter can be used in atomic services since API version 12.
 
+**Type:** string
+
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -203,6 +227,8 @@ const RESOURCE_OVERLIMIT: string
 Application resource leak event. This is a system event name constant.
 
 **Atomic service API**: This parameter can be used in atomic services since API version 12.
+
+**Type:** string
 
 **Since:** 12
 
@@ -220,6 +246,8 @@ ArkWeb fling jank event. This is a system event name constant.
 
 **Atomic service API**: This parameter can be used in atomic services since API version 23.
 
+**Type:** string
+
 **Since:** 23
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -235,6 +263,8 @@ const SCROLL_JANK: string
 Event indicating frame loss during swiping. This is a system event name constant.
 
 **Atomic service API**: This parameter can be used in atomic services since API version 12.
+
+**Type:** string
 
 **Since:** 12
 
@@ -252,6 +282,8 @@ User login event. This is a reserved application event name constant.
 
 **Atomic service API**: This parameter can be used in atomic services since API version 11.
 
+**Type:** string
+
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -267,6 +299,8 @@ const USER_LOGOUT: string
 User logout event. This is a reserved application event name constant.
 
 **Atomic service API**: This parameter can be used in atomic services since API version 11.
+
+**Type:** string
 
 **Since:** 9
 

@@ -4,6 +4,8 @@
 
 **起始版本：** 11
 
+**模型约束：** 此接口仅可在Stage模型下使用。
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -128,7 +130,6 @@ struct TapGestureExample {
 ```
 
 该示例通过getCurrentLocalPosition方法获取点击位置相对于当前组件实时位置左上角的坐标。
-从API版本26.0.0开始，新增支持getCurrentLocalPosition接口。
 
 ```TypeScript
 // xxx.ets

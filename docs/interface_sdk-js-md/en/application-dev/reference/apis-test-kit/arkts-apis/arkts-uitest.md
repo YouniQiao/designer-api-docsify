@@ -11,7 +11,7 @@ The **UiTest** module provides UI automation test capabilities, such as componen
  matching/search, key injection, coordinate clicking/sliding, and screenshot.
  - [UiWindow<sup>9+</sup>](arkts-test-uitest-uiwindow-c.md): represents a window object on the UI and provides APIs for obtaining window attributes,
  dragging windows, and adjusting window sizes.
- - [By<sup>(deprecated)</sup>](arkts-test-ohosuitest-p.md#by): provides UI component feature description APIs for component filtering and
+ - [By<sup>(deprecated)</sup>](arkts-test-uitest-con.md#by): provides UI component feature description APIs for component filtering and
  matching. This API is supported since API version 8 and deprecated since API version 9.
  You are advised to use [On](arkts-test-uitest-on-c.md) instead.
  - [UiComponent<sup>(deprecated)</sup>](arkts-test-uitest-uicomponent-c.md): represents a component on the UI and provides APIs for
@@ -84,9 +84,9 @@ import { UiComponent, UiDriver, BY, By } from '@kit.TestKit';
 | [WindowChangeType](arkts-test-uitest-windowchangetype-e.md) | Enumerates the window change event types that can be listened for. |
 | [WindowMode](arkts-test-uitest-windowmode-e.md) | Enumerates the window modes. |
 
-### Properties
+### Constants
 
 | Name | Description |
 | --- | --- |
-| [BY](arkts-test-ohosuitest-p.md) | The static builder for building [By](arkts-test-uitest-by-c.md)object conveniently,usage example:BY.text('txt').enabled(true). |
-| [ON](arkts-test-ohosuitest-p.md) | The static builder for building [On](arkts-test-uitest-on-c.md)object conveniently,usage example:ON.text('txt').enabled(true). |
+| [BY](arkts-test-uitest-con.md#by) | The static builder for building [By](arkts-test-uitest-by-c.md)object conveniently,usage example:BY.text('txt').enabled(true). |
+| [ON](arkts-test-uitest-con.md#on) | The static builder for building [On](arkts-test-uitest-on-c.md)object conveniently,usage example:ON.text('txt').enabled(true). |

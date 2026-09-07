@@ -20,7 +20,7 @@ API版本26.0.0之前，需先调用[connection.pairDevice](arkts-connectivity-c
 
 **需要权限：** 
 - API版本16+：ohos.permission.ACCESS_BLUETOOTH
-- API版本11 - 15：ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
+- API版本11-15：ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -77,7 +77,7 @@ API版本26.0.0之前，需先调用[connection.pairDevice](arkts-connectivity-c
 
 **需要权限：** 
 - API版本16+：ohos.permission.ACCESS_BLUETOOTH
-- API版本11 - 15：ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
+- API版本11-15：ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

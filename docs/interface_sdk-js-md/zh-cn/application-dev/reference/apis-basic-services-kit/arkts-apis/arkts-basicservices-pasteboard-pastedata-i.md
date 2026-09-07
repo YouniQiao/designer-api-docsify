@@ -24,7 +24,7 @@ addHtmlRecord(htmlText: string): void
 
 **废弃版本：** 9
 
-**替代接口：** [addRecord](#addrecord)(mimeType: string, value: ValueType)
+**替代接口：** [addRecord](#addrecord-1)(mimeType: string, value: ValueType)
 
 **系统能力：** SystemCapability.MiscServices.Pasteboard
 
@@ -52,7 +52,7 @@ addRecord(record: PasteDataRecord): void
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.MiscServices.Pasteboard
 
@@ -85,7 +85,7 @@ addRecord(mimeType: string, value: ValueType): void
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.MiscServices.Pasteboard
 
@@ -124,7 +124,7 @@ addTextRecord(text: string): void
 
 **废弃版本：** 9
 
-**替代接口：** [addRecord](#addrecord)(mimeType: string, value: ValueType)
+**替代接口：** [addRecord](#addrecord-1)(mimeType: string, value: ValueType)
 
 **系统能力：** SystemCapability.MiscServices.Pasteboard
 
@@ -153,7 +153,7 @@ addUriRecord(uri: string): void
 
 **废弃版本：** 9
 
-**替代接口：** [addRecord](#addrecord)(mimeType: string, value: ValueType)
+**替代接口：** [addRecord](#addrecord-1)(mimeType: string, value: ValueType)
 
 **系统能力：** SystemCapability.MiscServices.Pasteboard
 
@@ -182,7 +182,7 @@ addWantRecord(want: Want): void
 
 **废弃版本：** 9
 
-**替代接口：** [addRecord](#addrecord)(mimeType: string, value: ValueType)
+**替代接口：** [addRecord](#addrecord-1)(mimeType: string, value: ValueType)
 
 **系统能力：** SystemCapability.MiscServices.Pasteboard
 
@@ -215,7 +215,7 @@ getMimeTypes(): Array<string>
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.MiscServices.Pasteboard
 
@@ -242,7 +242,7 @@ getPrimaryHtml(): string
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.MiscServices.Pasteboard
 
@@ -275,7 +275,7 @@ getPrimaryMimeType(): string
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.MiscServices.Pasteboard
 
@@ -302,7 +302,7 @@ getPrimaryPixelMap(): image.PixelMap
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.MiscServices.Pasteboard
 
@@ -310,7 +310,7 @@ getPrimaryPixelMap(): image.PixelMap
 
 | 类型 | 说明 |
 | --- | --- |
-| [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | PixelMap内容。剪贴板内容对象中没有PixelMap内容时，默认返回为undefined。 |
+| image.PixelMap | PixelMap内容。剪贴板内容对象中没有PixelMap内容时，默认返回为undefined。 |
 
 **示例**
 
@@ -344,7 +344,7 @@ getPrimaryText(): string
 
 **起始版本：** 6
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.MiscServices.Pasteboard
 
@@ -381,7 +381,7 @@ getPrimaryUri(): string
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.MiscServices.Pasteboard
 
@@ -414,7 +414,7 @@ getPrimaryWant(): Want
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.MiscServices.Pasteboard
 
@@ -448,7 +448,7 @@ getProperty(): PasteDataProperty
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.MiscServices.Pasteboard
 
@@ -475,7 +475,7 @@ getRecord(index: number): PasteDataRecord
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.MiscServices.Pasteboard
 
@@ -556,7 +556,7 @@ getRecordCount(): number
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.MiscServices.Pasteboard
 
@@ -583,7 +583,7 @@ getTag(): string
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.MiscServices.Pasteboard
 
@@ -651,7 +651,7 @@ hasType(mimeType: string): boolean
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.MiscServices.Pasteboard
 
@@ -756,7 +756,7 @@ removeRecord(index: number): void
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.MiscServices.Pasteboard
 
@@ -831,7 +831,7 @@ replaceRecord(index: number, record: PasteDataRecord): void
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.MiscServices.Pasteboard
 
@@ -904,7 +904,7 @@ setProperty(property: PasteDataProperty): void
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.MiscServices.Pasteboard
 

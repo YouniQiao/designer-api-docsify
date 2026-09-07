@@ -110,7 +110,7 @@ readonly extensionAbilityType: bundleManager.ExtensionAbilityType
 
 Type of the ExtensionAbility.
 
-**Type:** [bundleManager.ExtensionAbilityType](arkts-ability-bundlemanager-extensionabilitytype-e.md)
+**Type:** bundleManager.ExtensionAbilityType
 
 **Since:** 9
 

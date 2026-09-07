@@ -35,6 +35,22 @@ Indicates the description of a link
 ## url
 
 ```TypeScript
+get url(): string
+```
+
+Indicates the url of a link
+
+**Type:** string
+
+**Since:** 10
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+**System capability:** SystemCapability.DistributedDataManager.UDMF.Core
+
+```TypeScript
 set url(value: string)
 ```
 

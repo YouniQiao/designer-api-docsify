@@ -32,7 +32,7 @@ Converts a SendableContext object to a UIAbilityContext object.
 
 | Type | Description |
 | --- | --- |
-| [common.UIAbilityContext](arkts-ability-common-uiabilitycontext-t.md) | [UIAbilityContext]{ |
+| common.UIAbilityContext | [UIAbilityContext]{ |
 
 **Error codes:**
 

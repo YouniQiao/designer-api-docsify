@@ -22,6 +22,7 @@ In freeform window mode, the child window created uses an immersive layout when 
 
 **Required permissions:** 
 - API version 12 and later: ohos.permission.SYSTEM_FLOAT_WINDOW
+- API versions 9 to 11: N/A
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -98,6 +99,7 @@ In freeform window mode, the child window created uses an immersive layout when 
 
 **Required permissions:** 
 - API version 12 and later: ohos.permission.SYSTEM_FLOAT_WINDOW
+- API versions 9 to 11: N/A
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

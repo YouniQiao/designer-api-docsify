@@ -18,7 +18,7 @@ function publish(request: NotificationRequest, userId: number, callback: AsyncCa
 
 **需要权限：** 
 - API版本18+：ohos.permission.NOTIFICATION_CONTROLLER or ohos.permission.SEND_NOTIFICATION_CROSS_USER
-- API版本9 - 17：ohos.permission.NOTIFICATION_CONTROLLER
+- API版本9-17：ohos.permission.NOTIFICATION_CONTROLLER
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -102,7 +102,7 @@ function publish(request: NotificationRequest, userId: number): Promise<void>
 
 **需要权限：** 
 - API版本18+：ohos.permission.NOTIFICATION_CONTROLLER or ohos.permission.SEND_NOTIFICATION_CROSS_USER
-- API版本9 - 17：ohos.permission.NOTIFICATION_CONTROLLER
+- API版本9-17：ohos.permission.NOTIFICATION_CONTROLLER
 
 **系统能力：** SystemCapability.Notification.Notification
 

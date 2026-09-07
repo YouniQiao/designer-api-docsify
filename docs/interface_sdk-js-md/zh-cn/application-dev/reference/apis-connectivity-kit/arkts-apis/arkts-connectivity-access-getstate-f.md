@@ -17,9 +17,10 @@ function getState(): BluetoothState
 **起始版本：** 10
 
 **需要权限：** 
-- API版本10 - 12：ohos.permission.ACCESS_BLUETOOTH
+- API版本13+：N/A
+- API版本10-12：ohos.permission.ACCESS_BLUETOOTH
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 

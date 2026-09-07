@@ -53,7 +53,7 @@ activeSymbolIcon?: SymbolGlyphModifier
 
 Symbol icon for a single option on the menu bar when it is in active state. It has higher priority than **activeIcon**.
 
-**Type:** SymbolGlyphModifier
+**Type:** [SymbolGlyphModifier](arkts-arkui-symbolglyphmodifier-t.md)
 
 **Since:** 12
 
@@ -109,7 +109,7 @@ symbolIcon?: SymbolGlyphModifier
 
 Symbol icon for a single option on the toolbar. It has higher priority than **icon**.
 
-**Type:** SymbolGlyphModifier
+**Type:** [SymbolGlyphModifier](arkts-arkui-symbolglyphmodifier-t.md)
 
 **Since:** 12
 

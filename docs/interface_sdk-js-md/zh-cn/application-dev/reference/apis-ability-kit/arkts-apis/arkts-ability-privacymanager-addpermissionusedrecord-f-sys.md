@@ -40,7 +40,7 @@ function addPermissionUsedRecord(
 | permissionName | Permissions | 是 | 需要记录的权限名称。传入无效值时返回错误码12100001。取值约束：权限名长度不能超过256个字符。 |
 | successCount | number | 是 | 访问成功的次数。传入无效值时返回错误码12100001。取值限定为整数。取值约束：取值必须为非负整数。 |
 | failCount | number | 是 | 访问失败的次数。传入无效值时返回错误码12100001。取值限定为整数。取值约束：取值必须为非负整数。 |
-| options | [AddPermissionUsedRecordOptions](arkts-ability-privacymanager-addpermissionusedrecordoptions-i-sys.md) | 否 | 添加权限使用记录可选参数，用于指定敏感权限使用类型和扩展身份。当需要区分权限访问方式（如通过Picker或安全控件访问）或标识调用方扩展身份时传入此参数。<br>**起始版本：** 12 |
+| options | [AddPermissionUsedRecordOptions](arkts-ability-privacymanager-addpermissionusedrecordoptions-i-sys.md) | 否 | 添加权限使用记录可选参数，用于指定敏感权限使用类型和扩展身份。当需要区分权限访问方式（如通过Picker或安全控件访问）或标识调用方扩展身份时传入此参数。<br>**适用版本：** 12 |
 
 **返回值：**
 

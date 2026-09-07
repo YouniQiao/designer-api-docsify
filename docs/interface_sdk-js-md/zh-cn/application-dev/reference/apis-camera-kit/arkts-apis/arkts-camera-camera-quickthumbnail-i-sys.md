@@ -136,7 +136,7 @@ thumbnailImage: image.PixelMap
 
 Thumbnail image.
 
-**类型：** [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)
+**类型：** image.PixelMap
 
 **起始版本：** 19
 

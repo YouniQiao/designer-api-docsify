@@ -295,7 +295,7 @@ readonly format: image.ImageFormat
 
 Image format.
 
-**Type:** [image.ImageFormat](arkts-image-image-imageformat-e.md)
+**Type:** image.ImageFormat
 
 **Since:** 12
 
@@ -309,7 +309,7 @@ readonly size: image.Size
 
 Image size.
 
-**Type:** [image.Size](arkts-image-image-size-i.md)
+**Type:** image.Size
 
 **Since:** 12
 

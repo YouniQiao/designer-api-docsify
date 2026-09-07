@@ -4,8 +4,6 @@ Enumerates the certificate revocation flags.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
-
 **System capability:** SystemCapability.Security.Cert
 
 ## CERT_REVOCATION_PREFER_OCSP

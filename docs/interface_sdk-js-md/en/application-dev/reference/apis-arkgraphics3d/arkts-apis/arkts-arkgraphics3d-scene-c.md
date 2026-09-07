@@ -519,6 +519,20 @@ Animation objects in the 3D scene.
 ## environment
 
 ```TypeScript
+get environment(): Environment
+```
+
+Environment object.
+
+@return { Environment }
+
+**Type:** [Environment](arkts-arkgraphics3d-sceneresources-environment-i.md)
+
+**Since:** 12
+
+**System capability:** SystemCapability.ArkUi.Graphics3D
+
+```TypeScript
 set environment(value: Environment)
 ```
 

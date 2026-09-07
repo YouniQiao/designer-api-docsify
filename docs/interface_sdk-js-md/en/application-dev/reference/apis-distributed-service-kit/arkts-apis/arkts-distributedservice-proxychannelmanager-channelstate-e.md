@@ -4,8 +4,6 @@ Enumerates the connection states of the proxy channel.
 
 **Since:** 20
 
-**Model restriction:** This API can be used only in the stage model.
-
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
 
 ## CHANNEL_WAIT_RESUME

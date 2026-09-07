@@ -36,7 +36,7 @@ rect: common2D.Rect
 
 Rectangular area information, in physical pixels (px).
 
-**Type:** [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md)
+**Type:** common2D.Rect
 
 **Since:** 12
 

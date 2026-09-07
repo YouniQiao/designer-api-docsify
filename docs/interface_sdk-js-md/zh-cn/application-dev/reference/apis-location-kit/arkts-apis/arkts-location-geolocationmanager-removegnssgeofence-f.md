@@ -17,7 +17,8 @@ function removeGnssGeofence(geofenceId: number): Promise<void>
 **起始版本：** 12
 
 **需要权限：** 
-- API版本12 - 24：ohos.permission.LOCATION and ohos.permission.APPROXIMATELY_LOCATION
+- API版本25+：N/A
+- API版本12-24：ohos.permission.LOCATION and ohos.permission.APPROXIMATELY_LOCATION
 
 **系统能力：** SystemCapability.Location.Location.Geofence
 

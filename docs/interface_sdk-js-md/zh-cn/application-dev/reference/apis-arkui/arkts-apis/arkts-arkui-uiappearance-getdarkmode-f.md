@@ -27,7 +27,8 @@ function getDarkMode(): DarkMode
 **起始版本：** 20
 
 **需要权限：** 
-- API版本10 - 19：ohos.permission.UPDATE_CONFIGURATION
+- API版本20+：N/A
+- API版本10-19：ohos.permission.UPDATE_CONFIGURATION
 
 **系统能力：** SystemCapability.ArkUI.UiAppearance
 

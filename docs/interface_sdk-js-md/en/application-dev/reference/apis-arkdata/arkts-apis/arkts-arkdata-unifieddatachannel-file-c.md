@@ -45,6 +45,22 @@ The default value is an empty dictionary object.
 ## uri
 
 ```TypeScript
+get uri(): string
+```
+
+Indicates the uri of file
+
+**Type:** string
+
+**Since:** 10
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+**System capability:** SystemCapability.DistributedDataManager.UDMF.Core
+
+```TypeScript
 set uri(value: string)
 ```
 

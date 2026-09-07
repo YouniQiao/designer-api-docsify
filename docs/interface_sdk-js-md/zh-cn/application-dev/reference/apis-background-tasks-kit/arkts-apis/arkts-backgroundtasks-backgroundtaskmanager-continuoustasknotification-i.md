@@ -20,11 +20,11 @@ contentType: notificationManager.ContentType
 
 长时任务通知的内容类型。
 
-**类型：** [notificationManager.ContentType](../../apis-notification-kit/arkts-apis/arkts-notification-notificationmanager-contenttype-e.md)
+**类型：** notificationManager.ContentType
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
@@ -40,7 +40,7 @@ continuousTaskId?: number
 
 **起始版本：** 15
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
@@ -56,7 +56,7 @@ notificationId: number
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
@@ -70,10 +70,10 @@ slotType: notificationManager.SlotType
 
 **说明：** 长时任务申请或更新成功后不支持提示音。
 
-**类型：** [notificationManager.SlotType](../../apis-notification-kit/arkts-apis/arkts-notification-notificationmanager-slottype-e.md)
+**类型：** notificationManager.SlotType
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask

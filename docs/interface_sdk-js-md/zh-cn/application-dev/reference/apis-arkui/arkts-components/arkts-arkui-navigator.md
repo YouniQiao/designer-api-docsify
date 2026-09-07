@@ -22,7 +22,7 @@ Navigator(value?: { target: string; type?: NavigationType })
 
 **替代接口：** [NavPathInfo](arkts-arkui-navpathinfo-c.md)
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -30,7 +30,7 @@ Navigator(value?: { target: string; type?: NavigationType })
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | { target: string; type?: NavigationType } | 否 | [跳转页面的信息。target：指定跳转目标页面的路径。type：指定路由方式。默认值：NavigationType.Push](arkts-arkui-navigationtype-e.md) |
+| value | { target: string; type?: NavigationType } | 否 | 跳转页面的信息。target：指定跳转目标页面的路径。type：指定路由方式。默认值：NavigationType.Push |
 
 ## Navigator
 
@@ -48,7 +48,7 @@ NavigationAttribute为Navigation组件的属性。
 
 **替代接口：** [NavigationAttribute](arkts-arkui-navigation-attribute.md)
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

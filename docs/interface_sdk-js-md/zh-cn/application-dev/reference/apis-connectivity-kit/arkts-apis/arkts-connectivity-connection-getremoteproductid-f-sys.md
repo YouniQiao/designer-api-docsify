@@ -17,7 +17,8 @@ function getRemoteProductId(deviceId: string): string
 **起始版本：** 11
 
 **需要权限：** 
-- API版本11 - 15：ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
+- API版本16+：N/A
+- API版本11-15：ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

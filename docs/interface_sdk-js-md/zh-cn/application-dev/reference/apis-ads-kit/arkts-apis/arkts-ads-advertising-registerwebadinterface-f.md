@@ -16,7 +16,7 @@ function registerWebAdInterface(controller: web_webview.WebviewController, conte
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Advertising.Ads
 
@@ -25,7 +25,7 @@ function registerWebAdInterface(controller: web_webview.WebviewController, conte
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | controller | web_webview.WebviewController | 是 | Web组件控制器。 |
-| context | [common.UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-common-uiabilitycontext-t.md) | 是 | UIAbility的上下文环境。 |
+| context | common.UIAbilityContext | 是 | UIAbility的上下文环境。 |
 
 **错误码：**
 
@@ -75,7 +75,7 @@ function registerWebAdInterface(controller: web_webview.WebviewController, conte
 
 **起始版本：** 16
 
-**原子化服务API：** 从API版本16开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本16开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Advertising.Ads
 
@@ -84,7 +84,7 @@ function registerWebAdInterface(controller: web_webview.WebviewController, conte
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | controller | web_webview.WebviewController | 是 | Web组件控制器。 |
-| context | [common.UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-common-uiabilitycontext-t.md) | 是 | UIAbility的上下文环境。 |
+| context | common.UIAbilityContext | 是 | UIAbility的上下文环境。 |
 | needRefresh | boolean | 是 | 是否需要刷新页面（true: 需要；false: 不需要）。 |
 
 **错误码：**

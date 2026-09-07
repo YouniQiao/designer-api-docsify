@@ -1598,7 +1598,7 @@ getOsAccountLocalIdBySerialNumber(serialNumber: number): Promise<number>
 
 **废弃版本：** 9
 
-**替代接口：** [getOsAccountLocalIdForSerialNumber](#getosaccountlocalidforserialnumber)(serialNumber: long)
+**替代接口：** [getOsAccountLocalIdForSerialNumber](#getosaccountlocalidforserialnumber-1)(serialNumber: long)
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -2057,14 +2057,14 @@ getOsAccountLocalIdFromDomain(domainInfo: DomainAccountInfo): Promise<number>
 > **说明：**
 > 
 > 从API version 8开始支持，从API version 9开始废弃。建议使用
-> [getOsAccountLocalIdForDomain](#getosaccountlocalidfordomain)
+> [getOsAccountLocalIdForDomain](#getosaccountlocalidfordomain-1)
 > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [getOsAccountLocalIdForDomain](#getosaccountlocalidfordomain)(domainInfo: DomainAccountInfo)
+**替代接口：** [getOsAccountLocalIdForDomain](#getosaccountlocalidfordomain-1)(domainInfo: DomainAccountInfo)
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
@@ -2242,7 +2242,7 @@ getOsAccountLocalIdFromUid(uid: number): Promise<number>
 
 **废弃版本：** 9
 
-**替代接口：** [getOsAccountLocalIdForUid](#getosaccountlocalidforuid)(uid: int)
+**替代接口：** [getOsAccountLocalIdForUid](#getosaccountlocalidforuid-1)(uid: int)
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -2653,7 +2653,7 @@ getSerialNumberByOsAccountLocalId(localId: number): Promise<number>
 
 **废弃版本：** 9
 
-**替代接口：** [getSerialNumberForOsAccountLocalId](#getserialnumberforosaccountlocalid)(localId: int)
+**替代接口：** [getSerialNumberForOsAccountLocalId](#getserialnumberforosaccountlocalid-1)(localId: int)
 
 **系统能力：** SystemCapability.Account.OsAccount
 

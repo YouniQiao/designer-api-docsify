@@ -24,7 +24,7 @@ getPosition(): number
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -37,7 +37,6 @@ getPosition(): number
 **示例**
 
 完整示例代码参考[initialize](#initialize)。
-- simpleType:
 
 ## getSize
 
@@ -49,7 +48,7 @@ getSize(): number
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -62,7 +61,6 @@ getSize(): number
 **示例**
 
 完整示例代码参考[initialize](#initialize)。
-- simpleType:
 
 ## initialize
 
@@ -74,7 +72,7 @@ initialize(): Promise<void>
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -182,7 +180,7 @@ WebHttpBodyStream是否采用分块传输。
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -195,7 +193,6 @@ WebHttpBodyStream是否采用分块传输。
 **示例**
 
 完整示例代码参考[initialize](#initialize)。
-- simpleType:
 
 ## isEof
 
@@ -207,7 +204,7 @@ isEof(): boolean
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -220,7 +217,6 @@ isEof(): boolean
 **示例**
 
 完整示例代码参考[initialize](#initialize)。
-- simpleType:
 
 ## isInMemory
 
@@ -232,7 +228,7 @@ isInMemory(): boolean
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -245,7 +241,6 @@ isInMemory(): boolean
 **示例**
 
 完整示例代码参考[initialize](#initialize)。
-- simpleType:
 
 ## read
 
@@ -257,7 +252,7 @@ read(size: number): Promise<ArrayBuffer>
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -282,4 +277,3 @@ read(size: number): Promise<ArrayBuffer>
 **示例**
 
 完整示例代码参考[initialize](#initialize)。
-- simpleType:

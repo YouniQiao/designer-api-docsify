@@ -4,8 +4,6 @@ Enumerates the progress indicator options.
 
 **Since:** 15
 
-**Model restriction:** This API can be used only in the stage model.
-
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## NONE

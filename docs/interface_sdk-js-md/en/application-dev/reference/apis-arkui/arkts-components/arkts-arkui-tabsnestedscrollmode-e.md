@@ -4,8 +4,6 @@ Enumerates the nested scrolling modes of the **Tabs** component and its parent c
 
 **Since:** 24
 
-**Model restriction:** This API can be used only in the stage model.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## SELF_ONLY

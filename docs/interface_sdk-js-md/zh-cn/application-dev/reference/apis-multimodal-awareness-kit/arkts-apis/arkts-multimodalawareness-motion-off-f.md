@@ -18,7 +18,7 @@ function off(type: 'operatingHandChanged', callback?: Callback<OperatingHandStat
 
 **需要权限：** 
 - API版本20+：ohos.permission.ACTIVITY_MOTION 或 ohos.permission.DETECT_GESTURE
-- API版本15 - 19：ohos.permission.ACTIVITY_MOTION
+- API版本15-19：ohos.permission.ACTIVITY_MOTION
 
 **系统能力：** SystemCapability.MultimodalAwareness.Motion
 

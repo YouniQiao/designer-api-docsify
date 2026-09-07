@@ -23,9 +23,10 @@ function getRunningProcessInformation(): Promise<Array<ProcessInformation>>
 **起始版本：** 9
 
 **需要权限：** 
-- API版本9 - 10：ohos.permission.GET_RUNNING_INFO
+- API版本11+：N/A
+- API版本9-10：ohos.permission.GET_RUNNING_INFO
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -72,9 +73,10 @@ function getRunningProcessInformation(callback: AsyncCallback<Array<ProcessInfor
 **起始版本：** 9
 
 **需要权限：** 
-- API版本9 - 10：ohos.permission.GET_RUNNING_INFO
+- API版本11+：N/A
+- API版本9-10：ohos.permission.GET_RUNNING_INFO
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 

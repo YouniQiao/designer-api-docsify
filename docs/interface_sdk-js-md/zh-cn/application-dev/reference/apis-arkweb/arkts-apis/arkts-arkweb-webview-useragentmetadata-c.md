@@ -35,7 +35,6 @@ getArchitecture(): string
 **示例**
 
 完整示例代码参考[setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled)。
-- simpleType:
 
 ## getBitness
 
@@ -60,7 +59,6 @@ getBitness(): string
 **示例**
 
 完整示例代码参考[setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled)。
-- simpleType:
 
 ## getBrandVersionList
 
@@ -85,7 +83,6 @@ getBrandVersionList(): Array<UserAgentBrandVersion>
 **示例**
 
 完整示例代码参考[setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled)。
-- simpleType:
 
 ## getFormFactors
 
@@ -110,7 +107,6 @@ getFormFactors(): Array<UserAgentFormFactor>
 **示例**
 
 完整示例代码参考[setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled)。
-- simpleType:
 
 ## getFullVersion
 
@@ -135,7 +131,6 @@ getFullVersion(): string
 **示例**
 
 完整示例代码参考[setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled)。
-- simpleType:
 
 ## getMobile
 
@@ -160,7 +155,6 @@ getMobile(): boolean
 **示例**
 
 完整示例代码参考[setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled)。
-- simpleType:
 
 ## getModel
 
@@ -185,7 +179,6 @@ getModel(): string
 **示例**
 
 完整示例代码参考[setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled)。
-- simpleType:
 
 ## getPlatform
 
@@ -210,7 +203,6 @@ getPlatform(): string
 **示例**
 
 完整示例代码参考[setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled)。
-- simpleType:
 
 ## getPlatformVersion
 
@@ -235,7 +227,6 @@ getPlatformVersion(): string
 **示例**
 
 完整示例代码参考[setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled)。
-- simpleType:
 
 ## getWow64
 
@@ -260,7 +251,6 @@ getWow64(): boolean
 **示例**
 
 完整示例代码参考[setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled)。
-- simpleType:
 
 ## setArchitecture
 
@@ -285,7 +275,6 @@ setArchitecture(arch: string): void
 **示例**
 
 完整示例代码参考[setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled)。
-- simpleType:
 
 ## setBitness
 
@@ -310,7 +299,6 @@ setBitness(bitness: string): void
 **示例**
 
 完整示例代码参考[setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled)。
-- simpleType:
 
 ## setBrandVersionList
 
@@ -335,7 +323,6 @@ setBrandVersionList(brandVersionList: Array<UserAgentBrandVersion>): void
 **示例**
 
 完整示例代码参考[setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled)。
-- simpleType:
 
 ## setFormFactors
 
@@ -360,7 +347,6 @@ setFormFactors(formFactors: Array<UserAgentFormFactor>): void
 **示例**
 
 完整示例代码参考[setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled)。
-- simpleType:
 
 ## setFullVersion
 
@@ -385,7 +371,6 @@ setFullVersion(fullVersion: string): void
 **示例**
 
 完整示例代码参考[setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled)。
-- simpleType:
 
 ## setMobile
 
@@ -410,7 +395,6 @@ setMobile(isMobile: boolean): void
 **示例**
 
 完整示例代码参考[setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled)。
-- simpleType:
 
 ## setModel
 
@@ -435,7 +419,6 @@ setModel(model: string): void
 **示例**
 
 完整示例代码参考[setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled)。
-- simpleType:
 
 ## setPlatform
 
@@ -460,7 +443,6 @@ setPlatform(platform: string): void
 **示例**
 
 完整示例代码参考[setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled)。
-- simpleType:
 
 ## setPlatformVersion
 
@@ -485,7 +467,6 @@ setPlatformVersion(platformVersion: string): void
 **示例**
 
 完整示例代码参考[setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled)。
-- simpleType:
 
 ## setWow64
 
@@ -510,4 +491,3 @@ setWow64(isWow64: boolean): void
 **示例**
 
 完整示例代码参考[setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled)。
-- simpleType:

@@ -24,7 +24,7 @@ blurRadius?: number
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -36,11 +36,11 @@ color?: common2D.Color
 
 文本阴影的颜色，默认为黑色Color(255, 0, 0, 0)。
 
-**类型：** [common2D.Color](arkts-arkgraphics2d-common2d-color-i.md)
+**类型：** common2D.Color
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -52,10 +52,10 @@ point?: common2D.Point
 
 文本阴影基于当前文本的偏移位置，横、纵坐标要大于等于零，单位为物理像素px，默认为common2D.Point(0, 0)。
 
-**类型：** [common2D.Point](arkts-arkgraphics2d-common2d-point-i.md)
+**类型：** common2D.Point
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Graphics.Drawing

@@ -20,7 +20,7 @@ CalendarPicker(options?: CalendarOptions)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -75,7 +75,6 @@ struct CalendarPickerExample {
 ```
 
 该示例通过start和end设置日历选择器的开始日期和结束日期。
-从API version 18开始，[CalendarOptions](#calendaroptions对象说明)中新增了start、end属性。
 
 ```TypeScript
 // xxx.ets
@@ -103,7 +102,6 @@ struct CalendarPickerExample {
 ```
 
 该示例通过markToday设置日历选择器在系统当前日期时，开启保持高亮显示，同时，通过disabledDateRange设置日历选择器的禁用日期区间。
-从API version 19开始，新增了[markToday](#marktoday19)接口，[CalendarOptions](#calendaroptions对象说明)中新增了disabledDateRange属性。
 
 ```TypeScript
 // xxx.ets

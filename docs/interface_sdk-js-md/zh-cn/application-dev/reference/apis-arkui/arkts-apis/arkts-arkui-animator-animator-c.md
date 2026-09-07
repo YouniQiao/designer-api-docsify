@@ -31,7 +31,7 @@ static create(options: AnimatorOptions): AnimatorResult
 
 **替代接口：** createAnimator
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -56,9 +56,6 @@ static create(options: AnimatorOptions): AnimatorResult
 **示例**
 
 完整示例请参考基于ArkTS扩展的声明式开发范式。
-> 说明：
-> 
-> 推荐通过使用[UIContext](arkts-apis-uicontext-uicontext.md)中的createAnimator接口明确UI上下文。
 
 ```TypeScript
 import { Animator as animator, AnimatorOptions } from '@kit.ArkUI';
@@ -88,7 +85,7 @@ static create(options: AnimatorOptions | SimpleAnimatorOptions): AnimatorResult
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -113,9 +110,6 @@ static create(options: AnimatorOptions | SimpleAnimatorOptions): AnimatorResult
 **示例**
 
 完整示例请参考基于ArkTS扩展的声明式开发范式。
-> 说明：
-> 
-> 推荐通过使用[UIContext](arkts-apis-uicontext-uicontext.md)中的createAnimator接口明确UI上下文。
 
 ```TypeScript
 import { Animator as animator, SimpleAnimatorOptions } from '@kit.ArkUI';

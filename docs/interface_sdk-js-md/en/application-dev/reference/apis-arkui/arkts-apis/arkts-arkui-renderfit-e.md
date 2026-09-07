@@ -4,8 +4,6 @@ Enumerates the modes in which the final state of the component's content is rend
 
 **Since:** 10
 
-**Model restriction:** This API can be used only in the stage model.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## CENTER

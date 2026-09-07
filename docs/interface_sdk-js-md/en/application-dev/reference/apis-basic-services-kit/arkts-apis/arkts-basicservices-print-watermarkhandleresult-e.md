@@ -4,8 +4,6 @@ Watermark handling result.
 
 **Since:** 24
 
-**Model restriction:** This API can be used only in the stage model.
-
 **System capability:** SystemCapability.Print.PrintFramework
 
 ## WATERMARK_HANDLE_SUCCESS

@@ -36,7 +36,8 @@ You can disable a USB storage device by calling this API or [addDisallowedUsbDev
 **Since:** 12
 
 **Required permissions:** 
-- API version 26.0.0 and later: ohos.permission.ENTERPRISE_MANAGE_USB or ohos.permission.PERSONAL_MANAGE_RESTRICTIONS
+- API version 26 and later: ohos.permission.ENTERPRISE_MANAGE_USB or ohos.permission.PERSONAL_MANAGE_RESTRICTIONS
+- API version 25: N/A
 - API versions 12 to 24: ohos.permission.ENTERPRISE_MANAGE_USB
 
 **Model restriction:** This API can be used only in the stage model.

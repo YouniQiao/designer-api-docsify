@@ -565,7 +565,7 @@ This API can be called only after the [Verify](arkts-cryptoarchitecture-cryptofr
 > **NOTE：**
 > 
 > You can call **update** multiple times or do not use **update** (call
-> [verify](#verify) after
+> [verify](#verify-3) after
 > [init](#init)), depending on the data volume.
 
 > The amount of the data to be passed in by **update()** (one-time or accumulative) is not limited. If there is a

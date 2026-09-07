@@ -28,7 +28,7 @@ onBackground(): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -61,7 +61,7 @@ UIAbility生命周期回调，当UIAbility侧滑返回时触发，根据返回�
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -69,7 +69,7 @@ UIAbility生命周期回调，当UIAbility侧滑返回时触发，根据返回�
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | The value&lt;code&gt;true&lt;/code&gt; means that the UIAbility instance will be moved to the background and will not be destroyed, and &lt;code&gt;false&lt;/code&gt; means that the UIAbility instance will be destroyed. |
+| boolean | The value &lt;code&gt;true&lt;/code&gt; means that the UIAbility instance will be moved to the background and will not be destroyed, and &lt;code&gt;false&lt;/code&gt; means that the UIAbility instance will be destroyed. |
 
 **示例**
 
@@ -121,7 +121,7 @@ UIAbility生命周期回调，在多设备协同场景下，协同方应用在�
 
 | 类型 | 说明 |
 | --- | --- |
-| [AbilityConstant.CollaborateResult](arkts-ability-abilityconstant-collaborateresult-e.md) | 协同方是否接受协同的结果。 |
+| AbilityConstant.CollaborateResult | 协同方是否接受协同的结果。 |
 
 **示例**
 
@@ -152,7 +152,7 @@ onContinue(wantParam: Record<string, Object>):
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -160,14 +160,14 @@ onContinue(wantParam: Record<string, Object>):
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| wantParam | Record&lt;string, Object&gt; | 是 | 开发者通过该参数保存待迁移的数据。<br>**起始版本：** 11 |
+| wantParam | Record&lt;string, Object&gt; | 是 | 开发者通过该参数保存待迁移的数据。<br>**适用版本：** 11 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [AbilityConstant.OnContinueResult](arkts-ability-abilityconstant-oncontinueresult-e.md) | Return the result of onContinue.<br>**适用版本：** 9 - 11 |
-| [AbilityConstant.OnContinueResult](arkts-ability-abilityconstant-oncontinueresult-e.md) \| Promise&lt;[AbilityConstant.OnContinueResult](arkts-ability-abilityconstant-oncontinueresult-e.md)&gt; | 表示是否同意迁移的结果： |
+| AbilityConstant.OnContinueResult | Return the result of onContinue.<br>**适用版本：** 9 - 11 |
+| AbilityConstant.OnContinueResult \| Promise&lt;AbilityConstant.OnContinueResult&gt; | 表示是否同意迁移的结果： |
 
 **示例**
 
@@ -223,7 +223,7 @@ onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -232,7 +232,7 @@ onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 | 调用方拉起该UIAbility时传递的数据。 |
-| launchParam | [AbilityConstant.LaunchParam](arkts-ability-abilityconstant-launchparam-i.md) | 是 | 应用启动参数，包含应用启动原因、应用上次退出原因等。 |
+| launchParam | AbilityConstant.LaunchParam | 是 | 应用启动参数，包含应用启动原因、应用上次退出原因等。 |
 
 **示例**
 
@@ -269,7 +269,7 @@ onDestroy(): void | Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -317,7 +317,7 @@ UIAbility生命周期回调，当应用从前台转到后台后触发，在[onBa
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -387,14 +387,13 @@ UIAbility生命周期回调，应用转到前台后触发，在[onForeground](#o
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 **示例**
 
 参考[onWillForeground](#onwillforeground)。
-- simpleType:
 
 ## onDump
 
@@ -408,7 +407,7 @@ onDump(params: Array<string>): Array<string>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -451,7 +450,7 @@ onForeground(): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -482,7 +481,7 @@ onNewWant(want: Want, launchParam: AbilityConstant.LaunchParam): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -491,7 +490,7 @@ onNewWant(want: Want, launchParam: AbilityConstant.LaunchParam): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 | 调用方再次拉起该UIAbility时传递的数据。 |
-| launchParam | [AbilityConstant.LaunchParam](arkts-ability-abilityconstant-launchparam-i.md) | 是 | UIAbility启动参数，包含启动原因等。 |
+| launchParam | AbilityConstant.LaunchParam | 是 | UIAbility启动参数，包含启动原因等。 |
 
 **示例**
 
@@ -532,7 +531,7 @@ onPrepareToTerminate(): boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -604,7 +603,7 @@ onPrepareToTerminateAsync(): Promise<boolean>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本15开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -647,7 +646,7 @@ onSaveState(reason: AbilityConstant.StateType, wantParam: Record<string, Object>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -655,14 +654,14 @@ onSaveState(reason: AbilityConstant.StateType, wantParam: Record<string, Object>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| reason | [AbilityConstant.StateType](arkts-ability-abilityconstant-statetype-e.md) | 是 | 触发应用保存状态的原因，当前仅支持APP_RECOVERY（即应用故障恢复场景）。 |
-| wantParam | Record&lt;string, Object&gt; | 是 | 用户自定义的应用状态数据，应用再启动时被保存在[onCreate](#oncreate)的Want.parameters中。<br>**起始版本：** 11 |
+| reason | AbilityConstant.StateType | 是 | 触发应用保存状态的原因，当前仅支持APP_RECOVERY（即应用故障恢复场景）。 |
+| wantParam | Record&lt;string, Object&gt; | 是 | 用户自定义的应用状态数据，应用再启动时被保存在[onCreate](#oncreate)的Want.parameters中。<br>**适用版本：** 11 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [AbilityConstant.OnSaveResult](arkts-ability-abilityconstant-onsaveresult-e.md) | 返回一个数据保存策略的对象（如全部拒绝、全部允许、只允许故障恢复场景等）。 |
+| AbilityConstant.OnSaveResult | 返回一个数据保存策略的对象（如全部拒绝、全部允许、只允许故障恢复场景等）。 |
 
 **示例**
 
@@ -690,7 +689,7 @@ onSaveStateAsync(stateType: AbilityConstant.StateType, wantParam: Record<string,
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -698,14 +697,14 @@ onSaveStateAsync(stateType: AbilityConstant.StateType, wantParam: Record<string,
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| stateType | [AbilityConstant.StateType](arkts-ability-abilityconstant-statetype-e.md) | 是 | 触发应用保存状态的原因，当前仅支持`APP_RECOVERY`（即应用故障恢复场景）。 |
+| stateType | AbilityConstant.StateType | 是 | 触发应用保存状态的原因，当前仅支持`APP_RECOVERY`（即应用故障恢复场景）。 |
 | wantParam | Record&lt;string, Object&gt; | 是 | 用户自定义的应用状态数据，应用再启动时被保存在[onCreate](#oncreate)的Want.parameters中。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[AbilityConstant.OnSaveResult](arkts-ability-abilityconstant-onsaveresult-e.md)&gt; | Promise对象。返回一个数据保存策略的对象（如全部拒绝、全部允许、只允许故障恢复场景等）。 |
+| Promise&lt;AbilityConstant.OnSaveResult&gt; | Promise对象。返回一个数据保存策略的对象（如全部拒绝、全部允许、只允许故障恢复场景等）。 |
 
 **示例**
 
@@ -735,7 +734,7 @@ onShare(wantParam: Record<string, Object>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -743,7 +742,7 @@ onShare(wantParam: Record<string, Object>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| wantParam | Record&lt;string, Object&gt; | 是 | 待分享的数据。<br>**起始版本：** 11 |
+| wantParam | Record&lt;string, Object&gt; | 是 | 待分享的数据。<br>**适用版本：** 11 |
 
 **示例**
 
@@ -772,7 +771,7 @@ UIAbility生命周期回调，当应用从前台转到后台前触发，在[onBa
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -820,7 +819,7 @@ UIAbility生命周期回调，应用转到前台前触发，在[onForeground](#o
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -890,7 +889,7 @@ onWindowStageCreate(windowStage: window.WindowStage): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -898,7 +897,7 @@ onWindowStageCreate(windowStage: window.WindowStage): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| windowStage | [window.WindowStage](../../apis-arkui/arkts-apis/arkts-arkui-window-windowstage-i.md) | 是 | WindowStage实例对象。 |
+| windowStage | window.WindowStage | 是 | WindowStage实例对象。 |
 
 **示例**
 
@@ -935,7 +934,7 @@ onWindowStageDestroy(): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -972,7 +971,7 @@ onWindowStageRestore(windowStage: window.WindowStage): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -980,7 +979,7 @@ onWindowStageRestore(windowStage: window.WindowStage): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| windowStage | [window.WindowStage](../../apis-arkui/arkts-apis/arkts-arkui-window-windowstage-i.md) | 是 | WindowStage实例对象。 |
+| windowStage | window.WindowStage | 是 | WindowStage实例对象。 |
 
 **示例**
 
@@ -1008,7 +1007,7 @@ onWindowStageWillDestroy(windowStage: window.WindowStage): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -1016,7 +1015,7 @@ onWindowStageWillDestroy(windowStage: window.WindowStage): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| windowStage | [window.WindowStage](../../apis-arkui/arkts-apis/arkts-arkui-window-windowstage-i.md) | 是 | WindowStage实例对象。 |
+| windowStage | window.WindowStage | 是 | WindowStage实例对象。 |
 
 **示例**
 
@@ -1062,7 +1061,7 @@ UIAbility的上下文。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -1083,7 +1082,7 @@ lastRequestWant: Want
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -1101,7 +1100,7 @@ UIAbility[冷启动](../../../application-models/uiability-intra-device-interact
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 

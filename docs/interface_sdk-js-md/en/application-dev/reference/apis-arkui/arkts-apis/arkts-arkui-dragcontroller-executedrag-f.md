@@ -51,8 +51,6 @@ Initiates a drag action, with the object to be dragged and the drag information 
 **Examples**
 
 > NOTE
-> 
-> You are advised to use [getDragController](arkts-arkui-arkui-uicontext-uicontext-c.md#getdragcontroller) in [UIContext](arkts-apis-uicontext-uicontext.md) to obtain the DragController object associated with the current UI context.
 
 ```TypeScript
 import { dragController } from '@kit.ArkUI';
@@ -169,8 +167,8 @@ Initiates a drag action, with the object to be dragged and the drag information 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;{ event: DragEvent, extraParams: string | > } Promise used to return the result.<br>**Applicable version:** 10 - 11 |
-| Promise&lt;[DragEventParam](arkts-arkui-dragcontroller-drageventparam-i.md)&gt; | A Promise with the drag event information.<br>**Applicable version:** 12 and later |
+| Promise&lt;{ event: DragEvent, extraParams: string | > } Promise used to return the result.<br>**Since:** 10 - 11 |
+| Promise&lt;[DragEventParam](arkts-arkui-dragcontroller-drageventparam-i.md)&gt; | A Promise with the drag event information.<br>**Since:** 12 |
 
 **Error codes:**
 
@@ -182,8 +180,6 @@ Initiates a drag action, with the object to be dragged and the drag information 
 **Examples**
 
 > NOTE
-> 
-> You are advised to use [getDragController](arkts-arkui-arkui-uicontext-uicontext-c.md#getdragcontroller) in [UIContext](arkts-apis-uicontext-uicontext.md) to obtain the DragController object associated with the current UI context.
 
 ```TypeScript
 import { dragController } from '@kit.ArkUI';

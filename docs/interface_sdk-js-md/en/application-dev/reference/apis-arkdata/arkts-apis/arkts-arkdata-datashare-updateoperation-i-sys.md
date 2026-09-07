@@ -22,7 +22,7 @@ predicates: dataSharePredicates.DataSharePredicates
 
 Conditions for updating data.
 
-**Type:** [dataSharePredicates.DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md)
+**Type:** dataSharePredicates.DataSharePredicates
 
 **Since:** 12
 

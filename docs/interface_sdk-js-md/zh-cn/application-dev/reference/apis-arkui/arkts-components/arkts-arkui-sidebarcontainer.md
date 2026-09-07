@@ -30,7 +30,7 @@ SideBarContainer(type?: SideBarContainerType)
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -38,7 +38,7 @@ SideBarContainer(type?: SideBarContainerType)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | [SideBarContainerType](arkts-arkui-sidebarcontainertype-e.md) | 否 | [设置侧边栏的显示类型。默认值：SideBarContainerType.Embed](arkts-arkui-sidebarcontainertype-e.md) |
+| type | [SideBarContainerType](arkts-arkui-sidebarcontainertype-e.md) | 否 | 设置侧边栏的显示类型。默认值：SideBarContainerType.Embed |
 
 ## 汇总
 

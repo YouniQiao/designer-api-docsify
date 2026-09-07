@@ -4,8 +4,6 @@ Enumerates display types for nodes in the **GridObjectSortComponent** component.
 
 **Since:** 11
 
-**Model restriction:** This API can be used only in the stage model.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## IMAGE_TEXT

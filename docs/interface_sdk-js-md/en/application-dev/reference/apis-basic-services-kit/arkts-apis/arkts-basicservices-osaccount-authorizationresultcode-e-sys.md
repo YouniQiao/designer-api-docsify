@@ -4,8 +4,6 @@ Enumerates authorization result codes.
 
 **Since:** 24
 
-**Model restriction:** This API can be used only in the stage model.
-
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.

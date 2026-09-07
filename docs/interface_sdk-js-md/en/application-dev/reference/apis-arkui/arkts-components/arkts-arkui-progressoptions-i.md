@@ -63,7 +63,7 @@ Style of the progress indicator.
 
 Default value: **ProgressType.Linear**
 
-**Type:** [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md)
+**Type:** Type
 
 **Since:** 8
 

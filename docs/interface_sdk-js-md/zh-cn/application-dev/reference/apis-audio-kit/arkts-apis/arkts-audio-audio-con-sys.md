@@ -8,6 +8,8 @@ const LOCAL_NETWORK_ID: string
 
 本地设备网络id。
 
+**类型：** string
+
 **起始版本：** 9
 
 **系统能力：** SystemCapability.Multimedia.Audio.Device

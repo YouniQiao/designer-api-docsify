@@ -1,6 +1,6 @@
 # Cipher
 
-加解密接口，定义对称加解密和非对称加解密方法。调用前，需通过[createCipher(transformation: string): Cipher](arkts-cryptoarchitecture-cryptoframework-createcipher-f.md)方法创建一个Cipher实例。按序调用Cipher实例中的[init()](#init)、[update()](#update)、[doFinal()](#dofinal)方法完成加解密操作。
+加解密接口，定义对称加解密和非对称加解密方法。调用前，需通过[createCipher(transformation: string): Cipher](arkts-cryptoarchitecture-cryptoframework-createcipher-f.md)方法创建一个Cipher实例。按序调用Cipher实例中的[init()](#init-3)、[update()](#update)、[doFinal()](#dofinal)方法完成加解密操作。
 
 完整的加解密流程示例可参考[开发指南](../../../security/CryptoArchitectureKit/crypto-encryption-decryption.md)。
 
@@ -33,7 +33,7 @@ doFinal(data: DataBlob, callback: AsyncCallback<DataBlob>): void
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Cipher
@@ -226,7 +226,7 @@ authTag为末尾的16字节；CCM模式下，authTag为末尾的12字节。其�
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Cipher
@@ -311,7 +311,7 @@ doFinal(data: DataBlob): Promise<DataBlob>
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Cipher
@@ -375,7 +375,7 @@ doFinal(data: DataBlob | null): Promise<DataBlob>
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Cipher
@@ -472,7 +472,7 @@ doFinalSync(data: DataBlob | null): DataBlob
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Security.CryptoFramework.Cipher
 
@@ -555,7 +555,7 @@ getCipherSpec(itemType: CipherSpecItem): string | Uint8Array
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Cipher
@@ -607,7 +607,7 @@ init、update和doFinal必须配合使用，其中init和doFinal是必选的，u
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Cipher
@@ -644,7 +644,7 @@ init、update、doFinal为三段式接口，需要成组使用。其中init和do
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Cipher
@@ -681,7 +681,7 @@ init、update和doFinal必须配合使用，其中init和doFinal是必选的，u
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Cipher
@@ -723,7 +723,7 @@ init、update、doFinal为三段式接口，需要成组使用。其中init和do
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Cipher
@@ -767,7 +767,7 @@ initSync、updateSync、doFinalSync为三段式接口，需要成组使用。其
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Security.CryptoFramework.Cipher
 
@@ -799,7 +799,7 @@ setCipherSpec(itemType: CipherSpecItem, itemValue: Uint8Array): void
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Cipher
@@ -842,7 +842,7 @@ update(data: DataBlob, callback: AsyncCallback<DataBlob>): void
 
 更新要分段加密或解密的数据。使用Callback异步回调。
 
-必须在对[Cipher](arkts-cryptoarchitecture-cryptoframework-cipher-i.md)实例使用[init()](#init)初始化后，才能使用本函数。
+必须在对[Cipher](arkts-cryptoarchitecture-cryptoframework-cipher-i.md)实例使用[init()](#init-3)初始化后，才能使用本函数。
 
 > **说明：**
 > 
@@ -872,7 +872,7 @@ update(data: DataBlob, callback: AsyncCallback<DataBlob>): void
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Cipher
@@ -903,7 +903,7 @@ update(data: DataBlob): Promise<DataBlob>
 
 分段更新加密或者解密数据操作。使用Promise异步回调。
 
-必须在对[Cipher](arkts-cryptoarchitecture-cryptoframework-cipher-i.md)实例使用[init()](#init)初始化后，才能使用本函数。
+必须在对[Cipher](arkts-cryptoarchitecture-cryptoframework-cipher-i.md)实例使用[init()](#init-3)初始化后，才能使用本函数。
 
 > **说明：**
 > 
@@ -933,7 +933,7 @@ update(data: DataBlob): Promise<DataBlob>
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Cipher
@@ -977,7 +977,7 @@ updateSync(data: DataBlob): DataBlob
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Security.CryptoFramework.Cipher
 
@@ -1015,7 +1015,7 @@ readonly algName: string
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Cipher

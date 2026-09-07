@@ -48,9 +48,9 @@
 <!--DelEnd-->
 
 <!--Del-->
-### 属性（系统接口）
+### 常量（系统接口）
 
 | 名称 | 说明 |
 | --- | --- |
-| [appStorage](arkts-arkui-commontsetsapi-p-sys.md) | 应用级全局状态存储实例，提供应用范围内的状态数据存储和访问能力。 |
+| [appStorage](arkts-arkui-commontsetsapi-con-sys.md#appstorage) | 应用级全局状态存储实例，提供应用范围内的状态数据存储和访问能力。 |
 <!--DelEnd-->

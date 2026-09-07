@@ -17,7 +17,7 @@ function removeLocalService(context: Context, serviceInfo: LocalServiceInfo,
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Communication.NetManager.MDNS
 
@@ -43,10 +43,6 @@ function removeLocalService(context: Context, serviceInfo: LocalServiceInfo,
 **示例**
 
 > 说明：
-> 
-> 在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需在页面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
-
-Stage模型示例：
 
 ```TypeScript
 import { mdns } from '@kit.NetworkKit';
@@ -83,7 +79,7 @@ function removeLocalService(context: Context, serviceInfo: LocalServiceInfo): Pr
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Communication.NetManager.MDNS
 
@@ -114,10 +110,6 @@ function removeLocalService(context: Context, serviceInfo: LocalServiceInfo): Pr
 **示例**
 
 > 说明：
-> 
-> 在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需在页面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
-
-Stage模型示例：
 
 ```TypeScript
 import { mdns } from '@kit.NetworkKit';

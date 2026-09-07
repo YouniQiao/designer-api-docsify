@@ -27,6 +27,7 @@ Obtains the current font size scale factor.
 **Since:** 20
 
 **Required permissions:** 
+- API version 20 and later: N/A
 - API versions 12 to 19: ohos.permission.UPDATE_CONFIGURATION
 
 **System capability:** SystemCapability.ArkUI.UiAppearance

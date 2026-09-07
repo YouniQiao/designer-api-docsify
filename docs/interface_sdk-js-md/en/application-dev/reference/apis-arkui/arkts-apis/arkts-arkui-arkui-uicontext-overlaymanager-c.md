@@ -273,7 +273,6 @@ Hides all **ComponentContent** nodes on the **OverlayManager**.
 **Examples**
 
 See the example for [addComponentContent](#addcomponentcontent).
-- simpleType:
 
 ## hideComponentContent
 
@@ -300,7 +299,6 @@ Hides a specified **ComponentContent** node on the **OverlayManager**.
 **Examples**
 
 See the example for [addComponentContent](#addcomponentcontent).
-- simpleType:
 
 ## openOrderOverlay
 
@@ -322,7 +320,7 @@ Opens an overlay with the specified ComponentContent and options.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| content | [ComponentContent](arkts-arkui-componentcontent-c.md) | Yes | Content to add to the new node on the OverlayManager.<p>&lt;strong&gt;NOTE&lt;/strong&gt;: By default, the new node is centered on the page and stacked according to its stacking level. </p> |
+| content | [ComponentContent](arkts-arkui-componentcontent-c.md) | Yes | Content to add to the new node on the OverlayManager. <p>&lt;strong&gt;NOTE&lt;/strong&gt;: By default, the new node is centered on the page and stacked according to its stacking level. </p> |
 | options | [OrderOverlayOptions](arkts-arkui-arkui-uicontext-orderoverlayoptions-i.md) | No |  |
 
 **Return value:**
@@ -362,7 +360,6 @@ Removes a specified node from the **OverlayManager**.
 **Examples**
 
 See the example for [addComponentContent](#addcomponentcontent).
-- simpleType:
 
 ## showAllComponentContents
 
@@ -383,7 +380,6 @@ Shows all **ComponentContent** nodes on the **OverlayManager**.
 **Examples**
 
 See the example for [addComponentContent](#addcomponentcontent).
-- simpleType:
 
 ## showComponentContent
 
@@ -410,4 +406,3 @@ Shows a specified **ComponentContent** node on the **OverlayManager**.
 **Examples**
 
 See the example for [addComponentContent](#addcomponentcontent).
-- simpleType:

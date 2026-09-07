@@ -17,6 +17,7 @@ Unsubscribe location changed. You are advised to use the [offLocationChange](#of
 **Since:** 9
 
 **Required permissions:** 
+- API version 25 and later: N/A
 - API versions 9 to 24: ohos.permission.APPROXIMATELY_LOCATION
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -318,6 +319,7 @@ Remove a geofence and unsubscribe geofence status changed.
 **Since:** 9
 
 **Required permissions:** 
+- API version 25 and later: N/A
 - API versions 9 to 24: ohos.permission.APPROXIMATELY_LOCATION
 
 **System capability:** SystemCapability.Location.Location.Geofence

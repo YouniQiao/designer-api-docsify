@@ -23,7 +23,7 @@ antiAlias(value: boolean)
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
 
@@ -45,7 +45,7 @@ fill(value: ResourceColor)
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
 
@@ -67,7 +67,7 @@ fillOpacity(value: number | string | Resource)
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
 
@@ -97,7 +97,7 @@ mesh(value: Array<any>, column: number, row: number)
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
 
@@ -121,7 +121,7 @@ stroke(value: ResourceColor)
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
 
@@ -143,7 +143,7 @@ strokeDashArray(value: Array<any>)
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
 
@@ -165,7 +165,7 @@ strokeDashOffset(value: Length)
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
 
@@ -175,7 +175,7 @@ strokeDashOffset(value: Length)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | 是 | 边框绘制起点的偏移量。默认值：0默认单位：vp 异常值undefined和null按照默认值处理，NaN和Infinity会导致strokeDashArray失效。<br>**起始版本：** 11 |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | 是 | 边框绘制起点的偏移量。默认值：0默认单位：vp 异常值undefined和null按照默认值处理，NaN和Infinity会导致strokeDashArray失效。<br>**适用版本：** 11 |
 
 ## strokeLineCap
 
@@ -187,7 +187,7 @@ strokeLineCap(value: LineCapStyle)
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
 
@@ -209,7 +209,7 @@ strokeLineJoin(value: LineJoinStyle)
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
 
@@ -233,7 +233,7 @@ strokeMiterLimit(value: Length)
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
 
@@ -243,7 +243,7 @@ strokeMiterLimit(value: Length)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | 是 | 斜接长度与边框宽度比值的极限值。默认值：4 异常值undefined、null和NaN按照默认值处理，Infinity会导致stroke失效。<br>**起始版本：** 20 |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | 是 | 斜接长度与边框宽度比值的极限值。默认值：4 异常值undefined、null和NaN按照默认值处理，Infinity会导致stroke失效。<br>**适用版本：** 20 |
 
 ## strokeOpacity
 
@@ -255,7 +255,7 @@ strokeOpacity(value: number | string | Resource)
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
 
@@ -277,7 +277,7 @@ strokeWidth(value: Length)
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
 
@@ -287,7 +287,7 @@ strokeWidth(value: Length)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | 是 | 边框宽度，取值范围≥0。默认值：1 默认单位：vp异常值undefined、null和NaN按照默认值处理，Infinity按0处理。<br>**起始版本：** 20 |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | 是 | 边框宽度，取值范围≥0。默认值：1 默认单位：vp异常值undefined、null和NaN按照默认值处理，Infinity按0处理。<br>**适用版本：** 20 |
 
 ## viewPort
 
@@ -301,7 +301,7 @@ viewPort(value: ViewportRect)
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
 
@@ -311,4 +311,4 @@ viewPort(value: ViewportRect)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ViewportRect](arkts-arkui-viewportrect-i.md) | 是 | Viewport绘制属性。默认值：{x: 0, y: 0, width: 0, height: 0} 异常值undefined和null按照默认值处理。<br>**起始版本：** 18 |
+| value | [ViewportRect](arkts-arkui-viewportrect-i.md) | 是 | Viewport绘制属性。默认值：{x: 0, y: 0, width: 0, height: 0} 异常值undefined和null按照默认值处理。<br>**适用版本：** 18 |

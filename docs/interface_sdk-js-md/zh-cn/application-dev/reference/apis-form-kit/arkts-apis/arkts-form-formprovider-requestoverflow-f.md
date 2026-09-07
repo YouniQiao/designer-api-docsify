@@ -23,7 +23,7 @@ function requestOverflow(formId: string, overflowInfo: formInfo.OverflowInfo): P
 
 **起始版本：** 20
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Ability.Form
 
@@ -32,7 +32,7 @@ function requestOverflow(formId: string, overflowInfo: formInfo.OverflowInfo): P
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | formId | string | 是 | 卡片标识。 |
-| overflowInfo | [formInfo.OverflowInfo](arkts-form-forminfo-overflowinfo-i.md) | 是 | 动效请求参数信息。 |
+| overflowInfo | formInfo.OverflowInfo | 是 | 动效请求参数信息。 |
 
 **返回值：**
 

@@ -4,8 +4,6 @@ The enum of BLE match mode.
 
 **Since:** 10
 
-**Model restriction:** This API can be used only in the stage model.
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## MATCH_MODE_AGGRESSIVE

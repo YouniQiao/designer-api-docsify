@@ -24,7 +24,7 @@ getAdvances(range: Range): Array<common2D.Point>
 
 **起始版本：** 20
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -38,7 +38,7 @@ getAdvances(range: Range): Array<common2D.Point>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;[common2D.Point](arkts-arkgraphics2d-common2d-point-i.md)&gt; | 返回该排版单元中每个字形相对于水平方向的字形宽度数组。其中，[common2D.Point]{ |
+| Array&lt;common2D.Point&gt; | 返回该排版单元中每个字形相对于水平方向的字形宽度数组。其中，[common2D.Point]{ |
 
 **示例**
 
@@ -59,7 +59,7 @@ getFont(): drawing.Font
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -67,7 +67,7 @@ getFont(): drawing.Font
 
 | 类型 | 说明 |
 | --- | --- |
-| [drawing.Font](arkts-arkgraphics2d-drawing-font-c.md) | 该排版单元的字体属性对象实例。 |
+| drawing.Font | 该排版单元的字体属性对象实例。 |
 
 **示例**
 
@@ -85,7 +85,7 @@ getGlyphCount(): number
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -115,7 +115,7 @@ getGlyphs(): Array<number>
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -141,7 +141,7 @@ getGlyphs(range: Range): Array<number>
 
 **起始版本：** 18
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -205,7 +205,7 @@ getImageBounds(): common2D.Rect
 
 **起始版本：** 18
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -213,7 +213,7 @@ getImageBounds(): common2D.Rect
 
 | 类型 | 说明 |
 | --- | --- |
-| [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) | 该排版单元的图像边界，单位为物理像素px。 |
+| common2D.Rect | 该排版单元的图像边界，单位为物理像素px。 |
 
 **示例**
 
@@ -235,7 +235,7 @@ getOffsets(): Array<common2D.Point>
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -243,7 +243,7 @@ getOffsets(): Array<common2D.Point>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;[common2D.Point](arkts-arkgraphics2d-common2d-point-i.md)&gt; | 该排版单元中每个字形相对于其索引的偏移量。 |
+| Array&lt;common2D.Point&gt; | 该排版单元中每个字形相对于其索引的偏移量。 |
 
 **示例**
 
@@ -261,7 +261,7 @@ getPositions(): Array<common2D.Point>
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -269,7 +269,7 @@ getPositions(): Array<common2D.Point>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;[common2D.Point](arkts-arkgraphics2d-common2d-point-i.md)&gt; | 该排版单元中每个字形相对于每行的字形位置。 |
+| Array&lt;common2D.Point&gt; | 该排版单元中每个字形相对于每行的字形位置。 |
 
 **示例**
 
@@ -287,7 +287,7 @@ getPositions(range: Range): Array<common2D.Point>
 
 **起始版本：** 18
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -301,7 +301,7 @@ getPositions(range: Range): Array<common2D.Point>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;[common2D.Point](arkts-arkgraphics2d-common2d-point-i.md)&gt; | 该排版单元中每个字形相对于每行的字形位置。 |
+| Array&lt;common2D.Point&gt; | 该排版单元中每个字形相对于每行的字形位置。 |
 
 **示例**
 
@@ -341,7 +341,7 @@ getStringIndices(range?: Range): Array<number>
 
 **起始版本：** 18
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -395,7 +395,7 @@ getStringRange(): Range
 
 **起始版本：** 18
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -423,7 +423,7 @@ getTextDirection(): TextDirection
 
 **起始版本：** 20
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -451,7 +451,7 @@ getTextStyle(): TextStyle
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -541,7 +541,7 @@ getTypographicBounds(): TypographicBounds
 
 **起始版本：** 18
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -572,7 +572,7 @@ paint(canvas: drawing.Canvas, x: number, y: number): void
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -580,7 +580,7 @@ paint(canvas: drawing.Canvas, x: number, y: number): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| canvas | [drawing.Canvas](arkts-arkgraphics2d-drawing-canvas-c.md) | 是 | 绘制的目标 canvas。 |
+| canvas | drawing.Canvas | 是 | 绘制的目标 canvas。 |
 | x | number | 是 | 绘制的左上角位置的横坐标，浮点数，单位为物理像素px。 |
 | y | number | 是 | 绘制的左上角位置的纵坐标，浮点数，单位为物理像素px。 |
 

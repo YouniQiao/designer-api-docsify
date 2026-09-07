@@ -129,6 +129,20 @@ default: string
 ## nullable
 
 ```TypeScript
+get nullable(): boolean
+```
+
+获取数据库字段是否为空。
+
+**类型：** boolean
+
+**起始版本：** 9
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**系统能力：** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
+
+```TypeScript
 set nullable(isnullable: boolean)
 ```
 
@@ -143,6 +157,20 @@ set nullable(isnullable: boolean)
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
 
 ## type
+
+```TypeScript
+get type(): number
+```
+
+获取节点对应的数据类型。
+
+**类型：** number
+
+**起始版本：** 9
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**系统能力：** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
 
 ```TypeScript
 set type(type: number)

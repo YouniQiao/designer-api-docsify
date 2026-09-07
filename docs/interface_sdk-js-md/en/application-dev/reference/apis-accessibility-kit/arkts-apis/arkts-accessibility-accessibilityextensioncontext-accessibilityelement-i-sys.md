@@ -2082,7 +2082,7 @@ Movement unit for text reading.
 
 Default value: **char**.
 
-**Type:** [accessibility.TextMoveUnit](arkts-accessibility-accessibility-textmoveunit-t.md)
+**Type:** accessibility.TextMoveUnit
 
 **Since:** 20
 

@@ -20,7 +20,7 @@ Scroll(scroller?: Scroller)
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -768,7 +768,6 @@ struct ScrollExample1 {
 ```
 
 该示例通过FrameNode中的getEvent('Scroll')获取[UIScrollEvent](arkts-arkui-uiscrollevent-i.md)，并为Scroll设置滚动事件回调，用于事件监听方因无法直接修改页面代码而无法使用声明式接口设置回调的场景。
-从API version 19开始，新增UIScrollEvent接口。
 
 ```TypeScript
 import { NodeController, FrameNode, typeNode } from '@kit.ArkUI';
