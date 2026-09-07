@@ -14,10 +14,10 @@ type AVDownloadTaskState = 'init' | 'queued' | 'running' | 'completed' | 'paused
 
 | 类型 | 说明 |
 | --- | --- |
-| 'init' |  |
-| 'queued' |  |
-| 'running' |  |
-| 'completed' |  |
-| 'paused' |  |
-| 'removing' |  |
-| 'error' |  |
+| 'init' | 下载任务初始化。 |
+| 'queued' | 下载任务排队等待。 |
+| 'running' | 下载任务正在运行。 |
+| 'completed' | 下载任务已完成。 |
+| 'paused' | 下载任务已暂停。 |
+| 'removing' | 下载任务正在移除。 |
+| 'error' | 下载任务出错。 |

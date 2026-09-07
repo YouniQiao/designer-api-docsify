@@ -36,7 +36,7 @@ function destroyPanel(panel: Panel): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [33600001](../errorcode-selection.md#33600001-划词服务调用异常) | Selection service exception. |
+| [33600001](../errorcode-selection.md#33600001-划词服务调用异常) | Selection service invocation exception. |
 
 **示例**
 

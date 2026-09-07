@@ -37,6 +37,7 @@ import { childProcessManager } from '@kit.AbilityKit';
 
 | 名称 | 说明 |
 | --- | --- |
+| [getChildProcessInfos](arkts-ability-childprocessmanager-getchildprocessinfos-f.md) | 获取当前应用的子进程信息。该接口使用promise返回的结果。返回的子进程包括通过创建的子进程[startChildProcess](arkts-ability-childprocessmanager-startchildprocess-f.md) (在APP_SPAWN_FORK模式)，[startArkChildProcess](arkts-ability-childprocessmanager-startarkchildprocess-f.md)，以及[startNativeChildProcess](arkts-ability-childprocessmanager-startnativechildprocess-f.md).【OH_Ability_CreateNativeChildProcess】【OH_Ability_CreateNativeChildProcessWithConfigs】【OH_Ability_StartNativeChildProcess】【OH_Ability_StartNativeChildProcessWithConfigs】 |
 | [isArkChildProcessSupported](arkts-ability-childprocessmanager-isarkchildprocesssupported-f.md) | 查询是否允许调用者在此设备上创建ArkTS子进程 |
 | [isNativeChildProcessSupported](arkts-ability-childprocessmanager-isnativechildprocesssupported-f.md) | 查询是否允许调用者在此设备上创建Native子进程 |
 | [startArkChildProcess](arkts-ability-childprocessmanager-startarkchildprocess-f.md) | 启动[ArkTS子进程](../../../application-models/ability-terminology.md#arkts子进程)。使用Promise异步回调。 |
@@ -49,3 +50,9 @@ import { childProcessManager } from '@kit.AbilityKit';
 | 名称 | 说明 |
 | --- | --- |
 | [StartMode](arkts-ability-childprocessmanager-startmode-e.md) | 子进程启动模式枚举。 |
+
+### 类型
+
+| 名称 | 说明 |
+| --- | --- |
+| [ChildProcessInformation](arkts-ability-childprocessmanager-childprocessinformation-t.md) | 定义子进程信息。 |

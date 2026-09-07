@@ -47,7 +47,7 @@ Moves the word selection panel to the specified coordinates in the global coordi
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [33600001](../errorcode-selection.md#33600001-word-selection-service-invocation-error) | Selection service exception. |
+| [33600001](../errorcode-selection.md#33600001-word-selection-service-invocation-error) | Selection service invocation exception. |
 | [33600002](../errorcode-selection.md#33600002-word-selection-panel-has-been-destroyed) | This selection window has been destroyed. |
 
 **Examples**

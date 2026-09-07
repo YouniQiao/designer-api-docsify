@@ -39,7 +39,7 @@ function createPanel(ctx: Context, info: PanelInfo): Promise<Panel>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [33600001](../errorcode-selection.md#33600001-划词服务调用异常) | Selection service exception. |
+| [33600001](../errorcode-selection.md#33600001-划词服务调用异常) | Selection service invocation exception. |
 | [33600003](../errorcode-selection.md#33600003-调用接口的应用与系统设置中选择的应用不匹配) | The application calling the API does not match the application selected in the system settings. |
 
 **示例**

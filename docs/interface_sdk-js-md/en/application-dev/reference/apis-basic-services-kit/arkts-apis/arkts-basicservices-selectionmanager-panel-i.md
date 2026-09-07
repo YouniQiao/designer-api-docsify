@@ -34,7 +34,7 @@ Hides the word selection panel. This API is used together with [show](#show). Th
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [33600001](../errorcode-selection.md#33600001-word-selection-service-invocation-error) | Selection service exception. |
+| [33600001](../errorcode-selection.md#33600001-word-selection-service-invocation-error) | Selection service invocation exception. |
 | [33600002](../errorcode-selection.md#33600002-word-selection-panel-has-been-destroyed) | This selection window has been destroyed. |
 
 **Examples**
@@ -81,7 +81,7 @@ Moves the word selection panel to the specified coordinates in the global coordi
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [33600001](../errorcode-selection.md#33600001-word-selection-service-invocation-error) | Selection service exception. |
+| [33600001](../errorcode-selection.md#33600001-word-selection-service-invocation-error) | Selection service invocation exception. |
 | [33600002](../errorcode-selection.md#33600002-word-selection-panel-has-been-destroyed) | This selection window has been destroyed. |
 
 **Examples**
@@ -255,7 +255,7 @@ Sets the UI content for the current word selection panel, for example, to displa
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [33600001](../errorcode-selection.md#33600001-word-selection-service-invocation-error) | Selection service exception. |
+| [33600001](../errorcode-selection.md#33600001-word-selection-service-invocation-error) | Selection service invocation exception. |
 | [33600002](../errorcode-selection.md#33600002-word-selection-panel-has-been-destroyed) | This selection window has been destroyed. |
 
 **Examples**
@@ -299,7 +299,7 @@ Shows the word selection panel. This API is used together with [hide](#hide). Th
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [33600001](../errorcode-selection.md#33600001-word-selection-service-invocation-error) | Selection service exception. |
+| [33600001](../errorcode-selection.md#33600001-word-selection-service-invocation-error) | Selection service invocation exception. |
 | [33600002](../errorcode-selection.md#33600002-word-selection-panel-has-been-destroyed) | This selection window has been destroyed. |
 
 **Examples**
@@ -339,7 +339,7 @@ Sets whether the word selection panel can be dragged along with the mouse, touch
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [33600001](../errorcode-selection.md#33600001-word-selection-service-invocation-error) | Selection service exception. |
+| [33600001](../errorcode-selection.md#33600001-word-selection-service-invocation-error) | Selection service invocation exception. |
 | [33600002](../errorcode-selection.md#33600002-word-selection-panel-has-been-destroyed) | This selection window has been destroyed. |
 
 **Examples**

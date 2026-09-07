@@ -69,6 +69,7 @@
   - [getUserAuthInstance](arkts-userauthentication-userauth-getuserauthinstance-f.md)
   <!--Del-->
   - [getUserAuthWidgetMgr(system api)](arkts-userauthentication-userauth-getuserauthwidgetmgr-f-sys.md)<!--DelEnd-->
+  - [getUserRecognitionMgr](arkts-userauthentication-userauth-getuserrecognitionmgr-f.md)
   <!--Del-->
   - [queryReusableAuthResult(system api)](arkts-userauthentication-userauth-queryreusableauthresult-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -101,6 +102,8 @@
   - [UserAuthResult](arkts-userauthentication-userauth-userauthresult-i.md)
   <!--Del-->
   - [UserAuthWidgetMgr(system api)](arkts-userauthentication-userauth-userauthwidgetmgr-i-sys.md)<!--DelEnd-->
+  - [UserRecognitionMgr](arkts-userauthentication-userauth-userrecognitionmgr-i.md)
+  - [UserRecognitionResult](arkts-userauthentication-userauth-userrecognitionresult-i.md)
   - [WidgetParam](arkts-userauthentication-userauth-widgetparam-i.md)
   <!--Del-->
   - [WidgetParam(system api)](arkts-userauthentication-userauth-widgetparam-i-sys.md)<!--DelEnd-->
@@ -111,6 +114,7 @@
   <!--Del-->
   - [ResultCallback(system api)](arkts-userauthentication-userauth-resultcallback-t-sys.md)<!--DelEnd-->
   - [SecureLevel](arkts-userauthentication-userauth-securelevel-t.md)
+  - [UserRecognitionResultCallback](arkts-userauthentication-userauth-userrecognitionresultcallback-t.md)
   <!--Del-->
   - [WidgetParamCallback(system api)](arkts-userauthentication-userauth-widgetparamcallback-t-sys.md)<!--DelEnd-->
   - [AuthenticationResult](arkts-userauthentication-userauth-authenticationresult-e.md)
@@ -128,6 +132,7 @@
   - [UserAuthType](arkts-userauthentication-userauth-userauthtype-e.md)
   <!--Del-->
   - [UserAuthType(system api)](arkts-userauthentication-userauth-userauthtype-e-sys.md)<!--DelEnd-->
+  - [UserRecognitionStatus](arkts-userauthentication-userauth-userrecognitionstatus-e.md)
   <!--Del-->
   - [WindowModeType(system api)](arkts-userauthentication-userauth-windowmodetype-e-sys.md)<!--DelEnd-->
   - [Constants](arkts-userauthentication-userauth-con.md)

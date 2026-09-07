@@ -12,7 +12,7 @@
 AVERR_SESSION_NOT_EXIST = 5400109
 ```
 
-The parameter value means session does not exist
+表示传入的会话ID不存在。
 
 **起始版本：** 20
 

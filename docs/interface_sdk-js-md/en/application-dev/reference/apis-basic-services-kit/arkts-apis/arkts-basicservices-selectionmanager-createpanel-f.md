@@ -39,7 +39,7 @@ Only one [MENU_PANEL](arkts-basicservices-selectioninput-selectionpanel-paneltyp
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [33600001](../errorcode-selection.md#33600001-word-selection-service-invocation-error) | Selection service exception. |
+| [33600001](../errorcode-selection.md#33600001-word-selection-service-invocation-error) | Selection service invocation exception. |
 | [33600003](../errorcode-selection.md#33600003-api-caller-and-word-selection-application-mismatched) | The application calling the API does not match the application selected in the system settings. |
 
 **Examples**

@@ -55,4 +55,4 @@
 - [Test Kit (55)](interface_sdk-js-md/en/application-dev/reference/apis-test-kit/arkts-apis/arkts-app-ability-abilitydelegatorregistry.md)
 - [Third_Party (1465)](interface_sdk_c-md/en/application-dev/reference/apis-third_party/c-apis/capi--slohbufferqueuestate-.md)
 - [Universal Keystore Kit (129)](interface_sdk-js-md/en/application-dev/reference/apis-universal-keystore-kit/arkts-apis/arkts-security-cryptoextensionability.md)
-- [User Authentication Kit (88)](interface_sdk-js-md/en/application-dev/reference/apis-user-authentication-kit/arkts-apis/arkts-app-ability-userauthextensionability.md)
+- [User Authentication Kit (93)](interface_sdk-js-md/en/application-dev/reference/apis-user-authentication-kit/arkts-apis/arkts-app-ability-userauthextensionability.md)

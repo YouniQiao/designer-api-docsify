@@ -34,7 +34,7 @@ hide(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [33600001](../errorcode-selection.md#33600001-划词服务调用异常) | Selection service exception. |
+| [33600001](../errorcode-selection.md#33600001-划词服务调用异常) | Selection service invocation exception. |
 | [33600002](../errorcode-selection.md#33600002-划词面板已被销毁) | This selection window has been destroyed. |
 
 **示例**
@@ -81,7 +81,7 @@ moveToGlobalDisplay(x: number, y: number): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [33600001](../errorcode-selection.md#33600001-划词服务调用异常) | Selection service exception. |
+| [33600001](../errorcode-selection.md#33600001-划词服务调用异常) | Selection service invocation exception. |
 | [33600002](../errorcode-selection.md#33600002-划词面板已被销毁) | This selection window has been destroyed. |
 
 **示例**
@@ -255,7 +255,7 @@ setUiContent(path: string): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [33600001](../errorcode-selection.md#33600001-划词服务调用异常) | Selection service exception. |
+| [33600001](../errorcode-selection.md#33600001-划词服务调用异常) | Selection service invocation exception. |
 | [33600002](../errorcode-selection.md#33600002-划词面板已被销毁) | This selection window has been destroyed. |
 
 **示例**
@@ -299,7 +299,7 @@ show(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [33600001](../errorcode-selection.md#33600001-划词服务调用异常) | Selection service exception. |
+| [33600001](../errorcode-selection.md#33600001-划词服务调用异常) | Selection service invocation exception. |
 | [33600002](../errorcode-selection.md#33600002-划词面板已被销毁) | This selection window has been destroyed. |
 
 **示例**
@@ -339,7 +339,7 @@ startMoving(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [33600001](../errorcode-selection.md#33600001-划词服务调用异常) | Selection service exception. |
+| [33600001](../errorcode-selection.md#33600001-划词服务调用异常) | Selection service invocation exception. |
 | [33600002](../errorcode-selection.md#33600002-划词面板已被销毁) | This selection window has been destroyed. |
 
 **示例**

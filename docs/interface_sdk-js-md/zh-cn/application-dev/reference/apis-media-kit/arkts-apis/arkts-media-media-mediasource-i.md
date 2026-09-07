@@ -63,7 +63,7 @@ getID(): string
 getTrackSelectionFilter(): TrackSelectionFilter | undefined
 ```
 
-Obtains the configured audio and video feature filtering values.
+获取已配置的音视频特征筛选值
 
 **起始版本：** 26.0.0
 
@@ -75,7 +75,7 @@ Obtains the configured audio and video feature filtering values.
 
 | 类型 | 说明 |
 | --- | --- |
-| [TrackSelectionFilter](arkts-media-media-trackselectionfilter-i.md) \| undefined | If the TrackSelectionFilter object exists, the TrackSelectionFilter object is returned. Otherwise, the TrackSelectionFilter object is returned. |
+| [TrackSelectionFilter](arkts-media-media-trackselectionfilter-i.md) \| undefined | 如果存在TrackSelectionFilter对象，返回TrackSelectionFilter对象。 否则, 返回TrackSelectionFilter对象。 |
 
 **示例**
 
@@ -178,7 +178,7 @@ setMimeType(mimeType: AVMimeTypes): void
 setTrackSelectionFilter(filter: TrackSelectionFilter): void
 ```
 
-Set the audio and video feature filtering items of the MediaSource, After the user defines the audio and video filtering items of the MediaSource, When playing or downloading MediaSource data offline, Preferentially perform a corresponding operation in the filtering feature.
+设置MediaSource的音视频特征筛选项，用户定义MediaSource的音视频筛选项后，在播放或离线下载MediaSource数据时，优先在筛选特征内执行对应的操作。
 
 **起始版本：** 26.0.0
 
@@ -190,7 +190,7 @@ Set the audio and video feature filtering items of the MediaSource, After the us
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| filter | [TrackSelectionFilter](arkts-media-media-trackselectionfilter-i.md) | 是 | Specifies the audio and video features of the pre-downloaded streaming media. |
+| filter | [TrackSelectionFilter](arkts-media-media-trackselectionfilter-i.md) | 是 | 指定预下载流媒体的音视频特征。 |
 
 **示例**
 

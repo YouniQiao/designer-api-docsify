@@ -344,8 +344,8 @@ getOsTypeByNetworkId(networkId: string): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | User permission verify failed. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | The caller is not a system application. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 | [11600102](../errorcode-device-manager.md#11600102-获取服务失败) | Failed to obtain service. |
 | [11600110](../errorcode-device-manager.md#11600110-无效的网络id) | Invalid network ID. |
 

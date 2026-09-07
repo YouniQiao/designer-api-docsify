@@ -36,7 +36,7 @@ Destroys the word selection panel. This API is used together with [createPanel](
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [33600001](../errorcode-selection.md#33600001-word-selection-service-invocation-error) | Selection service exception. |
+| [33600001](../errorcode-selection.md#33600001-word-selection-service-invocation-error) | Selection service invocation exception. |
 
 **Examples**
 

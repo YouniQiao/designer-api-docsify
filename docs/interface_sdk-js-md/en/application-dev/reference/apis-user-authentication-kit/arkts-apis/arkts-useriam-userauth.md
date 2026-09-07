@@ -33,6 +33,7 @@ import { userAuth } from '@kit.UserAuthenticationKit';
 | [getAvailableStatus](arkts-userauthentication-userauth-getavailablestatus-f.md) | Checks whether the specified authentication capability is supported. This API is used to check whether the current device supports the specified authentication type and authentication trust level. It helps an application determine whether the authentication capability is available before initiating authentication, thereby avoiding unnecessary authentication failures. If the query is successful (no error is thrown), the authentication capability is available. If an error is thrown, the application should determine the cause based on the error code and take appropriate measures. |
 | [getEnrolledState](arkts-userauthentication-userauth-getenrolledstate-f.md) | Obtains the credential state. This API is used to obtain the credential enrollment information of a specified authentication type, including the credential digest and quantity. The application can compare the current query result with the previously saved result to determine whether the user has added or deleted credentials, and then perform corresponding service processing. |
 | [getUserAuthInstance](arkts-userauthentication-userauth-getuserauthinstance-f.md) | Obtains a [UserAuthInstance](arkts-userauthentication-userauth-userauthinstance-i.md) instance for user authentication. The user authentication widget is also supported. This API is used to create a user authentication instance. After authentication parameters and UI parameters are configured, you can use the returned instance object to start authentication and subscribe to the authentication result. |
+| [getUserRecognitionMgr](arkts-userauthentication-userauth-getuserrecognitionmgr-f.md) | Obtains a [UserRecognitionMgr](arkts-userauthentication-userauth-userrecognitionmgr-i.md) instance, which is used to query and subscribe to the user recognition result. |
 
 <!--Del-->
 ### Functions(System API)
@@ -71,6 +72,8 @@ import { userAuth } from '@kit.UserAuthenticationKit';
 | [TipInfo](arkts-userauthentication-userauth-tipinfo-i.md) | Represents the tip information displayed during the authentication, which is used to provide feedback during the authentication process. |
 | [UserAuthInstance](arkts-userauthentication-userauth-userauthinstance-i.md) | Provides APIs for user authentication. The user authentication widget is supported. This API provides complete user authentication capabilities, including subscribing to authentication results and intermediate states, and starting and canceling authentication. The unified authentication widget provides users with a standardized authentication UI and consistent authentication experience. |
 | [UserAuthResult](arkts-userauthentication-userauth-userauthresult-i.md) | Represents the user authentication result. If the authentication is successful, the authentication type and token information are returned. If the authentication fails, the corresponding error code is returned. This API is used to describe the result information after the authentication is complete. The application can obtain the result through the **onResult** callback of [IAuthCallback](arkts-userauthentication-userauth-iauthcallback-i.md). |
+| [UserRecognitionMgr](arkts-userauthentication-userauth-userrecognitionmgr-i.md) | Provides APIs for querying and subscribing to user recognition results. Use [getUserRecognitionMgr](arkts-userauthentication-userauth-getuserrecognitionmgr-f.md) to obtain a **UserRecognitionMgr** instance. |
+| [UserRecognitionResult](arkts-userauthentication-userauth-userrecognitionresult-i.md) | Defines the user recognition result. |
 | [WidgetParam](arkts-userauthentication-userauth-widgetparam-i.md) | Represents the information presented on the user authentication page. This API is used to configure the display style and interaction mode of the authentication screen, including the title, navigation button text, and window mode. By properly setting these parameters, you can provide clear authentication guidance and good interaction experience for users. |
 
 <!--Del-->
@@ -98,6 +101,7 @@ import { userAuth } from '@kit.UserAuthenticationKit';
 | [UserAuthResultCode](arkts-userauthentication-userauth-userauthresultcode-e.md) | Enumerates the authentication result codes. They include all success codes and error codes for user authentication operations. The application can determine the authentication result based on the return code and take corresponding measures. |
 | [UserAuthTipCode](arkts-userauthentication-userauth-userauthtipcode-e.md) | Enumerates the intermediate states of identity authentication. This enum is used to describe various intermediate states during authentication, including authentication failure, timeout, lockout, and loading and release of the authentication screen. Applications can subscribe to these intermediate states through the [on('authTip')](arkts-userauthentication-userauth-userauthinstance-i.md#onauthtip) API to provide more refined user feedback and status awareness during authentication. |
 | [UserAuthType](arkts-userauthentication-userauth-userauthtype-e.md) | Enumerates the identity authentication types. This enum defines the authentication types supported by the system, including PIN authentication and biometric authentication (face and fingerprint). When initiating authentication, an application needs to specify the authentication type list, and the user can select any of the authentication types to complete the authentication. The security strength and user experience vary depending on authentication types. The application needs to select a proper authentication type based on service scenarios. |
+| [UserRecognitionStatus](arkts-userauthentication-userauth-userrecognitionstatus-e.md) | Enumerates the user recognition status. |
 
 <!--Del-->
 ### Enums(System API)
@@ -119,6 +123,7 @@ import { userAuth } from '@kit.UserAuthenticationKit';
 | [AuthType](arkts-userauthentication-userauth-authtype-t.md) | Enumerates the authentication types. |
 | [EventInfo](arkts-userauthentication-userauth-eventinfo-t.md) | Enumerates the authentication event information types. |
 | [SecureLevel](arkts-userauthentication-userauth-securelevel-t.md) | Enumerates the authentication security levels. |
+| [UserRecognitionResultCallback](arkts-userauthentication-userauth-userrecognitionresultcallback-t.md) | Defines the callback used to receive the user recognition result. |
 
 <!--Del-->
 ### Types(System API)

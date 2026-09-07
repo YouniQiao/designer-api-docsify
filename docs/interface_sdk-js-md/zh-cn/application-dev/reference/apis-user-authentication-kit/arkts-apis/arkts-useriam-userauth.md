@@ -33,6 +33,7 @@ import { userAuth } from '@kit.UserAuthenticationKit';
 | [getAvailableStatus](arkts-userauthentication-userauth-getavailablestatus-f.md) | 查询指定类型和等级的认证能力是否支持。该接口用于检查当前设备是否支持指定的认证类型和认证可信等级，帮助应用在发起认证前判断认证能力是否可用，从而避免不必要的认证不通过。若查询通过（无错误抛出），表示认证能力可用；若抛出错误，应用应根据错误码判断具体原因并采取相应处理。 |
 | [getEnrolledState](arkts-userauthentication-userauth-getenrolledstate-f.md) | 查询凭据注册的状态，以检测用户注册凭据的变更。该接口用于获取指定认证类型的凭据注册信息，包括凭据摘要和数量。应用可通过对比当前查询结果与之前保存的结果，判断用户是否新增或删除了凭据，从而采取相应的业务处理。 |
 | [getUserAuthInstance](arkts-userauthentication-userauth-getuserauthinstance-f.md) | 获取[UserAuthInstance](arkts-userauthentication-userauth-userauthinstance-i.md)对象，执行用户身份认证，并支持使用统一用户身份认证控件。该接口用于创建一个用户认证实例，配置认证参数和界面参数后，可通过返回的实例对象启动认证、订阅认证结果等。 |
+| [getUserRecognitionMgr](arkts-userauthentication-userauth-getuserrecognitionmgr-f.md) | 获取一个[UserRecognitionMgr](arkts-userauthentication-userauth-userrecognitionmgr-i.md)实例，用于查询和订阅用户识别结果。 |
 
 <!--Del-->
 ### 函数（系统接口）
@@ -71,6 +72,8 @@ import { userAuth } from '@kit.UserAuthenticationKit';
 | [TipInfo](arkts-userauthentication-userauth-tipinfo-i.md) | 表示认证过程中的提示信息，用于提供认证过程的反馈。 |
 | [UserAuthInstance](arkts-userauthentication-userauth-userauthinstance-i.md) | 用于执行用户身份认证，并支持使用统一用户身份认证控件。该接口提供了完整的用户认证能力，包括订阅认证结果、订阅认证中间状态、启动认证和取消认证等操作。通过统一认证控件，可以为用户提供标准化的认证界面和一致的认证体验。 |
 | [UserAuthResult](arkts-userauthentication-userauth-userauthresult-i.md) | 用户认证结果。认证通过时，返回认证类型和认证通过的令牌信息；认证不通过时，返回相应的错误码。该接口用于描述认证完成后的结果信息，应用可通过[IAuthCallback](arkts-userauthentication-userauth-iauthcallback-i.md)的onResult回调获取此结果。 |
+| [UserRecognitionMgr](arkts-userauthentication-userauth-userrecognitionmgr-i.md) | 提供用户识别结果查询和订阅接口，使用[getUserRecognitionMgr](arkts-userauthentication-userauth-getuserrecognitionmgr-f.md)获取**UserRecognitionMgr**实例。 |
+| [UserRecognitionResult](arkts-userauthentication-userauth-userrecognitionresult-i.md) | 用户识别结果。 |
 | [WidgetParam](arkts-userauthentication-userauth-widgetparam-i.md) | 用户认证界面配置相关参数。该接口用于配置认证界面的显示样式和交互方式，包括标题、导航按钮文本、窗口模式等。通过合理配置这些参数，可以为用户提供清晰的认证引导和良好的交互体验。 |
 
 <!--Del-->
@@ -98,6 +101,7 @@ import { userAuth } from '@kit.UserAuthenticationKit';
 | [UserAuthResultCode](arkts-userauthentication-userauth-userauthresultcode-e.md) | 表示返回码的枚举。该枚举定义了用户认证操作可能返回的所有结果码，包括成功码和各类错误码。应用可根据返回码判断认证结果，并采取相应的处理措施。 |
 | [UserAuthTipCode](arkts-userauthentication-userauth-userauthtipcode-e.md) | 表示身份认证中间状态的枚举。该枚举用于描述认证过程中的各种中间状态，包括认证不通过、超时、冻结状态以及认证界面的加载和释放等。应用可通过[on('authTip')](arkts-userauthentication-userauth-userauthinstance-i.md#onauthtip)接口订阅这些中间状态，以便在认证过程中提供更精细的用户反馈和状态感知。 |
 | [UserAuthType](arkts-userauthentication-userauth-userauthtype-e.md) | 表示身份认证的凭据类型枚举。该枚举定义了系统支持的认证类型，包括锁屏密码认证（PIN）、生物特征认证（人脸、指纹）等。应用在发起认证时需指定认证类型列表，用户可选择其中任意一种完成认证。不同认证类型具有不同的安全强度和用户体验特点，应用应根据业务场景选择合适的认证类型。 |
+| [UserRecognitionStatus](arkts-userauthentication-userauth-userrecognitionstatus-e.md) | 枚举用户识别状态。 |
 
 <!--Del-->
 ### 枚举（系统接口）
@@ -119,6 +123,7 @@ import { userAuth } from '@kit.UserAuthenticationKit';
 | [AuthType](arkts-userauthentication-userauth-authtype-t.md) | 表示认证类型。 |
 | [EventInfo](arkts-userauthentication-userauth-eventinfo-t.md) | 表示认证过程中事件信息的类型。 |
 | [SecureLevel](arkts-userauthentication-userauth-securelevel-t.md) | 表示认证的安全级别。 |
+| [UserRecognitionResultCallback](arkts-userauthentication-userauth-userrecognitionresultcallback-t.md) | 定义接收用户识别结果的回调。 |
 
 <!--Del-->
 ### 类型（系统接口）

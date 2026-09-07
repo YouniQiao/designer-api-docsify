@@ -417,6 +417,56 @@ export default class MyAbility extends UIAbility {
 }
 ```
 
+## getUIAbilityChildProcessInfos
+
+```TypeScript
+getUIAbilityChildProcessInfos(): Promise<Array<ChildProcessInformation>>
+```
+
+获取当前应用的UIAbility子进程信息。该接口使用了一个promise。来返回结果。返回的子进程是通过ProcessMode.NEW_PROCESS_ATTACH_TO_PARENT通过startAbility创建的。
+
+**起始版本：** 26.1.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**系统能力：** SystemCapability.Ability.AbilityRuntime.Core
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;Array&lt;[ChildProcessInformation](arkts-ability-childprocessinformation-i.md)&gt;&gt; | Promise用于返回UIA的相关信息当前应用程序的子进程。如果不存在子进程，则返回空数组。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [16000011](../errorcode-ability.md#16000011-上下文对象不存在) | The context does not exist. |
+| [16000050](../errorcode-ability.md#16000050-内部错误) | Connect to system service failed. |
+
+**示例**
+
+```TypeScript
+import { UIAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate() {
+    // 获取应用上下文
+    let applicationContext = this.context.getApplicationContext();
+    // 获取UIAbility子进程信息
+    applicationContext.getUIAbilityChildProcessInfos().then((data) => {
+      console.info(`getUIAbilityChildProcessInfos success, count: ${data.length}`);
+      for (let info of data) {
+        console.info(`pid: ${info.pid}, parentPid: ${info.parentPid}, processName: ${info.processName}`);
+      }
+    }).catch((err: BusinessError) => {
+      console.error(`getUIAbilityChildProcessInfos failed, code: ${err.code}, msg: ${err.message}`);
+    });
+  }
+}
+```
+
 ## killAllProcesses
 
 ```TypeScript

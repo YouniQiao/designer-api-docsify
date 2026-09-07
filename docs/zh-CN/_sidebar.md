@@ -1,4 +1,4 @@
-- [Ability Kit (1416)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-ability-kit/arkts-apis/arkts-ability-ability.md)
+- [Ability Kit (1420)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-ability-kit/arkts-apis/arkts-ability-ability.md)
 - [Accessibility Kit (126)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-accessibility-kit/arkts-apis/arkts-accessibility.md)
 - [Ads Kit (27)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-ads-kit/arkts-apis/arkts-advertising.md)
 - [Api10 Less Deprecated Modules (4)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-api10-less-deprecated-modules/arkts-apis/arkts-bytrace.md)
@@ -51,4 +51,4 @@
 - [Telephony Kit (452)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-telephony-kit/arkts-apis/arkts-telephony-call.md)
 - [Test Kit (55)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-test-kit/arkts-apis/arkts-app-ability-abilitydelegatorregistry.md)
 - [Universal Keystore Kit (129)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-universal-keystore-kit/arkts-apis/arkts-security-cryptoextensionability.md)
-- [User Authentication Kit (88)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-user-authentication-kit/arkts-apis/arkts-app-ability-userauthextensionability.md)
+- [User Authentication Kit (93)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-user-authentication-kit/arkts-apis/arkts-app-ability-userauthextensionability.md)
