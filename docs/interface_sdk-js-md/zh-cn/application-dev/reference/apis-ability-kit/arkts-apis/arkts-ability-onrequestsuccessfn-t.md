@@ -23,3 +23,4 @@ export type OnRequestSuccessFn = (name: string) => void
 **示例**
 
 参见[OnRequestFailureFn](arkts-ability-onrequestfailurefn-t.md)。
+- simpleType:

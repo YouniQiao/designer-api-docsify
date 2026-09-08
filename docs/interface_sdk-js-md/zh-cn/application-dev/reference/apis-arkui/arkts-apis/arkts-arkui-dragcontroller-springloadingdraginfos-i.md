@@ -20,7 +20,7 @@ dataSummary?: unifiedDataChannel.Summary
 
 拖拽数据的摘要，默认为null。
 
-**类型：** unifiedDataChannel.Summary
+**类型：** [unifiedDataChannel.Summary](../../apis-arkdata/arkts-apis/arkts-arkdata-unifieddatachannel-summary-c.md)
 
 **起始版本：** 20
 

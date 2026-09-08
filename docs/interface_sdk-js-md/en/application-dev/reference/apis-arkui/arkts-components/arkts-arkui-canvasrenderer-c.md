@@ -46,41 +46,6 @@ Creates a drawing path.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Examples**
-
-```TypeScript
-// xxx.ets
-@Entry
-@Component
-struct BeginPath {
-  private settings: RenderingContextSettings = new RenderingContextSettings(true);
-  private context: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings);
-  private offCanvas: OffscreenCanvas = new OffscreenCanvas(600, 600);
-
-  build() {
-    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
-      Canvas(this.context)
-        .width('100%')
-        .height('100%')
-        .backgroundColor('rgb(213,213,213)')
-        .onReady(() => {
-          let offContext = this.offCanvas.getContext("2d", this.settings)
-          offContext.beginPath()
-          offContext.lineWidth = 6
-          offContext.strokeStyle = '#0000ff'
-          offContext.moveTo(15, 80)
-          offContext.lineTo(280, 160)
-          offContext.stroke()
-          let image = this.offCanvas.transferToImageBitmap()
-          this.context.transferFromImageBitmap(image)
-        })
-    }
-    .width('100%')
-    .height('100%')
-  }
-}
-```
-
 ## clearRect
 
 ```TypeScript
@@ -106,38 +71,6 @@ Clears the content in a rectangle on the canvas.
 | w | number | Yes | Width of the rectangle.   **undefined**, **null**, **NaN**, and **Infinity** are treated as invalid values and no rendering will be performed.Default unit: vp |
 | h | number | Yes | Height of the rectangle.   **undefined**, **null**, **NaN**, and **Infinity** are treated as invalid values and no rendering will be performed.Default unit: vp |
 
-**Examples**
-
-```TypeScript
-// xxx.ets
-@Entry
-@Component
-struct ClearRect {
-  private settings: RenderingContextSettings = new RenderingContextSettings(true);
-  private context: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings);
-  private offCanvas: OffscreenCanvas = new OffscreenCanvas(600, 600);
-
-  build() {
-    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
-      Canvas(this.context)
-        .width('100%')
-        .height('100%')
-        .backgroundColor('#ffff00')
-        .onReady(() => {
-          let offContext = this.offCanvas.getContext("2d", this.settings)
-          offContext.fillStyle = 'rgb(0,0,255)'
-          offContext.fillRect(20, 20, 200, 200)
-          offContext.clearRect(30, 30, 150, 100)
-          let image = this.offCanvas.transferToImageBitmap()
-          this.context.transferFromImageBitmap(image)
-        })
-    }
-    .width('100%')
-    .height('100%')
-  }
-}
-```
-
 ## clip
 
 ```TypeScript
@@ -159,40 +92,6 @@ Sets the current path to a clipping path.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | fillRule | [CanvasFillRule](arkts-arkui-canvasfillrule-t.md) | No | Rule by which to determine whether a point is inside or outside the area to clip.The options are **"nonzero"** and **"evenodd"**.Invalid values **undefined** and **null** are treated as the default value.Default value: **"nonzero" |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-@Entry
-@Component
-struct Clip {
-  private settings: RenderingContextSettings = new RenderingContextSettings(true);
-  private context: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings);
-  private offCanvas: OffscreenCanvas = new OffscreenCanvas(600, 600);
-
-  build() {
-    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
-      Canvas(this.context)
-        .width('100%')
-        .height('100%')
-        .backgroundColor('#ffff00')
-        .onReady(() => {
-          let offContext = this.offCanvas.getContext("2d", this.settings)
-          offContext.rect(0, 0, 100, 200)
-          offContext.stroke()
-          offContext.clip()
-          offContext.fillStyle = "rgb(255,0,0)"
-          offContext.fillRect(0, 0, 200, 200)
-          let image = this.offCanvas.transferToImageBitmap()
-          this.context.transferFromImageBitmap(image)
-        })
-    }
-    .width('100%')
-    .height('100%')
-  }
-}
-```
 
 ## clip
 
@@ -216,46 +115,6 @@ Sets a specified path as the clipping path.
 | --- | --- | --- | --- |
 | path | [Path2D](arkts-arkui-path2d-c.md) | Yes | Path2D** path to clip.   **undefined** and **null** are treated as invalid values. |
 | fillRule | [CanvasFillRule](arkts-arkui-canvasfillrule-t.md) | No | Rule by which to determine whether a point is inside or outside the area to clip.The options are **"nonzero"** and **"evenodd"**.Invalid values **undefined** and **null** are treated as the default value.Default value: **"nonzero" |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-@Entry
-@Component
-struct Clip {
-  private settings: RenderingContextSettings = new RenderingContextSettings(true);
-  private context: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings);
-  private offCanvas: OffscreenCanvas = new OffscreenCanvas(600, 600);
-
-  build() {
-    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
-      Canvas(this.context)
-        .width('100%')
-        .height('100%')
-        .backgroundColor('#ffff00')
-        .onReady(() => {
-          let offContext = this.offCanvas.getContext("2d", this.settings)
-          let region = new Path2D()
-          region.moveTo(30, 90)
-          region.lineTo(110, 20)
-          region.lineTo(240, 130)
-          region.lineTo(60, 130)
-          region.lineTo(190, 20)
-          region.lineTo(270, 90)
-          region.closePath()
-          offContext.clip(region,"evenodd")
-          offContext.fillStyle = "rgb(0,255,0)"
-          offContext.fillRect(0, 0, 600, 600)
-          let image = this.offCanvas.transferToImageBitmap()
-          this.context.transferFromImageBitmap(image)
-        })
-    }
-    .width('100%')
-    .height('100%')
-  }
-}
-```
 
 ## createConicGradient
 
@@ -290,41 +149,6 @@ Creates a conic gradient.
 | Type | Description |
 | --- | --- |
 | [CanvasGradient](arkts-arkui-canvasgradient-c.md) | New **CanvasGradient** object used to create a gradient on the canvas. |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-@Entry
-@Component
-struct OffscreenCanvasConicGradientPage {
-  private settings: RenderingContextSettings = new RenderingContextSettings(true);
-  private context: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings);
-  private offCanvas: OffscreenCanvas = new OffscreenCanvas(600, 600);
-
-  build() {
-    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
-      Canvas(this.context)
-        .width('100%')
-        .height('100%')
-        .backgroundColor('#ffffff')
-        .onReady(() => {
-          let offContext = this.offCanvas.getContext("2d", this.settings)
-          let grad = offContext.createConicGradient(0, 50, 80)
-          grad.addColorStop(0.0, '#ff0000')
-          grad.addColorStop(0.5, '#ffffff')
-          grad.addColorStop(1.0, '#00ff00')
-          offContext.fillStyle = grad
-          offContext.fillRect(0, 30, 100, 100)
-          let image = this.offCanvas.transferToImageBitmap()
-          this.context.transferFromImageBitmap(image)
-        })
-    }
-    .width('100%')
-    .height('100%')
-  }
-}
-```
 
 ## createImageData
 
@@ -414,41 +238,6 @@ Creates a linear gradient.
 | --- | --- |
 | [CanvasGradient](arkts-arkui-canvasgradient-c.md) | New **CanvasGradient** object used to create a gradient on the canvas. |
 
-**Examples**
-
-```TypeScript
-// xxx.ets
-@Entry
-@Component
-struct CreateLinearGradient {
-  private settings: RenderingContextSettings = new RenderingContextSettings(true);
-  private context: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings);
-  private offCanvas: OffscreenCanvas = new OffscreenCanvas(600, 600);
-  
-  build() {
-    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
-      Canvas(this.context)
-        .width('100%')
-        .height('100%')
-        .backgroundColor('rgb(213,213,213)')
-        .onReady(() => {
-          let offContext = this.offCanvas.getContext("2d", this.settings)
-          let grad = offContext.createLinearGradient(50,0, 300,100)
-          grad.addColorStop(0.0, 'rgb(39,135,217)')
-          grad.addColorStop(0.5, 'rgb(255,238,240)')
-          grad.addColorStop(1.0, 'rgb(23,169,141)')
-          offContext.fillStyle = grad
-          offContext.fillRect(0, 0, 400, 400)
-          let image = this.offCanvas.transferToImageBitmap()
-          this.context.transferFromImageBitmap(image)
-        })
-    }
-    .width('100%')
-    .height('100%')
-  }
-}
-```
-
 ## createPattern
 
 ```TypeScript
@@ -477,42 +266,6 @@ Creates a pattern for image filling based on a specified source image and repeti
 | Type | Description |
 | --- | --- |
 | [CanvasPattern](arkts-arkui-canvaspattern-i.md) \| null | Pattern for image filling based on a specified source image and repetition mode. |
-
-**Examples**
-
-> NOTE
-
-```TypeScript
-// xxx.ets
-@Entry
-@Component
-struct CreatePattern {
-  private settings: RenderingContextSettings = new RenderingContextSettings(true);
-  private context: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings);
-  // Replace "common/images/example.jpg" with the image resource file you use.
-  private img:ImageBitmap = new ImageBitmap("common/images/example.jpg");
-  private offCanvas: OffscreenCanvas = new OffscreenCanvas(600, 600);
-
-  build() {
-    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
-      Canvas(this.context)
-        .width('100%')
-        .height('100%')
-        .backgroundColor('rgb(213,213,213)')
-        .onReady(() => {
-          let offContext = this.offCanvas.getContext("2d", this.settings)
-          let pattern = offContext.createPattern(this.img, 'repeat')
-          offContext.fillStyle = pattern as CanvasPattern
-          offContext.fillRect(0, 0, 200, 200)
-          let image = this.offCanvas.transferToImageBitmap()
-          this.context.transferFromImageBitmap(image)
-        })
-    }
-    .width('100%')
-    .height('100%')
-  }
-}
-```
 
 ## createRadialGradient
 
@@ -547,41 +300,6 @@ Creates a radial gradient.
 | --- | --- |
 | [CanvasGradient](arkts-arkui-canvasgradient-c.md) | New **CanvasGradient** object used to create a gradient on the canvas. |
 
-**Examples**
-
-```TypeScript
-// xxx.ets
-@Entry
-@Component
-struct CreateRadialGradient {
-  private settings: RenderingContextSettings = new RenderingContextSettings(true);
-  private context: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings);
-  private offCanvas: OffscreenCanvas = new OffscreenCanvas(600, 600);
-  
-  build() {
-    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
-      Canvas(this.context)
-        .width('100%')
-        .height('100%')
-        .backgroundColor('rgb(213,213,213)')
-        .onReady(() => {
-          let offContext = this.offCanvas.getContext("2d", this.settings)
-          let grad = offContext.createRadialGradient(200,200,50, 200,200,200)
-          grad.addColorStop(0.0, 'rgb(39,135,217)')
-          grad.addColorStop(0.5, 'rgb(255,238,240)')
-          grad.addColorStop(1.0, 'rgb(112,112,112)')
-          offContext.fillStyle = grad
-          offContext.fillRect(0, 0, 440, 440)
-          let image = this.offCanvas.transferToImageBitmap()
-          this.context.transferFromImageBitmap(image)
-        })
-    }
-    .width('100%')
-    .height('100%')
-  }
-}
-```
-
 ## drawImage
 
 ```TypeScript
@@ -602,43 +320,9 @@ Draws an image on the canvas.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| image | [ImageBitmap](arkts-arkui-imagebitmap-c.md) \| PixelMap | Yes | Image resource. For details, see **ImageBitmap** or **PixelMap**.   **undefined** and **null** are treated as invalid values and no rendering will be performed. |
+| image | [ImageBitmap](arkts-arkui-imagebitmap-c.md) \| [PixelMap](arkts-arkui-pixelmap-t.md) | Yes | Image resource. For details, see **ImageBitmap** or **PixelMap**.   **undefined** and **null** are treated as invalid values and no rendering will be performed. |
 | dx | number | Yes | X-coordinate of the top-left corner of the drawing area on the canvas.Invalid values **undefined** and **null** are treated as **0**. **NaN** and **Infinity** are treated as invalid and no rendering will be performed.Default unit: vp |
 | dy | number | Yes | Y-coordinate of the top-left corner of the drawing area on the canvas.Invalid values **undefined** and **null** are treated as **0**. **NaN** and **Infinity** are treated as invalid and no rendering will be performed.Default unit: vp |
-
-**Examples**
-
-> NOTE
-
-```TypeScript
-// xxx.ets
-@Entry
-@Component
-struct DrawImage {
-  private settings: RenderingContextSettings = new RenderingContextSettings(true);
-  private context: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings);
-  // Replace "common/images/example.jpg" with the image resource file you use.
-  private img: ImageBitmap = new ImageBitmap("common/images/example.jpg");
-  private offCanvas: OffscreenCanvas = new OffscreenCanvas(600, 600);
-
-  build() {
-    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
-      Canvas(this.context)
-        .width('100%')
-        .height('100%')
-        .backgroundColor('#D5D5D5')
-        .onReady(() => {
-          let offContext = this.offCanvas.getContext("2d", this.settings)
-          offContext.drawImage(this.img, 0, 0)
-          let image = this.offCanvas.transferToImageBitmap()
-          this.context.transferFromImageBitmap(image)
-        })
-    }
-    .width('100%')
-    .height('100%')
-  }
-}
-```
 
 ## drawImage
 
@@ -660,45 +344,11 @@ Draws an image by stretching or compressing it to the specified dimensions.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| image | [ImageBitmap](arkts-arkui-imagebitmap-c.md) \| PixelMap | Yes | Image resource. For details, see **ImageBitmap** or **PixelMap**.   **undefined** and **null** are treated as invalid values and no rendering will be performed. |
+| image | [ImageBitmap](arkts-arkui-imagebitmap-c.md) \| [PixelMap](arkts-arkui-pixelmap-t.md) | Yes | Image resource. For details, see **ImageBitmap** or **PixelMap**.   **undefined** and **null** are treated as invalid values and no rendering will be performed. |
 | dx | number | Yes | X-coordinate of the top-left corner of the drawing area on the canvas.Invalid values **undefined** and **null** are treated as **0**. **NaN** and **Infinity** are treated as invalid and no rendering will be performed.Default unit: vp |
 | dy | number | Yes | Y-coordinate of the top-left corner of the drawing area on the canvas.Invalid values **undefined** and **null** are treated as **0**. **NaN** and **Infinity** are treated as invalid and no rendering will be performed.Default unit: vp |
 | dw | number | Yes | Width of the drawing area. If the width of the drawing area is different from that of the cropped image, the latter will be stretched or compressed to the former.Negative values, **undefined**, and **null** are treated as **0**. **NaN** and **Infinity** are treated as invalid and no rendering will be performed.Default unit: vp |
 | dh | number | Yes | Height of the drawing area. If the height of the drawing area is different from that of the cropped image, the latter will be stretched or compressed to the former.Negative values, **undefined**, and **null** are treated as **0**. **NaN** and **Infinity** are treated as invalid and no rendering will be performed.Default unit: vp |
-
-**Examples**
-
-> NOTE
-
-```TypeScript
-// xxx.ets
-@Entry
-@Component
-struct DrawImage {
-  private settings: RenderingContextSettings = new RenderingContextSettings(true);
-  private context: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings);
-  // Replace "common/images/example.jpg" with the image resource file you use.
-  private img: ImageBitmap = new ImageBitmap("common/images/example.jpg");
-  private offCanvas: OffscreenCanvas = new OffscreenCanvas(600, 600);
-
-  build() {
-    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
-      Canvas(this.context)
-        .width('100%')
-        .height('100%')
-        .backgroundColor('#D5D5D5')
-        .onReady(() => {
-          let offContext = this.offCanvas.getContext("2d", this.settings)
-          offContext.drawImage(this.img, 0, 0, 300, 300)
-          let image = this.offCanvas.transferToImageBitmap()
-          this.context.transferFromImageBitmap(image)
-        })
-    }
-    .width('100%')
-    .height('100%')
-  }
-}
-```
 
 ## drawImage
 
@@ -730,7 +380,7 @@ Draws a cropped portion of an image by stretching or compressing it to the speci
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| image | [ImageBitmap](arkts-arkui-imagebitmap-c.md) \| PixelMap | Yes | Image resource. For details, see **ImageBitmap** or **PixelMap**.   **undefined** and **null** are treated as invalid values and no rendering will be performed. |
+| image | [ImageBitmap](arkts-arkui-imagebitmap-c.md) \| [PixelMap](arkts-arkui-pixelmap-t.md) | Yes | Image resource. For details, see **ImageBitmap** or **PixelMap**.   **undefined** and **null** are treated as invalid values and no rendering will be performed. |
 | sx | number | Yes | X-coordinate of the top-left corner of the rectangle used to crop the source image.Invalid values **undefined** and **null** are treated as **0**. **NaN** and **Infinity** are treated as invalid and no rendering will be performed.If the type of **image** is **ImageBitmap**, the default unit is vp.If the type of **image** is **PixelMap**, the default unit is px in versions earlier than API version 18 and vp in API version 18 and later. |
 | sy | number | Yes | Y-coordinate of the top-left corner of the rectangle used to crop the source image.Invalid values **undefined** and **null** are treated as **0**. **NaN** and **Infinity** are treated as invalid and no rendering will be performed.If the type of **image** is **ImageBitmap**, the default unit is vp.If the type of **image** is **PixelMap**, the default unit is px in versions earlier than API version 18 and vp in API version 18 and later. |
 | sw | number | Yes | Target width to crop the source image.Negative values, **undefined**, and **null** are treated as **0**. **NaN** and **Infinity** are treated as invalid and no rendering will be performed.If the type of **image** is **ImageBitmap**, the default unit is vp.If the type of **image** is **PixelMap**, the default unit is px in versions earlier than API version 18 and vp in API version 18 and later. |
@@ -739,104 +389,6 @@ Draws a cropped portion of an image by stretching or compressing it to the speci
 | dy | number | Yes | Y-coordinate of the top-left corner of the drawing area on the canvas.Invalid values **undefined** and **null** are treated as **0**. **NaN** and **Infinity** are treated as invalid and no rendering will be performed.Default unit: vp |
 | dw | number | Yes | Width of the drawing area.Negative values, **undefined**, and **null** are treated as **0**. **NaN** and **Infinity** are treated as invalid and no rendering will be performed. If the width of the drawing area is different from that of the cropped image, the latter will be stretched or compressed to the former.Default unit: vp |
 | dh | number | Yes | Height of the drawing area.Negative values, **undefined**, and **null** are treated as **0**. **NaN** and **Infinity** are treated as invalid and no rendering will be performed. If the height of the drawing area is different from that of the cropped image, the latter will be stretched or compressed to the former.Default unit: vp |
-
-**Examples**
-
-> NOTE
-
-```TypeScript
-// xxx.ets
-@Entry
-@Component
-struct DrawImage {
-  private settings: RenderingContextSettings = new RenderingContextSettings(true);
-  private context: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings);
-  // Replace "common/images/example.jpg" with the image resource file you use.
-  private img: ImageBitmap = new ImageBitmap("common/images/example.jpg");
-  private offCanvas: OffscreenCanvas = new OffscreenCanvas(600, 600);
-
-  build() {
-    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
-      Canvas(this.context)
-        .width('100%')
-        .height('100%')
-        .backgroundColor('#D5D5D5')
-        .onReady(() => {
-          let offContext = this.offCanvas.getContext("2d", this.settings)
-          offContext.drawImage(this.img, 0, 0)
-          let image = this.offCanvas.transferToImageBitmap()
-          this.context.transferFromImageBitmap(image)
-        })
-    }
-    .width('100%')
-    .height('100%')
-  }
-}
-```
-
-> NOTE
-
-```TypeScript
-// xxx.ets
-@Entry
-@Component
-struct DrawImage {
-  private settings: RenderingContextSettings = new RenderingContextSettings(true);
-  private context: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings);
-  // Replace "common/images/example.jpg" with the image resource file you use.
-  private img: ImageBitmap = new ImageBitmap("common/images/example.jpg");
-  private offCanvas: OffscreenCanvas = new OffscreenCanvas(600, 600);
-
-  build() {
-    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
-      Canvas(this.context)
-        .width('100%')
-        .height('100%')
-        .backgroundColor('#D5D5D5')
-        .onReady(() => {
-          let offContext = this.offCanvas.getContext("2d", this.settings)
-          offContext.drawImage(this.img, 0, 0, 300, 300)
-          let image = this.offCanvas.transferToImageBitmap()
-          this.context.transferFromImageBitmap(image)
-        })
-    }
-    .width('100%')
-    .height('100%')
-  }
-}
-```
-
-> NOTE
-
-```TypeScript
-// xxx.ets
-@Entry
-@Component
-struct DrawImage {
-  private settings: RenderingContextSettings = new RenderingContextSettings(true);
-  private context: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings);
-  // Replace "common/images/example.jpg" with the image resource file you use.
-  private img: ImageBitmap = new ImageBitmap("common/images/example.jpg");
-  private offCanvas: OffscreenCanvas = new OffscreenCanvas(600, 600);
-
-  build() {
-    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
-      Canvas(this.context)
-        .width('100%')
-        .height('100%')
-        .backgroundColor('#D5D5D5')
-        .onReady(() => {
-          let offContext = this.offCanvas.getContext("2d", this.settings)
-          offContext.drawImage(this.img, 0, 0, 500, 500, 0, 0, 400, 300)
-          let image = this.offCanvas.transferToImageBitmap()
-          this.context.transferFromImageBitmap(image)
-        })
-    }
-    .width('100%')
-    .height('100%')
-  }
-}
-```
 
 ## fill
 
@@ -860,46 +412,6 @@ Fills the current path.
 | --- | --- | --- | --- |
 | fillRule | [CanvasFillRule](arkts-arkui-canvasfillrule-t.md) | No | Rule by which to determine whether a point is inside or outside the area to fill.The options are **"nonzero"** and **"evenodd"**.Invalid values **undefined** and **null** are treated as the default value.Default value: **"nonzero" |
 
-**Examples**
-
-```TypeScript
-// xxx.ets
-@Entry
-@Component
-struct Fill {
-  private settings: RenderingContextSettings = new RenderingContextSettings(true);
-  private context: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings);
-  private offCanvas: OffscreenCanvas = new OffscreenCanvas(600, 600);
-
-  build() {
-    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
-      Canvas(this.context)
-        .width('100%')
-        .height('100%')
-        .backgroundColor('#ffff00')
-        .onReady(() => {
-          let offContext = this.offCanvas.getContext("2d", this.settings)
-          let region = new Path2D()
-          region.moveTo(30, 90)
-          region.lineTo(110, 20)
-          region.lineTo(240, 130)
-          region.lineTo(60, 130)
-          region.lineTo(190, 20)
-          region.lineTo(270, 90)
-          region.closePath()
-          // Fill path
-          offContext.fillStyle = '#00ff00'
-          offContext.fill(region, "evenodd")
-          let image = this.offCanvas.transferToImageBitmap()
-          this.context.transferFromImageBitmap(image)
-        })
-    }
-    .width('100%')
-    .height('100%')
-  }
-}
-```
-
 ## fill
 
 ```TypeScript
@@ -922,10 +434,6 @@ Fills a specified path.
 | --- | --- | --- | --- |
 | path | [Path2D](arkts-arkui-path2d-c.md) | Yes | Path2D** path to fill.   **undefined** and **null** are treated as invalid values. |
 | fillRule | [CanvasFillRule](arkts-arkui-canvasfillrule-t.md) | No | Rule by which to determine whether a point is inside or outside the area to fill.The options are **"nonzero"** and **"evenodd"**.Invalid values **undefined** and **null** are treated as the default value.Default value: **"nonzero" |
-
-**Examples**
-
-See [fill](#fill)
 
 ## fillRect
 
@@ -952,36 +460,6 @@ Fills a rectangle on the canvas.
 | w | number | Yes | Width of the rectangle.   **undefined**, **null**, **NaN**, and **Infinity** are treated as invalid values and no rendering will be performed.Default unit: vp |
 | h | number | Yes | Height of the rectangle.   **undefined**, **null**, **NaN**, and **Infinity** are treated as invalid values and no rendering will be performed.Default unit: vp |
 
-**Examples**
-
-```TypeScript
-// xxx.ets
-@Entry
-@Component
-struct FillRect {
-  private settings: RenderingContextSettings = new RenderingContextSettings(true);
-  private context: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings);
-  private offCanvas: OffscreenCanvas = new OffscreenCanvas(600, 600);
-  
-  build() {
-    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
-      Canvas(this.context)
-        .width('100%')
-        .height('100%')
-        .backgroundColor('rgb(213,213,213)')
-        .onReady(() => {
-          let offContext = this.offCanvas.getContext("2d", this.settings)
-          offContext.fillRect(30, 30, 100, 100)
-          let image = this.offCanvas.transferToImageBitmap()
-          this.context.transferFromImageBitmap(image)
-       })
-      }
-    .width('100%')
-    .height('100%')
-  }
-}
-```
-
 ## fillText
 
 ```TypeScript
@@ -1006,37 +484,6 @@ Draws filled text on the canvas.
 | x | number | Yes | X-coordinate of the start point for text rendering.   **undefined**, **null**, **NaN**, and **Infinity** are treated as invalid values and no rendering will be performed.Default unit: vp |
 | y | number | Yes | Y-coordinate of the start point for text rendering.   **undefined**, **null**, **NaN**, and **Infinity** are treated as invalid values and no rendering will be performed.Default unit: vp |
 | maxWidth | number | No | Maximum width allowed for the text.   **null** is treated as an invalid value and no rendering will be performed. **undefined**, **NaN**, or **Infinity** is treated as the default value.Default value: no width restriction Default unit: vp |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-@Entry
-@Component
-struct FillText {
-  private settings: RenderingContextSettings = new RenderingContextSettings(true);
-  private context: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings);
-  private offCanvas: OffscreenCanvas = new OffscreenCanvas(600, 600);
-
-  build() {
-    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
-      Canvas(this.context)
-        .width('100%')
-        .height('100%')
-        .backgroundColor('#ffff00')
-        .onReady(() => {
-          let offContext = this.offCanvas.getContext("2d", this.settings)
-          offContext.font = '30px sans-serif'
-          offContext.fillText("Hello World!", 20, 100)
-          let image = this.offCanvas.transferToImageBitmap()
-          this.context.transferFromImageBitmap(image)
-      })
-    }
-    .width('100%')
-    .height('100%')
-  }
-}
-```
 
 ## getImageData
 
@@ -1069,42 +516,6 @@ Obtains the **ImageData** object created with the pixels within the specified ar
 | --- | --- |
 | [ImageData](arkts-arkui-imagedata-c.md) | New **ImageData** object. |
 
-**Examples**
-
-> NOTE
-
-```TypeScript
-// xxx.ets
-@Entry
-@Component
-struct GetImageData {
-  private settings: RenderingContextSettings = new RenderingContextSettings(true);
-  private context: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings);
-  private offCanvas: OffscreenCanvas = new OffscreenCanvas(600, 600);
-  // Replace "/common/images/1234.png" with the image resource file you use.
-  private img:ImageBitmap = new ImageBitmap("/common/images/1234.png");
-
-  build() {
-    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
-      Canvas(this.context)
-        .width('100%')
-        .height('100%')
-        .backgroundColor('#ffff00')
-        .onReady(() => {
-          let offContext = this.offCanvas.getContext("2d", this.settings)
-          offContext.drawImage(this.img, 0, 0, 130, 130)
-          let imageData = offContext.getImageData(50,50,130,130)
-          offContext.putImageData(imageData, 150, 150)
-          let image = this.offCanvas.transferToImageBitmap()
-          this.context.transferFromImageBitmap(image)
-        })
-    }
-    .width('100%')
-    .height('100%')
-  }
-}
-```
-
 ## getLineDash
 
 ```TypeScript
@@ -1126,46 +537,6 @@ Obtains the dash line style.
 | Type | Description |
 | --- | --- |
 | number[] | Interval of alternate line segments and the length of spacing. |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-@Entry
-@Component
-struct OffscreenCanvasGetLineDash {
-  @State message: string = 'Hello World';
-  private settings: RenderingContextSettings = new RenderingContextSettings(true);
-  private context: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings);
-  private offCanvas: OffscreenCanvas = new OffscreenCanvas(600, 600);
-
-  build() {
-    Row() {
-      Column() {
-        Text(this.message)
-          .fontSize(50)
-          .fontWeight(FontWeight.Bold)
-        Canvas(this.context)
-          .width('100%')
-          .height('100%')
-          .backgroundColor('#D5D5D5')
-          .onReady(() => {
-            let offContext = this.offCanvas.getContext("2d", this.settings)
-            offContext.arc(100, 75, 50, 0, 6.28)
-            offContext.setLineDash([10, 20])
-            offContext.stroke()
-            let res = offContext.getLineDash()
-            this.message = JSON.stringify(res)
-            let image = this.offCanvas.transferToImageBitmap()
-            this.context.transferFromImageBitmap(image)
-          })
-      }
-      .width('100%')
-    }
-    .height('100%')
-  }
-}
-```
 
 ## getPixelMap
 
@@ -1194,43 +565,7 @@ Obtains the **PixelMap** object created with the pixels within the specified are
 
 | Type | Description |
 | --- | --- |
-| PixelMap | PixelMap** object. |
-
-**Examples**
-
-> NOTE
-
-```TypeScript
-// xxx.ets
-@Entry
-@Component
-struct GetPixelMap {
-  private settings: RenderingContextSettings = new RenderingContextSettings(true);
-  private context: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings);
-  // Replace "common/images/example.jpg" with the image resource file you use.
-  private img: ImageBitmap = new ImageBitmap("common/images/example.jpg");
-  private offCanvas: OffscreenCanvas = new OffscreenCanvas(600, 600);
-
-  build() {
-    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
-      Canvas(this.context)
-        .width('100%')
-        .height('100%')
-        .backgroundColor('#ffff00')
-        .onReady(() => {
-          let offContext = this.offCanvas.getContext("2d", this.settings)
-          offContext.drawImage(this.img, 100, 100, 130, 130)
-          let pixelmap = offContext.getPixelMap(150, 150, 130, 130)
-          offContext.setPixelMap(pixelmap)
-          let image = this.offCanvas.transferToImageBitmap()
-          this.context.transferFromImageBitmap(image)
-        })
-    }
-    .width('100%')
-    .height('100%')
-  }
-}
-```
+| [PixelMap](arkts-arkui-pixelmap-t.md) | PixelMap** object. |
 
 ## getTransform
 
@@ -1252,57 +587,7 @@ Obtains the current transformation matrix being applied to the context.
 
 | Type | Description |
 | --- | --- |
-| Matrix2D | Current transformation matrix applied to the context. |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-@Entry
-@Component
-struct TransFormDemo {
-  private settings: RenderingContextSettings = new RenderingContextSettings(true);
-  private context1: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings);
-  private offcontext1: OffscreenCanvasRenderingContext2D =
-    new OffscreenCanvasRenderingContext2D(600, 100, this.settings);
-  private context2: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings);
-  private offcontext2: OffscreenCanvasRenderingContext2D =
-    new OffscreenCanvasRenderingContext2D(600, 100, this.settings);
-
-  build() {
-    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
-      Text('context1');
-      Canvas(this.context1)
-        .width('230vp')
-        .height('120vp')
-        .backgroundColor('#ffff00')
-        .onReady(() => {
-          this.offcontext1.fillRect(50, 50, 50, 50);
-          this.offcontext1.setTransform(1.2, Math.PI / 8, Math.PI / 6, 0.5, 30, -25);
-          this.offcontext1.fillRect(50, 50, 50, 50);
-          let image = this.offcontext1.transferToImageBitmap();
-          this.context1.transferFromImageBitmap(image);
-        })
-      Text('context2');
-      Canvas(this.context2)
-        .width('230vp')
-        .height('120vp')
-        .backgroundColor('#0ffff0')
-        .onReady(() => {
-          this.offcontext2.fillRect(50, 50, 50, 50);
-          let storedTransform = this.offcontext1.getTransform();
-          console.info(`Matrix [scaleX = ${storedTransform.scaleX}, scaleY = ${storedTransform.scaleY}, rotateX = ${storedTransform.rotateX}, rotateY = ${storedTransform.rotateY}, translateX = ${storedTransform.translateX}, translateY = ${storedTransform.translateY}]`)
-          this.offcontext2.setTransform(storedTransform);
-          this.offcontext2.fillRect(50, 50, 50, 50);
-          let image = this.offcontext2.transferToImageBitmap();
-          this.context2.transferFromImageBitmap(image);
-        })
-    }
-    .width('100%')
-    .height('100%')
-  }
-}
-```
+| [Matrix2D](../arkts-apis/arkts-arkui-matrix2d-c.md) | Current transformation matrix applied to the context. |
 
 ## measureText
 
@@ -1332,38 +617,6 @@ Returns a **TextMetrics** object used to obtain the width of specified text. Not
 | --- | --- |
 | [TextMetrics](arkts-arkui-textmetrics-i.md) | TextMetrics** object. |
 
-**Examples**
-
-```TypeScript
-// xxx.ets
-@Entry
-@Component
-struct MeasureText {
-  private settings: RenderingContextSettings = new RenderingContextSettings(true);
-  private context: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings);
-  private offCanvas: OffscreenCanvas = new OffscreenCanvas(600, 600);
-
-  build() {
-    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
-      Canvas(this.context)
-        .width('100%')
-        .height('100%')
-        .backgroundColor('rgb(213,213,213)')
-        .onReady(() => {
-          let offContext = this.offCanvas.getContext("2d", this.settings)
-          offContext.font = '50px sans-serif'
-          offContext.fillText("Hello World!", 20, 100)
-          offContext.fillText("width:" + offContext.measureText("Hello World!").width, 20, 200)
-          let image = this.offCanvas.transferToImageBitmap()
-          this.context.transferFromImageBitmap(image)
-      })
-    }
-    .width('100%')
-    .height('100%')
-  }
-}
-```
-
 ## putImageData
 
 ```TypeScript
@@ -1387,44 +640,6 @@ Puts an **ImageData** object onto a rectangular area on the canvas.
 | imageData | [ImageData](arkts-arkui-imagedata-c.md) | Yes | ImageData** object with pixels to put onto the canvas.    **undefined** and **null** are treated as invalid values and no rendering will be performed. |
 | dx | number \| string | Yes | X-axis offset of the rectangular area on the canvas.Invalid values **undefined**, **null**, **NaN**, and **Infinity** are treated as **0**.Default unit: vp |
 | dy | number \| string | Yes | Y-axis offset of the rectangular area on the canvas.Invalid values **undefined**, **null**, **NaN**, and **Infinity** are treated as **0**.Default unit: vp |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-@Entry
-@Component
-struct PutImageData {
-  private settings: RenderingContextSettings = new RenderingContextSettings(true);
-  private context: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings);
-  private offCanvas: OffscreenCanvas = new OffscreenCanvas(600, 600);
-
-  build() {
-    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
-      Canvas(this.context)
-        .width('100%')
-        .height('100%')
-        .backgroundColor('rgb(213,213,213)')
-        .onReady(() => {
-          let offContext = this.offCanvas.getContext("2d", this.settings)
-          let imageDataNum = offContext.createImageData(100, 100)
-          let imageData = offContext.createImageData(imageDataNum)
-          for (let i = 0; i < imageData.data.length; i += 4) {
-            imageData.data[i + 0] = 112
-            imageData.data[i + 1] = 112
-            imageData.data[i + 2] = 112
-            imageData.data[i + 3] = 255
-          }
-          offContext.putImageData(imageData, 10, 10)
-          let image = this.offCanvas.transferToImageBitmap()
-          this.context.transferFromImageBitmap(image)
-        })
-    }
-    .width('100%')
-    .height('100%')
-  }
-}
-```
 
 ## putImageData
 
@@ -1462,80 +677,6 @@ Fills the new rectangular area with the **ImageData** data after cropping.
 | dirtyWidth | number \| string | Yes | Width of the rectangular area to crop the source image.Invalid values **undefined**, **null**, **NaN**, and **Infinity** are treated as **0**.Default unit: vp |
 | dirtyHeight | number \| string | Yes | Height of the rectangular area to crop the source image.Invalid values **undefined**, **null**, **NaN**, and **Infinity** are treated as **0**.Default unit: vp |
 
-**Examples**
-
-```TypeScript
-// xxx.ets
-@Entry
-@Component
-struct PutImageData {
-  private settings: RenderingContextSettings = new RenderingContextSettings(true);
-  private context: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings);
-  private offCanvas: OffscreenCanvas = new OffscreenCanvas(600, 600);
-
-  build() {
-    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
-      Canvas(this.context)
-        .width('100%')
-        .height('100%')
-        .backgroundColor('rgb(213,213,213)')
-        .onReady(() => {
-          let offContext = this.offCanvas.getContext("2d", this.settings)
-          let imageDataNum = offContext.createImageData(100, 100)
-          let imageData = offContext.createImageData(imageDataNum)
-          for (let i = 0; i < imageData.data.length; i += 4) {
-            imageData.data[i + 0] = 112
-            imageData.data[i + 1] = 112
-            imageData.data[i + 2] = 112
-            imageData.data[i + 3] = 255
-          }
-          offContext.putImageData(imageData, 10, 10)
-          let image = this.offCanvas.transferToImageBitmap()
-          this.context.transferFromImageBitmap(image)
-        })
-    }
-    .width('100%')
-    .height('100%')
-  }
-}
-```
-
-```TypeScript
-// xxx.ets
-@Entry
-@Component
-struct PutImageData {
-  private settings: RenderingContextSettings = new RenderingContextSettings(true);
-  private context: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings);
-  private offCanvas: OffscreenCanvas = new OffscreenCanvas(600, 600);
-
-  build() {
-    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
-      Canvas(this.context)
-        .width('100%')
-        .height('100%')
-        .backgroundColor('rgb(213,213,213)')
-        .onReady(() => {
-          let offContext = this.offCanvas.getContext("2d", this.settings)
-          let imageDataNum = offContext.createImageData(100, 100)
-          let imageData = offContext.createImageData(imageDataNum)
-          for (let i = 0; i < imageData.data.length; i += 4) {
-            imageData.data[i + 0] = 112
-            imageData.data[i + 1] = 112
-            imageData.data[i + 2] = 112
-            imageData.data[i + 3] = 255
-          }
-          offContext.putImageData(imageData, 10, 10, 0, 0, 100, 50)
-          let image = this.offCanvas.transferToImageBitmap()
-          this.context.transferFromImageBitmap(image)
-        })
-    }
-    .width('100%')
-    .height('100%')
-  }
-}
-```
-
 ## reset
 
 ```TypeScript
@@ -1552,39 +693,6 @@ Resets this **CanvasRenderingContext2D** object to its default state and clears 
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Examples**
-
-```TypeScript
-// xxx.ets
-@Entry
-@Component
-struct Reset {
-  private settings: RenderingContextSettings = new RenderingContextSettings(true);
-  private context: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings);
-  private offCanvas: OffscreenCanvas = new OffscreenCanvas(600, 600);
-
-  build() {
-    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
-      Canvas(this.context)
-        .width('100%')
-        .height('100%')
-        .backgroundColor('#ffff00')
-        .onReady(() => {
-          let offContext = this.offCanvas.getContext("2d", this.settings)
-          offContext.fillStyle = '#0000ff'
-          offContext.fillRect(20, 20, 150, 100)
-          offContext.reset()
-          offContext.fillRect(20, 150, 150, 100)
-          let image = this.offCanvas.transferToImageBitmap()
-          this.context.transferFromImageBitmap(image)
-        })
-    }
-    .width('100%')
-    .height('100%')
-  }
-}
-```
-
 ## resetTransform
 
 ```TypeScript
@@ -1600,41 +708,6 @@ Resets the current transform to the identity matrix.
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-@Entry
-@Component
-struct ResetTransform {
-  private settings: RenderingContextSettings = new RenderingContextSettings(true);
-  private context: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings);
-  private offCanvas: OffscreenCanvas = new OffscreenCanvas(600, 600);
-
-  build() {
-    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
-      Canvas(this.context)
-        .width('100%')
-        .height('100%')
-        .backgroundColor('#ffff00')
-        .onReady(() => {
-          let offContext = this.offCanvas.getContext("2d", this.settings)
-          offContext.setTransform(1,0.5, -0.5, 1, 10, 10)
-          offContext.fillStyle = 'rgb(0,0,255)'
-          offContext.fillRect(0, 0, 100, 100)
-          offContext.resetTransform()
-          offContext.fillStyle = 'rgb(255,0,0)'
-          offContext.fillRect(0, 0, 100, 100)
-          let image = this.offCanvas.transferToImageBitmap()
-          this.context.transferFromImageBitmap(image)
-        })
-    }
-    .width('100%')
-    .height('100%')
-  }
-}
-```
 
 ## restore
 
@@ -1662,40 +735,6 @@ Restores the saved drawing context.
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-@Entry
-@Component
-struct CanvasExample {
-  private settings: RenderingContextSettings = new RenderingContextSettings(true);
-  private context: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings);
-  private offCanvas: OffscreenCanvas = new OffscreenCanvas(600, 600);
-  
-  build() {
-    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
-      Canvas(this.context)
-        .width('100%')
-        .height('100%')
-        .backgroundColor('#ffff00')
-        .onReady(() => {
-          let offContext = this.offCanvas.getContext("2d", this.settings)
-          offContext.save() // save the default state
-          offContext.fillStyle = "#00ff00"
-          offContext.fillRect(20, 20, 100, 100)
-          offContext.restore() // restore to the default state
-          offContext.fillRect(150, 75, 100, 100)
-          let image = this.offCanvas.transferToImageBitmap()
-          this.context.transferFromImageBitmap(image)
-        })
-    }
-    .width('100%')
-    .height('100%')
-  }
-}
-```
 
 ## restoreLayer
 
@@ -1735,37 +774,6 @@ Rotates a canvas clockwise around its coordinate axes.
 | --- | --- | --- | --- |
 | angle | number | Yes | Clockwise rotation angle. You can convert degrees to radians using the following formula: degree * Math.PI/180.In versions earlier than API version 18, values **NaN** and **Infinity** cause the failure to call the drawing APIs following this API for rendering. Values **null** and **undefined** cause the current API to have no effect. Since API version 18, **NaN**, **Infinity**, **null**, or **undefined** causes the current API to have no effect, and other drawing APIs with valid arguments continue to render correctly.Unit: radian |
 
-**Examples**
-
-```TypeScript
-// xxx.ets
-@Entry
-@Component
-struct Rotate {
-  private settings: RenderingContextSettings = new RenderingContextSettings(true);
-  private context: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings);
-  private offCanvas: OffscreenCanvas = new OffscreenCanvas(600, 600);
-
-  build() {
-    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
-      Canvas(this.context)
-        .width('100%')
-        .height('100%')
-        .backgroundColor('#ffff00')
-        .onReady(() => {
-          let offContext = this.offCanvas.getContext("2d", this.settings)
-          offContext.rotate(45 * Math.PI / 180)
-          offContext.fillRect(70, 20, 50, 50)
-          let image = this.offCanvas.transferToImageBitmap()
-          this.context.transferFromImageBitmap(image)
-        })
-    }
-    .width('100%')
-    .height('100%')
-  }
-}
-```
-
 ## save
 
 ```TypeScript
@@ -1782,40 +790,6 @@ Saves the current drawing context.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Examples**
-
-```TypeScript
-// xxx.ets
-@Entry
-@Component
-struct CanvasExample {
-  private settings: RenderingContextSettings = new RenderingContextSettings(true);
-  private context: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings);
-  private offCanvas: OffscreenCanvas = new OffscreenCanvas(600, 600);
-  
-  build() {
-    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
-      Canvas(this.context)
-        .width('100%')
-        .height('100%')
-        .backgroundColor('#ffff00')
-        .onReady(() => {
-          let offContext = this.offCanvas.getContext("2d", this.settings)
-          offContext.save() // save the default state
-          offContext.fillStyle = "#00ff00"
-          offContext.fillRect(20, 20, 100, 100)
-          offContext.restore() // restore to the default state
-          offContext.fillRect(150, 75, 100, 100)
-          let image = this.offCanvas.transferToImageBitmap()
-          this.context.transferFromImageBitmap(image)
-        })
-    }
-    .width('100%')
-    .height('100%')
-  }
-}
-```
-
 ## saveLayer
 
 ```TypeScript
@@ -1831,47 +805,6 @@ Saves this layer.
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-@Entry
-@Component
-struct saveLayer {
-  private settings: RenderingContextSettings = new RenderingContextSettings(true);
-  private context: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings);
-  private offCanvas: OffscreenCanvas = new OffscreenCanvas(600, 600);
-
-  build() {
-    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
-      Canvas(this.context)
-        .width('100%')
-        .height('100%')
-        .backgroundColor('#ffff00')
-        .onReady(() => {
-          let offContext = this.offCanvas.getContext("2d", this.settings)
-          offContext.fillStyle = "#0000ff"
-          offContext.fillRect(50, 100, 300, 100)
-          offContext.fillStyle = "#00ffff"
-          offContext.fillRect(50, 150, 300, 100)
-          offContext.globalCompositeOperation = 'destination-over'
-          offContext.saveLayer()
-          offContext.globalCompositeOperation = 'source-over'
-          offContext.fillStyle = "#ff0000"
-          offContext.fillRect(100, 50, 100, 300)
-          offContext.fillStyle = "#00ff00"
-          offContext.fillRect(150, 50, 100, 300)
-          offContext.restoreLayer()
-          let image = this.offCanvas.transferToImageBitmap()
-          this.context.transferFromImageBitmap(image)
-        })
-    }
-    .width('100%')
-    .height('100%')
-  }
-}
-```
 
 ## scale
 
@@ -1896,39 +829,6 @@ Scales the canvas based on the given scale factors.
 | x | number | Yes | Horizontal scale factor.In versions earlier than API version 18, values **NaN** and **Infinity** cause the failure to call the drawing APIs following this API for rendering. Values **0**, **null**, **undefined**, and negative numbers cause the current API to have no effect. Since API version 18, **NaN**, **Infinity**, **0**, **null**, **undefined**, and negative numbers cause the current API to have no effect, and other drawing APIs with valid arguments continue to render correctly. |
 | y | number | Yes | Vertical scaling factor. Negative numbers are not supported.In versions earlier than API version 18, values **NaN** and **Infinity** cause the failure to call the drawing APIs following this API for rendering. Values **0**, **null**, **undefined**, and negative numbers cause the current API to have no effect. Since API version 18, **NaN**, **Infinity**, **0**, **null**, **undefined**, and negative numbers cause the current API to have no effect, and other drawing APIs with valid arguments continue to render correctly. |
 
-**Examples**
-
-```TypeScript
-// xxx.ets
-@Entry
-@Component
-struct Scale {
-  private settings: RenderingContextSettings = new RenderingContextSettings(true);
-  private context: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings);
-  private offCanvas: OffscreenCanvas = new OffscreenCanvas(600, 600);
-
-  build() {
-    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
-      Canvas(this.context)
-        .width('100%')
-        .height('100%')
-        .backgroundColor('#ffff00')
-        .onReady(() => {
-          let offContext = this.offCanvas.getContext("2d", this.settings)
-          offContext.lineWidth = 3
-          offContext.strokeRect(30, 30, 50, 50)
-          offContext.scale(2, 2) // Scale to 200%
-          offContext.strokeRect(30, 30, 50, 50)
-          let image = this.offCanvas.transferToImageBitmap()
-          this.context.transferFromImageBitmap(image)
-        })
-    }
-    .width('100%')
-    .height('100%')
-  }
-}
-```
-
 ## setLineDash
 
 ```TypeScript
@@ -1951,38 +851,6 @@ Sets the dash line style.
 | --- | --- | --- | --- |
 | segments | number[] | Yes | An array of numbers that specify distances to alternately draw a line and a gap.   **undefined** and **null** are treated as invalid values.Default unit: vp |
 
-**Examples**
-
-```TypeScript
-// xxx.ets
-@Entry
-@Component
-struct SetLineDash {
-  private settings: RenderingContextSettings = new RenderingContextSettings(true);
-  private context: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings);
-  private offCanvas: OffscreenCanvas = new OffscreenCanvas(600, 600);
-
-  build() {
-    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
-      Canvas(this.context)
-        .width('100%')
-        .height('100%')
-        .backgroundColor('#D5D5D5')
-        .onReady(() => {
-          let offContext = this.offCanvas.getContext("2d", this.settings)
-          offContext.arc(100, 75, 50, 0, 6.28)
-          offContext.setLineDash([10, 20])
-          offContext.stroke()
-          let image = this.offCanvas.transferToImageBitmap()
-          this.context.transferFromImageBitmap(image)
-        })
-    }
-    .width('100%')
-    .height('100%')
-  }
-}
-```
-
 ## setPixelMap
 
 ```TypeScript
@@ -2001,7 +869,7 @@ Draws the input **PixelMap** object on the canvas. The example is the same as th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | PixelMap | No | PixelMap** object that contains pixel values.    **undefined** and **null** are treated as invalid values and no rendering will be performed.Default value: **null |
+| value | [PixelMap](arkts-arkui-pixelmap-t.md) | No | PixelMap** object that contains pixel values.    **undefined** and **null** are treated as invalid values and no rendering will be performed.Default value: **null |
 
 ## setTransform
 
@@ -2042,40 +910,6 @@ Resets the existing transformation matrix and creates a new transformation matri
 | e | number | Yes | translateX**: horizontal translation distance. A negative value is supported.In versions earlier than API version 18, values **NaN** and **Infinity** cause the failure to call the drawing APIs following this API for rendering. Values **null** and **undefined** cause the current API to have no effect. Since API version 18, **NaN**, **Infinity**, **null**, or **undefined** causes the current API to have no effect, and other drawing APIs with valid arguments continue to render correctly.Default unit: vp |
 | f | number | Yes | translateY**: vertical translation distance. A negative value is supported.In versions earlier than API version 18, values **NaN** and **Infinity** cause the failure to call the drawing APIs following this API for rendering. Values **null** and **undefined** cause the current API to have no effect. Since API version 18, **NaN**, **Infinity**, **null**, or **undefined** causes the current API to have no effect, and other drawing APIs with valid arguments continue to render correctly.Default unit: vp |
 
-**Examples**
-
-```TypeScript
-// xxx.ets
-@Entry
-@Component
-struct SetTransform {
-  private settings: RenderingContextSettings = new RenderingContextSettings(true);
-  private context: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings);
-  private offCanvas: OffscreenCanvas = new OffscreenCanvas(600, 600);
-
-  build() {
-    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
-      Canvas(this.context)
-        .width('100%')
-        .height('100%')
-        .backgroundColor('#ffff00')
-        .onReady(() => {
-          let offContext = this.offCanvas.getContext("2d", this.settings)
-          offContext.fillStyle = 'rgb(255,0,0)'
-          offContext.fillRect(0, 0, 100, 100)
-          offContext.setTransform(1,0.5, -0.5, 1, 10, 10)
-          offContext.fillStyle = 'rgb(0,0,255)'
-          offContext.fillRect(0, 0, 100, 100)
-          let image = this.offCanvas.transferToImageBitmap()
-          this.context.transferFromImageBitmap(image)
-        })
-    }
-    .width('100%')
-    .height('100%')
-  }
-}
-```
-
 ## setTransform
 
 ```TypeScript
@@ -2096,54 +930,7 @@ Resets the current transformation to the identity matrix, and then creates a new
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| transform | Matrix2D | No | Transformation matrix.   **undefined** and **null** are treated as invalid values.Default value: **null |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
- @Entry
- @Component
- struct TransFormDemo {
-   private settings: RenderingContextSettings = new RenderingContextSettings(true);
-   private context1: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings);
-   private offcontext1: OffscreenCanvasRenderingContext2D = new OffscreenCanvasRenderingContext2D(600, 200, this.settings);
-   private context2: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings);
-   private offcontext2: OffscreenCanvasRenderingContext2D = new OffscreenCanvasRenderingContext2D(600, 200, this.settings);
-
-   build() {
-     Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
-       Text('context1');
-       Canvas(this.context1)
-         .width('230vp')
-         .height('160vp')
-         .backgroundColor('#ffff00')
-         .onReady(() => {
-           this.offcontext1.fillRect(100, 20, 50, 50);
-           this.offcontext1.setTransform(1, 0.5, -0.5, 1, 10, 10);
-           this.offcontext1.fillRect(100, 20, 50, 50);
-           let image = this.offcontext1.transferToImageBitmap();
-           this.context1.transferFromImageBitmap(image);
-         })
-       Text('context2');
-       Canvas(this.context2)
-         .width('230vp')
-         .height('160vp')
-         .backgroundColor('#0ffff0')
-         .onReady(() => {
-           this.offcontext2.fillRect(100, 20, 50, 50);
-           let storedTransform = this.offcontext1.getTransform();
-           this.offcontext2.setTransform(storedTransform);
-           this.offcontext2.fillRect(100, 20, 50, 50);
-           let image = this.offcontext2.transferToImageBitmap();
-           this.context2.transferFromImageBitmap(image);
-         })
-     }
-     .width('100%')
-     .height('100%')
-   }
- }
-```
+| transform | [Matrix2D](../arkts-apis/arkts-arkui-matrix2d-c.md) | No | Transformation matrix.   **undefined** and **null** are treated as invalid values.Default value: **null |
 
 ## stroke
 
@@ -2160,41 +947,6 @@ Strokes (outlines) this path.
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-@Entry
-@Component
-struct Stroke {
-  private settings: RenderingContextSettings = new RenderingContextSettings(true);
-  private context: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings);
-  private offCanvas: OffscreenCanvas = new OffscreenCanvas(600, 600);
-
-  build() {
-    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
-      Canvas(this.context)
-        .width('100%')
-        .height('100%')
-        .backgroundColor('#ffff00')
-        .onReady(() => {
-          let offContext = this.offCanvas.getContext("2d", this.settings)
-          offContext.moveTo(125, 25)
-          offContext.lineTo(125, 105)
-          offContext.lineTo(175, 105)
-          offContext.lineTo(175, 25)
-          offContext.strokeStyle = 'rgb(255,0,0)'
-          offContext.stroke()
-          let image = this.offCanvas.transferToImageBitmap()
-          this.context.transferFromImageBitmap(image)
-        })
-    }
-    .width('100%')
-    .height('100%')
-  }
-}
-```
 
 ## stroke
 
@@ -2217,42 +969,6 @@ Strokes (outlines) a specified path.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | path | [Path2D](arkts-arkui-path2d-c.md) | Yes | Specified stroke path object |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-@Entry
-@Component
-struct Stroke {
-  private settings: RenderingContextSettings = new RenderingContextSettings(true);
-  private context: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings);
-  private offCanvas: OffscreenCanvas = new OffscreenCanvas(600, 600);
-  private path2Da: Path2D = new Path2D();
-
-  build() {
-    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
-      Canvas(this.context)
-        .width('100%')
-        .height('100%')
-        .backgroundColor('#ffff00')
-        .onReady(() => {
-          let offContext = this.offCanvas.getContext("2d", this.settings)
-          this.path2Da.moveTo(25, 25)
-          this.path2Da.lineTo(25, 105)
-          this.path2Da.lineTo(75, 105)
-          this.path2Da.lineTo(75, 25)
-          offContext.strokeStyle = 'rgb(0,0,255)'
-          offContext.stroke(this.path2Da)
-          let image = this.offCanvas.transferToImageBitmap()
-          this.context.transferFromImageBitmap(image)
-        })
-    }
-    .width('100%')
-    .height('100%')
-  }
-}
-```
 
 ## strokeRect
 
@@ -2279,36 +995,6 @@ Draws an outlined rectangle on the canvas without filling its interior.
 | w | number | Yes | Width of the rectangle.   **undefined**, **null**, **NaN**, and **Infinity** are treated as invalid values and no rendering will be performed.Default unit: vp |
 | h | number | Yes | Height of the rectangle.   **undefined**, **null**, **NaN**, and **Infinity** are treated as invalid values and no rendering will be performed.Default unit: vp |
 
-**Examples**
-
-```TypeScript
-// xxx.ets
-@Entry
-@Component
-struct StrokeRect {
-  private settings: RenderingContextSettings = new RenderingContextSettings(true);
-  private context: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings);
-  private offCanvas: OffscreenCanvas = new OffscreenCanvas(600, 600);
-
-  build() {
-    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
-      Canvas(this.context)
-        .width('100%')
-        .height('100%')
-        .backgroundColor('#ffff00')
-        .onReady(() => {
-          let offContext = this.offCanvas.getContext("2d", this.settings)
-          offContext.strokeRect(30, 30, 200, 150)
-          let image = this.offCanvas.transferToImageBitmap()
-          this.context.transferFromImageBitmap(image)
-      })
-    }
-    .width('100%')
-    .height('100%')
-  }
-}
-```
-
 ## strokeText
 
 ```TypeScript
@@ -2333,37 +1019,6 @@ Draws stroked text on the canvas.
 | x | number | Yes | X-coordinate of the start point for text rendering.   **undefined**, **null**, **NaN**, and **Infinity** are treated as invalid values and no rendering will be performed.Default unit: vp |
 | y | number | Yes | Y-coordinate of the start point for text rendering.   **undefined**, **null**, **NaN**, and **Infinity** are treated as invalid values and no rendering will be performed.Default unit: vp |
 | maxWidth | number | No | Maximum width of the text.   **null** is treated as an invalid value and no rendering will be performed. **undefined**, **NaN**, or **Infinity** is treated as the default value.Default unit: vp Default value: no width restriction |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-@Entry
-@Component
-struct StrokeText {
-  private settings: RenderingContextSettings = new RenderingContextSettings(true);
-  private context: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings);
-  private offCanvas: OffscreenCanvas = new OffscreenCanvas(600, 600);
-
-  build() {
-    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
-      Canvas(this.context)
-        .width('100%')
-        .height('100%')
-        .backgroundColor('#ffff00')
-        .onReady(() => {
-          let offContext = this.offCanvas.getContext("2d", this.settings)
-          offContext.font = '55px sans-serif'
-          offContext.strokeText("Hello World!", 20, 60)
-          let image = this.offCanvas.transferToImageBitmap()
-          this.context.transferFromImageBitmap(image)
-      })
-    }
-    .width('100%')
-    .height('100%')
-  }
-}
-```
 
 ## transferFromImageBitmap
 
@@ -2426,43 +1081,6 @@ Defines a transformation matrix. To transform a graph, you only need to set para
 | e | number | Yes | Cell at row 1, column 3 of the transformation matrix. **translateX**: horizontal translation distance. A negative value is supported.In versions earlier than API version 18, values **NaN** and **Infinity** cause the failure to call the drawing APIs following this API for rendering. Values **null** and **undefined** cause the current API to have no effect. Since API version 18, **NaN**, **Infinity**, **null**, or **undefined** causes the current API to have no effect, and other drawing APIs with valid arguments continue to render correctly.Default unit: vp |
 | f | number | Yes | Cell at row 2, column 3 of the transformation matrix. **translateY**: vertical translation distance. A negative value is supported.In versions earlier than API version 18, values **NaN** and **Infinity** cause the failure to call the drawing APIs following this API for rendering. Values **null** and **undefined** cause the current API to have no effect. Since API version 18, **NaN**, **Infinity**, **null**, or **undefined** causes the current API to have no effect, and other drawing APIs with valid arguments continue to render correctly.Default unit: vp |
 
-**Examples**
-
-```TypeScript
-// xxx.ets
-@Entry
-@Component
-struct Transform {
-  private settings: RenderingContextSettings = new RenderingContextSettings(true);
-  private context: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings);
-  private offCanvas: OffscreenCanvas = new OffscreenCanvas(600, 600);
-
-  build() {
-    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
-      Canvas(this.context)
-        .width('100%')
-        .height('100%')
-        .backgroundColor('rgb(213,213,213)')
-        .onReady(() => {
-          let offContext = this.offCanvas.getContext("2d", this.settings)
-          offContext.fillStyle = 'rgb(112,112,112)'
-          offContext.fillRect(0, 0, 100, 100)
-          offContext.transform(1, 0.5, -0.5, 1, 10, 10)
-          offContext.fillStyle = 'rgb(0,74,175)'
-          offContext.fillRect(0, 0, 100, 100)
-          offContext.transform(1, 0.5, -0.5, 1, 10, 10)
-          offContext.fillStyle = 'rgb(39,135,217)'
-          offContext.fillRect(0, 0, 100, 100)
-          let image = this.offCanvas.transferToImageBitmap()
-          this.context.transferFromImageBitmap(image)
-        })
-    }
-    .width('100%')
-    .height('100%')
-  }
-}
-```
-
 ## translate
 
 ```TypeScript
@@ -2485,38 +1103,6 @@ Moves the origin of the coordinate system.
 | --- | --- | --- | --- |
 | x | number | Yes | Distance to translate on the x-axis.In versions earlier than API version 18, values **NaN** and **Infinity** cause the failure to call the drawing APIs following this API for rendering. Values **null** and **undefined** cause the current API to have no effect. Since API version 18, **NaN**, **Infinity**, **null**, or **undefined** causes the current API to have no effect, and other drawing APIs with valid arguments continue to render correctly.Default unit: vp |
 | y | number | Yes | Distance to translate on the y-axis.In versions earlier than API version 18, values **NaN** and **Infinity** cause the failure to call the drawing APIs following this API for rendering. Values **null** and **undefined** cause the current API to have no effect. Since API version 18, **NaN**, **Infinity**, **null**, or **undefined** causes the current API to have no effect, and other drawing APIs with valid arguments continue to render correctly.Default unit: vp |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-@Entry
-@Component
-struct Translate {
-  private settings: RenderingContextSettings = new RenderingContextSettings(true);
-  private context: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings);
-  private offCanvas: OffscreenCanvas = new OffscreenCanvas(600, 600);
-
-  build() {
-    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
-      Canvas(this.context)
-        .width('100%')
-        .height('100%')
-        .backgroundColor('#ffff00')
-        .onReady(() => {
-          let offContext = this.offCanvas.getContext("2d", this.settings)
-          offContext.fillRect(10, 10, 50, 50)
-          offContext.translate(70, 70)
-          offContext.fillRect(10, 10, 50, 50)
-          let image = this.offCanvas.transferToImageBitmap()
-          this.context.transferFromImageBitmap(image)
-        })
-    }
-    .width('100%')
-    .height('100%')
-  }
-}
-```
 
 ## antialias
 
@@ -2543,58 +1129,6 @@ When the value is **undefined**, the anti-aliasing effect in [RenderingContextSe
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-@Entry
-@Component
-struct AntialiasDemoOff {
-  private settings: RenderingContextSettings = new RenderingContextSettings(true);
-  private context: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings);
-  private offCanvas: OffscreenCanvas = new OffscreenCanvas(600, 600);
-
-  build() {
-    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
-      Canvas(this.context)
-        .width('100%')
-        .height('100%')
-        .backgroundColor('rgb(213,213,213)')
-        .onReady(() => {
-          let offContext = this.offCanvas.getContext("2d", this.settings);
-          let anti = offContext.antialias;
-          console.info(`current antialias is ${anti}`);
-          // Set antialias to false.
-          offContext.antialias = false;
-          offContext.strokeStyle = 'rgb(0,0,0)';
-          offContext.lineWidth = 2;
-          offContext.beginPath();
-          offContext.arc(150, 150, 100, 0, Math.PI);
-          offContext.stroke();
-          offContext.font = 'normal bold 30vp monospace';
-          offContext.fillText("Hello World", 20, 100);
-          anti = offContext.antialias;
-          console.info(`current antialias is ${anti}`);
-
-          // Set antialias to true.
-          offContext.antialias = true;
-          offContext.beginPath();
-          offContext.arc(150, 350, 100, 0, Math.PI);
-          offContext.stroke();
-          offContext.font = 'normal bold 30vp monospace';
-          offContext.fillText("Hello World", 20, 300);
-          anti = offContext.antialias;
-          console.info(`current antialias is ${anti}`);
-          let image = this.offCanvas.transferToImageBitmap();
-          this.context.transferFromImageBitmap(image);
-        })
-    }
-    .width('100%')
-    .height('100%')
-  }
-}
-```
 
 ## direction
 
@@ -2909,7 +1443,7 @@ Default value: **0** (Invalid values are treated as the default value.)
 > 
 > The LengthMetrics type is recommended for better performance.
 
-**Type:** LengthMetrics \| string
+**Type:** [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md) \| string
 
 **Default:** 0vp
 

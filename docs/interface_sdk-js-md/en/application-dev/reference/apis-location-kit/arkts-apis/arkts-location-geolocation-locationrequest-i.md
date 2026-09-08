@@ -58,7 +58,7 @@ maxAccuracy?: number
 priority?: LocationRequestPriority
 ```
 
-**Type:** LocationRequestPriority
+**Type:** [LocationRequestPriority](arkts-location-geolocation-locationrequestpriority-e.md)
 
 **Since:** 7
 
@@ -74,7 +74,7 @@ priority?: LocationRequestPriority
 scenario?: LocationRequestScenario
 ```
 
-**Type:** LocationRequestScenario
+**Type:** [LocationRequestScenario](arkts-location-geolocation-locationrequestscenario-e.md)
 
 **Since:** 7
 

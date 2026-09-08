@@ -26,7 +26,7 @@ Obtains information about visible main windows on the current screen. Visible ma
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;WindowInfo&gt;&gt; | Promise used to return the information about visible windows. |
+| Promise&lt;Array&lt;[WindowInfo](arkts-arkui-window-windowinfo-i.md)&gt;&gt; | Promise used to return the information about visible windows. |
 
 **Error codes:**
 

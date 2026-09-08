@@ -84,7 +84,7 @@ deviceType: DeviceType
 
 device type.
 
-**Type:** DeviceType
+**Type:** [DeviceType](arkts-avsession-avsession-devicetype-e.md)
 
 **Since:** 10
 

@@ -78,7 +78,7 @@ maxScreenWantAgent?: MaxScreenWantAgent
 
 Information about the ability that is automatically started when the reminder arrives. If the device is in use, a notification will be displayed.
 
-**Type:** MaxScreenWantAgent
+**Type:** [MaxScreenWantAgent](arkts-backgroundtasks-reminderagent-maxscreenwantagent-i.md)
 
 **Since:** 7
 
@@ -114,7 +114,7 @@ reminderType: ReminderType
 
 Type of the reminder.
 
-**Type:** ReminderType
+**Type:** [ReminderType](arkts-backgroundtasks-reminderagent-remindertype-e.md)
 
 **Since:** 7
 
@@ -150,7 +150,7 @@ slotType?: notification.SlotType
 
 Type of the slot used by the reminder.
 
-**Type:** notification.SlotType
+**Type:** [notification.SlotType](../../apis-notification-kit/arkts-apis/arkts-notification-notification-slottype-depr-e.md)
 
 **Since:** 7
 
@@ -240,7 +240,7 @@ wantAgent?: WantAgent
 
 Information about the ability that is redirected to when the notification is clicked.
 
-**Type:** WantAgent
+**Type:** [WantAgent](arkts-backgroundtasks-reminderagent-wantagent-i.md)
 
 **Since:** 7
 

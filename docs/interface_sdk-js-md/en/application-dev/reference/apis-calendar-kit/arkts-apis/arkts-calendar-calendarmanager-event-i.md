@@ -164,7 +164,7 @@ location?: Location
 
 Event location. If this parameter is not set, the default null value is used.
 
-**Type:** Location
+**Type:** [Location](arkts-calendar-calendarmanager-location-i.md)
 
 **Since:** 10
 
@@ -276,7 +276,7 @@ type: EventType
 
 Event type.When getEvents() is called to query events, this field is queried by default.
 
-**Type:** EventType
+**Type:** [EventType](arkts-calendar-calendarmanager-eventtype-e.md)
 
 **Since:** 10
 

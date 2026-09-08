@@ -33,7 +33,7 @@ Obtains an **AuthInstance** instance for user authentication.
 | --- | --- | --- | --- |
 | challenge | Uint8Array | Yes | Challenge value. It cannot exceed 32 bytes and can be passed in Uint8Array([]) format. |
 | authType | [UserAuthType](arkts-userauthentication-userauth-userauthtype-e.md) | Yes | Authentication type. Currently, **FACE** and **FINGERPRINT** are supported. |
-| authTrustLevel | AuthTrustLevel | Yes | Authentication trust level. |
+| authTrustLevel | [AuthTrustLevel](arkts-userauthentication-userauth-authtrustlevel-e.md) | Yes | Authentication trust level. |
 
 **Return value:**
 

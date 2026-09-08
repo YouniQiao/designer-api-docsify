@@ -1,6 +1,6 @@
 # LongPressRecognizer
 
-Implements a number press gesture recognizer. Inherits from [GestureRecognizer](arkts-arkui-gesturerecognizer-c.md).
+Implements a long press gesture recognizer. Inherits from [GestureRecognizer](arkts-arkui-gesturerecognizer-c.md).
 
 **Inheritance/Implementation:** LongPressRecognizer extends [GestureRecognizer](arkts-arkui-gesturerecognizer-c.md)
 
@@ -19,7 +19,7 @@ Implements a number press gesture recognizer. Inherits from [GestureRecognizer](
 getAllowableMovement(): number
 ```
 
-Obtains the maximum movement distance allowed for gesture recognition by the number press gesture recognizer.
+Obtains the maximum movement distance allowed for gesture recognition by the long press gesture recognizer.
 
 **Since:** 22
 
@@ -33,7 +33,7 @@ Obtains the maximum movement distance allowed for gesture recognition by the num
 
 | Type | Description |
 | --- | --- |
-| number | Maximum movement distance recognized by the number press gesture recognizer, in px. |
+| number | Maximum movement distance recognized by the long press gesture recognizer, in px. |
 
 ## getDuration
 
@@ -41,7 +41,7 @@ Obtains the maximum movement distance allowed for gesture recognition by the num
 getDuration(): number
 ```
 
-Obtains the minimum duration required for the number press gesture to be recognized.
+Obtains the minimum duration required for the long press gesture to be recognized.
 
 **Since:** 18
 
@@ -63,7 +63,7 @@ Obtains the minimum duration required for the number press gesture to be recogni
 isRepeat(): boolean
 ```
 
-Checks whether the number press gesture recognizer is set to trigger repeated callbacks.
+Checks whether the long press gesture recognizer is set to trigger repeated callbacks.
 
 **Since:** 18
 
@@ -77,4 +77,4 @@ Checks whether the number press gesture recognizer is set to trigger repeated ca
 
 | Type | Description |
 | --- | --- |
-| boolean | Whether the number press gesture recognizer is set to trigger repeated callbacks. **false**: Repeated callbacks are not triggered. **true**: Repeated callbacks are triggered. |
+| boolean | Whether the long press gesture recognizer is set to trigger repeated callbacks. **false**: Repeated callbacks are not triggered. **true**: Repeated callbacks are triggered. |

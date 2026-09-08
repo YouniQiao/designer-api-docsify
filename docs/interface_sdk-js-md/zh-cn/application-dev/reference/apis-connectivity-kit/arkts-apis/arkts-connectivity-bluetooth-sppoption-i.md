@@ -44,7 +44,7 @@ type: SppType
 
 Spp链路类型。
 
-**类型：** SppType
+**类型：** [SppType](arkts-connectivity-bluetooth-spptype-e.md)
 
 **起始版本：** 8
 

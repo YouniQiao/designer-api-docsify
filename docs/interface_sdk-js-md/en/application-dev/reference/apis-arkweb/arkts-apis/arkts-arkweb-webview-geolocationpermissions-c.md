@@ -46,36 +46,6 @@ Allows the specified origin to use the geolocation APIs. It is used to pre-autho
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.  2. Incorrect parameter types. 3.Parameter verification failed. |
 | [17100011](../errorcode-webview.md#17100011-invalid-origin) | Invalid origin. |
 
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-  origin: string = 'file:///';
-
-  build() {
-    Column() {
-      Button('allowGeolocation')
-        .onClick(() => {
-          try {
-            // Allow the specified origin to use the geolocation API.
-            webview.GeolocationPermissions.allowGeolocation(this.origin);
-          } catch (error) {
-            console.error(`Failed to allow geolocation. Code: ${(error as BusinessError).code}, Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
 ## deleteAllGeolocation
 
 ```TypeScript
@@ -95,35 +65,6 @@ Clears the geolocation permission status of all origins. It is used to revoke ge
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | incognito | boolean | No | The value **true** indicates clearing the geolocation permission status of all origins in Privacy Mode, and **false** indicates clearing the geolocation permission status of all origins in Normal Mode. Default value: **false**. The value **false** is used when null or undefined is input.<br>**Since:** 11 |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('deleteAllGeolocation')
-        .onClick(() => {
-          try {
-            // Clear the geolocation permission status of all origins.
-            webview.GeolocationPermissions.deleteAllGeolocation();
-          } catch (error) {
-            console.error(`Failed to delete all geolocation. Code: ${(error as BusinessError).code}, Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
 
 ## deleteGeolocation
 
@@ -152,40 +93,6 @@ Clears the geolocation permission status of the specified origin. It is used to 
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.  2. Incorrect parameter types. 3.Parameter verification failed. |
 | [17100011](../errorcode-webview.md#17100011-invalid-origin) | Invalid origin. |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-  origin: string = 'file:///';
-
-  build() {
-    Column() {
-      Button('deleteGeolocation')
-        .onClick(() => {
-          try {
-            // ` preserved
-</analysis>
-
-<translation>
-<seg id="0">Delete the geolocation permission status of the specified origin.
-            webview.GeolocationPermissions.deleteGeolocation(this.origin);
-          } catch (error) {
-            console.error(`Failed to delete geolocation. Code: ${(error as BusinessError).code}, Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
 
 ## getAccessibleGeolocation
 
@@ -221,41 +128,6 @@ Obtains the geolocation permission status of the specified origin. This API uses
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.  2. Incorrect parameter types. 3.Parameter verification failed. |
 | [17100011](../errorcode-webview.md#17100011-invalid-origin) | Invalid origin. |
 
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-  origin: string = 'file:///';
-
-  build() {
-    Column() {
-      Button('getAccessibleGeolocation')
-        .onClick(() => {
-          try {
-            // Obtain the geolocation permission status of the specified origin asynchronously. This API uses a promise to return the result.
-            webview.GeolocationPermissions.getAccessibleGeolocation(this.origin)
-              .then(result => {
-                console.info('getAccessibleGeolocationPromise result: ' + result);
-              }).catch((error: BusinessError) => {
-                console.error(`Failed to get accessible geolocation. Code: ${error.code}, Message: ${error.message}`);
-              });
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
 ## getAccessibleGeolocation
 
 ```TypeScript
@@ -284,42 +156,6 @@ Obtains the geolocation permission status of the specified origin. This API uses
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.  2. Incorrect parameter types. 3.Parameter verification failed. |
 | [17100011](../errorcode-webview.md#17100011-invalid-origin) | Invalid origin. |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-  origin: string = 'file:///';
-
-  build() {
-    Column() {
-      Button('getAccessibleGeolocation')
-        .onClick(() => {
-          try {
-            // Obtain the geolocation permission status of the specified origin asynchronously using a callback.
-            webview.GeolocationPermissions.getAccessibleGeolocation(this.origin, (error, result) => {
-              if (error) {
-                console.error(`Failed to get accessible geolocation. Code: ${(error as BusinessError).code}, Message: ${(error as BusinessError).message}`);
-                return;
-              }
-              console.info('getAccessibleGeolocationAsync result: ' + result);
-            });
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
 
 ## getStoredGeolocation
 
@@ -353,41 +189,6 @@ Obtains the geolocation permission status of all origins. This API uses a promis
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.  2. Incorrect parameter types. 3.Parameter verification failed. |
 
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('getStoredGeolocation')
-        .onClick(() => {
-          try {
-            // Asynchronously obtain all origin information of stored geolocation permission statuses using a promise.
-            webview.GeolocationPermissions.getStoredGeolocation()
-              .then(origins => {
-                let originsStr: string = origins.join();
-                console.info('getStoredGeolocationPromise origins: ' + originsStr);
-              }).catch((error: BusinessError) => {
-                console.error(`Failed to get stored geolocation. Code: ${error.code}, Message: ${error.message}`);
-              });
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
 ## getStoredGeolocation
 
 ```TypeScript
@@ -414,39 +215,3 @@ Obtains the geolocation permission status of all origins. This API uses an async
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.  2. Incorrect parameter types. 3.Parameter verification failed. |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('getStoredGeolocation')
-        .onClick(() => {
-          try {
-            // Obtain all origin information of stored geolocation permission statuses asynchronously using a callback.
-            webview.GeolocationPermissions.getStoredGeolocation((error, origins) => {
-              if (error) {
-                console.error(`Failed to get stored geolocation. Code: ${(error as BusinessError).code}, Message: ${(error as BusinessError).message}`);
-                return;
-              }
-              let originsStr: string = origins.join();
-              console.info('getStoredGeolocationAsync origins: ' + originsStr);
-            });
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```

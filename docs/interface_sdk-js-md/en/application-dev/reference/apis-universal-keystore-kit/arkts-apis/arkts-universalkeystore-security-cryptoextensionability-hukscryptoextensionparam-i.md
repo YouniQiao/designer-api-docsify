@@ -20,7 +20,7 @@ tag: huksExternalCrypto.HuksExternalCryptoTag | huks.HuksTag | number
 
 Parameter tag, which is used to distinguish parameters.
 
-**Type:** huksExternalCrypto.HuksExternalCryptoTag \| huks.HuksTag \| number
+**Type:** [huksExternalCrypto.HuksExternalCryptoTag](arkts-universalkeystore-huksexternalcrypto-huksexternalcryptotag-e.md) \| [huks.HuksTag](arkts-universalkeystore-huks-hukstag-e.md) \| number
 
 **Since:** 26.0.0
 

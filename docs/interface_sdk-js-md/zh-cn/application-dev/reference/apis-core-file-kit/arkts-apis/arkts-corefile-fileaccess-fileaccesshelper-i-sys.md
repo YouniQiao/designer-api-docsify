@@ -72,7 +72,7 @@ access(sourceFileUri: string) : Promise<boolean>
 | 13900025 | No space left on device |
 | 13900027 | Read-only file system |
 | 13900029 | Resource deadlock would occur |
-| 13900030 | File name too number |
+| 13900030 | File name too long |
 | 13900033 | Too many symbolic links encountered |
 | 13900034 | Operation would block |
 | 13900038 | Value too large for defined data type |
@@ -165,7 +165,7 @@ access(sourceFileUri: string, callback: AsyncCallback<boolean>): void
 | 13900025 | No space left on device |
 | 13900027 | Read-only file system |
 | 13900029 | Resource deadlock would occur |
-| 13900030 | File name too number |
+| 13900030 | File name too long |
 | 13900033 | Too many symbolic links encountered |
 | 13900034 | Operation would block |
 | 13900038 | Value too large for defined data type |
@@ -504,7 +504,7 @@ copyFile(sourceUri: string, destUri: string, fileName: string): Promise<string>
 | 13900024 | File too large |
 | 13900025 | No space left on device |
 | 13900027 | Read-only file system |
-| 13900030 | File name too number |
+| 13900030 | File name too long |
 | 13900042 | Unknown error |
 | 14300001 | IPC error |
 | 14300002 | Invalid uri |
@@ -590,7 +590,7 @@ copyFile(sourceUri: string, destUri: string, fileName: string, callback: AsyncCa
 | 13900024 | File too large |
 | 13900025 | No space left on device |
 | 13900027 | Read-only file system |
-| 13900030 | File name too number |
+| 13900030 | File name too long |
 | 13900042 | Unknown error |
 | 14300001 | IPC error |
 | 14300002 | Invalid uri |
@@ -658,7 +658,7 @@ createFile(uri: string, displayName: string) : Promise<string>
 | 13900025 | No space left on device |
 | 13900027 | Read-only file system |
 | 13900029 | Resource deadlock would occur |
-| 13900030 | File name too number |
+| 13900030 | File name too long |
 | 13900033 | Too many symbolic links encountered |
 | 13900034 | Operation would block |
 | 13900038 | Value too large for defined data type |
@@ -754,7 +754,7 @@ createFile(uri: string, displayName: string, callback: AsyncCallback<string>): v
 | 13900025 | No space left on device |
 | 13900027 | Read-only file system |
 | 13900029 | Resource deadlock would occur |
-| 13900030 | File name too number |
+| 13900030 | File name too long |
 | 13900033 | Too many symbolic links encountered |
 | 13900034 | Operation would block |
 | 13900038 | Value too large for defined data type |
@@ -851,7 +851,7 @@ delete(uri: string) : Promise<number>
 | 13900025 | No space left on device |
 | 13900027 | Read-only file system |
 | 13900029 | Resource deadlock would occur |
-| 13900030 | File name too number |
+| 13900030 | File name too long |
 | 13900033 | Too many symbolic links encountered |
 | 13900034 | Operation would block |
 | 13900038 | Value too large for defined data type |
@@ -941,7 +941,7 @@ delete(uri: string, callback: AsyncCallback<number>): void
 | 13900025 | No space left on device |
 | 13900027 | Read-only file system |
 | 13900029 | Resource deadlock would occur |
-| 13900030 | File name too number |
+| 13900030 | File name too long |
 | 13900033 | Too many symbolic links encountered |
 | 13900034 | Operation would block |
 | 13900038 | Value too large for defined data type |
@@ -1011,7 +1011,7 @@ getFileInfoFromRelativePath(relativePath: string) : Promise<FileInfo>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;FileInfo&gt; | Returns a FileInfo. |
+| Promise&lt;[FileInfo](arkts-corefile-fileaccess-fileinfo-i-sys.md)&gt; | Returns a FileInfo. |
 
 **示例**
 
@@ -1059,7 +1059,7 @@ getFileInfoFromRelativePath(relativePath: string, callback: AsyncCallback<FileIn
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | relativePath | string | 是 | Indicates the selected file or directory. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;FileInfo&gt; | 是 | The callback is used to return a fileinfo object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[FileInfo](arkts-corefile-fileaccess-fileinfo-i-sys.md)&gt; | 是 | The callback is used to return a fileinfo object. |
 
 **示例**
 
@@ -1116,7 +1116,7 @@ getFileInfoFromUri(uri: string) : Promise<FileInfo>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;FileInfo&gt; | Returns a FileInfo. |
+| Promise&lt;[FileInfo](arkts-corefile-fileaccess-fileinfo-i-sys.md)&gt; | Returns a FileInfo. |
 
 **示例**
 
@@ -1165,7 +1165,7 @@ getFileInfoFromUri(uri: string, callback: AsyncCallback<FileInfo>) : void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | uri | string | 是 | Indicates the selected file or directory. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;FileInfo&gt; | 是 | The callback is used to return a fileinfo object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[FileInfo](arkts-corefile-fileaccess-fileinfo-i-sys.md)&gt; | 是 | The callback is used to return a fileinfo object. |
 
 **示例**
 
@@ -1241,7 +1241,7 @@ getRoots(): Promise<RootIterator>
 | 13900025 | No space left on device |
 | 13900027 | Read-only file system |
 | 13900029 | Resource deadlock would occur |
-| 13900030 | File name too number |
+| 13900030 | File name too long |
 | 13900033 | Too many symbolic links encountered |
 | 13900034 | Operation would block |
 | 13900038 | Value too large for defined data type |
@@ -1335,7 +1335,7 @@ getRoots(callback: AsyncCallback<RootIterator>): void
 | 13900025 | No space left on device |
 | 13900027 | Read-only file system |
 | 13900029 | Resource deadlock would occur |
-| 13900030 | File name too number |
+| 13900030 | File name too long |
 | 13900033 | Too many symbolic links encountered |
 | 13900034 | Operation would block |
 | 13900038 | Value too large for defined data type |
@@ -1439,7 +1439,7 @@ mkDir(parentUri: string, displayName: string) : Promise<string>
 | 13900025 | No space left on device |
 | 13900027 | Read-only file system |
 | 13900029 | Resource deadlock would occur |
-| 13900030 | File name too number |
+| 13900030 | File name too long |
 | 13900033 | Too many symbolic links encountered |
 | 13900034 | Operation would block |
 | 13900038 | Value too large for defined data type |
@@ -1535,7 +1535,7 @@ mkDir(parentUri: string, displayName: string, callback: AsyncCallback<string>): 
 | 13900025 | No space left on device |
 | 13900027 | Read-only file system |
 | 13900029 | Resource deadlock would occur |
-| 13900030 | File name too number |
+| 13900030 | File name too long |
 | 13900033 | Too many symbolic links encountered |
 | 13900034 | Operation would block |
 | 13900038 | Value too large for defined data type |
@@ -1633,7 +1633,7 @@ move(sourceFile: string, destFile: string) : Promise<string>
 | 13900025 | No space left on device |
 | 13900027 | Read-only file system |
 | 13900029 | Resource deadlock would occur |
-| 13900030 | File name too number |
+| 13900030 | File name too long |
 | 13900033 | Too many symbolic links encountered |
 | 13900034 | Operation would block |
 | 13900038 | Value too large for defined data type |
@@ -1724,7 +1724,7 @@ move(sourceFile: string, destFile: string, callback: AsyncCallback<string>): voi
 | 13900025 | No space left on device |
 | 13900027 | Read-only file system |
 | 13900029 | Resource deadlock would occur |
-| 13900030 | File name too number |
+| 13900030 | File name too long |
 | 13900033 | Too many symbolic links encountered |
 | 13900034 | Operation would block |
 | 13900038 | Value too large for defined data type |
@@ -1823,7 +1823,7 @@ moveFile(sourceUri: string, destUri: string, fileName: string): Promise<string>
 | 13900024 | File too large |
 | 13900025 | No space left on device |
 | 13900027 | Read-only file system |
-| 13900030 | File name too number |
+| 13900030 | File name too long |
 | 13900042 | Unknown error |
 | 14300001 | IPC error |
 | 14300002 | Invalid uri |
@@ -1908,7 +1908,7 @@ moveFile(sourceUri: string, destUri: string, fileName: string, callback: AsyncCa
 | 13900024 | File too large |
 | 13900025 | No space left on device |
 | 13900027 | Read-only file system |
-| 13900030 | File name too number |
+| 13900030 | File name too long |
 | 13900042 | Unknown error |
 | 14300001 | IPC error |
 | 14300002 | Invalid uri |
@@ -2000,7 +2000,7 @@ moveItem(sourceUri: string, destUri: string, force?: boolean): Promise<Array<Mov
 | 13900024 | File too large |
 | 13900025 | No space left on device |
 | 13900027 | Read-only file system |
-| 13900030 | File name too number |
+| 13900030 | File name too long |
 | 13900042 | Unknown error |
 | 14300001 | IPC error |
 | 14300002 | Invalid uri |
@@ -2127,7 +2127,7 @@ moveItem(sourceUri: string, destUri: string, callback: AsyncCallback<Array<MoveR
 | 13900024 | File too large |
 | 13900025 | No space left on device |
 | 13900027 | Read-only file system |
-| 13900030 | File name too number |
+| 13900030 | File name too long |
 | 13900042 | Unknown error |
 | 14300001 | IPC error |
 | 14300002 | Invalid uri |
@@ -2222,7 +2222,7 @@ moveItem(sourceUri: string, destUri: string, force: boolean, callback: AsyncCall
 | 13900024 | File too large |
 | 13900025 | No space left on device |
 | 13900027 | Read-only file system |
-| 13900030 | File name too number |
+| 13900030 | File name too long |
 | 13900042 | Unknown error |
 | 14300001 | IPC error |
 | 14300002 | Invalid uri |
@@ -2321,7 +2321,7 @@ openFile(uri: string, flags: OPENFLAGS) : Promise<number>
 | 13900025 | No space left on device |
 | 13900027 | Read-only file system |
 | 13900029 | Resource deadlock would occur |
-| 13900030 | File name too number |
+| 13900030 | File name too long |
 | 13900033 | Too many symbolic links encountered |
 | 13900034 | Operation would block |
 | 13900038 | Value too large for defined data type |
@@ -2410,7 +2410,7 @@ openFile(uri: string, flags: OPENFLAGS, callback: AsyncCallback<number>): void
 | 13900025 | No space left on device |
 | 13900027 | Read-only file system |
 | 13900029 | Resource deadlock would occur |
-| 13900030 | File name too number |
+| 13900030 | File name too long |
 | 13900033 | Too many symbolic links encountered |
 | 13900034 | Operation would block |
 | 13900038 | Value too large for defined data type |
@@ -2651,7 +2651,7 @@ rename(uri: string, displayName: string) : Promise<string>
 | 13900025 | No space left on device |
 | 13900027 | Read-only file system |
 | 13900029 | Resource deadlock would occur |
-| 13900030 | File name too number |
+| 13900030 | File name too long |
 | 13900033 | Too many symbolic links encountered |
 | 13900034 | Operation would block |
 | 13900038 | Value too large for defined data type |
@@ -2741,7 +2741,7 @@ rename(uri: string, displayName: string, callback: AsyncCallback<string>): void
 | 13900025 | No space left on device |
 | 13900027 | Read-only file system |
 | 13900029 | Resource deadlock would occur |
-| 13900030 | File name too number |
+| 13900030 | File name too long |
 | 13900033 | Too many symbolic links encountered |
 | 13900034 | Operation would block |
 | 13900038 | Value too large for defined data type |

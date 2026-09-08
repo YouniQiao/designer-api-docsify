@@ -38,7 +38,7 @@ direction?: Direction
 
 Indicates the attribute of the current counter direction.
 
-**Type:** Direction
+**Type:** [Direction](arkts-arkui-direction-e.md)
 
 **Since:** 12
 

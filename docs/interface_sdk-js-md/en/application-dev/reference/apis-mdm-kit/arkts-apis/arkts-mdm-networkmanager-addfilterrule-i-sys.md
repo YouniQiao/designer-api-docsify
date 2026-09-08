@@ -22,7 +22,7 @@ action: Action
 
 Action to take, that is, receive or discard the data packets.
 
-**Type:** Action
+**Type:** [Action](arkts-mdm-networkmanager-action-e.md)
 
 **Since:** 10
 
@@ -76,7 +76,7 @@ direction: Direction
 
 Direction chains to which the rule applies.
 
-**Type:** Direction
+**Type:** [Direction](arkts-mdm-networkmanager-direction-e.md)
 
 **Since:** 10
 
@@ -112,7 +112,7 @@ protocol?: Protocol
 
 Network protocol.
 
-**Type:** Protocol
+**Type:** [Protocol](arkts-mdm-networkmanager-protocol-e.md)
 
 **Since:** 10
 

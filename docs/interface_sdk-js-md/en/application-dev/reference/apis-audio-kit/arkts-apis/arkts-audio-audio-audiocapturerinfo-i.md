@@ -36,7 +36,7 @@ source: SourceType
 
 Audio source type.
 
-**Type:** SourceType
+**Type:** [SourceType](arkts-audio-audio-sourcetype-e.md)
 
 **Since:** 8
 

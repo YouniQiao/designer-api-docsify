@@ -123,7 +123,7 @@ The display size of the symbol glyph is controlled by the **fontSize** setting. 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number \| string \| Resource | Yes | Size of the **SymbolGlyph** component.Default value: **16fp**Unit: fpPercentage strings are not supported. |
+| value | number \| string \| [Resource](../arkts-apis/arkts-arkui-resource-t.md) | Yes | Size of the **SymbolGlyph** component.Default value: **16fp**Unit: fpPercentage strings are not supported. |
 
 ## fontWeight
 
@@ -153,7 +153,7 @@ The **sys.symbol.ohos_lungs** icon does not support font weight setting.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number \| FontWeight \| string | Yes | Font weight of the **SymbolGlyph** component.Default value: **FontWeight.Normal |
+| value | number \| [FontWeight](../arkts-apis/arkts-arkui-fontweight-e.md) \| string | Yes | Font weight of the **SymbolGlyph** component.Default value: **FontWeight.Normal |
 
 ## fontWeight
 
@@ -177,7 +177,7 @@ Used to set the font weight of symbolGlyph.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number \| FontWeight \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | Yes | the symbolGlyph font weight. For the number type, the value range is [100, 900]. When enableVariableFontWeight in fontWeightConfigs is **false**, the value must be a multiple of 100; when **true**, any integer within [100, 900] is supported. The default value is **FontWeight.Normal**. |
+| value | number \| [FontWeight](../arkts-apis/arkts-arkui-fontweight-e.md) \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | Yes | the symbolGlyph font weight. For the number type, the value range is [100, 900]. When enableVariableFontWeight in fontWeightConfigs is **false**, the value must be a multiple of 100; when **true**, any integer within [100, 900] is supported. The default value is **FontWeight.Normal**. |
 | fontWeightConfigs | [FontWeightConfigs](../arkts-apis/arkts-arkui-fontweightconfigs-i.md) | No | the configuration of font weight. If not specified, the default values of FontWeightConfigs are used: enableVariableFontWeight defaults to **false**, and enableDeviceFontWeightCategory defaults to **true**. |
 
 ## maxFontScale
@@ -200,7 +200,7 @@ Sets the maximum font scale factor for the **SymbolGlyph** component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scale | [Optional](arkts-arkui-optional-t.md)&lt;number \| Resource&gt; | Yes | Maximum font scale factor for the **SymbolGlyph** component.Value range: [1, +∞)   **NOTE：**A value less than 1 is handled as **1**. Abnormal values are ineffective by default. |
+| scale | [Optional](arkts-arkui-optional-t.md)&lt;number \| [Resource](../arkts-apis/arkts-arkui-resource-t.md)&gt; | Yes | Maximum font scale factor for the **SymbolGlyph** component.Value range: [1, +∞)   **NOTE：**A value less than 1 is handled as **1**. Abnormal values are ineffective by default. |
 
 ## minFontScale
 
@@ -222,7 +222,7 @@ Sets the minimum font scale factor for the **SymbolGlyph** component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scale | [Optional](arkts-arkui-optional-t.md)&lt;number \| Resource&gt; | Yes | Minimum font scale factor for the **SymbolGlyph** component.Value range: [0, 1]The value **0** results in the minimum scaling.   **NOTE：**A value less than 0 is handled as 0. A value greater than 1 is handled as 1. Abnormal values are ineffective by default. |
+| scale | [Optional](arkts-arkui-optional-t.md)&lt;number \| [Resource](../arkts-apis/arkts-arkui-resource-t.md)&gt; | Yes | Minimum font scale factor for the **SymbolGlyph** component.Value range: [0, 1]The value **0** results in the minimum scaling.   **NOTE：**A value less than 0 is handled as 0. A value greater than 1 is handled as 1. Abnormal values are ineffective by default. |
 
 ## renderingStrategy
 

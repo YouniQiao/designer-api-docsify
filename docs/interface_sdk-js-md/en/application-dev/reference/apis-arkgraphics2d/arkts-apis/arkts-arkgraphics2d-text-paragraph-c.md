@@ -136,7 +136,7 @@ Obtains the actually visible text range in the specified line, excluding any ove
 
 | Type | Description |
 | --- | --- |
-| Range | Text range obtained. If the line index is invalid, **start** and **end** are both **0**. |
+| [Range](arkts-arkgraphics2d-text-range-i.md) | Text range obtained. If the line index is invalid, **start** and **end** are both **0**. |
 
 **Examples**
 
@@ -192,13 +192,13 @@ Obtains the character position information closest to the given coordinates.
 | --- | --- | --- | --- |
 | x | number | Yes | Horizontal coordinate in the text layout area, in physical pixels (px). X offset relative to the top-left corner of the text layout area, with the right direction as positive. Supports floating-point values and accepts negative values, which indicate positions to the left of the text layout area. If the coordinates are beyond the text layout area, the nearest character position is returned. It can be obtained through a touch event or click event. |
 | y | number | Yes | Vertical coordinate in the text layout area, in physical pixels (px). Y offset relative to the top-left corner of the text layout area, with the downward direction as positive. Supports floating-point values and accepts negative values, which indicate positions above the text layout area. If the coordinates are beyond the text layout area, the nearest character position is returned. It can be obtained through a touch event or click event. |
-| encoding | drawing.TextEncoding | Yes | Text encoding type. Currently, only UTF-8 and UTF-16 encoding types are supported. For UTF-8 encoding, the returned character position indicates the byte offset. For UTF-16 encoding, the returned character position indicates the UTF-16 encoding unit offset. |
+| encoding | [drawing.TextEncoding](arkts-arkgraphics2d-drawing-textencoding-e.md) | Yes | Text encoding type. Currently, only UTF-8 and UTF-16 encoding types are supported. For UTF-8 encoding, the returned character position indicates the byte offset. For UTF-16 encoding, the returned character position indicates the UTF-16 encoding unit offset. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| PositionWithAffinity | Character position. |
+| [PositionWithAffinity](arkts-arkgraphics2d-text-positionwithaffinity-i.md) | Character position. |
 
 **Error codes:**
 
@@ -262,14 +262,14 @@ Obtains the character range corresponding to the specified glyph range.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| glyphRange | Range | Yes | Glyph range. |
-| encoding | drawing.TextEncoding | Yes | Text encoding type. Currently, only UTF-8 and UTF-16 encoding types are supported. For UTF-8 encoding, the returned character range indicates the byte range. For UTF-16 encoding, the returned character range indicates the UTF-16 encoding unit range. |
+| glyphRange | [Range](arkts-arkgraphics2d-text-range-i.md) | Yes | Glyph range. |
+| encoding | [drawing.TextEncoding](arkts-arkgraphics2d-drawing-textencoding-e.md) | Yes | Text encoding type. Currently, only UTF-8 and UTF-16 encoding types are supported. For UTF-8 encoding, the returned character range indicates the byte range. For UTF-16 encoding, the returned character range indicates the UTF-16 encoding unit range. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;Range&gt; | Character range. If the array contains one element, it indicates the character range. If the array contains two elements, the first element indicates the character range, and the second element indicates the actual glyph range. |
+| Array&lt;[Range](arkts-arkgraphics2d-text-range-i.md)&gt; | Character range. If the array contains one element, it indicates the character range. If the array contains two elements, the first element indicates the character range, and the second element indicates the actual glyph range. |
 
 **Error codes:**
 
@@ -337,7 +337,7 @@ Obtains the position of a glyph closest to the given coordinates.
 
 | Type | Description |
 | --- | --- |
-| PositionWithAffinity | Position of the glyph. |
+| [PositionWithAffinity](arkts-arkgraphics2d-text-positionwithaffinity-i.md) | Position of the glyph. |
 
 **Examples**
 
@@ -365,14 +365,14 @@ Obtains the glyph range corresponding to the specified character range.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| characterRange | Range | Yes | Character range. |
-| encoding | drawing.TextEncoding | Yes | Text encoding type. Currently, only UTF-8 and UTF-16 encoding types are supported. For UTF-8 encoding, the returned actual character range indicates the byte range. For UTF-16 encoding, the returned actual character range indicates the UTF-16 encoding unit range. |
+| characterRange | [Range](arkts-arkgraphics2d-text-range-i.md) | Yes | Character range. |
+| encoding | [drawing.TextEncoding](arkts-arkgraphics2d-drawing-textencoding-e.md) | Yes | Text encoding type. Currently, only UTF-8 and UTF-16 encoding types are supported. For UTF-8 encoding, the returned actual character range indicates the byte range. For UTF-16 encoding, the returned actual character range indicates the UTF-16 encoding unit range. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;Range&gt; | Glyph range. The array contains two elements. The first element indicates the glyph range, and the second element indicates the actual character range. |
+| Array&lt;[Range](arkts-arkgraphics2d-text-range-i.md)&gt; | Glyph range. The array contains two elements. The first element indicates the glyph range, and the second element indicates the actual character range. |
 
 **Error codes:**
 
@@ -543,7 +543,7 @@ Obtains an array of line measurement information.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;LineMetrics&gt; | Array of line measurement information. |
+| Array&lt;[LineMetrics](arkts-arkgraphics2d-text-linemetrics-i.md)&gt; | Array of line measurement information. |
 
 **Examples**
 
@@ -575,7 +575,7 @@ Obtains the line measurement information of a line.
 
 | Type | Description |
 | --- | --- |
-| LineMetrics \| undefined | LineMetrics** object containing the measurement information if the specified line number is valid and the measurement information exists. If the line number is invalid or the measurement information cannot be obtained, **undefined** is returned. |
+| [LineMetrics](arkts-arkgraphics2d-text-linemetrics-i.md) \| undefined | LineMetrics** object containing the measurement information if the specified line number is valid and the measurement information exists. If the line number is invalid or the measurement information cannot be obtained, **undefined** is returned. |
 
 **Examples**
 
@@ -765,7 +765,7 @@ Obtains the style configuration of a paragraph.
 
 | Type | Description |
 | --- | --- |
-| ParagraphStyle | Style configuration of the paragraph. |
+| [ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md) | Style configuration of the paragraph. |
 
 **Examples**
 
@@ -890,7 +890,7 @@ Obtains the rectangles occupied by all placeholders in the text.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;TextBox&gt; | Array holding the rectangles obtained. |
+| Array&lt;[TextBox](arkts-arkgraphics2d-text-textbox-i.md)&gt; | Array holding the rectangles obtained. |
 
 **Examples**
 
@@ -916,15 +916,15 @@ Obtains the rectangles occupied by the characters in the range of the text under
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| range | Range | Yes | Range of the text. |
-| widthStyle | RectWidthStyle | Yes | Width of the rectangle. |
-| heightStyle | RectHeightStyle | Yes | Height of the rectangle. |
+| range | [Range](arkts-arkgraphics2d-text-range-i.md) | Yes | Range of the text. |
+| widthStyle | [RectWidthStyle](arkts-arkgraphics2d-text-rectwidthstyle-e.md) | Yes | Width of the rectangle. |
+| heightStyle | [RectHeightStyle](arkts-arkgraphics2d-text-rectheightstyle-e.md) | Yes | Height of the rectangle. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;TextBox&gt; | Array holding the rectangles obtained. |
+| Array&lt;[TextBox](arkts-arkgraphics2d-text-textbox-i.md)&gt; | Array holding the rectangles obtained. |
 
 **Examples**
 
@@ -1034,9 +1034,9 @@ The returned range depends on the specific truncation of the paragraph (for exam
 | Only maxLines truncation is set (no ellipsis).| the text from the first line to the end of the maxLines line.|
 | EllipsisMode.END| The range is the text before the ellipsis.|
 | EllipsisMode.START| The value is the text after the ellipsis.|
-| EllipsisMode.MIDDLE| the text range before and after the ellipsis is returned.|
-| EllipsisMode.MULTILINE_START| the text range before and after the ellipsis is returned.|
-| EllipsisMode.MULTILINE_MIDDLE| the text range before and after the ellipsis is returned.|
+| [EllipsisMode.MIDDLE](arkts-arkgraphics2d-text-ellipsismode-e.md) | the text range before and after the ellipsis is returned.|
+| [EllipsisMode.MULTILINE_START](arkts-arkgraphics2d-text-ellipsismode-e.md) | the text range before and after the ellipsis is returned.|
+| [EllipsisMode.MULTILINE_MIDDLE](arkts-arkgraphics2d-text-ellipsismode-e.md) | the text range before and after the ellipsis is returned.|
 
 **Since:** 26.0.0
 
@@ -1050,7 +1050,7 @@ The returned range depends on the specific truncation of the paragraph (for exam
 
 | Type | Description |
 | --- | --- |
-| Array&lt;Range&gt; | Array of the visible text range of a paragraph. The range is the index of the UTF-16 encoding unit. |
+| Array&lt;[Range](arkts-arkgraphics2d-text-range-i.md)&gt; | Array of the visible text range of a paragraph. The range is the index of the UTF-16 encoding unit. |
 
 **Examples**
 
@@ -1082,7 +1082,7 @@ Obtains the range of the word where the glyph with a given offset is located.
 
 | Type | Description |
 | --- | --- |
-| Range | Range of the word. |
+| [Range](arkts-arkgraphics2d-text-range-i.md) | Range of the word. |
 
 **Examples**
 
@@ -1278,7 +1278,7 @@ Draws text on the canvas with (x, y) as the upper-left corner. You must call [la
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| canvas | drawing.Canvas | Yes | Target canvas. |
+| canvas | [drawing.Canvas](arkts-arkgraphics2d-drawing-canvas-c.md) | Yes | Target canvas. |
 | x | number | Yes | Horizontal coordinate of the upper left corner, which is a floating-point value, in physical pixels (px). |
 | y | number | Yes | Vertical coordinate of the upper left corner, which is a floating-point value, in physical pixels (px). |
 
@@ -1290,67 +1290,6 @@ let opts: image.InitializationOptions = { editable: true, pixelFormat: 3, size: 
 let pixelMap: image.PixelMap = image.createPixelMapSync(color, opts);
 let canvas = new drawing.Canvas(pixelMap);
 paragraph.paint(canvas, 0, 0);
-```
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D'
-import { image } from '@kit.ImageKit'
-
-function textFunc(pixelmap: PixelMap) {
-  let canvas = new drawing.Canvas(pixelmap);
-  lines[0].paint(canvas, 0, 0);
-}
-
-@Entry
-@Component
-struct Index {
-  @State pixelmap?: PixelMap = undefined;
-  fun: Function = textFunc;
-  build() {
-    Column() {
-      Image(this.pixelmap).width(200).height(200);
-      Button().onClick(() => {
-        if (this.pixelmap == undefined) {
-          const color: ArrayBuffer = new ArrayBuffer(160000);
-          let opts: image.InitializationOptions = { editable: true, pixelFormat: 3, size: { height: 200, width: 200 } }
-          this.pixelmap = image.createPixelMapSync(color, opts);
-        }
-        this.fun(this.pixelmap);
-      })
-    }
-  }
-}
-```
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D'
-import { text } from '@kit.ArkGraphics2D'
-import { image } from '@kit.ImageKit'
-
-function textFunc(pixelmap: PixelMap) {
-  let canvas = new drawing.Canvas(pixelmap);
-  runs[0].paint(canvas, 0, 0);
-}
-
-@Entry
-@Component
-struct Index {
-  @State pixelmap?: PixelMap = undefined;
-  fun: Function = textFunc;
-  build() {
-    Column() {
-      Image(this.pixelmap).width(200).height(200);
-      Button().onClick(() => {
-        if (this.pixelmap == undefined) {
-          const color: ArrayBuffer = new ArrayBuffer(160000);
-          let opts: image.InitializationOptions = { editable: true, pixelFormat: 3, size: { height: 200, width: 200 } }
-          this.pixelmap = image.createPixelMapSync(color, opts);
-        }
-        this.fun(this.pixelmap);
-      })
-    }
-  }
-}
 ```
 
 ## paintOnPath
@@ -1371,8 +1310,8 @@ Draws text along a path on the canvas. You must call [layout()](#layout) for typ
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| canvas | drawing.Canvas | Yes | Target canvas. |
-| path | drawing.Path | Yes | Path along which the text is drawn. |
+| canvas | [drawing.Canvas](arkts-arkgraphics2d-drawing-canvas-c.md) | Yes | Target canvas. |
+| path | [drawing.Path](arkts-arkgraphics2d-drawing-path-c.md) | Yes | Path along which the text is drawn. |
 | hOffset | number | Yes | Offset along the path direction. Positive values extend forward from the path start point, and negative values extend backward. Unit: physical pixels (px). |
 | vOffset | number | Yes | Offset along the vertical direction of the path. Positive values extend to the right along the path, and negative values extend to the left. Unit: physical pixels (px). |
 
@@ -1406,7 +1345,7 @@ Updates the color of the entire text span. This API call also updates the decora
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | common2D.Color | Yes | Updated font color. |
+| color | [common2D.Color](arkts-arkgraphics2d-common2d-color-i.md) | Yes | Updated font color. |
 
 **Examples**
 

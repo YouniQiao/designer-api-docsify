@@ -24,7 +24,7 @@ function createPicture(mainPixelmap : PixelMap): Picture
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mainPixelmap | PixelMap | 是 | 主图的PixelMap。 |
+| mainPixelmap | [PixelMap](arkts-image-image-pixelmap-i.md) | 是 | 主图的PixelMap。 |
 
 **返回值：**
 

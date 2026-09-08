@@ -12,7 +12,7 @@ import { pointer } from '@kit.InputKit';
 function getTouchpadDoubleTapAndDragState(callback: AsyncCallback<boolean>): void
 ```
 
-Obtains the touchpad number-tap and drag switch state. This API uses an asynchronous callback to return the result.
+Obtains the touchpad double-tap and drag switch state. This API uses an asynchronous callback to return the result.
 
 **Since:** 14
 
@@ -71,7 +71,7 @@ struct Index {
 function getTouchpadDoubleTapAndDragState(): Promise<boolean>
 ```
 
-Obtains the touchpad number-tap and drag switch state. This API uses a promise to return the result.
+Obtains the touchpad double-tap and drag switch state. This API uses a promise to return the result.
 
 **Since:** 14
 
@@ -83,7 +83,7 @@ Obtains the touchpad number-tap and drag switch state. This API uses a promise t
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** indicates that the touchpad number-tap and drag switch is enabled, and the value **false** indicates that the touchpad number-tap and drag switch is disabled. |
+| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** indicates that the touchpad double-tap and drag switch is enabled, and the value **false** indicates that the touchpad double-tap and drag switch is disabled. |
 
 **Error codes:**
 

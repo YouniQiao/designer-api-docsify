@@ -25,7 +25,7 @@ Obtains all IP addresses of the default network by resolving the host name. This
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | host | string | Yes | Host name to resolve. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;NetAddress&gt;&gt; | Yes | Callback used to return the result. If all IP addresses are successfully obtained, **error** is **undefined**, and **data** is the list of all obtained IP addresses. Otherwise, **error** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[NetAddress](arkts-network-connection-netaddress-i.md)&gt;&gt; | Yes | Callback used to return the result. If all IP addresses are successfully obtained, **error** is **undefined**, and **data** is the list of all obtained IP addresses. Otherwise, **error** is an error object. |
 
 **Error codes:**
 
@@ -49,26 +49,6 @@ connection.getAddressesByName("xxxx", (error: BusinessError, data: connection.Ne
     return;
   }
   console.info("Succeeded to get data: " + JSON.stringify(data));
-});
-```
-
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-connection.getDefaultNet().then((netHandle: connection.NetHandle) => {
-  if (netHandle.netId == 0) {
-    // If no network is connected, the obtained netId of netHandle is 0, which is abnormal. You can add specific processing based on the service requirements.
-    return;
-  }
-  let host = "www.example.com";
-  netHandle.getAddressesByName(host, (error: BusinessError, data: connection.NetAddress[]) => {
-    if (error) {
-      console.error(`Failed to get addresses. Code:${error.code}, message:${error.message}`);
-      return;
-    }
-    console.info("Succeeded to get data: " + JSON.stringify(data));
-  });
 });
 ```
 
@@ -97,7 +77,7 @@ Obtains all IP addresses of the default network by resolving the host name. This
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;NetAddress&gt;&gt; | Promise used to return all IP addresses. |
+| Promise&lt;Array&lt;[NetAddress](arkts-network-connection-netaddress-i.md)&gt;&gt; | Promise used to return all IP addresses. |
 
 **Error codes:**
 
@@ -116,20 +96,5 @@ import { connection } from '@kit.NetworkKit';
 
 connection.getAddressesByName("xxxx").then((data: connection.NetAddress[]) => {
   console.info("Succeeded to get data: " + JSON.stringify(data));
-});
-```
-
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-
-connection.getDefaultNet().then((netHandle: connection.NetHandle) => {
-  if (netHandle.netId == 0) {
-    // If no network is connected, the obtained netId of netHandle is 0, which is abnormal. You can add specific processing based on the service requirements.
-    return;
-  }
-  let host = "www.example.com";
-  netHandle.getAddressesByName(host).then((data: connection.NetAddress[]) => {
-    console.info("Succeeded to get data: " + JSON.stringify(data));
-  });
 });
 ```

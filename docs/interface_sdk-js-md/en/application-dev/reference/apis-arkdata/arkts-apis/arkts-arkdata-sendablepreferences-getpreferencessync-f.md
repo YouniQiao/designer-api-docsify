@@ -25,13 +25,13 @@ Obtains a **Preferences** instance. This API returns the result synchronously.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | context | Context | Yes | Application context. |
-| options | Options | Yes | Configuration options of the **Preferences** instance. |
+| options | [Options](arkts-arkdata-sendablepreferences-options-i.md) | Yes | Configuration options of the **Preferences** instance. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Preferences | Preferences** instance obtained. |
+| [Preferences](arkts-arkdata-sendablepreferences-preferences-i.md) | Preferences** instance obtained. |
 
 **Error codes:**
 

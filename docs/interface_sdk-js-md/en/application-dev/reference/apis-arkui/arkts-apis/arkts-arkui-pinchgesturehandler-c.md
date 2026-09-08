@@ -55,7 +55,7 @@ Sets the callback for pinch gesture cancellation. This callback is triggered whe
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | Callback&lt;void&gt; | Yes | Callback invoked when the pinch gesture is cancelled. No gesture event information is returned. |
+| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;void&gt; | Yes | Callback invoked when the pinch gesture is cancelled. No gesture event information is returned. |
 
 **Return value:**
 
@@ -83,7 +83,7 @@ Sets the callback for pinch gesture cancellation. This callback is triggered whe
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | Callback&lt;[GestureEvent](arkts-arkui-gestureevent-i.md)&gt; | Yes | Callback invoked when the pinch gesture is cancelled. Gesture event information is returned. |
+| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;[GestureEvent](arkts-arkui-gestureevent-i.md)&gt; | Yes | Callback invoked when the pinch gesture is cancelled. Gesture event information is returned. |
 
 **Return value:**
 
@@ -111,7 +111,7 @@ Sets the callback for pinch gesture recognition completion. This callback is tri
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | Callback&lt;[GestureEvent](arkts-arkui-gestureevent-i.md)&gt; | Yes | Callback invoked when pinch gesture recognition completes. |
+| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;[GestureEvent](arkts-arkui-gestureevent-i.md)&gt; | Yes | Callback invoked when pinch gesture recognition completes. |
 
 **Return value:**
 
@@ -139,7 +139,7 @@ Sets the callback for successful pinch gesture recognition.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | Callback&lt;[GestureEvent](arkts-arkui-gestureevent-i.md)&gt; | Yes | Callback invoked upon successful pinch gesture recognition. |
+| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;[GestureEvent](arkts-arkui-gestureevent-i.md)&gt; | Yes | Callback invoked upon successful pinch gesture recognition. |
 
 **Return value:**
 
@@ -167,7 +167,7 @@ Sets the callback for pinch gesture movement updates. The callback is triggered 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | Callback&lt;[GestureEvent](arkts-arkui-gestureevent-i.md)&gt; | Yes | Callback invoked during pinch gesture movement. |
+| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;[GestureEvent](arkts-arkui-gestureevent-i.md)&gt; | Yes | Callback invoked during pinch gesture movement. |
 
 **Return value:**
 

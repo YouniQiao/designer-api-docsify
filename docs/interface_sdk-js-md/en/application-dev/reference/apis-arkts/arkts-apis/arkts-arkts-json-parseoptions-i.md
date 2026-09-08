@@ -20,7 +20,7 @@ bigIntMode: BigIntMode
 
 Mode for processing BigInt.
 
-**Type:** BigIntMode
+**Type:** [BigIntMode](arkts-arkts-json-bigintmode-e.md)
 
 **Since:** 12
 

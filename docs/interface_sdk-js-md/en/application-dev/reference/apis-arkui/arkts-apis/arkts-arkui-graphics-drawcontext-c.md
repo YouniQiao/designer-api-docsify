@@ -14,7 +14,7 @@ get canvas(): drawing.Canvas
 
 Obtains the canvas used for drawing.
 
-**Type:** drawing.Canvas
+**Type:** [drawing.Canvas](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-drawing-canvas-c.md)
 
 **Since:** 11
 

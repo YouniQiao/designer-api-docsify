@@ -156,6 +156,7 @@ getLuminanceSampler(target: TargetInfo): LuminanceSampler | undefined
 **示例**
 
 参考[offBackgroundLuminanceChange](arkts-arkui-arkui-uicontext-luminancesampler-c-sys.md#offbackgroundluminancechange)接口的示例。
+- simpleType:
 
 ## recycleInvisibleImageMemory
 

@@ -36,7 +36,7 @@ type: ServiceType
 
 Service type.
 
-**Type:** ServiceType
+**Type:** [ServiceType](arkts-calendar-calendarmanager-servicetype-e.md)
 
 **Since:** 10
 

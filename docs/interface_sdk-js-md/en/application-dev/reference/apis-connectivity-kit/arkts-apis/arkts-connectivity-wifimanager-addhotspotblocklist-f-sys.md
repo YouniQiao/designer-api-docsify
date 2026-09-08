@@ -26,7 +26,7 @@ Add the station into the block list, the station can NOT access the hotspot.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| stationInfo | StationInfo | Yes | station which will be added in the block list. |
+| stationInfo | [StationInfo](arkts-connectivity-wifimanager-stationinfo-i-sys.md) | Yes | station which will be added in the block list. |
 
 **Error codes:**
 

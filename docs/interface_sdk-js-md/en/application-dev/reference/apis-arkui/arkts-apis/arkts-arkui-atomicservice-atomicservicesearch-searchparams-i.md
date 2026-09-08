@@ -126,7 +126,7 @@ copyOptions?: CopyOptions
 
 Whether the input text can be copied. Default value: **CopyOptions.LocalDevice**.
 
-**Type:** CopyOptions
+**Type:** [CopyOptions](arkts-arkui-copyoptions-e.md)
 
 **Since:** 18
 
@@ -224,7 +224,7 @@ enterKeyType?: EnterKeyType
 
 Type of the Enter key. Default value: **EnterKeyType.Search**.
 
-**Type:** EnterKeyType
+**Type:** [EnterKeyType](../arkts-components/arkts-arkui-enterkeytype-e.md)
 
 **Since:** 18
 
@@ -280,7 +280,7 @@ hideSelectionMenu?: boolean
 
 Whether to hide the system text selection menu.
 
-**true**: The system text selection menu does not appear under the following circumstances: clicking the text box cursor, number-pressing the text box, number-tapping the text box, triple-tapping the text box, or right-clicking the text box. **false**: The system text selection menu appears under the following circumstances: clicking the text box cursor, number-pressing the text box, number-tapping the text box, triple-tapping the text box, or right-clicking the text box. Default value: **false**.
+**true**: The system text selection menu does not appear under the following circumstances: clicking the text box cursor, long-pressing the text box, double-tapping the text box, triple-tapping the text box, or right-clicking the text box. **false**: The system text selection menu appears under the following circumstances: clicking the text box cursor, long-pressing the text box, double-tapping the text box, triple-tapping the text box, or right-clicking the text box. Default value: **false**.
 
 **Type:** boolean
 
@@ -317,7 +317,7 @@ letterSpacing?: number | string | Resource
 
 Letter spacing. A positive value causes characters to spread farther apart, and a negative value bring characters closer together. The value for floating point numbers is **0.0**, in units of px. If the input is not a number and cannot be parsed as a number, the default value will be used.
 
-**Type:** number \| string \| Resource
+**Type:** number \| string \| [Resource](arkts-arkui-resource-t.md)
 
 **Since:** 18
 
@@ -333,7 +333,7 @@ maxFontSize?: number | string | Resource
 
 Maximum font size. For the setting to take effect, this attribute must be used together with **minFontSize** or layout constraint settings. Default value: **undefined**.
 
-**Type:** number \| string \| Resource
+**Type:** number \| string \| [Resource](arkts-arkui-resource-t.md)
 
 **Since:** 18
 
@@ -365,7 +365,7 @@ minFontSize?: number | string | Resource
 
 Minimum font size. For the setting to take effect, this attribute must be used together with **maxFontSize** or layout constraint settings. Default value: **undefined**.
 
-**Type:** number \| string \| Resource
+**Type:** number \| string \| [Resource](arkts-arkui-resource-t.md)
 
 **Since:** 18
 
@@ -628,7 +628,7 @@ textAlign?: TextAlign
 
 Text alignment mode in the search text box. Default value: **TextAlign.Start**.
 
-**Type:** TextAlign
+**Type:** [TextAlign](arkts-arkui-textalign-e.md)
 
 **Since:** 18
 

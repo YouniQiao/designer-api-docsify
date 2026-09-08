@@ -50,16 +50,6 @@ countText(text: string): number
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
 
-**示例**
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-let font = new drawing.Font();
-let resultNumber: number = font.countText('ABCDE');
-console.info("count text number: " + resultNumber);
-```
-
 ## createPathForGlyph
 
 ```TypeScript
@@ -84,28 +74,7 @@ createPathForGlyph(index: number): Path
 
 | 类型 | 说明 |
 | --- | --- |
-| Path | 返回指定字形的路径轮廓。 |
-
-**示例**
-
-```TypeScript
-import { RenderNode } from '@kit.ArkUI';
-import { drawing } from '@kit.ArkGraphics2D';
-
-class DrawingRenderNode extends RenderNode {
-  draw(context : DrawContext) {
-    const canvas = context.canvas;
-    let font = new drawing.Font();
-    font.setSize(50);
-    let text: string = '你好';
-    let glyphs: number[] = font.textToGlyphs(text);
-    for (let index = 0; index < glyphs.length; index++) {
-      let path: drawing.Path = font.createPathForGlyph(glyphs[index]);
-      canvas.drawPath(path);
-    }
-  }
-}
-```
+| [Path](arkts-arkgraphics2d-drawing-path-c.md) | 返回指定字形的路径轮廓。 |
 
 ## enableEmbolden
 
@@ -133,15 +102,6 @@ enableEmbolden(isEmbolden: boolean): void
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
 
-**示例**
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-let font = new drawing.Font();
-font.enableEmbolden(true);
-```
-
 ## enableLinearMetrics
 
 ```TypeScript
@@ -167,15 +127,6 @@ enableLinearMetrics(isLinearMetrics: boolean): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
-
-**示例**
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-let font = new drawing.Font();
-font.enableLinearMetrics(true);
-```
 
 ## enableSubpixel
 
@@ -203,15 +154,6 @@ enableSubpixel(isSubpixel: boolean): void
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
 
-**示例**
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-let font = new drawing.Font();
-font.enableSubpixel(true);
-```
-
 ## getBounds
 
 ```TypeScript
@@ -236,22 +178,7 @@ getBounds(glyphs: Array<number>): Array<common2D.Rect>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;common2D.Rect&gt; | 返回字形边界矩形数组。 |
-
-**示例**
-
-```TypeScript
-import { common2D, drawing } from '@kit.ArkGraphics2D';
-
-let font: drawing.Font = new drawing.Font();
-let text: string = 'hello world';
-let glyphs: number[] = font.textToGlyphs(text);
-let fontBounds: Array<common2D.Rect> = font.getBounds(glyphs);
-for (let index = 0; index < fontBounds.length; index++) {
-  console.info("get fontBounds[", index, "] left:", fontBounds[index].left, " top:", fontBounds[index].top,
-    " right:", fontBounds[index].right, " bottom:", fontBounds[index].bottom);
-}
-```
+| Array&lt;[common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md)&gt; | 返回字形边界矩形数组。 |
 
 ## getEdging
 
@@ -273,15 +200,6 @@ getEdging(): FontEdging
 | --- | --- |
 | [FontEdging](arkts-arkgraphics2d-drawing-fontedging-e.md) | 返回字型边缘效果。 |
 
-**示例**
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-let font: drawing.Font = new drawing.Font();
-console.info("values=" + font.getEdging());
-```
-
 ## getHinting
 
 ```TypeScript
@@ -301,15 +219,6 @@ getHinting(): FontHinting
 | 类型 | 说明 |
 | --- | --- |
 | [FontHinting](arkts-arkgraphics2d-drawing-fonthinting-e.md) | 返回字型轮廓效果。 |
-
-**示例**
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-let font: drawing.Font = new drawing.Font();
-console.info("values=" + font.getHinting());
-```
 
 ## getMetrics
 
@@ -331,15 +240,6 @@ getMetrics(): FontMetrics
 | --- | --- |
 | [FontMetrics](arkts-arkgraphics2d-drawing-fontmetrics-i.md) | 与字体关联的度量属性对象。 |
 
-**示例**
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-let font = new drawing.Font();
-let metrics = font.getMetrics();
-```
-
 ## getScaleX
 
 ```TypeScript
@@ -359,16 +259,6 @@ getScaleX(): number
 | 类型 | 说明 |
 | --- | --- |
 | number | 返回字型在x轴方向上的缩放比例。 |
-
-**示例**
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-let font: drawing.Font = new drawing.Font();
-font.setScaleX(2);
-console.info("values=" + font.getScaleX());
-```
 
 ## getSize
 
@@ -390,16 +280,6 @@ getSize(): number
 | --- | --- |
 | number | 返回字型大小，浮点数。单位为物理像素px。 |
 
-**示例**
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-let font = new drawing.Font();
-font.setSize(5);
-let fontSize = font.getSize();
-```
-
 ## getSkewX
 
 ```TypeScript
@@ -419,16 +299,6 @@ getSkewX(): number
 | 类型 | 说明 |
 | --- | --- |
 | number | 返回字型在x轴方向上的倾斜比例。 |
-
-**示例**
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-let font: drawing.Font = new drawing.Font();
-font.setSkewX(-1);
-console.info("values=" + font.getSkewX());
-```
 
 ## getTextPath
 
@@ -457,33 +327,13 @@ getTextPath(text: string, byteLength: number, x: number, y: number): Path
 
 | 类型 | 说明 |
 | --- | --- |
-| Path | 返回获取到的文本的路径轮廓。 |
+| [Path](arkts-arkgraphics2d-drawing-path-c.md) | 返回获取到的文本的路径轮廓。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
-
-**示例**
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-import { buffer } from '@kit.ArkTS';
-import { RenderNode } from '@kit.ArkUI';
-
-class DrawingRenderNode extends RenderNode {
-  draw(context : DrawContext) {
-    const canvas = context.canvas;
-    let font = new drawing.Font();
-    font.setSize(50);
-    let myString: string = "Hello";
-    let length: number = buffer.from(myString).length;
-    let path = font.getTextPath(myString, length, 0, 100);
-    canvas.drawPath(path);
-  }
-}
-```
 
 ## getTextPathWithFallback
 
@@ -512,30 +362,7 @@ getTextPathWithFallback(text: string, byteLength: number, x: number, y: number):
 
 | 类型 | 说明 |
 | --- | --- |
-| Path | 返回获取到的文本路径轮廓。路径对象创建失败时返回undefined。 |
-
-**示例**
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-import { buffer } from '@kit.ArkTS';
-import { RenderNode, DrawContext } from '@kit.ArkUI';
-
-class DrawingRenderNode extends RenderNode {
-  draw(context : DrawContext) {
-    const canvas = context.canvas;
-    let font = new drawing.Font();
-    font.setSize(50);
-    let myString: string = "Hello";
-    let length = buffer.from(myString).length;
-    let path = font.getTextPathWithFallback(myString, length, 0, 100);
-    if (path == undefined) {
-      return;
-    }
-    canvas.drawPath(path);
-  }
-}
-```
+| [Path](arkts-arkgraphics2d-drawing-path-c.md) | 返回获取到的文本路径轮廓。路径对象创建失败时返回undefined。 |
 
 ## getTypeface
 
@@ -556,15 +383,6 @@ getTypeface(): Typeface
 | 类型 | 说明 |
 | --- | --- |
 | [Typeface](arkts-arkgraphics2d-drawing-typeface-c.md) | 字体。 |
-
-**示例**
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-let font = new drawing.Font();
-let typeface = font.getTypeface();
-```
 
 ## getWidths
 
@@ -598,20 +416,6 @@ getWidths(glyphs: Array<number>): Array<number>
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
 
-**示例**
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-let font: drawing.Font = new drawing.Font();
-let text: string = 'hello world';
-let glyphs: number[] = font.textToGlyphs(text);
-let fontWidths: Array<number> = font.getWidths(glyphs);
-for (let index = 0; index < fontWidths.length; index++) {
-  console.info("get fontWidths[", index, "]:", fontWidths[index]);
-}
-```
-
 ## isBaselineSnap
 
 ```TypeScript
@@ -631,17 +435,6 @@ isBaselineSnap(): boolean
 | 类型 | 说明 |
 | --- | --- |
 | boolean | 返回字型基线是否与像素对齐，true表示对齐，false表示不对齐。 |
-
-**示例**
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-let font : drawing.Font = new drawing.Font();
-font.setTypeface(new drawing.Typeface());
-font.setBaselineSnap(true);
-console.info("drawing font isBaselineSnap: " + font.isBaselineSnap());
-```
 
 ## isEmbeddedBitmaps
 
@@ -663,17 +456,6 @@ isEmbeddedBitmaps(): boolean
 | --- | --- |
 | boolean | 返回字型是否使用内嵌位图渲染的结果，true表示使用内嵌位图字形，false表示不转换成位图处理。 |
 
-**示例**
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-let font : drawing.Font = new drawing.Font();
-font.setTypeface(new drawing.Typeface());
-font.setEmbeddedBitmaps(true);
-console.info("draw isEmbeddedBitmaps: " + font.isEmbeddedBitmaps());
-```
-
 ## isEmbolden
 
 ```TypeScript
@@ -693,16 +475,6 @@ isEmbolden(): boolean
 | 类型 | 说明 |
 | --- | --- |
 | boolean | 返回字型是否设置粗体效果的结果，true表示设置了粗体效果，false表示未设置粗体效果。 |
-
-**示例**
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-let font: drawing.Font = new drawing.Font();
-font.enableEmbolden(true);
-console.info("values=" + font.isEmbolden());
-```
 
 ## isForceAutoHinting
 
@@ -724,17 +496,6 @@ isForceAutoHinting(): boolean
 | --- | --- |
 | boolean | 返回字型是否自动调整轮廓以优化渲染效果的结果，true为自动调整，false为不自动调整。 |
 
-**示例**
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-let font : drawing.Font = new drawing.Font();
-font.setTypeface(new drawing.Typeface());
-font.setForceAutoHinting(false);
-console.info("drawing isForceAutoHinting:  " + font.isForceAutoHinting());
-```
-
 ## isLinearMetrics
 
 ```TypeScript
@@ -755,16 +516,6 @@ isLinearMetrics(): boolean
 | --- | --- |
 | boolean | 返回字型是否可线性缩放的结果，true表示可线性缩放，false表示不可线性缩放。 |
 
-**示例**
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-let font: drawing.Font = new drawing.Font();
-font.enableLinearMetrics(true);
-console.info("values=" + font.isLinearMetrics());
-```
-
 ## isSubpixel
 
 ```TypeScript
@@ -784,16 +535,6 @@ isSubpixel(): boolean
 | 类型 | 说明 |
 | --- | --- |
 | boolean | 返回字型是否使用亚像素渲染的结果，true表示使用，false表示不使用。 |
-
-**示例**
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-let font: drawing.Font = new drawing.Font();
-font.enableSubpixel(true)
-console.info("values=" + font.isSubpixel());
-```
 
 ## isThemeFontFollowed
 
@@ -847,21 +588,6 @@ measureSingleCharacter(text: string): number
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
 
-**示例**
-
-```TypeScript
-import { RenderNode } from '@kit.ArkUI';
-import { drawing } from '@kit.ArkGraphics2D';
-
-class DrawingRenderNode extends RenderNode {
-  draw(context : DrawContext) {
-    const font = new drawing.Font();
-    font.setSize(20);
-    let width = font.measureSingleCharacter("你");
-  }
-}
-```
-
 ## measureSingleCharacterWithFeatures
 
 ```TypeScript
@@ -881,7 +607,7 @@ measureSingleCharacterWithFeatures(text: string, features: Array<FontFeature>): 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | text | string | 是 | 待测量的单个字符。字符串长度必须为1。 |
-| features | Array&lt;FontFeature&gt; | 是 | 字体特征对象数组。参数为空数组时使用TTF（TrueType Font）文件中预设的字体特征。 |
+| features | Array&lt;[FontFeature](arkts-arkgraphics2d-drawing-fontfeature-i.md)&gt; | 是 | 字体特征对象数组。参数为空数组时使用TTF（TrueType Font）文件中预设的字体特征。 |
 
 **返回值：**
 
@@ -894,23 +620,6 @@ measureSingleCharacterWithFeatures(text: string, features: Array<FontFeature>): 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [25900001](../errorcode-drawing.md#25900001-参数值异常) | Parameter error. Possible causes: Incorrect parameter range. |
-
-**示例**
-
-```TypeScript
-import { RenderNode } from '@kit.ArkUI';
-import { drawing } from '@kit.ArkGraphics2D';
-
-class DrawingRenderNode extends RenderNode {
-  draw(context : DrawContext) {
-    const font = new drawing.Font();
-    font.setSize(20);
-    let fontFeatures : Array<drawing.FontFeature> = [];
-    fontFeatures.push({name: 'calt', value: 0});
-    let width = font.measureSingleCharacterWithFeatures("你", fontFeatures);
-  }
-}
-```
 
 ## measureText
 
@@ -936,7 +645,7 @@ measureText(text: string, encoding: TextEncoding): number
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | text | string | 是 | 待测量的文本内容，将按encoding指定的编码方式进行解析。 |
-| encoding | TextEncoding | 是 | 指定文本的编码格式。 |
+| encoding | [TextEncoding](arkts-arkgraphics2d-drawing-textencoding-e.md) | 是 | 指定文本的编码格式。 |
 
 **返回值：**
 
@@ -949,15 +658,6 @@ measureText(text: string, encoding: TextEncoding): number
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
-
-**示例**
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-let font = new drawing.Font();
-font.measureText("drawing", drawing.TextEncoding.TEXT_ENCODING_UTF8);
-```
 
 ## setBaselineSnap
 
@@ -985,16 +685,6 @@ setBaselineSnap(isBaselineSnap: boolean): void
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
 
-**示例**
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-let font : drawing.Font = new drawing.Font();
-font.setBaselineSnap(true);
-console.info("drawing font isBaselineSnap: " + font.isBaselineSnap());
-```
-
 ## setEdging
 
 ```TypeScript
@@ -1020,15 +710,6 @@ setEdging(edging: FontEdging): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
-
-**示例**
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-let font = new drawing.Font();
-font.setEdging(drawing.FontEdging.SUBPIXEL_ANTI_ALIAS);
-```
 
 ## setEmbeddedBitmaps
 
@@ -1056,17 +737,6 @@ setEmbeddedBitmaps(isEmbeddedBitmaps: boolean): void
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
 
-**示例**
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-let font : drawing.Font = new drawing.Font();
-font.setTypeface(new drawing.Typeface());
-font.setEmbeddedBitmaps(false);
-console.info("draw isEmbeddedBitmaps: " + font.isEmbeddedBitmaps());
-```
-
 ## setForceAutoHinting
 
 ```TypeScript
@@ -1092,17 +762,6 @@ setForceAutoHinting(isForceAutoHinting: boolean): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
-
-**示例**
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-let font : drawing.Font = new drawing.Font();
-font.setTypeface(new drawing.Typeface());
-font.setForceAutoHinting(false);
-console.info("drawing isForceAutoHinting:  " + font.isForceAutoHinting());
-```
 
 ## setHinting
 
@@ -1130,15 +789,6 @@ setHinting(hinting: FontHinting): void
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
 
-**示例**
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-let font = new drawing.Font();
-font.setHinting(drawing.FontHinting.FULL);
-```
-
 ## setScaleX
 
 ```TypeScript
@@ -1164,28 +814,6 @@ setScaleX(scaleX: number): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
-
-**示例**
-
-```TypeScript
-import { RenderNode } from '@kit.ArkUI';
-import { common2D, drawing } from '@kit.ArkGraphics2D';
-
-class DrawingRenderNode extends RenderNode {
-  draw(context : DrawContext) {
-    const canvas = context.canvas;
-    const pen = new drawing.Pen();
-    pen.setStrokeWidth(5);
-    pen.setColor({alpha: 255, red: 255, green: 0, blue: 0});
-    canvas.attachPen(pen);
-    let font = new drawing.Font();
-    font.setSize(100);
-    font.setScaleX(2);
-    const textBlob = drawing.TextBlob.makeFromString("hello", font, drawing.TextEncoding.TEXT_ENCODING_UTF8);
-    canvas.drawTextBlob(textBlob, 200, 200);
-  }
-}
-```
 
 ## setSize
 
@@ -1213,15 +841,6 @@ setSize(textSize: number): void
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
 
-**示例**
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-let font = new drawing.Font();
-font.setSize(5);
-```
-
 ## setSkewX
 
 ```TypeScript
@@ -1247,28 +866,6 @@ setSkewX(skewX: number): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
-
-**示例**
-
-```TypeScript
-import { RenderNode } from '@kit.ArkUI';
-import { common2D, drawing } from '@kit.ArkGraphics2D';
-
-class DrawingRenderNode extends RenderNode {
-  draw(context : DrawContext) {
-    const canvas = context.canvas;
-    const pen = new drawing.Pen();
-    pen.setStrokeWidth(5);
-    pen.setColor({alpha: 255, red: 255, green: 0, blue: 0});
-    canvas.attachPen(pen);
-    let font = new drawing.Font();
-    font.setSize(100);
-    font.setSkewX(1);
-    const textBlob = drawing.TextBlob.makeFromString("hello", font, drawing.TextEncoding.TEXT_ENCODING_UTF8);
-    canvas.drawTextBlob(textBlob, 200, 200);
-  }
-}
-```
 
 ## setThemeFontFollowed
 
@@ -1296,16 +893,6 @@ setThemeFontFollowed(followed: boolean): void
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
 
-**示例**
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-let font : drawing.Font = new drawing.Font();
-font.setThemeFontFollowed(true);
-console.info("font is theme font followed: " + font.isThemeFontFollowed());
-```
-
 ## setTypeface
 
 ```TypeScript
@@ -1331,15 +918,6 @@ setTypeface(typeface: Typeface): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
-
-**示例**
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-let font = new drawing.Font();
-font.setTypeface(new drawing.Typeface());
-```
 
 ## textToGlyphs
 
@@ -1373,14 +951,3 @@ textToGlyphs(text: string, glyphCount?: number): Array<number>
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
-
-**示例**
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-let font : drawing.Font = new drawing.Font();
-let text : string = 'hello world';
-let glyphs : number[] = font.textToGlyphs(text);
-console.info("drawing text toglyphs OnTestFunction num =  " + glyphs.length );
-```

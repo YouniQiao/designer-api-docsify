@@ -49,6 +49,8 @@ Destroys a VPN. This API uses an asynchronous callback to return the result.
 **Examples**
 
 > NOTE
+> 
+> In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
 ```TypeScript
 import { vpn } from '@kit.NetworkKit';
@@ -104,6 +106,8 @@ Destroys a VPN. This API uses a promise to return the result.
 **Examples**
 
 > NOTE
+> 
+> In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
 ```TypeScript
 import { vpn } from '@kit.NetworkKit';
@@ -164,6 +168,8 @@ Protects sockets against a VPN connection. The data sent through sockets is dire
 **Examples**
 
 > NOTE
+> 
+> In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
 ```TypeScript
 import { socket, vpn } from '@kit.NetworkKit';
@@ -245,6 +251,8 @@ Protects sockets against a VPN connection. The data sent through sockets is dire
 **Examples**
 
 > NOTE
+> 
+> In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
 ```TypeScript
 import { socket, vpn } from '@kit.NetworkKit';
@@ -305,7 +313,7 @@ Creates a VPN based on the specified configuration. This API uses an asynchronou
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | VpnConfig | Yes | VPN configuration. |
+| config | [VpnConfig](arkts-network-vpnextension-vpnconfig-i.md) | Yes | VPN configuration. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the result. If a VPN is created successfully, **error** is **undefined** and **data** is the file descriptor of the vNIC. Otherwise, **error** is an error object. |
 
 **Error codes:**
@@ -324,6 +332,8 @@ Creates a VPN based on the specified configuration. This API uses an asynchronou
 **Examples**
 
 > NOTE
+> 
+> In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
 ```TypeScript
 import { vpn } from '@kit.NetworkKit';
@@ -376,7 +386,7 @@ Creates a VPN based on the specified configuration. This API uses a promise to r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | VpnConfig | Yes | VPN configuration. |
+| config | [VpnConfig](arkts-network-vpnextension-vpnconfig-i.md) | Yes | VPN configuration. |
 
 **Return value:**
 
@@ -400,6 +410,8 @@ Creates a VPN based on the specified configuration. This API uses a promise to r
 **Examples**
 
 > NOTE
+> 
+> In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
 ```TypeScript
 import { vpn } from '@kit.NetworkKit';

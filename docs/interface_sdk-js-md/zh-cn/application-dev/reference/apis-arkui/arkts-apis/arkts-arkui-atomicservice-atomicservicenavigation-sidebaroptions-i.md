@@ -52,7 +52,7 @@ sideBarIcon?: Resource | SymbolGlyphModifier
 
 侧边栏的展开图标。
 
-**类型：** Resource \| [SymbolGlyphModifier](../arkts-components/arkts-arkui-symbolglyphmodifier-t.md)
+**类型：** [Resource](arkts-arkui-resource-t.md) \| [SymbolGlyphModifier](../arkts-components/arkts-arkui-symbolglyphmodifier-t.md)
 
 **默认值：** $r('sys.symbol.open_sidebar')
 

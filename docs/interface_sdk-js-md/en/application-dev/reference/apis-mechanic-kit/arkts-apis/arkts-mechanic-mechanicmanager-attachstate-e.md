@@ -2,7 +2,7 @@
 
 Device attach states.
 
-@enum { number }
+@enum { int }
 
 **Since:** 20
 

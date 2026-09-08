@@ -2,7 +2,7 @@
 
 Enumeration type of grid level.
 
-@enum { number } GridLevel
+@enum { int } GridLevel
 
 **Since:** 23
 

@@ -28,14 +28,14 @@ Before obtaining the notification slot, create a slot through [addSlot](arkts-no
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundle | BundleOption | Yes | Bundle information of the application. |
-| slotType | SlotType | Yes | Notification slot type. |
+| bundle | [BundleOption](arkts-notification-notificationmanager-bundleoption-t.md) | Yes | Bundle information of the application. |
+| slotType | [SlotType](arkts-notification-notificationmanager-slottype-e.md) | Yes | Notification slot type. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;NotificationSlot&gt; | Promise used to return the result. |
+| Promise&lt;[NotificationSlot](arkts-notification-notificationmanager-notificationslot-t.md)&gt; | Promise used to return the result. |
 
 **Error codes:**
 

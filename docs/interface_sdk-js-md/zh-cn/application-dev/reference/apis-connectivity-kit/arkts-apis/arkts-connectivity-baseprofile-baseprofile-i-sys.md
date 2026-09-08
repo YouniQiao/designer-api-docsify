@@ -50,21 +50,6 @@ getConnectionStrategy(deviceId: string, callback: AsyncCallback<ConnectionStrate
 | [2900004](../errorcode-bluetoothManager.md#2900004-配置文件不支持) | Profile not supported. |
 | [2900099](../errorcode-bluetoothManager.md#2900099-操作失败) | Operation failed. |
 
-**示例**
-
-```TypeScript
-import { AsyncCallback, BusinessError } from '@kit.BasicServicesKit';
-import { a2dp } from '@kit.ConnectivityKit';
-try {
-    let a2dpSrc = a2dp.createA2dpSrcProfile();
-    a2dpSrc.getConnectionStrategy('XX:XX:XX:XX:XX:XX', (err: BusinessError, data: baseProfile.ConnectionStrategy) => {
-        console.info('getConnectionStrategy, err: ' + JSON.stringify(err) + ', data: ' + JSON.stringify(data));
-    });
-} catch (err) {
-    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-}
-```
-
 ## getConnectionStrategy
 
 ```TypeScript
@@ -107,23 +92,6 @@ getConnectionStrategy(deviceId: string): Promise<ConnectionStrategy>
 | [2900003](../errorcode-bluetoothManager.md#2900003-蓝牙开关关闭) | Bluetooth disabled. |
 | [2900004](../errorcode-bluetoothManager.md#2900004-配置文件不支持) | Profile not supported. |
 | [2900099](../errorcode-bluetoothManager.md#2900099-操作失败) | Operation failed. |
-
-**示例**
-
-```TypeScript
-import { AsyncCallback, BusinessError } from '@kit.BasicServicesKit';
-import { a2dp } from '@kit.ConnectivityKit';
-try {
-    let a2dpSrc = a2dp.createA2dpSrcProfile();
-    a2dpSrc.getConnectionStrategy('XX:XX:XX:XX:XX:XX').then((data: baseProfile.ConnectionStrategy) => {
-        console.info('getConnectionStrategy');
-    }, (err: BusinessError) => {
-        console.error('getConnectionStrategy errCode: ' + err.code + ', errMessage: ' + err.message);
-    });
-} catch (err) {
-    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-}
-```
 
 ## setConnectionStrategy
 
@@ -169,23 +137,6 @@ setConnectionStrategy(deviceId: string, strategy: ConnectionStrategy): Promise<v
 | [2900004](../errorcode-bluetoothManager.md#2900004-配置文件不支持) | Profile not supported. |
 | [2900099](../errorcode-bluetoothManager.md#2900099-操作失败) | Operation failed. |
 
-**示例**
-
-```TypeScript
-import { AsyncCallback, BusinessError } from '@kit.BasicServicesKit';
-import { a2dp } from '@kit.ConnectivityKit';
-try {
-    let a2dpSrc = a2dp.createA2dpSrcProfile();
-    a2dpSrc.setConnectionStrategy('XX:XX:XX:XX:XX:XX', 1).then(() => {
-        console.info('setConnectionStrategy');
-    }, (err: BusinessError) => {
-        console.error('setConnectionStrategy errCode: ' + err.code + ', errMessage: ' + err.message);
-    });
-} catch (err) {
-    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-}
-```
-
 ## setConnectionStrategy
 
 ```TypeScript
@@ -224,18 +175,3 @@ setConnectionStrategy(deviceId: string, strategy: ConnectionStrategy, callback: 
 | [2900003](../errorcode-bluetoothManager.md#2900003-蓝牙开关关闭) | Bluetooth disabled. |
 | [2900004](../errorcode-bluetoothManager.md#2900004-配置文件不支持) | Profile not supported. |
 | [2900099](../errorcode-bluetoothManager.md#2900099-操作失败) | Operation failed. |
-
-**示例**
-
-```TypeScript
-import { AsyncCallback, BusinessError } from '@kit.BasicServicesKit';
-import { a2dp } from '@kit.ConnectivityKit';
-try {
-    let a2dpSrc = a2dp.createA2dpSrcProfile();
-    a2dpSrc.setConnectionStrategy('XX:XX:XX:XX:XX:XX', 0, (err: BusinessError) => {
-        console.info('setConnectionStrategy, err: ' + JSON.stringify(err));
-    });
-} catch (err) {
-    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-}
-```

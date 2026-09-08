@@ -56,7 +56,7 @@ readonly backgroundSystemMaterial?: uiMaterial.Material
 
 Set system-styled materials for the component. Different materials have different effects, which can influence the backgroundColor, border, shadow, and other visual attributes of the component.
 
-**Type:** uiMaterial.Material
+**Type:** [uiMaterial.Material](arkts-arkui-uimaterial-material-c.md)
 
 **Since:** 26.0.0
 
@@ -78,7 +78,7 @@ Default value: **undefined**
 
 This property is read-only.
 
-**Type:** BlurStyle
+**Type:** [BlurStyle](../arkts-components/arkts-arkui-blurstyle-e.md)
 
 **Since:** 18
 
@@ -354,7 +354,7 @@ When **fontWeight** of **textModifier** is set for **items**, **itemFontWeight**
 
 This property is read-only.
 
-**Type:** FontWeight
+**Type:** [FontWeight](arkts-arkui-fontweight-e.md)
 
 **Since:** 18
 
@@ -440,7 +440,7 @@ A value less than 1 is treated as **1**. A value greater than 2 is treated as **
 
 This property is read-only.
 
-**Type:** number \| Resource
+**Type:** number \| [Resource](arkts-arkui-resource-t.md)
 
 **Since:** 18
 
@@ -468,7 +468,7 @@ A value less than 0 is treated as **0**. A value greater than 1 is treated as **
 
 This property is read-only.
 
-**Type:** number \| Resource
+**Type:** number \| [Resource](arkts-arkui-resource-t.md)
 
 **Since:** 18
 
@@ -654,7 +654,7 @@ When **fontWeight** of **textModifier** is set for **items**, **itemSelectedFont
 
 This property is read-only.
 
-**Type:** FontWeight
+**Type:** [FontWeight](arkts-arkui-fontweight-e.md)
 
 **Since:** 18
 
@@ -844,7 +844,7 @@ If the value is out of the range, the default value is used.
 
 This property is read-only.
 
-**Type:** Direction
+**Type:** [Direction](arkts-arkui-direction-e.md)
 
 **Since:** 18
 

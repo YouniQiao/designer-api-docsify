@@ -49,43 +49,7 @@ Obtains information about a system font based on the font name.
 
 | Type | Description |
 | --- | --- |
-| font.FontInfo | Detailed information of the font. |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { Font, font } from '@kit.ArkUI';
-
-@Entry
-@Component
-struct Index {
-  private uiContext: UIContext = this.getUIContext();
-  private font: Font = this.uiContext.getFont();
-  fontInfo: font.FontInfo = this.font.getFontByName('');
-
-  build() {
-    Column() {
-      Button("getFontByName")
-        .width('60%')
-        .height('6%')
-        .onClick(() => {
-          this.fontInfo = this.font.getFontByName('HarmonyOS Sans Italic');
-          console.info("getFontByName(): path = " + this.fontInfo.path);
-          console.info("getFontByName(): postScriptName = " + this.fontInfo.postScriptName);
-          console.info("getFontByName(): fullName = " + this.fontInfo.fullName);
-          console.info("getFontByName(): family = " + this.fontInfo.family);
-          console.info("getFontByName(): subfamily = " + this.fontInfo.subfamily);
-          console.info("getFontByName(): weight = " + this.fontInfo.weight);
-          console.info("getFontByName(): width = " + this.fontInfo.width);
-          console.info("getFontByName(): italic = " + this.fontInfo.italic);
-          console.info("getFontByName(): monoSpace = " + this.fontInfo.monoSpace);
-          console.info("getFontByName(): symbolic = " + this.fontInfo.symbolic);
-        })
-    }.width('100%')
-  }
-}
-```
+| [font.FontInfo](arkts-arkui-font-fontinfo-i.md) | Detailed information of the font. |
 
 ## getSystemFontList
 
@@ -113,33 +77,6 @@ You are advised to use the [getSystemFontFullNamesByType](../../apis-arkgraphics
 | --- | --- |
 | Array&lt;string&gt; | List of supported fonts. |
 
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { Font } from '@kit.ArkUI';
-
-@Entry
-@Component
-struct Index {
-  private uiContext: UIContext = this.getUIContext();
-  private font: Font = this.uiContext.getFont();
-  fontList: Array<string> = new Array<string>();
-
-  build() {
-    Column() {
-      Button("getSystemFontList")
-        .width('60%')
-        .height('6%')
-        .onClick(() => {
-          this.fontList = this.font.getSystemFontList();
-          console.info('getSystemFontList', JSON.stringify(this.fontList));
-        })
-    }.width('100%')
-  }
-}
-```
-
 ## registerFont
 
 ```TypeScript
@@ -162,35 +99,4 @@ This API is asynchronous and does not support concurrent calls.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | font.FontOptions | Yes | Information about the custom font to register.   **NOTE：**When setting the path to the font file, you are advised to use a string with the **file://** path prefix for resources within the system sandbox path. Ensure that the file exists in the sandbox directory path and has read permissions. |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { Font } from '@kit.ArkUI';
-
-@Entry
-@Component
-struct Index {
-  @State message: string = 'Hello World';
-  private uiContext: UIContext = this.getUIContext();
-  private font: Font = this.uiContext.getFont();
-
-  aboutToAppear() {
-    this.font.registerFont({
-      familyName: 'medium',
-      familySrc: '/font/medium.ttf' // The font folder is at the same level as the pages folder.
-    });
-  }
-
-  build() {
-    Column() {
-      Text(this.message)
-        .align(Alignment.Center)
-        .fontSize(20)
-        .fontFamily('medium') // Name of the registered custom font. Call registerFont to register the font before using this font name.
-    }.width('100%')
-  }
-}
-```
+| options | [font.FontOptions](arkts-arkui-font-fontoptions-i.md) | Yes | Information about the custom font to register.   **NOTE：**When setting the path to the font file, you are advised to use a string with the **file://** path prefix for resources within the system sandbox path. Ensure that the file exists in the sandbox directory path and has read permissions. |

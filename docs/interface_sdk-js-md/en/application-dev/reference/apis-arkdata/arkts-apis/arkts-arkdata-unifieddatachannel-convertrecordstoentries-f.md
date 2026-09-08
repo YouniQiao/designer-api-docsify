@@ -31,7 +31,7 @@ This API is used only when the following rules are met:
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | UnifiedData | Yes | Data to convert. |
+| data | [UnifiedData](arkts-arkdata-unifieddatachannel-unifieddata-c.md) | Yes | Data to convert. |
 
 **Error codes:**
 

@@ -22,9 +22,9 @@ function getUpdateSqlInfo(predicates: RdbPredicates, values: ValuesBucket, confl
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| predicates | RdbPredicates | 是 | 与指定字段匹配的谓词。 |
-| values | ValuesBucket | 是 | 要写入数据库中数据的字段信息以及对应的值信息。 |
-| conflict | ConflictResolution | 否 | 指定冲突解决模式。 默认值是relationalStore.ConflictResolution.ON_CONFLICT_NONE。 |
+| predicates | [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | 是 | 与指定字段匹配的谓词。 |
+| values | [ValuesBucket](arkts-arkdata-relationalstore-valuesbucket-t.md) | 是 | 要写入数据库中数据的字段信息以及对应的值信息。 |
+| conflict | [ConflictResolution](arkts-arkdata-relationalstore-conflictresolution-e.md) | 否 | 指定冲突解决模式。 默认值是relationalStore.ConflictResolution.ON_CONFLICT_NONE。 |
 
 **返回值：**
 

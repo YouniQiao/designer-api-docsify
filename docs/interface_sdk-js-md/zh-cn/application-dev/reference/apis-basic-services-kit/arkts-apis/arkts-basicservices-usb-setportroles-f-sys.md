@@ -29,8 +29,8 @@ function setPortRoles(portId: number, powerRole: PowerRoleType, dataRole: DataRo
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | portId | number | 是 | 端口号。 |
-| powerRole | PowerRoleType | 是 | 充电的角色。 |
-| dataRole | DataRoleType | 是 | 数据传输的角色。 |
+| powerRole | [PowerRoleType](arkts-basicservices-usb-powerroletype-e-sys.md) | 是 | 充电的角色。 |
+| dataRole | [DataRoleType](arkts-basicservices-usb-dataroletype-e-sys.md) | 是 | 数据传输的角色。 |
 
 **返回值：**
 

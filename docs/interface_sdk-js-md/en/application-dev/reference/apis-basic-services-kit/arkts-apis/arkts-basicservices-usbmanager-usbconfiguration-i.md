@@ -48,7 +48,7 @@ interfaces: Array<USBInterface>
 
 Supported interface attributes.
 
-**Type:** Array&lt;USBInterface&gt;
+**Type:** Array&lt;[USBInterface](arkts-basicservices-usbmanager-usbinterface-i.md)&gt;
 
 **Since:** 9
 

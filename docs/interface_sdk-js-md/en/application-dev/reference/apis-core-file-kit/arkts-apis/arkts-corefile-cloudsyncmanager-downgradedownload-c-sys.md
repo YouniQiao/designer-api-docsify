@@ -129,7 +129,7 @@ Repeated triggering of a full download task will throw an error (22400006).
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DownloadProgress&gt; | Yes | Callback used to return the download progress. The parameter is **DownloadProgress**, and the return value is **void**. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DownloadProgress](arkts-corefile-cloudsyncmanager-downloadprogress-c.md)&gt; | Yes | Callback used to return the download progress. The parameter is **DownloadProgress**, and the return value is **void**. |
 
 **Return value:**
 

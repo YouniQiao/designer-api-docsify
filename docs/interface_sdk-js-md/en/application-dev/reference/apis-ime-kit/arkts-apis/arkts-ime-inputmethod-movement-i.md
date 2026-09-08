@@ -20,7 +20,7 @@ direction: Direction
 
 Direction in which the cursor moves when the text is selected.
 
-**Type:** Direction
+**Type:** [Direction](arkts-ime-inputmethod-direction-e.md)
 
 **Since:** 10
 

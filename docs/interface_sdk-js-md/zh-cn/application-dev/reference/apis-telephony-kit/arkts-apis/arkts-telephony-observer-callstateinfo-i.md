@@ -34,7 +34,7 @@ state: CallState
 
 通话类型。
 
-**类型：** CallState
+**类型：** [CallState](arkts-telephony-observer-callstate-t.md)
 
 **起始版本：** 11
 

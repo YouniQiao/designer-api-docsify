@@ -90,24 +90,3 @@ userAgent: string
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
-
-**示例**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-  @State userAgent:string = 'Mozilla/5.0 (Phone; OpenHarmony 5.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36 ArkWeb/4.1.6.1 Mobile DemoApp';
-
-  build() {
-    Column() {
-      Web({ src: 'www.example.com', controller: this.controller })
-        .userAgent(this.userAgent)
-    }
-  }
-}
-```

@@ -50,23 +50,9 @@ Truncates a file. This API uses a promise to return the result.
 | 13900023 | Text file busy |
 | 13900024 | File too large |
 | 13900027 | Read-only file system |
-| 13900030 | File name too number |
+| 13900030 | File name too long |
 | 13900033 | Too many symbolic links encountered |
 | 13900042 | Unknown error |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let filePath = pathDir + "/test.txt";
-let len: number = 5;
-fileIo.truncate(filePath, len).then(() => {
-  console.info(`Succeeded in truncating file.`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to truncate file. Code: ${err.code}, message: ${err.message}`);
-});
-```
 
 
 ## truncate
@@ -107,24 +93,9 @@ Truncates a file. This API uses an asynchronous callback to return the result.
 | 13900023 | Text file busy |
 | 13900024 | File too large |
 | 13900027 | Read-only file system |
-| 13900030 | File name too number |
+| 13900030 | File name too long |
 | 13900033 | Too many symbolic links encountered |
 | 13900042 | Unknown error |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let filePath = pathDir + "/test.txt";
-fileIo.truncate(filePath, (err: BusinessError) => {
-  if (err) {
-    console.error(`Failed to truncate. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info(`Succeeded in truncating.`);
-  }
-});
-```
 
 
 ## truncate
@@ -166,22 +137,6 @@ Truncates a file. This API uses an asynchronous callback to return the result.
 | 13900023 | Text file busy |
 | 13900024 | File too large |
 | 13900027 | Read-only file system |
-| 13900030 | File name too number |
+| 13900030 | File name too long |
 | 13900033 | Too many symbolic links encountered |
 | 13900042 | Unknown error |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let filePath = pathDir + "/test.txt";
-let len: number = 5;
-fileIo.truncate(filePath, len, (err: BusinessError) => {
-  if (err) {
-    console.error(`Failed to truncate. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info(`Succeeded in truncating.`);
-  }
-});
-```

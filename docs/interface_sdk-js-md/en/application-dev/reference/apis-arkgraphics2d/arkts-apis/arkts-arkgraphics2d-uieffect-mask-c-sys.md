@@ -70,7 +70,7 @@ Creates a fractal glass mask. It performs periodic horizontal displacement sampl
 | glassStrength | number | Yes | Distortion strength of the fractal glass. Value range: [0, 10]; out‑of‑range values will be clamped internally. |
 | glassSoftness | number | Yes | Edge softness of fractal glass stripes. Value range: [0, 0.01]; out‑of‑range values will be clamped internally. |
 | isSymmetric | boolean | Yes | Whether to enable symmetric distortion."Symmetric" refers to centering around the vertical axis of the image. |
-| refractMask | image.PixelMap | No | PixelMap instance created by the image module. Optional parameter to control the effective region of the fractal effect. If provided, glassNum no longer denotes stripe quantity. GlassNum and glassStrength jointly determine refraction intensity. |
+| refractMask | [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | No | PixelMap instance created by the image module. Optional parameter to control the effective region of the fractal effect. If provided, glassNum no longer denotes stripe quantity. GlassNum and glassStrength jointly determine refraction intensity. |
 
 **Return value:**
 
@@ -97,9 +97,9 @@ Creates a Mask instance with scaling effect by inputting a pixelMap, the area of
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pixelMap | image.PixelMap | Yes | The PixelMap instance created by the image module. It can be obtained through image decoding or direct creation. |
-| srcRect | common2D.Rect | Yes | The area of the pixelMap to be drawn. The leftmost and topmost positions correspond to 0, and the rightmost and bottommost positions correspond to 1. right must be greater than left, and bottom must be greater than top; otherwise the effect will not take effect. |
-| dstRect | common2D.Rect | Yes | The drawing area of the pixelMap on the node where the mask is mounted. The leftmost and topmost positions of the node correspond to 0, and the rightmost and bottommost positions correspond to 1. right must be greater than left, and bottom must be greater than top; otherwise the effect will not take effect. |
+| pixelMap | [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | Yes | The PixelMap instance created by the image module. It can be obtained through image decoding or direct creation. |
+| srcRect | [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) | Yes | The area of the pixelMap to be drawn. The leftmost and topmost positions correspond to 0, and the rightmost and bottommost positions correspond to 1. right must be greater than left, and bottom must be greater than top; otherwise the effect will not take effect. |
+| dstRect | [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) | Yes | The drawing area of the pixelMap on the node where the mask is mounted. The leftmost and topmost positions of the node correspond to 0, and the rightmost and bottommost positions correspond to 1. right must be greater than left, and bottom must be greater than top; otherwise the effect will not take effect. |
 | fillColor | Color | No | The color to fill the area outside the pixelMap drawing area on the node. Each component range is [0, 1], default is transparent color. Values less than 0 are treated as 0, and values greater than 1 are treated as 1. |
 
 **Return value:**
@@ -173,7 +173,7 @@ Creates a Mask instance by inputting a pixelMap. This interface does not perform
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pixelMap | image.PixelMap | Yes | The PixelMap instance created by the image module. It can be obtained through image decoding or direct creation. |
+| pixelMap | [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | Yes | The PixelMap instance created by the image module. It can be obtained through image decoding or direct creation. |
 
 **Return value:**
 
@@ -297,7 +297,7 @@ Creates an elliptical mask Mask instance by inputting the center position of the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| center | common2D.Point | Yes | Sets the center point of the ellipse. [0, 0] is the top-left corner of the component, [1, 1] is the bottom-right corner of the component. The value range is [-10, 10], floating-point values are supported, and values outside the range will be clamped during implementation. |
+| center | [common2D.Point](arkts-arkgraphics2d-common2d-point-i.md) | Yes | Sets the center point of the ellipse. [0, 0] is the top-left corner of the component, [1, 1] is the bottom-right corner of the component. The value range is [-10, 10], floating-point values are supported, and values outside the range will be clamped during implementation. |
 | radiusX | number | Yes | Sets the semi-major axis of the ellipse. When the radius is 1, it equals the component height. The value range is [0, 10], floating-point values are supported, and values outside the range will be clamped during implementation. |
 | radiusY | number | Yes | Sets the semi-minor axis of the ellipse. When the radius is 1, it equals the component height. The value range is [0, 10], floating-point values are supported, and values outside the range will be clamped during implementation. |
 | gradients | Array&lt;[number, number]&gt; | Yes | The binary arrays in the array represent gradients: [RGBA color, position]. The RGBA color uses the same value for all four channels, which can be regarded as a grayscale value; position represents the distribution position of the RGBA color along the radial direction outward. Both RGBA color and position have a value range of [0, 1], floating-point values are supported, values less than 0 are treated as 0, and values greater than 1 are treated as 1. The position parameter values must be strictly increasing, the number of binary arrays in the Array must be greater than or equal to 2, and the elements in the binary arrays must not be empty; otherwise the elliptical distribution effect will not take effect. |
@@ -354,7 +354,7 @@ Creates a wave ring mask Mask instance by inputting the center position, radius,
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| center | common2D.Point | Yes | Sets the position of the wave ring center on the component. [0, 0] is the top-left corner of the component, [1, 1] is the bottom-right corner of the component. The value range is [-10, 10], and values outside the range will be clamped during implementation. |
+| center | [common2D.Point](arkts-arkgraphics2d-common2d-point-i.md) | Yes | Sets the position of the wave ring center on the component. [0, 0] is the top-left corner of the component, [1, 1] is the bottom-right corner of the component. The value range is [-10, 10], and values outside the range will be clamped during implementation. |
 | radius | number | Yes | Sets the radius of the wave ring, using normalized values. When the radius is 1, the wave ring radius equals the component height. The value range is [0, 10], and values outside the range will be clamped during implementation. |
 | width | number | Yes | Sets the width of the wave ring, using normalized values. When the width is 1, the wave ring width equals the component height. The value range is [0, 10], and values outside the range will be clamped during implementation. |
 | offset | number | No | Sets the offset of the wave peak position. The default value is 0, meaning the wave peak is at the exact center of the wave ring; -1.0 means the wave peak is at the innermost edge of the wave ring; 1.0 means the wave peak is at the outermost edge of the wave ring. The value range is [-1, 1], and values outside the range will be clamped during implementation. |
@@ -543,7 +543,7 @@ Creates a single-wave mask Mask instance by inputting the wave source center pos
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| center | common2D.Point | Yes | Sets the center point of the single-wave source. [0, 0] is the top-left corner of the component, [1, 1] is the bottom-right corner of the component. The value range is [-10, 10], floating-point values are supported, and values outside the range will be clamped during implementation. |
+| center | [common2D.Point](arkts-arkgraphics2d-common2d-point-i.md) | Yes | Sets the center point of the single-wave source. [0, 0] is the top-left corner of the component, [1, 1] is the bottom-right corner of the component. The value range is [-10, 10], floating-point values are supported, and values outside the range will be clamped during implementation. |
 | width | number | Yes | Sets the width of the single-wave ring. The value range is [0, 5], floating-point values are supported, and values outside the range will be clamped during implementation. |
 | propagationRadius | number | Yes | Sets the outer diffusion radius of the single-wave ring. The value range is [0, 10], floating-point values are supported, and values outside the range will be clamped during implementation. |
 | blurRadius | number | Yes | Sets the blur outer radius of the single-wave ring. A blur radius of 0 results in a solid-edge ring; otherwise, it is a soft-edge ring. The value range is [0, 5], floating-point values are supported, and values outside the range will be clamped during implementation. |

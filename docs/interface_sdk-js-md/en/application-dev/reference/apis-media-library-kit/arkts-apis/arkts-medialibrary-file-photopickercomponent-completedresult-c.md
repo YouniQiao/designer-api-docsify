@@ -20,7 +20,7 @@ contextRecoveryInfo: photoAccessHelper.ContextRecoveryInfo
 
 Context information of the PhotoPicker exit status.
 
-**Type:** photoAccessHelper.ContextRecoveryInfo
+**Type:** [photoAccessHelper.ContextRecoveryInfo](arkts-medialibrary-photoaccesshelper-contextrecoveryinfo-c.md)
 
 **Since:** 26.0.0
 
@@ -38,7 +38,7 @@ movingPhotoBadgeStates: Array<photoAccessHelper.MovingPhotoBadgeStateType>
 
 Moving photo badge states of the selected media files. When **isMovingPhotoBadgeShown** is set to **true**, **movingPhotoBadgeStates** contains the moving photo status. Otherwise, the value is empty.
 
-**Type:** Array&lt;photoAccessHelper.MovingPhotoBadgeStateType&gt;
+**Type:** Array&lt;[photoAccessHelper.MovingPhotoBadgeStateType](arkts-medialibrary-photoaccesshelper-movingphotobadgestatetype-e.md)&gt;
 
 **Since:** 26.0.0
 

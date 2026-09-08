@@ -26,4 +26,4 @@ type DataLoadHandler = (acceptableInfo?: DataLoadInfo) => UnifiedData | null
 
 | 类型 | 说明 |
 | --- | --- |
-| UnifiedData \| null | 当延迟处理函数触发时，返回根据接收方信息生成的UnifiedData对象，用于数据传输。若无法生成数据或生成失败则返回null。 |
+| [UnifiedData](arkts-arkdata-unifieddatachannel-unifieddata-c.md) \| null | 当延迟处理函数触发时，返回根据接收方信息生成的UnifiedData对象，用于数据传输。若无法生成数据或生成失败则返回null。 |

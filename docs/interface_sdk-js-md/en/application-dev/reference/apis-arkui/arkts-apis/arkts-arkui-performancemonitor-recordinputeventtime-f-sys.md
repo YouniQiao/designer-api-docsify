@@ -26,8 +26,8 @@ Records the trigger event type and time before the start of the animation scene.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | ActionType | Yes | Trigger mode of the user scene. |
-| sourceType | SourceType | Yes | Trigger source of the user scene. |
+| type | [ActionType](arkts-arkui-performancemonitor-actiontype-e-sys.md) | Yes | Trigger mode of the user scene. |
+| sourceType | [SourceType](../arkts-components/arkts-arkui-sourcetype-e.md) | Yes | Trigger source of the user scene. |
 | time | number | Yes | Scenario trigger timestamp (in ms), for example, **1751508570794**. Values equal to or less than 0 will be automatically converted to the current system time, while positive values will be used as- is. Incorrect parameters may cause abnormal response latency metrics. |
 
 **Error codes:**

@@ -34,7 +34,7 @@ center?: PositionT<LengthMetrics>
 
 The coordinates of the center of the annulus
 
-**Type:** [PositionT](arkts-arkui-positiont-t.md)&lt;LengthMetrics&gt;
+**Type:** [PositionT](arkts-arkui-positiont-t.md)&lt;[LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md)&gt;
 
 **Default:** {x:LengthMetrics.percent(0.5),y:LengthMetrics.percent(0.5)}
 
@@ -74,7 +74,7 @@ innerRadius: LengthMetrics
 
 The inner radius of the annulus
 
-**Type:** LengthMetrics
+**Type:** [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md)
 
 **Since:** 20
 
@@ -92,7 +92,7 @@ outerRadius: LengthMetrics
 
 The outer radius of the annulus
 
-**Type:** LengthMetrics
+**Type:** [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md)
 
 **Since:** 20
 

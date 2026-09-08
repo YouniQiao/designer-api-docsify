@@ -12,7 +12,7 @@ Defines the states before the drag gesture is triggered.
 ACTION_DETECTING_STATUS = 0
 ```
 
-A drag gesture is being detected. (Triggered when the component is number pressed for 50 ms.)
+A drag gesture is being detected. (Triggered when the component is long pressed for 50 ms.)
 
 **Since:** 12
 
@@ -28,7 +28,7 @@ A drag gesture is being detected. (Triggered when the component is number presse
 READY_TO_TRIGGER_DRAG_ACTION = 1
 ```
 
-The component is ready to be dragged. (Triggered when the component is number pressed for 500 ms.)
+The component is ready to be dragged. (Triggered when the component is long pressed for 500 ms.)
 
 **Since:** 12
 
@@ -44,7 +44,7 @@ The component is ready to be dragged. (Triggered when the component is number pr
 PREVIEW_LIFT_STARTED = 2
 ```
 
-A lift animation is started. (Triggered when the component is number pressed for 800 ms.)
+A lift animation is started. (Triggered when the component is long pressed for 800 ms.)
 
 **Since:** 12
 
@@ -124,7 +124,7 @@ A drop animation is terminated. (Triggered when the finger is lifted off the scr
 PREPARING_FOR_DRAG_DETECTION = 7
 ```
 
-The component is ready to be dragged. (Triggered when the component is number pressed for 350 ms.)
+The component is ready to be dragged. (Triggered when the component is long pressed for 350 ms.)
 
 **Since:** 18
 

@@ -32,7 +32,7 @@ This API is used to batch query the configuration information of all notificatio
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;NotificationSlot&gt;&gt; | Yes | Callback used to return the result. If the notification slots are obtained successfully, **err** is **undefined** and **data** is the obtained **NotificationSlot** array. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[NotificationSlot](arkts-notification-notificationmanager-notificationslot-t.md)&gt;&gt; | Yes | Callback used to return the result. If the notification slots are obtained successfully, **err** is **undefined** and **data** is the obtained **NotificationSlot** array. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -86,7 +86,7 @@ This API is used to batch query the configuration information of all notificatio
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;NotificationSlot&gt;&gt; | Promise used to return the result. |
+| Promise&lt;Array&lt;[NotificationSlot](arkts-notification-notificationmanager-notificationslot-t.md)&gt;&gt; | Promise used to return the result. |
 
 **Error codes:**
 

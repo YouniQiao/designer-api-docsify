@@ -27,7 +27,7 @@ function sendImage(sessionId: number, image: image.PixelMap, quality?: number): 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | sessionId | number | 是 | 表示协同会话ID，需先创建协同会话后获取。 |
-| image | image.PixelMap | 是 | 表示图片信息。 |
+| image | [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | 是 | 表示图片信息。 |
 | quality | number | 否 | 表示图像压缩质量，取值范围为0到100，默认值为30。 |
 
 **返回值：**

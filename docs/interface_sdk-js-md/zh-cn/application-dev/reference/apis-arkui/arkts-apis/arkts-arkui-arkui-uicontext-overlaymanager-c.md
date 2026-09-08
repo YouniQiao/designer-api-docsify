@@ -38,100 +38,6 @@ Adds a specified ComponentContent node to the OverlayManager.
 | content | [ComponentContent](arkts-arkui-componentcontent-c.md) | 是 | Content to add to the target node on the **OverlayManager**.   **NOTE：**By default, the new node is centered on the page and stacked according to its stacking level. |
 | index | number | 否 |  |
 
-**示例**
-
-```TypeScript
-import { ComponentContent, OverlayManager } from '@kit.ArkUI';
-
-class Params {
-  text: string = '';
-  offset: Position;
-
-  constructor(text: string, offset: Position) {
-    this.text = text;
-    this.offset = offset;
-  }
-}
-
-@Builder
-function builderText(params: Params) {
-  Column() {
-    Text(params.text)
-      .fontSize(30)
-      .fontWeight(FontWeight.Bold)
-  }.offset(params.offset)
-}
-
-@Entry
-@Component
-struct OverlayExample {
-  @State message: string = 'ComponentContent';
-  private uiContext: UIContext = this.getUIContext();
-  private overlayNode: OverlayManager = this.uiContext.getOverlayManager();
-  @StorageLink('contentArray') contentArray: ComponentContent<Params>[] = [];
-  @StorageLink('componentContentIndex') componentContentIndex: number = 0;
-  @StorageLink('arrayIndex') arrayIndex: number = 0;
-  @StorageLink('componentOffset') componentOffset: Position = { x: 0, y: 110 };
-
-  build() {
-    Column({ space: 5 }) {
-      Button('++componentContentIndex: ' + this.componentContentIndex).onClick(() => {
-        ++this.componentContentIndex;
-      })
-      Button('--componentContentIndex: ' + this.componentContentIndex).onClick(() => {
-        --this.componentContentIndex;
-      })
-      Button('增加ComponentContent' + this.contentArray.length).onClick(() => {
-        let componentContent = new ComponentContent(
-          this.uiContext, wrapBuilder<[Params]>(builderText),
-          new Params(this.message + (this.contentArray.length), this.componentOffset)
-        );
-        this.contentArray.push(componentContent);
-        this.overlayNode.addComponentContent(componentContent, this.componentContentIndex);
-      })
-      Button('++arrayIndex: ' + this.arrayIndex).onClick(() => {
-        ++this.arrayIndex;
-      })
-      Button('--arrayIndex: ' + this.arrayIndex).onClick(() => {
-        --this.arrayIndex;
-      })
-      Button('删除ComponentContent' + this.arrayIndex).onClick(() => {
-        if (this.arrayIndex >= 0 && this.arrayIndex < this.contentArray.length) {
-          let componentContent = this.contentArray.splice(this.arrayIndex, 1);
-          this.overlayNode.removeComponentContent(componentContent.pop());
-        } else {
-          console.info('arrayIndex有误');
-        }
-      })
-      Button('显示ComponentContent' + this.arrayIndex).onClick(() => {
-        if (this.arrayIndex >= 0 && this.arrayIndex < this.contentArray.length) {
-          let componentContent = this.contentArray[this.arrayIndex];
-          this.overlayNode.showComponentContent(componentContent);
-        } else {
-          console.info('arrayIndex有误');
-        }
-      })
-      Button('隐藏ComponentContent' + this.arrayIndex).onClick(() => {
-        if (this.arrayIndex >= 0 && this.arrayIndex < this.contentArray.length) {
-          let componentContent = this.contentArray[this.arrayIndex];
-          this.overlayNode.hideComponentContent(componentContent);
-        } else {
-          console.info('arrayIndex有误');
-        }
-      })
-      Button('显示所有ComponentContent').onClick(() => {
-        this.overlayNode.showAllComponentContents();
-      })
-      Button('隐藏所有ComponentContent').onClick(() => {
-        this.overlayNode.hideAllComponentContents();
-      })
-    }
-    .width('100%')
-    .height('100%')
-  }
-}
-```
-
 ## addComponentContentWithOrder
 
 ```TypeScript
@@ -155,87 +61,6 @@ Creates a floating layer node with the specified display order. This API allows 
 | content | [ComponentContent](arkts-arkui-componentcontent-c.md) | 是 | Content to add to the target node on the **OverlayManager**.    **NOTE：**By default, the new node is centered on the page and stacked according to its stacking level. |
 | levelOrder | [LevelOrder](arkts-arkui-promptaction-levelorder-c.md) | 否 |  |
 
-**示例**
-
-本示例展示如何调用addComponentContentWithOrder接口创建浮层节点并指定显示顺序。
-
-```TypeScript
-import { ComponentContent, PromptAction, LevelOrder, UIContext, OverlayManager } from '@kit.ArkUI';
-
-class Params {
-  text: string = '';
-  offset: Position;
-  constructor(text: string, offset: Position) {
-    this.text = text;
-    this.offset = offset;
-  }
-}
-@Builder
-function builderText(params: Params) {
-  Column() {
-    Text(params.text)
-      .fontSize(30)
-      .fontWeight(FontWeight.Bold)
-  }.offset(params.offset)
-}
-
-@Entry
-@Component
-struct Index {
-  @State message: string = '弹窗';
-  private ctx: UIContext = this.getUIContext();
-  private promptAction: PromptAction = this.ctx.getPromptAction();
-  private overlayNode: OverlayManager = this.ctx.getOverlayManager();
-  @StorageLink('contentArray') contentArray: ComponentContent<Params>[] = [];
-  @StorageLink('componentContentIndex') componentContentIndex: number = 0;
-  @StorageLink('arrayIndex') arrayIndex: number = 0;
-  @StorageLink('componentOffset') componentOffset: Position = { x: 0, y: 80 };
-
-  build() {
-    Row() {
-      Column({ space: 10 }) {
-        Button('OverlayManager下面弹窗')
-          .fontSize(20)
-          .onClick(() => {
-            let componentContent = new ComponentContent(
-              this.ctx, wrapBuilder<[Params]>(builderText),
-              new Params(this.message + (this.contentArray.length), this.componentOffset)
-            );
-            this.contentArray.push(componentContent);
-            this.overlayNode.addComponentContentWithOrder(componentContent, LevelOrder.clamp(100.1));
-            let topOrder: LevelOrder = this.promptAction.getTopOrder();
-            if (topOrder !== undefined) {
-              console.info('topOrder: ' + topOrder.getOrder());
-            }
-            let bottomOrder: LevelOrder = this.promptAction.getBottomOrder();
-            if (bottomOrder !== undefined) {
-              console.info('bottomOrder: ' + bottomOrder.getOrder());
-            }
-          })
-        Button('OverlayManager上面弹窗')
-          .fontSize(20)
-          .onClick(() => {
-            let componentContent = new ComponentContent(
-              this.ctx, wrapBuilder<[Params]>(builderText),
-              new Params(this.message + (this.contentArray.length), this.componentOffset)
-            );
-            this.contentArray.push(componentContent);
-            this.overlayNode.addComponentContentWithOrder(componentContent, LevelOrder.clamp(100.2));
-            let topOrder: LevelOrder = this.promptAction.getTopOrder();
-            if (topOrder !== undefined) {
-              console.info('topOrder: ' + topOrder.getOrder());
-            }
-            let bottomOrder: LevelOrder = this.promptAction.getBottomOrder();
-            if (bottomOrder !== undefined) {
-              console.info('bottomOrder: ' + bottomOrder.getOrder());
-            }
-          })
-      }.width('100%')
-    }.height('100%')
-  }
-}
-```
-
 ## hideAllComponentContents
 
 ```TypeScript
@@ -251,10 +76,6 @@ Hide all ComponentContents on the OverlayManager.
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-**示例**
-
-请参考[addComponentContent](#addcomponentcontent)示例。
 
 ## hideComponentContent
 
@@ -277,10 +98,6 @@ Hide the ComponentContent.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | content | [ComponentContent](arkts-arkui-componentcontent-c.md) | 是 | Content to hide on the **OverlayManager**. |
-
-**示例**
-
-请参考[addComponentContent](#addcomponentcontent)示例。
 
 ## openOrderOverlay
 
@@ -317,56 +134,6 @@ openOrderOverlay(content: ComponentContent, options?: OrderOverlayOptions): Prom
 | --- | --- |
 | [103307](../errorcode-promptAction.md#103307-系统弹出窗口导致无法打开浮层) | The overlay cannot be opened due to the system pop-up window. |
 
-**示例**
-
-```TypeScript
-import { ComponentContent, OverlayManager, LevelOrder, LevelMode } from '@kit.ArkUI';
-
-class Params {
-  text: string = '';
-  offset: Position;
-
-  constructor(text: string, offset: Position) {
-    this.text = text;
-    this.offset = offset;
-  }
-}
-
-@Builder
-function builderText(params: Params) {
-  Column() {
-    Text(params.text)
-      .fontSize(30)
-      .fontWeight(FontWeight.Bold)
-  }.offset(params.offset)
-}
-
-@Entry
-@Component
-struct OverlayExample {
-  @State message: string = 'ComponentContent';
-  private uiContext: UIContext = this.getUIContext();
-  private overlayNode: OverlayManager = this.uiContext.getOverlayManager();
-
-  build() {
-    Column({ space: 5 }) {
-      Button('打开浮层').onClick(() => {
-        let componentContent = new ComponentContent(
-          this.uiContext, wrapBuilder<[Params]>(builderText),
-          new Params(this.message, { x: 0, y: 110 })
-        );
-        this.overlayNode.openOrderOverlay(componentContent, {
-          levelOrder: LevelOrder.clamp(100),
-          levelMode: LevelMode.OVERLAY
-        });
-      })
-    }
-    .width('100%')
-    .height('100%')
-  }
-}
-```
-
 ## removeComponentContent
 
 ```TypeScript
@@ -389,10 +156,6 @@ Removes a specified ComponentContent node from the OverlayManager
 | --- | --- | --- | --- |
 | content | [ComponentContent](arkts-arkui-componentcontent-c.md) | 是 | Content to remove from the **OverlayManager**. |
 
-**示例**
-
-请参考[addComponentContent](#addcomponentcontent)示例。
-
 ## showAllComponentContents
 
 ```TypeScript
@@ -408,10 +171,6 @@ Show all ComponentContents on the OverlayManager.
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-**示例**
-
-请参考[addComponentContent](#addcomponentcontent)示例。
 
 ## showComponentContent
 
@@ -434,7 +193,3 @@ Show the ComponentContent.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | content | [ComponentContent](arkts-arkui-componentcontent-c.md) | 是 | Content to show on the **OverlayManager**. |
-
-**示例**
-
-请参考[addComponentContent](#addcomponentcontent)示例。

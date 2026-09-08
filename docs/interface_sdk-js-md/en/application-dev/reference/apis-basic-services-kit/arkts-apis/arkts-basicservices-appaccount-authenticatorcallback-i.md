@@ -53,36 +53,6 @@ Called to redirect a request.
 import { Want } from '@kit.AbilityKit';
 
 class MyAuthenticator extends appAccount.Authenticator {
-  createAccountImplicitly(
-    options: appAccount.CreateAccountImplicitlyOptions, callback: appAccount.AuthCallback) {
-    let want: Want = {
-      bundleName: 'com.example.accountjsdemo',
-      abilityName: 'com.example.accountjsdemo.LoginAbility',
-    };
-    callback.onRequestRedirected(want);
-  }
-
-  auth(name: string, authType: string,
-    options: Record<string, Object>, callback: appAccount.AuthCallback) {
-    let result: appAccount.AuthResult = {
-      account: {
-        name: 'Lisi',
-        owner: 'com.example.accountjsdemo',
-      },
-      tokenInfo: {
-        token: 'xxxxxx',
-        authType: 'getSocialData'
-      }
-    };
-    callback.onResult(0, result);
-  }
-}
-```
-
-```TypeScript
-import { Want } from '@kit.AbilityKit';
-
-class MyAuthenticator extends appAccount.Authenticator {
   addAccountImplicitly(authType: string, callerBundleName: string,
     options: Record<string, Object>, callback: appAccount.AuthenticatorCallback) {
     let want: Want = {

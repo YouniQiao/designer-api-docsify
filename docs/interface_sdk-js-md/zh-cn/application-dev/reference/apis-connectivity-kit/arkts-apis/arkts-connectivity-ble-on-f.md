@@ -33,7 +33,7 @@ function on(type: 'BLEDeviceFind', callback: Callback<Array<ScanResult>>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'BLEDeviceFind' | 是 | 填写"BLEDeviceFind"字符串，表示BLE设备发现事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;ScanResult&gt;&gt; | 是 | 表示回调函数的入参，发现的设备集合。回调函数由用户创建通过该接口注册。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[ScanResult](arkts-connectivity-ble-scanresult-i.md)&gt;&gt; | 是 | 表示回调函数的入参，发现的设备集合。回调函数由用户创建通过该接口注册。 |
 
 **错误码：**
 

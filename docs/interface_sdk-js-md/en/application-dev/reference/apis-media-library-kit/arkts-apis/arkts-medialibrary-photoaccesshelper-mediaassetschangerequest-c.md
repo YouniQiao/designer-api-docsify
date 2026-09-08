@@ -30,7 +30,7 @@ Constructor.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| assets | Array&lt;PhotoAsset&gt; | Yes | Assets to change. |
+| assets | Array&lt;[PhotoAsset](arkts-medialibrary-photoaccesshelper-photoasset-i.md)&gt; | Yes | Assets to change. |
 
 **Error codes:**
 
@@ -83,31 +83,6 @@ Favorites or unfavorites this file asset.
 | 14000011 | System inner fail |
 
 **Examples**
-
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  console.info('setFavoriteDemo');
-  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-  let fetchOption: photoAccessHelper.FetchOptions = {
-    fetchColumns: [],
-    predicates: predicates
-  };
-  let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> = await phAccessHelper.getAssets(fetchOption);
-  let asset = await fetchResult.getFirstObject();
-  let assetChangeRequest: photoAccessHelper.MediaAssetChangeRequest = new photoAccessHelper.MediaAssetChangeRequest(asset);
-  assetChangeRequest.setFavorite(true);
-  phAccessHelper.applyChanges(assetChangeRequest).then(() => {
-    console.info('apply setFavorite successfully');
-  }).catch((err: BusinessError) => {
-    console.error(`apply setFavorite failed with error: ${err.code}, ${err.message}`);
-  });
-}
-```
 
 For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
 

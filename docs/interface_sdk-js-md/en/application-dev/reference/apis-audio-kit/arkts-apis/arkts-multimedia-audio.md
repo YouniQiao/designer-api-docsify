@@ -167,7 +167,7 @@ import { audio } from '@kit.AudioKit';
 | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | Enumerates the audio volume types. |
 | [BluetoothAndNearlinkPreferredRecordCategory](arkts-audio-audio-bluetoothandnearlinkpreferredrecordcategory-e.md) | Enumerates the preferred device categories available for recording with Bluetooth or NearLink. |
 | [ChannelBlendMode](arkts-audio-audio-channelblendmode-e.md) | Enumerates the audio channel blending modes. |
-| [CommunicationDeviceType](arkts-audio-audio-communicationdevicetype-e.md) | Enumerates the available device types for communication. @enum { number } |
+| [CommunicationDeviceType](arkts-audio-audio-communicationdevicetype-e.md) | Enumerates the available device types for communication. @enum { int } |
 | [ContentType](arkts-audio-audio-contenttype-e.md) | Enumerates the audio content types. |
 | [DeviceBlockStatus](arkts-audio-audio-deviceblockstatus-e.md) | Enumerates the blocked statuses of audio devices. |
 | [DeviceChangeType](arkts-audio-audio-devicechangetype-e.md) | Enumerates the device connection statuses. |

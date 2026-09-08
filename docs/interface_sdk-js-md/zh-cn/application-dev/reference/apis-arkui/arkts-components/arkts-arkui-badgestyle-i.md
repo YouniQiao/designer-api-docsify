@@ -217,7 +217,7 @@ fontWeight?: number | FontWeight | ResourceStr
 
 不支持设置百分比，当设置为百分比时，按照默认值处理。从API version 20开始，支持ResourceStr类型。
 
-**类型：** number \| FontWeight \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
+**类型：** number \| [FontWeight](../arkts-apis/arkts-arkui-fontweight-e.md) \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
 
 **起始版本：** 10
 
@@ -263,7 +263,7 @@ outerBorderWidth?: LengthMetrics
 
 不支持设置百分比，当设置为百分比时，按照默认值处理。
 
-**类型：** LengthMetrics
+**类型：** [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md)
 
 **默认值：** 0vp
 

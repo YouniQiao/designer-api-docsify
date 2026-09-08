@@ -22,7 +22,7 @@ reportAllowed?: ReportType
 
 Report allowed.
 
-**Type:** ReportType
+**Type:** [ReportType](arkts-telephony-sms-reporttype-e-sys.md)
 
 **Since:** 8
 

@@ -38,7 +38,7 @@ componentType: ComponentType
 
 组件类型。
 
-**类型：** ComponentType
+**类型：** [ComponentType](arkts-basicservices-update-componenttype-e-sys.md)
 
 **起始版本：** 9
 

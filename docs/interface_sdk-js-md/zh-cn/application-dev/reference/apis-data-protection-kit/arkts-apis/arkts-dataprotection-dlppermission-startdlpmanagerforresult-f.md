@@ -30,7 +30,7 @@ function startDLPManagerForResult(context: common.UIAbilityContext, want: Want):
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | common.UIAbilityContext | 是 | 当前窗口[UIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md) 上下文。 |
+| context | [common.UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-common-uiabilitycontext-t.md) | 是 | 当前窗口[UIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md) 上下文。 |
 | want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 请求对象，必须包含uri和displayName字段。 |
 
 **返回值：**

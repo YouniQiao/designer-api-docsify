@@ -309,7 +309,7 @@ onDoNotDisturbChanged?: (mode: notificationManager.DoNotDisturbDate) => void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mode | notificationManager.DoNotDisturbDate | 是 |  |
+| mode | [notificationManager.DoNotDisturbDate](arkts-notification-notificationmanager-donotdisturbdate-i-sys.md) | 是 |  |
 
 **示例**
 
@@ -354,7 +354,7 @@ onDoNotDisturbDateChange?: (mode: notification.DoNotDisturbDate) => void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mode | notification.DoNotDisturbDate | 是 |  |
+| mode | [notification.DoNotDisturbDate](arkts-notification-notification-donotdisturbdate-depr-i-sys.md) | 是 |  |
 
 **示例**
 

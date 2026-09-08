@@ -55,7 +55,7 @@ Upgrades a **TCPSocket** connection to a **TLSSocket** connection.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| tcpSocket | TCPSocket | Yes | TCPSocket** connection to be upgraded. |
+| tcpSocket | [TCPSocket](arkts-network-socket-tcpsocket-i.md) | Yes | TCPSocket** connection to be upgraded. |
 
 **Return value:**
 

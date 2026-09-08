@@ -84,7 +84,7 @@ readonly deviceRole: DeviceRole
 
 Device role.
 
-**Type:** DeviceRole
+**Type:** [DeviceRole](arkts-audio-audio-devicerole-e.md)
 
 **Since:** 7
 
@@ -100,7 +100,7 @@ readonly deviceType: DeviceType
 
 Device type.
 
-**Type:** DeviceType
+**Type:** [DeviceType](arkts-audio-audio-devicetype-e.md)
 
 **Since:** 7
 

@@ -33,8 +33,8 @@ Before you do this, call [usb.getDevices](arkts-basicservices-usb-getdevices-f.m
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pipe | USBDevicePipe | Yes | USB device pipe, which is used to determine the USB device. |
-| endpoint | USBEndpoint | Yes | USB endpoint, which is used to determine the USB port for data transfer. |
+| pipe | [USBDevicePipe](arkts-basicservices-usb-usbdevicepipe-i.md) | Yes | USB device pipe, which is used to determine the USB device. |
+| endpoint | [USBEndpoint](arkts-basicservices-usb-usbendpoint-i.md) | Yes | USB endpoint, which is used to determine the USB port for data transfer. |
 | buffer | Uint8Array | Yes | Buffer for writing or reading data. |
 | timeout | number | No | Timeout duration in ms. This parameter is optional. The default value is **0**, indicating no timeout. |
 

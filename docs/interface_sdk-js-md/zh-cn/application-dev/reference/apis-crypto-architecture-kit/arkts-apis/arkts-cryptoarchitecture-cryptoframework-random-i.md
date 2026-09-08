@@ -87,7 +87,7 @@ generateRandom(len: number, callback: AsyncCallback<DataBlob>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | len | number | 是 | 表示生成随机数的长度，单位为bytes，范围在[1, INT_MAX]。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DataBlob&gt; | 是 | 回调函数。当生成随机数成功时，err为undefined，data为获取到的随机数；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md)&gt; | 是 | 回调函数。当生成随机数成功时，err为undefined，data为获取到的随机数；否则为错误对象。 |
 
 **错误码：**
 
@@ -140,7 +140,7 @@ generateRandom(len: number): Promise<DataBlob>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;DataBlob&gt; | Promise对象，返回生成的随机数。 |
+| Promise&lt;[DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md)&gt; | Promise对象，返回生成的随机数。 |
 
 **错误码：**
 
@@ -265,7 +265,7 @@ generateRandomSync(len: number): DataBlob
 
 | 类型 | 说明 |
 | --- | --- |
-| DataBlob | 表示生成的随机数。 |
+| [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | 表示生成的随机数。 |
 
 **错误码：**
 
@@ -388,7 +388,7 @@ setSeed(seed: DataBlob): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| seed | DataBlob | 是 | 设置的种子。 |
+| seed | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | 是 | 设置的种子。 |
 
 **错误码：**
 

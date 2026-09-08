@@ -166,7 +166,7 @@ Whether to enable this menu item.
 public label?: ResourceStr
 ```
 
-Label text for number press dialog.
+Label text for long press dialog.
 
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 

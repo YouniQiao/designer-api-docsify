@@ -342,7 +342,7 @@ Creates and obtains a KV store. This API uses a promise to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | storeId | string | Yes | Unique identifier of the KV store. The length cannot exceed [MAX_STORE_ID_LENGTH](arkts-arkdata-distributeddata-constants-n.md). |
-| options | Options | Yes | Configuration of the KV store. |
+| options | [Options](arkts-arkdata-distributeddata-options-i.md) | Yes | Configuration of the KV store. |
 
 **Return value:**
 
@@ -396,7 +396,7 @@ Creates and obtains a KV store. This API uses an asynchronous callback to return
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | storeId | string | Yes | Unique identifier of the KV store. The length cannot exceed [MAX_STORE_ID_LENGTH](arkts-arkdata-distributeddata-constants-n.md). |
-| options | Options | Yes | Configuration of the KV store. |
+| options | [Options](arkts-arkdata-distributeddata-options-i.md) | Yes | Configuration of the KV store. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;T&gt; | Yes | Callback used to return the KV store instance created. |
 
 **Examples**

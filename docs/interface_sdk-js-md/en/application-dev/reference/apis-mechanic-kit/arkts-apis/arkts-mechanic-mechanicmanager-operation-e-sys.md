@@ -1,6 +1,6 @@
 # Operation (System API)
 
-Enumerates the user operations. @enum { number }
+Enumerates the user operations. @enum { int }
 
 **Since:** 20
 

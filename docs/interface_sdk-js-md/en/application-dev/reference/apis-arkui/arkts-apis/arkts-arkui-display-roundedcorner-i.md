@@ -20,7 +20,7 @@ readonly position: Position
 
 Coordinates of the center point of the rounded corner.
 
-**Type:** Position
+**Type:** [Position](arkts-arkui-display-position-i.md)
 
 **Since:** 23
 

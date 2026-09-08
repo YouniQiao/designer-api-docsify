@@ -216,7 +216,7 @@ Default value: **FontWeight.Normal**
 
 Percentage values are not supported. If a percentage value is set, the default value is used. The ResourceStr type is supported since API version 20.
 
-**Type:** number \| FontWeight \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
+**Type:** number \| [FontWeight](../arkts-apis/arkts-arkui-fontweight-e.md) \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
 
 **Since:** 10
 
@@ -262,7 +262,7 @@ Unit: vp
 
 Percentage values are not supported. If a percentage value is set, the default value is used.
 
-**Type:** LengthMetrics
+**Type:** [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md)
 
 **Default:** 0vp
 

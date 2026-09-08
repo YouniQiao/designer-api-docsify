@@ -20,7 +20,7 @@ deviceType: DeviceType
 
 当前设备类型。
 
-**类型：** DeviceType
+**类型：** [DeviceType](arkts-localization-resourcemanager-devicetype-e.md)
 
 **起始版本：** 6
 
@@ -36,7 +36,7 @@ screenDensity: ScreenDensity
 
 当前设备屏幕密度。
 
-**类型：** ScreenDensity
+**类型：** [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md)
 
 **起始版本：** 6
 

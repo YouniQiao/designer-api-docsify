@@ -28,7 +28,7 @@ action?: Action
 
 移除域名过滤规则时非必填，当值为空时，表示清空所有的匹配[Action](arkts-mdm-networkmanager-action-e.md)规则的链，且domainName，appUid也必须传入空值。
 
-**类型：** Action
+**类型：** [Action](arkts-mdm-networkmanager-action-e.md)
 
 **起始版本：** 12
 
@@ -64,7 +64,7 @@ direction?: Direction
 
 移除域名过滤规则时非必填，当值为空时，表示清空所有的[Direction](arkts-mdm-networkmanager-direction-e.md)链，且domainName，appUid也必须传入空值。
 
-**类型：** Direction
+**类型：** [Direction](arkts-mdm-networkmanager-direction-e.md)
 
 **起始版本：** 15
 

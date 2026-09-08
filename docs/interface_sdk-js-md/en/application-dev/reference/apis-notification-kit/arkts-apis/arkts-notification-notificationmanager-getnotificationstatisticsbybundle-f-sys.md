@@ -26,7 +26,7 @@ Obtains notification statistics of a specified list of applications in batches. 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundles | BundleOption[] | Yes | List of application bundle information. |
+| bundles | [BundleOption](arkts-notification-notificationmanager-bundleoption-t.md)[] | Yes | List of application bundle information. |
 
 **Return value:**
 

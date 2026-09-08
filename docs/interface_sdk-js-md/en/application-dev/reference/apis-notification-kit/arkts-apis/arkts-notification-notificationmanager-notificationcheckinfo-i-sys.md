@@ -40,7 +40,7 @@ contentType: ContentType
 
 Notification type.
 
-**Type:** ContentType
+**Type:** [ContentType](arkts-notification-notificationmanager-contenttype-e.md)
 
 **Since:** 10
 
@@ -130,7 +130,7 @@ slotType: SlotType
 
 Notification slot type.
 
-**Type:** SlotType
+**Type:** [SlotType](arkts-notification-notificationmanager-slottype-e.md)
 
 **Since:** 11
 

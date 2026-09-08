@@ -23,13 +23,13 @@ Create PixelMap by data buffer.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | colors | ArrayBuffer | Yes | The image color buffer. |
-| options | image.InitializationOptions | Yes | Initialization options for PixelMap. |
+| options | [image.InitializationOptions](arkts-image-image-initializationoptions-i.md) | Yes | Initialization options for PixelMap. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| PixelMap | Returns the instance if the operation is successful;Otherwise, return undefined. |
+| [PixelMap](arkts-image-sendableimage-pixelmap-i.md) | Returns the instance if the operation is successful;Otherwise, return undefined. |
 
 **Error codes:**
 

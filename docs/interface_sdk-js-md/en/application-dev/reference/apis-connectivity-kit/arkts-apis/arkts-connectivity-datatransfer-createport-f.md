@@ -34,9 +34,9 @@ Registers a port channel. A port channel can be used to connect to a remote devi
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported because the chip does not support it. |
-| 36100003 | NearLink disabled. |
-| 36100020 | The UUID is already registered. |
-| 36100021 | Port exceeds the upper limit. |
-| 36100043 | Invalid UUID. |
-| 36100044 | NearLink standard UUID not allowed. |
-| 36100099 | Operation failed. |
+| [36100003](../../apis-avsession-kit/errorcode-nearlink-service.md#36100003-nearlink-disabled) | NearLink disabled. |
+| [36100020](../../apis-avsession-kit/errorcode-nearlink-service.md#36100020-duplicate-port-registration) | The UUID is already registered. |
+| [36100021](../../apis-avsession-kit/errorcode-nearlink-service.md#36100021-number-of-registered-ports-exceeds-the-upper-limit) | Port exceeds the upper limit. |
+| [36100043](../../apis-avsession-kit/errorcode-nearlink-service.md#36100043-invalid-uuid) | Invalid UUID. |
+| [36100044](../../apis-avsession-kit/errorcode-nearlink-service.md#36100044-standard-nearlink-service-uuid-not-allowed) | NearLink standard UUID not allowed. |
+| [36100099](../../apis-avsession-kit/errorcode-nearlink-service.md#36100099-operation-failed) | Operation failed. |

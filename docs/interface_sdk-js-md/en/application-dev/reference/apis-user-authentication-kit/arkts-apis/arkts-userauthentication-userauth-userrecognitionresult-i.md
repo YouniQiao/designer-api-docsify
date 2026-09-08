@@ -20,7 +20,7 @@ authTrustLevel?: AuthTrustLevel
 
 Authentication trust level. Only returned when the status is [MATCH](arkts-userauthentication-userauth-userrecognitionstatus-e.md#match). For details about the values, see [AuthTrustLevel](arkts-userauthentication-userauth-authtrustlevel-e.md).
 
-**Type:** AuthTrustLevel
+**Type:** [AuthTrustLevel](arkts-userauthentication-userauth-authtrustlevel-e.md)
 
 **Since:** 26.1.0
 

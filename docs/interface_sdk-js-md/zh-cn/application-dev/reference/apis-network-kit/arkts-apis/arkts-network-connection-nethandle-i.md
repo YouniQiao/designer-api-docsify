@@ -30,7 +30,7 @@ bindSocket(socketParam: TCPSocket | UDPSocket, callback: AsyncCallback<void>): v
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| socketParam | TCPSocket \| UDPSocket | 是 | 待绑定的TCPSocket或UDPSocket对象。 |
+| socketParam | [TCPSocket](arkts-network-connection-tcpsocket-t.md) \| [UDPSocket](arkts-network-connection-udpsocket-t.md) | 是 | 待绑定的TCPSocket或UDPSocket对象。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当TCPSocket或UDPSocket成功绑定到当前网络，error为undefined，否则为错误对象。 |
 
 **错误码：**
@@ -120,7 +120,7 @@ bindSocket(socketParam: TCPSocket | UDPSocket): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| socketParam | TCPSocket \| UDPSocket | 是 | 待绑定的TCPSocket或UDPSocket对象。 |
+| socketParam | [TCPSocket](arkts-network-connection-tcpsocket-t.md) \| [UDPSocket](arkts-network-connection-udpsocket-t.md) | 是 | 待绑定的TCPSocket或UDPSocket对象。 |
 
 **返回值：**
 
@@ -213,7 +213,7 @@ getAddressByName(host: string, callback: AsyncCallback<NetAddress>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | host | string | 是 | 需要解析的主机名。例如："www.example.com"。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;NetAddress&gt; | 是 | 回调函数。当使用对应网络解析主机名获取第一个IP地址成功，error为undefined，data为获取的第一个IP地址；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[NetAddress](arkts-network-connection-netaddress-i.md)&gt; | 是 | 回调函数。当使用对应网络解析主机名获取第一个IP地址成功，error为undefined，data为获取的第一个IP地址；否则为错误对象。 |
 
 **错误码：**
 
@@ -271,7 +271,7 @@ getAddressByName(host: string): Promise<NetAddress>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;NetAddress&gt; | Promise对象，返回获取到的第一个IP地址。 |
+| Promise&lt;[NetAddress](arkts-network-connection-netaddress-i.md)&gt; | Promise对象，返回获取到的第一个IP地址。 |
 
 **错误码：**
 
@@ -321,7 +321,7 @@ getAddressesByName(host: string, callback: AsyncCallback<Array<NetAddress>>): vo
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | host | string | 是 | 需要解析的主机名。例如："www.example.com"。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;NetAddress&gt;&gt; | 是 | 回调函数。当使用对应网络解析主机名成功获取所有IP地址，error为undefined，data为获取到的所有IP地址；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[NetAddress](arkts-network-connection-netaddress-i.md)&gt;&gt; | 是 | 回调函数。当使用对应网络解析主机名成功获取所有IP地址，error为undefined，data为获取到的所有IP地址；否则为错误对象。 |
 
 **错误码：**
 
@@ -334,19 +334,6 @@ getAddressesByName(host: string, callback: AsyncCallback<Array<NetAddress>>): vo
 | [2100003](../errorcode-net-connection.md#2100003-系统内部错误) | System internal error. |
 
 **示例**
-
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-connection.getAddressesByName("xxxx", (error: BusinessError, data: connection.NetAddress[]) => {
-  if (error) {
-    console.error(`Failed to get addresses. Code:${error.code}, message:${error.message}`);
-    return;
-  }
-  console.info("Succeeded to get data: " + JSON.stringify(data));
-});
-```
 
 ```TypeScript
 import { connection } from '@kit.NetworkKit';
@@ -394,7 +381,7 @@ getAddressesByName(host: string): Promise<Array<NetAddress>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;NetAddress&gt;&gt; | Promise对象，返回所有IP地址。 |
+| Promise&lt;Array&lt;[NetAddress](arkts-network-connection-netaddress-i.md)&gt;&gt; | Promise对象，返回所有IP地址。 |
 
 **错误码：**
 
@@ -407,14 +394,6 @@ getAddressesByName(host: string): Promise<Array<NetAddress>>
 | [2100003](../errorcode-net-connection.md#2100003-系统内部错误) | System internal error. |
 
 **示例**
-
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-
-connection.getAddressesByName("xxxx").then((data: connection.NetAddress[]) => {
-  console.info("Succeeded to get data: " + JSON.stringify(data));
-});
-```
 
 ```TypeScript
 import { connection } from '@kit.NetworkKit';
@@ -458,7 +437,7 @@ getAddressesByNameWithOptions(host: string, option?: QueryOptions): Promise<Arra
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;NetAddress&gt;&gt; | Promise对象，返回查询到的IP地址。返回值中的port字段固定为0，无需关注。 |
+| Promise&lt;Array&lt;[NetAddress](arkts-network-connection-netaddress-i.md)&gt;&gt; | Promise对象，返回查询到的IP地址。返回值中的port字段固定为0，无需关注。 |
 
 **错误码：**
 
@@ -470,20 +449,6 @@ getAddressesByNameWithOptions(host: string, option?: QueryOptions): Promise<Arra
 | [2100003](../errorcode-net-connection.md#2100003-系统内部错误) | System internal error. |
 
 **示例**
-
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let option: connection.QueryOptions = {
-  family: connection.FamilyType.FAMILY_TYPE_IPV4
-};
-connection.getAddressesByNameWithOptions("www.example.com", option).then((data: connection.NetAddress[]) => {
-  console.info(`Succeeded to get data: ${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to get msg. Code:${err.code}, message:${err.message}`)
-});
-```
 
 ```TypeScript
 import { connection } from '@kit.NetworkKit';

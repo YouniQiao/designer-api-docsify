@@ -104,7 +104,7 @@ clientCert?: ClientCert
 
 支持传输客户端证书。
 
-**类型：** ClientCert
+**类型：** [ClientCert](arkts-network-http-clientcert-i.md)
 
 **起始版本：** 11
 
@@ -118,7 +118,7 @@ clientEncCert?: ClientCert
 
 支持应用程序传入客户端证书，使服务器能够进行验证客户端的加密身份。
 
-**类型：** ClientCert
+**类型：** [ClientCert](arkts-network-http-clientcert-i.md)
 
 **起始版本：** 20
 
@@ -538,7 +538,7 @@ sslType?: SslType
 
 使用安全通信协议TLS（默认）或TLCP。如果使用TLCP，相关的选项（如caPath、clientCert和clientEncCert）必须赋有效值。
 
-**类型：** SslType
+**类型：** [SslType](arkts-network-http-ssltype-t.md)
 
 **起始版本：** 20
 
@@ -606,7 +606,7 @@ HTTP代理配置，该项不配置时默认使用系统代理。
 - 当usingProxy为HttpProxy类型时，使用指定网络代理。从API version 22开始，HttpProxy支持指定username和password字段。  
 - 从API version 26.0.0开始，当usingSocks5Proxy被正确配置时，usingProxy项不生效。
 
-**类型：** boolean \| HttpProxy
+**类型：** boolean \| [HttpProxy](arkts-network-http-httpproxy-t.md)
 
 **起始版本：** 10
 
@@ -624,7 +624,7 @@ SOCKS5代理配置，该项不配置时不启动SOCKS5代理。
 
 当该项被正确配置时，如果同时配置了usingProxy，usingProxy不生效。
 
-**类型：** Socks5Proxy
+**类型：** [Socks5Proxy](arkts-network-http-socks5proxy-t.md)
 
 **起始版本：** 26.0.0
 

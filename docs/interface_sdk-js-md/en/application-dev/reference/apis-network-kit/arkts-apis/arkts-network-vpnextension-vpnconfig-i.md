@@ -20,7 +20,7 @@ addresses: Array<LinkAddress>
 
 IP addresses of vNICs. Before API version 23, a maximum of 64 IP addresses are supported. Starting from API version 23, a maximum of 2000 IP addresses are supported.
 
-**Type:** Array&lt;LinkAddress&gt;
+**Type:** Array&lt;[LinkAddress](arkts-network-vpnextension-linkaddress-t.md)&gt;
 
 **Since:** 11
 
@@ -138,7 +138,7 @@ routes?: Array<RouteInfo>
 
 Route information of the vNIC. Before API version 23, a maximum of 1024 routes can be configured. Starting from API version 23, a maximum of 10,000 routes can be configured.
 
-**Type:** Array&lt;RouteInfo&gt;
+**Type:** Array&lt;[RouteInfo](arkts-network-vpnextension-routeinfo-t.md)&gt;
 
 **Since:** 11
 
@@ -187,44 +187,3 @@ Unique VPN ID.
 **Since:** 20
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
-
-**Examples**
-
-```TypeScript
-import { vpnExtension} from '@kit.NetworkKit';
-
-let vpnConfig: vpnExtension.VpnConfig = {
-  addresses: [],
-  vpnId: '123',
-  routes: [{
-    interface: "eth0",
-    destination: {
-      address: {
-        address:'',
-        family:1,
-        port:8080
-      },
-      prefixLength:1
-    },
-    gateway: {
-      address:'',
-      family:1,
-      port:8080
-    },
-    hasGateway: true,
-    isDefaultRoute: true,
-  }],
-  mtu: 1400,
-  dnsAddresses: ["223.5.5.5", "223.6.6.6"],
-  trustedApplications: [],
-  blockedApplications: [],
-}
-let context: vpnExtension.VpnExtensionContext;
-
-function vpnCreate(){
-  let vpnConnection: vpnExtension.VpnConnection = vpnExtension.createVpnConnection(context);
-  vpnConnection.create(vpnConfig).then((data) => {
-    console.info("VPN create " + JSON.stringify(data));
-  })
-}
-```

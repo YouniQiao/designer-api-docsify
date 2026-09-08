@@ -32,13 +32,13 @@ function getProfileConnectionState(profileId: ProfileId): ProfileConnectionState
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| profileId | ProfileId | 是 | 表示profile的枚举值，例如：PROFILE_A2DP_SOURCE。 |
+| profileId | [ProfileId](arkts-connectivity-bluetoothmanager-profileid-e.md) | 是 | 表示profile的枚举值，例如：PROFILE_A2DP_SOURCE。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| ProfileConnectionState | profile的连接状态。 |
+| [ProfileConnectionState](arkts-connectivity-bluetoothmanager-profileconnectionstate-e.md) | profile的连接状态。 |
 
 **错误码：**
 

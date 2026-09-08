@@ -20,7 +20,7 @@ devices: Array<DeviceInfo>
 
 播放设备的集合。
 
-**类型：** Array&lt;DeviceInfo&gt;
+**类型：** Array&lt;[DeviceInfo](arkts-avsession-avsession-deviceinfo-i.md)&gt;
 
 **起始版本：** 10
 

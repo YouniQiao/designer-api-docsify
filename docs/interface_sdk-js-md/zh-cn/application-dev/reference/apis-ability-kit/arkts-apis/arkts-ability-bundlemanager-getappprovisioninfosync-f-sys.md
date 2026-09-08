@@ -35,7 +35,7 @@ function getAppProvisionInfoSync(bundleName: string, userId?: number): AppProvis
 
 | 类型 | 说明 |
 | --- | --- |
-| AppProvisionInfo | AppProvisionInfo对象，返回应用的provision配置文件信息。 |
+| [AppProvisionInfo](arkts-ability-bundlemanager-appprovisioninfo-t-sys.md) | AppProvisionInfo对象，返回应用的provision配置文件信息。 |
 
 **错误码：**
 

@@ -20,7 +20,7 @@ import { radio } from '@kit.TelephonyKit';
 arfcn: number
 ```
 
-Indicates the ARFCN(absolute radio frequency channel number).
+Indicates the ARFCN(absolute radio frequency channel int).
 
 **类型：** number
 

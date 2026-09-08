@@ -25,7 +25,7 @@ icon?: string | Resource
 
 Image for the tab. If this parameter is not set, no image is displayed.
 
-**Type:** string \| Resource
+**Type:** string \| [Resource](../arkts-apis/arkts-arkui-resource-t.md)
 
 **Since:** 7
 
@@ -41,7 +41,7 @@ text?: string | Resource
 
 Text for the tab. If this parameter is not set, no text is displayed.
 
-**Type:** string \| Resource
+**Type:** string \| [Resource](../arkts-apis/arkts-arkui-resource-t.md)
 
 **Since:** 7
 

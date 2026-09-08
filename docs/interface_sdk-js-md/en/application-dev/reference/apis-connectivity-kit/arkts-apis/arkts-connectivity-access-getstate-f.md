@@ -28,7 +28,7 @@ Obtains the Bluetooth status of a device.
 
 | Type | Description |
 | --- | --- |
-| BluetoothState | Returns the Bluetooth status. |
+| [BluetoothState](arkts-connectivity-access-bluetoothstate-e.md) | Returns the Bluetooth status. |
 
 **Error codes:**
 

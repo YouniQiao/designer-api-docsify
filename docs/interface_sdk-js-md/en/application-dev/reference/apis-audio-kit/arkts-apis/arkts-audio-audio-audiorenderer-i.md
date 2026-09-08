@@ -36,20 +36,6 @@ Drains the playback buffer. This API uses an asynchronous callback to return the
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioRenderer.drain((err: BusinessError) => {
-  if (err) {
-    console.error('Renderer drain failed');
-  } else {
-    console.info('Renderer drained.');
-  }
-});
-```
-
 ## drain
 
 ```TypeScript
@@ -67,18 +53,6 @@ Drains the playback buffer. This API uses a promise to return the result.
 | Type | Description |
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioRenderer.drain().then(() => {
-  console.info('Renderer drained successfully');
-}).catch((err: BusinessError) => {
-  console.error(`ERROR: ${err}`);
-});
-```
 
 ## flush
 
@@ -104,18 +78,6 @@ Flushes the buffer. This API is available when [AudioState](arkts-audio-audio-au
 | --- | --- |
 | [6800103](../errorcode-audio.md#6800103-unsupported-state) | Operation not permit at current state. Return by promise. |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioRenderer.flush().then(() => {
-  console.info('Renderer flushed successfully');
-}).catch((err: BusinessError) => {
-  console.error(`ERROR: ${err}`);
-});
-```
-
 ## getAudioEffectMode
 
 ```TypeScript
@@ -133,20 +95,6 @@ Obtains the audio effect mode in use. This API uses an asynchronous callback to 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AudioEffectMode](arkts-audio-audio-audioeffectmode-e.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the audio effect mode obtained; otherwise, **err** is an error object. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioRenderer.getAudioEffectMode((err: BusinessError, effectMode: audio.AudioEffectMode) => {
-  if (err) {
-    console.error('Failed to get params');
-  } else {
-    console.info(`getAudioEffectMode: ${effectMode}`);
-  }
-});
-```
 
 ## getAudioEffectMode
 
@@ -166,18 +114,6 @@ Obtains the audio effect mode in use. This API uses a promise to return the resu
 | --- | --- |
 | Promise&lt;[AudioEffectMode](arkts-audio-audio-audioeffectmode-e.md)&gt; | Promise used to return the audio effect mode. |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioRenderer.getAudioEffectMode().then((effectMode: audio.AudioEffectMode) => {
-  console.info(`getAudioEffectMode: ${effectMode}`);
-}).catch((err: BusinessError) => {
-  console.error(`ERROR: ${err}`);
-});
-```
-
 ## getAudioStreamId
 
 ```TypeScript
@@ -195,24 +131,6 @@ Obtains the stream ID of this audio renderer. This API uses an asynchronous call
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the stream ID obtained; otherwise, **err** is an error object. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioCapturer.getAudioStreamId((err: BusinessError, streamId: number) => {
-  console.info(`audioCapturer GetStreamId: ${streamId}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioRenderer.getAudioStreamId((err: BusinessError, streamId: number) => {
-  console.info(`Renderer GetStreamId: ${streamId}`);
-});
-```
 
 ## getAudioStreamId
 
@@ -232,28 +150,6 @@ Obtains the stream ID of this audio renderer. This API uses a promise to return 
 | --- | --- |
 | Promise&lt;number&gt; | Promise used to return the stream ID. |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioCapturer.getAudioStreamId().then((streamId: number) => {
-  console.info(`audioCapturer getAudioStreamId: ${streamId}`);
-}).catch((err: BusinessError) => {
-  console.error(`ERROR: ${err}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioRenderer.getAudioStreamId().then((streamId: number) => {
-  console.info(`Renderer getAudioStreamId: ${streamId}`);
-}).catch((err: BusinessError) => {
-  console.error(`ERROR: ${err}`);
-});
-```
-
 ## getAudioStreamIdSync
 
 ```TypeScript
@@ -271,32 +167,6 @@ Obtains the stream ID of this audio renderer. This API returns the result synchr
 | Type | Description |
 | --- | --- |
 | number | Stream ID. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let streamId: number = audioCapturer.getAudioStreamIdSync();
-  console.info(`audioCapturer getAudioStreamIdSync: ${streamId}`);
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`ERROR: ${error}`);
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let streamId: number = audioRenderer.getAudioStreamIdSync();
-  console.info(`Renderer getAudioStreamIdSync: ${streamId}`);
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`ERROR: ${error}`);
-}
-```
 
 ## getAudioTime
 
@@ -316,24 +186,6 @@ Obtains the timestamp of the current playback position, measured in nanoseconds 
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the number of nanoseconds obtained; otherwise, **err** is an error object. |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioCapturer.getAudioTime((err: BusinessError, timestamp: number) => {
-  console.info(`Succeeded in getting audio time. Timestamp: ${timestamp}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioRenderer.getAudioTime((err: BusinessError, timestamp: number) => {
-  console.info(`Current timestamp: ${timestamp}`);
-});
-```
-
 ## getAudioTime
 
 ```TypeScript
@@ -351,28 +203,6 @@ Obtains the timestamp of the current playback position, measured in nanoseconds 
 | Type | Description |
 | --- | --- |
 | Promise&lt;number&gt; | Promise used to return the timestamp. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioCapturer.getAudioTime().then((timestamp: number) => {
-  console.info(`Succeeded in getting audio time. Timestamp: ${timestamp}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to get audio time. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioRenderer.getAudioTime().then((timestamp: number) => {
-  console.info(`Current timestamp: ${timestamp}`);
-}).catch((err: BusinessError) => {
-  console.error(`ERROR: ${err}`);
-});
-```
 
 ## getAudioTimestampInfo
 
@@ -404,28 +234,6 @@ Additionally, changes in the audio stream route, such as switching devices or ou
 | --- | --- |
 | [6800103](../errorcode-audio.md#6800103-unsupported-state) | Operation not permit at current state. |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioCapturer.getAudioTimestampInfo().then((audioTimestampInfo: audio.AudioTimestampInfo) => {
-  console.info(`Current timestamp: ${audioTimestampInfo.timestamp}`);
-}).catch((err: BusinessError) => {
-  console.error(`ERROR: ${err}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioRenderer.getAudioTimestampInfo().then((audioTimestampInfo: audio.AudioTimestampInfo) => {
-  console.info(`Current timestamp: ${audioTimestampInfo.timestamp}`);
-}).catch((err: BusinessError) => {
-  console.error(`ERROR: ${err}`);
-});
-```
-
 ## getAudioTimestampInfoSync
 
 ```TypeScript
@@ -456,32 +264,6 @@ Additionally, changes in the audio stream route, such as switching devices or ou
 | --- | --- |
 | [6800103](../errorcode-audio.md#6800103-unsupported-state) | Operation not permit at current state. |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let audioTimestampInfo: audio.AudioTimestampInfo = audioCapturer.getAudioTimestampInfoSync();
-  console.info(`Current timestamp: ${audioTimestampInfo.timestamp}`);
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`ERROR: ${error}`);
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let audioTimestampInfo: audio.AudioTimestampInfo = audioRenderer.getAudioTimestampInfoSync();
-  console.info(`Current timestamp: ${audioTimestampInfo.timestamp}`);
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`ERROR: ${error}`);
-}
-```
-
 ## getAudioTimeSync
 
 ```TypeScript
@@ -499,32 +281,6 @@ Obtains the timestamp of the current playback position, measured in nanoseconds 
 | Type | Description |
 | --- | --- |
 | number | Timestamp. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let timestamp: number = audioCapturer.getAudioTimeSync();
-  console.info(`Succeeded in getting audio time. Timestamp: ${timestamp}`);
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`Failed to get audio time. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let timestamp: number = audioRenderer.getAudioTimeSync();
-  console.info(`Current timestamp: ${timestamp}`);
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`ERROR: ${error}`);
-}
-```
 
 ## getBufferSize
 
@@ -544,35 +300,6 @@ Obtains a reasonable minimum buffer size in bytes for rendering. This API uses a
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the minimum buffer size obtained; otherwise, **err** is an error object.The unit is bytes. |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioCapturer.getBufferSize((err: BusinessError, bufferSize: number) => {
-  if (err) {
-    console.error(`Failed to get buffer size. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info(`Succeeded in getting buffer size, BufferSize: ${bufferSize}.`);
-  }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let bufferSize: number;
-
-audioRenderer.getBufferSize((err: BusinessError, data: number) => {
-  if (err) {
-    console.error('getBufferSize error');
-  } else {
-    console.info(`AudioFrameworkRenderLog: getBufferSize: SUCCESS ${data}`);
-    bufferSize = data;
-  }
-});
-```
-
 ## getBufferSize
 
 ```TypeScript
@@ -590,31 +317,6 @@ Obtains a reasonable minimum buffer size in bytes for rendering. This API uses a
 | Type | Description |
 | --- | --- |
 | Promise&lt;number&gt; | Promise used to return the buffer size. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioCapturer.getBufferSize().then((bufferSize: number) => {
-  console.info(`Succeeded in getting buffer size, BufferSize: ${bufferSize}.`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to get buffer size. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let bufferSize: number;
-
-audioRenderer.getBufferSize().then((data: number) => {
-  console.info(`AudioFrameworkRenderLog: getBufferSize: SUCCESS ${data}`);
-  bufferSize = data;
-}).catch((err: BusinessError) => {
-  console.error(`AudioFrameworkRenderLog: getBufferSize: ERROR: ${err}`);
-});
-```
 
 ## getBufferSizeSync
 
@@ -634,34 +336,6 @@ Obtains a reasonable minimum buffer size in bytes for rendering. This API return
 | --- | --- |
 | number | Buffer size, in bytes. |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let bufferSize = audioCapturer.getBufferSizeSync();
-  console.info(`Succeeded in getting buffer size, BufferSize: ${bufferSize}.`);
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`Failed to get buffer size. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let bufferSize: number = 0;
-
-try {
-  bufferSize = audioRenderer.getBufferSizeSync();
-  console.info(`AudioFrameworkRenderLog: getBufferSize: SUCCESS ${bufferSize}`);
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`AudioFrameworkRenderLog: getBufferSize: ERROR: ${error}`);
-}
-```
-
 ## getCurrentOutputDevices
 
 ```TypeScript
@@ -679,29 +353,6 @@ Obtains the output device information of the audio stream. This API uses an asyn
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the output device information obtained; otherwise, **err** is an error object. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioRenderer.getCurrentOutputDevices((err: BusinessError, deviceInfo: audio.AudioDeviceDescriptors) => {
-  if (err) {
-    console.error(`getCurrentOutputDevices Fail: ${err}`);
-  } else {
-    for (let i = 0; i < deviceInfo.length; i++) {
-      console.info(`DeviceInfo id: ${deviceInfo[i].id}`);
-      console.info(`DeviceInfo type: ${deviceInfo[i].deviceType}`);
-      console.info(`DeviceInfo role: ${deviceInfo[i].deviceRole}`);
-      console.info(`DeviceInfo name: ${deviceInfo[i].name}`);
-      console.info(`DeviceInfo address: ${deviceInfo[i].address}`);
-      console.info(`DeviceInfo samplerate: ${deviceInfo[i].sampleRates[0]}`);
-      console.info(`DeviceInfo channelcount: ${deviceInfo[i].channelCounts[0]}`);
-      console.info(`DeviceInfo channelmask: ${deviceInfo[i].channelMasks[0]}`);
-    }
-  }
-});
-```
 
 ## getCurrentOutputDevices
 
@@ -721,27 +372,6 @@ Obtains the output device information of the audio stream. This API uses a promi
 | --- | --- |
 | Promise&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | Promise used to return the output device information. |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioRenderer.getCurrentOutputDevices().then((deviceInfo: audio.AudioDeviceDescriptors) => {
-  for (let i = 0; i < deviceInfo.length; i++) {
-    console.info(`DeviceInfo id: ${deviceInfo[i].id}`);
-    console.info(`DeviceInfo type: ${deviceInfo[i].deviceType}`);
-    console.info(`DeviceInfo role: ${deviceInfo[i].deviceRole}`);
-    console.info(`DeviceInfo name: ${deviceInfo[i].name}`);
-    console.info(`DeviceInfo address: ${deviceInfo[i].address}`);
-    console.info(`DeviceInfo samplerate: ${deviceInfo[i].sampleRates[0]}`);
-    console.info(`DeviceInfo channelcount: ${deviceInfo[i].channelCounts[0]}`);
-    console.info(`DeviceInfo channelmask: ${deviceInfo[i].channelMasks[0]}`);
-  }
-}).catch((err: BusinessError) => {
-  console.error(`Get current output devices Fail: ${err}`);
-});
-```
-
 ## getCurrentOutputDevicesSync
 
 ```TypeScript
@@ -759,29 +389,6 @@ Obtains the output device information of the audio stream. This API returns the 
 | Type | Description |
 | --- | --- |
 | [AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md) | Output device information. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let deviceInfo: audio.AudioDeviceDescriptors = audioRenderer.getCurrentOutputDevicesSync();
-  for (let i = 0; i < deviceInfo.length; i++) {
-    console.info(`DeviceInfo id: ${deviceInfo[i].id}`);
-    console.info(`DeviceInfo type: ${deviceInfo[i].deviceType}`);
-    console.info(`DeviceInfo role: ${deviceInfo[i].deviceRole}`);
-    console.info(`DeviceInfo name: ${deviceInfo[i].name}`);
-    console.info(`DeviceInfo address: ${deviceInfo[i].address}`);
-    console.info(`DeviceInfo samplerate: ${deviceInfo[i].sampleRates[0]}`);
-    console.info(`DeviceInfo channelcount: ${deviceInfo[i].channelCounts[0]}`);
-    console.info(`DeviceInfo channelmask: ${deviceInfo[i].channelMasks[0]}`);
-  }
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`Get current output devices Fail: ${error}`);
-}
-```
 
 ## getLatency
 
@@ -828,20 +435,6 @@ Obtains the estimated latency of the current audio route.
 | [6800103](../errorcode-audio.md#6800103-unsupported-state) | Operation not permitted in release state. |
 | [6800301](../errorcode-audio.md#6800301-system-error) | System internal error, like audio service error. |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  const latency: number = audioRenderer.getLatency(audio.AudioLatencyType.LATENCY_TYPE_ALL);
-  console.info(`Current audio latency: ${latency}ms`);
-} catch (err) {
-  const error = err as BusinessError;
-  console.error(`Failed to get latency. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
 ## getLoudnessGain
 
 ```TypeScript
@@ -859,12 +452,6 @@ Gets loudness gain of this stream.
 | Type | Description |
 | --- | --- |
 | number | Returns one float value, unit is dB. |
-
-**Examples**
-
-```TypeScript
-let loudnessGain = audioRenderer.getLoudnessGain();
-```
 
 ## getMaxStreamVolume
 
@@ -884,20 +471,6 @@ Obtains the maximum volume of the audio stream. This API uses an asynchronous ca
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the maximum volume obtained; otherwise, **err** is an error object.The volume range is [0.0, 1.0]. |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioRenderer.getMaxStreamVolume((err: BusinessError, maxVolume: number) => {
-  if (err) {
-    console.error(`getMaxStreamVolume Fail: ${err}`);
-  } else {
-    console.info(`getMaxStreamVolume Success! ${maxVolume}`);
-  }
-});
-```
-
 ## getMaxStreamVolume
 
 ```TypeScript
@@ -915,18 +488,6 @@ Obtains the maximum volume of the audio stream. This API uses a promise to retur
 | Type | Description |
 | --- | --- |
 | Promise&lt;number&gt; | Promise used to return the maximum volume of the audio stream. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioRenderer.getMaxStreamVolume().then((value: number) => {
-  console.info(`Get max stream volume Success! ${value}`);
-}).catch((err: BusinessError) => {
-  console.error(`Get max stream volume Fail: ${err}`);
-});
-```
 
 ## getMaxStreamVolumeSync
 
@@ -946,20 +507,6 @@ Obtains the maximum volume of the audio stream. This API returns the result sync
 | --- | --- |
 | number | Maximum volume of the audio stream, which ranges from 0.0 to 1.0. |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let value: number = audioRenderer.getMaxStreamVolumeSync();
-  console.info(`Get max stream volume Success! ${value}`);
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`Get max stream volume Fail: ${error}`);
-}
-```
-
 ## getMinStreamVolume
 
 ```TypeScript
@@ -977,20 +524,6 @@ Obtains the minimum volume of the audio stream. This API uses an asynchronous ca
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the minimum volume obtained; otherwise, **err** is an error object.The volume range is [0.0, 1.0]. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioRenderer.getMinStreamVolume((err: BusinessError, minVolume: number) => {
-  if (err) {
-    console.error(`getMinStreamVolume error: ${err}`);
-  } else {
-    console.info(`getMinStreamVolume Success! ${minVolume}`);
-  }
-});
-```
 
 ## getMinStreamVolume
 
@@ -1010,18 +543,6 @@ Obtains the minimum volume of the audio stream. This API uses a promise to retur
 | --- | --- |
 | Promise&lt;number&gt; | Promise used to return the minimum volume of the audio stream. |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioRenderer.getMinStreamVolume().then((value: number) => {
-  console.info(`Get min stream volume Success! ${value}`);
-}).catch((err: BusinessError) => {
-  console.error(`Get min stream volume Fail: ${err}`);
-});
-```
-
 ## getMinStreamVolumeSync
 
 ```TypeScript
@@ -1039,20 +560,6 @@ Obtains the minimum volume of the audio stream. This API returns the result sync
 | Type | Description |
 | --- | --- |
 | number | Minimum volume of the audio stream, which ranges from 0.0 to 1.0. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let value: number = audioRenderer.getMinStreamVolumeSync();
-  console.info(`Get min stream volume Success! ${value}`);
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`Get min stream volume Fail: ${error}`);
-}
-```
 
 ## getRendererInfo
 
@@ -1072,20 +579,6 @@ Obtains the information about this audio renderer. This API uses an asynchronous
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AudioRendererInfo](arkts-audio-audio-audiorendererinfo-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the audio renderer information obtained; otherwise, **err** is an error object. |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioRenderer.getRendererInfo((err: BusinessError, audioRendererInfo: audio.AudioRendererInfo) => {
-  if (err) {
-    console.error(`Failed to get renderer info. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info(`Succeeded in getting renderer info, AudioRendererInfo: ${JSON.stringify(audioRendererInfo)}.`);
-  }
-});
-```
-
 ## getRendererInfo
 
 ```TypeScript
@@ -1104,18 +597,6 @@ Obtains the information about this audio renderer. This API uses a promise to re
 | --- | --- |
 | Promise&lt;[AudioRendererInfo](arkts-audio-audio-audiorendererinfo-i.md)&gt; | Promise used to return the audio renderer information. |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioRenderer.getRendererInfo().then((audioRendererInfo: audio.AudioRendererInfo) => {
-  console.info(`Succeeded in getting renderer info, AudioRendererInfo: ${JSON.stringify(audioRendererInfo)}.`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to get renderer info. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
 ## getRendererInfoSync
 
 ```TypeScript
@@ -1133,20 +614,6 @@ Obtains the information about this audio renderer. This API returns the result s
 | Type | Description |
 | --- | --- |
 | [AudioRendererInfo](arkts-audio-audio-audiorendererinfo-i.md) | Audio renderer information. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let audioRendererInfo = audioRenderer.getRendererInfoSync();
-  console.info(`Succeeded in getting renderer info, AudioRendererInfo: ${JSON.stringify(audioRendererInfo)}.`);
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`Failed to get renderer info. Code: ${error.code}, message: ${error.message}`);
-}
-```
 
 ## getRenderRate
 
@@ -1170,16 +637,6 @@ Obtains the audio renderer rate. This API uses an asynchronous callback to retur
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AudioRendererRate](arkts-audio-audio-audiorendererrate-e.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the render rate obtained; otherwise, **err** is an error object. |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioRenderer.getRenderRate((err: BusinessError, renderRate: audio.AudioRendererRate) => {
-  console.info(`getRenderRate: ${renderRate}`);
-});
-```
-
 ## getRenderRate
 
 ```TypeScript
@@ -1201,18 +658,6 @@ Obtains the audio renderer rate. This API uses a promise to return the result.
 | Type | Description |
 | --- | --- |
 | Promise&lt;[AudioRendererRate](arkts-audio-audio-audiorendererrate-e.md)&gt; | Promise used to return the render rate. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioRenderer.getRenderRate().then((renderRate: audio.AudioRendererRate) => {
-  console.info(`getRenderRate: ${renderRate}`);
-}).catch((err: BusinessError) => {
-  console.error(`ERROR: ${err}`);
-});
-```
 
 ## getRenderRateSync
 
@@ -1236,20 +681,6 @@ Obtains the audio renderer rate. This API returns the result synchronously.
 | --- | --- |
 | [AudioRendererRate](arkts-audio-audio-audiorendererrate-e.md) | Audio render rate. |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let renderRate: audio.AudioRendererRate = audioRenderer.getRenderRateSync();
-  console.info(`getRenderRate: ${renderRate}`);
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`ERROR: ${error}`);
-}
-```
-
 ## getSilentModeAndMixWithOthers
 
 ```TypeScript
@@ -1267,12 +698,6 @@ Obtains the silent mode in concurrent playback for the audio stream.
 | Type | Description |
 | --- | --- |
 | boolean | Enabled status of the silent mode in concurrent playback. **true** if enabled, **false** otherwise. |
-
-**Examples**
-
-```TypeScript
-let on = audioRenderer.getSilentModeAndMixWithOthers();
-```
 
 ## getSpeed
 
@@ -1292,12 +717,6 @@ Obtains the playback speed.
 | --- | --- |
 | number | Playback rate, which ranges from 0.25 to 4.0. |
 
-**Examples**
-
-```TypeScript
-let speed = audioRenderer.getSpeed();
-```
-
 ## getStreamInfo
 
 ```TypeScript
@@ -1315,36 +734,6 @@ Obtains the stream information of this audio renderer. This API uses an asynchro
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AudioStreamInfo](arkts-audio-audio-audiostreaminfo-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the stream information obtained; otherwise, **err** is an error object. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioCapturer.getStreamInfo((err: BusinessError, streamInfo: audio.AudioStreamInfo) => {
-  if (err) {
-    console.error('Failed to get stream info');
-  } else {
-    console.info('Capturer GetStreamInfo:');
-    console.info(`Capturer sampling rate: ${streamInfo.samplingRate}`);
-    console.info(`Capturer channel: ${streamInfo.channels}`);
-    console.info(`Capturer format: ${streamInfo.sampleFormat}`);
-    console.info(`Capturer encoding type: ${streamInfo.encodingType}`);
-  }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioRenderer.getStreamInfo((err: BusinessError, streamInfo: audio.AudioStreamInfo) => {
-  console.info('Renderer GetStreamInfo:');
-  console.info(`Renderer sampling rate: ${streamInfo.samplingRate}`);
-  console.info(`Renderer channel: ${streamInfo.channels}`);
-  console.info(`Renderer format: ${streamInfo.sampleFormat}`);
-  console.info(`Renderer encoding type: ${streamInfo.encodingType}`);
-});
-```
 
 ## getStreamInfo
 
@@ -1364,36 +753,6 @@ Obtains the stream information of this audio renderer. This API uses a promise t
 | --- | --- |
 | Promise&lt;[AudioStreamInfo](arkts-audio-audio-audiostreaminfo-i.md)&gt; | Promise used to return the stream information. |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioCapturer.getStreamInfo().then((audioParamsGet: audio.AudioStreamInfo) => {
-  console.info('getStreamInfo:');
-  console.info(`sampleFormat: ${audioParamsGet.sampleFormat}`);
-  console.info(`samplingRate: ${audioParamsGet.samplingRate}`);
-  console.info(`channels: ${audioParamsGet.channels}`);
-  console.info(`encodingType: ${audioParamsGet.encodingType}`);
-}).catch((err: BusinessError) => {
-  console.error(`getStreamInfo :ERROR: ${err}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioRenderer.getStreamInfo().then((streamInfo: audio.AudioStreamInfo) => {
-  console.info('Renderer GetStreamInfo:');
-  console.info(`Renderer sampling rate: ${streamInfo.samplingRate}`);
-  console.info(`Renderer channel: ${streamInfo.channels}`);
-  console.info(`Renderer format: ${streamInfo.sampleFormat}`);
-  console.info(`Renderer encoding type: ${streamInfo.encodingType}`);
-}).catch((err: BusinessError) => {
-  console.error(`ERROR: ${err}`);
-});
-```
-
 ## getStreamInfoSync
 
 ```TypeScript
@@ -1411,38 +770,6 @@ Obtains the stream information of this audio renderer. This API returns the resu
 | Type | Description |
 | --- | --- |
 | [AudioStreamInfo](arkts-audio-audio-audiostreaminfo-i.md) | Stream information. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let audioParamsGet: audio.AudioStreamInfo = audioCapturer.getStreamInfoSync();
-  console.info(`sampleFormat: ${audioParamsGet.sampleFormat}`);
-  console.info(`samplingRate: ${audioParamsGet.samplingRate}`);
-  console.info(`channels: ${audioParamsGet.channels}`);
-  console.info(`encodingType: ${audioParamsGet.encodingType}`);
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`getStreamInfo :ERROR: ${error}`);
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let streamInfo: audio.AudioStreamInfo = audioRenderer.getStreamInfoSync();
-  console.info(`Renderer sampling rate: ${streamInfo.samplingRate}`);
-  console.info(`Renderer channel: ${streamInfo.channels}`);
-  console.info(`Renderer format: ${streamInfo.sampleFormat}`);
-  console.info(`Renderer encoding type: ${streamInfo.encodingType}`);
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`ERROR: ${error}`);
-}
-```
 
 ## getUnderflowCount
 
@@ -1462,20 +789,6 @@ Obtains the number of underflow audio frames in the audio stream that is being p
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the number of underloaded audio frames obtained; otherwise, **err** is an error object. |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioRenderer.getUnderflowCount((err: BusinessError, underflowCount: number) => {
-  if (err) {
-    console.error(`getUnderflowCount Fail: ${err}`);
-  } else {
-    console.info(`getUnderflowCount Success! ${underflowCount}`);
-  }
-});
-```
-
 ## getUnderflowCount
 
 ```TypeScript
@@ -1493,18 +806,6 @@ Obtains the number of underflow audio frames in the audio stream that is being p
 | Type | Description |
 | --- | --- |
 | Promise&lt;number&gt; | Promise used to return the number of underflow audio frames. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioRenderer.getUnderflowCount().then((value: number) => {
-  console.info(`Get underflow count Success! ${value}`);
-}).catch((err: BusinessError) => {
-  console.error(`Get underflow count Fail: ${err}`);
-});
-```
 
 ## getUnderflowCountSync
 
@@ -1524,20 +825,6 @@ Obtains the number of underflow audio frames in the audio stream that is being p
 | --- | --- |
 | number | Number of underflow audio frames. |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let value: number = audioRenderer.getUnderflowCountSync();
-  console.info(`Get underflow count Success! ${value}`);
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`Get underflow count Fail: ${error}`);
-}
-```
-
 ## getVolume
 
 ```TypeScript
@@ -1555,20 +842,6 @@ Obtains the volume of the audio stream. This API returns the result synchronousl
 | Type | Description |
 | --- | --- |
 | number | Volume, in the range [0.0, 1.0]. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let value: number = audioRenderer.getVolume();
-  console.info(`Indicate that the volume is obtained ${value}.`);
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`Failed to obtain the volume, error ${error}.`);
-}
-```
 
 ## off('audioInterrupt')
 
@@ -1650,7 +923,7 @@ Unsubscribes from the audio renderer state change event. This API uses an asynch
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'stateChange' | Yes | Event type. The event **'stateChange'** is triggered when the listening for audio renderer state change event is canceled. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AudioState&gt; | No | Callback used to return the audio status. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioState](arkts-audio-audio-audiostate-e.md)&gt; | No | Callback used to return the audio status. |
 
 **Error codes:**
 
@@ -1827,7 +1100,7 @@ Subscribes to the audio renderer state change event, which is triggered when the
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'stateChange' | Yes | Event type. The event **'stateChange'** is triggered when the state of the audio renderer is changed. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AudioState&gt; | Yes | Callback used to return the audio status. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioState](arkts-audio-audio-audiostate-e.md)&gt; | Yes | Callback used to return the audio status. |
 
 ## on('outputDeviceChange')
 
@@ -1927,20 +1200,6 @@ Pauses this audio renderer. This API uses an asynchronous callback to return the
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioRenderer.pause((err: BusinessError) => {
-  if (err) {
-    console.error('Renderer pause failed');
-  } else {
-    console.info('Renderer paused.');
-  }
-});
-```
-
 ## pause
 
 ```TypeScript
@@ -1958,18 +1217,6 @@ Pauses this audio renderer. This API uses a promise to return the result.
 | Type | Description |
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioRenderer.pause().then(() => {
-  console.info('Renderer paused');
-}).catch((err: BusinessError) => {
-  console.error(`ERROR: ${err}`);
-});
-```
 
 ## release
 
@@ -1989,45 +1236,6 @@ Releases the renderer. This API uses an asynchronous callback to return the resu
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-tonePlayer.release((err: BusinessError) => {
-  if (err) {
-    console.error(`callback call release failed error: ${err.message}`);
-    return;
-  } else {
-    console.info('callback call release success ');
-  }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioCapturer.release((err: BusinessError) => {
-  if (err) {
-    console.error('capturer release failed');
-  } else {
-    console.info('capturer released.');
-  }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioRenderer.release((err: BusinessError) => {
-  if (err) {
-    console.error('Renderer release failed');
-  } else {
-    console.info('Renderer released.');
-  }
-});
-```
-
 ## release
 
 ```TypeScript
@@ -2045,38 +1253,6 @@ Releases the renderer. This API uses a promise to return the result.
 | Type | Description |
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
-
-**Examples**
-
-```TypeScript
-tonePlayer.release().then(() => {
-  console.info('promise call release');
-}).catch(() => {
-  console.error('promise call release fail');
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioCapturer.release().then(() => {
-  console.info('AudioFrameworkRecLog: ---------RELEASE RECORD---------');
-  console.info('AudioFrameworkRecLog: Capturer release : SUCCESS');
-  console.info(`AudioFrameworkRecLog: AudioCapturer : STATE : ${audioCapturer.state}`);
-}).catch((err: BusinessError) => {
-  console.error(`AudioFrameworkRecLog: Capturer stop: ERROR: ${err}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioRenderer.release().then(() => {
-  console.info('Renderer released successfully');
-}).catch((err: BusinessError) => {
-  console.error(`ERROR: ${err}`);
-});
-```
 
 ## setAudioEffectMode
 
@@ -2103,20 +1279,6 @@ Sets an audio effect mode. This API uses an asynchronous callback to return the 
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. Return by callback. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioRenderer.setAudioEffectMode(audio.AudioEffectMode.EFFECT_DEFAULT, (err: BusinessError) => {
-  if (err) {
-    console.error('Failed to set params');
-  } else {
-    console.info('Callback invoked to indicate a successful audio effect mode setting.');
-  }
-});
-```
 
 ## setAudioEffectMode
 
@@ -2149,18 +1311,6 @@ Sets an audio effect mode. This API uses a promise to return the result.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. Return by promise. |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioRenderer.setAudioEffectMode(audio.AudioEffectMode.EFFECT_DEFAULT).then(() => {
-  console.info('setAudioEffectMode SUCCESS');
-}).catch((err: BusinessError) => {
-  console.error(`ERROR: ${err}`);
-});
-```
-
 ## setChannelBlendMode
 
 ```TypeScript
@@ -2187,15 +1337,6 @@ Sets the audio channel blending mode. This API returns the result synchronously.
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 | [6800103](../errorcode-audio.md#6800103-unsupported-state) | Operation not permit at current state. |
 
-**Examples**
-
-```TypeScript
-let mode = audio.ChannelBlendMode.MODE_DEFAULT;
-
-audioRenderer.setChannelBlendMode(mode);
-console.info(`BlendMode: ${mode}`);
-```
-
 ## setDefaultOutputDevice
 
 ```TypeScript
@@ -2212,7 +1353,7 @@ Temporarily changes the current audio device This function applies on audiorende
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceType | DeviceType | Yes | the available deviceTypes are EARPIECE: Built-in earpiece SPEAKER: Built-in speaker DEFAULT: System default output device |
+| deviceType | [DeviceType](arkts-audio-audio-devicetype-e.md) | Yes | the available deviceTypes are EARPIECE: Built-in earpiece SPEAKER: Built-in speaker DEFAULT: System default output device |
 
 **Return value:**
 
@@ -2227,31 +1368,6 @@ Temporarily changes the current audio device This function applies on audiorende
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 | [6800103](../errorcode-audio.md#6800103-unsupported-state) | Operation not permit at current state. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// This API can be called at any time after an AudioRenderer instance is created.
-// If the API is called when no audio is being played, the system records the default device set by the application. When the application starts playing, the sound is played from this default device.
-// If the API is called when audio is being played and no external device, such as a Bluetooth or wired headset, is connected, the system immediately switches to the default device. If an external device is connected, the system records the default device and switches to it once the external device is disconnected.
-audioRenderer.setDefaultOutputDevice(audio.DeviceType.SPEAKER).then(() => {
-  console.info('setDefaultOutputDevice Success!');
-}).catch((err: BusinessError) => {
-  console.error(`setDefaultOutputDevice Fail: ${err}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioSessionManager.setDefaultOutputDevice(audio.DeviceType.SPEAKER).then(() => {
-  console.info('setDefaultOutputDevice Success!');
-}).catch((err: BusinessError) => {
-  console.error(`setDefaultOutputDevice Fail: ${err}`);
-});
-```
 
 ## setIndependentAudioSessionStrategy
 
@@ -2287,24 +1403,6 @@ Sets the independent audio session strategy and behavior parameters.
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 | [6800103](../errorcode-audio.md#6800103-unsupported-state) | Operation not permit at current state. |
 
-**Examples**
-
-```TypeScript
-let strategy: audio.AudioSessionStrategy = {
-  concurrencyMode: audio.AudioConcurrencyMode.CONCURRENCY_MIX_WITH_OTHERS
-};
-let behavior: number = audio.AudioSessionBehaviorFlags.MUTE_WHEN_INTERRUPTED;
-audioCapturer.setIndependentAudioSessionStrategy(strategy, behavior);
-```
-
-```TypeScript
-let strategy: audio.AudioSessionStrategy = {
-  concurrencyMode: audio.AudioConcurrencyMode.CONCURRENCY_MIX_WITH_OTHERS
-};
-let behavior: number = audio.AudioSessionBehaviorFlags.MUTE_WHEN_INTERRUPTED;
-audioRenderer.setIndependentAudioSessionStrategy(strategy, behavior);
-```
-
 ## setInterruptMode
 
 ```TypeScript
@@ -2323,21 +1421,6 @@ Sets the audio interruption mode for the application. This API uses an asynchron
 | --- | --- | --- | --- |
 | mode | [InterruptMode](arkts-audio-audio-interruptmode-e.md) | Yes | Audio interruption mode. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let mode = 1;
-
-audioRenderer.setInterruptMode(mode, (err: BusinessError) => {
-  if(err){
-    console.error(`setInterruptMode Fail: ${err}`);
-  }
-  console.info('setInterruptMode Success!');
-});
-```
 
 ## setInterruptMode
 
@@ -2363,20 +1446,6 @@ Sets the audio interruption mode for the application. This API uses a promise to
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let mode = 0;
-
-audioRenderer.setInterruptMode(mode).then(() => {
-  console.info('setInterruptMode Success!');
-}).catch((err: BusinessError) => {
-  console.error(`setInterruptMode Fail: ${err}`);
-});
-```
-
 ## setInterruptModeSync
 
 ```TypeScript
@@ -2401,20 +1470,6 @@ Sets the audio interruption mode for the application. This API returns the resul
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  audioRenderer.setInterruptModeSync(0);
-  console.info('setInterruptMode Success!');
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`setInterruptMode Fail: ${error}`);
-}
-```
 
 ## setLoudnessGain
 
@@ -2447,12 +1502,6 @@ Sets the loudness gain of this stream. The default loudness gain is 0.0dB. The s
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 | [6800104](../errorcode-audio.md#6800104-unsupported-parameter-value) | Operation is not supported on this renderer, e.g. the stream usage of this renderer is not one of [STREAM_USAGE_MUSIC](arkts-audio-audio-streamusage-e.md#stream_usage_music), [STREAM_USAGE_MOVIE](arkts-audio-audio-streamusage-e.md#stream_usage_movie) or [STREAM_USAGE_AUDIOBOOK](arkts-audio-audio-streamusage-e.md#stream_usage_audiobook), or this renderer is routed through the high-resolution playback path. |
 
-**Examples**
-
-```TypeScript
-audioRenderer.setLoudnessGain(1.0);
-```
-
 ## setRenderRate
 
 ```TypeScript
@@ -2475,20 +1524,6 @@ Sets the render rate. This API uses an asynchronous callback to return the resul
 | --- | --- | --- | --- |
 | rate | [AudioRendererRate](arkts-audio-audio-audiorendererrate-e.md) | Yes | Audio render rate. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioRenderer.setRenderRate(audio.AudioRendererRate.RENDER_RATE_NORMAL, (err: BusinessError) => {
-  if (err) {
-    console.error('Failed to set params');
-  } else {
-    console.info('Callback invoked to indicate a successful render rate setting.');
-  }
-});
-```
 
 ## setRenderRate
 
@@ -2518,18 +1553,6 @@ Sets the render rate. This API uses a promise to return the result.
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioRenderer.setRenderRate(audio.AudioRendererRate.RENDER_RATE_NORMAL).then(() => {
-  console.info('setRenderRate SUCCESS');
-}).catch((err: BusinessError) => {
-  console.error(`ERROR: ${err}`);
-});
-```
-
 ## setSilentModeAndMixWithOthers
 
 ```TypeScript
@@ -2549,12 +1572,6 @@ If the silent mode in concurrent playback is enabled, the system mutes the audio
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | on | boolean | Yes | Whether to enable or disable the silent mode in concurrent playback for the audio stream. **true** to enable, **false** otherwise. |
-
-**Examples**
-
-```TypeScript
-audioRenderer.setSilentModeAndMixWithOthers(true);
-```
 
 ## setSpeed
 
@@ -2581,12 +1598,6 @@ Sets the playback speed.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
-**Examples**
-
-```TypeScript
-audioRenderer.setSpeed(1.5);
-```
-
 ## setVolume
 
 ```TypeScript
@@ -2605,20 +1616,6 @@ Sets the volume for the audio stream. This API uses an asynchronous callback to 
 | --- | --- | --- | --- |
 | volume | number | Yes | Volume to set, which is in the range [0.0, 1.0]. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioRenderer.setVolume(0.5, (err: BusinessError) => {
-  if(err){
-    console.error(`setVolume Fail: ${err}`);
-    return;
-  }
-  console.info('setVolume Success!');
-});
-```
 
 ## setVolume
 
@@ -2643,18 +1640,6 @@ Sets the volume for the audio stream. This API uses a promise to return the resu
 | Type | Description |
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioRenderer.setVolume(0.5).then(() => {
-  console.info('setVolume Success!');
-}).catch((err: BusinessError) => {
-  console.error(`setVolume Fail: ${err}`);
-});
-```
 
 ## setVolumeWithRamp
 
@@ -2682,16 +1667,6 @@ Sets a volume ramp. This API returns the result synchronously.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
-**Examples**
-
-```TypeScript
-let volume = 0.5;
-let duration = 1000;
-
-audioRenderer.setVolumeWithRamp(volume, duration);
-console.info(`setVolumeWithRamp: ${volume}`);
-```
-
 ## start
 
 ```TypeScript
@@ -2709,45 +1684,6 @@ Starts this audio renderer. This API uses an asynchronous callback to return the
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. If the operation fails, an error object with one of the following error codes is returned:Error code 6800301: indicates abnormal status, focus preemption failure, and abnormal system processing. For details, see system logs. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-tonePlayer.start((err: BusinessError) => {
-  if (err) {
-    console.error(`callback call start failed error: ${err.message}`);
-    return;
-  } else {
-    console.info('callback call start success');
-  }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioCapturer.start((err: BusinessError) => {
-  if (err) {
-    console.error('Capturer start failed.');
-  } else {
-    console.info('Capturer start success.');
-  }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioRenderer.start((err: BusinessError) => {
-  if (err) {
-    console.error('Renderer start failed.');
-  } else {
-    console.info('Renderer start success.');
-  }
-});
-```
 
 ## start
 
@@ -2767,39 +1703,6 @@ Starts this audio renderer. This API uses a promise to return the result.
 | --- | --- |
 | Promise&lt;void&gt; | Promise object, which indicates that the renderer is started successfully. If the operation fails, an error object with one of the following error codes is returned: |
 
-**Examples**
-
-```TypeScript
-tonePlayer.start().then(() => {
-  console.info('promise call start');
-}).catch(() => {
-  console.error('promise call start fail');
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioCapturer.start().then(() => {
-  console.info('Succeeded in doing start.');
-  if (audioCapturer.state == audio.AudioState.STATE_RUNNING) {
-    console.info('AudioFrameworkRecLog: AudioCapturer is in Running State');
-  }
-}).catch((err: BusinessError) => {
-  console.error(`Failed to start. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioRenderer.start().then(() => {
-  console.info('Renderer started');
-}).catch((err: BusinessError) => {
-  console.error(`ERROR: ${err}`);
-});
-```
-
 ## stop
 
 ```TypeScript
@@ -2818,45 +1721,6 @@ Stops this audio renderer. This API uses an asynchronous callback to return the 
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-tonePlayer.stop((err: BusinessError) => {
-  if (err) {
-    console.error(`callback call stop error: ${err.message}`);
-    return;
-  } else {
-    console.error('callback call stop success ');
-  }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioCapturer.stop((err: BusinessError) => {
-  if (err) {
-    console.error('Capturer stop failed');
-  } else {
-    console.info('Capturer stopped.');
-  }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioRenderer.stop((err: BusinessError) => {
-  if (err) {
-    console.error('Renderer stop failed');
-  } else {
-    console.info('Renderer stopped.');
-  }
-});
-```
-
 ## stop
 
 ```TypeScript
@@ -2874,39 +1738,6 @@ Stops this audio renderer. This API uses a promise to return the result.
 | Type | Description |
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
-
-**Examples**
-
-```TypeScript
-tonePlayer.stop().then(() => {
-  console.info('promise call stop finish');
-}).catch(() => {
-  console.error('promise call stop fail');
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioCapturer.stop().then(() => {
-  console.info('Succeeded in doing stop.');
-  if (audioCapturer.state == audio.AudioState.STATE_STOPPED){
-    console.info('AudioFrameworkRecLog: State is Stopped:');
-  }
-}).catch((err: BusinessError) => {
-  console.error(`Failed to stop. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioRenderer.stop().then(() => {
-  console.info('Renderer stopped successfully');
-}).catch((err: BusinessError) => {
-  console.error(`ERROR: ${err}`);
-});
-```
 
 ## write
 
@@ -2930,53 +1761,6 @@ Writes the buffer. This API uses an asynchronous callback to return the result.
 | --- | --- | --- | --- |
 | buffer | ArrayBuffer | Yes | Data to be written to the buffer. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the number of bytes written; otherwise, **err** is an error object. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { fileIo as fs } from '@kit.CoreFileKit';
-import { common } from '@kit.AbilityKit';
-
-let bufferSize: number;
-class Options {
-  offset?: number;
-  length?: number;
-}
-audioRenderer.getBufferSize().then((data: number)=> {
-  console.info(`AudioFrameworkRenderLog: getBufferSize: SUCCESS ${data}`);
-  bufferSize = data;
-  console.info(`Buffer size: ${bufferSize}`);
-  // Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
-  let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-  let path = context.cacheDir;
-  // This is just an example. Replace the file with the PCM file to be played by the application.
-  let filePath = path + '/StarWars10s-2C-48000-4SW.pcm';
-  let file: fs.File = fs.openSync(filePath, fs.OpenMode.READ_ONLY);
-  fs.stat(filePath).then(async (stat: fs.Stat) => {
-    let buf = new ArrayBuffer(bufferSize);
-    let len = stat.size % bufferSize == 0 ? Math.floor(stat.size / bufferSize) : Math.floor(stat.size / bufferSize + 1);
-    for (let i = 0;i < len; i++) {
-      let options: Options = {
-        offset: i * bufferSize,
-        length: bufferSize
-      };
-      await fs.read(file.fd, buf, options);
-      await new Promise((resolve,reject)=>{
-        audioRenderer.write(buf,(err: BusinessError, writeSize: number)=>{
-          if(err){
-            reject(err)
-          }else{
-            resolve(writeSize)
-          }
-        })
-      })
-    }
-  });
-  }).catch((err: BusinessError) => {
-    console.error(`AudioFrameworkRenderLog: getBufferSize: ERROR: ${err}`);
-});
-```
 
 ## write
 
@@ -3006,50 +1790,6 @@ Writes the buffer. This API uses a promise to return the result.
 | --- | --- |
 | Promise&lt;number&gt; | Promise used to return the number of written bytes. |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { fileIo as fs } from '@kit.CoreFileKit';
-import { common } from '@kit.AbilityKit';
-
-let bufferSize: number;
-class Options {
-  offset?: number;
-  length?: number;
-}
-audioRenderer.getBufferSize().then((data: number) => {
-  console.info(`AudioFrameworkRenderLog: getBufferSize: SUCCESS ${data}`);
-  bufferSize = data;
-  console.info(`BufferSize: ${bufferSize}`);
-  // Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
-  let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-  let path = context.cacheDir;
-  // This is just an example. Replace the file with the PCM file to be played by the application.
-  let filePath = path + '/StarWars10s-2C-48000-4SW.pcm';
-  let file: fs.File = fs.openSync(filePath, fs.OpenMode.READ_ONLY);
-  fs.stat(filePath).then(async (stat: fs.Stat) => {
-    let buf = new ArrayBuffer(bufferSize);
-    let len = stat.size % bufferSize == 0 ? Math.floor(stat.size / bufferSize) : Math.floor(stat.size / bufferSize + 1);
-    for (let i = 0;i < len; i++) {
-      let options: Options = {
-        offset: i * bufferSize,
-        length: bufferSize
-      };
-      await fs.read(file.fd, buf, options);
-      try{
-        await audioRenderer.write(buf);
-      } catch(err) {
-        let error = err as BusinessError;
-        console.error(`audioRenderer.write err: ${error}`);
-      }
-    }
-  });
-}).catch((err: BusinessError) => {
-  console.error(`AudioFrameworkRenderLog: getBufferSize: ERROR: ${err}`);
-});
-```
-
 ## state
 
 ```TypeScript
@@ -3058,7 +1798,7 @@ readonly state: AudioState
 
 Audio renderer state.
 
-**Type:** AudioState
+**Type:** [AudioState](arkts-audio-audio-audiostate-e.md)
 
 **Since:** 8
 

@@ -20,7 +20,7 @@ wordBreak?: WordBreak
 
 设置分词类型。
 
-**类型：** WordBreak
+**类型：** [WordBreak](arkts-arkui-wordbreak-e.md)
 
 **起始版本：** 26.1.0
 

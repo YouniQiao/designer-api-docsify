@@ -20,7 +20,7 @@ Set value.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| content | string \| Resource | Yes | [since 20] { string } content [since 8 - 19] |
+| content | string \| [Resource](../arkts-apis/arkts-arkui-resource-t.md) | Yes | [since 20] { string } content [since 8 - 19] |
 
 ## Summary
 
@@ -83,6 +83,8 @@ struct RichTextExample {
 ```
 
 richText
+Loads local resource files.
+Loads local resource files through $rawfile.
 
 ```TypeScript
 // xxx.ets
@@ -100,6 +102,7 @@ struct RichTextComponent {
 ```
 
 The following is an example of loading a link with the hash (#) route through the resources protocol in Webview.
+When $rawfile is used to load a URL contains a number sign (#), the content following the number sign is treated as a fragment. To avoid this issue, you can use the resource://rawfile/ protocol prefix instead. If the URL contains a number sign (#), the content following the number sign is treated as an anchor (fragment).
 
 ```TypeScript
 // xxx.ets
@@ -117,6 +120,7 @@ struct RichTextComponent {
 ```
 
 Create an index.html file in src/main/resources/rawfile.
+HTML file to be loaded:
 
 ```TypeScript
 <!-- index.html -->

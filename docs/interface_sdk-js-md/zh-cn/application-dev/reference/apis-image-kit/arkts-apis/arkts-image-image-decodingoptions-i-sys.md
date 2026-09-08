@@ -20,7 +20,7 @@ resolutionQuality?: ResolutionQuality
 
 画质效果等级。
 
-**类型：** ResolutionQuality
+**类型：** [ResolutionQuality](arkts-image-image-resolutionquality-e-sys.md)
 
 **起始版本：** 12
 

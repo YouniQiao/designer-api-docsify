@@ -309,7 +309,7 @@ such as certificate signature verification and certificate revocation check.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| cert | X509Cert | Yes | Certificate to verify. |
+| cert | [X509Cert](arkts-devicecertificate-cert-x509cert-i.md) | Yes | Certificate to verify. |
 | params | [CertValidationParams](arkts-devicecertificate-cert-certvalidationparams-i.md) | Yes | Certificate validation parameters. |
 
 **Return value:**

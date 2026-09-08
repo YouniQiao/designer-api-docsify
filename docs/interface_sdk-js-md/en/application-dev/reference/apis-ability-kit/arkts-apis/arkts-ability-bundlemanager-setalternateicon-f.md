@@ -36,9 +36,9 @@ Sets the alternate icon of the caller based on the given alternate icon name. Th
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 17700308 | The alternateIconName must match the name field under alternateIcons in the app.json5 file. |
-| 17700309 | No alternate icon is enabled. |
-| 17700310 | Failed to set the alternate icon. |
+| [17700308](../errorcode-bundle.md#17700308-alternate-icon-name-not-configured-in-the-configuration-file) | The alternateIconName must match the name field under alternateIcons in the app.json5 file. |
+| [17700309](../errorcode-bundle.md#17700309-no-alternate-icon-is-enabled) | No alternate icon is enabled. |
+| [17700310](../errorcode-bundle.md#17700310-failed-to-set-the-alternate-icon) | Failed to set the alternate icon. |
 
 **Examples**
 

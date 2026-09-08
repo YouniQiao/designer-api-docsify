@@ -29,19 +29,7 @@ A constructor used to create a **Readable** object.
 **Examples**
 
 ```TypeScript
-let writableStream = new stream.Writable();
-```
-
-```TypeScript
 let readableStream = new stream.Readable();
-```
-
-```TypeScript
-let duplex = new stream.Duplex();
-```
-
-```TypeScript
-let transform = new stream.Transform();
 ```
 
 ## constructor
@@ -94,21 +82,6 @@ You need to implement this API. It is called when the readable stream calls on f
 | callback | Function | Yes | Callback function. |
 
 **Examples**
-
-```TypeScript
-class MyWritable extends stream.Writable {
-  doInitialize(callback: Function) {
-    super.doInitialize(callback);
-    console.info("Writable doInitialize"); // Writable doInitialize
-  }
-
-  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
-    super.doWrite(chunk, encoding, callback);
-  }
-}
-
-new MyWritable();
-```
 
 ```TypeScript
 class MyReadable extends stream.Readable {
@@ -221,34 +194,9 @@ Unregisters an event processing callback used to listen for different events on 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | string | Yes | Type of the event. The following events are supported: |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;emitter.EventData&gt; | No | Callback function. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[emitter.EventData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-emitter-eventdata-i.md)&gt; | No | Callback function. |
 
 **Examples**
-
-```TypeScript
-class TestWritable extends stream.Writable {
-  constructor() {
-    super();
- }
-
-  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
-    callback();
-  }
-}
-
-let writableStream = new TestWritable();
-let testListenerCalled = false;
-let testListener = () => {
-  testListenerCalled = true;
-};
-writableStream.on('finish', testListener);
-writableStream.off('finish');
-writableStream.write('test');
-writableStream.end();
-setTimeout(() => {
-  console.info("Writable off test", testListenerCalled.toString()); // Writable off test false
-}, 0);
-```
 
 ```TypeScript
 class TestReadable extends stream.Readable {
@@ -292,29 +240,9 @@ Registers an event processing callback to listen for different events on the rea
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | string | Yes | Type of the event. The following events are supported: |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;emitter.EventData&gt; | Yes | Callback function used to return the event data. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[emitter.EventData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-emitter-eventdata-i.md)&gt; | Yes | Callback function used to return the event data. |
 
 **Examples**
-
-```TypeScript
-class TestWritable extends stream.Writable {
-  constructor() {
-    super();
-  }
-
-  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
-    callback(new Error());
-  }
-}
-
-let callbackCalled = false;
-let writable = new TestWritable();
-writable.on('error', () => {
-  console.info("Writable event test", callbackCalled.toString()); // Writable event test false
-});
-writable.write('hello', 'utf8', () => {
-});
-```
 
 ```TypeScript
 class TestReadable extends stream.Readable {

@@ -48,20 +48,6 @@ try {
 }
 ```
 
-```TypeScript
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { omapi } from '@kit.ConnectivityKit';
-
-let seChannel : omapi.Channel;
-
-// 在使用seChannel之前，需要对seChannel进行初始化
-try {
-    seChannel.close();
-} catch (exception) {
-    hilog.error(0x0000, 'testTag', 'close exception %{public}s', JSON.stringify(exception));
-}
-```
-
 ## closeChannels
 
 ```TypeScript
@@ -232,21 +218,6 @@ try {
     hilog.info(0x0000, 'testTag', 'isClosed %{public}s', JSON.stringify(isClosed));
 } catch (error) {
     hilog.error(0x0000, 'testTag', 'isClosed error %{public}s', JSON.stringify(error));
-}
-```
-
-```TypeScript
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { omapi } from '@kit.ConnectivityKit';
-
-let seChannel : omapi.Channel;
-
-// 在使用seChannel之前，需要对seChannel进行初始化
-try {
-    let isClosed = seChannel.isClosed();
-    hilog.info(0x0000, 'testTag', 'isClosed = %{public}s', JSON.stringify(isClosed));
-} catch (exception) {
-    hilog.error(0x0000, 'testTag', 'isClosed exception %{public}s', JSON.stringify(exception));
 }
 ```
 

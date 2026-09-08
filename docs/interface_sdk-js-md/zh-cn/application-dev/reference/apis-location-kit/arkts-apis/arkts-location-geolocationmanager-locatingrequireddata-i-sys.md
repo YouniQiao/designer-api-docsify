@@ -92,7 +92,7 @@ wifiData?: WifiScanInfo
 
 表示WiFi扫描结果。
 
-**类型：** WifiScanInfo
+**类型：** [WifiScanInfo](arkts-location-geolocationmanager-wifiscaninfo-i-sys.md)
 
 **起始版本：** 10
 

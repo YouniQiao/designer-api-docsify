@@ -44,8 +44,8 @@ Authenticates a device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceInfo | DeviceInfo | Yes | Device information. |
-| authParam | AuthParam | Yes | Authentication parameter. |
+| deviceInfo | [DeviceInfo](arkts-distributedservice-devicemanager-deviceinfo-i-sys.md) | Yes | Device information. |
+| authParam | [AuthParam](arkts-distributedservice-devicemanager-authparam-i-sys.md) | Yes | Authentication parameter. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;{ deviceId: string, pinToken?: number }&gt; | Yes |  |
 
 **Error codes:**
@@ -217,7 +217,7 @@ Obtains the information about a specific device based on the network ID. This AP
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | networkId | string | Yes | Network ID of the device. The value is a string of 1 to 255 characters. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DeviceInfo&gt; | Yes | Callback used to return the information about the specified device. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[DeviceInfo](arkts-distributedservice-devicemanager-deviceinfo-i-sys.md)&gt; | Yes | Callback used to return the information about the specified device. |
 
 **Error codes:**
 
@@ -280,7 +280,7 @@ Obtains the information about a specific device based on the network ID. This AP
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;DeviceInfo&gt; | Promise used to return the result. |
+| Promise&lt;[DeviceInfo](arkts-distributedservice-devicemanager-deviceinfo-i-sys.md)&gt; | Promise used to return the result. |
 
 **Error codes:**
 
@@ -330,7 +330,7 @@ Obtains local device information. This API uses an asynchronous callback to retu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DeviceInfo&gt; | Yes | Callback used to return the local device information. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[DeviceInfo](arkts-distributedservice-devicemanager-deviceinfo-i-sys.md)&gt; | Yes | Callback used to return the local device information. |
 
 **Error codes:**
 
@@ -386,7 +386,7 @@ Obtains local device information. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;DeviceInfo&gt; | Promise used to return the result. |
+| Promise&lt;[DeviceInfo](arkts-distributedservice-devicemanager-deviceinfo-i-sys.md)&gt; | Promise used to return the result. |
 
 **Error codes:**
 
@@ -433,7 +433,7 @@ Obtains local device information synchronously.
 
 | Type | Description |
 | --- | --- |
-| DeviceInfo | List of local devices obtained. |
+| [DeviceInfo](arkts-distributedservice-devicemanager-deviceinfo-i-sys.md) | List of local devices obtained. |
 
 **Error codes:**
 
@@ -483,7 +483,7 @@ Obtains all trusted devices. This API uses an asynchronous callback to return th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;DeviceInfo&gt;&gt; | Yes | Callback used to return the list of trusted devices. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[DeviceInfo](arkts-distributedservice-devicemanager-deviceinfo-i-sys.md)&gt;&gt; | Yes | Callback used to return the list of trusted devices. |
 
 **Error codes:**
 
@@ -538,7 +538,7 @@ Obtains all trusted devices. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;DeviceInfo&gt;&gt; | Promise used to return the result. |
+| Promise&lt;Array&lt;[DeviceInfo](arkts-distributedservice-devicemanager-deviceinfo-i-sys.md)&gt;&gt; | Promise used to return the result. |
 
 **Error codes:**
 
@@ -585,7 +585,7 @@ Obtains all trusted devices synchronously.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;DeviceInfo&gt; | List of trusted devices obtained. |
+| Array&lt;[DeviceInfo](arkts-distributedservice-devicemanager-deviceinfo-i-sys.md)&gt; | List of trusted devices obtained. |
 
 **Error codes:**
 
@@ -639,7 +639,7 @@ Enables the DSoftBus heartbeat mode to quickly bring offline trusted devices onl
 
 | Type | Description |
 | --- | --- |
-| Array&lt;DeviceInfo&gt; | List of trusted devices obtained. |
+| Array&lt;[DeviceInfo](arkts-distributedservice-devicemanager-deviceinfo-i-sys.md)&gt; | List of trusted devices obtained. |
 
 **Error codes:**
 
@@ -1818,7 +1818,7 @@ Starts to discover peripheral devices. The discovery process lasts 2 minutes. A 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| subscribeInfo | SubscribeInfo | Yes | Subscription information. |
+| subscribeInfo | [SubscribeInfo](arkts-distributedservice-devicemanager-subscribeinfo-i-sys.md) | Yes | Subscription information. |
 
 **Error codes:**
 
@@ -1890,7 +1890,7 @@ Starts to discover peripheral devices. The discovery process lasts 2 minutes. A 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| subscribeInfo | SubscribeInfo | Yes | Subscription information. |
+| subscribeInfo | [SubscribeInfo](arkts-distributedservice-devicemanager-subscribeinfo-i-sys.md) | Yes | Subscription information. |
 | filterOptions | string | No | Options for filtering discovered devices. Optional. The default value is **undefined**, indicating that discovery of offline devices. The value is a string of 1 to 255 characters. |
 
 **Error codes:**
@@ -2037,7 +2037,7 @@ Deauthenticates a device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceInfo | DeviceInfo | Yes | Device information. |
+| deviceInfo | [DeviceInfo](arkts-distributedservice-devicemanager-deviceinfo-i-sys.md) | Yes | Device information. |
 
 **Error codes:**
 

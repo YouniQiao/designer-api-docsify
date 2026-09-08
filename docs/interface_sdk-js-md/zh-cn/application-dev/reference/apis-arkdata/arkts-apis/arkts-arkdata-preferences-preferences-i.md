@@ -378,8 +378,8 @@ get(key: string, defValue: ValueType, callback: AsyncCallback<ValueType>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | key | string | 是 | 要获取的存储Key名称，不能为空，最大长度限制为[MAX_KEY_LENGTH](../../../reference/apis-arkdata/js-apis-data-sendablePreferences.md#constants)。 |
-| defValue | ValueType | 是 | 默认返回值。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ValueType&gt; | 是 | 回调函数。当获取成功时，err为undefined，data为键对应的值；否则err为错误对象。 |
+| defValue | [ValueType](arkts-arkdata-preferences-valuetype-t.md) | 是 | 默认返回值。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ValueType](arkts-arkdata-preferences-valuetype-t.md)&gt; | 是 | 回调函数。当获取成功时，err为undefined，data为键对应的值；否则err为错误对象。 |
 
 **错误码：**
 
@@ -421,13 +421,13 @@ get(key: string, defValue: ValueType): Promise<ValueType>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | key | string | 是 | 要获取的存储Key名称，不能为空，最大长度限制为[MAX_KEY_LENGTH](../../../reference/apis-arkdata/js-apis-data-sendablePreferences.md#constants)。 |
-| defValue | ValueType | 是 | 默认返回值。 |
+| defValue | [ValueType](arkts-arkdata-preferences-valuetype-t.md) | 是 | 默认返回值。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;ValueType&gt; | Promise对象，返回键对应的值。 |
+| Promise&lt;[ValueType](arkts-arkdata-preferences-valuetype-t.md)&gt; | Promise对象，返回键对应的值。 |
 
 **错误码：**
 
@@ -608,13 +608,13 @@ getSync(key: string, defValue: ValueType): ValueType
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | key | string | 是 | 要获取的存储Key名称，不能为空，最大长度限制为[MAX_KEY_LENGTH](../../../reference/apis-arkdata/js-apis-data-sendablePreferences.md#constants)。 |
-| defValue | ValueType | 是 | 默认返回值。 |
+| defValue | [ValueType](arkts-arkdata-preferences-valuetype-t.md) | 是 | 默认返回值。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| ValueType | 返回键对应的值。 |
+| [ValueType](arkts-arkdata-preferences-valuetype-t.md) | 返回键对应的值。 |
 
 **错误码：**
 
@@ -887,7 +887,7 @@ off(type: 'dataChange', keys: Array<string>, callback?: Callback<Record<string, 
 | --- | --- | --- | --- |
 | type | 'dataChange' | 是 | 事件类型，固定值'dataChange'，表示精确的数据变更。 |
 | keys | Array&lt;string&gt; | 是 | 需要取消订阅的Key集合，当Keys为空数组时，表示取消订阅全部Key；当Keys为非空数组时，表示只取消订阅Key集合中的Key。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, ValueType&gt;&gt; | 否 | 需要取消的回调函数，若不填写，表示取消所有已注册的回调函数；若填写，表示只取消指定的回调函数。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, [ValueType](arkts-arkdata-preferences-valuetype-t.md)&gt;&gt; | 否 | 需要取消的回调函数，若不填写，表示取消所有已注册的回调函数；若填写，表示只取消指定的回调函数。 |
 
 **错误码：**
 
@@ -1069,7 +1069,7 @@ on(type: 'dataChange', keys: Array<string>, callback: Callback<Record<string, Va
 | --- | --- | --- | --- |
 | type | 'dataChange' | 是 | 事件类型，固定值'dataChange'，表示精确的数据变更。 |
 | keys | Array&lt;string&gt; | 是 | 需要订阅的Key集合。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, ValueType&gt;&gt; | 是 | 回调函数。回调支持返回多个键值对，其中键为发生变更的订阅Key，类型为string；值为变更后的数据，类型为[ValueType](arkts-arkdata-preferences-valuetype-t.md)。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, [ValueType](arkts-arkdata-preferences-valuetype-t.md)&gt;&gt; | 是 | 回调函数。回调支持返回多个键值对，其中键为发生变更的订阅Key，类型为string；值为变更后的数据，类型为[ValueType](arkts-arkdata-preferences-valuetype-t.md)。 |
 
 **错误码：**
 
@@ -1127,7 +1127,7 @@ put(key: string, value: ValueType, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | key | string | 是 | 要修改的存储的Key，不能为空，最大长度限制为[MAX_KEY_LENGTH](../../../reference/apis-arkdata/js-apis-data-sendablePreferences.md#constants)。 |
-| value | ValueType | 是 | 存储的新值。 |
+| value | [ValueType](arkts-arkdata-preferences-valuetype-t.md) | 是 | 存储的新值。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当数据写入成功，err为undefined；否则为错误对象。 |
 
 **错误码：**
@@ -1176,7 +1176,7 @@ put(key: string, value: ValueType): Promise<void>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | key | string | 是 | 要修改的存储的Key，不能为空，最大长度限制为[MAX_KEY_LENGTH](../../../reference/apis-arkdata/js-apis-data-sendablePreferences.md#constants)。 |
-| value | ValueType | 是 | 存储的新值。 |
+| value | [ValueType](arkts-arkdata-preferences-valuetype-t.md) | 是 | 存储的新值。 |
 
 **返回值：**
 
@@ -1229,7 +1229,7 @@ putSync(key: string, value: ValueType): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | key | string | 是 | 要修改的存储的Key，不能为空，最大长度限制为[MAX_KEY_LENGTH](../../../reference/apis-arkdata/js-apis-data-sendablePreferences.md#constants)。 |
-| value | ValueType | 是 | 存储的新值。 |
+| value | [ValueType](arkts-arkdata-preferences-valuetype-t.md) | 是 | 存储的新值。 |
 
 **错误码：**
 

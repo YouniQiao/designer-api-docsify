@@ -28,7 +28,7 @@ This API can be properly called on devices other than wearables and TVs. If it i
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| date | DoNotDisturbDate | Yes | DND time to set. |
+| date | [DoNotDisturbDate](arkts-notification-notificationmanager-donotdisturbdate-i-sys.md) | Yes | DND time to set. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
@@ -89,7 +89,7 @@ This API can be properly called on devices other than wearables and TVs. If it i
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| date | DoNotDisturbDate | Yes | DND time to set. |
+| date | [DoNotDisturbDate](arkts-notification-notificationmanager-donotdisturbdate-i-sys.md) | Yes | DND time to set. |
 
 **Return value:**
 
@@ -150,7 +150,7 @@ This API can be properly called on devices other than wearables and TVs. If it i
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| date | DoNotDisturbDate | Yes | DND time to set. |
+| date | [DoNotDisturbDate](arkts-notification-notificationmanager-donotdisturbdate-i-sys.md) | Yes | DND time to set. |
 | userId | number | Yes | ID of the user for whom you want to set the DND time. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
@@ -216,7 +216,7 @@ This API can be properly called on devices other than wearables and TVs. If it i
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| date | DoNotDisturbDate | Yes | DND time to set. |
+| date | [DoNotDisturbDate](arkts-notification-notificationmanager-donotdisturbdate-i-sys.md) | Yes | DND time to set. |
 | userId | number | Yes | ID of the user for whom you want to set the DND time. |
 
 **Return value:**

@@ -343,7 +343,7 @@ Sets the friction coefficient. It applies only to gestures in the scrolling area
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number \| Resource | Yes | Friction coefficient.Default value: **0.9** for wearable devices and **0.6** for non-wearable devices Since API version 11, the default value for non-wearable devices is **0.7**.Since API version 12, the default value for non-wearable devices is **0.75**.Value range: (0, +∞). If this parameter is set to a value less than or equal to 0, the default value is used. |
+| value | number \| [Resource](../arkts-apis/arkts-arkui-resource-t.md) | Yes | Friction coefficient.Default value: **0.9** for wearable devices and **0.6** for non-wearable devices Since API version 11, the default value for non-wearable devices is **0.7**.Since API version 12, the default value for non-wearable devices is **0.75**.Value range: (0, +∞). If this parameter is set to a value less than or equal to 0, the default value is used. |
 
 ## layoutDirection
 
@@ -549,9 +549,9 @@ onItemDragStart(event: OnItemDragStartCallback)
 
 Triggered when a grid item starts to be dragged.
 
-This event is triggered when the user number presses a grid item.
+This event is triggered when the user long presses a grid item.
 
-Drag gesture recognition is also initiated by a number press, and the event processing mechanism prioritizes child component events. Therefore, when the grid item is bound to the [LongPressGesture](../arkts-apis/arkts-arkui-longpressgestureinterface-i.md), it cannot be dragged. In light of this, if both number press and drag operations are required on the grid item, you can use the universal drag event.
+Drag gesture recognition is also initiated by a long press, and the event processing mechanism prioritizes child component events. Therefore, when the grid item is bound to the [LongPressGesture](../arkts-apis/arkts-arkui-longpressgestureinterface-i.md), it cannot be dragged. In light of this, if both long press and drag operations are required on the grid item, you can use the universal drag event.
 
 The floating grid element being dragged can move within the application window. If it is necessary to restrict its movement range, this can be achieved through custom gestures. For details, see [Example 16: Customizing the Drag Effect for GridItem](../../../reference/apis-arkui/arkui-ts/ts-container-grid.md#example-16-customizing-the-drag-effect-for-griditem).
 
@@ -873,7 +873,7 @@ Sets the scrollbar color.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Color \| number \| string | Yes | Scrollbar color.Default value: **'#182431'** (40% opacity)A number value indicates a HEX color in RGB or ARGB format, for example, **0xffffff**.A string value indicates a color in RGB or ARGB format, for example, **'#ffffff'**. |
+| value | [Color](../arkts-apis/arkts-arkui-color-e.md) \| number \| string | Yes | Scrollbar color.Default value: **'#182431'** (40% opacity)A number value indicates a HEX color in RGB or ARGB format, for example, **0xffffff**.A string value indicates a color in RGB or ARGB format, for example, **'#ffffff'**. |
 
 ## scrollBarColor
 
@@ -895,7 +895,7 @@ Sets the scrollbar color. Compared with [scrollBarColor](#scrollbarcolor), the p
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | Color \| number \| string \| Resource | Yes | Scrollbar color.Default value: **'#182431'** (40% opacity)A number value indicates a HEX color in RGB or ARGB format, for example, **0xffffff**. A string value indicates a color in RGB or ARGB format, for example, **'#ffffff'**. |
+| color | [Color](../arkts-apis/arkts-arkui-color-e.md) \| number \| string \| [Resource](../arkts-apis/arkts-arkui-resource-t.md) | Yes | Scrollbar color.Default value: **'#182431'** (40% opacity)A number value indicates a HEX color in RGB or ARGB format, for example, **0xffffff**. A string value indicates a color in RGB or ARGB format, for example, **'#ffffff'**. |
 
 ## scrollBarWidth
 
@@ -939,7 +939,7 @@ If this attribute is not set, the scrollbar width is 4 vp.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number \| string \| Resource | Yes | Scrollbar width.Unit: vp The value range is [0, +∞). If this parameter is set to a value less than 0, **4vp** is used. The value **0** means not to show the scrollbar. |
+| value | number \| string \| [Resource](../arkts-apis/arkts-arkui-resource-t.md) | Yes | Scrollbar width.Unit: vp The value range is [0, +∞). If this parameter is set to a value less than 0, **4vp** is used. The value **0** means not to show the scrollbar. |
 
 ## supportAnimation
 

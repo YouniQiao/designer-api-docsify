@@ -547,7 +547,7 @@ Sets the interruption mode of the audio files with the same ID during playback. 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| interruptMode | media.SoundInterruptMode | Yes | Interruption mode of the audio files with the same ID during playback, which is obtained through the **media.SoundInterruptMode** enum. |
+| interruptMode | [media.SoundInterruptMode](arkts-media-media-soundinterruptmode-e.md) | Yes | Interruption mode of the audio files with the same ID during playback, which is obtained through the **media.SoundInterruptMode** enum. |
 
 ## setLoop
 
@@ -688,7 +688,7 @@ Sets the playback rate for an audio stream. This API uses an asynchronous callba
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | streamID | number | Yes | Audio stream ID, which is obtained by calling **play()**. |
-| rate | audio.AudioRendererRate | Yes | Playback rate. |
+| rate | [audio.AudioRendererRate](../../apis-audio-kit/arkts-apis/arkts-audio-audio-audiorendererrate-e.md) | Yes | Playback rate. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback function. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
@@ -716,7 +716,7 @@ Sets the playback rate for an audio stream. This API uses a promise to return th
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | streamID | number | Yes | Audio stream ID, which is obtained by calling **play()**. |
-| rate | audio.AudioRendererRate | Yes | Playback rate. |
+| rate | [audio.AudioRendererRate](../../apis-audio-kit/arkts-apis/arkts-audio-audio-audiorendererrate-e.md) | Yes | Playback rate. |
 
 **Return value:**
 

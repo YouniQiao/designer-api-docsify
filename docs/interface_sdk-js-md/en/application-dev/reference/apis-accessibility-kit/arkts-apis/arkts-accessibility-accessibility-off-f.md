@@ -187,7 +187,7 @@ struct Index {
 function off(type: 'touchModeChange', callback?: Callback<string>): void
 ```
 
-Unsubscribes from the single-tap/number-tap operation mode change event in touch guide mode. This API uses an asynchronous callback to return the result.
+Unsubscribes from the single-tap/double-tap operation mode change event in touch guide mode. This API uses an asynchronous callback to return the result.
 
 **Since:** 20
 

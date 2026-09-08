@@ -28,10 +28,4 @@ Obtains the numeric mask combination for the USB function list in Device mode. W
 
 | Type | Description |
 | --- | --- |
-| FunctionType | Numeric mask combination for the USB function list. |
-
-**Examples**
-
-```TypeScript
-let ret: number = usbManager.getCurrentFunctions();
-```
+| [FunctionType](arkts-basicservices-usbmanager-functiontype-e-sys.md) | Numeric mask combination for the USB function list. |

@@ -48,6 +48,8 @@ If the returned contact synchronization information is empty, the invoking party
 **Examples**
 
 > NOTE
+> 
+> In the examples of this document, UIAbilityContext is obtained through this.context, where this represents a UIAbility instance inherited from UIAbility. If you need to use the capabilities provided by UIAbilityContext in the UI, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
 ```TypeScript
 import { contact } from '@kit.ContactsKit';

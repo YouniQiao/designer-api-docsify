@@ -28,7 +28,7 @@ Sets whether priority notifications are enabled for applications in batches. Thi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| switches | Map&lt;BundleOption, boolean&gt; | Yes | Key-value pair set of the application notification priority enabling status. |
+| switches | Map&lt;[BundleOption](arkts-notification-notificationmanager-bundleoption-t.md), boolean&gt; | Yes | Key-value pair set of the application notification priority enabling status. |
 
 **Return value:**
 

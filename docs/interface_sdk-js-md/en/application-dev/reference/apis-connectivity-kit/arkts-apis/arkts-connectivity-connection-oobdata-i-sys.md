@@ -40,7 +40,7 @@ deviceId: BluetoothAddress
 
 The address of remote Bluetooth device.
 
-**Type:** BluetoothAddress
+**Type:** [BluetoothAddress](arkts-connectivity-connection-bluetoothaddress-t.md)
 
 **Since:** 23
 
@@ -76,7 +76,7 @@ deviceRole?: DeviceRole
 
 The role of the remote Bluetooth device.
 
-**Type:** DeviceRole
+**Type:** [DeviceRole](arkts-connectivity-connection-devicerole-e-sys.md)
 
 **Since:** 23
 

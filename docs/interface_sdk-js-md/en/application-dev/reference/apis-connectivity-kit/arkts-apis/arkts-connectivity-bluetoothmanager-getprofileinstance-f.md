@@ -26,13 +26,13 @@ Obtains the instance of profile.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| profileId | ProfileId | Yes | The profile id.. |
+| profileId | [ProfileId](arkts-connectivity-bluetoothmanager-profileid-e.md) | Yes | The profile id.. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| A2dpSourceProfile \| HandsFreeAudioGatewayProfile \| HidHostProfile \| PanProfile | Returns the instance of profile. |
+| [A2dpSourceProfile](arkts-connectivity-bluetoothmanager-a2dpsourceprofile-i.md) \| [HandsFreeAudioGatewayProfile](arkts-connectivity-bluetoothmanager-handsfreeaudiogatewayprofile-i.md) \| [HidHostProfile](arkts-connectivity-bluetoothmanager-hidhostprofile-i.md) \| [PanProfile](arkts-connectivity-bluetoothmanager-panprofile-i.md) | Returns the instance of profile. |
 
 **Error codes:**
 

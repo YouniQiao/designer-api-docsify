@@ -35,7 +35,7 @@ function getShortcutInfoByAppIndex(bundleName: string, appIndex: number): Array<
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;ShortcutInfo&gt; | Array形式返回当前用户下指定分身应用的[ShortcutInfo]{ |
+| Array&lt;[ShortcutInfo](arkts-ability-launcherbundlemanager-shortcutinfo-t.md)&gt; | Array形式返回当前用户下指定分身应用的[ShortcutInfo]{ |
 
 **错误码：**
 

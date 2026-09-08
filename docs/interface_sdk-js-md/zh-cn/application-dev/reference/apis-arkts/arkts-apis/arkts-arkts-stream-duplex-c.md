@@ -31,19 +31,7 @@ constructor()
 **示例**
 
 ```TypeScript
-let writableStream = new stream.Writable();
-```
-
-```TypeScript
-let readableStream = new stream.Readable();
-```
-
-```TypeScript
 let duplex = new stream.Duplex();
-```
-
-```TypeScript
-let transformStream = new stream.Transform();
 ```
 
 ## cork
@@ -67,22 +55,6 @@ cork(): boolean
 | boolean | 返回设置cork状态是否成功。true表示设置成功，false表示设置失败。 |
 
 **示例**
-
-```TypeScript
-class TestWritable extends stream.Writable {
-  constructor() {
-    super();
-  }
-
-  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
-    callback();
-  }
-}
-
-let writableStream = new TestWritable();
-let result = writableStream.cork();
-console.info("Writable cork result", result); // Writable cork result true
-```
 
 ```TypeScript
 let duplexStream = new stream.Duplex();
@@ -113,22 +85,6 @@ doWrite(chunk: string | Uint8Array, encoding: string, callback: Function): void
 | callback | Function | 是 | 回调函数。 |
 
 **示例**
-
-```TypeScript
-class TestWritable extends stream.Writable {
-  constructor() {
-    super();
-  }
-
-  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
-    console.info("Writable chunk is", chunk); // Writable chunk is data
-    callback();
-  }
-}
-
-let writableStream = new TestWritable();
-writableStream.write("data", "utf8");
-```
 
 ```TypeScript
 class TestDuplex extends stream.Duplex {
@@ -171,27 +127,6 @@ doWritev(chunks: string[] | Uint8Array[], callback: Function): void
 | callback | Function | 是 | 回调函数。 |
 
 **示例**
-
-```TypeScript
-class TestWritable extends stream.Writable {
-  constructor() {
-    super();
-  }
-
-  doWritev(chunks: string[] | Uint8Array[], callback: Function) {
-    console.info("Writable chunk", chunks);
-    callback();
-  }
-  // Writable chunk data1
-  // Writable chunk data2
-}
-
-let writableStream = new TestWritable();
-writableStream.write("data1", "utf8");
-writableStream.write("data2", "utf8");
-writableStream.uncork();
-writableStream.end();
-```
 
 ```TypeScript
 class TestDuplex extends stream.Duplex {
@@ -257,27 +192,6 @@ end(chunk?: string | Uint8Array, encoding?: string, callback?: Function): Writab
 **示例**
 
 ```TypeScript
-class TestWritable extends stream.Writable {
-  constructor() {
-    super();
-  }
-
-  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
-    console.info("Writable chunk is", chunk);
-    callback();
-  }
-  // Writable chunk is test
-  // Writable chunk is finish
-}
-
-let writableStream = new TestWritable();
-writableStream.write("test", "utf8");
-writableStream.end("finish", "utf8", () => {
-  console.info("Writable is end"); // Writable is end
-});
-```
-
-```TypeScript
 class TestDuplex extends stream.Duplex {
   constructor() {
     super();
@@ -327,22 +241,6 @@ setDefaultEncoding(encoding?: string): boolean
 **示例**
 
 ```TypeScript
-class TestWritable extends stream.Writable {
-  constructor() {
-    super();
-  }
-
-  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
-    callback();
-  }
-}
-
-let writableStream = new TestWritable();
-let result = writableStream.setDefaultEncoding("utf8");
-console.info("Writable is result", result); // Writable is result true
-```
-
-```TypeScript
 class TestDuplex extends stream.Duplex {
   constructor() {
     super();
@@ -382,28 +280,6 @@ uncork(): boolean
 | boolean | 返回解除cork状态是否成功。true表示成功，false表示失败。 |
 
 **示例**
-
-```TypeScript
-class TestWritable extends stream.Writable {
-  constructor() {
-    super();
-  }
-
-  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
-    callback();
-  }
-}
-
-let writableStream = new TestWritable();
-writableStream.cork();
-writableStream.write("data1", "utf8");
-writableStream.write("data2", "utf8");
-writableStream.uncork();
-writableStream.end();
-writableStream.on("finish", () => {
-  console.info("all Data is End"); // all Data is End
-});
-```
 
 ```TypeScript
 let dataWritten = "";
@@ -466,22 +342,6 @@ write(chunk?: string | Uint8Array, encoding?: string, callback?: Function): bool
 | [10200039](../errorcode-utils.md#10200039-dotransform接口未实现) | The doTransform method has not been implemented for a class that inherits from Transform. |
 
 **示例**
-
-```TypeScript
-class TestWritable extends stream.Writable {
-  constructor() {
-    super();
-  }
-
-  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
-    console.info("Writable chunk is", chunk); // Writable chunk is test
-    callback();
-  }
-}
-
-let writableStream = new TestWritable();
-writableStream.write("test", "utf8");
-```
 
 ```TypeScript
 class TestDuplex extends stream.Duplex {

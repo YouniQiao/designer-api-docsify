@@ -119,7 +119,7 @@ Sets the offset from the end of the content to the boundary of the scrollable di
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | number \| Resource | Yes | Offset from the end of the content to the boundary of the scrollable display area. Default value: &lt;em&gt;0&lt;/em&gt; Unit: vp |
+| offset | number \| [Resource](../arkts-apis/arkts-arkui-resource-t.md) | Yes | Offset from the end of the content to the boundary of the scrollable display area. Default value: &lt;em&gt;0&lt;/em&gt; Unit: vp |
 
 **Return value:**
 
@@ -147,7 +147,7 @@ Sets the offset from the start of the content to the boundary of the scrollable 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | number \| Resource | Yes | Offset from the start of the content to the boundary of the scrollable display area. Default value: &lt;em&gt;0&lt;/em&gt; Unit: vp |
+| offset | number \| [Resource](../arkts-apis/arkts-arkui-resource-t.md) | Yes | Offset from the start of the content to the boundary of the scrollable display area. Default value: &lt;em&gt;0&lt;/em&gt; Unit: vp |
 
 **Return value:**
 
@@ -345,7 +345,7 @@ Sets the friction coefficient.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number \| Resource | Yes | Friction coefficient. |
+| value | number \| [Resource](../arkts-apis/arkts-arkui-resource-t.md) | Yes | Friction coefficient. |
 
 **Return value:**
 
@@ -781,7 +781,7 @@ Sets the scrollbar color.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | Color \| number \| string | Yes | Scrollbar color.Default value: &lt;em&gt;'\#182431'&lt;/em&gt; (40% opacity) A number value indicates a HEX color in RGB or ARGB format, for example, &lt;em&gt;0xffffff&lt;/em&gt;. A string value indicates a color in RGB or ARGB format, for example, &lt;em&gt;'# ffffff'&lt;/em&gt;. |
+| color | [Color](../arkts-apis/arkts-arkui-color-e.md) \| number \| string | Yes | Scrollbar color.Default value: &lt;em&gt;'\#182431'&lt;/em&gt; (40% opacity) A number value indicates a HEX color in RGB or ARGB format, for example, &lt;em&gt;0xffffff&lt;/em&gt;. A string value indicates a color in RGB or ARGB format, for example, &lt;em&gt;'# ffffff'&lt;/em&gt;. |
 
 **Return value:**
 
@@ -809,7 +809,7 @@ Sets the scrollbar color.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | Color \| number \| string \| Resource | Yes | Scrollbar color.Default value: &lt;em&gt;'\#182431'&lt;/em&gt; (40% opacity) A number value indicates a HEX color in RGB or ARGB format, for example, &lt;em&gt;0xffffff&lt;/em&gt;. A string value indicates a color in RGB or ARGB format, for example, &lt;em&gt;'#ffffff'&lt;/em&gt;. |
+| color | [Color](../arkts-apis/arkts-arkui-color-e.md) \| number \| string \| [Resource](../arkts-apis/arkts-arkui-resource-t.md) | Yes | Scrollbar color.Default value: &lt;em&gt;'\#182431'&lt;/em&gt; (40% opacity) A number value indicates a HEX color in RGB or ARGB format, for example, &lt;em&gt;0xffffff&lt;/em&gt;. A string value indicates a color in RGB or ARGB format, for example, &lt;em&gt;'#ffffff'&lt;/em&gt;. |
 
 **Return value:**
 
@@ -837,7 +837,7 @@ Sets the scrollbar track height.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| height | LengthMetrics \| undefined | Yes | Scrollbar track height. The value must be greater than or equal to 0, If set to undefined or a value less than 0, the default value is used. If set to 0, the scrollbar is not displayed. Default value: adaptive to the height of the scrollable component. |
+| height | [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md) \| undefined | Yes | Scrollbar track height. The value must be greater than or equal to 0, If set to undefined or a value less than 0, the default value is used. If set to 0, the scrollbar is not displayed. Default value: adaptive to the height of the scrollable component. |
 
 **Return value:**
 
@@ -921,7 +921,7 @@ Sets the scrollbar width.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number \| string \| Resource | Yes | Scrollbar width. Unit: vp Default value: &lt;em&gt;4&lt;/em&gt; If this parameter is set to a value less than 0, the default value is used. The value &lt;em&gt;0&lt;/em&gt; means not to show the scrollbar. |
+| value | number \| string \| [Resource](../arkts-apis/arkts-arkui-resource-t.md) | Yes | Scrollbar width. Unit: vp Default value: &lt;em&gt;4&lt;/em&gt; If this parameter is set to a value less than 0, the default value is used. The value &lt;em&gt;0&lt;/em&gt; means not to show the scrollbar. |
 
 **Return value:**
 

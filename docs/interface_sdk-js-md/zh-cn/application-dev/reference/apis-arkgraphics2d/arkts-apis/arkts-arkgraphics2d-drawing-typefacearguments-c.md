@@ -47,15 +47,6 @@ addVariation(axis: string, value: number)
 | --- | --- |
 | [25900001](../errorcode-drawing.md#25900001-参数值异常) | Parameter error. Possible causes: Incorrect parameter range. |
 
-**示例**
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-let typefaceArgument = new drawing.TypefaceArguments();
-typefaceArgument.addVariation('wght', 10);
-```
-
 ## constructor
 
 ```TypeScript
@@ -69,45 +60,3 @@ constructor()
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Graphics.Drawing
-
-**示例**
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-const brush = new drawing.Brush();
-```
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-let matrix = new drawing.Matrix();
-```
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-let path: drawing.Path = new drawing.Path();
-```
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-const pen = new drawing.Pen();
-```
-
-```TypeScript
-import { RenderNode, DrawContext } from '@kit.ArkUI';
-import { drawing } from '@kit.ArkGraphics2D';
-
-class DrawingRenderNode extends RenderNode {
-  draw(context: DrawContext) {
-    let samplingOptions = new drawing.SamplingOptions();
-  }
-}
-```
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-let typefaceArgument = new drawing.TypefaceArguments();
-```

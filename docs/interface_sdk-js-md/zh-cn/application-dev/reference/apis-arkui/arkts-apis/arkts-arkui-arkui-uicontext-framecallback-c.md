@@ -45,46 +45,6 @@ onFrame(frameTimeInNano: number): void
 | --- | --- | --- | --- |
 | frameTimeInNano | number | 是 | 下一帧渲染开始执行的时间，以纳秒为单位，由系统回调时传入，开发者无需手动传入。取值范围：[0, +∞) |
 
-**示例**
-
-```TypeScript
-import { FrameCallback } from '@kit.ArkUI';
-
-class MyFrameCallback extends FrameCallback {
-  private tag: string;
-
-  constructor(tag: string) {
-    super();
-    this.tag = tag;
-  }
-
-  onFrame(frameTimeInNano: number) {
-    console.info('MyFrameCallback ' + this.tag + ' ' + frameTimeInNano.toString());
-  }
-}
-
-@Entry
-@Component
-struct Index {
-  build() {
-    Row() {
-      Column() {
-        Button('点击触发postFrameCallback')
-          .onClick(() => {
-            this.getUIContext().postFrameCallback(new MyFrameCallback('normTask'));
-          })
-        Button('点击触发postDelayedFrameCallback')
-          .onClick(() => {
-            this.getUIContext().postDelayedFrameCallback(new MyFrameCallback('delayTask'), 5);
-          })
-      }
-      .width('100%')
-    }
-    .height('100%')
-  }
-}
-```
-
 ## onIdle
 
 ```TypeScript
@@ -106,43 +66,3 @@ onIdle(timeLeftInNano: number): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | timeLeftInNano | number | 是 | 这一帧剩余的空闲时间，以纳秒为单位，由系统回调时传入，开发者无需手动传入。取值范围：[0, +∞) |
-
-**示例**
-
-```TypeScript
-import { FrameCallback } from '@kit.ArkUI';
-
-class MyIdleCallback extends FrameCallback {
-  private tag: string;
-
-  constructor(tag: string) {
-    super();
-    this.tag = tag;
-  }
-
-  onIdle(timeLeftInNano: number) {
-    console.info('MyIdleCallback ' + this.tag + ' ' + timeLeftInNano.toString());
-  }
-}
-
-@Entry
-@Component
-struct Index {
-  build() {
-    Row() {
-      Column() {
-        Button('点击触发postFrameCallback')
-          .onClick(() => {
-            this.getUIContext().postFrameCallback(new MyIdleCallback('normTask'));
-          })
-        Button('点击触发postDelayedFrameCallback')
-          .onClick(() => {
-            this.getUIContext().postDelayedFrameCallback(new MyIdleCallback('delayTask'), 5);
-          })
-      }
-      .width('100%')
-    }
-    .height('100%')
-  }
-}
-```

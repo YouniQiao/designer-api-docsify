@@ -22,7 +22,7 @@ Sets a watermark image for windows in the current application process. This API 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pixelMap | image.PixelMap \| undefined | Yes | If this parameter is set to **image.PixelMap**, a watermark image is set. If this parameter is set to **undefined**, the watermark is removed.If the width and height of the image both surpass the window and screen sizes, error code 1300016 is returned.If the width or height of the image goes beyond the window dimensions, the excess part is trimmed.If the width or height of the image falls short of the window dimensions, the shortfall is automatically repeated to complete the image. |
+| pixelMap | [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) \| undefined | Yes | If this parameter is set to **image.PixelMap**, a watermark image is set. If this parameter is set to **undefined**, the watermark is removed.If the width and height of the image both surpass the window and screen sizes, error code 1300016 is returned.If the width or height of the image goes beyond the window dimensions, the excess part is trimmed.If the width or height of the image falls short of the window dimensions, the shortfall is automatically repeated to complete the image. |
 
 **Return value:**
 

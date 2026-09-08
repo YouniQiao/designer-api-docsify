@@ -58,7 +58,7 @@ deviceType: DeviceType
 
 表示设备类型。
 
-**类型：** DeviceType
+**类型：** [DeviceType](arkts-multimodalawareness-userstatus-devicetype-e-sys.md)
 
 **起始版本：** 26.0.0
 

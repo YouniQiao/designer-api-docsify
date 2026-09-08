@@ -39,25 +39,3 @@ Unregisters the callback used to listen for auto-startup status changes of an ap
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Failed to connect to the system service. |
-
-**Examples**
-
-```TypeScript
-import { autoStartupManager, common } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  autoStartupManager.off('systemAutoStartup', {
-    onAutoStartupOn(data: common.AutoStartupInfo) {
-      console.info(`autostartupmanager onAutoStartupOn, data: ${JSON.stringify(data)}.`);
-    },
-    onAutoStartupOff(data: common.AutoStartupInfo) {
-      console.info(`autostartupmanager onAutoStartupOff, data: ${JSON.stringify(data)}.`);
-    }
-  });
-} catch (err) {
-  let code = (err as BusinessError).code;
-  let msg = (err as BusinessError).message;
-  console.error(`autostartupmanager on failed, err code: ${code}, err msg: ${msg}.`);
-}
-```

@@ -54,7 +54,7 @@ photoSource?: PhotoSource
 
 Source of the recent image or video, for example, image or video taken by the camera or screenshot. By default, the source is not restricted.
 
-**Type:** PhotoSource
+**Type:** [PhotoSource](arkts-medialibrary-photoaccesshelper-photosource-e.md)
 
 **Since:** 20
 

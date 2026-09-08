@@ -28,7 +28,7 @@ Converts the USB function list in the numeric mask format to a string in Device 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| funcs | FunctionType | Yes | USB function list in numeric mask format. |
+| funcs | [FunctionType](arkts-basicservices-usbmanager-functiontype-e-sys.md) | Yes | USB function list in numeric mask format. |
 
 **Return value:**
 
@@ -41,10 +41,3 @@ Converts the USB function list in the numeric mask format to a string in Device 
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:  1.Mandatory parameters are left unspecified.  2.Incorrect parameter types. |
-
-**Examples**
-
-```TypeScript
-let funcs: number = usbManager.FunctionType.ACM | usb.FunctionType.ECM;
-let ret: string = usbManager.usbFunctionsToString(funcs);
-```

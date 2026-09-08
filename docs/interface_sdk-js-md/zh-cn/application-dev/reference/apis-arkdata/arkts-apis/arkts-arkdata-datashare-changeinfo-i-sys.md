@@ -22,7 +22,7 @@ type: ChangeType
 
 通知变更的类型。
 
-**类型：** ChangeType
+**类型：** [ChangeType](arkts-arkdata-datashare-changetype-e.md)
 
 **起始版本：** 12
 

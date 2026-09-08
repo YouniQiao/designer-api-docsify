@@ -47,43 +47,7 @@ getFontByName(fontName: string): font.FontInfo
 
 | 类型 | 说明 |
 | --- | --- |
-| font.FontInfo | 字体的详细信息。 |
-
-**示例**
-
-```TypeScript
-// xxx.ets
-import { Font, font } from '@kit.ArkUI';
-
-@Entry
-@Component
-struct Index {
-  private uiContext: UIContext = this.getUIContext();
-  private font: Font = this.uiContext.getFont();
-  fontInfo: font.FontInfo = this.font.getFontByName('');
-
-  build() {
-    Column() {
-      Button("getFontByName")
-        .width('60%')
-        .height('6%')
-        .onClick(() => {
-          this.fontInfo = this.font.getFontByName('HarmonyOS Sans Italic');
-          console.info("getFontByName(): path = " + this.fontInfo.path);
-          console.info("getFontByName(): postScriptName = " + this.fontInfo.postScriptName);
-          console.info("getFontByName(): fullName = " + this.fontInfo.fullName);
-          console.info("getFontByName(): family = " + this.fontInfo.family);
-          console.info("getFontByName(): subfamily = " + this.fontInfo.subfamily);
-          console.info("getFontByName(): weight = " + this.fontInfo.weight);
-          console.info("getFontByName(): width = " + this.fontInfo.width);
-          console.info("getFontByName(): italic = " + this.fontInfo.italic);
-          console.info("getFontByName(): monoSpace = " + this.fontInfo.monoSpace);
-          console.info("getFontByName(): symbolic = " + this.fontInfo.symbolic);
-        })
-    }.width('100%')
-  }
-}
-```
+| [font.FontInfo](arkts-arkui-font-fontinfo-i.md) | 字体的详细信息。 |
 
 ## getSystemFontList
 
@@ -112,33 +76,6 @@ getSystemFontList(): Array<string>
 | --- | --- |
 | Array&lt;string&gt; | 系统支持的字体名称列表，返回的名称可用于getFontByName方法查询对应字体的详细信息。 |
 
-**示例**
-
-```TypeScript
-// xxx.ets
-import { Font } from '@kit.ArkUI';
-
-@Entry
-@Component
-struct Index {
-  private uiContext: UIContext = this.getUIContext();
-  private font: Font = this.uiContext.getFont();
-  fontList: Array<string> = new Array<string>();
-
-  build() {
-    Column() {
-      Button("getSystemFontList")
-        .width('60%')
-        .height('6%')
-        .onClick(() => {
-          this.fontList = this.font.getSystemFontList();
-          console.info('getSystemFontList', JSON.stringify(this.fontList));
-        })
-    }.width('100%')
-  }
-}
-```
-
 ## registerFont
 
 ```TypeScript
@@ -163,35 +100,4 @@ registerFont(options: font.FontOptions): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | font.FontOptions | 是 | 注册的自定义字体信息。   **说明：**设置注册字体文件的路径，读取系统沙箱路径内的资源时，建议使用file://路径前缀的字符串，需要确保沙箱目录路径下的文件存在并且有可读权限。 |
-
-**示例**
-
-```TypeScript
-// xxx.ets
-import { Font } from '@kit.ArkUI';
-
-@Entry
-@Component
-struct Index {
-  @State message: string = 'Hello World';
-  private uiContext: UIContext = this.getUIContext();
-  private font: Font = this.uiContext.getFont();
-
-  aboutToAppear() {
-    this.font.registerFont({
-      familyName: 'medium',
-      familySrc: '/font/medium.ttf' // font文件夹与pages目录同级
-    });
-  }
-
-  build() {
-    Column() {
-      Text(this.message)
-        .align(Alignment.Center)
-        .fontSize(20)
-        .fontFamily('medium') // medium：已注册的自定义字体名称。需先调用registerFont注册字体后，才能使用该字体名称。
-    }.width('100%')
-  }
-}
-```
+| options | [font.FontOptions](arkts-arkui-font-fontoptions-i.md) | 是 | 注册的自定义字体信息。   **说明：**设置注册字体文件的路径，读取系统沙箱路径内的资源时，建议使用file://路径前缀的字符串，需要确保沙箱目录路径下的文件存在并且有可读权限。 |

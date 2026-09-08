@@ -113,7 +113,7 @@ value: PixelMap
 
 设置图片数据源。
 
-**类型：** PixelMap
+**类型：** [PixelMap](../arkts-components/arkts-arkui-pixelmap-t.md)
 
 **起始版本：** 12
 

@@ -101,7 +101,7 @@ Maximum number of lines in the text paragraph.
 readonly overflow?: TextOverflow
 ```
 
-Display mode when the text is too number in the text paragraph.
+Display mode when the text is too long in the text paragraph.
 
 **Type:** [TextOverflow](arkts-arkui-textoverflow-e.md)
 
@@ -179,7 +179,7 @@ readonly textAlign?: TextAlign
 
 Horizontal alignment mode of the text paragraph.
 
-**Type:** TextAlign
+**Type:** [TextAlign](arkts-arkui-textalign-e.md)
 
 **Since:** 12
 
@@ -197,7 +197,7 @@ readonly textDirection?: TextDirection
 
 Text direction.
 
-**Type:** TextDirection
+**Type:** [TextDirection](arkts-arkui-textdirection-e.md)
 
 **Since:** 23
 
@@ -237,7 +237,7 @@ Vertical alignment mode of the text paragraph.
 
 The effect of this attribute is noticeable only when the same font size is used in a paragraph and lineHeight is set, or when different font sizes are used in a paragraph and the font sizes are mixed. The **SuperscriptStyle** in [TextStyle](arkts-arkui-textstyle-c.md) takes effect only when the value of TextVerticalAlign is set to **TextVerticalAlign.BASELINE**. In other vertical alignment modes, the superscript and subscript texts are displayed in the same way as the normal text.
 
-**Type:** TextVerticalAlign
+**Type:** [TextVerticalAlign](arkts-arkui-textverticalalign-e.md)
 
 **Since:** 20
 
@@ -255,7 +255,7 @@ readonly wordBreak?: WordBreak
 
 Word break rule of the text paragraph.
 
-**Type:** WordBreak
+**Type:** [WordBreak](arkts-arkui-wordbreak-e.md)
 
 **Since:** 12
 

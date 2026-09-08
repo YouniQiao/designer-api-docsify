@@ -24,4 +24,4 @@ function getAuthorizationManager(): AuthorizationManager
 
 | 类型 | 说明 |
 | --- | --- |
-| AuthorizationManager | 授权管理器的实例。 |
+| [AuthorizationManager](arkts-basicservices-authorization-authorizationmanager-i.md) | 授权管理器的实例。 |

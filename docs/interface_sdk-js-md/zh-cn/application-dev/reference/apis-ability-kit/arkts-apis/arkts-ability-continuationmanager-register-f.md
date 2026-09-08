@@ -69,7 +69,7 @@ function register(options: ContinuationExtraParams, callback: AsyncCallback<numb
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | ContinuationExtraParams | 是 | 过滤可选择设备列表的额外参数。 |
+| options | [ContinuationExtraParams](arkts-ability-continuationmanager-continuationextraparams-t.md) | 是 | 过滤可选择设备列表的额外参数。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | AsyncCallback形式返回流转管理服务连接后生成的token。 |
 
 **示例**
@@ -115,7 +115,7 @@ function register(options?: ContinuationExtraParams): Promise<number>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | ContinuationExtraParams | 否 | 过滤可选择设备列表的额外参数，该参数可缺省。 |
+| options | [ContinuationExtraParams](arkts-ability-continuationmanager-continuationextraparams-t.md) | 否 | 过滤可选择设备列表的额外参数，该参数可缺省。 |
 
 **返回值：**
 

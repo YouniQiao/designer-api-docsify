@@ -37,24 +37,9 @@ Obtains an extended attribute of a file or directory. This API uses a promise to
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified;  2.Incorrect parameter types. |
 | 13900002 | No such file or directory |
-| 13900007 | Arg list too number |
+| 13900007 | Arg list too long |
 | 13900012 | Permission denied |
 | 13900031 | Function not implemented |
 | 13900037 | No data available |
 | 13900038 | Value too large for defined data type |
 | 13900042 | Unknown error |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let filePath = pathDir + "/test.txt";
-let attrKey = "user.comment";
-
-fileIo.getxattr(filePath, attrKey).then((attrValue: string) => {
-  console.info(`Succeeded in getting extended attribute, the value is: ${attrValue}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to get extended attribute. Code: ${err.code}, message: ${err.message}`);
-});
-```

@@ -36,22 +36,6 @@ constructor()
 let fileSync = new cloudSync.FileSync()
 ```
 
-```TypeScript
-let fileCache = new cloudSync.CloudFileCache();
-```
-
-```TypeScript
-let fileVersion = new cloudSync.FileVersion();
-```
-
-```TypeScript
-let gallerySync = new cloudSync.GallerySync()
-```
-
-```TypeScript
-let download = new cloudSync.Download()
-```
-
 ## getLastSyncTime
 
 ```TypeScript
@@ -259,22 +243,6 @@ fileSync.start().then(() => {
 });
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let gallerySync = new cloudSync.GallerySync();
-
-gallerySync.on('progress', (pg: cloudSync.SyncProgress) => {
-  console.info("syncState: " + pg.state);
-});
-
-gallerySync.start().then(() => {
-  console.info("start sync successfully");
-}).catch((err: BusinessError) => {
-  console.error(`start sync failed with error message: ${err.message}, error code: ${err.code}`);
-});
-```
-
 ## start
 
 ```TypeScript
@@ -313,20 +281,6 @@ let fileSync = new cloudSync.FileSync();
 fileSync.start((err: BusinessError) => {
   if (err) {
     console.error("start sync failed with error message: " + err.message + ", error code: " + err.code);
-  } else {
-    console.info("start sync successfully");
-  }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let gallerySync = new cloudSync.GallerySync();
-
-gallerySync.start((err: BusinessError) => {
-  if (err) {
-    console.error(`start sync failed with error message: ${err.message}, error code: ${err.code}`);
   } else {
     console.info("start sync successfully");
   }
@@ -374,18 +328,6 @@ fileSync.stop().then(() => {
 });
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let gallerySync = new cloudSync.GallerySync();
-
-gallerySync.stop().then(() => {
-  console.info("stop sync successfully");
-}).catch((err: BusinessError) => {
-  console.error("stop sync failed with error message: " + err.message + ", error code: " + err.code);
-});
-```
-
 ## stop
 
 ```TypeScript
@@ -423,20 +365,6 @@ let fileSync = new cloudSync.FileSync();
 fileSync.stop((err: BusinessError) => {
   if (err) {
     console.error("stop sync failed with error message: " + err.message + ", error code: " + err.code);
-  } else {
-    console.info("stop sync successfully");
-  }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let gallerySync = new cloudSync.GallerySync();
-
-gallerySync.stop((err: BusinessError) => {
-  if (err) {
-    console.error(`stop sync failed with error message: ${err.message}, error code: ${err.code}`);
   } else {
     console.info("stop sync successfully");
   }

@@ -40,23 +40,10 @@ Obtains information about a symbolic link that is used to refer to a file or dir
 | 13900012 | Permission denied |
 | 13900013 | Bad address |
 | 13900018 | Not a directory |
-| 13900030 | File name too number |
+| 13900030 | File name too long |
 | 13900033 | Too many symbolic links encountered |
 | 13900038 | Value too large for defined data type |
 | 13900042 | Unknown error |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let filePath = pathDir + "/linkToFile";
-fileIo.lstat(filePath).then((stat: fileIo.Stat) => {
-  console.info(`Succeeded in getting symbolic link info, the size of file is ${stat.size}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to get symbolic link info. Code: ${err.code}, message: ${err.message}`);
-});
-```
 
 
 ## lstat
@@ -88,22 +75,7 @@ Obtains information about a symbolic link that is used to refer to a file or dir
 | 13900012 | Permission denied |
 | 13900013 | Bad address |
 | 13900018 | Not a directory |
-| 13900030 | File name too number |
+| 13900030 | File name too long |
 | 13900033 | Too many symbolic links encountered |
 | 13900038 | Value too large for defined data type |
 | 13900042 | Unknown error |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let filePath = pathDir + "/linkToFile";
-fileIo.lstat(filePath, (err: BusinessError, stat: fileIo.Stat) => {
-  if (err) {
-    console.error(`Failed to get symbolic link info. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info(`Succeeded in getting symbolic link info, the size of file is ${stat.size}`);
-  }
-});
-```

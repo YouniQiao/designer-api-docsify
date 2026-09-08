@@ -38,7 +38,7 @@ photoType: PhotoType
 
 创建的媒体文件类型[PhotoType](arkts-medialibrary-photoaccesshelper-phototype-e.md)，包含IMAGE或VIDEO。
 
-**类型：** PhotoType
+**类型：** [PhotoType](arkts-medialibrary-photoaccesshelper-phototype-e.md)
 
 **起始版本：** 23
 

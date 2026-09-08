@@ -20,7 +20,7 @@ backgroundImage?: Resource
 
 弹框背景图片。默认为纯色背景，颜色值为#EBEEF5。
 
-**类型：** Resource
+**类型：** [Resource](arkts-arkui-resource-t.md)
 
 **起始版本：** 12
 
@@ -52,7 +52,7 @@ foregroundImage?: Resource
 
 弹框前景图片。默认为空，即不显示前景图片。
 
-**类型：** Resource
+**类型：** [Resource](arkts-arkui-resource-t.md)
 
 **起始版本：** 12
 
@@ -132,7 +132,7 @@ subtitleColor?: ResourceStr | Color
 
 弹框副标题文本颜色。默认为\$r('sys.color.ohos_id_color_text_secondary_contrary')。
 
-**类型：** [ResourceStr](arkts-arkui-resourcestr-t.md) \| Color
+**类型：** [ResourceStr](arkts-arkui-resourcestr-t.md) \| [Color](arkts-arkui-color-e.md)
 
 **起始版本：** 12
 
@@ -164,7 +164,7 @@ titleColor?: ResourceStr | Color
 
 弹框主标题文本颜色。默认为\$r('sys.color.ohos_id_color_text_primary_contrary')。
 
-**类型：** [ResourceStr](arkts-arkui-resourcestr-t.md) \| Color
+**类型：** [ResourceStr](arkts-arkui-resourcestr-t.md) \| [Color](arkts-arkui-color-e.md)
 
 **起始版本：** 12
 

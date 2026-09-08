@@ -34,7 +34,7 @@ No permission is required for obtaining the caller's own information.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;ShortcutInfo&gt; | Array of the [ShortcutInfo]{ |
+| Array&lt;[ShortcutInfo](arkts-ability-launcherbundlemanager-shortcutinfo-t.md)&gt; | Array of the [ShortcutInfo]{ |
 
 **Error codes:**
 
@@ -93,7 +93,7 @@ No permission is required for obtaining the caller's own information.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;ShortcutInfo&gt; | Array of the [ShortcutInfo]{ |
+| Array&lt;[ShortcutInfo](arkts-ability-launcherbundlemanager-shortcutinfo-t.md)&gt; | Array of the [ShortcutInfo]{ |
 
 **Error codes:**
 

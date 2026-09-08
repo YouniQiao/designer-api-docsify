@@ -87,7 +87,7 @@ radius?: LengthMetrics
 
 取值范围：大于0。
 
-**类型：** LengthMetrics
+**类型：** [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md)
 
 **起始版本：** 12
 

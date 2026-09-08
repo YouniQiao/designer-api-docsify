@@ -55,7 +55,7 @@ Sets the callback for rotation gesture cancellation. This callback is triggered 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | Callback&lt;void&gt; | Yes | Callback invoked when the rotation gesture is cancelled. No gesture event information is returned. |
+| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;void&gt; | Yes | Callback invoked when the rotation gesture is cancelled. No gesture event information is returned. |
 
 **Return value:**
 
@@ -83,7 +83,7 @@ Sets the callback for rotation gesture cancellation. This callback is triggered 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | Callback&lt;[GestureEvent](arkts-arkui-gestureevent-i.md)&gt; | Yes | Callback invoked when the rotation gesture is cancelled. Gesture event information is returned. |
+| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;[GestureEvent](arkts-arkui-gestureevent-i.md)&gt; | Yes | Callback invoked when the rotation gesture is cancelled. Gesture event information is returned. |
 
 **Return value:**
 
@@ -111,7 +111,7 @@ Sets the callback for rotation gesture recognition completion. This callback is 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | Callback&lt;[GestureEvent](arkts-arkui-gestureevent-i.md)&gt; | Yes | Callback invoked when rotation gesture recognition completes. |
+| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;[GestureEvent](arkts-arkui-gestureevent-i.md)&gt; | Yes | Callback invoked when rotation gesture recognition completes. |
 
 **Return value:**
 
@@ -139,7 +139,7 @@ Sets the callback for successful rotation gesture recognition.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | Callback&lt;[GestureEvent](arkts-arkui-gestureevent-i.md)&gt; | Yes | Callback invoked upon successful rotation gesture recognition. |
+| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;[GestureEvent](arkts-arkui-gestureevent-i.md)&gt; | Yes | Callback invoked upon successful rotation gesture recognition. |
 
 **Return value:**
 
@@ -167,7 +167,7 @@ Sets the callback for rotation gesture movement updates. The callback is trigger
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | Callback&lt;[GestureEvent](arkts-arkui-gestureevent-i.md)&gt; | Yes | Callback invoked during rotation gesture movement. |
+| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;[GestureEvent](arkts-arkui-gestureevent-i.md)&gt; | Yes | Callback invoked during rotation gesture movement. |
 
 **Return value:**
 

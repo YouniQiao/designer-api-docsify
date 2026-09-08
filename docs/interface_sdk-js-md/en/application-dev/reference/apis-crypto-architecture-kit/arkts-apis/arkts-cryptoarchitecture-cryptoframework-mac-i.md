@@ -34,7 +34,7 @@ Finishes the MAC computation and obtains the MAC computation result. This API us
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DataBlob&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the MAC computation result obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the MAC computation result obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -88,7 +88,7 @@ Finishes the MAC computation and obtains the MAC computation result. This API us
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;DataBlob&gt; | Promise used to return the MAC computation result. |
+| Promise&lt;[DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md)&gt; | Promise used to return the MAC computation result. |
 
 **Error codes:**
 
@@ -126,7 +126,7 @@ doFinalSync(): DataBlob
 
 Finishes the MAC computation. This API returns the result synchronously.
 
-**NOTE：**It is recommended to prioritize the use of asynchronous API, doFinal. Synchronous API may take a number time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
+**NOTE：**It is recommended to prioritize the use of asynchronous API, doFinal. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
 **Since:** 12
 
@@ -138,7 +138,7 @@ Finishes the MAC computation. This API returns the result synchronously.
 
 | Type | Description |
 | --- | --- |
-| DataBlob | MAC computation result. |
+| [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | MAC computation result. |
 
 **Error codes:**
 
@@ -310,7 +310,7 @@ initSync(key: SymKey): void
 
 Initializes the MAC computation using a symmetric key. This API returns the result synchronously. **initSync**, **updateSync**, and **doFinalSync** must be used together. **initSync** and **doFinalSync** are mandatory, and **updateSync** is optional.
 
-**NOTE：**It is recommended to prioritize the use of asynchronous API, init. Synchronous API may take a number time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
+**NOTE：**It is recommended to prioritize the use of asynchronous API, init. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
 **Since:** 12
 
@@ -358,7 +358,7 @@ Updates the MAC status. This API uses an asynchronous callback to return the res
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| input | DataBlob | Yes | Data to pass in. |
+| input | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | Yes | Data to pass in. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
@@ -395,7 +395,7 @@ Updates the MAC status. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| input | DataBlob | Yes | Data to pass in. |
+| input | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | Yes | Data to pass in. |
 
 **Return value:**
 
@@ -425,7 +425,7 @@ Updates the MAC status. This API returns the result synchronously.
 > [Generating an HMAC by Passing In Data by Segment](../../../security/CryptoArchitectureKit/crypto-compute-hmac.md#generating-an-hmac-by-passing-in-data-by-segment)
 > .
 
-**NOTE：**It is recommended to prioritize the use of asynchronous API, update. Synchronous API may take a number time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
+**NOTE：**It is recommended to prioritize the use of asynchronous API, update. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
 **Since:** 12
 
@@ -437,7 +437,7 @@ Updates the MAC status. This API returns the result synchronously.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| input | DataBlob | Yes | Data to pass in. |
+| input | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | Yes | Data to pass in. |
 
 **Error codes:**
 

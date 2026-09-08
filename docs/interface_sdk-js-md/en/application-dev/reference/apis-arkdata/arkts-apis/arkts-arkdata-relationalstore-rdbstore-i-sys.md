@@ -81,8 +81,8 @@ Sync data to cloud.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | SyncMode | Yes | indicates the database synchronization mode. |
-| predicates | RdbPredicates | Yes | The specified sync condition by the instance object of [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md). |
+| mode | [SyncMode](arkts-arkdata-relationalstore-syncmode-e.md) | Yes | indicates the database synchronization mode. |
+| predicates | [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | Yes | The specified sync condition by the instance object of [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md). |
 | progress | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ProgressDetails](arkts-arkdata-relationalstore-progressdetails-i.md)&gt; | Yes | Callback used to return the [ProgressDetails](arkts-arkdata-relationalstore-progressdetails-i.md) result. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The callback of cloudSync. |
 
@@ -94,68 +94,6 @@ Sync data to cloud.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | if permission verification failed, application which is not a system application uses system API. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed.<br>**Applicable version:** 12 and later |
-
-**Examples**
-
-```TypeScript
-if (store != undefined) {
-  (store as relationalStore.RdbStore).cloudSync(relationalStore.SyncMode.SYNC_MODE_CLOUD_FIRST, (progressDetails) => {
-    console.info(`Progress: ${progressDetails}`);
-  }, (err) => {
-    if (err) {
-      console.error(`Cloud sync failed, code is ${err.code},message is ${err.message}`);
-      return;
-    }
-    console.info('Cloud sync succeeded');
-  });
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-if (store != undefined) {
-  (store as relationalStore.RdbStore).cloudSync(relationalStore.SyncMode.SYNC_MODE_CLOUD_FIRST, (progressDetail: relationalStore.ProgressDetails) => {
-    console.info(`progress: ${progressDetail}`);
-  }).then(() => {
-    console.info('Cloud sync succeeded');
-  }).catch((err: BusinessError) => {
-    console.error(`cloudSync failed, code is ${err.code},message is ${err.message}`);
-  });
-}
-```
-
-```TypeScript
-const tables = ["table1", "table2"];
-
-if (store != undefined) {
-  (store as relationalStore.RdbStore).cloudSync(relationalStore.SyncMode.SYNC_MODE_CLOUD_FIRST, tables, (progressDetail: relationalStore.ProgressDetails) => {
-    console.info(`Progress: ${progressDetail}`);
-  }, (err) => {
-    if (err) {
-      console.error(`Cloud sync failed, code is ${err.code},message is ${err.message}`);
-      return;
-    }
-    console.info('Cloud sync succeeded');
-  });
-};
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-const tables = ["table1", "table2"];
-
-if (store != undefined) {
-  (store as relationalStore.RdbStore).cloudSync(relationalStore.SyncMode.SYNC_MODE_CLOUD_FIRST, tables, (progressDetail: relationalStore.ProgressDetails) => {
-    console.info(`progress: ${progressDetail}`);
-  }).then(() => {
-    console.info('Cloud sync succeeded');
-  }).catch((err: BusinessError) => {
-    console.error(`cloudSync failed, code is ${err.code},message is ${err.message}`);
-  });
-};
-```
 
 ## cloudSync
 
@@ -175,8 +113,8 @@ Sync data to cloud.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | SyncMode | Yes | indicates the database synchronization mode. |
-| predicates | RdbPredicates | Yes | The specified sync condition by the instance object of [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md). |
+| mode | [SyncMode](arkts-arkdata-relationalstore-syncmode-e.md) | Yes | indicates the database synchronization mode. |
+| predicates | [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | Yes | The specified sync condition by the instance object of [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md). |
 | progress | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ProgressDetails](arkts-arkdata-relationalstore-progressdetails-i.md)&gt; | Yes | Callback used to return the [ProgressDetails](arkts-arkdata-relationalstore-progressdetails-i.md) result. |
 
 **Return value:**
@@ -193,10 +131,6 @@ Sync data to cloud.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | if permission verification failed, application which is not a system application uses system API. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed.<br>**Applicable version:** 12 and later |
-
-**Examples**
-
-See [cloudSync](#cloudsync)
 
 ## delete
 
@@ -219,7 +153,7 @@ Deletes data from the database based on a specified instance object of RdbPredic
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | table | string | Yes | Indicates the target table. |
-| predicates | dataSharePredicates.DataSharePredicates | Yes | The specified delete condition by the instance object of [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md). |
+| predicates | [dataSharePredicates.DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | Yes | The specified delete condition by the instance object of [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md). |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | The number of affected rows. |
 
 **Error codes:**
@@ -248,59 +182,6 @@ Deletes data from the database based on a specified instance object of RdbPredic
 | [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) | SQLite: Data type mismatch.<br>**Applicable version:** 12 and later |
 | [14800034](../errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) | SQLite: Library used incorrectly.<br>**Applicable version:** 12 and later |
 
-**Examples**
-
-```TypeScript
-let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
-predicates.equalTo("NAME", "Lisa");
-if (store != undefined) {
-  (store as relationalStore.RdbStore).delete(predicates, (err, rows) => {
-    if (err) {
-      console.error(`Delete failed, code is ${err.code},message is ${err.message}`);
-      return;
-    }
-    console.info(`Delete rows: ${rows}`);
-  });
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
-predicates.equalTo("NAME", "Lisa");
-if (store != undefined) {
-  (store as relationalStore.RdbStore).delete(predicates).then((rows: number) => {
-    console.info(`Delete rows: ${rows}`);
-  }).catch((err: BusinessError) => {
-    console.error(`Delete failed, code is ${err.code},message is ${err.message}`);
-  });
-}
-```
-
-```TypeScript
-let predicates2 = new relationalStore.RdbPredicates('EMPLOYEE');
-predicates2.equalTo('NAME', 'Lisa');
-
-if (store != undefined) {
-  try {
-    const transaction = await store.createTransaction();
-    try {
-      const rows = await transaction.delete(predicates2);
-      await transaction.commit();
-      console.info(`Delete rows: ${rows}`);
-    } catch (error) {
-      const err = error as BusinessError;
-      await transaction.rollback();
-      console.error(`Delete failed, code is ${err.code},message is ${err.message}`);
-    }
-  } catch (error) {
-    const err = error as BusinessError;
-    console.error(`createTransaction failed, code is ${err.code},message is ${err.message}`);
-  }
-}
-```
-
 ## delete
 
 ```TypeScript
@@ -322,7 +203,7 @@ Deletes data from the database based on a specified instance object of RdbPredic
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | table | string | Yes | Indicates the target table. |
-| predicates | dataSharePredicates.DataSharePredicates | Yes | The specified delete condition by the instance object of [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md). |
+| predicates | [dataSharePredicates.DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | Yes | The specified delete condition by the instance object of [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md). |
 
 **Return value:**
 
@@ -355,10 +236,6 @@ Deletes data from the database based on a specified instance object of RdbPredic
 | [14800032](../errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) | SQLite: Abort due to constraint violation.<br>**Applicable version:** 12 and later |
 | [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) | SQLite: Data type mismatch.<br>**Applicable version:** 12 and later |
 | [14800034](../errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) | SQLite: Library used incorrectly.<br>**Applicable version:** 12 and later |
-
-**Examples**
-
-See [delete](#delete)
 
 ## lockCloudContainer
 
@@ -407,8 +284,8 @@ Queries data in the database based on specified conditions.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | table | string | Yes | Indicates the target table. |
-| predicates | dataSharePredicates.DataSharePredicates | Yes | The specified query condition by the instance object of [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md). |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ResultSet&gt; | Yes | The [ResultSet](arkts-arkdata-relationalstore-resultset-i.md) object if the operation is successful. |
+| predicates | [dataSharePredicates.DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | Yes | The specified query condition by the instance object of [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md). |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ResultSet](arkts-arkdata-relationalstore-resultset-i.md)&gt; | Yes | The [ResultSet](arkts-arkdata-relationalstore-resultset-i.md) object if the operation is successful. |
 
 **Error codes:**
 
@@ -419,128 +296,6 @@ Queries data in the database based on specified conditions.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
 | [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed.<br>**Applicable version:** 12 and later |
 | [14800015](../errorcode-data-rdb.md#14800015-rdb-store-not-respond) | The database does not respond.<br>**Applicable version:** 12 and later |
-
-**Examples**
-
-```TypeScript
-let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
-predicates.equalTo("NAME", "Rose");
-if (store != undefined) {
-  (store as relationalStore.RdbStore).query(predicates, async (err, resultSet) => {
-    if (err) {
-      console.error(`Query failed, code is ${err.code},message is ${err.message}`);
-      return;
-    }
-    console.info(`ResultSet column names: ${resultSet.columnNames}, column count: ${resultSet.columnCount}`);
-    // resultSet is a cursor of a data set. By default, the cursor points to the -1st record. Valid data starts from 0.
-    try {
-      while (resultSet.goToNextRow()) {
-        const id = resultSet.getLong(resultSet.getColumnIndex("ID"));
-        const name = resultSet.getString(resultSet.getColumnIndex("NAME"));
-        const age = resultSet.getLong(resultSet.getColumnIndex("AGE"));
-        const salary = resultSet.getDouble(resultSet.getColumnIndex("SALARY"));
-        console.info(`id=${id}, name=${name}, age=${age}, salary=${salary}`);
-      }
-    } catch (err) {
-      console.error(`Query failed, code is ${err.code},message is ${err.message}`);
-    } finally {
-      // Release the memory of resultSet. If the memory is not released, FD or memory leaks may occur.
-      resultSet.close();
-    }
-  });
-}
-```
-
-```TypeScript
-let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
-predicates.equalTo("NAME", "Rose");
-if (store != undefined) {
-  (store as relationalStore.RdbStore).query(predicates, ["ID", "NAME", "AGE", "SALARY", "CODES"], async (err, resultSet) => {
-    if (err) {
-      console.error(`Query failed, code is ${err.code},message is ${err.message}`);
-      return;
-    }
-    console.info(`ResultSet column names: ${resultSet.columnNames}, column count: ${resultSet.columnCount}`);
-    // resultSet is a cursor of a data set. By default, the cursor points to the -1st record. Valid data starts from 0.
-    try {
-      while (resultSet.goToNextRow()) {
-        const id = resultSet.getLong(resultSet.getColumnIndex("ID"));
-        const name = resultSet.getString(resultSet.getColumnIndex("NAME"));
-        const age = resultSet.getLong(resultSet.getColumnIndex("AGE"));
-        const salary = resultSet.getDouble(resultSet.getColumnIndex("SALARY"));
-        console.info(`id=${id}, name=${name}, age=${age}, salary=${salary}`);
-      }
-    } catch (err) {
-      console.error(`Query failed, code is ${err.code},message is ${err.message}`);
-    } finally {
-      // Release the memory of resultSet. If the memory is not released, FD or memory leaks may occur.
-      resultSet.close();
-    }
-  });
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
-predicates.equalTo("NAME", "Rose");
-if (store != undefined) {
-  (store as relationalStore.RdbStore).query(predicates, ["ID", "NAME", "AGE", "SALARY", "CODES"]).then(async (resultSet: relationalStore.ResultSet) => {
-    console.info(`ResultSet column names: ${resultSet.columnNames}, column count: ${resultSet.columnCount}`);
-    // resultSet is a cursor of a data set. By default, the cursor points to the -1st record. Valid data starts from 0.
-    try {
-      while (resultSet.goToNextRow()) {
-        const id = resultSet.getLong(resultSet.getColumnIndex("ID"));
-        const name = resultSet.getString(resultSet.getColumnIndex("NAME"));
-        const age = resultSet.getLong(resultSet.getColumnIndex("AGE"));
-        const salary = resultSet.getDouble(resultSet.getColumnIndex("SALARY"));
-        console.info(`id=${id}, name=${name}, age=${age}, salary=${salary}`);
-      }
-    } catch (err) {
-      console.error(`Query failed, code is ${err.code},message is ${err.message}`);
-    } finally {
-      // Release the memory of resultSet. If the memory is not released, FD or memory leaks may occur.
-      resultSet.close();
-    }
-  }).catch((err: BusinessError) => {
-    console.error(`Query failed, code is ${err.code},message is ${err.message}`);
-  });
-}
-```
-
-```TypeScript
-let predicates4 = new relationalStore.RdbPredicates('EMPLOYEE');
-predicates4.equalTo('NAME', 'Rose');
-
-if (store != undefined) {
-  try {
-    const transaction = await store.createTransaction();
-    try {
-      const resultSet = await transaction.query(predicates4, ['ID', 'NAME', 'AGE', 'SALARY', 'CODES']);
-      console.info(`ResultSet column names: ${resultSet.columnNames}, column count: ${resultSet.columnCount}`);
-      // resultSet is a cursor of a data set. By default, the cursor points to the -1st record. Valid data starts from 0.
-      while (resultSet.goToNextRow()) {
-        const id = resultSet.getLong(resultSet.getColumnIndex('ID'));
-        const name = resultSet.getString(resultSet.getColumnIndex('NAME'));
-        const age = resultSet.getLong(resultSet.getColumnIndex('AGE'));
-        const salary = resultSet.getDouble(resultSet.getColumnIndex('SALARY'));
-        console.info(`id=${id}, name=${name}, age=${age}, salary=${salary}`);
-      }
-      // Release the memory of resultSet. If the memory is not released, FD or memory leaks may occur.
-      resultSet.close();
-      await transaction.commit();
-    } catch (error) {
-      const err = error as BusinessError;
-      await transaction.rollback();
-      console.error(`Query failed, code is ${err.code},message is ${err.message}`);
-    }
-  } catch (error) {
-    const err = error as BusinessError;
-    console.error(`createTransaction failed, code is ${err.code},message is ${err.message}`);
-  }
-}
-```
 
 ## query
 
@@ -568,9 +323,9 @@ Queries data in the database based on specified conditions.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | table | string | Yes | Indicates the target table. |
-| predicates | dataSharePredicates.DataSharePredicates | Yes | The specified query condition by the instance object of [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md). |
+| predicates | [dataSharePredicates.DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | Yes | The specified query condition by the instance object of [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md). |
 | columns | Array&lt;string&gt; | Yes | The columns to query. If the value is empty array, the query applies to all columns. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ResultSet&gt; | Yes | The [ResultSet](arkts-arkdata-relationalstore-resultset-i.md) object if the operation is successful. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ResultSet](arkts-arkdata-relationalstore-resultset-i.md)&gt; | Yes | The [ResultSet](arkts-arkdata-relationalstore-resultset-i.md) object if the operation is successful. |
 
 **Error codes:**
 
@@ -581,10 +336,6 @@ Queries data in the database based on specified conditions.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
 | [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed.<br>**Applicable version:** 12 and later |
 | [14800015](../errorcode-data-rdb.md#14800015-rdb-store-not-respond) | The database does not respond.<br>**Applicable version:** 12 and later |
-
-**Examples**
-
-See [query](#query)
 
 ## query
 
@@ -611,14 +362,14 @@ Queries data in the database based on specified conditions.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | table | string | Yes | Indicates the target table. |
-| predicates | dataSharePredicates.DataSharePredicates | Yes | The specified query condition by the instance object of [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md). |
+| predicates | [dataSharePredicates.DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | Yes | The specified query condition by the instance object of [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md). |
 | columns | Array&lt;string&gt; | No | The columns to query. If the value is null, the query applies to all columns. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ResultSet&gt; | The { |
+| Promise&lt;[ResultSet](arkts-arkdata-relationalstore-resultset-i.md)&gt; | The { |
 
 **Error codes:**
 
@@ -629,10 +380,6 @@ Queries data in the database based on specified conditions.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
 | [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed.<br>**Applicable version:** 12 and later |
 | [14800015](../errorcode-data-rdb.md#14800015-rdb-store-not-respond) | The database does not respond.<br>**Applicable version:** 12 and later |
-
-**Examples**
-
-See [query](#query)
 
 ## querySharingResource
 
@@ -652,14 +399,14 @@ Obtains sharing resource of rows corresponding to the predicates.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| predicates | RdbPredicates | Yes | The specified query condition by the instance object of [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md). |
+| predicates | [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | Yes | The specified query condition by the instance object of [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md). |
 | columns | Array&lt;string&gt; | No | The specified columns to query. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ResultSet&gt; | The promise returned by the function. { |
+| Promise&lt;[ResultSet](arkts-arkdata-relationalstore-resultset-i.md)&gt; | The promise returned by the function. { |
 
 **Error codes:**
 
@@ -704,8 +451,8 @@ Obtains sharing resource of rows corresponding to the predicates.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| predicates | RdbPredicates | Yes | The specified query condition by the instance object of [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md). |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ResultSet&gt; | Yes | The callback of querySharingResource. [ResultSet](arkts-arkdata-relationalstore-resultset-i.md) is query result. |
+| predicates | [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | Yes | The specified query condition by the instance object of [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md). |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ResultSet](arkts-arkdata-relationalstore-resultset-i.md)&gt; | Yes | The callback of querySharingResource. [ResultSet](arkts-arkdata-relationalstore-resultset-i.md) is query result. |
 
 **Error codes:**
 
@@ -750,9 +497,9 @@ Obtains sharing resource of rows corresponding to the predicates.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| predicates | RdbPredicates | Yes | The specified query condition by the instance object of [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md). |
+| predicates | [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | Yes | The specified query condition by the instance object of [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md). |
 | columns | Array&lt;string&gt; | Yes | The specified columns to query. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ResultSet&gt; | Yes | The callback of querySharingResource. [ResultSet](arkts-arkdata-relationalstore-resultset-i.md) is query result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ResultSet](arkts-arkdata-relationalstore-resultset-i.md)&gt; | Yes | The callback of querySharingResource. [ResultSet](arkts-arkdata-relationalstore-resultset-i.md) is query result. |
 
 **Error codes:**
 
@@ -823,33 +570,6 @@ Restores a database from a specified database file.
 | [14800032](../errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) | SQLite: Abort due to constraint violation. |
 | [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) | SQLite: Data type mismatch. |
 | [14800034](../errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) | SQLite: Library used incorrectly. |
-
-**Examples**
-
-```TypeScript
-if (store != undefined) {
-  (store as relationalStore.RdbStore).restore("dbBackup.db", (err) => {
-    if (err) {
-      console.error(`Restore failed, code is ${err.code},message is ${err.message}`);
-      return;
-    }
-    console.info('Restore success.');
-  });
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-if (store != undefined) {
-  let promiseRestore = (store as relationalStore.RdbStore).restore("dbBackup.db");
-  promiseRestore.then(() => {
-    console.info('Restore success.');
-  }).catch((err: BusinessError) => {
-    console.error(`Restore failed, code is ${err.code},message is ${err.message}`);
-  });
-}
-```
 
 ## retainDeviceData
 
@@ -944,8 +664,8 @@ Updates data in the database based on a specified instance object of RdbPredicat
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | table | string | Yes | Indicates the target table. |
-| values | ValuesBucket | Yes | Indicates the row of data to be updated in the database. The key-value pairs are associated with column names of the database table. |
-| predicates | dataSharePredicates.DataSharePredicates | Yes | Indicates the specified update condition by the instance object of [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md). |
+| values | [ValuesBucket](arkts-arkdata-relationalstore-valuesbucket-t.md) | Yes | Indicates the row of data to be updated in the database. The key-value pairs are associated with column names of the database table. |
+| predicates | [dataSharePredicates.DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | Yes | Indicates the specified update condition by the instance object of [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md). |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | The number of affected rows. |
 
 **Error codes:**
@@ -974,193 +694,6 @@ Updates data in the database based on a specified instance object of RdbPredicat
 | [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) | SQLite: Data type mismatch.<br>**Applicable version:** 12 and later |
 | [14800034](../errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) | SQLite: Library used incorrectly.<br>**Applicable version:** 12 and later |
 
-**Examples**
-
-```TypeScript
-let value1 = "Rose";
-let value2 = 22;
-let value3 = 200.5;
-let value4 = new Uint8Array([1, 2, 3, 4, 5]);
-
-// You can use either of the following:
-const valueBucket1: relationalStore.ValuesBucket = {
-  'NAME': value1,
-  'AGE': value2,
-  'SALARY': value3,
-  'CODES': value4
-};
-const valueBucket2: relationalStore.ValuesBucket = {
-  NAME: value1,
-  AGE: value2,
-  SALARY: value3,
-  CODES: value4
-};
-const valueBucket3: relationalStore.ValuesBucket = {
-  "NAME": value1,
-  "AGE": value2,
-  "SALARY": value3,
-  "CODES": value4
-};
-
-let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
-predicates.equalTo("NAME", "Lisa");
-if (store != undefined) {
-  (store as relationalStore.RdbStore).update(valueBucket1, predicates, (err, rows) => {
-    if (err) {
-      console.error(`Updated failed, code is ${err.code},message is ${err.message}`);
-      return;
-    }
-    console.info(`Updated row count: ${rows}`);
-  });
-}
-```
-
-```TypeScript
-let value1 = "Rose";
-let value2 = 22;
-let value3 = 200.5;
-let value4 = new Uint8Array([1, 2, 3, 4, 5]);
-
-// You can use either of the following:
-const valueBucket1: relationalStore.ValuesBucket = {
-  'NAME': value1,
-  'AGE': value2,
-  'SALARY': value3,
-  'CODES': value4
-};
-const valueBucket2: relationalStore.ValuesBucket = {
-  NAME: value1,
-  AGE: value2,
-  SALARY: value3,
-  CODES: value4
-};
-const valueBucket3: relationalStore.ValuesBucket = {
-  "NAME": value1,
-  "AGE": value2,
-  "SALARY": value3,
-  "CODES": value4
-};
-
-let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
-predicates.equalTo("NAME", "Lisa");
-if (store != undefined) {
-  (store as relationalStore.RdbStore).update(valueBucket1, predicates, relationalStore.ConflictResolution.ON_CONFLICT_REPLACE, (err, rows) => {
-    if (err) {
-      console.error(`Updated failed, code is ${err.code},message is ${err.message}`);
-      return;
-    }
-    console.info(`Updated row count: ${rows}`);
-  });
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let value1 = "Rose";
-let value2 = 22;
-let value3 = 200.5;
-let value4 = new Uint8Array([1, 2, 3, 4, 5]);
-
-// You can use either of the following:
-const valueBucket1: relationalStore.ValuesBucket = {
-  'NAME': value1,
-  'AGE': value2,
-  'SALARY': value3,
-  'CODES': value4
-};
-const valueBucket2: relationalStore.ValuesBucket = {
-  NAME: value1,
-  AGE: value2,
-  SALARY: value3,
-  CODES: value4
-};
-const valueBucket3: relationalStore.ValuesBucket = {
-  "NAME": value1,
-  "AGE": value2,
-  "SALARY": value3,
-  "CODES": value4
-};
-
-let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
-predicates.equalTo("NAME", "Lisa");
-if (store != undefined) {
-  (store as relationalStore.RdbStore).update(valueBucket1, predicates).then(async (rows: number) => {
-    console.info(`Updated row count: ${rows}`);
-  }).catch((err: BusinessError) => {
-    console.error(`Updated failed, code is ${err.code},message is ${err.message}`);
-  });
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let value1 = "Rose";
-let value2 = 22;
-let value3 = 200.5;
-let value4 = new Uint8Array([1, 2, 3, 4, 5]);
-
-// You can use either of the following:
-const valueBucket1: relationalStore.ValuesBucket = {
-  'NAME': value1,
-  'AGE': value2,
-  'SALARY': value3,
-  'CODES': value4
-};
-const valueBucket2: relationalStore.ValuesBucket = {
-  NAME: value1,
-  AGE: value2,
-  SALARY: value3,
-  CODES: value4
-};
-const valueBucket3: relationalStore.ValuesBucket = {
-  "NAME": value1,
-  "AGE": value2,
-  "SALARY": value3,
-  "CODES": value4
-};
-
-let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
-predicates.equalTo("NAME", "Lisa");
-if (store != undefined) {
-  (store as relationalStore.RdbStore).update(valueBucket1, predicates, relationalStore.ConflictResolution.ON_CONFLICT_REPLACE).then(async (rows: number) => {
-    console.info(`Updated row count: ${rows}`);
-  }).catch((err: BusinessError) => {
-    console.error(`Updated failed, code is ${err.code},message is ${err.message}`);
-  });
-}
-```
-
-```TypeScript
-const valueBucketF: relationalStore.ValuesBucket = {
-  NAME: 'Rose',
-  AGE: 22,
-  SALARY: 200.5,
-  CODES: new Uint8Array([1, 2, 3, 4, 5])
-};
-let predicates = new relationalStore.RdbPredicates('EMPLOYEE');
-predicates.equalTo('NAME', 'Lisa');
-
-if (store != undefined) {
-  try {
-    const transaction = await store.createTransaction();
-    try {
-      const rows = await transaction.update(valueBucketF, predicates, relationalStore.ConflictResolution.ON_CONFLICT_REPLACE);
-      await transaction.commit();
-      console.info(`Updated row count: ${rows}`);
-    } catch (error) {
-      const err = error as BusinessError;
-      await transaction.rollback();
-      console.error(`Updated failed, code is ${err.code},message is ${err.message}`);
-    }
-  } catch (error) {
-    const err = error as BusinessError;
-    console.error(`createTransaction failed, code is ${err.code},message is ${err.message}`);
-  }
-}
-```
-
 ## update
 
 ```TypeScript
@@ -1182,8 +715,8 @@ Updates data in the database based on a specified instance object of RdbPredicat
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | table | string | Yes | Indicates the target table. |
-| values | ValuesBucket | Yes | Indicates the row of data to be updated in the database. The key-value pairs are associated with column names of the database table. |
-| predicates | dataSharePredicates.DataSharePredicates | Yes | Indicates the specified update condition by the instance object of [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md). |
+| values | [ValuesBucket](arkts-arkdata-relationalstore-valuesbucket-t.md) | Yes | Indicates the row of data to be updated in the database. The key-value pairs are associated with column names of the database table. |
+| predicates | [dataSharePredicates.DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | Yes | Indicates the specified update condition by the instance object of [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md). |
 
 **Return value:**
 
@@ -1217,10 +750,6 @@ Updates data in the database based on a specified instance object of RdbPredicat
 | [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) | SQLite: Data type mismatch.<br>**Applicable version:** 12 and later |
 | [14800034](../errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) | SQLite: Library used incorrectly.<br>**Applicable version:** 12 and later |
 
-**Examples**
-
-See [update](#update)
-
 ## updateDistributedInfo
 
 ```TypeScript
@@ -1241,8 +770,8 @@ Update distributed table log.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| info | DistributedInfo | Yes | Indicates the table log needs to be updated. |
-| predicates | RdbPredicates | Yes | The specified query condition by the instance object of [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md). |
+| info | [DistributedInfo](arkts-arkdata-relationalstore-distributedinfo-i-sys.md) | Yes | Indicates the table log needs to be updated. |
+| predicates | [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | Yes | The specified query condition by the instance object of [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md). |
 
 **Return value:**
 

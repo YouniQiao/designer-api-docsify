@@ -22,7 +22,7 @@ componentType: ComponentType
 
 拦截时将提升的能力的类型。
 
-**类型：** ComponentType
+**类型：** [ComponentType](arkts-ability-appcontrol-componenttype-e-sys.md)
 
 **起始版本：** 11
 
@@ -38,7 +38,7 @@ controlType: ControlType
 
 拦截指定应用程序的不同策略。
 
-**类型：** ControlType
+**类型：** [ControlType](arkts-ability-appcontrol-controltype-e-sys.md)
 
 **起始版本：** 11
 

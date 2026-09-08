@@ -91,7 +91,7 @@ To disable the dynamic icon for another user, you must request the ohos.permissi
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name based on which the dynamic icon is to be disabled. |
-| option | BundleOptions | No | User and application clone index based on which the dynamic icon is to be disabled. By default, the dynamic icon is disabled for all users and all application clones. |
+| option | [BundleOptions](arkts-ability-bundle-bundleoptions-i.md) | No | User and application clone index based on which the dynamic icon is to be disabled. By default, the dynamic icon is disabled for all users and all application clones. |
 
 **Return value:**
 

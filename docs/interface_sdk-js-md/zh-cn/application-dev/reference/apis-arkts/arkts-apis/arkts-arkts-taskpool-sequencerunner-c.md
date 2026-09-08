@@ -30,7 +30,7 @@ SequenceRunner的构造函数，用于创建一个**SequenceRunner**实例。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| priority | Priority | 否 | 指定任务的优先级，默认值为**taskpool.Priority.MEDIUM**。 |
+| priority | [Priority](arkts-arkts-taskpool-priority-e.md) | 否 | 指定任务的优先级，默认值为**taskpool.Priority.MEDIUM**。 |
 
 **示例**
 
@@ -63,7 +63,7 @@ SequenceRunner的构造函数，用于创建一个**SequenceRunner**实例。该
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | name | string | 是 | 串行队列的名字。 |
-| priority | Priority | 否 | 指定任务的优先级，默认值为**taskpool.Priority.MEDIUM**。 |
+| priority | [Priority](arkts-arkts-taskpool-priority-e.md) | 否 | 指定任务的优先级，默认值为**taskpool.Priority.MEDIUM**。 |
 
 **示例**
 
@@ -95,7 +95,7 @@ execute(task: Task): Promise<Object>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| task | Task | 是 | 需要添加到串行任务队列中的任务。 |
+| task | [Task](arkts-arkts-taskpool-task-c.md) | 是 | 需要添加到串行任务队列中的任务。 |
 
 **返回值：**
 

@@ -55,20 +55,6 @@ click(): Promise<void>
 
 ```TypeScript
 // xxx.test.ets
-import { Driver, ON, Component } from '@kit.TestKit';
-
-async function demo() {
-  // 创建Driver对象。
-  let driver: Driver = Driver.create();
-  // 查找Button类型的控件。
-  let button: Component = await driver.findComponent(ON.type('Button'));
-  // 点击该控件。
-  await button.click();
-}
-```
-
-```TypeScript
-// xxx.test.ets
 import { UiDriver, BY, UiComponent } from '@kit.TestKit';
 
 async function demo() {
@@ -107,17 +93,6 @@ doubleClick(): Promise<void>
 | Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **示例**
-
-```TypeScript
-// xxx.test.ets
-import { Component, Driver, ON } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  let button: Component = await driver.findComponent(ON.type('Button'));
-  await button.doubleClick();
-}
-```
 
 ```TypeScript
 // xxx.test.ets
@@ -244,17 +219,6 @@ getText(): Promise<string>
 
 ```TypeScript
 // xxx.test.ets
-import { Component, Driver, ON } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  let button: Component = await driver.findComponent(ON.type('Button'));
-  let text = await button.getText();
-}
-```
-
-```TypeScript
-// xxx.test.ets
 import { UiDriver, BY, UiComponent } from '@kit.TestKit';
 
 async function demo() {
@@ -293,17 +257,6 @@ getType(): Promise<string>
 | Promise&lt;string&gt; | Promise对象，返回控件的类型。 |
 
 **示例**
-
-```TypeScript
-// xxx.test.ets
-import { Component, Driver, ON } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  let button: Component = await driver.findComponent(ON.type('Button'));
-  let type = await button.getType();
-}
-```
 
 ```TypeScript
 // xxx.test.ets
@@ -354,20 +307,6 @@ inputText(text: string): Promise<void>
 
 ```TypeScript
 // xxx.test.ets
-import { Component, Driver, ON } from '@kit.TestKit';
-
-async function demo() {
-  // 创建Driver对象。
-  let driver: Driver = Driver.create();
-  // 查找text为'hello world'的控件。
-  let text: Component = await driver.findComponent(ON.text('hello world'));
-  // 清空原有文本并输入'123'。
-  await text.inputText('123');
-}
-```
-
-```TypeScript
-// xxx.test.ets
 import { UiDriver, BY, UiComponent } from '@kit.TestKit';
 
 async function demo() {
@@ -406,21 +345,6 @@ isClickable(): Promise<boolean>
 | Promise&lt;boolean&gt; | Promise对象，返回控件对象可点击状态。true：可点击。false：不可点击。 |
 
 **示例**
-
-```TypeScript
-// xxx.test.ets
-import { Component, Driver, ON } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  let button: Component = await driver.findComponent(ON.type('Button'));
-  if (await button.isClickable()) {
-    console.info('This button can be clicked');
-  } else {
-    console.info('This button cannot be clicked');
-  }
-}
-```
 
 ```TypeScript
 // xxx.test.ets
@@ -469,21 +393,6 @@ isEnabled(): Promise<boolean>
 
 ```TypeScript
 // xxx.test.ets
-import { Component, Driver, ON } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  let button: Component = await driver.findComponent(ON.type('Button'));
-  if (await button.isEnabled()) {
-    console.info('This button can be operated');
-  } else {
-    console.info('This button cannot be operated');
-  }
-}
-```
-
-```TypeScript
-// xxx.test.ets
 import { UiDriver, BY, UiComponent } from '@kit.TestKit';
 
 async function demo() {
@@ -526,32 +435,6 @@ isFocused(): Promise<boolean>
 | Promise&lt;boolean&gt; | Promise对象，返回控件对象是否获焦。true：获焦。false：未获焦。 |
 
 **示例**
-
-```TypeScript
-// xxx.test.ets
-import { Component, Driver, ON } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  let button: Component = await driver.findComponent(ON.type('Button'));
-  if (await button.isFocused()) {
-    console.info('This button is focused');
-  } else {
-    console.info('This button is not focused');
-  }
-}
-```
-
-```TypeScript
-// xxx.test.ets
-import { Driver, UiWindow } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  let window: UiWindow = await driver.findWindow({ active: true });
-  let focused = await window.isFocused();
-}
-```
 
 ```TypeScript
 // xxx.test.ets
@@ -600,21 +483,6 @@ isScrollable(): Promise<boolean>
 
 ```TypeScript
 // xxx.test.ets
-import { Component, Driver, ON } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  let scrollBar: Component = await driver.findComponent(ON.scrollable(true));
-  if (await scrollBar.isScrollable()) {
-    console.info('This scrollBar can be operated');
-  } else {
-    console.info('This scrollBar cannot be operated');
-  }
-}
-```
-
-```TypeScript
-// xxx.test.ets
 import { UiDriver, BY, UiComponent } from '@kit.TestKit';
 
 async function demo() {
@@ -660,21 +528,6 @@ isSelected(): Promise<boolean>
 
 ```TypeScript
 // xxx.test.ets
-import { Component, Driver, ON } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  let button: Component = await driver.findComponent(ON.type('Button'));
-  if (await button.isSelected()) {
-    console.info('This button is selected');
-  } else {
-    console.info('This button is not selected');
-  }
-}
-```
-
-```TypeScript
-// xxx.test.ets
 import { UiDriver, BY, UiComponent } from '@kit.TestKit';
 
 async function demo() {
@@ -717,17 +570,6 @@ longClick(): Promise<void>
 | Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **示例**
-
-```TypeScript
-// xxx.test.ets
-import { Component, Driver, ON } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  let button: Component = await driver.findComponent(ON.type('Button'));
-  await button.longClick();
-}
-```
 
 ```TypeScript
 // xxx.test.ets

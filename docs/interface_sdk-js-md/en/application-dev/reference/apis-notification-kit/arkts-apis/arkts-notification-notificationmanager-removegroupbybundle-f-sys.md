@@ -26,7 +26,7 @@ Removes notifications under a notification group of the specified application. T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundle | BundleOption | Yes | Bundle information of the application. |
+| bundle | [BundleOption](arkts-notification-notificationmanager-bundleoption-t.md) | Yes | Bundle information of the application. |
 | groupName | string | Yes | Name of the notification group. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
@@ -82,7 +82,7 @@ Removes notifications under a notification group of the specified application. T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundle | BundleOption | Yes | Bundle information of the application. |
+| bundle | [BundleOption](arkts-notification-notificationmanager-bundleoption-t.md) | Yes | Bundle information of the application. |
 | groupName | string | Yes | Name of the notification group. |
 
 **Return value:**

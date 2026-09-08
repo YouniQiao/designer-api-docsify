@@ -31,7 +31,7 @@ Unsubscribe BLE scan result. On API 10 and above, the permission required by thi
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'BLEDeviceFind' | Yes | Type of the scan result event to listen for. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;ScanResult&gt;&gt; | No | Callback used to listen for the scan result event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[ScanResult](arkts-connectivity-ble-scanresult-i.md)&gt;&gt; | No | Callback used to listen for the scan result event. |
 
 **Error codes:**
 

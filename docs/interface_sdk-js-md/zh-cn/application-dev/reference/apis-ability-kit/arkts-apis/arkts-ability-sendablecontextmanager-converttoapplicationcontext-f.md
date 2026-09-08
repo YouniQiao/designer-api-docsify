@@ -26,13 +26,13 @@ function convertToApplicationContext(sendableContext: SendableContext): common.A
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| sendableContext | SendableContext | 是 |  |
+| sendableContext | [SendableContext](arkts-ability-sendablecontextmanager-sendablecontext-t.md) | 是 |  |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| common.ApplicationContext | [ApplicationContext]{ |
+| [common.ApplicationContext](arkts-ability-common-applicationcontext-t.md) | [ApplicationContext]{ |
 
 **错误码：**
 

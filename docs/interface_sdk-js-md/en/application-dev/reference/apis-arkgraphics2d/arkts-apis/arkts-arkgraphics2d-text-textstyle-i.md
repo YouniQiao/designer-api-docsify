@@ -84,7 +84,7 @@ color?: common2D.Color
 
 Text color. The default color is white.
 
-**Type:** common2D.Color
+**Type:** [common2D.Color](arkts-arkgraphics2d-common2d-color-i.md)
 
 **Since:** 12
 
@@ -132,7 +132,7 @@ ellipsisMode?: EllipsisMode
 
 Ellipsis type. The default value is **END**, indicating that the ellipsis is at the end of a line.
 
-**Type:** EllipsisMode
+**Type:** [EllipsisMode](arkts-arkgraphics2d-text-ellipsismode-e.md)
 
 **Since:** 12
 
@@ -148,7 +148,7 @@ fontEdging?: drawing.FontEdging
 
 Edge processing mode for drawing texts. The default value is **ANTI_ALIAS**.
 
-**Type:** drawing.FontEdging
+**Type:** [drawing.FontEdging](arkts-arkgraphics2d-drawing-fontedging-e.md)
 
 **Since:** 24
 
@@ -182,7 +182,7 @@ fontFeatures?: Array<FontFeature>
 
 Array of text font features. Pass this parameter when you need to enable or disable specific font features (such as ligatures, kerning adjustment, etc.).
 
-**Type:** Array&lt;FontFeature&gt;
+**Type:** Array&lt;[FontFeature](arkts-arkgraphics2d-text-fontfeature-i.md)&gt;
 
 **Since:** 12
 
@@ -214,7 +214,7 @@ fontStyle?: FontStyle
 
 Font style. The default value is **NORMAL**.
 
-**Type:** FontStyle
+**Type:** [FontStyle](arkts-arkgraphics2d-text-fontstyle-e.md)
 
 **Since:** 12
 
@@ -232,7 +232,7 @@ Array of specified typesetting font objects, used to prioritize the specified fo
 
 When fontTypefaces is set together with [TextStyle](arkts-arkgraphics2d-text-textstyle-i.md).fontFamilies, fontTypefaces takes precedence.
 
-**Type:** Array&lt;drawing.Typeface&gt;
+**Type:** Array&lt;[drawing.Typeface](arkts-arkgraphics2d-drawing-typeface-c.md)&gt;
 
 **Since:** 26.0.0
 
@@ -250,7 +250,7 @@ fontVariations?: Array<FontVariation>
 
 Array of variable font properties. Pass this parameter when you need to adjust the variable axis parameters of a variable font (such as the font weight axis, font width axis, etc.).
 
-**Type:** Array&lt;FontVariation&gt;
+**Type:** Array&lt;[FontVariation](arkts-arkgraphics2d-text-fontvariation-i.md)&gt;
 
 **Since:** 12
 
@@ -266,7 +266,7 @@ fontWeight?: FontWeight
 
 Font weight. The default value is W400. Before <!--RP1-->OpenHarmony 6.1<!--RP1End-->, only variable fonts in system fonts support font weight adjustment. Since <!--RP1-->OpenHarmony 6.1<!--RP1End-->, variable fonts in both system fonts and third-party registered fonts support font weight adjustment. For non-variable fonts, setting a font weight value less than semi-bold (W600) results in no change in font thickness, while setting a font weight value greater than or equal to semi-bold (W600) may trigger a pseudo-bold effect.
 
-**Type:** FontWeight
+**Type:** [FontWeight](arkts-arkgraphics2d-text-fontweight-e.md)
 
 **Since:** 12
 
@@ -394,7 +394,7 @@ lineHeightStyle?: LineHeightStyle
 
 Scaling base style of the line height. The default value is **FONT_SIZE**.
 
-**Type:** LineHeightStyle
+**Type:** [LineHeightStyle](arkts-arkgraphics2d-text-lineheightstyle-e.md)
 
 **Since:** 21
 

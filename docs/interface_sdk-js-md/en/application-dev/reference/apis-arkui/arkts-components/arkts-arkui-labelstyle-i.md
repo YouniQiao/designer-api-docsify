@@ -25,7 +25,7 @@ When the tab is a bottom tab, the default font is in 10.0 fp size, 'HarmonyOS Sa
 
 The default font size of the bottom tab page is 12.0 fp since API version 12.
 
-**Type:** Font
+**Type:** [Font](../arkts-apis/arkts-arkui-font-i.md)
 
 **Since:** 10
 
@@ -123,7 +123,7 @@ Value range: (0, +∞)
 overflow?: TextOverflow
 ```
 
-Display mode when the label text is too number. By default, an ellipsis (...) is used to represent text overflow.
+Display mode when the label text is too long. By default, an ellipsis (...) is used to represent text overflow.
 
 **Type:** [TextOverflow](../arkts-apis/arkts-arkui-textoverflow-e.md)
 

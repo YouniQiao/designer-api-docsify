@@ -46,7 +46,7 @@ predicates?: dataAbility.DataAbilityPredicates
 
 指示要设置的筛选条件。如果此参数为空，则操作所有数据记录。
 
-**类型：** dataAbility.DataAbilityPredicates
+**类型：** [dataAbility.DataAbilityPredicates](../../apis-arkdata/arkts-apis/arkts-arkdata-dataability-dataabilitypredicates-c.md)
 
 **起始版本：** 7
 
@@ -78,7 +78,7 @@ type: featureAbility.DataAbilityOperationType
 
 指示数据操作类型。
 
-**类型：** featureAbility.DataAbilityOperationType
+**类型：** [featureAbility.DataAbilityOperationType](arkts-ability-featureability-dataabilityoperationtype-e.md)
 
 **起始版本：** 7
 
@@ -110,7 +110,7 @@ valueBackReferences?: rdb.ValuesBucket
 
 指示数据值的反向引用，用于应用批处理中前一步操作生成的键值。
 
-**类型：** rdb.ValuesBucket
+**类型：** [rdb.ValuesBucket](../../apis-arkdata/arkts-apis/arkts-arkdata-rdb-valuesbucket-t.md)
 
 **起始版本：** 7
 
@@ -126,7 +126,7 @@ valuesBucket?: rdb.ValuesBucket
 
 指示要操作的数据值。
 
-**类型：** rdb.ValuesBucket
+**类型：** [rdb.ValuesBucket](../../apis-arkdata/arkts-apis/arkts-arkdata-rdb-valuesbucket-t.md)
 
 **起始版本：** 7
 

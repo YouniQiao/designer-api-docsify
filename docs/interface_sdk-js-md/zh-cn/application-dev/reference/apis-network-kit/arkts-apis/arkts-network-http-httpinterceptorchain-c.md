@@ -123,7 +123,7 @@ public apply(httpRequest: HttpRequest): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| httpRequest | HttpRequest | 是 | 要发起HTTP请求的[HttpRequest](arkts-network-http-httprequest-i.md)。 |
+| httpRequest | [HttpRequest](arkts-network-http-httprequest-i.md) | 是 | 要发起HTTP请求的[HttpRequest](arkts-network-http-httprequest-i.md)。 |
 
 **返回值：**
 
@@ -257,12 +257,4 @@ try {
 // 获取当前拦截器链中的所有拦截器
 let chain = interceptorChain.getChain();
 console.info(`Current interceptor chain has ${chain.length} interceptors`);
-```
-
-**示例**
-
-```TypeScript
-import { http } from '@kit.NetworkKit';
-
-let interceptorChain = new http.HttpInterceptorChain();
 ```

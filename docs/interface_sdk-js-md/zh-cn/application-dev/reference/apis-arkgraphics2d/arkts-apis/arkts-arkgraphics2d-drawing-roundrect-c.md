@@ -36,17 +36,7 @@ constructor(roundRect: RoundRect)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| roundRect | RoundRect | 是 | 用于拷贝的圆角矩形。 |
-
-**示例**
-
-```TypeScript
-import { common2D, drawing } from '@kit.ArkGraphics2D';
-
-let rect: common2D.Rect = {left: 100, top: 100, right: 500, bottom: 300};
-let roundRect = new drawing.RoundRect(rect, 50, 50);
-let roundRect2 = new drawing.RoundRect(roundRect);
-```
+| roundRect | [RoundRect](arkts-arkgraphics2d-drawing-roundrect-c.md) | 是 | 用于拷贝的圆角矩形。 |
 
 ## constructor
 
@@ -64,7 +54,7 @@ constructor(rect: common2D.Rect, xRadii: number, yRadii: number)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| rect | common2D.Rect | 是 | 需要创建的圆角矩形区域。 |
+| rect | [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) | 是 | 需要创建的圆角矩形区域。 |
 | xRadii | number | 是 | x轴方向的圆角半径，该参数为浮点数，取值大于0时圆角生效，小于等于0时圆角不生效。单位为物理像素px。 |
 | yRadii | number | 是 | y轴方向的圆角半径，该参数为浮点数，取值大于0时圆角生效，小于等于0时圆角不生效。单位为物理像素px。 |
 
@@ -73,15 +63,6 @@ constructor(rect: common2D.Rect, xRadii: number, yRadii: number)
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
-
-**示例**
-
-```TypeScript
-import { common2D, drawing } from '@kit.ArkGraphics2D';
-
-let rect: common2D.Rect = {left: 100, top: 100, right: 500, bottom: 300};
-let roundRect = new drawing.RoundRect(rect, 50, 50);
-```
 
 ## getCorner
 
@@ -105,24 +86,13 @@ getCorner(pos: CornerPos): common2D.Point
 
 | 类型 | 说明 |
 | --- | --- |
-| common2D.Point | 返回一个点，其横坐标表示圆角x轴方向上的半径，纵坐标表示y轴方向上的半径。 |
+| [common2D.Point](arkts-arkgraphics2d-common2d-point-i.md) | 返回一个点，其横坐标表示圆角x轴方向上的半径，纵坐标表示y轴方向上的半径。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
-
-**示例**
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-let roundRect: drawing.RoundRect = new drawing.RoundRect({left: 0, top: 0, right: 300, bottom: 300}, 50, 50);
-let cornerRadius = roundRect.getCorner(drawing.CornerPos.BOTTOM_LEFT_POS);
-console.info("getCorner---" + cornerRadius.x);
-console.info("getCorner---" + cornerRadius.y);
-```
 
 ## offset
 
@@ -149,41 +119,6 @@ offset(dx: number, dy: number): void
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
 
-**示例**
-
-```TypeScript
-import { RenderNode } from '@kit.ArkUI';
-import { drawing } from '@kit.ArkGraphics2D';
-
-class DrawingRenderNode extends RenderNode {
-  draw(context: DrawContext) {
-    const canvas = context.canvas;
-    const pen = new drawing.Pen();
-    pen.setColor({
-      alpha: 255,
-      red: 255,
-      green: 0,
-      blue: 0
-    });
-    pen.setStrokeWidth(10);
-    canvas.attachPen(pen);
-    let region = new drawing.Region();
-    region.setRect(100, 100, 400, 400);
-    region.offset(10, 20);
-    canvas.drawPoint(200, 200);
-    canvas.drawRegion(region);
-    canvas.detachPen();
-  }
-}
-```
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-let roundRect: drawing.RoundRect = new drawing.RoundRect({left: 0, top: 0, right: 300, bottom: 300}, 50, 50);
-roundRect.offset(100, 100);
-```
-
 ## setCorner
 
 ```TypeScript
@@ -209,12 +144,3 @@ setCorner(pos: CornerPos, x: number, y: number): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
-
-**示例**
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-let roundRect: drawing.RoundRect = new drawing.RoundRect({left: 0, top: 0, right: 300, bottom: 300}, 50, 50);
-roundRect.setCorner(drawing.CornerPos.TOP_LEFT_POS, 150, 150);
-```

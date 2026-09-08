@@ -34,7 +34,7 @@ Obtains analysis data. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| analysisType | photoAccessHelper.AnalysisType | Yes | Smart analysis type. |
+| analysisType | [photoAccessHelper.AnalysisType](arkts-medialibrary-photoaccesshelper-analysistype-e-sys.md) | Yes | Smart analysis type. |
 
 **Return value:**
 

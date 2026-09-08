@@ -37,6 +37,8 @@ Opens a serial port device.
 **Examples**
 
 > NOTE
+> 
+> The following sample code shows the basic process for calling the open API and it needs to be executed in a specific method. In actual calling, you must comply with the device-related protocols.
 
 ```TypeScript
 import { JSON } from '@kit.ArkTS';

@@ -2,7 +2,7 @@
 
 Enumerates the geometry types.
 
-@enum { number }
+@enum { int }
 
 **Since:** 18
 

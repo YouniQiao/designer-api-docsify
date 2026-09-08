@@ -36,7 +36,7 @@ direction?: Direction
 
 Indicates the attribute of the current popup direction.
 
-**Type:** Direction
+**Type:** [Direction](arkts-arkui-direction-e.md)
 
 **Since:** 26.0.0
 
@@ -148,7 +148,7 @@ showClose?: boolean | Resource
 
 The show close of Popup.
 
-**Type:** boolean \| Resource
+**Type:** boolean \| [Resource](arkts-arkui-resource-t.md)
 
 **Since:** 26.0.0
 

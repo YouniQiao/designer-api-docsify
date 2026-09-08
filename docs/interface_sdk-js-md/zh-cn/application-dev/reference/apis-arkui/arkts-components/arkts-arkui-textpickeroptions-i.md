@@ -29,7 +29,7 @@ columnWidths?: LengthMetrics[]
 > 4. 当columnWidths数组长度与实际列数不匹配时，超出列数的列宽值将被忽略；未指定列宽的列将均分组件剩余可用宽度
 > （组件宽度减去已指定列宽之和）。
 
-**类型：** LengthMetrics[]
+**类型：** [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md)[]
 
 **默认值：** Each column has equal width, calculated by dividing the total component width by the number of columns.
 
@@ -57,7 +57,7 @@ range: string[] | string[][] | Resource | TextPickerRangeContent[] | TextCascade
 > 4. Resource类型只支持[strarray.json](../../../quick-start/resource-categories-and-access.md#资源组目录)。
 > 5. range的类型及列数不可以动态修改。
 
-**类型：** string[] \| string[][] \| Resource \| [TextPickerRangeContent](arkts-arkui-textpickerrangecontent-i.md)[] \| [TextCascadePickerRangeContent](arkts-arkui-textcascadepickerrangecontent-i.md)[]
+**类型：** string[] \| string[][] \| [Resource](../arkts-apis/arkts-arkui-resource-t.md) \| [TextPickerRangeContent](arkts-arkui-textpickerrangecontent-i.md)[] \| [TextCascadePickerRangeContent](arkts-arkui-textcascadepickerrangecontent-i.md)[]
 
 **起始版本：** 8
 

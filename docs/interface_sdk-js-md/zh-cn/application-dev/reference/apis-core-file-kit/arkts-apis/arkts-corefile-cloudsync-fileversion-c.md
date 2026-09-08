@@ -94,23 +94,7 @@ A constructor used to create a FileVersion object.
 **示例**
 
 ```TypeScript
-let fileSync = new cloudSync.FileSync()
-```
-
-```TypeScript
-let fileCache = new cloudSync.CloudFileCache();
-```
-
-```TypeScript
 let fileVersion = new cloudSync.FileVersion();
-```
-
-```TypeScript
-let gallerySync = new cloudSync.GallerySync()
-```
-
-```TypeScript
-let download = new cloudSync.Download()
 ```
 
 ## downloadHistoryVersion

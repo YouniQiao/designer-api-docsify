@@ -35,27 +35,6 @@ Called by a system dialog box to obtain shared data, which is set by the target 
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 
-**Examples**
-
-```TypeScript
-import { abilityManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  abilityManager.acquireShareData(1, (err: BusinessError, wantParam: Record<string, Object>) => {
-    if (err) {
-      console.error(`acquireShareData fail, err: ${JSON.stringify(err)}`);
-    } else {
-      console.info(`acquireShareData success, data: ${JSON.stringify(wantParam)}`);
-    }
-  });
-} catch (paramError) {
-  let code: number = (paramError as BusinessError).code;
-  let message: string = (paramError as BusinessError).message;
-  console.error(`error.code: ${code}, error.message: ${message}`);
-}
-```
-
 
 ## acquireShareData
 
@@ -91,22 +70,3 @@ Called by a system dialog box to obtain shared data, which is set by the target 
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. Interface caller is not a system app. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
-
-**Examples**
-
-```TypeScript
-import { abilityManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  abilityManager.acquireShareData(1).then((wantParam: Record<string, Object>) => {
-    console.info(`acquireShareData success, data: ${JSON.stringify(wantParam)}`);
-  }).catch((err: BusinessError) => {
-    console.error(`acquireShareData fail, err: ${JSON.stringify(err)}`);
-  });
-} catch (paramError) {
-  let code: number = (paramError as BusinessError).code;
-  let message: string = (paramError as BusinessError).message;
-  console.error(`error.code: ${code}, error.message: ${message}`);
-}
-```

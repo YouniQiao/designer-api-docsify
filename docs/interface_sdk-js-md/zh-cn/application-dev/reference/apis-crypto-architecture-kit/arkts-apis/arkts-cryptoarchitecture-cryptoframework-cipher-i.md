@@ -43,8 +43,8 @@ doFinal(data: DataBlob, callback: AsyncCallback<DataBlob>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| data | DataBlob | 是 | 表示最终要加密或解密的数据。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DataBlob&gt; | 是 | 回调函数。当加/解密成功时，err为undefined，data为加/解密结果DataBlob；否则为错误对象。 |
+| data | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | 是 | 表示最终要加密或解密的数据。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md)&gt; | 是 | 回调函数。当加/解密成功时，err为undefined，data为加/解密结果DataBlob；否则为错误对象。 |
 
 **错误码：**
 
@@ -54,7 +54,7 @@ doFinal(data: DataBlob, callback: AsyncCallback<DataBlob>): void
 | [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | Memory operation failed. |
 | [17620002](../errorcode-crypto-framework.md#17620002-获取native对象失败或参数转换失败) | Failed to obtain the native object or convert parameters. |
 | [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | Crypto operation error. |
-| [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) | Parameter check failed. Possible causes:  1. The data is too number.<br>**适用版本：** 22+ |
+| [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) | Parameter check failed. Possible causes:  1. The data is too long.<br>**适用版本：** 22+ |
 
 **示例**
 
@@ -153,48 +153,6 @@ async function cipherByPromise() {
 }
 ```
 
-此外，更多HMAC的完整示例可参考开发指导中[消息认证码计算](../../../security/CryptoArchitectureKit/crypto-compute-hmac.md#分段hmac)。
-
-```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
-import { buffer } from '@kit.ArkTS';
-
-function hmacByCallback() {
-  let mac = cryptoFramework.createMac('SHA256');
-  let keyBlob: cryptoFramework.DataBlob = { data: new Uint8Array(buffer.from('12345678abcdefgh', 'utf-8').buffer) };
-  let symKeyGenerator = cryptoFramework.createSymKeyGenerator('AES128');
-  symKeyGenerator.convertKey(keyBlob, (err, symKey) => {
-    mac.init(symKey, (err) => {
-      mac.update({ data: new Uint8Array(buffer.from('hmacTestMessage', 'utf-8').buffer) }, (err) => {
-        mac.doFinal((err, output) => {
-          console.info('[Callback]: HMAC result: ' + output.data);
-          console.info('[Callback]: MAC len: ' + mac.getMacLength());
-        });
-      });
-    });
-  });
-}
-```
-
-此外，更多HMAC的完整示例可参考开发指导[消息认证码计算](../../../security/CryptoArchitectureKit/crypto-compute-hmac.md#分段hmac)。
-
-```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
-import { buffer } from '@kit.ArkTS';
-
-async function hmacByPromise() {
-  let mac = cryptoFramework.createMac('SHA256');
-  let keyBlob: cryptoFramework.DataBlob = { data: new Uint8Array(buffer.from('12345678abcdefgh', 'utf-8').buffer) };
-  let symKeyGenerator = cryptoFramework.createSymKeyGenerator('AES128');
-  let symKey = await symKeyGenerator.convertKey(keyBlob);
-  await mac.init(symKey);
-  await mac.update({ data: new Uint8Array(buffer.from('hmacTestMessage', 'utf-8').buffer) });
-  let macOutput = await mac.doFinal();
-  console.info('[Promise]: HMAC result: ' + macOutput.data);
-  console.info('[Promise]: MAC len: ' + mac.getMacLength());
-}
-```
-
 ## doFinal
 
 ```TypeScript
@@ -236,8 +194,8 @@ authTag为末尾的16字节；CCM模式下，authTag为末尾的12字节。其�
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| data | DataBlob \| null | 是 | 要加密或解密的数据。在对称加解密中，这个参数可以是**null**，但是**{data: Uint8Array()}**不能传入。在API版本10之前，仅支持**DataBlob**。从API版本10开始，还支持**null**。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DataBlob&gt; | 是 | 回调函数。当加/解密成功时，err为undefined，data为加/解密结果DataBlob；否则为错误对象。 |
+| data | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) \| null | 是 | 要加密或解密的数据。在对称加解密中，这个参数可以是**null**，但是**{data: Uint8Array()}**不能传入。在API版本10之前，仅支持**DataBlob**。从API版本10开始，还支持**null**。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md)&gt; | 是 | 回调函数。当加/解密成功时，err为undefined，data为加/解密结果DataBlob；否则为错误对象。 |
 
 **错误码：**
 
@@ -247,7 +205,7 @@ authTag为末尾的16字节；CCM模式下，authTag为末尾的12字节。其�
 | [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | Memory operation failed. |
 | [17620002](../errorcode-crypto-framework.md#17620002-获取native对象失败或参数转换失败) | Failed to obtain the native object or convert parameters. |
 | [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | Crypto operation error. |
-| [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) | Parameter check failed. Possible causes:  1. The data is too number.<br>**适用版本：** 22+ |
+| [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) | Parameter check failed. Possible causes:  1. The data is too long.<br>**适用版本：** 22+ |
 
 **示例**
 
@@ -321,13 +279,13 @@ doFinal(data: DataBlob): Promise<DataBlob>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| data | DataBlob | 是 | 表示最终要加密或解密的数据。 |
+| data | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | 是 | 表示最终要加密或解密的数据。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;DataBlob&gt; | Promise对象，返回加密或解密的数据。 |
+| Promise&lt;[DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md)&gt; | Promise对象，返回加密或解密的数据。 |
 
 **错误码：**
 
@@ -337,11 +295,104 @@ doFinal(data: DataBlob): Promise<DataBlob>
 | [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | Memory operation failed. |
 | [17620002](../errorcode-crypto-framework.md#17620002-获取native对象失败或参数转换失败) | Failed to obtain the native object or convert parameters. |
 | [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | Crypto operation error. |
-| [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) | Parameter check failed. Possible causes:  1. The data is too number.<br>**适用版本：** 22+ |
+| [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) | Parameter check failed. Possible causes:  1. The data is too long.<br>**适用版本：** 22+ |
 
 **示例**
 
-参见 [doFinal](#dofinal)
+更多加解密流程的完整示例请参考[加解密开发指导](../../../security/CryptoArchitectureKit/crypto-aes-sym-encrypt-decrypt.md#使用aes对称密钥gcm模式加解密)。
+
+```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { buffer } from '@kit.ArkTS';
+
+function generateRandom(len: number) {
+  let rand = cryptoFramework.createRandom();
+  let generateRandSync = rand.generateRandomSync(len);
+  return generateRandSync;
+}
+
+function genGcmParamsSpec() {
+  let ivBlob = generateRandom(12);
+  let arr = [1, 2, 3, 4, 5, 6, 7, 8];
+  let dataAad = new Uint8Array(arr);
+  let aadBlob: cryptoFramework.DataBlob = { data: dataAad };
+  arr = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+  let dataTag = new Uint8Array(arr);
+  let tagBlob: cryptoFramework.DataBlob = {
+    data: dataTag
+  };
+  let gcmParamsSpec: cryptoFramework.GcmParamsSpec = {
+    iv: ivBlob,
+    aad: aadBlob,
+    authTag: tagBlob,
+    algName: 'GcmParamsSpec'
+  };
+  return gcmParamsSpec;
+}
+
+function cipherByCallback() {
+  let gcmParams = genGcmParamsSpec();
+  let symKeyGenerator = cryptoFramework.createSymKeyGenerator('AES128');
+  let cipher = cryptoFramework.createCipher('AES128|GCM|PKCS7');
+  symKeyGenerator.generateSymKey((err, symKey) => {
+    cipher.init(cryptoFramework.CryptoMode.ENCRYPT_MODE, symKey, gcmParams, (err) => {
+      let message = 'This is a test';
+      let plainText: cryptoFramework.DataBlob = { data: new Uint8Array(buffer.from(message, 'utf-8').buffer) };
+      cipher.update(plainText, (err, encryptUpdate) => {
+        cipher.doFinal(null, (err, tag) => {
+          gcmParams.authTag = tag;
+          console.info('encryptUpdate plainText: ' + encryptUpdate.data);
+        });
+      });
+    });
+  });
+}
+```
+
+此外，更多加解密流程的完整示例可参考[加解密开发指导](../../../security/CryptoArchitectureKit/crypto-aes-sym-encrypt-decrypt.md#使用aes对称密钥gcm模式加解密)。
+
+```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { buffer } from '@kit.ArkTS';
+
+function generateRandom(len: number) {
+  let rand = cryptoFramework.createRandom();
+  let generateRandSync = rand.generateRandomSync(len);
+  return generateRandSync;
+}
+
+function genGcmParamsSpec() {
+  let ivBlob = generateRandom(12);
+  let arr = [1, 2, 3, 4, 5, 6, 7, 8];
+  let dataAad = new Uint8Array(arr);
+  let aadBlob: cryptoFramework.DataBlob = { data: dataAad };
+  arr = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+  let dataTag = new Uint8Array(arr);
+  let tagBlob: cryptoFramework.DataBlob = {
+    data: dataTag
+  };
+  let gcmParamsSpec: cryptoFramework.GcmParamsSpec = {
+    iv: ivBlob,
+    aad: aadBlob,
+    authTag: tagBlob,
+    algName: 'GcmParamsSpec'
+  };
+  return gcmParamsSpec;
+}
+
+async function cipherByPromise() {
+  let gcmParams = genGcmParamsSpec();
+  let symKeyGenerator = cryptoFramework.createSymKeyGenerator('AES128');
+  let cipher = cryptoFramework.createCipher('AES128|GCM|PKCS7');
+  let symKey = await symKeyGenerator.generateSymKey();
+  await cipher.init(cryptoFramework.CryptoMode.ENCRYPT_MODE, symKey, gcmParams);
+  let message = 'This is a test';
+  let plainText: cryptoFramework.DataBlob = { data: new Uint8Array(buffer.from(message, 'utf-8').buffer) };
+  let encryptUpdate = await cipher.update(plainText);
+  gcmParams.authTag = await cipher.doFinal(null);
+  console.info('encryptUpdate plainText: ' + encryptUpdate.data);
+}
+```
 
 ## doFinal
 
@@ -385,13 +436,13 @@ doFinal(data: DataBlob | null): Promise<DataBlob>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| data | DataBlob \| null | 是 | 要加密或解密的数据。可以为**null**，但不能为{data:Uint8Array(0)}。在API版本10之前的版本中，仅支持**DataBlob**。从API版本10开始，也支持**null**。 |
+| data | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) \| null | 是 | 要加密或解密的数据。可以为**null**，但不能为{data:Uint8Array(0)}。在API版本10之前的版本中，仅支持**DataBlob**。从API版本10开始，也支持**null**。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;DataBlob&gt; | Promise对象，返回剩余数据的加/解密结果DataBlob。 |
+| Promise&lt;[DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md)&gt; | Promise对象，返回剩余数据的加/解密结果DataBlob。 |
 
 **错误码：**
 
@@ -401,7 +452,7 @@ doFinal(data: DataBlob | null): Promise<DataBlob>
 | [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | Memory operation failed. |
 | [17620002](../errorcode-crypto-framework.md#17620002-获取native对象失败或参数转换失败) | Failed to obtain the native object or convert parameters. |
 | [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | Crypto operation error. |
-| [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) | Parameter check failed. Possible causes:  1. The data is too number.<br>**适用版本：** 22+ |
+| [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) | Parameter check failed. Possible causes:  1. The data is too long.<br>**适用版本：** 22+ |
 
 **示例**
 
@@ -480,13 +531,13 @@ doFinalSync(data: DataBlob | null): DataBlob
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| data | DataBlob \| null | 是 | 待加密或解密的数据。在对称加解密中可以为**null**， 但不能传入{data: Uint8Array(0)}。 |
+| data | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) \| null | 是 | 待加密或解密的数据。在对称加解密中可以为**null**， 但不能传入{data: Uint8Array(0)}。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| DataBlob | 加密或解密后的数据。 |
+| [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | 加密或解密后的数据。 |
 
 **错误码：**
 
@@ -496,7 +547,7 @@ doFinalSync(data: DataBlob | null): DataBlob
 | [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | Memory operation failed. |
 | [17620002](../errorcode-crypto-framework.md#17620002-获取native对象失败或参数转换失败) | Failed to obtain the native object or convert parameters. |
 | [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | Crypto operation error. |
-| [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) | Parameter check failed. Possible causes:  1. The data is too number.<br>**适用版本：** 22+ |
+| [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) | Parameter check failed. Possible causes:  1. The data is too long.<br>**适用版本：** 22+ |
 
 **示例**
 
@@ -618,7 +669,7 @@ init、update和doFinal必须配合使用，其中init和doFinal是必选的，u
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | opMode | [CryptoMode](arkts-cryptoarchitecture-cryptoframework-cryptomode-e.md) | 是 | 要执行的操作（加密或解密） |
-| key | Key | 是 | 用于加密或解密的密钥 |
+| key | [Key](arkts-cryptoarchitecture-cryptoframework-key-i.md) | 是 | 用于加密或解密的密钥 |
 | params | [ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md) | 是 | IV等算法参数 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当加解密初始化成功时，err为undefined；否则为错误对象。 |
 
@@ -655,7 +706,7 @@ init、update、doFinal为三段式接口，需要成组使用。其中init和do
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | opMode | [CryptoMode](arkts-cryptoarchitecture-cryptoframework-cryptomode-e.md) | 是 | 加密或者解密模式。 |
-| key | Key | 是 | 指定加密或解密的密钥。 |
+| key | [Key](arkts-cryptoarchitecture-cryptoframework-key-i.md) | 是 | 指定加密或解密的密钥。 |
 | params | [ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md) \| null | 是 | 指定加密或解密的参数，对于ECB等没有参数的算法模式，请传入null。API 10之前只支持ParamsSpec， API 10之后增加支持null。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当加解密初始化成功，err为undefined，否则为错误对象。 |
 
@@ -692,7 +743,7 @@ init、update和doFinal必须配合使用，其中init和doFinal是必选的，u
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | opMode | [CryptoMode](arkts-cryptoarchitecture-cryptoframework-cryptomode-e.md) | 是 | 要执行的操作（加密或解密） |
-| key | Key | 是 | 用于加密或解密的密钥 |
+| key | [Key](arkts-cryptoarchitecture-cryptoframework-key-i.md) | 是 | 用于加密或解密的密钥 |
 | params | [ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md) | 是 | IV等算法参数 |
 
 **返回值：**
@@ -734,7 +785,7 @@ init、update、doFinal为三段式接口，需要成组使用。其中init和do
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | opMode | [CryptoMode](arkts-cryptoarchitecture-cryptoframework-cryptomode-e.md) | 是 | 加密或者解密模式。 |
-| key | Key | 是 | 指定加密或解密的密钥。 |
+| key | [Key](arkts-cryptoarchitecture-cryptoframework-key-i.md) | 是 | 指定加密或解密的密钥。 |
 | params | [ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md) \| null | 是 | 指定加密或解密的参数，对于ECB等没有参数的算法模式，请传入null。API 10之前仅支持ParamsSpec，从API 10开始增加对null的支持。 |
 
 **返回值：**
@@ -776,7 +827,7 @@ initSync、updateSync、doFinalSync为三段式接口，需要成组使用。其
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | opMode | [CryptoMode](arkts-cryptoarchitecture-cryptoframework-cryptomode-e.md) | 是 | 加密或者解密模式。 |
-| key | Key | 是 | 指定加密或解密的密钥。 |
+| key | [Key](arkts-cryptoarchitecture-cryptoframework-key-i.md) | 是 | 指定加密或解密的密钥。 |
 | params | [ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md) \| null | 是 | 指定加密或解密的参数，对于ECB等没有参数的算法模式，请传入null。 |
 
 **错误码：**
@@ -882,8 +933,8 @@ update(data: DataBlob, callback: AsyncCallback<DataBlob>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| data | DataBlob | 是 | 需要进行加密或解密的数据。data不能为null。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DataBlob&gt; | 是 | 回调函数。当更新加/解密数据成功时，err为undefined，data为加密或解密结果DataBlob；否则为错误对象。 |
+| data | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | 是 | 需要进行加密或解密的数据。data不能为null。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md)&gt; | 是 | 回调函数。当更新加/解密数据成功时，err为undefined，data为加密或解密结果DataBlob；否则为错误对象。 |
 
 **错误码：**
 
@@ -893,7 +944,7 @@ update(data: DataBlob, callback: AsyncCallback<DataBlob>): void
 | [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | Memory operation failed. |
 | [17620002](../errorcode-crypto-framework.md#17620002-获取native对象失败或参数转换失败) | Failed to obtain the native object or convert parameters. |
 | [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | Crypto operation error. |
-| [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) | Parameter check failed. Possible causes:  1. The data is too number.<br>**适用版本：** 22+ |
+| [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) | Parameter check failed. Possible causes:  1. The data is too long.<br>**适用版本：** 22+ |
 
 ## update
 
@@ -943,13 +994,13 @@ update(data: DataBlob): Promise<DataBlob>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| data | DataBlob | 是 | 加密或者解密的数据。data不能为null。 |
+| data | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | 是 | 加密或者解密的数据。data不能为null。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;DataBlob&gt; | Promise对象，返回此次更新的加密或解密结果。 |
+| Promise&lt;[DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md)&gt; | Promise对象，返回此次更新的加密或解密结果。 |
 
 **错误码：**
 
@@ -959,7 +1010,7 @@ update(data: DataBlob): Promise<DataBlob>
 | [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | Memory operation failed. |
 | [17620002](../errorcode-crypto-framework.md#17620002-获取native对象失败或参数转换失败) | Failed to obtain the native object or convert parameters. |
 | [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | Crypto operation error. |
-| [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) | Parameter check failed. Possible causes:  1. The data is too number.<br>**适用版本：** 22+ |
+| [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) | Parameter check failed. Possible causes:  1. The data is too long.<br>**适用版本：** 22+ |
 
 ## updateSync
 
@@ -985,13 +1036,13 @@ updateSync(data: DataBlob): DataBlob
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| data | DataBlob | 是 | 加密或者解密的数据。data不能为null。 |
+| data | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | 是 | 加密或者解密的数据。data不能为null。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| DataBlob | 返回此次更新的加/解密结果DataBlob。 |
+| [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | 返回此次更新的加/解密结果DataBlob。 |
 
 **错误码：**
 
@@ -1001,7 +1052,7 @@ updateSync(data: DataBlob): DataBlob
 | [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | Memory operation failed. |
 | [17620002](../errorcode-crypto-framework.md#17620002-获取native对象失败或参数转换失败) | Failed to obtain the native object or convert parameters. |
 | [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | Crypto operation error. |
-| [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) | Parameter check failed. Possible causes:  1. The data is too number.<br>**适用版本：** 22+ |
+| [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) | Parameter check failed. Possible causes:  1. The data is too long.<br>**适用版本：** 22+ |
 
 ## algName
 

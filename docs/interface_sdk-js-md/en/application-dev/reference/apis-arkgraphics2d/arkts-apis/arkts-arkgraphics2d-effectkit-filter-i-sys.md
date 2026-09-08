@@ -42,7 +42,7 @@ Adds the elliptical gradient blur effect to the filter linked list, and returns 
 
 | Type | Description |
 | --- | --- |
-| Filter | Final image effect. |
+| [Filter](arkts-arkgraphics2d-effectkit-filter-i.md) | Final image effect. |
 
 **Error codes:**
 

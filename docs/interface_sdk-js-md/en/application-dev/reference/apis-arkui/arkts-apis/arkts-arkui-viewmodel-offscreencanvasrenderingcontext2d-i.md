@@ -419,7 +419,7 @@ Draw an Image object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| image | image.PixelMap | Yes | An element drawn to the context. |
+| image | [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | Yes | An element drawn to the context. |
 | dx | number | Yes | The top left corner of the image is the X-axis coordinates on the target canvas. |
 | dy | number | Yes | The top left corner of the image is the Y-axis coordinates on the target canvas. |
 | dw | number | Yes | Image The width drawn on the target canvas. |
@@ -453,7 +453,7 @@ Draw an Image object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| image | image.PixelMap | Yes | An element drawn to the context. |
+| image | [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | Yes | An element drawn to the context. |
 | sx | number | Yes | The upper-left X-axis coordinates of the image's rectangular (clipped) selection box that need to be drawn into the target context. |
 | sy | number | Yes | The upper-left Y-axis coordinates of the image's rectangular (clipped) selection box that need to be drawn into the target context. |
 | sw | number | Yes | The width of the image's rectangular (clipped) selection box that needs to be drawn into the target context. |
@@ -614,7 +614,7 @@ Get an PixelMap object.
 
 | Type | Description |
 | --- | --- |
-| image.PixelMap | PixelMap A PixelMap object that contains the rectangular ImageData given by the canvas. |
+| [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | PixelMap A PixelMap object that contains the rectangular ImageData given by the canvas. |
 
 ## isPointInPath
 

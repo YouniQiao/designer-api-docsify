@@ -44,24 +44,6 @@ false：没有被激活。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Manager
 
-**示例**
-
-```TypeScript
-avcontroller.isActive().then((isActive: boolean) => {
-  console.info(`Succeeded in checking active state: ${isActive}`);
-});
-```
-
-```TypeScript
-avcontroller.isActive((err: BusinessError, isActive: boolean) => {
-  if (err) {
-    console.error(`Failed to check active state, code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in checking active state: ${isActive}`);
-});
-```
-
 ## isTopSession
 
 ```TypeScript

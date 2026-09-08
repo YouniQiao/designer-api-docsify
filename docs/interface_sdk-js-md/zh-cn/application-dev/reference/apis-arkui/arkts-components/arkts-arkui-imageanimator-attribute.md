@@ -57,7 +57,7 @@ fillMode(value: FillMode)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [FillMode](../arkts-apis/arkts-arkui-fillmode-e.md) | 是 | 当前播放方向下，动画开始前和结束后的状态。默认值：FillMode.Forwards |
+| value | [FillMode](../arkts-apis/arkts-arkui-fillmode-e.md) | 是 | [当前播放方向下，动画开始前和结束后的状态。默认值：FillMode.Forwards](../arkts-apis/arkts-arkui-fillmode-e.md) |
 
 ## fixedSize
 
@@ -319,4 +319,4 @@ state(value: AnimationStatus)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [AnimationStatus](../arkts-apis/arkts-arkui-animationstatus-e.md) | 是 | 用于控制播放状态。默认值：AnimationStatus.Initial |
+| value | [AnimationStatus](../arkts-apis/arkts-arkui-animationstatus-e.md) | 是 | [用于控制播放状态。默认值：AnimationStatus.Initial](../arkts-apis/arkts-arkui-animationstatus-e.md) |

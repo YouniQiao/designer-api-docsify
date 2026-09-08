@@ -514,7 +514,7 @@ Obtains the type of this MIFARE Classic tag.
 
 | Type | Description |
 | --- | --- |
-| tag.MifareClassicType | Type of the MIFARE Classic tag obtained. |
+| [tag.MifareClassicType](arkts-connectivity-tag-mifareclassictype-e.md) | Type of the MIFARE Classic tag obtained. |
 
 **Examples**
 
@@ -524,14 +524,6 @@ import { tag } from '@kit.ConnectivityKit';
 // Obtain the correct MIFARE Classic tag by using the tag.TagInfo API in @ohos.nfc.tag.
 let getType : tag.MifareClassicType = mifareClassic.getType();
 console.info("mifareClassic getType: " + getType);
-```
-
-```TypeScript
-import { tag } from '@kit.ConnectivityKit';
-
-// Obtain the correct MIFARE Ultralight tag by using the tag.TagInfo API in @ohos.nfc.tag.
-let getType : tag.MifareUltralightType = mifareUltralight.getType();
-console.info("mifareUltralight getType: " + getType);
 ```
 
 ## incrementBlock

@@ -31,7 +31,7 @@ function getMultiLinkedInfo(): Array<WifiLinkedInfo>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;WifiLinkedInfo&gt; | Wi-Fi连接信息。 |
+| Array&lt;[WifiLinkedInfo](arkts-connectivity-wifimanager-wifilinkedinfo-i.md)&gt; | Wi-Fi连接信息。 |
 
 **错误码：**
 

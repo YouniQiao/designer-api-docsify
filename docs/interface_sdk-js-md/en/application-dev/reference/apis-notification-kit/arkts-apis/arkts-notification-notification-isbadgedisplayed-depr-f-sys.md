@@ -32,24 +32,6 @@ Checks whether the notification badge is enabled for a specified application. Th
 | bundle | BundleOption | Yes | Bundle information of the application. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. |
 
-**Examples**
-
-```TypeScript
-import Base from '@ohos.base';
-
-let isBadgeDisplayedCallback = (err: Base.BusinessError, data: boolean) => {
-  if (err) {
-    console.error("isBadgeDisplayed failed " + JSON.stringify(err));
-  } else {
-    console.info("isBadgeDisplayed success");
-  }
-}
-let bundle: Notification.BundleOption = {
-  bundle: "bundleName1",
-};
-Notification.isBadgeDisplayed(bundle, isBadgeDisplayedCallback);
-```
-
 
 ## isBadgeDisplayed
 
@@ -82,18 +64,3 @@ Checks whether the notification badge is enabled for a specified application. Th
 | Type | Description |
 | --- | --- |
 | Promise&lt;boolean&gt; | Promise used to return the result. |
-
-**Examples**
-
-```TypeScript
-import Base from '@ohos.base';
-
-let bundle: Notification.BundleOption = {
-  bundle: "bundleName1",
-};
-Notification.isBadgeDisplayed(bundle).then((data) => {
-  console.info("isBadgeDisplayed success, data: " + JSON.stringify(data));
-}).catch((err: Base.BusinessError) => {
-  console.error(`isBadgeDisplayed failed, code is ${err}`);
-});
-```

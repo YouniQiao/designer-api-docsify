@@ -29,8 +29,8 @@ Subscribe location changed
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'locationChange' | Yes | Indicates the location service event to be subscribed to. |
-| request | LocationRequest | Yes | Indicates the location request parameters. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Location&gt; | Yes | Indicates the callback for reporting the location result. |
+| request | [LocationRequest](arkts-location-geolocation-locationrequest-i.md) | Yes | Indicates the location request parameters. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Location](arkts-location-geolocation-location-i.md)&gt; | Yes | Indicates the callback for reporting the location result. |
 
 **Examples**
 
@@ -103,8 +103,8 @@ Subscribe to cache GNSS locations update messages
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'cachedGnssLocationsReporting' | Yes | Indicates the location service event to be subscribed to. |
-| request | CachedGnssLocationsRequest | Yes | Indicates the cached GNSS locations request parameters. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;Location&gt;&gt; | Yes | Indicates the callback for reporting the cached GNSS locations. |
+| request | [CachedGnssLocationsRequest](arkts-location-geolocation-cachedgnsslocationsrequest-i.md) | Yes | Indicates the cached GNSS locations request parameters. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[Location](arkts-location-geolocation-location-i.md)&gt;&gt; | Yes | Indicates the callback for reporting the cached GNSS locations. |
 
 **Examples**
 
@@ -141,7 +141,7 @@ Subscribe gnss status changed
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'gnssStatusChange' | Yes | Indicates the location service event to be subscribed to. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;SatelliteStatusInfo&gt; | Yes | Indicates the callback for reporting the gnss status change. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SatelliteStatusInfo](arkts-location-geolocation-satellitestatusinfo-i.md)&gt; | Yes | Indicates the callback for reporting the gnss status change. |
 
 **Examples**
 
@@ -213,7 +213,7 @@ Add a geofence and subscribe geo fence status changed
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'fenceStatusChange' | Yes | Indicates the location service event to be subscribed to. |
-| request | GeofenceRequest | Yes | Indicates the Geo-fence configuration parameters. |
+| request | [GeofenceRequest](arkts-location-geolocation-geofencerequest-i.md) | Yes | Indicates the Geo-fence configuration parameters. |
 | want | [WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-depr-t.md) | Yes | Indicates which ability to start when the geofence event is triggered. |
 
 **Examples**

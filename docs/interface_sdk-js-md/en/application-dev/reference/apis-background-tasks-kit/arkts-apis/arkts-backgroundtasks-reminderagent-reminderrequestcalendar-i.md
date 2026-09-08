@@ -26,7 +26,7 @@ dateTime: LocalDateTime
 
 Reminder time.
 
-**Type:** LocalDateTime
+**Type:** [LocalDateTime](arkts-backgroundtasks-reminderagent-localdatetime-i.md)
 
 **Since:** 7
 

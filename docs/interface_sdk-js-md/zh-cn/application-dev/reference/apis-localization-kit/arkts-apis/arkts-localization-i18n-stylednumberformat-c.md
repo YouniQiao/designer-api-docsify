@@ -30,7 +30,7 @@ constructor(numberFormat: Intl.NumberFormat | SimpleNumberFormat, options?: Styl
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| numberFormat | Intl.NumberFormat \| [SimpleNumberFormat](arkts-localization-i18n-simplenumberformat-c.md) | 是 | 用于格式化数字的对象。 |
+| numberFormat | [Intl.NumberFormat](arkts-localization-intl-numberformat-c.md) \| [SimpleNumberFormat](arkts-localization-i18n-simplenumberformat-c.md) | 是 | 用于格式化数字的对象。 |
 | options | [StyledNumberFormatOptions](arkts-localization-i18n-stylednumberformatoptions-i.md) | 否 |  |
 
 **示例**
@@ -91,7 +91,7 @@ constructor(numberFormat: intl.NumberFormat | SimpleNumberFormat, options?: Styl
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| numberFormat | intl.NumberFormat \| [SimpleNumberFormat](arkts-localization-i18n-simplenumberformat-c.md) | 是 | 用于格式化数字的对象。 |
+| numberFormat | [intl.NumberFormat](arkts-localization-intl-numberformat-c.md) \| [SimpleNumberFormat](arkts-localization-i18n-simplenumberformat-c.md) | 是 | 用于格式化数字的对象。 |
 | options | [StyledNumberFormatOptions](arkts-localization-i18n-stylednumberformatoptions-i.md) | 否 |  |
 
 **示例**

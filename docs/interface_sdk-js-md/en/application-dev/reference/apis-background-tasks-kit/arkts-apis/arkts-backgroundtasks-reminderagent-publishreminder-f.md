@@ -28,7 +28,7 @@ Publishes a reminder through the reminder agent. This API uses an asynchronous c
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| reminderReq | ReminderRequest | Yes | Reminder to be published. |
+| reminderReq | [ReminderRequest](arkts-backgroundtasks-reminderagent-reminderrequest-i.md) | Yes | Reminder to be published. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the published reminder's ID. |
 
 **Examples**
@@ -70,7 +70,7 @@ Publishes a reminder through the reminder agent. This API uses a promise to retu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| reminderReq | ReminderRequest | Yes | Indicates the reminder instance to publish. |
+| reminderReq | [ReminderRequest](arkts-backgroundtasks-reminderagent-reminderrequest-i.md) | Yes | Indicates the reminder instance to publish. |
 
 **Return value:**
 

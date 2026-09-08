@@ -52,7 +52,7 @@ mutedMediaType?: MediaType
 
 mute the specified media stream when playing.
 
-**Type:** MediaType
+**Type:** [MediaType](arkts-media-media-mediatype-e.md)
 
 **Since:** 12
 

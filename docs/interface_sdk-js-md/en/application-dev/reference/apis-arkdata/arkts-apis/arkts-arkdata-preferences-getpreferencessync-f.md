@@ -25,13 +25,13 @@ Obtains a **Preferences** instance. This API returns the result synchronously.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | context | Context | Yes | Application context.For details about the application context of the FA model, see Context.For details about the application context of the stage model, see [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md). |
-| options | Options | Yes | Configuration options of the **Preferences** instance. |
+| options | [Options](arkts-arkdata-preferences-options-i.md) | Yes | Configuration options of the **Preferences** instance. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Preferences | Preferences** instance obtained. |
+| [Preferences](arkts-arkdata-preferences-preferences-i.md) | Preferences** instance obtained. |
 
 **Error codes:**
 

@@ -33,21 +33,6 @@ function getOneCfgFile(relPath: string, callback: AsyncCallback<string>): void
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:  1.Mandatory parameters are left unspecified;  2.Incorrect parameter types. |
 
-**示例**
-
-```TypeScript
-import { configPolicy, BusinessError } from '@kit.BasicServicesKit';
-
-let relpath: string = 'etc/config.xml';
-configPolicy.getOneCfgFile(relpath, (err: BusinessError, data: string) => {
-  if (err == null) {
-    console.info('data is ' + data);
-  } else {
-    console.error('err: ' + err.code + ', ' + err.message);
-  }
-});
-```
-
 
 ## getOneCfgFile
 
@@ -76,22 +61,6 @@ function getOneCfgFile(relPath: string, followMode: FollowXMode, callback: Async
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:  1.Mandatory parameters are left unspecified;  2.Incorrect parameter types. |
-
-**示例**
-
-```TypeScript
-import { configPolicy, BusinessError } from '@kit.BasicServicesKit';
-
-let relpath: string = 'etc/config.xml';
-configPolicy.getOneCfgFile(relpath, configPolicy.FollowXMode.SIM_DEFAULT,
-  (err: BusinessError, data: string) => {
-    if (err == null) {
-      console.info('data is ' + data);
-    } else {
-      console.error('err: ' + err.code + ', ' + err.message);
-    }
-  });
-```
 
 
 ## getOneCfgFile
@@ -122,23 +91,6 @@ function getOneCfgFile(relPath: string, followMode: FollowXMode, extra: string, 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:  1.Mandatory parameters are left unspecified;  2.Incorrect parameter types. |
-
-**示例**
-
-```TypeScript
-import { configPolicy, BusinessError } from '@kit.BasicServicesKit';
-
-let relpath: string = 'etc/config.xml';
-let extra: string = 'etc/carrier/${telephony.sim.opkey0}';
-configPolicy.getOneCfgFile(relpath, configPolicy.FollowXMode.USER_DEFINED, extra,
-  (err: BusinessError, data: string) => {
-    if (err == null) {
-      console.info('data is ' + data);
-    } else {
-      console.error('err: ' + err.code + ', ' + err.message);
-    }
-  });
-```
 
 
 ## getOneCfgFile
@@ -172,26 +124,6 @@ function getOneCfgFile(relPath: string): Promise<string>
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:  1.Mandatory parameters are left unspecified;  2.Incorrect parameter types. |
-
-**示例**
-
-```TypeScript
-import { configPolicy, BusinessError } from '@kit.BasicServicesKit';
-
-async function fetchConfigFile() {
-  try {
-    let relpath: string = 'etc/config.xml';
-    let value: string = await configPolicy.getOneCfgFile(relpath);
-    console.info('value is ' + value);
-  } catch (error) {
-    let code = (error as BusinessError).code;
-    let message = (error as BusinessError).message;
-    console.error('error:' + code + ', ' + message);
-  }
-}
-
-fetchConfigFile();
-```
 
 
 ## getOneCfgFile
@@ -227,24 +159,3 @@ function getOneCfgFile(relPath: string, followMode: FollowXMode, extra?: string)
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:  1.Mandatory parameters are left unspecified;  2.Incorrect parameter types;  3.Parameter verification failed. |
-
-**示例**
-
-```TypeScript
-import { configPolicy, BusinessError } from '@kit.BasicServicesKit';
-
-async function fetchOneCfgFile() {
-  try {
-    let relpath: string = 'etc/config.xml';
-    let extra: string = 'etc/carrier/${telephony.sim.opkey0}';
-    let value: string = await configPolicy.getOneCfgFile(relpath, configPolicy.FollowXMode.SIM_DEFAULT, extra);
-    console.info('value is ' + value);
-  } catch (error) {
-    let code = (error as BusinessError).code;
-    let message = (error as BusinessError).message;
-    console.error('error:' + code + ', ' + message);
-  }
-}
-
-fetchOneCfgFile();
-```

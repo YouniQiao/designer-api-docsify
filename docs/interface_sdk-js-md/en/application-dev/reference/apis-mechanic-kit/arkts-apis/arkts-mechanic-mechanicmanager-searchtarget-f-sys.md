@@ -24,8 +24,8 @@ Searching for a specified target.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| target | TargetInfo | Yes | Target infomation. |
-| params | SearchParams | Yes | Parameters to use when searching. |
+| target | [TargetInfo](arkts-mechanic-mechanicmanager-targetinfo-i-sys.md) | Yes | Target infomation. |
+| params | [SearchParams](arkts-mechanic-mechanicmanager-searchparams-i-sys.md) | Yes | Parameters to use when searching. |
 
 **Return value:**
 

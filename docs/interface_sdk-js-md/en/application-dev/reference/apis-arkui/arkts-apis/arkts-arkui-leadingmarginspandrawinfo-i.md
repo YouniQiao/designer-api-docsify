@@ -63,7 +63,7 @@ direction: TextDirection
 
 Direction of the text content.
 
-**Type:** TextDirection
+**Type:** [TextDirection](arkts-arkui-textdirection-e.md)
 
 **Since:** 22
 

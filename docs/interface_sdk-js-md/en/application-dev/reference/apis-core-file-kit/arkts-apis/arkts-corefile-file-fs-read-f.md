@@ -53,25 +53,6 @@ Reads file data. This API uses a promise to return the result.
 | 13900042 | Unknown error |
 | 13900044 | Network is unreachable<br>**Applicable version:** 12 and later |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { buffer } from '@kit.ArkTS';
-
-let filePath = pathDir + "/test.txt";
-let file = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE);
-let arrayBuffer = new ArrayBuffer(4096);
-fileIo.read(file.fd, arrayBuffer).then((readLen: number) => {
-  let buf = buffer.from(arrayBuffer, 0, readLen);
-  console.info(`Succeeded in reading file data. The content of file: ${buf.toString()}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to read file data. Code: ${err.code}, message: ${err.message}`);
-}).finally(() => {
-  fileIo.closeSync(file);
-});
-```
-
 
 ## read
 
@@ -108,26 +89,6 @@ Reads data from a file. This API uses an asynchronous callback to return the res
 | 13900020 | Invalid argument |
 | 13900034 | Operation would block |
 | 13900042 | Unknown error |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { buffer } from '@kit.ArkTS';
-
-let filePath = pathDir + "/test.txt";
-let file = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE);
-let arrayBuffer = new ArrayBuffer(4096);
-fileIo.read(file.fd, arrayBuffer, (err: BusinessError, readLen: number) => {
-  if (err) {
-    console.error(`Failed to read. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    let buf = buffer.from(arrayBuffer, 0, readLen);
-    console.info(`Succeeded in reading file data. The content of file: ${buf.toString()}`);
-  }
-  fileIo.closeSync(file);
-});
-```
 
 
 ## read
@@ -171,28 +132,3 @@ Reads data from a file. This API uses an asynchronous callback to return the res
 | 13900020 | Invalid argument |
 | 13900034 | Operation would block |
 | 13900042 | Unknown error |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { buffer } from '@kit.ArkTS';
-import { ReadOptions } from '@kit.CoreFileKit';
-
-let filePath = pathDir + "/test.txt";
-let file = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE);
-let arrayBuffer = new ArrayBuffer(4096);
-let readOption: ReadOptions = {
-  offset: 1,
-  length: 5
-};
-fileIo.read(file.fd, arrayBuffer, readOption, (err: BusinessError, readLen: number) => {
-  if (err) {
-    console.error(`Failed to read. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    let buf = buffer.from(arrayBuffer, 0, readLen);
-    console.info(`Succeeded in reading file data. The content of file: ${buf.toString()}`);
-  }
-  fileIo.closeSync(file);
-});
-```

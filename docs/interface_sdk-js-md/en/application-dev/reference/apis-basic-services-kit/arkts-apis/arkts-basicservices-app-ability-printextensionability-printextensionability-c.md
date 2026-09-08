@@ -30,7 +30,7 @@ Called once to remove the print job has been started.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| jobInfo | print.PrintJob | Yes | Indicates the information of print job. |
+| jobInfo | [print.PrintJob](arkts-basicservices-print-printjob-i.md) | Yes | Indicates the information of print job. |
 
 **Error codes:**
 
@@ -201,7 +201,7 @@ Called once to request the printer's capabilities.
 
 | Type | Description |
 | --- | --- |
-| print.PrinterCapability | printer capability. |
+| [print.PrinterCapability](arkts-basicservices-print-printercapability-i.md) | printer capability. |
 
 **Error codes:**
 
@@ -273,7 +273,7 @@ Called once to start print job.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| jobInfo | print.PrintJob | Yes | Indicates the information of print job. |
+| jobInfo | [print.PrintJob](arkts-basicservices-print-printjob-i.md) | Yes | Indicates the information of print job. |
 
 **Error codes:**
 

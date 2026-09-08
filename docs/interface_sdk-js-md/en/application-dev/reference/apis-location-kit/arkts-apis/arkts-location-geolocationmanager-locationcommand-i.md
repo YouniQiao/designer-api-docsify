@@ -34,7 +34,7 @@ scenario: LocationRequestScenario
 
 Information about the scenario where the command is sent.
 
-**Type:** LocationRequestScenario
+**Type:** [LocationRequestScenario](arkts-location-geolocationmanager-locationrequestscenario-e.md)
 
 **Since:** 9
 

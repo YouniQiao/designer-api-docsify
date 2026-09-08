@@ -20,7 +20,7 @@ readonly creaseRects: Array<Rect>
 
 Crease region.
 
-**Type:** Array&lt;Rect&gt;
+**Type:** Array&lt;[Rect](arkts-arkui-display-rect-i.md)&gt;
 
 **Since:** 10
 

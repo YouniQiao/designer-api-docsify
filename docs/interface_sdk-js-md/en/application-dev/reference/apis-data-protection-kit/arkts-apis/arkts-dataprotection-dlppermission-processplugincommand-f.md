@@ -43,4 +43,4 @@ Process the plugin-related commands in the transparent encryption and decryption
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [19100001](../errorcode-dlp.md#19100001-invalid-parameter) | Invalid parameter value. |
 | [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) | The system ability works abnormally. |
-| 19100025 | The file is invalid. |
+| [19100025](../errorcode-dlp.md#19100025-invalid-file) | The file is invalid. |

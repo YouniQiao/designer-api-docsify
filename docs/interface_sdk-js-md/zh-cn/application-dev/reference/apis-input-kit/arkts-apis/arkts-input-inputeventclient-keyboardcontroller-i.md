@@ -123,3 +123,4 @@ releaseKey(keyCode: KeyCode): Promise<void>
 **示例**
 
 参见[pressKey](#presskey)示例。
+- simpleType:

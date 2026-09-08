@@ -34,7 +34,7 @@ position: Position
 
 Coordinates with the top-left corner of the screen specified by **displayId** as the origin.
 
-**Type:** Position
+**Type:** [Position](arkts-arkui-display-position-i.md)
 
 **Since:** 20
 

@@ -136,7 +136,7 @@ The default value is an empty string.
 
 If an invalid value is passed, the default value will be used.
 
-**Type:** string \| PixelMap \| Resource
+**Type:** string \| [PixelMap](arkts-arkui-pixelmap-t.md) \| [Resource](../arkts-apis/arkts-arkui-resource-t.md)
 
 **Since:** 7
 
@@ -173,7 +173,7 @@ If an invalid value is passed, the default value will be used.
 > 
 > The supported video formats are MP4, MKV, and TS.
 
-**Type:** string \| Resource
+**Type:** string \| [Resource](../arkts-apis/arkts-arkui-resource-t.md)
 
 **Since:** 7
 

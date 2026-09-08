@@ -156,7 +156,7 @@ maxScreenWantAgent?: MaxScreenWantAgent
 
 说明：该接口为预留接口，暂不支持使用。
 
-**类型：** MaxScreenWantAgent
+**类型：** [MaxScreenWantAgent](arkts-backgroundtasks-reminderagentmanager-maxscreenwantagent-i.md)
 
 **起始版本：** 9
 
@@ -200,7 +200,7 @@ reminderType: ReminderType
 
 指明代理提醒类型。
 
-**类型：** ReminderType
+**类型：** [ReminderType](arkts-backgroundtasks-reminderagentmanager-remindertype-e.md)
 
 **起始版本：** 9
 
@@ -381,7 +381,7 @@ wantAgent?: WantAgent
 
 点击通知后需要跳转的目标ability信息。
 
-**类型：** WantAgent
+**类型：** [WantAgent](arkts-backgroundtasks-reminderagentmanager-wantagent-i.md)
 
 **起始版本：** 9
 

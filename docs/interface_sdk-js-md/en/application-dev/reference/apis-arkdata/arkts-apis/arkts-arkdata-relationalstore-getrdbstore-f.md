@@ -34,8 +34,8 @@ Currently, **getRdbStore()** does not support multi-thread concurrent operations
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | context | Context | Yes | Application context.For details about the application context of the FA model, see Context.For details about the application context of the stage model, see [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md). |
-| config | StoreConfig | Yes | Configuration of the RDB store. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;RdbStore&gt; | Yes | Callback invoked to return the RDB store obtained. |
+| config | [StoreConfig](arkts-arkdata-relationalstore-storeconfig-i.md) | Yes | Configuration of the RDB store. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[RdbStore](arkts-arkdata-relationalstore-rdbstore-i.md)&gt; | Yes | Callback invoked to return the RDB store obtained. |
 
 **Error codes:**
 
@@ -142,13 +142,13 @@ Currently, **getRdbStore()** does not support multi-thread concurrent operations
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | context | Context | Yes | Application context.For details about the application context of the FA model, see Context.For details about the application context of the stage model, see [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md). |
-| config | StoreConfig | Yes | Configuration of the RDB store. |
+| config | [StoreConfig](arkts-arkdata-relationalstore-storeconfig-i.md) | Yes | Configuration of the RDB store. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;RdbStore&gt; | Promise used to return the **RdbStore** object. |
+| Promise&lt;[RdbStore](arkts-arkdata-relationalstore-rdbstore-i.md)&gt; | Promise used to return the **RdbStore** object. |
 
 **Error codes:**
 

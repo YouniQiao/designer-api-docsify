@@ -39,43 +39,6 @@ Creates a **RelativeTimeFormat** object.
 ```TypeScript
 import { intl } from '@kit.LocalizationKit';
 
-// The current locale ID is used by the default constructor.
-let locale = new intl.Locale();
-// Return the current system locale ID.
-let localeID = locale.toString();
-```
-
-```TypeScript
-import { intl } from '@kit.LocalizationKit';
-
-// Create a DateTimeFormat object using the current system locale ID.
-let formatter: intl.DateTimeFormat = new intl.DateTimeFormat();
-```
-
-```TypeScript
-import { intl } from '@kit.LocalizationKit';
-
-// Create a NumberFormat object using the current system locale ID.
-let formatter: intl.NumberFormat = new intl.NumberFormat();
-```
-
-```TypeScript
-import { intl } from '@kit.LocalizationKit';
-
-// Create a Collator object using the current system locale ID.
-let collator = new intl.Collator();
-```
-
-```TypeScript
-import { intl } from '@kit.LocalizationKit';
-
-// Create a PluralRules object using the current system locale ID.
-let pluralRules = new intl.PluralRules();
-```
-
-```TypeScript
-import { intl } from '@kit.LocalizationKit';
-
 // Create a RelativeTimeFormat object using the current system locale ID.
 let formatter: intl.RelativeTimeFormat = new intl.RelativeTimeFormat();
 ```

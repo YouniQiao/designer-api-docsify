@@ -36,7 +36,7 @@ color?: common2D.Color
 
 文本阴影的颜色，默认为黑色Color(255, 0, 0, 0)。
 
-**类型：** common2D.Color
+**类型：** [common2D.Color](arkts-arkgraphics2d-common2d-color-i.md)
 
 **起始版本：** 12
 
@@ -52,7 +52,7 @@ point?: common2D.Point
 
 文本阴影基于当前文本的偏移位置，横、纵坐标要大于等于零，单位为物理像素px，默认为common2D.Point(0, 0)。
 
-**类型：** common2D.Point
+**类型：** [common2D.Point](arkts-arkgraphics2d-common2d-point-i.md)
 
 **起始版本：** 12
 

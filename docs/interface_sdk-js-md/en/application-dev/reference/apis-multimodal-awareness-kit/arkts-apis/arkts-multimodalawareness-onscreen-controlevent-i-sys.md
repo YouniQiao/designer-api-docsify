@@ -22,7 +22,7 @@ eventType: EventType
 
 Control event type.
 
-**Type:** EventType
+**Type:** [EventType](arkts-multimodalawareness-onscreen-eventtype-e-sys.md)
 
 **Since:** 20
 

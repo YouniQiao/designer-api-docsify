@@ -79,7 +79,7 @@ fontFamily(value: string | Resource)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | string \| Resource | 是 | 字体列表。默认字体'HarmonyOS Sans'。应用当前支持'HarmonyOS Sans'字体和注册自定义字体[loadFontSync](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-fontcollection-c.md#loadfontsync)。卡片当前仅支持'HarmonyOS Sans'字体。 |
+| value | string \| [Resource](../arkts-apis/arkts-arkui-resource-t.md) | 是 | 字体列表。默认字体'HarmonyOS Sans'。应用当前支持'HarmonyOS Sans'字体和注册自定义字体[loadFontSync](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-fontcollection-c.md#loadfontsync)。卡片当前仅支持'HarmonyOS Sans'字体。 |
 
 ## fontSize
 
@@ -123,7 +123,7 @@ fontWeight(value: number | FontWeight | string)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number \| FontWeight \| string | 是 | 文本的字体粗细number类型取值[100, 900]，取值间隔为100，默认为400，取值越大，字体越粗。string类型仅支持number类型取值的字符串形式，例如“400”，以及“bold”、“bolder”、“ lighter”、“regular”、“medium”，分别对应FontWeight中相应的枚举值。设置过大可能会在不同字体下有截断。传入超出取值范围的值时取默认值。传入不符合间隔要求的值时，若设置fontWeightConfigs的enableVariableFontWeight为true，使用传入值；若设置为false，使用默认值。 |
+| value | number \| [FontWeight](../arkts-apis/arkts-arkui-fontweight-e.md) \| string | 是 | 文本的字体粗细number类型取值[100, 900]，取值间隔为100，默认为400，取值越大，字体越粗。string类型仅支持number类型取值的字符串形式，例如“400”，以及“bold”、“bolder”、“ lighter”、“regular”、“medium”，分别对应FontWeight中相应的枚举值。设置过大可能会在不同字体下有截断。传入超出取值范围的值时取默认值。传入不符合间隔要求的值时，若设置fontWeightConfigs的enableVariableFontWeight为true，使用传入值；若设置为false，使用默认值。 |
 
 ## marqueeUpdateStrategy
 

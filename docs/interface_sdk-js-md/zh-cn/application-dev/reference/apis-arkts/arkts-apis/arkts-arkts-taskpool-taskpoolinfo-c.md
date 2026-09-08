@@ -20,7 +20,7 @@ taskInfos: TaskInfo[]
 
 任务的内部信息。不建议修改此值。
 
-**类型：** TaskInfo[]
+**类型：** [TaskInfo](arkts-arkts-taskpool-taskinfo-c.md)[]
 
 **起始版本：** 10
 

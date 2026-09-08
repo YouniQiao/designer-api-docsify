@@ -48,7 +48,7 @@ Updates the hover detection configuration. This API is effective only when the h
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | DragSpringLoadingConfiguration | Yes | New configuration for hover detection. |
+| config | [DragSpringLoadingConfiguration](arkts-arkui-dragcontroller-dragspringloadingconfiguration-i.md) | Yes | New configuration for hover detection. |
 
 ## currentConfig
 
@@ -58,7 +58,7 @@ currentConfig?: DragSpringLoadingConfiguration
 
 Configuration information in the current callback. Omitted in CANCEL state; uses the [DragSpringLoadingConfiguration](arkts-arkui-dragcontroller-dragspringloadingconfiguration-i.md) default value when **undefined**.
 
-**Type:** DragSpringLoadingConfiguration
+**Type:** [DragSpringLoadingConfiguration](arkts-arkui-dragcontroller-dragspringloadingconfiguration-i.md)
 
 **Since:** 20
 

@@ -20,7 +20,7 @@ actionUponExpiry?: ActionType
 
 Whether the file can be opened after the permission expires (with the editing permission). This parameter is valid only when **expireTime** is not empty. This parameter is left empty by default.
 
-**Type:** ActionType
+**Type:** [ActionType](arkts-dataprotection-dlppermission-actiontype-e.md)
 
 **Since:** 21
 

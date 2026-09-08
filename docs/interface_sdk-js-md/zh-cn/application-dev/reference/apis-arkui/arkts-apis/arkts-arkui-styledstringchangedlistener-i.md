@@ -35,7 +35,7 @@ onWillChange?: Callback<StyledStringChangeValue, boolean>
 
 文本内容将要变化回调函数。
 
-**类型：** Callback&lt;[StyledStringChangeValue](arkts-arkui-styledstringchangevalue-i.md), boolean&gt;
+**类型：** [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;[StyledStringChangeValue](arkts-arkui-styledstringchangevalue-i.md), boolean&gt;
 
 **起始版本：** 12
 

@@ -28,13 +28,13 @@ Obtains the connection state of profile.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| profileId | ProfileId | Yes | The profile id. |
+| profileId | [ProfileId](arkts-connectivity-bluetooth-profileid-e.md) | Yes | The profile id. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ProfileConnectionState | Returns the connection state. |
+| [ProfileConnectionState](arkts-connectivity-bluetooth-profileconnectionstate-e.md) | Returns the connection state. |
 
 **Examples**
 

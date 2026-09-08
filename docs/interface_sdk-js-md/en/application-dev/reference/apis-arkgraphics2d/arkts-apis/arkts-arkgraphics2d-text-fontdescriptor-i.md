@@ -378,7 +378,7 @@ weight?: FontWeight
 
 Font weight. The default value is **0**.
 
-**Type:** FontWeight
+**Type:** [FontWeight](arkts-arkgraphics2d-text-fontweight-e.md)
 
 **Since:** 14
 

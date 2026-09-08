@@ -117,7 +117,7 @@ fontStyle?: FontStyle
 
 Font style.
 
-**Type:** FontStyle
+**Type:** [FontStyle](../arkts-apis/arkts-arkui-fontstyle-e.md)
 
 **Since:** 10
 
@@ -135,7 +135,7 @@ fontWeight?: number | FontWeight | string
 
 Font weight.
 
-**Type:** number \| FontWeight \| string
+**Type:** number \| [FontWeight](../arkts-apis/arkts-arkui-fontweight-e.md) \| string
 
 **Since:** 10
 
@@ -193,7 +193,7 @@ lineHeight?: number | string | Resource
 
 Line height. The default unit is fp.
 
-**Type:** number \| string \| Resource
+**Type:** number \| string \| [Resource](../arkts-apis/arkts-arkui-resource-t.md)
 
 **Since:** 12
 
@@ -259,7 +259,7 @@ Unit: LengthMetrics is followed by LengthMetrics when the type is LengthMetrics,
 
 Value range: (-∞, +∞)
 
-**Type:** LengthMetrics \| number
+**Type:** [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md) \| number
 
 **Since:** 23
 

@@ -20,7 +20,7 @@ address: NetAddress
 
 链路地址。
 
-**类型：** NetAddress
+**类型：** [NetAddress](arkts-network-connection-netaddress-i.md)
 
 **起始版本：** 8
 

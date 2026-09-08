@@ -378,7 +378,7 @@ weight?: FontWeight
 
 字体字重，默认值为0。
 
-**类型：** FontWeight
+**类型：** [FontWeight](arkts-arkgraphics2d-text-fontweight-e.md)
 
 **起始版本：** 14
 

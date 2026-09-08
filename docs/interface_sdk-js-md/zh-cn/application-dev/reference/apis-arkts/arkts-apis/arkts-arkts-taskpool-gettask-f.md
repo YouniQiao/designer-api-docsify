@@ -39,7 +39,7 @@ function getTask(taskId: number, taskName?: string): Task | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| Task \| undefined | Task实例；当情况异常时，返回undefined，具体可见上文说明。 |
+| [Task](arkts-arkts-taskpool-task-c.md) \| undefined | Task实例；当情况异常时，返回undefined，具体可见上文说明。 |
 
 **示例**
 

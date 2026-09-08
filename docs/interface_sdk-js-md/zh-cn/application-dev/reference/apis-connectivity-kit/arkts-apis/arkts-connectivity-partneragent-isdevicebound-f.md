@@ -28,7 +28,7 @@ function isDeviceBound(deviceAddress: PartnerDeviceAddress): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| deviceAddress | PartnerDeviceAddress | 是 | 应用注册的设备地址信息。应用需配置PartnerDeviceAddress类型的bluetoothAddress选项。 |
+| deviceAddress | [PartnerDeviceAddress](arkts-connectivity-partneragent-partnerdeviceaddress-i.md) | 是 | 应用注册的设备地址信息。应用需配置PartnerDeviceAddress类型的bluetoothAddress选项。 |
 
 **返回值：**
 

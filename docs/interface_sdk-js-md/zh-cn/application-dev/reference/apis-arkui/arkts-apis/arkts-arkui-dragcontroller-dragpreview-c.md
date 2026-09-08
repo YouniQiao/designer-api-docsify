@@ -32,12 +32,16 @@ animate(options: AnimationOptions, handler: () =>void): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | AnimationOptions | 是 | 动效参数。 |
+| options | [AnimationOptions](arkts-arkui-dragcontroller-animationoptions-i.md) | 是 | 动效参数。 |
 | handler | () =&gt;void | 是 | 用于修改背板蒙版颜色等属性的回调方法。 |
 
 **示例**
 
 > 说明：
+> 
+> 推荐通过使用[UIContext](arkts-apis-uicontext-uicontext.md)中的[getDragController](arkts-arkui-arkui-uicontext-uicontext-c.md#getdragcontroller)方法获取当前UI上下文关联的DragController对象。
+
+在EntryAbility.ets中获取UI上下文并保存至LocalStorage中。
 
 ```TypeScript
 import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
@@ -198,3 +202,4 @@ setForegroundColor(color: ResourceColor): void
 **示例**
 
 请参考[animate](#animate)。
+- simpleType:

@@ -20,7 +20,7 @@ errorInfo: ErrorInfo
 
 系统更新错误信息。
 
-**类型：** ErrorInfo
+**类型：** [ErrorInfo](arkts-mdm-systemmanager-errorinfo-i.md)
 
 **起始版本：** 12
 

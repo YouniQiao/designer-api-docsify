@@ -34,7 +34,7 @@ type: CertType
 
 Certificate type.
 
-**Type:** CertType
+**Type:** [CertType](arkts-network-networksecurity-certtype-e.md)
 
 **Since:** 11
 

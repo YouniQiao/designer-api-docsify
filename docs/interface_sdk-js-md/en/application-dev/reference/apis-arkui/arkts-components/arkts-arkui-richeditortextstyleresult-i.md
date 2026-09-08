@@ -113,7 +113,7 @@ fontStyle: FontStyle
 
 Font style.
 
-**Type:** FontStyle
+**Type:** [FontStyle](../arkts-apis/arkts-arkui-fontstyle-e.md)
 
 **Since:** 10
 

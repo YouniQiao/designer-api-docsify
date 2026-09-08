@@ -12,7 +12,7 @@ Enumerates the response types of the menu.
 LONG_PRESS = 1
 ```
 
-The menu is displayed when the component is number-pressed.
+The menu is displayed when the component is long-pressed.
 
 **Since:** 13
 

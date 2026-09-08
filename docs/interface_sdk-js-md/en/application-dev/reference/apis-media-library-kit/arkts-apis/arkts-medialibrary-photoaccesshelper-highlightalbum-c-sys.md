@@ -32,7 +32,7 @@ Constructor.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| album | Album | Yes | Highlights** album. |
+| album | [Album](arkts-medialibrary-photoaccesshelper-album-i.md) | Yes | Highlights** album. |
 
 **Error codes:**
 
@@ -62,92 +62,6 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 }
 ```
 
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-
-async function example(context: Context) {
-  console.info('MediaAnalysisAlbumChangeRequest constructorDemo');
-  let helper: photoAccessHelper.PhotoAccessHelper = photoAccessHelper.getPhotoAccessHelper(context);
-  let albumFetchOption: photoAccessHelper.FetchOptions = {
-    fetchColumns: [],
-    predicates: new dataSharePredicates.DataSharePredicates()
-  };
-  let albumFetchResult: photoAccessHelper.FetchResult<photoAccessHelper.Album> =
-    await helper.getAlbums(photoAccessHelper.AlbumType.SMART, photoAccessHelper.AlbumSubtype.HIGHLIGHT, albumFetchOption);
-  if (albumFetchResult.getCount() === 0) {
-    console.error('No album');
-    return;
-  }
-  let highlightAlbum: photoAccessHelper.Album = await albumFetchResult.getFirstObject();
-  albumFetchResult.close();
-  let changeRequest: photoAccessHelper.MediaAnalysisAlbumChangeRequest =
-    new photoAccessHelper.MediaAnalysisAlbumChangeRequest(highlightAlbum);
-}
-```
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-
-async function example(context: Context) {
-  console.info('MediaHighlightAlbumChangeRequest constructorDemo');
-  let helper: photoAccessHelper.PhotoAccessHelper = photoAccessHelper.getPhotoAccessHelper(context);
-  let albumFetchOption: photoAccessHelper.FetchOptions = {
-    fetchColumns: [],
-    predicates: new dataSharePredicates.DataSharePredicates()
-  };
-  let albumFetchResult: photoAccessHelper.FetchResult<photoAccessHelper.Album> =
-    await helper.getAlbums(photoAccessHelper.AlbumType.SMART, photoAccessHelper.AlbumSubtype.HIGHLIGHT, albumFetchOption);
-  if (albumFetchResult.getCount() === 0) {
-    console.error('No album');
-    return;
-  }
-  let highlightAlbum: photoAccessHelper.Album = await albumFetchResult.getFirstObject();
-  albumFetchResult.close();
-  let changeRequest: photoAccessHelper.MediaHighlightAlbumChangeRequest =
-    new photoAccessHelper.MediaHighlightAlbumChangeRequest(highlightAlbum);
-}
-```
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-
-async function example(context: Context) {
-  console.info('AnalysisAlbum constructorDemo');
-  let helper: photoAccessHelper.PhotoAccessHelper = photoAccessHelper.getPhotoAccessHelper(context);
-  let albumFetchOption: photoAccessHelper.FetchOptions = {
-    fetchColumns: [],
-    predicates: new dataSharePredicates.DataSharePredicates()
-  };
-  let albumFetchResult: photoAccessHelper.FetchResult<photoAccessHelper.Album> = 
-    await helper.getAlbums(photoAccessHelper.AlbumType.SMART, photoAccessHelper.AlbumSubtype.HIGHLIGHT, albumFetchOption);
-  if (albumFetchResult.getCount() === 0) {
-    console.error('No album');
-    return;
-  }
-  let highlightAlbum: photoAccessHelper.Album = await albumFetchResult.getFirstObject();
-  albumFetchResult.close();
-  let analysisAlbum: photoAccessHelper.AnalysisAlbum = new photoAccessHelper.AnalysisAlbum(highlightAlbum);
-}
-```
-
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  console.info('MediaAlbumChangeRequest constructorDemo');
-  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-  let fetchOptions: photoAccessHelper.FetchOptions = {
-    fetchColumns: [],
-    predicates: predicates
-  };
-  let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.Album> = await phAccessHelper.getAlbums(photoAccessHelper.AlbumType.USER, photoAccessHelper.AlbumSubtype.USER_GENERIC, fetchOptions);
-  let album: photoAccessHelper.Album = await fetchResult.getFirstObject();
-  let albumChangeRequest: photoAccessHelper.MediaAlbumChangeRequest = new photoAccessHelper.MediaAlbumChangeRequest(album);
-}
-```
-
 ## deleteHighlightAlbums
 
 ```TypeScript
@@ -169,7 +83,7 @@ Deletes highlight albums.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | Yes | Context of the ability instance. |
-| albums | Array&lt;Album&gt; | Yes | Array of highlight albums to delete. |
+| albums | Array&lt;[Album](arkts-medialibrary-photoaccesshelper-album-i.md)&gt; | Yes | Array of highlight albums to delete. |
 
 **Return value:**
 

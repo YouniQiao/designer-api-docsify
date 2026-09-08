@@ -91,7 +91,7 @@ Sets the opacity of the fill area. The value range is [0.0, 1.0]. A value less t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number \| string \| Resource | Yes | Opacity of the fill area. Default value: 1 |
+| value | number \| string \| [Resource](../arkts-apis/arkts-arkui-resource-t.md) | Yes | Opacity of the fill area. Default value: 1 |
 
 **Return value:**
 
@@ -287,7 +287,7 @@ Sets the stroke opacity. The value range is [0.0, 1.0]. A value less than 0.0 ev
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number \| string \| Resource | Yes | Stroke opacity. Default value: 1 |
+| value | number \| string \| [Resource](../arkts-apis/arkts-arkui-resource-t.md) | Yes | Stroke opacity. Default value: 1 |
 
 **Return value:**
 

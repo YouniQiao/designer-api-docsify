@@ -36,7 +36,7 @@ credential: Credential
 
 Server credential. The default value is **undefined**.
 
-**Type:** Credential
+**Type:** [Credential](arkts-network-http-credential-i.md)
 
 **Since:** 18
 

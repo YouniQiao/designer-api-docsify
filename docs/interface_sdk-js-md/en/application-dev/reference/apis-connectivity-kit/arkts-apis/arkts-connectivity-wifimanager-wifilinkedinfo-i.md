@@ -64,7 +64,7 @@ connState: ConnState
 
 The state of this Wi-Fi connection.
 
-**Type:** ConnState
+**Type:** [ConnState](arkts-connectivity-wifimanager-connstate-e.md)
 
 **Since:** 9
 

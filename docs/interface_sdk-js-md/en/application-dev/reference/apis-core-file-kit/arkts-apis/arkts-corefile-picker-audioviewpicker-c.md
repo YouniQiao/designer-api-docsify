@@ -29,15 +29,7 @@ A constructor used to create an **AudioViewPicker** instance. This constructor i
 **Examples**
 
 ```TypeScript
-let documentPicker = new picker.DocumentViewPicker(); // Construction without parameter is not recommended. There is a possibility that the DocumentViewPicker instance fails to start.
-```
-
-```TypeScript
 let audioPicker = new picker.AudioViewPicker(); // Construction without parameter is not recommended. There is a possibility that the AudioViewPicker instance fails to start.
-```
-
-```TypeScript
-let photoPicker = new picker.PhotoViewPicker(); // Construction without parameter is not recommended. There is a possibility that the PhotoViewPicker instance fails to start.
 ```
 
 ## constructor
@@ -78,59 +70,7 @@ struct Index {
           .fontWeight(FontWeight.Bold)
           .onClick(()=>{
             let context = this.getUIContext().getHostContext() as common.UIAbilityContext; // Ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
-            let documentPicker = new picker.DocumentViewPicker(context);
-          })
-      }
-      .width('100%')
-    }
-    .height('100%')
-  }
-}
-```
-
-```TypeScript
-import { common } from '@kit.AbilityKit';
-import  { picker } from '@kit.CoreFileKit';
-@Entry
-@Component
-struct Index {
-  @State message: string = 'hello World';
-
-  build() {
-    Row() {
-      Column() {
-        Text(this.message)
-          .fontSize(50)
-          .fontWeight(FontWeight.Bold)
-          .onClick(()=>{
-            let context = this.getUIContext().getHostContext() as common.UIAbilityContext; // Ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
             let audioPicker = new picker.AudioViewPicker(context);
-          })
-      }
-      .width('100%')
-    }
-    .height('100%')
-  }
-}
-```
-
-```TypeScript
-import { common } from '@kit.AbilityKit';
-import  { picker } from '@kit.CoreFileKit';
-@Entry
-@Component
-struct Index {
-  @State message: string = 'hello World';
-
-  build() {
-    Row() {
-      Column() {
-        Text(this.message)
-          .fontSize(50)
-          .fontWeight(FontWeight.Bold)
-          .onClick(()=>{
-            let context = this.getUIContext().getHostContext() as common.UIAbilityContext; // Ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
-            let photoPicker = new picker.PhotoViewPicker(context);
           })
       }
       .width('100%')
@@ -257,27 +197,6 @@ Starts an **audioPicker** page (currently, a **documentPicker** page is displaye
 import { BusinessError } from '@kit.BasicServicesKit';
 import { common } from '@kit.AbilityKit';
 import  { picker } from '@kit.CoreFileKit';
-async function example12(context: common.UIAbilityContext) { // Ensure that context is converted from UIAbilityContext.
-  try {
-    let documentPicker = new picker.DocumentViewPicker(context);
-    documentPicker.save((err: BusinessError, documentSaveResult: Array<string>) => {
-      if (err) {
-        console.error(`DocumentViewPicker.save failed with err, code is: ${err.code}, message is: ${err.message}`);
-        return;
-      }
-      console.info('DocumentViewPicker.save successfully, documentSaveResult uri: ' + JSON.stringify(documentSaveResult));
-    });
-  } catch (error) {
-    let err: BusinessError = error as BusinessError;
-    console.error(`DocumentViewPicker failed with err, code is: ${err.code}, message is: ${err.message}`);
-  }
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-import  { picker } from '@kit.CoreFileKit';
 async function example18(context: common.UIAbilityContext) { // Ensure that context is converted from UIAbilityContext.
   try {
     let audioPicker = new picker.AudioViewPicker(context);
@@ -291,27 +210,6 @@ async function example18(context: common.UIAbilityContext) { // Ensure that cont
   } catch (error) {
     let err: BusinessError = error as BusinessError;
         console.error(`AudioViewPicker failed with err, code is: ${err.code}, message is: ${err.message}`);
-  }
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-import  { picker } from '@kit.CoreFileKit';
-async function example06(context: common.UIAbilityContext) { // Ensure that context is converted from UIAbilityContext.
-  try {
-    let photoPicker = new picker.PhotoViewPicker(context);
-    photoPicker.save((err: BusinessError, photoSaveResult: Array<string>) => {
-      if (err) {
-        console.error('PhotoViewPicker.save failed with err: ' + JSON.stringify(err));
-        return;
-      }
-      console.info('PhotoViewPicker.save successfully, photoSaveResult uri: ' + JSON.stringify(photoSaveResult));
-    });
-  } catch (error) {
-    let err: BusinessError = error as BusinessError;
-    console.error('PhotoViewPicker failed with err: ' + JSON.stringify(err));
   }
 }
 ```
@@ -426,27 +324,6 @@ Starts an **audioPicker** page for the user to select one or more audio clips. T
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | Yes | Callback invoked to return the URIs of the audio clips selected.    **Note：**: For details about how to use the returned URIs, see [Using a Media File URI](../../../file-management/user-file-uri-intro.md#using-a-media-file-uri). |
 
 **Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-import  { picker } from '@kit.CoreFileKit';
-async function example09(context: common.UIAbilityContext) { // Ensure that context is converted from UIAbilityContext.
-  try {
-    let documentPicker = new picker.DocumentViewPicker(context);
-    documentPicker.select((err: BusinessError, documentSelectResult: Array<string>) => {
-      if (err) {
-        console.error(`DocumentViewPicker.select failed with err, code is: ${err.code}, message is: ${err.message}`);
-        return;
-      }
-      console.info('DocumentViewPicker.select successfully, documentSelectResult uri: ' + JSON.stringify(documentSelectResult));
-    });
-  } catch (error) {
-    let err: BusinessError = error as BusinessError;
-    console.error(`DocumentViewPicker failed with err, code is: ${err.code}, message is: ${err.message}`);
-  }
-}
-```
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

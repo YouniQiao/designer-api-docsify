@@ -48,7 +48,7 @@ signalType: NetworkType
 
 Signal strength type.
 
-**Type:** NetworkType
+**Type:** [NetworkType](arkts-telephony-radio-networktype-e.md)
 
 **Since:** 6
 

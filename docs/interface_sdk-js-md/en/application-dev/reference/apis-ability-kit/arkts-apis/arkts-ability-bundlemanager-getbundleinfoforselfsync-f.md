@@ -30,7 +30,7 @@ Obtains the bundle information of the current application based on the given bun
 
 | Type | Description |
 | --- | --- |
-| BundleInfo | Bundle information obtained. |
+| [BundleInfo](arkts-ability-bundlemanager-bundleinfo-t.md) | Bundle information obtained. |
 
 **Error codes:**
 

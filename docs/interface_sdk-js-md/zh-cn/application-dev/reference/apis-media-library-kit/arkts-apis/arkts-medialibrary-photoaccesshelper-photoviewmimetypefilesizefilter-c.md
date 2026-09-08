@@ -20,7 +20,7 @@ photoViewMimeType: PhotoViewMIMETypes
 
 指定媒体文件类型，用于文件大小过滤。
 
-**类型：** PhotoViewMIMETypes
+**类型：** [PhotoViewMIMETypes](arkts-medialibrary-photoaccesshelper-photoviewmimetypes-e.md)
 
 **起始版本：** 20
 

@@ -60,23 +60,6 @@ try {
 }
 ```
 
-```TypeScript
-let kvStore;
-try {
-    console.log('CloseResultSet success');
-    let resultSet = null;
-    kvStore.closeResultSet(resultSet, function (err, data) {
-        if (err == undefined) {
-            console.log('closeResultSet success');
-        } else {
-            console.log('closeResultSet fail');
-        }
-    });
-}catch(e) {
-    console.log('CloseResultSet e ' + e);
-}
-```
-
 ## closeResultSet
 
 ```TypeScript
@@ -110,21 +93,6 @@ Closes the **KvStoreResultSet** object obtained by [SingleKVStore.getResultSet](
 ```TypeScript
 let kvStore;
 try {
-    let resultSet = null;
-    kvStore.closeResultSet(resultSet).then(() => {
-        console.log('closeResultSet success');
-    }).catch((err) => {
-        console.log('closeResultSet fail ' + JSON.stringify(err));
-    });
-}catch(e) {
-    console.log('CloseResultSet e ' + e);
-}
-```
-
-```TypeScript
-let kvStore;
-try {
-    console.log('CloseResultSet success');
     let resultSet = null;
     kvStore.closeResultSet(resultSet).then(() => {
         console.log('closeResultSet success');
@@ -252,7 +220,7 @@ Obtains all KV pairs that match the specified key prefix. This API uses an async
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | keyPrefix | string | Yes | Key prefix to match. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Entry[]&gt; | Yes | Callback used to return the KV pairs that match the specified prefix. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Entry](arkts-arkdata-distributeddata-entry-i.md)[]&gt; | Yes | Callback used to return the KV pairs that match the specified prefix. |
 
 **Examples**
 
@@ -310,7 +278,7 @@ Obtains all KV pairs that match the specified key prefix. This API uses a promis
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Entry[]&gt; | Promise used to return the KV pairs that match the specified prefix. |
+| Promise&lt;[Entry](arkts-arkdata-distributeddata-entry-i.md)[]&gt; | Promise used to return the KV pairs that match the specified prefix. |
 
 **Examples**
 
@@ -369,8 +337,8 @@ Obtains the KV pairs that match the specified **Query** object. This API uses an
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| query | Query | Yes | Key prefix to match. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Entry[]&gt; | Yes | Callback used to return the KV pairs that match the specified **Query** object. |
+| query | [Query](arkts-arkdata-distributeddata-query-c.md) | Yes | Key prefix to match. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Entry](arkts-arkdata-distributeddata-entry-i.md)[]&gt; | Yes | Callback used to return the KV pairs that match the specified **Query** object. |
 
 **Examples**
 
@@ -407,40 +375,6 @@ try {
 }
 ```
 
-```TypeScript
-let kvStore;
-try {
-    var arr = new Uint8Array([21,31]);
-    let entries = [];
-    for (var i = 0; i < 10; i++) {
-        var key = 'batch_test_bool_key';
-        var entry = {
-            key : key + i,
-            value : {
-                type : distributedData.ValueType.BYTE_ARRAY,
-                value : arr
-            }
-        }
-        entries.push(entry);
-    }
-    console.log('entries: ' + JSON.stringify(entries));
-    kvStore.putBatch(entries, async function (err,data) {
-        console.log('putBatch success');
-        const query = new distributedData.Query();
-        query.prefixKey("batch_test");
-        query.deviceId('localDeviceId');
-        kvStore.getEntries(query, function (err,entries) {
-            console.log('getEntries success');
-            console.log('entries.length: ' + entries.length);
-            console.log('entries[0]: ' + JSON.stringify(entries[0]));
-        });
-    });
-    console.log('GetEntries success');
-}catch(e) {
-    console.log('GetEntries e ' + e);
-}
-```
-
 ## getEntries
 
 ```TypeScript
@@ -461,13 +395,13 @@ Obtains the KV pairs that match the specified **Query** object. This API uses a 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| query | Query | Yes | Query** object to match. |
+| query | [Query](arkts-arkdata-distributeddata-query-c.md) | Yes | Query** object to match. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Entry[]&gt; | Promise used to return the KV pairs that match the specified **Query** object. |
+| Promise&lt;[Entry](arkts-arkdata-distributeddata-entry-i.md)[]&gt; | Promise used to return the KV pairs that match the specified **Query** object. |
 
 **Examples**
 
@@ -649,7 +583,7 @@ Obtains a **KvStoreResultSet** object that matches the specified **Query** objec
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| query | Query | Yes | Query** object to match. |
+| query | [Query](arkts-arkdata-distributeddata-query-c.md) | Yes | Query** object to match. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[KvStoreResultSet](arkts-arkdata-distributeddata-kvstoreresultset-i.md)&gt; | Yes | Callback used to return the **KvStoreResultSet** object obtained. |
 
 **Examples**
@@ -684,40 +618,6 @@ try {
 }
 ```
 
-```TypeScript
-let kvStore;
-try {
-    let resultSet;
-    let entries = [];
-    for (var i = 0; i < 10; i++) {
-        var key = 'batch_test_string_key';
-        var entry = {
-            key : key + i,
-            value : {
-                type : distributedData.ValueType.STRING,
-                value : 'batch_test_string_value'
-            }
-        }
-        entries.push(entry);
-    }
-    kvStore.putBatch(entries, async function (err, data) {
-        console.log('putBatch success');
-        const query = new distributedData.Query();
-        query.prefixKey("batch_test");
-        query.deviceId('localDeviceId');
-        kvStore.getResultSet(query, async function (err, result) {
-            console.log('getResultSet succeed.');
-            resultSet = result;
-            kvStore.closeResultSet(resultSet, function (err, data) {
-                console.log('closeResultSet success');
-            })
-        });
-    });
-} catch(e) {
-    console.log('GetResultSet e ' + e);
-}
-```
-
 ## getResultSet
 
 ```TypeScript
@@ -738,7 +638,7 @@ Obtains a **KvStoreResultSet** object that matches the specified **Query** objec
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| query | Query | Yes | Query** object to match. |
+| query | [Query](arkts-arkdata-distributeddata-query-c.md) | Yes | Query** object to match. |
 
 **Return value:**
 
@@ -782,47 +682,6 @@ try {
 }
 ```
 
-```TypeScript
-let kvStore;
-try {
-    let resultSet;
-    let entries = [];
-    for (var i = 0; i < 10; i++) {
-        var key = 'batch_test_string_key';
-        var entry = {
-            key : key + i,
-            value : {
-                type : distributedData.ValueType.STRING,
-                value : 'batch_test_string_value'
-            }
-        }
-        entries.push(entry);
-    }
-    kvStore.putBatch(entries).then(async (err) => {
-        console.log('putBatch success');
-    }).catch((err) => {
-        console.log('putBatch fail ' + err);
-    });
-    const query = new distributedData.Query();
-    query.deviceId('localDeviceId');
-    query.prefixKey("batch_test");
-    console.log("GetResultSet " + query.getSqlLike());
-    kvStore.getResultSet(query).then((result) => {
-        console.log('getResultSet succeed.');
-        resultSet = result;
-    }).catch((err) => {
-        console.log('getResultSet failed: ' + JSON.stringify(err));
-    });
-    kvStore.closeResultSet(resultSet).then((err) => {
-        console.log('closeResultSet success');
-    }).catch((err) => {
-        console.log('closeResultSet fail ' + JSON.stringify(err));
-    });
-}catch(e) {
-    console.log('GetResultSet e ' + e);
-}
-```
-
 ## getResultSize
 
 ```TypeScript
@@ -843,7 +702,7 @@ Obtains the number of results that match the specified **Query** object. This AP
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| query | Query | Yes | Query** object to match. |
+| query | [Query](arkts-arkdata-distributeddata-query-c.md) | Yes | Query** object to match. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the number of results that match the specified **Query** object. |
 
 **Examples**
@@ -876,35 +735,6 @@ try {
 }
 ```
 
-```TypeScript
-let kvStore;
-try {
-    let entries = [];
-    for (var i = 0; i < 10; i++) {
-        var key = 'batch_test_string_key';
-        var entry = {
-            key : key + i,
-            value : {
-                type : distributedData.ValueType.STRING,
-                value : 'batch_test_string_value'
-            }
-        }
-        entries.push(entry);
-    }
-    kvStore.putBatch(entries, async function (err, data) {
-        console.log('putBatch success');
-        const query = new distributedData.Query();
-        query.prefixKey("batch_test");
-        query.deviceId('localDeviceId');
-        kvStore.getResultSize(query, async function (err, resultSize) {
-            console.log('getResultSet succeed.');
-        });
-    });
-} catch(e) {
-    console.log('GetResultSize e ' + e);
-}
-```
-
 ## getResultSize
 
 ```TypeScript
@@ -925,7 +755,7 @@ Obtains the number of results that match the specified **Query** object. This AP
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| query | Query | Yes | Query** object to match. |
+| query | [Query](arkts-arkdata-distributeddata-query-c.md) | Yes | Query** object to match. |
 
 **Return value:**
 
@@ -967,39 +797,6 @@ try {
 }
 ```
 
-```TypeScript
-let kvStore;
-try {
-    let entries = [];
-    for (var i = 0; i < 10; i++) {
-        var key = 'batch_test_string_key';
-        var entry = {
-            key : key + i,
-            value : {
-                type : distributedData.ValueType.STRING,
-                value : 'batch_test_string_value'
-            }
-        }
-        entries.push(entry);
-    }
-    kvStore.putBatch(entries).then(async (err) => {
-        console.log('putBatch success');
-    }).catch((err) => {
-        console.log('putBatch fail ' + JSON.stringify(err));
-    });
-    const query = new distributedData.Query();
-    query.prefixKey("batch_test");
-    query.deviceId('localDeviceId');
-    kvStore.getResultSize(query).then((resultSize) => {
-        console.log('getResultSet succeed.');
-    }).catch((err) => {
-        console.log('getResultSet failed: ' + JSON.stringify(err));
-    });
-}catch(e) {
-    console.log('GetResultSize e ' + e);
-}
-```
-
 ## getSecurityLevel
 
 ```TypeScript
@@ -1020,7 +817,7 @@ Obtains the security level of this KV store. This API uses an asynchronous callb
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;SecurityLevel&gt; | Yes | Callback used to return the security level of the KV store. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SecurityLevel](arkts-arkdata-distributeddata-securitylevel-e.md)&gt; | Yes | Callback used to return the security level of the KV store. |
 
 **Examples**
 
@@ -1055,7 +852,7 @@ Obtains the security level of this KV store. This API uses a promise to return t
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;SecurityLevel&gt; | Promise used to return the security level of the KV store. |
+| Promise&lt;[SecurityLevel](arkts-arkdata-distributeddata-securitylevel-e.md)&gt; | Promise used to return the security level of the KV store. |
 
 **Examples**
 
@@ -1093,7 +890,7 @@ Unsubscribes from data changes.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | 'dataChange' | Yes | Event type. The value is **dataChange**, which indicates data changes. |
-| listener | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ChangeNotification&gt; | No | Callback to unregister. If this parameter is not specified, all callbacks for data changes will be unregistered. |
+| listener | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ChangeNotification](arkts-arkdata-distributeddata-changenotification-i.md)&gt; | No | Callback to unregister. If this parameter is not specified, all callbacks for data changes will be unregistered. |
 
 **Examples**
 
@@ -1181,8 +978,8 @@ Subscribes to data changes of the specified type.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | 'dataChange' | Yes | Event type. The value is **dataChange**, which indicates data changes. |
-| type | SubscribeType | Yes | Type of data change. |
-| listener | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ChangeNotification&gt; | Yes | Callback used to return the result. |
+| type | [SubscribeType](arkts-arkdata-distributeddata-subscribetype-e.md) | Yes | Type of data change. |
+| listener | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ChangeNotification](arkts-arkdata-distributeddata-changenotification-i.md)&gt; | Yes | Callback used to return the result. |
 
 **Examples**
 
@@ -1285,30 +1082,6 @@ try {
 }
 ```
 
-```TypeScript
-let kvStore;
-const KEY_TEST_STRING_ELEMENT = 'key_test_string';
-const VALUE_TEST_STRING_ELEMENT = 'value-string-001';
-try {
-    kvStore.put(KEY_TEST_STRING_ELEMENT, VALUE_TEST_STRING_ELEMENT, async function (err,data) {
-        console.log('RemoveDeviceData  put success');
-        const deviceid = 'no_exist_device_id';
-        kvStore.removeDeviceData(deviceid, async function (err,data) {
-            if (err == undefined) {
-                console.log('removeDeviceData success');
-            } else {
-                console.log('removeDeviceData fail');
-                kvStore.get('localDeviceId', KEY_TEST_STRING_ELEMENT, async function (err,data) {
-                    console.log('RemoveDeviceData get success');
-                });
-            }
-        });
-    });
-}catch(e) {
-    console.log('RemoveDeviceData e ' + e);
-}
-```
-
 ## removeDeviceData
 
 ```TypeScript
@@ -1357,32 +1130,6 @@ try {
     });
     kvStore.get(KEY_TEST_STRING_ELEMENT).then((data) => {
         console.log('get success data:' + data);
-    }).catch((err) => {
-        console.log('RemoveDeviceData get fail ' + JSON.stringify(err));
-    });
-}catch(e) {
-    console.log('RemoveDeviceData e ' + e);
-}
-```
-
-```TypeScript
-let kvStore;
-const KEY_TEST_STRING_ELEMENT = 'key_test_string';
-const VALUE_TEST_STRING_ELEMENT = 'value-string-001';
-try {
-    kvStore.put(KEY_TEST_STRING_ELEMENT, VALUE_TEST_STRING_ELEMENT).then((err) => {
-        console.log('RemoveDeviceData put success');
-    }).catch((err) => {
-        console.log('RemoveDeviceData put fail ' + JSON.stringify(err));
-    });
-    const deviceid = 'no_exist_device_id';
-    kvStore.removeDeviceData(deviceid).then((err) => {
-        console.log('removeDeviceData success');
-    }).catch((err) => {
-        console.log('removeDeviceData fail ' + JSON.stringify(err));
-    });
-    kvStore.get('localDeviceId', KEY_TEST_STRING_ELEMENT).then((data) => {
-        console.log('RemoveDeviceData get success data:' + data);
     }).catch((err) => {
         console.log('RemoveDeviceData get fail ' + JSON.stringify(err));
     });
@@ -1495,7 +1242,7 @@ Synchronizes the KV store manually.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | deviceIds | string[] | Yes | List of **networkId**s of the devices in the same networking environment to be synchronized. |
-| mode | SyncMode | Yes | Sync mode. |
+| mode | [SyncMode](arkts-arkdata-distributeddata-syncmode-e.md) | Yes | Sync mode. |
 | delayMs | number | No | Delay time allowed, in milliseconds. The default value is **0**. |
 
 **Examples**

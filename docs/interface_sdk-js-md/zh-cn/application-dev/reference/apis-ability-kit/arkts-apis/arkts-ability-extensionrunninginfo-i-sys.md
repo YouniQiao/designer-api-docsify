@@ -106,7 +106,7 @@ type: bundle.ExtensionAbilityType
 
 Extension类型。
 
-**类型：** bundle.ExtensionAbilityType
+**类型：** [bundle.ExtensionAbilityType](arkts-ability-bundlemanager-extensionabilitytype-e.md)
 
 **默认值：** Enumerates types of the extension info
 

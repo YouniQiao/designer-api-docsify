@@ -24,25 +24,10 @@ Obtains a BundleInstaller object. This API is a synchronous API.
 
 | Type | Description |
 | --- | --- |
-| BundleInstaller | BundleInstaller object. |
+| [BundleInstaller](arkts-ability-installer-bundleinstaller-i-sys.md) | BundleInstaller object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-
-**Examples**
-
-```TypeScript
-import { installer } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-    installer.getBundleInstallerSync();
-    console.info('getBundleInstallerSync successfully.');
-} catch (error) {
-    let message = (error as BusinessError).message;
-    console.error('getBundleInstallerSync failed. Cause: ' + message);
-}
-```

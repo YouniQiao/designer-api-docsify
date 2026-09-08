@@ -24,13 +24,13 @@ Creates a **KVManager** instance for KV store management.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | KVManagerConfig | Yes | Configuration of the **KVManager** instance, including the bundle name (cannot be empty) of the caller and user information. |
+| config | [KVManagerConfig](arkts-arkdata-distributedkvstore-kvmanagerconfig-i.md) | Yes | Configuration of the **KVManager** instance, including the bundle name (cannot be empty) of the caller and user information. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| KVManager | KVManager** instance created. |
+| [KVManager](arkts-arkdata-distributedkvstore-kvmanager-i.md) | KVManager** instance created. |
 
 **Error codes:**
 

@@ -24,10 +24,10 @@ Implements initialization for the interpolation curve, which is used to create a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| curve | Curve | No | Curve type.Default value: **Curve.Linear |
+| curve | [Curve](arkts-arkui-curves-curve-e.md) | No | Curve type.Default value: **Curve.Linear |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ICurve | Interpolation curve. |
+| [ICurve](arkts-arkui-curves-icurve-i.md) | Interpolation curve. |

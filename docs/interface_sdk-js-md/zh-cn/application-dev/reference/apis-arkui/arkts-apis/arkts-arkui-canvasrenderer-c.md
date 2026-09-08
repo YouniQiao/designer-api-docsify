@@ -311,7 +311,7 @@ drawImage(image: ImageBitmap | PixelMap, dx: number, dy: number): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| image | [ImageBitmap](arkts-arkui-imagebitmap-c.md) \| PixelMap | 是 | 图片资源，请参考ImageBitmap或PixelMap。异常值undefined或null按无效值处理，不进行绘制。 |
+| image | [ImageBitmap](arkts-arkui-imagebitmap-c.md) \| [PixelMap](../arkts-components/arkts-arkui-pixelmap-t.md) | 是 | 图片资源，请参考ImageBitmap或PixelMap。异常值undefined或null按无效值处理，不进行绘制。 |
 | dx | number | 是 | 绘制区域左上角在x轴的位置。异常值undefined或null按0处理，NaN和Infinity按无效值处理，不进行绘制。默认单位：vp |
 | dy | number | 是 | 绘制区域左上角在y轴的位置。异常值undefined或null按0处理，NaN和Infinity按无效值处理，不进行绘制。默认单位：vp |
 
@@ -335,7 +335,7 @@ drawImage(image: ImageBitmap | PixelMap, dx: number, dy: number, dw: number, dh:
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| image | [ImageBitmap](arkts-arkui-imagebitmap-c.md) \| PixelMap | 是 | 图片资源，请参考ImageBitmap或PixelMap。异常值undefined或null按无效值处理，不进行绘制。 |
+| image | [ImageBitmap](arkts-arkui-imagebitmap-c.md) \| [PixelMap](../arkts-components/arkts-arkui-pixelmap-t.md) | 是 | 图片资源，请参考ImageBitmap或PixelMap。异常值undefined或null按无效值处理，不进行绘制。 |
 | dx | number | 是 | 绘制区域左上角在x轴的位置。异常值undefined或null按0处理，NaN和Infinity按无效值处理，不进行绘制。默认单位：vp |
 | dy | number | 是 | 绘制区域左上角在y轴的位置。异常值undefined或null按0处理，NaN和Infinity按无效值处理，不进行绘制。默认单位：vp |
 | dw | number | 是 | 绘制区域的宽度。当绘制区域的宽度和裁剪图像的宽度不一致时，将图像宽度拉伸或压缩为绘制区域的宽度。负数、异常值undefined或null按0处理，NaN和Infinity按无效值处理，不进行绘制。默认单位：vp |
@@ -371,7 +371,7 @@ drawImage(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| image | [ImageBitmap](arkts-arkui-imagebitmap-c.md) \| PixelMap | 是 | 图片资源，请参考ImageBitmap或PixelMap。异常值undefined或null按无效值处理，不进行绘制。 |
+| image | [ImageBitmap](arkts-arkui-imagebitmap-c.md) \| [PixelMap](../arkts-components/arkts-arkui-pixelmap-t.md) | 是 | 图片资源，请参考ImageBitmap或PixelMap。异常值undefined或null按无效值处理，不进行绘制。 |
 | sx | number | 是 | 裁剪源图像时矩形左上角的x轴坐标。异常值undefined或null按0处理，NaN和Infinity按无效值处理，不进行绘制。默认单位：vp |
 | sy | number | 是 | 裁剪源图像时矩形左上角的y轴坐标。异常值undefined或null按0处理，NaN和Infinity按无效值处理，不进行绘制。默认单位：vp |
 | sw | number | 是 | 裁剪源图像的目标宽度。负数、异常值undefined或null按0处理，NaN和Infinity按无效值处理，不进行绘制。默认单位：vp |
@@ -556,7 +556,7 @@ getPixelMap(sx: number, sy: number, sw: number, sh: number): PixelMap
 
 | 类型 | 说明 |
 | --- | --- |
-| PixelMap | PixelMap对象。 |
+| [PixelMap](../arkts-components/arkts-arkui-pixelmap-t.md) | PixelMap对象。 |
 
 ## getTransform
 
@@ -578,7 +578,7 @@ getTransform(): Matrix2D
 
 | 类型 | 说明 |
 | --- | --- |
-| Matrix2D | 当前被应用到上下文的转换矩阵。 |
+| [Matrix2D](arkts-arkui-matrix2d-c.md) | 当前被应用到上下文的转换矩阵。 |
 
 ## measureText
 
@@ -754,76 +754,6 @@ rotate(angle: number): void
 | --- | --- | --- | --- |
 | angle | number | 是 | 设置顺时针旋转的弧度值，可以通过 degree * Math.PI / 180 将角度转换为弧度值。API version 18之前，设置NaN或Infinity时，在该方法后执行的绘制方法无法绘制；设置null或undefined时，当前接口不生效。API version 18及以后，设置NaN、Infinity、null或undefined时当前接口不生效，其他传入有效参数的绘制方法正常绘制。单位：弧度 |
 
-**示例**
-
-```TypeScript
-// xxx.ets
-@Entry
-@Component
-struct Rotate {
-  private settings: RenderingContextSettings = new RenderingContextSettings(true);
-  private context: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings);
-  private matrix: Matrix2D = new Matrix2D();
-
-  build() {
-    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
-      Canvas(this.context)
-        .width('240vp')
-        .height('180vp')
-        .backgroundColor('#ffff00')
-        .onReady(() => {
-          this.context.fillRect(50, 110, 50, 50)
-          this.matrix.scaleX = 1
-          this.matrix.scaleY = 1
-          this.matrix.rotateX = -0.5
-          this.matrix.rotateY = 0.5
-          this.matrix.translateX = 10
-          this.matrix.translateY = 10
-          this.matrix.rotate(5, 5)
-          this.context.setTransform(this.matrix)
-          this.context.fillRect(50, 110, 50, 50)
-        })
-    }
-    .width('100%')
-    .height('100%')
-  }
-}
-```
-
-```TypeScript
-// xxx.ets
-@Entry
-@Component
-struct Rotate {
-  private settings: RenderingContextSettings = new RenderingContextSettings(true);
-  private context: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings);
-  private matrix: Matrix2D = new Matrix2D();
-
-  build() {
-    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
-      Canvas(this.context)
-        .width('240vp')
-        .height('180vp')
-        .backgroundColor('#ffff00')
-        .onReady(() => {
-          this.context.fillRect(60, 80, 50, 50)
-          this.matrix.scaleX = 1
-          this.matrix.scaleY = 1
-          this.matrix.rotateX = -0.5
-          this.matrix.rotateY = 0.5
-          this.matrix.translateX = 10
-          this.matrix.translateY = 10
-          this.matrix.rotate(-60 * Math.PI / 180, 5, 5)
-          this.context.setTransform(this.matrix)
-          this.context.fillRect(60, 80, 50, 50)
-        })
-    }
-    .width('100%')
-    .height('100%')
-  }
-}
-```
-
 ## save
 
 ```TypeScript
@@ -879,42 +809,6 @@ scale(x: number, y: number): void
 | x | number | 是 | 设置水平方向的缩放值。API version 18之前，设置NaN或Infinity时，在该方法后执行的绘制方法无法绘制；不支持设置0和负数，设置0、负数、null或undefined时，当前接口不生效。API version 18及以后，设置NaN、Infinity、0、负数、null或undefined时当前接口不生效，其他传入有效参数的绘制方法正常绘制。 |
 | y | number | 是 | 设置垂直方向的缩放值，不支持设置负数。API version 18之前，设置NaN或Infinity时，在该方法后执行的绘制方法无法绘制；不支持设置0和负数，设置0、负数、null或undefined时，当前接口不生效。API version 18及以后，设置NaN、Infinity、0、负数、null或undefined时当前接口不生效，其他传入有效参数的绘制方法正常绘制。 |
 
-**示例**
-
-```TypeScript
-// xxx.ets
-@Entry
-@Component
-struct Scale {
-  private settings: RenderingContextSettings = new RenderingContextSettings(true);
-  private context: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings);
-  private matrix: Matrix2D = new Matrix2D();
-
-  build() {
-    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
-      Canvas(this.context)
-        .width('240vp')
-        .height('180vp')
-        .backgroundColor('#ffff00')
-        .onReady(() => {
-          this.context.fillRect(120, 70, 50, 50)
-          this.matrix.scaleX = 1
-          this.matrix.scaleY = 1
-          this.matrix.rotateX = -0.5
-          this.matrix.rotateY = 0.5
-          this.matrix.translateX = 10
-          this.matrix.translateY = 10
-          this.matrix.scale(0.5, 0.5)
-          this.context.setTransform(this.matrix)
-          this.context.fillRect(120, 70, 50, 50)
-        })
-    }
-    .width('100%')
-    .height('100%')
-  }
-}
-```
-
 ## setLineDash
 
 ```TypeScript
@@ -955,7 +849,7 @@ setPixelMap(value?: PixelMap): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | PixelMap | 否 | 含有像素值的PixelMap对象。异常值undefined和null按无效值处理，不进行绘制。默认值：null |
+| value | [PixelMap](../arkts-components/arkts-arkui-pixelmap-t.md) | 否 | 含有像素值的PixelMap对象。异常值undefined和null按无效值处理，不进行绘制。默认值：null |
 
 ## setTransform
 
@@ -1014,7 +908,7 @@ setTransform(transform?: Matrix2D): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| transform | Matrix2D | 否 | 变换矩阵。异常值undefined或null按无效值处理。默认值：null |
+| transform | [Matrix2D](arkts-arkui-matrix2d-c.md) | 否 | 变换矩阵。异常值undefined或null按无效值处理。默认值：null |
 
 ## stroke
 
@@ -1185,42 +1079,6 @@ translate(x: number, y: number): void
 | --- | --- | --- | --- |
 | x | number | 是 | 设置水平平移量。API version 18之前，设置NaN或Infinity时，在该方法后执行的绘制方法无法绘制；设置null或undefined时，当前接口不生效。API version 18及以后，设置NaN、Infinity、null或undefined时当前接口不生效，其他传入有效参数的绘制方法正常绘制。默认单位：vp |
 | y | number | 是 | 设置竖直平移量。API version 18之前，设置NaN或Infinity时，在该方法后执行的绘制方法无法绘制；设置null或undefined时，当前接口不生效。API version 18及以后，设置NaN、Infinity、null或undefined时当前接口不生效，其他传入有效参数的绘制方法正常绘制。默认单位：vp |
-
-**示例**
-
-```TypeScript
-// xxx.ets
-@Entry
-@Component
-struct Translate {
-  private settings: RenderingContextSettings = new RenderingContextSettings(true);
-  private context: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings);
-  private matrix: Matrix2D = new Matrix2D();
-
-  build() {
-    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
-      Canvas(this.context)
-        .width('240vp')
-        .height('180vp')
-        .backgroundColor('#ffff00')
-        .onReady(() => {
-          this.context.fillRect(40, 20, 50, 50)
-          this.matrix.scaleX = 1
-          this.matrix.scaleY = 1
-          this.matrix.rotateX = 0
-          this.matrix.rotateY = 0
-          this.matrix.translateX = 0
-          this.matrix.translateY = 0
-          this.matrix.translate(100, 100)
-          this.context.setTransform(this.matrix)
-          this.context.fillRect(40, 20, 50, 50)
-        })
-    }
-    .width('100%')
-    .height('100%')
-  }
-}
-```
 
 ## antialias
 
@@ -1505,7 +1363,7 @@ letterSpacing: LengthMetrics | string
 > 
 > 推荐使用LengthMetrics，性能更好。
 
-**类型：** LengthMetrics \| string
+**类型：** [LengthMetrics](arkts-arkui-lengthmetrics-t.md) \| string
 
 **默认值：** 0vp
 

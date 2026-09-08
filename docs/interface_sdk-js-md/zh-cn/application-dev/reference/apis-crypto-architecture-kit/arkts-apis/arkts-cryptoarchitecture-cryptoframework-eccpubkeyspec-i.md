@@ -44,7 +44,7 @@ pk: Point
 
 指定ECC算法的公钥pk。
 
-**类型：** Point
+**类型：** [Point](arkts-cryptoarchitecture-cryptoframework-point-i.md)
 
 **起始版本：** 10
 

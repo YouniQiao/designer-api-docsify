@@ -59,7 +59,7 @@ dateTimeOptions(dateTimeOptions: Optional<DateTimeOptions>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| dateTimeOptions | [Optional](arkts-arkui-optional-t.md)&lt;DateTimeOptions&gt; | 是 | 设置小时是否显示前导0，只支持设置hour参数，参数值为{hour: "2-digit"}时表示显示前导0，参数值为{hour: "numeric"}时表示不显示前导0。默认值：undefined，默认状态下，24小时制显示前导0，12小时制不显示前导0。 |
+| dateTimeOptions | [Optional](arkts-arkui-optional-t.md)&lt;[DateTimeOptions](arkts-arkui-datetimeoptions-t.md)&gt; | 是 | 设置小时是否显示前导0，只支持设置hour参数，参数值为{hour: "2-digit"}时表示显示前导0，参数值为{hour: "numeric"}时表示不显示前导0。默认值：undefined，默认状态下，24小时制显示前导0，12小时制不显示前导0。 |
 
 ## fontColor
 
@@ -179,7 +179,7 @@ fontStyle(value: FontStyle)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | FontStyle | 是 | 字体样式。默认值：FontStyle.Normal，表示标准的字体样式（非斜体）。 |
+| value | [FontStyle](../arkts-apis/arkts-arkui-fontstyle-e.md) | 是 | 字体样式。默认值：FontStyle.Normal，表示标准的字体样式（非斜体）。 |
 
 ## fontWeight
 
@@ -201,7 +201,7 @@ fontWeight(value: number | FontWeight | string)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number \| FontWeight \| string | 是 | 文本的字体粗细，number类型取值范围为[100, 900]，取值间隔为100，取值越大，字体越粗。number类型取值范围外的默认值为400。string类型支持：number类型取值的字符串形式（如400），以及枚举值'lighter'（对应300）、'regular'（对应400）、'medium'（对应500）、'bold'（对应700）、'bolder'（对应900），分别对应FontWeight中相应的枚举值。默认值：FontWeight.Normal |
+| value | number \| [FontWeight](../arkts-apis/arkts-arkui-fontweight-e.md) \| string | 是 | 文本的字体粗细，number类型取值范围为[100, 900]，取值间隔为100，取值越大，字体越粗。number类型取值范围外的默认值为400。string类型支持：number类型取值的字符串形式（如400），以及枚举值'lighter'（对应300）、'regular'（对应400）、'medium'（对应500）、'bold'（对应700）、'bolder'（对应900），分别对应FontWeight中相应的枚举值。默认值：FontWeight.Normal |
 
 ## format
 

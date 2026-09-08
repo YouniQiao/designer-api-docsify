@@ -32,7 +32,7 @@ Obtains all the bundle information in the system based on the given bundle flags
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;BundleInfo&gt;&gt; | Promise used to return the list of installed applications. |
+| Promise&lt;Array&lt;[BundleInfo](arkts-ability-bundlemanager-bundleinfo-t.md)&gt;&gt; | Promise used to return the list of installed applications. |
 
 **Error codes:**
 

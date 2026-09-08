@@ -34,7 +34,7 @@ purpose: certificateManager.CertificatePurpose
 
 The type of the certificate, sign or encrypt.
 
-**Type:** certificateManager.CertificatePurpose
+**Type:** [certificateManager.CertificatePurpose](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-certificatemanager-certificatepurpose-e.md)
 
 **Since:** 22
 

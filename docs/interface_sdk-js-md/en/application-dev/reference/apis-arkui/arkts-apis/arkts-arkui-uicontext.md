@@ -23,7 +23,7 @@ import { BackPressActionProposal, BaseGestureHandlingProposal, ClickActionPropos
 | [ContextMenuController](arkts-arkui-arkui-uicontext-contextmenucontroller-c.md) | Provides the capability to control the closing of context menus. |
 | [CursorController](arkts-arkui-arkui-uicontext-cursorcontroller-c.md) | Provides the capability to set cursor styles. |
 | [DialogPresenter](arkts-arkui-arkui-uicontext-dialogpresenter-c.md) | Provides unified dialog APIs. |
-| [DragController](arkts-arkui-arkui-uicontext-dragcontroller-c.md) | Provides APIs for initiating drag actions. When receiving a gesture event, such as a touch or number-press event, an application can initiate a drag action and carry drag information therein. |
+| [DragController](arkts-arkui-arkui-uicontext-dragcontroller-c.md) | Provides APIs for initiating drag actions. When receiving a gesture event, such as a touch or long-press event, an application can initiate a drag action and carry drag information therein. |
 | [DynamicSyncScene](arkts-arkui-arkui-uicontext-dynamicsyncscene-c.md) | Represents a dynamic synchronization scene. |
 | [FocusController](arkts-arkui-arkui-uicontext-focuscontroller-c.md) | Provides capabilities to control focus, including features such as clearing, moving, and activating focus. |
 | [Font](arkts-arkui-arkui-uicontext-font-c.md) | Provides APIs for registering custom fonts. |
@@ -55,7 +55,7 @@ import { BackPressActionProposal, BaseGestureHandlingProposal, ClickActionPropos
 | Name | Description |
 | --- | --- |
 | [ComponentSnapshot](arkts-arkui-arkui-uicontext-componentsnapshot-c-sys.md) | Provides APIs for obtaining component snapshots, including snapshots of components that have been loaded and snapshots of components that have not been loaded yet. |
-| [DragController](arkts-arkui-arkui-uicontext-dragcontroller-c-sys.md) | Provides APIs for initiating drag actions. When receiving a gesture event, such as a touch or number-press event, an application can initiate a drag action and carry drag information therein. |
+| [DragController](arkts-arkui-arkui-uicontext-dragcontroller-c-sys.md) | Provides APIs for initiating drag actions. When receiving a gesture event, such as a touch or long-press event, an application can initiate a drag action and carry drag information therein. |
 | [LuminanceSampler](arkts-arkui-arkui-uicontext-luminancesampler-c-sys.md) | Sets the background luminance color picking parameters, registers the luminance change listening callback, and unregisters the listening callback. |
 | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c-sys.md) | Implements a **UIContext** instance. |
 <!--DelEnd-->

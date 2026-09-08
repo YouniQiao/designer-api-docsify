@@ -32,7 +32,7 @@ Obtains the list of clients that are connected to a Wi-Fi hotspot.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;StationInfo&gt; | Returns the list of clients that are connected to the Wi-Fi hotspot. |
+| Array&lt;[StationInfo](arkts-connectivity-wifi-stationinfo-i-sys.md)&gt; | Returns the list of clients that are connected to the Wi-Fi hotspot. |
 
 **Examples**
 

@@ -102,7 +102,7 @@ Closes a distributed KV store. This API uses a promise to return the result.
 | --- | --- | --- | --- |
 | appId | string | Yes | Bundle name of the application. The value cannot be empty or exceed 256 bytes. |
 | storeId | string | Yes | Unique identifier of the KV store to close. The KV store ID allows only letters, digits, and underscores (_), and cannot exceed [MAX_STORE_ID_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md) in length. |
-| kvConfig | Options | No | Indicates the `Options` object used for close the KVStore database.<br>**Since:** 24 |
+| kvConfig | [Options](arkts-arkdata-distributedkvstore-options-i.md) | No | Indicates the `Options` object used for close the KVStore database.<br>**Since:** 24 |
 
 **Return value:**
 
@@ -249,7 +249,7 @@ Deletes a distributed KV store. This API uses a promise to return the result.
 | --- | --- | --- | --- |
 | appId | string | Yes | Bundle name of the application. The value cannot be empty or exceed 256 bytes. |
 | storeId | string | Yes | Unique identifier of the KV store to delete. The KV store ID allows only letters, digits, and underscores (_), and cannot exceed [MAX_STORE_ID_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md) in length. |
-| kvConfig | Options | No | Indicates the `Options` object used for delete the KVStore database.<br>**Since:** 24 |
+| kvConfig | [Options](arkts-arkdata-distributedkvstore-options-i.md) | No | Indicates the `Options` object used for delete the KVStore database.<br>**Since:** 24 |
 
 **Return value:**
 
@@ -432,7 +432,7 @@ Creates and obtains a distributed KV store based on the specified **options** an
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | storeId | string | Yes | Unique identifier of the KV store. The KV store ID allows only letters, digits, and underscores (_), and cannot exceed [MAX_STORE_ID_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md) in length. |
-| options | Options | Yes | Configuration of the KV store to create. |
+| options | [Options](arkts-arkdata-distributedkvstore-options-i.md) | Yes | Configuration of the KV store to create. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;T&gt; | Yes | Callback used to return the **SingleKVStore** or **DeviceKVStore** instance created. |
 
 **Error codes:**
@@ -503,7 +503,7 @@ Creates and obtains a distributed KV store based on the specified **options** an
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | storeId | string | Yes | Unique identifier of the KV store. The KV store ID allows only letters, digits, and underscores (_), and cannot exceed [MAX_STORE_ID_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md) in length. |
-| options | Options | Yes | Configuration of the KV store to create. |
+| options | [Options](arkts-arkdata-distributedkvstore-options-i.md) | Yes | Configuration of the KV store to create. |
 
 **Return value:**
 

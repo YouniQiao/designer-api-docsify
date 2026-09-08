@@ -28,10 +28,4 @@ Obtains the list of all physical USB ports. When the developer mode is disabled,
 
 | Type | Description |
 | --- | --- |
-| Array&lt;USBPort&gt; | List of physical USB ports. |
-
-**Examples**
-
-```TypeScript
-let ret: Array<usbManager.USBPort> = usbManager.getPorts();
-```
+| Array&lt;[USBPort](arkts-basicservices-usbmanager-usbport-i-sys.md)&gt; | List of physical USB ports. |

@@ -40,7 +40,7 @@ Note:The application must request the **ohos.permission.ACCESS_BIOMETRIC** permi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| result | userAuth.UserAuthResult | Yes | Authentication result information. |
+| result | [userAuth.UserAuthResult](arkts-userauthentication-userauth-userauthresult-i.md) | Yes | Authentication result information. |
 
 ## onIconClick
 
@@ -64,7 +64,7 @@ authParam: userAuth.AuthParam
 
 User authentication parameters. The parameters include the **challenge** value, authentication type (**authType**), and authentication trust level (**authTrustLevel**). The challenge value is used to prevent replay attacks. The authentication type specifies the available authentication methods (such as face, fingerprint, and PIN). The authentication trust level determines the security strength of the authentication.
 
-**Type:** userAuth.AuthParam
+**Type:** [userAuth.AuthParam](arkts-userauthentication-userauth-authparam-i.md)
 
 **Since:** 12
 
@@ -116,7 +116,7 @@ widgetParam: userAuth.WidgetParam
 
 Parameters on the user authentication page. The parameters include the authentication screen title (**title**) and navigation button text (**navigationButtonText**), which are used to customize the content displayed in the authentication dialog box.
 
-**Type:** userAuth.WidgetParam
+**Type:** [userAuth.WidgetParam](arkts-userauthentication-userauth-widgetparam-i.md)
 
 **Since:** 12
 

@@ -61,12 +61,3 @@ start?: number
 **起始版本：** 12
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
-
-**示例**
-
-```TypeScript
-let filePath = pathDir + "/test.txt";
-let watcher = fileIo.createWatcher(filePath, 0xfff, () => {});
-watcher.start();
-watcher.stop();
-```

@@ -23,7 +23,7 @@ function show(id: string, callback: AsyncCallback<TaskInfo>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | id | string | 是 | 任务id。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;TaskInfo&gt; | 是 | 回调函数。当查询任务操作成功，err为undefined，data为查询到的任务TaskInfo信息；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[TaskInfo](arkts-basicservices-agent-taskinfo-i.md)&gt; | 是 | 回调函数。当查询任务操作成功，err为undefined，data为查询到的任务TaskInfo信息；否则为错误对象。 |
 
 **错误码：**
 
@@ -56,7 +56,7 @@ function show(id: string): Promise<TaskInfo>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;TaskInfo&gt; | Promise对象。返回任务详细信息TaskInfo的Promise对象。 |
+| Promise&lt;[TaskInfo](arkts-basicservices-agent-taskinfo-i.md)&gt; | Promise对象。返回任务详细信息TaskInfo的Promise对象。 |
 
 **错误码：**
 

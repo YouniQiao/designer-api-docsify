@@ -24,13 +24,13 @@ Queries the alternate icon information configured in the alternateIcons in the a
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;AlternateIconInfo&gt;&gt; | Promise used to return the list of alternate icons of the current application. |
+| Promise&lt;Array&lt;[AlternateIconInfo](arkts-ability-bundlemanager-alternateiconinfo-t.md)&gt;&gt; | Promise used to return the list of alternate icons of the current application. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 17700311 | Failed to obtain the alternate icon. |
+| [17700311](../errorcode-bundle.md#17700311-failed-to-obtain-the-alternate-icon) | Failed to obtain the alternate icon. |
 
 **Examples**
 

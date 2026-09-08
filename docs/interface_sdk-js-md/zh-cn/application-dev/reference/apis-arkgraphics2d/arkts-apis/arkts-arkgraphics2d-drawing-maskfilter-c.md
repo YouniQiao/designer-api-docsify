@@ -50,16 +50,3 @@ static createBlurMaskFilter(blurType: BlurType, sigma: number): MaskFilter
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
-
-**示例**
-
-```TypeScript
-import { RenderNode, DrawContext } from '@kit.ArkUI';
-import { drawing } from '@kit.ArkGraphics2D';
-
-class DrawingRenderNode extends RenderNode {
-  draw(context: DrawContext) {
-    const maskFilter = drawing.MaskFilter.createBlurMaskFilter(drawing.BlurType.OUTER, 10);
-  }
-}
-```

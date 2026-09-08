@@ -24,7 +24,7 @@ Images occupy a large amount of memory. When you finish using a Picture instance
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mainPixelmap | PixelMap | Yes | Main PixelMap. |
+| mainPixelmap | [PixelMap](arkts-image-image-pixelmap-i.md) | Yes | Main PixelMap. |
 
 **Return value:**
 

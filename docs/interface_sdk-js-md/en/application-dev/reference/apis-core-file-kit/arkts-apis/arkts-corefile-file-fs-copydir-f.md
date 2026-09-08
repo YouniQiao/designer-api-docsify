@@ -47,28 +47,13 @@ Copies the source directory to the destination path. This API uses a promise to 
 | 13900018 | Not a directory |
 | 13900019 | Is a directory |
 | 13900020 | Invalid argument |
-| 13900030 | File name too number |
+| 13900030 | File name too long |
 | 13900031 | Function not implemented |
 | 13900033 | Too many symbolic links encountered |
 | 13900034 | Operation would block |
 | 13900038 | Value too large for defined data type |
 | 13900042 | Unknown error |
 | 13900044 | Network is unreachable<br>**Applicable version:** 12 and later |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// Copy srcPath to destPath.
-let srcPath = pathDir + "/srcDir/";
-let destPath = pathDir + "/destDir/";
-fileIo.copyDir(srcPath, destPath, 0).then(() => {
-  console.info(`Succeeded in copying directory.`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to copy directory. Code: ${err.code}, message: ${err.message}`);
-});
-```
 
 
 ## copyDir
@@ -106,29 +91,12 @@ Copies the source directory to the destination directory. This API uses an async
 | 13900018 | Not a directory |
 | 13900019 | Is a directory |
 | 13900020 | Invalid argument |
-| 13900030 | File name too number |
+| 13900030 | File name too long |
 | 13900031 | Function not implemented |
 | 13900033 | Too many symbolic links encountered |
 | 13900034 | Operation would block |
 | 13900038 | Value too large for defined data type |
 | 13900042 | Unknown error |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// Copy srcPath to destPath.
-let srcPath = pathDir + "/srcDir/";
-let destPath = pathDir + "/destDir/";
-fileIo.copyDir(srcPath, destPath, (err: BusinessError) => {
-  if (err) {
-    console.error(`Failed to copy directory. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info(`Succeeded in copying directory.`);
-  }
-});
-```
 
 
 ## copyDir
@@ -158,28 +126,6 @@ An exception will be thrown if the destination directory contains a directory wi
 | Error Code ID | Error Message |
 | --- | --- |
 | 13900015 | File exists |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { ConflictFiles } from '@kit.CoreFileKit';
-
-// Copy srcPath to destPath.
-let srcPath = pathDir + "/srcDir/";
-let destPath = pathDir + "/destDir/";
-fileIo.copyDir(srcPath, destPath, (err: BusinessError<Array<ConflictFiles>>) => {
-  if (err && err.code == 13900015 && err.data?.length !== undefined) {
-    for (let i = 0; i < err.data.length; i++) {
-      console.error(`Failed to copy directory, with conflicting files: ${err.data[i].srcFile} ${err.data[i].destFile}`);
-    }
-  } else if (err) {
-    console.error(`Failed to copy directory. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info(`Succeeded in copying directory.`);
-  }
-});
-```
 
 
 ## copyDir
@@ -218,29 +164,12 @@ Copies the source directory to the destination directory. You can set the copy m
 | 13900018 | Not a directory |
 | 13900019 | Is a directory |
 | 13900020 | Invalid argument |
-| 13900030 | File name too number |
+| 13900030 | File name too long |
 | 13900031 | Function not implemented |
 | 13900033 | Too many symbolic links encountered |
 | 13900034 | Operation would block |
 | 13900038 | Value too large for defined data type |
 | 13900042 | Unknown error |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// Copy srcPath to destPath.
-let srcPath = pathDir + "/srcDir/";
-let destPath = pathDir + "/destDir/";
-fileIo.copyDir(srcPath, destPath, 0, (err: BusinessError) => {
-  if (err) {
-    console.error(`Failed to copy directory. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info(`Succeeded in copying directory.`);
-  }
-});
-```
 
 
 ## copyDir
@@ -269,25 +198,3 @@ Copies the source directory to the destination path. You can set the copy mode. 
 | Error Code ID | Error Message |
 | --- | --- |
 | 13900015 | File exists |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { ConflictFiles } from '@kit.CoreFileKit';
-
-// Copy srcPath to destPath.
-let srcPath = pathDir + "/srcDir/";
-let destPath = pathDir + "/destDir/";
-fileIo.copyDir(srcPath, destPath, 0, (err: BusinessError<Array<ConflictFiles>>) => {
-  if (err && err.code == 13900015 && err.data?.length !== undefined) {
-    for (let i = 0; i < err.data.length; i++) {
-      console.error(`Failed to copy directory, with conflicting files: ${err.data[i].srcFile} ${err.data[i].destFile}`);
-    }
-  } else if (err) {
-    console.error(`Failed to copy directory. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info(`Succeeded in copying directory.`);
-  }
-});
-```

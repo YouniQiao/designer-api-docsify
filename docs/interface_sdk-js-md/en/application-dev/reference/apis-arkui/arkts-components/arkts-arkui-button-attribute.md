@@ -41,7 +41,7 @@ Sets the style and primacy for the button. The system automatically adjusts the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ButtonStyleMode](arkts-arkui-buttonstylemode-e.md) | Yes | Style and primacy of the button Default value: **ButtonStyleMode.EMPHASIZED |
+| value | [ButtonStyleMode](arkts-arkui-buttonstylemode-e.md) | Yes | [Style and primacy of the button Default value: **ButtonStyleMode.EMPHASIZED](arkts-arkui-buttonstylemode-e.md) |
 
 ## contentModifier
 
@@ -135,7 +135,7 @@ Sets the font family.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | string \| Resource | Yes | Font family. The 'HarmonyOS Sans' font and [registered custom fonts](../arkts-apis/arkts-font.md) are supported. |
+| value | string \| [Resource](../arkts-apis/arkts-arkui-resource-t.md) | Yes | Font family. The 'HarmonyOS Sans' font and [registered custom fonts](../arkts-apis/arkts-font.md) are supported. |
 
 ## fontSize
 
@@ -179,7 +179,7 @@ Sets the font style for the button.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | FontStyle | Yes | Font style of the button.Default value: **FontStyle.Normal |
+| value | [FontStyle](../arkts-apis/arkts-arkui-fontstyle-e.md) | Yes | Font style of the button.Default value: **FontStyle.Normal |
 
 ## fontWeight
 
@@ -201,7 +201,7 @@ Sets the font weight for the button.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number \| FontWeight \| string | Yes | Font weight of the button. For the number type, the value ranges from 100 to 900, at an interval of 100. A larger value indicates a thicker font.Default value: **500**For the string type, only strings that represent a number, for example, **'400'**, and the following enumerated values of **FontWeight** are supported: **'bold'**, **'bolder'**, **'lighter'**, **'regular'**, and **'medium'**.If the value is abnormal or invalid, the font weight defaults to 400. |
+| value | number \| [FontWeight](../arkts-apis/arkts-arkui-fontweight-e.md) \| string | Yes | Font weight of the button. For the number type, the value ranges from 100 to 900, at an interval of 100. A larger value indicates a thicker font.Default value: **500**For the string type, only strings that represent a number, for example, **'400'**, and the following enumerated values of **FontWeight** are supported: **'bold'**, **'bolder'**, **'lighter'**, **'regular'**, and **'medium'**.If the value is abnormal or invalid, the font weight defaults to 400. |
 
 ## labelStyle
 
@@ -245,7 +245,7 @@ Sets the maximum font scale factor for text.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scale | number \| Resource | Yes | Maximum font scale factor for text.Value range: [1, +∞)   **NOTE：**A value less than 1 is handled as **1**. Abnormal values are ineffective by default.If this parameter is not configured, the maximum scale for a circular button is 1x, while the maximum scale for capsule-type buttons, standard buttons, and rounded rectangle buttons defaults to the system-defined value. |
+| scale | number \| [Resource](../arkts-apis/arkts-arkui-resource-t.md) | Yes | Maximum font scale factor for text.Value range: [1, +∞)   **NOTE：**A value less than 1 is handled as **1**. Abnormal values are ineffective by default.If this parameter is not configured, the maximum scale for a circular button is 1x, while the maximum scale for capsule-type buttons, standard buttons, and rounded rectangle buttons defaults to the system-defined value. |
 
 ## minFontScale
 
@@ -267,7 +267,7 @@ Sets the minimum font scale factor for text.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scale | number \| Resource | Yes | Minimum font scale factor for text.Value range: [0, 1]   **NOTE：**A value less than 0 is handled as **0**. A value greater than 1 is handled as **1**. Abnormal values are ineffective by default. |
+| scale | number \| [Resource](../arkts-apis/arkts-arkui-resource-t.md) | Yes | Minimum font scale factor for text.Value range: [0, 1]   **NOTE：**A value less than 0 is handled as **0**. A value greater than 1 is handled as **1**. Abnormal values are ineffective by default. |
 
 ## role
 

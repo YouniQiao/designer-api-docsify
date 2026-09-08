@@ -137,7 +137,7 @@ Binds the modal window to the target window. After the binding is successful, th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| token | rpc.RemoteObject | Yes | Token of the target window. |
+| token | [rpc.RemoteObject](../../apis-ipc-kit/arkts-apis/arkts-ipc-rpc-remoteobject-c.md) | Yes | Token of the target window. |
 | deathCallback | [Callback](arkts-arkui-window-callback-i.md)&lt;void&gt; | Yes | Callback used to listen for modal window destruction events. |
 
 **Return value:**
@@ -225,7 +225,7 @@ Binds the modal window to the target window. After the binding is successful, th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| token | rpc.RemoteObject | Yes | Token of the target window. |
+| token | [rpc.RemoteObject](../../apis-ipc-kit/arkts-apis/arkts-ipc-rpc-remoteobject-c.md) | Yes | Token of the target window. |
 | deathCallback | [Callback](arkts-arkui-window-callback-i.md)&lt;void&gt; | Yes | Callback used to listen for modal window destruction events. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
@@ -310,7 +310,7 @@ Binds the modal window to the target window. After the binding is successful, th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| requestInfo | dialogRequest.RequestInfo | Yes | RequestInfo** of the target window. |
+| requestInfo | [dialogRequest.RequestInfo](../../apis-ability-kit/arkts-apis/arkts-ability-dialogrequest-requestinfo-i.md) | Yes | RequestInfo** of the target window. |
 | deathCallback | [Callback](arkts-arkui-window-callback-i.md)&lt;void&gt; | Yes | Callback used to listen for modal window destruction events. |
 
 **Return value:**
@@ -386,7 +386,7 @@ Binds the modal window to the target window. After the binding is successful, th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| requestInfo | dialogRequest.RequestInfo | Yes | RequestInfo** of the target window. |
+| requestInfo | [dialogRequest.RequestInfo](../../apis-ability-kit/arkts-apis/arkts-ability-dialogrequest-requestinfo-i.md) | Yes | RequestInfo** of the target window. |
 | deathCallback | [Callback](arkts-arkui-window-callback-i.md)&lt;void&gt; | Yes | Callback used to listen for modal window destruction events. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
@@ -1502,7 +1502,7 @@ export default class EntryAbility extends UIAbility {
 requestFocus(isFocused: boolean): Promise<void>
 ```
 
-Allows this window to proactively request to gain or lose focus. This API uses a promise to return the result. A value is returned as number as the API is successfully called. The return value does not indicate that the window has gained or lost focus. You can use on('windowEvent') to listen for the focus status of the window.
+Allows this window to proactively request to gain or lose focus. This API uses a promise to return the result. A value is returned as long as the API is successfully called. The return value does not indicate that the window has gained or lost focus. You can use on('windowEvent') to listen for the focus status of the window.
 
 When a focus request is sent, whether the window can successfully gain focus depends on its capability of being focused and its current visibility. To gain focus, the window must be capable of receiving focus and in a visible state (actively displayed and not hidden or destroyed).
 
@@ -1568,7 +1568,7 @@ Sets the rotation parameters for this window. This API can be used only when you
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rotateOptions | RotateOptions | Yes | Rotation parameters to set. |
+| rotateOptions | [RotateOptions](../arkts-components/arkts-arkui-rotateoptions-i.md) | Yes | Rotation parameters to set. |
 
 **Error codes:**
 
@@ -1614,7 +1614,7 @@ Sets the scale parameters for this window. This API can be used only when you [c
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scaleOptions | ScaleOptions | Yes | Scale parameters to set. |
+| scaleOptions | [ScaleOptions](../arkts-components/arkts-arkui-scaleoptions-i.md) | Yes | Scale parameters to set. |
 
 **Error codes:**
 
@@ -1703,7 +1703,7 @@ Sets the blur style for the background of this window.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| blurStyle | BlurStyle | Yes | Blur style to set for the background of the window. |
+| blurStyle | [BlurStyle](../arkts-components/arkts-arkui-blurstyle-e.md) | Yes | Blur style to set for the background of the window. |
 
 **Error codes:**
 
@@ -1843,34 +1843,6 @@ try {
 } catch (exception) {
   console.error(`Failed to set default density enabled. Cause code: ${exception.code}, message: ${exception.message}`);
 }
-```
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { window } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit'
-
-export default class EntryAbility extends UIAbility {
-  // ...
-
-  onWindowStageCreate(windowStage: window.WindowStage) {
-      windowStage.loadContent("pages/page2", (err: BusinessError) => {
-        let errCode: number = err.code;
-        if (errCode) {
-          console.error(`Failed to load the content. Cause code: ${err.code}, message: ${err.message}`);
-          return;
-        }
-        console.info('onWindowStageCreate');
-      try {
-        windowStage.setDefaultDensityEnabled(true);
-        console.info('Succeeded in loading the content.');
-      } catch (exception) {
-        console.error(`Failed to set default density enabled. Cause code: ${exception.code}, message: ${exception.message}`);
-      }
-    });
-  }
-};
 ```
 
 ## setForbidSplitMove
@@ -2728,7 +2700,7 @@ Sets the mode of the main window. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | WindowMode | Yes | Indicate the mode of a window. |
+| mode | [WindowMode](arkts-arkui-window-windowmode-e-sys.md) | Yes | Indicate the mode of a window. |
 
 **Return value:**
 
@@ -2798,7 +2770,7 @@ Sets the mode of the main window. This API uses an asynchronous callback to retu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | WindowMode | Yes | Indicate the mode of a window. |
+| mode | [WindowMode](arkts-arkui-window-windowmode-e-sys.md) | Yes | Indicate the mode of a window. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
@@ -2867,7 +2839,7 @@ Sets the type of this window. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | WindowType | Yes | Window type. |
+| type | [WindowType](arkts-arkui-window-windowtype-e.md) | Yes | Window type. |
 
 **Return value:**
 
@@ -2909,7 +2881,7 @@ Sets the type of this window. This API uses an asynchronous callback to return t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | WindowType | Yes | Window type. |
+| type | [WindowType](arkts-arkui-window-windowtype-e.md) | Yes | Window type. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Examples**
@@ -3120,7 +3092,7 @@ Sets the translation parameters for this window. This API can be used only when 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| translateOptions | TranslateOptions | Yes | Translation parameters. The unit is px. |
+| translateOptions | [TranslateOptions](../arkts-components/arkts-arkui-translateoptions-i.md) | Yes | Translation parameters. The unit is px. |
 
 **Error codes:**
 

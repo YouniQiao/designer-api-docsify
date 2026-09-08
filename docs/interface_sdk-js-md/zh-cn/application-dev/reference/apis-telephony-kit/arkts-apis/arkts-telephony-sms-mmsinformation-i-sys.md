@@ -38,7 +38,7 @@ messageType: MessageType
 
 消息类型。
 
-**类型：** MessageType
+**类型：** [MessageType](arkts-telephony-sms-messagetype-e-sys.md)
 
 **起始版本：** 8
 

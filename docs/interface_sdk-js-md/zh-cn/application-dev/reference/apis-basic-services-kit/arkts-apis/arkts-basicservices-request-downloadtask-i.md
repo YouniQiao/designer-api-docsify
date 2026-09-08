@@ -45,16 +45,6 @@ delete(callback: AsyncCallback<boolean>): void
 **示例**
 
 ```TypeScript
-uploadTask.delete((err: BusinessError, result: boolean) => {
-  if (err) {
-    console.error(`Failed to delete the upload task. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in deleting the upload task.');
-});
-```
-
-```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 import { common } from '@kit.AbilityKit';
 
@@ -112,14 +102,6 @@ delete(): Promise<boolean>
 **示例**
 
 ```TypeScript
-uploadTask.delete().then((result: boolean) => {
-  console.info('Succeeded in deleting the upload task.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to delete the upload task. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
-```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 import { common } from '@kit.AbilityKit';
 
@@ -163,7 +145,7 @@ getTaskInfo(callback: AsyncCallback<DownloadInfo>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;DownloadInfo&gt; | 是 | 回调函数。当查询下载任务操作成功，err为undefined，data为获取到的DownloadInfo对象；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[DownloadInfo](arkts-basicservices-request-downloadinfo-i.md)&gt; | 是 | 回调函数。当查询下载任务操作成功，err为undefined，data为获取到的DownloadInfo对象；否则为错误对象。 |
 
 **错误码：**
 
@@ -220,7 +202,7 @@ getTaskInfo(): Promise<DownloadInfo>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;DownloadInfo&gt; | Promise对象，返回DownloadInfo对象。 |
+| Promise&lt;[DownloadInfo](arkts-basicservices-request-downloadinfo-i.md)&gt; | Promise对象，返回DownloadInfo对象。 |
 
 **错误码：**
 
@@ -886,53 +868,6 @@ downloadTask.pause((err: BusinessError) => {
 });
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-
-// 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-let config: request.agent.Config = {
-  action: request.agent.Action.DOWNLOAD,
-  url: 'http://127.0.0.1', // 需要手动将url替换为真实服务器的HTTP协议地址
-  title: 'taskPauseTest',
-  description: 'Sample code for pause the download task',
-  mode: request.agent.Mode.BACKGROUND,
-  overwrite: false,
-  method: "GET",
-  data: "",
-  saveas: "./",
-  network: request.agent.Network.CELLULAR,
-  metered: false,
-  roaming: true,
-  retry: true,
-  redirect: true,
-  index: 0,
-  begins: 0,
-  ends: -1,
-  gauge: false,
-  precise: false,
-  token: "it is a secret"
-};
-request.agent.create(context, config).then(async (task: request.agent.Task) => {
-  task.start();
-  // 等待1秒再执行下一步操作，以防异步乱序
-  await new Promise<void>((resolve) => {
-    setTimeout(() => resolve(), 1000);
-  })
-  task.pause((err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to pause the download task, Code: ${err.code}, message: ${err.message}`);
-      return;
-    }
-    console.info(`Succeeded in pausing a download task. `);
-  });
-  console.info(`Succeeded in creating a download task. result: ${task.tid}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to create a download task, Code: ${err.code}, message: ${err.message}`);
-});
-```
-
 ## pause
 
 ```TypeScript
@@ -977,51 +912,6 @@ downloadTask.pause().then(() => {
 });
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-
-// 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-let config: request.agent.Config = {
-  action: request.agent.Action.DOWNLOAD,
-  url: 'http://127.0.0.1', // 需要手动将url替换为真实服务器的HTTP协议地址
-  title: 'taskPauseTest',
-  description: 'Sample code for pause the download task',
-  mode: request.agent.Mode.BACKGROUND,
-  overwrite: false,
-  method: "GET",
-  data: "",
-  saveas: "./",
-  network: request.agent.Network.CELLULAR,
-  metered: false,
-  roaming: true,
-  retry: true,
-  redirect: true,
-  index: 0,
-  begins: 0,
-  ends: -1,
-  gauge: false,
-  precise: false,
-  token: "it is a secret"
-};
-request.agent.create(context, config).then(async (task: request.agent.Task) => {
-  task.start();
-  // 等待1秒再执行下一步操作，以防异步乱序
-  await new Promise<void>((resolve) => {
-    setTimeout(() => resolve(), 1000);
-  })
-  task.pause().then(() => {
-    console.info(`Succeeded in pausing a download task. `);
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to pause the download task, Code: ${err.code}, message: ${err.message}`);
-  });
-  console.info(`Succeeded in creating a download task. result: ${task.tid}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to create a download task, Code: ${err.code}, message: ${err.message}`);
-});
-```
-
 ## query
 
 ```TypeScript
@@ -1049,7 +939,7 @@ query(callback: AsyncCallback<DownloadInfo>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;DownloadInfo&gt; | 是 | 回调函数。当查询下载任务成功，err为undefined，data为获取到的DownloadInfo对象；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[DownloadInfo](arkts-basicservices-request-downloadinfo-i.md)&gt; | 是 | 回调函数。当查询下载任务成功，err为undefined，data为获取到的DownloadInfo对象；否则为错误对象。 |
 
 **错误码：**
 
@@ -1095,7 +985,7 @@ query(): Promise<DownloadInfo>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;DownloadInfo&gt; | Promise对象。返回DownloadInfo。 |
+| Promise&lt;[DownloadInfo](arkts-basicservices-request-downloadinfo-i.md)&gt; | Promise对象。返回DownloadInfo。 |
 
 **错误码：**
 
@@ -1242,18 +1132,6 @@ remove(callback: AsyncCallback<boolean>): void
 **示例**
 
 ```TypeScript
-uploadTask.remove((err: BusinessError, result: boolean) => {
-  if (err) {
-    console.error(`Failed to remove the upload task. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  if (result) {
-    console.info('Succeeded in removing the upload task.');
-  }
-});
-```
-
-```TypeScript
 downloadTask.remove((err, result) => {
   if (err) {
     console.error(`Failed to remove the download task. Code: ${err.code}, message: ${err.message}`);
@@ -1298,14 +1176,6 @@ remove(): Promise<boolean>
 | [201](../../errorcode-universal.md#201-权限校验失败) | The permissions check fails. |
 
 **示例**
-
-```TypeScript
-uploadTask.remove().then((result: boolean) => {
-  console.info('Succeeded in removing the upload task.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to remove the upload task. Code: ${err.code}, message: ${err.message}`);
-});
-```
 
 ```TypeScript
 downloadTask.remove().then((result) => {
@@ -1474,58 +1344,6 @@ downloadTask.resume((err: BusinessError) => {
 });
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-
-// 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-let config: request.agent.Config = {
-  action: request.agent.Action.DOWNLOAD,
-  url: 'http://127.0.0.1', // 需要手动将url替换为真实服务器的HTTP协议地址
-  title: 'taskResumeTest',
-  description: 'Sample code for resume the download task',
-  mode: request.agent.Mode.BACKGROUND,
-  overwrite: false,
-  method: "GET",
-  data: "",
-  saveas: "./",
-  network: request.agent.Network.CELLULAR,
-  metered: false,
-  roaming: true,
-  retry: true,
-  redirect: true,
-  index: 0,
-  begins: 0,
-  ends: -1,
-  gauge: false,
-  precise: false,
-  token: "it is a secret"
-};
-request.agent.create(context, config).then(async (task: request.agent.Task) => {
-  task.start();
-  // 等待1秒再执行下一步操作，以防异步乱序
-  await new Promise<void>((resolve) => {
-    setTimeout(() => resolve(), 1000);
-  })
-  task.pause();
-  // 等待1秒再执行下一步操作，以防异步乱序
-  await new Promise<void>((resolve) => {
-    setTimeout(() => resolve(), 1000);
-  })
-  task.resume((err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to resume the download task, Code: ${err.code}, message: ${err.message}`);
-      return;
-    }
-    console.info(`Succeeded in resuming a download task. `);
-  });
-  console.info(`Succeeded in creating a download task. result: ${task.tid}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to create a download task, Code: ${err.code}, message: ${err.message}`);
-});
-```
-
 ## resume
 
 ```TypeScript
@@ -1567,56 +1385,6 @@ downloadTask.resume().then(() => {
   console.info('Succeeded in resuming the download task.');
 }).catch((err: BusinessError) => {
   console.error(`Failed to resume the download task. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-
-// 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-let config: request.agent.Config = {
-  action: request.agent.Action.DOWNLOAD,
-  url: 'http://127.0.0.1', // 需要手动将url替换为真实服务器的HTTP协议地址
-  title: 'taskResumeTest',
-  description: 'Sample code for resume the download task',
-  mode: request.agent.Mode.BACKGROUND,
-  overwrite: false,
-  method: "GET",
-  data: "",
-  saveas: "./",
-  network: request.agent.Network.CELLULAR,
-  metered: false,
-  roaming: true,
-  retry: true,
-  redirect: true,
-  index: 0,
-  begins: 0,
-  ends: -1,
-  gauge: false,
-  precise: false,
-  token: "it is a secret"
-};
-request.agent.create(context, config).then(async (task: request.agent.Task) => {
-  task.start();
-  // 等待1秒再执行下一步操作，以防异步乱序
-  await new Promise<void>((resolve) => {
-    setTimeout(() => resolve(), 1000);
-  })
-  task.pause();
-  // 等待1秒再执行下一步操作，以防异步乱序
-  await new Promise<void>((resolve) => {
-    setTimeout(() => resolve(), 1000);
-  })
-  task.resume().then(() => {
-    console.info(`Succeeded in resuming a download task. `);
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to resume the download task, Code: ${err.code}, message: ${err.message}`);
-  });
-  console.info(`Succeeded in creating a download task. result: ${task.tid}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to create a download task, Code: ${err.code}, message: ${err.message}`);
 });
 ```
 

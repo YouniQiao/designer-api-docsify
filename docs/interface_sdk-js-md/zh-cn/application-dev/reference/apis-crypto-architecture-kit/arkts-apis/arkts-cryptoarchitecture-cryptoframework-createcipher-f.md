@@ -43,7 +43,7 @@ function createCipher(transformation: string): Cipher
 
 | 类型 | 说明 |
 | --- | --- |
-| Cipher | 返回对应算法的Cipher实例。 |
+| [Cipher](arkts-cryptoarchitecture-cryptoframework-cipher-i.md) | 返回对应算法的Cipher实例。 |
 
 **错误码：**
 

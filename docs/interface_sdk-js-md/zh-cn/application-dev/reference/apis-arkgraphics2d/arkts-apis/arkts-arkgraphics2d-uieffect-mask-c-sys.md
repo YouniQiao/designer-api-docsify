@@ -70,7 +70,7 @@ static createFractalGlassMask(glassNum: number, glassStrength: number, glassSoft
 | glassStrength | number | 是 | 分形玻璃的扭曲强度。取值范围为 [0, 10]；超出范围的值将在内部被截断。 |
 | glassSoftness | number | 是 | 分形玻璃条纹的边缘柔和度。取值范围为 [0, 0.01]；超出范围的值将在内部被截断。 |
 | isSymmetric | boolean | 是 | 是否启用对称扭曲。「对称」指关于图像的垂直轴进行对称。 |
-| refractMask | image.PixelMap | 否 | 由 image 模块创建的 PixelMap 实例。可选参数，用于控制分形效果的有效区域。如果提供该参数，glassNum 不再表示条纹数量；glassNum 和 glassStrength 共同决定折射强度。 |
+| refractMask | [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | 否 | 由 image 模块创建的 PixelMap 实例。可选参数，用于控制分形效果的有效区域。如果提供该参数，glassNum 不再表示条纹数量；glassNum 和 glassStrength 共同决定折射强度。 |
 
 **返回值：**
 
@@ -97,9 +97,9 @@ static createPixelMapMask(pixelMap: image.PixelMap, srcRect: common2D.Rect, dstR
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| pixelMap | image.PixelMap | 是 | image模块创建的PixelMap实例。可通过图片解码或直接创建获得。 |
-| srcRect | common2D.Rect | 是 | pixelMap的待绘制区域。图片最左侧和最上侧对应位置0，最右侧和最下侧对应位置1。right需大于left，bottom需大于top，违反约束时效果不生效。 |
-| dstRect | common2D.Rect | 是 | pixelMap在mask挂载的节点上的绘制区域。节点最左侧和最上侧对应位置0，最右侧和最下侧对应位置1。right需大于left，bottom需大于top，违反约束时效果不生效。 |
+| pixelMap | [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | 是 | image模块创建的PixelMap实例。可通过图片解码或直接创建获得。 |
+| srcRect | [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) | 是 | pixelMap的待绘制区域。图片最左侧和最上侧对应位置0，最右侧和最下侧对应位置1。right需大于left，bottom需大于top，违反约束时效果不生效。 |
+| dstRect | [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) | 是 | pixelMap在mask挂载的节点上的绘制区域。节点最左侧和最上侧对应位置0，最右侧和最下侧对应位置1。right需大于left，bottom需大于top，违反约束时效果不生效。 |
 | fillColor | Color | 否 | 节点上在pixelMap绘制区域之外的区域填充的颜色，各元素取值范围为[0, 1]，默认透明色，小于0的转为0，大于1的转为1。 |
 
 **返回值：**
@@ -173,7 +173,7 @@ static createPixelMapMask(pixelMap: image.PixelMap): Mask
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| pixelMap | image.PixelMap | 是 | image模块创建的PixelMap实例。可通过图片解码或直接创建获得。 |
+| pixelMap | [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | 是 | image模块创建的PixelMap实例。可通过图片解码或直接创建获得。 |
 
 **返回值：**
 
@@ -297,7 +297,7 @@ static createRadialGradientMask(center: common2D.Point, radiusX: number, radiusY
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| center | common2D.Point | 是 | 设置椭圆的中心点，[0, 0]为组件左上角，[1, 1]为组件的右下角。取值范围为[-10, 10]，可取浮点数，超出边界会在实现时自动截断。 |
+| center | [common2D.Point](arkts-arkgraphics2d-common2d-point-i.md) | 是 | 设置椭圆的中心点，[0, 0]为组件左上角，[1, 1]为组件的右下角。取值范围为[-10, 10]，可取浮点数，超出边界会在实现时自动截断。 |
 | radiusX | number | 是 | 设置椭圆的长轴，半径为1等于组件的高度。取值范围为[0, 10]，可取浮点数，超出边界会在实现时自动截断。 |
 | radiusY | number | 是 | 设置椭圆的短轴，半径为1等于组件的高度。取值范围为[0, 10]，可取浮点数，超出边界会在实现时自动截断。 |
 | gradients | Array&lt;[number, number]&gt; | 是 | 数组中保存的二元数组表示梯度：[RGBA颜色, 位置]。RGBA颜色四通道使用相同的值，可看作一个灰度值；位置表示沿径向方向向外时RGBA颜色对应的分布位置；RGBA颜色与位置的取值范围均为[0, 1]，可取浮点数，小于0的转为0，大于1的转为1。位置参数值须严格递增，Array数组中二元数组个数必须大于等于2，二元数组中的元素不能为空，否则该椭圆分布效果不生效。 |
@@ -354,7 +354,7 @@ static createRippleMask(center: common2D.Point, radius: number, width: number, o
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| center | common2D.Point | 是 | 设置波环圆心在组件上的位置，[0, 0]为组件左上角，[1, 1]为组件的右下角。取值范围为[-10, 10]，超出边界会在实现时自动截断。 |
+| center | [common2D.Point](arkts-arkgraphics2d-common2d-point-i.md) | 是 | 设置波环圆心在组件上的位置，[0, 0]为组件左上角，[1, 1]为组件的右下角。取值范围为[-10, 10]，超出边界会在实现时自动截断。 |
 | radius | number | 是 | 设置波环的半径，使用归一化值。半径为1时，波环半径等于组件高度。取值范围为[0, 10]，超出边界会在实现时自动截断。 |
 | width | number | 是 | 设置波环的宽度，使用归一化值。宽度为1时，波环宽度等于组件高度。取值范围为[0, 10]，超出边界会在实现时自动截断。 |
 | offset | number | 否 | 设置波峰位置的偏移。默认值为0，表示波峰在波环的正中心；-1.0表示波峰在波环的最内侧；1.0表示波峰在波环的最外侧。取值范围为[-1, 1]，超出边界会在实现时自动截断。 |
@@ -544,7 +544,7 @@ static createWaveGradientMask(center: common2D.Point, width: number, propagation
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| center | common2D.Point | 是 | 设置单波波源的中心点，[0, 0]为组件左上角，[1, 1]为组件的右下角。取值范围为[-10, 10]，可取浮点数，超出边界会在实现时自动截断。 |
+| center | [common2D.Point](arkts-arkgraphics2d-common2d-point-i.md) | 是 | 设置单波波源的中心点，[0, 0]为组件左上角，[1, 1]为组件的右下角。取值范围为[-10, 10]，可取浮点数，超出边界会在实现时自动截断。 |
 | width | number | 是 | 设置单波圆环的宽度。取值范围为[0, 5]，可取浮点数，超出边界会在实现时自动截断。 |
 | propagationRadius | number | 是 | 设置单波圆环的扩散外径。取值范围为[0, 10]，可取浮点数，超出边界会在实现时自动截断。 |
 | blurRadius | number | 是 | 设置单波圆环的模糊外径，模糊半径为0则是实边圆环，否则是虚边圆环。取值范围为[0, 5]，可取浮点数，超出边界会在实现时自动截断。 |

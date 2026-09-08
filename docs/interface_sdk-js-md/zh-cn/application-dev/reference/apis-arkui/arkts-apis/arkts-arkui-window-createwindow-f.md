@@ -32,7 +32,7 @@ function createWindow(config: Configuration, callback: AsyncCallback<Window>): v
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| config | Configuration | 是 | 创建窗口时的参数。 |
+| config | [Configuration](arkts-arkui-window-configuration-i.md) | 是 | 创建窗口时的参数。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Window](arkts-arkui-window-window-i.md)&gt; | 是 | 回调函数。返回当前创建的窗口对象。 |
 
 **错误码：**
@@ -109,7 +109,7 @@ function createWindow(config: Configuration): Promise<Window>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| config | Configuration | 是 | 创建窗口时的参数。 |
+| config | [Configuration](arkts-arkui-window-configuration-i.md) | 是 | 创建窗口时的参数。 |
 
 **返回值：**
 

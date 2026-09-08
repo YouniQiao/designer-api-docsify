@@ -41,7 +41,7 @@ download(table: string, gid: string, prefix: string, assets: Array<CloudAsset>):
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;Result&lt;[CloudAsset](arkts-arkdata-cloudextension-cloudasset-i-sys.md)&gt;&gt;&gt; | Promise对象，返回资产下载结果，包含资产ID和资产哈希值。 |
+| Promise&lt;Array&lt;[Result](arkts-arkdata-relationalstore-result-i.md)&lt;[CloudAsset](arkts-arkdata-cloudextension-cloudasset-i-sys.md)&gt;&gt;&gt; | Promise对象，返回资产下载结果，包含资产ID和资产哈希值。 |
 
 **示例**
 
@@ -82,7 +82,7 @@ upload(table: string, gid: string, assets: Array<CloudAsset>): Promise<Array<Res
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;Result&lt;[CloudAsset](arkts-arkdata-cloudextension-cloudasset-i-sys.md)&gt;&gt;&gt; | Promise对象，返回资产上云的结果，包含资产ID和资产哈希值。 |
+| Promise&lt;Array&lt;[Result](arkts-arkdata-relationalstore-result-i.md)&lt;[CloudAsset](arkts-arkdata-cloudextension-cloudasset-i-sys.md)&gt;&gt;&gt; | Promise对象，返回资产上云的结果，包含资产ID和资产哈希值。 |
 
 **示例**
 

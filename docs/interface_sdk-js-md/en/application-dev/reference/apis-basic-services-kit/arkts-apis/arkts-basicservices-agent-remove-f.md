@@ -35,46 +35,6 @@ Removes a specified task of the invoker. If the task is being executed, the task
 | [13400003](../errorcode-request.md#13400003-service-error) | Task service ability error. |
 | [21900006](../errorcode-request.md#21900006-task-not-found) | Task removed or not found. |
 
-**Examples**
-
-```TypeScript
-uploadTask.remove().then((result: boolean) => {
-  console.info('Succeeded in removing the upload task.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to remove the upload task. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
-```TypeScript
-uploadTask.remove((err: BusinessError, result: boolean) => {
-  if (err) {
-    console.error(`Failed to remove the upload task. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  if (result) {
-    console.info('Succeeded in removing the upload task.');
-  }
-});
-```
-
-```TypeScript
-downloadTask.remove().then((result) => {
-  console.info('Succeeded in removing the download task.');
-}).catch ((err: BusinessError) => {
-  console.error(`Failed to remove the download task. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
-```TypeScript
-downloadTask.remove((err, result)=>{
-  if(err) {
-    console.error(`Failed to remove the download task. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in removing the download task.');
-});
-```
-
 
 ## remove
 
@@ -109,7 +69,3 @@ Removes a specified task of the invoker. If the task is being executed, the task
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:   1. Missing mandatory parameters.   2. Incorrect parameter type. |
 | [13400003](../errorcode-request.md#13400003-service-error) | Task service ability error. |
 | [21900006](../errorcode-request.md#21900006-task-not-found) | Task removed or not found. |
-
-**Examples**
-
-See [remove](#remove)

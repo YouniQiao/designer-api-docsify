@@ -90,7 +90,7 @@ manufactureData: Array<ManufactureData>
 
 要携带的制造商数据内容。
 
-**类型：** Array&lt;ManufactureData&gt;
+**类型：** Array&lt;[ManufactureData](arkts-connectivity-ble-manufacturedata-i.md)&gt;
 
 **起始版本：** 10
 
@@ -108,7 +108,7 @@ serviceData: Array<ServiceData>
 
 要携带的服务数据内容。
 
-**类型：** Array&lt;ServiceData&gt;
+**类型：** Array&lt;[ServiceData](arkts-connectivity-ble-servicedata-i.md)&gt;
 
 **起始版本：** 10
 

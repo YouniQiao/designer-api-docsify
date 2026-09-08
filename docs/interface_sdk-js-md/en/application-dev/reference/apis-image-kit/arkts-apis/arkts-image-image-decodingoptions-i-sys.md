@@ -20,7 +20,7 @@ resolutionQuality?: ResolutionQuality
 
 Image quality.
 
-**Type:** ResolutionQuality
+**Type:** [ResolutionQuality](arkts-image-image-resolutionquality-e-sys.md)
 
 **Since:** 12
 

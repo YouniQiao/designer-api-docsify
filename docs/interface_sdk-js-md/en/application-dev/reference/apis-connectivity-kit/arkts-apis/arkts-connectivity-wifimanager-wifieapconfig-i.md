@@ -132,7 +132,7 @@ eapMethod: EapMethod
 
 EAP authentication method
 
-**Type:** EapMethod
+**Type:** [EapMethod](arkts-connectivity-wifimanager-eapmethod-e.md)
 
 **Since:** 10
 
@@ -188,7 +188,7 @@ phase2Method: Phase2Method
 
 Phase 2 authentication method
 
-**Type:** Phase2Method
+**Type:** [Phase2Method](arkts-connectivity-wifimanager-phase2method-e.md)
 
 **Since:** 10
 

@@ -28,7 +28,7 @@ function getActiveNotifications(callback: AsyncCallback<Array<NotificationReques
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;NotificationRequest&gt;&gt; | 是 | 回调函数。当获取未删除的通知列表成功，err为undefined，data为获取到的通知列表，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[NotificationRequest](arkts-notification-notificationmanager-notificationrequest-t.md)&gt;&gt; | 是 | 回调函数。当获取未删除的通知列表成功，err为undefined，data为获取到的通知列表，否则为错误对象。 |
 
 **错误码：**
 
@@ -77,7 +77,7 @@ function getActiveNotifications(): Promise<Array<NotificationRequest>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;NotificationRequest&gt;&gt; | Promise对象，返回当前应用的通知列表。 |
+| Promise&lt;Array&lt;[NotificationRequest](arkts-notification-notificationmanager-notificationrequest-t.md)&gt;&gt; | Promise对象，返回当前应用的通知列表。 |
 
 **错误码：**
 

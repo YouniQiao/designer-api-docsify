@@ -28,7 +28,7 @@ Unregisters the observer for network status change events. This API uses an asyn
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'networkStateChange' | Yes | Network status change event. This field has a fixed value of **networkStateChange**. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;NetworkState&gt; | No | Callback used to return the network status object. which is the [NetworkState](arkts-telephony-radio-networkstate-i.md) object. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[NetworkState](arkts-telephony-observer-networkstate-t.md)&gt; | No | Callback used to return the network status object. which is the [NetworkState](arkts-telephony-radio-networkstate-i.md) object. |
 
 **Error codes:**
 
@@ -75,7 +75,7 @@ Unregisters the observer for signal status change events. This API uses an async
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'signalInfoChange' | Yes | Signal status change event. This field has a fixed value of **signalInfoChange**. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;SignalInformation&gt;&gt; | No | Callback used to return the signal strength object. For details, see [SignalInformation](arkts-telephony-radio-signalinformation-i.md). |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[SignalInformation](arkts-telephony-observer-signalinformation-t.md)&gt;&gt; | No | Callback used to return the signal strength object. For details, see [SignalInformation](arkts-telephony-radio-signalinformation-i.md). |
 
 **Error codes:**
 
@@ -171,7 +171,7 @@ Unregisters the observer for the uplink and downlink data flow status change eve
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'cellularDataFlowChange' | Yes | Cellular data flow change event. This field has a fixed value of **cellularDataFlowChange**. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DataFlowType&gt; | No | Callback function used to return the data flow status object. For details, see [DataFlowType](arkts-telephony-data-dataflowtype-e.md) in **data**. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DataFlowType](arkts-telephony-observer-dataflowtype-t.md)&gt; | No | Callback function used to return the data flow status object. For details, see [DataFlowType](arkts-telephony-data-dataflowtype-e.md) in **data**. |
 
 **Error codes:**
 
@@ -267,7 +267,7 @@ Unregisters the observer for extended call status change events. This API uses a
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'callStateChangeEx' | Yes | Call status change event. This field has a fixed value of **callStateChange**. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;TelCallState&gt; | No | Callback function used to return the call status information object. For details, see [TelCallState](arkts-telephony-call-telcallstate-e.md) in **call**. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[TelCallState](arkts-telephony-observer-telcallstate-t.md)&gt; | No | Callback function used to return the call status information object. For details, see [TelCallState](arkts-telephony-call-telcallstate-e.md) in **call**. |
 
 **Error codes:**
 

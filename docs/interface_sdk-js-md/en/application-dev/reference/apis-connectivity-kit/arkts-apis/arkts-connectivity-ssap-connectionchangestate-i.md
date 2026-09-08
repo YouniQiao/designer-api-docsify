@@ -36,7 +36,7 @@ state: ConnectionState
 
 Connection status with a remote device.
 
-**Type:** ConnectionState
+**Type:** [ConnectionState](arkts-connectivity-ssap-connectionstate-t.md)
 
 **Since:** 26.0.0
 

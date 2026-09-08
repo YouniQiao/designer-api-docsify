@@ -70,36 +70,6 @@ class Temperature implements util.ScopeComparable {
 let tempLower = new Temperature(30);
 let tempUpper = new Temperature(40);
 let tempMiDF = new Temperature(35);
-let range = new util.ScopeHelper(tempLower, tempUpper);
-let result = range.clamp(tempMiDF);
-console.info("result = " + result);
-// Output: result = 35
-```
-
-```TypeScript
-class Temperature implements util.ScopeComparable {
-  private readonly _temp: number;
-
-  constructor(value: number) {
-    this._temp = value;
-  }
-
-  compareTo(value: Temperature) {
-    return this._temp >= value.getTemp();
-  }
-
-  getTemp() {
-    return this._temp;
-  }
-
-  toString(): string {
-    return this._temp.toString();
-  }
-}
-
-let tempLower = new Temperature(30);
-let tempUpper = new Temperature(40);
-let tempMiDF = new Temperature(35);
 let range = new util.Scope(tempLower, tempUpper);
 let result = range.clamp(tempMiDF);
 console.info("result = " + result);
@@ -130,33 +100,6 @@ A constructor used to create a **Scope** object with the specified upper and low
 | upperObj | [ScopeType](arkts-arkts-util-scopetype-t.md) | Yes | Upper limit of the **Scope** object. |
 
 **Examples**
-
-```TypeScript
-class Temperature implements util.ScopeComparable {
-  private readonly _temp: number;
-
-  constructor(value: number) {
-    this._temp = value;
-  }
-
-  compareTo(value: Temperature) {
-    return this._temp >= value.getTemp();
-  }
-
-  getTemp() {
-    return this._temp;
-  }
-
-  toString(): string {
-    return this._temp.toString();
-  }
-}
-let tempLower = new Temperature(30);
-let tempUpper = new Temperature(40);
-let range = new util.ScopeHelper(tempLower, tempUpper);
-console.info("range = " + range);
-// Output: range = [30, 40]
-```
 
 ```TypeScript
 class Temperature implements util.ScopeComparable {
@@ -215,36 +158,6 @@ Checks whether a value is within this **Scope**.
 | boolean | Check result. The value **true** is returned if the value is within this **Scope**; otherwise, **false** is returned. |
 
 **Examples**
-
-```TypeScript
-class Temperature implements util.ScopeComparable {
-  private readonly _temp: number;
-
-  constructor(value: number) {
-    this._temp = value;
-  }
-
-  compareTo(value: Temperature) {
-    return this._temp >= value.getTemp();
-  }
-
-  getTemp() {
-    return this._temp;
-  }
-
-  toString(): string {
-    return this._temp.toString();
-  }
-}
-
-let tempLower = new Temperature(30);
-let tempUpper = new Temperature(40);
-let tempMiDF = new Temperature(35);
-let range = new util.ScopeHelper(tempLower, tempUpper);
-let result = range.contains(tempMiDF);
-console.info("result = " + result);
-// Output: result = true
-```
 
 ```TypeScript
 class Temperature implements util.ScopeComparable {
@@ -569,35 +482,6 @@ class Temperature implements util.ScopeComparable {
 
 let tempLower = new Temperature(30);
 let tempUpper = new Temperature(40);
-let range = new util.ScopeHelper(tempLower, tempUpper);
-let result = range.getLower();
-console.info("result = " + result);
-// Output: result = 30
-```
-
-```TypeScript
-class Temperature implements util.ScopeComparable {
-  private readonly _temp: number;
-
-  constructor(value: number) {
-    this._temp = value;
-  }
-
-  compareTo(value: Temperature) {
-    return this._temp >= value.getTemp();
-  }
-
-  getTemp() {
-    return this._temp;
-  }
-
-  toString(): string {
-    return this._temp.toString();
-  }
-}
-
-let tempLower = new Temperature(30);
-let tempUpper = new Temperature(40);
 let range = new util.Scope(tempLower, tempUpper);
 let result = range.getLower();
 console.info("result = " + result);
@@ -627,35 +511,6 @@ Obtains the upper limit of this **Scope**.
 | [ScopeType](arkts-arkts-util-scopetype-t.md) | Upper limit of this **Scope**. |
 
 **Examples**
-
-```TypeScript
-class Temperature implements util.ScopeComparable {
-  private readonly _temp: number;
-
-  constructor(value: number) {
-    this._temp = value;
-  }
-
-  compareTo(value: Temperature) {
-    return this._temp >= value.getTemp();
-  }
-
-  getTemp() {
-    return this._temp;
-  }
-
-  toString(): string {
-    return this._temp.toString();
-  }
-}
-
-let tempLower = new Temperature(30);
-let tempUpper = new Temperature(40);
-let range = new util.ScopeHelper(tempLower, tempUpper);
-let result = range.getUpper();
-console.info("result = " + result);
-// Output: result = 40
-```
 
 ```TypeScript
 class Temperature implements util.ScopeComparable {
@@ -833,71 +688,6 @@ Obtains a string representation that contains this **Scope**.
 | string | String representation containing the **Scope**. |
 
 **Examples**
-
-```TypeScript
-let rationalNumber = new util.RationalNumber(1,2);
-let result = rationalNumber.toString();
-console.info("result = " + result);
-// Output: result = 1/2
-```
-
-You are advised to use the following code snippet for API version 9 and later versions:
-
-```TypeScript
-let rationalNumber = util.RationalNumber.parseRationalNumber(1,2);
-let result = rationalNumber.toString();
-console.info("result = " + result);
-// Output: result = 1/2
-```
-
-```TypeScript
-let pro = new util.LRUCache<number, number>();
-pro.put(2, 10);
-pro.get(2);
-pro.get(3);
-console.info(pro.toString());
-// Output: LRUCache[ maxSize = 64, hits = 1, misses = 1, hitRate = 50% ]
-// maxSize: maximum size of the cache. hits: number of matched queries. misses: number of mismatched queries. hitRate: matching rate.
-```
-
-```TypeScript
-class Temperature implements util.ScopeComparable {
-  private readonly _temp: number;
-
-  constructor(value: number) {
-    this._temp = value;
-  }
-
-  compareTo(value: Temperature) {
-    return this._temp >= value.getTemp();
-  }
-
-  getTemp() {
-    return this._temp;
-  }
-
-  toString(): string {
-    return this._temp.toString();
-  }
-}
-
-let tempLower = new Temperature(30);
-let tempUpper = new Temperature(40);
-let range = new util.ScopeHelper(tempLower, tempUpper);
-let result = range.toString();
-console.info("result = " + result);
-// Output: result = [30, 40]
-```
-
-```TypeScript
-let pro : util.LruBuffer<number,number> = new util.LruBuffer();
-pro.put(2,10);
-pro.get(2);
-pro.remove(20);
-let result = pro.toString();
-console.info("result = " + result);
-// Output: result = Lrubuffer[ maxSize = 64, hits = 1, misses = 0, hitRate = 100% ]
-```
 
 ```TypeScript
 class Temperature implements util.ScopeComparable {

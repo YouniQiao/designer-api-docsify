@@ -81,15 +81,6 @@ Obtains a collaborative playback management instance.
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
 
-**Examples**
-
-```TypeScript
-import { audio } from '@kit.AudioKit';
-
-let audioManager: audio.AudioManager = audio.getAudioManager();
-let audioCollaborativeManager: audio.AudioCollaborativeManager = audioManager.getCollaborativeManager();
-```
-
 ## getEffectManager
 
 ```TypeScript

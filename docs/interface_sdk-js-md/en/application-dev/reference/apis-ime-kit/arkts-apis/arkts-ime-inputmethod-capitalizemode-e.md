@@ -5,9 +5,9 @@ Enumerates the modes of capitalizing the first letter of a text.
 | Name| Value| Description|  
 | -------- | -- | -------- |  
 | NONE | 0 | The first letter is not capitalized.|
-| SENTENCES | 1 | The first letter of each sentence is capitalized.|
-| WORDS | 2 | The first letter of each word is capitalized.|
-| CHARACTERS | 3 | All letters are capitalized.|
+| [SENTENCES](arkts-ime-inputmethod-capitalizemode-e.md) | 1 | The first letter of each sentence is capitalized.|
+| [WORDS](arkts-ime-inputmethod-capitalizemode-e.md) | 2 | The first letter of each word is capitalized.|
+| [CHARACTERS](arkts-ime-inputmethod-capitalizemode-e.md) | 3 | All letters are capitalized.|
 
 **Since:** 20
 

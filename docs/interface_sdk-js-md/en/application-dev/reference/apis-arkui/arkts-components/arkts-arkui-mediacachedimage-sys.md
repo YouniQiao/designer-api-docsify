@@ -22,7 +22,7 @@ Image resource to be obtained.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| src | PixelMap \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| DrawableDescriptor \| [ASTCResource](arkts-arkui-astcresource-i-sys.md) | Yes |  |
+| src | [PixelMap](arkts-arkui-pixelmap-t.md) \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| DrawableDescriptor \| [ASTCResource](arkts-arkui-astcresource-i-sys.md) | Yes |  |
 
 ## Summary
 

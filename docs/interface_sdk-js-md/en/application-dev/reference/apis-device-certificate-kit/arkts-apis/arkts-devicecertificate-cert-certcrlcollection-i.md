@@ -36,7 +36,7 @@ Selects certificates that match the specified parameters. This API uses a promis
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;X509Cert&gt;&gt; | Promise used to return the matched certificates. |
+| Promise&lt;Array&lt;[X509Cert](arkts-devicecertificate-cert-x509cert-i.md)&gt;&gt; | Promise used to return the matched certificates. |
 
 **Error codes:**
 
@@ -128,7 +128,7 @@ Selects certificates that match the specified parameters. This API uses an async
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | param | [X509CertMatchParameters](arkts-devicecertificate-cert-x509certmatchparameters-i.md) | Yes | Parameters used to match the certificates. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;X509Cert&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the matched certificates obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[X509Cert](arkts-devicecertificate-cert-x509cert-i.md)&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the matched certificates obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 

@@ -127,21 +127,8 @@ constructor(type: Type, effect: Effect)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | Type | 是 | 转场类型，指定该转场效果生效的场景。默认值：TransitionType.All，即插入删除都生效。不指定type时默认为TransitionType.All。 |
+| type | [Type](../arkts-apis/arkts-arkui-arkui-statemanagement-type-d.md) | 是 | 转场类型，指定该转场效果生效的场景。默认值：TransitionType.All，即插入删除都生效。不指定type时默认为TransitionType.All。 |
 | effect | [Effect](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-sceneresources-effect-i.md) | 是 | 转场效果配置，用于指定具体的转场动画效果，包括透明度、平移、旋转、缩放等转场效果的参数设置。 |
-
-**示例**
-
-```TypeScript
-@Builder
-function myBuilder(value: string, size: number) {
-  Text(value)
-    .fontSize(size)
-}
-
-// 使用WrappedBuilder封装myBuilder
-let builderVar: WrappedBuilder<[string, number]> = new WrappedBuilder<[string, number]>(myBuilder);
-```
 
 ## move
 

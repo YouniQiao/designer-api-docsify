@@ -34,7 +34,7 @@ certType?: CertType
 
 证书类型，默认是PEM。
 
-**类型：** CertType
+**类型：** [CertType](arkts-network-http-certtype-e.md)
 
 **起始版本：** 11
 

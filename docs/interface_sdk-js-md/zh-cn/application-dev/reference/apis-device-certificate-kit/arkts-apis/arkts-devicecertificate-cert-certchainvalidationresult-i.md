@@ -20,7 +20,7 @@ readonly entityCert: X509Cert
 
 表示实体证书。
 
-**类型：** X509Cert
+**类型：** [X509Cert](arkts-devicecertificate-cert-x509cert-i.md)
 
 **起始版本：** 11
 

@@ -29,7 +29,7 @@ With **ColoringStrategy**, the average color or primary color can be obtained, a
 
 The **'average'** string can be used to trigger the mode for obtaining the average color, and the **'primary'** string for obtaining the primary color.
 
-**Type:** Color \| string \| Resource \| [ColoringStrategy](../arkts-apis/arkts-arkui-coloringstrategy-e.md)
+**Type:** [Color](../arkts-apis/arkts-arkui-color-e.md) \| string \| [Resource](../arkts-apis/arkts-arkui-resource-t.md) \| [ColoringStrategy](../arkts-apis/arkts-arkui-coloringstrategy-e.md)
 
 **Since:** 7
 
@@ -85,7 +85,7 @@ To use a value in the unit of vp, you can use [vp2px](../arkts-apis/arkts-arkui-
 
 If **offsetX** is of the Resource type, its value must be of the number type.
 
-**Type:** number \| Resource
+**Type:** number \| [Resource](../arkts-apis/arkts-arkui-resource-t.md)
 
 **Since:** 7
 
@@ -113,7 +113,7 @@ To use a value in the unit of vp, you can use [vp2px](../arkts-apis/arkts-arkui-
 
 If **offsetY** is of the Resource type, its value must be of the number type.
 
-**Type:** number \| Resource
+**Type:** number \| [Resource](../arkts-apis/arkts-arkui-resource-t.md)
 
 **Since:** 7
 
@@ -143,7 +143,7 @@ To use a value in the unit of vp, you can use [vp2px](../arkts-apis/arkts-arkui-
 
 If **radius** is of the Resource type, its value must be of the number type.
 
-**Type:** number \| Resource
+**Type:** number \| [Resource](../arkts-apis/arkts-arkui-resource-t.md)
 
 **Since:** 7
 

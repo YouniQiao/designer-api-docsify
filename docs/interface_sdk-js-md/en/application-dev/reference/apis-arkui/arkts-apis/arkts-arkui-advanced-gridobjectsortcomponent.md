@@ -1,5 +1,13 @@
 # @ohos.arkui.advanced.GridObjectSortComponent
 
+## Child Components
+
+Not supported
+
+## Events
+
+The universal events are not supported.
+
 ## Modules to Import
 
 ```TypeScript

@@ -2,7 +2,7 @@
 
 Enumerates the error code of the permission policy for the URI operation.
 
-@enum { number } PolicyErrorCode
+@enum { int } PolicyErrorCode
 
 **Since:** 11
 

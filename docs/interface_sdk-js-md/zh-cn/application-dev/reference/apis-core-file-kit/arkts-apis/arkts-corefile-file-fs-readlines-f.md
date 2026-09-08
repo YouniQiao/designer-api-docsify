@@ -43,30 +43,11 @@ declare function readLines(filePath: string, options?: Options): Promise<ReaderI
 | 13900022 | Too many open files |
 | 13900025 | No space left on device |
 | 13900027 | Read-only file system |
-| 13900030 | File name too number |
+| 13900030 | File name too long |
 | 13900033 | Too many symbolic links encountered |
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
 | 13900044 | Network is unreachable<br>**适用版本：** 12+ |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { Options } from '@kit.CoreFileKit';
-
-let filePath = pathDir + "/test.txt";
-let options: Options = {
-  encoding: 'utf-8'
-};
-fileIo.readLines(filePath, options).then((readerIterator: fileIo.ReaderIterator) => {
-  for (let it = readerIterator.next(); !it.done; it = readerIterator.next()) {
-    console.info(`Succeeded in reading lines, content: ${it.value}`);
-  }
-}).catch((err: BusinessError) => {
-  console.error(`Failed to read lines. Code: ${err.code}, message: ${err.message}`);
-});
-```
 
 
 ## readLines
@@ -100,27 +81,10 @@ declare function readLines(filePath: string, callback: AsyncCallback<ReaderItera
 | 13900022 | Too many open files |
 | 13900025 | No space left on device |
 | 13900027 | Read-only file system |
-| 13900030 | File name too number |
+| 13900030 | File name too long |
 | 13900033 | Too many symbolic links encountered |
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let filePath = pathDir + "/test.txt";
-fileIo.readLines(filePath, (err: BusinessError, readerIterator: fileIo.ReaderIterator) => {
-  if (err) {
-    console.error(`Failed to read lines. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    for (let it = readerIterator.next(); !it.done; it = readerIterator.next()) {
-      console.info(`Succeeded in reading lines, content: ${it.value}`);
-    }
-  }
-});
-```
 
 
 ## readLines
@@ -155,28 +119,7 @@ declare function readLines(filePath: string, options: Options, callback: AsyncCa
 | 13900022 | Too many open files |
 | 13900025 | No space left on device |
 | 13900027 | Read-only file system |
-| 13900030 | File name too number |
+| 13900030 | File name too long |
 | 13900033 | Too many symbolic links encountered |
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { Options } from '@kit.CoreFileKit';
-
-let filePath = pathDir + "/test.txt";
-let options: Options = {
-  encoding: 'utf-8'
-};
-fileIo.readLines(filePath, options, (err: BusinessError, readerIterator: fileIo.ReaderIterator) => {
-  if (err) {
-    console.error(`Failed to read lines. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    for (let it = readerIterator.next(); !it.done; it = readerIterator.next()) {
-      console.info(`Succeeded in reading lines, content: ${it.value}`);
-    }
-  }
-});
-```

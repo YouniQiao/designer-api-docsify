@@ -74,7 +74,7 @@ IP地址类型。
 
 **系统接口：** 此接口为系统接口。
 
-**类型：** IpType
+**类型：** [IpType](arkts-connectivity-wifi-iptype-e-sys.md)
 
 **起始版本：** 6
 
@@ -162,7 +162,7 @@ staticIp: IpConfig
 
 **系统接口：** 此接口为系统接口。
 
-**类型：** IpConfig
+**类型：** [IpConfig](arkts-connectivity-wifi-ipconfig-i-sys.md)
 
 **起始版本：** 6
 

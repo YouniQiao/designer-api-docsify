@@ -32,7 +32,7 @@ No permission is required for obtaining the caller's own information.
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name. |
 | abilityName | string | Yes | Ability name. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;image.PixelMap&gt; | Yes | Callback used to return the [PixelMap](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md). |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)&gt; | Yes | Callback used to return the [PixelMap](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md). |
 
 **Examples**
 
@@ -98,7 +98,7 @@ No permission is required for obtaining the caller's own information.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;image.PixelMap&gt; | Returns the PixelMap object representing the icon of the specified ability. |
+| Promise&lt;[image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)&gt; | Returns the PixelMap object representing the icon of the specified ability. |
 
 **Examples**
 

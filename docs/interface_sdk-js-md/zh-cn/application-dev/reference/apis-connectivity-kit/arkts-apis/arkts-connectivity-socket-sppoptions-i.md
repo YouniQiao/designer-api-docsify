@@ -56,7 +56,7 @@ type: SppType
 
 蓝牙套接字链路类型。
 
-**类型：** SppType
+**类型：** [SppType](arkts-connectivity-socket-spptype-e.md)
 
 **起始版本：** 10
 

@@ -24,50 +24,6 @@ BackForwardCacheOptions的构造函数。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
-**示例**
-
-```TypeScript
-// xxx.ets
-import { webview, WebNetErrorList } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('response').onClick(() => {
-        let response = new webview.WebSchemeHandlerResponse();
-        try {
-          response.setUrl("http://www.example.com")
-          response.setStatus(200)
-          response.setStatusText("OK")
-          response.setMimeType("text/html")
-          response.setEncoding("utf-8")
-          response.setHeaderByName("header1", "value1", false)
-          response.setNetErrorCode(WebNetErrorList.NET_OK)
-          response.setCustomErrorCode(1001)
-          console.info("[schemeHandler] getUrl:" + response.getUrl())
-          console.info("[schemeHandler] getStatus:" + response.getStatus())
-          console.info("[schemeHandler] getStatusText:" + response.getStatusText())
-          console.info("[schemeHandler] getMimeType:" + response.getMimeType())
-          console.info("[schemeHandler] getEncoding:" + response.getEncoding())
-          console.info("[schemeHandler] getHeaderByName:" + response.getHeaderByName("header1"))
-          console.info("[schemeHandler] getNetErrorCode:" + response.getNetErrorCode())
-          console.info("[schemeHandler] getCustomErrorCode:" + response.getCustomErrorCode())
-
-        } catch (error) {
-          console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-        }
-      })
-      Web({ src: 'https://www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
 ## size
 
 ```TypeScript

@@ -2,7 +2,7 @@
 
 Target type.
 
-@enum { number }
+@enum { int }
 
 **Since:** 21
 

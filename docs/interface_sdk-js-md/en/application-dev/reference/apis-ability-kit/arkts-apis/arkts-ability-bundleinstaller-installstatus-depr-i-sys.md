@@ -18,7 +18,7 @@ status: bundle.InstallErrorCode
 
 Installation or uninstall error code. The value must be defined in [InstallErrorCode](arkts-ability-bundle-installerrorcode-e.md).
 
-**Type:** bundle.InstallErrorCode
+**Type:** [bundle.InstallErrorCode](arkts-ability-bundle-installerrorcode-e.md)
 
 **Default:** Indicates the install or uninstall error code
 

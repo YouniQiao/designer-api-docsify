@@ -12,4 +12,4 @@ Defines the ability information.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
-**Type:** _AbilityInfo.AbilityInfo
+**Type:** [_AbilityInfo.AbilityInfo](arkts-ability-abilityinfo-i.md)

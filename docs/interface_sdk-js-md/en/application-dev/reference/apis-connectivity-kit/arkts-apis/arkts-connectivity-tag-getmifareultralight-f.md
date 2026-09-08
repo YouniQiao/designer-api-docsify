@@ -30,7 +30,7 @@ Obtains a **MifareUltralightTag** object, which allows access to the tags that u
 
 | Type | Description |
 | --- | --- |
-| MifareUltralightTag | MifareUltralightTag** object obtained. |
+| [MifareUltralightTag](arkts-connectivity-tag-mifareultralighttag-t.md) | MifareUltralightTag** object obtained. |
 
 **Error codes:**
 

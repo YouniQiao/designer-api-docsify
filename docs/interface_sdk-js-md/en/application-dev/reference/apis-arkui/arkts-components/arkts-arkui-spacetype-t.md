@@ -20,4 +20,4 @@ Describes the supported data types for the **space** parameter in the constructo
 | --- | --- |
 | string | Represents a string value. It can take any string value. |
 | number | Represents a numeric value. It can take any numerical value. |
-| Resource | Represents a resource reference type. It can take values from system resources or application resources. |
+| [Resource](../arkts-apis/arkts-arkui-resource-t.md) | Represents a resource reference type. It can take values from system resources or application resources. |

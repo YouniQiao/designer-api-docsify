@@ -26,7 +26,7 @@ Obtains all valid (not yet expired) reminders set by the current application. Th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;ReminderRequest&gt;&gt; | Yes | Callback used to return an array of all valid reminders set by the current application. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[ReminderRequest](arkts-backgroundtasks-reminderagent-reminderrequest-i.md)&gt;&gt; | Yes | Callback used to return an array of all valid reminders set by the current application. |
 
 **Examples**
 
@@ -80,7 +80,7 @@ Obtains all valid (not yet expired) reminders set by the current application. Th
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;ReminderRequest&gt;&gt; | Promise used to return an array of all valid reminders set by the current application. |
+| Promise&lt;Array&lt;[ReminderRequest](arkts-backgroundtasks-reminderagent-reminderrequest-i.md)&gt;&gt; | Promise used to return an array of all valid reminders set by the current application. |
 
 **Examples**
 

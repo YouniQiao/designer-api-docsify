@@ -52,185 +52,6 @@ Registers a callback to listen for gesture triggering information.
 | option | [GestureObserverConfigs](arkts-arkui-arkui-uicontext-gestureobserverconfigs-i.md) | Yes | Configuration options for binding the global listener. |
 | callback | [GestureListenerCallback](arkts-arkui-gesturelistenercallback-t.md) | Yes | Callback triggered when the gesture state updates. |
 
-**Examples**
-
-This example uses global gesture listeners to monitor the trigger status of three independent areas (Tap, Pan, and LongPress) in real time, records the trigger count and last operation information for each gesture, and automatically manages the registration and unregistration of listeners during the component's lifecycle.
-
-```TypeScript
-// Index.ets
-// Example usage of uiObserver.addGlobalGestureListener(type, option, callback)
-// uiObserver.removeGlobalGestureListener(type, callback)
-
-import { GestureListenerType, GestureActionPhase, GestureTriggerInfo, GestureListenerCallback } from '@kit.ArkUI';
-
-@Entry
-@Component
-struct Index {
-  @State tapCount: number = 0;
-  @State panCount: number = 0;
-  @State longPressCount: number = 0;
-  @State lastAction: string = 'None';
-  @State lastArea: string = 'None';
-
-  // Store listener callback references.
-  private tapCallback?: GestureListenerCallback;
-  private panCallback?: GestureListenerCallback;
-  private longPressCallback?: GestureListenerCallback;
-
-  // Enable global listeners.
-  aboutToAppear() {
-    this.addGlobalListeners();
-  }
-  // Disable global listeners.
-  aboutToDisappear() {
-    this.removeGlobalListeners();
-  }
-
-  private addGlobalListeners() {
-    const observer = this.getUIContext().getUIObserver();
-
-    // Tap listener.
-    this.tapCallback = (info: GestureTriggerInfo) => {
-      if (info.event?.target?.id === 'tap-area') {
-        this.tapCount++;
-        this.lastAction = 'Tap';
-        this.lastArea = 'Tap area';
-      }
-    };
-    observer.addGlobalGestureListener(
-      GestureListenerType.TAP,
-      { actionPhases: [GestureActionPhase.WILL_START, GestureActionPhase.WILL_END] },
-      this.tapCallback
-    );
-
-    // Pan listener.
-    this.panCallback = (info: GestureTriggerInfo) => {
-      if (info.event?.target?.id === 'pan-area') {
-        this.panCount++;
-        this.lastAction = 'Pan';
-        this.lastArea = 'Pan area';
-      }
-    };
-    observer.addGlobalGestureListener(
-      GestureListenerType.PAN,
-      {
-        actionPhases: [GestureActionPhase.WILL_START, GestureActionPhase.WILL_END]
-      },
-      this.panCallback
-    );
-
-    // LongPress listener.
-    this.longPressCallback = (info: GestureTriggerInfo) => {
-      if (info.event?.target?.id === 'longpress-area') {
-        this.longPressCount++;
-        this.lastAction = 'Long press';
-        this.lastArea = 'Long press area';
-      }
-    };
-    observer.addGlobalGestureListener(
-      GestureListenerType.LONG_PRESS,
-      {
-        actionPhases: [GestureActionPhase.WILL_START, GestureActionPhase.WILL_END]
-      },
-      this.longPressCallback
-    );
-  }
-
-  private removeGlobalListeners() {
-    const observer = this.getUIContext().getUIObserver();
-// 0, 2, and 1 indicate the tap, pan, and long-press gesture types, respectively, which are used to remove the corresponding global listeners.
-    if (this.tapCallback) {
-      observer.removeGlobalGestureListener(GestureListenerType.TAP, this.tapCallback);
-    }
-    if (this.panCallback) {
-      observer.removeGlobalGestureListener(GestureListenerType.PAN, this.panCallback);
-    }
-    if (this.longPressCallback) {
-      observer.removeGlobalGestureListener(GestureListenerType.LONG_PRESS, this.longPressCallback);
-    }
-  }
-
-  build() {
-    Column() {
-      // Gesture data statistics panel.
-      Row({ space: 30 }) {
-        Column() {
-          Text('Tap count:').fontSize(16)
-          Text(`${this.tapCount}`).fontSize(24).fontColor('#FF6B81')
-        }
-        Column() {
-          Text('Pan count:').fontSize(16)
-          Text(`${this.panCount}`).fontSize(24).fontColor('#7BED9F')
-        }
-        Column() {
-          Text('Long-press count:').fontSize(16)
-          Text(`${this.longPressCount}`).fontSize(24).fontColor('#70A1FF')
-        }
-      }
-      .margin(10)
-
-      Text(`Last action: ${this.lastAction} (${this.lastArea})`)
-        .fontSize(18)
-        .margin(10)
-
-      // Gesture areas.
-      Row() {
-        Text('Tap area').fontSize(18)
-      }
-      .id('tap-area')
-      .width('90%')
-      .height(120)
-      .margin(10)
-      .border({ width: 2, color: '#FF6B81' })
-      .justifyContent(FlexAlign.Center)
-      .gesture(TapGesture().onAction((event: GestureEvent) => {
-        // Implementation details.
-      }))
-
-      Row() {
-        Text('Pan area').fontSize(18)
-      }
-      .id('pan-area')
-      .width('90%')
-      .height(120)
-      .margin(10)
-      .border({ width: 2, color: '#7BED9F' })
-      .justifyContent(FlexAlign.Center)
-      .gesture(
-        PanGesture()
-          .onActionStart((event: GestureEvent) => {
-            // Implementation details.
-          })
-          .onActionEnd((event: GestureEvent) => {
-            // Implementation details.
-          })
-      )
-
-      Row() {
-        Text('LongPress area').fontSize(18)
-      }
-      .id('longpress-area')
-      .width('90%')
-      .height(120)
-      .margin(10)
-      .border({ width: 2, color: '#70A1FF' })
-      .justifyContent(FlexAlign.Center)
-      .gesture(
-        LongPressGesture()
-          .onAction((event: GestureEvent) => {
-            // Implementation details.
-          })
-          .onActionEnd((event: GestureEvent) => {
-            // Implementation details.
-          })
-      )
-    }
-    .width('100%')
-    .height('100%')
-  }
-}
-```
-
 ## off('navDestinationUpdate')
 
 ```TypeScript
@@ -323,8 +144,8 @@ Removes a callback function that was previously registered with `on()`.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'scrollEvent' | Yes | The type of event to remove the listener for. Must be 'scrollEvent'. |
-| options | observer.ObserverOptions | Yes | The options object. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;observer.ScrollEventInfo&gt; | No | The callback function to remove. If not provided, all callbacks for the given event type and scroll ID will be removed. |
+| options | [observer.ObserverOptions](arkts-arkui-uiobserver-observeroptions-i.md) | Yes | The options object. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[observer.ScrollEventInfo](arkts-arkui-uiobserver-scrolleventinfo-i.md)&gt; | No | The callback function to remove. If not provided, all callbacks for the given event type and scroll ID will be removed. |
 
 ## off('scrollEvent')
 
@@ -347,7 +168,7 @@ Removes a callback function that was previously registered with `on()`.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'scrollEvent' | Yes | The type of event to remove the listener for. Must be 'scrollEvent'. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;observer.ScrollEventInfo&gt; | No | The callback function to remove. If not provided, all callbacks for the given event type will be removed. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[observer.ScrollEventInfo](arkts-arkui-uiobserver-scrolleventinfo-i.md)&gt; | No | The callback function to remove. If not provided, all callbacks for the given event type will be removed. |
 
 ## off('routerPageUpdate')
 
@@ -393,7 +214,7 @@ Unregisters the listener for screen pixel density changes.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'densityUpdate' | Yes | Event type. The value **'densityUpdate'** indicates the pixel density changes of the screen. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;observer.DensityInfo&gt; | No | Target listener to unregister. If no parameter is provided, all screen pixel density change listeners for the current [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) are removed. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[observer.DensityInfo](arkts-arkui-uiobserver-densityinfo-c.md)&gt; | No | Target listener to unregister. If no parameter is provided, all screen pixel density change listeners for the current [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) are removed. |
 
 ## off('willDraw')
 
@@ -465,7 +286,7 @@ Removes a callback function that was previously registered with `on()`.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'navDestinationSwitch' | Yes | The type of event to remove the listener for. Must be 'navDestinationSwitch'. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;observer.NavDestinationSwitchInfo&gt; | No | The callback function to remove. If not provided, all callbacks for the given event type will be removed. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[observer.NavDestinationSwitchInfo](arkts-arkui-uiobserver-navdestinationswitchinfo-i.md)&gt; | No | The callback function to remove. If not provided, all callbacks for the given event type will be removed. |
 
 ## off('navDestinationSwitch')
 
@@ -492,8 +313,8 @@ Removes a callback function that was previously registered with `on()`.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'navDestinationSwitch' | Yes | The type of event to remove the listener for. Must be 'navDestinationSwitch'. |
-| observerOptions | observer.NavDestinationSwitchObserverOptions | Yes | Options. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;observer.NavDestinationSwitchInfo&gt; | No | The callback function to remove. If not provided, all callbacks for the given event type will be removed. |
+| observerOptions | [observer.NavDestinationSwitchObserverOptions](arkts-arkui-uiobserver-navdestinationswitchobserveroptions-i.md) | Yes | Options. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[observer.NavDestinationSwitchInfo](arkts-arkui-uiobserver-navdestinationswitchinfo-i.md)&gt; | No | The callback function to remove. If not provided, all callbacks for the given event type will be removed. |
 
 ## off('willClick')
 
@@ -700,8 +521,8 @@ Removes a callback function that was previously registered with `on()`.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'tabContentUpdate' | Yes | The type of event to remove the listener for. Must be 'tabContentUpdate'. |
-| options | observer.ObserverOptions | Yes | The options object. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;observer.TabContentInfo&gt; | No | The callback function to remove. If not provided, all callbacks for the given event type and Tabs ID will be removed. |
+| options | [observer.ObserverOptions](arkts-arkui-uiobserver-observeroptions-i.md) | Yes | The options object. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[observer.TabContentInfo](arkts-arkui-uiobserver-tabcontentinfo-i.md)&gt; | No | The callback function to remove. If not provided, all callbacks for the given event type and Tabs ID will be removed. |
 
 ## off('tabContentUpdate')
 
@@ -724,7 +545,7 @@ Removes a callback function that was previously registered with `on()`.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'tabContentUpdate' | Yes | The type of event to remove the listener for. Must be 'tabContentUpdate'. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;observer.TabContentInfo&gt; | No | The callback function to remove. If not provided, all callbacks for the given event type and Tabs ID will be removed. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[observer.TabContentInfo](arkts-arkui-uiobserver-tabcontentinfo-i.md)&gt; | No | The callback function to remove. If not provided, all callbacks for the given event type and Tabs ID will be removed. |
 
 ## off('tabChange')
 
@@ -747,8 +568,8 @@ Removes a callback function that was previously registered with `on()`.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'tabChange' | Yes | The type of event to remove the listener for. Must be 'tabChange'. |
-| config | observer.ObserverOptions | Yes | The config object. Includes the observed component id. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;observer.TabContentInfo&gt; | No | The callback function to remove. If not provided, all callbacks for the given event type and Tabs ID will be removed. |
+| config | [observer.ObserverOptions](arkts-arkui-uiobserver-observeroptions-i.md) | Yes | The config object. Includes the observed component id. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[observer.TabContentInfo](arkts-arkui-uiobserver-tabcontentinfo-i.md)&gt; | No | The callback function to remove. If not provided, all callbacks for the given event type and Tabs ID will be removed. |
 
 ## off('tabChange')
 
@@ -771,7 +592,7 @@ Removes a callback function that was previously registered with `on()`.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'tabChange' | Yes | The type of event to remove the listener for. Must be 'tabChange'. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;observer.TabContentInfo&gt; | No | The callback function to remove. If not provided, all callbacks for the given event type will be removed. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[observer.TabContentInfo](arkts-arkui-uiobserver-tabcontentinfo-i.md)&gt; | No | The callback function to remove. If not provided, all callbacks for the given event type will be removed. |
 
 ## off('windowSizeLayoutBreakpointChange')
 
@@ -794,7 +615,7 @@ Unregisters previously registered window size layout breakpoint change listeners
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'windowSizeLayoutBreakpointChange' | Yes | Event type. The value is fixed at **'windowSizeLayoutBreakpointChange'**, indicating window size layout breakpoint changes. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;observer.WindowSizeLayoutBreakpointInfo&gt; | No | Target listener to unregister. If no parameter is provided, all window size layout breakpoint change listeners for the current [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) are removed. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[observer.WindowSizeLayoutBreakpointInfo](arkts-arkui-uiobserver-windowsizelayoutbreakpointinfo-c.md)&gt; | No | Target listener to unregister. If no parameter is provided, all window size layout breakpoint change listeners for the current [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) are removed. |
 
 ## off('nodeRenderState')
 
@@ -841,7 +662,7 @@ Removes a callback function that was previously registered with `on()`.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'textChange' | Yes | The type of event to remove the listener for. Must be 'textChange'. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;observer.TextChangeEventInfo&gt; | No | The callback function to remove. If not provided, all callbacks for the given event type will be removed. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[observer.TextChangeEventInfo](arkts-arkui-uiobserver-textchangeeventinfo-i.md)&gt; | No | The callback function to remove. If not provided, all callbacks for the given event type will be removed. |
 
 ## off('textChange')
 
@@ -864,8 +685,8 @@ Removes a callback function that was previously registered with `on()`.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'textChange' | Yes | The type of event to remove the listener for. Must be 'textChange'. |
-| identity | observer.ObserverOptions | Yes | Identity options. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;observer.TextChangeEventInfo&gt; | No | The callback function to remove. If not provided, all callbacks for the given event type will be removed. |
+| identity | [observer.ObserverOptions](arkts-arkui-uiobserver-observeroptions-i.md) | Yes | Identity options. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[observer.TextChangeEventInfo](arkts-arkui-uiobserver-textchangeeventinfo-i.md)&gt; | No | The callback function to remove. If not provided, all callbacks for the given event type will be removed. |
 
 ## offNavDestinationSizeChange
 
@@ -888,10 +709,6 @@ Removes the listener callback registered using the **onNavDestinationSizeChange*
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;observer.NavDestinationInfo&gt; | No | Callback to be removed. If no parameter is passed, all callbacks are removed. |
-
-**Examples**
-
-See the example for the [onNavDestinationSizeChange](#onnavdestinationsizechange) API.
 
 ## offNavDestinationSizeChangeByUniqueId
 
@@ -916,10 +733,6 @@ Removes a callback function that was previously registered with 'onNavDestinatio
 | navigationUniqueId | number | Yes | The uniqueId of the Navigation to which NavDestination belongs. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;observer.NavDestinationInfo&gt; | No | The callback function to remove. If not provided, all callbacks for the given event type will be removed. |
 
-**Examples**
-
-See the example for the [onNavDestinationSizeChangeByUniqueId](#onnavdestinationsizechangebyuniqueid) API.
-
 ## offRouterPageSizeChange
 
 ```TypeScript
@@ -941,10 +754,6 @@ Removes the listener callback registered using the **onRouterPageSizeChange** AP
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;observer.RouterPageInfo&gt; | No | Callback to be removed. If no parameter is passed, all callbacks are removed. |
-
-**Examples**
-
-See the example for the [onRouterPageSizeChange](#onrouterpagesizechange) API.
 
 ## offSwiperContentUpdate
 
@@ -968,10 +777,6 @@ Unregister the listener for content switching events of the **Swiper** component
 | --- | --- | --- | --- |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SwiperContentInfo](arkts-arkui-arkui-uicontext-swipercontentinfo-i.md)&gt; | No | Target listener to unregister. If no parameter is provided, all listeners for the **Swiper** component are unregistered. |
 
-**Examples**
-
-See the example for the [onSwiperContentUpdate](#onswipercontentupdate) API.
-
 ## offSwiperContentUpdate
 
 ```TypeScript
@@ -992,12 +797,8 @@ Unregister the listener for content switching events of a specific **Swiper** co
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | observer.ObserverOptions | Yes | Information about the target **Swiper** component. |
+| config | [observer.ObserverOptions](arkts-arkui-uiobserver-observeroptions-i.md) | Yes | Information about the target **Swiper** component. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SwiperContentInfo](arkts-arkui-arkui-uicontext-swipercontentinfo-i.md)&gt; | No | Target listener to unregister. If no parameter is provided, all listeners for the **Swiper** component are unregistered. |
-
-**Examples**
-
-See the example for the [onSwiperContentUpdate](#onswipercontentupdate) API.
 
 ## on('navDestinationUpdate')
 
@@ -1091,8 +892,8 @@ Registers a callback function to be called when the scroll event start or stop.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'scrollEvent' | Yes | The type of event to listen for. Must be 'scrollEvent'. |
-| options | observer.ObserverOptions | Yes | The options object. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;observer.ScrollEventInfo&gt; | Yes | The callback function to be called when the scroll event start or stop. |
+| options | [observer.ObserverOptions](arkts-arkui-uiobserver-observeroptions-i.md) | Yes | The options object. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[observer.ScrollEventInfo](arkts-arkui-uiobserver-scrolleventinfo-i.md)&gt; | Yes | The callback function to be called when the scroll event start or stop. |
 
 ## on('scrollEvent')
 
@@ -1115,7 +916,7 @@ Registers a callback function to be called when the scroll event start or stop.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'scrollEvent' | Yes | The type of event to listen for. Must be 'scrollEvent'. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;observer.ScrollEventInfo&gt; | Yes | The callback function to be called when the scroll event start or stop. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[observer.ScrollEventInfo](arkts-arkui-uiobserver-scrolleventinfo-i.md)&gt; | Yes | The callback function to be called when the scroll event start or stop. |
 
 ## on('routerPageUpdate')
 
@@ -1161,7 +962,7 @@ Listens for screen pixel density changes.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'densityUpdate' | Yes | Event type. The value **'densityUpdate'** indicates the pixel density changes of the screen. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;observer.DensityInfo&gt; | Yes | Callback used to return the updated screen pixel density using a [DensityInfo](arkts-arkui-uiobserver-densityinfo-c.md) object. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[observer.DensityInfo](arkts-arkui-uiobserver-densityinfo-c.md)&gt; | Yes | Callback used to return the updated screen pixel density using a [DensityInfo](arkts-arkui-uiobserver-densityinfo-c.md) object. |
 
 ## on('willDraw')
 
@@ -1233,7 +1034,7 @@ Registers a callback function to be called when the navigation switched to a new
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'navDestinationSwitch' | Yes | The type of event to listen for. Must be 'navDestinationSwitch'. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;observer.NavDestinationSwitchInfo&gt; | Yes | The callback function to be called when the navigation switched to a new navDestination. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[observer.NavDestinationSwitchInfo](arkts-arkui-uiobserver-navdestinationswitchinfo-i.md)&gt; | Yes | The callback function to be called when the navigation switched to a new navDestination. |
 
 ## on('navDestinationSwitch')
 
@@ -1260,8 +1061,8 @@ Registers a callback function to be called when the navigation switched to a new
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'navDestinationSwitch' | Yes | The type of event to listen for. Must be 'navDestinationSwitch'. |
-| observerOptions | observer.NavDestinationSwitchObserverOptions | Yes | Options. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;observer.NavDestinationSwitchInfo&gt; | Yes | The callback function to be called when the navigation switched to a new navDestination. |
+| observerOptions | [observer.NavDestinationSwitchObserverOptions](arkts-arkui-uiobserver-navdestinationswitchobserveroptions-i.md) | Yes | Options. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[observer.NavDestinationSwitchInfo](arkts-arkui-uiobserver-navdestinationswitchinfo-i.md)&gt; | Yes | The callback function to be called when the navigation switched to a new navDestination. |
 
 ## on('willClick')
 
@@ -1468,8 +1269,8 @@ Registers a callback function to be called when the tabContent is showed or hidd
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'tabContentUpdate' | Yes | The type of event to listen for. Must be 'tabContentUpdate'. |
-| options | observer.ObserverOptions | Yes | The options object. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;observer.TabContentInfo&gt; | Yes | The callback function to be called when the tabContent show or hide. |
+| options | [observer.ObserverOptions](arkts-arkui-uiobserver-observeroptions-i.md) | Yes | The options object. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[observer.TabContentInfo](arkts-arkui-uiobserver-tabcontentinfo-i.md)&gt; | Yes | The callback function to be called when the tabContent show or hide. |
 
 ## on('tabContentUpdate')
 
@@ -1492,7 +1293,7 @@ Registers a callback function to be called when the tabContent is showed or hidd
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'tabContentUpdate' | Yes | The type of event to listen for. Must be 'tabContentUpdate'. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;observer.TabContentInfo&gt; | Yes | The callback function to be called when the tabContent is showed or hidden. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[observer.TabContentInfo](arkts-arkui-uiobserver-tabcontentinfo-i.md)&gt; | Yes | The callback function to be called when the tabContent is showed or hidden. |
 
 ## on('tabChange')
 
@@ -1515,8 +1316,8 @@ Registers a callback function to be called when the tabContent is showed or hidd
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'tabChange' | Yes | The type of event to listen for. Must be 'tabChange'. |
-| config | observer.ObserverOptions | Yes | The options object. Includes the observed component id. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;observer.TabContentInfo&gt; | Yes | The callback function to be called when when the tabContent is showed or hidden. |
+| config | [observer.ObserverOptions](arkts-arkui-uiobserver-observeroptions-i.md) | Yes | The options object. Includes the observed component id. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[observer.TabContentInfo](arkts-arkui-uiobserver-tabcontentinfo-i.md)&gt; | Yes | The callback function to be called when when the tabContent is showed or hidden. |
 
 ## on('tabChange')
 
@@ -1539,7 +1340,7 @@ Registers a callback function to be called when the tabContent is showed or hidd
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'tabChange' | Yes | The type of event to listen for. Must be 'tabChange'. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;observer.TabContentInfo&gt; | Yes | The callback function to be called when the tabContent is showed or hidden. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[observer.TabContentInfo](arkts-arkui-uiobserver-tabcontentinfo-i.md)&gt; | Yes | The callback function to be called when the tabContent is showed or hidden. |
 
 ## on('windowSizeLayoutBreakpointChange')
 
@@ -1562,7 +1363,7 @@ Registers a callback for window size layout breakpoint changes. This enables ada
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'windowSizeLayoutBreakpointChange' | Yes | Event type. The value is fixed at **'windowSizeLayoutBreakpointChange'**, indicating window size layout breakpoint changes. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;observer.WindowSizeLayoutBreakpointInfo&gt; | Yes | Callback used to return the result. It provides window width and height layout breakpoint enumerations using a **WindowSizeLayoutBreakpointinfo** object. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[observer.WindowSizeLayoutBreakpointInfo](arkts-arkui-uiobserver-windowsizelayoutbreakpointinfo-c.md)&gt; | Yes | Callback used to return the result. It provides window width and height layout breakpoint enumerations using a **WindowSizeLayoutBreakpointinfo** object. |
 
 ## on('nodeRenderState')
 
@@ -1619,7 +1420,7 @@ Registers a callback function to be called when text field's content is changed.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'textChange' | Yes | The type of event to listen for. Must be 'textChange'. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;observer.TextChangeEventInfo&gt; | Yes | The callback function to be called when text field's content is changed. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[observer.TextChangeEventInfo](arkts-arkui-uiobserver-textchangeeventinfo-i.md)&gt; | Yes | The callback function to be called when text field's content is changed. |
 
 ## on('textChange')
 
@@ -1642,8 +1443,8 @@ Registers a callback function to be called when text field's content is changed.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'textChange' | Yes | The type of event to listen for. Must be 'textChange'. |
-| identity | observer.ObserverOptions | Yes | Identity options. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;observer.TextChangeEventInfo&gt; | Yes | The callback function to be called when the text field's content is changed. |
+| identity | [observer.ObserverOptions](arkts-arkui-uiobserver-observeroptions-i.md) | Yes | Identity options. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[observer.TextChangeEventInfo](arkts-arkui-uiobserver-textchangeeventinfo-i.md)&gt; | Yes | The callback function to be called when the text field's content is changed. |
 
 ## onNavDestinationSizeChange
 
@@ -1666,74 +1467,6 @@ Registers a callback that is triggered when the size of the visible navigation d
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;observer.NavDestinationInfo&gt; | Yes | Callback used to return navigation destination information. |
-
-**Examples**
-
-```TypeScript
-import { uiObserver } from '@kit.ArkUI';
-
-@Component
-struct PageOneContent {
-  destSizeCallback(info: uiObserver.NavDestinationInfo): void {
-    console.info(`testTag destSize changeTo ${(info && info.size) ? JSON.stringify(info.size) : 'NA'}`);
-  }
-
-  aboutToAppear(): void {
-    // You can obtain the size of the navigation destination page by registering a listener.
-    this.getUIContext().getUIObserver().onNavDestinationSizeChange(this.destSizeCallback);
-  }
-
-  aboutToDisappear(): void {
-    this.getUIContext().getUIObserver().offNavDestinationSizeChange(this.destSizeCallback);
-  }
-
-  build() {
-    Column() {
-      Button('queryDestSize').onClick(() => {
-        // You can also proactively obtain the size of the navigation destination page.
-        let info = this.queryNavDestinationInfo();
-        console.info(`testTag destSize: ${(info && info.size) ? JSON.stringify(info.size) : 'NA'}`);
-      })
-    }
-    .width('100%')
-    .height('100%')
-  }
-}
-
-@Component
-struct PageOne {
-  build() {
-    NavDestination() {
-      PageOneContent()
-    }
-    .title('pageOne')
-  }
-}
-
-@Entry
-@Component
-struct QueryNavDestinationSize {
-  private stack: NavPathStack = new NavPathStack();
-
-  aboutToAppear(): void {
-    this.stack.pushPath({name: 'one'});
-  }
-
-  @Builder
-  myPageMap(name: string) {
-    PageOne()
-  }
-
-  build() {
-    Navigation(this.stack) {
-    }
-    .width('100%')
-    .height('100%')
-    .navDestination(this.myPageMap)
-    .hideNavBar(true)
-  }
-}
-```
 
 ## onNavDestinationSizeChangeByUniqueId
 
@@ -1758,80 +1491,6 @@ Removes the listener callback registered using the **onNavDestinationSizeChangeB
 | navigationUniqueId | number | Yes | Unique ID of the **Navigation** component to which the **NavDestination** component to be listened belongs, which can be obtained through [queryNavigationInfo](../arkts-components/arkts-arkui-basecustomcomponent-c.md#querynavigationinfo). |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;observer.NavDestinationInfo&gt; | Yes | Callback to be removed. If no parameter is passed, all callbacks with the same **navigationUniqueId** setting are removed. |
 
-**Examples**
-
-```TypeScript
-import { uiObserver } from '@kit.ArkUI';
-
-@Component
-struct PageOneContent {
-  private navUniqueId: number = 0;
-
-  destSizeCallback(info: uiObserver.NavDestinationInfo): void {
-    console.info(`testTag destSize changeTo ${(info && info.size) ? JSON.stringify(info.size) : 'NA'}`);
-  }
-
-  aboutToAppear(): void {
-    let navInfo = this.queryNavigationInfo();
-    if (navInfo && navInfo.uniqueId) {
-      this.navUniqueId = navInfo.uniqueId;
-      // You can obtain the size of the navigation destination page by registering a listener.
-      this.getUIContext().getUIObserver().onNavDestinationSizeChangeByUniqueId(this.navUniqueId, this.destSizeCallback);
-    }
-  }
-
-  aboutToDisappear(): void {
-    this.getUIContext().getUIObserver().offNavDestinationSizeChangeByUniqueId(this.navUniqueId, this.destSizeCallback);
-  }
-
-  build() {
-    Column() {
-      Button('queryDestSize').onClick(() => {
-        // You can also proactively obtain the size of the navigation destination page.
-        let info = this.queryNavDestinationInfo();
-        console.info(`testTag destSize: ${(info && info.size) ? JSON.stringify(info.size) : 'NA'}`);
-      })
-    }
-    .width('100%')
-    .height('100%')
-  }
-}
-
-@Component
-struct PageOne {
-  build() {
-    NavDestination() {
-      PageOneContent()
-    }
-    .title('pageOne')
-  }
-}
-
-@Entry
-@Component
-struct QueryNavDestinationSize {
-  private stack: NavPathStack = new NavPathStack();
-
-  aboutToAppear(): void {
-    this.stack.pushPath({name: 'one'});
-  }
-
-  @Builder
-  myPageMap(name: string) {
-    PageOne()
-  }
-
-  build() {
-    Navigation(this.stack) {
-    }
-    .width('100%')
-    .height('100%')
-    .navDestination(this.myPageMap)
-    .hideNavBar(true)
-  }
-}
-```
-
 ## onRouterPageSizeChange
 
 ```TypeScript
@@ -1853,41 +1512,6 @@ Registers a callback that is triggered when the size of the visible router page 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;observer.RouterPageInfo&gt; | Yes | Callback used to return the information about the router page. |
-
-**Examples**
-
-```TypeScript
-import { uiObserver } from '@kit.ArkUI';
-
-const myPageRouterPageSizeCallback = (info: uiObserver.RouterPageInfo): void => {
-  console.info(`testTag pageSize changeTo ${(info && info.size) ? JSON.stringify(info.size) : 'NA'}`);
-}
-
-@Entry
-@Component
-struct QueryRouterPageSize {
-  aboutToAppear(): void {
-    // You can obtain the page size information by registering a listener.
-    this.getUIContext().getUIObserver().onRouterPageSizeChange(myPageRouterPageSizeCallback);
-  }
-
-  aboutToDisappear(): void {
-    this.getUIContext().getUIObserver().offRouterPageSizeChange(myPageRouterPageSizeCallback);
-  }
-
-  build() {
-    Column() {
-      Button('querySize').onClick(() => {
-        // You can also proactively obtain the page size.
-        let info = this.queryRouterPageInfo();
-        console.info(`testTag pageSize: ${info && info.size ? JSON.stringify(info.size) : 'NA'}`);
-      })
-    }
-    .width('100%')
-    .height('100%')
-  }
-}
-```
 
 ## onSwiperContentUpdate
 
@@ -1911,58 +1535,6 @@ Listens for content switching events of the **Swiper** component. This API uses 
 | --- | --- | --- | --- |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SwiperContentInfo](arkts-arkui-arkui-uicontext-swipercontentinfo-i.md)&gt; | Yes | Callback used to return the result. It provides the **Swiper** content switching information using a **SwiperContentInfo** object. |
 
-**Examples**
-
-```TypeScript
-// Index.ets
-import { SwiperContentInfo } from '@kit.ArkUI';
-
-// Define callbacks for event listeners.
-const callbackFunc = (info: SwiperContentInfo) => {
-  console.info('swiperContentUpdate', JSON.stringify(info));
-}
-
-@Entry
-@Component
-struct SwiperExample {
-  private swiperController: SwiperController = new SwiperController();
-
-  aboutToAppear(): void {
-    // Listen for 'swiperContentUpdate' events.
-    this.getUIContext().getUIObserver().onSwiperContentUpdate(callbackFunc);
-  }
-
-  aboutToDisappear(): void {
-    // Unregister the listener for 'swiperContentUpdate' events.
-    this.getUIContext().getUIObserver().offSwiperContentUpdate(callbackFunc);
-  }
-
-  build() {
-    Column({ space: 5 }) {
-      Swiper(this.swiperController) {
-        Column() {
-          Text('SwiperItem1')
-        }.width('100%').height('100%').backgroundColor('#00CB87')
-
-        Column() {
-          Text('SwiperItem2')
-        }.width('100%').height('100%').backgroundColor('#007DFF')
-
-        Column() {
-          Text('SwiperItem3')
-        }.width('100%').height('100%').backgroundColor('#FFBF00')
-
-        Column() {
-          Text('SwiperItem4')
-        }.width('100%').height('100%').backgroundColor('#E67C92')
-      }
-      .width(360)
-      .height(300)
-    }.width('100%')
-  }
-}
-```
-
 ## onSwiperContentUpdate
 
 ```TypeScript
@@ -1983,61 +1555,8 @@ Listens for content switching events of a specific **Swiper** component identifi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | observer.ObserverOptions | Yes | Information about the target **Swiper** component. |
+| config | [observer.ObserverOptions](arkts-arkui-uiobserver-observeroptions-i.md) | Yes | Information about the target **Swiper** component. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SwiperContentInfo](arkts-arkui-arkui-uicontext-swipercontentinfo-i.md)&gt; | Yes | Callback used to return the result. It provides the **Swiper** content switching information using a **SwiperContentInfo** object. |
-
-**Examples**
-
-```TypeScript
-// Index.ets
-import { SwiperContentInfo } from '@kit.ArkUI';
-
-// Define callbacks for event listeners.
-function callbackFunc(info: SwiperContentInfo) {
-  console.info('swiperContentUpdate', JSON.stringify(info));
-}
-
-@Entry
-@Component
-struct SwiperExample {
-  private swiperController: SwiperController = new SwiperController();
-
-  aboutToAppear(): void {
-    // Listen for 'swiperContentUpdate' events for the component with the specified ID.
-    this.getUIContext().getUIObserver().onSwiperContentUpdate({ id: 'swiperId' }, callbackFunc);
-  }
-
-  aboutToDisappear(): void {
-    // Unregister the listener for 'swiperContentUpdate' events for the component with the specified ID.
-    this.getUIContext().getUIObserver().offSwiperContentUpdate({ id: 'swiperId' }, callbackFunc);
-  }
-
-  build() {
-    Column({ space: 5 }) {
-      Swiper(this.swiperController) {
-        Column() {
-          Text('SwiperItem1')
-        }.width('100%').height('100%').backgroundColor('#00CB87')
-
-        Column() {
-          Text('SwiperItem2')
-        }.width('100%').height('100%').backgroundColor('#007DFF')
-
-        Column() {
-          Text('SwiperItem3')
-        }.width('100%').height('100%').backgroundColor('#FFBF00')
-
-        Column() {
-          Text('SwiperItem4')
-        }.width('100%').height('100%').backgroundColor('#E67C92')
-      }
-      .id('swiperId')
-      .width(360)
-      .height(300)
-    }.width('100%')
-  }
-}
-```
 
 ## removeGlobalGestureListener
 
@@ -2061,7 +1580,3 @@ Unregisters the specified global gesture listener.
 | --- | --- | --- | --- |
 | type | [GestureListenerType](arkts-arkui-arkui-uicontext-gesturelistenertype-e.md) | Yes | Event type. |
 | callback | [GestureListenerCallback](arkts-arkui-gesturelistenercallback-t.md) | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for this gesture type. |
-
-**Examples**
-
-See the example for the [addGlobalGestureListener](#addglobalgesturelistener) API .

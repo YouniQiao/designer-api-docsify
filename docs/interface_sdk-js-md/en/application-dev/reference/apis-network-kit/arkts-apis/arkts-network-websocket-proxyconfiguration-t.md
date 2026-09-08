@@ -14,4 +14,4 @@ Represents the HTTP proxy configuration.
 | --- | --- |
 | 'system' | The default network proxy is used. |
 | 'no-proxy' | No network proxy is used. |
-| HttpProxy | The specified network proxy is used. |
+| [HttpProxy](arkts-network-websocket-httpproxy-t.md) | The specified network proxy is used. |

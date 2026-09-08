@@ -34,7 +34,7 @@ function createGattClientDevice(deviceId: string): GattClientDevice
 
 | 类型 | 说明 |
 | --- | --- |
-| GattClientDevice | client端类，使用client端方法之前需要创建该类的实例进行操作。 |
+| [GattClientDevice](arkts-connectivity-ble-gattclientdevice-i.md) | client端类，使用client端方法之前需要创建该类的实例进行操作。 |
 
 **错误码：**
 

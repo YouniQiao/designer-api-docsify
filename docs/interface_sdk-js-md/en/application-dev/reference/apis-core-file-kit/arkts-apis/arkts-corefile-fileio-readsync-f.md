@@ -42,12 +42,3 @@ Reads data from a file. This API returns the result synchronously.
 | Type | Description |
 | --- | --- |
 | number | Length of the data read, in bytes. |
-
-**Examples**
-
-```TypeScript
-let filePath = pathDir + "/test.txt";
-let fd = fileio.openSync(filePath, 0o2);
-let buf = new ArrayBuffer(4096);
-let num = fileio.readSync(fd, buf);
-```

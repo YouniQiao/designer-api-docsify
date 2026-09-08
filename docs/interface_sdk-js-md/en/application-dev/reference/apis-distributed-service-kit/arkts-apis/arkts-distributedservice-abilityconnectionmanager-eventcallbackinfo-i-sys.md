@@ -20,7 +20,7 @@ image?: image.PixelMap
 
 Received image.
 
-**Type:** image.PixelMap
+**Type:** [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)
 
 **Since:** 18
 

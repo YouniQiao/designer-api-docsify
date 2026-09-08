@@ -28,7 +28,7 @@ Obtains the hotspot information that scanned.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;WifiScanInfo&gt;&gt; | Returns information about scanned Wi-Fi hotspot if any. |
+| Promise&lt;Array&lt;[WifiScanInfo](arkts-connectivity-wifi-wifiscaninfo-i.md)&gt;&gt; | Returns information about scanned Wi-Fi hotspot if any. |
 
 **Examples**
 
@@ -75,7 +75,7 @@ Obtains the hotspot information that scanned.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;WifiScanInfo&gt;&gt; | Yes |  |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[WifiScanInfo](arkts-connectivity-wifi-wifiscaninfo-i.md)&gt;&gt; | Yes |  |
 
 **Examples**
 

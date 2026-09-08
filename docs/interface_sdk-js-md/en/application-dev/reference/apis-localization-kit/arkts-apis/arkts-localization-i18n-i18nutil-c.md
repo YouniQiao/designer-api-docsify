@@ -297,7 +297,7 @@ For example, "/data/out/tmp" is changed to "tmp/out/data/" after localization.
 | --- | --- | --- | --- |
 | path | string | Yes | Path to mirror, for example, "/data/out/tmp". |
 | delimiter | string | No | Path delimiter. The default value is "/". |
-| locale | Intl.Locale | No | Locale** object. The default value is the current system locale. |
+| locale | [Intl.Locale](arkts-localization-intl-locale-c.md) | No | Locale** object. The default value is the current system locale. |
 
 **Return value:**
 
@@ -355,7 +355,7 @@ For example, "/data/out/tmp" is changed to "tmp/out/data/" after localization.
 | --- | --- | --- | --- |
 | path | string | Yes | Path to mirror, for example, "/data/out/tmp". |
 | delimiter | string | No | Path delimiter. The default value is "/". |
-| locale | intl.Locale | No | Locale** object. The default value is the current system locale. |
+| locale | [intl.Locale](arkts-localization-intl-locale-c.md) | No | Locale** object. The default value is the current system locale. |
 
 **Return value:**
 
@@ -454,7 +454,7 @@ Converts one measurement unit into another and formats the unit based on the spe
 | toUnit | [UnitInfo](arkts-localization-i18n-unitinfo-i.md) | Yes | Measurement unit to be converted to. |
 | value | number | Yes | Value of the measurement unit to be converted. |
 | locale | string | Yes | [Locale ID](../../../internationalization/i18n-locale-culture.md#how-it-works), which consists of the language, script, and country/region, for example, **zh-Hans-CN**. |
-| style | string | No | Style used for formatting. The value can be **number**, **short**, or **narrow**. The default value is **short**. For details about the meaning or display effect of different values, see [Number and Unit of Measurement Formatting](../../../internationalization/i18n-numbers-weights-measures.md). |
+| style | string | No | Style used for formatting. The value can be **long**, **short**, or **narrow**. The default value is **short**. For details about the meaning or display effect of different values, see [Number and Unit of Measurement Formatting](../../../internationalization/i18n-numbers-weights-measures.md). |
 
 **Return value:**
 

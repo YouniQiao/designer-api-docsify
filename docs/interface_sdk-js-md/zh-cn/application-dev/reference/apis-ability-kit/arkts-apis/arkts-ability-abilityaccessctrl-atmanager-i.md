@@ -39,7 +39,7 @@ checkAccessToken(tokenID: number, permissionName: Permissions): Promise<GrantSta
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;GrantStatus&gt; | Promise对象，返回授权状态结果。 |
+| Promise&lt;[GrantStatus](arkts-ability-abilityaccessctrl-grantstatus-e.md)&gt; | Promise对象，返回授权状态结果。 |
 
 **错误码：**
 
@@ -99,7 +99,7 @@ checkAccessTokenSync(tokenID: number, permissionName: Permissions): GrantStatus
 
 | 类型 | 说明 |
 | --- | --- |
-| GrantStatus | 枚举实例，返回授权状态。 |
+| [GrantStatus](arkts-ability-abilityaccessctrl-grantstatus-e.md) | 枚举实例，返回授权状态。 |
 
 **错误码：**
 
@@ -467,7 +467,7 @@ requestPermissionOnSetting(context: Context, permissionList: Array<Permissions>)
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;GrantStatus&gt;&gt; | Promise对象，返回授权状态数组，数组中每个元素对应permissionList中相应权限的授权结果。 |
+| Promise&lt;Array&lt;[GrantStatus](arkts-ability-abilityaccessctrl-grantstatus-e.md)&gt;&gt; | Promise对象，返回授权状态数组，数组中每个元素对应permissionList中相应权限的授权结果。 |
 
 **错误码：**
 
@@ -545,6 +545,7 @@ requestPermissionsFromUser(context: Context, permissionList: Array<Permissions>,
 **示例**
 
 下述示例中context的获取方式请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
+关于向用户申请授权的完整流程及示例，请参见[向用户申请授权](../../../security/AccessToken/request-user-authorization.md)。
 
 ```TypeScript
 import { abilityAccessCtrl, Context, PermissionRequestResult, common } from '@kit.AbilityKit';
@@ -614,6 +615,7 @@ requestPermissionsFromUser(context: Context, permissionList: Array<Permissions>)
 **示例**
 
 下述示例中context的获取方式请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
+关于向用户申请授权的完整流程及示例，请参见[向用户申请授权](../../../security/AccessToken/request-user-authorization.md)。
 
 ```TypeScript
 import { abilityAccessCtrl, Context, PermissionRequestResult, common } from '@kit.AbilityKit';
@@ -663,7 +665,7 @@ verifyAccessToken(tokenID: number, permissionName: Permissions): Promise<GrantSt
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;GrantStatus&gt; | Promise对象，返回授权状态结果。 |
+| Promise&lt;[GrantStatus](arkts-ability-abilityaccessctrl-grantstatus-e.md)&gt; | Promise对象，返回授权状态结果。 |
 
 **示例**
 
@@ -717,7 +719,7 @@ verifyAccessToken(tokenID: number, permissionName: string): Promise<GrantStatus>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;GrantStatus&gt; | Promise对象，返回授权状态结果。 |
+| Promise&lt;[GrantStatus](arkts-ability-abilityaccessctrl-grantstatus-e.md)&gt; | Promise对象，返回授权状态结果。 |
 
 **示例**
 
@@ -768,7 +770,7 @@ verifyAccessTokenSync(tokenID: number, permissionName: Permissions): GrantStatus
 
 | 类型 | 说明 |
 | --- | --- |
-| GrantStatus | 枚举实例，返回授权状态。 |
+| [GrantStatus](arkts-ability-abilityaccessctrl-grantstatus-e.md) | 枚举实例，返回授权状态。 |
 
 **错误码：**
 

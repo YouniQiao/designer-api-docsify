@@ -217,22 +217,3 @@ Indicates the bundle name of app
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
-
-**Examples**
-
-```TypeScript
-let appItem = new unifiedDataChannel.SystemDefinedAppItem();
-appItem.appId = 'MyAppId';
-appItem.appName = 'MyAppName';
-appItem.appIconId = 'MyAppIconId';
-appItem.appLabelId = 'MyAppLabelId';
-appItem.bundleName = 'MyBundleName';
-appItem.abilityName = 'MyAbilityName';
-let u8Array = new Uint8Array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
-appItem.details = {
-  appItemKey1: 123,
-  appItemKey2: 'appItemValue',
-  appItemKey3: u8Array
-};
-let unifiedData = new unifiedDataChannel.UnifiedData(appItem);
-```

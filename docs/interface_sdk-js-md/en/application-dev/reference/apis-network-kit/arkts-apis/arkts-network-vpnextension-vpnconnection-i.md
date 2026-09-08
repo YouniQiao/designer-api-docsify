@@ -34,7 +34,7 @@ Creates a VPN based on the specified configuration. This API uses a promise to r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | VpnConfig | Yes | VPN configuration. |
+| config | [VpnConfig](arkts-network-vpnextension-vpnconfig-i.md) | Yes | VPN configuration. |
 
 **Return value:**
 

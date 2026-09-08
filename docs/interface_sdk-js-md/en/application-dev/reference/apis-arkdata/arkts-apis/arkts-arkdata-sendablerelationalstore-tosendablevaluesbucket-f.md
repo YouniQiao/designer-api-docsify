@@ -28,7 +28,7 @@ Converts a key-value (KV) pair that cannot be passed across threads into the dat
 
 | Type | Description |
 | --- | --- |
-| ValuesBucket | Data that can be passed across threads. |
+| [ValuesBucket](arkts-arkdata-sendablerelationalstore-valuesbucket-t.md) | Data that can be passed across threads. |
 
 **Error codes:**
 

@@ -14,7 +14,7 @@ axis?: Axis
 
 定义懒加载布局的主轴方向。
 
-**类型：** Axis
+**类型：** [Axis](arkts-arkui-axis-e.md)
 
 **默认值：** Axis.Vertical
 

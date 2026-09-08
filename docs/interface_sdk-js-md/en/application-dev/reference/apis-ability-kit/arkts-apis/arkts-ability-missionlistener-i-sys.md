@@ -89,6 +89,7 @@ Called when the system creates a mission.
 **Examples**
 
 For details, see [onMissionClosed](#onmissionclosed).
+- simpleType:
 
 ## onMissionDestroyed
 
@@ -113,6 +114,7 @@ Called when the system destroys a mission.
 **Examples**
 
 For details, see [onMissionClosed](#onmissionclosed).
+- simpleType:
 
 ## onMissionIconUpdated
 
@@ -133,11 +135,12 @@ Called when the system updates the icon of a mission.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | mission | number | Yes | Mission ID. |
-| icon | image.PixelMap | Yes | New mission icon. |
+| icon | [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | Yes | New mission icon. |
 
 **Examples**
 
 For details, see [onMissionClosed](#onmissionclosed).
+- simpleType:
 
 ## onMissionLabelUpdated
 
@@ -162,6 +165,7 @@ Called when the system updates the label of a mission.
 **Examples**
 
 For details, see [onMissionClosed](#onmissionclosed).
+- simpleType:
 
 ## onMissionMovedToFront
 
@@ -186,6 +190,7 @@ Called when the system moves a mission to the foreground.
 **Examples**
 
 For details, see [onMissionClosed](#onmissionclosed).
+- simpleType:
 
 ## onMissionSnapshotChanged
 
@@ -210,3 +215,4 @@ Called when the system updates the snapshot of a mission.
 **Examples**
 
 For details, see [onMissionClosed](#onmissionclosed).
+- simpleType:

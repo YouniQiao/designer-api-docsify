@@ -39,30 +39,6 @@ Destroy the server controller
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-currentAVSession.destroy((err: BusinessError) => {
-  if (err) {
-    console.error(`Failed to destroy, code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in destroying.');
-});
-```
-
-```TypeScript
-avcontroller.destroy((err: BusinessError) => {
-  if (err) {
-    console.error(`Failed to destroy controller, code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in destroying.');
-});
-```
-
 ## destroy
 
 ```TypeScript
@@ -90,20 +66,6 @@ Destroy the server controller
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
-**Examples**
-
-```TypeScript
-currentAVSession.destroy().then(() => {
-  console.info('Succeeded in destroying.');
-});
-```
-
-```TypeScript
-avcontroller.destroy().then(() => {
-  console.info('Succeeded in destroying.');
-});
-```
-
 ## getAVCallState
 
 ```TypeScript
@@ -129,14 +91,6 @@ Get the call status of the current session
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
-
-**Examples**
-
-```TypeScript
-avcontroller.getAVCallState((err: BusinessError, callstate: avSession.AVCallState) => {
-  console.info(`Succeeded in getting AV call state: ${callstate.state}`);
-});
-```
 
 ## getAVCallState
 
@@ -164,14 +118,6 @@ Get the call status of the current session
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
-**Examples**
-
-```TypeScript
-avcontroller.getAVCallState().then((callstate: avSession.AVCallState) => {
-  console.info(`Succeeded in getting AV call state: ${callstate.state}`);
-});
-```
-
 ## getAVMetadata
 
 ```TypeScript
@@ -188,7 +134,7 @@ Get the metadata of the current session
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;AVMetadata&gt; | Yes | The triggered asyncCallback when (getAVMetadata). |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AVMetadata](arkts-avsession-avsession-avmetadata-i.md)&gt; | Yes | The triggered asyncCallback when (getAVMetadata). |
 
 **Error codes:**
 
@@ -197,18 +143,6 @@ Get the metadata of the current session
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
-
-**Examples**
-
-```TypeScript
-avcontroller.getAVMetadata((err: BusinessError, metadata: avSession.AVMetadata) => {
-  if (err) {
-    console.error(`Failed to get AV metadata, code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in getting AV metadata, assetId: ${metadata.assetId}`);
-});
-```
 
 ## getAVMetadata
 
@@ -228,7 +162,7 @@ Get the metadata of the current session
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;AVMetadata&gt; | (AVMetadata) returned through promise |
+| Promise&lt;[AVMetadata](arkts-avsession-avsession-avmetadata-i.md)&gt; | (AVMetadata) returned through promise |
 
 **Error codes:**
 
@@ -237,14 +171,6 @@ Get the metadata of the current session
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
-
-**Examples**
-
-```TypeScript
-avcontroller.getAVMetadata().then((metadata: avSession.AVMetadata) => {
-  console.info(`Succeeded in getting AV metadata, assetId: ${metadata.assetId}`);
-});
-```
 
 ## getAVMetadataSync
 
@@ -264,7 +190,7 @@ Get the metadata of the current session
 
 | Type | Description |
 | --- | --- |
-| AVMetadata | (AVMetadata) returned |
+| [AVMetadata](arkts-avsession-avsession-avmetadata-i.md) | (AVMetadata) returned |
 
 **Error codes:**
 
@@ -273,12 +199,6 @@ Get the metadata of the current session
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
-
-**Examples**
-
-```TypeScript
-let metaData: avSession.AVMetadata = avcontroller.getAVMetadataSync();
-```
 
 ## getAVPlaybackState
 
@@ -305,24 +225,6 @@ Get the playback status of the current session
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
-
-**Examples**
-
-```TypeScript
-avCastController.getAVPlaybackState((state: avSession.AVPlaybackState) => {
-  console.info('Succeeded in getting AV playback state.');
-});
-```
-
-```TypeScript
-avcontroller.getAVPlaybackState((err: BusinessError, state: avSession.AVPlaybackState) => {
-  if (err) {
-    console.error(`Failed to get AV playback state, code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in getting AV playback state.');
-});
-```
 
 ## getAVPlaybackState
 
@@ -352,20 +254,6 @@ Get the playback status of the current session
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
-**Examples**
-
-```TypeScript
-avCastController.getAVPlaybackState().then((state: avSession.AVPlaybackState) => {
-  console.info('Succeeded in getting AV playback state.');
-});
-```
-
-```TypeScript
-avcontroller.getAVPlaybackState().then((state: avSession.AVPlaybackState) => {
-  console.info('Succeeded in getting AV playback state.');
-});
-```
-
 ## getAVPlaybackStateSync
 
 ```TypeScript
@@ -394,12 +282,6 @@ Get the playback status of the current session
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
-**Examples**
-
-```TypeScript
-let playbackState: avSession.AVPlaybackState = avcontroller.getAVPlaybackStateSync();
-```
-
 ## getAVQueueItems
 
 ```TypeScript
@@ -425,18 +307,6 @@ Get the playlist of the current session
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
-
-**Examples**
-
-```TypeScript
-avcontroller.getAVQueueItems((err: BusinessError, items: avSession.AVQueueItem[]) => {
-  if (err) {
-    console.error(`Failed to get AV queue items, code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in getting AV queue items, length: ${items.length}`);
-});
-```
 
 ## getAVQueueItems
 
@@ -466,14 +336,6 @@ Get the playlist of the current session
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
-**Examples**
-
-```TypeScript
-avcontroller.getAVQueueItems().then((items: avSession.AVQueueItem[]) => {
-  console.info(`Succeeded in getting AV queue items, length: ${items.length}`);
-});
-```
-
 ## getAVQueueItemsSync
 
 ```TypeScript
@@ -502,12 +364,6 @@ Get the playlist of the current session
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
-**Examples**
-
-```TypeScript
-let currentQueueItems: Array<avSession.AVQueueItem> = avcontroller.getAVQueueItemsSync();
-```
-
 ## getAVQueueTitle
 
 ```TypeScript
@@ -533,18 +389,6 @@ Get the name of the playlist of the current session
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
-
-**Examples**
-
-```TypeScript
-avcontroller.getAVQueueTitle((err: BusinessError, title: string) => {
-  if (err) {
-    console.error(`Failed to get AV queue title, code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in getting AV queue title: ${title}`);
-});
-```
 
 ## getAVQueueTitle
 
@@ -574,14 +418,6 @@ Get the name of the playlist of the current session
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
-**Examples**
-
-```TypeScript
-avcontroller.getAVQueueTitle().then((title: string) => {
-  console.info(`Succeeded in getting AV queue title: ${title}`);
-});
-```
-
 ## getAVQueueTitleSync
 
 ```TypeScript
@@ -610,12 +446,6 @@ Get the name of the playlist of the current session
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
-**Examples**
-
-```TypeScript
-let currentQueueTitle: string = avcontroller.getAVQueueTitleSync();
-```
-
 ## getCallMetadata
 
 ```TypeScript
@@ -642,14 +472,6 @@ Get the call metadata of the current session
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
-**Examples**
-
-```TypeScript
-avcontroller.getCallMetadata((calldata: avSession.CallMetadata) => {
-  console.info(`Succeeded in getting call metadata, name: ${calldata.name}`);
-});
-```
-
 ## getCallMetadata
 
 ```TypeScript
@@ -675,14 +497,6 @@ Get the call metadata of the current session
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
-
-**Examples**
-
-```TypeScript
-avcontroller.getCallMetadata().then((calldata: avSession.CallMetadata) => {
-  console.info(`Succeeded in getting call metadata, name: ${calldata.name}`);
-});
-```
 
 ## getDesktopLyricState
 
@@ -714,21 +528,6 @@ Get desktop lyric state such as lock state for this session.
 | [6600110](../errorcode-avsession.md#6600110-desktop-lyrics-not-enabled-for-the-application) | The desktop lyrics feature of this application is not enabled. |
 | [6600111](../errorcode-avsession.md#6600111-desktop-lyrics-not-supported-for-the-current-device) | The desktop lyrics feature is not supported. |
 
-**Examples**
-
-```TypeScript
-if (currentAVSession !== undefined) {
-  (currentAVSession as avSession.AVSession).getDesktopLyricState()
-    .then((state: avSession.DesktopLyricState) => {
-    console.info(`getDesktopLyricState: ${state.isLocked}`);
-  })
-}
-```
-
-```TypeScript
-avcontroller.getDesktopLyricState();
-```
-
 ## getExtras
 
 ```TypeScript
@@ -757,18 +556,6 @@ Get custom media packets provided by the corresponding session
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 | [6600105](../errorcode-avsession.md#6600105-invalid-session-command) | Invalid session command. |
 | [6600107](../errorcode-avsession.md#6600107-too-many-commands-or-events) | Too many commands or events. |
-
-**Examples**
-
-```TypeScript
-avcontroller.getExtras((err: BusinessError, extras) => {
-  if (err) {
-    console.error(`Failed to get extras, code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in getting extras: ${extras}`);
-});
-```
 
 ## getExtras
 
@@ -800,50 +587,6 @@ Get custom media packets provided by the corresponding session
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 | [6600105](../errorcode-avsession.md#6600105-invalid-session-command) | Invalid session command. |
 | [6600107](../errorcode-avsession.md#6600107-too-many-commands-or-events) | Too many commands or events. |
-
-**Examples**
-
-```TypeScript
-// Index.ets
-import { avSession } from '@kit.AVSessionKit';
-
-@Entry
-@Component
-struct Index {
-  private tag: string = "createNewSession";
-  private sessionId: string = "";
-  private controller: avSession.AVSessionController | undefined = undefined;
-  private currentAVSession?: avSession.AVSession;
-  context = this.getUIContext();
-
-  aboutToAppear(): void {
-
-    avSession.createAVSession(this.getUIContext().getHostContext(), this.tag, "audio")
-      .then(async (data: avSession.AVSession) => {
-        this.currentAVSession = data;
-        this.sessionId = this.currentAVSession.sessionId;
-        this.controller = await this.currentAVSession.getController();
-        console.info(`Succeeded in creating AV session, sessionId: ${this.sessionId}`);
-      });
-    if (this.controller !== undefined) {
-      (this.controller as avSession.AVSessionController).getExtras().then((extras) => {
-        console.info(`Succeeded in getting extras: ${extras}`);
-      });
-    }
-  }
-
-  build() {
-    Column() {
-      Text('AVSession Demo')
-        .fontSize(20)
-        .margin(10)
-    }
-    .width('100%')
-    .height('100%')
-    .justifyContent(FlexAlign.Center)
-  }
-}
-```
 
 ## getExtrasWithEvent
 
@@ -878,28 +621,6 @@ Get extra information for remote device, such as volume level, connected devices
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 | [6600105](../errorcode-avsession.md#6600105-invalid-session-command) | Invalid session command. |
 
-**Examples**
-
-```TypeScript
-let controller: avSession.AVSessionController | ESObject;
-const COMMON_COMMAND_STRING_1 = 'AUDIO_GET_VOLUME';
-const COMMON_COMMAND_STRING_2 = 'AUDIO_GET_AVAILABLE_DEVICES';
-const COMMON_COMMAND_STRING_3 = 'AUDIO_GET_PREFERRED_OUTPUT_DEVICE_FOR_RENDERER_INFO';
-if (controller !== undefined) {
-  controller.getExtrasWithEvent(COMMON_COMMAND_STRING_1).then(() => {
-    console.info(`${[COMMON_COMMAND_STRING_1]}`);
-  })
-
-  controller.getExtrasWithEvent(COMMON_COMMAND_STRING_2).then(() => {
-    console.info(`${[COMMON_COMMAND_STRING_2]}`);
-  })
-
-  controller.getExtrasWithEvent(COMMON_COMMAND_STRING_3).then(() => {
-    console.info(`${[COMMON_COMMAND_STRING_3]}`);
-  })
-}
-```
-
 ## getLaunchAbility
 
 ```TypeScript
@@ -925,18 +646,6 @@ Get the [WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-t.
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
-
-**Examples**
-
-```TypeScript
-avcontroller.getLaunchAbility((err: BusinessError, agent: object) => {
-  if (err) {
-    console.error(`Failed to get launch ability, code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in getting launch ability: ${agent}`);
-});
-```
 
 ## getLaunchAbility
 
@@ -966,14 +675,6 @@ Get the [WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-t.
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
-**Examples**
-
-```TypeScript
-avcontroller.getLaunchAbility().then((agent: object) => {
-  console.info(`Succeeded in getting launch ability: ${agent}`);
-});
-```
-
 ## getMediaCenterControlType
 
 ```TypeScript
@@ -1001,14 +702,6 @@ Get media control type that the can be displayed on the media center.
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
-**Examples**
-
-```TypeScript
-avcontroller.getMediaCenterControlType().then((types: avSession.AVMediaCenterControlType[]) => {
-  console.info(`Succeeded in getting media center control types, size: ${types.length}`);
-});
-```
-
 ## getOutputDevice
 
 ```TypeScript
@@ -1033,30 +726,6 @@ Get output device information
 | --- | --- |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-currentAVSession.getOutputDevice((err: BusinessError, outputDeviceInfo: avSession.OutputDeviceInfo) => {
-  if (err) {
-    console.error(`Failed to get output device, code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in getting output device, devices length: ${outputDeviceInfo.devices.length}`);
-});
-```
-
-```TypeScript
-avcontroller.getOutputDevice((err: BusinessError, deviceInfo: avSession.OutputDeviceInfo) => {
-  if (err) {
-    console.error(`Failed to get output device, code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in getting output device.');
-});
-```
 
 ## getOutputDevice
 
@@ -1085,20 +754,6 @@ Get output device information
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
-**Examples**
-
-```TypeScript
-currentAVSession.getOutputDevice().then((outputDeviceInfo: avSession.OutputDeviceInfo) => {
-  console.info(`Succeeded in getting output device, devices length: ${outputDeviceInfo.devices.length}`);
-})
-```
-
-```TypeScript
-avcontroller.getOutputDevice().then((deviceInfo: avSession.OutputDeviceInfo) => {
-  console.info('Succeeded in getting output device.');
-});
-```
-
 ## getOutputDeviceSync
 
 ```TypeScript
@@ -1126,16 +781,6 @@ Get output device information
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
-**Examples**
-
-```TypeScript
-let currentOutputDevice: avSession.OutputDeviceInfo = currentAVSession.getOutputDeviceSync();
-```
-
-```TypeScript
-let currentOutputDevice: avSession.OutputDeviceInfo = avcontroller.getOutputDeviceSync();
-```
-
 ## getRealPlaybackPositionSync
 
 ```TypeScript
@@ -1162,12 +807,6 @@ Get the adjusted playback position. The time automatically calculated by the sys
 | --- | --- |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
-
-**Examples**
-
-```TypeScript
-let time: number = avcontroller.getRealPlaybackPositionSync();
-```
 
 ## getSupportedLoopModes
 
@@ -1198,14 +837,6 @@ Get supported loop modes supplied by application.
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
-**Examples**
-
-```TypeScript
-avcontroller.getSupportedLoopModes().then((loopModes: avSession.LoopMode[]) => {
-  console.info(`Succeeded in getting supported loop modes, size: ${loopModes.length}`);
-});
-```
-
 ## getSupportedPlaySpeeds
 
 ```TypeScript
@@ -1235,23 +866,6 @@ Get supported speeds supplied by application.
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
-**Examples**
-
-```TypeScript
-avCastController.getSupportedPlaySpeeds().then((nums: number[]) => {
-  console.info(`Succeeded in getting supported play speeds, length: ${nums.length}`);
-  if (nums.length > 0 ) {
-    console.info(`Succeeded in getting supported play speed: ${nums[0]}`);
-  }
-});
-```
-
-```TypeScript
-avcontroller.getSupportedPlaySpeeds().then((speeds: number[]) => {
-  console.info(`Succeeded in getting supported play speeds, size: ${speeds.length}`);
-});
-```
-
 ## getValidCommands
 
 ```TypeScript
@@ -1277,18 +891,6 @@ Get commands supported by the current session
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
-
-**Examples**
-
-```TypeScript
-avcontroller.getValidCommands((err: BusinessError, validCommands: avSession.AVControlCommandType[]) => {
-  if (err) {
-    console.error(`Failed to get valid commands, code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in getting valid commands, size: ${validCommands.length}`);
-});
-```
 
 ## getValidCommands
 
@@ -1318,14 +920,6 @@ Get commands supported by the current session
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
-**Examples**
-
-```TypeScript
-avcontroller.getValidCommands().then((validCommands: avSession.AVControlCommandType[]) => {
-  console.info(`Succeeded in getting valid commands, size: ${validCommands.length}`);
-});
-```
-
 ## getValidCommandsSync
 
 ```TypeScript
@@ -1354,12 +948,6 @@ Get commands supported by the current session
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
-**Examples**
-
-```TypeScript
-let validCommands: Array<avSession.AVControlCommandType> = avcontroller.getValidCommandsSync();
-```
-
 ## isActive
 
 ```TypeScript
@@ -1385,18 +973,6 @@ Check if the current session is active
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
-
-**Examples**
-
-```TypeScript
-avcontroller.isActive((err: BusinessError, isActive: boolean) => {
-  if (err) {
-    console.error(`Failed to check active state, code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in checking active state: ${isActive}`);
-});
-```
 
 ## isActive
 
@@ -1426,14 +1002,6 @@ Check if the current session is active
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
-**Examples**
-
-```TypeScript
-avcontroller.isActive().then((isActive: boolean) => {
-  console.info(`Succeeded in checking active state: ${isActive}`);
-});
-```
-
 ## isActiveSync
 
 ```TypeScript
@@ -1461,12 +1029,6 @@ Check if the current session is active
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
-
-**Examples**
-
-```TypeScript
-let isActive: boolean = avcontroller.isActiveSync();
-```
 
 ## isDesktopLyricEnabled
 
@@ -1526,20 +1088,6 @@ Query desktop lyric visible state for this session.
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 | [6600110](../errorcode-avsession.md#6600110-desktop-lyrics-not-enabled-for-the-application) | The desktop lyrics feature of this application is not enabled. |
 | [6600111](../errorcode-avsession.md#6600111-desktop-lyrics-not-supported-for-the-current-device) | The desktop lyrics feature is not supported. |
-
-**Examples**
-
-```TypeScript
-if (currentAVSession !== undefined) {
-  (currentAVSession as avSession.AVSession).isDesktopLyricVisible().then((visible: boolean) => {
-    console.info(`isDesktopLyricVisible: ${visible}`);
-  })
-}
-```
-
-```TypeScript
-avcontroller.isDesktopLyricVisible();
-```
 
 ## off('metadataChange')
 
@@ -1944,12 +1492,6 @@ Unregister desktop lyric enable state change callback.
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
-**Examples**
-
-```TypeScript
-avcontroller.offDesktopLyricEnabled();
-```
-
 ## offDesktopLyricStateChanged
 
 ```TypeScript
@@ -1976,18 +1518,6 @@ Unregister desktop lyric state changed callback.
 | --- | --- |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
-
-**Examples**
-
-```TypeScript
-if (currentAVSession !== undefined) {
-  (currentAVSession as avSession.AVSession).offDesktopLyricStateChanged();
-}
-```
-
-```TypeScript
-avcontroller.offDesktopLyricStateChanged();
-```
 
 ## offDesktopLyricVisibilityChanged
 
@@ -2016,18 +1546,6 @@ Unregister desktop lyric visible state change callback.
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
-**Examples**
-
-```TypeScript
-if (currentAVSession !== undefined) {
-  (currentAVSession as avSession.AVSession).offDesktopLyricVisibilityChanged();
-}
-```
-
-```TypeScript
-avcontroller.offDesktopLyricVisibilityChanged();
-```
-
 ## offMediaCenterControlTypeChanged
 
 ```TypeScript
@@ -2054,12 +1572,6 @@ Unregister media center control type changed callback.
 | --- | --- |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
-
-**Examples**
-
-```TypeScript
-avcontroller.offMediaCenterControlTypeChanged();
-```
 
 ## offSupportedLoopModesChange
 
@@ -2090,12 +1602,6 @@ Unregister listener for supported loop modes.
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
-**Examples**
-
-```TypeScript
-avcontroller.offSupportedLoopModesChange();
-```
-
 ## offSupportedPlaySpeedsChange
 
 ```TypeScript
@@ -2124,12 +1630,6 @@ Unregister listener for supported play speeds.
 | --- | --- |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
-
-**Examples**
-
-```TypeScript
-avcontroller.offSupportedPlaySpeedsChange();
-```
 
 ## on('metadataChange')
 
@@ -2538,14 +2038,6 @@ Register desktop lyric enable state change callback.
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
-**Examples**
-
-```TypeScript
-avcontroller.onDesktopLyricEnabled((enabled: boolean) => {
-  console.info(`desktop lyric enabled state : ${enabled}`);
-})
-```
-
 ## onDesktopLyricStateChanged
 
 ```TypeScript
@@ -2572,22 +2064,6 @@ Register desktop lyric state changed callback.
 | --- | --- |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
-
-**Examples**
-
-```TypeScript
-if (currentAVSession !== undefined) {
-  (currentAVSession as avSession.AVSession).onDesktopLyricStateChanged((state: avSession.DesktopLyricState) => {
-    console.info(`desktop lyric isLocked : ${state.isLocked}`);
-  })
-}
-```
-
-```TypeScript
-avcontroller.onDesktopLyricStateChanged((state: avSession.DesktopLyricState) => {
-  console.info(`desktop lyric isLocked : ${state.isLocked}`);
-})
-```
 
 ## onDesktopLyricVisibilityChanged
 
@@ -2616,22 +2092,6 @@ Register desktop lyric visible state change callback.
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
-**Examples**
-
-```TypeScript
-if (currentAVSession !== undefined) {
-  (currentAVSession as avSession.AVSession).onDesktopLyricVisibilityChanged((visible: boolean) => {
-    console.info(`desktop lyric visible state: ${visible}`);
-  });
-}
-```
-
-```TypeScript
-avcontroller.onDesktopLyricVisibilityChanged((visible: boolean) => {
-  console.info(`desktop lyric visible state: ${visible}`);
-});
-```
-
 ## onMediaCenterControlTypeChanged
 
 ```TypeScript
@@ -2658,14 +2118,6 @@ Register media center control type changed callback.
 | --- | --- |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
-
-**Examples**
-
-```TypeScript
-avcontroller.onMediaCenterControlTypeChanged((types: avSession.AVMediaCenterControlType[]) => {
-  console.info(`Media center control types changed, size: ${types.length}`);
-});
-```
 
 ## onSupportedLoopModesChange
 
@@ -2696,14 +2148,6 @@ Register listener for supported loop modes.
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
-**Examples**
-
-```TypeScript
-avcontroller.onSupportedLoopModesChange((loopModes: avSession.LoopMode[]) => {
-  console.info(`Supported loop modes changed, size: ${loopModes.length}`);
-});
-```
-
 ## onSupportedPlaySpeedsChange
 
 ```TypeScript
@@ -2732,14 +2176,6 @@ Register listener for supported play speeds.
 | --- | --- |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
-
-**Examples**
-
-```TypeScript
-avcontroller.onSupportedPlaySpeedsChange((speeds: number[]) => {
-  console.info(`Supported play speeds changed, size: ${speeds.length}`);
-});
-```
 
 ## sendAVKeyEvent
 
@@ -2770,23 +2206,6 @@ Send media key event to this session
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 | [6600105](../errorcode-avsession.md#6600105-invalid-session-command) | Invalid session command. |
 | [6600106](../errorcode-avsession.md#6600106-session-not-activated) | The session is not activated. |
-
-**Examples**
-
-```TypeScript
-import { Key, KeyEvent } from '@kit.InputKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let keyItem: Key = {code:0x49, pressedTime:2, deviceId:0};
-let event:KeyEvent = {id:1, deviceId:0, actionTime:1, screenId:1, windowId:1, action:2, key:keyItem, unicodeChar:0, keys:[keyItem], ctrlKey:false, altKey:false, shiftKey:false, logoKey:false, fnKey:false, capsLock:false, numLock:false, scrollLock:false};
-avcontroller.sendAVKeyEvent(event, (err: BusinessError) => {
-  if (err) {
-    console.error(`Failed to send AV key event, code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in sending AV key event.');
-});
-```
 
 ## sendAVKeyEvent
 
@@ -2825,19 +2244,6 @@ Send media key event to this session
 | [6600105](../errorcode-avsession.md#6600105-invalid-session-command) | Invalid session command. |
 | [6600106](../errorcode-avsession.md#6600106-session-not-activated) | The session is not activated. |
 
-**Examples**
-
-```TypeScript
-import { Key, KeyEvent } from '@kit.InputKit';
-
-let keyItem: Key = {code:0x49, pressedTime:2, deviceId:0};
-let event:KeyEvent = {id:1, deviceId:0, actionTime:1, screenId:1, windowId:1, action:2, key:keyItem, unicodeChar:0, keys:[keyItem], ctrlKey:false, altKey:false, shiftKey:false, logoKey:false, fnKey:false, capsLock:false, numLock:false, scrollLock:false};
-
-avcontroller.sendAVKeyEvent(event).then(() => {
-  console.info('Succeeded in sending AV key event.');
-});
-```
-
 ## sendCommonCommand
 
 ```TypeScript
@@ -2869,19 +2275,6 @@ Send common commands to this session
 | [6600105](../errorcode-avsession.md#6600105-invalid-session-command) | Invalid session command. |
 | [6600106](../errorcode-avsession.md#6600106-session-not-activated) | The session is not activated. |
 | [6600107](../errorcode-avsession.md#6600107-too-many-commands-or-events) | Too many commands or events. |
-
-**Examples**
-
-```TypeScript
-let commandName = "my_command";
-avcontroller.sendCommonCommand(commandName, {command : "This is my command"}, (err: BusinessError) => {
-  if (err) {
-    console.error(`Failed to send common command, code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in sending common command.');
-})
-```
 
 ## sendCommonCommand
 
@@ -2922,15 +2315,6 @@ Send common commands to this session
 | [6600106](../errorcode-avsession.md#6600106-session-not-activated) | The session is not activated. |
 | [6600107](../errorcode-avsession.md#6600107-too-many-commands-or-events) | Too many commands or events. |
 
-**Examples**
-
-```TypeScript
-let commandName = "my_command";
-avcontroller.sendCommonCommand(commandName, {command : "This is my command"}).then(() => {
-  console.info('Succeeded in sending common command.');
-});
-```
-
 ## sendControlCommand
 
 ```TypeScript
@@ -2961,19 +2345,6 @@ Send control commands to this session
 | [6600105](../errorcode-avsession.md#6600105-invalid-session-command) | Invalid session command. |
 | [6600106](../errorcode-avsession.md#6600106-session-not-activated) | The session is not activated. |
 | [6600107](../errorcode-avsession.md#6600107-too-many-commands-or-events) | Too many commands or events. |
-
-**Examples**
-
-```TypeScript
-let avCommand: avSession.AVControlCommand = {command:'play'};
-avcontroller.sendControlCommand(avCommand, (err: BusinessError) => {
-  if (err) {
-    console.error(`Failed to send control command, code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in sending control command.');
-});
-```
 
 ## sendControlCommand
 
@@ -3013,15 +2384,6 @@ Send control commands to this session
 | [6600106](../errorcode-avsession.md#6600106-session-not-activated) | The session is not activated. |
 | [6600107](../errorcode-avsession.md#6600107-too-many-commands-or-events) | Too many commands or events. |
 
-**Examples**
-
-```TypeScript
-let avCommand: avSession.AVControlCommand = {command:'play'};
-avcontroller.sendControlCommand(avCommand).then(() => {
-  console.info('Succeeded in sending control command.');
-});
-```
-
 ## sendCustomData
 
 ```TypeScript
@@ -3055,58 +2417,6 @@ Send custom data to this avsession.
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. You are advised to:1.Scheduled retry.2.Destroy the current session or session controller and re-create it. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
-
-**Examples**
-
-```TypeScript
-avCastController.sendCustomData({customData : "This is custom data"});
-```
-
-```TypeScript
-currentAVSession.sendCustomData({customData : "This is custom data"}).then(() => {
-  console.info('Succeeded in sending custom data.');
-});
-```
-
-```TypeScript
-// Index.ets
-import { avSession } from '@kit.AVSessionKit';
-
-@Entry
-@Component
-struct Index {
-  private tag: string = "createNewSession";
-  private sessionId: string = "";
-  private controller: avSession.AVSessionController | undefined = undefined;
-  private currentAVSession?: avSession.AVSession;
-  context = this.getUIContext();
-
-  aboutToAppear(): void {
-    avSession.createAVSession(this.getUIContext().getHostContext(), this.tag, "audio")
-      .then(async (data: avSession.AVSession) => {
-        this.currentAVSession = data;
-        this.sessionId = this.currentAVSession.sessionId;
-        this.controller = await this.currentAVSession.getController();
-        console.info(`Succeeded in creating AV session, sessionId: ${this.sessionId}`);
-      });
-
-    if (this.controller !== undefined) {
-      (this.controller as avSession.AVSessionController).sendCustomData({ customData: "This is my data" })
-    }
-  }
-
-  build() {
-    Column() {
-      Text('AVSession Demo')
-        .fontSize(20)
-        .margin(10)
-    }
-    .width('100%')
-    .height('100%')
-    .justifyContent(FlexAlign.Center)
-  }
-}
-```
 
 ## setDesktopLyricState
 
@@ -3144,24 +2454,6 @@ Set desktop lyric state such as lock state for this session.
 | [6600110](../errorcode-avsession.md#6600110-desktop-lyrics-not-enabled-for-the-application) | The desktop lyrics feature of this application is not enabled. |
 | [6600111](../errorcode-avsession.md#6600111-desktop-lyrics-not-supported-for-the-current-device) | The desktop lyrics feature is not supported. |
 
-**Examples**
-
-```TypeScript
-let state: avSession.DesktopLyricState = {
-  isLocked: true,
-};
-currentAVSession.setDesktopLyricState(state).then(() => {
-  console.info('Succeeded in setting desktop lyric state.');
-})
-```
-
-```TypeScript
-let state: avSession.DesktopLyricState = {
-  isLocked: true,
-};
-avcontroller.setDesktopLyricState(state);
-```
-
 ## setDesktopLyricVisible
 
 ```TypeScript
@@ -3198,18 +2490,6 @@ Set desktop lyric visible state for this session.
 | [6600110](../errorcode-avsession.md#6600110-desktop-lyrics-not-enabled-for-the-application) | The desktop lyrics feature of this application is not enabled. |
 | [6600111](../errorcode-avsession.md#6600111-desktop-lyrics-not-supported-for-the-current-device) | The desktop lyrics feature is not supported. |
 
-**Examples**
-
-```TypeScript
-currentAVSession.setDesktopLyricVisible(true).then(() => {
-  console.info('Succeeded in setting desktop lyric visible.');
-});
-```
-
-```TypeScript
-avcontroller.setDesktopLyricVisible(true);
-```
-
 ## skipToQueueItem
 
 ```TypeScript
@@ -3237,19 +2517,6 @@ Set the item in the playlist to be played
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
-
-**Examples**
-
-```TypeScript
-let queueItemId = 0;
-avcontroller.skipToQueueItem(queueItemId, (err: BusinessError) => {
-  if (err) {
-    console.error(`Failed to skip to queue item, code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in skipping to queue item.');
-});
-```
 
 ## skipToQueueItem
 
@@ -3285,15 +2552,6 @@ Set the item in the playlist to be played
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
-
-**Examples**
-
-```TypeScript
-let queueItemId = 0;
-avcontroller.skipToQueueItem(queueItemId).then(() => {
-  console.info('Succeeded in skipping to queue item.');
-});
-```
 
 ## sessionId
 

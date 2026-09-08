@@ -1498,7 +1498,7 @@ Starts an ability. This API uses an asynchronous callback to return the result.
 | [16000010](../errorcode-ability.md#16000010-continuation-flag-is-forbidden) | The call with the continuation and prepare continuation flag is forbidden. |
 | [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
-| [16000053](../errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) | The ability is not on the top of the UI. |
+| [16000053](../errorcode-ability.md#16000053-ability-not-in-the-foreground) | The ability is not on the top of the UI. |
 | [16000055](../errorcode-ability.md#16000055-installation-free-timeout) | Installation-free timed out. |
 | [16200001](../errorcode-ability.md#16200001-caller-released) | The caller has been released. |
 | [16000012](../errorcode-ability.md#16000012-application-under-control) | The application is controlled.<br>**Applicable version:** 10 and later |
@@ -1572,7 +1572,7 @@ Starts an ability. This API uses a promise to return the result.
 | [16000010](../errorcode-ability.md#16000010-continuation-flag-is-forbidden) | The call with the continuation and prepare continuation flag is forbidden. |
 | [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
-| [16000053](../errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) | The ability is not on the top of the UI. |
+| [16000053](../errorcode-ability.md#16000053-ability-not-in-the-foreground) | The ability is not on the top of the UI. |
 | [16000055](../errorcode-ability.md#16000055-installation-free-timeout) | Installation-free timed out. |
 | [16200001](../errorcode-ability.md#16200001-caller-released) | The caller has been released. |
 | [16000012](../errorcode-ability.md#16000012-application-under-control) | The application is controlled.<br>**Applicable version:** 10 and later |

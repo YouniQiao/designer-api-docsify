@@ -91,6 +91,8 @@ Adds a contact. This API uses an asynchronous callback to return the result.
 **Examples**
 
 > NOTE
+> 
+> In the examples in this document, this.context is used to obtain the UIAbilityContext, where this represents the UIAbility instance that inherits from UIAbility. To use the capabilities provided by UIAbilityContext in the UI, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -206,6 +208,8 @@ Adds a contact. This API uses a promise to return the result.
 **Examples**
 
 > NOTE
+> 
+> In the examples in this document, this.context is used to obtain the UIAbilityContext, where this represents a UIAbility instance inherited from UIAbility. If you need to use the capabilities provided by UIAbilityContext in a UI page, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
 ```TypeScript
 import { contact } from '@kit.ContactsKit';

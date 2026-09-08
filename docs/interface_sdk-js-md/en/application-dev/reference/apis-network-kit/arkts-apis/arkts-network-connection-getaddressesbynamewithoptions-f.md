@@ -33,7 +33,7 @@ Performs the DNS resolution using the current default network based on the speci
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;NetAddress&gt;&gt; | Promise used to return the queried IP address. In the command output, the port field has a fixed value of 0. |
+| Promise&lt;Array&lt;[NetAddress](arkts-network-connection-netaddress-i.md)&gt;&gt; | Promise used to return the queried IP address. In the command output, the port field has a fixed value of 0. |
 
 **Error codes:**
 
@@ -56,26 +56,5 @@ connection.getAddressesByNameWithOptions("www.example.com", option).then((data: 
   console.info(`Succeeded to get data: ${JSON.stringify(data)}`);
 }).catch((err: BusinessError) => {
   console.error(`get ERROR msg: ${JSON.stringify(err)}`)
-});
-```
-
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-connection.getDefaultNet().then((netHandle: connection.NetHandle) => {
-  if (netHandle.netId == 0) {
-    // If no network is connected, the obtained netId of netHandle is 0, which is abnormal. You can add specific processing based on the service requirements.
-    return;
-  }
-  let host = "www.example.com";
-  let option: connection.QueryOptions = {
-      family: connection.FamilyType.FAMILY_TYPE_IPV4
-    };
-  netHandle.getAddressesByNameWithOptions(host, option).then((data: connection.NetAddress[]) => {
-    console.info(`Succeeded to get data: ${JSON.stringify(data)}`);
-  }).catch((err: BusinessError) => {
-    console.error(`get ERROR msg: ${JSON.stringify(err)}`)
-  });
 });
 ```

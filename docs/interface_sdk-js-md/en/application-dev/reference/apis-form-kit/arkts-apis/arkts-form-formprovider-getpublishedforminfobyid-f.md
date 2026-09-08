@@ -39,7 +39,7 @@ Obtains the information of the widget that has been added to the home screen on 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;formInfo.FormInfo&gt; | Promise used to return the information obtained. |
+| Promise&lt;[formInfo.FormInfo](arkts-form-forminfo-forminfo-i.md)&gt; | Promise used to return the information obtained. |
 
 **Error codes:**
 

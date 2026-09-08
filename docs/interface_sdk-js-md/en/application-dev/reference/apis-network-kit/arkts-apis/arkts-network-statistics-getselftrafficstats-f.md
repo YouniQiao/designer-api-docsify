@@ -31,7 +31,7 @@ Obtains the traffic statistics of the specified application on the specified net
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| networkInfo | NetworkInfo | Yes | Network information. |
+| networkInfo | [NetworkInfo](arkts-network-statistics-networkinfo-i.md) | Yes | Network information. |
 
 **Return value:**
 

@@ -45,7 +45,7 @@ The ImageSource instance created in incremental mode supports the following capa
 
 | Type | Description |
 | --- | --- |
-| ImageSource | ImageSource instance. If the operation fails, undefined is returned. |
+| [ImageSource](arkts-image-image-imagesource-i.md) | ImageSource instance. If the operation fails, undefined is returned. |
 
 **Examples**
 
@@ -97,7 +97,7 @@ The capabilities supported by the ImageSource instance created by this API are t
 
 | Type | Description |
 | --- | --- |
-| ImageSource | ImageSource instance. If the operation fails, undefined is returned. |
+| [ImageSource](arkts-image-image-imagesource-i.md) | ImageSource instance. If the operation fails, undefined is returned. |
 
 **Examples**
 

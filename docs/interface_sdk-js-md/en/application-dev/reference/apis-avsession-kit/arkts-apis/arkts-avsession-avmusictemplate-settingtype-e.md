@@ -2,7 +2,7 @@
 
 Enumeration of setting type.
 
-@enum { number }
+@enum { int }
 
 **Since:** 23
 

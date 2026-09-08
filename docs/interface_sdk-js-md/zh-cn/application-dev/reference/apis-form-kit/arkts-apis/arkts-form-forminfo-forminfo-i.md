@@ -56,7 +56,7 @@ colorMode: ColorMode
 
 从API version 9开始支持，从API version 20开始废弃。无替代接口。
 
-**类型：** ColorMode
+**类型：** [ColorMode](arkts-form-forminfo-colormode-e.md)
 
 **起始版本：** 9
 
@@ -380,7 +380,7 @@ type: FormType
 
 **说明：** 当卡片类型为JS时，isDynamic强制为true，transparencyEnabled不生效，jsComponentName为必填项。
 
-**类型：** FormType
+**类型：** [FormType](arkts-form-forminfo-formtype-e.md)
 
 **起始版本：** 9
 

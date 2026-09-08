@@ -26,7 +26,7 @@ Shows the shortcut menu by right-clicking the text.
 LongPress
 ```
 
-The menu is displayed when the component is number-pressed.
+The menu is displayed when the component is long-pressed.
 
 **Since:** 8
 

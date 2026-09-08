@@ -30,4 +30,4 @@ import { AsyncCallback, BusinessError, Callback, ErrorCallback } from '@kit.Basi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| err | T | Yes | Common error information returned when the API fails to be called. The default type is **BusinessError**, including the error code (**code**) and optional additional data (**data**). |
+| err | T | Yes | Common error information returned when the API call fails. The default type is **BusinessError**, including the error code (**code**) and optional additional data (**data**). |

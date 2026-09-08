@@ -351,29 +351,6 @@ stream.read(arrayBuffer, readOption).then((readLen: number) => {
 });
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { ReadOptions } from '@kit.CoreFileKit';
-
-let filePath = pathDir + "/test.txt";
-let file = fileIo.openSync(filePath, fileIo.OpenMode.CREATE | fileIo.OpenMode.READ_WRITE);
-let randomAccessFile = fileIo.createRandomAccessFileSync(file);
-let bufferLength: number = 4096;
-let readOption: ReadOptions = {
-  offset: 1,
-  length: 5
-};
-let arrayBuffer = new ArrayBuffer(bufferLength);
-randomAccessFile.read(arrayBuffer, readOption).then((readLength: number) => {
-  console.info(`Succeeded in reading, read length: ${readLength}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to read. Code: ${err.code}, message: ${err.message}`);
-}).finally(() => {
-  randomAccessFile.close();
-  fileIo.closeSync(file);
-});
-```
-
 ## read
 
 ```TypeScript
@@ -426,28 +403,6 @@ stream.read(arrayBuffer, (err: BusinessError, readLen: number) => {
     console.info(`Succeeded in reading data, the content of file is: ${buf.toString()}`);
     stream.close();
   }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let filePath = pathDir + "/test.txt";
-let file = fileIo.openSync(filePath, fileIo.OpenMode.CREATE | fileIo.OpenMode.READ_WRITE);
-let randomAccessFile = fileIo.createRandomAccessFileSync(file);
-let length: number = 20;
-
-let arrayBuffer = new ArrayBuffer(length);
-randomAccessFile.read(arrayBuffer, (err: BusinessError, readLength: number) => {
-  if (err) {
-    console.error(`Failed to read. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    if (readLength) {
-      console.info(`Succeeded in reading, size is: ${readLength}`);
-    }
-  }
-  randomAccessFile.close();
-  fileIo.closeSync(file);
 });
 ```
 
@@ -516,32 +471,6 @@ stream.read(arrayBuffer, readOption, (err: BusinessError, readLen: number) => {
 });
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { ReadOptions } from '@kit.CoreFileKit';
-
-let filePath = pathDir + "/test.txt";
-let file = fileIo.openSync(filePath, fileIo.OpenMode.CREATE | fileIo.OpenMode.READ_WRITE);
-let randomAccessFile = fileIo.createRandomAccessFileSync(file);
-let length: number = 20;
-let readOption: ReadOptions = {
-  offset: 1,
-  length: 5
-};
-let arrayBuffer = new ArrayBuffer(length);
-randomAccessFile.read(arrayBuffer, readOption, (err: BusinessError, readLength: number) => {
-  if (err) {
-    console.error(`Failed to read. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    if (readLength) {
-      console.info(`Succeeded in reading, size is: ${readLength}`);
-    }
-  }
-  randomAccessFile.close();
-  fileIo.closeSync(file);
-});
-```
-
 ## readSync
 
 ```TypeScript
@@ -601,17 +530,6 @@ let readOption: ReadOptions = {
 let buf = new ArrayBuffer(4096);
 let num = stream.readSync(buf, readOption);
 stream.close();
-```
-
-```TypeScript
-let filePath = pathDir + "/test.txt";
-let file = fileIo.openSync(filePath, fileIo.OpenMode.CREATE | fileIo.OpenMode.READ_WRITE);
-let randomAccessFile = fileIo.createRandomAccessFileSync(file);
-let length: number = 4096;
-let arrayBuffer = new ArrayBuffer(length);
-let readLength = randomAccessFile.readSync(arrayBuffer);
-randomAccessFile.close();
-fileIo.closeSync(file);
 ```
 
 ## write
@@ -682,30 +600,6 @@ stream.write("hello, world", writeOption).then((number: number) => {
 });
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { WriteOptions } from '@kit.CoreFileKit';
-
-let filePath = pathDir + "/test.txt";
-let file = fileIo.openSync(filePath, fileIo.OpenMode.CREATE | fileIo.OpenMode.READ_WRITE);
-let randomAccessFile = fileIo.createRandomAccessFileSync(file);
-let bufferLength: number = 4096;
-let writeOption: WriteOptions = {
-  offset: 1,
-  length: 5,
-  encoding: 'utf-8'
-};
-let arrayBuffer = new ArrayBuffer(bufferLength);
-randomAccessFile.write(arrayBuffer, writeOption).then((bytesWritten: number) => {
-  console.info(`Succeeded in writing, bytes written: ${bytesWritten}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to write. Code: ${err.code}, message: ${err.message}`);
-}).finally(() => {
-  randomAccessFile.close();
-  fileIo.closeSync(file);
-});
-```
-
 ## write
 
 ```TypeScript
@@ -760,27 +654,6 @@ stream.write("hello, world", (err: BusinessError, bytesWritten: number) => {
     }
   }
   stream.close();
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let filePath = pathDir + "/test.txt";
-let file = fileIo.openSync(filePath, fileIo.OpenMode.CREATE | fileIo.OpenMode.READ_WRITE);
-let randomAccessFile = fileIo.createRandomAccessFileSync(file);
-let bufferLength: number = 4096;
-let arrayBuffer = new ArrayBuffer(bufferLength);
-randomAccessFile.write(arrayBuffer, (err: BusinessError, bytesWritten: number) => {
-  if (err) {
-    console.error(`Failed to write. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    if (bytesWritten) {
-      console.info(`Succeeded in writing, size is: ${bytesWritten}`);
-    }
-  }
-  randomAccessFile.close();
-  fileIo.closeSync(file);
 });
 ```
 
@@ -852,33 +725,6 @@ stream.write("hello, world", writeOption, (err: BusinessError, bytesWritten: num
 });
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { WriteOptions } from '@kit.CoreFileKit';
-
-let filePath = pathDir + "/test.txt";
-let file = fileIo.openSync(filePath, fileIo.OpenMode.CREATE | fileIo.OpenMode.READ_WRITE);
-let randomAccessFile = fileIo.createRandomAccessFileSync(file);
-let bufferLength: number = 4096;
-let writeOption: WriteOptions = {
-  offset: 1,
-  length: bufferLength,
-  encoding: 'utf-8'
-};
-let arrayBuffer = new ArrayBuffer(bufferLength);
-randomAccessFile.write(arrayBuffer, writeOption, (err: BusinessError, bytesWritten: number) => {
-  if (err) {
-    console.error(`Failed to write. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    if (bytesWritten) {
-      console.info(`Succeeded in writing, size is: ${bytesWritten}`);
-    }
-  }
-  randomAccessFile.close();
-  fileIo.closeSync(file);
-});
-```
-
 ## writeSync
 
 ```TypeScript
@@ -940,18 +786,4 @@ let writeOption: WriteOptions = {
 };
 let num = stream.writeSync("hello, world", writeOption);
 stream.close();
-```
-
-```TypeScript
-import { WriteOptions } from '@kit.CoreFileKit';
-
-let filePath = pathDir + "/test.txt";
-let randomAccessFile = fileIo.createRandomAccessFileSync(filePath, fileIo.OpenMode.CREATE | fileIo.OpenMode.READ_WRITE);
-let writeOption: WriteOptions = {
-  offset: 5,
-  length: 5,
-  encoding: 'utf-8'
-};
-let bytesWritten = randomAccessFile.writeSync("hello, world", writeOption);
-randomAccessFile.close();
 ```

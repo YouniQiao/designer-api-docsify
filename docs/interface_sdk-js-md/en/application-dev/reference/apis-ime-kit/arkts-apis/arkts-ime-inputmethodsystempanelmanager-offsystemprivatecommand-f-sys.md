@@ -26,7 +26,7 @@ Unsubscribes from events that the system-default input method application sends 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, CommandDataType&gt;&gt; | No | Callback function. If this parameter is left empty, all callbacks will be unsubscribed from. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, [CommandDataType](arkts-ime-inputmethodengine-commanddatatype-t.md)&gt;&gt; | No | Callback function. If this parameter is left empty, all callbacks will be unsubscribed from. |
 
 **Error codes:**
 

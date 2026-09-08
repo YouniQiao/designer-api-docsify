@@ -32,7 +32,7 @@ function reserveProfilesForFactoryRestore(slotId: number): Promise<ResultCode>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;ResultCode&gt; | Promise对象，返回恢复出厂设置的结果码。 |
+| Promise&lt;[ResultCode](arkts-telephony-esim-resultcode-e-sys.md)&gt; | Promise对象，返回恢复出厂设置的结果码。 |
 
 **错误码：**
 

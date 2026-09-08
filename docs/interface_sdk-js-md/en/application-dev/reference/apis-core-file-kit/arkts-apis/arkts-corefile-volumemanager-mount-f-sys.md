@@ -43,16 +43,6 @@ Mounts a volume. This API uses an asynchronous callback to return the result. Cu
 | 13600008 | No such object. |
 | 13900042 | Unknown error. |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-let volumeId: string = "";
-volumeManager.mount(volumeId, (error: BusinessError) => {
-  // Do something.
-});
-```
-
 
 ## mount
 
@@ -95,15 +85,3 @@ Mounts a volume. This API uses a promise to return the result. Currently, only t
 | 13600005 | Incorrect volume state. |
 | 13600008 | No such object. |
 | 13900042 | Unknown error. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-let volumeId: string = "";
-volumeManager.mount(volumeId).then(() => {
-  // Do something.
-}).catch((error: BusinessError) => {
-  console.error("mount failed");
-});
-```

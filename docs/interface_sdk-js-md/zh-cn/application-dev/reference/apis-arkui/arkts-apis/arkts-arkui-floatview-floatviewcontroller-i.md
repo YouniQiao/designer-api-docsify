@@ -566,7 +566,7 @@ setWindowSize(size: window.Size): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| size | window.Size | 是 | 表示窗口的大小。建议大小满足[getFloatViewLimits](arkts-arkui-floatview-getfloatviewlimits-f.md)接口返回的限制。 |
+| size | [window.Size](arkts-arkui-window-size-i.md) | 是 | 表示窗口的大小。建议大小满足[getFloatViewLimits](arkts-arkui-floatview-getfloatviewlimits-f.md)接口返回的限制。 |
 
 **返回值：**
 

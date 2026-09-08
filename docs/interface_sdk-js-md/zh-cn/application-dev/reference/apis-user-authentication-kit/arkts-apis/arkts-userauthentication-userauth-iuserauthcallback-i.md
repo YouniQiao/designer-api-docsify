@@ -99,7 +99,7 @@ extraInfo中返回冻结时间，类型为[AuthResult](arkts-userauthentication-
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | result | number | 是 |  |
-| extraInfo | AuthResult | 是 |  |
+| extraInfo | [AuthResult](arkts-userauthentication-userauth-authresult-i.md) | 是 |  |
 
 **示例**
 

@@ -39,9 +39,9 @@ ensure that ohos.permission.MANAGE_BLUETOOTH_ADVERTISER_NAME has been added.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| setting | AdvertiseSetting | Yes | Indicates the settings for BLE advertising. |
-| advData | AdvertiseData | Yes | Indicates the advertising data. |
-| advResponse | AdvertiseData | No | Indicates the scan response associated with the advertising data. |
+| setting | [AdvertiseSetting](arkts-connectivity-ble-advertisesetting-i.md) | Yes | Indicates the settings for BLE advertising. |
+| advData | [AdvertiseData](arkts-connectivity-ble-advertisedata-i.md) | Yes | Indicates the advertising data. |
+| advResponse | [AdvertiseData](arkts-connectivity-ble-advertisedata-i.md) | No | Indicates the scan response associated with the advertising data. |
 
 **Error codes:**
 
@@ -136,7 +136,7 @@ ensure that ohos.permission.MANAGE_BLUETOOTH_ADVERTISER_NAME has been added.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| advertisingParams | AdvertisingParams | Yes | Indicates the params for BLE advertising. |
+| advertisingParams | [AdvertisingParams](arkts-connectivity-ble-advertisingparams-i.md) | Yes | Indicates the params for BLE advertising. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | the callback of advertise ID. |
 
 **Error codes:**
@@ -246,7 +246,7 @@ ensure that ohos.permission.MANAGE_BLUETOOTH_ADVERTISER_NAME has been added.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| advertisingParams | AdvertisingParams | Yes | Indicates the param for BLE advertising. |
+| advertisingParams | [AdvertisingParams](arkts-connectivity-ble-advertisingparams-i.md) | Yes | Indicates the param for BLE advertising. |
 
 **Return value:**
 

@@ -37,7 +37,7 @@ Generates SM2 ciphertext in ASN.1 format.
 
 | Type | Description |
 | --- | --- |
-| DataBlob | SM2 ciphertext in ASN.1 format. |
+| [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | SM2 ciphertext in ASN.1 format. |
 
 **Error codes:**
 
@@ -87,7 +87,7 @@ Obtains SM2 ciphertext parameters from the SM2 ciphertext in ASN.1 format.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| cipherText | DataBlob | Yes | SM2 ciphertext in ASN.1 format. |
+| cipherText | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | Yes | SM2 ciphertext in ASN.1 format. |
 | mode | string | No | Order of the SM2 parameters in the ciphertext. Currently, only C1C3C2 is supported. If this parameter is left empty or is an empty string, the default value is used. |
 
 **Return value:**

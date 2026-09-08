@@ -20,7 +20,7 @@ enterKeyType: EnterKeyType
 
 Function type represented by the Enter key of the input method.
 
-**Type:** EnterKeyType
+**Type:** [EnterKeyType](arkts-ime-inputmethod-enterkeytype-e.md)
 
 **Since:** 10
 

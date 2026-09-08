@@ -62,7 +62,7 @@ type: ChangeType
 
 Type of the data changed, which can be data or asset.
 
-**Type:** ChangeType
+**Type:** [ChangeType](arkts-arkdata-relationalstore-changetype-e.md)
 
 **Since:** 10
 

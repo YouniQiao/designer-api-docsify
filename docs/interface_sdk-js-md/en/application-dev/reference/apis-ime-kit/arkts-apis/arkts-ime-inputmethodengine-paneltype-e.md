@@ -4,8 +4,8 @@ Enumerates the types of the input method panel.
 
 | Name | Value| Description |  
 | ------------ | -- | ------------------ |  
-| SOFT_KEYBOARD | 0 | Soft keyboard type.|
-| STATUS_BAR | 1 | Status bar type.|
+| [SOFT_KEYBOARD](arkts-ime-inputmethodengine-paneltype-e.md) | 0 | Soft keyboard type.|
+| [STATUS_BAR](arkts-ime-inputmethodengine-paneltype-e.md) | 1 | Status bar type.|
 
 **Since:** 10
 

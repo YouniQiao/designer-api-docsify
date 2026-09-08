@@ -41,17 +41,6 @@ Closes a directory. This API uses a promise to return the result. After a direct
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
-let filePath = pathDir + "/test.txt";
-let ss = fileio.createStreamSync(filePath, "r+");
-ss.close().then(() => {
-  console.info("close fileStream succeed");
-}).catch((err: BusinessError) => {
-  console.error("close fileStream  failed with error:" + err);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@ohos.base';
 dir.close().then(() => {
   console.info("close dir successfully");
 });
@@ -83,15 +72,6 @@ Closes a directory. This API uses an asynchronous callback to return the result.
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
-let filePath = pathDir + "/test.txt";
-let ss = fileio.createStreamSync(filePath, "r+");
-ss.close((err: BusinessError) => {
-  // Do something.
-});
-```
-
-```TypeScript
-import { BusinessError } from '@ohos.base';
 dir.close((err: BusinessError) => {
   console.info("close dir successfully");
 });
@@ -114,12 +94,6 @@ Closes a directory. After a directory is closed, the file descriptor in **Dir** 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Examples**
-
-```TypeScript
-let filePath = pathDir + "/test.txt";
-let ss = fileio.createStreamSync(filePath, "r+");
-ss.closeSync();
-```
 
 ```TypeScript
 dir.closeSync();

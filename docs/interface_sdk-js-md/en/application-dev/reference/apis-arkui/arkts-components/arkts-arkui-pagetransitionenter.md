@@ -151,6 +151,7 @@ struct Page1 {
 ```
 
 pageTransition1
+Method 2: The entrance animation of the current page is configured to slide in from the left, and the exit animation is configured to translate with opacity change.
 
 ```TypeScript
 // Index.ets 
@@ -291,6 +292,7 @@ struct Page1 {
 ```
 
 pageTransition1
+Customization method 2: Use the system's default entrance and exit effects, with the system language layout mode set to right-to-left (RTL).
 
 ```TypeScript
 // Index.ets

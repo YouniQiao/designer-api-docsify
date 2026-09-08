@@ -153,7 +153,7 @@ textAlign?: TextAlign
 
 默认值：TextAlign.Start
 
-**类型：** TextAlign
+**类型：** [TextAlign](arkts-arkui-textalign-e.md)
 
 **默认值：** { TextAlign.Start }
 

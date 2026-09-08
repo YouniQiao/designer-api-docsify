@@ -47,20 +47,6 @@ Clicks this component. This API uses a promise to return the result.
 
 ```TypeScript
 // xxx.test.ets
-import { Driver, ON, Component } from '@kit.TestKit';
-
-async function demo() {
-  // Create a Driver object.
-  let driver: Driver = Driver.create();
-  // Search for the Button component.
-  let button: Component = await driver.findComponent(ON.type('Button'));
-  // Tap the component.
-  await button.click();
-}
-```
-
-```TypeScript
-// xxx.test.ets
 import { UiDriver, BY, UiComponent } from '@kit.TestKit';
 
 async function demo() {
@@ -95,17 +81,6 @@ Double-clicks this component. This API uses a promise to return the result.
 | Promise&lt;void&gt; | Promise that returns no value. |
 
 **Examples**
-
-```TypeScript
-// xxx.test.ets
-import { Component, Driver, ON } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  let button: Component = await driver.findComponent(ON.type('Button'));
-  await button.doubleClick();
-}
-```
 
 ```TypeScript
 // xxx.test.ets
@@ -220,17 +195,6 @@ Obtains the text information of this component. This API uses a promise to retur
 
 ```TypeScript
 // xxx.test.ets
-import { Component, Driver, ON } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  let button: Component = await driver.findComponent(ON.type('Button'));
-  let text = await button.getText();
-}
-```
-
-```TypeScript
-// xxx.test.ets
 import { UiDriver, BY, UiComponent } from '@kit.TestKit';
 
 async function demo() {
@@ -265,17 +229,6 @@ Obtains the type of this component. This API uses a promise to return the result
 | Promise&lt;string&gt; | Promise used to return the component type. |
 
 **Examples**
-
-```TypeScript
-// xxx.test.ets
-import { Component, Driver, ON } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  let button: Component = await driver.findComponent(ON.type('Button'));
-  let type = await button.getType();
-}
-```
 
 ```TypeScript
 // xxx.test.ets
@@ -322,20 +275,6 @@ Inputs text to a component. This API takes effect only for editable text compone
 
 ```TypeScript
 // xxx.test.ets
-import { Component, Driver, ON } from '@kit.TestKit';
-
-async function demo() {
-  // Create a Driver object.
-  let driver: Driver = Driver.create();
-  // Search for the component whose text is 'hello world'.
-  let text: Component = await driver.findComponent(ON.text('hello world'));
-  // Clear the original text and enter '123'.
-  await text.inputText('123');
-}
-```
-
-```TypeScript
-// xxx.test.ets
 import { UiDriver, BY, UiComponent } from '@kit.TestKit';
 
 async function demo() {
@@ -370,21 +309,6 @@ Obtains the clickable status of this component. This API uses a promise to retur
 | Promise&lt;boolean&gt; | Promise used to return whether the component is clickable. The value **true** indicates that the component is clickable, and **false** indicates the opposite. |
 
 **Examples**
-
-```TypeScript
-// xxx.test.ets
-import { Component, Driver, ON } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  let button: Component = await driver.findComponent(ON.type('Button'));
-  if (await button.isClickable()) {
-    console.info('This button can be clicked');
-  } else {
-    console.info('This button cannot be clicked');
-  }
-}
-```
 
 ```TypeScript
 // xxx.test.ets
@@ -429,21 +353,6 @@ Obtains the enabled status of this component. This API uses a promise to return 
 
 ```TypeScript
 // xxx.test.ets
-import { Component, Driver, ON } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  let button: Component = await driver.findComponent(ON.type('Button'));
-  if (await button.isEnabled()) {
-    console.info('This button can be operated');
-  } else {
-    console.info('This button cannot be operated');
-  }
-}
-```
-
-```TypeScript
-// xxx.test.ets
 import { UiDriver, BY, UiComponent } from '@kit.TestKit';
 
 async function demo() {
@@ -482,32 +391,6 @@ Obtains the focused status of this component. This API uses a promise to return 
 | Promise&lt;boolean&gt; | Promise used to return whether the component is focused. The value **true** indicates that the component is focused, and **false** indicates the opposite. |
 
 **Examples**
-
-```TypeScript
-// xxx.test.ets
-import { Component, Driver, ON } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  let button: Component = await driver.findComponent(ON.type('Button'));
-  if (await button.isFocused()) {
-    console.info('This button is focused');
-  } else {
-    console.info('This button is not focused');
-  }
-}
-```
-
-```TypeScript
-// xxx.test.ets
-import { Driver, UiWindow } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  let window: UiWindow = await driver.findWindow({ active: true });
-  let focused = await window.isFocused();
-}
-```
 
 ```TypeScript
 // xxx.test.ets
@@ -552,21 +435,6 @@ Obtains the scrollable status of this component. This API uses a promise to retu
 
 ```TypeScript
 // xxx.test.ets
-import { Component, Driver, ON } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  let scrollBar: Component = await driver.findComponent(ON.scrollable(true));
-  if (await scrollBar.isScrollable()) {
-    console.info('This scrollBar can be operated');
-  } else {
-    console.info('This scrollBar cannot be operated');
-  }
-}
-```
-
-```TypeScript
-// xxx.test.ets
 import { UiDriver, BY, UiComponent } from '@kit.TestKit';
 
 async function demo() {
@@ -608,21 +476,6 @@ Obtains the selected status of this component. This API uses a promise to return
 
 ```TypeScript
 // xxx.test.ets
-import { Component, Driver, ON } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  let button: Component = await driver.findComponent(ON.type('Button'));
-  if (await button.isSelected()) {
-    console.info('This button is selected');
-  } else {
-    console.info('This button is not selected');
-  }
-}
-```
-
-```TypeScript
-// xxx.test.ets
 import { UiDriver, BY, UiComponent } from '@kit.TestKit';
 
 async function demo() {
@@ -661,17 +514,6 @@ Long-clicks this component. This API uses a promise to return the result.
 | Promise&lt;void&gt; | Promise that returns no value. |
 
 **Examples**
-
-```TypeScript
-// xxx.test.ets
-import { Component, Driver, ON } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  let button: Component = await driver.findComponent(ON.type('Button'));
-  await button.longClick();
-}
-```
 
 ```TypeScript
 // xxx.test.ets

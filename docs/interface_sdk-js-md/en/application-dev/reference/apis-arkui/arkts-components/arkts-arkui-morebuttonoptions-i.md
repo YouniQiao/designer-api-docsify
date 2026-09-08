@@ -19,7 +19,7 @@ backgroundBlurStyle?: BlurStyle
 
 Background blur style of the more button menu. If this parameter is not set, background blur is disabled.
 
-**Type:** BlurStyle
+**Type:** [BlurStyle](arkts-arkui-blurstyle-e.md)
 
 **Since:** 19
 

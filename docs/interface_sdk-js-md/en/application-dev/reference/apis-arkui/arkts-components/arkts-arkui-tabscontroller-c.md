@@ -174,4 +174,4 @@ Sets the translation distance of the tab bar.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| translate | TranslateOptions | Yes | Translation distance of the tab bar. |
+| translate | [TranslateOptions](arkts-arkui-translateoptions-i.md) | Yes | Translation distance of the tab bar. |

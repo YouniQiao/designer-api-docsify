@@ -52,7 +52,7 @@ fileConflictOptions?: FileConflictOptions
 
 定义文件拷贝冲突时的选项。OVERWRITE（覆盖）适合需要确保目标路径使用最新文件内容的场景；SKIP（跳过）适合需要保留目标路径原有文件、避免意外覆盖的场景。默认为OVERWRITE。
 
-**类型：** FileConflictOptions
+**类型：** [FileConflictOptions](arkts-basicservices-pasteboard-fileconflictoptions-e.md)
 
 **默认值：** FileConflictOptions.OVERWRITE
 
@@ -70,7 +70,7 @@ progressIndicator: ProgressIndicator
 
 定义进度条指示选项，可选择是否采用系统默认进度显示。设置为DEFAULT时采用系统默认进度显示；设置为NONE时需应用自行处理进度，此时progressListener和progressSignal参数才有效。
 
-**类型：** ProgressIndicator
+**类型：** [ProgressIndicator](arkts-basicservices-pasteboard-progressindicator-e.md)
 
 **起始版本：** 15
 

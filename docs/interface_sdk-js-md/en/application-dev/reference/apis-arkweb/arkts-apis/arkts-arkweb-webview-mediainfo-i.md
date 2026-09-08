@@ -112,7 +112,7 @@ mediaType: MediaType
 
 Type of the media.
 
-**Type:** MediaType
+**Type:** [MediaType](arkts-arkweb-webview-mediatype-e.md)
 
 **Since:** 12
 

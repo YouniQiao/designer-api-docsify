@@ -26,7 +26,7 @@ function getNotificationStatisticsByBundle(bundles: BundleOption[]): Promise<Bun
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| bundles | BundleOption[] | 是 | 应用的包信息列表。 |
+| bundles | [BundleOption](arkts-notification-notificationmanager-bundleoption-t.md)[] | 是 | 应用的包信息列表。 |
 
 **返回值：**
 

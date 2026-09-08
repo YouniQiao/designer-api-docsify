@@ -31,4 +31,4 @@ global \$rawfile function
 
 | Type | Description |
 | --- | --- |
-| Resource |  |
+| [Resource](../arkts-apis/arkts-arkui-resource-t.md) |  |

@@ -19,7 +19,7 @@ counterTextColor?: ColorMetrics
 
 Text color of the character counter. When the input character count exceeds the maximum limit multiplied by the specified percentage, the counter displays the current count text using this color. If **counterTextColor** is not set, the default gray color is used.
 
-**Type:** ColorMetrics
+**Type:** [ColorMetrics](../arkts-apis/arkts-arkui-colormetrics-t.md)
 
 **Since:** 22
 
@@ -41,7 +41,7 @@ Text color of the character counter when the maximum limit is exceeded. When the
 
 The border color is changed only when the **highlightBorder** attribute of [InputCounterOptions](arkts-arkui-inputcounteroptions-i.md) is set.
 
-**Type:** ColorMetrics
+**Type:** [ColorMetrics](../arkts-apis/arkts-arkui-colormetrics-t.md)
 
 **Since:** 22
 

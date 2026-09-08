@@ -22,7 +22,7 @@ addresses: Array<LinkAddress>
 
 VPN虚拟网卡的 IP 地址。
 
-**类型：** Array&lt;LinkAddress&gt;
+**类型：** Array&lt;[LinkAddress](arkts-network-vpn-linkaddress-t.md)&gt;
 
 **起始版本：** 10
 
@@ -150,7 +150,7 @@ routes?: Array<RouteInfo>
 
 VPN虚拟网卡的路由信息。
 
-**类型：** Array&lt;RouteInfo&gt;
+**类型：** Array&lt;[RouteInfo](arkts-network-vpn-routeinfo-t.md)&gt;
 
 **起始版本：** 10
 

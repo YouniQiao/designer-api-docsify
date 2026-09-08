@@ -40,16 +40,6 @@ Obtains information about a volume based on the UUID. This API uses an asynchron
 | 13600008 | No such object. |
 | 13900042 | Unknown error. |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-let uuid: string = "";
-volumeManager.getVolumeByUuid(uuid, (error: BusinessError, volume: volumeManager.Volume) => {
-  // Do something.   
-});
-```
-
 
 ## getVolumeByUuid
 
@@ -89,15 +79,3 @@ Obtains information about a volume based on the universally unique identifier (U
 | 13600001 | IPC error. |
 | 13600008 | No such object. |
 | 13900042 | Unknown error. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-let uuid: string = "";
-volumeManager.getVolumeByUuid(uuid).then((volume: volumeManager.Volume) => {
-  console.info("getVolumeByUuid successfully:" + JSON.stringify(volume));
-}).catch((error: BusinessError) => {
-  console.error("getVolumeByUuid failed with error:" + JSON.stringify(error));
-});
-```

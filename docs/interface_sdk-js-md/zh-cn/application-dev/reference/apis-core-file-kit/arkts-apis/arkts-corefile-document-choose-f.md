@@ -31,13 +31,6 @@ declare function choose(types?: string[]): Promise<string>
 | --- | --- |
 | Promise&lt;string&gt; | 异步返回文件URI（注：当前返回错误码） |
 
-**示例**
-
-```TypeScript
-let types: Array<string> = [];
-document.choose(types);
-```
-
 
 ## choose
 
@@ -58,15 +51,6 @@ declare function choose(callback: AsyncCallback<string>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 异步获取对应文件URI（注：当前返回错误码） |
-
-**示例**
-
-```TypeScript
-let uri: string = "";
-document.choose((err: TypeError, uri: string) => {
-  //do something with uri
-});
-```
 
 
 ## choose
@@ -89,13 +73,3 @@ declare function choose(types: string[], callback: AsyncCallback<string>): void
 | --- | --- | --- | --- |
 | types | string[] | 是 | 限定选择文件的类型 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 异步获取对应文件URI（注：当前返回错误码） |
-
-**示例**
-
-```TypeScript
-let types: Array<string> = [];
-let uri: string = "";
-document.choose(types, (err: TypeError, uri: string) => {
-  //do something with uri
-});
-```

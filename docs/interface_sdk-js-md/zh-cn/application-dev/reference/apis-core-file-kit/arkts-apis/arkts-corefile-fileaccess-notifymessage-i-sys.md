@@ -26,7 +26,7 @@ type: NotifyType
 
 变更的通知类型。
 
-**类型：** NotifyType
+**类型：** [NotifyType](arkts-corefile-cloudsync-notifytype-e.md)
 
 **起始版本：** 10
 

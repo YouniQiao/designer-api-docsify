@@ -21,7 +21,7 @@ Space on the cross axis of the **Flex** component.
 
 Default value: **LengthMetrics.px(0)**.
 
-**Type:** LengthMetrics
+**Type:** [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md)
 
 **Since:** 12
 
@@ -41,7 +41,7 @@ Space on the main axis of the **Flex** component.
 
 Default value: **LengthMetrics.px(0)**.
 
-**Type:** LengthMetrics
+**Type:** [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md)
 
 **Since:** 12
 

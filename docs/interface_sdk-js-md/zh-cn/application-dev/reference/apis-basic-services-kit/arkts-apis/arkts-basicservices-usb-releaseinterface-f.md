@@ -28,8 +28,8 @@ function releaseInterface(pipe: USBDevicePipe, iface: USBInterface): number
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| pipe | USBDevicePipe | 是 | 用于确定总线号和设备地址。 |
-| iface | USBInterface | 是 | 用于确定需要释放接口的索引。 |
+| pipe | [USBDevicePipe](arkts-basicservices-usb-usbdevicepipe-i.md) | 是 | 用于确定总线号和设备地址。 |
+| iface | [USBInterface](arkts-basicservices-usb-usbinterface-i.md) | 是 | 用于确定需要释放接口的索引。 |
 
 **返回值：**
 

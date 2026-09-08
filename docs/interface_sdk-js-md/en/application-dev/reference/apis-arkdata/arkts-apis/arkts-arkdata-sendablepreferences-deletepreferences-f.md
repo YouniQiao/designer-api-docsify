@@ -25,7 +25,7 @@ Deletes a specified **Preferences** instance from the cache. If the **Preference
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | context | Context | Yes | Application context. |
-| options | Options | Yes | Configuration options of the **Preferences** instance. |
+| options | [Options](arkts-arkdata-sendablepreferences-options-i.md) | Yes | Configuration options of the **Preferences** instance. |
 
 **Return value:**
 

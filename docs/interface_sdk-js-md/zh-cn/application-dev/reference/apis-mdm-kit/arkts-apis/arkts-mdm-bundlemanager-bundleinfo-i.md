@@ -36,7 +36,7 @@ readonly appInfo: ApplicationInfo
 
 应用程序的配置信息。
 
-**类型：** ApplicationInfo
+**类型：** [ApplicationInfo](arkts-mdm-bundlemanager-applicationinfo-i.md)
 
 **起始版本：** 20
 
@@ -116,7 +116,7 @@ readonly signatureInfo: SignatureInfo
 
 应用包的签名信息。
 
-**类型：** SignatureInfo
+**类型：** [SignatureInfo](arkts-mdm-bundlemanager-signatureinfo-i.md)
 
 **起始版本：** 20
 

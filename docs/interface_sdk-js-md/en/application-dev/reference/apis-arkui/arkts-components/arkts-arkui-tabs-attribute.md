@@ -111,7 +111,7 @@ Sets the background blur style of the tab bar.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | BlurStyle | Yes | Background blur style of the tab bar.Default value: **BlurStyle.NONE |
+| value | [BlurStyle](arkts-arkui-blurstyle-e.md) | Yes | Background blur style of the tab bar.Default value: **BlurStyle.NONE |
 
 ## barBackgroundBlurStyle
 
@@ -133,7 +133,7 @@ Defines the blur style to apply between the background and content of a tab bar.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | BlurStyle | Yes | Settings of the background blur style, including the blur radius, mask color, mask opacity, saturation, and brightness. |
+| style | [BlurStyle](arkts-arkui-blurstyle-e.md) | Yes | Settings of the background blur style, including the blur radius, mask color, mask opacity, saturation, and brightness. |
 | options | [BackgroundBlurStyleOptions](arkts-arkui-backgroundblurstyleoptions-i.md) | Yes | Background blur options. |
 
 ## barBackgroundColor

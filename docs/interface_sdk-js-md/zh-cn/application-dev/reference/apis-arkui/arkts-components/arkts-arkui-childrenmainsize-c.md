@@ -43,19 +43,6 @@ ChildrenMainSize有参构造函数。
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
 
-**示例**
-
-```TypeScript
-@Builder
-function myBuilder(value: string, size: number) {
-  Text(value)
-    .fontSize(size)
-}
-
-// 使用WrappedBuilder封装myBuilder
-let builderVar: WrappedBuilder<[string, number]> = new WrappedBuilder<[string, number]>(myBuilder);
-```
-
 ## splice
 
 ```TypeScript

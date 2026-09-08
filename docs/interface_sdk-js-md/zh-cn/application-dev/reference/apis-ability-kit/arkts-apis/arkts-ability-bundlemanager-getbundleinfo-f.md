@@ -28,7 +28,7 @@ function getBundleInfo(bundleName: string, bundleFlags: number, callback: AsyncC
 | --- | --- | --- | --- |
 | bundleName | string | 是 | 表示要查询的应用Bundle名称。 |
 | bundleFlags | number | 是 | 指定返回的BundleInfo所包含的信息。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;BundleInfo&gt; | 是 | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)，当获取成功时，err为undefined，data为获取到的BundleInfo；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[BundleInfo](arkts-ability-bundlemanager-bundleinfo-t.md)&gt; | 是 | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)，当获取成功时，err为undefined，data为获取到的BundleInfo；否则为错误对象。 |
 
 **错误码：**
 
@@ -89,7 +89,7 @@ function getBundleInfo(bundleName: string, bundleFlags: number, userId: number, 
 | bundleName | string | 是 | 表示要查询的应用Bundle名称。 |
 | bundleFlags | number | 是 | 指定返回的BundleInfo所包含的信息。 |
 | userId | number | 是 | 表示用户ID，可以通过[getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid)获取。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;BundleInfo&gt; | 是 | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)，当获取成功时，err为undefined，data为获取到的bundleInfo；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[BundleInfo](arkts-ability-bundlemanager-bundleinfo-t.md)&gt; | 是 | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)，当获取成功时，err为undefined，data为获取到的bundleInfo；否则为错误对象。 |
 
 **错误码：**
 
@@ -182,7 +182,7 @@ function getBundleInfo(bundleName: string, bundleFlags: number, userId?: number)
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;BundleInfo&gt; | Promise对象，返回BundleInfo。 |
+| Promise&lt;[BundleInfo](arkts-ability-bundlemanager-bundleinfo-t.md)&gt; | Promise对象，返回BundleInfo。 |
 
 **错误码：**
 

@@ -22,7 +22,7 @@ Creates a Filter instance for adding multiple filter effects to a component.
 
 | Type | Description |
 | --- | --- |
-| Filter | Returns a Filter instance, which supports adding multiple filter effects. |
+| [Filter](arkts-arkgraphics2d-uieffect-filter-i.md) | Returns a Filter instance, which supports adding multiple filter effects. |
 
 **Examples**
 

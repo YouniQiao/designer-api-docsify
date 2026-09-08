@@ -33,19 +33,6 @@ Closes a file. This API uses a promise to return the result.
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@ohos.base';
-let filePath = pathDir + "/test.txt";
-let fd = fileio.openSync(filePath);
-fileio.close(fd).then(() => {
-  console.info("close file succeed");
-}).catch((err: BusinessError) => {
-  console.error("close file failed with error:" + err);
-});
-```
-
 
 ## close
 
@@ -69,14 +56,3 @@ Closes a file. This API uses an asynchronous callback to return the result.
 | --- | --- | --- | --- |
 | fd | number | Yes | File descriptor of the file to close. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback invoked when the file is closed asynchronously. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@ohos.base';
-let filePath = pathDir + "/test.txt";
-let fd = fileio.openSync(filePath);
-fileio.close(fd, (err: BusinessError) => {
-  // Do something.
-});
-```

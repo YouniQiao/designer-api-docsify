@@ -165,6 +165,7 @@ struct GridExample {
 ```
 
 可滚动Grid，包括所有滚动属性和事件。
+GridDataSource实现了LazyForEach数据源接口[IDataSource](ts-rendering-control-lazyforeach.md#idatasource)，用于通过LazyForEach给Grid提供子组件。
 
 ```TypeScript
 // GridDataSource.ets
@@ -308,6 +309,7 @@ struct GridExample {
 ```
 
 [GridLayoutOptions](#gridlayoutoptions10对象说明)的使用：irregularIndexes与onGetIrregularSizeByIndex。
+GridDataSource说明及完整代码参考[示例2（可滚动Grid和滚动事件）](#示例2可滚动grid和滚动事件)。
 
 ```TypeScript
 // xxx.ets
@@ -395,6 +397,7 @@ struct GridExample {
 ```
 
 [nestedScroll](#nestedscroll10)和[onScrollFrameBegin](#onscrollframebegin10)的使用。
+GridDataSource说明及完整代码参考[示例2（可滚动Grid和滚动事件）](#示例2可滚动grid和滚动事件)。
 
 ```TypeScript
 import { GridDataSource } from './GridDataSource';
@@ -571,6 +574,14 @@ struct GridExample {
 ```
 
 通过属性[editMode](#editmode8)设置Grid是否进入编辑模式，进入编辑模式可以拖拽Grid组件内部GridItem。
+在[onItemDragStart](#onitemdragstart8)回调中设置拖拽过程中显示的图片。
+在[onItemDrop](#onitemdrop8)中获取拖拽起始位置，和拖拽插入位置，并在[onItemDrop](#onitemdrop8)中完成交换数组位置逻辑。
+设置属性支持动画。
+> 说明：
+> 
+> 预览器窗口不支持显示拖拽跟手。
+
+GridDataSource说明及完整代码参考[示例2（可滚动Grid和滚动事件）](#示例2可滚动grid和滚动事件)。
 
 ```TypeScript
 import { GridDataSource } from './GridDataSource';
@@ -645,6 +656,7 @@ struct GridExample {
 ```
 
 [layoutDirection](#layoutdirection8)、[maxCount](#maxcount8)、[minCount](#mincount8)、[cellLength](arkts-arkui-grid-attribute.md#celllength)的使用。
+GridDataSource说明及完整代码参考[示例2（可滚动Grid和滚动事件）](#示例2可滚动grid和滚动事件)。
 
 ```TypeScript
 import { GridDataSource } from './GridDataSource';
@@ -692,6 +704,7 @@ struct GridExample {
 ```
 
 双指缩放修改Grid列数。
+GridDataSource说明及完整代码参考[示例2（可滚动Grid和滚动事件）](#示例2可滚动grid和滚动事件)。
 
 ```TypeScript
 // xxx.ets
@@ -838,6 +851,8 @@ struct GridColumnsTemplate {
 ```
 
 下面的Grid中包含两列，每列中的GridItem包括高度确定的两个Column和一个高度不确定的Text共三个子组件。
+在默认情况下，左右两个GridItem的高度可能是不同的；在设置了Grid的[alignItems](#alignitems12)属性为GridItemAlignment.STRETCH后，一行左右两个GridItem中原本高度较小的GridItem会以另一个高度较大的GridItem的高度作为自己的高度。
+GridDataSource说明及完整代码参考[示例2（可滚动Grid和滚动事件）](#示例2可滚动grid和滚动事件)。
 
 ```TypeScript
 import { GridDataSource } from './GridDataSource';
@@ -899,6 +914,7 @@ struct Index {
 ```
 
 通过[fadingEdge](ts-container-scrollable-common.md#fadingedge14)属性来设置边缘渐隐效果。
+GridDataSource说明及完整代码参考[示例2（可滚动Grid和滚动事件）](#示例2可滚动grid和滚动事件)。
 
 ```TypeScript
 // xxx.ets
@@ -949,6 +965,7 @@ struct GridExample {
 ```
 
 该示例通过[edgeEffect](#edgeeffect10)接口，实现了Grid组件设置单边边缘效果。
+GridDataSource说明及完整代码参考[示例2（可滚动Grid和滚动事件）](#示例2可滚动grid和滚动事件)。
 
 ```TypeScript
 // xxx.ets
@@ -1080,6 +1097,7 @@ struct GridExample {
 ```
 
 该示例通过FrameNode中的getEvent('Grid')获取[UIGridEvent](arkts-arkui-uigridevent-i.md)，并为Grid设置滚动事件回调，用于事件监听方因无法直接修改页面代码而无法使用声明式接口设置回调的场景。
+从API version 19开始，新增UIGridEvent接口。
 
 ```TypeScript
 import { NodeController, FrameNode, typeNode } from '@kit.ArkUI';
@@ -1170,6 +1188,7 @@ struct Index {
 ```
 
 该示例通过[scrollToIndex](ts-container-scroll.md#scrolltoindex)接口，实现了Grid组件滚动到指定位置。
+GridDataSource说明及完整代码参考[示例2（可滚动Grid和滚动事件）](#示例2可滚动grid和滚动事件)。
 
 ```TypeScript
 import { GridDataSource } from './GridDataSource';
@@ -1226,6 +1245,7 @@ struct GridScrollToIndexSample {
 ```
 
 该示例通过[PanGesture](./ts-basic-gestures-pangesture.md#pangesture-1)接口，实现了Grid组件一边滑动一边选择的效果。
+GridDataSource说明及完整代码参考[示例2（可滚动Grid和滚动事件）](#示例2可滚动grid和滚动事件)。
 
 ```TypeScript
 // xxx.ets
@@ -1789,6 +1809,7 @@ struct GridItemExample {
 ```
 
 该示例通过[拖拽事件](./ts-universal-events-drag-drop.md)实现拖拽GridItem到Grid边缘时Grid自动滚动的功能。
+GridDataSource说明及完整代码参考[示例2（可滚动Grid和滚动事件）](#示例2可滚动grid和滚动事件)。
 
 ```TypeScript
 // xxx.ets
@@ -1903,6 +1924,7 @@ struct GridExample {
 ```
 
 从API version 22 开始，该示例实现了获取内容总大小的功能。
+GridDataSource说明及完整代码参考[示例2（可滚动Grid和滚动事件）](#示例2可滚动grid和滚动事件)。
 
 ```TypeScript
 import { GridDataSource } from './GridDataSource';
@@ -1983,6 +2005,8 @@ struct GridExample {
 ```
 
 该示例通过打开Grid多选聚拢动画开关，实现了在GridItem上长按弹出菜单时，通过[bindContextMenu](ts-universal-attributes-menu.md#bindcontextmenu8)聚拢显示范围内被选中的GridItem的效果。
+从API version 23开始，Grid组件新增[editModeOptions](#editmodeoptions23)接口，可以设置多选聚拢动画开关。
+GridDataSource说明及完整代码参考[示例2（可滚动Grid和滚动事件）](#示例2可滚动grid和滚动事件)。
 
 ```TypeScript
 // xxx.ets
@@ -2079,6 +2103,8 @@ struct GridExample {
 ```
 
 该示例通过使用双向绑定和事件监听在Grid上双指滑动进入多选模式的通知，实现了在Grid上边滑动边选择的效果。
+从API版本26.0.0开始，Grid组件新增[enableEditMode](#enableeditmode)接口和[onEditModeChange](#oneditmodechange)事件。
+GridDataSource说明及完整代码参考[示例2（可滚动Grid和滚动事件）](#示例2可滚动grid和滚动事件)。
 
 ```TypeScript
 // xxx.ets

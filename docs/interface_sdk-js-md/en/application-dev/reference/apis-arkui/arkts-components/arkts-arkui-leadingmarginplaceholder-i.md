@@ -19,7 +19,7 @@ pixelMap: PixelMap
 
 Image content.
 
-**Type:** PixelMap
+**Type:** [PixelMap](arkts-arkui-pixelmap-t.md)
 
 **Since:** 11
 

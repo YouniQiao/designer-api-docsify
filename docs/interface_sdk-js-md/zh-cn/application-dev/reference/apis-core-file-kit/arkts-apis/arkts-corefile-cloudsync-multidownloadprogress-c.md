@@ -172,7 +172,7 @@ state: State
 
 批量缓存任务的执行状态。
 
-**类型：** State
+**类型：** [State](arkts-corefile-cloudsync-state-e.md)
 
 **起始版本：** 20
 

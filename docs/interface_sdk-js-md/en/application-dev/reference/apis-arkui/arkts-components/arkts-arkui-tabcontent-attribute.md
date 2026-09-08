@@ -89,7 +89,7 @@ If the content exceeds the space provided by the tab bar, it will be clipped.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | string \| Resource \| [CustomBuilder](arkts-arkui-custombuilder-t.md) \| [TabBarOptions](arkts-arkui-tabbaroptions-i.md) | Yes | Content displayed on the tab bar.    **CustomBuilder**: builder, to which components can be passed (applicable to API version 8 and later versions).<br>**Since:** 18 |
+| options | string \| [Resource](../arkts-apis/arkts-arkui-resource-t.md) \| [CustomBuilder](arkts-arkui-custombuilder-t.md) \| [TabBarOptions](arkts-arkui-tabbaroptions-i.md) | Yes | Content displayed on the tab bar.    **CustomBuilder**: builder, to which components can be passed (applicable to API version 8 and later versions).<br>**Since:** 18 |
 
 ## tabBar
 
@@ -149,7 +149,7 @@ If the content exceeds the space provided by the tab bar, it will be clipped.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| content | ComponentContent \| [SubTabBarStyle](arkts-arkui-subtabbarstyle-c.md) \| [BottomTabBarStyle](arkts-arkui-bottomtabbarstyle-c.md) \| string \| Resource \| [CustomBuilder](arkts-arkui-custombuilder-t.md) \| [TabBarOptions](arkts-arkui-tabbaroptions-i.md) | Yes | Content displayed on the tab bar.   **ComponentContent**: encapsulation of the component content, which can be customized.   **SubTabBarStyle**: subtab style.   **BottomTabBarStyle**: style of the bottom and side tabs. The bottom style does not have the underline effect.   **string**: string type.   **Resource**: resource reference for importing strings from system or application resources.   **CustomBuilder**: builder that can take components as arguments.   **TabBarOptions**: options for configuring images and text content on the tabs. |
+| content | ComponentContent \| [SubTabBarStyle](arkts-arkui-subtabbarstyle-c.md) \| [BottomTabBarStyle](arkts-arkui-bottomtabbarstyle-c.md) \| string \| [Resource](../arkts-apis/arkts-arkui-resource-t.md) \| [CustomBuilder](arkts-arkui-custombuilder-t.md) \| [TabBarOptions](arkts-arkui-tabbaroptions-i.md) | Yes | Content displayed on the tab bar.   **ComponentContent**: encapsulation of the component content, which can be customized.   **SubTabBarStyle**: subtab style.   **BottomTabBarStyle**: style of the bottom and side tabs. The bottom style does not have the underline effect.   **string**: string type.   **Resource**: resource reference for importing strings from system or application resources.   **CustomBuilder**: builder that can take components as arguments.   **TabBarOptions**: options for configuring images and text content on the tabs. |
 
 ## tabBarVisibility
 

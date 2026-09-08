@@ -55,12 +55,3 @@ Start position to write the data, in bytes. This parameter is optional. By defau
 **Since:** 12
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
-
-**Examples**
-
-```TypeScript
-let filePath = pathDir + "/test.txt";
-let watcher = fileIo.createWatcher(filePath, 0xfff, () => {});
-watcher.start();
-watcher.stop();
-```

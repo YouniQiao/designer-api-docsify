@@ -120,7 +120,7 @@ dataSrc?: media.AVDataSrcDescriptor
 
 播放列表数据源描述。
 
-**类型：** media.AVDataSrcDescriptor
+**类型：** [media.AVDataSrcDescriptor](../../apis-media-kit/arkts-apis/arkts-media-media-avdatasrcdescriptor-i.md)
 
 **起始版本：** 12
 
@@ -221,7 +221,7 @@ fdSrc?: media.AVFileDescriptor
 
 播放列表媒体本地文件的句柄。
 
-**类型：** media.AVFileDescriptor
+**类型：** [media.AVFileDescriptor](../../apis-media-kit/arkts-apis/arkts-media-media-avfiledescriptor-i.md)
 
 **起始版本：** 10
 
@@ -296,7 +296,7 @@ mediaImage?: image.PixelMap | string
 
 从API version 23开始，支持入参为image.PixelMap类型给对端设备设置媒体信息。
 
-**类型：** image.PixelMap \| string
+**类型：** [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) \| string
 
 **起始版本：** 10
 

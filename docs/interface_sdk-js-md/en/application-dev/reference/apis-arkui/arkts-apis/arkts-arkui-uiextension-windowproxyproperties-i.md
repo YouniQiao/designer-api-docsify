@@ -20,7 +20,7 @@ uiExtensionHostWindowProxyRect: window.Rect
 
 Position and size of the component (**EmbeddedComponent** or **UIExtensionComponent**).
 
-**Type:** window.Rect
+**Type:** [window.Rect](arkts-arkui-window-rect-i.md)
 
 **Since:** 14
 

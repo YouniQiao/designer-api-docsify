@@ -132,7 +132,7 @@ Dragging is not allowed when **CopyOptions.None** is set.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | CopyOptions | Yes | Whether the input text can be copied.Default value: **CopyOptions.LocalDevice |
+| value | [CopyOptions](../arkts-apis/arkts-arkui-copyoptions-e.md) | Yes | Whether the input text can be copied.Default value: **CopyOptions.LocalDevice |
 
 ## customKeyboard
 
@@ -385,7 +385,7 @@ Sets the type of the Enter key.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | EnterKeyType | Yes | Type of the Enter key.Default value: **EnterKeyType.Search |
+| value | [EnterKeyType](arkts-arkui-enterkeytype-e.md) | Yes | Type of the Enter key.Default value: **EnterKeyType.Search |
 
 ## fallbackLineSpacing
 
@@ -578,7 +578,7 @@ This setting applies to every character, including those at line endings.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number \| string \| Resource | Yes | Letter spacing.Unit: fp |
+| value | number \| string \| [Resource](../arkts-apis/arkts-arkui-resource-t.md) | Yes | Letter spacing.Unit: fp |
 
 ## lineHeight
 
@@ -600,7 +600,7 @@ Sets the text line height. If the value is less than or equal to **0**, the line
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number \| string \| Resource | Yes | Text line height. |
+| value | number \| string \| [Resource](../arkts-apis/arkts-arkui-resource-t.md) | Yes | Text line height. |
 
 ## maxFontScale
 
@@ -622,7 +622,7 @@ Sets the maximum font scale factor for text.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scale | [Optional](arkts-arkui-optional-t.md)&lt;number \| Resource&gt; | Yes | Maximum font scale factor for text. The **undefined** type is supported.Value range: [1, +∞)   **NOTE：**A value less than 1 is handled as **1**. Abnormal values are ineffective by default.After the **maxFontScale** attribute is set, the content of the **Search** component can be scaled up to 2 times at most.Before use, you need to configure the [configuration.json](../../../quick-start/app-configuration-file.md#tags-in-the-configuration-file) and [app.json5](../../../quick-start/app-configuration-file.md) files in the project. For details, see [Example 19: Setting the Minimum and Maximum Font Scale Factors](../../../reference/apis-arkui/arkui-ts/ts-basic-components-search.md#example-19-setting-the-minimum-and-maximum-font-scale-factors). |
+| scale | [Optional](arkts-arkui-optional-t.md)&lt;number \| [Resource](../arkts-apis/arkts-arkui-resource-t.md)&gt; | Yes | Maximum font scale factor for text. The **undefined** type is supported.Value range: [1, +∞)   **NOTE：**A value less than 1 is handled as **1**. Abnormal values are ineffective by default.After the **maxFontScale** attribute is set, the content of the **Search** component can be scaled up to 2 times at most.Before use, you need to configure the [configuration.json](../../../quick-start/app-configuration-file.md#tags-in-the-configuration-file) and [app.json5](../../../quick-start/app-configuration-file.md) files in the project. For details, see [Example 19: Setting the Minimum and Maximum Font Scale Factors](../../../reference/apis-arkui/arkui-ts/ts-basic-components-search.md#example-19-setting-the-minimum-and-maximum-font-scale-factors). |
 
 ## maxFontSize
 
@@ -650,7 +650,7 @@ If **maxFontSize** is less than or equal to 0 or **maxFontSize** is less than **
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number \| string \| Resource | Yes | Maximum font size.Unit: fp |
+| value | number \| string \| [Resource](../arkts-apis/arkts-arkui-resource-t.md) | Yes | Maximum font size.Unit: fp |
 
 ## maxLength
 
@@ -694,7 +694,7 @@ Sets the minimum font scale factor for text.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scale | [Optional](arkts-arkui-optional-t.md)&lt;number \| Resource&gt; | Yes | Minimum font scale factor for text. The **undefined** type is supported.Value range: [0, 1]   **NOTE：**A value less than 0 is handled as **0**. A value greater than 1 is handled as **1**. Abnormal values are ineffective by default.Before use, you need to configure the [configuration.json](../../../quick-start/app-configuration-file.md#tags-in-the-configuration-file) and [app.json5](../../../quick-start/app-configuration-file.md) files in the project. For details, see [Example 19: Setting the Minimum and Maximum Font Scale Factors](../../../reference/apis-arkui/arkui-ts/ts-basic-components-search.md#example-19-setting-the-minimum-and-maximum-font-scale-factors). |
+| scale | [Optional](arkts-arkui-optional-t.md)&lt;number \| [Resource](../arkts-apis/arkts-arkui-resource-t.md)&gt; | Yes | Minimum font scale factor for text. The **undefined** type is supported.Value range: [0, 1]   **NOTE：**A value less than 0 is handled as **0**. A value greater than 1 is handled as **1**. Abnormal values are ineffective by default.Before use, you need to configure the [configuration.json](../../../quick-start/app-configuration-file.md#tags-in-the-configuration-file) and [app.json5](../../../quick-start/app-configuration-file.md) files in the project. For details, see [Example 19: Setting the Minimum and Maximum Font Scale Factors](../../../reference/apis-arkui/arkui-ts/ts-basic-components-search.md#example-19-setting-the-minimum-and-maximum-font-scale-factors). |
 
 ## minFontSize
 
@@ -722,7 +722,7 @@ If **minFontSize** is less than or equal to 0, the adaptive font size does not t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number \| string \| Resource | Yes | Minimum font size.Unit: fp |
+| value | number \| string \| [Resource](../arkts-apis/arkts-arkui-resource-t.md) | Yes | Minimum font size.Unit: fp |
 
 ## onChange
 
@@ -1257,7 +1257,7 @@ Sets whether to hide the system text selection menu.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean | Yes | Whether to hide the system text selection menu.   **true**: Tapping, number-pressing, number-tapping, triple-tapping, or right-clicking the text box will not trigger the system text selection menu.    **false**: Tapping, number-pressing, number-tapping, triple-tapping, or right-clicking the text box will trigger the system text selection menu.Default value: **false |
+| value | boolean | Yes | Whether to hide the system text selection menu.   **true**: Tapping, long-pressing, double-tapping, triple-tapping, or right-clicking the text box will not trigger the system text selection menu.    **false**: Tapping, long-pressing, double-tapping, triple-tapping, or right-clicking the text box will trigger the system text selection menu.Default value: **false |
 
 ## shaderStyle
 
@@ -1387,7 +1387,7 @@ Sets the text alignment mode in the search text box. Currently, the following al
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | TextAlign | Yes | Text alignment mode in the search text box.Default value: **TextAlign.Start |
+| value | [TextAlign](../arkts-apis/arkts-arkui-textalign-e.md) | Yes | Text alignment mode in the search text box.Default value: **TextAlign.Start |
 
 ## textDirection
 
@@ -1409,7 +1409,7 @@ Specifies the text layout direction. If this attribute is not set, the default t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| direction | TextDirection \| undefined | Yes | Defines the text layout direction.If this parameter is set to **undefined**, the text layout direction follows the component layout direction as defined by **TextDirection.DEFAULT**. |
+| direction | [TextDirection](../arkts-apis/arkts-arkui-textdirection-e.md) \| undefined | Yes | Defines the text layout direction.If this parameter is set to **undefined**, the text layout direction follows the component layout direction as defined by **TextDirection.DEFAULT**. |
 
 ## textFont
 

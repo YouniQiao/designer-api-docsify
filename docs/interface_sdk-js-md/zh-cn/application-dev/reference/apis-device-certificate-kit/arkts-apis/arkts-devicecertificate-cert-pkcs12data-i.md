@@ -20,7 +20,7 @@ cert?: X509Cert
 
 和私钥匹配的证书。
 
-**类型：** X509Cert
+**类型：** [X509Cert](arkts-devicecertificate-cert-x509cert-i.md)
 
 **起始版本：** 18
 
@@ -36,7 +36,7 @@ otherCerts?: Array<X509Cert>
 
 其他证书。
 
-**类型：** Array&lt;X509Cert&gt;
+**类型：** Array&lt;[X509Cert](arkts-devicecertificate-cert-x509cert-i.md)&gt;
 
 **起始版本：** 18
 

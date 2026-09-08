@@ -332,7 +332,7 @@ readonly type: bundleManager.ModuleType
 
 标识当前模块的类型。
 
-**类型：** bundleManager.ModuleType
+**类型：** [bundleManager.ModuleType](arkts-ability-bundlemanager-moduletype-e.md)
 
 **起始版本：** 9
 

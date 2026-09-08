@@ -54,7 +54,7 @@ signerCerts?: Array<X509Cert>
 
 Signer certificates.
 
-**Type:** Array&lt;X509Cert&gt;
+**Type:** Array&lt;[X509Cert](arkts-devicecertificate-cert-x509cert-i.md)&gt;
 
 **Since:** 22
 
@@ -74,7 +74,7 @@ Trusted certificates.
 > 
 > You need to configure the trust certificates of all signers.
 
-**Type:** Array&lt;X509Cert&gt;
+**Type:** Array&lt;[X509Cert](arkts-devicecertificate-cert-x509cert-i.md)&gt;
 
 **Since:** 22
 

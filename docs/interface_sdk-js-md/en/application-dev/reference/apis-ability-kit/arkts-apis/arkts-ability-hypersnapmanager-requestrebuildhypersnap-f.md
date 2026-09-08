@@ -33,4 +33,4 @@ Most applications don't require manual intervention for snapshot management.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 16000150 | Failed to send request to system service. |
+| [16000150](../errorcode-ability.md#16000150-failed-to-send-request) | Failed to send request to system service. |

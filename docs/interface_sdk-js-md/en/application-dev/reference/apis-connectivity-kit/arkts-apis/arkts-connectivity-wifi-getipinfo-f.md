@@ -30,7 +30,7 @@ Obtains the IP information of a Wi-Fi connection.
 
 | Type | Description |
 | --- | --- |
-| IpInfo | Returns the IP information of the Wi-Fi connection. |
+| [IpInfo](arkts-connectivity-wifi-ipinfo-i.md) | Returns the IP information of the Wi-Fi connection. |
 
 **Examples**
 

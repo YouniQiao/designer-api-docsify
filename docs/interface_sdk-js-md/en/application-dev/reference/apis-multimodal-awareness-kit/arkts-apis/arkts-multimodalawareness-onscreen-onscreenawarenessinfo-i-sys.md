@@ -113,7 +113,7 @@ entityInfo?: EntityInfo[]
 
 Entity information.
 
-**Type:** EntityInfo[]
+**Type:** [EntityInfo](arkts-multimodalawareness-onscreen-entityinfo-i-sys.md)[]
 
 **Since:** 23
 

@@ -20,7 +20,7 @@ state: CCallState
 
 通话类型。
 
-**类型：** CCallState
+**类型：** [CCallState](arkts-telephony-observer-ccallstate-t.md)
 
 **起始版本：** 23
 

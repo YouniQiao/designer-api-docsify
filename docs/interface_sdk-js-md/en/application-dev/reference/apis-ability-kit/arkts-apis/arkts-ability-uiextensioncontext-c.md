@@ -56,7 +56,7 @@ Connects this UIExtensionAbility to a ServiceExtensionAbility. It enables commun
 | [16000012](../errorcode-ability.md#16000012-application-under-control) | The application is controlled. |
 | [16000013](../errorcode-ability.md#16000013-application-controlled-by-edm) | The application is controlled by EDM. |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
-| [16000053](../errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) | The ability is not on the top of the UI. |
+| [16000053](../errorcode-ability.md#16000053-ability-not-in-the-foreground) | The ability is not on the top of the UI. |
 | [16000055](../errorcode-ability.md#16000055-installation-free-timeout) | Installation-free timed out. |
 | [16000070](../errorcode-ability.md#16000070-extensionability-fails-to-start-a-serviceextensionability-in-strict-mode) | The extension cannot start the service. |
 
@@ -314,10 +314,10 @@ If you want to obtain the result after the started UIAbility is terminated, set 
 | [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
 | [16000012](../errorcode-ability.md#16000012-application-under-control) | The application is controlled. |
 | [16000013](../errorcode-ability.md#16000013-application-controlled-by-edm) | The application is controlled by EDM. |
-| [16000019](../errorcode-ability.md#16000019-no-matching-ability-is-found-during-implicit-startup) | No matching ability is found. |
+| [16000019](../errorcode-ability.md#16000019-no-matching-ability-found-for-implicit-start) | No matching ability is found. |
 | [16000069](../errorcode-ability.md#16000069-extensionability-fails-to-start-a-third-party-application-in-strict-mode) | The extension cannot start the third party application. |
 | [16200001](../errorcode-ability.md#16200001-caller-released) | The caller has been released. |
-| [16000053](../errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) | The ability is not on the top of the UI. |
+| [16000053](../errorcode-ability.md#16000053-ability-not-in-the-foreground) | The ability is not on the top of the UI. |
 | [16000136](../errorcode-ability.md#16000136-prohibited-from-launching-the-applications-own-uiability-via-app-linking) | The UIAbility is prohibited from launching itself via App Linking.<br>**Applicable version:** 23 and later |
 
 ## reportDrawnCompleted
@@ -377,7 +377,7 @@ Sets the dark/light color mode for this UIExtensionAbility. Before calling this 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| colorMode | ConfigurationConstant.ColorMode | Yes | Color mode. The options are as follows:    - **COLOR_MODE_DARK**: dark mode.    - **COLOR_MODE_LIGHT**: light mode.    - **COLOR_MODE_NOT_SET**: not set (following the system or application). |
+| colorMode | [ConfigurationConstant.ColorMode](arkts-ability-configurationconstant-colormode-e.md) | Yes | Color mode. The options are as follows:    - **COLOR_MODE_DARK**: dark mode.    - **COLOR_MODE_LIGHT**: light mode.    - **COLOR_MODE_NOT_SET**: not set (following the system or application). |
 
 **Error codes:**
 
@@ -429,11 +429,11 @@ Starts a UIAbility. This API uses an asynchronous callback to return the result.
 | [16000012](../errorcode-ability.md#16000012-application-under-control) | The application is controlled. |
 | [16000013](../errorcode-ability.md#16000013-application-controlled-by-edm) | The application is controlled by EDM. |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
-| [16000053](../errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) | The ability is not on the top of the UI. |
+| [16000053](../errorcode-ability.md#16000053-ability-not-in-the-foreground) | The ability is not on the top of the UI. |
 | [16000055](../errorcode-ability.md#16000055-installation-free-timeout) | Installation-free timed out. |
 | [16200001](../errorcode-ability.md#16200001-caller-released) | The caller has been released. |
 | [16000018](../errorcode-ability.md#16000018-restricting-redirection-to-third-party-applications-of-api-version-11-or-later) | Redirection to a third-party application is not allowed in API version greater than 11.<br>**Applicable version:** 12 and later |
-| [16000019](../errorcode-ability.md#16000019-no-matching-ability-is-found-during-implicit-startup) | No matching ability is found.<br>**Applicable version:** 12 and later |
+| [16000019](../errorcode-ability.md#16000019-no-matching-ability-found-for-implicit-start) | No matching ability is found.<br>**Applicable version:** 12 and later |
 | [16000069](../errorcode-ability.md#16000069-extensionability-fails-to-start-a-third-party-application-in-strict-mode) | The extension cannot start the third party application.<br>**Applicable version:** 12 and later |
 | [16000070](../errorcode-ability.md#16000070-extensionability-fails-to-start-a-serviceextensionability-in-strict-mode) | The extension cannot start the service.<br>**Applicable version:** 12 and later |
 | [16000073](../errorcode-ability.md#16000073-appcloneindex-is-invalid) | The app clone index is invalid.<br>**Applicable version:** 12 and later |
@@ -488,11 +488,11 @@ Starts a UIAbility. This API uses an asynchronous callback to return the result.
 | [16000012](../errorcode-ability.md#16000012-application-under-control) | The application is controlled. |
 | [16000013](../errorcode-ability.md#16000013-application-controlled-by-edm) | The application is controlled by EDM. |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
-| [16000053](../errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) | The ability is not on the top of the UI. |
+| [16000053](../errorcode-ability.md#16000053-ability-not-in-the-foreground) | The ability is not on the top of the UI. |
 | [16000055](../errorcode-ability.md#16000055-installation-free-timeout) | Installation-free timed out. |
 | [16200001](../errorcode-ability.md#16200001-caller-released) | The caller has been released. |
 | [16000018](../errorcode-ability.md#16000018-restricting-redirection-to-third-party-applications-of-api-version-11-or-later) | Redirection to a third-party application is not allowed in API version greater than 11.<br>**Applicable version:** 12 and later |
-| [16000019](../errorcode-ability.md#16000019-no-matching-ability-is-found-during-implicit-startup) | No matching ability is found.<br>**Applicable version:** 12 and later |
+| [16000019](../errorcode-ability.md#16000019-no-matching-ability-found-for-implicit-start) | No matching ability is found.<br>**Applicable version:** 12 and later |
 | [16000069](../errorcode-ability.md#16000069-extensionability-fails-to-start-a-third-party-application-in-strict-mode) | The extension cannot start the third party application.<br>**Applicable version:** 12 and later |
 | [16000070](../errorcode-ability.md#16000070-extensionability-fails-to-start-a-serviceextensionability-in-strict-mode) | The extension cannot start the service.<br>**Applicable version:** 12 and later |
 | [16000073](../errorcode-ability.md#16000073-appcloneindex-is-invalid) | The app clone index is invalid.<br>**Applicable version:** 12 and later |
@@ -554,11 +554,11 @@ Starts a UIAbility. This API uses a promise to return the result.
 | [16000012](../errorcode-ability.md#16000012-application-under-control) | The application is controlled. |
 | [16000013](../errorcode-ability.md#16000013-application-controlled-by-edm) | The application is controlled by EDM. |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
-| [16000053](../errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) | The ability is not on the top of the UI. |
+| [16000053](../errorcode-ability.md#16000053-ability-not-in-the-foreground) | The ability is not on the top of the UI. |
 | [16000055](../errorcode-ability.md#16000055-installation-free-timeout) | Installation-free timed out. |
 | [16200001](../errorcode-ability.md#16200001-caller-released) | The caller has been released. |
 | [16000018](../errorcode-ability.md#16000018-restricting-redirection-to-third-party-applications-of-api-version-11-or-later) | Redirection to a third-party application is not allowed in API version greater than 11.<br>**Applicable version:** 12 and later |
-| [16000019](../errorcode-ability.md#16000019-no-matching-ability-is-found-during-implicit-startup) | No matching ability is found.<br>**Applicable version:** 12 and later |
+| [16000019](../errorcode-ability.md#16000019-no-matching-ability-found-for-implicit-start) | No matching ability is found.<br>**Applicable version:** 12 and later |
 | [16000069](../errorcode-ability.md#16000069-extensionability-fails-to-start-a-third-party-application-in-strict-mode) | The extension cannot start the third party application.<br>**Applicable version:** 12 and later |
 | [16000070](../errorcode-ability.md#16000070-extensionability-fails-to-start-a-serviceextensionability-in-strict-mode) | The extension cannot start the service.<br>**Applicable version:** 12 and later |
 | [16000073](../errorcode-ability.md#16000073-appcloneindex-is-invalid) | The app clone index is invalid.<br>**Applicable version:** 12 and later |
@@ -621,11 +621,11 @@ Starts a UIAbility and returns the exit result of the launched UIAbility via a c
 | [16000012](../errorcode-ability.md#16000012-application-under-control) | The application is controlled. |
 | [16000013](../errorcode-ability.md#16000013-application-controlled-by-edm) | The application is controlled by EDM. |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
-| [16000053](../errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) | The ability is not on the top of the UI. |
+| [16000053](../errorcode-ability.md#16000053-ability-not-in-the-foreground) | The ability is not on the top of the UI. |
 | [16000055](../errorcode-ability.md#16000055-installation-free-timeout) | Installation-free timed out. |
 | [16200001](../errorcode-ability.md#16200001-caller-released) | The caller has been released. |
 | [16000018](../errorcode-ability.md#16000018-restricting-redirection-to-third-party-applications-of-api-version-11-or-later) | Redirection to a third-party application is not allowed in API version greater than 11.<br>**Applicable version:** 12 and later |
-| [16000019](../errorcode-ability.md#16000019-no-matching-ability-is-found-during-implicit-startup) | No matching ability is found.<br>**Applicable version:** 12 and later |
+| [16000019](../errorcode-ability.md#16000019-no-matching-ability-found-for-implicit-start) | No matching ability is found.<br>**Applicable version:** 12 and later |
 | [16000069](../errorcode-ability.md#16000069-extensionability-fails-to-start-a-third-party-application-in-strict-mode) | The extension cannot start the third party application.<br>**Applicable version:** 12 and later |
 | [16000070](../errorcode-ability.md#16000070-extensionability-fails-to-start-a-serviceextensionability-in-strict-mode) | The extension cannot start the service.<br>**Applicable version:** 12 and later |
 | [16000073](../errorcode-ability.md#16000073-appcloneindex-is-invalid) | The app clone index is invalid.<br>**Applicable version:** 12 and later |
@@ -687,11 +687,11 @@ Starts a UIAbility and returns the exit result of the launched UIAbility via a c
 | [16000012](../errorcode-ability.md#16000012-application-under-control) | The application is controlled. |
 | [16000013](../errorcode-ability.md#16000013-application-controlled-by-edm) | The application is controlled by EDM. |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
-| [16000053](../errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) | The ability is not on the top of the UI. |
+| [16000053](../errorcode-ability.md#16000053-ability-not-in-the-foreground) | The ability is not on the top of the UI. |
 | [16000055](../errorcode-ability.md#16000055-installation-free-timeout) | Installation-free timed out. |
 | [16200001](../errorcode-ability.md#16200001-caller-released) | The caller has been released. |
 | [16000018](../errorcode-ability.md#16000018-restricting-redirection-to-third-party-applications-of-api-version-11-or-later) | Redirection to a third-party application is not allowed in API version greater than 11.<br>**Applicable version:** 12 and later |
-| [16000019](../errorcode-ability.md#16000019-no-matching-ability-is-found-during-implicit-startup) | No matching ability is found.<br>**Applicable version:** 12 and later |
+| [16000019](../errorcode-ability.md#16000019-no-matching-ability-found-for-implicit-start) | No matching ability is found.<br>**Applicable version:** 12 and later |
 | [16000069](../errorcode-ability.md#16000069-extensionability-fails-to-start-a-third-party-application-in-strict-mode) | The extension cannot start the third party application.<br>**Applicable version:** 12 and later |
 | [16000070](../errorcode-ability.md#16000070-extensionability-fails-to-start-a-serviceextensionability-in-strict-mode) | The extension cannot start the service.<br>**Applicable version:** 12 and later |
 | [16000073](../errorcode-ability.md#16000073-appcloneindex-is-invalid) | The app clone index is invalid.<br>**Applicable version:** 12 and later |
@@ -760,11 +760,11 @@ Starts a UIAbility and returns the exit result of the launched UIAbility via a c
 | [16000012](../errorcode-ability.md#16000012-application-under-control) | The application is controlled. |
 | [16000013](../errorcode-ability.md#16000013-application-controlled-by-edm) | The application is controlled by EDM. |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
-| [16000053](../errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) | The ability is not on the top of the UI. |
+| [16000053](../errorcode-ability.md#16000053-ability-not-in-the-foreground) | The ability is not on the top of the UI. |
 | [16000055](../errorcode-ability.md#16000055-installation-free-timeout) | Installation-free timed out. |
 | [16200001](../errorcode-ability.md#16200001-caller-released) | The caller has been released. |
 | [16000018](../errorcode-ability.md#16000018-restricting-redirection-to-third-party-applications-of-api-version-11-or-later) | Redirection to a third-party application is not allowed in API version greater than 11.<br>**Applicable version:** 12 and later |
-| [16000019](../errorcode-ability.md#16000019-no-matching-ability-is-found-during-implicit-startup) | No matching ability is found.<br>**Applicable version:** 12 and later |
+| [16000019](../errorcode-ability.md#16000019-no-matching-ability-found-for-implicit-start) | No matching ability is found.<br>**Applicable version:** 12 and later |
 | [16000069](../errorcode-ability.md#16000069-extensionability-fails-to-start-a-third-party-application-in-strict-mode) | The extension cannot start the third party application.<br>**Applicable version:** 12 and later |
 | [16000070](../errorcode-ability.md#16000070-extensionability-fails-to-start-a-serviceextensionability-in-strict-mode) | The extension cannot start the service.<br>**Applicable version:** 12 and later |
 | [16000073](../errorcode-ability.md#16000073-appcloneindex-is-invalid) | The app clone index is invalid.<br>**Applicable version:** 12 and later |
@@ -822,7 +822,7 @@ Starts a UIServiceExtensionAbility. This API uses a promise to return the result
 | [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
 | [16000012](../errorcode-ability.md#16000012-application-under-control) | The application is controlled. |
 | [16000013](../errorcode-ability.md#16000013-application-controlled-by-edm) | The application is controlled by EDM. |
-| [16000019](../errorcode-ability.md#16000019-no-matching-ability-is-found-during-implicit-startup) | No matching ability is found. |
+| [16000019](../errorcode-ability.md#16000019-no-matching-ability-found-for-implicit-start) | No matching ability is found. |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 | [16200001](../errorcode-ability.md#16200001-caller-released) | The caller has been released. |
 

@@ -110,7 +110,7 @@ This API can be called only after the prepare() event is triggered and before th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| watermark | image.PixelMap | Yes | : Watermark image. |
+| watermark | [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | Yes | : Watermark image. |
 | config | [WatermarkConfig](arkts-media-media-watermarkconfig-i-sys.md) | Yes | : Configures of the watermark. |
 
 **Return value:**

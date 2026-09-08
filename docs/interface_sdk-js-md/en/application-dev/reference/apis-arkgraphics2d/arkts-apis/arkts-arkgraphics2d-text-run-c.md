@@ -32,13 +32,13 @@ Obtains the glyph width array of each glyph within the specified range of the ru
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| range | Range | Yes | Range of the glyph position to be obtained. **range.start** indicates the start position of the range, and **range.end** indicates the range length. If the length is **0**, the range starts from **range.start** and ends at the end of the run. If **range.end** or **range.start** is set to a negative value, **null**, or **undefined**, **undefined** is returned. |
+| range | [Range](arkts-arkgraphics2d-text-range-i.md) | Yes | Range of the glyph position to be obtained. **range.start** indicates the start position of the range, and **range.end** indicates the range length. If the length is **0**, the range starts from **range.start** and ends at the end of the run. If **range.end** or **range.start** is set to a negative value, **null**, or **undefined**, **undefined** is returned. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;common2D.Point&gt; | Returns the glyph width array of each glyph in the run unit relative to the horizontal direction. In [common2D.Point]{ |
+| Array&lt;[common2D.Point](arkts-arkgraphics2d-common2d-point-i.md)&gt; | Returns the glyph width array of each glyph in the run unit relative to the horizontal direction. In [common2D.Point]{ |
 
 **Examples**
 
@@ -67,7 +67,7 @@ Obtains the **Font** object of this run.
 
 | Type | Description |
 | --- | --- |
-| drawing.Font | Font** object of this run. |
+| [drawing.Font](arkts-arkgraphics2d-drawing-font-c.md) | Font** object of this run. |
 
 **Examples**
 
@@ -96,10 +96,6 @@ Obtains the number of glyphs in this run.
 | number | Number of glyphs. The value is an integer. |
 
 **Examples**
-
-```TypeScript
-let glyphCount = lines[0].getGlyphCount();
-```
 
 ```TypeScript
 let glyphs = runs[0].getGlyphCount();
@@ -149,7 +145,7 @@ Obtains the index of each glyph in the specified range of this run.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| range | Range | Yes | Range of glyph indices to obtain. **range.start** indicates the starting position of the range, and **range.end** indicates the length of the range. When **range.end** is **0**, glyphs are fetched from **range.start** to the end of the rendered block. If **range.end** or **range.start** is set to a negative value, **null**, or **undefined**, **undefined** is returned. |
+| range | [Range](arkts-arkgraphics2d-text-range-i.md) | Yes | Range of glyph indices to obtain. **range.start** indicates the starting position of the range, and **range.end** indicates the length of the range. When **range.end** is **0**, glyphs are fetched from **range.start** to the end of the rendered block. If **range.end** or **range.start** is set to a negative value, **null**, or **undefined**, **undefined** is returned. |
 
 **Return value:**
 
@@ -213,13 +209,9 @@ Obtains the image boundaries of the typographic unit. Equivalent to visual bound
 
 | Type | Description |
 | --- | --- |
-| common2D.Rect | Image boundary of the layout unit, in physical pixels (px). |
+| [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) | Image boundary of the layout unit, in physical pixels (px). |
 
 **Examples**
-
-```TypeScript
-let imageBounds = lines[0].getImageBounds();
-```
 
 ```TypeScript
 let bounds = runs[0].getImageBounds();
@@ -243,7 +235,7 @@ Obtains the offset of each glyph in this run relative to its index.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;common2D.Point&gt; | Array holding the offset of each glyph in the run relative to its index. |
+| Array&lt;[common2D.Point](arkts-arkgraphics2d-common2d-point-i.md)&gt; | Array holding the offset of each glyph in the run relative to its index. |
 
 **Examples**
 
@@ -269,7 +261,7 @@ Obtains the position of each glyph relative to the respective line in this run.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;common2D.Point&gt; | Array holding the position of each glyph relative to the respective line in the run. |
+| Array&lt;[common2D.Point](arkts-arkgraphics2d-common2d-point-i.md)&gt; | Array holding the position of each glyph relative to the respective line in the run. |
 
 **Examples**
 
@@ -295,13 +287,13 @@ Obtains the position array of each glyph relative to the respective line within 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| range | Range | Yes | Range of the glyphs, where **range.start** indicates the start position of the range, and **range.end** indicates the length of the range. If the length is **0**, the range is from **range.start** to the end of the run. If **range.end** or **range.start** is set to a negative value, **null**, or **undefined**, **undefined** is returned. |
+| range | [Range](arkts-arkgraphics2d-text-range-i.md) | Yes | Range of the glyphs, where **range.start** indicates the start position of the range, and **range.end** indicates the length of the range. If the length is **0**, the range is from **range.start** to the end of the run. If **range.end** or **range.start** is set to a negative value, **null**, or **undefined**, **undefined** is returned. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;common2D.Point&gt; | Array holding the position of each glyph relative to the respective line in the run. |
+| Array&lt;[common2D.Point](arkts-arkgraphics2d-common2d-point-i.md)&gt; | Array holding the position of each glyph relative to the respective line in the run. |
 
 **Examples**
 
@@ -349,7 +341,7 @@ Obtains an array of character indices for glyphs within a specified range of thi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| range | Range | No | Range of character indices to be obtained. **range.start** indicates the starting position of the range, and **range.end** indicates the range length. If the length is 0, characters are retrieved from **range.start** to the end of the rendered block. If **range.end** or **range.start** is set to a negative value, **null**, or **undefined**, **undefined** is returned. If this parameter is not passed, the entire run is obtained. |
+| range | [Range](arkts-arkgraphics2d-text-range-i.md) | No | Range of character indices to be obtained. **range.start** indicates the starting position of the range, and **range.end** indicates the range length. If the length is 0, characters are retrieved from **range.start** to the end of the rendered block. If **range.end** or **range.start** is set to a negative value, **null**, or **undefined**, **undefined** is returned. If this parameter is not passed, the entire run is obtained. |
 
 **Return value:**
 
@@ -403,7 +395,7 @@ Obtains the range of glyphs generated by this run.
 
 | Type | Description |
 | --- | --- |
-| Range | Range of the glyphs, where **start** indicates the start position of the range, which is the index relative to the entire paragraph, and **end** indicates the length of the range. |
+| [Range](arkts-arkgraphics2d-text-range-i.md) | Range of the glyphs, where **start** indicates the start position of the range, which is the index relative to the entire paragraph, and **end** indicates the length of the range. |
 
 **Examples**
 
@@ -431,7 +423,7 @@ Obtains the text direction of the run.
 
 | Type | Description |
 | --- | --- |
-| TextDirection | Obtains the text direction of the run. |
+| [TextDirection](arkts-arkgraphics2d-text-textdirection-e.md) | Obtains the text direction of the run. |
 
 **Examples**
 
@@ -459,7 +451,7 @@ Obtains the text style of this typesetting unit.
 
 | Type | Description |
 | --- | --- |
-| TextStyle | Text style of this typesetting unit. |
+| [TextStyle](arkts-arkgraphics2d-text-textstyle-i.md) | Text style of this typesetting unit. |
 
 **Examples**
 
@@ -554,11 +546,6 @@ Obtains the typographic boundaries of the typographic unit. These boundaries are
 **Examples**
 
 ```TypeScript
-let bounds = lines[0].getTypographicBounds();
-console.info('textLine ascent:' + bounds.ascent + ', descent:' + bounds.descent + ', leading:' + bounds.leading + ', width:' + bounds.width);
-```
-
-```TypeScript
 let typographicBounds = runs[0].getTypographicBounds();
 ```
 
@@ -580,49 +567,11 @@ Paints this run on the canvas with the coordinate point (x, y) as the upper left
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| canvas | drawing.Canvas | Yes | Target canvas. |
+| canvas | [drawing.Canvas](arkts-arkgraphics2d-drawing-canvas-c.md) | Yes | Target canvas. |
 | x | number | Yes | Horizontal coordinate of the upper left corner, which is a floating-point value, in physical pixels (px). |
 | y | number | Yes | Vertical coordinate of the upper left corner, which is a floating-point value, in physical pixels (px). |
 
 **Examples**
-
-```TypeScript
-const color: ArrayBuffer = new ArrayBuffer(160000);
-let opts: image.InitializationOptions = { editable: true, pixelFormat: 3, size: { height: 200, width: 200 } }
-let pixelMap: image.PixelMap = image.createPixelMapSync(color, opts);
-let canvas = new drawing.Canvas(pixelMap);
-paragraph.paint(canvas, 0, 0);
-```
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D'
-import { image } from '@kit.ImageKit'
-
-function textFunc(pixelmap: PixelMap) {
-  let canvas = new drawing.Canvas(pixelmap);
-  lines[0].paint(canvas, 0, 0);
-}
-
-@Entry
-@Component
-struct Index {
-  @State pixelmap?: PixelMap = undefined;
-  fun: Function = textFunc;
-  build() {
-    Column() {
-      Image(this.pixelmap).width(200).height(200);
-      Button().onClick(() => {
-        if (this.pixelmap == undefined) {
-          const color: ArrayBuffer = new ArrayBuffer(160000);
-          let opts: image.InitializationOptions = { editable: true, pixelFormat: 3, size: { height: 200, width: 200 } }
-          this.pixelmap = image.createPixelMapSync(color, opts);
-        }
-        this.fun(this.pixelmap);
-      })
-    }
-  }
-}
-```
 
 ```TypeScript
 import { drawing } from '@kit.ArkGraphics2D'

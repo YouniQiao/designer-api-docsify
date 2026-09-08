@@ -82,7 +82,7 @@ Get the phone book access authorization.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | deviceId | string | Yes | Indicates device ID. For example, "11:22:33:AA:BB:FF". |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;AccessAuthorization&gt; | Yes | the callback result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AccessAuthorization](arkts-connectivity-pbap-accessauthorization-t-sys.md)&gt; | Yes | the callback result. |
 
 **Error codes:**
 
@@ -137,7 +137,7 @@ Get the phone book access authorization.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;AccessAuthorization&gt; | Returns the promise object. |
+| Promise&lt;[AccessAuthorization](arkts-connectivity-pbap-accessauthorization-t-sys.md)&gt; | Returns the promise object. |
 
 **Error codes:**
 
@@ -296,7 +296,7 @@ Set the phone book access authorization.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | deviceId | string | Yes | Indicates device ID. For example, "11:22:33:AA:BB:FF". |
-| authorization | AccessAuthorization | Yes | Indicates the permission. |
+| authorization | [AccessAuthorization](arkts-connectivity-pbap-accessauthorization-t-sys.md) | Yes | Indicates the permission. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | the callback result. |
 
 **Error codes:**
@@ -347,7 +347,7 @@ Set the phone book access authorization.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | deviceId | string | Yes | Indicates device ID. For example, "11:22:33:AA:BB:FF". |
-| authorization | AccessAuthorization | Yes | Indicates the permission. |
+| authorization | [AccessAuthorization](arkts-connectivity-pbap-accessauthorization-t-sys.md) | Yes | Indicates the permission. |
 
 **Return value:**
 

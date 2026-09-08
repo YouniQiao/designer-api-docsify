@@ -35,7 +35,7 @@ Creates an ImageReceiver instance by specifying the image width, height, format,
 
 | Type | Description |
 | --- | --- |
-| ImageReceiver | ImageReceiver instance. |
+| [ImageReceiver](arkts-image-image-imagereceiver-i.md) | ImageReceiver instance. |
 
 **Examples**
 
@@ -68,7 +68,7 @@ Creates an ImageReceiver instance by specifying the image size, format, and capa
 
 | Type | Description |
 | --- | --- |
-| ImageReceiver | ImageReceiver instance. |
+| [ImageReceiver](arkts-image-image-imagereceiver-i.md) | ImageReceiver instance. |
 
 **Error codes:**
 
@@ -111,7 +111,7 @@ Creates an ImageReceiver instance.
 
 | Type | Description |
 | --- | --- |
-| ImageReceiver \| undefined | ImageReceiver instance created. If the operation fails, undefined is returned. |
+| [ImageReceiver](arkts-image-image-imagereceiver-i.md) \| undefined | ImageReceiver instance created. If the operation fails, undefined is returned. |
 
 **Error codes:**
 

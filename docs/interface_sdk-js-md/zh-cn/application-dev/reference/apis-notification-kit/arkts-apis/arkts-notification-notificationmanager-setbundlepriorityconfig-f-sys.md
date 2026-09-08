@@ -26,7 +26,7 @@ function setBundlePriorityConfig(bundle: BundleOption, value: string): Promise<v
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| bundle | BundleOption | 是 | 指定应用的包信息。 |
+| bundle | [BundleOption](arkts-notification-notificationmanager-bundleoption-t.md) | 是 | 指定应用的包信息。 |
 | value | string | 是 | 应用的优先功能配置。 |
 
 **返回值：**

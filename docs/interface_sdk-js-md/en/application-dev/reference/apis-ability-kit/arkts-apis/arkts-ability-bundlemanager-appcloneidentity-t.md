@@ -10,4 +10,4 @@ Describes the identity information of an application clone.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
-**Type:** _BundleInfo.AppCloneIdentity
+**Type:** [_BundleInfo.AppCloneIdentity](arkts-ability-bundleinfo-appcloneidentity-i.md)

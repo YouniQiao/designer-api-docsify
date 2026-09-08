@@ -26,8 +26,8 @@ Displays the dialog box.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | ShowDialogOptions | Yes | Options. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ShowDialogSuccessResponse&gt; | Yes |  |
+| options | [ShowDialogOptions](arkts-arkui-prompt-showdialogoptions-i.md) | Yes | Options. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ShowDialogSuccessResponse](arkts-arkui-prompt-showdialogsuccessresponse-i.md)&gt; | Yes |  |
 
 **Examples**
 
@@ -76,13 +76,13 @@ Displays the dialog box.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | ShowDialogOptions | Yes | Options. |
+| options | [ShowDialogOptions](arkts-arkui-prompt-showdialogoptions-i.md) | Yes | Options. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ShowDialogSuccessResponse&gt; |  |
+| Promise&lt;[ShowDialogSuccessResponse](arkts-arkui-prompt-showdialogsuccessresponse-i.md)&gt; |  |
 
 **Examples**
 

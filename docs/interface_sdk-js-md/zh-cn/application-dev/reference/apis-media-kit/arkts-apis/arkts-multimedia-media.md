@@ -49,8 +49,8 @@ import { media } from '@kit.MediaKit';
 | 名称 | 说明 |
 | --- | --- |
 | [createParallelSoundPool](arkts-media-media-createparallelsoundpool-f-sys.md) | 创建音频池实例。使用Promise异步回调。 |
-| [createVideoRecorder](arkts-media-media-createvideorecorder-f-sys.md) | 该接口自API version 9起停止维护，建议使用AVRecorder。创建视频录制实例。 |
-| [createVideoRecorder](arkts-media-media-createvideorecorder-f-sys.md) | 该接口自API version 9起停止维护，建议使用AVRecorder。创建视频录制实例。 |
+| [createVideoRecorder](arkts-media-media-createvideorecorder-f-sys.md) | 创建视频录制实例（一台设备只允许创建一个录制实例）。使用callback异步回调。 |
+| [createVideoRecorder](arkts-media-media-createvideorecorder-f-sys.md) | 创建视频录制实例（一台设备只允许创建一个录制实例）。使用Promise异步回调。 |
 | [getAVScreenCaptureConfigurableParameters](arkts-media-media-getavscreencaptureconfigurableparameters-f-sys.md) | get Configurations which user can changes from AVScreenCapture server |
 | [getScreenCaptureMonitor](arkts-media-media-getscreencapturemonitor-f-sys.md) | Obtains a **ScreenCaptureMonitor** instance. This API uses a promise to return the result. |
 | [reportAVScreenCaptureUserChoice](arkts-media-media-reportavscreencaptureuserchoice-f-sys.md) | Reports the user selection result in the screen capture privacy dialog box to the AVScreenCapture server to determine whether to start screen capture. Screen capture starts only when the user touches a button to continue the operation. This API is called by the system application that creates the dialog box. |
@@ -116,10 +116,10 @@ import { media } from '@kit.MediaKit';
 | [PixelMapParams](arkts-media-media-pixelmapparams-i-sys.md) | 获取视频缩略图时，输出缩略图的格式参数。 |
 | [PlaybackStrategy](arkts-media-media-playbackstrategy-i-sys.md) | 播放器首选播放设置。 |
 | [ScreenCaptureMonitor](arkts-media-media-screencapturemonitor-i-sys.md) | A class that provides APIs to query and monitor the system screen recorder status. Before calling any API, you must use getScreenCaptureMonitor() to obtain a ScreenCaptureMonitor instance. |
-| [VideoRecorder](arkts-media-media-videorecorder-i-sys.md) | 该接口自API version 9起停止维护，建议使用AVRecorder。视频录制管理类，用于视频录制。在调用VideoRecorder的方法前，必须先通过createVideoRecorder()创建一个VideoRecorder实例。 |
-| [VideoRecorderConfig](arkts-media-media-videorecorderconfig-i-sys.md) | 视频录制配置定义。 |
-| [VideoRecorderProfile](arkts-media-media-videorecorderprofile-i-sys.md) | 视频录制配置参数定义。 |
-| [WatermarkConfig](arkts-media-media-watermarkconfig-i-sys.md) | 设置AVRecorder的水印配置。水印位置从左上角开始计算。 |
+| [VideoRecorder](arkts-media-media-videorecorder-i-sys.md) |  |
+| [VideoRecorderConfig](arkts-media-media-videorecorderconfig-i-sys.md) | 表示视频录制的参数设置。 |
+| [VideoRecorderProfile](arkts-media-media-videorecorderprofile-i-sys.md) | 视频录制的配置文件。 |
+| [WatermarkConfig](arkts-media-media-watermarkconfig-i-sys.md) | 设置给AVRecorder的水印相关配置，该位置以画面的左上角为开始点。 |
 <!--DelEnd-->
 
 ### 枚举
@@ -204,5 +204,5 @@ import { media } from '@kit.MediaKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [VideoRecordState](arkts-media-media-videorecordstate-t-sys.md) | 从API version 9起停止维护，请使用AVRecorderState。描述视频录制状态。 |
+| [VideoRecordState](arkts-media-media-videorecordstate-t-sys.md) | 视频录制的状态机。可通过state属性获取当前状态。 |
 <!--DelEnd-->

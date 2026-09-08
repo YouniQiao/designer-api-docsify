@@ -20,7 +20,7 @@ capitalizeMode?: CapitalizeMode
 
 编辑框设置大小写模式。如果没有设置或设置非法值，默认不进行任何首字母大写处理。
 
-**类型：** CapitalizeMode
+**类型：** [CapitalizeMode](arkts-ime-inputmethod-capitalizemode-e.md)
 
 **默认值：** CapitalizeMode.NONE
 
@@ -78,7 +78,7 @@ selection?: Range
 
 文本选中的范围。
 
-**类型：** Range
+**类型：** [Range](arkts-ime-inputmethod-range-i.md)
 
 **起始版本：** 10
 

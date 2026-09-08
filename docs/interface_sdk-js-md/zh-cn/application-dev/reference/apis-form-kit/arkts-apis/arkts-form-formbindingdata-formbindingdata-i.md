@@ -36,7 +36,7 @@ proxies?: Array<ProxyData>
 
 卡片代理刷新的订阅信息，配置后会订阅代理刷新消息。默认为空数组，表示不订阅代理刷新消息。当需要使用卡片代理刷新功能时传入此参数，不传入时默认为空数组（不使用代理刷新）。
 
-**类型：** Array&lt;ProxyData&gt;
+**类型：** Array&lt;[ProxyData](arkts-form-formbindingdata-proxydata-i.md)&gt;
 
 **起始版本：** 10
 

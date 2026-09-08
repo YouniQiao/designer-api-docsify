@@ -61,20 +61,3 @@ declare function mmap(file: number | File, mode: MappingMode, offset: number, si
 | 13900038 | Value too large for defined data type |
 | 13900050 | Internal resource error |
 | 13900056 | Mmap does not support mapping this file |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let filePath = pathDir + "/test.txt";
-let file = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE | fileIo.OpenMode.CREATE);
-fileIo.mmap(file, fileIo.MappingMode.READ_WRITE, 0, 1024).then((mapping: fileIo.FileMapping) => {
-  console.info(`Succeeded in mmap`);
-  mapping.unmapSync();
-}).catch((err: BusinessError) => {
-  console.error(`Failed to mmap. Code: ${err.code}, message: ${err.message}`);
-}).finally(() => {
-  fileIo.closeSync(file);
-});
-```

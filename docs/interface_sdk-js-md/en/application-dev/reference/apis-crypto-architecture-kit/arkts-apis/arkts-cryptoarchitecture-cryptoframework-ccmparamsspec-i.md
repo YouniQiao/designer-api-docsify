@@ -32,7 +32,7 @@ aad: DataBlob
 
 AAD for encryption and decryption. The AAD value contains 1 to 2,048 bytes.
 
-**Type:** DataBlob
+**Type:** [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md)
 
 **Since:** 9
 
@@ -52,7 +52,7 @@ Authentication tag, which is of 12 bytes.
 
 When CCM mode is used for encryption, you need to extract the last 12 bytes from the [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) returned by [doFinal()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#dofinal) or [doFinalSync()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#dofinalsync) and use them as **authTag** in **CcmParamsSpec** for [init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init) or [initSync()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#initsync) during decryption.
 
-**Type:** DataBlob
+**Type:** [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md)
 
 **Since:** 9
 
@@ -70,7 +70,7 @@ iv: DataBlob
 
 IV for encryption and decryption. Only 7 bytes are supported. If the length of the input **iv** parameter exceeds 7 bytes, the excess part will be truncated.
 
-**Type:** DataBlob
+**Type:** [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md)
 
 **Since:** 9
 

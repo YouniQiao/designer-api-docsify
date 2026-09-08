@@ -30,7 +30,7 @@ Sets the result of the request for the modal dialog box.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| result | RequestResult | Yes | Request result to set. |
+| result | [RequestResult](arkts-ability-dialogrequest-requestresult-i.md) | Yes | Request result to set. |
 
 **Error codes:**
 

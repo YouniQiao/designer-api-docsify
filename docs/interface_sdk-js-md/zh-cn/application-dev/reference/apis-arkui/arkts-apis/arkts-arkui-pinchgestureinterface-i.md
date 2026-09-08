@@ -117,7 +117,7 @@ Pinch手势识别成功并接收到触摸取消事件的回调。与onActionCanc
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | Callback&lt;[GestureEvent](arkts-arkui-gestureevent-i.md)&gt; | 是 | 手势事件回调函数。 |
+| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;[GestureEvent](arkts-arkui-gestureevent-i.md)&gt; | 是 | 手势事件回调函数。 |
 
 **返回值：**
 

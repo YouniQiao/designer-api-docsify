@@ -68,7 +68,7 @@ serviceType?: ServiceType
 
 L2CAP service type, default = SERVICE_BEST_EFFORT.
 
-**Type:** ServiceType
+**Type:** [ServiceType](arkts-connectivity-hid-servicetype-e.md)
 
 **Since:** 23
 

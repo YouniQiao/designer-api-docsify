@@ -38,7 +38,7 @@ location?: Location
 
 Geolocation information of the image (depending on the device hardware information by default).
 
-**Type:** Location
+**Type:** [Location](arkts-camera-camera-location-i.md)
 
 **Since:** 10
 
@@ -70,7 +70,7 @@ quality?: QualityLevel
 
 Image quality (high by default).
 
-**Type:** QualityLevel
+**Type:** [QualityLevel](arkts-camera-camera-qualitylevel-e.md)
 
 **Since:** 10
 

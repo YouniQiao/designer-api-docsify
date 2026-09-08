@@ -26,7 +26,7 @@ Displays the notification text.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | ShowToastOptions | Yes | Options. |
+| options | [ShowToastOptions](arkts-arkui-prompt-showtoastoptions-i.md) | Yes | Options. |
 
 **Examples**
 

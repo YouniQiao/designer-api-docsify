@@ -42,22 +42,6 @@ Synchronizes the data of a file. This API uses a promise to return the result.
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let filePath = pathDir + "/test.txt";
-let file = fileIo.openSync(filePath);
-fileIo.fdatasync(file.fd).then(() => {
-  console.info(`Succeeded in syncing data.`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to sync data. Code: ${err.code}, message: ${err.message}`);
-}).finally(() => {
-  fileIo.closeSync(file);
-});
-```
-
 
 ## fdatasync
 
@@ -89,20 +73,3 @@ Synchronizes the data of a file. This API uses an asynchronous callback to retur
 | 13900027 | Read-only file system |
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let filePath = pathDir + "/test.txt";
-let file = fileIo.openSync(filePath);
-fileIo.fdatasync(file.fd, (err: BusinessError) => {
-  if (err) {
-    console.error(`Failed to sync data. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info(`Succeeded in syncing data.`);
-  }
-  fileIo.closeSync(file);
-});
-```

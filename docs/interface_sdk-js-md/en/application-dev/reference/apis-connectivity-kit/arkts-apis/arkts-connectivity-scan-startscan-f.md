@@ -27,7 +27,7 @@ Starts NearLink scanning. This API uses a promise to return the result. You need
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | filters | [ScanFilters](arkts-connectivity-scan-scanfilters-i.md)[] \| null | Yes | Filter criteria for NearLink advertising. Devices that meet the filter criteria will be reported. If the filter is not enabled, **null** is passed. If this parameter is set to **null**, all discoverable NearLink devices nearby will be scanned. However, this method is not recommended as it may pick up unexpected devices and increase power consumption. |
-| options | ScanOptions | No | Scan options. The low power consumption mode is used by default. |
+| options | [ScanOptions](arkts-connectivity-scan-scanoptions-i.md) | No | Scan options. The low power consumption mode is used by default. |
 
 **Return value:**
 
@@ -41,8 +41,8 @@ Starts NearLink scanning. This API uses a promise to return the result. You need
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported because the chip does not support it. |
-| 36100003 | NearLink disabled. |
-| 36100040 | Integer out of range. |
-| 36100041 | Invalid address. |
-| 36100042 | Empty array. |
-| 36100099 | Operation failed. |
+| [36100003](../../apis-avsession-kit/errorcode-nearlink-service.md#36100003-nearlink-disabled) | NearLink disabled. |
+| [36100040](../../apis-avsession-kit/errorcode-nearlink-service.md#36100040-integer-out-of-range) | Integer out of range. |
+| [36100041](../../apis-avsession-kit/errorcode-nearlink-service.md#36100041-invalid-url) | Invalid address. |
+| [36100042](../../apis-avsession-kit/errorcode-nearlink-service.md#36100042-empty-array) | Empty array. |
+| [36100099](../../apis-avsession-kit/errorcode-nearlink-service.md#36100099-operation-failed) | Operation failed. |

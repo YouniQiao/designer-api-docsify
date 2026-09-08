@@ -44,7 +44,7 @@ public backgroundBlurStyle?: BlurStyle
 
 Background blur style.
 
-**Type:** BlurStyle
+**Type:** [BlurStyle](../arkts-components/arkts-arkui-blurstyle-e.md)
 
 **Since:** 26.0.0
 

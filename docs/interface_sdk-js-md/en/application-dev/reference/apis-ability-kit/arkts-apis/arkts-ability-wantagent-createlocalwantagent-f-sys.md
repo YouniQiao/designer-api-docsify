@@ -26,7 +26,7 @@ Create a local WantAgent object. The WantAgent created by this interface stores 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| info | LocalWantAgentInfo | Yes | Information about the local WantAgent object to create. |
+| info | [LocalWantAgentInfo](arkts-ability-wantagent-localwantagentinfo-t-sys.md) | Yes | Information about the local WantAgent object to create. |
 
 **Return value:**
 

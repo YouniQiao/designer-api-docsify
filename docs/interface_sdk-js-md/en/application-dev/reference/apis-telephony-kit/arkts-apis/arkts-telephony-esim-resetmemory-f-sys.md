@@ -33,7 +33,7 @@ Clears all specific profiles and resets the eUICC. This API uses a promise to re
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ResultCode&gt; | Promise used to return the operation result. |
+| Promise&lt;[ResultCode](arkts-telephony-esim-resultcode-e-sys.md)&gt; | Promise used to return the operation result. |
 
 **Error codes:**
 

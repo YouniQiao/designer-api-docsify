@@ -18,7 +18,7 @@ import { vibrator } from '@kit.SensorServiceKit';
 duration?: number
 ```
 
-Vibration duration. This parameter is optional, in ms. The value range is (0,5000]. The default value is **48** for short vibration and **1000** for number vibration.
+Vibration duration. This parameter is optional, in ms. The value range is (0,5000]. The default value is **48** for short vibration and **1000** for long vibration.
 
 **Type:** number
 

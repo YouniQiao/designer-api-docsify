@@ -59,16 +59,6 @@ connect(deviceId: string): void
 **示例**
 
 ```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-try {
-    let hfpAg = hfp.createHfpAgProfile();
-    hfpAg.connect('XX:XX:XX:XX:XX:XX');
-} catch (err) {
-    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-}
-```
-
-```TypeScript
 try {
     let hf = hfp.createHfpHfProfile();
     hf.connect('XX:XX:XX:XX:XX:XX');
@@ -116,16 +106,6 @@ disconnect(deviceId: string): void
 | [2900099](../errorcode-bluetoothManager.md#2900099-操作失败) | Internal system error. For example, IPC error. |
 
 **示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-try {
-    let hfpAg = hfp.createHfpAgProfile();
-    hfpAg.disconnect('XX:XX:XX:XX:XX:XX');
-} catch (err) {
-    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-}
-```
 
 ```TypeScript
 try {

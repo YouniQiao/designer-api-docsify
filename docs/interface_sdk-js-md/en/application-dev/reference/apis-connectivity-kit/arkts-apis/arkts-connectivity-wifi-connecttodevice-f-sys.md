@@ -30,7 +30,7 @@ Connects to Wi-Fi network.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | WifiDeviceConfig | Yes | Indicates the device configuration for connection to the Wi-Fi network. |
+| config | [WifiDeviceConfig](arkts-connectivity-wifi-wifideviceconfig-i.md) | Yes | Indicates the device configuration for connection to the Wi-Fi network. |
 
 **Return value:**
 

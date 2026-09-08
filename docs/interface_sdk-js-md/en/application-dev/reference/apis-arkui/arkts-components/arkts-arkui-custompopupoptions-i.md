@@ -305,7 +305,7 @@ Unit: vp
 
 1. Percentage values are not supported. If a percentage value is set, the value **0** is used.
 2. If no inner outline is set, this parameter must be used together with **borderLinearGradient**.
-3. For number outlines, it is recommended that the inner outline width should not exceed 10 vp.
+3. For double outlines, it is recommended that the inner outline width should not exceed 10 vp.
 
 **Type:** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
 
@@ -489,7 +489,7 @@ levelMode?: LevelMode
 
 Defines the display level of the popup.
 
-**Type:** LevelMode
+**Type:** [LevelMode](../arkts-apis/arkts-arkui-levelmode-t.md)
 
 **Since:** 26.0.0
 
@@ -529,7 +529,7 @@ Color of the popup mask.
 
 This parameter is deprecated since API version 10. You are advised to use **mask** instead.
 
-**Type:** Color \| string \| Resource \| number
+**Type:** [Color](../arkts-apis/arkts-arkui-color-e.md) \| string \| [Resource](../arkts-apis/arkts-arkui-resource-t.md) \| number
 
 **Since:** 8
 
@@ -633,7 +633,7 @@ Unit: vp
 
 1. Percentage values are not supported. If a percentage value is set, the value **0** is used.
 2. If the outer outline is not set, this parameter must be used together with **outlineLinearGradient**.
-3. For number outlines, it is recommended that the outer outline width should not exceed 10 vp.
+3. For double outlines, it is recommended that the outer outline width should not exceed 10 vp.
 
 **Type:** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
 
@@ -679,7 +679,7 @@ API version 10: **'#4d4d4d'**
 
 API version 11 and later: TRANSPARENT plus [COMPONENT_ULTRA_THICK](arkts-arkui-blurstyle-e.md)
 
-**Type:** Color \| string \| Resource \| number
+**Type:** [Color](../arkts-apis/arkts-arkui-color-e.md) \| string \| [Resource](../arkts-apis/arkts-arkui-resource-t.md) \| number
 
 **Default:** '#4d4d4d' [since 10 - 10] @default TRANSPARENT plus COMPONENT_ULTRA_THICK [since 11]
 

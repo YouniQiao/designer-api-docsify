@@ -41,7 +41,7 @@ mode(mode: NavRouteMode)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mode | [NavRouteMode](arkts-arkui-navroutemode-e.md) | 是 | 指定点击NavRouter跳转到NavDestination页面时，使用的路由模式。默认值：NavRouteMode.PUSH_WITH_RECREATE |
+| mode | [NavRouteMode](arkts-arkui-navroutemode-e.md) | 是 | [指定点击NavRouter跳转到NavDestination页面时，使用的路由模式。默认值：NavRouteMode.PUSH_WITH_RECREATE](arkts-arkui-navroutemode-e.md) |
 
 ## onStateChange
 

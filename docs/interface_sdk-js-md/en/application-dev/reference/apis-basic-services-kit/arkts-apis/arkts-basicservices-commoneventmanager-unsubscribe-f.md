@@ -24,7 +24,7 @@ Unsubscribes from a common event. This API uses an asynchronous callback to retu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| subscriber | CommonEventSubscriber | Yes | Subscriber object. |
+| subscriber | [CommonEventSubscriber](arkts-basicservices-commoneventmanager-commoneventsubscriber-t.md) | Yes | Subscriber object. |
 | callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | No | Callback used to return the result. If the common event is successfully unsubscribed from, **err** is **undefined**; if the unsubscription fails, **err** is an error object. If this parameter is not passed, the subscription is canceled by default and no result is returned. |
 
 **Error codes:**

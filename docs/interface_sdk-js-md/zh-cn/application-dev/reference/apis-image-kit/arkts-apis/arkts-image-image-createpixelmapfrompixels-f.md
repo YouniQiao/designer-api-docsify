@@ -37,7 +37,7 @@ The following pixel formats are not supported for PixelMap creation: RGBA_101010
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;PixelMap&gt; | A Promise of the new PixelMap created. |
+| Promise&lt;[PixelMap](arkts-image-image-pixelmap-i.md)&gt; | A Promise of the new PixelMap created. |
 
 **错误码：**
 

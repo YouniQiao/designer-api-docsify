@@ -4,7 +4,7 @@ The **componentSnapshot** module provides APIs for obtaining component snapshots
 
 Transformation attributes such as scaling, translation, and rotation only apply to the child components of the target component. Applying these transformation attributes directly to the target component itself has no effect; the snapshot will still display the component as it appears before any transformations are applied.
 
-For typical use cases (for example, number screenshots) and best practices of component snapshots, see [Using Component Snapshot (ComponentSnapshot)](../../../ui/arkts-uicontext-component-snapshot.md).
+For typical use cases (for example, long screenshots) and best practices of component snapshots, see [Using Component Snapshot (ComponentSnapshot)](../../../ui/arkts-uicontext-component-snapshot.md).
 
 > **NOTE：**
 > 

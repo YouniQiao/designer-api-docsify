@@ -41,13 +41,3 @@ declare function lseek(fd: number, offset: number, whence?: WhenceType): number
 | 13900026 | Illegal seek |
 | 13900038 | Value too large for defined data type |
 | 13900042 | Unknown error |
-
-**示例**
-
-```TypeScript
-let filePath = pathDir + "/test.txt";
-let file = fileIo.openSync(filePath, fileIo.OpenMode.CREATE | fileIo.OpenMode.READ_WRITE);
-let offset = fileIo.lseek(file.fd, 5, fileIo.WhenceType.SEEK_SET);
-console.info(`Succeeded in seeking, the current offset is at ${offset}`);
-fileIo.closeSync(file);
-```

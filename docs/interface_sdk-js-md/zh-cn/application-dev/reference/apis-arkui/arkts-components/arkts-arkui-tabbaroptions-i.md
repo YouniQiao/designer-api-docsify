@@ -23,7 +23,7 @@ icon?: string | Resource
 
 TabBar icon.
 
-**类型：** string \| Resource
+**类型：** string \| [Resource](../arkts-apis/arkts-arkui-resource-t.md)
 
 **起始版本：** 7
 
@@ -39,7 +39,7 @@ text?: string | Resource
 
 TabBar text.
 
-**类型：** string \| Resource
+**类型：** string \| [Resource](../arkts-apis/arkts-arkui-resource-t.md)
 
 **起始版本：** 7
 

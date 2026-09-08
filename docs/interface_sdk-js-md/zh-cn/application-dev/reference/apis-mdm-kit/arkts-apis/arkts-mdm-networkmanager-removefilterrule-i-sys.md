@@ -22,7 +22,7 @@ action?: Action
 
 接收或者丢弃数据包。
 
-**类型：** Action
+**类型：** [Action](arkts-mdm-networkmanager-action-e.md)
 
 **起始版本：** 10
 
@@ -76,7 +76,7 @@ direction: Direction
 
 规则链。
 
-**类型：** Direction
+**类型：** [Direction](arkts-mdm-networkmanager-direction-e.md)
 
 **起始版本：** 10
 
@@ -94,7 +94,7 @@ protocol?: Protocol
 
 网络协议。
 
-**类型：** Protocol
+**类型：** [Protocol](arkts-mdm-networkmanager-protocol-e.md)
 
 **起始版本：** 10
 

@@ -52,7 +52,7 @@ state: ConnectionState
 
 Connection state with a remote device.
 
-**Type:** ConnectionState
+**Type:** [ConnectionState](arkts-connectivity-datatransfer-connectionstate-t.md)
 
 **Since:** 26.0.0
 

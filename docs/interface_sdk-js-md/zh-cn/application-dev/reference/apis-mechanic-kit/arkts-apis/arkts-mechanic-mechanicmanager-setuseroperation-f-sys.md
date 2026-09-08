@@ -26,7 +26,7 @@ function setUserOperation(operation: Operation, mac: string, params: string): vo
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| operation | Operation | 是 | 操作类型 |
+| operation | [Operation](arkts-mechanic-mechanicmanager-operation-e-sys.md) | 是 | 操作类型 |
 | mac | string | 是 | MAC address. |
 | params | string | 是 | Operation parameters. |
 

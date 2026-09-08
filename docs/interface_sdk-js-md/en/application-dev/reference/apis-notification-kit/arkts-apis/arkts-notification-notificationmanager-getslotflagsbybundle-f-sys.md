@@ -26,7 +26,7 @@ Obtains the notification slot flag of a specified application. This API uses a p
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundle | BundleOption | Yes | Bundle information of the application. |
+| bundle | [BundleOption](arkts-notification-notificationmanager-bundleoption-t.md) | Yes | Bundle information of the application. |
 
 **Return value:**
 

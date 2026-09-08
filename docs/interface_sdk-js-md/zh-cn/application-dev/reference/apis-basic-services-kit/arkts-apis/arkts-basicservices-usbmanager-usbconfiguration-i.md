@@ -48,7 +48,7 @@ interfaces: Array<USBInterface>
 
 配置支持的接口列表。
 
-**类型：** Array&lt;USBInterface&gt;
+**类型：** Array&lt;[USBInterface](arkts-basicservices-usbmanager-usbinterface-i.md)&gt;
 
 **起始版本：** 9
 

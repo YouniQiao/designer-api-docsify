@@ -20,7 +20,7 @@ APP_START_COMPLETE_TIME**):
 > - Supported scenarios: list scrolling of the **List**, **Grid**, **Scroll**, and **WaterFlow** components in the ArkUI subsystem.
 > - During a test, only the first list scrolling frame rate in the specified application is collected.
 
-@enum { number }
+@enum { int }
 
 **Since:** 20
 

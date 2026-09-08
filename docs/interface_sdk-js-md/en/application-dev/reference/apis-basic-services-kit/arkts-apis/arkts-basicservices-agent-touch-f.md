@@ -24,7 +24,7 @@ Queries the task details based on the task ID and token. This API uses an asynch
 | --- | --- | --- | --- |
 | id | string | Yes | Task ID. |
 | token | string | Yes | Token for task query. |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;TaskInfo&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the **TaskInfo** object obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[TaskInfo](arkts-basicservices-agent-taskinfo-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the **TaskInfo** object obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -58,7 +58,7 @@ Queries the task details based on the task ID and token. This API uses a promise
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;TaskInfo&gt; | Promise used to return the **TaskInfo** object. |
+| Promise&lt;[TaskInfo](arkts-basicservices-agent-taskinfo-i.md)&gt; | Promise used to return the **TaskInfo** object. |
 
 **Error codes:**
 

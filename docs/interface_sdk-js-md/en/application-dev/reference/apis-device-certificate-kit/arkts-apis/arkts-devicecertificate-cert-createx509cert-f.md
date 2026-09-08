@@ -25,7 +25,7 @@ Creates an **X509Cert** instance. This API uses an asynchronous callback to retu
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | inStream | [EncodingBlob](arkts-devicecertificate-cert-encodingblob-i.md) | Yes | X.509 certificate serialization data. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;X509Cert&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the **X509Cert** instance created. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[X509Cert](arkts-devicecertificate-cert-x509cert-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the **X509Cert** instance created. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -101,7 +101,7 @@ Creates an **X509Cert** instance. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;X509Cert&gt; | Promise used to return the **X509Cert** instance created. |
+| Promise&lt;[X509Cert](arkts-devicecertificate-cert-x509cert-i.md)&gt; | Promise used to return the **X509Cert** instance created. |
 
 **Error codes:**
 

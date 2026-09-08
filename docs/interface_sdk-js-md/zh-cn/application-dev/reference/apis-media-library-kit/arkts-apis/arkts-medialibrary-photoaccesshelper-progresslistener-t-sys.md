@@ -20,4 +20,4 @@ type ProgressListener = (progress: Progress) => void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| progress | Progress | 是 | 进度信息。 |
+| progress | [Progress](arkts-medialibrary-photoaccesshelper-progress-i-sys.md) | 是 | 进度信息。 |

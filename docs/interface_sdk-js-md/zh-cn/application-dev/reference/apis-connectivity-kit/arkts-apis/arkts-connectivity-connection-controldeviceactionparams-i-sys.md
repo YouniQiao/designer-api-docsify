@@ -58,7 +58,7 @@ type: ControlType
 
 表示控制类型。
 
-**类型：** ControlType
+**类型：** [ControlType](arkts-connectivity-connection-controltype-e-sys.md)
 
 **起始版本：** 15
 

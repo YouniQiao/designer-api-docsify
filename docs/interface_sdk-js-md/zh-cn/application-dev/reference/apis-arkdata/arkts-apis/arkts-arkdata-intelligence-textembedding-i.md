@@ -171,19 +171,6 @@ textEmbedding.loadModel()
   })
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// imageEmbedding需先通过intelligence.getImageEmbeddingModel获取
-imageEmbedding.loadModel()
-  .then(() => {
-    console.info("Succeeded in loading Model");
-  })
-  .catch((err: BusinessError) => {
-    console.error(`Failed to load Model. Code: ${err.code}, message: ${err.message}`);
-  })
-```
-
 ## releaseModel
 
 ```TypeScript
@@ -216,19 +203,6 @@ import { BusinessError } from '@kit.BasicServicesKit';
 
 // textEmbedding需先通过intelligence.getTextEmbeddingModel获取
 textEmbedding.releaseModel()
-  .then(() => {
-    console.info("Succeeded in releasing Model");
-  })
-  .catch((err: BusinessError) => {
-    console.error(`Failed to release Model. Code: ${err.code}, message: ${err.message}`);
-  })
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// imageEmbedding需先通过intelligence.getImageEmbeddingModel获取
-imageEmbedding.releaseModel()
   .then(() => {
     console.info("Succeeded in releasing Model");
   })

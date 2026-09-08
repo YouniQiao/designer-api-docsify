@@ -51,7 +51,7 @@ style?: FontStyle
 
 Font style. Default value: FontStyle.Normal.
 
-**Type:** FontStyle
+**Type:** [FontStyle](arkts-arkui-fontstyle-e.md)
 
 **Since:** 7
 
@@ -67,7 +67,7 @@ weight?: FontWeight | number | string
 
 Font weight. For the number type, the value ranges from 100 to 900, at an interval of 100. A larger value indicates a thicker font. Default value: FontWeight.Normal.
 
-**Type:** FontWeight \| number \| string
+**Type:** [FontWeight](arkts-arkui-fontweight-e.md) \| number \| string
 
 **Since:** 7
 

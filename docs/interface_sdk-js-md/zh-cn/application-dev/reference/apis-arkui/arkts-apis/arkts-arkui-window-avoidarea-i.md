@@ -30,7 +30,7 @@ bottomRect: Rect
 
 中心位于窗口的两条对角线的底部的矩形区。
 
-**类型：** Rect
+**类型：** [Rect](arkts-arkui-window-rect-i.md)
 
 **起始版本：** 7
 
@@ -46,7 +46,7 @@ leftRect: Rect
 
 中心位于窗口的两条对角线的左侧的矩形区。
 
-**类型：** Rect
+**类型：** [Rect](arkts-arkui-window-rect-i.md)
 
 **起始版本：** 7
 
@@ -62,7 +62,7 @@ rightRect: Rect
 
 中心位于窗口的两条对角线的右侧的矩形区。
 
-**类型：** Rect
+**类型：** [Rect](arkts-arkui-window-rect-i.md)
 
 **起始版本：** 7
 
@@ -78,7 +78,7 @@ topRect: Rect
 
 中心位于窗口的两条对角线的顶部的矩形区。
 
-**类型：** Rect
+**类型：** [Rect](arkts-arkui-window-rect-i.md)
 
 **起始版本：** 7
 

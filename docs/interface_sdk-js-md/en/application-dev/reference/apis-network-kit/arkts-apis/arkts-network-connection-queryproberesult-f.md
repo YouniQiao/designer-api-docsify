@@ -32,7 +32,7 @@ Queries network probe results. If an exception (for example, network disconnecti
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | destination | string | Yes | Target domain name or IP address, for example, www.example.com or 8.8.8.8. |
-| duration | number | Yes | Probe duration, in seconds. The value range is [1, 1000]. The probe interval is one second. If no exception (such as network disconnection) occurs, the probe result is returned when the probe duration expires. This field indicates the total probe duration. If the value is too large, application thread resources may be occupied for a number time. |
+| duration | number | Yes | Probe duration, in seconds. The value range is [1, 1000]. The probe interval is one second. If no exception (such as network disconnection) occurs, the probe result is returned when the probe duration expires. This field indicates the total probe duration. If the value is too large, application thread resources may be occupied for a long time. |
 
 **Return value:**
 

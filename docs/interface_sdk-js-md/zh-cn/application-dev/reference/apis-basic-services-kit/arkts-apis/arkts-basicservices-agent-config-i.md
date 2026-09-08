@@ -23,7 +23,7 @@ action: Action
 - UPLOAD表示上传任务。  
 - DOWNLOAD表示下载任务。
 
-**类型：** Action
+**类型：** [Action](arkts-basicservices-agent-action-e.md)
 
 **起始版本：** 10
 
@@ -270,7 +270,7 @@ network?: Network
 
 网络选项，当前支持无线网络WIFI和蜂窝数据网络CELLULAR，默认为ANY（WIFI或CELLULAR）。
 
-**类型：** Network
+**类型：** [Network](arkts-basicservices-agent-network-e.md)
 
 **默认值：** Network.ANY
 
@@ -288,7 +288,7 @@ notification?: Notification
 
 通知栏自定义设置。默认值为`{}`。
 
-**类型：** Notification
+**类型：** [Notification](arkts-basicservices-agent-notification-i.md)
 
 **起始版本：** 15
 

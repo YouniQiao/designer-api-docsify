@@ -122,7 +122,7 @@ backgroundBlurStyle?: BlurStyle
 
 对话框的背景模糊样式。设置为BlurStyle.NONE将禁用背景模糊。
 
-**类型：** BlurStyle
+**类型：** [BlurStyle](../arkts-components/arkts-arkui-blurstyle-e.md)
 
 **默认值：** BlurStyle.COMPONENT_ULTRA_THICK
 

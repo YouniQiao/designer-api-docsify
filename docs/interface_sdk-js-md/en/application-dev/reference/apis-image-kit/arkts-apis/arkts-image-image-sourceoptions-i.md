@@ -43,7 +43,7 @@ sourcePixelFormat?: PixelMapFormat
 
 Image pixel format. The default value is **UNKNOWN**.
 
-**Type:** PixelMapFormat
+**Type:** [PixelMapFormat](arkts-image-image-pixelmapformat-e.md)
 
 **Since:** 9
 

@@ -22,7 +22,7 @@ coordinateSystemType?: CoordinateSystemType
 
 APP应先使用[getGeofenceSupportedCoordTypes](arkts-location-geolocationmanager-getgeofencesupportedcoordtypes-f.md)查询支持的坐标系，然后传入正确的圆心坐标。
 
-**类型：** CoordinateSystemType
+**类型：** [CoordinateSystemType](arkts-location-geolocationmanager-coordinatesystemtype-e.md)
 
 **起始版本：** 12
 

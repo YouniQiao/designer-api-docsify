@@ -166,7 +166,7 @@ poiLocation: Point
 
 Indicates the location of POI.
 
-**Type:** Point
+**Type:** [Point](arkts-location-geolocationmanager-point-i.md)
 
 **Since:** 26.0.0
 

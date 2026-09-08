@@ -24,7 +24,7 @@ function subscribeSelf(subscriber: NotificationSubscriber): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| subscriber | NotificationSubscriber | 是 | 通知订阅对象。 |
+| subscriber | [NotificationSubscriber](arkts-notification-notificationsubscribe-notificationsubscriber-t-sys.md) | 是 | 通知订阅对象。 |
 
 **返回值：**
 

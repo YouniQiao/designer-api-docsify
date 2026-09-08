@@ -44,23 +44,6 @@ Closes a file descriptor. This API is a static method.
 import { rpc } from '@kit.IPCKit';
 import { fileIo } from '@kit.CoreFileKit';
 import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let filePath = "path/to/file"; 
-  let file = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE | fileIo.OpenMode.CREATE);
-  rpc.MessageSequence.closeFileDescriptor(file.fd);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
-  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
-}
-```
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { fileIo } from '@kit.CoreFileKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
 
 try {
   let filePath = "path/to/file";
@@ -94,25 +77,6 @@ Checks whether this **MessageParcel** object contains file descriptors.
 | boolean | Returns **true** if the **MessageParcel** object contains file descriptors; returns **false** otherwise. |
 
 **Examples**
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { fileIo } from '@kit.CoreFileKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let sequence = rpc.MessageSequence.create();
-  let filePath = "path/to/file";
-  let file = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE | fileIo.OpenMode.CREATE);
-  let containFD = sequence.containFileDescriptors();
-  hilog.info(0x0000, 'testTag', 'sequence after write fd containFd result is ' + containFD);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
-  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
-}
-```
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -205,23 +169,6 @@ Duplicates a file descriptor. This API is a static method.
 import { rpc } from '@kit.IPCKit';
 import { fileIo } from '@kit.CoreFileKit';
 import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let filePath = "path/to/file"; 
-  let file = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE | fileIo.OpenMode.CREATE);
-  rpc.MessageSequence.dupFileDescriptor(file.fd);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
-  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
-}
-```
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { fileIo } from '@kit.CoreFileKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
 
 try {
   let filePath = "path/to/file";
@@ -255,22 +202,6 @@ Obtains the capacity of this **MessageParcel** object.
 | number | MessageParcel** capacity obtained, in bytes. |
 
 **Examples**
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let data = rpc.MessageSequence.create();
-  let result = data.getCapacity();
-  hilog.info(0x0000, 'testTag', 'capacity is ' + result);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
-  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
-}
-```
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -312,22 +243,6 @@ Obtains the maximum amount of raw data that can be held by this **MessageParcel*
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
 import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let sequence = rpc.MessageSequence.create();
-  let result = sequence.getRawDataCapacity();
-  hilog.info(0x0000, 'testTag', 'sequence get RawDataCapacity result is ' + result);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
-  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
-}
-```
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
 
 try {
   let parcel = new rpc.MessageParcel();
@@ -361,23 +276,6 @@ Obtains the readable capacity of this **MessageParcel** object.
 | number | MessageParcel** object readable capacity, in bytes. |
 
 **Examples**
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let data = rpc.MessageSequence.create();
-  data.writeString("hello world");
-  let result = data.getReadableBytes();
-  hilog.info(0x0000, 'testTag', 'RpcServer: getReadableBytes is ' + result);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
-  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
-}
-```
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -420,23 +318,6 @@ Obtains the read position of this **MessageParcel** object.
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
 import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let data = rpc.MessageSequence.create();
-  data.writeString("hello world");
-  let readPos = data.getReadPosition();
-  hilog.info(0x0000, 'testTag', 'readPos is ' + readPos);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
-  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
-}
-```
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
 
 try {
   let data = rpc.MessageParcel.create();
@@ -470,22 +351,6 @@ Obtains the data size of this **MessageParcel** object.
 | number | Size of the **MessageParcel** object obtained, in bytes. |
 
 **Examples**
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let data = rpc.MessageSequence.create();
-  let size = data.getSize();
-  hilog.info(0x0000, 'testTag', 'size is ' + size);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
-  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
-}
-```
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -528,23 +393,6 @@ Obtains the writable capacity of this **MessageParcel** object.
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
 import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let data = rpc.MessageSequence.create();
-  data.setCapacity(100);
-  let getWritableBytes = data.getWritableBytes();
-  hilog.info(0x0000, 'testTag', 'RpcServer: getWritableBytes is ' + getWritableBytes);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
-  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
-}
-```
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
 
 try {
   let data = rpc.MessageParcel.create();
@@ -583,23 +431,6 @@ Obtains the write position of this **MessageParcel** object.
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
 import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let data = rpc.MessageSequence.create();
-  data.writeInt(10);
-  let bwPos = data.getWritePosition();
-  hilog.info(0x0000, 'testTag', 'bwPos is ' + bwPos);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
-  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
-}
-```
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
 
 try {
   let data = rpc.MessageParcel.create();
@@ -634,44 +465,6 @@ Reads the anonymous shared object from this **MessageParcel** object.
 | [Ashmem](arkts-ipc-rpc-ashmem-c.md) | Anonymous share object obtained. |
 
 **Examples**
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let sequence = rpc.MessageSequence.create();
-  let ashmem = rpc.Ashmem.create("ashmem", 1024);
-  // Write data to ashmem.
-  let buffer = new ArrayBuffer(1024);
-  let int32View = new Int32Array(buffer);
-  for (let i = 0; i < int32View.length; i++) {
-    int32View[i] = i * 2 + 1;
-  }
-  let size = buffer.byteLength;
-  ashmem.mapReadWriteAshmem();
-  ashmem.writeDataToAshmem(buffer, size, 0);
-  // Write the size of the transferred data to this MessageSequence object.
-  sequence.writeInt(size);
-  // Write the ashmem object to the messageSequence object.
-  sequence.writeAshmem(ashmem);
-
-  // Read the size of the transferred data.
-  let dataSize = sequence.readInt();
-  // Read the ashmem object from this MessageSequence object.
-  let ashmem1 = sequence.readAshmem();
-  // Read data from the ashmem object.
-  ashmem1.mapReadWriteAshmem();
-  let readResult = ashmem1.readDataFromAshmem(dataSize, 0);
-  let readInt32View = new Int32Array(readResult);
-  hilog.info(0x0000, 'testTag', 'read from Ashmem result is ' + readInt32View);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
-  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
-}
-```
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -716,23 +509,6 @@ Reads the Boolean value from this **MessageParcel** object.
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
 import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let data = rpc.MessageSequence.create();
-  data.writeBoolean(false);
-  let ret = data.readBoolean();
-  hilog.info(0x0000, 'testTag', 'readBoolean is ' + ret);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
-  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
-}
-```
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
 
 try {
   let data = rpc.MessageParcel.create();
@@ -768,24 +544,6 @@ Reads the Boolean array from this **MessageParcel** object and writes it to the 
 | dataIn | boolean[] | Yes | Boolean array to read. |
 
 **Examples**
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let data = rpc.MessageSequence.create();
-  data.writeBooleanArray([false, true, false]);
-  let array: Array<boolean> = new Array(3);
-  data.readBooleanArray(array);
-  hilog.info(0x0000, 'testTag', 'readBooleanArray is ' + array);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
-  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
-}
-```
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -830,23 +588,6 @@ Reads the Boolean array from this **MessageParcel** object.
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
 import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let data = rpc.MessageSequence.create();
-  data.writeBooleanArray([false, true, false]);
-  let array = data.readBooleanArray();
-  hilog.info(0x0000, 'testTag', 'readBooleanArray is ' + array);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
-  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
-}
-```
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
 
 try {
   let data = rpc.MessageParcel.create();
@@ -886,23 +627,6 @@ Reads the byte value from this **MessageParcel** object.
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
 import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let data = rpc.MessageSequence.create();
-  data.writeByte(2);
-  let ret = data.readByte();
-  hilog.info(0x0000, 'testTag', 'readByte is: ' +  ret);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
-  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
-}
-```
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
 
 try {
   let data = rpc.MessageParcel.create();
@@ -938,26 +662,6 @@ Reads the byte array from this **MessageParcel** object and writes it to the cre
 | dataIn | number[] | Yes | Byte array to read. |
 
 **Examples**
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let data = rpc.MessageSequence.create();
-  let ByteArrayVar = [1, 2, 3, 4, 5];
-  // Write the byte array to the MessageSequence Object
-  data.writeByteArray(ByteArrayVar);
-  let array: Array<number> = new Array(5);
-  data.readByteArray(array);
-  hilog.info(0x0000, 'testTag', 'readByteArray is  ' + array);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
-  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
-}
-```
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -1002,25 +706,6 @@ Reads the byte array from this **MessageParcel** object.
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
 import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let data = rpc.MessageSequence.create();
-  let ByteArrayVar = [1, 2, 3, 4, 5];
-  // Write the byte array to the MessageSequence Object
-  data.writeByteArray(ByteArrayVar);
-  let array = data.readByteArray();
-  hilog.info(0x0000, 'testTag', 'readByteArray is  ' + array);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
-  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
-}
-```
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
 
 try {
   let data = rpc.MessageParcel.create();
@@ -1061,23 +746,6 @@ Reads the single character value from this **MessageParcel** object.
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
 import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let data = rpc.MessageSequence.create();
-  data.writeChar(97);
-  let ret = data.readChar();
-  hilog.info(0x0000, 'testTag', 'readChar is ' + ret);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
-  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
-}
-```
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
 
 try {
   let data = rpc.MessageParcel.create();
@@ -1113,24 +781,6 @@ Reads the character array from this **MessageParcel** object and writes it to th
 | dataIn | number[] | Yes | Character array to read. |
 
 **Examples**
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let data = rpc.MessageSequence.create();
-  data.writeCharArray([97, 98, 88]);
-  let array: Array<number> = new Array(3);
-  data.readCharArray(array);
-  hilog.info(0x0000, 'testTag', 'readCharArray is ' + array);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
-  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
-}
-```
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -1175,23 +825,6 @@ Reads the single character array from this **MessageParcel** object.
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
 import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let data = rpc.MessageSequence.create();
-  data.writeCharArray([97, 98, 88]);
-  let array = data.readCharArray();
-  hilog.info(0x0000, 'testTag', 'readCharArray is ' + array);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
-  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
-}
-```
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
 
 try {
   let data = rpc.MessageParcel.create();
@@ -1210,7 +843,7 @@ try {
 readDouble(): number
 ```
 
-Reads the number value from this **MessageParcel** object.
+Reads the double value from this **MessageParcel** object.
 
 **Since:** 7
 
@@ -1227,23 +860,6 @@ Reads the number value from this **MessageParcel** object.
 | number | Double value read. |
 
 **Examples**
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let data = rpc.MessageSequence.create();
-  data.writeDouble(10.2);
-  let ret = data.readDouble();
-  hilog.info(0x0000, 'testTag', 'readDouble is ' +  ret);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
-  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
-}
-```
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -1266,7 +882,7 @@ try {
 readDoubleArray(dataIn: number[]): void
 ```
 
-Reads the number array from this **MessageParcel** object and writes it to the created empty array.
+Reads the double array from this **MessageParcel** object and writes it to the created empty array.
 
 **Since:** 7
 
@@ -1283,24 +899,6 @@ Reads the number array from this **MessageParcel** object and writes it to the c
 | dataIn | number[] | Yes | Double array to read. |
 
 **Examples**
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let data = rpc.MessageSequence.create();
-  data.writeDoubleArray([11.1, 12.2, 13.3]);
-  let array: Array<number> = new Array(3);
-  data.readDoubleArray(array);
-  hilog.info(0x0000, 'testTag', 'readDoubleArray is ' + array);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
-  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
-}
-```
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -1324,7 +922,7 @@ try {
 readDoubleArray(): number[]
 ```
 
-Reads the number array from this **MessageParcel** object.
+Reads the double array from this **MessageParcel** object.
 
 **Since:** 7
 
@@ -1341,23 +939,6 @@ Reads the number array from this **MessageParcel** object.
 | number[] | Double array read. |
 
 **Examples**
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let data = rpc.MessageSequence.create();
-  data.writeDoubleArray([11.1, 12.2, 13.3]);
-  let array = data.readDoubleArray();
-  hilog.info(0x0000, 'testTag', 'readDoubleArray is ' + array);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
-  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
-}
-```
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -1393,6 +974,8 @@ Reads the exception information from this **MessageParcel** object.
 **Examples**
 
 > NOTE
+> 
+> In the sample code provided in this topic, this.getUIContext().getHostContext() is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
 ```TypeScript
 // If the FA model is used, import featureAbility from @kit.AbilityKit.
@@ -1427,45 +1010,6 @@ let want: Want = {
 let context: common.UIAbilityContext = this.getUIContext().getHostContext(); // UIAbilityContext
 // Save the connection ID, which will be used for the subsequent service disconnection.
 let connectionId = context.connectServiceExtensionAbility(want, connect);
-```
-
-The proxy object in the onConnect callback can be assigned a value only after the ability is connected asynchronously. Then, sendMessageRequest() of the proxy object is called to send a message.
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-  
-try {
-  let option = new rpc.MessageOption();
-  let data = rpc.MessageSequence.create();
-  let reply = rpc.MessageSequence.create();
-  data.writeNoException();
-  data.writeInt(6);
-  if (proxy != undefined) {
-    proxy.sendMessageRequest(1, data, reply, option)
-      .then((result: rpc.RequestResult) => {
-        if (result.errCode === 0) {
-          hilog.info(0x0000, 'testTag', 'sendMessageRequest got result');
-          result.reply.readException();
-          let num = result.reply.readInt();
-          hilog.info(0x0000, 'testTag', 'reply num: ' + num);
-        } else {
-          hilog.error(0x0000, 'testTag', 'sendMessageRequest failed, errCode: ' + result.errCode);
-        }
-      }).catch((e: Error) => {
-        hilog.error(0x0000, 'testTag', 'sendMessageRequest got exception: ' + JSON.stringify(e));
-      }).finally(() => {
-        hilog.info(0x0000, 'testTag', 'sendMessageRequest ends, reclaim parcel');
-        data.reclaim();
-        reply.reclaim();
-      });
-  }
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
-  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
-}
 ```
 
 The proxy object in the onConnect callback can be assigned a value only after the ability is connected asynchronously. Then, sendRequest() of the proxy object is called to send a message.
@@ -1533,26 +1077,6 @@ Reads the file descriptor from this **MessageParcel** object.
 import { rpc } from '@kit.IPCKit';
 import { fileIo } from '@kit.CoreFileKit';
 import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let sequence = rpc.MessageSequence.create();
-  let filePath = "path/to/file";
-  let file = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE | fileIo.OpenMode.CREATE);
-  sequence.writeFileDescriptor(file.fd);
-  let readFD = sequence.readFileDescriptor();
-  hilog.info(0x0000, 'testTag', 'readFileDescriptor is ' + readFD);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
-  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
-}
-```
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { fileIo } from '@kit.CoreFileKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
 
 try {
   let parcel = new rpc.MessageParcel();
@@ -1572,7 +1096,7 @@ try {
 readFloat(): number
 ```
 
-Reads the number value from this **MessageParcel** object.
+Reads the double value from this **MessageParcel** object.
 
 **Since:** 7
 
@@ -1589,23 +1113,6 @@ Reads the number value from this **MessageParcel** object.
 | number | Double value read. |
 
 **Examples**
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let data = rpc.MessageSequence.create();
-  data.writeFloat(1.2);
-  let ret = data.readFloat();
-  hilog.info(0x0000, 'testTag', 'readFloat is ' + ret);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
-  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
-}
-```
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -1628,7 +1135,7 @@ try {
 readFloatArray(dataIn: number[]): void
 ```
 
-Reads the number array from this **MessageParcel** object and writes it to the created empty array.
+Reads the double array from this **MessageParcel** object and writes it to the created empty array.
 
 **Since:** 7
 
@@ -1642,27 +1149,9 @@ Reads the number array from this **MessageParcel** object and writes it to the c
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dataIn | number[] | Yes | Double array to read. The system processes float data as that of the number type. Therefore, the total number of bytes occupied by a float array must be calculated as the number type. |
+| dataIn | number[] | Yes | Double array to read. The system processes float data as that of the double type. Therefore, the total number of bytes occupied by a float array must be calculated as the double type. |
 
 **Examples**
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let data = rpc.MessageSequence.create();
-  data.writeFloatArray([1.2, 1.3, 1.4]);
-  let array: Array<number> = new Array(3);
-  data.readFloatArray(array);
-  hilog.info(0x0000, 'testTag', 'readFloatArray is ' + array);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
-  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
-}
-```
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -1686,7 +1175,7 @@ try {
 readFloatArray(): number[]
 ```
 
-Reads the number array from this **MessageParcel** object.
+Reads the double array from this **MessageParcel** object.
 
 **Since:** 7
 
@@ -1703,23 +1192,6 @@ Reads the number array from this **MessageParcel** object.
 | number[] | Double array read. |
 
 **Examples**
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let data = rpc.MessageSequence.create();
-  data.writeFloatArray([1.2, 1.3, 1.4]);
-  let array = data.readFloatArray();
-  hilog.info(0x0000, 'testTag', 'readFloatArray is ' + array);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
-  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
-}
-```
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -1761,24 +1233,6 @@ Reads the integer from this **MessageParcel** object.
 **Examples**
 
 ```TypeScript
-// In atomic services, this example is used only to describe how to use the readInt() API. However, rpc.MessageSequence.create() is currently not supported for use in atomic services.
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let data = rpc.MessageSequence.create();
-  data.writeInt(10);
-  let ret = data.readInt();
-  hilog.info(0x0000, 'testTag', 'readInt is ' + ret);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
-  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
-}
-```
-
-```TypeScript
 import { rpc } from '@kit.IPCKit';
 import { hilog } from '@kit.PerformanceAnalysisKit';
 
@@ -1816,24 +1270,6 @@ Reads the integer array from this **MessageParcel** object and writes it to the 
 | dataIn | number[] | Yes | Integer array to read. |
 
 **Examples**
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let data = rpc.MessageSequence.create();
-  data.writeIntArray([100, 111, 112]);
-  let array: Array<number> = new Array(3);
-  data.readIntArray(array);
-  hilog.info(0x0000, 'testTag', 'readIntArray is  ' + array);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
-  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
-}
-```
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -1878,23 +1314,6 @@ Reads the integer array from this **MessageParcel** object.
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
 import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let data = rpc.MessageSequence.create();
-  data.writeIntArray([100, 111, 112]);
-  let array = data.readIntArray();
-  hilog.info(0x0000, 'testTag', 'readIntArray is ' + array);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
-  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
-}
-```
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
 
 try {
   let data = rpc.MessageParcel.create();
@@ -1934,23 +1353,6 @@ Reads the interface token from this **MessageParcel** object. The interface toke
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
 import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let data = rpc.MessageSequence.create();
-  data.writeInterfaceToken("aaa");
-  let interfaceToken = data.readInterfaceToken();
-  hilog.info(0x0000, 'testTag', 'RpcServer: interfaceToken is ' + interfaceToken);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
-  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
-}
-```
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
 
 try {
   let data = rpc.MessageParcel.create();
@@ -1968,7 +1370,7 @@ try {
 readLong(): number
 ```
 
-Reads the number number value from this **MessageParcel** object.
+Reads the long int value from this **MessageParcel** object.
 
 **Since:** 7
 
@@ -1985,23 +1387,6 @@ Reads the number number value from this **MessageParcel** object.
 | number | Long integer read. |
 
 **Examples**
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let data = rpc.MessageSequence.create();
-  data.writeLong(10000);
-  let ret = data.readLong();
-  hilog.info(0x0000, 'testTag', 'readLong is ' + ret);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
-  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
-}
-```
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -2024,7 +1409,7 @@ try {
 readLongArray(dataIn: number[]): void
 ```
 
-Reads the number array from this **MessageParcel** object and writes it to the created empty array.
+Reads the long array from this **MessageParcel** object and writes it to the created empty array.
 
 **Since:** 7
 
@@ -2041,24 +1426,6 @@ Reads the number array from this **MessageParcel** object and writes it to the c
 | dataIn | number[] | Yes | Long array to read. |
 
 **Examples**
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let data = rpc.MessageSequence.create();
-  data.writeLongArray([1111, 1112, 1113]);
-  let array: Array<number> = new Array(3);
-  data.readLongArray(array);
-  hilog.info(0x0000, 'testTag', 'readLongArray is ' + array);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
-  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
-}
-```
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -2082,7 +1449,7 @@ try {
 readLongArray(): number[]
 ```
 
-Reads the number array from this **MessageParcel** object.
+Reads the long array from this **MessageParcel** object.
 
 **Since:** 7
 
@@ -2099,23 +1466,6 @@ Reads the number array from this **MessageParcel** object.
 | number[] | Long array read. |
 
 **Examples**
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let data = rpc.MessageSequence.create();
-  data.writeLongArray([1111, 1112, 1113]);
-  let array = data.readLongArray();
-  hilog.info(0x0000, 'testTag', 'readLongArray is ' + array);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
-  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
-}
-```
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -2165,25 +1515,6 @@ Reads raw data from this **MessageParcel** object.
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
 import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let sequence = rpc.MessageSequence.create();
-  let arr = [1, 2, 3, 4, 5];
-  sequence.writeRawData(arr, arr.length);
-  let size = arr.length;
-  let result = sequence.readRawData(size);
-  hilog.info(0x0000, 'testTag', 'sequence read raw data result is ' + result);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
-  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
-}
-```
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
 
 try {
   let parcel = new rpc.MessageParcel();
@@ -2220,35 +1551,6 @@ Reads the remote object from this **MessageParcel** object. You can use this met
 | [IRemoteObject](arkts-ipc-rpc-iremoteobject-c.md) | Remote object obtained. |
 
 **Examples**
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class TestRemoteObject extends rpc.RemoteObject {
-  constructor(descriptor: string) {
-    super(descriptor);
-  }
-  onRemoteMessageRequest(code: number, data: rpc.MessageSequence, reply: rpc.MessageSequence,
-    option: rpc.MessageOption): boolean | Promise<boolean> {
-    // Process services based on the actual service logic.
-    return true;
-  }
-}
-
-try {
-  let data = rpc.MessageSequence.create();
-  let testRemoteObject = new TestRemoteObject("testObject");
-  data.writeRemoteObject(testRemoteObject);
-  let proxy = data.readRemoteObject();
-  hilog.info(0x0000, 'testTag', 'readRemoteObject is ' + proxy);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
-  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
-}
-```
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -2303,36 +1605,6 @@ Reads the **IRemoteObject** array from this **MessageParcel** object and writes 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
 import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class TestRemoteObject extends rpc.RemoteObject {
-  constructor(descriptor: string) {
-    super(descriptor);
-  }
-  onRemoteMessageRequest(code: number, data: rpc.MessageSequence, reply: rpc.MessageSequence,
-    option: rpc.MessageOption): boolean | Promise<boolean> {
-    // Process services based on the actual service logic.
-    return true;
-  }
-}
-
-try {
-  let a = [new TestRemoteObject("testObject1"), new TestRemoteObject("testObject2"), new TestRemoteObject("testObject3")];
-  let data = rpc.MessageSequence.create();
-  data.writeRemoteObjectArray(a);
-  let b: Array<rpc.IRemoteObject> = new Array(3);
-  data.readRemoteObjectArray(b);
-  hilog.info(0x0000, 'testTag', 'readRemoteObjectArray is ' + b);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
-  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
-}
-```
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
 
 class TestRemoteObject extends rpc.RemoteObject {
   constructor(descriptor: string) {
@@ -2381,34 +1653,6 @@ Reads the **IRemoteObject** array from this **MessageParcel** object.
 | [IRemoteObject](arkts-ipc-rpc-iremoteobject-c.md)[] | IRemoteObject** object array obtained. |
 
 **Examples**
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class TestRemoteObject extends rpc.RemoteObject {
-  constructor(descriptor: string) {
-    super(descriptor);
-  }
-  onRemoteMessageRequest(code: number, data: rpc.MessageSequence, reply: rpc.MessageSequence,
-    option: rpc.MessageOption): boolean | Promise<boolean> {
-    // Process services based on the actual service logic.
-    return true;
-  }
-}
-
-try {
-  let a = [new TestRemoteObject("testObject1"), new TestRemoteObject("testObject2"), new TestRemoteObject("testObject3")];
-  let data = rpc.MessageSequence.create();
-  let b = data.readRemoteObjectArray();
-  hilog.info(0x0000, 'testTag', 'readRemoteObjectArray is ' + b);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
-  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
-}
-```
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -2593,23 +1837,6 @@ Reads the short integer from this **MessageParcel** object.
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
 import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let data = rpc.MessageSequence.create();
-  data.writeShort(8);
-  let ret = data.readShort();
-  hilog.info(0x0000, 'testTag', 'readShort is ' + ret);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
-  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
-}
-```
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
 
 try {
   let data = rpc.MessageParcel.create();
@@ -2645,24 +1872,6 @@ Reads the short array from this **MessageParcel** object and writes it to the cr
 | dataIn | number[] | Yes | Short array to read. |
 
 **Examples**
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let data = rpc.MessageSequence.create();
-  data.writeShortArray([11, 12, 13]);
-  let array: Array<number> = new Array(3);
-  data.readShortArray(array);
-  hilog.info(0x0000, 'testTag', 'readShortArray is  ' + array);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
-  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
-}
-```
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -2707,23 +1916,6 @@ Reads the short array from this **MessageParcel** object.
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
 import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let data = rpc.MessageSequence.create();
-  data.writeShortArray([11, 12, 13]);
-  let array = data.readShortArray();
-  hilog.info(0x0000, 'testTag', 'readShortArray is ' + array);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
-  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
-}
-```
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
 
 try {
   let data = rpc.MessageParcel.create();
@@ -2759,24 +1951,6 @@ Reads the string from this **MessageParcel** object.
 | string | String read. |
 
 **Examples**
-
-```TypeScript
-// In atomic services, this example is used only to describe how to use the readString() API. However, rpc.MessageSequence.create() is currently not supported for use in atomic services.
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let data = rpc.MessageSequence.create();
-  data.writeString('abc');
-  let ret = data.readString();
-  hilog.info(0x0000, 'testTag', 'readString is ' + ret);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
-  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
-}
-```
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -2816,24 +1990,6 @@ Reads the string array from this **MessageParcel** object and writes it to the c
 | dataIn | string[] | Yes | String array to read. |
 
 **Examples**
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let data = rpc.MessageSequence.create();
-  data.writeStringArray(["abc", "def"]);
-  let array: Array<string> = new Array(2);
-  data.readStringArray(array);
-  hilog.info(0x0000, 'testTag', 'readStringArray is ' + array);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
-  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
-}
-```
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -2878,23 +2034,6 @@ Reads the string array from this **MessageParcel** object.
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
 import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let data = rpc.MessageSequence.create();
-  data.writeStringArray(["abc", "def"]);
-  let array = data.readStringArray();
-  hilog.info(0x0000, 'testTag', 'readStringArray is ' + array);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
-  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
-}
-```
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
 
 try {
   let data = rpc.MessageParcel.create();
@@ -2924,21 +2063,6 @@ Reclaims the **MessageParcel** object that is no longer used.
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Examples**
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let reply = rpc.MessageSequence.create();
-  reply.reclaim();
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
-  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
-}
-```
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -3441,7 +2565,7 @@ try {
 writeDouble(val: number): boolean
 ```
 
-Writes a number value to this **MessageParcel** object.
+Writes a double value to this **MessageParcel** object.
 
 **Since:** 7
 
@@ -3484,7 +2608,7 @@ try {
 writeDoubleArray(doubleArray: number[]): boolean
 ```
 
-Writes a number array to this **MessageParcel** object.
+Writes a double array to this **MessageParcel** object.
 
 **Since:** 7
 
@@ -3573,7 +2697,7 @@ try {
 writeFloat(val: number): boolean
 ```
 
-Writes a number value to this **MessageParcel** object.
+Writes a double value to this **MessageParcel** object.
 
 **Since:** 7
 
@@ -3616,7 +2740,7 @@ try {
 writeFloatArray(floatArray: number[]): boolean
 ```
 
-Writes a number array to this **MessageParcel** object.
+Writes a double array to this **MessageParcel** object.
 
 **Since:** 7
 
@@ -3630,7 +2754,7 @@ Writes a number array to this **MessageParcel** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| floatArray | number[] | Yes | Double array to write. The system processes float data as that of the number type. Therefore, the total number of bytes occupied by a float array must be calculated as the number type. |
+| floatArray | number[] | Yes | Double array to write. The system processes float data as that of the double type. Therefore, the total number of bytes occupied by a float array must be calculated as the double type. |
 
 **Return value:**
 
@@ -3659,7 +2783,7 @@ try {
 writeInt(val: number): boolean
 ```
 
-Writes an number value to this **MessageParcel** object.
+Writes an int value to this **MessageParcel** object.
 
 **Since:** 7
 
@@ -3788,7 +2912,7 @@ try {
 writeLong(val: number): boolean
 ```
 
-Writes a number number value to this **MessageParcel** object.
+Writes a long int value to this **MessageParcel** object.
 
 **Since:** 7
 
@@ -3802,7 +2926,7 @@ Writes a number number value to this **MessageParcel** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| val | number | Yes | Long number value to write. |
+| val | number | Yes | Long int value to write. |
 
 **Return value:**
 
@@ -3831,7 +2955,7 @@ try {
 writeLongArray(longArray: number[]): boolean
 ```
 
-Writes a number array to this **MessageParcel** object.
+Writes a long array to this **MessageParcel** object.
 
 **Since:** 7
 
@@ -3885,35 +3009,6 @@ Writes information to this **MessageParcel** object indicating that no exception
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Examples**
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class TestRemoteObject extends rpc.RemoteObject {
-  constructor(descriptor: string) {
-    super(descriptor);
-  }
-  onRemoteMessageRequest(code: number, data: rpc.MessageSequence, reply: rpc.MessageSequence,
-    option: rpc.MessageOption): boolean | Promise<boolean> {
-    if (code === 1) {
-      hilog.info(0x0000, 'testTag', 'RpcServer: onRemoteMessageRequest called');
-      try {
-        reply.writeNoException();
-      } catch (error) {
-        let e: BusinessError = error as BusinessError;
-        hilog.error(0x0000, 'testTag', 'rpc write no exception fail, errorCode ' + e.code);
-        hilog.error(0x0000, 'testTag', 'rpc write no exception fail, errorMessage ' + e.message);
-      }
-      return true;
-    } else {
-      hilog.error(0x0000, 'testTag', 'RpcServer: unknown code: ' + code);
-      return false;
-    }
-  }
-}
-```
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -4230,7 +3325,7 @@ try {
 writeShort(val: number): boolean
 ```
 
-Writes a short number value to this **MessageParcel** object.
+Writes a short int value to this **MessageParcel** object.
 
 **Since:** 7
 

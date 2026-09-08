@@ -38,7 +38,7 @@ connect(deviceId: BluetoothAddress): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| deviceId | BluetoothAddress | 是 | 需要连接的对端蓝牙设备地址信息，HID设备中不涉及rawAddressType，无需给定该参数。 |
+| deviceId | [BluetoothAddress](arkts-connectivity-hid-bluetoothaddress-t.md) | 是 | 需要连接的对端蓝牙设备地址信息，HID设备中不涉及rawAddressType，无需给定该参数。 |
 
 **错误码：**
 
@@ -653,7 +653,7 @@ replyReport(type: ReportType, id: number, reportData: Uint8Array): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | ReportType | 是 | 回复的报告类型，应与[onGetReport](#ongetreport)回调中收到的type保持一致。 |
+| type | [ReportType](arkts-connectivity-hid-reporttype-e.md) | 是 | 回复的报告类型，应与[onGetReport](#ongetreport)回调中收到的type保持一致。 |
 | id | number | 是 | 对应HID设备注册时通过[HidDeviceSdp](arkts-connectivity-hid-hiddevicesdp-i.md)提供的描述符中定义的报告ID，用于标识报告类型，对于不带ID的简单设备，此参数应设置为0。对于定义了多个报告ID的设备，此处应传入对应的ID值，该ID值必须与描述符中定义的值保持一致。 |
 | reportData | Uint8Array | 是 | 报告数据。其内容长度和解析方式必须严格匹配描述符中为该报告ID定义的格式。 |
 

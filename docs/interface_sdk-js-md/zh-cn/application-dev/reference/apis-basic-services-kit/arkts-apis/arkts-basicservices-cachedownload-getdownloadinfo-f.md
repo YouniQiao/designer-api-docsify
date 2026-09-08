@@ -35,7 +35,7 @@ function getDownloadInfo(url: string): DownloadInfo | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| DownloadInfo \| undefined | 返回对应url的下载信息，url未记录时返回undefined。 |
+| [DownloadInfo](arkts-basicservices-cachedownload-downloadinfo-i.md) \| undefined | 返回对应url的下载信息，url未记录时返回undefined。 |
 
 **错误码：**
 

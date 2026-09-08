@@ -323,7 +323,7 @@ Installs an application. This API uses an asynchronous callback to return the re
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | hapFilePaths | Array&lt;string&gt; | Yes | Paths where the HAP files of the bundle are stored, which are the data directories. If only one directory is passed, the HAP files in the directory must belong to the same bundle and have the same signature. |
-| installParam | InstallParam | Yes | Parameters required for the installation. |
+| installParam | [InstallParam](arkts-ability-installer-installparam-i-sys.md) | Yes | Parameters required for the installation. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md) used to return the result. If the operation is successful, **err** is **null**; otherwise, **err** is an error object. |
 
 **Error codes:**
@@ -351,7 +351,7 @@ Installs an application. This API uses an asynchronous callback to return the re
 | [17700047](../errorcode-bundle.md#17700047-application-version-to-be-updated-is-not-later-than-the-current-version) | Failed to install the HAP because the VersionCode to be updated is not greater than the current VersionCode. |
 | [17700048](../errorcode-bundle.md#17700048-code-signature-verification-failure) | Failed to install the HAP because the code signature verification is failed.<br>**Applicable version:** 10 and later |
 | [17700050](../errorcode-bundle.md#17700050-installation-of-enterprise-mdm-applications-and-standard-enterprise-applications-not-allowed) | Failed to install the HAP because enterprise normal/MDM bundle cannot be installed on non-enterprise device.<br>**Applicable version:** 10 and later |
-| [17700052](../errorcode-bundle.md#17700052-installation-of-debugging-applications-allowed-only-in-developer-mode) | Failed to install the HAP because debug bundle cannot be installed under non -developer mode.<br>**Applicable version:** 11 and later |
+| [17700052](../errorcode-bundle.md#17700052-installing-a-debug-self-distributed-plugin-or-debug-application-is-not-allowed-in-non-developer-mode) | Failed to install the HAP because debug bundle cannot be installed under non -developer mode.<br>**Applicable version:** 11 and later |
 | [17700054](../errorcode-bundle.md#17700054-bundle-installation-failure-due-to-permission-verification-failure) | Failed to install the HAP because the HAP requests wrong permissions.<br>**Applicable version:** 11 and later |
 | [17700058](../errorcode-bundle.md#17700058-specified-application-cannot-be-installed-on-this-device-or-by-this-user) | Failed to install the HAP because the device has been controlled.<br>**Applicable version:** 12 and later |
 | [17700066](../errorcode-bundle.md#17700066-failed-to-install-the-native-software-package) | Failed to install the HAP because installing the native package failed.<br>**Applicable version:** 12 and later |
@@ -447,7 +447,7 @@ Installs an application. This API uses an asynchronous callback to return the re
 | [17700047](../errorcode-bundle.md#17700047-application-version-to-be-updated-is-not-later-than-the-current-version) | Failed to install the HAP because the VersionCode to be updated is not greater than the current VersionCode. |
 | [17700048](../errorcode-bundle.md#17700048-code-signature-verification-failure) | Failed to install the HAP because the code signature verification is failed.<br>**Applicable version:** 10 and later |
 | [17700050](../errorcode-bundle.md#17700050-installation-of-enterprise-mdm-applications-and-standard-enterprise-applications-not-allowed) | Failed to install the HAP because enterprise normal/MDM bundle cannot be installed on non-enterprise device.<br>**Applicable version:** 10 and later |
-| [17700052](../errorcode-bundle.md#17700052-installation-of-debugging-applications-allowed-only-in-developer-mode) | Failed to install the HAP because debug bundle cannot be installed under non -developer mode.<br>**Applicable version:** 11 and later |
+| [17700052](../errorcode-bundle.md#17700052-installing-a-debug-self-distributed-plugin-or-debug-application-is-not-allowed-in-non-developer-mode) | Failed to install the HAP because debug bundle cannot be installed under non -developer mode.<br>**Applicable version:** 11 and later |
 | [17700054](../errorcode-bundle.md#17700054-bundle-installation-failure-due-to-permission-verification-failure) | Failed to install the HAP because the HAP requests wrong permissions.<br>**Applicable version:** 11 and later |
 | [17700058](../errorcode-bundle.md#17700058-specified-application-cannot-be-installed-on-this-device-or-by-this-user) | Failed to install the HAP because the device has been controlled.<br>**Applicable version:** 12 and later |
 | [17700066](../errorcode-bundle.md#17700066-failed-to-install-the-native-software-package) | Failed to install the HAP because installing the native package failed.<br>**Applicable version:** 12 and later |
@@ -512,7 +512,7 @@ Installs an application. This API uses a promise to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | hapFilePaths | Array&lt;string&gt; | Yes | Paths where the HAP files of the bundle are stored, which are the data directories. If only one directory is passed, the HAP files in the directory must belong to the same bundle and have the same signature. |
-| installParam | InstallParam | No | Parameters required for the installation. For details about their default values, see [InstallParam](arkts-ability-installer-installparam-i-sys.md).<br>**Since:** 12 |
+| installParam | [InstallParam](arkts-ability-installer-installparam-i-sys.md) | No | Parameters required for the installation. For details about their default values, see [InstallParam](arkts-ability-installer-installparam-i-sys.md).<br>**Since:** 12 |
 
 **Return value:**
 
@@ -545,7 +545,7 @@ Installs an application. This API uses a promise to return the result.
 | [17700047](../errorcode-bundle.md#17700047-application-version-to-be-updated-is-not-later-than-the-current-version) | Failed to install the HAP because the VersionCode to be updated is not greater than the current VersionCode. |
 | [17700048](../errorcode-bundle.md#17700048-code-signature-verification-failure) | Failed to install the HAP because the code signature verification is failed.<br>**Applicable version:** 10 and later |
 | [17700050](../errorcode-bundle.md#17700050-installation-of-enterprise-mdm-applications-and-standard-enterprise-applications-not-allowed) | Failed to install the HAP because enterprise normal/MDM bundle cannot be installed on non-enterprise device.<br>**Applicable version:** 10 and later |
-| [17700052](../errorcode-bundle.md#17700052-installation-of-debugging-applications-allowed-only-in-developer-mode) | Failed to install the HAP because debug bundle cannot be installed under non -developer mode.<br>**Applicable version:** 11 and later |
+| [17700052](../errorcode-bundle.md#17700052-installing-a-debug-self-distributed-plugin-or-debug-application-is-not-allowed-in-non-developer-mode) | Failed to install the HAP because debug bundle cannot be installed under non -developer mode.<br>**Applicable version:** 11 and later |
 | [17700054](../errorcode-bundle.md#17700054-bundle-installation-failure-due-to-permission-verification-failure) | Failed to install the HAP because the HAP requests wrong permissions.<br>**Applicable version:** 11 and later |
 | [17700058](../errorcode-bundle.md#17700058-specified-application-cannot-be-installed-on-this-device-or-by-this-user) | Failed to install the HAP because the device has been controlled.<br>**Applicable version:** 12 and later |
 | [17700066](../errorcode-bundle.md#17700066-failed-to-install-the-native-software-package) | Failed to install the HAP because installing the native package failed.<br>**Applicable version:** 12 and later |
@@ -628,7 +628,7 @@ Installs a plugin for an application. This API uses a promise to return the resu
 | [17700016](../errorcode-bundle.md#17700016-bundle-installation-failure-due-to-insufficient-system-disk-space) | Failed to install the plugin because of insufficient system disk space. |
 | [17700017](../errorcode-bundle.md#17700017-bundle-installation-failure-because-the-version-to-install-is-too-earlier) | Failed to install the plugin since the version of the plugin to install is too early. |
 | [17700048](../errorcode-bundle.md#17700048-code-signature-verification-failure) | Failed to install the plugin because the code signature verification is failed. |
-| [17700052](../errorcode-bundle.md#17700052-installation-of-debugging-applications-allowed-only-in-developer-mode) | Failed to install the plugin because debug bundle cannot be installed under non-developer mode. |
+| [17700052](../errorcode-bundle.md#17700052-installing-a-debug-self-distributed-plugin-or-debug-application-is-not-allowed-in-non-developer-mode) | Failed to install the plugin because debug bundle cannot be installed under non-developer mode. |
 | [17700073](../errorcode-bundle.md#17700073-installation-failure-caused-by-an-application-with-the-same-bundle-name-but-different-signature-information) | Failed to install the plugin because a plugin with the same bundle name but different signature information exists on the device. |
 | [17700087](../errorcode-bundle.md#17700087-unsupported-plugin-installation) | Failed to install the plugin because the current device does not support plugin. |
 | [17700088](../errorcode-bundle.md#17700088-plugin-installation-failure-due-to-no-permission) | Failed to install the plugin because the host application lacks ohos.permission.kernel.SUPPORT_PLUGIN. |
@@ -759,7 +759,7 @@ Rolls back an application to the initial installation state. This API uses an as
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Name of the target bundle. |
-| installParam | InstallParam | Yes | Parameters required for the installation. |
+| installParam | [InstallParam](arkts-ability-installer-installparam-i-sys.md) | Yes | Parameters required for the installation. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md) used to return the result. If the operation is successful, **err** is **null**; otherwise, **err** is an error object. |
 
 **Error codes:**
@@ -886,7 +886,7 @@ Rolls back an application to the initial installation state. This API uses a pro
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Name of the target bundle. |
-| installParam | InstallParam | No | Parameters required for the installation. For details about their default values, see [InstallParam](arkts-ability-installer-installparam-i-sys.md). |
+| installParam | [InstallParam](arkts-ability-installer-installparam-i-sys.md) | No | Parameters required for the installation. For details about their default values, see [InstallParam](arkts-ability-installer-installparam-i-sys.md). |
 
 **Return value:**
 
@@ -1020,7 +1020,7 @@ Uninstalls an application. This API uses an asynchronous callback to return the 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Name of the target bundle. |
-| installParam | InstallParam | Yes | Parameters required for the installation. |
+| installParam | [InstallParam](arkts-ability-installer-installparam-i-sys.md) | Yes | Parameters required for the installation. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md) used to return the result. If the operation is successful, **err** is **null**; otherwise, **err** is an error object. |
 
 **Error codes:**
@@ -1154,7 +1154,7 @@ Uninstalls an application. This API uses a promise to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Name of the target bundle. |
-| installParam | InstallParam | No | Parameters required for the installation. For details about their default values, see [InstallParam](arkts-ability-installer-installparam-i-sys.md).<br>**Since:** 15 |
+| installParam | [InstallParam](arkts-ability-installer-installparam-i-sys.md) | No | Parameters required for the installation. For details about their default values, see [InstallParam](arkts-ability-installer-installparam-i-sys.md).<br>**Since:** 15 |
 
 **Return value:**
 
@@ -1489,7 +1489,7 @@ Uninstalls and updates a preinstalled application and restores it to the initial
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Name of the target bundle. |
-| installParam | InstallParam | No | Parameters required for the uninstall and update. For details about their default values, see [InstallParam](arkts-ability-installer-installparam-i-sys.md). The **userId** parameter cannot be specified. Calling this API will uninstall and update the application for all users. |
+| installParam | [InstallParam](arkts-ability-installer-installparam-i-sys.md) | No | Parameters required for the uninstall and update. For details about their default values, see [InstallParam](arkts-ability-installer-installparam-i-sys.md). The **userId** parameter cannot be specified. Calling this API will uninstall and update the application for all users. |
 
 **Return value:**
 
@@ -1561,7 +1561,7 @@ Updates the current bundle. This API can be called only by enterprise MDM applic
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | hapFilePaths | Array&lt;string&gt; | Yes | Paths where the HAP files of the bundle are stored, which are the data directories. If only one directory is passed, the HAP files in the directory must belong to the same bundle and have the same signature. |
-| installParam | InstallParam | Yes | Parameters required for the installation. |
+| installParam | [InstallParam](arkts-ability-installer-installparam-i-sys.md) | Yes | Parameters required for the installation. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md) used to return the result. If the operation is successful, **err** is **null**; otherwise, **err** is an error object. |
 
 **Error codes:**
@@ -1716,7 +1716,7 @@ Updates the current bundle. This API can be called only by enterprise MDM applic
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | hapFilePaths | Array&lt;string&gt; | Yes | Paths where the HAP files of the bundle are stored, which are the data directories. If only one directory is passed, the HAP files in the directory must belong to the same bundle and have the same signature. |
-| installParam | InstallParam | No | Parameters required for the installation. For details about their default values, see [InstallParam](arkts-ability-installer-installparam-i-sys.md). |
+| installParam | [InstallParam](arkts-ability-installer-installparam-i-sys.md) | No | Parameters required for the installation. For details about their default values, see [InstallParam](arkts-ability-installer-installparam-i-sys.md). |
 
 **Return value:**
 

@@ -60,7 +60,7 @@ reqType: USBControlRequestType
 
 Control request type.
 
-**Type:** USBControlRequestType
+**Type:** [USBControlRequestType](arkts-basicservices-usbmanager-usbcontrolrequesttype-e.md)
 
 **Since:** 9
 
@@ -96,7 +96,7 @@ target: USBRequestTargetType
 
 Request target type.
 
-**Type:** USBRequestTargetType
+**Type:** [USBRequestTargetType](arkts-basicservices-usbmanager-usbrequesttargettype-e.md)
 
 **Since:** 9
 

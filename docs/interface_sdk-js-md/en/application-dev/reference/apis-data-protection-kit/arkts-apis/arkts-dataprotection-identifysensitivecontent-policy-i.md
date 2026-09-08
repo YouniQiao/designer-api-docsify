@@ -32,7 +32,7 @@ Keyword set, which is used to match sensitive keywords in a file. The system sea
 regex: string
 ```
 
-Regular expression used to match sensitive content. The system performs pattern matching on the file content based on the regular expression. The matched content is returned. The value contains 0 to 512 characters. When entering a string, check whether some special characters (such as backslash (), number quotation marks ("), and newline characters) are automatically escaped to ensure the input effect of the string.
+Regular expression used to match sensitive content. The system performs pattern matching on the file content based on the regular expression. The matched content is returned. The value contains 0 to 512 characters. When entering a string, check whether some special characters (such as backslash (), double quotation marks ("), and newline characters) are automatically escaped to ensure the input effect of the string.
 
 **Type:** string
 

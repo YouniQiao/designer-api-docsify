@@ -25,7 +25,7 @@ Sets a privacy mask image for the screen. This API uses a promise to return the 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | screenId | number | Yes | Screen ID. The value must be a positive integer. |
-| image | image.PixelMap | No | Privacy mask image. If no value is passed, the default privacy mask image is used. |
+| image | [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | No | Privacy mask image. If no value is passed, the default privacy mask image is used. |
 
 **Return value:**
 

@@ -20,7 +20,7 @@ clientDevices: WifiP2pDevice[]
 
 Client list
 
-**Type:** WifiP2pDevice[]
+**Type:** [WifiP2pDevice](arkts-connectivity-wifimanager-wifip2pdevice-i.md)[]
 
 **Since:** 9
 
@@ -118,7 +118,7 @@ ownerInfo: WifiP2pDevice
 
 Group owner information
 
-**Type:** WifiP2pDevice
+**Type:** [WifiP2pDevice](arkts-connectivity-wifimanager-wifip2pdevice-i.md)
 
 **Since:** 9
 

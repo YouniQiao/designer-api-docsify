@@ -1,6 +1,10 @@
 # VideoRecorder（系统接口）
 
-该接口自API version 9起停止维护，建议使用AVRecorder。视频录制管理类，用于视频录制。在调用VideoRecorder的方法前，必须先通过createVideoRecorder()创建一个VideoRecorder实例。
+
+> **说明：**
+> AVRecorder&lt;sup&gt;9+&lt;/sup&gt;发布后，VideoRecorder停止维护，建议使用[AVRecorder](arkts-media-media-avrecorder-i.md)替代。
+
+视频录制管理类，用于录制视频媒体。在调用VideoRecorder的方法前，需要先通过[createVideoRecorder()](arkts-media-media-createvideorecorder-f-sys.md)构建一个[VideoRecorder](arkts-media-media-videorecorder-i-sys.md)实例。
 
 **起始版本：** 9
 
@@ -20,7 +24,7 @@ import { media } from '@kit.MediaKit';
 getInputSurface(callback: AsyncCallback<string>): void
 ```
 
-获取录制surface。必须在prepare完成后和start之前调用。
+获得录制需要的surface。使用callback异步回调。开发者从此surface中获取surfaceBuffer，填入相应的数据。应当注意，填入的视频数据需要携带时间戳（单位ns），buffersize。时间戳的起始时间请以系统启动时间为基准。只能在[prepare()](#prepare)接口调用后调用。
 
 **起始版本：** 9
 
@@ -32,7 +36,7 @@ getInputSurface(callback: AsyncCallback<string>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数，返回输入surface id字符串。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数。获得录制需要的surface成功，err为undefined，data为获取到的surfaceBuffer，否则为错误对象。 |
 
 **错误码：**
 
@@ -60,28 +64,13 @@ videoRecorder.getInputSurface((err: BusinessError, surfaceId: string) => {
 });
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let inputSurfaceId: string; // 该inputSurfaceId用于传递给相机接口创建videoOutput。
-
-avRecorder.getInputSurface((err: BusinessError, surfaceId: string) => {
-  if (err) {
-    console.error(`Failed to do getInputSurface and error is: Code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info('Succeeded in doing getInputSurface');
-    inputSurfaceId = surfaceId;
-  }
-});
-```
-
 ## getInputSurface
 
 ```TypeScript
 getInputSurface(): Promise<string>
 ```
 
-获取录制surface。必须在prepare完成后和start之前调用。
+获得录制需要的surface。使用Promise异步回调。开发者从此surface中获取surfaceBuffer，填入相应的数据。应当注意，填入的视频数据需要携带时间戳（单位ns），buffersize。时间戳的起始时间请以系统启动时间为基准。只能在[prepare()](#prepare-1)接口调用后调用。
 
 **起始版本：** 9
 
@@ -93,7 +82,7 @@ getInputSurface(): Promise<string>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;string&gt; | Promise对象，返回输入surface id字符串。 |
+| Promise&lt;string&gt; | Promise对象，返回surface。 |
 
 **错误码：**
 
@@ -119,27 +108,13 @@ videoRecorder.getInputSurface().then((surfaceId: string) => {
 });
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let inputSurfaceId: string; // 该inputSurfaceId用于传递给相机接口创建videoOutput。
-
-avRecorder.getInputSurface().then((surfaceId: string) => {
-  console.info('Succeeded in getting InputSurface');
-  inputSurfaceId = surfaceId;
-}).catch((err: Error) => {
-  let error: BusinessError = err as BusinessError;
-  console.error(`Failed to get InputSurface and error is: Code: ${error.code}, message: ${error.message}`);
-});
-```
-
 ## on('error')
 
 ```TypeScript
 on(type: 'error', callback: ErrorCallback): void
 ```
 
-监听视频录制错误事件。
+开始订阅视频录制错误事件，当上报error错误事件后，用户需处理error事件，退出录制操作。使用callback异步回调。
 
 **起始版本：** 9
 
@@ -151,7 +126,7 @@ on(type: 'error', callback: ErrorCallback): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'error' | 是 | 视频录制错误事件的类型。 |
+| type | 'error' | 是 | 录制错误事件回调类型'error'。   - & nbsp;'error'：视频录制过程中发生错误，触发该事件。 |
 | callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 | 回调函数，监听视频录制错误事件。 |
 
 **错误码：**
@@ -180,7 +155,9 @@ videoRecorder.on('error', (error: BusinessError) => { // 设置'error'事件回�
 pause(callback: AsyncCallback<void>): void
 ```
 
-暂停视频录制。
+暂停视频录制。使用callback异步回调。
+
+在[start()](#start)后调用。可以通过调用[resume()](#resume)接口来恢复录制。
 
 **起始版本：** 9
 
@@ -192,7 +169,7 @@ pause(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，暂停录制完成时返回。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。暂停视频录制成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -218,53 +195,15 @@ videoRecorder.pause((err: BusinessError) => {
 });
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function test(){
-  let avPlayer = await media.createAVPlayer();
-  // 此处仅为示意，实际开发中需要在stateChange事件成功触发至playing状态后才能调用。
-  avPlayer.pause((err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to pause. Code:${err.code},message:${err.message}`);
-    } else {
-      console.info('Succeeded in pausing');
-    }
-  });
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-avRecorder.pause((err: BusinessError) => {
-  if (err) {
-    console.error(`Failed to pause AVRecorder and error is: Code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info('Succeeded in pausing');
-  }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-videoPlayer.pause((err: BusinessError) => {
-  if (err) {
-    console.error('Failed to pause!');
-  } else {
-    console.info('Succeeded in pausing!');
-  }
-});
-```
-
 ## pause
 
 ```TypeScript
 pause(): Promise<void>
 ```
 
-暂停视频录制。
+暂停视频录制。使用callback异步回调。
+
+在[start()](#start)后调用。可以通过调用[resume()](#resume)接口来恢复录制。
 
 **起始版本：** 9
 
@@ -276,7 +215,7 @@ pause(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，暂停录制完成时返回。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -300,63 +239,13 @@ videoRecorder.pause().then(() => {
 });
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function test(){
-  let avPlayer = await media.createAVPlayer();
-  // 此处仅为示意，实际开发中需要在stateChange事件成功触发至playing状态后才能调用。
-  avPlayer.pause().then(() => {
-    console.info('Succeeded in pausing');
-  }, (err: BusinessError) => {
-    console.error(`Failed to pause. Code:${err.code},message:${err.message}`);
-  });
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-avRecorder.pause().then(() => {
-  console.info('Succeeded in pausing');
-}).catch((err: Error) => {
-  let error: BusinessError = err as BusinessError;
-  console.error(`Failed to pause AVRecorder and error is: Code: ${error.code}, message: ${error.message}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { media } from '@kit.MediaKit';
-
-async function test() {
-  // 创建转码实例。
-  let avTranscoder = await media.createAVTranscoder();
-  avTranscoder.pause().then(() => {
-    console.info('pause AVTranscoder success');
-  }).catch((err: BusinessError) => {
-    console.error('pause AVTranscoder failed and catch error is ' + err.message);
-  });
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-videoPlayer.pause().then(() => {
-  console.info('Succeeded in pausing');
-}).catch((error: BusinessError) => {
-  console.error(`video catchCallback, error:${error}`);
-});
-```
-
 ## prepare
 
 ```TypeScript
 prepare(config: VideoRecorderConfig, callback: AsyncCallback<void>): void
 ```
 
-视频录制准备。
+进行视频录制的参数设置。使用callback异步回调。
 
 **起始版本：** 9
 
@@ -370,8 +259,8 @@ prepare(config: VideoRecorderConfig, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| config | [VideoRecorderConfig](arkts-media-media-videorecorderconfig-i-sys.md) | 是 | 录制参数。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，准备录制完成时返回。 |
+| config | [VideoRecorderConfig](arkts-media-media-videorecorderconfig-i-sys.md) | 是 | 配置视频录制的相关参数。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。视频录制参数设置成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -427,7 +316,7 @@ videoRecorder.prepare(videoConfig, (err: BusinessError) => {
 prepare(config: VideoRecorderConfig): Promise<void>
 ```
 
-视频录制准备。
+进行视频录制的参数设置。使用Promise异步回调。
 
 **起始版本：** 9
 
@@ -441,13 +330,13 @@ prepare(config: VideoRecorderConfig): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| config | [VideoRecorderConfig](arkts-media-media-videorecorderconfig-i-sys.md) | 是 | 录制参数。 |
+| config | [VideoRecorderConfig](arkts-media-media-videorecorderconfig-i-sys.md) | 是 | 配置视频录制的相关参数。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，准备录制完成时返回。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -501,7 +390,7 @@ videoRecorder.prepare(videoConfig).then(() => {
 release(callback: AsyncCallback<void>): void
 ```
 
-释放视频录制资源。
+释放视频录制资源。使用callback异步回调。
 
 **起始版本：** 9
 
@@ -513,7 +402,7 @@ release(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，释放资源完成时返回。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。释放视频录制资源成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -537,94 +426,13 @@ videoRecorder.release((err: BusinessError) => {
 });
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { media } from '@kit.MediaKit';
-
-let avImageGenerator: media.AVImageGenerator | undefined = undefined;
-
-// 释放资源。
-media.createAVImageGenerator((err: BusinessError, generator: media.AVImageGenerator) => {
-  if (generator) {
-    avImageGenerator = generator;
-    console.info(`Succeeded in creating AVImageGenerator`);
-    avImageGenerator.release((error: BusinessError) => {
-      if (error) {
-        console.error(`Failed to release, code: ${error.code}, message: ${error.message}`);
-        return;
-      }
-      console.info(`Succeeded in releasing`);
-    });
-  } else {
-    console.error(`Failed to create AVImageGenerator, code: ${err.code}, message: ${err.message}`);
-  }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { media } from '@kit.MediaKit';
-
-async function test() {
-  // 创建AVMetadataExtractor对象。
-  let avMetadataExtractor: media.AVMetadataExtractor = await media.createAVMetadataExtractor();
-  avMetadataExtractor.release((error: BusinessError) => {
-    if (error) {
-      console.error(`Failed to release, code: ${error.code} message: ${error.message}`);
-      return;
-    }
-    console.info(`Succeeded in releasing.`);
-  });
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function test(){
-  let avPlayer = await media.createAVPlayer();
-  // 此处仅为示意，实际开发中需要在stateChange事件成功触发除released以外的状态才能调用。
-  avPlayer.release((err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to release. Code:${err.code},message:${err.message}`);
-    } else {
-      console.info('Succeeded in releasing');
-    }
-  });
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-avRecorder.release((err: BusinessError) => {
-  if (err) {
-    console.error(`Failed to release AVRecorder and error is: Code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info('Succeeded in releasing AVRecorder');
-  }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-videoPlayer.release((err: BusinessError) => {
-  if (err) {
-    console.error('Failed to release!');
-  } else {
-    console.info('Succeeded in releasing!');
-  }
-});
-```
-
 ## release
 
 ```TypeScript
 release(): Promise<void>
 ```
 
-释放视频录制资源。
+释放视频录制资源。使用Promise异步回调。
 
 **起始版本：** 9
 
@@ -636,13 +444,13 @@ release(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，释放资源完成时返回。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by callback. |
+| [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by promise. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App.<br>**适用版本：** 12+ |
 
 **示例**
@@ -658,123 +466,15 @@ videoRecorder.release().then(() => {
 });
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { media } from '@kit.MediaKit';
-
-let avImageGenerator: media.AVImageGenerator | undefined = undefined;
-
-// 释放资源。
-media.createAVImageGenerator((err: BusinessError, generator: media.AVImageGenerator) => {
-  if (generator) {
-    avImageGenerator = generator;
-    console.info(`Succeeded in creating AVImageGenerator`);
-    avImageGenerator.release().then(() => {
-      console.info(`Succeeded in releasing.`);
-    }).catch((error: BusinessError) => {
-      console.error(`Failed to release, code: ${error.code}, message: ${error.message}`);
-    });
-  } else {
-    console.error(`Failed to create AVImageGenerator, code: ${err.code}, message: ${err.message}`);
-  }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { media } from '@kit.MediaKit';
-
-async function test() {
-  // 创建AVMetadataExtractor对象。
-  let avMetadataExtractor: media.AVMetadataExtractor = await media.createAVMetadataExtractor();
-  if (avMetadataExtractor) {
-    avMetadataExtractor.release().then(() => {
-      console.info(`Succeeded in releasing.`);
-    }).catch((error: BusinessError) => {
-      console.error(`Failed to release, code: ${error.code} message: ${error.message}`);
-    });
-  }
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function test(){
-  let avPlayer = await media.createAVPlayer();
-  // 此处仅为示意，实际开发中需要在stateChange事件成功触发除released以外的状态才能调用。
-  avPlayer.release().then(() => {
-    console.info('Succeeded in releasing');
-  }, (err: BusinessError) => {
-    console.error(`Failed to release. Code:${err.code},message:${err.message}`);
-  });
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-avRecorder.release().then(() => {
-  console.info('Succeeded in releasing AVRecorder');
-}).catch((err: Error) => {
-  let error: BusinessError = err as BusinessError;
-  console.error(`Failed to release AVRecorder and error is: Code: ${error.code}, message: ${error.message}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { media } from '@kit.MediaKit';
-
-async function testRelease() {
-  // 创建录屏实例。
-  let avScreenCaptureRecorder = await media.createAVScreenCaptureRecorder();
-
-  // 其余流程。
-
-  // 调用release方法。
-  if (avScreenCaptureRecorder) {
-    avScreenCaptureRecorder.release().then(() => {
-      console.info('Succeeded in releasing avScreenCaptureRecorder');
-    }).catch((err: BusinessError) => {
-      console.error(`Failed to release avScreenCaptureRecorder. Code: ${err.code}, message: ${err.message}`);
-    });
-  }
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { media } from '@kit.MediaKit';
-
-async function test() {
-  // 创建转码实例。
-  let avTranscoder = await media.createAVTranscoder();
-  avTranscoder.release().then(() => {
-    console.info('release AVTranscoder success');
-  }).catch((err: BusinessError) => {
-    console.error('release AVTranscoder failed and catch error is ' + err.message);
-  });
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-videoPlayer.release().then(() => {
-  console.info('Succeeded in releasing');
-}).catch((error: BusinessError) => {
-  console.error(`video catchCallback, error:${error}`);
-});
-```
-
 ## reset
 
 ```TypeScript
 reset(callback: AsyncCallback<void>): void
 ```
 
-重置视频录制。在重置之前，必须先调用stop()停止录制。重置后，必须调用prepare()设置录制配置以进行下一次录制。
+重置视频录制。使用callback异步回调。
+
+需要重新调用[prepare()](#prepare)和[getInputSurface()](#getinputsurface)接口才能重新录制。
 
 **起始版本：** 9
 
@@ -786,7 +486,7 @@ reset(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，重置完成时返回。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。重置视频录制成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -811,53 +511,15 @@ videoRecorder.reset((err: BusinessError) => {
 });
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function test(){
-  let avPlayer = await media.createAVPlayer();
-  // 此处仅为示意，实际开发中需要在stateChange事件成功触发至initialized/prepared/playing/paused/completed/stopped/error状态后才能调用。
-  avPlayer.reset((err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to reset. Code:${err.code},message:${err.message}`);
-    } else {
-      console.info('Succeeded in resetting');
-    }
-  });
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-avRecorder.reset((err: BusinessError) => {
-  if (err) {
-    console.error(`Failed to reset AVRecorder and error is: Code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info('Succeeded in resetting AVRecorder');
-  }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-videoPlayer.reset((err: BusinessError) => {
-  if (err) {
-    console.error('Failed to reset!');
-  } else {
-    console.info('Succeeded in resetting!');
-  }
-});
-```
-
 ## reset
 
 ```TypeScript
 reset(): Promise<void>
 ```
 
-重置视频录制。在重置之前，必须先调用stop()停止录制。重置后，必须调用prepare()设置录制配置以进行下一次录制。
+重置视频录制。使用Promise异步回调。
+
+需要重新调用[prepare()](#prepare-1)和[getInputSurface()](#getinputsurface)接口才能重新录制。
 
 **起始版本：** 9
 
@@ -869,7 +531,7 @@ reset(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，重置完成时返回。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -892,48 +554,13 @@ videoRecorder.reset().then(() => {
 });
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function test(){
-  let avPlayer = await media.createAVPlayer();
-  // 此处仅为示意，实际开发中需要在stateChange事件成功触发至initialized/prepared/playing/paused/completed/stopped/error状态后才能调用。
-  avPlayer.reset().then(() => {
-    console.info('Succeeded in resetting');
-  }, (err: BusinessError) => {
-    console.error(`Failed to reset. Code:${err.code},message:${err.message}`);
-  });
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-avRecorder.reset().then(() => {
-  console.info('Succeeded in resetting AVRecorder');
-}).catch((err: Error) => {
-  let error: BusinessError = err as BusinessError;
-  console.error(`Failed to reset AVRecorder and error is: Code: ${error.code}, message: ${error.message}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-videoPlayer.reset().then(() => {
-  console.info('Succeeded in resetting');
-}).catch((error: BusinessError) => {
-  console.error(`video catchCallback, error:${error}`);
-});
-```
-
 ## resume
 
 ```TypeScript
 resume(callback: AsyncCallback<void>): void
 ```
 
-恢复视频录制。
+恢复视频录制。使用callback异步回调。
 
 **起始版本：** 9
 
@@ -945,7 +572,7 @@ resume(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，恢复录制完成时返回。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。恢复视频录制成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -971,25 +598,13 @@ videoRecorder.resume((err: BusinessError) => {
 });
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-avRecorder.resume((err: BusinessError) => {
-  if (err) {
-    console.error(`Failed to resume AVRecorder and error is: Code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info('Succeeded in resuming AVRecorder');
-  }
-});
-```
-
 ## resume
 
 ```TypeScript
 resume(): Promise<void>
 ```
 
-恢复视频录制。
+恢复视频录制。使用Promise异步回调。
 
 **起始版本：** 9
 
@@ -1001,7 +616,7 @@ resume(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，恢复录制完成时返回。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -1025,39 +640,15 @@ videoRecorder.resume().then(() => {
 });
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-avRecorder.resume().then(() => {
-  console.info('Succeeded in resuming AVRecorder');
-}).catch((err: Error) => {
-  let error: BusinessError = err as BusinessError;
-  console.error(`Failed to resume AVRecorder and error is: Code: ${error.code}, message: ${error.message}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { media } from '@kit.MediaKit';
-
-async function test() {
-  // 创建转码实例。
-  let avTranscoder = await media.createAVTranscoder();
-  avTranscoder.resume().then(() => {
-    console.info('resume AVTranscoder success');
-  }).catch((err: BusinessError) => {
-    console.error('resume AVTranscoder failed and catch error is ' + err.message);
-  });
-}
-```
-
 ## start
 
 ```TypeScript
 start(callback: AsyncCallback<void>): void
 ```
 
-开始视频录制。
+开始视频录制。使用callback异步回调。
+
+在[prepare()](#prepare)和[getInputSurface()](#getinputsurface)后调用，需要依赖数据源先给surface传递数据。
 
 **起始版本：** 9
 
@@ -1069,7 +660,7 @@ start(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，开始录制完成时返回。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。开始视频录制成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -1095,25 +686,15 @@ videoRecorder.start((err: BusinessError) => {
 });
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-avRecorder.start((err: BusinessError) => {
-  if (err) {
-    console.error(`Failed to start AVRecorder and error is: Code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info('Succeeded in starting AVRecorder');
-  }
-});
-```
-
 ## start
 
 ```TypeScript
 start(): Promise<void>
 ```
 
-开始视频录制。
+开始视频录制。使用Promise异步回调。
+
+在[prepare()](#prepare-1)和[getInputSurface()](#getinputsurface)后调用，需要依赖数据源先给surface传递数据。
 
 **起始版本：** 9
 
@@ -1125,7 +706,7 @@ start(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，开始录制完成时返回。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -1149,39 +730,15 @@ videoRecorder.start().then(() => {
 });
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-avRecorder.start().then(() => {
-  console.info('Succeeded in starting AVRecorder');
-}).catch((err: Error) => {
-  let error: BusinessError = err as BusinessError;
-  console.error(`Failed to start AVRecorder and error is: Code: ${error.code}, message: ${error.message}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { media } from '@kit.MediaKit';
-
-async function test() {
-  // 创建转码实例。
-  let avTranscoder = await media.createAVTranscoder();
-  avTranscoder.start().then(() => {
-    console.info('start AVTranscoder success');
-  }).catch((err: BusinessError) => {
-    console.error('start AVTranscoder failed and catch error is ' + err.message);
-  });
-}
-```
-
 ## stop
 
 ```TypeScript
 stop(callback: AsyncCallback<void>): void
 ```
 
-停止视频录制。
+停止视频录制。使用callback异步回调。
+
+需要重新调用[prepare()](#prepare)和[getInputSurface()](#getinputsurface)接口才能重新录制。
 
 **起始版本：** 9
 
@@ -1193,7 +750,7 @@ stop(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，停止录制完成时返回。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。停止视频录制成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -1219,53 +776,15 @@ videoRecorder.stop((err: BusinessError) => {
 });
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function test(){
-  let avPlayer = await media.createAVPlayer();
-  // 此处仅为示意，实际开发中需要在stateChange事件成功触发至prepared/playing/paused/completed状态后才能调用。
-  avPlayer.stop((err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to stop. Code:${err.code},message:${err.message}`);
-    } else {
-      console.info('Succeeded in stopping');
-    }
-  });
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-avRecorder.stop((err: BusinessError) => {
-  if (err) {
-    console.error(`Failed to stop AVRecorder and error is: Code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info('Succeeded in stopping AVRecorder');
-  }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-videoPlayer.stop((err: BusinessError) => {
-  if (err) {
-    console.error('Failed to stop!');
-  } else {
-    console.info('Succeeded in stopping!');
-  }
-});
-```
-
 ## stop
 
 ```TypeScript
 stop(): Promise<void>
 ```
 
-停止视频录制。
+停止视频录制。使用callback异步回调。
+
+需要重新调用[prepare()](#prepare-1)和[getInputSurface()](#getinputsurface)接口才能重新录制。
 
 **起始版本：** 9
 
@@ -1277,7 +796,7 @@ stop(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，停止录制完成时返回。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -1298,41 +817,6 @@ videoRecorder.stop().then(() => {
   console.info('stop videorecorder success');
 }).catch((err: BusinessError) => {
   console.error('stop videorecorder failed and catch error is ' + err.message);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function test(){
-  let avPlayer = await media.createAVPlayer();
-  // 此处仅为示意，实际开发中需要在stateChange事件成功触发至prepared/playing/paused/completed状态后才能调用。
-  avPlayer.stop().then(() => {
-    console.info('Succeeded in stopping');
-  }, (err: BusinessError) => {
-    console.error(`Failed to stop. Code:${err.code},message:${err.message}`);
-  });
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-avRecorder.stop().then(() => {
-  console.info('Succeeded in stopping AVRecorder');
-}).catch((err: Error) => {
-  let error: BusinessError = err as BusinessError;
-  console.error(`Failed to stop AVRecorder and error is: Code: ${error.code}, message: ${error.message}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-videoPlayer.stop().then(() => {
-  console.info('Succeeded in stopping');
-}).catch((error: BusinessError) => {
-  console.error(`video catchCallback, error:${error}`);
 });
 ```
 

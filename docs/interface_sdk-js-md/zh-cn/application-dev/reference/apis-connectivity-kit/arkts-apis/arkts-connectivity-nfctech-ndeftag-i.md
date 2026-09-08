@@ -101,7 +101,7 @@ getNdefTagType(): tag.NfcForumType
 
 | 类型 | 说明 |
 | --- | --- |
-| tag.NfcForumType | NDEF标签类型，包括NFC FORUM TYPE 1/2/3/4等。 |
+| [tag.NfcForumType](arkts-connectivity-tag-nfcforumtype-e.md) | NDEF标签类型，包括NFC FORUM TYPE 1/2/3/4等。 |
 
 **示例**
 
@@ -131,7 +131,7 @@ getNdefTagTypeString(type: tag.NfcForumType): string
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | tag.NfcForumType | 是 | NDEF标签类型，包括NFC FORUM TYPE 1/2/3/4等。 |
+| type | [tag.NfcForumType](arkts-connectivity-tag-nfcforumtype-e.md) | 是 | NDEF标签类型，包括NFC FORUM TYPE 1/2/3/4等。 |
 
 **返回值：**
 

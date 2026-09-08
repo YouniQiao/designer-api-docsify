@@ -38,7 +38,7 @@ dialogType: DialogType
 
 The type of bluetooth dialog.
 
-**Type:** DialogType
+**Type:** [DialogType](arkts-connectivity-access-dialogtype-e-sys.md)
 
 **Since:** 20
 

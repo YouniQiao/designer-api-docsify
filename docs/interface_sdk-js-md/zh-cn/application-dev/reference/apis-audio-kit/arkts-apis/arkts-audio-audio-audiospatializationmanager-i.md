@@ -30,14 +30,6 @@ isSpatializationEnabledForCurrentDevice(): boolean
 | --- | --- |
 | boolean | 当前设备空间音频渲染是否开启。true表示开启，false表示未开启。 |
 
-**示例**
-
-```TypeScript
-let isSpatializationEnabledForCurrentDevice: boolean = audioSpatializationManager.isSpatializationEnabledForCurrentDevice();
-
-console.info(`Succeeded in checking whether spatialization is enabled for the current device, isSpatializationEnabledForCurrentDevice: ${isSpatializationEnabledForCurrentDevice}.`);
-```
-
 ## off('spatializationEnabledChangeForCurrentDevice')
 
 ```TypeScript

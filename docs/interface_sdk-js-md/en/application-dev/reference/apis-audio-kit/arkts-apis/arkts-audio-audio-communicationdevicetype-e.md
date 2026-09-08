@@ -1,6 +1,6 @@
 # CommunicationDeviceType
 
-Enumerates the available device types for communication. @enum { number }
+Enumerates the available device types for communication. @enum { int }
 
 **Since:** 12
 

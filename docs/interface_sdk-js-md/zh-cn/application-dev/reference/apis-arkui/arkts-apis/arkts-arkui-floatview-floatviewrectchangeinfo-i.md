@@ -42,7 +42,7 @@ windowRect: window.Rect
 
 标准悬浮窗窗口矩形区域。
 
-**类型：** window.Rect
+**类型：** [window.Rect](arkts-arkui-window-rect-i.md)
 
 **起始版本：** 26.0.0
 

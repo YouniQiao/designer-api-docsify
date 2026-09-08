@@ -74,7 +74,7 @@ launchReason: LaunchReason
 
 枚举类型，表示Ability启动原因（如故障恢复拉起、意图调用拉起、原子化服务分享拉起等），详见[LaunchReason](arkts-ability-abilityconstant-launchreason-e.md)。
 
-**类型：** LaunchReason
+**类型：** [LaunchReason](arkts-ability-abilityconstant-launchreason-e.md)
 
 **起始版本：** 9
 

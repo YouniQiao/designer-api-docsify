@@ -31,23 +31,7 @@ constructor()
 **示例**
 
 ```TypeScript
-let fileSync = new cloudSync.FileSync()
-```
-
-```TypeScript
-let fileCache = new cloudSync.CloudFileCache();
-```
-
-```TypeScript
-let fileVersion = new cloudSync.FileVersion();
-```
-
-```TypeScript
 let gallerySync = new cloudSync.GallerySync()
-```
-
-```TypeScript
-let download = new cloudSync.Download()
 ```
 
 ## off
@@ -219,24 +203,6 @@ start(): Promise<void>
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
-let fileSync = new cloudSync.FileSync();
-
-let callback = (pg: cloudSync.SyncProgress) => {
-  console.info("file sync state: " + pg.state + "error type: " + pg.error);
-}
-
-fileSync.on('progress', callback);
-
-fileSync.start().then(() => {
-  console.info("start sync successfully");
-}).catch((err: BusinessError) => {
-  console.error("start sync failed with error message: " + err.message + ", error code: " + err.code);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
 let gallerySync = new cloudSync.GallerySync();
 
 gallerySync.on('progress', (pg: cloudSync.SyncProgress) => {
@@ -284,20 +250,6 @@ start(callback: AsyncCallback<void>): void
 | 22400003 | Low battery level. |
 
 **示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let fileSync = new cloudSync.FileSync();
-
-fileSync.start((err: BusinessError) => {
-  if (err) {
-    console.error("start sync failed with error message: " + err.message + ", error code: " + err.code);
-  } else {
-    console.info("start sync successfully");
-  }
-});
-```
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -352,18 +304,6 @@ stop(): Promise<void>
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
-let fileSync = new cloudSync.FileSync();
-
-fileSync.stop().then(() => {
-  console.info("stop sync successfully");
-}).catch((err: BusinessError) => {
-  console.error("stop sync failed with error message: " + err.message + ", error code: " + err.code);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
 let gallerySync = new cloudSync.GallerySync();
 
 gallerySync.stop().then(() => {
@@ -408,20 +348,6 @@ stop(callback: AsyncCallback<void>): void
 | [401](../../errorcode-universal.md#401-参数检查失败) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified;  2.Incorrect parameter types. |
 
 **示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let fileSync = new cloudSync.FileSync();
-
-fileSync.stop((err: BusinessError) => {
-  if (err) {
-    console.error("stop sync failed with error message: " + err.message + ", error code: " + err.code);
-  } else {
-    console.info("stop sync successfully");
-  }
-});
-```
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

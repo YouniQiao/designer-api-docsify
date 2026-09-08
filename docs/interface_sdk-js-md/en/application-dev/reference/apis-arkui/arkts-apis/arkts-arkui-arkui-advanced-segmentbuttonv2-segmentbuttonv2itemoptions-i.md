@@ -173,7 +173,7 @@ Default value: **undefined**
 
 Decorator type: @Trace
 
-**Type:** Resource
+**Type:** [Resource](arkts-arkui-resource-t.md)
 
 **Since:** 18
 

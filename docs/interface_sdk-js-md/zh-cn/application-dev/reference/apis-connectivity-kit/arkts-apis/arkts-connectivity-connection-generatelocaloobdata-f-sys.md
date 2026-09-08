@@ -28,7 +28,7 @@ function generateLocalOobData(transport: BluetoothTransport): Promise<OobData>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| transport | BluetoothTransport | 是 | 表示在配对对端设备时使用的传输方式。若使用传统蓝牙（BR/EDR），则传入TRANSPORT_BR_EDR。若使用低功耗蓝牙（BLE），则传入TRANSPORT_LE。不支持其他[BluetoothTransport](arkts-connectivity-connection-bluetoothtransport-e.md)类型。 |
+| transport | [BluetoothTransport](arkts-connectivity-connection-bluetoothtransport-e.md) | 是 | 表示在配对对端设备时使用的传输方式。若使用传统蓝牙（BR/EDR），则传入TRANSPORT_BR_EDR。若使用低功耗蓝牙（BLE），则传入TRANSPORT_LE。不支持其他[BluetoothTransport](arkts-connectivity-connection-bluetoothtransport-e.md)类型。 |
 
 **返回值：**
 

@@ -77,21 +77,6 @@ getTrackSelectionFilter(): TrackSelectionFilter | undefined
 | --- | --- |
 | [TrackSelectionFilter](arkts-media-media-trackselectionfilter-i.md) \| undefined | 如果存在TrackSelectionFilter对象，返回TrackSelectionFilter对象。 否则, 返回TrackSelectionFilter对象。 |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function test() {
-  let player = await media.createAVPlayer();
-  player.getTrackSelectionFilter().then((selectionFilter: media.TrackSelectionFilter) => {
-    console.info(`Succeeded in getting TrackSelectionFilter: ${selectionFilter}`);
-  }).catch((err: BusinessError) => {
-    console.error('Failed to getTrackSelectionFilter, error message is:' + err.message);
-  });
-}
-```
-
 ## setMediaResourceLoaderDelegate
 
 ```TypeScript
@@ -111,46 +96,6 @@ setMediaResourceLoaderDelegate(resourceLoader: MediaSourceLoader): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | resourceLoader | [MediaSourceLoader](arkts-media-media-mediasourceloader-i.md) | 是 | 应用实现的媒体数据获取接口，方便播放器获取数据。 |
-
-**示例**
-
-```TypeScript
-import { HashMap } from '@kit.ArkTS';
-import { media } from '@kit.MediaKit';
-
-let headers: Record<string, string> = {"User-Agent" : "User-Agent-Value"};
-let mediaSource : media.MediaSource = media.createMediaSourceWithUrl("http://xxx",  headers);
-let uuid: number = 1;
-let requests: HashMap<number, media.MediaSourceLoadingRequest> = new HashMap();
-
-let sourceOpenCallback: media.SourceOpenCallback = (request: media.MediaSourceLoadingRequest) => {
-  console.info(`Opening resource: ${request.url}`);
-  // 成功打开资源，返回唯一的句柄, 保证uuid和request对应。
-  uuid += 1;
-  requests.set(uuid, request);
-  return uuid;
-};
-
-let sourceReadCallback: media.SourceReadCallback = (uuid: number, requestedOffset: number, requestedLength: number) => {
-  console.info(`Reading resource with handle ${uuid}, offset: ${requestedOffset}, length: ${requestedLength}`);
-  // 判断uuid是否合法、存储read请求，不要在read请求阻塞去推送数据和头信息。
-};
-
-let sourceCloseCallback: media.SourceCloseCallback = (uuid: number) => {
-  console.info(`Closing resource with handle ${uuid}`);
-  // 清除当前uuid相关资源。
-  requests.remove(uuid);
-};
-
-// 应用按需实现。
-let resourceLoader: media.MediaSourceLoader = {
-  open: sourceOpenCallback,
-  read: sourceReadCallback,
-  close: sourceCloseCallback
-};
-
-mediaSource.setMediaResourceLoaderDelegate(resourceLoader);
-```
 
 ## setMimeType
 
@@ -191,33 +136,3 @@ setTrackSelectionFilter(filter: TrackSelectionFilter): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | filter | [TrackSelectionFilter](arkts-media-media-trackselectionfilter-i.md) | 是 | 指定预下载流媒体的音视频特征。 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function test() {
-  let player = await media.createAVPlayer();
-  let selectionFilter: media.TrackSelectionFilter = {
-    maxVideoBitrate: 80000,
-    minVideoBitrate: 0,
-    maxVideoFrameRate: 60,
-    minVideoFrameRate: 0,
-    maxVideoResolution: { width: 1080, height: 720 },
-    minVideoResolution: { width: 0, height: 0 },
-    preferredVideoMimeTypes: [media.CodecMimeType.VIDEO_AVC],
-    maxAudioBitrate: 8000,
-    minAudioBitrate: 0,
-    maxAudioChannels: 3,
-    preferredAudioMimeTypes: [media.CodecMimeType.AUDIO_AAC, media.CodecMimeType.AUDIO_MP3],
-    preferredAudioLanguages: [],
-    preferredSubtitleLanguages: []
-  };
-  player.setTrackSelectionFilter(selectionFilter).then(() => {
-    console.info('Succeeded in setting TrackSelectionFilter');
-  }).catch((err: BusinessError) => {
-    console.error('Failed to setTrackSelectionFilter, error message is:' + err.message);
-  });
-}
-```

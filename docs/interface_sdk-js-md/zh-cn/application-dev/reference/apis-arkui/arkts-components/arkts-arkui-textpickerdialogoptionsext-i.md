@@ -184,7 +184,7 @@ backgroundBlurStyle?: BlurStyle
 > 设置为BlurStyle.NONE即可关闭背景虚化。当设置了backgroundBlurStyle为非NONE值时，则不要设置backgroundColor，
 > 否则显示的颜色将不符合预期效果。
 
-**类型：** BlurStyle
+**类型：** [BlurStyle](arkts-arkui-blurstyle-e.md)
 
 **默认值：** BlurStyle.COMPONENT_ULTRA_THICK
 
@@ -540,7 +540,7 @@ offset?: Offset
 
 默认值：{ dx: 0 , dy: 0 }
 
-**类型：** Offset
+**类型：** [Offset](../arkts-apis/arkts-arkui-offset-t.md)
 
 **起始版本：** 20
 
@@ -558,7 +558,7 @@ onAccept?: Callback<TextPickerResult>
 
 点击弹窗中的“确定”按钮时触发该回调。
 
-**类型：** Callback&lt;[TextPickerResult](arkts-arkui-textpickerresult-i.md)&gt;
+**类型：** [Callback](arkts-arkui-callback-i.md)&lt;[TextPickerResult](arkts-arkui-textpickerresult-i.md)&gt;
 
 **起始版本：** 20
 
@@ -578,7 +578,7 @@ onChange?: Callback<TextPickerResult>
 
 回调会在滑动动画结束后触发，如果需要快速获取索引值变化，建议使用onEnterSelectedArea接口。
 
-**类型：** Callback&lt;[TextPickerResult](arkts-arkui-textpickerresult-i.md)&gt;
+**类型：** [Callback](arkts-arkui-callback-i.md)&lt;[TextPickerResult](arkts-arkui-textpickerresult-i.md)&gt;
 
 **起始版本：** 20
 
@@ -601,7 +601,7 @@ onEnterSelectedArea?: Callback<TextPickerResult>
 > 在多列联动场景中，不建议使用该回调，由于该回调标识的是滑动过程中选项进入分割线区域内的节点，而跟随变化的选项并不涉及滑动，因此，
 > 回调的返回值中，仅当前滑动列的值会正常变化，其余未滑动列的值保持不变。
 
-**类型：** Callback&lt;[TextPickerResult](arkts-arkui-textpickerresult-i.md)&gt;
+**类型：** [Callback](arkts-arkui-callback-i.md)&lt;[TextPickerResult](arkts-arkui-textpickerresult-i.md)&gt;
 
 **起始版本：** 20
 
@@ -619,7 +619,7 @@ onScrollStop?: Callback<TextPickerResult>
 
 滑动弹窗中的选择器的选择列停止时，触发该回调，用于监听物理滑动停止事件。两者触发时机略有不同，onChange侧重于选项选中状态，onScrollStop侧重于滑动动作结束。
 
-**类型：** Callback&lt;[TextPickerResult](arkts-arkui-textpickerresult-i.md)&gt;
+**类型：** [Callback](arkts-arkui-callback-i.md)&lt;[TextPickerResult](arkts-arkui-textpickerresult-i.md)&gt;
 
 **起始版本：** 20
 

@@ -48,7 +48,7 @@ type: SppType
 
 Spp link type
 
-**Type:** SppType
+**Type:** [SppType](arkts-connectivity-socket-spptype-e.md)
 
 **Since:** 10
 

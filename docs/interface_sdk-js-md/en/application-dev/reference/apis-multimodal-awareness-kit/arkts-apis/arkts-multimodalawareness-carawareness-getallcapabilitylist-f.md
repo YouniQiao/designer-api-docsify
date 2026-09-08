@@ -24,7 +24,7 @@ Returns the list of all capabilities.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Capability[]&gt; | Promise used to return the list of all capabilities. |
+| Promise&lt;[Capability](arkts-multimodalawareness-carawareness-capability-e.md)[]&gt; | Promise used to return the list of all capabilities. |
 
 **Error codes:**
 

@@ -73,7 +73,7 @@ function createImageSource(uri: string): ImageSource
 
 | 类型 | 说明 |
 | --- | --- |
-| ImageSource | 返回ImageSource类实例，失败时返回undefined。 |
+| [ImageSource](arkts-image-image-imagesource-i.md) | 返回ImageSource类实例，失败时返回undefined。 |
 
 **示例**
 
@@ -156,7 +156,7 @@ function createImageSource(uri: string, options: SourceOptions): ImageSource
 
 | 类型 | 说明 |
 | --- | --- |
-| ImageSource | 返回ImageSource类实例，失败时返回undefined。 |
+| [ImageSource](arkts-image-image-imagesource-i.md) | 返回ImageSource类实例，失败时返回undefined。 |
 
 **示例**
 
@@ -196,7 +196,7 @@ function createImageSource(fd: number): ImageSource
 
 | 类型 | 说明 |
 | --- | --- |
-| ImageSource | 返回ImageSource类实例，失败时返回undefined。 |
+| [ImageSource](arkts-image-image-imagesource-i.md) | 返回ImageSource类实例，失败时返回undefined。 |
 
 **示例**
 
@@ -241,7 +241,7 @@ function createImageSource(fd: number, options: SourceOptions): ImageSource
 
 | 类型 | 说明 |
 | --- | --- |
-| ImageSource | 返回ImageSource类实例，失败时返回undefined。 |
+| [ImageSource](arkts-image-image-imagesource-i.md) | 返回ImageSource类实例，失败时返回undefined。 |
 
 **示例**
 
@@ -286,7 +286,7 @@ function createImageSource(buf: ArrayBuffer): ImageSource
 
 | 类型 | 说明 |
 | --- | --- |
-| ImageSource | 返回ImageSource类实例，失败时返回undefined。 |
+| [ImageSource](arkts-image-image-imagesource-i.md) | 返回ImageSource类实例，失败时返回undefined。 |
 
 **示例**
 
@@ -327,7 +327,7 @@ function createImageSource(buf: ArrayBuffer, options: SourceOptions): ImageSourc
 
 | 类型 | 说明 |
 | --- | --- |
-| ImageSource | 返回ImageSource类实例，失败时返回undefined。 |
+| [ImageSource](arkts-image-image-imagesource-i.md) | 返回ImageSource类实例，失败时返回undefined。 |
 
 **示例**
 
@@ -360,14 +360,14 @@ function createImageSource(rawfile: resourceManager.RawFileDescriptor, options?:
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| rawfile | resourceManager.RawFileDescriptor | 是 | 图像资源文件的RawFileDescriptor。 |
+| rawfile | [resourceManager.RawFileDescriptor](../../apis-localization-kit/arkts-apis/arkts-localization-resourcemanager-rawfiledescriptor-t.md) | 是 | 图像资源文件的RawFileDescriptor。 |
 | options | [SourceOptions](arkts-image-image-sourceoptions-i.md) | 否 | 图片属性，包括图片像素密度、像素格式和图片尺寸。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| ImageSource | 返回ImageSource类实例，失败时返回undefined。 |
+| [ImageSource](arkts-image-image-imagesource-i.md) | 返回ImageSource类实例，失败时返回undefined。 |
 
 **示例**
 

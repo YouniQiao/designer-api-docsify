@@ -37,20 +37,6 @@ Activate the session, indicating that the session can accept control commands
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-currentAVSession.activate((err: BusinessError) => {
-  if (err) {
-    console.error(`Failed to activate, code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in activating.');
-});
-```
-
 ## activate
 
 ```TypeScript
@@ -78,14 +64,6 @@ Activate the session, indicating that the session can accept control commands
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
-**Examples**
-
-```TypeScript
-currentAVSession.activate().then(() => {
-  console.info('Succeeded in activating.');
-});
-```
-
 ## deactivate
 
 ```TypeScript
@@ -110,20 +88,6 @@ Deactivate the session, indicating that the session not ready to accept control 
 | --- | --- |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-currentAVSession.deactivate((err: BusinessError) => {
-  if (err) {
-    console.error(`Failed to deactivate, code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in deactivating.');
-});
-```
 
 ## deactivate
 
@@ -152,14 +116,6 @@ Deactivate the session, indicating that the session not ready to accept control 
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
-**Examples**
-
-```TypeScript
-currentAVSession.deactivate().then(() => {
-  console.info('Succeeded in deactivating.');
-});
-```
-
 ## destroy
 
 ```TypeScript
@@ -184,30 +140,6 @@ Destroy this session, the server will clean up the session resources
 | --- | --- |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-currentAVSession.destroy((err: BusinessError) => {
-  if (err) {
-    console.error(`Failed to destroy, code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in destroying.');
-});
-```
-
-```TypeScript
-avcontroller.destroy((err: BusinessError) => {
-  if (err) {
-    console.error(`Failed to destroy controller, code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in destroying.');
-});
-```
 
 ## destroy
 
@@ -236,20 +168,6 @@ Destroy this session, the server will clean up the session resources
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
-**Examples**
-
-```TypeScript
-currentAVSession.destroy().then(() => {
-  console.info('Succeeded in destroying.');
-});
-```
-
-```TypeScript
-avcontroller.destroy().then(() => {
-  console.info('Succeeded in destroying.');
-});
-```
-
 ## dispatchSessionEvent
 
 ```TypeScript
@@ -277,21 +195,6 @@ Dispatch the session event of this session.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let eventName: string = "dynamic_lyric";
-currentAVSession.dispatchSessionEvent(eventName, {lyric : "This is lyric"}, (err: BusinessError) => {
-  if (err) {
-    console.error(`Failed to dispatch session event, code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in dispatching session event.');
-});
-```
 
 ## dispatchSessionEvent
 
@@ -328,15 +231,6 @@ Dispatch the session event of this session.
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
-**Examples**
-
-```TypeScript
-let eventName = "dynamic_lyric";
-currentAVSession.dispatchSessionEvent(eventName, {lyric : "This is lyric"}).then(() => {
-  console.info('Succeeded in dispatching session event.');
-});
-```
-
 ## enableDesktopLyric
 
 ```TypeScript
@@ -371,16 +265,6 @@ Enable desktop lyric for this session.
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 | [6600111](../errorcode-avsession.md#6600111-desktop-lyrics-not-supported-for-the-current-device) | The desktop lyrics feature is not supported. |
 
-**Examples**
-
-```TypeScript
-if (currentAVSession !== undefined) {
-  (currentAVSession as avSession.AVSession).enableDesktopLyric(true).then(() => {
-    console.info('Succeeded in enabling desktop lyric.');
-  })
-}
-```
-
 ## getAllCastDisplays
 
 ```TypeScript
@@ -408,17 +292,6 @@ Get all the current virtual display information for extended display.
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
-**Examples**
-
-```TypeScript
-let castDisplay: avSession.CastDisplayInfo;
-currentAVSession.getAllCastDisplays().then((data: Array< avSession.CastDisplayInfo >) => {
-    if (data.length >= 1) {
-       castDisplay = data[0];
-     }
-    });
-```
-
 ## getAVCastController
 
 ```TypeScript
@@ -443,22 +316,6 @@ Get the cast controller when the session is casted to remote device. If the avse
 | --- | --- |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 | [6600109](../errorcode-avsession.md#6600109-remote-session-does-not-exist) | The remote connection is not established. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let avCastController: avSession.AVCastController;
-currentAVSession.getAVCastController((err: BusinessError, avcontroller: avSession.AVCastController) => {
-  if (err) {
-    console.error(`Failed to get AV cast controller, code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  avCastController = avcontroller;
-  console.info('Succeeded in getting AV cast controller.');
-});
-```
 
 ## getAVCastController
 
@@ -487,16 +344,6 @@ Get the cast controller when the session is casted to remote device. If the avse
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 | [6600109](../errorcode-avsession.md#6600109-remote-session-does-not-exist) | The remote connection is not established. |
 
-**Examples**
-
-```TypeScript
-let avCastController: avSession.AVCastController;
-currentAVSession.getAVCastController().then((avcontroller: avSession.AVCastController) => {
-  avCastController = avcontroller;
-  console.info('Succeeded in getting AV cast controller.');
-});
-```
-
 ## getController
 
 ```TypeScript
@@ -521,18 +368,6 @@ Get the current session's own controller
 | --- | --- |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
-
-**Examples**
-
-```TypeScript
-currentAVSession.getController((err: BusinessError, avcontroller: avSession.AVSessionController) => {
-  if (err) {
-    console.error(`Failed to get controller, code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in getting controller, sessionid: ${avcontroller.sessionId}`);
-});
-```
 
 ## getController
 
@@ -560,14 +395,6 @@ Get the current session's own controller
 | --- | --- |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
-
-**Examples**
-
-```TypeScript
-currentAVSession.getController().then((avcontroller: avSession.AVSessionController) => {
-  console.info(`Succeeded in getting controller, sessionid: ${avcontroller.sessionId}`);
-});
-```
 
 ## getDesktopLyricState
 
@@ -598,21 +425,6 @@ Get desktop lyric state such as lock state for this session.
 | [6600110](../errorcode-avsession.md#6600110-desktop-lyrics-not-enabled-for-the-application) | The desktop lyrics feature of this application is not enabled. |
 | [6600111](../errorcode-avsession.md#6600111-desktop-lyrics-not-supported-for-the-current-device) | The desktop lyrics feature is not supported. |
 
-**Examples**
-
-```TypeScript
-if (currentAVSession !== undefined) {
-  (currentAVSession as avSession.AVSession).getDesktopLyricState()
-    .then((state: avSession.DesktopLyricState) => {
-    console.info(`getDesktopLyricState: ${state.isLocked}`);
-  })
-}
-```
-
-```TypeScript
-avcontroller.getDesktopLyricState();
-```
-
 ## getOutputDevice
 
 ```TypeScript
@@ -637,30 +449,6 @@ Get output device information
 | --- | --- |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-currentAVSession.getOutputDevice((err: BusinessError, outputDeviceInfo: avSession.OutputDeviceInfo) => {
-  if (err) {
-    console.error(`Failed to get output device, code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in getting output device, devices length: ${outputDeviceInfo.devices.length}`);
-});
-```
-
-```TypeScript
-avcontroller.getOutputDevice((err: BusinessError, deviceInfo: avSession.OutputDeviceInfo) => {
-  if (err) {
-    console.error(`Failed to get output device, code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in getting output device.');
-});
-```
 
 ## getOutputDevice
 
@@ -689,20 +477,6 @@ Get output device information
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
-**Examples**
-
-```TypeScript
-currentAVSession.getOutputDevice().then((outputDeviceInfo: avSession.OutputDeviceInfo) => {
-  console.info(`Succeeded in getting output device, devices length: ${outputDeviceInfo.devices.length}`);
-})
-```
-
-```TypeScript
-avcontroller.getOutputDevice().then((deviceInfo: avSession.OutputDeviceInfo) => {
-  console.info('Succeeded in getting output device.');
-});
-```
-
 ## getOutputDeviceSync
 
 ```TypeScript
@@ -729,16 +503,6 @@ Get output device information
 | --- | --- |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
-
-**Examples**
-
-```TypeScript
-let currentOutputDevice: avSession.OutputDeviceInfo = currentAVSession.getOutputDeviceSync();
-```
-
-```TypeScript
-let currentOutputDevice: avSession.OutputDeviceInfo = avcontroller.getOutputDeviceSync();
-```
 
 ## isDesktopLyricVisible
 
@@ -768,20 +532,6 @@ Query desktop lyric visible state for this session.
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 | [6600110](../errorcode-avsession.md#6600110-desktop-lyrics-not-enabled-for-the-application) | The desktop lyrics feature of this application is not enabled. |
 | [6600111](../errorcode-avsession.md#6600111-desktop-lyrics-not-supported-for-the-current-device) | The desktop lyrics feature is not supported. |
-
-**Examples**
-
-```TypeScript
-if (currentAVSession !== undefined) {
-  (currentAVSession as avSession.AVSession).isDesktopLyricVisible().then((visible: boolean) => {
-    console.info(`isDesktopLyricVisible: ${visible}`);
-  })
-}
-```
-
-```TypeScript
-avcontroller.isDesktopLyricVisible();
-```
 
 ## off('play')
 
@@ -1478,18 +1228,6 @@ Unregister desktop lyric state changed callback.
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
-**Examples**
-
-```TypeScript
-if (currentAVSession !== undefined) {
-  (currentAVSession as avSession.AVSession).offDesktopLyricStateChanged();
-}
-```
-
-```TypeScript
-avcontroller.offDesktopLyricStateChanged();
-```
-
 ## offDesktopLyricVisibilityChanged
 
 ```TypeScript
@@ -1517,18 +1255,6 @@ Unregister desktop lyric visible state change callback.
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
-**Examples**
-
-```TypeScript
-if (currentAVSession !== undefined) {
-  (currentAVSession as avSession.AVSession).offDesktopLyricVisibilityChanged();
-}
-```
-
-```TypeScript
-avcontroller.offDesktopLyricVisibilityChanged();
-```
-
 ## offFastForward
 
 ```TypeScript
@@ -1553,12 +1279,6 @@ Unregister fastForward command callback. When canceling the callback, need to up
 | --- | --- |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
-
-**Examples**
-
-```TypeScript
-currentAVSession.offFastForward();
-```
 
 ## offPlay
 
@@ -1585,12 +1305,6 @@ Unregister play command callback. When canceling the callback, need to update th
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
-**Examples**
-
-```TypeScript
-currentAVSession.offPlay();
-```
-
 ## offPlayNext
 
 ```TypeScript
@@ -1615,12 +1329,6 @@ Unregister playNext command callback. When canceling the callback, need to updat
 | --- | --- |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
-
-**Examples**
-
-```TypeScript
-currentAVSession.offPlayNext();
-```
 
 ## offPlayPrevious
 
@@ -1647,12 +1355,6 @@ Unregister playPrevious command callback. When canceling the callback, need to u
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
-**Examples**
-
-```TypeScript
-currentAVSession.offPlayPrevious();
-```
-
 ## offRewind
 
 ```TypeScript
@@ -1678,19 +1380,13 @@ Unregister rewind command callback. When canceling the callback, need to update 
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
-**Examples**
-
-```TypeScript
-currentAVSession.offRewind();
-```
-
 ## on('play')
 
 ```TypeScript
 on(type: 'play', callback: () => void): void
 ```
 
-Register play command callback. As number as it is registered, it means that the ability supports this command. If you cancel the callback, you need to call off off When canceling the callback, need to update the supported commands list. Each playback command only supports registering one callback, and the new callback will replace the previous one.
+Register play command callback. As long as it is registered, it means that the ability supports this command. If you cancel the callback, you need to call off off When canceling the callback, need to update the supported commands list. Each playback command only supports registering one callback, and the new callback will replace the previous one.
 
 **Since:** 10
 
@@ -1719,7 +1415,7 @@ Register play command callback. As number as it is registered, it means that the
 on(type: 'pause', callback: () => void): void
 ```
 
-Register pause command callback. As number as it is registered, it means that the ability supports this command. If you cancel the callback, you need to call off off When canceling the callback, need to update the supported commands list. Each playback command only supports registering one callback, and the new callback will replace the previous one.
+Register pause command callback. As long as it is registered, it means that the ability supports this command. If you cancel the callback, you need to call off off When canceling the callback, need to update the supported commands list. Each playback command only supports registering one callback, and the new callback will replace the previous one.
 
 **Since:** 10
 
@@ -1748,7 +1444,7 @@ Register pause command callback. As number as it is registered, it means that th
 on(type: 'stop', callback: () => void): void
 ```
 
-Register stop command callback. As number as it is registered, it means that the ability supports this command. If you cancel the callback, you need to call off off When canceling the callback, need to update the supported commands list. Each playback command only supports registering one callback, and the new callback will replace the previous one.
+Register stop command callback. As long as it is registered, it means that the ability supports this command. If you cancel the callback, you need to call off off When canceling the callback, need to update the supported commands list. Each playback command only supports registering one callback, and the new callback will replace the previous one.
 
 **Since:** 10
 
@@ -1777,7 +1473,7 @@ Register stop command callback. As number as it is registered, it means that the
 on(type: 'playNext', callback: () => void): void
 ```
 
-Register playNext command callback. As number as it is registered, it means that the ability supports this command. If you cancel the callback, you need to call off off When canceling the callback, need to update the supported commands list. Each playback command only supports registering one callback, and the new callback will replace the previous one.
+Register playNext command callback. As long as it is registered, it means that the ability supports this command. If you cancel the callback, you need to call off off When canceling the callback, need to update the supported commands list. Each playback command only supports registering one callback, and the new callback will replace the previous one.
 
 **Since:** 10
 
@@ -1806,7 +1502,7 @@ Register playNext command callback. As number as it is registered, it means that
 on(type: 'playPrevious', callback: () => void): void
 ```
 
-Register playPrevious command callback. As number as it is registered, it means that the ability supports this command. If you cancel the callback, you need to call off off When canceling the callback, need to update the supported commands list. Each playback command only supports registering one callback, and the new callback will replace the previous one.
+Register playPrevious command callback. As long as it is registered, it means that the ability supports this command. If you cancel the callback, you need to call off off When canceling the callback, need to update the supported commands list. Each playback command only supports registering one callback, and the new callback will replace the previous one.
 
 **Since:** 10
 
@@ -1835,7 +1531,7 @@ Register playPrevious command callback. As number as it is registered, it means 
 on(type: 'fastForward', callback: (time ?: number) => void): void
 ```
 
-Register fastForward command callback. As number as it is registered, it means that the ability supports this command. If you cancel the callback, you need to call off off When canceling the callback, need to update the supported commands list. Each playback command only supports registering one callback, and the new callback will replace the previous one.
+Register fastForward command callback. As long as it is registered, it means that the ability supports this command. If you cancel the callback, you need to call off off When canceling the callback, need to update the supported commands list. Each playback command only supports registering one callback, and the new callback will replace the previous one.
 
 **Since:** 10
 
@@ -1864,7 +1560,7 @@ Register fastForward command callback. As number as it is registered, it means t
 on(type: 'rewind', callback: (time ?: number) => void): void
 ```
 
-Register rewind command callback. As number as it is registered, it means that the ability supports this command. If you cancel the callback, you need to call off off When canceling the callback, need to update the supported commands list. Each playback command only supports registering one callback, and the new callback will replace the previous one.
+Register rewind command callback. As long as it is registered, it means that the ability supports this command. If you cancel the callback, you need to call off off When canceling the callback, need to update the supported commands list. Each playback command only supports registering one callback, and the new callback will replace the previous one.
 
 **Since:** 10
 
@@ -1893,7 +1589,7 @@ Register rewind command callback. As number as it is registered, it means that t
 on(type: 'playFromAssetId', callback: (assetId: number) => void): void
 ```
 
-Register playFromAssetId command callback. As number as it is registered, it means that the ability supports this command. If you cancel the callback, you need to call off off When canceling the callback, need to update the supported commands list. Each playback command only supports registering one callback, and the new callback will replace the previous one.
+Register playFromAssetId command callback. As long as it is registered, it means that the ability supports this command. If you cancel the callback, you need to call off off When canceling the callback, need to update the supported commands list. Each playback command only supports registering one callback, and the new callback will replace the previous one.
 
 **Since:** 11
 
@@ -2214,7 +1910,7 @@ Register the item to play from the playlist change callback
 on(type: 'answer', callback: Callback<void>): void
 ```
 
-Register answer command callback. As number as it is registered, it means that the ability supports this command. If you cancel the callback, you need to call off off
+Register answer command callback. As long as it is registered, it means that the ability supports this command. If you cancel the callback, you need to call off off
 
 **Since:** 11
 
@@ -2243,7 +1939,7 @@ Register answer command callback. As number as it is registered, it means that t
 on(type: 'hangUp', callback: Callback<void>): void
 ```
 
-Register hangUp command callback. As number as it is registered, it means that the ability supports this command. If you cancel the callback, you need to call off off
+Register hangUp command callback. As long as it is registered, it means that the ability supports this command. If you cancel the callback, you need to call off off
 
 **Since:** 11
 
@@ -2272,7 +1968,7 @@ Register hangUp command callback. As number as it is registered, it means that t
 on(type: 'toggleCallMute', callback: Callback<void>): void
 ```
 
-Register toggleCallMute command callback. As number as it is registered, it means that the ability supports this command. If you cancel the callback, you need to call off off
+Register toggleCallMute command callback. As long as it is registered, it means that the ability supports this command. If you cancel the callback, you need to call off off
 
 **Since:** 11
 
@@ -2379,22 +2075,6 @@ Register desktop lyric state changed callback.
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
-**Examples**
-
-```TypeScript
-if (currentAVSession !== undefined) {
-  (currentAVSession as avSession.AVSession).onDesktopLyricStateChanged((state: avSession.DesktopLyricState) => {
-    console.info(`desktop lyric isLocked : ${state.isLocked}`);
-  })
-}
-```
-
-```TypeScript
-avcontroller.onDesktopLyricStateChanged((state: avSession.DesktopLyricState) => {
-  console.info(`desktop lyric isLocked : ${state.isLocked}`);
-})
-```
-
 ## onDesktopLyricVisibilityChanged
 
 ```TypeScript
@@ -2422,22 +2102,6 @@ Register desktop lyric visible state change callback.
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
-**Examples**
-
-```TypeScript
-if (currentAVSession !== undefined) {
-  (currentAVSession as avSession.AVSession).onDesktopLyricVisibilityChanged((visible: boolean) => {
-    console.info(`desktop lyric visible state: ${visible}`);
-  });
-}
-```
-
-```TypeScript
-avcontroller.onDesktopLyricVisibilityChanged((visible: boolean) => {
-  console.info(`desktop lyric visible state: ${visible}`);
-});
-```
-
 ## onFastForward
 
 ```TypeScript
@@ -2462,14 +2126,6 @@ Register fastForward command callback. The application will receive forward time
 | --- | --- |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
-
-**Examples**
-
-```TypeScript
-currentAVSession.onFastForward((time: number, info: avSession.CommandInfo) => {
-  console.info('on fastForward entry');
-});
-```
 
 ## onPlay
 
@@ -2496,14 +2152,6 @@ Register play command callback. The application will receive [CommandInfo](arkts
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
-**Examples**
-
-```TypeScript
-currentAVSession.onPlay((info: avSession.CommandInfo) => {
-  console.info('on play entry');
-});
-```
-
 ## onPlayNext
 
 ```TypeScript
@@ -2528,14 +2176,6 @@ Register playNext command callback. The application will receive [CommandInfo](a
 | --- | --- |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
-
-**Examples**
-
-```TypeScript
-currentAVSession.onPlayNext((info: avSession.CommandInfo) => {
-  console.info('on playNext entry');
-});
-```
 
 ## onPlayPrevious
 
@@ -2564,14 +2204,6 @@ Register playPrevious command callback. The application will receive [CommandInf
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
-**Examples**
-
-```TypeScript
-currentAVSession.onPlayPrevious((info: avSession.CommandInfo) => {
-  console.info('on playPrevious entry');
-});
-```
-
 ## onRewind
 
 ```TypeScript
@@ -2596,14 +2228,6 @@ Register rewind command callback. The application will receive rewind time and [
 | --- | --- |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
-
-**Examples**
-
-```TypeScript
-currentAVSession.onRewind((time: number, info: avSession.CommandInfo) => {
-  console.info('on rewind entry');
-});
-```
 
 ## sendCustomData
 
@@ -2638,58 +2262,6 @@ Sends custom data to a remote device.
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. You are advised to:1.Scheduled retry.2.Destroy the current session or session controller and re-create it. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
-**Examples**
-
-```TypeScript
-avCastController.sendCustomData({customData : "This is custom data"});
-```
-
-```TypeScript
-currentAVSession.sendCustomData({customData : "This is custom data"}).then(() => {
-  console.info('Succeeded in sending custom data.');
-});
-```
-
-```TypeScript
-// Index.ets
-import { avSession } from '@kit.AVSessionKit';
-
-@Entry
-@Component
-struct Index {
-  private tag: string = "createNewSession";
-  private sessionId: string = "";
-  private controller: avSession.AVSessionController | undefined = undefined;
-  private currentAVSession?: avSession.AVSession;
-  context = this.getUIContext();
-
-  aboutToAppear(): void {
-    avSession.createAVSession(this.getUIContext().getHostContext(), this.tag, "audio")
-      .then(async (data: avSession.AVSession) => {
-        this.currentAVSession = data;
-        this.sessionId = this.currentAVSession.sessionId;
-        this.controller = await this.currentAVSession.getController();
-        console.info(`Succeeded in creating AV session, sessionId: ${this.sessionId}`);
-      });
-
-    if (this.controller !== undefined) {
-      (this.controller as avSession.AVSessionController).sendCustomData({ customData: "This is my data" })
-    }
-  }
-
-  build() {
-    Column() {
-      Text('AVSession Demo')
-        .fontSize(20)
-        .margin(10)
-    }
-    .width('100%')
-    .height('100%')
-    .justifyContent(FlexAlign.Center)
-  }
-}
-```
-
 ## setAVCallState
 
 ```TypeScript
@@ -2716,24 +2288,6 @@ Set the call state of this session.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let avcalldata: avSession.AVCallState = {
-  state: avSession.CallState.CALL_STATE_ACTIVE,
-  muted: false
-};
-currentAVSession.setAVCallState(avcalldata, (err: BusinessError) => {
-  if (err) {
-    console.error(`Failed to set AVCallState, code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in setting AVCallState.');
-});
-```
 
 ## setAVCallState
 
@@ -2767,18 +2321,6 @@ Set the call state of this session.
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
-**Examples**
-
-```TypeScript
-let calldata: avSession.AVCallState = {
-  state: avSession.CallState.CALL_STATE_ACTIVE,
-  muted: false
-};
-currentAVSession.setAVCallState(calldata).then(() => {
-  console.info('Succeeded in setting AVCallState.');
-});
-```
-
 ## setAVMetadata
 
 ```TypeScript
@@ -2795,7 +2337,7 @@ Set the metadata of this session. In addition to the required properties, users 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | AVMetadata | Yes | { |
+| data | [AVMetadata](arkts-avsession-avsession-avmetadata-i.md) | Yes | { |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The asyncCallback triggered when the command is executed successfully |
 
 **Error codes:**
@@ -2805,41 +2347,6 @@ Set the metadata of this session. In addition to the required properties, users 
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let metadata: avSession.AVMetadata = {
-  assetId: "121278",
-  title: "lose yourself",
-  artist: "Eminem",
-  author: "ST",
-  album: "Slim shady",
-  writer: "ST",
-  composer: "ST",
-  duration: 2222,
-  mediaImage: "https://www.example.com/example.jpg",
-  subtitle: "8 Mile",
-  description: "Rap",
-  // The LRC contains two types of elements: time tag + lyrics, and ID tag.
-  // Example: [00:25.44]xxx\r\n[00:26.44]xxx\r\n
-  lyric: "Lyrics in LRC format",
-  // The singleLyricText field stores a single line of lyric text without timestamps.
-  // Example: "Content of a single lyric line"
-  singleLyricText: "Content of a single lyric line",
-  previousAssetId: "121277",
-  nextAssetId: "121279"
-};
-currentAVSession.setAVMetadata(metadata, (err: BusinessError) => {
-  if (err) {
-    console.error(`Failed to set AVMetadata, code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in setting AVMetadata.');
-});
-```
 
 ## setAVMetadata
 
@@ -2859,7 +2366,7 @@ Set the metadata of this session. In addition to the required properties, users 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | AVMetadata | Yes | { |
+| data | [AVMetadata](arkts-avsession-avsession-avmetadata-i.md) | Yes | { |
 
 **Return value:**
 
@@ -2874,35 +2381,6 @@ Set the metadata of this session. In addition to the required properties, users 
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
-
-**Examples**
-
-```TypeScript
-let metadata: avSession.AVMetadata = {
-  assetId: "121278",
-  title: "lose yourself",
-  artist: "Eminem",
-  author: "ST",
-  album: "Slim shady",
-  writer: "ST",
-  composer: "ST",
-  duration: 2222,
-  mediaImage: "https://www.example.com/example.jpg",
-  subtitle: "8 Mile",
-  description: "Rap",
-  // The LRC contains two types of elements: time tag + lyrics, and ID tag.
-  // Example: [00:25.44]xxx\r\n[00:26.44]xxx\r\n
-  lyric: "Lyrics in LRC format",
-  // The singleLyricText field stores a single line of lyric text without timestamps.
-  // Example: "Content of a single lyric line"
-  singleLyricText: "Content of a single lyric line",
-  previousAssetId: "121277",
-  nextAssetId: "121279"
-};
-currentAVSession.setAVMetadata(metadata).then(() => {
-  console.info('Succeeded in setting AVMetadata.');
-});
-```
 
 ## setAVPlaybackState
 
@@ -2930,28 +2408,6 @@ Set the playback state of this session.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let PlaybackState: avSession.AVPlaybackState = {
-  state:avSession.PlaybackState.PLAYBACK_STATE_PLAY,
-  speed: 1.0,
-  position:{elapsedTime:10, updateTime:(new Date()).getTime()},
-  bufferedTime:1000,
-  loopMode:avSession.LoopMode.LOOP_MODE_SINGLE,
-  isFavorite:true
-};
-currentAVSession.setAVPlaybackState(PlaybackState, (err: BusinessError) => {
-  if (err) {
-    console.error(`Failed to set AVPlaybackState, code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in setting AVPlaybackState.');
-});
-```
 
 ## setAVPlaybackState
 
@@ -2987,22 +2443,6 @@ Set the playback state of this session.
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
-**Examples**
-
-```TypeScript
-let playbackState: avSession.AVPlaybackState = {
-  state:avSession.PlaybackState.PLAYBACK_STATE_PLAY,
-  speed: 1.0,
-  position:{elapsedTime:10, updateTime:(new Date()).getTime()},
-  bufferedTime:1000,
-  loopMode:avSession.LoopMode.LOOP_MODE_SINGLE,
-  isFavorite:true
-};
-currentAVSession.setAVPlaybackState(playbackState).then(() => {
-  console.info('Succeeded in setting AVPlaybackState.');
-});
-```
-
 ## setAVQueueItems
 
 ```TypeScript
@@ -3029,51 +2469,6 @@ Set the playlist of queueItem. Identifies the content of the playlist presented 
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
-
-**Examples**
-
-```TypeScript
-// Index.ets
-import { image } from '@kit.ImageKit';
-import { resourceManager } from '@kit.LocalizationKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let value = await resourceManager.getSysResourceManager().getRawFileContent('IMAGE_URI');
-let imageSource = await image.createImageSource(value.buffer);
-let imagePixel = await imageSource.createPixelMap({ desiredSize: { width: 150, height: 150 } });
-let queueItemDescription_1: avSession.AVMediaDescription = {
-  assetId: '001',
-  title: 'music_name',
-  subtitle: 'music_sub_name',
-  description: 'music_description',
-  mediaImage: imagePixel,
-  extras: { extras: 'any' }
-};
-let queueItem_1: avSession.AVQueueItem = {
-  itemId: 1,
-  description: queueItemDescription_1
-};
-let queueItemDescription_2: avSession.AVMediaDescription = {
-  assetId: '002',
-  title: 'music_name',
-  subtitle: 'music_sub_name',
-  description: 'music_description',
-  mediaImage: imagePixel,
-  extras: { extras: 'any' }
-};
-let queueItem_2: avSession.AVQueueItem = {
-  itemId: 2,
-  description: queueItemDescription_2
-};
-let queueItemsArray: avSession.AVQueueItem[] = [queueItem_1, queueItem_2];
-currentAVSession.setAVQueueItems(queueItemsArray, (err: BusinessError) => {
-  if (err) {
-    console.error(`Failed to set AVQueueItems, code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in setting AVQueueItems.');
-});
-```
 
 ## setAVQueueItems
 
@@ -3109,46 +2504,6 @@ Set the playlist of queueItem. Identifies the content of the playlist presented 
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
-**Examples**
-
-```TypeScript
-// Index.ets
-import { image } from '@kit.ImageKit';
-import { resourceManager } from '@kit.LocalizationKit';
-
-let value = await resourceManager.getSysResourceManager().getRawFileContent('IMAGE_URI');
-let imageSource = await image.createImageSource(value.buffer);
-let imagePixel = await imageSource.createPixelMap({desiredSize:{width: 150, height: 150}});
-let queueItemDescription_1: avSession.AVMediaDescription = {
-  assetId: '001',
-  title: 'music_name',
-  subtitle: 'music_sub_name',
-  description: 'music_description',
-  mediaImage : imagePixel,
-  extras: {extras:'any'}
-};
-let queueItem_1: avSession.AVQueueItem = {
-  itemId: 1,
-  description: queueItemDescription_1
-} as avSession.AVQueueItem;
-let queueItemDescription_2: avSession.AVMediaDescription = {
-  assetId: '002',
-  title: 'music_name',
-  subtitle: 'music_sub_name',
-  description: 'music_description',
-  mediaImage: imagePixel,
-  extras: {extras:'any'}
-};
-let queueItem_2: avSession.AVQueueItem = {
-  itemId: 2,
-  description: queueItemDescription_2
-} as avSession.AVQueueItem;
-let queueItemsArray: avSession.AVQueueItem[] = [queueItem_1, queueItem_2];
-currentAVSession.setAVQueueItems(queueItemsArray).then(() => {
-  console.info('Succeeded in setting AVQueueItems.');
-});
-```
-
 ## setAVQueueTitle
 
 ```TypeScript
@@ -3175,21 +2530,6 @@ Set the name of the playlist presented by this session.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let queueTitle = 'QUEUE_TITLE';
-currentAVSession.setAVQueueTitle(queueTitle, (err: BusinessError) => {
-  if (err) {
-    console.error(`Failed to set AVQueueTitle, code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in setting AVQueueTitle.');
-});
-```
 
 ## setAVQueueTitle
 
@@ -3225,15 +2565,6 @@ Set the name of the playlist presented by this session.
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
-**Examples**
-
-```TypeScript
-let queueTitle = 'QUEUE_TITLE';
-currentAVSession.setAVQueueTitle(queueTitle).then(() => {
-  console.info('Succeeded in setting AVQueueTitle.');
-});
-```
-
 ## setBackgroundPlayMode
 
 ```TypeScript
@@ -3267,16 +2598,6 @@ Set the background playback mode. It is recommended that you associate it with t
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
-**Examples**
-
-```TypeScript
-try {
-  currentAVSession.setBackgroundPlayMode(avSession.BackgroundPlayMode.ENABLE_BACKGROUND_PLAY);
-} catch (err) {
-  console.error(`setBackgroundPlayMode BusinessError: code: ${err.code}, message: ${err.message}`);
-}
-```
-
 ## setCallMetadata
 
 ```TypeScript
@@ -3303,51 +2624,6 @@ Set the metadata related with current call.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
-
-**Examples**
-
-```TypeScript
-// Index.ets
-import { image } from '@kit.ImageKit';
-import { resourceManager } from '@kit.LocalizationKit';
-import { avSession } from '@kit.AVSessionKit';
-
-@Entry
-@Component
-struct Index {
-  build() {
-    Column() {
-      Text('Hello World')
-        .fontSize(50)
-        .fontWeight(FontWeight.Bold)
-    }
-    .width('100%')
-    .height('100%')
-  }
-}
-
-class CallManager {
-  private currentAVSession: avSession.AVSession | null = null;
-
-  async setCallMetadata() {
-    let value = await resourceManager.getSysResourceManager().getRawFileContent('IMAGE_URI');
-    let imageSource = await image.createImageSource(value.buffer);
-    let imagePixel = await imageSource.createPixelMap({ desiredSize: { width: 150, height: 150 } });
-    let calldata: avSession.CallMetadata = {
-      name: "xiaoming",
-      phoneNumber: "111xxxxxxxx",
-      avatar: imagePixel
-    };
-    this.currentAVSession?.setCallMetadata(calldata, (err: BusinessError) => {
-      if (err) {
-        console.error(`Failed to set call metadata, code: ${err.code}, message: ${err.message}`);
-        return;
-      }
-      console.info('Succeeded in setting call metadata.');
-    });
-  }
-}
-```
 
 ## setCallMetadata
 
@@ -3380,52 +2656,6 @@ Set the metadata related with current call.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
-
-**Examples**
-
-```TypeScript
-// Index.ets
-import { image } from '@kit.ImageKit';
-import { resourceManager } from '@kit.LocalizationKit';
-import { avSession } from '@kit.AVSessionKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct Index {
-  build() {
-    Column() {
-      Text('Hello World')
-        .fontSize(50)
-        .fontWeight(FontWeight.Bold)
-    }
-    .width('100%')
-    .height('100%')
-  }
-}
-
-class CallManager {
-  private currentAVSession: avSession.AVSession | null = null;
-
-  async setCallMetadata() {
-    let value = await resourceManager.getSysResourceManager().getRawFileContent('IMAGE_URI');
-    let imageSource = await image.createImageSource(value.buffer);
-    let imagePixel = await imageSource.createPixelMap({ desiredSize: { width: 150, height: 150 } });
-    let calldata: avSession.CallMetadata = {
-      name: "xiaoming",
-      phoneNumber: "111xxxxxxxx",
-      avatar: imagePixel
-    };
-    this.currentAVSession?.setCallMetadata(calldata, (err: BusinessError) => {
-      if (err) {
-        console.error(`Failed to set call metadata, code: ${err.code}, message: ${err.message}`);
-        return;
-      }
-      console.info('Succeeded in setting call metadata.');
-    });
-  }
-}
-```
 
 ## setDesktopLyricState
 
@@ -3462,24 +2692,6 @@ Set desktop lyric state such as lock state for this session.
 | [6600110](../errorcode-avsession.md#6600110-desktop-lyrics-not-enabled-for-the-application) | The desktop lyrics feature of this application is not enabled. |
 | [6600111](../errorcode-avsession.md#6600111-desktop-lyrics-not-supported-for-the-current-device) | The desktop lyrics feature is not supported. |
 
-**Examples**
-
-```TypeScript
-let state: avSession.DesktopLyricState = {
-  isLocked: true,
-};
-currentAVSession.setDesktopLyricState(state).then(() => {
-  console.info('Succeeded in setting desktop lyric state.');
-})
-```
-
-```TypeScript
-let state: avSession.DesktopLyricState = {
-  isLocked: true,
-};
-avcontroller.setDesktopLyricState(state);
-```
-
 ## setDesktopLyricVisible
 
 ```TypeScript
@@ -3515,18 +2727,6 @@ Set desktop lyric visible state for this session.
 | [6600110](../errorcode-avsession.md#6600110-desktop-lyrics-not-enabled-for-the-application) | The desktop lyrics feature of this application is not enabled. |
 | [6600111](../errorcode-avsession.md#6600111-desktop-lyrics-not-supported-for-the-current-device) | The desktop lyrics feature is not supported. |
 
-**Examples**
-
-```TypeScript
-currentAVSession.setDesktopLyricVisible(true).then(() => {
-  console.info('Succeeded in setting desktop lyric visible.');
-});
-```
-
-```TypeScript
-avcontroller.setDesktopLyricVisible(true);
-```
-
 ## setExtras
 
 ```TypeScript
@@ -3553,20 +2753,6 @@ Set the custom media packets for this session.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-currentAVSession.setExtras({extras : "This is custom media packet"}, (err: BusinessError) => {
-  if (err) {
-    console.error(`Failed to set extras, code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in setting extras.');
-})
-```
 
 ## setExtras
 
@@ -3602,14 +2788,6 @@ Set the custom media packets for this session.
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
-**Examples**
-
-```TypeScript
-currentAVSession.setExtras({extras : "This is custom media packet"}).then(() => {
-  console.info('Succeeded in setting extras.');
-});
-```
-
 ## setLaunchAbility
 
 ```TypeScript
@@ -3636,51 +2814,6 @@ Set the ability to start the session corresponding to
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
-
-**Examples**
-
-```TypeScript
-import { wantAgent } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// WantAgentInfo object.
-let wantAgentInfo: wantAgent.WantAgentInfo = {
-  wants: [
-    {
-      deviceId: "deviceId",
-      bundleName: "com.example.myapplication",
-      abilityName: "EntryAbility",
-      action: "action1",
-      entities: ["entity1"],
-      type: "MIMETYPE",
-      uri: "key = {true,true,false}",
-      parameters:
-        {
-          mykey0: 2222,
-          mykey1: [1, 2, 3],
-          mykey2: "[1, 2, 3]",
-          mykey3: "ssssssssssssssssssssssssss",
-          mykey4: [false, true, false],
-          mykey5: ["qqqqq", "wwwwww", "aaaaaaaaaaaaaaaaa"],
-          mykey6: true
-        }
-    }
-  ],
-  operationType: wantAgent.OperationType.START_ABILITIES,
-  requestCode: 0,
-  wantAgentFlags:[wantAgent.WantAgentFlags.UPDATE_PRESENT_FLAG]
-}
-
-wantAgent.getWantAgent(wantAgentInfo).then((agent) => {
-  currentAVSession.setLaunchAbility(agent, (err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to set launch ability, code: ${err.code}, message: ${err.message}`);
-      return;
-    }
-    console.info('Succeeded in setting launch ability.');
-  });
-});
-```
 
 ## setLaunchAbility
 
@@ -3716,46 +2849,6 @@ Set the ability to start the session corresponding to
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
-**Examples**
-
-```TypeScript
-import { wantAgent } from '@kit.AbilityKit';
-
-// WantAgentInfo object.
-let wantAgentInfo: wantAgent.WantAgentInfo = {
-  wants: [
-    {
-      deviceId: "deviceId",
-      bundleName: "com.example.myapplication",
-      abilityName: "EntryAbility",
-      action: "action1",
-      entities: ["entity1"],
-      type: "MIMETYPE",
-      uri: "key = {true,true,false}",
-      parameters:
-        {
-          mykey0: 2222,
-          mykey1: [1, 2, 3],
-          mykey2: "[1, 2, 3]",
-          mykey3: "ssssssssssssssssssssssssss",
-          mykey4: [false, true, false],
-          mykey5: ["qqqqq", "wwwwww", "aaaaaaaaaaaaaaaaa"],
-          mykey6: true
-        }
-    }
-  ],
-  operationType: wantAgent.OperationType.START_ABILITIES,
-  requestCode: 0,
-  wantAgentFlags:[wantAgent.WantAgentFlags.UPDATE_PRESENT_FLAG]
-}
-
-wantAgent.getWantAgent(wantAgentInfo).then((agent) => {
-  currentAVSession.setLaunchAbility(agent).then(() => {
-    console.info('Succeeded in setting launch ability.');
-  });
-});
-```
-
 ## setMediaCenterControlType
 
 ```TypeScript
@@ -3788,23 +2881,6 @@ Set media control types that can be displayed on the media center.
 | --- | --- |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
-
-**Examples**
-
-```TypeScript
-try {
-  let controlTypes: avSession.AVMediaCenterControlType[] = [
-    'playNext',
-    'playPrevious',
-    'setSpeed',
-    'setLoopMode'
-  ];
-  await currentAVSession.setMediaCenterControlType(controlTypes);
-  console.info('Succeeded in setting media center control type.');
-} catch (err) {
-  console.error(`setMediaCenterControlType BusinessError: code: ${err.code}, message: ${err.message}`);
-}
-```
 
 ## setSupportedLoopModes
 
@@ -3841,22 +2917,6 @@ Set supported loop modes supplied by application.
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
-**Examples**
-
-```TypeScript
-try {
-  let loopModes: avSession.LoopMode[] = [
-    avSession.LoopMode.LOOP_MODE_SEQUENCE,
-    avSession.LoopMode.LOOP_MODE_SINGLE,
-    avSession.LoopMode.LOOP_MODE_LIST
-  ];
-  await currentAVSession.setSupportedLoopModes(loopModes);
-  console.info('Succeeded in setting supported loop modes.');
-} catch (err) {
-  console.error(`setSupportedLoopModes BusinessError: code: ${err.code}, message: ${err.message}`);
-}
-```
-
 ## setSupportedPlaySpeeds
 
 ```TypeScript
@@ -3892,18 +2952,6 @@ Set supported speeds supplied by application.
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
-**Examples**
-
-```TypeScript
-try {
-  let speeds: number[] = [0.5, 1, 1.25, 1.5];
-  await currentAVSession.setSupportedPlaySpeeds(speeds);
-  console.info('Succeeded in setting supported play speeds.');
-} catch (err) {
-  console.error(`setSupportedPlaySpeeds BusinessError: code: ${err.code}, message: ${err.message}`);
-}
-```
-
 ## stopCasting
 
 ```TypeScript
@@ -3927,14 +2975,6 @@ Stop current cast and disconnect device connection.
 | Error Code ID | Error Message |
 | --- | --- |
 | [6600109](../errorcode-avsession.md#6600109-remote-session-does-not-exist) | The remote connection is not established. |
-
-**Examples**
-
-```TypeScript
-currentAVSession.stopCasting(() => {
-  console.info('Succeeded in stopping casting.');
-});
-```
 
 ## stopCasting
 
@@ -3961,14 +3001,6 @@ Stop current cast and disconnect device connection.
 | Error Code ID | Error Message |
 | --- | --- |
 | [6600109](../errorcode-avsession.md#6600109-remote-session-does-not-exist) | The remote connection is not established. |
-
-**Examples**
-
-```TypeScript
-currentAVSession.stopCasting().then(() => {
-  console.info('Succeeded in stopping casting.');
-});
-```
 
 ## sessionId
 

@@ -26,7 +26,7 @@ Creates a progress indicator.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [ProgressOptions](arkts-arkui-progressoptions-i.md)&lt;Type&gt; | Yes | Options of the progress indicator, which vary by progress indicator type. |
+| options | [ProgressOptions](arkts-arkui-progressoptions-i.md)&lt;[Type](../arkts-apis/arkts-arkui-arkui-statemanagement-type-d.md)&gt; | Yes | Options of the progress indicator, which vary by progress indicator type. |
 
 ## Summary
 
@@ -340,6 +340,7 @@ struct ProgressExample {
 ```
 
 This example demonstrates how to set the border radius of the capsule progress indicator using the input parameter borderRadius of [CapsuleStyleOptions](arkts-arkui-capsulestyleoptions-i.md).
+The borderRadius attribute is supported since API version 18.
 
 ```TypeScript
 import { LengthMetrics } from '@kit.ArkUI';

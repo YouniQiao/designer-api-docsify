@@ -61,18 +61,7 @@ back(options?: router.RouterOptions): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | router.RouterOptions | 否 | 返回页面描述信息。当需要返回到指定的页面时传入此参数（通过url指定目标页面）；当只需返回上一页时可以不传入此参数。url指定返回的目标页面：若页面栈中存在该url，则返回至index最大的同名页面；若不存在则不响应操作。若url未设置，则返回上一页（页面不会重新构建，出栈后会被回收）。 |
-
-**示例**
-
-完整示例请参考[PushUrl](#pushurl)中的示例。
-
-```TypeScript
-import { Router , UIContext } from '@kit.ArkUI';
-let uiContext: UIContext = this.getUIContext();
-let router: Router = uiContext.getRouter();
-router.back({url:'pages/detail'});
-```
+| options | [router.RouterOptions](arkts-arkui-router-routeroptions-i.md) | 否 | 返回页面描述信息。当需要返回到指定的页面时传入此参数（通过url指定目标页面）；当只需返回上一页时可以不传入此参数。url指定返回的目标页面：若页面栈中存在该url，则返回至index最大的同名页面；若不存在则不响应操作。若url未设置，则返回上一页（页面不会重新构建，出栈后会被回收）。 |
 
 ## back
 
@@ -97,27 +86,6 @@ back(index: number, params?: Object): void
 | index | number | 是 | 返回目标页面的索引值，从0开始计数（注意：与[getStateByIndex](#getstatebyindex)的index参数不同，后者从1开始计数）。取值范围：[0, +∞)。如果index超出页面栈范围或不存在对应页面，则不响应用户操作。 |
 | params | Object | 否 | 页面返回时携带的参数。不传入时不携带参数。 |
 
-**示例**
-
-完整示例请参考[PushUrl](#pushurl)中的示例。
-
-```TypeScript
-import { Router , UIContext } from '@kit.ArkUI';
-let uiContext: UIContext = this.getUIContext();
-
-let router: Router = uiContext.getRouter();
-router.back(1);
-```
-
-完整示例请参考[PushUrl](#pushurl)中的示例。
-
-```TypeScript
-import { Router , UIContext } from '@kit.ArkUI';
-let uiContext: UIContext = this.getUIContext();
-let router: Router = uiContext.getRouter();
-router.back(1, {info:'来自Home页'}); // 携带参数返回
-```
-
 ## clear
 
 ```TypeScript
@@ -139,18 +107,6 @@ clear(): void
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-**示例**
-
-完整示例请参考[PushUrl](#pushurl)中的示例。
-
-```TypeScript
-import { Router , UIContext } from '@kit.ArkUI';
-let uiContext: UIContext = this.getUIContext();
-
-let router: Router = uiContext.getRouter();
-router.clear();
-```
 
 ## getLength
 
@@ -182,19 +138,6 @@ getLength(): string
 | --- | --- |
 | string | 页面数量，页面栈支持最大数值是32。 |
 
-**示例**
-
-完整示例请参考[PushUrl](#pushurl)中的示例。
-
-```TypeScript
-import { Router , UIContext } from '@kit.ArkUI';
-let uiContext: UIContext = this.getUIContext();
-
-let router: Router = uiContext.getRouter();
-let size = router.getLength();        
-console.info('pages stack size = ' + size);
-```
-
 ## getParams
 
 ```TypeScript
@@ -216,17 +159,6 @@ getParams(): Object
 | 类型 | 说明 |
 | --- | --- |
 | Object | 发起跳转的页面往当前页传入的参数。 |
-
-**示例**
-
-完整示例请参考[PushUrl](#pushurl)中的示例。
-
-```TypeScript
-import { Router , UIContext } from '@kit.ArkUI';
-let uiContext: UIContext = this.getUIContext();
-let router: Router = uiContext.getRouter();
-router.getParams();
-```
 
 ## getStackSize
 
@@ -250,32 +182,6 @@ getStackSize(): number
 | --- | --- |
 | number | 页面数量，页面栈支持最大数值是32。 |
 
-**示例**
-
-```TypeScript
-@Entry
-@Component
-struct Index {
-
-  build() {
-    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
-      Button() {
-        Text('stack size')
-          .fontSize(25)
-          .fontWeight(FontWeight.Bold)
-      }.type(ButtonType.Capsule)
-      .margin({ top: 20 })
-      .backgroundColor('#ccc')
-      .onClick(() => {
-        console.info(`get stack size: ${this.getUIContext().getRouter().getStackSize()}`)
-      })
-    }
-    .width('100%')
-    .height('100%')
-  }
-}
-```
-
 ## getState
 
 ```TypeScript
@@ -296,24 +202,7 @@ getState(): router.RouterState
 
 | 类型 | 说明 |
 | --- | --- |
-| router.RouterState | 页面状态信息。 |
-
-**示例**
-
-完整示例请参考[PushUrl](#pushurl)中的示例。
-
-```TypeScript
-import { Router , UIContext } from '@kit.ArkUI';
-let uiContext: UIContext = this.getUIContext();
-
-let router: Router = uiContext.getRouter();
-let page = router.getState();
-if (page != undefined) {
-  console.info('current index = ' + page.index);
-  console.info('current name = ' + page.name);
-  console.info('current path = ' + page.path);
-}
-```
+| [router.RouterState](arkts-arkui-router-routerstate-i.md) | 页面状态信息。 |
 
 ## getStateByIndex
 
@@ -341,25 +230,7 @@ getStateByIndex(index: number): router.RouterState | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| router.RouterState \| undefined | 返回页面状态信息。索引不存在时返回undefined。 |
-
-**示例**
-
-完整示例请参考[PushUrl](#pushurl)中的示例。
-
-```TypeScript
-import { Router , UIContext } from '@kit.ArkUI';
-let uiContext: UIContext = this.getUIContext();
-
-let router: Router = uiContext.getRouter();
-let options: router.RouterState | undefined = router.getStateByIndex(1);
-if (options != undefined) {
-  console.info('index = ' + options.index);
-  console.info('name = ' + options.name);
-  console.info('path = ' + options.path);
-  console.info('params = ' + options.params);
-}
-```
+| [router.RouterState](arkts-arkui-router-routerstate-i.md) \| undefined | 返回页面状态信息。索引不存在时返回undefined。 |
 
 ## getStateByUrl
 
@@ -387,24 +258,7 @@ getStateByUrl(url: string): Array<router.RouterState>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;router.RouterState&gt; | 页面状态信息。 |
-
-**示例**
-
-完整示例请参考[PushUrl](#pushurl)中的示例。
-
-```TypeScript
-import { Router , UIContext } from '@kit.ArkUI';
-let uiContext: UIContext = this.getUIContext();
-let router: Router = uiContext.getRouter();
-let options:Array<router.RouterState> = router.getStateByUrl('pages/index');
-for (let i: number = 0; i < options.length; i++) {
-  console.info('index = ' + options[i].index);
-  console.info('name = ' + options[i].name);
-  console.info('path = ' + options[i].path);
-  console.info('params = ' + options[i].params);
-}
-```
+| Array&lt;[router.RouterState](arkts-arkui-router-routerstate-i.md)&gt; | 页面状态信息。 |
 
 ## hideAlertBeforeBackPage
 
@@ -421,18 +275,6 @@ hideAlertBeforeBackPage(): void
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-**示例**
-
-完整示例请参考[PushUrl](#pushurl)中的示例。
-
-```TypeScript
-import { Router , UIContext } from '@kit.ArkUI';
-let uiContext: UIContext = this.getUIContext();
-
-let router: Router = uiContext.getRouter();
-router.hideAlertBeforeBackPage();
-```
 
 ## pushNamedRoute
 
@@ -454,7 +296,7 @@ pushNamedRoute(options: router.NamedRouterOptions, callback: AsyncCallback<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | router.NamedRouterOptions | 是 | 跳转页面描述信息。 |
+| options | [router.NamedRouterOptions](arkts-arkui-router-namedrouteroptions-i.md) | 是 | 跳转页面描述信息。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 页面跳转结果回调函数。当页面跳转成功时，error为undefined。当页面跳转失败时，error为系统返回的错误对象。 |
 
 **错误码：**
@@ -465,53 +307,6 @@ pushNamedRoute(options: router.NamedRouterOptions, callback: AsyncCallback<void>
 | [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal error. |
 | [100003](../errorcode-router.md#100003-路由压入的page过多) | Page stack error. Too many pages are pushed. |
 | [100004](../errorcode-router.md#100004-命名路由页面跳转时输入的name错误) | Named route error. The named route does not exist. |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct Index {
-  async routePage() {
-    this.getUIContext().getRouter().pushNamedRoute({
-      name: 'myPage',
-      params: {
-        data1: 'message',
-        data2: {
-          data3: [123, 456, 789]
-        }
-      }
-    }, (err: Error) => {
-      if (err) {
-        let message = (err as BusinessError).message;
-        let code = (err as BusinessError).code;
-        console.error(`pushNamedRoute failed, code is ${code}, message is ${message}`);
-        return;
-      }
-      console.info('pushNamedRoute success');
-    })
-  }
-
-  build() {
-    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
-      Button() {
-        Text('next page')
-          .fontSize(25)
-          .fontWeight(FontWeight.Bold)
-      }.type(ButtonType.Capsule)
-      .margin({ top: 20 })
-      .backgroundColor('#ccc')
-      .onClick(() => {
-        this.routePage();
-      })
-    }
-    .width('100%')
-    .height('100%')
-  }
-}
-```
 
 ## pushNamedRoute
 
@@ -533,7 +328,7 @@ pushNamedRoute(options: router.NamedRouterOptions): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | router.NamedRouterOptions | 是 | 跳转页面描述信息，包含name（命名路由名称）和params（传递的参数）等字段。 |
+| options | [router.NamedRouterOptions](arkts-arkui-router-namedrouteroptions-i.md) | 是 | 跳转页面描述信息，包含name（命名路由名称）和params（传递的参数）等字段。 |
 
 **返回值：**
 
@@ -549,52 +344,6 @@ pushNamedRoute(options: router.NamedRouterOptions): Promise<void>
 | [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal error. |
 | [100003](../errorcode-router.md#100003-路由压入的page过多) | Page stack error. Too many pages are pushed. |
 | [100004](../errorcode-router.md#100004-命名路由页面跳转时输入的name错误) | Named route error. The named route does not exist. |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct Index {
-  async routePage() {
-    // 调用pushNamedRoute接口跳转到命名路由页面
-    this.getUIContext().getRouter().pushNamedRoute({
-        name: 'myPage',  // 命名路由名称
-        params: {  // 传递的页面参数
-          data1: 'message',
-          data2: {
-            data3: [123, 456, 789]
-          }
-        }
-      })
-      .then(() => {
-        console.info('succeeded');
-      })
-      .catch((error: BusinessError) => {
-        console.error(`pushNamedRoute failed, code is ${error.code}, message is ${error.message}`);
-      });
-  }
-
-  build() {
-    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
-      Button() {
-        Text('next page')
-          .fontSize(25)
-          .fontWeight(FontWeight.Bold)
-      }.type(ButtonType.Capsule)
-      .margin({ top: 20 })
-      .backgroundColor('#ccc')
-      .onClick(() => {
-        this.routePage();
-      })
-    }
-    .width('100%')
-    .height('100%')
-  }
-}
-```
 
 ## pushNamedRoute
 
@@ -616,8 +365,8 @@ pushNamedRoute(options: router.NamedRouterOptions, mode: router.RouterMode, call
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | router.NamedRouterOptions | 是 | 跳转页面描述信息。 |
-| mode | router.RouterMode | 是 | 跳转页面使用的模式，可选Standard（标准模式）或Single（单例模式）。建议根据页面栈管理需求选择：Standard模式适用于常规页面跳转；Single模式可避免相同页面重复入栈，适合登录页、主页等单例场景。 |
+| options | [router.NamedRouterOptions](arkts-arkui-router-namedrouteroptions-i.md) | 是 | 跳转页面描述信息。 |
+| mode | [router.RouterMode](arkts-arkui-router-routermode-e.md) | 是 | 跳转页面使用的模式，可选Standard（标准模式）或Single（单例模式）。建议根据页面栈管理需求选择：Standard模式适用于常规页面跳转；Single模式可避免相同页面重复入栈，适合登录页、主页等单例场景。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 页面跳转结果回调函数。当页面跳转成功时，error为undefined。当页面跳转失败时，error为系统返回的错误对象。 |
 
 **错误码：**
@@ -628,60 +377,6 @@ pushNamedRoute(options: router.NamedRouterOptions, mode: router.RouterMode, call
 | [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal error. |
 | [100003](../errorcode-router.md#100003-路由压入的page过多) | Page stack error. Too many pages are pushed. |
 | [100004](../errorcode-router.md#100004-命名路由页面跳转时输入的name错误) | Named route error. The named route does not exist. |
-
-**示例**
-
-```TypeScript
-import { router } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class RouterTmp {
-  Standard: router.RouterMode = router.RouterMode.Standard;
-}
-
-let rtm: RouterTmp = new RouterTmp();
-
-@Entry
-@Component
-struct Index {
-  async routePage() {
-    this.getUIContext().getRouter().pushNamedRoute({
-      name: 'myPage',
-      params: {
-        data1: 'message',
-        data2: {
-          data3: [123, 456, 789]
-        }
-      }
-    }, rtm.Standard, (err: Error) => {
-      if (err) {
-        let message = (err as BusinessError).message;
-        let code = (err as BusinessError).code;
-        console.error(`pushNamedRoute failed, code is ${code}, message is ${message}`);
-        return;
-      }
-      console.info('pushNamedRoute success');
-    })
-  }
-
-  build() {
-    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
-      Button() {
-        Text('next page')
-          .fontSize(25)
-          .fontWeight(FontWeight.Bold)
-      }.type(ButtonType.Capsule)
-      .margin({ top: 20 })
-      .backgroundColor('#ccc')
-      .onClick(() => {
-        this.routePage();
-      })
-    }
-    .width('100%')
-    .height('100%')
-  }
-}
-```
 
 ## pushNamedRoute
 
@@ -703,8 +398,8 @@ pushNamedRoute(options: router.NamedRouterOptions, mode: router.RouterMode): Pro
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | router.NamedRouterOptions | 是 | 跳转页面描述信息。 |
-| mode | router.RouterMode | 是 | 跳转页面使用的模式，可选Standard（标准模式）或Single（单例模式）。建议根据页面栈管理需求选择：Standard模式适用于常规页面跳转；Single模式可避免相同页面重复入栈，适合登录页、主页等单例场景。 |
+| options | [router.NamedRouterOptions](arkts-arkui-router-namedrouteroptions-i.md) | 是 | 跳转页面描述信息。 |
+| mode | [router.RouterMode](arkts-arkui-router-routermode-e.md) | 是 | 跳转页面使用的模式，可选Standard（标准模式）或Single（单例模式）。建议根据页面栈管理需求选择：Standard模式适用于常规页面跳转；Single模式可避免相同页面重复入栈，适合登录页、主页等单例场景。 |
 
 **返回值：**
 
@@ -720,57 +415,6 @@ pushNamedRoute(options: router.NamedRouterOptions, mode: router.RouterMode): Pro
 | [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal error. |
 | [100003](../errorcode-router.md#100003-路由压入的page过多) | Page stack error. Too many pages are pushed. |
 | [100004](../errorcode-router.md#100004-命名路由页面跳转时输入的name错误) | Named route error. The named route does not exist. |
-
-**示例**
-
-```TypeScript
-import { router } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class RouterTmp{
-  Standard:router.RouterMode = router.RouterMode.Standard;
-}
-let rtm:RouterTmp = new RouterTmp();
-
-@Entry
-@Component
-struct Index {
-  async routePage() {
-    this.getUIContext().getRouter().pushNamedRoute({
-      name: 'myPage',
-      params: {  // 传递的页面参数
-        data1: 'message',
-        data2: {
-          data3: [123, 456, 789]
-          }
-        }
-      }, rtm.Standard)
-      .then(() => {
-        console.info('succeeded');
-      })
-      .catch((error: BusinessError) => {
-        console.error(`pushNamedRoute failed, code is ${error.code}, message is ${error.message}`);
-      });
-  }
-
-  build() {
-    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
-      Button() {
-        Text('next page')
-          .fontSize(25)
-          .fontWeight(FontWeight.Bold)
-      }.type(ButtonType.Capsule)
-      .margin({ top: 20 })
-      .backgroundColor('#ccc')
-      .onClick(() => {
-        this.routePage();
-      })
-    }
-    .width('100%')
-    .height('100%')
-  }
-}
-```
 
 ## pushUrl
 
@@ -792,7 +436,7 @@ pushUrl(options: router.RouterOptions, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | router.RouterOptions | 是 | 跳转页面描述信息。 |
+| options | [router.RouterOptions](arkts-arkui-router-routeroptions-i.md) | 是 | 跳转页面描述信息。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 页面跳转结果回调函数。当页面跳转成功时，error为undefined。当页面跳转失败时，error为系统返回的错误对象。 |
 
 **错误码：**
@@ -803,54 +447,6 @@ pushUrl(options: router.RouterOptions, callback: AsyncCallback<void>): void
 | [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal error. |
 | [100002](../errorcode-router.md#100002-路由页面跳转时输入的uri错误) | Uri error. The URI of the page to redirect is incorrect or does not exist |
 | [100003](../errorcode-router.md#100003-路由压入的page过多) | Page stack error. Too many pages are pushed. |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct Index {
-  async routePage() {
-    // 调用pushUrl接口进行页面跳转
-    this.getUIContext().getRouter().pushUrl({
-      url: 'pages/routerpage2',  // 跳转目标页面路径
-      params: {  // 传递的页面参数
-        data1: 'message',
-        data2: {
-          data3: [123, 456, 789]
-        }
-      }
-    }, (err: Error) => {
-      if (err) {
-        let message = (err as BusinessError).message;
-        let code = (err as BusinessError).code;
-        console.error(`pushUrl failed, code is ${code}, message is ${message}`);
-        return;
-      }
-      console.info('pushUrl success');
-    })
-  }
-
-  build() {
-    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
-      Button() {
-        Text('next page')
-          .fontSize(25)
-          .fontWeight(FontWeight.Bold)
-      }.type(ButtonType.Capsule)
-      .margin({ top: 20 })
-      .backgroundColor('#ccc')
-      .onClick(() => {
-        this.routePage();
-      })
-    }
-    .width('100%')
-    .height('100%')
-  }
-}
-```
 
 ## pushUrl
 
@@ -876,7 +472,7 @@ pushUrl(options: router.RouterOptions): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | router.RouterOptions | 是 | 跳转页面描述信息，包含url（目标页面路径）和params（传递的参数）等字段。**说明：** 页面栈最大支持32个页面，建议跳转前通过[getStackSize](#getstacksize)（从API version 23开始支持）检查当前栈大小，避免超出限制导致跳转失败（错误码100003）。API version 23之前可使用[getLength](#getlength)检查。 |
+| options | [router.RouterOptions](arkts-arkui-router-routeroptions-i.md) | 是 | 跳转页面描述信息，包含url（目标页面路径）和params（传递的参数）等字段。**说明：** 页面栈最大支持32个页面，建议跳转前通过[getStackSize](#getstacksize)（从API version 23开始支持）检查当前栈大小，避免超出限制导致跳转失败（错误码100003）。API version 23之前可使用[getLength](#getlength)检查。 |
 
 **返回值：**
 
@@ -892,116 +488,6 @@ pushUrl(options: router.RouterOptions): Promise<void>
 | [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal error. |
 | [100002](../errorcode-router.md#100002-路由页面跳转时输入的uri错误) | Uri error. The URI of the page to redirect is incorrect or does not exist |
 | [100003](../errorcode-router.md#100003-路由压入的page过多) | Page stack error. Too many pages are pushed. |
-
-**示例**
-
-```TypeScript
-import { router } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 定义传递参数的内部类
-class InnerParams {
-  array: number[];
-
-  constructor(tuple: number[]) {
-    this.array = tuple;
-  }
-}
-
-// 定义路由参数类
-class RouterParams {
-  data: InnerParams;
-
-  constructor(tuple: number[]) {
-    this.data = new InnerParams(tuple);
-  }
-}
-
-@Entry
-@Component
-struct Index {
-  async routePage() {
-    let options: router.RouterOptions = {
-      url: 'pages/second',  // 跳转目标页面路径
-      params: new RouterParams([12, 45, 78])  // 传递的页面参数
-    }
-    this.getUIContext()
-      .getRouter()
-      .pushUrl(options)
-      .then(() => {
-        console.info('pushUrl success');
-      })
-      .catch((err: ESObject) => {
-        console.error(`pushUrl failed, code is ${(err as BusinessError).code}, message is ${(err as BusinessError).message}`);
-      });
-  }
-
-  build() {
-    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
-      Text('First Page')
-      Button('Next page')
-        .type(ButtonType.Capsule)
-        .margin({ top: 20 })
-        .onClick(() => {
-          this.routePage()
-        })
-    }
-    .width('100%')
-    .height('100%')
-  }
-}
-```
-
-```TypeScript
-// 在second页面中接收传递过来的参数
-class InnerParams {
-  array: number[];
-
-  constructor(tuple: number[]) {
-    this.array = tuple;
-  }
-}
-
-class RouterParams {
-  data: InnerParams;
-
-  constructor(tuple: number[]) {
-    this.data = new InnerParams(tuple);
-  }
-}
-
-@Entry
-@Component
-struct Second {
-  @State data: object = (this.getUIContext().getRouter().getParams() as RouterParams).data;
-  @State secondData: string = '';
-
-  build() {
-    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
-      Text('Second Page')
-      Button('Back')
-        .fontSize(30)
-        .onClick(() => {
-          try {
-            // 开启返回询问对话框
-            this.getUIContext().getRouter().showAlertBeforeBackPage({ message: 'Are you sure to return?' })
-          } catch (error) {
-            // TODO: Implement error handling.
-          }
-          this.getUIContext().getRouter().back()
-        })
-        .margin({ top: 20 })
-      Button(`The value on the first page：${this.secondData}`)
-        .margin({ top: 20 })
-        .onClick(()=> {
-          this.secondData = (this.data['array'][1]).toString();
-        })
-    }
-    .width('100%')
-    .height('100%')
-  }
-}
-```
 
 ## pushUrl
 
@@ -1023,8 +509,8 @@ pushUrl(options: router.RouterOptions, mode: router.RouterMode, callback: AsyncC
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | router.RouterOptions | 是 | 跳转页面描述信息。 |
-| mode | router.RouterMode | 是 | 跳转页面使用的模式，可选Standard（标准模式）或Single（单例模式）。建议根据页面栈管理需求选择：Standard模式适用于常规页面跳转；Single模式可避免相同页面重复入栈，适合登录页、主页等单例场景。 |
+| options | [router.RouterOptions](arkts-arkui-router-routeroptions-i.md) | 是 | 跳转页面描述信息。 |
+| mode | [router.RouterMode](arkts-arkui-router-routermode-e.md) | 是 | 跳转页面使用的模式，可选Standard（标准模式）或Single（单例模式）。建议根据页面栈管理需求选择：Standard模式适用于常规页面跳转；Single模式可避免相同页面重复入栈，适合登录页、主页等单例场景。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 页面跳转结果回调函数。当页面跳转成功时，error为undefined。当页面跳转失败时，error为系统返回的错误对象。 |
 
 **错误码：**
@@ -1035,60 +521,6 @@ pushUrl(options: router.RouterOptions, mode: router.RouterMode, callback: AsyncC
 | [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal error. |
 | [100002](../errorcode-router.md#100002-路由页面跳转时输入的uri错误) | Uri error. The URI of the page to redirect is incorrect or does not exist |
 | [100003](../errorcode-router.md#100003-路由压入的page过多) | Page stack error. Too many pages are pushed. |
-
-**示例**
-
-```TypeScript
-import { router } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class RouterTmp {
-  Standard: router.RouterMode = router.RouterMode.Standard;
-}
-
-let rtm: RouterTmp = new RouterTmp();
-
-@Entry
-@Component
-struct Index {
-  async routePage() {
-    this.getUIContext().getRouter().pushUrl({
-      url: 'pages/routerpage2',
-      params: {
-        data1: 'message',
-        data2: {
-          data3: [123, 456, 789]
-        }
-      }
-    }, rtm.Standard, (err) => {
-      if (err) {
-        let message = (err as BusinessError).message;
-        let code = (err as BusinessError).code;
-        console.error(`pushUrl failed, code is ${code}, message is ${message}`);
-        return;
-      }
-      console.info('pushUrl success');
-    })
-  }
-
-  build() {
-    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
-      Button() {
-        Text('next page')
-          .fontSize(25)
-          .fontWeight(FontWeight.Bold)
-      }.type(ButtonType.Capsule)
-      .margin({ top: 20 })
-      .backgroundColor('#ccc')
-      .onClick(() => {
-        this.routePage();
-      })
-    }
-    .width('100%')
-    .height('100%')
-  }
-}
-```
 
 ## pushUrl
 
@@ -1110,8 +542,8 @@ pushUrl(options: router.RouterOptions, mode: router.RouterMode): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | router.RouterOptions | 是 | 跳转页面描述信息。 |
-| mode | router.RouterMode | 是 | 跳转页面使用的模式，可选Standard（标准模式）或Single（单例模式）。建议根据页面栈管理需求选择：Standard模式适用于常规页面跳转；Single模式可避免相同页面重复入栈，适合登录页、主页等单例场景。 |
+| options | [router.RouterOptions](arkts-arkui-router-routeroptions-i.md) | 是 | 跳转页面描述信息。 |
+| mode | [router.RouterMode](arkts-arkui-router-routermode-e.md) | 是 | 跳转页面使用的模式，可选Standard（标准模式）或Single（单例模式）。建议根据页面栈管理需求选择：Standard模式适用于常规页面跳转；Single模式可避免相同页面重复入栈，适合登录页、主页等单例场景。 |
 
 **返回值：**
 
@@ -1127,59 +559,6 @@ pushUrl(options: router.RouterOptions, mode: router.RouterMode): Promise<void>
 | [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal error. |
 | [100002](../errorcode-router.md#100002-路由页面跳转时输入的uri错误) | Uri error. The URI of the page to redirect is incorrect or does not exist |
 | [100003](../errorcode-router.md#100003-路由压入的page过多) | Page stack error. Too many pages are pushed. |
-
-**示例**
-
-```TypeScript
-import { router } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 定义路由模式类
-class RouterTmp {
-  Standard: router.RouterMode = router.RouterMode.Standard;  // 标准路由模式
-}
-
-let rtm: RouterTmp = new RouterTmp();
-
-@Entry
-@Component
-struct Index {
-  async routePage() {
-    this.getUIContext().getRouter().pushUrl({
-        url: 'pages/routerpage2',
-        params: {  // 传递的页面参数
-          data1: 'message',
-          data2: {
-            data3: [123, 456, 789]
-          }
-        }
-      }, rtm.Standard)  // 使用标准路由模式
-      .then(() => {
-        console.info('succeeded');
-      })
-      .catch((error: BusinessError) => {
-        console.error(`pushUrl failed, code is ${error.code}, message is ${error.message}`);
-      });
-  }
-
-  build() {
-    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
-      Button() {
-        Text('next page')
-          .fontSize(25)
-          .fontWeight(FontWeight.Bold)
-      }.type(ButtonType.Capsule)
-      .margin({ top: 20 })
-      .backgroundColor('#ccc')
-      .onClick(() => {
-        this.routePage();
-      })
-    }
-    .width('100%')
-    .height('100%')
-  }
-}
-```
 
 ## replaceNamedRoute
 
@@ -1201,7 +580,7 @@ replaceNamedRoute(options: router.NamedRouterOptions, callback: AsyncCallback<vo
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | router.NamedRouterOptions | 是 | 替换页面描述信息。 |
+| options | [router.NamedRouterOptions](arkts-arkui-router-namedrouteroptions-i.md) | 是 | 替换页面描述信息。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 页面替换结果回调函数。当页面替换成功时，error为undefined。当页面替换失败时，error为系统返回的错误对象。 |
 
 **错误码：**
@@ -1211,50 +590,6 @@ replaceNamedRoute(options: router.NamedRouterOptions, callback: AsyncCallback<vo
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
 | [100001](../errorcode-internal.md#100001-接口调用异常错误码) | The UI execution context is not found. This error code is thrown only in the standard system. |
 | [100004](../errorcode-router.md#100004-命名路由页面跳转时输入的name错误) | Named route error. The named route does not exist. |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct Index {
-  async routePage() {
-    this.getUIContext().getRouter().replaceNamedRoute({
-      name: 'myPage',
-      params: {  // 传递的页面参数
-        data1: 'message'
-      }
-    }, (err: Error) => {
-      if (err) {
-        let message = (err as BusinessError).message;
-        let code = (err as BusinessError).code;
-        console.error(`replaceNamedRoute failed, code is ${code}, message is ${message}`);
-        return;
-      }
-      console.info('replaceNamedRoute success');
-    })
-  }
-
-  build() {
-    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
-      Button() {
-        Text('next page')
-          .fontSize(25)
-          .fontWeight(FontWeight.Bold)
-      }.type(ButtonType.Capsule)
-      .margin({ top: 20 })
-      .backgroundColor('#ccc')
-      .onClick(() => {
-        this.routePage();
-      })
-    }
-    .width('100%')
-    .height('100%')
-  }
-}
-```
 
 ## replaceNamedRoute
 
@@ -1276,7 +611,7 @@ replaceNamedRoute(options: router.NamedRouterOptions): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | router.NamedRouterOptions | 是 | 替换页面描述信息。 |
+| options | [router.NamedRouterOptions](arkts-arkui-router-namedrouteroptions-i.md) | 是 | 替换页面描述信息。 |
 
 **返回值：**
 
@@ -1291,49 +626,6 @@ replaceNamedRoute(options: router.NamedRouterOptions): Promise<void>
 | [401](../../errorcode-universal.md#401-参数检查失败) | if the number of parameters is less than 1 or the type of the url parameter is not string. |
 | [100001](../errorcode-internal.md#100001-接口调用异常错误码) | The UI execution context is not found. This error code is thrown only in the standard system. |
 | [100004](../errorcode-router.md#100004-命名路由页面跳转时输入的name错误) | Named route error. The named route does not exist. |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct Index {
-  async routePage() {
-    // 调用replaceNamedRoute接口替换命名路由页面
-    this.getUIContext().getRouter().replaceNamedRoute({
-        name: 'myPage',
-        params: {  // 传递的页面参数
-          data1: 'message'
-        }
-      })
-      .then(() => {
-        console.info('succeeded');
-      })
-      .catch((error: BusinessError) => {
-        console.error(`replaceNamedRoute failed, code is ${error.code}, message is ${error.message}`);
-      });
-  }
-
-  build() {
-    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
-      Button() {
-        Text('next page')
-          .fontSize(25)
-          .fontWeight(FontWeight.Bold)
-      }.type(ButtonType.Capsule)
-      .margin({ top: 20 })
-      .backgroundColor('#ccc')
-      .onClick(() => {
-        this.routePage();
-      })
-    }
-    .width('100%')
-    .height('100%')
-  }
-}
-```
 
 ## replaceNamedRoute
 
@@ -1355,8 +647,8 @@ replaceNamedRoute(options: router.NamedRouterOptions, mode: router.RouterMode, c
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | router.NamedRouterOptions | 是 | 替换页面描述信息。 |
-| mode | router.RouterMode | 是 | 替换页面使用的模式，可选Standard（标准模式）或Single（单例模式）。建议根据页面栈管理需求选择：Standard模式适用于常规页面跳转；Single模式可避免相同页面重复入栈，适合登录页、主页等单例场景。 |
+| options | [router.NamedRouterOptions](arkts-arkui-router-namedrouteroptions-i.md) | 是 | 替换页面描述信息。 |
+| mode | [router.RouterMode](arkts-arkui-router-routermode-e.md) | 是 | 替换页面使用的模式，可选Standard（标准模式）或Single（单例模式）。建议根据页面栈管理需求选择：Standard模式适用于常规页面跳转；Single模式可避免相同页面重复入栈，适合登录页、主页等单例场景。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 页面替换结果回调函数。当页面替换成功时，error为undefined。当页面替换失败时，error为系统返回的错误对象。 |
 
 **错误码：**
@@ -1366,57 +658,6 @@ replaceNamedRoute(options: router.NamedRouterOptions, mode: router.RouterMode, c
 | [401](../../errorcode-universal.md#401-参数检查失败) | if the number of parameters is less than 1 or the type of the url parameter is not string. |
 | [100001](../errorcode-internal.md#100001-接口调用异常错误码) | The UI execution context is not found. This error code is thrown only in the standard system. |
 | [100004](../errorcode-router.md#100004-命名路由页面跳转时输入的name错误) | Named route error. The named route does not exist. |
-
-**示例**
-
-```TypeScript
-import { router } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class RouterTmp {
-  Standard: router.RouterMode = router.RouterMode.Standard;
-}
-
-let rtm: RouterTmp = new RouterTmp();
-
-@Entry
-@Component
-struct Index {
-  async routePage() {
-    this.getUIContext().getRouter().replaceNamedRoute({
-      name: 'myPage',
-      params: {
-        data1: 'message'
-      }
-    }, rtm.Standard, (err: Error) => {
-      if (err) {
-        let message = (err as BusinessError).message;
-        let code = (err as BusinessError).code;
-        console.error(`replaceNamedRoute failed, code is ${code}, message is ${message}`);
-        return;
-      }
-      console.info('replaceNamedRoute success');
-    })
-  }
-
-  build() {
-    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
-      Button() {
-        Text('next page')
-          .fontSize(25)
-          .fontWeight(FontWeight.Bold)
-      }.type(ButtonType.Capsule)
-      .margin({ top: 20 })
-      .backgroundColor('#ccc')
-      .onClick(() => {
-        this.routePage();
-      })
-    }
-    .width('100%')
-    .height('100%')
-  }
-}
-```
 
 ## replaceNamedRoute
 
@@ -1438,8 +679,8 @@ replaceNamedRoute(options: router.NamedRouterOptions, mode: router.RouterMode): 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | router.NamedRouterOptions | 是 | 替换页面描述信息。 |
-| mode | router.RouterMode | 是 | 跳转页面使用的模式，可选Standard（标准模式）或Single（单例模式）。建议根据页面栈管理需求选择：Standard模式适用于常规页面跳转；Single模式可避免相同页面重复入栈，适合登录页、主页等单例场景。 |
+| options | [router.NamedRouterOptions](arkts-arkui-router-namedrouteroptions-i.md) | 是 | 替换页面描述信息。 |
+| mode | [router.RouterMode](arkts-arkui-router-routermode-e.md) | 是 | 跳转页面使用的模式，可选Standard（标准模式）或Single（单例模式）。建议根据页面栈管理需求选择：Standard模式适用于常规页面跳转；Single模式可避免相同页面重复入栈，适合登录页、主页等单例场景。 |
 
 **返回值：**
 
@@ -1454,55 +695,6 @@ replaceNamedRoute(options: router.NamedRouterOptions, mode: router.RouterMode): 
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
 | [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Failed to get the delegate. This error code is thrown only in the standard system. |
 | [100004](../errorcode-router.md#100004-命名路由页面跳转时输入的name错误) | Named route error. The named route does not exist. |
-
-**示例**
-
-```TypeScript
-import { router } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class RouterTmp {
-  Standard: router.RouterMode = router.RouterMode.Standard;
-}
-
-let rtm: RouterTmp = new RouterTmp();
-
-@Entry
-@Component
-struct Index {
-  async routePage() {
-    this.getUIContext().getRouter().replaceNamedRoute({
-        name: 'myPage',
-        params: {
-          data1: 'message'
-        }
-      }, rtm.Standard)
-      .then(() => {
-        console.info('succeeded');
-      })
-      .catch((error: BusinessError) => {
-        console.error(`replaceNamedRoute failed, code is ${error.code}, message is ${error.message}`);
-      });
-  }
-
-  build() {
-    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
-      Button() {
-        Text('next page')
-          .fontSize(25)
-          .fontWeight(FontWeight.Bold)
-      }.type(ButtonType.Capsule)
-      .margin({ top: 20 })
-      .backgroundColor('#ccc')
-      .onClick(() => {
-        this.routePage();
-      })
-    }
-    .width('100%')
-    .height('100%')
-  }
-}
-```
 
 ## replaceUrl
 
@@ -1524,7 +716,7 @@ replaceUrl(options: router.RouterOptions, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | router.RouterOptions | 是 | 替换页面描述信息。 |
+| options | [router.RouterOptions](arkts-arkui-router-routeroptions-i.md) | 是 | 替换页面描述信息。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 页面替换结果回调函数。当页面替换成功时，error为undefined。当页面替换失败时，error为系统返回的错误对象。 |
 
 **错误码：**
@@ -1534,50 +726,6 @@ replaceUrl(options: router.RouterOptions, callback: AsyncCallback<void>): void
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
 | [100001](../errorcode-internal.md#100001-接口调用异常错误码) | The UI execution context is not found. This error code is thrown only in the standard system. |
 | [200002](../errorcode-router.md#200002-路由页面替换时输入的uri错误) | Uri error. The URI of the page to be used for replacement is incorrect or does not exist. |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct Index {
-  async routePage() {
-    this.getUIContext().getRouter().replaceUrl({
-      url: 'pages/detail',
-      params: {  // 传递的页面参数
-        data1: 'message'
-      }
-    }, (err: Error) => {
-      if (err) {
-        let message = (err as BusinessError).message;
-        let code = (err as BusinessError).code;
-        console.error(`replaceUrl failed, code is ${code}, message is ${message}`);
-        return;
-      }
-      console.info('replaceUrl success');
-    })
-  }
-
-  build() {
-    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
-      Button() {
-        Text('next page')
-          .fontSize(25)
-          .fontWeight(FontWeight.Bold)
-      }.type(ButtonType.Capsule)
-      .margin({ top: 20 })
-      .backgroundColor('#ccc')
-      .onClick(() => {
-        this.routePage();
-      })
-    }
-    .width('100%')
-    .height('100%')
-  }
-}
-```
 
 ## replaceUrl
 
@@ -1604,7 +752,7 @@ replaceUrl(options: router.RouterOptions): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | router.RouterOptions | 是 | 替换页面描述信息。 |
+| options | [router.RouterOptions](arkts-arkui-router-routeroptions-i.md) | 是 | 替换页面描述信息。 |
 
 **返回值：**
 
@@ -1619,49 +767,6 @@ replaceUrl(options: router.RouterOptions): Promise<void>
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
 | [100001](../errorcode-internal.md#100001-接口调用异常错误码) | The UI execution context is not found. This error code is thrown only in the standard system. |
 | [200002](../errorcode-router.md#200002-路由页面替换时输入的uri错误) | Uri error. The URI of the page to be used for replacement is incorrect or does not exist. |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct Index {
-  async routePage() {
-    // 调用replaceUrl接口进行页面替换
-    this.getUIContext().getRouter().replaceUrl({
-        url: 'pages/detail',  // 替换的目标页面路径
-        params: {  // 传递的页面参数
-          data1: 'message'
-        }
-      })
-      .then(() => {
-        console.info('succeeded');
-      })
-      .catch((error: BusinessError) => {
-        console.error(`replaceUrl failed, code is ${error.code}, message is ${error.message}`);
-      });
-  }
-
-  build() {
-    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
-      Button() {
-        Text('next page')
-          .fontSize(25)
-          .fontWeight(FontWeight.Bold)
-      }.type(ButtonType.Capsule)
-      .margin({ top: 20 })
-      .backgroundColor('#ccc')
-      .onClick(() => {
-        this.routePage();
-      })
-    }
-    .width('100%')
-    .height('100%')
-  }
-}
-```
 
 ## replaceUrl
 
@@ -1683,8 +788,8 @@ replaceUrl(options: router.RouterOptions, mode: router.RouterMode, callback: Asy
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | router.RouterOptions | 是 | 替换页面描述信息。 |
-| mode | router.RouterMode | 是 | 替换页面使用的模式，可选Standard（标准模式）或Single（单例模式）。建议根据页面栈管理需求选择：Standard模式适用于常规页面跳转；Single模式可避免相同页面重复入栈，适合登录页、主页等单例场景。 |
+| options | [router.RouterOptions](arkts-arkui-router-routeroptions-i.md) | 是 | 替换页面描述信息。 |
+| mode | [router.RouterMode](arkts-arkui-router-routermode-e.md) | 是 | 替换页面使用的模式，可选Standard（标准模式）或Single（单例模式）。建议根据页面栈管理需求选择：Standard模式适用于常规页面跳转；Single模式可避免相同页面重复入栈，适合登录页、主页等单例场景。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 页面替换结果回调函数。当页面替换成功时，error为undefined。当页面替换失败时，error为系统返回的错误对象。 |
 
 **错误码：**
@@ -1694,57 +799,6 @@ replaceUrl(options: router.RouterOptions, mode: router.RouterMode, callback: Asy
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
 | [100001](../errorcode-internal.md#100001-接口调用异常错误码) | The UI execution context is not found. This error code is thrown only in the standard system. |
 | [200002](../errorcode-router.md#200002-路由页面替换时输入的uri错误) | Uri error. The URI of the page to be used for replacement is incorrect or does not exist. |
-
-**示例**
-
-```TypeScript
-import { router } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class RouterTmp {
-  Standard: router.RouterMode = router.RouterMode.Standard;
-}
-
-let rtm: RouterTmp = new RouterTmp();
-
-@Entry
-@Component
-struct Index {
-  async routePage() {
-    this.getUIContext().getRouter().replaceUrl({
-      url: 'pages/detail',
-      params: {
-        data1: 'message'
-      }
-    }, rtm.Standard, (err: Error) => {
-      if (err) {
-        let message = (err as BusinessError).message;
-        let code = (err as BusinessError).code;
-        console.error(`replaceUrl failed, code is ${code}, message is ${message}`);
-        return;
-      }
-      console.info('replaceUrl success');
-    });
-  }
-
-  build() {
-    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
-      Button() {
-        Text('next page')
-          .fontSize(25)
-          .fontWeight(FontWeight.Bold)
-      }.type(ButtonType.Capsule)
-      .margin({ top: 20 })
-      .backgroundColor('#ccc')
-      .onClick(() => {
-        this.routePage();
-      })
-    }
-    .width('100%')
-    .height('100%')
-  }
-}
-```
 
 ## replaceUrl
 
@@ -1766,8 +820,8 @@ replaceUrl(options: router.RouterOptions, mode: router.RouterMode): Promise<void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | router.RouterOptions | 是 | 替换页面描述信息。 |
-| mode | router.RouterMode | 是 | 替换页面使用的模式，可选Standard（标准模式）或Single（单例模式）。建议根据页面栈管理需求选择：Standard模式适用于常规页面跳转；Single模式可避免相同页面重复入栈，适合登录页、主页等单例场景。 |
+| options | [router.RouterOptions](arkts-arkui-router-routeroptions-i.md) | 是 | 替换页面描述信息。 |
+| mode | [router.RouterMode](arkts-arkui-router-routermode-e.md) | 是 | 替换页面使用的模式，可选Standard（标准模式）或Single（单例模式）。建议根据页面栈管理需求选择：Standard模式适用于常规页面跳转；Single模式可避免相同页面重复入栈，适合登录页、主页等单例场景。 |
 
 **返回值：**
 
@@ -1782,55 +836,6 @@ replaceUrl(options: router.RouterOptions, mode: router.RouterMode): Promise<void
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
 | [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Failed to get the delegate. This error code is thrown only in the standard system. |
 | [200002](../errorcode-router.md#200002-路由页面替换时输入的uri错误) | Uri error. The URI of the page to be used for replacement is incorrect or does not exist. |
-
-**示例**
-
-```TypeScript
-import { router } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class RouterTmp {
-  Standard: router.RouterMode = router.RouterMode.Standard;
-}
-
-let rtm: RouterTmp = new RouterTmp();
-
-@Entry
-@Component
-struct Index {
-  async routePage() {
-    this.getUIContext().getRouter().replaceUrl({
-        url: 'pages/detail',
-        params: {
-          data1: 'message'
-        }
-      }, rtm.Standard)
-      .then(() => {
-        console.info('succeeded');
-      })
-      .catch((error: BusinessError) => {
-        console.error(`replaceUrl failed, code is ${error.code}, message is ${error.message}`);
-      });
-  }
-
-  build() {
-    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
-      Button() {
-        Text('next page')
-          .fontSize(25)
-          .fontWeight(FontWeight.Bold)
-      }.type(ButtonType.Capsule)
-      .margin({ top: 20 })
-      .backgroundColor('#ccc')
-      .onClick(() => {
-        this.routePage();
-      })
-    }
-    .width('100%')
-    .height('100%')
-  }
-}
-```
 
 ## showAlertBeforeBackPage
 
@@ -1852,7 +857,7 @@ showAlertBeforeBackPage(options: router.EnableAlertOptions): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | router.EnableAlertOptions | 是 | 文本弹窗信息描述，包含message（弹窗提示内容）等参数。 |
+| options | [router.EnableAlertOptions](arkts-arkui-router-enablealertoptions-i.md) | 是 | 文本弹窗信息描述，包含message（弹窗提示内容）等参数。 |
 
 **错误码：**
 
@@ -1860,24 +865,3 @@ showAlertBeforeBackPage(options: router.EnableAlertOptions): void
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
 | [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal error. |
-
-**示例**
-
-完整示例请参考[PushUrl](#pushurl)中的示例。
-
-```TypeScript
-import { Router , UIContext } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let uiContext: UIContext = this.getUIContext();
-let router: Router = uiContext.getRouter();
-try {
-  router.showAlertBeforeBackPage({            
-    message: 'Message Info'        
-  });
-} catch(error) {
-  let message = (error as BusinessError).message;
-  let code = (error as BusinessError).code;
-  console.error(`showAlertBeforeBackPage failed, code is ${code}, message is ${message}`);
-}
-```

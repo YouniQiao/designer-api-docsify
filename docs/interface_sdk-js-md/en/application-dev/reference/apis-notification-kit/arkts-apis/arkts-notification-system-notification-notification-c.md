@@ -37,21 +37,3 @@ Displays the notification.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | options | [ShowNotificationOptions](arkts-notification-system-notification-shownotificationoptions-i.md) | No | Notification title. |
-
-**Examples**
-
-```TypeScript
-let notificationObj: notification = {
-  show() {
-    notification.show({
-      contentTitle: 'title info',
-      contentText: 'text',
-      clickAction: {
-        bundleName: 'com.example.testapp',
-        abilityName: 'notificationDemo',
-        uri: '/path/to/notification'
-      }
-    });
-  }
-}
-```

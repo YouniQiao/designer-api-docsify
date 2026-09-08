@@ -28,7 +28,7 @@ Register the callback for deleting forms.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | formInfo.DeleteFormsCallback | Yes | Identifies the callback for deleting forms. |
+| callback | [formInfo.DeleteFormsCallback](arkts-form-forminfo-deleteformscallback-t-sys.md) | Yes | Identifies the callback for deleting forms. |
 
 **Error codes:**
 

@@ -25,7 +25,7 @@ font?: Font
 
 从API version 12开始，底部页签内容左右排布时默认字体大小为12.0fp。
 
-**类型：** Font
+**类型：** [Font](../arkts-apis/arkts-arkui-font-i.md)
 
 **起始版本：** 10
 

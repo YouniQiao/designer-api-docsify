@@ -36,7 +36,7 @@ netHandle: NetHandle
 
 Network handle.
 
-**Type:** NetHandle
+**Type:** [NetHandle](arkts-network-connection-nethandle-i.md)
 
 **Since:** 10
 

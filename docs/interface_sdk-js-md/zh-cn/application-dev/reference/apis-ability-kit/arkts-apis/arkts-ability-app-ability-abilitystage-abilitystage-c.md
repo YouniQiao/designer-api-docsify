@@ -287,7 +287,7 @@ onMemoryLevel(level: AbilityConstant.MemoryLevel): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| level | AbilityConstant.MemoryLevel | 是 | 整机可用内存级别，对应的触发场景详见[AbilityConstant.MemoryLevel](arkts-ability-abilityconstant-memorylevel-e.md)。 |
+| level | [AbilityConstant.MemoryLevel](arkts-ability-abilityconstant-memorylevel-e.md) | 是 | 整机可用内存级别，对应的触发场景详见[AbilityConstant.MemoryLevel](arkts-ability-abilityconstant-memorylevel-e.md)。 |
 
 **示例**
 
@@ -439,7 +439,7 @@ onPrepareTermination(): AbilityConstant.PrepareTermination
 
 | 类型 | 说明 |
 | --- | --- |
-| AbilityConstant.PrepareTermination | The user's choice. |
+| [AbilityConstant.PrepareTermination](arkts-ability-abilityconstant-preparetermination-e.md) | The user's choice. |
 
 **示例**
 
@@ -482,7 +482,7 @@ onPrepareTerminationAsync(): Promise<AbilityConstant.PrepareTermination>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;AbilityConstant.PrepareTermination&gt; | Promise used to return the user's choice. |
+| Promise&lt;[AbilityConstant.PrepareTermination](arkts-ability-abilityconstant-preparetermination-e.md)&gt; | Promise used to return the user's choice. |
 
 **示例**
 

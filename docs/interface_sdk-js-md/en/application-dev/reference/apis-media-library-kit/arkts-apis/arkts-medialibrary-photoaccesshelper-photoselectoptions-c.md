@@ -204,7 +204,7 @@ pickerColorMode?: PickerColorMode
 
 Picker color mode. Dark/light color mode of all content within the Picker. The default value is `PickerColorMode.AUTO`, which follows the system's dark/light color mode.
 
-**Type:** PickerColorMode
+**Type:** [PickerColorMode](arkts-medialibrary-photoaccesshelper-pickercolormode-e.md)
 
 **Since:** 26.1.0
 
@@ -229,14 +229,3 @@ Name of the child window.
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
-
-**Examples**
-
-```TypeScript
-async function photoPicker() {
-    let picker = new photoAccessHelper.PhotoViewPicker();
-    let option = new photoAccessHelper.PhotoSelectOptions();
-    option.userId = 101;
-    picker.select(option);
-  }
-```

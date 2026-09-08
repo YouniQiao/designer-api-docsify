@@ -35,27 +35,6 @@ function acquireShareData(missionId: number, callback: AsyncCallback<Record<stri
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
 
-**示例**
-
-```TypeScript
-import { abilityManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  abilityManager.acquireShareData(1, (err: BusinessError, wantParam: Record<string, Object>) => {
-    if (err) {
-      console.error(`acquireShareData fail, err: ${JSON.stringify(err)}`);
-    } else {
-      console.info(`acquireShareData success, data: ${JSON.stringify(wantParam)}`);
-    }
-  });
-} catch (paramError) {
-  let code: number = (paramError as BusinessError).code;
-  let message: string = (paramError as BusinessError).message;
-  console.error(`error.code: ${code}, error.message: ${message}`);
-}
-```
-
 
 ## acquireShareData
 
@@ -91,22 +70,3 @@ function acquireShareData(missionId: number): Promise<Record<string, Object>>
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
-
-**示例**
-
-```TypeScript
-import { abilityManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  abilityManager.acquireShareData(1).then((wantParam: Record<string, Object>) => {
-    console.info(`acquireShareData success, data: ${JSON.stringify(wantParam)}`);
-  }).catch((err: BusinessError) => {
-    console.error(`acquireShareData fail, err: ${JSON.stringify(err)}`);
-  });
-} catch (paramError) {
-  let code: number = (paramError as BusinessError).code;
-  let message: string = (paramError as BusinessError).message;
-  console.error(`error.code: ${code}, error.message: ${message}`);
-}
-```

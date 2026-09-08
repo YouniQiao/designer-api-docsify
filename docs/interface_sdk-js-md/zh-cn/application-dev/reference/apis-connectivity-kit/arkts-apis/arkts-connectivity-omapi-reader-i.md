@@ -166,7 +166,7 @@ openSession(): Session
 
 | 类型 | 说明 |
 | --- | --- |
-| Session | 连接会话Session实例。 |
+| [Session](arkts-connectivity-omapi-session-i.md) | 连接会话Session实例。 |
 
 **错误码：**
 

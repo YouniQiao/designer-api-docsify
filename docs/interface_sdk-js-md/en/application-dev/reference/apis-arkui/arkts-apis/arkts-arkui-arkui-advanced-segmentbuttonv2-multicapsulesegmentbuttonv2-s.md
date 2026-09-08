@@ -60,7 +60,7 @@ Default value: **undefined**
 
 This property is read-only.
 
-**Type:** BlurStyle
+**Type:** [BlurStyle](../arkts-components/arkts-arkui-blurstyle-e.md)
 
 **Since:** 18
 
@@ -240,7 +240,7 @@ When **fontWeight** of **textModifier** is set for **items**, **itemFontWeight**
 
 This property is read-only.
 
-**Type:** FontWeight
+**Type:** [FontWeight](arkts-arkui-fontweight-e.md)
 
 **Since:** 18
 
@@ -326,7 +326,7 @@ A value less than 1 is treated as **1**. A value greater than 2 is treated as **
 
 This property is read-only.
 
-**Type:** number \| Resource
+**Type:** number \| [Resource](arkts-arkui-resource-t.md)
 
 **Since:** 18
 
@@ -354,7 +354,7 @@ A value less than 0 is treated as **0**. A value greater than 1 is treated as **
 
 This property is read-only.
 
-**Type:** number \| Resource
+**Type:** number \| [Resource](arkts-arkui-resource-t.md)
 
 **Since:** 18
 
@@ -540,7 +540,7 @@ When **fontWeight** of **textModifier** is set for **items**, **itemSelectedFont
 
 This property is read-only.
 
-**Type:** FontWeight
+**Type:** [FontWeight](arkts-arkui-fontweight-e.md)
 
 **Since:** 18
 
@@ -706,7 +706,7 @@ If the value is out of the range, the default value is used.
 
 This property is read-only.
 
-**Type:** Direction
+**Type:** [Direction](arkts-arkui-direction-e.md)
 
 **Since:** 18
 

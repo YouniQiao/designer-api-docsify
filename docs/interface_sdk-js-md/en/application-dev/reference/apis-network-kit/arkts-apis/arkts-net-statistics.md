@@ -9,7 +9,7 @@ resource consumption of applications.
 - Obtaining traffic statistics for a specified socket, providing a data foundation for fine-grained network  
 performance analysis.  
 - Obtaining the historical traffic usage of an application within a specified time period, facilitating the analysis  
-of number-term network usage trends of the application.
+of long-term network usage trends of the application.
 
 **Since:** 10
 

@@ -26,13 +26,13 @@ function convertToAbilityStageContext(sendableContext: SendableContext): common.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| sendableContext | SendableContext | 是 |  |
+| sendableContext | [SendableContext](arkts-ability-sendablecontextmanager-sendablecontext-t.md) | 是 |  |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| common.AbilityStageContext | [AbilityStageContext]{ |
+| [common.AbilityStageContext](arkts-ability-common-abilitystagecontext-t.md) | [AbilityStageContext]{ |
 
 **错误码：**
 

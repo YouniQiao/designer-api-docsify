@@ -17,7 +17,7 @@ Interaction behavior for the floating preview image
 defaultAnimationBeforeLifting?: boolean
 ```
 
-Whether to enable the default press animation (scale-down) during number-press lift phase. **true** to enable, **false** otherwise.
+Whether to enable the default press animation (scale-down) during long-press lift phase. **true** to enable, **false** otherwise.
 
 Default value: **false**.
 
@@ -93,7 +93,7 @@ Whether to disable the lift animation effect during dragging.
 
 **false**: Enable the lifting effect during dragging.
 
-With the value **true**, only the custom menu preview (set using [bindContextMenu](arkts-arkui-commonmethod-c.md#bindcontextmenu)), also known as the number-press preview, is displayed if both the number-press preview and drag preview are configured.
+With the value **true**, only the custom menu preview (set using [bindContextMenu](arkts-arkui-commonmethod-c.md#bindcontextmenu)), also known as the long-press preview, is displayed if both the long-press preview and drag preview are configured.
 
 Default value: **false**
 

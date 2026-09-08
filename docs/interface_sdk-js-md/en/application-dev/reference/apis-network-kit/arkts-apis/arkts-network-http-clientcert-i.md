@@ -34,7 +34,7 @@ certType?: CertType
 
 Certificate type. The default value is **PEM**.
 
-**Type:** CertType
+**Type:** [CertType](arkts-network-http-certtype-e.md)
 
 **Since:** 11
 

@@ -26,7 +26,7 @@ load(soundType: systemSoundManager.SystemSoundType): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| soundType | systemSoundManager.SystemSoundType | 是 | 系统音效类型。 |
+| soundType | [systemSoundManager.SystemSoundType](arkts-audio-systemsoundmanager-systemsoundtype-e.md) | 是 | 系统音效类型。 |
 
 **返回值：**
 
@@ -72,7 +72,7 @@ play(soundType: systemSoundManager.SystemSoundType): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| soundType | systemSoundManager.SystemSoundType | 是 | 系统音效类型。 |
+| soundType | [systemSoundManager.SystemSoundType](arkts-audio-systemsoundmanager-systemsoundtype-e.md) | 是 | 系统音效类型。 |
 
 **返回值：**
 
@@ -156,7 +156,7 @@ unload(soundType: systemSoundManager.SystemSoundType): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| soundType | systemSoundManager.SystemSoundType | 是 | 系统音效类型。 |
+| soundType | [systemSoundManager.SystemSoundType](arkts-audio-systemsoundmanager-systemsoundtype-e.md) | 是 | 系统音效类型。 |
 
 **返回值：**
 

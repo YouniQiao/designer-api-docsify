@@ -25,7 +25,7 @@ batchInsert(uri: string, valuesBuckets: Array<rdb.ValuesBucket>, callback: Async
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | uri | string | 是 | 表示要插入数据的uri。 |
-| valuesBuckets | Array&lt;rdb.ValuesBucket&gt; | 是 | 表示要插入的数据记录数组。 |
+| valuesBuckets | Array&lt;[rdb.ValuesBucket](../../apis-arkdata/arkts-apis/arkts-arkdata-rdb-valuesbucket-t.md)&gt; | 是 | 表示要插入的数据记录数组。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数，返回插入的数据记录数。 |
 
 **示例**
@@ -69,7 +69,7 @@ batchInsert(uri: string, valuesBuckets: Array<rdb.ValuesBucket>): Promise<number
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | uri | string | 是 | 表示要插入数据的uri。 |
-| valuesBuckets | Array&lt;rdb.ValuesBucket&gt; | 是 | 表示要插入的数据记录数组。 |
+| valuesBuckets | Array&lt;[rdb.ValuesBucket](../../apis-arkdata/arkts-apis/arkts-arkdata-rdb-valuesbucket-t.md)&gt; | 是 | 表示要插入的数据记录数组。 |
 
 **返回值：**
 
@@ -204,7 +204,7 @@ delete(uri: string, predicates: dataAbility.DataAbilityPredicates, callback: Asy
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | uri | string | 是 | 表示要删除数据的uri。 |
-| predicates | dataAbility.DataAbilityPredicates | 是 | 表示筛选条件。当此参数为null时，应定义处理逻辑。 |
+| predicates | [dataAbility.DataAbilityPredicates](../../apis-arkdata/arkts-apis/arkts-arkdata-dataability-dataabilitypredicates-c.md) | 是 | 表示筛选条件。当此参数为null时，应定义处理逻辑。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数，返回已删除的数据记录数。 |
 
 **示例**
@@ -246,7 +246,7 @@ delete(uri: string, predicates?: dataAbility.DataAbilityPredicates): Promise<num
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | uri | string | 是 | 表示要删除数据的uri。 |
-| predicates | dataAbility.DataAbilityPredicates | 否 | 表示筛选条件。当此参数为null时，应定义处理逻辑。 |
+| predicates | [dataAbility.DataAbilityPredicates](../../apis-arkdata/arkts-apis/arkts-arkdata-dataability-dataabilitypredicates-c.md) | 否 | 表示筛选条件。当此参数为null时，应定义处理逻辑。 |
 
 **返回值：**
 
@@ -659,7 +659,7 @@ insert(uri: string, valuesBucket: rdb.ValuesBucket, callback: AsyncCallback<numb
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | uri | string | 是 | 表示要插入数据的uri。 |
-| valuesBucket | rdb.ValuesBucket | 是 | 表示要插入的数据记录。如果此参数为空，将插入一个空行。 |
+| valuesBucket | [rdb.ValuesBucket](../../apis-arkdata/arkts-apis/arkts-arkdata-rdb-valuesbucket-t.md) | 是 | 表示要插入的数据记录。如果此参数为空，将插入一个空行。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数，返回插入数据记录的索引。 |
 
 **示例**
@@ -725,7 +725,7 @@ insert(uri: string, valuesBucket: rdb.ValuesBucket): Promise<number>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | uri | string | 是 | 表示要插入数据的uri。 |
-| valuesBucket | rdb.ValuesBucket | 是 | 表示要插入的数据记录。如果此参数为空，将插入一个空行。 |
+| valuesBucket | [rdb.ValuesBucket](../../apis-arkdata/arkts-apis/arkts-arkdata-rdb-valuesbucket-t.md) | 是 | 表示要插入的数据记录。如果此参数为空，将插入一个空行。 |
 
 **返回值：**
 
@@ -1089,7 +1089,7 @@ query(
 | --- | --- | --- | --- |
 | uri | string | 是 | 表示要查询数据的uri。 |
 | columns | Array&lt;string&gt; | 是 | 表示要查询的列。如果此参数为空，则查询所有列。 |
-| predicates | dataAbility.DataAbilityPredicates | 是 | 表示筛选条件。当此参数为null时，自定义查询数据库中数据的处理逻辑。 |
+| predicates | [dataAbility.DataAbilityPredicates](../../apis-arkdata/arkts-apis/arkts-arkdata-dataability-dataabilitypredicates-c.md) | 是 | 表示筛选条件。当此参数为null时，自定义查询数据库中数据的处理逻辑。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ResultSet](../../apis-arkdata/arkts-apis/arkts-arkdata-resultset-resultset-depr-i.md)&gt; | 是 | 回调函数，返回查询结果。 |
 
 **示例**
@@ -1212,7 +1212,7 @@ query(uri: string, predicates: dataAbility.DataAbilityPredicates, callback: Asyn
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | uri | string | 是 | 表示要查询数据的uri。 |
-| predicates | dataAbility.DataAbilityPredicates | 是 | 表示筛选条件。当此参数为null时，自定义查询数据库中数据的处理逻辑。 |
+| predicates | [dataAbility.DataAbilityPredicates](../../apis-arkdata/arkts-apis/arkts-arkdata-dataability-dataabilitypredicates-c.md) | 是 | 表示筛选条件。当此参数为null时，自定义查询数据库中数据的处理逻辑。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ResultSet](../../apis-arkdata/arkts-apis/arkts-arkdata-resultset-resultset-depr-i.md)&gt; | 是 | 回调函数，返回查询结果。 |
 
 **示例**
@@ -1255,7 +1255,7 @@ query(uri: string, columns?: Array<string>, predicates?: dataAbility.DataAbility
 | --- | --- | --- | --- |
 | uri | string | 是 | 表示要查询数据的uri。 |
 | columns | Array&lt;string&gt; | 否 | 表示要查询的列。如果此参数为空，则查询所有列。 |
-| predicates | dataAbility.DataAbilityPredicates | 否 | 表示筛选条件。当此参数为null时，自定义查询数据库中数据的处理逻辑。 |
+| predicates | [dataAbility.DataAbilityPredicates](../../apis-arkdata/arkts-apis/arkts-arkdata-dataability-dataabilitypredicates-c.md) | 否 | 表示筛选条件。当此参数为null时，自定义查询数据库中数据的处理逻辑。 |
 
 **返回值：**
 
@@ -1304,8 +1304,8 @@ update(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | uri | string | 是 | 表示要更新数据的uri。 |
-| valuesBucket | rdb.ValuesBucket | 是 | 表示要更新的数据。 |
-| predicates | dataAbility.DataAbilityPredicates | 是 | 表示筛选条件。当此参数为null时，应定义处理逻辑。 |
+| valuesBucket | [rdb.ValuesBucket](../../apis-arkdata/arkts-apis/arkts-arkdata-rdb-valuesbucket-t.md) | 是 | 表示要更新的数据。 |
+| predicates | [dataAbility.DataAbilityPredicates](../../apis-arkdata/arkts-apis/arkts-arkdata-dataability-dataabilitypredicates-c.md) | 是 | 表示筛选条件。当此参数为null时，应定义处理逻辑。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数，返回更新的数据记录数。 |
 
 **示例**
@@ -1354,8 +1354,8 @@ update(uri: string, valuesBucket: rdb.ValuesBucket, predicates?: dataAbility.Dat
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | uri | string | 是 | 表示要更新数据的uri。 |
-| valuesBucket | rdb.ValuesBucket | 是 | 表示要更新的数据。 |
-| predicates | dataAbility.DataAbilityPredicates | 否 | 表示筛选条件。当此参数为null时，应定义处理逻辑。 |
+| valuesBucket | [rdb.ValuesBucket](../../apis-arkdata/arkts-apis/arkts-arkdata-rdb-valuesbucket-t.md) | 是 | 表示要更新的数据。 |
+| predicates | [dataAbility.DataAbilityPredicates](../../apis-arkdata/arkts-apis/arkts-arkdata-dataability-dataabilitypredicates-c.md) | 否 | 表示筛选条件。当此参数为null时，应定义处理逻辑。 |
 
 **返回值：**
 
@@ -1405,7 +1405,7 @@ predicates筛选条件为空，自定义更新数据库的处理逻辑。使用c
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | uri | string | 是 | 表示要更新数据的uri。 |
-| valuesBucket | rdb.ValuesBucket | 是 | 表示要更新的数据。 |
+| valuesBucket | [rdb.ValuesBucket](../../apis-arkdata/arkts-apis/arkts-arkdata-rdb-valuesbucket-t.md) | 是 | 表示要更新的数据。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数，返回更新的数据记录数。 |
 
 **示例**

@@ -33,21 +33,6 @@ Obtains the path of the configuration file with the highest priority. This API u
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:  1.Mandatory parameters are left unspecified;  2.Incorrect parameter types. |
 
-**Examples**
-
-```TypeScript
-import { configPolicy, BusinessError } from '@kit.BasicServicesKit';
-
-let relpath: string = 'etc/config.xml';
-configPolicy.getOneCfgFile(relpath, (err: BusinessError, data: string) => {
-  if (err == null) {
-    console.info('data is ' + data);
-  } else {
-    console.error('err: ' + err.code + ', ' + err.message);
-  }
-});
-```
-
 
 ## getOneCfgFile
 
@@ -81,26 +66,6 @@ Obtains the path of the configuration file with the highest priority. This API u
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:  1.Mandatory parameters are left unspecified;  2.Incorrect parameter types. |
 
-**Examples**
-
-```TypeScript
-import { configPolicy, BusinessError } from '@kit.BasicServicesKit';
-
-async function fetchConfigFile() {
-  try {
-    let relpath: string = 'etc/config.xml';
-    let value: string = await configPolicy.getOneCfgFile(relpath);
-    console.info('value is ' + value);
-  } catch (error) {
-    let code = (error as BusinessError).code;
-    let message = (error as BusinessError).message;
-    console.error('error:' + code + ', ' + message);
-  }
-}
-
-fetchConfigFile();
-```
-
 
 ## getOneCfgFile
 
@@ -129,22 +94,6 @@ Obtains the path of the configuration file with the highest priority based on th
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:  1.Mandatory parameters are left unspecified;  2.Incorrect parameter types. |
-
-**Examples**
-
-```TypeScript
-import { configPolicy, BusinessError } from '@kit.BasicServicesKit';
-
-let relpath: string = 'etc/config.xml';
-configPolicy.getOneCfgFile(relpath, configPolicy.FollowXMode.SIM_DEFAULT,
-  (err: BusinessError, data: string) => {
-    if (err == null) {
-      console.info('data is ' + data);
-    } else {
-      console.error('err: ' + err.code + ', ' + err.message);
-    }
-  });
-```
 
 
 ## getOneCfgFile
@@ -175,23 +124,6 @@ Obtains the path of the configuration file with the highest priority based on th
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:  1.Mandatory parameters are left unspecified;  2.Incorrect parameter types. |
-
-**Examples**
-
-```TypeScript
-import { configPolicy, BusinessError } from '@kit.BasicServicesKit';
-
-let relpath: string = 'etc/config.xml';
-let extra: string = 'etc/carrier/${telephony.sim.opkey0}';
-configPolicy.getOneCfgFile(relpath, configPolicy.FollowXMode.USER_DEFINED, extra,
-  (err: BusinessError, data: string) => {
-    if (err == null) {
-      console.info('data is ' + data);
-    } else {
-      console.error('err: ' + err.code + ', ' + err.message);
-    }
-  });
-```
 
 
 ## getOneCfgFile
@@ -227,24 +159,3 @@ Obtains the path of the configuration file with the highest priority based on th
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:  1.Mandatory parameters are left unspecified;  2.Incorrect parameter types;  3.Parameter verification failed. |
-
-**Examples**
-
-```TypeScript
-import { configPolicy, BusinessError } from '@kit.BasicServicesKit';
-
-async function fetchOneCfgFile() {
-  try {
-    let relpath: string = 'etc/config.xml';
-    let extra: string = 'etc/carrier/${telephony.sim.opkey0}';
-    let value: string = await configPolicy.getOneCfgFile(relpath, configPolicy.FollowXMode.SIM_DEFAULT, extra);
-    console.info('value is ' + value);
-  } catch (error) {
-    let code = (error as BusinessError).code;
-    let message = (error as BusinessError).message;
-    console.error('error:' + code + ', ' + message);
-  }
-}
-
-fetchOneCfgFile();
-```

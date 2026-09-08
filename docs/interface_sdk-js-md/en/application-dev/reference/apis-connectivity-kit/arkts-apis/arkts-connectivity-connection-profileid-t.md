@@ -12,4 +12,4 @@ Indicate the profile id.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
-**Type:** constant.ProfileId
+**Type:** [constant.ProfileId](arkts-connectivity-constant-profileid-e.md)

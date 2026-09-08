@@ -20,7 +20,7 @@ readonly entityCert: X509Cert
 
 Entity certificate.
 
-**Type:** X509Cert
+**Type:** [X509Cert](arkts-devicecertificate-cert-x509cert-i.md)
 
 **Since:** 11
 

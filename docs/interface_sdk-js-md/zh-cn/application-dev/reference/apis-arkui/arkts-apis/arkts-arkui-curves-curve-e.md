@@ -4,19 +4,19 @@
 
 | 名称 | 值 | 说明 |  
 | ------------------- | -- | ------------------------------------------------------------ |  
-| Linear | 0 | 表示动画从头到尾的速度都是相同的。 |
-| Ease | 1 | 表示动画以低速开始，然后加快，在结束前变慢，cubic-bezier(0.25, 0.1, 0.25, 1.0)。 |
-| EaseIn | 2 | 表示动画以低速开始，cubic-bezier(0.42, 0.0, 1.0, 1.0)。 |
-| EaseOut | 3 | 表示动画以低速结束，cubic-bezier(0.0, 0.0, 0.58, 1.0)。 |
-| EaseInOut | 4 | 表示动画以低速开始和结束，cubic-bezier(0.42, 0.0, 0.58, 1.0)。 |
-| FastOutSlowIn | 5 | 标准曲线，cubic-bezier(0.4, 0.0, 0.2, 1.0)。 |
-| LinearOutSlowIn | 6 | 减速曲线，cubic-bezier(0.0, 0.0, 0.2, 1.0)。 |
-| FastOutLinearIn | 7 | 加速曲线，cubic-bezier(0.4, 0.0, 1.0, 1.0)。 |
-| ExtremeDeceleration | 8 | 急缓曲线，cubic-bezier(0.0, 0.0, 0.0, 1.0)。 |
-| Sharp | 9 | 锐利曲线，cubic-bezier(0.33, 0.0, 0.67, 1.0)。 |
-| Rhythm | 10 | 节奏曲线，cubic-bezier(0.7, 0.0, 0.2, 1.0)。 |
-| Smooth | 11 | 平滑曲线，cubic-bezier(0.4, 0.0, 0.4, 1.0)。 |
-| Friction | 12 | 阻尼曲线，cubic-bezier(0.2, 0.0, 0.2, 1.0)。 |
+| [Linear](arkts-arkui-curves-curve-e.md) | 0 | 表示动画从头到尾的速度都是相同的。 |
+| [Ease](arkts-arkui-curves-curve-e.md) | 1 | 表示动画以低速开始，然后加快，在结束前变慢，cubic-bezier(0.25, 0.1, 0.25, 1.0)。 |
+| [EaseIn](arkts-arkui-curves-curve-e.md) | 2 | 表示动画以低速开始，cubic-bezier(0.42, 0.0, 1.0, 1.0)。 |
+| [EaseOut](arkts-arkui-curves-curve-e.md) | 3 | 表示动画以低速结束，cubic-bezier(0.0, 0.0, 0.58, 1.0)。 |
+| [EaseInOut](arkts-arkui-curves-curve-e.md) | 4 | 表示动画以低速开始和结束，cubic-bezier(0.42, 0.0, 0.58, 1.0)。 |
+| [FastOutSlowIn](arkts-arkui-curves-curve-e.md) | 5 | 标准曲线，cubic-bezier(0.4, 0.0, 0.2, 1.0)。 |
+| [LinearOutSlowIn](arkts-arkui-curves-curve-e.md) | 6 | 减速曲线，cubic-bezier(0.0, 0.0, 0.2, 1.0)。 |
+| [FastOutLinearIn](arkts-arkui-curves-curve-e.md) | 7 | 加速曲线，cubic-bezier(0.4, 0.0, 1.0, 1.0)。 |
+| [ExtremeDeceleration](arkts-arkui-curves-curve-e.md) | 8 | 急缓曲线，cubic-bezier(0.0, 0.0, 0.0, 1.0)。 |
+| [Sharp](arkts-arkui-curves-curve-e.md) | 9 | 锐利曲线，cubic-bezier(0.33, 0.0, 0.67, 1.0)。 |
+| [Rhythm](arkts-arkui-curves-curve-e.md) | 10 | 节奏曲线，cubic-bezier(0.7, 0.0, 0.2, 1.0)。 |
+| [Smooth](arkts-arkui-curves-curve-e.md) | 11 | 平滑曲线，cubic-bezier(0.4, 0.0, 0.4, 1.0)。 |
+| [Friction](arkts-arkui-curves-curve-e.md) | 12 | 阻尼曲线，cubic-bezier(0.2, 0.0, 0.2, 1.0)。 |
 
 **起始版本：** 7
 
@@ -203,10 +203,3 @@ Friction = 12
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-**示例**
-
-```TypeScript
-import { curves } from '@kit.ArkUI';
-curves.initCurve(Curve.EaseIn); // 创建一个默认先慢后快插值曲线
-```

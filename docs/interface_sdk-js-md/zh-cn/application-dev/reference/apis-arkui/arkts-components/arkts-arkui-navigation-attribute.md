@@ -38,7 +38,7 @@ backButtonIcon(value: string | PixelMap | Resource | SymbolGlyphModifier)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | string \| PixelMap \| Resource \| [SymbolGlyphModifier](arkts-arkui-symbolglyphmodifier-t.md) | 是 | 标题栏中返回键图标。<br>**适用版本：** 9 - 11 |
+| value | string \| [PixelMap](arkts-arkui-pixelmap-t.md) \| [Resource](../arkts-apis/arkts-arkui-resource-t.md) \| [SymbolGlyphModifier](arkts-arkui-symbolglyphmodifier-t.md) | 是 | 标题栏中返回键图标。<br>**适用版本：** 9 - 11 |
 
 ## backButtonIcon
 
@@ -69,7 +69,7 @@ backButtonIcon(icon: string | PixelMap | Resource | SymbolGlyphModifier, accessi
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| icon | string \| PixelMap \| Resource \| [SymbolGlyphModifier](arkts-arkui-symbolglyphmodifier-t.md) | 是 | 标题栏中返回键图标。 |
+| icon | string \| [PixelMap](arkts-arkui-pixelmap-t.md) \| [Resource](../arkts-apis/arkts-arkui-resource-t.md) \| [SymbolGlyphModifier](arkts-arkui-symbolglyphmodifier-t.md) | 是 | 标题栏中返回键图标。 |
 | accessibilityText | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | 否 | 返回键无障碍播报内容。&lt;/br&gt;默认值：系统语言是中文时为“返回”，系统语言是英文时为“back”。 |
 
 ## configuration

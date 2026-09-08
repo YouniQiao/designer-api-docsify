@@ -32,18 +32,6 @@ A constructor used to create a **Writable** object.
 let writableStream = new stream.Writable();
 ```
 
-```TypeScript
-let readableStream = new stream.Readable();
-```
-
-```TypeScript
-let duplex = new stream.Duplex();
-```
-
-```TypeScript
-let transform = new stream.Transform();
-```
-
 ## cork
 
 ```TypeScript
@@ -82,12 +70,6 @@ let result = writableStream.cork();
 console.info("Writable cork result", result); // Writable cork result true
 ```
 
-```TypeScript
-let duplexStream = new stream.Duplex();
-let result = duplexStream.cork();
-console.info("duplexStream cork result", result); // duplexStream cork result true
-```
-
 ## doInitialize
 
 ```TypeScript
@@ -123,22 +105,6 @@ class MyWritable extends stream.Writable {
 }
 
 new MyWritable();
-```
-
-```TypeScript
-class MyReadable extends stream.Readable {
-  doInitialize(callback: Function) {
-    super.doInitialize(callback);
-    console.info("Readable doInitialize"); // Readable doInitialize
-}
-
-  doRead(size: number) {
-  }
-}
-
-let myReadable = new MyReadable();
-myReadable.on('data', () => {
-});
 ```
 
 ## doWrite
@@ -179,25 +145,6 @@ class TestWritable extends stream.Writable {
 
 let writableStream = new TestWritable();
 writableStream.write('data', 'utf8');
-```
-
-```TypeScript
-class TestDuplex extends stream.Duplex {
-  constructor() {
-    super();
-  }
-
-  doRead(size: number) {
-  }
-
-  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
-    console.info("duplexStream chunk is", chunk); // duplexStream chunk is data
-    callback();
-  }
-}
-
-let duplexStream = new TestDuplex();
-duplexStream.write('data', 'utf8');
 ```
 
 ## doWritev
@@ -242,33 +189,6 @@ writableStream.write('data1', 'utf8');
 writableStream.write('data2', 'utf8');
 writableStream.uncork();
 writableStream.end();
-```
-
-```TypeScript
-class TestDuplex extends stream.Duplex {
-  constructor() {
-    super();
-  }
-
-  doRead(size: number) {
-  }
-
-  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
-    callback();
-  }
-
-  doWritev(chunks: string[] | Uint8Array[], callback: Function) {
-    console.info("duplexStream chunk", chunks[0]); // duplexStream chunk data1
-    callback();
-  }
-}
-
-let duplexStream = new TestDuplex();
-duplexStream.cork();
-duplexStream.write('data1', 'utf8');
-duplexStream.write('data2', 'utf8');
-duplexStream.uncork();
-duplexStream.end();
 ```
 
 ## end
@@ -328,27 +248,6 @@ writableStream.end('finish', 'utf8', () => {
 });
 ```
 
-```TypeScript
-class TestDuplex extends stream.Duplex {
-  constructor() {
-    super();
-  }
-
-  doRead(size: number) {
-  }
-
-  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
-  console.info("Duplex chunk is", chunk); // Duplex chunk is test
-  callback();
-  }
-}
-
-let duplexStream = new TestDuplex();
-duplexStream.end('test', 'utf8', () => {
-  console.info("Duplex is end"); // Duplex is end
-});
-```
-
 ## off
 
 ```TypeScript
@@ -368,7 +267,7 @@ Unregisters an event processing callback used to listen for different events on 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | string | Yes | Type of the event. The following events are supported: |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;emitter.EventData&gt; | No | Callback function. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[emitter.EventData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-emitter-eventdata-i.md)&gt; | No | Callback function. |
 
 **Examples**
 
@@ -397,29 +296,6 @@ setTimeout(() => {
 }, 0);
 ```
 
-```TypeScript
-class TestReadable extends stream.Readable {
-  constructor() {
-    super();
-  }
-
-  doRead(size: number) {
-  }
-}
-
-let readable = new TestReadable();
-
-function read() {
-  console.info("read() called");
-}
-
-readable.setEncoding('utf8');
-readable.on('readable', read);
-readable.off('readable');
-readable.push('test');
-// After off is used to unregister the listening of the readable stream events, the read function is not called and "read() called" is not printed.
-```
-
 ## on
 
 ```TypeScript
@@ -439,7 +315,7 @@ Registers an event processing callback to listen for different events on the wri
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | string | Yes | Type of the event. The following events are supported: |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;emitter.EventData&gt; | Yes | Callback function used to return the event data. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[emitter.EventData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-emitter-eventdata-i.md)&gt; | Yes | Callback function used to return the event data. |
 
 **Examples**
 
@@ -460,24 +336,6 @@ writable.on('error', () => {
   console.info("Writable event test", callbackCalled.toString()); // Writable event test false
 });
 writable.write('hello', 'utf8', () => {
-});
-```
-
-```TypeScript
-class TestReadable extends stream.Readable {
-  constructor() {
-    super();
-  }
-
-  doRead(size: number) {
-    throw new Error('Simulated error');
-  }
-}
-
-let readable = new TestReadable();
-readable.push('test');
-readable.on('error', () => {
-  console.info("error event called"); // error event called
 });
 ```
 
@@ -525,25 +383,6 @@ let result = writableStream.setDefaultEncoding('utf8');
 console.info("Writable is result", result); // Writable is result true
 ```
 
-```TypeScript
-class TestDuplex extends stream.Duplex {
-  constructor() {
-    super();
-  }
-
-  doRead(size: number) {
-  }
-
-  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
-    callback();
-  }
-}
-
-let duplexStream = new TestDuplex();
-let result = duplexStream.setDefaultEncoding('utf8');
-console.info("duplexStream is result", result); // duplexStream is result true
-```
-
 ## uncork
 
 ```TypeScript
@@ -586,30 +425,6 @@ writableStream.end();
 writableStream.on('finish', () => {
   console.info("all Data is End"); // all Data is End
 });
-```
-
-```TypeScript
-let dataWritten = '';
-class TestDuplex extends stream.Duplex {
-  constructor() {
-    super();
-  }
-
-  doRead(size: number) {
-  }
-
-  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
-    dataWritten += chunk;
-    callback();
-  }
-}
-
-let duplexStream = new TestDuplex();
-duplexStream.cork();
-duplexStream.write('a');
-duplexStream.write('b');
-duplexStream.uncork();
-console.info("Duplex test uncork", dataWritten); // Duplex test uncork ab
 ```
 
 ## write
@@ -664,26 +479,6 @@ class TestWritable extends stream.Writable {
 
 let writableStream = new TestWritable();
 writableStream.write('test', 'utf8');
-```
-
-```TypeScript
-class TestDuplex extends stream.Duplex {
-  constructor() {
-    super();
-  }
-
-  doRead(size: number) {
-  }
-
-  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
-    console.info("duplexStream chunk is", chunk); // duplexStream chunk is test
-    callback();
-  }
-}
-
-let duplexStream = new TestDuplex();
-let result = duplexStream.write('test', 'utf8');
-console.info("duplexStream result", result); // duplexStream result true
 ```
 
 ## writable

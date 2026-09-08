@@ -37,7 +37,7 @@ one.
 
 | Type | Description |
 | --- | --- |
-| DownloadInfo \| undefined | Returns the download information of the corresponding URL if the operation is successful; returns **undefined** if the specified URL does not exist. |
+| [DownloadInfo](arkts-basicservices-cachedownload-downloadinfo-i.md) \| undefined | Returns the download information of the corresponding URL if the operation is successful; returns **undefined** if the specified URL does not exist. |
 
 **Error codes:**
 

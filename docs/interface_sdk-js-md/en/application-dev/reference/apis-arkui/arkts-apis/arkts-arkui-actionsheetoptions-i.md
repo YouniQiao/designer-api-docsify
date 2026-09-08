@@ -81,7 +81,7 @@ Default value: **BlurStyle.COMPONENT_ULTRA_THICK**
 
 Setting this parameter to **BlurStyle.NONE** disables the background blur. When **backgroundBlurStyle** is set to a value other than **NONE**, do not set **backgroundColor**. If you do, the color display may not produce the expected visual effect.
 
-**Type:** BlurStyle
+**Type:** [BlurStyle](../arkts-components/arkts-arkui-blurstyle-e.md)
 
 **Default:** BlurStyle.COMPONENT_ULTRA_THICK
 
@@ -447,7 +447,7 @@ Display order of the dialog box.
 - Default value: **LevelOrder.clamp(0)**  
 - Dynamic updating is not supported.
 
-**Type:** LevelOrder
+**Type:** [LevelOrder](arkts-arkui-levelorder-t.md)
 
 **Default:** The value returns by LevelOrder.clamp(0)
 
@@ -517,9 +517,9 @@ message: string | Resource
 
 Content of the dialog box.
 
-If the text is too number to display, a scrollbar is displayed.
+If the text is too long to display, a scrollbar is displayed.
 
-**Type:** string \| Resource
+**Type:** string \| [Resource](arkts-arkui-resource-t.md)
 
 **Since:** 8
 
@@ -563,7 +563,7 @@ Event callback after the dialog box appears.
 3. When a dialog box is dismissed immediately after being shown, **onWillDisappear** may be triggered before **onDidAppear**.
 4. If the dialog box is dismissed before its entrance animation is finished, the animation will be interrupted, and **onDidAppear** will not be triggered.
 
-**Type:** Callback&lt;void&gt;
+**Type:** [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;void&gt;
 
 **Since:** 19
 
@@ -585,7 +585,7 @@ Event callback after the dialog box disappears.
 
 The normal timing sequence is as follows: onWillAppear &gt; onDidAppear &gt; onWillDisappear &gt; onDidDisappear.
 
-**Type:** Callback&lt;void&gt;
+**Type:** [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;void&gt;
 
 **Since:** 19
 
@@ -608,7 +608,7 @@ Event callback when the dialog box is about to appear.
 1. The normal timing sequence is as follows: onWillAppear &gt; onDidAppear &gt; onWillDisappear &gt; onDidDisappear.
 2. You can set the callback event for changing the dialog box display effect in **onWillAppear**. The settings take effect next time the dialog box appears.
 
-**Type:** Callback&lt;void&gt;
+**Type:** [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;void&gt;
 
 **Since:** 19
 
@@ -630,7 +630,7 @@ Event callback when the dialog box is about to disappear.
 
 The normal timing sequence is as follows: onWillAppear &gt; onDidAppear &gt; onWillDisappear &gt; onDidDisappear.
 
-**Type:** Callback&lt;void&gt;
+**Type:** [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;void&gt;
 
 **Since:** 19
 
@@ -653,7 +653,7 @@ Callback for interactive closure of the dialog box.
 1. If this callback is registered, the dialog box will not be dismissed immediately after the user touches the mask or the Back button, presses the Esc key, or swipes left or right on the screen. The **reason** parameter in the callback is used to determine whether the dialog box can be closed. The reason returned by the component does not support the value **CLOSE_BUTTON**.
 2. In the **onWillDismiss** callback, another **onWillDismiss** callback is not allowed.
 
-**Type:** Callback&lt;[DismissDialogAction](arkts-arkui-dismissdialogaction-i.md)&gt;
+**Type:** [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;[DismissDialogAction](arkts-arkui-dismissdialogaction-i.md)&gt;
 
 **Since:** 12
 
@@ -735,7 +735,7 @@ subtitle?: ResourceStr
 
 Subtitle of the dialog box.
 
-If the text is too number to display, it is truncated with an ellipsis (...).
+If the text is too long to display, it is truncated with an ellipsis (...).
 
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
@@ -775,9 +775,9 @@ title: string | Resource
 
 Title of the dialog box.
 
-If the text is too number to display, it is truncated with an ellipsis (...).
+If the text is too long to display, it is truncated with an ellipsis (...).
 
-**Type:** string \| Resource
+**Type:** string \| [Resource](arkts-arkui-resource-t.md)
 
 **Since:** 8
 

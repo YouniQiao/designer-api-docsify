@@ -392,7 +392,7 @@ Proprietary tone for prompt.
 TONE_TYPE_COMMON_PROPRIETARY_DOUBLE_BEEP = 204
 ```
 
-Proprietary tone for number beep.
+Proprietary tone for double beep.
 
 **Since:** 9
 

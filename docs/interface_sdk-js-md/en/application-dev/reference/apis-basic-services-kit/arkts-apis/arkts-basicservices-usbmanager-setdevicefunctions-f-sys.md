@@ -26,7 +26,7 @@ Sets the current USB function list in Device mode. This API uses a promise to re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| funcs | FunctionType | Yes | USB function list in numeric mask format. |
+| funcs | [FunctionType](arkts-basicservices-usbmanager-functiontype-e-sys.md) | Yes | USB function list in numeric mask format. |
 
 **Return value:**
 
@@ -44,15 +44,3 @@ Sets the current USB function list in Device mode. This API uses a promise to re
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported.<br>**Applicable version:** 18 and later |
 | [14400002](../errorcode-usb.md#14400002-hdc-disabled) | Permission denied. The HDC is disabled by the system. |
 | [14400006](../errorcode-usb.md#14400006-usb-device-function-unsupported) | Unsupported operation. The function is not supported. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-let funcs: number = usbManager.FunctionType.HDC;
-usbManager.setDeviceFunctions(funcs).then(() => {
-    console.info('usb setDeviceFunctions successfully.');
-}).catch((err : BusinessError) => {
-    console.error('usb setDeviceFunctions failed: ' + err.code + ' message: ' + err.message);
-});
-```

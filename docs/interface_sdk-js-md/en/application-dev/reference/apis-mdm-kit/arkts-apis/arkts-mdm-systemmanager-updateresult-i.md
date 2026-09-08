@@ -20,7 +20,7 @@ errorInfo: ErrorInfo
 
 Error information.
 
-**Type:** ErrorInfo
+**Type:** [ErrorInfo](arkts-mdm-systemmanager-errorinfo-i.md)
 
 **Since:** 12
 

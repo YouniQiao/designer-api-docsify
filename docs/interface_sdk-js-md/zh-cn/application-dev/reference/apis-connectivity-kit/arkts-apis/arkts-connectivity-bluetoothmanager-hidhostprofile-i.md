@@ -45,7 +45,7 @@ off(type: 'connectionStateChange', callback?: Callback<StateChangeParam>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'connectionStateChange' | 是 | 填写"connectionStateChange"字符串，表示连接状态变化事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;StateChangeParam&gt; | 否 | 表示回调函数的入参。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[StateChangeParam](arkts-connectivity-bluetoothmanager-statechangeparam-i.md)&gt; | 否 | 表示回调函数的入参。 |
 
 **错误码：**
 
@@ -81,7 +81,7 @@ on(type: 'connectionStateChange', callback: Callback<StateChangeParam>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'connectionStateChange' | 是 | 填写"connectionStateChange"字符串，表示连接状态变化事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;StateChangeParam&gt; | 是 | 表示回调函数的入参。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[StateChangeParam](arkts-connectivity-bluetoothmanager-statechangeparam-i.md)&gt; | 是 | 表示回调函数的入参。 |
 
 **错误码：**
 

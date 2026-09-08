@@ -33,7 +33,7 @@ createTruncatedLine(width: number, ellipsisMode: EllipsisMode, ellipsis: string)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | width | number | 是 | 截断后的行宽度，浮点数，单位为物理像素px。 |
-| ellipsisMode | EllipsisMode | 是 | 截断的类型，当前仅支持头部截断START和尾部截断END。 |
+| ellipsisMode | [EllipsisMode](arkts-arkgraphics2d-text-ellipsismode-e.md) | 是 | 截断的类型，当前仅支持头部截断START和尾部截断END。 |
 | ellipsis | string | 是 | 截断的标记字符串。 |
 
 **返回值：**
@@ -163,10 +163,6 @@ getGlyphCount(): number
 let glyphCount = lines[0].getGlyphCount();
 ```
 
-```TypeScript
-let glyphs = runs[0].getGlyphCount();
-```
-
 ## getGlyphRuns
 
 ```TypeScript
@@ -221,16 +217,12 @@ getImageBounds(): common2D.Rect
 
 | 类型 | 说明 |
 | --- | --- |
-| common2D.Rect | 文本行的图像边界，单位为物理像素px。 |
+| [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) | 文本行的图像边界，单位为物理像素px。 |
 
 **示例**
 
 ```TypeScript
 let imageBounds = lines[0].getImageBounds();
-```
-
-```TypeScript
-let bounds = runs[0].getImageBounds();
 ```
 
 ## getOffsetForStringIndex
@@ -283,7 +275,7 @@ getStringIndexForPosition(point: common2D.Point): number
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| point | common2D.Point | 是 | 要查找字符索引的坐标位置，坐标相对于文本行的左上角原点，单位为物理像素px。其中x为水平坐标，y为垂直坐标。 |
+| point | [common2D.Point](arkts-arkgraphics2d-common2d-point-i.md) | 是 | 要查找字符索引的坐标位置，坐标相对于文本行的左上角原点，单位为物理像素px。其中x为水平坐标，y为垂直坐标。 |
 
 **返回值：**
 
@@ -317,7 +309,7 @@ getTextRange(): Range
 
 | 类型 | 说明 |
 | --- | --- |
-| Range | 该行文本在整个段落文本中的索引区间。 |
+| [Range](arkts-arkgraphics2d-text-range-i.md) | 该行文本在整个段落文本中的索引区间。 |
 
 **示例**
 
@@ -389,10 +381,6 @@ let bounds = lines[0].getTypographicBounds();
 console.info('textLine ascent:' + bounds.ascent + ', descent:' + bounds.descent + ', leading:' + bounds.leading + ', width:' + bounds.width);
 ```
 
-```TypeScript
-let typographicBounds = runs[0].getTypographicBounds();
-```
-
 ## paint
 
 ```TypeScript
@@ -411,19 +399,11 @@ paint(canvas: drawing.Canvas, x: number, y: number): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| canvas | drawing.Canvas | 是 | 绘制的目标canvas。 |
+| canvas | [drawing.Canvas](arkts-arkgraphics2d-drawing-canvas-c.md) | 是 | 绘制的目标canvas。 |
 | x | number | 是 | 绘制的左上角位置的横坐标，浮点数，单位为物理像素px。 |
 | y | number | 是 | 绘制的左上角位置的纵坐标，浮点数，单位为物理像素px。 |
 
 **示例**
-
-```TypeScript
-const color: ArrayBuffer = new ArrayBuffer(160000);
-let opts: image.InitializationOptions = { editable: true, pixelFormat: 3, size: { height: 200, width: 200 } }
-let pixelMap: image.PixelMap = image.createPixelMapSync(color, opts);
-let canvas = new drawing.Canvas(pixelMap);
-paragraph.paint(canvas, 0, 0);
-```
 
 ```TypeScript
 import { drawing } from '@kit.ArkGraphics2D'
@@ -432,37 +412,6 @@ import { image } from '@kit.ImageKit'
 function textFunc(pixelmap: PixelMap) {
   let canvas = new drawing.Canvas(pixelmap);
   lines[0].paint(canvas, 0, 0);
-}
-
-@Entry
-@Component
-struct Index {
-  @State pixelmap?: PixelMap = undefined;
-  fun: Function = textFunc;
-  build() {
-    Column() {
-      Image(this.pixelmap).width(200).height(200);
-      Button().onClick(() => {
-        if (this.pixelmap == undefined) {
-          const color: ArrayBuffer = new ArrayBuffer(160000);
-          let opts: image.InitializationOptions = { editable: true, pixelFormat: 3, size: { height: 200, width: 200 } }
-          this.pixelmap = image.createPixelMapSync(color, opts);
-        }
-        this.fun(this.pixelmap);
-      })
-    }
-  }
-}
-```
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D'
-import { text } from '@kit.ArkGraphics2D'
-import { image } from '@kit.ImageKit'
-
-function textFunc(pixelmap: PixelMap) {
-  let canvas = new drawing.Canvas(pixelmap);
-  runs[0].paint(canvas, 0, 0);
 }
 
 @Entry

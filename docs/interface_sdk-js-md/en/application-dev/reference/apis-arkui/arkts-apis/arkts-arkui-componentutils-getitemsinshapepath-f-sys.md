@@ -32,4 +32,4 @@ Get the image objects located within the selected area.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;ImageItem&gt; | Returns the image objects located within the selected area. |
+| Array&lt;[ImageItem](arkts-arkui-componentutils-imageitem-i-sys.md)&gt; | Returns the image objects located within the selected area. |

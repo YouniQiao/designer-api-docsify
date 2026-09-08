@@ -1,6 +1,6 @@
 # NotificationLongTextContent
 
-Describes the number text notification. This API is inherited from NotificationBasicContent.
+Describes the long text notification. This API is inherited from NotificationBasicContent.
 
 > **NOTE：**
 > 
@@ -8,7 +8,7 @@ Describes the number text notification. This API is inherited from NotificationB
 > to the collapsed state, and the displayed title and body are the **title** and **text** inherited from
 > NotificationBasicContent. When this notification type is displayed alone and does not form a group notification
 > with other notifications, its display effect defaults to the expanded state, where the displayed title is the
-> expanded title **expandedTitle**, and the displayed body content is the number text **longText**.
+> expanded title **expandedTitle**, and the displayed body content is the long text **longText**.
 > 
 > - When a user taps a group notification to view the notification details, the display effect of this
 > notification changes to the expanded state.
@@ -55,7 +55,7 @@ Title when the notification is expanded. It cannot be an empty string. The size 
 longText: string
 ```
 
-Full number text content displayed after the notification is expanded. It cannot be an empty string. The size does not exceed 3072 bytes, and the excess part will be truncated.
+Full long text content displayed after the notification is expanded. It cannot be an empty string. The size does not exceed 3072 bytes, and the excess part will be truncated.
 
 **Type:** string
 

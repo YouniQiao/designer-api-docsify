@@ -28,7 +28,7 @@ Obtains information about all missions. This API uses an asynchronous callback t
 | --- | --- | --- | --- |
 | deviceId | string | Yes | Device ID. It is a null string by default for the local device. |
 | numMax | number | Yes | Maximum number of missions whose information can be obtained. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;MissionInfo&gt;&gt; | Yes | Callback used to return the array of mission information obtained. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[MissionInfo](arkts-ability-missionmanager-missioninfo-t-sys.md)&gt;&gt; | Yes | Callback used to return the array of mission information obtained. |
 
 **Error codes:**
 
@@ -88,7 +88,7 @@ Obtains information about all missions. This API uses a promise to return the re
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;MissionInfo&gt;&gt; | Promise used to return the array of mission information obtained. |
+| Promise&lt;Array&lt;[MissionInfo](arkts-ability-missionmanager-missioninfo-t-sys.md)&gt;&gt; | Promise used to return the array of mission information obtained. |
 
 **Error codes:**
 

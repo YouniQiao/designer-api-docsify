@@ -28,7 +28,7 @@ function offGetWantParamsCallback(callback?: formInfo.GetWantParamsCallback): vo
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | formInfo.GetWantParamsCallback | 否 | 回调函数，返回卡片参数信息。 |
+| callback | [formInfo.GetWantParamsCallback](arkts-form-forminfo-getwantparamscallback-t-sys.md) | 否 | 回调函数，返回卡片参数信息。 |
 
 **错误码：**
 

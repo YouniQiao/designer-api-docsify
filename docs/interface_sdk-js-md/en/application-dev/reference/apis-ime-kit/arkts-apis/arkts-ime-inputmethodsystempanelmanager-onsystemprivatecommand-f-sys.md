@@ -26,7 +26,7 @@ Subscribe to the event when the input method application sends private data comm
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, CommandDataType&gt;&gt; | Yes | Callback function, which is triggered when the input method application or system service sends a private data command. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, [CommandDataType](arkts-ime-inputmethodengine-commanddatatype-t.md)&gt;&gt; | Yes | Callback function, which is triggered when the input method application or system service sends a private data command. |
 
 **Error codes:**
 

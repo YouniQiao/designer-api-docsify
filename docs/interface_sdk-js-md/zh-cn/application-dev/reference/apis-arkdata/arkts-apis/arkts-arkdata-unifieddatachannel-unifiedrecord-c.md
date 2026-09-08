@@ -33,7 +33,7 @@ addEntry(type: string, value: ValueType): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | string | 是 | 要创建的数据类型，见[UniformDataType](arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md)。 |
-| value | ValueType | 是 | 要创建的数据的值。 |
+| value | [ValueType](arkts-arkdata-unifieddatachannel-valuetype-t.md) | 是 | 要创建的数据的值。 |
 
 **错误码：**
 
@@ -87,10 +87,6 @@ constructor()
 **示例**
 
 ```TypeScript
-let unifiedData = new unifiedDataChannel.UnifiedData();
-```
-
-```TypeScript
 let unifiedRecord = new unifiedDataChannel.UnifiedRecord();
 ```
 
@@ -119,7 +115,7 @@ constructor(type: string, value: ValueType)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | string | 是 | 要创建的数据记录的类型，用于标识数据记录的具体类型。取值见[UniformDataType](arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md)，如'general.plain-text'、'general.hyperlink'等。 |
-| value | ValueType | 是 | 要创建的数据记录的值。 |
+| value | [ValueType](arkts-arkdata-unifieddatachannel-valuetype-t.md) | 是 | 要创建的数据记录的值。 |
 
 **错误码：**
 
@@ -182,7 +178,7 @@ getEntries(): Record<string, ValueType>
 
 | 类型 | 说明 |
 | --- | --- |
-| Record&lt;string, ValueType&gt; | 当前数据记录对应的类型和内容。 |
+| Record&lt;string, [ValueType](arkts-arkdata-unifieddatachannel-valuetype-t.md)&gt; | 当前数据记录对应的类型和内容。 |
 
 **示例**
 
@@ -259,7 +255,7 @@ getEntry(type: string): ValueType
 
 | 类型 | 说明 |
 | --- | --- |
-| ValueType | 当前数据记录对应的值。 |
+| [ValueType](arkts-arkdata-unifieddatachannel-valuetype-t.md) | 当前数据记录对应的值。 |
 
 **错误码：**
 
@@ -386,28 +382,6 @@ getTypes(): Array<string>
 ```TypeScript
 import { uniformDataStruct, uniformTypeDescriptor } from '@kit.ArkData';
 
-let plainText: uniformDataStruct.PlainText = {
-  uniformDataType: 'general.plain-text',
-  textContent: 'This is a plain text example',
-  abstract: 'This is abstract'
-};
-let text = new unifiedDataChannel.UnifiedRecord(uniformTypeDescriptor.UniformDataType.PLAIN_TEXT, plainText);
-let unifiedData = new unifiedDataChannel.UnifiedData(text);
-
-let hyperlink: uniformDataStruct.Hyperlink = {
-  uniformDataType: 'general.hyperlink',
-  url: 'www.XXX.com',
-  description: 'This is the description of the hyperlink'
-};
-let link = new unifiedDataChannel.UnifiedRecord(uniformTypeDescriptor.UniformDataType.HYPERLINK, hyperlink);
-unifiedData.addRecord(link);
-
-let types = unifiedData.getTypes();
-```
-
-```TypeScript
-import { uniformDataStruct, uniformTypeDescriptor } from '@kit.ArkData';
-
 let fileUriDetails: Record<string, string> = {
   'attr1': 'value1',
   'attr2': 'value2'
@@ -467,7 +441,7 @@ getValue(): ValueType
 
 | 类型 | 说明 |
 | --- | --- |
-| ValueType | 当前数据记录对应的值。 |
+| [ValueType](arkts-arkdata-unifieddatachannel-valuetype-t.md) | 当前数据记录对应的值。 |
 
 **示例**
 

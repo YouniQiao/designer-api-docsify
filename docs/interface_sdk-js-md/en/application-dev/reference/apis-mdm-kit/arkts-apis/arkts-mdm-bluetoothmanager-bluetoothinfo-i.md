@@ -20,7 +20,7 @@ connectionState: constant.ProfileConnectionState
 
 Bluetooth profile connection state of the device.
 
-**Type:** constant.ProfileConnectionState
+**Type:** [constant.ProfileConnectionState](../../apis-connectivity-kit/arkts-apis/arkts-connectivity-constant-profileconnectionstate-e.md)
 
 **Since:** 12
 
@@ -52,7 +52,7 @@ state: access.BluetoothState
 
 Bluetooth state of the device.
 
-**Type:** access.BluetoothState
+**Type:** [access.BluetoothState](../../apis-connectivity-kit/arkts-apis/arkts-connectivity-access-bluetoothstate-e.md)
 
 **Since:** 12
 

@@ -54,7 +54,7 @@ trustlist?: Array<BundleOption>
 
 勿扰模式的信任列表。
 
-**类型：** Array&lt;BundleOption&gt;
+**类型：** Array&lt;[BundleOption](arkts-notification-notificationmanager-bundleoption-t.md)&gt;
 
 **起始版本：** 12
 

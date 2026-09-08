@@ -32,7 +32,7 @@ After a notification is published, it will be displayed as a notification widget
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| request | NotificationRequest | Yes | Content and related configuration of the notification to publish. |
+| request | [NotificationRequest](arkts-notification-notificationmanager-notificationrequest-t.md) | Yes | Content and related configuration of the notification to publish. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
@@ -110,7 +110,7 @@ After a notification is published, it will be displayed as a notification card i
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| request | NotificationRequest | Yes | Content and related configuration of the notification to publish. |
+| request | [NotificationRequest](arkts-notification-notificationmanager-notificationrequest-t.md) | Yes | Content and related configuration of the notification to publish. |
 
 **Return value:**
 

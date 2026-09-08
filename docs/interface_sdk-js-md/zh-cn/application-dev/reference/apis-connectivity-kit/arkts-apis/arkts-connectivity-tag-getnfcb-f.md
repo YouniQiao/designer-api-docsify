@@ -30,7 +30,7 @@ function getNfcB(tagInfo: TagInfo): NfcBTag
 
 | 类型 | 说明 |
 | --- | --- |
-| NfcBTag | NFC B类型Tag对象。 |
+| [NfcBTag](arkts-connectivity-tag-nfcbtag-t.md) | NFC B类型Tag对象。 |
 
 **错误码：**
 

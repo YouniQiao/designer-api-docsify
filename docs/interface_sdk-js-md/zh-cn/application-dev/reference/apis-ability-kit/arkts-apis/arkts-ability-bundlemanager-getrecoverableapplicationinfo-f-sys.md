@@ -26,7 +26,7 @@ function getRecoverableApplicationInfo(callback: AsyncCallback<Array<Recoverable
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;RecoverableApplicationInfo&gt;&gt; | 是 | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)，当获取成功时，err为undefined，data为获取到的所有可恢复的预置应用信息。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[RecoverableApplicationInfo](arkts-ability-bundlemanager-recoverableapplicationinfo-t-sys.md)&gt;&gt; | 是 | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)，当获取成功时，err为undefined，data为获取到的所有可恢复的预置应用信息。 |
 
 **错误码：**
 
@@ -77,7 +77,7 @@ function getRecoverableApplicationInfo(): Promise<Array<RecoverableApplicationIn
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;RecoverableApplicationInfo&gt;&gt; | Promise对象，返回所有可恢复的预置应用信息。 |
+| Promise&lt;Array&lt;[RecoverableApplicationInfo](arkts-ability-bundlemanager-recoverableapplicationinfo-t-sys.md)&gt;&gt; | Promise对象，返回所有可恢复的预置应用信息。 |
 
 **错误码：**
 

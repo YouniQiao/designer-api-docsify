@@ -188,7 +188,7 @@ activatedBackgroundSystemMaterial?: uiMaterial.Material
 
 Set system-styled materials for the component which is activated. Different materials have different effects, which can influence the backgroundColor, border, shadow, and other visual attributes of the component.
 
-**Type:** uiMaterial.Material
+**Type:** [uiMaterial.Material](arkts-arkui-uimaterial-material-c.md)
 
 **Since:** 26.0.0
 
@@ -252,7 +252,7 @@ backgroundSystemMaterial?: uiMaterial.Material
 
 Set system-styled materials for the component. Different materials have different effects, which can influence the backgroundColor, border, shadow, and other visual attributes of the component.
 
-**Type:** uiMaterial.Material
+**Type:** [uiMaterial.Material](arkts-arkui-uimaterial-material-c.md)
 
 **Since:** 26.0.0
 
@@ -316,7 +316,7 @@ Default value: **Direction.Auto**
 
 If the value is **undefined**, the default value is used.
 
-**Type:** Direction
+**Type:** [Direction](arkts-arkui-direction-e.md)
 
 **Since:** 12
 
@@ -407,7 +407,7 @@ maxFontScale?: number | Resource
 
 Maximum font scale factor for the text and icon of the chip. Value range: [1, +∞).
 
-**Type:** number \| Resource
+**Type:** number \| [Resource](arkts-arkui-resource-t.md)
 
 **Since:** 23
 
@@ -425,7 +425,7 @@ minFontScale?: number | Resource
 
 Minimum font scale factor for the text and icon of the chip. Value range: [0, 1].
 
-**Type:** number \| Resource
+**Type:** number \| [Resource](arkts-arkui-resource-t.md)
 
 **Since:** 23
 

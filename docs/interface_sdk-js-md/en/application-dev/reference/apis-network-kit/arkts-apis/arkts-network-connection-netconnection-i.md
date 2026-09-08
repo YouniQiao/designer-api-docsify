@@ -45,7 +45,7 @@ Registers a listener for **netAvailable** events. Before you call this API, make
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'netAvailable' | Yes | Event type. This field has a fixed value of **netAvailable**.    **netAvailable**: event indicating that the data network is available. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;NetHandle&gt; | Yes | Callback used to return the network handle. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[NetHandle](arkts-network-connection-nethandle-i.md)&gt; | Yes | Callback used to return the network handle. |
 
 **Examples**
 
@@ -225,7 +225,7 @@ Registers a listener for **netLost** events. Before you call this API, make sure
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'netLost' | Yes | Event type. This field has a fixed value of **netLost**.    **netLost**: event indicating that the network is interrupted or normally disconnected. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;NetHandle&gt; | Yes | Callback used to return the result, which is a **netHandle** object. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[NetHandle](arkts-network-connection-nethandle-i.md)&gt; | Yes | Callback used to return the result, which is a **netHandle** object. |
 
 **Examples**
 

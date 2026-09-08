@@ -38,34 +38,6 @@ arc(x: number, y: number, radius: number, startAngle: number, endAngle: number, 
 | endAngle | number | 是 | 弧线的终止弧度。单位：弧度。 |
 | counterclockwise | boolean | 否 | 是否逆时针绘制圆弧。   **true**：逆时针方向绘制圆弧。   **false**：顺时针方向绘制圆弧。默认值：**false**，设置**null**或**undefined**按默认值处理。 |
 
-**示例**
-
-```TypeScript
-// xxx.ets
-@Entry
-@Component
-struct Arc {
-  private settings: RenderingContextSettings = new RenderingContextSettings(true);
-  private context: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings);
-  private path2Db: Path2D = new Path2D();
-
-  build() {
-    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
-      Canvas(this.context)
-        .width('100%')
-        .height('100%')
-        .backgroundColor('#ffff00')
-        .onReady(() => {
-          this.path2Db.arc(100, 75, 50, 0, 6.28)
-          this.context.stroke(this.path2Db)
-        })
-    }
-    .width('100%')
-    .height('100%')
-  }
-}
-```
-
 ## arcTo
 
 ```TypeScript
@@ -91,35 +63,6 @@ arcTo(x1: number, y1: number, x2: number, y2: number, radius: number): void
 | x2 | number | 是 | 圆弧经过的第二个点的x坐标值。API version 18之前，设置NaN或Infinity时，整条路径不显示；设置null或undefined时，当前接口不生效。API version 18及以后，设置NaN、Infinity、null或undefined时当前接口不生效，其他传入有效参数的路径方法正常绘制。默认单位：vp |
 | y2 | number | 是 | 圆弧经过的第二个点的y坐标值。API version 18之前，设置NaN或Infinity时，整条路径不显示；设置null或undefined时，当前接口不生效。API version 18及以后，设置NaN、Infinity、null或undefined时当前接口不生效，其他传入有效参数的路径方法正常绘制。默认单位：vp |
 | radius | number | 是 | 圆弧的圆半径值。API version 18之前，设置NaN或Infinity时，整条路径不显示；设置null或undefined时，当前接口不生效。API version 18及以后，设置NaN、Infinity、null或undefined时当前接口不生效，其他传入有效参数的路径方法正常绘制。默认单位：vp |
-
-**示例**
-
-```TypeScript
-// xxx.ets
-@Entry
-@Component
-struct ArcTo {
-  private settings: RenderingContextSettings = new RenderingContextSettings(true);
-  private context: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings);
-  private path2Db: Path2D = new Path2D();
-
-  build() {
-    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
-      Canvas(this.context)
-        .width('100%')
-        .height('100%')
-        .backgroundColor('#ffff00')
-        .onReady(() => {
-          this.path2Db.moveTo(0, 0)
-          this.path2Db.arcTo(150, 20, 150, 70, 50)
-          this.context.stroke(this.path2Db)
-        })
-    }
-    .width('100%')
-    .height('100%')
-  }
-}
-```
 
 ## bezierCurveTo
 
@@ -148,35 +91,6 @@ bezierCurveTo(cp1x: number, cp1y: number, cp2x: number, cp2y: number, x: number,
 | x | number | 是 | 路径结束时的x坐标值。API version 18之前，设置NaN或Infinity时，整条路径不显示；设置null或undefined时，当前接口不生效。API version 18及以后，设置NaN、Infinity、null或undefined时当前接口不生效，其他传入有效参数的路径方法正常绘制。默认单位：vp |
 | y | number | 是 | 路径结束时的y坐标值。API version 18之前，设置NaN或Infinity时，整条路径不显示；设置null或undefined时，当前接口不生效。API version 18及以后，设置NaN、Infinity、null或undefined时当前接口不生效，其他传入有效参数的路径方法正常绘制。默认单位：vp |
 
-**示例**
-
-```TypeScript
-// xxx.ets
-@Entry
-@Component
-struct BezierCurveTo {
-  private settings: RenderingContextSettings = new RenderingContextSettings(true);
-  private context: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings);
-  private path2Db: Path2D = new Path2D();
-
-  build() {
-    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
-      Canvas(this.context)
-        .width('100%')
-        .height('100%')
-        .backgroundColor('#ffff00')
-        .onReady(() => {
-          this.path2Db.moveTo(10, 10)
-          this.path2Db.bezierCurveTo(20, 100, 200, 100, 200, 20)
-          this.context.stroke(this.path2Db)
-        })
-    }
-    .width('100%')
-    .height('100%')
-  }
-}
-```
-
 ## closePath
 
 ```TypeScript
@@ -192,37 +106,6 @@ closePath(): void
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-**示例**
-
-```TypeScript
-// xxx.ets
-@Entry
-@Component
-struct ClosePath {
-  private settings: RenderingContextSettings = new RenderingContextSettings(true);
-  private context: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings);
-  private path2Db: Path2D = new Path2D();
-
-  build() {
-    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
-      Canvas(this.context)
-        .width('100%')
-        .height('100%')
-        .backgroundColor('#ffff00')
-        .onReady(() => {
-          this.path2Db.moveTo(200, 100)
-          this.path2Db.lineTo(300, 100)
-          this.path2Db.lineTo(200, 200)
-          this.path2Db.closePath()
-          this.context.stroke(this.path2Db)
-        })
-    }
-    .width('100%')
-    .height('100%')
-  }
-}
-```
 
 ## ellipse
 
@@ -262,34 +145,6 @@ ellipse(
 | endAngle | number | 是 | 椭圆绘制的结束点角度。单位：弧度。 |
 | counterclockwise | boolean | 否 | 是否以逆时针方向绘制椭圆。   **true**：逆时针方向绘制椭圆。   **false**：顺时针方向绘制椭圆。默认值：**false**，设置**null**或**undefined**按默认值处理。 |
 
-**示例**
-
-```TypeScript
-// xxx.ets
-@Entry
-@Component
-struct CanvasExample {
-  private settings: RenderingContextSettings = new RenderingContextSettings(true);
-  private context: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings);
-  private path2Db: Path2D = new Path2D();
-
-  build() {
-    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
-      Canvas(this.context)
-        .width('100%')
-        .height('100%')
-        .backgroundColor('#ffff00')
-        .onReady(() => {
-          this.path2Db.ellipse(200, 200, 50, 100, 0, Math.PI * 1, Math.PI * 2)
-          this.context.stroke(this.path2Db)
-        })
-    }
-    .width('100%')
-    .height('100%')
-  }
-}
-```
-
 ## lineTo
 
 ```TypeScript
@@ -313,38 +168,6 @@ lineTo(x: number, y: number): void
 | x | number | 是 | 目标点X轴坐标。API version 18之前，设置NaN或Infinity时，整条路径不显示；设置null或undefined时，当前接口不生效。API version 18及以后，设置NaN、Infinity、null或undefined时当前接口不生效，其他传入有效参数的路径方法正常绘制。默认单位：vp |
 | y | number | 是 | 目标点Y轴坐标。API version 18之前，设置NaN或Infinity时，整条路径不显示；设置null或undefined时，当前接口不生效。API version 18及以后，设置NaN、Infinity、null或undefined时当前接口不生效，其他传入有效参数的路径方法正常绘制。默认单位：vp |
 
-**示例**
-
-```TypeScript
-// xxx.ets
-@Entry
-@Component
-struct LineTo {
-  private settings: RenderingContextSettings = new RenderingContextSettings(true);
-  private context: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings);
-  private path2Db: Path2D = new Path2D();
-
-  build() {
-    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
-      Canvas(this.context)
-        .width('100%')
-        .height('100%')
-        .backgroundColor('#ffff00')
-        .onReady(() => {
-          this.path2Db.moveTo(100, 100)
-          this.path2Db.lineTo(100, 200)
-          this.path2Db.lineTo(200, 200)
-          this.path2Db.lineTo(200, 100)
-          this.path2Db.closePath()
-          this.context.stroke(this.path2Db)
-        })
-    }
-    .width('100%')
-    .height('100%')
-  }
-}
-```
-
 ## moveTo
 
 ```TypeScript
@@ -367,37 +190,6 @@ moveTo(x: number, y: number): void
 | --- | --- | --- | --- |
 | x | number | 是 | 目标点X轴坐标。API version 18之前，设置NaN或Infinity时，整条路径不显示；设置null或undefined时，当前接口不生效。API version 18及以后，设置NaN、Infinity、null或undefined时当前接口不生效，其他传入有效参数的路径方法正常绘制。默认单位：vp |
 | y | number | 是 | 目标点Y轴坐标。API version 18之前，设置NaN或Infinity时，整条路径不显示；设置null或undefined时，当前接口不生效。API version 18及以后，设置NaN、Infinity、null或undefined时当前接口不生效，其他传入有效参数的路径方法正常绘制。默认单位：vp  > **说明：** >  > API version 18之前，如果没有调用**moveTo**接口或传入无效参数，路径从(0,0)开始。 >  > API version 18及以后，如果没有调用**moveTo**接口或传入无效参数，路径将从第一个有效调用的 > **lineTo**、**arcTo**、**bezierCurveTo**或**quadraticCurveTo**的起始点开始。 |
-
-**示例**
-
-```TypeScript
-// xxx.ets
-@Entry
-@Component
-struct MoveTo {
-  private settings: RenderingContextSettings = new RenderingContextSettings(true);
-  private context: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings);
-  private path2Db: Path2D = new Path2D();
-
-  build() {
-    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
-      Canvas(this.context)
-        .width('100%')
-        .height('100%')
-        .backgroundColor('#ffff00')
-        .onReady(() => {
-          this.path2Db.moveTo(50, 100)
-          this.path2Db.lineTo(250, 100)
-          this.path2Db.lineTo(150, 200)
-          this.path2Db.closePath()
-          this.context.stroke(this.path2Db)
-        })
-    }
-    .width('100%')
-    .height('100%')
-  }
-}
-```
 
 ## quadraticCurveTo
 
@@ -424,35 +216,6 @@ quadraticCurveTo(cpx: number, cpy: number, x: number, y: number): void
 | x | number | 是 | 路径结束时的x坐标值。API version 18之前，设置NaN或Infinity时，整条路径不显示；设置null或undefined时，当前接口不生效。API version 18及以后，设置NaN、Infinity、null或undefined时当前接口不生效，其他传入有效参数的路径方法正常绘制。默认单位：vp |
 | y | number | 是 | 路径结束时的y坐标值。API version 18之前，设置NaN或Infinity时，整条路径不显示；设置null或undefined时，当前接口不生效。API version 18及以后，设置NaN、Infinity、null或undefined时当前接口不生效，其他传入有效参数的路径方法正常绘制。默认单位：vp |
 
-**示例**
-
-```TypeScript
-// xxx.ets
-@Entry
-@Component
-struct QuadraticCurveTo {
-  private settings: RenderingContextSettings = new RenderingContextSettings(true);
-  private context: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings);
-  private path2Db: Path2D = new Path2D();
-
-  build() {
-    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
-      Canvas(this.context)
-        .width('100%')
-        .height('100%')
-        .backgroundColor('#ffff00')
-        .onReady(() => {
-          this.path2Db.moveTo(10, 10)
-          this.path2Db.quadraticCurveTo(100, 100, 200, 20)
-          this.context.stroke(this.path2Db)
-        })
-    }
-    .width('100%')
-    .height('100%')
-  }
-}
-```
-
 ## rect
 
 ```TypeScript
@@ -477,34 +240,6 @@ rect(x: number, y: number, w: number, h: number): void
 | y | number | 是 | 指定矩形的左上角y坐标值。API version 18之前，设置NaN或Infinity时，整条路径不显示；设置null或undefined时，当前接口不生效。API version 18及以后，设置NaN、Infinity、null或undefined时当前接口不生效，其他传入有效参数的路径方法正常绘制。默认单位：vp |
 | w | number | 是 | 指定矩形的宽度。API version 18之前，设置NaN或Infinity时，整条路径不显示；设置null或undefined时，当前接口不生效。API version 18及以后，设置NaN、Infinity、null或undefined时当前接口不生效，其他传入有效参数的路径方法正常绘制。默认单位：vp |
 | h | number | 是 | 指定矩形的高度。API version 18之前，设置NaN或Infinity时，整条路径不显示；设置null或undefined时，当前接口不生效。API version 18及以后，设置NaN、Infinity、null或undefined时当前接口不生效，其他传入有效参数的路径方法正常绘制。默认单位：vp |
-
-**示例**
-
-```TypeScript
-// xxx.ets
-@Entry
-@Component
-struct CanvasExample {
-  private settings: RenderingContextSettings = new RenderingContextSettings(true);
-  private context: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings);
-  private path2Db: Path2D = new Path2D();
-
-  build() {
-    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
-      Canvas(this.context)
-        .width('100%')
-        .height('100%')
-        .backgroundColor('#ffff00')
-        .onReady(() => {
-          this.path2Db.rect(20, 20, 100, 100);
-          this.context.stroke(this.path2Db)
-        })
-    }
-    .width('100%')
-    .height('100%')
-  }
-}
-```
 
 ## roundRect
 
@@ -539,54 +274,3 @@ roundRect(x: number, y: number, w: number, h: number, radii?: number | Array<num
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [103701](../errorcode-canvas.md#103701-参数错误) | 参数错误。可能的原因：  1. 参数radii数组的元素个数为0或超过4个。  2. 参数radii中包含负数。 |
-
-**示例**
-
-该示例展示了绘制六个圆角矩形：
-
-```TypeScript
-// xxx.ets
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct CanvasExample {
-  private settings: RenderingContextSettings = new RenderingContextSettings(true);
-  private context: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings);
-  private pathA: Path2D = new Path2D();
-  private pathB: Path2D = new Path2D();
-
-  build() {
-    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
-      Canvas(this.context)
-        .width('100%')
-        .height('100%')
-        .backgroundColor('#D5D5D5')
-        .onReady(() => {
-          try {
-            this.context.fillStyle = '#707070'
-            // 创建一个(10vp, 10vp)为起点，宽高为100vp，四个矩形角圆弧半径为10vp的圆角矩形
-            this.pathA.roundRect(10, 10, 100, 100, 10)
-            // 创建一个(120vp, 10vp)为起点，宽高为100vp，四个矩形角圆弧半径为10vp的圆角矩形
-            this.pathA.roundRect(120, 10, 100, 100, [10])
-            this.context.fill(this.pathA)
-            // 创建一个(10vp, 120vp)为起点，宽高为100vp，左上矩形角圆弧半径及右下矩形角圆弧半径为10vp，右上矩形角圆弧半径及左下矩形角圆弧半径为20vp的圆角矩形
-            this.pathB.roundRect(10, 120, 100, 100, [10, 20])
-            // 创建一个(120vp, 120vp)为起点，宽高为100vp，左上矩形角圆弧半径为10vp，右上矩形角圆弧半径及左下矩形角圆弧半径为20vp，右下矩形角圆弧半径为30vp的圆角矩形
-            this.pathB.roundRect(120, 120, 100, 100, [10, 20, 30])
-            // 创建一个(10vp, 230vp)为起点，宽高为100vp，左上矩形角圆弧半径为10vp，右上矩形角圆弧半径为20vp，右下矩形角圆弧半径为30vp，左下矩形角圆弧半径为40vp的圆角矩形
-            this.pathB.roundRect(10, 230, 100, 100, [10, 20, 30, 40])
-            // 创建一个(220vp, 330vp)为起点，宽高为-100vp，左上矩形角圆弧半径为10vp，右上矩形角圆弧半径为20vp，右下矩形角圆弧半径为30vp，左下矩形角圆弧半径为40vp的圆角矩形
-            this.pathB.roundRect(220, 330, -100, -100, [10, 20, 30, 40])
-            this.context.stroke(this.pathB)
-          } catch (error) {
-            let e: BusinessError = error as BusinessError;
-            console.error(`Failed to create roundRect. Code: ${e.code}, message: ${e.message}`);
-          }
-        })
-    }
-    .width('100%')
-    .height('100%')
-  }
-}
-```

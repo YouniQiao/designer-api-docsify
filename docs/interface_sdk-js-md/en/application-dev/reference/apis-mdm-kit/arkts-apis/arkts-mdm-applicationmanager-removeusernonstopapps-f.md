@@ -27,7 +27,7 @@ Removes the non-stoppable application list for a specified user. After the remov
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
-| applicationInstances | Array&lt;common.ApplicationInstance&gt; | Yes | Array of non-stoppable applications. |
+| applicationInstances | Array&lt;[common.ApplicationInstance](arkts-mdm-common-applicationinstance-i.md)&gt; | Yes | Array of non-stoppable applications. |
 
 **Error codes:**
 

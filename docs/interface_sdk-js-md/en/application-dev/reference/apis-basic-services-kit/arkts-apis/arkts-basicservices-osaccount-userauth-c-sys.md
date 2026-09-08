@@ -40,9 +40,9 @@ Performs authentication of the current user.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | challenge | Uint8Array | Yes | Challenge value, which is a random number used to improve security. |
-| authType | AuthType | Yes | Authentication credential type. |
-| authTrustLevel | AuthTrustLevel | Yes | Trust level of the authentication result. |
-| callback | IUserAuthCallback | Yes | Callback used to return the authentication result. |
+| authType | [AuthType](arkts-basicservices-osaccount-authtype-e-sys.md) | Yes | Authentication credential type. |
+| authTrustLevel | [AuthTrustLevel](arkts-basicservices-osaccount-authtrustlevel-e-sys.md) | Yes | Trust level of the authentication result. |
+| callback | [IUserAuthCallback](arkts-basicservices-osaccount-iuserauthcallback-i-sys.md) | Yes | Callback used to return the authentication result. |
 
 **Return value:**
 
@@ -126,10 +126,10 @@ Starts user authentication based on the specified challenge value, authenticatio
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | challenge | Uint8Array | Yes | Challenge value, which is a random number used to prevent replay attacks and improve security. |
-| authType | AuthType | Yes | Authentication credential type. |
-| authTrustLevel | AuthTrustLevel | Yes | Trust level of the authentication result. |
+| authType | [AuthType](arkts-basicservices-osaccount-authtype-e-sys.md) | Yes | Authentication credential type. |
+| authTrustLevel | [AuthTrustLevel](arkts-basicservices-osaccount-authtrustlevel-e-sys.md) | Yes | Trust level of the authentication result. |
 | options | [AuthOptions](arkts-basicservices-osaccount-authoptions-i-sys.md) | Yes | Optional parameters for the authentication. |
-| callback | IUserAuthCallback | Yes | Callback used to return the authentication result. |
+| callback | [IUserAuthCallback](arkts-basicservices-osaccount-iuserauthcallback-i-sys.md) | Yes | Callback used to return the authentication result. |
 
 **Return value:**
 
@@ -218,9 +218,9 @@ Authenticates a specified user. This API uses an asynchronous callback to return
 | --- | --- | --- | --- |
 | userId | number | Yes | User ID. |
 | challenge | Uint8Array | Yes | Challenge value, which is a random number used to improve security. |
-| authType | AuthType | Yes | Authentication credential type. |
-| authTrustLevel | AuthTrustLevel | Yes | Trust level of the authentication result. |
-| callback | IUserAuthCallback | Yes | Callback used to return the authentication result. |
+| authType | [AuthType](arkts-basicservices-osaccount-authtype-e-sys.md) | Yes | Authentication credential type. |
+| authTrustLevel | [AuthTrustLevel](arkts-basicservices-osaccount-authtrustlevel-e-sys.md) | Yes | Trust level of the authentication result. |
+| callback | [IUserAuthCallback](arkts-basicservices-osaccount-iuserauthcallback-i-sys.md) | Yes | Callback used to return the authentication result. |
 
 **Return value:**
 
@@ -359,14 +359,6 @@ A constructor used to create an instance for user authentication.
 let userAuth = new osAccount.UserAuth();
 ```
 
-```TypeScript
-let pinAuth: osAccount.PINAuth = new osAccount.PINAuth();
-```
-
-```TypeScript
-let userIDM = new osAccount.UserIdentityManager();
-```
-
 ## getAvailableStatus
 
 ```TypeScript
@@ -387,8 +379,8 @@ Obtains the available status of the authentication capability corresponding to t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| authType | AuthType | Yes | Authentication credential type. |
-| authTrustLevel | AuthTrustLevel | Yes | Trust level of the authentication. |
+| authType | [AuthType](arkts-basicservices-osaccount-authtype-e-sys.md) | Yes | Authentication credential type. |
+| authTrustLevel | [AuthTrustLevel](arkts-basicservices-osaccount-authtrustlevel-e-sys.md) | Yes | Trust level of the authentication. |
 
 **Return value:**
 

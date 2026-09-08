@@ -38,7 +38,7 @@ Default value: **STANDARD**
 
 If the value is **undefined**, **null**, or not set, the default value is used. If an abnormal value is used, snapshot capture fails and the error code 160003 is returned.
 
-**Type:** DynamicRangeMode
+**Type:** [DynamicRangeMode](../arkts-components/arkts-arkui-dynamicrangemode-e.md)
 
 **Since:** 23
 
@@ -77,49 +77,3 @@ When **isAuto** is set to true, the value of **dynamicRangeMode** is ignored.
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Examples**
-
-```TypeScript
-import { image } from '@kit.ImageKit';
-
-@Entry
-@Component
-struct SnapshotDynamicRangeExample {
-  @State pixmap: image.PixelMap | undefined = undefined;
-
-  build() {
-    Column() {
-      Row() {
-        Image(this.pixmap).width(200).height(200).border({ color: Color.Black, width: 2 }).margin(5)
-        // Replace $r('app.media.img') with the image resource file you use.
-        Image($r('app.media.img'))
-          .autoResize(true)
-          .width(200)
-          .height(200)
-          .margin(5)
-          .id('root')
-      }
-
-      Button('click to generate UI snapshot')
-        .onClick(() => {
-          this.getUIContext().getComponentSnapshot().get('root', (error: Error, pixmap: image.PixelMap) => {
-            if (error) {
-              console.error(`error:${JSON.stringify(error)}`);
-              return;
-            }
-            this.pixmap = pixmap;
-          }, {
-            scale: 2,
-            waitUntilRenderFinished: true,
-            // Set isAuto to true for the dynamic range mode.
-            dynamicRangeMode: { dynamicRangeMode: DynamicRangeMode.STANDARD, isAuto: true }
-          })
-        }).margin(10)
-    }
-    .width('100%')
-    .height('100%')
-    .alignItems(HorizontalAlign.Center)
-  }
-}
-```

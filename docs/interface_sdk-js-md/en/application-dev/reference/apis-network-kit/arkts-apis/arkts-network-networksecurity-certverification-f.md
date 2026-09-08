@@ -22,8 +22,8 @@ Verifies the certificate passed by the application using the preset CA certifica
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| cert | CertBlob | Yes | Certificate to be verified. |
-| caCert | CertBlob | No | Custom CA certificate. |
+| cert | [CertBlob](arkts-network-networksecurity-certblob-i.md) | Yes | Certificate to be verified. |
+| caCert | [CertBlob](arkts-network-networksecurity-certblob-i.md) | No | Custom CA certificate. |
 
 **Return value:**
 

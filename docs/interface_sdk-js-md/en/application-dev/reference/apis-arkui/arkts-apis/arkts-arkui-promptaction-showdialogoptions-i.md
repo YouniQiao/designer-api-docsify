@@ -40,7 +40,7 @@ backgroundBlurStyle?: BlurStyle
 Background blur style of the dialog box. Default value: **BlurStyle.COMPONENT_ULTRA_THICK**   
 **NOTE：**Setting this parameter to **BlurStyle.NONE** disables the background blur. When **backgroundBlurStyle** is set to a value other than **NONE**, do not set **backgroundColor**. If you do, the color display may not produce the expected visual effect.
 
-**Type:** BlurStyle
+**Type:** [BlurStyle](../arkts-components/arkts-arkui-blurstyle-e.md)
 
 **Default:** BlurStyle.COMPONENT_ULTRA_THICK
 
@@ -117,7 +117,7 @@ buttons?: Array<Button>
 
 Array of buttons in the dialog box. The array structure is {text:'button',&nbsp;color:&nbsp;'\#666666'}. More than one button is supported.
 
-**Type:** Array&lt;Button&gt;
+**Type:** Array&lt;[Button](arkts-arkui-promptaction-button-i.md)&gt;
 
 **Since:** 9
 
@@ -305,7 +305,7 @@ message?: string | Resource
 
 Text body.Default value: **undefined**, which indicates that no content is displayed by default.
 
-**Type:** string \| Resource
+**Type:** string \| [Resource](arkts-arkui-resource-t.md)
 
 **Since:** 9
 
@@ -481,7 +481,7 @@ title?: string | Resource
 
 Title of the dialog box.Default value: **undefined**, which indicates that no title is not displayed by default.
 
-**Type:** string \| Resource
+**Type:** string \| [Resource](arkts-arkui-resource-t.md)
 
 **Since:** 9
 

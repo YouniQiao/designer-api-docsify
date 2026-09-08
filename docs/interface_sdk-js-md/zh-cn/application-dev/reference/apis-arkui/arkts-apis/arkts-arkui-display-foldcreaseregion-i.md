@@ -20,7 +20,7 @@ readonly creaseRects: Array<Rect>
 
 折痕区域。
 
-**类型：** Array&lt;Rect&gt;
+**类型：** Array&lt;[Rect](arkts-arkui-display-rect-i.md)&gt;
 
 **起始版本：** 10
 

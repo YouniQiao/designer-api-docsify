@@ -82,7 +82,7 @@ Unsubscribe the event reported when a remote Bluetooth device is bonded. On API 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'bondStateChange' | Yes | Type of the bond state event to listen for. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;BondStateParam&gt; | No | Callback used to listen for the bond state event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[BondStateParam](arkts-connectivity-bluetoothmanager-bondstateparam-i.md)&gt; | No | Callback used to listen for the bond state event. |
 
 **Error codes:**
 
@@ -134,7 +134,7 @@ Unsubscribe the event of a pairing request from a remote Bluetooth device. On AP
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'pinRequired' | Yes | Type of the pairing request event to listen for. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;PinRequiredParam&gt; | No | Callback used to listen for the pairing request event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PinRequiredParam](arkts-connectivity-bluetoothmanager-pinrequiredparam-i.md)&gt; | No | Callback used to listen for the pairing request event. |
 
 **Error codes:**
 
@@ -186,7 +186,7 @@ Unsubscribe the event reported when the Bluetooth state changes. On API 10 and a
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'stateChange' | Yes | Type of the Bluetooth state changes event to listen for. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;BluetoothState&gt; | No | Callback used to listen for the Bluetooth state event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[BluetoothState](arkts-connectivity-bluetoothmanager-bluetoothstate-e.md)&gt; | No | Callback used to listen for the Bluetooth state event. |
 
 **Error codes:**
 

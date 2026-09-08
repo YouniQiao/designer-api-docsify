@@ -36,7 +36,7 @@ mode: SyncMode
 
 Indicates the database synchronization mode.
 
-**Type:** SyncMode
+**Type:** [SyncMode](arkts-arkdata-relationalstore-syncmode-e.md)
 
 **Since:** 26.0.0
 
@@ -52,7 +52,7 @@ predicate?: RdbPredicates
 
 Indicates the table-level synchronization predicate.
 
-**Type:** RdbPredicates
+**Type:** [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md)
 
 **Since:** 26.0.0
 

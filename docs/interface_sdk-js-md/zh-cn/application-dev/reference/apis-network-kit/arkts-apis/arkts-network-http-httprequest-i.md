@@ -555,7 +555,7 @@ request(url: string, callback: AsyncCallback<HttpResponse>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | url | string | 是 | 发起网络请求的URL地址。示例：https://www.test.com |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;HttpResponse&gt; | 是 | 回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[HttpResponse](arkts-network-http-httpresponse-i.md)&gt; | 是 | 回调函数。 |
 
 **错误码：**
 
@@ -647,7 +647,7 @@ request(url: string, options: HttpRequestOptions, callback: AsyncCallback<HttpRe
 | --- | --- | --- | --- |
 | url | string | 是 | 发起网络请求的URL地址。 |
 | options | [HttpRequestOptions](arkts-network-http-httprequestoptions-i.md) | 是 | 参考[HttpRequestOptions](arkts-network-http-httprequestoptions-i.md)。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;HttpResponse&gt; | 是 | 回调函数。当请求成功时，回调内容是[HttpResponse](arkts-network-http-httpresponse-i.md) ，请求失败时为undefined。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[HttpResponse](arkts-network-http-httpresponse-i.md)&gt; | 是 | 回调函数。当请求成功时，回调内容是[HttpResponse](arkts-network-http-httpresponse-i.md) ，请求失败时为undefined。 |
 
 **错误码：**
 
@@ -769,7 +769,7 @@ request(url: string, options?: HttpRequestOptions): Promise<HttpResponse>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;HttpResponse&gt; | Promise对象，返回请求的响应结果。 |
+| Promise&lt;[HttpResponse](arkts-network-http-httpresponse-i.md)&gt; | Promise对象，返回请求的响应结果。 |
 
 **错误码：**
 
@@ -1154,7 +1154,7 @@ requestSync(url: string, options?: HttpRequestOptions): HttpResponse
 
 | 类型 | 说明 |
 | --- | --- |
-| HttpResponse | 同步返回HTTP请求响应结果。 |
+| [HttpResponse](arkts-network-http-httpresponse-i.md) | 同步返回HTTP请求响应结果。 |
 
 **错误码：**
 

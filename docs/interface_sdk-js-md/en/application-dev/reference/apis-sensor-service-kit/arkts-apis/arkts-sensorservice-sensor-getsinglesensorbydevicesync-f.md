@@ -29,7 +29,7 @@ Obtains information about the sensor of a specific type.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;Sensor&gt; | Sensor attribute list. |
+| Array&lt;[Sensor](arkts-sensorservice-sensor-sensor-i.md)&gt; | Sensor attribute list. |
 
 **Examples**
 

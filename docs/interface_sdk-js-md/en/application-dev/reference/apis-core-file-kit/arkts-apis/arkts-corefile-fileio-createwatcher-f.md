@@ -34,12 +34,3 @@ Listens for file or directory changes. This API uses an asynchronous callback to
 | Type | Description |
 | --- | --- |
 | [Watcher](arkts-corefile-fileio-watcher-depr-i.md) | Promise that returns the file change. |
-
-**Examples**
-
-```TypeScript
-let filePath = pathDir + "/test.txt";
-fileio.createWatcher(filePath, 1, (err: BusinessError, event: number) => {
-  console.info("event: " + event + "errmsg: " + JSON.stringify(err));
-});
-```

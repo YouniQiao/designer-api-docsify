@@ -22,7 +22,7 @@ Creates a **UDPSocket** object.
 
 | Type | Description |
 | --- | --- |
-| UDPSocket | UDPSocket** object. |
+| [UDPSocket](arkts-network-socket-udpsocket-i.md) | UDPSocket** object. |
 
 **Examples**
 

@@ -27,7 +27,7 @@ Obtains the network status of the SIM card in the specified slot. This API uses 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | slotId | number | Yes | Card slot ID.    - **0**: card slot 1.    - **1**: card slot 2 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;NetworkState&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[NetworkState](arkts-telephony-radio-networkstate-i.md)&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -82,7 +82,7 @@ Obtains the network status of the SIM card in the specified slot. This API uses 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;NetworkState&gt; | Promise used to return the network status. |
+| Promise&lt;[NetworkState](arkts-telephony-radio-networkstate-i.md)&gt; | Promise used to return the network status. |
 
 **Error codes:**
 
@@ -129,7 +129,7 @@ Obtains the network status. This API uses an asynchronous callback to return the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;NetworkState&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[NetworkState](arkts-telephony-radio-networkstate-i.md)&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 

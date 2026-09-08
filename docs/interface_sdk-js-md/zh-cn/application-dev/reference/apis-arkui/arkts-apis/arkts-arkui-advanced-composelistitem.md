@@ -1,5 +1,13 @@
 # @ohos.arkui.advanced.ComposeListItem
 
+## 子组件
+
+无
+
+## 事件
+
+不支持通用事件。
+
 ## 导入模块
 
 ```TypeScript

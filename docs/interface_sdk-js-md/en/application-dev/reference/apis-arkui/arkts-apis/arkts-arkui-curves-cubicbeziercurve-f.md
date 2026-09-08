@@ -33,7 +33,7 @@ Creates a cubic Bezier curve, with x-coordinates automatically normalized betwee
 
 | Type | Description |
 | --- | --- |
-| ICurve | Interpolation curve. |
+| [ICurve](arkts-arkui-curves-icurve-i.md) | Interpolation curve. |
 
 **Examples**
 

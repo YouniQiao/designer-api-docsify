@@ -34,7 +34,7 @@ Requests a transient task.
 
 | Type | Description |
 | --- | --- |
-| DelaySuspendInfo | Information about the transient task. |
+| [DelaySuspendInfo](arkts-backgroundtasks-backgroundtaskmanager-delaysuspendinfo-i.md) | Information about the transient task. |
 
 **Error codes:**
 

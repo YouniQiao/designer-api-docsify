@@ -67,7 +67,7 @@ Callback invoked when the toggle's state changes.
 
 **true**: The toggle is turned on. **false**: The toggle is turned off.
 
-**Type:** Callback&lt;boolean&gt;
+**Type:** [Callback](arkts-arkui-callback-i.md)&lt;boolean&gt;
 
 **Since:** 12
 

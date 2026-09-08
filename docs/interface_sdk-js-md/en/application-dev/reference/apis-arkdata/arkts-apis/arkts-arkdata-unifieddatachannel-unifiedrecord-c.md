@@ -33,7 +33,7 @@ Adds data of a specified data type and content to the current data record. You c
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | string | Yes | Type of the data to add. For details, see [UniformDataType](arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md). |
-| value | ValueType | Yes | Value of the data to add. |
+| value | [ValueType](arkts-arkdata-unifieddatachannel-valuetype-t.md) | Yes | Value of the data to add. |
 
 **Error codes:**
 
@@ -87,10 +87,6 @@ Defines a constructor used to create a **UnfiedRecord** object.
 **Examples**
 
 ```TypeScript
-let unifiedData = new unifiedDataChannel.UnifiedData();
-```
-
-```TypeScript
 let unifiedRecord = new unifiedDataChannel.UnifiedRecord();
 ```
 
@@ -119,7 +115,7 @@ If **value** is of the [Want](../../apis-ability-kit/arkts-apis/arkts-ability-ap
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | string | Yes | Type of the data record to create. |
-| value | ValueType | Yes | Value of the data record to create. |
+| value | [ValueType](arkts-arkdata-unifieddatachannel-valuetype-t.md) | Yes | Value of the data record to create. |
 
 **Error codes:**
 
@@ -182,7 +178,7 @@ Obtains all the data in the current data record.
 
 | Type | Description |
 | --- | --- |
-| Record&lt;string, ValueType&gt; | Values and types obtained. |
+| Record&lt;string, [ValueType](arkts-arkdata-unifieddatachannel-valuetype-t.md)&gt; | Values and types obtained. |
 
 **Examples**
 
@@ -259,7 +255,7 @@ Obtains data of the specified type from the data record.
 
 | Type | Description |
 | --- | --- |
-| ValueType | Value obtained. |
+| [ValueType](arkts-arkdata-unifieddatachannel-valuetype-t.md) | Value obtained. |
 
 **Error codes:**
 
@@ -386,28 +382,6 @@ Obtains all the data types in the data record. This API can be called using the 
 ```TypeScript
 import { uniformDataStruct, uniformTypeDescriptor } from '@kit.ArkData';
 
-let plainText: uniformDataStruct.PlainText = {
-  uniformDataType: 'general.plain-text',
-  textContent: 'This is a plain text example',
-  abstract: 'This is abstract'
-};
-let text = new unifiedDataChannel.UnifiedRecord(uniformTypeDescriptor.UniformDataType.PLAIN_TEXT, plainText);
-let unifiedData = new unifiedDataChannel.UnifiedData(text);
-
-let hyperlink: uniformDataStruct.Hyperlink = {
-  uniformDataType: 'general.hyperlink',
-  url: 'www.XXX.com',
-  description: 'This is the description of the hyperlink'
-};
-let link = new unifiedDataChannel.UnifiedRecord(uniformTypeDescriptor.UniformDataType.HYPERLINK, hyperlink);
-unifiedData.addRecord(link);
-
-let types = unifiedData.getTypes();
-```
-
-```TypeScript
-import { uniformDataStruct, uniformTypeDescriptor } from '@kit.ArkData';
-
 let fileUriDetails: Record<string, string> = {
   'attr1': 'value1',
   'attr2': 'value2'
@@ -467,7 +441,7 @@ Obtains the value of this data record.
 
 | Type | Description |
 | --- | --- |
-| ValueType | Value obtained. |
+| [ValueType](arkts-arkdata-unifieddatachannel-valuetype-t.md) | Value obtained. |
 
 **Examples**
 

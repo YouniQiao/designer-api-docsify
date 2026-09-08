@@ -26,7 +26,7 @@ Obtains the number of notification slots of a specified application. This API us
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundle | BundleOption | Yes | Bundle information of the application. |
+| bundle | [BundleOption](arkts-notification-notificationmanager-bundleoption-t.md) | Yes | Bundle information of the application. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
@@ -83,7 +83,7 @@ Obtains the number of notification slots of a specified application. This API us
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundle | BundleOption | Yes | Bundle information of the application. |
+| bundle | [BundleOption](arkts-notification-notificationmanager-bundleoption-t.md) | Yes | Bundle information of the application. |
 
 **Return value:**
 

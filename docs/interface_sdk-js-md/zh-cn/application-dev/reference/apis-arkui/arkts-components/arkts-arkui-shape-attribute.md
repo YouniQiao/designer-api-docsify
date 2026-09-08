@@ -77,7 +77,7 @@ fillOpacity(value: number | string | Resource)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number \| string \| Resource | 是 | 填充区域透明度。   **说明：**number格式取值范围是[0.0, 1.0]，若给定值小于0.0，则取值为0.0；若给定值大于1.0，则取值为1.0，其余异常值按1.0处理。string格式支持number格式取值的字符串形式，取值范围与number格式相同。Resource格式支持系统资源或者应用资源中的字符串，取值范围和number格式相同。默认值：1.0 |
+| value | number \| string \| [Resource](../arkts-apis/arkts-arkui-resource-t.md) | 是 | 填充区域透明度。   **说明：**number格式取值范围是[0.0, 1.0]，若给定值小于0.0，则取值为0.0；若给定值大于1.0，则取值为1.0，其余异常值按1.0处理。string格式支持number格式取值的字符串形式，取值范围与number格式相同。Resource格式支持系统资源或者应用资源中的字符串，取值范围和number格式相同。默认值：1.0 |
 
 ## mesh
 
@@ -265,7 +265,7 @@ strokeOpacity(value: number | string | Resource)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number \| string \| Resource | 是 | 边框透明度。默认值：[stroke](#stroke)接口设置的透明度。异常值NaN按0.0处理，undefined、null和Infinity按1.0处理。 |
+| value | number \| string \| [Resource](../arkts-apis/arkts-arkui-resource-t.md) | 是 | 边框透明度。默认值：[stroke](#stroke)接口设置的透明度。异常值NaN按0.0处理，undefined、null和Infinity按1.0处理。 |
 
 ## strokeWidth
 

@@ -37,6 +37,7 @@ Called after the [onBackground](arkts-ability-app-ability-uiability-uiability-c.
 **Examples**
 
 For details, see AbilityLifecycleCallback Usage Example.
+- simpleType:
 
 ## onAbilityContinue
 
@@ -63,6 +64,7 @@ Called after the [onContinue](arkts-ability-app-ability-uiability-uiability-c.md
 **Examples**
 
 For details, see AbilityLifecycleCallback Usage Example.
+- simpleType:
 
 ## onAbilityCreate
 
@@ -89,6 +91,7 @@ Called after the [onCreate](arkts-ability-app-ability-uiability-uiability-c.md#o
 **Examples**
 
 For details, see AbilityLifecycleCallback Usage Example.
+- simpleType:
 
 ## onAbilityDestroy
 
@@ -115,6 +118,7 @@ Called after the [onDestroy](arkts-ability-app-ability-uiability-uiability-c.md#
 **Examples**
 
 For details, see AbilityLifecycleCallback Usage Example.
+- simpleType:
 
 ## onAbilityForeground
 
@@ -141,6 +145,7 @@ Called after the [onForeground](arkts-ability-app-ability-uiability-uiability-c.
 **Examples**
 
 For details, see AbilityLifecycleCallback Usage Example.
+- simpleType:
 
 ## onAbilitySaveState
 
@@ -167,6 +172,7 @@ Called after the [onSaveState](arkts-ability-app-ability-uiability-uiability-c.m
 **Examples**
 
 For details, see AbilityLifecycleCallback Usage Example.
+- simpleType:
 
 ## onAbilityWillBackground
 
@@ -193,6 +199,7 @@ Called before the [onBackground](arkts-ability-app-ability-uiability-uiability-c
 **Examples**
 
 For details, see AbilityLifecycleCallback Usage Example.
+- simpleType:
 
 ## onAbilityWillContinue
 
@@ -219,6 +226,7 @@ Called before the [onContinue](arkts-ability-app-ability-uiability-uiability-c.m
 **Examples**
 
 For details, see AbilityLifecycleCallback Usage Example.
+- simpleType:
 
 ## onAbilityWillCreate
 
@@ -245,6 +253,7 @@ Called before the [onCreate](arkts-ability-app-ability-uiability-uiability-c.md#
 **Examples**
 
 For details, see AbilityLifecycleCallback Usage Example.
+- simpleType:
 
 ## onAbilityWillDestroy
 
@@ -271,6 +280,7 @@ Called before the [onDestroy](arkts-ability-app-ability-uiability-uiability-c.md
 **Examples**
 
 For details, see AbilityLifecycleCallback Usage Example.
+- simpleType:
 
 ## onAbilityWillForeground
 
@@ -297,6 +307,7 @@ Called before the [onForeground](arkts-ability-app-ability-uiability-uiability-c
 **Examples**
 
 For details, see AbilityLifecycleCallback Usage Example.
+- simpleType:
 
 ## onAbilityWillSaveState
 
@@ -323,6 +334,7 @@ Called before the [onSaveState](arkts-ability-app-ability-uiability-uiability-c.
 **Examples**
 
 For details, see AbilityLifecycleCallback Usage Example.
+- simpleType:
 
 ## onNewWant
 
@@ -349,6 +361,7 @@ Called after the [onNewWant](arkts-ability-app-ability-uiability-uiability-c.md#
 **Examples**
 
 For details, see AbilityLifecycleCallback Usage Example.
+- simpleType:
 
 ## onWillNewWant
 
@@ -375,6 +388,7 @@ Called before the [onNewWant](arkts-ability-app-ability-uiability-uiability-c.md
 **Examples**
 
 For details, see AbilityLifecycleCallback Usage Example.
+- simpleType:
 
 ## onWindowStageActive
 
@@ -397,11 +411,12 @@ Called when the main window of the UIAbility gains focus.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | Yes | UIAbility object associated with the callback event. |
-| windowStage | window.WindowStage | Yes | Main window manager of the UIAbility associated with the callback event. |
+| windowStage | [window.WindowStage](../../apis-arkui/arkts-apis/arkts-arkui-window-windowstage-i.md) | Yes | Main window manager of the UIAbility associated with the callback event. |
 
 **Examples**
 
 For details, see AbilityLifecycleCallback Usage Example.
+- simpleType:
 
 ## onWindowStageCreate
 
@@ -424,11 +439,12 @@ Called after the [onWindowStageCreate](arkts-ability-app-ability-uiability-uiabi
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | Yes | UIAbility object associated with the callback event. |
-| windowStage | window.WindowStage | Yes | Main window manager of the UIAbility associated with the callback event. |
+| windowStage | [window.WindowStage](../../apis-arkui/arkts-apis/arkts-arkui-window-windowstage-i.md) | Yes | Main window manager of the UIAbility associated with the callback event. |
 
 **Examples**
 
 For details, see AbilityLifecycleCallback Usage Example.
+- simpleType:
 
 ## onWindowStageDestroy
 
@@ -451,11 +467,12 @@ Called after the [onWindowStageDestroy](arkts-ability-app-ability-uiability-uiab
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | Yes | UIAbility object associated with the callback event. |
-| windowStage | window.WindowStage | Yes | Main window manager of the UIAbility associated with the callback event. |
+| windowStage | [window.WindowStage](../../apis-arkui/arkts-apis/arkts-arkui-window-windowstage-i.md) | Yes | Main window manager of the UIAbility associated with the callback event. |
 
 **Examples**
 
 For details, see AbilityLifecycleCallback Usage Example.
+- simpleType:
 
 ## onWindowStageInactive
 
@@ -478,11 +495,12 @@ Called when the main window of the UIAbility loses focus.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | Yes | UIAbility object associated with the callback event. |
-| windowStage | window.WindowStage | Yes | Main window manager of the UIAbility associated with the callback event. |
+| windowStage | [window.WindowStage](../../apis-arkui/arkts-apis/arkts-arkui-window-windowstage-i.md) | Yes | Main window manager of the UIAbility associated with the callback event. |
 
 **Examples**
 
 For details, see AbilityLifecycleCallback Usage Example.
+- simpleType:
 
 ## onWindowStageRestore
 
@@ -505,11 +523,12 @@ Called after the [onWindowStageRestore](arkts-ability-app-ability-uiability-uiab
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | Yes | UIAbility object associated with the callback event. |
-| windowStage | window.WindowStage | Yes | Main window manager of the UIAbility associated with the callback event. |
+| windowStage | [window.WindowStage](../../apis-arkui/arkts-apis/arkts-arkui-window-windowstage-i.md) | Yes | Main window manager of the UIAbility associated with the callback event. |
 
 **Examples**
 
 For details, see AbilityLifecycleCallback Usage Example.
+- simpleType:
 
 ## onWindowStageWillCreate
 
@@ -532,11 +551,12 @@ Called before the [onWindowStageCreate](arkts-ability-app-ability-uiability-uiab
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | Yes | UIAbility object associated with the callback event. |
-| windowStage | window.WindowStage | Yes | Main window manager of the UIAbility associated with the callback event. |
+| windowStage | [window.WindowStage](../../apis-arkui/arkts-apis/arkts-arkui-window-windowstage-i.md) | Yes | Main window manager of the UIAbility associated with the callback event. |
 
 **Examples**
 
 For details, see AbilityLifecycleCallback Usage Example.
+- simpleType:
 
 ## onWindowStageWillDestroy
 
@@ -559,11 +579,12 @@ Called before the [onWindowStageDestroy](arkts-ability-app-ability-uiability-uia
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | Yes | UIAbility object associated with the callback event. |
-| windowStage | window.WindowStage | Yes | Main window manager of the UIAbility associated with the callback event. |
+| windowStage | [window.WindowStage](../../apis-arkui/arkts-apis/arkts-arkui-window-windowstage-i.md) | Yes | Main window manager of the UIAbility associated with the callback event. |
 
 **Examples**
 
 For details, see AbilityLifecycleCallback Usage Example.
+- simpleType:
 
 ## onWindowStageWillRestore
 
@@ -586,8 +607,9 @@ Called before the [onWindowStageRestore](arkts-ability-app-ability-uiability-uia
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | Yes | UIAbility object associated with the callback event. |
-| windowStage | window.WindowStage | Yes | Main window manager of the UIAbility associated with the callback event. |
+| windowStage | [window.WindowStage](../../apis-arkui/arkts-apis/arkts-arkui-window-windowstage-i.md) | Yes | Main window manager of the UIAbility associated with the callback event. |
 
 **Examples**
 
 For details, see AbilityLifecycleCallback Usage Example.
+- simpleType:

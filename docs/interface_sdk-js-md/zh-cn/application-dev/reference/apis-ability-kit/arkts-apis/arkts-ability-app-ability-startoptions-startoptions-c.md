@@ -176,7 +176,7 @@ UIAbility启动后的进程模式。
 
 3.processMode和startupVisibility必须同时设置。
 
-**类型：** contextConstant.ProcessMode
+**类型：** [contextConstant.ProcessMode](arkts-ability-contextconstant-processmode-e.md)
 
 **起始版本：** 12
 
@@ -192,7 +192,7 @@ splitRatio?: window.SplitRatioPreference
 
 分屏比首选项的类型。
 
-**类型：** window.SplitRatioPreference
+**类型：** [window.SplitRatioPreference](../../apis-arkui/arkts-apis/arkts-arkui-window-splitratiopreference-e.md)
 
 **起始版本：** 26.0.0
 
@@ -216,7 +216,7 @@ UIAbility启动后的可见性。当用户设置目标UIAbility为不可见时�
 
 3.processMode和startupVisibility必须同时设置。
 
-**类型：** contextConstant.StartupVisibility
+**类型：** [contextConstant.StartupVisibility](arkts-ability-contextconstant-startupvisibility-e.md)
 
 **起始版本：** 12
 
@@ -261,7 +261,7 @@ startWindowIcon?: image.PixelMap
 - 仅在[UIAbilityContext.startAbility](arkts-ability-uiabilitycontext-c.md#startability)中生效。  
 - 图片数据大小限制为600MB。
 
-**类型：** image.PixelMap
+**类型：** [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)
 
 **起始版本：** 14
 
@@ -288,7 +288,7 @@ supportWindowModes?: Array<bundleManager.SupportWindowMode>
 
 <!--RP1-->该功能仅在2in1和Tablet设备上生效。<!--RP1End-->
 
-**类型：** Array&lt;bundleManager.SupportWindowMode&gt;
+**类型：** Array&lt;[bundleManager.SupportWindowMode](arkts-ability-bundlemanager-supportwindowmode-e.md)&gt;
 
 **起始版本：** 14
 
@@ -304,7 +304,7 @@ windowCreateParams?: window.WindowCreateParams
 
 启动UIAbility时的窗口参数。
 
-**类型：** window.WindowCreateParams
+**类型：** [window.WindowCreateParams](../../apis-arkui/arkts-apis/arkts-arkui-window-windowcreateparams-i.md)
 
 **起始版本：** 20
 
@@ -433,122 +433,3 @@ withAnimation?: boolean
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
-
-**示例**
-
-```TypeScript
-import { UIAbility, Want, StartOptions, bundleManager, CompletionHandler } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { image } from '@kit.ImageKit';
-import { window } from '@kit.ArkUI';
-
-export default class EntryAbility extends UIAbility {
-  onForeground() {
-    let want: Want = {
-      deviceId: '',
-      bundleName: 'com.example.myapplication',
-      abilityName: 'EntryAbility'
-    };
-
-    let completionHandler: CompletionHandler = {
-      onRequestSuccess: (elementName: bundleManager.ElementName, message: string): void => {
-        console.info(`${elementName.bundleName}-${elementName.moduleName}-${elementName.abilityName} start succeeded: ${message}`);
-      },
-      onRequestFailure: (elementName: bundleManager.ElementName, message: string): void => {
-        console.error(`${elementName.bundleName}-${elementName.moduleName}-${elementName.abilityName} start failed: ${message}`);
-      }
-    };
-
-    let color = new ArrayBuffer(512 * 512 * 4); // 创建一个ArrayBuffer对象，用于存储图像像素。该对象的大小为（height * width * 4）字节。
-    let imagePixelMap: image.PixelMap;
-    let windowParam: window.WindowCreateParams = {};
-    let bufferArr = new Uint8Array(color);
-    for (let i = 0; i < bufferArr.length; i += 4) {
-      bufferArr[i] = 255;
-      bufferArr[i+1] = 0;
-      bufferArr[i+2] = 122;
-      bufferArr[i+3] = 255;
-    }
-    image.createPixelMap(color, {
-      editable: true, pixelFormat: image.PixelMapFormat.RGBA_8888, size: { height: 512, width: 512 }
-    }).then((data) => {
-      imagePixelMap = data;
-      // 配置启动UIAbility的选项参数
-      let options: StartOptions = {
-        displayId: 0,
-        startWindowIcon: imagePixelMap,
-        startWindowBackgroundColor: '#E510FFFF',
-        supportWindowModes: [
-          bundleManager.SupportWindowMode.FULL_SCREEN,
-          bundleManager.SupportWindowMode.SPLIT,
-          bundleManager.SupportWindowMode.FLOATING
-        ],
-        minWindowWidth: 320,
-        minWindowHeight: 240,
-        maxWindowWidth: 2560,
-        maxWindowHeight: 2560,
-        completionHandler: completionHandler,
-        hideStartWindow: true,
-        windowCreateParams: windowParam
-      };
-
-      try {
-        // 调用startAbility接口启动目标UIAbility，传入Want参数和启动选项
-        this.context.startAbility(want, options, (err: BusinessError) => {
-          if (err.code) {
-            // 处理业务逻辑错误
-            console.error(`startAbility failed, code is ${err.code}, message is ${err.message}`);
-            return;
-          }
-          // 执行正常业务
-          console.info('startAbility succeed');
-        });
-      } catch (err) {
-        // 处理入参错误异常
-        let code = (err as BusinessError).code;
-        let message = (err as BusinessError).message;
-        console.error(`startAbility failed, code is ${code}, message is ${message}`);
-      }
-    }).catch((err: BusinessError) => {
-      console.error(`createPixelMap failed, code is ${err.code}, message is ${err.message}`);
-    });
-  }
-}
-```
-
-```TypeScript
-import { UIAbility, Want, StartOptions } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-
-  onForeground() {
-    let want: Want = {
-      deviceId: '',
-      bundleName: 'com.example.myapplication',
-      abilityName: 'EntryAbility'
-    };
-    let options: StartOptions = {
-      displayId: 0
-    };
-
-    try {
-      // 启动指定的Ability，传入Want和StartOptions参数
-      this.context.startAbility(want, options, (err: BusinessError) => {
-        if (err.code) {
-          // 处理业务逻辑错误
-          console.error(`startAbility failed, code is ${err.code}, message is ${err.message}`);
-          return;
-        }
-        // 执行正常业务
-        console.info('startAbility succeed');
-      });
-    } catch (err) {
-      // 处理入参错误异常
-      let code = (err as BusinessError).code;
-      let message = (err as BusinessError).message;
-      console.error(`startAbility failed, code is ${code}, message is ${message}`);
-    }
-  }
-}
-```

@@ -51,19 +51,6 @@ If a key parameter of the [COMMON_PARAMS_SPEC](arkts-cryptoarchitecture-cryptofr
 ```TypeScript
 import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 
-let asyKeyGenerator = cryptoFramework.createAsyKeyGenerator('ECC256');
-asyKeyGenerator.generateKeyPair((err, keyPair) => {
-  if (err) {
-    console.error(`generateKeyPair failed, errCode: ${err.code}, errMsg: ${err.message}`);
-    return;
-  }
-  console.info('generateKeyPair result: success.');
-})
-```
-
-```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
-
 // Set the common parameters of the DSA1024 public and private keys.
 function genDsa1024CommonSpecBigE() {
   let dsaCommonSpec: cryptoFramework.DSACommonParamsSpec = {
@@ -140,19 +127,6 @@ If a key parameter of the [COMMON_PARAMS_SPEC](arkts-cryptoarchitecture-cryptofr
 import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
-let asyKeyGenerator = cryptoFramework.createAsyKeyGenerator('ECC256');
-let keyGenPromise = asyKeyGenerator.generateKeyPair();
-keyGenPromise.then(keyPair => {
-  console.info('generateKeyPair result: success.');
-}).catch((error: BusinessError) => {
-  console.error(`generateKeyPair failed, ${error.code}, ${error.message}`);
-});
-```
-
-```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
 // Set the common parameters of the DSA1024 public and private keys.
 function genDsa1024CommonSpecBigE() {
   let dsaCommonSpec: cryptoFramework.DSACommonParamsSpec = {
@@ -200,7 +174,7 @@ Generates a key pair using this asymmetric key generator. This API returns the r
 
 If a key parameter of the [COMMON_PARAMS_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md) type is used to create the key generator, a key pair will be randomly generated. If a key parameter of the [KEY_PAIR_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md) type is used to create the key generator, you can obtain a key pair that is consistent with the specified key parameters.
 
-**NOTE：**It is recommended to prioritize the use of asynchronous API, generateKeyPair. Synchronous API may take a number time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
+**NOTE：**It is recommended to prioritize the use of asynchronous API, generateKeyPair. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
 **Since:** 12
 
@@ -223,22 +197,6 @@ If a key parameter of the [COMMON_PARAMS_SPEC](arkts-cryptoarchitecture-cryptofr
 | [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
 
 **Examples**
-
-```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
-
-let asyKeyGenerator = cryptoFramework.createAsyKeyGenerator('ECC256');
-try {
-  let keyPairData = asyKeyGenerator.generateKeyPairSync();
-  if (keyPairData != null) {
-    console.info('[Sync]: key pair result: success.');
-  } else {
-    console.error('[Sync]: get key pair result: fail.');
-  }
-} catch (e) {
-  console.error(`sync failed: errCode: ${e.code}, errMsg: ${e.message}`);
-}
-```
 
 ```TypeScript
 import { cryptoFramework } from '@kit.CryptoArchitectureKit';
@@ -446,7 +404,7 @@ Generates a private key using this asymmetric key generator. This API returns th
 
 If a key parameter of the [PRIVATE_KEY_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md) type is used to create the key generator, a private key can be obtained. If a key parameter of the [KEY_PAIR_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md) type is used to create the key generator, you can obtain the private key from the key pair generated.
 
-**NOTE：**It is recommended to prioritize the use of asynchronous API, [generatePriKey](#generateprikey). Synchronous API may take a number time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
+**NOTE：**It is recommended to prioritize the use of asynchronous API, [generatePriKey](#generateprikey). Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
 **Since:** 12
 
@@ -674,7 +632,7 @@ Generates a public key using this asymmetric key generator. This API returns the
 
 If [PUBLIC_KEY_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md) is used to create a key generator, the key generator generates the specified public key. If [KEY_PAIR_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md) is used to create a key generator, you can obtain the specified public key from the key pair generated.
 
-**NOTE：**It is recommended to prioritize the use of asynchronous API, [generatePubKey](#generatepubkey). Synchronous API may take a number time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
+**NOTE：**It is recommended to prioritize the use of asynchronous API, [generatePubKey](#generatepubkey). Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
 **Since:** 12
 

@@ -23,7 +23,7 @@ Obtains information about the sensor of a specific type. This API uses an asynch
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | [SensorId](arkts-sensorservice-sensor-sensorid-e.md) | Yes | Sensor type. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Sensor&gt; | Yes | Callback used to return the sensor information. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Sensor](arkts-sensorservice-sensor-sensor-i.md)&gt; | Yes | Callback used to return the sensor information. |
 
 **Error codes:**
 
@@ -85,7 +85,7 @@ Obtains information about the sensor of a specific type. This API uses a promise
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Sensor&gt; | Promise used to return the sensor information. |
+| Promise&lt;[Sensor](arkts-sensorservice-sensor-sensor-i.md)&gt; | Promise used to return the sensor information. |
 
 **Error codes:**
 

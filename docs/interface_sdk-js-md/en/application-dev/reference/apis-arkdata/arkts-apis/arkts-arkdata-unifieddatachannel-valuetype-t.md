@@ -21,7 +21,7 @@ Enumerates the data field types allowed in a unified data record.
 | double | Double. |
 | string | String. |
 | boolean | Boolean. |
-| image.PixelMap | The value is of the [image.PixelMap]{ |
+| [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | The value is of the [image.PixelMap]{ |
 | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | [Want]{ |
 | ArrayBuffer | ArrayBuffer. |
 | object | Object. |

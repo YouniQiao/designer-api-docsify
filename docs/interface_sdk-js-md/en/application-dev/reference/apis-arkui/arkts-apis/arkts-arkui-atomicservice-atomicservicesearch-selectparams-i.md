@@ -114,7 +114,7 @@ menuBackgroundBlurStyle?: BlurStyle
 
 Set menu background blur Style.
 
-**Type:** BlurStyle
+**Type:** [BlurStyle](../arkts-components/arkts-arkui-blurstyle-e.md)
 
 **Since:** 18
 

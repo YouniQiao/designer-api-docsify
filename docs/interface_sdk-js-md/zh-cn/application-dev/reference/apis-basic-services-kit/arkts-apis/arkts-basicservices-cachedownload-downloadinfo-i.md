@@ -20,7 +20,7 @@ readonly network: NetworkInfo
 
 预下载的网络信息。
 
-**类型：** NetworkInfo
+**类型：** [NetworkInfo](arkts-basicservices-cachedownload-networkinfo-i.md)
 
 **起始版本：** 20
 

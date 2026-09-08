@@ -101,7 +101,7 @@ Horizontal alignment mode of the text.
 
 Default value: **TextAlign.START**
 
-**Type:** TextAlign
+**Type:** [TextAlign](../arkts-apis/arkts-arkui-textalign-e.md)
 
 **Since:** 11
 
@@ -121,7 +121,7 @@ Sets the text direction.
 
 Default value: TextDirection.DEFAULT
 
-**Type:** TextDirection
+**Type:** [TextDirection](../arkts-apis/arkts-arkui-textdirection-e.md)
 
 **Since:** 23
 
@@ -141,7 +141,7 @@ Vertical alignment of text paragraphs.
 
 Default value: **TextVerticalAlign.BASELINE**.
 
-**Type:** TextVerticalAlign
+**Type:** [TextVerticalAlign](../arkts-apis/arkts-arkui-textverticalalign-e.md)
 
 **Since:** 20
 
@@ -161,7 +161,7 @@ Word break rule.
 
 Default value: **WordBreak.BREAK_WORD**
 
-**Type:** WordBreak
+**Type:** [WordBreak](../arkts-apis/arkts-arkui-wordbreak-e.md)
 
 **Since:** 12
 

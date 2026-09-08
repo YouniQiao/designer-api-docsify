@@ -84,7 +84,7 @@ colorMode?: ConfigurationConstant.ColorMode
 
 颜色模式。深色模式下按钮颜色适配为浅色，浅色模式下按钮颜色适配为深色。未设置则默认跟随系统颜色模式。
 
-**类型：** ConfigurationConstant.ColorMode
+**类型：** [ConfigurationConstant.ColorMode](../../apis-ability-kit/arkts-apis/arkts-ability-configurationconstant-colormode-e.md)
 
 **起始版本：** 14
 

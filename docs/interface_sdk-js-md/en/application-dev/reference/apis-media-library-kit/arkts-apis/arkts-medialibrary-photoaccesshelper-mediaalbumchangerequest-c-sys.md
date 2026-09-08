@@ -98,7 +98,7 @@ Deletes user albums. This API uses a promise to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | Yes | Context of the ability instance. |
-| albums | Array&lt;Album&gt; | Yes | Albums to delete. |
+| albums | Array&lt;[Album](arkts-medialibrary-photoaccesshelper-album-i.md)&gt; | Yes | Albums to delete. |
 
 **Return value:**
 
@@ -215,7 +215,7 @@ Permanently deletes assets from the trash.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| assets | Array&lt;PhotoAsset&gt; | Yes | Assets to be permanently deleted. |
+| assets | Array&lt;[PhotoAsset](arkts-medialibrary-photoaccesshelper-photoasset-i.md)&gt; | Yes | Assets to be permanently deleted. |
 
 **Error codes:**
 
@@ -391,7 +391,7 @@ Removes assets from this portrait album or group photo album.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| assets | Array&lt;PhotoAsset&gt; | Yes | Assets to remove. |
+| assets | Array&lt;[PhotoAsset](arkts-medialibrary-photoaccesshelper-photoasset-i.md)&gt; | Yes | Assets to remove. |
 
 **Error codes:**
 
@@ -456,7 +456,7 @@ Merges two portrait albums.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| target | Album | Yes | Album generated after the merge. The album must be renamed. |
+| target | [Album](arkts-medialibrary-photoaccesshelper-album-i.md) | Yes | Album generated after the merge. The album must be renamed. |
 
 **Error codes:**
 
@@ -519,8 +519,8 @@ Moves assets to another album.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| assets | Array&lt;PhotoAsset&gt; | Yes | Assets to move. |
-| targetAlbum | Album | Yes | Album to which the assets are to be moved. |
+| assets | Array&lt;[PhotoAsset](arkts-medialibrary-photoaccesshelper-photoasset-i.md)&gt; | Yes | Assets to move. |
+| targetAlbum | [Album](arkts-medialibrary-photoaccesshelper-album-i.md) | Yes | Album to which the assets are to be moved. |
 
 **Error codes:**
 
@@ -585,7 +585,7 @@ Moves assets in an album to another album.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | assetUris | Array&lt;string&gt; | Yes | Array of URIs of the assets to move. |
-| targetAlbum | Album | Yes | Album to which the assets are to be moved. |
+| targetAlbum | [Album](arkts-medialibrary-photoaccesshelper-album-i.md) | Yes | Album to which the assets are to be moved. |
 
 **Error codes:**
 
@@ -728,7 +728,7 @@ Places this album before an album.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| album | Album | Yes | Target album. To place this album to the end, set **album** to null. |
+| album | [Album](arkts-medialibrary-photoaccesshelper-album-i.md) | Yes | Target album. To place this album to the end, set **album** to null. |
 
 **Error codes:**
 
@@ -781,7 +781,7 @@ Restores the assets corresponding to the specified PhotoAsset object array from 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| assets | Array&lt;PhotoAsset&gt; | Yes | Assets to recover. |
+| assets | Array&lt;[PhotoAsset](arkts-medialibrary-photoaccesshelper-photoasset-i.md)&gt; | Yes | Assets to recover. |
 
 **Error codes:**
 
@@ -1120,7 +1120,7 @@ Sets whether the albums can be synced to cloud storage or family storage. This A
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | Yes | Context of the ability instance. |
-| albums | Album[] | Yes | Array of albums whose sync status is to be set. You can set the sync status for user albums and source albums. The array can contain a maximum of 500 elements. |
+| albums | [Album](arkts-medialibrary-photoaccesshelper-album-i.md)[] | Yes | Array of albums whose sync status is to be set. You can set the sync status for user albums and source albums. The array can contain a maximum of 500 elements. |
 | allowUpload | boolean | Yes | Whether the albums can be synced to cloud storage or family storage. **true** if they can be synced, **false** otherwise. |
 
 **Return value:**

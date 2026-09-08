@@ -244,7 +244,7 @@ backgroundBlurStyle?: BlurStyle
 > 设置为BlurStyle.NONE即可关闭背景虚化。当设置了backgroundBlurStyle为非NONE值时，则不要设置backgroundColor，
 > 否则显示的颜色将不符合预期效果。
 
-**类型：** BlurStyle
+**类型：** [BlurStyle](arkts-arkui-blurstyle-e.md)
 
 **默认值：** BlurStyle.COMPONENT_ULTRA_THICK
 
@@ -393,7 +393,7 @@ dateTimeOptions?: DateTimeOptions
 > - minute: 默认为"2-digit"，设置minute是否按照2位数字显示，如果实际数值小于10，则会补充前导0并显示，即为"0X"。
 > 可选值为"numeric"或"2-digit"，传入其他值时按默认值处理。
 
-**类型：** DateTimeOptions
+**类型：** [DateTimeOptions](arkts-arkui-datetimeoptions-t.md)
 
 **默认值：** hour: In the 24-hour format, it defaults to 2-digit, which means a leading zero is used; 
 In the 12-hour format, it defaults to numeric, which means no leading zero is used. 
@@ -643,7 +643,7 @@ offset?: Offset
 
 > 默认值：{ dx: 0 , dy: 0 }
 
-**类型：** Offset
+**类型：** [Offset](../arkts-apis/arkts-arkui-offset-t.md)
 
 **默认值：** { dx: 0 , dy: 0 } [since 11]
 
@@ -667,7 +667,7 @@ onDateAccept?: Callback<Date>
 > 
 > 当showTime设置为true时，value中时和分为选择器选择的时和分。否则，value中时和分为系统时间的时和分。
 
-**类型：** Callback&lt;Date&gt;
+**类型：** [Callback](arkts-arkui-callback-i.md)&lt;Date&gt;
 
 **起始版本：** 10
 
@@ -689,7 +689,7 @@ onDateChange?: Callback<Date>
 > 
 > 当showTime设置为true时，value中时和分为选择器选择的时和分。否则，value中时和分为系统时间的时和分。
 
-**类型：** Callback&lt;Date&gt;
+**类型：** [Callback](arkts-arkui-callback-i.md)&lt;Date&gt;
 
 **起始版本：** 10
 

@@ -112,7 +112,7 @@ IP地址类型。
 
 **系统接口：** 此接口为系统接口。
 
-**类型：** IpType
+**类型：** [IpType](arkts-connectivity-wifimanager-iptype-e-sys.md)
 
 **起始版本：** 9
 
@@ -220,7 +220,7 @@ staticIp?: IpConfig
 
 **系统接口：** 此接口为系统接口。
 
-**类型：** IpConfig
+**类型：** [IpConfig](arkts-connectivity-wifimanager-ipconfig-i-sys.md)
 
 **起始版本：** 9
 

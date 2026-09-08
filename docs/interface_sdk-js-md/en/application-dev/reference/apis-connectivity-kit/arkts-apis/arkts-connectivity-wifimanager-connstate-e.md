@@ -2,7 +2,7 @@
 
 The state of Wi-Fi connection enumeration.
 
-@enum { number }
+@enum { int }
 
 **Since:** 9
 

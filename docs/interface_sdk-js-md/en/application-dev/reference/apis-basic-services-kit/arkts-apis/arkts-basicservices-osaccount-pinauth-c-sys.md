@@ -37,15 +37,7 @@ Creates a PIN authentication instance.
 **Examples**
 
 ```TypeScript
-let userAuth = new osAccount.UserAuth();
-```
-
-```TypeScript
 let pinAuth: osAccount.PINAuth = new osAccount.PINAuth();
-```
-
-```TypeScript
-let userIDM = new osAccount.UserIdentityManager();
 ```
 
 ## registerInputer

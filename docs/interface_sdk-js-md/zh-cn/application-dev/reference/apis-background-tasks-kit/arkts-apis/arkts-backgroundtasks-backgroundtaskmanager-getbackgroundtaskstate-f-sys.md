@@ -34,7 +34,7 @@ function getBackgroundTaskState(stateInfo: BackgroundTaskStateInfo): UserAuthRes
 
 | 类型 | 说明 |
 | --- | --- |
-| UserAuthResult | 授权结果。 |
+| [UserAuthResult](arkts-backgroundtasks-backgroundtaskmanager-userauthresult-e.md) | 授权结果。 |
 
 **错误码：**
 

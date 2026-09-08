@@ -67,9 +67,9 @@ Constructor, which is used to construct an EventInfo instance using independent 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | EventType | Yes | Accessibility event types. |
+| type | [EventType](arkts-accessibility-accessibility-eventtype-t.md) | Yes | Accessibility event types. |
 | bundleName | string | Yes | Bundle name of the target app. |
-| triggerAction | Action | Yes | Action that triggers the event. |
+| triggerAction | [Action](arkts-accessibility-accessibility-action-t.md) | Yes | Action that triggers the event. |
 
 **Examples**
 
@@ -363,7 +363,7 @@ triggerAction: Action
 
 Action that triggers the event (mandatory).
 
-**Type:** Action
+**Type:** [Action](arkts-accessibility-accessibility-action-t.md)
 
 **Since:** 7
 
@@ -381,7 +381,7 @@ type: EventType
 
 Accessibility event type (mandatory).
 
-**Type:** EventType
+**Type:** [EventType](arkts-accessibility-accessibility-eventtype-t.md)
 
 **Since:** 7
 

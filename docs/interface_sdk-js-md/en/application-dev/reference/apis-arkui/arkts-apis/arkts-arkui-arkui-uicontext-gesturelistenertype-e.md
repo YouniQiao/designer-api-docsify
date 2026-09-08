@@ -28,7 +28,7 @@ The tap gesture.
 LONG_PRESS = 1
 ```
 
-The number press gesture.
+The long press gesture.
 
 **Since:** 20
 

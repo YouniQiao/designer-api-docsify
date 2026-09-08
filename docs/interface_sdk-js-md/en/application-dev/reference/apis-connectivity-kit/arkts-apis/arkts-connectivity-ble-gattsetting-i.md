@@ -38,7 +38,7 @@ transport?: BluetoothTransport
 
 Transport of the connection, default is `TRANSPORT_LE`
 
-**Type:** BluetoothTransport
+**Type:** [BluetoothTransport](arkts-connectivity-ble-bluetoothtransport-t.md)
 
 **Since:** 26.0.0
 

@@ -86,7 +86,7 @@ For details about their display effects, see [Table 23](../../../reference/apis-
 style: string
 ```
 
-Length of an internationalized message. The value can be **number**, **short**, or **narrow**.
+Length of an internationalized message. The value can be **long**, **short**, or **narrow**.
 
 For details about their display effects, see [Table 24](../../../reference/apis-localization-kit/js-apis-intl.md#appendix).
 

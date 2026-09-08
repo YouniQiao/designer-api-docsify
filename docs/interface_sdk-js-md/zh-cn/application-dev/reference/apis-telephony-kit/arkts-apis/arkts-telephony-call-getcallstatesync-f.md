@@ -22,7 +22,7 @@ function getCallStateSync(): CallState
 
 | 类型 | 说明 |
 | --- | --- |
-| CallState | 返回获取到的通话状态。 |
+| [CallState](arkts-telephony-call-callstate-e.md) | 返回获取到的通话状态。 |
 
 **示例**
 

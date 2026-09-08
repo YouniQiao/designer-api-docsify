@@ -33,4 +33,4 @@ Callback when the button is touched.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | notificationId | number | Yes |  |
-| buttonOptions | ButtonOptions | Yes |  |
+| buttonOptions | [ButtonOptions](arkts-notification-notificationmanager-buttonoptions-i-sys.md) | Yes |  |

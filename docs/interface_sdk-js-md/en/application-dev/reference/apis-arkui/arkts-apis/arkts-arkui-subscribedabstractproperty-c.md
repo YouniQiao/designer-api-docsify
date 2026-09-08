@@ -86,12 +86,6 @@ Property name.
 **Examples**
 
 ```TypeScript
-AppStorage.setOrCreate('PropA', 47);
-let ref1: AbstractProperty<number> | undefined = AppStorage.ref('PropA');
-ref1?.info(); // ref1.info()='PropA'
-```
-
-```TypeScript
 AppStorage.setOrCreate('PropA', 47); 
 let prop1: SubscribedAbstractProperty<number> = AppStorage.prop('PropA');
 prop1.info(); // prop1.info() = 'PropA'

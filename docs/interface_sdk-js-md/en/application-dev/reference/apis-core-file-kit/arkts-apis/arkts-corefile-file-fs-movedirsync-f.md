@@ -53,26 +53,3 @@ Moves the source directory to the destination directory. This API returns the re
 | 13900033 | Too many symbolic links encountered |
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { ConflictFiles } from '@kit.CoreFileKit';
-
-let srcPath = pathDir + "/srcDir";
-let destPath = pathDir + "/destDir";
-try {
-  fileIo.moveDirSync(srcPath, destPath, 1);
-  console.info(`Succeeded in moving directory.`);
-} catch (error) {
-  let err: BusinessError<Array<ConflictFiles>> = error as BusinessError<Array<ConflictFiles>>;
-  if (err.code == 13900015 && err.data?.length !== undefined) {
-    for (let i = 0; i < err.data.length; i++) {
-      console.error(`Failed to move directory, with conflicting files: ${err.data[i].srcFile} ${err.data[i].destFile}`);
-    }
-  } else {
-    console.error(`Failed to move directory. Code: ${err.code}, message: ${err.message}`);
-  }
-}
-```

@@ -10,4 +10,4 @@ Indicates several assets in one column
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
-**Type:** Asset[]
+**Type:** [Asset](arkts-arkdata-relationalstore-asset-i.md)[]

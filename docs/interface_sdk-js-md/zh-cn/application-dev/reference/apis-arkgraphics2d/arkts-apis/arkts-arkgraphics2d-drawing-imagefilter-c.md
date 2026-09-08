@@ -36,7 +36,7 @@ static createBlendImageFilter(mode: BlendMode, background: ImageFilter, foregrou
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mode | BlendMode | 是 | 颜色混合模式。 |
+| mode | [BlendMode](arkts-arkgraphics2d-drawing-blendmode-e.md) | 是 | 颜色混合模式。 |
 | background | [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) | 是 | 在混合模式中作为目标色的滤波器。 |
 | foreground | [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) | 是 | 在混合模式中作为源色的滤波器。 |
 
@@ -51,20 +51,6 @@ static createBlendImageFilter(mode: BlendMode, background: ImageFilter, foregrou
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [25900001](../errorcode-drawing.md#25900001-参数值异常) | Parameter error. Possible causes: Incorrect parameter range. |
-
-**示例**
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-let dx = 15.0;
-let dy = 10.0;
-let offsetFilter1 = drawing.ImageFilter.createOffsetImageFilter(dx, dy, null);
-let x = 15.0;
-let y = 30.0;
-let offsetFilter2 = drawing.ImageFilter.createOffsetImageFilter(x, y, null);
-let blendImageFilter = drawing.ImageFilter.createBlendImageFilter(drawing.BlendMode.SRC_IN, offsetFilter1, offsetFilter2);
-```
 
 ## createBlurImageFilter
 
@@ -85,7 +71,7 @@ static createBlurImageFilter(sigmaX: number, sigmaY: number,
 | --- | --- | --- | --- |
 | sigmaX | number | 是 | 表示沿x轴方向上高斯模糊的标准差，必须大于0，该参数为浮点数。单位为物理像素px。 |
 | sigmaY | number | 是 | 表示沿y轴方向上高斯模糊的标准差，必须大于0，该参数为浮点数。单位为物理像素px。 |
-| tileMode | TileMode | 是 | 表示在边缘处应用的平铺模式。 |
+| tileMode | [TileMode](arkts-arkgraphics2d-drawing-tilemode-e.md) | 是 | 表示在边缘处应用的平铺模式。 |
 | imageFilter | [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) \| null | 否 | 要与当前图像滤波器叠加的输入滤波器，默认为null，表示直接将当前图像滤波器作用于原始图像。 |
 
 **返回值：**
@@ -99,14 +85,6 @@ static createBlurImageFilter(sigmaX: number, sigmaY: number,
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
-
-**示例**
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-let imgFilter = drawing.ImageFilter.createBlurImageFilter(5, 10, drawing.TileMode.CLAMP);
-```
 
 ## createComposeImageFilter
 
@@ -133,25 +111,6 @@ static createComposeImageFilter(cOuter: ImageFilter, cInner: ImageFilter): Image
 | --- | --- |
 | [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) | 返回级联后的图像滤波器。 |
 
-**示例**
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-let blurSigmaX = 10.0;
-let blurSigmaY = 10.0;
-let blurFilter = drawing.ImageFilter.createBlurImageFilter(blurSigmaX, blurSigmaY, drawing.TileMode.CLAMP, null);
-let colorMatrix:Array<number> = [
-  0, 0, 0, 0, 0,
-  0, 1, 0, 0, 0,
-  0, 0, 1, 0, 0,
-  0, 0, 0, 1, 0
-];
-let redRemovalFilter = drawing.ColorFilter.createMatrixColorFilter(colorMatrix);
-let colorFilter = drawing.ImageFilter.createFromColorFilter(redRemovalFilter, null);
-let composedImageFilter = drawing.ImageFilter.createComposeImageFilter(colorFilter, blurFilter);
-```
-
 ## createFromColorFilter
 
 ```TypeScript
@@ -168,7 +127,7 @@ static createFromColorFilter(colorFilter: ColorFilter, imageFilter?: ImageFilter
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| colorFilter | ColorFilter | 是 | 表示颜色滤波器。 |
+| colorFilter | [ColorFilter](arkts-arkgraphics2d-drawing-colorfilter-c.md) | 是 | 表示颜色滤波器。 |
 | imageFilter | [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) \| null | 否 | 要与当前图像滤波器叠加的输入滤波器，默认为null，表示直接将当前图像滤波器作用于原始图像。<br>**适用版本：** 20 |
 
 **返回值：**
@@ -182,16 +141,6 @@ static createFromColorFilter(colorFilter: ColorFilter, imageFilter?: ImageFilter
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
-
-**示例**
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-let imgFilter = drawing.ImageFilter.createBlurImageFilter(5, 10, drawing.TileMode.CLAMP);
-let colorFilter = drawing.ColorFilter.createSRGBGammaToLinear();
-let imgFilter1 = drawing.ImageFilter.createFromColorFilter(colorFilter, imgFilter);
-```
 
 ## createFromImage
 
@@ -209,63 +158,15 @@ static createFromImage(pixelmap: image.PixelMap, srcRect?: common2D.Rect | null,
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| pixelmap | image.PixelMap | 是 | 图像对象。 |
-| srcRect | common2D.Rect \| null | 否 | 可选参数，默认为null。此滤波器要使用的图像的像素区域，如果为null，则使用pixelmap全部区域。 |
-| dstRect | common2D.Rect \| null | 否 | 可选参数，默认为null。要进行渲染的区域，如果为null，则和srcRect保持一致。 |
+| pixelmap | [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | 是 | 图像对象。 |
+| srcRect | [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) \| null | 否 | 可选参数，默认为null。此滤波器要使用的图像的像素区域，如果为null，则使用pixelmap全部区域。 |
+| dstRect | [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) \| null | 否 | 可选参数，默认为null。要进行渲染的区域，如果为null，则和srcRect保持一致。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
 | [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) | 返回基于图像创建的图像滤波器。 |
-
-**示例**
-
-```TypeScript
-import { RenderNode, DrawContext } from '@kit.ArkUI';
-import { image } from '@kit.ImageKit';
-import { common2D, drawing } from '@kit.ArkGraphics2D';
-
-class DrawingRenderNode extends RenderNode {
-  draw(context: DrawContext) {
-    const width = 1000;
-    const height = 1000;
-    const bufferSize = width * height * 4;
-    const color: ArrayBuffer = new ArrayBuffer(bufferSize);
-
-    const colorData = new Uint8Array(color);
-    for (let i = 0; i < colorData.length; i += 4) {
-      colorData[i] = 255;
-      colorData[i + 1] = 156;
-      colorData[i + 2] = 0;
-      colorData[i + 3] = 255;
-    }
-
-    let opts: image.InitializationOptions = {
-      editable: true,
-      pixelFormat: 3,
-      size: { height, width }
-    };
-
-    let pixelMap: image.PixelMap = image.createPixelMapSync(color, opts);
-    let srcRect: common2D.Rect = {
-      left: 10,
-      top: 10,
-      right: 80,
-      bottom: 80
-    };
-    let dstRect: common2D.Rect = {
-      left: 200,
-      top: 200,
-      right: 400,
-      bottom: 400
-    };
-    if (pixelMap != null) {
-      let filter = drawing.ImageFilter.createFromImage(pixelMap, srcRect, dstRect);
-    }
-  }
-}
-```
 
 ## createFromShaderEffect
 
@@ -290,15 +191,6 @@ static createFromShaderEffect(shader: ShaderEffect): ImageFilter
 | 类型 | 说明 |
 | --- | --- |
 | [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) | 返回基于着色器创建的图像滤波器。 |
-
-**示例**
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-let shaderEffect = drawing.ShaderEffect.createColorShader(0xFF00FF00);
-let renderEffect = drawing.ImageFilter.createFromShaderEffect(shaderEffect);
-```
 
 ## createOffsetImageFilter
 
@@ -325,13 +217,3 @@ static createOffsetImageFilter(dx: number, dy: number, input?: ImageFilter | nul
 | 类型 | 说明 |
 | --- | --- |
 | [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) | 返回偏移后的图像滤波器。 |
-
-**示例**
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-let dx = 15.0;
-let dy = 10.0;
-let offsetFilter = drawing.ImageFilter.createOffsetImageFilter(dx, dy, null);
-```

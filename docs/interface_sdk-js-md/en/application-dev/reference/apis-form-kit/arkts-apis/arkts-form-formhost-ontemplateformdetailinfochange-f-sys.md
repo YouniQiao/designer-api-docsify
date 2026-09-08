@@ -28,7 +28,7 @@ Subscribes to changes in the static configuration information of template widget
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | formInfo.TemplateFormDetailInfoCallback | Yes | Callback function used to listen for changes in the static configuration information of template widgets. |
+| callback | [formInfo.TemplateFormDetailInfoCallback](arkts-form-forminfo-templateformdetailinfocallback-t-sys.md) | Yes | Callback function used to listen for changes in the static configuration information of template widgets. |
 
 **Error codes:**
 

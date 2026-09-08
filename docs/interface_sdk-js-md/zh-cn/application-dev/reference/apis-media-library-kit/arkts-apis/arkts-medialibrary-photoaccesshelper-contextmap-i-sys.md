@@ -22,7 +22,7 @@ topicField: FieldType[]
 
 用户输入的字段类型
 
-**类型：** FieldType[]
+**类型：** [FieldType](arkts-medialibrary-photoaccesshelper-fieldtype-e-sys.md)[]
 
 **起始版本：** 23
 

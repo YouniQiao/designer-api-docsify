@@ -28,7 +28,7 @@ contentType: ContentType
 
 音频打断媒体类型。
 
-**类型：** ContentType
+**类型：** [ContentType](arkts-audio-audio-contenttype-e.md)
 
 **起始版本：** 7
 

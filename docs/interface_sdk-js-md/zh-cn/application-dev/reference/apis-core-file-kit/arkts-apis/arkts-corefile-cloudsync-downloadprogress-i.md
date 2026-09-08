@@ -62,7 +62,7 @@ state: State
 
 枚举值，云文件下载状态。
 
-**类型：** State
+**类型：** [State](arkts-corefile-cloudsync-state-e.md)
 
 **起始版本：** 11
 

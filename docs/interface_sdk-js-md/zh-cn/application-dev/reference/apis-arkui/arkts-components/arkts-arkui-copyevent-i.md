@@ -21,7 +21,7 @@ preventDefault?: Callback<void>
 
 省略时，执行系统默认复制行为。
 
-**类型：** Callback&lt;void&gt;
+**类型：** [Callback](arkts-arkui-callback-i.md)&lt;void&gt;
 
 **起始版本：** 12
 

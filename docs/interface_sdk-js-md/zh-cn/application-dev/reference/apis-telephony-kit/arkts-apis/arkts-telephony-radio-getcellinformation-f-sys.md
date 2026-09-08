@@ -27,7 +27,7 @@ Get the current cell information.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | slotId | number | 是 | Indicates the card slot index number, ranging from 0 to the maximum card slot index number supported by the device. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;CellInformation&gt;&gt; | 是 | Indicates the callback for getting cell information. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[CellInformation](arkts-telephony-radio-cellinformation-i.md)&gt;&gt; | 是 | Indicates the callback for getting cell information. |
 
 **错误码：**
 
@@ -83,7 +83,7 @@ Get the current cell information.
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;CellInformation&gt;&gt; | Returns the current cell information. |
+| Promise&lt;Array&lt;[CellInformation](arkts-telephony-radio-cellinformation-i.md)&gt;&gt; | Returns the current cell information. |
 
 **错误码：**
 
@@ -131,7 +131,7 @@ Get the current cell information.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;CellInformation&gt;&gt; | 是 | Indicates the callback for getting cell information. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[CellInformation](arkts-telephony-radio-cellinformation-i.md)&gt;&gt; | 是 | Indicates the callback for getting cell information. |
 
 **错误码：**
 

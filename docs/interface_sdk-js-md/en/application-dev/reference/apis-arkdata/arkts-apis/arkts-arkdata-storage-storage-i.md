@@ -298,8 +298,8 @@ Obtains the value corresponding to a key. If the value is null or not of the def
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | key | string | Yes | Key of the data. It cannot be empty. |
-| defValue | ValueType | Yes | Default value to be returned. It can be a number, string, or Boolean value. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ValueType&gt; | Yes | Callback used to return the result. |
+| defValue | [ValueType](arkts-arkdata-storage-valuetype-t.md) | Yes | Default value to be returned. It can be a number, string, or Boolean value. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ValueType](arkts-arkdata-storage-valuetype-t.md)&gt; | Yes | Callback used to return the result. |
 
 **Examples**
 
@@ -332,13 +332,13 @@ Obtains the value corresponding to a key. If the value is null or not of the def
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | key | string | Yes | Key of the data. It cannot be empty. |
-| defValue | ValueType | Yes | Default value to be returned. It can be a number, string, or Boolean value. |
+| defValue | [ValueType](arkts-arkdata-storage-valuetype-t.md) | Yes | Default value to be returned. It can be a number, string, or Boolean value. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ValueType&gt; | Promise used to return the result. |
+| Promise&lt;[ValueType](arkts-arkdata-storage-valuetype-t.md)&gt; | Promise used to return the result. |
 
 **Examples**
 
@@ -370,13 +370,13 @@ Obtains the value corresponding to a key. If the value is null or not of the def
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | key | string | Yes | Key of the data. It cannot be empty. |
-| defValue | ValueType | Yes | Default value to be returned if the value of the specified key does not exist. It can be a number, string, or Boolean value. |
+| defValue | [ValueType](arkts-arkdata-storage-valuetype-t.md) | Yes | Default value to be returned if the value of the specified key does not exist. It can be a number, string, or Boolean value. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ValueType | Value corresponding to the specified key. If the value is null or not in the default value format, the default value is returned. |
+| [ValueType](arkts-arkdata-storage-valuetype-t.md) | Value corresponding to the specified key. If the value is null or not in the default value format, the default value is returned. |
 
 **Examples**
 
@@ -581,7 +581,7 @@ Obtains the **Storage** instance corresponding to the specified file, writes dat
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | key | string | Yes | Key of the data. It cannot be empty. |
-| value | ValueType | Yes | New value to store. It can be a number, string, or Boolean value. |
+| value | [ValueType](arkts-arkdata-storage-valuetype-t.md) | Yes | New value to store. It can be a number, string, or Boolean value. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Examples**
@@ -615,7 +615,7 @@ Obtains the **Storage** instance corresponding to the specified file, writes dat
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | key | string | Yes | Key of the data. It cannot be empty. |
-| value | ValueType | Yes | New value to store. It can be a number, string, or Boolean value. |
+| value | [ValueType](arkts-arkdata-storage-valuetype-t.md) | Yes | New value to store. It can be a number, string, or Boolean value. |
 
 **Return value:**
 
@@ -653,7 +653,7 @@ Obtains the **Storage** instance corresponding to the specified file, writes dat
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | key | string | Yes | Key of the data. It cannot be empty. |
-| value | ValueType | Yes | New value to store. It can be a number, string, or Boolean value. |
+| value | [ValueType](arkts-arkdata-storage-valuetype-t.md) | Yes | New value to store. It can be a number, string, or Boolean value. |
 
 **Examples**
 

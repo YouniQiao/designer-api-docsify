@@ -59,7 +59,7 @@ function on(type: 'hotspotStaJoin', callback: Callback<StationInfo>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'hotspotStaJoin' | 是 | 固定填"hotspotStaJoin"字符串。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;StationInfo&gt; | 是 | 回调函数，返回StationInfo对象。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[StationInfo](arkts-connectivity-wifi-stationinfo-i-sys.md)&gt; | 是 | 回调函数，返回StationInfo对象。 |
 
 
 ## on('hotspotStaLeave')
@@ -87,4 +87,4 @@ function on(type: 'hotspotStaLeave', callback: Callback<StationInfo>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'hotspotStaLeave' | 是 | 固定填"hotspotStaLeave"字符串。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;StationInfo&gt; | 是 | 回调函数，返回StationInfo对象。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[StationInfo](arkts-connectivity-wifi-stationinfo-i-sys.md)&gt; | 是 | 回调函数，返回StationInfo对象。 |

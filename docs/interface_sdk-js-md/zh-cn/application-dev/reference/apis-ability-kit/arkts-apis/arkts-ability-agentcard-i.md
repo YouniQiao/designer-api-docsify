@@ -252,7 +252,7 @@ type?: agentConstant.AgentCardType
 
 AgentCard的类型。<!--Del-->当[agentConstant.AgentCardType](arkts-ability-agentconstant-agentcardtype-e.md)的枚举值为LOW_CODE时，对应的应用必须是系统应用，否则Agent卡片无法注册、安装或更新。<!--DelEnd-->如果未指定，默认为APP类型。
 
-**类型：** agentConstant.AgentCardType
+**类型：** [agentConstant.AgentCardType](arkts-ability-agentconstant-agentcardtype-e.md)
 
 **默认值：** AgentCardType.APP
 

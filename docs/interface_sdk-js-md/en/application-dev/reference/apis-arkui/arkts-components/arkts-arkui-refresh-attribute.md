@@ -59,7 +59,7 @@ If this API is not set, the maximum pull-down distance is **undefined**.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| distance | number \| Resource \| undefined | Yes | Maximum pull-down distance.Default value: **undefined**.Unit: vp Value range: [0, +∞). If the value is less than 0, **0** is used. If this value is less than the [refreshOffset](../../../reference/apis-arkui/arkui-ts/ts-container-refresh.md#refreshoffset12), the refresh action will not be triggered when the pull-down gesture is released. If this parameter is set to **undefined** or **null**, it is considered that this attribute is not set, meaning there is no limit on the maximum pull-down distance. |
+| distance | number \| [Resource](../arkts-apis/arkts-arkui-resource-t.md) \| undefined | Yes | Maximum pull-down distance.Default value: **undefined**.Unit: vp Value range: [0, +∞). If the value is less than 0, **0** is used. If this value is less than the [refreshOffset](../../../reference/apis-arkui/arkui-ts/ts-container-refresh.md#refreshoffset12), the refresh action will not be triggered when the pull-down gesture is released. If this parameter is set to **undefined** or **null**, it is considered that this attribute is not set, meaning there is no limit on the maximum pull-down distance. |
 
 ## onOffsetChange
 
@@ -237,4 +237,4 @@ If this API and [promptText](arkts-arkui-refreshoptions-i.md) are not set, the d
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number \| Resource | Yes | Pull-down offset.Unit: vp Value range: (0, +∞). If the value is 0 or a negative number, the default value will be used. |
+| value | number \| [Resource](../arkts-apis/arkts-arkui-resource-t.md) | Yes | Pull-down offset.Unit: vp Value range: (0, +∞). If the value is 0 or a negative number, the default value will be used. |

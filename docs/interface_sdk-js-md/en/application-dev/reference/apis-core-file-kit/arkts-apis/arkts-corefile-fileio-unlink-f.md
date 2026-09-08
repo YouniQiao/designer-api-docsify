@@ -33,18 +33,6 @@ Removes a file. This API uses a promise to return the result.
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@ohos.base';
-let filePath = pathDir + "/test.txt";
-fileio.unlink(filePath).then(() => {
-  console.info("remove file succeed");
-}).catch((error: BusinessError) => {
-  console.error("remove file failed with error:" + error);
-});
-```
-
 
 ## unlink
 
@@ -68,13 +56,3 @@ Removes a file. This API uses an asynchronous callback to return the result.
 | --- | --- | --- | --- |
 | path | string | Yes | Application sandbox path of the file. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback invoked when the file is removed asynchronously. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@ohos.base';
-let filePath = pathDir + "/test.txt";
-fileio.unlink(filePath, (err: BusinessError) => {
-  console.info("remove file succeed");
-});
-```

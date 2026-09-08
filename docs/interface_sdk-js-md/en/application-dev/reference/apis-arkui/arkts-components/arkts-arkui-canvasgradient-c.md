@@ -104,7 +104,7 @@ Adds a color stop for the **CanvasGradient** object based on the specified offse
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | offset | number | Yes | Relative position of the gradient stop along the gradient vector, represented by the ratio of the distance between the gradient stop and the start point to the total length. The value ranges from 0 to 1.If the value of **offset** is less than 0 or greater than 1, there is no gradient effect.    **undefined** and **null** are treated as invalid values and are not applied. **NaN** causes a **CanvasGradient** exception, and **Infinity** causes **CanvasGradient** to be invalid. |
-| color | string \| ColorMetrics | Yes | Color of the gradient fill.You can use the [colorWithSpace](../arkts-apis/arkts-arkui-graphics-colormetrics-c.md#colorwithspace) method to construct a color with the color gamut attribute ColorSpace set to **SRGB** or **DISPLAY_P3**. The color gamut attributes of each gradient ColorMetrics must be the same. If different color gamut attributes are set, an exception is thrown, and the error code is 103701.    **undefined** and **null** are treated as invalid values, and the current stop is ignored. |
+| color | string \| [ColorMetrics](../arkts-apis/arkts-arkui-colormetrics-t.md) | Yes | Color of the gradient fill.You can use the [colorWithSpace](../arkts-apis/arkts-arkui-graphics-colormetrics-c.md#colorwithspace) method to construct a color with the color gamut attribute ColorSpace set to **SRGB** or **DISPLAY_P3**. The color gamut attributes of each gradient ColorMetrics must be the same. If different color gamut attributes are set, an exception is thrown, and the error code is 103701.    **undefined** and **null** are treated as invalid values, and the current stop is ignored. |
 
 **Error codes:**
 
@@ -169,6 +169,12 @@ struct AddColorStop {
 ```
 
 addColorStop
+The following example demonstrates the brightness difference between SDR and HDR gradients. Through ColorMetrics, you can construct HDR colors in the BT2020 color gamut, where color component values can exceed 1.0. The portion exceeding 1.0 is used to represent highlight effects beyond the normal screen brightness range. The left side uses an sRGB red-to-white-to-green gradient, while the right side uses HDR colors in the BT2020 color gamut with a highlight white brightness multiplier of 1.5. On an HDR-capable screen, the highlight area on the right is noticeably brighter than that on the left.
+> NOTE
+> 
+> When using HDR colors, you must set the color gamut mode of the window where the Canvas component is located to the wide gamut mode (WIDE_GAMUT) through the [setWindowColorSpace](../arkts-apis-window-Window.md#setwindowcolorspace) method. Otherwise, the HDR brightening effect will not take effect.
+
+Since API version 26.0.0, the [addColorStop](#addcolorstop) API additionally supports HDR brightening through the ColorMetrics type input parameter.
 
 ```TypeScript
 // xxx.ets

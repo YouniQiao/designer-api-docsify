@@ -56,7 +56,7 @@ rect: formInfo.Rect
 
 The live form display area.
 
-**Type:** formInfo.Rect
+**Type:** [formInfo.Rect](arkts-form-forminfo-rect-i.md)
 
 **Since:** 20
 

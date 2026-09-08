@@ -20,7 +20,7 @@ dst:Array<Point>
 
 目标多边形顶点坐标，用于定义映射变换的目标形状。
 
-**类型：** Array&lt;Point&gt;
+**类型：** Array&lt;[Point](arkts-arkui-matrix4-point-i.md)&gt;
 
 **起始版本：** 12
 
@@ -86,7 +86,7 @@ src: Array<Point>
 
 源多边形顶点坐标，用于定义映射变换的起始形状。
 
-**类型：** Array&lt;Point&gt;
+**类型：** Array&lt;[Point](arkts-arkui-matrix4-point-i.md)&gt;
 
 **起始版本：** 12
 

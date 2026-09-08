@@ -52,9 +52,9 @@ import { observer } from '@kit.TelephonyKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| off | 取消订阅小区信息变化事件，使用callback方式作为异步方法。 |
-| on | 订阅小区信息变化事件，使用callback方式作为异步方法。 |
-| on | 订阅指定卡槽位的小区信息变化事件，使用callback方式作为异步方法。 |
+| [off](arkts-telephony-observer-off-f.md) | 取消订阅小区信息变化事件，使用callback方式作为异步方法。 |
+| [on](arkts-telephony-observer-on-f.md) | 订阅小区信息变化事件，使用callback方式作为异步方法。 |
+| [on](arkts-telephony-observer-on-f.md) | 订阅指定卡槽位的小区信息变化事件，使用callback方式作为异步方法。 |
 <!--DelEnd-->
 
 ### 接口

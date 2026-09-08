@@ -19,7 +19,7 @@ constraintWidth?: LengthMetrics
 
 Layout width of the measured text. If not set, the width is the maximum width occupied by a single-line layout.
 
-**Type:** LengthMetrics
+**Type:** [LengthMetrics](arkts-arkui-lengthmetrics-t.md)
 
 **Since:** 20
 

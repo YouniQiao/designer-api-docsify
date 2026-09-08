@@ -26,7 +26,7 @@ function isDistributedEnabledBySlot(slot: SlotType, deviceType: string): Promise
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| slot | SlotType | 是 | 通知渠道类型。 |
+| slot | [SlotType](arkts-notification-notificationmanager-slottype-e.md) | 是 | 通知渠道类型。 |
 | deviceType | string | 是 | 设备类型。从API version 18开始，支持的设备类型如下：   - headset（可穿戴式音频设备）。   - liteWearable（轻量级智能穿戴设备）。   - wearable（智能穿戴设备）。   从API version 20开始，支持的设备类型如下：   - headset（可穿戴式音频设备）。   - liteWearable（轻量级智能穿戴设备）。   - wearable（智能穿戴设备）。   - current（本设备）。   - 2in1（PC设备）。   - tablet（平板）。 |
 
 **返回值：**

@@ -29,7 +29,7 @@ function updateFormCrossBundle(formId: string, formBindingData: formBindingData.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | formId | string | 是 | 待更新的卡片标识。 |
-| formBindingData | formBindingData.FormBindingData | 是 | 用于更新的卡片数据。 |
+| formBindingData | [formBindingData.FormBindingData](arkts-form-formbindingdata-formbindingdata-i.md) | 是 | 用于更新的卡片数据。 |
 
 **返回值：**
 

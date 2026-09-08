@@ -32,7 +32,7 @@ function getIpInfo(): IpInfo
 
 | 类型 | 说明 |
 | --- | --- |
-| IpInfo | IP信息。 |
+| [IpInfo](arkts-connectivity-wifi-ipinfo-i.md) | IP信息。 |
 
 **示例**
 

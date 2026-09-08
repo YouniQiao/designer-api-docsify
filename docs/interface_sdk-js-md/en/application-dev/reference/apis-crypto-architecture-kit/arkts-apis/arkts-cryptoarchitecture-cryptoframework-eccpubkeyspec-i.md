@@ -44,7 +44,7 @@ pk: Point
 
 Public key **pk** in the ECC algorithm.
 
-**Type:** Point
+**Type:** [Point](arkts-cryptoarchitecture-cryptoframework-point-i.md)
 
 **Since:** 10
 

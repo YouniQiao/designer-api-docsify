@@ -26,11 +26,3 @@ Synchronizes a file. This API returns the result synchronously.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | fd | number | Yes | File descriptor of the file to synchronize. |
-
-**Examples**
-
-```TypeScript
-let filePath = pathDir + "/test.txt";
-let fd = fileio.openSync(filePath);
-fileio.fsyncSync(fd);
-```

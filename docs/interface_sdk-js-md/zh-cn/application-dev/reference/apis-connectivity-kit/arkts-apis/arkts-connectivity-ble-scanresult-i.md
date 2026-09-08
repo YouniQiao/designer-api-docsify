@@ -20,7 +20,7 @@ address?: BluetoothAddress
 
 扫描到的蓝牙设备地址信息，包括地址与地址类型。若不设置此参数，则内容为undefined。
 
-**类型：** BluetoothAddress
+**类型：** [BluetoothAddress](arkts-connectivity-ble-bluetoothaddress-t.md)
 
 **起始版本：** 23
 

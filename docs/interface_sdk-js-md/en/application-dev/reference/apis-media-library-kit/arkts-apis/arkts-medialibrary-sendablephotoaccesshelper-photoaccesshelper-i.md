@@ -36,9 +36,9 @@ If you do not have the **ohos.permission.WRITE_IMAGEVIDEO** permission, you can 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| photoType | PhotoType | Yes | Type of the file to create, which can be **IMAGE** or **VIDEO**. |
+| photoType | [PhotoType](arkts-medialibrary-sendablephotoaccesshelper-phototype-e.md) | Yes | Type of the file to create, which can be **IMAGE** or **VIDEO**. |
 | extension | string | Yes | File name extension, for example, **'jpg'**. The string length ranges from 1 to 255. |
-| options | photoAccessHelper.CreateOptions | No | Options for creating the media asset, for example, **{title: 'testPhoto'}**. The file name must not contain any invalid characters. Starting from API version 18, the following characters are considered invalid: \ / : * ? " &lt; &gt; \| For API versions 10 to 17, the following characters are considered invalid: . .. \ / : * ? " ' ` &lt; &gt; \| { } [ ] |
+| options | [photoAccessHelper.CreateOptions](arkts-medialibrary-photoaccesshelper-createoptions-i.md) | No | Options for creating the media asset, for example, **{title: 'testPhoto'}**. The file name must not contain any invalid characters. Starting from API version 18, the following characters are considered invalid: \ / : * ? " &lt; &gt; \| For API versions 10 to 17, the following characters are considered invalid: . .. \ / : * ? " ' ` &lt; &gt; \| { } [ ] |
 
 **Return value:**
 
@@ -98,13 +98,13 @@ Before the operation, ensure that the albums to obtain exist.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | photoAccessHelper.FetchOptions | Yes | Retrieval options. |
+| options | [photoAccessHelper.FetchOptions](arkts-medialibrary-photoaccesshelper-fetchoptions-i.md) | Yes | Retrieval options. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;FetchResult&lt;Album&gt;&gt; | Promise used to return the result. |
+| Promise&lt;[FetchResult](arkts-medialibrary-sendablephotoaccesshelper-fetchresult-i.md)&lt;[Album](arkts-medialibrary-sendablephotoaccesshelper-album-i.md)&gt;&gt; | Promise used to return the result. |
 
 **Error codes:**
 
@@ -170,15 +170,15 @@ Before the operation, ensure that the albums to obtain exist.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | AlbumType | Yes | Album type. |
-| subtype | AlbumSubtype | Yes | Subtype of the album. |
-| options | photoAccessHelper.FetchOptions | No | Retrieval options. If this parameter is not specified, the albums are obtained based on the album type by default. |
+| type | [AlbumType](arkts-medialibrary-sendablephotoaccesshelper-albumtype-e.md) | Yes | Album type. |
+| subtype | [AlbumSubtype](arkts-medialibrary-sendablephotoaccesshelper-albumsubtype-e.md) | Yes | Subtype of the album. |
+| options | [photoAccessHelper.FetchOptions](arkts-medialibrary-photoaccesshelper-fetchoptions-i.md) | No | Retrieval options. If this parameter is not specified, the albums are obtained based on the album type by default. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;FetchResult&lt;Album&gt;&gt; | Promise used to return the result. |
+| Promise&lt;[FetchResult](arkts-medialibrary-sendablephotoaccesshelper-fetchresult-i.md)&lt;[Album](arkts-medialibrary-sendablephotoaccesshelper-album-i.md)&gt;&gt; | Promise used to return the result. |
 
 **Error codes:**
 
@@ -238,13 +238,13 @@ Obtains image and video assets. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | photoAccessHelper.FetchOptions | Yes | Retrieval options. |
+| options | [photoAccessHelper.FetchOptions](arkts-medialibrary-photoaccesshelper-fetchoptions-i.md) | Yes | Retrieval options. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;FetchResult&lt;PhotoAsset&gt;&gt; | Promise used to return the media assets obtained. |
+| Promise&lt;[FetchResult](arkts-medialibrary-sendablephotoaccesshelper-fetchresult-i.md)&lt;[PhotoAsset](arkts-medialibrary-sendablephotoaccesshelper-photoasset-i.md)&gt;&gt; | Promise used to return the media assets obtained. |
 
 **Error codes:**
 
@@ -284,34 +284,6 @@ async function example(phAccessHelper: sendablePhotoAccessHelper.PhotoAccessHelp
 }
 ```
 
-For details about how to create a phAccessHelper instance, see the example provided in sendablePhotoAccessHelper.getPhotoAccessHelper.
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { photoAccessHelper } from '@kit.MediaLibraryKit';
-
-async function example(phAccessHelper: sendablePhotoAccessHelper.PhotoAccessHelper) {
-  console.info('albumGetAssetsDemoPromise');
-  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-  let albumFetchOptions: photoAccessHelper.FetchOptions = {
-    fetchColumns: [],
-    predicates: predicates
-  };
-  let fetchOption: photoAccessHelper.FetchOptions = {
-    fetchColumns: [],
-    predicates: predicates
-  };
-  let albumList: sendablePhotoAccessHelper.FetchResult<sendablePhotoAccessHelper.Album> = await phAccessHelper.getAlbums(sendablePhotoAccessHelper.AlbumType.USER, sendablePhotoAccessHelper.AlbumSubtype.USER_GENERIC, albumFetchOptions);
-  let album: sendablePhotoAccessHelper.Album = await albumList.getFirstObject();
-  album.getAssets(fetchOption).then((albumFetchResult) => {
-    console.info('album getAssets successfully, getCount: ' + albumFetchResult.getCount());
-  }).catch((err: BusinessError) => {
-    console.error(`album getAssets failed with error: ${err.code}, ${err.message}`);
-  });
-}
-```
-
 ## getBurstAssets
 
 ```TypeScript
@@ -331,13 +303,13 @@ Obtains resources of burst photos. This API uses a promise to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | burstKey | string | Yes | Universally Unique Identifier (UUID) of a group of burst photos, that is, **BURST_KEY** of [PhotoKeys](arkts-medialibrary-photoaccesshelper-photokeys-e.md). The string contains 36 bytes. |
-| options | photoAccessHelper.FetchOptions | Yes | Retrieval options. |
+| options | [photoAccessHelper.FetchOptions](arkts-medialibrary-photoaccesshelper-fetchoptions-i.md) | Yes | Retrieval options. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;FetchResult&lt;PhotoAsset&gt;&gt; | Promise used to return the result. |
+| Promise&lt;[FetchResult](arkts-medialibrary-sendablephotoaccesshelper-fetchresult-i.md)&lt;[PhotoAsset](arkts-medialibrary-sendablephotoaccesshelper-photoasset-i.md)&gt;&gt; | Promise used to return the result. |
 
 **Error codes:**
 

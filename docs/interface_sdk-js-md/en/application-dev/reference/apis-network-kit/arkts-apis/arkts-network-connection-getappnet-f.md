@@ -22,7 +22,7 @@ Obtains the network handle bound to an application. This API uses an asynchronou
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;NetHandle&gt; | Yes | Callback used to return the result. If information about the network bound to the application is successfully obtained, **error** is **undefined** and **data** is the obtained network information. Otherwise, **error** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[NetHandle](arkts-network-connection-nethandle-i.md)&gt; | Yes | Callback used to return the result. If information about the network bound to the application is successfully obtained, **error** is **undefined** and **data** is the obtained network information. Otherwise, **error** is an error object. |
 
 **Error codes:**
 
@@ -64,7 +64,7 @@ Obtains the network information bound to an application. This API uses a promise
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;NetHandle&gt; | Promise used to return the result. |
+| Promise&lt;[NetHandle](arkts-network-connection-nethandle-i.md)&gt; | Promise used to return the result. |
 
 **Error codes:**
 

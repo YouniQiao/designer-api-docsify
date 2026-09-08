@@ -58,7 +58,7 @@ suggestionFields?: FieldType[]
 
 指定返回的标签类型
 
-**类型：** FieldType[]
+**类型：** [FieldType](arkts-medialibrary-photoaccesshelper-fieldtype-e-sys.md)[]
 
 **起始版本：** 23
 

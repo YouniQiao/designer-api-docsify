@@ -25,29 +25,6 @@ Cancels the resending of web form data.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Web({ src: 'www.example.com', controller: this.controller })
-        .onDataResubmitted((event) => {
-          console.info('onDataResubmitted');
-          event.handler.cancel();
-        })
-    }
-  }
-}
-```
-
 ## constructor
 
 ```TypeScript
@@ -75,26 +52,3 @@ Resends the web form data.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Web({ src: 'www.example.com', controller: this.controller })
-        .onDataResubmitted((event) => {
-          console.info('onDataResubmitted');
-          event.handler.resend();
-        })
-    }
-  }
-}
-```

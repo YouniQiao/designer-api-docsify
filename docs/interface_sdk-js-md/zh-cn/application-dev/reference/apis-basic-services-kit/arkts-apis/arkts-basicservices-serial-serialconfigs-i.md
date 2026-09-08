@@ -38,7 +38,7 @@ dataBits?: DataBits
 
 数据位。默认值：EIGHT（8数据位，标准通信）。FIVE/SIX/SEVEN用于老旧设备或特殊协议。
 
-**类型：** DataBits
+**类型：** [DataBits](arkts-basicservices-serial-databits-e.md)
 
 **默认值：** EIGHT
 
@@ -56,7 +56,7 @@ parity?: Parity
 
 校验位。默认值：NONE（无校验）。EVEN/ODD用于数据准确性要求高的场景；MARK/SPACE用于特殊通信协议。
 
-**类型：** Parity
+**类型：** [Parity](arkts-basicservices-serial-parity-e.md)
 
 **默认值：** NONE
 
@@ -92,7 +92,7 @@ stopBits?: StopBits
 
 停止位。默认值：ONE。1个停止位用于标准通信场景；2个停止位用于低速通信或与老旧设备通信时增加信号稳定性。
 
-**类型：** StopBits
+**类型：** [StopBits](arkts-basicservices-serial-stopbits-e.md)
 
 **默认值：** ONE
 

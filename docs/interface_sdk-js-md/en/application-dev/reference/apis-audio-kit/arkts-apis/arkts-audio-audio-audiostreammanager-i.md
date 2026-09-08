@@ -44,20 +44,6 @@ Obtains information about the audio effect mode in use. This API uses an asynchr
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. Return by callback. |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioStreamManager.getAudioEffectInfoArray(audio.StreamUsage.STREAM_USAGE_MUSIC, (err: BusinessError, audioEffectInfoArray: audio.AudioEffectInfoArray) => {
-  if (err) {
-    console.error(`Failed to get audio effect info array. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info(`Succeeded in getting effect info array, AudioEffectInfoArray: ${JSON.stringify(audioEffectInfoArray)}.`);
-  }
-});
-```
-
 ## getAudioEffectInfoArray
 
 ```TypeScript
@@ -88,18 +74,6 @@ Obtains information about the audio effect mode in use. This API uses a promise 
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. Return by promise. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioStreamManager.getAudioEffectInfoArray(audio.StreamUsage.STREAM_USAGE_MUSIC).then((audioEffectInfoArray: audio.AudioEffectInfoArray) => {
-  console.info(`Succeeded in getting effect info array, AudioEffectInfoArray: ${JSON.stringify(audioEffectInfoArray)}.`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to get audio effect info array. Code: ${err.code}, message: ${err.message}`);
-});
-```
 
 ## getAudioEffectInfoArraySync
 
@@ -132,20 +106,6 @@ Obtains information about the audio effect mode in use. This API returns the res
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let audioEffectInfoArray = audioStreamManager.getAudioEffectInfoArraySync(audio.StreamUsage.STREAM_USAGE_MUSIC);
-  console.info(`Succeeded in getting effect info array, AudioEffectInfoArray: ${JSON.stringify(audioEffectInfoArray)}.`);
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`Failed to get audio effect info array. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
 ## getCurrentAudioCapturerInfoArray
 
 ```TypeScript
@@ -168,20 +128,6 @@ Obtains the information about this audio capturer. This API uses an asynchronous
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AudioCapturerChangeInfoArray](arkts-audio-audio-audiocapturerchangeinfoarray-t.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the audio capturer information obtained; otherwise, **err** is an error object. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioStreamManager.getCurrentAudioCapturerInfoArray((err: BusinessError, audioCapturerChangeInfoArray: audio.AudioCapturerChangeInfoArray) => {
-  if (err) {
-    console.error(`Failed to get current audio capturer info array. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info(`Succeeded in getting current audio capturer info array, AudioCapturerChangeInfoArray: ${JSON.stringify(audioCapturerChangeInfoArray)}.`);
-  }
-});
-```
 
 ## getCurrentAudioCapturerInfoArray
 
@@ -206,18 +152,6 @@ Obtains the information about this audio capturer. This API uses a promise to re
 | --- | --- |
 | Promise&lt;[AudioCapturerChangeInfoArray](arkts-audio-audio-audiocapturerchangeinfoarray-t.md)&gt; | Promise used to return the audio capturer information. |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioStreamManager.getCurrentAudioCapturerInfoArray().then((audioCapturerChangeInfoArray: audio.AudioCapturerChangeInfoArray) => {
-  console.info(`Succeeded in getting current audio capturer info array, AudioCapturerChangeInfoArray: ${JSON.stringify(audioCapturerChangeInfoArray)}.`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to get current audio capturer info array. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
 ## getCurrentAudioCapturerInfoArraySync
 
 ```TypeScript
@@ -240,20 +174,6 @@ Obtains the information about this audio capturer. This API returns the result s
 | Type | Description |
 | --- | --- |
 | [AudioCapturerChangeInfoArray](arkts-audio-audio-audiocapturerchangeinfoarray-t.md) | Audio capturer information. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let audioCapturerChangeInfoArray = audioStreamManager.getCurrentAudioCapturerInfoArraySync();
-  console.info(`Succeeded in getting current audio capturer info array, AudioCapturerChangeInfoArray: ${JSON.stringify(audioCapturerChangeInfoArray)}.`);
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`Failed to get current audio capturer info array. Code: ${error.code}, message: ${error.message}`);
-}
-```
 
 ## getCurrentAudioRendererInfoArray
 
@@ -278,20 +198,6 @@ Obtains the information about this audio renderer. This API uses an asynchronous
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AudioRendererChangeInfoArray](arkts-audio-audio-audiorendererchangeinfoarray-t.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the audio renderer information obtained; otherwise, **err** is an error object. |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioStreamManager.getCurrentAudioRendererInfoArray((err: BusinessError, audioRendererChangeInfoArray: audio.AudioRendererChangeInfoArray) => {
-  if (err) {
-    console.error(`Failed to get current audio renderer info array. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info(`Succeeded in getting current audio renderer info array, AudioRendererChangeInfoArray: ${JSON.stringify(audioRendererChangeInfoArray)}.`);
-  }
-});
-```
-
 ## getCurrentAudioRendererInfoArray
 
 ```TypeScript
@@ -314,18 +220,6 @@ Obtains the information about this audio renderer. This API uses a promise to re
 | Type | Description |
 | --- | --- |
 | Promise&lt;[AudioRendererChangeInfoArray](arkts-audio-audio-audiorendererchangeinfoarray-t.md)&gt; | Promise used to return the audio renderer information. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioStreamManager.getCurrentAudioRendererInfoArray().then((audioRendererChangeInfoArray: audio.AudioRendererChangeInfoArray) => {
-  console.info(`Succeeded in getting current audio renderer info array, AudioRendererChangeInfoArray: ${JSON.stringify(audioRendererChangeInfoArray)}.`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to get current audio renderer info array. Code: ${err.code}, message: ${err.message}`);
-});
-```
 
 ## getCurrentAudioRendererInfoArraySync
 
@@ -350,20 +244,6 @@ Obtains the information about this audio renderer. This API returns the result s
 | --- | --- |
 | [AudioRendererChangeInfoArray](arkts-audio-audio-audiorendererchangeinfoarray-t.md) | Audio renderer information. |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let audioRendererChangeInfoArray: audio.AudioRendererChangeInfoArray = audioStreamManager.getCurrentAudioRendererInfoArraySync();
-  console.info(`Succeeded in getting current audio renderer info array, AudioRendererChangeInfoArray: ${JSON.stringify(audioRendererChangeInfoArray)}.`);
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`Failed to get current audio renderer info array. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
 ## isAcousticEchoCancelerSupported
 
 ```TypeScript
@@ -380,7 +260,7 @@ Checks whether the specified audio source type supports echo cancellation.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sourceType | SourceType | Yes | Audio source type. |
+| sourceType | [SourceType](arkts-audio-audio-sourcetype-e.md) | Yes | Audio source type. |
 
 **Return value:**
 
@@ -393,20 +273,6 @@ Checks whether the specified audio source type supports echo cancellation.
 | Error Code ID | Error Message |
 | --- | --- |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let isAcousticEchoCancelerSupported = audioStreamManager.isAcousticEchoCancelerSupported(audio.SourceType.SOURCE_TYPE_LIVE);
-  console.info(`Succeeded in using isAcousticEchoCancelerSupported function, IsAcousticEchoCancelerSupported: ${isAcousticEchoCancelerSupported}.`);
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`Failed to use isAcousticEchoCancelerSupported function. code: ${error.code}, message: ${error.message}`);
-}
-```
 
 ## isActive
 
@@ -430,32 +296,6 @@ Checks whether a stream is active. This API uses an asynchronous callback to ret
 | --- | --- | --- | --- |
 | volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | Yes | Audio stream types. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is **true** if the stream is active or **false** if not active; otherwise, **err** is an error object. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioManager.isActive(audio.AudioVolumeType.MEDIA, (err: BusinessError, value: boolean) => {
-  if (err) {
-    console.error(`Failed to obtain the active status of the stream. ${err}`);
-    return;
-  }
-  console.info(`Callback invoked to indicate that the active status of the stream is obtained ${value}.`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioStreamManager.isActive(audio.AudioVolumeType.MEDIA, (err: BusinessError, value: boolean) => {
-if (err) {
-  console.error(`Failed to obtain the active status of the stream. ${err}`);
-  return;
-}
-  console.info(`Callback invoked to indicate that the active status of the stream is obtained ${value}.`);
-});
-```
 
 ## isActive
 
@@ -484,20 +324,6 @@ Checks whether a stream is active. This API uses a promise to return the result.
 | Type | Description |
 | --- | --- |
 | Promise&lt;boolean&gt; | Promise used to return the result, indicating whether the stream is active. **true** if active, **false** otherwise. |
-
-**Examples**
-
-```TypeScript
-audioManager.isActive(audio.AudioVolumeType.MEDIA).then((value: boolean) => {
-  console.info(`Promise returned to indicate that the active status of the stream is obtained ${value}.`);
-});
-```
-
-```TypeScript
-audioStreamManager.isActive(audio.AudioVolumeType.MEDIA).then((value: boolean) => {
-  console.info(`Promise returned to indicate that the active status of the stream is obtained ${value}.`);
-});
-```
 
 ## isActiveSync
 
@@ -534,20 +360,6 @@ Checks whether a stream is active. This API returns the result synchronously.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let value: boolean = audioStreamManager.isActiveSync(audio.AudioVolumeType.MEDIA);
-  console.info(`Indicate that the active status of the stream is obtained ${value}.`);
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`Failed to obtain the active status of the stream ${error}.`);
-}
-```
-
 ## isAudioLoopbackSupported
 
 ```TypeScript
@@ -578,20 +390,6 @@ Checks whether the current system supports the specified audio loopback mode.
 | --- | --- |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let isAudioLoopbackSupported = audioStreamManager.isAudioLoopbackSupported(audio.AudioLoopbackMode.HARDWARE);
-  console.info(`Succeeded in using isAudioLoopbackSupported function, IsAudioLoopbackSupported: ${isAudioLoopbackSupported}.`);
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`Failed to use isAudioLoopbackSupported function. code: ${error.code}, message: ${error.message}`);
-}
-```
-
 ## isDirectPlaybackSupported
 
 ```TypeScript
@@ -618,26 +416,6 @@ Return if direct playback is supported for the specific audio stream info and us
 | Type | Description |
 | --- | --- |
 | boolean | True if direct playback is supported in this situation. |
-
-**Examples**
-
-```TypeScript
-let streamInfo: audio.AudioStreamInfo = {
-  samplingRate: audio.AudioSamplingRate.SAMPLE_RATE_48000,
-  channels: audio.AudioChannel.CHANNEL_2,
-  sampleFormat: audio.AudioSampleFormat.SAMPLE_FORMAT_S16LE,
-  encodingType: audio.AudioEncodingType.ENCODING_TYPE_RAW,
-  channelLayout: audio.AudioChannelLayout.CH_LAYOUT_STEREO
-};
-
-try {
-  let isSupported = audioStreamManager.isDirectPlaybackSupported(streamInfo, audio.StreamUsage.STREAM_USAGE_MUSIC);
-  console.info(`isDirectPlaybackSupported: ${isSupported}.`);
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`Failed to use isDirectPlaybackSupported function. code: ${error.code}, message: ${error.message}`);
-}
-```
 
 ## isFastPlaybackSupported
 
@@ -666,26 +444,6 @@ Return if fast playback is supported for the specific audio stream info and usag
 | --- | --- |
 | boolean | True if fast playback is supported in this situation. |
 
-**Examples**
-
-```TypeScript
-let streamInfo: audio.AudioStreamInfo = {
-  samplingRate: audio.AudioSamplingRate.SAMPLE_RATE_48000,
-  channels: audio.AudioChannel.CHANNEL_2,
-  sampleFormat: audio.AudioSampleFormat.SAMPLE_FORMAT_S16LE,
-  encodingType: audio.AudioEncodingType.ENCODING_TYPE_RAW,
-  channelLayout: audio.AudioChannelLayout.CH_LAYOUT_STEREO
-};
-
-try {
-  let isSupported = audioStreamManager.isFastPlaybackSupported(streamInfo, audio.StreamUsage.STREAM_USAGE_MUSIC);
-  console.info(`isFastPlaybackSupported: ${isSupported}.`);
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`Failed to use isFastPlaybackSupported function. code: ${error.code}, message: ${error.message}`);
-}
-```
-
 ## isFastRecordingSupported
 
 ```TypeScript
@@ -705,33 +463,13 @@ Return if fast recording is supported for the specific audio stream info and usa
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | streamInfo | [AudioStreamInfo](arkts-audio-audio-audiostreaminfo-i.md) | Yes | reference of stream info structure to describe basic audio format. |
-| source | SourceType | Yes | stream source type used to decide the audio device and pipe type selection result. |
+| source | [SourceType](arkts-audio-audio-sourcetype-e.md) | Yes | stream source type used to decide the audio device and pipe type selection result. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
 | boolean | True if fast recording is supported in this situation. |
-
-**Examples**
-
-```TypeScript
-let streamInfo: audio.AudioStreamInfo = {
-  samplingRate: audio.AudioSamplingRate.SAMPLE_RATE_48000,
-  channels: audio.AudioChannel.CHANNEL_2,
-  sampleFormat: audio.AudioSampleFormat.SAMPLE_FORMAT_S16LE,
-  encodingType: audio.AudioEncodingType.ENCODING_TYPE_RAW,
-  channelLayout: audio.AudioChannelLayout.CH_LAYOUT_STEREO
-};
-
-try {
-  let isSupported = audioStreamManager.isFastRecordingSupported(streamInfo, audio.SourceType.SOURCE_TYPE_MIC);
-  console.info(`isFastRecordingSupported: ${isSupported}.`);
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`Failed to use isFastRecordingSupported function. code: ${error.code}, message: ${error.message}`);
-}
-```
 
 ## isIntelligentNoiseReductionEnabledForCurrentDevice
 
@@ -749,7 +487,7 @@ Checks whether the intelligent noise reduction feature is enabled for the audio 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sourceType | SourceType | Yes | Audio source type. |
+| sourceType | [SourceType](arkts-audio-audio-sourcetype-e.md) | Yes | Audio source type. |
 
 **Return value:**
 
@@ -762,20 +500,6 @@ Checks whether the intelligent noise reduction feature is enabled for the audio 
 | Error Code ID | Error Message |
 | --- | --- |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let isSupport = audioStreamManager.isIntelligentNoiseReductionEnabledForCurrentDevice(audio.SourceType.SOURCE_TYPE_LIVE);
-  console.info(`SourceType: ${audio.SourceType.SOURCE_TYPE_LIVE} intelligent noise reduction enabled is: ${isSupport}`);
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`isIntelligentNoiseReductionEnabledForCurrentDevice ERROR: ${error}`);
-}
-```
 
 ## isMultichannelPlaybackSupported
 
@@ -804,26 +528,6 @@ Return if multichannel playback is supported for the specific audio stream info 
 | --- | --- |
 | boolean | True if multichannel playback is supported in this situation. |
 
-**Examples**
-
-```TypeScript
-let streamInfo: audio.AudioStreamInfo = {
-  samplingRate: audio.AudioSamplingRate.SAMPLE_RATE_48000,
-  channels: audio.AudioChannel.CHANNEL_3,
-  sampleFormat: audio.AudioSampleFormat.SAMPLE_FORMAT_S16LE,
-  encodingType: audio.AudioEncodingType.ENCODING_TYPE_RAW,
-  channelLayout: audio.AudioChannelLayout.CH_LAYOUT_2POINT1
-};
-
-try {
-  let isSupported = audioStreamManager.isMultichannelPlaybackSupported(streamInfo, audio.StreamUsage.STREAM_USAGE_MUSIC);
-  console.info(`isMultichannelPlaybackSupported: ${isSupported}.`);
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`Failed to use isMultichannelPlaybackSupported function. code: ${error.code}, message: ${error.message}`);
-}
-```
-
 ## isOffloadPlaybackSupported
 
 ```TypeScript
@@ -850,26 +554,6 @@ Return if offload playback is supported for the specific audio stream info and u
 | Type | Description |
 | --- | --- |
 | boolean | True if offload playback is supported in this situation. |
-
-**Examples**
-
-```TypeScript
-let streamInfo: audio.AudioStreamInfo = {
-  samplingRate: audio.AudioSamplingRate.SAMPLE_RATE_48000,
-  channels: audio.AudioChannel.CHANNEL_2,
-  sampleFormat: audio.AudioSampleFormat.SAMPLE_FORMAT_S16LE,
-  encodingType: audio.AudioEncodingType.ENCODING_TYPE_RAW,
-  channelLayout: audio.AudioChannelLayout.CH_LAYOUT_STEREO
-};
-
-try {
-  let isSupported = audioStreamManager.isOffloadPlaybackSupported(streamInfo, audio.StreamUsage.STREAM_USAGE_MUSIC);
-  console.info(`isOffloadPlaybackSupported: ${isSupported}.`);
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`Failed to use isOffloadPlaybackSupported function. code: ${error.code}, message: ${error.message}`);
-}
-```
 
 ## isRecordingAvailable
 
@@ -901,44 +585,6 @@ Checks whether recording can be started based on the audio source type in the au
 | --- | --- |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let audioStreamInfo: audio.AudioStreamInfo = {
-  samplingRate: audio.AudioSamplingRate.SAMPLE_RATE_48000,
-  channels: audio.AudioChannel.CHANNEL_2,
-  sampleFormat: audio.AudioSampleFormat.SAMPLE_FORMAT_S16LE,
-  encodingType: audio.AudioEncodingType.ENCODING_TYPE_RAW
-};
-
-let audioCapturerInfo: audio.AudioCapturerInfo = {
-  source: audio.SourceType.SOURCE_TYPE_MIC,
-  capturerFlags: 0
-};
-
-let audioCapturerOptions: audio.AudioCapturerOptions = {
-  streamInfo: audioStreamInfo,
-  capturerInfo: audioCapturerInfo
-};
-
-audio.createAudioCapturer(audioCapturerOptions, (err: BusinessError, audioCapturer: audio.AudioCapturer) => {
-  if (err) {
-    console.error(`Failed to create AudioCapturer. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info('Succeeded in creating AudioCapturer.');
-    try {
-      let isRecordingAvailable = audioStreamManager.isRecordingAvailable(audioCapturerInfo);
-      console.info(`Succeeded in using isRecordingAvailable function, IsRecordingAvailable: ${isRecordingAvailable}.`);
-    } catch (err) {
-      let error = err as BusinessError;
-      console.error(`Failed to use isRecordingAvailable function. code: ${error.code}, message: ${error.message}`);
-    }
-  }
-});
-```
-
 ## isStreamActive
 
 ```TypeScript
@@ -968,20 +614,6 @@ Checks whether a stream is active. This API returns the result synchronously.
 | Error Code ID | Error Message |
 | --- | --- |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let isStreamActive = audioStreamManager.isStreamActive(audio.StreamUsage.STREAM_USAGE_MUSIC);
-  console.info(`Succeeded in using isStreamActive function, IsStreamActive: ${isStreamActive}.`);
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`Failed to use isStreamActive function. code: ${error.code}, message: ${error.message}`);
-}
-```
 
 ## off('audioRendererChange')
 

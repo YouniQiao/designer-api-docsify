@@ -36,7 +36,7 @@ majorClass: MajorClass
 
 主要类型。是蓝牙标准协议中定义的类型字段。
 
-**类型：** MajorClass
+**类型：** [MajorClass](arkts-connectivity-connection-majorclass-t.md)
 
 **起始版本：** 10
 
@@ -52,7 +52,7 @@ majorMinorClass: MajorMinorClass
 
 子类型，是在主要类型基础上进一步细分的类型。是蓝牙标准协议中定义的类型字段。
 
-**类型：** MajorMinorClass
+**类型：** [MajorMinorClass](arkts-connectivity-connection-majorminorclass-t.md)
 
 **起始版本：** 10
 

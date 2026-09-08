@@ -32,8 +32,8 @@ Called when the media application starts to load an ad. The device vendor needs 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| adParam | advertising.AdRequestParams | Yes | Ad request parameters. |
-| adOptions | advertising.AdOptions | Yes | Ad configuration options. |
+| adParam | [advertising.AdRequestParams](arkts-ads-advertising-adrequestparams-i.md) | Yes | Ad request parameters. |
+| adOptions | [advertising.AdOptions](arkts-ads-advertising-adoptions-i.md) | Yes | Ad configuration options. |
 | respCallback | [RespCallback](arkts-ads-advertising-adsserviceextensionability-respcallback-i.md) | Yes | Ad request callback. |
 
 **Examples**
@@ -70,8 +70,8 @@ Called when the media application starts to load multiple ads. The device vendor
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| adParams | advertising.AdRequestParams[] | Yes | Ad request parameters. |
-| adOptions | advertising.AdOptions | Yes | Ad configuration options. |
+| adParams | [advertising.AdRequestParams](arkts-ads-advertising-adrequestparams-i.md)[] | Yes | Ad request parameters. |
+| adOptions | [advertising.AdOptions](arkts-ads-advertising-adoptions-i.md) | Yes | Ad configuration options. |
 | respCallback | [RespCallback](arkts-ads-advertising-adsserviceextensionability-respcallback-i.md) | Yes | Ad request callback. |
 
 **Examples**

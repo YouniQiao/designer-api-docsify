@@ -28,7 +28,7 @@ SymbolGlyph(value?: Resource)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | Resource | 否 | SymbolGlyph组件的资源名，如 \\$r('sys.symbol.ohos_wifi')。不传入时不显示图标。 |
+| value | [Resource](../arkts-apis/arkts-arkui-resource-t.md) | 否 | SymbolGlyph组件的资源名，如 \\$r('sys.symbol.ohos_wifi')。不传入时不显示图标。 |
 
 ## 汇总
 
@@ -367,6 +367,7 @@ struct Index {
 ```
 
 该示例通过[fontColor](#fontcolor-1)属性传入ColorMetrics类型参数，设置SymbolGlyph组件的颜色。
+从API版本26.0.0开始，新增支持[fontColor](#fontcolor-1)。
 
 ```TypeScript
 // xxx.ets
@@ -412,6 +413,7 @@ struct Index {
 ```
 
 该示例通过[fontWeight](#fontweight-1)属性展示SymbolGlyph不同粗细配置下的效果：第一行图标小符号展示启用可变字重后，分别设置字重值为220和660的效果；第二行图标小符号展示在将设备的系统字体粗细设置为粗体后，分别设置跟随和不跟随设备的字体粗细级别自动更新的效果。
+从API版本26.0.0开始，新增[fontWeight](#fontweight-1)属性。
 
 ```TypeScript
 // xxx.ets

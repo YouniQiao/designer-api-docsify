@@ -2,7 +2,7 @@
 
 旋转轴限位状态
 
-@enum { number }
+@enum { int }
 
 **起始版本：** 20
 

@@ -30,7 +30,7 @@ function convertRelativeToGlobalCoordinate(relativePosition: RelativePosition): 
 
 | 类型 | 说明 |
 | --- | --- |
-| Position | 返回相对于主屏左上角的全局坐标。 |
+| [Position](arkts-arkui-display-position-i.md) | 返回相对于主屏左上角的全局坐标。 |
 
 **错误码：**
 

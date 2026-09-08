@@ -32,7 +32,7 @@ Obtains the list of all existing Wi-Fi configurations.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;WifiDeviceConfig&gt; | sReturns the list of all existing Wi-Fi configurations you created on your application. |
+| Array&lt;[WifiDeviceConfig](arkts-connectivity-wifi-wifideviceconfig-i.md)&gt; | sReturns the list of all existing Wi-Fi configurations you created on your application. |
 
 **Examples**
 

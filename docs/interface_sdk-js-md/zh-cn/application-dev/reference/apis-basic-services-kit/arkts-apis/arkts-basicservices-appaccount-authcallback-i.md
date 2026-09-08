@@ -90,30 +90,6 @@ class MyAuthenticator extends appAccount.Authenticator {
 }
 ```
 
-```TypeScript
-import { Want } from '@kit.AbilityKit';
-
-class MyAuthenticator extends appAccount.Authenticator {
-  addAccountImplicitly(authType: string, callerBundleName: string,
-    options: Record<string, Object>, callback: appAccount.AuthenticatorCallback) {
-    let want: Want = {
-      bundleName: 'com.example.accountjsdemo',
-      abilityName: 'com.example.accountjsdemo.LoginAbility',
-    };
-    callback.onRequestRedirected(want);
-  }
-
-  authenticate(name: string, authType: string, callerBundleName: string,
-    options: Record<string, Object>, callback: appAccount.AuthenticatorCallback) {
-    callback.onResult(appAccount.ResultCode.SUCCESS, {
-      name: name,
-      authType: authType,
-      token: 'xxxxxx'
-    });
-  }
-}
-```
-
 ## onResult
 
 ```TypeScript
@@ -131,7 +107,7 @@ onResult: (code: number, result?: AuthResult) => void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | code | number | 是 |  |
-| result | AuthResult | 否 |  |
+| result | [AuthResult](arkts-basicservices-appaccount-authresult-i.md) | 否 |  |
 
 **示例**
 

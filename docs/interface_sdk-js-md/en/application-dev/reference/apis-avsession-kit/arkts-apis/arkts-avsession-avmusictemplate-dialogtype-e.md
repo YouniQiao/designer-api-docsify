@@ -2,7 +2,7 @@
 
 Enumeration of dialog type.
 
-@enum { number }
+@enum { int }
 
 **Since:** 23
 

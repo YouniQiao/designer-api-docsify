@@ -36,7 +36,7 @@ The required network conditions are not met.
 APP_BACKGROUND = 0x02
 ```
 
-The application has been running in the background for a number time.
+The application has been running in the background for a long time.
 
 **Since:** 20
 

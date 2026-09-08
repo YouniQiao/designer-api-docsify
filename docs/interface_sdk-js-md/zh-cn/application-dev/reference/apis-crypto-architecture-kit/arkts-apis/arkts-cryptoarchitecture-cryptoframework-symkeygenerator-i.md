@@ -41,7 +41,7 @@ convertKey(key: DataBlob, callback: AsyncCallback<SymKey>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| key | DataBlob | 是 | 指定的对称密钥材料。 |
+| key | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | 是 | 指定的对称密钥材料。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SymKey](arkts-cryptoarchitecture-cryptoframework-symkey-i.md)&gt; | 是 | 回调函数。当生成对称密钥成功时，err为undefined，data为获取到的SymKey；否则为错误对象。 |
 
 **错误码：**
@@ -95,7 +95,7 @@ convertKey(key: DataBlob): Promise<SymKey>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| key | DataBlob | 是 | 指定的密钥材料数据。 |
+| key | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | 是 | 指定的密钥材料数据。 |
 
 **返回值：**
 
@@ -163,7 +163,7 @@ convertKeySync(key: DataBlob): SymKey
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| key | DataBlob | 是 | 指定的对称密钥材料。 |
+| key | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | 是 | 指定的对称密钥材料。 |
 
 **返回值：**
 

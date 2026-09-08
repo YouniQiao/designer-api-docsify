@@ -35,32 +35,9 @@ Removes a notification for a specified bundle. This API uses an asynchronous cal
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundle | BundleOption | Yes | Bundle information of the application. |
-| notificationKey | NotificationKey | Yes | Notification key. |
+| notificationKey | [NotificationKey](arkts-notification-notification-notificationkey-depr-i.md) | Yes | Notification key. |
 | reason | RemoveReason | Yes | Reason for deleting a notification. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
-
-**Examples**
-
-```TypeScript
-import Base from '@ohos.base';
-
-let removeCallback = (err: Base.BusinessError) => {
-  if (err) {
-    console.error("remove failed " + JSON.stringify(err));
-  } else {
-    console.info("remove success");
-  }
-}
-let bundle: Notification.BundleOption = {
-  bundle: "bundleName1",
-};
-let notificationKey: Notification.NotificationKey = {
-  id: 0,
-  label: "label",
-};
-let reason: Notification.RemoveReason = Notification.RemoveReason.CLICK_REASON_REMOVE;
-Notification.remove(bundle, notificationKey, reason, removeCallback);
-```
 
 
 ## remove
@@ -88,7 +65,7 @@ Removes a notification for a specified bundle. This API uses a promise to return
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundle | BundleOption | Yes | Bundle information of the application. |
-| notificationKey | NotificationKey | Yes | Notification key. |
+| notificationKey | [NotificationKey](arkts-notification-notification-notificationkey-depr-i.md) | Yes | Notification key. |
 | reason | RemoveReason | Yes | Reason for deleting a notification. |
 
 **Return value:**
@@ -96,26 +73,6 @@ Removes a notification for a specified bundle. This API uses a promise to return
 | Type | Description |
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
-
-**Examples**
-
-```TypeScript
-import Base from '@ohos.base';
-
-let bundle: Notification.BundleOption = {
-  bundle: "bundleName1",
-};
-let notificationKey: Notification.NotificationKey = {
-  id: 0,
-  label: "label",
-};
-let reason: Notification.RemoveReason = Notification.RemoveReason.CLICK_REASON_REMOVE;
-Notification.remove(bundle, notificationKey, reason).then(() => {
-  console.info("remove success");
-}).catch((err: Base.BusinessError) => {
-  console.error(`remove failed, code is ${err}`);
-});
-```
 
 
 ## remove
@@ -145,24 +102,6 @@ Removes a notification for a specified bundle. This API uses an asynchronous cal
 | hashCode | string | Yes | Unique notification ID. It is the value of **hashCode** in the [NotificationRequest](arkts-notification-notificationrequest-notificationrequest-i.md) object of [SubscribeCallbackData](arkts-notification-notificationsubscriber-subscribecallbackdata-i-sys.md) used in the [onConsume](arkts-notification-notificationsubscriber-notificationsubscriber-i-sys.md#onconsume) callback. |
 | reason | RemoveReason | Yes | Reason for deleting a notification. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
-
-**Examples**
-
-```TypeScript
-import Base from '@ohos.base';
-
-let hashCode: string = 'hashCode';
-
-let removeCallback = (err: Base.BusinessError) => {
-  if (err) {
-    console.error("remove failed " + JSON.stringify(err));
-  } else {
-    console.info("remove success");
-  }
-}
-let reason: Notification.RemoveReason = Notification.RemoveReason.CANCEL_REASON_REMOVE;
-Notification.remove(hashCode, reason, removeCallback);
-```
 
 
 ## remove
@@ -197,17 +136,3 @@ Removes a notification for a specified bundle. This API uses a promise to return
 | Type | Description |
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
-
-**Examples**
-
-```TypeScript
-import Base from '@ohos.base';
-
-let hashCode: string = 'hashCode';
-let reason: Notification.RemoveReason = Notification.RemoveReason.CLICK_REASON_REMOVE;
-Notification.remove(hashCode, reason).then(() => {
-  console.info("remove success");
-}).catch((err: Base.BusinessError) => {
-  console.error(`remove failed, code is ${err}`);
-});
-```

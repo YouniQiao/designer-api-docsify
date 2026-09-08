@@ -175,3 +175,21 @@ Section that defines the order of the album, specifying where the album is displ
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
+
+## shareRiskStatus
+
+```TypeScript
+shareRiskStatus?: ShareAlbumRiskStatus
+```
+
+The risk status of share album.
+
+**Type:** [ShareAlbumRiskStatus](arkts-medialibrary-photoaccesshelper-sharealbumriskstatus-e-sys.md)
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+**System API:** This is a system API.

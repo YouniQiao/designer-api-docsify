@@ -42,13 +42,6 @@ declare function unlinkSync(path: string): void
 | 13900019 | Is a directory |
 | 13900020 | Invalid argument |
 | 13900027 | Read-only file system |
-| 13900030 | File name too number |
+| 13900030 | File name too long |
 | 13900033 | Too many symbolic links encountered |
 | 13900042 | Unknown error |
-
-**示例**
-
-```TypeScript
-let filePath = pathDir + "/test.txt";
-fileIo.unlinkSync(filePath);
-```

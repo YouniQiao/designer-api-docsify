@@ -70,7 +70,7 @@ dialogType: DialogType
 
 Type of the dialog.
 
-**Type:** DialogType
+**Type:** [DialogType](arkts-avsession-avmusictemplate-dialogtype-e.md)
 
 **Since:** 23
 

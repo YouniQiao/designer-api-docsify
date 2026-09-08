@@ -41,22 +41,6 @@ capture(callback: AsyncCallback<void>): void
 | [7400104](../errorcode-camera.md#7400104-会话未运行) | Session not running. |
 | [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function capture(photoOutput: camera.PhotoOutput): void {
-  photoOutput.capture((err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to capture the photo, error code: ${err.code}.`);
-      return;
-    }
-    console.info('Callback invoked to indicate the photo capture request success.');
-  });
-}
-```
-
 ## capture
 
 ```TypeScript
@@ -83,20 +67,6 @@ capture(): Promise<void>
 | --- | --- |
 | [7400104](../errorcode-camera.md#7400104-会话未运行) | Session not running. |
 | [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function capture(photoOutput: camera.PhotoOutput): void {
-  photoOutput.capture().then(() => {
-    console.info('Promise returned to indicate that photo capture request success.');
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to photo output capture, error code: ${error.code}.`);
-  });
-}
-```
 
 ## capture
 
@@ -126,33 +96,6 @@ capture(setting: PhotoCaptureSetting, callback: AsyncCallback<void>): void
 | [7400101](../errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect. |
 | [7400104](../errorcode-camera.md#7400104-会话未运行) | Session not running. |
 | [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function capture(photoOutput: camera.PhotoOutput): void {
-  let captureLocation: camera.Location = {
-    latitude: 0,
-    longitude: 0,
-    altitude: 0
-  }
-  let settings: camera.PhotoCaptureSetting = {
-    quality: camera.QualityLevel.QUALITY_LEVEL_LOW,
-    rotation: camera.ImageRotation.ROTATION_0,
-    location: captureLocation,
-    mirror: false
-  }
-  photoOutput.capture(settings, (err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to capture the photo, error code: ${err.code}.`);
-      return;
-    }
-    console.info('Callback invoked to indicate the photo capture request success.');
-  });
-}
-```
 
 ## capture
 
@@ -188,31 +131,6 @@ capture(setting: PhotoCaptureSetting): Promise<void>
 | [7400104](../errorcode-camera.md#7400104-会话未运行) | Session not running. |
 | [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function capture(photoOutput: camera.PhotoOutput): void {
-  let captureLocation: camera.Location = {
-    latitude: 0,
-    longitude: 0,
-    altitude: 0
-  }
-  let settings: camera.PhotoCaptureSetting = {
-    quality: camera.QualityLevel.QUALITY_LEVEL_LOW,
-    rotation: camera.ImageRotation.ROTATION_0,
-    location: captureLocation,
-    mirror: false
-  }
-  photoOutput.capture(settings).then(() => {
-    console.info('Promise returned to indicate that photo capture request success.');
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to photo output capture, error code: ${error.code}.`);
-  });
-}
-```
-
 ## enableAutoExtendedGainmapDelivery
 
 ```TypeScript
@@ -242,23 +160,6 @@ enableAutoExtendedGainmapDelivery(enabled: boolean): void
 | [7400102](../errorcode-camera.md#7400102-非法操作) | Operation not allowed. |
 | [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config, only throw in session usage. |
 | [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { camera } from '@kit.CameraKit';
-
-function enableAutoExtendedGainmapDelivery(photoOutput: camera.PhotoOutput): void {
-  try {
-    photoOutput.enableAutoExtendedGainmapDelivery(true);
-  } catch (error) {
-    // 失败返回错误码error.code并处理。
-    let err = error as BusinessError;
-    console.error(`The enableAutoExtendedGainmapDelivery call failed. error code: ${err.code}`);
-  }
-}
-```
 
 ## enableMirror
 
@@ -290,37 +191,6 @@ enableMirror(enabled: boolean): void
 | [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
 | [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function enableMirror(photoOutput: camera.PhotoOutput): void {
-  try {
-    photoOutput.enableMirror(true);
-  } catch (error) {
-    // 失败返回错误码error.code并处理。
-    let err = error as BusinessError;
-    console.error(`The enableMirror call failed. error code: ${err.code}`);
-  }
-}
-```
-
-```TypeScript
-import { camera } from '@kit.CameraKit';
-import { media } from '@kit.MediaKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function enableMirror(videoOutput: camera.VideoOutput, mirrorMode: boolean, aVRecorder: media.AVRecorder, deviceDegree : number): void {
-    try {
-        videoOutput.enableMirror(mirrorMode);
-        aVRecorder.updateRotation(videoOutput.getVideoRotation(deviceDegree));
-    } catch (error) {
-        let err = error as BusinessError;
-    }
-}
-```
-
 ## enableMovingPhoto
 
 ```TypeScript
@@ -351,22 +221,6 @@ enableMovingPhoto(enabled: boolean): void
 | [7400101](../errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect. |
 | [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function enableMovingPhoto(photoOutput: camera.PhotoOutput): void {
-  try {
-    photoOutput.enableMovingPhoto(true);
-  } catch (error) {
-    // 失败返回错误码error.code并处理。
-    let err = error as BusinessError;
-    console.error(`The enableMovingPhoto call failed. error code: ${err.code}`);
-  }
-}
-```
-
 ## getActiveProfile
 
 ```TypeScript
@@ -392,40 +246,6 @@ getActiveProfile(): Profile
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function testGetActiveProfile(photoOutput: camera.PhotoOutput): camera.Profile | undefined {
-  let activeProfile: camera.Profile | undefined = undefined;
-  try {
-    activeProfile = photoOutput.getActiveProfile();
-  } catch (error) {
-    // 失败返回错误码error.code并处理。
-    let err = error as BusinessError;
-    console.error(`The photoOutput.getActiveProfile call failed. error code: ${err.code}`);
-  }
-  return activeProfile;
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function testGetActiveProfile(previewOutput: camera.PreviewOutput): camera.Profile | undefined {
-  let activeProfile: camera.Profile | undefined = undefined;
-  try {
-    activeProfile = previewOutput.getActiveProfile();
-  } catch (error) {
-    // 失败返回错误码error.code并处理。
-    let err = error as BusinessError;
-    console.error(`The previewOutput.getActiveProfile call failed. error code: ${err.code}`);
-  }
-  return activeProfile;
-}
-```
 
 ## getPhotoRotation
 
@@ -465,38 +285,6 @@ getPhotoRotation(deviceDegree?: number): ImageRotation
 | [7400101](../errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect.<br>**适用版本：** 12 - 22 |
 | [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function testGetPhotoRotation(photoOutput: camera.PhotoOutput, deviceDegree : number): camera.ImageRotation {
-  let photoRotation: camera.ImageRotation = camera.ImageRotation.ROTATION_0;
-  try {
-    photoRotation = photoOutput.getPhotoRotation(deviceDegree);
-    console.info(`Photo rotation is: ${photoRotation}`);
-  } catch (error) {
-    // 失败返回错误码error.code并处理。
-    let err = error as BusinessError;
-    console.error(`The photoOutput.getPhotoRotation call failed. error code: ${err.code}`);
-  }
-  return photoRotation;
-}
-
-function testGetPhotoRotationWithOutParam(photoOutput: camera.PhotoOutput): camera.ImageRotation {
-  let photoRotation: camera.ImageRotation = camera.ImageRotation.ROTATION_0;
-  try {
-    photoRotation = photoOutput.getPhotoRotation();
-    console.info(`Photo rotation is: ${photoRotation}`);
-  } catch (error) {
-    // 失败返回错误码error.code并处理。
-    let err = error as BusinessError;
-    console.error(`The photoOutput.testGetPhotoRotationWithOutParam call failed. error code: ${err.code}`);
-  }
-  return photoRotation;
-}
-```
-
 ## getSupportedMovingPhotoVideoCodecTypes
 
 ```TypeScript
@@ -523,15 +311,6 @@ getSupportedMovingPhotoVideoCodecTypes(): Array<VideoCodecType>
 | --- | --- |
 | [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
 
-**示例**
-
-```TypeScript
-function getSupportedMovingPhotoVideoCodecType(photoOutput: camera.PhotoOutput): Array<camera.VideoCodecType> {
-  let supportedVideoCodecTypesArray: Array<camera.VideoCodecType> = photoOutput.getSupportedMovingPhotoVideoCodecTypes();
-  return supportedVideoCodecTypesArray;
-}
-```
-
 ## isAutoExtendedGainmapDeliverySupported
 
 ```TypeScript
@@ -554,25 +333,6 @@ isAutoExtendedGainmapDeliverySupported(): boolean
 | --- | --- |
 | boolean | 是否支持自动扩展增益图（Gainmap）的输出。true表示支持，false表示不支持。 |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { camera } from '@kit.CameraKit';
-
-function isAutoExtendedGainmapDeliverySupported(photoOutput: camera.PhotoOutput): boolean {
-  let isSupported: boolean = false;
-  try {
-    isSupported = photoOutput.isAutoExtendedGainmapDeliverySupported();
-  } catch (error) {
-    // 失败返回错误码error.code并处理。
-    let err = error as BusinessError;
-    console.error(`The isAutoExtendedGainmapDeliverySupported call failed. error code: ${err.code}`);
-  }
-  return isSupported;
-}
-```
-
 ## isMirrorSupported
 
 ```TypeScript
@@ -592,22 +352,6 @@ isMirrorSupported(): boolean
 | 类型 | 说明 |
 | --- | --- |
 | boolean | 返回是否支持镜像拍照，true表示支持，false表示不支持。若接口调用失败，返回undefined。 |
-
-**示例**
-
-```TypeScript
-function isMirrorSupported(photoOutput: camera.PhotoOutput): boolean {
-  let isSupported: boolean = photoOutput.isMirrorSupported();
-  return isSupported;
-}
-```
-
-```TypeScript
-function testIsMirrorSupported(videoOutput: camera.VideoOutput): boolean {
-  let isSupported: boolean = videoOutput.isMirrorSupported();
-  return isSupported;
-}
-```
 
 ## isMovingPhotoSupported
 
@@ -634,24 +378,6 @@ isMovingPhotoSupported(): boolean
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function isMovingPhotoSupported(photoOutput: camera.PhotoOutput): boolean {
-  let isSupported: boolean = false;
-  try {
-    isSupported = photoOutput.isMovingPhotoSupported();
-  } catch (error) {
-    // 失败返回错误码error.code并处理。
-    let err = error as BusinessError;
-    console.error(`The isMovingPhotoSupported call failed. error code: ${err.code}`);
-  }
-  return isSupported;
-}
-```
 
 ## isPhotoQualityPrioritizationSupported
 
@@ -684,26 +410,6 @@ isPhotoQualityPrioritizationSupported(qualityPrioritization: PhotoQualityPriorit
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error, reconfiguring streams is needed to recover from failure. |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { camera } from '@kit.CameraKit';
-
-let photoOutput: camera.PhotoOutput;
-
-function isPhotoQualityPrioritizationSupported(qualityPrioritization: camera.PhotoQualityPrioritization): boolean {
-  let isSupported: boolean = false;
-  try {
-    isSupported = photoOutput.isPhotoQualityPrioritizationSupported(qualityPrioritization);
-  } catch (error) {
-    let err = error as BusinessError;
-    console.error(`The isPhotoQualityPrioritizationSupported call failed. error code: ${err.code}`);
-  }
-  return isSupported;
-}
-```
 
 ## off('photoAvailable')
 
@@ -745,7 +451,7 @@ off(type: 'photoAssetAvailable', callback?: AsyncCallback<photoAccessHelper.Phot
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'photoAssetAvailable' | 是 | 监听事件，固定为'photoAssetAvailable'，photoOutput创建成功后可监听。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;photoAccessHelper.PhotoAsset&gt; | 否 | 需要解监听的回调方法。如果callback不为空且与此对应的监听方法一致，不为匿名方法，则解注册该方法；如果callback为空，则解监听所有回调。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[photoAccessHelper.PhotoAsset](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoasset-i.md)&gt; | 否 | 需要解监听的回调方法。如果callback不为空且与此对应的监听方法一致，不为匿名方法，则解注册该方法；如果callback为空，则解监听所有回调。 |
 
 ## off('captureStart')
 
@@ -945,21 +651,6 @@ offCapturePhotoAvailable(callback?: Callback<CapturePhoto>): void
 | --- | --- | --- | --- |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CapturePhoto](arkts-camera-camera-capturephoto-i.md)&gt; | 否 | 回调函数，如果指定参数则取消对应callback，callback对象不可是匿名函数，否则取消所有callback。 |
 
-**示例**
-
-```TypeScript
-import { camera } from '@kit.CameraKit';
-import { image } from '@kit.ImageKit';
-
-function callback(capturePhoto: camera.CapturePhoto): void {
-  let picture: image.Image | image.Picture = capturePhoto.main;
-}
-
-function unRegisterCapturePhotoOutputPhotoAvailable(photoOutput: camera.PhotoOutput): void {
-  photoOutput.offCapturePhotoAvailable(callback);
-}
-```
-
 ## on('photoAvailable')
 
 ```TypeScript
@@ -1008,7 +699,7 @@ on(type: 'photoAssetAvailable', callback: AsyncCallback<photoAccessHelper.PhotoA
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'photoAssetAvailable' | 是 | 监听事件，固定为'photoAssetAvailable'，photoOutput创建成功后可监听。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;photoAccessHelper.PhotoAsset&gt; | 是 | 回调函数，用于监听photoAsset上报。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[photoAccessHelper.PhotoAsset](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoasset-i.md)&gt; | 是 | 回调函数，用于监听photoAsset上报。 |
 
 ## on('captureStart')
 
@@ -1240,21 +931,6 @@ onCapturePhotoAvailable(callback: Callback<CapturePhoto>): void
 | --- | --- | --- | --- |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CapturePhoto](arkts-camera-camera-capturephoto-i.md)&gt; | 是 | 回调函数，用于监听全质量图和未压缩图上报事件。 |
 
-**示例**
-
-```TypeScript
-import { camera } from '@kit.CameraKit';
-import { image } from '@kit.ImageKit';
-
-function callback(capturePhoto: camera.CapturePhoto): void {
-  let picture: image.Image | image.Picture = capturePhoto.main;
-}
-
-function registerCapturePhotoOutputPhotoAvailable(photoOutput: camera.PhotoOutput): void {
-  photoOutput.onCapturePhotoAvailable(callback);
-}
-```
-
 ## setMovingPhotoVideoCodecType
 
 ```TypeScript
@@ -1280,14 +956,6 @@ setMovingPhotoVideoCodecType(codecType: VideoCodecType): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
-
-**示例**
-
-```TypeScript
-function setMovingPhotoVideoCodecTypes(photoOutput: camera.PhotoOutput, videoCodecType: camera.VideoCodecType): void {
-  photoOutput.setMovingPhotoVideoCodecType(videoCodecType);
-}
-```
 
 ## setPhotoQualityPrioritization
 
@@ -1317,21 +985,3 @@ setPhotoQualityPrioritization(qualityPrioritization: PhotoQualityPrioritization)
 | --- | --- |
 | [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error, reconfiguring streams is needed to recover from failure. |
 | [7400102](../errorcode-camera.md#7400102-非法操作) | Operation not allowed. |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { camera } from '@kit.CameraKit';
-
-let photoOutput: camera.PhotoOutput;
-
-function setPhotoQualityPrioritization(qualityPrioritization: camera.PhotoQualityPrioritization): void {
-  try {
-    photoOutput.setPhotoQualityPrioritization(qualityPrioritization);
-  } catch (error) {
-    let err = error as BusinessError;
-    console.error(`The setPhotoQualityPrioritization call failed. error code: ${err.code}`);
-  }
-}
-```

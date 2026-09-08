@@ -26,7 +26,7 @@ Obtains the information about the UIAbility components of an application that is
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;AbilityStateData&gt;&gt; | Yes | Callback used to return the API call result and the UIAbility information. You can perform error handling or custom processing in it. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[AbilityStateData](arkts-ability-abilitymanager-abilitystatedata-t.md)&gt;&gt; | Yes | Callback used to return the API call result and the UIAbility information. You can perform error handling or custom processing in it. |
 
 **Error codes:**
 
@@ -73,7 +73,7 @@ Obtains the information about the UIAbility components of an application that is
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;AbilityStateData&gt;&gt; | Promise used to return the API call result and the UIAbility information. You can perform error handling or custom processing in it. |
+| Promise&lt;Array&lt;[AbilityStateData](arkts-ability-abilitymanager-abilitystatedata-t.md)&gt;&gt; | Promise used to return the API call result and the UIAbility information. You can perform error handling or custom processing in it. |
 
 **Error codes:**
 

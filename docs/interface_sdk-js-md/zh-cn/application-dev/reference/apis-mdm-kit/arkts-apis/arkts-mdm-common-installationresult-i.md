@@ -38,7 +38,7 @@ result: Result
 
 应用安装结果码。SUCCESS表示应用安装成功，应用可正常使用；FAIL表示应用安装失败，应用不可用。
 
-**类型：** Result
+**类型：** [Result](arkts-mdm-common-result-e.md)
 
 **起始版本：** 22
 

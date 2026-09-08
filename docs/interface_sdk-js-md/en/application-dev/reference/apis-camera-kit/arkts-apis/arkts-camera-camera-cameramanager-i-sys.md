@@ -301,7 +301,7 @@ Mutes the camera device permanently.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | mute | boolean | Yes | Mutes or unmutes the camera device. **true** to mute, **false** otherwise. |
-| type | PolicyType | Yes | Policy type. For details about the available options, see [PolicyType](arkts-camera-camera-policytype-e-sys.md). |
+| type | [PolicyType](arkts-camera-camera-policytype-e-sys.md) | Yes | Policy type. For details about the available options, see [PolicyType](arkts-camera-camera-policytype-e-sys.md). |
 
 **Error codes:**
 

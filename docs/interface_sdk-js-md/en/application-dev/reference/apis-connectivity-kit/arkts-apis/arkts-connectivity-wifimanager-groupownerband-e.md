@@ -2,7 +2,7 @@
 
 P2P group owner band.
 
-@enum { number }
+@enum { int }
 
 **Since:** 9
 

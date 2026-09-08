@@ -20,7 +20,7 @@ events?: Event[]
 
 表示服务的事件列表。若未配置该字段，则服务不提供任何事件。
 
-**类型：** Event[]
+**类型：** [Event](arkts-connectivity-ssap-event-i-sys.md)[]
 
 **起始版本：** 26.0.0
 

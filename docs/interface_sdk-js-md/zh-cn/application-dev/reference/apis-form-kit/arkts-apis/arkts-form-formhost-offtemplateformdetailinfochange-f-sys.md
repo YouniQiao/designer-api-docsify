@@ -28,7 +28,7 @@ function offTemplateFormDetailInfoChange(callback?: formInfo.TemplateFormDetailI
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | formInfo.TemplateFormDetailInfoCallback | 否 | 回调函数，监控模板卡片静态配置信息变化。 |
+| callback | [formInfo.TemplateFormDetailInfoCallback](arkts-form-forminfo-templateformdetailinfocallback-t-sys.md) | 否 | 回调函数，监控模板卡片静态配置信息变化。 |
 
 **错误码：**
 

@@ -19,7 +19,7 @@ backgroundBlurStyle?: BlurStyle
 
 Background blur style of the title bar. If this parameter is not set, the background blur effect is disabled.
 
-**Type:** BlurStyle
+**Type:** [BlurStyle](arkts-arkui-blurstyle-e.md)
 
 **Since:** 11
 

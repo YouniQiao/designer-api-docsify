@@ -62,7 +62,7 @@ alt(value: string | Resource | PixelMap)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | string \| Resource \| PixelMap | 是 | 设置图片加载过程中显示的占位图，支持本地图片（png、jpg、bmp、svg、gif和heif类型），支持[PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)类型图片，不支持网络图片。   - 支持`Base64`字符串。   - 支持file://路径前缀的字符串，应用沙箱URI：file://&lt;bundleName&gt;/&lt;sandboxPath&gt;。应用沙箱路径URI构造可参考[constructor](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-fileuri-c.md#constructor)。沙箱路径需要使用[fileUri.getUriFromPath(path)](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md)方法将路径转换为应用沙箱URI，然后传入显示。同时需要保证目录包路径下的文件有可读权限。   默认值：null由有效值（可正常解析并加载的图片资源）切换为无效值（无法解析或加载的图片路径）时，组件保持显示此前成功加载的图片内容，不进行清除或重置操作。<br>**适用版本：** 12 |
+| value | string \| [Resource](../arkts-apis/arkts-arkui-resource-t.md) \| [PixelMap](arkts-arkui-pixelmap-t.md) | 是 | 设置图片加载过程中显示的占位图，支持本地图片（png、jpg、bmp、svg、gif和heif类型），支持[PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)类型图片，不支持网络图片。   - 支持`Base64`字符串。   - 支持file://路径前缀的字符串，应用沙箱URI：file://&lt;bundleName&gt;/&lt;sandboxPath&gt;。应用沙箱路径URI构造可参考[constructor](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-fileuri-c.md#constructor)。沙箱路径需要使用[fileUri.getUriFromPath(path)](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md)方法将路径转换为应用沙箱URI，然后传入显示。同时需要保证目录包路径下的文件有可读权限。   默认值：null由有效值（可正常解析并加载的图片资源）切换为无效值（无法解析或加载的图片路径）时，组件保持显示此前成功加载的图片内容，不进行清除或重置操作。<br>**适用版本：** 12 |
 
 ## alt
 
@@ -93,7 +93,7 @@ alt(src: ResourceStr | PixelMap | ImageAlt)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| src | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| PixelMap \| [ImageAlt](arkts-arkui-imagealt-i.md) | 是 | 设置图片加载过程中和加载失败时的占位图，支持本地图片（png、jpg、bmp、svg、gif和heif类型），支持[PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)类型图片，不支持网络图片。   - 支持`Base64`字符串。   - 支持file://路径前缀的字符串，应用沙箱URI：file://&lt;bundleName&gt;/&lt;sandboxPath&gt;。应用沙箱路径URI构造可参考[constructor](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-fileuri-c.md#constructor)。沙箱路径需要使用[fileUri.getUriFromPath(path)](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md)方法将路径转换为应用沙箱URI，然后传入显示。同时需要保证目录包路径下的文件有可读权限。 |
+| src | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| [PixelMap](arkts-arkui-pixelmap-t.md) \| [ImageAlt](arkts-arkui-imagealt-i.md) | 是 | 设置图片加载过程中和加载失败时的占位图，支持本地图片（png、jpg、bmp、svg、gif和heif类型），支持[PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)类型图片，不支持网络图片。   - 支持`Base64`字符串。   - 支持file://路径前缀的字符串，应用沙箱URI：file://&lt;bundleName&gt;/&lt;sandboxPath&gt;。应用沙箱路径URI构造可参考[constructor](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-fileuri-c.md#constructor)。沙箱路径需要使用[fileUri.getUriFromPath(path)](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md)方法将路径转换为应用沙箱URI，然后传入显示。同时需要保证目录包路径下的文件有可读权限。 |
 
 ## antialiased
 
@@ -180,7 +180,7 @@ colorFilter(value: ColorFilter | DrawingColorFilter)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | ColorFilter \| [DrawingColorFilter](arkts-arkui-drawingcolorfilter-t.md) | 是 | 1. 给图像设置颜色滤镜效果，入参为一个4x5的RGBA转换矩阵。 2. 从API version12开始支持@ ohos.graphics.drawing的ColorFilter类型作为入参。   **说明：** API version 11及之前，SVG类型图源不支持该属性。从API version 12开始，该接口中的DrawingColorFilter类型支持在原子化服务中使用。其中，SVG类型的图源只有设置了stroke属性（无论是否有值）才会生效。从API version 21开始，当[supportSvg2](#supportsvg2)属性设置为true时，colorFilter属性对整个SVG图源起作用。<br>**适用版本：** 12 |
+| value | [ColorFilter](../arkts-apis/arkts-arkui-colorfilter-c.md) \| [DrawingColorFilter](arkts-arkui-drawingcolorfilter-t.md) | 是 | 1. 给图像设置颜色滤镜效果，入参为一个4x5的RGBA转换矩阵。 2. 从API version12开始支持@ ohos.graphics.drawing的ColorFilter类型作为入参。   **说明：** API version 11及之前，SVG类型图源不支持该属性。从API version 12开始，该接口中的DrawingColorFilter类型支持在原子化服务中使用。其中，SVG类型的图源只有设置了stroke属性（无论是否有值）才会生效。从API version 21开始，当[supportSvg2](#supportsvg2)属性设置为true时，colorFilter属性对整个SVG图源起作用。<br>**适用版本：** 12 |
 
 ## colorFilter
 
@@ -208,7 +208,7 @@ colorFilter(value: ColorFilter | DrawingColorFilter | ResourceColor)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | ColorFilter \| [DrawingColorFilter](arkts-arkui-drawingcolorfilter-t.md) \| [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | 是 | 图像颜色的滤镜值。   ColorFilter、[DrawingColorFilter](arkts-arkui-drawingcolorfilter-t.md)类型及SVG图源的相关说明，请参考[colorFilter](#colorfilter)的接口说明。[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)类型的输入颜色值，默认按照[DrawingColorFilter](arkts-arkui-drawingcolorfilter-t.md). [createBlendModeColorFilter](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-drawing-colorfilter-c.md#createblendmodecolorfilter)的SRC_ATOP模式进行绘制（该模式表示滤镜颜色与目标图像叠加，滤镜覆盖在目标上方）。 |
+| value | [ColorFilter](../arkts-apis/arkts-arkui-colorfilter-c.md) \| [DrawingColorFilter](arkts-arkui-drawingcolorfilter-t.md) \| [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | 是 | 图像颜色的滤镜值。   ColorFilter、[DrawingColorFilter](arkts-arkui-drawingcolorfilter-t.md)类型及SVG图源的相关说明，请参考[colorFilter](#colorfilter)的接口说明。[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)类型的输入颜色值，默认按照[DrawingColorFilter](arkts-arkui-drawingcolorfilter-t.md). [createBlendModeColorFilter](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-drawing-colorfilter-c.md#createblendmodecolorfilter)的SRC_ATOP模式进行绘制（该模式表示滤镜颜色与目标图像叠加，滤镜覆盖在目标上方）。 |
 
 ## contentTransition
 
@@ -254,7 +254,7 @@ copyOption(value: CopyOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | CopyOptions | 是 | 图片是否可复制。默认值：CopyOptions.None |
+| value | [CopyOptions](../arkts-apis/arkts-arkui-copyoptions-e.md) | 是 | 图片是否可复制。默认值：CopyOptions.None |
 
 ## draggable
 
@@ -582,7 +582,7 @@ objectRepeat(value: ImageRepeat)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ImageRepeat](../arkts-apis/arkts-arkui-imagerepeat-e.md) | 是 | 图片的重复样式。默认值：ImageRepeat.NoRepeat |
+| value | [ImageRepeat](../arkts-apis/arkts-arkui-imagerepeat-e.md) | 是 | [图片的重复样式。默认值：ImageRepeat.NoRepeat](../arkts-apis/arkts-arkui-imagerepeat-e.md) |
 
 ## onComplete
 
@@ -1006,7 +1006,7 @@ renderMode(value: ImageRenderMode)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ImageRenderMode](arkts-arkui-imagerendermode-e.md) | 是 | 图片的渲染模式为原色或黑白。默认值：ImageRenderMode.Original |
+| value | [ImageRenderMode](arkts-arkui-imagerendermode-e.md) | 是 | [图片的渲染模式为原色或黑白。默认值：ImageRenderMode.Original](arkts-arkui-imagerendermode-e.md) |
 
 ## resizable
 

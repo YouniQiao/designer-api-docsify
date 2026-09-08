@@ -30,7 +30,7 @@ Obtains the embedding vector of the given image. The model can handle images bel
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| image | Image | Yes | The input image of the embedding model. |
+| image | [Image](arkts-arkdata-intelligence-image-t.md) | Yes | The input image of the embedding model. |
 
 **Return value:**
 
@@ -92,18 +92,6 @@ Loads this image embedding model. If the loading fails, an error code is returne
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
-textEmbedding.loadModel()
-  .then(() => {
-    console.info("Succeeded in loading Model");
-  })
-  .catch((err: BusinessError) => {
-    console.error("Failed to load Model and code is " + err.code);
-  })
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
 imageEmbedding.loadModel()
   .then(() => {
     console.info("Succeeded in loading Model");
@@ -139,18 +127,6 @@ Releases this image embedding model. If the releasing fails, an error code is re
 | [31300000](../errorcode-intelligence.md#31300000-internal-error) | Inner error. |
 
 **Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-textEmbedding.releaseModel()
-  .then(() => {
-    console.info("Succeeded in releasing Model");
-  })
-  .catch((err: BusinessError) => {
-    console.error("Failed to release Model and code is " + err.code);
-  })
-```
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

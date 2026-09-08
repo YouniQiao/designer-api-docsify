@@ -33,7 +33,7 @@ Queries usage information about each bundle within a specified period at a speci
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| byInterval | IntervalType | 是 | Indicates the interval at which the usage statistics are queried. The value can be { |
+| byInterval | [IntervalType](arkts-backgroundtasks-bundlestate-intervaltype-e.md) | 是 | Indicates the interval at which the usage statistics are queried. The value can be { |
 | begin | number | 是 | Indicates the start time of the query period, in milliseconds. |
 | end | number | 是 | Indicates the end time of the query period, in milliseconds. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[BundleStateInfo](arkts-backgroundtasks-bundlestate-bundlestateinfo-i.md)&gt;&gt; | 是 | the callback of usage information about each bundle. |
@@ -84,7 +84,7 @@ Queries usage information about each bundle within a specified period at a speci
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| byInterval | IntervalType | 是 | Indicates the interval at which the usage statistics are queried. The value can be { |
+| byInterval | [IntervalType](arkts-backgroundtasks-bundlestate-intervaltype-e.md) | 是 | Indicates the interval at which the usage statistics are queried. The value can be { |
 | begin | number | 是 | Indicates the start time of the query period, in milliseconds. |
 | end | number | 是 | Indicates the end time of the query period, in milliseconds. |
 

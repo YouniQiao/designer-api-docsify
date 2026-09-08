@@ -118,7 +118,7 @@ playState: PlaybackState
 
 Play state of the media resource.
 
-**Type:** PlaybackState
+**Type:** [PlaybackState](arkts-avsession-avmusictemplate-playbackstate-e.md)
 
 **Since:** 23
 

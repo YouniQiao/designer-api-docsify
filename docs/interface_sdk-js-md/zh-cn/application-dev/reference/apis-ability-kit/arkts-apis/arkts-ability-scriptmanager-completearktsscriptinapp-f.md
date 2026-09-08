@@ -28,7 +28,7 @@ function completeArkTSScriptInApp(context: Context, requestCode: string, result:
 | --- | --- | --- | --- |
 | context | [Context](arkts-ability-context-c.md) | 是 | Ability上下文，用于临时文件授权。 |
 | requestCode | string | 是 | 用于标识当前操作的请求码。 |
-| result | ExecuteResult | 是 | ArkTS脚本的执行结果。 |
+| result | [ExecuteResult](arkts-ability-scriptmanager-executeresult-i.md) | 是 | ArkTS脚本的执行结果。 |
 
 **返回值：**
 

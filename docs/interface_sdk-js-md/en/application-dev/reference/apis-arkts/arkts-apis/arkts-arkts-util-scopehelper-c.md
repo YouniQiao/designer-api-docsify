@@ -70,36 +70,6 @@ console.info("result = " + result);
 // Output: result = 35
 ```
 
-```TypeScript
-class Temperature implements util.ScopeComparable {
-  private readonly _temp: number;
-
-  constructor(value: number) {
-    this._temp = value;
-  }
-
-  compareTo(value: Temperature) {
-    return this._temp >= value.getTemp();
-  }
-
-  getTemp() {
-    return this._temp;
-  }
-
-  toString(): string {
-    return this._temp.toString();
-  }
-}
-
-let tempLower = new Temperature(30);
-let tempUpper = new Temperature(40);
-let tempMiDF = new Temperature(35);
-let range = new util.Scope(tempLower, tempUpper);
-let result = range.clamp(tempMiDF);
-console.info("result = " + result);
-// Output: result = 35
-```
-
 ## constructor
 
 ```TypeScript
@@ -146,34 +116,6 @@ class Temperature implements util.ScopeComparable {
 let tempLower = new Temperature(30);
 let tempUpper = new Temperature(40);
 let range = new util.ScopeHelper(tempLower, tempUpper);
-console.info("range = " + range);
-// Output: range = [30, 40]
-```
-
-```TypeScript
-class Temperature implements util.ScopeComparable {
-  private readonly _temp: number;
-
-  constructor(value: number) {
-    this._temp = value;
-  }
-
-  compareTo(value: Temperature) {
-    return this._temp >= value.getTemp();
-  }
-
-  getTemp() {
-    return this._temp;
-  }
-
-  toString(): string {
-    return this._temp.toString();
-  }
-}
-
-let tempLower = new Temperature(30);
-let tempUpper = new Temperature(40);
-let range = new util.Scope(tempLower, tempUpper);
 console.info("range = " + range);
 // Output: range = [30, 40]
 ```
@@ -231,36 +173,6 @@ let tempLower = new Temperature(30);
 let tempUpper = new Temperature(40);
 let tempMiDF = new Temperature(35);
 let range = new util.ScopeHelper(tempLower, tempUpper);
-let result = range.contains(tempMiDF);
-console.info("result = " + result);
-// Output: result = true
-```
-
-```TypeScript
-class Temperature implements util.ScopeComparable {
-  private readonly _temp: number;
-
-  constructor(value: number) {
-    this._temp = value;
-  }
-
-  compareTo(value: Temperature) {
-    return this._temp >= value.getTemp();
-  }
-
-  getTemp() {
-    return this._temp;
-  }
-
-  toString(): string {
-    return this._temp.toString();
-  }
-}
-
-let tempLower = new Temperature(30);
-let tempUpper = new Temperature(40);
-let tempMiDF = new Temperature(35);
-let range = new util.Scope(tempLower, tempUpper);
 let result = range.contains(tempMiDF);
 console.info("result = " + result);
 // Output: result = true
@@ -555,35 +467,6 @@ console.info("result = " + result);
 // Output: result = 30
 ```
 
-```TypeScript
-class Temperature implements util.ScopeComparable {
-  private readonly _temp: number;
-
-  constructor(value: number) {
-    this._temp = value;
-  }
-
-  compareTo(value: Temperature) {
-    return this._temp >= value.getTemp();
-  }
-
-  getTemp() {
-    return this._temp;
-  }
-
-  toString(): string {
-    return this._temp.toString();
-  }
-}
-
-let tempLower = new Temperature(30);
-let tempUpper = new Temperature(40);
-let range = new util.Scope(tempLower, tempUpper);
-let result = range.getLower();
-console.info("result = " + result);
-// Output: result = 30
-```
-
 ## getUpper
 
 ```TypeScript
@@ -630,35 +513,6 @@ class Temperature implements util.ScopeComparable {
 let tempLower = new Temperature(30);
 let tempUpper = new Temperature(40);
 let range = new util.ScopeHelper(tempLower, tempUpper);
-let result = range.getUpper();
-console.info("result = " + result);
-// Output: result = 40
-```
-
-```TypeScript
-class Temperature implements util.ScopeComparable {
-  private readonly _temp: number;
-
-  constructor(value: number) {
-    this._temp = value;
-  }
-
-  compareTo(value: Temperature) {
-    return this._temp >= value.getTemp();
-  }
-
-  getTemp() {
-    return this._temp;
-  }
-
-  toString(): string {
-    return this._temp.toString();
-  }
-}
-
-let tempLower = new Temperature(30);
-let tempUpper = new Temperature(40);
-let range = new util.Scope(tempLower, tempUpper);
 let result = range.getUpper();
 console.info("result = " + result);
 // Output: result = 40
@@ -807,32 +661,6 @@ Obtains a string representation that contains this **Scope**.
 **Examples**
 
 ```TypeScript
-let rationalNumber = new util.RationalNumber(1,2);
-let result = rationalNumber.toString();
-console.info("result = " + result);
-// Output: result = 1/2
-```
-
-You are advised to use the following code snippet for API version 9 and later versions:
-
-```TypeScript
-let rationalNumber = util.RationalNumber.parseRationalNumber(1,2);
-let result = rationalNumber.toString();
-console.info("result = " + result);
-// Output: result = 1/2
-```
-
-```TypeScript
-let pro = new util.LRUCache<number, number>();
-pro.put(2, 10);
-pro.get(2);
-pro.get(3);
-console.info(pro.toString());
-// Output: LRUCache[ maxSize = 64, hits = 1, misses = 1, hitRate = 50% ]
-// maxSize: maximum size of the cache. hits: number of matched queries. misses: number of mismatched queries. hitRate: matching rate.
-```
-
-```TypeScript
 class Temperature implements util.ScopeComparable {
   private readonly _temp: number;
 
@@ -856,45 +684,6 @@ class Temperature implements util.ScopeComparable {
 let tempLower = new Temperature(30);
 let tempUpper = new Temperature(40);
 let range = new util.ScopeHelper(tempLower, tempUpper);
-let result = range.toString();
-console.info("result = " + result);
-// Output: result = [30, 40]
-```
-
-```TypeScript
-let pro : util.LruBuffer<number,number> = new util.LruBuffer();
-pro.put(2,10);
-pro.get(2);
-pro.remove(20);
-let result = pro.toString();
-console.info("result = " + result);
-// Output: result = Lrubuffer[ maxSize = 64, hits = 1, misses = 0, hitRate = 100% ]
-```
-
-```TypeScript
-class Temperature implements util.ScopeComparable {
-  private readonly _temp: number;
-
-  constructor(value: number) {
-    this._temp = value;
-  }
-
-  compareTo(value: Temperature) {
-    return this._temp >= value.getTemp();
-  }
-
-  getTemp() {
-    return this._temp;
-  }
-
-  toString(): string {
-    return this._temp.toString();
-  }
-}
-
-let tempLower = new Temperature(30);
-let tempUpper = new Temperature(40);
-let range = new util.Scope(tempLower, tempUpper);
 let result = range.toString();
 console.info("result = " + result);
 // Output: result = [30, 40]

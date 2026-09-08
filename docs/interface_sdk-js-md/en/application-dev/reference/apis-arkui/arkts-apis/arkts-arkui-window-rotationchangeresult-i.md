@@ -22,7 +22,7 @@ rectType: RectType
 
 Type of window rectangle coordinate system.
 
-**Type:** RectType
+**Type:** [RectType](arkts-arkui-window-recttype-e.md)
 
 **Since:** 19
 
@@ -38,7 +38,7 @@ windowRect: Rect
 
 Information about the window's rectangle relative to the screen or parent window coordinate system.
 
-**Type:** Rect
+**Type:** [Rect](arkts-arkui-window-rect-i.md)
 
 **Since:** 19
 

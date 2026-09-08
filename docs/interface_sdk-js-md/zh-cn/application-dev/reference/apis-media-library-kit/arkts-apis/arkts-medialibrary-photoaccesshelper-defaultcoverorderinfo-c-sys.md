@@ -22,7 +22,7 @@ public albumSubtype: AlbumSubtype
 
 相册子类型。
 
-**类型：** AlbumSubtype
+**类型：** [AlbumSubtype](arkts-medialibrary-photoaccesshelper-albumsubtype-e.md)
 
 **起始版本：** 26.0.0
 
@@ -40,7 +40,7 @@ public albumType: AlbumType
 
 相册类型。
 
-**类型：** AlbumType
+**类型：** [AlbumType](arkts-medialibrary-photoaccesshelper-albumtype-e.md)
 
 **起始版本：** 26.0.0
 

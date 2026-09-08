@@ -26,13 +26,13 @@ Converts a SendableContext object to a UIAbilityContext object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sendableContext | SendableContext | Yes |  |
+| sendableContext | [SendableContext](arkts-ability-sendablecontextmanager-sendablecontext-t.md) | Yes |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| common.UIAbilityContext | [UIAbilityContext]{ |
+| [common.UIAbilityContext](arkts-ability-common-uiabilitycontext-t.md) | [UIAbilityContext]{ |
 
 **Error codes:**
 

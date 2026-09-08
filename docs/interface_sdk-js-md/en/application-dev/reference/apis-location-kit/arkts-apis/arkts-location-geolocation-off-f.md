@@ -29,7 +29,7 @@ Unsubscribe location changed
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'locationChange' | Yes | Indicates the location service event to be subscribed to. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Location&gt; | No | Indicates the callback for reporting the location result. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Location](arkts-location-geolocation-location-i.md)&gt; | No | Indicates the callback for reporting the location result. |
 
 **Examples**
 
@@ -104,7 +104,7 @@ Unsubscribe to cache GNSS locations update messages
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'cachedGnssLocationsReporting' | Yes | Indicates the location service event to be subscribed to. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;Location&gt;&gt; | No | Indicates the callback for reporting the cached gnss locations. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[Location](arkts-location-geolocation-location-i.md)&gt;&gt; | No | Indicates the callback for reporting the cached gnss locations. |
 
 **Examples**
 
@@ -142,7 +142,7 @@ Unsubscribe gnss status changed
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'gnssStatusChange' | Yes | Indicates the location service event to be subscribed to. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;SatelliteStatusInfo&gt; | No | Indicates the callback for reporting the gnss status change. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SatelliteStatusInfo](arkts-location-geolocation-satellitestatusinfo-i.md)&gt; | No | Indicates the callback for reporting the gnss status change. |
 
 **Examples**
 
@@ -216,7 +216,7 @@ Remove a geofence and unsubscribe geo fence status changed
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'fenceStatusChange' | Yes | Indicates the location service event to be subscribed to. |
-| request | GeofenceRequest | Yes | Indicates the Geo-fence configuration parameters. |
+| request | [GeofenceRequest](arkts-location-geolocation-geofencerequest-i.md) | Yes | Indicates the Geo-fence configuration parameters. |
 | want | [WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-depr-t.md) | Yes | Indicates which ability to start when the geofence event is triggered. |
 
 **Examples**

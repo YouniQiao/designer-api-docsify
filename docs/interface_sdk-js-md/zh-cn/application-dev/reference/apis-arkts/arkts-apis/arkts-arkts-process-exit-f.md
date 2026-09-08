@@ -35,8 +35,3 @@ function exit(code: number): void
 ```TypeScript
 process.exit(0);
 ```
-
-```TypeScript
-let processManager = new process.ProcessManager();
-processManager.exit(0);
-```

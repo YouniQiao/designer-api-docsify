@@ -24,7 +24,7 @@ Constructs an identity matrix.
 
 | Type | Description |
 | --- | --- |
-| Matrix4Transit | Identity matrix object. |
+| [Matrix4Transit](arkts-arkui-matrix4-matrix4transit-i.md) | Identity matrix object. |
 
 **Examples**
 

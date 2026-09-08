@@ -47,6 +47,14 @@ import { InnerFullScreenLaunchComponent, LaunchController } from '@kit.ArkUI';
 ## Examples
 
 > NOTE
+> 
+> Because the embedded atomic service runs in an independent process, its crash exceptions are not directly exposed in the host's logs. During local debugging, you can view the actual error stack as follows:
+> 
+> Open the HiLog panel in DevEco Studio.
+> 
+> Switch the mode in the upper left corner to User logs of selected app.
+> 
+> In the process list on the right, select the launched atomic service process (the bundle name of the launched atomic service, with the suffix "embeddable").
 
 ```TypeScript
 import { InnerFullScreenLaunchComponent, LaunchController } from '@kit.ArkUI';

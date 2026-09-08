@@ -26,13 +26,13 @@ Converts a SendableContext object to a Context object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sendableContext | SendableContext | Yes |  |
+| sendableContext | [SendableContext](arkts-ability-sendablecontextmanager-sendablecontext-t.md) | Yes |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| common.Context | [Context]{ |
+| [common.Context](arkts-ability-common-context-t.md) | [Context]{ |
 
 **Error codes:**
 

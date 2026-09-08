@@ -74,7 +74,7 @@ descriptors: Array<BLEDescriptor>
 
 特征值包含的描述符列表。
 
-**类型：** Array&lt;BLEDescriptor&gt;
+**类型：** Array&lt;[BLEDescriptor](arkts-connectivity-ble-bledescriptor-i.md)&gt;
 
 **起始版本：** 10
 

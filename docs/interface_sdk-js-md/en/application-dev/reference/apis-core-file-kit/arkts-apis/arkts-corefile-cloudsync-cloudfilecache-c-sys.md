@@ -91,12 +91,6 @@ A constructor used to create a CloudFileCache object.
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
 
-**Examples**
-
-```TypeScript
-let fileSync = new cloudSync.FileSync("com.ohos.demo")
-```
-
 ## getDownloadList
 
 ```TypeScript
@@ -125,7 +119,7 @@ Query the download state of the cloud file list.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;DownloadProgress&gt;&gt; | Return Promise. |
+| Promise&lt;Array&lt;[DownloadProgress](arkts-corefile-cloudsync-downloadprogress-i.md)&gt;&gt; | Return Promise. |
 
 **Error codes:**
 

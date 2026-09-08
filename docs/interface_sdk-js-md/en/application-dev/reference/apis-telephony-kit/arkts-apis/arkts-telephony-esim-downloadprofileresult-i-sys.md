@@ -38,7 +38,7 @@ responseResult: ResultCode
 
 Operation result code.
 
-**Type:** ResultCode
+**Type:** [ResultCode](arkts-telephony-esim-resultcode-e-sys.md)
 
 **Since:** 18
 

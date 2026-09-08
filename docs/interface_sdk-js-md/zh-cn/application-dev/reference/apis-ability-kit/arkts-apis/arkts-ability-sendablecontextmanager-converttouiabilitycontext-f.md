@@ -26,13 +26,13 @@ function convertToUIAbilityContext(sendableContext: SendableContext): common.UIA
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| sendableContext | SendableContext | 是 |  |
+| sendableContext | [SendableContext](arkts-ability-sendablecontextmanager-sendablecontext-t.md) | 是 |  |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| common.UIAbilityContext | [UIAbilityContext]{ |
+| [common.UIAbilityContext](arkts-ability-common-uiabilitycontext-t.md) | [UIAbilityContext]{ |
 
 **错误码：**
 

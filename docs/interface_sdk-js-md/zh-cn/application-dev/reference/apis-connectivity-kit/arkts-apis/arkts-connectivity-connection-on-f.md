@@ -137,7 +137,7 @@ function on(type: 'bondStateChange', callback: Callback<BondStateParam>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'bondStateChange' | 是 | 事件回调类型，支持的事件为'bondStateChange'，表示蓝牙配对状态变化事件。当调用[connection.pairDevice](arkts-connectivity-connection-pairdevice-f.md)发起主动配对，或者本机设备收到其他设备的配对请求时，触发该事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;BondStateParam&gt; | 是 | 指定订阅的回调函数，会携带配对状态结果。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[BondStateParam](arkts-connectivity-connection-bondstateparam-i.md)&gt; | 是 | 指定订阅的回调函数，会携带配对状态结果。 |
 
 **错误码：**
 
@@ -187,7 +187,7 @@ function on(type: 'pinRequired', callback: Callback<PinRequiredParam>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'pinRequired' | 是 | 事件回调类型，支持的事件为'pinRequired'，表示配对请求事件。当调用[connection.pairDevice](arkts-connectivity-connection-pairdevice-f.md)发起主动配对，或者本机设备收到其他设备的配对请求时，触发该事件。收到配对请求后，可调用[connection.setDevicePairingConfirmation](arkts-connectivity-connection-setdevicepairingconfirmation-f.md)确认或拒绝配对请求。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;PinRequiredParam&gt; | 是 | 指定订阅的回调函数，会携带配对请求。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PinRequiredParam](arkts-connectivity-connection-pinrequiredparam-i.md)&gt; | 是 | 指定订阅的回调函数，会携带配对请求。 |
 
 **错误码：**
 
@@ -234,7 +234,7 @@ function on(type: 'batteryChange', callback: Callback<BatteryInfo>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'batteryChange' | 是 | 事件回调类型，支持的事件为'batteryChange'，表示对端设备的电量信息变化事件。当该设备通知电量变化时，会触发该事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;BatteryInfo&gt; | 是 | 指定订阅的回调函数，返回电量信息。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[BatteryInfo](arkts-connectivity-connection-batteryinfo-i.md)&gt; | 是 | 指定订阅的回调函数，返回电量信息。 |
 
 **错误码：**
 

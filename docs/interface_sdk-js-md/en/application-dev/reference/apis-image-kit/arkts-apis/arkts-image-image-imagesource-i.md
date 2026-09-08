@@ -45,29 +45,6 @@ Obtains raw data from an image.
 | [7700101](../errorcode-image.md#7700101-abnormal-image-source) | Bad source. |
 | [7700102](../errorcode-image.md#7700102-unsupported-mime-type) | Unsupported MIME type. |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function createImageRawData(imageSourceObj: image.ImageSource) {
-  await imageSourceObj.createImageRawData().then((data: image.ImageRawData) => {
-    console.info(`createImageRawData successfully. length: ${data.buffer.byteLength}, bitPerPixel:${data.bitsPerPixel}`);
-    if (data.bitsPerPixel == 16) {
-      let array: Uint16Array = new Uint16Array();
-      let value: string = "";
-      array = new Uint16Array(data.buffer);
-      for (let i = 0; i < array.length && i < 10; i++) {
-        value += array[i] + ', ';
-      }
-      console.info(`get dng rawdata is:${value}.`);
-    }
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to create image rawData. error.code is ${error.code}, error.message is ${error.message}`);
-  });
-}
-```
-
 ## createPicture
 
 ```TypeScript
@@ -103,22 +80,6 @@ Before releasing the instance, ensure that all asynchronous operations associate
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
 | [7700301](../errorcode-image.md#7700301-decoding-failure) | Decode failed. |
 | [7700203](../errorcode-image.md#7700203-unsupported-options) | Unsupported options. For example, unsupported desiredPixelFormat causes a failure in converting an image into the desired pixel format.<br>**Applicable version:** 24 and later |
-
-**Examples**
-
-```TypeScript
-async function CreatePicture(imageSourceObj : image.ImageSource) {
-  let options: image.DecodingOptionsForPicture = {
-    desiredAuxiliaryPictures: [image.AuxiliaryPictureType.GAINMAP] // GAINMAP indicates the type of the auxiliary picture to be decoded.
-  };
-  let pictureObj: image.Picture = await imageSourceObj.createPicture(options);
-  if (pictureObj != null) {
-    console.info('Succeeded in creating picture.');
-  } else {
-    console.error('Failed to create picture.');
-  }
-}
-```
 
 ## createPictureAtIndex
 
@@ -158,22 +119,6 @@ Before releasing the instance, ensure that all asynchronous operations associate
 | [7700203](../errorcode-image.md#7700203-unsupported-options) | Unsupported options. For example, index is invalid. |
 | [7700301](../errorcode-image.md#7700301-decoding-failure) | Decoding failed. |
 
-**Examples**
-
-```TypeScript
-async function CreatePictures(imageSourceObj : image.ImageSource) {
-  let frameCount: number = await imageSourceObj.getFrameCount();
-  for (let index = 0; index < frameCount; index++) {
-    try {
-      let pictureObj: image.Picture = await imageSourceObj.createPictureAtIndex(index);
-      console.info('Succeeded in creating picture for frame: ' + index);
-    } catch (e) {
-      console.error('Failed to create picture for frame: ' + index);
-    }
-  }
-}
-```
-
 ## createPixelMap
 
 ```TypeScript
@@ -212,21 +157,7 @@ Starting from API version 15, you are advised to use [createPixelMapUsingAllocat
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;PixelMap&gt; | Promise used to return the PixelMap object. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function CreatePixelMap(imageSourceObj : image.ImageSource) {
-  imageSourceObj.createPixelMap().then((pixelMap: image.PixelMap) => {
-    console.info('Succeeded in creating pixelMap object through image decoding parameters.');
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to create pixelMap object through image decoding parameters, error.code ${error.code}, error.message ${error.message}`);
-  })
-}
-```
+| Promise&lt;[PixelMap](arkts-image-image-pixelmap-i.md)&gt; | Promise used to return the PixelMap object. |
 
 ## createPixelMap
 
@@ -260,23 +191,7 @@ Starting from API version 15, you are advised to use [createPixelMapUsingAllocat
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;PixelMap&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is undefined and **data** is the PixelMap object obtained; otherwise, **err** is an error object. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function CreatePixelMap(imageSourceObj : image.ImageSource) {
-  imageSourceObj.createPixelMap((err: BusinessError, pixelMap: image.PixelMap) => {
-    if (err) {
-      console.error(`Failed to create pixelMap.code is ${err.code},message is ${err.message}`);
-    } else {
-      console.info('Succeeded in creating pixelMap object.');
-    }
-  })
-}
-```
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[PixelMap](arkts-image-image-pixelmap-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is undefined and **data** is the PixelMap object obtained; otherwise, **err** is an error object. |
 
 ## createPixelMap
 
@@ -311,34 +226,7 @@ Starting from API version 15, you are advised to use [createPixelMapUsingAllocat
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | options | [DecodingOptions](arkts-image-image-decodingoptions-i.md) | Yes | Decoding options. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;PixelMap&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is undefined and **data** is the PixelMap object obtained; otherwise, **err** is an error object. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function CreatePixelMap(imageSourceObj : image.ImageSource) {
-  let decodingOptions: image.DecodingOptions = {
-    sampleSize: 1,
-    editable: true,
-    desiredSize: { width: 1, height: 2 },
-    rotate: 10,
-    desiredPixelFormat: image.PixelMapFormat.RGBA_8888,
-    desiredRegion: { size: { width: 1, height: 2 }, x: 0, y: 0 },
-    // If both desiredSize and desiredRegion are passed to the decoding API, you must also include cropAndScaleStrategy to determine whether to crop or scale first. CROP_FIRST is recommended.
-    cropAndScaleStrategy: image.CropAndScaleStrategy.CROP_FIRST,
-    index: 0
-  };
-  imageSourceObj.createPixelMap(decodingOptions, (err: BusinessError, pixelMap: image.PixelMap) => {
-    if (err) {
-      console.error(`Failed to create pixelMap.code is ${err.code},message is ${err.message}`);
-    } else {
-      console.info('Succeeded in creating pixelMap object.');
-    }
-  })
-}
-```
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[PixelMap](arkts-image-image-pixelmap-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is undefined and **data** is the PixelMap object obtained; otherwise, **err** is an error object. |
 
 ## createPixelMapList
 
@@ -379,7 +267,7 @@ For dynamic images such as GIF and WebP images, this API returns the data of eac
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;PixelMap&gt;&gt; | Promise used to return an array of PixelMap objects. |
+| Promise&lt;Array&lt;[PixelMap](arkts-image-image-pixelmap-i.md)&gt;&gt; | Promise used to return an array of PixelMap objects. |
 
 **Error codes:**
 
@@ -398,28 +286,6 @@ For dynamic images such as GIF and WebP images, this API returns the data of eac
 | [62980137](../errorcode-image.md#62980137-invalid-image-operation) | Invalid media operation. |
 | [62980173](../errorcode-image.md#62980173-dma-memory-space-error) | The DMA memory does not exist. |
 | [62980174](../errorcode-image.md#62980174-abnormal-dma-memory-data) | The DMA memory data is abnormal. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function CreatePixelMapList(imageSourceObj : image.ImageSource) {
-  let decodeOpts: image.DecodingOptions = {
-    sampleSize: 1,
-    editable: true,
-    desiredSize: { width: 198, height: 202 },
-    rotate: 0,
-    desiredPixelFormat: image.PixelMapFormat.RGBA_8888,
-    index: 0,
-  };
-  imageSourceObj.createPixelMapList(decodeOpts).then((pixelMapList: Array<image.PixelMap>) => {
-    console.info('Succeeded in creating pixelMapList object.');
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to create pixelMapList object, error code is ${err}`);
-  })
-}
-```
 
 ## createPixelMapList
 
@@ -454,7 +320,7 @@ For dynamic images such as GIF and WebP images, this API returns the data of eac
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;PixelMap&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is undefined and **data** is the array of PixelMap objects obtained; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[PixelMap](arkts-image-image-pixelmap-i.md)&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is undefined and **data** is the array of PixelMap objects obtained; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -473,22 +339,6 @@ For dynamic images such as GIF and WebP images, this API returns the data of eac
 | [62980137](../errorcode-image.md#62980137-invalid-image-operation) | Invalid media operation. |
 | [62980173](../errorcode-image.md#62980173-dma-memory-space-error) | The DMA memory does not exist. |
 | [62980174](../errorcode-image.md#62980174-abnormal-dma-memory-data) | The DMA memory data is abnormal. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function CreatePixelMapList(imageSourceObj : image.ImageSource) {
-  imageSourceObj.createPixelMapList((err: BusinessError, pixelMapList: Array<image.PixelMap>) => {
-    if (err) {
-      console.error(`Failed to create pixelMapList object, error code is ${err}`);
-    } else {
-      console.info('Succeeded in creating pixelMapList object.');
-    }
-  })
-}
-```
 
 ## createPixelMapList
 
@@ -524,7 +374,7 @@ For dynamic images such as GIF and WebP images, this API returns the data of eac
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | options | [DecodingOptions](arkts-image-image-decodingoptions-i.md) | Yes | Decoding options. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;PixelMap&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is undefined and **data** is the array of PixelMap objects obtained; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[PixelMap](arkts-image-image-pixelmap-i.md)&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is undefined and **data** is the array of PixelMap objects obtained; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -543,30 +393,6 @@ For dynamic images such as GIF and WebP images, this API returns the data of eac
 | [62980137](../errorcode-image.md#62980137-invalid-image-operation) | Invalid media operation. |
 | [62980173](../errorcode-image.md#62980173-dma-memory-space-error) | The DMA memory does not exist. |
 | [62980174](../errorcode-image.md#62980174-abnormal-dma-memory-data) | The DMA memory data is abnormal. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function CreatePixelMapList(imageSourceObj : image.ImageSource) {
-  let decodeOpts: image.DecodingOptions = {
-    sampleSize: 1,
-    editable: true,
-    desiredSize: { width: 198, height: 202 },
-    rotate: 0,
-    desiredPixelFormat: image.PixelMapFormat.RGBA_8888,
-    index: 0,
-  };
-  imageSourceObj.createPixelMapList(decodeOpts, (err: BusinessError, pixelMapList: Array<image.PixelMap>) => {
-    if (err) {
-      console.error(`Failed to create pixelMapList object, error code is ${err}`);
-    } else {
-      console.info('Succeeded in creating pixelMapList object.');
-    }
-  })
-}
-```
 
 ## createPixelMapSync
 
@@ -603,34 +429,7 @@ Starting from API version 15, you are advised to use [createPixelMapUsingAllocat
 
 | Type | Description |
 | --- | --- |
-| PixelMap | PixelMap object. |
-
-**Examples**
-
-```TypeScript
-function CreatePixelMapSync(context : Context) {
-  // "test.jpg" is only an example. Replace it with the actual one in use. Otherwise, the imageSource instance fails to be created, and subsequent operations cannot be performed.
-  let filePath: string = context.filesDir + "/test.jpg";
-  let imageSource = image.createImageSource(filePath);
-  let decodingOptions: image.DecodingOptions = {
-    sampleSize: 1,
-    editable: true,
-    desiredSize: { width: 1, height: 2 },
-    rotate: 10,
-    desiredPixelFormat: image.PixelMapFormat.RGBA_8888,
-    desiredRegion: { size: { width: 1, height: 2 }, x: 0, y: 0 },
-    // If both desiredSize and desiredRegion are passed to the decoding API, you must also include cropAndScaleStrategy to determine whether to crop or scale first. CROP_FIRST is recommended.
-    cropAndScaleStrategy: image.CropAndScaleStrategy.CROP_FIRST,
-    index: 0
-  };
-  let pixelmap = imageSource.createPixelMapSync(decodingOptions);
-  if (pixelmap != undefined) {
-    console.info('Succeeded in creating pixelMap object.');
-  } else {
-    console.error('Failed to create pixelMap.');
-  }
-}
-```
+| [PixelMap](arkts-image-image-pixelmap-i.md) | PixelMap object. |
 
 ## createPixelMapUsingAllocator
 
@@ -665,7 +464,7 @@ Creates a PixelMap object based on decoding options and memory type. This API us
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;PixelMap&gt; | Promise used to return the PixelMap object. |
+| Promise&lt;[PixelMap](arkts-image-image-pixelmap-i.md)&gt; | Promise used to return the PixelMap object. |
 
 **Error codes:**
 
@@ -679,32 +478,6 @@ Creates a PixelMap object based on decoding options and memory type. This API us
 | [7700203](../errorcode-image.md#7700203-unsupported-options) | Unsupported options, e.g, cannot convert image into desired pixel format. |
 | [7700301](../errorcode-image.md#7700301-decoding-failure) | Failed to decode image. |
 | [7700302](../errorcode-image.md#7700302-memory-allocation-failed) | Failed to allocate memory. |
-
-**Examples**
-
-```TypeScript
-async function CreatePixelMapUsingAllocator(context : Context) {
-  // "test.jpg" is only an example. Replace it with the actual one in use. Otherwise, the imageSource instance fails to be created, and subsequent operations cannot be performed.
-  let filePath: string = context.filesDir + "/test.jpg";
-  let imageSource = image.createImageSource(filePath);
-  let decodingOptions: image.DecodingOptions = {
-    editable: true,
-    desiredSize: { width: 3072, height: 4096 },
-    rotate: 10,
-    desiredPixelFormat: image.PixelMapFormat.RGBA_8888,
-    desiredRegion: { size: { width: 3072, height: 4096 }, x: 0, y: 0 },
-    // If both desiredSize and desiredRegion are passed to the decoding API, you must also include cropAndScaleStrategy to determine whether to crop or scale first. CROP_FIRST is recommended.
-    cropAndScaleStrategy: image.CropAndScaleStrategy.CROP_FIRST,
-    index: 0
-  };
-  let pixelmap = imageSource.createPixelMapUsingAllocator(decodingOptions, image.AllocatorType.AUTO);
-  if (pixelmap != undefined) {
-    console.info('Succeeded in creating pixelMap object.');
-  } else {
-    console.error('Failed to create pixelMap.');
-  }
-}
-```
 
 ## createPixelMapUsingAllocatorSync
 
@@ -740,7 +513,7 @@ Before releasing the instance, ensure that all asynchronous operations associate
 
 | Type | Description |
 | --- | --- |
-| PixelMap | PixelMap object. |
+| [PixelMap](arkts-image-image-pixelmap-i.md) | PixelMap object. |
 
 **Error codes:**
 
@@ -754,32 +527,6 @@ Before releasing the instance, ensure that all asynchronous operations associate
 | [7700203](../errorcode-image.md#7700203-unsupported-options) | Unsupported options, e.g, cannot convert image into desired pixel format. |
 | [7700301](../errorcode-image.md#7700301-decoding-failure) | Failed to decode image. |
 | [7700302](../errorcode-image.md#7700302-memory-allocation-failed) | Failed to allocate memory. |
-
-**Examples**
-
-```TypeScript
-async function CreatePixelMapUsingAllocator(context : Context) {
-  // "test.jpg" is only an example. Replace it with the actual one in use. Otherwise, the imageSource instance fails to be created, and subsequent operations cannot be performed.
-  let filePath: string = context.filesDir + "/test.jpg";
-  let imageSource = image.createImageSource(filePath);
-  let decodingOptions: image.DecodingOptions = {
-    editable: true,
-    desiredSize: { width: 3072, height: 4096 },
-    rotate: 10,
-    desiredPixelFormat: image.PixelMapFormat.RGBA_8888,
-    desiredRegion: { size: { width: 3072, height: 4096 }, x: 0, y: 0 },
-    // If both desiredSize and desiredRegion are passed to the decoding API, you must also include cropAndScaleStrategy to determine whether to crop or scale first. CROP_FIRST is recommended.
-    cropAndScaleStrategy: image.CropAndScaleStrategy.CROP_FIRST,
-    index: 0
-  };
-  let pixelmap = imageSource.createPixelMapUsingAllocatorSync(decodingOptions, image.AllocatorType.AUTO);
-  if (pixelmap != undefined) {
-    console.info('Succeeded in creating pixelMap object.');
-  } else {
-    console.error('Failed to create pixelMap.');
-  }
-}
-```
 
 ## createThumbnail
 
@@ -805,7 +552,7 @@ Creates a thumbnail image based on image decoding parameters. This method uses a
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;PixelMap \| undefined&gt; | A Promise instance used to return the PixelMap object representing the thumbnail. |
+| Promise&lt;[PixelMap](arkts-image-image-pixelmap-i.md) \| undefined&gt; | A Promise instance used to return the PixelMap object representing the thumbnail. |
 
 **Error codes:**
 
@@ -817,42 +564,6 @@ Creates a thumbnail image based on image decoding parameters. This method uses a
 | [7700301](../errorcode-image.md#7700301-decoding-failure) | Decode failed. |
 | [7700303](../errorcode-image.md#7700303-image-does-not-contain-thumbnail-data) | Image does not carry thumbnail data. |
 | [7700305](../errorcode-image.md#7700305-thumbnail-generation-failed) | Thumbnail generation failed. |
-
-**Examples**
-
-```TypeScript
-async function CreateThumbnail(imageSource: image.ImageSource): Promise<image.PixelMap | undefined> {
-  try {
-    if (!imageSource) {
-      console.error('CreateThumbnail: imageSource is null or undefined');
-      return undefined;
-    }
-    const imageInfo = await imageSource.getImageInfo();
-    const supportedMimeTypes = ['image/jpeg', 'image/heif', 'image/heic'];
-    if (!supportedMimeTypes.includes(imageInfo.mimeType)) {
-      console.error(`CreateThumbnail: Unsupported MIME type: ${imageInfo.mimeType}`);
-      return undefined;
-    }
-
-    const decodingOptions: image.DecodingOptionsForThumbnail = {
-      generateThumbnailIfAbsent: true,
-      maxGeneratedPixelDimension: 200,
-    };
-
-    const pixelmap = await imageSource.createThumbnail(decodingOptions);
-    if (pixelmap) {
-      console.info('Succeeded in creating thumbnail pixelMap object.');
-      return pixelmap;
-    } else {
-      console.error('Failed to create thumbnail pixelMap.');
-      return undefined;
-    }
-  } catch (error) {
-    console.error('CreateThumbnail error:', JSON.stringify(error));
-    return undefined;
-  }
-}
-```
 
 ## createThumbnailSync
 
@@ -878,7 +589,7 @@ Synchronously creates a thumbnail image based on image decoding parameters. This
 
 | Type | Description |
 | --- | --- |
-| PixelMap \| undefined | The PixelMap object representing the generated thumbnail. |
+| [PixelMap](arkts-image-image-pixelmap-i.md) \| undefined | The PixelMap object representing the generated thumbnail. |
 
 **Error codes:**
 
@@ -890,43 +601,6 @@ Synchronously creates a thumbnail image based on image decoding parameters. This
 | [7700301](../errorcode-image.md#7700301-decoding-failure) | Decode failed. |
 | [7700303](../errorcode-image.md#7700303-image-does-not-contain-thumbnail-data) | Image does not carry thumbnail data. |
 | [7700305](../errorcode-image.md#7700305-thumbnail-generation-failed) | Thumbnail generation failed. |
-
-**Examples**
-
-```TypeScript
-async function CreateThumbnailSync(imageSource: image.ImageSource): Promise<image.PixelMap | undefined> {
-  try {
-    if (!imageSource) {
-      console.error('CreateThumbnailSync: imageSource is null or undefined');
-      return undefined;
-    }
-    const imageInfo = await imageSource.getImageInfo();
-    const supportedMimeTypes = ['image/jpeg', 'image/heif', 'image/heic'];
-    if (!supportedMimeTypes.includes(imageInfo.mimeType)) {
-      console.error(`CreateThumbnailSync: Unsupported MIME type: ${imageInfo.mimeType}`);
-      return undefined;
-    }
-
-    const decodingOptionsForThumbnail: image.DecodingOptionsForThumbnail = {
-      generateThumbnailIfAbsent: true,
-      maxGeneratedPixelDimension: 200,
-    };
-
-    const pixelmap = imageSource.createThumbnailSync(decodingOptionsForThumbnail);
-
-    if (pixelmap) {
-      console.info('Succeeded in creating thumbnail pixelMap object.');
-      return pixelmap;
-    } else {
-      console.error('Failed to create thumbnail pixelMap.');
-      return undefined;
-    }
-  } catch (error) {
-    console.error('CreateThumbnailSync error:', JSON.stringify(error));
-    return undefined;
-  }
-}
-```
 
 ## getDelayTimeList
 
@@ -959,20 +633,6 @@ Obtains an array of delay times. This API uses a promise to return the result. T
 | [62980122](../errorcode-image.md#62980122-failure-in-decoding-the-image-header) | Failed to decode the image header. |
 | [62980149](../errorcode-image.md#62980149-invalid-image-parameter) | Invalid MIME type for the image source. |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function GetDelayTimeList(imageSourceObj : image.ImageSource) {
-  imageSourceObj.getDelayTimeList().then((delayTimes: Array<number>) => {
-    console.info('Succeeded in getting delayTimes object.');
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to get delayTimes object.code is ${err.code},message is ${err.message}`);
-  })
-}
-```
-
 ## getDelayTimeList
 
 ```TypeScript
@@ -1004,22 +664,6 @@ Obtains an array of delay times. This API uses an asynchronous callback to retur
 | [62980122](../errorcode-image.md#62980122-failure-in-decoding-the-image-header) | Failed to decode the image header. |
 | [62980149](../errorcode-image.md#62980149-invalid-image-parameter) | Invalid MIME type for the image source. |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function GetDelayTimeList(imageSourceObj : image.ImageSource) {
-  imageSourceObj.getDelayTimeList((err: BusinessError, delayTimes: Array<number>) => {
-    if (err) {
-      console.error(`Failed to get delayTimes object.code is ${err.code},message is ${err.message}`);
-    } else {
-      console.info('Succeeded in getting delayTimes object.');
-    }
-  })
-}
-```
-
 ## getDisposalTypeList
 
 ```TypeScript
@@ -1046,20 +690,6 @@ Obtains the list of disposal types. This API uses a promise to return the result
 | [62980101](../errorcode-image.md#62980101-incorrect-input-image-data) | The image data is abnormal. |
 | [62980137](../errorcode-image.md#62980137-invalid-image-operation) | Invalid media operation. |
 | [62980149](../errorcode-image.md#62980149-invalid-image-parameter) | Invalid MIME type for the image source. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function GetDisposalTypeList(imageSourceObj : image.ImageSource) {
-  imageSourceObj.getDisposalTypeList().then((disposalTypes: Array<number>) => {
-    console.info('Succeeded in getting disposalTypes object.');
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to get disposalTypes object.code ${err.code},message is ${err.message}`);
-  })
-}
-```
 
 ## getFrameCount
 
@@ -1093,20 +723,6 @@ Obtains the number of frames. This API uses a promise to return the result.
 | [62980122](../errorcode-image.md#62980122-failure-in-decoding-the-image-header) | Failed to decode the image header. |
 | [62980137](../errorcode-image.md#62980137-invalid-image-operation) | Invalid media operation. |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function GetFrameCount(imageSourceObj : image.ImageSource) {
-  imageSourceObj.getFrameCount().then((frameCount: number) => {
-    console.info('Succeeded in getting frame count.');
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to get frame count.code is ${err.code},message is ${err.message}`);
-  })
-}
-```
-
 ## getFrameCount
 
 ```TypeScript
@@ -1139,22 +755,6 @@ Obtains the number of frames. This API uses an asynchronous callback to return t
 | [62980122](../errorcode-image.md#62980122-failure-in-decoding-the-image-header) | Failed to decode the image header. |
 | [62980137](../errorcode-image.md#62980137-invalid-image-operation) | Invalid media operation. |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function GetFrameCount(imageSourceObj : image.ImageSource) {
-  imageSourceObj.getFrameCount((err: BusinessError, frameCount: number) => {
-    if (err) {
-      console.error(`Failed to get frame count.code is ${err.code},message is ${err.message}`);
-    } else {
-      console.info('Succeeded in getting frame count.');
-    }
-  })
-}
-```
-
 ## getImageInfo
 
 ```TypeScript
@@ -1178,22 +778,6 @@ Obtains the image information with the specified index. This API uses an asynchr
 | index | number | Yes | Index of the image source. The default value is **0**, indicating the first image. If this parameter is set to N, the (N+1)th image is used. For single-frame images, the value is always **0**. For multi-frame images such as animations, the value ranges from 0 to (Number of frames – 1). |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ImageInfo](arkts-image-image-imageinfo-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the image information obtained; otherwise, **err** is an error object. |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function GetImageInfo(imageSourceObj : image.ImageSource) {
-  imageSourceObj.getImageInfo(0, (error: BusinessError, imageInfo: image.ImageInfo) => {
-    if (error) {
-      console.error(`Failed to obtain the image information.code is ${error.code}, message is ${error.message}`);
-    } else {
-      console.info('Succeeded in obtaining the image information.');
-    }
-  })
-}
-```
-
 ## getImageInfo
 
 ```TypeScript
@@ -1215,36 +799,6 @@ Obtains the image information. This API uses an asynchronous callback to return 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ImageInfo](arkts-image-image-imageinfo-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the image information obtained; otherwise, **err** is an error object. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function GetImageInfo(imageSourceObj : image.ImageSource) {
-  imageSourceObj.getImageInfo((err: BusinessError, imageInfo: image.ImageInfo) => {
-    if (err) {
-      console.error(`Failed to obtain the image information.code is ${err.code}, message is ${err.message}`);
-    } else {
-      console.info('Succeeded in obtaining the image information.');
-    }
-  })
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function getImageInfo(pixelMap: image.PixelMap) {
-  pixelMap.getImageInfo((err: BusinessError, imageInfo: image.ImageInfo) => {
-    if (err) {
-      console.error(`Failed to obtain information of the PixelMap. Code: ${err.code}, message: ${err.message}`);
-      return;
-    }
-    console.info(`Succeeded in obtaining information of the PixelMap with size ${imageInfo.size} and pixel format ${imageInfo.pixelFormat}.`);
-  });
-}
-```
 
 ## getImageInfo
 
@@ -1273,21 +827,6 @@ Obtains the image information. This API uses a promise to return the result.
 | Type | Description |
 | --- | --- |
 | Promise&lt;[ImageInfo](arkts-image-image-imageinfo-i.md)&gt; | Promise used to return the image information. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function GetImageInfo(imageSourceObj : image.ImageSource) {
-  imageSourceObj.getImageInfo(0)
-    .then((imageInfo: image.ImageInfo) => {
-      console.info('Succeeded in obtaining the image information.');
-    }).catch((error: BusinessError) => {
-      console.error(`Failed to obtain the image information.code is ${error.code}, message is ${error.message}`);
-    })
-}
-```
 
 ## getImageInfoSync
 
@@ -1320,24 +859,6 @@ Obtains the image information with the specified index. This API returns the res
 | --- | --- |
 | [ImageInfo](arkts-image-image-imageinfo-i.md) | Image information. |
 
-**Examples**
-
-```TypeScript
-function GetImageInfoSync(context : Context) {
-  // "test.jpg" is only an example. Replace it with the actual one in use. Otherwise, the imageSource instance fails to be created, and subsequent operations cannot be performed.
-  let filePath: string = context.filesDir + "/test.jpg";
-  let imageSource = image.createImageSource(filePath);
-  let imageInfo = imageSource.getImageInfoSync(0);
-  if (imageInfo == undefined) {
-    console.error('Failed to obtain the image information.');
-  } else {
-    console.info('Succeeded in obtaining the image information.');
-    console.info('imageInfo.size.height:' + imageInfo.size.height);
-    console.info('imageInfo.size.width:' + imageInfo.size.width);
-  }
-}
-```
-
 ## getImageProperties
 
 ```TypeScript
@@ -1356,13 +877,13 @@ This API applies only to images that are in JPEG, PNG, HEIF, WEBP&lt;sup&gt;23+&
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | Array&lt;PropertyKey&gt; | Yes | Array of properties names. |
+| key | Array&lt;[PropertyKey](arkts-image-image-propertykey-e.md)&gt; | Yes | Array of properties names. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Record&lt;PropertyKey, string \| null&gt;&gt; | Promise used to return the property values. If the operation fails, **null** is returned. |
+| Promise&lt;Record&lt;[PropertyKey](arkts-image-image-propertykey-e.md), string \| null&gt;&gt; | Promise used to return the property values. If the operation fails, **null** is returned. |
 
 **Error codes:**
 
@@ -1373,21 +894,6 @@ This API applies only to images that are in JPEG, PNG, HEIF, WEBP&lt;sup&gt;23+&
 | [62980110](../errorcode-image.md#62980110-incorrect-image-source-data) | The image source data is incorrect. |
 | [62980113](../errorcode-image.md#62980113-unknown-image-format) | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
 | [62980116](../errorcode-image.md#62980116-decoding-failure) | Failed to decode the image. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function GetImageProperties(imageSourceObj : image.ImageSource) {
-  let key = [image.PropertyKey.IMAGE_WIDTH, image.PropertyKey.IMAGE_LENGTH];
-  imageSourceObj.getImageProperties(key).then((data) => {
-    console.info(JSON.stringify(data));
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to get the properties, error.code ${err.code}, error.message ${err.message}`);
-  });
-}
-```
 
 ## getImageProperty
 
@@ -1407,7 +913,7 @@ This API applies only to images that are in JPEG, PNG, HEIF&lt;sup&gt;12+&lt;/su
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | PropertyKey | Yes | Name of the property. |
+| key | [PropertyKey](arkts-image-image-propertykey-e.md) | Yes | Name of the property. |
 | options | [ImagePropertyOptions](arkts-image-image-imagepropertyoptions-i.md) | No | Image properties, including the image index and default property value. |
 
 **Return value:**
@@ -1432,22 +938,6 @@ This API applies only to images that are in JPEG, PNG, HEIF&lt;sup&gt;12+&lt;/su
 | [62980122](../errorcode-image.md#62980122-failure-in-decoding-the-image-header) | Failed to decode the image header. |
 | [62980123](../errorcode-image.md#62980123-exif-decoding-not-supported) | The image does not support EXIF decoding. |
 | [62980135](../errorcode-image.md#62980135-invalid-image-property-value) | The EXIF value is invalid. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function GetImageProperty(imageSourceObj : image.ImageSource) {
-  let options: image.ImagePropertyOptions = { index: 0, defaultValue: '9999' }
-  imageSourceObj.getImageProperty(image.PropertyKey.BITS_PER_SAMPLE, options)
-    .then((data: string) => {
-      console.info('Succeeded in getting the value of the specified attribute key of the image.');
-    }).catch((error: BusinessError) => {
-    console.error(`Failed to get the value of the specified attribute key of the image, error.code ${error.code}, error.message ${error.message}`);
-  })
-}
-```
 
 ## getImageProperty
 
@@ -1480,21 +970,6 @@ This API applies only to images that are in JPEG, PNG, HEIF&lt;sup&gt;12+&lt;/su
 | --- | --- |
 | Promise&lt;string&gt; | Promise used to return the property value. If the operation fails, the default value is returned. |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function GetImageProperty(imageSourceObj : image.ImageSource) {
-  imageSourceObj.getImageProperty("BitsPerSample")
-    .then((data: string) => {
-      console.info('Succeeded in getting the value of the specified attribute key of the image.');
-    }).catch((error: BusinessError) => {
-    console.error(`Failed to get the value of the specified attribute key of the image, error.code ${error.code}, error.message ${error.message}`);
-  })
-}
-```
-
 ## getImageProperty
 
 ```TypeScript
@@ -1520,22 +995,6 @@ This API applies only to images that are in JPEG, PNG, HEIF&lt;sup&gt;12+&lt;/su
 | key | string | Yes | Name of the property. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the property value obtained; otherwise, **err** is an error object. |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function GetImageProperty(imageSourceObj : image.ImageSource) {
-  imageSourceObj.getImageProperty("BitsPerSample", (error: BusinessError, data: string) => {
-    if (error) {
-      console.error('Failed to get the value of the specified attribute key of the image.');
-    } else {
-      console.info('Succeeded in getting the value of the specified attribute key of the image.');
-    }
-  })
-}
-```
-
 ## getImageProperty
 
 ```TypeScript
@@ -1559,23 +1018,6 @@ Obtains the value of a property in this image. This API uses an asynchronous cal
 | key | string | Yes | Name of the property. |
 | options | [GetImagePropertyOptions](arkts-image-image-getimagepropertyoptions-i.md) | Yes | Image properties, including the image index and default property value. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the property value obtained; otherwise, **err** is an error object. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function GetImageProperty(imageSourceObj : image.ImageSource) {
-  let property: image.GetImagePropertyOptions = { index: 0, defaultValue: '9999' }
-  imageSourceObj.getImageProperty("BitsPerSample", property, (error: BusinessError, data: string) => {
-    if (error) {
-      console.error('Failed to get the value of the specified attribute key of the image.');
-    } else {
-      console.info('Succeeded in getting the value of the specified attribute key of the image.');
-    }
-  })
-}
-```
 
 ## getImagePropertySync
 
@@ -1606,7 +1048,7 @@ Obtains the value of a specified Exif property. This API returns the result sync
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | PropertyKey | Yes | Name of the property. |
+| key | [PropertyKey](arkts-image-image-propertykey-e.md) | Yes | Name of the property. |
 
 **Return value:**
 
@@ -1621,23 +1063,6 @@ Obtains the value of a specified Exif property. This API returns the result sync
 | [7700101](../errorcode-image.md#7700101-abnormal-image-source) | Bad source. e.g.,1. Image has invalid width or height. 2. Image source incomplete. 3. Read image data failed. 4. Codec create failed. |
 | [7700102](../errorcode-image.md#7700102-unsupported-mime-type) | Unsupported MIME type. |
 | [7700202](../errorcode-image.md#7700202-unsupported-metadata) | Unsupported metadata. For example, key is not supported. |
-
-**Examples**
-
-```TypeScript
-function GetImagePropertySync(context : Context) {
-  let resourceMgr = context.resourceManager;
-  if (resourceMgr == null) {
-    return;
-  }
-  let fd = resourceMgr.getRawFdSync("example.jpg");
-
-  const imageSourceObj = image.createImageSource(fd);
-  console.info("getImagePropertySync");
-  let bits_per_sample = imageSourceObj.getImagePropertySync(image.PropertyKey.BITS_PER_SAMPLE);
-  console.info("bits_per_sample : " + bits_per_sample);
-}
-```
 
 ## modifyImageProperties
 
@@ -1663,7 +1088,7 @@ This API applies only to images that are in JPEG, PNG, HEIF, or WEBP&lt;sup&gt;2
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| records | Record&lt;PropertyKey, string \| null&gt; | Yes | Array of property names and property values. |
+| records | Record&lt;[PropertyKey](arkts-image-image-propertykey-e.md), string \| null&gt; | Yes | Array of property names and property values. |
 
 **Return value:**
 
@@ -1679,29 +1104,6 @@ This API applies only to images that are in JPEG, PNG, HEIF, or WEBP&lt;sup&gt;2
 | [62980123](../errorcode-image.md#62980123-exif-decoding-not-supported) | The image does not support EXIF decoding. |
 | [62980135](../errorcode-image.md#62980135-invalid-image-property-value) | The EXIF value is invalid. |
 | [62980146](../errorcode-image.md#62980146-failed-to-write-image-property-values-to-the-file) | The EXIF data failed to be written to the file. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function ModifyImageProperties(imageSourceObj : image.ImageSource) {
-  let keyValues: Record<PropertyKey, string|null> = {
-    [image.PropertyKey.IMAGE_WIDTH] : "1024",
-    [image.PropertyKey.IMAGE_LENGTH] : "1024"
-  };
-  let checkKey = [image.PropertyKey.IMAGE_WIDTH, image.PropertyKey.IMAGE_LENGTH];
-  imageSourceObj.modifyImageProperties(keyValues).then(() => {
-    imageSourceObj.getImageProperties(checkKey).then((data) => {
-      console.info(`Image Width and Image Height:${data}`);
-    }).catch((err: BusinessError) => {
-      console.error(`Failed to modify the Image Width and Image Height, error.code ${err.code}, error.message ${err.message}`);
-    });
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to modify the Image Width and Image Height, error.code ${err.code}, error.message ${err.message}`);
-  });
-}
-```
 
 ## modifyImagePropertiesEnhanced
 
@@ -1750,30 +1152,6 @@ Modifies image properties in batches. This API uses a promise to return the resu
 | [7700202](../errorcode-image.md#7700202-unsupported-metadata) | Unsupported metadata. For example, the property key is not supported, or the property value is invalid. |
 | [7700304](../errorcode-image.md#7700304-failed-to-write-image-information-to-the-file) | Failed to write image properties to the file. |
 
-**Examples**
-
-```TypeScript
-import { image } from '@kit.ImageKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function ModifyImagePropertiesEnhanced(imageSourceObj : image.ImageSource) {
-  let keyValues: Record<string, string|null> = {
-    "ImageWidth" : "1024",
-    "ImageLength" : "1024"
-  };
-  let checkKey = [image.PropertyKey.IMAGE_WIDTH, image.PropertyKey.IMAGE_LENGTH];
-  imageSourceObj.modifyImagePropertiesEnhanced(keyValues).then(() => {
-    imageSourceObj.getImageProperties(checkKey).then((data) => {
-      console.info(`Image Width and Image Height:${data}`);
-    }).catch((err: BusinessError) => {
-      console.error(`Failed to modify the Image Width and Image Height, error.code ${err.code}, error.message ${err.message}`);
-    });
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to modify the Image Width and Image Height, error.code ${err.code}, error.message ${err.message}`);
-  });
-}
-```
-
 ## modifyImageProperty
 
 ```TypeScript
@@ -1798,7 +1176,7 @@ This API applies only to images that are in JPEG, PNG, HEIF&lt;sup&gt;12+&lt;/su
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | PropertyKey | Yes | Name of the property. |
+| key | [PropertyKey](arkts-image-image-propertykey-e.md) | Yes | Name of the property. |
 | value | string | Yes | New value of the property. |
 
 **Return value:**
@@ -1816,24 +1194,6 @@ This API applies only to images that are in JPEG, PNG, HEIF&lt;sup&gt;12+&lt;/su
 | [62980133](../errorcode-image.md#62980133-image-property-value-out-of-range) | The EXIF data is out of range. |
 | [62980135](../errorcode-image.md#62980135-invalid-image-property-value) | The EXIF value is invalid. |
 | [62980146](../errorcode-image.md#62980146-failed-to-write-image-property-values-to-the-file) | The EXIF data failed to be written to the file. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function ModifyImageProperty(imageSourceObj : image.ImageSource) {
-  imageSourceObj.modifyImageProperty(image.PropertyKey.IMAGE_WIDTH, "120").then(() => {
-    imageSourceObj.getImageProperty(image.PropertyKey.IMAGE_WIDTH).then((width: string) => {
-      console.info(`ImageWidth is :${width}`);
-    }).catch((error: BusinessError) => {
-      console.error(`Failed to get the Image Width, error.code ${error.code}, error.message ${error.message}`);
-    })
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to modify the Image Width, error.code ${error.code}, error.message ${error.message}`);
-  })
-}
-```
 
 ## modifyImageProperty
 
@@ -1872,24 +1232,6 @@ This API applies only to images that are in JPEG, PNG, HEIF&lt;sup&gt;12+&lt;/su
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function ModifyImageProperty(imageSourceObj : image.ImageSource) {
-  imageSourceObj.modifyImageProperty("ImageWidth", "120").then(() => {
-    imageSourceObj.getImageProperty("ImageWidth").then((width: string) => {
-      console.info(`ImageWidth is :${width}`);
-    }).catch((error: BusinessError) => {
-      console.error(`Failed to get the Image Width, error.code ${error.code}, error.message ${error.message}`);
-    })
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to modify the Image Width, error.code ${error.code}, error.message ${error.message}`);
-  })
-}
-```
-
 ## modifyImageProperty
 
 ```TypeScript
@@ -1921,22 +1263,6 @@ This API applies only to images that are in JPEG, PNG, HEIF&lt;sup&gt;12+&lt;/su
 | key | string | Yes | Name of the property. |
 | value | string | Yes | New value of the property. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function ModifyImageProperty(imageSourceObj : image.ImageSource) {
-  imageSourceObj.modifyImageProperty("ImageWidth", "120", (err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to modify the Image Width.code is ${err.code}, message is ${err.message}`);
-    } else {
-      console.info('Succeeded in modifying the Image Width.');
-    }
-  })
-}
-```
 
 ## readImageMetadata
 
@@ -2027,25 +1353,6 @@ This API applies only to images that are in JPEG, PNG, HEIF, WEBP, or DNG format
 | [7700202](../errorcode-image.md#7700202-unsupported-metadata) | Unsupported metadata. |
 | [7700204](../errorcode-image.md#7700204-invalid-parameter) | Invalid parameter. Possible causes: 1. The index is negative. 2. The index is greater than or equal to the number of frames in the image. |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function ReadImageMetadata(imageSourceObj : image.ImageSource) {
-  let propertyKeys = ["ImageWidth", "HwMnoteIsXmageSupported"];
-  await imageSourceObj.readImageMetadata(propertyKeys).then((metaData: image.ImageMetadata) => {
-    if (metaData != undefined && metaData.exifMetadata != undefined &&
-      metaData.makerNoteHuaweiMetadata != undefined) {
-      console.info("ImageWidth: " + metaData.exifMetadata.imageWidth +
-        " HwMnoteIsXmageSupported: " + metaData.makerNoteHuaweiMetadata.isXmageSupported);
-    }
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to read image metadata. error.code is ${error.code}, error.message is ${error.message}`);
-  })
-}
-```
-
 ## readImageMetadataByType
 
 ```TypeScript
@@ -2115,24 +1422,6 @@ This API applies only to images that are in JPEG, PNG, HEIF, WEBP, DNG, or HEIFS
 | [7700202](../errorcode-image.md#7700202-unsupported-metadata) | Unsupported metadata. |
 | [7700204](../errorcode-image.md#7700204-invalid-parameter) | Invalid parameter. Possible causes: 1.The index is negative. 2. The index is greater than or equal to the number of frames in the image. |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { image } from '@kit.ImageKit';
-
-async function ReadImageMetadataByType(imageSource : image.ImageSource, type: image.MetadataType) {
-  let types: image.MetadataType[] = [type];
-  await imageSource.readImageMetadataByType(types, 0).then((metaData: image.ImageMetadata) => {
-    if (metaData != undefined && metaData.exifMetadata != undefined) {
-      console.info("ImageWidth: " + metaData.exifMetadata.imageWidth);
-    }
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to read image metadata by type. error.code is ${error.code}, error.message is ${error.message}`);
-  })
-}
-```
-
 ## release
 
 ```TypeScript
@@ -2157,93 +1446,6 @@ Before releasing the instance, ensure that all asynchronous operations associate
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function Release(img : image.Image) {
-  img.release((err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to release the image instance.code ${err.code},message is ${err.message}`);
-    } else {
-      console.info('Succeeded in releasing the image instance.');
-    }
-  })
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function Release(creator : image.ImageCreator) {
-  creator.release((err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to release the creator.code ${err.code},message is ${err.message}`);
-    } else {
-      console.info('Succeeded in releasing creator.');
-    }
-  });
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function Release() {
-  const imagePackerObj: image.ImagePacker = image.createImagePacker();
-  imagePackerObj.release((err: BusinessError)=>{
-    if (err) {
-      console.error(`Failed to release image packaging.code ${err.code},message is ${err.message}`);
-    } else {
-      console.info('Succeeded in releasing image packaging.');
-    }
-  })
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function Release(receiver : image.ImageReceiver) {
-  receiver.release((err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to release the receiver.code ${err.code},message is ${err.message}`);
-    } else {
-      console.info('Succeeded in releasing the receiver.');
-    }
-  })
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function Release(imageSourceObj : image.ImageSource) {
-  imageSourceObj.release((err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to release the image source instance.code ${err.code},message is ${err.message}`);
-    } else {
-      console.info('Succeeded in releasing the image source instance.');
-    }
-  })
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function release(pixelMap: image.PixelMap) {
-  pixelMap.release((err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to release the PixelMap object. Code: ${err.code}, message: ${err.message}`);
-      return;
-    }
-    console.info('Succeeded in releasing the PixelMap object.');
-  });
-}
-```
-
 ## release
 
 ```TypeScript
@@ -2267,81 +1469,6 @@ Before releasing the instance, ensure that all asynchronous operations associate
 | Type | Description |
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function Release(img : image.Image) {
-  img.release().then(() => {
-    console.info('Succeeded in releasing the image instance.');
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to release the image instance.code ${error.code},message is ${error.message}`);
-  })
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function Release(creator : image.ImageCreator) {
-  creator.release().then(() => {
-    console.info('Succeeded in releasing creator.');
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to release the creator.code ${error.code},message is ${error.message}`);
-  })
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function Release() {
-  const imagePackerObj: image.ImagePacker = image.createImagePacker();
-  imagePackerObj.release().then(() => {
-    console.info('Succeeded in releasing image packaging.');
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to release image packaging.code ${error.code},message is ${error.message}`);
-  })
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function Release(receiver : image.ImageReceiver) {
-  receiver.release().then(() => {
-    console.info('Succeeded in releasing the receiver.');
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to release the receiver.code ${error.code},message is ${error.message}`);
-  })
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function Release(imageSourceObj : image.ImageSource) {
-  imageSourceObj.release().then(() => {
-    console.info('Succeeded in releasing the image source instance.');
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to release the image source instance.code ${error.code},message is ${error.message}`);
-  })
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function release(pixelMap: image.PixelMap) {
-  pixelMap.release().then(() => {
-    console.info('Succeeded in releasing the PixelMap object.');
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to release the PixelMap object. Code: ${err.code}, message: ${err.message}`);
-  });
-}
-```
 
 ## updateData
 
@@ -2370,21 +1497,6 @@ Updates incremental data. This API uses a promise to return the result.
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function UpdateDatay(imageSourceObj : image.ImageSource) {
-  const array: ArrayBuffer = new ArrayBuffer(100);
-  imageSourceObj.updateData(array, false, 0, 10).then(() => {
-    console.info('Succeeded in updating data.');
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to update data.code is ${err.code},message is ${err.message}`);
-  })
-}
-```
-
 ## updateData
 
 ```TypeScript
@@ -2412,23 +1524,6 @@ Updates incremental data. This API uses an asynchronous callback to return the r
 | offset | number | Yes | Offset of the data in the buffer, measured from the start of the entire image file, in bytes.<br>**Since:** 11 |
 | length | number | Yes | Length of the buffer, in bytes. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function UpdateDatay(imageSourceObj : image.ImageSource) {
-  const array: ArrayBuffer = new ArrayBuffer(100);
-  imageSourceObj.updateData(array, false, 0, 10, (err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to update data.code is ${err.code},message is ${err.message}`);
-    } else {
-      console.info('Succeeded in updating data.');
-    }
-  })
-}
-```
 
 ## writeImageMetadata
 
@@ -2486,25 +1581,6 @@ Modifies image properties in batches. This API uses a promise to return the resu
 | [7700102](../errorcode-image.md#7700102-unsupported-mime-type) | Unsupported MIME type. |
 | [7700202](../errorcode-image.md#7700202-unsupported-metadata) | Unsupported metadata. |
 | [7700204](../errorcode-image.md#7700204-invalid-parameter) | Invalid parameter. Possible causes: The imageSource object is released. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function WriteImageMetadata(imageSourceObj : image.ImageSource) {
-  let propertyKeys = ["ImageWidth", "HwMnoteIsXmageSupported"];
-  let metaData = await imageSourceObj.readImageMetadata(propertyKeys);
-  if (metaData != undefined && metaData.exifMetadata != undefined) {
-    metaData.exifMetadata.imageLength = 3072;
-  }
-  await imageSourceObj.writeImageMetadata(metaData).then(() => {
-    console.info(`Succeeded in writing image metadata.`);
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to write image metadata. error.code is ${error.code}, error.message is ${error.message}`);
-  });
-}
-```
 
 ## supportedFormats
 

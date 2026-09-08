@@ -94,7 +94,7 @@ dimension: FormDimension
 
 Obtains the form dimension of the template form.
 
-**Type:** FormDimension
+**Type:** [FormDimension](arkts-form-forminfo-formdimension-e.md)
 
 **Since:** 23
 

@@ -41,32 +41,6 @@ Adds a surface for delayed preview. This API can run after [commitConfig](arkts-
 | [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 13 - 23 |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function preview(cameraManager: camera.CameraManager, cameraInfo: camera.CameraDevice, previewProfile: camera.Profile, photoProfile: camera.Profile, mode: camera.SceneMode, previewSurfaceId: string): Promise<void> {
-  let cameraInput: camera.CameraInput = cameraManager.createCameraInput(cameraInfo);
-  let previewOutput: camera.PreviewOutput = cameraManager.createDeferredPreviewOutput(previewProfile);
-  let photoOutput: camera.PhotoOutput = cameraManager.createPhotoOutput(photoProfile);
-  let session: camera.Session  = cameraManager.createSession(mode);
-  session.beginConfig();
-  session.addInput(cameraInput);
-  session.addOutput(previewOutput);
-  session.addOutput(photoOutput);
-  await session.commitConfig();
-  try {
-    await session.start();
-  } catch (error) {
-    // If the operation fails, error.code is returned and processed.
-    let err = error as BusinessError;
-    console.error(`start session failed. error code: ${err.code}`);
-  }
-  previewOutput.addDeferredSurface(previewSurfaceId);
-}
-```
-
 ## enableBandwidthCompression
 
 ```TypeScript
@@ -103,22 +77,6 @@ Before enabling this feature, you can call [isBandwidthCompressionSupported](#is
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 | [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function enableBandwidthCompression(previewOutput: camera.PreviewOutput, enabled: boolean): void {
-  try {
-    previewOutput.enableBandwidthCompression(enabled);
-  } catch (error) {
-    // If the operation fails, error.code is returned and processed.
-    let err = error as BusinessError;
-    console.error(`The previewOutput.enableBandwidthCompression call failed. error code: ${err.code}`);
-  }
-}
-```
-
 ## getActiveFrameRate
 
 ```TypeScript
@@ -140,22 +98,6 @@ This API is valid only after [setFrameRate](#setframerate) is called to set a fr
 | Type | Description |
 | --- | --- |
 | [FrameRateRange](arkts-camera-camera-frameraterange-i.md) | Frame rate range. |
-
-**Examples**
-
-```TypeScript
-function getActiveFrameRate(previewOutput: camera.PreviewOutput): camera.FrameRateRange {
-  let activeFrameRate: camera.FrameRateRange = previewOutput.getActiveFrameRate();
-  return activeFrameRate;
-}
-```
-
-```TypeScript
-function getActiveFrameRate(videoOutput: camera.VideoOutput): camera.FrameRateRange {
-  let activeFrameRate: camera.FrameRateRange = videoOutput.getActiveFrameRate();
-  return activeFrameRate;
-}
-```
 
 ## getActiveProfile
 
@@ -182,40 +124,6 @@ Obtains the profile that takes effect currently.
 | Error Code ID | Error Message |
 | --- | --- |
 | [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function testGetActiveProfile(photoOutput: camera.PhotoOutput): camera.Profile | undefined {
-  let activeProfile: camera.Profile | undefined = undefined;
-  try {
-    activeProfile = photoOutput.getActiveProfile();
-  } catch (error) {
-    // If the operation fails, error.code is returned and processed.
-    let err = error as BusinessError;
-    console.error(`The photoOutput.getActiveProfile call failed. error code: ${err.code}`);
-  }
-  return activeProfile;
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function testGetActiveProfile(previewOutput: camera.PreviewOutput): camera.Profile | undefined {
-  let activeProfile: camera.Profile | undefined = undefined;
-  try {
-    activeProfile = previewOutput.getActiveProfile();
-  } catch (error) {
-    // If the operation fails, error.code is returned and processed.
-    let err = error as BusinessError;
-    console.error(`The previewOutput.getActiveProfile call failed. error code: ${err.code}`);
-  }
-  return activeProfile;
-}
-```
 
 ## getPreviewRotation
 
@@ -257,38 +165,6 @@ natural orientation. For example, the rear camera sensor of a bar-type phone is 
 | [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect.<br>**Applicable version:** 12 - 22 |
 | [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function testGetPreviewRotation(previewOutput: camera.PreviewOutput, imageRotation : camera.ImageRotation): camera.ImageRotation {
-  let previewRotation: camera.ImageRotation = camera.ImageRotation.ROTATION_0;
-  try {
-    previewRotation = previewOutput.getPreviewRotation(imageRotation);
-    console.info(`Preview rotation is: ${previewRotation}`);
-  } catch (error) {
-    // If the operation fails, error.code is returned and processed.
-    let err = error as BusinessError;
-    console.error(`The previewOutput.getPreviewRotation call failed. error code: ${err.code}`);
-  }
-  return previewRotation;
-}
-
-function testGetPreviewRotationWithOutParam(previewOutput: camera.PreviewOutput): camera.ImageRotation {
-  let previewRotation: camera.ImageRotation = camera.ImageRotation.ROTATION_0;
-  try {
-    previewRotation = previewOutput.getPreviewRotation();
-    console.info(`Preview rotation is: ${previewRotation}`);
-  } catch (error) {
-    // If the operation fails, error.code is returned and processed.
-    let err = error as BusinessError;
-    console.error(`The previewOutput.testGetPreviewRotationWithOutParam call failed. error code: ${err.code}`);
-  }
-  return previewRotation;
-}
-```
-
 ## getSupportedFrameRates
 
 ```TypeScript
@@ -309,22 +185,6 @@ Obtains the supported frame rates.
 | --- | --- |
 | Array&lt;[FrameRateRange](arkts-camera-camera-frameraterange-i.md)&gt; | Array of supported frame rates. If the API call fails, undefined is returned. |
 
-**Examples**
-
-```TypeScript
-function getSupportedFrameRates(previewOutput: camera.PreviewOutput): Array<camera.FrameRateRange> {
-  let supportedFrameRatesArray: Array<camera.FrameRateRange> = previewOutput.getSupportedFrameRates();
-  return supportedFrameRatesArray;
-}
-```
-
-```TypeScript
-function getSupportedFrameRates(videoOutput: camera.VideoOutput): Array<camera.FrameRateRange> {
-  let supportedFrameRatesArray: Array<camera.FrameRateRange> = videoOutput.getSupportedFrameRates();
-  return supportedFrameRatesArray;
-}
-```
-
 ## isBandwidthCompressionSupported
 
 ```TypeScript
@@ -344,24 +204,6 @@ Checks whether preview bandwidth compression is supported. This involves reducin
 | Type | Description |
 | --- | --- |
 | boolean | Check result for the support of preview bandwidth compression. **true** if supported, **false** otherwise. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function isBandwidthCompressionSupported(previewOutput: camera.PreviewOutput): boolean {
-  let supported: boolean = false;
-  try {
-    supported = previewOutput.isBandwidthCompressionSupported();
-  } catch (error) {
-    // If the operation fails, error.code is returned and processed.
-    let err = error as BusinessError;
-    console.error(`The previewOutput.isBandwidthCompressionSupported call failed. error code: ${err.code}`);
-  }
-  return supported;
-}
-```
 
 ## isLogViewAssistSupported
 
@@ -471,7 +313,7 @@ Subscribes to preview frame start events. This API uses an asynchronous callback
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'frameStart' | Yes | Event type. The value is fixed at **'frameStart'**. The event can be listened for when a previewOutput instance is created. This event is triggered and returned when the bottom layer starts exposure for the first time. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. The preview starts as number as this event is returned. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. The preview starts as long as this event is returned. |
 
 ## on('frameEnd')
 
@@ -496,7 +338,7 @@ Subscribes to preview frame end events. This API uses an asynchronous callback t
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'frameEnd' | Yes | Event type. The value is fixed at **'frameEnd'**. The event can be listened for when a previewOutput instance is created. This event is triggered and returned when the last frame of preview ends. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. The preview ends as number as this event is returned. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. The preview ends as long as this event is returned. |
 
 ## on('error')
 
@@ -558,20 +400,6 @@ which can be obtained by calling [getSupportedFrameRates](#getsupportedframerate
 | [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
 | [7400110](../errorcode-camera.md#7400110-configuration-conflicts) | Unresolved conflicts with current configurations. |
 
-**Examples**
-
-```TypeScript
-function setFrameRateRange(previewOutput: camera.PreviewOutput, frameRateRange: Array<number>): void {
-  previewOutput.setFrameRate(frameRateRange[0], frameRateRange[1]);
-}
-```
-
-```TypeScript
-function setFrameRateRange(videoOutput: camera.VideoOutput, frameRateRange: Array<number>): void {
-  videoOutput.setFrameRate(frameRateRange[0], frameRateRange[1]);
-}
-```
-
 ## setLogViewAssistEnable
 
 ```TypeScript
@@ -630,23 +458,6 @@ Sets the preview rotation angle.
 | [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
 | [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function testSetPreviewRotation(previewOutput: camera.PreviewOutput, previewRotation : camera.ImageRotation, isDisplayLocked: boolean): void {
-  try {
-    previewOutput.setPreviewRotation(previewRotation, isDisplayLocked);
-  } catch (error) {
-    // If the operation fails, error.code is returned and processed.
-    let err = error as BusinessError;
-    console.error(`The previewOutput.setPreviewRotation call failed. error code: ${err.code}`);
-  }
-  return;
-}
-```
-
 ## start
 
 ```TypeScript
@@ -674,78 +485,6 @@ Starts to output preview streams. This API uses an asynchronous callback to retu
 | Error Code ID | Error Message |
 | --- | --- |
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function startCaptureSession(captureSession: camera.CaptureSession): void {
-  captureSession.start((err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to start the session, error code: ${err.code}.`);
-      return;
-    }
-    console.info('Callback invoked to indicate the session start success.');
-  });
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function startMetadataOutput(metadataOutput: camera.MetadataOutput): void {
-  metadataOutput.start((err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to start metadata output, error code: ${err.code}.`);
-      return;
-    }
-    console.info('Callback returned with metadata output started.');
-  });
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function startPreviewOutput(previewOutput: camera.PreviewOutput): void {
-  previewOutput.start((err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to start the preview output, error code: ${err.code}.`);
-      return;
-    }
-    console.info('Callback returned with preview output started.');
-  });
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function startCaptureSession(session: camera.Session): void {
-  session.start((err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to start the session, error code: ${err.code}.`);
-      return;
-    }
-    console.info('Callback invoked to indicate the session start success.');
-  });
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function startVideoOutput(videoOutput: camera.VideoOutput): void {
-  videoOutput.start((err: BusinessError) => {
-    if (err.code) {
-      console.error(`Failed to start the video output, error code: ${err.code}.`);
-      return;
-    }
-    console.info('Callback invoked to indicate the video output start success.');
-  });
-}
-```
 
 ## start
 
@@ -775,80 +514,6 @@ Starts to output preview streams. This API uses a promise to return the result.
 | --- | --- |
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function startDepthDataOutput(depthDataOutput: camera.DepthDataOutput): void {
-  depthDataOutput.start().then(() => {
-    console.info('Promise returned to indicate that start method execution success.');
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to depth data output start, error code: ${error.code}.`);
-  });
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function startCaptureSession(captureSession: camera.CaptureSession): void {
-  captureSession.start().then(() => {
-    console.info('Promise returned to indicate the session start success.');
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to start the session, error code: ${err.code}.`);
-  });
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function startMetadataOutput(metadataOutput: camera.MetadataOutput): void {
-  metadataOutput.start().then(() => {
-    console.info('Callback returned with metadata output started.');
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to metadata output start, error code: ${error.code}`);
-  });
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function startPreviewOutput(previewOutput: camera.PreviewOutput): void {
-  previewOutput.start().then(() => {
-    console.info('Promise returned with preview output started.');
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to preview output start, error code: ${error.code}.`);
-  });
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function startCaptureSession(session: camera.Session): void {
-  session.start().then(() => {
-    console.info('Promise returned to indicate the session start success.');
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to start the session, error code: ${error.code}.`);
-  });
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function startVideoOutput(videoOutput: camera.VideoOutput): void {
-  videoOutput.start().then(() => {
-    console.info('Promise returned to indicate that start method execution success.');
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to video output start, error code: ${error.code}.`);
-  });
-}
-```
-
 ## stop
 
 ```TypeScript
@@ -871,72 +536,6 @@ Stops outputting preview streams. This API uses an asynchronous callback to retu
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the preview stream output stops successfully, **err** is **undefined**; otherwise, **err** is an error object. |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function stopCaptureSession(captureSession: camera.CaptureSession): void {
-  captureSession.stop((err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to stop the session, error code: ${err.code}.`);
-      return;
-    }
-    console.info('Callback invoked to indicate the session stop success.');
-  });
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function stopMetadataOutput(metadataOutput: camera.MetadataOutput): void {
-  metadataOutput.stop((err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to stop the metadata output, error code: ${err.code}.`);
-      return;
-    }
-    console.info('Callback returned with metadata output stopped.');
-  })
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function stopPreviewOutput(previewOutput: camera.PreviewOutput): void {
-  previewOutput.stop((err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to stop the preview output, error code: ${err.code}.`);
-      return;
-    }
-    console.info('Returned with preview output stopped.');
-  })
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function stopCaptureSession(session: camera.Session): void {
-  session.stop((err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to stop the session, error code: ${err.code}.`);
-      return;
-    }
-    console.info('Callback invoked to indicate the session stop success.');
-  });
-}
-```
-
-```TypeScript
-function stopVideoOutput(videoOutput: camera.VideoOutput): void {
-  videoOutput.stop(() => {
-    console.info('Callback invoked to indicate the video output stop success.');
-  });
-}
-```
-
 ## stop
 
 ```TypeScript
@@ -958,77 +557,3 @@ Stops outputting preview streams. This API uses a promise to return the result.
 | Type | Description |
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function stopDepthDataOutput(depthDataOutput: camera.DepthDataOutput): void {
-  depthDataOutput.stop().then(() => {
-    console.info('Promise returned to indicate that stop method execution success.');
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to depth data output stop, error code: ${error.code}.`);
-  });
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function stopCaptureSession(captureSession: camera.CaptureSession): void {
-  captureSession.stop().then(() => {
-    console.info('Promise returned to indicate the session stop success.');
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to stop the session, error code: ${err.code}.`);
-  });
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function stopMetadataOutput(metadataOutput: camera.MetadataOutput): void {
-  metadataOutput.stop().then(() => {
-    console.info('Callback returned with metadata output stopped.');
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to metadata output stop, error code: ${error.code}`);
-  });
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function stopPreviewOutput(previewOutput: camera.PreviewOutput): void {
-  previewOutput.stop().then(() => {
-    console.info('Callback returned with preview output stopped.');
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to preview output stop, error code: ${error.code}.`);
-  });
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function stopCaptureSession(session: camera.Session): void {
-  session.stop().then(() => {
-    console.info('Promise returned to indicate the session stop success.');
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to stop the session, error code: ${error.code}.`);
-  });
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function stopVideoOutput(videoOutput: camera.VideoOutput): void {
-  videoOutput.stop().then(() => {
-    console.info('Promise returned to indicate that stop method execution success.');
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to video output stop, error code: ${error.code}.`);
-  });
-}
-```

@@ -22,7 +22,7 @@ locations: Array<Location>
 
 表示模拟位置数组。
 
-**类型：** Array&lt;Location&gt;
+**类型：** Array&lt;[Location](arkts-location-geolocationmanager-location-i.md)&gt;
 
 **起始版本：** 9
 

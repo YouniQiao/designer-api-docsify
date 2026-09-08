@@ -25,14 +25,14 @@ Parses and processes the body of an ad response (this API is only open to some p
 | --- | --- | --- | --- |
 | adResponse | string | Yes | Ad response body. |
 | listener | [MultiSlotsAdLoadListener](arkts-ads-advertising-multislotsadloadlistener-i.md) | Yes | Callback listener for ad requests. |
-| context | common.UIAbilityContext | Yes | Context of the UIAbility. |
+| context | [common.UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-common-uiabilitycontext-t.md) | Yes | Context of the UIAbility. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid input parameter.Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [801](../errorcode-ads.md#801-ad-request-failure) | Device not supported. |
+| [401](../errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| [801](../errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
 | [21800001](../errorcode-ads.md#21800001-internal-system-error) | System internal error. |
 | [21800005](../errorcode-ads.md#21800005-ad-data-parsing-failure) | Failed to parse the ad response. |
 

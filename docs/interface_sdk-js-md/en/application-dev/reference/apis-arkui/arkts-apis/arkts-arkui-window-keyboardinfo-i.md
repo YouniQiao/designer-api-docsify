@@ -36,7 +36,7 @@ beginRect: Rect
 
 Position and size of the soft keyboard before the animation starts.
 
-**Type:** Rect
+**Type:** [Rect](arkts-arkui-window-rect-i.md)
 
 **Since:** 18
 
@@ -68,7 +68,7 @@ endRect: Rect
 
 Position and size of the soft keyboard after the animation ends.
 
-**Type:** Rect
+**Type:** [Rect](arkts-arkui-window-rect-i.md)
 
 **Since:** 18
 

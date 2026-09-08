@@ -29,30 +29,7 @@ A constructor used to create a **Base64Helper** instance.
 **Examples**
 
 ```TypeScript
-let textDecoder = new util.TextDecoder();
-let retStr = textDecoder.encoding;
-console.info('retStr = ' + retStr);
-// Output: retStr = utf-8
-```
-
-```TypeScript
-let textEncoder = new util.TextEncoder();
-```
-
-```TypeScript
-let rationalNumber = new util.RationalNumber();
-```
-
-```TypeScript
 let base64 = new util.Base64Helper();
-```
-
-```TypeScript
-let type = new util.types();
-```
-
-```TypeScript
-let base64 = new  util.Base64();
 ```
 
 ## decode
@@ -74,7 +51,7 @@ Decodes the input content into a Uint8Array object. This API uses a promise to r
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | src | Uint8Array \| string | Yes | Uint8Array object or string to decode. |
-| options | Type | No | Decoding format.The following values are available:   - **util.Type.BASIC** (default): Base64 decoding.   - **util.Type.MIME**: Base64 decoding. The input parameter **src** contains carriage return characters and newline characters.   - **util.Type.BASIC_URL_SAFE**: Base64URL decoding.  - **util.Type.MIME_URL_SAFE**: Base64 URL decoding. The input parameter **src** contains carriage return   characters and newline characters.<br>**Since:** 10 |
+| options | [Type](arkts-arkts-util-type-e.md) | No | Decoding format.The following values are available:   - **util.Type.BASIC** (default): Base64 decoding.   - **util.Type.MIME**: Base64 decoding. The input parameter **src** contains carriage return characters and newline characters.   - **util.Type.BASIC_URL_SAFE**: Base64URL decoding.  - **util.Type.MIME_URL_SAFE**: Base64 URL decoding. The input parameter **src** contains carriage return   characters and newline characters.<br>**Since:** 10 |
 
 **Return value:**
 
@@ -114,7 +91,7 @@ Decodes a string into a Uint8Array object. This API returns the result synchrono
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | src | Uint8Array \| string | Yes | Uint8Array object or string to decode. |
-| options | Type | No | Decoding format.The following values are available:   - **util.Type.BASIC** (default): Base64 decoding.   - **util.Type.MIME**: Base64 decoding. The input parameter **src** contains carriage return characters and newline characters.   - **util.Type.BASIC_URL_SAFE**: Base64URL decoding.  - **util.Type.MIME_URL_SAFE**: Base64 URL decoding. The input parameter **src** contains carriage return   characters and newline characters.<br>**Since:** 10 |
+| options | [Type](arkts-arkts-util-type-e.md) | No | Decoding format.The following values are available:   - **util.Type.BASIC** (default): Base64 decoding.   - **util.Type.MIME**: Base64 decoding. The input parameter **src** contains carriage return characters and newline characters.   - **util.Type.BASIC_URL_SAFE**: Base64URL decoding.  - **util.Type.MIME_URL_SAFE**: Base64 URL decoding. The input parameter **src** contains carriage return   characters and newline characters.<br>**Since:** 10 |
 
 **Return value:**
 
@@ -153,7 +130,7 @@ Encodes the input content into a Uint8Array object. This API uses a promise to r
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | src | Uint8Array | Yes | Uint8Array object to encode. |
-| options | Type | No | Encoding format.The following values are available:   - **util.Type.BASIC** (default): Base64 encoding.   - **util.Type.BASIC_URL_SAFE**: Base64URL encoding.<br>**Since:** 12 |
+| options | [Type](arkts-arkts-util-type-e.md) | No | Encoding format.The following values are available:   - **util.Type.BASIC** (default): Base64 encoding.   - **util.Type.BASIC_URL_SAFE**: Base64URL encoding.<br>**Since:** 12 |
 
 **Return value:**
 
@@ -191,7 +168,7 @@ Encodes the input content into a Uint8Array object.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | src | Uint8Array | Yes | Uint8Array object to encode. |
-| options | Type | No | Encoding format.The following values are available:   - **util.Type.BASIC** (default): Base64 encoding.   - **util.Type.BASIC_URL_SAFE**: Base64URL encoding.<br>**Since:** 12 |
+| options | [Type](arkts-arkts-util-type-e.md) | No | Encoding format.The following values are available:   - **util.Type.BASIC** (default): Base64 encoding.   - **util.Type.BASIC_URL_SAFE**: Base64URL encoding.<br>**Since:** 12 |
 
 **Return value:**
 
@@ -228,7 +205,7 @@ Encodes the input content into a string. This API uses a promise to return the r
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | src | Uint8Array | Yes | Uint8Array object to encode. |
-| options | Type | No | Encoding format.The following values are available:   - **util.Type.BASIC** (default): Base64 encoding. The return value does not contain carriage return characters or newline characters.   - **util.Type.MIME**: Base64 encoding. Each line of the return value contains a maximum of 76 characters and ends with '\r\n'.   - **util.Type.BASIC_URL_SAFE**: Base64URL encoding. The return value does not contain carriage return characters or newline characters.   - **util.Type.MIME_URL_SAFE**: Base64URL encoding. Each line in the return value contains a maximum of 76 characters and ends with '\r\n'.<br>**Since:** 10 |
+| options | [Type](arkts-arkts-util-type-e.md) | No | Encoding format.The following values are available:   - **util.Type.BASIC** (default): Base64 encoding. The return value does not contain carriage return characters or newline characters.   - **util.Type.MIME**: Base64 encoding. Each line of the return value contains a maximum of 76 characters and ends with '\r\n'.   - **util.Type.BASIC_URL_SAFE**: Base64URL encoding. The return value does not contain carriage return characters or newline characters.   - **util.Type.MIME_URL_SAFE**: Base64URL encoding. Each line in the return value contains a maximum of 76 characters and ends with '\r\n'.<br>**Since:** 10 |
 
 **Return value:**
 
@@ -271,7 +248,7 @@ Performs Base64 encoding on the input Uint8Array byte array and returns a string
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | src | Uint8Array | Yes | Uint8Array object to encode. |
-| options | Type | No | Encoding format.The following values are available:   - **util.Type.BASIC** (default): Base64 encoding. The return value does not contain carriage return characters or newline characters.   - **util.Type.MIME**: Base64 encoding. If the return value exceeds 76 characters, a line break is inserted every 76 characters, and each line ends with '\r\n'. If the return value is fewer than 76 characters, an exception is thrown.   - **util.Type.BASIC_URL_SAFE**: Base64URL encoding. The return value does not contain carriage return characters or newline characters.   - **util.Type.MIME_URL_SAFE**: Base64 URL encoding. Each line in the return value contains a maximum of 76 characters and ends with '\r\n'.<br>**Since:** 12 |
+| options | [Type](arkts-arkts-util-type-e.md) | No | Encoding format.The following values are available:   - **util.Type.BASIC** (default): Base64 encoding. The return value does not contain carriage return characters or newline characters.   - **util.Type.MIME**: Base64 encoding. If the return value exceeds 76 characters, a line break is inserted every 76 characters, and each line ends with '\r\n'. If the return value is fewer than 76 characters, an exception is thrown.   - **util.Type.BASIC_URL_SAFE**: Base64URL encoding. The return value does not contain carriage return characters or newline characters.   - **util.Type.MIME_URL_SAFE**: Base64 URL encoding. Each line in the return value contains a maximum of 76 characters and ends with '\r\n'.<br>**Since:** 12 |
 
 **Return value:**
 

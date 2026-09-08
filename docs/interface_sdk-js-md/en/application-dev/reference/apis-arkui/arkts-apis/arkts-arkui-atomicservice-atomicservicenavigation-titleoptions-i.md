@@ -90,7 +90,7 @@ titleIcon?: Resource | SymbolGlyphModifier
 
 Set title bar icon.
 
-**Type:** Resource \| [SymbolGlyphModifier](../arkts-components/arkts-arkui-symbolglyphmodifier-t.md)
+**Type:** [Resource](arkts-arkui-resource-t.md) \| [SymbolGlyphModifier](../arkts-components/arkts-arkui-symbolglyphmodifier-t.md)
 
 **Default:** atomicservice icon
 

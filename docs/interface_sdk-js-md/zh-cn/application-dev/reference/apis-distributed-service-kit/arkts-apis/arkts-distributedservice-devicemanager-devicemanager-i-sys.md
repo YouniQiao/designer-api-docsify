@@ -44,8 +44,8 @@ authenticateDevice(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| deviceInfo | DeviceInfo | 是 | 设备信息。 |
-| authParam | AuthParam | 是 | 认证参数。 |
+| deviceInfo | [DeviceInfo](arkts-distributedservice-devicemanager-deviceinfo-i-sys.md) | 是 | 设备信息。 |
+| authParam | [AuthParam](arkts-distributedservice-devicemanager-authparam-i-sys.md) | 是 | 认证参数。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;{ deviceId: string, pinToken?: number }&gt; | 是 |  |
 
 **错误码：**
@@ -217,7 +217,7 @@ getDeviceInfo(networkId: string, callback: AsyncCallback<DeviceInfo>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | networkId | string | 是 | 设备的网络标识。长度范围1~255字符。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DeviceInfo&gt; | 是 | 获取指定设备信息。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[DeviceInfo](arkts-distributedservice-devicemanager-deviceinfo-i-sys.md)&gt; | 是 | 获取指定设备信息。 |
 
 **错误码：**
 
@@ -280,7 +280,7 @@ getDeviceInfo(networkId: string): Promise<DeviceInfo>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;DeviceInfo&gt; | Promise实例，用于获取异步返回结果。 |
+| Promise&lt;[DeviceInfo](arkts-distributedservice-devicemanager-deviceinfo-i-sys.md)&gt; | Promise实例，用于获取异步返回结果。 |
 
 **错误码：**
 
@@ -330,7 +330,7 @@ getLocalDeviceInfo(callback: AsyncCallback<DeviceInfo>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DeviceInfo&gt; | 是 | 获取本地设备信息。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[DeviceInfo](arkts-distributedservice-devicemanager-deviceinfo-i-sys.md)&gt; | 是 | 获取本地设备信息。 |
 
 **错误码：**
 
@@ -386,7 +386,7 @@ getLocalDeviceInfo(): Promise<DeviceInfo>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;DeviceInfo&gt; | Promise实例，用于获取异步返回结果。 |
+| Promise&lt;[DeviceInfo](arkts-distributedservice-devicemanager-deviceinfo-i-sys.md)&gt; | Promise实例，用于获取异步返回结果。 |
 
 **错误码：**
 
@@ -433,7 +433,7 @@ getLocalDeviceInfoSync(): DeviceInfo
 
 | 类型 | 说明 |
 | --- | --- |
-| DeviceInfo | 返回本地设备列表。 |
+| [DeviceInfo](arkts-distributedservice-devicemanager-deviceinfo-i-sys.md) | 返回本地设备列表。 |
 
 **错误码：**
 
@@ -483,7 +483,7 @@ getTrustedDeviceList(callback: AsyncCallback<Array<DeviceInfo>>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;DeviceInfo&gt;&gt; | 是 | 获取所有可信设备列表的回调，返回设备信息。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[DeviceInfo](arkts-distributedservice-devicemanager-deviceinfo-i-sys.md)&gt;&gt; | 是 | 获取所有可信设备列表的回调，返回设备信息。 |
 
 **错误码：**
 
@@ -538,7 +538,7 @@ getTrustedDeviceList(): Promise<Array<DeviceInfo>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;DeviceInfo&gt;&gt; | Promise实例，用于获取异步返回结果。 |
+| Promise&lt;Array&lt;[DeviceInfo](arkts-distributedservice-devicemanager-deviceinfo-i-sys.md)&gt;&gt; | Promise实例，用于获取异步返回结果。 |
 
 **错误码：**
 
@@ -585,7 +585,7 @@ getTrustedDeviceListSync(): Array<DeviceInfo>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;DeviceInfo&gt; | 返回可信设备列表。 |
+| Array&lt;[DeviceInfo](arkts-distributedservice-devicemanager-deviceinfo-i-sys.md)&gt; | 返回可信设备列表。 |
 
 **错误码：**
 
@@ -639,7 +639,7 @@ getTrustedDeviceListSync(isRefresh: boolean): Array<DeviceInfo>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;DeviceInfo&gt; | 返回可信设备列表。 |
+| Array&lt;[DeviceInfo](arkts-distributedservice-devicemanager-deviceinfo-i-sys.md)&gt; | 返回可信设备列表。 |
 
 **错误码：**
 
@@ -1818,7 +1818,7 @@ startDeviceDiscovery(subscribeInfo: SubscribeInfo): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| subscribeInfo | SubscribeInfo | 是 | 发现信息。 |
+| subscribeInfo | [SubscribeInfo](arkts-distributedservice-devicemanager-subscribeinfo-i-sys.md) | 是 | 发现信息。 |
 
 **错误码：**
 
@@ -1890,7 +1890,7 @@ startDeviceDiscovery(subscribeInfo: SubscribeInfo, filterOptions?: string): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| subscribeInfo | SubscribeInfo | 是 | 发现信息。 |
+| subscribeInfo | [SubscribeInfo](arkts-distributedservice-devicemanager-subscribeinfo-i-sys.md) | 是 | 发现信息。 |
 | filterOptions | string | 否 | 发现设备过滤信息。可选，默认为undefined，发现未上线设备。长度范围1~255字符。 |
 
 **错误码：**
@@ -2037,7 +2037,7 @@ unAuthenticateDevice(deviceInfo: DeviceInfo): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| deviceInfo | DeviceInfo | 是 | 设备信息。 |
+| deviceInfo | [DeviceInfo](arkts-distributedservice-devicemanager-deviceinfo-i-sys.md) | 是 | 设备信息。 |
 
 **错误码：**
 

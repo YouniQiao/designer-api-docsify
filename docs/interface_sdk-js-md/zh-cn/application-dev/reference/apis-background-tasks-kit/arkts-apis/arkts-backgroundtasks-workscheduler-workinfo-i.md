@@ -210,7 +210,7 @@ networkType?: NetworkType
 
 网络类型。
 
-**类型：** NetworkType
+**类型：** [NetworkType](arkts-backgroundtasks-workscheduler-networktype-e.md)
 
 **起始版本：** 9
 

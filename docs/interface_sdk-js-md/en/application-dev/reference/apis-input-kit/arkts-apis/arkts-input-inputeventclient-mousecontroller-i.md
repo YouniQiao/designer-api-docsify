@@ -131,6 +131,7 @@ Ends an axis event. This API uses a promise to return the result.
 **Examples**
 
 For details, see [beginAxis](#beginaxis).
+- simpleType:
 
 ## moveTo
 
@@ -307,6 +308,7 @@ Release a mouse button. This API uses a promise to return the result.
 **Examples**
 
 For details, see [pressButton](#pressbutton).
+- simpleType:
 
 ## updateAxis
 
@@ -348,3 +350,4 @@ Updates an axis event. This API uses a promise to return the result.
 **Examples**
 
 For details, see [beginAxis](#beginaxis).
+- simpleType:

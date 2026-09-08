@@ -52,35 +52,6 @@ createSubWindow(name: string): Promise<Window>
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: The subWindow has been created and cannot be created again. |
 | [1300005](../errorcode-window.md#1300005-windowstage异常) | This window stage is abnormal.<br>**适用版本：** 9 |
 
-**示例**
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { window } from '@kit.ArkUI';
-
-export default class EntryAbility extends UIAbility {
-  // ...
-
-  onWindowStageCreate(windowStage: window.WindowStage) {
-    console.info('onWindowStageCreate');
-    let windowClass: window.Window | undefined = undefined;
-    try {
-      let promise = windowStage.createSubWindow('mySubWindow');
-      promise.then((data) => {
-        windowClass = data;
-        console.info(`Succeeded in creating the subwindow. Data: ${JSON.stringify(data)}`);
-      }).catch((err: BusinessError) => {
-        console.error(`Failed to create the subwindow. Cause code: ${err.code}, message: ${err.message}`);
-      });
-    } catch (exception) {
-      console.error(`Failed to create the subwindow. Cause code: ${exception.code}, message: ${exception.message}`);
-    }
-  }
-};
-```
-
 ## createSubWindow
 
 ```TypeScript
@@ -113,43 +84,6 @@ createSubWindow(name: string, callback: AsyncCallback<Window>): void
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible cause: Incorrect parameter types. |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: The subWindow has been created and cannot be created again. |
 | [1300005](../errorcode-window.md#1300005-windowstage异常) | This window stage is abnormal.<br>**适用版本：** 9 |
-
-**示例**
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { window } from '@kit.ArkUI';
-
-export default class EntryAbility extends UIAbility {
-  // ...
-
-  onWindowStageCreate(windowStage: window.WindowStage) {
-    console.info('onWindowStageCreate');
-    let windowClass: window.Window | undefined = undefined;
-    try {
-      windowStage.createSubWindow('mySubWindow', (err: BusinessError, data) => {
-        const errCode: number = err.code;
-        if (errCode) {
-          console.error(`Failed to create the subwindow. Cause code: ${err.code}, message: ${err.message}`);
-          return;
-        }
-        windowClass = data;
-        console.info(`Succeeded in creating the subwindow. Data: ${JSON.stringify(data)}`);
-        if (!windowClass) {
-          console.info('Failed to create the subwindow. Cause: windowClass is null');
-        }
-        else {
-          windowClass.resize(500, 1000);
-        }
-      });
-    } catch (exception) {
-      console.error(`Failed to create the subwindow. Cause code: ${exception.code}, message: ${exception.message}`);
-    }
-  }
-};
-```
 
 ## createSubWindowWithOptions
 
@@ -193,59 +127,6 @@ createSubWindowWithOptions(name: string, options: SubWindowOptions): Promise<Win
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. The subWindow has been created and cannot be created again. |
 | [1300005](../errorcode-window.md#1300005-windowstage异常) | This window stage is abnormal. |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let options : window.SubWindowOptions = {
-    title: 'title',
-    decorEnabled: true,
-    isModal: true
-  };
-  let promise = windowClass.createSubWindowWithOptions('mySubWindow', options);
-  promise.then((data) => {
-    console.info(`Succeeded in creating the subwindow. Data: ${JSON.stringify(data)}`);
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to create the subwindow. Cause code: ${err.code}, message: ${err.message}`);
-  });
-} catch (exception) {
-  console.error(`Failed to create the subwindow. Cause code: ${exception.code}, message: ${exception.message}`);
-}
-```
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { window } from '@kit.ArkUI';
-
-export default class EntryAbility extends UIAbility {
-  // ...
-
-  onWindowStageCreate(windowStage: window.WindowStage) {
-    console.info('onWindowStageCreate');
-    let windowClass: window.Window | undefined = undefined;
-    try {
-      let options : window.SubWindowOptions = {
-        title: 'title',
-        decorEnabled: true
-      };
-      let promise = windowStage.createSubWindowWithOptions('mySubWindow', options);
-      promise.then((data) => {
-        windowClass = data;
-        console.info(`Succeeded in creating the subwindow. Data: ${JSON.stringify(data)}`);
-      }).catch((err: BusinessError) => {
-        console.error(`Failed to create the subwindow. Cause code: ${err.code}, message: ${err.message}`);
-      });
-    } catch (exception) {
-      console.error(`Failed to create the subwindow. Cause code: ${exception.code}, message: ${exception.message}`);
-    }
-  }
-};
-```
-
 ## getMainWindow
 
 ```TypeScript
@@ -276,38 +157,6 @@ getMainWindow(): Promise<Window>
 | --- | --- |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
 | [1300005](../errorcode-window.md#1300005-windowstage异常) | This window stage is abnormal. |
-
-**示例**
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { window } from '@kit.ArkUI';
-
-export default class EntryAbility extends UIAbility {
-  // ...
-
-  onWindowStageCreate(windowStage: window.WindowStage) {
-    console.info('onWindowStageCreate');
-    windowStage.loadContent('pages/Index', (err) => {
-      if (err.code) {
-        console.error(`Failed to load the content. Cause code: ${err.code}, message: ${err.message}`);
-        return;
-      }
-      console.info('Succeeded in loading the content.');
-      let windowClass: window.Window | undefined = undefined;
-      let promise = windowStage.getMainWindow();
-      promise.then((data) => {
-        windowClass = data;
-        console.info('Succeeded in obtaining the main window.');
-      }).catch((err: BusinessError) => {
-        console.error(`Failed to obtain the main window. Cause code: ${err.code}, message: ${err.message}`);
-      });
-    });
-  }
-};
-```
 
 ## getMainWindow
 
@@ -340,40 +189,6 @@ getMainWindow(callback: AsyncCallback<Window>): void
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
 | [1300005](../errorcode-window.md#1300005-windowstage异常) | This window stage is abnormal. |
 
-**示例**
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { window } from '@kit.ArkUI';
-
-export default class EntryAbility extends UIAbility {
-  // ...
-
-  onWindowStageCreate(windowStage: window.WindowStage) {
-    console.info('onWindowStageCreate');
-    windowStage.loadContent('pages/Index', (err) => {
-      if (err.code) {
-        console.error(`Failed to load the content. Cause code: ${err.code}, message: ${err.message}`);
-        return;
-      }
-      console.info('Succeeded in loading the content.');
-      let windowClass: window.Window | undefined = undefined;
-      windowStage.getMainWindow((err: BusinessError, data) => {
-        const errCode: number = err.code;
-        if (errCode) {
-          console.error(`Failed to obtain the main window. Cause code: ${errCode}, message: ${err.message}`);
-          return;
-        }
-        windowClass = data;
-        console.info(`Succeeded in obtaining the main window. Data: ${JSON.stringify(data)}`);
-      });
-    });
-  }
-};
-```
-
 ## getMainWindowSync
 
 ```TypeScript
@@ -402,34 +217,6 @@ getMainWindowSync(): Window
 | --- | --- |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
 | [1300005](../errorcode-window.md#1300005-windowstage异常) | This window stage is abnormal. |
-
-**示例**
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { window } from '@kit.ArkUI';
-
-export default class EntryAbility extends UIAbility {
-  // ...
-
-  onWindowStageCreate(windowStage: window.WindowStage) {
-    console.info('onWindowStageCreate');
-    windowStage.loadContent('pages/Index', (err) => {
-      if (err.code) {
-        console.error(`Failed to load the content. Cause code: ${err.code}, message: ${err.message}`);
-        return;
-      }
-      console.info('Succeeded in loading the content.');
-      try {
-        let windowClass = windowStage.getMainWindowSync();
-      } catch (exception) {
-        console.error(`Failed to obtain the main window. Cause code: ${exception.code}, message: ${exception.message}`);
-      }
-    });
-  }
-};
-```
 
 ## getSubWindow
 
@@ -460,31 +247,6 @@ getSubWindow(): Promise<Array<Window>>
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: The window is not created or destroyed.<br>**适用版本：** 10+ |
 | [1300005](../errorcode-window.md#1300005-windowstage异常) | This window stage is abnormal.<br>**适用版本：** 9 |
 
-**示例**
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { window } from '@kit.ArkUI';
-
-export default class EntryAbility extends UIAbility {
-  // ...
-
-  onWindowStageCreate(windowStage: window.WindowStage) {
-    console.info('onWindowStageCreate');
-    let windowClass: window.Window[] = [];
-    let promise = windowStage.getSubWindow();
-    promise.then((data) => {
-      windowClass = data;
-      console.info(`Succeeded in obtaining the subwindow. Data: ${JSON.stringify(data)}`);
-    }).catch((err: BusinessError) => {
-      console.error(`Failed to obtain the subwindow. Cause code: ${err.code}, message: ${err.message}`);
-    });
-  }
-};
-```
-
 ## getSubWindow
 
 ```TypeScript
@@ -513,33 +275,6 @@ getSubWindow(callback: AsyncCallback<Array<Window>>): void
 | --- | --- |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal.<br>**适用版本：** 10+ |
 | [1300005](../errorcode-window.md#1300005-windowstage异常) | This window stage is abnormal.<br>**适用版本：** 9 |
-
-**示例**
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { window } from '@kit.ArkUI';
-
-export default class EntryAbility extends UIAbility {
-  // ...
-
-  onWindowStageCreate(windowStage: window.WindowStage) {
-    console.info('onWindowStageCreate');
-    let windowClass: window.Window[] = [];
-    windowStage.getSubWindow((err: BusinessError, data) => {
-      const errCode: number = err.code;
-      if (errCode) {
-        console.error(`Failed to obtain the subwindow. Cause code: ${err.code}, message: ${err.message}`);
-        return;
-      }
-      windowClass = data;
-      console.info(`Succeeded in obtaining the subwindow. Data: ${JSON.stringify(data)}`);
-    });
-  }
-};
-```
 
 ## isWindowRectAutoSave
 
@@ -570,32 +305,6 @@ isWindowRectAutoSave(): Promise<boolean>
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally.<br>**适用版本：** 20+ |
-
-**示例**
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { window } from '@kit.ArkUI';
-
-export default class EntryAbility extends UIAbility {
-  // ...
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    console.info('onWindowStageCreate');
-    try {
-      let promise = windowStage.isWindowRectAutoSave();
-      promise.then((data) => {
-        console.info(`Succeeded in checking whether the window support the rect auto-save. Data: ${data}`);
-      }).catch((err: BusinessError) => {
-        console.error(`Failed to check whether the window support the rect auto-save. Cause code: ${err.code}, message: ${err.message}`);
-      });
-    } catch (exception) {
-      console.error(`Failed to check whether the window support the rect auto-save. Cause code: ${exception.code}, message: ${exception.message}`);
-    }
-  }
-}
-```
 
 ## loadContent
 
@@ -632,53 +341,6 @@ loadContent(path: string, storage: LocalStorage, callback: AsyncCallback<void>):
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Invalid path parameter. |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
 | [1300005](../errorcode-window.md#1300005-windowstage异常) | This window stage is abnormal.<br>**适用版本：** 9 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let storage: LocalStorage = new LocalStorage();
-storage.setOrCreate('storageSimpleProp', 121);
-windowClass.loadContent('pages/page2', storage, (err: BusinessError) => {
-  const errCode: number = err.code;
-  if (errCode) {
-    console.error(`Failed to load the content. Cause code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in loading the content.');
-});
-```
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { window } from '@kit.ArkUI';
-
-export default class EntryAbility extends UIAbility {
-  // ...
-
-  storage: LocalStorage = new LocalStorage();
-
-  onWindowStageCreate(windowStage: window.WindowStage) {
-    this.storage.setOrCreate('storageSimpleProp', 121);
-    console.info('onWindowStageCreate');
-    try {
-      windowStage.loadContent('pages/page2', this.storage, (err: BusinessError) => {
-        const errCode: number = err.code;
-        if (errCode) {
-          console.error(`Failed to load the content. Cause code: ${err.code}, message: ${err.message}`);
-          return;
-        }
-        console.info('Succeeded in loading the content.');
-      });
-    } catch (exception) {
-      console.error(`Failed to load the content. Cause code: ${exception.code}, message: ${exception.message}`);
-    }
-  }
-};
-```
 
 ## loadContent
 
@@ -719,36 +381,6 @@ loadContent(path: string, storage?: LocalStorage): Promise<void>
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
 | [1300005](../errorcode-window.md#1300005-windowstage异常) | This window stage is abnormal.<br>**适用版本：** 9 |
 
-**示例**
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { window } from '@kit.ArkUI';
-
-export default class EntryAbility extends UIAbility {
-  // ...
-
-  storage: LocalStorage = new LocalStorage();
-
-  onWindowStageCreate(windowStage: window.WindowStage) {
-    this.storage.setOrCreate('storageSimpleProp', 121);
-    console.info('onWindowStageCreate');
-    try {
-      let promise = windowStage.loadContent('pages/page2', this.storage);
-      promise.then(() => {
-        console.info('Succeeded in loading the content.');
-      }).catch((err: BusinessError) => {
-        console.error(`Failed to load the content. Cause code: ${err.code}, message: ${err.message}`);
-      });
-    } catch (exception) {
-      console.error(`Failed to load the content. Cause code: ${exception.code}, message: ${exception.message}`);
-    }
-  }
-};
-```
-
 ## loadContent
 
 ```TypeScript
@@ -784,48 +416,6 @@ loadContent(path: string, callback: AsyncCallback<void>): void
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
 | [1300005](../errorcode-window.md#1300005-windowstage异常) | This window stage is abnormal.<br>**适用版本：** 9 |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-windowClass.loadContent('pages/page2/page3', (err: BusinessError) => {
-  const errCode: number = err.code;
-  if (errCode) {
-    console.error(`Failed to load the content. Cause code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in loading the content.');
-});
-```
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { window } from '@kit.ArkUI';
-
-export default class EntryAbility extends UIAbility {
-  // ...
-
-  onWindowStageCreate(windowStage: window.WindowStage) {
-    console.info('onWindowStageCreate');
-    try {
-      windowStage.loadContent('pages/page2', (err: BusinessError) => {
-        const errCode: number = err.code;
-        if (errCode) {
-          console.error(`Failed to load the content. Cause code: ${err.code}, message: ${err.message}`);
-          return;
-        }
-        console.info('Succeeded in loading the content.');
-      });
-    } catch (exception) {
-      console.error(`Failed to load the content. Cause code: ${exception.code}, message: ${exception.message}`);
-    }
-  }
-};
-```
-
 ## loadContentByName
 
 ```TypeScript
@@ -856,96 +446,6 @@ Loads content by named router
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
-
-**示例**
-
-```TypeScript
-// EntryAbility.ets
-
-import { window } from '@kit.ArkUI';
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import * as Index from '../pages/Index'; // 导入命名路由页面
-
-export default class EntryAbility extends UIAbility {
-  onWindowStageCreate(windowStage: window.WindowStage) {
-    console.info('onWindowStageCreate');
-    let storage: LocalStorage = new LocalStorage();
-    let newValue: number = 121;
-    storage.setOrCreate('storageSimpleProp', newValue);
-    try {
-      let windowClass: window.Window = windowStage.getMainWindowSync();
-      if (!windowClass) {
-        console.error('Failed to get main window.');
-        return;
-      }
-      windowClass.loadContentByName(Index.entryName, storage, (err: BusinessError) => {
-        const errCode: number = err?.code;
-        if (errCode) {
-          console.error(`Failed to load the content. Cause code: ${err?.code}, message: ${err?.message}`);
-          return;
-        }
-        console.info('Succeeded in loading the content.');
-      });
-    } catch (exception) {
-      console.error(`Failed to load the content. Cause code: ${exception.code}, message: ${exception.message}`);
-    }
-  }
-}
-```
-
-```TypeScript
-// ets/pages/Index.ets
-export const entryName : string = 'Index';
-@Entry({routeName: entryName, useSharedStorage: true})
-@Component
-export struct Index {
-  @State message: string = 'Hello World'
-  @LocalStorageLink('storageSimpleProp') storageSimpleProp: number = 1;
-  build() {
-    Row() {
-      Column() {
-        Text(this.message)
-          .fontSize(50)
-          .fontWeight(FontWeight.Bold)
-      }
-      .width('100%')
-    }
-    .height('100%')
-  }
-}
-```
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import * as Index from '../pages/Index'; // 导入命名路由页面
-import { window } from '@kit.ArkUI';
-
-export default class EntryAbility extends UIAbility {
-  // ...
-
-  storage: LocalStorage = new LocalStorage();
-
-  onWindowStageCreate(windowStage: window.WindowStage) {
-    console.info('onWindowStageCreate');
-    this.storage.setOrCreate('storageSimpleProp', 121);
-    try {
-      windowStage.loadContentByName(Index.entryName, this.storage, (err: BusinessError) => {
-        const errCode: number = err.code;
-        if (errCode) {
-          console.error(`Failed to load the content. Cause code: ${err.code}, message: ${err.message}`);
-          return;
-        }
-        console.info('Succeeded in loading the content.');
-      });
-    } catch (exception) {
-      console.error(`Failed to load the content. Cause code: ${exception.code}, message: ${exception.message}`);
-    }
-  }
-};
-```
 
 ## loadContentByName
 
@@ -980,75 +480,6 @@ loadContentByName(name: string, callback: AsyncCallback<void>): void
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import * as Index from '../pages/Index'; // 导入命名路由页面
-
-try {
-  (windowClass as window.Window).loadContentByName(Index.entryName, (err: BusinessError) => {
-    const errCode: number = err.code;
-    if (errCode) {
-      console.error(`Failed to load the content. Cause code: ${err.code}, message: ${err.message}`);
-      return;
-    }
-    console.info('Succeeded in loading the content.');
-  });
-} catch (exception) {
-  console.error(`Failed to load the content. Cause code: ${exception.code}, message: ${exception.message}`);
-}
-```
-
-```TypeScript
-// ets/pages/Index.ets
-export const entryName : string = 'Index';
-@Entry({routeName: entryName})
-@Component
-export struct Index {
-  @State message: string = 'Hello World'
-  build() {
-    Row() {
-      Column() {
-        Text(this.message)
-          .fontSize(50)
-          .fontWeight(FontWeight.Bold)
-      }
-      .width('100%')
-    }
-    .height('100%')
-  }
-}
-```
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import * as Index from '../pages/Index'; // 导入命名路由页面
-import { window } from '@kit.ArkUI';
-
-export default class EntryAbility extends UIAbility {
-  // ...
-
-  onWindowStageCreate(windowStage: window.WindowStage) {
-    console.info('onWindowStageCreate');
-    try {
-      windowStage.loadContentByName(Index.entryName, (err: BusinessError) => {
-        const errCode: number = err.code;
-        if (errCode) {
-          console.error(`Failed to load the content. Cause code: ${err.code}, message: ${err.message}`);
-          return;
-        }
-        console.info('Succeeded in loading the content.');
-      });
-    } catch (exception) {
-      console.error(`Failed to load the content. Cause code: ${exception.code}, message: ${exception.message}`);
-    }
-  }
-};
-```
 
 ## loadContentByName
 
@@ -1085,77 +516,6 @@ Loads content by named router
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import * as Index from '../pages/Index'; // 导入命名路由页面
-
-let storage: LocalStorage = new LocalStorage();
-storage.setOrCreate('storageSimpleProp', 121);
-try {
-  let promise = (windowClass as window.Window).loadContentByName(Index.entryName, storage);
-  promise.then(() => {
-    console.info('Succeeded in loading the content.');
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to load the content. Cause code: ${err.code}, message: ${err.message}`);
-  });
-} catch (exception) {
-  console.error(`Failed to load the content. Cause code: ${exception.code}, message: ${exception.message}`);
-}
-```
-
-```TypeScript
-// ets/pages/Index.ets
-export const entryName : string = 'Index';
-@Entry({routeName: entryName, useSharedStorage: true})
-@Component
-export struct Index {
-  @State message: string = 'Hello World'
-  @LocalStorageLink('storageSimpleProp') storageSimpleProp: number = 1;
-  build() {
-    Row() {
-      Column() {
-        Text(this.message)
-          .fontSize(50)
-          .fontWeight(FontWeight.Bold)
-      }
-      .width('100%')
-    }
-    .height('100%')
-  }
-}
-```
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import * as Index from '../pages/Index'; // 导入命名路由页面
-import { window } from '@kit.ArkUI';
-
-export default class EntryAbility extends UIAbility {
-  // ...
-
-  storage: LocalStorage = new LocalStorage();
-
-  onWindowStageCreate(windowStage: window.WindowStage) {
-    console.info('onWindowStageCreate');
-    this.storage.setOrCreate('storageSimpleProp', 121);
-    try {
-      let promise = windowStage.loadContentByName(Index.entryName, this.storage);
-      promise.then(() => {
-        console.info('Succeeded in loading the content.');
-      }).catch((err: BusinessError) => {
-        console.error(`Failed to load the content. Cause code: ${err.code}, message: ${err.message}`);
-      });
-    } catch (exception) {
-      console.error(`Failed to load the content. Cause code: ${exception.code}, message: ${exception.message}`);
-    }
-  }
-};
-```
 
 ## off
 
@@ -1369,45 +729,6 @@ releaseUIContent(): Promise<void>
 | --- | --- |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
 
-**示例**
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { window } from '@kit.ArkUI';
-
-export default class EntryAbility extends UIAbility {
-  // ...
-
-  windowStage?: window.WindowStage;
-  onWindowStageCreate(windowStage: window.WindowStage) {
-    console.info('onWindowStageCreate');
-    this.windowStage = windowStage;
-    try {
-      let promise = windowStage.loadContent('pages/page');
-      promise.then(() => {
-        console.info('Succeeded in loading the content.');
-      }).catch((err: BusinessError) => {
-        console.error(`Failed to load the content. Cause code: ${err.code}, message: ${err.message}`);
-      });
-    } catch (exception) {
-      console.error(`Failed to load the content. Cause code: ${exception.code}, message: ${exception.message}`);
-    }
-  }
-
-  onBackground():  void {
-    try {
-      this.windowStage?.releaseUIContent().then(() => {
-        console.info('Succeeded in releasing the content.');
-      });
-    } catch (exception) {
-      console.error(`Failed to release the content. Cause code: ${exception.code}, message: ${exception.message}`);
-    }
-  }
-};
-```
-
 ## removeImageForRecent
 
 ```TypeScript
@@ -1441,32 +762,6 @@ removeImageForRecent(): Promise<void>
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. |
-
-**示例**
-
-```TypeScript
-import { UIAbility } from '@kit.AbilityKit';
-import { window } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { image } from '@kit.ImageKit';
-
-export default class EntryAbility extends UIAbility {
-  // ...
-
-  onWindowStageCreate(windowStage: window.WindowStage) {
-    try {
-      let promise = windowStage.removeImageForRecent();
-      promise.then(() => {
-        console.info(`Succeeded in removing image for recent`);
-      }).catch((err: BusinessError) => {
-        console.error(`Failed to remove image for recent. Cause code: ${err.code}, message: ${err.message}`);
-      });
-    } catch (exception) {
-      console.error(`Failed to remove image for recent. Cause code: ${exception.code}, message: ${exception.message}`);
-    }
-  }
-};
-```
 
 ## removeStartingWindow
 
@@ -1504,28 +799,6 @@ removeStartingWindow(): Promise<void>
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: 1. The window stage is not created or destroyed; 2. The main window is not created or destroyed; 3. Internal task error. |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. |
 
-**示例**
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { window } from '@kit.ArkUI';
-
-export default class EntryAbility extends UIAbility {
-  // ...
-
-  onWindowStageCreate(windowStage: window.WindowStage) {
-    console.info('onWindowStageCreate');
-    windowStage.removeStartingWindow().then(() => {
-      console.info('Succeeded in removing starting window.');
-    }).catch((err: BusinessError) => {
-        console.error(`Failed to remove starting window. Cause code: ${err.code}, message: ${err.message}`);
-    });
-  }
-};
-```
-
 ## setCustomDensity
 
 ```TypeScript
@@ -1561,27 +834,6 @@ setCustomDensity(density: number): void
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. |
 | [1300005](../errorcode-window.md#1300005-windowstage异常) | This window stage is abnormal. |
 
-**示例**
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { window } from '@kit.ArkUI';
-
-export default class EntryAbility extends UIAbility {
-  // ...
-
-  onWindowStageCreate(windowStage: window.WindowStage) {
-    console.info('onWindowStageCreate');
-    try {
-      windowStage.setCustomDensity(-1.0);
-    } catch (exception) {
-      console.error(`Failed to set custom density. Cause code: ${exception.code}, message: ${exception.message}`);
-    }
-  }
-};
-```
-
 ## setCustomDensity
 
 ```TypeScript
@@ -1614,29 +866,6 @@ setCustomDensity(density: number, applyToSubWindow?: boolean): void
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: The main window is not created or destroyed. |
 | [1300005](../errorcode-window.md#1300005-windowstage异常) | This window stage is abnormal. Possible cause: The window stage is not created or destroyed. |
-
-**示例**
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { window } from '@kit.ArkUI';
-
-export default class EntryAbility extends UIAbility {
-  // ...
-
-  onWindowStageCreate(windowStage: window.WindowStage) {
-    console.info('onWindowStageCreate');
-    try {
-      windowStage.setCustomDensity(2.0);
-      windowStage.setCustomDensity(3.0, true);
-      windowStage.setCustomDensity(-1.0, false);
-    } catch (exception) {
-      console.error(`Failed to set custom density. Cause code: ${exception.code}, message: ${exception.message}`);
-    }
-  }
-};
-```
 
 ## setDefaultDensityEnabled
 
@@ -1673,45 +902,6 @@ setDefaultDensityEnabled(enabled: boolean): void
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: The main window is not created or destroyed. |
 | [1300005](../errorcode-window.md#1300005-windowstage异常) | This window stage is abnormal. Possible cause: The window stage is not created or destroyed. |
 
-**示例**
-
-```TypeScript
-try {
-  windowClass.setDefaultDensityEnabled(true);
-  console.info(`Succeeded in setting default density enabled`);
-} catch (exception) {
-  console.error(`Failed to set default density enabled. Cause code: ${exception.code}, message: ${exception.message}`);
-}
-```
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { window } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit'
-
-export default class EntryAbility extends UIAbility {
-  // ...
-
-  onWindowStageCreate(windowStage: window.WindowStage) {
-      windowStage.loadContent("pages/page2", (err: BusinessError) => {
-        let errCode: number = err.code;
-        if (errCode) {
-          console.error(`Failed to load the content. Cause code: ${err.code}, message: ${err.message}`);
-          return;
-        }
-        console.info('Succeeded in loading the content.');
-      try {
-        windowStage.setDefaultDensityEnabled(true);
-        console.info('Succeeded in setting default density enabled.');
-      } catch (exception) {
-        console.error(`Failed to set default density enabled. Cause code: ${exception.code}, message: ${exception.message}`);
-      }
-    });
-  }
-};
-```
-
 ## setSupportedWindowModes
 
 ```TypeScript
@@ -1732,7 +922,7 @@ setSupportedWindowModes(supportedWindowModes: Array<bundleManager.SupportWindowM
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| supportedWindowModes | Array&lt;bundleManager.SupportWindowMode&gt; | 是 | 设置主窗的窗口支持模式。   - FULL_SCREEN：支持全屏模式。   - FLOATING：支持自由悬浮窗口模式。   - SPLIT：支持分屏模式。需要配合FULL_SCREEN或FLOATING一起使用，不支持仅配置SPLIT。    注：数组中SupportWindowMode字段取值不应该与该UIAbility对应的[module.json5配置文件][module.json5 file](../../../quick-start/module-configuration-file.md)中[abilities标签](../../../quick-start/module-configuration-file.md#abilities标签)的supportWindowMode字段取值或者[StartOptions](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-startoptions-startoptions-c.md)的supportWindowModes属性取值冲突。当取值冲突时，最终以该参数设置的窗口支持模式为准。 |
+| supportedWindowModes | Array&lt;[bundleManager.SupportWindowMode](../../apis-ability-kit/arkts-apis/arkts-ability-bundlemanager-supportwindowmode-e.md)&gt; | 是 | 设置主窗的窗口支持模式。   - FULL_SCREEN：支持全屏模式。   - FLOATING：支持自由悬浮窗口模式。   - SPLIT：支持分屏模式。需要配合FULL_SCREEN或FLOATING一起使用，不支持仅配置SPLIT。    注：数组中SupportWindowMode字段取值不应该与该UIAbility对应的[module.json5配置文件][module.json5 file](../../../quick-start/module-configuration-file.md)中[abilities标签](../../../quick-start/module-configuration-file.md#abilities标签)的supportWindowMode字段取值或者[StartOptions](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-startoptions-startoptions-c.md)的supportWindowModes属性取值冲突。当取值冲突时，最终以该参数设置的窗口支持模式为准。 |
 
 **返回值：**
 
@@ -1747,66 +937,6 @@ setSupportedWindowModes(supportedWindowModes: Array<bundleManager.SupportWindowM
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed. 2. Internal task error. |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. |
-
-**示例**
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility, bundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { window } from '@kit.ArkUI';
-
-export default class EntryAbility extends UIAbility {
-  // ...
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    console.info('onWindowStageCreate');
-    windowStage.getMainWindow().then((windowClass) => {
-      try {
-        let promise = windowClass.setSupportedWindowModes([
-          bundleManager.SupportWindowMode.FULL_SCREEN,
-          bundleManager.SupportWindowMode.SPLIT,
-          bundleManager.SupportWindowMode.FLOATING
-        ]);
-        promise.then(() => {
-          console.info('Succeeded in setting window support modes');
-        }).catch((err: BusinessError) => {
-          console.error(`Failed to set window support modes. Cause code: ${err.code}, message: ${err.message}`);
-        });
-      } catch (exception) {
-        console.error(`Failed to set window support modes. Cause code: ${exception.code}, message: ${exception.message}`);
-      }
-    });
-  }
-}
-```
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility, bundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { window } from '@kit.ArkUI';
-
-export default class EntryAbility extends UIAbility {
-  // ...
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    console.info('onWindowStageCreate');
-    try {
-      let promise = windowStage.setSupportedWindowModes([
-        bundleManager.SupportWindowMode.FULL_SCREEN,
-        bundleManager.SupportWindowMode.SPLIT,
-        bundleManager.SupportWindowMode.FLOATING
-      ]);
-      promise.then(() => {
-        console.info('Succeeded in setting window support modes');
-      }).catch((err: BusinessError) => {
-        console.error(`Failed to set window support modes. Cause code: ${err.code}, message: ${err.message}`);
-      });
-    } catch (exception) {
-      console.error(`Failed to set window support modes. Cause code: ${exception.code}, message: ${exception.message}`);
-    }
-  }
-}
-```
 
 ## setSupportedWindowModes
 
@@ -1826,7 +956,7 @@ setSupportedWindowModes(supportedWindowModes: Array<bundleManager.SupportWindowM
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| supportedWindowModes | Array&lt;bundleManager.SupportWindowMode&gt; | 是 | 设置主窗的窗口支持模式。   - FULL_SCREEN：支持全屏模式。   - FLOATING：支持自由悬浮窗口模式。   - SPLIT：支持分屏模式。需要配合FULL_SCREEN或FLOATING一起使用，不支持仅配置SPLIT。    注：数组中SupportWindowMode字段取值不应该与该UIAbility对应的[module.json5配置文件][module.json5 file](../../../quick-start/module-configuration-file.md)中[abilities标签](../../../quick-start/module-configuration-file.md#abilities标签)的supportWindowMode字段取值或者[StartOptions](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-startoptions-startoptions-c.md)的supportWindowModes属性取值冲突。当取值冲突时，最终以该参数设置的窗口支持模式为准。 |
+| supportedWindowModes | Array&lt;[bundleManager.SupportWindowMode](../../apis-ability-kit/arkts-apis/arkts-ability-bundlemanager-supportwindowmode-e.md)&gt; | 是 | 设置主窗的窗口支持模式。   - FULL_SCREEN：支持全屏模式。   - FLOATING：支持自由悬浮窗口模式。   - SPLIT：支持分屏模式。需要配合FULL_SCREEN或FLOATING一起使用，不支持仅配置SPLIT。    注：数组中SupportWindowMode字段取值不应该与该UIAbility对应的[module.json5配置文件][module.json5 file](../../../quick-start/module-configuration-file.md)中[abilities标签](../../../quick-start/module-configuration-file.md#abilities标签)的supportWindowMode字段取值或者[StartOptions](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-startoptions-startoptions-c.md)的supportWindowModes属性取值冲突。当取值冲突时，最终以该参数设置的窗口支持模式为准。 |
 | grayOutMaximizeButton | boolean | 是 | 是否显示并将主窗口的最大化按钮置灰true表示显示并将主窗口的最大化按钮置灰，此时最大化按钮不可用；false表示不显示主窗口的最大化按钮。此参数配置仅在supportedWindowModes不支持FULL_SCREEN时生效。 |
 
 **返回值：**
@@ -1843,36 +973,6 @@ setSupportedWindowModes(supportedWindowModes: Array<bundleManager.SupportWindowM
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed. 2. Internal task error. |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. |
 | [1300016](../errorcode-window.md#1300016-参数校验错误) | Parameter error. Possible cause: 1. Invalid parameter range. 2. Invalid parameter length. 3. Incorrect parameter format. |
-
-**示例**
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility, bundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { window } from '@kit.ArkUI';
-
-export default class EntryAbility extends UIAbility {
-  // ...
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    console.info('onWindowStageCreate');
-    try {
-      let promise = windowStage.setSupportedWindowModes([
-        bundleManager.SupportWindowMode.FULL_SCREEN,
-        bundleManager.SupportWindowMode.SPLIT,
-        bundleManager.SupportWindowMode.FLOATING
-      ], true);
-      promise.then(() => {
-        console.info('Succeeded in setting window support modes');
-      }).catch((err: BusinessError) => {
-        console.error(`Failed to set window support modes. Cause code: ${err.code}, message: ${err.message}`);
-      });
-    } catch (exception) {
-      console.error(`Failed to set window support modes. Cause code: ${exception.code}, message: ${exception.message}`);
-    }
-  }
-}
-```
 
 ## setWindowModal
 
@@ -1911,32 +1011,6 @@ Set the application modality of the windowStage.
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. |
 | [1300005](../errorcode-window.md#1300005-windowstage异常) | This window stage is abnormal. Possible cause: The window is not created or destroyed.<br>**适用版本：** 20+ |
-
-**示例**
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { window } from '@kit.ArkUI';
-
-export default class EntryAbility extends UIAbility {
-  // ...
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    console.info('onWindowStageCreate');
-    try {
-      let promise = windowStage.setWindowModal(true);
-      promise.then(() => {
-        console.info('Succeeded in setting window modal');
-      }).catch((err: BusinessError) => {
-        console.error(`Failed to set window modal. Cause code: ${err.code}, message: ${err.message}`);
-      });
-    } catch (exception) {
-      console.error(`Failed to set window modal. Cause code: ${exception.code}, message: ${exception.message}`);
-    }
-  }
-}
-```
 
 ## setWindowRectAutoSave
 
@@ -1985,32 +1059,6 @@ setWindowRectAutoSave(enabled: boolean): Promise<void>
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. |
-
-**示例**
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { window } from '@kit.ArkUI';
-
-export default class EntryAbility extends UIAbility {
-  // ...
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    console.info('onWindowStageCreate');
-    try {
-      let promise = windowStage.setWindowRectAutoSave(true);
-      promise.then(() => {
-        console.info('Succeeded in setting window rect auto-save');
-      }).catch((err: BusinessError) => {
-        console.error(`Failed to set window rect auto-save. Cause code: ${err.code}, message: ${err.message}`);
-      });
-    } catch (exception) {
-      console.error(`Failed to set window rect auto-save. Cause code: ${exception.code}, message: ${exception.message}`);
-    }
-  }
-}
-```
 
 ## setWindowRectAutoSave
 
@@ -2062,29 +1110,3 @@ setWindowRectAutoSave(enabled: boolean, isSaveBySpecifiedFlag: boolean): Promise
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Function setWindowRectAutoSave can not work correctly due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. |
-
-**示例**
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { window } from '@kit.ArkUI';
-
-export default class EntryAbility extends UIAbility {
-  // ...
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    console.info('onWindowStageCreate');
-    try {
-      let promise = windowStage.setWindowRectAutoSave(true, true);
-      promise.then(() => {
-        console.info('Succeeded in setting window rect auto-save');
-      }).catch((err: BusinessError) => {
-        console.error(`Failed to set window rect auto-save. Cause code: ${err.code}, message: ${err.message}`);
-      });
-    } catch (exception) {
-      console.error(`Failed to set window rect auto-save. Cause code: ${exception.code}, message: ${exception.message}`);
-    }
-  }
-}
-```

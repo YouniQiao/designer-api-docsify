@@ -36,7 +36,7 @@ Extension生命周期回调，会在[onCreate](../../apis-ability-kit/arkts-apis
 
 | 类型 | 说明 |
 | --- | --- |
-| rpc.RemoteObject \| Promise&lt;rpc.RemoteObject&gt; | 一个RemoteObject对象，用于客户端和服务端进行通信；或一个Promise对象，返回用于通信的RemoteObject对象。 |
+| [rpc.RemoteObject](../../apis-ipc-kit/arkts-apis/arkts-ipc-rpc-remoteobject-c.md) \| Promise&lt;[rpc.RemoteObject](../../apis-ipc-kit/arkts-apis/arkts-ipc-rpc-remoteobject-c.md)&gt; | 一个RemoteObject对象，用于客户端和服务端进行通信；或一个Promise对象，返回用于通信的RemoteObject对象。 |
 
 **示例**
 

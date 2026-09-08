@@ -26,7 +26,7 @@ Compresses multiple specified files. This API uses a promise to return the resul
 | --- | --- | --- | --- |
 | inFiles | Array&lt;string&gt; | Yes | Path of the folder or file to compress. The path must be an application sandbox path, which can be obtained from the context. For details about the context, see FA Model and Stage Model. The folder to compress cannot be empty. Otherwise, an error will be reported when [decompressFile](arkts-basicservices-zlib-decompressfile-f.md) is used to decompress the folder. |
 | outFile | string | Yes | Path of the compressed file. When multiple threads compress files at the same time, the values of **outFile** must be different. |
-| options | Options | Yes | Compression parameters. |
+| options | [Options](arkts-basicservices-zlib-options-i.md) | Yes | Compression parameters. |
 
 **Return value:**
 

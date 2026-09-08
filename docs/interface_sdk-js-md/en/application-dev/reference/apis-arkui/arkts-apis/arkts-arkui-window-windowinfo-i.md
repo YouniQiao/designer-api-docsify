@@ -64,7 +64,7 @@ globalDisplayRect?: Rect
 
 Window size in the global coordinate system. In extended screen scenarios, the top-left corner of the primary screen is used as the coordinate origin. In virtual screen scenarios, the top-left corner of the virtual screen is used as the coordinate origin. The default value is [0, 0, 0, 0].
 
-**Type:** Rect
+**Type:** [Rect](arkts-arkui-window-rect-i.md)
 
 **Since:** 20
 
@@ -78,7 +78,7 @@ globalRect?: Rect
 
 Indicates the actual display size and position of the window.
 
-**Type:** Rect
+**Type:** [Rect](arkts-arkui-window-rect-i.md)
 
 **Since:** 26.0.0
 
@@ -100,17 +100,6 @@ Whether the window gains focus. **true** if the window gains focus, **false** ot
 
 **System capability:** SystemCapability.Window.SessionManager
 
-**Examples**
-
-```TypeScript
-try {
-  let focus = windowClass.isFocused();
-  console.info(`Succeeded in checking whether the window is focused. Data: ${focus}`);
-} catch (exception) {
-  console.error(`Failed to check whether the window is focused. Cause code: ${exception.code}, message: ${exception.message}`);
-}
-```
-
 ## rect
 
 ```TypeScript
@@ -119,7 +108,7 @@ rect: Rect
 
 Window size.
 
-**Type:** Rect
+**Type:** [Rect](arkts-arkui-window-rect-i.md)
 
 **Since:** 18
 
@@ -147,7 +136,7 @@ windowStatusType: WindowStatusType
 
 Window mode.
 
-**Type:** WindowStatusType
+**Type:** [WindowStatusType](arkts-arkui-window-windowstatustype-e.md)
 
 **Since:** 18
 

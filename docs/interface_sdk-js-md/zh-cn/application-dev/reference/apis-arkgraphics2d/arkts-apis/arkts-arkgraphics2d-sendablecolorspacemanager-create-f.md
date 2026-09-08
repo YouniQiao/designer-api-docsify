@@ -22,13 +22,13 @@ function create(colorSpaceName: colorSpaceManager.ColorSpace): ColorSpaceManager
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| colorSpaceName | colorSpaceManager.ColorSpace | 是 | 标准色域类型枚举值。UNKNOWN与CUSTOM不可用于直接创建色域对象。 |
+| colorSpaceName | [colorSpaceManager.ColorSpace](arkts-arkgraphics2d-colorspacemanager-colorspace-e.md) | 是 | 标准色域类型枚举值。UNKNOWN与CUSTOM不可用于直接创建色域对象。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| ColorSpaceManager | 返回当前创建的可共享的色彩管理实例。 |
+| [ColorSpaceManager](arkts-arkgraphics2d-sendablecolorspacemanager-colorspacemanager-i.md) | 返回当前创建的可共享的色彩管理实例。 |
 
 **错误码：**
 
@@ -63,14 +63,14 @@ function create(primaries: colorSpaceManager.ColorSpacePrimaries, gamma: number)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| primaries | colorSpaceManager.ColorSpacePrimaries | 是 | 色域标准三原色。 |
+| primaries | [colorSpaceManager.ColorSpacePrimaries](arkts-arkgraphics2d-colorspacemanager-colorspaceprimaries-i.md) | 是 | 色域标准三原色。 |
 | gamma | number | 是 | 色域gamma值，取值为大于0的浮点数。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| ColorSpaceManager | 返回当前创建的可共享的色彩管理实例。 |
+| [ColorSpaceManager](arkts-arkgraphics2d-sendablecolorspacemanager-colorspacemanager-i.md) | 返回当前创建的可共享的色彩管理实例。 |
 
 **错误码：**
 

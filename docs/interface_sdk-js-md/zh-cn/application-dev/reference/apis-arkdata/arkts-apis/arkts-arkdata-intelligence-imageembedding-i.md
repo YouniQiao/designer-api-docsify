@@ -34,7 +34,7 @@ getEmbedding(image: Image): Promise<Array<number>>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| image | Image | 是 | 嵌入模型的输入图像类型的URI地址。 |
+| image | [Image](arkts-arkdata-intelligence-image-t.md) | 是 | 嵌入模型的输入图像类型的URI地址。 |
 
 **返回值：**
 
@@ -105,19 +105,6 @@ loadModel(): Promise<void>
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
-// textEmbedding需先通过intelligence.getTextEmbeddingModel获取
-textEmbedding.loadModel()
-  .then(() => {
-    console.info("Succeeded in loading Model");
-  })
-  .catch((err: BusinessError) => {
-    console.error(`Failed to load Model. Code: ${err.code}, message: ${err.message}`);
-  })
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
 // imageEmbedding需先通过intelligence.getImageEmbeddingModel获取
 imageEmbedding.loadModel()
   .then(() => {
@@ -154,19 +141,6 @@ releaseModel(): Promise<void>
 | [31300000](../errorcode-intelligence.md#31300000-服务内部异常) | Inner error. |
 
 **示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// textEmbedding需先通过intelligence.getTextEmbeddingModel获取
-textEmbedding.releaseModel()
-  .then(() => {
-    console.info("Succeeded in releasing Model");
-  })
-  .catch((err: BusinessError) => {
-    console.error(`Failed to release Model. Code: ${err.code}, message: ${err.message}`);
-  })
-```
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

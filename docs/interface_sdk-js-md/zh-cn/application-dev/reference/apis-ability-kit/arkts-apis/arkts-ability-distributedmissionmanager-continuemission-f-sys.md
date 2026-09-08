@@ -28,8 +28,8 @@ function continueMission(parameter: ContinueDeviceInfo, options: ContinueCallbac
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| parameter | ContinueDeviceInfo | 是 | 通过任务ID方式迁移时的迁移信息，包含源设备ID、目标设备ID、任务ID等。 |
-| options | ContinueCallback | 是 | 通过任务ID方式迁移任务完成时的回调函数，用于接收迁移结果。 |
+| parameter | [ContinueDeviceInfo](arkts-ability-distributedmissionmanager-continuedeviceinfo-t-sys.md) | 是 | 通过任务ID方式迁移时的迁移信息，包含源设备ID、目标设备ID、任务ID等。 |
+| options | [ContinueCallback](arkts-ability-distributedmissionmanager-continuecallback-t-sys.md) | 是 | 通过任务ID方式迁移任务完成时的回调函数，用于接收迁移结果。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，迁移任务完成时，err为undefined，否则返回错误对象。 |
 
 **错误码：**
@@ -102,8 +102,8 @@ function continueMission(parameter: ContinueDeviceInfo, options: ContinueCallbac
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| parameter | ContinueDeviceInfo | 是 | 迁移信息，包含源设备ID、目标设备ID、任务ID和自定义参数等字段。 |
-| options | ContinueCallback | 是 | 迁移任务完成回调函数。 |
+| parameter | [ContinueDeviceInfo](arkts-ability-distributedmissionmanager-continuedeviceinfo-t-sys.md) | 是 | 迁移信息，包含源设备ID、目标设备ID、任务ID和自定义参数等字段。 |
+| options | [ContinueCallback](arkts-ability-distributedmissionmanager-continuecallback-t-sys.md) | 是 | 迁移任务完成回调函数。 |
 
 **返回值：**
 
@@ -178,7 +178,7 @@ function continueMission(parameter: ContinueMissionInfo, callback: AsyncCallback
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| parameter | ContinueMissionInfo | 是 | 迁移信息，包含源设备ID、目标设备ID、应用包名和自定义参数等字段。 |
+| parameter | [ContinueMissionInfo](arkts-ability-distributedmissionmanager-continuemissioninfo-t-sys.md) | 是 | 迁移信息，包含源设备ID、目标设备ID、应用包名和自定义参数等字段。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，通过指定包名迁移任务完成时，err为undefined，否则为错误对象。 |
 
 **错误码：**
@@ -244,7 +244,7 @@ function continueMission(parameter: ContinueMissionInfo): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| parameter | ContinueMissionInfo | 是 | 迁移信息，包含源设备ID、目标设备ID、应用包名和自定义参数等字段。 |
+| parameter | [ContinueMissionInfo](arkts-ability-distributedmissionmanager-continuemissioninfo-t-sys.md) | 是 | 迁移信息，包含源设备ID、目标设备ID、应用包名和自定义参数等字段。 |
 
 **返回值：**
 

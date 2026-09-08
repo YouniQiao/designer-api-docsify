@@ -38,7 +38,7 @@ Called when an AppServiceExtensionAbility instance is connected by calling [conn
 
 | Type | Description |
 | --- | --- |
-| rpc.RemoteObject | A RemoteObject used for communication between the server and client. |
+| [rpc.RemoteObject](../../apis-ipc-kit/arkts-apis/arkts-ipc-rpc-remoteobject-c.md) | A RemoteObject used for communication between the server and client. |
 
 **Examples**
 

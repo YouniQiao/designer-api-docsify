@@ -20,7 +20,7 @@ type: ChangeType
 
 Data change type.
 
-**Type:** ChangeType
+**Type:** [ChangeType](arkts-arkdata-datashare-changetype-e.md)
 
 **Since:** 20
 

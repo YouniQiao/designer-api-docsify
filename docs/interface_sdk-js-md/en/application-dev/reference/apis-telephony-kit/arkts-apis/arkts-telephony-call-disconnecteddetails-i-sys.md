@@ -38,7 +38,7 @@ reason: DisconnectedReason
 
 Defines the call disconnection cause.
 
-**Type:** DisconnectedReason
+**Type:** [DisconnectedReason](arkts-telephony-call-disconnectedreason-e-sys.md)
 
 **Since:** 9
 

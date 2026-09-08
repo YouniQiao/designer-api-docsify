@@ -53,38 +53,6 @@ canPreconfig(preconfigType: PreconfigType, preconfigRatio?: PreconfigRatio): boo
 | --- | --- |
 | [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function testCanPreconfig(photoSession: camera.PhotoSession, preconfigType: camera.PreconfigType,
-  preconfigRatio: camera.PreconfigRatio): void {
-  try {
-    let result = photoSession.canPreconfig(preconfigType, preconfigRatio);
-    console.info(`canPreconfig ${preconfigType} ${preconfigRatio} result is : ${result}`);
-  } catch (error) {
-    let err = error as BusinessError;
-    console.error(`The canPreconfig call failed. error code: ${err.code}`);
-  }
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function testCanPreconfig(videoSession: camera.VideoSession, preconfigType: camera.PreconfigType,
-  preconfigRatio: camera.PreconfigRatio): void {
-  try {
-    let result = videoSession.canPreconfig(preconfigType, preconfigRatio);
-    console.info(`canPreconfig ${preconfigType} ${preconfigRatio} result is : ${result}`);
-  } catch (error) {
-    let err = error as BusinessError;
-    console.error(`The canPreconfig call failed. error code: ${err.code}`);
-  }
-}
-```
-
 ## off('error')
 
 ```TypeScript
@@ -260,20 +228,6 @@ offExposureInfoChange(callback?: Callback<ExposureInfo>): void
 | --- | --- | --- | --- |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ExposureInfo](arkts-camera-camera-exposureinfo-i.md)&gt; | 否 | 回调函数，如果指定参数则取消对应callback（callback对象不可是匿名函数），否则取消所有callback。 |
 
-**示例**
-
-```TypeScript
-function offExposureInfoChange(photoSession: camera.PhotoSession): void {
-  photoSession.offExposureInfoChange();
-}
-```
-
-```TypeScript
-function offExposureInfoChange(videoSession: camera.VideoSession): void {
-  videoSession.offExposureInfoChange();
-}
-```
-
 ## offIsoInfoChange
 
 ```TypeScript
@@ -295,28 +249,6 @@ offIsoInfoChange(callback?: Callback<IsoInfo>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[IsoInfo](arkts-camera-camera-isoinfo-i.md)&gt; | 否 | 回调函数，可选。如果指定callback参数则注销该callback监听，callback不可是匿名函数。如果未指定callback，则注销所有已存在的callback监听。 |
-
-**示例**
-
-```TypeScript
-function offIsoInfoChange(photoSession: camera.PhotoSession): void {
-  photoSession.offIsoInfoChange();
-}
-```
-
-```TypeScript
-function callback(isoInfo: camera.IsoInfo): void {
-  console.info(`Iso : ${isoInfo}`);
-}
-
-function unregisterIsoInfoChanged(videoSession: camera.VideoSession): void {
-  videoSession.offIsoInfoChange(callback);
-}
-
-function unregisterAllIsoInfoChanged(videoSession: camera.VideoSession): void {
-  videoSession.offIsoInfoChange();
-}
-```
 
 ## on('error')
 
@@ -517,24 +449,6 @@ onExposureInfoChange(callback: Callback<ExposureInfo>): void
 | --- | --- | --- | --- |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ExposureInfo](arkts-camera-camera-exposureinfo-i.md)&gt; | 是 | 回调函数，用于获取曝光值变化信息。 |
 
-**示例**
-
-```TypeScript
-function onExposureInfoChange(photoSession: camera.PhotoSession): void {
-  photoSession.onExposureInfoChange((exposureInfo: camera.ExposureInfo) => {
-    console.info(`Exposure info changed, exposureTime: ${exposureInfo.exposureTime}`);
-  });
-}
-```
-
-```TypeScript
-function onExposureInfoChange(videoSession: camera.VideoSession): void {
-  videoSession.onExposureInfoChange((exposureInfo: camera.ExposureInfo) => {
-    console.info(`Exposure info changed, exposureTime: ${exposureInfo.exposureTime}`);
-  });
-}
-```
-
 ## onIsoInfoChange
 
 ```TypeScript
@@ -556,26 +470,6 @@ onIsoInfoChange(callback: Callback<IsoInfo>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[IsoInfo](arkts-camera-camera-isoinfo-i.md)&gt; | 是 | 回调函数，用于获取相机当前的ISO值。 |
-
-**示例**
-
-```TypeScript
-function onIsoInfoChange(photoSession: camera.PhotoSession): void {
-  photoSession.onIsoInfoChange((isoInfo: camera.IsoInfo) => {
-    console.info(`ISO info changed, iso: ${isoInfo.iso}`);
-  });
-}
-```
-
-```TypeScript
-function callback(isoInfo: camera.IsoInfo): void {
-  console.info(`Iso : ${isoInfo}`);
-}
-
-function registerIsoInfoChanged(videoSession: camera.VideoSession): void {
-  videoSession.onIsoInfoChange(callback);
-}
-```
 
 ## preconfig
 
@@ -603,38 +497,6 @@ preconfig(preconfigType: PreconfigType, preconfigRatio?: PreconfigRatio): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function testPreconfig(photoSession: camera.PhotoSession, preconfigType: camera.PreconfigType,
-  preconfigRatio: camera.PreconfigRatio): void {
-  try {
-    photoSession.preconfig(preconfigType, preconfigRatio);
-    console.info(`preconfig success preconfigType: ${preconfigType}, preconfigRatio: ${preconfigRatio}`);
-  } catch (error) {
-    let err = error as BusinessError;
-    console.error(`The preconfig call failed. error code: ${err.code}`);
-  }
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function testPreconfig(videoSession: camera.VideoSession, preconfigType: camera.PreconfigType,
-  preconfigRatio: camera.PreconfigRatio): void {
-  try {
-    videoSession.preconfig(preconfigType, preconfigRatio);
-    console.info(`preconfig ${preconfigType} ${preconfigRatio} success`);
-  } catch (error) {
-    let err = error as BusinessError;
-    console.error(`The preconfig call failed. error code: ${err.code}`);
-  }
-}
-```
 
 ## setQualityPrioritization
 
@@ -669,19 +531,3 @@ setQualityPrioritization(quality: QualityPrioritization): void
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. The session has not been committed or configured. |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function setQualityPrioritization(videoSession: camera.VideoSession): void {
-  try {
-    videoSession.setQualityPrioritization(camera.QualityPrioritization.POWER_BALANCE);
-  } catch (error) {
-    // 失败返回错误码error.code并处理。
-    let err = error as BusinessError;
-    console.error(`The setQualityPrioritization call failed. error code: ${err.code}`);
-  }
-}
-```

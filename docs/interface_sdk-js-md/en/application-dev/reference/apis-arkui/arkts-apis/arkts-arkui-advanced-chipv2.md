@@ -57,6 +57,7 @@ import { ChipV2Size, ChipV2AccessibilitySelectedType, ChipV2ImageIconConfig, Chi
 ## Examples
 
 This example sets custom icons through the prefixIcon and suffixIcon attributes of ChipV2Options.
+Since API version 26.0.0, ChipV2Options supports the prefixIcon and suffixIcon attributes.
 
 ```TypeScript
 import { ChipV2, ChipV2Options, ChipV2Label, ChipV2PrefixImageIcon, ChipV2SuffixImageIcon, LengthMetrics, ColorMetrics } from '@kit.ArkUI';
@@ -109,6 +110,7 @@ struct Index {
 ```
 
 This example sets the active state of [ChipV2](arkts-arkui-arkui-advanced-chipv2-chipv2-s.md) through the activated attribute of ChipV2Options.
+Since API version 26.0.0, ChipV2Options supports the activated attribute.
 
 ```TypeScript
 import { ChipV2, ChipV2Options, ChipV2Label, ChipV2PrefixImageIcon, ChipV2CloseIcon, LengthMetrics, ColorMetrics } from '@kit.ArkUI';
@@ -168,6 +170,7 @@ struct Index {
 ```
 
 This example uses [SymbolGlyphModifier](ts-universal-attributes-attribute-symbolglyphmodifier.md#symbolglyphmodifier) to set a symbol icon for [ChipV2](arkts-arkui-arkui-advanced-chipv2-chipv2-s.md).
+Since API version 26.0.0, ChipV2 is introduced.
 
 ```TypeScript
 import { ChipV2, ChipV2Options, ChipV2Label, ChipV2PrefixSymbolIcon, SymbolGlyphModifier, LengthMetrics, ColorMetrics } from '@kit.ArkUI';
@@ -221,6 +224,7 @@ struct Index {
 ```
 
 ChipV2Options uses the @ObservedV2 decorator, and the [ChipV2](arkts-arkui-arkui-advanced-chipv2-chipv2-s.md) component receives the ChipV2Options object through @Param. For primitive type attributes decorated by @Trace, @Param can already observe attribute changes and trigger UI refresh. However, for internal attributes (such as start and end of padding) of object-type attributes (such as padding and labelMargin of label), these object types themselves are not decorated by @ObservedV2. Therefore, changes to their internal attributes cannot be perceived by @Param, and the UI is not automatically refreshed when internal attributes are changed. Using makeObserved to wrap object-type attributes (such as padding) can supplement deep observation capability for their internal attributes. In this way, when internal attributes (such as start and end) are changed, the framework can listen for the changes and trigger UI refresh. For detailed description of the makeObserved API, see [makeObserved API: Changing Unobservable Data to Observable Data](../../../ui/state-management/arkts-new-makeObserved.md).
+The following example uses makeObserved to wrap padding, and changes the start and end attributes of padding through a button, to verify that changes to internal attributes of object-type attributes can trigger UI refresh of ChipV2.
 
 ```TypeScript
 import { ChipV2, ChipV2Options, ChipV2Label, LengthMetrics, ColorMetrics, UIUtils } from '@kit.ArkUI';

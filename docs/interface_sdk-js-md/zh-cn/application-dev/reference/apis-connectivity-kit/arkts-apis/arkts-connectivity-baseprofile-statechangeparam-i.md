@@ -68,7 +68,7 @@ state: ProfileConnectionState
 
 Profile连接状态。
 
-**类型：** ProfileConnectionState
+**类型：** [ProfileConnectionState](arkts-connectivity-baseprofile-profileconnectionstate-t.md)
 
 **起始版本：** 10
 

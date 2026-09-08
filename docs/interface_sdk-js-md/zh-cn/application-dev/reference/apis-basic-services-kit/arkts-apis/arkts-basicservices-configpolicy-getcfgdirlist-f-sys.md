@@ -32,20 +32,6 @@ function getCfgDirList(callback: AsyncCallback<Array<string>>): void
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:  1.Mandatory parameters are left unspecified;  2.Incorrect parameter types. |
 
-**示例**
-
-```TypeScript
-import { configPolicy, BusinessError } from '@kit.BasicServicesKit';
-
-configPolicy.getCfgDirList((err: BusinessError, data: Array<string>) => {
-  if (err == null) {
-    console.info('data is ' + data);
-  } else {
-    console.error('err: ' + err.code + ', ' + err.message);
-  }
-});
-```
-
 
 ## getCfgDirList
 
@@ -66,22 +52,3 @@ function getCfgDirList(): Promise<Array<string>>
 | 类型 | 说明 |
 | --- | --- |
 | Promise&lt;Array&lt;string&gt;&gt; | Promise对象，返回配置层级目录列表。 |
-
-**示例**
-
-```TypeScript
-import { configPolicy, BusinessError } from '@kit.BasicServicesKit';
-
-async function fetchCfgDirList() {
-  try {
-    let value: Array<string> = await configPolicy.getCfgDirList();
-    console.info('value is ' + value);
-  } catch (error) {
-    let code = (error as BusinessError).code;
-    let message = (error as BusinessError).message;
-    console.error('error:' + code + ', ' + message);
-  }
-}
-
-fetchCfgDirList();
-```

@@ -30,7 +30,7 @@ Lists the files and directories in the **Recently deleted** list.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;FileInfo&gt; | List of the files and directories obtained. |
+| Array&lt;[FileInfo](arkts-corefile-trash-fileinfo-i-sys.md)&gt; | List of the files and directories obtained. |
 
 **Error codes:**
 

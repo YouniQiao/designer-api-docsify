@@ -38,7 +38,7 @@ authType?: AuthType
 
 认证类型，默认为undefined。
 
-**类型：** AuthType
+**类型：** [AuthType](arkts-basicservices-osaccount-authtype-e-sys.md)
 
 **起始版本：** 12
 

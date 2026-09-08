@@ -27,13 +27,13 @@ function getPreferences(context: Context, options: Options): Promise<Preferences
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | context | Context | 是 | 应用上下文。 |
-| options | Options | 是 | 与Preferences实例相关的配置选项。name字段为必填字段，名称长度需大于零且小于等于255字节，名称中不能包含'/'且不能以'/'结尾。dataGroupId为可选字段。 |
+| options | [Options](arkts-arkdata-sendablepreferences-options-i.md) | 是 | 与Preferences实例相关的配置选项。name字段为必填字段，名称长度需大于零且小于等于255字节，名称中不能包含'/'且不能以'/'结尾。dataGroupId为可选字段。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Preferences&gt; | Promise对象，返回Preferences实例。 |
+| Promise&lt;[Preferences](arkts-arkdata-sendablepreferences-preferences-i.md)&gt; | Promise对象，返回Preferences实例。 |
 
 **错误码：**
 

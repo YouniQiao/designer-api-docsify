@@ -61,7 +61,7 @@ error?: BusinessError<void>
 
 加载失败的错误信息。
 
-**类型：** BusinessError&lt;void&gt;
+**类型：** [BusinessError](arkts-arkui-businesserror-t.md)&lt;void&gt;
 
 **起始版本：** 26.0.0
 

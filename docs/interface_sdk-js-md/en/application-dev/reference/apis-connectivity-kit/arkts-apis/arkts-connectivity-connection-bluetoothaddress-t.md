@@ -12,4 +12,4 @@ Bluetooth device address.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
-**Type:** common.BluetoothAddress
+**Type:** [common.BluetoothAddress](arkts-connectivity-common-bluetoothaddress-i.md)

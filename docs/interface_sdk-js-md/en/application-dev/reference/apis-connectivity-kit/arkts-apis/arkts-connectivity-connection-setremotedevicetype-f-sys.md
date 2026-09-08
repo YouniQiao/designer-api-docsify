@@ -29,7 +29,7 @@ Set remote device custom type.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | deviceId | string | Yes | Indicates device ID. For example, "11:22:33:AA:BB:FF". |
-| type | DeviceType | Yes | Indicates device type. |
+| type | [DeviceType](arkts-connectivity-connection-devicetype-e-sys.md) | Yes | Indicates device type. |
 
 **Return value:**
 

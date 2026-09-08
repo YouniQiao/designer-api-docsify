@@ -28,7 +28,7 @@ Automatically triggers the autofill service when a TextInput component gains foc
 MANUAL_REQUEST = 1
 ```
 
-Manually triggers the autofill service by number-pressing any input component to bring up a secondary menu and selecting autofill.
+Manually triggers the autofill service by long-pressing any input component to bring up a secondary menu and selecting autofill.
 
 **Since:** 26.0.0
 
@@ -44,7 +44,7 @@ Manually triggers the autofill service by number-pressing any input component to
 PASTE_REQUEST = 2
 ```
 
-Triggers the autofill service via paste by number-pressing a username or password in the password vault to select secure copy, number-pressing any input component to bring up a secondary menu, and selecting paste.
+Triggers the autofill service via paste by long-pressing a username or password in the password vault to select secure copy, long-pressing any input component to bring up a secondary menu, and selecting paste.
 
 **Since:** 26.0.0
 

@@ -20,7 +20,7 @@ color: string | Resource
 
 按钮文本颜色。
 
-**类型：** string \| Resource
+**类型：** string \| [Resource](arkts-arkui-resource-t.md)
 
 **起始版本：** 9
 
@@ -54,7 +54,7 @@ text: string | Resource
 
 按钮文本内容。
 
-**类型：** string \| Resource
+**类型：** string \| [Resource](arkts-arkui-resource-t.md)
 
 **起始版本：** 9
 

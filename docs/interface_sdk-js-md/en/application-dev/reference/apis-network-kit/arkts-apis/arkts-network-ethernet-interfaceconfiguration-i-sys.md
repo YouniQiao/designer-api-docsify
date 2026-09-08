@@ -54,7 +54,7 @@ httpProxy?: HttpProxy
 
 HTTP proxy of the Ethernet connection. By default, no proxy is configured.
 
-**Type:** HttpProxy
+**Type:** [HttpProxy](arkts-network-ethernet-httpproxy-t.md)
 
 **Since:** 10
 

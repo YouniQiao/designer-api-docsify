@@ -79,7 +79,7 @@ Default value: **BlurStyle.COMPONENT_ULTRA_THICK**
 
 Setting this parameter to **BlurStyle.NONE** disables the background blur. When **backgroundBlurStyle** is set to a value other than **NONE**, do not set **backgroundColor**. If you do, the color display may not produce the expected visual effect.
 
-**Type:** BlurStyle
+**Type:** [BlurStyle](../arkts-components/arkts-arkui-blurstyle-e.md)
 
 **Default:** BlurStyle.COMPONENT_ULTRA_THICK
 
@@ -366,7 +366,7 @@ Overlay effect for the page-level dialog box.
 - Default value: **ImmersiveMode.DEFAULT**  
 - This parameter takes effect only when **levelMode** is set to **LevelMode.EMBEDDED**.
 
-**Type:** ImmersiveMode
+**Type:** [ImmersiveMode](arkts-arkui-immersivemode-t.md)
 
 **Default:** ImmersiveMode.DEFAULT
 
@@ -413,7 +413,7 @@ Display level of the dialog box.
 - Default value: **LevelMode.OVERLAY**  
 - This parameter takes effect only when **showInSubWindow** is set to **false**.
 
-**Type:** LevelMode
+**Type:** [LevelMode](arkts-arkui-levelmode-t.md)
 
 **Default:** LevelMode.OVERLAY
 
@@ -524,7 +524,7 @@ Offset of the dialog box based on the **alignment** settings.
 
 Default value: **{ dx: 0 , dy: 0 }**
 
-**Type:** Offset
+**Type:** [Offset](arkts-arkui-offset-t.md)
 
 **Since:** 7
 
@@ -547,7 +547,7 @@ Event callback after the dialog box appears.
 3. When a dialog box is dismissed immediately after being shown, **onWillDisappear** may be triggered before **onDidAppear**.
 4. If the dialog box is dismissed before its entrance animation is finished, the animation will be interrupted, and **onDidAppear** will not be triggered.
 
-**Type:** Callback&lt;void&gt;
+**Type:** [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;void&gt;
 
 **Since:** 19
 
@@ -569,7 +569,7 @@ Event callback after the dialog box disappears.
 
 The normal timing sequence is as follows: onWillAppear &gt; onDidAppear &gt; onWillDisappear &gt; onDidDisappear.
 
-**Type:** Callback&lt;void&gt;
+**Type:** [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;void&gt;
 
 **Since:** 19
 
@@ -592,7 +592,7 @@ Event callback when the dialog box is about to appear.
 1. The normal timing sequence is as follows: onWillAppear &gt; onDidAppear &gt; onWillDisappear &gt; onDidDisappear.
 2. You can set the callback event for changing the dialog box display effect in **onWillAppear**. The settings take effect next time the dialog box appears.
 
-**Type:** Callback&lt;void&gt;
+**Type:** [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;void&gt;
 
 **Since:** 19
 
@@ -614,7 +614,7 @@ Event callback when the dialog box is about to disappear.
 
 The normal timing sequence is as follows: onWillAppear &gt; onDidAppear &gt; onWillDisappear &gt; onDidDisappear.
 
-**Type:** Callback&lt;void&gt;
+**Type:** [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;void&gt;
 
 **Since:** 19
 
@@ -637,7 +637,7 @@ Callback for interactive dismissal of the dialog box.
 1. If this callback is registered, the dialog box will not be dismissed immediately after the user touches the mask or the Back button, presses the **Esc** key, or swipes left or right on the screen. The **reason** parameter in the callback is used to determine whether the dialog box can be dismissed. The reason returned by the component does not support the value **CLOSE_BUTTON**.
 2. In the **onWillDismiss** callback, another **onWillDismiss** callback is not allowed.
 
-**Type:** Callback&lt;[DismissDialogAction](arkts-arkui-dismissdialogaction-i.md)&gt;
+**Type:** [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;[DismissDialogAction](arkts-arkui-dismissdialogaction-i.md)&gt;
 
 **Since:** 12
 

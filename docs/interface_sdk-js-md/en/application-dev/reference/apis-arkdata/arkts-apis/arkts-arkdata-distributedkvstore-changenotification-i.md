@@ -20,7 +20,7 @@ deleteEntries: Entry[]
 
 Data deleted.
 
-**Type:** Entry[]
+**Type:** [Entry](arkts-arkdata-distributedkvstore-entry-i.md)[]
 
 **Since:** 9
 
@@ -44,23 +44,6 @@ UUID of the device.
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-    let query: distributedKVStore.Query | null = new distributedKVStore.Query();
-    if (query != null) {
-      query.deviceId('deviceId');
-      console.info(`query is ${query.getSqlLike()}`);
-    }
-} catch (err) {
-    let error = err as BusinessError;
-    console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
 ## insertEntries
 
 ```TypeScript
@@ -69,7 +52,7 @@ insertEntries: Entry[]
 
 Data inserted.
 
-**Type:** Entry[]
+**Type:** [Entry](arkts-arkdata-distributedkvstore-entry-i.md)[]
 
 **Since:** 9
 
@@ -85,7 +68,7 @@ updateEntries: Entry[]
 
 Data updated.
 
-**Type:** Entry[]
+**Type:** [Entry](arkts-arkdata-distributedkvstore-entry-i.md)[]
 
 **Since:** 9
 

@@ -28,7 +28,7 @@ function toSendableAsset(asset: NonSendableAsset): Asset
 
 | 类型 | 说明 |
 | --- | --- |
-| Asset | 可跨线程传递的Asset数据。 |
+| [Asset](arkts-arkdata-sendablerelationalstore-asset-i.md) | 可跨线程传递的Asset数据。 |
 
 **错误码：**
 

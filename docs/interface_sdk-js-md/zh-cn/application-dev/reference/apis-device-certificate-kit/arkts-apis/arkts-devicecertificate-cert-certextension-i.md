@@ -149,29 +149,6 @@ cert.createCertExtension(encodingBlob, (error, certExt) => {
 });
 ```
 
-```TypeScript
-import { cert } from '@kit.DeviceCertificateKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let nameStr = '/CN=Example CA/OU=test cert/O=test/L=XA/ST=SX/C=CN/CN=RSA CA/CN=XTS';
-async function getEncoded() {
-  try {
-    cert.createX500DistinguishedName(nameStr)
-      .then((data) => {
-        console.info('createX500DistinguishedName result: success.');
-        let encodingBlobData = data.getEncoded();
-        console.info('encodingBlobData = ' + encodingBlobData.data);
-      })
-      .catch((err: BusinessError) => {
-        console.error(`createX500DistinguishedName failed, errCode: ${err.code}, errMsg: ${err.message}`);
-      });
-  } catch (error) {
-    let e: BusinessError = error as BusinessError;
-    console.error(`createX500DistinguishedName failed, errCode: ${e.code}, errMsg: ${e.message}`);
-  }
-}
-```
-
 ## getEntry
 
 ```TypeScript
@@ -191,13 +168,13 @@ getEntry(valueType: ExtensionEntryType, oid: DataBlob): DataBlob
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | valueType | [ExtensionEntryType](arkts-devicecertificate-cert-extensionentrytype-e.md) | 是 | 指定要获取的扩展信息类型。 |
-| oid | DataBlob | 是 | 指定要获取的扩展项OID。 |
+| oid | [DataBlob](arkts-devicecertificate-cert-datablob-i.md) | 是 | 指定要获取的扩展项OID。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| DataBlob | 获取的证书扩展项数据。 |
+| [DataBlob](arkts-devicecertificate-cert-datablob-i.md) | 获取的证书扩展项数据。 |
 
 **错误码：**
 

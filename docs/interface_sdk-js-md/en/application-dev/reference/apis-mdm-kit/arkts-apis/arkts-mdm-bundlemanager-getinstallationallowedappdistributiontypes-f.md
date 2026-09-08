@@ -32,7 +32,7 @@ Obtains the distribution type of the signing certificate used by applications th
 
 | Type | Description |
 | --- | --- |
-| Array&lt;AppDistributionType&gt; | Distribution types of the application signing certificate. |
+| Array&lt;[AppDistributionType](arkts-mdm-bundlemanager-appdistributiontype-e.md)&gt; | Distribution types of the application signing certificate. |
 
 **Error codes:**
 
@@ -88,7 +88,7 @@ Obtains the distribution type of the signing certificate used by applications th
 
 | Type | Description |
 | --- | --- |
-| Array&lt;AppDistributionType&gt; | Distribution types of the application signing certificate. |
+| Array&lt;[AppDistributionType](arkts-mdm-bundlemanager-appdistributiontype-e.md)&gt; | Distribution types of the application signing certificate. |
 
 **Error codes:**
 

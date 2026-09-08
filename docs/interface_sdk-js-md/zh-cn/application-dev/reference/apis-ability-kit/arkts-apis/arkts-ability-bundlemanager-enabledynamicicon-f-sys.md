@@ -96,7 +96,7 @@ function enableDynamicIcon(bundleName: string, moduleName: string, option?: Bund
 | --- | --- | --- | --- |
 | bundleName | string | 是 | 要使能动态图标的应用包名。 |
 | moduleName | string | 是 | 要使能动态图标的模块名。 |
-| option | BundleOptions | 否 | 指定需要使能动态图标的用户和分身索引。缺省时使能应用所有用户和所有分身的动态图标。 |
+| option | [BundleOptions](arkts-ability-bundle-bundleoptions-i.md) | 否 | 指定需要使能动态图标的用户和分身索引。缺省时使能应用所有用户和所有分身的动态图标。 |
 
 **返回值：**
 

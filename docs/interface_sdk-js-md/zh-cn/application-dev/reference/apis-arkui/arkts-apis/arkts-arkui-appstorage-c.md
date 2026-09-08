@@ -78,12 +78,6 @@ AppStorage.setOrCreate('PropA', 47);
 let res: boolean = AppStorage.clear(); // true，已经没有订阅者
 ```
 
-```TypeScript
-let initialData: Record<string, number> = { 'PropA': 47 };
-let storage: LocalStorage = new LocalStorage(initialData);
-let res: boolean = storage.clear(); // true，已经没有订阅者
-```
-
 ## Delete
 
 ```TypeScript
@@ -178,16 +172,6 @@ AppStorage.setOrCreate('PropB', 48);
 let res1: boolean = AppStorage.delete('PropB'); // true，PropB 已从AppStorage成功删除
 ```
 
-```TypeScript
-let initialData: Record<string, number> = { 'PropA': 47 };
-let storage: LocalStorage = new LocalStorage(initialData);
-storage.link<number>('PropA');
-let res: boolean = storage.delete('PropA'); // false，PropA 还存在订阅者
-let res1: boolean = storage.delete('PropB'); // false，PropB 不存在于storage中
-storage.setOrCreate('PropB', 48);
-let res2: boolean = storage.delete('PropB'); // true，PropB 已从storage成功删除
-```
-
 ## Get
 
 ```TypeScript
@@ -256,12 +240,6 @@ AppStorage.setOrCreate('PropA', 47);
 let value: number = AppStorage.get('PropA') as number; // 47
 ```
 
-```TypeScript
-let initialData: Record<string, number> = { 'PropA': 47 };
-let storage: LocalStorage = new LocalStorage(initialData);
-let value: number = storage.get('PropA') as number; // 47
-```
-
 ## Has
 
 ```TypeScript
@@ -326,12 +304,6 @@ static has(propName: string): boolean
 
 ```TypeScript
 AppStorage.has('simpleProp');
-```
-
-```TypeScript
-let initialData: Record<string, number> = { 'PropA': 47 };
-let storage: LocalStorage = new LocalStorage(initialData);
-storage.has('PropA'); // true
 ```
 
 ## IsMutable
@@ -427,12 +399,6 @@ AppStorage.setOrCreate('PropB', 48);
 let keys: IterableIterator<string> = AppStorage.keys();
 ```
 
-```TypeScript
-let initialData: Record<string, number> = { 'PropA': 47 };
-let storage: LocalStorage = new LocalStorage(initialData);
-let keys: IterableIterator<string> = storage.keys();
-```
-
 ## Link
 
 ```TypeScript
@@ -508,14 +474,6 @@ static link<T>(propName: string): SubscribedAbstractProperty<T>
 AppStorage.setOrCreate('PropA', 47);
 let linkToPropA1: SubscribedAbstractProperty<number> = AppStorage.link('PropA');
 let linkToPropA2: SubscribedAbstractProperty<number> = AppStorage.link('PropA'); // linkToPropA2.get() == 47
-linkToPropA1.set(48); // 双向同步：linkToPropA1.get() == linkToPropA2.get() == 48
-```
-
-```TypeScript
-let initialData: Record<string, number> = { 'PropA': 47 };
-let storage: LocalStorage = new LocalStorage(initialData);
-let linkToPropA1: SubscribedAbstractProperty<number> = storage.link('PropA');
-let linkToPropA2: SubscribedAbstractProperty<number> = storage.link('PropA'); // linkToPropA2.get() == 47
 linkToPropA1.set(48); // 双向同步：linkToPropA1.get() == linkToPropA2.get() == 48
 ```
 
@@ -632,14 +590,6 @@ let refToPropA2: AbstractProperty<number> | undefined = AppStorage.ref('PropA');
 refToPropA1?.set(48); // 同步修改AppStorage：refToPropA1.get() == refToPropA2.get() == 48
 ```
 
-```TypeScript
-let initialData: Record<string, number> = { 'PropA': 47 };
-let storage: LocalStorage = new LocalStorage(initialData);
-let refToPropA1: AbstractProperty<number> | undefined = storage.ref('PropA');
-let refToPropA2: AbstractProperty<number> | undefined = storage.ref('PropA'); // refToPropA2.get() == 47
-refToPropA1?.set(48); // refToPropA1.get() == refToPropA2.get() == 48
-```
-
 ## Set
 
 ```TypeScript
@@ -712,13 +662,6 @@ let res: boolean = AppStorage.set('PropA', 47); // true
 let res1: boolean = AppStorage.set('PropB', 47); // false
 ```
 
-```TypeScript
-let initialData: Record<string, number> = { 'PropA': 47 };
-let storage: LocalStorage = new LocalStorage(initialData);
-let res: boolean = storage.set('PropA', 47); // true
-let res1: boolean = storage.set('PropB', 47); // false
-```
-
 ## SetAndLink
 
 ```TypeScript
@@ -789,13 +732,6 @@ static setAndLink<T>(propName: string, defaultValue: T): SubscribedAbstractPrope
 AppStorage.setOrCreate('PropA', 47);
 let link1: SubscribedAbstractProperty<number> = AppStorage.setAndLink('PropB', 49); // 用默认值49创建PropB
 let link2: SubscribedAbstractProperty<number> = AppStorage.setAndLink('PropA', 50); // PropA已存在，值为47
-```
-
-```TypeScript
-let initialData: Record<string, number> = { 'PropA': 47 };
-let storage: LocalStorage = new LocalStorage(initialData);
-let link1: SubscribedAbstractProperty<number> = storage.setAndLink('PropB', 49); // 用默认值49创建PropB
-let link2: SubscribedAbstractProperty<number> = storage.setAndLink('PropA', 50); // PropA已存在，值为47
 ```
 
 ## SetAndProp
@@ -903,13 +839,6 @@ static setAndRef<T>(propName: string, defaultValue: T): AbstractProperty<T>
 AppStorage.setOrCreate('PropA', 47);
 let ref1: AbstractProperty<number> = AppStorage.setAndRef('PropB', 49); // 用默认值49创建PropB
 let ref2: AbstractProperty<number> = AppStorage.setAndRef('PropA', 50); // PropA已存在，值为47
-```
-
-```TypeScript
-let initialData: Record<string, number> = { 'PropA': 47 };
-let storage: LocalStorage = new LocalStorage(initialData);
-let ref1: AbstractProperty<number> = storage.setAndRef('PropB', 49); // 用默认值49创建PropB
-let ref2: AbstractProperty<number> = storage.setAndRef('PropA', 50); // PropA已存在，值为47
 ```
 
 ## SetOrCreate
@@ -1024,12 +953,6 @@ static size(): number
 ```TypeScript
 AppStorage.setOrCreate('PropB', 48);
 let res: number = AppStorage.size(); // 1
-```
-
-```TypeScript
-let initialData: Record<string, number> = { 'PropA': 47 };
-let storage: LocalStorage = new LocalStorage(initialData);
-let res: number = storage.size(); // 1
 ```
 
 ## staticClear

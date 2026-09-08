@@ -48,7 +48,7 @@ Searches for task IDs based on [Filter](arkts-basicservices-agent-filter-i.md). 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| filter | Filter | Yes | Filter criteria. |
+| filter | [Filter](arkts-basicservices-agent-filter-i.md) | Yes | Filter criteria. |
 | callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the task ID. Otherwise, **err** is an error object. |
 
 **Error codes:**
@@ -75,7 +75,7 @@ Searches for task IDs based on [Filter](arkts-basicservices-agent-filter-i.md). 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| filter | Filter | No | Filter criteria. The default value is empty. |
+| filter | [Filter](arkts-basicservices-agent-filter-i.md) | No | Filter criteria. The default value is empty. |
 
 **Return value:**
 

@@ -96,7 +96,7 @@ Boolean.
 DOUBLE = 5
 ```
 
-Double (number-precision floating point).
+Double (double-precision floating point).
 
 **Since:** 7
 

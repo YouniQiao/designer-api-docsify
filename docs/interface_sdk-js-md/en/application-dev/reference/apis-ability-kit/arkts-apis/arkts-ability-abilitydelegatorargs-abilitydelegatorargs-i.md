@@ -83,13 +83,3 @@ Names of the test case executors.
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **Test API:** This API is used only in automated test scripts.
-
-**Examples**
-
-```TypeScript
-// Import the test registration module.
-import { abilityDelegatorRegistry } from '@kit.TestKit';
-
-// Obtain the AbilityDelegatorArgs object through AbilityDelegatorRegistry.
-let args: abilityDelegatorRegistry.AbilityDelegatorArgs = abilityDelegatorRegistry.getArguments();
-```

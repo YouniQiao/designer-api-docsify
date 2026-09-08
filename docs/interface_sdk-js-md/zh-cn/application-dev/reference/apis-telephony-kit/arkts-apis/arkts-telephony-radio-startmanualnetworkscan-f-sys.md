@@ -27,7 +27,7 @@ function startManualNetworkScan(slotId: number, callback: Callback<NetworkSearch
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | slotId | number | 是 | Indicates the card slot index number. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;NetworkSearchRealTimeResult&gt; | 是 | Indicates the callback for manual network scan |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[NetworkSearchRealTimeResult](arkts-telephony-radio-networksearchrealtimeresult-i-sys.md)&gt; | 是 | Indicates the callback for manual network scan |
 
 **错误码：**
 

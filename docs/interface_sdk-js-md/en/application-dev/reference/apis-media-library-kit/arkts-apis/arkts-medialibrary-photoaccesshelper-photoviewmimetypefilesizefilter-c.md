@@ -20,7 +20,7 @@ photoViewMimeType: PhotoViewMIMETypes
 
 Media file types used for filtering.
 
-**Type:** PhotoViewMIMETypes
+**Type:** [PhotoViewMIMETypes](arkts-medialibrary-photoaccesshelper-photoviewmimetypes-e.md)
 
 **Since:** 20
 

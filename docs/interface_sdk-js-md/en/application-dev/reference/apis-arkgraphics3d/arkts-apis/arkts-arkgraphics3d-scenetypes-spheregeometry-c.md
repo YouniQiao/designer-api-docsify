@@ -18,7 +18,7 @@ get radius(): number
 
 Radius of the sphere, measured in the world coordinate system's units (for example, cm, m, or km). The value must be greater than 0.
 
-@return { number }
+@return { double }
 
 **Type:** number
 
@@ -46,7 +46,7 @@ get segmentCount(): number
 
 Number of segments divided by longitude and latitude on the sphere. The value range is a positive integer greater than or equal to 3.
 
-@return { number }
+@return { int }
 
 **Type:** number
 

@@ -43,18 +43,6 @@ let randomAccessFile = fileIo.createRandomAccessFileSync(filePath, fileIo.OpenMo
 randomAccessFile.close();
 ```
 
-```TypeScript
-const filePath = pathDir + "/test.txt";
-const rs = fileIo.createReadStream(filePath);
-rs.close();
-```
-
-```TypeScript
-const filePath = pathDir + "/test.txt";
-const ws = fileIo.createWriteStream(filePath);
-ws.close();
-```
-
 ## getReadStream
 
 ```TypeScript
@@ -180,27 +168,6 @@ Reads data from a file. This API uses a promise to return the result.
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
-import { buffer } from '@kit.ArkTS';
-import { ReadOptions } from '@kit.CoreFileKit';
-
-let filePath = pathDir + "/test.txt";
-let stream = fileIo.createStreamSync(filePath, "r+");
-let arrayBuffer = new ArrayBuffer(4096);
-let readOption: ReadOptions = {
-  offset: 5,
-  length: 5
-};
-stream.read(arrayBuffer, readOption).then((readLen: number) => {
-  let buf = buffer.from(arrayBuffer, 0, readLen);
-  console.info(`Succeeded in reading data, the content of file is: ${buf.toString()}`);
-  stream.close();
-}).catch((err: BusinessError) => {
-  console.error(`Failed to read data. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
 import { ReadOptions } from '@kit.CoreFileKit';
 
 let filePath = pathDir + "/test.txt";
@@ -256,24 +223,6 @@ Reads data from a file. This API uses an asynchronous callback to return the res
 | 13900042 | Unknown error |
 
 **Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { buffer } from '@kit.ArkTS';
-
-let filePath = pathDir + "/test.txt";
-let stream = fileIo.createStreamSync(filePath, "r+");
-let arrayBuffer = new ArrayBuffer(4096);
-stream.read(arrayBuffer, (err: BusinessError, readLen: number) => {
-  if (err) {
-    console.error(`Failed to read stream. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    let buf = buffer.from(arrayBuffer, 0, readLen);
-    console.info(`Succeeded in reading data, the content of file is: ${buf.toString()}`);
-    stream.close();
-  }
-});
-```
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -336,29 +285,6 @@ Reads data from a file. This API uses an asynchronous callback to return the res
 | 13900042 | Unknown error |
 
 **Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { buffer } from '@kit.ArkTS';
-import { ReadOptions } from '@kit.CoreFileKit';
-
-let filePath = pathDir + "/test.txt";
-let stream = fileIo.createStreamSync(filePath, "r+");
-let arrayBuffer = new ArrayBuffer(4096);
-let readOption: ReadOptions = {
-  offset: 5,
-  length: 5
-};
-stream.read(arrayBuffer, readOption, (err: BusinessError, readLen: number) => {
-  if (err) {
-    console.error(`Failed to read stream. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    let buf = buffer.from(arrayBuffer, 0, readLen);
-    console.info(`Succeeded in reading data, the content of file is: ${buf.toString()}`);
-    stream.close();
-  }
-});
-```
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -430,20 +356,6 @@ Reads data from a file. This API returns the result synchronously.
 | 13900044 | Network is unreachable<br>**Applicable version:** 12 and later |
 
 **Examples**
-
-```TypeScript
-import { ReadOptions } from '@kit.CoreFileKit';
-
-let filePath = pathDir + "/test.txt";
-let stream = fileIo.createStreamSync(filePath, "r+");
-let readOption: ReadOptions = {
-  offset: 5,
-  length: 5
-};
-let buf = new ArrayBuffer(4096);
-let num = stream.readSync(buf, readOption);
-stream.close();
-```
 
 ```TypeScript
 let filePath = pathDir + "/test.txt";
@@ -545,25 +457,6 @@ import { BusinessError } from '@kit.BasicServicesKit';
 import { WriteOptions } from '@kit.CoreFileKit';
 
 let filePath = pathDir + "/test.txt";
-let stream = fileIo.createStreamSync(filePath, "r+");
-let writeOption: WriteOptions = {
-  offset: 5,
-  length: 5,
-  encoding: 'utf-8'
-};
-stream.write("hello, world", writeOption).then((number: number) => {
-  console.info(`Succeeded in writing, size is: ${number}`);
-  stream.close();
-}).catch((err: BusinessError) => {
-  console.error(`Failed to write. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { WriteOptions } from '@kit.CoreFileKit';
-
-let filePath = pathDir + "/test.txt";
 let file = fileIo.openSync(filePath, fileIo.OpenMode.CREATE | fileIo.OpenMode.READ_WRITE);
 let randomAccessFile = fileIo.createRandomAccessFileSync(file);
 let bufferLength: number = 4096;
@@ -620,23 +513,6 @@ Writes data to a file. This API uses an asynchronous callback to return the resu
 | 13900042 | Unknown error |
 
 **Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let filePath = pathDir + "/test.txt";
-let stream = fileIo.createStreamSync(filePath, "r+");
-stream.write("hello, world", (err: BusinessError, bytesWritten: number) => {
-  if (err) {
-    console.error(`Failed to write stream. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    if (bytesWritten) {
-      console.info(`Succeeded in writing, size is: ${bytesWritten}`);
-    }
-  }
-  stream.close();
-});
-```
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -701,29 +577,6 @@ Writes data to a file. This API uses an asynchronous callback to return the resu
 | 13900042 | Unknown error |
 
 **Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { WriteOptions } from '@kit.CoreFileKit';
-
-let filePath = pathDir + "/test.txt";
-let stream = fileIo.createStreamSync(filePath, "r+");
-let writeOption: WriteOptions = {
-  offset: 5,
-  length: 5,
-  encoding: 'utf-8'
-};
-stream.write("hello, world", writeOption, (err: BusinessError, bytesWritten: number) => {
-  if (err) {
-    console.error(`Failed to write stream. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    if (bytesWritten) {
-      console.info(`Succeeded in writing, size is: ${bytesWritten}`);
-    }
-  }
-  stream.close();
-});
-```
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -798,20 +651,6 @@ Writes data to a file. This API returns the result synchronously.
 | 13900042 | Unknown error |
 
 **Examples**
-
-```TypeScript
-import { WriteOptions } from '@kit.CoreFileKit';
-
-let filePath = pathDir + "/test.txt";
-let stream = fileIo.createStreamSync(filePath,"r+");
-let writeOption: WriteOptions = {
-  offset: 5,
-  length: 5,
-  encoding: 'utf-8'
-};
-let num = stream.writeSync("hello, world", writeOption);
-stream.close();
-```
 
 ```TypeScript
 import { WriteOptions } from '@kit.CoreFileKit';

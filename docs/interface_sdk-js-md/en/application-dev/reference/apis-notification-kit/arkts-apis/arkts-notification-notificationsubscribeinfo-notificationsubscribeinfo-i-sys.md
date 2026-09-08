@@ -132,7 +132,7 @@ slotTypes?: Array<notificationManager.SlotType>
 
 Types of the notification slots. If this parameter is not specified, the subscription defaults to notifications of all slot types.
 
-**Type:** Array&lt;notificationManager.SlotType&gt;
+**Type:** Array&lt;[notificationManager.SlotType](arkts-notification-notificationmanager-slottype-e.md)&gt;
 
 **Since:** 18
 

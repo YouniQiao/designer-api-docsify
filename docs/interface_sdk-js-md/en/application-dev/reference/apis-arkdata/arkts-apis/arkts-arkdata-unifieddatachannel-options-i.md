@@ -62,7 +62,7 @@ visibility?: Visibility
 
 Data visibility level. This parameter is effective only when specified during data writing. If unspecified, the default value **Visibility.ALL** is used.
 
-**Type:** Visibility
+**Type:** [Visibility](arkts-arkdata-unifieddatachannel-visibility-e.md)
 
 **Since:** 20
 

@@ -22,7 +22,7 @@ addresses: Array<LinkAddress>
 
 IP address of the vNIC.
 
-**Type:** Array&lt;LinkAddress&gt;
+**Type:** Array&lt;[LinkAddress](arkts-network-vpn-linkaddress-t.md)&gt;
 
 **Since:** 10
 
@@ -150,7 +150,7 @@ routes?: Array<RouteInfo>
 
 Route information of the vNIC.
 
-**Type:** Array&lt;RouteInfo&gt;
+**Type:** Array&lt;[RouteInfo](arkts-network-vpn-routeinfo-t.md)&gt;
 
 **Since:** 10
 

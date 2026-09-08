@@ -58,7 +58,7 @@ type: ControlType
 
 Indicates the control type.
 
-**Type:** ControlType
+**Type:** [ControlType](arkts-connectivity-connection-controltype-e-sys.md)
 
 **Since:** 15
 

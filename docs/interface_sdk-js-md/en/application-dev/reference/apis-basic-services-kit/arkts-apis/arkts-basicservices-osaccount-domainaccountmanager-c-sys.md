@@ -34,7 +34,7 @@ Authenticates a domain account.
 | --- | --- | --- | --- |
 | domainAccountInfo | [DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i.md) | Yes | Domain account information. |
 | credential | Uint8Array | Yes | Credentials of the domain account. |
-| callback | IUserAuthCallback | Yes | Callback used to return the authentication result. |
+| callback | [IUserAuthCallback](arkts-basicservices-osaccount-iuserauthcallback-i-sys.md) | Yes | Callback used to return the authentication result. |
 
 **Error codes:**
 
@@ -58,54 +58,6 @@ Authenticates a domain account.
 | 12300211 | Server unreachable. |
 
 **Examples**
-
-```TypeScript
-import { AsyncCallback, BusinessError } from '@kit.BasicServicesKit';
-
-let plugin: osAccount.DomainPlugin = {
-  auth: (domainAccountInfo: osAccount.DomainAccountInfo, credential: Uint8Array,
-        callback: osAccount.IUserAuthCallback) => {
-    // mock authentication
-    // notify authentication result
-    let result: osAccount.AuthResult = {
-      token: new Uint8Array([0]),
-      remainTimes: 5,
-      freezingTime: 0
-    };
-    callback.onResult(0, result);
-  },
-  authWithPopup: (domainAccountInfo: osAccount.DomainAccountInfo,
-                  callback: osAccount.IUserAuthCallback) => {},
-  authWithToken: (domainAccountInfo: osAccount.DomainAccountInfo, token: Uint8Array,
-                  callback: osAccount.IUserAuthCallback) => {},
-  getAccountInfo: (options: osAccount.GetDomainAccountInfoPluginOptions,
-                  callback: AsyncCallback<osAccount.DomainAccountInfo>) => {},
-  getAuthStatusInfo: (domainAccountInfo: osAccount.DomainAccountInfo,
-                    callback: AsyncCallback<osAccount.AuthStatusInfo>) => {},
-  bindAccount: (domainAccountInfo: osAccount.DomainAccountInfo, localId: number,
-                callback: AsyncCallback<void>) => {},
-  unbindAccount: (domainAccountInfo: osAccount.DomainAccountInfo, callback: AsyncCallback<void>) => {},
-  isAccountTokenValid: (domainAccountInfo: osAccount.DomainAccountInfo, token: Uint8Array,
-                        callback: AsyncCallback<boolean>) => {},
-  getAccessToken: (options: osAccount.GetDomainAccessTokenOptions, callback: AsyncCallback<Uint8Array>) => {}
-}
-osAccount.DomainAccountManager.registerPlugin(plugin);
-let userAuth = new osAccount.UserAuth();
-let challenge: Uint8Array = new Uint8Array([0]);
-let authType: osAccount.AuthType = osAccount.AuthType.DOMAIN;
-let authTrustLevel: osAccount.AuthTrustLevel = osAccount.AuthTrustLevel.ATL1;
-try {
-  userAuth.auth(challenge, authType, authTrustLevel, {
-    onResult: (resultCode: number, authResult: osAccount.AuthResult) => {
-        console.info('auth resultCode = ' + resultCode);
-        console.info('auth authResult = ' + JSON.stringify(authResult));
-    }
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`auth exception = code is ${err.code}, message is ${err.message}`);
-}
-```
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -155,7 +107,7 @@ Authenticates a specified domain account. You can specify authentication options
 | domainAccountInfo | [DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i.md) | Yes | Domain account information. |
 | credential | Uint8Array | Yes | Credentials of the domain account. |
 | options | [DomainAccountAuthOptions](arkts-basicservices-osaccount-domainaccountauthoptions-i-sys.md) | Yes | Options for domain account authentication. |
-| callback | IUserAuthCallback | Yes | Callback used to return the authentication result. |
+| callback | [IUserAuthCallback](arkts-basicservices-osaccount-iuserauthcallback-i-sys.md) | Yes | Callback used to return the authentication result. |
 
 **Error codes:**
 
@@ -229,7 +181,7 @@ Authenticates a domain account in a pop-up window.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | IUserAuthCallback | Yes | Callback used to return the authentication result. |
+| callback | [IUserAuthCallback](arkts-basicservices-osaccount-iuserauthcallback-i-sys.md) | Yes | Callback used to return the authentication result. |
 
 **Error codes:**
 
@@ -291,7 +243,7 @@ Authenticates a domain account in a pop-up window.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | localId | number | Yes | Local ID of the OS account bound to the domain account. |
-| callback | IUserAuthCallback | Yes | Callback used to return the authentication result. |
+| callback | [IUserAuthCallback](arkts-basicservices-osaccount-iuserauthcallback-i-sys.md) | Yes | Callback used to return the authentication result. |
 
 **Error codes:**
 

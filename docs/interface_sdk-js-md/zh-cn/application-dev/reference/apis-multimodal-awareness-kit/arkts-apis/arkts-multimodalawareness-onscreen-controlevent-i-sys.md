@@ -22,7 +22,7 @@ eventType: EventType
 
 控制事件类型。
 
-**类型：** EventType
+**类型：** [EventType](arkts-multimodalawareness-onscreen-eventtype-e-sys.md)
 
 **起始版本：** 20
 

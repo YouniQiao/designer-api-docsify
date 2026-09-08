@@ -30,7 +30,7 @@ abilityState: abilityManager.AbilityState
 
 Ability的状态。
 
-**类型：** abilityManager.AbilityState
+**类型：** [abilityManager.AbilityState](arkts-ability-abilitymanager-abilitystate-e.md)
 
 **默认值：** Enumerates state of the ability state info
 

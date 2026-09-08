@@ -31,7 +31,7 @@ A constructor used to create a text baseline offset style.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | LengthMetrics | Yes | Text baseline offset options. This API does not work if **unit** of **LengthMetrics** is percent. |
+| value | [LengthMetrics](arkts-arkui-lengthmetrics-t.md) | Yes | Text baseline offset options. This API does not work if **unit** of **LengthMetrics** is percent. |
 
 ## baselineOffset
 

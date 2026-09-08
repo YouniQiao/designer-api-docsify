@@ -60,7 +60,7 @@ endpoints: Array<USBEndpoint>
 
 当前接口所包含的端点。
 
-**类型：** Array&lt;USBEndpoint&gt;
+**类型：** Array&lt;[USBEndpoint](arkts-basicservices-usb-usbendpoint-i.md)&gt;
 
 **起始版本：** 8
 

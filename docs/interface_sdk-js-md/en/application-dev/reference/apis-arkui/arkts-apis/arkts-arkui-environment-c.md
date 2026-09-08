@@ -100,6 +100,7 @@ It is incorrect to use AppStorage to read environment variables without calling 
 **Examples**
 
 For details about how to use envProp, see [Accessing Environment Parameters from the UI](../../../ui/state-management/arkts-environment.md#accessing-environment-parameters-from-the-ui).
+- simpleType:
 
 ## EnvProps
 
@@ -191,10 +192,6 @@ Returns the property key array of environment variables.
 **Examples**
 
 ```TypeScript
-let keys: Array<string> = PersistentStorage.Keys();
-```
-
-```TypeScript
 Environment.EnvProps([{ key: 'accessibilityEnabled', defaultValue: 'default' }, {
   key: 'languageCode',
   defaultValue: 'en'
@@ -224,10 +221,6 @@ Returns the property key array of environment variables.
 | Array&lt;string&gt; | Property key array of environment variables. |
 
 **Examples**
-
-```TypeScript
-let keys: Array<string> = PersistentStorage.keys();
-```
 
 ```TypeScript
 Environment.envProps([{ key: 'accessibilityEnabled', defaultValue: 'default' }, {

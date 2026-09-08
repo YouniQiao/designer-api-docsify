@@ -200,13 +200,13 @@ recover(signatureData: DataBlob): Promise<DataBlob | null>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| signatureData | DataBlob | 是 | 签名数据。 |
+| signatureData | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | 是 | 签名数据。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;DataBlob \| null&gt; | Promise对象，返回从签名中恢复的原始数据。 |
+| Promise&lt;[DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) \| null&gt; | Promise对象，返回从签名中恢复的原始数据。 |
 
 **错误码：**
 
@@ -320,13 +320,13 @@ recoverSync(signatureData: DataBlob): DataBlob | null
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| signatureData | DataBlob | 是 | 签名数据。 |
+| signatureData | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | 是 | 签名数据。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| DataBlob \| null | 恢复的数据。 |
+| [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) \| null | 恢复的数据。 |
 
 **错误码：**
 
@@ -536,7 +536,7 @@ update(data: DataBlob, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| data | DataBlob | 是 | 传入的消息。 |
+| data | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | 是 | 传入的消息。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当验签更新成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
@@ -587,7 +587,7 @@ update(data: DataBlob): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| data | DataBlob | 是 | 传入的消息。 |
+| data | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | 是 | 传入的消息。 |
 
 **返回值：**
 
@@ -643,7 +643,7 @@ updateSync(data: DataBlob): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| data | DataBlob | 是 | 传入的消息。 |
+| data | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | 是 | 传入的消息。 |
 
 **错误码：**
 
@@ -675,8 +675,8 @@ verify(data: DataBlob, signatureData: DataBlob, callback: AsyncCallback<boolean>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| data | DataBlob | 是 | 待验签的数据。 |
-| signatureData | DataBlob | 是 | 签名数据。 |
+| data | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | 是 | 待验签的数据。 |
+| signatureData | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | 是 | 签名数据。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。返回true表示验签通过；返回false表示验签失败。 |
 
 **错误码：**
@@ -709,8 +709,8 @@ verify(data: DataBlob | null, signatureData: DataBlob, callback: AsyncCallback<b
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| data | DataBlob \| null | 是 | 传入的消息。API 10之前只支持DataBlob， API 10之后增加支持null。 |
-| signatureData | DataBlob | 是 | 签名数据。 |
+| data | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) \| null | 是 | 传入的消息。API 10之前只支持DataBlob， API 10之后增加支持null。 |
+| signatureData | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | 是 | 签名数据。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。返回true表示验签通过；返回false表示验签不通过。 |
 
 **错误码：**
@@ -743,8 +743,8 @@ verify(data: DataBlob, signatureData: DataBlob): Promise<boolean>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| data | DataBlob | 是 | 待验签的数据。 |
-| signatureData | DataBlob | 是 | 签名数据。 |
+| data | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | 是 | 待验签的数据。 |
+| signatureData | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | 是 | 签名数据。 |
 
 **返回值：**
 
@@ -782,8 +782,8 @@ verify(data: DataBlob | null, signatureData: DataBlob): Promise<boolean>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| data | DataBlob \| null | 是 | 传入的消息。API 10之前只支持DataBlob， API 10之后增加支持null。 |
-| signatureData | DataBlob | 是 | 签名数据。 |
+| data | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) \| null | 是 | 传入的消息。API 10之前只支持DataBlob， API 10之后增加支持null。 |
+| signatureData | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | 是 | 签名数据。 |
 
 **返回值：**
 
@@ -821,8 +821,8 @@ verifySync(data: DataBlob | null, signatureData: DataBlob): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| data | DataBlob \| null | 是 | 传入的消息。 |
-| signatureData | DataBlob | 是 | 签名数据。 |
+| data | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) \| null | 是 | 传入的消息。 |
+| signatureData | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | 是 | 签名数据。 |
 
 **返回值：**
 

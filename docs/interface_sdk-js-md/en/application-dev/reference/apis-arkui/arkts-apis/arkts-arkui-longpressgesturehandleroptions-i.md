@@ -1,6 +1,6 @@
 # LongPressGestureHandlerOptions
 
-Provides the parameters of the number press gesture handler. Inherits from [BaseHandlerOptions](arkts-arkui-basehandleroptions-i.md).
+Provides the parameters of the long press gesture handler. Inherits from [BaseHandlerOptions](arkts-arkui-basehandleroptions-i.md).
 
 **Inheritance/Implementation:** LongPressGestureHandlerOptions extends [BaseHandlerOptions](arkts-arkui-basehandleroptions-i.md)
 
@@ -19,7 +19,7 @@ Provides the parameters of the number press gesture handler. Inherits from [Base
 allowableMovement?: number
 ```
 
-Maximum movement distance recognized by the number press gesture recognizer, in px.
+Maximum movement distance recognized by the long press gesture recognizer, in px.
 
 Default value: **15**
 
@@ -65,7 +65,7 @@ Value range: [0, +∞). If the value is less than or equal to 0, the default val
 fingers?: number
 ```
 
-Minimum number of fingers to trigger a number press gesture. The value ranges from 1 to 10.
+Minimum number of fingers to trigger a long press gesture. The value ranges from 1 to 10.
 
 Default value: **1**
 

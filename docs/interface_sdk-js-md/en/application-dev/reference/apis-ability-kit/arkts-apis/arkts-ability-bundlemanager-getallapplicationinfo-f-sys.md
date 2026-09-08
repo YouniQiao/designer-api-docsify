@@ -27,7 +27,7 @@ Obtains all the application information in the system based on the given applica
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | appFlags | number | Yes | Type of the application information to obtain. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;ApplicationInfo&gt;&gt; | Yes | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md) used to return the result. If the operation is successful, **err** is **null** and **data** is the array of application information obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[ApplicationInfo](arkts-ability-bundlemanager-applicationinfo-t.md)&gt;&gt; | Yes | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md) used to return the result. If the operation is successful, **err** is **null** and **data** is the array of application information obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -84,7 +84,7 @@ Obtains all the application information in the system based on the given applica
 | --- | --- | --- | --- |
 | appFlags | number | Yes | Type of the application information to obtain. |
 | userId | number | Yes | User ID, which can be obtained by calling [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid). |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;ApplicationInfo&gt;&gt; | Yes | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md) used to return the result. If the operation is successful, **err** is **null** and **data** is the array of application information obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[ApplicationInfo](arkts-ability-bundlemanager-applicationinfo-t.md)&gt;&gt; | Yes | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md) used to return the result. If the operation is successful, **err** is **null** and **data** is the array of application information obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -147,7 +147,7 @@ Obtains all the application information in the system based on the given applica
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;ApplicationInfo&gt;&gt; | Promise used to return the array of application information obtained. |
+| Promise&lt;Array&lt;[ApplicationInfo](arkts-ability-bundlemanager-applicationinfo-t.md)&gt;&gt; | Promise used to return the array of application information obtained. |
 
 **Error codes:**
 

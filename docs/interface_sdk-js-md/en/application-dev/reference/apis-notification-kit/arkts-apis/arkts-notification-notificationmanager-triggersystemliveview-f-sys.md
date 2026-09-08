@@ -26,9 +26,9 @@ Triggers a system live view notification. This API uses a promise to return the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundle | BundleOption | Yes | Bundle information of the application. |
+| bundle | [BundleOption](arkts-notification-notificationmanager-bundleoption-t.md) | Yes | Bundle information of the application. |
 | notificationId | number | Yes | Notification ID. |
-| buttonOptions | ButtonOptions | Yes | Button information. |
+| buttonOptions | [ButtonOptions](arkts-notification-notificationmanager-buttonoptions-i-sys.md) | Yes | Button information. |
 
 **Return value:**
 

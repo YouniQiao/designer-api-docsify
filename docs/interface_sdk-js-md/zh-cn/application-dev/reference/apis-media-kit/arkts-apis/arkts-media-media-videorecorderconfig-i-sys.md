@@ -1,6 +1,8 @@
 # VideoRecorderConfig（系统接口）
 
-视频录制配置定义。
+表示视频录制的参数设置。
+
+通过audioSourceType和videoSourceType区分纯视频录制和音视频录制（纯音频录制请使用[AVRecorder](arkts-media-media-avrecorder-i.md)或[AudioRecorder](arkts-media-media-audiorecorder-i.md)）。纯视频录制时，仅需要设置videoSourceType；音视频录制时，audioSourceType和videoSourceType均需要设置。
 
 **起始版本：** 9
 
@@ -20,7 +22,7 @@ import { media } from '@kit.MediaKit';
 audioSourceType?: AudioSourceType
 ```
 
-音频源类型，详见AudioSourceType。
+视频录制的音频源类型，选择音频录制时必填。
 
 **类型：** [AudioSourceType](arkts-media-media-audiosourcetype-e.md)
 
@@ -36,9 +38,9 @@ audioSourceType?: AudioSourceType
 location?: Location
 ```
 
-地理位置信息。
+录制视频的地理位置，默认不记录地理位置信息。
 
-**类型：** Location
+**类型：** [Location](arkts-media-media-location-i.md)
 
 **起始版本：** 9
 
@@ -52,7 +54,7 @@ location?: Location
 profile: VideoRecorderProfile
 ```
 
-视频录制配置参数，可通过getVideoRecorderProfile获取，详见VideoRecorderProfile。
+视频录制的profile。
 
 **类型：** [VideoRecorderProfile](arkts-media-media-videorecorderprofile-i-sys.md)
 
@@ -68,7 +70,7 @@ profile: VideoRecorderProfile
 rotation?: number
 ```
 
-设置视频输出文件中的旋转角度，用于文件播放。仅mp4格式支持。旋转角度取值为{0, 90, 180, 270}，默认值为0。
+录制的视频旋转角度，单位为度（°）。仅支持0°、90°、180°和270°，默认值为0°。
 
 **类型：** number
 
@@ -84,7 +86,7 @@ rotation?: number
 url: string
 ```
 
-视频输出URI。支持两种URI格式。格式：scheme + "://" + "context"。fd格式：fd://fd
+视频输出URL：fd://xx&nbsp;(fd&nbsp;number)
 
 **类型：** string
 
@@ -100,7 +102,7 @@ url: string
 videoSourceType: VideoSourceType
 ```
 
-视频源类型，详见VideoSourceType。
+视频录制的视频源类型。
 
 **类型：** [VideoSourceType](arkts-media-media-videosourcetype-e.md)
 

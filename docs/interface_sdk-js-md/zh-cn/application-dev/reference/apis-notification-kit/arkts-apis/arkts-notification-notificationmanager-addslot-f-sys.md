@@ -26,7 +26,7 @@ function addSlot(slot: NotificationSlot, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| slot | NotificationSlot | 是 | 要创建的通知渠道对象。 |
+| slot | [NotificationSlot](arkts-notification-notificationmanager-notificationslot-t.md) | 是 | 要创建的通知渠道对象。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 表示被指定通道的回调方法。 |
 
 **错误码：**
@@ -82,7 +82,7 @@ function addSlot(slot: NotificationSlot): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| slot | NotificationSlot | 是 | 要创建的通知渠道对象。 |
+| slot | [NotificationSlot](arkts-notification-notificationmanager-notificationslot-t.md) | 是 | 要创建的通知渠道对象。 |
 
 **返回值：**
 

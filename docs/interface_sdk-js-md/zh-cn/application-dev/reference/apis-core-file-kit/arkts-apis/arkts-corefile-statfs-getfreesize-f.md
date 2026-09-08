@@ -42,7 +42,7 @@ function getFreeSize(path: string): Promise<number>
 | 13900012 | Permission denied |
 | 13900013 | Bad address |
 | 13900018 | Not a directory |
-| 13900030 | File name too number |
+| 13900030 | File name too long |
 | 13900031 | Function not implemented |
 | 13900033 | Too many symbolic links encountered |
 | 13900038 | Value too large for defined data type |
@@ -96,7 +96,7 @@ function getFreeSize(path: string, callback: AsyncCallback<number>): void
 | 13900012 | Permission denied |
 | 13900013 | Bad address |
 | 13900018 | Not a directory |
-| 13900030 | File name too number |
+| 13900030 | File name too long |
 | 13900031 | Function not implemented |
 | 13900033 | Too many symbolic links encountered |
 | 13900038 | Value too large for defined data type |

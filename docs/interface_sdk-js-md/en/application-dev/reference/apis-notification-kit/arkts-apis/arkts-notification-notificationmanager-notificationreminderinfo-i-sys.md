@@ -22,7 +22,7 @@ bundle: BundleOption
 
 Bundle information of the application.
 
-**Type:** BundleOption
+**Type:** [BundleOption](arkts-notification-notificationmanager-bundleoption-t.md)
 
 **Since:** 21
 

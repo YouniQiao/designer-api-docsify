@@ -48,7 +48,7 @@ pixelMap: image.PixelMap
 
 Pixel map. The minimum size is subject to the minimum limit of the image. The maximum size is 256 x 256 px.
 
-**Type:** image.PixelMap
+**Type:** [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)
 
 **Since:** 15
 

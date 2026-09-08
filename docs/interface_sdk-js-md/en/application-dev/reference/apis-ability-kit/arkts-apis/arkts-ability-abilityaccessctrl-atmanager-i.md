@@ -39,7 +39,7 @@ Applicable to scenarios where a pre-permission check is performed before an app 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;GrantStatus&gt; | Promise used to return the authorization status result. |
+| Promise&lt;[GrantStatus](arkts-ability-abilityaccessctrl-grantstatus-e.md)&gt; | Promise used to return the authorization status result. |
 
 **Error codes:**
 
@@ -99,7 +99,7 @@ Applicable to scenarios where a pre-permission check is performed before an app 
 
 | Type | Description |
 | --- | --- |
-| GrantStatus | Permission grant state. |
+| [GrantStatus](arkts-ability-abilityaccessctrl-grantstatus-e.md) | Permission grant state. |
 
 **Error codes:**
 
@@ -451,7 +451,7 @@ Before calling this API, the app needs to call [requestPermissionsFromUser](#req
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;GrantStatus&gt;&gt; | Promise used to return an array of authorization statuses. Each element in the array corresponds to the authorization result of the respective permission in permissionList. |
+| Promise&lt;Array&lt;[GrantStatus](arkts-ability-abilityaccessctrl-grantstatus-e.md)&gt;&gt; | Promise used to return an array of authorization statuses. Each element in the array corresponds to the authorization result of the respective permission in permissionList. |
 
 **Error codes:**
 
@@ -509,6 +509,7 @@ If the user denies authorization, the authorization dialog box cannot be brought
 **Examples**
 
 For details about how to obtain the context in the example, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+For details about the process and example of applying for user authorization, see [Requesting User Authorization](../../../security/AccessToken/request-user-authorization.md).
 
 ```TypeScript
 import { abilityAccessCtrl, Context, PermissionRequestResult, common } from '@kit.AbilityKit';
@@ -576,6 +577,7 @@ If the user denies authorization, the authorization dialog box cannot be brought
 **Examples**
 
 For details about how to obtain the context in the example, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+For details about the process and example of applying for user authorization, see [Requesting User Authorization](../../../security/AccessToken/request-user-authorization.md).
 
 ```TypeScript
 import { abilityAccessCtrl, Context, PermissionRequestResult, common } from '@kit.AbilityKit';
@@ -625,7 +627,7 @@ Applicable to scenarios where a pre-permission check is performed before an app 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;GrantStatus&gt; | Promise used to return the authorization status result. |
+| Promise&lt;[GrantStatus](arkts-ability-abilityaccessctrl-grantstatus-e.md)&gt; | Promise used to return the authorization status result. |
 
 **Examples**
 
@@ -680,7 +682,7 @@ Verifies whether an app has been granted the specified permission. After the cal
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;GrantStatus&gt; | Promise used to return the authorization status result. |
+| Promise&lt;[GrantStatus](arkts-ability-abilityaccessctrl-grantstatus-e.md)&gt; | Promise used to return the authorization status result. |
 
 **Examples**
 
@@ -731,7 +733,7 @@ It is recommended to use [checkAccessTokenSync](#checkaccesstokensync) instead.
 
 | Type | Description |
 | --- | --- |
-| GrantStatus | Permission grant state. |
+| [GrantStatus](arkts-ability-abilityaccessctrl-grantstatus-e.md) | Permission grant state. |
 
 **Error codes:**
 

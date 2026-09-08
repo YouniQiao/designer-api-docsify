@@ -20,7 +20,7 @@ uiExtensionHostWindowProxyRect: window.Rect
 
 组件（EmbeddedComponent或UIExtensionComponent）的位置和宽高。
 
-**类型：** window.Rect
+**类型：** [window.Rect](arkts-arkui-window-rect-i.md)
 
 **起始版本：** 14
 

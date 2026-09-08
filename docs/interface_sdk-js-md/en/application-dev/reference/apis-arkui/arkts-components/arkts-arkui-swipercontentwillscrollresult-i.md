@@ -37,7 +37,7 @@ Index of the page that will be displayed in the scroll direction.
 currentIndex: number
 ```
 
-Index of the current page. During a finger swipe, this value remains constant as number as the finger is on the screen, even if the page has completely moved out of view.
+Index of the current page. During a finger swipe, this value remains constant as long as the finger is on the screen, even if the page has completely moved out of view.
 
 **Type:** number
 

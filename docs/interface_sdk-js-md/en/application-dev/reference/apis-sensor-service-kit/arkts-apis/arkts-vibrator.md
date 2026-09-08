@@ -45,7 +45,7 @@ import { vibrator } from '@kit.SensorServiceKit';
 
 | Name | Description |
 | --- | --- |
-| [VibratorPatternBuilder](arkts-sensorservice-vibrator-vibratorpatternbuilder-c.md) | Provide methods for adding number or short vibration events and generate VibratorPattern objects. |
+| [VibratorPatternBuilder](arkts-sensorservice-vibrator-vibratorpatternbuilder-c.md) | Provide methods for adding long or short vibration events and generate VibratorPattern objects. |
 
 ### Interfaces
 

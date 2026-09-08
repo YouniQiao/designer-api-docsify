@@ -18,7 +18,7 @@ import { intl } from '@kit.LocalizationKit';
 compactDisplay?: string
 ```
 
-紧凑显示格式，取值包括："number", "short"。
+紧凑显示格式，取值包括："long", "short"。
 
 默认值：short。
 
@@ -406,7 +406,7 @@ unit?: string
 unitDisplay?: string
 ```
 
-单位的显示格式（需设置style为unit），取值包括："number", "short", "narrow"。
+单位的显示格式（需设置style为unit），取值包括："long", "short", "narrow"。
 
 默认值：short。
 

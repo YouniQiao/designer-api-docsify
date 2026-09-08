@@ -98,7 +98,7 @@ parentWindowStatusChangeCallback?: Callback<WindowStatusType>
 
 Callback triggered when the parent window mode changes. The callback is triggered immediately after the binding, and notifications are sent when the parent window mode changes. By default, this parameter is not passed, and notifications about the parent window mode changes cannot be received.
 
-**Type:** [Callback](arkts-arkui-window-callback-i.md)&lt;WindowStatusType&gt;
+**Type:** [Callback](arkts-arkui-window-callback-i.md)&lt;[WindowStatusType](arkts-arkui-window-windowstatustype-e.md)&gt;
 
 **Since:** 24
 

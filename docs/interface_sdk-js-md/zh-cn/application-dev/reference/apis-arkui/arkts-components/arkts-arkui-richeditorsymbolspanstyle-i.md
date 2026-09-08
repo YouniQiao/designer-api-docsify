@@ -63,7 +63,7 @@ number类型取值范围：(0, +∞)，设置为0时显示默认字体大小。
 
 默认值：跟随主题。
 
-**类型：** number \| string \| Resource
+**类型：** number \| string \| [Resource](../arkts-apis/arkts-arkui-resource-t.md)
 
 **起始版本：** 11
 
@@ -87,7 +87,7 @@ string类型仅支持number类型取值的字符串形式，例如“400”，�
 
 默认值：FontWeight.Normal。
 
-**类型：** number \| FontWeight \| string
+**类型：** number \| [FontWeight](../arkts-apis/arkts-arkui-fontweight-e.md) \| string
 
 **起始版本：** 11
 

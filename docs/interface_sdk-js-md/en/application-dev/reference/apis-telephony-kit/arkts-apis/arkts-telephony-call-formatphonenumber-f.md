@@ -25,7 +25,7 @@ A formatted phone number is a standard numeric string, for example, 555 0100.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | phoneNumber | string | Yes | Phone number. |
-| options | NumberFormatOptions | Yes | Number formatting options, for example, country code. |
+| options | [NumberFormatOptions](arkts-telephony-call-numberformatoptions-i.md) | Yes | Number formatting options, for example, country code. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
@@ -75,7 +75,7 @@ A formatted phone number is a standard numeric string, for example, 555 0100.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | phoneNumber | string | Yes | Phone number. |
-| options | NumberFormatOptions | No | Number formatting options, for example, country code. |
+| options | [NumberFormatOptions](arkts-telephony-call-numberformatoptions-i.md) | No | Number formatting options, for example, country code. |
 
 **Return value:**
 

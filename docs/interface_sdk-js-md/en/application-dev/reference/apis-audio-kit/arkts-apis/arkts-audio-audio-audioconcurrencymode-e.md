@@ -2,7 +2,7 @@
 
 Enumerates the audio concurrency modes.
 
-@enum { number } [since 12 - 24]
+@enum { int } [since 12 - 24]
 
 **Since:** 12
 

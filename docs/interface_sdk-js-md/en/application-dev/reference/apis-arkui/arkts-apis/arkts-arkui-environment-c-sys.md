@@ -40,10 +40,3 @@ Constructor.
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
-
-**Examples**
-
-```TypeScript
-let initialData: Record<string, number> = { 'PropA': 47 };
-let storage: LocalStorage = new LocalStorage(initialData);
-```

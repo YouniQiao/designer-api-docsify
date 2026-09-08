@@ -22,8 +22,8 @@ Transforms pixelmap from unpremultiplied alpha format to premultiplied alpha for
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| src | PixelMap | 是 | The source pixelmap. |
-| dst | PixelMap | 是 | The destination pixelmap. |
+| src | [PixelMap](arkts-image-image-pixelmap-i.md) | 是 | The source pixelmap. |
+| dst | [PixelMap](arkts-image-image-pixelmap-i.md) | 是 | The destination pixelmap. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | Callback used to return the operation result. If the operation fails, an error message is returned. |
 
 **错误码：**
@@ -80,8 +80,8 @@ Transforms pixelmap from premultiplied alpha format to unpremultiplied alpha for
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| src | PixelMap | 是 | The source pixelMap. |
-| dst | PixelMap | 是 | The destination pixelmap. |
+| src | [PixelMap](arkts-image-image-pixelmap-i.md) | 是 | The source pixelMap. |
+| dst | [PixelMap](arkts-image-image-pixelmap-i.md) | 是 | The destination pixelmap. |
 
 **返回值：**
 

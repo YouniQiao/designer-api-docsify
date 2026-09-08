@@ -26,7 +26,7 @@ Finish background load task.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| taskInfo | TaskInfo | Yes |  |
+| taskInfo | [TaskInfo](arkts-backgroundtasks-backgroundloader-taskinfo-i.md) | Yes |  |
 
 **Error codes:**
 

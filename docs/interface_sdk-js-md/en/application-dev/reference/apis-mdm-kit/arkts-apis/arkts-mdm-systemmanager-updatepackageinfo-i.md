@@ -52,7 +52,7 @@ packages: Array<Package>
 
 Details about the system update packages.
 
-**Type:** Array&lt;Package&gt;
+**Type:** Array&lt;[Package](arkts-mdm-systemmanager-package-i.md)&gt;
 
 **Since:** 12
 

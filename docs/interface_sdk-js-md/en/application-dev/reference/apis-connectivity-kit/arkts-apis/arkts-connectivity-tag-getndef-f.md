@@ -30,7 +30,7 @@ Obtains an **NdefTag** object, which allows access to NFC Data Exchange Format (
 
 | Type | Description |
 | --- | --- |
-| NdefTag | NdefTag** object obtained. |
+| [NdefTag](arkts-connectivity-tag-ndeftag-t.md) | NdefTag** object obtained. |
 
 **Error codes:**
 

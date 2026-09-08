@@ -20,7 +20,7 @@ geofence: Geofence
 
 表示围栏信息。
 
-**类型：** Geofence
+**类型：** [Geofence](arkts-location-geolocationmanager-geofence-i.md)
 
 **起始版本：** 9
 
@@ -34,7 +34,7 @@ scenario: LocationRequestScenario
 
 表示定位场景。
 
-**类型：** LocationRequestScenario
+**类型：** [LocationRequestScenario](arkts-location-geolocationmanager-locationrequestscenario-e.md)
 
 **起始版本：** 9
 

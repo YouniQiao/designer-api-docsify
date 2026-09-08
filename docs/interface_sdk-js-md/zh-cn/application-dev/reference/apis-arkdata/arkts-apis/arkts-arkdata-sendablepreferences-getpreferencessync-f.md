@@ -27,13 +27,13 @@ function getPreferencesSync(context: Context, options: Options): Preferences
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | context | Context | 是 | 应用上下文。 |
-| options | Options | 是 | 与Preferences实例相关的配置选项。 |
+| options | [Options](arkts-arkdata-sendablepreferences-options-i.md) | 是 | 与Preferences实例相关的配置选项。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Preferences | 返回Preferences实例。 |
+| [Preferences](arkts-arkdata-sendablepreferences-preferences-i.md) | 返回Preferences实例。 |
 
 **错误码：**
 

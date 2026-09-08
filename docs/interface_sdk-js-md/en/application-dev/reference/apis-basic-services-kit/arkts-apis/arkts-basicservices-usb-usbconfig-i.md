@@ -60,7 +60,7 @@ interfaces: Array<USBInterface>
 
 Supported interface attributes.
 
-**Type:** Array&lt;USBInterface&gt;
+**Type:** Array&lt;[USBInterface](arkts-basicservices-usb-usbinterface-i.md)&gt;
 
 **Since:** 8
 

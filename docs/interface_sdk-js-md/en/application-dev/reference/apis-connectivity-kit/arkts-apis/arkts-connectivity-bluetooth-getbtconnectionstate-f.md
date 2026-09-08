@@ -28,7 +28,7 @@ Get the local device connection state to any profile of any remote device.
 
 | Type | Description |
 | --- | --- |
-| ProfileConnectionState | One of { |
+| [ProfileConnectionState](arkts-connectivity-bluetooth-profileconnectionstate-e.md) | One of { |
 
 **Examples**
 

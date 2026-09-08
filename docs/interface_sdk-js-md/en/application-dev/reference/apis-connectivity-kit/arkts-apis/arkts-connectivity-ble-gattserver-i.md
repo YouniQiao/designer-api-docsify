@@ -36,7 +36,7 @@ The added service and its characteristics are provided by the local device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| service | GattService | Yes | Indicates the service to add. |
+| service | [GattService](arkts-connectivity-ble-gattservice-i.md) | Yes | Indicates the service to add. |
 
 **Error codes:**
 
@@ -123,16 +123,6 @@ try {
 }
 ```
 
-```TypeScript
-import { AsyncCallback, BusinessError } from '@kit.BasicServicesKit';
-try {
-    let device: ble.GattClientDevice = ble.createGattClientDevice('XX:XX:XX:XX:XX:XX');
-    device.close();
-} catch (err) {
-    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-}
-```
-
 ## connect
 
 ```TypeScript
@@ -168,18 +158,6 @@ Connects to a BLE central device.
 | 2900003 | Bluetooth disabled. |
 | 2900099 | Operation failed. |
 
-**Examples**
-
-```TypeScript
-import { AsyncCallback, BusinessError } from '@kit.BasicServicesKit';
-try {
-    let device: ble.GattClientDevice = ble.createGattClientDevice('XX:XX:XX:XX:XX:XX');
-    device.connect();
-} catch (err) {
-    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-}
-```
-
 ## disconnect
 
 ```TypeScript
@@ -214,18 +192,6 @@ Disconnects from or stops an ongoing connection to a BLE central device.
 | 2900003 | Bluetooth disabled. |
 | 2900099 | Operation failed. |
 
-**Examples**
-
-```TypeScript
-import { AsyncCallback, BusinessError } from '@kit.BasicServicesKit';
-try {
-    let device: ble.GattClientDevice = ble.createGattClientDevice('XX:XX:XX:XX:XX:XX');
-    device.disconnect();
-} catch (err) {
-    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-}
-```
-
 ## getConnectedState
 
 ```TypeScript
@@ -252,7 +218,7 @@ Get the connection state of a specific device.
 
 | Type | Description |
 | --- | --- |
-| ProfileConnectionState | Connection state. |
+| [ProfileConnectionState](arkts-connectivity-ble-profileconnectionstate-t.md) | Connection state. |
 
 **Error codes:**
 
@@ -303,7 +269,7 @@ Obtain a specific GATT service by using a UUID.
 
 | Type | Description |
 | --- | --- |
-| GattService | The GATT service has been obtained. |
+| [GattService](arkts-connectivity-ble-gattservice-i.md) | The GATT service has been obtained. |
 
 **Error codes:**
 
@@ -353,7 +319,7 @@ Obtain the list of GATT services registered by the application.
 
 | Type | Description |
 | --- | --- |
-| GattService[] | The list of GATT service has been obtained. |
+| [GattService](arkts-connectivity-ble-gattservice-i.md)[] | The list of GATT service has been obtained. |
 
 **Error codes:**
 
@@ -410,7 +376,7 @@ This method should be called for every BLE peripheral device that has requested 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | deviceId | string | Yes | Indicates device ID. For example, "11:22:33:AA:BB:FF". |
-| notifyCharacteristic | NotifyCharacteristic | Yes | Indicates the local characteristic that has changed. |
+| notifyCharacteristic | [NotifyCharacteristic](arkts-connectivity-ble-notifycharacteristic-i.md) | Yes | Indicates the local characteristic that has changed. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
@@ -474,7 +440,7 @@ This method should be called for every BLE peripheral device that has requested 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | deviceId | string | Yes | Indicates device ID. For example, "11:22:33:AA:BB:FF". |
-| notifyCharacteristic | NotifyCharacteristic | Yes | Indicates the local characteristic that has changed. |
+| notifyCharacteristic | [NotifyCharacteristic](arkts-connectivity-ble-notifycharacteristic-i.md) | Yes | Indicates the local characteristic that has changed. |
 
 **Return value:**
 
@@ -537,7 +503,7 @@ Unsubscribe characteristic read event.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'characteristicRead' | Yes | Type of the characteristic read event to listen for. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;CharacteristicReadRequest&gt; | No | Callback used to listen for the characteristic read event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CharacteristicReadRequest](arkts-connectivity-ble-characteristicreadrequest-i.md)&gt; | No | Callback used to listen for the characteristic read event. |
 
 **Error codes:**
 
@@ -582,7 +548,7 @@ Unsubscribe characteristic write event.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'characteristicWrite' | Yes | Type of the characteristic write event to listen for. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;CharacteristicWriteRequest&gt; | No | Callback used to listen for the characteristic write event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CharacteristicWriteRequest](arkts-connectivity-ble-characteristicwriterequest-i.md)&gt; | No | Callback used to listen for the characteristic write event. |
 
 **Error codes:**
 
@@ -627,7 +593,7 @@ Unsubscribe descriptor read event.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'descriptorRead' | Yes | Type of the descriptor read event to listen for. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DescriptorReadRequest&gt; | No | Callback used to listen for the descriptor read event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DescriptorReadRequest](arkts-connectivity-ble-descriptorreadrequest-i.md)&gt; | No | Callback used to listen for the descriptor read event. |
 
 **Error codes:**
 
@@ -672,7 +638,7 @@ Unsubscribe descriptor write event.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'descriptorWrite' | Yes | Type of the descriptor write event to listen for. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DescriptorWriteRequest&gt; | No | Callback used to listen for the descriptor write event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DescriptorWriteRequest](arkts-connectivity-ble-descriptorwriterequest-i.md)&gt; | No | Callback used to listen for the descriptor write event. |
 
 **Error codes:**
 
@@ -825,18 +791,6 @@ try {
 }
 ```
 
-```TypeScript
-function BlePhyCallback(data:ble.PhyValue) {
-    console.info(`txPhy: ${data.txPhy}, rxPhy: ${data.rxPhy}`);
-}
-let gattClient: ble.GattClientDevice = ble.createGattClientDevice('XX:XX:XX:XX:XX:XX');
-try {
-    gattClient.offBlePhyUpdate(BlePhyCallback);
-} catch (err) {
-    console.error(`errCode: ${err.code}, errMessage: ${err.message}`);
-}
-```
-
 ## on('characteristicRead')
 
 ```TypeScript
@@ -863,7 +817,7 @@ Subscribe characteristic read event. On API 26.0.0 and above, if the application
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'characteristicRead' | Yes | Type of the characteristic read event to listen for. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;CharacteristicReadRequest&gt; | Yes | Callback used to listen for the characteristic read event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CharacteristicReadRequest](arkts-connectivity-ble-characteristicreadrequest-i.md)&gt; | Yes | Callback used to listen for the characteristic read event. |
 
 **Error codes:**
 
@@ -924,7 +878,7 @@ Subscribe characteristic write event. On API 26.0.0 and above, if the applicatio
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'characteristicWrite' | Yes | Type of the characteristic write event to listen for. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;CharacteristicWriteRequest&gt; | Yes | Callback used to listen for the characteristic write event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CharacteristicWriteRequest](arkts-connectivity-ble-characteristicwriterequest-i.md)&gt; | Yes | Callback used to listen for the characteristic write event. |
 
 **Error codes:**
 
@@ -988,7 +942,7 @@ Subscribe descriptor read event. On API 26.0.0 and above, if the application has
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'descriptorRead' | Yes | Type of the descriptor read event to listen for. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DescriptorReadRequest&gt; | Yes | Callback used to listen for the descriptor read event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DescriptorReadRequest](arkts-connectivity-ble-descriptorreadrequest-i.md)&gt; | Yes | Callback used to listen for the descriptor read event. |
 
 **Error codes:**
 
@@ -1049,7 +1003,7 @@ Subscribe descriptor write event. On API 26.0.0 and above, if the application ha
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'descriptorWrite' | Yes | Type of the descriptor write event to listen for. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DescriptorWriteRequest&gt; | Yes | Callback used to listen for the descriptor write event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DescriptorWriteRequest](arkts-connectivity-ble-descriptorwriterequest-i.md)&gt; | Yes | Callback used to listen for the descriptor write event. |
 
 **Error codes:**
 
@@ -1228,18 +1182,6 @@ try {
 }
 ```
 
-```TypeScript
-function BlePhyCallback(data:ble.PhyValue) {
-    console.info(`txPhy: ${data.txPhy}, rxPhy: ${data.rxPhy}`);
-}
-let gattClient: ble.GattClientDevice = ble.createGattClientDevice('XX:XX:XX:XX:XX:XX');
-try {
-    gattClient.onBlePhyUpdate(BlePhyCallback);
-} catch (err) {
-    console.error(`errCode: ${err.code}, errMessage: ${err.message}`);
-}
-```
-
 ## readPhy
 
 ```TypeScript
@@ -1401,7 +1343,7 @@ Sends a response to a specified read or write request to a given BLE peripheral 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| serverResponse | ServerResponse | Yes | Indicates the response parameters [ServerResponse](arkts-connectivity-ble-serverresponse-i.md). |
+| serverResponse | [ServerResponse](arkts-connectivity-ble-serverresponse-i.md) | Yes | Indicates the response parameters [ServerResponse](arkts-connectivity-ble-serverresponse-i.md). |
 
 **Error codes:**
 

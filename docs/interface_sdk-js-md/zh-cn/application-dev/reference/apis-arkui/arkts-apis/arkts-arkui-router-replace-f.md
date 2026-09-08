@@ -31,7 +31,7 @@ function replace(options: RouterOptions): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | RouterOptions | 是 | 替换页面描述信息。 |
+| options | [RouterOptions](arkts-arkui-router-routeroptions-i.md) | 是 | 替换页面描述信息。 |
 
 **示例**
 

@@ -20,7 +20,7 @@ readonly boundingRects: Array<Rect>
 
 Unusable areas (bounding rectangles) designed for punch holes and notches. If there are no punch holes or notches, an empty array is returned.
 
-**Type:** Array&lt;Rect&gt;
+**Type:** Array&lt;[Rect](arkts-arkui-display-rect-i.md)&gt;
 
 **Since:** 9
 

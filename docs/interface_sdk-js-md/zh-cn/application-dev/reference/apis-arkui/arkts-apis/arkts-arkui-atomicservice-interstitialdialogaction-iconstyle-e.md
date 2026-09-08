@@ -4,8 +4,8 @@
 
 | 名称 | 值 | 说明 |  
 | - | - | - |  
-| DARK | 0 | 设置关闭按钮为暗色调。 |
-| LIGHT | 1 | 设置关闭按钮为亮色调。默认值。 |
+| [DARK](arkts-arkui-atomicservice-interstitialdialogaction-iconstyle-e.md) | 0 | 设置关闭按钮为暗色调。 |
+| [LIGHT](arkts-arkui-atomicservice-interstitialdialogaction-iconstyle-e.md) | 1 | 设置关闭按钮为亮色调。默认值。 |
 
 **起始版本：** 12
 

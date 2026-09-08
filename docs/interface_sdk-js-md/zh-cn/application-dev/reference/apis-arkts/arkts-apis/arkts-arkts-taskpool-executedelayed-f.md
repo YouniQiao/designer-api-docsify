@@ -31,8 +31,8 @@ function executeDelayed(delayTime: number, task: Task, priority?: Priority): Pro
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | delayTime | number | 是 | 延时时间。单位：ms。delayTime值必须要大于等于0。 |
-| task | Task | 是 | 需要延时执行的任务。 |
-| priority | Priority | 否 | 延时执行的任务的优先级，该参数默认值为**taskpool.Priority.MEDIUM**。 |
+| task | [Task](arkts-arkts-taskpool-task-c.md) | 是 | 需要延时执行的任务。 |
+| priority | [Priority](arkts-arkts-taskpool-priority-e.md) | 否 | 延时执行的任务的优先级，该参数默认值为**taskpool.Priority.MEDIUM**。 |
 
 **返回值：**
 
@@ -92,7 +92,7 @@ function executeDelayed<A extends Array<Object>, R>(delayTime: number, task: Gen
 | --- | --- | --- | --- |
 | delayTime | number | 是 | 延时时间。单位：ms。delayTime值必须要大于等于0。 |
 | task | [GenericsTask](arkts-arkts-taskpool-genericstask-c.md)&lt;A, R&gt; | 是 | 需要延时执行的泛型任务。 |
-| priority | Priority | 否 | 延时执行的任务的优先级，默认值为**taskpool.Priority.MEDIUM**。 |
+| priority | [Priority](arkts-arkts-taskpool-priority-e.md) | 否 | 延时执行的任务的优先级，默认值为**taskpool.Priority.MEDIUM**。 |
 
 **返回值：**
 

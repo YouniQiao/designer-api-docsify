@@ -37,7 +37,7 @@ static genCipherTextBySpec(spec: SM2CipherTextSpec, mode?: string): DataBlob
 
 | 类型 | 说明 |
 | --- | --- |
-| DataBlob | 返回符合国密标准的ASN.1格式的SM2密文。 |
+| [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | 返回符合国密标准的ASN.1格式的SM2密文。 |
 
 **错误码：**
 
@@ -87,7 +87,7 @@ static getCipherTextSpec(cipherText: DataBlob, mode?: string): SM2CipherTextSpec
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| cipherText | DataBlob | 是 | 符合国密标准的ASN.1格式的SM2密文。 |
+| cipherText | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | 是 | 符合国密标准的ASN.1格式的SM2密文。 |
 | mode | string | 否 | 可选的密文转换模式，可用于指定密文参数的拼接顺序，当前仅支持默认值"C1C3C2"。为空或空字符串时使用默认值。 |
 
 **返回值：**

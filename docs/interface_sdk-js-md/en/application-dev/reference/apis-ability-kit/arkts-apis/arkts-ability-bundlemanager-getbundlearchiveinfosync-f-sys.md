@@ -33,7 +33,7 @@ Obtains the bundle information based on the given HAP file path and bundle flags
 
 | Type | Description |
 | --- | --- |
-| BundleInfo | Bundle information obtained. |
+| [BundleInfo](arkts-ability-bundlemanager-bundleinfo-t.md) | Bundle information obtained. |
 
 **Error codes:**
 

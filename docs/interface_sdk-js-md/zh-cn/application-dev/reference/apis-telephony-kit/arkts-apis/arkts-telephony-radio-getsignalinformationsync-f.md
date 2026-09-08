@@ -28,7 +28,7 @@ function getSignalInformationSync(slotId: number): Array<SignalInformation>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;SignalInformation&gt; | 返回网络信号强度[SignalInformation]{ |
+| Array&lt;[SignalInformation](arkts-telephony-radio-signalinformation-i.md)&gt; | 返回网络信号强度[SignalInformation]{ |
 
 **示例**
 

@@ -155,23 +155,3 @@ Type name of the email.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Applications.ContactsData
-
-**Examples**
-
-Create data in JSON format.
-
-```TypeScript
-import { contact } from '@kit.ContactsKit';
-
-let email: contact.Email = {
-    email: 'xxx@email.com',
-    displayName: 'displayName'
-}
-```
-
-Alternatively, create data by using the new Email object.
-
-```TypeScript
-let email = new contact.Email();
-email.email = 'xxx@email.com';
-```

@@ -166,7 +166,7 @@ Default value: **BlurStyle.COMPONENT_ULTRA_THICK**
 
 Setting this parameter to **BlurStyle.NONE** disables the background blur. When **backgroundBlurStyle** is set to a value other than **NONE**, do not set **backgroundColor**. If you do, the color display may not produce the expected visual effect.
 
-**Type:** BlurStyle
+**Type:** [BlurStyle](arkts-arkui-blurstyle-e.md)
 
 **Default:** BlurStyle.COMPONENT_ULTRA_THICK
 
@@ -344,7 +344,7 @@ Triggered when the OK button in the dialog box is clicked.
 
 The callback parameter represents the selected date value.
 
-**Type:** Callback&lt;Date&gt;
+**Type:** [Callback](arkts-arkui-callback-i.md)&lt;Date&gt;
 
 **Since:** 10
 
@@ -364,7 +364,7 @@ Triggered when the selection in the picker changes the selected date.
 
 The callback parameter represents the selected date value.
 
-**Type:** Callback&lt;Date&gt;
+**Type:** [Callback](arkts-arkui-callback-i.md)&lt;Date&gt;
 
 **Since:** 10
 

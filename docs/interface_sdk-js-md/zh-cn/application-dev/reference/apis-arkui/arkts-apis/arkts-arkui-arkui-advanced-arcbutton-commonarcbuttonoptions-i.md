@@ -22,7 +22,7 @@ backgroundBlurStyle?: BlurStyle
 
 默认值：BlurStyle.NONE。
 
-**类型：** BlurStyle
+**类型：** [BlurStyle](../arkts-components/arkts-arkui-blurstyle-e.md)
 
 **起始版本：** 18
 
@@ -78,7 +78,7 @@ fontFamily?: string | Resource
 
 弧形按钮字体名。
 
-**类型：** string \| Resource
+**类型：** string \| [Resource](arkts-arkui-resource-t.md)
 
 **起始版本：** 18
 
@@ -132,7 +132,7 @@ fontStyle?: FontStyle
 
 默认值：FontStyle.Normal。
 
-**类型：** FontStyle
+**类型：** [FontStyle](arkts-arkui-fontstyle-e.md)
 
 **起始版本：** 18
 
@@ -180,7 +180,7 @@ onTouch?: Callback<TouchEvent>
 
 弧形按钮手指触摸动作触发该回调。
 
-**类型：** Callback&lt;TouchEvent&gt;
+**类型：** Callback&lt;[TouchEvent](../arkts-components/arkts-arkui-touchevent-i.md)&gt;
 
 **起始版本：** 18
 

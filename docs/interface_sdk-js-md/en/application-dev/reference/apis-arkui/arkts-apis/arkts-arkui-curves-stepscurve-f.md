@@ -31,7 +31,7 @@ Creates a step curve.
 
 | Type | Description |
 | --- | --- |
-| ICurve | Interpolation curve. |
+| [ICurve](arkts-arkui-curves-icurve-i.md) | Interpolation curve. |
 
 **Examples**
 

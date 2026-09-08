@@ -38,7 +38,7 @@ aad: DataBlob
 
 Additional authenticated data.
 
-**Type:** DataBlob
+**Type:** [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md)
 
 **Since:** 22
 
@@ -54,7 +54,7 @@ authTag: DataBlob
 
 Authentication tag, which is of 16 bytes.
 
-**Type:** DataBlob
+**Type:** [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md)
 
 **Since:** 22
 
@@ -70,7 +70,7 @@ iv: DataBlob
 
 Nonce (passed as the **iv** field), which is of 12 bytes.
 
-**Type:** DataBlob
+**Type:** [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md)
 
 **Since:** 22
 

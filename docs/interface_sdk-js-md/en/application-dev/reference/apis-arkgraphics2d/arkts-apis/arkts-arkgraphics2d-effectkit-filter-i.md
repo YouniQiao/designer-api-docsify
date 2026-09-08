@@ -18,7 +18,7 @@ import { effectKit } from '@kit.ArkGraphics2D';
 blur(radius: number): Filter
 ```
 
-Adds the blur effect to the effect chain and returns the instance of the chain. The shader tile mode uses DECAL. To specify the tile mode, use the blur(radius: number, tileMode: TileMode) API. It is commonly used in scenarios such as background blurring, privacy information masking, frosted glass background effect, and pop-up window background blur.
+Adds the blur effect to the effect chain and returns the instance of the chain. The shader tile mode uses DECAL. To specify the tile mode, use the blur(radius: double, tileMode: TileMode) API. It is commonly used in scenarios such as background blurring, privacy information masking, frosted glass background effect, and pop-up window background blur.
 
 > **NOTE：**
 > 
@@ -42,7 +42,7 @@ Adds the blur effect to the effect chain and returns the instance of the chain. 
 
 | Type | Description |
 | --- | --- |
-| Filter | Returns the Filter instance with the added effects, for further adding effects or obtaining the processed image. |
+| [Filter](arkts-arkgraphics2d-effectkit-filter-i.md) | Returns the Filter instance with the added effects, for further adding effects or obtaining the processed image. |
 
 **Examples**
 
@@ -131,13 +131,13 @@ Adds the blur effect to the effect chain and returns the instance of the chain. 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | radius | number | Yes | Blur radius, in px. Value range: [0, +∞). A larger blur radius produces a more pronounced blur effect. No effect is applied when a negative value is passed in. |
-| tileMode | TileMode | Yes | Shader tile mode, which affects the blur effect at the image edges. |
+| tileMode | [TileMode](arkts-arkgraphics2d-effectkit-tilemode-e.md) | Yes | Shader tile mode, which affects the blur effect at the image edges. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Filter | Returns a Filter instance with the added effects, for continuing to add effects or obtaining the processed image. |
+| [Filter](arkts-arkgraphics2d-effectkit-filter-i.md) | Returns a Filter instance with the added effects, for continuing to add effects or obtaining the processed image. |
 
 **Examples**
 
@@ -231,7 +231,7 @@ Adds the brightness effect to the effect chain and returns the instance of the c
 
 | Type | Description |
 | --- | --- |
-| Filter | Returns the Filter instance with the added effects, for further adding effects or obtaining the processed image. |
+| [Filter](arkts-arkgraphics2d-effectkit-filter-i.md) | Returns the Filter instance with the added effects, for further adding effects or obtaining the processed image. |
 
 **Examples**
 
@@ -323,7 +323,7 @@ Obtains image.PixelMap of the source image to which the effect chain has been ad
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;image.PixelMap&gt; | Promise used to return the image.PixelMap of the source image with the effect chain applied. |
+| Promise&lt;[image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)&gt; | Promise used to return the image.PixelMap of the source image with the effect chain applied. |
 
 **Examples**
 
@@ -381,7 +381,7 @@ Obtains image.PixelMap of the source image with the linked list effect. The rend
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;image.PixelMap&gt; | Promise used to return image.PixelMap of the source image. |
+| Promise&lt;[image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)&gt; | Promise used to return image.PixelMap of the source image. |
 
 **Examples**
 
@@ -433,7 +433,7 @@ Obtains image.PixelMap of the source image to which the effect chain has been ad
 
 | Type | Description |
 | --- | --- |
-| image.PixelMap | image.PixelMap of the source image with the effect chain applied. |
+| [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | image.PixelMap of the source image with the effect chain applied. |
 
 **Examples**
 
@@ -476,7 +476,7 @@ Adds the grayscale effect to the effect chain and returns the instance of the ch
 
 | Type | Description |
 | --- | --- |
-| Filter | Returns the Filter instance with the added effects, which can be used to continue adding effects or obtain the processed image. |
+| [Filter](arkts-arkgraphics2d-effectkit-filter-i.md) | Returns the Filter instance with the added effects, which can be used to continue adding effects or obtain the processed image. |
 
 **Examples**
 
@@ -558,7 +558,7 @@ Adds the invert effect to the effect chain and returns the instance of the chain
 
 | Type | Description |
 | --- | --- |
-| Filter | Returns the Filter instance with the added effects, which can be used to continue adding effects or obtain the processed image. |
+| [Filter](arkts-arkgraphics2d-effectkit-filter-i.md) | Returns the Filter instance with the added effects, which can be used to continue adding effects or obtain the processed image. |
 
 **Examples**
 
@@ -646,7 +646,7 @@ Performs color transformation on the image using a custom color matrix, adds the
 
 | Type | Description |
 | --- | --- |
-| Filter | Filter instance with effects added, which can be used to add more effects or obtain the processed image. |
+| [Filter](arkts-arkgraphics2d-effectkit-filter-i.md) | Filter instance with effects added, which can be used to add more effects or obtain the processed image. |
 
 **Error codes:**
 

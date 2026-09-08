@@ -62,7 +62,7 @@ deviceStatus: P2pDeviceStatus
 
 Device status
 
-**Type:** P2pDeviceStatus
+**Type:** [P2pDeviceStatus](arkts-connectivity-wifimanager-p2pdevicestatus-e.md)
 
 **Since:** 9
 

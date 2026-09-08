@@ -86,7 +86,7 @@ function on(type: 'checkNotification', checkRequest: NotificationCheckRequest,
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'checkNotification' | 是 | 回调函数类型名，固定为'checkNotification'。 |
-| checkRequest | NotificationCheckRequest | 是 | 通知请求验证内容。 |
+| checkRequest | [NotificationCheckRequest](arkts-notification-notificationmanager-notificationcheckrequest-t-sys.md) | 是 | 通知请求验证内容。 |
 | callback | (checkInfo: NotificationCheckInfo) =&gt; Promise&lt;[NotificationCheckResult](arkts-notification-notificationmanager-notificationcheckresult-i-sys.md)&gt; | 是 | 消息验证函数指针。 |
 
 **错误码：**

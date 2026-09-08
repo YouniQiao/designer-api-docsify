@@ -94,7 +94,7 @@ dimension: FormDimension
 
 卡片规格
 
-**类型：** FormDimension
+**类型：** [FormDimension](arkts-form-forminfo-formdimension-e.md)
 
 **起始版本：** 23
 

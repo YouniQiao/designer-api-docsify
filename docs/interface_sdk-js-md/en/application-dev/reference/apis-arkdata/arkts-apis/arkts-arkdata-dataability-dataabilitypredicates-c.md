@@ -117,8 +117,8 @@ Creates a **DataAbilityPredicates** object to search for the records in the spec
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | field | string | Yes | Column name in the table. |
-| low | ValueType | Yes | Minimum value to match. |
-| high | ValueType | Yes | Maximum value to match. |
+| low | [ValueType](arkts-arkdata-dataability-valuetype-t.md) | Yes | Minimum value to match. |
+| high | [ValueType](arkts-arkdata-dataability-valuetype-t.md) | Yes | Maximum value to match. |
 
 **Return value:**
 
@@ -268,7 +268,7 @@ This API is similar to the SQL equal to (=) operator.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | field | string | Yes | Column name in the table. |
-| value | ValueType | Yes | Value to match. |
+| value | [ValueType](arkts-arkdata-dataability-valuetype-t.md) | Yes | Value to match. |
 
 **Return value:**
 
@@ -336,7 +336,7 @@ Creates a **DataAbilityPredicates** object to search for the records in the spec
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | field | string | Yes | Column name in the table. |
-| value | ValueType | Yes | Value to match. |
+| value | [ValueType](arkts-arkdata-dataability-valuetype-t.md) | Yes | Value to match. |
 
 **Return value:**
 
@@ -367,7 +367,7 @@ Creates a **DataAbilityPredicates** object to search for the records in the spec
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | field | string | Yes | Column name in the table. |
-| value | ValueType | Yes | Value to match. |
+| value | [ValueType](arkts-arkdata-dataability-valuetype-t.md) | Yes | Value to match. |
 
 **Return value:**
 
@@ -428,7 +428,7 @@ Creates a **DataAbilityPredicates** object to search for the records in the spec
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | field | string | Yes | Column name in the table. |
-| value | Array&lt;ValueType&gt; | Yes | Array of **ValueType**s to match. |
+| value | Array&lt;[ValueType](arkts-arkdata-dataability-valuetype-t.md)&gt; | Yes | Array of **ValueType**s to match. |
 
 **Return value:**
 
@@ -588,7 +588,7 @@ Creates a **DataAbilityPredicates** object to search for the records in the spec
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | field | string | Yes | Column name in the table. |
-| value | ValueType | Yes | Value to match. |
+| value | [ValueType](arkts-arkdata-dataability-valuetype-t.md) | Yes | Value to match. |
 
 **Return value:**
 
@@ -619,7 +619,7 @@ Creates a **DataAbilityPredicates** object to search for the records in the spec
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | field | string | Yes | Column name in the table. |
-| value | ValueType | Yes | Value to match. |
+| value | [ValueType](arkts-arkdata-dataability-valuetype-t.md) | Yes | Value to match. |
 
 **Return value:**
 
@@ -713,8 +713,8 @@ Creates a **DataAbilityPredicates** object to search for the records in the spec
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | field | string | Yes | Column name in the table. |
-| low | ValueType | Yes | Minimum value to match. |
-| high | ValueType | Yes | Maximum value to match. |
+| low | [ValueType](arkts-arkdata-dataability-valuetype-t.md) | Yes | Minimum value to match. |
+| high | [ValueType](arkts-arkdata-dataability-valuetype-t.md) | Yes | Maximum value to match. |
 
 **Return value:**
 
@@ -747,7 +747,7 @@ This API is similar to the SQL not equal (!=) operator.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | field | string | Yes | Column name in the table. |
-| value | ValueType | Yes | Value to match. |
+| value | [ValueType](arkts-arkdata-dataability-valuetype-t.md) | Yes | Value to match. |
 
 **Return value:**
 
@@ -778,7 +778,7 @@ Creates a **DataAbilityPredicates** object to search for the records in the spec
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | field | string | Yes | Column name in the table. |
-| value | Array&lt;ValueType&gt; | Yes | Array of **ValueType**s to match. |
+| value | Array&lt;[ValueType](arkts-arkdata-dataability-valuetype-t.md)&gt; | Yes | Array of **ValueType**s to match. |
 
 **Return value:**
 

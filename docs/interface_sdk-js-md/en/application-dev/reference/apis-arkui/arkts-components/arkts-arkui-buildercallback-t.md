@@ -19,14 +19,3 @@ Defines the callback type used in mutableBuilder.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | args | Args | Yes | The parameter of MutableBuilder. |
-
-**Examples**
-
-```TypeScript
-@Builder
-function MyBuilder(value: string, size: number) {
-  Text(value)
-    .fontSize(size)
-}
-let builderVar: MutableBuilder<[string, number]> = mutableBuilder(MyBuilder); // Declare builderVar as type MutableBuilder.
-```

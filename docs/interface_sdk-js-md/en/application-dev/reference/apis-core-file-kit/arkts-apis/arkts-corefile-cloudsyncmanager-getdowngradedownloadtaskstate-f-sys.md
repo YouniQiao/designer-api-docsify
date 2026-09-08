@@ -34,7 +34,7 @@ Supports querying the execution status of full data download tasks for integrate
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;DownloadProgress&gt;&gt; | Return Promise. |
+| Promise&lt;Array&lt;[DownloadProgress](arkts-corefile-cloudsyncmanager-downloadprogress-c.md)&gt;&gt; | Return Promise. |
 
 **Error codes:**
 

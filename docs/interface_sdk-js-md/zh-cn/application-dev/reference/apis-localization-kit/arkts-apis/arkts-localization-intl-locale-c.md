@@ -47,41 +47,6 @@ let locale = new intl.Locale();
 let localeID = locale.toString();
 ```
 
-```TypeScript
-import { intl } from '@kit.LocalizationKit';
-
-// 使用系统当前区域ID创建DateTimeFormat对象
-let formatter: intl.DateTimeFormat = new intl.DateTimeFormat();
-```
-
-```TypeScript
-import { intl } from '@kit.LocalizationKit';
-
-// 使用系统当前区域ID创建NumberFormat对象
-let formatter: intl.NumberFormat = new intl.NumberFormat();
-```
-
-```TypeScript
-import { intl } from '@kit.LocalizationKit';
-
-// 使用系统区域创建Collator对象
-let collator = new intl.Collator();
-```
-
-```TypeScript
-import { intl } from '@kit.LocalizationKit';
-
-// 使用系统区域创建PluralRules对象
-let pluralRules = new intl.PluralRules();
-```
-
-```TypeScript
-import { intl } from '@kit.LocalizationKit';
-
-// 使用系统区域创建RelativeTimeFormat对象
-let formatter: intl.RelativeTimeFormat = new intl.RelativeTimeFormat();
-```
-
 ## constructor
 
 ```TypeScript

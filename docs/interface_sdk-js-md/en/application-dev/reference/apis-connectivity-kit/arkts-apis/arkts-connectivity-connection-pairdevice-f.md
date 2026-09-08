@@ -136,7 +136,7 @@ Starts pairing with a remote Bluetooth device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceId | BluetoothAddress | Yes | Indicates address of peer device. |
+| deviceId | [BluetoothAddress](arkts-connectivity-connection-bluetoothaddress-t.md) | Yes | Indicates address of peer device. |
 
 **Return value:**
 

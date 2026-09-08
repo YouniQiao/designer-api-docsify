@@ -19,7 +19,7 @@ counterTextColor?: ColorMetrics
 
 设置组件中字符计数器的文本颜色。当用户输入字符数大于最大字符数乘百分比值时，计数器会显示当前输入的字符数，并且计数器的文本颜色为counterTextColor指定的颜色。如果不设置counterTextColor，则计数器的文本颜色为默认颜色，默认颜色为灰色。
 
-**类型：** ColorMetrics
+**类型：** [ColorMetrics](../arkts-apis/arkts-arkui-colormetrics-t.md)
 
 **起始版本：** 22
 
@@ -41,7 +41,7 @@ counterTextOverflowColor?: ColorMetrics
 
 当设置了[InputCounterOptions](arkts-arkui-inputcounteroptions-i.md)的highlightBorder属性时，边框颜色才会被同步更改。
 
-**类型：** ColorMetrics
+**类型：** [ColorMetrics](../arkts-apis/arkts-arkui-colormetrics-t.md)
 
 **起始版本：** 22
 

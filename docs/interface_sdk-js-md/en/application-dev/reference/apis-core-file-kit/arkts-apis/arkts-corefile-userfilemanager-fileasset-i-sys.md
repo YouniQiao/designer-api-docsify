@@ -191,30 +191,6 @@ async function example(mgr: userFileManager.UserFileManager) {
 }
 ```
 
-For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-
-async function example(mgr: userFileManager.UserFileManager) {
-  console.info('albumCommitModifyDemo');
-  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-  let albumFetchOptions: userFileManager.AlbumFetchOptions = {
-    predicates: predicates
-  };
-  const albumList: userFileManager.FetchResult<userFileManager.Album> = await mgr.getPhotoAlbums(albumFetchOptions);
-  const album: userFileManager.Album = await albumList.getFirstObject();
-  album.albumName = 'hello';
-  album.commitModify((err) => {
-    if (err != undefined) {
-      console.error('commitModify failed with error: ' + err);
-    } else {
-      console.info('commitModify successfully');
-    }
-  });
-}
-```
-
 ## commitModify
 
 ```TypeScript
@@ -269,33 +245,6 @@ async function example(mgr: userFileManager.UserFileManager) {
     console.info('fileAsset commitModify successfully, commitModifyDisplayName = ', commitModifyDisplayName);
   } catch (err) {
     console.error('commitModify failed. message = ', err);
-  }
-}
-```
-
-For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function example(mgr: userFileManager.UserFileManager) {
-  console.info('albumCommitModifyDemo');
-  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-  let albumFetchOptions: userFileManager.AlbumFetchOptions = {
-    predicates: predicates
-  };
-  try {
-    let albumList: userFileManager.FetchResult<userFileManager.Album> = await mgr.getPhotoAlbums(albumFetchOptions);
-    let album: userFileManager.Album = await albumList.getFirstObject();
-    album.albumName = 'hello';
-    album.commitModify().then(() => {
-      console.info('commitModify successfully');
-    }).catch((err: BusinessError) => {
-      console.error('commitModify failed with error: ' + err);
-    });
-  } catch (err) {
-    console.error('getPhotoAlbums failed. message = ', err);
   }
 }
 ```
@@ -438,7 +387,7 @@ Obtains the value of a **FileAsset** parameter.
 
 | Type | Description |
 | --- | --- |
-| MemberType | Returns the member parameter. |
+| [MemberType](arkts-corefile-userfilemanager-membertype-t-sys.md) | Returns the member parameter. |
 
 **Examples**
 
@@ -716,7 +665,7 @@ Obtains the thumbnail of a file. This API uses an asynchronous callback to retur
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;image.PixelMap&gt; | Yes | Callback used to return the PixelMap of the thumbnail. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)&gt; | Yes | Callback used to return the PixelMap of the thumbnail. |
 
 **Examples**
 
@@ -769,8 +718,8 @@ Obtains the file thumbnail of the given size. This API uses an asynchronous call
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| size | image.Size | Yes | Size of the thumbnail. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;image.PixelMap&gt; | Yes | Callback used to return the PixelMap of the thumbnail. |
+| size | [image.Size](../../apis-image-kit/arkts-apis/arkts-image-image-size-i.md) | Yes | Size of the thumbnail. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)&gt; | Yes | Callback used to return the PixelMap of the thumbnail. |
 
 **Examples**
 
@@ -825,13 +774,13 @@ Obtains the file thumbnail of the given size. This API uses a promise to return 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| size | image.Size | No | Size of the thumbnail. |
+| size | [image.Size](../../apis-image-kit/arkts-apis/arkts-image-image-size-i.md) | No | Size of the thumbnail. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;image.PixelMap&gt; | Promise that returns the PixelMap of the thumbnail. |
+| Promise&lt;[image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)&gt; | Promise that returns the PixelMap of the thumbnail. |
 
 **Examples**
 

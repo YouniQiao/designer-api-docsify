@@ -49,6 +49,8 @@ destroy(callback: AsyncCallback<void>): void
 **示例**
 
 > 说明：
+> 
+> 在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需在页面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
 
 ```TypeScript
 import { vpn } from '@kit.NetworkKit';
@@ -104,6 +106,8 @@ destroy(): Promise<void>
 **示例**
 
 > 说明：
+> 
+> 在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需在页面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
 
 ```TypeScript
 import { vpn } from '@kit.NetworkKit';
@@ -164,6 +168,8 @@ protect(socketFd: number, callback: AsyncCallback<void>): void
 **示例**
 
 > 说明：
+> 
+> 在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需在页面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
 
 ```TypeScript
 import { socket, vpn } from '@kit.NetworkKit';
@@ -245,6 +251,8 @@ protect(socketFd: number): Promise<void>
 **示例**
 
 > 说明：
+> 
+> 在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需在页面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
 
 ```TypeScript
 import { socket, vpn } from '@kit.NetworkKit';
@@ -305,7 +313,7 @@ setUp(config: VpnConfig, callback: AsyncCallback<number>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| config | VpnConfig | 是 | 指定 VPN 网络的配置信息。 |
+| config | [VpnConfig](arkts-network-vpnextension-vpnconfig-i.md) | 是 | 指定 VPN 网络的配置信息。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数，当成功启动 VPN 网络时，返回虚拟网卡的文件描述符 fd, error 为 undefined，否则为错误对象。 |
 
 **错误码：**
@@ -324,6 +332,8 @@ setUp(config: VpnConfig, callback: AsyncCallback<number>): void
 **示例**
 
 > 说明：
+> 
+> 在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需在页面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
 
 ```TypeScript
 import { vpn } from '@kit.NetworkKit';
@@ -376,7 +386,7 @@ setUp(config: VpnConfig): Promise<number>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| config | VpnConfig | 是 | 指定 VPN 网络的配置信息。 |
+| config | [VpnConfig](arkts-network-vpnextension-vpnconfig-i.md) | 是 | 指定 VPN 网络的配置信息。 |
 
 **返回值：**
 
@@ -400,6 +410,8 @@ setUp(config: VpnConfig): Promise<number>
 **示例**
 
 > 说明：
+> 
+> 在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需在页面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
 
 ```TypeScript
 import { vpn } from '@kit.NetworkKit';

@@ -22,7 +22,7 @@ public albumSubtype: AlbumSubtype
 
 Album subtype
 
-**Type:** AlbumSubtype
+**Type:** [AlbumSubtype](arkts-medialibrary-photoaccesshelper-albumsubtype-e.md)
 
 **Since:** 26.0.0
 
@@ -40,7 +40,7 @@ public albumType: AlbumType
 
 Album type
 
-**Type:** AlbumType
+**Type:** [AlbumType](arkts-medialibrary-photoaccesshelper-albumtype-e.md)
 
 **Since:** 26.0.0
 

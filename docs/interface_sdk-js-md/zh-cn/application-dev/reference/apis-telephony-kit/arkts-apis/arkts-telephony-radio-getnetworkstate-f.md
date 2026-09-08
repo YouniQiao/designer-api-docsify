@@ -25,7 +25,7 @@ function getNetworkState(slotId: number, callback: AsyncCallback<NetworkState>):
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | slotId | number | 是 | 卡槽ID。   - 0：卡槽1。   - 1：卡槽2。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;NetworkState&gt; | 是 | 回调函数。返回当前网络状态。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[NetworkState](arkts-telephony-radio-networkstate-i.md)&gt; | 是 | 回调函数。返回当前网络状态。 |
 
 **错误码：**
 
@@ -78,7 +78,7 @@ function getNetworkState(slotId?: number): Promise<NetworkState>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;NetworkState&gt; | Promise对象，返回网络状态。 |
+| Promise&lt;[NetworkState](arkts-telephony-radio-networkstate-i.md)&gt; | Promise对象，返回网络状态。 |
 
 **错误码：**
 
@@ -125,7 +125,7 @@ function getNetworkState(callback: AsyncCallback<NetworkState>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;NetworkState&gt; | 是 | 回调函数。返回当前网络状态。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[NetworkState](arkts-telephony-radio-networkstate-i.md)&gt; | 是 | 回调函数。返回当前网络状态。 |
 
 **错误码：**
 

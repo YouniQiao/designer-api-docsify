@@ -557,7 +557,7 @@ radius?: LengthMetrics | BorderRadiuses | LocalizedBorderRadiuses
 
 Defines sheet radius
 
-**Type:** LengthMetrics \| [BorderRadiuses](../arkts-apis/arkts-arkui-borderradiuses-t.md) \| [LocalizedBorderRadiuses](../arkts-apis/arkts-arkui-localizedborderradiuses-i.md)
+**Type:** [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md) \| [BorderRadiuses](../arkts-apis/arkts-arkui-borderradiuses-t.md) \| [LocalizedBorderRadiuses](../arkts-apis/arkts-arkui-localizedborderradiuses-i.md)
 
 **Since:** 15
 
@@ -656,7 +656,7 @@ showClose?: boolean | Resource
 
 Defines whether the close icon is displayed
 
-**Type:** boolean \| Resource
+**Type:** boolean \| [Resource](../arkts-apis/arkts-arkui-resource-t.md)
 
 **Default:** true
 

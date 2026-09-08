@@ -9,7 +9,7 @@ import { fontManager } from '@kit.LocalizationKit';
 ## offFontObserver
 
 ```TypeScript
-function offFontObserver(observer: FontClientObserver): void
+function offFontObserver(): void
 ```
 
 Unregisters the font service death observer.
@@ -21,12 +21,6 @@ Unregisters the font service death observer.
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Global.FontManager
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| observer | [FontClientObserver](arkts-localization-fontmanager-fontclientobserver-i.md) | Yes | Font service death observer. |
 
 **Error codes:**
 

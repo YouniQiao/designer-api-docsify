@@ -22,7 +22,7 @@ code: relationalStore.ProgressCode
 
 最近一次端云同步的结果。
 
-**类型：** relationalStore.ProgressCode
+**类型：** [relationalStore.ProgressCode](arkts-arkdata-relationalstore-progresscode-e.md)
 
 **起始版本：** 12
 

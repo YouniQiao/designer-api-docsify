@@ -1,6 +1,6 @@
 # VideoRecorderProfile（系统接口）
 
-视频录制配置参数定义。
+视频录制的配置文件。
 
 **起始版本：** 9
 
@@ -20,7 +20,7 @@ import { media } from '@kit.MediaKit';
 readonly audioBitrate: number
 ```
 
-音频比特率，单位为bit/s。
+音频编码比特率，选择音频录制时必填。
 
 **类型：** number
 
@@ -36,7 +36,7 @@ readonly audioBitrate: number
 readonly audioChannels: number
 ```
 
-音频声道数。
+音频采集声道数，选择音频录制时必填。
 
 **类型：** number
 
@@ -52,7 +52,7 @@ readonly audioChannels: number
 readonly audioCodec: CodecMimeType
 ```
 
-音频编码格式。
+音频编码格式，选择音频录制时必填。
 
 **类型：** [CodecMimeType](arkts-media-media-codecmimetype-e.md)
 
@@ -68,7 +68,7 @@ readonly audioCodec: CodecMimeType
 readonly audioSampleRate: number
 ```
 
-音频采样率，单位为Hz。
+音频采样率，选择音频录制时必填。
 
 **类型：** number
 
@@ -84,7 +84,7 @@ readonly audioSampleRate: number
 readonly fileFormat: ContainerFormatType
 ```
 
-输出文件格式。
+文件的容器格式。
 
 **类型：** [ContainerFormatType](arkts-media-media-containerformattype-e.md)
 
@@ -100,7 +100,7 @@ readonly fileFormat: ContainerFormatType
 readonly videoBitrate: number
 ```
 
-视频比特率，单位为bit/s。
+视频编码比特率。
 
 **类型：** number
 
@@ -132,7 +132,7 @@ readonly videoCodec: CodecMimeType
 readonly videoFrameHeight: number
 ```
 
-视频高度，单位为像素（px）。
+录制视频帧的高。
 
 **类型：** number
 
@@ -148,7 +148,7 @@ readonly videoFrameHeight: number
 readonly videoFrameRate: number
 ```
 
-视频帧率，单位为fps。
+录制视频帧率。
 
 **类型：** number
 
@@ -164,7 +164,7 @@ readonly videoFrameRate: number
 readonly videoFrameWidth: number
 ```
 
-视频宽度，单位为像素（px）。
+录制视频帧的宽。
 
 **类型：** number
 

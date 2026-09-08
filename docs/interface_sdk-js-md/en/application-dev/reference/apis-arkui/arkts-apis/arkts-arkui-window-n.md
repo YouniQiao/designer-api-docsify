@@ -69,12 +69,12 @@ import { window } from '@kit.ArkUI';
 | [setSpecificSystemWindowZIndex](arkts-arkui-window-setspecificsystemwindowzindex-f-sys.md) | Sets the z-level of a system window. This API uses a promise to return the result. |
 | [getTopNavDestinationName](arkts-arkui-window-gettopnavdestinationname-f-sys.md) | Obtains the name of NavDestination in the current top-level Navigation component of the specified foreground window. This API uses a promise to return the result. |
 | [getSnapshot](arkts-arkui-window-getsnapshot-f-sys.md) | Obtains a snapshot of the same size as the specified window. This API uses a promise to return the result. If privacy mode is enabled for the current window (using [setWindowPrivacyMode](arkts-arkui-window-window-i.md#setwindowprivacymode)), taking a screenshot will result in a blank screen. |
-| on | Subscribes to the property change event of the status bar and navigation bar. |
-| off | Unsubscribes from the property change event of the status bar and navigation bar. |
-| on | Subscribes to the gesture navigation status change event. |
-| off | Unsubscribes from the gesture navigation status change event. |
-| on | Subscribes to the watermark status change event. |
-| off | Unsubscribes from the watermark status change event. |
+| [on](../arkts-components/arkts-arkui-canvasrenderingcontext2d-c.md) | Subscribes to the property change event of the status bar and navigation bar. |
+| [off](../arkts-components/arkts-arkui-canvasrenderingcontext2d-c.md) | Unsubscribes from the property change event of the status bar and navigation bar. |
+| [on](../arkts-components/arkts-arkui-canvasrenderingcontext2d-c.md) | Subscribes to the gesture navigation status change event. |
+| [off](../arkts-components/arkts-arkui-canvasrenderingcontext2d-c.md) | Unsubscribes from the gesture navigation status change event. |
+| [on](../arkts-components/arkts-arkui-canvasrenderingcontext2d-c.md) | Subscribes to the watermark status change event. |
+| [off](../arkts-components/arkts-arkui-canvasrenderingcontext2d-c.md) | Unsubscribes from the watermark status change event. |
 | [notifyScreenshotEvent](arkts-arkui-window-notifyscreenshotevent-f-sys.md) | Notifies a screenshot event. This API uses a promise to return the result. |
 | [moveMainWindowToTargetDisplay](arkts-arkui-window-movemainwindowtotargetdisplay-f-sys.md) | Move a window to the target display. The window must be a main window. |
 <!--DelEnd-->

@@ -26,8 +26,8 @@ Updates the data in the UDMF public data channel. This API uses an asynchronous 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | Options | Yes | Configuration for the data update operation. The **key** field is mandatory. If it is not specified, error code 401 will be returned. Only the DATA_HUB channel of the **intention** parameter is supported. The settings of other parameters do not affect the use of this API. |
-| data | UnifiedData | Yes | Data to update. |
+| options | [Options](arkts-arkdata-unifieddatachannel-options-i.md) | Yes | Configuration for the data update operation. The **key** field is mandatory. If it is not specified, error code 401 will be returned. Only the DATA_HUB channel of the **intention** parameter is supported. The settings of other parameters do not affect the use of this API. |
+| data | [UnifiedData](arkts-arkdata-unifieddatachannel-unifieddata-c.md) | Yes | Data to update. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the data is updated successfully, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
@@ -109,8 +109,8 @@ Updates the data in the UDMF public data channel. This API uses a promise to ret
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | Options | Yes | Configuration for the data update operation. The **key** field is mandatory. If it is not specified, error code 401 will be returned. Only the DATA_HUB channel of the **intention** parameter is supported. The settings of other parameters do not affect the use of this API. |
-| data | UnifiedData | Yes | Data to update. |
+| options | [Options](arkts-arkdata-unifieddatachannel-options-i.md) | Yes | Configuration for the data update operation. The **key** field is mandatory. If it is not specified, error code 401 will be returned. Only the DATA_HUB channel of the **intention** parameter is supported. The settings of other parameters do not affect the use of this API. |
+| data | [UnifiedData](arkts-arkdata-unifieddatachannel-unifieddata-c.md) | Yes | Data to update. |
 
 **Return value:**
 

@@ -64,7 +64,7 @@ This attribute does not take effect when the parameter type of the component is 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | string \| Resource \| PixelMap | Yes | Placeholder image displayed during loading. Local images (in PNG, JPG, BMP, SVG, GIF, or HEIF format) and [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) objects are supported, but online images are not.   - Base64 strings are supported.   - Strings prefixed with the **file://** path are supported (application sandbox URI: **file://&lt;bundleName&gt;/&lt;sandboxPath&gt;**). For details about how to construct the application sandbox path URI, see [constructor](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-fileuri-c.md#constructor). The sandbox path must be converted to an application sandbox URI using the [fileUri.getUriFromPath(path)](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md) API before being passed in for display. In addition, ensure that the application has the read permission to the files in the specified path.   Default value: **null**When the value is switched from a valid one (an image resource that can be parsed and loaded correctly) to an invalid one (an image path that cannot be parsed or loaded), the component retains the previously successfully loaded image content without clearing or resetting it.<br>**Since:** 12 |
+| value | string \| [Resource](../arkts-apis/arkts-arkui-resource-t.md) \| [PixelMap](arkts-arkui-pixelmap-t.md) | Yes | Placeholder image displayed during loading. Local images (in PNG, JPG, BMP, SVG, GIF, or HEIF format) and [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) objects are supported, but online images are not.   - Base64 strings are supported.   - Strings prefixed with the **file://** path are supported (application sandbox URI: **file://&lt;bundleName&gt;/&lt;sandboxPath&gt;**). For details about how to construct the application sandbox path URI, see [constructor](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-fileuri-c.md#constructor). The sandbox path must be converted to an application sandbox URI using the [fileUri.getUriFromPath(path)](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md) API before being passed in for display. In addition, ensure that the application has the read permission to the files in the specified path.   Default value: **null**When the value is switched from a valid one (an image resource that can be parsed and loaded correctly) to an invalid one (an image path that cannot be parsed or loaded), the component retains the previously successfully loaded image content without clearing or resetting it.<br>**Since:** 12 |
 
 ## alt
 
@@ -98,7 +98,7 @@ This attribute does not take effect when the parameter type of the component is 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| src | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| PixelMap \| [ImageAlt](arkts-arkui-imagealt-i.md) | Yes | Placeholder image displayed during loading or in case of loading failure. Local images (in PNG, JPG, BMP, SVG, GIF, or HEIF format) and [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) objects are supported, but online images are not.   - Base64 strings are supported.   - Strings prefixed with the **file://** path are supported (application sandbox URI: **file://&lt;bundleName&gt;/&lt;sandboxPath&gt;**). For details about how to construct the application sandbox path URI, see [constructor](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-fileuri-c.md#constructor). The sandbox path must be converted to an application sandbox URI using the [fileUri.getUriFromPath(path)](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md) API before being passed in for display. In addition, ensure that the application has the read permission to the files in the specified path. |
+| src | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| [PixelMap](arkts-arkui-pixelmap-t.md) \| [ImageAlt](arkts-arkui-imagealt-i.md) | Yes | Placeholder image displayed during loading or in case of loading failure. Local images (in PNG, JPG, BMP, SVG, GIF, or HEIF format) and [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) objects are supported, but online images are not.   - Base64 strings are supported.   - Strings prefixed with the **file://** path are supported (application sandbox URI: **file://&lt;bundleName&gt;/&lt;sandboxPath&gt;**). For details about how to construct the application sandbox path URI, see [constructor](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-fileuri-c.md#constructor). The sandbox path must be converted to an application sandbox URI using the [fileUri.getUriFromPath(path)](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md) API before being passed in for display. In addition, ensure that the application has the read permission to the files in the specified path. |
 
 ## antialiased
 
@@ -182,7 +182,7 @@ When this attribute is set, [renderMode](#rendermode) is not effective.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | ColorFilter \| [DrawingColorFilter](arkts-arkui-drawingcolorfilter-t.md) | Yes | 1. Color filter of the image. The input parameter is a 4 x 5 RGBA transformation matrix. 2. The ColorFilter type of **@ohos.graphics.drawing** can be used as an input parameter since API version 12.   **NOTE：**This parameter is not available for SVG images in API version 11 and earlier versions.The DrawingColorfilter type can be used in atomic services since API version 12. For SVG sources, the effect only applies when the **stroke** property is set (regardless of the value).Since API version 21, when [supportSvg2](#supportsvg2) is set to **true**, **colorFilter** takes effect on the entire SVG image source.<br>**Since:** 12 |
+| value | [ColorFilter](../arkts-apis/arkts-arkui-colorfilter-c.md) \| [DrawingColorFilter](arkts-arkui-drawingcolorfilter-t.md) | Yes | 1. Color filter of the image. The input parameter is a 4 x 5 RGBA transformation matrix. 2. The ColorFilter type of **@ohos.graphics.drawing** can be used as an input parameter since API version 12.   **NOTE：**This parameter is not available for SVG images in API version 11 and earlier versions.The DrawingColorfilter type can be used in atomic services since API version 12. For SVG sources, the effect only applies when the **stroke** property is set (regardless of the value).Since API version 21, when [supportSvg2](#supportsvg2) is set to **true**, **colorFilter** takes effect on the entire SVG image source.<br>**Since:** 12 |
 
 ## colorFilter
 
@@ -208,7 +208,7 @@ Sets the color filter for the image.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | ColorFilter \| [DrawingColorFilter](arkts-arkui-drawingcolorfilter-t.md) \| [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Color filter of image. |
+| value | [ColorFilter](../arkts-apis/arkts-arkui-colorfilter-c.md) \| [DrawingColorFilter](arkts-arkui-drawingcolorfilter-t.md) \| [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Color filter of image. |
 
 ## contentTransition
 
@@ -238,7 +238,7 @@ Triggers transition animations when the image content changes.
 copyOption(value: CopyOptions)
 ```
 
-Specifies whether the image can be copied. When **copyOption** is set to a value other than **CopyOptions.None**, the image can be copied through multiple interactions, such as number press, right-click, or Ctrl+C. SVG images cannot be copied.
+Specifies whether the image can be copied. When **copyOption** is set to a value other than **CopyOptions.None**, the image can be copied through multiple interactions, such as long press, right-click, or Ctrl+C. SVG images cannot be copied.
 
 This attribute does not take effect when the parameter type of the component is [AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-animateddrawabledescriptor-c.md).
 
@@ -254,7 +254,7 @@ This attribute does not take effect when the parameter type of the component is 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | CopyOptions | Yes | Specifies whether the image can be copied.Default value: **CopyOptions.None |
+| value | [CopyOptions](../arkts-apis/arkts-arkui-copyoptions-e.md) | Yes | Specifies whether the image can be copied.Default value: **CopyOptions.None |
 
 ## draggable
 
@@ -274,7 +274,7 @@ Specifies whether the image is draggable.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean | Yes | Whether the image is draggable. The value **true** means that the image is draggable, in which case the bound number press gesture will not take effect.Default value:API version 9 and earlier: **false**Since API version 10: **true**To bind custom gestures to the component, set **draggable** to **false**. With the value **false**, drag-related events are not triggered. |
+| value | boolean | Yes | Whether the image is draggable. The value **true** means that the image is draggable, in which case the bound long press gesture will not take effect.Default value:API version 9 and earlier: **false**Since API version 10: **true**To bind custom gestures to the component, set **draggable** to **false**. With the value **false**, drag-related events are not triggered. |
 
 ## dynamicRangeMode
 

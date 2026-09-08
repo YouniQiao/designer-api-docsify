@@ -26,7 +26,7 @@ dateTime: LocalDateTime
 
 指明提醒的目标时间。
 
-**类型：** LocalDateTime
+**类型：** [LocalDateTime](arkts-backgroundtasks-reminderagent-localdatetime-i.md)
 
 **起始版本：** 7
 

@@ -35,4 +35,4 @@ Creates a spring animation curve. If multiple spring animations are applied to t
 
 | Type | Description |
 | --- | --- |
-| ICurve | Curve. |
+| [ICurve](arkts-arkui-curves-icurve-i.md) | Curve. |

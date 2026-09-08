@@ -34,11 +34,4 @@ Constructor.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | appStorage | [AppStorage](arkts-arkui-appstorage-c.md) | Yes | Application-level storage. |
-| storage | Storage | Yes | Storage. |
-
-**Examples**
-
-```TypeScript
-let initialData: Record<string, number> = { 'PropA': 47 };
-let storage: LocalStorage = new LocalStorage(initialData);
-```
+| storage | [Storage](arkts-arkui-storage-c-sys.md) | Yes | Storage. |

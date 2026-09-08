@@ -195,7 +195,7 @@ Called when the NodeContainer component bound to this **NodeController** instanc
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | TouchEvent | Yes | Touch event. |
+| event | [TouchEvent](../arkts-components/arkts-arkui-touchevent-i.md) | Yes | Touch event. |
 
 ## onUnbind
 

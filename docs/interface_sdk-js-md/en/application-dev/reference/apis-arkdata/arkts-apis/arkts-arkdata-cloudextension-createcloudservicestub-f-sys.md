@@ -30,7 +30,7 @@ Creates a RemoteObject instance based on a CloudService instance. The system use
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;rpc.RemoteObject&gt; | Promise used to return the RemoteObject instance of CloudService. |
+| Promise&lt;[rpc.RemoteObject](../../apis-ipc-kit/arkts-apis/arkts-ipc-rpc-remoteobject-c.md)&gt; | Promise used to return the RemoteObject instance of CloudService. |
 
 **Examples**
 

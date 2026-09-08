@@ -35,7 +35,7 @@ Navigates to a specified page in the application.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | RouterOptions | Yes | Page routing parameters. |
+| options | [RouterOptions](arkts-arkui-router-routeroptions-i.md) | Yes | Page routing parameters. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
@@ -112,7 +112,7 @@ Navigates to a specified page in the application.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | RouterOptions | Yes | Page routing parameters. |
+| options | [RouterOptions](arkts-arkui-router-routeroptions-i.md) | Yes | Page routing parameters. |
 
 **Return value:**
 
@@ -196,7 +196,7 @@ Navigates to a specified page in the application.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | RouterOptions | Yes | Page routing parameters. |
+| options | [RouterOptions](arkts-arkui-router-routeroptions-i.md) | Yes | Page routing parameters. |
 | mode | [RouterMode](arkts-arkui-router-routermode-e.md) | Yes | Routing mode. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
@@ -274,7 +274,7 @@ Navigates to a specified page in the application.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | RouterOptions | Yes | Page routing parameters. |
+| options | [RouterOptions](arkts-arkui-router-routeroptions-i.md) | Yes | Page routing parameters. |
 | mode | [RouterMode](arkts-arkui-router-routermode-e.md) | Yes | Routing mode. |
 
 **Return value:**

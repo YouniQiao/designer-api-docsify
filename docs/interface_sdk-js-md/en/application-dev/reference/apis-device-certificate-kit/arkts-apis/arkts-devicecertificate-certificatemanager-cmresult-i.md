@@ -62,7 +62,7 @@ credential?: Credential
 
 Detailed credential information.
 
-**Type:** Credential
+**Type:** [Credential](arkts-devicecertificate-certificatemanager-credential-i.md)
 
 **Since:** 11
 
@@ -76,7 +76,7 @@ credentialDetailList?: Array<Credential>
 
 Represents detailed information about a credential.
 
-**Type:** Array&lt;Credential&gt;
+**Type:** Array&lt;[Credential](arkts-devicecertificate-certificatemanager-credential-i.md)&gt;
 
 **Since:** 22
 

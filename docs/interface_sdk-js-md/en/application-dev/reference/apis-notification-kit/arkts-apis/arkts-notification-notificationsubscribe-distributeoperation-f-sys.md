@@ -27,7 +27,7 @@ Triggers a notification for cross-device operations, such as tap-to-redirect and
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | hashcode | string | Yes | Unique notification ID. |
-| operationInfo | OperationInfo | No | Cross-device operation information. This parameter is left empty by default. |
+| operationInfo | [OperationInfo](arkts-notification-notificationsubscribe-operationinfo-i-sys.md) | No | Cross-device operation information. This parameter is left empty by default. |
 
 **Return value:**
 

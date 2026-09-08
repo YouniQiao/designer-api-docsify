@@ -28,8 +28,8 @@ function claimInterface(pipe: USBDevicePipe, iface: USBInterface, force?: boolea
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| pipe | USBDevicePipe | 是 | 用于确定总线号和设备地址。 |
-| iface | USBInterface | 是 | 用于确定需要获取接口的索引。 |
+| pipe | [USBDevicePipe](arkts-basicservices-usb-usbdevicepipe-i.md) | 是 | 用于确定总线号和设备地址。 |
+| iface | [USBInterface](arkts-basicservices-usb-usbinterface-i.md) | 是 | 用于确定需要获取接口的索引。 |
 | force | boolean | 否 | 可选参数，是否强制获取。默认值为false?，表示不强制获取。 |
 
 **返回值：**

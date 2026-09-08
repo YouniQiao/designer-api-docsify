@@ -8,7 +8,7 @@ The signature verification mode is determined in **createVerify()**, and the key
 
 If the signed message is short, you can call **verify()** to pass in the signed message and signature (**signatureData**) for signature verification after **init()**. That is, you do not need to use **update()**.
 
-If the signed message is too number, you can call **update()** multiple times to pass in the signed message by segment, and then call **verify()** to verify the full text of the message. In versions earlier than API version 10, the input parameter **data** of **verify()** supports only **DataBlob**. Since API version 10, **data** also supports **null**. After all the data is passed in by using **update()**, **verify()** can be called to verify the signature data.
+If the signed message is too long, you can call **update()** multiple times to pass in the signed message by segment, and then call **verify()** to verify the full text of the message. In versions earlier than API version 10, the input parameter **data** of **verify()** supports only **DataBlob**. Since API version 10, **data** also supports **null**. After all the data is passed in by using **update()**, **verify()** can be called to verify the signature data.
 
 If the DSA algorithm is used for signature verification and the digest algorithm is **NoHash**, **update()** is not supported. If **update()** is called in this case, **ERR_CRYPTO_OPERATION** will be returned.
 
@@ -154,7 +154,7 @@ initSync(pubKey: PubKey): void
 
 Initializes the **Verify** instance with a public key. This API returns the result synchronously. **initSync**, **updateSync**, and **verifySync** must be used together. **initSync** and **verifySync** are mandatory, and **updateSync** is optional.
 
-**NOTE：**It is recommended to prioritize the use of asynchronous API, init. Synchronous API may take a number time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
+**NOTE：**It is recommended to prioritize the use of asynchronous API, init. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
 **Since:** 12
 
@@ -200,13 +200,13 @@ Recovers the original data from a signature. This API uses a promise to return t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| signatureData | DataBlob | Yes | Signature data. |
+| signatureData | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | Yes | Signature data. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;DataBlob \| null&gt; | Promise used to return the raw data recovered from the signature. |
+| Promise&lt;[DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) \| null&gt; | Promise used to return the raw data recovered from the signature. |
 
 **Error codes:**
 
@@ -308,7 +308,7 @@ Recovers the original data from a signature. This API returns the result synchro
 > 
 > - Currently, only RSA is supported.
 
-**NOTE：**It is recommended to prioritize the use of asynchronous API, [recover](#recover). Synchronous API may take a number time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
+**NOTE：**It is recommended to prioritize the use of asynchronous API, [recover](#recover). Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
 **Since:** 12
 
@@ -320,13 +320,13 @@ Recovers the original data from a signature. This API returns the result synchro
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| signatureData | DataBlob | Yes | Signature data. |
+| signatureData | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | Yes | Signature data. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| DataBlob \| null | Data restored. |
+| [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) \| null | Data restored. |
 
 **Error codes:**
 
@@ -539,7 +539,7 @@ This API can be called only after the [Verify](arkts-cryptoarchitecture-cryptofr
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | DataBlob | Yes | Data to pass in. |
+| data | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | Yes | Data to pass in. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
@@ -594,7 +594,7 @@ This API can be called only after the [Verify](arkts-cryptoarchitecture-cryptofr
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | DataBlob | Yes | Data to pass in. |
+| data | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | Yes | Data to pass in. |
 
 **Return value:**
 
@@ -642,7 +642,7 @@ This API can be called only after the [Verify](arkts-cryptoarchitecture-cryptofr
 > If the DSA algorithm is used for signature verification and the digest algorithm is **NoHash**, **updateSync**
 > is not supported. If **updateSync** is called in this case, **ERR_CRYPTO_OPERATION** will be returned.
 
-**NOTE：**It is recommended to prioritize the use of asynchronous API, update. Synchronous API may take a number time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
+**NOTE：**It is recommended to prioritize the use of asynchronous API, update. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
 **Since:** 12
 
@@ -654,7 +654,7 @@ This API can be called only after the [Verify](arkts-cryptoarchitecture-cryptofr
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | DataBlob | Yes | Data to pass in. |
+| data | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | Yes | Data to pass in. |
 
 **Error codes:**
 
@@ -686,8 +686,8 @@ Verifies the message, including the update data. This API uses an asynchronous c
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | DataBlob | Yes | Data to be verified. |
-| signatureData | DataBlob | Yes | The signature data. |
+| data | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | Yes | Data to be verified. |
+| signatureData | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | Yes | The signature data. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** indicates that the signature verification is successful, and **false** indicates the opposite. |
 
 **Error codes:**
@@ -720,8 +720,8 @@ Verifies the signature of the data. This API uses an asynchronous callback to re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | DataBlob \| null | Yes | Data to pass in. In versions earlier than API version 10, only **DataBlob** is supported. Since API version 10, **null** is also supported. |
-| signatureData | DataBlob | Yes | Signature data. |
+| data | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) \| null | Yes | Data to pass in. In versions earlier than API version 10, only **DataBlob** is supported. Since API version 10, **null** is also supported. |
+| signatureData | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | Yes | Signature data. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** indicates that the signature verification is successful, and **false** indicates the opposite. |
 
 **Error codes:**
@@ -754,8 +754,8 @@ Verifies the message, including the update data. This API uses a promise to retu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | DataBlob | Yes | Data to be verified. |
-| signatureData | DataBlob | Yes | The signature data. |
+| data | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | Yes | Data to be verified. |
+| signatureData | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | Yes | The signature data. |
 
 **Return value:**
 
@@ -793,8 +793,8 @@ Verifies the signature of the data. This API uses a promise to return the result
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | DataBlob \| null | Yes | Data to pass in. In versions earlier than API version 10, only **DataBlob** is supported. Since API version 10, **null** is also supported. |
-| signatureData | DataBlob | Yes | Signature data. |
+| data | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) \| null | Yes | Data to pass in. In versions earlier than API version 10, only **DataBlob** is supported. Since API version 10, **null** is also supported. |
+| signatureData | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | Yes | Signature data. |
 
 **Return value:**
 
@@ -820,7 +820,7 @@ verifySync(data: DataBlob | null, signatureData: DataBlob): boolean
 
 Verifies the signature. This API returns the verification result synchronously.
 
-**NOTE：**It is recommended to prioritize the use of asynchronous API, [verify](arkts-cryptoarchitecture-cryptoframework-verify-i.md). Synchronous API may take a number time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
+**NOTE：**It is recommended to prioritize the use of asynchronous API, [verify](arkts-cryptoarchitecture-cryptoframework-verify-i.md). Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
 **Since:** 12
 
@@ -832,8 +832,8 @@ Verifies the signature. This API returns the verification result synchronously.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | DataBlob \| null | Yes | Data to pass in. |
-| signatureData | DataBlob | Yes | Signature data. |
+| data | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) \| null | Yes | Data to pass in. |
+| signatureData | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | Yes | Signature data. |
 
 **Return value:**
 

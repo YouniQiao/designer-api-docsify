@@ -42,7 +42,7 @@ NFC服务进程的远端对象，用于客户端和服务之间的接口通信�
 
 **系统接口：** 此接口为系统接口。
 
-**类型：** rpc.RemoteObject
+**类型：** [rpc.RemoteObject](../../apis-ipc-kit/arkts-apis/arkts-ipc-rpc-remoteobject-c.md)
 
 **起始版本：** 9
 

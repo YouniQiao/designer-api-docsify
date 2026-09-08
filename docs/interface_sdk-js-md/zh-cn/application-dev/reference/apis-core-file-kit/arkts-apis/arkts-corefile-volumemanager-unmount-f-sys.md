@@ -43,21 +43,6 @@ function unmount(volumeId: string, callback: AsyncCallback<void>): void
 | 13600008 | No such object. |
 | 13900042 | Unknown error. |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-// volumeId可通过getAllVolumes()接口获取
-let volumeId: string = "";
-volumeManager.unmount(volumeId, (error: BusinessError) => {
-  if (error) {
-    console.error(`unmount failed, code is: ${error.code}, message is: ${error.message}`);
-    return;
-  }
-  // 卸载指定卷设备成功后的回调
-});
-```
-
 
 ## unmount
 
@@ -100,16 +85,3 @@ function unmount(volumeId: string): Promise<void>
 | 13600005 | Incorrect volume state. |
 | 13600008 | No such object. |
 | 13900042 | Unknown error. |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-// volumeId可通过getAllVolumes()接口获取
-let volumeId: string = "";
-volumeManager.unmount(volumeId).then(() => {
-  // 卸载指定卷设备成功后的回调
-}).catch((error: BusinessError) => {
-  console.error(`Failed to unmount. Code: ${error.code}, message: ${error.message}`);
-});
-```

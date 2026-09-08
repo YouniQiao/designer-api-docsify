@@ -54,7 +54,7 @@ privilege?: Privilege
 
 指定的共享数据权限。默认为[Privilege](arkts-arkdata-sharing-privilege-i-sys.md)的默认值。
 
-**类型：** Privilege
+**类型：** [Privilege](arkts-arkdata-sharing-privilege-i-sys.md)
 
 **起始版本：** 11
 
@@ -70,7 +70,7 @@ role?: Role
 
 参与者的角色，为邀请者或被邀请者。默认为undefined。
 
-**类型：** Role
+**类型：** [Role](arkts-arkdata-sharing-role-e-sys.md)
 
 **起始版本：** 11
 
@@ -86,7 +86,7 @@ state?: State
 
 共享的状态。默认为undefined。
 
-**类型：** State
+**类型：** [State](arkts-arkdata-sharing-state-e-sys.md)
 
 **起始版本：** 11
 

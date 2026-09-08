@@ -28,8 +28,8 @@ Before you do this, call [usb.getDevices](arkts-basicservices-usb-getdevices-f.m
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pipe | USBDevicePipe | Yes | USB device pipe, which is used to determine the USB device. |
-| controlparam | USBControlParams | Yes | Control transfer parameters. |
+| pipe | [USBDevicePipe](arkts-basicservices-usb-usbdevicepipe-i.md) | Yes | USB device pipe, which is used to determine the USB device. |
+| controlparam | [USBControlParams](arkts-basicservices-usb-usbcontrolparams-i.md) | Yes | Control transfer parameters. |
 | timeout | number | No | Timeout duration in ms. This parameter is optional. The default value is **0**, indicating no timeout. |
 
 **Return value:**

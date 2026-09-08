@@ -568,6 +568,7 @@ struct SelectExample {
 ```
 
 该示例通过调用[keyboardAvoidMode](#keyboardavoidmode23)和[minKeyboardAvoidDistance](#minkeyboardavoiddistance23)接口，实现下拉菜单避让软键盘并自定义避让软键盘的最小距离。
+从API version 23开始，新增keyboardAvoidMode、minKeyboardAvoidDistance接口。
 
 ```TypeScript
 import { inputMethod } from '@kit.IMEKit';
@@ -642,6 +643,8 @@ struct Index {
 ```
 
 该示例通过调用[menuSystemMaterial](arkts-arkui-select-attribute.md#menusystemmaterial)接口设置下拉菜单的系统材质，实现沉浸光感效果；通过[SystemUiMaterial](ts-universal-attributes-image-effect.md#systemuimaterial)接口设置Select组件的系统材质，实现沉浸光感效果。
+组件沉浸光感效果会根据设备算力与用户在系统中设置的沉浸光感效果自适应调整，开发者无需额外适配。
+从API版本26.0.0开始，新增menuSystemMaterial接口。
 
 ```TypeScript
 import { uiMaterial } from '@kit.ArkUI';

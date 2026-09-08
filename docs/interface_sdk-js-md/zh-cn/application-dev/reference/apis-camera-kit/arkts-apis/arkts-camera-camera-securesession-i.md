@@ -50,22 +50,6 @@ addSecureOutput(previewOutput: PreviewOutput): void
 | [7400102](../errorcode-camera.md#7400102-非法操作) | Operation not allowed. |
 | [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config.<br>**适用版本：** 12 - 17 |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function addSecureOutput(session: camera.SecureSession, previewOutput: camera.PreviewOutput): void {
-  try {
-    session.addSecureOutput(previewOutput);
-  } catch (error) {
-    // 失败返回错误码error.code并处理。
-    let err = error as BusinessError;
-    console.error(`The addOutput call failed. error code: ${err.code}`);
-  }
-}
-```
-
 ## off('error')
 
 ```TypeScript

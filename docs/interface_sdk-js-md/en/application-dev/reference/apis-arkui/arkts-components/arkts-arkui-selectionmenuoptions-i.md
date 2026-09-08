@@ -87,7 +87,7 @@ onDisappear?: Callback<void>
 
 Callback invoked when the custom context menu on selection disappears.
 
-**Type:** Callback&lt;void&gt;
+**Type:** [Callback](arkts-arkui-callback-i.md)&lt;void&gt;
 
 **Since:** 10
 

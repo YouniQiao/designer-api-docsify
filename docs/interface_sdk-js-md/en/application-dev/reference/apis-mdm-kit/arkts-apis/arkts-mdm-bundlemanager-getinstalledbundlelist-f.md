@@ -33,7 +33,7 @@ Obtains the applications installed by a specified user on a device. This API use
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;BundleInfo&gt;&gt; | Promise used to return the bundle information of the installed application. |
+| Promise&lt;Array&lt;[BundleInfo](arkts-mdm-bundlemanager-bundleinfo-i.md)&gt;&gt; | Promise used to return the bundle information of the installed application. |
 
 **Error codes:**
 
@@ -93,7 +93,7 @@ Obtains the list of applications installed by a specified user based on the spec
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;BundleInfo&gt;&gt; | Promise used to return the bundle information of the installed application. |
+| Promise&lt;Array&lt;[BundleInfo](arkts-mdm-bundlemanager-bundleinfo-i.md)&gt;&gt; | Promise used to return the bundle information of the installed application. |
 
 **Error codes:**
 

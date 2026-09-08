@@ -84,6 +84,7 @@ struct Index {
 ```
 
 This example demonstrates how to use the brand, primary, onPrimary, and container attributes in Colors to set theme colors for a component.
+The primary, onPrimary, and container attributes are added to Colors since API version 26.0.0.
 
 ```TypeScript
 import { CustomColors } from '@kit.ArkUI';

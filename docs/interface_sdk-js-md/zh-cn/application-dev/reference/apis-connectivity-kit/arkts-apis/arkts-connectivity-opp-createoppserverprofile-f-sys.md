@@ -34,15 +34,3 @@ function createOppServerProfile(): OppServerProfile
 | --- | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Non-system applications are not allowed to use system APIs. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-try {
-    let oppProfile = opp.createOppServerProfile();
-    console.info('oppServer success');
-} catch (err) {
-    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-}
-```

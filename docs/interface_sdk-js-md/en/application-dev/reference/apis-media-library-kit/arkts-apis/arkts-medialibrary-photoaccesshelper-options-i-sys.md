@@ -58,7 +58,7 @@ suggestionFields?: FieldType[]
 
 Suggestion Fields option
 
-**Type:** FieldType[]
+**Type:** [FieldType](arkts-medialibrary-photoaccesshelper-fieldtype-e-sys.md)[]
 
 **Since:** 23
 

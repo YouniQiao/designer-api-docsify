@@ -36,7 +36,7 @@ desiredPixelFormat?: PixelMapFormat
 
 Desired Pixel format, RGBA_8888\BGRA_8888\RGB_565\NV12\NV21 are supported.
 
-**Type:** PixelMapFormat
+**Type:** [PixelMapFormat](arkts-image-image-pixelmapformat-e.md)
 
 **Since:** 24
 

@@ -38,7 +38,7 @@ status: USBPortStatus
 
 USB端口角色信息。其currentMode应在supportedModes范围内。
 
-**类型：** USBPortStatus
+**类型：** [USBPortStatus](arkts-basicservices-usbmanager-usbportstatus-i-sys.md)
 
 **起始版本：** 9
 
@@ -54,7 +54,7 @@ supportedModes: PortModeType
 
 USB端口所支持的模式的数字组合掩码。status.currentMode应在此范围内。
 
-**类型：** PortModeType
+**类型：** [PortModeType](arkts-basicservices-usbmanager-portmodetype-e-sys.md)
 
 **起始版本：** 9
 

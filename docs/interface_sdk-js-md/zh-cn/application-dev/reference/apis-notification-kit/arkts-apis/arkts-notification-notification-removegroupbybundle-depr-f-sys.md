@@ -33,25 +33,6 @@ function removeGroupByBundle(bundle: BundleOption, groupName: string, callback: 
 | groupName | string | 是 | 通知组名称。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 删除指定应用指定组下通知的回调函数。 |
 
-**示例**
-
-```TypeScript
-import Base from '@ohos.base';
-
-let removeGroupByBundleCallback = (err: Base.BusinessError) => {
-  if (err) {
-    console.error("removeGroupByBundle failed " + JSON.stringify(err));
-  } else {
-    console.info("removeGroupByBundle success");
-  }
-}
-
-let bundleOption: Notification.BundleOption = {bundle: "Bundle"};
-let groupName: string = "GroupName";
-
-Notification.removeGroupByBundle(bundleOption, groupName, removeGroupByBundleCallback);
-```
-
 
 ## removeGroupByBundle
 
@@ -85,17 +66,3 @@ function removeGroupByBundle(bundle: BundleOption, groupName: string): Promise<v
 | 类型 | 说明 |
 | --- | --- |
 | Promise&lt;void&gt; | 无返回结果的Promise对象。 |
-
-**示例**
-
-```TypeScript
-import Base from '@ohos.base';
-
-let bundleOption: Notification.BundleOption = {bundle: "Bundle"};
-let groupName: string = "GroupName";
-Notification.removeGroupByBundle(bundleOption, groupName).then(() => {
-  console.info("removeGroupByBundle success");
-}).catch((err: Base.BusinessError) => {
-  console.error(`removeGroupByBundle failed, code is ${err}`);
-});
-```

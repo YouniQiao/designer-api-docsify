@@ -105,7 +105,7 @@ textAlign?: TextAlign
 
 设置文本段落在水平方向的对齐方式。默认值：TextAlign.START
 
-**类型：** TextAlign
+**类型：** [TextAlign](../arkts-apis/arkts-arkui-textalign-e.md)
 
 **起始版本：** 11
 
@@ -125,7 +125,7 @@ textDirection?: TextDirection
 
 默认值：TextDirection.DEFAULT
 
-**类型：** TextDirection
+**类型：** [TextDirection](../arkts-apis/arkts-arkui-textdirection-e.md)
 
 **起始版本：** 23
 
@@ -145,7 +145,7 @@ textVerticalAlign?: TextVerticalAlign
 
 默认值：TextVerticalAlign.BASELINE
 
-**类型：** TextVerticalAlign
+**类型：** [TextVerticalAlign](../arkts-apis/arkts-arkui-textverticalalign-e.md)
 
 **起始版本：** 20
 
@@ -165,7 +165,7 @@ wordBreak?: WordBreak
 
 默认值：WordBreak.BREAK_WORD。
 
-**类型：** WordBreak
+**类型：** [WordBreak](../arkts-apis/arkts-arkui-wordbreak-e.md)
 
 **起始版本：** 12
 

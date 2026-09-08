@@ -23,7 +23,7 @@ direction : Axis
 
 非法值：按默认值处理。
 
-**类型：** Axis
+**类型：** [Axis](../arkts-apis/arkts-arkui-axis-e.md)
 
 **起始版本：** 12
 

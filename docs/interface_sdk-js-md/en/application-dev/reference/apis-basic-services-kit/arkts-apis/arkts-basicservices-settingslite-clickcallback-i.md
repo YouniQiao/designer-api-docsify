@@ -1,6 +1,6 @@
 # ClickCallback
 
-Defines a callback used to return whether the application started by number-pressing the function key is the application itself.
+Defines a callback used to return whether the application started by double-pressing the function key is the application itself.
 
 **Since:** 24
 
@@ -18,7 +18,7 @@ import { settingsLite } from '@kit.BasicServicesKit';
 onResult(result: boolean): void
 ```
 
-Called to determine whether the application can be started by number-pressing the function key.
+Called to determine whether the application can be started by double-pressing the function key.
 
 **Since:** 24
 
@@ -30,4 +30,4 @@ Called to determine whether the application can be started by number-pressing th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| result | boolean | Yes | The specified application is started by number-pressing the function key if true is returned. Otherwise, an unexpected application is started. |
+| result | boolean | Yes | The specified application is started by double-pressing the function key if true is returned. Otherwise, an unexpected application is started. |

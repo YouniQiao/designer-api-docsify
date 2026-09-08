@@ -20,7 +20,7 @@ readonly errorCode: ErrorCode
 
 Specific error type returned by the pre-download error callback.
 
-**Type:** ErrorCode
+**Type:** [ErrorCode](arkts-basicservices-cachedownload-errorcode-e.md)
 
 **Since:** 23
 

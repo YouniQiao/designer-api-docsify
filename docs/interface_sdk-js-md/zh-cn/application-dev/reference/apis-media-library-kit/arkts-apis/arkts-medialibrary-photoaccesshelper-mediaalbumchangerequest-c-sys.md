@@ -104,7 +104,7 @@ static deleteAlbums(context: Context, albums: Array<Album>): Promise<void>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | 是 | 传入Ability实例的Context。 |
-| albums | Array&lt;Album&gt; | 是 | 待删除的相册数组。 |
+| albums | Array&lt;[Album](arkts-medialibrary-photoaccesshelper-album-i.md)&gt; | 是 | 待删除的相册数组。 |
 
 **返回值：**
 
@@ -220,7 +220,7 @@ deleteAssets(assets: Array<PhotoAsset>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| assets | Array&lt;PhotoAsset&gt; | 是 | 待从回收站中彻底删除的资产数组。 |
+| assets | Array&lt;[PhotoAsset](arkts-medialibrary-photoaccesshelper-photoasset-i.md)&gt; | 是 | 待从回收站中彻底删除的资产数组。 |
 
 **错误码：**
 
@@ -393,7 +393,7 @@ dismissAssets(assets: Array<PhotoAsset>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| assets | Array&lt;PhotoAsset&gt; | 是 | 需要移除的文件列表。 |
+| assets | Array&lt;[PhotoAsset](arkts-medialibrary-photoaccesshelper-photoasset-i.md)&gt; | 是 | 需要移除的文件列表。 |
 
 **错误码：**
 
@@ -458,7 +458,7 @@ mergeAlbum(target: Album): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| target | Album | 是 | 需要合并的目标相册，合并相册必须重命名。 |
+| target | [Album](arkts-medialibrary-photoaccesshelper-album-i.md) | 是 | 需要合并的目标相册，合并相册必须重命名。 |
 
 **错误码：**
 
@@ -521,8 +521,8 @@ moveAssets(assets: Array<PhotoAsset>, targetAlbum: Album): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| assets | Array&lt;PhotoAsset&gt; | 是 | 待从相册中移出的资产数组。 |
-| targetAlbum | Album | 是 | 待移入资产的目标相册。 |
+| assets | Array&lt;[PhotoAsset](arkts-medialibrary-photoaccesshelper-photoasset-i.md)&gt; | 是 | 待从相册中移出的资产数组。 |
+| targetAlbum | [Album](arkts-medialibrary-photoaccesshelper-album-i.md) | 是 | 待移入资产的目标相册。 |
 
 **错误码：**
 
@@ -587,7 +587,7 @@ moveAssetsWithUri(assetUris: Array<string>, targetAlbum: Album): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | assetUris | Array&lt;string&gt; | 是 | 待从相册中移出的资产Uri数组。 |
-| targetAlbum | Album | 是 | 待移入资产的目标相册。 |
+| targetAlbum | [Album](arkts-medialibrary-photoaccesshelper-album-i.md) | 是 | 待移入资产的目标相册。 |
 
 **错误码：**
 
@@ -730,7 +730,7 @@ placeBefore(album: Album): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| album | Album | 是 | 目标相册。如果要将当前相册排序到末位，则目标相册传入null。 |
+| album | [Album](arkts-medialibrary-photoaccesshelper-album-i.md) | 是 | 目标相册。如果要将当前相册排序到末位，则目标相册传入null。 |
 
 **错误码：**
 
@@ -783,7 +783,7 @@ recoverAssets(assets: Array<PhotoAsset>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| assets | Array&lt;PhotoAsset&gt; | 是 | 待从回收站中恢复的资产数组。 |
+| assets | Array&lt;[PhotoAsset](arkts-medialibrary-photoaccesshelper-photoasset-i.md)&gt; | 是 | 待从回收站中恢复的资产数组。 |
 
 **错误码：**
 
@@ -1236,7 +1236,7 @@ static setUploadStatus(context: Context, albums: Album[], allowUpload: boolean):
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | 是 | 传入Ability实例的Context。 |
-| albums | Album[] | 是 | 待设置同步状态的相册数组，支持设置用户相册和来源相册，数组中元素个数不超过500个。 |
+| albums | [Album](arkts-medialibrary-photoaccesshelper-album-i.md)[] | 是 | 待设置同步状态的相册数组，支持设置用户相册和来源相册，数组中元素个数不超过500个。 |
 | allowUpload | boolean | 是 | 是否允许相册同步，true表示允许，false表示不允许。 |
 
 **返回值：**

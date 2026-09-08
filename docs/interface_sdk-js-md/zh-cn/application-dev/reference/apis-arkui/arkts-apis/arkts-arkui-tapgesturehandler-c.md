@@ -55,7 +55,7 @@ onAction(event: Callback<GestureEvent>): TapGestureHandler
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | Callback&lt;[GestureEvent](arkts-arkui-gestureevent-i.md)&gt; | 是 | 点击手势处理器识别成功回调。 |
+| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;[GestureEvent](arkts-arkui-gestureevent-i.md)&gt; | 是 | 点击手势处理器识别成功回调。 |
 
 **返回值：**
 

@@ -30,7 +30,7 @@ Obtains the Bluetooth scanning mode of a device. On API 10 and above, the permis
 
 | Type | Description |
 | --- | --- |
-| ScanMode | Returns the Bluetooth scanning mode, { |
+| [ScanMode](arkts-connectivity-bluetoothmanager-scanmode-e.md) | Returns the Bluetooth scanning mode, { |
 
 **Error codes:**
 

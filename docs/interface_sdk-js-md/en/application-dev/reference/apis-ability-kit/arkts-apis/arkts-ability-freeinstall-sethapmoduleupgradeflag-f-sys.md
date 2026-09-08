@@ -43,27 +43,6 @@ Sets an upgrade flag for a module. This API uses an asynchronous callback to ret
 | [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundle name is not found. |
 | [17700002](../errorcode-bundle.md#17700002-module-name-does-not-exist) | The specified module name is not found. |
 
-**Examples**
-
-```TypeScript
-import { freeInstall } from '@kit.AbilityKit';
-
-let bundleName = 'com.example.myapplication';
-let moduleName = 'entry';
-let upgradeFlag = freeInstall.UpgradeFlag.SINGLE_UPGRADE;
-try {
-  freeInstall.setHapModuleUpgradeFlag(bundleName, moduleName, upgradeFlag, err => {
-    if (err) {
-      console.error('Operation failed:' + JSON.stringify(err));
-    } else {
-      console.info('Operation succeed');
-    }
-  });
-} catch (err) {
-  console.error('Operation failed:' + JSON.stringify(err));
-}
-```
-
 
 ## setHapModuleUpgradeFlag
 
@@ -105,23 +84,3 @@ Sets an upgrade flag for a module. This API uses a promise to return the result.
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundle name is not found. |
 | [17700002](../errorcode-bundle.md#17700002-module-name-does-not-exist) | The specified module name is not found. |
-
-**Examples**
-
-```TypeScript
-import { freeInstall } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let bundleName = 'com.example.myapplication';
-let moduleName = 'entry';
-let upgradeFlag = freeInstall.UpgradeFlag.SINGLE_UPGRADE;
-try {
-  freeInstall.setHapModuleUpgradeFlag(bundleName, moduleName, upgradeFlag).then(() => {
-    console.info('Operation succeed')
-  }).catch((err: BusinessError) => {
-    console.error('Operation failed:' + JSON.stringify(err));
-  });
-} catch (err) {
-  console.error('Operation failed:' + JSON.stringify(err));
-}
-```

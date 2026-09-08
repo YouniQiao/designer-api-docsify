@@ -499,7 +499,7 @@ levelMode?: LevelMode
 
 默认值：LevelMode.OVERLAY
 
-**类型：** LevelMode
+**类型：** [LevelMode](../arkts-apis/arkts-arkui-levelmode-t.md)
 
 **起始版本：** 26.0.0
 
@@ -539,7 +539,7 @@ maskColor?: Color | string | Resource | number
 
 从 API version 10 开始废弃，建议使用`mask`替代。
 
-**类型：** Color \| string \| Resource \| number
+**类型：** [Color](../arkts-apis/arkts-arkui-color-e.md) \| string \| [Resource](../arkts-apis/arkts-arkui-resource-t.md) \| number
 
 **起始版本：** 8
 
@@ -687,7 +687,7 @@ API version 10，默认值：'#4d4d4d'
 
 API version 11及以后，默认值：透明色TRANSPARENT加模糊背景填充效果[COMPONENT_ULTRA_THICK](arkts-arkui-blurstyle-e.md)
 
-**类型：** Color \| string \| Resource \| number
+**类型：** [Color](../arkts-apis/arkts-arkui-color-e.md) \| string \| [Resource](../arkts-apis/arkts-arkui-resource-t.md) \| number
 
 **默认值：** '#4d4d4d' [since 10 - 10] @default TRANSPARENT plus COMPONENT_ULTRA_THICK [since 11]
 

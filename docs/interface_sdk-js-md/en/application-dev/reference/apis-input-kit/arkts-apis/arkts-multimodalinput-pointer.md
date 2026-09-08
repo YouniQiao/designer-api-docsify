@@ -55,8 +55,8 @@ import { pointer } from '@kit.InputKit';
 | [getPointerSpeed](arkts-input-pointer-getpointerspeed-f-sys.md) | Obtains the mouse pointer speed. This API uses an asynchronous callback to return the result. |
 | [getPointerSpeed](arkts-input-pointer-getpointerspeed-f-sys.md) | Obtains the mouse pointer speed. This API uses a promise to return the result. |
 | [getPointerSpeedSync](arkts-input-pointer-getpointerspeedsync-f-sys.md) | Obtains the mouse pointer speed. This API returns the result synchronously. |
-| [getTouchpadDoubleTapAndDragState](arkts-input-pointer-gettouchpaddoubletapanddragstate-f-sys.md) | Obtains the touchpad number-tap and drag switch state. This API uses an asynchronous callback to return the result. |
-| [getTouchpadDoubleTapAndDragState](arkts-input-pointer-gettouchpaddoubletapanddragstate-f-sys.md) | Obtains the touchpad number-tap and drag switch state. This API uses a promise to return the result. |
+| [getTouchpadDoubleTapAndDragState](arkts-input-pointer-gettouchpaddoubletapanddragstate-f-sys.md) | Obtains the touchpad double-tap and drag switch state. This API uses an asynchronous callback to return the result. |
+| [getTouchpadDoubleTapAndDragState](arkts-input-pointer-gettouchpaddoubletapanddragstate-f-sys.md) | Obtains the touchpad double-tap and drag switch state. This API uses a promise to return the result. |
 | [getTouchpadPinchSwitch](arkts-input-pointer-gettouchpadpinchswitch-f-sys.md) | Obtains the touchpad pinch switch state. This API uses an asynchronous callback to return the result. |
 | [getTouchpadPinchSwitch](arkts-input-pointer-gettouchpadpinchswitch-f-sys.md) | Obtains the touchpad pinch switch state. This API uses a promise to return the result. |
 | [getTouchpadPointerSpeed](arkts-input-pointer-gettouchpadpointerspeed-f-sys.md) | Obtains the touchpad pointer speed. This API uses an asynchronous callback to return the result. |
@@ -87,8 +87,8 @@ import { pointer } from '@kit.InputKit';
 | [setPointerSpeed](arkts-input-pointer-setpointerspeed-f-sys.md) | Sets the mouse pointer speed. This API uses an asynchronous callback to return the result. |
 | [setPointerSpeed](arkts-input-pointer-setpointerspeed-f-sys.md) | Sets the mouse pointer speed. This API uses a promise to return the result. |
 | [setPointerSpeedSync](arkts-input-pointer-setpointerspeedsync-f-sys.md) | Sets the mouse pointer speed. This API returns the result synchronously. |
-| [setTouchpadDoubleTapAndDragState](arkts-input-pointer-settouchpaddoubletapanddragstate-f-sys.md) | Sets the touchpad number-tap and drag switch state. This API uses an asynchronous callback to return the result. |
-| [setTouchpadDoubleTapAndDragState](arkts-input-pointer-settouchpaddoubletapanddragstate-f-sys.md) | Sets the touchpad number-tap and drag switch state. This API uses a promise to return the result. |
+| [setTouchpadDoubleTapAndDragState](arkts-input-pointer-settouchpaddoubletapanddragstate-f-sys.md) | Sets the touchpad double-tap and drag switch state. This API uses an asynchronous callback to return the result. |
+| [setTouchpadDoubleTapAndDragState](arkts-input-pointer-settouchpaddoubletapanddragstate-f-sys.md) | Sets the touchpad double-tap and drag switch state. This API uses a promise to return the result. |
 | [setTouchpadPinchSwitch](arkts-input-pointer-settouchpadpinchswitch-f-sys.md) | Sets the touchpad pinch switch. This API uses an asynchronous callback to return the result. |
 | [setTouchpadPinchSwitch](arkts-input-pointer-settouchpadpinchswitch-f-sys.md) | Sets the touchpad pinch switch. This API uses a promise to return the result. |
 | [setTouchpadPointerSpeed](arkts-input-pointer-settouchpadpointerspeed-f-sys.md) | Sets the touchpad pointer speed. This API uses an asynchronous callback to return the result. |

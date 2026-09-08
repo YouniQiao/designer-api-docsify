@@ -133,7 +133,7 @@ addImageSpan(value: PixelMap | ResourceStr, options?: RichEditorImageSpanOptions
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | PixelMap \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | 是 | 图片内容。 |
+| value | [PixelMap](arkts-arkui-pixelmap-t.md) \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | 是 | 图片内容。 |
 | options | [RichEditorImageSpanOptions](arkts-arkui-richeditorimagespanoptions-i.md) | 否 | 图片选项。当需要设置图片样式、偏移位置或段落样式时传入此参数；不传入时，图片将使用默认样式插入到内容末尾。 |
 
 **返回值：**
@@ -164,7 +164,7 @@ SymbolSpan暂不支持手势、复制操作和拖拽处理。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | Resource | 是 | SymbolSpan图标资源引用，用于指定系统预置或自定义的Symbol图标。 |
+| value | [Resource](../arkts-apis/arkts-arkui-resource-t.md) | 是 | SymbolSpan图标资源引用，用于指定系统预置或自定义的Symbol图标。 |
 | options | [RichEditorSymbolSpanOptions](arkts-arkui-richeditorsymbolspanoptions-i.md) | 否 | symbol选项。当需要设置SymbolSpan的偏移位置或样式时传入此参数；不传入时，SymbolSpan将使用默认样式插入到内容末尾。 |
 
 **返回值：**

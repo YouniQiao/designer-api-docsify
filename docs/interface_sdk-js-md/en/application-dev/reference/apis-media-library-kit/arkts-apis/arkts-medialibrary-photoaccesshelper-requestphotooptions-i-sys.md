@@ -38,7 +38,7 @@ size?: image.Size
 
 Size of the thumbnail to obtain.
 
-**Type:** image.Size
+**Type:** [image.Size](../../apis-image-kit/arkts-apis/arkts-image-image-size-i.md)
 
 **Since:** 11
 

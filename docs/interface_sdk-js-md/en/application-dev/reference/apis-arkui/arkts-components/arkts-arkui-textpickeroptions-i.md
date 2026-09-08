@@ -28,7 +28,7 @@ Default value: Each column has equal width, calculated by dividing the total com
 3. Individual array elements can be **Undefined** or **Null**, but the entire array cannot be **Undefined[]**
 or **Null[]**.
 
-**Type:** LengthMetrics[]
+**Type:** [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md)[]
 
 **Default:** Each column has equal width, calculated by dividing the total component width by the number of columns.
 
@@ -58,7 +58,7 @@ or [TextPickerRangeContent](arkts-arkui-textpickerrangecontent-i.md)[]
 (../../../quick-start/resource-categories-and-access.md#resource-group-directories).
 5. The type and number of columns in the range cannot be dynamically modified.
 
-**Type:** string[] \| string[][] \| Resource \| [TextPickerRangeContent](arkts-arkui-textpickerrangecontent-i.md)[] \| [TextCascadePickerRangeContent](arkts-arkui-textcascadepickerrangecontent-i.md)[]
+**Type:** string[] \| string[][] \| [Resource](../arkts-apis/arkts-arkui-resource-t.md) \| [TextPickerRangeContent](arkts-arkui-textpickerrangecontent-i.md)[] \| [TextCascadePickerRangeContent](arkts-arkui-textcascadepickerrangecontent-i.md)[]
 
 **Since:** 8
 

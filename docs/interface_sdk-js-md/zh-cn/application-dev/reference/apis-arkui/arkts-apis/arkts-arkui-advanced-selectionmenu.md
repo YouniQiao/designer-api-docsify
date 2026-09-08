@@ -688,6 +688,7 @@ struct Index {
 ```
 
 该示例通过设置SelectionMenuOptions的属性backgroundSystemMaterial，展示了超薄样式的背景板材质。
+从API版本26.0.0开始，SelectionMenuOptions新增backgroundSystemMaterial属性。
 
 ```TypeScript
 import {

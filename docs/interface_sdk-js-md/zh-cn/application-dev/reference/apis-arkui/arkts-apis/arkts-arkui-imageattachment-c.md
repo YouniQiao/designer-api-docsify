@@ -199,7 +199,7 @@ readonly value: PixelMap
 
 获取属性字符串的图片数据源。
 
-**类型：** PixelMap
+**类型：** [PixelMap](../arkts-components/arkts-arkui-pixelmap-t.md)
 
 **起始版本：** 12
 

@@ -2,7 +2,7 @@
 
 Enumerates the sampler addressing modes, which are used to control how texture coordinates are handled when they go beyond the [0, 1] range.
 
-@enum { number }
+@enum { int }
 
 **Since:** 20
 

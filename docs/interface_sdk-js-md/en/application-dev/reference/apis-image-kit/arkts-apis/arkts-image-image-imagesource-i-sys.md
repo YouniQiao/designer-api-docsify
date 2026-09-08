@@ -36,7 +36,7 @@ Decodes to a SDR PixelMap, using a as wide gamut as possible. For a SDR ImageSou
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;PixelMap&gt; | Decoded PixelMap. |
+| Promise&lt;[PixelMap](arkts-image-image-pixelmap-i.md)&gt; | Decoded PixelMap. |
 
 **Error codes:**
 

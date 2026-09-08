@@ -48,6 +48,46 @@ Start medialibrary database backup and wait for returning with backup informatio
 | [23800201](../errorcode-medialibrary.md#23800201-unsupported-operation-type) | Unsupported operation type, this api only works on beta device. |
 | [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. You are advised to retry and check the logs. Possible causes:  1. The database is corrupted.  2. The file system is abnormal.  3. The IPC request timed out. |
 
+## applyShareAlbumChanges
+
+```TypeScript
+applyShareAlbumChanges(mediaChangeRequest: MediaShareAlbumChangeRequest): Promise<Album|null>
+```
+
+Applies media changes of share album. This API uses a promise to return the target Album or null.
+
+**Since:** 26.1.0
+
+**Required permissions:** ohos.permission.WRITE_IMAGEVIDEO and ohos.permission.MANAGE_SHARE_PHOTO
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| mediaChangeRequest | [MediaShareAlbumChangeRequest](arkts-medialibrary-photoaccesshelper-mediasharealbumchangerequest-c-sys.md) | Yes | Request for share album changes. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;[Album](arkts-medialibrary-photoaccesshelper-album-i.md) \| null&gt; | Promise used to return the target album or null. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. Possible causes: 1. The mediaShareAlbumRequest is null. 2. The operator must be the owner of the share album when creating the album. 3. The operator must be the owner of the share album when adding share member. 4. The operator must be the owner of the share album or device owner of share album member when updating share member status. 5. The shared album member status update logic does not meet expectations. 6. The operator must be the owner of the share album when deleting share member. 7. The target Album is not exist. 8. The operator must be the owner of the share album when modifying the share album name. 9. The CoverUri is deleted or riskControlled. 10. The operator must be the owner of the share album when setting the cover of the album. 11. The operator must be the owner of the share album when resetting the cover of the album. 12. This member does not belong to the current shared album. |
+| [23800201](../errorcode-medialibrary.md#23800201-unsupported-operation-type) | Operation not supported. Possible causes: 1. Request must be from share album. |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. You are advised to retry and check the logs. Possible causes: 1. The database is corrupted. 2. The file system is abnormal. 3. The IPC request timed out. |
+
 ## batchGetPhotoAssetParams
 
 ```TypeScript
@@ -66,7 +106,7 @@ Obtains the values of specified properties for an array of [PhotoAsset](arkts-me
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| assets | PhotoAsset[] | Yes | Array of files for which property values are to be retrieved. |
+| assets | [PhotoAsset](arkts-medialibrary-photoaccesshelper-photoasset-i.md)[] | Yes | Array of files for which property values are to be retrieved. |
 | members | string[] | Yes | Array of properties for which values are to be retrieved. |
 
 **Return value:**
@@ -309,15 +349,15 @@ clone assets to Album.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| assets | PhotoAsset[] | Yes | Assets to be cloned. |
-| target | Album | Yes | Target Album. |
+| assets | [PhotoAsset](arkts-medialibrary-photoaccesshelper-photoasset-i.md)[] | Yes | Assets to be cloned. |
+| target | [Album](arkts-medialibrary-photoaccesshelper-album-i.md) | Yes | Target Album. |
 | option | [BatchOperationOptions](arkts-medialibrary-photoaccesshelper-batchoperationoptions-i-sys.md) | No | Option for performing batch operations on assets. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;PhotoAsset[]&gt; | Returns list of successful assets. |
+| Promise&lt;[PhotoAsset](arkts-medialibrary-photoaccesshelper-photoasset-i.md)[]&gt; | Returns list of successful assets. |
 
 **Error codes:**
 
@@ -325,7 +365,7 @@ clone assets to Album.
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
-| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. Possible causes:  1. Asset to be cloned has been deleted or hidden;  2. Asset to be cloned is cloud pictures, which can not be cloned;  3. The Target Album does not exist.  4. Insufficient system space.  5. Automatic renaming is not supported. |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. Possible causes:  1. Asset to be cloned has been deleted or hidden;  2. The Target Album does not exist.  3. Insufficient system space.  4. Automatic renaming is not supported.  5. The clone task is interrupted. |
 | [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. Possible causes: 1. Database corrupted; 2. The file system is abnormal; 3. The IPC request timed out. |
 
 **Examples**
@@ -357,6 +397,50 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 }
 ```
 
+## cloneWithShareAlbum
+
+```TypeScript
+cloneWithShareAlbum(owner:string, assets: PhotoAsset[], targetAlbum: Album, shareGroup: number,
+      option?: BatchOperationOptions): Promise<PhotoAsset[]>
+```
+
+Clone assets in shared albums. Resources can be copied from a common album to a shared album. Assets in a shared album can be copied to a common album. You can copy assets from a shared album to a shared album.
+
+**Since:** 26.1.0
+
+**Required permissions:** ohos.permission.WRITE_IMAGEVIDEO and ohos.permission.MANAGE_SHARE_PHOTO
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| owner | string | Yes | The owner of share album. |
+| assets | [PhotoAsset](arkts-medialibrary-photoaccesshelper-photoasset-i.md)[] | Yes | Assets to be cloned. |
+| targetAlbum | [Album](arkts-medialibrary-photoaccesshelper-album-i.md) | Yes | Target Album. |
+| shareGroup | number | Yes | The share group of assets to be cloned. |
+| option | [BatchOperationOptions](arkts-medialibrary-photoaccesshelper-batchoperationoptions-i-sys.md) | No | Option for performing batch operations on assets. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;[PhotoAsset](arkts-medialibrary-photoaccesshelper-photoasset-i.md)[]&gt; | Promise used to return list of successful assets. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. Possible causes:  1. Asset to be cloned has been deleted or hidden;  2. Asset to be cloned is cloud pictures, which can not be cloned;  3. The Target Album does not exist.  4. Insufficient system space.  5. Automatic renaming is not supported.  6. The clone task is interrupted. |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. Possible causes:  1. Database corrupted;  2. The file system is abnormal;  3. The IPC request timed out. |
+
 ## convertAssetToCompatibleAsset
 
 ```TypeScript
@@ -377,13 +461,13 @@ Convert Asset Attributes to Compatibility Attributes
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| assets | Array&lt;PhotoAsset&gt; | Yes | need to be converted. |
+| assets | Array&lt;[PhotoAsset](arkts-medialibrary-photoaccesshelper-photoasset-i.md)&gt; | Yes | need to be converted. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;PhotoAsset&gt;&gt; | Promise used to return Converted assets. |
+| Promise&lt;Array&lt;[PhotoAsset](arkts-medialibrary-photoaccesshelper-photoasset-i.md)&gt;&gt; | Promise used to return Converted assets. |
 
 **Error codes:**
 
@@ -426,7 +510,7 @@ The album name must meet the following requirements:
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the album to create. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Album&gt; | Yes | Callback used to return the created album instance. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Album](arkts-medialibrary-photoaccesshelper-album-i.md)&gt; | Yes | Callback used to return the created album instance. |
 
 **Error codes:**
 
@@ -496,7 +580,7 @@ The album name must meet the following requirements:
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Album&gt; | Promise used to return the created album instance. |
+| Promise&lt;[Album](arkts-medialibrary-photoaccesshelper-album-i.md)&gt; | Promise used to return the created album instance. |
 
 **Error codes:**
 
@@ -558,7 +642,7 @@ For API versions 10 to 17, the following characters are considered invalid: . ..
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | displayName | string | Yes | File name of the image or video to create. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;PhotoAsset&gt; | Yes | Callback used to return the image or video created. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[PhotoAsset](arkts-medialibrary-photoaccesshelper-photoasset-i.md)&gt; | Yes | Callback used to return the image or video created. |
 
 **Error codes:**
 
@@ -626,7 +710,7 @@ For API versions 10 to 17, the following characters are considered invalid: . ..
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;PhotoAsset&gt; | Promise used to return the created image and video asset. |
+| Promise&lt;[PhotoAsset](arkts-medialibrary-photoaccesshelper-photoasset-i.md)&gt; | Promise used to return the created image and video asset. |
 
 **Error codes:**
 
@@ -688,13 +772,13 @@ For API versions 10 to 17, the following characters are considered invalid: . ..
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | displayName | string | Yes | File name of the image or video to create. |
-| options | PhotoCreateOptions | Yes | Options for creating an image or video asset. |
+| options | [PhotoCreateOptions](arkts-medialibrary-photoaccesshelper-photocreateoptions-i-sys.md) | Yes | Options for creating an image or video asset. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;PhotoAsset&gt; | Promise used to return the created image and video asset. |
+| Promise&lt;[PhotoAsset](arkts-medialibrary-photoaccesshelper-photoasset-i.md)&gt; | Promise used to return the created image and video asset. |
 
 **Error codes:**
 
@@ -759,8 +843,8 @@ For API versions 10 to 17, the following characters are considered invalid: . ..
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | displayName | string | Yes | File name of the image or video to create. |
-| options | PhotoCreateOptions | Yes | Options for creating an image or video asset. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;PhotoAsset&gt; | Yes | Callback used to return the image or video created. |
+| options | [PhotoCreateOptions](arkts-medialibrary-photoaccesshelper-photocreateoptions-i-sys.md) | Yes | Options for creating an image or video asset. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[PhotoAsset](arkts-medialibrary-photoaccesshelper-photoasset-i.md)&gt; | Yes | Callback used to return the image or video created. |
 
 **Error codes:**
 
@@ -1117,7 +1201,7 @@ Deletes user albums. This API uses an asynchronous callback to return the result
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| albums | Array&lt;Album&gt; | Yes | Albums to delete. |
+| albums | Array&lt;[Album](arkts-medialibrary-photoaccesshelper-album-i.md)&gt; | Yes | Albums to delete. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback that returns no value. |
 
 **Error codes:**
@@ -1183,7 +1267,7 @@ Deletes user albums. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| albums | Array&lt;Album&gt; | Yes | Albums to delete. |
+| albums | Array&lt;[Album](arkts-medialibrary-photoaccesshelper-album-i.md)&gt; | Yes | Albums to delete. |
 
 **Return value:**
 
@@ -1458,7 +1542,7 @@ Obtains album information by album IDs. This API uses a promise to return the re
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Map&lt;number, Album&gt;&gt; | Promise used to return the map object that contains the album information. |
+| Promise&lt;Map&lt;number, [Album](arkts-medialibrary-photoaccesshelper-album-i.md)&gt;&gt; | Promise used to return the map object that contains the album information. |
 
 **Error codes:**
 
@@ -1562,7 +1646,7 @@ Obtain the URI list to be transcoded based on bundleName, photoAsset list, and c
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | string | Yes | The app bundleName. |
-| assets | Array&lt;PhotoAsset&gt; | Yes | Array of the assets. |
+| assets | Array&lt;[PhotoAsset](arkts-medialibrary-photoaccesshelper-photoasset-i.md)&gt; | Yes | Array of the assets. |
 | compatibleFlag | number | No | Compatible configuration mask flag. The value should be an integer. |
 
 **Return value:**
@@ -1856,8 +1940,8 @@ Obtains hidden albums based on the specified display mode and retrieval options.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | mode | [HiddenPhotosDisplayMode](arkts-medialibrary-photoaccesshelper-hiddenphotosdisplaymode-e-sys.md) | Yes | Display mode of hidden albums. |
-| options | FetchOptions | Yes | Retrieval options. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;FetchResult&lt;Album&gt;&gt; | Yes | Callback used to return the result. |
+| options | [FetchOptions](arkts-medialibrary-photoaccesshelper-fetchoptions-i.md) | Yes | Retrieval options. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[FetchResult](arkts-medialibrary-photoaccesshelper-fetchresult-i.md)&lt;[Album](arkts-medialibrary-photoaccesshelper-album-i.md)&gt;&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -1927,7 +2011,7 @@ Obtains hidden albums based on the specified display mode. This API uses an asyn
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | mode | [HiddenPhotosDisplayMode](arkts-medialibrary-photoaccesshelper-hiddenphotosdisplaymode-e-sys.md) | Yes | Display mode of hidden albums. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;FetchResult&lt;Album&gt;&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[FetchResult](arkts-medialibrary-photoaccesshelper-fetchresult-i.md)&lt;[Album](arkts-medialibrary-photoaccesshelper-album-i.md)&gt;&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -2021,13 +2105,13 @@ Obtains hidden albums based on the specified display mode and retrieval options.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | mode | [HiddenPhotosDisplayMode](arkts-medialibrary-photoaccesshelper-hiddenphotosdisplaymode-e-sys.md) | Yes | Display mode of hidden albums. |
-| options | FetchOptions | No | Options for retrieving the files. If this parameter is not specified, the files are retrieved based on the display mode of hidden files. |
+| options | [FetchOptions](arkts-medialibrary-photoaccesshelper-fetchoptions-i.md) | No | Options for retrieving the files. If this parameter is not specified, the files are retrieved based on the display mode of hidden files. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;FetchResult&lt;Album&gt;&gt; | Promise used to return the result. |
+| Promise&lt;[FetchResult](arkts-medialibrary-photoaccesshelper-fetchresult-i.md)&lt;[Album](arkts-medialibrary-photoaccesshelper-album-i.md)&gt;&gt; | Promise used to return the result. |
 
 **Error codes:**
 
@@ -2172,13 +2256,13 @@ Obtains the sorting order for system, user, and source albums. This API uses a p
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | orderStyle | number | Yes | Sorting style for albums. The value **0** means the phone style, and **1** means the PC style. |
-| options | FetchOptions | No | Retrieval options. If this parameter is not specified, the albums are obtained based on the album type by default. |
+| options | [FetchOptions](arkts-medialibrary-photoaccesshelper-fetchoptions-i.md) | No | Retrieval options. If this parameter is not specified, the albums are obtained based on the album type by default. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;FetchResult&lt;[AlbumOrder](arkts-medialibrary-photoaccesshelper-albumorder-i-sys.md)&gt;&gt; | Promise used to return the sorting order. |
+| Promise&lt;[FetchResult](arkts-medialibrary-photoaccesshelper-fetchresult-i.md)&lt;[AlbumOrder](arkts-medialibrary-photoaccesshelper-albumorder-i-sys.md)&gt;&gt; | Promise used to return the sorting order. |
 
 **Error codes:**
 
@@ -2241,13 +2325,13 @@ Before the operation, ensure that the albums to obtain exist.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | FetchOptions | No | Retrieval options. If this parameter is not specified, the albums are obtained based on the album type by default. |
+| options | [FetchOptions](arkts-medialibrary-photoaccesshelper-fetchoptions-i.md) | No | Retrieval options. If this parameter is not specified, the albums are obtained based on the album type by default. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;FetchResult&lt;Album&gt;&gt; | Promise used to return the result. |
+| Promise&lt;[FetchResult](arkts-medialibrary-photoaccesshelper-fetchresult-i.md)&lt;[Album](arkts-medialibrary-photoaccesshelper-album-i.md)&gt;&gt; | Promise used to return the result. |
 
 **Error codes:**
 
@@ -2306,13 +2390,13 @@ Converts the **ValuesBucket** record to a **PhotoAsset** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| assetsData | ValuesBucket[] | Yes | Array of asset records. Each element in the array contains the column name and value of the asset. The array can contain a maximum of 500 elements. Each element in the array must contain the following asset column information: **file_id**, **data**, **display_name**, **media_type**, and **subtype**. |
+| assetsData | [ValuesBucket](arkts-medialibrary-photoaccesshelper-valuesbucket-t-sys.md)[] | Yes | Array of asset records. Each element in the array contains the column name and value of the asset. The array can contain a maximum of 500 elements. Each element in the array must contain the following asset column information: **file_id**, **data**, **display_name**, **media_type**, and **subtype**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;PhotoAsset[]&gt; | Promise used to return the PhotoAsset object array (which may be empty). |
+| Promise&lt;[PhotoAsset](arkts-medialibrary-photoaccesshelper-photoasset-i.md)[]&gt; | Promise used to return the PhotoAsset object array (which may be empty). |
 
 **Error codes:**
 
@@ -2371,7 +2455,7 @@ Obtains the index of an image or video in an album. This API uses an asynchronou
 | --- | --- | --- | --- |
 | photoUri | string | Yes | URI of the media asset whose index is to be obtained. |
 | albumUri | string | Yes | Album URI, which can be an empty string. If it is an empty string, all the media assets in the Gallery are obtained by default. |
-| options | FetchOptions | Yes | Retrieval options. Only one search condition or sorting mode must be set in **predicates**. If no value is set or multiple search criteria or sorting modes are set, the API cannot be called successfully. |
+| options | [FetchOptions](arkts-medialibrary-photoaccesshelper-fetchoptions-i.md) | Yes | Retrieval options. Only one search condition or sorting mode must be set in **predicates**. If no value is set or multiple search criteria or sorting modes are set, the API cannot be called successfully. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the index obtained. |
 
 **Error codes:**
@@ -2448,7 +2532,7 @@ Obtains the index of an image or video in an album. This API uses a promise to r
 | --- | --- | --- | --- |
 | photoUri | string | Yes | URI of the media asset whose index is to be obtained. |
 | albumUri | string | Yes | Album URI, which can be an empty string. If it is an empty string, all the media assets in the Gallery are obtained by default. |
-| options | FetchOptions | Yes | Retrieval options. Only one search condition or sorting mode must be set in **predicates**. If no value is set or multiple search criteria or sorting modes are set, the API cannot be called successfully. |
+| options | [FetchOptions](arkts-medialibrary-photoaccesshelper-fetchoptions-i.md) | Yes | Retrieval options. Only one search condition or sorting mode must be set in **predicates**. If no value is set or multiple search criteria or sorting modes are set, the API cannot be called successfully. |
 
 **Return value:**
 
@@ -2567,6 +2651,45 @@ async function getPreferredCompatibleMode(
 }
 ```
 
+## getShareAlbums
+
+```TypeScript
+getShareAlbums(options?: FetchOptions): Promise<FetchResult<Album>>
+```
+
+Query shared photo albums.
+
+**Since:** 26.1.0
+
+**Required permissions:** ohos.permission.MANAGE_SHARE_PHOTO
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| options | [FetchOptions](arkts-medialibrary-photoaccesshelper-fetchoptions-i.md) | No | Retrieval options. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;[FetchResult](arkts-medialibrary-photoaccesshelper-fetchresult-i.md)&lt;[Album](arkts-medialibrary-photoaccesshelper-album-i.md)&gt;&gt; | Promise used to return fetch result of album. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. Possible causes:  1. The column field does not support querying.  2. Filter conditions do not match expectations. |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. Possible causes:  1. Database corrupted;  2. The file system is abnormal;  3. The IPC request timed out. |
+
 ## getSharedPhotoAssets
 
 ```TypeScript
@@ -2587,13 +2710,13 @@ Obtains the shared photo assets.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | FetchOptions | Yes | Options for obtaining the shared photo assets. |
+| options | [FetchOptions](arkts-medialibrary-photoaccesshelper-fetchoptions-i.md) | Yes | Options for obtaining the shared photo assets. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;SharedPhotoAsset&gt; | Shared photo assets obtained. |
+| Array&lt;[SharedPhotoAsset](arkts-medialibrary-photoaccesshelper-sharedphotoasset-i-sys.md)&gt; | Shared photo assets obtained. |
 
 **Error codes:**
 
@@ -3448,6 +3571,68 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper, cont
 }
 ```
 
+## offShareAlbumChange
+
+```TypeScript
+offShareAlbumChange(callback?: Callback<AlbumChangeInfos>): void
+```
+
+Unsubscribes from changes in the share album.
+
+**Since:** 26.1.0
+
+**Required permissions:** ohos.permission.MANAGE_SHARE_PHOTO
+
+**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md)&gt; | No | Callback used for unsubscription. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. You are advised to retry and check the logs. Possible causes:  1. The database is corrupted.  2. The file system is abnormal.  3. The IPC request timed out. |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |  |
+
+## offSharePhotoChange
+
+```TypeScript
+offSharePhotoChange(callback?: Callback<PhotoAssetChangeInfos>): void
+```
+
+Unsubscribes from changes of share photos and videos.
+
+**Since:** 26.1.0
+
+**Required permissions:** ohos.permission.MANAGE_SHARE_PHOTO
+
+**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md)&gt; | No | Callback used for unsubscription. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. You are advised to retry and check the logs. Possible causes:  1. The database is corrupted.  2. The file system is abnormal.  3. The IPC request timed out. |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |  |
+
 ## on('hiddenPhotoChange')
 
 ```TypeScript
@@ -3822,6 +4007,68 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper, cont
 }
 ```
 
+## onShareAlbumChange
+
+```TypeScript
+onShareAlbumChange(callback: Callback<AlbumChangeInfos>): void
+```
+
+Subscribes to changes of the share album.
+
+**Since:** 26.1.0
+
+**Required permissions:** ohos.permission.MANAGE_SHARE_PHOTO
+
+**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md)&gt; | Yes | Callback used to notify the application of the changes. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. You are advised to retry and check the logs. Possible causes:  1. The database is corrupted.  2. The file system is abnormal.  3. The IPC request timed out. |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |  |
+
+## onSharePhotoChange
+
+```TypeScript
+onSharePhotoChange(callback: Callback<PhotoAssetChangeInfos>): void
+```
+
+Subscribes to changes of share photos and videos.
+
+**Since:** 26.1.0
+
+**Required permissions:** ohos.permission.MANAGE_SHARE_PHOTO
+
+**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md)&gt; | Yes | Callback used to notify the application of the changes. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. You are advised to retry and check the logs. Possible causes:  1. The database is corrupted.  2. The file system is abnormal.  3. The IPC request timed out. |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |  |
+
 ## query
 
 ```TypeScript
@@ -3848,7 +4095,7 @@ Queries data in the database using the specified SQL statement. This API does no
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ResultSet&gt; | Promise used to return a **ResultSet** object. If the operation fails, an exception is thrown. |
+| Promise&lt;[ResultSet](arkts-medialibrary-photoaccesshelper-resultset-c-sys.md)&gt; | Promise used to return a **ResultSet** object. If the operation fails, an exception is thrown. |
 
 **Error codes:**
 
@@ -3938,7 +4185,7 @@ Removes the Gallery widget information bound to a single image from the database
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| info | FormInfo | Yes | Information about the Gallery widget to save, which includes the ID of the widget and the URI of the image bound to the widget. |
+| info | [FormInfo](arkts-medialibrary-photoaccesshelper-forminfo-i-sys.md) | Yes | Information about the Gallery widget to save, which includes the ID of the widget and the URI of the image bound to the widget. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback that returns no value. |
 
 **Error codes:**
@@ -3995,7 +4242,7 @@ Removes the Gallery widget information bound to a single image from the database
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| info | FormInfo | Yes | Information about the Gallery widget to save, which includes the ID of the widget and the URI of the image bound to the widget. |
+| info | [FormInfo](arkts-medialibrary-photoaccesshelper-forminfo-i-sys.md) | Yes | Information about the Gallery widget to save, which includes the ID of the widget and the URI of the image bound to the widget. |
 
 **Return value:**
 
@@ -4112,7 +4359,7 @@ Saves the Gallery widget information bound to a single image to the database. Th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| info | FormInfo | Yes | Information about the Gallery widget to save, which includes the ID of the widget and the URI of the image bound to the widget. |
+| info | [FormInfo](arkts-medialibrary-photoaccesshelper-forminfo-i-sys.md) | Yes | Information about the Gallery widget to save, which includes the ID of the widget and the URI of the image bound to the widget. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback that returns no value. |
 
 **Error codes:**
@@ -4178,7 +4425,7 @@ Saves the Gallery widget information bound to a single image to the database. Th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| info | FormInfo | Yes | Information about the Gallery widget to save, which includes the ID of the widget and the URI of the image bound to the widget. |
+| info | [FormInfo](arkts-medialibrary-photoaccesshelper-forminfo-i-sys.md) | Yes | Information about the Gallery widget to save, which includes the ID of the widget and the URI of the image bound to the widget. |
 
 **Return value:**
 
@@ -4693,7 +4940,7 @@ Generates a thumbnail based on the specified rule.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| predicate | dataSharePredicates.DataSharePredicates | Yes | Rule for generating the thumbnail. |
+| predicate | [dataSharePredicates.DataSharePredicates](../../apis-arkdata/arkts-apis/arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | Yes | Rule for generating the thumbnail. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, the notification task ends, and **err** is undefined. If the task fails, **err** is an error object. |
 
 **Return value:**
@@ -4756,7 +5003,7 @@ Generates a thumbnail based on the specified rule. This API uses an asynchronous
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| predicate | dataSharePredicates.DataSharePredicates | Yes | Predicates for generating a thumbnail. |
+| predicate | [dataSharePredicates.DataSharePredicates](../../apis-arkdata/arkts-apis/arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | Yes | Predicates for generating a thumbnail. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to notify that the task is complete when the operation is successful. |
 | response | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return whether there are ungenerated thumbnails. If **1** is returned, all thumbnails have been generated. If **0** is returned, some thumbnails have not been generated. |
 

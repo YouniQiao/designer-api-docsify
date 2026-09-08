@@ -55,60 +55,6 @@ get(key: string, callback: AsyncCallback<boolean | string | number | number | Ui
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
-
-const KEY_TEST_STRING_ELEMENT = 'key_test_string';
-const VALUE_TEST_STRING_ELEMENT = 'value-test-string';
-try {
-  kvStore.put(KEY_TEST_STRING_ELEMENT, VALUE_TEST_STRING_ELEMENT, (err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to put. Code: ${err.code}, message: ${err.message}`);
-      return;
-    }
-    console.info('Succeeded in putting');
-    if (kvStore != null) {
-      kvStore.get(KEY_TEST_STRING_ELEMENT, (err: BusinessError, data: boolean | string | number | Uint8Array) => {
-        if (err) {
-          console.error(`Failed to get. Code: ${err.code}, message: ${err.message}`);
-          return;
-        }
-        console.info(`Succeeded in getting data.data=${data}`);
-      });
-    }
-  });
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`Failed to get. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-
-const KEY_TEST_STRING_ELEMENT = 'key_test_string';
-const VALUE_TEST_STRING_ELEMENT = 'value-test-string';
-try {
-  kvStore.put(KEY_TEST_STRING_ELEMENT, VALUE_TEST_STRING_ELEMENT).then(() => {
-    console.info(`Succeeded in putting data`);
-    if (kvStore != null) {
-      kvStore.get(KEY_TEST_STRING_ELEMENT).then((data: boolean | string | number | Uint8Array) => {
-        console.info(`Succeeded in getting data.data=${data}`);
-      }).catch((err: BusinessError) => {
-        console.error(`Failed to get. Code: ${err.code}, message: ${err.message}`);
-      });
-    }
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to put. Code: ${err.code}, message: ${err.message}`);
-  });
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`Failed to get. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
 const KEY_TEST_STRING_ELEMENT = 'key_test_string';
 const VALUE_TEST_STRING_ELEMENT = 'value-test-string';
 try {
@@ -247,7 +193,109 @@ get(key: string): Promise<boolean | string | number | number | Uint8Array>
 
 **示例**
 
-参见 [get](#get)
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+const KEY_TEST_STRING_ELEMENT = 'key_test_string';
+const VALUE_TEST_STRING_ELEMENT = 'value-test-string';
+try {
+  kvStore.put(KEY_TEST_STRING_ELEMENT, VALUE_TEST_STRING_ELEMENT, (err: BusinessError) => {
+    if (err) {
+      console.error(`Failed to put. Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+    console.info('Succeeded in putting');
+    if (kvStore != null) {
+      kvStore.get(KEY_TEST_STRING_ELEMENT, (err: BusinessError, data: boolean | string | number | Uint8Array) => {
+        if (err) {
+          console.error(`Failed to get. Code: ${err.code}, message: ${err.message}`);
+          return;
+        }
+        console.info(`Succeeded in getting data. Data=${data}`);
+      });
+    }
+  });
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to get. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+const KEY_TEST_STRING_ELEMENT = 'key_test_string';
+const VALUE_TEST_STRING_ELEMENT = 'value-test-string';
+try {
+  kvStore.put(KEY_TEST_STRING_ELEMENT, VALUE_TEST_STRING_ELEMENT).then(() => {
+    console.info(`Succeeded in putting data`);
+    if (kvStore != null) {
+      kvStore.get(KEY_TEST_STRING_ELEMENT).then((data: boolean | string | number | Uint8Array) => {
+        console.info(`Succeeded in getting data.data=${data}`);
+      }).catch((err: BusinessError) => {
+        console.error(`Failed to get. Code: ${err.code}, message: ${err.message}`);
+      });
+    }
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to put. Code: ${err.code}, message: ${err.message}`);
+  });
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to get. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+const KEY_TEST_STRING_ELEMENT = 'key_test_string_2';
+const VALUE_TEST_STRING_ELEMENT = 'value-string-002';
+try {
+  kvStore.put(KEY_TEST_STRING_ELEMENT, VALUE_TEST_STRING_ELEMENT, async (err: BusinessError) => {
+    if (err) {
+      console.error(`Failed to put. Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+    console.info('Succeeded in putting');
+    if (kvStore != null) {
+      kvStore.get('localDeviceId', KEY_TEST_STRING_ELEMENT, (err: BusinessError, data: boolean | string | number | Uint8Array) => {
+        if (err) {
+          console.error(`Failed to get. Code: ${err.code}, message: ${err.message}`);
+          return;
+        }
+        console.info('Succeeded in getting');
+      });
+    }
+  })
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to get. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+const KEY_TEST_STRING_ELEMENT = 'key_test_string_2';
+const VALUE_TEST_STRING_ELEMENT = 'value-string-002';
+try {
+  kvStore.put(KEY_TEST_STRING_ELEMENT, VALUE_TEST_STRING_ELEMENT).then(async () => {
+    console.info('Succeeded in putting');
+    if (kvStore != null) {
+      kvStore.get('localDeviceId', KEY_TEST_STRING_ELEMENT).then((data: boolean | string | number | Uint8Array) => {
+        console.info('Succeeded in getting');
+      }).catch((err: BusinessError) => {
+        console.error(`Failed to get. Code: ${err.code}, message: ${err.message}`);
+      });
+    }
+  }).catch((error: BusinessError) => {
+    console.error(`Failed to put. Code: ${error.code}, message: ${error.message}`);
+  });
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to get. Code: ${error.code}, message: ${error.message}`);
+}
+```
 
 ## get
 
@@ -291,7 +339,109 @@ get(deviceId: string, key: string, callback: AsyncCallback<boolean | string | nu
 
 **示例**
 
-参见 [get](#get)
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+const KEY_TEST_STRING_ELEMENT = 'key_test_string';
+const VALUE_TEST_STRING_ELEMENT = 'value-test-string';
+try {
+  kvStore.put(KEY_TEST_STRING_ELEMENT, VALUE_TEST_STRING_ELEMENT, (err: BusinessError) => {
+    if (err) {
+      console.error(`Failed to put. Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+    console.info('Succeeded in putting');
+    if (kvStore != null) {
+      kvStore.get(KEY_TEST_STRING_ELEMENT, (err: BusinessError, data: boolean | string | number | Uint8Array) => {
+        if (err) {
+          console.error(`Failed to get. Code: ${err.code}, message: ${err.message}`);
+          return;
+        }
+        console.info(`Succeeded in getting data. Data=${data}`);
+      });
+    }
+  });
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to get. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+const KEY_TEST_STRING_ELEMENT = 'key_test_string';
+const VALUE_TEST_STRING_ELEMENT = 'value-test-string';
+try {
+  kvStore.put(KEY_TEST_STRING_ELEMENT, VALUE_TEST_STRING_ELEMENT).then(() => {
+    console.info(`Succeeded in putting data`);
+    if (kvStore != null) {
+      kvStore.get(KEY_TEST_STRING_ELEMENT).then((data: boolean | string | number | Uint8Array) => {
+        console.info(`Succeeded in getting data.data=${data}`);
+      }).catch((err: BusinessError) => {
+        console.error(`Failed to get. Code: ${err.code}, message: ${err.message}`);
+      });
+    }
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to put. Code: ${err.code}, message: ${err.message}`);
+  });
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to get. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+const KEY_TEST_STRING_ELEMENT = 'key_test_string_2';
+const VALUE_TEST_STRING_ELEMENT = 'value-string-002';
+try {
+  kvStore.put(KEY_TEST_STRING_ELEMENT, VALUE_TEST_STRING_ELEMENT, async (err: BusinessError) => {
+    if (err) {
+      console.error(`Failed to put. Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+    console.info('Succeeded in putting');
+    if (kvStore != null) {
+      kvStore.get('localDeviceId', KEY_TEST_STRING_ELEMENT, (err: BusinessError, data: boolean | string | number | Uint8Array) => {
+        if (err) {
+          console.error(`Failed to get. Code: ${err.code}, message: ${err.message}`);
+          return;
+        }
+        console.info('Succeeded in getting');
+      });
+    }
+  })
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to get. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+const KEY_TEST_STRING_ELEMENT = 'key_test_string_2';
+const VALUE_TEST_STRING_ELEMENT = 'value-string-002';
+try {
+  kvStore.put(KEY_TEST_STRING_ELEMENT, VALUE_TEST_STRING_ELEMENT).then(async () => {
+    console.info('Succeeded in putting');
+    if (kvStore != null) {
+      kvStore.get('localDeviceId', KEY_TEST_STRING_ELEMENT).then((data: boolean | string | number | Uint8Array) => {
+        console.info('Succeeded in getting');
+      }).catch((err: BusinessError) => {
+        console.error(`Failed to get. Code: ${err.code}, message: ${err.message}`);
+      });
+    }
+  }).catch((error: BusinessError) => {
+    console.error(`Failed to put. Code: ${error.code}, message: ${error.message}`);
+  });
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to get. Code: ${error.code}, message: ${error.message}`);
+}
+```
 
 ## get
 
@@ -340,7 +490,109 @@ get(deviceId: string, key: string): Promise<boolean | string | number | number |
 
 **示例**
 
-参见 [get](#get)
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+const KEY_TEST_STRING_ELEMENT = 'key_test_string';
+const VALUE_TEST_STRING_ELEMENT = 'value-test-string';
+try {
+  kvStore.put(KEY_TEST_STRING_ELEMENT, VALUE_TEST_STRING_ELEMENT, (err: BusinessError) => {
+    if (err) {
+      console.error(`Failed to put. Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+    console.info('Succeeded in putting');
+    if (kvStore != null) {
+      kvStore.get(KEY_TEST_STRING_ELEMENT, (err: BusinessError, data: boolean | string | number | Uint8Array) => {
+        if (err) {
+          console.error(`Failed to get. Code: ${err.code}, message: ${err.message}`);
+          return;
+        }
+        console.info(`Succeeded in getting data. Data=${data}`);
+      });
+    }
+  });
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to get. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+const KEY_TEST_STRING_ELEMENT = 'key_test_string';
+const VALUE_TEST_STRING_ELEMENT = 'value-test-string';
+try {
+  kvStore.put(KEY_TEST_STRING_ELEMENT, VALUE_TEST_STRING_ELEMENT).then(() => {
+    console.info(`Succeeded in putting data`);
+    if (kvStore != null) {
+      kvStore.get(KEY_TEST_STRING_ELEMENT).then((data: boolean | string | number | Uint8Array) => {
+        console.info(`Succeeded in getting data.data=${data}`);
+      }).catch((err: BusinessError) => {
+        console.error(`Failed to get. Code: ${err.code}, message: ${err.message}`);
+      });
+    }
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to put. Code: ${err.code}, message: ${err.message}`);
+  });
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to get. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+const KEY_TEST_STRING_ELEMENT = 'key_test_string_2';
+const VALUE_TEST_STRING_ELEMENT = 'value-string-002';
+try {
+  kvStore.put(KEY_TEST_STRING_ELEMENT, VALUE_TEST_STRING_ELEMENT, async (err: BusinessError) => {
+    if (err) {
+      console.error(`Failed to put. Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+    console.info('Succeeded in putting');
+    if (kvStore != null) {
+      kvStore.get('localDeviceId', KEY_TEST_STRING_ELEMENT, (err: BusinessError, data: boolean | string | number | Uint8Array) => {
+        if (err) {
+          console.error(`Failed to get. Code: ${err.code}, message: ${err.message}`);
+          return;
+        }
+        console.info('Succeeded in getting');
+      });
+    }
+  })
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to get. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+const KEY_TEST_STRING_ELEMENT = 'key_test_string_2';
+const VALUE_TEST_STRING_ELEMENT = 'value-string-002';
+try {
+  kvStore.put(KEY_TEST_STRING_ELEMENT, VALUE_TEST_STRING_ELEMENT).then(async () => {
+    console.info('Succeeded in putting');
+    if (kvStore != null) {
+      kvStore.get('localDeviceId', KEY_TEST_STRING_ELEMENT).then((data: boolean | string | number | Uint8Array) => {
+        console.info('Succeeded in getting');
+      }).catch((err: BusinessError) => {
+        console.error(`Failed to get. Code: ${err.code}, message: ${err.message}`);
+      });
+    }
+  }).catch((error: BusinessError) => {
+    console.error(`Failed to put. Code: ${error.code}, message: ${error.message}`);
+  });
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to get. Code: ${error.code}, message: ${error.message}`);
+}
+```
 
 ## getEntries
 
@@ -361,7 +613,7 @@ getEntries(keyPrefix: string, callback: AsyncCallback<Entry[]>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | keyPrefix | string | 是 | 表示要匹配的键前缀，长度范围为1-[MAX_KEY_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md)。不能包含'^'，包含'^'将导致谓词失效，查询结果会返回数据库中的所有数据。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Entry[]&gt; | 是 | 回调函数。返回匹配指定前缀的键值对列表。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Entry](arkts-arkdata-distributedkvstore-entry-i.md)[]&gt; | 是 | 回调函数。返回匹配指定前缀的键值对列表。 |
 
 **错误码：**
 
@@ -438,7 +690,7 @@ getEntries(keyPrefix: string): Promise<Entry[]>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Entry[]&gt; | Promise对象。返回匹配指定前缀的键值对列表。 |
+| Promise&lt;[Entry](arkts-arkdata-distributedkvstore-entry-i.md)[]&gt; | Promise对象。返回匹配指定前缀的键值对列表。 |
 
 **错误码：**
 
@@ -449,43 +701,6 @@ getEntries(keyPrefix: string): Promise<Entry[]>
 | [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. |
 
 **示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-
-try {
-  let entries: distributedKVStore.Entry[] = [];
-  for (let i = 0; i < 10; i++) {
-    let key = 'batch_test_string_key';
-    let entry: distributedKVStore.Entry = {
-      key: key + i,
-      value: {
-        type: distributedKVStore.ValueType.STRING,
-        value: 'batch_test_string_value'
-      }
-    }
-    entries.push(entry);
-  }
-  console.info(`entries: ${entries}`);
-  kvStore.putBatch(entries).then(async () => {
-    console.info('Succeeded in putting Batch');
-    if (kvStore != null) {
-      kvStore.getEntries('batch_test_string_key').then((entries: distributedKVStore.Entry[]) => {
-        console.info('Succeeded in getting Entries');
-        console.info(`PutBatch ${entries}`);
-      }).catch((err: BusinessError) => {
-        console.error(`Failed to get Entries. Code: ${err.code}, message: ${err.message}`);
-      });
-    }
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to put Batch. Code: ${err.code}, message: ${err.message}`);
-  });
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
-}
-```
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -552,7 +767,7 @@ getEntries(deviceId: string, keyPrefix: string, callback: AsyncCallback<Entry[]>
 | --- | --- | --- | --- |
 | deviceId | string | 是 | 设备的networkId，标识要查询其数据的设备，不能为空。 |
 | keyPrefix | string | 是 | 表示要匹配的键前缀，长度范围为1-[MAX_KEY_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md)。不能包含'^'，包含'^'将导致谓词失效，查询结果会返回数据库中的所有数据。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Entry[]&gt; | 是 | 回调函数，返回满足给定条件的所有键值对的列表。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Entry](arkts-arkdata-distributedkvstore-entry-i.md)[]&gt; | 是 | 回调函数，返回满足给定条件的所有键值对的列表。 |
 
 **错误码：**
 
@@ -639,7 +854,7 @@ getEntries(deviceId: string, keyPrefix: string): Promise<Entry[]>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Entry[]&gt; | Promise对象。返回匹配给定条件的所有键值对的列表。 |
+| Promise&lt;[Entry](arkts-arkdata-distributedkvstore-entry-i.md)[]&gt; | Promise对象。返回匹配给定条件的所有键值对的列表。 |
 
 **错误码：**
 
@@ -708,8 +923,8 @@ getEntries(query: Query, callback: AsyncCallback<Entry[]>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| query | Query | 是 | 表示要查询的对象。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Entry[]&gt; | 是 | 回调函数。返回本设备与指定Query对象匹配的键值对列表。 |
+| query | [Query](arkts-arkdata-distributedkvstore-query-c.md) | 是 | 表示要查询的对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Entry](arkts-arkdata-distributedkvstore-entry-i.md)[]&gt; | 是 | 回调函数。返回本设备与指定Query对象匹配的键值对列表。 |
 
 **错误码：**
 
@@ -720,50 +935,6 @@ getEntries(query: Query, callback: AsyncCallback<Entry[]>): void
 | [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. |
 
 **示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let arr = new Uint8Array([21, 31]);
-  let entries: distributedKVStore.Entry[] = [];
-  for (let i = 0; i < 10; i++) {
-    let key = 'batch_test_bool_key';
-    let entry: distributedKVStore.Entry = {
-      key: key + i,
-      value: {
-        type: distributedKVStore.ValueType.BYTE_ARRAY,
-        value: arr
-      }
-    }
-    entries.push(entry);
-  }
-  console.info(`entries: ${entries}`);
-  kvStore.putBatch(entries, async (err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to put Batch. Code: ${err.code}, message: ${err.message}`);
-      return;
-    }
-    console.info('Succeeded in putting Batch');
-    const query = new distributedKVStore.Query();
-    query.prefixKey('batch_test');
-    if (kvStore != null) {
-      kvStore.getEntries(query, (err: BusinessError, entries: distributedKVStore.Entry[]) => {
-        if (err) {
-          console.error(`Failed to get Entries. Code: ${err.code}, message: ${err.message}`);
-          return;
-        }
-        console.info('Succeeded in getting Entries');
-        console.info(`entries.length: ${entries.length}`);
-        console.info(`entries[0]: ${entries[0]}`);
-      });
-    }
-  });
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`Failed to get Entries. Code: ${error.code}, message: ${error.message}`);
-}
-```
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -827,13 +998,13 @@ getEntries(query: Query): Promise<Entry[]>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| query | Query | 是 | 表示查询对象。 |
+| query | [Query](arkts-arkdata-distributedkvstore-query-c.md) | 是 | 表示查询对象。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Entry[]&gt; | Promise对象。返回本设备与指定Query对象匹配的键值对列表。 |
+| Promise&lt;[Entry](arkts-arkdata-distributedkvstore-entry-i.md)[]&gt; | Promise对象。返回本设备与指定Query对象匹配的键值对列表。 |
 
 **错误码：**
 
@@ -912,8 +1083,8 @@ getEntries(deviceId: string, query: Query, callback: AsyncCallback<Entry[]>): vo
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | deviceId | string | 是 | 设备的networkId，标识要查询其数据的设备，不能为空。 |
-| query | Query | 是 | 表示查询对象。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Entry[]&gt; | 是 | 回调函数。返回与指定设备ID和Query对象匹配的键值对列表。 |
+| query | [Query](arkts-arkdata-distributedkvstore-query-c.md) | 是 | 表示查询对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Entry](arkts-arkdata-distributedkvstore-entry-i.md)[]&gt; | 是 | 回调函数。返回与指定设备ID和Query对象匹配的键值对列表。 |
 
 **错误码：**
 
@@ -999,13 +1170,13 @@ getEntries(deviceId: string, query: Query): Promise<Entry[]>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | deviceId | string | 是 | 设备的networkId，标识要查询其数据的设备，不能为空。 |
-| query | Query | 是 | 表示查询对象。 |
+| query | [Query](arkts-arkdata-distributedkvstore-query-c.md) | 是 | 表示查询对象。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Entry[]&gt; | Promise对象。返回与指定设备ID和Query对象匹配的键值对列表。 |
+| Promise&lt;[Entry](arkts-arkdata-distributedkvstore-entry-i.md)[]&gt; | Promise对象。返回与指定设备ID和Query对象匹配的键值对列表。 |
 
 **错误码：**
 
@@ -1121,55 +1292,6 @@ try {
         console.info('Succeeded in getting result set');
         resultSet = result;
         if (kvStore != null) {
-          kvStore.closeResultSet(resultSet, (err :BusinessError) => {
-            if (err) {
-              console.error(`Failed to close resultset. Code: ${err.code}, message: ${err.message}`);
-              return;
-            }
-            console.info('Succeeded in closing result set');
-          });
-        }
-      });
-    }
-  });
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let resultSet: distributedKVStore.KVStoreResultSet;
-  let entries: distributedKVStore.Entry[] = [];
-  for (let i = 0; i < 10; i++) {
-    let key = 'batch_test_string_key';
-    let entry: distributedKVStore.Entry = {
-      key: key + i,
-      value: {
-        type: distributedKVStore.ValueType.STRING,
-        value: 'batch_test_string_value'
-      }
-    }
-    entries.push(entry);
-  }
-  kvStore.putBatch(entries, async (err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to put batch. Code: ${err.code}, message: ${err.message}`);
-      return;
-    }
-    console.info('Succeeded in putting batch');
-    if (kvStore != null) {
-      kvStore.getResultSet('batch_test_string_key', async (err: BusinessError, result: distributedKVStore.KVStoreResultSet) => {
-        if (err) {
-          console.error(`Failed to get resultset. Code: ${err.code}, message: ${err.message}`);
-          return;
-        }
-        console.info('Succeeded in getting result set');
-        resultSet = result;
-        if (kvStore != null) {
           kvStore.closeResultSet(resultSet, (err: BusinessError) => {
             if (err) {
               console.error(`Failed to close resultset. Code: ${err.code}, message: ${err.message}`);
@@ -1223,47 +1345,6 @@ getResultSet(keyPrefix: string): Promise<KVStoreResultSet>
 | [15100001](../errorcode-distributedKVStore.md#15100001-超过最大订阅数量或结果集数量) | Over max limits.<br>**适用版本：** 10+ |
 
 **示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let resultSet: distributedKVStore.KVStoreResultSet;
-  let entries: distributedKVStore.Entry[] = [];
-  for (let i = 0; i < 10; i++) {
-    let key = 'batch_test_string_key';
-    let entry: distributedKVStore.Entry = {
-      key: key + i,
-      value: {
-        type: distributedKVStore.ValueType.STRING,
-        value: 'batch_test_string_value'
-      }
-    }
-    entries.push(entry);
-  }
-  kvStore!.putBatch(entries).then(() => {
-    console.info('Succeeded in putting batch');
-    kvStore!.getResultSet('batch_test_string_key').then((result: distributedKVStore.KVStoreResultSet) => {
-      console.info('Succeeded in getting result set');
-      resultSet = result;
-      if (kvStore != null) {
-        kvStore.closeResultSet(resultSet).then(() => {
-          console.info('Succeeded in closing result set');
-        }).catch((err: BusinessError) => {
-          console.error(`Failed to close resultset. Code: ${err.code}, message: ${err.message}`);
-        });
-      }
-    }).catch((err: BusinessError) => {
-      console.error(`Failed to get resultset. Code: ${err.code}, message: ${err.message}`);
-    });
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to put batch. Code: ${err.code}, message: ${err.message}`);
-  });
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
-}
-```
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1465,7 +1546,7 @@ getResultSet(query: Query, callback: AsyncCallback<KVStoreResultSet>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| query | Query | 是 | 表示查询对象。 |
+| query | [Query](arkts-arkdata-distributedkvstore-query-c.md) | 是 | 表示查询对象。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[KVStoreResultSet](arkts-arkdata-distributedkvstore-kvstoreresultset-i.md)&gt; | 是 | 回调函数。成功时返回与指定Query对象匹配的KVStoreResultSet对象，失败时返回错误对象。 |
 
 **错误码：**
@@ -1478,47 +1559,6 @@ getResultSet(query: Query, callback: AsyncCallback<KVStoreResultSet>): void
 | [15100001](../errorcode-distributedKVStore.md#15100001-超过最大订阅数量或结果集数量) | Over max limits.<br>**适用版本：** 10+ |
 
 **示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let resultSet: distributedKVStore.KVStoreResultSet;
-  let entries: distributedKVStore.Entry[] = [];
-  for (let i = 0; i < 10; i++) {
-    let key = 'batch_test_string_key';
-    let entry: distributedKVStore.Entry = {
-      key: key + i,
-      value: {
-        type: distributedKVStore.ValueType.STRING,
-        value: 'batch_test_string_value'
-      }
-    }
-    entries.push(entry);
-  }
-  kvStore.putBatch(entries, async (err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to put batch. Code: ${err.code}, message: ${err.message}`);
-      return;
-    }
-    console.info('Succeeded in putting batch');
-    const query = new distributedKVStore.Query();
-    query.prefixKey('batch_test');
-    if (kvStore != null) {
-      kvStore.getResultSet(query, async (err: BusinessError, result: distributedKVStore.KVStoreResultSet) => {
-        if (err) {
-          console.error(`Failed to get resultset. Code: ${err.code}, message: ${err.message}`);
-          return;
-        }
-        console.info('Succeeded in getting result set');
-      });
-    }
-  });
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
-}
-```
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1589,7 +1629,7 @@ getResultSet(query: Query): Promise<KVStoreResultSet>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| query | Query | 是 | 表示查询对象。 |
+| query | [Query](arkts-arkdata-distributedkvstore-query-c.md) | 是 | 表示查询对象。 |
 
 **返回值：**
 
@@ -1607,40 +1647,6 @@ getResultSet(query: Query): Promise<KVStoreResultSet>
 | [15100001](../errorcode-distributedKVStore.md#15100001-超过最大订阅数量或结果集数量) | Over max limits.<br>**适用版本：** 10+ |
 
 **示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let entries: distributedKVStore.Entry[] = [];
-  for (let i = 0; i < 10; i++) {
-    let key = 'batch_test_string_key';
-    let entry: distributedKVStore.Entry = {
-      key: key + i,
-      value: {
-        type: distributedKVStore.ValueType.STRING,
-        value: 'batch_test_string_value'
-      }
-    }
-    entries.push(entry);
-  }
-    kvStore!.putBatch(entries).then(() => {
-    console.info('Succeeded in putting batch');
-    const query = new distributedKVStore.Query();
-    query.prefixKey('batch_test');
-    kvStore!.getResultSet(query).then((result: distributedKVStore.KVStoreResultSet) => {
-      console.info(`Succeeded in getting result set size=${result.getCount()}`);
-    }).catch((err: BusinessError) => {
-      console.error(`Failed to get resultset. Code: ${err.code}, message: ${err.message}`);
-    });
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to put batch. Code: ${err.code}, message: ${err.message}`);
-  });
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
-}
-```
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1706,7 +1712,7 @@ getResultSet(deviceId: string, query: Query, callback: AsyncCallback<KVStoreResu
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | deviceId | string | 是 | 设备的networkId，标识要查询其数据的设备，不能为空。 |
-| query | Query | 是 | 表示查询对象。 |
+| query | [Query](arkts-arkdata-distributedkvstore-query-c.md) | 是 | 表示查询对象。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[KVStoreResultSet](arkts-arkdata-distributedkvstore-kvstoreresultset-i.md)&gt; | 是 | 回调函数。返回与指定设备ID和Query对象匹配的KVStoreResultSet对象。 |
 
 **错误码：**
@@ -1799,7 +1805,7 @@ getResultSet(deviceId: string, query: Query): Promise<KVStoreResultSet>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | deviceId | string | 是 | 设备的networkId，标识要查询其数据的设备，不能为空。 |
-| query | Query | 是 | 表示查询对象。 |
+| query | [Query](arkts-arkdata-distributedkvstore-query-c.md) | 是 | 表示查询对象。 |
 
 **返回值：**
 
@@ -1884,7 +1890,7 @@ getResultSize(query: Query, callback: AsyncCallback<number>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| query | Query | 是 | 表示查询对象。 |
+| query | [Query](arkts-arkdata-distributedkvstore-query-c.md) | 是 | 表示查询对象。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数。返回与本设备指定Query对象匹配的结果数。 |
 
 **错误码：**
@@ -1956,7 +1962,7 @@ getResultSize(query: Query): Promise<number>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| query | Query | 是 | 表示查询对象。 |
+| query | [Query](arkts-arkdata-distributedkvstore-query-c.md) | 是 | 表示查询对象。 |
 
 **返回值：**
 
@@ -2037,7 +2043,7 @@ getResultSize(deviceId: string, query: Query, callback: AsyncCallback<number>): 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | deviceId | string | 是 | 设备的networkId，标识要查询其数据的设备，不能为空。 |
-| query | Query | 是 | 表示查询对象。 |
+| query | [Query](arkts-arkdata-distributedkvstore-query-c.md) | 是 | 表示查询对象。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数。返回与指定设备ID和Query对象匹配的结果数。 |
 
 **错误码：**
@@ -2119,7 +2125,7 @@ getResultSize(deviceId: string, query: Query): Promise<number>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | deviceId | string | 是 | 设备的networkId，标识要查询其数据的设备，不能为空。 |
-| query | Query | 是 | 表示查询对象。 |
+| query | [Query](arkts-arkdata-distributedkvstore-query-c.md) | 是 | 表示查询对象。 |
 
 **返回值：**
 

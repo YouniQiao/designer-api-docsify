@@ -60,17 +60,6 @@ After an event is published using this API, the event may not be executed immedi
 **Examples**
 
 ```TypeScript
-let eventData: emitter.EventData = {
-  data: {
-    "content": "content",
-    "id": 1,
-  }
-};
-
-emitter.emit('eventId', eventData);
-```
-
-```TypeScript
 let emitter1: emitter.Emitter = new emitter.Emitter();
 let eventData: emitter.EventData = {
   data: {
@@ -121,24 +110,6 @@ class Sample {
   count: number;
 }
 
-let eventData: emitter.GenericEventData<Sample> = {
-  data: new Sample()
-};
-emitter.emit('eventId', eventData);
-```
-
-```TypeScript
-@Sendable
-class Sample {
-  constructor() {
-    this.count = 100;
-  }
-  printCount() {
-    console.info('Print count : ' + this.count);
-  }
-  count: number;
-}
-
 let emitter1: emitter.Emitter = new emitter.Emitter();
 
 let eventData: emitter.GenericEventData<Sample> = {
@@ -171,25 +142,10 @@ After an event is published using this API, the event may not be executed immedi
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | eventId | string | Yes | Event ID, which cannot be empty or exceed 10,240 bytes. Excess content will be truncated. |
-| options | Options | Yes | Event emit priority. |
+| options | [Options](arkts-basicservices-emitter-options-i.md) | Yes | Event emit priority. |
 | data | [EventData](arkts-basicservices-emitter-eventdata-i.md) | No | Data carried by the event. This parameter is left empty by default. |
 
 **Examples**
-
-```TypeScript
-let eventData: emitter.EventData = {
-  data: {
-    "content": "content",
-    "id": 1,
-  }
-};
-
-let options: emitter.Options = {
-  priority: emitter.EventPriority.HIGH
-};
-
-emitter.emit('eventId', options, eventData);
-```
 
 ```TypeScript
 let emitter1: emitter.Emitter = new emitter.Emitter();
@@ -230,32 +186,10 @@ After an event is published using this API, the event may not be executed immedi
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | eventId | string | Yes | Event ID, which cannot be empty or exceed 10,240 bytes. Excess content will be truncated. |
-| options | Options | Yes | Event emit priority. |
+| options | [Options](arkts-basicservices-emitter-options-i.md) | Yes | Event emit priority. |
 | data | [GenericEventData](arkts-basicservices-emitter-genericeventdata-i.md)&lt;T&gt; | No | Data carried by the event. This parameter is left empty by default. |
 
 **Examples**
-
-```TypeScript
-@Sendable
-class Sample {
-  constructor() {
-    this.count = 100;
-  }
-  printCount() {
-    console.info('Print count : ' + this.count);
-  }
-  count: number;
-}
-
-let options: emitter.Options = {
-  priority: emitter.EventPriority.HIGH
-};
-let eventData: emitter.GenericEventData<Sample> = {
-  data: new Sample()
-};
-
-emitter.emit('eventId', options, eventData);
-```
 
 ```TypeScript
 @Sendable
@@ -339,11 +273,6 @@ After this API is used to unsubscribe from an event, the event that has been pub
 **Examples**
 
 ```TypeScript
-// Unregister all callbacks for events whose event ID is eventId1.
-emitter.off('eventId1');
-```
-
-```TypeScript
 let emitter1: emitter.Emitter = new emitter.Emitter();
 
 emitter1.off('eventId');
@@ -373,17 +302,6 @@ After this API is used to unsubscribe from an event, the event that has been pub
 | callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[EventData](arkts-basicservices-emitter-eventdata-i.md)&gt; | Yes | Callback to unregister. |
 
 **Examples**
-
-```TypeScript
-import { Callback } from '@kit.BasicServicesKit';
-
-let callback: Callback<emitter.EventData> = (eventData: emitter.EventData) => {
-  console.info(`eventData: ${JSON.stringify(eventData)}`);
-};
-// Unregister all callbacks for events whose event ID is eventId1. The callback object must be the object used during registration.
-// If the callback has not been registered, no processing is performed.
-emitter.off('eventId1', callback);
-```
 
 ```TypeScript
 import { Callback } from '@kit.BasicServicesKit';
@@ -421,31 +339,6 @@ After this API is used to unsubscribe from an event, the event that has been pub
 | callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[GenericEventData](arkts-basicservices-emitter-genericeventdata-i.md)&lt;T&gt;&gt; | Yes | Callback to unregister. |
 
 **Examples**
-
-```TypeScript
-import { Callback } from '@kit.BasicServicesKit';
-
-@Sendable
-class Sample {
-  constructor() {
-    this.count = 100;
-  }
-  printCount() {
-    console.info('Print count : ' + this.count);
-  }
-  count: number;
-}
-
-let callback: Callback<emitter.GenericEventData<Sample>> = (eventData: emitter.GenericEventData<Sample>): void => {
-  console.info(`eventData: ${JSON.stringify(eventData?.data)}`);
-  if (eventData?.data instanceof Sample) {
-    eventData?.data?.printCount();
-  }
-};
-// Unregister all callbacks for events whose event ID is eventId1. The callback object must be the object used during registration.
-// If the callback has not been registered, no processing is performed.
-emitter.off('eventId1', callback);
-```
 
 ```TypeScript
 import { Callback } from '@kit.BasicServicesKit';
@@ -499,16 +392,6 @@ Subscribes to an event specified by the Emitter instance in persistent manner an
 ```TypeScript
 import { Callback } from '@kit.BasicServicesKit';
 
-let callback: Callback<emitter.EventData> = (eventData: emitter.EventData) => {
-  console.info(`eventData: ${JSON.stringify(eventData)}`);
-};
-// Execute the callback after receiving the event whose ID is eventId.
-emitter.on('eventId', callback);
-```
-
-```TypeScript
-import { Callback } from '@kit.BasicServicesKit';
-
 let emitter1: emitter.Emitter = new emitter.Emitter();
 
 let callback: Callback<emitter.EventData> = (eventData: emitter.EventData) => {
@@ -540,30 +423,6 @@ Subscribes to an event specified by the Emitter instance in persistent manner an
 | callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[GenericEventData](arkts-basicservices-emitter-genericeventdata-i.md)&lt;T&gt;&gt; | Yes | Callback to be invoked when the event is received. |
 
 **Examples**
-
-```TypeScript
-import { Callback } from '@kit.BasicServicesKit';
-
-@Sendable
-class Sample {
-  constructor() {
-    this.count = 100;
-  }
-  printCount() {
-    console.info('Print count : ' + this.count);
-  }
-  count: number;
-}
-
-let callback: Callback<emitter.GenericEventData<Sample>> = (eventData: emitter.GenericEventData<Sample>): void => {
-  console.info(`eventData: ${JSON.stringify(eventData?.data)}`);
-  if (eventData?.data instanceof Sample) {
-    eventData?.data?.printCount();
-  }
-};
-// Execute the callback after receiving the event whose event ID is eventId.
-emitter.on('eventId', callback);
-```
 
 ```TypeScript
 import { Callback } from '@kit.BasicServicesKit';
@@ -617,16 +476,6 @@ Subscribes to an event specified by the Emitter instance in one-shot manner and 
 ```TypeScript
 import { Callback } from '@kit.BasicServicesKit';
 
-let callback: Callback<emitter.EventData> = (eventData: emitter.EventData) => {
-  console.info(`eventData: ${JSON.stringify(eventData)}`);
-};
-// Execute the callback after receiving the event whose event ID is eventId.
-emitter.once('eventId', callback);
-```
-
-```TypeScript
-import { Callback } from '@kit.BasicServicesKit';
-
 let emitter1: emitter.Emitter = new emitter.Emitter();
 
 let callback: Callback<emitter.EventData> = (eventData: emitter.EventData) => {
@@ -658,30 +507,6 @@ Subscribes to an event specified by the Emitter instance in one-shot manner and 
 | callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[GenericEventData](arkts-basicservices-emitter-genericeventdata-i.md)&lt;T&gt;&gt; | Yes | Callback to be invoked when the event is received. |
 
 **Examples**
-
-```TypeScript
-import { Callback } from '@kit.BasicServicesKit';
-
-@Sendable
-class Sample {
-  constructor() {
-    this.count = 100;
-  }
-  printCount() {
-    console.info('Print count : ' + this.count);
-  }
-  count: number;
-}
-
-let callback: Callback<emitter.GenericEventData<Sample>> = (eventData: emitter.GenericEventData<Sample>): void => {
-  console.info(`eventData: ${JSON.stringify(eventData?.data)}`);
-  if (eventData?.data instanceof Sample) {
-    eventData?.data?.printCount();
-  }
-};
-// Execute the callback after receiving the event whose event ID is eventId.
-emitter.once('eventId', callback);
-```
 
 ```TypeScript
 import { Callback } from '@kit.BasicServicesKit';

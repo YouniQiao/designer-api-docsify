@@ -109,7 +109,7 @@ This API is a synchronous API. In a weak network environment, directly adding ne
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | PixelMap \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | Yes | Image content. |
+| value | [PixelMap](arkts-arkui-pixelmap-t.md) \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | Yes | Image content. |
 | options | [RichEditorImageSpanOptions](arkts-arkui-richeditorimagespanoptions-i.md) | No | Image options. |
 
 **Return value:**
@@ -140,7 +140,7 @@ Currently, gestures, copying, and dragging are not supported.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Resource | Yes | Symbol resource object. |
+| value | [Resource](../arkts-apis/arkts-arkui-resource-t.md) | Yes | Symbol resource object. |
 | options | [RichEditorSymbolSpanOptions](arkts-arkui-richeditorsymbolspanoptions-i.md) | No | Symbol options. |
 
 **Return value:**

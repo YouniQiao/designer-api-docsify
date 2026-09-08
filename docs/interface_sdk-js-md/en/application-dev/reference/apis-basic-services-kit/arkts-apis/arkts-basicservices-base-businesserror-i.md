@@ -20,7 +20,7 @@ import { AsyncCallback, BusinessError, Callback, ErrorCallback } from '@kit.Basi
 code: number
 ```
 
-Error code returned when the API fails to be called. The specific error code is defined by each API. For details, see the error code description of the corresponding API.
+Error code returned when the API call fails. The specific error code is defined by each API. For details, see the error code description of the corresponding API.
 
 **Type:** number
 
@@ -38,7 +38,7 @@ Error code returned when the API fails to be called. The specific error code is 
 data?: T
 ```
 
-Error message returned when the API fails to be called. If this parameter is left empty, the error object does not contain additional data.
+Additional error information returned when the API call fails. If this parameter is left empty, the error object does not contain additional data.
 
 **Type:** T
 

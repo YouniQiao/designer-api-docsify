@@ -229,7 +229,7 @@ function on(type: 'p2pConnectionChange', callback: Callback<WifiP2pLinkedInfo>):
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'p2pConnectionChange' | 是 | 固定填"p2pConnectionChange"字符串。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;WifiP2pLinkedInfo&gt; | 是 | 状态改变回调函数。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[WifiP2pLinkedInfo](arkts-connectivity-wifi-wifip2plinkedinfo-i.md)&gt; | 是 | 状态改变回调函数。 |
 
 
 ## on('p2pDeviceChange')
@@ -259,7 +259,7 @@ function on(type: 'p2pDeviceChange', callback: Callback<WifiP2pDevice>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'p2pDeviceChange' | 是 | 固定填"p2pDeviceChange"字符串。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;WifiP2pDevice&gt; | 是 | 状态改变回调函数。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[WifiP2pDevice](arkts-connectivity-wifi-wifip2pdevice-i.md)&gt; | 是 | 状态改变回调函数。 |
 
 
 ## on('p2pPeerDeviceChange')
@@ -289,7 +289,7 @@ function on(type: 'p2pPeerDeviceChange', callback: Callback<WifiP2pDevice[]>): v
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'p2pPeerDeviceChange' | 是 | 固定填"p2pPeerDeviceChange"字符串。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;WifiP2pDevice[]&gt; | 是 | 状态改变回调函数。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[WifiP2pDevice](arkts-connectivity-wifi-wifip2pdevice-i.md)[]&gt; | 是 | 状态改变回调函数。 |
 
 
 ## on('p2pPersistentGroupChange')

@@ -88,7 +88,7 @@ securityType: WifiSecurityType
 
 The encryption mode of the Wi-Fi hotspot
 
-**Type:** WifiSecurityType
+**Type:** [WifiSecurityType](arkts-connectivity-wifi-wifisecuritytype-e.md)
 
 **Since:** 7
 

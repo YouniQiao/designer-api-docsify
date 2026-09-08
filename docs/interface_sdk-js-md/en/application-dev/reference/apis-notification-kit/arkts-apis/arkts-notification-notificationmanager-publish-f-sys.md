@@ -28,7 +28,7 @@ Publishes a notification to a specified user. This API uses an asynchronous call
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| request | NotificationRequest | Yes | Content and related configuration of the notification to publish. |
+| request | [NotificationRequest](arkts-notification-notificationmanager-notificationrequest-t.md) | Yes | Content and related configuration of the notification to publish. |
 | userId | number | Yes | User ID. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
@@ -112,7 +112,7 @@ Publishes a notification to a specified user. This API uses a promise to return 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| request | NotificationRequest | Yes | Content and related configuration of the notification to publish. |
+| request | [NotificationRequest](arkts-notification-notificationmanager-notificationrequest-t.md) | Yes | Content and related configuration of the notification to publish. |
 | userId | number | Yes | User ID. |
 
 **Return value:**

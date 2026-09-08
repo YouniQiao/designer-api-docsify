@@ -33,7 +33,7 @@ function sppListen(name: string, option: SppOption, callback: AsyncCallback<numb
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | name | string | 是 | 服务的名称。 |
-| option | SppOption | 是 | spp监听配置参数。 |
+| option | [SppOption](arkts-connectivity-bluetoothmanager-sppoption-i.md) | 是 | spp监听配置参数。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 表示回调函数的入参，服务端Socket的id。 |
 
 **错误码：**

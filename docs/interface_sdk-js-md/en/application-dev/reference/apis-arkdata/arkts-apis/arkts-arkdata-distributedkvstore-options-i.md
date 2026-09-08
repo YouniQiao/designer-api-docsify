@@ -52,42 +52,6 @@ SystemCapability.DistributedDataManager.KVStore.Core
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let backupFile = 'BK001';
-try {
-  kvStore.backup(backupFile, (err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to backup. Code: ${err.code}, message: ${err.message} `);
-    } else {
-      console.info(`Succeeded in backupping data`);
-    }
-  });
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let backupFile = 'BK001';
-try {
-  kvStore.backup(backupFile).then(() => {
-    console.info(`Succeeded in backupping data`);
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to backup. Code: ${err.code}, message: ${err.message}`);
-  });
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
 ## createIfMissing
 
 ```TypeScript
@@ -134,7 +98,7 @@ Type of the KV store to create. The default value is **DEVICE_COLLABORATION**, w
 
 SystemCapability.DistributedDataManager.KVStore.Core
 
-**Type:** KVStoreType
+**Type:** [KVStoreType](arkts-arkdata-distributedkvstore-kvstoretype-e.md)
 
 **Since:** 9
 
@@ -168,7 +132,7 @@ Schema that defines the values stored in the KV store. The default value is **un
 
 SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
 
-**Type:** Schema
+**Type:** [Schema](arkts-arkdata-distributedkvstore-schema-c.md)
 
 **Since:** 9
 
@@ -184,7 +148,7 @@ securityLevel: SecurityLevel
 
 Security level of the KV store.
 
-**Type:** SecurityLevel
+**Type:** [SecurityLevel](arkts-arkdata-distributedkvstore-securitylevel-e.md)
 
 **Since:** 9
 

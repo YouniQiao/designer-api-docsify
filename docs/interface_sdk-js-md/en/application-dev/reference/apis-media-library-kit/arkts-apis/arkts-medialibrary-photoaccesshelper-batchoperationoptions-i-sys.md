@@ -88,7 +88,7 @@ taskSignal?: TaskSignal
 
 interrupting of batch operations.
 
-**Type:** TaskSignal
+**Type:** [TaskSignal](arkts-medialibrary-photoaccesshelper-tasksignal-c-sys.md)
 
 **Since:** 26.0.0
 

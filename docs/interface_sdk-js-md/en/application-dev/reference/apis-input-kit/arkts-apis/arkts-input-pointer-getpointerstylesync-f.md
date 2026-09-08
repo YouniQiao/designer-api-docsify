@@ -28,7 +28,7 @@ Queries the mouse pointer style type of a specified window, such as east arrow, 
 
 | Type | Description |
 | --- | --- |
-| PointerStyle | Mouse pointer style. |
+| [PointerStyle](arkts-input-pointer-pointerstyle-e.md) | Mouse pointer style. |
 
 **Error codes:**
 

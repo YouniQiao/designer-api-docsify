@@ -195,7 +195,7 @@ popupBackgroundBlurStyle(style: Optional<BlurStyle>): ArcAlphabetIndexerAttribut
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;BlurStyle&gt; | 是 | 设置提示弹窗的背景模糊材质。默认值：BlurStyle.NONE。设置此属性后不建议再设置[popupBackground](#popupbackground)属性。 |
+| style | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[BlurStyle](../arkts-components/arkts-arkui-blurstyle-e.md)&gt; | 是 | 设置提示弹窗的背景模糊材质。默认值：BlurStyle.NONE。设置此属性后不建议再设置[popupBackground](#popupbackground)属性。 |
 
 **返回值：**
 

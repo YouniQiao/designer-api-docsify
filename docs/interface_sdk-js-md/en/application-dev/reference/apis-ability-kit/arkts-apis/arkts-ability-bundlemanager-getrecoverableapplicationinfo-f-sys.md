@@ -26,7 +26,7 @@ Obtains information about all preinstalled applications that can be restored. Th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;RecoverableApplicationInfo&gt;&gt; | Yes | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md) used to return the result. If the operation is successful, **err** is **null** and **data** is the information about all preinstalled applications. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[RecoverableApplicationInfo](arkts-ability-bundlemanager-recoverableapplicationinfo-t-sys.md)&gt;&gt; | Yes | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md) used to return the result. If the operation is successful, **err** is **null** and **data** is the information about all preinstalled applications. |
 
 **Error codes:**
 
@@ -77,7 +77,7 @@ Obtains information about all preinstalled applications that can be restored. Th
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;RecoverableApplicationInfo&gt;&gt; | Promise used to return the information about all recoverable applications. |
+| Promise&lt;Array&lt;[RecoverableApplicationInfo](arkts-ability-bundlemanager-recoverableapplicationinfo-t-sys.md)&gt;&gt; | Promise used to return the information about all recoverable applications. |
 
 **Error codes:**
 

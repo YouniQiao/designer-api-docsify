@@ -28,7 +28,7 @@ Before calling this API, ensure that the app has enabled the sensitive data prot
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dataType | DataType | Yes | Type of sensitive data that is accessible on the lock screen. |
+| dataType | [DataType](arkts-ability-screenlockfilemanager-datatype-e.md) | Yes | Type of sensitive data that is accessible on the lock screen. |
 
 **Return value:**
 

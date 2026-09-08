@@ -55,6 +55,7 @@ TextPicker(options?: TextPickerOptions)
 ## 示例
 
 该示例通过配置range实现单列数据选择器和多列数据选择器，并使用columnWidths调整每一列的宽度。
+从API version 18开始，新增了[TextPickerOptions](#textpickeroptions对象说明)的columnWidths属性。
 
 ```TypeScript
 // xxx.ets
@@ -349,6 +350,7 @@ struct TextPickerExample {
 ```
 
 该示例通过配置[disableTextStyleAnimation](#disabletextstyleanimation15)、[defaultTextStyle](#defaulttextstyle15)实现关闭文本选择器文本样式变化的动效，并设置文本样式。
+从API version 15开始，新增disableTextStyleAnimation、defaultTextStyle接口。
 
 ```TypeScript
 // xxx.ets
@@ -438,6 +440,7 @@ struct TextPickerExample {
 ```
 
 该示例通过配置[disappearTextStyle](#disappeartextstyle20)、[textStyle](#textstyle20)和[selectedTextStyle](#selectedtextstyle20)，设置文本的颜色、最大字号、最小字号、超长文本截断方式。
+从API version 20开始，新增disappearTextStyle、textStyle和selectedTextStyle接口。
 
 ```TypeScript
 // xxx.ets

@@ -55,31 +55,6 @@ uploadTask.delete((err: BusinessError, result: boolean) => {
 });
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-
-// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-try {
-  // Replace the URL with the HTTP address of the real server.
-  request.downloadFile(context, { url: 'https://xxxx/xxxx.hap' }).then((data: request.DownloadTask) => {
-    let downloadTask: request.DownloadTask = data;
-    downloadTask.delete((err: BusinessError, result: boolean) => {
-      if (err) {
-        console.error(`Failed to remove the download task. Code: ${err.code}, message: ${err.message}`);
-        return;
-      }
-      console.info('Succeeded in removing the download task.');
-    });
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
-  })
-} catch (err) {
-  console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
-}
-```
-
 ## delete
 
 ```TypeScript
@@ -119,28 +94,6 @@ uploadTask.delete().then((result: boolean) => {
 }).catch((err: BusinessError) => {
   console.error(`Failed to delete the upload task. Code: ${err.code}, message: ${err.message}`);
 });
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-
-// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-try {
-  // Replace the URL with the HTTP address of the real server.
-  request.downloadFile(context, { url: 'https://xxxx/xxxx.hap' }).then((data: request.DownloadTask) => {
-    data.delete().then((result: boolean) => {
-      console.info('Succeeded in removing the download task.');
-    }).catch((err: BusinessError) => {
-      console.error(`Failed to remove the download task. Code: ${err.code}, message: ${err.message}`);
-    });
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
-  })
-} catch (err) {
-  console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
-}
 ```
 
 ## off('progress')
@@ -512,16 +465,6 @@ uploadTask.remove((err: BusinessError, result: boolean) => {
 });
 ```
 
-```TypeScript
-downloadTask.remove((err, result)=>{
-  if(err) {
-    console.error(`Failed to remove the download task. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in removing the download task.');
-});
-```
-
 ## remove
 
 ```TypeScript
@@ -559,13 +502,5 @@ uploadTask.remove().then((result: boolean) => {
   console.info('Succeeded in removing the upload task.');
 }).catch((err: BusinessError) => {
   console.error(`Failed to remove the upload task. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
-```TypeScript
-downloadTask.remove().then((result) => {
-  console.info('Succeeded in removing the download task.');
-}).catch ((err: BusinessError) => {
-  console.error(`Failed to remove the download task. Code: ${err.code}, message: ${err.message}`);
 });
 ```

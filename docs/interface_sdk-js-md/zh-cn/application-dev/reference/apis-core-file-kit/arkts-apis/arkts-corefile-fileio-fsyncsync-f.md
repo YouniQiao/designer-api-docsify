@@ -26,11 +26,3 @@ declare function fsyncSync(fd: number): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | fd | number | 是 | 待同步文件的文件描述符。 |
-
-**示例**
-
-```TypeScript
-let filePath = pathDir + "/test.txt";
-let fd = fileio.openSync(filePath);
-fileio.fsyncSync(fd);
-```

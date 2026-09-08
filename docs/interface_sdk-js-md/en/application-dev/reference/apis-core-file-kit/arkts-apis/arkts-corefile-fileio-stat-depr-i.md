@@ -44,11 +44,6 @@ let filePath = pathDir + "/test.txt";
 let isBLockDevice = fileio.statSync(filePath).isBlockDevice();
 ```
 
-```TypeScript
-let dir = fileio.opendirSync(pathDir);
-let isBLockDevice = dir.readSync().isBlockDevice();
-```
-
 ## isCharacterDevice
 
 ```TypeScript
@@ -76,11 +71,6 @@ Checks whether this file is a character special file. A character special file s
 ```TypeScript
 let filePath = pathDir + "/test.txt";
 let isCharacterDevice = fileio.statSync(filePath).isCharacterDevice();
-```
-
-```TypeScript
-let dir = fileio.opendirSync(pathDir);
-let isCharacterDevice = dir.readSync().isCharacterDevice();
 ```
 
 ## isDirectory
@@ -112,11 +102,6 @@ let dirPath = pathDir + "/test";
 let isDirectory = fileio.statSync(dirPath).isDirectory();
 ```
 
-```TypeScript
-let dir = fileio.opendirSync(pathDir);
-let isDirectory = dir.readSync().isDirectory();
-```
-
 ## isFIFO
 
 ```TypeScript
@@ -144,11 +129,6 @@ Checks whether this file is a named pipe (or FIFO). Named pipes are used for int
 ```TypeScript
 let filePath = pathDir + "/test.txt";
 let isFIFO = fileio.statSync(filePath).isFIFO();
-```
-
-```TypeScript
-let dir = fileio.opendirSync(pathDir);
-let isFIFO = dir.readSync().isFIFO();
 ```
 
 ## isFile
@@ -180,11 +160,6 @@ let filePath = pathDir + "/test.txt";
 let isFile = fileio.statSync(filePath).isFile();
 ```
 
-```TypeScript
-let dir = fileio.opendirSync(pathDir);
-let isFile = dir.readSync().isFile();
-```
-
 ## isSocket
 
 ```TypeScript
@@ -214,11 +189,6 @@ let filePath = pathDir + "/test.txt";
 let isSocket = fileio.statSync(filePath).isSocket();
 ```
 
-```TypeScript
-let dir = fileio.opendirSync(pathDir);
-let isSocket = dir.readSync().isSocket();
-```
-
 ## isSymbolicLink
 
 ```TypeScript
@@ -246,11 +216,6 @@ Checks whether this file is a symbolic link.
 ```TypeScript
 let filePath = pathDir + "/test";
 let isSymbolicLink = fileio.statSync(filePath).isSymbolicLink();
-```
-
-```TypeScript
-let dir = fileio.opendirSync(pathDir);
-let isSymbolicLink = dir.readSync().isSymbolicLink();
 ```
 
 ## atime

@@ -46,7 +46,7 @@ Media file types to select. If this parameter is not specified, **IMAGE_VIDEO_TY
 
 **Note：**: This API is supported since API version 9 and deprecated since API version 18.
 
-**Type:** PhotoViewMIMETypes
+**Type:** [PhotoViewMIMETypes](arkts-corefile-picker-photoviewmimetypes-e.md)
 
 **Since:** 9
 

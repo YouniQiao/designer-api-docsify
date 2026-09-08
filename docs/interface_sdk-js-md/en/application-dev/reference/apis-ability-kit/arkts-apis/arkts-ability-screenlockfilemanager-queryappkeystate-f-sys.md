@@ -26,7 +26,7 @@ Queries the status of a specified type of sensitive data key under the lock scre
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dataType | DataType | Yes | Type of sensitive data that is accessible on the lock screen. |
+| dataType | [DataType](arkts-ability-screenlockfilemanager-datatype-e.md) | Yes | Type of sensitive data that is accessible on the lock screen. |
 
 **Return value:**
 

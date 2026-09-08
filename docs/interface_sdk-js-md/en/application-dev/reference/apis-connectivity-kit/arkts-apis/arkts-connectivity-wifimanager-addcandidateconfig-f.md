@@ -26,7 +26,7 @@ Add a specified candidate hotspot configuration and returns the networkId. This 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | WifiDeviceConfig | Yes | candidate config. |
+| config | [WifiDeviceConfig](arkts-connectivity-wifimanager-wifideviceconfig-i.md) | Yes | candidate config. |
 
 **Return value:**
 
@@ -85,7 +85,7 @@ Add a specified candidate hotspot configuration and returns the networkId. This 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | WifiDeviceConfig | Yes | candidate config. |
+| config | [WifiDeviceConfig](arkts-connectivity-wifimanager-wifideviceconfig-i.md) | Yes | candidate config. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Indicates call back of addCandidateConfig. |
 
 **Error codes:**

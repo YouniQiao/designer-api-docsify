@@ -117,18 +117,6 @@ UiDriver对象采取如下操作：在目标坐标点单击。使用Promise异�
 
 ```TypeScript
 // xxx.test.ets
-import { Driver } from '@kit.TestKit';
-
-async function demo() {
-  // 创建Driver对象。
-  let driver: Driver = Driver.create();
-  // 在坐标(100,100)处执行点击操作。
-  await driver.click(100, 100);
-}
-```
-
-```TypeScript
-// xxx.test.ets
 import { UiDriver } from '@kit.TestKit';
 
 async function demo() {
@@ -214,16 +202,6 @@ UiDriver对象在给定的时间内延时。使用Promise异步回调。
 
 ```TypeScript
 // xxx.test.ets
-import { Driver } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  await driver.delayMs(1000);
-}
-```
-
-```TypeScript
-// xxx.test.ets
 import { UiDriver } from '@kit.TestKit';
 
 async function demo() {
@@ -268,16 +246,6 @@ UiDriver对象采取如下操作：在目标坐标点双击。使用Promise异�
 | Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **示例**
-
-```TypeScript
-// xxx.test.ets
-import { Driver } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  await driver.doubleClick(100, 100);
-}
-```
 
 ```TypeScript
 // xxx.test.ets
@@ -420,16 +388,6 @@ UiDriver对象采取如下操作：在目标坐标点长按下鼠标左键。使
 
 ```TypeScript
 // xxx.test.ets
-import { Driver } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  await driver.longClick(100, 100);
-}
-```
-
-```TypeScript
-// xxx.test.ets
 import { UiDriver } from '@kit.TestKit';
 
 async function demo() {
@@ -467,16 +425,6 @@ UiDriver对象进行点击BACK键的操作。使用Promise异步回调。
 | Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **示例**
-
-```TypeScript
-// xxx.test.ets
-import { Driver } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  await driver.pressBack();
-}
-```
 
 ```TypeScript
 // xxx.test.ets
@@ -523,16 +471,6 @@ UiDriver对象采取如下操作：捕获当前屏幕，并保存为PNG格式的
 | Promise&lt;boolean&gt; | Promise对象，返回截图操作是否成功完成。true：成功完成，false：未成功完成。 |
 
 **示例**
-
-```TypeScript
-// xxx.test.ets
-import { Driver } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  await driver.screenCap('/data/storage/el2/base/cache/1.png');
-}
-```
 
 ```TypeScript
 // xxx.test.ets
@@ -628,17 +566,6 @@ UiDriver对象采取如下操作：通过key值找到对应键并点击。使用
 | Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **示例**
-
-```TypeScript
-// xxx.test.ets
-import { Driver } from '@kit.TestKit';
-import { KeyCode } from '@kit.InputKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  await driver.triggerKey(KeyCode.KEYCODE_BACK); // 返回键。
-}
-```
 
 ```TypeScript
 // xxx.test.ets

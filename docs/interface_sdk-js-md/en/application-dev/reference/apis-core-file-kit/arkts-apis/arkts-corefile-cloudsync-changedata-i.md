@@ -34,7 +34,7 @@ type: NotifyType
 
 Type of the data change.
 
-**Type:** NotifyType
+**Type:** [NotifyType](arkts-corefile-cloudsync-notifytype-e.md)
 
 **Since:** 12
 

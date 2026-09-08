@@ -30,7 +30,7 @@ Obtains information about the peer application in the specified session.
 
 | Type | Description |
 | --- | --- |
-| PeerInfo \| undefined | Information about the peer application if the corresponding **peerInfo** exists; **undefined** if the session ID is not found. |
+| [PeerInfo](arkts-distributedservice-abilityconnectionmanager-peerinfo-i.md) \| undefined | Information about the peer application if the corresponding **peerInfo** exists; **undefined** if the session ID is not found. |
 
 **Error codes:**
 

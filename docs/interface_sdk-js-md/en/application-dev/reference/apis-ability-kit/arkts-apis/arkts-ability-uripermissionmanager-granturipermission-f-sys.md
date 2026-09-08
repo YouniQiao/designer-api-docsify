@@ -42,7 +42,7 @@ Grants the URI permission to an application. If the call is successful, the appl
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uri | string | Yes | URI of the file. The scheme has a fixed value of **file**. For details, see [FileUri](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-fileuri-c.md#constructor). |
-| flag | wantConstant.Flags | Yes | Read or write permission on the file to grant. |
+| flag | [wantConstant.Flags](arkts-ability-wantconstant-flags-e.md) | Yes | Read or write permission on the file to grant. |
 | targetBundleName | string | Yes | Bundle name of the target application. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the result. If the operation is successful, **0** is returned; otherwise, **-1** is returned. |
 
@@ -117,7 +117,7 @@ Grants the URI permission to an application. If the call is successful, the appl
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uri | string | Yes | URI of the file. The scheme has a fixed value of **file**. For details, see [FileUri](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-fileuri-c.md#constructor). |
-| flag | wantConstant.Flags | Yes | Read or write permission on the file to grant. |
+| flag | [wantConstant.Flags](arkts-ability-wantconstant-flags-e.md) | Yes | Read or write permission on the file to grant. |
 | targetBundleName | string | Yes | Bundle name of the target application. |
 
 **Return value:**
@@ -200,7 +200,7 @@ Grants the URI permission to an application. If the call is successful, the appl
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uri | string | Yes | URI of the file. The scheme has a fixed value of **file**. For details, see [FileUri](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-fileuri-c.md#constructor). |
-| flag | wantConstant.Flags | Yes | Read or write permission on the file to grant. |
+| flag | [wantConstant.Flags](arkts-ability-wantconstant-flags-e.md) | Yes | Read or write permission on the file to grant. |
 | targetBundleName | string | Yes | Bundle name of the target application. |
 | appCloneIndex | number | Yes | Index of the cloned application. The value range is [0, 1000]. The value **0** indicates the application itself. |
 

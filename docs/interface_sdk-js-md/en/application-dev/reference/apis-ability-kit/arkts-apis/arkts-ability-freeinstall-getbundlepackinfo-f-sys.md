@@ -29,7 +29,7 @@ Obtains bundlePackInfo based on **bundleName** and **bundlePackFlag**. This API 
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name. |
 | bundlePackFlag | [BundlePackFlag](arkts-ability-freeinstall-bundlepackflag-e-sys.md) | Yes | Flag of the bundle package. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;BundlePackInfo&gt; | Yes | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md) used to return the result. If the operation is successful, **err** is **null** and **data** is the BundlePackInfo object obtained; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[BundlePackInfo](arkts-ability-freeinstall-bundlepackinfo-t-sys.md)&gt; | Yes | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md) used to return the result. If the operation is successful, **err** is **null** and **data** is the BundlePackInfo object obtained; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -40,26 +40,6 @@ Obtains bundlePackInfo based on **bundleName** and **bundlePackFlag**. This API 
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundle name is not found. |
-
-**Examples**
-
-```TypeScript
-import { freeInstall } from '@kit.AbilityKit';
-
-let bundleName = 'com.example.myapplication';
-let bundlePackFlag = freeInstall.BundlePackFlag.GET_PACK_INFO_ALL;
-try {
-  freeInstall.getBundlePackInfo(bundleName, bundlePackFlag, (err, data) => {
-    if (err) {
-      console.error('Operation failed:' + JSON.stringify(err));
-    } else {
-      console.info('Operation succeed:' + JSON.stringify(data));
-    }
-  });
-} catch (err) {
-  console.error('Operation failed:' + JSON.stringify(err));
-}
-```
 
 
 ## getBundlePackInfo
@@ -89,7 +69,7 @@ Obtains bundlePackInfo based on **bundleName** and **bundlePackFlag**. This API 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;BundlePackInfo&gt; | Promise used to return the BundlePackInfo object obtained. |
+| Promise&lt;[BundlePackInfo](arkts-ability-freeinstall-bundlepackinfo-t-sys.md)&gt; | Promise used to return the BundlePackInfo object obtained. |
 
 **Error codes:**
 
@@ -100,22 +80,3 @@ Obtains bundlePackInfo based on **bundleName** and **bundlePackFlag**. This API 
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundle name is not found. |
-
-**Examples**
-
-```TypeScript
-import { freeInstall } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let bundleName = 'com.example.myapplication';
-let bundlePackFlag = freeInstall.BundlePackFlag.GET_PACK_INFO_ALL;
-try {
-  freeInstall.getBundlePackInfo(bundleName, bundlePackFlag).then(data => {
-    console.info('Operation succeed:' + JSON.stringify(data));
-  }).catch((err: BusinessError) => {
-    console.error('Operation failed:' + JSON.stringify(err));
-  });
-} catch (err) {
-  console.error('Operation failed:' + JSON.stringify(err));
-}
-```

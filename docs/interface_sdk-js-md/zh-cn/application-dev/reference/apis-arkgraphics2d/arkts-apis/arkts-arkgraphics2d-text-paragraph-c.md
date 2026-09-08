@@ -136,7 +136,7 @@ getActualTextRange(lineNumber: number, includeSpaces: boolean): Range
 
 | 类型 | 说明 |
 | --- | --- |
-| Range | 返回对应行数的实际文本范围。如果行索引非法，返回的start和end均为0。 |
+| [Range](arkts-arkgraphics2d-text-range-i.md) | 返回对应行数的实际文本范围。如果行索引非法，返回的start和end均为0。 |
 
 **示例**
 
@@ -192,13 +192,13 @@ getCharacterPositionAtCoordinate(x: number, y: number, encoding: drawing.TextEnc
 | --- | --- | --- | --- |
 | x | number | 是 | 文本排版区域内的水平坐标，单位为物理像素（px）。相对于文本排版区域左上角的x偏移量，向右为正方向。支持浮点数，可取负值（表示在文本区域左侧）。坐标超出文本区域范围时，将返回最近的字符位置。可通过触摸事件或点击事件获取。 |
 | y | number | 是 | 文本排版区域内的垂直坐标，单位为物理像素（px）。相对于文本排版区域左上角的y偏移量，向下为正方向。支持浮点数，可取负值（表示在文本区域上方）。坐标超出文本区域范围时，将返回最近的字符位置。可通过触摸事件或点击事件获取。 |
-| encoding | drawing.TextEncoding | 是 | 文本编码类型。目前仅支持UTF-8和UTF-16编码类型。对于UTF-8编码，返回的字符位置表示字节偏移量。对于UTF-16编码，返回的字符位置表示UTF-16编码单元偏移量。 |
+| encoding | [drawing.TextEncoding](arkts-arkgraphics2d-drawing-textencoding-e.md) | 是 | 文本编码类型。目前仅支持UTF-8和UTF-16编码类型。对于UTF-8编码，返回的字符位置表示字节偏移量。对于UTF-16编码，返回的字符位置表示UTF-16编码单元偏移量。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| PositionWithAffinity | 字符位置信息。 |
+| [PositionWithAffinity](arkts-arkgraphics2d-text-positionwithaffinity-i.md) | 字符位置信息。 |
 
 **错误码：**
 
@@ -262,14 +262,14 @@ getCharacterRangeForGlyphRange(glyphRange: Range, encoding: drawing.TextEncoding
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| glyphRange | Range | 是 | 字形范围。 |
-| encoding | drawing.TextEncoding | 是 | 文本编码类型。目前仅支持UTF-8和UTF-16编码类型。对于UTF-8编码，返回的字符范围表示字节范围。对于UTF-16编码，返回的字符范围表示UTF-16编码单元范围。 |
+| glyphRange | [Range](arkts-arkgraphics2d-text-range-i.md) | 是 | 字形范围。 |
+| encoding | [drawing.TextEncoding](arkts-arkgraphics2d-drawing-textencoding-e.md) | 是 | 文本编码类型。目前仅支持UTF-8和UTF-16编码类型。对于UTF-8编码，返回的字符范围表示字节范围。对于UTF-16编码，返回的字符范围表示UTF-16编码单元范围。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;Range&gt; | 字符范围。如果数组包含一个元素，它表示字符范围。如果包含两个元素，第一个是字符范围，第二个是实际的字形范围。 |
+| Array&lt;[Range](arkts-arkgraphics2d-text-range-i.md)&gt; | 字符范围。如果数组包含一个元素，它表示字符范围。如果包含两个元素，第一个是字符范围，第二个是实际的字形范围。 |
 
 **错误码：**
 
@@ -337,7 +337,7 @@ getGlyphPositionAtCoordinate(x: number, y: number): PositionWithAffinity
 
 | 类型 | 说明 |
 | --- | --- |
-| PositionWithAffinity | 字形位置信息。 |
+| [PositionWithAffinity](arkts-arkgraphics2d-text-positionwithaffinity-i.md) | 字形位置信息。 |
 
 **示例**
 
@@ -365,14 +365,14 @@ getGlyphRangeForCharacterRange(characterRange: Range, encoding: drawing.TextEnco
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| characterRange | Range | 是 | 字符范围。 |
-| encoding | drawing.TextEncoding | 是 | 文本编码类型。目前仅支持UTF-8和UTF-16编码类型。对于UTF-8编码，返回的实际字符范围表示字节范围。对于UTF-16编码，返回的实际字符范围表示UTF-16编码单元范围。 |
+| characterRange | [Range](arkts-arkgraphics2d-text-range-i.md) | 是 | 字符范围。 |
+| encoding | [drawing.TextEncoding](arkts-arkgraphics2d-drawing-textencoding-e.md) | 是 | 文本编码类型。目前仅支持UTF-8和UTF-16编码类型。对于UTF-8编码，返回的实际字符范围表示字节范围。对于UTF-16编码，返回的实际字符范围表示UTF-16编码单元范围。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;Range&gt; | 字形范围。数组包含两个元素，第一个是字形范围，第二个是实际的字符范围。 |
+| Array&lt;[Range](arkts-arkgraphics2d-text-range-i.md)&gt; | 字形范围。数组包含两个元素，第一个是字形范围，第二个是实际的字符范围。 |
 
 **错误码：**
 
@@ -543,7 +543,7 @@ getLineMetrics(): Array<LineMetrics>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;LineMetrics&gt; | 文本行的行度量数组。 |
+| Array&lt;[LineMetrics](arkts-arkgraphics2d-text-linemetrics-i.md)&gt; | 文本行的行度量数组。 |
 
 **示例**
 
@@ -575,7 +575,7 @@ getLineMetrics(lineNumber: number): LineMetrics | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| LineMetrics \| undefined | 如果指定的行号有效且度量信息存在，则返回一个包含该行度量数据的LineMetrics对象；如果行号无效或无法获取度量信息，则返回undefined。 |
+| [LineMetrics](arkts-arkgraphics2d-text-linemetrics-i.md) \| undefined | 如果指定的行号有效且度量信息存在，则返回一个包含该行度量数据的LineMetrics对象；如果行号无效或无法获取度量信息，则返回undefined。 |
 
 **示例**
 
@@ -765,7 +765,7 @@ getParagraphStyle(): ParagraphStyle
 
 | 类型 | 说明 |
 | --- | --- |
-| ParagraphStyle | 段落的样式配置。 |
+| [ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md) | 段落的样式配置。 |
 
 **示例**
 
@@ -890,7 +890,7 @@ getRectsForPlaceholders(): Array<TextBox>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;TextBox&gt; | 矩形区域数组。 |
+| Array&lt;[TextBox](arkts-arkgraphics2d-text-textbox-i.md)&gt; | 矩形区域数组。 |
 
 **示例**
 
@@ -916,15 +916,15 @@ getRectsForRange(range: Range, widthStyle: RectWidthStyle, heightStyle: RectHeig
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| range | Range | 是 | 需要获取的区域的文本区间。 |
-| widthStyle | RectWidthStyle | 是 | 返回的矩形区域的宽度的规格。 |
-| heightStyle | RectHeightStyle | 是 | 返回的矩形区域的高度的规格。 |
+| range | [Range](arkts-arkgraphics2d-text-range-i.md) | 是 | 需要获取的区域的文本区间。 |
+| widthStyle | [RectWidthStyle](arkts-arkgraphics2d-text-rectwidthstyle-e.md) | 是 | 返回的矩形区域的宽度的规格。 |
+| heightStyle | [RectHeightStyle](arkts-arkgraphics2d-text-rectheightstyle-e.md) | 是 | 返回的矩形区域的高度的规格。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;TextBox&gt; | 矩形区域数组。 |
+| Array&lt;[TextBox](arkts-arkgraphics2d-text-textbox-i.md)&gt; | 矩形区域数组。 |
 
 **示例**
 
@@ -1049,7 +1049,7 @@ getVisibleTextRanges(): Array<Range>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;Range&gt; | 段落可见文本范围数组，范围为UTF-16编码单元索引。 |
+| Array&lt;[Range](arkts-arkgraphics2d-text-range-i.md)&gt; | 段落可见文本范围数组，范围为UTF-16编码单元索引。 |
 
 **示例**
 
@@ -1081,7 +1081,7 @@ getWordBoundary(offset: number): Range
 
 | 类型 | 说明 |
 | --- | --- |
-| Range | 单词的索引区间。 |
+| [Range](arkts-arkgraphics2d-text-range-i.md) | 单词的索引区间。 |
 
 **示例**
 
@@ -1277,7 +1277,7 @@ paint(canvas: drawing.Canvas, x: number, y: number): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| canvas | drawing.Canvas | 是 | 绘制的目标画布。 |
+| canvas | [drawing.Canvas](arkts-arkgraphics2d-drawing-canvas-c.md) | 是 | 绘制的目标画布。 |
 | x | number | 是 | 绘制的左上角位置的横坐标，浮点数，单位为物理像素px。 |
 | y | number | 是 | 绘制的左上角位置的纵坐标，浮点数，单位为物理像素px。 |
 
@@ -1289,67 +1289,6 @@ let opts: image.InitializationOptions = { editable: true, pixelFormat: 3, size: 
 let pixelMap: image.PixelMap = image.createPixelMapSync(color, opts);
 let canvas = new drawing.Canvas(pixelMap);
 paragraph.paint(canvas, 0, 0);
-```
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D'
-import { image } from '@kit.ImageKit'
-
-function textFunc(pixelmap: PixelMap) {
-  let canvas = new drawing.Canvas(pixelmap);
-  lines[0].paint(canvas, 0, 0);
-}
-
-@Entry
-@Component
-struct Index {
-  @State pixelmap?: PixelMap = undefined;
-  fun: Function = textFunc;
-  build() {
-    Column() {
-      Image(this.pixelmap).width(200).height(200);
-      Button().onClick(() => {
-        if (this.pixelmap == undefined) {
-          const color: ArrayBuffer = new ArrayBuffer(160000);
-          let opts: image.InitializationOptions = { editable: true, pixelFormat: 3, size: { height: 200, width: 200 } }
-          this.pixelmap = image.createPixelMapSync(color, opts);
-        }
-        this.fun(this.pixelmap);
-      })
-    }
-  }
-}
-```
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D'
-import { text } from '@kit.ArkGraphics2D'
-import { image } from '@kit.ImageKit'
-
-function textFunc(pixelmap: PixelMap) {
-  let canvas = new drawing.Canvas(pixelmap);
-  runs[0].paint(canvas, 0, 0);
-}
-
-@Entry
-@Component
-struct Index {
-  @State pixelmap?: PixelMap = undefined;
-  fun: Function = textFunc;
-  build() {
-    Column() {
-      Image(this.pixelmap).width(200).height(200);
-      Button().onClick(() => {
-        if (this.pixelmap == undefined) {
-          const color: ArrayBuffer = new ArrayBuffer(160000);
-          let opts: image.InitializationOptions = { editable: true, pixelFormat: 3, size: { height: 200, width: 200 } }
-          this.pixelmap = image.createPixelMapSync(color, opts);
-        }
-        this.fun(this.pixelmap);
-      })
-    }
-  }
-}
 ```
 
 ## paintOnPath
@@ -1370,8 +1309,8 @@ paintOnPath(canvas: drawing.Canvas, path: drawing.Path, hOffset: number, vOffset
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| canvas | drawing.Canvas | 是 | 绘制的目标画布。 |
-| path | drawing.Path | 是 | 确认文字位置的路径。 |
+| canvas | [drawing.Canvas](arkts-arkgraphics2d-drawing-canvas-c.md) | 是 | 绘制的目标画布。 |
+| path | [drawing.Path](arkts-arkgraphics2d-drawing-path-c.md) | 是 | 确认文字位置的路径。 |
 | hOffset | number | 是 | 沿路径方向偏置，从路径起点向前为正，向后为负，单位为物理像素px。 |
 | vOffset | number | 是 | 沿路径垂直方向偏置，沿路径方向左侧为负，右侧为正，单位为物理像素px。 |
 
@@ -1405,7 +1344,7 @@ updateColor(color: common2D.Color): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| color | common2D.Color | 是 | 更新后的字体色。 |
+| color | [common2D.Color](arkts-arkgraphics2d-common2d-color-i.md) | 是 | 更新后的字体色。 |
 
 **示例**
 

@@ -20,7 +20,7 @@ readonly boundingBox: Rect
 
 Metadata rectangle.
 
-**Type:** Rect
+**Type:** [Rect](arkts-camera-camera-rect-i.md)
 
 **Since:** 10
 

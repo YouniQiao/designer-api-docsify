@@ -212,7 +212,7 @@ textAlign?: TextAlign
 
 Set the alignment mode for the button label.
 
-**Type:** TextAlign
+**Type:** [TextAlign](arkts-arkui-textalign-e.md)
 
 **Default:** { TextAlign.Start }
 

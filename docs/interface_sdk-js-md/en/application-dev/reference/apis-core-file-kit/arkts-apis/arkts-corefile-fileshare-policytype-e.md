@@ -2,7 +2,7 @@
 
 Indicates the policy type of the path.
 
-@enum { number } policyType
+@enum { int } policyType
 
 **Since:** 15
 

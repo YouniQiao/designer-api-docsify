@@ -20,7 +20,7 @@ privilege: Privilege
 
 Privilege associated with the authorization.
 
-**Type:** Privilege
+**Type:** [Privilege](arkts-basicservices-authorization-privilege-e.md)
 
 **Since:** 26.1.0
 
@@ -36,7 +36,7 @@ resultCode: AuthorizationResultCode
 
 Authorization result code. If the authorization is granted, [AUTHORIZATION_GRANTED](arkts-basicservices-authorization-authorizationresultcode-e.md#authorization_granted) is returned. Otherwise, an error code is returned. For details, see [AuthorizationResultCode](arkts-basicservices-authorization-authorizationresultcode-e.md).
 
-**Type:** AuthorizationResultCode
+**Type:** [AuthorizationResultCode](arkts-basicservices-authorization-authorizationresultcode-e.md)
 
 **Since:** 26.1.0
 

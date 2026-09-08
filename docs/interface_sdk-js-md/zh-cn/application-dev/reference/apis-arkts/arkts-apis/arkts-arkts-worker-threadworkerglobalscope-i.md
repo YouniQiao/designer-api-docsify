@@ -140,24 +140,6 @@ workerPort.onmessage = (e: MessageEvents): void => {
 }
 ```
 
-```TypeScript
-// Index.ets
-import { worker } from '@kit.ArkTS';
-
-const workerInstance = new worker.Worker("entry/ets/workers/worker.ets");
-workerInstance.postMessage("hello world");
-```
-
-```TypeScript
-// worker.ets
-import { worker } from '@kit.ArkTS';
-
-const parentPort = worker.parentPort;
-parentPort.onmessage = (): void => {
-    parentPort.close()
-}
-```
-
 ## onmessage
 
 ```TypeScript
@@ -266,31 +248,6 @@ workerPort.onmessage = (e: MessageEvents): void => {
 }
 ```
 
-```TypeScript
-// Index.ets
-import { worker } from '@kit.ArkTS';
-
-const workerInstance = new worker.Worker("entry/ets/workers/worker.ets");
-workerInstance.postMessage("hello world");
-workerInstance.onmessage = (e: MessageEvents): void => {
-    // let data = e.data;
-    console.info("receive data from worker.ets");
-}
-```
-
-```TypeScript
-// worker.ets
-import { DedicatedWorkerGlobalScope, worker } from '@kit.ArkTS';
-
-const workerPort: DedicatedWorkerGlobalScope = worker.parentPort;
-
-workerPort.onmessage = (): void => {
-    // let data = e.data;
-    let buffer = new ArrayBuffer(5)
-    workerPort.postMessage(buffer, [buffer]);
-}
-```
-
 ## postMessage
 
 ```TypeScript
@@ -339,27 +296,6 @@ import { worker, MessageEvents } from '@kit.ArkTS';
 const workerPort = worker.workerPort;
 workerPort.onmessage = (e: MessageEvents): void => {
     workerPort.postMessage("receive data from main thread");
-}
-```
-
-```TypeScript
-// Index.ets
-import { worker } from '@kit.ArkTS';
-
-const workerInstance = new worker.Worker("entry/ets/workers/worker.ets");
-workerInstance.postMessage("hello world");
-workerInstance.onmessage = (): void => {
-    console.info("receive data from worker.ets");
-}
-```
-
-```TypeScript
-// worker.ets
-import { ErrorEvent, MessageEvents, worker } from '@kit.ArkTS';
-
-const parentPort = worker.parentPort;
-parentPort.onmessage = (e: MessageEvents) => {
-  parentPort.postMessage("receive data from main thread");
 }
 ```
 
@@ -513,47 +449,6 @@ Worker线程向宿主线程发送消息，消息中的Sendable对象通过引用
 | [10200006](../errorcode-utils.md#10200006-worker传输信息序列化异常) | An exception occurred during serialization. |
 
 **示例**
-
-```TypeScript
-// Index.ets
-// 新建SendableObject实例并通过宿主线程传递至Worker线程
-
-import { worker } from '@kit.ArkTS';
-import { SendableObject } from './sendable';
-
-const workerInstance = new worker.ThreadWorker("entry/ets/workers/Worker.ets");
-let object: SendableObject = new SendableObject();
-workerInstance.postMessageWithSharedSendable(object);
-
-// 使用postMessage接口传递Sendable对象，使用拷贝数据的方式传递
-workerInstance.postMessage(object);
-```
-
-```TypeScript
-// sendable.ets
-// 定义SendableObject
-
-@Sendable
-export class SendableObject {
-  value:number = 45;
-}
-```
-
-```TypeScript
-// worker文件路径为：entry/src/main/ets/workers/Worker.ets
-// Worker.ets
-// 接收宿主线程传递至Worker线程的数据并访问
-
-import { SendableObject } from '../pages/sendable';
-import { worker, ThreadWorkerGlobalScope, MessageEvents, ErrorEvent } from '@kit.ArkTS';
-
-const workerPort: ThreadWorkerGlobalScope = worker.workerPort;
-
-workerPort.onmessage = (e: MessageEvents) => {
-  let obj: SendableObject = e.data;
-  console.info("sendable obj is: " + obj.value);
-}
-```
 
 ```TypeScript
 // worker文件路径为：entry/src/main/ets/workers/Worker.ets

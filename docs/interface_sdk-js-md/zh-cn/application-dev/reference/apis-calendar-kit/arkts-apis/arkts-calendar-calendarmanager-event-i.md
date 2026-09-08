@@ -164,7 +164,7 @@ location?: Location
 
 日程地点。不填时，默认为undefined。
 
-**类型：** Location
+**类型：** [Location](arkts-calendar-calendarmanager-location-i.md)
 
 **起始版本：** 10
 
@@ -276,7 +276,7 @@ type: EventType
 
 日程类型。
 
-**类型：** EventType
+**类型：** [EventType](arkts-calendar-calendarmanager-eventtype-e.md)
 
 **起始版本：** 10
 

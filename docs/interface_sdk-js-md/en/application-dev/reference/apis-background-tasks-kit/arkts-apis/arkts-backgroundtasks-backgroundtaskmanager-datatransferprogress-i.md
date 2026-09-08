@@ -36,7 +36,7 @@ progressInfo: ProgressInfo
 
 Notify progress data.
 
-**Type:** ProgressInfo
+**Type:** [ProgressInfo](arkts-backgroundtasks-backgroundtaskmanager-progressinfo-i.md)
 
 **Since:** 26.1.0
 

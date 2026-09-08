@@ -2,7 +2,7 @@
 
 Rotation execution results.
 
-@enum { number }
+@enum { int }
 
 **Since:** 20
 

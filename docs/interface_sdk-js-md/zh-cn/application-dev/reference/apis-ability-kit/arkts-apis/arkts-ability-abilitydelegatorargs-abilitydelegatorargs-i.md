@@ -75,13 +75,3 @@ testRunnerClassName: string
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
-
-**示例**
-
-```TypeScript
-// 导入测试注册模块
-import { abilityDelegatorRegistry } from '@kit.TestKit';
-
-// 通过AbilityDelegatorRegistry获取AbilityDelegatorArgs对象
-let args: abilityDelegatorRegistry.AbilityDelegatorArgs = abilityDelegatorRegistry.getArguments();
-```

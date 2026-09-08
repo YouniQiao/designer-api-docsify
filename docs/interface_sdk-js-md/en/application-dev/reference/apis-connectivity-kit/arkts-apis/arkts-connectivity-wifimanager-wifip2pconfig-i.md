@@ -48,7 +48,7 @@ goBand: GroupOwnerBand
 
 Group owner band
 
-**Type:** GroupOwnerBand
+**Type:** [GroupOwnerBand](arkts-connectivity-wifimanager-groupownerband-e.md)
 
 **Since:** 9
 

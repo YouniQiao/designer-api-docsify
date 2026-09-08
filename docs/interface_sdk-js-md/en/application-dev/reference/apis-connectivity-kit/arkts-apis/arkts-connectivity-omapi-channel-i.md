@@ -36,21 +36,6 @@ Closes this channel.
 import { hilog } from '@kit.PerformanceAnalysisKit';
 import { omapi } from '@kit.ConnectivityKit';
 
-let seSession : omapi.Session;
-
-// Initialize seSession before using it.
-
-try {
-    seSession.close();
-} catch (error) {
-    hilog.error(0x0000, 'testTag', 'close error %{public}s', JSON.stringify(error));
-}
-```
-
-```TypeScript
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { omapi } from '@kit.ConnectivityKit';
-
 let seChannel : omapi.Channel;
 
 // Initialize seChannel before using it.
@@ -118,7 +103,7 @@ Obtains the session used to open this channel.
 
 | Type | Description |
 | --- | --- |
-| Session | Session instance obtained. |
+| [Session](arkts-connectivity-omapi-session-i.md) | Session instance obtained. |
 
 **Error codes:**
 
@@ -210,22 +195,6 @@ Checks whether this channel is closed.
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 
 **Examples**
-
-```TypeScript
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { omapi } from '@kit.ConnectivityKit';
-
-let seSession : omapi.Session;
-
-// Initialize seSession before using it.
-
-try {
-    let isClosed = seSession.isClosed();
-    hilog.info(0x0000, 'testTag', 'isClosed %{public}s', JSON.stringify(isClosed));
-} catch (error) {
-    hilog.error(0x0000, 'testTag', 'isClosed error %{public}s', JSON.stringify(error));
-}
-```
 
 ```TypeScript
 import { hilog } from '@kit.PerformanceAnalysisKit';

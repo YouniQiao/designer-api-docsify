@@ -76,26 +76,6 @@ Whether the peer end of the current communication is a process on the local devi
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
-**Examples**
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-class Stub extends rpc.RemoteObject {
-  onRemoteMessageRequest(code: number, data: rpc.MessageSequence, reply: rpc.MessageSequence,
-    option: rpc.MessageOption): boolean | Promise<boolean> {
-    try {
-      let isLocalCalling = rpc.IPCSkeleton.isLocalCalling();
-      hilog.info(0x0000, 'testTag', 'RpcServer: isLocalCalling is ' + isLocalCalling);
-    } catch (error) {
-      hilog.error(0x0000, 'testTag', 'error ' + error);
-    }
-    return true;
-  }
-}
-```
-
 ## localDeviceId
 
 ```TypeScript

@@ -26,7 +26,7 @@ function finishTask(taskInfo: TaskInfo): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| taskInfo | TaskInfo | 是 |  |
+| taskInfo | [TaskInfo](arkts-backgroundtasks-backgroundloader-taskinfo-i.md) | 是 |  |
 
 **错误码：**
 

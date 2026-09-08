@@ -39,7 +39,7 @@ notification: Notification
 
 Custom settings for the notification bar. The default value is **{}**.
 
-**Type:** Notification
+**Type:** [Notification](arkts-basicservices-agent-notification-i.md)
 
 **Since:** 15
 

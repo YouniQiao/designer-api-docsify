@@ -223,7 +223,7 @@ backgroundBlurStyle?: BlurStyle
 > 否则显示的颜色将不符合预期效果。
 > 2. 从API版本26.0.0开始，设置systemMaterial后，backgroundBlurStyle不生效。
 
-**类型：** BlurStyle
+**类型：** [BlurStyle](arkts-arkui-blurstyle-e.md)
 
 **默认值：** BlurStyle.COMPONENT_ULTRA_THICK
 
@@ -522,7 +522,7 @@ offset?: Offset
 
 默认值：{ dx: 0 , dy: 0 }
 
-**类型：** Offset
+**类型：** [Offset](../arkts-apis/arkts-arkui-offset-t.md)
 
 **起始版本：** 10
 
@@ -545,7 +545,7 @@ onEnterSelectedArea?: Callback<TimePickerResult>
 > 当enableCascade设置为true时，由于上午/下午列与小时列存在联动关系，不建议使用该回调。该回调标识的是滑动过程中选项进入分割线区域内的节点，
 > 而联动变化的选项并不涉及滑动，因此，回调的返回值中，仅当前滑动列的值会正常变化，其余未滑动列的值保持不变。
 
-**类型：** Callback&lt;[TimePickerResult](arkts-arkui-timepickerresult-i.md)&gt;
+**类型：** [Callback](arkts-arkui-callback-i.md)&lt;[TimePickerResult](arkts-arkui-timepickerresult-i.md)&gt;
 
 **起始版本：** 18
 

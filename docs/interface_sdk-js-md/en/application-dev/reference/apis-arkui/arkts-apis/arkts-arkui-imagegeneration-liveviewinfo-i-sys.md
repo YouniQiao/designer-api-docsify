@@ -22,7 +22,7 @@ import { imageGeneration } from '@kit.ArkUI';
 getLongTermTaskId(): number
 ```
 
-Get the number-term task ID for LiveView.
+Get the long-term task ID for LiveView.
 
 **Since:** 26.0.0
 
@@ -36,7 +36,7 @@ Get the number-term task ID for LiveView.
 
 | Type | Description |
 | --- | --- |
-| number | Returns the number-term task ID. |
+| number | Returns the long-term task ID. |
 
 ## getWant
 

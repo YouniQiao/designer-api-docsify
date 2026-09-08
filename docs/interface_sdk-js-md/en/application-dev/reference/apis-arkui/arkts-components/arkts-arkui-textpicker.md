@@ -57,6 +57,7 @@ Creates a text picker based on the specified data list.
 ## Examples
 
 This example demonstrates how to configure single-column and multi-column text pickers by setting range and customizing the width of each column using columnWidths.
+The columnWidths attribute of [TextPickerOptions](arkts-arkui-textpickeroptions-i.md) is added since API version 18.
 
 ```TypeScript
 // xxx.ets
@@ -356,6 +357,7 @@ struct TextPickerExample {
 ```
 
 This example demonstrates how to disable the text style change animation for the text picker and set the text style by configuring [disableTextStyleAnimation](#disabletextstyleanimation15) and [defaultTextStyle](#defaulttextstyle15).
+The disableTextStyleAnimation and defaultTextStyle APIs are supported since API version 15.
 
 ```TypeScript
 // xxx.ets
@@ -445,6 +447,7 @@ struct TextPickerExample {
 ```
 
 This example shows how to set the text color, maximum font size, minimum font size, and text overflow mode by configuring [disappearTextStyle](#disappeartextstyle20), [textStyle](#textstyle20), and [selectedTextStyle](#selectedtextstyle20).
+The disappearTextStyle, textStyle, and selectedTextStyle APIs are supported since API version 20.
 
 ```TypeScript
 // xxx.ets

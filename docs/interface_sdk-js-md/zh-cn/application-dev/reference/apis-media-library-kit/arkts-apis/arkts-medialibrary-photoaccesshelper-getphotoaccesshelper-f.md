@@ -32,7 +32,7 @@ function getPhotoAccessHelper(context: Context): PhotoAccessHelper
 
 | 类型 | 说明 |
 | --- | --- |
-| PhotoAccessHelper | 相册管理模块的实例。 |
+| [PhotoAccessHelper](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md) | 相册管理模块的实例。 |
 
 **错误码：**
 

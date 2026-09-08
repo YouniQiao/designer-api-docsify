@@ -28,8 +28,8 @@ function controlTransfer(pipe: USBDevicePipe, controlparam: USBControlParams, ti
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| pipe | USBDevicePipe | 是 | 用于确定设备。 |
-| controlparam | USBControlParams | 是 | 控制传输参数。 |
+| pipe | [USBDevicePipe](arkts-basicservices-usb-usbdevicepipe-i.md) | 是 | 用于确定设备。 |
+| controlparam | [USBControlParams](arkts-basicservices-usb-usbcontrolparams-i.md) | 是 | 控制传输参数。 |
 | timeout | number | 否 | 超时时间（单位：ms），可选参数，默认为0不超时。 |
 
 **返回值：**

@@ -28,7 +28,7 @@ action?: Action
 
 移除防火墙时非必填，当值为空时，表示清空所有的匹配[Action](arkts-mdm-networkmanager-action-e.md)规则的链，且srcAddr，destAddr，srcPort，destPort，appUid也必须传入空值。
 
-**类型：** Action
+**类型：** [Action](arkts-mdm-networkmanager-action-e.md)
 
 **起始版本：** 12
 
@@ -96,7 +96,7 @@ direction?: Direction
 
 移除防火墙时非必填，当值为空时，表示清空所有的[Direction](arkts-mdm-networkmanager-direction-e.md)链，且srcAddr，destAddr，srcPort，destPort，appUid也必须传入空值。
 
-**类型：** Direction
+**类型：** [Direction](arkts-mdm-networkmanager-direction-e.md)
 
 **起始版本：** 12
 
@@ -150,7 +150,7 @@ protocol?: Protocol
 
 网络协议。当值为ALL或者ICMP时，设置srcPort与destPort无效。
 
-**类型：** Protocol
+**类型：** [Protocol](arkts-mdm-networkmanager-protocol-e.md)
 
 **起始版本：** 12
 

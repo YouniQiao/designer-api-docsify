@@ -35,7 +35,7 @@ Obtains state information about the page at the top of the navigation stack.
 
 | Type | Description |
 | --- | --- |
-| RouterState | Page routing state. |
+| [RouterState](arkts-arkui-router-routerstate-i.md) | Page routing state. |
 
 **Examples**
 

@@ -51,6 +51,6 @@ Connects an AgentExtensionAbility to a ServiceExtensionAbility. If the target se
 | [16000012](../errorcode-ability.md#16000012-application-under-control) | The application is controlled. |
 | [16000013](../errorcode-ability.md#16000013-application-controlled-by-edm) | The application is controlled by enterprise device management (EDM). |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. Possible causes: 1.Connect to system service failed. 2.System service failed to communicate with dependency module. |
-| [16000053](../errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) | The ability is not on the top of the UI. |
+| [16000053](../errorcode-ability.md#16000053-ability-not-in-the-foreground) | The ability is not on the top of the UI. |
 | [16000055](../errorcode-ability.md#16000055-installation-free-timeout) | Installation-free timed out. |
 | [16000073](../errorcode-ability.md#16000073-appcloneindex-is-invalid) | The app clone index is invalid. |

@@ -60,7 +60,7 @@ priority?: LocationRequestPriority
 
 表示优先级信息。当scenario取值为UNSET时，priority参数生效，否则priority参数不生效；当scenario和priority均取值为UNSET时，无法发起定位请求。取值范围见[LocationRequestPriority](arkts-location-geolocationmanager-locationrequestpriority-e.md)的定义。默认值为FIRST_FIX。
 
-**类型：** LocationRequestPriority
+**类型：** [LocationRequestPriority](arkts-location-geolocationmanager-locationrequestpriority-e.md)
 
 **起始版本：** 9
 
@@ -76,7 +76,7 @@ scenario?: LocationRequestScenario
 
 表示场景信息。当scenario取值为UNSET时，priority参数生效，否则priority参数不生效；当scenario和priority均取值为UNSET时，无法发起定位请求。取值范围见[LocationRequestScenario](arkts-location-geolocationmanager-locationrequestscenario-e.md)的定义。默认值为UNSET。
 
-**类型：** LocationRequestScenario
+**类型：** [LocationRequestScenario](arkts-location-geolocationmanager-locationrequestscenario-e.md)
 
 **起始版本：** 9
 

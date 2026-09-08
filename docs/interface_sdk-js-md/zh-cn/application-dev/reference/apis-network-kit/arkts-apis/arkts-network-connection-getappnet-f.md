@@ -22,7 +22,7 @@ function getAppNet(callback: AsyncCallback<NetHandle>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;NetHandle&gt; | 是 | 回调函数。当成功获取App绑定的网络信息时，error为undefined，data为获取到App绑定的网络信息；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[NetHandle](arkts-network-connection-nethandle-i.md)&gt; | 是 | 回调函数。当成功获取App绑定的网络信息时，error为undefined，data为获取到App绑定的网络信息；否则为错误对象。 |
 
 **错误码：**
 
@@ -64,7 +64,7 @@ function getAppNet(): Promise<NetHandle>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;NetHandle&gt; | 以Promise形式返回App绑定的网络信息。 |
+| Promise&lt;[NetHandle](arkts-network-connection-nethandle-i.md)&gt; | 以Promise形式返回App绑定的网络信息。 |
 
 **错误码：**
 

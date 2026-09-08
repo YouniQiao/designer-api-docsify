@@ -22,7 +22,7 @@ desiredPixelFormat?: PixelMapFormat
 
 Indicates the pixel format of the decomposed SDR Pixelmap and the gainmap. The formats of RGBA_8888\NV12\NV21 are supported. Default value: RGBA_8888.
 
-**Type:** PixelMapFormat
+**Type:** [PixelMapFormat](arkts-image-image-pixelmapformat-e.md)
 
 **Since:** 26.0.0
 

@@ -39,7 +39,7 @@ font?: Font
 
 Text style.
 
-**Type:** Font
+**Type:** [Font](../arkts-apis/arkts-arkui-font-i.md)
 
 **Since:** 11
 

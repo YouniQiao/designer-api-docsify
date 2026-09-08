@@ -47,36 +47,6 @@ phAccessHelper的创建请参考sendablePhotoAccessHelper.getPhotoAccessHelper�
 
 ```TypeScript
 import { dataSharePredicates } from '@kit.ArkData';
-import { photoAccessHelper } from '@kit.MediaLibraryKit';
-
-async function example(phAccessHelper: sendablePhotoAccessHelper.PhotoAccessHelper) {
-  console.info('commitModifyDemo');
-  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-  let fetchOption: photoAccessHelper.FetchOptions = {
-    fetchColumns: ['title'],
-    predicates: predicates
-  };
-  let fetchResult: sendablePhotoAccessHelper.FetchResult<sendablePhotoAccessHelper.PhotoAsset> = await phAccessHelper.getAssets(fetchOption);
-  let photoAsset: sendablePhotoAccessHelper.PhotoAsset = await fetchResult.getFirstObject();
-  let title: string = photoAccessHelper.PhotoKeys.TITLE.toString();
-  let photoAssetTitle: photoAccessHelper.MemberType = photoAsset.get(title);
-  console.info('photoAsset get photoAssetTitle = ', photoAssetTitle);
-  photoAsset.set(title, 'newTitle3');
-  try {
-   // 将修改后的照片元数据提交到数据库进行持久化保存。
-    await photoAsset.commitModify();
-    let newPhotoAssetTitle: photoAccessHelper.MemberType = photoAsset.get(title);
-    console.info('photoAsset get newPhotoAssetTitle = ', newPhotoAssetTitle);
-  } catch (err) {
-    console.error(`commitModify failed. error: ${err.code}, ${err.message}`);
-  }
-}
-```
-
-phAccessHelper的创建请参考sendablePhotoAccessHelper.getPhotoAccessHelper的示例使用。
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
 import { BusinessError } from '@kit.BasicServicesKit';
 import { photoAccessHelper } from '@kit.MediaLibraryKit';
 
@@ -115,7 +85,7 @@ convertToPhotoAlbum(): photoAccessHelper.Album
 
 | 类型 | 说明 |
 | --- | --- |
-| photoAccessHelper.Album | 返回非Sendable类型的Album。 |
+| [photoAccessHelper.Album](arkts-medialibrary-photoaccesshelper-album-i.md) | 返回非Sendable类型的Album。 |
 
 **错误码：**
 

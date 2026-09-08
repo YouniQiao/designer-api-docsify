@@ -237,7 +237,7 @@ Unsubscribes from task response headers.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | 'response' | Yes | Event type.   - **response**: task response. |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;HttpResponse&gt; | No | Callback to unregister. If this parameter is not specified, all callbacks of the current type will be unregistered. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[HttpResponse](arkts-basicservices-agent-httpresponse-i.md)&gt; | No | Callback to unregister. If this parameter is not specified, all callbacks of the current type will be unregistered. |
 
 **Error codes:**
 
@@ -527,7 +527,7 @@ Subscribes to task response headers. This API uses an asynchronous callback to r
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | 'response' | Yes | Event type.   - **'response'**: task response. |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;HttpResponse&gt; | Yes | Callback used to return the data structure of the task response header. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[HttpResponse](arkts-basicservices-agent-httpresponse-i.md)&gt; | Yes | Callback used to return the data structure of the task response header. |
 
 **Error codes:**
 
@@ -623,65 +623,6 @@ Pauses a task that is waiting, running, or retrying. A paused task can be resume
 | [21900005](../errorcode-request.md#21900005-task-mode-error) | Operation with wrong task mode.<br>**Applicable version:** 10 |
 | [21900007](../errorcode-request.md#21900007-operation-not-supported-by-the-task-state) | Operation with wrong task state. |
 
-**Examples**
-
-```TypeScript
-downloadTask.pause((err: BusinessError) => {
-  if(err) {
-    console.error(`Failed to pause the download task. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in pausing the download task.');
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-
-// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-let config: request.agent.Config = {
-  action: request.agent.Action.DOWNLOAD,
-  url: 'http://127.0.0.1', // Replace the URL with the HTTP address of the real server.
-  title: 'taskPauseTest',
-  description: 'Sample code for pause the download task',
-  mode: request.agent.Mode.BACKGROUND,
-  overwrite: false,
-  method: "GET",
-  data: "",
-  saveas: "./",
-  network: request.agent.Network.CELLULAR,
-  metered: false,
-  roaming: true,
-  retry: true,
-  redirect: true,
-  index: 0,
-  begins: 0,
-  ends: -1,
-  gauge: false,
-  precise: false,
-  token: "it is a secret"
-};
-request.agent.create(context, config).then(async (task: request.agent.Task) => {
-  task.start();
-  // Wait for 1 second before executing the next step to prevent asynchronous out-of-order.
-  await new Promise<void>((resolve) => {
-    setTimeout(() => resolve(),1000)
-  })
-  task.pause((err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to pause the download task, Code: ${err.code}, message: ${err.message}`);
-      return;
-    }
-    console.info(`Succeeded in pausing a download task. `);
-  });
-  console.info(`Succeeded in creating a download task. result: ${task.tid}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to create a download task, Code: ${err.code}, message: ${err.message}`);
-});
-```
-
 ## pause
 
 ```TypeScript
@@ -707,61 +648,6 @@ Pauses a task that is waiting, running, or retrying. A paused task can be resume
 | [13400003](../errorcode-request.md#13400003-service-error) | Task service ability error. |
 | [21900005](../errorcode-request.md#21900005-task-mode-error) | Operation with wrong task mode.<br>**Applicable version:** 10 |
 | [21900007](../errorcode-request.md#21900007-operation-not-supported-by-the-task-state) | Operation with wrong task state. |
-
-**Examples**
-
-```TypeScript
-downloadTask.pause().then(() => {    
-  console.info('Succeeded in pausing the download task.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to pause the download task. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-
-// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-let config: request.agent.Config = {
-  action: request.agent.Action.DOWNLOAD,
-  url: 'http://127.0.0.1', // Replace the URL with the HTTP address of the real server.
-  title: 'taskPauseTest',
-  description: 'Sample code for pause the download task',
-  mode: request.agent.Mode.BACKGROUND,
-  overwrite: false,
-  method: "GET",
-  data: "",
-  saveas: "./",
-  network: request.agent.Network.CELLULAR,
-  metered: false,
-  roaming: true,
-  retry: true,
-  redirect: true,
-  index: 0,
-  begins: 0,
-  ends: -1,
-  gauge: false,
-  precise: false,
-  token: "it is a secret"
-};
-request.agent.create(context, config).then(async (task: request.agent.Task) => {
-  task.start();
-  // Wait for 1 second before executing the next step to prevent asynchronous out-of-order.
-  await new Promise<void>((resolve) => {
-    setTimeout(() => resolve(),1000)
-  })
-  task.pause().then(() => {
-    console.info(`Succeeded in pausing a download task. `);
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to pause the download task, Code: ${err.code}, message: ${err.message}`);
-  });
-  console.info(`Succeeded in creating a download task. result: ${task.tid}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to create a download task, Code: ${err.code}, message: ${err.message}`);
-});
-```
 
 ## resume
 
@@ -792,70 +678,6 @@ Resumes a paused task. This API uses an asynchronous callback to return the resu
 | [21900005](../errorcode-request.md#21900005-task-mode-error) | Operation with wrong task mode.<br>**Applicable version:** 10 |
 | [21900007](../errorcode-request.md#21900007-operation-not-supported-by-the-task-state) | Operation with wrong task state. |
 
-**Examples**
-
-```TypeScript
-downloadTask.resume((err: BusinessError) => {
-  if (err) {
-    console.error(`Failed to resume the download task. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in resuming the download task.');
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-
-// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-let config: request.agent.Config = {
-  action: request.agent.Action.DOWNLOAD,
-  url: 'http://127.0.0.1', // Replace the URL with the HTTP address of the real server.
-  title: 'taskResumeTest',
-  description: 'Sample code for resume the download task',
-  mode: request.agent.Mode.BACKGROUND,
-  overwrite: false,
-  method: "GET",
-  data: "",
-  saveas: "./",
-  network: request.agent.Network.CELLULAR,
-  metered: false,
-  roaming: true,
-  retry: true,
-  redirect: true,
-  index: 0,
-  begins: 0,
-  ends: -1,
-  gauge: false,
-  precise: false,
-  token: "it is a secret"
-};
-request.agent.create(context, config).then(async (task: request.agent.Task) => {
-  task.start();
-  // Wait for 1 second before executing the next step to prevent asynchronous out-of-order.
-  await new Promise<void>((resolve) => {
-    setTimeout(() => resolve(),1000)
-  })
-  task.pause();
-  // Wait for 1 second before executing the next step to prevent asynchronous out-of-order.
-  await new Promise<void>((resolve) => {
-    setTimeout(() => resolve(),1000)
-  })
-  task.resume((err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to resume the download task, Code: ${err.code}, message: ${err.message}`);
-      return;
-    }
-    console.info(`Succeeded in resuming a download task. `);
-  });
-  console.info(`Succeeded in creating a download task. result: ${task.tid}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to create a download task, Code: ${err.code}, message: ${err.message}`);
-});
-```
-
 ## resume
 
 ```TypeScript
@@ -884,66 +706,6 @@ Resumes a paused task. This API uses a promise to return the result.
 | [13400003](../errorcode-request.md#13400003-service-error) | Task service ability error. |
 | [21900005](../errorcode-request.md#21900005-task-mode-error) | Operation with wrong task mode.<br>**Applicable version:** 10 |
 | [21900007](../errorcode-request.md#21900007-operation-not-supported-by-the-task-state) | Operation with wrong task state. |
-
-**Examples**
-
-```TypeScript
-downloadTask.resume().then(() => {
-  console.info('Succeeded in resuming the download task.')
-}).catch((err: BusinessError) => {
-  console.error(`Failed to resume the download task. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-
-// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-let config: request.agent.Config = {
-  action: request.agent.Action.DOWNLOAD,
-  url: 'http://127.0.0.1', // Replace the URL with the HTTP address of the real server.
-  title: 'taskResumeTest',
-  description: 'Sample code for resume the download task',
-  mode: request.agent.Mode.BACKGROUND,
-  overwrite: false,
-  method: "GET",
-  data: "",
-  saveas: "./",
-  network: request.agent.Network.CELLULAR,
-  metered: false,
-  roaming: true,
-  retry: true,
-  redirect: true,
-  index: 0,
-  begins: 0,
-  ends: -1,
-  gauge: false,
-  precise: false,
-  token: "it is a secret"
-};
-request.agent.create(context, config).then(async (task: request.agent.Task) => {
-  task.start();
-  // Wait for 1 second before executing the next step to prevent asynchronous out-of-order.
-  await new Promise<void>((resolve) => {
-    setTimeout(() => resolve(),1000)
-  })
-  task.pause();
-  // Wait for 1 second before executing the next step to prevent asynchronous out-of-order.
-  await new Promise<void>((resolve) => {
-    setTimeout(() => resolve(),1000)
-  })
-  task.resume().then(() => {
-    console.info(`Succeeded in resuming a download task. `);
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to resume the download task, Code: ${err.code}, message: ${err.message}`);
-  });
-  console.info(`Succeeded in creating a download task. result: ${task.tid}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to create a download task, Code: ${err.code}, message: ${err.message}`);
-});
-```
 
 ## setMaxSpeed
 
@@ -975,31 +737,6 @@ Sets the maximum number of bytes that can be transmitted by a task per second. T
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:   1. Missing mandatory parameters.   2. Incorrect parameter type.   3. Parameter verification failed. |
 | [13400003](../errorcode-request.md#13400003-service-error) | Task service ability error. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-
-// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-let config: request.agent.Config = {
-  action: request.agent.Action.DOWNLOAD,
-  url: 'http://127.0.0.1', // Replace the URL with the HTTP address of the real server.
-  saveas: "./",
-};
-request.agent.create(context, config).then((task: request.agent.Task) => {
-  // Set the maximum transmission speed.
-  task.setMaxSpeed(10 * 1024 * 1024).then(() => {
-    console.info(`Succeeded in setting the max speed of the task. result: ${task.tid}`);
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to set the max speed of the task. result: ${task.tid}`);
-  });
-}).catch((err: BusinessError) => {
-  console.error(`Failed to create a download task, Code: ${err.code}, message: ${err.message}`);
-});
-```
 
 ## start
 
@@ -1042,50 +779,6 @@ Tasks in the following states can be started:
 | [13400003](../errorcode-request.md#13400003-service-error) | Task service ability error. |
 | [21900007](../errorcode-request.md#21900007-operation-not-supported-by-the-task-state) | Operation with wrong task state. |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-
-// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-let config: request.agent.Config = {
-  action: request.agent.Action.DOWNLOAD,
-  url: 'http://127.0.0.1', // Replace the URL with the HTTP address of the real server.
-  title: 'taskStartTest',
-  description: 'Sample code for start the download task',
-  mode: request.agent.Mode.BACKGROUND,
-  overwrite: false,
-  method: "GET",
-  data: "",
-  saveas: "./",
-  network: request.agent.Network.CELLULAR,
-  metered: false,
-  roaming: true,
-  retry: true,
-  redirect: true,
-  index: 0,
-  begins: 0,
-  ends: -1,
-  gauge: false,
-  precise: false,
-  token: "it is a secret"
-};
-request.agent.create(context, config).then((task: request.agent.Task) => {
-  task.start((err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to start the download task, Code: ${err.code}, message: ${err.message}`);
-      return;
-    }
-    console.info(`Succeeded in starting a download task.`);
-  });
-  console.info(`Succeeded in creating a download task. result: ${task.tid}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to create a download task, Code: ${err.code}, message: ${err.message}`);
-});
-```
-
 ## start
 
 ```TypeScript
@@ -1127,48 +820,6 @@ Tasks in the following states can be started:
 | [13400003](../errorcode-request.md#13400003-service-error) | Task service ability error. |
 | [21900007](../errorcode-request.md#21900007-operation-not-supported-by-the-task-state) | Operation with wrong task state. |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-
-// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-let config: request.agent.Config = {
-  action: request.agent.Action.DOWNLOAD,
-  url: 'http://127.0.0.1', // Replace the URL with the HTTP address of the real server.
-  title: 'taskStartTest',
-  description: 'Sample code for start the download task',
-  mode: request.agent.Mode.BACKGROUND,
-  overwrite: false,
-  method: "GET",
-  data: "",
-  saveas: "./",
-  network: request.agent.Network.CELLULAR,
-  metered: false,
-  roaming: true,
-  retry: true,
-  redirect: true,
-  index: 0,
-  begins: 0,
-  ends: -1,
-  gauge: false,
-  precise: false,
-  token: "it is a secret"
-};
-request.agent.create(context, config).then((task: request.agent.Task) => {
-  task.start().then(() => {
-    console.info(`Succeeded in starting a download task.`);
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to start the download task, Code: ${err.code}, message: ${err.message}`);
-  });
-  console.info(`Succeeded in creating a download task. result: ${task.tid}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to create a download task, Code: ${err.code}, message: ${err.message}`);
-});
-```
-
 ## stop
 
 ```TypeScript
@@ -1195,55 +846,6 @@ Stops a task that is running, waiting, or retrying. A paused task can be resumed
 | --- | --- |
 | [13400003](../errorcode-request.md#13400003-service-error) | Task service ability error. |
 | [21900007](../errorcode-request.md#21900007-operation-not-supported-by-the-task-state) | Operation with wrong task state. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-
-// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-let config: request.agent.Config = {
-  action: request.agent.Action.DOWNLOAD,
-  url: 'http://127.0.0.1', // Replace the URL with the HTTP address of the real server.
-  title: 'taskStopTest',
-  description: 'Sample code for stop the download task',
-  mode: request.agent.Mode.BACKGROUND,
-  overwrite: false,
-  method: "GET",
-  data: "",
-  saveas: "./",
-  network: request.agent.Network.CELLULAR,
-  metered: false,
-  roaming: true,
-  retry: true,
-  redirect: true,
-  index: 0,
-  begins: 0,
-  ends: -1,
-  gauge: false,
-  precise: false,
-  token: "it is a secret"
-};
-request.agent.create(context, config).then(async (task: request.agent.Task) => {
-  task.start();
-  // Wait for 1 second before executing the next step to prevent asynchronous out-of-order.
-  await new Promise<void>((resolve) => {
-    setTimeout(() => resolve(),1000)
-  })
-  task.stop((err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to stop the download task, Code: ${err.code}, message: ${err.message}`);
-      return;
-    }
-    console.info(`Succeeded in stopping a download task. `);
-  });
-  console.info(`Succeeded in creating a download task. result: ${task.tid}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to create a download task, Code: ${err.code}, message: ${err.message}`);
-});
-```
 
 ## stop
 
@@ -1272,53 +874,6 @@ Stops a task that is running, waiting, or retrying. A paused task can be resumed
 | [13400003](../errorcode-request.md#13400003-service-error) | Task service ability error. |
 | [21900007](../errorcode-request.md#21900007-operation-not-supported-by-the-task-state) | Operation with wrong task state. |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-
-// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-let config: request.agent.Config = {
-  action: request.agent.Action.DOWNLOAD,
-  url: 'http://127.0.0.1', // Replace the URL with the HTTP address of the real server.
-  title: 'taskStopTest',
-  description: 'Sample code for stop the download task',
-  mode: request.agent.Mode.BACKGROUND,
-  overwrite: false,
-  method: "GET",
-  data: "",
-  saveas: "./",
-  network: request.agent.Network.CELLULAR,
-  metered: false,
-  roaming: true,
-  retry: true,
-  redirect: true,
-  index: 0,
-  begins: 0,
-  ends: -1,
-  gauge: false,
-  precise: false,
-  token: "it is a secret"
-};
-request.agent.create(context, config).then(async (task: request.agent.Task) => {
-  task.start();
-  // Wait for 1 second before executing the next step to prevent asynchronous out-of-order.
-  await new Promise<void>((resolve) => {
-    setTimeout(() => resolve(),1000)
-  })
-  task.stop().then(() => {
-    console.info(`Succeeded in stopping a download task. `);
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to stop the download task, Code: ${err.code}, message: ${err.message}`);
-  });
-  console.info(`Succeeded in creating a download task. result: ${task.tid}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to create a download task, Code: ${err.code}, message: ${err.message}`);
-});
-```
-
 ## config
 
 ```TypeScript
@@ -1327,7 +882,7 @@ config: Config
 
 Task configuration.
 
-**Type:** Config
+**Type:** [Config](arkts-basicservices-agent-config-i.md)
 
 **Since:** 10
 

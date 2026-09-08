@@ -36,7 +36,7 @@ Adds image and video assets to a user album. Before the operation, ensure that t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| assets | Array&lt;PhotoAsset&gt; | Yes | Array of the image and video assets to add. |
+| assets | Array&lt;[PhotoAsset](arkts-medialibrary-photoaccesshelper-photoasset-i.md)&gt; | Yes | Array of the image and video assets to add. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback function. If an image or video is added successfully, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
@@ -47,42 +47,6 @@ Adds image and video assets to a user album. Before the operation, ensure that t
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
 | 13900020 | Invalid argument |
 | 14000011 | System inner fail |
-
-**Examples**
-
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  try {
-    console.info('addAssetsDemoCallback');
-    let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-    let fetchOption: photoAccessHelper.FetchOptions = {
-      fetchColumns: [],
-      predicates: predicates
-    };
-    let albumFetchResult: photoAccessHelper.FetchResult<photoAccessHelper.Album> = await phAccessHelper.getAlbums(photoAccessHelper.AlbumType.USER, photoAccessHelper.AlbumSubtype.USER_GENERIC);
-    let album: photoAccessHelper.Album = await albumFetchResult.getFirstObject();
-    let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> = await phAccessHelper.getAssets(fetchOption);
-    let asset: photoAccessHelper.PhotoAsset = await fetchResult.getFirstObject();
-    if (asset === undefined) {
-      console.error('addAssetsDemoCallback asset is undefined');
-      return;
-    }
-    album.addAssets([asset], (err) => {
-      if (err === undefined) {
-        console.info('album addAssets successfully');
-      } else {
-        console.error(`album addAssets failed with error: ${err.code}, ${err.message}`);
-      }
-    });
-  } catch (err) {
-    console.error(`addAssetsDemoCallback failed with error: ${err.code}, ${err.message}`);
-  }
-}
-```
 
 ## addAssets
 
@@ -106,7 +70,7 @@ Adds image and video assets to a user album. Before the operation, ensure that t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| assets | Array&lt;PhotoAsset&gt; | Yes | Array of the image and video assets to add. |
+| assets | Array&lt;[PhotoAsset](arkts-medialibrary-photoaccesshelper-photoasset-i.md)&gt; | Yes | Array of the image and video assets to add. |
 
 **Return value:**
 
@@ -122,41 +86,6 @@ Adds image and video assets to a user album. Before the operation, ensure that t
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
 | 13900020 | Invalid argument |
 | 14000011 | System inner fail |
-
-**Examples**
-
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  try {
-    console.info('addAssetsDemoPromise');
-    let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-    let fetchOption: photoAccessHelper.FetchOptions = {
-      fetchColumns: [],
-      predicates: predicates
-    };
-    let albumFetchResult: photoAccessHelper.FetchResult<photoAccessHelper.Album> = await phAccessHelper.getAlbums(photoAccessHelper.AlbumType.USER, photoAccessHelper.AlbumSubtype.USER_GENERIC);
-    let album: photoAccessHelper.Album = await albumFetchResult.getFirstObject();
-    let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> = await phAccessHelper.getAssets(fetchOption);
-    let asset: photoAccessHelper.PhotoAsset = await fetchResult.getFirstObject();
-    if (asset === undefined) {
-      console.error('addAssetsDemoPromise asset is undefined');
-      return;
-    }
-    album.addAssets([asset]).then(() => {
-      console.info('album addAssets successfully');
-    }).catch((err: BusinessError) => {
-      console.error(`album addAssets failed with error: ${err.code}, ${err.message}`);
-    });
-  } catch (err) {
-    console.error(`addAssetsDemoPromise failed with error: ${err.code}, ${err.message}`);
-  }
-}
-```
 
 ## commitModify
 
@@ -187,70 +116,6 @@ Commits the modification on the album attributes to the database. This API uses 
 | 13900020 | Invalid argument |
 | 14000011 | System inner fail |
 
-**Examples**
-
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  console.info('albumCommitModifyDemo');
-  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-  let albumFetchOptions: photoAccessHelper.FetchOptions = {
-    fetchColumns: [],
-    predicates: predicates
-  };
-  let albumList: photoAccessHelper.FetchResult<photoAccessHelper.Album> = await phAccessHelper.getAlbums(photoAccessHelper.AlbumType.USER, photoAccessHelper.AlbumSubtype.USER_GENERIC, albumFetchOptions);
-  if (albumList === undefined) {
-    console.error('albumList is undefined');
-    return;
-  }
-  let album: photoAccessHelper.Album = await albumList.getFirstObject();
-  if (album === undefined) {
-    console.error('album is undefined');
-    return;
-  }
-  album.albumName = 'hello';
-  album.commitModify((err) => {
-    if (err !== undefined) {
-      console.error(`commitModify failed with error: ${err.code}, ${err.message}`);
-    } else {
-      console.info('commitModify successfully');
-    }
-  });
-}
-```
-
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  console.info('commitModifyDemo');
-  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-  let fetchOption: photoAccessHelper.FetchOptions = {
-    fetchColumns: ['title'],
-    predicates: predicates
-  };
-  let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> = await phAccessHelper.getAssets(fetchOption);
-  let photoAsset: photoAccessHelper.PhotoAsset = await fetchResult.getFirstObject();
-  let title: string = photoAccessHelper.PhotoKeys.TITLE.toString();
-  let photoAssetTitle: photoAccessHelper.MemberType = photoAsset.get(title);
-  console.info('photoAsset get photoAssetTitle = ', photoAssetTitle);
-  photoAsset.set(title, 'newTitle2');
-  photoAsset.commitModify((err) => {
-    if (err === undefined) {
-      let newPhotoAssetTitle: photoAccessHelper.MemberType = photoAsset.get(title);
-      console.info('photoAsset get newPhotoAssetTitle = ', newPhotoAssetTitle);
-    } else {
-      console.error(`commitModify failed, error: ${err.code}, ${err.message}`);
-    }
-  });
-}
-```
-
 ## commitModify
 
 ```TypeScript
@@ -280,72 +145,6 @@ Commits the modification on the album attributes to the database. This API uses 
 | 13900020 | Invalid argument |
 | 14000011 | System inner fail |
 
-**Examples**
-
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  console.info('albumCommitModifyDemo');
-  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-  let albumFetchOptions: photoAccessHelper.FetchOptions = {
-    fetchColumns: [],
-    predicates: predicates
-  };
-  let albumList: photoAccessHelper.FetchResult<photoAccessHelper.Album> = await phAccessHelper.getAlbums(photoAccessHelper.AlbumType.USER, photoAccessHelper.AlbumSubtype.USER_GENERIC, albumFetchOptions);
-  if (albumList === undefined) {
-    console.error('albumList is undefined');
-    return;
-  }
-  let album: photoAccessHelper.Album = await albumList.getFirstObject();
-  if (album === undefined) {
-    console.error('album is undefined');
-    return;
-  }
-  album.albumName = 'hello';
-  album.commitModify().then(() => {
-    console.info('commitModify successfully');
-  }).catch((err: BusinessError) => {
-    console.error(`commitModify failed with error: ${err.code}, ${err.message}`);
-  });
-}
-```
-
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  console.info('commitModifyDemo');
-  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-  let fetchOption: photoAccessHelper.FetchOptions = {
-    fetchColumns: ['title'],
-    predicates: predicates
-  };
-  let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> = await phAccessHelper.getAssets(fetchOption);
-  let photoAsset: photoAccessHelper.PhotoAsset = await fetchResult.getFirstObject();
-  if (photoAsset === undefined) {
-    console.error('commitModifyPromise photoAsset is undefined');
-    return;
-  }
-  let title: string = photoAccessHelper.PhotoKeys.TITLE.toString();
-  let photoAssetTitle: photoAccessHelper.MemberType = photoAsset.get(title);
-  console.info('photoAsset get photoAssetTitle = ', photoAssetTitle);
-  photoAsset.set(title, 'newTitle3');
-  try {
-    await photoAsset.commitModify();
-    let newPhotoAssetTitle: photoAccessHelper.MemberType = photoAsset.get(title);
-    console.info('photoAsset get newPhotoAssetTitle = ', newPhotoAssetTitle);
-  } catch (err) {
-    console.error(`release failed. error: ${err.code}, ${err.message}`);
-  }
-}
-```
-
 ## removeAssets
 
 ```TypeScript
@@ -368,7 +167,7 @@ Removes image and video assets from a user album. The album and file resources m
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| assets | Array&lt;PhotoAsset&gt; | Yes | Array of the image and video assets to remove. |
+| assets | Array&lt;[PhotoAsset](arkts-medialibrary-photoaccesshelper-photoasset-i.md)&gt; | Yes | Array of the image and video assets to remove. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback function. If an image or video is removed successfully, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
@@ -379,42 +178,6 @@ Removes image and video assets from a user album. The album and file resources m
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
 | 13900020 | Invalid argument |
 | 14000011 | System inner fail |
-
-**Examples**
-
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  try {
-    console.info('removeAssetsDemoCallback');
-    let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-    let fetchOption: photoAccessHelper.FetchOptions = {
-      fetchColumns: [],
-      predicates: predicates
-    };
-    let albumFetchResult: photoAccessHelper.FetchResult<photoAccessHelper.Album> = await phAccessHelper.getAlbums(photoAccessHelper.AlbumType.USER, photoAccessHelper.AlbumSubtype.USER_GENERIC);
-    let album: photoAccessHelper.Album = await albumFetchResult.getFirstObject();
-    let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> = await album.getAssets(fetchOption);
-    let asset: photoAccessHelper.PhotoAsset = await fetchResult.getFirstObject();
-    if (asset === undefined) {
-      console.error('removeAssetsDemoCallback asset is undefined');
-      return;
-    }
-    album.removeAssets([asset], (err) => {
-      if (err === undefined) {
-        console.info('album removeAssets successfully');
-      } else {
-        console.error(`album removeAssets failed with error: ${err.code}, ${err.message}`);
-      }
-    });
-  } catch (err) {
-    console.error(`removeAssetsDemoCallback failed with error: ${err.code}, ${err.message}`);
-  }
-}
-```
 
 ## removeAssets
 
@@ -438,7 +201,7 @@ Removes image and video assets from a user album. The album and file resources m
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| assets | Array&lt;PhotoAsset&gt; | Yes | Array of the image and video assets to remove. |
+| assets | Array&lt;[PhotoAsset](arkts-medialibrary-photoaccesshelper-photoasset-i.md)&gt; | Yes | Array of the image and video assets to remove. |
 
 **Return value:**
 
@@ -454,45 +217,6 @@ Removes image and video assets from a user album. The album and file resources m
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
 | 13900020 | Invalid argument |
 | 14000011 | System inner fail |
-
-**Examples**
-
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  try {
-    console.info('removeAssetsDemoPromise');
-    let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-    let fetchOption: photoAccessHelper.FetchOptions = {
-      fetchColumns: [],
-      predicates: predicates
-    };
-    let albumFetchResult: photoAccessHelper.FetchResult<photoAccessHelper.Album> = await phAccessHelper.getAlbums(photoAccessHelper.AlbumType.USER, photoAccessHelper.AlbumSubtype.USER_GENERIC);
-    let album: photoAccessHelper.Album = await albumFetchResult.getFirstObject();
-    if (album === undefined) {
-      console.error('removeAssetsPromise albums is undefined');
-      return;
-    }
-    let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> = await album.getAssets(fetchOption);
-    let asset: photoAccessHelper.PhotoAsset = await fetchResult.getFirstObject();
-    if (asset === undefined) {
-      console.error('removeAssetsPromise asset is undefined');
-      return;
-    }
-    album.removeAssets([asset]).then(() => {
-      console.info('album removeAssets successfully');
-    }).catch((err: BusinessError) => {
-      console.error(`album removeAssets failed with error: ${err.code}, ${err.message}`);
-    });
-  } catch (err) {
-    console.error(`removeAssetsDemoPromise failed with error: ${err.code}, ${err.message}`);
-  }
-}
-```
 
 ## imageCount
 

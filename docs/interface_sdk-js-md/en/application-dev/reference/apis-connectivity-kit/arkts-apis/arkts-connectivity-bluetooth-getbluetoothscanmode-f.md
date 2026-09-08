@@ -28,7 +28,7 @@ Obtains the Bluetooth scanning mode of a device.
 
 | Type | Description |
 | --- | --- |
-| ScanMode | Returns the Bluetooth scanning mode, { |
+| [ScanMode](arkts-connectivity-bluetooth-scanmode-e.md) | Returns the Bluetooth scanning mode, { |
 
 **Examples**
 

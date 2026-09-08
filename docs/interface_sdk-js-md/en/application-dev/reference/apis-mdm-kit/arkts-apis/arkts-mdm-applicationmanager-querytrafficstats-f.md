@@ -32,7 +32,7 @@ Queries the data usage of a specified application within a specified period for 
 > If the input user ID (**accountId**) is not the ID of the current user, the API returns error code 9200012.
 > 
 > It is advised that the query interval (end time – start time) be 1 to 30 days. If the interval is too short, the
-> query result may be inaccurate. If the interval is too number, the query will take a number time.
+> query result may be inaccurate. If the interval is too long, the query will take a long time.
 
 **Since:** 26.0.0
 
@@ -50,13 +50,13 @@ Queries the data usage of a specified application within a specified period for 
 | bundleName | string | Yes | Bundle name of the application. |
 | appIndex | number | Yes | Index of the application clone. The value is an integer greater than or equal to 0. You can call [getAppCloneIdentity](../../apis-ability-kit/arkts-apis/arkts-ability-bundlemanager-getappcloneidentity-f.md) of @ohos.bundle.bundleManager to obtain the index. |
 | accountId | number | Yes | Account ID. The value is an integer greater than or equal to 0. You can call [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) of @ohos.account.osAccount to obtain the ID. |
-| networkInfo | statistics.NetworkInfo | Yes | Network information. |
+| networkInfo | [statistics.NetworkInfo](../../apis-network-kit/arkts-apis/arkts-network-statistics-networkinfo-i.md) | Yes | Network information. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;statistics.NetStatsInfo&gt; | Promise used to return the historical traffic information object. |
+| Promise&lt;[statistics.NetStatsInfo](../../apis-network-kit/arkts-apis/arkts-network-statistics-netstatsinfo-i.md)&gt; | Promise used to return the historical traffic information object. |
 
 **Error codes:**
 

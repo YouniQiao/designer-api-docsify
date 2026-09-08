@@ -684,6 +684,7 @@ struct RefreshExample {
 ```
 
 该示例通过[pullUpToCancelRefresh](arkts-arkui-refresh-attribute.md#pulluptocancelrefresh)接口设置上滑不取消刷新。
+从API version 23开始，新增pullUpToCancelRefresh接口。
 
 ```TypeScript
 // xxx.ets

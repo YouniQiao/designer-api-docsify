@@ -36,11 +36,6 @@ Creates and returns an XmlPullParser object.
 **Examples**
 
 ```TypeScript
-let arrayBuffer = new ArrayBuffer(2048);
-let thatSer = new xml.XmlSerializer(arrayBuffer, "utf-8");
-```
-
-```TypeScript
 import { util } from '@kit.ArkTS';
 
 let strXml = '<title>Happy</title>'
@@ -71,7 +66,7 @@ Starts parsing the XML file.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| option | ParseOptions | Yes | Parse options for XmlPullParser, the interface including two Boolean variables and three callback functions. |
+| option | [ParseOptions](arkts-arkts-xml-parseoptions-i.md) | Yes | Parse options for XmlPullParser, the interface including two Boolean variables and three callback functions. |
 
 **Examples**
 
@@ -123,4 +118,4 @@ Parses XML information.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| option | ParseOptions | Yes | XML parsing options. |
+| option | [ParseOptions](arkts-arkts-xml-parseoptions-i.md) | Yes | XML parsing options. |

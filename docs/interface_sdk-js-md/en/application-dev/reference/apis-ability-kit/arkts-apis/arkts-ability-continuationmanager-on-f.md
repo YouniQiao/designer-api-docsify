@@ -34,7 +34,7 @@ Subscribes to device connection events. This API uses an asynchronous callback t
 | --- | --- | --- | --- |
 | type | 'deviceSelected' | Yes | Event type. The value is fixed at **deviceSelected**. |
 | token | number | Yes | Token obtained after the registration of the continuation management service. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;ContinuationResult&gt;&gt; | Yes | Callback invoked when a device is selected from the device list provided by the device selection module. This callback returns the device ID, type, and name. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[ContinuationResult](arkts-ability-continuationmanager-continuationresult-t.md)&gt;&gt; | Yes | Callback invoked when a device is selected from the device list provided by the device selection module. This callback returns the device ID, type, and name. |
 
 **Error codes:**
 
@@ -95,7 +95,7 @@ Subscribes to device disconnection events. This API uses an asynchronous callbac
 | --- | --- | --- | --- |
 | type | 'deviceUnselected' | Yes | Event type. The value is fixed at **deviceUnselected**. |
 | token | number | Yes | Token obtained after the registration of the continuation management service. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;ContinuationResult&gt;&gt; | Yes | Callback invoked when a device is unselected from the device list provided by the device selection module. This callback returns the device ID, type, and name. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[ContinuationResult](arkts-ability-continuationmanager-continuationresult-t.md)&gt;&gt; | Yes | Callback invoked when a device is unselected from the device list provided by the device selection module. This callback returns the device ID, type, and name. |
 
 **Error codes:**
 
@@ -152,7 +152,7 @@ Subscribes to device connection events. This API uses an asynchronous callback t
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'deviceConnect' | Yes | Event type. The value is fixed at **deviceConnect**. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ContinuationResult&gt; | Yes | Callback invoked when a device is selected from the device list provided by the device selection module. This callback returns the device ID, type, and name. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ContinuationResult](arkts-ability-continuationmanager-continuationresult-t.md)&gt; | Yes | Callback invoked when a device is selected from the device list provided by the device selection module. This callback returns the device ID, type, and name. |
 
 **Examples**
 

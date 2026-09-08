@@ -60,7 +60,7 @@ descriptors: Array<BLEDescriptor>
 
 The list of [BLEDescriptor](arkts-connectivity-bluetooth-bledescriptor-i.md) contained in the characteristic
 
-**Type:** Array&lt;BLEDescriptor&gt;
+**Type:** Array&lt;[BLEDescriptor](arkts-connectivity-bluetooth-bledescriptor-i.md)&gt;
 
 **Since:** 7
 

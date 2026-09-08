@@ -42,7 +42,7 @@ addResource(type: ResourceType, proxy: PhotoProxy): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | ResourceType | 是 | 待添加资源的类型。 |
+| type | [ResourceType](arkts-medialibrary-photoaccesshelper-resourcetype-e.md) | 是 | 待添加资源的类型。 |
 | proxy | [PhotoProxy](arkts-medialibrary-photoaccesshelper-photoproxy-i-sys.md) | 是 | 待添加资源的PhotoProxy 数据。 |
 
 **错误码：**
@@ -99,7 +99,7 @@ addResourceForPicker(type: ResourceType, fileUri: string): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | ResourceType | 是 | 待加载的图片或者视频类型 |
+| type | [ResourceType](arkts-medialibrary-photoaccesshelper-resourcetype-e.md) | 是 | 待加载的图片或者视频类型 |
 | fileUri | string | 是 | 待加载图片或者视频的路径 |
 
 **错误码：**
@@ -110,28 +110,6 @@ addResourceForPicker(type: ResourceType, fileUri: string): void
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application. |
 | [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. You are advised to retry and check the logs. Possible causes:  1. The database is corrupted.  2. The file system is abnormal.  3. The IPC request timed out. |
 | [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) |  |
-
-**示例**
-
-phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
-
-```TypeScript
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper, context: Context) {
-  console.info('addResourceForPickerByFileUriDemo');
-  try {
-    let photoType: photoAccessHelper.PhotoType = photoAccessHelper.PhotoType.IMAGE;
-    let extension: string = 'jpg';
-    let assetChangeRequest: photoAccessHelper.MediaAssetChangeRequest = photoAccessHelper.MediaAssetChangeRequest.createAssetRequest(context, photoType, extension);
-    // 需要确保fileUri对应的资源存在。
-    let fileUri = 'file://com.example.temptest/data/storage/el2/base/haps/entry/files/test.jpg';
-    assetChangeRequest.addResourceForPicker(photoAccessHelper.ResourceType.IMAGE_RESOURCE, fileUri);
-    await phAccessHelper.applyChanges(assetChangeRequest);
-    console.info('addResourceForPickerByFileUri successfully');
-  } catch (err) {
-    console.error(`addResourceForPickerByFileUriDemo failed with error: ${err.code}, ${err.message}`);
-  }
-}
-```
 
 ## createAssetRequest
 
@@ -345,7 +323,7 @@ static deleteLocalAssetsPermanently(context: Context, assets: Array<PhotoAsset>)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | 是 | 传入Ability实例的Context。 |
-| assets | Array&lt;PhotoAsset&gt; | 是 | 待彻底删除的图片或者视频数组，数组中元素个数不超过500个。 |
+| assets | Array&lt;[PhotoAsset](arkts-medialibrary-photoaccesshelper-photoasset-i.md)&gt; | 是 | 待彻底删除的图片或者视频数组，数组中元素个数不超过500个。 |
 
 **返回值：**
 
@@ -860,7 +838,7 @@ setEffectMode(mode: MovingPhotoEffectMode): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mode | MovingPhotoEffectMode | 是 | 动态照片效果模式。 |
+| mode | [MovingPhotoEffectMode](arkts-medialibrary-photoaccesshelper-movingphotoeffectmode-e-sys.md) | 是 | 动态照片效果模式。 |
 
 **错误码：**
 
@@ -1003,31 +981,6 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 }
 ```
 
-phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  console.info('setHiddenDemo');
-  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-  let fetchOption: photoAccessHelper.FetchOptions = {
-    fetchColumns: [],
-    predicates: predicates
-  };
-  let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> = await phAccessHelper.getAssets(fetchOption);
-  let photoAssetList: Array<photoAccessHelper.PhotoAsset> = await fetchResult.getAllObjects();
-  let assetsChangeRequest: photoAccessHelper.MediaAssetsChangeRequest = new photoAccessHelper.MediaAssetsChangeRequest(photoAssetList);
-  assetsChangeRequest.setHidden(true);
-  phAccessHelper.applyChanges(assetsChangeRequest).then(() => {
-    console.info('apply setHidden successfully');
-  }).catch((err: BusinessError) => {
-    console.error(`apply setHidden failed with error: ${err.code}, ${err.message}`);
-  });
-}
-```
-
 ## setHiddenAttribute
 
 ```TypeScript
@@ -1112,33 +1065,6 @@ Set recentShow state of the asset.
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
 | 14000011 | System inner fail |
-
-**示例**
-
-phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  console.info('setIsRecentShowDemo');
-  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-  let fetchOption: photoAccessHelper.FetchOptions = {
-    fetchColumns: [],
-    predicates: predicates
-  };
-  let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> = await phAccessHelper.getAssets(fetchOption);
-  let photoAssetList: Array<photoAccessHelper.PhotoAsset> = await fetchResult.getAllObjects();
-  let assetsChangeRequest: photoAccessHelper.MediaAssetsChangeRequest = new photoAccessHelper.MediaAssetsChangeRequest(photoAssetList);
-  assetsChangeRequest.setIsRecentShow(true);
-  phAccessHelper.applyChanges(assetsChangeRequest).then(() => {
-    console.info('apply setIsRecentShow successfully');
-  }).catch((err: BusinessError) => {
-    console.error(`apply setIsRecentShow failed with error: ${err.code}, ${err.message}`);
-  });
-}
-```
 
 ## setLivePhoto4dStatus
 
@@ -1446,31 +1372,6 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 }
 ```
 
-phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  console.info('setUserCommentDemo');
-  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-  let fetchOption: photoAccessHelper.FetchOptions = {
-    fetchColumns: [],
-    predicates: predicates
-  };
-  let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> = await phAccessHelper.getAssets(fetchOption);
-  let photoAssetList: Array<photoAccessHelper.PhotoAsset> = await fetchResult.getAllObjects();
-  let assetsChangeRequest: photoAccessHelper.MediaAssetsChangeRequest = new photoAccessHelper.MediaAssetsChangeRequest(photoAssetList);
-  assetsChangeRequest.setUserComment('test_set_user_comment');
-  phAccessHelper.applyChanges(assetsChangeRequest).then(() => {
-    console.info('apply setUserComment successfully');
-  }).catch((err: BusinessError) => {
-    console.error(`apply setUserComment failed with error: ${err.code}, ${err.message}`);
-  });
-}
-```
-
 ## setVideoEnhancementAttr
 
 ```TypeScript
@@ -1500,20 +1401,3 @@ setVideoEnhancementAttr(videoEnhancementType: VideoEnhancementType, photoId: str
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
 | 14000011 | Internal system error |
 | 14000016 | Operation Not Support |
-
-**示例**
-
-phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
-
-```TypeScript
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper, asset: photoAccessHelper.PhotoAsset) {
-  try {
-    let assetChangeRequest: photoAccessHelper.MediaAssetChangeRequest = new photoAccessHelper.MediaAssetChangeRequest(asset);
-    let photoId = "202410011800";
-    assetChangeRequest.setVideoEnhancementAttr(photoAccessHelper.VideoEnhancementType.QUALITY_ENHANCEMENT_LOCAL, photoId);
-    await phAccessHelper.applyChanges(assetChangeRequest);
-  } catch (err) {
-    console.error(`setVideoEnhancementAttr fail with error: ${err.code}, ${err.message}`);
-  }
-}
-```

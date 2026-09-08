@@ -46,7 +46,7 @@ public backgroundBlurStyle?: BlurStyle
 
 默认值：BlurStyle.NONE。
 
-**类型：** BlurStyle
+**类型：** [BlurStyle](../arkts-components/arkts-arkui-blurstyle-e.md)
 
 **起始版本：** 26.0.0
 

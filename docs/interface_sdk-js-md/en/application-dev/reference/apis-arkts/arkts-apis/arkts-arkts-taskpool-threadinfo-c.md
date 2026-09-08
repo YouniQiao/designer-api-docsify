@@ -20,7 +20,7 @@ priority?: Priority
 
 Priority of the calling thread. If the return value is empty, no task is running. You are advised not to change the value.
 
-**Type:** Priority
+**Type:** [Priority](arkts-arkts-taskpool-priority-e.md)
 
 **Since:** 10
 

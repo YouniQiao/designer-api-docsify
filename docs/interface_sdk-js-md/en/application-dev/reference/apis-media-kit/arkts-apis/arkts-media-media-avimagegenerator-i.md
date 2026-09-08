@@ -34,7 +34,7 @@ Obtains a video thumbnail. This API uses an asynchronous callback to return the 
 | timeUs | number | Yes | Time of the video for which a thumbnail is to be obtained, in μs. |
 | options | [AVImageQueryOptions](arkts-media-media-avimagequeryoptions-e.md) | Yes | Relationship between the thumbnail timestamp in and the video frame. |
 | param | [PixelMapParams](arkts-media-media-pixelmapparams-i.md) | Yes | Format parameters of the thumbnail to be obtained. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;image.PixelMap&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the PixelMap instance obtained; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the PixelMap instance obtained; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -42,44 +42,6 @@ Obtains a video thumbnail. This API uses an asynchronous callback to return the 
 | --- | --- |
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Returned by callback. |
 | [5400106](../errorcode-media.md#5400106-format-not-supported) | Unsupported format. Returned by callback. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { image } from '@kit.ImageKit';
-import { media } from '@kit.MediaKit';
-
-let avImageGenerator: media.AVImageGenerator | undefined = undefined;
-let pixel_map: image.PixelMap | undefined = undefined;
-
-// Initialize input parameters.
-let timeUs: number = 0;
-
-let queryOption: media.AVImageQueryOptions = media.AVImageQueryOptions.AV_IMAGE_QUERY_NEXT_SYNC;
-
-let param: media.PixelMapParams = {
-  width: 300,
-  height: 300,
-};
-
-// Obtain the thumbnail.
-media.createAVImageGenerator((err: BusinessError, generator: media.AVImageGenerator) => {
-  if (generator) {
-    avImageGenerator = generator;
-    console.info(`Succeeded in creating AVImageGenerator`);
-    avImageGenerator.fetchFrameByTime(timeUs, queryOption, param, (error: BusinessError, pixelMap) => {
-      if (error) {
-        console.error(`Failed to fetch FrameByTime, err = ${JSON.stringify(error)}`);
-        return;
-      }
-      pixel_map = pixelMap;
-    });
-  } else {
-    console.error(`Failed to create AVImageGenerator, error message:${err.message}`);
-  }
-});
-```
 
 ## fetchFrameByTime
 
@@ -105,7 +67,7 @@ Obtains a video thumbnail. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;image.PixelMap&gt; | Promise used to return the video thumbnail. |
+| Promise&lt;[image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)&gt; | Promise used to return the video thumbnail. |
 
 **Error codes:**
 
@@ -113,73 +75,6 @@ Obtains a video thumbnail. This API uses a promise to return the result.
 | --- | --- |
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Returned by promise. |
 | [5400106](../errorcode-media.md#5400106-format-not-supported) | Unsupported format. Returned by promise. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { image } from '@kit.ImageKit';
-import { media } from '@kit.MediaKit';
-
-let avImageGenerator: media.AVImageGenerator | undefined = undefined;
-let pixel_map: image.PixelMap | undefined = undefined;
-
-// Initialize input parameters.
-let timeUs: number = 0;
-
-let queryOption: media.AVImageQueryOptions = media.AVImageQueryOptions.AV_IMAGE_QUERY_NEXT_SYNC;
-
-let param: media.PixelMapParams = {
-  width: 300,
-  height: 300,
-};
-
-// Obtain the thumbnail.
-media.createAVImageGenerator((err: BusinessError, generator: media.AVImageGenerator) => {
-  if (generator) {
-    avImageGenerator = generator;
-    console.info(`Succeeded in creating AVImageGenerator`);
-    avImageGenerator.fetchFrameByTime(timeUs, queryOption, param).then((pixelMap: image.PixelMap) => {
-      pixel_map = pixelMap;
-    }).catch((error: BusinessError) => {
-      console.error(`Failed to fetch FrameByTime, error message:${error.message}`);
-    });
-  } else {
-    console.error(`Failed to create AVImageGenerator, error message:${err.message}`);
-  }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { image } from '@kit.ImageKit';
-import { media } from '@kit.MediaKit';
-
-let avMetadataExtractor: media.AVMetadataExtractor | undefined = undefined;
-let pixelMap: image.PixelMap | undefined = undefined;
-
-// Initialize input parameters.
-let timeUs: number = 0;
-let queryOption: media.AVImageQueryOptions = media.AVImageQueryOptions.AV_IMAGE_QUERY_PREVIOUS_SYNC;
-let param: media.PixelMapParams = {
-  width: 300,
-  height: 300
-};
-// Obtain the thumbnail.
-media.createAVMetadataExtractor((error: BusinessError, extractor: media.AVMetadataExtractor) => {
-  if (extractor) {
-    avMetadataExtractor = extractor;
-    console.info('Succeeded in creating AVMetadataExtractor');
-    avMetadataExtractor.fetchFrameByTime(timeUs, queryOption, param).then((pixelMap: image.PixelMap) => {
-      pixelMap = pixelMap;
-    }).catch((error: BusinessError) => {
-      console.error(`Failed to fetch FrameByTime, error message:${error.message}`);
-    });
-  } else {
-    console.error(`Failed to create AVMetadataExtractor, error message:${error.message}`);
-  }
-});
-```
 
 ## fetchScaledFrameByTime
 
@@ -206,7 +101,7 @@ Fetches a scaled thumbnail from the video at a particular timestamp. This API us
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;image.PixelMap&gt; | Promise used to return the video thumbnail. |
+| Promise&lt;[image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)&gt; | Promise used to return the video thumbnail. |
 
 **Error codes:**
 
@@ -214,38 +109,6 @@ Fetches a scaled thumbnail from the video at a particular timestamp. This API us
 | --- | --- |
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) |  |
 | [5400106](../errorcode-media.md#5400106-format-not-supported) |  |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { image } from '@kit.ImageKit';
-import { media } from '@kit.MediaKit';
-
-let avImageGenerator: media.AVImageGenerator | undefined = undefined;
-let pixel_map: image.PixelMap | undefined = undefined;
-// Initialize input parameters.
-let timeUs: number = 0;
-let queryOption: media.AVImageQueryOptions = media.AVImageQueryOptions.AV_IMAGE_QUERY_NEXT_SYNC;
-let outputSize: media.OutputSize = {
-  width: 300,
-  height: 300,
-};
-// Obtain the thumbnail.
-media.createAVImageGenerator((err: BusinessError, generator: media.AVImageGenerator) => {
-  if (generator) {
-    avImageGenerator = generator;
-    console.info(`Succeeded in creating AVImageGenerator`);
-    avImageGenerator.fetchScaledFrameByTime(timeUs, queryOption, outputSize).then((pixelMap: image.PixelMap) => {
-      pixel_map = pixelMap;
-    }).catch((error: BusinessError) => {
-      console.error(`Failed to fetch ScaledFrameByTime, error message:${error.message}`);
-    });
-  } else {
-    console.error(`Failed to create AVImageGenerator, error message:${err.message}`);
-  }
-});
-```
 
 ## release
 
@@ -271,102 +134,6 @@ Releases this AVImageGenerator instance. This API uses an asynchronous callback 
 | --- | --- |
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Returned by callback. |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// asyncallback.
-videoRecorder.release((err: BusinessError) => {
-  if (err == null) {
-    console.info('release videorecorder success');
-  } else {
-    console.error('release videorecorder failed and error is ' + err.message);
-  }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { media } from '@kit.MediaKit';
-
-let avImageGenerator: media.AVImageGenerator | undefined = undefined;
-
-// Release the resources.
-media.createAVImageGenerator((err: BusinessError, generator: media.AVImageGenerator) => {
-  if (generator) {
-    avImageGenerator = generator;
-    console.info(`Succeeded in creating AVImageGenerator`);
-    avImageGenerator.release((error: BusinessError) => {
-      if (error) {
-        console.error(`Failed to release, err = ${JSON.stringify(error)}`);
-        return;
-      }
-      console.info(`Succeeded in releasing`);
-    });
-  } else {
-    console.error(`Failed to create AVImageGenerator, error message:${err.message}`);
-  }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { media } from '@kit.MediaKit';
-
-async function test() {
-  // Create an AVMetadataExtractor instance.
-  let avMetadataExtractor: media.AVMetadataExtractor = await media.createAVMetadataExtractor();
-  avMetadataExtractor.release((error: BusinessError) => {
-    if (error) {
-      console.error(`Failed to release, err = ${JSON.stringify(error)}`);
-      return;
-    }
-    console.info(`Succeeded in releasing.`);
-  });
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function  test(){
-  let avPlayer = await media.createAVPlayer();
-  // Here is only an example. In real development, you must wait for the stateChange event to successfully trigger and reach a state other than released before proceeding.
-  avPlayer.release((err: BusinessError) => {
-    if (err) {
-      console.error('Failed to release,error message is :' + err.message);
-    } else {
-      console.info('Succeeded in releasing');
-    }
-  });
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-avRecorder.release((err: BusinessError) => {
-  if (err) {
-    console.error(`Failed to release AVRecorder and error is: Code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info('Succeeded in releasing AVRecorder');
-  }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-videoPlayer.release((err: BusinessError) => {
-  if (err) {
-    console.error('Failed to release!');
-  } else {
-    console.info('Succeeded in releasing!');
-  }
-});
-```
-
 ## release
 
 ```TypeScript
@@ -390,134 +157,6 @@ Releases this AVImageGenerator instance. This API uses a promise to return the r
 | Error Code ID | Error Message |
 | --- | --- |
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Returned by promise. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// promise.
-videoRecorder.release().then(() => {
-  console.info('release videorecorder success');
-}).catch((err: BusinessError) => {
-  console.error('release videorecorder failed and catch error is ' + err.message);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { media } from '@kit.MediaKit';
-
-let avImageGenerator: media.AVImageGenerator | undefined = undefined;
-
-// Release the resources.
-media.createAVImageGenerator((err: BusinessError, generator: media.AVImageGenerator) => {
-  if (generator) {
-    avImageGenerator = generator;
-    console.info(`Succeeded in creating AVImageGenerator`);
-    avImageGenerator.release().then(() => {
-      console.info(`Succeeded in releasing.`);
-    }).catch((error: BusinessError) => {
-      console.error(`Failed to release, error message:${error.message}`);
-    });
-  } else {
-    console.error(`Failed to create AVImageGenerator, error message:${err.message}`);
-  }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { media } from '@kit.MediaKit';
-
-async function test() {
-  // Create an AVMetadataExtractor instance.
-  let avMetadataExtractor: media.AVMetadataExtractor = await media.createAVMetadataExtractor();
-  avMetadataExtractor.release().then(() => {
-    console.info(`Succeeded in releasing.`);
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to release, error message:${error.message}`);
-  });
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function  test(){
-  let avPlayer = await media.createAVPlayer();
-  // Here is only an example. In real development, you must wait for the stateChange event to successfully trigger and reach a state other than released before proceeding.
-  avPlayer.release().then(() => {
-    console.info('Succeeded in releasing');
-  }, (err: BusinessError) => {
-    console.error('Failed to release,error message is :' + err.message);
-  });
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-avRecorder.release().then(() => {
-  console.info('Succeeded in releasing AVRecorder');
-}).catch((err: Error) => {
-  let error: BusinessError = err as BusinessError;
-  console.error(`Failed to release AVRecorder and error is: Code: ${error.code}, message: ${error.message}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// Initialize avScreenCaptureRecorder.
-let avScreenCaptureRecorder: media.AVScreenCaptureRecorder | undefined;
-media.createAVScreenCaptureRecorder().then((captureRecorder: media.AVScreenCaptureRecorder) => {
-  if (captureRecorder != null) {
-    avScreenCaptureRecorder = captureRecorder;
-    console.info('Succeeded in creating avScreenCaptureRecorder');
-  } else {
-    console.error('Failed to create avScreenCaptureRecorder');
-  }
-}).catch((error: BusinessError) => {
-  console.error(`createAVScreenCaptureRecorder catchCallback, error message:${error.message}`);
-});
-
-// Other processes.
-
-// Call the release method.
-if (avScreenCaptureRecorder != undefined) {
-  avScreenCaptureRecorder.release().then(() => {
-    console.info('Succeeded in releasing avScreenCaptureRecorder');
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to release avScreenCaptureRecorder. Code: ${err.code}, message: ${err.message}`);
-  });
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { media } from '@kit.MediaKit';
-
-async function test() {
-  // Create an AVTranscoder instance.
-  let avTranscoder = await media.createAVTranscoder();
-  avTranscoder.release().then(() => {
-    console.info('release AVTranscoder success');
-  }).catch((err: BusinessError) => {
-    console.error('release AVTranscoder failed and catch error is ' + err.message);
-  });
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-videoPlayer.release().then(() => {
-  console.info('Succeeded in releasing');
-}).catch((error: BusinessError) => {
-  console.error(`video catchCallback, error:${error}`);
-});
-```
 
 ## fdSrc
 

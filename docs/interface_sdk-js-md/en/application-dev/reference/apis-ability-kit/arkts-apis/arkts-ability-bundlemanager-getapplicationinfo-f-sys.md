@@ -30,7 +30,7 @@ No permission is required for obtaining the caller's own information.
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name. |
 | appFlags | number | Yes | Type of the application information to obtain. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ApplicationInfo&gt; | Yes | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md) used to return the result. If the operation is successful, **err** is **null** and **data** is the application information obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ApplicationInfo](arkts-ability-bundlemanager-applicationinfo-t.md)&gt; | Yes | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md) used to return the result. If the operation is successful, **err** is **null** and **data** is the application information obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -92,7 +92,7 @@ No permission is required for obtaining the caller's own information.
 | bundleName | string | Yes | Bundle name. |
 | appFlags | number | Yes | Type of the application information to obtain. |
 | userId | number | Yes | User ID, which can be obtained by calling [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid). |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ApplicationInfo&gt; | Yes | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md) used to return the result. If the operation is successful, **err** is **null** and **data** is the application information obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ApplicationInfo](arkts-ability-bundlemanager-applicationinfo-t.md)&gt; | Yes | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md) used to return the result. If the operation is successful, **err** is **null** and **data** is the application information obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -161,7 +161,7 @@ No permission is required for obtaining the caller's own information.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ApplicationInfo&gt; | Promise used to return the application information. |
+| Promise&lt;[ApplicationInfo](arkts-ability-bundlemanager-applicationinfo-t.md)&gt; | Promise used to return the application information. |
 
 **Error codes:**
 

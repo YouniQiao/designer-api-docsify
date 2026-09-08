@@ -62,12 +62,3 @@ try {
   console.error(`call SimpleDateTimeFormat.format failed, error code: ${err.code}, message: ${err.message}.`);
 }
 ```
-
-```TypeScript
-let formatter = new i18n.ISO8601DateTimeFormat({
-  dateFormat: 'calendar',
-  timePrecision: 'minutes',
-  separatorStyle: 'extended'
-});
-let result = formatter.format(new Date(2026, 2, 15, 12, 0, 0));
-```

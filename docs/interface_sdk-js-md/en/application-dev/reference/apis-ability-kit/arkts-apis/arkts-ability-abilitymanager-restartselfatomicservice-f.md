@@ -42,7 +42,7 @@ Restarts the current atomic service.
 | Error Code ID | Error Message |
 | --- | --- |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. Possible causes: 1. Connect to system service failed; 2.Send restart message to system service failed; 3.System service failed to communicate with dependency module. |
-| [16000053](../errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) | The ability is not on the top of the UI. |
+| [16000053](../errorcode-ability.md#16000053-ability-not-in-the-foreground) | The ability is not on the top of the UI. |
 | [16000064](../errorcode-ability.md#16000064-frequent-application-restart) | Restart too frequently. Try again at least 3s later. |
 | [16000086](../errorcode-ability.md#16000086-context-is-not-a-uiabilitycontext) | The context is not UIAbilityContext. |
 | [16000090](../errorcode-ability.md#16000090-caller-is-not-an-atomic-service) | The caller is not an atomic service. |

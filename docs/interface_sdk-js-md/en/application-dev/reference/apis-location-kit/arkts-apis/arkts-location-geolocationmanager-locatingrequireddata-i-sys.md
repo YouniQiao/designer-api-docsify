@@ -92,7 +92,7 @@ wifiData?: WifiScanInfo
 
 WiFi scan info.
 
-**Type:** WifiScanInfo
+**Type:** [WifiScanInfo](arkts-location-geolocationmanager-wifiscaninfo-i-sys.md)
 
 **Since:** 10
 

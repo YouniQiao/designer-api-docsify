@@ -47,29 +47,5 @@ Creates a **Watcher** object to listen for file or directory changes.
 | 13900021 | File table overflow |
 | 13900022 | Too many open files |
 | 13900025 | No space left on device |
-| 13900030 | File name too number |
+| 13900030 | File name too long |
 | 13900042 | Unknown error |
-
-**Examples**
-
-```TypeScript
-import { common } from '@kit.AbilityKit';
-import { WatchEvent } from '@kit.CoreFileKit';
-
-// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-let pathDir = context.filesDir;
-let filePath = pathDir + "/test.txt";
-let file = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE | fileIo.OpenMode.CREATE);
-let watcher = fileIo.createWatcher(filePath, 0x2 | 0x10, (watchEvent: WatchEvent) => {
-  if (watchEvent.event == 0x2) {
-    console.info(watchEvent.fileName + 'was modified');
-  } else if (watchEvent.event == 0x10) {
-    console.info(watchEvent.fileName + 'was closed');
-  }
-});
-watcher.start();
-fileIo.writeSync(file.fd, 'test');
-fileIo.closeSync(file);
-watcher.stop();
-```

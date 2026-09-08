@@ -26,7 +26,7 @@ create a JavaScript Gatt server instance.
 
 | Type | Description |
 | --- | --- |
-| GattServer | Returns a JavaScript Gatt server instance { |
+| [GattServer](arkts-connectivity-ble-gattserver-i.md) | Returns a JavaScript Gatt server instance { |
 
 **Examples**
 

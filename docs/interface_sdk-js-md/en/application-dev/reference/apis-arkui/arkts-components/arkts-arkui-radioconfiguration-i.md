@@ -45,7 +45,7 @@ Changes the selected state of the radio button.
 
 The value **true** means that the radio button changes from unselected to selected, and **false** means that the radio button changes from selected to unselected.
 
-**Type:** Callback&lt;boolean&gt;
+**Type:** [Callback](arkts-arkui-callback-i.md)&lt;boolean&gt;
 
 **Since:** 12
 

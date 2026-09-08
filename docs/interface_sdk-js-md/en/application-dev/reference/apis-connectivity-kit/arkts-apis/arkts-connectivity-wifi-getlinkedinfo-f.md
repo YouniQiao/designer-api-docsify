@@ -28,7 +28,7 @@ Obtains information about a Wi-Fi connection.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;WifiLinkedInfo&gt; | Returns Wi-Fi linked information. |
+| Promise&lt;[WifiLinkedInfo](arkts-connectivity-wifi-wifilinkedinfo-i.md)&gt; | Returns Wi-Fi linked information. |
 
 **Examples**
 
@@ -73,7 +73,7 @@ Obtains information about a Wi-Fi connection.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;WifiLinkedInfo&gt; | Yes |  |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[WifiLinkedInfo](arkts-connectivity-wifi-wifilinkedinfo-i.md)&gt; | Yes |  |
 
 **Examples**
 

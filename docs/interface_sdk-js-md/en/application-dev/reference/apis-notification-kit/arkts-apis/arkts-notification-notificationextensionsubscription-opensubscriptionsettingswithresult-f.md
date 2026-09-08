@@ -32,7 +32,7 @@ Opens the settings screen of notification extension subscription in a semi-modal
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;UserGrantSetting&gt; | Promise used to return the result of the authorization set by the user. |
+| Promise&lt;[UserGrantSetting](arkts-notification-notificationextensionsubscription-usergrantsetting-t.md)&gt; | Promise used to return the result of the authorization set by the user. |
 
 **Error codes:**
 

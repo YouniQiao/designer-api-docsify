@@ -27,7 +27,7 @@ function createNode(context: UIContext, nodeType: 'Text'): Text
 
 | 类型 | 说明 |
 | --- | --- |
-| Text | Text类型的FrameNode节点。 |
+| [Text](arkts-arkui-typenode-text-t.md) | Text类型的FrameNode节点。 |
 
 **示例**
 
@@ -93,7 +93,7 @@ function createNode(context: UIContext, nodeType: 'Column'): Column
 
 | 类型 | 说明 |
 | --- | --- |
-| Column | Column类型的FrameNode节点。 |
+| [Column](arkts-arkui-typenode-column-t.md) | Column类型的FrameNode节点。 |
 
 **示例**
 
@@ -158,7 +158,7 @@ function createNode(context: UIContext, nodeType: 'Row'): Row
 
 | 类型 | 说明 |
 | --- | --- |
-| Row | Row类型的FrameNode节点。 |
+| [Row](arkts-arkui-typenode-row-t.md) | Row类型的FrameNode节点。 |
 
 **示例**
 
@@ -223,7 +223,7 @@ function createNode(context: UIContext, nodeType: 'Stack'): Stack
 
 | 类型 | 说明 |
 | --- | --- |
-| Stack | Stack类型的FrameNode节点。 |
+| [Stack](arkts-arkui-typenode-stack-t.md) | Stack类型的FrameNode节点。 |
 
 **示例**
 
@@ -292,7 +292,7 @@ function createNode(context: UIContext, nodeType: 'GridRow'): GridRow
 
 | 类型 | 说明 |
 | --- | --- |
-| GridRow | GridRow类型的FrameNode节点。 |
+| [GridRow](arkts-arkui-typenode-gridrow-t.md) | GridRow类型的FrameNode节点。 |
 
 **示例**
 
@@ -364,7 +364,7 @@ function createNode(context: UIContext, nodeType: 'GridCol'): GridCol
 
 | 类型 | 说明 |
 | --- | --- |
-| GridCol | GridCol类型的FrameNode节点。 |
+| [GridCol](arkts-arkui-typenode-gridcol-t.md) | GridCol类型的FrameNode节点。 |
 
 **示例**
 
@@ -436,7 +436,7 @@ function createNode(context: UIContext, nodeType: 'Flex'): Flex
 
 | 类型 | 说明 |
 | --- | --- |
-| Flex | Flex类型的FrameNode节点。 |
+| [Flex](arkts-arkui-typenode-flex-t.md) | Flex类型的FrameNode节点。 |
 
 **示例**
 
@@ -501,7 +501,7 @@ function createNode(context: UIContext, nodeType: 'Swiper'): Swiper
 
 | 类型 | 说明 |
 | --- | --- |
-| Swiper | Swiper类型的FrameNode节点。 |
+| [Swiper](arkts-arkui-typenode-swiper-t.md) | Swiper类型的FrameNode节点。 |
 
 **示例**
 
@@ -585,7 +585,7 @@ function createNode(context: UIContext, nodeType: 'Progress'): Progress
 
 | 类型 | 说明 |
 | --- | --- |
-| Progress | Progress类型的FrameNode节点。 |
+| [Progress](arkts-arkui-typenode-progress-t.md) | Progress类型的FrameNode节点。 |
 
 **示例**
 
@@ -653,7 +653,7 @@ function createNode(context: UIContext, nodeType: 'Scroll'): Scroll
 
 | 类型 | 说明 |
 | --- | --- |
-| Scroll | Scroll类型的FrameNode节点。 |
+| [Scroll](arkts-arkui-typenode-scroll-t.md) | Scroll类型的FrameNode节点。 |
 
 **示例**
 
@@ -735,7 +735,7 @@ function createNode(context: UIContext, nodeType: 'RelativeContainer'): Relative
 
 | 类型 | 说明 |
 | --- | --- |
-| RelativeContainer | RelativeContainer类型的FrameNode节点。 |
+| [RelativeContainer](arkts-arkui-typenode-relativecontainer-t.md) | RelativeContainer类型的FrameNode节点。 |
 
 **示例**
 
@@ -800,7 +800,7 @@ function createNode(context: UIContext, nodeType: 'Divider'): Divider
 
 | 类型 | 说明 |
 | --- | --- |
-| Divider | Divider类型的FrameNode节点。 |
+| [Divider](arkts-arkui-typenode-divider-t.md) | Divider类型的FrameNode节点。 |
 
 **示例**
 
@@ -871,7 +871,7 @@ function createNode(context: UIContext, nodeType: 'LoadingProgress'): LoadingPro
 
 | 类型 | 说明 |
 | --- | --- |
-| LoadingProgress | LoadingProgress类型的FrameNode节点。 |
+| [LoadingProgress](arkts-arkui-typenode-loadingprogress-t.md) | LoadingProgress类型的FrameNode节点。 |
 
 **示例**
 
@@ -937,7 +937,7 @@ function createNode(context: UIContext, nodeType: 'Search'): Search
 
 | 类型 | 说明 |
 | --- | --- |
-| Search | Search类型的FrameNode节点。 |
+| [Search](arkts-arkui-typenode-search-t.md) | Search类型的FrameNode节点。 |
 
 **示例**
 
@@ -1004,7 +1004,7 @@ function createNode(context: UIContext, nodeType: 'Blank'): Blank
 
 | 类型 | 说明 |
 | --- | --- |
-| Blank | Blank类型的FrameNode节点。 |
+| [Blank](arkts-arkui-typenode-blank-t.md) | Blank类型的FrameNode节点。 |
 
 **示例**
 
@@ -1076,7 +1076,7 @@ function createNode(context: UIContext, nodeType: 'Image'): Image
 
 | 类型 | 说明 |
 | --- | --- |
-| Image | Image类型的FrameNode节点。 |
+| [Image](arkts-arkui-typenode-image-t.md) | Image类型的FrameNode节点。 |
 
 **示例**
 
@@ -1152,7 +1152,7 @@ function createNode(context: UIContext, nodeType: 'List'): List
 
 | 类型 | 说明 |
 | --- | --- |
-| List | List类型的FrameNode节点。 |
+| [List](arkts-arkui-typenode-list-t.md) | List类型的FrameNode节点。 |
 
 **示例**
 
@@ -1241,11 +1241,12 @@ function createNode(context: UIContext, nodeType: 'ListItem'): ListItem
 
 | 类型 | 说明 |
 | --- | --- |
-| ListItem | ListItem类型的FrameNode节点。 |
+| [ListItem](arkts-arkui-typenode-listitem-t.md) | ListItem类型的FrameNode节点。 |
 
 **示例**
 
 参考createNode('List')示例。
+- simpleType:
 
 
 ## createNode
@@ -1275,7 +1276,7 @@ function createNode(context: UIContext, nodeType: 'TextInput'): TextInput
 
 | 类型 | 说明 |
 | --- | --- |
-| TextInput | TextInput类型的FrameNode节点。 |
+| [TextInput](arkts-arkui-typenode-textinput-t.md) | TextInput类型的FrameNode节点。 |
 
 **示例**
 
@@ -1340,7 +1341,7 @@ function createNode(context: UIContext, nodeType: 'Button'): Button
 
 | 类型 | 说明 |
 | --- | --- |
-| Button | Button类型的FrameNode节点。 |
+| [Button](arkts-arkui-typenode-button-t.md) | Button类型的FrameNode节点。 |
 
 **示例**
 
@@ -1412,11 +1413,12 @@ function createNode(context: UIContext, nodeType: 'ListItemGroup'): ListItemGrou
 
 | 类型 | 说明 |
 | --- | --- |
-| ListItemGroup | ListItemGroup类型的FrameNode节点。 |
+| [ListItemGroup](arkts-arkui-typenode-listitemgroup-t.md) | ListItemGroup类型的FrameNode节点。 |
 
 **示例**
 
 参考createNode('List')示例。
+- simpleType:
 
 
 ## createNode
@@ -1446,7 +1448,7 @@ function createNode(context: UIContext, nodeType: 'WaterFlow'): WaterFlow
 
 | 类型 | 说明 |
 | --- | --- |
-| WaterFlow | WaterFlow类型的FrameNode节点。 |
+| [WaterFlow](arkts-arkui-typenode-waterflow-t.md) | WaterFlow类型的FrameNode节点。 |
 
 **示例**
 
@@ -1539,11 +1541,12 @@ function createNode(context: UIContext, nodeType: 'FlowItem'): FlowItem
 
 | 类型 | 说明 |
 | --- | --- |
-| FlowItem | FlowItem类型的FrameNode节点。 |
+| [FlowItem](arkts-arkui-typenode-flowitem-t.md) | FlowItem类型的FrameNode节点。 |
 
 **示例**
 
 参考createNode('WaterFlow')示例。
+- simpleType:
 
 
 ## createNode
@@ -1573,7 +1576,7 @@ function createNode(context: UIContext, nodeType: 'XComponent'): XComponent
 
 | 类型 | 说明 |
 | --- | --- |
-| XComponent | XComponent类型的FrameNode节点。 |
+| [XComponent](arkts-arkui-typenode-xcomponent-t.md) | XComponent类型的FrameNode节点。 |
 
 **示例**
 
@@ -1640,7 +1643,7 @@ function createNode(context: UIContext, nodeType: 'XComponent', options: XCompon
 
 | 类型 | 说明 |
 | --- | --- |
-| XComponent | XComponent类型的FrameNode节点。 |
+| [XComponent](arkts-arkui-typenode-xcomponent-t.md) | XComponent类型的FrameNode节点。 |
 
 **示例**
 
@@ -1713,7 +1716,7 @@ function createNode(context: UIContext, nodeType: 'XComponent', parameters: Nati
 
 | 类型 | 说明 |
 | --- | --- |
-| XComponent | XComponent类型的FrameNode节点。 |
+| [XComponent](arkts-arkui-typenode-xcomponent-t.md) | XComponent类型的FrameNode节点。 |
 
 **示例**
 
@@ -1783,7 +1786,7 @@ function createNode(context: UIContext, nodeType: 'Checkbox'): Checkbox
 
 | 类型 | 说明 |
 | --- | --- |
-| Checkbox | Checkbox类型的FrameNode节点。 |
+| [Checkbox](arkts-arkui-typenode-checkbox-t.md) | Checkbox类型的FrameNode节点。 |
 
 **示例**
 
@@ -1857,7 +1860,7 @@ function createNode(context: UIContext, nodeType: 'CheckboxGroup'): CheckboxGrou
 
 | 类型 | 说明 |
 | --- | --- |
-| CheckboxGroup | CheckboxGroup类型的FrameNode节点。 |
+| [CheckboxGroup](arkts-arkui-typenode-checkboxgroup-t.md) | CheckboxGroup类型的FrameNode节点。 |
 
 **示例**
 
@@ -1933,7 +1936,7 @@ function createNode(context: UIContext, nodeType: 'Radio'): Radio
 
 | 类型 | 说明 |
 | --- | --- |
-| Radio | Radio类型的FrameNode节点。 |
+| [Radio](arkts-arkui-typenode-radio-t.md) | Radio类型的FrameNode节点。 |
 
 **示例**
 
@@ -2006,7 +2009,7 @@ function createNode(context: UIContext, nodeType: 'Rating'): Rating
 
 | 类型 | 说明 |
 | --- | --- |
-| Rating | Rating类型的FrameNode节点。 |
+| [Rating](arkts-arkui-typenode-rating-t.md) | Rating类型的FrameNode节点。 |
 
 **示例**
 
@@ -2075,7 +2078,7 @@ function createNode(context: UIContext, nodeType: 'Select'): Select
 
 | 类型 | 说明 |
 | --- | --- |
-| Select | Select类型的FrameNode节点。 |
+| [Select](arkts-arkui-typenode-select-t.md) | Select类型的FrameNode节点。 |
 
 **示例**
 
@@ -2142,7 +2145,7 @@ function createNode(context: UIContext, nodeType: 'Slider'): Slider
 
 | 类型 | 说明 |
 | --- | --- |
-| Slider | Slider类型的FrameNode节点。 |
+| [Slider](arkts-arkui-typenode-slider-t.md) | Slider类型的FrameNode节点。 |
 
 **示例**
 
@@ -2211,7 +2214,7 @@ function createNode(context: UIContext, nodeType: 'Toggle', options?: ToggleOpti
 
 | 类型 | 说明 |
 | --- | --- |
-| Toggle | Toggle类型的FrameNode节点。 |
+| [Toggle](arkts-arkui-typenode-toggle-t.md) | Toggle类型的FrameNode节点。 |
 
 **示例**
 
@@ -2280,7 +2283,7 @@ function createNode(context: UIContext, nodeType: 'Marquee'): Marquee
 
 | 类型 | 说明 |
 | --- | --- |
-| Marquee | Marquee类型的FrameNode节点。 |
+| [Marquee](arkts-arkui-typenode-marquee-t.md) | Marquee类型的FrameNode节点。 |
 
 **示例**
 
@@ -2346,7 +2349,7 @@ function createNode(context: UIContext, nodeType: 'TextArea'): TextArea
 
 | 类型 | 说明 |
 | --- | --- |
-| TextArea | TextArea类型的FrameNode节点。 |
+| [TextArea](arkts-arkui-typenode-textarea-t.md) | TextArea类型的FrameNode节点。 |
 
 **示例**
 
@@ -2411,7 +2414,7 @@ function createNode(context: UIContext, nodeType: 'SymbolGlyph'): SymbolGlyph
 
 | 类型 | 说明 |
 | --- | --- |
-| SymbolGlyph | SymbolGlyph类型的FrameNode节点。 |
+| [SymbolGlyph](arkts-arkui-typenode-symbolglyph-t.md) | SymbolGlyph类型的FrameNode节点。 |
 
 **示例**
 
@@ -2476,7 +2479,7 @@ function createNode(context: UIContext, nodeType: 'QRCode'): QRCode
 
 | 类型 | 说明 |
 | --- | --- |
-| QRCode | QRCode类型的FrameNode节点。 |
+| [QRCode](arkts-arkui-typenode-qrcode-t.md) | QRCode类型的FrameNode节点。 |
 
 **示例**
 
@@ -2512,7 +2515,7 @@ function createNode(context: UIContext, nodeType: 'Badge'): Badge
 
 | 类型 | 说明 |
 | --- | --- |
-| Badge | Badge类型的FrameNode节点。 |
+| [Badge](arkts-arkui-typenode-badge-t.md) | Badge类型的FrameNode节点。 |
 
 **示例**
 
@@ -2548,7 +2551,7 @@ function createNode(context: UIContext, nodeType: 'TextClock'): TextClock
 
 | 类型 | 说明 |
 | --- | --- |
-| TextClock | TextClock类型的FrameNode节点。 |
+| [TextClock](arkts-arkui-typenode-textclock-t.md) | TextClock类型的FrameNode节点。 |
 
 **示例**
 
@@ -2584,7 +2587,7 @@ function createNode(context: UIContext, nodeType: 'TextTimer'): TextTimer
 
 | 类型 | 说明 |
 | --- | --- |
-| TextTimer | TextTimer类型的FrameNode节点。 |
+| [TextTimer](arkts-arkui-typenode-texttimer-t.md) | TextTimer类型的FrameNode节点。 |
 
 **示例**
 
@@ -2620,7 +2623,7 @@ function createNode(context: UIContext, nodeType: 'Grid'): Grid
 
 | 类型 | 说明 |
 | --- | --- |
-| Grid | Grid类型的FrameNode节点。 |
+| [Grid](arkts-arkui-typenode-grid-t.md) | Grid类型的FrameNode节点。 |
 
 **示例**
 
@@ -2708,8 +2711,9 @@ function createNode(context: UIContext, nodeType: 'GridItem'): GridItem
 
 | 类型 | 说明 |
 | --- | --- |
-| GridItem | GridItem类型的FrameNode节点。 |
+| [GridItem](arkts-arkui-typenode-griditem-t.md) | GridItem类型的FrameNode节点。 |
 
 **示例**
 
 参考createNode('Grid')示例。
+- simpleType:

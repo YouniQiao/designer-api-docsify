@@ -91,7 +91,7 @@ function disableDynamicIcon(bundleName: string, option?: BundleOptions): Promise
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | bundleName | string | 是 | 要禁用动态图标的应用包名。 |
-| option | BundleOptions | 否 | 指定需要禁用动态图标的用户和分身索引。缺省时禁用应用所有用户和所有分身的动态图标。 |
+| option | [BundleOptions](arkts-ability-bundle-bundleoptions-i.md) | 否 | 指定需要禁用动态图标的用户和分身索引。缺省时禁用应用所有用户和所有分身的动态图标。 |
 
 **返回值：**
 

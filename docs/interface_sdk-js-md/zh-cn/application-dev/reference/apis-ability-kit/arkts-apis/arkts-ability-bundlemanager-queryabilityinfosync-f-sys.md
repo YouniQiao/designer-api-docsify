@@ -36,7 +36,7 @@ function queryAbilityInfoSync(want: Want, abilityFlags: number, userId?: number)
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;AbilityInfo&gt; | Array&lt;AbilityInfo&gt;信息。 |
+| Array&lt;[AbilityInfo](arkts-ability-bundlemanager-abilityinfo-t.md)&gt; | Array&lt;AbilityInfo&gt;信息。 |
 
 **错误码：**
 

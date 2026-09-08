@@ -36,9 +36,9 @@ createAsset(photoType: PhotoType, extension: string, options?: photoAccessHelper
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| photoType | PhotoType | 是 | 创建的文件类型，IMAGE或者VIDEO类型。 |
+| photoType | [PhotoType](arkts-medialibrary-sendablephotoaccesshelper-phototype-e.md) | 是 | 创建的文件类型，IMAGE或者VIDEO类型。 |
 | extension | string | 是 | 文件名后缀参数，例如：'jpg'。字符串长度的取值范围为[1, 255]。. |
-| options | photoAccessHelper.CreateOptions | 否 | 创建选项，例如{title: 'testPhoto'}。文件名中不允许出现非法英文字符。API18开始，非法字符包括： \ / : * ? " &lt; &gt; \| API10-17，非法字符包括： . .. \ / : * ? " ' ` &lt; &gt; \| { } [ ] |
+| options | [photoAccessHelper.CreateOptions](arkts-medialibrary-photoaccesshelper-createoptions-i.md) | 否 | 创建选项，例如{title: 'testPhoto'}。文件名中不允许出现非法英文字符。API18开始，非法字符包括： \ / : * ? " &lt; &gt; \| API10-17，非法字符包括： . .. \ / : * ? " ' ` &lt; &gt; \| { } [ ] |
 
 **返回值：**
 
@@ -98,13 +98,13 @@ getAlbums(options: photoAccessHelper.FetchOptions): Promise<FetchResult<Album>>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | photoAccessHelper.FetchOptions | 是 | 检索选项。 |
+| options | [photoAccessHelper.FetchOptions](arkts-medialibrary-photoaccesshelper-fetchoptions-i.md) | 是 | 检索选项。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;FetchResult&lt;Album&gt;&gt; | Promise对象，返回获取相册的结果集。 |
+| Promise&lt;[FetchResult](arkts-medialibrary-sendablephotoaccesshelper-fetchresult-i.md)&lt;[Album](arkts-medialibrary-sendablephotoaccesshelper-album-i.md)&gt;&gt; | Promise对象，返回获取相册的结果集。 |
 
 **错误码：**
 
@@ -170,15 +170,15 @@ getAlbums(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | AlbumType | 是 | 相册类型。 |
-| subtype | AlbumSubtype | 是 | 相册子类型。 |
-| options | photoAccessHelper.FetchOptions | 否 | 检索选项，不填时默认根据相册类型检索。 |
+| type | [AlbumType](arkts-medialibrary-sendablephotoaccesshelper-albumtype-e.md) | 是 | 相册类型。 |
+| subtype | [AlbumSubtype](arkts-medialibrary-sendablephotoaccesshelper-albumsubtype-e.md) | 是 | 相册子类型。 |
+| options | [photoAccessHelper.FetchOptions](arkts-medialibrary-photoaccesshelper-fetchoptions-i.md) | 否 | 检索选项，不填时默认根据相册类型检索。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;FetchResult&lt;Album&gt;&gt; | Promise对象，返回获取相册的结果集。 |
+| Promise&lt;[FetchResult](arkts-medialibrary-sendablephotoaccesshelper-fetchresult-i.md)&lt;[Album](arkts-medialibrary-sendablephotoaccesshelper-album-i.md)&gt;&gt; | Promise对象，返回获取相册的结果集。 |
 
 **错误码：**
 
@@ -238,13 +238,13 @@ getAssets(options: photoAccessHelper.FetchOptions): Promise<FetchResult<PhotoAss
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | photoAccessHelper.FetchOptions | 是 | 图片和视频检索选项。 |
+| options | [photoAccessHelper.FetchOptions](arkts-medialibrary-photoaccesshelper-fetchoptions-i.md) | 是 | 图片和视频检索选项。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;FetchResult&lt;PhotoAsset&gt;&gt; | Promise对象，返回图片和视频数据结果集。 |
+| Promise&lt;[FetchResult](arkts-medialibrary-sendablephotoaccesshelper-fetchresult-i.md)&lt;[PhotoAsset](arkts-medialibrary-sendablephotoaccesshelper-photoasset-i.md)&gt;&gt; | Promise对象，返回图片和视频数据结果集。 |
 
 **错误码：**
 
@@ -284,34 +284,6 @@ async function example(phAccessHelper: sendablePhotoAccessHelper.PhotoAccessHelp
 }
 ```
 
-phAccessHelper的创建请参考sendablePhotoAccessHelper.getPhotoAccessHelper的示例使用。
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { photoAccessHelper } from '@kit.MediaLibraryKit';
-
-async function example(phAccessHelper: sendablePhotoAccessHelper.PhotoAccessHelper) {
-  console.info('albumGetAssetsDemoPromise');
-  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-  let albumFetchOptions: photoAccessHelper.FetchOptions = {
-    fetchColumns: [],
-    predicates: predicates
-  };
-  let fetchOption: photoAccessHelper.FetchOptions = {
-    fetchColumns: [],
-    predicates: predicates
-  };
-  let albumList: sendablePhotoAccessHelper.FetchResult<sendablePhotoAccessHelper.Album> = await phAccessHelper.getAlbums(sendablePhotoAccessHelper.AlbumType.USER, sendablePhotoAccessHelper.AlbumSubtype.USER_GENERIC, albumFetchOptions);
-  let album: sendablePhotoAccessHelper.Album = await albumList.getFirstObject();
-  album.getAssets(fetchOption).then((albumFetchResult) => {
-    console.info('album getAssets successfully, getCount: ' + albumFetchResult.getCount());
-  }).catch((err: BusinessError) => {
-    console.error(`album getAssets failed with error: ${err.code}, ${err.message}`);
-  });
-}
-```
-
 ## getBurstAssets
 
 ```TypeScript
@@ -331,13 +303,13 @@ getBurstAssets(burstKey: string, options: photoAccessHelper.FetchOptions): Promi
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | burstKey | string | 是 | 一组连拍照片的唯一标识：uuid（可传入[PhotoKeys](arkts-medialibrary-photoaccesshelper-photokeys-e.md)的BURST_KEY）。字符串长度为36字节。 |
-| options | photoAccessHelper.FetchOptions | 是 | 连拍照片检索选项。 |
+| options | [photoAccessHelper.FetchOptions](arkts-medialibrary-photoaccesshelper-fetchoptions-i.md) | 是 | 连拍照片检索选项。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;FetchResult&lt;PhotoAsset&gt;&gt; | Promise对象，返回连拍照片数据结果集。 |
+| Promise&lt;[FetchResult](arkts-medialibrary-sendablephotoaccesshelper-fetchresult-i.md)&lt;[PhotoAsset](arkts-medialibrary-sendablephotoaccesshelper-photoasset-i.md)&gt;&gt; | Promise对象，返回连拍照片数据结果集。 |
 
 **错误码：**
 

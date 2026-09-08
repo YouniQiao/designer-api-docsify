@@ -36,24 +36,6 @@ Obtains the stream ID of this audio capturer. This API uses an asynchronous call
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the stream ID obtained; otherwise, **err** is an error object. |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioCapturer.getAudioStreamId((err: BusinessError, streamId: number) => {
-  console.info(`audioCapturer GetStreamId: ${streamId}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioRenderer.getAudioStreamId((err: BusinessError, streamId: number) => {
-  console.info(`Renderer GetStreamId: ${streamId}`);
-});
-```
-
 ## getAudioStreamId
 
 ```TypeScript
@@ -71,28 +53,6 @@ Obtains the stream ID of this audio capturer. This API uses a promise to return 
 | Type | Description |
 | --- | --- |
 | Promise&lt;number&gt; | Promise used to return the stream ID. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioCapturer.getAudioStreamId().then((streamId: number) => {
-  console.info(`audioCapturer getAudioStreamId: ${streamId}`);
-}).catch((err: BusinessError) => {
-  console.error(`ERROR: ${err}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioRenderer.getAudioStreamId().then((streamId: number) => {
-  console.info(`Renderer getAudioStreamId: ${streamId}`);
-}).catch((err: BusinessError) => {
-  console.error(`ERROR: ${err}`);
-});
-```
 
 ## getAudioStreamIdSync
 
@@ -112,32 +72,6 @@ Obtains the stream ID of this audio capturer. This API returns the result synchr
 | --- | --- |
 | number | Stream ID. |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let streamId: number = audioCapturer.getAudioStreamIdSync();
-  console.info(`audioCapturer getAudioStreamIdSync: ${streamId}`);
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`ERROR: ${error}`);
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let streamId: number = audioRenderer.getAudioStreamIdSync();
-  console.info(`Renderer getAudioStreamIdSync: ${streamId}`);
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`ERROR: ${error}`);
-}
-```
-
 ## getAudioTime
 
 ```TypeScript
@@ -156,24 +90,6 @@ Obtains the timestamp of the current recording position, measured in nanoseconds
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the number of nanoseconds obtained; otherwise, **err** is an error object. |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioCapturer.getAudioTime((err: BusinessError, timestamp: number) => {
-  console.info(`Succeeded in getting audio time. Timestamp: ${timestamp}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioRenderer.getAudioTime((err: BusinessError, timestamp: number) => {
-  console.info(`Current timestamp: ${timestamp}`);
-});
-```
-
 ## getAudioTime
 
 ```TypeScript
@@ -191,28 +107,6 @@ Obtains the timestamp of the current recording position, measured in nanoseconds
 | Type | Description |
 | --- | --- |
 | Promise&lt;number&gt; | Promise used to return a timestamp representing the number of nanoseconds elapsed since the Unix epoch (January 1, 1970). |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioCapturer.getAudioTime().then((timestamp: number) => {
-  console.info(`Succeeded in getting audio time. Timestamp: ${timestamp}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to get audio time. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioRenderer.getAudioTime().then((timestamp: number) => {
-  console.info(`Current timestamp: ${timestamp}`);
-}).catch((err: BusinessError) => {
-  console.error(`ERROR: ${err}`);
-});
-```
 
 ## getAudioTimestampInfo
 
@@ -240,28 +134,6 @@ This API obtains the actual recording position (specified by **framePos**) of th
 | --- | --- |
 | [6800103](../errorcode-audio.md#6800103-unsupported-state) | Operation not permit at current state. |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioCapturer.getAudioTimestampInfo().then((audioTimestampInfo: audio.AudioTimestampInfo) => {
-  console.info(`Current timestamp: ${audioTimestampInfo.timestamp}`);
-}).catch((err: BusinessError) => {
-  console.error(`ERROR: ${err}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioRenderer.getAudioTimestampInfo().then((audioTimestampInfo: audio.AudioTimestampInfo) => {
-  console.info(`Current timestamp: ${audioTimestampInfo.timestamp}`);
-}).catch((err: BusinessError) => {
-  console.error(`ERROR: ${err}`);
-});
-```
-
 ## getAudioTimestampInfoSync
 
 ```TypeScript
@@ -286,32 +158,6 @@ Obtains the timestamp and position information of an input audio stream. This AP
 | --- | --- |
 | [6800103](../errorcode-audio.md#6800103-unsupported-state) | Operation not permit at current state. |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let audioTimestampInfo: audio.AudioTimestampInfo = audioCapturer.getAudioTimestampInfoSync();
-  console.info(`Current timestamp: ${audioTimestampInfo.timestamp}`);
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`ERROR: ${error}`);
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let audioTimestampInfo: audio.AudioTimestampInfo = audioRenderer.getAudioTimestampInfoSync();
-  console.info(`Current timestamp: ${audioTimestampInfo.timestamp}`);
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`ERROR: ${error}`);
-}
-```
-
 ## getAudioTimeSync
 
 ```TypeScript
@@ -329,32 +175,6 @@ Obtains the timestamp of the current recording position, measured in nanoseconds
 | Type | Description |
 | --- | --- |
 | number | Timestamp. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let timestamp: number = audioCapturer.getAudioTimeSync();
-  console.info(`Succeeded in getting audio time. Timestamp: ${timestamp}`);
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`Failed to get audio time. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let timestamp: number = audioRenderer.getAudioTimeSync();
-  console.info(`Current timestamp: ${timestamp}`);
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`ERROR: ${error}`);
-}
-```
 
 ## getBufferSize
 
@@ -374,35 +194,6 @@ Obtains a reasonable minimum buffer size in bytes for capturing. This API uses a
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the minimum buffer size obtained; otherwise, **err** is an error object.The unit is bytes. |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioCapturer.getBufferSize((err: BusinessError, bufferSize: number) => {
-  if (err) {
-    console.error(`Failed to get buffer size. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info(`Succeeded in getting buffer size, BufferSize: ${bufferSize}.`);
-  }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let bufferSize: number;
-
-audioRenderer.getBufferSize((err: BusinessError, data: number) => {
-  if (err) {
-    console.error('getBufferSize error');
-  } else {
-    console.info(`AudioFrameworkRenderLog: getBufferSize: SUCCESS ${data}`);
-    bufferSize = data;
-  }
-});
-```
-
 ## getBufferSize
 
 ```TypeScript
@@ -420,31 +211,6 @@ Obtains a reasonable minimum buffer size in bytes for capturing. This API uses a
 | Type | Description |
 | --- | --- |
 | Promise&lt;number&gt; | Promise used to return the buffer size. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioCapturer.getBufferSize().then((bufferSize: number) => {
-  console.info(`Succeeded in getting buffer size, BufferSize: ${bufferSize}.`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to get buffer size. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let bufferSize: number;
-
-audioRenderer.getBufferSize().then((data: number) => {
-  console.info(`AudioFrameworkRenderLog: getBufferSize: SUCCESS ${data}`);
-  bufferSize = data;
-}).catch((err: BusinessError) => {
-  console.error(`AudioFrameworkRenderLog: getBufferSize: ERROR: ${err}`);
-});
-```
 
 ## getBufferSizeSync
 
@@ -464,34 +230,6 @@ Obtains a reasonable minimum buffer size in bytes for capturing. This API return
 | --- | --- |
 | number | Buffer size, in bytes. |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let bufferSize = audioCapturer.getBufferSizeSync();
-  console.info(`Succeeded in getting buffer size, BufferSize: ${bufferSize}.`);
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`Failed to get buffer size. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let bufferSize: number = 0;
-
-try {
-  bufferSize = audioRenderer.getBufferSizeSync();
-  console.info(`AudioFrameworkRenderLog: getBufferSize: SUCCESS ${bufferSize}`);
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`AudioFrameworkRenderLog: getBufferSize: ERROR: ${error}`);
-}
-```
-
 ## getCapturerInfo
 
 ```TypeScript
@@ -509,22 +247,6 @@ Obtains the audio capturer information. This API uses an asynchronous callback t
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AudioCapturerInfo](arkts-audio-audio-audiocapturerinfo-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the capturer information obtained; otherwise, **err** is an error object. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioCapturer.getCapturerInfo((err: BusinessError, capturerInfo: audio.AudioCapturerInfo) => {
-  if (err) {
-    console.error('Failed to get capture info');
-  } else {
-    console.info('Capturer getCapturerInfo:');
-    console.info(`Capturer source: ${capturerInfo.source}`);
-    console.info(`Capturer flags: ${capturerInfo.capturerFlags}`);
-  }
-});
-```
 
 ## getCapturerInfo
 
@@ -544,25 +266,6 @@ Obtains the audio capturer information. This API uses a promise to return the re
 | --- | --- |
 | Promise&lt;[AudioCapturerInfo](arkts-audio-audio-audiocapturerinfo-i.md)&gt; | Promise used to return the audio capturer information. |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioCapturer.getCapturerInfo().then((audioParamsGet: audio.AudioCapturerInfo) => {
-  if (audioParamsGet != undefined) {
-    console.info('AudioFrameworkRecLog: Capturer CapturerInfo:');
-    console.info(`AudioFrameworkRecLog: Capturer SourceType: ${audioParamsGet.source}`);
-    console.info(`AudioFrameworkRecLog: Capturer capturerFlags: ${audioParamsGet.capturerFlags}`);
-  } else {
-    console.info(`AudioFrameworkRecLog: audioParamsGet is : ${audioParamsGet}`);
-    console.info('AudioFrameworkRecLog: audioParams getCapturerInfo are incorrect');
-  }
-}).catch((err: BusinessError) => {
-  console.error(`AudioFrameworkRecLog: CapturerInfo :ERROR: ${err}`);
-})
-```
-
 ## getCapturerInfoSync
 
 ```TypeScript
@@ -580,21 +283,6 @@ Obtains the audio capturer information. This API returns the result synchronousl
 | Type | Description |
 | --- | --- |
 | [AudioCapturerInfo](arkts-audio-audio-audiocapturerinfo-i.md) | Audio capturer information. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let audioParamsGet: audio.AudioCapturerInfo = audioCapturer.getCapturerInfoSync();
-  console.info(`AudioFrameworkRecLog: Capturer SourceType: ${audioParamsGet.source}`);
-  console.info(`AudioFrameworkRecLog: Capturer capturerFlags: ${audioParamsGet.capturerFlags}`);
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`AudioFrameworkRecLog: CapturerInfo :ERROR: ${error}`);
-}
-```
 
 ## getCurrentAudioCapturerChangeInfo
 
@@ -614,26 +302,6 @@ Obtains the configuration changes of the current audio capturer. This API return
 | --- | --- |
 | [AudioCapturerChangeInfo](arkts-audio-audio-audiocapturerchangeinfo-i.md) | Configuration changes of the audio capturer. |
 
-**Examples**
-
-```TypeScript
-let info: audio.AudioCapturerChangeInfo = audioCapturer.getCurrentAudioCapturerChangeInfo();
-console.info(`Info streamId: ${info.streamId}`);
-console.info(`Info source: ${info.capturerInfo.source}`);
-console.info(`Info capturerFlags: ${info.capturerInfo.capturerFlags}`);
-console.info(`Info muted: ${info.muted}`);
-console.info(`Info type: ${info.deviceDescriptors[0].deviceType}`);
-console.info(`Info role: ${info.deviceDescriptors[0].deviceRole}`);
-console.info(`Info name: ${info.deviceDescriptors[0].name}`);
-console.info(`Info address: ${info.deviceDescriptors[0].address}`);
-console.info(`Info samplerates: ${info.deviceDescriptors[0].sampleRates[0]}`);
-console.info(`Info channelcounts: ${info.deviceDescriptors[0].channelCounts[0]}`);
-console.info(`Info channelmask: ${info.deviceDescriptors[0].channelMasks[0]}`);
-if (info.deviceDescriptors[0].encodingTypes) {
-  console.info(`Device encodingTypes: ${info.deviceDescriptors[0].encodingTypes[0]}`);
-}
-```
-
 ## getCurrentInputDevices
 
 ```TypeScript
@@ -651,23 +319,6 @@ Obtains the information of the current input devices. This API returns the resul
 | Type | Description |
 | --- | --- |
 | [AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md) | An array of the audio device descriptors. |
-
-**Examples**
-
-```TypeScript
-let deviceDescriptors: audio.AudioDeviceDescriptors = audioCapturer.getCurrentInputDevices();
-console.info(`Device id: ${deviceDescriptors[0].id}`);
-console.info(`Device type: ${deviceDescriptors[0].deviceType}`);
-console.info(`Device role: ${deviceDescriptors[0].deviceRole}`);
-console.info(`Device name: ${deviceDescriptors[0].name}`);
-console.info(`Device address: ${deviceDescriptors[0].address}`);
-console.info(`Device samplerates: ${deviceDescriptors[0].sampleRates[0]}`);
-console.info(`Device channelcounts: ${deviceDescriptors[0].channelCounts[0]}`);
-console.info(`Device channelmask: ${deviceDescriptors[0].channelMasks[0]}`);
-if (deviceDescriptors[0].encodingTypes) {
-  console.info(`Device encodingTypes: ${deviceDescriptors[0].encodingTypes[0]}`);
-}
-```
 
 ## getNoiseReductionMode
 
@@ -689,13 +340,6 @@ Gets the noise reduction mode for current audio capturer. The mode will only con
 | --- | --- |
 | [NoiseReductionMode](arkts-audio-audio-noisereductionmode-e.md) | The noise reduction mode for current audio capturer, the default value is { |
 
-**Examples**
-
-```TypeScript
-let noiseReductionMode: audio.NoiseReductionMode = audioCapturer.getNoiseReductionMode();
-console.info(`getNoiseReductionMode success: ${noiseReductionMode}`);
-```
-
 ## getOverflowCount
 
 ```TypeScript
@@ -713,18 +357,6 @@ Obtains the number of overflow audio frames in the audio stream that is being ca
 | Type | Description |
 | --- | --- |
 | Promise&lt;number&gt; | Promise used to return the number of overflow audio frames. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioCapturer.getOverflowCount().then((value: number) => {
-  console.info(`Get overflow count Success! ${value}`);
-}).catch((err: BusinessError) => {
-  console.error(`Get overflow count Fail: ${err}`);
-});
-```
 
 ## getOverflowCountSync
 
@@ -744,20 +376,6 @@ Obtains the number of overflow audio frames in the audio stream that is being ca
 | --- | --- |
 | number | Number of overflow audio frames. |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let value: number = audioCapturer.getOverflowCountSync();
-  console.info(`Get overflow count Success! ${value}`);
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`Get overflow count Fail: ${error}`);
-}
-```
-
 ## getStreamInfo
 
 ```TypeScript
@@ -775,36 +393,6 @@ Obtains the stream information of this audio capturer. This API uses an asynchro
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AudioStreamInfo](arkts-audio-audio-audiostreaminfo-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the stream information obtained; otherwise, **err** is an error object. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioCapturer.getStreamInfo((err: BusinessError, streamInfo: audio.AudioStreamInfo) => {
-  if (err) {
-    console.error('Failed to get stream info');
-  } else {
-    console.info('Capturer GetStreamInfo:');
-    console.info(`Capturer sampling rate: ${streamInfo.samplingRate}`);
-    console.info(`Capturer channel: ${streamInfo.channels}`);
-    console.info(`Capturer format: ${streamInfo.sampleFormat}`);
-    console.info(`Capturer encoding type: ${streamInfo.encodingType}`);
-  }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioRenderer.getStreamInfo((err: BusinessError, streamInfo: audio.AudioStreamInfo) => {
-  console.info('Renderer GetStreamInfo:');
-  console.info(`Renderer sampling rate: ${streamInfo.samplingRate}`);
-  console.info(`Renderer channel: ${streamInfo.channels}`);
-  console.info(`Renderer format: ${streamInfo.sampleFormat}`);
-  console.info(`Renderer encoding type: ${streamInfo.encodingType}`);
-});
-```
 
 ## getStreamInfo
 
@@ -824,36 +412,6 @@ Obtains the stream information of this audio capturer. This API uses a promise t
 | --- | --- |
 | Promise&lt;[AudioStreamInfo](arkts-audio-audio-audiostreaminfo-i.md)&gt; | Promise used to return the stream information. |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioCapturer.getStreamInfo().then((audioParamsGet: audio.AudioStreamInfo) => {
-  console.info('getStreamInfo:');
-  console.info(`sampleFormat: ${audioParamsGet.sampleFormat}`);
-  console.info(`samplingRate: ${audioParamsGet.samplingRate}`);
-  console.info(`channels: ${audioParamsGet.channels}`);
-  console.info(`encodingType: ${audioParamsGet.encodingType}`);
-}).catch((err: BusinessError) => {
-  console.error(`getStreamInfo :ERROR: ${err}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioRenderer.getStreamInfo().then((streamInfo: audio.AudioStreamInfo) => {
-  console.info('Renderer GetStreamInfo:');
-  console.info(`Renderer sampling rate: ${streamInfo.samplingRate}`);
-  console.info(`Renderer channel: ${streamInfo.channels}`);
-  console.info(`Renderer format: ${streamInfo.sampleFormat}`);
-  console.info(`Renderer encoding type: ${streamInfo.encodingType}`);
-}).catch((err: BusinessError) => {
-  console.error(`ERROR: ${err}`);
-});
-```
-
 ## getStreamInfoSync
 
 ```TypeScript
@@ -871,38 +429,6 @@ Obtains the stream information of this audio capturer. This API returns the resu
 | Type | Description |
 | --- | --- |
 | [AudioStreamInfo](arkts-audio-audio-audiostreaminfo-i.md) | Stream information. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let audioParamsGet: audio.AudioStreamInfo = audioCapturer.getStreamInfoSync();
-  console.info(`sampleFormat: ${audioParamsGet.sampleFormat}`);
-  console.info(`samplingRate: ${audioParamsGet.samplingRate}`);
-  console.info(`channels: ${audioParamsGet.channels}`);
-  console.info(`encodingType: ${audioParamsGet.encodingType}`);
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`getStreamInfo :ERROR: ${error}`);
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let streamInfo: audio.AudioStreamInfo = audioRenderer.getStreamInfoSync();
-  console.info(`Renderer sampling rate: ${streamInfo.samplingRate}`);
-  console.info(`Renderer channel: ${streamInfo.channels}`);
-  console.info(`Renderer format: ${streamInfo.sampleFormat}`);
-  console.info(`Renderer encoding type: ${streamInfo.encodingType}`);
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`ERROR: ${error}`);
-}
-```
 
 ## getSupportedNoiseReductionModes
 
@@ -929,20 +455,6 @@ Gets all the supported noise reduction modes for current device platform. Curren
 | Error Code ID | Error Message |
 | --- | --- |
 | [6800301](../errorcode-audio.md#6800301-system-error) | Audio server process died. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let supportedModes: Array<audio.NoiseReductionMode> = audioCapturer.getSupportedNoiseReductionModes();
-  console.info(`getSupportedNoiseReductionModes success: ${supportedModes}`);
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`getSupportedNoiseReductionModes failed. Code: ${error.code}, message: ${error.message}`);
-}
-```
 
 ## off('markReach')
 
@@ -999,7 +511,7 @@ Unsubscribes from the audio capturer state change event. This API uses an asynch
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'stateChange' | Yes | Event type. The event **'stateChange'** is triggered when the listening for audio capturer state change event is canceled. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AudioState&gt; | No | Callback used to return the audio status. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioState](arkts-audio-audio-audiostate-e.md)&gt; | No | Callback used to return the audio status. |
 
 **Error codes:**
 
@@ -1171,7 +683,7 @@ Subscribes to the audio capturer state change event, which is triggered when the
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'stateChange' | Yes | Event type. The event **'stateChange'** is triggered when the state of the audio capturer is changed. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AudioState&gt; | Yes | Callback used to return the audio status. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioState](arkts-audio-audio-audiostate-e.md)&gt; | Yes | Callback used to return the audio status. |
 
 ## on('audioInterrupt')
 
@@ -1309,25 +821,6 @@ Reads the buffer from the audio capturer. This method uses an asynchronous callb
 | isBlockingRead | boolean | Yes | Whether to block the read operation. **true** to block, **false** otherwise. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ArrayBuffer&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the buffer read; otherwise, **err** is an error object. |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioCapturer.getBufferSize().then((bufferSize: number) => {
-  console.info('Succeeded in doing getBufferSize.');
-  audioCapturer.read(bufferSize, true, (err: BusinessError, buffer: ArrayBuffer) => {
-    if (err) {
-      console.error(`Failed to read. Code: ${err.code}, message: ${err.message}`);
-      return;
-    }
-    console.info('Succeeded in doing read.');
-  });
-}).catch((err: BusinessError) => {
-  console.error(`Failed to getBufferSize. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
 ## read
 
 ```TypeScript
@@ -1357,23 +850,6 @@ Reads the buffer. This API uses a promise to return the result.
 | --- | --- |
 | Promise&lt;ArrayBuffer&gt; | Promise used to return the data read from the buffer. |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioCapturer.getBufferSize().then((bufferSize: number) => {
-  console.info('Succeeded in doing getBufferSize.');
-  audioCapturer.read(bufferSize, true).then((buffer: ArrayBuffer) => {
-    console.info('Succeeded in doing read.');
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to read. Code: ${err.code}, message: ${err.message}`);
-  });
-}).catch((err: BusinessError) => {
-  console.error(`Failed to getBufferSize. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
 ## release
 
 ```TypeScript
@@ -1392,45 +868,6 @@ Releases this audio capturer. This API uses an asynchronous callback to return t
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-tonePlayer.release((err: BusinessError) => {
-  if (err) {
-    console.error(`callback call release failed error: ${err.message}`);
-    return;
-  } else {
-    console.info('callback call release success ');
-  }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioCapturer.release((err: BusinessError) => {
-  if (err) {
-    console.error('capturer release failed');
-  } else {
-    console.info('capturer released.');
-  }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioRenderer.release((err: BusinessError) => {
-  if (err) {
-    console.error('Renderer release failed');
-  } else {
-    console.info('Renderer released.');
-  }
-});
-```
-
 ## release
 
 ```TypeScript
@@ -1448,38 +885,6 @@ Releases this audio capturer. This API uses a promise to return the result.
 | Type | Description |
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
-
-**Examples**
-
-```TypeScript
-tonePlayer.release().then(() => {
-  console.info('promise call release');
-}).catch(() => {
-  console.error('promise call release fail');
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioCapturer.release().then(() => {
-  console.info('AudioFrameworkRecLog: ---------RELEASE RECORD---------');
-  console.info('AudioFrameworkRecLog: Capturer release : SUCCESS');
-  console.info(`AudioFrameworkRecLog: AudioCapturer : STATE : ${audioCapturer.state}`);
-}).catch((err: BusinessError) => {
-  console.error(`AudioFrameworkRecLog: Capturer stop: ERROR: ${err}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioRenderer.release().then(() => {
-  console.info('Renderer released successfully');
-}).catch((err: BusinessError) => {
-  console.error(`ERROR: ${err}`);
-});
-```
 
 ## requestPlaybackCaptureStart
 
@@ -1500,18 +905,6 @@ Asynchronously request to start the playback capture stream. This function is no
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PlaybackCaptureStartState](arkts-audio-audio-playbackcapturestartstate-e.md)&gt; | Yes | Callback function used to receive the final result of start request. |
-
-**Examples**
-
-```TypeScript
-audioCapturer.requestPlaybackCaptureStart((state: audio.PlaybackCaptureStartState) => {
-  if (state === audio.PlaybackCaptureStartState.STATE_SUCCESS) {
-    console.info('Succeeded in starting Playback capture.');
-  } else {
-    console.error(`Failed to start Playback capture. State: ${state}.`);
-  }
-});
-```
 
 ## setIndependentAudioSessionStrategy
 
@@ -1547,24 +940,6 @@ Sets the independent audio session strategy and behavior parameters.
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 | [6800103](../errorcode-audio.md#6800103-unsupported-state) | Operation not permit at current state. |
 
-**Examples**
-
-```TypeScript
-let strategy: audio.AudioSessionStrategy = {
-  concurrencyMode: audio.AudioConcurrencyMode.CONCURRENCY_MIX_WITH_OTHERS
-};
-let behavior: number = audio.AudioSessionBehaviorFlags.MUTE_WHEN_INTERRUPTED;
-audioCapturer.setIndependentAudioSessionStrategy(strategy, behavior);
-```
-
-```TypeScript
-let strategy: audio.AudioSessionStrategy = {
-  concurrencyMode: audio.AudioConcurrencyMode.CONCURRENCY_MIX_WITH_OTHERS
-};
-let behavior: number = audio.AudioSessionBehaviorFlags.MUTE_WHEN_INTERRUPTED;
-audioRenderer.setIndependentAudioSessionStrategy(strategy, behavior);
-```
-
 ## setMuteHint
 
 ```TypeScript
@@ -1597,18 +972,6 @@ Set mute hint for this capturer, this method is used as a hint for power optimiz
 | --- | --- |
 | [6800103](../errorcode-audio.md#6800103-unsupported-state) | Operation not permitted at current state, stream is not running. |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioCapturer.setMuteHint(true).then(() => {
-  console.info('setMuteHint Success!');
-}).catch((err: BusinessError) => {
-  console.error(`setMuteHint Fail: ${err}`);
-});
-```
-
 ## setNoiseReductionMode
 
 ```TypeScript
@@ -1637,25 +1000,6 @@ Sets noise reduction mode for current audio capturer. The supported mode should 
 | [6800103](../errorcode-audio.md#6800103-unsupported-state) | Illegal state, audio capturer is in running or released state. |
 | [6800104](../errorcode-audio.md#6800104-unsupported-parameter-value) | The setted mode is not supported. |
 | [6800301](../errorcode-audio.md#6800301-system-error) | Audio server process died. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let supportedModes: Array<audio.NoiseReductionMode> = audioCapturer.getSupportedNoiseReductionModes();
-  if (supportedModes.includes(audio.NoiseReductionMode.PURE_VOCALS)) {
-    audioCapturer.setNoiseReductionMode(audio.NoiseReductionMode.PURE_VOCALS);
-  } else {
-    audioCapturer.setNoiseReductionMode(audio.NoiseReductionMode.FIDELITY);
-  }
-  console.info(`setNoiseReductionMode success: ${audioCapturer.getNoiseReductionMode()}`);
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`setNoiseReductionMode failed. Code: ${error.code}, message: ${error.message}`);
-}
-```
 
 ## setWillMuteWhenInterrupted
 
@@ -1687,18 +1031,6 @@ Sets whether to [mute the current audio recording stream when an audio interrupt
 | --- | --- |
 | [6800103](../errorcode-audio.md#6800103-unsupported-state) | Operation not permitted at current state. |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioCapturer.setWillMuteWhenInterrupted(true).then(() => {
-  console.info('setWillMuteWhenInterrupted Success!');
-}).catch((err: BusinessError) => {
-  console.error(`setWillMuteWhenInterrupted Fail: ${err}`);
-});
-```
-
 ## start
 
 ```TypeScript
@@ -1716,45 +1048,6 @@ Starts this audio capturer to start capturing audio data. This API uses an async
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. If the operation fails, an error object with the following error code is returned:Error code 6800301: indicates abnormal status, focus preemption failure, and abnormal system processing. For details, see system logs. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-tonePlayer.start((err: BusinessError) => {
-  if (err) {
-    console.error(`callback call start failed error: ${err.message}`);
-    return;
-  } else {
-    console.info('callback call start success');
-  }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioCapturer.start((err: BusinessError) => {
-  if (err) {
-    console.error('Capturer start failed.');
-  } else {
-    console.info('Capturer start success.');
-  }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioRenderer.start((err: BusinessError) => {
-  if (err) {
-    console.error('Renderer start failed.');
-  } else {
-    console.info('Renderer start success.');
-  }
-});
-```
 
 ## start
 
@@ -1774,39 +1067,6 @@ Starts this audio capturer to start capturing audio data. This API uses a promis
 | --- | --- |
 | Promise&lt;void&gt; | Promise object, which indicates that the capturer is started successfully. If the operation fails, an error object with the following error code is returned: |
 
-**Examples**
-
-```TypeScript
-tonePlayer.start().then(() => {
-  console.info('promise call start');
-}).catch(() => {
-  console.error('promise call start fail');
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioCapturer.start().then(() => {
-  console.info('Succeeded in doing start.');
-  if (audioCapturer.state == audio.AudioState.STATE_RUNNING) {
-    console.info('AudioFrameworkRecLog: AudioCapturer is in Running State');
-  }
-}).catch((err: BusinessError) => {
-  console.error(`Failed to start. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioRenderer.start().then(() => {
-  console.info('Renderer started');
-}).catch((err: BusinessError) => {
-  console.error(`ERROR: ${err}`);
-});
-```
-
 ## stop
 
 ```TypeScript
@@ -1824,45 +1084,6 @@ Stops this audio capturer, ceasing the input audio stream. This API uses an asyn
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-tonePlayer.stop((err: BusinessError) => {
-  if (err) {
-    console.error(`callback call stop error: ${err.message}`);
-    return;
-  } else {
-    console.error('callback call stop success ');
-  }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioCapturer.stop((err: BusinessError) => {
-  if (err) {
-    console.error('Capturer stop failed');
-  } else {
-    console.info('Capturer stopped.');
-  }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioRenderer.stop((err: BusinessError) => {
-  if (err) {
-    console.error('Renderer stop failed');
-  } else {
-    console.info('Renderer stopped.');
-  }
-});
-```
 
 ## stop
 
@@ -1882,39 +1103,6 @@ Stops this audio capturer, ceasing the input audio stream. This API uses a promi
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
 
-**Examples**
-
-```TypeScript
-tonePlayer.stop().then(() => {
-  console.info('promise call stop finish');
-}).catch(() => {
-  console.error('promise call stop fail');
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioCapturer.stop().then(() => {
-  console.info('Succeeded in doing stop.');
-  if (audioCapturer.state == audio.AudioState.STATE_STOPPED){
-    console.info('AudioFrameworkRecLog: State is Stopped:');
-  }
-}).catch((err: BusinessError) => {
-  console.error(`Failed to stop. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioRenderer.stop().then(() => {
-  console.info('Renderer stopped successfully');
-}).catch((err: BusinessError) => {
-  console.error(`ERROR: ${err}`);
-});
-```
-
 ## state
 
 ```TypeScript
@@ -1923,7 +1111,7 @@ readonly state: AudioState
 
 Audio capturer state.
 
-**Type:** AudioState
+**Type:** [AudioState](arkts-audio-audio-audiostate-e.md)
 
 **Since:** 8
 

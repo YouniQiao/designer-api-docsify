@@ -32,7 +32,7 @@ function getP2pLinkedInfo(): Promise<WifiP2pLinkedInfo>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;WifiP2pLinkedInfo&gt; | Promise对象。表示P2P连接信息。 |
+| Promise&lt;[WifiP2pLinkedInfo](arkts-connectivity-wifi-wifip2plinkedinfo-i.md)&gt; | Promise对象。表示P2P连接信息。 |
 
 **示例**
 
@@ -79,7 +79,7 @@ function getP2pLinkedInfo(callback: AsyncCallback<WifiP2pLinkedInfo>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;WifiP2pLinkedInfo&gt; | 是 | 回调函数。当操作成功时，err为0，data表示P2P连接信息。如果err为非0，表示处理出现错误。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[WifiP2pLinkedInfo](arkts-connectivity-wifi-wifip2plinkedinfo-i.md)&gt; | 是 | 回调函数。当操作成功时，err为0，data表示P2P连接信息。如果err为非0，表示处理出现错误。 |
 
 **示例**
 

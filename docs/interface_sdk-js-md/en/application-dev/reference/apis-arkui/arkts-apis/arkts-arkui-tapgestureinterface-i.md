@@ -4,7 +4,7 @@ TapGesture is used to trigger a tap gesture with one, two, or more taps.
 
 > **NOTE：**
 > 
-> When both number-tap and single-tap gestures are bound to a component with the number-tap gesture bound first, the
+> When both double-tap and single-tap gestures are bound to a component with the double-tap gesture bound first, the
 > single-tap gesture will have a 300 ms delay.
 
 **Inheritance/Implementation:** TapGestureInterface extends GestureInterface<TapGestureInterface>

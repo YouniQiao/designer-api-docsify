@@ -2,7 +2,7 @@
 
 Enumerates the material types in a scene. The material type defines how materials in a scene are rendered.
 
-@enum { number }
+@enum { int }
 
 **Since:** 12
 

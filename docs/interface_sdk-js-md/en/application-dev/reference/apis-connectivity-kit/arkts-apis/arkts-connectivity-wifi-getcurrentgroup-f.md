@@ -28,7 +28,7 @@ Obtains information about the current group.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;WifiP2pGroupInfo&gt; | Returns the current group information. |
+| Promise&lt;[WifiP2pGroupInfo](arkts-connectivity-wifi-wifip2pgroupinfo-i.md)&gt; | Returns the current group information. |
 
 **Examples**
 
@@ -71,7 +71,7 @@ Obtains information about the current group.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;WifiP2pGroupInfo&gt; | Yes |  |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[WifiP2pGroupInfo](arkts-connectivity-wifi-wifip2pgroupinfo-i.md)&gt; | Yes |  |
 
 **Examples**
 

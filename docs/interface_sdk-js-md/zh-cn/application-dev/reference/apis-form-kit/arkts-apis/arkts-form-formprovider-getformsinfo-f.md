@@ -24,8 +24,8 @@ function getFormsInfo(filter: formInfo.FormInfoFilter, callback: AsyncCallback<A
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| filter | formInfo.FormInfoFilter | 是 | 卡片信息过滤器。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;formInfo.FormInfo&gt;&gt; | 是 | 回调函数。返回查询到符合条件的卡片信息。 |
+| filter | [formInfo.FormInfoFilter](arkts-form-forminfo-forminfofilter-i.md) | 是 | 卡片信息过滤器。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[formInfo.FormInfo](arkts-form-forminfo-forminfo-i.md)&gt;&gt; | 是 | 回调函数。返回查询到符合条件的卡片信息。 |
 
 **错误码：**
 
@@ -78,7 +78,7 @@ function getFormsInfo(callback: AsyncCallback<Array<formInfo.FormInfo>>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;formInfo.FormInfo&gt;&gt; | 是 | 回调函数。返回查询到的卡片信息。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[formInfo.FormInfo](arkts-form-forminfo-forminfo-i.md)&gt;&gt; | 是 | 回调函数。返回查询到的卡片信息。 |
 
 **错误码：**
 
@@ -127,13 +127,13 @@ function getFormsInfo(filter?: formInfo.FormInfoFilter): Promise<Array<formInfo.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| filter | formInfo.FormInfoFilter | 否 | 卡片信息过滤器，用于筛选指定条件的卡片信息。当需要获取特定模块或特定名称的卡片时传入此参数进行过滤，当需要获取所有卡片信息时可以不传此参数。不传入时默认为空，返回所有卡片信息。 |
+| filter | [formInfo.FormInfoFilter](arkts-form-forminfo-forminfofilter-i.md) | 否 | 卡片信息过滤器，用于筛选指定条件的卡片信息。当需要获取特定模块或特定名称的卡片时传入此参数进行过滤，当需要获取所有卡片信息时可以不传此参数。不传入时默认为空，返回所有卡片信息。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;formInfo.FormInfo&gt;&gt; | Promise对象。返回查询到符合条件的卡片信息。 |
+| Promise&lt;Array&lt;[formInfo.FormInfo](arkts-form-forminfo-forminfo-i.md)&gt;&gt; | Promise对象。返回查询到符合条件的卡片信息。 |
 
 **错误码：**
 

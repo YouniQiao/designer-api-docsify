@@ -47,41 +47,6 @@ let locale = new intl.Locale();
 let localeID = locale.toString();
 ```
 
-```TypeScript
-import { intl } from '@kit.LocalizationKit';
-
-// Create a DateTimeFormat object using the current system locale ID.
-let formatter: intl.DateTimeFormat = new intl.DateTimeFormat();
-```
-
-```TypeScript
-import { intl } from '@kit.LocalizationKit';
-
-// Create a NumberFormat object using the current system locale ID.
-let formatter: intl.NumberFormat = new intl.NumberFormat();
-```
-
-```TypeScript
-import { intl } from '@kit.LocalizationKit';
-
-// Create a Collator object using the current system locale ID.
-let collator = new intl.Collator();
-```
-
-```TypeScript
-import { intl } from '@kit.LocalizationKit';
-
-// Create a PluralRules object using the current system locale ID.
-let pluralRules = new intl.PluralRules();
-```
-
-```TypeScript
-import { intl } from '@kit.LocalizationKit';
-
-// Create a RelativeTimeFormat object using the current system locale ID.
-let formatter: intl.RelativeTimeFormat = new intl.RelativeTimeFormat();
-```
-
 ## constructor
 
 ```TypeScript
@@ -107,7 +72,7 @@ Creates a **Locale** object.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | locale | string | Yes | Locale information, which consists of the language, script, and country/region. |
-| options | LocaleOptions | No | Options for creating the **Locale** object.<br>**Since:** 12 |
+| options | [LocaleOptions](arkts-localization-intl-localeoptions-i.md) | No | Options for creating the **Locale** object.<br>**Since:** 12 |
 
 **Examples**
 
@@ -143,7 +108,7 @@ Maximizes locale information by supplementing the missing script and country/reg
 
 | Type | Description |
 | --- | --- |
-| Locale | Locale** object with the script and country/region information. |
+| [Locale](arkts-localization-intl-locale-c.md) | Locale** object with the script and country/region information. |
 
 **Examples**
 
@@ -187,7 +152,7 @@ Minimizes locale information by removing the script and country/region informati
 
 | Type | Description |
 | --- | --- |
-| Locale | Locale** object without the script and country/region information. |
+| [Locale](arkts-localization-intl-locale-c.md) | Locale** object without the script and country/region information. |
 
 **Examples**
 

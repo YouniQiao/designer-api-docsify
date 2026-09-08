@@ -4,10 +4,10 @@ Enumerates the immersive modes of the input method.
 
 | Name | Value| Description |  
 | ------------ | -- | ------------------ |  
-| NONE_IMMERSIVE | 0 | The immersive mode is not used.|
-| IMMERSIVE | 1 | The immersive mode is used. Its style is determined by the input method application.|
-| LIGHT_IMMERSIVE | 2 | Immersive style in light mode.|
-| DARK_IMMERSIVE | 3 | Immersive style in dark mode.|
+| [NONE_IMMERSIVE](arkts-ime-inputmethodengine-immersivemode-e.md) | 0 | The immersive mode is not used.|
+| [IMMERSIVE](arkts-ime-inputmethodengine-immersivemode-e.md) | 1 | The immersive mode is used. Its style is determined by the input method application.|
+| [LIGHT_IMMERSIVE](arkts-ime-inputmethodengine-immersivemode-e.md) | 2 | Immersive style in light mode.|
+| [DARK_IMMERSIVE](arkts-ime-inputmethodengine-immersivemode-e.md) | 3 | Immersive style in dark mode.|
 
 **Since:** 15
 

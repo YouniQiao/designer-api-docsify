@@ -42,7 +42,7 @@ goBand: GroupOwnerBand
 
 Group owner band
 
-**Type:** GroupOwnerBand
+**Type:** [GroupOwnerBand](arkts-connectivity-wifi-groupownerband-e.md)
 
 **Since:** 8
 

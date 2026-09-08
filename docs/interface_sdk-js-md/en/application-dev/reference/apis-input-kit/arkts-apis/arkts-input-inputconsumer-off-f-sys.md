@@ -25,8 +25,8 @@ Disables listening for system hotkey change events. This API uses an asynchronou
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'key' | Yes | Event type. Currently, only **key** is supported. |
-| keyOptions | KeyOptions | Yes | Combination key options. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;KeyOptions&gt; | No | Callback to unregister. If this parameter is not specified, listening will be disabled for all callbacks registered by the current application. |
+| keyOptions | [KeyOptions](arkts-input-inputconsumer-keyoptions-i-sys.md) | Yes | Combination key options. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[KeyOptions](arkts-input-inputconsumer-keyoptions-i-sys.md)&gt; | No | Callback to unregister. If this parameter is not specified, listening will be disabled for all callbacks registered by the current application. |
 
 **Error codes:**
 

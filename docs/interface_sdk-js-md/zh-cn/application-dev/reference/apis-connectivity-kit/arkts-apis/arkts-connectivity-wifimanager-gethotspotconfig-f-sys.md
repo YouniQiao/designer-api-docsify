@@ -26,7 +26,7 @@ function getHotspotConfig(): HotspotConfig
 
 | 类型 | 说明 |
 | --- | --- |
-| HotspotConfig | 热点的配置信息。 |
+| [HotspotConfig](arkts-connectivity-wifimanager-hotspotconfig-i-sys.md) | 热点的配置信息。 |
 
 **错误码：**
 

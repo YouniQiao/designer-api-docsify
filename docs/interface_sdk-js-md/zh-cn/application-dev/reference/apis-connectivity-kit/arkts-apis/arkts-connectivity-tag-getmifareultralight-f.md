@@ -30,7 +30,7 @@ function getMifareUltralight(tagInfo: TagInfo): MifareUltralightTag
 
 | 类型 | 说明 |
 | --- | --- |
-| MifareUltralightTag | MIFARE Ultralight类型Tag对象，通过该对象访问MIFARE Ultralight类型的相关接口。 |
+| [MifareUltralightTag](arkts-connectivity-tag-mifareultralighttag-t.md) | MIFARE Ultralight类型Tag对象，通过该对象访问MIFARE Ultralight类型的相关接口。 |
 
 **错误码：**
 

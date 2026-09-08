@@ -40,7 +40,7 @@ static batchQueryLastSyncInfo(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | accountId | string | 是 | 已登录的云账号ID。 |
-| bundleInfos | Array&lt;BundleInfo&gt; | 是 | 批量查询的应用信息数组。取值范围：数组长度为[1, 30]，超过该范围返回14800001错误码。 |
+| bundleInfos | Array&lt;[BundleInfo](arkts-arkdata-clouddata-bundleinfo-i-sys.md)&gt; | 是 | 批量查询的应用信息数组。取值范围：数组长度为[1, 30]，超过该范围返回14800001错误码。 |
 
 **返回值：**
 
@@ -504,8 +504,8 @@ static cloudSync(
 | --- | --- | --- | --- |
 | bundleName | string | 是 | 待端云同步数据的应用包名。 |
 | storeId | string | 是 | 待端云同步的数据库名。 |
-| mode | relationalStore.SyncMode | 是 | 端云同步类型。 |
-| progress | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;relationalStore.ProgressDetails&gt; | 是 | 同步进度回调。返回ProgressDetails实例对象。 |
+| mode | [relationalStore.SyncMode](arkts-arkdata-relationalstore-syncmode-e.md) | 是 | 端云同步类型。 |
+| progress | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[relationalStore.ProgressDetails](arkts-arkdata-relationalstore-progressdetails-i.md)&gt; | 是 | 同步进度回调。返回ProgressDetails实例对象。 |
 
 **返回值：**
 
@@ -568,9 +568,9 @@ static cloudSyncEx(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| bundleInfo | BundleInfo | 是 | 应用包信息配置。BundleInfo的实例对象。 |
-| config | relationalStore.CloudSyncConfig | 是 | 云同步配置。 |
-| progress | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;relationalStore.ProgressDetails&gt; | 是 | 进度回调函数。返回ProgressDetails实例对象。 |
+| bundleInfo | [BundleInfo](arkts-arkdata-clouddata-bundleinfo-i-sys.md) | 是 | 应用包信息配置。BundleInfo的实例对象。 |
+| config | [relationalStore.CloudSyncConfig](arkts-arkdata-relationalstore-cloudsyncconfig-i.md) | 是 | 云同步配置。 |
+| progress | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[relationalStore.ProgressDetails](arkts-arkdata-relationalstore-progressdetails-i.md)&gt; | 是 | 进度回调函数。返回ProgressDetails实例对象。 |
 
 **返回值：**
 
@@ -859,7 +859,7 @@ static notifyDataChange(extInfo: ExtraData, userId?: number): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| extInfo | ExtraData | 是 | 透传数据，包含通知数据变更后的应用信息。 |
+| extInfo | [ExtraData](arkts-arkdata-clouddata-extradata-i-sys.md) | 是 | 透传数据，包含通知数据变更后的应用信息。 |
 | userId | number | 否 | 表示用户账号ID。此参数是可选的，默认值是当前用户账号ID，如果指定了此参数，则该值必须是系统中现有的用户账号ID。 |
 
 **返回值：**
@@ -919,7 +919,7 @@ static notifyDataChange(extInfo: ExtraData, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| extInfo | ExtraData | 是 | 透传数据，包含通知数据变更后的应用信息。 |
+| extInfo | [ExtraData](arkts-arkdata-clouddata-extradata-i-sys.md) | 是 | 透传数据，包含通知数据变更后的应用信息。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当数据变更通知成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
@@ -974,7 +974,7 @@ static notifyDataChange(extInfo: ExtraData, userId: number, callback: AsyncCallb
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| extInfo | ExtraData | 是 | 透传数据，包含通知数据变更后的应用信息。 |
+| extInfo | [ExtraData](arkts-arkdata-clouddata-extradata-i-sys.md) | 是 | 透传数据，包含通知数据变更后的应用信息。 |
 | userId | number | 是 | 用户账号ID，指系统中现有的用户账号ID。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当数据变更通知成功，err为undefined，否则为错误对象。 |
 
@@ -1147,7 +1147,7 @@ static offSyncInfoChanged(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| bundleInfos | Array&lt;BundleInfo&gt; | 是 | 取消订阅的应用信息数组。取值范围：数组长度为[1, 30]，超过该范围返回14800001错误码。取消订阅时应用信息的storeId需要与订阅时保持一致。 |
+| bundleInfos | Array&lt;[BundleInfo](arkts-arkdata-clouddata-bundleinfo-i-sys.md)&gt; | 是 | 取消订阅的应用信息数组。取值范围：数组长度为[1, 30]，超过该范围返回14800001错误码。取消订阅时应用信息的storeId需要与订阅时保持一致。 |
 | progress | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, Record&lt;string, [SyncInfo](arkts-arkdata-clouddata-syncinfo-i-sys.md)&gt;&gt;&gt; | 否 | 回调函数。如果传入此参数，则取消订阅指定的回调函数；如果不传此参数，则取消该应用的所有订阅。 |
 
 **错误码：**
@@ -1223,7 +1223,7 @@ static onSyncInfoChanged(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| bundleInfos | Array&lt;BundleInfo&gt; | 是 | 订阅的应用信息数组。取值范围：数组长度为[1, 30]，超过该范围返回14800001错误码。 |
+| bundleInfos | Array&lt;[BundleInfo](arkts-arkdata-clouddata-bundleinfo-i-sys.md)&gt; | 是 | 订阅的应用信息数组。取值范围：数组长度为[1, 30]，超过该范围返回14800001错误码。 |
 | progress | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, Record&lt;string, [SyncInfo](arkts-arkdata-clouddata-syncinfo-i-sys.md)&gt;&gt;&gt; | 是 | 回调函数。返回应用包名以及对应数据库的同步信息结果集。外层Record的键为应用包名，内层Record的键为数据库名。 |
 
 **错误码：**
@@ -1398,7 +1398,7 @@ static setGlobalCloudStrategy(strategy: StrategyType, param?: Array<commonType.V
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | strategy | [StrategyType](arkts-arkdata-clouddata-strategytype-e.md) | 是 | 配置的策略类型。 |
-| param | Array&lt;commonType.ValueType&gt; | 否 | 策略参数。不填写时默认为空，默认取消所有配置。 |
+| param | Array&lt;[commonType.ValueType](arkts-arkdata-commontype-valuetype-t.md)&gt; | 否 | 策略参数。不填写时默认为空，默认取消所有配置。 |
 
 **返回值：**
 
@@ -1449,7 +1449,7 @@ static stopCloudSync(bundleInfos: Array<BundleInfo>): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| bundleInfos | Array&lt;BundleInfo&gt; | 是 | 应用包信息配置数组。取值范围：数组长度为[1, 30]，超过该范围返回14800001错误码。 |
+| bundleInfos | Array&lt;[BundleInfo](arkts-arkdata-clouddata-bundleinfo-i-sys.md)&gt; | 是 | 应用包信息配置数组。取值范围：数组长度为[1, 30]，超过该范围返回14800001错误码。 |
 
 **返回值：**
 

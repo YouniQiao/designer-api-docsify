@@ -34,7 +34,7 @@ albumSubtype: AlbumSubtype
 
 Subtype of the album.
 
-**Type:** AlbumSubtype
+**Type:** [AlbumSubtype](arkts-medialibrary-photoaccesshelper-albumsubtype-e.md)
 
 **Since:** 20
 
@@ -48,7 +48,7 @@ albumType: AlbumType
 
 Type of the album.
 
-**Type:** AlbumType
+**Type:** [AlbumType](arkts-medialibrary-photoaccesshelper-albumtype-e.md)
 
 **Since:** 20
 

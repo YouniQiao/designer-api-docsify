@@ -32,20 +32,6 @@ Obtains a list of configuration level directories, in ascending order of priorit
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:  1.Mandatory parameters are left unspecified;  2.Incorrect parameter types. |
 
-**Examples**
-
-```TypeScript
-import { configPolicy, BusinessError } from '@kit.BasicServicesKit';
-
-configPolicy.getCfgDirList((err: BusinessError, data: Array<string>) => {
-  if (err == null) {
-    console.info('data is ' + data);
-  } else {
-    console.error('err: ' + err.code + ', ' + err.message);
-  }
-});
-```
-
 
 ## getCfgDirList
 
@@ -66,22 +52,3 @@ Obtains a list of configuration level directories, in ascending order of priorit
 | Type | Description |
 | --- | --- |
 | Promise&lt;Array&lt;string&gt;&gt; | Promise used to return the list of configuration level directories. |
-
-**Examples**
-
-```TypeScript
-import { configPolicy, BusinessError } from '@kit.BasicServicesKit';
-
-async function fetchCfgDirList() {
-  try {
-    let value: Array<string> = await configPolicy.getCfgDirList();
-    console.info('value is ' + value);
-  } catch (error) {
-    let code = (error as BusinessError).code;
-    let message = (error as BusinessError).message;
-    console.error('error:' + code + ', ' + message);
-  }
-}
-
-fetchCfgDirList();
-```

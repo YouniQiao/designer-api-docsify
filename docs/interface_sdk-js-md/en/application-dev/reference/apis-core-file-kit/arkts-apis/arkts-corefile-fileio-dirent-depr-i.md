@@ -40,11 +40,6 @@ Checks whether this directory entry is a block special file. A block special fil
 **Examples**
 
 ```TypeScript
-let filePath = pathDir + "/test.txt";
-let isBLockDevice = fileio.statSync(filePath).isBlockDevice();
-```
-
-```TypeScript
 let dir = fileio.opendirSync(pathDir);
 let isBLockDevice = dir.readSync().isBlockDevice();
 ```
@@ -72,11 +67,6 @@ Checks whether this directory entry is a character special file. A character spe
 | boolean | Returns **true** if it is a character special file; returns **false** otherwise. |
 
 **Examples**
-
-```TypeScript
-let filePath = pathDir + "/test.txt";
-let isCharacterDevice = fileio.statSync(filePath).isCharacterDevice();
-```
 
 ```TypeScript
 let dir = fileio.opendirSync(pathDir);
@@ -108,11 +98,6 @@ Checks whether this directory entry is a directory.
 **Examples**
 
 ```TypeScript
-let dirPath = pathDir + "/test";
-let isDirectory = fileio.statSync(dirPath).isDirectory();
-```
-
-```TypeScript
 let dir = fileio.opendirSync(pathDir);
 let isDirectory = dir.readSync().isDirectory();
 ```
@@ -140,11 +125,6 @@ Checks whether this directory entry is a named pipe (also called FIFO). Named pi
 | boolean | Returns **true** if it is a named pipe; returns **false** otherwise. |
 
 **Examples**
-
-```TypeScript
-let filePath = pathDir + "/test.txt";
-let isFIFO = fileio.statSync(filePath).isFIFO();
-```
 
 ```TypeScript
 let dir = fileio.opendirSync(pathDir);
@@ -176,11 +156,6 @@ Checks whether this directory entry is a regular file.
 **Examples**
 
 ```TypeScript
-let filePath = pathDir + "/test.txt";
-let isFile = fileio.statSync(filePath).isFile();
-```
-
-```TypeScript
 let dir = fileio.opendirSync(pathDir);
 let isFile = dir.readSync().isFile();
 ```
@@ -210,11 +185,6 @@ Checks whether this directory entry is a socket.
 **Examples**
 
 ```TypeScript
-let filePath = pathDir + "/test.txt";
-let isSocket = fileio.statSync(filePath).isSocket();
-```
-
-```TypeScript
 let dir = fileio.opendirSync(pathDir);
 let isSocket = dir.readSync().isSocket();
 ```
@@ -242,11 +212,6 @@ Checks whether this directory entry is a symbolic link.
 | boolean | Returns **true** if it is a symbolic link; returns **false** otherwise. |
 
 **Examples**
-
-```TypeScript
-let filePath = pathDir + "/test";
-let isSymbolicLink = fileio.statSync(filePath).isSymbolicLink();
-```
 
 ```TypeScript
 let dir = fileio.opendirSync(pathDir);

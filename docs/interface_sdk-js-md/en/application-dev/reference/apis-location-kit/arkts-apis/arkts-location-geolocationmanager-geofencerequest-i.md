@@ -20,7 +20,7 @@ geofence: Geofence
 
 Circular fence information.
 
-**Type:** Geofence
+**Type:** [Geofence](arkts-location-geolocationmanager-geofence-i.md)
 
 **Since:** 9
 
@@ -34,7 +34,7 @@ scenario: LocationRequestScenario
 
 Indicate the user scenario.
 
-**Type:** LocationRequestScenario
+**Type:** [LocationRequestScenario](arkts-location-geolocationmanager-locationrequestscenario-e.md)
 
 **Since:** 9
 

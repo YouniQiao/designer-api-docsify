@@ -22,11 +22,13 @@ function getPortList(): Readonly<SerialPort>[]
 
 | 类型 | 说明 |
 | --- | --- |
-| Readonly&lt;SerialPort&gt;[] | 返回可用串口设备的列表，每个元素包含串口的端口号和设备名称等属性信息。可用于获取当前系统中的所有串口设备，以便用户选择需要进行操作的串口。 |
+| Readonly&lt;[SerialPort](arkts-basicservices-serialmanager-serialport-i.md)&gt;[] | 返回可用串口设备的列表，每个元素包含串口的端口号和设备名称等属性信息。可用于获取当前系统中的所有串口设备，以便用户选择需要进行操作的串口。 |
 
 **示例**
 
 > 说明：
+> 
+> 以下示例代码只是调用getPortList接口的必要流程，需要放入具体的方法中执行。实际调用时，设备开发者需要遵循设备相关协议进行调用。
 
 ```TypeScript
 import { JSON } from '@kit.ArkTS';

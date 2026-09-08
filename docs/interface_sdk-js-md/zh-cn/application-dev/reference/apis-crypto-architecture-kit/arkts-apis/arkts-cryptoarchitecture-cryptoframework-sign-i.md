@@ -358,8 +358,8 @@ sign(data: DataBlob, callback: AsyncCallback<DataBlob>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| data | DataBlob | 是 | 待签名的数据。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DataBlob&gt; | 是 | 回调函数。当签名成功时，err为undefined，data为获取到的签名结果DataBlob；否则为错误对象。 |
+| data | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | 是 | 待签名的数据。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md)&gt; | 是 | 回调函数。当签名成功时，err为undefined，data为获取到的签名结果DataBlob；否则为错误对象。 |
 
 **错误码：**
 
@@ -391,8 +391,8 @@ sign(data: DataBlob | null, callback: AsyncCallback<DataBlob>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| data | DataBlob \| null | 是 | 传入的消息。API 10之前只支持DataBlob， API 10之后增加支持null。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DataBlob&gt; | 是 | 回调函数。当签名成功时，err为undefined，data为获取到的签名结果DataBlob；否则为错误对象。 |
+| data | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) \| null | 是 | 传入的消息。API 10之前只支持DataBlob， API 10之后增加支持null。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md)&gt; | 是 | 回调函数。当签名成功时，err为undefined，data为获取到的签名结果DataBlob；否则为错误对象。 |
 
 **错误码：**
 
@@ -424,13 +424,13 @@ sign(data: DataBlob): Promise<DataBlob>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| data | DataBlob | 是 | 待签名的数据。 |
+| data | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | 是 | 待签名的数据。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;DataBlob&gt; | Promise对象，返回签名结果。 |
+| Promise&lt;[DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md)&gt; | Promise对象，返回签名结果。 |
 
 **错误码：**
 
@@ -462,13 +462,13 @@ sign(data: DataBlob | null): Promise<DataBlob>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| data | DataBlob \| null | 是 | 传入的消息。 |
+| data | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) \| null | 是 | 传入的消息。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;DataBlob&gt; | Promise对象，返回签名结果。 |
+| Promise&lt;[DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md)&gt; | Promise对象，返回签名结果。 |
 
 **错误码：**
 
@@ -500,13 +500,13 @@ signSync(data: DataBlob | null): DataBlob
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| data | DataBlob \| null | 是 | 传入的消息。 |
+| data | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) \| null | 是 | 传入的消息。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| DataBlob | 返回签名结果。 |
+| [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | 返回签名结果。 |
 
 **错误码：**
 
@@ -748,7 +748,7 @@ update(data: DataBlob, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| data | DataBlob | 是 | 传入的消息。 |
+| data | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | 是 | 传入的消息。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当签名更新成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
@@ -799,7 +799,7 @@ update(data: DataBlob): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| data | DataBlob | 是 | 传入的消息。 |
+| data | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | 是 | 传入的消息。 |
 
 **返回值：**
 
@@ -855,7 +855,7 @@ updateSync(data: DataBlob): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| data | DataBlob | 是 | 传入的消息。 |
+| data | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | 是 | 传入的消息。 |
 
 **错误码：**
 

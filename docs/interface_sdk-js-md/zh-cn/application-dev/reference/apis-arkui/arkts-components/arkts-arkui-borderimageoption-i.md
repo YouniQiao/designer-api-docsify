@@ -175,7 +175,7 @@ source?: string | Resource | LinearGradient
 
 边框图源仅适用于容器组件，如Row、Column、Flex，在非容器组件上使用会失效。
 
-**类型：** string \| Resource \| [LinearGradient](arkts-arkui-lineargradient-i.md)
+**类型：** string \| [Resource](../arkts-apis/arkts-arkui-resource-t.md) \| [LinearGradient](arkts-arkui-lineargradient-i.md)
 
 **起始版本：** 11
 

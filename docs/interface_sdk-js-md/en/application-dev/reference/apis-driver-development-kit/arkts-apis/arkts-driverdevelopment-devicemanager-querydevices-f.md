@@ -30,7 +30,7 @@ Queries the list of peripheral devices. If the device has no peripheral device c
 
 | Type | Description |
 | --- | --- |
-| Array&lt;Readonly&lt;Device&gt;&gt; | List of peripheral devices obtained. |
+| Array&lt;Readonly&lt;[Device](arkts-driverdevelopment-devicemanager-device-i.md)&gt;&gt; | List of peripheral devices obtained. |
 
 **Error codes:**
 

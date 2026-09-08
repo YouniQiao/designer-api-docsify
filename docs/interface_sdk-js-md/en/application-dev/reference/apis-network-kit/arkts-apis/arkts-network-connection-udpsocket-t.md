@@ -10,4 +10,4 @@ Defines a **UDPSocket** object, which can be created using [socket.constructUDPS
 
 **System capability:** SystemCapability.Communication.NetStack
 
-**Type:** socket.UDPSocket
+**Type:** [socket.UDPSocket](arkts-network-socket-udpsocket-i.md)

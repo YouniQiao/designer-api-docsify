@@ -36,7 +36,7 @@ function capture(options?: CaptureOption): Promise<image.PixelMap>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;image.PixelMap&gt; | Promise used to return a PixelMap object. |
+| Promise&lt;[image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)&gt; | Promise used to return a PixelMap object. |
 
 **错误码：**
 

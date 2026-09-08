@@ -63,7 +63,7 @@ Unsubscribe Wi-Fi hotspot sta join events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'hotspotStaJoin' | Yes | event name. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;StationInfo&gt; | No | the callback of on |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[StationInfo](arkts-connectivity-wifi-stationinfo-i-sys.md)&gt; | No | the callback of on |
 
 
 ## off('hotspotStaLeave')
@@ -91,4 +91,4 @@ Unsubscribe Wi-Fi hotspot sta leave events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'hotspotStaLeave' | Yes | event name. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;StationInfo&gt; | No | the callback of on |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[StationInfo](arkts-connectivity-wifi-stationinfo-i-sys.md)&gt; | No | the callback of on |

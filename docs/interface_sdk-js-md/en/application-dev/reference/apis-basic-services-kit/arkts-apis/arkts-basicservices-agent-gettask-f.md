@@ -30,7 +30,7 @@ Obtains task information based on the task ID. This API uses a promise to return
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Task&gt; | Promise used to return the created task. |
+| Promise&lt;[Task](arkts-basicservices-agent-task-i.md)&gt; | Promise used to return the created task. |
 
 **Error codes:**
 

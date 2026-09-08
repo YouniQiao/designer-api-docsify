@@ -2,7 +2,7 @@
 
 光源类型枚举。
 
-@enum { number }
+@enum { int }
 
 **起始版本：** 12
 

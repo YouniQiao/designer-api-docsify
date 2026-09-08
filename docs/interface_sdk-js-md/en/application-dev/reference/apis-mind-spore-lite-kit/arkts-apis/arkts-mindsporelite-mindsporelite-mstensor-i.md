@@ -166,7 +166,7 @@ dtype: DataType
 
 The data type of the tensor.
 
-**Type:** DataType
+**Type:** [DataType](arkts-mindsporelite-mindsporelite-datatype-e.md)
 
 **Since:** 10
 

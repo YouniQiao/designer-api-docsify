@@ -23,7 +23,7 @@ bindSelectionMenu(spanType: Optional<TextSpanType>, content: Optional<CustomBuil
 
 Bind to the selection menu.
 
-<p>&lt;strong&gt;NOTE&lt;/strong&gt;: The duration required for a number-press gesture is 600 ms for bindSelectionMenu and 800 ms for bindContextMenu. When both bindSelectionMenu and bindContextMenu are set and both are configured to be triggered by a number-press gesture, bindSelectionMenu is triggered first. If the custom menu is too number, embed a Scroll component to prevent the keyboard from being blocked. </p>
+<p>&lt;strong&gt;NOTE&lt;/strong&gt;: The duration required for a long-press gesture is 600 ms for bindSelectionMenu and 800 ms for bindContextMenu. When both bindSelectionMenu and bindContextMenu are set and both are configured to be triggered by a long-press gesture, bindSelectionMenu is triggered first. If the custom menu is too long, embed a Scroll component to prevent the keyboard from being blocked. </p>
 
 **Since:** 26.0.0
 
@@ -96,7 +96,7 @@ Set whether to allow copy and where data can be copied.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;CopyOptions&gt; | Yes | copy option for selected text. Default value is CopyOptions.InApp. |
+| value | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[CopyOptions](arkts-arkui-copyoptions-e.md)&gt; | Yes | copy option for selected text. Default value is CopyOptions.InApp. |
 
 **Return value:**
 

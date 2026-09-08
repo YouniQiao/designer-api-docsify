@@ -20,7 +20,7 @@ CACert?: X509Cert
 
 信任的CA证书。如果配置了CACert，则校验证书链时只使用CACert，不再使用CAPubKey和CASubject。
 
-**类型：** X509Cert
+**类型：** [X509Cert](arkts-devicecertificate-cert-x509cert-i.md)
 
 **起始版本：** 11
 

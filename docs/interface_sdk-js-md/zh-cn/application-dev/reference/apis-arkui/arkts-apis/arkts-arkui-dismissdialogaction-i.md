@@ -19,7 +19,7 @@ dismiss: Callback<void>
 
 Dialog关闭回调函数。开发者需要退出时调用，不需要退出时无需调用。
 
-**类型：** Callback&lt;void&gt;
+**类型：** [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;void&gt;
 
 **起始版本：** 12
 

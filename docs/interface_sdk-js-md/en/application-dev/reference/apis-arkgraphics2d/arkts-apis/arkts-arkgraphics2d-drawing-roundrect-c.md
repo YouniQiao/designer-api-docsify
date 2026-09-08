@@ -37,17 +37,7 @@ Copies a rounded rectangle.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| roundRect | RoundRect | Yes | Rounded rectangle to be copied. |
-
-**Examples**
-
-```TypeScript
-import { common2D, drawing } from '@kit.ArkGraphics2D';
-
-let rect: common2D.Rect = {left : 100, top : 100, right : 500, bottom : 300};
-let roundRect = new drawing.RoundRect(rect, 50, 50);
-let roundRect2 = new drawing.RoundRect(roundRect);
-```
+| roundRect | [RoundRect](arkts-arkgraphics2d-drawing-roundrect-c.md) | Yes | Rounded rectangle to be copied. |
 
 ## constructor
 
@@ -65,7 +55,7 @@ A constructor used to create a **RoundRect** object. A rounded rectangle is crea
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rect | common2D.Rect | Yes | Rectangle that encloses the rounded rectangle to create. |
+| rect | [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) | Yes | Rectangle that encloses the rounded rectangle to create. |
 | xRadii | number | Yes | Radius of the rounded corner on the X axis. The value is a floating point number. A negative number is invalid. |
 | yRadii | number | Yes | Radius of the rounded corner on the Y axis. The value is a floating point number. A negative number is invalid. |
 
@@ -74,15 +64,6 @@ A constructor used to create a **RoundRect** object. A rounded rectangle is crea
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
-
-**Examples**
-
-```TypeScript
-import { common2D, drawing } from '@kit.ArkGraphics2D';
-
-let rect: common2D.Rect = {left : 100, top : 100, right : 500, bottom : 300};
-let roundRect = new drawing.RoundRect(rect, 50, 50);
-```
 
 ## getCorner
 
@@ -106,24 +87,13 @@ Obtains the radii of the specified rounded corner in this rounded rectangle.
 
 | Type | Description |
 | --- | --- |
-| common2D.Point | Point. The horizontal coordinate indicates the radius of the rounded corner on the X axis, and the vertical coordinate indicates the radius on the Y axis. |
+| [common2D.Point](arkts-arkgraphics2d-common2d-point-i.md) | Point. The horizontal coordinate indicates the radius of the rounded corner on the X axis, and the vertical coordinate indicates the radius on the Y axis. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
-
-**Examples**
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-let roundRect : drawing.RoundRect = new drawing.RoundRect({left: 0, top: 0, right: 300, bottom: 300}, 50, 50);
-let cornerRadius = roundRect.getCorner(drawing.CornerPos.BOTTOM_LEFT_POS);
-console.info("getCorner---"+cornerRadius.x)
-console.info("getCorner---"+cornerRadius.y)
-```
 
 ## offset
 
@@ -150,41 +120,6 @@ Translates this rounded rectangle by an offset along the X axis and Y axis.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
 
-**Examples**
-
-```TypeScript
-import { RenderNode } from '@kit.ArkUI';
-import { drawing } from '@kit.ArkGraphics2D';
-
-class DrawingRenderNode extends RenderNode {
-  draw(context: DrawContext) {
-    const canvas = context.canvas;
-    const pen = new drawing.Pen();
-    pen.setColor({
-      alpha: 255,
-      red: 255,
-      green: 0,
-      blue: 0
-    });
-    pen.setStrokeWidth(10);
-    canvas.attachPen(pen);
-    let region = new drawing.Region();
-    region.setRect(100, 100, 400, 400);
-    region.offset(10, 20);
-    canvas.drawPoint(200, 200);
-    canvas.drawRegion(region);
-    canvas.detachPen();
-  }
-}
-```
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-let roundRect : drawing.RoundRect = new drawing.RoundRect({left: 0, top: 0, right: 300, bottom: 300}, 50, 50);
-roundRect.offset(100, 100);
-```
-
 ## setCorner
 
 ```TypeScript
@@ -210,12 +145,3 @@ Sets the radii of the specified rounded corner in this rounded rectangle.
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
-
-**Examples**
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-let roundRect : drawing.RoundRect = new drawing.RoundRect({left: 0, top: 0, right: 300, bottom: 300}, 50, 50);
-roundRect.setCorner(drawing.CornerPos.TOP_LEFT_POS, 150, 150);
-```

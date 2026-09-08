@@ -77,7 +77,7 @@ Sets the opacity of the fill area. This attribute can be dynamically set using a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number \| string \| Resource | Yes | Opacity of the fill area.   **NOTE：**For the number type, the value range is [0.0, 1.0]. A value less than 0.0 is treated as **0.0**. A value greater than 1.0 is treated as **1.0**. Any other invalid value is treated as **1.0**.For the string type, the value is a character string of the number type. The value range is the same as that of the number type.For the Resource type, the value is a character string from the system resource or application resource. The value range is the same as that of the number type.Default value: **1.0 |
+| value | number \| string \| [Resource](../arkts-apis/arkts-arkui-resource-t.md) | Yes | Opacity of the fill area.   **NOTE：**For the number type, the value range is [0.0, 1.0]. A value less than 0.0 is treated as **0.0**. A value greater than 1.0 is treated as **1.0**. Any other invalid value is treated as **1.0**.For the string type, the value is a character string of the number type. The value range is the same as that of the number type.For the Resource type, the value is a character string from the system resource or application resource. The value range is the same as that of the number type.Default value: **1.0 |
 
 ## mesh
 
@@ -265,7 +265,7 @@ Sets the stroke opacity. This attribute can be dynamically set using attributeMo
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number \| string \| Resource | Yes | Stroke opacity.Default value: opacity set by the [stroke](../../../reference/apis-arkui/arkui-ts/ts-drawing-components-shape.md#stroke) API Invalid value **NaN** is treated as **0.0**, while invalid values **undefined**, **null**, and **Infinity** are treated as **1.0**. |
+| value | number \| string \| [Resource](../arkts-apis/arkts-arkui-resource-t.md) | Yes | Stroke opacity.Default value: opacity set by the [stroke](../../../reference/apis-arkui/arkui-ts/ts-drawing-components-shape.md#stroke) API Invalid value **NaN** is treated as **0.0**, while invalid values **undefined**, **null**, and **Infinity** are treated as **1.0**. |
 
 ## strokeWidth
 

@@ -32,4 +32,4 @@ function getNfcVTag(tagInfo: TagInfo): NfcVTag
 
 | 类型 | 说明 |
 | --- | --- |
-| NfcVTag | NFC V类型Tag对象。 |
+| [NfcVTag](arkts-connectivity-tag-nfcvtag-t.md) | NFC V类型Tag对象。 |

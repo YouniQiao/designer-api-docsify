@@ -70,7 +70,7 @@ region?: Rect
 
 Current position and size of the system bar. The default value is {0,0,0,0}.
 
-**Type:** Rect
+**Type:** [Rect](arkts-arkui-window-rect-i.md)
 
 **Since:** 8
 
@@ -86,7 +86,7 @@ type: WindowType
 
 Type of the system bar whose properties are changed. Only the status bar and navigation bar are supported.
 
-**Type:** WindowType
+**Type:** [WindowType](arkts-arkui-window-windowtype-e.md)
 
 **Since:** 8
 

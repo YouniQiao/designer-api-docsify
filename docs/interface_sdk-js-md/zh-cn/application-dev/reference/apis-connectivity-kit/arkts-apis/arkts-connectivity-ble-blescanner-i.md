@@ -144,8 +144,8 @@ startScan(filters: Array<ScanFilter>, options?: ScanOptions): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| filters | Array&lt;ScanFilter&gt; | 是 | 扫描BLE广播的过滤条件集合，符合过滤条件的设备会被上报。   - 若该参数设置为null，将扫描所有可发现的周边BLE设备，但是不建议使用此方式，可能扫描到非预期设备，并增加功耗。   - 围栏模式下（[ScanReportMode](arkts-connectivity-ble-scanreportmode-e.md)设置为FENCE_SENSITIVITY_LOW或FENCE_SENSITIVITY_HIGH时），该参数不可   设置为null，需传入非空过滤器。   - 过滤器资源为所有应用共享，建议单个应用使用过滤器数量不超过3个，否则过滤器资源占满将导致开启扫描失败，返回2900009错误码。 |
-| options | ScanOptions | 否 | 扫描的配置参数。不填写时使用默认配置。 |
+| filters | Array&lt;[ScanFilter](arkts-connectivity-ble-scanfilter-i.md)&gt; | 是 | 扫描BLE广播的过滤条件集合，符合过滤条件的设备会被上报。   - 若该参数设置为null，将扫描所有可发现的周边BLE设备，但是不建议使用此方式，可能扫描到非预期设备，并增加功耗。   - 围栏模式下（[ScanReportMode](arkts-connectivity-ble-scanreportmode-e.md)设置为FENCE_SENSITIVITY_LOW或FENCE_SENSITIVITY_HIGH时），该参数不可   设置为null，需传入非空过滤器。   - 过滤器资源为所有应用共享，建议单个应用使用过滤器数量不超过3个，否则过滤器资源占满将导致开启扫描失败，返回2900009错误码。 |
+| options | [ScanOptions](arkts-connectivity-ble-scanoptions-i.md) | 否 | 扫描的配置参数。不填写时使用默认配置。 |
 
 **返回值：**
 

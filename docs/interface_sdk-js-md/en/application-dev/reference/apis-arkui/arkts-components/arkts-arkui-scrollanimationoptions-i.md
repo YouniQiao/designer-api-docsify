@@ -41,7 +41,7 @@ curve?: Curve | ICurve
 
 Scrolling curve.
 
-**Type:** Curve \| ICurve
+**Type:** [Curve](../arkts-apis/arkts-arkui-curve-e.md) \| [ICurve](arkts-arkui-icurve-i.md)
 
 **Default:** Curve.Ease
 

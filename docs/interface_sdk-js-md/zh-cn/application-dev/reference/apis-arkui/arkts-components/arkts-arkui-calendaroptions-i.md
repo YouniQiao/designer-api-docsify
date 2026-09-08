@@ -92,7 +92,7 @@ hintRadius?: number | Resource
 > 当hintRadius为0.0时表示底板样式为直角矩形；当hintRadius为(0.0, 16.0)时，底板样式为圆角矩形；当hintRadius为16.0时，
 > 底板样式为圆形；当hintRadius为负数或大于16.0时，恢复为默认值16.0。
 
-**类型：** number \| Resource
+**类型：** number \| [Resource](../arkts-apis/arkts-arkui-resource-t.md)
 
 **默认值：** 16.0
 

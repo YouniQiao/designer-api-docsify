@@ -50,7 +50,7 @@ direction?: Direction
 
 值为undefined时，按默认值处理。
 
-**类型：** Direction
+**类型：** [Direction](arkts-arkui-direction-e.md)
 
 **起始版本：** 26.0.0
 

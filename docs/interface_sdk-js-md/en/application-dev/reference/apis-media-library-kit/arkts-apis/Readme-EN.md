@@ -45,6 +45,10 @@
   - [MediaAssetsChangeRequest(system api)](arkts-medialibrary-photoaccesshelper-mediaassetschangerequest-c-sys.md)<!--DelEnd-->
   <!--Del-->
   - [MediaHighlightAlbumChangeRequest(system api)](arkts-medialibrary-photoaccesshelper-mediahighlightalbumchangerequest-c-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [MediaShareAlbumChangeRequest(system api)](arkts-medialibrary-photoaccesshelper-mediasharealbumchangerequest-c-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [MemberInfo(system api)](arkts-medialibrary-photoaccesshelper-memberinfo-c-sys.md)<!--DelEnd-->
   - [MimeTypeFilter](arkts-medialibrary-photoaccesshelper-mimetypefilter-c.md)
   - [OperationItem](arkts-medialibrary-photoaccesshelper-operationitem-c.md)
   <!--Del-->
@@ -63,6 +67,8 @@
   - [RequestReadPermissionResult](arkts-medialibrary-photoaccesshelper-requestreadpermissionresult-c.md)
   <!--Del-->
   - [ResultSet(system api)](arkts-medialibrary-photoaccesshelper-resultset-c-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [ShareAlbumMemberInfo(system api)](arkts-medialibrary-photoaccesshelper-sharealbummemberinfo-c-sys.md)<!--DelEnd-->
   <!--Del-->
   - [TaskSignal(system api)](arkts-medialibrary-photoaccesshelper-tasksignal-c-sys.md)<!--DelEnd-->
   - [VideoDurationFilter](arkts-medialibrary-photoaccesshelper-videodurationfilter-c.md)
@@ -298,6 +304,10 @@
   - [SceneType](arkts-medialibrary-photoaccesshelper-scenetype-e.md)
   <!--Del-->
   - [SearchSuggestionType(system api)](arkts-medialibrary-photoaccesshelper-searchsuggestiontype-e-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [ShareAlbumRiskStatus(system api)](arkts-medialibrary-photoaccesshelper-sharealbumriskstatus-e-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [ShareMemberStatus(system api)](arkts-medialibrary-photoaccesshelper-sharememberstatus-e-sys.md)<!--DelEnd-->
   - [SingleSelectionMode](arkts-medialibrary-photoaccesshelper-singleselectionmode-e.md)
   <!--Del-->
   - [SourceMode(system api)](arkts-medialibrary-photoaccesshelper-sourcemode-e-sys.md)<!--DelEnd-->

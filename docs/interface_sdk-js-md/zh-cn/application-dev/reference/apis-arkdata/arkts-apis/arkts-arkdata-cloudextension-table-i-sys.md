@@ -38,7 +38,7 @@ fields: Array<Field>
 
 数据库表中的字段结构信息。
 
-**类型：** Array&lt;Field&gt;
+**类型：** Array&lt;[Field](arkts-arkdata-relationalstore-field-e.md)&gt;
 
 **起始版本：** 11
 

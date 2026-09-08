@@ -84,7 +84,7 @@ color?: common2D.Color
 
 文字颜色，默认为白色。
 
-**类型：** common2D.Color
+**类型：** [common2D.Color](arkts-arkgraphics2d-common2d-color-i.md)
 
 **起始版本：** 12
 
@@ -132,7 +132,7 @@ ellipsisMode?: EllipsisMode
 
 省略号类型，默认为END，行尾省略号。
 
-**类型：** EllipsisMode
+**类型：** [EllipsisMode](arkts-arkgraphics2d-text-ellipsismode-e.md)
 
 **起始版本：** 12
 
@@ -148,7 +148,7 @@ fontEdging?: drawing.FontEdging
 
 绘制文本的边缘处理方式，默认值为ANTI_ALIAS。
 
-**类型：** drawing.FontEdging
+**类型：** [drawing.FontEdging](arkts-arkgraphics2d-drawing-fontedging-e.md)
 
 **起始版本：** 24
 
@@ -182,7 +182,7 @@ fontFeatures?: Array<FontFeature>
 
 文本字体特征数组。当需要启用或禁用特定字体特性（如连字、字距调整等）时传入。
 
-**类型：** Array&lt;FontFeature&gt;
+**类型：** Array&lt;[FontFeature](arkts-arkgraphics2d-text-fontfeature-i.md)&gt;
 
 **起始版本：** 12
 
@@ -214,7 +214,7 @@ fontStyle?: FontStyle
 
 字体样式，默认为常规样式。
 
-**类型：** FontStyle
+**类型：** [FontStyle](arkts-arkgraphics2d-text-fontstyle-e.md)
 
 **起始版本：** 12
 
@@ -232,7 +232,7 @@ fontTypefaces?: Array<drawing.Typeface>
 
 当fontTypefaces与[TextStyle](arkts-arkgraphics2d-text-textstyle-i.md).fontFamilies同时设置时，fontTypefaces优先级更高。
 
-**类型：** Array&lt;drawing.Typeface&gt;
+**类型：** Array&lt;[drawing.Typeface](arkts-arkgraphics2d-drawing-typeface-c.md)&gt;
 
 **起始版本：** 26.0.0
 
@@ -250,7 +250,7 @@ fontVariations?: Array<FontVariation>
 
 可变字体属性数组。当需要调整可变字体的可变轴参数（如字重轴、字宽轴等）时传入。
 
-**类型：** Array&lt;FontVariation&gt;
+**类型：** Array&lt;[FontVariation](arkts-arkgraphics2d-text-fontvariation-i.md)&gt;
 
 **起始版本：** 12
 
@@ -266,7 +266,7 @@ fontWeight?: FontWeight
 
 字重，默认为W400。 在<!--RP1-->OpenHarmony 6.1<!--RP1End-->之前，仅系统字体中的可变字体支持字重调节；从<!--RP1-->OpenHarmony 6.1<!--RP1End-->开始，系统字体与三方注册字体中的可变字体均支持字重调节。非可变字体设置字重值小于semi-bold（即W600）时字体粗细无变化，设置字重值大于等于semi-bold（即W600）时可能会触发伪加粗效果。
 
-**类型：** FontWeight
+**类型：** [FontWeight](arkts-arkgraphics2d-text-fontweight-e.md)
 
 **起始版本：** 12
 
@@ -394,7 +394,7 @@ lineHeightStyle?: LineHeightStyle
 
 行高缩放基数样式。默认为FONT_SIZE。
 
-**类型：** LineHeightStyle
+**类型：** [LineHeightStyle](arkts-arkgraphics2d-text-lineheightstyle-e.md)
 
 **起始版本：** 21
 

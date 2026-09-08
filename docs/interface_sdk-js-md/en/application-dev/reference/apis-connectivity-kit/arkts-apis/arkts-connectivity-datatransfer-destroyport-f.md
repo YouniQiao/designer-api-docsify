@@ -34,8 +34,8 @@ Destroys the port channel.
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported because the chip does not support it. |
-| 36100003 | NearLink disabled. |
-| 36100022 | The UUID is not registered. |
-| 36100043 | Invalid UUID. |
-| 36100044 | NearLink standard UUID not allowed. |
-| 36100099 | Operation failed. |
+| [36100003](../../apis-avsession-kit/errorcode-nearlink-service.md#36100003-nearlink-disabled) | NearLink disabled. |
+| [36100022](../../apis-avsession-kit/errorcode-nearlink-service.md#36100022-port-not-registered) | The UUID is not registered. |
+| [36100043](../../apis-avsession-kit/errorcode-nearlink-service.md#36100043-invalid-uuid) | Invalid UUID. |
+| [36100044](../../apis-avsession-kit/errorcode-nearlink-service.md#36100044-standard-nearlink-service-uuid-not-allowed) | NearLink standard UUID not allowed. |
+| [36100099](../../apis-avsession-kit/errorcode-nearlink-service.md#36100099-operation-failed) | Operation failed. |

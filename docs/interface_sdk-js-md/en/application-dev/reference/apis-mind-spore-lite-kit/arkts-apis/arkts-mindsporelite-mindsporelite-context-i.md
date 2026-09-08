@@ -59,10 +59,3 @@ The target device
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.AI.MindSporeLite
-
-**Examples**
-
-```TypeScript
-let context: mindSporeLite.Context = {};
-context.target = ['cpu','nnrt'];
-```

@@ -29,7 +29,7 @@ No permission is required for obtaining the caller's own information.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;ShortcutInfo&gt;&gt; | Yes | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md) used to return the result. If the operation is successful, **err** is **null**, and **data** is the array of ShortcutInfo objects obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[ShortcutInfo](arkts-ability-launcherbundlemanager-shortcutinfo-t.md)&gt;&gt; | Yes | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md) used to return the result. If the operation is successful, **err** is **null**, and **data** is the array of ShortcutInfo objects obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -93,7 +93,7 @@ No permission is required for obtaining the caller's own information.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;ShortcutInfo&gt;&gt; | Promise used to return the array of [ShortcutInfo]{ |
+| Promise&lt;Array&lt;[ShortcutInfo](arkts-ability-launcherbundlemanager-shortcutinfo-t.md)&gt;&gt; | Promise used to return the array of [ShortcutInfo]{ |
 
 **Error codes:**
 

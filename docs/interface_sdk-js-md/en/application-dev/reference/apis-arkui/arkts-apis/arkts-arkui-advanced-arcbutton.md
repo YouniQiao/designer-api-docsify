@@ -38,6 +38,9 @@ import { ArcButton, ArcButtonOptions, ArcButtonProgressConfig, ArcButtonPosition
 ## Examples
 
 This example demonstrates the basic usage of ArcButton. ArcButton is added since API version 18. The following is an example configuration:
+topOptions defines an upper arc button with the button text "ButtonTop," a font size of 15 fp, and shadow enabled, in the normal state with a light-color emphasized style.
+bottomOptions defines a bottom arc button with the button text "ButtonBottom," a font size of 15 fp, shadow enabled, in a light-color emphasized style, with a click event set for the button.
+This example is recommended to run on a wearable device for optimal display effects and is also supported on other devices. To run the example on a wearable device, configure wearable in the [deviceTypes](../../../quick-start/module-configuration-file.md#devicetypes) tag of the [module.json5](../../../quick-start/module-configuration-file.md) configuration file in the src/main directory.
 
 ```TypeScript
 // module.json5
@@ -117,6 +120,9 @@ struct Index {
 ```
 
 This example demonstrates the basic usage of the ArcButton component in progress indicator style. The [progressConfig](arkts-arkui-arkui-advanced-arcbutton-arcbuttonoptions-c.md) API is supported since API version 23. The following is an example configuration:
+topOptions defines an upper arc button with the "Add" button text, a font size of 15 fp, and shadow enabled, in the normal state with a light-color emphasized style. A click event is set for the button, and tapping the button increases the progress of the progress indicator.
+bottomOptions defines a bottom arc button with the button text showing the progress percentage, a font size of 15 fp, state set in progress indicator mode, default style, and shadow enabled.
+This example is recommended to run on a wearable device for optimal display effects and is also supported on other devices. To run the example on a wearable device, configure wearable in the [deviceTypes](../../../quick-start/module-configuration-file.md#devicetypes) tag of the [module.json5](../../../quick-start/module-configuration-file.md) configuration file in the src/main directory.
 
 ```TypeScript
 // module.json5

@@ -48,7 +48,7 @@ data?: unifiedDataChannel.UnifiedData
 
 默认值：空
 
-**类型：** unifiedDataChannel.UnifiedData
+**类型：** [unifiedDataChannel.UnifiedData](../../apis-arkdata/arkts-apis/arkts-arkdata-unifieddatachannel-unifieddata-c.md)
 
 **起始版本：** 10
 
@@ -68,7 +68,7 @@ dataLoadParams?: unifiedDataChannel.DataLoadParams
 
 默认值：空
 
-**类型：** unifiedDataChannel.DataLoadParams
+**类型：** [unifiedDataChannel.DataLoadParams](../../apis-arkdata/arkts-apis/arkts-arkdata-unifieddatachannel-dataloadparams-i.md)
 
 **起始版本：** 20
 
@@ -142,7 +142,7 @@ touchPoint?: TouchPoint
 
 配置跟手点坐标。不配置时，左右居中，顶部向下偏移20%。
 
-**类型：** TouchPoint
+**类型：** [TouchPoint](arkts-arkui-touchpoint-i.md)
 
 **起始版本：** 11
 
@@ -151,130 +151,3 @@ touchPoint?: TouchPoint
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-**示例**
-
-该示例通过[DragInfo](#draginfo)的autoHideComponentUniqueIds属性，在主动拖拽成功发起后自动隐藏指定组件。
-
-```TypeScript
-import { dragController } from '@kit.ArkUI';
-import { unifiedDataChannel } from '@kit.ArkData';
-
-@Entry
-@Component
-struct DragInfoAutoHideSample {
-  @State sourceVisibility: Visibility = Visibility.Visible;
-  @State badgeVisibility: Visibility = Visibility.Visible;
-  @State statusText: string = '状态：等待主动拖拽';
-
-  @Builder
-  PreviewBuilder() {
-    Text('Drag Preview')
-      .width(140)
-      .height(60)
-      .backgroundColor('#3F51B5')
-      .borderRadius(10)
-      .fontColor(Color.White);
-  }
-
-  private buildData(content: string): unifiedDataChannel.UnifiedData {
-    let plainText = new unifiedDataChannel.PlainText();
-    plainText.textContent = content;
-    plainText.abstract = content;
-    return new unifiedDataChannel.UnifiedData(plainText);
-  }
-
-  private collectHideIds(): number[] {
-    let hideIds: number[] = [];
-    let sourceNode = this.getUIContext().getFrameNodeById('active_source');
-    let badgeNode = this.getUIContext().getFrameNodeById('active_badge');
-    if (sourceNode?.getUniqueId() !== undefined) {
-      hideIds.push(sourceNode.getUniqueId());
-    }
-    if (badgeNode?.getUniqueId() !== undefined) {
-      hideIds.push(badgeNode.getUniqueId());
-    }
-    return hideIds;
-  }
-
-  private hideTargets(): void {
-    this.sourceVisibility = Visibility.Hidden;
-    this.badgeVisibility = Visibility.Hidden;
-    this.statusText = '状态：主动拖拽中，目标组件已隐藏';
-  }
-
-  private restoreTargets(): void {
-    this.sourceVisibility = Visibility.Visible;
-    this.badgeVisibility = Visibility.Visible;
-    this.statusText = '状态：拖拽结束，组件已恢复显示';
-  }
-
-  build() {
-    Column({ space: 12 }) {
-      Text(this.statusText)
-        .width('100%')
-        .fontSize(14)
-        .fontColor('#BF360C');
-
-      Row({ space: 12 }) {
-        Column() {
-          Text('主动拖拽源')
-            .fontColor(Color.White)
-            .fontWeight(FontWeight.Medium);
-          Text('id: active_source')
-            .fontSize(10)
-            .fontColor('#E8F5E9');
-        }
-          .id('active_source')
-          .width(140)
-          .height(90)
-          .backgroundColor('#2E7D32')
-          .borderRadius(12)
-          .justifyContent(FlexAlign.Center)
-          .visibility(this.sourceVisibility);
-
-        Column() {
-          Text('跟随隐藏组件')
-            .fontColor(Color.White)
-            .fontWeight(FontWeight.Medium);
-          Text('id: active_badge')
-            .fontSize(10)
-            .fontColor('#E3F2FD');
-        }
-          .id('active_badge')
-          .width(140)
-          .height(90)
-          .backgroundColor('#1565C0')
-          .borderRadius(12)
-          .justifyContent(FlexAlign.Center)
-          .visibility(this.badgeVisibility);
-      }
-
-      Button('发起主动拖拽')
-        .width('100%')
-        .height(56)
-        .backgroundColor('#FF8F00')
-        .onTouch((touchEvent) => {
-          if (!touchEvent || touchEvent.type !== TouchType.Down) {
-            return;
-          }
-          let hideIds = this.collectHideIds();
-          let dragInfo: dragController.DragInfo = {
-            pointerId: 0,
-            data: this.buildData('active drag data'),
-            extraParams: '',
-            autoHideComponentUniqueIds: hideIds
-          };
-          this.hideTargets();
-          this.getUIContext().getDragController().executeDrag(() => {
-            this.PreviewBuilder();
-          }, dragInfo, () => {
-            this.restoreTargets();
-          });
-        })
-    }
-    .width('100%')
-    .padding(16)
-  }
-}
-```

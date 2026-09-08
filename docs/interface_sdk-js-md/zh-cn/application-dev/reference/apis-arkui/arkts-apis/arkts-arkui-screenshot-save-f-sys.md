@@ -31,7 +31,7 @@ function save(options: ScreenshotOptions, callback: AsyncCallback<image.PixelMap
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | options | [ScreenshotOptions](arkts-arkui-screenshot-screenshotoptions-i-sys.md) | 是 | 要截取的图像信息。当指定截取屏幕为虚拟屏时，截取图像为白屏。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;image.PixelMap&gt; | 是 | 回调函数。返回一个PixelMap对象，其大小为指定的imageSize大小，若未指定默认为displayId所在逻辑屏的大小。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)&gt; | 是 | 回调函数。返回一个PixelMap对象，其大小为指定的imageSize大小，若未指定默认为displayId所在逻辑屏的大小。 |
 
 **错误码：**
 
@@ -97,7 +97,7 @@ function save(callback: AsyncCallback<image.PixelMap>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;image.PixelMap&gt; | 是 | 回调函数。返回一个PixelMap对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)&gt; | 是 | 回调函数。返回一个PixelMap对象。 |
 
 **错误码：**
 
@@ -154,7 +154,7 @@ function save(options?: ScreenshotOptions): Promise<image.PixelMap>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;image.PixelMap&gt; | Promise used to return a PixelMap object. |
+| Promise&lt;[image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)&gt; | Promise used to return a PixelMap object. |
 
 **错误码：**
 

@@ -379,7 +379,7 @@ largeIcon?: image.PixelMap
 
 Large notification icon. This parameter is left empty by default. The total number of the icon pixel bytes cannot exceed 192 KB (which is obtained through [getPixelBytesNumber](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md#getpixelbytesnumber)). The setting does not take effect if the limit is exceeded. When **largeIcon** is not set, the notification does not display a large icon. The recommended icon size is 128 × 128 pixels. The display effect depends on the device capability and notification center UI style.
 
-**Type:** image.PixelMap
+**Type:** [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)
 
 **Since:** 7
 
@@ -412,7 +412,7 @@ notificationSlotType?: notificationManager.SlotType
 
 Notification slot type. The default value is **OTHER_TYPES**. The notification reminder mode varies depending on the notification slot type.
 
-**Type:** notificationManager.SlotType
+**Type:** [notificationManager.SlotType](arkts-notification-notificationmanager-slottype-e.md)
 
 **Since:** 11
 
@@ -426,7 +426,7 @@ overlayIcon?: image.PixelMap
 
 Notification overlay icon. This parameter is left empty by default. The total bytes of the icon pixels cannot exceed 192 KB.
 
-**Type:** image.PixelMap
+**Type:** [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)
 
 **Since:** 23
 
@@ -440,7 +440,7 @@ priorityNotificationType?: notificationManager.PriorityNotificationType
 
 Notification priority type. The default value is **OTHER**. If this parameter is set, the notification is pinned on the top and displayed in a highlighted manner in the notification center. The actual display effect depends on the device capability and notification center UI style.
 
-**Type:** notificationManager.PriorityNotificationType
+**Type:** [notificationManager.PriorityNotificationType](arkts-notification-notificationmanager-prioritynotificationtype-e.md)
 
 **Since:** 23
 
@@ -484,7 +484,7 @@ slotType?: notification.SlotType
 
 Notification slot type. The default value is **OTHER_TYPES**.
 
-**Type:** notification.SlotType
+**Type:** [notification.SlotType](arkts-notification-notification-slottype-depr-e.md)
 
 **Since:** 7
 
@@ -502,7 +502,7 @@ smallIcon?: image.PixelMap
 
 Small notification icon. This parameter is left empty by default. The total number of the icon pixel bytes cannot exceed 192 KB (which is obtained through [getPixelBytesNumber](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md#getpixelbytesnumber)). The setting does not take effect if the limit is exceeded. When **smallIcon** is not set, the notification displays the default application icon. The recommended icon size is 128 × 128 pixels. The display effect depends on the device capability and notification center UI style.
 
-**Type:** image.PixelMap
+**Type:** [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)
 
 **Since:** 7
 

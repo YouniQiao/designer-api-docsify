@@ -38,7 +38,7 @@ from: NavDestinationInfo | NavBar
 
 Source page for page switching.
 
-**Type:** NavDestinationInfo \| NavBar
+**Type:** [NavDestinationInfo](arkts-arkui-uiobserver-navdestinationinfo-i.md) \| NavBar
 
 **Since:** 12
 
@@ -74,7 +74,7 @@ to: NavDestinationInfo | NavBar
 
 Destination page for page switching.
 
-**Type:** NavDestinationInfo \| NavBar
+**Type:** [NavDestinationInfo](arkts-arkui-uiobserver-navdestinationinfo-i.md) \| NavBar
 
 **Since:** 12
 

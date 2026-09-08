@@ -148,7 +148,7 @@ eapMethod: EapMethod
 
 EAP authentication method.
 
-**Type:** EapMethod
+**Type:** [EapMethod](arkts-mdm-wifimanager-eapmethod-e.md)
 
 **Since:** 12
 
@@ -212,7 +212,7 @@ phase2Method: Phase2Method
 
 Phase 2 authentication method. This parameter is mandatory only when **eapMethod** is **EAP_PEAP** or **EAP_TTLS**.
 
-**Type:** Phase2Method
+**Type:** [Phase2Method](arkts-mdm-wifimanager-phase2method-e.md)
 
 **Since:** 12
 

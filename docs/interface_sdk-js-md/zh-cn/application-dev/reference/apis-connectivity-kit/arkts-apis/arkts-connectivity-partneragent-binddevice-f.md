@@ -29,8 +29,8 @@ function bindDevice(deviceAddress: PartnerDeviceAddress, deviceCapability: Devic
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| deviceAddress | PartnerDeviceAddress | 是 | 应用注册的设备地址信息。应用需配置PartnerDeviceAddress类型的bluetoothAddress选项。 |
-| deviceCapability | DeviceCapability | 是 | 注册设备支持的能力。配置supportBR选项后，外设互通子系统将监听与该设备的[ACL](../../../connectivity/bluetooth/terminology.md#acl)连接状态，一旦建立ACL连接，即视为成功发现该设备；配置supportBleAdvertiser选项后，系统将启动该设备的[BLE](../../../connectivity/bluetooth/terminology.md#ble)扫描，扫描到该设备后，同样视为成功发现该设备。注意：为了减少系统功耗，BLE扫描到该设备后，若应用在3分钟内未与该设备建立ACL连接，外设互通子系统将自动终止应用的PartnerAgentExtensionAbility进程。 |
+| deviceAddress | [PartnerDeviceAddress](arkts-connectivity-partneragent-partnerdeviceaddress-i.md) | 是 | 应用注册的设备地址信息。应用需配置PartnerDeviceAddress类型的bluetoothAddress选项。 |
+| deviceCapability | [DeviceCapability](arkts-connectivity-partneragent-devicecapability-i.md) | 是 | 注册设备支持的能力。配置supportBR选项后，外设互通子系统将监听与该设备的[ACL](../../../connectivity/bluetooth/terminology.md#acl)连接状态，一旦建立ACL连接，即视为成功发现该设备；配置supportBleAdvertiser选项后，系统将启动该设备的[BLE](../../../connectivity/bluetooth/terminology.md#ble)扫描，扫描到该设备后，同样视为成功发现该设备。注意：为了减少系统功耗，BLE扫描到该设备后，若应用在3分钟内未与该设备建立ACL连接，外设互通子系统将自动终止应用的PartnerAgentExtensionAbility进程。 |
 | businessCapability | [BusinessCapability](arkts-connectivity-partneragent-businesscapability-i.md) | 是 | 应用注册设备的业务功能，包括媒体控制、通话控制。注意：supportMediaControl和supportTelephonyControl均选择false时，设备发现时不会拉起[PartnerAgentExtensionAbility](arkts-connectivity-fusionconnectivity-partneragentextensionability-partneragentextensionability-c.md)进程。 |
 | partnerAgentExtensionAbilityName | string | 是 | 该参数需与应用模块级配置文件[module.json5](../../../quick-start/module-configuration-file.md) 中的[extensionabilities](../../../quick-start/module-configuration-file.md#extensionabilities标签) name属性值相同。 |
 

@@ -26,7 +26,7 @@ type: NotifyType
 
 Notification type.
 
-**Type:** NotifyType
+**Type:** [NotifyType](arkts-corefile-cloudsync-notifytype-e.md)
 
 **Since:** 10
 

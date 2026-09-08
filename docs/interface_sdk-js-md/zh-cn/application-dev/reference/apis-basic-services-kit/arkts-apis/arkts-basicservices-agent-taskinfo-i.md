@@ -23,7 +23,7 @@ readonly action: Action
 - UPLOAD表示上传任务。  
 - DOWNLOAD表示下载任务。
 
-**类型：** Action
+**类型：** [Action](arkts-basicservices-agent-action-e.md)
 
 **起始版本：** 10
 
@@ -188,7 +188,7 @@ readonly progress: Progress
 
 任务的过程进度。
 
-**类型：** Progress
+**类型：** [Progress](arkts-basicservices-agent-progress-i.md)
 
 **起始版本：** 10
 

@@ -24,7 +24,7 @@ Material type.
 
 Default value: **MaterialType.NONE**.
 
-**Type:** MaterialType
+**Type:** [MaterialType](arkts-arkui-uimaterial-materialtype-e.md)
 
 **Default:** uiMaterial.MaterialType.NONE
 

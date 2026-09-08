@@ -87,7 +87,7 @@ Generates a random number of the specified length. This API uses an asynchronous
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | len | number | Yes | Length of the random number to generate, in bytes. The value range is [1, INT_MAX]. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DataBlob&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the random number obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the random number obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -140,7 +140,7 @@ Generates a random number of the specified length. This API uses a promise to re
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;DataBlob&gt; | Promise used to return the random number generated. |
+| Promise&lt;[DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md)&gt; | Promise used to return the random number generated. |
 
 **Error codes:**
 
@@ -241,7 +241,7 @@ generateRandomSync(len: number): DataBlob
 
 Generates a random number of the specified length. This API returns the result synchronously.
 
-**NOTE：**It is recommended to prioritize the use of asynchronous API, [generateRandom](#generaterandom). Synchronous API may take a number time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
+**NOTE：**It is recommended to prioritize the use of asynchronous API, [generateRandom](#generaterandom). Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
 **Since:** 10
 
@@ -265,7 +265,7 @@ Generates a random number of the specified length. This API returns the result s
 
 | Type | Description |
 | --- | --- |
-| DataBlob | Returns the generated random number. |
+| [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | Returns the generated random number. |
 
 **Error codes:**
 
@@ -388,7 +388,7 @@ Sets a seed.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| seed | DataBlob | Yes | Seed to set. |
+| seed | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | Yes | Seed to set. |
 
 **Error codes:**
 

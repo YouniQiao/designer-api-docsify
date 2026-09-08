@@ -32,7 +32,7 @@ Creates a responsive spring animation curve. It is a special case of [springMoti
 
 | Type | Description |
 | --- | --- |
-| ICurve | Curve. |
+| [ICurve](arkts-arkui-curves-icurve-i.md) | Curve. |
 
 **Examples**
 

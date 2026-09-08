@@ -24,7 +24,7 @@ Task action.
 - **DOWNLOAD**: Download tasks.  
 - If this parameter is not set, all tasks are queried.
 
-**Type:** Action
+**Type:** [Action](arkts-basicservices-agent-action-e.md)
 
 **Since:** 10
 
@@ -84,7 +84,7 @@ state?: State
 
 Task state. If this parameter is not set, all tasks are queried.
 
-**Type:** State
+**Type:** [State](arkts-basicservices-agent-state-e.md)
 
 **Since:** 10
 

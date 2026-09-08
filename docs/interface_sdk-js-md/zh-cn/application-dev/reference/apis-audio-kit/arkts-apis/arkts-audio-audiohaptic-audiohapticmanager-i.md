@@ -237,7 +237,7 @@ setStreamUsage(id: number, usage: audio.StreamUsage): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | id | number | 是 | 已注册资源的source id。 |
-| usage | audio.StreamUsage | 是 | 音频流使用类型。 |
+| usage | [audio.StreamUsage](arkts-audio-audio-streamusage-e.md) | 是 | 音频流使用类型。 |
 
 **错误码：**
 

@@ -74,7 +74,7 @@ ocspResponderCert?: X509Cert
 
 Signing certificate used for verifying the signature of the OCSP response.
 
-**Type:** X509Cert
+**Type:** [X509Cert](arkts-devicecertificate-cert-x509cert-i.md)
 
 **Since:** 12
 

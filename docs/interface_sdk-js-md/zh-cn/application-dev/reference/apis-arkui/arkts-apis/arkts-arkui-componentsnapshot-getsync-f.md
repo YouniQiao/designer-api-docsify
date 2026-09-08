@@ -37,7 +37,7 @@ function getSync(id: string, options?: SnapshotOptions): image.PixelMap
 
 | 类型 | 说明 |
 | --- | --- |
-| image.PixelMap | 截图返回的结果。 |
+| [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | 截图返回的结果。 |
 
 **错误码：**
 

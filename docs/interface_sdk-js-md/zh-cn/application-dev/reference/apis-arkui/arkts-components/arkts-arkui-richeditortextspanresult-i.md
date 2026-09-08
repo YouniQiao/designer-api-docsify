@@ -171,7 +171,7 @@ SymbolSpan资源内容。
 
 默认值：undefined。
 
-**类型：** Resource
+**类型：** [Resource](../arkts-apis/arkts-arkui-resource-t.md)
 
 **起始版本：** 11
 

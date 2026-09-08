@@ -174,7 +174,7 @@ Process mode of the UIAbility after it is started.
 [UIAbilityContext.startAbility](arkts-ability-uiabilitycontext-c.md#startability).
 3. **processMode** and **startupVisibility** must be set in pair.
 
-**Type:** contextConstant.ProcessMode
+**Type:** [contextConstant.ProcessMode](arkts-ability-contextconstant-processmode-e.md)
 
 **Since:** 12
 
@@ -190,7 +190,7 @@ splitRatio?: window.SplitRatioPreference
 
 The type of split ratio preference.
 
-**Type:** window.SplitRatioPreference
+**Type:** [window.SplitRatioPreference](../../apis-arkui/arkts-apis/arkts-arkui-window-splitratiopreference-e.md)
 
 **Since:** 26.0.0
 
@@ -213,7 +213,7 @@ Visibility status of the UIAbility after it is started. If the target UIAbility 
 [UIAbilityContext.startAbility](arkts-ability-uiabilitycontext-c.md#startability).
 3. **processMode** and **startupVisibility** must be set in pair.
 
-**Type:** contextConstant.StartupVisibility
+**Type:** [contextConstant.StartupVisibility](arkts-ability-contextconstant-startupvisibility-e.md)
 
 **Since:** 12
 
@@ -260,7 +260,7 @@ Icon displayed on the starting window for the UIAbility of the current applicati
 [UIAbilityContext.startAbility](arkts-ability-uiabilitycontext-c.md#startability).  
 - The maximum size of an image used as the startup icon is 600 MB.
 
-**Type:** image.PixelMap
+**Type:** [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)
 
 **Since:** 14
 
@@ -287,7 +287,7 @@ When **FULL_SCREEN** and **SPLIT** are both configured for a [freeform window](.
 
 <!--RP1-->This property takes effect only on 2-in-1 devices and tablets.<!--RP1End-->
 
-**Type:** Array&lt;bundleManager.SupportWindowMode&gt;
+**Type:** Array&lt;[bundleManager.SupportWindowMode](arkts-ability-bundlemanager-supportwindowmode-e.md)&gt;
 
 **Since:** 14
 
@@ -303,7 +303,7 @@ windowCreateParams?: window.WindowCreateParams
 
 Parameters for the window for the UIAbility upon startup.
 
-**Type:** window.WindowCreateParams
+**Type:** [window.WindowCreateParams](../../apis-arkui/arkts-apis/arkts-arkui-window-windowcreateparams-i.md)
 
 **Since:** 20
 
@@ -431,119 +431,3 @@ Whether animation effects are used for the UIAbility upon startup. **true** if u
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
-
-**Examples**
-
-```TypeScript
-import { UIAbility, Want, StartOptions, bundleManager, CompletionHandler } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { image } from '@kit.ImageKit';
-import { window } from '@kit.ArkUI';
-
-export default class EntryAbility extends UIAbility {
-  onForeground() {
-    let want: Want = {
-      deviceId: '',
-      bundleName: 'com.example.myapplication',
-      abilityName: 'EntryAbility'
-    };
-
-    let completionHandler: CompletionHandler = {
-      onRequestSuccess: (elementName: bundleManager.ElementName, message: string): void => {
-        console.info(`${elementName.bundleName}-${elementName.moduleName}-${elementName.abilityName} start succeeded: ${message}`);
-      },
-      onRequestFailure: (elementName: bundleManager.ElementName, message: string): void => {
-        console.error(`${elementName.bundleName}-${elementName.moduleName}-${elementName.abilityName} start failed: ${message}`);
-      }
-    };
-
-    let color = new ArrayBuffer(512 * 512 * 4); // Create an ArrayBuffer object to store image pixels. The size of the object is (height * width * 4) bytes.
-    let imagePixelMap: image.PixelMap;
-    let windowParam: window.WindowCreateParams = {};
-    let bufferArr = new Uint8Array(color);
-    for (let i = 0; i < bufferArr.length; i += 4) {
-      bufferArr[i] = 255;
-      bufferArr[i+1] = 0;
-      bufferArr[i+2] = 122;
-      bufferArr[i+3] = 255;
-    }
-    image.createPixelMap(color, {
-      editable: true, pixelFormat: image.PixelMapFormat.RGBA_8888, size: { height: 512, width: 512 }
-    }).then((data) => {
-      imagePixelMap = data;
-      let options: StartOptions = {
-        displayId: 0,
-        startWindowIcon: imagePixelMap,
-        startWindowBackgroundColor: '#E510FFFF',
-        supportWindowModes: [
-          bundleManager.SupportWindowMode.FULL_SCREEN,
-          bundleManager.SupportWindowMode.SPLIT,
-          bundleManager.SupportWindowMode.FLOATING
-        ],
-        minWindowWidth: 320,
-        minWindowHeight: 240,
-        maxWindowWidth: 2560,
-        maxWindowHeight: 2560,
-        completionHandler: completionHandler,
-        hideStartWindow: true,
-        windowCreateParams: windowParam
-      };
-
-      try {
-        this.context.startAbility(want, options, (err: BusinessError) => {
-          if (err.code) {
-            // Process service logic errors.
-            console.error(`startAbility failed, code is ${err.code}, message is ${err.message}`);
-            return;
-          }
-          // Carry out normal service processing.
-          console.info('startAbility succeed');
-        });
-      } catch (err) {
-        // Process input parameter errors.
-        let code = (err as BusinessError).code;
-        let message = (err as BusinessError).message;
-        console.error(`startAbility failed, code is ${code}, message is ${message}`);
-      }
-    }).catch((err: BusinessError) => {
-      console.error(`createPixelMap failed, code is ${err.code}, message is ${err.message}`);
-    });
-  }
-}
-```
-
-```TypeScript
-import { UIAbility, Want, StartOptions } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-
-  onForeground() {
-    let want: Want = {
-      deviceId: '',
-      bundleName: 'com.example.myapplication',
-      abilityName: 'EntryAbility'
-    };
-    let options: StartOptions = {
-      displayId: 0
-    };
-
-    try {
-      this.context.startAbility(want, options, (err: BusinessError) => {
-        if (err.code) {
-          // Process service logic errors.
-          console.error(`startAbility failed, code is ${err.code}, message is ${err.message}`);
-          return;
-        }
-        // Carry out normal service processing.
-        console.info('startAbility succeed');
-      });
-    } catch (err) {
-      // Process input parameter errors.
-      let code = (err as BusinessError).code;
-      let message = (err as BusinessError).message;
-      console.error(`startAbility failed, code is ${code}, message is ${message}`);
-    }
-  }
-}
-```

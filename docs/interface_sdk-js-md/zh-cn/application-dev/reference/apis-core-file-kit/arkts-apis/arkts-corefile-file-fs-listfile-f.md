@@ -48,31 +48,6 @@ declare function listFile(
 | 13900018 | Not a directory |
 | 13900042 | Unknown error |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { Filter, ListFileOptions } from '@kit.CoreFileKit';
-
-let listFileOption: ListFileOptions = {
-  recursion: false,
-  listNum: 0,
-  filter: {
-    suffix: [".png", ".jpg", ".jpeg"],
-    displayName: ["*abc", "efg*"],
-    fileSizeOver: 1024
-  }
-}
-fileIo.listFile(pathDir, listFileOption).then((filenames: Array<string>) => {
-  console.info(`Succeeded in listing file.`);
-  for (let i = 0; i < filenames.length; i++) {
-    console.info(`Succeeded in listing file, file name: ${filenames[i]}`);
-  }
-}).catch((err: BusinessError) => {
-  console.error(`Failed to list file. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
 
 ## listFile
 
@@ -104,23 +79,6 @@ declare function listFile(path: string, callback: AsyncCallback<string[]>): void
 | 13900011 | Out of memory |
 | 13900018 | Not a directory |
 | 13900042 | Unknown error |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-fileIo.listFile(pathDir, (err: BusinessError, filenames: Array<string>) => {
-  if (err) {
-    console.error(`Failed to list file. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info(`Succeeded in listing file.`);
-    for (let i = 0; i < filenames.length; i++) {
-      console.info(`Succeeded in listing file, file name: ${filenames[i]}`);
-    }
-  }
-});
-```
 
 
 ## listFile
@@ -160,30 +118,3 @@ declare function listFile(
 | 13900011 | Out of memory |
 | 13900018 | Not a directory |
 | 13900042 | Unknown error |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { Filter, ListFileOptions } from '@kit.CoreFileKit';
-
-let listFileOption: ListFileOptions = {
-  recursion: false,
-  listNum: 0,
-  filter: {
-    suffix: [".png", ".jpg", ".jpeg"],
-    displayName: ["*abc", "efg*"],
-    fileSizeOver: 1024
-  }
-};
-fileIo.listFile(pathDir, listFileOption, (err: BusinessError, filenames: Array<string>) => {
-  if (err) {
-    console.error(`Failed to list file. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info(`Succeeded in listing file.`);
-    for (let i = 0; i < filenames.length; i++) {
-      console.info(`Succeeded in listing file, file name: ${filenames[i]}`);
-    }
-  }
-});
-```

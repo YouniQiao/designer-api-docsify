@@ -54,19 +54,6 @@ Add a new playback source to the player's playlist.
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by promise. |
 | [5400108](../errorcode-media.md#5400108-parameter-value-out-of-range) | The media source ID does not exist in the playlist. Returned by promise. |
 
-**Examples**
-
-```TypeScript
-async function test() {
-  let player = await media.createAVPlayer();
-  let headers: Record<string, string> = {"User-Agent" : "MyApp/1.0"};
-  let mediaSource1: media.MediaSource = media.createMediaSourceWithUrl("http://example.com/video1.mp4", headers);
-  let source1 = await player.addPlaybackMediaSource(mediaSource1);
-  let mediaSource2: media.MediaSource = media.createMediaSourceWithUrl("http://example.com/video2.mp4", headers);
-  let source2 = await player.addPlaybackMediaSource(mediaSource2, source1);
-}
-```
-
 ## addSubtitleFromFd
 
 ```TypeScript
@@ -102,18 +89,6 @@ Adds an external subtitle to a video based on the FD. Currently, the external su
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Return by promise. |
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by promise. |
 
-**Examples**
-
-```TypeScript
-import { common } from '@kit.AbilityKit'
-
-let avPlayer = await media.createAVPlayer();
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-let fileDescriptor = await context.resourceManager.getRawFd('xxx.srt');
-
-avPlayer.addSubtitleFromFd(fileDescriptor.fd, fileDescriptor.offset, fileDescriptor.length);
-```
-
 ## addSubtitleFromUrl
 
 ```TypeScript
@@ -146,16 +121,6 @@ Adds an external subtitle to a video based on the URL. Currently, the external s
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Return by promise. |
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by promise. |
-
-**Examples**
-
-```TypeScript
-async function test(){
-  let fdUrl:string = 'http://xxx.xxx.xxx/xx/index.srt';
-  let avPlayer: media.AVPlayer = await media.createAVPlayer();
-  avPlayer.addSubtitleFromUrl(fdUrl);
-}
-```
 
 ## advanceToMediaSource
 
@@ -192,25 +157,6 @@ Ends playback of the current mediasource and starts playback of the specified me
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by promise. |
 | [5400108](../errorcode-media.md#5400108-parameter-value-out-of-range) | The mediasource does not exist in the playlist. Returned via promise. |
 
-**Examples**
-
-```TypeScript
-async function test() {
-  let player = await media.createAVPlayer();
-  let headers: Record<string, string> = {"User-Agent" : "MyApp/1.0"};
-
-  let mediaSource1: media.MediaSource = media.createMediaSourceWithUrl("http://example.com/video1.mp4", headers);
-  let sourceId1 = await player.addPlaybackMediaSource(mediaSource1);
-  let mediaSource2: media.MediaSource = media.createMediaSourceWithUrl("http://example.com/video2.mp4", headers);
-  let sourceId2 = await player.addPlaybackMediaSource(mediaSource2);
-  let mediaSource3: media.MediaSource = media.createMediaSourceWithUrl("http://example.com/video3.mp4", headers);
-  let sourceId3 = await player.addPlaybackMediaSource(mediaSource3);
-  await player.prepare();
-  await player.play();
-  await player.advanceToMediaSource(sourceId3);
-}
-```
-
 ## advanceToNextMediaSource
 
 ```TypeScript
@@ -239,24 +185,6 @@ Ends playback of the current mediasource and starts playback of the next mediaso
 | --- | --- |
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed . Return by promise. |
 | [5400108](../errorcode-media.md#5400108-parameter-value-out-of-range) | The previous mediasource does not exist in the playlist. Returned via promise. |
-
-**Examples**
-
-```TypeScript
-async function test() {
-  let player = await media.createAVPlayer();
-
-  let headers: Record<string, string> = {"User-Agent" : "MyApp/1.0"};
-  let mediaSource1: media.MediaSource = media.createMediaSourceWithUrl("http://example.com/video1.mp4", headers);
-  await player.addPlaybackMediaSource(mediaSource1);
-  let mediaSource2: media.MediaSource = media.createMediaSourceWithUrl("http://example.com/video2.mp4", headers);
-  await player.addPlaybackMediaSource(mediaSource2);
-
-  await player.prepare();
-  await player.play();
-  await player.advanceToNextMediaSource();
-}
-```
 
 ## advanceToPrevMediaSource
 
@@ -287,27 +215,6 @@ Ends playback of the current mediasource and starts playback of the previous med
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by promise. |
 | [5400108](../errorcode-media.md#5400108-parameter-value-out-of-range) | The next mediasource does not exist in the playlist. Returned via promise. |
 
-**Examples**
-
-```TypeScript
-async function test() {
-  let player = await media.createAVPlayer();
-
-  let headers: Record<string, string> = {"User-Agent" : "MyApp/1.0"};
-  let mediaSource1: media.MediaSource = media.createMediaSourceWithUrl("http://example.com/video1.mp4", headers);
-  await player.addPlaybackMediaSource(mediaSource1);
-  let mediaSource2: media.MediaSource = media.createMediaSourceWithUrl("http://example.com/video2.mp4", headers);
-  await player.addPlaybackMediaSource(mediaSource2);
-  let mediaSource3: media.MediaSource = media.createMediaSourceWithUrl("http://example.com/video3.mp4", headers);
-  await player.addPlaybackMediaSource(mediaSource3);
-
-  await player.prepare();
-  await player.play();
-  await player.advanceToNextMediaSource();
-  await player.advanceToPrevMediaSource();
-}
-```
-
 ## clearPlaybackList
 
 ```TypeScript
@@ -335,20 +242,6 @@ Clears all the items in the player's playlist. Currently playing media will be t
 | Error Code ID | Error Message |
 | --- | --- |
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | operation not allowed . Returned via promise. |
-
-**Examples**
-
-```TypeScript
-async function test() {
-  let player = await media.createAVPlayer();
-  let headers: Record<string, string> = {"User-Agent" : "MyApp/1.0"};
-  let mediaSource1: media.MediaSource = media.createMediaSourceWithUrl("http://example.com/video1.mp4", headers);
-  let sourceId1 = await player.addPlaybackMediaSource(mediaSource1);
-  let mediaSource2: media.MediaSource = media.createMediaSourceWithUrl("http://example.com/video2.mp4", headers);
-  let sourceId2 = await player.addPlaybackMediaSource(mediaSource2, sourceId1);
-  await player.clearPlaybackList();
-}
-```
 
 ## deselectTrack
 
@@ -383,32 +276,6 @@ Deselects the specified track when the AVPlayer plays multimedia resources with 
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Return by promise. |
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by promise. |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let avPlayer: media.AVPlayer = await media.createAVPlayer();
-let audioTrackIndex: Object = 0;
-avPlayer.getTrackDescription((error: BusinessError, arrList: Array<media.MediaDescription>) => {
-  if (arrList != null) {
-    for (let i = 0; i < arrList.length; i++) {
-      if (i != 0) {
-        // Obtain the audio track list.
-        audioTrackIndex = arrList[i][media.MediaDescriptionKey.MD_KEY_TRACK_INDEX];
-      }
-    }
-  } else {
-    console.error(`Failed to get TrackDescription, error:${error}`);
-  }
-});
-
-// Select an audio track.
-avPlayer.selectTrack(parseInt(audioTrackIndex.toString()));
-// Deselect the audio track and restore to the default audio track.
-avPlayer.deselectTrack(parseInt(audioTrackIndex.toString()));
-```
-
 ## getCurrentMediaSource
 
 ```TypeScript
@@ -436,18 +303,6 @@ Return the current mediasource.
 | Error Code ID | Error Message |
 | --- | --- |
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by promise. |
-
-**Examples**
-
-```TypeScript
-async function test() {
-  let player = await media.createAVPlayer();
-  let headers: Record<string, string> = {"User-Agent" : "MyApp/1.0"};
-  let mediaSource: media.MediaSource = media.createMediaSourceWithUrl("http://example.com/video1.mp4", headers);
-  await player.addPlaybackMediaSource(mediaSource);
-  let currentMediaSource: media.MediaSource | undefined = player.getCurrentMediaSource();
-}
-```
 
 ## getCurrentPresentationTimestamp
 
@@ -477,24 +332,6 @@ Obtains the current playback time. This API can be called only when the AVPlayer
 | --- | --- |
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function  test(){
-  let avPlayer = await media.createAVPlayer();
-  // Here is only an example. In real development, you must wait for the stateChange event to successfully trigger and reach the initialized state before proceeding.
-  avPlayer.play().then(() => {
-    console.info('Succeeded in playing');
-    let currentPresentation: number = avPlayer.getCurrentPresentationTimestamp();
-    console.info(`AVPlayer getCurrentPresentationTimestamp== ${currentPresentation}`);
-  }, (err: BusinessError) => {
-    console.error('Failed to prepare,error message is :' + err.message);
-  });
-}
-```
-
 ## getCurrentTrack
 
 ```TypeScript
@@ -513,7 +350,7 @@ Obtains the selected track by the specified media type. This API can be called o
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| trackType | MediaType | Yes | specified media Type, see MediaType. |
+| trackType | [MediaType](arkts-media-media-mediatype-e.md) | Yes | specified media Type, see MediaType. |
 
 **Return value:**
 
@@ -529,23 +366,6 @@ Obtains the selected track by the specified media type. This API can be called o
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by promise. |
 | [5400103](../errorcode-media.md#5400103-io-error) | I/O error. Return by promise. |
 | [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. Return by promise. |
-
-**Examples**
-
-```TypeScript
-async function test(){
-  let avPlayer = await media.createAVPlayer();
-  // Here is only an example. In real development, you must wait for the stateChange event to successfully trigger and reach the prepared, playing, or paused state before proceeding.
-  let myTrackId : number;
-  let trackType: media.MediaType = media.MediaType.MEDIA_TYPE_AUD;
-  avPlayer.getCurrentTrack(trackType).then((trackId: number) => {
-    console.info('Succeeded in getting CurrentTrack');
-    myTrackId = trackId;
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to get CurrentTrack, error: ${error}`);
-  });
-}
-```
 
 ## getLoadedTimeRanges
 
@@ -571,20 +391,7 @@ Obtains the list of loaded time ranges. This API uses a promise to return the re
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;Range&gt;&gt; | Promise used to return the list of loaded time ranges on the player. |
-
-**Examples**
-
-```TypeScript
-async function test(){
-  let avPlayer = await media.createAVPlayer();
-  avPlayer.getLoadedTimeRanges().then((range: Array<media.Range>) => {
-    console.info(`Succeeded in calling getLoadedTimeRanges: ${range}`);
-  }).catch((err: BusinessError) => {
-    console.error('Failed to getLoadedTimeRanges, error message is: ' + err.message);
-  });
-}
-```
+| Promise&lt;Array&lt;[Range](arkts-media-media-range-i.md)&gt;&gt; | Promise used to return the list of loaded time ranges on the player. |
 
 ## getMediaKeySystemInfos
 
@@ -604,24 +411,7 @@ Obtains the media key system information of the media asset that is being played
 
 | Type | Description |
 | --- | --- |
-| Array&lt;drm.MediaKeySystemInfo&gt; | Array of MediaKeySystemInfo objects, each of which contains the **uuid** and **pssh** properties. If the return value is undefined, the mediaKeySystemInfoUpdate event is not triggered. |
-
-**Examples**
-
-```TypeScript
-import { drm } from '@kit.DrmKit';
-
-async function  test(){
-  let avPlayer = await media.createAVPlayer();
-  // Here is only an example. In real development, you must wait for the mediaKeySystemInfoUpdate event to successfully trigger before proceeding.
-  const infos = avPlayer.getMediaKeySystemInfos();
-  console.info('GetMediaKeySystemInfos count: ' + infos.length);
-  for (let i = 0; i < infos.length; i++) {
-    console.info('GetMediaKeySystemInfos uuid: ' + infos[i]["uuid"]);
-    console.info('GetMediaKeySystemInfos pssh: ' + infos[i]["pssh"]);
-  }
-}
-```
+| Array&lt;[drm.MediaKeySystemInfo](../../apis-drm-kit/arkts-apis/arkts-drm-drm-mediakeysysteminfo-i.md)&gt; | Array of MediaKeySystemInfo objects, each of which contains the **uuid** and **pssh** properties. If the return value is undefined, the mediaKeySystemInfoUpdate event is not triggered. |
 
 ## getMediaSources
 
@@ -651,20 +441,6 @@ Return the array of mediasources in the playlist.
 | --- | --- |
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by promise. |
 
-**Examples**
-
-```TypeScript
-async function test() {
-  let player = await media.createAVPlayer();
-  let headers: Record<string, string> = {"User-Agent" : "MyApp/1.0"};
-  let mediaSource1: media.MediaSource = media.createMediaSourceWithUrl("http://example.com/video1.mp4", headers);
-  let sourceId1 = await player.addPlaybackMediaSource(mediaSource1);
-  let mediaSource2: media.MediaSource = media.createMediaSourceWithUrl("http://example.com/video2.mp4", headers);
-  let sourceId2 = await player.addPlaybackMediaSource(mediaSource2);
-  let sources: Array<media.MediaSource | undefined> = player.getMediaSources();
-}
-```
-
 ## getPlaybackInfo
 
 ```TypeScript
@@ -681,32 +457,7 @@ Obtains the playback information. This API can be called only when the AVPlayer 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;PlaybackInfo&gt; | Promise used to return **PlaybackInfo**. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let avPlayer: media.AVPlayer | undefined;
-let playbackInfo: media.PlaybackInfo | undefined;
-media.createAVPlayer(async (err: BusinessError, player: media.AVPlayer) => {
-  if (player != null) {
-    avPlayer = player;
-    console.info(`Succeeded in creating AVPlayer`);
-    if (avPlayer) {
-      try {
-        playbackInfo = await avPlayer.getPlaybackInfo();
-        console.info(`AVPlayer getPlaybackInfo = ${JSON.stringify(playbackInfo)}`); // Print PlaybackInfo.
-      } catch (error) {
-        console.error(`error = ${error}`);
-      }
-    }
-  } else {
-    console.error(`Failed to create AVPlayer, error message:${err.message}`);
-  }
-});
-```
+| Promise&lt;[PlaybackInfo](arkts-media-media-playbackinfo-i.md)&gt; | Promise used to return **PlaybackInfo**. |
 
 ## getPlaybackPosition
 
@@ -734,24 +485,6 @@ Obtains the current playback position. This API can be called only when the AVPl
 | --- | --- |
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function  test(){
-  let avPlayer = await media.createAVPlayer();
-  // Here is only an example. In real development, you must wait for the stateChange event to successfully trigger and reach the initialized state before proceeding.
-  avPlayer.prepare().then(() => {
-    console.info('Succeeded in preparing');
-    let playbackPosition: number = avPlayer.getPlaybackPosition();
-    console.info(`AVPlayer getPlaybackPosition== ${playbackPosition}`);
-  }, (err: BusinessError) => {
-    console.error('Failed to prepare,error message is :' + err.message);
-  });
-}
-```
-
 ## getPlaybackRate
 
 ```TypeScript
@@ -770,17 +503,6 @@ Obtains the playback speed of an AVPlayer. This API uses a promise to return the
 | --- | --- |
 | Promise&lt;number&gt; | Promise object, which returns the playback speed. |
 
-**Examples**
-
-```TypeScript
-async function test(){
-  let avPlayer = await media.createAVPlayer();
-  avPlayer.getPlaybackRate().then((rate: number) => {
-    console.info('Succeeded getPlaybackRate' + rate);
-  });
-}
-```
-
 ## getPlaybackStatisticMetrics
 
 ```TypeScript
@@ -798,31 +520,6 @@ Obtains the statistic metrics of the current player. This API can be called when
 | Type | Description |
 | --- | --- |
 | Promise&lt;[PlaybackMetrics](arkts-media-media-playbackmetrics-t.md)&gt; | Promise used to return the playback metrics of the current AVPlayer. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let avPlayer: media.AVPlayer | undefined;
-let playbackMetrics: media.PlaybackMetrics | undefined;
-media.createAVPlayer(async (err: BusinessError, player: media.AVPlayer) => {
-  if (player != null) {
-    avPlayer = player;
-    console.info(`Succeeded in creating AVPlayer`);
-    if (avPlayer) {
-      try {
-        playbackMetrics = await avPlayer.getPlaybackStatisticMetrics();
-        console.info(`AVPlayer getPlaybackStatisticMetrics = ${JSON.stringify(playbackMetrics)}`); // Print the value of playbackMetrics.
-      } catch (error) {
-        console.error(`error = ${error}`);
-      }
-    }
-  } else {
-    console.error(`Failed to create AVPlayer, error message:${err.message}`);
-  }
-});
-```
 
 ## getSeekableTimeRanges
 
@@ -849,20 +546,7 @@ Obtains the list of seekable time ranges. This API uses a promise to return the 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;Range&gt;&gt; | Promise used to return the list of seekable time ranges on the player. |
-
-**Examples**
-
-```TypeScript
-async function test(){
-  let avPlayer = await media.createAVPlayer();
-  avPlayer.getSeekableTimeRanges().then((range: Array<media.Range>) => {
-    console.info(`Succeeded in calling getSeekableTimeRanges: ${range}`);
-  }).catch((err: BusinessError) => {
-    console.error('Failed to getSeekableTimeRanges, error message is: ' + err.message);
-  });
-}
-```
+| Promise&lt;Array&lt;[Range](arkts-media-media-range-i.md)&gt;&gt; | Promise used to return the list of seekable time ranges on the player. |
 
 ## getSelectedTracks
 
@@ -890,22 +574,6 @@ Obtains the indexes of the selected audio or video tracks. This API can be calle
 | --- | --- |
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function  test(){
-  let avPlayer = await media.createAVPlayer();
-  // Here is only an example. In real development, you must wait for the stateChange event to successfully trigger and reach the prepared, playing, or paused state before proceeding.
-  avPlayer.getSelectedTracks().then((arrList: Array<number>) => {
-    console.info('Succeeded in getting SelectedTracks');
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to get SelectedTracks, error:${error}`);
-  });
-}
-```
-
 ## getTrackDescription
 
 ```TypeScript
@@ -931,48 +599,6 @@ Obtains the audio and video track information. This API can be called only when 
 | Error Code ID | Error Message |
 | --- | --- |
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by callback. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioPlayer.getTrackDescription((error: BusinessError, arrList: Array<media.MediaDescription>) => {
-  if (arrList != null) {
-    console.info('Succeeded in getting TrackDescription');
-  } else {
-    console.error(`Failed to get TrackDescription, error:${error}`);
-  }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function  test(){
-  let avPlayer = await media.createAVPlayer();
-  // Here is only an example. In real development, you must wait for the stateChange event to successfully trigger and reach the prepared, playing, or paused state before proceeding.
-  avPlayer.getTrackDescription((error: BusinessError, arrList: Array<media.MediaDescription>) => {
-    if ((arrList) != null) {
-      console.info('Succeeded in doing getTrackDescription');
-    } else {
-      console.error(`Failed to do getTrackDescription, error:${error}`);
-    }
-  });
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-videoPlayer.getTrackDescription((error: BusinessError, arrList: Array<media.MediaDescription>) => {
-  if ((arrList) != null) {
-    console.info('Succeeded in getting TrackDescription');
-  } else {
-    console.error(`Failed to get TrackDescription, error:${error}`);
-  }
-});
-```
 
 ## getTrackDescription
 
@@ -1000,46 +626,6 @@ Obtains the audio and video track information. This API can be called only when 
 | --- | --- |
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by promise. |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioPlayer.getTrackDescription().then((arrList: Array<media.MediaDescription>) => {
-  console.info('Succeeded in getting TrackDescription');
-}).catch((error: BusinessError) => {
-  console.error(`Failed to get TrackDescription, error:${error}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function  test(){
-  let avPlayer = await media.createAVPlayer();
-  // Here is only an example. In real development, you must wait for the stateChange event to successfully trigger and reach the prepared, playing, or paused state before proceeding.
-  avPlayer.getTrackDescription().then((arrList: Array<media.MediaDescription>) => {
-    console.info('Succeeded in getting TrackDescription');
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to get TrackDescription, error:${error}`);
-  });
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-videoPlayer.getTrackDescription().then((arrList: Array<media.MediaDescription>) => {
-  if (arrList != null) {
-    console.info('Succeeded in getting TrackDescription');
-  } else {
-    console.error('Failed to get TrackDescription');
-  }
-}).catch((error: BusinessError) => {
-  console.error(`video catchCallback, error:${error}`);
-});
-```
-
 ## getTrackSelectionFilter
 
 ```TypeScript
@@ -1066,19 +652,6 @@ Obtains the track selection filter configured for the player. This API uses a pr
 | --- | --- |
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. |
 
-**Examples**
-
-```TypeScript
-async function test() {
-  let player = await media.createAVPlayer();
-  player.getTrackSelectionFilter().then((selectionFilter: media.TrackSelectionFilter) => {
-    console.info(`Succeeded in getting TrackSelectionFilter: ${selectionFilter}`);
-  }).catch((err: BusinessError) => {
-    console.error('Failed to getTrackSelectionFilter, error message is:' + err.message);
-  });
-}
-```
-
 ## isSeekContinuousSupported
 
 ```TypeScript
@@ -1099,16 +672,6 @@ Checks whether the media source supports [seek](#seek) in SEEK_CONTINUOUS mode (
 | --- | --- |
 | boolean | Check result for the support of the seek operation in **SEEK_CONTINUOUS** mode. **true** to support, **false** otherwise. |
 
-**Examples**
-
-```TypeScript
-async function  test(){
-  let avPlayer = await media.createAVPlayer();
-  // Here is only an example. In real development, you must wait for the stateChange event to successfully trigger and reach the prepared, playing, paused, or completed state before proceeding.
-  let isSupported = avPlayer.isSeekContinuousSupported();
-}
-```
-
 ## off('mediaKeySystemInfoUpdate')
 
 ```TypeScript
@@ -1128,7 +691,7 @@ Unsubscribes from media key system information changes.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'mediaKeySystemInfoUpdate' | Yes | Event type, which is **'mediaKeySystemInfoUpdate'** in this case. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;drm.MediaKeySystemInfo&gt;&gt; | No | Callback invoked when the event is triggered. It reports a **MediaKeySystemInfo** array. If this parameter is specified, only the specified callback is unregistered. Otherwise, all callbacks associated with the **mediaKeySystemInfoUpdate** event will be unregistered.<br>**Since:** 12 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[drm.MediaKeySystemInfo](../../apis-drm-kit/arkts-apis/arkts-drm-drm-mediakeysysteminfo-i.md)&gt;&gt; | No | Callback invoked when the event is triggered. It reports a **MediaKeySystemInfo** array. If this parameter is specified, only the specified callback is unregistered. Otherwise, all callbacks associated with the **mediaKeySystemInfoUpdate** event will be unregistered.<br>**Since:** 12 |
 
 ## off('stateChange')
 
@@ -1401,7 +964,7 @@ Unsubscribes from the audio interruption event.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'audioInterrupt' | Yes | Event type, which is **'audioInterrupt'** in this case. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;audio.InterruptEvent&gt; | No | Callback invoked when the event is triggered. If this parameter is specified, only the specified callback is unregistered. Otherwise, all callbacks associated with the **audioInterrupt** event will be unregistered.<br>**Since:** 12 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[audio.InterruptEvent](../../apis-audio-kit/arkts-apis/arkts-audio-audio-interruptevent-i.md)&gt; | No | Callback invoked when the event is triggered. If this parameter is specified, only the specified callback is unregistered. Otherwise, all callbacks associated with the **audioInterrupt** event will be unregistered.<br>**Since:** 12 |
 
 ## off('availableBitrates')
 
@@ -1464,7 +1027,7 @@ Unsubscribes from audio stream output device changes and reasons. This API uses 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'audioOutputDeviceChangeWithInfo' | Yes | Event type, which is **'audioOutputDeviceChangeWithInfo'** in this case. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;audio.AudioStreamDeviceChangeInfo&gt; | No | Callback used to return the output device descriptor of the current audio stream and the change reason. If this parameter is specified, only the specified callback is unregistered. Otherwise, all callbacks associated with the **audioOutputDeviceChangeWithInfo** event will be unregistered. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[audio.AudioStreamDeviceChangeInfo](../../apis-audio-kit/arkts-apis/arkts-audio-audio-audiostreamdevicechangeinfo-i.md)&gt; | No | Callback used to return the output device descriptor of the current audio stream and the change reason. If this parameter is specified, only the specified callback is unregistered. Otherwise, all callbacks associated with the **audioOutputDeviceChangeWithInfo** event will be unregistered. |
 
 **Error codes:**
 
@@ -1615,15 +1178,6 @@ Unsubscribes from metric events during playback.
 | --- | --- | --- | --- |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[AVMetricsEvent](arkts-media-media-avmetricsevent-i.md)&gt;&gt; | No | Callback invoked for metric events. This API uses an asynchronous callback to return the result. |
 
-**Examples**
-
-```TypeScript
-async function test(){
-  let avPlayer = await media.createAVPlayer();
-  avPlayer.offMetricsEvent();
-}
-```
-
 ## offPlaybackContentChanged
 
 ```TypeScript
@@ -1645,20 +1199,6 @@ Unregisters listener to detect when changes occur in the playback content.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | No | Callback invoked when the event is triggered. Default value:If this parameter is not specified, all callback functions for the event are unsubscribed. |
-
-**Examples**
-
-```TypeScript
-async function test(){
-  let avPlayer = await media.createAVPlayer();
-  let callback = (id: string) => {
-    console.info('MediaSourceChange callback called');
-  };
-
-  avPlayer.onPlaybackContentChanged(callback);
-  avPlayer.offPlaybackContentChanged(callback);
-}
-```
 
 ## offTimedMetaData
 
@@ -1682,15 +1222,6 @@ Unregister listener to detect time-based metadata, Currently, only the #EXT-X-DA
 | --- | --- | --- | --- |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVTimedMetaData](arkts-media-media-avtimedmetadata-i.md)&gt; | No | Callback invoked when the event is triggered. Default value:If this parameter is not specified, all callback functions for the event are unsubscribed. |
 
-**Examples**
-
-```TypeScript
-async function test(){
-  let avPlayer = await media.createAVPlayer();
-  avPlayer.offTimedMetaData();
-}
-```
-
 ## on('mediaKeySystemInfoUpdate')
 
 ```TypeScript
@@ -1710,7 +1241,7 @@ Subscribes to media key system information changes.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'mediaKeySystemInfoUpdate' | Yes | Event type, which is **'mediaKeySystemInfoUpdate'** in this case. This event is triggered when the copyright protection information of the media asset being played changes. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;drm.MediaKeySystemInfo&gt;&gt; | Yes | Callback invoked when the event is triggered. It reports a **MediaKeySystemInfo** array.<br>**Since:** 12 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[drm.MediaKeySystemInfo](../../apis-drm-kit/arkts-apis/arkts-drm-drm-mediakeysysteminfo-i.md)&gt;&gt; | Yes | Callback invoked when the event is triggered. It reports a **MediaKeySystemInfo** array.<br>**Since:** 12 |
 
 ## on('stateChange')
 
@@ -1996,7 +1527,7 @@ Subscribes to the audio interruption event. When multiple audio and video assets
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'audioInterrupt' | Yes | Event type, which is **'audioInterrupt'** in this case. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;audio.InterruptEvent&gt; | Yes | Callback invoked when the event is triggered.<br>**Since:** 12 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[audio.InterruptEvent](../../apis-audio-kit/arkts-apis/arkts-audio-audio-interruptevent-i.md)&gt; | Yes | Callback invoked when the event is triggered.<br>**Since:** 12 |
 
 ## on('availableBitrates')
 
@@ -2088,7 +1619,7 @@ When subscribing to this event, you are advised to implement the player behavior
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'audioOutputDeviceChangeWithInfo' | Yes | Event type, which is **'audioOutputDeviceChangeWithInfo'** in this case. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;audio.AudioStreamDeviceChangeInfo&gt; | Yes | Callback used to return the output device descriptor of the current audio stream and the change reason. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[audio.AudioStreamDeviceChangeInfo](../../apis-audio-kit/arkts-apis/arkts-audio-audio-audiostreamdevicechangeinfo-i.md)&gt; | Yes | Callback used to return the output device descriptor of the current audio stream and the change reason. |
 
 **Error codes:**
 
@@ -2239,23 +1770,6 @@ Subscribes to metric events during playback.
 | --- | --- | --- | --- |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[AVMetricsEvent](arkts-media-media-avmetricsevent-i.md)&gt;&gt; | Yes | Callback invoked for metric events. This API uses an asynchronous callback to return the result. |
 
-**Examples**
-
-```TypeScript
-async function test(){
-  let avPlayer = await media.createAVPlayer();
-  avPlayer.onMetricsEvent((info: Array<media.AVMetricsEvent>) => {
-    if (info) {
-      for (let i = 0; i < info.length; i++) {
-        console.info('metrics info: index=' + i + ' info=' + JSON.stringify(info));
-      }
-    } else {
-      console.info('metrics info is null');
-    }
-  });
-}
-```
-
 ## onPlaybackContentChanged
 
 ```TypeScript
@@ -2278,17 +1792,6 @@ Registers a listener to detect when the playback content has changed. The value 
 | --- | --- | --- | --- |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | Yes | Callback invoked when the event is triggered. |
 
-**Examples**
-
-```TypeScript
-async function test(){
-  let avPlayer = await media.createAVPlayer();
-  avPlayer.onPlaybackContentChanged((id: string) => {
-    console.info('MediaSourceChange called, SourceId:' + id);
-  });
-}
-```
-
 ## onTimedMetaData
 
 ```TypeScript
@@ -2310,16 +1813,6 @@ Register listener to detect time-based metadata, Currently, only the #EXT-X-DATE
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVTimedMetaData](arkts-media-media-avtimedmetadata-i.md)&gt; | Yes | Callback invoked when the event is triggered. |
-
-**Examples**
-
-```TypeScript
-async function test(){
-  let avPlayer = await media.createAVPlayer();
-  avPlayer.onTimedMetaData((data: media.AVTimedMetaData) => {
-  });
-}
-```
 
 ## pause
 
@@ -2347,61 +1840,6 @@ Pauses audio and video playback. This API can be called only when the AVPlayer i
 | --- | --- |
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by callback. |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// asyncallback.
-videoRecorder.pause((err: BusinessError) => {
-  if (err == null) {
-    console.info('pause videorecorder success');
-  } else {
-    console.error('pause videorecorder failed and error is ' + err.message);
-  }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function  test(){
-  let avPlayer = await media.createAVPlayer();
-  // Here is only an example. In real development, you must wait for the stateChange event to successfully trigger and reach the playing state before proceeding.
-  avPlayer.pause((err: BusinessError) => {
-    if (err) {
-      console.error('Failed to pause,error message is :' + err.message);
-    } else {
-      console.info('Succeeded in pausing');
-    }
-  });
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-avRecorder.pause((err: BusinessError) => {
-  if (err) {
-    console.error(`Failed to pause AVRecorder and error is: Code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info('Succeeded in pausing');
-  }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-videoPlayer.pause((err: BusinessError) => {
-  if (err) {
-    console.error('Failed to pause!');
-  } else {
-    console.info('Succeeded in pausing!');
-  }
-});
-```
-
 ## pause
 
 ```TypeScript
@@ -2427,69 +1865,6 @@ Pauses audio and video playback. This API can be called only when the AVPlayer i
 | Error Code ID | Error Message |
 | --- | --- |
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by promise. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// promise.
-videoRecorder.pause().then(() => {
-  console.info('pause videorecorder success');
-}).catch((err: BusinessError) => {
-  console.error('pause videorecorder failed and catch error is ' + err.message);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function  test(){
-  let avPlayer = await media.createAVPlayer();
-  // Here is only an example. In real development, you must wait for the stateChange event to successfully trigger and reach the playing state before proceeding.
-  avPlayer.pause().then(() => {
-    console.info('Succeeded in pausing');
-  }, (err: BusinessError) => {
-    console.error('Failed to pause,error message is :' + err.message);
-  });
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-avRecorder.pause().then(() => {
-  console.info('Succeeded in pausing');
-}).catch((err: Error) => {
-  let error: BusinessError = err as BusinessError;
-  console.error(`Failed to pause AVRecorder and error is: Code: ${error.code}, message: ${error.message}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { media } from '@kit.MediaKit';
-
-async function test() {
-  // Create an AVTranscoder instance.
-  let avTranscoder = await media.createAVTranscoder();
-  avTranscoder.pause().then(() => {
-    console.info('pause AVTranscoder success');
-  }).catch((err: BusinessError) => {
-    console.error('pause AVTranscoder failed and catch error is ' + err.message);
-  });
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-videoPlayer.pause().then(() => {
-  console.info('Succeeded in pausing');
-}).catch((error: BusinessError) => {
-  console.error(`video catchCallback, error:${error}`);
-});
-```
 
 ## play
 
@@ -2517,36 +1892,6 @@ Starts to play an audio and video asset. This API can be called only when the AV
 | --- | --- |
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by callback. |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function  test(){
-  let avPlayer = await media.createAVPlayer();
-  // Here is only an example. In real development, you must wait for the stateChange event to successfully trigger and reach the prepared, paused, or completed state before proceeding.
-  avPlayer.play((err: BusinessError) => {
-    if (err) {
-      console.error('Failed to play,error message is :' + err.message);
-    } else {
-      console.info('Succeeded in playing');
-    }
-  });
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-videoPlayer.play((err: BusinessError) => {
-  if (err) {
-    console.error('Failed to play!');
-  } else {
-    console.info('Succeeded in playing!');
-  }
-});
-```
-
 ## play
 
 ```TypeScript
@@ -2572,32 +1917,6 @@ Starts to play an audio and video asset. This API can be called only when the AV
 | Error Code ID | Error Message |
 | --- | --- |
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by promise. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function  test(){
-  let avPlayer = await media.createAVPlayer();
-  // Here is only an example. In real development, you must wait for the stateChange event to successfully trigger and reach the prepared, paused, or completed state before proceeding.
-  avPlayer.play().then(() => {
-    console.info('Succeeded in playing');
-  }, (err: BusinessError) => {
-    console.error('Failed to play,error message is :' + err.message);
-  });
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-videoPlayer.play().then(() => {
-  console.info('Succeeded in playing');
-}).catch((error: BusinessError) => {
-  console.error(`video catchCallback, error:${error}`);
-});
-```
 
 ## prepare
 
@@ -2625,36 +1944,6 @@ Prepares for audio and video playback. This API can be called only when the AVPl
 | --- | --- |
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by callback. |
 | [5400106](../errorcode-media.md#5400106-format-not-supported) | Unsupported format. Return by callback. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function  test(){
-  let avPlayer = await media.createAVPlayer();
-  // Here is only an example. In real development, you must wait for the stateChange event to successfully trigger and reach the initialized state before proceeding.
-  avPlayer.prepare((err: BusinessError) => {
-    if (err) {
-      console.error('Failed to prepare,error message is :' + err.message);
-    } else {
-      console.info('Succeeded in preparing');
-    }
-  });
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-videoPlayer.prepare((err: BusinessError) => {
-  if (err) {
-    console.error('Failed to prepare!');
-  } else {
-    console.info('Succeeded in preparing!');
-  }
-});
-```
 
 ## prepare
 
@@ -2685,32 +1974,6 @@ If your application frequently switches between short videos, you can create mul
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by promise. |
 | [5400106](../errorcode-media.md#5400106-format-not-supported) | Unsupported format. Return by promise. |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function  test(){
-  let avPlayer = await media.createAVPlayer();
-  // Here is only an example. In real development, you must wait for the stateChange event to successfully trigger and reach the initialized state before proceeding.
-  avPlayer.prepare().then(() => {
-    console.info('Succeeded in preparing');
-  }, (err: BusinessError) => {
-    console.error('Failed to prepare,error message is :' + err.message);
-  });
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-videoPlayer.prepare().then(() => {
-  console.info('Succeeded in preparing');
-}).catch((error: BusinessError) => {
-  console.error(`video catchCallback, error:${error}`);
-});
-```
-
 ## release
 
 ```TypeScript
@@ -2737,102 +2000,6 @@ Releases the playback resources. This API can be called when the AVPlayer is in 
 | --- | --- |
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by callback. |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// asyncallback.
-videoRecorder.release((err: BusinessError) => {
-  if (err == null) {
-    console.info('release videorecorder success');
-  } else {
-    console.error('release videorecorder failed and error is ' + err.message);
-  }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { media } from '@kit.MediaKit';
-
-let avImageGenerator: media.AVImageGenerator | undefined = undefined;
-
-// Release the resources.
-media.createAVImageGenerator((err: BusinessError, generator: media.AVImageGenerator) => {
-  if (generator) {
-    avImageGenerator = generator;
-    console.info(`Succeeded in creating AVImageGenerator`);
-    avImageGenerator.release((error: BusinessError) => {
-      if (error) {
-        console.error(`Failed to release, err = ${JSON.stringify(error)}`);
-        return;
-      }
-      console.info(`Succeeded in releasing`);
-    });
-  } else {
-    console.error(`Failed to create AVImageGenerator, error message:${err.message}`);
-  }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { media } from '@kit.MediaKit';
-
-async function test() {
-  // Create an AVMetadataExtractor instance.
-  let avMetadataExtractor: media.AVMetadataExtractor = await media.createAVMetadataExtractor();
-  avMetadataExtractor.release((error: BusinessError) => {
-    if (error) {
-      console.error(`Failed to release, err = ${JSON.stringify(error)}`);
-      return;
-    }
-    console.info(`Succeeded in releasing.`);
-  });
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function  test(){
-  let avPlayer = await media.createAVPlayer();
-  // Here is only an example. In real development, you must wait for the stateChange event to successfully trigger and reach a state other than released before proceeding.
-  avPlayer.release((err: BusinessError) => {
-    if (err) {
-      console.error('Failed to release,error message is :' + err.message);
-    } else {
-      console.info('Succeeded in releasing');
-    }
-  });
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-avRecorder.release((err: BusinessError) => {
-  if (err) {
-    console.error(`Failed to release AVRecorder and error is: Code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info('Succeeded in releasing AVRecorder');
-  }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-videoPlayer.release((err: BusinessError) => {
-  if (err) {
-    console.error('Failed to release!');
-  } else {
-    console.info('Succeeded in releasing!');
-  }
-});
-```
-
 ## release
 
 ```TypeScript
@@ -2858,134 +2025,6 @@ Releases the playback resources. This API can be called when the AVPlayer is in 
 | Error Code ID | Error Message |
 | --- | --- |
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by promise. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// promise.
-videoRecorder.release().then(() => {
-  console.info('release videorecorder success');
-}).catch((err: BusinessError) => {
-  console.error('release videorecorder failed and catch error is ' + err.message);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { media } from '@kit.MediaKit';
-
-let avImageGenerator: media.AVImageGenerator | undefined = undefined;
-
-// Release the resources.
-media.createAVImageGenerator((err: BusinessError, generator: media.AVImageGenerator) => {
-  if (generator) {
-    avImageGenerator = generator;
-    console.info(`Succeeded in creating AVImageGenerator`);
-    avImageGenerator.release().then(() => {
-      console.info(`Succeeded in releasing.`);
-    }).catch((error: BusinessError) => {
-      console.error(`Failed to release, error message:${error.message}`);
-    });
-  } else {
-    console.error(`Failed to create AVImageGenerator, error message:${err.message}`);
-  }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { media } from '@kit.MediaKit';
-
-async function test() {
-  // Create an AVMetadataExtractor instance.
-  let avMetadataExtractor: media.AVMetadataExtractor = await media.createAVMetadataExtractor();
-  avMetadataExtractor.release().then(() => {
-    console.info(`Succeeded in releasing.`);
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to release, error message:${error.message}`);
-  });
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function  test(){
-  let avPlayer = await media.createAVPlayer();
-  // Here is only an example. In real development, you must wait for the stateChange event to successfully trigger and reach a state other than released before proceeding.
-  avPlayer.release().then(() => {
-    console.info('Succeeded in releasing');
-  }, (err: BusinessError) => {
-    console.error('Failed to release,error message is :' + err.message);
-  });
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-avRecorder.release().then(() => {
-  console.info('Succeeded in releasing AVRecorder');
-}).catch((err: Error) => {
-  let error: BusinessError = err as BusinessError;
-  console.error(`Failed to release AVRecorder and error is: Code: ${error.code}, message: ${error.message}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// Initialize avScreenCaptureRecorder.
-let avScreenCaptureRecorder: media.AVScreenCaptureRecorder | undefined;
-media.createAVScreenCaptureRecorder().then((captureRecorder: media.AVScreenCaptureRecorder) => {
-  if (captureRecorder != null) {
-    avScreenCaptureRecorder = captureRecorder;
-    console.info('Succeeded in creating avScreenCaptureRecorder');
-  } else {
-    console.error('Failed to create avScreenCaptureRecorder');
-  }
-}).catch((error: BusinessError) => {
-  console.error(`createAVScreenCaptureRecorder catchCallback, error message:${error.message}`);
-});
-
-// Other processes.
-
-// Call the release method.
-if (avScreenCaptureRecorder != undefined) {
-  avScreenCaptureRecorder.release().then(() => {
-    console.info('Succeeded in releasing avScreenCaptureRecorder');
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to release avScreenCaptureRecorder. Code: ${err.code}, message: ${err.message}`);
-  });
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { media } from '@kit.MediaKit';
-
-async function test() {
-  // Create an AVTranscoder instance.
-  let avTranscoder = await media.createAVTranscoder();
-  avTranscoder.release().then(() => {
-    console.info('release AVTranscoder success');
-  }).catch((err: BusinessError) => {
-    console.error('release AVTranscoder failed and catch error is ' + err.message);
-  });
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-videoPlayer.release().then(() => {
-  console.info('Succeeded in releasing');
-}).catch((error: BusinessError) => {
-  console.error(`video catchCallback, error:${error}`);
-});
-```
 
 ## removePlaybackMediaSource
 
@@ -3022,18 +2061,6 @@ Removes the specified playback media source from the player's playlist. If the i
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by promise. |
 | [5400108](../errorcode-media.md#5400108-parameter-value-out-of-range) | The media source ID does not exist in the playlist. Returned via promise. |
 
-**Examples**
-
-```TypeScript
-async function test() {
-  let player = await media.createAVPlayer();
-  let headers: Record<string, string> = {"User-Agent" : "MyApp/1.0"};
-  let mediaSource1: media.MediaSource = media.createMediaSourceWithUrl("http://example.com/video1.mp4", headers);
-  let sourceId = await player.addPlaybackMediaSource(mediaSource1);
-  await player.removePlaybackMediaSource(sourceId);
-}
-```
-
 ## reset
 
 ```TypeScript
@@ -3059,61 +2086,6 @@ Resets audio and video playback. This API can be called only when the AVPlayer i
 | Error Code ID | Error Message |
 | --- | --- |
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by callback. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// asyncallback.
-videoRecorder.reset((err: BusinessError) => {
-  if (err == null) {
-    console.info('reset videorecorder success');
-  } else {
-    console.error('reset videorecorder failed and error is ' + err.message);
-  }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function  test(){
-  let avPlayer = await media.createAVPlayer();
-  // Here is only an example. In real development, you must wait for the stateChange event to successfully trigger and reach the initialized, prepared, playing, paused, completed, stopped, or error state before proceeding.
-  avPlayer.reset((err: BusinessError) => {
-    if (err) {
-      console.error('Failed to reset,error message is :' + err.message);
-    } else {
-      console.info('Succeeded in resetting');
-    }
-  });
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-avRecorder.reset((err: BusinessError) => {
-  if (err) {
-    console.error(`Failed to reset AVRecorder and error is: Code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info('Succeeded in resetting AVRecorder');
-  }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-videoPlayer.reset((err: BusinessError) => {
-  if (err) {
-    console.error('Failed to reset!');
-  } else {
-    console.info('Succeeded in resetting!');
-  }
-});
-```
 
 ## reset
 
@@ -3141,54 +2113,6 @@ Resets audio and video playback. This API can be called only when the AVPlayer i
 | --- | --- |
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by promise. |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// promise.
-videoRecorder.reset().then(() => {
-  console.info('reset videorecorder success');
-}).catch((err: BusinessError) => {
-  console.error('reset videorecorder failed and catch error is ' + err.message);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function  test(){
-  let avPlayer = await media.createAVPlayer();
-  // Here is only an example. In real development, you must wait for the stateChange event to successfully trigger and reach the initialized, prepared, playing, paused, completed, stopped, or error state before proceeding.
-  avPlayer.reset().then(() => {
-    console.info('Succeeded in resetting');
-  }, (err: BusinessError) => {
-    console.error('Failed to reset,error message is :' + err.message);
-  });
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-avRecorder.reset().then(() => {
-  console.info('Succeeded in resetting AVRecorder');
-}).catch((err: Error) => {
-  let error: BusinessError = err as BusinessError;
-  console.error(`Failed to reset AVRecorder and error is: Code: ${error.code}, message: ${error.message}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-videoPlayer.reset().then(() => {
-  console.info('Succeeded in resetting');
-}).catch((error: BusinessError) => {
-  console.error(`video catchCallback, error:${error}`);
-});
-```
-
 ## seek
 
 ```TypeScript
@@ -3214,31 +2138,7 @@ Seeks to the specified playback position. This API can be called only when the A
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | timeMs | number | Yes | Position to seek to, in ms. The value range is [0, [duration](../../../reference/apis-media-kit/arkts-apis-media-AVPlayer.md)].When the seek mode is [SEEK_CONTINUOUS](arkts-media-media-seekmode-e.md), you can set this parameter to **-1** to end the **SEEK_CONTINUOUS** mode. |
-| mode | SeekMode | No | Seek mode based on the video I frame. The default value is **SEEK_PREV_SYNC**. **Set this parameter only for video playback. |
-
-**Examples**
-
-```TypeScript
-async function  test(){
-  let avPlayer = await media.createAVPlayer();
-  let seekTime: number = 1000;
-  // Here is only an example. In real development, you must wait for the stateChange event to successfully trigger and reach the prepared, playing, paused, or completed state before proceeding.
-  avPlayer.seek(seekTime, media.SeekMode.SEEK_PREV_SYNC);
-}
-```
-
-```TypeScript
-async function  test(){
-  // Use SEEK_CONTINUOUS with the onChange callback of the Slider. When slideMode is Moving, it triggers continuous seeking during the drag.
-  let avPlayer = await media.createAVPlayer();
-  let slideMovingTime: number = 2000;
-  // Here is only an example. In real development, you must wait for the stateChange event to successfully trigger and reach the prepared, playing, paused, or completed state before proceeding.
-  avPlayer.seek(slideMovingTime, media.SeekMode.SEEK_CONTINUOUS);
-
-  // To end the seek when slideMode is End, call seek(-1, media.SeekMode.SEEK_CONTINUOUS).
-  avPlayer.seek(-1, media.SeekMode.SEEK_CONTINUOUS);
-}
-```
+| mode | [SeekMode](arkts-media-media-seekmode-e.md) | No | Seek mode based on the video I frame. The default value is **SEEK_PREV_SYNC**. **Set this parameter only for video playback. |
 
 ## seekToDefaultPosition
 
@@ -3259,20 +2159,6 @@ Seeks to the default access point of the playback source. For live streams, the 
 | Error Code ID | Error Message |
 | --- | --- |
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by callback. |
-
-**Examples**
-
-```TypeScript
-async function test(){
-  let avPlayer = await media.createAVPlayer();
-  try {
-    avPlayer.seekToDefaultPosition()
-    console.info('Succeeded in calling seekToDefaultPosition.');
-  } catch (err) {
-    console.error('Failed to seekToDefaultPosition, error message is: ' + err.message);
-  }
-}
-```
 
 ## selectTrack
 
@@ -3310,32 +2196,6 @@ Selects a track when the AVPlayer plays multimedia resources with multiple audio
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Return by promise. |
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by promise. |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function  test(){
-  let avPlayer: media.AVPlayer = await media.createAVPlayer();
-  let audioTrackIndex: Object = 0;
-  avPlayer.getTrackDescription((error: BusinessError, arrList: Array<media.MediaDescription>) => {
-    if (arrList != null) {
-      for (let i = 0; i < arrList.length; i++) {
-        if (i != 0) {
-          // Obtain the audio track list.
-          audioTrackIndex = arrList[i][media.MediaDescriptionKey.MD_KEY_TRACK_INDEX];
-        }
-      }
-    } else {
-      console.error(`Failed to get TrackDescription, error:${error}`);
-    }
-  });
-
-  // Select an audio track.
-  avPlayer.selectTrack(parseInt(audioTrackIndex.toString()));
-}
-```
-
 ## setBitrate
 
 ```TypeScript
@@ -3356,17 +2216,6 @@ Sets the bitrate for the streaming media. This API is valid only for HLS/DASH st
 | --- | --- | --- | --- |
 | bitrate | number | Yes | Bitrate to set. You can obtain the available bitrates of the current HLS/DASH stream by subscribing to the availableBitrates event. If the bitrate to set is not in the list of the available bitrates, the AVPlayer selects from the list the bitrate that is closed to the bitrate to set. If the length of the available bitrate list obtained through the event is 0, no bitrate can be set and the **bitrateDone** callback will not be triggered. |
 
-**Examples**
-
-```TypeScript
-async function  test(){
-  let avPlayer = await media.createAVPlayer();
-  let bitrate: number = 96000;
-  // Here is only an example. In real development, you must wait for the stateChange event to successfully trigger and reach the prepared, playing, paused, or completed state before proceeding.
-  avPlayer.setBitrate(bitrate);
-}
-```
-
 ## setDecryptionConfig
 
 ```TypeScript
@@ -3385,7 +2234,7 @@ Sets the decryption configuration. When receiving an on('mediaKeySystemInfoUpdat
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mediaKeySession | drm.MediaKeySession | Yes | Decryption session. |
+| mediaKeySession | [drm.MediaKeySession](../../apis-drm-kit/arkts-apis/arkts-drm-drm-mediakeysession-i.md) | Yes | Decryption session. |
 | secureVideoPath | boolean | Yes | Secure video channel. **true** if a secure video channel is selected, **false** otherwise. |
 
 **Error codes:**
@@ -3393,27 +2242,6 @@ Sets the decryption configuration. When receiving an on('mediaKeySystemInfoUpdat
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.  2. Incorrect parameter types. 3.Parameter verification failed. |
-
-**Examples**
-
-For details about the DRM module, see [@ohos.multimedia.drm](../apis-drm-kit/arkts-apis-drm.md).
-
-```TypeScript
-import { drm } from '@kit.DrmKit';
-
-async function  test(){
-  let avPlayer = await media.createAVPlayer();
-  // Create a media key system.
-  let keySystem:drm.MediaKeySystem = drm.createMediaKeySystem('com.clearplay.drm');
-  // Create a media key session.
-  let keySession:drm.MediaKeySession = keySystem.createMediaKeySession(drm.ContentProtectionLevel.CONTENT_PROTECTION_LEVEL_SW_CRYPTO);
-  // Generate a media key request and set the response to the media key request.
-  // Flag indicating whether a secure video channel is used.
-  let secureVideoPath:boolean = false;
-  // Set the decryption configuration.
-  avPlayer.setDecryptionConfig(keySession, secureVideoPath);
-}
-```
 
 ## setLoudnessGain
 
@@ -3449,23 +2277,6 @@ Sets the loudness gain of the AVPlayer. After this API is called, the loudness g
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
 
-**Examples**
-
-```TypeScript
-import { audio } from '@kit.AudioKit';
-
-async function test(){
-  let avPlayer = await media.createAVPlayer();
-
-  let loudnessGain: number = 1.0;
-  avPlayer.audioRendererInfo = {
-    usage: audio.StreamUsage.STREAM_USAGE_MOVIE,
-    rendererFlags: 0
-  }
-  avPlayer.setLoudnessGain(loudnessGain);
-}
-```
-
 ## setMediaMuted
 
 ```TypeScript
@@ -3486,7 +2297,7 @@ This API can be called only when the AVPlayer is in the prepared, playing, pause
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mediaType | MediaType | Yes | Media type.For API version 12 to 19, only **MEDIA_TYPE_AUD** is supported.Since API version 20, **MEDIA_TYPE_VID** is supported. |
+| mediaType | [MediaType](arkts-media-media-mediatype-e.md) | Yes | Media type.For API version 12 to 19, only **MEDIA_TYPE_AUD** is supported.Since API version 20, **MEDIA_TYPE_VID** is supported. |
 | muted | boolean | Yes | For API version 12 to 19, only audio playback strategies are supported. This parameter specifies whether to mute or unmute the audio. **true** to mute, **false** otherwise.Since API version 20, video playback strategies are also supported. This parameter specifies whether to disable or enable the video image. **true** to disable, false otherwise. |
 
 **Return value:**
@@ -3501,23 +2312,6 @@ This API can be called only when the AVPlayer is in the prepared, playing, pause
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Return by promise. |
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by promise. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function  test(){
-  let avPlayer = await media.createAVPlayer();
-  // Here is only an example. In real development, you must wait for the stateChange event to successfully trigger and reach the initialized state before proceeding.
-  avPlayer.prepare().then(() => {
-    console.info('Succeeded in preparing');
-    avPlayer.setMediaMuted(media.MediaType.MEDIA_TYPE_AUD, true);
-  }, (err: BusinessError) => {
-    console.error('Failed to prepare,error message is :' + err.message);
-  });
-}
-```
 
 ## setMediaSource
 
@@ -3553,25 +2347,6 @@ Sets a source of streaming media that can be pre-downloaded, downloads the media
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.  2. Incorrect parameter types. 3.Parameter verification failed. |
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by promise. |
 
-**Examples**
-
-```TypeScript
-async function test(){
-  let player = await media.createAVPlayer();
-  let headers: Record<string, string> = {"User-Agent" : "User-Agent-Value"};
-  let mediaSource : media.MediaSource = media.createMediaSourceWithUrl("http://xxx",  headers);
-  let playStrategy : media.PlaybackStrategy = {
-    preferredWidth: 1,
-    preferredHeight: 2,
-    preferredBufferDuration: 3,
-    preferredHdr: false,
-    preferredBufferDurationForPlaying: 1,
-    thresholdForAutoQuickPlay: 5
-  };
-  player.setMediaSource(mediaSource, playStrategy);
-}
-```
-
 ## setPlaybackRange
 
 ```TypeScript
@@ -3592,7 +2367,7 @@ Sets the playback range and seeks to the start position of the range based on th
 | --- | --- | --- | --- |
 | startTimeMs | number | Yes | Start position of the range, in ms. The value range is [0, duration). If **-1** is passed in, the system starts playing from position 0. |
 | endTimeMs | number | Yes | End position of the range, in ms. The value range is (startTimeMs, duration]. If **-1** is passed in, the system plays the content until it reaches the final part of the asset. |
-| mode | SeekMode | No | Seek mode, which can be **SeekMode.SEEK_PREV_SYNC** or **SeekMode.SEEK_CLOSEST**.The default value is **SeekMode.SEEK_PREV_SYNC**. |
+| mode | [SeekMode](arkts-media-media-seekmode-e.md) | No | Seek mode, which can be **SeekMode.SEEK_PREV_SYNC** or **SeekMode.SEEK_CLOSEST**.The default value is **SeekMode.SEEK_PREV_SYNC**. |
 
 **Return value:**
 
@@ -3606,21 +2381,6 @@ Sets the playback range and seeks to the start position of the range based on th
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Return by promise. |
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by promise. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function  test(){
-  let avPlayer = await media.createAVPlayer();
-  avPlayer.setPlaybackRange(0, 6000, media.SeekMode.SEEK_CLOSEST).then(() => {
-    console.info('Succeeded setPlaybackRange');
-  }).catch((err: BusinessError) => {
-    console.error('Failed to setPlaybackRange' + err.message);
-  });
-}
-```
 
 ## setPlaybackRate
 
@@ -3652,16 +2412,6 @@ Set playback rate. Sets the playback rate. This API can be called only when the 
 | --- | --- |
 | [5400108](../errorcode-media.md#5400108-parameter-value-out-of-range) | The parameter check failed, parameter value out of range. |
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed, if invalid state or live stream. |
-
-**Examples**
-
-```TypeScript
-async function test(){
-  let avPlayer = await media.createAVPlayer();
-  // Here is only an example. In real development, you must wait for the stateChange event to successfully trigger and reach the prepared, playing, paused, or completed state before proceeding.
-  avPlayer.setPlaybackRate(2.0);
-}
-```
 
 ## setPlaybackStrategy
 
@@ -3696,27 +2446,6 @@ Sets a playback strategy. This API can be called only when the AVPlayer is in th
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types. 2. Parameter verification failed. |
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by promise. |
 
-**Examples**
-
-```TypeScript
-import { common } from '@kit.AbilityKit';
-
-let player = await media.createAVPlayer();
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-let fileDescriptor = await context.resourceManager.getRawFd('xxx.mp4');
-player.fdSrc = fileDescriptor
-let playStrategy : media.PlaybackStrategy = {
-  preferredWidth: 1,
-  preferredHeight: 2,
-  preferredBufferDuration: 3,
-  preferredHdr: false,
-  mutedMediaType: media.MediaType.MEDIA_TYPE_AUD,
-  preferredBufferDurationForPlaying: 1,
-  thresholdForAutoQuickPlay: 5
-};
-player.setPlaybackStrategy(playStrategy);
-```
-
 ## setSpeed
 
 ```TypeScript
@@ -3739,17 +2468,7 @@ Sets the playback speed. This API can be called only when the AVPlayer is in the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| speed | PlaybackSpeed | Yes | Playback speed to set. |
-
-**Examples**
-
-```TypeScript
-async function  test(){
-  let avPlayer = await media.createAVPlayer();
-  // Here is only an example. In real development, you must wait for the stateChange event to successfully trigger and reach the prepared, playing, paused, or completed state before proceeding.
-  avPlayer.setSpeed(media.PlaybackSpeed.SPEED_FORWARD_2_00_X);
-}
-```
+| speed | [PlaybackSpeed](arkts-media-media-playbackspeed-e.md) | Yes | Playback speed to set. |
 
 ## setSuperResolution
 
@@ -3787,22 +2506,6 @@ Before calling [prepare()](#prepare), enable super resolution by using [Playback
 | [5410003](../errorcode-media.md#5410003-super-resolution-is-not-supported) | Super-resolution not supported. Return by promise. |
 | [5410004](../errorcode-media.md#5410004-super-resolution-is-not-enabled) | Missing enable super-resolution feature in [PlaybackStrategy](arkts-media-media-playbackstrategy-i.md). Return by promise. |
 
-**Examples**
-
-```TypeScript
-async function test(){
-  let avPlayer = await media.createAVPlayer();
-  let url: string = 'http://abc.bcd.efg/aa/test.mp4'; // Replace it with the actual URL of the resource file.
-  avPlayer.url = url;
-  let playStrategy : media.PlaybackStrategy = {
-      enableSuperResolution: true
-  };
-  avPlayer.setPlaybackStrategy(playStrategy);
-  // Here is only an example. In real development, you must wait for the stateChange event to successfully trigger and reach the initialized, prepared, playing, paused, completed, or stopped state before proceeding.
-  avPlayer.setSuperResolution(true);
-}
-```
-
 ## setTrackSelectionFilter
 
 ```TypeScript
@@ -3834,34 +2537,6 @@ Sets a track selection filter for the player. The player will use this filter to
 | Error Code ID | Error Message |
 | --- | --- |
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. |
-
-**Examples**
-
-```TypeScript
-async function test() {
-  let player = await media.createAVPlayer();
-  let selectionFilter: media.TrackSelectionFilter = {
-    maxVideoBitrate: 80000,
-    minVideoBitrate: 0,
-    maxVideoFrameRate: 60,
-    minVideoFrameRate: 0,
-    maxVideoResolution: { width: 1080, height: 720 },
-    minVideoResolution: { width: 0, height: 0 },
-    preferredVideoMimeTypes: [media.CodecMimeType.VIDEO_AVC],
-    maxAudioBitrate: 8000,
-    minAudioBitrate: 0,
-    maxAudioChannels: 3,
-    preferredAudioMimeTypes: [media.CodecMimeType.AUDIO_AAC, media.CodecMimeType.AUDIO_MP3],
-    preferredAudioLanguages: [],
-    preferredSubtitleLanguages: []
-  };
-  player.setTrackSelectionFilter(selectionFilter).then(() => {
-    console.info('Succeeded in setting TrackSelectionFilter');
-  }).catch((err: BusinessError) => {
-    console.error('Failed to setTrackSelectionFilter, error message is:' + err.message);
-  });
-}
-```
 
 ## setVideoWindowSize
 
@@ -3903,23 +2578,6 @@ Before calling [prepare()](#prepare), enable super resolution by using [Playback
 | [5410003](../errorcode-media.md#5410003-super-resolution-is-not-supported) | Super-resolution not supported. Return by promise. |
 | [5410004](../errorcode-media.md#5410004-super-resolution-is-not-enabled) | Missing enable super-resolution feature in [PlaybackStrategy](arkts-media-media-playbackstrategy-i.md). Return by promise. |
 
-**Examples**
-
-```TypeScript
-async function test(){
-  let avPlayer = await media.createAVPlayer();
-  let url: string = 'http://abc.bcd.efg/aa/test.mp4'; // Replace it with the actual URL of the resource file.
-  avPlayer.url = url;
-  let playStrategy : media.PlaybackStrategy = {
-      enableSuperResolution: true
-  };
-  avPlayer.setPlaybackStrategy(playStrategy);
-  avPlayer.setSuperResolution(true);
-  // Here is only an example. In real development, you must wait for the stateChange event to successfully trigger and reach the initialized, prepared, playing, paused, completed, or stopped state before proceeding.
-  avPlayer.setVideoWindowSize(1920, 1080);
-}
-```
-
 ## setVolume
 
 ```TypeScript
@@ -3939,16 +2597,6 @@ Sets the playback volume. This API can be called only when the AVPlayer is in th
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | volume | number | Yes | Relative volume. The value ranges from 0.00 to 1.00. The value **1.00** indicates the maximum volume (100%). |
-
-**Examples**
-
-```TypeScript
-async function test(){
-  let avPlayer = await media.createAVPlayer();
-  let volume: number = 1.0;
-  avPlayer.setVolume(volume);
-}
-```
 
 ## stop
 
@@ -3976,61 +2624,6 @@ Stops audio and video playback. This API can be called only when the AVPlayer is
 | --- | --- |
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by callback. |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// asyncallback.
-videoRecorder.stop((err: BusinessError) => {
-  if (err == null) {
-    console.info('stop videorecorder success');
-  } else {
-    console.error('stop videorecorder failed and error is ' + err.message);
-  }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function  test(){
-  let avPlayer = await media.createAVPlayer();
-  // Here is only an example. In real development, you must wait for the stateChange event to successfully trigger and reach the prepared, playing, paused, or completed state before proceeding.
-  avPlayer.stop((err: BusinessError) => {
-    if (err) {
-      console.error('Failed to stop,error message is :' + err.message);
-    } else {
-      console.info('Succeeded in stopping');
-    }
-  });
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-avRecorder.stop((err: BusinessError) => {
-  if (err) {
-    console.error(`Failed to stop AVRecorder and error is: Code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info('Succeeded in stopping AVRecorder');
-  }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-videoPlayer.stop((err: BusinessError) => {
-  if (err) {
-    console.error('Failed to stop!');
-  } else {
-    console.info('Succeeded in stopping!');
-  }
-});
-```
-
 ## stop
 
 ```TypeScript
@@ -4057,54 +2650,6 @@ Stops audio and video playback. This API can be called only when the AVPlayer is
 | --- | --- |
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by promise. |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// promise.
-videoRecorder.stop().then(() => {
-  console.info('stop videorecorder success');
-}).catch((err: BusinessError) => {
-  console.error('stop videorecorder failed and catch error is ' + err.message);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function  test(){
-  let avPlayer = await media.createAVPlayer();
-  // Here is only an example. In real development, you must wait for the stateChange event to successfully trigger and reach the prepared, playing, paused, or completed state before proceeding.
-  avPlayer.stop().then(() => {
-    console.info('Succeeded in stopping');
-  }, (err: BusinessError) => {
-    console.error('Failed to stop,error message is :' + err.message);
-  });
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-avRecorder.stop().then(() => {
-  console.info('Succeeded in stopping AVRecorder');
-}).catch((err: Error) => {
-  let error: BusinessError = err as BusinessError;
-  console.error(`Failed to stop AVRecorder and error is: Code: ${error.code}, message: ${error.message}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-videoPlayer.stop().then(() => {
-  console.info('Succeeded in stopping');
-}).catch((error: BusinessError) => {
-  console.error(`video catchCallback, error:${error}`);
-});
-```
-
 ## audioEffectMode
 
 ```TypeScript
@@ -4113,7 +2658,7 @@ audioEffectMode ?: audio.AudioEffectMode
 
 Audio effect mode. The audio effect mode is a dynamic property and is restored to the default value **EFFECT_DEFAULT** when **usage** of **audioRendererInfo** is changed. It can be set only when the AVPlayer is in the prepared, playing, paused, or completed state.
 
-**Type:** audio.AudioEffectMode
+**Type:** [audio.AudioEffectMode](../../apis-audio-kit/arkts-apis/arkts-audio-audio-audioeffectmode-e.md)
 
 **Since:** 10
 
@@ -4133,7 +2678,7 @@ and can be set only when the AVPlayer is in the prepared, playing, paused, or co
 
 To take effect, this property must be set before [play()](#play) is called for the first time.
 
-**Type:** audio.InterruptMode
+**Type:** [audio.InterruptMode](../../apis-audio-kit/arkts-apis/arkts-audio-audio-interruptmode-e.md)
 
 **Since:** 9
 
@@ -4153,7 +2698,7 @@ This parameter can be set only when the AVPlayer is in the initialized state.
 
 To take effect, this property must be set before [prepare()](#prepare) is called for the first time.
 
-**Type:** audio.AudioRendererInfo
+**Type:** [audio.AudioRendererInfo](../../apis-audio-kit/arkts-apis/arkts-audio-audio-audiorendererinfo-i.md)
 
 **Since:** 10
 
@@ -4341,7 +2886,7 @@ privacyType?: audio.AudioPrivacyType
 
 Audio privacy configuration. For more information, see [AudioPrivacyType](../../apis-audio-kit/arkts-apis/arkts-audio-audio-audioprivacytype-e.md). Default value: PRIVACY_TYPE_PUBLIC.
 
-**Type:** audio.AudioPrivacyType
+**Type:** [audio.AudioPrivacyType](../../apis-audio-kit/arkts-apis/arkts-audio-audio-audioprivacytype-e.md)
 
 **Since:** 26.0.0
 

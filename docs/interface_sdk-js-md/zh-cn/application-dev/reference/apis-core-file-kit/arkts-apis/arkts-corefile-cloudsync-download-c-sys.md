@@ -31,22 +31,6 @@ constructor()
 **示例**
 
 ```TypeScript
-let fileSync = new cloudSync.FileSync()
-```
-
-```TypeScript
-let fileCache = new cloudSync.CloudFileCache();
-```
-
-```TypeScript
-let fileVersion = new cloudSync.FileVersion();
-```
-
-```TypeScript
-let gallerySync = new cloudSync.GallerySync()
-```
-
-```TypeScript
 let download = new cloudSync.Download()
 ```
 
@@ -223,30 +207,6 @@ start(uri: string): Promise<void>
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
-import { fileUri } from '@kit.CoreFileKit';
-
-let fileCache = new cloudSync.CloudFileCache();
-let path = "/data/storage/el2/cloud/1.txt";
-let uri = fileUri.getUriFromPath(path);
-
-try {
-  fileCache.on('progress', (pg: cloudSync.DownloadProgress) => {
-    console.info("download state: " + pg.state);
-  });
-} catch (e) {
-  const error = e as BusinessError;
-  console.error(`Error code: ${error.code}, message: ${error.message}`);
-}
-
-fileCache.start(uri).then(() => {
-  console.info("start download successfully");
-}).catch((err: BusinessError) => {
-  console.error("start download failed with error message: " + err.message + ", error code: " + err.code);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
 
 let download = new cloudSync.Download();
 let uri: string = "file:///media/Photo/1";
@@ -296,23 +256,6 @@ start(uri: string, callback: AsyncCallback<void>): void
 | 13900025 | No space left on device. |
 
 **示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { fileUri } from '@kit.CoreFileKit';
-
-let fileCache = new cloudSync.CloudFileCache();
-let path = "/data/storage/el2/cloud/1.txt";
-let uri = fileUri.getUriFromPath(path);
-
-fileCache.start(uri, (err: BusinessError) => {
-  if (err) {
-    console.error("start download failed with error message: " + err.message + ", error code: " + err.code);
-  } else {
-    console.info("start download successfully");
-  }
-});
-```
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -420,23 +363,6 @@ stop(uri: string, callback: AsyncCallback<void>): void
 | [401](../../errorcode-universal.md#401-参数检查失败) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified;  2.Incorrect parameter types. |
 
 **示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { fileUri } from '@kit.CoreFileKit';
-
-let fileCache = new cloudSync.CloudFileCache();
-let path = "/data/storage/el2/cloud/1.txt";
-let uri = fileUri.getUriFromPath(path);
-
-fileCache.stop(uri, (err: BusinessError) => {
-  if (err) {
-    console.error("stop download failed with error message: " + err.message + ", error code: " + err.code);
-  } else {
-    console.info("stop download successfully");
-  }
-});
-```
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

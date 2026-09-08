@@ -21,7 +21,7 @@ readonly abilityTypes: Array<AbilityType>
 
 Accessibility application type.
 
-**Type:** Array&lt;AbilityType&gt;
+**Type:** Array&lt;[AbilityType](arkts-accessibility-accessibility-abilitytype-t.md)&gt;
 
 **Since:** 7
 
@@ -57,7 +57,7 @@ readonly capabilities: Array<Capability>
 
 Capabilities list of the accessibility application.
 
-**Type:** Array&lt;Capability&gt;
+**Type:** Array&lt;[Capability](arkts-accessibility-accessibility-capability-t.md)&gt;
 
 **Since:** 7
 
@@ -93,7 +93,7 @@ readonly eventTypes: Array<EventType>
 
 List of events that the accessibility application focuses on.
 
-**Type:** Array&lt;EventType&gt;
+**Type:** Array&lt;[EventType](arkts-accessibility-accessibility-eventtype-t.md)&gt;
 
 **Since:** 7
 

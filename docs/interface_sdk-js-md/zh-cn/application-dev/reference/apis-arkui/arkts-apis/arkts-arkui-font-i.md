@@ -53,7 +53,7 @@ style?: FontStyle
 
 font style.
 
-**类型：** FontStyle
+**类型：** [FontStyle](arkts-arkui-fontstyle-e.md)
 
 **起始版本：** 11
 
@@ -69,7 +69,7 @@ weight?: FontWeight | number | string
 
 font weight.
 
-**类型：** FontWeight \| number \| string
+**类型：** [FontWeight](arkts-arkui-fontweight-e.md) \| number \| string
 
 **起始版本：** 11
 

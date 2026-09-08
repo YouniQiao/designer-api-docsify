@@ -26,7 +26,7 @@ Obtains the connection information of the data network specified by **NetHandle*
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| netHandle | NetHandle | Yes | Network handle. |
+| netHandle | [NetHandle](arkts-network-connection-nethandle-i.md) | Yes | Network handle. |
 
 **Return value:**
 

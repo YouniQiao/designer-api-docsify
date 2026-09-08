@@ -22,7 +22,7 @@ info: ContinuableInfo
 
 Continuation information of the mission.
 
-**Type:** ContinuableInfo
+**Type:** [ContinuableInfo](arkts-ability-distributedmissionmanager-continuableinfo-t-sys.md)
 
 **Since:** 11
 
@@ -40,7 +40,7 @@ state: ContinueState
 
 Continuation state of the mission.
 
-**Type:** ContinueState
+**Type:** [ContinueState](arkts-ability-abilityconstant-continuestate-e.md)
 
 **Since:** 11
 

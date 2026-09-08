@@ -28,7 +28,7 @@ function getPreferences(context: Context, name: string, callback: AsyncCallback<
 | --- | --- | --- | --- |
 | context | Context | 是 | 应用上下文。FA模型的应用Context定义见Context。Stage模型的应用Context定义见[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md)。 |
 | name | string | 是 | Preferences实例的名称。名称长度需大于零且小于等于255字节，名称中不能包含'/'且不能以'/'结尾。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Preferences&gt; | 是 | 回调函数。当获取Preferences实例成功，err为undefined，返回Preferences实例；否则err为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Preferences](arkts-arkdata-preferences-preferences-i.md)&gt; | 是 | 回调函数。当获取Preferences实例成功，err为undefined，返回Preferences实例；否则err为错误对象。 |
 
 **错误码：**
 
@@ -103,8 +103,8 @@ function getPreferences(context: Context, options: Options, callback: AsyncCallb
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | context | Context | 是 | 应用上下文。FA模型的应用Context定义见Context。Stage模型的应用Context定义见[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md)。 |
-| options | Options | 是 | 与Preferences实例相关的配置选项。name字段为必填字段，名称长度需大于零且小于等于255字节，名称中不能包含'/'且不能以'/'结尾。dataGroupId和storageType为可选字段。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Preferences&gt; | 是 | 回调函数。当获取Preferences实例成功，err为undefined，返回Preferences实例；否则err为错误对象。 |
+| options | [Options](arkts-arkdata-preferences-options-i.md) | 是 | 与Preferences实例相关的配置选项。name字段为必填字段，名称长度需大于零且小于等于255字节，名称中不能包含'/'且不能以'/'结尾。dataGroupId和storageType为可选字段。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Preferences](arkts-arkdata-preferences-preferences-i.md)&gt; | 是 | 回调函数。当获取Preferences实例成功，err为undefined，返回Preferences实例；否则err为错误对象。 |
 
 **错误码：**
 
@@ -191,7 +191,7 @@ function getPreferences(context: Context, name: string): Promise<Preferences>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Preferences&gt; | Promise对象，返回Preferences实例。 |
+| Promise&lt;[Preferences](arkts-arkdata-preferences-preferences-i.md)&gt; | Promise对象，返回Preferences实例。 |
 
 **错误码：**
 
@@ -265,13 +265,13 @@ function getPreferences(context: Context, options: Options): Promise<Preferences
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | context | Context | 是 | 应用上下文。FA模型的应用Context定义见Context。Stage模型的应用Context定义见[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md)。 |
-| options | Options | 是 | 与Preferences实例相关的配置选项。 |
+| options | [Options](arkts-arkdata-preferences-options-i.md) | 是 | 与Preferences实例相关的配置选项。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Preferences&gt; | Promise对象，返回Preferences实例。 |
+| Promise&lt;[Preferences](arkts-arkdata-preferences-preferences-i.md)&gt; | Promise对象，返回Preferences实例。 |
 
 **错误码：**
 

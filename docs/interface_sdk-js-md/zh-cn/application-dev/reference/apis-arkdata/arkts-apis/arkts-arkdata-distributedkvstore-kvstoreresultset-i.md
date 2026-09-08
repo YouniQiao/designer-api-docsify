@@ -80,7 +80,7 @@ getEntry(): Entry
 
 | 类型 | 说明 |
 | --- | --- |
-| Entry | 返回键值对。 |
+| [Entry](arkts-arkdata-distributedkvstore-entry-i.md) | 返回键值对。 |
 
 **示例**
 

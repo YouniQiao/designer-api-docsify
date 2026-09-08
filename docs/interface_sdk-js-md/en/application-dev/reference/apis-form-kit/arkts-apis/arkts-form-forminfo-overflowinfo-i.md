@@ -20,7 +20,7 @@ area: Rect
 
 The overflow animation area
 
-**Type:** Rect
+**Type:** [Rect](arkts-form-forminfo-rect-i.md)
 
 **Since:** 20
 

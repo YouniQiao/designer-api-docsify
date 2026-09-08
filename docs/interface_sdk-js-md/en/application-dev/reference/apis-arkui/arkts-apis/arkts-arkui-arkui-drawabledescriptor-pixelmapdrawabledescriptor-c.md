@@ -34,7 +34,7 @@ A constructor used to create a **PixelMapDrawableDescriptor** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| src | image.PixelMap | No | PixelMap** image data. |
+| src | [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | No | PixelMap** image data. |
 
 **Examples**
 
@@ -62,36 +62,6 @@ struct PixelMapDrawableDescriptorExample {
 }
 ```
 
-```TypeScript
-import { AnimationOptions, AnimatedDrawableDescriptor } from '@kit.ArkUI';
-import { fileUri } from '@kit.CoreFileKit';
-
-@Entry
-@Component
-struct Example {
-  options: AnimationOptions = { duration: 1000, iterations: -1, autoPlay: false };
-  // Sandbox paths (file://xx) and application resources are supported.
-  @State animated1: AnimatedDrawableDescriptor = new AnimatedDrawableDescriptor($r('app.media.gif'), this.options);
-  @State animated2: AnimatedDrawableDescriptor | undefined = undefined;
-
-  aboutToAppear() {
-    let files = this.getUIContext().getHostContext()?.filesDir
-    let originPath = files + "/flower.gif"
-    let resultPath = fileUri.getUriFromPath(originPath)
-    this.animated2 = new AnimatedDrawableDescriptor(resultPath, { iterations: -1 })
-  }
-
-  build() {
-    Column() {
-      Row() {
-        Image(this.animated1).width(100).height(100)
-        Image(this.animated2).width(100).height(100)
-      }
-    }
-  }
-}
-```
-
 ## constructor
 
 ```TypeScript
@@ -112,7 +82,7 @@ A constructor used to create a **PixelMapDrawableDescriptor** object through the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| src | image.PixelMap \| [ResourceStr](arkts-arkui-resourcestr-t.md) | No | PixelMap** image data. You can use application resources, system resources, sandbox paths (file://&lt;bundleName&gt;/&lt;sandboxPath&gt;), and Base64 strings to create **PixelMapDrawableDescriptor** objects. |
+| src | [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) \| [ResourceStr](arkts-arkui-resourcestr-t.md) | No | PixelMap** image data. You can use application resources, system resources, sandbox paths (file://&lt;bundleName&gt;/&lt;sandboxPath&gt;), and Base64 strings to create **PixelMapDrawableDescriptor** objects. |
 
 **Examples**
 

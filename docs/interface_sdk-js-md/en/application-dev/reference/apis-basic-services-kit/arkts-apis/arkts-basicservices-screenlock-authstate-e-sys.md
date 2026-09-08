@@ -2,7 +2,7 @@
 
 Indicates the screen lock authentication state.
 
-@enum { number }
+@enum { int }
 
 **Since:** 12
 

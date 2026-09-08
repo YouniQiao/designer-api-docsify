@@ -38,7 +38,7 @@ componentType: ComponentType
 
 Component type.
 
-**Type:** ComponentType
+**Type:** [ComponentType](arkts-basicservices-update-componenttype-e-sys.md)
 
 **Since:** 9
 

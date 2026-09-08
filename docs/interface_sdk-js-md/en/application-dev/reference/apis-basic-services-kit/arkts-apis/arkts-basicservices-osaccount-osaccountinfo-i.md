@@ -48,7 +48,7 @@ distributedInfo: distributedAccount.DistributedInfo
 
 Distributed account information. By default, no value is passed in.
 
-**Type:** distributedAccount.DistributedInfo
+**Type:** [distributedAccount.DistributedInfo](arkts-basicservices-distributedaccount-distributedinfo-i.md)
 
 **Since:** 7
 

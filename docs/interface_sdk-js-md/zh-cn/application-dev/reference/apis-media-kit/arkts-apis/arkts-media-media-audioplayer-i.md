@@ -49,48 +49,6 @@ getTrackDescription(callback: AsyncCallback<Array<MediaDescription>>): void
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[MediaDescription](arkts-media-media-mediadescription-i.md)&gt;&gt; | 是 | 回调函数。获取音频轨道信息成功时，err为undefined，data为获取到的MediaDescription数组，否则为错误对象。 |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioPlayer.getTrackDescription((error: BusinessError, arrList: Array<media.MediaDescription>) => {
-  if (arrList != null) {
-    console.info('Succeeded in getting TrackDescription');
-  } else {
-    console.error(`Failed to get TrackDescription, error:${error}`);
-  }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function test(){
-  let avPlayer = await media.createAVPlayer();
-  // 此处仅为示意，实际开发中需要在stateChange事件成功触发至prepared/playing/paused状态后才能调用。
-  avPlayer.getTrackDescription((error: BusinessError, arrList: Array<media.MediaDescription>) => {
-    if (error) {
-      console.error(`Failed to do getTrackDescription, error:${error}`);
-    } else {
-      console.info('Succeeded in doing getTrackDescription');
-    }
-  });
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-videoPlayer.getTrackDescription((error: BusinessError, arrList: Array<media.MediaDescription>) => {
-  if ((arrList) != null) {
-    console.info('Succeeded in getting TrackDescription');
-  } else {
-    console.error(`Failed to get TrackDescription, error:${error}`);
-  }
-});
-```
-
 ## getTrackDescription
 
 ```TypeScript
@@ -117,46 +75,6 @@ getTrackDescription(): Promise<Array<MediaDescription>>
 | 类型 | 说明 |
 | --- | --- |
 | Promise&lt;Array&lt;[MediaDescription](arkts-media-media-mediadescription-i.md)&gt;&gt; | 音频轨道信息MediaDescription数组Promise返回值。 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioPlayer.getTrackDescription().then((arrList: Array<media.MediaDescription>) => {
-  console.info('Succeeded in getting TrackDescription');
-}).catch((error: BusinessError) => {
-  console.error(`Failed to get TrackDescription, error:${error}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function test(){
-  let avPlayer = await media.createAVPlayer();
-  // 此处仅为示意，实际开发中需要在stateChange事件成功触发至prepared/playing/paused状态后才能调用。
-  avPlayer.getTrackDescription().then((arrList: Array<media.MediaDescription>) => {
-    console.info('Succeeded in getting TrackDescription');
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to get TrackDescription. Code:${error.code},message:${error.message}`);
-  });
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-videoPlayer.getTrackDescription().then((arrList: Array<media.MediaDescription>) => {
-  if (arrList != null) {
-    console.info('Succeeded in getting TrackDescription');
-  } else {
-    console.error('Failed to get TrackDescription');
-  }
-}).catch((error: BusinessError) => {
-  console.error(`video catchCallback, error:${error}`);
-});
-```
 
 ## on('bufferingUpdate')
 
@@ -498,22 +416,6 @@ pause(): void
 
 **系统能力：** SystemCapability.Multimedia.Media.AudioPlayer
 
-**示例**
-
-```TypeScript
-audioPlayer.on('pause', () => {    // 设置'pause'事件回调。
-  console.info('audio pause called');
-});
-audioPlayer.pause();
-```
-
-```TypeScript
-audioRecorder.on('pause', () => {    // 设置'pause'事件回调。
-  console.info('audio recorder pause called');
-});
-audioRecorder.pause();
-```
-
 ## play
 
 ```TypeScript
@@ -534,15 +436,6 @@ play(): void
 **替代接口：** [play](arkts-media-media-avplayer-i.md#play)(callback: AsyncCallback&lt;void&gt;)
 
 **系统能力：** SystemCapability.Multimedia.Media.AudioPlayer
-
-**示例**
-
-```TypeScript
-audioPlayer.on('play', () => {    // 设置'play'事件回调。
-  console.info('audio play called');
-});
-audioPlayer.play();
-```
 
 ## release
 
@@ -565,21 +458,6 @@ release(): void
 
 **系统能力：** SystemCapability.Multimedia.Media.AudioPlayer
 
-**示例**
-
-```TypeScript
-audioPlayer.release();
-audioPlayer = undefined;
-```
-
-```TypeScript
-audioRecorder.on('release', () => {    // 设置'release'事件回调。
-  console.info('audio recorder release called');
-});
-audioRecorder.release();
-audioRecorder = undefined;
-```
-
 ## reset
 
 ```TypeScript
@@ -600,22 +478,6 @@ reset(): void
 **替代接口：** [reset](arkts-media-media-avplayer-i.md#reset)(callback: AsyncCallback&lt;void&gt;)
 
 **系统能力：** SystemCapability.Multimedia.Media.AudioPlayer
-
-**示例**
-
-```TypeScript
-audioPlayer.on('reset', () => {    // 设置'reset'事件回调。
-  console.info('audio reset called');
-});
-audioPlayer.reset();
-```
-
-```TypeScript
-audioRecorder.on('reset', () => {    // 设置'reset'事件回调。
-  console.info('audio recorder reset called');
-});
-audioRecorder.reset();
-```
 
 ## seek
 
@@ -644,19 +506,6 @@ seek(timeMs: number): void
 | --- | --- | --- | --- |
 | timeMs | number | 是 | 指定的跳转时间节点，单位毫秒（ms），取值范围[0, duration]。 |
 
-**示例**
-
-```TypeScript
-audioPlayer.on('timeUpdate', (seekDoneTime: number) => {    // 设置'timeUpdate'事件回调。
-  if (seekDoneTime == null) {
-    console.error('Failed to seek');
-    return;
-  }
-  console.info('Succeeded in seek. seekDoneTime: ' + seekDoneTime);
-});
-audioPlayer.seek(30000);    // seek到30000ms的位置。
-```
-
 ## setVolume
 
 ```TypeScript
@@ -684,15 +533,6 @@ setVolume(vol: number): void
 | --- | --- | --- | --- |
 | vol | number | 是 | 指定的相对音量大小，取值范围为[0.00-1.00]，1表示最大音量，即100%。 |
 
-**示例**
-
-```TypeScript
-audioPlayer.on('volumeChange', () => {    // 设置'volumeChange'事件回调。
-  console.info('audio volumeChange called');
-});
-audioPlayer.setVolume(1);    // 设置音量到100%。
-```
-
 ## stop
 
 ```TypeScript
@@ -714,22 +554,6 @@ stop(): void
 
 **系统能力：** SystemCapability.Multimedia.Media.AudioPlayer
 
-**示例**
-
-```TypeScript
-audioPlayer.on('stop', () => {    // 设置'stop'事件回调。
-  console.info('audio stop called');
-});
-audioPlayer.stop();
-```
-
-```TypeScript
-audioRecorder.on('stop', () => {    // 设置'stop'事件回调。
-  console.info('audio recorder stop called');
-});
-audioRecorder.stop();
-```
-
 ## audioInterruptMode
 
 ```TypeScript
@@ -738,7 +562,7 @@ audioInterruptMode?: audio.InterruptMode
 
 音频焦点模型。
 
-**类型：** audio.InterruptMode
+**类型：** [audio.InterruptMode](../../apis-audio-kit/arkts-apis/arkts-audio-audio-interruptmode-e.md)
 
 **起始版本：** 9
 
@@ -876,7 +700,7 @@ readonly state: AudioState
 
 可以查询音频播放的状态，该状态不可作为调用play/pause/stop等状态切换的触发条件。
 
-**类型：** AudioState
+**类型：** [AudioState](arkts-media-media-audiostate-t.md)
 
 **起始版本：** 6
 

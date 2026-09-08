@@ -26,7 +26,7 @@ Obtains information about all preinstalled applications. This API uses a promise
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;PreinstalledApplicationInfo&gt;&gt; | Promise used to return the array of preinstalled applications obtained. |
+| Promise&lt;Array&lt;[PreinstalledApplicationInfo](arkts-ability-bundlemanager-preinstalledapplicationinfo-t-sys.md)&gt;&gt; | Promise used to return the array of preinstalled applications obtained. |
 
 **Error codes:**
 

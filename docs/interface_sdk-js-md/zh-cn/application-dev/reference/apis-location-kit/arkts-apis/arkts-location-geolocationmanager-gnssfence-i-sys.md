@@ -22,7 +22,7 @@ circularFence?: Geofence
 
 表示圆形围栏信息集合。
 
-**类型：** Geofence
+**类型：** [Geofence](arkts-location-geolocationmanager-geofence-i.md)
 
 **起始版本：** 26.0.0
 
@@ -58,7 +58,7 @@ polygon?: Array<Point>
 
 表示多边形围栏信息集合。
 
-**类型：** Array&lt;Point&gt;
+**类型：** Array&lt;[Point](arkts-location-geolocationmanager-point-i.md)&gt;
 
 **起始版本：** 26.0.0
 

@@ -24,7 +24,7 @@ characteristics: Array<BLECharacteristic>
 
 The [BLECharacteristic](arkts-connectivity-bluetooth-blecharacteristic-i.md) list belongs to this GattService instance
 
-**Type:** Array&lt;BLECharacteristic&gt;
+**Type:** Array&lt;[BLECharacteristic](arkts-connectivity-bluetooth-blecharacteristic-i.md)&gt;
 
 **Since:** 7
 
@@ -42,7 +42,7 @@ includeServices?: Array<GattService>
 
 The list of GATT services contained in the service
 
-**Type:** Array&lt;GattService&gt;
+**Type:** Array&lt;[GattService](arkts-connectivity-bluetooth-gattservice-i.md)&gt;
 
 **Since:** 7
 

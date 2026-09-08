@@ -24,7 +24,7 @@ Initiate a P2P connection to a device with the specified configuration.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | WifiP2PConfig | Yes | Indicates the configuration for connecting to a specific group. |
+| config | [WifiP2PConfig](arkts-connectivity-wifimanager-wifip2pconfig-i.md) | Yes | Indicates the configuration for connecting to a specific group. |
 
 **Error codes:**
 

@@ -33,19 +33,6 @@ Obtains file status based on the file descriptor. This API uses a promise to ret
 | --- | --- |
 | Promise&lt;[Stat](arkts-corefile-fileio-stat-depr-i.md)&gt; | Promise that returns the detailed file status obtained. |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@ohos.base';
-let filePath = pathDir + "/test.txt";
-let fd = fileio.openSync(filePath);
-fileio.fstat(fd).then((stat: fileio.Stat) => {
-  console.info("fstat succeed, the size of file is " + stat.size);
-}).catch((err: BusinessError) => {
-  console.error("fstat failed with error:" + err);
-});
-```
-
 
 ## fstat
 
@@ -69,14 +56,3 @@ Obtains file status based on the file descriptor. This API uses an asynchronous 
 | --- | --- | --- | --- |
 | fd | number | Yes | File descriptor of the file whose status is to be obtained. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Stat](arkts-corefile-fileio-stat-depr-i.md)&gt; | Yes | Callback used to return the file status obtained. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@ohos.base';
-let filePath = pathDir + "/test.txt";
-let fd = fileio.openSync(filePath);
-fileio.fstat(fd, (err: BusinessError) => {
-  // Do something.
-});
-```

@@ -24,7 +24,7 @@ Destroys the word selection panel. This API is used together with [createPanel](
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| panel | Panel | Yes | Word selection panel to destroy. |
+| panel | [Panel](arkts-basicservices-selectionmanager-panel-i.md) | Yes | Word selection panel to destroy. |
 
 **Return value:**
 

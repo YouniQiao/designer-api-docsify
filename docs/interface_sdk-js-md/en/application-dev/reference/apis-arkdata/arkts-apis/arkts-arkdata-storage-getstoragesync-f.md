@@ -29,21 +29,4 @@ Reads the specified file and loads its data to the **Storage** instance for data
 
 | Type | Description |
 | --- | --- |
-| Storage | Storage** instance used for data storage operations. |
-
-**Examples**
-
-```TypeScript
-import featureAbility from '@ohos.ability.featureAbility';
-
-let path;
-let context = featureAbility.getContext();
-context.getFilesDir().then((filePath) => {
-  path = filePath;
-  console.info("======================>getFilesDirPromise====================>");
-
-  let storage = data_storage.getStorageSync(path + '/mystore');
-  storage.putSync('startup', 'auto');
-  storage.flushSync();
-});
-```
+| [Storage](arkts-arkdata-storage-storage-i.md) | Storage** instance used for data storage operations. |

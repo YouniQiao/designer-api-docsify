@@ -34,7 +34,7 @@ photo?: image.PixelMap
 
 Contact portrait in PixelMap format.
 
-**Type:** image.PixelMap
+**Type:** [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)
 
 **Since:** 22
 
@@ -57,25 +57,3 @@ Contact portrait in URI format.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Applications.ContactsData
-
-**Examples**
-
-Create data using JSON format.
-
-```TypeScript
-import { contact } from '@kit.ContactsKit';
-import { image } from '@kit.ImageKit';
-
-async function SetPortraitUri(uri: string) {
-  let portrait: contact.Portrait = {
-    uri: uri
-  };
-}
-
-async function SetPortraitPixelMap(photo: image.PixelMap) {
-  let portrait: contact.Portrait = {
-    uri: '',
-    photo: photo
-  };
-}
-```

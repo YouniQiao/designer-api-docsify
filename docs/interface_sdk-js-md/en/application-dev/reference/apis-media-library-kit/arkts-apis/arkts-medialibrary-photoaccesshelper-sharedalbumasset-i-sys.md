@@ -54,7 +54,7 @@ albumSubType: AlbumSubtype
 
 subtype of album asset
 
-**Type:** AlbumSubtype
+**Type:** [AlbumSubtype](arkts-medialibrary-photoaccesshelper-albumsubtype-e.md)
 
 **Since:** 14
 
@@ -70,7 +70,7 @@ albumType: AlbumType
 
 type of album asset
 
-**Type:** AlbumType
+**Type:** [AlbumType](arkts-medialibrary-photoaccesshelper-albumtype-e.md)
 
 **Since:** 14
 

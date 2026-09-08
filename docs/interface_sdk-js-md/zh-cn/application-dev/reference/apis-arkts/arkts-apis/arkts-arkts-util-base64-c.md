@@ -35,29 +35,6 @@ constructor()
 **示例**
 
 ```TypeScript
-let textDecoder = new util.TextDecoder();
-let retStr = textDecoder.encoding;
-console.info('retStr = ' + retStr);
-// 输出结果：retStr = utf-8
-```
-
-```TypeScript
-let textEncoder = new util.TextEncoder();
-```
-
-```TypeScript
-let rationalNumber = new util.RationalNumber();
-```
-
-```TypeScript
-let base64 = new util.Base64Helper();
-```
-
-```TypeScript
-let type = new util.types();
-```
-
-```TypeScript
 let base64 = new  util.Base64();
 ```
 

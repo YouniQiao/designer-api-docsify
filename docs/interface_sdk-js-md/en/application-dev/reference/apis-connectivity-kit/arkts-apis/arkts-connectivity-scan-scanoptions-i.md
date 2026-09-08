@@ -36,7 +36,7 @@ scanMode?: ScanMode
 
 Scan mode. The default value is **'SCAN_MODE_LOW_POWER'**.
 
-**Type:** ScanMode
+**Type:** [ScanMode](arkts-connectivity-scan-scanmode-e.md)
 
 **Since:** 26.0.0
 

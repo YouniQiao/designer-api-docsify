@@ -35,6 +35,11 @@ Creates an **HttpResponseCache** object that stores the response data of HTTP re
 **Examples**
 
 createHttpResponseCache(cacheSize?: number): HttpResponseCache
+Creates an HttpResponseCache object that stores the response data of HTTP requests. You can call flush and delete in the object.
+Atomic service API: This API can be used in atomic services since API version 11.
+System capability: SystemCapability.Communication.NetStack
+Parameters
+Return value
 
 ```TypeScript
 import { http } from '@kit.NetworkKit';

@@ -20,7 +20,7 @@ dutyMode?: ScanDuty
 
 Bluetooth LE scan mode
 
-**Type:** ScanDuty
+**Type:** [ScanDuty](arkts-connectivity-ble-scanduty-e.md)
 
 **Since:** 10
 
@@ -74,7 +74,7 @@ matchMode?: MatchMode
 
 Match mode for Bluetooth LE scan filters hardware match
 
-**Type:** MatchMode
+**Type:** [MatchMode](arkts-connectivity-ble-matchmode-e.md)
 
 **Since:** 10
 

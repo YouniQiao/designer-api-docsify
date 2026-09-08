@@ -29,7 +29,7 @@ addEntry(type: string, value: ValueType): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | string | 是 | 剪贴板数据对应的MIME类型，可以是[常量](../../../reference/apis-basic-services-kit/js-apis-pasteboard.md#常量)中已定义的类型，包括HTML类型，Want类型，纯文本类型，URI类型，PixelMap类型；也可以是自定义的MIME类型，开发者可自定义此参数值，mimeType长度不能超过1024字节。 |
-| value | ValueType | 是 | 自定义数据内容。 |
+| value | [ValueType](arkts-basicservices-pasteboard-valuetype-t.md) | 是 | 自定义数据内容。 |
 
 **错误码：**
 
@@ -150,7 +150,7 @@ getData(type: string): Promise<ValueType>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;ValueType&gt; | Promise对象，返回PasteDataRecord中指定MIME类型的自定义数据。PasteDataRecord中包含多个MIME类型数据时，非PasteDataRecord的默认MIME类型的数据只能通过本接口获取。 |
+| Promise&lt;[ValueType](arkts-basicservices-pasteboard-valuetype-t.md)&gt; | Promise对象，返回PasteDataRecord中指定MIME类型的自定义数据。PasteDataRecord中包含多个MIME类型数据时，非PasteDataRecord的默认MIME类型的数据只能通过本接口获取。 |
 
 **错误码：**
 
@@ -311,7 +311,7 @@ pixelMap: image.PixelMap
 
 PixelMap内容。对此属性的修改无效，如需刷新属性值，请使用[addEntry](#addentry)。
 
-**类型：** image.PixelMap
+**类型：** [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)
 
 **起始版本：** 9
 

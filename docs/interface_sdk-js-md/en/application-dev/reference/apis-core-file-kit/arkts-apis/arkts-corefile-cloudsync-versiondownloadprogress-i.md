@@ -48,7 +48,7 @@ state: State
 
 Download state of the cloud file of the selected version.
 
-**Type:** State
+**Type:** [State](arkts-corefile-cloudsync-state-e.md)
 
 **Since:** 20
 

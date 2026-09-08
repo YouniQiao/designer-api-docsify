@@ -20,7 +20,7 @@ protocol: ProtocolType
 
 protocol of protocol data.
 
-**Type:** ProtocolType
+**Type:** [ProtocolType](arkts-connectivity-hid-protocoltype-e.md)
 
 **Since:** 23
 

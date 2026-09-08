@@ -48,7 +48,7 @@ errInfo?: huksExternalCrypto.HuksExternalErrorInfo
 
 The detailed error information returned.
 
-**Type:** huksExternalCrypto.HuksExternalErrorInfo
+**Type:** [huksExternalCrypto.HuksExternalErrorInfo](arkts-universalkeystore-huksexternalcrypto-huksexternalerrorinfo-i.md)
 
 **Since:** 26.0.0
 
@@ -92,7 +92,7 @@ property?: Array<huksExternalCrypto.HuksExternalCryptoParam>
 
 Returned property info.
 
-**Type:** Array&lt;huksExternalCrypto.HuksExternalCryptoParam&gt;
+**Type:** Array&lt;[huksExternalCrypto.HuksExternalCryptoParam](arkts-universalkeystore-huksexternalcrypto-huksexternalcryptoparam-i.md)&gt;
 
 **Since:** 22
 

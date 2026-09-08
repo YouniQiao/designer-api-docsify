@@ -26,7 +26,7 @@ Obtain the Wi-Fi hotspot configuration.
 
 | Type | Description |
 | --- | --- |
-| HotspotConfig | Returns the configuration of an existed or enabled Wi-Fi hotspot. |
+| [HotspotConfig](arkts-connectivity-wifimanager-hotspotconfig-i-sys.md) | Returns the configuration of an existed or enabled Wi-Fi hotspot. |
 
 **Error codes:**
 

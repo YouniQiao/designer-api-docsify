@@ -42,30 +42,6 @@ Cancels the auto-startup setting for an application component. This API uses an 
 | [16000013](../errorcode-ability.md#16000013-application-controlled-by-edm) | The application is controlled by EDM. |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Failed to connect to the system service. |
 
-**Examples**
-
-```TypeScript
-import { autoStartupManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  autoStartupManager.cancelApplicationAutoStartup({
-    bundleName: 'com.example.autostartupapp',
-    abilityName: 'EntryAbility'
-  }, (err: BusinessError) => {
-    if (err) {
-      console.error(`cancelApplicationAutoStartup failed, err code: ${err.code}, msg: ${err.message}.`);
-      return;
-    }
-    console.info(`cancelApplicationAutoStartup success.`);
-  });
-} catch (err) {
-  let code = (err as BusinessError).code;
-  let msg = (err as BusinessError).message;
-  console.error(`cancelApplicationAutoStartup failed, err code: ${code}, err msg: ${msg}.`);
-}
-```
-
 
 ## cancelApplicationAutoStartup
 
@@ -107,25 +83,3 @@ Cancels the auto-startup setting for an application component. This API uses a p
 | [16000004](../errorcode-ability.md#16000004-visibility-verification-failure) | Cannot start an invisible component. |
 | [16000013](../errorcode-ability.md#16000013-application-controlled-by-edm) | The application is controlled by EDM. |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Failed to connect to the system service. |
-
-**Examples**
-
-```TypeScript
-import { autoStartupManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  autoStartupManager.cancelApplicationAutoStartup({
-    bundleName: 'com.example.autostartupapp',
-    abilityName: 'EntryAbility'
-  }).then(() => {
-    console.info(`cancelApplicationAutoStartup success.`);
-  }).catch((err: BusinessError) => {
-    console.error(`cancelApplicationAutoStartup failed, err code: ${err.code}, msg: ${err.message}.`);
-  });
-} catch (err) {
-  let code = (err as BusinessError).code;
-  let msg = (err as BusinessError).message;
-  console.error(`cancelApplicationAutoStartup failed, err code: ${code}, err msg: ${msg}.`);
-}
-```

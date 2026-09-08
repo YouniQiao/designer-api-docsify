@@ -60,7 +60,7 @@ Image加载成功且组件不设置宽高时，其显示大小自适应父组件
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| src | PixelMap \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| [DrawableDescriptor](arkts-arkui-drawabledescriptor-t.md) | 是 | 图片的数据源，支持本地图片和网络图片，引用方式请参考[加载图片资源](../../../ui/arkts-graphics-display.md#加载图片资源)。 1. PixelMap格式为像素图，常用于图片编辑的场景。 2. ResourceStr包含Resource和string格式。 string格式可用于加载网络图片和本地图片。当使用相对路径显示图片时，不支持跨包/跨模块调用该Image组件，建议使用Resource格式来管理需全局使用的图片资源。从DevEco Studio 6.0.0 Beta2版本开始，新建工程或模块时，默认创建的模块不会对非resource目录下的资源进行打包，需使能相关开关：模块的build-profile.json5中buildOption &gt; resOptions &gt; copyCodeResource &gt; enable 设置为true。   - 支持`Base64`字符串。   - 传入的字符串为https网络图片地址时，建议参考示例2（下载与显示静态网络图片）。   - 支持file://路径前缀的字符串，应用沙箱URI：file://&lt;bundleName&gt;/&lt;sandboxPath&gt;。应用沙箱路径URI构造可参考[constructor](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-fileuri-c.md#constructor)。沙箱路径需要使用[fileUri.getUriFromPath(path)](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md)方法将路径转换为应用沙箱URI，然后传入显示。同时需要保证目录包路径下的文件有可读权限。   Resource格式可以跨包/跨模块访问资源文件，是访问本地图片的推荐方式，具体示例参考[访问跨HAP/HSP包资源](../../../quick-start/resource-categories-and-access.md#访问跨haphsp包资源)。 3. 当传入资源id或name为普通图片时，生成DrawableDescriptor对象。传入[AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-animateddrawabledescriptor-c.md)类型可播放PixelMap数组动画。   **说明：** - ArkTS卡片上支持gif图片格式动效，但仅在显示时播放一次。 - ArkTS卡片上不支持http://等网络相关路径前缀和file://路径前缀的字符串。 |
+| src | [PixelMap](arkts-arkui-pixelmap-t.md) \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| [DrawableDescriptor](arkts-arkui-drawabledescriptor-t.md) | 是 | 图片的数据源，支持本地图片和网络图片，引用方式请参考[加载图片资源](../../../ui/arkts-graphics-display.md#加载图片资源)。 1. PixelMap格式为像素图，常用于图片编辑的场景。 2. ResourceStr包含Resource和string格式。 string格式可用于加载网络图片和本地图片。当使用相对路径显示图片时，不支持跨包/跨模块调用该Image组件，建议使用Resource格式来管理需全局使用的图片资源。从DevEco Studio 6.0.0 Beta2版本开始，新建工程或模块时，默认创建的模块不会对非resource目录下的资源进行打包，需使能相关开关：模块的build-profile.json5中buildOption &gt; resOptions &gt; copyCodeResource &gt; enable 设置为true。   - 支持`Base64`字符串。   - 传入的字符串为https网络图片地址时，建议参考示例2（下载与显示静态网络图片）。   - 支持file://路径前缀的字符串，应用沙箱URI：file://&lt;bundleName&gt;/&lt;sandboxPath&gt;。应用沙箱路径URI构造可参考[constructor](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-fileuri-c.md#constructor)。沙箱路径需要使用[fileUri.getUriFromPath(path)](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md)方法将路径转换为应用沙箱URI，然后传入显示。同时需要保证目录包路径下的文件有可读权限。   Resource格式可以跨包/跨模块访问资源文件，是访问本地图片的推荐方式，具体示例参考[访问跨HAP/HSP包资源](../../../quick-start/resource-categories-and-access.md#访问跨haphsp包资源)。 3. 当传入资源id或name为普通图片时，生成DrawableDescriptor对象。传入[AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-animateddrawabledescriptor-c.md)类型可播放PixelMap数组动画。   **说明：** - ArkTS卡片上支持gif图片格式动效，但仅在显示时播放一次。 - ArkTS卡片上不支持http://等网络相关路径前缀和file://路径前缀的字符串。 |
 
 ## Image
 
@@ -84,7 +84,7 @@ src新增[ImageContent](arkts-arkui-imagecontent-e.md)类型，可指定对应�
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| src | PixelMap \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| [DrawableDescriptor](arkts-arkui-drawabledescriptor-t.md) \| [ImageContent](arkts-arkui-imagecontent-e.md) | 是 | 图片的数据源，支持本地图片和网络图片，引用方式请参考[加载图片资源](../../../ui/arkts-graphics-display.md#加载图片资源)。PixelMap、ResourceStr和DrawableDescriptor的使用请参考Image的src参数说明。传入[ImageContent](arkts-arkui-imagecontent-e.md)类型，指定图像内容。   **说明：** - ArkTS卡片上支持gif图片格式动效，但仅在显示时播放一次。 - ArkTS卡片上不支持http://等网络相关路径前缀和file://路径前缀的字符串。 |
+| src | [PixelMap](arkts-arkui-pixelmap-t.md) \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| [DrawableDescriptor](arkts-arkui-drawabledescriptor-t.md) \| [ImageContent](arkts-arkui-imagecontent-e.md) | 是 | 图片的数据源，支持本地图片和网络图片，引用方式请参考[加载图片资源](../../../ui/arkts-graphics-display.md#加载图片资源)。PixelMap、ResourceStr和DrawableDescriptor的使用请参考Image的src参数说明。传入[ImageContent](arkts-arkui-imagecontent-e.md)类型，指定图像内容。   **说明：** - ArkTS卡片上支持gif图片格式动效，但仅在显示时播放一次。 - ArkTS卡片上不支持http://等网络相关路径前缀和file://路径前缀的字符串。 |
 
 ## Image
 
@@ -108,7 +108,7 @@ Image(src: PixelMap | ResourceStr | DrawableDescriptor | ImageContent, reloadKey
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| src | PixelMap \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| [DrawableDescriptor](arkts-arkui-drawabledescriptor-t.md) \| [ImageContent](arkts-arkui-imagecontent-e.md) | 是 |  |
+| src | [PixelMap](arkts-arkui-pixelmap-t.md) \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| [DrawableDescriptor](arkts-arkui-drawabledescriptor-t.md) \| [ImageContent](arkts-arkui-imagecontent-e.md) | 是 |  |
 | reloadKey | string | 否 |  |
 
 ## Image
@@ -131,7 +131,7 @@ Image新增[ImageAIOptions](../arkts-apis/arkts-arkui-imageaioptions-i.md)参数
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| src | PixelMap \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| [DrawableDescriptor](arkts-arkui-drawabledescriptor-t.md) | 是 | 图片的数据源，支持本地图片和网络图片，引用方式请参考[加载图片资源](../../../ui/arkts-graphics-display.md#加载图片资源)。PixelMap、ResourceStr和DrawableDescriptor的使用请参考Image的src参数说明。   **说明：** - ArkTS卡片上支持gif图片格式动效，但仅在显示时播放一次。 - ArkTS卡片上不支持http://等网络相关路径前缀和file://路径前缀的字符串。 |
+| src | [PixelMap](arkts-arkui-pixelmap-t.md) \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| [DrawableDescriptor](arkts-arkui-drawabledescriptor-t.md) | 是 | 图片的数据源，支持本地图片和网络图片，引用方式请参考[加载图片资源](../../../ui/arkts-graphics-display.md#加载图片资源)。PixelMap、ResourceStr和DrawableDescriptor的使用请参考Image的src参数说明。   **说明：** - ArkTS卡片上支持gif图片格式动效，但仅在显示时播放一次。 - ArkTS卡片上不支持http://等网络相关路径前缀和file://路径前缀的字符串。 |
 | imageAIOptions | [ImageAIOptions](../arkts-apis/arkts-arkui-imageaioptions-i.md) | 是 | 给组件设置一个AI分析选项，通过此项可配置分析类型或绑定一个分析控制器。 |
 
 ## Image
@@ -155,7 +155,7 @@ Image(src: PixelMap | ResourceStr | DrawableDescriptor,
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| src | PixelMap \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| [DrawableDescriptor](arkts-arkui-drawabledescriptor-t.md) | 是 |  |
+| src | [PixelMap](arkts-arkui-pixelmap-t.md) \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| [DrawableDescriptor](arkts-arkui-drawabledescriptor-t.md) | 是 |  |
 | imageAIOptions | [ImageAIOptions](../arkts-apis/arkts-arkui-imageaioptions-i.md) | 否 |  |
 | reloadKey | string | 否 |  |
 
@@ -235,6 +235,7 @@ struct ImageExample1 {
 ```
 
 加载网络图片时，默认网络超时是5分钟，建议使用alt配置加载时的占位图。使用[HTTP](../../../network/http-request.md)工具包发送网络请求，接着将返回的数据解码为Image组件中的，加载gif到时，gif显示为静态图。图片开发可参考[Image Kit简介](../../../media/image/image-overview.md)。
+使用网络图片时，需要申请权限ohos.permission.INTERNET。具体申请方式请参考[声明权限](../../../security/AccessToken/declare-permissions.md)。
 
 ```TypeScript
 import { http } from '@kit.NetworkKit';
@@ -295,6 +296,7 @@ struct ImageExample2 {
 ```
 
 该示例使用cacheDownload.download接口下载网络gif图片。
+使用网络图片时，需要申请权限ohos.permission.INTERNET。具体申请方式请参考[声明权限](../../../security/AccessToken/declare-permissions.md)。
 
 ```TypeScript
 import { cacheDownload } from '@kit.BasicServicesKit';
@@ -842,6 +844,7 @@ struct ImageExample11 {
 ```
 
 该示例通过[imageMatrix](#imagematrix15)和[objectFit](#objectfit)属性，为图片添加旋转和平移的效果。
+从API version 15开始，新增imageMatrix属性。
 
 ```TypeScript
 import { matrix4 } from '@kit.ArkUI';
@@ -1024,6 +1027,7 @@ struct Index {
 ```
 
 该示例通过[hdrBrightness](#hdrbrightness19)属性调整HDR图源的亮度，将hdrBrightness从0调整到1。
+从API version 19开始，新增hdrBrightness属性。
 
 ```TypeScript
 import { image } from '@kit.ImageKit';
@@ -1418,6 +1422,7 @@ struct Index {
 ```
 
 该示例通过设置[supportSvg2](#supportsvg221)属性，使SVG标签解析能力增强功能生效。
+从API version 21开始，新增supportSvg2属性。
 
 ```TypeScript
 @Entry
@@ -1513,6 +1518,7 @@ struct ImageExample {
 ```
 
 该示例演示如何通过[onError](#onerror9)回调获取网络图片加载异常时的详细下载信息[ImageError](arkts-arkui-imageerror-i.md)。当图片加载失败时，可通过ImageError中的downloadInfo属性获取网络图片下载的详细信息，包括下载的资源信息、网络请求信息以及性能统计信息，有助于快速定位网络异常或资源错误原因。
+从API version 23开始，ImageError新增downloadInfo属性。
 
 ```TypeScript
 @Entry
@@ -1534,6 +1540,7 @@ struct Index {
 ```
 
 该示例演示了如何通过设置[antialiased](arkts-arkui-image-attribute.md#antialiased)接口开启位图图片边缘的抗锯齿功能。
+从API version 23开始，新增[antialiased](arkts-arkui-image-attribute.md#antialiased)接口。
 
 ```TypeScript
 @Entry

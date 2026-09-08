@@ -30,15 +30,15 @@ Shows a full-screen ad.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ad | Advertisement | Yes | Ad object. |
+| ad | [Advertisement](arkts-ads-advertising-advertisement-t.md) | Yes | Ad object. |
 | options | [AdDisplayOptions](arkts-ads-advertising-addisplayoptions-i.md) | Yes | Ad display parameters. |
-| context | common.UIAbilityContext | No | Context of the UIAbility. If this parameter is not set, the value is obtained from @ohos.app.ability.common.<br>**Since:** 12 |
+| context | [common.UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-common-uiabilitycontext-t.md) | No | Context of the UIAbility. If this parameter is not set, the value is obtained from @ohos.app.ability.common.<br>**Since:** 12 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid input parameter. Possible causes: 1. Mandatory parameters are left unspecified. |
+| [401](../errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. |
 | [21800001](../errorcode-ads.md#21800001-internal-system-error) | System internal error. |
 | [21800004](../errorcode-ads.md#21800004-ad-display-failure) | Failed to display the ad. |
 

@@ -27,13 +27,13 @@ Obtains the information about the running process based on the bundle type. This
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleType | bundleManager.BundleType | Yes | Bundle type. |
+| bundleType | [bundleManager.BundleType](arkts-ability-bundlemanager-bundletype-e.md) | Yes | Bundle type. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;ProcessInformation&gt;&gt; | Promise used to return the process information. |
+| Promise&lt;Array&lt;[ProcessInformation](arkts-ability-appmanager-processinformation-t.md)&gt;&gt; | Promise used to return the process information. |
 
 **Error codes:**
 

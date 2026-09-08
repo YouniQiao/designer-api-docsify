@@ -40,7 +40,7 @@ authResult?: UserAuthResult
 
 Type of user authorization status.
 
-**Type:** UserAuthResult
+**Type:** [UserAuthResult](arkts-backgroundtasks-backgroundtaskmanager-userauthresult-e.md)
 
 **Since:** 22
 

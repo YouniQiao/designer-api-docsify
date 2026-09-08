@@ -30,7 +30,7 @@ function getScanResults(): Promise<Array<WifiScanInfo>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;WifiScanInfo&gt;&gt; | Promise对象。返回扫描到的热点列表。 |
+| Promise&lt;Array&lt;[WifiScanInfo](arkts-connectivity-wifimanager-wifiscaninfo-i.md)&gt;&gt; | Promise对象。返回扫描到的热点列表。 |
 
 **错误码：**
 
@@ -110,7 +110,7 @@ function getScanResults(callback: AsyncCallback<Array<WifiScanInfo>>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;WifiScanInfo&gt;&gt; | 是 | 回调函数，返回扫描到的WLAN热点信息（如果有）。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[WifiScanInfo](arkts-connectivity-wifimanager-wifiscaninfo-i.md)&gt;&gt; | 是 | 回调函数，返回扫描到的WLAN热点信息（如果有）。 |
 
 **错误码：**
 

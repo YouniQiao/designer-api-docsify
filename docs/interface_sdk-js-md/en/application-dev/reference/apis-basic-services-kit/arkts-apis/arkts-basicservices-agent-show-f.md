@@ -23,7 +23,7 @@ Queries the task details based on the task ID. This API uses an asynchronous cal
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | id | string | Yes | Task ID. |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;TaskInfo&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the **TaskInfo** object obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[TaskInfo](arkts-basicservices-agent-taskinfo-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the **TaskInfo** object obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -56,7 +56,7 @@ Queries the task details based on the task ID. This API uses a promise to return
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;TaskInfo&gt; | Promise used to return the **TaskInfo** object. |
+| Promise&lt;[TaskInfo](arkts-basicservices-agent-taskinfo-i.md)&gt; | Promise used to return the **TaskInfo** object. |
 
 **Error codes:**
 

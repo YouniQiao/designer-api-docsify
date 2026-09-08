@@ -2,7 +2,7 @@
 
 Enumeration type of scene.
 
-@enum { number } SceneType
+@enum { int } SceneType
 
 **Since:** 23
 

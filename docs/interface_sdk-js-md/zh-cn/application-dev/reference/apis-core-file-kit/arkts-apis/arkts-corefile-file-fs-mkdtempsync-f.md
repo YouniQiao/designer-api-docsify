@@ -45,13 +45,7 @@ declare function mkdtempSync(prefix: string): string
 | 13900020 | Invalid argument |
 | 13900025 | No space left on device |
 | 13900028 | Too many links |
-| 13900030 | File name too number |
+| 13900030 | File name too long |
 | 13900033 | Too many symbolic links encountered |
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
-
-**示例**
-
-```TypeScript
-let res = fileIo.mkdtempSync(pathDir + "/XXXXXX");
-```

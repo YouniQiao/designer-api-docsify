@@ -20,7 +20,7 @@ reason: RectChangeReason
 
 组件矩形变化的原因。
 
-**类型：** RectChangeReason
+**类型：** [RectChangeReason](arkts-arkui-uiextension-rectchangereason-e.md)
 
 **起始版本：** 14
 
@@ -38,7 +38,7 @@ rect: window.Rect
 
 组件矩形变化后的值。
 
-**类型：** window.Rect
+**类型：** [window.Rect](arkts-arkui-window-rect-i.md)
 
 **起始版本：** 14
 

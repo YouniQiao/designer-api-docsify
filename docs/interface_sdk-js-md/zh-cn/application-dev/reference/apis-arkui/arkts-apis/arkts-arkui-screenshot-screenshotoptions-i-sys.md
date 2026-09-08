@@ -102,7 +102,7 @@ screenRect?: Rect
 
 表示截取图像的区域，不传值默认返回displayId所在逻辑屏的区域。
 
-**类型：** Rect
+**类型：** [Rect](arkts-arkui-screenshot-rect-i.md)
 
 **起始版本：** 7
 

@@ -20,7 +20,7 @@ appWindow?: window.Window
 
 Application window object. This API is used to display the authentication dialog box as an application modal dialog. It is applicable to scenarios where the dialog box needs to be displayed by using the window object. If this parameter is provided, **uiContext** will be ignored. If this parameter is not passed, the display of the authentication dialog box is controlled by **uiContext**.
 
-**Type:** window.Window
+**Type:** [window.Window](../../apis-arkui/arkts-apis/arkts-arkui-window-window-i.md)
 
 **Since:** 26.0.0
 

@@ -36,7 +36,7 @@ state: AcbState
 
 Current logical link connection status.
 
-**Type:** AcbState
+**Type:** [AcbState](arkts-connectivity-remotedevice-acbstate-t.md)
 
 **Since:** 26.0.0
 

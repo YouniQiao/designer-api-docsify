@@ -24,14 +24,14 @@ Searching for a specified target.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| target | TargetInfo | 是 | Target infomation. |
-| params | SearchParams | 是 | Parameters to use when searching. |
+| target | [TargetInfo](arkts-mechanic-mechanicmanager-targetinfo-i-sys.md) | 是 | Target infomation. |
+| params | [SearchParams](arkts-mechanic-mechanicmanager-searchparams-i-sys.md) | 是 | Parameters to use when searching. |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;SearchResult&gt; | Promise that return the Search result. |
+| Promise&lt;[SearchResult](arkts-mechanic-mechanicmanager-searchresult-i-sys.md)&gt; | Promise that return the Search result. |
 
 **错误码：**
 

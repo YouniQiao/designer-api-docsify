@@ -26,7 +26,7 @@ function getDoNotDisturbDate(callback: AsyncCallback<DoNotDisturbDate>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DoNotDisturbDate&gt; | 是 | 查询免打扰时间回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[DoNotDisturbDate](arkts-notification-notificationmanager-donotdisturbdate-i-sys.md)&gt; | 是 | 查询免打扰时间回调函数。 |
 
 **错误码：**
 
@@ -78,7 +78,7 @@ function getDoNotDisturbDate(): Promise<DoNotDisturbDate>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;DoNotDisturbDate&gt; | 以Promise形式返回获取查询到的免打扰时间。 |
+| Promise&lt;[DoNotDisturbDate](arkts-notification-notificationmanager-donotdisturbdate-i-sys.md)&gt; | 以Promise形式返回获取查询到的免打扰时间。 |
 
 **错误码：**
 
@@ -126,7 +126,7 @@ function getDoNotDisturbDate(userId: number, callback: AsyncCallback<DoNotDistur
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | userId | number | 是 | 用户ID。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DoNotDisturbDate&gt; | 是 | 查询免打扰时间回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[DoNotDisturbDate](arkts-notification-notificationmanager-donotdisturbdate-i-sys.md)&gt; | 是 | 查询免打扰时间回调函数。 |
 
 **错误码：**
 
@@ -188,7 +188,7 @@ function getDoNotDisturbDate(userId: number): Promise<DoNotDisturbDate>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;DoNotDisturbDate&gt; | 以Promise形式返回获取查询到的免打扰时间。 |
+| Promise&lt;[DoNotDisturbDate](arkts-notification-notificationmanager-donotdisturbdate-i-sys.md)&gt; | 以Promise形式返回获取查询到的免打扰时间。 |
 
 **错误码：**
 

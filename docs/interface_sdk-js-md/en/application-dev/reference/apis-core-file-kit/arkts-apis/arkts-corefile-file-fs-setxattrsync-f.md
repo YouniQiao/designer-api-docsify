@@ -40,20 +40,3 @@ Sets an extended attribute of a file or directory.
 | 13900038 | Value too large for defined data type |
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let filePath = pathDir + "/test.txt";
-let attrKey = "user.comment";
-let attrValue = "Test file.";
-
-try {
-  fileIo.setxattrSync(filePath, attrKey, attrValue);
-  console.info(`Succeeded in setting extended attribute.`);
-} catch (err) {
-  console.error(`Failed to set extended attribute. Code: ${err.code}, message: ${err.message}`);
-}
-```

@@ -40,7 +40,7 @@ eventTypes?: EventType[]
 
 需要订阅的事件类型集合。默认不进行过滤。
 
-**类型：** EventType[]
+**类型：** [EventType](arkts-performanceanalysis-hiappevent-eventtype-e.md)[]
 
 **起始版本：** 9
 

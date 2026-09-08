@@ -208,7 +208,7 @@ position?: PositionType
 
 媒体资产（图片/视频）的所在位置。
 
-**类型：** PositionType
+**类型：** [PositionType](arkts-medialibrary-photoaccesshelper-positiontype-e.md)
 
 **起始版本：** 23
 
@@ -256,7 +256,7 @@ thumbnailVisible: ThumbnailVisibility
 
 缩略图的可访问性。
 
-**类型：** ThumbnailVisibility
+**类型：** [ThumbnailVisibility](arkts-medialibrary-photoaccesshelper-thumbnailvisibility-e-sys.md)
 
 **起始版本：** 20
 

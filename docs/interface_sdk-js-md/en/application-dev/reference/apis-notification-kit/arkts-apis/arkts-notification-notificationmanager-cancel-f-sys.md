@@ -26,7 +26,7 @@ The current application must have a proxy relationship with another application,
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| representativeBundle | BundleOption | Yes | Bundle information of the application. |
+| representativeBundle | [BundleOption](arkts-notification-notificationmanager-bundleoption-t.md) | Yes | Bundle information of the application. |
 | id | number | Yes | Notification ID. |
 
 **Return value:**

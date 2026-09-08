@@ -272,7 +272,7 @@ closeRawFileDescriptor(path: string, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | path | string | 是 | 相对resources/rawfile目录的rawfile文件路径，如"test.txt"、"subdir/test.txt"，不以"/"开头。 |
-| callback | AsyncCallback&lt;void&gt; | 是 | 回调函数。当关闭rawfile文件的文件描述符（fd）成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](arkts-localization-resourcemanager-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当关闭rawfile文件的文件描述符（fd）成功，err为undefined，否则为错误对象。 |
 
 **示例**
 
@@ -421,7 +421,7 @@ getBoolean(resource: Resource): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| resource | Resource | 是 | 资源信息。 |
+| resource | [Resource](arkts-localization-resourcemanager-resource-t.md) | 是 | 资源信息。 |
 
 **返回值：**
 
@@ -734,7 +734,7 @@ getColor(resource: Resource, callback: _AsyncCallback<number>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| resource | Resource | 是 | 资源信息。 |
+| resource | [Resource](arkts-localization-resourcemanager-resource-t.md) | 是 | 资源信息。 |
 | callback | _AsyncCallback&lt;number&gt; | 是 | 回调函数，返回resource对象对应的颜色值（十进制）。 |
 
 **错误码：**
@@ -803,7 +803,7 @@ getColor(resource: Resource): Promise<number>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| resource | Resource | 是 | 资源信息。 |
+| resource | [Resource](arkts-localization-resourcemanager-resource-t.md) | 是 | 资源信息。 |
 
 **返回值：**
 
@@ -1146,7 +1146,7 @@ getColorSync(resource: Resource) : number
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| resource | Resource | 是 | 资源信息。 |
+| resource | [Resource](arkts-localization-resourcemanager-resource-t.md) | 是 | 资源信息。 |
 
 **返回值：**
 
@@ -1215,7 +1215,7 @@ getConfiguration(callback: _AsyncCallback<Configuration>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | _AsyncCallback&lt;Configuration&gt; | 是 | 回调函数，返回设备的Configuration。 |
+| callback | _AsyncCallback&lt;[Configuration](arkts-localization-resourcemanager-configuration-c.md)&gt; | 是 | 回调函数，返回设备的Configuration。 |
 
 **示例**
 
@@ -1260,7 +1260,7 @@ getConfiguration(): Promise<Configuration>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Configuration&gt; | Promise对象，返回设备的Configuration。 |
+| Promise&lt;[Configuration](arkts-localization-resourcemanager-configuration-c.md)&gt; | Promise对象，返回设备的Configuration。 |
 
 **示例**
 
@@ -1303,7 +1303,7 @@ getConfigurationSync(): Configuration
 
 | 类型 | 说明 |
 | --- | --- |
-| Configuration | 设备的Configuration。 |
+| [Configuration](arkts-localization-resourcemanager-configuration-c.md) | 设备的Configuration。 |
 
 **示例**
 
@@ -1341,7 +1341,7 @@ getDeviceCapability(callback: _AsyncCallback<DeviceCapability>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | _AsyncCallback&lt;DeviceCapability&gt; | 是 | 回调函数，返回设备的DeviceCapability。 |
+| callback | _AsyncCallback&lt;[DeviceCapability](arkts-localization-resourcemanager-devicecapability-c.md)&gt; | 是 | 回调函数，返回设备的DeviceCapability。 |
 
 **示例**
 
@@ -1386,7 +1386,7 @@ getDeviceCapability(): Promise<DeviceCapability>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;DeviceCapability&gt; | Promise对象，返回设备的DeviceCapability。 |
+| Promise&lt;[DeviceCapability](arkts-localization-resourcemanager-devicecapability-c.md)&gt; | Promise对象，返回设备的DeviceCapability。 |
 
 **示例**
 
@@ -1429,7 +1429,7 @@ getDeviceCapabilitySync(): DeviceCapability
 
 | 类型 | 说明 |
 | --- | --- |
-| DeviceCapability | 设备的DeviceCapability。 |
+| [DeviceCapability](arkts-localization-resourcemanager-devicecapability-c.md) | 设备的DeviceCapability。 |
 
 **示例**
 
@@ -1656,7 +1656,7 @@ getDoublePluralStringValueSync(resource: Resource, num: number, ...args: Array<s
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| resource | Resource | 是 | 资源信息。 |
+| resource | [Resource](arkts-localization-resourcemanager-resource-t.md) | 是 | 资源信息。 |
 | num | number | 是 | 数量值（浮点数）。根据当前语言的[单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)获取该数量值对应的字符串。 |
 | args | Array&lt;string \| number&gt; | 是 | 格式化字符串资源参数。支持的参数类型包括`%d`、`%f`、`%s`、`%%`、`%数字\\$d`、`%数字\\$f`和`%数字\\$s`。   **说明：** - `%%`转义为`%`，如`%%d`格式化后为`%d`。 - `%数字\\$d`中的数字表示参数索引，从`1`开始计数。如`%1\\$d`表示使用`args[0]`格式化，`%2\\$d`表示使用`args[1]`格式化，依此类推。 |
 
@@ -1818,7 +1818,7 @@ getDrawableDescriptor(resource: Resource, density?: number, type?: number): Draw
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| resource | Resource | 是 | 资源信息。 |
+| resource | [Resource](arkts-localization-resourcemanager-resource-t.md) | 是 | 资源信息。 |
 | density | number | 否 | 资源获取需要的屏幕密度，0或缺省表示默认屏幕密度。取值具体请参考枚举[ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md)。 |
 | type | number | 否 | 图标类型。默认值为0。0：表示获取应用自身图标资源。1：表示获取主题资源包中应用的分层图标资源。 |
 
@@ -2151,7 +2151,7 @@ getIntPluralStringValueSync(resource: Resource, num: number, ...args: Array<stri
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| resource | Resource | 是 | 资源信息。 |
+| resource | [Resource](arkts-localization-resourcemanager-resource-t.md) | 是 | 资源信息。 |
 | num | number | 是 | 数量值（整数）。根据当前语言的[单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)获取该数量值对应的字符串。 |
 | args | Array&lt;string \| number&gt; | 是 | 格式化字符串资源参数。支持的参数类型包括`%d`、`%f`、`%s`、`%%`、`%数字\\$d`、`%数字\\$f`和`%数字\\$s`。   **说明：** - `%%`转义为`%`，如`%%d`格式化后为`%d`。 - `%数字\\$d`中的数字表示参数索引，从`1`开始计数。如`%1\\$d`表示使用`args[0]`格式化，`%2\\$d`表示使用`args[1]`格式化，依此类推。 |
 
@@ -2305,7 +2305,7 @@ getMedia(resId: number, callback: AsyncCallback<Uint8Array>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | resId | number | 是 | 资源ID值。 |
-| callback | AsyncCallback&lt;Uint8Array&gt; | 是 | 回调函数，返回资源ID值对应的媒体文件内容。 |
+| callback | [AsyncCallback](arkts-localization-resourcemanager-asynccallback-i.md)&lt;Uint8Array&gt; | 是 | 回调函数，返回资源ID值对应的媒体文件内容。 |
 
 **示例**
 
@@ -2384,7 +2384,7 @@ getMediaBase64(resId: number, callback: AsyncCallback<string>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | resId | number | 是 | 资源ID值。 |
-| callback | AsyncCallback&lt;string&gt; | 是 | 回调函数，返回资源ID值对应的图片资源Base64编码。 |
+| callback | [AsyncCallback](arkts-localization-resourcemanager-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数，返回资源ID值对应的图片资源Base64编码。 |
 
 **示例**
 
@@ -3050,7 +3050,7 @@ getMediaContent(resource: Resource, callback: _AsyncCallback<Uint8Array>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| resource | Resource | 是 | 资源信息。 |
+| resource | [Resource](arkts-localization-resourcemanager-resource-t.md) | 是 | 资源信息。 |
 | callback | _AsyncCallback&lt;Uint8Array&gt; | 是 | 回调函数，返回resource对象对应的媒体文件内容。 |
 
 **错误码：**
@@ -3111,7 +3111,7 @@ getMediaContent(resource: Resource, density: number, callback: _AsyncCallback<Ui
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| resource | Resource | 是 | 资源信息。 |
+| resource | [Resource](arkts-localization-resourcemanager-resource-t.md) | 是 | 资源信息。 |
 | density | number | 是 | 资源获取需要的屏幕密度，0表示默认屏幕密度。取值具体请参考枚举[ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md)。 |
 | callback | _AsyncCallback&lt;Uint8Array&gt; | 是 | 回调函数，返回resource对象对应的媒体文件内容。 |
 
@@ -3173,7 +3173,7 @@ getMediaContent(resource: Resource): Promise<Uint8Array>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| resource | Resource | 是 | 资源信息。 |
+| resource | [Resource](arkts-localization-resourcemanager-resource-t.md) | 是 | 资源信息。 |
 
 **返回值：**
 
@@ -3237,7 +3237,7 @@ getMediaContent(resource: Resource, density: number): Promise<Uint8Array>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| resource | Resource | 是 | 资源信息。 |
+| resource | [Resource](arkts-localization-resourcemanager-resource-t.md) | 是 | 资源信息。 |
 | density | number | 是 | 资源获取需要的屏幕密度，0表示默认屏幕密度。取值具体请参考枚举[ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md)。 |
 
 **返回值：**
@@ -3531,7 +3531,7 @@ getMediaContentBase64(resource: Resource, callback: _AsyncCallback<string>): voi
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| resource | Resource | 是 | 资源信息。 |
+| resource | [Resource](arkts-localization-resourcemanager-resource-t.md) | 是 | 资源信息。 |
 | callback | _AsyncCallback&lt;string&gt; | 是 | 回调函数，返回resource对象对应的图片资源Base64编码。 |
 
 **错误码：**
@@ -3592,7 +3592,7 @@ getMediaContentBase64(resource: Resource, density: number, callback: _AsyncCallb
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| resource | Resource | 是 | 资源信息。 |
+| resource | [Resource](arkts-localization-resourcemanager-resource-t.md) | 是 | 资源信息。 |
 | density | number | 是 | 资源获取需要的屏幕密度，0表示默认屏幕密度。取值具体请参考枚举[ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md)。 |
 | callback | _AsyncCallback&lt;string&gt; | 是 | 回调函数，返回resource对象对应的图片资源Base64编码。 |
 
@@ -3654,7 +3654,7 @@ getMediaContentBase64(resource: Resource): Promise<string>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| resource | Resource | 是 | 资源信息。 |
+| resource | [Resource](arkts-localization-resourcemanager-resource-t.md) | 是 | 资源信息。 |
 
 **返回值：**
 
@@ -3718,7 +3718,7 @@ getMediaContentBase64(resource: Resource, density: number): Promise<string>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| resource | Resource | 是 | 资源信息。 |
+| resource | [Resource](arkts-localization-resourcemanager-resource-t.md) | 是 | 资源信息。 |
 | density | number | 是 | 资源获取需要的屏幕密度，0表示默认屏幕密度。取值具体请参考枚举[ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md)。 |
 
 **返回值：**
@@ -4075,7 +4075,7 @@ getMediaContentBase64Sync(resource: Resource, density?: number): string
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| resource | Resource | 是 | 资源信息。 |
+| resource | [Resource](arkts-localization-resourcemanager-resource-t.md) | 是 | 资源信息。 |
 | density | number | 否 | 资源获取需要的屏幕密度，0或缺省表示默认屏幕密度。取值具体请参考枚举[ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md)。 |
 
 **返回值：**
@@ -4208,7 +4208,7 @@ getMediaContentSync(resource: Resource, density?: number): Uint8Array
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| resource | Resource | 是 | 资源信息。 |
+| resource | [Resource](arkts-localization-resourcemanager-resource-t.md) | 是 | 资源信息。 |
 | density | number | 否 | 资源获取需要的屏幕密度，0或缺省表示默认屏幕密度。取值具体请参考枚举[ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md)。 |
 
 **返回值：**
@@ -4372,7 +4372,7 @@ getNumber(resource: Resource): number
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| resource | Resource | 是 | 资源信息。 |
+| resource | [Resource](arkts-localization-resourcemanager-resource-t.md) | 是 | 资源信息。 |
 
 **返回值：**
 
@@ -4539,7 +4539,7 @@ getOverrideConfiguration(): Configuration
 
 | 类型 | 说明 |
 | --- | --- |
-| Configuration | 差异化资源的配置。 |
+| [Configuration](arkts-localization-resourcemanager-configuration-c.md) | 差异化资源的配置。 |
 
 **示例**
 
@@ -4584,7 +4584,7 @@ getOverrideResourceManager(configuration?: Configuration): ResourceManager
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| configuration | Configuration | 否 | 指定想要获取的资源配置。通过[getOverrideConfiguration](#getoverrideconfiguration)获取差异化配置后，根据需求修改配置项，再作为参数传入该函数。若缺省则表示使用当前系统的configuration。 |
+| configuration | [Configuration](arkts-localization-resourcemanager-configuration-c.md) | 否 | 指定想要获取的资源配置。通过[getOverrideConfiguration](#getoverrideconfiguration)获取差异化配置后，根据需求修改配置项，再作为参数传入该函数。若缺省则表示使用当前系统的configuration。 |
 
 **返回值：**
 
@@ -4648,7 +4648,7 @@ getPluralString(resId: number, num: number, callback: AsyncCallback<string>): vo
 | --- | --- | --- | --- |
 | resId | number | 是 | 资源ID值。 |
 | num | number | 是 | 数量值。根据当前语言的[单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)获取该数量值对应的字符串。 |
-| callback | AsyncCallback&lt;string&gt; | 是 | 回调函数，返回资源ID值对应的指定数量的单复数字符串。 |
+| callback | [AsyncCallback](arkts-localization-resourcemanager-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数，返回资源ID值对应的指定数量的单复数字符串。 |
 
 **示例**
 
@@ -4988,7 +4988,7 @@ getPluralStringValue(resource: Resource, num: number, callback: _AsyncCallback<s
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| resource | Resource | 是 | 资源信息。 |
+| resource | [Resource](arkts-localization-resourcemanager-resource-t.md) | 是 | 资源信息。 |
 | num | number | 是 | 数量值。根据当前语言的[单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)获取该数量值对应的字符串。 |
 | callback | _AsyncCallback&lt;string&gt; | 是 | 回调函数，返回resource对象对应的指定数量的单复数字符串。 |
 
@@ -5075,7 +5075,7 @@ getPluralStringValue(resource: Resource, num: number): Promise<string>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| resource | Resource | 是 | 资源信息。 |
+| resource | [Resource](arkts-localization-resourcemanager-resource-t.md) | 是 | 资源信息。 |
 | num | number | 是 | 数量值。根据当前语言的[单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)获取该数量值对应的字符串。 |
 
 **返回值：**
@@ -5412,7 +5412,7 @@ getPluralStringValueSync(resource: Resource, num: number): string
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| resource | Resource | 是 | 资源信息。 |
+| resource | [Resource](arkts-localization-resourcemanager-resource-t.md) | 是 | 资源信息。 |
 | num | number | 是 | 数量值。根据当前语言的[单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)获取该数量值对应的字符串。 |
 
 **返回值：**
@@ -5502,7 +5502,7 @@ getRawFd(path: string, callback: _AsyncCallback<RawFileDescriptor>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | path | string | 是 | 相对resources/rawfile目录的rawfile文件路径，如"test.txt"、"subdir/test.txt"，不以"/"开头。 |
-| callback | _AsyncCallback&lt;RawFileDescriptor&gt; | 是 | 回调函数，返回的rawfile文件所在HAP的文件描述符（fd）。 |
+| callback | _AsyncCallback&lt;[RawFileDescriptor](arkts-localization-resourcemanager-rawfiledescriptor-t.md)&gt; | 是 | 回调函数，返回的rawfile文件所在HAP的文件描述符（fd）。 |
 
 **错误码：**
 
@@ -5572,7 +5572,7 @@ getRawFd(path: string): Promise<RawFileDescriptor>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;RawFileDescriptor&gt; | Promise对象，返回rawfile文件所在HAP的文件描述符（fd）。 |
+| Promise&lt;[RawFileDescriptor](arkts-localization-resourcemanager-rawfiledescriptor-t.md)&gt; | Promise对象，返回rawfile文件所在HAP的文件描述符（fd）。 |
 
 **错误码：**
 
@@ -5640,7 +5640,7 @@ getRawFdSync(path: string): RawFileDescriptor
 
 | 类型 | 说明 |
 | --- | --- |
-| RawFileDescriptor | rawfile文件所在HAP的文件描述符（fd）。 |
+| [RawFileDescriptor](arkts-localization-resourcemanager-rawfiledescriptor-t.md) | rawfile文件所在HAP的文件描述符（fd）。 |
 
 **错误码：**
 
@@ -5692,7 +5692,7 @@ getRawFile(path: string, callback: AsyncCallback<Uint8Array>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | path | string | 是 | 相对resources/rawfile目录的rawfile文件路径，如"test.txt"、"subdir/test.txt"，不以"/"开头。 |
-| callback | AsyncCallback&lt;Uint8Array&gt; | 是 | 回调函数，返回rawfile文件内容。 |
+| callback | [AsyncCallback](arkts-localization-resourcemanager-asynccallback-i.md)&lt;Uint8Array&gt; | 是 | 回调函数，返回rawfile文件内容。 |
 
 **示例**
 
@@ -5947,7 +5947,7 @@ getRawFileDescriptor(path: string, callback: AsyncCallback<RawFileDescriptor>): 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | path | string | 是 | 相对resources/rawfile目录的rawfile文件路径，如"test.txt"、"subdir/test.txt"，不以"/"开头。 |
-| callback | AsyncCallback&lt;RawFileDescriptor&gt; | 是 | 回调函数，返回rawfile文件的文件描述符（fd）。 |
+| callback | [AsyncCallback](arkts-localization-resourcemanager-asynccallback-i.md)&lt;[RawFileDescriptor](arkts-localization-resourcemanager-rawfiledescriptor-t.md)&gt; | 是 | 回调函数，返回rawfile文件的文件描述符（fd）。 |
 
 **示例**
 
@@ -5995,7 +5995,7 @@ getRawFileDescriptor(path: string): Promise<RawFileDescriptor>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;RawFileDescriptor&gt; | Promise对象，返回rawfile文件的文件描述符（fd）。 |
+| Promise&lt;[RawFileDescriptor](arkts-localization-resourcemanager-rawfiledescriptor-t.md)&gt; | Promise对象，返回rawfile文件的文件描述符（fd）。 |
 
 **示例**
 
@@ -6275,7 +6275,7 @@ getString(resId: number, callback: AsyncCallback<string>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | resId | number | 是 | 资源ID值。 |
-| callback | AsyncCallback&lt;string&gt; | 是 | 回调函数，返回资源ID值对应的字符串。 |
+| callback | [AsyncCallback](arkts-localization-resourcemanager-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数，返回资源ID值对应的字符串。 |
 
 **示例**
 
@@ -6354,7 +6354,7 @@ getStringArray(resId: number, callback: AsyncCallback<Array<string>>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | resId | number | 是 | 资源ID值。 |
-| callback | AsyncCallback&lt;Array&lt;string&gt;&gt; | 是 | 回调函数，返回资源ID值对应的字符串数组。 |
+| callback | [AsyncCallback](arkts-localization-resourcemanager-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | 是 | 回调函数，返回资源ID值对应的字符串数组。 |
 
 **示例**
 
@@ -6649,7 +6649,7 @@ getStringArrayValue(resource: Resource, callback: _AsyncCallback<Array<string>>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| resource | Resource | 是 | 资源信息。 |
+| resource | [Resource](arkts-localization-resourcemanager-resource-t.md) | 是 | 资源信息。 |
 | callback | _AsyncCallback&lt;Array&lt;string&gt;&gt; | 是 | 回调函数，返回resource对象对应的字符串数组。 |
 
 **错误码：**
@@ -6722,7 +6722,7 @@ getStringArrayValue(resource: Resource): Promise<Array<string>>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| resource | Resource | 是 | 资源信息。 |
+| resource | [Resource](arkts-localization-resourcemanager-resource-t.md) | 是 | 资源信息。 |
 
 **返回值：**
 
@@ -7013,7 +7013,7 @@ getStringArrayValueSync(resource: Resource): Array<string>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| resource | Resource | 是 | 资源信息。 |
+| resource | [Resource](arkts-localization-resourcemanager-resource-t.md) | 是 | 资源信息。 |
 
 **返回值：**
 
@@ -7501,7 +7501,7 @@ getStringSync(resource: Resource): string
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| resource | Resource | 是 | 资源信息。 |
+| resource | [Resource](arkts-localization-resourcemanager-resource-t.md) | 是 | 资源信息。 |
 
 **返回值：**
 
@@ -7576,7 +7576,7 @@ getStringSync(resource: Resource, ...args: Array<string | number>): string
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| resource | Resource | 是 | 资源信息。 |
+| resource | [Resource](arkts-localization-resourcemanager-resource-t.md) | 是 | 资源信息。 |
 | args | Array&lt;string \| number&gt; | 是 | 格式化字符串资源参数。支持的参数类型包括`%d`、`%f`、`%s`、`%%`、`%数字\\$d`、`%数字\\$f`和`%数字\\$s`。   **说明：** - `%%`转义为`%`，如`%%d`格式化后为`%d`。 - `%数字\\$d`中的数字表示参数索引，从`1`开始计数。如`%1\\$d`表示使用`args[0]`格式化，`%2\\$d`表示使用`args[1]`格式化，依此类推。 |
 
 **返回值：**
@@ -7653,7 +7653,7 @@ getStringValue(resource: Resource, callback: _AsyncCallback<string>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| resource | Resource | 是 | 资源信息。 |
+| resource | [Resource](arkts-localization-resourcemanager-resource-t.md) | 是 | 资源信息。 |
 | callback | _AsyncCallback&lt;string&gt; | 是 | 回调函数，返回resource对象对应的字符串。 |
 
 **错误码：**
@@ -7722,7 +7722,7 @@ getStringValue(resource: Resource): Promise<string>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| resource | Resource | 是 | 资源信息。 |
+| resource | [Resource](arkts-localization-resourcemanager-resource-t.md) | 是 | 资源信息。 |
 
 **返回值：**
 
@@ -7987,7 +7987,7 @@ getSymbol(resource: Resource) : number
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| resource | Resource | 是 | 资源信息。 |
+| resource | [Resource](arkts-localization-resourcemanager-resource-t.md) | 是 | 资源信息。 |
 
 **返回值：**
 
@@ -8245,7 +8245,7 @@ updateOverrideConfiguration(configuration: Configuration): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| configuration | Configuration | 是 | 指定差异化资源的配置。通过[getOverrideConfiguration](#getoverrideconfiguration)获取差异化配置后，根据需求修改配置项，再作为参数传入。 |
+| configuration | [Configuration](arkts-localization-resourcemanager-configuration-c.md) | 是 | 指定差异化资源的配置。通过[getOverrideConfiguration](#getoverrideconfiguration)获取差异化配置后，根据需求修改配置项，再作为参数传入。 |
 
 **错误码：**
 

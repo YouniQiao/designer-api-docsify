@@ -28,7 +28,7 @@ No preview is displayed.
 IMAGE = 1
 ```
 
-The preview is a screenshot of the component on which a number-press triggers the context menu.
+The preview is a screenshot of the component on which a long-press triggers the context menu.
 
 **Since:** 11
 

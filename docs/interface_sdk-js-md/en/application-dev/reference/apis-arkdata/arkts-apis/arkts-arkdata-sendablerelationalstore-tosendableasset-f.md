@@ -28,7 +28,7 @@ Converts the asset data that cannot be passed across threads into the data that 
 
 | Type | Description |
 | --- | --- |
-| Asset | Asset data that can be passed across threads. |
+| [Asset](arkts-arkdata-sendablerelationalstore-asset-i.md) | Asset data that can be passed across threads. |
 
 **Error codes:**
 

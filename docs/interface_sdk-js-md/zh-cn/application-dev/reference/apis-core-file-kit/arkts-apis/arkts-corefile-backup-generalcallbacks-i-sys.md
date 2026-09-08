@@ -224,7 +224,7 @@ onFileReady: AsyncCallback<File>
 
 备份服务向客户端发送文件时触发的回调。File参数表示发送给客户端的文件。返回的文件归备份服务所有，客户端关闭文件句柄后由备份服务清理。
 
-**类型：** [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;File&gt;
+**类型：** [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[File](arkts-corefile-file-fs-file-i.md)&gt;
 
 **起始版本：** 10
 

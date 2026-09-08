@@ -79,7 +79,7 @@ Sets the font family.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | string \| Resource | Yes | Font family. Default font: **'HarmonyOS Sans'**Supported fonts include **'HarmonyOS Sans'** and custom fonts registered using [loadFontSync](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-fontcollection-c.md#loadfontsync).Only the 'HarmonyOS Sans' font is supported for widgets. |
+| value | string \| [Resource](../arkts-apis/arkts-arkui-resource-t.md) | Yes | Font family. Default font: **'HarmonyOS Sans'**Supported fonts include **'HarmonyOS Sans'** and custom fonts registered using [loadFontSync](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-fontcollection-c.md#loadfontsync).Only the 'HarmonyOS Sans' font is supported for widgets. |
 
 ## fontSize
 
@@ -123,7 +123,7 @@ Sets the font weight. If the value is too large, the text may be clipped dependi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number \| FontWeight \| string | Yes | Font weight. For the number type, the value range is [100, 900], at an interval of 100. The default value is **400**. A larger value indicates a heavier font weight. For the string type, only strings that represent a number, for example, **400**, and the following enumerated values of **FontWeight** are supported: **bold**, **bolder**, **lighter**, **regular**, and **medium**.Default value: **FontWeight.Normal |
+| value | number \| [FontWeight](../arkts-apis/arkts-arkui-fontweight-e.md) \| string | Yes | Font weight. For the number type, the value range is [100, 900], at an interval of 100. The default value is **400**. A larger value indicates a heavier font weight. For the string type, only strings that represent a number, for example, **400**, and the following enumerated values of **FontWeight** are supported: **bold**, **bolder**, **lighter**, **regular**, and **medium**.Default value: **FontWeight.Normal |
 
 ## marqueeUpdateStrategy
 

@@ -28,13 +28,13 @@ Creates a **VpnConnection** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | VpnExtensionContext | Yes | Specified context. |
+| context | [VpnExtensionContext](arkts-network-vpnextension-vpnextensioncontext-t.md) | Yes | Specified context. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| VpnConnection | VPN connection object. |
+| [VpnConnection](arkts-network-vpnextension-vpnconnection-i.md) | VPN connection object. |
 
 **Error codes:**
 

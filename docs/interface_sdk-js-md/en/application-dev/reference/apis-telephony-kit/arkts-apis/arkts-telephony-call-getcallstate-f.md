@@ -22,7 +22,7 @@ Obtains the call status. This API uses an asynchronous callback to return the re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;CallState&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[CallState](arkts-telephony-call-callstate-e.md)&gt; | Yes | Callback used to return the result. |
 
 **Examples**
 
@@ -55,7 +55,7 @@ Obtains the call status. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;CallState&gt; | Promise used to return the result. |
+| Promise&lt;[CallState](arkts-telephony-call-callstate-e.md)&gt; | Promise used to return the result. |
 
 **Examples**
 

@@ -86,7 +86,7 @@ function on(type: 'bondStateChange', callback: Callback<BondStateParam>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'bondStateChange' | 是 | 填写"bondStateChange"字符串，表示蓝牙配对状态改变事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;BondStateParam&gt; | 是 | 表示回调函数的入参，配对的状态。回调函数由用户创建通过该接口注册。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[BondStateParam](arkts-connectivity-bluetoothmanager-bondstateparam-i.md)&gt; | 是 | 表示回调函数的入参，配对的状态。回调函数由用户创建通过该接口注册。 |
 
 **错误码：**
 
@@ -139,7 +139,7 @@ function on(type: 'pinRequired', callback: Callback<PinRequiredParam>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'pinRequired' | 是 | 填写"pinRequired"字符串，表示配对请求事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;PinRequiredParam&gt; | 是 | 表示回调函数的入参，配对请求。回调函数由用户创建通过该接口注册。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PinRequiredParam](arkts-connectivity-bluetoothmanager-pinrequiredparam-i.md)&gt; | 是 | 表示回调函数的入参，配对请求。回调函数由用户创建通过该接口注册。 |
 
 **错误码：**
 
@@ -192,7 +192,7 @@ function on(type: 'stateChange', callback: Callback<BluetoothState>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'stateChange' | 是 | 填写"stateChange"字符串，表示蓝牙状态改变事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;BluetoothState&gt; | 是 | 表示回调函数的入参，蓝牙状态。回调函数由用户创建通过该接口注册。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[BluetoothState](arkts-connectivity-bluetoothmanager-bluetoothstate-e.md)&gt; | 是 | 表示回调函数的入参，蓝牙状态。回调函数由用户创建通过该接口注册。 |
 
 **错误码：**
 

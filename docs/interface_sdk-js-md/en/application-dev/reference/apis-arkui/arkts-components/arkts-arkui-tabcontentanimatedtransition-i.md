@@ -47,7 +47,7 @@ transition: Callback<TabContentTransitionProxy>
 
 Content of the custom tab switching animation.
 
-**Type:** Callback&lt;[TabContentTransitionProxy](arkts-arkui-tabcontenttransitionproxy-i.md)&gt;
+**Type:** [Callback](arkts-arkui-callback-i.md)&lt;[TabContentTransitionProxy](arkts-arkui-tabcontenttransitionproxy-i.md)&gt;
 
 **Since:** 11
 

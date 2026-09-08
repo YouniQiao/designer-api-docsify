@@ -30,7 +30,7 @@ addDependency(...tasks: Task[]): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| tasks | Task[] | 是 | 被依赖的任务数组。默认值为**undefined**。 |
+| tasks | [Task](arkts-arkts-taskpool-task-c.md)[] | 是 | 被依赖的任务数组。默认值为**undefined**。 |
 
 **错误码：**
 
@@ -195,6 +195,8 @@ function inspectStatus(arg: number): number {
 ```
 
 > 说明：
+> 
+> isCanceled方法需要和taskpool.cancel方法搭配使用，如果不调用cancel方法，isCanceled方法默认返回false。
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -552,7 +554,7 @@ removeDependency(...tasks: Task[]): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| tasks | Task[] | 是 | 被依赖的任务数组。默认值为**undefined**。 |
+| tasks | [Task](arkts-arkts-taskpool-task-c.md)[] | 是 | 被依赖的任务数组。默认值为**undefined**。 |
 
 **错误码：**
 

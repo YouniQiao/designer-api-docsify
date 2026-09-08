@@ -411,7 +411,7 @@ Unsubscribes from data changes.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | 'dataChange' | Yes | Event type. The value is **dataChange**, which indicates data changes. |
-| listener | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ChangeNotification&gt; | No | Callback to unregister. If this parameter is not specified, all callbacks for data changes will be unregistered. |
+| listener | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ChangeNotification](arkts-arkdata-distributeddata-changenotification-i.md)&gt; | No | Callback to unregister. If this parameter is not specified, all callbacks for data changes will be unregistered. |
 
 **Examples**
 
@@ -499,8 +499,8 @@ Subscribes to data changes of the specified type.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | 'dataChange' | Yes | Event type. The value is **dataChange**, which indicates data changes. |
-| type | SubscribeType | Yes | Type of data change. |
-| listener | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ChangeNotification&gt; | Yes | Callback used to return the result. |
+| type | [SubscribeType](arkts-arkdata-distributeddata-subscribetype-e.md) | Yes | Type of data change. |
+| listener | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ChangeNotification](arkts-arkdata-distributeddata-changenotification-i.md)&gt; | Yes | Callback used to return the result. |
 
 **Examples**
 
@@ -652,7 +652,7 @@ Inserts KV pairs in batches to this KV store. This API uses an asynchronous call
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| entries | Entry[] | Yes | KV pairs to insert in batches. |
+| entries | [Entry](arkts-arkdata-distributeddata-entry-i.md)[] | Yes | KV pairs to insert in batches. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Examples**
@@ -706,7 +706,7 @@ Inserts KV pairs in batches to this KV store. This API uses a promise to return 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| entries | Entry[] | Yes | KV pairs to insert in batches. |
+| entries | [Entry](arkts-arkdata-distributeddata-entry-i.md)[] | Yes | KV pairs to insert in batches. |
 
 **Return value:**
 

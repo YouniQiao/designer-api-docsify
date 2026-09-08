@@ -55,7 +55,7 @@ enterKeyType: EnterKeyType
 
 Function type represented by the Enter key.
 
-**Type:** EnterKeyType
+**Type:** [EnterKeyType](arkts-ime-inputmethod-enterkeytype-e.md)
 
 **Since:** 10
 

@@ -26,13 +26,13 @@ Converts a SendableContext object to an AbilityStageContext object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sendableContext | SendableContext | Yes |  |
+| sendableContext | [SendableContext](arkts-ability-sendablecontextmanager-sendablecontext-t.md) | Yes |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| common.AbilityStageContext | [AbilityStageContext]{ |
+| [common.AbilityStageContext](arkts-ability-common-abilitystagecontext-t.md) | [AbilityStageContext]{ |
 
 **Error codes:**
 

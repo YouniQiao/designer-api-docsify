@@ -52,7 +52,7 @@ preState: ConnectionState
 
 Indicates the previous connection state.
 
-**Type:** ConnectionState
+**Type:** [ConnectionState](arkts-connectivity-remotedevice-connectionstate-t.md)
 
 **Since:** 26.0.0
 
@@ -84,7 +84,7 @@ state: ConnectionState
 
 Indicates the current connection state.
 
-**Type:** ConnectionState
+**Type:** [ConnectionState](arkts-connectivity-remotedevice-connectionstate-t.md)
 
 **Since:** 26.0.0
 

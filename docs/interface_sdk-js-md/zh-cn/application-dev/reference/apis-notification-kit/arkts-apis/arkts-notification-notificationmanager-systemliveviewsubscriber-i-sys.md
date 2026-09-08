@@ -33,4 +33,4 @@ onResponse?: (notificationId: number, buttonOptions: ButtonOptions) => void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | notificationId | number | 是 |  |
-| buttonOptions | ButtonOptions | 是 |  |
+| buttonOptions | [ButtonOptions](arkts-notification-notificationmanager-buttonoptions-i-sys.md) | 是 |  |

@@ -80,7 +80,7 @@ operationType?: wantAgent.OperationType
 
 从API version 7 开始支持，从API version 11 开始废弃，建议使用actionType&lt;sup&gt;11+&lt;/sup&gt;替代。
 
-**类型：** wantAgent.OperationType
+**类型：** [wantAgent.OperationType](arkts-ability-wantagent-operationtype-depr-e.md)
 
 **起始版本：** 7
 
@@ -118,7 +118,7 @@ wantAgentFlags?: Array<wantAgent.WantAgentFlags>
 
 从API version 7 开始支持，从API version 11 开始废弃，建议使用actionFlags&lt;sup&gt;11+&lt;/sup&gt;替代。
 
-**类型：** Array&lt;wantAgent.WantAgentFlags&gt;
+**类型：** Array&lt;[wantAgent.WantAgentFlags](arkts-ability-wantagent-wantagentflags-depr-e.md)&gt;
 
 **起始版本：** 7
 

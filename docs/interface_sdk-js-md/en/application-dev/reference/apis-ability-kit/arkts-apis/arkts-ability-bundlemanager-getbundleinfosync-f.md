@@ -34,7 +34,7 @@ No permission is required for obtaining the caller's own information.
 
 | Type | Description |
 | --- | --- |
-| BundleInfo | Bundle information obtained. |
+| [BundleInfo](arkts-ability-bundlemanager-bundleinfo-t.md) | Bundle information obtained. |
 
 **Error codes:**
 
@@ -94,7 +94,7 @@ No permission is required for obtaining the caller's own information.
 
 | Type | Description |
 | --- | --- |
-| BundleInfo | Bundle information obtained. |
+| [BundleInfo](arkts-ability-bundlemanager-bundleinfo-t.md) | Bundle information obtained. |
 
 **Error codes:**
 

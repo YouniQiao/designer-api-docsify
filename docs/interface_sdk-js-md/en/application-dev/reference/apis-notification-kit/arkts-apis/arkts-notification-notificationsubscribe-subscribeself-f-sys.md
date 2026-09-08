@@ -24,7 +24,7 @@ Subscribes to notifications of the application and specifies subscription inform
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| subscriber | NotificationSubscriber | Yes | Notification subscriber. |
+| subscriber | [NotificationSubscriber](arkts-notification-notificationsubscribe-notificationsubscriber-t-sys.md) | Yes | Notification subscriber. |
 
 **Return value:**
 

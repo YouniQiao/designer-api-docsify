@@ -36,4 +36,4 @@ Returns a child process object and spawns a new ChildProcess to run the command.
 
 | Type | Description |
 | --- | --- |
-| ChildProcess | Returns a child process object. |
+| [ChildProcess](arkts-arkts-process-childprocess-i-sys.md) | Returns a child process object. |

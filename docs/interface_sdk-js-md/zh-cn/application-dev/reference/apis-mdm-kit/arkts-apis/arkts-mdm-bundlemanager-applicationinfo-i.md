@@ -164,7 +164,7 @@ readonly descriptionResource: Resource
 
 应用程序的描述资源信息，包含了该资源的信息的bundleName、moduleName和id。
 
-**类型：** Resource
+**类型：** [Resource](arkts-mdm-bundlemanager-resource-i.md)
 
 **起始版本：** 20
 
@@ -244,7 +244,7 @@ readonly iconResource: Resource
 
 应用程序的图标资源信息，包含了该资源的信息的bundleName、moduleName和id。
 
-**类型：** Resource
+**类型：** [Resource](arkts-mdm-bundlemanager-resource-i.md)
 
 **起始版本：** 20
 
@@ -314,7 +314,7 @@ readonly labelResource: Resource
 
 应用程序的标签资源信息，包含了该资源的信息的bundleName、moduleName和id。
 
-**类型：** Resource
+**类型：** [Resource](arkts-mdm-bundlemanager-resource-i.md)
 
 **起始版本：** 20
 

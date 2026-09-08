@@ -42,10 +42,3 @@ Converts the USB function list in the string format to a numeric mask in Device 
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied. Normal application do not have permission to use system api. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:  1.Mandatory parameters are left unspecified.  2.Incorrect parameter types. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported.<br>**Applicable version:** 18 and later |
-
-**Examples**
-
-```TypeScript
-let funcs: string = "acm";
-let ret: number = usbManager.getFunctionsFromString(funcs);
-```

@@ -53,12 +53,3 @@ Moves a file. This API returns the result synchronously.
 | 13900033 | Too many symbolic links encountered |
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
-
-**Examples**
-
-```TypeScript
-let srcPath = pathDir + "/source.txt";
-let destPath = pathDir + "/dest.txt";
-fileIo.moveFileSync(srcPath, destPath, 0);
-console.info(`Succeeded in moving file.`);
-```

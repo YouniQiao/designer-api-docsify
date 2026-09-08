@@ -45,6 +45,8 @@ Execute a drag event.
 **示例**
 
 > 说明：
+> 
+> 推荐通过使用[UIContext](arkts-apis-uicontext-uicontext.md)中的[getDragController](arkts-arkui-arkui-uicontext-uicontext-c.md#getdragcontroller)方法获取当前UI上下文关联的DragController对象。
 
 ```TypeScript
 import { dragController } from '@kit.ArkUI';
@@ -174,6 +176,8 @@ function executeDrag(custom: CustomBuilder | DragItemInfo, dragInfo: DragInfo): 
 **示例**
 
 > 说明：
+> 
+> 推荐通过使用[UIContext](arkts-apis-uicontext-uicontext.md)中的[getDragController](arkts-arkui-arkui-uicontext-uicontext-c.md#getdragcontroller)方法获取当前UI上下文关联的DragController对象。
 
 ```TypeScript
 import { dragController } from '@kit.ArkUI';

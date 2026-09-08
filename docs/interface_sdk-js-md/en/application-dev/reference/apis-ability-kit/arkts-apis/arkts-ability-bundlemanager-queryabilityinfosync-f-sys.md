@@ -36,7 +36,7 @@ No permission is required for obtaining the caller's own information.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;AbilityInfo&gt; | An array of ability information. |
+| Array&lt;[AbilityInfo](arkts-ability-bundlemanager-abilityinfo-t.md)&gt; | An array of ability information. |
 
 **Error codes:**
 

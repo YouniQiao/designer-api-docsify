@@ -119,7 +119,7 @@ readonly fontStyle?: FontStyle
 
 获取属性字符串的文本字体样式。
 
-**类型：** FontStyle
+**类型：** [FontStyle](arkts-arkui-fontstyle-e.md)
 
 **起始版本：** 12
 
@@ -139,7 +139,7 @@ readonly fontVariations?: Array<FontVariation>
 
 默认值：undefined，表示未设置可变字体的属性。
 
-**类型：** Array&lt;FontVariation&gt;
+**类型：** Array&lt;[FontVariation](arkts-arkui-fontvariation-t.md)&gt;
 
 **起始版本：** 26.0.0
 

@@ -20,7 +20,7 @@ priority?: Priority
 
 The priority of the task. The default value is taskpool.Priority.MEDIUM.
 
-**Type:** Priority
+**Type:** [Priority](arkts-arkts-taskpool-priority-e.md)
 
 **Since:** 24
 

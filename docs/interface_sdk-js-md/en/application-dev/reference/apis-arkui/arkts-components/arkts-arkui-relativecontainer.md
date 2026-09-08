@@ -668,6 +668,7 @@ struct Index {
 ```
 
 This example demonstrates how to use [chainWeight](ts-universal-attributes-location.md#chainweight14) to set the size weights of components in a chain.
+You must first set the chain alignment rules of child components through alignRules (to ensure that the components form a chain in the horizontal or vertical direction), and then set the chain style (such as SPREAD, SPREAD_INSIDE, and PACKED) through chainMode. chainWeight takes effect only in chain mode.
 
 ```TypeScript
 @Entry

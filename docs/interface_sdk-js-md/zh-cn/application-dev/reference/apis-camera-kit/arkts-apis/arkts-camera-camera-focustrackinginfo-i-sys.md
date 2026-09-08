@@ -38,7 +38,7 @@ trackingRegion: Rect
 
 Tracking region.
 
-**类型：** Rect
+**类型：** [Rect](arkts-camera-camera-rect-i.md)
 
 **起始版本：** 15
 

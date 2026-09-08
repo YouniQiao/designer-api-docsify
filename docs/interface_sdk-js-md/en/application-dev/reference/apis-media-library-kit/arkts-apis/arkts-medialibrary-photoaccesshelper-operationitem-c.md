@@ -44,7 +44,7 @@ operationType: OperationType
 
 Predicates.
 
-**Type:** OperationType
+**Type:** [OperationType](arkts-medialibrary-photoaccesshelper-operationtype-e.md)
 
 **Since:** 22
 

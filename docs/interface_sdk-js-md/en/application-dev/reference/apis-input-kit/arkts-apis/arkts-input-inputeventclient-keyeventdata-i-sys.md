@@ -22,7 +22,7 @@ keyEvent: KeyEvent
 
 Key event to inject.
 
-**Type:** KeyEvent
+**Type:** [KeyEvent](arkts-input-multimodalinput-keyevent-keyevent-i.md)
 
 **Since:** 11
 

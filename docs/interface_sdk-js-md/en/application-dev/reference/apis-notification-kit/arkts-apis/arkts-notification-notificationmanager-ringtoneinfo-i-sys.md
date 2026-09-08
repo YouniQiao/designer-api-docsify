@@ -54,7 +54,7 @@ ringtoneType: RingtoneType
 
 Type of the ringtone.
 
-**Type:** RingtoneType
+**Type:** [RingtoneType](arkts-notification-notificationmanager-ringtonetype-e-sys.md)
 
 **Since:** 21
 

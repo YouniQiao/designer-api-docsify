@@ -32,7 +32,7 @@ function createServer(name: string): Server
 
 | 类型 | 说明 |
 | --- | --- |
-| Server | 创建成功的服务对象。 |
+| [Server](arkts-distributedservice-linkenhance-server-i.md) | 创建成功的服务对象。 |
 
 **错误码：**
 

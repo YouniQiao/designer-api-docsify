@@ -76,7 +76,7 @@ readonly bundleType: bundleManager.BundleType
 
 标识包的类型，取值为APP（应用）或者ATOMIC_SERVICE（原子化服务）。
 
-**类型：** bundleManager.BundleType
+**类型：** [bundleManager.BundleType](arkts-ability-bundlemanager-bundletype-e.md)
 
 **起始版本：** 9
 

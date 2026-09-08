@@ -26,7 +26,7 @@ Obtains the USB device list.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;Readonly&lt;USBDevice&gt;&gt; | USB device list. |
+| Array&lt;Readonly&lt;[USBDevice](arkts-basicservices-usb-usbdevice-i.md)&gt;&gt; | USB device list. |
 
 **Examples**
 

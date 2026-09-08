@@ -18,7 +18,7 @@ Equivalent to `propertyKey in target`.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | target | object | Yes |  |
-| propertyKey | PropertyKey | Yes |  |
+| propertyKey | [PropertyKey](arkts-propertykey-t.md) | Yes |  |
 
 **Return value:**
 

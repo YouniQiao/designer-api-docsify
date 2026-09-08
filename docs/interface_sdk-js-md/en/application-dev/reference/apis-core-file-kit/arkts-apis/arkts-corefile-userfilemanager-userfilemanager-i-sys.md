@@ -53,7 +53,7 @@ The album name must meet the following requirements:
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the album to create. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Album&gt; | Yes | Callback used to return the created album instance. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Album](arkts-corefile-userfilemanager-album-i-sys.md)&gt; | Yes | Callback used to return the created album instance. |
 
 **Examples**
 
@@ -113,7 +113,7 @@ The album name must meet the following requirements:
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Album&gt; | Promise that returns the created album instance. |
+| Promise&lt;[Album](arkts-corefile-userfilemanager-album-i-sys.md)&gt; | Promise that returns the created album instance. |
 
 **Examples**
 
@@ -435,7 +435,7 @@ Creates an image or video asset with the specified file name and options. This A
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | displayName | string | Yes | File name of the image or video to create. |
-| createOption | PhotoCreateOptions | Yes | Options for creating an image or video asset. |
+| createOption | [PhotoCreateOptions](arkts-corefile-userfilemanager-photocreateoptions-i-sys.md) | Yes | Options for creating an image or video asset. |
 
 **Return value:**
 
@@ -495,7 +495,7 @@ Creates an image or video asset with the specified file name and options. This A
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | displayName | string | Yes | File name of the image or video to create. |
-| createOption | PhotoCreateOptions | Yes | Options for creating an image or video asset. |
+| createOption | [PhotoCreateOptions](arkts-corefile-userfilemanager-photocreateoptions-i-sys.md) | Yes | Options for creating an image or video asset. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[FileAsset](arkts-corefile-userfilemanager-fileasset-i-sys.md)&gt; | Yes | Callback used to return the image or video created. |
 
 **Error codes:**
@@ -596,33 +596,6 @@ async function example(mgr: userFileManager.UserFileManager) {
 }
 ```
 
-For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](arkts-corefile-userfilemanager-getuserfilemgr-f-sys.md).
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-
-async function example(mgr: userFileManager.UserFileManager) {
-  console.info('privateAlbumDeleteCallback');
-  let albumList: userFileManager.FetchResult<userFileManager.PrivateAlbum> = await mgr.getPrivateAlbum(userFileManager.PrivateAlbumType.TYPE_TRASH);
-  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-  let fetchOption: userFileManager.FetchOptions = {
-    fetchColumns: [],
-    predicates: predicates
-  };
-  let trashAlbum: userFileManager.PrivateAlbum = await albumList.getFirstObject();
-  let fetchResult: userFileManager.FetchResult<userFileManager.FileAsset> = await trashAlbum.getPhotoAssets(fetchOption);
-  let fileAsset: userFileManager.FileAsset = await fetchResult.getFirstObject();
-  let deleteFileUri = fileAsset.uri;
-  trashAlbum.delete(deleteFileUri, (err) => {
-    if (err != undefined) {
-      console.error('trashAlbum.delete failed, message = ', err);
-    } else {
-      console.info('trashAlbum.delete successfully');
-    }
-  });
-}
-```
-
 ## delete
 
 ```TypeScript
@@ -690,32 +663,6 @@ async function example(mgr: userFileManager.UserFileManager) {
 }
 ```
 
-For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](arkts-corefile-userfilemanager-getuserfilemgr-f-sys.md).
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function example(mgr: userFileManager.UserFileManager) {
-  console.info('privateAlbumDeleteDemoPromise');
-  let albumList: userFileManager.FetchResult<userFileManager.PrivateAlbum> = await mgr.getPrivateAlbum(userFileManager.PrivateAlbumType.TYPE_TRASH);
-  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-  let fetchOption: userFileManager.FetchOptions = {
-    fetchColumns: [],
-    predicates: predicates
-  };
-  let trashAlbum: userFileManager.PrivateAlbum = await albumList.getFirstObject();
-  let fetchResult: userFileManager.FetchResult<userFileManager.FileAsset> = await trashAlbum.getPhotoAssets(fetchOption);
-  let fileAsset: userFileManager.FileAsset = await fetchResult.getFirstObject();
-  let deleteFileUri = fileAsset.uri;
-  trashAlbum.delete(deleteFileUri).then(() => {
-    console.info('trashAlbum.delete successfully');
-  }).catch((err: BusinessError) => {
-    console.error('trashAlbum.delete failed, message = ', err);
-  });
-}
-```
-
 ## deleteAlbums
 
 ```TypeScript
@@ -740,7 +687,7 @@ Deletes user albums. This API uses an asynchronous callback to return the result
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| albums | Array&lt;Album&gt; | Yes | Albums to delete. |
+| albums | Array&lt;[Album](arkts-corefile-userfilemanager-album-i-sys.md)&gt; | Yes | Albums to delete. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback that returns no value. |
 
 **Examples**
@@ -796,7 +743,7 @@ Deletes user albums. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| albums | Array&lt;Album&gt; | Yes | Albums to delete. |
+| albums | Array&lt;[Album](arkts-corefile-userfilemanager-album-i-sys.md)&gt; | Yes | Albums to delete. |
 
 **Return value:**
 
@@ -853,7 +800,7 @@ Obtains information about online peer devices. This API uses an asynchronous cal
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;PeerInfo&gt;&gt; | Yes | Callback used to return a list of online peer devices. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[PeerInfo](arkts-corefile-userfilemanager-peerinfo-i-sys.md)&gt;&gt; | Yes | Callback used to return a list of online peer devices. |
 
 **Examples**
 
@@ -895,7 +842,7 @@ Obtains the information about online peer devices. This API uses a promise to re
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;PeerInfo&gt;&gt; | Promise that returns a list of online peer devices. |
+| Promise&lt;Array&lt;[PeerInfo](arkts-corefile-userfilemanager-peerinfo-i-sys.md)&gt;&gt; | Promise that returns a list of online peer devices. |
 
 **Examples**
 
@@ -953,10 +900,10 @@ Before the operation, ensure that the albums to obtain exist.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | AlbumType | Yes | Type of the album to obtain. |
+| type | [AlbumType](arkts-corefile-userfilemanager-albumtype-e-sys.md) | Yes | Type of the album to obtain. |
 | subType | [AlbumSubType](arkts-corefile-userfilemanager-albumsubtype-e-sys.md) | Yes | Subtype of the album. |
-| options | FetchOptions | Yes | Retrieval options. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;FetchResult&lt;Album&gt;&gt; | Yes | Callback used to return the result. |
+| options | [FetchOptions](arkts-corefile-userfilemanager-fetchoptions-i-sys.md) | Yes | Retrieval options. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[FetchResult](arkts-corefile-userfilemanager-fetchresult-i-sys.md)&lt;[Album](arkts-corefile-userfilemanager-album-i-sys.md)&gt;&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -1024,9 +971,9 @@ Before the operation, ensure that the albums to obtain exist.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | AlbumType | Yes | Type of the album to obtain. |
+| type | [AlbumType](arkts-corefile-userfilemanager-albumtype-e-sys.md) | Yes | Type of the album to obtain. |
 | subType | [AlbumSubType](arkts-corefile-userfilemanager-albumsubtype-e-sys.md) | Yes | Subtype of the album. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;FetchResult&lt;Album&gt;&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[FetchResult](arkts-corefile-userfilemanager-fetchresult-i-sys.md)&lt;[Album](arkts-corefile-userfilemanager-album-i-sys.md)&gt;&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -1086,15 +1033,15 @@ Before the operation, ensure that the albums to obtain exist.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | AlbumType | Yes | Type of the album to obtain. |
+| type | [AlbumType](arkts-corefile-userfilemanager-albumtype-e-sys.md) | Yes | Type of the album to obtain. |
 | subType | [AlbumSubType](arkts-corefile-userfilemanager-albumsubtype-e-sys.md) | Yes | Subtype of the album. |
-| options | FetchOptions | No | Options for fetching the albums. If this parameter is not specified, the albums are obtained based on the album type by default. |
+| options | [FetchOptions](arkts-corefile-userfilemanager-fetchoptions-i-sys.md) | No | Options for fetching the albums. If this parameter is not specified, the albums are obtained based on the album type by default. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;FetchResult&lt;Album&gt;&gt; | Promise that returns the albums. |
+| Promise&lt;[FetchResult](arkts-corefile-userfilemanager-fetchresult-i-sys.md)&lt;[Album](arkts-corefile-userfilemanager-album-i-sys.md)&gt;&gt; | Promise that returns the albums. |
 
 **Error codes:**
 
@@ -1153,7 +1100,7 @@ Obtains information about all peer devices. This API uses an asynchronous callba
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;PeerInfo&gt;&gt; | Yes | Callback used to return a list of online peer devices. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[PeerInfo](arkts-corefile-userfilemanager-peerinfo-i-sys.md)&gt;&gt; | Yes | Callback used to return a list of online peer devices. |
 
 **Examples**
 
@@ -1195,7 +1142,7 @@ Obtains the information about all peer devices. This API uses a promise to retur
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;PeerInfo&gt;&gt; | Promise that returns the information obtained. |
+| Promise&lt;Array&lt;[PeerInfo](arkts-corefile-userfilemanager-peerinfo-i-sys.md)&gt;&gt; | Promise that returns the information obtained. |
 
 **Examples**
 
@@ -1243,8 +1190,8 @@ Obtains audio assets. This API uses an asynchronous callback to return the resul
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | FetchOptions | Yes | Retrieval options. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;FetchResult&lt;[FileAsset](arkts-corefile-userfilemanager-fileasset-i-sys.md)&gt;&gt; | Yes | Callback used to return the audio assets obtained. |
+| options | [FetchOptions](arkts-corefile-userfilemanager-fetchoptions-i-sys.md) | Yes | Retrieval options. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[FetchResult](arkts-corefile-userfilemanager-fetchresult-i-sys.md)&lt;[FileAsset](arkts-corefile-userfilemanager-fileasset-i-sys.md)&gt;&gt; | Yes | Callback used to return the audio assets obtained. |
 
 **Error codes:**
 
@@ -1303,13 +1250,13 @@ Obtains an audio asset. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | FetchOptions | Yes | Retrieval options. |
+| options | [FetchOptions](arkts-corefile-userfilemanager-fetchoptions-i-sys.md) | Yes | Retrieval options. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;FetchResult&lt;[FileAsset](arkts-corefile-userfilemanager-fileasset-i-sys.md)&gt;&gt; | Promise that returns the audio assets obtained. |
+| Promise&lt;[FetchResult](arkts-corefile-userfilemanager-fetchresult-i-sys.md)&lt;[FileAsset](arkts-corefile-userfilemanager-fileasset-i-sys.md)&gt;&gt; | Promise that returns the audio assets obtained. |
 
 **Error codes:**
 
@@ -1375,7 +1322,7 @@ This API will be deprecated. Use [getAlbums](#getalbums) instead.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | options | [AlbumFetchOptions](arkts-corefile-userfilemanager-albumfetchoptions-i-sys.md) | Yes | Options for fetching the albums. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;FetchResult&lt;Album&gt;&gt; | Yes | Callback used to return the albums obtained. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[FetchResult](arkts-corefile-userfilemanager-fetchresult-i-sys.md)&lt;[Album](arkts-corefile-userfilemanager-album-i-sys.md)&gt;&gt; | Yes | Callback used to return the albums obtained. |
 
 **Error codes:**
 
@@ -1448,7 +1395,7 @@ This API will be deprecated. Use [getAlbums](#getalbums) instead.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;FetchResult&lt;Album&gt;&gt; | Promise that returns the albums obtained. |
+| Promise&lt;[FetchResult](arkts-corefile-userfilemanager-fetchresult-i-sys.md)&lt;[Album](arkts-corefile-userfilemanager-album-i-sys.md)&gt;&gt; | Promise that returns the albums obtained. |
 
 **Error codes:**
 
@@ -1504,8 +1451,8 @@ Obtains image and video assets. This API uses an asynchronous callback to return
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | FetchOptions | Yes | Options for fetching the image and video assets. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;FetchResult&lt;[FileAsset](arkts-corefile-userfilemanager-fileasset-i-sys.md)&gt;&gt; | Yes | Callback used to return the image and video assets obtained. |
+| options | [FetchOptions](arkts-corefile-userfilemanager-fetchoptions-i-sys.md) | Yes | Options for fetching the image and video assets. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[FetchResult](arkts-corefile-userfilemanager-fetchresult-i-sys.md)&lt;[FileAsset](arkts-corefile-userfilemanager-fileasset-i-sys.md)&gt;&gt; | Yes | Callback used to return the image and video assets obtained. |
 
 **Error codes:**
 
@@ -1542,63 +1489,6 @@ async function example(mgr: userFileManager.UserFileManager) {
 }
 ```
 
-For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](arkts-corefile-userfilemanager-getuserfilemgr-f-sys.md).
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-
-async function example(mgr: userFileManager.UserFileManager) {
-  console.info('albumGetFileAssetsDemoCallback');
-
-  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-  let albumFetchOptions: userFileManager.AlbumFetchOptions = {
-    predicates: predicates
-  };
-  let fetchOption: userFileManager.FetchOptions = {
-    fetchColumns: [],
-    predicates: predicates
-  };
-  let albumList: userFileManager.FetchResult<userFileManager.Album> = await mgr.getPhotoAlbums(albumFetchOptions);
-  let album: userFileManager.Album = await albumList.getFirstObject();
-  album.getPhotoAssets(fetchOption, (err, albumFetchResult) => {
-    if (albumFetchResult != undefined) {
-      console.info('album getPhotoAssets successfully, getCount: ' + albumFetchResult.getCount());
-    } else {
-      console.error('album getPhotoAssets failed with error: ' + err);
-    }
-  });
-}
-```
-
-For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](arkts-corefile-userfilemanager-getuserfilemgr-f-sys.md).
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-
-async function example(mgr: userFileManager.UserFileManager) {
-  console.info('privateAlbumGetFileAssetsDemoCallback');
-  let albumList: userFileManager.FetchResult<userFileManager.PrivateAlbum> = await mgr.getPrivateAlbum(userFileManager.PrivateAlbumType.TYPE_TRASH);
-  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-  let fetchOption: userFileManager.FetchOptions = {
-    fetchColumns: [],
-    predicates: predicates
-  };
-  const trashAlbum: userFileManager.PrivateAlbum = await albumList.getFirstObject();
-  if (trashAlbum === undefined) {
-    console.error('trashAlbum is undefined');
-    return;
-  }
-  trashAlbum.getPhotoAssets(fetchOption, (err, fetchResult) => {
-    if (fetchResult != undefined) {
-      let count = fetchResult.getCount();
-      console.info('fetchResult.count = ', count);
-    } else {
-      console.error('getFileAssets failed, message = ', err);
-    }
-  });
-}
-```
-
 ## getPhotoAssets
 
 ```TypeScript
@@ -1623,13 +1513,13 @@ Obtains image and video assets. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | FetchOptions | Yes | Options for fetching the image and video assets. |
+| options | [FetchOptions](arkts-corefile-userfilemanager-fetchoptions-i-sys.md) | Yes | Options for fetching the image and video assets. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;FetchResult&lt;[FileAsset](arkts-corefile-userfilemanager-fileasset-i-sys.md)&gt;&gt; | Promise that returns the image and video assets obtained. |
+| Promise&lt;[FetchResult](arkts-corefile-userfilemanager-fetchresult-i-sys.md)&lt;[FileAsset](arkts-corefile-userfilemanager-fileasset-i-sys.md)&gt;&gt; | Promise that returns the image and video assets obtained. |
 
 **Error codes:**
 
@@ -1666,53 +1556,6 @@ async function example(mgr: userFileManager.UserFileManager) {
 }
 ```
 
-For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](arkts-corefile-userfilemanager-getuserfilemgr-f-sys.md).
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function example(mgr: userFileManager.UserFileManager) {
-  console.info('albumGetFileAssetsDemoPromise');
-
-  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-  let albumFetchOptions: userFileManager.AlbumFetchOptions = {
-    predicates: predicates
-  };
-  let fetchOption: userFileManager.FetchOptions = {
-    fetchColumns: [],
-    predicates: predicates
-  };
-  const albumList: userFileManager.FetchResult<userFileManager.Album> = await mgr.getPhotoAlbums(albumFetchOptions);
-  const album: userFileManager.Album = await albumList.getFirstObject();
-  album.getPhotoAssets(fetchOption).then((albumFetchResult) => {
-    console.info('album getFileAssets successfully, getCount: ' + albumFetchResult.getCount());
-  }).catch((err: BusinessError) => {
-    console.error('album getFileAssets failed with error: ' + err);
-  });
-}
-```
-
-For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](arkts-corefile-userfilemanager-getuserfilemgr-f-sys.md).
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-
-async function example(mgr: userFileManager.UserFileManager) {
-  console.info('privateAlbumGetFileAssetsDemoPromise');
-  let albumList: userFileManager.FetchResult<userFileManager.PrivateAlbum> = await mgr.getPrivateAlbum(userFileManager.PrivateAlbumType.TYPE_TRASH);
-  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-  let fetchOption: userFileManager.FetchOptions = {
-    fetchColumns: [],
-    predicates: predicates
-  };
-  const trashAlbum: userFileManager.PrivateAlbum = await albumList.getFirstObject();
-  let fetchResult: userFileManager.FetchResult<userFileManager.FileAsset> = await trashAlbum.getPhotoAssets(fetchOption);
-  let count = fetchResult.getCount();
-  console.info('fetchResult.count = ', count);
-}
-```
-
 ## getPhotoIndex
 
 ```TypeScript
@@ -1739,7 +1582,7 @@ Obtains the index of an image or video in an album. This API uses an asynchronou
 | --- | --- | --- | --- |
 | photoUri | string | Yes | URI of the media asset whose index is to be obtained. |
 | albumUri | string | Yes | Album URI, which can be an empty string. If it is an empty string, all the media assets in the Gallery are obtained by default. |
-| options | FetchOptions | Yes | Retrieval options. Only one search condition or sorting mode must be set in **predicates**. If no value is set or multiple search criteria or sorting modes are set, the API cannot be called successfully. |
+| options | [FetchOptions](arkts-corefile-userfilemanager-fetchoptions-i-sys.md) | Yes | Retrieval options. Only one search condition or sorting mode must be set in **predicates**. If no value is set or multiple search criteria or sorting modes are set, the API cannot be called successfully. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the index obtained. |
 
 **Error codes:**
@@ -1815,7 +1658,7 @@ Obtains the index of an image or video in an album. This API uses a promise to r
 | --- | --- | --- | --- |
 | photoUri | string | Yes | URI of the media asset whose index is to be obtained. |
 | albumUri | string | Yes | Album URI, which can be an empty string. If it is an empty string, all the media assets in the Gallery are obtained by default. |
-| options | FetchOptions | Yes | Retrieval options. Only one search condition or sorting mode must be set in **predicates**. If no value is set or multiple search criteria or sorting modes are set, the API cannot be called successfully. |
+| options | [FetchOptions](arkts-corefile-userfilemanager-fetchoptions-i-sys.md) | Yes | Retrieval options. Only one search condition or sorting mode must be set in **predicates**. If no value is set or multiple search criteria or sorting modes are set, the API cannot be called successfully. |
 
 **Return value:**
 
@@ -1900,7 +1743,7 @@ This API will be deprecated. Use [getAlbums](#getalbums) instead.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | [PrivateAlbumType](arkts-corefile-userfilemanager-privatealbumtype-e-sys.md) | Yes | Type of the system album to obtain. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;FetchResult&lt;[PrivateAlbum](arkts-corefile-userfilemanager-privatealbum-i-sys.md)&gt;&gt; | Yes | Callback used to return the albums obtained. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[FetchResult](arkts-corefile-userfilemanager-fetchresult-i-sys.md)&lt;[PrivateAlbum](arkts-corefile-userfilemanager-privatealbum-i-sys.md)&gt;&gt; | Yes | Callback used to return the albums obtained. |
 
 **Error codes:**
 
@@ -1958,7 +1801,7 @@ This API will be deprecated. Use [getAlbums](#getalbums) instead.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;FetchResult&lt;[PrivateAlbum](arkts-corefile-userfilemanager-privatealbum-i-sys.md)&gt;&gt; | Promise that returns the albums obtained. |
+| Promise&lt;[FetchResult](arkts-corefile-userfilemanager-fetchresult-i-sys.md)&lt;[PrivateAlbum](arkts-corefile-userfilemanager-privatealbum-i-sys.md)&gt;&gt; | Promise that returns the albums obtained. |
 
 **Error codes:**
 
@@ -2067,7 +1910,7 @@ Unregisters the listener for the specified URI. Multiple callbacks can be regist
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uri | string | Yes | URI of the file asset or album, or [DefaultChangeUri](arkts-corefile-userfilemanager-defaultchangeuri-e-sys.md). |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ChangeData&gt; | No | Callback registered by on. If this parameter is not specified, all listener callbacks registered for the URI will be unregistered. Note that the specified callback will not be invoked. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ChangeData](arkts-corefile-cloudsync-changedata-i.md)&gt; | No | Callback registered by on. If this parameter is not specified, all listener callbacks registered for the URI will be unregistered. Note that the specified callback will not be invoked. |
 
 **Error codes:**
 
@@ -2201,7 +2044,7 @@ Registers a listener for the specified URI. This API uses an asynchronous callba
 | --- | --- | --- | --- |
 | uri | string | Yes | URI of the file asset or album, or [DefaultChangeUri](arkts-corefile-userfilemanager-defaultchangeuri-e-sys.md). |
 | forSubUri | boolean | Yes | Whether to perform fuzzy listening. If **uri** is the URI of the album, the value **true** means to listen for the file change in the album; the value **false** means to listen for the album change only. If **uri** is the URI of the file asset, there is no difference whether **forSubUri** is **true** or **false**. If **uri** is **DefaultChangeUri**, the value must be **true**, otherwise, the URI cannot be found and no message can be received. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ChangeData&gt; | Yes | Callback used to return [ChangeData](arkts-corefile-userfilemanager-changedata-i-sys.md). Note that different callbacks can be registered for a URI. You can use off to disable the specified callback or all callbacks for the URI. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ChangeData](arkts-corefile-cloudsync-changedata-i.md)&gt; | Yes | Callback used to return [ChangeData](arkts-corefile-userfilemanager-changedata-i-sys.md). Note that different callbacks can be registered for a URI. You can use off to disable the specified callback or all callbacks for the URI. |
 
 **Error codes:**
 

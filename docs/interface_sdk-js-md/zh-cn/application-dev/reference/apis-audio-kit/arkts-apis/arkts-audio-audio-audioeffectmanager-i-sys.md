@@ -97,13 +97,6 @@ getNoiseReductionMode(clientUid: number, device: AudioDeviceDescriptor): NoiseRe
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
 | [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 
-**示例**
-
-```TypeScript
-let noiseReductionMode: audio.NoiseReductionMode = audioCapturer.getNoiseReductionMode();
-console.info(`getNoiseReductionMode success: ${noiseReductionMode}`);
-```
-
 ## getSupportedAudioEffectProperty
 
 ```TypeScript
@@ -185,20 +178,6 @@ getSupportedNoiseReductionModes(device: AudioDeviceDescriptor): Array<NoiseReduc
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
 | [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let supportedModes: Array<audio.NoiseReductionMode> = audioCapturer.getSupportedNoiseReductionModes();
-  console.info(`getSupportedNoiseReductionModes success: ${supportedModes}`);
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`getSupportedNoiseReductionModes failed. Code: ${error.code}, message: ${error.message}`);
-}
-```
 
 ## isAudioSeparationEffectSupported
 
@@ -576,25 +555,6 @@ setNoiseReductionMode(clientUid: number, device: AudioDeviceDescriptor, noiseRed
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
 | [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 | [6800301](../errorcode-audio.md#6800301-系统处理异常) | Live audio capture service exception. Indicates an internal failure in the audio service during live stream creation, start, read, stop, release, or noise reduction handling. |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let supportedModes: Array<audio.NoiseReductionMode> = audioCapturer.getSupportedNoiseReductionModes();
-  if (supportedModes.includes(audio.NoiseReductionMode.PURE_VOCALS)) {
-    audioCapturer.setNoiseReductionMode(audio.NoiseReductionMode.PURE_VOCALS);
-  } else {
-    audioCapturer.setNoiseReductionMode(audio.NoiseReductionMode.FIDELITY);
-  }
-  console.info(`setNoiseReductionMode success: ${audioCapturer.getNoiseReductionMode()}`);
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`setNoiseReductionMode failed. Code: ${error.code}, message: ${error.message}`);
-}
-```
 
 ## updateDeviceNoiseReductionCapability
 

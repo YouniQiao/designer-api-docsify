@@ -87,7 +87,7 @@ tabBar(options: string | Resource | CustomBuilder | TabBarOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | string \| Resource \| [CustomBuilder](arkts-arkui-custombuilder-t.md) \| [TabBarOptions](arkts-arkui-tabbaroptions-i.md) | 是 | TabBar上显示内容。CustomBuilder：?构造器，内部可以传入组件（API version 8版本以上适用）。<br>**适用版本：** 18 |
+| options | string \| [Resource](../arkts-apis/arkts-arkui-resource-t.md) \| [CustomBuilder](arkts-arkui-custombuilder-t.md) \| [TabBarOptions](arkts-arkui-tabbaroptions-i.md) | 是 | TabBar上显示内容。CustomBuilder：?构造器，内部可以传入组件（API version 8版本以上适用）。<br>**适用版本：** 18 |
 
 ## tabBar
 
@@ -146,4 +146,4 @@ tabBar(content: ComponentContent | SubTabBarStyle | BottomTabBarStyle | string |
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| content | ComponentContent \| [SubTabBarStyle](arkts-arkui-subtabbarstyle-c.md) \| [BottomTabBarStyle](arkts-arkui-bottomtabbarstyle-c.md) \| string \| Resource \| [CustomBuilder](arkts-arkui-custombuilder-t.md) \| [TabBarOptions](arkts-arkui-tabbaroptions-i.md) | 是 | Content displayed on the tab bar.   **ComponentContent**: encapsulation of the component content, which can be customized.   **SubTabBarStyle**: subtab style.   **BottomTabBarStyle**: style of the bottom and side tabs. The bottom style does not have the underline effect.   **string**: string type.   **Resource**: resource reference for importing strings from system or application resources.   **CustomBuilder**: builder that can take components as arguments.   **TabBarOptions**: options for configuring images and text content on the tabs. |
+| content | ComponentContent \| [SubTabBarStyle](arkts-arkui-subtabbarstyle-c.md) \| [BottomTabBarStyle](arkts-arkui-bottomtabbarstyle-c.md) \| string \| [Resource](../arkts-apis/arkts-arkui-resource-t.md) \| [CustomBuilder](arkts-arkui-custombuilder-t.md) \| [TabBarOptions](arkts-arkui-tabbaroptions-i.md) | 是 | Content displayed on the tab bar.   **ComponentContent**: encapsulation of the component content, which can be customized.   **SubTabBarStyle**: subtab style.   **BottomTabBarStyle**: style of the bottom and side tabs. The bottom style does not have the underline effect.   **string**: string type.   **Resource**: resource reference for importing strings from system or application resources.   **CustomBuilder**: builder that can take components as arguments.   **TabBarOptions**: options for configuring images and text content on the tabs. |

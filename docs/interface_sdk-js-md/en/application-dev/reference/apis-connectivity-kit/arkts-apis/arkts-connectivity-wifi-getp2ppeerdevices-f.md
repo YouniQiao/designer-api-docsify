@@ -28,7 +28,7 @@ Obtains the information about the found devices.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;WifiP2pDevice[]&gt; | Returns the found devices list. |
+| Promise&lt;[WifiP2pDevice](arkts-connectivity-wifi-wifip2pdevice-i.md)[]&gt; | Returns the found devices list. |
 
 **Examples**
 
@@ -71,7 +71,7 @@ Obtains the information about the found devices.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;WifiP2pDevice[]&gt; | Yes |  |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[WifiP2pDevice](arkts-connectivity-wifi-wifip2pdevice-i.md)[]&gt; | Yes |  |
 
 **Examples**
 

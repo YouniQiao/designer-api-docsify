@@ -48,7 +48,7 @@ state: State
 
 所选版本云文件的下载状态。
 
-**类型：** State
+**类型：** [State](arkts-corefile-cloudsync-state-e.md)
 
 **起始版本：** 20
 

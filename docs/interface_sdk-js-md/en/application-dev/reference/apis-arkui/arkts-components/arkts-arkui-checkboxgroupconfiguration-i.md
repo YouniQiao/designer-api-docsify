@@ -57,7 +57,7 @@ triggerChange: Callback<boolean>
 
 Triggers a change in the selection state of the check box group. The value true indicates that the selected status changes from partially selected or unselected to fully selected, and the value false indicates that the selected status changes from fully selected or partially selected to unselected.
 
-**Type:** Callback&lt;boolean&gt;
+**Type:** [Callback](arkts-arkui-callback-i.md)&lt;boolean&gt;
 
 **Since:** 21
 

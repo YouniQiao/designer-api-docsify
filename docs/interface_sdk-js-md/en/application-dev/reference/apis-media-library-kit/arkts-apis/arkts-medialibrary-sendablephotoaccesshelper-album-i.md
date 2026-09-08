@@ -47,35 +47,6 @@ For details about how to create a phAccessHelper instance, see the example provi
 
 ```TypeScript
 import { dataSharePredicates } from '@kit.ArkData';
-import { photoAccessHelper } from '@kit.MediaLibraryKit';
-
-async function example(phAccessHelper: sendablePhotoAccessHelper.PhotoAccessHelper) {
-  console.info('commitModifyDemo');
-  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-  let fetchOption: photoAccessHelper.FetchOptions = {
-    fetchColumns: ['title'],
-    predicates: predicates
-  };
-  let fetchResult: sendablePhotoAccessHelper.FetchResult<sendablePhotoAccessHelper.PhotoAsset> = await phAccessHelper.getAssets(fetchOption);
-  let photoAsset: sendablePhotoAccessHelper.PhotoAsset = await fetchResult.getFirstObject();
-  let title: string = photoAccessHelper.PhotoKeys.TITLE.toString();
-  let photoAssetTitle: photoAccessHelper.MemberType = photoAsset.get(title);
-  console.info('photoAsset get photoAssetTitle = ', photoAssetTitle);
-  photoAsset.set(title, 'newTitle3');
-  try {
-    await photoAsset.commitModify();
-    let newPhotoAssetTitle: photoAccessHelper.MemberType = photoAsset.get(title);
-    console.info('photoAsset get newPhotoAssetTitle = ', newPhotoAssetTitle);
-  } catch (err) {
-    console.error(`commitModify failed. error: ${err.code}, ${err.message}`);
-  }
-}
-```
-
-For details about how to create a phAccessHelper instance, see the example provided in sendablePhotoAccessHelper.getPhotoAccessHelper.
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
 import { BusinessError } from '@kit.BasicServicesKit';
 import { photoAccessHelper } from '@kit.MediaLibraryKit';
 
@@ -113,7 +84,7 @@ Converts this Sendable album to a non-Sendable album.
 
 | Type | Description |
 | --- | --- |
-| photoAccessHelper.Album | Album of the non-Sendable type. |
+| [photoAccessHelper.Album](arkts-medialibrary-photoaccesshelper-album-i.md) | Album of the non-Sendable type. |
 
 **Error codes:**
 

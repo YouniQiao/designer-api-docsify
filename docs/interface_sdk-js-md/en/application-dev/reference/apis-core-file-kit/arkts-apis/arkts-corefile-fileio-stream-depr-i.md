@@ -50,13 +50,6 @@ ss.close().then(() => {
 });
 ```
 
-```TypeScript
-import { BusinessError } from '@ohos.base';
-dir.close().then(() => {
-  console.info("close dir successfully");
-});
-```
-
 ## close
 
 ```TypeScript
@@ -90,13 +83,6 @@ ss.close((err: BusinessError) => {
 });
 ```
 
-```TypeScript
-import { BusinessError } from '@ohos.base';
-dir.close((err: BusinessError) => {
-  console.info("close dir successfully");
-});
-```
-
 ## closeSync
 
 ```TypeScript
@@ -119,10 +105,6 @@ Closes the file stream. This API returns the result synchronously.
 let filePath = pathDir + "/test.txt";
 let ss = fileio.createStreamSync(filePath, "r+");
 ss.closeSync();
-```
-
-```TypeScript
-dir.closeSync();
 ```
 
 ## flush
@@ -352,25 +334,6 @@ ss.read(arrayBuffer, option, (err: BusinessError, readResult: fileio.ReadOut) =>
 });
 ```
 
-```TypeScript
-import { BusinessError } from '@ohos.base';
-dir.read().then((dirent: fileio.Dirent) => {
-  console.info("read succeed, the name of dirent is " + dirent.name);
-}).catch((err: BusinessError) => {
-  console.error("read failed with error:" + err);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@ohos.base';
-dir.read((err: BusinessError, dirent: fileio.Dirent) => {
-  if (dirent) {
-    // Do something.
-    console.info("read succeed, the name of file is " + dirent.name);
-  }
-});
-```
-
 ## read
 
 ```TypeScript
@@ -567,28 +530,6 @@ Writes data to a stream file. This API uses an asynchronous callback to return t
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback invoked when the data is written asynchronously, which is used to return the length of the data written, in bytes. |
 
 **Examples**
-
-```TypeScript
-import { BusinessError } from '@ohos.base';
-let filePath = pathDir + "/test.txt";
-let fd = fileio.openSync(filePath, 0o100 | 0o2, 0o666);
-fileio.write(fd, "hello, world").then((number: number) => {
-  console.info("write data to file succeed and size is:" + number);
-}).catch((err: BusinessError) => {
-  console.error("write data to file failed with error:" + err);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@ohos.base';
-let filePath = pathDir + "/test.txt";
-let fd = fileio.openSync(filePath, 0o100 | 0o2, 0o666);
-fileio.write(fd, "hello, world", (err: BusinessError, bytesWritten: number) => {
-  if (bytesWritten) {
-    console.info("write data to file succeed and size is:" + bytesWritten);
-  }
-});
-```
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';

@@ -39,22 +39,3 @@ Triggers disconnection.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed.Possible causes: 1.Mandatory parameters are left unspecified;  2.Incorrect parameter types. |
 | 13600004 | Unmount failed. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { distributedDeviceManager } from '@kit.DistributedServiceKit';
-
-let dmInstance = distributedDeviceManager.createDeviceManager("com.example.filesync");
-let deviceInfoList: Array<distributedDeviceManager.DeviceBasicInfo> = dmInstance.getAvailableDeviceListSync();
-if (deviceInfoList && deviceInfoList.length > 0) {
-  console.info(`Succeeded in getting available device list.`);
-  let networkId = deviceInfoList[0].networkId;
-  fileIo.disconnectDfs(networkId).then(() => {
-    console.info("Succeeded in disconnecting dfs.");
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to disconnect dfs. Code: ${err.code}, message: ${err.message}`);
-  })
-}
-```

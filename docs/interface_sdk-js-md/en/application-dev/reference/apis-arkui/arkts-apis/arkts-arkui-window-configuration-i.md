@@ -116,7 +116,7 @@ windowType: WindowType
 
 Indicates window type
 
-**Type:** WindowType
+**Type:** [WindowType](arkts-arkui-window-windowtype-e.md)
 
 **Since:** 9
 

@@ -20,7 +20,7 @@ reason: RectChangeReason
 
 窗口矩形变化的原因。
 
-**类型：** RectChangeReason
+**类型：** [RectChangeReason](arkts-arkui-window-rectchangereason-e.md)
 
 **起始版本：** 12
 
@@ -36,7 +36,7 @@ rect: Rect
 
 New value of the window rectangle.
 
-**类型：** Rect
+**类型：** [Rect](arkts-arkui-window-rect-i.md)
 
 **起始版本：** 12
 

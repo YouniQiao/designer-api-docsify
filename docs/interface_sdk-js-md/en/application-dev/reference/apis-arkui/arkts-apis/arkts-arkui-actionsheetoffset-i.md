@@ -25,7 +25,7 @@ Explicitly specify the length unit explicitly, for example, **'10px'**, or provi
 
 If the unit is not specified, the default unit vp is used, in which case **'10'** is equivalent to **10**.
 
-**Type:** number \| string \| Resource
+**Type:** number \| string \| [Resource](arkts-arkui-resource-t.md)
 
 **Since:** 18
 
@@ -49,7 +49,7 @@ Explicitly specify the length unit explicitly, for example, **'10px'**, or provi
 
 If the unit is not specified, the default unit vp is used, in which case **'10'** is equivalent to **10**.
 
-**Type:** number \| string \| Resource
+**Type:** number \| string \| [Resource](arkts-arkui-resource-t.md)
 
 **Since:** 18
 

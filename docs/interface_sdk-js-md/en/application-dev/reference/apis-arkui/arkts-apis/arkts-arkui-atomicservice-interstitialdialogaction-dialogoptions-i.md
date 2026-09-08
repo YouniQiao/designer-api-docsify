@@ -20,7 +20,7 @@ backgroundImage?: Resource
 
 The background of the dialog.
 
-**Type:** Resource
+**Type:** [Resource](arkts-arkui-resource-t.md)
 
 **Since:** 12
 
@@ -52,7 +52,7 @@ foregroundImage?: Resource
 
 The foreground of the dialog.
 
-**Type:** Resource
+**Type:** [Resource](arkts-arkui-resource-t.md)
 
 **Since:** 12
 
@@ -132,7 +132,7 @@ subtitleColor?: ResourceStr | Color
 
 The color of the subtitle.
 
-**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md) \| Color
+**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md) \| [Color](arkts-arkui-color-e.md)
 
 **Since:** 12
 
@@ -164,7 +164,7 @@ titleColor?: ResourceStr | Color
 
 The color of the title.
 
-**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md) \| Color
+**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md) \| [Color](arkts-arkui-color-e.md)
 
 **Since:** 12
 

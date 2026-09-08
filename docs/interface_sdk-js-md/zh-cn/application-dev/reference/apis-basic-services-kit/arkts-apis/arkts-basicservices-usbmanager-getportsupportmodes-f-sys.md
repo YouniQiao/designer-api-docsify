@@ -32,7 +32,7 @@ function getPortSupportModes(portId: number): PortModeType
 
 | 类型 | 说明 |
 | --- | --- |
-| PortModeType | 支持的模式列表的组合掩码。 |
+| [PortModeType](arkts-basicservices-usbmanager-portmodetype-e-sys.md) | 支持的模式列表的组合掩码。 |
 
 **错误码：**
 
@@ -42,10 +42,3 @@ function getPortSupportModes(portId: number): PortModeType
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied. Normal application do not have permission to use system api. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:  1.Mandatory parameters are left unspecified.  2.Incorrect parameter types. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.<br>**适用版本：** 18+ |
-
-**示例**
-
-```TypeScript
-// 获取端口ID为0的支持模式
-let ret: usbManager.PortModeType = usbManager.getPortSupportModes(0);
-```

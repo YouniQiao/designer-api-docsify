@@ -28,7 +28,7 @@ Before you do this, call [usb.getDevices](arkts-basicservices-usb-getdevices-f.m
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pipe | USBDevicePipe | Yes | USB device pipe. |
+| pipe | [USBDevicePipe](arkts-basicservices-usb-usbdevicepipe-i.md) | Yes | USB device pipe. |
 
 **Return value:**
 

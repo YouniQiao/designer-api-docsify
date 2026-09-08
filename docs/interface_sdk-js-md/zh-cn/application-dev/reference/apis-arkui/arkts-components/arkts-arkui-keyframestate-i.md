@@ -45,7 +45,7 @@ curve?: Curve | string | ICurve
 
 由于[springMotion](../arkts-apis/arkts-arkui-curves-springmotion-f.md)、[responsiveSpringMotion](../arkts-apis/arkts-arkui-curves-responsivespringmotion-f.md)、[interpolatingSpring](../arkts-apis/arkts-arkui-curves-interpolatingspring-f.md)曲线时长不生效，故不支持这三种曲线。设置不支持的曲线时，使用默认曲线Curve.EaseInOut。
 
-**类型：** Curve \| string \| [ICurve](arkts-arkui-icurve-i.md)
+**类型：** [Curve](../arkts-apis/arkts-arkui-curve-e.md) \| string \| [ICurve](arkts-arkui-icurve-i.md)
 
 **默认值：** Curve.EaseInOut
 

@@ -19,7 +19,7 @@ main: string | Resource
 
 设置主标题。
 
-**类型：** string \| Resource
+**类型：** string \| [Resource](../arkts-apis/arkts-arkui-resource-t.md)
 
 **起始版本：** 9
 
@@ -35,7 +35,7 @@ sub: string | Resource
 
 设置副标题。
 
-**类型：** string \| Resource
+**类型：** string \| [Resource](../arkts-apis/arkts-arkui-resource-t.md)
 
 **起始版本：** 9
 

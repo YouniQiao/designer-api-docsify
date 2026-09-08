@@ -187,7 +187,7 @@ getAllWindowStages(): Promise<Array<window.WindowStage>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;window.WindowStage&gt;&gt; | Promise used to return all WindowStage objects in the current application process. |
+| Promise&lt;Array&lt;[window.WindowStage](../../apis-arkui/arkts-apis/arkts-arkui-window-windowstage-i.md)&gt;&gt; | Promise used to return all WindowStage objects in the current application process. |
 
 **示例**
 
@@ -336,7 +336,7 @@ getRunningProcessInformation(): Promise<Array<ProcessInformation>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;ProcessInformation&gt;&gt; | Promise对象，返回接口运行结果及有关运行进程的信息，可进行错误处理或其他自定义处理。 |
+| Promise&lt;Array&lt;[ProcessInformation](arkts-ability-processinformation-i.md)&gt;&gt; | Promise对象，返回接口运行结果及有关运行进程的信息，可进行错误处理或其他自定义处理。 |
 
 **错误码：**
 
@@ -386,7 +386,7 @@ getRunningProcessInformation(callback: AsyncCallback<Array<ProcessInformation>>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;Array&lt;ProcessInformation&gt;&gt; | 是 | 回调函数，返回有关运行进程的信息。 |
+| callback | AsyncCallback&lt;Array&lt;[ProcessInformation](arkts-ability-processinformation-i.md)&gt;&gt; | 是 | 回调函数，返回有关运行进程的信息。 |
 
 **错误码：**
 
@@ -938,7 +938,7 @@ offSystemConfigurationUpdated(callback?: systemConfiguration.UpdatedCallback): v
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | systemConfiguration.UpdatedCallback | 否 | 回调函数。取值可以为使用[ApplicationContext.onSystemConfigurationUpdated](../../../reference/apis-ability-kit/js-apis-inner-application-applicationContext.md#applicationcontextonsystemconfigurationupdated24)方法注册的callback回调，也可以为空。   -&nbsp;如果传入已定义的回调，则取消该监听。    -&nbsp;如果未传入参数，则取消所有已注册的监听。 |
+| callback | [systemConfiguration.UpdatedCallback](arkts-ability-systemconfiguration-updatedcallback-i.md) | 否 | 回调函数。取值可以为使用[ApplicationContext.onSystemConfigurationUpdated](../../../reference/apis-ability-kit/js-apis-inner-application-applicationContext.md#applicationcontextonsystemconfigurationupdated24)方法注册的callback回调，也可以为空。   -&nbsp;如果传入已定义的回调，则取消该监听。    -&nbsp;如果未传入参数，则取消所有已注册的监听。 |
 
 **示例**
 
@@ -1298,7 +1298,7 @@ onSystemConfigurationUpdated(callback: systemConfiguration.UpdatedCallback): voi
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | systemConfiguration.UpdatedCallback | 是 | 系统环境变化时触发的回调方法。 |
+| callback | [systemConfiguration.UpdatedCallback](arkts-ability-systemconfiguration-updatedcallback-i.md) | 是 | 系统环境变化时触发的回调方法。 |
 
 **示例**
 

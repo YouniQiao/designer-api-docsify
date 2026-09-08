@@ -31,7 +31,7 @@ Creates a PixelMap object based on the ID of a Surface with transformation.
 
 | Type | Description |
 | --- | --- |
-| PixelMap | A PixelMap instance if the operation is successful. Otherwise, an exception will be thrown. |
+| [PixelMap](arkts-image-image-pixelmap-i.md) | A PixelMap instance if the operation is successful. Otherwise, an exception will be thrown. |
 
 **Error codes:**
 

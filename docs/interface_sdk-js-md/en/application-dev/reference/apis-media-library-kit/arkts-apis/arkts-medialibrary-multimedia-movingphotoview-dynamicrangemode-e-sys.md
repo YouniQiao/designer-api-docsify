@@ -2,7 +2,7 @@
 
 Dynamic range mode of moving photo.
 
-@enum { number }
+@enum { int }
 
 **Since:** 14
 

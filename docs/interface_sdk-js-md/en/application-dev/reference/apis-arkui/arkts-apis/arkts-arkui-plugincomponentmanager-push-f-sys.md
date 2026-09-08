@@ -36,31 +36,26 @@ import { pluginComponentManager } from '@kit.ArkUI';
 
 pluginComponentManager.push(
   {
-    owner: {
+    want: {
       bundleName: "com.example.provider",
       abilityName: "com.example.provider.MainAbility",
     },
-    target: {
-      bundleName: "com.example.user",
-      abilityName: "com.example.user.MainAbility",
-    },
-    name: "ets/pages/plugin2.js",
+    name: "plugintemplate",
     data: {
-      "js": "ets/pages/plugin.js",
-      "key1": 1111,
+      "key_1": "plugin component test",
+      "key_2": 34234,
     },
     extraData: {
-      "extraStr": "this is push event"
+      "extra_str": "this is push event",
     },
     jsonPath: "",
   },
-  (err, data) => {
+  (err) => {
     if (err) {
-      console.error(`Failed to push. Code: ${err.code}, message: ${err.message}`);
+      console.error(`push_callback: err.code = ${err.code}, err.message = ${err.message}`);
       return;
     }
-    console.info("push_callback:data: ", JSON.stringify(data));
     console.info("push_callback: push ok!");
   }
-);
+)
 ```

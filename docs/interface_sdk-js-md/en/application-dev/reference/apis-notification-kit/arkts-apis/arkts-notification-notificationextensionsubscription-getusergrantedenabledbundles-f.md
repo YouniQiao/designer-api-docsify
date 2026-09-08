@@ -24,7 +24,7 @@ Obtains the applications that are allowed to access device notifications for the
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;GrantedBundleInfo[]&gt; | Promise used to return the list of applications that are allowed to access device notifications for the current application. |
+| Promise&lt;[GrantedBundleInfo](arkts-notification-notificationextensionsubscription-grantedbundleinfo-t.md)[]&gt; | Promise used to return the list of applications that are allowed to access device notifications for the current application. |
 
 **Error codes:**
 

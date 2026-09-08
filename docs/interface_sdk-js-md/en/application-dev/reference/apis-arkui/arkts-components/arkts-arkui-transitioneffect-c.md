@@ -127,19 +127,8 @@ Constructs a **TransitionEffect** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | Type | Yes | Transition type. |
+| type | [Type](../arkts-apis/arkts-arkui-arkui-statemanagement-type-d.md) | Yes | Transition type. |
 | effect | [Effect](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-sceneresources-effect-i.md) | Yes | Transition parameter. |
-
-**Examples**
-
-```TypeScript
-@Builder
-function MyBuilder(value: string, size: number) {
-  Text(value)
-    .fontSize(size)
-}
-let builderVar: WrappedBuilder<[string, number]> = new WrappedBuilder<[string, number]>(MyBuilder);
-```
 
 ## move
 

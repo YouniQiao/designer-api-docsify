@@ -20,7 +20,7 @@ color?: common2D.Color
 
 装饰线颜色，默认为跟随文本颜色。
 
-**类型：** common2D.Color
+**类型：** [common2D.Color](arkts-arkgraphics2d-common2d-color-i.md)
 
 **起始版本：** 12
 
@@ -36,7 +36,7 @@ decorationStyle?: TextDecorationStyle
 
 装饰线样式，默认为SOLID。
 
-**类型：** TextDecorationStyle
+**类型：** [TextDecorationStyle](arkts-arkgraphics2d-text-textdecorationstyle-e.md)
 
 **起始版本：** 12
 
@@ -68,7 +68,7 @@ textDecoration?: TextDecorationType
 
 装饰线类型，默认为NONE。
 
-**类型：** TextDecorationType
+**类型：** [TextDecorationType](arkts-arkgraphics2d-text-textdecorationtype-e.md)
 
 **起始版本：** 12
 

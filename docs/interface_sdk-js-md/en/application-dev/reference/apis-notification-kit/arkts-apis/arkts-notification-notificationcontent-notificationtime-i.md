@@ -74,15 +74,3 @@ Whether the timer is paused. The default value is **false**.
 **Since:** 11
 
 **System capability:** SystemCapability.Notification.Notification
-
-**Examples**
-
-```TypeScript
-// The notification counts down from three seconds and the time is displayed in the title.
-time: {
-    initialTime: 3000,
-    isCountDown: true,
-    isPaused: false,
-    isInTitle: true,
-}
-```

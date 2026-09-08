@@ -118,7 +118,7 @@ get root(): FieldNode
 
 获取Value中所有字段的定义。
 
-**类型：** FieldNode
+**类型：** [FieldNode](arkts-arkdata-distributedkvstore-fieldnode-c.md)
 
 **起始版本：** 9
 
@@ -132,7 +132,7 @@ set root(root: FieldNode)
 
 设置Value中所有字段的定义。
 
-**类型：** FieldNode
+**类型：** [FieldNode](arkts-arkdata-distributedkvstore-fieldnode-c.md)
 
 **起始版本：** 9
 

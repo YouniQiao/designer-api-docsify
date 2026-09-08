@@ -59,7 +59,7 @@ Starts an ability that belongs to the same application as this **StaticSubscribe
 | [16000009](../../apis-ability-kit/errorcode-ability.md#16000009-ability-start-or-stop-failure-in-wukong-mode) | An ability cannot be started or stopped in Wukong mode. |
 | [16000011](../../apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
 | [16000050](../../apis-ability-kit/errorcode-ability.md#16000050-internal-error) | Internal error. |
-| [16000053](../../apis-ability-kit/errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) | The ability is not on the top of the UI. |
+| [16000053](../../apis-ability-kit/errorcode-ability.md#16000053-ability-not-in-the-foreground) | The ability is not on the top of the UI. |
 | [16000055](../../apis-ability-kit/errorcode-ability.md#16000055-installation-free-timeout) | Installation-free timed out. |
 | [16200001](../../apis-ability-kit/errorcode-ability.md#16200001-caller-released) | The caller has been released. |
 | [16300003](../../apis-ability-kit/errorcode-ability.md#16300003-target-application-is-not-the-invoker-application) | The target application is not the current application. |
@@ -145,7 +145,7 @@ Starts an ability that belongs to the same application as this **StaticSubscribe
 | [16000009](../../apis-ability-kit/errorcode-ability.md#16000009-ability-start-or-stop-failure-in-wukong-mode) | An ability cannot be started or stopped in Wukong mode. |
 | [16000011](../../apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
 | [16000050](../../apis-ability-kit/errorcode-ability.md#16000050-internal-error) | Internal error. |
-| [16000053](../../apis-ability-kit/errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) | The ability is not on the top of the UI. |
+| [16000053](../../apis-ability-kit/errorcode-ability.md#16000053-ability-not-in-the-foreground) | The ability is not on the top of the UI. |
 | [16000055](../../apis-ability-kit/errorcode-ability.md#16000055-installation-free-timeout) | Installation-free timed out. |
 | [16200001](../../apis-ability-kit/errorcode-ability.md#16200001-caller-released) | The caller has been released. |
 | [16300003](../../apis-ability-kit/errorcode-ability.md#16300003-target-application-is-not-the-invoker-application) | The target application is not the current application. |

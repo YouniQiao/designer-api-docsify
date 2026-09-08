@@ -36,7 +36,7 @@ To obtain the dynamic icon information of all applications and all application c
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;DynamicIconInfo&gt;&gt; | Promise used to return the dynamic icon information. |
+| Promise&lt;Array&lt;[DynamicIconInfo](arkts-ability-bundlemanager-dynamiciconinfo-t-sys.md)&gt;&gt; | Promise used to return the dynamic icon information. |
 
 **Error codes:**
 

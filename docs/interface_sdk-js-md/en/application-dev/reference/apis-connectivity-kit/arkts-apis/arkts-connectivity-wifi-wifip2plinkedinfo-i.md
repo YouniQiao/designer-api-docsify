@@ -24,7 +24,7 @@ connectState: P2pConnectState
 
 Connection status
 
-**Type:** P2pConnectState
+**Type:** [P2pConnectState](arkts-connectivity-wifi-p2pconnectstate-e.md)
 
 **Since:** 8
 

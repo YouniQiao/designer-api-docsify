@@ -209,36 +209,3 @@ width: number
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-**示例**
-
-> 说明：
-
-```TypeScript
-// xxx.ets
-@Entry
-@Component
-struct FontExample {
-  private fontInfo = this.getUIContext().getFont().getFontByName('');
-
-  build() {
-    Column() {
-      Button('getFontByName')
-        .onClick(() => {
-          this.fontInfo =
-            this.getUIContext().getFont().getFontByName('HarmonyOS Sans Italic');
-          console.info('getFontByName(): path = ' + this.fontInfo.path);
-          console.info('getFontByName(): postScriptName = ' + this.fontInfo.postScriptName);
-          console.info('getFontByName(): fullName = ' + this.fontInfo.fullName);
-          console.info('getFontByName(): family = ' + this.fontInfo.family);
-          console.info('getFontByName(): subfamily = ' + this.fontInfo.subfamily);
-          console.info('getFontByName(): weight = ' + this.fontInfo.weight);
-          console.info('getFontByName(): width = ' + this.fontInfo.width);
-          console.info('getFontByName(): italic = ' + this.fontInfo.italic);
-          console.info('getFontByName(): monoSpace = ' + this.fontInfo.monoSpace);
-          console.info('getFontByName(): symbolic = ' + this.fontInfo.symbolic);
-        })
-    }.width('100%')
-  }
-}
-```

@@ -42,7 +42,7 @@ blur(radius: number): Filter
 
 | 类型 | 说明 |
 | --- | --- |
-| Filter | 返回已添加效果的Filter实例，用于继续添加效果或获取处理后的图像。 |
+| [Filter](arkts-arkgraphics2d-effectkit-filter-i.md) | 返回已添加效果的Filter实例，用于继续添加效果或获取处理后的图像。 |
 
 **示例**
 
@@ -131,13 +131,13 @@ blur(radius: number, tileMode: TileMode): Filter
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | radius | number | 是 | 模糊半径，单位为px，取值范围为[0, +∞)。模糊半径值越大，模糊效果越明显。传入负数时无效果。 |
-| tileMode | TileMode | 是 | 着色器效果平铺模式。影响图像边缘的模糊效果。 |
+| tileMode | [TileMode](arkts-arkgraphics2d-effectkit-tilemode-e.md) | 是 | 着色器效果平铺模式。影响图像边缘的模糊效果。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Filter | 返回已添加效果的Filter实例，用于继续添加效果或获取处理后的图像。 |
+| [Filter](arkts-arkgraphics2d-effectkit-filter-i.md) | 返回已添加效果的Filter实例，用于继续添加效果或获取处理后的图像。 |
 
 **示例**
 
@@ -231,7 +231,7 @@ brightness(bright: number): Filter
 
 | 类型 | 说明 |
 | --- | --- |
-| Filter | 返回已添加效果的Filter实例，用于继续添加效果或获取处理后的图像。 |
+| [Filter](arkts-arkgraphics2d-effectkit-filter-i.md) | 返回已添加效果的Filter实例，用于继续添加效果或获取处理后的图像。 |
 
 **示例**
 
@@ -323,7 +323,7 @@ getEffectPixelMap(): Promise<image.PixelMap>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;image.PixelMap&gt; | Promise对象。返回已添加链表效果的源图像的image.PixelMap。 |
+| Promise&lt;[image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)&gt; | Promise对象。返回已添加链表效果的源图像的image.PixelMap。 |
 
 **示例**
 
@@ -381,7 +381,7 @@ getEffectPixelMap(useCpuRender : boolean): Promise<image.PixelMap>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;image.PixelMap&gt; | Promise对象。返回已添加链表效果的源图像的image.PixelMap。 |
+| Promise&lt;[image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)&gt; | Promise对象。返回已添加链表效果的源图像的image.PixelMap。 |
 
 **示例**
 
@@ -433,7 +433,7 @@ getPixelMap(): image.PixelMap
 
 | 类型 | 说明 |
 | --- | --- |
-| image.PixelMap | 已添加效果的源图像的image.PixelMap。 |
+| [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | 已添加效果的源图像的image.PixelMap。 |
 
 **示例**
 
@@ -476,7 +476,7 @@ grayscale(): Filter
 
 | 类型 | 说明 |
 | --- | --- |
-| Filter | 返回已添加效果的Filter实例，用于继续添加效果或获取处理后的图像。 |
+| [Filter](arkts-arkgraphics2d-effectkit-filter-i.md) | 返回已添加效果的Filter实例，用于继续添加效果或获取处理后的图像。 |
 
 **示例**
 
@@ -558,7 +558,7 @@ invert(): Filter
 
 | 类型 | 说明 |
 | --- | --- |
-| Filter | 返回已添加效果的Filter实例，用于继续添加效果或获取处理后的图像。 |
+| [Filter](arkts-arkgraphics2d-effectkit-filter-i.md) | 返回已添加效果的Filter实例，用于继续添加效果或获取处理后的图像。 |
 
 **示例**
 
@@ -646,7 +646,7 @@ setColorMatrix(colorMatrix: Array<number>): Filter
 
 | 类型 | 说明 |
 | --- | --- |
-| Filter | 返回已添加效果的Filter实例，用于继续添加效果或获取处理后的图像。 |
+| [Filter](arkts-arkgraphics2d-effectkit-filter-i.md) | 返回已添加效果的Filter实例，用于继续添加效果或获取处理后的图像。 |
 
 **错误码：**
 

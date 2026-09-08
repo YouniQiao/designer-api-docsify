@@ -70,7 +70,7 @@ Adds a created task to this task group. Before using this API, you must create a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| task | Task | Yes | Task to be added to the task group. |
+| task | [Task](arkts-arkts-taskpool-task-c.md) | Yes | Task to be added to the task group. |
 
 **Error codes:**
 

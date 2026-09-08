@@ -10,4 +10,4 @@ type AppStatsMap = Record<string, Array<BundleStatsInfo>>
 
 **System API:** This is a system API.
 
-**Type:** Record&lt;string, Array&lt;BundleStatsInfo&gt;&gt;
+**Type:** Record&lt;string, Array&lt;[BundleStatsInfo](arkts-backgroundtasks-usagestatistics-bundlestatsinfo-i-sys.md)&gt;&gt;

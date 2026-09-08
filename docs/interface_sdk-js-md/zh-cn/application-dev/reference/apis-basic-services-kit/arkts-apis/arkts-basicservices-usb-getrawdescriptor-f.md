@@ -28,7 +28,7 @@ function getRawDescriptor(pipe: USBDevicePipe): Uint8Array
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| pipe | USBDevicePipe | 是 | 用于确定总线号和设备地址。 |
+| pipe | [USBDevicePipe](arkts-basicservices-usb-usbdevicepipe-i.md) | 是 | 用于确定总线号和设备地址。 |
 
 **返回值：**
 

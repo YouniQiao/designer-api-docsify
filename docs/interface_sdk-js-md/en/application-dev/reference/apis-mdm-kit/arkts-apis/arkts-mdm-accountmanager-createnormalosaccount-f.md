@@ -41,7 +41,7 @@ Creates a normal system account. A maximum of two normal system accounts ([osAcc
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;osAccount.OsAccountInfo&gt; | Promise used to return the information about the created system account. |
+| Promise&lt;[osAccount.OsAccountInfo](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-osaccountinfo-i.md)&gt; | Promise used to return the information about the created system account. |
 
 **Error codes:**
 

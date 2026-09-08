@@ -44,7 +44,7 @@ majorClass: MajorClass
 
 表示蓝牙设备主要类别的枚举。
 
-**类型：** MajorClass
+**类型：** [MajorClass](arkts-connectivity-bluetoothmanager-majorclass-e.md)
 
 **起始版本：** 9
 
@@ -62,7 +62,7 @@ majorMinorClass: MajorMinorClass
 
 表示主要次要蓝牙设备类别的枚举。
 
-**类型：** MajorMinorClass
+**类型：** [MajorMinorClass](arkts-connectivity-bluetoothmanager-majorminorclass-e.md)
 
 **起始版本：** 9
 

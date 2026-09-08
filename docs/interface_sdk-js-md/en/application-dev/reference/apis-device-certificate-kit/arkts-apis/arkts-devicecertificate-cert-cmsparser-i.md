@@ -161,7 +161,7 @@ Obtains the certificate from CMS message of the **SIGNED_DATA** type by passing 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;X509Cert&gt;&gt; | Promise used to return a certificate set. |
+| Promise&lt;Array&lt;[X509Cert](arkts-devicecertificate-cert-x509cert-i.md)&gt;&gt; | Promise used to return a certificate set. |
 
 **Error codes:**
 

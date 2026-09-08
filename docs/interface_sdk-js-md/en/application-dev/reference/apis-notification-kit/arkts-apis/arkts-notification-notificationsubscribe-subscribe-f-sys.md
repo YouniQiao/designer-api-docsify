@@ -30,7 +30,7 @@ Subscribes to notifications of all applications under this user. This API uses a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| subscriber | NotificationSubscriber | Yes | Notification subscriber. |
+| subscriber | [NotificationSubscriber](arkts-notification-notificationsubscribe-notificationsubscriber-t-sys.md) | Yes | Notification subscriber. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
@@ -95,8 +95,8 @@ Subscribes to a notification with the subscription information specified. This A
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| subscriber | NotificationSubscriber | Yes | Notification subscriber. |
-| info | NotificationSubscribeInfo | Yes | Notification subscription information. |
+| subscriber | [NotificationSubscriber](arkts-notification-notificationsubscribe-notificationsubscriber-t-sys.md) | Yes | Notification subscriber. |
+| info | [NotificationSubscribeInfo](arkts-notification-notificationsubscribe-notificationsubscribeinfo-t-sys.md) | Yes | Notification subscription information. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
@@ -162,8 +162,8 @@ Subscribes to a notification with the subscription information specified. This A
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| subscriber | NotificationSubscriber | Yes | Notification subscriber. |
-| info | NotificationSubscribeInfo | No | Notification subscription information. By default, this parameter is left empty, which means to subscribe to notifications of all applications under this user. |
+| subscriber | [NotificationSubscriber](arkts-notification-notificationsubscribe-notificationsubscriber-t-sys.md) | Yes | Notification subscriber. |
+| info | [NotificationSubscribeInfo](arkts-notification-notificationsubscribe-notificationsubscribeinfo-t-sys.md) | No | Notification subscription information. By default, this parameter is left empty, which means to subscribe to notifications of all applications under this user. |
 
 **Return value:**
 

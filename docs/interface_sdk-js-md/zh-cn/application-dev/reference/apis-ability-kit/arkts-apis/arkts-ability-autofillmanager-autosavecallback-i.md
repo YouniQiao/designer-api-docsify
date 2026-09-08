@@ -31,6 +31,7 @@ onFailure(): void
 **示例**
 
 参见autoFillManager.requestAutoSave。
+- simpleType:
 
 ## onSuccess
 
@@ -51,3 +52,4 @@ onSuccess(): void
 **示例**
 
 参见autoFillManager.requestAutoSave。
+- simpleType:

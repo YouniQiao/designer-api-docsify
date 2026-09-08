@@ -36,7 +36,7 @@ state: AdvertisingState
 
 Advertising state.
 
-**Type:** AdvertisingState
+**Type:** [AdvertisingState](arkts-connectivity-advertising-advertisingstate-e.md)
 
 **Since:** 26.0.0
 

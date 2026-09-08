@@ -27,7 +27,7 @@ function querySecurityEvent(rules: Array<SecurityEventRule>, querier: Querier): 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | rules | Array&lt;[SecurityEventRule](arkts-securityguard-securityguard-securityeventrule-i-sys.md)&gt; | 是 | 获取数据的规则。 |
-| querier | Querier | 是 | 用于接收数据的回调函数。 |
+| querier | [Querier](arkts-securityguard-securityguard-querier-i-sys.md) | 是 | 用于接收数据的回调函数。 |
 
 **错误码：**
 

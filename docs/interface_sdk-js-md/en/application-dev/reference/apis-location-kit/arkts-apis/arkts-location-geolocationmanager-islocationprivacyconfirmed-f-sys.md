@@ -24,7 +24,7 @@ Querying location privacy protocol confirmation status.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | LocationPrivacyType | Yes | Indicates location privacy protocol type. |
+| type | [LocationPrivacyType](arkts-location-geolocation-locationprivacytype-e.md) | Yes | Indicates location privacy protocol type. |
 
 **Return value:**
 

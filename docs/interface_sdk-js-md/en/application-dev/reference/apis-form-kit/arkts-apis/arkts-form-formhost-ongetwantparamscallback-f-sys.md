@@ -28,7 +28,7 @@ Register callback of getting the want parameters of the form.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | formInfo.GetWantParamsCallback | Yes | the callback for getting want parameters of the form. |
+| callback | [formInfo.GetWantParamsCallback](arkts-form-forminfo-getwantparamscallback-t-sys.md) | Yes | the callback for getting want parameters of the form. |
 
 **Error codes:**
 

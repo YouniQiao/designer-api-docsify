@@ -46,19 +46,6 @@ getBufferData(): ImageBufferData | null
 | --- | --- |
 | [ImageBufferData](arkts-image-image-imagebufferdata-i.md) \| null | 获取封装图像数据缓冲区的结构体，获取不到时返回空值。 |
 
-**示例**
-
-```TypeScript
-function GetBufferData(img: image.Image) {
-  const bufferData = img.getBufferData();
-  if (bufferData == null) {
-    console.error('Failed to get the bufferData: bufferData is null.');
-    return;
-  }
-  console.info('Succeeded in getting bufferData.');
-}
-```
-
 ## getComponent
 
 ```TypeScript
@@ -75,24 +62,8 @@ getComponent(componentType: ComponentType, callback: AsyncCallback<Component>): 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| componentType | ComponentType | 是 | 图像的组件类型（目前仅支持ComponentType:JPEG，实际返回格式由生产者决定，如相机）。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Component&gt; | 是 | 回调函数，当返回组件缓冲区成功，err为undefined，data为获取到的组件缓冲区；否则为错误对象。 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function GetComponent(img : image.Image) {
-  img.getComponent(image.ComponentType.JPEG, (err: BusinessError, component: image.Component) => {
-    if (err) {
-      console.error(`Failed to get the component.code ${err.code},message is ${err.message}`);
-    } else {
-      console.info('Succeeded in getting component.');
-    }
-  })
-}
-```
+| componentType | [ComponentType](arkts-image-image-componenttype-e.md) | 是 | 图像的组件类型（目前仅支持ComponentType:JPEG，实际返回格式由生产者决定，如相机）。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Component](arkts-image-image-component-i.md)&gt; | 是 | 回调函数，当返回组件缓冲区成功，err为undefined，data为获取到的组件缓冲区；否则为错误对象。 |
 
 ## getComponent
 
@@ -110,27 +81,13 @@ getComponent(componentType: ComponentType): Promise<Component>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| componentType | ComponentType | 是 | 图像的组件类型（目前仅支持ComponentType:JPEG，实际返回格式由生产者决定，如相机）。 |
+| componentType | [ComponentType](arkts-image-image-componenttype-e.md) | 是 | 图像的组件类型（目前仅支持ComponentType:JPEG，实际返回格式由生产者决定，如相机）。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Component&gt; | Promise对象，返回组件缓冲区。 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function GetComponent(img : image.Image) {
-  img.getComponent(image.ComponentType.JPEG).then((component: image.Component) => {
-    console.info('Succeeded in getting component.');
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to get the component.code ${error.code},message is ${error.message}`);
-  })
-}
-```
+| Promise&lt;[Component](arkts-image-image-component-i.md)&gt; | Promise对象，返回组件缓冲区。 |
 
 ## getMetadata
 
@@ -165,19 +122,6 @@ getMetadata(key: HdrMetadataKey): HdrMetadataValue | null
 | [7600206](../errorcode-image.md#7600206-无效参数) | Invalid parameter. |
 | [7600302](../errorcode-image.md#7600302-内存拷贝失败) | Memory copy failed. |
 
-**示例**
-
-```TypeScript
-async function GetMetadata(img : image.Image) {
-  try {
-    let staticMetadata = img.getMetadata(image.HdrMetadataKey.HDR_STATIC_METADATA);
-    console.info(`getMetadata:${staticMetadata}`);
-  } catch (err) {
-    console.error('Failed to getMetadata.' + err);
-  }
-}
-```
-
 ## release
 
 ```TypeScript
@@ -201,93 +145,6 @@ release(callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，当图像释放成功，err为undefined，否则为错误对象。 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function Release(img : image.Image) {
-  img.release((err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to release the image instance.code ${err.code},message is ${err.message}`);
-    } else {
-      console.info('Succeeded in releasing the image instance.');
-    }
-  })
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function Release(creator : image.ImageCreator) {
-  creator.release((err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to release the creator.code ${err.code},message is ${err.message}`);
-    } else {
-      console.info('Succeeded in releasing creator.');
-    }
-  });
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function Release() {
-  const imagePackerObj: image.ImagePacker = image.createImagePacker();
-  imagePackerObj.release((err: BusinessError)=>{
-    if (err) {
-      console.error(`Failed to release image packaging.code ${err.code},message is ${err.message}`);
-    } else {
-      console.info('Succeeded in releasing image packaging.');
-    }
-  })
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function Release(receiver : image.ImageReceiver) {
-  receiver.release((err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to release the receiver.code ${err.code},message is ${err.message}`);
-    } else {
-      console.info('Succeeded in releasing the receiver.');
-    }
-  })
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function Release(imageSourceObj : image.ImageSource) {
-  imageSourceObj.release((err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to release the image source instance.code ${err.code},message is ${err.message}`);
-    } else {
-      console.info('Succeeded in releasing the image source instance.');
-    }
-  })
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function release(pixelMap: image.PixelMap) {
-  pixelMap.release((err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to release the PixelMap object. Code: ${err.code}, message: ${err.message}`);
-      return;
-    }
-    console.info('Succeeded in releasing the PixelMap object.');
-  });
-}
-```
 
 ## release
 
@@ -313,81 +170,6 @@ release(): Promise<void>
 | --- | --- |
 | Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function Release(img : image.Image) {
-  img.release().then(() => {
-    console.info('Succeeded in releasing the image instance.');
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to release the image instance.code ${error.code},message is ${error.message}`);
-  })
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function Release(creator : image.ImageCreator) {
-  creator.release().then(() => {
-    console.info('Succeeded in releasing creator.');
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to release the creator.code ${error.code},message is ${error.message}`);
-  })
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function Release() {
-  const imagePackerObj: image.ImagePacker = image.createImagePacker();
-  imagePackerObj.release().then(() => {
-    console.info('Succeeded in releasing image packaging.');
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to release image packaging.code ${error.code},message is ${error.message}`);
-  })
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function Release(receiver : image.ImageReceiver) {
-  receiver.release().then(() => {
-    console.info('Succeeded in releasing the receiver.');
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to release the receiver.code ${error.code},message is ${error.message}`);
-  })
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function Release(imageSourceObj : image.ImageSource) {
-  imageSourceObj.release().then(() => {
-    console.info('Succeeded in releasing the image source instance.');
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to release the image source instance.code ${error.code},message is ${error.message}`);
-  })
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function release(pixelMap: image.PixelMap) {
-  pixelMap.release().then(() => {
-    console.info('Succeeded in releasing the PixelMap object.');
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to release the PixelMap object. Code: ${err.code}, message: ${err.message}`);
-  });
-}
-```
-
 ## clipRect
 
 ```TypeScript
@@ -396,7 +178,7 @@ clipRect: Region
 
 要裁剪的图像区域。恒等于整个图像，不支持修改。
 
-**类型：** Region
+**类型：** [Region](arkts-image-image-region-i.md)
 
 **起始版本：** 9
 
@@ -410,7 +192,7 @@ readonly colorSpace: colorSpaceManager.ColorSpace
 
 图像色彩空间，色域枚举类型。
 
-**类型：** colorSpaceManager.ColorSpace
+**类型：** [colorSpaceManager.ColorSpace](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-colorspacemanager-colorspace-e.md)
 
 **起始版本：** 23
 

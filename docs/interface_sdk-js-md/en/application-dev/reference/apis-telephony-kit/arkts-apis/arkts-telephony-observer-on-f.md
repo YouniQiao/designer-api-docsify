@@ -27,7 +27,7 @@ Registers an observer for network status change events. This API uses an asynchr
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'networkStateChange' | Yes | Network status change event. This field has a fixed value of **networkStateChange**. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;NetworkState&gt; | Yes | Callback used to return the network status object. For details, see [NetworkState](arkts-telephony-radio-networkstate-i.md). |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[NetworkState](arkts-telephony-observer-networkstate-t.md)&gt; | Yes | Callback used to return the network status object. For details, see [NetworkState](arkts-telephony-radio-networkstate-i.md). |
 
 **Error codes:**
 
@@ -70,8 +70,8 @@ Registers an observer for network status change events of the SIM card in the sp
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'networkStateChange' | Yes | Network status change event. This field has a fixed value of **networkStateChange**. |
-| options | ObserverOptions | Yes | Event subscription parameters. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;NetworkState&gt; | Yes | Callback used to return the network status object. For details, see [NetworkState](arkts-telephony-radio-networkstate-i.md). |
+| options | [ObserverOptions](arkts-telephony-observer-observeroptions-i.md) | Yes | Event subscription parameters. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[NetworkState](arkts-telephony-observer-networkstate-t.md)&gt; | Yes | Callback used to return the network status object. For details, see [NetworkState](arkts-telephony-radio-networkstate-i.md). |
 
 **Error codes:**
 
@@ -113,7 +113,7 @@ Registers an observer for signal status change events. This API uses an asynchro
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'signalInfoChange' | Yes | Signal status change event. This field has a fixed value of **signalInfoChange**. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;SignalInformation&gt;&gt; | Yes | Callback used to return the signal strength object. For details, see [SignalInformation](arkts-telephony-radio-signalinformation-i.md). |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[SignalInformation](arkts-telephony-observer-signalinformation-t.md)&gt;&gt; | Yes | Callback used to return the signal strength object. For details, see [SignalInformation](arkts-telephony-radio-signalinformation-i.md). |
 
 **Error codes:**
 
@@ -153,8 +153,8 @@ Registers an observer for signal status change events of the SIM card in the spe
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'signalInfoChange' | Yes | Signal status change event. This field has a fixed value of **signalInfoChange**. |
-| options | ObserverOptions | Yes | Event subscription parameters. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;SignalInformation&gt;&gt; | Yes | Callback used to return the signal strength object. For details, see [SignalInformation](arkts-telephony-radio-signalinformation-i.md). |
+| options | [ObserverOptions](arkts-telephony-observer-observeroptions-i.md) | Yes | Event subscription parameters. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[SignalInformation](arkts-telephony-observer-signalinformation-t.md)&gt;&gt; | Yes | Callback used to return the signal strength object. For details, see [SignalInformation](arkts-telephony-radio-signalinformation-i.md). |
 
 **Error codes:**
 
@@ -236,7 +236,7 @@ Registers an observer for connection status change events of the cellular data l
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'cellularDataConnectionStateChange' | Yes | Cellular data connection status event. This field has a fixed value of **cellularDataConnectionStateChange**. |
-| options | ObserverOptions | Yes | Event subscription parameters. |
+| options | [ObserverOptions](arkts-telephony-observer-observeroptions-i.md) | Yes | Event subscription parameters. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DataConnectionStateInfo](arkts-telephony-observer-dataconnectionstateinfo-i.md)&gt; | Yes | Callback function used to return the cellular data connection status information object. For details, see [DataConnectState](arkts-telephony-data-dataconnectstate-e.md) of **data** and [RadioTechnology](arkts-telephony-radio-radiotechnology-e.md) of **radio**. |
 
 **Error codes:**
@@ -278,7 +278,7 @@ Registers an observer for the uplink and downlink data flow status change events
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'cellularDataFlowChange' | Yes | Cellular data flow change event. This field has a fixed value of **cellularDataFlowChange**. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DataFlowType&gt; | Yes | Callback function used to return the data flow status object. For details, see [DataFlowType](arkts-telephony-data-dataflowtype-e.md) in **data**. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DataFlowType](arkts-telephony-observer-dataflowtype-t.md)&gt; | Yes | Callback function used to return the data flow status object. For details, see [DataFlowType](arkts-telephony-data-dataflowtype-e.md) in **data**. |
 
 **Error codes:**
 
@@ -318,8 +318,8 @@ Registers an observer for the uplink and downlink data flow status change events
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'cellularDataFlowChange' | Yes | Cellular data flow change event. This field has a fixed value of **cellularDataFlowChange**. |
-| options | ObserverOptions | Yes | Event subscription parameters. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DataFlowType&gt; | Yes | Callback function used to return the data flow status object. For details, see [DataFlowType](arkts-telephony-data-dataflowtype-e.md) in **data**. |
+| options | [ObserverOptions](arkts-telephony-observer-observeroptions-i.md) | Yes | Event subscription parameters. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DataFlowType](arkts-telephony-observer-dataflowtype-t.md)&gt; | Yes | Callback function used to return the data flow status object. For details, see [DataFlowType](arkts-telephony-data-dataflowtype-e.md) in **data**. |
 
 **Error codes:**
 
@@ -400,7 +400,7 @@ Registers an observer for call status change events. This API uses an asynchrono
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'callStateChange' | Yes | Call status change event. This field has a fixed value of **callStateChange**. |
-| options | ObserverOptions | Yes | Event subscription parameters. |
+| options | [ObserverOptions](arkts-telephony-observer-observeroptions-i.md) | Yes | Event subscription parameters. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CallStateInfo](arkts-telephony-observer-callstateinfo-i.md)&gt; | Yes | Callback function used to return the call status information object. The application can obtain the **CallStateInfo** object. In this object:    - Only **state** is accessible to third-party applications. - **number** is only accessible to system applications. |
 
 **Error codes:**
@@ -442,8 +442,8 @@ Registers an observer for extended call status change events. This API uses an a
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'callStateChangeEx' | Yes | Extended call status change event. This field has a fixed value of **callStateChangeEx**. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;TelCallState&gt; | Yes | Callback function used to return the call status information object. The application can obtain **TelCallState**. |
-| options | ObserverOptions | No | Event subscription parameters. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[TelCallState](arkts-telephony-observer-telcallstate-t.md)&gt; | Yes | Callback function used to return the call status information object. The application can obtain **TelCallState**. |
+| options | [ObserverOptions](arkts-telephony-observer-observeroptions-i.md) | No | Event subscription parameters. |
 
 **Error codes:**
 
@@ -531,7 +531,7 @@ Registers an observer for status change events of the SIM card in the specified 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'simStateChange' | Yes | SIM status change event. This field has a fixed value of **simStateChange**. |
-| options | ObserverOptions | Yes | Event subscription parameters. |
+| options | [ObserverOptions](arkts-telephony-observer-observeroptions-i.md) | Yes | Event subscription parameters. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SimStateData](arkts-telephony-observer-simstatedata-i.md)&gt; | Yes | Callback function used to return the SIM status data object. |
 
 **Error codes:**

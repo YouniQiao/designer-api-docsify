@@ -139,20 +139,3 @@ Name of the Event type.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Applications.ContactsData
-
-**Examples**
-
-Create data in JSON format.
-
-```TypeScript
-let event: contact.Event = {
-    eventDate: '2000-01-01'
-};
-```
-
-Or create data by instantiating an Event object.
-
-```TypeScript
-let event = new contact.Event();
-event.eventDate = '2000-01-01';
-```

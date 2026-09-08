@@ -26,7 +26,7 @@ Obtain information about the groups.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;WifiP2pGroupInfo&gt;&gt; | Returns the information about own device info. |
+| Promise&lt;Array&lt;[WifiP2pGroupInfo](arkts-connectivity-wifimanager-wifip2pgroupinfo-i.md)&gt;&gt; | Returns the information about own device info. |
 
 **Error codes:**
 
@@ -77,7 +77,7 @@ Obtain information about the groups.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;WifiP2pGroupInfo&gt;&gt; | Yes | Indicates callback of function. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[WifiP2pGroupInfo](arkts-connectivity-wifimanager-wifip2pgroupinfo-i.md)&gt;&gt; | Yes | Indicates callback of function. |
 
 **Error codes:**
 

@@ -34,7 +34,7 @@ state: DataConnectState
 
 Data connection status.
 
-**Type:** DataConnectState
+**Type:** [DataConnectState](arkts-telephony-observer-dataconnectstate-t.md)
 
 **Since:** 11
 

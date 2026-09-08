@@ -2,7 +2,7 @@
 
 The state of the supplicant enumeration.
 
-@enum { number }
+@enum { int }
 
 **Since:** 9
 

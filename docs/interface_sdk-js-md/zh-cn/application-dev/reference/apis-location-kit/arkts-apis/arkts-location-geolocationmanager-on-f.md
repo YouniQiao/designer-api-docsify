@@ -28,8 +28,8 @@ function on(type: 'locationChange', request: LocationRequest | ContinuousLocatio
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'locationChange' | 是 | 设置事件类型。type为“locationChange”，表示位置变化。 |
-| request | LocationRequest \| [ContinuousLocationRequest](arkts-location-geolocationmanager-continuouslocationrequest-i.md) | 是 | 设置位置请求参数。ContinuousLocationRequest为API12新增参数。<br>**适用版本：** 12 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Location&gt; | 是 | 回调函数，返回位置信息。 |
+| request | [LocationRequest](arkts-location-geolocationmanager-locationrequest-i.md) \| [ContinuousLocationRequest](arkts-location-geolocationmanager-continuouslocationrequest-i.md) | 是 | 设置位置请求参数。ContinuousLocationRequest为API12新增参数。<br>**适用版本：** 12 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Location](arkts-location-geolocationmanager-location-i.md)&gt; | 是 | 回调函数，返回位置信息。 |
 
 **错误码：**
 
@@ -207,8 +207,8 @@ function on(type: 'cachedGnssLocationsChange', request: CachedGnssLocationsReque
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'cachedGnssLocationsChange' | 是 | 设置事件类型。type为“cachedGnssLocationsChange”，表示GNSS缓存定位结果上报。 |
-| request | CachedGnssLocationsRequest | 是 | GNSS缓存功能配置参数。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;Location&gt;&gt; | 是 | 回调函数，返回GNSS缓存位置。 |
+| request | [CachedGnssLocationsRequest](arkts-location-geolocationmanager-cachedgnsslocationsrequest-i.md) | 是 | GNSS缓存功能配置参数。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[Location](arkts-location-geolocationmanager-location-i.md)&gt;&gt; | 是 | 回调函数，返回GNSS缓存位置。 |
 
 **错误码：**
 
@@ -262,7 +262,7 @@ function on(type: 'satelliteStatusChange', callback: Callback<SatelliteStatusInf
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'satelliteStatusChange' | 是 | 设置事件类型。type为“satelliteStatusChange”，表示订阅GNSS卫星状态信息上报。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;SatelliteStatusInfo&gt; | 是 | 回调函数，返回GNSS卫星状态信息。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SatelliteStatusInfo](arkts-location-geolocationmanager-satellitestatusinfo-i.md)&gt; | 是 | 回调函数，返回GNSS卫星状态信息。 |
 
 **错误码：**
 
@@ -391,7 +391,7 @@ function on(type: 'gnssFenceStatusChange', request: GeofenceRequest, want: WantA
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'gnssFenceStatusChange' | 是 | 设置事件类型。type为“gnssFenceStatusChange”，表示订阅围栏事件上报。 |
-| request | GeofenceRequest | 是 | 围栏的配置参数。 |
+| request | [GeofenceRequest](arkts-location-geolocationmanager-geofencerequest-i.md) | 是 | 围栏的配置参数。 |
 | want | [WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-depr-t.md) | 是 | 用于接收地理围栏事件上报（进出围栏）。 |
 
 **错误码：**

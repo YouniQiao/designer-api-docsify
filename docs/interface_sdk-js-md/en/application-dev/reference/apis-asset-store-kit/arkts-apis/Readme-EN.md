@@ -1,6 +1,6 @@
 # ArkTS API<!--arkts-assetstorekit-->
 
-- [@ohos.security.asset](arkts-security-asset.md)
+- [@ohos.security.asset(Asset Store Service)](arkts-security-asset.md)
   - [add](arkts-assetstore-asset-add-f.md)
   <!--Del-->
   - [addAsUser(system api)](arkts-assetstore-asset-addasuser-f-sys.md)<!--DelEnd-->

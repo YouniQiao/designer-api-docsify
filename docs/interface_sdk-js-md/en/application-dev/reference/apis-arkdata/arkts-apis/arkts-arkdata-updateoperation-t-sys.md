@@ -14,4 +14,4 @@ Represents the batch update operation information.
 
 **System API:** This is a system API.
 
-**Type:** dataShare.UpdateOperation
+**Type:** [dataShare.UpdateOperation](arkts-arkdata-datashare-updateoperation-i-sys.md)

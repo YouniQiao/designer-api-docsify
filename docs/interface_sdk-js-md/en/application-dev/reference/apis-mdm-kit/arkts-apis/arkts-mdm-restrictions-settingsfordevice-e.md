@@ -26,7 +26,7 @@ APN configuration, currently supported only on phones and tablets.
 POWER_LONG_PRESS = 1
 ```
 
-Opens the power menu by number-pressing the power button. Currently, this item is supported only on phones and tablets.
+Opens the power menu by long-pressing the power button. Currently, this item is supported only on phones and tablets.
 
 **Since:** 26.0.0
 

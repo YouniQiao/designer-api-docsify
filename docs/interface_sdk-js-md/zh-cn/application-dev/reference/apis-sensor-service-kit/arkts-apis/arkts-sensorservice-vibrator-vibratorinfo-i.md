@@ -54,23 +54,6 @@ isHdHapticSupported: boolean
 
 **系统能力：** SystemCapability.Sensors.MiscDevice
 
-**示例**
-
-```TypeScript
-import { vibrator } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 使用try catch对可能出现的异常进行捕获
-try {
-  // 查询是否支持高清振动
-  let ret = vibrator.isHdHapticSupported();
-  console.info(`The query result is ${ret}`);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  console.error(`An unexpected error occurred. Code: ${e.code}, message: ${e.message}`);
-}
-```
-
 ## isLocalVibrator
 
 ```TypeScript

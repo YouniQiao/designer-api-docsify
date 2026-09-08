@@ -38,7 +38,7 @@ from: NavDestinationInfo | NavBar
 
 From navigation content info.
 
-**类型：** NavDestinationInfo \| NavBar
+**类型：** [NavDestinationInfo](arkts-arkui-uiobserver-navdestinationinfo-i.md) \| NavBar
 
 **起始版本：** 12
 
@@ -74,7 +74,7 @@ to: NavDestinationInfo | NavBar
 
 To navigation content info.
 
-**类型：** NavDestinationInfo \| NavBar
+**类型：** [NavDestinationInfo](arkts-arkui-uiobserver-navdestinationinfo-i.md) \| NavBar
 
 **起始版本：** 12
 

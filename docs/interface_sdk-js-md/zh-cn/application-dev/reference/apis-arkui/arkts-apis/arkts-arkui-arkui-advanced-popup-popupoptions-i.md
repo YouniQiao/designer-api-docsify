@@ -60,7 +60,7 @@ direction?: Direction
 
 默认值：Direction.Auto
 
-**类型：** Direction
+**类型：** [Direction](arkts-arkui-direction-e.md)
 
 **起始版本：** 12
 
@@ -158,7 +158,7 @@ Resource：显示对应的图标。
 
 默认值：true
 
-**类型：** boolean \| Resource
+**类型：** boolean \| [Resource](arkts-arkui-resource-t.md)
 
 **起始版本：** 11
 

@@ -84,7 +84,7 @@ deviceType: DeviceType
 
 设备类型。
 
-**类型：** DeviceType
+**类型：** [DeviceType](arkts-distributedservice-devicemanager-devicetype-e-sys.md)
 
 **起始版本：** 7
 

@@ -20,7 +20,7 @@ coordinateSystemType?: CoordinateSystemType
 
 Coordinate system type.
 
-**Type:** CoordinateSystemType
+**Type:** [CoordinateSystemType](arkts-location-geolocationmanager-coordinatesystemtype-e.md)
 
 **Since:** 12
 

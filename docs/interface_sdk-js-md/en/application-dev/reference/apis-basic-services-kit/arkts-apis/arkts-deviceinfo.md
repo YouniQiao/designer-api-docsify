@@ -24,7 +24,7 @@ import { deviceInfo } from '@kit.BasicServicesKit';
 
 | Name | Description |
 | --- | --- |
-| [apiAvailable](arkts-basicservices-deviceinfo-apiavailable-f.md) | Checks whether a specified API version is available on the current device. This API provides compatibility check across different OpenHarmony/Distribution OS versions. A suitable version check method is automatically selected based on the input format and supported API versions. |
+| [apiAvailable](arkts-basicservices-deviceinfo-apiavailable-f.md) | Checks whether a specified API version is available on the current device. This API provides compatibility check for OpenHarmony and its distribution OS API versions. A suitable version check method is automatically selected based on the input format and supported API versions. |
 
 ### Enums
 

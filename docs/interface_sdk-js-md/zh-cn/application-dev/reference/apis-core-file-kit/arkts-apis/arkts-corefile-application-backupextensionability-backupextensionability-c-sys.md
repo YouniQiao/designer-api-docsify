@@ -40,35 +40,6 @@ getBackupCompatibilityInfo(extInfo: string) : Promise<string>
 | --- | --- |
 | Promise&lt;string&gt; | Promise对象，返回备份过程中应用自定义的兼容性信息。 |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class BackupExt extends BackupExtensionAbility {
-  async getBackupCompatibilityInfo(extInfo: string): Promise<string> {
-    let ret: string = '';
-    try {
-      // 此处仅以JSON为示范，相应判断逻辑及相应字段由应用自定义
-      if (!extInfo) {
-        ret = '{"dbVersion": "1.0", "isThemCardEnable": "true"}';
-      } else {
-        let extJson: Record<string, string> = JSON.parse(extInfo);
-        if (extJson?.requireCompatibility) {
-          ret = '{"isSupportBackup": "true"}';
-        } else {
-          ret = '{"isSupportBackup": "false"}';
-        }
-      }
-    } catch (error) {
-      let err: BusinessError = error as BusinessError;
-      console.error(`getBackupCompatibilityInfo failed with error. Code: ${err.code}, message: ${err.message}`);
-    }
-    return ret;
-  }
-}
-```
-
 ## getBackupInfo
 
 ```TypeScript
@@ -90,18 +61,6 @@ getBackupInfo(): string
 | 类型 | 说明 |
 | --- | --- |
 | string | 应用自定义的备份信息，具体格式和字段由应用自行定义。 |
-
-**示例**
-
-```TypeScript
-class BackupExt extends BackupExtensionAbility {
-  getBackupInfo(): string {
-    console.info('getBackupInfo ok');
-    let info = 'app diy info';
-    return info;
-  }
-}
-```
 
 ## getRestoreCompatibilityInfo
 
@@ -130,32 +89,3 @@ getRestoreCompatibilityInfo(extInfo: string) : Promise<string>
 | 类型 | 说明 |
 | --- | --- |
 | Promise&lt;string&gt; | Promise对象，返回恢复过程中应用自定义的兼容性信息。 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class BackupExt extends BackupExtensionAbility {
-  async getRestoreCompatibilityInfo(extInfo: string): Promise<string> {
-    let ret: string = '';
-    try {
-      // 此处仅以JSON为示范，相应判断逻辑及相应字段由应用自定义
-      if (!extInfo) {
-        ret = '{"dbVersion": "1.0", "isThemCardEnable": "true"}';
-      } else {
-        let extJson: Record<string, string> = JSON.parse(extInfo);
-        if (extJson?.requireCompatibility) {
-          ret = '{"isSupportRestore": "true"}';
-        } else {
-          ret = '{"isSupportRestore": "false"}';
-        }
-      }
-    } catch (error) {
-      let err: BusinessError = error as BusinessError;
-      console.error(`getRestoreCompatibilityInfo failed with error. Code: ${err.code}, message: ${err.message}`);
-    }
-    return ret;
-  }
-}
-```

@@ -38,7 +38,7 @@ authType: AuthType
 
 身份验证凭据类型。
 
-**类型：** AuthType
+**类型：** [AuthType](arkts-basicservices-osaccount-authtype-e-sys.md)
 
 **起始版本：** 8
 

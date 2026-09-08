@@ -66,7 +66,7 @@ schedule: Progress
 
 表示端云同步过程。
 
-**类型：** Progress
+**类型：** [Progress](arkts-arkdata-relationalstore-progress-e.md)
 
 **起始版本：** 10
 

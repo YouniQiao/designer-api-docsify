@@ -35,10 +35,6 @@ constructor(encoding?: string)
 **示例**
 
 ```TypeScript
-let textEncoder = new util.TextEncoder("utf-8");
-```
-
-```TypeScript
 let decoder = new util.StringDecoder();
 ```
 

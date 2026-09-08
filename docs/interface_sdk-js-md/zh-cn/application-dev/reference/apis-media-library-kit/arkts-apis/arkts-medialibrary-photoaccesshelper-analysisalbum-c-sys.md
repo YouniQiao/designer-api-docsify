@@ -32,7 +32,7 @@ constructor(album: Album)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| album | Album | 是 | 智慧相册。 |
+| album | [Album](arkts-medialibrary-photoaccesshelper-album-i.md) | 是 | 智慧相册。 |
 
 **错误码：**
 
@@ -42,70 +42,6 @@ constructor(album: Album)
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
 
 **示例**
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  console.info('HighlightAlbum constructorDemo');
-  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-  let fetchOption: photoAccessHelper.FetchOptions = {
-    fetchColumns: [],
-    predicates: predicates
-  };
-  let albumFetchResult: photoAccessHelper.FetchResult<photoAccessHelper.Album> = await phAccessHelper.getAlbums(
-    photoAccessHelper.AlbumType.SMART, photoAccessHelper.AlbumSubtype.HIGHLIGHT, fetchOption);
-  let album: photoAccessHelper.Album = await albumFetchResult.getFirstObject();
-  let highlightAlbum: photoAccessHelper.HighlightAlbum = new photoAccessHelper.HighlightAlbum(album);
-  albumFetchResult.close();
-}
-```
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-
-async function example(context: Context) {
-  console.info('MediaAnalysisAlbumChangeRequest constructorDemo');
-  let helper: photoAccessHelper.PhotoAccessHelper = photoAccessHelper.getPhotoAccessHelper(context);
-  let albumFetchOption: photoAccessHelper.FetchOptions = {
-    fetchColumns: [],
-    predicates: new dataSharePredicates.DataSharePredicates()
-  };
-  let albumFetchResult: photoAccessHelper.FetchResult<photoAccessHelper.Album> =
-    await helper.getAlbums(photoAccessHelper.AlbumType.SMART, photoAccessHelper.AlbumSubtype.HIGHLIGHT, albumFetchOption);
-  if (albumFetchResult.getCount() === 0) {
-    console.error('No album');
-    return;
-  }
-  let highlightAlbum: photoAccessHelper.Album = await albumFetchResult.getFirstObject();
-  albumFetchResult.close();
-  let changeRequest: photoAccessHelper.MediaAnalysisAlbumChangeRequest =
-    new photoAccessHelper.MediaAnalysisAlbumChangeRequest(highlightAlbum);
-}
-```
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-
-async function example(context: Context) {
-  console.info('MediaHighlightAlbumChangeRequest constructorDemo');
-  let helper: photoAccessHelper.PhotoAccessHelper = photoAccessHelper.getPhotoAccessHelper(context);
-  let albumFetchOption: photoAccessHelper.FetchOptions = {
-    fetchColumns: [],
-    predicates: new dataSharePredicates.DataSharePredicates()
-  };
-  let albumFetchResult: photoAccessHelper.FetchResult<photoAccessHelper.Album> =
-    await helper.getAlbums(photoAccessHelper.AlbumType.SMART, photoAccessHelper.AlbumSubtype.HIGHLIGHT, albumFetchOption);
-  if (albumFetchResult.getCount() === 0) {
-    console.error('No album');
-    return;
-  }
-  let highlightAlbum: photoAccessHelper.Album = await albumFetchResult.getFirstObject();
-  albumFetchResult.close();
-  let changeRequest: photoAccessHelper.MediaHighlightAlbumChangeRequest =
-    new photoAccessHelper.MediaHighlightAlbumChangeRequest(highlightAlbum);
-}
-```
 
 ```TypeScript
 import { dataSharePredicates } from '@kit.ArkData';
@@ -129,28 +65,6 @@ async function example(context: Context) {
 }
 ```
 
-phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  console.info('MediaAlbumChangeRequest constructorDemo');
-  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-  let fetchOptions: photoAccessHelper.FetchOptions = {
-    fetchColumns: [],
-    predicates: predicates
-  };
-  try {
-    let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.Album> = await phAccessHelper.getAlbums(photoAccessHelper.AlbumType.USER, photoAccessHelper.AlbumSubtype.USER_GENERIC, fetchOptions);
-    let album: photoAccessHelper.Album = await fetchResult.getFirstObject();
-    let albumChangeRequest: photoAccessHelper.MediaAlbumChangeRequest = new photoAccessHelper.MediaAlbumChangeRequest(album);
-  } catch (err) {
-    console.error(`MediaAlbumChangeRequest constructorDemo failed with error: ${err.code}, ${err.message}`);
-  }
-}
-```
-
 ## getOrderPosition
 
 ```TypeScript
@@ -171,7 +85,7 @@ getOrderPosition(assets: Array<PhotoAsset>): Promise<Array<number>>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| assets | Array&lt;PhotoAsset&gt; | 是 | 需要获取顺序位置的相册中资产。 |
+| assets | Array&lt;[PhotoAsset](arkts-medialibrary-photoaccesshelper-photoasset-i.md)&gt; | 是 | 需要获取顺序位置的相册中资产。 |
 
 **返回值：**
 

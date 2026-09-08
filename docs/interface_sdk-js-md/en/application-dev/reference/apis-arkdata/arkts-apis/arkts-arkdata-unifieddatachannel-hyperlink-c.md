@@ -65,11 +65,3 @@ Indicates the url of a link
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
-
-**Examples**
-
-```TypeScript
-let link = new unifiedDataChannel.Hyperlink();
-link.url = 'www.XXX.com';
-link.description = 'This is description';
-```

@@ -20,7 +20,7 @@ readonly errorCode: ErrorCode
 
 预下载错误回调返回的特定错误类型。
 
-**类型：** ErrorCode
+**类型：** [ErrorCode](arkts-basicservices-cachedownload-errorcode-e.md)
 
 **起始版本：** 23
 

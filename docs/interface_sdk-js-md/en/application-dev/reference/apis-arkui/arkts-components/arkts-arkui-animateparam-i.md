@@ -81,7 +81,7 @@ When the type is string, it represents an animation interpolation curve, support
 
 Default value: **Curve.EaseInOut**
 
-**Type:** Curve \| string \| [ICurve](arkts-arkui-icurve-i.md)
+**Type:** [Curve](../arkts-apis/arkts-arkui-curve-e.md) \| string \| [ICurve](arkts-arkui-icurve-i.md)
 
 **Default:** Curve.EaseInOut
 
@@ -236,7 +236,7 @@ Default value: **PlayMode.Normal**
 > - **PlayMode.Reverse** is not recommended. Under this setting, the animation jumps to the end state at the
 > beginning, and its final state will be different from the value of the state variable.
 
-**Type:** PlayMode
+**Type:** [PlayMode](../arkts-apis/arkts-arkui-playmode-e.md)
 
 **Default:** PlayMode.Normal
 

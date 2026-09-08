@@ -166,7 +166,7 @@ Opens a session to connect to an SE in this reader. Multiple sessions can be ope
 
 | Type | Description |
 | --- | --- |
-| Session | Session instance opened. |
+| [Session](arkts-connectivity-omapi-session-i.md) | Session instance opened. |
 
 **Error codes:**
 

@@ -27,7 +27,7 @@ function getPermissionDef(permissionName: string, callback: AsyncCallback<Permis
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | permissionName | string | 是 | 表示权限名称。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;PermissionDef&gt; | 是 | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)，当获取成功时，err为undefined，data为获取到的Array&lt;PermissionDef&gt;；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[PermissionDef](arkts-ability-bundlemanager-permissiondef-t-sys.md)&gt; | 是 | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)，当获取成功时，err为undefined，data为获取到的Array&lt;PermissionDef&gt;；否则为错误对象。 |
 
 **错误码：**
 
@@ -87,7 +87,7 @@ function getPermissionDef(permissionName: string): Promise<PermissionDef>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;PermissionDef&gt; | Promise对象，返回Array&lt;PermissionDef&gt;对象。 |
+| Promise&lt;[PermissionDef](arkts-ability-bundlemanager-permissiondef-t-sys.md)&gt; | Promise对象，返回Array&lt;PermissionDef&gt;对象。 |
 
 **错误码：**
 

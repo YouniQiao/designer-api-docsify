@@ -38,7 +38,7 @@ photoType: PhotoType
 
 [PhotoType](arkts-medialibrary-photoaccesshelper-phototype-e.md) of the created media file, which can be **IMAGE** or **VIDEO**.
 
-**Type:** PhotoType
+**Type:** [PhotoType](arkts-medialibrary-photoaccesshelper-phototype-e.md)
 
 **Since:** 23
 
@@ -61,7 +61,7 @@ If this parameter is not passed, the system generates a value. The parameter spe
 - It must not contain a file name extension.  
 - It must not contain any invalid characters, which are:\ / : * ? " ' ` &lt; &gt; | { } [ ]  
 - The file name consists of the title and file name extension. The file name string length ranges from 1 to 255.  
-Therefore, the title length cannot be too number.
+Therefore, the title length cannot be too long.
 
 **Type:** string
 

@@ -31,7 +31,7 @@ Obtains the **Calendar** object for the specified locale and calendar type.
 
 | Type | Description |
 | --- | --- |
-| Calendar | Calendar** object. |
+| [Calendar](arkts-localization-i18n-calendar-c.md) | Calendar** object. |
 
 **Examples**
 

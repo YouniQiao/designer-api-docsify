@@ -80,7 +80,7 @@ securityType: WifiSecurityType
 
 Security type: reference definition of WifiSecurityType
 
-**Type:** WifiSecurityType
+**Type:** [WifiSecurityType](arkts-connectivity-wifi-wifisecuritytype-e.md)
 
 **Since:** 6
 

@@ -42,7 +42,7 @@ state: ProfileConnectionState
 
 Connection state of the Gatt profile
 
-**Type:** ProfileConnectionState
+**Type:** [ProfileConnectionState](arkts-connectivity-bluetoothmanager-profileconnectionstate-e.md)
 
 **Since:** 9
 

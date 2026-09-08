@@ -34,7 +34,7 @@ function setProfileNickname(slotId: number, iccid: string, nickname: string): Pr
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;ResultCode&gt; | Promise对象，返回设置昵称的结果码。 |
+| Promise&lt;[ResultCode](arkts-telephony-esim-resultcode-e-sys.md)&gt; | Promise对象，返回设置昵称的结果码。 |
 
 **错误码：**
 

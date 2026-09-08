@@ -32,7 +32,7 @@ Obtains the dynamic icon information of all users and all application clones bas
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;DynamicIconInfo&gt;&gt; | Promise used to return the dynamic icon information. |
+| Promise&lt;Array&lt;[DynamicIconInfo](arkts-ability-bundlemanager-dynamiciconinfo-t-sys.md)&gt;&gt; | Promise used to return the dynamic icon information. |
 
 **Error codes:**
 

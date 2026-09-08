@@ -37,7 +37,7 @@ addCert(cert: X509Cert): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| cert | X509Cert | 是 | 要添加的X.509证书。 |
+| cert | [X509Cert](arkts-devicecertificate-cert-x509cert-i.md) | 是 | 要添加的X.509证书。 |
 
 **错误码：**
 
@@ -247,7 +247,7 @@ addSigner(cert: X509Cert, keyInfo: PrivateKeyInfo, config: CmsSignerConfig): voi
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| cert | X509Cert | 是 | 指定X.509证书。 |
+| cert | [X509Cert](arkts-devicecertificate-cert-x509cert-i.md) | 是 | 指定X.509证书。 |
 | keyInfo | [PrivateKeyInfo](arkts-devicecertificate-cert-privatekeyinfo-i.md) | 是 | 指定私钥信息。 |
 | config | [CmsSignerConfig](arkts-devicecertificate-cert-cmssignerconfig-i.md) | 是 | 指定签名者选项。 |
 

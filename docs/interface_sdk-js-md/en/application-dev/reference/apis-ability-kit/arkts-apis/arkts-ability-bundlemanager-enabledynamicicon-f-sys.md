@@ -96,7 +96,7 @@ To enable the dynamic icon for another user, you must request the ohos.permissio
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name based on which the dynamic icon is to be enabled. |
 | moduleName | string | Yes | Module name based on which the dynamic icon is to be enabled. |
-| option | BundleOptions | No | User and application clone index based on which the dynamic icon is to be enabled. By default, the dynamic icon is enabled for all users and all application clones. |
+| option | [BundleOptions](arkts-ability-bundle-bundleoptions-i.md) | No | User and application clone index based on which the dynamic icon is to be enabled. By default, the dynamic icon is enabled for all users and all application clones. |
 
 **Return value:**
 

@@ -41,16 +41,6 @@ Returns an iterator allowing to go through all key/value pairs contained in this
 **Examples**
 
 ```TypeScript
-const paramsObject = new url.URLParams('fod=bay&edg=bap');
-let iter = paramsObject[Symbol.iterator]();
-for (let pair of iter) {
-  console.info(pair[0] + ', ' + pair[1]);
-}
-// fod, bay
-// edg, bap
-```
-
-```TypeScript
 const paramsObject = new url.URLSearchParams('fod=bay&edg=bap');
 let pairs = paramsObject[Symbol.iterator]();
 for (let pair of pairs) {
@@ -84,12 +74,6 @@ Appends a specified key/value pair as a new search parameter.
 | value | string | Yes | The value of the search parameter to insert |
 
 **Examples**
-
-```TypeScript
-let urlObject = url.URL.parseURL('https://developer.exampleUrl/?fod=1&bard=2');
-let paramsObject = new url.URLParams(urlObject.search.slice(1));
-paramsObject.append('fod', '3');
-```
 
 ```TypeScript
 let urlObject = new url.URL('https://developer.exampleUrl/?fod=1&bard=2');
@@ -154,12 +138,6 @@ Deletes the given search parameter and its associated value,from the list of all
 **Examples**
 
 ```TypeScript
-let urlObject = url.URL.parseURL('https://developer.exampleUrl/?fod=1&bard=2');
-let paramsObject = new url.URLParams(urlObject.search.slice(1));
-paramsObject.delete('fod');
-```
-
-```TypeScript
 let urlObject = new url.URL('https://developer.exampleUrl/?fod=1&bard=2');
 let paramsObject = new url.URLSearchParams(urlObject.search.slice(1));
 paramsObject.delete('fod');
@@ -188,16 +166,6 @@ Returns an ES6 iterator. Each item of the iterator is a JavaScript Array. The fi
 | [IterableIterator](../../apis-default/arkts-apis/arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;[string, string]&gt; | Returns an iterator for ES6. |
 
 **Examples**
-
-```TypeScript
-let paramsObject = new url.URLParams("keyName1=valueName1&keyName2=valueName2");
-let pair = paramsObject.entries();
-for (let item of pair) {
-    console.info(item[0] + '=' + item[1]);
-}
-// keyName1=valueName1
-// keyName2=valueName2
-```
 
 ```TypeScript
 let searchParamsObject = new url.URLSearchParams("keyName1=valueName1&keyName2=valueName2");
@@ -272,13 +240,6 @@ Returns the first value associated to the given search parameter.
 **Examples**
 
 ```TypeScript
-let paramsObject = new url.URLParams('name=Jonathan&age=18');
-let name = paramsObject.get("name"); // is the string "Jonathan"
-let age = paramsObject.get("age"); // is the string "18"
-let getObj = paramsObject.get("abc"); // undefined
-```
-
-```TypeScript
 let paramsObject = new url.URLSearchParams('name=Jonathan&age=18');
 let name = paramsObject.get("name"); // is the string "Jonathan"
 let age = paramsObject.get("age"); // is the string '18'
@@ -314,13 +275,6 @@ Returns all key-value pairs associated with a given search parameter as an array
 | string[] | Returns all key-value pairs with the specified name |
 
 **Examples**
-
-```TypeScript
-let urlObject = url.URL.parseURL('https://developer.exampleUrl/?fod=1&bard=2');
-let params = new url.URLParams(urlObject.search.slice(1));
-params.append('fod', '3'); // Add a second value for the fod parameter.
-console.info(params.getAll('fod').toString()) // Output ["1","3"].
-```
 
 ```TypeScript
 let urlObject = new url.URL('https://developer.exampleUrl/?fod=1&bard=2');
@@ -360,12 +314,6 @@ Returns a Boolean that indicates whether a parameter with the specified name exi
 **Examples**
 
 ```TypeScript
-let urlObject = url.URL.parseURL('https://developer.exampleUrl/?fod=1&bard=2');
-let paramsObject = new url.URLParams(urlObject.search.slice(1));
-let result = paramsObject.has('bard');
-```
-
-```TypeScript
 let urlObject = new url.URL('https://developer.exampleUrl/?fod=1&bard=2');
 let paramsObject = new url.URLSearchParams(urlObject.search.slice(1));
 paramsObject.has('bard') === true;
@@ -394,16 +342,6 @@ Returns an iterator allowing to go through all keys contained in this object.
 | [IterableIterator](../../apis-default/arkts-apis/arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;string&gt; | Returns an ES6 Iterator over the names of each name-value pair. |
 
 **Examples**
-
-```TypeScript
-let paramsObject = new url.URLParams("key1=value1&key2=value2");
-let keys = paramsObject.keys();
-for (let key of keys) {
-  console.info(key);
-}
-// key1
-// key2
-```
 
 ```TypeScript
 let searchParamsObject = new url.URLSearchParams("key1=value1&key2=value2");
@@ -441,12 +379,6 @@ Sets the value associated with a given search parameter to the given value. If t
 **Examples**
 
 ```TypeScript
-let urlObject = url.URL.parseURL('https://developer.exampleUrl/?fod=1&bard=2');
-let paramsObject = new url.URLParams(urlObject.search.slice(1));
-paramsObject.set('baz', '3'); // Add a third parameter.
-```
-
-```TypeScript
 let urlObject = new url.URL('https://developer.exampleUrl/?fod=1&bard=2');
 let paramsObject = new url.URLSearchParams(urlObject.search.slice(1));
 paramsObject.set('baz', '3'); // Add a third parameter.
@@ -469,12 +401,6 @@ Sort all key/value pairs contained in this object in place and return undefined.
 **System capability:** SystemCapability.Utils.Lang
 
 **Examples**
-
-```TypeScript
-let paramsObject = new url.URLParams("c=3&a=9&b=4&d=2"); // Create a test URLParams object
-paramsObject.sort(); // Sort the key/value pairs
-console.info(paramsObject.toString()); // Display the sorted query string // Output a=9&b=4&c=3&d=2
-```
 
 ```TypeScript
 let searchParamsObject = new url.URLSearchParams("c=3&a=9&b=4&d=2"); // Create a test URLSearchParams object
@@ -507,18 +433,6 @@ Returns a query string suitable for use in a URL.
 **Examples**
 
 ```TypeScript
-let urlObject = url.URL.parseURL('https://developer.exampleUrl/?fod=1&bard=2');
-let params = new url.URLParams(urlObject.search.slice(1));
-params.append('fod', '3');
-console.info(params.toString()); // Output 'fod=1&bard=2&fod=3'
-```
-
-```TypeScript
-const urlObject = url.URL.parseURL('https://username:password@host:8080/directory/file?query=pppppp#qwer=da');
-let result = urlObject.toString(); // Output 'https://username:password@host:8080/directory/file?query=pppppp#qwer=da'
-```
-
-```TypeScript
 let urlObject = new url.URL('https://developer.exampleUrl/?fod=1&bard=2');
 let params = new url.URLSearchParams(urlObject.search.slice(1));
 params.append('fod', '3');
@@ -548,16 +462,6 @@ Returns an iterator allowing to go through all values contained in this object.
 | [IterableIterator](../../apis-default/arkts-apis/arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;string&gt; | Returns an ES6 Iterator over the values of each name-value pair. |
 
 **Examples**
-
-```TypeScript
-let paramsObject = new url.URLParams("key1=value1&key2=value2");
-let values = paramsObject.values();
-for (let value of values) {
-  console.info(value);
-}
-// value1
-// value2
-```
 
 ```TypeScript
 let searchParams = new url.URLSearchParams("key1=value1&key2=value2");

@@ -62,7 +62,7 @@ ads: advertising.Advertisement[]
 
 说明：非贴片广告类型，组件只展示数组第一个数据。
 
-**类型：** advertising.Advertisement[]
+**类型：** [advertising.Advertisement](arkts-ads-advertising-advertisement-t.md)[]
 
 **起始版本：** 11
 
@@ -78,7 +78,7 @@ displayOptions: advertising.AdDisplayOptions
 
 广告展示参数。
 
-**类型：** advertising.AdDisplayOptions
+**类型：** [advertising.AdDisplayOptions](arkts-ads-advertising-addisplayoptions-i.md)
 
 **起始版本：** 11
 
@@ -94,7 +94,7 @@ interactionListener: advertising.AdInteractionListener
 
 广告状态变化回调。
 
-**类型：** advertising.AdInteractionListener
+**类型：** [advertising.AdInteractionListener](arkts-ads-advertising-adinteractionlistener-i.md)
 
 **起始版本：** 11
 

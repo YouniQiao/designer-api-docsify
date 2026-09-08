@@ -30,7 +30,7 @@ Adds a specified untrusted hotspot configuration.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | WifiDeviceConfig | Yes | Indicates the device configuration for connection to the Wi-Fi network. |
+| config | [WifiDeviceConfig](arkts-connectivity-wifi-wifideviceconfig-i.md) | Yes | Indicates the device configuration for connection to the Wi-Fi network. |
 
 **Return value:**
 
@@ -96,7 +96,7 @@ Adds a specified untrusted hotspot configuration.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | WifiDeviceConfig | Yes | Indicates the device configuration for connection to the Wi-Fi network. |
+| config | [WifiDeviceConfig](arkts-connectivity-wifi-wifideviceconfig-i.md) | Yes | Indicates the device configuration for connection to the Wi-Fi network. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes |  |
 
 **Examples**

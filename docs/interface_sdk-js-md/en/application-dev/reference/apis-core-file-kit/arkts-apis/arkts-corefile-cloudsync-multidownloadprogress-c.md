@@ -172,7 +172,7 @@ state: State
 
 Execution state of the batch download.
 
-**Type:** State
+**Type:** [State](arkts-corefile-cloudsync-state-e.md)
 
 **Since:** 20
 

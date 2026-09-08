@@ -48,7 +48,7 @@ function getStateByIndex(index: number): RouterState | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| RouterState \| undefined | 返回对应索引页面的状态信息，包含页面索引、名称、路径和参数。索引不存在时返回undefined。 |
+| [RouterState](arkts-arkui-router-routerstate-i.md) \| undefined | 返回对应索引页面的状态信息，包含页面索引、名称、路径和参数。索引不存在时返回undefined。 |
 
 **示例**
 

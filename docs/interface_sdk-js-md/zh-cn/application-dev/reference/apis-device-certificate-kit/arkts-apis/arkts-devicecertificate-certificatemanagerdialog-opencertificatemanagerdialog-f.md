@@ -26,7 +26,7 @@ function openCertificateManagerDialog(context: common.Context, pageType: Certifi
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | common.Context | 是 | 表示应用的上下文信息。 |
+| context | [common.Context](../../apis-ability-kit/arkts-apis/arkts-ability-common-context-t.md) | 是 | 表示应用的上下文信息。 |
 | pageType | [CertificateDialogPageType](arkts-devicecertificate-certificatemanagerdialog-certificatedialogpagetype-e.md) | 是 | 表示页面类型。 |
 
 **返回值：**

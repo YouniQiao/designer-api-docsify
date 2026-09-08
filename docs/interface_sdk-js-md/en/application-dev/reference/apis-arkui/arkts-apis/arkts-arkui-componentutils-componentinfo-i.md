@@ -20,7 +20,7 @@ localOffset: Offset
 
 Offset of the component relative to the parent component.
 
-**Type:** Offset
+**Type:** [Offset](arkts-arkui-componentutils-offset-i.md)
 
 **Since:** 10
 
@@ -74,7 +74,7 @@ screenOffset: Offset
 
 Offset of the component relative to the screen.
 
-**Type:** Offset
+**Type:** [Offset](arkts-arkui-componentutils-offset-i.md)
 
 **Since:** 10
 
@@ -146,7 +146,7 @@ windowOffset: Offset
 
 Offset of the component relative to the window.
 
-**Type:** Offset
+**Type:** [Offset](arkts-arkui-componentutils-offset-i.md)
 
 **Since:** 10
 

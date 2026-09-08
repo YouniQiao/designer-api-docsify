@@ -27,8 +27,8 @@ function updateFormSize(formId: string, newDimension: formInfo.FormDimension, ne
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | formId | string | 是 | 卡片标识。 |
-| newDimension | formInfo.FormDimension | 是 | 卡片尺寸，例如 Dimension_1_2，表示 1 x 2 卡片。 |
-| newRect | formInfo.Rect | 是 | 卡片位置信息，包括卡片左上角顶点的xy坐标和卡片的宽高。 |
+| newDimension | [formInfo.FormDimension](arkts-form-forminfo-formdimension-e.md) | 是 | 卡片尺寸，例如 Dimension_1_2，表示 1 x 2 卡片。 |
+| newRect | [formInfo.Rect](arkts-form-forminfo-rect-i.md) | 是 | 卡片位置信息，包括卡片左上角顶点的xy坐标和卡片的宽高。 |
 
 **错误码：**
 

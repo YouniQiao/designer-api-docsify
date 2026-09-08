@@ -129,7 +129,7 @@ direction(direction: PlayMode): SimpleAnimatorOptions
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| direction | PlayMode | 是 | 设置animator动画播放方向。PlayMode.Normal：动画正向循环播放。PlayMode.Reverse：动画反向循环播放。PlayMode.Alternate：动画交替循环播放，奇数次正向播放，偶数次反向播放。PlayMode.AlternateReverse：动画反向交替循环播放，奇数次反向播放，偶数次正向播放。默认值：PlayMode.Normal |
+| direction | [PlayMode](arkts-arkui-playmode-e.md) | 是 | 设置animator动画播放方向。PlayMode.Normal：动画正向循环播放。PlayMode.Reverse：动画反向循环播放。PlayMode.Alternate：动画交替循环播放，奇数次正向播放，偶数次反向播放。PlayMode.AlternateReverse：动画反向交替循环播放，奇数次反向播放，偶数次正向播放。默认值：PlayMode.Normal |
 
 **返回值：**
 

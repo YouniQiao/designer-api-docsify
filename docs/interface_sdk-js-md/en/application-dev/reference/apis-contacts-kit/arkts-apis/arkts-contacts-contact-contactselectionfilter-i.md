@@ -36,7 +36,7 @@ filterType: FilterType
 
 Filter type.
 
-**Type:** FilterType
+**Type:** [FilterType](arkts-contacts-contact-filtertype-e.md)
 
 **Since:** 15
 

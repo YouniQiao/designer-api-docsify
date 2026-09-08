@@ -103,7 +103,7 @@ avoidance(mode: AvoidanceMode)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mode | [AvoidanceMode](arkts-arkui-avoidancemode-e.md) | 是 | 设置下拉菜单的避让模式。默认值：AvoidanceMode.COVER_TARGET |
+| mode | [AvoidanceMode](arkts-arkui-avoidancemode-e.md) | 是 | [设置下拉菜单的避让模式。默认值：AvoidanceMode.COVER_TARGET](arkts-arkui-avoidancemode-e.md) |
 
 ## controlSize
 
@@ -369,7 +369,7 @@ menuBackgroundBlurStyle(value: BlurStyle)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | BlurStyle | 是 | 下拉菜单的背景模糊材质。默认值：BlurStyle.COMPONENT_ULTRA_THICK |
+| value | [BlurStyle](arkts-arkui-blurstyle-e.md) | 是 | [下拉菜单的背景模糊材质。默认值：BlurStyle.COMPONENT_ULTRA_THICK](arkts-arkui-blurstyle-e.md) |
 
 ## menuBackgroundBlurStyle
 
@@ -391,7 +391,7 @@ menuBackgroundBlurStyle(style: Optional<BlurStyle>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style | [Optional](arkts-arkui-optional-t.md)&lt;BlurStyle&gt; | 是 | 下拉菜单的背景模糊材质。当style的值为undefined时，默认值：BlurStyle.COMPONENT_ULTRA_THICK |
+| style | [Optional](arkts-arkui-optional-t.md)&lt;[BlurStyle](arkts-arkui-blurstyle-e.md)&gt; | 是 | [下拉菜单的背景模糊材质。当style的值为undefined时，默认值：BlurStyle.COMPONENT_ULTRA_THICK](arkts-arkui-blurstyle-e.md) |
 
 ## menuBackgroundBlurStyleOptions
 
@@ -905,7 +905,7 @@ selected(value: number | Resource)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number \| Resource | 是 | 下拉菜单初始选项的索引，索引值从0开始。<br>**适用版本：** 11 |
+| value | number \| [Resource](../arkts-apis/arkts-arkui-resource-t.md) | 是 | 下拉菜单初始选项的索引，索引值从0开始。<br>**适用版本：** 11 |
 
 ## selected
 
@@ -929,7 +929,7 @@ selected(numCount: Optional<number | Resource>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| numCount | [Optional](arkts-arkui-optional-t.md)&lt;number \| Resource&gt; | 是 | 下拉菜单初始选项的索引，索引值从0开始。当numCount的值为undefined或null时，选中第一项。 |
+| numCount | [Optional](arkts-arkui-optional-t.md)&lt;number \| [Resource](../arkts-apis/arkts-arkui-resource-t.md)&gt; | 是 | 下拉菜单初始选项的索引，索引值从0开始。当numCount的值为undefined或null时，选中第一项。 |
 
 ## selectedOptionBgColor
 

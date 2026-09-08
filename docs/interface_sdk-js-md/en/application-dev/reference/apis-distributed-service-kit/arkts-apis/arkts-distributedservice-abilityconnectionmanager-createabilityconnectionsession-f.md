@@ -29,8 +29,8 @@ Creates a collaboration session between applications.
 | --- | --- | --- | --- |
 | serviceName | string | Yes | Service name for the application. The service name must be the same on the local end and peer end. The value contains a maximum of 256 characters. |
 | context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | Yes | Application context. |
-| peerInfo | PeerInfo | Yes | Collaboration information of the peer end. |
-| connectOptions | ConnectOptions | Yes | Connection options for the application. |
+| peerInfo | [PeerInfo](arkts-distributedservice-abilityconnectionmanager-peerinfo-i.md) | Yes | Collaboration information of the peer end. |
+| connectOptions | [ConnectOptions](arkts-distributedservice-abilityconnectionmanager-connectoptions-i.md) | Yes | Connection options for the application. |
 
 **Return value:**
 

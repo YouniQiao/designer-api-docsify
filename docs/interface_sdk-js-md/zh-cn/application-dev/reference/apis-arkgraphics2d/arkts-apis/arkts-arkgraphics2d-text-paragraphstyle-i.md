@@ -20,7 +20,7 @@ align?: TextAlign
 
 文本对齐方式，默认为START。若同时配置tab属性，制表符对齐方式将失效。
 
-**类型：** TextAlign
+**类型：** [TextAlign](arkts-arkgraphics2d-text-textalign-e.md)
 
 **起始版本：** 12
 
@@ -290,7 +290,7 @@ textDirection?: TextDirection
 
 文本方向，默认为LTR。
 
-**类型：** TextDirection
+**类型：** [TextDirection](arkts-arkgraphics2d-text-textdirection-e.md)
 
 **起始版本：** 12
 
@@ -322,7 +322,7 @@ textStyle?: TextStyle
 
 作用于整个段落的文本样式，默认为初始的文本样式。
 
-**类型：** TextStyle
+**类型：** [TextStyle](arkts-arkgraphics2d-text-textstyle-i.md)
 
 **起始版本：** 12
 
@@ -354,7 +354,7 @@ verticalAlign?: TextVerticalAlign
 
 文本垂直对齐方式，默认为BASELINE，即文本基线对齐。开启行高缩放（即设置[TextStyle](arkts-arkgraphics2d-text-textstyle-i.md)的heightScale）或行内不同字号（即设置[TextStyle](arkts-arkgraphics2d-text-textstyle-i.md)的fontSize）文本混排时生效。若行内有上下标文本（即设置[TextStyle](arkts-arkgraphics2d-text-textstyle-i.md)的badgeType属性文本），上下标文本将与普通文本一样参与垂直对齐。
 
-**类型：** TextVerticalAlign
+**类型：** [TextVerticalAlign](arkts-arkgraphics2d-text-textverticalalign-e.md)
 
 **起始版本：** 20
 
@@ -370,7 +370,7 @@ wordBreak?: WordBreak
 
 断词类型，默认为BREAK_WORD。
 
-**类型：** WordBreak
+**类型：** [WordBreak](arkts-arkgraphics2d-text-wordbreak-e.md)
 
 **起始版本：** 12
 

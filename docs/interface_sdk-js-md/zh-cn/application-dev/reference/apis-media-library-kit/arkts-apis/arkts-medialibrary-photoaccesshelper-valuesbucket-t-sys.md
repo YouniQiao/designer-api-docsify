@@ -12,4 +12,4 @@ type ValuesBucket = Record<string, ValueType>
 
 **系统接口：** 此接口为系统接口。
 
-**类型：** Record&lt;string, ValueType&gt;
+**类型：** Record&lt;string, [ValueType](arkts-medialibrary-photoaccesshelper-valuetype-t-sys.md)&gt;

@@ -31,15 +31,7 @@ A constructor used to create a **GallerySync** instance.
 **Examples**
 
 ```TypeScript
-let fileSync = new cloudSync.FileSync()
-```
-
-```TypeScript
 let gallerySync = new cloudSync.GallerySync()
-```
-
-```TypeScript
-let download = new cloudSync.Download()
 ```
 
 ## off
@@ -211,24 +203,6 @@ Starts device-cloud sync. This API uses a promise to return the result.
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
-let fileSync = new cloudSync.FileSync();
-
-let callback = (pg: cloudSync.SyncProgress) => {
-  console.info("file sync state: " + pg.state + "error type: " + pg.error);
-}
-
-fileSync.on('progress', callback);
-
-fileSync.start().then(() => {
-  console.info("start sync successfully");
-}).catch((err: BusinessError) => {
-  console.error("start sync failed with error message: " + err.message + ", error code: " + err.code);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
 let gallerySync = new cloudSync.GallerySync();
 
 gallerySync.on('progress', (pg: cloudSync.SyncProgress) => {
@@ -276,20 +250,6 @@ Starts device-cloud sync. This API uses an asynchronous callback to return the r
 | 22400003 | Low battery level. |
 
 **Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let fileSync = new cloudSync.FileSync();
-
-fileSync.start((err: BusinessError) => {
-  if (err) {
-    console.error("start sync failed with error message: " + err.message + ", error code: " + err.code);
-  } else {
-    console.info("start sync successfully");
-  }
-});
-```
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -345,18 +305,6 @@ Stops device-cloud sync. This API uses a promise to return the result.
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
-let fileSync = new cloudSync.FileSync();
-
-fileSync.stop().then(() => {
-  console.info("stop sync successfully");
-}).catch((err: BusinessError) => {
-  console.error("stop sync failed with error message: " + err.message + ", error code: " + err.code);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
 let gallerySync = new cloudSync.GallerySync();
 
 gallerySync.stop().then(() => {
@@ -402,20 +350,6 @@ Stops device-cloud sync. This API uses an asynchronous callback to return the re
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified;  2.Incorrect parameter types. |
 
 **Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let fileSync = new cloudSync.FileSync();
-
-fileSync.stop((err: BusinessError) => {
-  if (err) {
-    console.error("stop sync failed with error message: " + err.message + ", error code: " + err.code);
-  } else {
-    console.info("stop sync successfully");
-  }
-});
-```
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

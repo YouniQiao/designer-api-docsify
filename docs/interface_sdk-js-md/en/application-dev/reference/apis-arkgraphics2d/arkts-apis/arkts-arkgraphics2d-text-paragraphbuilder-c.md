@@ -192,7 +192,7 @@ Builds a paragraph and generates a paragraph object that can be used for subsequ
 
 | Type | Description |
 | --- | --- |
-| Paragraph | Paragraph** object that can be used for subsequent rendering. |
+| [Paragraph](arkts-arkgraphics2d-text-paragraph-c.md) | Paragraph** object that can be used for subsequent rendering. |
 
 **Examples**
 
@@ -295,7 +295,7 @@ A constructor used to create a **ParagraphBuilder** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| paragraphStyle | ParagraphStyle | Yes | Paragraph style. |
+| paragraphStyle | [ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md) | Yes | Paragraph style. |
 | fontCollection | [FontCollection](arkts-arkgraphics2d-text-fontcollection-c.md) | Yes | Font collection object that provides font resources required for text typesetting, used for glyph matching and text rendering during paragraph construction. |
 
 **Examples**
@@ -406,7 +406,7 @@ Applies a new style to the current text blob.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| textStyle | TextStyle | Yes | Text style, which describes various visual attributes of text, such as font, font size, color, font weight, word spacing, line spacing, decoration (such as underline and strikethrough), and text shadow. |
+| textStyle | [TextStyle](arkts-arkgraphics2d-text-textstyle-i.md) | Yes | Text style, which describes various visual attributes of text, such as font, font size, color, font weight, word spacing, line spacing, decoration (such as underline and strikethrough), and text shadow. |
 
 **Examples**
 

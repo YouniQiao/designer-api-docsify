@@ -28,7 +28,7 @@ Obtains the numeric mask combination for the USB function list in Device mode.
 
 | Type | Description |
 | --- | --- |
-| FunctionType | Numeric mask combination for the USB function list. |
+| [FunctionType](arkts-basicservices-usb-functiontype-e-sys.md) | Numeric mask combination for the USB function list. |
 
 **Examples**
 

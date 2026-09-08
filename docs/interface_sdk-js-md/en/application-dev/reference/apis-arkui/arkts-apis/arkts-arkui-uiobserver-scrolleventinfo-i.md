@@ -22,7 +22,7 @@ axis?: Axis
 
 Scroll axis.
 
-**Type:** Axis
+**Type:** [Axis](arkts-arkui-axis-e.md)
 
 **Since:** 20
 

@@ -27,7 +27,7 @@ This API can only be used in the main thread. If a thread error occurs, an error
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'error' | Yes | Event type. It is fixed at **'error'**. |
-| observer | ErrorObserver | Yes | Error observer instance. |
+| observer | [ErrorObserver](arkts-ability-errormanager-errorobserver-t.md) | Yes | Error observer instance. |
 
 **Return value:**
 
@@ -94,7 +94,7 @@ This API can only be used in the main thread. If a thread error occurs, an error
 | --- | --- | --- | --- |
 | type | 'loopObserver' | Yes | Event type. It is fixed at **'loopObserver'**, indicating an observer for the message processing duration of the main thread. |
 | timeout | number | Yes | Event execution threshold, in milliseconds. The value must be greater than **0**.The unit is milliseconds(ms). |
-| observer | LoopObserver | Yes | Observer to register. |
+| observer | [LoopObserver](arkts-ability-errormanager-loopobserver-t.md) | Yes | Observer to register. |
 
 **Error codes:**
 

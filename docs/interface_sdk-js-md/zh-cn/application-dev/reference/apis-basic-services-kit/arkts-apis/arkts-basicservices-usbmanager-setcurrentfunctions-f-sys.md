@@ -28,7 +28,7 @@ function setCurrentFunctions(funcs: FunctionType): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| funcs | FunctionType | 是 | 功能列表对应的数字掩码，可通过位运算组合多个功能。 |
+| funcs | [FunctionType](arkts-basicservices-usbmanager-functiontype-e-sys.md) | 是 | 功能列表对应的数字掩码，可通过位运算组合多个功能。 |
 
 **返回值：**
 
@@ -42,17 +42,3 @@ function setCurrentFunctions(funcs: FunctionType): Promise<void>
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:  1.Mandatory parameters are left unspecified.  2.Incorrect parameter types. |
 | [14400002](../errorcode-usb.md#14400002-hdc功能被禁用) | Permission denied. The HDC is disabled by the system. |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-// 设置USB功能类型为HDC
-let funcs: usbManager.FunctionType = usbManager.FunctionType.HDC;
-// 异步设置当前USB功能
-usbManager.setCurrentFunctions(funcs).then(() => {
-  console.info('usb setCurrentFunctions successfully.');
-}).catch((err: BusinessError) => {
-  console.error(`usb setCurrentFunctions failed. Code: ${err.code}, message: ${err.message}`);
-});
-```

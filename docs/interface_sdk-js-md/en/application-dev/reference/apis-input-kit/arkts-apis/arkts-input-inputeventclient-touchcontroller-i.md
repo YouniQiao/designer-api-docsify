@@ -36,7 +36,7 @@ Presses down a touch point. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| touch | TouchPoint | Yes | Information about the touch point that is in contact with the display. |
+| touch | [TouchPoint](arkts-input-inputeventclient-touchpoint-i.md) | Yes | Information about the touch point that is in contact with the display. |
 
 **Return value:**
 
@@ -126,7 +126,7 @@ Moves a touch point. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| touch | TouchPoint | Yes | Information about the touch point to be moved. |
+| touch | [TouchPoint](arkts-input-inputeventclient-touchpoint-i.md) | Yes | Information about the touch point to be moved. |
 
 **Return value:**
 
@@ -145,6 +145,7 @@ Moves a touch point. This API uses a promise to return the result.
 **Examples**
 
 For details, see [touchDown](#touchdown).
+- simpleType:
 
 ## touchUp
 
@@ -166,7 +167,7 @@ Releases a touch point. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| touch | TouchPoint | Yes | Information about the touch point to be released. |
+| touch | [TouchPoint](arkts-input-inputeventclient-touchpoint-i.md) | Yes | Information about the touch point to be released. |
 
 **Return value:**
 
@@ -185,3 +186,4 @@ Releases a touch point. This API uses a promise to return the result.
 **Examples**
 
 For details, see [touchDown](#touchdown).
+- simpleType:

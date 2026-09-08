@@ -8,7 +8,7 @@ const audioBalance: Config<number>
 
 Indicates the configuration for left and right channel volume balance. **-1.0** indicates output from the left channel only; **0.0** indicates balanced output from both channels; **1.0** indicates output from the right channel only. Intermediate values represent a linear ratio of the left and right channel volumes. The value ranges from -1. 0 to 1.0. The default value is **0.0**.
 
-**Type:** Config&lt;number&gt;
+**Type:** [Config](arkts-accessibility-config-config-i-sys.md)&lt;number&gt;
 
 **Since:** 10
 
@@ -24,7 +24,7 @@ const audioMono: Config<boolean>
 
 Indicates the mono audio feature status. The value **true** indicates that the mono audio feature is enabled, and **false** indicates that it is disabled. The default value is **false**.
 
-**Type:** Config&lt;boolean&gt;
+**Type:** [Config](arkts-accessibility-config-config-i-sys.md)&lt;boolean&gt;
 
 **Since:** 10
 
@@ -40,7 +40,7 @@ const clickResponseTime: Config<ClickResponseTime>
 
 Length of time required for a click.
 
-**Type:** Config&lt;[ClickResponseTime](arkts-accessibility-config-clickresponsetime-t-sys.md)&gt;
+**Type:** [Config](arkts-accessibility-config-config-i-sys.md)&lt;[ClickResponseTime](arkts-accessibility-config-clickresponsetime-t-sys.md)&gt;
 
 **Since:** 11
 
@@ -56,7 +56,7 @@ const daltonizationState: Config<boolean>
 
 Indicates the color correction feature status. Used together with daltonizationColorFilter. The value **true** indicates that color correction is enabled, and **false** indicates that it is disabled. The default value is **false**.
 
-**Type:** Config&lt;boolean&gt;
+**Type:** [Config](arkts-accessibility-config-config-i-sys.md)&lt;boolean&gt;
 
 **Since:** 11
 
@@ -74,7 +74,7 @@ Whether to ignore repeated clicks. This parameter must be used together with **r
 
 Default value: **false**
 
-**Type:** Config&lt;boolean&gt;
+**Type:** [Config](arkts-accessibility-config-config-i-sys.md)&lt;boolean&gt;
 
 **Since:** 11
 
@@ -90,7 +90,7 @@ const repeatClickInterval: Config<RepeatClickInterval>
 
 Indicates the configuration for the interval of ignoring repeated clicks. Used together with ignoreRepeatClick. This configuration takes effect only when ignoreRepeatClick is set to **true**. The default value is Shortest, indicating the shortest interval.
 
-**Type:** Config&lt;[RepeatClickInterval](arkts-accessibility-config-repeatclickinterval-t-sys.md)&gt;
+**Type:** [Config](arkts-accessibility-config-config-i-sys.md)&lt;[RepeatClickInterval](arkts-accessibility-config-repeatclickinterval-t-sys.md)&gt;
 
 **Since:** 11
 
@@ -106,7 +106,7 @@ const screenMagnification: Config<boolean>
 
 Indicates the configuration of screen magnification.
 
-**Type:** Config&lt;boolean&gt;
+**Type:** [Config](arkts-accessibility-config-config-i-sys.md)&lt;boolean&gt;
 
 **Since:** 12
 
@@ -122,7 +122,7 @@ const shortkeyMultiTargets: Config<Array<string>>
 
 Indicates the multi-target list configuration of the accessibility extension shortcut key. The value is the name of the accessibility extension app, in the format ['bundleName/abilityName']. If the format is incorrect or the name is invalid, the setting does not take effect.
 
-**Type:** Config&lt;Array&lt;string&gt;&gt;
+**Type:** [Config](arkts-accessibility-config-config-i-sys.md)&lt;Array&lt;string&gt;&gt;
 
 **Since:** 11
 

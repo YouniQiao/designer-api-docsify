@@ -49,17 +49,6 @@ let result = util.TextDecoder.create().decodeToString(uint8);
 console.info(result); // <d/>
 ```
 
-```TypeScript
-import { util } from '@kit.ArkTS';
-
-let serializer = new xml.XmlDynamicSerializer('utf-8');
-serializer.addEmptyElement("d");
-let arrayBuffer = serializer.getOutput();
-let uint8 = new Uint8Array(arrayBuffer);
-let result = util.TextDecoder.create().decodeToString(uint8);
-console.info(result); // <d/>
-```
-
 ## constructor
 
 ```TypeScript
@@ -90,15 +79,6 @@ constructor(buffer: ArrayBuffer | DataView, encoding?: string)
 ```TypeScript
 let arrayBuffer = new ArrayBuffer(2048);
 let xmlSerializer = new xml.XmlSerializer(arrayBuffer, "utf-8");
-```
-
-```TypeScript
-import { util } from '@kit.ArkTS';
-
-let strXml = '<title>Happy</title>'
-let textEncoder = new util.TextEncoder();
-let uint8Array = textEncoder.encodeInto(strXml);
-let xmlParser = new xml.XmlPullParser(uint8Array.buffer as object as ArrayBuffer, 'UTF-8');
 ```
 
 ## endElement
@@ -133,19 +113,6 @@ let uint8 = new Uint8Array(arrayBuffer);
 let result = util.TextDecoder.create().decodeToString(uint8);
 console.info(result);
 // <note>Happy</note>
-```
-
-```TypeScript
-import { util } from '@kit.ArkTS';
-
-let serializer = new xml.XmlDynamicSerializer('utf-8');
-serializer.startElement("note");
-serializer.setText("Happy");
-serializer.endElement();
-let arrayBuffer = serializer.getOutput();
-let uint8 = new Uint8Array(arrayBuffer);
-let result = util.TextDecoder.create().decodeToString(uint8);
-console.info(result); // <note>Happy</note>
 ```
 
 ## setAttributes
@@ -185,19 +152,6 @@ let thatSer = new xml.XmlSerializer(arrayBuffer);
 thatSer.startElement("note");
 thatSer.setAttributes("importance", "high");
 thatSer.endElement();
-let uint8 = new Uint8Array(arrayBuffer);
-let result = util.TextDecoder.create().decodeToString(uint8);
-console.info(result); // <note importance="high"/>
-```
-
-```TypeScript
-import { util } from '@kit.ArkTS';
-
-let serializer = new xml.XmlDynamicSerializer('utf-8');
-serializer.startElement("note");
-serializer.setAttributes("importance", "high");
-serializer.endElement();
-let arrayBuffer = serializer.getOutput();
 let uint8 = new Uint8Array(arrayBuffer);
 let result = util.TextDecoder.create().decodeToString(uint8);
 console.info(result); // <note importance="high"/>
@@ -273,17 +227,6 @@ let result = util.TextDecoder.create().decodeToString(uint8);
 console.info(result); // <!--Hello, World!-->
 ```
 
-```TypeScript
-import { util } from '@kit.ArkTS';
-
-let serializer = new xml.XmlDynamicSerializer('utf-8');
-serializer.setComment("Hello, World!");
-let arrayBuffer = serializer.getOutput();
-let uint8 = new Uint8Array(arrayBuffer);
-let result = util.TextDecoder.create().decodeToString(uint8);
-console.info(result); // <!--Hello, World!-->
-```
-
 ## setDeclaration
 
 ```TypeScript
@@ -310,17 +253,6 @@ let uint8 = new Uint8Array(arrayBuffer);
 let result = util.TextDecoder.create().decodeToString(uint8);
 console.info(result);
 // <?xml version="1.0" encoding="utf-8"?>
-```
-
-```TypeScript
-import { util } from '@kit.ArkTS';
-
-let serializer = new xml.XmlDynamicSerializer('utf-8');
-serializer.setDeclaration();
-let arrayBuffer = serializer.getOutput();
-let uint8 = new Uint8Array(arrayBuffer);
-let result = util.TextDecoder.create().decodeToString(uint8);
-console.info(result); // <?xml version="1.0" encoding="utf-8"?>
 ```
 
 ## setDocType
@@ -351,17 +283,6 @@ import { util } from '@kit.ArkTS';
 let arrayBuffer = new ArrayBuffer(2048);
 let thatSer = new xml.XmlSerializer(arrayBuffer);
 thatSer.setDocType('root SYSTEM "http://www.test.org/test.dtd"');
-let uint8 = new Uint8Array(arrayBuffer);
-let result = util.TextDecoder.create().decodeToString(uint8);
-console.info(result); // <!DOCTYPE root SYSTEM "http://www.test.org/test.dtd">
-```
-
-```TypeScript
-import { util } from '@kit.ArkTS';
-
-let serializer = new xml.XmlDynamicSerializer('utf-8');
-serializer.setDocType('root SYSTEM "http://www.test.org/test.dtd"');
-let arrayBuffer = serializer.getOutput();
 let uint8 = new Uint8Array(arrayBuffer);
 let result = util.TextDecoder.create().decodeToString(uint8);
 console.info(result); // <!DOCTYPE root SYSTEM "http://www.test.org/test.dtd">
@@ -410,19 +331,6 @@ console.info(result);
 // <h:note xmlns:h="http://www.w3.org/TR/html4/"/>
 ```
 
-```TypeScript
-import { util } from '@kit.ArkTS';
-
-let serializer = new xml.XmlDynamicSerializer('utf-8');
-serializer.setNamespace("h", "http://www.w3.org/TR/html4/");
-serializer.startElement("note");
-serializer.endElement();
-let arrayBuffer = serializer.getOutput();
-let uint8 = new Uint8Array(arrayBuffer);
-let result = util.TextDecoder.create().decodeToString(uint8);
-console.info(result); // <h:note xmlns:h="http://www.w3.org/TR/html4/"/>
-```
-
 ## setText
 
 ```TypeScript
@@ -458,20 +366,6 @@ thatSer.startElement("note");
 thatSer.setAttributes("importance", "high");
 thatSer.setText("Happy");
 thatSer.endElement();
-let uint8 = new Uint8Array(arrayBuffer);
-let result = util.TextDecoder.create().decodeToString(uint8);
-console.info(result); // <note importance="high">Happy</note>
-```
-
-```TypeScript
-import { util } from '@kit.ArkTS';
-
-let serializer = new xml.XmlDynamicSerializer('utf-8');
-serializer.startElement("note");
-serializer.setAttributes("importance", "high");
-serializer.setText("Happy");
-serializer.endElement();
-let arrayBuffer = serializer.getOutput();
 let uint8 = new Uint8Array(arrayBuffer);
 let result = util.TextDecoder.create().decodeToString(uint8);
 console.info(result); // <note importance="high">Happy</note>
@@ -517,17 +411,4 @@ let uint8 = new Uint8Array(arrayBuffer);
 let result = util.TextDecoder.create().decodeToString(uint8);
 console.info(result);
 // <note>Happy</note>
-```
-
-```TypeScript
-import { util } from '@kit.ArkTS';
-
-let serializer = new xml.XmlDynamicSerializer('utf-8');
-serializer.startElement("note");
-serializer.setText("Happy");
-serializer.endElement();
-let arrayBuffer = serializer.getOutput();
-let uint8 = new Uint8Array(arrayBuffer);
-let result = util.TextDecoder.create().decodeToString(uint8);
-console.info(result); // <note>Happy</note>
 ```

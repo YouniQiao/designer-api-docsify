@@ -152,7 +152,7 @@ sources: Array<SourceType>
 
 Input sources supported by the input device, including the keyboard, mouse, touchscreen, trackball, touchpad, and joystick.
 
-**Type:** Array&lt;SourceType&gt;
+**Type:** Array&lt;[SourceType](arkts-input-inputdevice-sourcetype-t.md)&gt;
 
 **Since:** 8
 

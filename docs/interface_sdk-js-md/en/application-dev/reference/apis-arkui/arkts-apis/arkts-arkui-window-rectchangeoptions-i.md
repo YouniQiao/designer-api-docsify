@@ -20,7 +20,7 @@ reason: RectChangeReason
 
 Reason for the window rectangle change.
 
-**Type:** RectChangeReason
+**Type:** [RectChangeReason](arkts-arkui-window-rectchangereason-e.md)
 
 **Since:** 12
 
@@ -36,7 +36,7 @@ rect: Rect
 
 New value of the window rectangle.
 
-**Type:** Rect
+**Type:** [Rect](arkts-arkui-window-rect-i.md)
 
 **Since:** 12
 

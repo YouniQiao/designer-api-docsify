@@ -2,7 +2,7 @@
 
 Indicates wallpaper type.
 
-@enum { number } WallpaperType
+@enum { int } WallpaperType
 
 **Since:** 7
 

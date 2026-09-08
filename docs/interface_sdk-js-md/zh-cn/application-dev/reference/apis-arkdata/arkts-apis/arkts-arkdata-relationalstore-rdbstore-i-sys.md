@@ -88,8 +88,8 @@ cloudSync(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mode | SyncMode | 是 | 表示数据库的同步模式。 |
-| predicates | RdbPredicates | 是 | 表示同步数据的谓词条件。 |
+| mode | [SyncMode](arkts-arkdata-relationalstore-syncmode-e.md) | 是 | 表示数据库的同步模式。 |
+| predicates | [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | 是 | 表示同步数据的谓词条件。 |
 | progress | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ProgressDetails](arkts-arkdata-relationalstore-progressdetails-i.md)&gt; | 是 | 用来处理数据库同步详细信息的回调函数。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当同步成功，err为undefined；否则为错误对象。 |
 
@@ -101,68 +101,6 @@ cloudSync(
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | if permission verification failed, application which is not a system application uses system API. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
 | [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The target instance is already closed.<br>**适用版本：** 12+ |
-
-**示例**
-
-```TypeScript
-if (store != undefined) {
-  (store as relationalStore.RdbStore).cloudSync(relationalStore.SyncMode.SYNC_MODE_CLOUD_FIRST, (progressDetails) => {
-    console.info(`Progress: ${progressDetails}`);
-  }, (err) => {
-    if (err) {
-      console.error(`Cloud sync failed, code is ${err.code},message is ${err.message}`);
-      return;
-    }
-    console.info('Cloud sync succeeded');
-  });
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-if (store != undefined) {
-  (store as relationalStore.RdbStore).cloudSync(relationalStore.SyncMode.SYNC_MODE_CLOUD_FIRST, (progressDetail: relationalStore.ProgressDetails) => {
-    console.info(`progress: ${progressDetail}`);
-  }).then(() => {
-    console.info('Cloud sync succeeded');
-  }).catch((err: BusinessError) => {
-    console.error(`cloudSync failed, code is ${err.code},message is ${err.message}`);
-  });
-}
-```
-
-```TypeScript
-const tables = ["table1", "table2"];
-
-if (store != undefined) {
-  (store as relationalStore.RdbStore).cloudSync(relationalStore.SyncMode.SYNC_MODE_CLOUD_FIRST, tables, (progressDetail: relationalStore.ProgressDetails) => {
-    console.info(`Progress: ${progressDetail}`);
-  }, (err) => {
-    if (err) {
-      console.error(`Cloud sync failed, code is ${err.code},message is ${err.message}`);
-      return;
-    }
-    console.info('Cloud sync succeeded');
-  });
-};
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-const tables = ["table1", "table2"];
-
-if (store != undefined) {
-  (store as relationalStore.RdbStore).cloudSync(relationalStore.SyncMode.SYNC_MODE_CLOUD_FIRST, tables, (progressDetail: relationalStore.ProgressDetails) => {
-    console.info(`progress: ${progressDetail}`);
-  }).then(() => {
-    console.info('Cloud sync succeeded');
-  }).catch((err: BusinessError) => {
-    console.error(`cloudSync failed, code is ${err.code},message is ${err.message}`);
-  });
-};
-```
 
 ## cloudSync
 
@@ -189,8 +127,8 @@ cloudSync(mode: SyncMode, predicates: RdbPredicates, progress: Callback<Progress
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mode | SyncMode | 是 | 表示数据库的同步模式。 |
-| predicates | RdbPredicates | 是 | 表示同步数据的谓词条件。 |
+| mode | [SyncMode](arkts-arkdata-relationalstore-syncmode-e.md) | 是 | 表示数据库的同步模式。 |
+| predicates | [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | 是 | 表示同步数据的谓词条件。 |
 | progress | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ProgressDetails](arkts-arkdata-relationalstore-progressdetails-i.md)&gt; | 是 | 用来处理数据库同步详细信息的回调函数。 |
 
 **返回值：**
@@ -207,10 +145,6 @@ cloudSync(mode: SyncMode, predicates: RdbPredicates, progress: Callback<Progress
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | if permission verification failed, application which is not a system application uses system API. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
 | [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The target instance is already closed.<br>**适用版本：** 12+ |
-
-**示例**
-
-参见 [cloudSync](#cloudsync)
 
 ## delete
 
@@ -233,7 +167,7 @@ delete(table: string, predicates: dataSharePredicates.DataSharePredicates, callb
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | table | string | 是 | 指定的目标表名，不能为空字符串。 |
-| predicates | dataSharePredicates.DataSharePredicates | 是 | DataSharePredicates的实例对象指定的删除条件。 |
+| predicates | [dataSharePredicates.DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | 是 | DataSharePredicates的实例对象指定的删除条件。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数。当删除数据成功，err为undefined，data为受影响的行数量；否则为错误对象。 |
 
 **错误码：**
@@ -262,59 +196,6 @@ delete(table: string, predicates: dataSharePredicates.DataSharePredicates, callb
 | [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) | SQLite: Data type mismatch.<br>**适用版本：** 12+ |
 | [14800034](../errorcode-data-rdb.md#14800034-sqlite库使用不正确) | SQLite: Library used incorrectly.<br>**适用版本：** 12+ |
 
-**示例**
-
-```TypeScript
-let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
-predicates.equalTo("NAME", "Lisa");
-if (store != undefined) {
-  (store as relationalStore.RdbStore).delete(predicates, (err, rows) => {
-    if (err) {
-      console.error(`Delete failed, code is ${err.code},message is ${err.message}`);
-      return;
-    }
-    console.info(`Delete rows: ${rows}`);
-  });
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
-predicates.equalTo("NAME", "Lisa");
-if (store != undefined) {
-  (store as relationalStore.RdbStore).delete(predicates).then((rows: number) => {
-    console.info(`Delete rows: ${rows}`);
-  }).catch((err: BusinessError) => {
-    console.error(`Delete failed, code is ${err.code},message is ${err.message}`);
-  });
-}
-```
-
-```TypeScript
-let predicates2 = new relationalStore.RdbPredicates('EMPLOYEE');
-predicates2.equalTo('NAME', 'Lisa');
-
-if (store != undefined) {
-  try {
-    const transaction = await store.createTransaction();
-    try {
-      const rows = await transaction.delete(predicates2);
-      await transaction.commit();
-      console.info(`Delete rows: ${rows}`);
-    } catch (error) {
-      const err = error as BusinessError;
-      await transaction.rollback();
-      console.error(`Delete failed, code is ${err.code},message is ${err.message}`);
-    }
-  } catch (error) {
-    const err = error as BusinessError;
-    console.error(`createTransaction failed, code is ${err.code},message is ${err.message}`);
-  }
-}
-```
-
 ## delete
 
 ```TypeScript
@@ -336,7 +217,7 @@ delete(table: string, predicates: dataSharePredicates.DataSharePredicates): Prom
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | table | string | 是 | 指定的目标表名，不能为空字符串。 |
-| predicates | dataSharePredicates.DataSharePredicates | 是 | DataSharePredicates的实例对象指定的删除条件。 |
+| predicates | [dataSharePredicates.DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | 是 | DataSharePredicates的实例对象指定的删除条件。 |
 
 **返回值：**
 
@@ -369,10 +250,6 @@ delete(table: string, predicates: dataSharePredicates.DataSharePredicates): Prom
 | [14800032](../errorcode-data-rdb.md#14800032-sqlite由于违反约束而中止) | SQLite: Abort due to constraint violation.<br>**适用版本：** 12+ |
 | [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) | SQLite: Data type mismatch.<br>**适用版本：** 12+ |
 | [14800034](../errorcode-data-rdb.md#14800034-sqlite库使用不正确) | SQLite: Library used incorrectly.<br>**适用版本：** 12+ |
-
-**示例**
-
-参见 [delete](#delete)
 
 ## lockCloudContainer
 
@@ -425,8 +302,8 @@ query(table: string, predicates: dataSharePredicates.DataSharePredicates, callba
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | table | string | 是 | 指定的目标表名，不能为空字符串。 |
-| predicates | dataSharePredicates.DataSharePredicates | 是 | DataSharePredicates的实例对象指定的查询条件。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ResultSet&gt; | 是 | 回调函数。返回ResultSet对象。 |
+| predicates | [dataSharePredicates.DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | 是 | DataSharePredicates的实例对象指定的查询条件。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ResultSet](arkts-arkdata-relationalstore-resultset-i.md)&gt; | 是 | 回调函数。返回ResultSet对象。 |
 
 **错误码：**
 
@@ -437,128 +314,6 @@ query(table: string, predicates: dataSharePredicates.DataSharePredicates, callba
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
 | [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The target instance is already closed.<br>**适用版本：** 12+ |
 | [14800015](../errorcode-data-rdb.md#14800015-数据库没有响应) | The database does not respond.<br>**适用版本：** 12+ |
-
-**示例**
-
-```TypeScript
-let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
-predicates.equalTo("NAME", "Rose");
-if (store != undefined) {
-  (store as relationalStore.RdbStore).query(predicates, async (err, resultSet) => {
-    if (err) {
-      console.error(`Query failed, code is ${err.code},message is ${err.message}`);
-      return;
-    }
-    console.info(`ResultSet column names: ${resultSet.columnNames}, column count: ${resultSet.columnCount}`);
-    // resultSet是一个数据集合的游标，默认指向第-1个记录，有效的数据从0开始。
-    try {
-      while (resultSet.goToNextRow()) {
-        const id = resultSet.getLong(resultSet.getColumnIndex("ID"));
-        const name = resultSet.getString(resultSet.getColumnIndex("NAME"));
-        const age = resultSet.getLong(resultSet.getColumnIndex("AGE"));
-        const salary = resultSet.getDouble(resultSet.getColumnIndex("SALARY"));
-        console.info(`id=${id}, name=${name}, age=${age}, salary=${salary}`);
-      }
-    } catch (err) {
-      console.error(`Query failed, code is ${err.code},message is ${err.message}`);
-    } finally {
-      // 释放数据集的内存，若不释放可能会引起fd泄漏与内存泄漏。
-      resultSet.close();
-    }
-  });
-}
-```
-
-```TypeScript
-let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
-predicates.equalTo("NAME", "Rose");
-if (store != undefined) {
-  (store as relationalStore.RdbStore).query(predicates, ["ID", "NAME", "AGE", "SALARY", "CODES"], async (err, resultSet) => {
-    if (err) {
-      console.error(`Query failed, code is ${err.code},message is ${err.message}`);
-      return;
-    }
-    console.info(`ResultSet column names: ${resultSet.columnNames}, column count: ${resultSet.columnCount}`);
-    // resultSet是一个数据集合的游标，默认指向第-1个记录，有效的数据从0开始。
-    try {
-      while (resultSet.goToNextRow()) {
-        const id = resultSet.getLong(resultSet.getColumnIndex("ID"));
-        const name = resultSet.getString(resultSet.getColumnIndex("NAME"));
-        const age = resultSet.getLong(resultSet.getColumnIndex("AGE"));
-        const salary = resultSet.getDouble(resultSet.getColumnIndex("SALARY"));
-        console.info(`id=${id}, name=${name}, age=${age}, salary=${salary}`);
-      }
-    } catch (err) {
-      console.error(`Query failed, code is ${err.code},message is ${err.message}`);
-    } finally {
-      // 释放数据集的内存，若不释放可能会引起fd泄漏与内存泄漏。
-      resultSet.close();
-    }
-  });
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
-predicates.equalTo("NAME", "Rose");
-if (store != undefined) {
-  (store as relationalStore.RdbStore).query(predicates, ["ID", "NAME", "AGE", "SALARY", "CODES"]).then(async (resultSet: relationalStore.ResultSet) => {
-    console.info(`ResultSet column names: ${resultSet.columnNames}, column count: ${resultSet.columnCount}`);
-    // resultSet是一个数据集合的游标，默认指向第-1个记录，有效的数据从0开始。
-    try {
-      while (resultSet.goToNextRow()) {
-        const id = resultSet.getLong(resultSet.getColumnIndex("ID"));
-        const name = resultSet.getString(resultSet.getColumnIndex("NAME"));
-        const age = resultSet.getLong(resultSet.getColumnIndex("AGE"));
-        const salary = resultSet.getDouble(resultSet.getColumnIndex("SALARY"));
-        console.info(`id=${id}, name=${name}, age=${age}, salary=${salary}`);
-      }
-    } catch (err) {
-      console.error(`Query failed, code is ${err.code},message is ${err.message}`);
-    } finally {
-      // 释放数据集的内存，若不释放可能会引起fd泄漏与内存泄漏。
-      resultSet.close();
-    }
-  }).catch((err: BusinessError) => {
-    console.error(`Query failed, code is ${err.code},message is ${err.message}`);
-  });
-}
-```
-
-```TypeScript
-let predicates4 = new relationalStore.RdbPredicates('EMPLOYEE');
-predicates4.equalTo('NAME', 'Rose');
-
-if (store != undefined) {
-  try {
-    const transaction = await store.createTransaction();
-    try {
-      const resultSet = await transaction.query(predicates4, ['ID', 'NAME', 'AGE', 'SALARY', 'CODES']);
-      console.info(`ResultSet column names: ${resultSet.columnNames}, column count: ${resultSet.columnCount}`);
-      // resultSet是一个数据集合的游标，默认指向第-1个记录，有效的数据从0开始。
-      while (resultSet.goToNextRow()) {
-        const id = resultSet.getLong(resultSet.getColumnIndex('ID'));
-        const name = resultSet.getString(resultSet.getColumnIndex('NAME'));
-        const age = resultSet.getLong(resultSet.getColumnIndex('AGE'));
-        const salary = resultSet.getDouble(resultSet.getColumnIndex('SALARY'));
-        console.info(`id=${id}, name=${name}, age=${age}, salary=${salary}`);
-      }
-      // 释放数据集的内存，若不释放可能会引起fd泄漏与内存泄漏
-      resultSet.close();
-      await transaction.commit();
-    } catch (error) {
-      const err = error as BusinessError;
-      await transaction.rollback();
-      console.error(`Query failed, code is ${err.code},message is ${err.message}`);
-    }
-  } catch (error) {
-    const err = error as BusinessError;
-    console.error(`createTransaction failed, code is ${err.code},message is ${err.message}`);
-  }
-}
-```
 
 ## query
 
@@ -586,9 +341,9 @@ query(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | table | string | 是 | 指定的目标表名，不能为空字符串。 |
-| predicates | dataSharePredicates.DataSharePredicates | 是 | DataSharePredicates的实例对象指定的查询条件。 |
+| predicates | [dataSharePredicates.DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | 是 | DataSharePredicates的实例对象指定的查询条件。 |
 | columns | Array&lt;string&gt; | 是 | 表示要查询的列。如果值为空，则查询应用于所有列。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ResultSet&gt; | 是 | 回调函数。返回ResultSet对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ResultSet](arkts-arkdata-relationalstore-resultset-i.md)&gt; | 是 | 回调函数。返回ResultSet对象。 |
 
 **错误码：**
 
@@ -599,10 +354,6 @@ query(
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
 | [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The target instance is already closed.<br>**适用版本：** 12+ |
 | [14800015](../errorcode-data-rdb.md#14800015-数据库没有响应) | The database does not respond.<br>**适用版本：** 12+ |
-
-**示例**
-
-参见 [query](#query)
 
 ## query
 
@@ -629,14 +380,14 @@ query(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | table | string | 是 | 指定的目标表名，不能为空字符串。 |
-| predicates | dataSharePredicates.DataSharePredicates | 是 | DataSharePredicates的实例对象指定的查询条件。 |
+| predicates | [dataSharePredicates.DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | 是 | DataSharePredicates的实例对象指定的查询条件。 |
 | columns | Array&lt;string&gt; | 否 | 表示要查询的列。如果值为空，则查询应用于所有列。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;ResultSet&gt; | 返回ResultSet对象。 |
+| Promise&lt;[ResultSet](arkts-arkdata-relationalstore-resultset-i.md)&gt; | 返回ResultSet对象。 |
 
 **错误码：**
 
@@ -647,10 +398,6 @@ query(
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
 | [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The target instance is already closed.<br>**适用版本：** 12+ |
 | [14800015](../errorcode-data-rdb.md#14800015-数据库没有响应) | The database does not respond.<br>**适用版本：** 12+ |
-
-**示例**
-
-参见 [query](#query)
 
 ## querySharingResource
 
@@ -670,14 +417,14 @@ querySharingResource(predicates: RdbPredicates, columns?: Array<string>): Promis
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| predicates | RdbPredicates | 是 | 表示查询的谓词条件。 |
+| predicates | [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | 是 | 表示查询的谓词条件。 |
 | columns | Array&lt;string&gt; | 否 | 表示要查找的列字段名。此参数不填时，返回的结果集中只包含共享资源标识字段。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;ResultSet&gt; | Promise对象。返回查询的结果集。 |
+| Promise&lt;[ResultSet](arkts-arkdata-relationalstore-resultset-i.md)&gt; | Promise对象。返回查询的结果集。 |
 
 **错误码：**
 
@@ -722,8 +469,8 @@ querySharingResource(predicates: RdbPredicates, callback: AsyncCallback<ResultSe
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| predicates | RdbPredicates | 是 | 表示查询的谓词条件。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ResultSet&gt; | 是 | 回调函数。返回查询的结果集。 |
+| predicates | [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | 是 | 表示查询的谓词条件。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ResultSet](arkts-arkdata-relationalstore-resultset-i.md)&gt; | 是 | 回调函数。返回查询的结果集。 |
 
 **错误码：**
 
@@ -768,9 +515,9 @@ querySharingResource(predicates: RdbPredicates, columns: Array<string>, callback
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| predicates | RdbPredicates | 是 | 表示查询的谓词条件。 |
+| predicates | [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | 是 | 表示查询的谓词条件。 |
 | columns | Array&lt;string&gt; | 是 | 表示要查找的列字段名。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ResultSet&gt; | 是 | 回调函数。返回查询的结果集。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ResultSet](arkts-arkdata-relationalstore-resultset-i.md)&gt; | 是 | 回调函数。返回查询的结果集。 |
 
 **错误码：**
 
@@ -841,33 +588,6 @@ restore(): Promise<void>
 | [14800032](../errorcode-data-rdb.md#14800032-sqlite由于违反约束而中止) | SQLite: Abort due to constraint violation. |
 | [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) | SQLite: Data type mismatch. |
 | [14800034](../errorcode-data-rdb.md#14800034-sqlite库使用不正确) | SQLite: Library used incorrectly. |
-
-**示例**
-
-```TypeScript
-if (store != undefined) {
-  (store as relationalStore.RdbStore).restore("dbBackup.db", (err) => {
-    if (err) {
-      console.error(`Restore failed, code is ${err.code},message is ${err.message}`);
-      return;
-    }
-    console.info('Restore success.');
-  });
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-if (store != undefined) {
-  let promiseRestore = (store as relationalStore.RdbStore).restore("dbBackup.db");
-  promiseRestore.then(() => {
-    console.info('Restore success.');
-  }).catch((err: BusinessError) => {
-    console.error(`Restore failed, code is ${err.code},message is ${err.message}`);
-  });
-}
-```
 
 ## retainDeviceData
 
@@ -976,8 +696,8 @@ update(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | table | string | 是 | 指定的目标表名，不能为空字符串。 |
-| values | ValuesBucket | 是 | values指示数据库中要更新的数据行。键值对与数据库表的列名相关联。 |
-| predicates | dataSharePredicates.DataSharePredicates | 是 | DataSharePredicates的实例对象指定的更新条件。 |
+| values | [ValuesBucket](arkts-arkdata-relationalstore-valuesbucket-t.md) | 是 | values指示数据库中要更新的数据行。键值对与数据库表的列名相关联。 |
+| predicates | [dataSharePredicates.DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | 是 | DataSharePredicates的实例对象指定的更新条件。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数。返回受影响的行数。 |
 
 **错误码：**
@@ -1006,193 +726,6 @@ update(
 | [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) | SQLite: Data type mismatch.<br>**适用版本：** 12+ |
 | [14800034](../errorcode-data-rdb.md#14800034-sqlite库使用不正确) | SQLite: Library used incorrectly.<br>**适用版本：** 12+ |
 
-**示例**
-
-```TypeScript
-let value1 = "Rose";
-let value2 = 22;
-let value3 = 200.5;
-let value4 = new Uint8Array([1, 2, 3, 4, 5]);
-
-// 以下三种方式可用
-const valueBucket1: relationalStore.ValuesBucket = {
-  'NAME': value1,
-  'AGE': value2,
-  'SALARY': value3,
-  'CODES': value4
-};
-const valueBucket2: relationalStore.ValuesBucket = {
-  NAME: value1,
-  AGE: value2,
-  SALARY: value3,
-  CODES: value4
-};
-const valueBucket3: relationalStore.ValuesBucket = {
-  "NAME": value1,
-  "AGE": value2,
-  "SALARY": value3,
-  "CODES": value4
-};
-
-let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
-predicates.equalTo("NAME", "Lisa");
-if (store != undefined) {
-  (store as relationalStore.RdbStore).update(valueBucket1, predicates, (err, rows) => {
-    if (err) {
-      console.error(`Updated failed, code is ${err.code},message is ${err.message}`);
-      return;
-    }
-    console.info(`Updated row count: ${rows}`);
-  });
-}
-```
-
-```TypeScript
-let value1 = "Rose";
-let value2 = 22;
-let value3 = 200.5;
-let value4 = new Uint8Array([1, 2, 3, 4, 5]);
-
-// 以下三种方式可用
-const valueBucket1: relationalStore.ValuesBucket = {
-  'NAME': value1,
-  'AGE': value2,
-  'SALARY': value3,
-  'CODES': value4
-};
-const valueBucket2: relationalStore.ValuesBucket = {
-  NAME: value1,
-  AGE: value2,
-  SALARY: value3,
-  CODES: value4
-};
-const valueBucket3: relationalStore.ValuesBucket = {
-  "NAME": value1,
-  "AGE": value2,
-  "SALARY": value3,
-  "CODES": value4
-};
-
-let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
-predicates.equalTo("NAME", "Lisa");
-if (store != undefined) {
-  (store as relationalStore.RdbStore).update(valueBucket1, predicates, relationalStore.ConflictResolution.ON_CONFLICT_REPLACE, (err, rows) => {
-    if (err) {
-      console.error(`Updated failed, code is ${err.code},message is ${err.message}`);
-      return;
-    }
-    console.info(`Updated row count: ${rows}`);
-  });
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let value1 = "Rose";
-let value2 = 22;
-let value3 = 200.5;
-let value4 = new Uint8Array([1, 2, 3, 4, 5]);
-
-// 以下三种方式可用
-const valueBucket1: relationalStore.ValuesBucket = {
-  'NAME': value1,
-  'AGE': value2,
-  'SALARY': value3,
-  'CODES': value4
-};
-const valueBucket2: relationalStore.ValuesBucket = {
-  NAME: value1,
-  AGE: value2,
-  SALARY: value3,
-  CODES: value4
-};
-const valueBucket3: relationalStore.ValuesBucket = {
-  "NAME": value1,
-  "AGE": value2,
-  "SALARY": value3,
-  "CODES": value4
-};
-
-let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
-predicates.equalTo("NAME", "Lisa");
-if (store != undefined) {
-  (store as relationalStore.RdbStore).update(valueBucket1, predicates).then(async (rows: number) => {
-    console.info(`Updated row count: ${rows}`);
-  }).catch((err: BusinessError) => {
-    console.error(`Updated failed, code is ${err.code},message is ${err.message}`);
-  });
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let value1 = "Rose";
-let value2 = 22;
-let value3 = 200.5;
-let value4 = new Uint8Array([1, 2, 3, 4, 5]);
-
-// 以下三种方式可用
-const valueBucket1: relationalStore.ValuesBucket = {
-  'NAME': value1,
-  'AGE': value2,
-  'SALARY': value3,
-  'CODES': value4
-};
-const valueBucket2: relationalStore.ValuesBucket = {
-  NAME: value1,
-  AGE: value2,
-  SALARY: value3,
-  CODES: value4
-};
-const valueBucket3: relationalStore.ValuesBucket = {
-  "NAME": value1,
-  "AGE": value2,
-  "SALARY": value3,
-  "CODES": value4
-};
-
-let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
-predicates.equalTo("NAME", "Lisa");
-if (store != undefined) {
-  (store as relationalStore.RdbStore).update(valueBucket1, predicates, relationalStore.ConflictResolution.ON_CONFLICT_REPLACE).then(async (rows: number) => {
-    console.info(`Updated row count: ${rows}`);
-  }).catch((err: BusinessError) => {
-    console.error(`Updated failed, code is ${err.code},message is ${err.message}`);
-  });
-}
-```
-
-```TypeScript
-const valueBucketF: relationalStore.ValuesBucket = {
-  NAME: 'Rose',
-  AGE: 22,
-  SALARY: 200.5,
-  CODES: new Uint8Array([1, 2, 3, 4, 5])
-};
-let predicates = new relationalStore.RdbPredicates('EMPLOYEE');
-predicates.equalTo('NAME', 'Lisa');
-
-if (store != undefined) {
-  try {
-    const transaction = await store.createTransaction();
-    try {
-      const rows = await transaction.update(valueBucketF, predicates, relationalStore.ConflictResolution.ON_CONFLICT_REPLACE);
-      await transaction.commit();
-      console.info(`Updated row count: ${rows}`);
-    } catch (error) {
-      const err = error as BusinessError;
-      await transaction.rollback();
-      console.error(`Updated failed, code is ${err.code},message is ${err.message}`);
-    }
-  } catch (error) {
-    const err = error as BusinessError;
-    console.error(`createTransaction failed, code is ${err.code},message is ${err.message}`);
-  }
-}
-```
-
 ## update
 
 ```TypeScript
@@ -1214,8 +747,8 @@ update(table: string, values: ValuesBucket, predicates: dataSharePredicates.Data
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | table | string | 是 | 指定的目标表名，不能为空字符串。 |
-| values | ValuesBucket | 是 | values指示数据库中要更新的数据行。键值对与数据库表的列名相关联。 |
-| predicates | dataSharePredicates.DataSharePredicates | 是 | DataSharePredicates的实例对象指定的更新条件。 |
+| values | [ValuesBucket](arkts-arkdata-relationalstore-valuesbucket-t.md) | 是 | values指示数据库中要更新的数据行。键值对与数据库表的列名相关联。 |
+| predicates | [dataSharePredicates.DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | 是 | DataSharePredicates的实例对象指定的更新条件。 |
 
 **返回值：**
 
@@ -1249,10 +782,6 @@ update(table: string, values: ValuesBucket, predicates: dataSharePredicates.Data
 | [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) | SQLite: Data type mismatch.<br>**适用版本：** 12+ |
 | [14800034](../errorcode-data-rdb.md#14800034-sqlite库使用不正确) | SQLite: Library used incorrectly.<br>**适用版本：** 12+ |
 
-**示例**
-
-参见 [update](#update)
-
 ## updateDistributedInfo
 
 ```TypeScript
@@ -1283,8 +812,8 @@ updateDistributedInfo(info: DistributedInfo, predicates: RdbPredicates): Promise
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| info | DistributedInfo | 是 | 指定要更新的分布式表的日志信息。 |
-| predicates | RdbPredicates | 是 | RdbPredicates的实例对象指定的查询条件。 |
+| info | [DistributedInfo](arkts-arkdata-relationalstore-distributedinfo-i-sys.md) | 是 | 指定要更新的分布式表的日志信息。 |
+| predicates | [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | 是 | RdbPredicates的实例对象指定的查询条件。 |
 
 **返回值：**
 

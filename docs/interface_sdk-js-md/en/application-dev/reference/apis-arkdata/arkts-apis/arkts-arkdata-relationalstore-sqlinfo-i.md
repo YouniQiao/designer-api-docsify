@@ -20,7 +20,7 @@ args: Array<ValueType>
 
 Parameters in the SQL statements to be executed.
 
-**Type:** Array&lt;ValueType&gt;
+**Type:** Array&lt;[ValueType](arkts-arkdata-relationalstore-valuetype-t.md)&gt;
 
 **Since:** 20
 

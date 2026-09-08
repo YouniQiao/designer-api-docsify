@@ -2,7 +2,7 @@
 
 Enumeration of media resource type.
 
-@enum { number }
+@enum { int }
 
 **Since:** 23
 

@@ -377,7 +377,7 @@ Publishes shared configuration items. This API uses a promise to return the resu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | ProxyData[] | Yes | Array of shared configuration items to be created or updated, with a maximum of 32 items. |
+| data | [ProxyData](arkts-arkdata-datashare-proxydata-i.md)[] | Yes | Array of shared configuration items to be created or updated, with a maximum of 32 items. |
 | config | [DataProxyConfig](arkts-arkdata-datashare-dataproxyconfig-i.md) | Yes | Data proxy configuration. |
 
 **Return value:**

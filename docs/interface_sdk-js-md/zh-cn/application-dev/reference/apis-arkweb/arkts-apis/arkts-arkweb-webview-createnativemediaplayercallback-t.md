@@ -25,7 +25,3 @@ type CreateNativeMediaPlayerCallback =
 | 类型 | 说明 |
 | --- | --- |
 | [NativeMediaPlayerBridge](arkts-arkweb-webview-nativemediaplayerbridge-i.md) | 接管网页媒体播放器和 ArkWeb 内核之间的一个接口类。 |
-
-**示例**
-
-完整示例代码参考[onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer)。

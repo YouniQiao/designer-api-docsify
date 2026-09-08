@@ -10,4 +10,4 @@ type ValuesBucket = Record<string, ValueType>
 
 **系统能力：** SystemCapability.DistributedDataManager.CommonType
 
-**类型：** Record&lt;string, ValueType&gt;
+**类型：** Record&lt;string, [ValueType](arkts-arkdata-commontype-valuetype-t.md)&gt;

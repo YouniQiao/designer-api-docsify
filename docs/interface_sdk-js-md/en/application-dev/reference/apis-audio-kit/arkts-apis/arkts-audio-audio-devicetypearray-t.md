@@ -12,4 +12,4 @@ Defines the device type array.
 
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
-**Type:** Array&lt;DeviceType&gt;
+**Type:** Array&lt;[DeviceType](arkts-audio-audio-devicetype-e.md)&gt;

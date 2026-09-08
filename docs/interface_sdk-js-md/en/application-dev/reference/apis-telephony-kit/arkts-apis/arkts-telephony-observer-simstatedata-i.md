@@ -34,7 +34,7 @@ state: SimState
 
 SIM card state.
 
-**Type:** SimState
+**Type:** [SimState](arkts-telephony-observer-simstate-t.md)
 
 **Since:** 7
 
@@ -48,7 +48,7 @@ type: CardType
 
 SIM card type.
 
-**Type:** CardType
+**Type:** [CardType](arkts-telephony-observer-cardtype-t.md)
 
 **Since:** 7
 

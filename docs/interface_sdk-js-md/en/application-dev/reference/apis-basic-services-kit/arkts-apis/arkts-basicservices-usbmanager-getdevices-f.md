@@ -28,7 +28,7 @@ Obtains the list of USB devices connected to the host.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;Readonly&lt;USBDevice&gt;&gt; | USB device list. |
+| Array&lt;Readonly&lt;[USBDevice](arkts-basicservices-usbmanager-usbdevice-i.md)&gt;&gt; | USB device list. |
 
 **Error codes:**
 

@@ -2,7 +2,7 @@
 
 Enum for identification result inside and outside the door
 
-@enum { number } PositionRelativeToDoor
+@enum { int } PositionRelativeToDoor
 
 **Since:** 23
 

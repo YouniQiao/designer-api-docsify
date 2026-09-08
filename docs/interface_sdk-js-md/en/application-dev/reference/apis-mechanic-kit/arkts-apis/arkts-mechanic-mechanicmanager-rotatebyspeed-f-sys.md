@@ -32,7 +32,7 @@ Rotates a mechanical device at the specified speed.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Result&gt; | Promise that return the execution result. |
+| Promise&lt;[Result](arkts-mechanic-mechanicmanager-result-e-sys.md)&gt; | Promise that return the execution result. |
 
 **Error codes:**
 

@@ -75,7 +75,7 @@ root: FieldNode
 
 JSON root object.
 
-**Type:** FieldNode
+**Type:** [FieldNode](arkts-arkdata-distributeddata-fieldnode-c.md)
 
 **Since:** 8
 

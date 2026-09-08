@@ -30,7 +30,7 @@ function getBluetoothScanMode(): ScanMode
 
 | 类型 | 说明 |
 | --- | --- |
-| ScanMode | 蓝牙扫描模式。 |
+| [ScanMode](arkts-connectivity-bluetooth-scanmode-e.md) | 蓝牙扫描模式。 |
 
 **示例**
 

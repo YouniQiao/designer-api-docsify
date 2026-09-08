@@ -22,7 +22,7 @@ Obtains the network information bound to an application. This API returns the re
 
 | Type | Description |
 | --- | --- |
-| NetHandle | Data network bound to the application. |
+| [NetHandle](arkts-network-connection-nethandle-i.md) | Data network bound to the application. |
 
 **Error codes:**
 

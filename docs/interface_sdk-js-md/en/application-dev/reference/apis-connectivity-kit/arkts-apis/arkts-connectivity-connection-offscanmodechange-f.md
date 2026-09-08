@@ -26,7 +26,7 @@ Unsubscribe to an event indicating that the scanning mode of the local device ha
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ScanMode&gt; | No | Callback used to listen. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ScanMode](arkts-connectivity-connection-scanmode-e.md)&gt; | No | Callback used to listen. |
 
 **Error codes:**
 

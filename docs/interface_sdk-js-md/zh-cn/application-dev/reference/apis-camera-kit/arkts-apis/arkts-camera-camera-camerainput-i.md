@@ -40,22 +40,6 @@ close(callback: AsyncCallback<void>): void
 | --- | --- |
 | [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function closeCameraInput(cameraInput: camera.CameraInput): void {
-  cameraInput.close((err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to close the cameras, error code: ${err.code}.`);
-      return;
-    }
-    console.info('Callback returned with camera closed.');
-  });
-}
-```
-
 ## close
 
 ```TypeScript
@@ -82,20 +66,6 @@ close(): Promise<void>
 | --- | --- |
 | [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function closeCameraInput(cameraInput: camera.CameraInput): void {
-  cameraInput.close().then(() => {
-    console.info('Promise returned with camera closed.');
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to close the cameras, error code: ${error.code}.`);
-  }); 
-}
-```
-
 ## getPhysicalCameraOrientation
 
 ```TypeScript
@@ -116,15 +86,6 @@ getPhysicalCameraOrientation(): number
 | --- | --- |
 | number | 返回设备当前折叠状态下的物理镜头角度。 |
 
-**示例**
-
-```TypeScript
-function getPhysicalCameraOrientation(cameraInput: camera.CameraInput): number {
-  let physicalCameraOrientation: number = cameraInput.getPhysicalCameraOrientation();
-  return physicalCameraOrientation;
-}
-```
-
 ## isPhysicalCameraOrientationVariable
 
 ```TypeScript
@@ -144,15 +105,6 @@ isPhysicalCameraOrientationVariable(): boolean
 | 类型 | 说明 |
 | --- | --- |
 | boolean | 查询设备不同折叠状态下，相机物理镜头角度是否可变。true表示可变，false表示不可变。若接口调用失败，返回undefined。 |
-
-**示例**
-
-```TypeScript
-function isPhysicalCameraOrientationVariable(cameraInput: camera.CameraInput): boolean {
-  let isVariable: boolean = cameraInput.isPhysicalCameraOrientationVariable();
-  return isVariable;
-}
-```
 
 ## off('error')
 
@@ -288,22 +240,6 @@ open(callback: AsyncCallback<void>): void
 | [7400108](../errorcode-camera.md#7400108-安全策略无法使用相机) | Camera disabled cause of security reason. |
 | [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function openCameraInput(cameraInput: camera.CameraInput): void {
-  cameraInput.open((err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to open camera, error code: ${err.code}.`);
-      return;
-    }
-    console.info('Callback returned with camera opened.');
-  });
-}
-```
-
 ## open
 
 ```TypeScript
@@ -332,20 +268,6 @@ open(): Promise<void>
 | [7400107](../errorcode-camera.md#7400107-相机冲突) | Can not use camera cause of conflict. |
 | [7400108](../errorcode-camera.md#7400108-安全策略无法使用相机) | Camera disabled cause of security reason. |
 | [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function openCameraInput(cameraInput: camera.CameraInput): void {
-  cameraInput.open().then(() => {
-    console.info('Promise returned with camera opened.');
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to open camera, error code: ${error.code}.`);
-  });
-}
-```
 
 ## open
 
@@ -380,20 +302,6 @@ open(isSecureEnabled: boolean): Promise<bigint>
 | [7400107](../errorcode-camera.md#7400107-相机冲突) | Can not use camera cause of conflict. |
 | [7400108](../errorcode-camera.md#7400108-安全策略无法使用相机) | Camera disabled cause of security reason. |
 | [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function openCameraInput(cameraInput: camera.CameraInput): void {
-  cameraInput.open(true).then(() => {
-    console.info('Promise returned with camera opened.');
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to open camera, error code: ${error.code}.`);
-  });
-}
-```
 
 ## open
 
@@ -430,20 +338,6 @@ open(type: CameraConcurrentType): Promise<void>
 | [7400108](../errorcode-camera.md#7400108-安全策略无法使用相机) | Camera disabled cause of security reason. |
 | [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function openCameraInput(cameraInput: camera.CameraInput): void {
-  cameraInput.open(0).then(() => {
-    console.info('Promise returned with camera opened.');
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to open camera, error code: ${error.code}.`);
-  });
-}
-```
-
 ## usePhysicalCameraOrientation
 
 ```TypeScript
@@ -470,18 +364,3 @@ usePhysicalCameraOrientation(isUsed: boolean): void
 | --- | --- |
 | [7400102](../errorcode-camera.md#7400102-非法操作) | Operation not allowed. |
 | [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function usePhysicalCameraOrientation(cameraInput: camera.CameraInput, isUsed: boolean): void {
-  try {
-    cameraInput.usePhysicalCameraOrientation(isUsed);
-  } catch (error) {
-    let err = error as BusinessError;
-    console.error(`The usePhysicalCameraOrientation call failed. error code: ${err.code}`);
-  }
-}
-```

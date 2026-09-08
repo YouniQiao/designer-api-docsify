@@ -122,7 +122,7 @@ friction(value: number | Resource)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number \| Resource | 是 | 摩擦系数。默认值：非可穿戴设备为0.6，可穿戴设备为0.9。从API version 11开始，非可穿戴设备默认值为0.7。从API version 12开始，非可穿戴设备默认值为0.75。取值范围：(0, +∞)，设置为小于等于0的值时，按默认值处理。 |
+| value | number \| [Resource](../arkts-apis/arkts-arkui-resource-t.md) | 是 | 摩擦系数。默认值：非可穿戴设备为0.6，可穿戴设备为0.9。从API version 11开始，非可穿戴设备默认值为0.7。从API version 12开始，非可穿戴设备默认值为0.75。取值范围：(0, +∞)，设置为小于等于0的值时，按默认值处理。 |
 
 ## initialOffset
 
@@ -571,7 +571,7 @@ scrollBarColor(color: Color | number | string)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| color | Color \| number \| string | 是 | 滚动条的颜色。默认值：'#66182431'number为HEX格式颜色，支持rgb或者argb，取值范围：[0x0, 0xFFFFFFFF]，示例：0xffffff。string为rgb或者argb格式颜色，示例：'#ffffff'。 |
+| color | [Color](../arkts-apis/arkts-arkui-color-e.md) \| number \| string | 是 | 滚动条的颜色。默认值：'#66182431'number为HEX格式颜色，支持rgb或者argb，取值范围：[0x0, 0xFFFFFFFF]，示例：0xffffff。string为rgb或者argb格式颜色，示例：'#ffffff'。 |
 
 ## scrollBarColor
 
@@ -593,7 +593,7 @@ scrollBarColor(color: Color | number | string | Resource)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| color | Color \| number \| string \| Resource | 是 | 滚动条的颜色。默认值：'#66182431'number为HEX格式颜色，支持rgb或者argb，取值范围：[0x0, 0xFFFFFFFF]，示例：0xffffff。string为rgb或者argb格式颜色，示例：'#ffffff'。 |
+| color | [Color](../arkts-apis/arkts-arkui-color-e.md) \| number \| string \| [Resource](../arkts-apis/arkts-arkui-resource-t.md) | 是 | 滚动条的颜色。默认值：'#66182431'number为HEX格式颜色，支持rgb或者argb，取值范围：[0x0, 0xFFFFFFFF]，示例：0xffffff。string为rgb或者argb格式颜色，示例：'#ffffff'。 |
 
 ## scrollBarWidth
 
@@ -637,7 +637,7 @@ scrollBarWidth(value: number | string | Resource)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number \| string \| Resource | 是 | 滚动条的宽度。默认值：4单位：vp 取值范围：[0, +∞)。设置为小于0的值时，按4vp处理。设置为0时，不显示滚动条。 |
+| value | number \| string \| [Resource](../arkts-apis/arkts-arkui-resource-t.md) | 是 | 滚动条的宽度。默认值：4单位：vp 取值范围：[0, +∞)。设置为小于0的值时，按4vp处理。设置为0时，不显示滚动条。 |
 
 ## scrollSnap
 

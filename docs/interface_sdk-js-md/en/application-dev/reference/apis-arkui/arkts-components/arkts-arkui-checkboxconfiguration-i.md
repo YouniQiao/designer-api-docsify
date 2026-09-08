@@ -67,7 +67,7 @@ Triggers a change in the check box selection state.
 
 The value **true** indicates a change from unselected to selected, and **false** indicates a change from selected to unselected.
 
-**Type:** Callback&lt;boolean&gt;
+**Type:** [Callback](arkts-arkui-callback-i.md)&lt;boolean&gt;
 
 **Since:** 12
 

@@ -23,7 +23,7 @@ backgroundBlurStyle?: BlurStyle
 Background blur style of the dialog box. Default value: **BlurStyle.COMPONENT_ULTRA_THICK**   
 **NOTE：**Setting this parameter to **BlurStyle.NONE** disables the background blur. When **backgroundBlurStyle** is set to a value other than **NONE**, do not set **backgroundColor**. If you do, the color display may not produce the expected visual effect.
 
-**Type:** BlurStyle
+**Type:** [BlurStyle](../arkts-components/arkts-arkui-blurstyle-e.md)
 
 **Default:** BlurStyle.COMPONENT_ULTRA_THICK
 

@@ -24,7 +24,7 @@ Obtain information about the P2P connection.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;WifiP2pLinkedInfo&gt; | Returns p2p linked information. |
+| Promise&lt;[WifiP2pLinkedInfo](arkts-connectivity-wifimanager-wifip2plinkedinfo-i.md)&gt; | Returns p2p linked information. |
 
 **Error codes:**
 
@@ -71,7 +71,7 @@ Obtain information about the P2P connection.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;WifiP2pLinkedInfo&gt; | Yes | Indicates callback of function. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[WifiP2pLinkedInfo](arkts-connectivity-wifimanager-wifip2plinkedinfo-i.md)&gt; | Yes | Indicates callback of function. |
 
 **Error codes:**
 

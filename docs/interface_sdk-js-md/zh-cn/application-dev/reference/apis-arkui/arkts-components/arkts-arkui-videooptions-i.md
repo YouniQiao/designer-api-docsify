@@ -137,7 +137,7 @@ Resource格式可以跨包/跨模块访问资源文件。
 
 异常值：按默认值处理。
 
-**类型：** string \| PixelMap \| Resource
+**类型：** string \| [PixelMap](arkts-arkui-pixelmap-t.md) \| [Resource](../arkts-apis/arkts-arkui-resource-t.md)
 
 **起始版本：** 7
 
@@ -173,7 +173,7 @@ string格式可用于加载网络视频和本地视频，常用于加载网络�
 
 视频支持的格式是：mp4、mkv、TS。
 
-**类型：** string \| Resource
+**类型：** string \| [Resource](../arkts-apis/arkts-arkui-resource-t.md)
 
 **起始版本：** 7
 

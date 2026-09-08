@@ -27,21 +27,3 @@ type SourceOpenCallback = (request: MediaSourceLoadingRequest) => number
 | 类型 | 说明 |
 | --- | --- |
 | number | 当前资源打开请求的句柄。大于0表示请求成功，小于或等于0表示请求失败。 |
-
-**示例**
-
-```TypeScript
-import { HashMap } from '@kit.ArkTS';
-import { media } from '@kit.MediaKit';
-
-let uuid: number = 1;
-let requests: HashMap<number, media.MediaSourceLoadingRequest> = new HashMap();
-
-let sourceOpenCallback: media.SourceOpenCallback = (request: media.MediaSourceLoadingRequest) => {
-  console.info(`Opening resource: ${request.url}`);
-  // 成功打开资源，返回唯一的句柄, 保证uuid和request对应。
-  uuid += 1;
-  requests.set(uuid, request);
-  return uuid;
-};
-```

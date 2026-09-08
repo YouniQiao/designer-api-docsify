@@ -30,7 +30,7 @@ Subscribes to the notification extension. You can subscribe to the notification 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| info | NotificationExtensionSubscriptionInfo[] | Yes | List of subscribed notifications (in array). |
+| info | [NotificationExtensionSubscriptionInfo](arkts-notification-notificationextensionsubscription-notificationextensionsubscriptioninfo-t.md)[] | Yes | List of subscribed notifications (in array). |
 
 **Return value:**
 

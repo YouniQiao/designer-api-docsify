@@ -53,11 +53,6 @@ connect(device: string): boolean
 **示例**
 
 ```TypeScript
-let a2dpSrc : bluetooth.A2dpSourceProfile = bluetooth.getProfile(bluetooth.ProfileId.PROFILE_A2DP_SOURCE) as bluetooth.A2dpSourceProfile;
-let ret : boolean = a2dpSrc.connect('XX:XX:XX:XX:XX:XX');
-```
-
-```TypeScript
 let hfpAg : bluetooth.HandsFreeAudioGatewayProfile= bluetooth.getProfile(bluetooth.ProfileId
     .PROFILE_HANDS_FREE_AUDIO_GATEWAY);
 let ret : boolean = hfpAg.connect('XX:XX:XX:XX:XX:XX');
@@ -98,11 +93,6 @@ disconnect(device: string): boolean
 **示例**
 
 ```TypeScript
-let a2dpSrc : bluetooth.A2dpSourceProfile = bluetooth.getProfile(bluetooth.ProfileId.PROFILE_A2DP_SOURCE) as bluetooth.A2dpSourceProfile;
-let ret : boolean = a2dpSrc.disconnect('XX:XX:XX:XX:XX:XX');
-```
-
-```TypeScript
 let hfpAg : bluetooth.HandsFreeAudioGatewayProfile = bluetooth.getProfile(bluetooth.ProfileId
     .PROFILE_HANDS_FREE_AUDIO_GATEWAY);
 let ret : boolean = hfpAg.disconnect('XX:XX:XX:XX:XX:XX');
@@ -131,7 +121,7 @@ off(type: 'connectionStateChange', callback?: Callback<StateChangeParam>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'connectionStateChange' | 是 | 填写"connectionStateChange"字符串，表示连接状态变化事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;StateChangeParam&gt; | 否 | 表示回调函数的入参。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[StateChangeParam](arkts-connectivity-bluetooth-statechangeparam-i.md)&gt; | 否 | 表示回调函数的入参。 |
 
 ## on('connectionStateChange')
 
@@ -156,4 +146,4 @@ on(type: 'connectionStateChange', callback: Callback<StateChangeParam>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'connectionStateChange' | 是 | 填写"connectionStateChange"字符串，表示连接状态变化事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;StateChangeParam&gt; | 是 | 表示回调函数的入参。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[StateChangeParam](arkts-connectivity-bluetooth-statechangeparam-i.md)&gt; | 是 | 表示回调函数的入参。 |

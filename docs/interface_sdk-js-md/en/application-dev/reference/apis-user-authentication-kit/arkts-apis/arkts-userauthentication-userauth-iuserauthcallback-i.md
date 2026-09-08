@@ -99,7 +99,7 @@ is successful, the user authentication token will be returned in **extraInfo**. 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | result | number | Yes |  |
-| extraInfo | AuthResult | Yes |  |
+| extraInfo | [AuthResult](arkts-userauthentication-userauth-authresult-i.md) | Yes |  |
 
 **Examples**
 

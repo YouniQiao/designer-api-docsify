@@ -76,26 +76,6 @@ readonly isLocalCalling: boolean
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
-**示例**
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-class Stub extends rpc.RemoteObject {
-  onRemoteMessageRequest(code: number, data: rpc.MessageSequence, reply: rpc.MessageSequence,
-    option: rpc.MessageOption): boolean | Promise<boolean> {
-    try {
-      let isLocalCalling = rpc.IPCSkeleton.isLocalCalling();
-      hilog.info(0x0000, 'testTag', 'RpcServer: isLocalCalling is ' + isLocalCalling);
-    } catch (error) {
-      hilog.error(0x0000, 'testTag', 'error ' + error);
-    }
-    return true;
-  }
-}
-```
-
 ## localDeviceId
 
 ```TypeScript

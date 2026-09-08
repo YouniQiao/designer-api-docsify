@@ -33,7 +33,7 @@ Only one [MENU_PANEL](arkts-basicservices-selectioninput-selectionpanel-paneltyp
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Panel&gt; | Promise used to return the **Panel** object created, which can be used to set, display, hide, and move the panel, and subscribe to events. |
+| Promise&lt;[Panel](arkts-basicservices-selectionmanager-panel-i.md)&gt; | Promise used to return the **Panel** object created, which can be used to set, display, hide, and move the panel, and subscribe to events. |
 
 **Error codes:**
 

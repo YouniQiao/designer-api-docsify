@@ -27,8 +27,8 @@ function getCurrentLocation(request: CurrentLocationRequest | SingleLocationRequ
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| request | CurrentLocationRequest \| [SingleLocationRequest](arkts-location-geolocationmanager-singlelocationrequest-i.md) | 是 | 设置位置请求参数。SingleLocationRequest为API12新增参数。<br>**适用版本：** 12 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Location&gt; | 是 | 回调函数，返回当前位置信息。 |
+| request | [CurrentLocationRequest](arkts-location-geolocationmanager-currentlocationrequest-i.md) \| [SingleLocationRequest](arkts-location-geolocationmanager-singlelocationrequest-i.md) | 是 | 设置位置请求参数。SingleLocationRequest为API12新增参数。<br>**适用版本：** 12 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Location](arkts-location-geolocationmanager-location-i.md)&gt; | 是 | 回调函数，返回当前位置信息。 |
 
 **错误码：**
 
@@ -109,7 +109,7 @@ function getCurrentLocation(callback: AsyncCallback<Location>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Location&gt; | 是 | 回调函数，返回当前位置信息。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Location](arkts-location-geolocationmanager-location-i.md)&gt; | 是 | 回调函数，返回当前位置信息。 |
 
 **错误码：**
 
@@ -166,13 +166,13 @@ function getCurrentLocation(request?: CurrentLocationRequest | SingleLocationReq
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| request | CurrentLocationRequest \| [SingleLocationRequest](arkts-location-geolocationmanager-singlelocationrequest-i.md) | 否 | 设置位置请求参数。SingleLocationRequest为API12新增参数。若无此参数设置，则使用CurrentLocationRequest为默认值。<br>**适用版本：** 12 |
+| request | [CurrentLocationRequest](arkts-location-geolocationmanager-currentlocationrequest-i.md) \| [SingleLocationRequest](arkts-location-geolocationmanager-singlelocationrequest-i.md) | 否 | 设置位置请求参数。SingleLocationRequest为API12新增参数。若无此参数设置，则使用CurrentLocationRequest为默认值。<br>**适用版本：** 12 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Location&gt; | Promise对象，返回当前位置信息。 |
+| Promise&lt;[Location](arkts-location-geolocationmanager-location-i.md)&gt; | Promise对象，返回当前位置信息。 |
 
 **错误码：**
 

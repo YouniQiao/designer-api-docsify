@@ -42,7 +42,7 @@ deviceId: BluetoothAddress
 
 在使用OobData时，[BluetoothAddress](arkts-connectivity-common-bluetoothaddress-i.md)中的address、addressType和rawAddressType均为必选参数，且addressType必须设置为REAL。
 
-**类型：** BluetoothAddress
+**类型：** [BluetoothAddress](arkts-connectivity-connection-bluetoothaddress-t.md)
 
 **起始版本：** 23
 
@@ -78,7 +78,7 @@ deviceRole?: DeviceRole
 
 蓝牙设备在连接过程中的角色。若不设置该值，则默认值为DEVICE_ROLE_PERIPHERAL_ONLY。
 
-**类型：** DeviceRole
+**类型：** [DeviceRole](arkts-connectivity-connection-devicerole-e-sys.md)
 
 **起始版本：** 23
 

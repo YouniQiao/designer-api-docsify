@@ -28,7 +28,7 @@ function onDeleteFormsCallback(callback: formInfo.DeleteFormsCallback): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | formInfo.DeleteFormsCallback | 是 | 回调函数，返回被删除的卡片标识列表。 |
+| callback | [formInfo.DeleteFormsCallback](arkts-form-forminfo-deleteformscallback-t-sys.md) | 是 | 回调函数，返回被删除的卡片标识列表。 |
 
 **错误码：**
 

@@ -25,7 +25,7 @@ function exit(sharingResource: string, callback: AsyncCallback<Result<void>>): v
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | sharingResource | string | 是 | 端云共享数据的资源标识。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Result&lt;void&gt;&gt; | 是 | 回调函数。返回退出共享的结果。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Result](arkts-arkdata-relationalstore-result-i.md)&lt;void&gt;&gt; | 是 | 回调函数。返回退出共享的结果。 |
 
 **错误码：**
 
@@ -74,7 +74,7 @@ function exit(sharingResource: string): Promise<Result<void>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Result&lt;void&gt;&gt; | Promise对象，返回退出端云共享的结果。 |
+| Promise&lt;[Result](arkts-arkdata-relationalstore-result-i.md)&lt;void&gt;&gt; | Promise对象，返回退出端云共享的结果。 |
 
 **错误码：**
 

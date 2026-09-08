@@ -22,7 +22,7 @@ Releases a **DeviceManager** instance that is no longer used.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceManager | DeviceManager | Yes | DeviceManager** instance to release. |
+| deviceManager | [DeviceManager](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md) | Yes | DeviceManager** instance to release. |
 
 **Error codes:**
 

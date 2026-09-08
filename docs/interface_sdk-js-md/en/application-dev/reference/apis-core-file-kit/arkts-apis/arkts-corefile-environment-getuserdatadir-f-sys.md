@@ -34,17 +34,6 @@ Obtains the root directory of user files. This API uses a promise to return the 
 | 13900020 | Invalid argument |
 | 13900042 | Unknown error |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-Environment.getUserDataDir().then((path: string) => {
-  console.info("getUserDataDir successfully, Path: " + path);
-}).catch((err: BusinessError) => {
-  console.error("getUserDataDir failed with error message: " + err.message + ", error code: " + err.code);
-});
-```
-
 
 ## getUserDataDir
 
@@ -73,16 +62,3 @@ Obtains the root directory of user files. This API uses an asynchronous callback
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application |
 | 13900020 | Invalid argument |
 | 13900042 | Unknown error |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-Environment.getUserDataDir((err: BusinessError, path: string) => {
-  if (err) {
-    console.error("getUserDataDir failed with error message: " + err.message + ", error code: " + err.code);
-  } else {
-    console.info("getUserDataDir successfully, Path: " + path);
-  }
-});
-```

@@ -40,15 +40,7 @@ Obtains information about a symbolic link that is used to refer to a file or dir
 | 13900012 | Permission denied |
 | 13900013 | Bad address |
 | 13900018 | Not a directory |
-| 13900030 | File name too number |
+| 13900030 | File name too long |
 | 13900033 | Too many symbolic links encountered |
 | 13900038 | Value too large for defined data type |
 | 13900042 | Unknown error |
-
-**Examples**
-
-```TypeScript
-let filePath = pathDir + "/linkToFile";
-let fileStat = fileIo.lstatSync(filePath);
-console.info(`Succeeded in getting symbolic link info, the size of file is ${fileStat.size}`);
-```

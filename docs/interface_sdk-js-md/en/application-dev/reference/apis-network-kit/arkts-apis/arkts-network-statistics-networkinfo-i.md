@@ -66,7 +66,7 @@ Network type.
 
 **Note：**: If **type** is set to **cellular**, the **simId** field must be specified.
 
-**Type:** NetBearType
+**Type:** [NetBearType](arkts-network-statistics-netbeartype-t.md)
 
 **Since:** 22
 

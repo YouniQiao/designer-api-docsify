@@ -52,7 +52,7 @@ type: ReportType
 
 报告类型。
 
-**类型：** ReportType
+**类型：** [ReportType](arkts-connectivity-hid-reporttype-e.md)
 
 **起始版本：** 23
 

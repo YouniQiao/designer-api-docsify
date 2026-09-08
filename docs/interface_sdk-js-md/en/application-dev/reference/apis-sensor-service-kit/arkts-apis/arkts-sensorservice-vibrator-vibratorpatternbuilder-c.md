@@ -1,6 +1,6 @@
 # VibratorPatternBuilder
 
-Provide methods for adding number or short vibration events and generate VibratorPattern objects.
+Provide methods for adding long or short vibration events and generate VibratorPattern objects.
 
 **Since:** 18
 
@@ -18,7 +18,7 @@ import { vibrator } from '@kit.SensorServiceKit';
 addContinuousEvent(time: number, duration: number, options?: ContinuousParam): VibratorPatternBuilder
 ```
 
-Adds a number vibration event as a **VibratorPattern** object.
+Adds a long vibration event as a **VibratorPattern** object.
 
 **Since:** 18
 
@@ -28,15 +28,15 @@ Adds a number vibration event as a **VibratorPattern** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| time | number | Yes | Start time of the number vibration event, in ms. The value range is [0, 1800000]. |
-| duration | number | Yes | Duration of the number vibration event, in ms. The value range is (0,5000]. |
+| time | number | Yes | Start time of the long vibration event, in ms. The value range is [0, 1800000]. |
+| duration | number | Yes | Duration of the long vibration event, in ms. The value range is (0,5000]. |
 | options | [ContinuousParam](arkts-sensorservice-vibrator-continuousparam-i.md) | No | Optional parameters. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [VibratorPatternBuilder](arkts-sensorservice-vibrator-vibratorpatternbuilder-c.md) | VibratorPatternBuilder** object representing a number vibration event. |
+| [VibratorPatternBuilder](arkts-sensorservice-vibrator-vibratorpatternbuilder-c.md) | VibratorPatternBuilder** object representing a long vibration event. |
 
 **Error codes:**
 
@@ -139,7 +139,7 @@ try {
 build(): VibratorPattern
 ```
 
-Constructor used to create a **VibratorPattern** object, which determines the vibration sequence of short or number events.
+Constructor used to create a **VibratorPattern** object, which determines the vibration sequence of short or long events.
 
 **Since:** 18
 

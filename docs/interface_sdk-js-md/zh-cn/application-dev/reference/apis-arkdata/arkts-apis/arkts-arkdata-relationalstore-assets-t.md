@@ -10,4 +10,4 @@ type Assets = Asset[]
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
-**类型：** Asset[]
+**类型：** [Asset](arkts-arkdata-relationalstore-asset-i.md)[]

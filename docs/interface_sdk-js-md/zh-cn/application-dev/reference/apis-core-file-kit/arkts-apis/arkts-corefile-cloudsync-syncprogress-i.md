@@ -20,7 +20,7 @@ error: ErrorType
 
 枚举值，同步失败错误类型。
 
-**类型：** ErrorType
+**类型：** [ErrorType](arkts-corefile-cloudsync-errortype-e.md)
 
 **起始版本：** 12
 

@@ -142,7 +142,7 @@ Deletes data from the database. This API can be overridden as required.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uri | string | Yes | URI of the data to delete. |
-| predicates | dataSharePredicates.DataSharePredicates | Yes | Filter criteria for deleting data. |
+| predicates | [dataSharePredicates.DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | Yes | Filter criteria for deleting data. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the number of deleted data records. |
 
 **Examples**
@@ -384,7 +384,7 @@ Queries data from the database. This API can be overridden as required.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uri | string | Yes | URI of the data to query. |
-| predicates | dataSharePredicates.DataSharePredicates | Yes | Filter criteria for querying data. |
+| predicates | [dataSharePredicates.DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | Yes | Filter criteria for querying data. |
 | columns | Array&lt;string&gt; | Yes | Columns to query. If this parameter is empty, all columns will be queried. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Object&gt; | Yes | Callback used to return the result set obtained. |
 
@@ -439,7 +439,7 @@ Updates data in the database. This API can be overridden as required.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uri | string | Yes | URI of the data to update. |
-| predicates | dataSharePredicates.DataSharePredicates | Yes | Filter criteria for updating data. |
+| predicates | [dataSharePredicates.DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | Yes | Filter criteria for updating data. |
 | valueBucket | [ValuesBucket](arkts-arkdata-valuesbucket-t.md) | Yes | New data. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the number of data records updated. |
 

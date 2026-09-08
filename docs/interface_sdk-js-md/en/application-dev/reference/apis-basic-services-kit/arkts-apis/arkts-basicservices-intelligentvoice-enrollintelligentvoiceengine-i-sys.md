@@ -309,21 +309,6 @@ if (enrollIntelligentVoiceEngine != null) {
 }
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-if (wakeupIntelligentVoiceEngine != null) {
-  (wakeupIntelligentVoiceEngine as intelligentVoice.WakeupIntelligentVoiceEngine).getParameter('key', (err: BusinessError, data: string) => {
-    if (err) {
-      console.error(`Failed to get parameter, Code:${err.code}, message:${err.message}`);
-    } else {
-      let param: string = data;
-      console.info(`Succeeded in getting parameter, param:${param}`);
-    }
-  });
-}
-```
-
 ## getParameter
 
 ```TypeScript
@@ -366,34 +351,8 @@ Obtains the value of an intelligent voice parameter. This method uses a promise 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
-if (wakeupManager != null) {
-  (wakeupManager as intelligentVoice.WakeupManager).getParameter('isEnrolled').then((data: string) => {
-    let param: string = data;
-    console.info(`Succeeded in getting parameter, param:${param}`);
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to get parameter, Code:${err.code}, message:${err.message}`);
-  });
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
 if (enrollIntelligentVoiceEngine != null) {
   (enrollIntelligentVoiceEngine as intelligentVoice.EnrollIntelligentVoiceEngine).getParameter('key').then((data: string) => {
-    let param: string = data;
-    console.info(`Succeeded in getting parameter, param:${param}`);
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to get parameter, Code:${err.code}, message:${err.message}`);
-  });
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-if (wakeupIntelligentVoiceEngine != null) {
-  (wakeupIntelligentVoiceEngine as intelligentVoice.WakeupIntelligentVoiceEngine).getParameter('key').then((data: string) => {
     let param: string = data;
     console.info(`Succeeded in getting parameter, param:${param}`);
   }).catch((err: BusinessError) => {
@@ -450,21 +409,6 @@ if (enrollIntelligentVoiceEngine != null) {
 }
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-if (wakeupIntelligentVoiceEngine != null) {
-  (wakeupIntelligentVoiceEngine as intelligentVoice.WakeupIntelligentVoiceEngine).getSupportedRegions((err: BusinessError, data: Array<string>) => {
-    if (err) {
-      console.error(`Failed to get supported regions, Code:${err.code}, message:${err.message}`);
-    } else {
-      let regions: Array<string> = data;
-      console.info(`Succeeded in getting supported regions, regions:${regions}.`);
-    }
-  });
-}
-```
-
 ## getSupportedRegions
 
 ```TypeScript
@@ -503,19 +447,6 @@ let regions: Array<string> | null = null;
 if (enrollIntelligentVoiceEngine != null) {
   (enrollIntelligentVoiceEngine as intelligentVoice.EnrollIntelligentVoiceEngine).getSupportedRegions().then((data: Array<string>) => {
     regions = data;
-    console.info(`Succeeded in getting supported regions, regions:${regions}.`);
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to get supported regions, Code:${err.code}, message:${err.message}`);
-  });
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-if (wakeupIntelligentVoiceEngine != null) {
-  (wakeupIntelligentVoiceEngine as intelligentVoice.WakeupIntelligentVoiceEngine).getSupportedRegions().then((data: Array<string>) => {
-    let regions: Array<string> = data;
     console.info(`Succeeded in getting supported regions, regions:${regions}.`);
   }).catch((err: BusinessError) => {
     console.error(`Failed to get supported regions, Code:${err.code}, message:${err.message}`);
@@ -677,20 +608,6 @@ if (enrollIntelligentVoiceEngine != null) {
 }
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-if (wakeupIntelligentVoiceEngine != null) {
-  (wakeupIntelligentVoiceEngine as intelligentVoice.WakeupIntelligentVoiceEngine).release((err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to release wakeupIntelligentVoice engine, Code:${err.code}, message:${err.message}`);
-    } else {
-      console.info(`Succeeded in releasing wakeupIntelligentVoice engine.`);
-    }
-  });
-}
-```
-
 ## release
 
 ```TypeScript
@@ -730,18 +647,6 @@ if (enrollIntelligentVoiceEngine != null) {
     console.info(`Succeeded in releasing enrollIntelligentVoice engine.`);
   }).catch((err: BusinessError) => {
     console.error(`Failed to release enrollIntelligentVoice engine, Code:${err.code}, message:${err.message}`);
-  });
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-if (wakeupIntelligentVoiceEngine != null) {
-  (wakeupIntelligentVoiceEngine as intelligentVoice.WakeupIntelligentVoiceEngine).release().then(() => {
-    console.info(`Succeeded in releasing wakeupIntelligentVoice engine.`);
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to release wakeupIntelligentVoice engine, Code:${err.code}, message:${err.message}`);
   });
 }
 ```
@@ -795,20 +700,6 @@ if (enrollIntelligentVoiceEngine != null) {
 }
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-if (wakeupIntelligentVoiceEngine != null) {
-  (wakeupIntelligentVoiceEngine as intelligentVoice.WakeupIntelligentVoiceEngine).setParameter('scene', '0', (err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to set parameter, Code:${err.code}, message:${err.message}`);
-    } else {
-      console.info(`Succeeded in setting parameter`);
-    }
-  });
-}
-```
-
 ## setParameter
 
 ```TypeScript
@@ -852,32 +743,8 @@ Sets an intelligent voice parameter. This method uses a promise to return the re
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
-if (wakeupManager != null) {
-  (wakeupManager as intelligentVoice.WakeupManager).setParameter('wakeup_phrase', 'xiaohuaxiaohua').then(() => {
-    console.info(`Succeeded in setting parameter`);
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to set parameter, Code:${err.code}, message:${err.message}`);
-  });
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
 if (enrollIntelligentVoiceEngine != null) {
   (enrollIntelligentVoiceEngine as intelligentVoice.EnrollIntelligentVoiceEngine).setParameter('scene', '0').then(() => {
-    console.info(`Succeeded in setting parameter`);
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to set parameter, Code:${err.code}, message:${err.message}`);
-  });
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-if (wakeupIntelligentVoiceEngine != null) {
-  (wakeupIntelligentVoiceEngine as intelligentVoice.WakeupIntelligentVoiceEngine).setParameter('scene', '0').then(() => {
     console.info(`Succeeded in setting parameter`);
   }).catch((err: BusinessError) => {
     console.error(`Failed to set parameter, Code:${err.code}, message:${err.message}`);
@@ -924,20 +791,6 @@ import { BusinessError } from '@kit.BasicServicesKit';
 
 if (enrollIntelligentVoiceEngine != null) {
   (enrollIntelligentVoiceEngine as intelligentVoice.EnrollIntelligentVoiceEngine).setSensibility(intelligentVoice.SensibilityType.LOW_SENSIBILITY, (err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to set sensibility, Code:${err.code}, message:${err.message}`);
-    } else {
-      console.info(`Succeeded in setting sensibility.`);
-    }
-  });
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-if (wakeupIntelligentVoiceEngine != null) {
-  (wakeupIntelligentVoiceEngine as intelligentVoice.WakeupIntelligentVoiceEngine).setSensibility(intelligentVoice.SensibilityType.LOW_SENSIBILITY, (err: BusinessError) => {
     if (err) {
       console.error(`Failed to set sensibility, Code:${err.code}, message:${err.message}`);
     } else {
@@ -998,18 +851,6 @@ if (enrollIntelligentVoiceEngine != null) {
 }
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-if (wakeupIntelligentVoiceEngine != null) {
-  (wakeupIntelligentVoiceEngine as intelligentVoice.WakeupIntelligentVoiceEngine).setSensibility(intelligentVoice.SensibilityType.LOW_SENSIBILITY).then(() => {
-    console.info(`Succeeded in setting sensibility.`);
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to set sensibility, Code:${err.code}, message:${err.message}`);
-  });
-}
-```
-
 ## setWakeupHapInfo
 
 ```TypeScript
@@ -1053,25 +894,6 @@ let info: intelligentVoice.WakeupHapInfo = {
 }
 if (enrollIntelligentVoiceEngine != null) {
   (enrollIntelligentVoiceEngine as intelligentVoice.EnrollIntelligentVoiceEngine).setWakeupHapInfo(info, (err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to set wakeup hap info, Code:${err.code}, message:${err.message}`);
-    } else {
-      console.info(`Succeeded in setting wakeup hap info.`);
-    }
-  });
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let hapInfo: intelligentVoice.WakeupHapInfo = {
-  bundleName: 'com.wakeup',
-  abilityName: 'WakeUpExtAbility',
-}
-
-if (wakeupIntelligentVoiceEngine != null) {
-  (wakeupIntelligentVoiceEngine as intelligentVoice.WakeupIntelligentVoiceEngine).setWakeupHapInfo(hapInfo, (err: BusinessError) => {
     if (err) {
       console.error(`Failed to set wakeup hap info, Code:${err.code}, message:${err.message}`);
     } else {
@@ -1129,22 +951,6 @@ let info: intelligentVoice.WakeupHapInfo = {
 }
 if (enrollIntelligentVoiceEngine != null) {
   (enrollIntelligentVoiceEngine as intelligentVoice.EnrollIntelligentVoiceEngine).setWakeupHapInfo(info).then(() => {
-    console.info(`Succeeded in setting wakeup hap info.`);
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to set wakeup hap info, Code:${err.code}, message:${err.message}`);
-  });
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let hapInfo: intelligentVoice.WakeupHapInfo = {
-  bundleName: 'com.wakeup',
-  abilityName: 'WakeUpExtAbility',
-}
-if (wakeupIntelligentVoiceEngine != null) {
-  (wakeupIntelligentVoiceEngine as intelligentVoice.WakeupIntelligentVoiceEngine).setWakeupHapInfo(hapInfo).then(() => {
     console.info(`Succeeded in setting wakeup hap info.`);
   }).catch((err: BusinessError) => {
     console.error(`Failed to set wakeup hap info, Code:${err.code}, message:${err.message}`);

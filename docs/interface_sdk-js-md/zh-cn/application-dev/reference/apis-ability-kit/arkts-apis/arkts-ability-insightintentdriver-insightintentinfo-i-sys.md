@@ -112,7 +112,7 @@ readonly entities: Array<EntityInfo>
 
 表示意图包含的实体信息。
 
-**类型：** Array&lt;EntityInfo&gt;
+**类型：** Array&lt;[EntityInfo](arkts-ability-insightintentdriver-entityinfo-i-sys.md)&gt;
 
 **起始版本：** 20
 

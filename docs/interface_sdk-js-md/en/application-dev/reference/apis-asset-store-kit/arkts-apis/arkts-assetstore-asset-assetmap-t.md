@@ -12,4 +12,4 @@ Represents a set of asset attributes in the form of KV pairs.
 
 **System capability:** SystemCapability.Security.Asset
 
-**Type:** Map&lt;[Tag](arkts-assetstore-asset-tag-e.md), Value&gt;
+**Type:** Map&lt;[Tag](arkts-assetstore-asset-tag-e.md), [Value](arkts-assetstore-asset-value-t.md)&gt;

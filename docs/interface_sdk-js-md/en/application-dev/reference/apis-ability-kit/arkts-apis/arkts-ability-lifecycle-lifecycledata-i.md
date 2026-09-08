@@ -32,7 +32,7 @@ Inserts multiple data records into the database. This method should be implement
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uri | string | Yes | Indicates the position where the data is to insert. |
-| valueBuckets | Array&lt;rdb.ValuesBucket&gt; | Yes | Indicates the data to insert. |
+| valueBuckets | Array&lt;[rdb.ValuesBucket](../../apis-arkdata/arkts-apis/arkts-arkdata-rdb-valuesbucket-t.md)&gt; | Yes | Indicates the data to insert. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | function specified by framework to receive the result, developer should call this function to return the result to framework. |
 
 ## call
@@ -77,7 +77,7 @@ Deletes one or more data records. This method should be implemented by a Data ab
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uri | string | Yes | Indicates the database table storing the data to delete. |
-| predicates | dataAbility.DataAbilityPredicates | Yes | Indicates filter criteria. If this parameter is null, all data records will be deleted by default. |
+| predicates | [dataAbility.DataAbilityPredicates](../../apis-arkdata/arkts-apis/arkts-arkdata-dataability-dataabilitypredicates-c.md) | Yes | Indicates filter criteria. If this parameter is null, all data records will be deleted by default. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | function specified by framework to receive the result, developer should call this function to return the result to framework. |
 
 ## denormalizeUri
@@ -184,7 +184,7 @@ Inserts a data record into the database. This method should be implemented by a 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uri | string | Yes | Indicates the position where the data is to insert. |
-| valueBucket | rdb.ValuesBucket | Yes | Indicates the data to insert. |
+| valueBucket | [rdb.ValuesBucket](../../apis-arkdata/arkts-apis/arkts-arkdata-rdb-valuesbucket-t.md) | Yes | Indicates the data to insert. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | function specified by framework to receive the result, developer should call this function to return the result to framework. |
 
 ## normalizeUri
@@ -275,7 +275,7 @@ Queries one or more data records in the database. This method should be implemen
 | --- | --- | --- | --- |
 | uri | string | Yes | Indicates the database table storing the data to query. |
 | columns | Array&lt;string&gt; | Yes | Indicates the columns to be queried, in array, for example, {"name","age"}. You should define the processing logic when this parameter is null. |
-| predicates | dataAbility.DataAbilityPredicates | Yes | Indicates filter criteria. If this parameter is null, all data records will be queried by default. |
+| predicates | [dataAbility.DataAbilityPredicates](../../apis-arkdata/arkts-apis/arkts-arkdata-dataability-dataabilitypredicates-c.md) | Yes | Indicates filter criteria. If this parameter is null, all data records will be queried by default. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ResultSet](../../apis-arkdata/arkts-apis/arkts-arkdata-resultset-resultset-depr-i.md)&gt; | Yes | function specified by framework to receive the result, developer should call this function to return the result to framework. |
 
 ## update
@@ -302,6 +302,6 @@ Updates one or more data records in the database. This method should be implemen
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uri | string | Yes | Indicates the database table storing the data to update. |
-| valueBucket | rdb.ValuesBucket | Yes | Indicates the data to update. This parameter can be null. |
-| predicates | dataAbility.DataAbilityPredicates | Yes | Indicates filter criteria. If this parameter is null, all data records will be updated by default. |
+| valueBucket | [rdb.ValuesBucket](../../apis-arkdata/arkts-apis/arkts-arkdata-rdb-valuesbucket-t.md) | Yes | Indicates the data to update. This parameter can be null. |
+| predicates | [dataAbility.DataAbilityPredicates](../../apis-arkdata/arkts-apis/arkts-arkdata-dataability-dataabilitypredicates-c.md) | Yes | Indicates filter criteria. If this parameter is null, all data records will be updated by default. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | function specified by framework to receive the result, developer should call this function to return the result to framework. |

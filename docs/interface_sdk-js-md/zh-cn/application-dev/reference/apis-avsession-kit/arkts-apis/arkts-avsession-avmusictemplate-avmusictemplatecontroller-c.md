@@ -268,7 +268,7 @@ offCurrentSingleChange(callback?: Callback<Single>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Single&gt; | 否 | 回调函数，返回当前单曲的信息。不填该参数则注销该类型对应的所有回调。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Single](arkts-avsession-avmusictemplate-single-i.md)&gt; | 否 | 回调函数，返回当前单曲的信息。不填该参数则注销该类型对应的所有回调。 |
 
 **错误码：**
 
@@ -548,7 +548,7 @@ offUserInfoChange(callback?: Callback<UserInfo>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;UserInfo&gt; | 否 | 回调函数，返回用户信息。不填该参数则注销该类型对应的所有回调。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[UserInfo](arkts-avsession-avmusictemplate-userinfo-i.md)&gt; | 否 | 回调函数，返回用户信息。不填该参数则注销该类型对应的所有回调。 |
 
 **错误码：**
 
@@ -576,7 +576,7 @@ onCurrentSingleChange(callback: Callback<Single>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Single&gt; | 是 | 回调函数，返回当前单曲的信息。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Single](arkts-avsession-avmusictemplate-single-i.md)&gt; | 是 | 回调函数，返回当前单曲的信息。 |
 
 **错误码：**
 
@@ -856,7 +856,7 @@ onUserInfoChange(callback: Callback<UserInfo>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;UserInfo&gt; | 是 | 回调函数，参数为用户信息。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[UserInfo](arkts-avsession-avmusictemplate-userinfo-i.md)&gt; | 是 | 回调函数，参数为用户信息。 |
 
 **错误码：**
 
@@ -1026,7 +1026,7 @@ queryCurrentSingle(): Promise<Single>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Single&gt; | Promise对象，返回当前单曲。 |
+| Promise&lt;[Single](arkts-avsession-avmusictemplate-single-i.md)&gt; | Promise对象，返回当前单曲。 |
 
 **错误码：**
 

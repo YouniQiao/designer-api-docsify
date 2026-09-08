@@ -256,7 +256,7 @@ Security level of the RDB store.
 
 SystemCapability.DistributedDataManager.RelationalStore.Core
 
-**Type:** SecurityLevel
+**Type:** [SecurityLevel](arkts-arkdata-relationalstore-securitylevel-e.md)
 
 **Since:** 9
 

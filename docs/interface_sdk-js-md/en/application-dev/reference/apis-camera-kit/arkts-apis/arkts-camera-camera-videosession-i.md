@@ -53,38 +53,6 @@ Checks whether this session supports a preconfigured resolution.
 | --- | --- |
 | [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function testCanPreconfig(photoSession: camera.PhotoSession, preconfigType: camera.PreconfigType,
-  preconfigRatio: camera.PreconfigRatio): void {
-  try {
-    let result = photoSession.canPreconfig(preconfigType, preconfigRatio);
-    console.info(`canPreconfig ${preconfigType} ${preconfigRatio} result is : ${result}`);
-  } catch (error) {
-    let err = error as BusinessError;
-    console.error(`The canPreconfig call failed. error code: ${err.code}`);
-  }
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function testCanPreconfig(videoSession: camera.VideoSession, preconfigType: camera.PreconfigType,
-  preconfigRatio: camera.PreconfigRatio): void {
-  try {
-    let result = videoSession.canPreconfig(preconfigType, preconfigRatio);
-    console.info(`canPreconfig ${preconfigType} ${preconfigRatio} result is : ${result}`);
-  } catch (error) {
-    let err = error as BusinessError;
-    console.error(`The canPreconfig call failed. error code: ${err.code}`);
-  }
-}
-```
-
 ## off('error')
 
 ```TypeScript
@@ -260,20 +228,6 @@ Unsubscribes from exposure information change events. If you have subscribed to 
 | --- | --- | --- | --- |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ExposureInfo](arkts-camera-camera-exposureinfo-i.md)&gt; | No | Callback used to return the result. If this parameter is specified, the subscription to the specified event with the specified callback is canceled. (The callback object cannot be an anonymous function.) Otherwise, the subscriptions to the specified event with all the callbacks are canceled. |
 
-**Examples**
-
-```TypeScript
-function offExposureInfoChange(photoSession: camera.PhotoSession): void {
-  photoSession.offExposureInfoChange();
-}
-```
-
-```TypeScript
-function offExposureInfoChange(videoSession: camera.VideoSession): void {
-  videoSession.offExposureInfoChange();
-}
-```
-
 ## offIsoInfoChange
 
 ```TypeScript
@@ -295,28 +249,6 @@ Unsubscribes from ISO state change events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[IsoInfo](arkts-camera-camera-isoinfo-i.md)&gt; | No | Callback used for unsubscription. If this parameter is specified, the subscription to the specified event with the specified callback is canceled. (The callback object cannot be an anonymous function.) Otherwise, the subscriptions to the specified event with all the callbacks are canceled. |
-
-**Examples**
-
-```TypeScript
-function offIsoInfoChange(photoSession: camera.PhotoSession): void {
-  photoSession.offIsoInfoChange();
-}
-```
-
-```TypeScript
-function callback(isoInfo: camera.IsoInfo): void {
-  console.info(`Iso : ${isoInfo}`);
-}
-
-function unregisterIsoInfoChanged(videoSession: camera.VideoSession): void {
-  videoSession.offIsoInfoChange(callback);
-}
-
-function unregisterAllIsoInfoChanged(videoSession: camera.VideoSession): void {
-  videoSession.offIsoInfoChange();
-}
-```
 
 ## on('error')
 
@@ -517,24 +449,6 @@ Subscribes to exposure information change events. After the exposure parameters 
 | --- | --- | --- | --- |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ExposureInfo](arkts-camera-camera-exposureinfo-i.md)&gt; | Yes | Callback used to obtain the exposure information. |
 
-**Examples**
-
-```TypeScript
-function onExposureInfoChange(photoSession: camera.PhotoSession): void {
-  photoSession.onExposureInfoChange((exposureInfo: camera.ExposureInfo) => {
-    console.info(`Exposure info changed, exposureTime: ${exposureInfo.exposureTime}`);
-  });
-}
-```
-
-```TypeScript
-function onExposureInfoChange(videoSession: camera.VideoSession): void {
-  videoSession.onExposureInfoChange((exposureInfo: camera.ExposureInfo) => {
-    console.info(`Exposure info changed, exposureTime: ${exposureInfo.exposureTime}`);
-  });
-}
-```
-
 ## onIsoInfoChange
 
 ```TypeScript
@@ -556,26 +470,6 @@ Subscribes to sensitivity (ISO) state change events and obtains the latest ISO v
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[IsoInfo](arkts-camera-camera-isoinfo-i.md)&gt; | Yes | Callback used to obtain the current ISO value of the camera. |
-
-**Examples**
-
-```TypeScript
-function onIsoInfoChange(photoSession: camera.PhotoSession): void {
-  photoSession.onIsoInfoChange((isoInfo: camera.IsoInfo) => {
-    console.info(`ISO info changed, iso: ${isoInfo.iso}`);
-  });
-}
-```
-
-```TypeScript
-function callback(isoInfo: camera.IsoInfo): void {
-  console.info(`Iso : ${isoInfo}`);
-}
-
-function registerIsoInfoChanged(videoSession: camera.VideoSession): void {
-  videoSession.onIsoInfoChange(callback);
-}
-```
 
 ## preconfig
 
@@ -603,38 +497,6 @@ Preconfigures this session.
 | Error Code ID | Error Message |
 | --- | --- |
 | [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function testPreconfig(photoSession: camera.PhotoSession, preconfigType: camera.PreconfigType,
-  preconfigRatio: camera.PreconfigRatio): void {
-  try {
-    photoSession.preconfig(preconfigType, preconfigRatio);
-    console.info(`preconfig success preconfigType: ${preconfigType}, preconfigRatio: ${preconfigRatio}`);
-  } catch (error) {
-    let err = error as BusinessError;
-    console.error(`The preconfig call failed. error code: ${err.code}`);
-  }
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function testPreconfig(videoSession: camera.VideoSession, preconfigType: camera.PreconfigType,
-  preconfigRatio: camera.PreconfigRatio): void {
-  try {
-    videoSession.preconfig(preconfigType, preconfigRatio);
-    console.info(`preconfig ${preconfigType} ${preconfigRatio} success`);
-  } catch (error) {
-    let err = error as BusinessError;
-    console.error(`The preconfig call failed. error code: ${err.code}`);
-  }
-}
-```
 
 ## setQualityPrioritization
 
@@ -671,19 +533,3 @@ Sets the priority level for video recording quality.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. The session has not been committed or configured. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function setQualityPrioritization(videoSession: camera.VideoSession): void {
-  try {
-    videoSession.setQualityPrioritization(camera.QualityPrioritization.POWER_BALANCE);
-  } catch (error) {
-    // If the operation fails, error.code is returned and processed.
-    let err = error as BusinessError;
-    console.error(`The setQualityPrioritization call failed. error code: ${err.code}`);
-  }
-}
-```

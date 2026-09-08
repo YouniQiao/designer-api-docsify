@@ -116,7 +116,7 @@ windowType: WindowType
 
 窗口类型。
 
-**类型：** WindowType
+**类型：** [WindowType](arkts-arkui-window-windowtype-e.md)
 
 **起始版本：** 9
 

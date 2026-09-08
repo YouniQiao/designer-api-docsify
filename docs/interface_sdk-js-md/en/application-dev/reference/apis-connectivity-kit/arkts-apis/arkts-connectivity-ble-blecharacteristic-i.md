@@ -74,7 +74,7 @@ descriptors: Array<BLEDescriptor>
 
 The list of [BLEDescriptor](arkts-connectivity-ble-bledescriptor-i.md) contained in the characteristic
 
-**Type:** Array&lt;BLEDescriptor&gt;
+**Type:** Array&lt;[BLEDescriptor](arkts-connectivity-ble-bledescriptor-i.md)&gt;
 
 **Since:** 10
 

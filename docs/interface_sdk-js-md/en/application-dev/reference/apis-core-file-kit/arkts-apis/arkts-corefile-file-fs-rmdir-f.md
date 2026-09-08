@@ -49,22 +49,9 @@ Removes a directory and all its subdirectories and files. This API uses a promis
 | 13900018 | Not a directory |
 | 13900020 | Invalid argument |
 | 13900027 | Read-only file system |
-| 13900030 | File name too number |
+| 13900030 | File name too long |
 | 13900032 | Directory not empty |
 | 13900042 | Unknown error |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let dirPath = pathDir + "/testDir";
-fileIo.rmdir(dirPath).then(() => {
-  console.info(`Succeeded in removing directory.`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to remove directory. Code: ${err.code}, message: ${err.message}`);
-});
-```
 
 
 ## rmdir
@@ -105,21 +92,6 @@ Removes a directory and all its subdirectories and files. This API uses an async
 | 13900018 | Not a directory |
 | 13900020 | Invalid argument |
 | 13900027 | Read-only file system |
-| 13900030 | File name too number |
+| 13900030 | File name too long |
 | 13900032 | Directory not empty |
 | 13900042 | Unknown error |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let dirPath = pathDir + "/testDir";
-fileIo.rmdir(dirPath, (err: BusinessError) => {
-  if (err) {
-    console.error(`Failed to remove directory. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info(`Succeeded in removing directory.`);
-  }
-});
-```

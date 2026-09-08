@@ -234,7 +234,7 @@ Default value: **BlurStyle.COMPONENT_ULTRA_THICK**
 
 Setting this parameter to **BlurStyle.NONE** disables the background blur. When **backgroundBlurStyle** is set to a value other than **NONE**, do not set **backgroundColor**. If you do, the color display may not produce the expected visual effect.
 
-**Type:** BlurStyle
+**Type:** [BlurStyle](arkts-arkui-blurstyle-e.md)
 
 **Default:** BlurStyle.COMPONENT_ULTRA_THICK
 
@@ -375,7 +375,7 @@ Default value:
 
 **minute**: The default value is **"2-digit"**, meaning the minute is displayed as a two-digit number. If the actual value is less than 10, a leading zero is added, displayed as "0X".
 
-**Type:** DateTimeOptions
+**Type:** [DateTimeOptions](arkts-arkui-datetimeoptions-t.md)
 
 **Default:** hour: In the 24-hour format, it defaults to 2-digit, which means a leading zero is used; 
 In the 12-hour format, it defaults to numeric, which means no leading zero is used. 
@@ -609,7 +609,7 @@ Offset of the dialog box based on the **alignment** settings.
 
 Default value: **{ dx: 0 , dy: 0 }**
 
-**Type:** Offset
+**Type:** [Offset](../arkts-apis/arkts-arkui-offset-t.md)
 
 **Default:** { dx: 0 , dy: 0 } [since 11]
 
@@ -633,7 +633,7 @@ Callback invoked when the OK button in the dialog box is clicked.
 
 When **showTime** is set to **true**, the hour and minute in the value returned by the callback are the hour and minute selected in the picker. Otherwise, the hour and minute are the hour and minute of the system time.
 
-**Type:** Callback&lt;Date&gt;
+**Type:** [Callback](arkts-arkui-callback-i.md)&lt;Date&gt;
 
 **Since:** 10
 
@@ -655,7 +655,7 @@ Callback triggered when date selection changes through scrolling in the dialog b
 
 When **showTime** is set to **true**, the hour and minute in the value returned by the callback are the hour and minute selected in the picker. Otherwise, the hour and minute are the hour and minute of the system time.
 
-**Type:** Callback&lt;Date&gt;
+**Type:** [Callback](arkts-arkui-callback-i.md)&lt;Date&gt;
 
 **Since:** 10
 

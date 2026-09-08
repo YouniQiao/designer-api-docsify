@@ -44,7 +44,7 @@ state: BondState
 
 表示配对设备的状态。
 
-**类型：** BondState
+**类型：** [BondState](arkts-connectivity-bluetoothmanager-bondstate-e.md)
 
 **起始版本：** 9
 

@@ -22,7 +22,7 @@ rectType: RectType
 
 窗口矩形区域坐标系类型。
 
-**类型：** RectType
+**类型：** [RectType](arkts-arkui-window-recttype-e.md)
 
 **起始版本：** 19
 
@@ -38,7 +38,7 @@ windowRect: Rect
 
 相对于屏幕或父窗坐标系的窗口矩形区域信息。
 
-**类型：** Rect
+**类型：** [Rect](arkts-arkui-window-rect-i.md)
 
 **起始版本：** 19
 

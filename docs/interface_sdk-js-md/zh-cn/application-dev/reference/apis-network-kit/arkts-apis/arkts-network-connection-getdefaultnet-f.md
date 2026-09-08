@@ -39,7 +39,7 @@ function getDefaultNet(callback: AsyncCallback<NetHandle>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;NetHandle&gt; | 是 | 回调函数。当成功获取默认激活网络的网络句柄时，error为undefined，data为默认网络的网络句柄；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[NetHandle](arkts-network-connection-nethandle-i.md)&gt; | 是 | 回调函数。当成功获取默认激活网络的网络句柄时，error为undefined，data为默认网络的网络句柄；否则为错误对象。 |
 
 **错误码：**
 
@@ -99,7 +99,7 @@ function getDefaultNet(): Promise<NetHandle>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;NetHandle&gt; | 以Promise形式返回默认网络的网络句柄。 |
+| Promise&lt;[NetHandle](arkts-network-connection-nethandle-i.md)&gt; | 以Promise形式返回默认网络的网络句柄。 |
 
 **错误码：**
 

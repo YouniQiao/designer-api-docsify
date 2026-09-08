@@ -20,7 +20,7 @@ coordinates: Array<FontVariation>
 
 可变字体属性数组。
 
-**类型：** Array&lt;FontVariation&gt;
+**类型：** Array&lt;[FontVariation](arkts-arkgraphics2d-text-fontvariation-i.md)&gt;
 
 **起始版本：** 24
 

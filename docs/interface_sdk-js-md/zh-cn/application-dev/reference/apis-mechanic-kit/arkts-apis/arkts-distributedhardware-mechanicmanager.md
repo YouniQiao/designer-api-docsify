@@ -46,8 +46,8 @@ import { mechanicManager } from '@kit.MechanicKit';
 | [isSupportAction](arkts-mechanic-mechanicmanager-issupportaction-f-sys.md) | 判断是否支持某个动作 |
 | [move](arkts-mechanic-mechanicmanager-move-f-sys.md) | 以特定参数移动一个具身设备 |
 | [moveBySpeed](arkts-mechanic-mechanicmanager-movebyspeed-f-sys.md) | 以特定速度移动一个具身设备 |
-| off | Unregister a listener for axis state changes. |
-| on | Register a listener for axis state changes. The status of the rotation axis changes dynamically, which needs to be monitored. |
+| [off](arkts-mechanic-mechanicmanager-off-f.md) | Unregister a listener for axis state changes. |
+| [on](arkts-mechanic-mechanicmanager-on-f.md) | Register a listener for axis state changes. The status of the rotation axis changes dynamically, which needs to be monitored. |
 | [rotate](arkts-mechanic-mechanicmanager-rotate-f-sys.md) | 将机械设备旋转到相对角度 |
 | [rotateBySpeed](arkts-mechanic-mechanicmanager-rotatebyspeed-f-sys.md) | 以指定的速度旋转机械设备 |
 | [rotateToEulerAngles](arkts-mechanic-mechanicmanager-rotatetoeulerangles-f-sys.md) | 将机械设备旋转到绝对角度 |
@@ -95,7 +95,7 @@ import { mechanicManager } from '@kit.MechanicKit';
 | --- | --- |
 | [AttachState](arkts-mechanic-mechanicmanager-attachstate-e.md) | Device attach states. |
 | [CameraTrackingLayout](arkts-mechanic-mechanicmanager-cameratrackinglayout-e.md) | 相机跟踪布局 |
-| [MechDeviceType](arkts-mechanic-mechanicmanager-mechdevicetype-e.md) | Enumerates the mechanical device types. @enum { number } |
+| [MechDeviceType](arkts-mechanic-mechanicmanager-mechdevicetype-e.md) | Enumerates the mechanical device types. @enum { int } |
 | [TrackingEvent](arkts-mechanic-mechanicmanager-trackingevent-e.md) | 跟踪事件 |
 
 <!--Del-->
@@ -106,7 +106,7 @@ import { mechanicManager } from '@kit.MechanicKit';
 | [ActionType](arkts-mechanic-mechanicmanager-actiontype-e-sys.md) | 动作序列类型 |
 | [AddressType](arkts-mechanic-mechanicmanager-addresstype-e-sys.md) | 具身设备地址类型 |
 | [MarchingMode](arkts-mechanic-mechanicmanager-marchingmode-e-sys.md) | 行进模式定义 |
-| [MechDeviceType](arkts-mechanic-mechanicmanager-mechdevicetype-e-sys.md) | Enumerates the mechanical device types. @enum { number } |
+| [MechDeviceType](arkts-mechanic-mechanicmanager-mechdevicetype-e-sys.md) | Enumerates the mechanical device types. @enum { int } |
 | [MechEventType](arkts-mechanic-mechanicmanager-mecheventtype-e-sys.md) | 具身设备事件定义 |
 | [Operation](arkts-mechanic-mechanicmanager-operation-e-sys.md) | 用户操作 |
 | [Result](arkts-mechanic-mechanicmanager-result-e-sys.md) | Rotation execution results. |

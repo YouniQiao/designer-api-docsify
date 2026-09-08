@@ -118,7 +118,7 @@ securityType: WifiSecurityType
 
 加密类型。
 
-**类型：** WifiSecurityType
+**类型：** [WifiSecurityType](arkts-connectivity-wifimanager-wifisecuritytype-e.md)
 
 **起始版本：** 9
 

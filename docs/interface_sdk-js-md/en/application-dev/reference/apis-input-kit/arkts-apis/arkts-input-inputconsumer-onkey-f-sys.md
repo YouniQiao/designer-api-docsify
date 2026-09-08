@@ -26,7 +26,7 @@ Subscribe system keys.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| keyOptions | KeyOptions | Yes | the key events about input which is to be subscribed. |
+| keyOptions | [KeyOptions](arkts-input-inputconsumer-keyoptions-i-sys.md) | Yes | the key events about input which is to be subscribed. |
 | callback | [KeyCommandCallback](arkts-input-inputconsumer-keycommandcallback-t-sys.md) | Yes | callback function, receive reported data. |
 
 **Error codes:**

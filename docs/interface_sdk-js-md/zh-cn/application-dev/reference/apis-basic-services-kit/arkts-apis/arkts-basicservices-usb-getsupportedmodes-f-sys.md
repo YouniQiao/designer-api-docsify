@@ -34,7 +34,7 @@ function getSupportedModes(portId: number): PortModeType
 
 | 类型 | 说明 |
 | --- | --- |
-| PortModeType | 支持的模式列表的组合掩码。 |
+| [PortModeType](arkts-basicservices-usb-portmodetype-e-sys.md) | 支持的模式列表的组合掩码。 |
 
 **示例**
 

@@ -44,7 +44,7 @@ Obtains the network handle used by the system by default, including the network 
 
 | Type | Description |
 | --- | --- |
-| NetHandle | Network handle of the default network. |
+| [NetHandle](arkts-network-connection-nethandle-i.md) | Network handle of the default network. |
 
 **Error codes:**
 

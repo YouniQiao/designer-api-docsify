@@ -100,7 +100,7 @@ readonly style?: TextDecorationStyle
 
 Style of the text decorative line.
 
-**Type:** TextDecorationStyle
+**Type:** [TextDecorationStyle](arkts-arkui-textdecorationstyle-e.md)
 
 **Since:** 12
 
@@ -136,7 +136,7 @@ readonly type: TextDecorationType
 
 Type of the text decorative line.
 
-**Type:** TextDecorationType
+**Type:** [TextDecorationType](arkts-arkui-textdecorationtype-e.md)
 
 **Since:** 12
 

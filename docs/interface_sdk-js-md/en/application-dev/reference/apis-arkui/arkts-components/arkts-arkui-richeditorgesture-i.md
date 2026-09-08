@@ -21,9 +21,9 @@ Triggered when [ClickEvent](arkts-arkui-clickevent-i.md) occurs.
 
 It is executed on completion of a single click.
 
-On a number-click, the first click triggers the callback event.
+On a double-click, the first click triggers the callback event.
 
-**Type:** Callback&lt;[ClickEvent](arkts-arkui-clickevent-i.md)&gt;
+**Type:** [Callback](arkts-arkui-callback-i.md)&lt;[ClickEvent](arkts-arkui-clickevent-i.md)&gt;
 
 **Since:** 11
 
@@ -39,11 +39,11 @@ On a number-click, the first click triggers the callback event.
 onLongPress?: Callback<GestureEvent>
 ```
 
-Triggered when the user performs a number press.
+Triggered when the user performs a long press.
 
-It is executed on completion of a number press.
+It is executed on completion of a long press.
 
-**Type:** Callback&lt;[GestureEvent](../arkts-apis/arkts-arkui-gestureevent-i.md)&gt;
+**Type:** [Callback](arkts-arkui-callback-i.md)&lt;[GestureEvent](../arkts-apis/arkts-arkui-gestureevent-i.md)&gt;
 
 **Since:** 11
 

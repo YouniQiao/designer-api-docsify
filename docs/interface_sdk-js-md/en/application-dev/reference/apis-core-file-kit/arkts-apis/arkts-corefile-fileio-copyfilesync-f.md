@@ -28,11 +28,3 @@ Copies a file. This API returns the result synchronously.
 | src | string \| number | Yes | Path or file descriptor of the source file to copy. |
 | dest | string \| number | Yes | Path or file descriptor of the destination file. |
 | mode | number | No | Option for overwriting the destination file. The default value is **0**, which is the only value supported.   **0**: Overwrite the file with the same name completely and truncate the part that is not overwritten. |
-
-**Examples**
-
-```TypeScript
-let srcPath = pathDir + "srcDir/test.txt";
-let dstPath = pathDir + "dstDir/test.txt";
-fileio.copyFileSync(srcPath, dstPath);
-```

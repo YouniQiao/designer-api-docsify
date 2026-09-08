@@ -2,7 +2,7 @@
 
 Enumeration type of grid pinch mode.
 
-@enum { number } GridPinchModeType
+@enum { int } GridPinchModeType
 
 **Since:** 23
 

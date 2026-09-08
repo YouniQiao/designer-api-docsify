@@ -30,7 +30,7 @@ Obtains the distributed account information. This API uses an asynchronous callb
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;DistributedInfo&gt; | Yes | Callback used to return the result. If the distributed account information is obtained successfully, **err** is **undefined** and **data** is the distributed account information obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[DistributedInfo](arkts-basicservices-distributedaccount-distributedinfo-i.md)&gt; | Yes | Callback used to return the result. If the distributed account information is obtained successfully, **err** is **undefined** and **data** is the distributed account information obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -80,7 +80,7 @@ Obtains the distributed account information. This API uses a promise to return t
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;DistributedInfo&gt; | Promise used to return the distributed account information obtained. |
+| Promise&lt;[DistributedInfo](arkts-basicservices-distributedaccount-distributedinfo-i.md)&gt; | Promise used to return the distributed account information obtained. |
 
 **Error codes:**
 
@@ -136,7 +136,7 @@ Queries the distributed account information. This API uses an asynchronous callb
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;DistributedInfo&gt; | Yes | Callback used to return the result. If the distributed account information is obtained successfully, **err** is **undefined** and **data** is the distributed account information obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[DistributedInfo](arkts-basicservices-distributedaccount-distributedinfo-i.md)&gt; | Yes | Callback used to return the result. If the distributed account information is obtained successfully, **err** is **undefined** and **data** is the distributed account information obtained. Otherwise, **err** is an error object. |
 
 **Examples**
 
@@ -183,7 +183,7 @@ Queries the distributed account information. This API uses a promise to return t
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;DistributedInfo&gt; | Promise used to return the distributed account information obtained. |
+| Promise&lt;[DistributedInfo](arkts-basicservices-distributedaccount-distributedinfo-i.md)&gt; | Promise used to return the distributed account information obtained. |
 
 **Examples**
 
@@ -217,7 +217,7 @@ Sets the distributed account information. This API uses an asynchronous callback
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| accountInfo | DistributedInfo | Yes | Distributed account information. |
+| accountInfo | [DistributedInfo](arkts-basicservices-distributedaccount-distributedinfo-i.md) | Yes | Distributed account information. |
 | callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the distributed account information is updated successfully, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
@@ -273,7 +273,7 @@ Sets the distributed account information. This API uses a promise to return the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| accountInfo | DistributedInfo | Yes | Distributed account information. |
+| accountInfo | [DistributedInfo](arkts-basicservices-distributedaccount-distributedinfo-i.md) | Yes | Distributed account information. |
 
 **Return value:**
 
@@ -342,7 +342,7 @@ Updates the distributed account information. This API uses an asynchronous callb
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| accountInfo | DistributedInfo | Yes | Distributed account information. |
+| accountInfo | [DistributedInfo](arkts-basicservices-distributedaccount-distributedinfo-i.md) | Yes | Distributed account information. |
 | callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the distributed account information is updated successfully, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Examples**
@@ -392,7 +392,7 @@ Updates the distributed account information. This API uses a promise to return t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| accountInfo | DistributedInfo | Yes | Distributed account information. |
+| accountInfo | [DistributedInfo](arkts-basicservices-distributedaccount-distributedinfo-i.md) | Yes | Distributed account information. |
 
 **Return value:**
 

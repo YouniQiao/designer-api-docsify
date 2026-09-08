@@ -30,7 +30,7 @@ Called when the system starts scheduling the deferred task.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| work | workScheduler.WorkInfo | Yes | Deferred task that starts. |
+| work | [workScheduler.WorkInfo](arkts-backgroundtasks-workscheduler-workinfo-i.md) | Yes | Deferred task that starts. |
 
 **Examples**
 
@@ -64,7 +64,7 @@ Called when the system stops scheduling the deferred task. This callback is trig
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| work | workScheduler.WorkInfo | Yes | Deferred task that stops. |
+| work | [workScheduler.WorkInfo](arkts-backgroundtasks-workscheduler-workinfo-i.md) | Yes | Deferred task that stops. |
 
 **Examples**
 

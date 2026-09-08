@@ -34,7 +34,7 @@ purpose: certificateManager.CertificatePurpose
 
 表示证书链对应密钥的使用类型。
 
-**类型：** certificateManager.CertificatePurpose
+**类型：** [certificateManager.CertificatePurpose](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-certificatemanager-certificatepurpose-e.md)
 
 **起始版本：** 22
 

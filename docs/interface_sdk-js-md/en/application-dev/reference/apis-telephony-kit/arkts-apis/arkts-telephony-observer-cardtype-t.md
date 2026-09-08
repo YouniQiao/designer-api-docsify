@@ -10,4 +10,4 @@ Enumerates SIM card types.
 
 **System capability:** SystemCapability.Telephony.StateRegistry
 
-**Type:** sim.CardType
+**Type:** [sim.CardType](arkts-telephony-sim-cardtype-e.md)

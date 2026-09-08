@@ -188,37 +188,6 @@ For details about how to create a userFileManager instance, see the example in u
 import { dataSharePredicates } from '@kit.ArkData';
 
 async function example(mgr: userFileManager.UserFileManager) {
-  console.info('commitModifyDemo');
-  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-  let fetchOption: userFileManager.FetchOptions = {
-    fetchColumns: [],
-    predicates: predicates
-  };
-  let fetchResult: userFileManager.FetchResult<userFileManager.FileAsset> = await mgr.getPhotoAssets(fetchOption);
-  let fileAsset: userFileManager.FileAsset = await fetchResult.getFirstObject();
-  let displayName: string = userFileManager.ImageVideoKey.DISPLAY_NAME.toString();
-  let fileAssetDisplayName: userFileManager.MemberType = fileAsset.get(displayName);
-  console.info('fileAsset get fileAssetDisplayName = ', fileAssetDisplayName);
-  let newFileAssetDisplayName = 'new' + fileAssetDisplayName;
-  console.info('fileAsset newFileAssetDisplayName = ', newFileAssetDisplayName);
-  fileAsset.set(displayName, newFileAssetDisplayName);
-  fileAsset.commitModify((err) => {
-    if (err == undefined) {
-      let commitModifyDisplayName = fileAsset.get(displayName);
-      console.info('fileAsset commitModify successfully, commitModifyDisplayName = ', commitModifyDisplayName);
-    } else {
-      console.error('commitModify failed, message =', err);
-    }
-  });
-}
-```
-
-For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-
-async function example(mgr: userFileManager.UserFileManager) {
   console.info('albumCommitModifyDemo');
   let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
   let albumFetchOptions: userFileManager.AlbumFetchOptions = {
@@ -264,36 +233,6 @@ Commits the modification on the album attributes to the database. This API uses 
 | Promise&lt;void&gt; | Promise that returns no value. |
 
 **Examples**
-
-For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-
-async function example(mgr: userFileManager.UserFileManager) {
-  console.info('commitModifyDemo');
-  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-  let fetchOption: userFileManager.FetchOptions = {
-    fetchColumns: [],
-    predicates: predicates
-  };
-  let fetchResult: userFileManager.FetchResult<userFileManager.FileAsset> = await mgr.getPhotoAssets(fetchOption);
-  let fileAsset: userFileManager.FileAsset = await fetchResult.getFirstObject();
-  let displayName = userFileManager.ImageVideoKey.DISPLAY_NAME.toString();
-  let fileAssetDisplayName: userFileManager.MemberType = fileAsset.get(displayName);
-  console.info('fileAsset get fileAssetDisplayName = ', fileAssetDisplayName);
-  let newFileAssetDisplayName = 'new' + fileAssetDisplayName;
-  console.info('fileAsset newFileAssetDisplayName = ', newFileAssetDisplayName);
-  fileAsset.set(displayName, newFileAssetDisplayName);
-  try {
-    await fileAsset.commitModify();
-    let commitModifyDisplayName = fileAsset.get(displayName);
-    console.info('fileAsset commitModify successfully, commitModifyDisplayName = ', commitModifyDisplayName);
-  } catch (err) {
-    console.error('commitModify failed. message = ', err);
-  }
-}
-```
 
 For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
 

@@ -2,7 +2,7 @@
 
 P2P device status.
 
-@enum { number }
+@enum { int }
 
 **Since:** 9
 

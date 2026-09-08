@@ -264,7 +264,7 @@ Unregister report current single callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Single&gt; | No | The callback used to handle ('reportCurrentSingle') event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Single](arkts-avsession-avmusictemplate-single-i.md)&gt; | No | The callback used to handle ('reportCurrentSingle') event. |
 
 **Error codes:**
 
@@ -272,7 +272,7 @@ Unregister report current single callback.
 | --- | --- |
 | [801](../../errorcode-universal.md#801-api-not-supported) | capability not supported. |
 | [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
-| 35000012 | AVMusicTemplate error. |
+| [35000012](../errorcode-avmusictemplate.md#35000012-audio-template-error) | AVMusicTemplate error. |
 
 ## offCustomElementsChange
 
@@ -300,7 +300,7 @@ Unregister report custom elements change callback.
 | --- | --- |
 | [801](../../errorcode-universal.md#801-api-not-supported) | capability not supported. |
 | [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
-| 35000012 | AVMusicTemplate error. |
+| [35000012](../errorcode-avmusictemplate.md#35000012-audio-template-error) | AVMusicTemplate error. |
 
 ## offDialogCommandChange
 
@@ -328,7 +328,7 @@ Unregister report dialog command callback.
 | --- | --- |
 | [801](../../errorcode-universal.md#801-api-not-supported) | capability not supported. |
 | [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
-| 35000012 | AVMusicTemplate error. |
+| [35000012](../errorcode-avmusictemplate.md#35000012-audio-template-error) | AVMusicTemplate error. |
 
 ## offDownloadMediaEntityStatusChange
 
@@ -356,7 +356,7 @@ Unregister report download media entity status callback.
 | --- | --- |
 | [801](../../errorcode-universal.md#801-api-not-supported) | capability not supported. |
 | [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
-| 35000012 | AVMusicTemplate error. |
+| [35000012](../errorcode-avmusictemplate.md#35000012-audio-template-error) | AVMusicTemplate error. |
 
 ## offExtensionAbilityChange
 
@@ -384,7 +384,7 @@ Unregister report extension ability callback.
 | --- | --- |
 | [801](../../errorcode-universal.md#801-api-not-supported) | capability not supported. |
 | [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
-| 35000012 | AVMusicTemplate error. |
+| [35000012](../errorcode-avmusictemplate.md#35000012-audio-template-error) | AVMusicTemplate error. |
 
 ## offMediaEntitiesChange
 
@@ -412,7 +412,7 @@ Unregister report media entities change callback.
 | --- | --- |
 | [801](../../errorcode-universal.md#801-api-not-supported) | capability not supported. |
 | [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
-| 35000012 | AVMusicTemplate error. |
+| [35000012](../errorcode-avmusictemplate.md#35000012-audio-template-error) | AVMusicTemplate error. |
 
 ## offPlaylistChange
 
@@ -440,7 +440,7 @@ Unregister report playlist callback.
 | --- | --- |
 | [801](../../errorcode-universal.md#801-api-not-supported) | capability not supported. |
 | [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
-| 35000012 | AVMusicTemplate error. |
+| [35000012](../errorcode-avmusictemplate.md#35000012-audio-template-error) | AVMusicTemplate error. |
 
 ## offReportExecuteAction
 
@@ -468,7 +468,7 @@ Unregister report execute action callback.
 | --- | --- |
 | [801](../../errorcode-universal.md#801-api-not-supported) | capability not supported. |
 | [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
-| 35000012 | AVMusicTemplate error. |
+| [35000012](../errorcode-avmusictemplate.md#35000012-audio-template-error) | AVMusicTemplate error. |
 
 ## offSettingsChange
 
@@ -496,7 +496,7 @@ Unregister report settings callback.
 | --- | --- |
 | [801](../../errorcode-universal.md#801-api-not-supported) | capability not supported. |
 | [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
-| 35000012 | AVMusicTemplate error. |
+| [35000012](../errorcode-avmusictemplate.md#35000012-audio-template-error) | AVMusicTemplate error. |
 
 ## offTabContentChange
 
@@ -524,7 +524,7 @@ Unregister report tab content callback.
 | --- | --- |
 | [801](../../errorcode-universal.md#801-api-not-supported) | capability not supported. |
 | [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
-| 35000012 | AVMusicTemplate error. |
+| [35000012](../errorcode-avmusictemplate.md#35000012-audio-template-error) | AVMusicTemplate error. |
 
 ## offUserInfoChange
 
@@ -544,7 +544,7 @@ Unregister report user info callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;UserInfo&gt; | No | The callback used to handle ('reportUserInfo') event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[UserInfo](arkts-avsession-avmusictemplate-userinfo-i.md)&gt; | No | The callback used to handle ('reportUserInfo') event. |
 
 **Error codes:**
 
@@ -552,7 +552,7 @@ Unregister report user info callback.
 | --- | --- |
 | [801](../../errorcode-universal.md#801-api-not-supported) | capability not supported. |
 | [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
-| 35000012 | AVMusicTemplate error. |
+| [35000012](../errorcode-avmusictemplate.md#35000012-audio-template-error) | AVMusicTemplate error. |
 
 ## onCurrentSingleChange
 
@@ -572,7 +572,7 @@ Register report current single callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Single&gt; | Yes | The callback used to handle ('reportCurrentSingle') event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Single](arkts-avsession-avmusictemplate-single-i.md)&gt; | Yes | The callback used to handle ('reportCurrentSingle') event. |
 
 **Error codes:**
 
@@ -580,7 +580,7 @@ Register report current single callback.
 | --- | --- |
 | [801](../../errorcode-universal.md#801-api-not-supported) | capability not supported. |
 | [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
-| 35000012 | AVMusicTemplate error. |
+| [35000012](../errorcode-avmusictemplate.md#35000012-audio-template-error) | AVMusicTemplate error. |
 
 ## onCustomElementsChange
 
@@ -608,7 +608,7 @@ Register report custom elements change callback.
 | --- | --- |
 | [801](../../errorcode-universal.md#801-api-not-supported) | capability not supported. |
 | [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
-| 35000012 | AVMusicTemplate error. |
+| [35000012](../errorcode-avmusictemplate.md#35000012-audio-template-error) | AVMusicTemplate error. |
 
 ## onDialogCommandChange
 
@@ -636,7 +636,7 @@ Register report dialog command callback.
 | --- | --- |
 | [801](../../errorcode-universal.md#801-api-not-supported) | capability not supported. |
 | [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
-| 35000012 | AVMusicTemplate error. |
+| [35000012](../errorcode-avmusictemplate.md#35000012-audio-template-error) | AVMusicTemplate error. |
 
 ## onDownloadMediaEntityStatusChange
 
@@ -664,7 +664,7 @@ Register report download media entity status callback.
 | --- | --- |
 | [801](../../errorcode-universal.md#801-api-not-supported) | capability not supported. |
 | [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
-| 35000012 | AVMusicTemplate error. |
+| [35000012](../errorcode-avmusictemplate.md#35000012-audio-template-error) | AVMusicTemplate error. |
 
 ## onExtensionAbilityChange
 
@@ -692,7 +692,7 @@ Register report extension ability callback.
 | --- | --- |
 | [801](../../errorcode-universal.md#801-api-not-supported) | capability not supported. |
 | [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
-| 35000012 | AVMusicTemplate error. |
+| [35000012](../errorcode-avmusictemplate.md#35000012-audio-template-error) | AVMusicTemplate error. |
 
 ## onMediaEntitiesChange
 
@@ -720,7 +720,7 @@ Register report media entities change callback.
 | --- | --- |
 | [801](../../errorcode-universal.md#801-api-not-supported) | capability not supported. |
 | [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
-| 35000012 | AVMusicTemplate error. |
+| [35000012](../errorcode-avmusictemplate.md#35000012-audio-template-error) | AVMusicTemplate error. |
 
 ## onPlaylistChange
 
@@ -748,7 +748,7 @@ Register report playlist callback.
 | --- | --- |
 | [801](../../errorcode-universal.md#801-api-not-supported) | capability not supported. |
 | [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
-| 35000012 | AVMusicTemplate error. |
+| [35000012](../errorcode-avmusictemplate.md#35000012-audio-template-error) | AVMusicTemplate error. |
 
 ## onReportExecuteAction
 
@@ -776,7 +776,7 @@ Register report execute action callback.
 | --- | --- |
 | [801](../../errorcode-universal.md#801-api-not-supported) | capability not supported. |
 | [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
-| 35000012 | AVMusicTemplate error. |
+| [35000012](../errorcode-avmusictemplate.md#35000012-audio-template-error) | AVMusicTemplate error. |
 
 ## onSettingsChange
 
@@ -804,7 +804,7 @@ Register report settings callback.
 | --- | --- |
 | [801](../../errorcode-universal.md#801-api-not-supported) | capability not supported. |
 | [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
-| 35000012 | AVMusicTemplate error. |
+| [35000012](../errorcode-avmusictemplate.md#35000012-audio-template-error) | AVMusicTemplate error. |
 
 ## onTabContentChange
 
@@ -832,7 +832,7 @@ Register report tab content callback.
 | --- | --- |
 | [801](../../errorcode-universal.md#801-api-not-supported) | capability not supported. |
 | [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
-| 35000012 | AVMusicTemplate error. |
+| [35000012](../errorcode-avmusictemplate.md#35000012-audio-template-error) | AVMusicTemplate error. |
 
 ## onUserInfoChange
 
@@ -852,7 +852,7 @@ Register report user info callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;UserInfo&gt; | Yes | The callback used to handle ('reportUserInfo') event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[UserInfo](arkts-avsession-avmusictemplate-userinfo-i.md)&gt; | Yes | The callback used to handle ('reportUserInfo') event. |
 
 **Error codes:**
 
@@ -860,7 +860,7 @@ Register report user info callback.
 | --- | --- |
 | [801](../../errorcode-universal.md#801-api-not-supported) | capability not supported. |
 | [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
-| 35000012 | AVMusicTemplate error. |
+| [35000012](../errorcode-avmusictemplate.md#35000012-audio-template-error) | AVMusicTemplate error. |
 
 ## playForSearch
 
@@ -1022,7 +1022,7 @@ Query current single.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Single&gt; | Promise for the result |
+| Promise&lt;[Single](arkts-avsession-avmusictemplate-single-i.md)&gt; | Promise for the result |
 
 **Error codes:**
 

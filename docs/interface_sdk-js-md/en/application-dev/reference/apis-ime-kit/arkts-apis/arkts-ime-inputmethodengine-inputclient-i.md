@@ -58,23 +58,6 @@ inputClient.deleteBackward(length, (err: BusinessError, result: boolean) => {
 });
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let length: number = 1;
-textInputClient.deleteBackward(length, (err: BusinessError, result: boolean) => {
-  if (err) {
-    console.error(`Failed to deleteBackward. Code is ${err.code}, message is ${err.message}`);
-    return;
-  }
-  if (result) {
-    console.info('Succeeded in deleting backward.');
-  } else {
-    console.error('Failed to deleteBackward.');
-  }
-});
-```
-
 ## deleteBackward
 
 ```TypeScript
@@ -114,21 +97,6 @@ import { BusinessError } from '@kit.BasicServicesKit';
 
 let length: number = 1;
 inputClient.deleteBackward(length).then((result: boolean) => {
-  if (result) {
-    console.info('Succeeded in deleting backward.');
-  } else {
-    console.error('Failed to deleteBackward.');
-  }
-}).catch((err: BusinessError) => {
-  console.error(`Failed to deleteBackward. Code is ${err.code}, message is ${err.message}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let length: number = 1;
-textInputClient.deleteBackward(length).then((result: boolean) => {
   if (result) {
     console.info('Succeeded in deleting backward.');
   } else {
@@ -218,23 +186,6 @@ inputClient.deleteForward(length, (err: BusinessError, result: boolean) => {
 });
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let length: number = 1;
-textInputClient.deleteForward(length, (err: BusinessError, result: boolean) => {
-  if (err) {
-    console.error(`Failed to deleteForward. Code is ${err.code}, message is ${err.message}`);
-    return;
-  }
-  if (result) {
-    console.info('Succeeded in deleting forward.');
-  } else {
-    console.error('Failed to deleteForward.');
-  }
-});
-```
-
 ## deleteForward
 
 ```TypeScript
@@ -278,21 +229,6 @@ inputClient.deleteForward(length).then((result: boolean) => {
     console.info('Succeeded in deleting forward.');
   } else {
     console.error('Failed to delete Forward.');
-  }
-}).catch((err: BusinessError) => {
-  console.error(`Failed to deleteForward. Code is ${err.code}, message is ${err.message}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let length: number = 1;
-textInputClient.deleteForward(length).then((result: boolean) => {
-  if (result) {
-    console.info('Succeeded in deleting forward.');
-  } else {
-    console.error('Failed to delete forward.');
   }
 }).catch((err: BusinessError) => {
   console.error(`Failed to deleteForward. Code is ${err.code}, message is ${err.message}`);
@@ -420,7 +356,7 @@ Obtains the additional options for binding an input method.
 
 | Type | Description |
 | --- | --- |
-| AttachOptions | Additional options for binding an input method. |
+| [AttachOptions](arkts-ime-inputmethodengine-attachoptions-i.md) | Additional options for binding an input method. |
 
 **Error codes:**
 
@@ -477,19 +413,6 @@ inputClient.getBackward(length, (err: BusinessError, text: string) => {
 });
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let length: number = 1;
-textInputClient.getBackward(length, (err: BusinessError, text: string) => {
-  if (err) {
-    console.error(`Failed to getBackward. Code is ${err.code}, message is ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in getting backward, text: ' + text);
-});
-```
-
 ## getBackward
 
 ```TypeScript
@@ -530,17 +453,6 @@ import { BusinessError } from '@kit.BasicServicesKit';
 let length: number = 1;
 inputClient.getBackward(length).then((text: string) => {
   console.info('Succeeded in getting backward, text: ' + text);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to getBackward. Code is ${err.code}, message is ${err.message}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let length: number = 1;
-textInputClient.getBackward(length).then((text: string) => {
-  console.info(`'Succeeded in getting backward: ${text}`);
 }).catch((err: BusinessError) => {
   console.error(`Failed to getBackward. Code is ${err.code}, message is ${err.message}`);
 });
@@ -607,7 +519,7 @@ Obtains information about the application window, in which the input box that st
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;WindowInfo&gt; | Promise used to return the information obtained. |
+| Promise&lt;[WindowInfo](arkts-ime-inputmethodengine-windowinfo-i.md)&gt; | Promise used to return the information obtained. |
 
 **Error codes:**
 
@@ -669,21 +581,6 @@ inputClient.getEditorAttribute((err: BusinessError, editorAttribute: inputMethod
 });
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-
-textInputClient.getEditorAttribute((err: BusinessError,
-  editorAttribute: inputMethodEngine.EditorAttribute) => {
-  if (err) {
-    console.error(`Failed to getEditorAttribute. Code is ${err.code}, message is ${err.message}`);
-    return;
-  }
-  console.info(`editorAttribute.inputPattern: ${editorAttribute.inputPattern}`);
-  console.info(`editorAttribute.enterKeyType: ${editorAttribute.enterKeyType}`);
-});
-```
-
 ## getEditorAttribute
 
 ```TypeScript
@@ -716,17 +613,6 @@ import { BusinessError } from '@kit.BasicServicesKit';
 inputClient.getEditorAttribute().then((editorAttribute: inputMethodEngine.EditorAttribute) => {
   console.info(`editorAttribute.inputPattern:  ${editorAttribute.inputPattern}`);
   console.info(`editorAttribute.enterKeyType:  ${editorAttribute.enterKeyType}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to getEditorAttribute. Code is ${err.code}, message is ${err.message}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-textInputClient.getEditorAttribute().then((editorAttribute: inputMethodEngine.EditorAttribute) => {
-  console.info(`editorAttribute.inputPattern: ${editorAttribute.inputPattern}`);
-  console.info(`editorAttribute.enterKeyType: ${editorAttribute.enterKeyType}}`);
 }).catch((err: BusinessError) => {
   console.error(`Failed to getEditorAttribute. Code is ${err.code}, message is ${err.message}`);
 });
@@ -806,19 +692,6 @@ inputClient.getForward(length, (err: BusinessError, text: string) => {
 });
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let length: number = 1;
-textInputClient.getForward(length, (err: BusinessError, text: string) => {
-  if (err) {
-    console.error(`Failed to getForward. Code is ${err.code}, message is ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in getting forward, text: ' + text);
-});
-```
-
 ## getForward
 
 ```TypeScript
@@ -858,17 +731,6 @@ import { BusinessError } from '@kit.BasicServicesKit';
 
 let length: number = 1;
 inputClient.getForward(length).then((text: string) => {
-  console.info('Succeeded in getting forward, text: ' + text);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to getForward. Code is ${err.code}, message is ${err.message}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let length: number = 1;
-textInputClient.getForward(length).then((text: string) => {
   console.info('Succeeded in getting forward, text: ' + text);
 }).catch((err: BusinessError) => {
   console.error(`Failed to getForward. Code is ${err.code}, message is ${err.message}`);
@@ -1069,22 +931,6 @@ inputClient.insertText('test', (err: BusinessError, result: boolean) => {
 });
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-textInputClient.insertText('test', (err: BusinessError, result: boolean) => {
-  if (err) {
-    console.error(`Failed to insertText. Code is ${err.code}, message is ${err.message}`);
-    return;
-  }
-  if (result) {
-    console.info('Succeeded in inserting text.');
-  } else {
-    console.error('Failed to insertText.');
-  }
-});
-```
-
 ## insertText
 
 ```TypeScript
@@ -1123,20 +969,6 @@ Inserts text. This API uses a promise to return the result.
 import { BusinessError } from '@kit.BasicServicesKit';
 
 inputClient.insertText('test').then((result: boolean) => {
-  if (result) {
-    console.info('Succeeded in inserting text.');
-  } else {
-    console.error('Failed to insertText.');
-  }
-}).catch((err: BusinessError) => {
-  console.error(`Failed to insertText. Code is ${err.code}, message is ${err.message}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-textInputClient.insertText('test').then((result: boolean) => {
   if (result) {
     console.info('Succeeded in inserting text.');
   } else {
@@ -1310,7 +1142,7 @@ Unsubscribes from the event indicating that additional options for binding an in
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'attachOptionsDidChange' | Yes | Additional option change event when the input method is bound. The value is fixed to **'attachOptionsDidChange'**. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AttachOptions&gt; | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the specified type by default. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AttachOptions](arkts-ime-inputmethodengine-attachoptions-i.md)&gt; | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the specified type by default. |
 
 **Examples**
 
@@ -1343,7 +1175,7 @@ Subscribes to the event indicating that the additional options for binding an in
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'attachOptionsDidChange' | Yes | Additional option change event when the input method is bound. The value is fixed to **'attachOptionsDidChange'**. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AttachOptions&gt; | Yes | Callback used to return the additional options for binding an input method. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AttachOptions](arkts-ime-inputmethodengine-attachoptions-i.md)&gt; | Yes | Callback used to return the additional options for binding an input method. |
 
 **Error codes:**
 
@@ -1390,7 +1222,7 @@ Registers or unregisters MessageHandler.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| msgHandler | MessageHandler | No | This object receives custom communication data from the edit box application attached to the input method application through [onMessage](arkts-ime-inputmethodengine-messagehandler-i.md#onmessage) and receives a message for terminating the subscription to this object through [onTerminated](arkts-ime-inputmethodengine-messagehandler-i.md#onterminated). If no parameter is set, unregister [MessageHandler](arkts-ime-inputmethodengine-messagehandler-i.md). Its [onTerminated](arkts-ime-inputmethodengine-messagehandler-i.md#onterminated) callback will be triggered. |
+| msgHandler | [MessageHandler](arkts-ime-inputmethodengine-messagehandler-i.md) | No | This object receives custom communication data from the edit box application attached to the input method application through [onMessage](arkts-ime-inputmethodengine-messagehandler-i.md#onmessage) and receives a message for terminating the subscription to this object through [onTerminated](arkts-ime-inputmethodengine-messagehandler-i.md#onterminated). If no parameter is set, unregister [MessageHandler](arkts-ime-inputmethodengine-messagehandler-i.md). Its [onTerminated](arkts-ime-inputmethodengine-messagehandler-i.md#onterminated) callback will be triggered. |
 
 **Error codes:**
 
@@ -1434,7 +1266,7 @@ Selects text based on the cursor movement direction. This API uses an asynchrono
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| movement | Movement | Yes | Direction in which the cursor moves when the text is selected. |
+| movement | [Movement](arkts-ime-inputmethodengine-movement-i.md) | Yes | Direction in which the cursor moves when the text is selected. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the selection event is sent, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
@@ -1475,7 +1307,7 @@ Selects text based on the cursor movement direction. This API uses a promise to 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| movement | Movement | Yes | Direction in which the cursor moves when the text is selected. |
+| movement | [Movement](arkts-ime-inputmethodengine-movement-i.md) | Yes | Direction in which the cursor moves when the text is selected. |
 
 **Return value:**
 
@@ -1519,7 +1351,7 @@ Selects text based on the cursor movement direction.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| movement | Movement | Yes | Direction in which the cursor moves when the text is selected. |
+| movement | [Movement](arkts-ime-inputmethodengine-movement-i.md) | Yes | Direction in which the cursor moves when the text is selected. |
 
 **Error codes:**
 
@@ -1551,7 +1383,7 @@ Selects text based on the specified range. This API uses an asynchronous callbac
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| range | Range | Yes | Range of the selected text. |
+| range | [Range](arkts-ime-inputmethodengine-range-i.md) | Yes | Range of the selected text. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the selection event is sent, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
@@ -1592,7 +1424,7 @@ Selects text based on the specified range. This API uses a promise to return the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| range | Range | Yes | Range of the selected text. |
+| range | [Range](arkts-ime-inputmethodengine-range-i.md) | Yes | Range of the selected text. |
 
 **Return value:**
 
@@ -1636,7 +1468,7 @@ Selects text based on the specified range.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| range | Range | Yes | Range of the selected text. |
+| range | [Range](arkts-ime-inputmethodengine-range-i.md) | Yes | Range of the selected text. |
 
 **Error codes:**
 
@@ -1677,7 +1509,7 @@ Sends an extended edit action. This API uses an asynchronous callback to return 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| action | ExtendAction | Yes | Extended edit action to send. |
+| action | [ExtendAction](arkts-ime-inputmethodengine-extendaction-e.md) | Yes | Extended edit action to send. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
@@ -1727,7 +1559,7 @@ Sends an extended edit action. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| action | ExtendAction | Yes | Extended edit action to send. |
+| action | [ExtendAction](arkts-ime-inputmethodengine-extendaction-e.md) | Yes | Extended edit action to send. |
 
 **Return value:**
 
@@ -1801,23 +1633,6 @@ inputClient.sendKeyFunction(action, (err: BusinessError, result: boolean) => {
 });
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let action: number = 1;
-textInputClient.sendKeyFunction(action, (err: BusinessError, result: boolean) => {
-  if (err) {
-    console.error(`Failed to sendKeyFunction. Code is ${err.code}, message is ${err.message}`);
-    return;
-  }
-  if (result) {
-    console.info('Succeeded in sending key function.');
-  } else {
-    console.error('Failed to sendKeyFunction.');
-  }
-});
-```
-
 ## sendKeyFunction
 
 ```TypeScript
@@ -1863,21 +1678,6 @@ inputClient.sendKeyFunction(action).then((result: boolean) => {
   }
 }).catch((err: BusinessError) => {
   console.error(`Failed to sendKeyFunction. Code is ${err.code}, message is ${err.message}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let action: number = 1;
-textInputClient.sendKeyFunction(action).then((result: boolean) => {
-  if (result) {
-    console.info('Succeeded in sending key function.');
-  } else {
-    console.error('Failed to sendKeyFunction.');
-  }
-}).catch((err: BusinessError) => {
-  console.error(`Failed to sendKeyFunction:. Code is ${err.code}, message is ${err.message}`);
 });
 ```
 
@@ -1969,7 +1769,7 @@ Sends private data to the system component that needs to communicate with the in
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| commandData | Record&lt;string, CommandDataType&gt; | Yes | Private data to send. |
+| commandData | Record&lt;string, [CommandDataType](arkts-ime-inputmethodengine-commanddatatype-t.md)&gt; | Yes | Private data to send. |
 
 **Return value:**
 
@@ -2022,7 +1822,7 @@ Sets the preview text. This API uses a promise to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | text | string | Yes | Preview text to set. |
-| range | Range | Yes | Range of the preview text.    - If the value is { start: -1, end: -1 }, **text** replaces the entire text in the current preview area by default.    - If **start** is equal to **end**, **text** is inserted into the cursor position specified by **start**.    - If **start** is not equal to **end**, **text** replaces the text of the specified range.    - If the values of **start** and **end** are negative values, a parameter error is returned.    - If there is preview text in the text box, the value of **range** cannot exceed the range of the preview text. Otherwise, a parameter error is returned.    - If there is no preview text in the text box, the value of **range** cannot exceed the text range of the text box. Otherwise, a parameter error is returned. |
+| range | [Range](arkts-ime-inputmethodengine-range-i.md) | Yes | Range of the preview text.    - If the value is { start: -1, end: -1 }, **text** replaces the entire text in the current preview area by default.    - If **start** is equal to **end**, **text** is inserted into the cursor position specified by **start**.    - If **start** is not equal to **end**, **text** replaces the text of the specified range.    - If the values of **start** and **end** are negative values, a parameter error is returned.    - If there is preview text in the text box, the value of **range** cannot exceed the range of the preview text. Otherwise, a parameter error is returned.    - If there is no preview text in the text box, the value of **range** cannot exceed the text range of the text box. Otherwise, a parameter error is returned. |
 
 **Return value:**
 
@@ -2068,7 +1868,7 @@ Sets the preview text.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | text | string | Yes | Preview text to set. |
-| range | Range | Yes | Range of the preview text.    - If the value is { start: -1, end: -1 }, **text** replaces the entire text in the current preview area by default.    - If **start** is equal to **end**, **text** is inserted into the cursor position specified by **start**.    - If **start** is not equal to **end**, **text** replaces the text of the specified range.    - If the values of **start** and **end** are negative values, a parameter error is returned.    - If there is preview text in the text box, the value of **range** cannot exceed the range of the preview text. Otherwise, a parameter error is returned.    - If there is no preview text in the text box, the value of **range** cannot exceed the text range of the text box. Otherwise, a parameter error is returned. |
+| range | [Range](arkts-ime-inputmethodengine-range-i.md) | Yes | Range of the preview text.    - If the value is { start: -1, end: -1 }, **text** replaces the entire text in the current preview area by default.    - If **start** is equal to **end**, **text** is inserted into the cursor position specified by **start**.    - If **start** is not equal to **end**, **text** replaces the text of the specified range.    - If the values of **start** and **end** are negative values, a parameter error is returned.    - If there is preview text in the text box, the value of **range** cannot exceed the range of the preview text. Otherwise, a parameter error is returned.    - If there is no preview text in the text box, the value of **range** cannot exceed the text range of the text box. Otherwise, a parameter error is returned. |
 
 **Error codes:**
 

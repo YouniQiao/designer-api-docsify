@@ -27,7 +27,7 @@ Creates a FrameNode of the **Text** type.
 
 | Type | Description |
 | --- | --- |
-| Text | FrameNode of the **Text** type. |
+| [Text](arkts-arkui-typenode-text-t.md) | FrameNode of the **Text** type. |
 
 **Examples**
 
@@ -93,7 +93,7 @@ Creates a FrameNode of the **Column** type.
 
 | Type | Description |
 | --- | --- |
-| Column | FrameNode of the **Column** type. |
+| [Column](arkts-arkui-typenode-column-t.md) | FrameNode of the **Column** type. |
 
 **Examples**
 
@@ -158,7 +158,7 @@ Creates a FrameNode of the Row type.
 
 | Type | Description |
 | --- | --- |
-| Row | FrameNode of the **Row** type. |
+| [Row](arkts-arkui-typenode-row-t.md) | FrameNode of the **Row** type. |
 
 **Examples**
 
@@ -223,7 +223,7 @@ Creates a FrameNode of the **Stack** type.
 
 | Type | Description |
 | --- | --- |
-| Stack | FrameNode of the **Stack** type. |
+| [Stack](arkts-arkui-typenode-stack-t.md) | FrameNode of the **Stack** type. |
 
 **Examples**
 
@@ -292,7 +292,7 @@ Creates a FrameNode of the **GridRow** type.
 
 | Type | Description |
 | --- | --- |
-| GridRow | FrameNode of the **GridRow** type. |
+| [GridRow](arkts-arkui-typenode-gridrow-t.md) | FrameNode of the **GridRow** type. |
 
 **Examples**
 
@@ -364,7 +364,7 @@ Creates a FrameNode of the **GridCol** type.
 
 | Type | Description |
 | --- | --- |
-| GridCol | FrameNode of the **GridCol** type. |
+| [GridCol](arkts-arkui-typenode-gridcol-t.md) | FrameNode of the **GridCol** type. |
 
 **Examples**
 
@@ -436,7 +436,7 @@ Creates a FrameNode of the Flex type.
 
 | Type | Description |
 | --- | --- |
-| Flex | FrameNode of the **Flex** type. |
+| [Flex](arkts-arkui-typenode-flex-t.md) | FrameNode of the **Flex** type. |
 
 **Examples**
 
@@ -501,7 +501,7 @@ Creates a FrameNode of the **Swiper** type.
 
 | Type | Description |
 | --- | --- |
-| Swiper | FrameNode of the **Swiper** type. |
+| [Swiper](arkts-arkui-typenode-swiper-t.md) | FrameNode of the **Swiper** type. |
 
 **Examples**
 
@@ -585,7 +585,7 @@ Creates a FrameNode of the **Progress** type.
 
 | Type | Description |
 | --- | --- |
-| Progress | FrameNode of the **Progress** type. |
+| [Progress](arkts-arkui-typenode-progress-t.md) | FrameNode of the **Progress** type. |
 
 **Examples**
 
@@ -653,7 +653,7 @@ Creates a FrameNode of the **Scroll** type.
 
 | Type | Description |
 | --- | --- |
-| Scroll | FrameNode of the **Scroll** type. |
+| [Scroll](arkts-arkui-typenode-scroll-t.md) | FrameNode of the **Scroll** type. |
 
 **Examples**
 
@@ -735,7 +735,7 @@ Creates a FrameNode of the **RelativeContainer** type.
 
 | Type | Description |
 | --- | --- |
-| RelativeContainer | FrameNode of the **RelativeContainer** type. |
+| [RelativeContainer](arkts-arkui-typenode-relativecontainer-t.md) | FrameNode of the **RelativeContainer** type. |
 
 **Examples**
 
@@ -800,7 +800,7 @@ Creates a FrameNode of the **Divider** type.
 
 | Type | Description |
 | --- | --- |
-| Divider | FrameNode of the **Divider** type. |
+| [Divider](arkts-arkui-typenode-divider-t.md) | FrameNode of the **Divider** type. |
 
 **Examples**
 
@@ -871,7 +871,7 @@ Creates a FrameNode of the **LoadingProgress** type.
 
 | Type | Description |
 | --- | --- |
-| LoadingProgress | FrameNode of the **LoadingProgress** type. |
+| [LoadingProgress](arkts-arkui-typenode-loadingprogress-t.md) | FrameNode of the **LoadingProgress** type. |
 
 **Examples**
 
@@ -937,7 +937,7 @@ Creates a FrameNode of the **Search** type.
 
 | Type | Description |
 | --- | --- |
-| Search | FrameNode of the **Search** type. |
+| [Search](arkts-arkui-typenode-search-t.md) | FrameNode of the **Search** type. |
 
 **Examples**
 
@@ -1004,7 +1004,7 @@ Creates a FrameNode of the **Blank** type.
 
 | Type | Description |
 | --- | --- |
-| Blank | FrameNode of the **Blank** type. |
+| [Blank](arkts-arkui-typenode-blank-t.md) | FrameNode of the **Blank** type. |
 
 **Examples**
 
@@ -1076,7 +1076,7 @@ Creates a FrameNode of the **Image** type.
 
 | Type | Description |
 | --- | --- |
-| Image | FrameNode of the **Image** type. |
+| [Image](arkts-arkui-typenode-image-t.md) | FrameNode of the **Image** type. |
 
 **Examples**
 
@@ -1152,7 +1152,7 @@ Creates a FrameNode of the **List** type.
 
 | Type | Description |
 | --- | --- |
-| List | FrameNode of the **List** type. |
+| [List](arkts-arkui-typenode-list-t.md) | FrameNode of the **List** type. |
 
 **Examples**
 
@@ -1241,11 +1241,12 @@ Creates a FrameNode of the **ListItem** type.
 
 | Type | Description |
 | --- | --- |
-| ListItem | FrameNode of the **ListItem** type. |
+| [ListItem](arkts-arkui-typenode-listitem-t.md) | FrameNode of the **ListItem** type. |
 
 **Examples**
 
 See the example for createNode('List').
+- simpleType:
 
 
 ## createNode
@@ -1275,7 +1276,7 @@ Creates a FrameNode of the **TextInput** type.
 
 | Type | Description |
 | --- | --- |
-| TextInput | FrameNode of the **TextInput** type. |
+| [TextInput](arkts-arkui-typenode-textinput-t.md) | FrameNode of the **TextInput** type. |
 
 **Examples**
 
@@ -1340,7 +1341,7 @@ Creates a FrameNode of the **Button** type.
 
 | Type | Description |
 | --- | --- |
-| Button | FrameNode of the **Button** type. |
+| [Button](arkts-arkui-typenode-button-t.md) | FrameNode of the **Button** type. |
 
 **Examples**
 
@@ -1412,11 +1413,12 @@ Creates a FrameNode of the **ListItemGroup** type.
 
 | Type | Description |
 | --- | --- |
-| ListItemGroup | FrameNode of the **ListItemGroup** type. |
+| [ListItemGroup](arkts-arkui-typenode-listitemgroup-t.md) | FrameNode of the **ListItemGroup** type. |
 
 **Examples**
 
 See the example for createNode('List').
+- simpleType:
 
 
 ## createNode
@@ -1446,7 +1448,7 @@ Creates a FrameNode of the **WaterFlow** type.
 
 | Type | Description |
 | --- | --- |
-| WaterFlow | FrameNode of the **WaterFlow** type. |
+| [WaterFlow](arkts-arkui-typenode-waterflow-t.md) | FrameNode of the **WaterFlow** type. |
 
 **Examples**
 
@@ -1539,11 +1541,12 @@ Creates a FrameNode of the **FlowItem** type.
 
 | Type | Description |
 | --- | --- |
-| FlowItem | FrameNode of the **FlowItem** type. |
+| [FlowItem](arkts-arkui-typenode-flowitem-t.md) | FrameNode of the **FlowItem** type. |
 
 **Examples**
 
 See the example for createNode('WaterFlow').
+- simpleType:
 
 
 ## createNode
@@ -1573,7 +1576,7 @@ Creates a FrameNode of the **XComponent** type.
 
 | Type | Description |
 | --- | --- |
-| XComponent | FrameNode of the **XComponent** type. |
+| [XComponent](arkts-arkui-typenode-xcomponent-t.md) | FrameNode of the **XComponent** type. |
 
 **Examples**
 
@@ -1640,7 +1643,7 @@ Creates a FrameNode of the **XComponent** type based on the settings specified i
 
 | Type | Description |
 | --- | --- |
-| XComponent | FrameNode of the **XComponent** type. |
+| [XComponent](arkts-arkui-typenode-xcomponent-t.md) | FrameNode of the **XComponent** type. |
 
 **Examples**
 
@@ -1713,7 +1716,7 @@ Creates a FrameNode of the **XComponent** type based on the settings specified i
 
 | Type | Description |
 | --- | --- |
-| XComponent | FrameNode of the **XComponent** type. |
+| [XComponent](arkts-arkui-typenode-xcomponent-t.md) | FrameNode of the **XComponent** type. |
 
 **Examples**
 
@@ -1783,7 +1786,7 @@ Creates a FrameNode of the **Checkbox** type.
 
 | Type | Description |
 | --- | --- |
-| Checkbox | FrameNode of the **Checkbox** type. |
+| [Checkbox](arkts-arkui-typenode-checkbox-t.md) | FrameNode of the **Checkbox** type. |
 
 **Examples**
 
@@ -1857,7 +1860,7 @@ Creates a FrameNode of the **CheckboxGroup** type.
 
 | Type | Description |
 | --- | --- |
-| CheckboxGroup | FrameNode of the **CheckboxGroup** type. |
+| [CheckboxGroup](arkts-arkui-typenode-checkboxgroup-t.md) | FrameNode of the **CheckboxGroup** type. |
 
 **Examples**
 
@@ -1933,7 +1936,7 @@ Creates a FrameNode of the **Radio** type.
 
 | Type | Description |
 | --- | --- |
-| Radio | FrameNode of the **Radio** type. |
+| [Radio](arkts-arkui-typenode-radio-t.md) | FrameNode of the **Radio** type. |
 
 **Examples**
 
@@ -2006,7 +2009,7 @@ Creates a FrameNode of the **Rating** type.
 
 | Type | Description |
 | --- | --- |
-| Rating | FrameNode of the **Rating** type. |
+| [Rating](arkts-arkui-typenode-rating-t.md) | FrameNode of the **Rating** type. |
 
 **Examples**
 
@@ -2075,7 +2078,7 @@ Creates a FrameNode of the **Select** type.
 
 | Type | Description |
 | --- | --- |
-| Select | FrameNode of the **Select** type. |
+| [Select](arkts-arkui-typenode-select-t.md) | FrameNode of the **Select** type. |
 
 **Examples**
 
@@ -2142,7 +2145,7 @@ Creates a FrameNode of the **Slider** type.
 
 | Type | Description |
 | --- | --- |
-| Slider | FrameNode of the **Slider** type. |
+| [Slider](arkts-arkui-typenode-slider-t.md) | FrameNode of the **Slider** type. |
 
 **Examples**
 
@@ -2211,7 +2214,7 @@ Creates a FrameNode of the **Toggle** type.
 
 | Type | Description |
 | --- | --- |
-| Toggle | FrameNode of the **Toggle** type. |
+| [Toggle](arkts-arkui-typenode-toggle-t.md) | FrameNode of the **Toggle** type. |
 
 **Examples**
 
@@ -2280,7 +2283,7 @@ Creates a FrameNode of the **Marquee** type.
 
 | Type | Description |
 | --- | --- |
-| Marquee | FrameNode of the **Marquee** type. |
+| [Marquee](arkts-arkui-typenode-marquee-t.md) | FrameNode of the **Marquee** type. |
 
 **Examples**
 
@@ -2346,7 +2349,7 @@ Creates a FrameNode of the **TextArea** type.
 
 | Type | Description |
 | --- | --- |
-| TextArea | FrameNode of the **TextArea** type. |
+| [TextArea](arkts-arkui-typenode-textarea-t.md) | FrameNode of the **TextArea** type. |
 
 **Examples**
 
@@ -2411,7 +2414,7 @@ Creates a FrameNode of the **SymbolGlyph** type.
 
 | Type | Description |
 | --- | --- |
-| SymbolGlyph | FrameNode of the **SymbolGlyph** type. |
+| [SymbolGlyph](arkts-arkui-typenode-symbolglyph-t.md) | FrameNode of the **SymbolGlyph** type. |
 
 **Examples**
 
@@ -2476,7 +2479,7 @@ Creates a FrameNode of the **QRCode** type.
 
 | Type | Description |
 | --- | --- |
-| QRCode | FrameNode of the **QRCode** type. |
+| [QRCode](arkts-arkui-typenode-qrcode-t.md) | FrameNode of the **QRCode** type. |
 
 **Examples**
 
@@ -2512,7 +2515,7 @@ Creates a FrameNode of the **Badge** type.
 
 | Type | Description |
 | --- | --- |
-| Badge | FrameNode of the **Badge** type. |
+| [Badge](arkts-arkui-typenode-badge-t.md) | FrameNode of the **Badge** type. |
 
 **Examples**
 
@@ -2548,7 +2551,7 @@ Creates a FrameNode of the **TextClock** type.
 
 | Type | Description |
 | --- | --- |
-| TextClock | FrameNode of the **TextClock** type. |
+| [TextClock](arkts-arkui-typenode-textclock-t.md) | FrameNode of the **TextClock** type. |
 
 **Examples**
 
@@ -2584,7 +2587,7 @@ Creates a FrameNode of the **TextTimer** type.
 
 | Type | Description |
 | --- | --- |
-| TextTimer | FrameNode of the **TextTimer** type. |
+| [TextTimer](arkts-arkui-typenode-texttimer-t.md) | FrameNode of the **TextTimer** type. |
 
 **Examples**
 
@@ -2620,7 +2623,7 @@ Creates a FrameNode of the **Grid** type.
 
 | Type | Description |
 | --- | --- |
-| Grid | FrameNode of the **Grid** type. |
+| [Grid](arkts-arkui-typenode-grid-t.md) | FrameNode of the **Grid** type. |
 
 **Examples**
 
@@ -2708,8 +2711,9 @@ Creates a FrameNode of the **GridItem** type.
 
 | Type | Description |
 | --- | --- |
-| GridItem | FrameNode of the **GridItem** type. |
+| [GridItem](arkts-arkui-typenode-griditem-t.md) | FrameNode of the **GridItem** type. |
 
 **Examples**
 
 See the example for createNode('Grid').
+- simpleType:

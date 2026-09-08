@@ -105,7 +105,7 @@ Button文本内容。
 
 当文本内容过长无法显示时，用省略号代替未显示的部分。
 
-**类型：** string \| Resource
+**类型：** string \| [Resource](arkts-arkui-resource-t.md)
 
 **起始版本：** 8
 

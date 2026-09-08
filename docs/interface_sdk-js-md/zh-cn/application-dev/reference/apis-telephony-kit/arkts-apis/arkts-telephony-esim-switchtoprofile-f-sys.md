@@ -36,7 +36,7 @@ function switchToProfile(slotId: number, portIndex: number, iccid: string,
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;ResultCode&gt; | Promise对象，返回切换配置文件的结果码。 |
+| Promise&lt;[ResultCode](arkts-telephony-esim-resultcode-e-sys.md)&gt; | Promise对象，返回切换配置文件的结果码。 |
 
 **错误码：**
 

@@ -26,27 +26,6 @@ Deletes the singleton **Storage** instance of a file from the memory, and delete
 | path | string | Yes | Path of the target file. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
-**Examples**
-
-```TypeScript
-import featureAbility from '@ohos.ability.featureAbility';
-
-let path;
-let context = featureAbility.getContext();
-context.getFilesDir().then((filePath) => {
-  path = filePath;
-  console.info("======================>getFilesDirPromise====================>");
-
-  data_storage.deleteStorage(path + '/mystore', function (err) {
-    if (err) {
-      console.info("Failed to delete the storage with err: " + err);
-      return;
-    }
-    console.info("Succeeded in deleting the storage.");
-  })
-});
-```
-
 
 ## deleteStorage
 
@@ -73,23 +52,3 @@ Deletes the singleton **Storage** instance of a file from the memory, and delete
 | Type | Description |
 | --- | --- |
 | Promise&lt;void&gt; | Promise used to return the result. |
-
-**Examples**
-
-```TypeScript
-import featureAbility from '@ohos.ability.featureAbility';
-
-let path;
-let context = featureAbility.getContext();
-context.getFilesDir().then((filePath) => {
-  path = filePath;
-  console.info("======================>getFilesDirPromise====================>");
-
-  let promisedelSt = data_storage.deleteStorage(path + '/mystore');
-  promisedelSt.then(() => {
-    console.info("Succeeded in deleting the storage.");
-  }).catch((err) => {
-    console.info("Failed to delete the storage with err: " + err);
-  })
-});
-```

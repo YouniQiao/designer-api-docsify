@@ -25,7 +25,7 @@ buttonType: ActionButtonType
 
 按钮类型。
 
-**类型：** ActionButtonType
+**类型：** [ActionButtonType](arkts-backgroundtasks-reminderagentmanager-actionbuttontype-e.md)
 
 **起始版本：** 23
 

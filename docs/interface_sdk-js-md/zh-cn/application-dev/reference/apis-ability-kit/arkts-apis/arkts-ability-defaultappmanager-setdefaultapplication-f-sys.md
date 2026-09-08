@@ -12,7 +12,7 @@ import { defaultAppManager } from '@kit.AbilityKit';
 function setDefaultApplication(type: string, elementName: ElementName, userId: number, callback: AsyncCallback<void>) : void
 ```
 
-根据系统已定义的应用类型或者符合媒体类型格式（type/subtype）的文件类型或者[UniformDataType](../../apis-arkdata/arkts-apis/arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md)类型设置默认应用。使用callback异步回调。
+根据系统已定义的应用类型或者符合媒体类型格式（type/subtype）的文件类型或者[UniformDataType](../../apis-arkdata/arkts-apis/arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md)类型设置默认应用。使用callback异步回调。将应用设置为默认浏览器时，目标应用必须已被授予ohos.permission.DEFAULT_WEB_BROWSER权限，否则返回错误码18000001。 [since 26.1.0]
 
 **起始版本：** 9
 
@@ -42,6 +42,7 @@ function setDefaultApplication(type: string, elementName: ElementName, userId: n
 | [17700004](../errorcode-bundle.md#17700004-指定的用户不存在) | The specified user ID is not found. |
 | [17700025](../errorcode-bundle.md#17700025-输入的type无效) | The specified type is invalid. |
 | [17700028](../errorcode-bundle.md#17700028-输入的ability与type不匹配) | The specified ability does not match the type. |
+| [18000001](../errorcode-bundle.md#18000001-设置默认浏览器时应用缺少默认浏览器权限) | The specified type is Web Browser and the specified application does not have the ohos.permission.DEFAULT_WEB_BROWSER permission.<br>**适用版本：** 26.1.0+ |
 
 **示例**
 
@@ -95,7 +96,7 @@ defaultAppManager.setDefaultApplication(uniformTypeDescriptor.UniformDataType.AV
 function setDefaultApplication(type: string, elementName: ElementName, callback: AsyncCallback<void>) : void
 ```
 
-根据系统已定义的应用类型或者符合媒体类型格式（type/subtype）的文件类型或者[UniformDataType](../../apis-arkdata/arkts-apis/arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md)类型设置默认应用。使用callback异步回调。
+根据系统已定义的应用类型或者符合媒体类型格式（type/subtype）的文件类型或者[UniformDataType](../../apis-arkdata/arkts-apis/arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md)类型设置默认应用。使用callback异步回调。将应用设置为默认浏览器时，目标应用必须已被授予ohos.permission.DEFAULT_WEB_BROWSER权限，否则返回错误码18000001。 [since 26.1.0]
 
 **起始版本：** 9
 
@@ -123,6 +124,7 @@ function setDefaultApplication(type: string, elementName: ElementName, callback:
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
 | [17700025](../errorcode-bundle.md#17700025-输入的type无效) | The specified type is invalid. |
 | [17700028](../errorcode-bundle.md#17700028-输入的ability与type不匹配) | The specified ability does not match the type. |
+| [18000001](../errorcode-bundle.md#18000001-设置默认浏览器时应用缺少默认浏览器权限) | The specified type is Web Browser and the specified application does not have the ohos.permission.DEFAULT_WEB_BROWSER permission.<br>**适用版本：** 26.1.0+ |
 
 **示例**
 
@@ -175,7 +177,7 @@ defaultAppManager.setDefaultApplication(uniformTypeDescriptor.UniformDataType.AV
 function setDefaultApplication(type: string, elementName: ElementName, userId?: number) : Promise<void>
 ```
 
-根据系统已定义的应用类型或者符合媒体类型格式（type/subtype）的文件类型或者[UniformDataType](../../apis-arkdata/arkts-apis/arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md)类型设置默认应用。使用Promise异步回调。
+根据系统已定义的应用类型或者符合媒体类型格式（type/subtype）的文件类型或者[UniformDataType](../../apis-arkdata/arkts-apis/arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md)类型设置默认应用。使用Promise异步回调。将应用设置为默认浏览器时，目标应用必须已被授予ohos.permission.DEFAULT_WEB_BROWSER权限，否则返回错误码18000001。 [since 26.1.0]
 
 **起始版本：** 9
 
@@ -210,6 +212,7 @@ function setDefaultApplication(type: string, elementName: ElementName, userId?: 
 | [17700004](../errorcode-bundle.md#17700004-指定的用户不存在) | The specified user ID is not found. |
 | [17700025](../errorcode-bundle.md#17700025-输入的type无效) | The specified type is invalid. |
 | [17700028](../errorcode-bundle.md#17700028-输入的ability与type不匹配) | The specified ability does not match the type. |
+| [18000001](../errorcode-bundle.md#18000001-设置默认浏览器时应用缺少默认浏览器权限) | The specified type is Web Browser and the specified application does not have the ohos.permission.DEFAULT_WEB_BROWSER permission.<br>**适用版本：** 26.1.0+ |
 
 **示例**
 

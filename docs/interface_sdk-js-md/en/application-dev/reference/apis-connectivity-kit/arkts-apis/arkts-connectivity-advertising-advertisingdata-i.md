@@ -52,7 +52,7 @@ serviceData?: ServiceData[]
 
 Service data. By default, this field is not carried if it is not set.
 
-**Type:** ServiceData[]
+**Type:** [ServiceData](arkts-connectivity-advertising-servicedata-i.md)[]
 
 **Since:** 26.0.0
 

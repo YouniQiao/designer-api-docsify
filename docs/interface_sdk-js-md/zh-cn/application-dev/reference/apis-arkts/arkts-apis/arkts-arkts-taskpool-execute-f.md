@@ -147,8 +147,8 @@ function execute(task: Task, priority?: Priority): Promise<Object>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| task | Task | 是 | 需要在任务池中执行的任务。 |
-| priority | Priority | 否 | 等待执行的任务的优先级，默认值为**taskpool.Priority.MEDIUM**。 |
+| task | [Task](arkts-arkts-taskpool-task-c.md) | 是 | 需要在任务池中执行的任务。 |
+| priority | [Priority](arkts-arkts-taskpool-priority-e.md) | 否 | 等待执行的任务的优先级，默认值为**taskpool.Priority.MEDIUM**。 |
 
 **返回值：**
 
@@ -190,40 +190,6 @@ taskpool.execute(task3, taskpool.Priority.HIGH).then((value: Object) => {
 });
 ```
 
-```TypeScript
-import { taskpool } from '@kit.ArkTS';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Concurrent
-function additionDelay(delay: number): void {
-  let start: number = new Date().getTime();
-  while (new Date().getTime() - start < delay) {
-    continue;
-  }
-}
-async function asyncRunner() {
-  let runner:taskpool.AsyncRunner = new taskpool.AsyncRunner("runner1", 5, 5);
-  for (let i = 0; i < 30; i++) {
-    let task:taskpool.Task = new taskpool.Task(additionDelay, 1000);
-    runner.execute(task).then(() => {
-      console.info("asyncRunner: task" + i + " done.");
-    }).catch((e: BusinessError) => {
-      console.error("asyncRunner: task" + i + " error." + e.code + "-" + e.message);
-    });
-  }
-}
-
-async function asyncRunner2() {
-  let runner:taskpool.AsyncRunner = new taskpool.AsyncRunner(5);
-  for (let i = 0; i < 20; i++) {
-    let task:taskpool.Task = new taskpool.Task(additionDelay, 1000);
-    runner.execute(task).then(() => {
-      console.info("asyncRunner: task" + i + " done.");
-    });
-  }
-}
-```
-
 
 ## execute
 
@@ -244,7 +210,7 @@ function execute<A extends Array<Object>, R>(task: GenericsTask<A, R>, priority?
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | task | [GenericsTask](arkts-arkts-taskpool-genericstask-c.md)&lt;A, R&gt; | 是 | 需要在任务池中执行的泛型任务。 |
-| priority | Priority | 否 | 等待执行的任务的优先级，默认值为**taskpool.Priority.MEDIUM**。 |
+| priority | [Priority](arkts-arkts-taskpool-priority-e.md) | 否 | 等待执行的任务的优先级，默认值为**taskpool.Priority.MEDIUM**。 |
 
 **返回值：**
 
@@ -304,7 +270,7 @@ function execute(group: TaskGroup, priority?: Priority): Promise<Object[]>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | group | [TaskGroup](arkts-arkts-taskpool-taskgroup-c.md) | 是 | 需要在任务池中执行的任务组。 |
-| priority | Priority | 否 | 等待执行的任务组的优先级，该参数默认值为**taskpool.Priority.MEDIUM**。 |
+| priority | [Priority](arkts-arkts-taskpool-priority-e.md) | 否 | 等待执行的任务组的优先级，该参数默认值为**taskpool.Priority.MEDIUM**。 |
 
 **返回值：**
 
@@ -391,7 +357,7 @@ function execute(task: Task, configs: Configs): Promise<Object>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| task | Task | 是 | 需要在任务池中执行的任务。 |
+| task | [Task](arkts-arkts-taskpool-task-c.md) | 是 | 需要在任务池中执行的任务。 |
 | configs | [Configs](arkts-arkts-taskpool-configs-i.md) | 是 | 该参数可以设置超时时间和任务优先级。 |
 
 **返回值：**

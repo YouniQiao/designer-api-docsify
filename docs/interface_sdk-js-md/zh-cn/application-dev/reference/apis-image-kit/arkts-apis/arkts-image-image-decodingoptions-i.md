@@ -36,7 +36,7 @@ desiredColorSpace?: colorSpaceManager.ColorSpaceManager
 
 目标色彩空间。默认值为UNKNOWN。
 
-**类型：** colorSpaceManager.ColorSpaceManager
+**类型：** [colorSpaceManager.ColorSpaceManager](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-colorspacemanager-colorspacemanager-i.md)
 
 **起始版本：** 11
 
@@ -88,7 +88,7 @@ desiredRegion?: Region
 
 注意：若解码接口同时传入了desiredSize参数与desiredRegion参数，需进一步传入cropAndScaleStrategy参数指定缩放与裁剪的先后顺序，推荐设置CROP_FIRST。
 
-**类型：** Region
+**类型：** [Region](arkts-image-image-region-i.md)
 
 **起始版本：** 7
 
@@ -191,36 +191,6 @@ rotate?: number
 **卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function rotate(pixelMap: image.PixelMap) {
-  const angle: number = 90.0;
-  pixelMap.rotate(angle, (err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to rotate the PixelMap. Code: ${err.code}, message: ${err.message}`);
-      return;
-    }
-    console.info("Succeeded in rotating the PixelMap.");
-  });
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function rotate(pixelMap: image.PixelMap) {
-  const angle: number = 90.0;
-  pixelMap.rotate(angle).then(() => {
-    console.info('Succeeded in rotating the PixelMap.');
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to rotate the PixelMap. Code: ${err.code}, message: ${err.message}`);
-  });
-}
-```
 
 ## sampleSize
 

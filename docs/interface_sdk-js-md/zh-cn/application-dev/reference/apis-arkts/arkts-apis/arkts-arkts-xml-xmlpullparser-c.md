@@ -36,11 +36,6 @@ constructor(buffer: ArrayBuffer | DataView, encoding?: string)
 **示例**
 
 ```TypeScript
-let arrayBuffer = new ArrayBuffer(2048);
-let xmlSerializer = new xml.XmlSerializer(arrayBuffer, "utf-8");
-```
-
-```TypeScript
 import { util } from '@kit.ArkTS';
 
 let strXml = '<title>Happy</title>'
@@ -71,7 +66,7 @@ parse(option: ParseOptions): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| option | ParseOptions | 是 | XML解析选项。 |
+| option | [ParseOptions](arkts-arkts-xml-parseoptions-i.md) | 是 | XML解析选项。 |
 
 **示例**
 
@@ -123,4 +118,4 @@ parseXml(option: ParseOptions): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| option | ParseOptions | 是 | XML解析选项。 |
+| option | [ParseOptions](arkts-arkts-xml-parseoptions-i.md) | 是 | XML解析选项。 |

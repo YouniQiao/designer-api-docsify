@@ -145,7 +145,7 @@ Disables delayed process exit for the current process.
 | --- | --- |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. Possible causes: Fail to connect system service. |
-| 16000150 | The current process has no UIAbility, and this API cannot be called. |
+| [16000150](../errorcode-ability.md#16000150-failed-to-send-request) | The current process has no UIAbility, and this API cannot be called. |
 
 ## enableDelayedProcessExit
 
@@ -173,7 +173,7 @@ Enable delayed exit for the current process. <p>**NOTE：**: It can be called on
 | --- | --- |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. Possible causes: Fail to connect system service. |
-| 16000150 | The current process has no UIAbility, and this API cannot be called. |
+| [16000150](../errorcode-ability.md#16000150-failed-to-send-request) | The current process has no UIAbility, and this API cannot be called. |
 
 ## getAllRunningInstanceKeys
 
@@ -245,7 +245,7 @@ This API is used to manage multiple windows in an application that contains seve
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;window.WindowStage&gt;&gt; | Promise used to return all WindowStage objects in the current application process. |
+| Promise&lt;Array&lt;[window.WindowStage](../../apis-arkui/arkts-apis/arkts-arkui-window-windowstage-i.md)&gt;&gt; | Promise used to return all WindowStage objects in the current application process. |
 
 **Examples**
 
@@ -989,7 +989,7 @@ unregisters a listener for system configuration updated.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | systemConfiguration.UpdatedCallback | No | The system configuration updated callback. If a defined callback is passed in, the listener for that callback is unregistered. If no value is passed in, all the listeners for the corresponding event are unregistered. |
+| callback | [systemConfiguration.UpdatedCallback](arkts-ability-systemconfiguration-updatedcallback-i.md) | No | The system configuration updated callback. If a defined callback is passed in, the listener for that callback is unregistered. If no value is passed in, all the listeners for the corresponding event are unregistered. |
 
 ## on('abilityLifecycle')
 
@@ -1249,7 +1249,7 @@ Registers a listener for system configuration updated.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | systemConfiguration.UpdatedCallback | Yes | The system configuration updated callback. |
+| callback | [systemConfiguration.UpdatedCallback](arkts-ability-systemconfiguration-updatedcallback-i.md) | Yes | The system configuration updated callback. |
 
 ## restartApp
 
@@ -1293,7 +1293,7 @@ Restarts the application and starts the specified UIAbility. This API can be cal
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
-| [16000053](../errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) | The ability is not on the top of the UI. |
+| [16000053](../errorcode-ability.md#16000053-ability-not-in-the-foreground) | The ability is not on the top of the UI. |
 | [16000063](../errorcode-ability.md#16000063-invalid-ability-during-application-restart) | The target to restart does not belong to the current application or is not a UIAbility. |
 | [16000064](../errorcode-ability.md#16000064-frequent-application-restart) | Restart too frequently. Try again at least 3s later. |
 
@@ -1368,7 +1368,7 @@ Sets the dark/light color mode for the application. This API can be called only 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| colorMode | ConfigurationConstant.ColorMode | Yes | Dark/light color mode, which can be dark mode, light mode, or follow-system mode (default). |
+| colorMode | [ConfigurationConstant.ColorMode](arkts-ability-configurationconstant-colormode-e.md) | Yes | Dark/light color mode, which can be dark mode, light mode, or follow-system mode (default). |
 
 **Error codes:**
 
@@ -1670,7 +1670,7 @@ Starts a UIAbility of the current application during the delayed-exit window.
 | [16000122](../errorcode-ability.md#16000122-target-component-is-intercepted-by-the-system-control-module) | The target component is blocked by the system module and does not support startup. |
 | [16000123](../errorcode-ability.md#16000123-implicit-startup-is-not-supported) | Implicit startup is not supported. |
 | [16000124](../errorcode-ability.md#16000124-starting-a-distributed-uiability-is-not-supported) | Starting a remote UIAbility is not supported. |
-| [16000125](../errorcode-ability.md#16000125-starting-a-plugin-is-not-supported) | Starting a plugin UIAbility is not supported. |
+| [16000125](../errorcode-ability.md#16000125-starting-a-plugin-uiability-is-not-supported) | Starting a plugin UIAbility is not supported. |
 | [16000130](../errorcode-ability.md#16000130-uiability-does-not-belong-to-the-caller) | The UIAbility does not belong to the caller. |
-| 16000161 | Delayed process exit is not pending in the current process, and this API cannot be called. |
-| 16000162 | The current process still has another UIAbility, and this API cannot be called. |
+| [16000161](../errorcode-ability.md#16000161-delayed-process-exit-is-not-pending-in-the-current-process-and-this-api-cannot-be-called) | Delayed process exit is not pending in the current process, and this API cannot be called. |
+| [16000162](../errorcode-ability.md#16000162-the-current-process-still-has-another-uiability-and-this-api-cannot-be-called) | The current process still has another UIAbility, and this API cannot be called. |

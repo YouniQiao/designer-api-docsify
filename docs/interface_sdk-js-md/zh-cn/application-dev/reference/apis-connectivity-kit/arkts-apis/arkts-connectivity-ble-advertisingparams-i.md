@@ -22,7 +22,7 @@ advertisingData: AdvertiseData
 
 需要发送的广播报文数据内容。
 
-**类型：** AdvertiseData
+**类型：** [AdvertiseData](arkts-connectivity-ble-advertisedata-i.md)
 
 **起始版本：** 11
 
@@ -38,7 +38,7 @@ advertisingResponse?: AdvertiseData
 
 回复扫描请求的广播报文数据内容。若不填写，则不携带扫描回复广播报文。在扩展广播模式下（isExtended为true时），与connectable不能共存：connectable为true时本参数需为空，connectable为false时本参数不能为空。
 
-**类型：** AdvertiseData
+**类型：** [AdvertiseData](arkts-connectivity-ble-advertisedata-i.md)
 
 **起始版本：** 11
 
@@ -54,7 +54,7 @@ advertisingSettings: AdvertiseSetting
 
 广播的发送参数。
 
-**类型：** AdvertiseSetting
+**类型：** [AdvertiseSetting](arkts-connectivity-ble-advertisesetting-i.md)
 
 **起始版本：** 11
 

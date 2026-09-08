@@ -38,7 +38,7 @@ result: Result
 
 Application installation result. **SUCCESS** indicates that the application is successfully installed and can be properly used. **FAIL** indicates that the application fails to be installed and is unavailable.
 
-**Type:** Result
+**Type:** [Result](arkts-mdm-common-result-e.md)
 
 **Since:** 22
 

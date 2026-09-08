@@ -23,8 +23,8 @@ Enumerates gesture competition results.
 | [GestureGroupHandler](arkts-arkui-gesturegrouphandler-c.md) | Defines a gesture group handler object. |
 | [GestureHandler](arkts-arkui-gesturehandler-c.md) | Represents the base type for gesture handlers. |
 | [GestureRecognizer](arkts-arkui-gesturerecognizer-c.md) | Gesture recognizer object. |
-| [LongPressGestureHandler](arkts-arkui-longpressgesturehandler-c.md) | Defines a number press gesture handler object. |
-| [LongPressRecognizer](arkts-arkui-longpressrecognizer-c.md) | Implements a number press gesture recognizer. Inherits from [GestureRecognizer](arkts-arkui-gesturerecognizer-c.md). |
+| [LongPressGestureHandler](arkts-arkui-longpressgesturehandler-c.md) | Defines a long press gesture handler object. |
+| [LongPressRecognizer](arkts-arkui-longpressrecognizer-c.md) | Implements a long press gesture recognizer. Inherits from [GestureRecognizer](arkts-arkui-gesturerecognizer-c.md). |
 | [PanGestureHandler](arkts-arkui-pangesturehandler-c.md) | Defines a pan gesture handler object. |
 | [PanGestureOptions](arkts-arkui-pangestureoptions-c.md) | Defines the PanGesture options. |
 | [PanRecognizer](arkts-arkui-panrecognizer-c.md) | Gesture recognizer object. |
@@ -53,8 +53,8 @@ Enumerates gesture competition results.
 | [GestureInfo](arkts-arkui-gestureinfo-i.md) | Defines the gesture information type. |
 | [GestureInterface](arkts-arkui-gestureinterface-i.md) | Defines the gesture API. |
 | [LongPressGestureEvent](arkts-arkui-longpressgestureevent-i.md) | Inherits from [BaseGestureEvent](arkts-arkui-basegestureevent-i.md). This object can be passed as the **event** parameter of [onGestureJudgeBegin](../arkts-components/arkts-arkui-commonmethod-c.md#ongesturejudgebegin). |
-| [LongPressGestureHandlerOptions](arkts-arkui-longpressgesturehandleroptions-i.md) | Provides the parameters of the number press gesture handler. Inherits from [BaseHandlerOptions](arkts-arkui-basehandleroptions-i.md). |
-| [LongPressGestureInterface](arkts-arkui-longpressgestureinterface-i.md) | **LongPressGesture** is used to trigger a number press gesture. This gesture requires one or more fingers to be held down for a specified duration, which is 500 ms by default and can be adjusted using the **duration** parameter. |
+| [LongPressGestureHandlerOptions](arkts-arkui-longpressgesturehandleroptions-i.md) | Provides the parameters of the long press gesture handler. Inherits from [BaseHandlerOptions](arkts-arkui-basehandleroptions-i.md). |
+| [LongPressGestureInterface](arkts-arkui-longpressgestureinterface-i.md) | **LongPressGesture** is used to trigger a long press gesture. This gesture requires one or more fingers to be held down for a specified duration, which is 500 ms by default and can be adjusted using the **duration** parameter. |
 | [PanGestureEvent](arkts-arkui-pangestureevent-i.md) | Inherits from [BaseGestureEvent](arkts-arkui-basegestureevent-i.md). This object can be passed as the **event** parameter of [onGestureJudgeBegin](../arkts-components/arkts-arkui-commonmethod-c.md#ongesturejudgebegin). |
 | [PanGestureHandlerOptions](arkts-arkui-pangesturehandleroptions-i.md) | Provides the parameters of the pan gesture handler. Inherits from [BaseHandlerOptions](arkts-arkui-basehandleroptions-i.md). |
 | [PanGestureInterface](arkts-arkui-pangestureinterface-i.md) | PanGesture is used to trigger a pan gesture when the movement distance of a finger on the screen reaches the minimum value. |

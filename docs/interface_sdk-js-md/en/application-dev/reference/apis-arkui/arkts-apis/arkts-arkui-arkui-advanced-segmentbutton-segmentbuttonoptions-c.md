@@ -107,7 +107,7 @@ Background blur style of the component.
 
 If the value is **undefined**, it defaults to **BlurStyle.NONE**.
 
-**Type:** BlurStyle
+**Type:** [BlurStyle](../arkts-components/arkts-arkui-blurstyle-e.md)
 
 **Since:** 11
 
@@ -175,7 +175,7 @@ backgroundSystemMaterial?: uiMaterial.Material
 
 Set system-styled materials for the component. Different materials have different effects, which can influence the backgroundColor, border, shadow, and other visual attributes of the component.
 
-**Type:** uiMaterial.Material
+**Type:** [uiMaterial.Material](arkts-arkui-uimaterial-material-c.md)
 
 **Since:** 26.0.0
 
@@ -265,7 +265,7 @@ Default value: **Direction.Auto**
 
 If the value is **undefined**, the default value is used.
 
-**Type:** Direction
+**Type:** [Direction](arkts-arkui-direction-e.md)
 
 **Since:** 12
 
@@ -325,7 +325,7 @@ Font weight of the unselected button.
 
 If the value is **undefined**, the font weight is **FontWeight.Regular**.
 
-**Type:** FontWeight
+**Type:** [FontWeight](arkts-arkui-fontweight-e.md)
 
 **Since:** 11
 
@@ -537,7 +537,7 @@ Font weight of the selected button.
 
 If the value is **undefined**, the font weight is **FontWeight.Medium**.
 
-**Type:** FontWeight
+**Type:** [FontWeight](arkts-arkui-fontweight-e.md)
 
 **Since:** 11
 

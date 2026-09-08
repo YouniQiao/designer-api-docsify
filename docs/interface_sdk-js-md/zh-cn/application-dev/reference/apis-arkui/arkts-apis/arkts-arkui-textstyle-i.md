@@ -21,7 +21,7 @@ wordBreak?: WordBreak
 
 默认值：WordBreak.BREAK_ALL
 
-**类型：** WordBreak
+**类型：** [WordBreak](arkts-arkui-wordbreak-e.md)
 
 **起始版本：** 12
 

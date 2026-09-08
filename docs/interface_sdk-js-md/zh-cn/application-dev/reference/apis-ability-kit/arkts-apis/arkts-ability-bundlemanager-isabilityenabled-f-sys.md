@@ -24,7 +24,7 @@ function isAbilityEnabled(info: AbilityInfo, appIndex: number): Promise<boolean>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| info | AbilityInfo | 是 | 表示关于检查ability的信息。 |
+| info | [AbilityInfo](arkts-ability-bundlemanager-abilityinfo-t.md) | 是 | 表示关于检查ability的信息。 |
 | appIndex | number | 是 | 表示分身应用的索引。 appIndex为0时，表示获取主应用组件的禁用或使能状态。appIndex大于0时，表示获取指定分身应用组件的禁用或使能状态。 |
 
 **返回值：**
@@ -96,7 +96,7 @@ function isAbilityEnabled(info: AbilityInfo, callback: AsyncCallback<boolean>): 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| info | AbilityInfo | 是 | 表示关于检查ability的信息。 |
+| info | [AbilityInfo](arkts-ability-bundlemanager-abilityinfo-t.md) | 是 | 表示关于检查ability的信息。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)，返回true表示当前应用组件为使能状态，返回false表示应用组件为禁用状态。 |
 
 **错误码：**
@@ -163,7 +163,7 @@ function isAbilityEnabled(info: AbilityInfo): Promise<boolean>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| info | AbilityInfo | 是 | 表示关于检查ability的信息。 |
+| info | [AbilityInfo](arkts-ability-bundlemanager-abilityinfo-t.md) | 是 | 表示关于检查ability的信息。 |
 
 **返回值：**
 

@@ -59,7 +59,7 @@ maxPullDownDistance(distance: number | Resource | undefined)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| distance | number \| Resource \| undefined | 是 | 最大下拉距离。默认值：undefined单位：vp取值范围：[0, +∞)，值小于0时按0处理。当该值小于刷新的下拉偏移量[refreshOffset](#refreshoffset)时，Refresh下拉离手不会触发刷新。undefined和null按没有设置此属性处理，即没有最大下拉距离限制。 |
+| distance | number \| [Resource](../arkts-apis/arkts-arkui-resource-t.md) \| undefined | 是 | 最大下拉距离。默认值：undefined单位：vp取值范围：[0, +∞)，值小于0时按0处理。当该值小于刷新的下拉偏移量[refreshOffset](#refreshoffset)时，Refresh下拉离手不会触发刷新。undefined和null按没有设置此属性处理，即没有最大下拉距离限制。 |
 
 ## onOffsetChange
 
@@ -237,4 +237,4 @@ refreshOffset(value: number | Resource)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number \| Resource | 是 | 下拉偏移量。单位：vp取值范围：(0, +∞)。默认值：未设置[promptText](arkts-arkui-refreshoptions-i.md)参数时为64vp，设置了[promptText](arkts-arkui-refreshoptions-i.md)参数时为96vp。值为0或负数时，按默认值处理。 |
+| value | number \| [Resource](../arkts-apis/arkts-arkui-resource-t.md) | 是 | 下拉偏移量。单位：vp取值范围：(0, +∞)。默认值：未设置[promptText](arkts-arkui-refreshoptions-i.md)参数时为64vp，设置了[promptText](arkts-arkui-refreshoptions-i.md)参数时为96vp。值为0或负数时，按默认值处理。 |

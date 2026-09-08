@@ -14,7 +14,7 @@ get canvas(): drawing.Canvas
 
 获取用于绘制的画布。
 
-**类型：** drawing.Canvas
+**类型：** [drawing.Canvas](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-drawing-canvas-c.md)
 
 **起始版本：** 11
 

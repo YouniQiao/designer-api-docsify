@@ -54,47 +54,10 @@ getRectangleById(id: string): componentUtils.ComponentInfo
 
 | 类型 | 说明 |
 | --- | --- |
-| componentUtils.ComponentInfo | 组件大小、位置、平移、缩放、旋转及仿射矩阵属性信息。 |
+| [componentUtils.ComponentInfo](arkts-arkui-componentutils-componentinfo-i.md) | 组件大小、位置、平移、缩放、旋转及仿射矩阵属性信息。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [100001](../errorcode-internal.md#100001-接口调用异常错误码) | UI execution context not found. |
-
-**示例**
-
-```TypeScript
-import { ComponentUtils } from '@kit.ArkUI';
-
-@Entry
-@Component
-struct Index {
-  @State message: string = 'Hello World';
-
-  build() {
-    RelativeContainer() {
-      Text(this.message)
-        .id('HelloWorld')
-        .fontSize($r('app.float.page_text_font_size'))
-        .fontWeight(FontWeight.Bold)
-        .alignRules({
-          center: { anchor: '__container__', align: VerticalAlign.Center },
-          middle: { anchor: '__container__', align: HorizontalAlign.Center }
-        })
-        .onClick(() => {
-          this.message = 'Welcome';
-          let componentUtils: ComponentUtils = this.getUIContext().getComponentUtils();
-          let componentInfo = componentUtils.getRectangleById("HelloWorld");
-          let width = componentInfo.size.width; // 获取组件的宽度
-          let height = componentInfo.size.height; // 获取组件的高度
-          let localOffsetX = componentInfo.localOffset.x; // 获取组件相对于父组件的x轴偏移
-          let localOffsetY = componentInfo.localOffset.y; // 获取组件相对于父组件的y轴偏移
-          console.info(`width: ${width}, height: ${height}, localOffsetX: ${localOffsetX}, localOffsetY: ${localOffsetY}`);
-        })
-    }
-    .height('100%')
-    .width('100%')
-  }
-}
-```

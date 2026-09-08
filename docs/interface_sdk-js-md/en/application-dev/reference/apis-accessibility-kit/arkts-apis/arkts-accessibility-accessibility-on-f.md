@@ -227,7 +227,7 @@ struct Index {
 function on(type: 'touchModeChange', callback: Callback<string>): void
 ```
 
-Subscribes to the single-tap/number-tap operation mode change event in touch guide mode. This API uses an asynchronous callback to return the result.
+Subscribes to the single-tap/double-tap operation mode change event in touch guide mode. This API uses an asynchronous callback to return the result.
 
 > **NOTE：**
 > 
@@ -252,7 +252,7 @@ Subscribes to the single-tap/number-tap operation mode change event in touch gui
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'touchModeChange' | Yes | Event type, which is set to **'touchModeChange'** in this API. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | Yes | Callback invoked when the single-tap/number-tap operation mode changes in touch browsing mode. The value 'singleTouchMode' indicates single-tap operation mode, 'doubleTouchMode'indicates number-tap operation mode, and 'none' indicates that touch browsing is not enabled. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | Yes | Callback invoked when the single-tap/double-tap operation mode changes in touch browsing mode. The value 'singleTouchMode' indicates single-tap operation mode, 'doubleTouchMode'indicates double-tap operation mode, and 'none' indicates that touch browsing is not enabled. |
 
 **Error codes:**
 

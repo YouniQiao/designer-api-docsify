@@ -378,7 +378,7 @@ setMissionIcon(icon: image.PixelMap, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| icon | image.PixelMap | 是 | 在最近的任务中显示的UIAbility图标。 |
+| icon | [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | 是 | 在最近的任务中显示的UIAbility图标。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，当设置当前UIAbility在任务中显示的图标成功，err中code为0；否则err会返回对应的错误码和错误信息。 |
 
 **错误码：**
@@ -446,7 +446,7 @@ setMissionIcon(icon: image.PixelMap): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| icon | image.PixelMap | 是 | 在最近的任务中显示的UIAbility图标。 |
+| icon | [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | 是 | 在最近的任务中显示的UIAbility图标。 |
 
 **返回值：**
 

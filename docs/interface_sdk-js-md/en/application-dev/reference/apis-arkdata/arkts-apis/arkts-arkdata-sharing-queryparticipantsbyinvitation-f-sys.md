@@ -28,7 +28,7 @@ Queries the participants based on the sharing invitation code. This API uses an 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | invitationCode | string | Yes | Invitation code of the share. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Result&lt;Array&lt;[Participant](arkts-arkdata-sharing-participant-i-sys.md)&gt;&gt;&gt; | Yes | Callback used to return the participants obtained. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Result](arkts-arkdata-relationalstore-result-i.md)&lt;Array&lt;[Participant](arkts-arkdata-sharing-participant-i-sys.md)&gt;&gt;&gt; | Yes | Callback used to return the participants obtained. |
 
 **Error codes:**
 
@@ -77,7 +77,7 @@ Queries the participants based on the sharing invitation code. This API uses a p
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Result&lt;Array&lt;[Participant](arkts-arkdata-sharing-participant-i-sys.md)&gt;&gt;&gt; | Promise used to return the participants obtained. |
+| Promise&lt;[Result](arkts-arkdata-relationalstore-result-i.md)&lt;Array&lt;[Participant](arkts-arkdata-sharing-participant-i-sys.md)&gt;&gt;&gt; | Promise used to return the participants obtained. |
 
 **Error codes:**
 

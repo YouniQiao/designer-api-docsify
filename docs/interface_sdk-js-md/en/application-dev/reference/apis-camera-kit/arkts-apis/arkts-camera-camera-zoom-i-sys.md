@@ -34,7 +34,7 @@ Gets zoom center point.
 
 | Type | Description |
 | --- | --- |
-| Point | The current zoom center point. |
+| [Point](arkts-camera-camera-point-i.md) | The current zoom center point. |
 
 **Error codes:**
 
@@ -98,7 +98,7 @@ Sets zoom center point.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| point | Point | Yes | Target zoom center point. |
+| point | [Point](arkts-camera-camera-point-i.md) | Yes | Target zoom center point. |
 
 **Error codes:**
 

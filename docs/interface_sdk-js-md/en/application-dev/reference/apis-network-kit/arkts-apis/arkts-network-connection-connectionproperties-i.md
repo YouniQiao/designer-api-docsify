@@ -25,7 +25,7 @@ dnses: Array<NetAddress>
 
 Network address. For details, see [NetAddress](arkts-network-connection-netaddress-i.md).
 
-**Type:** Array&lt;NetAddress&gt;
+**Type:** Array&lt;[NetAddress](arkts-network-connection-netaddress-i.md)&gt;
 
 **Since:** 8
 
@@ -99,7 +99,7 @@ linkAddresses: Array<LinkAddress>
 
 Network link information.
 
-**Type:** Array&lt;LinkAddress&gt;
+**Type:** Array&lt;[LinkAddress](arkts-network-connection-linkaddress-i.md)&gt;
 
 **Since:** 8
 
@@ -127,7 +127,7 @@ routes: Array<RouteInfo>
 
 Network route information.
 
-**Type:** Array&lt;RouteInfo&gt;
+**Type:** Array&lt;[RouteInfo](arkts-network-connection-routeinfo-i.md)&gt;
 
 **Since:** 8
 

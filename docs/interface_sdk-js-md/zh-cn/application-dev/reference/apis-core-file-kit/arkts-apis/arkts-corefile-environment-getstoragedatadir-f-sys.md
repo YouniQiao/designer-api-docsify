@@ -34,17 +34,6 @@ function getStorageDataDir(): Promise<string>
 | 13900020 | Invalid argument |
 | 13900042 | Unknown error |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-Environment.getStorageDataDir().then((path: string) => {
-    console.info("getStorageDataDir successfully, Path: " + path);
-}).catch((err: BusinessError) => {
-    console.error("getStorageDataDir failed with error message: " + err.message + ", error code: " + err.code);
-});
-```
-
 
 ## getStorageDataDir
 
@@ -73,16 +62,3 @@ function getStorageDataDir(callback: AsyncCallback<string>): void
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | The caller is not a system application |
 | 13900020 | Invalid argument |
 | 13900042 | Unknown error |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-Environment.getStorageDataDir((err: BusinessError, path: string) => {
-  if (err) {
-    console.error("getStorageDataDir failed with error message: " + err.message + ", error code: " + err.code);
-  } else {
-    console.info("getStorageDataDir successfully, Path: " + path);
-  }
-});
-```

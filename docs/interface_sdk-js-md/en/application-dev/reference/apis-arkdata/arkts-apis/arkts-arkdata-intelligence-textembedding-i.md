@@ -149,18 +149,6 @@ textEmbedding.loadModel()
   })
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-imageEmbedding.loadModel()
-  .then(() => {
-    console.info("Succeeded in loading Model");
-  })
-  .catch((err: BusinessError) => {
-    console.error("Failed to load Model and code is " + err.code);
-  })
-```
-
 ## releaseModel
 
 ```TypeScript
@@ -192,18 +180,6 @@ Releases this text embedding model. If the releasing fails, an error code is ret
 import { BusinessError } from '@kit.BasicServicesKit';
 
 textEmbedding.releaseModel()
-  .then(() => {
-    console.info("Succeeded in releasing Model");
-  })
-  .catch((err: BusinessError) => {
-    console.error("Failed to release Model and code is " + err.code);
-  })
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-imageEmbedding.releaseModel()
   .then(() => {
     console.info("Succeeded in releasing Model");
   })

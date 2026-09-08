@@ -41,22 +41,6 @@ Captures a photo with the default photo capture parameters. This API uses an asy
 | [7400104](../errorcode-camera.md#7400104-session-not-running) | Session not running. |
 | [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function capture(photoOutput: camera.PhotoOutput): void {
-  photoOutput.capture((err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to capture the photo, error code: ${err.code}.`);
-      return;
-    }
-    console.info('Callback invoked to indicate the photo capture request success.');
-  });
-}
-```
-
 ## capture
 
 ```TypeScript
@@ -83,20 +67,6 @@ Captures a photo with the default photo capture parameters. This API uses a prom
 | --- | --- |
 | [7400104](../errorcode-camera.md#7400104-session-not-running) | Session not running. |
 | [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function capture(photoOutput: camera.PhotoOutput): void {
-  photoOutput.capture().then(() => {
-    console.info('Promise returned to indicate that photo capture request success.');
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to photo output capture, error code: ${error.code}.`);
-  });
-}
-```
 
 ## capture
 
@@ -126,33 +96,6 @@ Captures a photo with the specified photo capture parameters. This API uses an a
 | [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
 | [7400104](../errorcode-camera.md#7400104-session-not-running) | Session not running. |
 | [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function capture(photoOutput: camera.PhotoOutput): void {
-  let captureLocation: camera.Location = {
-    latitude: 0,
-    longitude: 0,
-    altitude: 0
-  }
-  let settings: camera.PhotoCaptureSetting = {
-    quality: camera.QualityLevel.QUALITY_LEVEL_LOW,
-    rotation: camera.ImageRotation.ROTATION_0,
-    location: captureLocation,
-    mirror: false
-  }
-  photoOutput.capture(settings, (err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to capture the photo, error code: ${err.code}.`);
-      return;
-    }
-    console.info('Callback invoked to indicate the photo capture request success.');
-  });
-}
-```
 
 ## capture
 
@@ -188,31 +131,6 @@ Captures a photo with the specified photo capture parameters. This API uses a pr
 | [7400104](../errorcode-camera.md#7400104-session-not-running) | Session not running. |
 | [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function capture(photoOutput: camera.PhotoOutput): void {
-  let captureLocation: camera.Location = {
-    latitude: 0,
-    longitude: 0,
-    altitude: 0
-  }
-  let settings: camera.PhotoCaptureSetting = {
-    quality: camera.QualityLevel.QUALITY_LEVEL_LOW,
-    rotation: camera.ImageRotation.ROTATION_0,
-    location: captureLocation,
-    mirror: false
-  }
-  photoOutput.capture(settings).then(() => {
-    console.info('Promise returned to indicate that photo capture request success.');
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to photo output capture, error code: ${error.code}.`);
-  });
-}
-```
-
 ## enableAutoExtendedGainmapDelivery
 
 ```TypeScript
@@ -242,23 +160,6 @@ Enables or disables automatic extended gain map delivery.
 | [7400102](../errorcode-camera.md#7400102-invalid-operation) | Operation not allowed. |
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config, only throw in session usage. |
 | [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { camera } from '@kit.CameraKit';
-
-function enableAutoExtendedGainmapDelivery(photoOutput: camera.PhotoOutput): void {
-  try {
-    photoOutput.enableAutoExtendedGainmapDelivery(true);
-  } catch (error) {
-    // If the operation fails, error.code is returned and processed.
-    let err = error as BusinessError;
-    console.error(`The enableAutoExtendedGainmapDelivery call failed. error code: ${err.code}`);
-  }
-}
-```
 
 ## enableMirror
 
@@ -290,37 +191,6 @@ Before calling this API, check whether moving photo capture is supported by call
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 | [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function enableMirror(photoOutput: camera.PhotoOutput): void {
-  try {
-    photoOutput.enableMirror(true);
-  } catch (error) {
-    // If the operation fails, error.code is returned and processed.
-    let err = error as BusinessError;
-    console.error(`The enableMirror call failed. error code: ${err.code}`);
-  }
-}
-```
-
-```TypeScript
-import { camera } from '@kit.CameraKit';
-import { media } from '@kit.MediaKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function enableMirror(videoOutput: camera.VideoOutput, mirrorMode: boolean, aVRecorder: media.AVRecorder, deviceDegree : number): void {
-    try {
-        videoOutput.enableMirror(mirrorMode);
-        aVRecorder.updateRotation(videoOutput.getVideoRotation(deviceDegree));
-    } catch (error) {
-        let err = error as BusinessError;
-    }
-}
-```
-
 ## enableMovingPhoto
 
 ```TypeScript
@@ -351,22 +221,6 @@ Enables or disables the feature of taking moving photos.
 | [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
 | [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function enableMovingPhoto(photoOutput: camera.PhotoOutput): void {
-  try {
-    photoOutput.enableMovingPhoto(true);
-  } catch (error) {
-    // If the operation fails, error.code is returned and processed.
-    let err = error as BusinessError;
-    console.error(`The enableMovingPhoto call failed. error code: ${err.code}`);
-  }
-}
-```
-
 ## getActiveProfile
 
 ```TypeScript
@@ -392,40 +246,6 @@ Obtains the profile that takes effect currently.
 | Error Code ID | Error Message |
 | --- | --- |
 | [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function testGetActiveProfile(photoOutput: camera.PhotoOutput): camera.Profile | undefined {
-  let activeProfile: camera.Profile | undefined = undefined;
-  try {
-    activeProfile = photoOutput.getActiveProfile();
-  } catch (error) {
-    // If the operation fails, error.code is returned and processed.
-    let err = error as BusinessError;
-    console.error(`The photoOutput.getActiveProfile call failed. error code: ${err.code}`);
-  }
-  return activeProfile;
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function testGetActiveProfile(previewOutput: camera.PreviewOutput): camera.Profile | undefined {
-  let activeProfile: camera.Profile | undefined = undefined;
-  try {
-    activeProfile = previewOutput.getActiveProfile();
-  } catch (error) {
-    // If the operation fails, error.code is returned and processed.
-    let err = error as BusinessError;
-    console.error(`The previewOutput.getActiveProfile call failed. error code: ${err.code}`);
-  }
-  return activeProfile;
-}
-```
 
 ## getPhotoRotation
 
@@ -467,38 +287,6 @@ natural orientation. For example, the rear camera sensor of a bar-type phone is 
 | [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect.<br>**Applicable version:** 12 - 22 |
 | [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function testGetPhotoRotation(photoOutput: camera.PhotoOutput, deviceDegree : number): camera.ImageRotation {
-  let photoRotation: camera.ImageRotation = camera.ImageRotation.ROTATION_0;
-  try {
-    photoRotation = photoOutput.getPhotoRotation(deviceDegree);
-    console.info(`Photo rotation is: ${photoRotation}`);
-  } catch (error) {
-    // If the operation fails, error.code is returned and processed.
-    let err = error as BusinessError;
-    console.error(`The photoOutput.getPhotoRotation call failed. error code: ${err.code}`);
-  }
-  return photoRotation;
-}
-
-function testGetPhotoRotationWithOutParam(photoOutput: camera.PhotoOutput): camera.ImageRotation {
-  let photoRotation: camera.ImageRotation = camera.ImageRotation.ROTATION_0;
-  try {
-    photoRotation = photoOutput.getPhotoRotation();
-    console.info(`Photo rotation is: ${photoRotation}`);
-  } catch (error) {
-    // If the operation fails, error.code is returned and processed.
-    let err = error as BusinessError;
-    console.error(`The photoOutput.testGetPhotoRotationWithOutParam call failed. error code: ${err.code}`);
-  }
-  return photoRotation;
-}
-```
-
 ## getSupportedMovingPhotoVideoCodecTypes
 
 ```TypeScript
@@ -525,15 +313,6 @@ Obtains the supported video codec types of moving photos.
 | --- | --- |
 | [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
 
-**Examples**
-
-```TypeScript
-function getSupportedMovingPhotoVideoCodecType(photoOutput: camera.PhotoOutput): Array<camera.VideoCodecType> {
-  let supportedVideoCodecTypesArray: Array<camera.VideoCodecType> = photoOutput.getSupportedMovingPhotoVideoCodecTypes();
-  return supportedVideoCodecTypesArray;
-}
-```
-
 ## isAutoExtendedGainmapDeliverySupported
 
 ```TypeScript
@@ -556,25 +335,6 @@ Checks whether automatic extended gain map delivery is supported.
 | --- | --- |
 | boolean | Whether automatic extended gain map delivery is supported. The value **true** indicates it is supported, and the value **false** indicates it is not supported. |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { camera } from '@kit.CameraKit';
-
-function isAutoExtendedGainmapDeliverySupported(photoOutput: camera.PhotoOutput): boolean {
-  let isSupported: boolean = false;
-  try {
-    isSupported = photoOutput.isAutoExtendedGainmapDeliverySupported();
-  } catch (error) {
-    // If the operation fails, error.code is returned and processed.
-    let err = error as BusinessError;
-    console.error(`The isAutoExtendedGainmapDeliverySupported call failed. error code: ${err.code}`);
-  }
-  return isSupported;
-}
-```
-
 ## isMirrorSupported
 
 ```TypeScript
@@ -594,22 +354,6 @@ Checks whether mirror photography is supported.
 | Type | Description |
 | --- | --- |
 | boolean | Check result for the support of mirror photography. **true** if supported, **false** otherwise. If the API call fails, undefined is returned. |
-
-**Examples**
-
-```TypeScript
-function isMirrorSupported(photoOutput: camera.PhotoOutput): boolean {
-  let isSupported: boolean = photoOutput.isMirrorSupported();
-  return isSupported;
-}
-```
-
-```TypeScript
-function testIsMirrorSupported(videoOutput: camera.VideoOutput): boolean {
-  let isSupported: boolean = videoOutput.isMirrorSupported();
-  return isSupported;
-}
-```
 
 ## isMovingPhotoSupported
 
@@ -636,24 +380,6 @@ Checks whether taking moving photos is supported.
 | Error Code ID | Error Message |
 | --- | --- |
 | [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function isMovingPhotoSupported(photoOutput: camera.PhotoOutput): boolean {
-  let isSupported: boolean = false;
-  try {
-    isSupported = photoOutput.isMovingPhotoSupported();
-  } catch (error) {
-    // If the operation fails, error.code is returned and processed.
-    let err = error as BusinessError;
-    console.error(`The isMovingPhotoSupported call failed. error code: ${err.code}`);
-  }
-  return isSupported;
-}
-```
 
 ## isPhotoQualityPrioritizationSupported
 
@@ -686,26 +412,6 @@ Checks whether the specified photo quality prioritization strategy is supported.
 | Error Code ID | Error Message |
 | --- | --- |
 | [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error, reconfiguring streams is needed to recover from failure. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { camera } from '@kit.CameraKit';
-
-let photoOutput: camera.PhotoOutput;
-
-function isPhotoQualityPrioritizationSupported(qualityPrioritization: camera.PhotoQualityPrioritization): boolean {
-  let isSupported: boolean = false;
-  try {
-    isSupported = photoOutput.isPhotoQualityPrioritizationSupported(qualityPrioritization);
-  } catch (error) {
-    let err = error as BusinessError;
-    console.error(`The isPhotoQualityPrioritizationSupported call failed. error code: ${err.code}`);
-  }
-  return isSupported;
-}
-```
 
 ## off('photoAvailable')
 
@@ -747,7 +453,7 @@ Unsubscribes from photo asset available events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'photoAssetAvailable' | Yes | Event type. The value is fixed at **'photoAssetAvailable'**. The event can be listened for when a photoOutput instance is created. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;photoAccessHelper.PhotoAsset&gt; | No | Callback used for unsubscription. If this parameter is specified, the subscription to the specified event with the specified callback is canceled. (The callback object cannot be an anonymous function.) Otherwise, the subscriptions to the specified event with all the callbacks are canceled. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[photoAccessHelper.PhotoAsset](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoasset-i.md)&gt; | No | Callback used for unsubscription. If this parameter is specified, the subscription to the specified event with the specified callback is canceled. (The callback object cannot be an anonymous function.) Otherwise, the subscriptions to the specified event with all the callbacks are canceled. |
 
 ## off('captureStart')
 
@@ -945,21 +651,6 @@ Unsubscribes from the events of returning full-quality images and uncompressed i
 | --- | --- | --- | --- |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CapturePhoto](arkts-camera-camera-capturephoto-i.md)&gt; | No | Callback used to return the result. If this parameter is specified, the subscription to the specified event with the specified callback is canceled. (The callback object cannot be an anonymous function.) Otherwise, the subscriptions to the specified event with all the callbacks are canceled. |
 
-**Examples**
-
-```TypeScript
-import { camera } from '@kit.CameraKit';
-import { image } from '@kit.ImageKit';
-
-function callback(capturePhoto: camera.CapturePhoto): void {
-  let picture: image.Image | image.Picture = capturePhoto.main;
-}
-
-function unRegisterCapturePhotoOutputPhotoAvailable(photoOutput: camera.PhotoOutput): void {
-  photoOutput.offCapturePhotoAvailable(callback);
-}
-```
-
 ## on('photoAvailable')
 
 ```TypeScript
@@ -1008,7 +699,7 @@ Subscribes to photo asset available events. This API uses an asynchronous callba
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'photoAssetAvailable' | Yes | Event type. The value is fixed at **'photoAssetAvailable'**. The event can be listened for when a photoOutput instance is created. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;photoAccessHelper.PhotoAsset&gt; | Yes | Callback used to return the photo asset. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[photoAccessHelper.PhotoAsset](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoasset-i.md)&gt; | Yes | Callback used to return the photo asset. |
 
 ## on('captureStart')
 
@@ -1081,7 +772,7 @@ Subscribes to frame shutter events. This API uses an asynchronous callback to re
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'frameShutter' | Yes | Event type. The value is fixed at **'frameShutter'**. The event can be listened for when a photoOutput instance is created. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[FrameShutterInfo](arkts-camera-camera-frameshutterinfo-i.md)&gt; | Yes | Callback used to return the result. A new photo capture request can be delivered as number as this event is returned. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[FrameShutterInfo](arkts-camera-camera-frameshutterinfo-i.md)&gt; | Yes | Callback used to return the result. A new photo capture request can be delivered as long as this event is returned. |
 
 ## on('frameShutterEnd')
 
@@ -1238,21 +929,6 @@ Subscribes to the events of returning full-quality images and uncompressed image
 | --- | --- | --- | --- |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CapturePhoto](arkts-camera-camera-capturephoto-i.md)&gt; | Yes | Callback used to listen for the event of returning full-quality images and uncompressed images. |
 
-**Examples**
-
-```TypeScript
-import { camera } from '@kit.CameraKit';
-import { image } from '@kit.ImageKit';
-
-function callback(capturePhoto: camera.CapturePhoto): void {
-  let picture: image.Image | image.Picture = capturePhoto.main;
-}
-
-function registerCapturePhotoOutputPhotoAvailable(photoOutput: camera.PhotoOutput): void {
-  photoOutput.onCapturePhotoAvailable(callback);
-}
-```
-
 ## setMovingPhotoVideoCodecType
 
 ```TypeScript
@@ -1278,14 +954,6 @@ Sets a video codec type for moving photos.
 | Error Code ID | Error Message |
 | --- | --- |
 | [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
-
-**Examples**
-
-```TypeScript
-function setMovingPhotoVideoCodecTypes(photoOutput: camera.PhotoOutput, videoCodecType: camera.VideoCodecType): void {
-  photoOutput.setMovingPhotoVideoCodecType(videoCodecType);
-}
-```
 
 ## setPhotoQualityPrioritization
 
@@ -1315,21 +983,3 @@ Before setting the strategy, you can call [isPhotoQualityPrioritizationSupported
 | --- | --- |
 | [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error, reconfiguring streams is needed to recover from failure. |
 | [7400102](../errorcode-camera.md#7400102-invalid-operation) | Operation not allowed. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { camera } from '@kit.CameraKit';
-
-let photoOutput: camera.PhotoOutput;
-
-function setPhotoQualityPrioritization(qualityPrioritization: camera.PhotoQualityPrioritization): void {
-  try {
-    photoOutput.setPhotoQualityPrioritization(qualityPrioritization);
-  } catch (error) {
-    let err = error as BusinessError;
-    console.error(`The setPhotoQualityPrioritization call failed. error code: ${err.code}`);
-  }
-}
-```

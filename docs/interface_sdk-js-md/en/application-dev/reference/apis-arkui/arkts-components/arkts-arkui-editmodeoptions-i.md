@@ -33,7 +33,7 @@ Called to return whether to display the number badge or the number displayed on 
 enableGatherSelectedItemsAnimation?: boolean
 ```
 
-Define whether to gather selected items in grid or list when item is number pressed for context menu.
+Define whether to gather selected items in grid or list when item is long pressed for context menu.
 
 **Type:** boolean
 

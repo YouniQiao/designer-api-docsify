@@ -22,7 +22,7 @@ error: ErrorType
 
 上传的错误类型。
 
-**类型：** ErrorType
+**类型：** [ErrorType](arkts-corefile-cloudsync-errortype-e.md)
 
 **起始版本：** 26.0.0
 

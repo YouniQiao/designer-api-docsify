@@ -26,7 +26,7 @@ function setHotspotConfig(config: HotspotConfig): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| config | HotspotConfig | 是 | 热点配置信息。 |
+| config | [HotspotConfig](arkts-connectivity-wifimanager-hotspotconfig-i-sys.md) | 是 | 热点配置信息。 |
 
 **错误码：**
 

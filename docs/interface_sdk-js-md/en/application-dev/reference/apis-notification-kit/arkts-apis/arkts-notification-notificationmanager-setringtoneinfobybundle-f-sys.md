@@ -26,7 +26,7 @@ Sets the custom ringtone information for an application. This API uses a promise
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundle | BundleOption | Yes | Bundle information of the application. |
+| bundle | [BundleOption](arkts-notification-notificationmanager-bundleoption-t.md) | Yes | Bundle information of the application. |
 | ringtoneInfo | [RingtoneInfo](arkts-notification-notificationmanager-ringtoneinfo-i-sys.md) | Yes | Custom ringtone information. |
 
 **Return value:**

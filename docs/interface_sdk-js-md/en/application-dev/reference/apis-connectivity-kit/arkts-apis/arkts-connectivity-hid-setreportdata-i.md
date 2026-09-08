@@ -52,7 +52,7 @@ type: ReportType
 
 reportType of SET_REPORT data.
 
-**Type:** ReportType
+**Type:** [ReportType](arkts-connectivity-hid-reporttype-e.md)
 
 **Since:** 23
 

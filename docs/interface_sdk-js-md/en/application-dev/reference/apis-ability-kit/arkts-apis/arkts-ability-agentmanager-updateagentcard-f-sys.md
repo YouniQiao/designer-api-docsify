@@ -47,5 +47,5 @@ Updates the AgentCard within specified agent id.
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. Possible causes: 1.Connect to system service failed. 2.System service failed to communicate with dependency module. |
 | [18500001](../errorcode-ability.md#18500001-invalid-bundle-name) | The bundle does not exist or no patch has been applied. |
 | [35600001](../errorcode-ability.md#35600001-the-specified-agentid-does-not-exist) | The specified agentId does not exist. |
-| 35600004 | The specified AgentCard version is older than the current version. |
-| 35600005 | The specified AgentCard version is invalid. |
+| [35600004](../errorcode-ability.md#35600004-the-specified-agentcard-version-is-older-than-the-current-version) | The specified AgentCard version is older than the current version. |
+| [35600005](../errorcode-ability.md#35600005-the-specified-agentcard-version-is-invalid) | The specified AgentCard version is invalid. |

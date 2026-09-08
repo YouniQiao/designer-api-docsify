@@ -60,7 +60,7 @@ Layout direction.
 
 Default value: **Direction.Auto**
 
-**Type:** Direction
+**Type:** [Direction](arkts-arkui-direction-e.md)
 
 **Since:** 12
 
@@ -158,7 +158,7 @@ Whether to show the close button.
 
 Default value: **true**
 
-**Type:** boolean \| Resource
+**Type:** boolean \| [Resource](arkts-arkui-resource-t.md)
 
 **Since:** 11
 

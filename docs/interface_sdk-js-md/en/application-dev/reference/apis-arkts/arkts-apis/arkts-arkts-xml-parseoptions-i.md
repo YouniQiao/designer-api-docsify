@@ -86,7 +86,7 @@ Token value callback function.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| eventType | EventType | Yes |  |
+| eventType | [EventType](arkts-arkts-xml-eventtype-e.md) | Yes |  |
 | value | [ParseInfo](arkts-arkts-xml-parseinfo-i.md) | Yes |  |
 
 ## ignoreNameSpace

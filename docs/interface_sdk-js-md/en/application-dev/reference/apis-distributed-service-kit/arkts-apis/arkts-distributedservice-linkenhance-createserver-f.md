@@ -32,7 +32,7 @@ Creates a **Server** object. After **start()** is called, the device can be conn
 
 | Type | Description |
 | --- | --- |
-| Server | Server** object created. |
+| [Server](arkts-distributedservice-linkenhance-server-i.md) | Server** object created. |
 
 **Error codes:**
 

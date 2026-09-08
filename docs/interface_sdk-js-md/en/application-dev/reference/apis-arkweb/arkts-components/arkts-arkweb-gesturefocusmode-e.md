@@ -12,7 +12,7 @@ Enumerates the focus modes.
 DEFAULT = 0
 ```
 
-The **Web** component applies for the focus when it is touched, number-pressed, swiped, or zoomed.
+The **Web** component applies for the focus when it is touched, long-pressed, swiped, or zoomed.
 
 **Since:** 20
 
@@ -24,7 +24,7 @@ The **Web** component applies for the focus when it is touched, number-pressed, 
 GESTURE_TAP_AND_LONG_PRESS = 1
 ```
 
-The **Web** component applies for the focus only when it is touched and number-pressed. The swipe and zoom gestures do not apply for the focus.
+The **Web** component applies for the focus only when it is touched and long-pressed. The swipe and zoom gestures do not apply for the focus.
 
 **Since:** 20
 

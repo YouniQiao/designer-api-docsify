@@ -43,20 +43,6 @@ declare function close(file: number | File): Promise<void>
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let filePath = pathDir + "/test.txt";
-let file = fileIo.openSync(filePath);
-fileIo.close(file).then(() => {
-  console.info(`Succeeded in closing file.`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to close file. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
 
 ## close
 
@@ -89,19 +75,3 @@ declare function close(file: number | File, callback: AsyncCallback<void>): void
 | 13900025 | No space left on device |
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let filePath = pathDir + "/test.txt";
-let file = fileIo.openSync(filePath);
-fileIo.close(file, (err: BusinessError) => {
-  if (err) {
-    console.error(`Failed to close file. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info(`Succeeded in closing file.`);
-  }
-});
-```

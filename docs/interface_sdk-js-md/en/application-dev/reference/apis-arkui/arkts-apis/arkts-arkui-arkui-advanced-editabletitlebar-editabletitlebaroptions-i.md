@@ -22,7 +22,7 @@ Background blur style of the title bar.
 
 Default value: **BlurStyle.NONE**
 
-**Type:** BlurStyle
+**Type:** [BlurStyle](../arkts-components/arkts-arkui-blurstyle-e.md)
 
 **Since:** 12
 

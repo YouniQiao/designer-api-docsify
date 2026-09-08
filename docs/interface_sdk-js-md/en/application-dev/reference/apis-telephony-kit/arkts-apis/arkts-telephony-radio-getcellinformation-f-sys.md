@@ -27,7 +27,7 @@ Get the current cell information.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | slotId | number | Yes | Indicates the card slot index number, ranging from 0 to the maximum card slot index number supported by the device. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;CellInformation&gt;&gt; | Yes | Indicates the callback for getting cell information. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[CellInformation](arkts-telephony-radio-cellinformation-i.md)&gt;&gt; | Yes | Indicates the callback for getting cell information. |
 
 **Error codes:**
 
@@ -83,7 +83,7 @@ Get the current cell information.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;CellInformation&gt;&gt; | Returns the current cell information. |
+| Promise&lt;Array&lt;[CellInformation](arkts-telephony-radio-cellinformation-i.md)&gt;&gt; | Returns the current cell information. |
 
 **Error codes:**
 
@@ -131,7 +131,7 @@ Get the current cell information.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;CellInformation&gt;&gt; | Yes | Indicates the callback for getting cell information. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[CellInformation](arkts-telephony-radio-cellinformation-i.md)&gt;&gt; | Yes | Indicates the callback for getting cell information. |
 
 **Error codes:**
 

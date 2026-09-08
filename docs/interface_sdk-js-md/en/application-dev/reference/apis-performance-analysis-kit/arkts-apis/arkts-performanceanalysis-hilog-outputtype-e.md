@@ -2,7 +2,7 @@
 
 Enumerates output type of hilog.
 
-@enum { number }
+@enum { int }
 
 **Since:** 26.0.0
 

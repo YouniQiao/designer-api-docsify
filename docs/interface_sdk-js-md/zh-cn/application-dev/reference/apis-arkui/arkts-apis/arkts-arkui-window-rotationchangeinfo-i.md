@@ -36,7 +36,7 @@ displayRect: Rect
 
 窗口所在屏幕旋转后的矩形区域大小。
 
-**类型：** Rect
+**类型：** [Rect](arkts-arkui-window-rect-i.md)
 
 **起始版本：** 19
 

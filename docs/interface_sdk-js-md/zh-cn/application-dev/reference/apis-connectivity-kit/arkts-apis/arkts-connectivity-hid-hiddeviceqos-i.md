@@ -68,7 +68,7 @@ serviceType?: ServiceType
 
 服务类型，默认为SERVICE_BEST_EFFORT。
 
-**类型：** ServiceType
+**类型：** [ServiceType](arkts-connectivity-hid-servicetype-e.md)
 
 **起始版本：** 23
 

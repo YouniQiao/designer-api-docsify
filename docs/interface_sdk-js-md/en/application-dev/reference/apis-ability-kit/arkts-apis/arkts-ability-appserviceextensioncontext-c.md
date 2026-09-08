@@ -147,6 +147,7 @@ Disconnects this AppServiceExtensionAbility from a ServiceExtensionAbility. This
 **Examples**
 
 For details, see [connectServiceExtensionAbility](#connectserviceextensionability).
+- simpleType:
 
 ## startAbility
 
@@ -190,7 +191,7 @@ Starts the UIAbility. This API can be called only by the main thread. It uses a 
 | [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
 | [16000012](../errorcode-ability.md#16000012-application-under-control) | The application is controlled. |
 | [16000013](../errorcode-ability.md#16000013-application-controlled-by-edm) | The application is controlled by EDM. |
-| [16000019](../errorcode-ability.md#16000019-no-matching-ability-is-found-during-implicit-startup) | No matching ability is found. |
+| [16000019](../errorcode-ability.md#16000019-no-matching-ability-found-for-implicit-start) | No matching ability is found. |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 | [16000055](../errorcode-ability.md#16000055-installation-free-timeout) | Installation-free timed out. |
 | [16000071](../errorcode-ability.md#16000071-application-clone-is-not-supported) | App clone is not supported. |

@@ -49,24 +49,7 @@ declare function createWriteStream(path: string, options?: WriteStreamOptions): 
 | 13900024 | File too large |
 | 13900025 | No space left on device |
 | 13900027 | Read-only file system |
-| 13900030 | File name too number |
+| 13900030 | File name too long |
 | 13900038 | Value too large for defined data type |
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
-
-**示例**
-
-```TypeScript
-// 创建文件可读流
-const rs = fileIo.createReadStream(`${pathDir}/read.txt`);
-// 创建文件可写流
-const ws = fileIo.createWriteStream(`${pathDir}/write.txt`);
-// 暂停模式拷贝文件
-rs.on('readable', () => {
-  const data = rs.read();
-  if (!data) {
-    return;
-  }
-  ws.write(data);
-});
-```

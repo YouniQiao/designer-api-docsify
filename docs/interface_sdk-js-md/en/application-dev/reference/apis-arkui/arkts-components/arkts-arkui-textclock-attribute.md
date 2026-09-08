@@ -59,7 +59,7 @@ Sets whether to display a leading zero for the hour.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dateTimeOptions | [Optional](arkts-arkui-optional-t.md)&lt;DateTimeOptions&gt; | Yes | Whether to display leading zeros in the hour. It only supports setting the **hour** parameter. When the parameter value is **{hour: "2-digit"}**, a leading zero is displayed. When the parameter value is **{hour: "numeric"}**, no leading zero is displayed.Default value: **undefined**. By default, leading zeros are displayed in 24-hour format, but not displayed in 12-hour format. |
+| dateTimeOptions | [Optional](arkts-arkui-optional-t.md)&lt;[DateTimeOptions](arkts-arkui-datetimeoptions-t.md)&gt; | Yes | Whether to display leading zeros in the hour. It only supports setting the **hour** parameter. When the parameter value is **{hour: "2-digit"}**, a leading zero is displayed. When the parameter value is **{hour: "numeric"}**, no leading zero is displayed.Default value: **undefined**. By default, leading zeros are displayed in 24-hour format, but not displayed in 12-hour format. |
 
 ## fontColor
 
@@ -179,7 +179,7 @@ Sets the font style.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | FontStyle | Yes | Font style.Default value: **FontStyle.Normal**, indicating the standard font style (non-italic) |
+| value | [FontStyle](../arkts-apis/arkts-arkui-fontstyle-e.md) | Yes | Font style.Default value: **FontStyle.Normal**, indicating the standard font style (non-italic) |
 
 ## fontWeight
 
@@ -201,7 +201,7 @@ Sets the font weight of the text. If the value is too large, the text in differe
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number \| FontWeight \| string | Yes | Font width of the text. The value range of the number type is [100, 900]. The value interval is 100. A larger value indicates a wider font. If the value of the number type is not within the value range, the default value is **400**. For the string type, only strings that represent a number, for example, **"400"**, and the following enumerated values of **FontWeight** are supported: **"bold"**, **"bolder"**, **"lighter"**, **"regular"**, and **"medium"**.Default value: **FontWeight.Normal |
+| value | number \| [FontWeight](../arkts-apis/arkts-arkui-fontweight-e.md) \| string | Yes | Font width of the text. The value range of the number type is [100, 900]. The value interval is 100. A larger value indicates a wider font. If the value of the number type is not within the value range, the default value is **400**. For the string type, only strings that represent a number, for example, **"400"**, and the following enumerated values of **FontWeight** are supported: **"bold"**, **"bolder"**, **"lighter"**, **"regular"**, and **"medium"**.Default value: **FontWeight.Normal |
 
 ## format
 
@@ -274,7 +274,7 @@ The following table shows how different settings of **format** work out.
 | aa hh:mm | AM 5:00 |
 | hh:mm | 5:00 |
 | mm:ss | 00:04 |
-| mm:ss.SS | 00:04.91 |
+| [mm:ss.SS](../../apis-performance-analysis-kit/arkts-apis/arkts-performanceanalysis-hitracechain-hitracetracepointtype-e.md) | 00:04.91 |
 | mm:ss.SSS | 00:04.536 |
 | hh:mm:ss aa | 5:00:04 AM |
 | HH | 17 |

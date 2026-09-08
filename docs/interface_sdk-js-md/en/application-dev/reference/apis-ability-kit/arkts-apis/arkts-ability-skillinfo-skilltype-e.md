@@ -2,7 +2,7 @@
 
 Enumerates the skill types.
 
-@enum { number }
+@enum { int }
 
 **Since:** 26.0.0
 

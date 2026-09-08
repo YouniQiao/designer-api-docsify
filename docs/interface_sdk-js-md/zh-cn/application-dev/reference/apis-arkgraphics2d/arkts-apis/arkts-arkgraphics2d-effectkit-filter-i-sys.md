@@ -42,7 +42,7 @@ ellipticalGradientBlur(blurRadius: number, center: EllipticalMaskCenter,
 
 | 类型 | 说明 |
 | --- | --- |
-| Filter | 返回已添加的图像效果。 |
+| [Filter](arkts-arkgraphics2d-effectkit-filter-i.md) | 返回已添加的图像效果。 |
 
 **错误码：**
 

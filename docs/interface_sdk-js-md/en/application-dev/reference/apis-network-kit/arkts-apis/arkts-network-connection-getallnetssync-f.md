@@ -26,7 +26,7 @@ Obtains the list of all connected networks. This API returns the result synchron
 
 | Type | Description |
 | --- | --- |
-| Array&lt;NetHandle&gt; | List of all connected networks. |
+| Array&lt;[NetHandle](arkts-network-connection-nethandle-i.md)&gt; | List of all connected networks. |
 
 **Error codes:**
 

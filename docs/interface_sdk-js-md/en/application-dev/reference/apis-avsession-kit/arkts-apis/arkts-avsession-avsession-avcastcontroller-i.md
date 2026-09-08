@@ -36,24 +36,6 @@ Get the playback status of the current player
 | --- | --- |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 
-**Examples**
-
-```TypeScript
-avCastController.getAVPlaybackState((state: avSession.AVPlaybackState) => {
-  console.info('Succeeded in getting AV playback state.');
-});
-```
-
-```TypeScript
-avcontroller.getAVPlaybackState((err: BusinessError, state: avSession.AVPlaybackState) => {
-  if (err) {
-    console.error(`Failed to get AV playback state, code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in getting AV playback state.');
-});
-```
-
 ## getAVPlaybackState
 
 ```TypeScript
@@ -80,20 +62,6 @@ Get the playback status of the current player
 | --- | --- |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 
-**Examples**
-
-```TypeScript
-avCastController.getAVPlaybackState().then((state: avSession.AVPlaybackState) => {
-  console.info('Succeeded in getting AV playback state.');
-});
-```
-
-```TypeScript
-avcontroller.getAVPlaybackState().then((state: avSession.AVPlaybackState) => {
-  console.info('Succeeded in getting AV playback state.');
-});
-```
-
 ## getCurrentItem
 
 ```TypeScript
@@ -117,14 +85,6 @@ Get the current playing item
 | Error Code ID | Error Message |
 | --- | --- |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
-
-**Examples**
-
-```TypeScript
-avCastController.getCurrentItem((value: avSession.AVQueueItem) => {
-  console.info('Succeeded in getting current item.');
-});
-```
 
 ## getCurrentItem
 
@@ -151,14 +111,6 @@ Get the current playing item
 | Error Code ID | Error Message |
 | --- | --- |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
-
-**Examples**
-
-```TypeScript
-avCastController.getCurrentItem().then((value: avSession.AVQueueItem) => {
-  console.info('Succeeded in getting current item.');
-});
-```
 
 ## getRecommendedResolutionLevel
 
@@ -192,15 +144,6 @@ Get recommended resolution of remote player based on each decoder.
 | --- | --- |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 
-**Examples**
-
-```TypeScript
-let decoderType = avSession.DecoderType.OH_AVCODEC_MIMETYPE_VIDEO_AVC;
-avCastController.getRecommendedResolutionLevel(decoderType).then((resolutionLevel: avSession.ResolutionLevel) => {
-  console.info('Succeeded in getting recommended resolution level.');
-});
-```
-
 ## getSupportedDecoders
 
 ```TypeScript
@@ -227,17 +170,6 @@ Get supported decoders of remote player.
 | --- | --- |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 
-**Examples**
-
-```TypeScript
-avCastController.getSupportedDecoders().then((decoderTypes: avSession.DecoderType[]) => {
-  console.info(`Succeeded in getting supported decoders, length: ${decoderTypes.length}`);
-  if (decoderTypes.length > 0 ) {
-    console.info(`Succeeded in getting supported decoder: ${decoderTypes[0]}`);
-  }
-});
-```
-
 ## getSupportedHdrCapabilities
 
 ```TypeScript
@@ -256,26 +188,13 @@ Get supported hdr capabilities of remote player.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;hdrCapability.HDRFormat&gt;&gt; | HDRFormat returned through promise |
+| Promise&lt;Array&lt;[hdrCapability.HDRFormat](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-hdrcapability-hdrformat-e.md)&gt;&gt; | HDRFormat returned through promise |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
-
-**Examples**
-
-```TypeScript
-import type hdrCapability from './@ohos.graphics.hdrCapability';
-
-avCastController.getSupportedHdrCapabilities().then((hdrFormats: hdrCapability.HDRFormat[]) => {
-  console.info(`Succeeded in getting supported HDR capabilities, length: ${hdrFormats.length}`);
-  if (hdrFormats.length > 0 ) {
-    console.info(`Succeeded in getting supported HDR capability: ${hdrFormats[0]}`);
-  }
-});
-```
 
 ## getSupportedPlaySpeeds
 
@@ -303,23 +222,6 @@ Get supported speed of remote player.
 | --- | --- |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 
-**Examples**
-
-```TypeScript
-avCastController.getSupportedPlaySpeeds().then((nums: number[]) => {
-  console.info(`Succeeded in getting supported play speeds, length: ${nums.length}`);
-  if (nums.length > 0 ) {
-    console.info(`Succeeded in getting supported play speed: ${nums[0]}`);
-  }
-});
-```
-
-```TypeScript
-avcontroller.getSupportedPlaySpeeds().then((speeds: number[]) => {
-  console.info(`Succeeded in getting supported play speeds, size: ${speeds.length}`);
-});
-```
-
 ## getValidCommands
 
 ```TypeScript
@@ -344,14 +246,6 @@ Get commands supported by the current cast controller
 | --- | --- |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 
-**Examples**
-
-```TypeScript
-avCastController.getValidCommands((state: avSession.AVCastControlCommandType[]) => {
-  console.info('Succeeded in getting valid commands.');
-});
-```
-
 ## getValidCommands
 
 ```TypeScript
@@ -375,14 +269,6 @@ Get commands supported by the current cast controller
 | Error Code ID | Error Message |
 | --- | --- |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
-
-**Examples**
-
-```TypeScript
-avCastController.getValidCommands().then((state: avSession.AVCastControlCommandType[]) => {
-  console.info('Succeeded in getting valid commands.');
-});
-```
 
 ## off('playbackStateChange')
 
@@ -1468,32 +1354,6 @@ Load the current item and mediaUri can be null, this is needed for sink media in
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600109](../errorcode-avsession.md#6600109-remote-session-does-not-exist) | The remote connection is not established. |
 
-**Examples**
-
-```TypeScript
-// Set playback parameters.
-let playItem: avSession.AVQueueItem = {
-  itemId: 0,
-  description: {
-    assetId: '12345',
-    mediaType: 'AUDIO',
-    mediaUri: 'http://resource1_address',
-    mediaSize: 12345,
-    startPosition: 0,
-    duration: 0,
-    artist: 'mysong',
-    albumTitle: 'song1_title',
-    albumCoverUri: "http://resource1_album_address",
-    lyricUri: "http://resource1_lyric_address",
-    appName: 'MyMusic'
-  }
-};
-// Prepare for playback. This operation triggers loading and buffering, but not the actual playback.
-avCastController.prepare(playItem, () => {
-  console.info('Succeeded in preparing.');
-});
-```
-
 ## prepare
 
 ```TypeScript
@@ -1527,32 +1387,6 @@ Load the current item and mediaUri can be null, this is needed for sink media in
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600109](../errorcode-avsession.md#6600109-remote-session-does-not-exist) | The remote connection is not established. |
-
-**Examples**
-
-```TypeScript
-// Set playback parameters.
-let playItem: avSession.AVQueueItem = {
-  itemId: 0,
-  description: {
-    assetId: '12345',
-    mediaType: 'AUDIO',
-    mediaUri: 'http://resource1_address',
-    mediaSize: 12345,
-    startPosition: 0,
-    duration: 0,
-    artist: 'mysong',
-    albumTitle: 'song1_title',
-    albumCoverUri: "http://resource1_album_address",
-    lyricUri: "http://resource1_lyric_address",
-    appName: 'MyMusic'
-  }
-};
-// Prepare for playback. This operation triggers loading and buffering, but not the actual playback.
-avCastController.prepare(playItem).then(() => {
-  console.info('Succeeded in preparing.');
-});
-```
 
 ## processMediaKeyResponse
 
@@ -1588,19 +1422,6 @@ Process the response corresponding to the media key request obtained by the appl
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 
-**Examples**
-
-```TypeScript
-let keyRequestCallback: avSession.KeyRequestCallback = async(assetId: string, requestData: Uint8Array) => {
-  // Obtain the DRM URL based on the asset ID.
-  let drmUrl = 'http://license.xxx.xxx.com:8080/drmproxy/getLicense';
-  // Obtain a media key from the server. Assign a value based on service requirements.
-  let licenseResponseData: Uint8Array = new Uint8Array();
-  console.info(`Succeeded in get license by ${drmUrl}.`);
-  avCastController.processMediaKeyResponse(assetId, licenseResponseData);
-}
-```
-
 ## release
 
 ```TypeScript
@@ -1624,14 +1445,6 @@ Destroy the controller
 | Error Code ID | Error Message |
 | --- | --- |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
-
-**Examples**
-
-```TypeScript
-avCastController.release(() => {
-  console.info('Succeeded in releasing.');
-});
-```
 
 ## release
 
@@ -1658,14 +1471,6 @@ Destroy the controller
 | Error Code ID | Error Message |
 | --- | --- |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
-
-**Examples**
-
-```TypeScript
-avCastController.release().then(() => {
-  console.info('Succeeded in releasing.');
-});
-```
 
 ## sendControlCommand
 
@@ -1694,15 +1499,6 @@ Send control commands to remote player
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600105](../errorcode-avsession.md#6600105-invalid-session-command) | Invalid session command. |
 | [6600109](../errorcode-avsession.md#6600109-remote-session-does-not-exist) | The remote connection is not established. |
-
-**Examples**
-
-```TypeScript
-let avCommand: avSession.AVCastControlCommand = {command:'play'};
-avCastController.sendControlCommand(avCommand, () => {
-  console.info('Succeeded in sending control command.');
-});
-```
 
 ## sendControlCommand
 
@@ -1739,15 +1535,6 @@ Send control commands to remote player
 | [6600105](../errorcode-avsession.md#6600105-invalid-session-command) | Invalid session command. |
 | [6600109](../errorcode-avsession.md#6600109-remote-session-does-not-exist) | The remote connection is not established. |
 
-**Examples**
-
-```TypeScript
-let avCommand: avSession.AVCastControlCommand = {command:'play'};
-avCastController.sendControlCommand(avCommand).then(() => {
-  console.info('Succeeded in sending control command.');
-});
-```
-
 ## sendCustomData
 
 ```TypeScript
@@ -1780,58 +1567,6 @@ Sends custom data to a remote device.
 | --- | --- |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. You are advised to:1.Scheduled retry.2.Destroy the current session or session controller and re-create it. |
 
-**Examples**
-
-```TypeScript
-avCastController.sendCustomData({customData : "This is custom data"});
-```
-
-```TypeScript
-currentAVSession.sendCustomData({customData : "This is custom data"}).then(() => {
-  console.info('Succeeded in sending custom data.');
-});
-```
-
-```TypeScript
-// Index.ets
-import { avSession } from '@kit.AVSessionKit';
-
-@Entry
-@Component
-struct Index {
-  private tag: string = "createNewSession";
-  private sessionId: string = "";
-  private controller: avSession.AVSessionController | undefined = undefined;
-  private currentAVSession?: avSession.AVSession;
-  context = this.getUIContext();
-
-  aboutToAppear(): void {
-    avSession.createAVSession(this.getUIContext().getHostContext(), this.tag, "audio")
-      .then(async (data: avSession.AVSession) => {
-        this.currentAVSession = data;
-        this.sessionId = this.currentAVSession.sessionId;
-        this.controller = await this.currentAVSession.getController();
-        console.info(`Succeeded in creating AV session, sessionId: ${this.sessionId}`);
-      });
-
-    if (this.controller !== undefined) {
-      (this.controller as avSession.AVSessionController).sendCustomData({ customData: "This is my data" })
-    }
-  }
-
-  build() {
-    Column() {
-      Text('AVSession Demo')
-        .fontSize(20)
-        .margin(10)
-    }
-    .width('100%')
-    .height('100%')
-    .justifyContent(FlexAlign.Center)
-  }
-}
-```
-
 ## start
 
 ```TypeScript
@@ -1858,33 +1593,6 @@ Play the current item, should contain mediaUri otherwise the playback will fail.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600109](../errorcode-avsession.md#6600109-remote-session-does-not-exist) | The remote connection is not established. |
-
-**Examples**
-
-```TypeScript
-// Set playback parameters.
-let playItem: avSession.AVQueueItem = {
-  itemId: 0,
-  description: {
-    assetId: '12345',
-    mediaType: 'AUDIO',
-    mediaUri: 'http://resource1_address',
-    mediaSize: 12345,
-    startPosition: 0,
-    duration: 0,
-    artist: 'mysong',
-    albumTitle: 'song1_title',
-    albumCoverUri: "http://resource1_album_address",
-    lyricUri: "http://resource1_lyric_address",
-    appName: 'MyMusic'
-  }
-};
-
-// Start playback.
-avCastController.start(playItem, () => {
-  console.info('Succeeded in starting.');
-});
-```
 
 ## start
 
@@ -1919,29 +1627,3 @@ Play the current item, should contain mediaUri otherwise the playback will fail.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600109](../errorcode-avsession.md#6600109-remote-session-does-not-exist) | The remote connection is not established. |
-
-**Examples**
-
-```TypeScript
-// Set playback parameters.
-let playItem: avSession.AVQueueItem = {
-  itemId: 0,
-  description: {
-    assetId: '12345',
-    mediaType: 'AUDIO',
-    mediaUri: 'http://resource1_address',
-    mediaSize: 12345,
-    startPosition: 0,
-    duration: 0,
-    artist: 'mysong',
-    albumTitle: 'song1_title',
-    albumCoverUri: "http://resource1_album_address",
-    lyricUri: "http://resource1_lyric_address",
-    appName: 'MyMusic'
-  }
-};
-// Start playback.
-avCastController.start(playItem).then(() => {
-  console.info('Succeeded in starting.');
-});
-```

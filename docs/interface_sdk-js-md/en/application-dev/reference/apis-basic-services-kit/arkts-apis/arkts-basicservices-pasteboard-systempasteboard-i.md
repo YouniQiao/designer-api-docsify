@@ -210,13 +210,13 @@ Detects [patterns](arkts-basicservices-pasteboard-pattern-e.md) in the system pa
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| patterns | Array&lt;Pattern&gt; | Yes | Pattern to be detected in the system pasteboard. |
+| patterns | Array&lt;[Pattern](arkts-basicservices-pasteboard-pattern-e.md)&gt; | Yes | Pattern to be detected in the system pasteboard. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;Pattern&gt;&gt; | Promise used to return the detected patterns. |
+| Promise&lt;Array&lt;[Pattern](arkts-basicservices-pasteboard-pattern-e.md)&gt;&gt; | Promise used to return the detected patterns. |
 
 **Error codes:**
 
@@ -489,7 +489,7 @@ While most applications must [request permissions to access the pasteboard](../.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| params | GetDataParams | Yes | Parameters required when an application obtains the Data from the system pasteboard, including the destination path, file conflict options, and progress indicator types. |
+| params | [GetDataParams](arkts-basicservices-pasteboard-getdataparams-i.md) | Yes | Parameters required when an application obtains the Data from the system pasteboard, including the destination path, file conflict options, and progress indicator types. |
 
 **Return value:**
 
@@ -690,7 +690,7 @@ While most applications must [request permissions to access the pasteboard](../.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;unifiedDataChannel.UnifiedData&gt; | Promise used to return the system PasteData. |
+| Promise&lt;[unifiedDataChannel.UnifiedData](../../apis-arkdata/arkts-apis/arkts-arkdata-unifieddatachannel-unifieddata-c.md)&gt; | Promise used to return the system PasteData. |
 
 **Error codes:**
 
@@ -741,7 +741,7 @@ While most applications must [request permissions to access the pasteboard](../.
 
 | Type | Description |
 | --- | --- |
-| unifiedDataChannel.UnifiedData | Data in the system pasteboard. |
+| [unifiedDataChannel.UnifiedData](../../apis-arkdata/arkts-apis/arkts-arkdata-unifieddatachannel-unifieddata-c.md) | Data in the system pasteboard. |
 
 **Error codes:**
 
@@ -1516,7 +1516,7 @@ Writes a **PasteData** object to the system pasteboard. This API uses a promise 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | unifiedDataChannel.UnifiedData | Yes | Data to be written to the pasteboard. |
+| data | [unifiedDataChannel.UnifiedData](../../apis-arkdata/arkts-apis/arkts-arkdata-unifieddatachannel-unifieddata-c.md) | Yes | Data to be written to the pasteboard. |
 
 **Return value:**
 
@@ -1577,7 +1577,7 @@ Writes data to the system pasteboard. This API returns the result synchronously.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | unifiedDataChannel.UnifiedData | Yes | Data to be written to the pasteboard. |
+| data | [unifiedDataChannel.UnifiedData](../../apis-arkdata/arkts-apis/arkts-arkdata-unifieddatachannel-unifieddata-c.md) | Yes | Data to be written to the pasteboard. |
 
 **Error codes:**
 

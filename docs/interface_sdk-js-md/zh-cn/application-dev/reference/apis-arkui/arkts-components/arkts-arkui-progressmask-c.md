@@ -35,19 +35,6 @@ constructor(value: number, total: number, color: ResourceColor)
 | total | number | 是 | 进度遮罩的最大值。取值范围：[0.0, +∞)。传入负数时自动修正为100。 |
 | color | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | 是 | 进度遮罩的颜色。 |
 
-**示例**
-
-```TypeScript
-@Builder
-function myBuilder(value: string, size: number) {
-  Text(value)
-    .fontSize(size)
-}
-
-// 使用WrappedBuilder封装myBuilder
-let builderVar: WrappedBuilder<[string, number]> = new WrappedBuilder<[string, number]>(myBuilder);
-```
-
 ## enableBreathingAnimation
 
 ```TypeScript

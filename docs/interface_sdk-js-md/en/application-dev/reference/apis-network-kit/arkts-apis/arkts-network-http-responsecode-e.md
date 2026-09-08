@@ -390,7 +390,7 @@ ENTITY_TOO_LARGE = 413
 REQ_TOO_LONG = 414
 ```
 
-"Request-URI Too Long." The Request-URI is too number for the server to process.
+"Request-URI Too Long." The Request-URI is too long for the server to process.
 
 **Since:** 6
 

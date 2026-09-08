@@ -28,7 +28,7 @@ state of a device.
 
 For details, see [Principles for Classifying Biometric Authentication Trust Levels](../../../security/UserAuthenticationKit/user-authentication-overview.md#principles-for-classifying-biometric-authentication-trust-levels).
 
-**Type:** AuthTrustLevel
+**Type:** [AuthTrustLevel](arkts-userauthentication-userauth-authtrustlevel-e.md)
 
 **Since:** 10
 

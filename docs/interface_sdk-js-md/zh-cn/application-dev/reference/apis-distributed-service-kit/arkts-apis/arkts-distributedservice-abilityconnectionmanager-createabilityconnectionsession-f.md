@@ -30,7 +30,7 @@ function createAbilityConnectionSession(serviceName: string, context: Context, p
 | serviceName | string | 是 | 应用设置的服务名称（两端必须一致），最大长度为256字符。 |
 | context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | 是 | 表示应用上下文。 |
 | peerInfo | [PeerInfo](arkts-distributedservice-abilityconnectionmanager-peerinfo-i.md) | 是 | 对端的协同信息。 |
-| connectOptions | ConnectOptions | 是 | 应用设置的连接选项。 |
+| connectOptions | [ConnectOptions](arkts-distributedservice-abilityconnectionmanager-connectoptions-i.md) | 是 | 应用设置的连接选项。 |
 
 **返回值：**
 

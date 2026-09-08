@@ -22,7 +22,7 @@ businessType: BusinessType
 
 Indicates the type of business ability info
 
-**Type:** BusinessType
+**Type:** [BusinessType](arkts-ability-businessabilityrouter-businesstype-e-sys.md)
 
 **Since:** 10
 

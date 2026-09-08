@@ -12,7 +12,7 @@ import { serialManager } from '@kit.BasicServicesKit';
 function writeSync(portId: number, buffer: Uint8Array, timeout?: number): number
 ```
 
-Writes data to the serial port device synchronously. The length of data written each time cannot exceed 4 KB; otherwise, data loss may occur. You are advised to write number data in multiple packets.
+Writes data to the serial port device synchronously. The length of data written each time cannot exceed 4 KB; otherwise, data loss may occur. You are advised to write long data in multiple packets.
 
 **Since:** 19
 
@@ -46,6 +46,8 @@ Writes data to the serial port device synchronously. The length of data written 
 **Examples**
 
 > NOTE
+> 
+> The following sample code shows the basic process for calling the writeSync API and it needs to be executed in a specific method. In actual calling, you must comply with the device-related protocols.
 
 ```TypeScript
 import { JSON } from '@kit.ArkTS';

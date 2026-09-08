@@ -17,14 +17,3 @@ function that returns backup datasize by bundleName.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | reportInfo | string | Yes | the scanned backup datasize infos. |
-
-**Examples**
-
-```TypeScript
-import { backup } from '@kit.CoreFileKit';
-
-onBackupSizeReport: (OnBackupSizeReport: backup.OnBackupSizeReport) => {
-  console.info('dataSizeCallback success');
-  console.info('dataSizeCallback report : ' + OnBackupSizeReport);
-}
-```

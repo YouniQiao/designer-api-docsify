@@ -28,7 +28,7 @@ Obtains the information about all sensors on the device.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;Sensor&gt; | Sensor attribute list. |
+| Array&lt;[Sensor](arkts-sensorservice-sensor-sensor-i.md)&gt; | Sensor attribute list. |
 
 **Examples**
 

@@ -34,7 +34,7 @@ reminderReq: ReminderRequest
 
 Request used for publishing the reminder.
 
-**Type:** ReminderRequest
+**Type:** [ReminderRequest](arkts-backgroundtasks-reminderagentmanager-reminderrequest-i.md)
 
 **Since:** 12
 

@@ -29,8 +29,8 @@ Sets the role types supported by a specified port, which can be **powerRole** (f
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | portId | number | Yes | Port number. |
-| powerRole | PowerRoleType | Yes | Role for charging. |
-| dataRole | DataRoleType | Yes | Role for data transfer. |
+| powerRole | [PowerRoleType](arkts-basicservices-usb-powerroletype-e-sys.md) | Yes | Role for charging. |
+| dataRole | [DataRoleType](arkts-basicservices-usb-dataroletype-e-sys.md) | Yes | Role for data transfer. |
 
 **Return value:**
 

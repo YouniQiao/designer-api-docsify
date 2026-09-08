@@ -36,13 +36,13 @@ createPixelMap(options?: image.DecodingOptions): Promise<PixelMap>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | image.DecodingOptions | 否 | 解码参数。 |
+| options | [image.DecodingOptions](arkts-image-image-decodingoptions-i.md) | 否 | 解码参数。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;PixelMap&gt; | Promise实例，用于异步返回创建结果。 |
+| Promise&lt;[PixelMap](arkts-image-sendableimage-pixelmap-i.md)&gt; | Promise实例，用于异步返回创建结果。 |
 
 **示例**
 
@@ -86,18 +86,6 @@ release(): Promise<void>
 **示例**
 
 ```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function release(pixelMap: sendableImage.PixelMap) {
-  pixelMap.release().then(() => {
-    console.info('Succeeded in releasing the PixelMap object.');
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to release the PixelMap object. Code: ${err.code}, message: ${err.message}`);
-  });
-}
-```
-
-```TypeScript
 import { sendableImage } from '@kit.ImageKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
@@ -108,45 +96,6 @@ async function Release(context : Context) {
     console.info('Succeeded in releasing the image source instance.');
   }).catch((error: BusinessError) => {
     console.error(`Failed to release the image source instance. code ${error.code}, message is ${error.message}`);
-  })
-}
-```
-
-```TypeScript
-import { sendableImage } from '@kit.ImageKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { image } from '@kit.ImageKit';
-
-async function Release() {
-  let size: image.Size = {
-    height: 8192,
-    width: 8
-  }
-  let receiver: sendableImage.ImageReceiver = sendableImage.createImageReceiver(size, image.ImageFormat.JPEG, 8);
-  let img = await receiver.readNextImage();
-  img.release().then(() => {
-    console.info('Succeeded in releasing an image.');
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to release an image. Code: ${error.code}, message: ${error.message}.`);
-  })
-}
-```
-
-```TypeScript
-import { sendableImage } from '@kit.ImageKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { image } from '@kit.ImageKit';
-
-async function Release() {
-  let size: image.Size = {
-    height: 8192,
-    width: 8
-  }
-  let receiver: sendableImage.ImageReceiver = sendableImage.createImageReceiver(size, image.ImageFormat.JPEG, 8);
-  receiver.release().then(() => {
-    console.info('Succeeded in releasing an image receiver.');
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to release an image receiver. Code: ${error.code}, message: ${error.message}.`);
   })
 }
 ```

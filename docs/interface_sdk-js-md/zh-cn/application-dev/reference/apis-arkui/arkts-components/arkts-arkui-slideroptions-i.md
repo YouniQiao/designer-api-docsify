@@ -21,7 +21,7 @@ direction?: Axis
 
 默认值：Axis.Horizontal
 
-**类型：** Axis
+**类型：** [Axis](../arkts-apis/arkts-arkui-axis-e.md)
 
 **默认值：** Axis.Horizontal [since 11]
 

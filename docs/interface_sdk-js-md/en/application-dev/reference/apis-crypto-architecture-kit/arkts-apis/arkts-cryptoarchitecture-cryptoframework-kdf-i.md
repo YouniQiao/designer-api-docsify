@@ -35,7 +35,7 @@ Generates a key based on the specified key derivation parameters. This API uses 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | params | [KdfSpec](arkts-cryptoarchitecture-cryptoframework-kdfspec-i.md) | Yes | Parameters of the key derivation function. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DataBlob&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the derived key obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the derived key obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -118,7 +118,7 @@ Generates a key based on the specified key derivation parameters. This API uses 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;DataBlob&gt; | Promise used to return the derived key. |
+| Promise&lt;[DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md)&gt; | Promise used to return the derived key. |
 
 **Error codes:**
 
@@ -183,7 +183,7 @@ generateSecretSync(params: KdfSpec): DataBlob
 
 Generates a key based on the specified key derivation parameters. This API returns the result synchronously.
 
-**NOTE：**It is recommended to prioritize the use of asynchronous API, generateSecret. Synchronous API may take a number time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
+**NOTE：**It is recommended to prioritize the use of asynchronous API, generateSecret. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
 **Since:** 12
 
@@ -201,7 +201,7 @@ Generates a key based on the specified key derivation parameters. This API retur
 
 | Type | Description |
 | --- | --- |
-| DataBlob | The derived key. |
+| [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | The derived key. |
 
 **Error codes:**
 

@@ -19,7 +19,7 @@ onClick?: Callback<ClickEvent>
 
 Callback for click events.
 
-**Type:** Callback&lt;[ClickEvent](../arkts-components/arkts-arkui-clickevent-i.md)&gt;
+**Type:** [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;[ClickEvent](../arkts-components/arkts-arkui-clickevent-i.md)&gt;
 
 **Since:** 12
 
@@ -35,9 +35,9 @@ Callback for click events.
 onLongPress?: Callback<GestureEvent>
 ```
 
-Callback for number press events.
+Callback for long press events.
 
-**Type:** Callback&lt;[GestureEvent](arkts-arkui-gestureevent-i.md)&gt;
+**Type:** [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;[GestureEvent](arkts-arkui-gestureevent-i.md)&gt;
 
 **Since:** 12
 
@@ -55,7 +55,7 @@ onTouch?: Callback<TouchEvent>
 
 Callback for touch events.
 
-**Type:** Callback&lt;TouchEvent&gt;
+**Type:** [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;[TouchEvent](../arkts-components/arkts-arkui-touchevent-i.md)&gt;
 
 **Since:** 20
 

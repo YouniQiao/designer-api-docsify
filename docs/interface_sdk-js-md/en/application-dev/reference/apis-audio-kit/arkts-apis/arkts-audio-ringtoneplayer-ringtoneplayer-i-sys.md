@@ -111,7 +111,7 @@ Obtains the information about the audio renderer used by the ringtone. This API 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;audio.AudioRendererInfo&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the renderer information obtained; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[audio.AudioRendererInfo](arkts-audio-audio-audiorendererinfo-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the renderer information obtained; otherwise, **err** is an error object. |
 
 **Examples**
 
@@ -149,7 +149,7 @@ Obtains the information about the audio renderer used by the ringtone. This API 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;audio.AudioRendererInfo&gt; | Promise used to return the renderer information. |
+| Promise&lt;[audio.AudioRendererInfo](arkts-audio-audio-audiorendererinfo-i.md)&gt; | Promise used to return the renderer information. |
 
 **Examples**
 
@@ -285,7 +285,7 @@ Subscribes to the audio interruption event, which is triggered when the audio fo
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'audioInterrupt' | Yes | Event type. The event **'audioInterrupt'** is triggered when the audio focus is changed. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;audio.InterruptEvent&gt; | Yes | Callback used to return the event information. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[audio.InterruptEvent](arkts-audio-audio-interruptevent-i.md)&gt; | Yes | Callback used to return the event information. |
 
 **Error codes:**
 
@@ -550,7 +550,7 @@ readonly state: media.AVPlayerState
 
 Gets player state.
 
-**Type:** media.AVPlayerState
+**Type:** [media.AVPlayerState](../../apis-media-kit/arkts-apis/arkts-media-media-avplayerstate-t.md)
 
 **Since:** 10
 

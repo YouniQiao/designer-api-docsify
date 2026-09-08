@@ -33,20 +33,6 @@ Obtains a list of all files with the specified names, in ascending order of prio
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:  1.Mandatory parameters are left unspecified;  2.Incorrect parameter types. |
 
-**Examples**
-
-```TypeScript
-import { configPolicy, BusinessError } from '@kit.BasicServicesKit';
-
-configPolicy.getCfgFiles('etc/config.xml', (err: BusinessError, data: Array<string>) => {
-  if (err == null) {
-    console.info('data is ' + data);
-  } else {
-    console.error('err: ' + err.code + ', ' + err.message);
-  }
-});
-```
-
 
 ## getCfgFiles
 
@@ -75,22 +61,6 @@ Obtains a list of all files of a specified file name based on the provided follo
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:  1.Mandatory parameters are left unspecified;  2.Incorrect parameter types. |
-
-**Examples**
-
-```TypeScript
-import { configPolicy, BusinessError } from '@kit.BasicServicesKit';
-
-let relpath: string = 'etc/config.xml';
-configPolicy.getCfgFiles(relpath, configPolicy.FollowXMode.SIM_DEFAULT,
-  (err: BusinessError, data: Array<string>) => {
-    if (err == null) {
-      console.info('data is ' + data);
-    } else {
-      console.error('err: ' + err.code + ', ' + err.message);
-    }
-  });
-```
 
 
 ## getCfgFiles
@@ -121,23 +91,6 @@ Obtains a list of all files of a specified file name based on the provided follo
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:  1.Mandatory parameters are left unspecified;  2.Incorrect parameter types. |
-
-**Examples**
-
-```TypeScript
-import { configPolicy, BusinessError } from '@kit.BasicServicesKit';
-
-let relpath: string = 'etc/config.xml';
-let extra: string = 'etc/carrier/${telephony.sim.opkey0}';
-configPolicy.getCfgFiles(relpath, configPolicy.FollowXMode.SIM_DEFAULT, extra,
-  (err: BusinessError, data: Array<string>) => {
-    if (err == null) {
-      console.info('data is ' + data);
-    } else {
-      console.error('err: ' + err.code + ', ' + err.message);
-    }
-  });
-```
 
 
 ## getCfgFiles
@@ -171,26 +124,6 @@ Obtains a list of all files with the specified names, in ascending order of prio
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:  1.Mandatory parameters are left unspecified;  2.Incorrect parameter types. |
-
-**Examples**
-
-```TypeScript
-import { configPolicy, BusinessError } from '@kit.BasicServicesKit';
-
-async function fetchCfgFiles() {
-  try {
-    let relpath: string = 'etc/config.xml';
-    let value: Array<string> = await configPolicy.getCfgFiles(relpath);
-    console.info('value is ' + value);
-  } catch (error) {
-    let code = (error as BusinessError).code;
-    let message = (error as BusinessError).message;
-    console.error('error:' + code + ', ' + message);
-  }
-}
-
-fetchCfgFiles();
-```
 
 
 ## getCfgFiles
@@ -226,24 +159,3 @@ Obtains a list of all files of a specified file name based on the provided follo
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:  1.Mandatory parameters are left unspecified;  2.Incorrect parameter types;  3.Parameter verification failed. |
-
-**Examples**
-
-```TypeScript
-import { configPolicy, BusinessError } from '@kit.BasicServicesKit';
-
-async function fetchCfgFiles() {
-  try {
-    let relpath: string = 'etc/config.xml';
-    let extra: string = 'etc/carrier/${telephony.sim.opkey0}';
-    let value: Array<string> = await configPolicy.getCfgFiles(relpath, configPolicy.FollowXMode.SIM_DEFAULT, extra);
-    console.info('value is ' + value);
-  } catch (error) {
-    let code = (error as BusinessError).code;
-    let message = (error as BusinessError).message;
-    console.error('error:' + code + ', ' + message);
-  }
-}
-
-fetchCfgFiles();
-```

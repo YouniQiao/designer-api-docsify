@@ -20,7 +20,7 @@ networkType: NetworkType
 
 Network type of the cell.
 
-**Type:** NetworkType
+**Type:** [NetworkType](arkts-telephony-radio-networktype-e.md)
 
 **Since:** 8
 
@@ -34,7 +34,7 @@ signalInformation: SignalInformation
 
 Signal information.
 
-**Type:** SignalInformation
+**Type:** [SignalInformation](arkts-telephony-radio-signalinformation-i.md)
 
 **Since:** 8
 

@@ -27,7 +27,7 @@ function on(type: 'error', observer: ErrorObserver): number
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'error' | 是 | 填写'error'，表示错误观测器。 |
-| observer | ErrorObserver | 是 | 错误观测器。 |
+| observer | [ErrorObserver](arkts-ability-errormanager-errorobserver-t.md) | 是 | 错误观测器。 |
 
 **返回值：**
 
@@ -94,7 +94,7 @@ function on(type: 'loopObserver', timeout: number, observer: LoopObserver): void
 | --- | --- | --- | --- |
 | type | 'loopObserver' | 是 | 填写'loopObserver'，表示注册主线程消息处理耗时监听器。 |
 | timeout | number | 是 | 表示事件执行阈值（单位：毫秒）。 阈值必须大于0。 单位为毫秒（ms）。 |
-| observer | LoopObserver | 是 | 注册主线程消息处理耗时监听器。 |
+| observer | [LoopObserver](arkts-ability-errormanager-loopobserver-t.md) | 是 | 注册主线程消息处理耗时监听器。 |
 
 **错误码：**
 

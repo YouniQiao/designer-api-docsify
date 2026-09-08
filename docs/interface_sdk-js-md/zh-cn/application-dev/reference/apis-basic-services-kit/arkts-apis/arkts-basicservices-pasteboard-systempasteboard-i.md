@@ -210,13 +210,13 @@ detectPatterns(patterns: Array<Pattern>): Promise<Array<Pattern>>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| patterns | Array&lt;Pattern&gt; | 是 | 需要在剪贴板中检测的模式，用于检查剪贴板数据是否符合特定格式。可选值包括：URL(URL类型)、NUMBER(数字类型)、EMAIL_ADDRESS(邮箱地址类型)等。取值范围：数组元素数量不限，元素值只能为Pattern枚举值。传入无效值时返回错误码401。 |
+| patterns | Array&lt;[Pattern](arkts-basicservices-pasteboard-pattern-e.md)&gt; | 是 | 需要在剪贴板中检测的模式，用于检查剪贴板数据是否符合特定格式。可选值包括：URL(URL类型)、NUMBER(数字类型)、EMAIL_ADDRESS(邮箱地址类型)等。取值范围：数组元素数量不限，元素值只能为Pattern枚举值。传入无效值时返回错误码401。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;Pattern&gt;&gt; | Promise对象，返回检测到的模式。 |
+| Promise&lt;Array&lt;[Pattern](arkts-basicservices-pasteboard-pattern-e.md)&gt;&gt; | Promise对象，返回检测到的模式。 |
 
 **错误码：**
 
@@ -487,7 +487,7 @@ getDataWithProgress(params: GetDataParams): Promise<PasteData>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| params | GetDataParams | 是 | 应用在使用剪贴板提供的文件拷贝能力的情况下需要的参数，包含目标路径、文件冲突选项、进度条类型等。 |
+| params | [GetDataParams](arkts-basicservices-pasteboard-getdataparams-i.md) | 是 | 应用在使用剪贴板提供的文件拷贝能力的情况下需要的参数，包含目标路径、文件冲突选项、进度条类型等。 |
 
 **返回值：**
 
@@ -688,7 +688,7 @@ getUnifiedData(): Promise<unifiedDataChannel.UnifiedData>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;unifiedDataChannel.UnifiedData&gt; | Promise对象，返回系统剪贴板数据。 |
+| Promise&lt;[unifiedDataChannel.UnifiedData](../../apis-arkdata/arkts-apis/arkts-arkdata-unifieddatachannel-unifieddata-c.md)&gt; | Promise对象，返回系统剪贴板数据。 |
 
 **错误码：**
 
@@ -739,7 +739,7 @@ getUnifiedDataSync(): unifiedDataChannel.UnifiedData
 
 | 类型 | 说明 |
 | --- | --- |
-| unifiedDataChannel.UnifiedData | 返回系统剪贴板数据。 |
+| [unifiedDataChannel.UnifiedData](../../apis-arkdata/arkts-apis/arkts-arkdata-unifieddatachannel-unifieddata-c.md) | 返回系统剪贴板数据。 |
 
 **错误码：**
 
@@ -1539,7 +1539,7 @@ setUnifiedData(data: unifiedDataChannel.UnifiedData): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| data | unifiedDataChannel.UnifiedData | 是 | 需要写入剪贴板中的数据。调用本接口前，需确保无其他拷贝或粘贴操作正在进行。 |
+| data | [unifiedDataChannel.UnifiedData](../../apis-arkdata/arkts-apis/arkts-arkdata-unifieddatachannel-unifieddata-c.md) | 是 | 需要写入剪贴板中的数据。调用本接口前，需确保无其他拷贝或粘贴操作正在进行。 |
 
 **返回值：**
 
@@ -1600,7 +1600,7 @@ setUnifiedDataSync(data: unifiedDataChannel.UnifiedData): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| data | unifiedDataChannel.UnifiedData | 是 | 需要写入剪贴板中的数据内容。支持跨应用数据交换，其他应用可通过统一数据结构读取该内容。 |
+| data | [unifiedDataChannel.UnifiedData](../../apis-arkdata/arkts-apis/arkts-arkdata-unifieddatachannel-unifieddata-c.md) | 是 | 需要写入剪贴板中的数据内容。支持跨应用数据交换，其他应用可通过统一数据结构读取该内容。 |
 
 **错误码：**
 

@@ -34,13 +34,13 @@ Obtains the component buffer from the Image instance based on the color componen
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| componentType | image.ComponentType | Yes | Color component type of the image. |
+| componentType | [image.ComponentType](arkts-image-image-componenttype-e.md) | Yes | Color component type of the image. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;image.Component&gt; | Promise used to return the component buffer. |
+| Promise&lt;[image.Component](arkts-image-image-component-i.md)&gt; | Promise used to return the component buffer. |
 
 **Examples**
 
@@ -91,36 +91,6 @@ Before releasing the instance, ensure that all asynchronous operations associate
 **Examples**
 
 ```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { sendableImage } from '@kit.ImageKit';
-
-async function Release(pixelMap: sendableImage.PixelMap) {
-  if (pixelMap != undefined) {
-    await pixelMap.release().then(() => {
-      console.info('Succeeded in releasing pixelmap object.');
-    }).catch((error: BusinessError) => {
-      console.error(`Failed to release pixelmap object. code is ${error.code}, message is ${error.message}`);
-    })
-  }
-}
-```
-
-```TypeScript
-import { sendableImage } from '@kit.ImageKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function Release(context : Context) {
-  const path: string = context.cacheDir + "/test.jpg";
-  const sendableImageSourceObj: sendableImage.ImageSource = sendableImage.createImageSource(path);
-  sendableImageSourceObj.release().then(() => {
-    console.info('Succeeded in releasing the image source instance.');
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to release the image source instance. code ${error.code}, message is ${error.message}`);
-  })
-}
-```
-
-```TypeScript
 import { sendableImage } from '@kit.ImageKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 import { image } from '@kit.ImageKit';
@@ -140,25 +110,6 @@ async function Release() {
 }
 ```
 
-```TypeScript
-import { sendableImage } from '@kit.ImageKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { image } from '@kit.ImageKit';
-
-async function Release() {
-  let size: image.Size = {
-    height: 8192,
-    width: 8
-  }
-  let receiver: sendableImage.ImageReceiver = sendableImage.createImageReceiver(size, image.ImageFormat.JPEG, 8);
-  receiver.release().then(() => {
-    console.info('Succeeded in releasing an image receiver.');
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to release an image receiver. Code: ${error.code}, message: ${error.message}.`);
-  })
-}
-```
-
 ## clipRect
 
 ```TypeScript
@@ -167,7 +118,7 @@ clipRect: Region
 
 Image area to be cropped.
 
-**Type:** Region
+**Type:** [Region](arkts-image-sendableimage-region-i.md)
 
 **Since:** 12
 

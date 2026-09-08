@@ -39,34 +39,6 @@ The constructor used to create a AVCastPickerHelper object.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 
-**Examples**
-
-```TypeScript
-import { avSession } from '@kit.AVSessionKit';
-
-@Entry
-@Component
-struct Index {
-  @State message: string = 'hello world';
-
-  build() {
-    Row() {
-      Column() {
-        Text(this.message)
-          .fontSize(40)
-          .fontWeight(FontWeight.Bold)
-          .onClick(() => {
-            let context = this.getUIContext().getHostContext() as Context;
-            let avCastPicker = new avSession.AVCastPickerHelper(context);
-          })
-      }
-      .width('100%')
-    }
-    .height('100%')
-  }
-}
-```
-
 ## off('pickerStateChange')
 
 ```TypeScript
@@ -143,20 +115,6 @@ Reset audio device to be default set by the platform which is used for communica
 | --- | --- |
 | Promise&lt;void&gt; | void promise when executed successfully |
 
-**Examples**
-
-```TypeScript
-import { common } from '@kit.AbilityKit';
-import { avSession } from '@kit.AVSessionKit';
-
-async function avCastPicker(context: common.Context) {
-  let avCastPicker = new avSession.AVCastPickerHelper(context);
-  avCastPicker.resetCommunicationDevice().then(() => {
-    console.info('Succeeded in resetting communication device.');
-  });
-}
-```
-
 ## select
 
 ```TypeScript
@@ -188,28 +146,3 @@ Pull up the avcastpicker based on the options.
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-
-**Examples**
-
-```TypeScript
-import { common } from '@kit.AbilityKit';
-import { avSession } from '@kit.AVSessionKit';
-
-class MyPage {
-  private avCastPicker: avSession.AVCastPickerHelper;
-
-  constructor(context: common.Context) {
-    this.avCastPicker = new avSession.AVCastPickerHelper(context);
-  }
-
-  async selectCastDevice() {
-    const avCastPickerOptions: avSession.AVCastPickerOptions = {
-      sessionType: 'video',
-    };
-
-this.avCastPicker.select(avCastPickerOptions).then(() => {
-  console.info('Succeeded in selecting.');
-});
-  }
-}
-```

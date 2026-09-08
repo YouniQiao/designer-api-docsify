@@ -23,7 +23,7 @@ function getCardType(slotId: number, callback: AsyncCallback<CardType>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | slotId | number | 是 | 卡槽ID。   - 0：卡槽1。   - 1：卡槽2。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;CardType&gt; | 是 | 回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[CardType](arkts-telephony-sim-cardtype-e.md)&gt; | 是 | 回调函数。 |
 
 **错误码：**
 
@@ -74,7 +74,7 @@ function getCardType(slotId: number): Promise<CardType>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;CardType&gt; | 以Promise形式返回指定卡槽SIM卡的卡类型。 |
+| Promise&lt;[CardType](arkts-telephony-sim-cardtype-e.md)&gt; | 以Promise形式返回指定卡槽SIM卡的卡类型。 |
 
 **错误码：**
 

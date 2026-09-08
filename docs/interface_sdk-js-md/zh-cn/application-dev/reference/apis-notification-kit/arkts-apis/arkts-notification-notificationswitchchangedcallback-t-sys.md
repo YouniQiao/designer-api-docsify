@@ -19,21 +19,3 @@ export type NotificationSwitchChangedCallback = (callbackData: NotificationSwitc
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | callbackData | [NotificationSwitchChangedCallbackData](arkts-notification-notificationsubscriber-notificationswitchchangedcallbackdata-i-sys.md) | 是 | 回调返回由[notificationManager.setNotificationSwitch]{ |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let subscriber: notificationSubscribe.NotificationSubscriber = {
-  onNotificationSwitchChanged: (callbackData: notificationSubscribe.NotificationSwitchChangedCallbackData) => {
-    console.info(`onNotificationSwitchChanged: ${JSON.stringify(callbackData)}`);
-  }
-};
-
-notificationSubscribe.subscribeNotification(subscriber).then(() => {
-  console.info('subscribeNotification success');
-}).catch((err: BusinessError) => {
-  console.error(`subscribeNotification failed, code is ${err.code}, message is ${err.message}`);
-});
-```

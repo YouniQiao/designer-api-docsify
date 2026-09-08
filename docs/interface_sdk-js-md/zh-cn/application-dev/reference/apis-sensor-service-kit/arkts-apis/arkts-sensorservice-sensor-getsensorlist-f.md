@@ -22,7 +22,7 @@ function getSensorList(callback: AsyncCallback<Array<Sensor>>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;Sensor&gt;&gt; | 是 | 回调函数，异步返回传感器属性列表。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[Sensor](arkts-sensorservice-sensor-sensor-i.md)&gt;&gt; | 是 | 回调函数，异步返回传感器属性列表。 |
 
 **错误码：**
 
@@ -71,7 +71,7 @@ function getSensorList(): Promise<Array<Sensor>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;Sensor&gt;&gt; | Promise对象，使用异步方式返回传感器属性列表。每个Sensor对象包含传感器的类型ID、名称、版本、厂商、最大范围、分辨率、功率等属性信息。 |
+| Promise&lt;Array&lt;[Sensor](arkts-sensorservice-sensor-sensor-i.md)&gt;&gt; | Promise对象，使用异步方式返回传感器属性列表。每个Sensor对象包含传感器的类型ID、名称、版本、厂商、最大范围、分辨率、功率等属性信息。 |
 
 **错误码：**
 

@@ -20,7 +20,7 @@ host?: NetAddress
 
 MDNS服务设备的IP地址。采用设备的IP，添加服务和移除服务时候不生效。
 
-**类型：** NetAddress
+**类型：** [NetAddress](arkts-network-mdns-netaddress-t.md)
 
 **起始版本：** 10
 

@@ -57,7 +57,7 @@ Called back when geofence status is change.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| transition | geoLocationManager.GeofenceTransition | Yes | Geofence transition status |
+| transition | [geoLocationManager.GeofenceTransition](arkts-location-geolocationmanager-geofencetransition-i.md) | Yes | Geofence transition status |
 | additions | Record&lt;string, string&gt; | Yes | Indicates additional information |
 
 **Examples**

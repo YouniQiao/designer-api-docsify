@@ -42,7 +42,7 @@ type: SppType
 
 Spp link type [SppType](arkts-connectivity-bluetoothmanager-spptype-e.md)
 
-**Type:** SppType
+**Type:** [SppType](arkts-connectivity-bluetoothmanager-spptype-e.md)
 
 **Since:** 9
 

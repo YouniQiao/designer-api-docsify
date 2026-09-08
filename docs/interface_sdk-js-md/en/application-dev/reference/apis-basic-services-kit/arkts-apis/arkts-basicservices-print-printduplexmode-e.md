@@ -24,7 +24,7 @@ Simplex (single-sided).
 DUPLEX_MODE_LONG_EDGE = 1
 ```
 
-Duplex (number-sided) with flipping on number edge.
+Duplex (double-sided) with flipping on long edge.
 
 **Since:** 11
 
@@ -36,7 +36,7 @@ Duplex (number-sided) with flipping on number edge.
 DUPLEX_MODE_SHORT_EDGE = 2
 ```
 
-Duplex (number-sided) with flipping on short edge.
+Duplex (double-sided) with flipping on short edge.
 
 **Since:** 11
 

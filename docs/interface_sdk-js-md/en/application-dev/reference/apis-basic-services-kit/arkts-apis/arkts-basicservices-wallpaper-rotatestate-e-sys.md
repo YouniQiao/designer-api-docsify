@@ -2,7 +2,7 @@
 
 Define the rotation state of wallpaper
 
-@enum { number } RotateState
+@enum { int } RotateState
 
 **Since:** 14
 

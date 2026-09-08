@@ -274,29 +274,13 @@ pause(): void
 
 **系统能力：** SystemCapability.Multimedia.Media.AudioRecorder
 
-**示例**
-
-```TypeScript
-audioPlayer.on('pause', () => {    // 设置'pause'事件回调。
-  console.info('audio pause called');
-});
-audioPlayer.pause();
-```
-
-```TypeScript
-audioRecorder.on('pause', () => {    // 设置'pause'事件回调。
-  console.info('audio recorder pause called');
-});
-audioRecorder.pause();
-```
-
 ## prepare
 
 ```TypeScript
 prepare(config: AudioRecorderConfig): void
 ```
 
-录音准备。
+录制准备，根据传入的配置参数初始化录制资源（包括编码器、采样率、声道数等），完成录制前的准备工作。
 
 > **说明：**
 > 
@@ -326,24 +310,6 @@ prepare(config: AudioRecorderConfig): void
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | permission denied.<br>**适用版本：** 12+ |
 
-**示例**
-
-```TypeScript
-let audioRecorderConfig: media.AudioRecorderConfig = {
-  audioEncoder : media.AudioEncoder.AAC_LC,
-  audioEncodeBitRate : 64000,
-  audioSampleRate : 44100,
-  numberOfChannels : 2,
-  format : media.AudioOutputFormat.AAC_ADTS,
-  uri : 'fd://1',       // fd通过fs.open()获取。文件需先由调用者创建，并给予适当的权限。
-  location : { latitude : 30, longitude : 130},
-};
-audioRecorder.on('prepare', () => {    // 设置'prepare'事件回调。
-  console.info('prepare called');
-});
-audioRecorder.prepare(audioRecorderConfig);
-```
-
 ## release
 
 ```TypeScript
@@ -364,21 +330,6 @@ release(): void
 **替代接口：** [release](arkts-media-media-avrecorder-i.md#release)(callback: AsyncCallback&lt;void&gt;)
 
 **系统能力：** SystemCapability.Multimedia.Media.AudioRecorder
-
-**示例**
-
-```TypeScript
-audioPlayer.release();
-audioPlayer = undefined;
-```
-
-```TypeScript
-audioRecorder.on('release', () => {    // 设置'release'事件回调。
-  console.info('audio recorder release called');
-});
-audioRecorder.release();
-audioRecorder = undefined;
-```
 
 ## reset
 
@@ -403,22 +354,6 @@ reset(): void
 
 **系统能力：** SystemCapability.Multimedia.Media.AudioRecorder
 
-**示例**
-
-```TypeScript
-audioPlayer.on('reset', () => {    // 设置'reset'事件回调。
-  console.info('audio reset called');
-});
-audioPlayer.reset();
-```
-
-```TypeScript
-audioRecorder.on('reset', () => {    // 设置'reset'事件回调。
-  console.info('audio recorder reset called');
-});
-audioRecorder.reset();
-```
-
 ## resume
 
 ```TypeScript
@@ -439,15 +374,6 @@ resume(): void
 **替代接口：** [resume](arkts-media-media-avrecorder-i.md#resume)(callback: AsyncCallback&lt;void&gt;)
 
 **系统能力：** SystemCapability.Multimedia.Media.AudioRecorder
-
-**示例**
-
-```TypeScript
-audioRecorder.on('resume', () => {    // 设置'resume'事件回调。
-  console.info('audio recorder resume called');
-});
-audioRecorder.resume();
-```
 
 ## start
 
@@ -470,15 +396,6 @@ start(): void
 
 **系统能力：** SystemCapability.Multimedia.Media.AudioRecorder
 
-**示例**
-
-```TypeScript
-audioRecorder.on('start', () => {    // 设置'start'事件回调。
-  console.info('audio recorder start called');
-});
-audioRecorder.start();
-```
-
 ## stop
 
 ```TypeScript
@@ -499,19 +416,3 @@ stop(): void
 **替代接口：** [stop](arkts-media-media-avrecorder-i.md#stop)(callback: AsyncCallback&lt;void&gt;)
 
 **系统能力：** SystemCapability.Multimedia.Media.AudioRecorder
-
-**示例**
-
-```TypeScript
-audioPlayer.on('stop', () => {    // 设置'stop'事件回调。
-  console.info('audio stop called');
-});
-audioPlayer.stop();
-```
-
-```TypeScript
-audioRecorder.on('stop', () => {    // 设置'stop'事件回调。
-  console.info('audio recorder stop called');
-});
-audioRecorder.stop();
-```

@@ -52,7 +52,7 @@ deviceClass?: nearlinkConstant.DeviceClass
 
 Type of the device discovered. This field is not returned if the device advertising information does not carry the device type.
 
-**Type:** nearlinkConstant.DeviceClass
+**Type:** [nearlinkConstant.DeviceClass](arkts-connectivity-nearlinkconstant-deviceclass-e.md)
 
 **Since:** 26.0.0
 

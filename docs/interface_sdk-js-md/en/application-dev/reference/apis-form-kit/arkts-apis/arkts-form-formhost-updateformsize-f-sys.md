@@ -27,8 +27,8 @@ Updates the size of the widget.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | formId | string | Yes | Widget ID. |
-| newDimension | formInfo.FormDimension | Yes | Widget dimension. For example, **Dimension_1_2** indicates a 1 x 2 widget. |
-| newRect | formInfo.Rect | Yes | Widget position information, including the X and Y coordinates of the widget's top-left corner, as well as its width and height. |
+| newDimension | [formInfo.FormDimension](arkts-form-forminfo-formdimension-e.md) | Yes | Widget dimension. For example, **Dimension_1_2** indicates a 1 x 2 widget. |
+| newRect | [formInfo.Rect](arkts-form-forminfo-rect-i.md) | Yes | Widget position information, including the X and Y coordinates of the widget's top-left corner, as well as its width and height. |
 
 **Error codes:**
 

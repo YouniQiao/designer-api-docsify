@@ -13,7 +13,7 @@ import { AccessibilityEventType, AccessibilityAction, FocusMoveResultCode, Injec
 function getTouchModeSync(): string
 ```
 
-Obtains the single-tap/number-tap operation mode in touch guide mode. This can be used to adjust the app's interaction response mode based on the current operation mode (for example, responding directly to taps in single- tap mode, or requiring number-tap confirmation in number-tap mode).
+Obtains the single-tap/double-tap operation mode in touch guide mode. This can be used to adjust the app's interaction response mode based on the current operation mode (for example, responding directly to taps in single- tap mode, or requiring double-tap confirmation in double-tap mode).
 
 **Since:** 20
 

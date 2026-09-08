@@ -48,7 +48,7 @@ certType: CertType
 
 表示证书的类型。
 
-**类型：** CertType
+**类型：** [CertType](arkts-devicecertificate-certificatemanager-certtype-e.md)
 
 **起始版本：** 18
 

@@ -36,7 +36,7 @@ emails?: Email[]
 
 联系人的邮箱地址列表。
 
-**类型：** Email[]
+**类型：** [Email](arkts-contacts-contact-email-c.md)[]
 
 **起始版本：** 7
 
@@ -52,7 +52,7 @@ events?: Event[]
 
 联系人的生日、周年纪念等重要日期列表。
 
-**类型：** Event[]
+**类型：** [Event](arkts-contacts-contact-event-c.md)[]
 
 **起始版本：** 7
 
@@ -212,7 +212,7 @@ phoneNumbers?: PhoneNumber[]
 
 联系人的电话号码列表。
 
-**类型：** PhoneNumber[]
+**类型：** [PhoneNumber](arkts-contacts-contact-phonenumber-c.md)[]
 
 **起始版本：** 7
 
@@ -228,7 +228,7 @@ portrait?: Portrait
 
 联系人的头像。
 
-**类型：** Portrait
+**类型：** [Portrait](arkts-contacts-contact-portrait-c.md)
 
 **起始版本：** 7
 
@@ -299,24 +299,3 @@ websites?: Website[]
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Applications.ContactsData
-
-**示例**
-
-使用JSON格式创建联系人数据。
-
-```TypeScript
-import { contact } from '@kit.ContactsKit';
-
-let myContact: contact.Contact = {
-    phoneNumbers: [{
-        phoneNumber: '138xxxxxxxx'
-    }],
-    name: {
-        fullName: 'fullName',
-        namePrefix: 'namePrefix'
-    },
-    nickName: {
-        nickName: 'nickName'
-    }
-};
-```

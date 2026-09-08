@@ -34,7 +34,7 @@ function cancelSession(slotId: number, transactionId: string, cancelReason: Canc
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;ResultCode&gt; | Promise对象，返回取消会话的结果码。 |
+| Promise&lt;[ResultCode](arkts-telephony-esim-resultcode-e-sys.md)&gt; | Promise对象，返回取消会话的结果码。 |
 
 **错误码：**
 

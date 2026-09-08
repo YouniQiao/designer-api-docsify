@@ -28,11 +28,4 @@ function getCurrentFunctions(): FunctionType
 
 | 类型 | 说明 |
 | --- | --- |
-| FunctionType | 当前的USB功能列表的数字组合掩码。如果开发者模式关闭且没有设备接入，则返回undefined，需要对返回值做判空处理。 |
-
-**示例**
-
-```TypeScript
-// 获取当前USB功能的数字掩码
-let ret: usbManager.FunctionType = usbManager.getCurrentFunctions();
-```
+| [FunctionType](arkts-basicservices-usbmanager-functiontype-e-sys.md) | 当前的USB功能列表的数字组合掩码。如果开发者模式关闭且没有设备接入，则返回undefined，需要对返回值做判空处理。 |

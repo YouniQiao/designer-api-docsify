@@ -110,10 +110,6 @@ Gets file name of tone.
 toneAttrs.getFileName();
 ```
 
-```TypeScript
-toneHapticsAttrs.getFileName();
-```
-
 ## getMediaType
 
 ```TypeScript
@@ -132,7 +128,7 @@ Gets media type. This function returns [AUDIO](arkts-audio-systemsoundmanager-me
 
 | Type | Description |
 | --- | --- |
-| MediaType | Media type. |
+| [MediaType](arkts-audio-systemsoundmanager-mediatype-e-sys.md) | Media type. |
 
 **Error codes:**
 
@@ -178,10 +174,6 @@ Gets title of tone.
 toneAttrs.getTitle();
 ```
 
-```TypeScript
-toneHapticsAttrs.getTitle();
-```
-
 ## getUri
 
 ```TypeScript
@@ -212,10 +204,6 @@ Gets uri of tone.
 
 ```TypeScript
 toneAttrs.getUri();
-```
-
-```TypeScript
-toneHapticsAttrs.getUri();
 ```
 
 ## setCategory
@@ -306,7 +294,7 @@ Sets media type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | MediaType | Yes | Target media type. |
+| type | [MediaType](arkts-audio-systemsoundmanager-mediatype-e-sys.md) | Yes | Target media type. |
 
 **Error codes:**
 

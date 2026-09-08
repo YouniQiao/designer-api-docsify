@@ -2,7 +2,7 @@
 
 枚举授予或激活权限策略失败的URI对应的错误码。
 
-@enum { number } PolicyErrorCode
+@enum { int } PolicyErrorCode
 
 **起始版本：** 11
 

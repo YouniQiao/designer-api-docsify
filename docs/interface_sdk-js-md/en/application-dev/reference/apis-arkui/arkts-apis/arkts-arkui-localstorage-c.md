@@ -38,11 +38,6 @@ For details about the subscriber, see [delete](#delete).
 **Examples**
 
 ```TypeScript
-AppStorage.setOrCreate('PropA', 47);
-let res: boolean = AppStorage.clear(); // true: There are no subscribers.
-```
-
-```TypeScript
 let initialData: Record<string, number> = { 'PropA': 47 };
 let storage: LocalStorage = new LocalStorage(initialData);
 let res: boolean = storage.clear(); // true: There are no subscribers.
@@ -124,15 +119,6 @@ of **SubscribedAbstractProperty** returned by **link**, **prop**, **setAndLink**
 **Examples**
 
 ```TypeScript
-AppStorage.setOrCreate('PropA', 47);
-AppStorage.link<number>('PropA');
-let res: boolean = AppStorage.delete('PropA'); // false: PropA still has subscribers.
-
-AppStorage.setOrCreate('PropB', 48);
-let res1: boolean = AppStorage.delete('PropB'); // true: PropB is successfully deleted from AppStorage.
-```
-
-```TypeScript
 let initialData: Record<string, number> = { 'PropA': 47 };
 let storage: LocalStorage = new LocalStorage(initialData);
 storage.link<number>('PropA');
@@ -171,11 +157,6 @@ Obtains the value of the property corresponding to **propName** from [LocalStora
 | T \| undefined | Value of the property corresponding to **propName** in LocalStorage, or **undefined** if it does not exist. |
 
 **Examples**
-
-```TypeScript
-AppStorage.setOrCreate('PropA', 47);
-let value: number = AppStorage.get('PropA') as number; // 47
-```
 
 ```TypeScript
 let initialData: Record<string, number> = { 'PropA': 47 };
@@ -280,10 +261,6 @@ Checks whether the property corresponding to **propName** exists in [LocalStorag
 **Examples**
 
 ```TypeScript
-AppStorage.has('simpleProp');
-```
-
-```TypeScript
 let initialData: Record<string, number> = { 'PropA': 47 };
 let storage: LocalStorage = new LocalStorage(initialData);
 storage.has('PropA'); // true
@@ -312,11 +289,6 @@ Obtains all property names in [LocalStorage](../../../ui/state-management/arkts-
 | [IterableIterator](../../apis-default/arkts-apis/arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;string&gt; | All property names in LocalStorage. |
 
 **Examples**
-
-```TypeScript
-AppStorage.setOrCreate('PropB', 48);
-let keys: IterableIterator<string> = AppStorage.keys();
-```
 
 ```TypeScript
 let initialData: Record<string, number> = { 'PropA': 47 };
@@ -357,13 +329,6 @@ If the given property does not exist in LocalStorage, **undefined** is returned.
 | [SubscribedAbstractProperty](arkts-arkui-subscribedabstractproperty-c.md)&lt;T&gt; | Returns the **SubscribedAbstractProperty&lt;T&gt;** instance if the given property exists in LocalStorage; returns **undefined** otherwise. |
 
 **Examples**
-
-```TypeScript
-AppStorage.setOrCreate('PropA', 47);
-let linkToPropA1: SubscribedAbstractProperty<number> = AppStorage.link('PropA');
-let linkToPropA2: SubscribedAbstractProperty<number> = AppStorage.link('PropA'); // linkToPropA2.get() == 47
-linkToPropA1.set(48); // Two-way synchronization: linkToPropA1.get() == linkToPropA2.get() == 48.
-```
 
 ```TypeScript
 let initialData: Record<string, number> = { 'PropA': 47 };
@@ -442,13 +407,6 @@ This API is similar to [link](#link) but does not require manually releasing the
 **Examples**
 
 ```TypeScript
-AppStorage.setOrCreate('PropA', 47);
-let refToPropA1: AbstractProperty<number> | undefined = AppStorage.ref('PropA');
-let refToPropA2: AbstractProperty<number> | undefined = AppStorage.ref('PropA'); // refToPropA2.get() == 47
-refToPropA1?.set(48); // Synchronously modify AppStorage: refToPropA1.get() == refToPropA2.get() == 48.
-```
-
-```TypeScript
 let initialData: Record<string, number> = { 'PropA': 47 };
 let storage: LocalStorage = new LocalStorage(initialData);
 let refToPropA1: AbstractProperty<number> | undefined = storage.ref('PropA');
@@ -497,12 +455,6 @@ Sets the value of the property corresponding to **propName** in [LocalStorage](.
 **Examples**
 
 ```TypeScript
-AppStorage.setOrCreate('PropA', 48);
-let res: boolean = AppStorage.set('PropA', 47); // true
-let res1: boolean = AppStorage.set('PropB', 47); // false
-```
-
-```TypeScript
 let initialData: Record<string, number> = { 'PropA': 47 };
 let storage: LocalStorage = new LocalStorage(initialData);
 let res: boolean = storage.set('PropA', 47); // true
@@ -548,12 +500,6 @@ Similar to the [link](#link) API, establishes a two-way data binding with the pr
 | [SubscribedAbstractProperty](arkts-arkui-subscribedabstractproperty-c.md)&lt;T&gt; | Instance of **SubscribedAbstractProperty&lt;T&gt;** and two-way bound data of the given property in LocalStorage. |
 
 **Examples**
-
-```TypeScript
-AppStorage.setOrCreate('PropA', 47);
-let link1: SubscribedAbstractProperty<number> = AppStorage.setAndLink('PropB', 49); // Create PropB with the default value 49.
-let link2: SubscribedAbstractProperty<number> = AppStorage.setAndLink('PropA', 50); // PropA already exists with the value 47.
-```
 
 ```TypeScript
 let initialData: Record<string, number> = { 'PropA': 47 };
@@ -649,12 +595,6 @@ This API is similar to [setAndLink](#setandlink) but does not require manually r
 **Examples**
 
 ```TypeScript
-AppStorage.setOrCreate('PropA', 47);
-let ref1: AbstractProperty<number> = AppStorage.setAndRef('PropB', 49); // Create PropB with the default value 49.
-let ref2: AbstractProperty<number> = AppStorage.setAndRef('PropA', 50); // PropA already exists with the value 47.
-```
-
-```TypeScript
 let initialData: Record<string, number> = { 'PropA': 47 };
 let storage: LocalStorage = new LocalStorage(initialData);
 let ref1: AbstractProperty<number> = storage.setAndRef('PropB', 49); // Create PropB with the default value 49.
@@ -734,11 +674,6 @@ Obtains the number of properties in [LocalStorage](../../../ui/state-management/
 | number | Number of properties in LocalStorage. |
 
 **Examples**
-
-```TypeScript
-AppStorage.setOrCreate('PropB', 48);
-let res: number = AppStorage.size(); // 1
-```
 
 ```TypeScript
 let initialData: Record<string, number> = { 'PropA': 47 };

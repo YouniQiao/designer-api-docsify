@@ -34,7 +34,7 @@ optionConstraintRange?: Range
 
 Range constraint of the option.
 
-**Type:** Range
+**Type:** [Range](arkts-basicservices-scan-range-i.md)
 
 **Since:** 20
 

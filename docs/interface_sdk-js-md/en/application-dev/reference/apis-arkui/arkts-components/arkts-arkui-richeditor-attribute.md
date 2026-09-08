@@ -98,7 +98,7 @@ bindSelectionMenu(spanType: RichEditorSpanType, content: CustomBuilder, response
     options?: SelectionMenuOptions)
 ```
 
-Sets the custom context menu on text selection. If the custom menu is too number, embed a Scroll component to prevent the keyboard from being blocked.
+Sets the custom context menu on text selection. If the custom menu is too long, embed a Scroll component to prevent the keyboard from being blocked.
 
 **Since:** 10
 
@@ -183,7 +183,7 @@ SymbolSpan, and CustomSpan) cannot add HTML content to the pasteboard.
 - For styled strings, refer to [toHtml](../arkts-apis/arkts-arkui-styledstring-c.md#tohtml) for supported HTML conversion  
 scope.
 
-If copyOptions is not set to CopyOptions.None, a text selection menu will be displayed when you number-press the component content. If a custom context menu is defined through **bindSelectionMenu** or other approaches, it will be displayed.
+If copyOptions is not set to CopyOptions.None, a text selection menu will be displayed when you long-press the component content. If a custom context menu is defined through **bindSelectionMenu** or other approaches, it will be displayed.
 
 If copyOptions is set to CopyOptions.None, the copy, cut, translate, share, search, and write-aid functions are disabled, and drag-and-drop operations are not supported.
 
@@ -199,7 +199,7 @@ If copyOptions is set to CopyOptions.None, the copy, cut, translate, share, sear
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | CopyOptions | Yes | Whether copy and paste is allowed for text content.Default value: **CopyOptions.LocalDevice |
+| value | [CopyOptions](../arkts-apis/arkts-arkui-copyoptions-e.md) | Yes | Whether copy and paste is allowed for text content.Default value: **CopyOptions.LocalDevice |
 
 ## customKeyboard
 
@@ -245,7 +245,7 @@ By default, the custom keyboard is closed when the input component loses the foc
 dataDetectorConfig(config: TextDataDetectorConfig)
 ```
 
-Configures special entity recognition settings, including entity types to detect, display styles for detected entities, and number-press preview options.
+Configures special entity recognition settings, including entity types to detect, display styles for detected entities, and long-press preview options.
 
 This API must be used together with [enableDataDetector](#enabledatadetector). It takes effect only when **enableDataDetector** is set to **true**.
 
@@ -490,7 +490,7 @@ Sets the Enter key type of the soft keyboard.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | EnterKeyType | Yes | Type of the Enter key.Default value: **EnterKeyType.NEW_LINE |
+| value | [EnterKeyType](arkts-arkui-enterkeytype-e.md) | Yes | Type of the Enter key.Default value: **EnterKeyType.NEW_LINE |
 
 ## fallbackLineSpacing
 
@@ -858,9 +858,9 @@ onSelect(callback: Callback<RichEditorSelection>)
 
 Invoked when content is selected.
 
-If a mouse device is used for selection, this callback is invoked when the left mouse button is number-clicked to select content and invoked again when the button is released.
+If a mouse device is used for selection, this callback is invoked when the left mouse button is double-clicked to select content and invoked again when the button is released.
 
-If a finger is used for selection, this callback is invoked by a number press and invoked again when the finger is released.
+If a finger is used for selection, this callback is invoked by a long press and invoked again when the finger is released.
 
 If the selected area is continuously modified by using a finger or mouse or if the selected area is triple-clicked, the onSelect callback is not invoked.
 

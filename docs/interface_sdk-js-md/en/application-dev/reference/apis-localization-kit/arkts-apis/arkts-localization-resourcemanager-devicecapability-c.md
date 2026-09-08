@@ -20,7 +20,7 @@ deviceType: DeviceType
 
 Device type.
 
-**Type:** DeviceType
+**Type:** [DeviceType](arkts-localization-resourcemanager-devicetype-e.md)
 
 **Since:** 6
 
@@ -36,7 +36,7 @@ screenDensity: ScreenDensity
 
 Screen density of the device.
 
-**Type:** ScreenDensity
+**Type:** [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md)
 
 **Since:** 6
 

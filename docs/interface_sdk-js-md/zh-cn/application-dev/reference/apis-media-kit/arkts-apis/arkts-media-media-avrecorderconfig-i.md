@@ -51,7 +51,7 @@ location?: Location
 
 录制的地理位置，默认不记录地理位置信息。从API version 6开始支持，从API version 12开始废弃。建议使用 [AVMetadata](arkts-media-media-avmetadata-i.md).location。如果同时设置两个值，将会采用[AVMetadata](arkts-media-media-avmetadata-i.md).location。
 
-**类型：** Location
+**类型：** [Location](arkts-media-media-location-i.md)
 
 **起始版本：** 9
 
@@ -83,7 +83,7 @@ metadata?: AVMetadata
 
 设置元数据信息。详细内容请参考 [AVMetadata](arkts-media-media-avmetadata-i.md)。
 
-**类型：** AVMetadata
+**类型：** [AVMetadata](arkts-media-media-avmetadata-i.md)
 
 **起始版本：** 12
 

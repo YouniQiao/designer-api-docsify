@@ -38,7 +38,7 @@ static negate(point: common2D.Point): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| point | common2D.Point | 是 | 要取反的点。 |
+| point | [common2D.Point](arkts-arkgraphics2d-common2d-point-i.md) | 是 | 要取反的点。 |
 
 ## offset
 
@@ -58,61 +58,6 @@ static offset(point: common2D.Point, dx: number, dy: number): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| point | common2D.Point | 是 | 要偏移的点。 |
+| point | [common2D.Point](arkts-arkgraphics2d-common2d-point-i.md) | 是 | 要偏移的点。 |
 | dx | number | 是 | x轴方向平移距离，正数表示往x轴正方向平移，负数表示往x轴负方向平移，该参数为浮点数。单位为物理像素px。 |
 | dy | number | 是 | y轴方向平移距离，正数表示往y轴正方向平移，负数表示往y轴负方向平移，该参数为浮点数。单位为物理像素px。 |
-
-**示例**
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-const path = new drawing.Path();
-path.moveTo(200, 200);
-path.lineTo(300, 300);
-const dstPath = path.offset(200, 200);
-```
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-let rect = drawing.RectUtils.makeLtrb(0, 0, 20, 20);
-drawing.RectUtils.offset(rect, 10, 20);
-console.info('rect.left: ', rect.left);
-console.info('rect.top: ', rect.top);
-console.info('rect.right: ', rect.right);
-console.info('rect.bottom: ', rect.bottom);
-```
-
-```TypeScript
-import { RenderNode } from '@kit.ArkUI';
-import { drawing } from '@kit.ArkGraphics2D';
-
-class DrawingRenderNode extends RenderNode {
-  draw(context: DrawContext) {
-    const canvas = context.canvas;
-    const pen = new drawing.Pen();
-    pen.setColor({
-      alpha: 255,
-      red: 255,
-      green: 0,
-      blue: 0
-    });
-    pen.setStrokeWidth(10);
-    canvas.attachPen(pen);
-    let region = new drawing.Region();
-    region.setRect(100, 100, 400, 400);
-    region.offset(10, 20);
-    canvas.drawPoint(200, 200);
-    canvas.drawRegion(region);
-    canvas.detachPen();
-  }
-}
-```
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-let roundRect: drawing.RoundRect = new drawing.RoundRect({left: 0, top: 0, right: 300, bottom: 300}, 50, 50);
-roundRect.offset(100, 100);
-```

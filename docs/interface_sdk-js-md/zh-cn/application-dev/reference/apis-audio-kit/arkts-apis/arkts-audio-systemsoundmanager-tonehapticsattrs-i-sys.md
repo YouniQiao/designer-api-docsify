@@ -43,10 +43,6 @@ getFileName(): string
 **示例**
 
 ```TypeScript
-toneAttrs.getFileName();
-```
-
-```TypeScript
 toneHapticsAttrs.getFileName();
 ```
 
@@ -177,10 +173,6 @@ getTitle(): string
 **示例**
 
 ```TypeScript
-toneAttrs.getTitle();
-```
-
-```TypeScript
 toneHapticsAttrs.getTitle();
 ```
 
@@ -213,10 +205,6 @@ getUri(): string
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
 
 **示例**
-
-```TypeScript
-toneAttrs.getUri();
-```
 
 ```TypeScript
 toneHapticsAttrs.getUri();

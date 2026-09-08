@@ -107,8 +107,8 @@ execute(task: Task, priority?: Priority): Promise<Object>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| task | Task | 是 | 需要添加到异步队列中的任务。 |
-| priority | Priority | 否 | 指定任务的优先级，默认值为**taskpool.Priority.MEDIUM**。 |
+| task | [Task](arkts-arkts-taskpool-task-c.md) | 是 | 需要添加到异步队列中的任务。 |
+| priority | [Priority](arkts-arkts-taskpool-priority-e.md) | 否 | 指定任务的优先级，默认值为**taskpool.Priority.MEDIUM**。 |
 
 **返回值：**
 
@@ -127,27 +127,6 @@ execute(task: Task, priority?: Priority): Promise<Object>
 | [10200057](../errorcode-utils.md#10200057-任务无法被两种api执行) | The task cannot be executed by two APIs. |
 
 **示例**
-
-```TypeScript
-@Concurrent
-function printArgs(args: number): number {
-    console.info("printArgs: " + args);
-    return args;
-}
-
-let task1: taskpool.Task = new taskpool.Task(printArgs, 100); // 100: test number
-let task2: taskpool.Task = new taskpool.Task(printArgs, 200); // 200: test number
-let task3: taskpool.Task = new taskpool.Task(printArgs, 300); // 300: test number
-taskpool.execute(task1, taskpool.Priority.LOW).then((value: Object) => {
-  console.info("taskpool result1: " + value);
-});
-taskpool.execute(task2, taskpool.Priority.MEDIUM).then((value: Object) => {
-  console.info("taskpool result2: " + value);
-});
-taskpool.execute(task3, taskpool.Priority.HIGH).then((value: Object) => {
-  console.info("taskpool result3: " + value);
-});
-```
 
 ```TypeScript
 import { taskpool } from '@kit.ArkTS';

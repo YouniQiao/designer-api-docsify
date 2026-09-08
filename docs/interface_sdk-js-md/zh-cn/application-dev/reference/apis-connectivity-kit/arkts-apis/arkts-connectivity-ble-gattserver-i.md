@@ -36,7 +36,7 @@ server端添加服务。该操作会在蓝牙子系统中注册该服务，表�
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| service | GattService | 是 | server端的service数据。表示支持的特定功能。例如：00001800-0000-1000-8000-00805f9b34fb表示通用访问服务；00001801-0000-1000-8000-00805f9b34fb表示通用属性服务等。 |
+| service | [GattService](arkts-connectivity-ble-gattservice-i.md) | 是 | server端的service数据。表示支持的特定功能。例如：00001800-0000-1000-8000-00805f9b34fb表示通用访问服务；00001801-0000-1000-8000-00805f9b34fb表示通用属性服务等。 |
 
 **错误码：**
 
@@ -118,16 +118,6 @@ import { AsyncCallback, BusinessError } from '@kit.BasicServicesKit';
 let server: ble.GattServer = ble.createGattServer();
 try {
     server.close();
-} catch (err) {
-    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-}
-```
-
-```TypeScript
-import { AsyncCallback, BusinessError } from '@kit.BasicServicesKit';
-try {
-    let device: ble.GattClientDevice = ble.createGattClientDevice('XX:XX:XX:XX:XX:XX');
-    device.close();
 } catch (err) {
     console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
 }
@@ -257,7 +247,7 @@ getConnectedState(deviceId: string): ProfileConnectionState
 
 | 类型 | 说明 |
 | --- | --- |
-| ProfileConnectionState | 蓝牙设备的profile连接状态。 |
+| [ProfileConnectionState](arkts-connectivity-ble-profileconnectionstate-t.md) | 蓝牙设备的profile连接状态。 |
 
 **错误码：**
 
@@ -310,7 +300,7 @@ getService(serviceUuid: string): GattService
 
 | 类型 | 说明 |
 | --- | --- |
-| GattService | 指定的GATT服务。 |
+| [GattService](arkts-connectivity-ble-gattservice-i.md) | 指定的GATT服务。 |
 
 **错误码：**
 
@@ -362,7 +352,7 @@ server端获取本端已添加的服务能力。
 
 | 类型 | 说明 |
 | --- | --- |
-| GattService[] | server端已添加的服务能力。 |
+| [GattService](arkts-connectivity-ble-gattservice-i.md)[] | server端已添加的服务能力。 |
 
 **错误码：**
 
@@ -419,7 +409,7 @@ server端发送特征值变化通知或者指示给client端。使用Callback异
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | deviceId | string | 是 | 接收通知的client设备地址。例如：“XX:XX:XX:XX:XX:XX”。 |
-| notifyCharacteristic | NotifyCharacteristic | 是 | 通知给client的特征值数据对象。 |
+| notifyCharacteristic | [NotifyCharacteristic](arkts-connectivity-ble-notifycharacteristic-i.md) | 是 | 通知给client的特征值数据对象。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当通知成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
@@ -483,7 +473,7 @@ server端发送特征值变化通知或者指示给client端。使用Promise异�
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | deviceId | string | 是 | 接收通知的client设备地址。例如：“XX:XX:XX:XX:XX:XX”。 |
-| notifyCharacteristic | NotifyCharacteristic | 是 | 通知给client的特征值数据对象。 |
+| notifyCharacteristic | [NotifyCharacteristic](arkts-connectivity-ble-notifycharacteristic-i.md) | 是 | 通知给client的特征值数据对象。 |
 
 **返回值：**
 
@@ -546,7 +536,7 @@ server端取消订阅client的特征值读请求事件。
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'characteristicRead' | 是 | 事件回调类型，支持的事件为'characteristicRead'，表示特征值读请求事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;CharacteristicReadRequest&gt; | 否 | 指定取消订阅的回调函数通知。若传参，则需与on('characteristicRead')中的回调函数一致；若无传参，则取消订阅该type对应的所有回调函数通知。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CharacteristicReadRequest](arkts-connectivity-ble-characteristicreadrequest-i.md)&gt; | 否 | 指定取消订阅的回调函数通知。若传参，则需与on('characteristicRead')中的回调函数一致；若无传参，则取消订阅该type对应的所有回调函数通知。 |
 
 **错误码：**
 
@@ -591,7 +581,7 @@ server端取消订阅client的特征值写请求事件。
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'characteristicWrite' | 是 | 事件回调类型，支持的事件为'characteristicWrite'，表示特征值写请求事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;CharacteristicWriteRequest&gt; | 否 | 指定取消订阅的回调函数通知。若传参，则需与on('characteristicWrite')中的回调函数一致；若无传参，则取消订阅该type对应的所有回调函数通知。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CharacteristicWriteRequest](arkts-connectivity-ble-characteristicwriterequest-i.md)&gt; | 否 | 指定取消订阅的回调函数通知。若传参，则需与on('characteristicWrite')中的回调函数一致；若无传参，则取消订阅该type对应的所有回调函数通知。 |
 
 **错误码：**
 
@@ -636,7 +626,7 @@ server端取消订阅client的描述符读请求事件。
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'descriptorRead' | 是 | 事件回调类型，支持的事件为'descriptorRead'，表示描述符读请求事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DescriptorReadRequest&gt; | 否 | 指定取消订阅的回调函数通知。若传参，则需与on('descriptorRead')中的回调函数一致；若无传参，则取消订阅该type对应的所有回调函数通知。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DescriptorReadRequest](arkts-connectivity-ble-descriptorreadrequest-i.md)&gt; | 否 | 指定取消订阅的回调函数通知。若传参，则需与on('descriptorRead')中的回调函数一致；若无传参，则取消订阅该type对应的所有回调函数通知。 |
 
 **错误码：**
 
@@ -681,7 +671,7 @@ server端取消订阅client的描述符写请求事件。
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'descriptorWrite' | 是 | 事件回调类型，支持的事件为'descriptorWrite'，表示描述符写请求事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DescriptorWriteRequest&gt; | 否 | 指定取消订阅的回调函数通知。若传参，则需与on('descriptorWrite')中的回调函数一致；若无传参，则取消订阅该type对应的所有回调函数通知。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DescriptorWriteRequest](arkts-connectivity-ble-descriptorwriterequest-i.md)&gt; | 否 | 指定取消订阅的回调函数通知。若传参，则需与on('descriptorWrite')中的回调函数一致；若无传参，则取消订阅该type对应的所有回调函数通知。 |
 
 **错误码：**
 
@@ -834,18 +824,6 @@ try {
 }
 ```
 
-```TypeScript
-function BlePhyCallback(data:ble.PhyValue) {
-    console.info(`txPhy: ${data.txPhy}, rxPhy: ${data.rxPhy}`);
-}
-let gattClient: ble.GattClientDevice = ble.createGattClientDevice('XX:XX:XX:XX:XX:XX');
-try {
-    gattClient.offBlePhyUpdate(BlePhyCallback);
-} catch (err) {
-    console.error(`errCode: ${err.code}, errMessage: ${err.message}`);
-}
-```
-
 ## on('characteristicRead')
 
 ```TypeScript
@@ -872,7 +850,7 @@ server端订阅client的特征值读请求事件，server端收到该事件后�
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'characteristicRead' | 是 | 事件回调类型，支持的事件为'characteristicRead'，表示特征值读请求事件。当收到client端设备的读取特征值请求时，触发该事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;CharacteristicReadRequest&gt; | 是 | 指定订阅的回调函数，会携带client端发送的读请求数据。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CharacteristicReadRequest](arkts-connectivity-ble-characteristicreadrequest-i.md)&gt; | 是 | 指定订阅的回调函数，会携带client端发送的读请求数据。 |
 
 **错误码：**
 
@@ -933,7 +911,7 @@ server端订阅client的特征值写请求事件，server端收到该事件后�
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'characteristicWrite' | 是 | 事件回调类型，支持的事件为'characteristicWrite'，表示特征值写请求事件。当收到client端设备的写特征值请求时，触发该事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;CharacteristicWriteRequest&gt; | 是 | 指定订阅的回调函数，会携带client端发送的写请求数据。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CharacteristicWriteRequest](arkts-connectivity-ble-characteristicwriterequest-i.md)&gt; | 是 | 指定订阅的回调函数，会携带client端发送的写请求数据。 |
 
 **错误码：**
 
@@ -997,7 +975,7 @@ server端订阅client的描述符读请求事件，server端收到该事件后�
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'descriptorRead' | 是 | 事件回调类型，支持的事件为'descriptorRead'，表示描述符读请求事件。当收到client端设备的读取描述符请求时，触发该事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DescriptorReadRequest&gt; | 是 | 指定订阅的回调函数，会携带client端发送的读请求数据。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DescriptorReadRequest](arkts-connectivity-ble-descriptorreadrequest-i.md)&gt; | 是 | 指定订阅的回调函数，会携带client端发送的读请求数据。 |
 
 **错误码：**
 
@@ -1058,7 +1036,7 @@ server端订阅client的描述符写请求事件，server端收到该事件后�
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'descriptorWrite' | 是 | 事件回调类型，支持的事件为'descriptorWrite'，表示描述符写请求事件。当收到client端设备的写描述符请求时，触发该事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DescriptorWriteRequest&gt; | 是 | 指定订阅的回调函数，会携带client端发送的写请求数据。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DescriptorWriteRequest](arkts-connectivity-ble-descriptorwriterequest-i.md)&gt; | 是 | 指定订阅的回调函数，会携带client端发送的写请求数据。 |
 
 **错误码：**
 
@@ -1232,18 +1210,6 @@ function BlePhyCallback(data:ble.PhyValue) {
 let gattServer: ble.GattServer = ble.createGattServer();
 try {
     gattServer.onBlePhyUpdate(BlePhyCallback);
-} catch (err) {
-    console.error(`errCode: ${err.code}, errMessage: ${err.message}`);
-}
-```
-
-```TypeScript
-function BlePhyCallback(data:ble.PhyValue) {
-    console.info(`txPhy: ${data.txPhy}, rxPhy: ${data.rxPhy}`);
-}
-let gattClient: ble.GattClientDevice = ble.createGattClientDevice('XX:XX:XX:XX:XX:XX');
-try {
-    gattClient.onBlePhyUpdate(BlePhyCallback);
 } catch (err) {
     console.error(`errCode: ${err.code}, errMessage: ${err.message}`);
 }
@@ -1424,7 +1390,7 @@ on('descriptorWrite')，需根据[DescriptorWriteRequest](arkts-connectivity-ble
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| serverResponse | ServerResponse | 是 | server端回复client的响应数据。 |
+| serverResponse | [ServerResponse](arkts-connectivity-ble-serverresponse-i.md) | 是 | server端回复client的响应数据。 |
 
 **错误码：**
 

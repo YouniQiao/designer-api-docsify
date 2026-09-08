@@ -248,7 +248,7 @@ dynamicRangeType: DynamicRangeType
 
 Dynamic range type of the asset
 
-**类型：** DynamicRangeType
+**类型：** [DynamicRangeType](arkts-medialibrary-sendablephotoaccesshelper-dynamicrangetype-e.md)
 
 **起始版本：** 14
 
@@ -344,7 +344,7 @@ mediaType: PhotoType
 
 Media type of photo asset
 
-**类型：** PhotoType
+**类型：** [PhotoType](arkts-medialibrary-sendablephotoaccesshelper-phototype-e.md)
 
 **起始版本：** 14
 
@@ -360,7 +360,7 @@ movingPhotoEffectMode: MovingPhotoEffectMode
 
 Effect mode of moving photo
 
-**类型：** MovingPhotoEffectMode
+**类型：** [MovingPhotoEffectMode](arkts-medialibrary-sendablephotoaccesshelper-movingphotoeffectmode-e-sys.md)
 
 **起始版本：** 14
 
@@ -408,7 +408,7 @@ position: PositionType
 
 Position of photo asset
 
-**类型：** PositionType
+**类型：** [PositionType](arkts-medialibrary-photoaccesshelper-positiontype-e.md)
 
 **起始版本：** 14
 
@@ -440,7 +440,7 @@ subtype: PhotoSubtype
 
 Subtype of photo asset
 
-**类型：** PhotoSubtype
+**类型：** [PhotoSubtype](arkts-medialibrary-sendablephotoaccesshelper-photosubtype-e.md)
 
 **起始版本：** 14
 
@@ -504,7 +504,7 @@ thumbnailVisible: ThumbnailVisibility
 
 visibility of thumbnails
 
-**类型：** ThumbnailVisibility
+**类型：** [ThumbnailVisibility](arkts-medialibrary-sendablephotoaccesshelper-thumbnailvisibility-e-sys.md)
 
 **起始版本：** 14
 

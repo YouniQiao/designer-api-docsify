@@ -26,7 +26,7 @@ function sendPrivateCommand(commandData: Record<string, CommandDataType>): Promi
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| commandData | Record&lt;string, CommandDataType&gt; | 是 | 将要发送的命令数据。最大大小32KB。 |
+| commandData | Record&lt;string, [CommandDataType](arkts-ime-inputmethodengine-commanddatatype-t.md)&gt; | 是 | 将要发送的命令数据。最大大小32KB。 |
 
 **返回值：**
 

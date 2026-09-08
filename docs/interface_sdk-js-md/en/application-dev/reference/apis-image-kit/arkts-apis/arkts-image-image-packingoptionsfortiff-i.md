@@ -39,7 +39,7 @@ orientation?: Orientation
 
 Image orientation.Default value is TOP_LEFT.
 
-**Type:** Orientation
+**Type:** [Orientation](arkts-image-image-orientation-e.md)
 
 **Since:** 26.0.0
 

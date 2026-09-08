@@ -2,7 +2,7 @@
 
 Search direction.
 
-@enum { number }
+@enum { int }
 
 **Since:** 21
 

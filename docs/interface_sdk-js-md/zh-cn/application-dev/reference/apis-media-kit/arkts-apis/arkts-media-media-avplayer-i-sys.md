@@ -86,7 +86,7 @@ getCurrentTrack(trackType: MediaType): Promise<number>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| trackType | MediaType | 是 | 指定的媒体类型，见MediaType. |
+| trackType | [MediaType](arkts-media-media-mediatype-e.md) | 是 | 指定的媒体类型，见MediaType. |
 
 **返回值：**
 
@@ -103,25 +103,6 @@ getCurrentTrack(trackType: MediaType): Promise<number>
 | [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by promise. |
 | [5400103](../errorcode-media.md#5400103-出现io错误) | I/O error. Return by promise. |
 | [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by promise. |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function test(){
-  let avPlayer = await media.createAVPlayer();
-  // 此处仅为示意，实际开发中需要在stateChange事件成功触发至prepared/playing/paused状态后才能调用。
-  let myTrackId : number;
-  let trackType: media.MediaType = media.MediaType.MEDIA_TYPE_AUD;
-  avPlayer.getCurrentTrack(trackType).then((trackId: number) => {
-    console.info('Succeeded in getting CurrentTrack');
-    myTrackId = trackId;
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to get CurrentTrack. Code:${error.code},message:${error.message}`);
-  });
-}
-```
 
 ## enableStartFrameRateOpt
 
@@ -149,7 +130,7 @@ privacyType?: audio.AudioPrivacyType
 
 音频隐私设置。如需更多信息，请参阅 [AudioPrivacyType](../../apis-audio-kit/arkts-apis/arkts-audio-audio-audioprivacytype-e.md).默认值: PRIVACY_TYPE_PUBLIC.
 
-**类型：** audio.AudioPrivacyType
+**类型：** [audio.AudioPrivacyType](../../apis-audio-kit/arkts-apis/arkts-audio-audio-audioprivacytype-e.md)
 
 **起始版本：** 26.0.0
 

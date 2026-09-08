@@ -32,22 +32,4 @@ global \$r function
 
 | 类型 | 说明 |
 | --- | --- |
-| Resource |  |
-
-**示例**
-
-```TypeScript
-@Entry
-@Component
-struct Page {
-  build() {
-    Row() {
-      Column() {
-        Text($r('app.string.app_name'))
-      }
-      .width('100%')
-    }
-    .height('100%')
-  }
-}
-```
+| [Resource](../arkts-apis/arkts-arkui-resource-t.md) |  |

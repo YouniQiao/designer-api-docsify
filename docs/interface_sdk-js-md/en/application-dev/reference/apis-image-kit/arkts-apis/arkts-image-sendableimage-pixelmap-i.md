@@ -32,7 +32,7 @@ This method is used to change color space of PixelMap. Pixel data will be change
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| targetColorSpace | colorSpaceManager.ColorSpaceManager | Yes | The color space for pixelmap. |
+| targetColorSpace | [colorSpaceManager.ColorSpaceManager](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-colorspacemanager-colorspacemanager-i.md) | Yes | The color space for pixelmap. |
 
 **Return value:**
 
@@ -85,7 +85,7 @@ Obtains new pixelmap with alpha information. This method uses a promise to retur
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;PixelMap&gt; | A Promise instance used to return the new image pixelmap. If the operation fails, an error message is returned. |
+| Promise&lt;[PixelMap](arkts-image-sendableimage-pixelmap-i.md)&gt; | A Promise instance used to return the new image pixelmap. If the operation fails, an error message is returned. |
 
 **Examples**
 
@@ -122,7 +122,7 @@ Obtains new pixelmap with alpha information.
 
 | Type | Description |
 | --- | --- |
-| PixelMap | return the new image pixelmap. If the operation fails, an error message is returned. |
+| [PixelMap](arkts-image-sendableimage-pixelmap-i.md) | return the new image pixelmap. If the operation fails, an error message is returned. |
 
 **Error codes:**
 
@@ -160,7 +160,7 @@ Crop the image. This method uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| region | image.Region | Yes | The region to crop. |
+| region | [image.Region](arkts-image-image-region-i.md) | Yes | The region to crop. |
 
 **Return value:**
 
@@ -206,7 +206,7 @@ Crop the image.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| region | image.Region | Yes | The region to crop. |
+| region | [image.Region](arkts-image-image-region-i.md) | Yes | The region to crop. |
 
 **Error codes:**
 
@@ -364,7 +364,7 @@ Get color space of pixelmap.
 
 | Type | Description |
 | --- | --- |
-| colorSpaceManager.ColorSpaceManager | If the operation fails, an error message is returned. |
+| [colorSpaceManager.ColorSpaceManager](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-colorspacemanager-colorspacemanager-i.md) | If the operation fails, an error message is returned. |
 
 **Error codes:**
 
@@ -541,7 +541,7 @@ Marshalling PixelMap and write into MessageSequence.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sequence | rpc.MessageSequence | Yes | rpc.MessageSequence parameter. |
+| sequence | [rpc.MessageSequence](../../apis-ipc-kit/arkts-apis/arkts-ipc-rpc-messagesequence-c.md) | Yes | rpc.MessageSequence parameter. |
 
 **Error codes:**
 
@@ -712,7 +712,7 @@ Reads image pixelmap data in an area. This method uses a promise to return the d
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| area | image.PositionArea | Yes | Area from which the image pixelmap data will be read. |
+| area | [image.PositionArea](arkts-image-image-positionarea-i.md) | Yes | Area from which the image pixelmap data will be read. |
 
 **Return value:**
 
@@ -762,7 +762,7 @@ Reads image pixelmap data in an area.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| area | image.PositionArea | Yes | Area from which the image pixelmap data will be read. |
+| area | [image.PositionArea](arkts-image-image-positionarea-i.md) | Yes | Area from which the image pixelmap data will be read. |
 
 **Error codes:**
 
@@ -909,60 +909,6 @@ async function Release(pixelMap: sendableImage.PixelMap) {
       console.error(`Failed to release pixelmap object. code is ${error.code}, message is ${error.message}`);
     })
   }
-}
-```
-
-```TypeScript
-import { sendableImage } from '@kit.ImageKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function Release(context : Context) {
-  const path: string = context.cacheDir + "/test.jpg";
-  const sendableImageSourceObj: sendableImage.ImageSource = sendableImage.createImageSource(path);
-  sendableImageSourceObj.release().then(() => {
-    console.info('Succeeded in releasing the image source instance.');
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to release the image source instance. code ${error.code}, message is ${error.message}`);
-  })
-}
-```
-
-```TypeScript
-import { sendableImage } from '@kit.ImageKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { image } from '@kit.ImageKit';
-
-async function Release() {
-  let size: image.Size = {
-    height: 8192,
-    width: 8
-  }
-  let receiver: sendableImage.ImageReceiver = sendableImage.createImageReceiver(size, image.ImageFormat.JPEG, 8);
-  let img = await receiver.readNextImage();
-  img.release().then(() => {
-    console.info('Succeeded in releasing an image.');
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to release an image. Code: ${error.code}, message: ${error.message}.`);
-  })
-}
-```
-
-```TypeScript
-import { sendableImage } from '@kit.ImageKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { image } from '@kit.ImageKit';
-
-async function Release() {
-  let size: image.Size = {
-    height: 8192,
-    width: 8
-  }
-  let receiver: sendableImage.ImageReceiver = sendableImage.createImageReceiver(size, image.ImageFormat.JPEG, 8);
-  receiver.release().then(() => {
-    console.info('Succeeded in releasing an image receiver.');
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to release an image receiver. Code: ${error.code}, message: ${error.message}.`);
-  })
 }
 ```
 
@@ -1157,7 +1103,7 @@ This method is only used to set the colorspace property of PixelMap, while all p
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| colorSpace | colorSpaceManager.ColorSpaceManager | Yes | The color space for pixelmap. |
+| colorSpace | [colorSpaceManager.ColorSpaceManager](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-colorspacemanager-colorspacemanager-i.md) | Yes | The color space for pixelmap. |
 
 **Error codes:**
 
@@ -1285,13 +1231,13 @@ Creates a PixelMap object based on MessageSequence parameter.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sequence | rpc.MessageSequence | Yes | rpc.MessageSequence parameter. |
+| sequence | [rpc.MessageSequence](../../apis-ipc-kit/arkts-apis/arkts-ipc-rpc-messagesequence-c.md) | Yes | rpc.MessageSequence parameter. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;PixelMap&gt; | A Promise instance used to return the PixelMap object. |
+| Promise&lt;[PixelMap](arkts-image-sendableimage-pixelmap-i.md)&gt; | A Promise instance used to return the PixelMap object. |
 
 **Error codes:**
 
@@ -1472,7 +1418,7 @@ Writes image pixelmap data to the specified area. This method uses a promise to 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| area | image.PositionArea | Yes | Area to which the image pixelmap data will be written. |
+| area | [image.PositionArea](arkts-image-image-positionarea-i.md) | Yes | Area to which the image pixelmap data will be written. |
 
 **Return value:**
 
@@ -1526,7 +1472,7 @@ Writes image pixelmap data to the specified area.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| area | image.PositionArea | Yes | Area to which the image pixelmap data will be written. |
+| area | [image.PositionArea](arkts-image-image-positionarea-i.md) | Yes | Area to which the image pixelmap data will be written. |
 
 **Error codes:**
 

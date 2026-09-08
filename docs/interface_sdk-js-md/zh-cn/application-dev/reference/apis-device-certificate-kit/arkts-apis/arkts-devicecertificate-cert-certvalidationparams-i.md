@@ -174,7 +174,7 @@ trustedCerts?: Array<X509Cert>
 
 信任证书列表。指定信任的根证书或中间CA证书，作为验证的信任锚点。最大个数：100。验证时，证书链须追溯至信任证书，必须设置此参数或将trustSystemCa设为true。
 
-**类型：** Array&lt;X509Cert&gt;
+**类型：** Array&lt;[X509Cert](arkts-devicecertificate-cert-x509cert-i.md)&gt;
 
 **起始版本：** 26.0.0
 
@@ -214,7 +214,7 @@ untrustedCerts?: Array<X509Cert>
 
 非信任证书列表。仅用于构建证书链的中间证书，不作为信任锚点。最大个数：100。
 
-**类型：** Array&lt;X509Cert&gt;
+**类型：** Array&lt;[X509Cert](arkts-devicecertificate-cert-x509cert-i.md)&gt;
 
 **起始版本：** 26.0.0
 

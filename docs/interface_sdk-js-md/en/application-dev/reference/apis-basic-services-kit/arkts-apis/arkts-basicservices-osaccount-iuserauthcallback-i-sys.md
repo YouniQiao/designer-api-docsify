@@ -71,7 +71,7 @@ Called to return the result code and authentication result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | result | number | Yes |  |
-| extraInfo | AuthResult | Yes |  |
+| extraInfo | [AuthResult](arkts-basicservices-appaccount-authresult-i.md) | Yes |  |
 
 **Examples**
 

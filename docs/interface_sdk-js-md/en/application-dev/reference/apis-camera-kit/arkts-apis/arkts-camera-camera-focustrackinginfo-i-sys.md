@@ -38,7 +38,7 @@ trackingRegion: Rect
 
 Tracking region.
 
-**Type:** Rect
+**Type:** [Rect](arkts-camera-camera-rect-i.md)
 
 **Since:** 15
 

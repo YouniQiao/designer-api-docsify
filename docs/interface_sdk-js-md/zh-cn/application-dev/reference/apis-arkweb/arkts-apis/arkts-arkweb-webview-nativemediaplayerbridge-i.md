@@ -26,10 +26,6 @@ enterFullscreen(): void
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
-**示例**
-
-完整示例代码参考[onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer)。
-
 ## exitFullscreen
 
 ```TypeScript
@@ -43,10 +39,6 @@ exitFullscreen(): void
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
-
-**示例**
-
-完整示例代码参考[onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer)。
 
 ## pause
 
@@ -62,88 +54,6 @@ pause(): void
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
-**示例**
-
-完整示例代码参考[onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer)。
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-  delegate: webview.WebDownloadDelegate = new webview.WebDownloadDelegate();
-  download: webview.WebDownloadItem = new webview.WebDownloadItem();
-  failedData: Uint8Array = new Uint8Array();
-
-  build() {
-    Column() {
-      Button('setDownloadDelegate')
-        .onClick(() => {
-          try {
-            this.delegate.onBeforeDownload((webDownloadItem: webview.WebDownloadItem) => {
-              console.info("will start a download.");
-              // 传入一个下载路径，并开始下载。
-              webDownloadItem.start("/data/storage/el2/base/cache/web/" + webDownloadItem.getSuggestedFileName());
-            })
-            this.delegate.onDownloadUpdated((webDownloadItem: webview.WebDownloadItem) => {
-              console.info("download update percent complete: " + webDownloadItem.getPercentComplete());
-              this.download = webDownloadItem;
-            })
-            this.delegate.onDownloadFailed((webDownloadItem: webview.WebDownloadItem) => {
-              console.error("download failed guid: " + webDownloadItem.getGuid());
-              // 序列化失败的下载到一个字节数组。
-              this.failedData = webDownloadItem.serialize();
-            })
-            this.delegate.onDownloadFinish((webDownloadItem: webview.WebDownloadItem) => {
-              console.info("download finish guid: " + webDownloadItem.getGuid());
-            })
-            this.controller.setDownloadDelegate(this.delegate);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Button('startDownload')
-        .onClick(() => {
-          try {
-            this.controller.startDownload('https://www.example.com');
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Button('resumeDownload')
-        .onClick(() => {
-          try {
-            webview.WebDownloadManager.resumeDownload(webview.WebDownloadItem.deserialize(this.failedData));
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Button('cancel')
-        .onClick(() => {
-          try {
-            this.download.cancel();
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Button('pause')
-        .onClick(() => {
-          try {
-            this.download.pause();
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
 ## play
 
 ```TypeScript
@@ -157,10 +67,6 @@ play(): void
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
-
-**示例**
-
-完整示例代码参考[onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer)。
 
 ## release
 
@@ -176,10 +82,6 @@ release(): void
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
-**示例**
-
-完整示例代码参考[onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer)。
-
 ## resumePlayer
 
 ```TypeScript
@@ -191,10 +93,6 @@ resumePlayer?(): void
 **起始版本：** 12
 
 **系统能力：** SystemCapability.Web.Webview.Core
-
-**示例**
-
-完整示例代码参考[onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer)。
 
 ## seek
 
@@ -216,10 +114,6 @@ seek(targetTime: number): void
 | --- | --- | --- | --- |
 | targetTime | number | 是 | 播放跳转到的时间点，从媒体开始播放时计算。单位：秒。 |
 
-**示例**
-
-完整示例代码参考[onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer)。
-
 ## setMuted
 
 ```TypeScript
@@ -239,10 +133,6 @@ setMuted(muted: boolean): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | muted | boolean | 是 | 是否静音。true表示静音，false表示未静音。 |
-
-**示例**
-
-完整示例代码参考[onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer)。
 
 ## setPlaybackRate
 
@@ -264,10 +154,6 @@ setPlaybackRate(playbackRate: number): void
 | --- | --- | --- | --- |
 | playbackRate | number | 是 | 播放速率。取值范围：[0, 10.0]，其中1表示原速播放。超出取值范围时，按边界值自动修正。 |
 
-**示例**
-
-完整示例代码参考[onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer)。
-
 ## setVolume
 
 ```TypeScript
@@ -288,10 +174,6 @@ setVolume(volume: number): void
 | --- | --- | --- | --- |
 | volume | number | 是 | 播放器的音量。取值范围：[0, 1.0]，其中0表示静音，1.0表示最大音量。超出取值范围时，按边界值自动修正。 |
 
-**示例**
-
-完整示例代码参考[onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer)。
-
 ## suspendPlayer
 
 ```TypeScript
@@ -309,10 +191,6 @@ suspendPlayer?(type: SuspendType): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | [SuspendType](arkts-arkweb-webview-suspendtype-e.md) | 是 | 播放器挂起类型，用于指定播放器挂起的方式。不同 SuspendType 取值对应不同的挂起场景。 |
-
-**示例**
-
-完整示例代码参考[onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer)。
 
 ## updateRect
 
@@ -336,7 +214,3 @@ updateRect(x: number, y: number, width: number, height: number): void
 | y | number | 是 | surface相对于Web组件的y坐标信息。单位：px。 |
 | width | number | 是 | surface的宽度。单位：px。 |
 | height | number | 是 | surface的高度。单位：px。 |
-
-**示例**
-
-完整示例代码参考[onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer)。

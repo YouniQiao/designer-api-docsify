@@ -20,7 +20,7 @@ alignment: TextAlign
 
 Text alignment method after the tab character in a paragraph. It supports the LEFT (left alignment), RIGHT (right alignment), and CENTER (center alignment) alignment methods of [TextAlign](arkts-arkgraphics2d-text-textalign-e.md). Unlisted enum values are treated as left alignment, with left alignment as the default.
 
-**Type:** TextAlign
+**Type:** [TextAlign](arkts-arkgraphics2d-text-textalign-e.md)
 
 **Since:** 18
 
@@ -43,7 +43,3 @@ Alignment position of the text following the tab character. The value is a float
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 **System capability:** SystemCapability.Graphics.Drawing
-
-**Examples**
-
-alignment is CENTER, location is 200, and the text is "12/t345".

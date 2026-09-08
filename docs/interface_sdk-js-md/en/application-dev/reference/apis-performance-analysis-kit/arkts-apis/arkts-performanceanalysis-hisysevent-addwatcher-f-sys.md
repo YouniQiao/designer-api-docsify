@@ -26,7 +26,7 @@ Adds a watcher for event subscription.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| watcher | Watcher | Yes | Watcher for event subscription. |
+| watcher | [Watcher](arkts-performanceanalysis-hiappevent-watcher-i.md) | Yes | Watcher for event subscription. |
 
 **Error codes:**
 

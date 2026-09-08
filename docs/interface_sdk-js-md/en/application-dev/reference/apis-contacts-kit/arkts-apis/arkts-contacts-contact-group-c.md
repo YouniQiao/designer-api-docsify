@@ -43,16 +43,3 @@ Name of a contact group.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Applications.ContactsData
-
-**Examples**
-
-Creates data in JSON format.
-
-```TypeScript
-import { contact } from '@kit.ContactsKit';
-
-let group: contact.Group = {
-    groupId: 1,
-    title: 'title'
-};
-```

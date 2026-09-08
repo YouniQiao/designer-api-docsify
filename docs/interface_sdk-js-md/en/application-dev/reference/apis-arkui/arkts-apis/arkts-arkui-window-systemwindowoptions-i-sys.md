@@ -22,7 +22,7 @@ windowType: WindowType
 
 Window type. There is no default value. If null is passed in, the window fails to be created. **TYPE_DIALOG** is not supported.
 
-**Type:** WindowType
+**Type:** [WindowType](arkts-arkui-window-windowtype-e.md)
 
 **Since:** 14
 

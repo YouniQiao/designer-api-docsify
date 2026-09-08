@@ -622,7 +622,7 @@ getVolumeInUnitOfDb(volumeType: AudioVolumeType, volumeLevel: number, device: De
 | --- | --- | --- | --- |
 | volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | 是 | 音量类型。 |
 | volumeLevel | number | 是 | 要设置的音量级别。 |
-| device | DeviceType | 是 | 输出设备类型。 |
+| device | [DeviceType](arkts-audio-audio-devicetype-e.md) | 是 | 输出设备类型。 |
 
 **返回值：**
 

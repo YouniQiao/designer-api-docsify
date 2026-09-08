@@ -26,9 +26,9 @@ function triggerSystemLiveView(bundle: BundleOption, notificationId: number, but
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| bundle | BundleOption | 是 | 指定应用的包信息。 |
+| bundle | [BundleOption](arkts-notification-notificationmanager-bundleoption-t.md) | 是 | 指定应用的包信息。 |
 | notificationId | number | 是 | 通知ID。 |
-| buttonOptions | ButtonOptions | 是 | 按钮信息。 |
+| buttonOptions | [ButtonOptions](arkts-notification-notificationmanager-buttonoptions-i-sys.md) | 是 | 按钮信息。 |
 
 **返回值：**
 

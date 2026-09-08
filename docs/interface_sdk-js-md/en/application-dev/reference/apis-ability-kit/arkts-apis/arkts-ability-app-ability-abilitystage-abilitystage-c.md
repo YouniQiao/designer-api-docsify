@@ -283,7 +283,7 @@ This API returns the result synchronously and does not support asynchronous call
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| level | AbilityConstant.MemoryLevel | Yes | Memory level that indicates the memory usage status. When the specified memory level is reached, a callback will be invoked and the system will start adjustment.   **NOTE：**The trigger conditions may differ across various devices. For example, on a standard device with 12 GB of memory: - A callback with value 0 is triggered when available memory drops between 1700 MB and 1800 MB. - A callback with value 1 is triggered when available memory drops between 1600 MB and 1700 MB. - A callback with value 2 is triggered when available memory falls below 1600 MB. |
+| level | [AbilityConstant.MemoryLevel](arkts-ability-abilityconstant-memorylevel-e.md) | Yes | Memory level that indicates the memory usage status. When the specified memory level is reached, a callback will be invoked and the system will start adjustment.   **NOTE：**The trigger conditions may differ across various devices. For example, on a standard device with 12 GB of memory: - A callback with value 0 is triggered when available memory drops between 1700 MB and 1800 MB. - A callback with value 1 is triggered when available memory drops between 1600 MB and 1700 MB. - A callback with value 2 is triggered when available memory falls below 1600 MB. |
 
 **Examples**
 
@@ -437,7 +437,7 @@ Called when the application is closed by the user, allowing the user to choose b
 
 | Type | Description |
 | --- | --- |
-| AbilityConstant.PrepareTermination | The user's choice. |
+| [AbilityConstant.PrepareTermination](arkts-ability-abilityconstant-preparetermination-e.md) | The user's choice. |
 
 **Examples**
 
@@ -483,7 +483,7 @@ Called when the application is closed by the user, allowing the user to choose b
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;AbilityConstant.PrepareTermination&gt; | Promise used to return the user's choice. |
+| Promise&lt;[AbilityConstant.PrepareTermination](arkts-ability-abilityconstant-preparetermination-e.md)&gt; | Promise used to return the user's choice. |
 
 **Examples**
 

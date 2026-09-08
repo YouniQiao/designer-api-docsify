@@ -33,10 +33,3 @@ Creates a stream based on the file path. This API returns the result synchronous
 | Type | Description |
 | --- | --- |
 | [Stream](arkts-corefile-fileio-stream-depr-i.md) | File stream. |
-
-**Examples**
-
-```TypeScript
-let filePath = pathDir + "/test.txt";
-let ss = fileio.createStreamSync(filePath, "r+");
-```

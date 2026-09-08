@@ -154,10 +154,10 @@ import { notificationManager } from '@kit.NotificationKit';
 | [isSmartReminderEnabled](arkts-notification-notificationmanager-issmartreminderenabled-f-sys.md) | Obtains a smart reminder for cross-device collaboration. This API uses a promise to return the result. |
 | [isSupportDoNotDisturbMode](arkts-notification-notificationmanager-issupportdonotdisturbmode-f-sys.md) | Checks whether DND mode is supported. This API uses an asynchronous callback to return the result. |
 | [isSupportDoNotDisturbMode](arkts-notification-notificationmanager-issupportdonotdisturbmode-f-sys.md) | Checks whether DND mode is supported. This API uses a promise to return the result. |
-| off | Unsubscribes from notification events. |
+| [off](arkts-notification-notificationmanager-off-f-sys.md) | Unsubscribes from notification events. |
 | [offBadgeNumberQuery](arkts-notification-notificationmanager-offbadgenumberquery-f-sys.md) | Unregisters the callback for querying the number of application badges. |
-| on | Subscribes to notification events. The notification service sends the notification information in the callback to the verification program. The verification program returns the verification result to determine whether to publish the notification, for example, controlling the publication frequency of marketing notifications. |
-| on | Subscribes to notification events. The notification service sends the notification information in the callback to the verification program. The verification program returns the verification result to determine whether to publish the notification, for example, controlling the publication frequency of marketing notifications. This API uses a promise to return the result. |
+| [on](arkts-notification-notificationmanager-on-f-sys.md) | Subscribes to notification events. The notification service sends the notification information in the callback to the verification program. The verification program returns the verification result to determine whether to publish the notification, for example, controlling the publication frequency of marketing notifications. |
+| [on](arkts-notification-notificationmanager-on-f-sys.md) | Subscribes to notification events. The notification service sends the notification information in the callback to the verification program. The verification program returns the verification result to determine whether to publish the notification, for example, controlling the publication frequency of marketing notifications. This API uses a promise to return the result. |
 | [onBadgeNumberQuery](arkts-notification-notificationmanager-onbadgenumberquery-f-sys.md) | Registers a callback for querying the number of application badges. |
 | [publish](arkts-notification-notificationmanager-publish-f-sys.md) | Publishes a notification to a specified user. This API uses an asynchronous callback to return the result. |
 | [publish](arkts-notification-notificationmanager-publish-f-sys.md) | Publishes a notification to a specified user. This API uses a promise to return the result. |
@@ -271,7 +271,7 @@ import { notificationManager } from '@kit.NotificationKit';
 | [NotificationButton](arkts-notification-notificationmanager-notificationbutton-t.md) | Describes the notification button. |
 | [NotificationCapsule](arkts-notification-notificationmanager-notificationcapsule-t.md) | Describes the notification capsule. |
 | [NotificationContent](arkts-notification-notificationmanager-notificationcontent-t.md) | Describes the notification content. |
-| [NotificationLongTextContent](arkts-notification-notificationmanager-notificationlongtextcontent-t.md) | Describes the number text notification. |
+| [NotificationLongTextContent](arkts-notification-notificationmanager-notificationlongtextcontent-t.md) | Describes the long text notification. |
 | [NotificationMultiLineContent](arkts-notification-notificationmanager-notificationmultilinecontent-t.md) | Describes the multi-line text notification. |
 | [NotificationParameters](arkts-notification-notificationmanager-notificationparameters-t.md) | Describes partial information about the **wantAgent** in the notification request. |
 | [NotificationPictureContent](arkts-notification-notificationmanager-notificationpicturecontent-t.md) | Describes the picture-attached notification. |

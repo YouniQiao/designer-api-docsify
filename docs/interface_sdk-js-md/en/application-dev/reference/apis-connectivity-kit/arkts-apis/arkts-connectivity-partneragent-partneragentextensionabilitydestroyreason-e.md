@@ -2,7 +2,7 @@
 
 The enum of reasons for destroying partner agent extension ability.
 
-@enum { number }
+@enum { int }
 
 **Since:** 23
 

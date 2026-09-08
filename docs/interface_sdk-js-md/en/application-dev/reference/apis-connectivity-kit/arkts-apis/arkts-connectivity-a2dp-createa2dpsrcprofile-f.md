@@ -22,7 +22,7 @@ create the instance of a2dp profile.
 
 | Type | Description |
 | --- | --- |
-| A2dpSourceProfile | Returns the instance of profile. |
+| [A2dpSourceProfile](arkts-connectivity-a2dp-a2dpsourceprofile-i.md) | Returns the instance of profile. |
 
 **Error codes:**
 

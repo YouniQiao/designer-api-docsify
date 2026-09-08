@@ -31,7 +31,7 @@ A constructor used to create a text line height style.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| lineHeight | LengthMetrics | Yes | Text line height options. If **value** of **LengthMetrics** is less than or equal to 0, the text line height is unlimited and automatically adapts to the font size. |
+| lineHeight | [LengthMetrics](arkts-arkui-lengthmetrics-t.md) | Yes | Text line height options. If **value** of **LengthMetrics** is less than or equal to 0, the text line height is unlimited and automatically adapts to the font size. |
 
 ## constructor
 
@@ -66,7 +66,7 @@ A constructor used to create a text line height and multiple.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| lineHeight | LengthMetrics | Yes | Text line height options. If **value** of **LengthMetrics** is less than or equal to 0, the text line height is unlimited and automatically adapts to the font size. |
+| lineHeight | [LengthMetrics](arkts-arkui-lengthmetrics-t.md) | Yes | Text line height options. If **value** of **LengthMetrics** is less than or equal to 0, the text line height is unlimited and automatically adapts to the font size. |
 | lineHeightMultiple | number | No | Multiplier for the text line height.Value range: 0, +∞). Decimals are supported. |
 
 ## lineHeight

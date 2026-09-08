@@ -37,13 +37,13 @@ Matrix的叠加函数，可以为当前矩阵增加另一个矩阵的叠加效�
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | Matrix4Transit | 是 | 待叠加的矩阵对象，其变换效果将与当前矩阵进行叠加（矩阵相乘），生成新的变换矩阵。 |
+| options | [Matrix4Transit](arkts-arkui-matrix4-matrix4transit-i.md) | 是 | 待叠加的矩阵对象，其变换效果将与当前矩阵进行叠加（矩阵相乘），生成新的变换矩阵。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Matrix4Transit | 矩阵叠加后的对象。 |
+| [Matrix4Transit](arkts-arkui-matrix4-matrix4transit-i.md) | 矩阵叠加后的对象。 |
 
 **示例**
 
@@ -95,7 +95,7 @@ Matrix的拷贝函数，可以拷贝一份当前的矩阵对象。
 
 | 类型 | 说明 |
 | --- | --- |
-| Matrix4Transit | 当前矩阵的拷贝对象。 |
+| [Matrix4Transit](arkts-arkui-matrix4-matrix4transit-i.md) | 当前矩阵的拷贝对象。 |
 
 **示例**
 
@@ -134,36 +134,6 @@ struct Test {
 }
 ```
 
-```TypeScript
-// xxx.ets
-import { matrix4 } from '@kit.ArkUI';
-
-let matrix1 = matrix4.identity().translate({ x: 100 });
-// 对matrix1的拷贝矩阵做scale操作，不影响到matrix1
-let matrix2 = matrix1.copy().scale({ x: 2 });
-
-@Entry
-@Component
-struct Test {
-
-  build() {
-    Column() {
-      // $r("app.media.bg1")需要替换为开发者所需的图像资源文件。
-      Image($r("app.media.bg1"))
-        .width('40%')
-        .height(100)
-        .transform(matrix1)
-      // $r("app.media.bg2")需要替换为开发者所需的图像资源文件。
-      Image($r("app.media.bg2"))
-        .width("40%")
-        .height(100)
-        .margin({ top: 50 })
-        .transform(matrix2)
-    }
-  }
-}
-```
-
 ## invert
 
 ```TypeScript
@@ -182,7 +152,7 @@ Matrix的逆函数，会改变调用该函数的原始矩阵，将其变换为�
 
 | 类型 | 说明 |
 | --- | --- |
-| Matrix4Transit | 当前矩阵的逆矩阵对象。 |
+| [Matrix4Transit](arkts-arkui-matrix4-matrix4transit-i.md) | 当前矩阵的逆矩阵对象。 |
 
 **示例**
 
@@ -239,7 +209,7 @@ Matrix的旋转函数，可以为当前矩阵增加x轴/y轴/z轴旋转效果。
 
 | 类型 | 说明 |
 | --- | --- |
-| Matrix4Transit | 旋转效果后的矩阵对象。 |
+| [Matrix4Transit](arkts-arkui-matrix4-matrix4transit-i.md) | 旋转效果后的矩阵对象。 |
 
 **示例**
 
@@ -293,7 +263,7 @@ Matrix的缩放函数，可以为当前矩阵增加x轴/y轴/z轴缩放效果。
 
 | 类型 | 说明 |
 | --- | --- |
-| Matrix4Transit | 缩放效果后的矩阵对象。 |
+| [Matrix4Transit](arkts-arkui-matrix4-matrix4transit-i.md) | 缩放效果后的矩阵对象。 |
 
 **示例**
 
@@ -350,7 +320,7 @@ setPolyToPoly(options: PolyToPolyOptions): Matrix4Transit
 
 | 类型 | 说明 |
 | --- | --- |
-| Matrix4Transit | 当前矩阵变换后的对象。 |
+| [Matrix4Transit](arkts-arkui-matrix4-matrix4transit-i.md) | 当前矩阵变换后的对象。 |
 
 **示例**
 
@@ -408,7 +378,7 @@ Matrix的倾斜函数，可以为当前矩阵增加x轴/y轴倾斜效果。会�
 
 | 类型 | 说明 |
 | --- | --- |
-| Matrix4Transit | 倾斜效果后的矩阵对象。 |
+| [Matrix4Transit](arkts-arkui-matrix4-matrix4transit-i.md) | 倾斜效果后的矩阵对象。 |
 
 **示例**
 
@@ -523,7 +493,7 @@ Matrix的平移函数，可以为当前矩阵增加x轴/y轴/z轴平移效果。
 
 | 类型 | 说明 |
 | --- | --- |
-| Matrix4Transit | 平移效果后的矩阵对象。 |
+| [Matrix4Transit](arkts-arkui-matrix4-matrix4transit-i.md) | 平移效果后的矩阵对象。 |
 
 **示例**
 

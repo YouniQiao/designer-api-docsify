@@ -169,20 +169,6 @@ Gets the output volume for audio loopback.
 | --- | --- |
 | number | Current audio loopback output volume value. |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let value: number = audioRenderer.getVolume();
-  console.info(`Indicate that the volume is obtained ${value}.`);
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`Failed to obtain the volume, error ${error}.`);
-}
-```
-
 ## off('statusChange')
 
 ```TypeScript
@@ -322,15 +308,3 @@ Sets the volume for audio loopback. This volume does not affect other audio stre
 | Error Code ID | Error Message |
 | --- | --- |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed, from 0.0 to 1.0. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioRenderer.setVolume(0.5).then(() => {
-  console.info('setVolume Success!');
-}).catch((err: BusinessError) => {
-  console.error(`setVolume Fail: ${err}`);
-});
-```

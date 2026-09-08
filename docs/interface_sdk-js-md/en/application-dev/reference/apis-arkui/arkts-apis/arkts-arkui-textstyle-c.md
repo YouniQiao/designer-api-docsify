@@ -119,7 +119,7 @@ readonly fontStyle?: FontStyle
 
 Font style of the styled string.
 
-**Type:** FontStyle
+**Type:** [FontStyle](arkts-arkui-fontstyle-e.md)
 
 **Since:** 12
 
@@ -141,7 +141,7 @@ Default value: **undefined**, indicating that variable font attributes are not s
 
 **Since**: 26.0.0
 
-**Type:** Array&lt;FontVariation&gt;
+**Type:** Array&lt;[FontVariation](arkts-arkui-fontvariation-t.md)&gt;
 
 **Since:** 26.0.0
 

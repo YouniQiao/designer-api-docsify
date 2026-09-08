@@ -132,7 +132,7 @@ eapMethod: EapMethod
 
 AP认证方式。
 
-**类型：** EapMethod
+**类型：** [EapMethod](arkts-network-eap-eapmethod-e.md)
 
 **起始版本：** 20
 
@@ -188,7 +188,7 @@ phase2Method: Phase2Method
 
 第二阶段认证方式。
 
-**类型：** Phase2Method
+**类型：** [Phase2Method](arkts-network-eap-phase2method-e.md)
 
 **起始版本：** 20
 

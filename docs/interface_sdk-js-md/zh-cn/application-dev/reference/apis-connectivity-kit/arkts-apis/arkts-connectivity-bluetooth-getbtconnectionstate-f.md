@@ -30,7 +30,7 @@ function getBtConnectionState(): ProfileConnectionState
 
 | 类型 | 说明 |
 | --- | --- |
-| ProfileConnectionState | 表示蓝牙设备的Profile连接状态。 |
+| [ProfileConnectionState](arkts-connectivity-bluetooth-profileconnectionstate-e.md) | 表示蓝牙设备的Profile连接状态。 |
 
 **示例**
 

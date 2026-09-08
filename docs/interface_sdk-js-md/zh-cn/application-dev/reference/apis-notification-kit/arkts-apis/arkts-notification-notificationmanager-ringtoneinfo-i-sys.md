@@ -54,7 +54,7 @@ ringtoneType: RingtoneType
 
 铃声的类型。
 
-**类型：** RingtoneType
+**类型：** [RingtoneType](arkts-notification-notificationmanager-ringtonetype-e-sys.md)
 
 **起始版本：** 21
 

@@ -20,7 +20,7 @@ devices: Array<DeviceInfo>
 
 Arrays of device information
 
-**Type:** Array&lt;DeviceInfo&gt;
+**Type:** Array&lt;[DeviceInfo](arkts-avsession-avsession-deviceinfo-i.md)&gt;
 
 **Since:** 10
 

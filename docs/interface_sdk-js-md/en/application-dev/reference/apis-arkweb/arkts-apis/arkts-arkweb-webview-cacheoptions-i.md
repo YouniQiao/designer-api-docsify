@@ -20,7 +20,7 @@ responseHeaders: Array<WebHeader>
 
 Response headers returned by the server when requesting this JavaScript file. ETag or Last-Modified is used to identify the file version and determine whether an update is needed.
 
-**Type:** Array&lt;WebHeader&gt;
+**Type:** Array&lt;[WebHeader](arkts-arkweb-webview-webheader-i.md)&gt;
 
 **Since:** 12
 

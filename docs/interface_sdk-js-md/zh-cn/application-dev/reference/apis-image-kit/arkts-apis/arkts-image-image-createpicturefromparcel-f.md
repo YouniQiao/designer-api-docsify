@@ -24,7 +24,7 @@ function createPictureFromParcel(sequence: rpc.MessageSequence): Picture
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| sequence | rpc.MessageSequence | 是 | 保存有Picture信息的MessageSequence。 |
+| sequence | [rpc.MessageSequence](../../apis-ipc-kit/arkts-apis/arkts-ipc-rpc-messagesequence-c.md) | 是 | 保存有Picture信息的MessageSequence。 |
 
 **返回值：**
 

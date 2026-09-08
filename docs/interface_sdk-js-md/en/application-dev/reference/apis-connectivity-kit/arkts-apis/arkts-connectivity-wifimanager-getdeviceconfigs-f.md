@@ -24,7 +24,7 @@ Obtain the list of all existed Wi-Fi configurations.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;WifiDeviceConfig&gt; | Returns the list of all existing Wi-Fi configurations you created on your application. |
+| Array&lt;[WifiDeviceConfig](arkts-connectivity-wifimanager-wifideviceconfig-i.md)&gt; | Returns the list of all existing Wi-Fi configurations you created on your application. |
 
 **Error codes:**
 

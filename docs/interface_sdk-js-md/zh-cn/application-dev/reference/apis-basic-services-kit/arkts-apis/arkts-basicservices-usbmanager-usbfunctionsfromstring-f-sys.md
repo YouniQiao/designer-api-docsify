@@ -41,12 +41,3 @@ function usbFunctionsFromString(funcs: string): number
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:  1.Mandatory parameters are left unspecified.  2.Incorrect parameter types. |
-
-**示例**
-
-```TypeScript
-// 定义USB功能字符串
-let funcs: string = 'acm';
-// 将字符串转化为数字掩码
-let ret: number = usbManager.usbFunctionsFromString(funcs);
-```

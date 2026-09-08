@@ -41,22 +41,6 @@ function partition(diskId: string, type: number, callback: AsyncCallback<void>):
 | 13600008 | No such object. |
 | 13900042 | Unknown error. |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-// diskId可通过getAllDisks()接口获取
-let diskId: string = "";
-let type: number = 0;
-volumeManager.partition(diskId, type, (error: BusinessError) => {
-  if (error) {
-    console.error(`partition failed, code is: ${error.code}, message is: ${error.message}`);
-    return;
-  }
-  // 对磁盘设备分区成功后的回调
-});
-```
-
 
 ## partition
 
@@ -97,17 +81,3 @@ function partition(diskId: string, type: number): Promise<void>
 | 13600001 | IPC error. |
 | 13600008 | No such object. |
 | 13900042 | Unknown error. |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-// diskId可通过getAllDisks()接口获取
-let diskId: string = "";
-let type: number = 0;
-volumeManager.partition(diskId, type).then(() => {
-  console.info("partition successfully");
-}).catch((error: BusinessError) => {
-  console.error(`Failed to partition. Code: ${error.code}, message: ${error.message}`);
-});
-```

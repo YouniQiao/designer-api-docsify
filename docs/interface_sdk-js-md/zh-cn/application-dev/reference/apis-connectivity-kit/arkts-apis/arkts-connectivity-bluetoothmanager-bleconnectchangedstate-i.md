@@ -44,7 +44,7 @@ state: ProfileConnectionState
 
 表示BLE连接状态的枚举。
 
-**类型：** ProfileConnectionState
+**类型：** [ProfileConnectionState](arkts-connectivity-bluetoothmanager-profileconnectionstate-e.md)
 
 **起始版本：** 9
 

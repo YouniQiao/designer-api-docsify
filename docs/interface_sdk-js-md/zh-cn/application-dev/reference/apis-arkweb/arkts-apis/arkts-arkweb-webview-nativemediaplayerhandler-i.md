@@ -32,10 +32,6 @@ handleBufferedEndTimeChanged(bufferedEndTime: number): void
 | --- | --- | --- | --- |
 | bufferedEndTime | number | 是 | 媒体缓冲的时长。单位：秒，取值范围：[0, duration]。超出范围时，ArkWeb 内核将不会执行。 |
 
-**示例**
-
-完整示例代码参考[onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer)。
-
 ## handleDurationChanged
 
 ```TypeScript
@@ -56,10 +52,6 @@ handleDurationChanged(duration: number): void
 | --- | --- | --- | --- |
 | duration | number | 是 | 媒体的总时长。单位：秒，取值范围：[0, +∞)。传入负数时，ArkWeb 内核将不会执行。 |
 
-**示例**
-
-完整示例代码参考[onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer)。
-
 ## handleEnded
 
 ```TypeScript
@@ -73,10 +65,6 @@ handleEnded(): void
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
-
-**示例**
-
-完整示例代码参考[onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer)。
 
 ## handleError
 
@@ -99,10 +87,6 @@ handleError(error: MediaError, errorMessage: string): void
 | error | [MediaError](arkts-arkweb-webview-mediaerror-e.md) | 是 | 错误类型。 |
 | errorMessage | string | 是 | 错误的详细描述。 |
 
-**示例**
-
-完整示例代码参考[onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer)。
-
 ## handleFullscreenChanged
 
 ```TypeScript
@@ -122,10 +106,6 @@ handleFullscreenChanged(fullscreen: boolean): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | fullscreen | boolean | 是 | 是否全屏。true表示全屏，false表示未全屏。 |
-
-**示例**
-
-完整示例代码参考[onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer)。
 
 ## handleMutedChanged
 
@@ -147,10 +127,6 @@ handleMutedChanged(muted: boolean): void
 | --- | --- | --- | --- |
 | muted | boolean | 是 | 当前播放器是否静音。true表示当前播放器静音，false表示当前播放器未静音。 |
 
-**示例**
-
-完整示例代码参考[onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer)。
-
 ## handleNetworkStateChanged
 
 ```TypeScript
@@ -169,11 +145,7 @@ handleNetworkStateChanged(state: NetworkState): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| state | NetworkState | 是 | 播放器的网络状态。 |
-
-**示例**
-
-完整示例代码参考[onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer)。
+| state | [NetworkState](arkts-arkweb-webview-networkstate-e.md) | 是 | 播放器的网络状态。 |
 
 ## handlePlaybackRateChanged
 
@@ -195,10 +167,6 @@ handlePlaybackRateChanged(playbackRate: number): void
 | --- | --- | --- | --- |
 | playbackRate | number | 是 | 播放速率，取值范围：[0, +∞)。传入负数时，ArkWeb 内核将不会执行。 |
 
-**示例**
-
-完整示例代码参考[onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer)。
-
 ## handleReadyStateChanged
 
 ```TypeScript
@@ -219,10 +187,6 @@ handleReadyStateChanged(state: ReadyState): void
 | --- | --- | --- | --- |
 | state | [ReadyState](arkts-arkweb-webview-readystate-e.md) | 是 | 播放器的缓存状态。 |
 
-**示例**
-
-完整示例代码参考[onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer)。
-
 ## handleSeekFinished
 
 ```TypeScript
@@ -237,10 +201,6 @@ handleSeekFinished(): void
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
-**示例**
-
-完整示例代码参考[onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer)。
-
 ## handleSeeking
 
 ```TypeScript
@@ -254,10 +214,6 @@ handleSeeking(): void
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
-
-**示例**
-
-完整示例代码参考[onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer)。
 
 ## handleStatusChanged
 
@@ -279,10 +235,6 @@ handleStatusChanged(status: PlaybackStatus): void
 | --- | --- | --- | --- |
 | status | [PlaybackStatus](arkts-arkweb-webview-playbackstatus-e.md) | 是 | 播放器的播放状态。 |
 
-**示例**
-
-完整示例代码参考[onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer)。
-
 ## handleTimeUpdate
 
 ```TypeScript
@@ -302,10 +254,6 @@ handleTimeUpdate(currentPlayTime: number): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | currentPlayTime | number | 是 | 当前播放时间。单位：秒，取值范围：[0, duration]。超出范围时，ArkWeb 内核将不会执行。 |
-
-**示例**
-
-完整示例代码参考[onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer)。
 
 ## handleVideoSizeChanged
 
@@ -328,10 +276,6 @@ handleVideoSizeChanged(width: number, height: number): void
 | width | number | 是 | 视频的宽，单位：像素，取值范围：[0, +∞)。传入负数时，ArkWeb 内核将忽略该值。 |
 | height | number | 是 | 视频的高，单位：像素，取值范围：[0, +∞)。传入负数时，ArkWeb 内核将忽略该值。 |
 
-**示例**
-
-完整示例代码参考[onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer)。
-
 ## handleVolumeChanged
 
 ```TypeScript
@@ -351,7 +295,3 @@ handleVolumeChanged(volume: number): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | volume | number | 是 | 播放器的音量，取值范围：[0, 1.0]。超出范围时，ArkWeb 内核将不会执行。 |
-
-**示例**
-
-完整示例代码参考[onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer)。

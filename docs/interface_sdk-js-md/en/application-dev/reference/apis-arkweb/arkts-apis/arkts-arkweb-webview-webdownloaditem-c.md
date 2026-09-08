@@ -34,78 +34,6 @@ Cancels the download task.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-  delegate: webview.WebDownloadDelegate = new webview.WebDownloadDelegate();
-  download: webview.WebDownloadItem = new webview.WebDownloadItem();
-  failedData: Uint8Array = new Uint8Array();
-
-  build() {
-    Column() {
-      Button('setDownloadDelegate')
-        .onClick(() => {
-          try {
-            this.delegate.onBeforeDownload((webDownloadItem: webview.WebDownloadItem) => {
-              console.info("will start a download.");
-              // Pass in a download path and start the download.
-              webDownloadItem.start("/data/storage/el2/base/cache/web/" + webDownloadItem.getSuggestedFileName());
-            })
-            this.delegate.onDownloadUpdated((webDownloadItem: webview.WebDownloadItem) => {
-              console.info("download update percent complete: " + webDownloadItem.getPercentComplete());
-              this.download = webDownloadItem;
-            })
-            this.delegate.onDownloadFailed((webDownloadItem: webview.WebDownloadItem) => {
-              console.error("download failed guid: " + webDownloadItem.getGuid());
-              // Serialize the failed download to a byte array.
-              this.failedData = webDownloadItem.serialize();
-            })
-            this.delegate.onDownloadFinish((webDownloadItem: webview.WebDownloadItem) => {
-              console.info("download finish guid: " + webDownloadItem.getGuid());
-            })
-            this.controller.setDownloadDelegate(this.delegate);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Button('startDownload')
-        .onClick(() => {
-          try {
-            this.controller.startDownload('https://www.example.com');
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Button('resumeDownload')
-        .onClick(() => {
-          try {
-            webview.WebDownloadManager.resumeDownload(webview.WebDownloadItem.deserialize(this.failedData));
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Button('cancel')
-        .onClick(() => {
-          try {
-            this.download.cancel();
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
 ## deserialize
 
 ```TypeScript
@@ -138,68 +66,6 @@ Deserializes the serialized byte array into a **WebDownloadItem** object.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types.  2. Parameter verification failed. |
 
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-  delegate: webview.WebDownloadDelegate = new webview.WebDownloadDelegate();
-  failedData: Uint8Array = new Uint8Array();
-
-  build() {
-    Column() {
-      Button('setDownloadDelegate')
-        .onClick(() => {
-          try {
-            this.delegate.onBeforeDownload((webDownloadItem: webview.WebDownloadItem) => {
-              console.info("will start a download.");
-              // Pass in a download path and start the download.
-              webDownloadItem.start("/data/storage/el2/base/cache/web/" + webDownloadItem.getSuggestedFileName());
-            })
-            this.delegate.onDownloadUpdated((webDownloadItem: webview.WebDownloadItem) => {
-              console.info("download update percent complete: " + webDownloadItem.getPercentComplete());
-            })
-            this.delegate.onDownloadFailed((webDownloadItem: webview.WebDownloadItem) => {
-              console.error("download failed guid: " + webDownloadItem.getGuid());
-              // Serialize the failed download to a byte array.
-              this.failedData = webDownloadItem.serialize();
-            })
-            this.delegate.onDownloadFinish((webDownloadItem: webview.WebDownloadItem) => {
-              console.info("download finish guid: " + webDownloadItem.getGuid());
-            })
-            this.controller.setDownloadDelegate(this.delegate);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Button('startDownload')
-        .onClick(() => {
-          try {
-            this.controller.startDownload('https://www.example.com');
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Button('resumeDownload')
-        .onClick(() => {
-          try {
-            webview.WebDownloadManager.resumeDownload(webview.WebDownloadItem.deserialize(this.failedData));
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
 ## getCurrentSpeed
 
 ```TypeScript
@@ -219,57 +85,6 @@ Obtains the download speed, in bytes per second.
 | Type | Description |
 | --- | --- |
 | number | Download speed, in bytes per second. |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-  delegate: webview.WebDownloadDelegate = new webview.WebDownloadDelegate();
-
-  build() {
-    Column() {
-      Button('setDownloadDelegate')
-        .onClick(() => {
-          try {
-            this.delegate.onBeforeDownload((webDownloadItem: webview.WebDownloadItem) => {
-              console.info("will start a download.");
-              // Pass in a download path and start the download.
-              webDownloadItem.start("/data/storage/el2/base/cache/web/" + webDownloadItem.getSuggestedFileName());
-            })
-            this.delegate.onDownloadUpdated((webDownloadItem: webview.WebDownloadItem) => {
-              console.info("download update current speed: " + webDownloadItem.getCurrentSpeed());
-            })
-            this.delegate.onDownloadFailed((webDownloadItem: webview.WebDownloadItem) => {
-              console.error("download failed guid: " + webDownloadItem.getGuid());
-            })
-            this.delegate.onDownloadFinish((webDownloadItem: webview.WebDownloadItem) => {
-              console.info("download finish guid: " + webDownloadItem.getGuid());
-            })
-            this.controller.setDownloadDelegate(this.delegate);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Button('startDownload')
-        .onClick(() => {
-          try {
-            this.controller.startDownload('https://www.example.com');
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
 
 ## getFullPath
 
@@ -291,58 +106,6 @@ Obtains the full path of the downloaded file on the disk.
 | --- | --- |
 | string | Full path of the downloaded file on the disk. |
 
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-  delegate: webview.WebDownloadDelegate = new webview.WebDownloadDelegate();
-
-  build() {
-    Column() {
-      Button('setDownloadDelegate')
-        .onClick(() => {
-          try {
-            this.delegate.onBeforeDownload((webDownloadItem: webview.WebDownloadItem) => {
-              console.info("will start a download.");
-              // Pass in a download path and start the download.
-              webDownloadItem.start("/data/storage/el2/base/cache/web/" + webDownloadItem.getSuggestedFileName());
-            })
-            this.delegate.onDownloadUpdated((webDownloadItem: webview.WebDownloadItem) => {
-              console.info("download update percent complete: " + webDownloadItem.getPercentComplete());
-            })
-            this.delegate.onDownloadFailed((webDownloadItem: webview.WebDownloadItem) => {
-              console.error("download failed guid: " + webDownloadItem.getGuid());
-            })
-            this.delegate.onDownloadFinish((webDownloadItem: webview.WebDownloadItem) => {
-              console.info("download finish guid: " + webDownloadItem.getGuid());
-              console.info("download finish full path: " + webDownloadItem.getFullPath());
-            })
-            this.controller.setDownloadDelegate(this.delegate);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Button('startDownload')
-        .onClick(() => {
-          try {
-            this.controller.startDownload('https://www.example.com');
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
 ## getGuid
 
 ```TypeScript
@@ -362,57 +125,6 @@ Obtains the unique ID of this download task.
 | Type | Description |
 | --- | --- |
 | string | Unique ID of the download task. |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-  delegate: webview.WebDownloadDelegate = new webview.WebDownloadDelegate();
-
-  build() {
-    Column() {
-      Button('setDownloadDelegate')
-        .onClick(() => {
-          try {
-            this.delegate.onBeforeDownload((webDownloadItem: webview.WebDownloadItem) => {
-              console.info("will start a download.");
-              // Pass in a download path and start the download.
-              webDownloadItem.start("/data/storage/el2/base/cache/web/" + webDownloadItem.getSuggestedFileName());
-            })
-            this.delegate.onDownloadUpdated((webDownloadItem: webview.WebDownloadItem) => {
-              console.info("download update guid: " + webDownloadItem.getGuid());
-            })
-            this.delegate.onDownloadFailed((webDownloadItem: webview.WebDownloadItem) => {
-              console.error("download failed guid: " + webDownloadItem.getGuid());
-            })
-            this.delegate.onDownloadFinish((webDownloadItem: webview.WebDownloadItem) => {
-              console.info("download finish guid: " + webDownloadItem.getGuid());
-            })
-            this.controller.setDownloadDelegate(this.delegate);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Button('startDownload')
-        .onClick(() => {
-          try {
-            this.controller.startDownload('https://www.example.com');
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
 
 ## getLastErrorCode
 
@@ -434,58 +146,6 @@ Obtains the download error code.
 | --- | --- |
 | [WebDownloadErrorCode](arkts-arkweb-webview-webdownloaderrorcode-e.md) | Error code when the download fails. |
 
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-  delegate: webview.WebDownloadDelegate = new webview.WebDownloadDelegate();
-
-  build() {
-    Column() {
-      Button('setDownloadDelegate')
-        .onClick(() => {
-          try {
-            this.delegate.onBeforeDownload((webDownloadItem: webview.WebDownloadItem) => {
-              console.info("will start a download.");
-              // Pass in a download path and start the download.
-              webDownloadItem.start("/data/storage/el2/base/cache/web/" + webDownloadItem.getSuggestedFileName());
-            })
-            this.delegate.onDownloadUpdated((webDownloadItem: webview.WebDownloadItem) => {
-              console.info("download update percent complete: " + webDownloadItem.getPercentComplete());
-            })
-            this.delegate.onDownloadFailed((webDownloadItem: webview.WebDownloadItem) => {
-              console.error("download failed guid: " + webDownloadItem.getGuid());
-              console.info("download error code: " + webDownloadItem.getLastErrorCode());
-            })
-            this.delegate.onDownloadFinish((webDownloadItem: webview.WebDownloadItem) => {
-              console.info("download finish guid: " + webDownloadItem.getGuid());
-            })
-            this.controller.setDownloadDelegate(this.delegate);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Button('startDownload')
-        .onClick(() => {
-          try {
-            this.controller.startDownload('https://www.example.com');
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
 ## getMethod
 
 ```TypeScript
@@ -505,57 +165,6 @@ Obtains the request mode of this download task.
 | Type | Description |
 | --- | --- |
 | string | Request mode of the download task. |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-  delegate: webview.WebDownloadDelegate = new webview.WebDownloadDelegate();
-
-  build() {
-    Column() {
-      Button('setDownloadDelegate')
-        .onClick(() => {
-          try {
-            this.delegate.onBeforeDownload((webDownloadItem: webview.WebDownloadItem) => {
-              console.info("will start a download, method:" + webDownloadItem.getMethod());
-              // Pass in a download path and start the download.
-              webDownloadItem.start("/data/storage/el2/base/cache/web/" + webDownloadItem.getSuggestedFileName());
-            })
-            this.delegate.onDownloadUpdated((webDownloadItem: webview.WebDownloadItem) => {
-              console.info("download update percent complete: " + webDownloadItem.getPercentComplete());
-            })
-            this.delegate.onDownloadFailed((webDownloadItem: webview.WebDownloadItem) => {
-              console.error("download failed guid: " + webDownloadItem.getGuid());
-            })
-            this.delegate.onDownloadFinish((webDownloadItem: webview.WebDownloadItem) => {
-              console.info("download finish guid: " + webDownloadItem.getGuid());
-            })
-            this.controller.setDownloadDelegate(this.delegate);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Button('startDownload')
-        .onClick(() => {
-          try {
-            this.controller.startDownload('https://www.example.com');
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
 
 ## getMimeType
 
@@ -577,59 +186,6 @@ Obtains the MIME type of this download task (for example, a sound file may be ma
 | --- | --- |
 | string | MIME type (for example, audio/ogg for a sound file, and image/png for an image file). |
 
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-  delegate: webview.WebDownloadDelegate = new webview.WebDownloadDelegate();
-
-  build() {
-    Column() {
-      Button('setDownloadDelegate')
-        .onClick(() => {
-          try {
-            this.delegate.onBeforeDownload((webDownloadItem: webview.WebDownloadItem) => {
-              console.info("will start a download, mime type:" + webDownloadItem.getMimeType());
-              // Pass in a download path and start the download.
-              webDownloadItem.start("/data/storage/el2/base/cache/web/" + webDownloadItem.getSuggestedFileName());
-            })
-            this.delegate.onDownloadUpdated((webDownloadItem: webview.WebDownloadItem) => {
-              console.info("download update percent complete: " + webDownloadItem.getPercentComplete());
-            })
-            this.delegate.onDownloadFailed((webDownloadItem: webview.WebDownloadItem) => {
-              console.error("download failed guid: " + webDownloadItem.getGuid());
-            })
-            this.delegate.onDownloadFinish((webDownloadItem: webview.WebDownloadItem) => {
-              console.info("download finish guid: " + webDownloadItem.getGuid());
-            })
-            this.controller.setDownloadDelegate(this.delegate);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Button('startDownload')
-        .onClick(() => {
-          try {
-            this.controller.startDownload('https://www.example.com');
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-For details about the sample code, see constructor.
-
 ## getOriginalUrl
 
 ```TypeScript
@@ -649,84 +205,6 @@ Obtains the original URL address of the download file.
 | Type | Description |
 | --- | --- |
 | string | Original URL address of the download file. |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-  delegate: webview.WebDownloadDelegate = new webview.WebDownloadDelegate();
-
-  build() {
-    Column() {
-      Button('setDownloadDelegate')
-        .onClick(() => {
-          try {
-            this.delegate.onBeforeDownload((webDownloadItem: webview.WebDownloadItem) => {
-              console.info("will start a download, original URL: " + webDownloadItem.getOriginalUrl());
-              // Pass in a download path and start the download.
-              webDownloadItem.start("/data/storage/el2/base/cache/web/" + webDownloadItem.getSuggestedFileName());
-            })
-            this.delegate.onDownloadUpdated((webDownloadItem: webview.WebDownloadItem) => {
-              console.info("download update percent complete: " + webDownloadItem.getPercentComplete());
-            })
-            this.delegate.onDownloadFailed((webDownloadItem: webview.WebDownloadItem) => {
-              console.error("download failed guid: " + webDownloadItem.getGuid());
-            })
-            this.delegate.onDownloadFinish((webDownloadItem: webview.WebDownloadItem) => {
-              console.info("download finish guid: " + webDownloadItem.getGuid());
-            })
-            this.controller.setDownloadDelegate(this.delegate);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Button('startDownload')
-        .onClick(() => {
-          try {
-            this.controller.startDownload('https://www.example.com');
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('getOrgUrl')
-        .onClick(() => {
-          try {
-            let url = this.controller.getOriginalUrl();
-            console.info("original url: " + url);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
 
 ## getPercentComplete
 
@@ -748,57 +226,6 @@ Obtains the download progress. The value **100** indicates that the download is 
 | --- | --- |
 | number | Download progress. The value **100** indicates that the download is complete, and the value **-1** indicates that the progress is unknown. |
 
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-  delegate: webview.WebDownloadDelegate = new webview.WebDownloadDelegate();
-
-  build() {
-    Column() {
-      Button('setDownloadDelegate')
-        .onClick(() => {
-          try {
-            this.delegate.onBeforeDownload((webDownloadItem: webview.WebDownloadItem) => {
-              console.info("will start a download.");
-              // Pass in a download path and start the download.
-              webDownloadItem.start("/data/storage/el2/base/cache/web/" + webDownloadItem.getSuggestedFileName());
-            })
-            this.delegate.onDownloadUpdated((webDownloadItem: webview.WebDownloadItem) => {
-              console.info("download update percent complete: " + webDownloadItem.getPercentComplete());
-            })
-            this.delegate.onDownloadFailed((webDownloadItem: webview.WebDownloadItem) => {
-              console.error("download failed guid: " + webDownloadItem.getGuid());
-            })
-            this.delegate.onDownloadFinish((webDownloadItem: webview.WebDownloadItem) => {
-              console.info("download finish guid: " + webDownloadItem.getGuid());
-            })
-            this.controller.setDownloadDelegate(this.delegate);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Button('startDownload')
-        .onClick(() => {
-          try {
-            this.controller.startDownload('https://www.example.com');
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
 ## getReceivedBytes
 
 ```TypeScript
@@ -818,58 +245,6 @@ Obtains the number of received bytes.
 | Type | Description |
 | --- | --- |
 | number | Number of received bytes. |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-  delegate: webview.WebDownloadDelegate = new webview.WebDownloadDelegate();
-
-  build() {
-    Column() {
-      Button('setDownloadDelegate')
-        .onClick(() => {
-          try {
-            this.delegate.onBeforeDownload((webDownloadItem: webview.WebDownloadItem) => {
-              console.info("will start a download.");
-              // Pass in a download path and start the download.
-              webDownloadItem.start("/data/storage/el2/base/cache/web/" + webDownloadItem.getSuggestedFileName());
-            })
-            this.delegate.onDownloadUpdated((webDownloadItem: webview.WebDownloadItem) => {
-              console.info("download update percent complete: " + webDownloadItem.getPercentComplete());
-              console.info("download update received bytes: " + webDownloadItem.getReceivedBytes());
-            })
-            this.delegate.onDownloadFailed((webDownloadItem: webview.WebDownloadItem) => {
-              console.error("download failed guid: " + webDownloadItem.getGuid());
-            })
-            this.delegate.onDownloadFinish((webDownloadItem: webview.WebDownloadItem) => {
-              console.info("download finish guid: " + webDownloadItem.getGuid());
-            })
-            this.controller.setDownloadDelegate(this.delegate);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Button('startDownload')
-        .onClick(() => {
-          try {
-            this.controller.startDownload('https://www.example.com');
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
 
 ## getReferrerUrl
 
@@ -891,57 +266,6 @@ Obtains the referrer address of the download file.
 | --- | --- |
 | string | Referrer address of the download file. |
 
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-  delegate: webview.WebDownloadDelegate = new webview.WebDownloadDelegate();
-
-  build() {
-    Column() {
-      Button('setDownloadDelegate')
-        .onClick(() => {
-          try {
-            this.delegate.onBeforeDownload((webDownloadItem: webview.WebDownloadItem) => {
-              console.info("will start a download, referrer URL: " + webDownloadItem.getReferrerUrl());
-              // Pass in a download path and start the download.
-              webDownloadItem.start("/data/storage/el2/base/cache/web/" + webDownloadItem.getSuggestedFileName());
-            })
-            this.delegate.onDownloadUpdated((webDownloadItem: webview.WebDownloadItem) => {
-              console.info("download update percent complete: " + webDownloadItem.getPercentComplete());
-            })
-            this.delegate.onDownloadFailed((webDownloadItem: webview.WebDownloadItem) => {
-              console.error("download failed guid: " + webDownloadItem.getGuid());
-            })
-            this.delegate.onDownloadFinish((webDownloadItem: webview.WebDownloadItem) => {
-              console.info("download finish guid: " + webDownloadItem.getGuid());
-            })
-            this.controller.setDownloadDelegate(this.delegate);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Button('startDownload')
-        .onClick(() => {
-          try {
-            this.controller.startDownload('https://www.example.com');
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
 ## getState
 
 ```TypeScript
@@ -961,57 +285,6 @@ Obtains the download state.
 | Type | Description |
 | --- | --- |
 | [WebDownloadState](arkts-arkweb-webview-webdownloadstate-e.md) | Download state. |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-  delegate: webview.WebDownloadDelegate = new webview.WebDownloadDelegate();
-
-  build() {
-    Column() {
-      Button('setDownloadDelegate')
-        .onClick(() => {
-          try {
-            this.delegate.onBeforeDownload((webDownloadItem: webview.WebDownloadItem) => {
-              console.info("will start a download.");
-              // Pass in a download path and start the download.
-              webDownloadItem.start("/data/storage/el2/base/cache/web/" + webDownloadItem.getSuggestedFileName());
-            })
-            this.delegate.onDownloadUpdated((webDownloadItem: webview.WebDownloadItem) => {
-              console.info("download update download state: " + webDownloadItem.getState());
-            })
-            this.delegate.onDownloadFailed((webDownloadItem: webview.WebDownloadItem) => {
-              console.error("download failed guid: " + webDownloadItem.getGuid());
-            })
-            this.delegate.onDownloadFinish((webDownloadItem: webview.WebDownloadItem) => {
-              console.info("download finish guid: " + webDownloadItem.getGuid());
-            })
-            this.controller.setDownloadDelegate(this.delegate);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Button('startDownload')
-        .onClick(() => {
-          try {
-            this.controller.startDownload('https://www.example.com');
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
 
 ## getSuggestedFileName
 
@@ -1033,57 +306,6 @@ Obtains the suggested file name for this download task.
 | --- | --- |
 | string | Suggested file name. |
 
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-  delegate: webview.WebDownloadDelegate = new webview.WebDownloadDelegate();
-
-  build() {
-    Column() {
-      Button('setDownloadDelegate')
-        .onClick(() => {
-          try {
-            this.delegate.onBeforeDownload((webDownloadItem: webview.WebDownloadItem) => {
-              console.info("will start a download, suggest name:" + webDownloadItem.getSuggestedFileName());
-              // Pass in a download path and start the download.
-              webDownloadItem.start("/data/storage/el2/base/cache/web/" + webDownloadItem.getSuggestedFileName());
-            })
-            this.delegate.onDownloadUpdated((webDownloadItem: webview.WebDownloadItem) => {
-              console.info("download update percent complete: " + webDownloadItem.getPercentComplete());
-            })
-            this.delegate.onDownloadFailed((webDownloadItem: webview.WebDownloadItem) => {
-              console.error("download failed guid: " + webDownloadItem.getGuid());
-            })
-            this.delegate.onDownloadFinish((webDownloadItem: webview.WebDownloadItem) => {
-              console.info("download finish guid: " + webDownloadItem.getGuid());
-            })
-            this.controller.setDownloadDelegate(this.delegate);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Button('startDownload')
-        .onClick(() => {
-          try {
-            this.controller.startDownload('https://www.example.com');
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
 ## getTotalBytes
 
 ```TypeScript
@@ -1103,57 +325,6 @@ Obtains the total length of the file to be downloaded.
 | Type | Description |
 | --- | --- |
 | number | Total length of the file to be downloaded. The value -1 indicates that the total size is unknown. Unit: byte. |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-  delegate: webview.WebDownloadDelegate = new webview.WebDownloadDelegate();
-
-  build() {
-    Column() {
-      Button('setDownloadDelegate')
-        .onClick(() => {
-          try {
-            this.delegate.onBeforeDownload((webDownloadItem: webview.WebDownloadItem) => {
-              console.info("will start a download.");
-              // Pass in a download path and start the download.
-              webDownloadItem.start("/data/storage/el2/base/cache/web/" + webDownloadItem.getSuggestedFileName());
-            })
-            this.delegate.onDownloadUpdated((webDownloadItem: webview.WebDownloadItem) => {
-              console.info("download update total bytes: " + webDownloadItem.getTotalBytes());
-            })
-            this.delegate.onDownloadFailed((webDownloadItem: webview.WebDownloadItem) => {
-              console.error("download failed guid: " + webDownloadItem.getGuid());
-            })
-            this.delegate.onDownloadFinish((webDownloadItem: webview.WebDownloadItem) => {
-              console.info("download finish guid: " + webDownloadItem.getGuid());
-            })
-            this.controller.setDownloadDelegate(this.delegate);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Button('startDownload')
-        .onClick(() => {
-          try {
-            this.controller.startDownload('https://www.example.com');
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
 
 ## getUrl
 
@@ -1175,88 +346,6 @@ Obtains the download request URL.
 | --- | --- |
 | string | Download request URL. |
 
-**Examples**
-
-For details about the sample code, see [removeProxyOverride](./arkts-apis-webview-ProxyController.md#removeproxyoverride).
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-  delegate: webview.WebDownloadDelegate = new webview.WebDownloadDelegate();
-
-  build() {
-    Column() {
-      Button('setDownloadDelegate')
-        .onClick(() => {
-          try {
-            this.delegate.onBeforeDownload((webDownloadItem: webview.WebDownloadItem) => {
-              console.info("will start a download, url:" + webDownloadItem.getUrl());
-              // Pass in a download path and start the download.
-              webDownloadItem.start("/data/storage/el2/base/cache/web/" + webDownloadItem.getSuggestedFileName());
-            })
-            this.delegate.onDownloadUpdated((webDownloadItem: webview.WebDownloadItem) => {
-              console.info("download update percent complete: " + webDownloadItem.getPercentComplete());
-            })
-            this.delegate.onDownloadFailed((webDownloadItem: webview.WebDownloadItem) => {
-              console.error("download failed guid: " + webDownloadItem.getGuid());
-            })
-            this.delegate.onDownloadFinish((webDownloadItem: webview.WebDownloadItem) => {
-              console.info("download finish guid: " + webDownloadItem.getGuid());
-            })
-            this.controller.setDownloadDelegate(this.delegate);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Button('startDownload')
-        .onClick(() => {
-          try {
-            this.controller.startDownload('https://www.example.com');
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-For details about the sample code, see constructor.
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('getUrl')
-        .onClick(() => {
-          try {
-            let url = this.controller.getUrl();
-            console.info("url: " + url);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
 ## pause
 
 ```TypeScript
@@ -1276,88 +365,6 @@ Pauses the download task.
 | Error Code ID | Error Message |
 | --- | --- |
 | [17100019](../errorcode-webview.md#17100019-download-not-started-yet) | The download task is not started yet. |
-
-**Examples**
-
-For details about the sample code, see [onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer).
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-  delegate: webview.WebDownloadDelegate = new webview.WebDownloadDelegate();
-  download: webview.WebDownloadItem = new webview.WebDownloadItem();
-  failedData: Uint8Array = new Uint8Array();
-
-  build() {
-    Column() {
-      Button('setDownloadDelegate')
-        .onClick(() => {
-          try {
-            this.delegate.onBeforeDownload((webDownloadItem: webview.WebDownloadItem) => {
-              console.info("will start a download.");
-              // Pass in a download path and start the download.
-              webDownloadItem.start("/data/storage/el2/base/cache/web/" + webDownloadItem.getSuggestedFileName());
-            })
-            this.delegate.onDownloadUpdated((webDownloadItem: webview.WebDownloadItem) => {
-              console.info("download update percent complete: " + webDownloadItem.getPercentComplete());
-              this.download = webDownloadItem;
-            })
-            this.delegate.onDownloadFailed((webDownloadItem: webview.WebDownloadItem) => {
-              console.error("download failed guid: " + webDownloadItem.getGuid());
-              // Serialize the failed download to a byte array.
-              this.failedData = webDownloadItem.serialize();
-            })
-            this.delegate.onDownloadFinish((webDownloadItem: webview.WebDownloadItem) => {
-              console.info("download finish guid: " + webDownloadItem.getGuid());
-            })
-            this.controller.setDownloadDelegate(this.delegate);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Button('startDownload')
-        .onClick(() => {
-          try {
-            this.controller.startDownload('https://www.example.com');
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Button('resumeDownload')
-        .onClick(() => {
-          try {
-            webview.WebDownloadManager.resumeDownload(webview.WebDownloadItem.deserialize(this.failedData));
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Button('cancel')
-        .onClick(() => {
-          try {
-            this.download.cancel();
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Button('pause')
-        .onClick(() => {
-          try {
-            this.download.pause();
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
 
 ## resume
 
@@ -1379,94 +386,6 @@ Resumes a download task.
 | --- | --- |
 | [17100016](../errorcode-webview.md#17100016-download-task-not-paused) | The download task is not paused. |
 
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-  delegate: webview.WebDownloadDelegate = new webview.WebDownloadDelegate();
-  download: webview.WebDownloadItem = new webview.WebDownloadItem();
-  failedData: Uint8Array = new Uint8Array();
-
-  build() {
-    Column() {
-      Button('setDownloadDelegate')
-        .onClick(() => {
-          try {
-            this.delegate.onBeforeDownload((webDownloadItem: webview.WebDownloadItem) => {
-              console.info("will start a download.");
-              // Pass in a download path and start the download.
-              webDownloadItem.start("/data/storage/el2/base/cache/web/" + webDownloadItem.getSuggestedFileName());
-            })
-            this.delegate.onDownloadUpdated((webDownloadItem: webview.WebDownloadItem) => {
-              console.info("download update percent complete: " + webDownloadItem.getPercentComplete());
-              this.download = webDownloadItem;
-            })
-            this.delegate.onDownloadFailed((webDownloadItem: webview.WebDownloadItem) => {
-              console.error("download failed guid: " + webDownloadItem.getGuid());
-              // Serialize the failed download to a byte array.
-              this.failedData = webDownloadItem.serialize();
-            })
-            this.delegate.onDownloadFinish((webDownloadItem: webview.WebDownloadItem) => {
-              console.info("download finish guid: " + webDownloadItem.getGuid());
-            })
-            this.controller.setDownloadDelegate(this.delegate);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Button('startDownload')
-        .onClick(() => {
-          try {
-            this.controller.startDownload('https://www.example.com');
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Button('resumeDownload')
-        .onClick(() => {
-          try {
-            webview.WebDownloadManager.resumeDownload(webview.WebDownloadItem.deserialize(this.failedData));
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Button('cancel')
-        .onClick(() => {
-          try {
-            this.download.cancel();
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Button('pause')
-        .onClick(() => {
-          try {
-            this.download.pause();
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Button('resume')
-        .onClick(() => {
-          try {
-            this.download.resume();
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
 ## serialize
 
 ```TypeScript
@@ -1486,60 +405,6 @@ Serializes the failed download to a byte array.
 | Type | Description |
 | --- | --- |
 | Uint8Array | Byte array into which the failed download is serialized. |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-  delegate: webview.WebDownloadDelegate = new webview.WebDownloadDelegate();
-  failedData: Uint8Array = new Uint8Array();
-
-  build() {
-    Column() {
-      Button('setDownloadDelegate')
-        .onClick(() => {
-          try {
-            this.delegate.onBeforeDownload((webDownloadItem: webview.WebDownloadItem) => {
-              console.info("will start a download.");
-              // Pass in a download path and start the download.
-              webDownloadItem.start("/data/storage/el2/base/cache/web/" + webDownloadItem.getSuggestedFileName());
-            })
-            this.delegate.onDownloadUpdated((webDownloadItem: webview.WebDownloadItem) => {
-              console.info("download update percent complete: " + webDownloadItem.getPercentComplete());
-            })
-            this.delegate.onDownloadFailed((webDownloadItem: webview.WebDownloadItem) => {
-              console.error("download failed guid: " + webDownloadItem.getGuid());
-              // Serialize the failed download to a byte array.
-              this.failedData = webDownloadItem.serialize();
-            })
-            this.delegate.onDownloadFinish((webDownloadItem: webview.WebDownloadItem) => {
-              console.info("download finish guid: " + webDownloadItem.getGuid());
-            })
-            this.controller.setDownloadDelegate(this.delegate);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Button('startDownload')
-        .onClick(() => {
-          try {
-            this.controller.startDownload('https://www.example.com');
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
 
 ## start
 
@@ -1575,65 +440,3 @@ Starts downloading to the specified directory. The parameter specifies the disk 
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types.  2. Parameter verification failed. |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-  delegate: webview.WebDownloadDelegate = new webview.WebDownloadDelegate();
-  failedData: Uint8Array = new Uint8Array();
-
-  build() {
-    Column() {
-      Button('setDownloadDelegate')
-        .onClick(() => {
-          try {
-            this.delegate.onBeforeDownload((webDownloadItem: webview.WebDownloadItem) => {
-              console.info("will start a download.");
-              // Pass in a download path and start the download.
-              webDownloadItem.start("/data/storage/el2/base/cache/web/" + webDownloadItem.getSuggestedFileName());
-            })
-            this.delegate.onDownloadUpdated((webDownloadItem: webview.WebDownloadItem) => {
-              console.info("download update percent complete: " + webDownloadItem.getPercentComplete());
-            })
-            this.delegate.onDownloadFailed((webDownloadItem: webview.WebDownloadItem) => {
-              console.error("download failed guid: " + webDownloadItem.getGuid());
-              // Serialize the failed download to a byte array.
-              this.failedData = webDownloadItem.serialize();
-            })
-            this.delegate.onDownloadFinish((webDownloadItem: webview.WebDownloadItem) => {
-              console.info("download finish guid: " + webDownloadItem.getGuid());
-            })
-            this.controller.setDownloadDelegate(this.delegate);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Button('startDownload')
-        .onClick(() => {
-          try {
-            this.controller.startDownload('https://www.example.com');
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Button('resumeDownload')
-        .onClick(() => {
-          try {
-            webview.WebDownloadManager.resumeDownload(webview.WebDownloadItem.deserialize(this.failedData));
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```

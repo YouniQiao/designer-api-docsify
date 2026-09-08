@@ -38,7 +38,7 @@ fitStrRange: Array<Range>
 
 Array of character ranges that can be completely displayed after text layout calculation.
 
-**Type:** Array&lt;Range&gt;
+**Type:** Array&lt;[Range](arkts-arkgraphics2d-text-range-i.md)&gt;
 
 **Since:** 24
 

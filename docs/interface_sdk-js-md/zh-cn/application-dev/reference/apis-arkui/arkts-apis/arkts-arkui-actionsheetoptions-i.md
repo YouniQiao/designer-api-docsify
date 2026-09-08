@@ -81,7 +81,7 @@ backgroundBlurStyle?: BlurStyle
 
 设置为BlurStyle.NONE即可关闭背景虚化。当设置了backgroundBlurStyle为非NONE值时，则不要设置backgroundColor，否则颜色显示将不符合预期效果。
 
-**类型：** BlurStyle
+**类型：** [BlurStyle](../arkts-components/arkts-arkui-blurstyle-e.md)
 
 **默认值：** BlurStyle.COMPONENT_ULTRA_THICK
 
@@ -446,7 +446,7 @@ levelOrder?: LevelOrder
 - 默认值：LevelOrder.clamp(0)  
 - 不支持动态刷新顺序。
 
-**类型：** LevelOrder
+**类型：** [LevelOrder](arkts-arkui-levelorder-t.md)
 
 **默认值：** The value returns by LevelOrder.clamp(0)
 
@@ -518,7 +518,7 @@ message: string | Resource
 
 文本超长时会触发滚动条。
 
-**类型：** string \| Resource
+**类型：** string \| [Resource](arkts-arkui-resource-t.md)
 
 **起始版本：** 8
 
@@ -569,7 +569,7 @@ onDidAppear?: Callback<void>
 
 4.弹窗入场动效未完成时彻底关闭弹窗，动效打断，onDidAppear不会触发。
 
-**类型：** Callback&lt;void&gt;
+**类型：** [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;void&gt;
 
 **起始版本：** 19
 
@@ -594,7 +594,7 @@ onDidDisappear?: Callback<void>
 > onWillDisappear &gt;
 > onDidDisappear。
 
-**类型：** Callback&lt;void&gt;
+**类型：** [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;void&gt;
 
 **起始版本：** 19
 
@@ -621,7 +621,7 @@ onWillAppear?: Callback<void>
 
 2.在onWillAppear内设置改变弹窗显示效果的回调事件，二次弹出生效。
 
-**类型：** Callback&lt;void&gt;
+**类型：** [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;void&gt;
 
 **起始版本：** 19
 
@@ -646,7 +646,7 @@ onWillDisappear?: Callback<void>
 > onWillDisappear &gt;
 > onDidDisappear。
 
-**类型：** Callback&lt;void&gt;
+**类型：** [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;void&gt;
 
 **起始版本：** 19
 
@@ -670,7 +670,7 @@ onWillDismiss?: Callback<DismissDialogAction>
 
 2.在onWillDismiss回调中，不能再做onWillDismiss拦截。
 
-**类型：** Callback&lt;[DismissDialogAction](arkts-arkui-dismissdialogaction-i.md)&gt;
+**类型：** [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;[DismissDialogAction](arkts-arkui-dismissdialogaction-i.md)&gt;
 
 **起始版本：** 12
 
@@ -799,7 +799,7 @@ title: string | Resource
 
 当文本内容过长无法显示时，用省略号代替未显示的部分。
 
-**类型：** string \| Resource
+**类型：** string \| [Resource](arkts-arkui-resource-t.md)
 
 **起始版本：** 8
 

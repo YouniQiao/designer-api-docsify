@@ -22,7 +22,7 @@ componentType: ComponentType
 
 Type of application component that functions as the displayed page.
 
-**Type:** ComponentType
+**Type:** [ComponentType](arkts-ability-appcontrol-componenttype-e-sys.md)
 
 **Since:** 11
 
@@ -38,7 +38,7 @@ controlType: ControlType
 
 Control type of application disposal.
 
-**Type:** ControlType
+**Type:** [ControlType](arkts-ability-appcontrol-controltype-e-sys.md)
 
 **Since:** 11
 

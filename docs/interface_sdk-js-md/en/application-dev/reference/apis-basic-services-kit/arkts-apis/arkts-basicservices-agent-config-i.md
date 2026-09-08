@@ -23,7 +23,7 @@ Task action.
 - **UPLOAD**: Upload tasks.  
 - **DOWNLOAD**: Download tasks.
 
-**Type:** Action
+**Type:** [Action](arkts-basicservices-agent-action-e.md)
 
 **Since:** 10
 
@@ -274,7 +274,7 @@ network?: Network
 
 Network used for the task. The default value is **ANY** (Wi-Fi or cellular).
 
-**Type:** Network
+**Type:** [Network](arkts-basicservices-agent-network-e.md)
 
 **Default:** Network.ANY
 
@@ -292,7 +292,7 @@ notification?: Notification
 
 Custom settings for the notification bar. The default value is **{}**.
 
-**Type:** Notification
+**Type:** [Notification](arkts-basicservices-agent-notification-i.md)
 
 **Since:** 15
 

@@ -26,7 +26,7 @@ function setDeviceFunctions(funcs: FunctionType): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| funcs | FunctionType | 是 | 功能列表对应的数字掩码，可通过位运算组合多个功能。部分功能可能不被当前设备支持，具体参见[FunctionType](arkts-basicservices-usbmanager-functiontype-e-sys.md)。 |
+| funcs | [FunctionType](arkts-basicservices-usbmanager-functiontype-e-sys.md) | 是 | 功能列表对应的数字掩码，可通过位运算组合多个功能。部分功能可能不被当前设备支持，具体参见[FunctionType](arkts-basicservices-usbmanager-functiontype-e-sys.md)。 |
 
 **返回值：**
 
@@ -44,17 +44,3 @@ function setDeviceFunctions(funcs: FunctionType): Promise<void>
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.<br>**适用版本：** 18+ |
 | [14400002](../errorcode-usb.md#14400002-hdc功能被禁用) | Permission denied. The HDC is disabled by the system. |
 | [14400006](../errorcode-usb.md#14400006-不支持的usb设备侧功能) | Unsupported operation. The function is not supported. |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-// 设置USB功能类型为HDC
-let funcs: usbManager.FunctionType = usbManager.FunctionType.HDC;
-// 异步设置设备功能
-usbManager.setDeviceFunctions(funcs).then(() => {
-    console.info('usb setDeviceFunctions successfully.');
-}).catch((err : BusinessError) => {
-    console.error(`usb setDeviceFunctions failed. Code: ${err.code}, message: ${err.message}`);
-});
-```

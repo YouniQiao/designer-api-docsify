@@ -30,7 +30,7 @@ Checks whether the current process has authorization for the specified privilege
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| privilege | Privilege | Yes | Target privilege. For available values, see [Privilege](arkts-basicservices-authorization-privilege-e.md). |
+| privilege | [Privilege](arkts-basicservices-authorization-privilege-e.md) | Yes | Target privilege. For available values, see [Privilege](arkts-basicservices-authorization-privilege-e.md). |
 
 **Return value:**
 
@@ -66,7 +66,7 @@ When the application is in the foreground and there is no valid authorization, t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| privilege | Privilege | Yes | Target privilege. For available values, see [Privilege](arkts-basicservices-authorization-privilege-e.md). |
+| privilege | [Privilege](arkts-basicservices-authorization-privilege-e.md) | Yes | Target privilege. For available values, see [Privilege](arkts-basicservices-authorization-privilege-e.md). |
 | context | [UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md) | Yes | The [UIAbility context](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md) that hosts the authorization dialog. |
 
 **Return value:**

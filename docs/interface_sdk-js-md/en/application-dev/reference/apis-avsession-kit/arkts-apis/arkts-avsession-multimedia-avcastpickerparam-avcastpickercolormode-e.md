@@ -1,6 +1,6 @@
 # AVCastPickerColorMode
 
-Definition of color mode of picker @enum { number }
+Definition of color mode of picker @enum { int }
 
 **Since:** 12
 

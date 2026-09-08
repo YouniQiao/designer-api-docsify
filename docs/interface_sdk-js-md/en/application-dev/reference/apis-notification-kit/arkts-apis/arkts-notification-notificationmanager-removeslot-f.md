@@ -32,7 +32,7 @@ After deletion, the corresponding type of notification slot and its configuratio
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotType | SlotType | Yes | Notification slot type, such as social communication, service reminder, and content consultation. The created slot type must be passed in; otherwise, the deletion operation is invalid. |
+| slotType | [SlotType](arkts-notification-notificationmanager-slottype-e.md) | Yes | Notification slot type, such as social communication, service reminder, and content consultation. The created slot type must be passed in; otherwise, the deletion operation is invalid. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
@@ -88,7 +88,7 @@ After deletion, the corresponding notification slot and its configuration will b
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotType | SlotType | Yes | Notification slot type, such as social communication, service reminder, and content consultation. The created slot type must be passed in; otherwise, the deletion operation is invalid. |
+| slotType | [SlotType](arkts-notification-notificationmanager-slottype-e.md) | Yes | Notification slot type, such as social communication, service reminder, and content consultation. The created slot type must be passed in; otherwise, the deletion operation is invalid. |
 
 **Return value:**
 

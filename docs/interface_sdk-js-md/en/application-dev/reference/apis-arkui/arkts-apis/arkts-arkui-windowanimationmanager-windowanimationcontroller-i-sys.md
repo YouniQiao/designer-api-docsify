@@ -37,13 +37,14 @@ Called on application transition.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fromWindowTarget | WindowAnimationTarget | Yes | Window target of the source application. |
-| toWindowTarget | WindowAnimationTarget | Yes | Window target of the destination application. |
+| fromWindowTarget | [WindowAnimationTarget](arkts-arkui-windowanimationmanager-windowanimationtarget-i-sys.md) | Yes | Window target of the source application. |
+| toWindowTarget | [WindowAnimationTarget](arkts-arkui-windowanimationmanager-windowanimationtarget-i-sys.md) | Yes | Window target of the destination application. |
 | finishCallback | [WindowAnimationFinishedCallback](arkts-arkui-windowanimationmanager-windowanimationfinishedcallback-i-sys.md) | Yes | Animation finished callback. |
 
 **Examples**
 
 For details, see the sample code under windowAnimationManager.setController.
+- simpleType:
 
 ## onCloseWindow
 
@@ -65,12 +66,13 @@ Called on closing a window.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| closingWindowTarget | WindowAnimationTarget | Yes |  |
+| closingWindowTarget | [WindowAnimationTarget](arkts-arkui-windowanimationmanager-windowanimationtarget-i-sys.md) | Yes |  |
 | finishCallback | [WindowAnimationFinishedCallback](arkts-arkui-windowanimationmanager-windowanimationfinishedcallback-i-sys.md) | Yes | Animation finished callback. |
 
 **Examples**
 
 For details, see the sample code under windowAnimationManager.setController.
+- simpleType:
 
 ## onMinimizeWindow
 
@@ -93,12 +95,13 @@ Called on minimizing a window.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| minimizingWindowTarget | WindowAnimationTarget | Yes | Window target of the minimizing window. |
+| minimizingWindowTarget | [WindowAnimationTarget](arkts-arkui-windowanimationmanager-windowanimationtarget-i-sys.md) | Yes | Window target of the minimizing window. |
 | finishCallback | [WindowAnimationFinishedCallback](arkts-arkui-windowanimationmanager-windowanimationfinishedcallback-i-sys.md) | Yes | Animation finished callback. |
 
 **Examples**
 
 For details, see the sample code under windowAnimationManager.setController.
+- simpleType:
 
 ## onScreenUnlock
 
@@ -125,6 +128,7 @@ Called on unlocking the screen.
 **Examples**
 
 For details, see the sample code under windowAnimationManager.setController.
+- simpleType:
 
 ## onStartAppFromLauncher
 
@@ -147,12 +151,13 @@ Called on starting an application form launcher.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| startingWindowTarget | WindowAnimationTarget | Yes | indicates Window target of the starting application. |
+| startingWindowTarget | [WindowAnimationTarget](arkts-arkui-windowanimationmanager-windowanimationtarget-i-sys.md) | Yes | indicates Window target of the starting application. |
 | finishCallback | [WindowAnimationFinishedCallback](arkts-arkui-windowanimationmanager-windowanimationfinishedcallback-i-sys.md) | Yes | Animation finished callback. |
 
 **Examples**
 
 For details, see the sample code under windowAnimationManager.setController.
+- simpleType:
 
 ## onStartAppFromOther
 
@@ -175,12 +180,13 @@ Called on starting an application form other.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| startingWindowTarget | WindowAnimationTarget | Yes | Window target of the starting application. |
+| startingWindowTarget | [WindowAnimationTarget](arkts-arkui-windowanimationmanager-windowanimationtarget-i-sys.md) | Yes | Window target of the starting application. |
 | finishCallback | [WindowAnimationFinishedCallback](arkts-arkui-windowanimationmanager-windowanimationfinishedcallback-i-sys.md) | Yes | Animation finished callback. |
 
 **Examples**
 
 For details, see the sample code under windowAnimationManager.setController.
+- simpleType:
 
 ## onStartAppFromRecent
 
@@ -203,12 +209,13 @@ Called on starting an application form recent.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| startingWindowTarget | WindowAnimationTarget | Yes | Window target of the starting application. |
+| startingWindowTarget | [WindowAnimationTarget](arkts-arkui-windowanimationmanager-windowanimationtarget-i-sys.md) | Yes | Window target of the starting application. |
 | finishCallback | [WindowAnimationFinishedCallback](arkts-arkui-windowanimationmanager-windowanimationfinishedcallback-i-sys.md) | Yes | Animation finished callback. |
 
 **Examples**
 
 For details, see the sample code under windowAnimationManager.setController.
+- simpleType:
 
 ## onWindowAnimationTargetsUpdate
 
@@ -231,9 +238,10 @@ Called on window animation targets update.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fullScreenWindowTarget | WindowAnimationTarget | Yes | The fullscreen window target. |
-| floatingWindowTargets | Array&lt;WindowAnimationTarget&gt; | Yes | All the floating window targets. |
+| fullScreenWindowTarget | [WindowAnimationTarget](arkts-arkui-windowanimationmanager-windowanimationtarget-i-sys.md) | Yes | The fullscreen window target. |
+| floatingWindowTargets | Array&lt;[WindowAnimationTarget](arkts-arkui-windowanimationmanager-windowanimationtarget-i-sys.md)&gt; | Yes | All the floating window targets. |
 
 **Examples**
 
 For details, see the sample code under windowAnimationManager.setController.
+- simpleType:

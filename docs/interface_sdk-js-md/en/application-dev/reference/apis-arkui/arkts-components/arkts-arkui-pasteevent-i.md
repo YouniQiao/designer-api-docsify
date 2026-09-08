@@ -19,7 +19,7 @@ preventDefault?: Callback<void>
 
 Prevents the default paste event.
 
-**Type:** Callback&lt;void&gt;
+**Type:** [Callback](arkts-arkui-callback-i.md)&lt;void&gt;
 
 **Since:** 11
 

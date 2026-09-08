@@ -35,7 +35,7 @@ iv: DataBlob
 - 3DES的CBC|OFB|CFB模式：iv长度为8字节。  
 - SM4&lt;sup&gt;10+&lt;/sup&gt;的CBC|CTR|OFB|CFB模式：iv长度为16字节。
 
-**类型：** DataBlob
+**类型：** [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md)
 
 **起始版本：** 9
 

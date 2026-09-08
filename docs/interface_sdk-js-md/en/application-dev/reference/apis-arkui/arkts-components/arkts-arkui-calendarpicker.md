@@ -75,6 +75,7 @@ struct CalendarPickerExample {
 ```
 
 This example demonstrates how to set the start and end dates for the calendar picker using start and end.
+Since API version 18, the start and end attributes are added to [CalendarOptions](arkts-arkui-calendaroptions-i.md).
 
 ```TypeScript
 // xxx.ets
@@ -102,6 +103,7 @@ struct CalendarPickerExample {
 ```
 
 This example shows how to highlight the current system date using markToday and disable a specific date range using disabledDateRange.
+Since API version 19, the [markToday](#marktoday19) API is added, and the disabledDateRange attribute is added to [CalendarOptions](arkts-arkui-calendaroptions-i.md).
 
 ```TypeScript
 // xxx.ets

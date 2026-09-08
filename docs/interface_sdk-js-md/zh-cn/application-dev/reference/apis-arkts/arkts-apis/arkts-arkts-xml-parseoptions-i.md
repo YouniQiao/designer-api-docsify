@@ -86,7 +86,7 @@ tokenValueCallbackFunction?: (eventType: EventType, value: ParseInfo) => boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| eventType | EventType | 是 |  |
+| eventType | [EventType](arkts-arkts-xml-eventtype-e.md) | 是 |  |
 | value | [ParseInfo](arkts-arkts-xml-parseinfo-i.md) | 是 |  |
 
 ## ignoreNameSpace

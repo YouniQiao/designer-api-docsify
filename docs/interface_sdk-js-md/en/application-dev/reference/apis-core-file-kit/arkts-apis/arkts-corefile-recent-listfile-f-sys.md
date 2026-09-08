@@ -30,7 +30,7 @@ Lists the files that are accessed recently.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;FileInfo&gt; | Returns the next level FileInfo Object. |
+| Array&lt;[FileInfo](arkts-corefile-recent-fileinfo-i-sys.md)&gt; | Returns the next level FileInfo Object. |
 
 **Error codes:**
 

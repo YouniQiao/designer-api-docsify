@@ -233,21 +233,6 @@ Release the AVAdsController object.
 
 **System capability:** SystemCapability.Multimedia.Media.AVPlayer
 
-**Examples**
-
-```TypeScript
-audioPlayer.release();
-audioPlayer = undefined;
-```
-
-```TypeScript
-audioRecorder.on('release', () => {    // Set the 'release' event callback.
-  console.info('audio recorder release called');
-});
-audioRecorder.release();
-audioRecorder = undefined;
-```
-
 ## removeAdsMediaSource
 
 ```TypeScript

@@ -25,13 +25,13 @@ function doAction(mechId: number, actionType: ActionType): Promise<Result>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | mechId | number | 是 | 具身设备ID。取值限定为整数。 |
-| actionType | ActionType | 是 | 动作序列类型。 |
+| actionType | [ActionType](arkts-mechanic-mechanicmanager-actiontype-e-sys.md) | 是 | 动作序列类型。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Result&gt; | 202 - 非系统应用 |
+| Promise&lt;[Result](arkts-mechanic-mechanicmanager-result-e-sys.md)&gt; | 202 - 非系统应用 |
 
 **错误码：**
 

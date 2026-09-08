@@ -47,7 +47,7 @@ transition: Callback<TabContentTransitionProxy>
 
 自定义切换动画具体内容。
 
-**类型：** Callback&lt;[TabContentTransitionProxy](arkts-arkui-tabcontenttransitionproxy-i.md)&gt;
+**类型：** [Callback](arkts-arkui-callback-i.md)&lt;[TabContentTransitionProxy](arkts-arkui-tabcontenttransitionproxy-i.md)&gt;
 
 **起始版本：** 11
 

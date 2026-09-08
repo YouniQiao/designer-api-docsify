@@ -58,6 +58,21 @@ By default, the width of the dialog box in portrait mode is the width of the win
 **Examples**
 
 openCustomDialog(options: CustomDialogOptions): Promise<number>
+Opens a custom dialog box. This API uses a promise to return the result.
+By default, the width of the dialog box in portrait mode is the width of the window where it is located minus the left and right margins (40 vp for 2-in-1 devices and 16 vp for other devices), and the maximum width is 400 vp.
+> NOTE
+> 
+> This API is supported since API version 11 and deprecated since API version 18. You are advised to use openCustomDialog instead. Before calling this API, you need to obtain the [PromptAction](arkts-apis-uicontext-promptaction.md) object using the [getPromptAction](arkts-arkui-arkui-uicontext-uicontext-c.md#getpromptaction) method in [UIContext](arkts-apis-uicontext-uicontext.md). Directly using openCustomDialog can lead to the issue of [ambiguous UI context](../../../ui/arkts-global-interface.md#ambiguous-ui-context).
+> 
+> Since API version 12, you can use the [getPromptAction](arkts-arkui-arkui-uicontext-uicontext-c.md#getpromptaction) API in [UIContext](arkts-apis-uicontext-uicontext.md) to obtain the [PromptAction](arkts-apis-uicontext-promptaction.md) object associated with the current UI context.
+
+Model constraint: This API can be used only in the stage model.
+Atomic service API: This API can be used in atomic services since API version 12.
+System capability: SystemCapability.ArkUI.ArkUI.Full
+Parameters
+Return value
+Error codes
+For details about the error codes, see [Universal Error Codes](../../errorcode-universal.md) and [API Call Error Codes](../errorcode-internal.md).
 
 ```TypeScript
 import { promptAction } from '@kit.ArkUI';
@@ -131,6 +146,9 @@ struct Index {
 ```
 
 This example demonstrates how to set styles of a dialog box, including the width, height, background color, and shadow.
+> NOTE
+> 
+> Directly using openCustomDialog can lead to the issue of ambiguous UI context. To avoid this, obtain the [PromptAction](arkts-apis-uicontext-promptaction.md) object using the [getPromptAction](arkts-arkui-arkui-uicontext-uicontext-c.md#getpromptaction) API in [UIContext](arkts-apis-uicontext-uicontext.md) and then call the openCustomDialog API through this object.
 
 ```TypeScript
 import { LevelMode, ImmersiveMode } from '@kit.ArkUI';
@@ -208,6 +226,10 @@ struct Index {
 ```
 
 en-us_image_0007
+This example shows how to implement a dialog box on a page.
+> NOTE
+> 
+> Directly using openCustomDialog can lead to the issue of ambiguous UI context. To avoid this, obtain the [PromptAction](arkts-apis-uicontext-promptaction.md) object using the [getPromptAction](arkts-arkui-arkui-uicontext-uicontext-c.md#getpromptaction) API in [UIContext](arkts-apis-uicontext-uicontext.md) and then call the openCustomDialog API through this object.
 
 ```TypeScript
 // Index.ets

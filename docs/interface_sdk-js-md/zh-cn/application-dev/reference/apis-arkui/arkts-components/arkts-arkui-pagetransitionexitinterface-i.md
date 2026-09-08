@@ -66,15 +66,3 @@ onExit(event: PageTransitionCallback): PageTransitionExitInterface
 | 类型 | 说明 |
 | --- | --- |
 | [PageTransitionExitInterface](arkts-arkui-pagetransitionexitinterface-i.md) |  |
-
-**示例**
-
-```TypeScript
-pageTransition() {
-    PageTransitionExit({ duration: 1200, curve: Curve.Linear })
-      // 转场动画时退场动画 type 为路由类型 ，progress为从0到1逐渐变大
-      .onExit((type: RouteType, progress: number) => {
-        // 业务逻辑代码
-      })
-  }
-```

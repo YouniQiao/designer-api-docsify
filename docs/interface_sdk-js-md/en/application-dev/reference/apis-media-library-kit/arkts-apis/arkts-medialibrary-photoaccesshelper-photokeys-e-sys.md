@@ -592,6 +592,102 @@ Size of the asset attachment, in bytes.
 
 **System API:** This is a system API.
 
+## SHARE_OWNER_INFO
+
+```TypeScript
+SHARE_OWNER_INFO = 'share_owner_info'
+```
+
+The asset owner in share album.
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+**System API:** This is a system API.
+
+## SHARE_RISK_STATUS
+
+```TypeScript
+SHARE_RISK_STATUS = 'share_risk_status'
+```
+
+The risk status of share album asset.
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+**System API:** This is a system API.
+
+## SHARE_RISK_TYPE
+
+```TypeScript
+SHARE_RISK_TYPE = 'share_risk_type'
+```
+
+The risk type of share album asset.
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+**System API:** This is a system API.
+
+## PHOTO_VISIBILITY
+
+```TypeScript
+PHOTO_VISIBILITY = 'photo_visibility'
+```
+
+The photo visibility of photo asset.
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+**System API:** This is a system API.
+
+## SHARE_GROUP
+
+```TypeScript
+SHARE_GROUP = 'share_group'
+```
+
+The share group of share album asset.
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+**System API:** This is a system API.
+
+## SHARE_DATE_DAY
+
+```TypeScript
+SHARE_DATE_DAY = 'share_date_day'
+```
+
+The share date day of share album asset.
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+**System API:** This is a system API.
+
 ## MUSIC_MASTER_MODE
 
 ```TypeScript

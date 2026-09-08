@@ -331,7 +331,7 @@ getCurrentRingtoneAttribute(type: RingtoneType): Promise<ToneAttrs>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | RingtoneType | 是 | 被设置的系统铃声的类型。 |
+| type | [RingtoneType](arkts-audio-systemsoundmanager-ringtonetype-e-sys.md) | 是 | 被设置的系统铃声的类型。 |
 
 **返回值：**
 
@@ -431,7 +431,7 @@ getDefaultRingtoneAttrs(context: BaseContext, type: RingtoneType): Promise<ToneA
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | context | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | 是 | 当前应用的上下文。 |
-| type | RingtoneType | 是 | 被设置的系统铃声的类型。 |
+| type | [RingtoneType](arkts-audio-systemsoundmanager-ringtonetype-e-sys.md) | 是 | 被设置的系统铃声的类型。 |
 
 **返回值：**
 
@@ -602,14 +602,14 @@ getMockHapticRingtonePlayer(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | context | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | 是 | 当前应用的上下文。 |
-| type | RingtoneType | 是 | 待获取播放器的铃声类型。 |
+| type | [RingtoneType](arkts-audio-systemsoundmanager-ringtonetype-e-sys.md) | 是 | 待获取播放器的铃声类型。 |
 | ringtoneUri | string | 是 | 铃音文件的URI，需确保在系统文件中真实存在。如果为自定义铃声需使用[addCustomizedTone](#addcustomizedtone)接口返回的ringtoneUri，确保铃音文件URI在铃音库中存在。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;RingtonePlayer \| null&gt; | Promise对象，成功返回模拟触觉铃声播放器实例，发生错误时返回null。 |
+| Promise&lt;[RingtonePlayer](arkts-audio-systemsoundmanager-ringtoneplayer-t-sys.md) \| null&gt; | Promise对象，成功返回模拟触觉铃声播放器实例，发生错误时返回null。 |
 
 **错误码：**
 
@@ -676,7 +676,7 @@ getMockHapticRingtonePlayer(context: BaseContext, hapticUri: string): Promise<Ri
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;RingtonePlayer \| null&gt; | Promise对象，成功返回模拟触觉铃声播放器实例，发生错误时返回null。 |
+| Promise&lt;[RingtonePlayer](arkts-audio-systemsoundmanager-ringtoneplayer-t-sys.md) \| null&gt; | Promise对象，成功返回模拟触觉铃声播放器实例，发生错误时返回null。 |
 
 **错误码：**
 
@@ -727,7 +727,7 @@ getRingtoneAttrList(context: BaseContext, type: RingtoneType): Promise<ToneAttrs
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | context | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | 是 | 当前应用的上下文。 |
-| type | RingtoneType | 是 | 被设置的系统铃声的类型。 |
+| type | [RingtoneType](arkts-audio-systemsoundmanager-ringtonetype-e-sys.md) | 是 | 被设置的系统铃声的类型。 |
 
 **返回值：**
 
@@ -780,13 +780,13 @@ getRingtonePlayer(context: BaseContext, type: RingtoneType): Promise<RingtonePla
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | context | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | 是 | 当前应用的上下文。 |
-| type | RingtoneType | 是 | 待获取播放器的系统铃声的类型。 |
+| type | [RingtoneType](arkts-audio-systemsoundmanager-ringtonetype-e-sys.md) | 是 | 待获取播放器的系统铃声的类型。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;RingtonePlayer&gt; | Promise对象，返回获取的系统铃声播放器。 |
+| Promise&lt;[RingtonePlayer](arkts-audio-systemsoundmanager-ringtoneplayer-t-sys.md)&gt; | Promise对象，返回获取的系统铃声播放器。 |
 
 **错误码：**
 
@@ -834,7 +834,7 @@ getRingtoneUri(context: BaseContext, type: RingtoneType): Promise<string>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | context | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | 是 | 当前应用的上下文。 |
-| type | RingtoneType | 是 | 被设置的系统铃声的类型。 |
+| type | [RingtoneType](arkts-audio-systemsoundmanager-ringtonetype-e-sys.md) | 是 | 被设置的系统铃声的类型。 |
 
 **返回值：**
 
@@ -891,8 +891,8 @@ getSystemRingtonePlayer(context: Context, type: RingtoneType, callback: AsyncCal
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | 是 | 当前应用的上下文。 |
-| type | RingtoneType | 是 | 待获取播放器的系统铃声的类型。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;RingtonePlayer&gt; | 是 | 回调函数。当获取系统铃声播放器成功，err为undefined data为获取到的系统铃声播放器；否则为错误对象。 |
+| type | [RingtoneType](arkts-audio-systemsoundmanager-ringtonetype-e-sys.md) | 是 | 待获取播放器的系统铃声的类型。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[RingtonePlayer](arkts-audio-systemsoundmanager-ringtoneplayer-t-sys.md)&gt; | 是 | 回调函数。当获取系统铃声播放器成功，err为undefined data为获取到的系统铃声播放器；否则为错误对象。 |
 
 **示例**
 
@@ -939,13 +939,13 @@ getSystemRingtonePlayer(context: Context, type: RingtoneType): Promise<RingtoneP
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | 是 | 当前应用的上下文。 |
-| type | RingtoneType | 是 | 待获取播放器的系统铃声的类型。 |
+| type | [RingtoneType](arkts-audio-systemsoundmanager-ringtonetype-e-sys.md) | 是 | 待获取播放器的系统铃声的类型。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;RingtonePlayer&gt; | Promise对象，返回获取的系统铃声播放器。 |
+| Promise&lt;[RingtonePlayer](arkts-audio-systemsoundmanager-ringtoneplayer-t-sys.md)&gt; | Promise对象，返回获取的系统铃声播放器。 |
 
 **示例**
 
@@ -990,7 +990,7 @@ getSystemRingtoneUri(context: Context, type: RingtoneType, callback: AsyncCallba
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | 是 | 当前应用的上下文。 |
-| type | RingtoneType | 是 | 待获取的系统铃声的类型。 |
+| type | [RingtoneType](arkts-audio-systemsoundmanager-ringtonetype-e-sys.md) | 是 | 待获取的系统铃声的类型。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数。当获取系统铃声uri成功，err为undefined，data为获取到的系统铃声uri；否则为错误对象。 |
 
 **示例**
@@ -1036,7 +1036,7 @@ getSystemRingtoneUri(context: Context, type: RingtoneType): Promise<string>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | 是 | 当前应用的上下文。 |
-| type | RingtoneType | 是 | 被设置的系统铃声的类型。 |
+| type | [RingtoneType](arkts-audio-systemsoundmanager-ringtonetype-e-sys.md) | 是 | 被设置的系统铃声的类型。 |
 
 **返回值：**
 
@@ -1140,7 +1140,7 @@ getSystemTonePlayer(context: BaseContext, type: SystemToneType): Promise<SystemT
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;SystemTonePlayer&gt; | Promise对象，返回获取的系统提示音播放器。 |
+| Promise&lt;[SystemTonePlayer](arkts-audio-systemsoundmanager-systemtoneplayer-t-sys.md)&gt; | Promise对象，返回获取的系统提示音播放器。 |
 
 **错误码：**
 
@@ -1469,7 +1469,7 @@ openToneList(uriList: Array<string>): Promise<Array<[string, number, SystemSound
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
-| [20700007](../errorcode-audio-ringtone-sys.md#20700007-参数无效) | Parameter is invalid, e.g. the length of uriList is too number. |
+| [20700007](../errorcode-audio-ringtone-sys.md#20700007-参数无效) | Parameter is invalid, e.g. the length of uriList is too long. |
 
 **示例**
 
@@ -1582,7 +1582,7 @@ removeCustomizedToneList(uriList: Array<string>): Promise<Array<[string, SystemS
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
-| [20700007](../errorcode-audio-ringtone-sys.md#20700007-参数无效) | Parameter is invalid, e.g. the length of uriList is too number. |
+| [20700007](../errorcode-audio-ringtone-sys.md#20700007-参数无效) | Parameter is invalid, e.g. the length of uriList is too long. |
 
 **示例**
 
@@ -1678,7 +1678,7 @@ setRingtoneUri(context: BaseContext, uri: string, type: RingtoneType): Promise<v
 | --- | --- | --- | --- |
 | context | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | 是 | 当前应用的上下文。 |
 | uri | string | 是 | 被设置的系统铃声的uri，资源支持可参考[media.AVPlayer](../../apis-media-kit/arkts-apis/arkts-media-media-avplayer-i.md)。 |
-| type | RingtoneType | 是 | 被设置的系统铃声的类型。 |
+| type | [RingtoneType](arkts-audio-systemsoundmanager-ringtonetype-e-sys.md) | 是 | 被设置的系统铃声的类型。 |
 
 **返回值：**
 
@@ -1737,7 +1737,7 @@ setSystemRingtoneUri(context: Context, uri: string, type: RingtoneType, callback
 | --- | --- | --- | --- |
 | context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | 是 | 当前应用的上下文。 |
 | uri | string | 是 | 被设置的系统铃声的uri，资源支持可参考[media.AVPlayer](../../apis-media-kit/arkts-apis/arkts-media-media-avplayer-i.md)。 |
-| type | RingtoneType | 是 | 被设置的系统铃声的类型。 |
+| type | [RingtoneType](arkts-audio-systemsoundmanager-ringtonetype-e-sys.md) | 是 | 被设置的系统铃声的类型。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当设置系统铃声uri成功，err为undefined，否则为错误对象。 |
 
 **示例**
@@ -1785,7 +1785,7 @@ setSystemRingtoneUri(context: Context, uri: string, type: RingtoneType): Promise
 | --- | --- | --- | --- |
 | context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | 是 | 当前应用的上下文。 |
 | uri | string | 是 | 被设置的系统铃声的uri，资源支持可参考[media.AVPlayer](../../apis-media-kit/arkts-apis/arkts-media-media-avplayer-i.md)。 |
-| type | RingtoneType | 是 | 被设置的系统铃声的类型。 |
+| type | [RingtoneType](arkts-audio-systemsoundmanager-ringtonetype-e-sys.md) | 是 | 被设置的系统铃声的类型。 |
 
 **返回值：**
 

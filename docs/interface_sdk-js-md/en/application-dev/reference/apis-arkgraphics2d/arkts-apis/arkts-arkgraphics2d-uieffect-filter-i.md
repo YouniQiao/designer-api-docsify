@@ -34,7 +34,7 @@ Adds a blur effect to the component.
 
 | Type | Description |
 | --- | --- |
-| Filter | Returns the Filter with the blur effect attached, supporting chained calls to add other effects. |
+| [Filter](arkts-arkgraphics2d-uieffect-filter-i.md) | Returns the Filter with the blur effect attached, supporting chained calls to add other effects. |
 
 **Examples**
 
@@ -103,7 +103,7 @@ The maximum supported brightness boost multiple is calculated as the device's cu
 
 | Type | Description |
 | --- | --- |
-| Filter | Returns the Filter with the HDR brightening effect attached, supporting chained calls to add other effects. |
+| [Filter](arkts-arkgraphics2d-uieffect-filter-i.md) | Returns the Filter with the HDR brightening effect attached, supporting chained calls to add other effects. |
 
 **Error codes:**
 

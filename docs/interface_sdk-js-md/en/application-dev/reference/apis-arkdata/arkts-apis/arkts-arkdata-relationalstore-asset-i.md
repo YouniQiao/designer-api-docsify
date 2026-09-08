@@ -92,7 +92,7 @@ Asset status.
 
 Default value: **ASSET_NORMAL**.
 
-**Type:** AssetStatus
+**Type:** [AssetStatus](arkts-arkdata-relationalstore-assetstatus-e.md)
 
 **Since:** 10
 

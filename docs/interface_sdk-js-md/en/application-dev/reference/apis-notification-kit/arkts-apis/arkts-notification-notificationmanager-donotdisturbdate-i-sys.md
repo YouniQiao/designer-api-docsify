@@ -54,7 +54,7 @@ type: DoNotDisturbType
 
 DND time type.
 
-**Type:** DoNotDisturbType
+**Type:** [DoNotDisturbType](arkts-notification-notificationmanager-donotdisturbtype-e-sys.md)
 
 **Since:** 9
 

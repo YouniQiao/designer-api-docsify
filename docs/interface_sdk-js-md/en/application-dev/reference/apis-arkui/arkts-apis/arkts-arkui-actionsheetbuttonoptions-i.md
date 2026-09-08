@@ -105,9 +105,9 @@ value: string | Resource
 
 Button text.
 
-If the text is too number to display, it is truncated with an ellipsis (...).
+If the text is too long to display, it is truncated with an ellipsis (...).
 
-**Type:** string \| Resource
+**Type:** string \| [Resource](arkts-arkui-resource-t.md)
 
 **Since:** 8
 

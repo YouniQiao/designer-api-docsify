@@ -32,23 +32,7 @@ Obtains an image buffer from the idle queue and writes image data into it. This 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Image&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the latest image obtained; otherwise, **err** is an error object. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function DequeueImage(creator : image.ImageCreator) {
-  creator.dequeueImage((err: BusinessError, img: image.Image) => {
-    if (err) {
-      console.error(`Failed to dequeue the Image.code ${err.code},message is ${err.message}`);
-    } else {
-      console.info('Succeeded in dequeuing the Image.');
-    }
-  });
-}
-```
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Image](arkts-image-image-image-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the latest image obtained; otherwise, **err** is an error object. |
 
 ## dequeueImage
 
@@ -66,21 +50,7 @@ Obtains an image buffer from the idle queue and writes image data into it. This 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Image&gt; | Promise used to return the latest image. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function DequeueImage(creator : image.ImageCreator) {
-  creator.dequeueImage().then((img: image.Image) => {
-    console.info('Succeeded in dequeuing the Image.');
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to dequeue the Image.code ${error.code},message is ${error.message}`);
-  })
-}
-```
+| Promise&lt;[Image](arkts-image-image-image-i.md)&gt; | Promise used to return the latest image. |
 
 ## off('imageRelease')
 
@@ -101,18 +71,6 @@ Unregisters the callback function that is triggered when the buffer is released.
 | type | 'imageRelease' | Yes | Type of event, which is **'imageRelease'**. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | No | Callback used to return the result. If the operation is successful, **err** is null; otherwise, **err** is an error object. |
 
-**Examples**
-
-```TypeScript
-async function Off(creator : image.ImageCreator) {
-  let callbackFunc = ()=>{
-      // Implement the callback logic.
-  }
-  creator.on('imageRelease', callbackFunc)
-  creator.off('imageRelease', callbackFunc)
-}
-```
-
 ## on('imageRelease')
 
 ```TypeScript
@@ -132,22 +90,6 @@ Listens for image release events. This API uses an asynchronous callback to retu
 | type | 'imageRelease' | Yes | Type of event, which is **'imageRelease'**. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function On(creator : image.ImageCreator) {
-  creator.on('imageRelease', (err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to get the imageRelease callback.code ${err.code},message is ${err.message}`);
-    } else {
-      console.info('Succeeded in getting imageRelease callback.');
-    }
-  })
-}
-```
-
 ## queueImage
 
 ```TypeScript
@@ -164,36 +106,8 @@ Places the drawn image in the queue. This API uses an asynchronous callback to r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| image | Image | Yes | Drawn image. |
+| image | [Image](arkts-image-image-image-i.md) | Yes | Drawn image. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function QueueImage(creator : image.ImageCreator) {
-  creator.dequeueImage().then((img: image.Image) => {
-    // Draw the image.
-    img.getComponent(4).then((component : image.Component) => {
-      let bufferArr: Uint8Array = new Uint8Array(component.byteBuffer);
-      for (let i = 0; i < bufferArr.length; i += 4) {
-        bufferArr[i] = 0; // B
-        bufferArr[i + 1] = 0; // G
-        bufferArr[i + 2] = 255; // R
-        bufferArr[i + 3] = 255; // A
-      }
-    })
-    creator.queueImage(img, (err: BusinessError) => {
-      if (err) {
-        console.error(`Failed to queue the Image.code ${err.code},message is ${err.message}`);
-      } else {
-        console.info('Succeeded in queuing the Image.');
-      }
-    })
-  })
-}
-```
 
 ## queueImage
 
@@ -211,39 +125,13 @@ Places the drawn image in the queue. This API uses a promise to return the resul
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| image | Image | Yes | Drawn image. |
+| image | [Image](arkts-image-image-image-i.md) | Yes | Drawn image. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function QueueImage(creator : image.ImageCreator) {
-  creator.dequeueImage().then((img: image.Image) => {
-    // Draw the image.
-    img.getComponent(4).then((component: image.Component) => {
-      let bufferArr: Uint8Array = new Uint8Array(component.byteBuffer);
-      for (let i = 0; i < bufferArr.length; i += 4) {
-        bufferArr[i] = 0; // B
-        bufferArr[i + 1] = 0; // G
-        bufferArr[i + 2] = 255; // R
-        bufferArr[i + 3] = 255; // A
-      }
-    })
-    creator.queueImage(img).then(() => {
-      console.info('Succeeded in queuing the Image.');
-    }).catch((error: BusinessError) => {
-      console.error(`Failed to queue the Image.code ${error.code},message is ${error.message}`);
-    })
-  })
-}
-```
 
 ## release
 
@@ -267,93 +155,6 @@ Before releasing the instance, ensure that all asynchronous operations associate
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function Release(img : image.Image) {
-  img.release((err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to release the image instance.code ${err.code},message is ${err.message}`);
-    } else {
-      console.info('Succeeded in releasing the image instance.');
-    }
-  })
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function Release(creator : image.ImageCreator) {
-  creator.release((err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to release the creator.code ${err.code},message is ${err.message}`);
-    } else {
-      console.info('Succeeded in releasing creator.');
-    }
-  });
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function Release() {
-  const imagePackerObj: image.ImagePacker = image.createImagePacker();
-  imagePackerObj.release((err: BusinessError)=>{
-    if (err) {
-      console.error(`Failed to release image packaging.code ${err.code},message is ${err.message}`);
-    } else {
-      console.info('Succeeded in releasing image packaging.');
-    }
-  })
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function Release(receiver : image.ImageReceiver) {
-  receiver.release((err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to release the receiver.code ${err.code},message is ${err.message}`);
-    } else {
-      console.info('Succeeded in releasing the receiver.');
-    }
-  })
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function Release(imageSourceObj : image.ImageSource) {
-  imageSourceObj.release((err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to release the image source instance.code ${err.code},message is ${err.message}`);
-    } else {
-      console.info('Succeeded in releasing the image source instance.');
-    }
-  })
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function release(pixelMap: image.PixelMap) {
-  pixelMap.release((err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to release the PixelMap object. Code: ${err.code}, message: ${err.message}`);
-      return;
-    }
-    console.info('Succeeded in releasing the PixelMap object.');
-  });
-}
-```
-
 ## release
 
 ```TypeScript
@@ -375,81 +176,6 @@ Before releasing the instance, ensure that all asynchronous operations associate
 | Type | Description |
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function Release(img : image.Image) {
-  img.release().then(() => {
-    console.info('Succeeded in releasing the image instance.');
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to release the image instance.code ${error.code},message is ${error.message}`);
-  })
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function Release(creator : image.ImageCreator) {
-  creator.release().then(() => {
-    console.info('Succeeded in releasing creator.');
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to release the creator.code ${error.code},message is ${error.message}`);
-  })
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function Release() {
-  const imagePackerObj: image.ImagePacker = image.createImagePacker();
-  imagePackerObj.release().then(() => {
-    console.info('Succeeded in releasing image packaging.');
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to release image packaging.code ${error.code},message is ${error.message}`);
-  })
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function Release(receiver : image.ImageReceiver) {
-  receiver.release().then(() => {
-    console.info('Succeeded in releasing the receiver.');
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to release the receiver.code ${error.code},message is ${error.message}`);
-  })
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function Release(imageSourceObj : image.ImageSource) {
-  imageSourceObj.release().then(() => {
-    console.info('Succeeded in releasing the image source instance.');
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to release the image source instance.code ${error.code},message is ${error.message}`);
-  })
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function release(pixelMap: image.PixelMap) {
-  pixelMap.release().then(() => {
-    console.info('Succeeded in releasing the PixelMap object.');
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to release the PixelMap object. Code: ${err.code}, message: ${err.message}`);
-  });
-}
-```
 
 ## capacity
 

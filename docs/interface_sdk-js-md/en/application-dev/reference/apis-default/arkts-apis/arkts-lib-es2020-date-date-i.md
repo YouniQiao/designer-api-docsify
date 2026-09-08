@@ -17,7 +17,7 @@ Converts a date to a string by using the current or specified locale.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| locales | Intl.LocalesArgument | No |  |
+| locales | [Intl.LocalesArgument](arkts-intl-localesargument-t.md) | No |  |
 | options | Intl.DateTimeFormatOptions | No |  |
 
 **Return value:**
@@ -36,7 +36,7 @@ Converts a date and time to a string by using the current or specified locale.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| locales | Intl.LocalesArgument | No |  |
+| locales | [Intl.LocalesArgument](arkts-intl-localesargument-t.md) | No |  |
 | options | Intl.DateTimeFormatOptions | No |  |
 
 **Return value:**
@@ -55,7 +55,7 @@ Converts a time to a string by using the current or specified locale.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| locales | Intl.LocalesArgument | No |  |
+| locales | [Intl.LocalesArgument](arkts-intl-localesargument-t.md) | No |  |
 | options | Intl.DateTimeFormatOptions | No |  |
 
 **Return value:**

@@ -42,6 +42,7 @@ import { CounterV2Component, CounterV2Options, CounterV2DateData, CounterV2Type 
 ## Examples
 
 This example implements a list CounterV2 by setting [CounterV2Type](arkts-arkui-arkui-advanced-counterv2-counterv2type-e.md).LIST and the numberOptions attribute of [CounterV2Options](arkts-arkui-arkui-advanced-counterv2-counterv2options-c.md).
+Since API version 26.0.0, [CounterV2Options](arkts-arkui-arkui-advanced-counterv2-counterv2options-c.md) supports the numberOptions attributes.
 
 ```TypeScript
 import { CounterV2Type, CounterV2Component } from '@kit.ArkUI';
@@ -69,6 +70,7 @@ struct ListCounterExample {
 ```
 
 This example implements a compact CounterV2 by setting [CounterV2Type](arkts-arkui-arkui-advanced-counterv2-counterv2type-e.md).COMPACT and the numberOptions attributes of [CounterV2Options](arkts-arkui-arkui-advanced-counterv2-counterv2options-c.md).
+Since API version 26.0.0, [CounterV2Options](arkts-arkui-arkui-advanced-counterv2-counterv2options-c.md) supports the numberOptions attribute.
 
 ```TypeScript
 import { CounterV2Type, CounterV2Component } from '@kit.ArkUI';
@@ -97,6 +99,7 @@ struct CompactCounterExample {
 ```
 
 This example implements an inline number CounterV2 by setting [CounterV2Type](arkts-arkui-arkui-advanced-counterv2-counterv2type-e.md).INLINE and the inlineOptions attribute of [CounterV2Options](arkts-arkui-arkui-advanced-counterv2-counterv2options-c.md).
+Since API version 26.0.0, [CounterV2Options](arkts-arkui-arkui-advanced-counterv2-counterv2options-c.md) supports the inlineOptions attribute.
 
 ```TypeScript
 import { CounterV2Type, CounterV2Component } from '@kit.ArkUI';
@@ -128,6 +131,7 @@ struct NumberStyleExample {
 ```
 
 This example implements an inline date CounterV2 by setting [CounterV2Type](arkts-arkui-arkui-advanced-counterv2-counterv2type-e.md).INLINE_DATE and the dateOptions attribute of [CounterV2Options](arkts-arkui-arkui-advanced-counterv2-counterv2options-c.md).
+Since API version 26.0.0, [CounterV2Options](arkts-arkui-arkui-advanced-counterv2-counterv2options-c.md) supports the dateOptions attribute.
 
 ```TypeScript
 import { CounterV2Type, CounterV2Component, CounterV2DateData } from '@kit.ArkUI';
@@ -155,6 +159,7 @@ struct DateStyleExample {
 ```
 
 This example uses the direction attribute of [CounterV2Options](arkts-arkui-arkui-advanced-counterv2-counterv2options-c.md) to implement mirrored layouts for the list, compact, inline number, and inline date CounterV2 components.
+Since API version 26.0.0, [CounterV2Options](arkts-arkui-arkui-advanced-counterv2-counterv2options-c.md) supports the direction attribute.
 
 ```TypeScript
 import { CounterV2Type, CounterV2Component, CounterV2DateData } from '@kit.ArkUI';

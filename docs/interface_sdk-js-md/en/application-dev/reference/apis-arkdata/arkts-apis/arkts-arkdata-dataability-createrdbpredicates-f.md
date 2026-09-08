@@ -29,7 +29,7 @@ Creates an **RdbPredicates** object with a table name and **DataAbilityPredicate
 
 | Type | Description |
 | --- | --- |
-| rdb.RdbPredicates | RdbPredicates** object created. |
+| [rdb.RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | RdbPredicates** object created. |
 
 **Examples**
 

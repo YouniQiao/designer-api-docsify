@@ -29,30 +29,7 @@ constructor()
 **示例**
 
 ```TypeScript
-let textDecoder = new util.TextDecoder();
-let retStr = textDecoder.encoding;
-console.info('retStr = ' + retStr);
-// 输出结果：retStr = utf-8
-```
-
-```TypeScript
-let textEncoder = new util.TextEncoder();
-```
-
-```TypeScript
-let rationalNumber = new util.RationalNumber();
-```
-
-```TypeScript
-let base64 = new util.Base64Helper();
-```
-
-```TypeScript
 let type = new util.types();
-```
-
-```TypeScript
-let base64 = new  util.Base64();
 ```
 
 ## isAnyArrayBuffer
@@ -240,6 +217,10 @@ console.info("result = " + result);
 ```
 
 > 说明：
+> 
+> 该接口无法对AsyncGenerator Function进行有效判断，建议通过获取函数的属性与做判等的方式替代。
+> 
+> 该接口无法对Sendable class中的async成员函数进行有效判断，无替代方案。
 
 ```TypeScript
 // /entry/src/main/ets/pages/test.ts
@@ -682,6 +663,8 @@ console.info("result = " + result);
 ```
 
 > 说明：
+> 
+> 该接口无法对AsyncGenerator Function进行有效判断，建议通过获取函数的属性与做判等的方式替代。
 
 ```TypeScript
 // /entry/src/main/ets/pages/test.ts

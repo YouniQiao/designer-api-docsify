@@ -331,7 +331,7 @@ Gets the ringtone attribute which is in use.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | RingtoneType | Yes | Ringtone type to get. |
+| type | [RingtoneType](arkts-audio-systemsoundmanager-ringtonetype-e-sys.md) | Yes | Ringtone type to get. |
 
 **Return value:**
 
@@ -431,7 +431,7 @@ Gets attributes of the default ringtone.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | context | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | Yes | Current application context. |
-| type | RingtoneType | Yes | Ringtone type to get. |
+| type | [RingtoneType](arkts-audio-systemsoundmanager-ringtonetype-e-sys.md) | Yes | Ringtone type to get. |
 
 **Return value:**
 
@@ -600,7 +600,7 @@ Obtains a mock haptic ringtone player for playing vibration files and their corr
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;RingtonePlayer \| null&gt; | Promise used to return a ringtone player instance, or null when an error happens. |
+| Promise&lt;[RingtonePlayer](arkts-audio-systemsoundmanager-ringtoneplayer-t-sys.md) \| null&gt; | Promise used to return a ringtone player instance, or null when an error happens. |
 
 **Error codes:**
 
@@ -631,14 +631,14 @@ Obtains a mock haptic ringtone player for playing vibration files and their corr
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | context | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | Yes | Current application context. |
-| type | RingtoneType | Yes | Ringtone type to get. |
+| type | [RingtoneType](arkts-audio-systemsoundmanager-ringtonetype-e-sys.md) | Yes | Ringtone type to get. |
 | ringtoneUri | string | Yes | Ringtone uri to get. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;RingtonePlayer \| null&gt; | Promise used to return a ringtone player instance, or null when an error happens. |
+| Promise&lt;[RingtonePlayer](arkts-audio-systemsoundmanager-ringtoneplayer-t-sys.md) \| null&gt; | Promise used to return a ringtone player instance, or null when an error happens. |
 
 **Error codes:**
 
@@ -667,7 +667,7 @@ Gets attribute list of ringtones.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | context | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | Yes | Current application context. |
-| type | RingtoneType | Yes | Ringtone type to get. |
+| type | [RingtoneType](arkts-audio-systemsoundmanager-ringtonetype-e-sys.md) | Yes | Ringtone type to get. |
 
 **Return value:**
 
@@ -720,13 +720,13 @@ Gets the ringtone player.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | context | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | Yes | Current application context. |
-| type | RingtoneType | Yes | Ringtone type to get. |
+| type | [RingtoneType](arkts-audio-systemsoundmanager-ringtonetype-e-sys.md) | Yes | Ringtone type to get. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;RingtonePlayer&gt; | Promise used to return a ringtone player instance. |
+| Promise&lt;[RingtonePlayer](arkts-audio-systemsoundmanager-ringtoneplayer-t-sys.md)&gt; | Promise used to return a ringtone player instance. |
 
 **Error codes:**
 
@@ -774,7 +774,7 @@ Gets the ringtone uri.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | context | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | Yes | Current application context. |
-| type | RingtoneType | Yes | Ringtone type to get. |
+| type | [RingtoneType](arkts-audio-systemsoundmanager-ringtonetype-e-sys.md) | Yes | Ringtone type to get. |
 
 **Return value:**
 
@@ -831,8 +831,8 @@ Gets the ringtone player.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | Yes | Current application context. |
-| type | RingtoneType | Yes | Ringtone type to get. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;RingtonePlayer&gt; | Yes | Callback used to return a ringtone player instance. |
+| type | [RingtoneType](arkts-audio-systemsoundmanager-ringtonetype-e-sys.md) | Yes | Ringtone type to get. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[RingtonePlayer](arkts-audio-systemsoundmanager-ringtoneplayer-t-sys.md)&gt; | Yes | Callback used to return a ringtone player instance. |
 
 **Examples**
 
@@ -879,13 +879,13 @@ Gets the ringtone player.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | Yes | Current application context. |
-| type | RingtoneType | Yes | Ringtone type to get. |
+| type | [RingtoneType](arkts-audio-systemsoundmanager-ringtonetype-e-sys.md) | Yes | Ringtone type to get. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;RingtonePlayer&gt; | Promise used to return a ringtone player instance. |
+| Promise&lt;[RingtonePlayer](arkts-audio-systemsoundmanager-ringtoneplayer-t-sys.md)&gt; | Promise used to return a ringtone player instance. |
 
 **Examples**
 
@@ -930,7 +930,7 @@ Gets the ringtone uri.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | Yes | Current application context. |
-| type | RingtoneType | Yes | Ringtone type to get. |
+| type | [RingtoneType](arkts-audio-systemsoundmanager-ringtonetype-e-sys.md) | Yes | Ringtone type to get. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the ringtone uri maintained in system. |
 
 **Examples**
@@ -976,7 +976,7 @@ Gets the ringtone uri.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | Yes | Current application context. |
-| type | RingtoneType | Yes | Ringtone type to get. |
+| type | [RingtoneType](arkts-audio-systemsoundmanager-ringtonetype-e-sys.md) | Yes | Ringtone type to get. |
 
 **Return value:**
 
@@ -1080,7 +1080,7 @@ Gets the system tone player.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;SystemTonePlayer&gt; | Promise used to return the SystemTonePlayer. |
+| Promise&lt;[SystemTonePlayer](arkts-audio-systemsoundmanager-systemtoneplayer-t-sys.md)&gt; | Promise used to return the SystemTonePlayer. |
 
 **Error codes:**
 
@@ -1409,7 +1409,7 @@ Open tone list in batch.
 | Error Code ID | Error Message |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Calleris not a system application. |
-| [20700007](../errorcode-audio-ringtone-sys.md#20700007-invalid-parameter) | Parameter is invalid, e.g. the length of uriList is too number. |
+| [20700007](../errorcode-audio-ringtone-sys.md#20700007-invalid-parameter) | Parameter is invalid, e.g. the length of uriList is too long. |
 
 **Examples**
 
@@ -1522,7 +1522,7 @@ Remove customized tone list in batch.
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
-| [20700007](../errorcode-audio-ringtone-sys.md#20700007-invalid-parameter) | Parameter is invalid, e.g. the length of uriList is too number. |
+| [20700007](../errorcode-audio-ringtone-sys.md#20700007-invalid-parameter) | Parameter is invalid, e.g. the length of uriList is too long. |
 
 **Examples**
 
@@ -1618,7 +1618,7 @@ Sets the ringtone uri to system.
 | --- | --- | --- | --- |
 | context | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | Yes | Current application context. |
 | uri | string | Yes | Ringtone uri to set. |
-| type | RingtoneType | Yes | Ringtone type to set. |
+| type | [RingtoneType](arkts-audio-systemsoundmanager-ringtonetype-e-sys.md) | Yes | Ringtone type to set. |
 
 **Return value:**
 
@@ -1677,7 +1677,7 @@ Sets the ringtone uri to system.
 | --- | --- | --- | --- |
 | context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | Yes | Current application context. |
 | uri | string | Yes | Ringtone uri to set. |
-| type | RingtoneType | Yes | Ringtone type to set. |
+| type | [RingtoneType](arkts-audio-systemsoundmanager-ringtonetype-e-sys.md) | Yes | Ringtone type to set. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the set uri result. |
 
 **Examples**
@@ -1725,7 +1725,7 @@ Sets the ringtone uri to system.
 | --- | --- | --- | --- |
 | context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | Yes | Current application context. |
 | uri | string | Yes | Ringtone uri to set. |
-| type | RingtoneType | Yes | Ringtone type to set. |
+| type | [RingtoneType](arkts-audio-systemsoundmanager-ringtonetype-e-sys.md) | Yes | Ringtone type to set. |
 
 **Return value:**
 

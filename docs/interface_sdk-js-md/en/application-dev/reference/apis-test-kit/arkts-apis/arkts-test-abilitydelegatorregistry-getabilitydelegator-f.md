@@ -26,7 +26,7 @@ Obtains an [AbilityDelegator](../../apis-ability-kit/arkts-apis/arkts-ability-ab
 
 | Type | Description |
 | --- | --- |
-| AbilityDelegator | [AbilityDelegator]{ |
+| [AbilityDelegator](arkts-test-abilitydelegatorregistry-abilitydelegator-t.md) | [AbilityDelegator]{ |
 
 **Examples**
 

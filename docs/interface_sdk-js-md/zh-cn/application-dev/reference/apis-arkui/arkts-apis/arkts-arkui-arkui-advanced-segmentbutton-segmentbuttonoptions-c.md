@@ -108,7 +108,7 @@ backgroundBlurStyle: BlurStyle
 
 值为undefined时，按默认值处理。
 
-**类型：** BlurStyle
+**类型：** [BlurStyle](../arkts-components/arkts-arkui-blurstyle-e.md)
 
 **起始版本：** 11
 
@@ -182,7 +182,7 @@ backgroundSystemMaterial?: uiMaterial.Material
 
 从API版本26.0.0开始，除胶囊类多选分段按钮（即type为"capsule"且multiply为true）外，backgroundSystemMaterial设置自动反色的系统材质时，fontColor和selectedFontColor使用支持反色的特殊系统资源，颜色自动适配到材质背景色的反色。
 
-**类型：** uiMaterial.Material
+**类型：** [uiMaterial.Material](arkts-arkui-uimaterial-material-c.md)
 
 **起始版本：** 26.0.0
 
@@ -270,7 +270,7 @@ direction?: Direction
 
 值为undefined时，按默认值处理。
 
-**类型：** Direction
+**类型：** [Direction](arkts-arkui-direction-e.md)
 
 **起始版本：** 12
 
@@ -334,7 +334,7 @@ fontWeight: FontWeight
 
 值为undefined时，字体粗细为FontWeight.Regular。
 
-**类型：** FontWeight
+**类型：** [FontWeight](arkts-arkui-fontweight-e.md)
 
 **起始版本：** 11
 
@@ -560,7 +560,7 @@ selectedFontWeight: FontWeight
 
 值为undefined时，字体粗细为FontWeight.Medium。
 
-**类型：** FontWeight
+**类型：** [FontWeight](arkts-arkui-fontweight-e.md)
 
 **起始版本：** 11
 

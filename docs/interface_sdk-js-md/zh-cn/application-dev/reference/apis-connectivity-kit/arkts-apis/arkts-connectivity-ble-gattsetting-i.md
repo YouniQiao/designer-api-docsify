@@ -38,7 +38,7 @@ transport?: BluetoothTransport
 
 连接的传输类型，默认值为TRANSPORT_LE。
 
-**类型：** BluetoothTransport
+**类型：** [BluetoothTransport](arkts-connectivity-ble-bluetoothtransport-t.md)
 
 **起始版本：** 26.0.0
 

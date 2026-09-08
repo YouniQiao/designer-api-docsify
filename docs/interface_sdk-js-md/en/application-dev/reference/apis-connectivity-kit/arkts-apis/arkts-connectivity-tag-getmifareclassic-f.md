@@ -30,7 +30,7 @@ Obtains a **MifareClassicTag** object, which allows access to the tags that use 
 
 | Type | Description |
 | --- | --- |
-| MifareClassicTag | MifareClassicTag** object obtained. |
+| [MifareClassicTag](arkts-connectivity-tag-mifareclassictag-t.md) | MifareClassicTag** object obtained. |
 
 **Error codes:**
 

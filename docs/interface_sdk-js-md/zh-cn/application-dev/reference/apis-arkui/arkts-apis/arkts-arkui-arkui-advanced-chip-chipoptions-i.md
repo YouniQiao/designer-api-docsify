@@ -194,7 +194,7 @@ activatedBackgroundSystemMaterial?: uiMaterial.Material
 
 **说明：**当设置activatedBackgroundSystemMaterial时，应将activatedBackgroundColor设为Color.Transparent，否则会与系统材质冲突；当activatedBackgroundSystemMaterial为undefined时，activatedBackgroundColor属性生效。
 
-**类型：** uiMaterial.Material
+**类型：** [uiMaterial.Material](arkts-arkui-uimaterial-material-c.md)
 
 **起始版本：** 26.0.0
 
@@ -266,7 +266,7 @@ backgroundSystemMaterial?: uiMaterial.Material
 
 **说明：**当设置backgroundSystemMaterial时，应将backgroundColor设为Color.Transparent，否则会与系统材质冲突；当backgroundSystemMaterial为undefined时，backgroundColor属性生效。
 
-**类型：** uiMaterial.Material
+**类型：** [uiMaterial.Material](arkts-arkui-uimaterial-material-c.md)
 
 **起始版本：** 26.0.0
 
@@ -336,7 +336,7 @@ direction?: Direction
 
 **使用场景**：常用于国际化场景，适配阿拉伯语等从右到左（RTL）阅读习惯的语言环境，实现界面镜像效果。
 
-**类型：** Direction
+**类型：** [Direction](arkts-arkui-direction-e.md)
 
 **起始版本：** 12
 
@@ -437,7 +437,7 @@ Chip组件文本与图标的最大的字体缩放倍数。
 
 **使用场景**：适用于需要限制字体放大上限的无障碍场景，防止字体过大导致布局溢出。
 
-**类型：** number \| Resource
+**类型：** number \| [Resource](arkts-arkui-resource-t.md)
 
 **起始版本：** 23
 
@@ -465,7 +465,7 @@ Chip组件文本与图标的最小的字体缩放倍数。
 
 **使用场景**：适用于需要限制字体缩小下限的场景，保证文本可读性。
 
-**类型：** number \| Resource
+**类型：** number \| [Resource](arkts-arkui-resource-t.md)
 
 **起始版本：** 23
 

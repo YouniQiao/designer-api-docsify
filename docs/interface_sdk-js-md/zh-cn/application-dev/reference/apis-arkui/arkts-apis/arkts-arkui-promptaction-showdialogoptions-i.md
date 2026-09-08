@@ -40,7 +40,7 @@ backgroundBlurStyle?: BlurStyle
 对话框背板模糊材质。默认值：从API版本26.0.0开始，为BlurStyle.NONE，API版本26.0.0之前，为BlurStyle.COMPONENT_ULTRA_THICK。  
 **说明：** 设置为BlurStyle.NONE即可关闭背景虚化。当设置了backgroundBlurStyle为非NONE值时，则不要设置backgroundColor，否则颜色显示将不符合预期效果。
 
-**类型：** BlurStyle
+**类型：** [BlurStyle](../arkts-components/arkts-arkui-blurstyle-e.md)
 
 **默认值：** BlurStyle.COMPONENT_ULTRA_THICK
 
@@ -117,7 +117,7 @@ buttons?: Array<Button>
 
 对话框中按钮的数组，结构为：{text:'button',&nbsp;color:&nbsp;'\#666666'}，支持1个或多个按钮。
 
-**类型：** Array&lt;Button&gt;
+**类型：** Array&lt;[Button](arkts-arkui-promptaction-button-i.md)&gt;
 
 **起始版本：** 9
 
@@ -302,7 +302,7 @@ message?: string | Resource
 
 内容文本。默认值：undefined，取值为undefined默认不显示内容。
 
-**类型：** string \| Resource
+**类型：** string \| [Resource](arkts-arkui-resource-t.md)
 
 **起始版本：** 9
 
@@ -480,7 +480,7 @@ title?: string | Resource
 
 标题文本。默认值：undefined，取值为undefined默认不显示标题。
 
-**类型：** string \| Resource
+**类型：** string \| [Resource](arkts-arkui-resource-t.md)
 
 **起始版本：** 9
 

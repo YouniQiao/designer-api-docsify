@@ -50,7 +50,7 @@ Return a new Decimal whose value is the absolute value of `n`.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \| Decimal} |
 
 **Return value:**
 
@@ -108,7 +108,7 @@ Return a new Decimal whose value is the arccosine in radians of `n`.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \| Decimal} |
 
 **Return value:**
 
@@ -167,7 +167,7 @@ Return a new Decimal whose value is the inverse of the hyperbolic cosine of `n`,
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \| Decimal} |
 
 **Return value:**
 
@@ -200,7 +200,7 @@ Return a new Decimal whose value is the value of this Decimal plus `n`, rounded 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \| Decimal} |
 
 **Return value:**
 
@@ -232,8 +232,8 @@ Return a new Decimal whose value is the sum of `x` and `y`, rounded to `precisio
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| x | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \| Decimal} |
-| y | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \| Decimal} |
+| x | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \| Decimal} |
+| y | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \| Decimal} |
 
 **Return value:**
 
@@ -291,7 +291,7 @@ Return a new Decimal whose value is the arcsine in radians of `n`, rounded to `p
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \| Decimal} |
 
 **Return value:**
 
@@ -350,7 +350,7 @@ Return a new Decimal whose value is the inverse of the hyperbolic sine of `n`, r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \| Decimal} A value in radians. |
+| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \| Decimal} A value in radians. |
 
 **Return value:**
 
@@ -409,7 +409,7 @@ Return a new Decimal whose value is the arctangent in radians of `n`, rounded to
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \| Decimal} |
 
 **Return value:**
 
@@ -442,8 +442,8 @@ Return a new Decimal whose value is the arctangent in radians of `y/x` in the ra
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| y | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \| Decimal} The y-coordinate. |
-| x | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \| Decimal} The x-coordinate. |
+| y | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \| Decimal} The y-coordinate. |
+| x | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \| Decimal} The x-coordinate. |
 
 **Return value:**
 
@@ -502,7 +502,7 @@ Return a new Decimal whose value is the inverse of the hyperbolic tangent of `n`
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \| Decimal} A value in radians. |
+| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \| Decimal} A value in radians. |
 
 **Return value:**
 
@@ -555,7 +555,7 @@ Return a new Decimal whose value is the cube root of `n`, rounded to `precision`
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \| Decimal} |
 
 **Return value:**
 
@@ -607,7 +607,7 @@ Return a new Decimal whose value is `n` rounded to an integer using `ROUND_CEIL`
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \| Decimal} |
 
 **Return value:**
 
@@ -639,8 +639,8 @@ Return a new Decimal whose value is the value of this Decimal clamped to the ran
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| min | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \| Decimal} |
-| max | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \| Decimal} |
+| min | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \| Decimal} |
+| max | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \| Decimal} |
 
 **Return value:**
 
@@ -673,9 +673,9 @@ Return a new Decimal whose value is `n` clamped to the range delineated by `min`
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \| Decimal} |
-| min | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \| Decimal} |
-| max | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \| Decimal} |
+| min | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \| Decimal} |
+| max | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \| Decimal} |
 
 **Return value:**
 
@@ -708,7 +708,7 @@ Return 1 if the value of this Decimal is greater than the value of `n`, -1 if th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \| Decimal} |
 
 **Return value:**
 
@@ -740,7 +740,7 @@ Return a new Decimal whose value is the absolute value of this Decimal.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \| Decimal} |
 
 **Error codes:**
 
@@ -786,7 +786,7 @@ Return a new Decimal whose value is the cosine of `n`, rounded to `precision` si
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \| Decimal} A value in radians. |
+| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \| Decimal} A value in radians. |
 
 **Return value:**
 
@@ -838,7 +838,7 @@ Return a new Decimal whose value is the hyperbolic cosine of `n`, rounded to pre
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \| Decimal} A value in radians. |
+| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \| Decimal} A value in radians. |
 
 **Return value:**
 
@@ -890,7 +890,7 @@ Return a new Decimal whose value is the value of this Decimal divided by `n`, ro
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \| Decimal} |
 
 **Return value:**
 
@@ -922,8 +922,8 @@ Return a new Decimal whose value is `x` divided by `y`, rounded to `precision` s
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| x | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \| Decimal} |
-| y | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \| Decimal} |
+| x | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \| Decimal} |
+| y | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \| Decimal} |
 
 **Return value:**
 
@@ -955,7 +955,7 @@ Return a new Decimal whose value is the integer part of dividing the value of th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \| Decimal} |
 
 **Return value:**
 
@@ -987,7 +987,7 @@ Return true if the value of this Decimal is equal to the value of `n`, otherwise
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \| Decimal} |
 
 **Return value:**
 
@@ -1045,7 +1045,7 @@ Return a new Decimal whose value is the natural exponential of `n`, rounded to `
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \| Decimal} |
 
 **Return value:**
 
@@ -1098,7 +1098,7 @@ Return a new Decimal whose value is `n` round to an integer using `ROUND_FLOOR`.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \| Decimal} |
 
 **Return value:**
 
@@ -1130,7 +1130,7 @@ Return true if the value of this Decimal is greater than the value of `n`, other
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \| Decimal} |
 
 **Return value:**
 
@@ -1162,7 +1162,7 @@ Return true if the value of this Decimal is greater than or equal to the value o
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \| Decimal} |
 
 **Return value:**
 
@@ -1194,7 +1194,7 @@ Return a new Decimal whose value is the square root of the sum of the squares of
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md)[] | Yes | {number \| string \| Decimal} Decimal |
+| n | [Value](arkts-arkts-value-t.md)[] | Yes | {double \| string \| Decimal} Decimal |
 
 **Return value:**
 
@@ -1346,7 +1346,7 @@ Return true if the value of this Decimal is less than `n`, otherwise return fals
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \| Decimal} |
 
 **Return value:**
 
@@ -1378,7 +1378,7 @@ Return true if the value of this Decimal is less than or equal to `n`, otherwise
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \| Decimal} |
 
 **Return value:**
 
@@ -1436,7 +1436,7 @@ Return a new Decimal whose value is the natural logarithm of `n`, rounded to `pr
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \| Decimal} |
 
 **Return value:**
 
@@ -1469,7 +1469,7 @@ Return the logarithm of the value of this Decimal to the specified base, rounded
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \| Decimal} |
 
 **Return value:**
 
@@ -1502,8 +1502,8 @@ Return a new Decimal whose value is the log of `n` to the base `base`, rounded t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \| Decimal} |
-| base | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \| Decimal} |
+| base | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \| Decimal} |
 
 **Return value:**
 
@@ -1536,7 +1536,7 @@ Return a new Decimal whose value is the base 10 logarithm of `n`, rounded to `pr
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \| Decimal} |
 
 **Return value:**
 
@@ -1569,7 +1569,7 @@ Return a new Decimal whose value is the base 2 logarithm of `n`, rounded to `pre
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \| Decimal} |
 
 **Return value:**
 
@@ -1602,7 +1602,7 @@ Return a new Decimal whose value is the maximum of the arguments.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md)[] | Yes | {number \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md)[] | Yes | {double \| string \| Decimal} |
 
 **Return value:**
 
@@ -1634,7 +1634,7 @@ Return a new Decimal whose value is the minimum of the arguments.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md)[] | Yes | {number \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md)[] | Yes | {double \| string \| Decimal} |
 
 **Return value:**
 
@@ -1666,7 +1666,7 @@ Return a new Decimal whose value is the value of this Decimal modulo `n`, rounde
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \| Decimal} |
 
 **Return value:**
 
@@ -1698,8 +1698,8 @@ Return a new Decimal whose value is `x` modulo `y`, rounded to `precision` signi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| x | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \| Decimal} |
-| y | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \| Decimal} |
+| x | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \| Decimal} |
+| y | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \| Decimal} |
 
 **Return value:**
 
@@ -1731,7 +1731,7 @@ Return a new Decimal whose value is this Decimal times `n`, rounded to `precisio
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \| Decimal} |
 
 **Return value:**
 
@@ -1763,8 +1763,8 @@ Return a new Decimal whose value is `x` multiplied by `y`, rounded to `precision
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| x | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \| Decimal} |
-| y | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \| Decimal} |
+| x | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \| Decimal} |
+| y | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \| Decimal} |
 
 **Return value:**
 
@@ -1816,7 +1816,7 @@ Return a new Decimal whose value is the value of this Decimal raised to the powe
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \| Decimal} |
 
 **Return value:**
 
@@ -1849,8 +1849,8 @@ Return a new Decimal whose value is `base` raised to the power `exponent`, round
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| base | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \| Decimal} The base. |
-| exponent | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \| Decimal} The exponent. |
+| base | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \| Decimal} The base. |
+| exponent | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \| Decimal} The exponent. |
 
 **Return value:**
 
@@ -1994,7 +1994,7 @@ Return a new Decimal whose value is `n` rounded to an integer using rounding mod
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \| Decimal} |
 
 **Return value:**
 
@@ -2054,7 +2054,7 @@ Return the sign of the passed value to the method. 1 if x &gt; 0, -1 if x &lt; 0
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \| Decimal} |
 
 **Return value:**
 
@@ -2107,7 +2107,7 @@ Return a new Decimal whose value is the sine of `n`, rounded to `precision` sign
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \| Decimal} A value in radians. |
+| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \| Decimal} A value in radians. |
 
 **Return value:**
 
@@ -2159,7 +2159,7 @@ Return a new Decimal whose value is the hyperbolic sine of `n`, rounded to `prec
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \| Decimal} |
 
 **Return value:**
 
@@ -2211,7 +2211,7 @@ Return a new Decimal whose value is the square root of `n`, rounded to `precisio
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \| Decimal} |
 
 **Return value:**
 
@@ -2243,7 +2243,7 @@ Return a new Decimal whose value is the value of this Decimal minus `n`, rounded
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \| Decimal} |
 
 **Return value:**
 
@@ -2275,8 +2275,8 @@ Return a new Decimal whose value is `x` minus `y`, rounded to `precision` signif
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| x | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \| Decimal} |
-| y | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \| Decimal} |
+| x | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \| Decimal} |
+| y | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \| Decimal} |
 
 **Return value:**
 
@@ -2310,7 +2310,7 @@ Only the result is rounded, not the intermediate calculations.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md)[] | Yes | {number \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md)[] | Yes | {double \| string \| Decimal} |
 
 **Return value:**
 
@@ -2362,7 +2362,7 @@ Return a new Decimal whose value is the tangent of `n`, rounded to `precision` s
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \| Decimal} A value in radians. |
+| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \| Decimal} A value in radians. |
 
 **Return value:**
 
@@ -2414,7 +2414,7 @@ Return a new Decimal whose value is the hyperbolic tangent of `n`, rounded to `p
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \| Decimal} A value in radians. |
+| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \| Decimal} A value in radians. |
 
 **Return value:**
 
@@ -2807,7 +2807,7 @@ Return an array representing the value of this Decimal as a simple fraction with
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| maxDenominator | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \| Decimal} |
+| maxDenominator | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \| Decimal} |
 
 **Return value:**
 
@@ -2924,7 +2924,7 @@ Returns a new Decimal whose value is the nearest multiple of `n`.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \| Decimal} |
 
 **Return value:**
 
@@ -2956,7 +2956,7 @@ Returns a new Decimal whose value is the nearest multiple of `n` in the directio
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \| Decimal} |
 | rounding | [Rounding](arkts-arkts-rounding-t.md) | Yes | Rounding mode. Integer, 0 to 8 inclusive. |
 
 **Return value:**
@@ -3030,7 +3030,7 @@ Return a string representing the value of this Decimal in base 8, round to `sign
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| significantDigits | number | Yes | {number \| string \| Decimal} |
+| significantDigits | number | Yes | {double \| string \| Decimal} |
 
 **Return value:**
 
@@ -3062,7 +3062,7 @@ Return a string representing the value of this Decimal in base 8, round to `sign
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| significantDigits | number | Yes | {number \| string \| Decimal} |
+| significantDigits | number | Yes | {double \| string \| Decimal} |
 | rounding | [Rounding](arkts-arkts-rounding-t.md) | Yes | Rounding mode. Integer, 0 to 8 inclusive. |
 
 **Return value:**
@@ -3305,7 +3305,7 @@ Return a new Decimal whose value is `n` truncated to an integer.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \| Decimal} |
 
 **Return value:**
 

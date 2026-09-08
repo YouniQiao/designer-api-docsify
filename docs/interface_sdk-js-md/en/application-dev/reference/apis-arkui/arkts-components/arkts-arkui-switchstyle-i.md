@@ -47,7 +47,7 @@ If the value is not specified or the specified one is less than 0, the radius is
 
 (Component height (in vp)/2) - (2 vp x Component height (in vp)/20 vp)
 
-**Type:** number \| Resource
+**Type:** number \| [Resource](../arkts-apis/arkts-arkui-resource-t.md)
 
 **Since:** 12
 
@@ -73,7 +73,7 @@ If the value is not specified or the specified one is less than 0, the radius is
 
 Default value formula: Component height (in vp)/2
 
-**Type:** number \| Resource
+**Type:** number \| [Resource](../arkts-apis/arkts-arkui-resource-t.md)
 
 **Since:** 12
 

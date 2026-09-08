@@ -79,7 +79,7 @@ Email address list. Verify that the certificate contains the specified email add
 hostnames?: Array<string>
 ```
 
-List of hostnames. Verify that the certificate's subject alternative name (SAN) or common name (CN) contains the specified hostname. Maximum number: 100; maximum length of each host name: 128. Verification is successful as number as one of the hostnames is matched.
+List of hostnames. Verify that the certificate's subject alternative name (SAN) or common name (CN) contains the specified hostname. Maximum number: 100; maximum length of each host name: 128. Verification is successful as long as one of the hostnames is matched.
 
 **Type:** Array&lt;string&gt;
 
@@ -176,7 +176,7 @@ trustedCerts?: Array<X509Cert>
 
 Trust certificate list. Specifies the trusted root certificate or intermediate CA certificate as the trust anchor for validation. Maximum count: 100. During verification, the certificate chain must trace back to a trusted certificate. You must set this parameter or set trustSystemCa to true.
 
-**Type:** Array&lt;X509Cert&gt;
+**Type:** Array&lt;[X509Cert](arkts-devicecertificate-cert-x509cert-i.md)&gt;
 
 **Since:** 26.0.0
 
@@ -216,7 +216,7 @@ untrustedCerts?: Array<X509Cert>
 
 Indicates the list of untrusted certificates. An intermediate certificate is used only to construct a certificate chain and is not used as a trust anchor. Maximum count: 100.
 
-**Type:** Array&lt;X509Cert&gt;
+**Type:** Array&lt;[X509Cert](arkts-devicecertificate-cert-x509cert-i.md)&gt;
 
 **Since:** 26.0.0
 

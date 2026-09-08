@@ -12,7 +12,7 @@ Enumerates the error codes.
 PERMISSION_DENIED = 201
 ```
 
-The caller does not have the permission.
+Permission verification failed. The application does not have the permission required to call the API.
 
 **Since:** 11
 
@@ -24,7 +24,7 @@ The caller does not have the permission.
 NOT_SYSTEM_APPLICATION = 202
 ```
 
-The caller is not a system application.
+Permission verification failed. A non-system application calls a system API.
 
 **Since:** 12
 

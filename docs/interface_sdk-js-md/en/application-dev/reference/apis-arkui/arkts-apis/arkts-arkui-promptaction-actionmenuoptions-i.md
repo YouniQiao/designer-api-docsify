@@ -254,7 +254,7 @@ title?: string | Resource
 
 Title of the dialog box.Default value: **undefined**, which indicates that no title is not displayed by default.
 
-**Type:** string \| Resource
+**Type:** string \| [Resource](arkts-arkui-resource-t.md)
 
 **Since:** 9
 

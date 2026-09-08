@@ -15,21 +15,3 @@ UIContext
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Type:** import('../api/@ohos.arkui.UIContext').UIContext
-
-**Examples**
-
-```TypeScript
-import { UIContext } from '@kit.ArkUI';
-
-@Entry
-@Component
-struct MyComponent {
-  aboutToAppear() {
-    let uiContext: UIContext = this.getUIContext();
-  }
-
-  build() {
-    // ...
-  }
-}
-```

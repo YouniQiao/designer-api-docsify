@@ -20,7 +20,7 @@ content?: ContentType
 
 Audio content type.
 
-**Type:** ContentType
+**Type:** [ContentType](arkts-audio-audio-contenttype-e.md)
 
 **Since:** 8
 

@@ -43,38 +43,10 @@ Converts a color value of the **ResourceColor** type to a **common2D.Color** obj
 
 | Type | Description |
 | --- | --- |
-| common2D.Color | Common2D.Color** object. If the conversion fails, a null pointer is returned. |
+| [common2D.Color](arkts-arkgraphics2d-common2d-color-i.md) | Common2D.Color** object. If the conversion fails, a null pointer is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
-
-**Examples**
-
-```TypeScript
-import { drawing, common2D } from '@kit.ArkGraphics2D';
-
-// Color
-let color1: common2D.Color = drawing.Tool.makeColorFromResourceColor(Color.Blue);
-
-// Number
-let color2: common2D.Color = drawing.Tool.makeColorFromResourceColor(0xffc0cb);
-let color3: common2D.Color = drawing.Tool.makeColorFromResourceColor(0x11ffa500);
-
-// String
-let color4: common2D.Color = drawing.Tool.makeColorFromResourceColor('#ff0000');
-let color5: common2D.Color = drawing.Tool.makeColorFromResourceColor('#110000ff');
-let color6: common2D.Color = drawing.Tool.makeColorFromResourceColor('#00f');
-let color7: common2D.Color = drawing.Tool.makeColorFromResourceColor('#100f');
-let color8: common2D.Color = drawing.Tool.makeColorFromResourceColor('rgb(255, 100, 255)');
-let color9: common2D.Color = drawing.Tool.makeColorFromResourceColor('rgba(255, 100, 255, 0.5)');
-
-// Resource
-let color10: common2D.Color = drawing.Tool.makeColorFromResourceColor($r('sys.color.ohos_id_color_secondary'));
-
-// Use color
-let brush = new drawing.Brush();
-brush.setColor(color1);
-```

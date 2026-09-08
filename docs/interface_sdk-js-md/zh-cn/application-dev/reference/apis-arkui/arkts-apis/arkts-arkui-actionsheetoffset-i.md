@@ -25,7 +25,7 @@ dx: number | string | Resource
 
 不指定像素单位时，默认单位vp，如'10'，等同于10。
 
-**类型：** number \| string \| Resource
+**类型：** number \| string \| [Resource](arkts-arkui-resource-t.md)
 
 **起始版本：** 18
 
@@ -49,7 +49,7 @@ dy: number | string | Resource
 
 不指定像素单位时，默认单位vp，如'10'，等同于10。
 
-**类型：** number \| string \| Resource
+**类型：** number \| string \| [Resource](arkts-arkui-resource-t.md)
 
 **起始版本：** 18
 

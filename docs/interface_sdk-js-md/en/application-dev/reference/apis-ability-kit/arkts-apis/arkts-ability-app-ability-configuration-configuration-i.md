@@ -28,7 +28,7 @@ The options are as follows:
 - **COLOR_MODE_LIGHT**: light mode.  
 - **COLOR_MODE_DARK**: dark mode.
 
-**Type:** ConfigurationConstant.ColorMode
+**Type:** [ConfigurationConstant.ColorMode](arkts-ability-configurationconstant-colormode-e.md)
 
 **Since:** 9
 
@@ -52,7 +52,7 @@ The options are as follows:
 
 You can subscribe to changes to this environment variable in the [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) and [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md), but not in the [ApplicationContext](arkts-ability-applicationcontext-c.md) or [AbilityStage](arkts-ability-app-ability-abilitystage-abilitystage-c.md).
 
-**Type:** ConfigurationConstant.Direction
+**Type:** [ConfigurationConstant.Direction](arkts-ability-configurationconstant-direction-e.md)
 
 **Since:** 9
 
@@ -236,49 +236,10 @@ The font size is positively correlated with the screen pixel density. By monitor
 
 You can subscribe to changes to this environment variable in the [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) and [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md), but not in the [ApplicationContext](arkts-ability-applicationcontext-c.md) or [AbilityStage](arkts-ability-app-ability-abilitystage-abilitystage-c.md).
 
-**Type:** ConfigurationConstant.ScreenDensity
+**Type:** [ConfigurationConstant.ScreenDensity](arkts-ability-configurationconstant-screendensity-e.md)
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Ability.AbilityBase
-
-**Examples**
-
-```TypeScript
-import { UIAbility, AbilityConstant, EnvironmentCallback, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam) {
-    let envCallback: EnvironmentCallback = {
-      onConfigurationUpdated(config) {
-        console.info(`envCallback onConfigurationUpdated success: ${JSON.stringify(config)}`);
-        let language = config.language;
-        let colorMode = config.colorMode;
-        let direction = config.direction;
-        let screenDensity = config.screenDensity;
-        let displayId = config.displayId;
-        let hasPointerDevice = config.hasPointerDevice;
-        let fontId = config.fontId;
-        let fontSizeScale = config.fontSizeScale;
-        let fontWeightScale = config.fontWeightScale;
-        let mcc = config.mcc;
-        let mnc = config.mnc;
-        let locale = config.locale;
-      },
-      onMemoryLevel(level) {
-        console.info(`onMemoryLevel level: ${level}`);
-      }
-    };
-    try {
-      let applicationContext = this.context.getApplicationContext();
-      let callbackId = applicationContext.on('environment', envCallback);
-      console.info(`callbackId: ${callbackId}`);
-    } catch (paramError) {
-      console.error(`error: ${(paramError as BusinessError).code}, ${(paramError as BusinessError).message}`);
-    }
-  }
-}
-```

@@ -179,7 +179,7 @@
   - [ResourceRequest(system api)](arkts-backgroundtasks-devicestandby-resourcerequest-i-sys.md)<!--DelEnd-->
   <!--Del-->
   - [ResourceType(system api)](arkts-backgroundtasks-devicestandby-resourcetype-e-sys.md)<!--DelEnd-->
-- [@ohos.resourceschedule.usageStatistics](arkts-resourceschedule-usagestatistics.md)
+- [@ohos.resourceschedule.usageStatistics(Device Usage Statistics)](arkts-resourceschedule-usagestatistics.md)
   <!--Del-->
   - [isIdleState(system api)](arkts-backgroundtasks-usagestatistics-isidlestate-f-sys.md)<!--DelEnd-->
   <!--Del-->

@@ -48,7 +48,7 @@ certType: CertType
 
 Type of the certificate.
 
-**Type:** CertType
+**Type:** [CertType](arkts-devicecertificate-certificatemanager-certtype-e.md)
 
 **Since:** 18
 

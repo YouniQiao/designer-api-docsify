@@ -30,7 +30,7 @@ function getNdefFormatable(tagInfo: TagInfo): NdefFormatableTag
 
 | 类型 | 说明 |
 | --- | --- |
-| NdefFormatableTag | NDEF Formatable类型Tag对象，通过该对象访问NDEF Formatable类型的相关接口。 |
+| [NdefFormatableTag](arkts-connectivity-tag-ndefformatabletag-t.md) | NDEF Formatable类型Tag对象，通过该对象访问NDEF Formatable类型的相关接口。 |
 
 **错误码：**
 

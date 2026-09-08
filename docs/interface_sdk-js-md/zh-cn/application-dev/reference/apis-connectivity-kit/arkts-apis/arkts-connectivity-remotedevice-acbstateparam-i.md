@@ -36,7 +36,7 @@ state: AcbState
 
 当前逻辑链路连接状态。
 
-**类型：** AcbState
+**类型：** [AcbState](arkts-connectivity-remotedevice-acbstate-t.md)
 
 **起始版本：** 26.0.0
 

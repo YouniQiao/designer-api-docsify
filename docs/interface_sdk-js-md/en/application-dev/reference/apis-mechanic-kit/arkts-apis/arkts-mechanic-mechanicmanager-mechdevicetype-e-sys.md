@@ -1,6 +1,6 @@
 # MechDeviceType
 
-Enumerates the mechanical device types. @enum { number }
+Enumerates the mechanical device types. @enum { int }
 
 **Since:** 20
 

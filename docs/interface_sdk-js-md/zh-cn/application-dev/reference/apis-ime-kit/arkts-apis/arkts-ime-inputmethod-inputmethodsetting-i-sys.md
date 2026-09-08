@@ -138,11 +138,28 @@ enableInputMethod(
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
-inputMethod.getSetting().enableInputMethod('com.example.keyboard', 'InputMethodExtAbility', inputMethod.EnabledState.FULL_EXPERIENCE_MODE, 100).then(() => {
-  console.info('Succeeded in enabling input method.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to enableInputMethod, code: ${err.code}, message: ${err.message}`);
-});
+function enableInputMethodSafely() {
+  const currentIme: inputMethod.InputMethodProperty = inputMethod.getCurrentInputMethod();
+  if (!currentIme) {
+    console.error("Failed to get current input method");
+    return;
+  }
+
+  inputMethod.getSetting()
+    .enableInputMethod(currentIme.name, currentIme.id, inputMethod.EnabledState.BASIC_MODE)
+    .then(() => {
+      console.info('Succeeded in enable inputmethod.');
+    })
+    .catch((err) => {
+      if (err instanceof BusinessError) {
+        console.error(`Failed to enableInputMethod. Code: ${err.code}, message: ${err.message}`);
+      } else {
+        console.error(`Failed to enableInputMethod. Error: ${err}`);
+      }
+    });
+}
+
+enableInputMethodSafely();
 ```
 
 ## getAllInputMethodsSync
@@ -187,15 +204,7 @@ getAllInputMethodsSync(userId?: number): Array<InputMethodProperty>
 **示例**
 
 ```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let imeProperty: Array<inputMethod.InputMethodProperty> = inputMethod.getSetting().getAllInputMethodsSync(100);
-  console.info('Succeeded in getting all input methods, count: ' + imeProperty.length);
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`Failed to getAllInputMethodsSync. Code: ${error.code}, message: ${error.message}`);
-}
+let imeProperty: Array<inputMethod.InputMethodProperty> = inputMethod.getSetting().getAllInputMethodsSync();
 ```
 
 ## getCursorInfo
@@ -346,15 +355,7 @@ getInputMethodsSync(enable: boolean, userId?: number): Array<InputMethodProperty
 **示例**
 
 ```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let imeProperty: Array<inputMethod.InputMethodProperty> = inputMethod.getSetting().getInputMethodsSync(true, 100);
-  console.info('Succeeded in getting enabled input methods, count: ' + imeProperty.length);
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`Failed to getInputMethodsSync. Code: ${error.code}, message: ${error.message}`);
-}
+let imeProperty: Array<inputMethod.InputMethodProperty> = inputMethod.getSetting().getInputMethodsSync(true);
 ```
 
 ## getInputMethodSubtypes
@@ -396,22 +397,6 @@ getInputMethodSubtypes(bundleName: string, userId?: number): Array<InputMethodSu
 | [12800023](../errorcode-inputmethod-framework.md#12800023-指定的用户不存在) | the specified user does not exist. |
 | [12800024](../errorcode-inputmethod-framework.md#12800024-指定的用户未在前台) | the specified user is not in the foreground. |
 | [12800025](../errorcode-inputmethod-framework.md#12800025-跨用户操作被拒绝) | cross-user operation denied. Only user 0 applications are authorized for this operation. |
-
-**示例**
-
-```TypeScript
-import { InputMethodSubtype } from '@kit.IMEKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let inputMethodSetting: inputMethod.InputMethodSetting = inputMethod.getSetting();
-try {
-  let subtypes: Array<InputMethodSubtype> = inputMethodSetting.getInputMethodSubtypes('com.example.keyboard', 100);
-  console.info('Succeeded in getting input method subtypes, count: ' + subtypes.length);
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`Failed to getInputMethodSubtypes. Code: ${error.code}, message: ${error.message}`);
-}
-```
 
 ## isPanelShown
 
@@ -602,12 +587,6 @@ offImeChangeWithUserId(callback?: ImeChangeWithUserIdCallback): void
 | --- | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | not system application. |
 
-**示例**
-
-```TypeScript
-inputMethod.getSetting().offImeChangeWithUserId();
-```
-
 ## on('imeShow')
 
 ```TypeScript
@@ -714,14 +693,3 @@ onImeChangeWithUserId(callback: ImeChangeWithUserIdCallback): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | not system application. |
-
-**示例**
-
-```TypeScript
-import { InputMethodSubtype } from '@kit.IMEKit';
-
-inputMethod.getSetting()
-  .onImeChangeWithUserId((inputMethodProperty: inputMethod.InputMethodProperty, inputMethodSubtype: InputMethodSubtype, userId: number) => {
-    console.info(`Succeeded in subscribing imeChange: inputMethodProperty.name: ${inputMethodProperty.name}, inputMethodSubtype.id: ${inputMethodSubtype.id}, userId: ${userId}`);
-  });
-```

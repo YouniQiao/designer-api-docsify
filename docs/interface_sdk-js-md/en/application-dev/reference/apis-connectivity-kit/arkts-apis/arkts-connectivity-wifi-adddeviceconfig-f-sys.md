@@ -32,7 +32,7 @@ Adds Wi-Fi connection configuration to the device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | WifiDeviceConfig | Yes | Indicates the device configuration for connection to the Wi-Fi network. |
+| config | [WifiDeviceConfig](arkts-connectivity-wifi-wifideviceconfig-i.md) | Yes | Indicates the device configuration for connection to the Wi-Fi network. |
 
 **Return value:**
 
@@ -100,7 +100,7 @@ Adds Wi-Fi connection configuration to the device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | WifiDeviceConfig | Yes | Indicates the device configuration for connection to the Wi-Fi network. |
+| config | [WifiDeviceConfig](arkts-connectivity-wifi-wifideviceconfig-i.md) | Yes | Indicates the device configuration for connection to the Wi-Fi network. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes |  |
 
 **Examples**

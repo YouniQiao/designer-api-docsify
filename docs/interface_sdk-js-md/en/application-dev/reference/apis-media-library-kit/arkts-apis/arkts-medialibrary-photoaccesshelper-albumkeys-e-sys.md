@@ -93,3 +93,67 @@ directory hidden state of filemanager
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
+
+## SHARE_RISK_STATUS
+
+```TypeScript
+SHARE_RISK_STATUS = 'share_risk_status'
+```
+
+The risk status of share album.
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+**System API:** This is a system API.
+
+## SHARE_RISK_TYPE
+
+```TypeScript
+SHARE_RISK_TYPE = 'share_risk_type'
+```
+
+The risk type of share album.
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+**System API:** This is a system API.
+
+## SHARE_ALBUM_OWNER
+
+```TypeScript
+SHARE_ALBUM_OWNER = 'share_album_owner'
+```
+
+The owner of share album.
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+**System API:** This is a system API.
+
+## CLOUD_ID
+
+```TypeScript
+CLOUD_ID = 'cloud_id'
+```
+
+The cloudId of album.
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+**System API:** This is a system API.

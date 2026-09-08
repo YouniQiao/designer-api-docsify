@@ -73,7 +73,7 @@ Images occupy a large amount of memory. When you finish using an ImageSource ins
 
 | Type | Description |
 | --- | --- |
-| ImageSource | ImageSource instance. If the operation fails, undefined is returned. |
+| [ImageSource](arkts-image-sendableimage-imagesource-i.md) | ImageSource instance. If the operation fails, undefined is returned. |
 
 **Examples**
 
@@ -113,7 +113,7 @@ Images occupy a large amount of memory. When you finish using an ImageSource ins
 
 | Type | Description |
 | --- | --- |
-| ImageSource | ImageSource instance. If the operation fails, undefined is returned. |
+| [ImageSource](arkts-image-sendableimage-imagesource-i.md) | ImageSource instance. If the operation fails, undefined is returned. |
 
 **Examples**
 
@@ -157,7 +157,7 @@ Images occupy a large amount of memory. When you finish using an ImageSource ins
 
 | Type | Description |
 | --- | --- |
-| ImageSource | ImageSource instance. If the operation fails, undefined is returned. |
+| [ImageSource](arkts-image-sendableimage-imagesource-i.md) | ImageSource instance. If the operation fails, undefined is returned. |
 
 **Examples**
 

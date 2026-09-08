@@ -61,28 +61,8 @@ Connect to device with hfp. On API 10 and above, the permission required by this
 ```TypeScript
 import { BusinessError } from '@ohos.base';
 try {
-    let a2dpSrc: bluetoothManager.A2dpSourceProfile = bluetoothManager.getProfileInstance(bluetoothManager.ProfileId.PROFILE_A2DP_SOURCE) as bluetoothManager.A2dpSourceProfile;
-    a2dpSrc.connect('XX:XX:XX:XX:XX:XX');
-} catch (err) {
-    console.error("errCode:" + (err as BusinessError).code + ",errMessage:" + (err as BusinessError).message);
-}
-```
-
-```TypeScript
-import { BusinessError } from '@ohos.base';
-try {
     let hfpAg: bluetoothManager.HandsFreeAudioGatewayProfile = bluetoothManager.getProfileInstance(bluetoothManager.ProfileId.PROFILE_HANDS_FREE_AUDIO_GATEWAY) as bluetoothManager.HandsFreeAudioGatewayProfile;
     hfpAg.connect('XX:XX:XX:XX:XX:XX');
-} catch (err) {
-    console.error("errCode:" + (err as BusinessError).code + ",errMessage:" + (err as BusinessError).message);
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-try {
-    let hidHostProfile: bluetoothManager.HidHostProfile = bluetoothManager.getProfileInstance(bluetoothManager.ProfileId.PROFILE_HID_HOST) as bluetoothManager.HidHostProfile;
-    hidHostProfile.connect('XX:XX:XX:XX:XX:XX');
 } catch (err) {
     console.error("errCode:" + (err as BusinessError).code + ",errMessage:" + (err as BusinessError).message);
 }
@@ -131,38 +111,8 @@ Disconnect to device with hfp. On API 10 and above, the permission required by t
 ```TypeScript
 import { BusinessError } from '@ohos.base';
 try {
-    let a2dpSrc: bluetoothManager.A2dpSourceProfile = bluetoothManager.getProfileInstance(bluetoothManager.ProfileId.PROFILE_A2DP_SOURCE) as bluetoothManager.A2dpSourceProfile;
-    a2dpSrc.disconnect('XX:XX:XX:XX:XX:XX');
-} catch (err) {
-    console.error("errCode:" + (err as BusinessError).code + ",errMessage:" + (err as BusinessError).message);
-}
-```
-
-```TypeScript
-import { BusinessError } from '@ohos.base';
-try {
     let hfpAg: bluetoothManager.HandsFreeAudioGatewayProfile = bluetoothManager.getProfileInstance(bluetoothManager.ProfileId.PROFILE_HANDS_FREE_AUDIO_GATEWAY) as bluetoothManager.HandsFreeAudioGatewayProfile;
     hfpAg.disconnect('XX:XX:XX:XX:XX:XX');
-} catch (err) {
-    console.error("errCode:" + (err as BusinessError).code + ",errMessage:" + (err as BusinessError).message);
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-try {
-    let hidHostProfile: bluetoothManager.HidHostProfile = bluetoothManager.getProfileInstance(bluetoothManager.ProfileId.PROFILE_HID_HOST) as bluetoothManager.HidHostProfile;
-    hidHostProfile.disconnect('XX:XX:XX:XX:XX:XX');
-} catch (err) {
-    console.error("errCode:" + (err as BusinessError).code + ",errMessage:" + (err as BusinessError).message);
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-try {
-    let panProfile: bluetoothManager.PanProfile = bluetoothManager.getProfileInstance(bluetoothManager.ProfileId.PROFILE_PAN_NETWORK) as bluetoothManager.PanProfile;
-    panProfile.disconnect('XX:XX:XX:XX:XX:XX');
 } catch (err) {
     console.error("errCode:" + (err as BusinessError).code + ",errMessage:" + (err as BusinessError).message);
 }
@@ -193,7 +143,7 @@ Unsubscribe the event reported when the profile connection state changes. On API
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'connectionStateChange' | Yes | Type of the profile connection state changes event to listen for . |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;StateChangeParam&gt; | No | Callback used to listen for event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[StateChangeParam](arkts-connectivity-bluetoothmanager-statechangeparam-i.md)&gt; | No | Callback used to listen for event. |
 
 **Error codes:**
 
@@ -227,7 +177,7 @@ Subscribe the event reported when the profile connection state changes. On API 1
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'connectionStateChange' | Yes | Type of the profile connection state changes event to listen for . |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;StateChangeParam&gt; | Yes | Callback used to listen for event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[StateChangeParam](arkts-connectivity-bluetoothmanager-statechangeparam-i.md)&gt; | Yes | Callback used to listen for event. |
 
 **Error codes:**
 

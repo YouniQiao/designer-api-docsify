@@ -34,7 +34,7 @@ state: SimState
 
 SIM卡状态。
 
-**类型：** SimState
+**类型：** [SimState](arkts-telephony-observer-simstate-t.md)
 
 **起始版本：** 7
 
@@ -48,7 +48,7 @@ type: CardType
 
 SIM卡类型。
 
-**类型：** CardType
+**类型：** [CardType](arkts-telephony-observer-cardtype-t.md)
 
 **起始版本：** 7
 

@@ -31,7 +31,7 @@ export function getCalendar(locale: string, type?: string): Calendar
 
 | 类型 | 说明 |
 | --- | --- |
-| Calendar | 日历对象。 |
+| [Calendar](arkts-localization-i18n-calendar-c.md) | 日历对象。 |
 
 **示例**
 

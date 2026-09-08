@@ -31,6 +31,13 @@ Enables the display of a confirm dialog box before returning to the previous pag
 **Examples**
 
 enableAlertBeforeBackPage(options: EnableAlertOptions): void
+Enables the display of a confirm dialog box before returning to the previous page. After this API is called, a confirm dialog box will be displayed when back is executed to return to a page. The page return operation is performed only after the user confirms; if the user cancels, the return is not performed. This is applicable to scenarios where you need to prevent data loss caused by accidental return operations, for example, when the user is filling in a form, editing a document, or making a payment, a confirm dialog box is displayed to avoid accidental exit.
+> NOTE
+> 
+> This API is supported since API version 8 and deprecated since API version 9. You are advised to use showAlertBeforeBackPage instead.
+
+System capability: SystemCapability.ArkUI.ArkUI.Full
+Parameters
 
 ```TypeScript
 import { router } from '@kit.ArkUI';

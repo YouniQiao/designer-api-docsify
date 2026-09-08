@@ -58,7 +58,7 @@ deviceType: DeviceType
 
 Device type.
 
-**Type:** DeviceType
+**Type:** [DeviceType](arkts-multimodalawareness-userstatus-devicetype-e-sys.md)
 
 **Since:** 26.0.0
 

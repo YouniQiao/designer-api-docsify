@@ -31,7 +31,7 @@ function onKey(keyOptions: KeyOptions, callback:KeyCommandCallback): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| keyOptions | KeyOptions | 是 | 组合键选项，支持triggerType参数。 |
+| keyOptions | [KeyOptions](arkts-input-inputconsumer-keyoptions-i-sys.md) | 是 | 组合键选项，支持triggerType参数。 |
 | callback | [KeyCommandCallback](arkts-input-inputconsumer-keycommandcallback-t-sys.md) | 是 | 回调函数，返回组合键选项和按键事件数据。 |
 
 **错误码：**

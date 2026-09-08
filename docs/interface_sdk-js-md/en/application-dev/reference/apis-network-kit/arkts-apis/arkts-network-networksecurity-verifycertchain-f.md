@@ -24,15 +24,15 @@ Verifies the server certificate chain and returns a sorted chain.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| cert | CertBlob[] | Yes | Certificate chain to be verified. |
-| caCert | CertBlob | No | Incoming custom CA cert. |
+| cert | [CertBlob](arkts-network-networksecurity-certblob-i.md)[] | Yes | Certificate chain to be verified. |
+| caCert | [CertBlob](arkts-network-networksecurity-certblob-i.md) | No | Incoming custom CA cert. |
 | hostname | string | No | Hostname to be verified. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;CertBlob[]&gt; | Returns a promise that resolves to the sorted certificate chain (ordered from leaf to root) if verification succeeds. |
+| Promise&lt;[CertBlob](arkts-network-networksecurity-certblob-i.md)[]&gt; | Returns a promise that resolves to the sorted certificate chain (ordered from leaf to root) if verification succeeds. |
 
 **Error codes:**
 

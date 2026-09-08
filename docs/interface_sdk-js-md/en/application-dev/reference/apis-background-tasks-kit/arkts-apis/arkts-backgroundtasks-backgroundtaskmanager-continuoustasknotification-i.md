@@ -20,7 +20,7 @@ contentType: notificationManager.ContentType
 
 Content type of a continuous-task notification.
 
-**Type:** notificationManager.ContentType
+**Type:** [notificationManager.ContentType](../../apis-notification-kit/arkts-apis/arkts-notification-notificationmanager-contenttype-e.md)
 
 **Since:** 12
 
@@ -70,7 +70,7 @@ Slot type of a continuous-task notification.
 
 Note: After a continuous task is successfully requested or updated, no prompt tone is played.
 
-**Type:** notificationManager.SlotType
+**Type:** [notificationManager.SlotType](../../apis-notification-kit/arkts-apis/arkts-notification-notificationmanager-slottype-e.md)
 
 **Since:** 12
 

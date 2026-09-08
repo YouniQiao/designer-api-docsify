@@ -30,7 +30,7 @@ Starts pairing with the specific remote Bluetooth device using the Out Of Band m
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | deviceId | string | Yes | Indicates device ID. For example, "11:22:33:AA:BB:FF". |
-| transport | BluetoothTransport | Yes | Indicates the transport of a remote Bluetooth device. |
+| transport | [BluetoothTransport](arkts-connectivity-connection-bluetoothtransport-e.md) | Yes | Indicates the transport of a remote Bluetooth device. |
 | p192Data | [OobData](arkts-connectivity-connection-oobdata-i-sys.md) | No | The out-of-band data (P192). |
 | p256Data | [OobData](arkts-connectivity-connection-oobdata-i-sys.md) | No | The out-of-band data (P256). |
 

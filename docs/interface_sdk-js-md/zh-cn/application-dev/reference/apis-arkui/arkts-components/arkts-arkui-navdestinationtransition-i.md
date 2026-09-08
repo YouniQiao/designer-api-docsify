@@ -19,7 +19,7 @@ curve?: Curve
 
 动画的曲线类型，默认值为Curve.EaseInOut。
 
-**类型：** Curve
+**类型：** [Curve](../arkts-apis/arkts-arkui-curve-e.md)
 
 **起始版本：** 15
 
@@ -85,7 +85,7 @@ event: Callback<void>
 
 指定转场动效的闭包函数，系统会根据闭包中对组件UI状态的修改，生成对应的过渡动画。参见[animateTo](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#animatetoimmediately)中的event。
 
-**类型：** Callback&lt;void&gt;
+**类型：** [Callback](arkts-arkui-callback-i.md)&lt;void&gt;
 
 **起始版本：** 15
 
@@ -103,7 +103,7 @@ onTransitionEnd?: Callback<void>
 
 转场动画结束时的回调函数。
 
-**类型：** Callback&lt;void&gt;
+**类型：** [Callback](arkts-arkui-callback-i.md)&lt;void&gt;
 
 **起始版本：** 15
 

@@ -96,7 +96,7 @@ securityType: WifiSecurityType
 
 Security type: reference definition of WifiSecurityType
 
-**Type:** WifiSecurityType
+**Type:** [WifiSecurityType](arkts-connectivity-wifimanager-wifisecuritytype-e.md)
 
 **Since:** 12
 

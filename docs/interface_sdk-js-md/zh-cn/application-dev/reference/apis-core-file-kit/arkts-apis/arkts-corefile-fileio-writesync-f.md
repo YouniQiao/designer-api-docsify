@@ -43,11 +43,3 @@ declare function writeSync(
 | 类型 | 说明 |
 | --- | --- |
 | number | 实际写入的长度，单位为Byte。 |
-
-**示例**
-
-```TypeScript
-let filePath = pathDir + "/test.txt";
-let fd = fileio.openSync(filePath, 0o100 | 0o2, 0o666);
-let num = fileio.writeSync(fd, "hello, world");
-```

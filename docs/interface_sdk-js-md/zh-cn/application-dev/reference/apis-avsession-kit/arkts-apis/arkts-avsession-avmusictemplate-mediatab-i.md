@@ -38,7 +38,7 @@ tabIcon?: image.PixelMap
 
 标签页的图标（接入模板时在主界面的标签页中必填）。
 
-**类型：** image.PixelMap
+**类型：** [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)
 
 **起始版本：** 23
 

@@ -44,6 +44,6 @@ Sets the connection mode. This API uses a promise to return the result.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported because the chip does not support it. |
-| 36100003 | NearLink disabled. |
-| 36100040 | Integer out of range. |
-| 36100099 | Operation failed. |
+| [36100003](../../apis-avsession-kit/errorcode-nearlink-service.md#36100003-nearlink-disabled) | NearLink disabled. |
+| [36100040](../../apis-avsession-kit/errorcode-nearlink-service.md#36100040-integer-out-of-range) | Integer out of range. |
+| [36100099](../../apis-avsession-kit/errorcode-nearlink-service.md#36100099-operation-failed) | Operation failed. |

@@ -30,7 +30,7 @@ Adds dependent tasks for this task. Before using this API, you must create a **T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| tasks | Task[] | Yes | Array of tasks on which the current task depends. The default value is **undefined**. |
+| tasks | [Task](arkts-arkts-taskpool-task-c.md)[] | Yes | Array of tasks on which the current task depends. The default value is **undefined**. |
 
 **Error codes:**
 
@@ -191,6 +191,8 @@ function inspectStatus(arg: number): number {
 ```
 
 > NOTE
+> 
+> isCanceled must be used together with taskpool.cancel. If cancel is not called, isCanceled returns false by default.
 
 ```TypeScript
 @Concurrent
@@ -540,7 +542,7 @@ Removes dependent tasks for this task. Before using this method, you need to con
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| tasks | Task[] | Yes | Array of tasks on which the current task depends. The default value is **undefined**. |
+| tasks | [Task](arkts-arkts-taskpool-task-c.md)[] | Yes | Array of tasks on which the current task depends. The default value is **undefined**. |
 
 **Error codes:**
 

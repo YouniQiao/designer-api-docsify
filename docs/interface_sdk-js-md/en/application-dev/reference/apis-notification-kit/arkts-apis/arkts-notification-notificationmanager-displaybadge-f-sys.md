@@ -26,7 +26,7 @@ Sets whether to enable the notification badge for a specified application. This 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundle | BundleOption | Yes | Bundle information of the application. |
+| bundle | [BundleOption](arkts-notification-notificationmanager-bundleoption-t.md) | Yes | Bundle information of the application. |
 | enable | boolean | Yes | Whether to enable the notification slot type. The value **true** means to enable the notification slot type, and **false** means the opposite. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
@@ -82,7 +82,7 @@ Sets whether to enable the notification badge for a specified application. This 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundle | BundleOption | Yes | Bundle information of the application. |
+| bundle | [BundleOption](arkts-notification-notificationmanager-bundleoption-t.md) | Yes | Bundle information of the application. |
 | enable | boolean | Yes | Whether to enable the notification slot type. The value **true** means to enable the notification slot type, and **false** means the opposite. |
 
 **Return value:**

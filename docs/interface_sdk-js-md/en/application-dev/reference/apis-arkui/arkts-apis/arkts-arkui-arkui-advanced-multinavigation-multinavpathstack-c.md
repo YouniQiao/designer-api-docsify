@@ -544,7 +544,7 @@ Pushes the navigation destination page specified by **name** to the navigation s
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the navigation destination page. |
 | param | Object | Yes | Detailed parameters of the navigation destination page. |
-| onPop | base.Callback&lt;[PopInfo](../arkts-components/arkts-arkui-popinfo-i.md)&gt; | No | Callback used to handle the return result. |
+| onPop | [base.Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PopInfo](../arkts-components/arkts-arkui-popinfo-i.md)&gt; | No | Callback used to handle the return result. |
 | animated | boolean | No | Whether to support the transition animation.Default value: **true**.    **true**: The transition animation is supported.   **false**: The transition animation is not supported. |
 | policy | [SplitPolicy](arkts-arkui-arkui-advanced-multinavigation-splitpolicy-e.md) | No | Policy for the current page being pushed. Default value: **DETAIL_PAGE**. |
 

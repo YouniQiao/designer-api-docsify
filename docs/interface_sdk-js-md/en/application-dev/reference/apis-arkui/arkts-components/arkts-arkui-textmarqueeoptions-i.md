@@ -39,9 +39,9 @@ Unit: millisecond
 fadeout?: boolean
 ```
 
-Whether to apply a fade-out effect when the text is too number.
+Whether to apply a fade-out effect when the text is too long.
 
-**true** to apply a fade-out effect when the text is too number, **false** otherwise.
+**true** to apply a fade-out effect when the text is too long, **false** otherwise.
 
 When this parameter is set to **true**: if the text content exceeds the display range, a fade-out effect is applied to the edges of the partially visible text; if text is partially visible at both ends, the fade-out effect is applied to both ends. The **clip** attribute is automatically locked to **true** and cannot be set to **false**.
 
@@ -151,7 +151,7 @@ Spacing between two marquee rounds. If the unit of **LengthMetrics** is **PERCEN
 
 Default value: **48.0vp**
 
-**Type:** LengthMetrics
+**Type:** [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md)
 
 **Since:** 23
 

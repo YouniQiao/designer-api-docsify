@@ -221,7 +221,7 @@ Default value: **BlurStyle.COMPONENT_ULTRA_THICK**
 
 Setting this parameter to **BlurStyle.NONE** disables the background blur. When **backgroundBlurStyle** is set to a value other than **NONE**, do not set **backgroundColor**. If you do, the color display may not produce the expected visual effect.
 
-**Type:** BlurStyle
+**Type:** [BlurStyle](arkts-arkui-blurstyle-e.md)
 
 **Default:** BlurStyle.COMPONENT_ULTRA_THICK
 
@@ -499,7 +499,7 @@ Offset of the dialog box relative to the alignment position.
 
 Default value: **{ dx: 0 , dy: 0 }**
 
-**Type:** Offset
+**Type:** [Offset](../arkts-apis/arkts-arkui-offset-t.md)
 
 **Since:** 10
 
@@ -521,7 +521,7 @@ Represents the callback triggered during the scrolling of the text picker when a
 
 When **enableCascade** is set to **true**, using this callback is not recommended due to the interdependent relationship between the AM/PM and hour columns. This callback indicates the moment an option enters the divider area during scrolling, and only the value of the currently scrolled column will change. The values of other non- scrolled columns will remain unchanged.
 
-**Type:** Callback&lt;[TimePickerResult](arkts-arkui-timepickerresult-i.md)&gt;
+**Type:** [Callback](arkts-arkui-callback-i.md)&lt;[TimePickerResult](arkts-arkui-timepickerresult-i.md)&gt;
 
 **Since:** 18
 

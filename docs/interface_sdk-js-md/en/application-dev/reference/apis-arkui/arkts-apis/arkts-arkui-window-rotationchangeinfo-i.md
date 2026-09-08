@@ -36,7 +36,7 @@ displayRect: Rect
 
 Size of the rectangle after the screen where the window is located is rotated.
 
-**Type:** Rect
+**Type:** [Rect](arkts-arkui-window-rect-i.md)
 
 **Since:** 19
 

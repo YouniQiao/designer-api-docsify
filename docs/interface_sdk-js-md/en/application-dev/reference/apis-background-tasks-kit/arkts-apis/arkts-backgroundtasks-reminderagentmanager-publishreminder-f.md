@@ -30,7 +30,7 @@ Publishes a reminder. This API uses an asynchronous callback to return the resul
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| reminderReq | ReminderRequest | Yes | Request used for publishing the reminder. |
+| reminderReq | [ReminderRequest](arkts-backgroundtasks-reminderagentmanager-reminderrequest-i.md) | Yes | Request used for publishing the reminder. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the result. After the agent-powered reminder is published, **err** is **undefined**, and **data** is the ID of the published reminder. Otherwise, **err** is an error object. |
 
 **Error codes:**
@@ -87,7 +87,7 @@ Publishes a reminder. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| reminderReq | ReminderRequest | Yes | Request used for publishing the reminder. |
+| reminderReq | [ReminderRequest](arkts-backgroundtasks-reminderagentmanager-reminderrequest-i.md) | Yes | Request used for publishing the reminder. |
 
 **Return value:**
 

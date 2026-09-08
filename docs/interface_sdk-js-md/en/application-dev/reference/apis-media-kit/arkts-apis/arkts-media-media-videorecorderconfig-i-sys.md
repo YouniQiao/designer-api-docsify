@@ -38,7 +38,7 @@ location?: Location
 
 geographical location information.
 
-**Type:** Location
+**Type:** [Location](arkts-media-media-location-i.md)
 
 **Since:** 9
 

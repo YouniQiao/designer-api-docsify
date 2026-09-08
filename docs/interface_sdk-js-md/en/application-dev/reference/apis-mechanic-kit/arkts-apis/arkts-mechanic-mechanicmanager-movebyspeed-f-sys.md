@@ -32,7 +32,7 @@ Move a mechanical device at the specified speed.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Result&gt; | Promise that returns the execution result. |
+| Promise&lt;[Result](arkts-mechanic-mechanicmanager-result-e-sys.md)&gt; | Promise that returns the execution result. |
 
 **Error codes:**
 

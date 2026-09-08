@@ -53,15 +53,3 @@ Application ID.
 **Since:** 7
 
 **System capability:** SystemCapability.Applications.ContactsData
-
-**Examples**
-
-Create data in JSON format.
-
-```TypeScript
-let holder: contact.Holder = {
-  bundleName: 'com.ohos.contacts',
-  displayName: 'displayName',
-  holderId: 1
-};
-```

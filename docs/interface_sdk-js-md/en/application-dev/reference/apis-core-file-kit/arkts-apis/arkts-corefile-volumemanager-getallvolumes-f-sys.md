@@ -38,15 +38,6 @@ Obtains information about all volumes of this external storage device. This API 
 | 13600001 | IPC error. |
 | 13900042 | Unknown error. |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-volumeManager.getAllVolumes((error: BusinessError, volumes: Array<volumeManager.Volume>) => {
-  // Do something.
-});
-```
-
 
 ## getAllVolumes
 
@@ -79,14 +70,3 @@ Obtains information about all volumes of this external storage device. This API 
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The input parameter is invalid.Possible causes:Mandatory parameters are left unspecified; |
 | 13600001 | IPC error. |
 | 13900042 | Unknown error. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-volumeManager.getAllVolumes().then((volumes: Array<volumeManager.Volume>) => {
-  // do something with volumes, which is an array
-}).catch((error: BusinessError) => {
-  console.error("getAllVolumes failed");
-});
-```

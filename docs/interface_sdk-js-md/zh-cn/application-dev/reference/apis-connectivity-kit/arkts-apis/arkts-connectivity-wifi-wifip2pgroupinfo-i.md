@@ -28,7 +28,7 @@ clientDevices: WifiP2pDevice[]
 
 接入的设备列表信息。
 
-**类型：** WifiP2pDevice[]
+**类型：** [WifiP2pDevice](arkts-connectivity-wifi-wifip2pdevice-i.md)[]
 
 **起始版本：** 8
 
@@ -154,7 +154,7 @@ ownerInfo: WifiP2pDevice
 
 群组的设备信息。
 
-**类型：** WifiP2pDevice
+**类型：** [WifiP2pDevice](arkts-connectivity-wifi-wifip2pdevice-i.md)
 
 **起始版本：** 8
 

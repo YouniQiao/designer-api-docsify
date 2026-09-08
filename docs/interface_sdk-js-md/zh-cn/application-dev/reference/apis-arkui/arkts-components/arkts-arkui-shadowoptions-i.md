@@ -29,7 +29,7 @@ color?: Color | string | Resource | ColoringStrategy
 
 支持使用'average'字符串触发智能平均取色模式，支持使用'primary'字符串触发智能主色模式。
 
-**类型：** Color \| string \| Resource \| [ColoringStrategy](../arkts-apis/arkts-arkui-coloringstrategy-e.md)
+**类型：** [Color](../arkts-apis/arkts-arkui-color-e.md) \| string \| [Resource](../arkts-apis/arkts-arkui-resource-t.md) \| [ColoringStrategy](../arkts-apis/arkts-arkui-coloringstrategy-e.md)
 
 **起始版本：** 7
 
@@ -83,7 +83,7 @@ offsetX?: number | Resource
 
 如果offsetX为Resource类型，则传入的值需为number类型。
 
-**类型：** number \| Resource
+**类型：** number \| [Resource](../arkts-apis/arkts-arkui-resource-t.md)
 
 **起始版本：** 11
 
@@ -111,7 +111,7 @@ offsetY?: number | Resource
 
 如果offsetY为Resource类型，则传入的值需为number类型。
 
-**类型：** number \| Resource
+**类型：** number \| [Resource](../arkts-apis/arkts-arkui-resource-t.md)
 
 **起始版本：** 11
 
@@ -141,7 +141,7 @@ API版本26.0.0之前，设置小于0的值时，按值为0处理。从API版本
 
 如果radius为Resource类型，则传入的值需为number类型。
 
-**类型：** number \| Resource
+**类型：** number \| [Resource](../arkts-apis/arkts-arkui-resource-t.md)
 
 **起始版本：** 11
 

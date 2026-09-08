@@ -27,7 +27,7 @@ Performs SIM card authentication.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | slotId | number | 是 | Sim slot id. |
-| authType | AuthType | 是 | The authentication type. |
+| authType | [AuthType](arkts-telephony-sim-authtype-e-sys.md) | 是 | The authentication type. |
 | authData | string | 是 | Ser password or other authentication information. |
 
 **返回值：**

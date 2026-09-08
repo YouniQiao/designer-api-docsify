@@ -20,7 +20,7 @@ playMode: PlayMode
 
 是否支持动态照片自动播放。
 
-**类型：** PlayMode
+**类型：** [PlayMode](arkts-medialibrary-photoaccesshelper-playmode-e.md)
 
 **起始版本：** 23
 

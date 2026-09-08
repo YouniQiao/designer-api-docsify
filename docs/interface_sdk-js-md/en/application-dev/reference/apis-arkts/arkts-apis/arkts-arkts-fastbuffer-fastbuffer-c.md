@@ -594,7 +594,7 @@ console.info(buf.readBigUInt64LE(0).toString());
 readDoubleBE(offset?: number): number
 ```
 
-Reads a 64-bit, big-endian number from buf at the specified offset
+Reads a 64-bit, big-endian double from buf at the specified offset
 
 **Since:** 20
 
@@ -612,7 +612,7 @@ Reads a 64-bit, big-endian number from buf at the specified offset
 
 | Type | Description |
 | --- | --- |
-| number | Return a 64-bit, big-endian number |
+| number | Return a 64-bit, big-endian double |
 
 **Error codes:**
 
@@ -636,7 +636,7 @@ console.info(buf.readDoubleBE(0).toString());
 readDoubleLE(offset?: number): number
 ```
 
-Reads a 64-bit, little-endian number from buf at the specified offset
+Reads a 64-bit, little-endian double from buf at the specified offset
 
 **Since:** 20
 
@@ -654,7 +654,7 @@ Reads a 64-bit, little-endian number from buf at the specified offset
 
 | Type | Description |
 | --- | --- |
-| number | Return a 64-bit, little-endian number |
+| number | Return a 64-bit, little-endian double |
 
 **Error codes:**
 
@@ -1882,7 +1882,7 @@ Writes value to buf at the specified offset as big-endian.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | The 64-bit big-endian number value to write |
+| value | number | Yes | The 64-bit big-endian double value to write |
 | offset | number | No | offset [offset = 0] Number of bytes to skip before starting to write. Must satisfy: 0 &lt;= offset &lt;= buf.length - 8 |
 
 **Return value:**
@@ -1926,7 +1926,7 @@ Writes value to buf at the specified offset as little-endian.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | The 64-bit little-endian number value to write |
+| value | number | Yes | The 64-bit little-endian double value to write |
 | offset | number | No | offset [offset = 0] Number of bytes to skip before starting to write. Must satisfy: 0 &lt;= offset &lt;= buf.length - 8 |
 
 **Return value:**

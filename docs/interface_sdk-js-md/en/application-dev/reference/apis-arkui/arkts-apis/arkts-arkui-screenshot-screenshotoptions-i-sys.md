@@ -102,7 +102,7 @@ screenRect?: Rect
 
 Region of the screen to capture. If no value is passed, the region of the logical screen associated with the specified display ID is returned.
 
-**Type:** Rect
+**Type:** [Rect](arkts-arkui-screenshot-rect-i.md)
 
 **Since:** 7
 

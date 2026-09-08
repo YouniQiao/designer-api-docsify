@@ -2,7 +2,7 @@
 
 Enumerates the uri operate mode types.
 
-@enum { number } OperationMode
+@enum { int } OperationMode
 
 **Since:** 11
 

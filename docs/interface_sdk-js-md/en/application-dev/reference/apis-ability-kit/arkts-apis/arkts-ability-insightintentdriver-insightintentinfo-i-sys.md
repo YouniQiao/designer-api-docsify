@@ -112,7 +112,7 @@ readonly entities: Array<EntityInfo>
 
 Entity information contained in the intent.
 
-**Type:** Array&lt;EntityInfo&gt;
+**Type:** Array&lt;[EntityInfo](arkts-ability-insightintentdriver-entityinfo-i-sys.md)&gt;
 
 **Since:** 20
 

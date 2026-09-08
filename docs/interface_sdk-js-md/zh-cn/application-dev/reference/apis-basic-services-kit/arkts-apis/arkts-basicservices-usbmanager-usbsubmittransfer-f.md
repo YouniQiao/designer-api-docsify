@@ -44,6 +44,8 @@ function usbSubmitTransfer(transfer: UsbDataTransferParams): void
 **示例**
 
 > 说明：
+> 
+> 以下示例代码需要放入具体的方法中执行，只是调用usbSubmitTransfer接口的必要流程，实际调用时，设备开发者需要遵循目标USB设备的协议规范进行调用，具体协议要求请参考设备的技术文档，确保数据的正确传输和设备的兼容性。
 
 ```TypeScript
 // usbManager.getDevices 接口返回数据集合，取其中一个设备对象，并获取权限。

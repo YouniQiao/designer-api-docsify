@@ -41,7 +41,7 @@ function createImageReceiver(width: number, height: number, format: number, capa
 
 | 类型 | 说明 |
 | --- | --- |
-| ImageReceiver | 如果操作成功，则返回ImageReceiver实例。 |
+| [ImageReceiver](arkts-image-image-imagereceiver-i.md) | 如果操作成功，则返回ImageReceiver实例。 |
 
 **示例**
 
@@ -76,7 +76,7 @@ function createImageReceiver(size: Size, format: ImageFormat, capacity: number):
 
 | 类型 | 说明 |
 | --- | --- |
-| ImageReceiver | 如果操作成功，则返回ImageReceiver实例。 |
+| [ImageReceiver](arkts-image-image-imagereceiver-i.md) | 如果操作成功，则返回ImageReceiver实例。 |
 
 **错误码：**
 
@@ -121,7 +121,7 @@ function createImageReceiver(options?: ImageReceiverOptions): ImageReceiver | un
 
 | 类型 | 说明 |
 | --- | --- |
-| ImageReceiver \| undefined | 操作成功时返回ImageReceiver实例，否则返回undefined。 |
+| [ImageReceiver](arkts-image-image-imagereceiver-i.md) \| undefined | 操作成功时返回ImageReceiver实例，否则返回undefined。 |
 
 **错误码：**
 

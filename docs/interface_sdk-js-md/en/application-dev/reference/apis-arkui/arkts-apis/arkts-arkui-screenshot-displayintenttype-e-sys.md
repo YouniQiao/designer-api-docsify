@@ -2,7 +2,7 @@
 
 Enumerates the screenshot display intent type.
 
-@enum { number }
+@enum { int }
 
 **Since:** 26.0.0
 

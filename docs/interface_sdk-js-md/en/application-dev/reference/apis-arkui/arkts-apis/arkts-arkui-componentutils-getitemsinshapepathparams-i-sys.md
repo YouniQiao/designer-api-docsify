@@ -24,7 +24,7 @@ images: Array<ImageItem>
 
 image information.
 
-**Type:** Array&lt;ImageItem&gt;
+**Type:** Array&lt;[ImageItem](arkts-arkui-componentutils-imageitem-i-sys.md)&gt;
 
 **Since:** 23
 
@@ -60,7 +60,7 @@ shapePath: Array<common2D.Point>
 
 Indicates the path points information.
 
-**Type:** Array&lt;common2D.Point&gt;
+**Type:** Array&lt;[common2D.Point](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-common2d-point-i.md)&gt;
 
 **Since:** 23
 

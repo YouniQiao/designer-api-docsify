@@ -26,7 +26,7 @@ Obtains the list of all physical USB ports. When the developer mode is disabled,
 
 | Type | Description |
 | --- | --- |
-| Array&lt;USBPort&gt; | List of physical USB ports. |
+| Array&lt;[USBPort](arkts-basicservices-usbmanager-usbport-i-sys.md)&gt; | List of physical USB ports. |
 
 **Error codes:**
 
@@ -36,9 +36,3 @@ Obtains the list of all physical USB ports. When the developer mode is disabled,
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied. Normal application do not have permission to use system api. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported.<br>**Applicable version:** 18 and later |
 | [14400004](../errorcode-usb.md#14400004-service-exception) |  |
-
-**Examples**
-
-```TypeScript
-let ret: Array<usbManager.USBPort> = usbManager.getPortList();
-```

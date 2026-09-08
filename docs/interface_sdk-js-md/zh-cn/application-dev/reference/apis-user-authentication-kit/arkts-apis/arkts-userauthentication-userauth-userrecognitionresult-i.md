@@ -20,7 +20,7 @@ authTrustLevel?: AuthTrustLevel
 
 认证信任级别。仅在状态为[MATCH](arkts-userauthentication-userauth-userrecognitionstatus-e.md#match)时有效。具体取值请参见[AuthTrustLevel](arkts-userauthentication-userauth-authtrustlevel-e.md)。
 
-**类型：** AuthTrustLevel
+**类型：** [AuthTrustLevel](arkts-userauthentication-userauth-authtrustlevel-e.md)
 
 **起始版本：** 26.1.0
 

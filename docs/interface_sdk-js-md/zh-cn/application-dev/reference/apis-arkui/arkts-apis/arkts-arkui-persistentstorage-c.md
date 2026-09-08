@@ -97,15 +97,6 @@ static Keys(): Array<string>
 let keys: Array<string> = PersistentStorage.Keys();
 ```
 
-```TypeScript
-Environment.EnvProps([{ key: 'accessibilityEnabled', defaultValue: 'default' }, {
-  key: 'languageCode',
-  defaultValue: 'en'
-}, { key: 'prop', defaultValue: 'hhhh' }]);
-
-let keys: Array<string> = Environment.Keys(); // keys 包含 accessibilityEnabled、languageCode、prop
-```
-
 ## keys
 
 ```TypeScript
@@ -130,15 +121,6 @@ static keys(): Array<string>
 
 ```TypeScript
 let keys: Array<string> = PersistentStorage.keys();
-```
-
-```TypeScript
-Environment.envProps([{ key: 'accessibilityEnabled', defaultValue: 'default' }, {
-  key: 'languageCode',
-  defaultValue: 'en'
-}, { key: 'prop', defaultValue: 'hhhh' }]);
-
-let keys: Array<string> = Environment.keys(); // keys 包含 accessibilityEnabled、languageCode、prop
 ```
 
 ## PersistProp
@@ -214,6 +196,7 @@ static persistProp<T>(key: string, defaultValue: T): void
 **示例**
 
 persistProp具体用法详见[从AppStorage中访问PersistentStorage初始化的属性](../../../ui/state-management/arkts-persiststorage.md#从appstorage中访问persistentstorage初始化的属性)。
+- simpleType:
 
 ## PersistProps
 

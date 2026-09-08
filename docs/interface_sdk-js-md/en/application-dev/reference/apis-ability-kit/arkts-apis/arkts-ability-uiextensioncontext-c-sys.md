@@ -52,7 +52,7 @@ Connects the current UI extension to an service extension ability with a root ho
 | [16000012](../errorcode-ability.md#16000012-application-under-control) | The application is controlled. |
 | [16000013](../errorcode-ability.md#16000013-application-controlled-by-edm) | The application is controlled by EDM. |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. Possible causes: 1. Connect to system service failed; 2.Send restart message to system service failed; 3.System service failed to communicate with dependency module. |
-| [16000053](../errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) | The ability is not on the top of the UI. |
+| [16000053](../errorcode-ability.md#16000053-ability-not-in-the-foreground) | The ability is not on the top of the UI. |
 | [16000070](../errorcode-ability.md#16000070-extensionability-fails-to-start-a-serviceextensionability-in-strict-mode) | The extension cannot start the service. |
 
 ## setHostPageOverlayForbidden
@@ -199,7 +199,7 @@ Starts a ServiceExtensionAbility. This API uses a promise to return the result.
 | [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
 | [16000012](../errorcode-ability.md#16000012-application-under-control) | The application is controlled. |
 | [16000013](../errorcode-ability.md#16000013-application-controlled-by-edm) | The application is controlled by EDM. |
-| [16000019](../errorcode-ability.md#16000019-no-matching-ability-is-found-during-implicit-startup) | No matching ability is found. |
+| [16000019](../errorcode-ability.md#16000019-no-matching-ability-found-for-implicit-start) | No matching ability is found. |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 | [16200001](../errorcode-ability.md#16200001-caller-released) | The caller has been released. |
 
@@ -257,7 +257,7 @@ Starts a ServiceExtensionAbility under a specified system account. This API uses
 | [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
 | [16000012](../errorcode-ability.md#16000012-application-under-control) | The application is controlled. |
 | [16000013](../errorcode-ability.md#16000013-application-controlled-by-edm) | The application is controlled by EDM. |
-| [16000019](../errorcode-ability.md#16000019-no-matching-ability-is-found-during-implicit-startup) | No matching ability is found. |
+| [16000019](../errorcode-ability.md#16000019-no-matching-ability-found-for-implicit-start) | No matching ability is found. |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 | [16200001](../errorcode-ability.md#16200001-caller-released) | The caller has been released. |
 
@@ -318,7 +318,7 @@ Starts multiple UIAbility components simultaneously. This API uses a promise to 
 | [16000122](../errorcode-ability.md#16000122-target-component-is-intercepted-by-the-system-control-module) | The target component is blocked by the system module and does not support startup. |
 | [16000123](../errorcode-ability.md#16000123-implicit-startup-is-not-supported) | Implicit startup is not supported. |
 | [16000124](../errorcode-ability.md#16000124-starting-a-distributed-uiability-is-not-supported) | Starting a remote UIAbility is not supported. |
-| [16000125](../errorcode-ability.md#16000125-starting-a-plugin-is-not-supported) | Starting a plugin UIAbility is not supported. |
+| [16000125](../errorcode-ability.md#16000125-starting-a-plugin-uiability-is-not-supported) | Starting a plugin UIAbility is not supported. |
 | [16000126](../errorcode-ability.md#16000126-dlp-files-cannot-be-started) | Starting DLP files is not supported. |
 
 ## startUIAbilitiesInSplitWindowMode
@@ -387,5 +387,5 @@ Starts a second UIAbility after the first UIAbility instance is created, and dis
 | [16000122](../errorcode-ability.md#16000122-target-component-is-intercepted-by-the-system-control-module) | The target component is blocked by the system module and does not support startup. |
 | [16000123](../errorcode-ability.md#16000123-implicit-startup-is-not-supported) | Implicit startup is not supported. |
 | [16000124](../errorcode-ability.md#16000124-starting-a-distributed-uiability-is-not-supported) | Starting a remote UIAbility is not supported. |
-| [16000125](../errorcode-ability.md#16000125-starting-a-plugin-is-not-supported) | Starting a plugin UIAbility is not supported. |
+| [16000125](../errorcode-ability.md#16000125-starting-a-plugin-uiability-is-not-supported) | Starting a plugin UIAbility is not supported. |
 | [16000126](../errorcode-ability.md#16000126-dlp-files-cannot-be-started) | Starting DLP files is not supported. |

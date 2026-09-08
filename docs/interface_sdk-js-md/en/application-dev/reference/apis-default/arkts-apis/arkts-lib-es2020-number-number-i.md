@@ -17,7 +17,7 @@ Converts a number to a string by using the current or specified locale.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| locales | Intl.LocalesArgument | No |  |
+| locales | [Intl.LocalesArgument](arkts-intl-localesargument-t.md) | No |  |
 | options | Intl.NumberFormatOptions | No |  |
 
 **Return value:**

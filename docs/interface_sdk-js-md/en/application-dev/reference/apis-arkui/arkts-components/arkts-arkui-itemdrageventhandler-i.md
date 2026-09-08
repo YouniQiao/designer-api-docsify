@@ -69,7 +69,7 @@ This callback is triggered when the item is dropped.
 onLongPress?: Callback<number>
 ```
 
-This callback is triggered when the item is number pressed.
+This callback is triggered when the item is long pressed.
 
 **Type:** [Callback](arkts-arkui-callback-i.md)&lt;number&gt;
 

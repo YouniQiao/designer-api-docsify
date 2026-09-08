@@ -34,7 +34,7 @@ clientCert?: ClientCert
 
 支持传输客户端证书。
 
-**类型：** ClientCert
+**类型：** [ClientCert](arkts-network-websocket-clientcert-i.md)
 
 **起始版本：** 11
 

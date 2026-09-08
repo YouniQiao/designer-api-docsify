@@ -34,15 +34,3 @@ create the instance of OPP server profile.
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-try {
-    let oppProfile = opp.createOppServerProfile();
-    console.info('oppServer success');
-} catch (err) {
-    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-}
-```

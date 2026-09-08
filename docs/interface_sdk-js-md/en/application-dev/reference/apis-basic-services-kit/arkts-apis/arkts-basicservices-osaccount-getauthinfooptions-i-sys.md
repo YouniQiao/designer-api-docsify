@@ -38,7 +38,7 @@ authType?: AuthType
 
 Authentication type, which is **undefined** by default.
 
-**Type:** AuthType
+**Type:** [AuthType](arkts-basicservices-osaccount-authtype-e-sys.md)
 
 **Since:** 12
 

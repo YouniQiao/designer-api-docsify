@@ -59,6 +59,7 @@ Generates a key for the specified user. This API uses a promise to return the re
 **Examples**
 
 Prerequisites:
+The caller must be a system application running under user 0 to user 99 (inclusive) and must have the ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS permission. For details, see [singleton](../../../../device-dev/subsystems/subsys-app-privilege-config-guide.md#device-specific-application-privileges).
 
 ```TypeScript
 import { huks } from '@kit.UniversalKeystoreKit';

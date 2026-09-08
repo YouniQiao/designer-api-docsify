@@ -146,4 +146,4 @@ setTabBarTranslate(translate: TranslateOptions): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| translate | TranslateOptions | 是 | 设置TabBar的平移距离。 |
+| translate | [TranslateOptions](arkts-arkui-translateoptions-i.md) | 是 | 设置TabBar的平移距离。 |

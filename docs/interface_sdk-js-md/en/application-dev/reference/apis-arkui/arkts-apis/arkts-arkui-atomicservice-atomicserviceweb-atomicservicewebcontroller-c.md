@@ -209,7 +209,7 @@ Loads a specified URL.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| url | string \| Resource | Yes | URL to load. |
+| url | string \| [Resource](arkts-arkui-resource-t.md) | Yes | URL to load. |
 | headers | Array&lt;[WebHeader](arkts-arkui-atomicservice-atomicserviceweb-webheader-i.md)&gt; | No | Additional HTTP request header of the URL. |
 
 **Error codes:**

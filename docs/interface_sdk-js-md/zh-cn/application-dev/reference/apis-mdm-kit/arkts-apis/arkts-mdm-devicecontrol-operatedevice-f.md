@@ -81,7 +81,7 @@ function operateDevice(admin: Want, operation: Operation, addition?: string): vo
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
-| operation | Operation | 是 | 要执行的操作。 |
+| operation | [Operation](arkts-mdm-devicecontrol-operation-e.md) | 是 | 要执行的操作。 |
 | addition | string | 否 | 执行时附加参数。当operation类型为磁盘擦除时，附加参数为图片的沙箱路径。若磁盘擦除成功后需给用户展示信息，可设置该参数传递信息，该图片大小需小于5KB（建议使用二维码图片）。长度限制为1024字节。若operation类型为锁定设备时，表示屏幕锁定后展示的描述信息。若operation为其他类型时，目前无需传入。 |
 
 **错误码：**

@@ -142,7 +142,7 @@ function pairDevice(deviceId: BluetoothAddress): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| deviceId | BluetoothAddress | 是 | 需要配对的对端蓝牙设备地址信息，包括地址与地址类型。 |
+| deviceId | [BluetoothAddress](arkts-connectivity-connection-bluetoothaddress-t.md) | 是 | 需要配对的对端蓝牙设备地址信息，包括地址与地址类型。 |
 
 **返回值：**
 

@@ -26,7 +26,7 @@ Obtain the scanned station list. If does't have the permission of ohos.permissio
 
 | Type | Description |
 | --- | --- |
-| Array&lt;WifiScanInfo&gt; | Returns information about scanned Wi-Fi hotspot if any. |
+| Array&lt;[WifiScanInfo](arkts-connectivity-wifimanager-wifiscaninfo-i.md)&gt; | Returns information about scanned Wi-Fi hotspot if any. |
 
 **Error codes:**
 

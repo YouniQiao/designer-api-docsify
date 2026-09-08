@@ -36,7 +36,7 @@ Obtains the class of a peer Bluetooth device. On API 10 and above, the permissio
 
 | Type | Description |
 | --- | --- |
-| DeviceClass | The class of the remote device, { |
+| [DeviceClass](arkts-connectivity-bluetoothmanager-deviceclass-i.md) | The class of the remote device, { |
 
 **Error codes:**
 

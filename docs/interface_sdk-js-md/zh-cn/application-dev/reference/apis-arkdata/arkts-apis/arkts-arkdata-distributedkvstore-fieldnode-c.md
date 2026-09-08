@@ -30,7 +30,7 @@ appendChild(child: FieldNode): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| child | FieldNode | 是 | 要附加的子节点。 |
+| child | [FieldNode](arkts-arkdata-distributedkvstore-fieldnode-c.md) | 是 | 要附加的子节点。 |
 
 **返回值：**
 
@@ -91,26 +91,6 @@ constructor(name: string)
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;  2.Parameter verification failed. |
-
-**示例**
-
-```TypeScript
-let child1 = new distributedKVStore.FieldNode('id');
-child1.type = distributedKVStore.ValueType.INTEGER;
-child1.nullable = false;
-child1.default = '1';
-let child2 = new distributedKVStore.FieldNode('name');
-child2.type = distributedKVStore.ValueType.STRING;
-child2.nullable = false;
-child2.default = 'zhangsan';
-
-let schema = new distributedKVStore.Schema();
-schema.root.appendChild(child1);
-schema.root.appendChild(child2);
-schema.indexes = ['$.id', '$.name'];
-schema.mode = 1;
-schema.skip = 0;
-```
 
 ## default
 

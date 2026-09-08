@@ -26,13 +26,13 @@ Converts a SendableContext object to an ApplicationContext object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sendableContext | SendableContext | Yes |  |
+| sendableContext | [SendableContext](arkts-ability-sendablecontextmanager-sendablecontext-t.md) | Yes |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| common.ApplicationContext | [ApplicationContext]{ |
+| [common.ApplicationContext](arkts-ability-common-applicationcontext-t.md) | [ApplicationContext]{ |
 
 **Error codes:**
 

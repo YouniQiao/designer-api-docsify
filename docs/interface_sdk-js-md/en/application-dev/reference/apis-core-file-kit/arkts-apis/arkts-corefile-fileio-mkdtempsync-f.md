@@ -32,9 +32,3 @@ Creates a temporary directory. This API returns the result synchronously.
 | Type | Description |
 | --- | --- |
 | string | Unique directory generated. |
-
-**Examples**
-
-```TypeScript
-let res = fileio.mkdtempSync(pathDir + "/XXXXXX");
-```

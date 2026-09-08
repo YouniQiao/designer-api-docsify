@@ -117,7 +117,7 @@ Code segment for resetting the environment after the test is complete. This para
 timeout?: number
 ```
 
-resetCode**) at a time. The value is an integer greater than 0, in milliseconds. The default value is **10000**. If the execution of a test code segment takes a number time, you can increase the value of this parameter to prevent timeout. If a timeout occurs, an exception is triggered and the test execution is terminated.
+resetCode**) at a time. The value is an integer greater than 0, in milliseconds. The default value is **10000**. If the execution of a test code segment takes a long time, you can increase the value of this parameter to prevent timeout. If a timeout occurs, an exception is triggered and the test execution is terminated.
 
 **Type:** number
 

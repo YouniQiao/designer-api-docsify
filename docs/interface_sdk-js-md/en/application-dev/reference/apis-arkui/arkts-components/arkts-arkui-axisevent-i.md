@@ -121,7 +121,7 @@ Checks whether this axis event contains the specified axis type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| axisType | AxisType | Yes | Axis type to check for. |
+| axisType | [AxisType](../arkts-apis/arkts-arkui-axistype-e.md) | Yes | Axis type to check for. |
 
 **Return value:**
 

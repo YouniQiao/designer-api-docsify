@@ -79,4 +79,4 @@ Sets the opacity of the QR code content. The minimum value is 0, and the maximum
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number \| Resource | Yes | Opacity of the QR code content.Default value: **1**Value range: [0, 1]. If the value is out of the range, the default value is used. |
+| value | number \| [Resource](../arkts-apis/arkts-arkui-resource-t.md) | Yes | Opacity of the QR code content.Default value: **1**Value range: [0, 1]. If the value is out of the range, the default value is used. |

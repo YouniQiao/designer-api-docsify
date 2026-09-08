@@ -25,13 +25,13 @@ Connects to the USB device based on the device information returned by **getDevi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| device | USBDevice | Yes | USB device. The **busNum** and **devAddress** parameters obtained by [usbManager.getDevices](arkts-basicservices-usbmanager-getdevices-f.md) are used to determine a USB device. Other parameters are passed transparently. |
+| device | [USBDevice](arkts-basicservices-usbmanager-usbdevice-i.md) | Yes | USB device. The **busNum** and **devAddress** parameters obtained by [usbManager.getDevices](arkts-basicservices-usbmanager-getdevices-f.md) are used to determine a USB device. Other parameters are passed transparently. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Readonly&lt;USBDevicePipe&gt; | USB device pipe for data transfer. |
+| Readonly&lt;[USBDevicePipe](arkts-basicservices-usbmanager-usbdevicepipe-i.md)&gt; | USB device pipe for data transfer. |
 
 **Error codes:**
 

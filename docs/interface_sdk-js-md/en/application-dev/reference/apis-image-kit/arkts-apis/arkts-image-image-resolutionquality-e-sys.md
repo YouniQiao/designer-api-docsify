@@ -42,7 +42,7 @@ Medium image quality, requiring a medium decoding time
 HIGH = 3
 ```
 
-High image quality, requiring a number decoding time.
+High image quality, requiring a long decoding time.
 
 **Since:** 12
 

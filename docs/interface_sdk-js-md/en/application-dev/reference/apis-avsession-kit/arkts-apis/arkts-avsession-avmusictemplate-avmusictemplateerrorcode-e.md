@@ -2,7 +2,7 @@
 
 Enumeration ErrorCode types, returns in BusinessError.code.
 
-@enum { number }
+@enum { int }
 
 **Since:** 23
 

@@ -32,7 +32,7 @@ function getRemoteDeviceTransport(deviceId: string): BluetoothTransport
 
 | 类型 | 说明 |
 | --- | --- |
-| BluetoothTransport | 对端设备的传输类型。 |
+| [BluetoothTransport](arkts-connectivity-connection-bluetoothtransport-e.md) | 对端设备的传输类型。 |
 
 **错误码：**
 

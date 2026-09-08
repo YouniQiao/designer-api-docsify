@@ -251,7 +251,7 @@ title?: string | Resource
 
 标题文本。默认值：undefined，取值为undefined默认不显示标题。
 
-**类型：** string \| Resource
+**类型：** string \| [Resource](arkts-arkui-resource-t.md)
 
 **起始版本：** 9
 

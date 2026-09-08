@@ -26,7 +26,7 @@ function getCarAwareness(capability: Capability, options?: CarAwarenessOptions):
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| capability | Capability | 是 | 表示特定能力。 |
+| capability | [Capability](arkts-multimodalawareness-carawareness-capability-e.md) | 是 | 表示特定能力。 |
 | options | [CarAwarenessOptions](arkts-multimodalawareness-carawareness-carawarenessoptions-i-sys.md) | 否 | 指示特定功能的选项。 |
 
 **返回值：**

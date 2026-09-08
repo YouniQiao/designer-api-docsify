@@ -529,7 +529,7 @@ Display layer of the element. The value range is greater than or equal to 0. The
 longClickable: boolean
 ```
 
-Whether the element is number-clickable. The value **true** indicates that the element is number-clickable, and **false** indicates the opposite. The default value is **false**.
+Whether the element is long-clickable. The value **true** indicates that the element is long-clickable, and **false** indicates the opposite. The default value is **false**.
 
 **Type:** boolean
 
@@ -733,7 +733,7 @@ textMoveUnit: accessibility.TextMoveUnit
 
 Granularity of movement when the text is read.
 
-**Type:** accessibility.TextMoveUnit
+**Type:** [accessibility.TextMoveUnit](arkts-accessibility-accessibility-textmoveunit-t.md)
 
 **Since:** 9
 
@@ -761,7 +761,7 @@ triggerAction: accessibility.Action
 
 Action that triggers the element event.
 
-**Type:** accessibility.Action
+**Type:** [accessibility.Action](arkts-accessibility-accessibility-action-t.md)
 
 **Since:** 9
 

@@ -124,7 +124,7 @@ function notifyDataChange(userId: number, extraData: ExtraData): Promise<void>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | userId | number | 是 | 用户Id。 |
-| extraData | ExtraData | 是 | 云端数据变更信息。 |
+| extraData | [ExtraData](arkts-corefile-cloudsyncmanager-extradata-i-sys.md) | 是 | 云端数据变更信息。 |
 
 **返回值：**
 
@@ -177,7 +177,7 @@ function notifyDataChange(userId: number, extraData: ExtraData, callback: AsyncC
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | userId | number | 是 | 用户Id。 |
-| extraData | ExtraData | 是 | 云端数据变更信息。 |
+| extraData | [ExtraData](arkts-corefile-cloudsyncmanager-extradata-i-sys.md) | 是 | 云端数据变更信息。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。异步通知端云服务应用的云数据变更之后。 |
 
 **错误码：**

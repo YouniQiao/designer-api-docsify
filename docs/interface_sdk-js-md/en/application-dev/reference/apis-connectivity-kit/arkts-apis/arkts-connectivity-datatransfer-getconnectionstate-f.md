@@ -32,7 +32,7 @@ Obtains the port channel connection state with a remote device.
 
 | Type | Description |
 | --- | --- |
-| ConnectionState | NearLink port channel connection state with a remote device. |
+| [ConnectionState](arkts-connectivity-datatransfer-connectionstate-t.md) | NearLink port channel connection state with a remote device. |
 
 **Error codes:**
 
@@ -40,8 +40,8 @@ Obtains the port channel connection state with a remote device.
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported because the chip does not support it. |
-| 36100003 | NearLink disabled. |
-| 36100041 | Invalid address. |
-| 36100043 | Invalid UUID in connection parameters. |
-| 36100044 | NearLink standard UUID not allowed. |
-| 36100099 | Operation failed. |
+| [36100003](../../apis-avsession-kit/errorcode-nearlink-service.md#36100003-nearlink-disabled) | NearLink disabled. |
+| [36100041](../../apis-avsession-kit/errorcode-nearlink-service.md#36100041-invalid-url) | Invalid address. |
+| [36100043](../../apis-avsession-kit/errorcode-nearlink-service.md#36100043-invalid-uuid) | Invalid UUID in connection parameters. |
+| [36100044](../../apis-avsession-kit/errorcode-nearlink-service.md#36100044-standard-nearlink-service-uuid-not-allowed) | NearLink standard UUID not allowed. |
+| [36100099](../../apis-avsession-kit/errorcode-nearlink-service.md#36100099-operation-failed) | Operation failed. |

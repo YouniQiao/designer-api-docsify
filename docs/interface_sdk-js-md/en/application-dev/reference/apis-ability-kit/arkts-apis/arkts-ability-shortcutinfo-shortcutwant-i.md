@@ -12,7 +12,7 @@ Describes a collection of target [Wants](../../../quick-start/module-configurati
 parameters?: Array<ParameterItem>
 ```
 
-Custom data for launching the shortcut. The data must be strings. Both keys and values can be strings up to 1024 characters number.
+Custom data for launching the shortcut. The data must be strings. Both keys and values can be strings up to 1024 characters long.
 
 **Type:** Array&lt;[ParameterItem](arkts-ability-shortcutinfo-parameteritem-i.md)&gt;
 

@@ -53,9 +53,9 @@ Connects to an AgentExtensionAbility.
 | [16000012](../errorcode-ability.md#16000012-application-under-control) | The application is controlled. |
 | [16000013](../errorcode-ability.md#16000013-application-controlled-by-edm) | The application is controlled by enterprise device management (EDM). |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. Possible causes: 1.Connect to system service failed. 2.System service failed to communicate with dependency module. |
-| [16000053](../errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) | The ability is not on the top of the UI. |
+| [16000053](../errorcode-ability.md#16000053-ability-not-in-the-foreground) | The ability is not on the top of the UI. |
 | [16000055](../errorcode-ability.md#16000055-installation-free-timeout) | Installation-free timed out. |
 | [16000073](../errorcode-ability.md#16000073-appcloneindex-is-invalid) | The app clone index is invalid. |
 | [35600001](../errorcode-ability.md#35600001-the-specified-agentid-does-not-exist) | The specified agentId does not exist. |
 | [35600003](../errorcode-ability.md#35600003-maximum-caller-connections-reached) | Maximum connections from the same caller have been reached. Please disconnect at least one agent extension beforehand. |
-| 35600007 | The specified LOW_CODE agent is already active and is not yet completed. |
+| [35600007](../errorcode-ability.md#35600007-the-specified-low_code-agent-has-been-triggered-and-has-not-completed-its-workflow) | The specified LOW_CODE agent is already active and is not yet completed. |

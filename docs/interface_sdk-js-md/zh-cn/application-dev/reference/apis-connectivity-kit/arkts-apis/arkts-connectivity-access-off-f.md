@@ -29,7 +29,7 @@ function off(type: 'stateChange', callback?: Callback<BluetoothState>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'stateChange' | 是 | 事件回调类型，支持的事件为'stateChange'，表示蓝牙开关状态变化事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;BluetoothState&gt; | 否 | 指定取消订阅的回调函数通知。若传参，则需与access.on('stateChange')中的回调函数一致；若无传参，则取消订阅该type对应的所有回调函数通知。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[BluetoothState](arkts-connectivity-access-bluetoothstate-e.md)&gt; | 否 | 指定取消订阅的回调函数通知。若传参，则需与access.on('stateChange')中的回调函数一致；若无传参，则取消订阅该type对应的所有回调函数通知。 |
 
 **错误码：**
 

@@ -22,7 +22,7 @@ Converts the asset data that can be passed across threads into the data that can
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| asset | Asset | Yes | Asset data that can be passed across threads. |
+| asset | [Asset](arkts-arkdata-sendablerelationalstore-asset-i.md) | Yes | Asset data that can be passed across threads. |
 
 **Return value:**
 

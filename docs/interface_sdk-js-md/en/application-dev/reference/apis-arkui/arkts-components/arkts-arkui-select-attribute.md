@@ -369,7 +369,7 @@ Sets the background blur style of the drop-down menu.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | BlurStyle | Yes | Background blur style of the drop-down menu.Default value: **BlurStyle.COMPONENT_ULTRA_THICK |
+| value | [BlurStyle](arkts-arkui-blurstyle-e.md) | Yes | Background blur style of the drop-down menu.Default value: **BlurStyle.COMPONENT_ULTRA_THICK |
 
 ## menuBackgroundBlurStyle
 
@@ -391,7 +391,7 @@ Sets the background blur style of the drop-down menu. Compared with [menuBackgro
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [Optional](arkts-arkui-optional-t.md)&lt;BlurStyle&gt; | Yes | Background blur style of the drop-down menu.If **style** is set to **undefined**, the default value **BlurStyle.COMPONENT_ULTRA_THICK** is used. |
+| style | [Optional](arkts-arkui-optional-t.md)&lt;[BlurStyle](arkts-arkui-blurstyle-e.md)&gt; | Yes | Background blur style of the drop-down menu.If **style** is set to **undefined**, the default value **BlurStyle.COMPONENT_ULTRA_THICK** is used. |
 
 ## menuBackgroundBlurStyleOptions
 
@@ -929,7 +929,7 @@ Since API version 18, this attribute supports two-way binding through [!!](../..
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number \| Resource | Yes | Index of the initially selected option. The index is zero-based.<br>**Since:** 11 |
+| value | number \| [Resource](../arkts-apis/arkts-arkui-resource-t.md) | Yes | Index of the initially selected option. The index is zero-based.<br>**Since:** 11 |
 
 ## selected
 
@@ -953,7 +953,7 @@ This attribute supports two-way binding through [\$\$](../../../ui/state-managem
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| numCount | [Optional](arkts-arkui-optional-t.md)&lt;number \| Resource&gt; | Yes | Index of the initially selected option.When **numCount** is set to **undefined**, the first option is selected. |
+| numCount | [Optional](arkts-arkui-optional-t.md)&lt;number \| [Resource](../arkts-apis/arkts-arkui-resource-t.md)&gt; | Yes | Index of the initially selected option.When **numCount** is set to **undefined**, the first option is selected. |
 
 ## selectedOptionBgColor
 

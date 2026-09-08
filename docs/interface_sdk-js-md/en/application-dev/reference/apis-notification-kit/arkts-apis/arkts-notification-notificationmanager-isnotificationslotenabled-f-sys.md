@@ -28,8 +28,8 @@ This API can be properly called on devices other than wearables. If it is called
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundle | BundleOption | Yes | Bundle information of the application. |
-| type | SlotType | Yes | Notification slot type. |
+| bundle | [BundleOption](arkts-notification-notificationmanager-bundleoption-t.md) | Yes | Bundle information of the application. |
+| type | [SlotType](arkts-notification-notificationmanager-slottype-e.md) | Yes | Notification slot type. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** means that the notification slot type is enabled, and **false** means the opposite. |
 
 **Error codes:**
@@ -88,8 +88,8 @@ This API can be properly called on devices other than wearables. If it is called
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundle | BundleOption | Yes | Bundle information of the application. |
-| type | SlotType | Yes | Notification slot type. |
+| bundle | [BundleOption](arkts-notification-notificationmanager-bundleoption-t.md) | Yes | Bundle information of the application. |
+| type | [SlotType](arkts-notification-notificationmanager-slottype-e.md) | Yes | Notification slot type. |
 
 **Return value:**
 

@@ -32,13 +32,13 @@ Fetch shared photo assets in an album.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | FetchOptions | Yes | Fetch options. |
+| options | [FetchOptions](arkts-medialibrary-photoaccesshelper-fetchoptions-i.md) | Yes | Fetch options. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;SharedPhotoAsset&gt; | Returns the shared photo assets |
+| Array&lt;[SharedPhotoAsset](arkts-medialibrary-photoaccesshelper-sharedphotoasset-i-sys.md)&gt; | Returns the shared photo assets |
 
 **Error codes:**
 
@@ -48,30 +48,6 @@ Fetch shared photo assets in an album.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
 | 14000011 | Internal system error |
-
-**Examples**
-
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData'
-
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-  let fetchOptions: photoAccessHelper.FetchOptions = {
-    fetchColumns: [],
-    predicates: predicates
-  };
-
-  try {
-    console.info('getSharedPhotoAssets test start');
-    phAccessHelper.getSharedPhotoAssets(fetchOptions);
-    console.info('getSharedPhotoAssets test end');
-  } catch (err) {
-    console.error(`getSharedPhotoAssets failed, error: ${err.code}, ${err.message}`);
-  }
-}
-```
 
 ## coverUriSource
 

@@ -20,7 +20,7 @@ playMode: PlayMode
 
 Whether to support automatic playback of the moving photo.
 
-**Type:** PlayMode
+**Type:** [PlayMode](arkts-medialibrary-photoaccesshelper-playmode-e.md)
 
 **Since:** 23
 

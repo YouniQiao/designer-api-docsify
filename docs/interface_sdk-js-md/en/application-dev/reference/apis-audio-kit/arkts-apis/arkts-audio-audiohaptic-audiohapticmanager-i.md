@@ -241,7 +241,7 @@ Sets the stream usage for an audio-haptic source.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | id | number | Yes | Source ID. |
-| usage | audio.StreamUsage | Yes | Stream usage. |
+| usage | [audio.StreamUsage](arkts-audio-audio-streamusage-e.md) | Yes | Stream usage. |
 
 **Error codes:**
 

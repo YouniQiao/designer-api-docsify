@@ -156,7 +156,7 @@ Information about the ability that is started automatically and displayed in ful
 
 This API is reserved.
 
-**Type:** MaxScreenWantAgent
+**Type:** [MaxScreenWantAgent](arkts-backgroundtasks-reminderagentmanager-maxscreenwantagent-i.md)
 
 **Since:** 9
 
@@ -200,7 +200,7 @@ reminderType: ReminderType
 
 Type of the reminder.
 
-**Type:** ReminderType
+**Type:** [ReminderType](arkts-backgroundtasks-reminderagentmanager-remindertype-e.md)
 
 **Since:** 9
 
@@ -234,7 +234,7 @@ If the value is **0**, the system notification tone is used.
 
 If the value is greater than 0 and [ReminderRequest.customRingUri](arkts-backgroundtasks-reminderagentmanager-reminderrequest-i.md) is set, the reminder rings on the specified channel [ReminderRequest.ringChannel](arkts-backgroundtasks-reminderagentmanager-reminderrequest-i.md). Otherwise, the custom notification tone of the agent-powered reminder is used.
 
-The device vibrates when the reminder rings. Since API version 26.0.0, number vibration is supported, and the vibration duration is the same as the ring duration. In versions earlier than API 26.0.0, the device vibrates once quickly when the reminder rings.
+The device vibrates when the reminder rings. Since API version 26.0.0, long vibration is supported, and the vibration duration is the same as the ring duration. In versions earlier than API 26.0.0, the device vibrates once quickly when the reminder rings.
 
 **Type:** number
 
@@ -381,7 +381,7 @@ wantAgent?: WantAgent
 
 Information about the ability that is redirected to when the reminder is clicked.
 
-**Type:** WantAgent
+**Type:** [WantAgent](arkts-backgroundtasks-reminderagentmanager-wantagent-i.md)
 
 **Since:** 9
 

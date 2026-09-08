@@ -50,9 +50,9 @@ bindSelectionMenu(spanType: TextSpanType, content: CustomBuilder, responseType: 
 
 Sets the custom selection menu.
 
-The number-press response duration of **bindSelectionMenu** is 600 ms while that of [bindContextMenu](arkts-arkui-commonmethod-c.md#bindcontextmenu) is 800 ms. When both are bound and their triggering methods are set to number press, **bindSelectionMenu** takes precedence.
+The long-press response duration of **bindSelectionMenu** is 600 ms while that of [bindContextMenu](arkts-arkui-commonmethod-c.md#bindcontextmenu) is 800 ms. When both are bound and their triggering methods are set to long press, **bindSelectionMenu** takes precedence.
 
-When the custom menu is too number, it is recommended that nest a Scroll component inside to prevent the keyboard from being obscured.
+When the custom menu is too long, it is recommended that nest a Scroll component inside to prevent the keyboard from being obscured.
 
 > **NOTE：**
 > 
@@ -170,14 +170,14 @@ ImageSpan support HTML-formatted pasteboard content.
 
 When **copyOption** is set to **CopyOptions.InApp** or **CopyOptions.LocalDevice**:
 
-- A number press on the text will display a menu that offers the copy and select-all options.  
+- A long press on the text will display a menu that offers the copy and select-all options.  
 - By default, selected text is draggable. To disable dragging, set **draggable** to **false**.  
 - To support **Ctrl+C** copying, also set [textSelectable](#textselectable) to  
 **TextSelectableMode.SELECTABLE_FOCUSABLE**.
 
 The **Text** component listens for **onClick**, which is a non-bubbling event. To allow parent components to respond to clicks within the **Text** area, use [parallelGesture](arkts-arkui-commonmethod-c.md#parallelgesture) on the parent. For implementation guidance, see [Example 7: Setting Text Recognition](../../../reference/apis-arkui/arkui-ts/ts-basic-components-text.md#example-7-setting-text-recognition).
 
-Because widgets do not have the number press event, the menu will not be displayed when users number press text.
+Because widgets do not have the long press event, the menu will not be displayed when users long press text.
 
 **Since:** 9
 
@@ -191,7 +191,7 @@ Because widgets do not have the number press event, the menu will not be display
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | CopyOptions | Yes | Whether copy and paste operations are allowed.Default value: **CopyOptions.None |
+| value | [CopyOptions](../arkts-apis/arkts-arkui-copyoptions-e.md) | Yes | Whether copy and paste operations are allowed.Default value: **CopyOptions.None |
 
 ## dataDetectorConfig
 
@@ -199,7 +199,7 @@ Because widgets do not have the number press event, the menu will not be display
 dataDetectorConfig(config: TextDataDetectorConfig)
 ```
 
-Configures text recognition settings, including entity types to detect, display styles for detected entities, and number-press preview options.
+Configures text recognition settings, including entity types to detect, display styles for detected entities, and long-press preview options.
 
 This API must be used together with [enableDataDetector](#enabledatadetector). It takes effect only when **enableDataDetector** is set to **true**.
 
@@ -329,7 +329,7 @@ For the settings to work, **overflow** must be set to **TextOverflow.Ellipsis** 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | EllipsisMode | Yes | Ellipsis position.Default value: **EllipsisMode.END |
+| value | [EllipsisMode](../arkts-apis/arkts-arkui-ellipsismode-e.md) | Yes | Ellipsis position.Default value: **EllipsisMode.END |
 
 ## enableAutoSpacing
 
@@ -557,7 +557,7 @@ Sets the font family.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | string \| Resource | Yes | Font family. Default font: **'HarmonyOS Sans'**To specify multiple fonts, separate them with commas (,), and fonts are applied in priority order. Example: **'Arial, HarmonyOS Sans'**. |
+| value | string \| [Resource](../arkts-apis/arkts-arkui-resource-t.md) | Yes | Font family. Default font: **'HarmonyOS Sans'**To specify multiple fonts, separate them with commas (,), and fonts are applied in priority order. Example: **'Arial, HarmonyOS Sans'**. |
 
 ## fontFeature
 
@@ -633,7 +633,7 @@ Sets the text size.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number \| string \| Resource | Yes | Font size. If **fontSize** is of the number type, the unit fp is used. This parameter cannot be set in percentage.Default value: **16fp**Default value on wearable devices: **15fp |
+| value | number \| string \| [Resource](../arkts-apis/arkts-arkui-resource-t.md) | Yes | Font size. If **fontSize** is of the number type, the unit fp is used. This parameter cannot be set in percentage.Default value: **16fp**Default value on wearable devices: **15fp |
 
 ## fontStyle
 
@@ -655,7 +655,7 @@ Sets the font style.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | FontStyle | Yes | Font style.Default value: **FontStyle.Normal |
+| value | [FontStyle](../arkts-apis/arkts-arkui-fontstyle-e.md) | Yes | Font style.Default value: **FontStyle.Normal |
 
 ## fontVariations
 
@@ -679,7 +679,7 @@ Set the font variation.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fontVariations | Array&lt;FontVariation&gt; | Yes | Indicates the text font variation. |
+| fontVariations | Array&lt;[FontVariation](../arkts-apis/arkts-arkui-fontvariation-t.md)&gt; | Yes | Indicates the text font variation. |
 
 ## fontWeight
 
@@ -701,7 +701,7 @@ Sets the font weight. If the value is too large, the text may be clipped dependi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number \| FontWeight \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | Yes | Font weight. For the number type, the value range is [100, 900], at an interval of 100. The default value is **400**. A larger value indicates a heavier font weight. For the string type, only strings that represent a number, for example, **400**, and the following enumerated values of **FontWeight** are supported: **bold**, **bolder**, **lighter**, **regular**, and **medium**.Default value: **FontWeight.Normal**Default value on wearable devices: **FontWeight.Regular**The Resource type is supported since API version 20.<br>**Since:** 20 |
+| value | number \| [FontWeight](../arkts-apis/arkts-arkui-fontweight-e.md) \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | Yes | Font weight. For the number type, the value range is [100, 900], at an interval of 100. The default value is **400**. A larger value indicates a heavier font weight. For the string type, only strings that represent a number, for example, **400**, and the following enumerated values of **FontWeight** are supported: **bold**, **bolder**, **lighter**, **regular**, and **medium**.Default value: **FontWeight.Normal**Default value on wearable devices: **FontWeight.Regular**The Resource type is supported since API version 20.<br>**Since:** 20 |
 
 ## fontWeight
 
@@ -727,7 +727,7 @@ It is only effective for the **Text** component, not for its child components.<!
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| weight | number \| FontWeight \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | Yes | Font weight. For the number type, the value ranges from 100 to 900, at an interval of 100. A larger value indicates a heavier font weight. The default value is **400**. For the string type, only strings that represent a number, for example, **400**, and the following enumerated values of **FontWeight** are supported: **bold**, **bolder**, **lighter**, **regular**, and **medium**.The Resource type is supported since API version 20.<br>**Since:** 20 |
+| weight | number \| [FontWeight](../arkts-apis/arkts-arkui-fontweight-e.md) \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | Yes | Font weight. For the number type, the value ranges from 100 to 900, at an interval of 100. A larger value indicates a heavier font weight. The default value is **400**. For the string type, only strings that represent a number, for example, **400**, and the following enumerated values of **FontWeight** are supported: **bold**, **bolder**, **lighter**, **regular**, and **medium**.The Resource type is supported since API version 20.<br>**Since:** 20 |
 | options | [FontSettingOptions](../arkts-apis/arkts-arkui-fontsettingoptions-i.md) | No | Font setting options.When **enableVariableFontWeight** in **options** is set to **false**, variable font weight adjustment is disabled. If **weight** is set to a value at intervals of 100 within [100, 900], the font weight uses the specified value. If **weight** is set to a value that is not a multiple of 100, the default value **400** is used.When **enableVariableFontWeight** in **options** is set to **true**, variable font weight adjustment is enabled. If **weight** is set to any integer within [100, 900], the font weight uses the specified value. |
 
 ## halfLeading
@@ -907,7 +907,7 @@ If the value is less than or equal to **0**, the line height is unrestricted and
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number \| string \| Resource | Yes | Text line height. |
+| value | number \| string \| [Resource](../arkts-apis/arkts-arkui-resource-t.md) | Yes | Text line height. |
 
 ## lineHeightMultiple
 
@@ -1029,7 +1029,7 @@ Sets the maximum font scale factor for text.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scale | number \| Resource | Yes | Maximum font scale factor for text.Value range: [1, +∞)   **NOTE：**Values less than 1 are treated as **1**. Other invalid values are ineffective by default. |
+| scale | number \| [Resource](../arkts-apis/arkts-arkui-resource-t.md) | Yes | Maximum font scale factor for text.Value range: [1, +∞)   **NOTE：**Values less than 1 are treated as **1**. Other invalid values are ineffective by default. |
 
 ## maxFontSize
 
@@ -1061,7 +1061,7 @@ Since API version 18, adaptive font sizing is supported on child components and 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number \| string \| Resource | Yes | Maximum font size.Unit: fp |
+| value | number \| string \| [Resource](../arkts-apis/arkts-arkui-resource-t.md) | Yes | Maximum font size.Unit: fp |
 
 ## maxLineHeight
 
@@ -1133,7 +1133,7 @@ Sets the minimum font scale factor for text.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scale | number \| Resource | Yes | Minimum font scale factor for text.Value range: [0, 1]   **NOTE：**Values less than 0 are treated as 0, and values greater than 1 are treated as 1. Other invalid values do not take effect by default. |
+| scale | number \| [Resource](../arkts-apis/arkts-arkui-resource-t.md) | Yes | Minimum font scale factor for text.Value range: [0, 1]   **NOTE：**Values less than 0 are treated as 0, and values greater than 1 are treated as 1. Other invalid values do not take effect by default. |
 
 ## minFontSize
 
@@ -1165,7 +1165,7 @@ Since API version 18, adaptive font sizing is supported on child components and 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number \| string \| Resource | Yes | Minimum font size.Unit: fp |
+| value | number \| string \| [Resource](../arkts-apis/arkts-arkui-resource-t.md) | Yes | Minimum font size.Unit: fp |
 
 ## minLineHeight
 
@@ -1227,7 +1227,7 @@ If constraintSize is set for the text, the component height is confined within t
 onCopy(callback: (value: string) => void)
 ```
 
-Called when data is copied to the pasteboard, which is displayed when the text box is number pressed. Currently, only text can be copied.
+Called when data is copied to the pasteboard, which is displayed when the text box is long pressed. Currently, only text can be copied.
 
 **Since:** 11
 
@@ -1572,7 +1572,7 @@ When **textAlign** is set to **TextAlign.JUSTIFY**, the [wordBreak](#wordbreak) 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | TextAlign | Yes | Horizontal alignment of the text.Default value: **TextAlign.Start**Default value on wearable devices: **TextAlign.Center |
+| value | [TextAlign](../arkts-apis/arkts-arkui-textalign-e.md) | Yes | Horizontal alignment of the text.Default value: **TextAlign.Start**Default value on wearable devices: **TextAlign.Center |
 
 ## textCase
 
@@ -1640,7 +1640,7 @@ Specifies the text layout direction. If this attribute is not set, the default t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| direction | TextDirection \| undefined | Yes | Text layout direction.If this parameter is set to **undefined**, the text layout direction follows the component layout direction as defined by **TextDirection.DEFAULT**. |
+| direction | [TextDirection](../arkts-apis/arkts-arkui-textdirection-e.md) \| undefined | Yes | Text layout direction.If this parameter is set to **undefined**, the text layout direction follows the component layout direction as defined by **TextDirection.DEFAULT**. |
 
 ## textIndent
 
@@ -1707,7 +1707,7 @@ images are allowed to scroll within a single line.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [TextOverflowOptions](arkts-arkui-textoverflowoptions-i.md) | Yes | Display mode when the text is too number.<br>**Since:** 18 |
+| options | [TextOverflowOptions](arkts-arkui-textoverflowoptions-i.md) | Yes | Display mode when the text is too long.<br>**Since:** 18 |
 
 ## textSelectable
 
@@ -1793,7 +1793,7 @@ Sets the vertical alignment of the text.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| textVerticalAlign | [Optional](arkts-arkui-optional-t.md)&lt;TextVerticalAlign&gt; | Yes | Vertical alignment of the text.Default value: **TextVerticalAlign.BASELINE |
+| textVerticalAlign | [Optional](arkts-arkui-optional-t.md)&lt;[TextVerticalAlign](../arkts-apis/arkts-arkui-textverticalalign-e.md)&gt; | Yes | Vertical alignment of the text.Default value: **TextVerticalAlign.BASELINE |
 
 ## wordBreak
 
@@ -1819,4 +1819,4 @@ To break text by character, with the excess part displayed as an ellipsis (...),
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | WordBreak | Yes | Word break rule.Default value: **WordBreak.BREAK_WORD |
+| value | [WordBreak](../arkts-apis/arkts-arkui-wordbreak-e.md) | Yes | Word break rule.Default value: **WordBreak.BREAK_WORD |

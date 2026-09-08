@@ -72,7 +72,7 @@ userInfo?: UserInfo
 
 User information
 
-**Type:** UserInfo
+**Type:** [UserInfo](arkts-avsession-avmusictemplate-userinfo-i.md)
 
 **Since:** 23
 

@@ -26,7 +26,7 @@ Obtain connection information about the Wi-Fi connection. If does't have the per
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;WifiLinkedInfo&gt; | Returns Wi-Fi linked information. |
+| Promise&lt;[WifiLinkedInfo](arkts-connectivity-wifimanager-wifilinkedinfo-i.md)&gt; | Returns Wi-Fi linked information. |
 
 **Error codes:**
 
@@ -68,7 +68,7 @@ Obtain connection information about the Wi-Fi connection.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;WifiLinkedInfo&gt; | Yes | Indicates callback of function. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[WifiLinkedInfo](arkts-connectivity-wifimanager-wifilinkedinfo-i.md)&gt; | Yes | Indicates callback of function. |
 
 **Error codes:**
 

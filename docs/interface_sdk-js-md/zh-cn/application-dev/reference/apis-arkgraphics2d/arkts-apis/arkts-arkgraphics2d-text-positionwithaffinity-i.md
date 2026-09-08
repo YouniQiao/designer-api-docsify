@@ -20,7 +20,7 @@ affinity: Affinity
 
 位置亲和度。
 
-**类型：** Affinity
+**类型：** [Affinity](arkts-arkgraphics2d-text-affinity-e.md)
 
 **起始版本：** 12
 

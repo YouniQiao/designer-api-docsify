@@ -28,7 +28,7 @@ geofence: Geofence
 
 用于接收地理围栏事件上报（进出围栏）。
 
-**类型：** Geofence
+**类型：** [Geofence](arkts-location-geolocation-geofence-i.md)
 
 **起始版本：** 8
 
@@ -46,7 +46,7 @@ priority: LocationRequestPriority
 
 设置事件类型。type为“fenceStatusChange”，表示订阅围栏事件上报。
 
-**类型：** LocationRequestPriority
+**类型：** [LocationRequestPriority](arkts-location-geolocation-locationrequestpriority-e.md)
 
 **起始版本：** 8
 
@@ -64,7 +64,7 @@ scenario: LocationRequestScenario
 
 围栏的配置参数。
 
-**类型：** LocationRequestScenario
+**类型：** [LocationRequestScenario](arkts-location-geolocation-locationrequestscenario-e.md)
 
 **起始版本：** 8
 

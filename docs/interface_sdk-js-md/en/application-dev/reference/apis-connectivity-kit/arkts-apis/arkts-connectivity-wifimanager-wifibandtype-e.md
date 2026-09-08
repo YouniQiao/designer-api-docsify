@@ -1,6 +1,6 @@
 # WifiBandType
 
-Wi-Fi band type. @enum { number }
+Wi-Fi band type. @enum { int }
 
 **Since:** 10
 

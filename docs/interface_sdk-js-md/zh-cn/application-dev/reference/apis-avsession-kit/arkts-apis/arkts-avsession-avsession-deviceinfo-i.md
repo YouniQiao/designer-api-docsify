@@ -84,7 +84,7 @@ deviceType: DeviceType
 
 播放设备的类型。
 
-**类型：** DeviceType
+**类型：** [DeviceType](arkts-avsession-avsession-devicetype-e.md)
 
 **起始版本：** 10
 

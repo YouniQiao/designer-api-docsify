@@ -1251,6 +1251,8 @@
   <!--Del-->
   - [getDefaultApplication(系统接口)](arkts-ability-defaultappmanager-getdefaultapplication-f-sys.md)<!--DelEnd-->
   <!--Del-->
+  - [getDefaultApplicationCandidates(系统接口)](arkts-ability-defaultappmanager-getdefaultapplicationcandidates-f-sys.md)<!--DelEnd-->
+  <!--Del-->
   - [getDefaultApplicationSync(系统接口)](arkts-ability-defaultappmanager-getdefaultapplicationsync-f-sys.md)<!--DelEnd-->
   - [isDefaultApplication](arkts-ability-defaultappmanager-isdefaultapplication-f.md)
   - [isDefaultApplicationSync](arkts-ability-defaultappmanager-isdefaultapplicationsync-f.md)

@@ -32,7 +32,7 @@ Obtains the **PermissionDef** struct based on the given permission name. This AP
 
 | Type | Description |
 | --- | --- |
-| PermissionDef | PermissionDef object. |
+| [PermissionDef](arkts-ability-bundlemanager-permissiondef-t-sys.md) | PermissionDef object. |
 
 **Error codes:**
 

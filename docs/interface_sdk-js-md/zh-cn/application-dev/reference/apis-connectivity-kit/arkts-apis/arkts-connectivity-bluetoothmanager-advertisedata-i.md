@@ -26,7 +26,7 @@ manufactureData: Array<ManufactureData>
 
 表示要广播的广播的制造商信息列表。
 
-**类型：** Array&lt;ManufactureData&gt;
+**类型：** Array&lt;[ManufactureData](arkts-connectivity-bluetoothmanager-manufacturedata-i.md)&gt;
 
 **起始版本：** 9
 
@@ -44,7 +44,7 @@ serviceData: Array<ServiceData>
 
 表示要广播的服务数据列表。
 
-**类型：** Array&lt;ServiceData&gt;
+**类型：** Array&lt;[ServiceData](arkts-connectivity-bluetoothmanager-servicedata-i.md)&gt;
 
 **起始版本：** 9
 

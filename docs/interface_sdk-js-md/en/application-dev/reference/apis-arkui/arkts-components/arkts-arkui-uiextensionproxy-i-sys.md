@@ -34,7 +34,7 @@ Unsubscribes from asynchronous registration of the started UIExtensionAbility th
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'asyncReceiverRegister' | Yes | Event type. The value is fixed at **'asyncReceiverRegister'**. |
-| callback | Callback&lt;[UIExtensionProxy](arkts-arkui-uiextensionproxy-i-sys.md)&gt; | No | Callback. If this parameter is left empty, it means unsubscribing from all callbacks triggered after UIExtensionAbility's asynchronous registration.If this parameter is not empty, it means unsubscribing from callbacks corresponding to **type**.<br>**Since:** 18 |
+| callback | [Callback](arkts-arkui-callback-i.md)&lt;[UIExtensionProxy](arkts-arkui-uiextensionproxy-i-sys.md)&gt; | No | Callback. If this parameter is left empty, it means unsubscribing from all callbacks triggered after UIExtensionAbility's asynchronous registration.If this parameter is not empty, it means unsubscribing from callbacks corresponding to **type**.<br>**Since:** 18 |
 
 ## off('syncReceiverRegister')
 
@@ -57,7 +57,7 @@ Unsubscribes from synchronous registration of the started UIExtensionAbility thr
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'syncReceiverRegister' | Yes | Event type. The value is fixed at **'syncReceiverRegister'**. |
-| callback | Callback&lt;[UIExtensionProxy](arkts-arkui-uiextensionproxy-i-sys.md)&gt; | No | Callback. If this parameter is left empty, it means unsubscribing from all callbacks triggered after UIExtensionAbility's synchronous registration.If this parameter is not empty, it means unsubscribing from callbacks corresponding to **type**.<br>**Since:** 18 |
+| callback | [Callback](arkts-arkui-callback-i.md)&lt;[UIExtensionProxy](arkts-arkui-uiextensionproxy-i-sys.md)&gt; | No | Callback. If this parameter is left empty, it means unsubscribing from all callbacks triggered after UIExtensionAbility's synchronous registration.If this parameter is not empty, it means unsubscribing from callbacks corresponding to **type**.<br>**Since:** 18 |
 
 ## on('asyncReceiverRegister')
 
@@ -80,7 +80,7 @@ Subscribes to asynchronous registration of the started UIExtensionAbility throug
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'asyncReceiverRegister' | Yes | Event type. The value is fixed at **'asyncReceiverRegister'**. |
-| callback | Callback&lt;[UIExtensionProxy](arkts-arkui-uiextensionproxy-i-sys.md)&gt; | Yes | Callback. It is triggered after UIExtensionAbility registers the **setReceiveDataCallback** method.<br>**Since:** 18 |
+| callback | [Callback](arkts-arkui-callback-i.md)&lt;[UIExtensionProxy](arkts-arkui-uiextensionproxy-i-sys.md)&gt; | Yes | Callback. It is triggered after UIExtensionAbility registers the **setReceiveDataCallback** method.<br>**Since:** 18 |
 
 ## on('syncReceiverRegister')
 
@@ -103,7 +103,7 @@ Subscribes to synchronous registration of the started UIExtensionAbility through
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'syncReceiverRegister' | Yes | Event type. The value is fixed at **'syncReceiverRegister'**. |
-| callback | Callback&lt;[UIExtensionProxy](arkts-arkui-uiextensionproxy-i-sys.md)&gt; | Yes | Callback. It is triggered after the UIExtensionAbility registers **setReceiveDataForResultCallback**.<br>**Since:** 18 |
+| callback | [Callback](arkts-arkui-callback-i.md)&lt;[UIExtensionProxy](arkts-arkui-uiextensionproxy-i-sys.md)&gt; | Yes | Callback. It is triggered after the UIExtensionAbility registers **setReceiveDataForResultCallback**.<br>**Since:** 18 |
 
 ## send
 

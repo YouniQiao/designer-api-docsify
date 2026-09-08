@@ -26,7 +26,7 @@ Decomposes an HDR Pixelmap object to a Picture object which contains an SDR Pixe
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| hdrPixelMap | PixelMap | Yes | An HDR PixelMap, whose PixelMapFormat should be RGBA_F16\RGBA_1010102\YCBCR_P010\YCRCB_P010. |
+| hdrPixelMap | [PixelMap](arkts-image-image-pixelmap-i.md) | Yes | An HDR PixelMap, whose PixelMapFormat should be RGBA_F16\RGBA_1010102\YCBCR_P010\YCRCB_P010. |
 | options | [HdrDecomposeOptions](arkts-image-image-hdrdecomposeoptions-i-sys.md) | No | The HDR decomposition configurations. |
 
 **Return value:**

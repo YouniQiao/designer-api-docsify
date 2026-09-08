@@ -195,7 +195,7 @@ Sets the background blur style of the pop-up window. If this API is not used, th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;BlurStyle&gt; | Yes | Background blur style of the pop-up window. |
+| style | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[BlurStyle](../arkts-components/arkts-arkui-blurstyle-e.md)&gt; | Yes | Background blur style of the pop-up window. |
 
 **Return value:**
 

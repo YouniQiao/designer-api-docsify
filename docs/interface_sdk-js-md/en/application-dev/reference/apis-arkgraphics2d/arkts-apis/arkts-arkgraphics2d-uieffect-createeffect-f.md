@@ -24,7 +24,7 @@ Creates a VisualEffect instance for adding multiple VisualEffect effects to a co
 
 | Type | Description |
 | --- | --- |
-| VisualEffect | Returns a VisualEffect instance, which supports adding multiple VisualEffect effects. |
+| [VisualEffect](arkts-arkgraphics2d-uieffect-visualeffect-i-sys.md) | Returns a VisualEffect instance, which supports adding multiple VisualEffect effects. |
 
 **Examples**
 

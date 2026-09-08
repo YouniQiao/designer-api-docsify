@@ -44,7 +44,7 @@ server端添加服务。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| service | GattService | 是 | 服务端的service数据。BLE广播的相关参数 |
+| service | [GattService](arkts-connectivity-bluetoothmanager-gattservice-i.md) | 是 | 服务端的service数据。BLE广播的相关参数 |
 
 **错误码：**
 
@@ -137,16 +137,6 @@ try {
 }
 ```
 
-```TypeScript
-import { BusinessError } from '@ohos.base';
-try {
-    let device = bluetoothManager.BLE.createGattClientDevice('XX:XX:XX:XX:XX:XX');
-    device.close();
-} catch (err) {
-    console.error("errCode:" + (err as BusinessError).code + ",errMessage:" + (err as BusinessError).message);
-}
-```
-
 ## notifyCharacteristicChanged
 
 ```TypeScript
@@ -174,7 +164,7 @@ server端特征值发生变化时，主动通知已连接的client设备。
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | deviceId | string | 是 | 接收通知的client端设备地址，例如“XX:XX:XX:XX:XX:XX”。 |
-| notifyCharacteristic | NotifyCharacteristic | 是 | 通知的特征值数据。 |
+| notifyCharacteristic | [NotifyCharacteristic](arkts-connectivity-bluetoothmanager-notifycharacteristic-i.md) | 是 | 通知的特征值数据。 |
 
 **错误码：**
 
@@ -240,7 +230,7 @@ server端取消订阅特征值读请求事件。
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'characteristicRead' | 是 | 填写"characteristicRead"字符串，表示特征值读请求事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;CharacteristicReadRequest&gt; | 否 | 表示取消订阅特征值读请求事件上报。不填该参数则取消订阅该type对应的所有回调。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CharacteristicReadRequest](arkts-connectivity-bluetoothmanager-characteristicreadrequest-i.md)&gt; | 否 | 表示取消订阅特征值读请求事件上报。不填该参数则取消订阅该type对应的所有回调。 |
 
 **错误码：**
 
@@ -289,7 +279,7 @@ server端取消订阅特征值写请求事件。
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'characteristicWrite' | 是 | 填写"characteristicWrite"字符串，表示特征值写请求事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;CharacteristicWriteRequest&gt; | 否 | 表示取消订阅特征值写请求事件上报。不填该参数则取消订阅该type对应的所有回调。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CharacteristicWriteRequest](arkts-connectivity-bluetoothmanager-characteristicwriterequest-i.md)&gt; | 否 | 表示取消订阅特征值写请求事件上报。不填该参数则取消订阅该type对应的所有回调。 |
 
 **错误码：**
 
@@ -338,7 +328,7 @@ server端取消订阅描述符读请求事件。
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'descriptorRead' | 是 | 填写"descriptorRead"字符串，表示描述符读请求事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DescriptorReadRequest&gt; | 否 | 表示取消订阅描述符读请求事件上报。不填该参数则取消订阅该type对应的所有回调。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DescriptorReadRequest](arkts-connectivity-bluetoothmanager-descriptorreadrequest-i.md)&gt; | 否 | 表示取消订阅描述符读请求事件上报。不填该参数则取消订阅该type对应的所有回调。 |
 
 **错误码：**
 
@@ -387,7 +377,7 @@ server端取消订阅描述符写请求事件。
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'descriptorWrite' | 是 | 填写"descriptorWrite"字符串，表示描述符写请求事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DescriptorWriteRequest&gt; | 否 | 表示取消订阅描述符写请求事件上报。不填该参数则取消订阅该type对应的所有回调。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DescriptorWriteRequest](arkts-connectivity-bluetoothmanager-descriptorwriterequest-i.md)&gt; | 否 | 表示取消订阅描述符写请求事件上报。不填该参数则取消订阅该type对应的所有回调。 |
 
 **错误码：**
 
@@ -436,7 +426,7 @@ server端取消订阅BLE连接状态变化事件。
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'connectStateChange' | 是 | 填写"connectStateChange"字符串，表示BLE连接状态变化事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;BLEConnectChangedState&gt; | 否 | 表示取消订阅BLE连接状态变化事件。不填该参数则取消订阅该type对应的所有回调。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[BLEConnectChangedState](arkts-connectivity-bluetoothmanager-bleconnectchangedstate-i.md)&gt; | 否 | 表示取消订阅BLE连接状态变化事件。不填该参数则取消订阅该type对应的所有回调。 |
 
 **错误码：**
 
@@ -485,7 +475,7 @@ server端订阅特征值读请求事件。
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'characteristicRead' | 是 | 填写"characteristicRead"字符串，表示特征值读请求事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;CharacteristicReadRequest&gt; | 是 | 表示回调函数的入参，client端发送的读请求数据。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CharacteristicReadRequest](arkts-connectivity-bluetoothmanager-characteristicreadrequest-i.md)&gt; | 是 | 表示回调函数的入参，client端发送的读请求数据。 |
 
 **错误码：**
 
@@ -548,7 +538,7 @@ server端订阅特征值写请求事件。
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'characteristicWrite' | 是 | 填写"characteristicWrite"字符串，表示特征值写请求事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;CharacteristicWriteRequest&gt; | 是 | 表示回调函数的入参，client端发送的写请求数据。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CharacteristicWriteRequest](arkts-connectivity-bluetoothmanager-characteristicwriterequest-i.md)&gt; | 是 | 表示回调函数的入参，client端发送的写请求数据。 |
 
 **错误码：**
 
@@ -614,7 +604,7 @@ server端订阅描述符读请求事件。
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'descriptorRead' | 是 | 填写"descriptorRead"字符串，表示描述符读请求事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DescriptorReadRequest&gt; | 是 | 表示回调函数的入参，client端发送的读请求数据。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DescriptorReadRequest](arkts-connectivity-bluetoothmanager-descriptorreadrequest-i.md)&gt; | 是 | 表示回调函数的入参，client端发送的读请求数据。 |
 
 **错误码：**
 
@@ -677,7 +667,7 @@ server端订阅描述符写请求事件。
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'descriptorWrite' | 是 | 填写"descriptorWrite"字符串，表示描述符写请求事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DescriptorWriteRequest&gt; | 是 | 表示回调函数的入参，client端发送的写请求数据。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DescriptorWriteRequest](arkts-connectivity-bluetoothmanager-descriptorwriterequest-i.md)&gt; | 是 | 表示回调函数的入参，client端发送的写请求数据。 |
 
 **错误码：**
 
@@ -743,7 +733,7 @@ server端订阅BLE连接状态变化事件。
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'connectStateChange' | 是 | 填写"connectStateChange"字符串，表示BLE连接状态变化事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;BLEConnectChangedState&gt; | 是 | 表示回调函数的入参，连接状态。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[BLEConnectChangedState](arkts-connectivity-bluetoothmanager-bleconnectchangedstate-i.md)&gt; | 是 | 表示回调函数的入参，连接状态。 |
 
 **错误码：**
 
@@ -847,7 +837,7 @@ server端回复client端的读写请求。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| serverResponse | ServerResponse | 是 | server端回复的响应数据。 |
+| serverResponse | [ServerResponse](arkts-connectivity-bluetoothmanager-serverresponse-i.md) | 是 | server端回复的响应数据。 |
 
 **错误码：**
 
@@ -910,9 +900,9 @@ startAdvertising(setting: AdvertiseSetting, advData: AdvertiseData, advResponse?
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| setting | AdvertiseSetting | 是 | 广播的发送参数。 |
-| advData | AdvertiseData | 是 | 需要发送的广播报文数据内容。 |
-| advResponse | AdvertiseData | 否 | 回复扫描请求的广播报文数据内容。 |
+| setting | [AdvertiseSetting](arkts-connectivity-bluetoothmanager-advertisesetting-i.md) | 是 | 广播的发送参数。 |
+| advData | [AdvertiseData](arkts-connectivity-bluetoothmanager-advertisedata-i.md) | 是 | 需要发送的广播报文数据内容。 |
+| advResponse | [AdvertiseData](arkts-connectivity-bluetoothmanager-advertisedata-i.md) | 否 | 回复扫描请求的广播报文数据内容。 |
 
 **错误码：**
 

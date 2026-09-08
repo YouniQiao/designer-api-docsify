@@ -30,7 +30,7 @@ Obtains the Bluetooth status of a device. On API 10 and above, the permission re
 
 | Type | Description |
 | --- | --- |
-| BluetoothState | Returns the Bluetooth status, which can be { |
+| [BluetoothState](arkts-connectivity-bluetoothmanager-bluetoothstate-e.md) | Returns the Bluetooth status, which can be { |
 
 **Error codes:**
 

@@ -39,7 +39,7 @@ font?: Font
 
 Text style.
 
-**类型：** Font
+**类型：** [Font](../arkts-apis/arkts-arkui-font-i.md)
 
 **起始版本：** 11
 

@@ -24,7 +24,7 @@ Get all active fences.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Map&lt;number, Geofence&gt;&gt; | The promise returned by the function. The key of the map represents the fence ID. The value of the map represents the detailed information of the fence. |
+| Promise&lt;Map&lt;number, [Geofence](arkts-location-geolocationmanager-geofence-i.md)&gt;&gt; | The promise returned by the function. The key of the map represents the fence ID. The value of the map represents the detailed information of the fence. |
 
 **Error codes:**
 

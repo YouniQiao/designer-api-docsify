@@ -20,7 +20,7 @@ requestKeyboardReason?: RequestKeyboardReason
 
 Reason for requesting the keyboard.
 
-**Type:** RequestKeyboardReason
+**Type:** [RequestKeyboardReason](arkts-ime-inputmethod-requestkeyboardreason-e.md)
 
 **Default:** RequestKeyboardReason.NONE
 

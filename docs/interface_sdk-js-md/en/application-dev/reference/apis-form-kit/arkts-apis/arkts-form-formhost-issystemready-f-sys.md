@@ -33,23 +33,6 @@ Checks whether the system is ready. This API uses an asynchronous callback to re
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not a system application. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 
-**Examples**
-
-```TypeScript
-import { formHost } from '@kit.FormKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  formHost.isSystemReady((error: BusinessError) => {
-    if (error) {
-      console.error(`error, code: ${error.code}, message: ${error.message}`);
-    }
-  });
-} catch (error) {
-  console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
-}
-```
-
 
 ## isSystemReady
 
@@ -76,20 +59,3 @@ Checks whether the system is ready. This API uses a promise to return the result
 | Error Code ID | Error Message |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not a system application. |
-
-**Examples**
-
-```TypeScript
-import { formHost } from '@kit.FormKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  formHost.isSystemReady().then(() => {
-    console.info('formHost isSystemReady success');
-  }).catch((error: BusinessError) => {
-    console.error(`error, code: ${error.code}, message: ${error.message}`);
-  });
-} catch (error) {
-  console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
-}
-```

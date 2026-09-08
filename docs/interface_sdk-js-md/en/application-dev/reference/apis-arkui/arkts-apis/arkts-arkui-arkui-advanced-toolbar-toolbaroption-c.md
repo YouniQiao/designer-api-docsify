@@ -172,7 +172,7 @@ If this parameter is not set or is set to **undefined**, the icon is not display
 
 If **toolBarSymbolOptions** has input parameters, **icon** is ineffective.
 
-**Type:** Resource
+**Type:** [Resource](arkts-arkui-resource-t.md)
 
 **Since:** 10
 

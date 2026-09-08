@@ -22,7 +22,7 @@ eventType: EventType
 
 Indicates the system event type related to the screenlock management service.
 
-**Type:** EventType
+**Type:** [EventType](arkts-basicservices-screenlock-eventtype-t-sys.md)
 
 **Since:** 9
 

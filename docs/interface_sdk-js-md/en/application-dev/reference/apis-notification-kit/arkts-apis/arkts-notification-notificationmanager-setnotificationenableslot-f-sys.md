@@ -33,8 +33,8 @@ This API can be properly called on devices other than wearables. If it is called
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundle | BundleOption | Yes | Bundle information of the application. |
-| type | SlotType | Yes | Notification slot type. |
+| bundle | [BundleOption](arkts-notification-notificationmanager-bundleoption-t.md) | Yes | Bundle information of the application. |
+| type | [SlotType](arkts-notification-notificationmanager-slottype-e.md) | Yes | Notification slot type. |
 | enable | boolean | Yes | Whether to enable the notification slot type. The value **true** means to enable the notification slot type, and **false** means the opposite. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
@@ -101,8 +101,8 @@ This API can be properly called on devices other than wearables. If it is called
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundle | BundleOption | Yes | Bundle information of the application. |
-| type | SlotType | Yes | Notification slot type. |
+| bundle | [BundleOption](arkts-notification-notificationmanager-bundleoption-t.md) | Yes | Bundle information of the application. |
+| type | [SlotType](arkts-notification-notificationmanager-slottype-e.md) | Yes | Notification slot type. |
 | enable | boolean | Yes | Whether to enable the notification slot type. The value **true** means to enable the notification slot type, and **false** means the opposite. |
 | isForceControl | boolean | Yes | Whether the slot is affected by the notification authorization. The value **true** means the slot is affected, and **false** means the opposite. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
@@ -197,8 +197,8 @@ This API can be properly called on devices other than wearables. If it is called
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundle | BundleOption | Yes | Bundle information of the application. |
-| type | SlotType | Yes | Notification slot type. |
+| bundle | [BundleOption](arkts-notification-notificationmanager-bundleoption-t.md) | Yes | Bundle information of the application. |
+| type | [SlotType](arkts-notification-notificationmanager-slottype-e.md) | Yes | Notification slot type. |
 | enable | boolean | Yes | Whether to enable the notification slot type. The value **true** means to enable the notification slot type, and **false** means the opposite. |
 | isForceControl | boolean | No | Whether the enabled status of the notification slot is subject to the enabled status of notification. The value **false** means that the enabled status of the notification slot is subject to the enabled status of notification, and **true** means the opposite. Default value: **false<br>**Since:** 11 |
 

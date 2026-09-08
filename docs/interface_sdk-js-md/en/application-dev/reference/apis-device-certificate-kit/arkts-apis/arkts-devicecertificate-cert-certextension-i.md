@@ -147,28 +147,6 @@ cert.createCertExtension(encodingBlob, (error, certExt) => {
 });
 ```
 
-```TypeScript
-import { cert } from '@kit.DeviceCertificateKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let nameStr = '/CN=Example CA/OU=test cert/O=test/L=XA/ST=SX/C=CN/CN=RSA CA/CN=XTS';
-async function getEncoded() {
-  try {
-    cert.createX500DistinguishedName(nameStr)
-      .then((data) => {
-        console.info('createX500DistinguishedName result: success.');
-        let encodingBlobData = data.getEncoded();
-      })
-      .catch((err: BusinessError) => {
-        console.error(`createX500DistinguishedName failed, errCode: ${err.code}, errMsg: ${err.message}`);
-      })
-  } catch (error) {
-    let e: BusinessError = error as BusinessError;
-    console.error(`createX500DistinguishedName failed, errCode: ${e.code}, errMsg: ${e.message}`);
-  }
-}
-```
-
 ## getEntry
 
 ```TypeScript
@@ -188,13 +166,13 @@ Obtains the value of a specific certificate extension entry by OID.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | valueType | [ExtensionEntryType](arkts-devicecertificate-cert-extensionentrytype-e.md) | Yes | Type of the information to obtain. |
-| oid | DataBlob | Yes | OID of the certificate extension to obtain. |
+| oid | [DataBlob](arkts-devicecertificate-cert-datablob-i.md) | Yes | OID of the certificate extension to obtain. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| DataBlob | Certificate extension object information obtained. |
+| [DataBlob](arkts-devicecertificate-cert-datablob-i.md) | Certificate extension object information obtained. |
 
 **Error codes:**
 

@@ -25,13 +25,13 @@ Execute an action sequence.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | mechId | number | Yes | ID of the mechanical device. The value should be an integer. |
-| actionType | ActionType | Yes | Type of action sequence. |
+| actionType | [ActionType](arkts-mechanic-mechanicmanager-actiontype-e-sys.md) | Yes | Type of action sequence. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Result&gt; | Promise that returns the execution result. |
+| Promise&lt;[Result](arkts-mechanic-mechanicmanager-result-e-sys.md)&gt; | Promise that returns the execution result. |
 
 **Error codes:**
 

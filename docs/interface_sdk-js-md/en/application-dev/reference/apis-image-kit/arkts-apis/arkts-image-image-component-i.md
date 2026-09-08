@@ -34,7 +34,7 @@ readonly componentType: ComponentType
 
 Color component type.
 
-**Type:** ComponentType
+**Type:** [ComponentType](arkts-image-image-componenttype-e.md)
 
 **Since:** 9
 

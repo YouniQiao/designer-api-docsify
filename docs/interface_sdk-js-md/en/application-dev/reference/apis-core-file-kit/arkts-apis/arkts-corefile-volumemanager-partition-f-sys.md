@@ -41,17 +41,6 @@ Partitions a disk. This API uses an asynchronous callback to return the result. 
 | 13600008 | No such object. |
 | 13900042 | Unknown error. |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-let diskId: string = "";
-let type: number = 0;
-volumeManager.partition(diskId, type, (error: BusinessError) => {
-  // Do something.   
-});
-```
-
 
 ## partition
 
@@ -92,16 +81,3 @@ Partitions a disk. This API uses a promise to return the result. The system supp
 | 13600001 | IPC error. |
 | 13600008 | No such object. |
 | 13900042 | Unknown error. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-let diskId: string = "";
-let type: number = 0;
-volumeManager.partition(diskId, type).then(() => {
-  console.info("partition successfully");
-}).catch((error: BusinessError) => {
-  console.error("partition failed with error:" + JSON.stringify(error));
-});
-```

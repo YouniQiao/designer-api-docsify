@@ -40,7 +40,7 @@ capability: Capability
 
 Indicates specific capability.
 
-**Type:** Capability
+**Type:** [Capability](arkts-multimodalawareness-carawareness-capability-e.md)
 
 **Since:** 26.1.0
 

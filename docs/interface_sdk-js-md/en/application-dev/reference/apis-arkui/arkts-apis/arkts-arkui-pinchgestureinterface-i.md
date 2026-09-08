@@ -118,7 +118,7 @@ Triggered when a touch cancellation event occurs after successful pinch gesture 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | Callback&lt;[GestureEvent](arkts-arkui-gestureevent-i.md)&gt; | Yes | Callback for the pinch event. |
+| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;[GestureEvent](arkts-arkui-gestureevent-i.md)&gt; | Yes | Callback for the pinch event. |
 
 **Return value:**
 

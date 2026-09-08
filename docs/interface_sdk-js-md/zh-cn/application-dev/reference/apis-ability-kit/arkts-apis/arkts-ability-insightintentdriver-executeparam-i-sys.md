@@ -94,7 +94,7 @@ executeMode: insightIntent.ExecuteMode
 
 意图调用执行模式。 如果通过[@InsightIntentLink](../../../reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintentlink)装饰器定义的意图来实现应用跳转，此字段需填写（可填任意符合定义的值），但实际不会生效。
 
-**类型：** insightIntent.ExecuteMode
+**类型：** [insightIntent.ExecuteMode](arkts-ability-insightintent-executemode-e.md)
 
 **起始版本：** 11
 

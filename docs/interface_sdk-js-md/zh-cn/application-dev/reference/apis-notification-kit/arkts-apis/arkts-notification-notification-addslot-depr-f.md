@@ -28,22 +28,6 @@ function addSlot(type: SlotType, callback: AsyncCallback<void>): void
 | type | SlotType | 是 | 要创建的通知通道的类型。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 表示被指定的回调方法。 |
 
-**示例**
-
-```TypeScript
-import Base from '@ohos.base';
-
-// addslot回调
-let addSlotCallBack = (err: Base.BusinessError) => {
-  if (err) {
-    console.error("addSlot failed " + JSON.stringify(err));
-  } else {
-    console.info("addSlot success");
-  }
-}
-Notification.addSlot(Notification.SlotType.SOCIAL_COMMUNICATION, addSlotCallBack);
-```
-
 
 ## addSlot
 
@@ -72,15 +56,3 @@ function addSlot(type: SlotType): Promise<void>
 | 类型 | 说明 |
 | --- | --- |
 | Promise&lt;void&gt; | 无返回结果的Promise对象。 |
-
-**示例**
-
-```TypeScript
-import Base from '@ohos.base';
-
-Notification.addSlot(Notification.SlotType.SOCIAL_COMMUNICATION).then(() => {
-  console.info("addSlot success");
-}).catch((err: Base.BusinessError) => {
-  console.error(`addSlot failed, code is ${err}`);
-});
-```

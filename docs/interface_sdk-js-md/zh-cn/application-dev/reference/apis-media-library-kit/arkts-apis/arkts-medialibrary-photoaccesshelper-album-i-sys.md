@@ -42,7 +42,7 @@ deleteAssets(assets: Array<PhotoAsset>, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| assets | Array&lt;PhotoAsset&gt; | 是 | 回收站中待彻底删除图片或者视频数组。 |
+| assets | Array&lt;[PhotoAsset](arkts-medialibrary-photoaccesshelper-photoasset-i.md)&gt; | 是 | 回收站中待彻底删除图片或者视频数组。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | callback返回void。 |
 
 **错误码：**
@@ -115,7 +115,7 @@ deleteAssets(assets: Array<PhotoAsset>): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| assets | Array&lt;PhotoAsset&gt; | 是 | 回收站中待彻底删除图片或者视频数组。 |
+| assets | Array&lt;[PhotoAsset](arkts-medialibrary-photoaccesshelper-photoasset-i.md)&gt; | 是 | 回收站中待彻底删除图片或者视频数组。 |
 
 **返回值：**
 
@@ -371,7 +371,7 @@ getSelectedAssets(optionCheck: FetchOptions, filter?: string): Promise<FetchResu
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;FetchResult&lt;PhotoAsset&gt;&gt; | Promise对象，返回获取的图片结果。 |
+| Promise&lt;[FetchResult](arkts-medialibrary-photoaccesshelper-fetchresult-i.md)&lt;[PhotoAsset](arkts-medialibrary-photoaccesshelper-photoasset-i.md)&gt;&gt; | Promise对象，返回获取的图片结果。 |
 
 **错误码：**
 
@@ -464,7 +464,7 @@ recoverAssets(assets: Array<PhotoAsset>, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| assets | Array&lt;PhotoAsset&gt; | 是 | 回收站中待恢复图片或者视频数组。 |
+| assets | Array&lt;[PhotoAsset](arkts-medialibrary-photoaccesshelper-photoasset-i.md)&gt; | 是 | 回收站中待恢复图片或者视频数组。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | callback返回void。 |
 
 **错误码：**
@@ -533,7 +533,7 @@ recoverAssets(assets: Array<PhotoAsset>): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| assets | Array&lt;PhotoAsset&gt; | 是 | 回收站中待恢复图片或者视频数组。 |
+| assets | Array&lt;[PhotoAsset](arkts-medialibrary-photoaccesshelper-photoasset-i.md)&gt; | 是 | 回收站中待恢复图片或者视频数组。 |
 
 **返回值：**
 
@@ -721,41 +721,6 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
     });
   } catch (err) {
     console.error(`setCoverUriDemoCallback failed with error: ${err.code}, ${err.message}`);
-  }
-}
-```
-
-phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  console.info('setCoverUriDemo');
-  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-  let fetchOptions: photoAccessHelper.FetchOptions = {
-    fetchColumns: [],
-    predicates: predicates
-  };
-  try {
-    let albumFetchResult: photoAccessHelper.FetchResult<photoAccessHelper.Album> = await phAccessHelper.getAlbums(photoAccessHelper.AlbumType.USER, photoAccessHelper.AlbumSubtype.USER_GENERIC);
-    let album: photoAccessHelper.Album = await albumFetchResult.getFirstObject();
-    if (album === undefined) {
-      console.error('getHiddenAlbumsViewCallback albums is undefined');
-      return;
-    }
-    let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> = await album.getAssets(fetchOptions);
-    let asset: photoAccessHelper.PhotoAsset = await fetchResult.getFirstObject();
-    if (asset === undefined) {
-      console.error('asset is undefined');
-      return;
-    }
-    let albumChangeRequest: photoAccessHelper.MediaAlbumChangeRequest = new photoAccessHelper.MediaAlbumChangeRequest(album);
-    albumChangeRequest.setCoverUri(asset.uri);
-    await phAccessHelper.applyChanges(albumChangeRequest);
-    console.info('setCoverUri successfully');
-  } catch (err) {
-    console.error(`setCoverUriDemo failed with error: ${err.code}, ${err.message}`);
   }
 }
 ```

@@ -42,7 +42,7 @@ netType: NetBearType
 
 网络类型。
 
-**类型：** NetBearType
+**类型：** [NetBearType](arkts-network-policy-netbeartype-t.md)
 
 **起始版本：** 10
 

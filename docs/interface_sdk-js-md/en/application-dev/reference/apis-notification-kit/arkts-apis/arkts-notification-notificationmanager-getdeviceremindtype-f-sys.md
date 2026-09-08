@@ -28,7 +28,7 @@ Obtains the notification reminder type. This API uses an asynchronous callback t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DeviceRemindType&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[DeviceRemindType](arkts-notification-notificationmanager-deviceremindtype-e-sys.md)&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -80,7 +80,7 @@ Obtains the notification reminder type. This API uses a promise to return the re
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;DeviceRemindType&gt; | Promise used to return the result. |
+| Promise&lt;[DeviceRemindType](arkts-notification-notificationmanager-deviceremindtype-e-sys.md)&gt; | Promise used to return the result. |
 
 **Error codes:**
 

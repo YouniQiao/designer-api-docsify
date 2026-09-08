@@ -59,40 +59,6 @@ For details about how to create a userFileManager instance, see the example in u
 import { dataSharePredicates } from '@kit.ArkData';
 
 async function example(mgr: userFileManager.UserFileManager) {
-  console.info('deleteAssetDemo');
-  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-  let fetchOptions: userFileManager.FetchOptions = {
-    fetchColumns: [],
-    predicates: predicates
-  };
-  try {
-    const fetchResult: userFileManager.FetchResult<userFileManager.FileAsset> = await mgr.getPhotoAssets(fetchOptions);
-    let asset: userFileManager.FileAsset = await fetchResult.getFirstObject();
-
-
-    if (asset == undefined) {
-      console.error('asset not exist');
-      return;
-    }
-    mgr.delete(asset.uri, (err) => {
-      if (err == undefined) {
-        console.info('delete successfully');
-      } else {
-        console.error('delete failed with error: ' + err);
-      }
-    });
-  } catch (err) {
-    console.error('fetch failed, message =', err);
-  }
-}
-```
-
-For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-
-async function example(mgr: userFileManager.UserFileManager) {
   console.info('privateAlbumDeleteCallback');
   let albumList: userFileManager.FetchResult<userFileManager.PrivateAlbum> = await mgr.getPrivateAlbum(userFileManager.PrivateAlbumType.TYPE_TRASH);
   let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
@@ -149,33 +115,6 @@ This API will be deprecated. Use [Album.deletePhotoAssets](arkts-corefile-userfi
 | Promise&lt;void&gt; | Promise that returns no value. |
 
 **Examples**
-
-For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-
-async function example(mgr: userFileManager.UserFileManager) {
-  console.info('deleteDemo');
-  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-  let fetchOptions: userFileManager.FetchOptions = {
-    fetchColumns: [],
-    predicates: predicates
-  };
-  try {
-    const fetchResult: userFileManager.FetchResult<userFileManager.FileAsset> = await mgr.getPhotoAssets(fetchOptions);
-    let asset: userFileManager.FileAsset = await fetchResult.getFirstObject();
-    if (asset == undefined) {
-      console.error('asset not exist');
-      return;
-    }
-    await mgr.delete(asset.uri);
-    console.info('delete successfully');
-  } catch (err) {
-    console.error('delete failed with error: ' + err);
-  }
-}
-```
 
 For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
 

@@ -84,7 +84,7 @@ deviceType: DeviceType
 
 Device type.
 
-**Type:** DeviceType
+**Type:** [DeviceType](arkts-distributedservice-devicemanager-devicetype-e-sys.md)
 
 **Since:** 7
 

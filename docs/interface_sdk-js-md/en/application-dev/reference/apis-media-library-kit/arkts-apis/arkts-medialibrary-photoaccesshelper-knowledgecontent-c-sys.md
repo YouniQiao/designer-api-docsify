@@ -38,13 +38,13 @@ Get Related Entities, Smart Label
 | --- | --- | --- | --- |
 | topic | string | Yes | Searching topic string. |
 | context | [ContextMap](arkts-medialibrary-photoaccesshelper-contextmap-i-sys.md) | Yes | Context Map indicates topic filed. |
-| option | Options | No | Options for getRelatedEntity. |
+| option | [Options](arkts-medialibrary-photoaccesshelper-options-i-sys.md) | No | Options for getRelatedEntity. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Entity[]&gt; | Returns Array of Related Entities |
+| Promise&lt;[Entity](arkts-medialibrary-photoaccesshelper-entity-i-sys.md)[]&gt; | Returns Array of Related Entities |
 
 **Error codes:**
 

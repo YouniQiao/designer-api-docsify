@@ -38,7 +38,7 @@ localAddresses?: Array<LinkAddress>
 
 VPN接口的地址数组
 
-**类型：** Array&lt;LinkAddress&gt;
+**类型：** Array&lt;[LinkAddress](arkts-network-vpn-linkaddress-t.md)&gt;
 
 **起始版本：** 26.0.0
 

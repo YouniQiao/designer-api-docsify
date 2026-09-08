@@ -209,39 +209,3 @@ Value range: [1, 9], with intervals of 1, corresponding to the values in the [Fo
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Examples**
-
-> NOTE
-
-```TypeScript
-// xxx.ets
-import { font } from '@kit.ArkUI';
-
-@Entry
-@Component
-struct FontExample {
-  uiFont = this.getUIContext().getFont();
-  fontInfo: font.FontInfo = this.uiFont.getFontByName(''); // You are advised to use the this.getUIContext().getFont().getFontByName() API.
-
-  build() {
-    Column() {
-      Button("getFontByName")
-        .onClick(() => {
-          this.fontInfo =
-            this.uiFont.getFontByName('HarmonyOS Sans Italic');
-          console.info("getFontByName(): path = " + this.fontInfo.path);
-          console.info("getFontByName(): postScriptName = " + this.fontInfo.postScriptName);
-          console.info("getFontByName(): fullName = " + this.fontInfo.fullName);
-          console.info("getFontByName(): family = " + this.fontInfo.family);
-          console.info("getFontByName(): subfamily = " + this.fontInfo.subfamily);
-          console.info("getFontByName(): weight = " + this.fontInfo.weight);
-          console.info("getFontByName(): width = " + this.fontInfo.width);
-          console.info("getFontByName(): italic = " + this.fontInfo.italic);
-          console.info("getFontByName(): monoSpace = " + this.fontInfo.monoSpace);
-          console.info("getFontByName(): symbolic = " + this.fontInfo.symbolic);
-        })
-    }.width('100%')
-  }
-}
-```

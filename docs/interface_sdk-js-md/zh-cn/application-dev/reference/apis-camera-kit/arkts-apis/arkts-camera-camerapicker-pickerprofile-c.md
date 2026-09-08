@@ -20,7 +20,7 @@ cameraPosition: camera.CameraPosition
 
 相机的位置。
 
-**类型：** camera.CameraPosition
+**类型：** [camera.CameraPosition](arkts-camera-camera-cameraposition-e.md)
 
 **起始版本：** 11
 

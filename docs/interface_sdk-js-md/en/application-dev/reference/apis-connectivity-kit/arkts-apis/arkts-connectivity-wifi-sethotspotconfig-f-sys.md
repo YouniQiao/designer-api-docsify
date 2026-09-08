@@ -32,7 +32,7 @@ Sets the hotspot for a device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | HotspotConfig | Yes |  |
+| config | [HotspotConfig](arkts-connectivity-wifi-hotspotconfig-i-sys.md) | Yes |  |
 
 **Return value:**
 

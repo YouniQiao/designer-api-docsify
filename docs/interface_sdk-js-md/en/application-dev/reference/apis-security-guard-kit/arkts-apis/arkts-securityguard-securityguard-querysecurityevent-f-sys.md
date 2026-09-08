@@ -27,7 +27,7 @@ Query security event information from security guard.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | rules | Array&lt;[SecurityEventRule](arkts-securityguard-securityguard-securityeventrule-i-sys.md)&gt; | Yes | rule of get security event information. |
-| querier | Querier | Yes | callback of receiving the query data. |
+| querier | [Querier](arkts-securityguard-securityguard-querier-i-sys.md) | Yes | callback of receiving the query data. |
 
 **Error codes:**
 

@@ -26,7 +26,7 @@ Obtains the ChineseCalendar object for the specified locale.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| locale | Intl.Locale | No | Locale object. The default value is the current system locale. |
+| locale | [Intl.Locale](arkts-localization-intl-locale-c.md) | No | Locale object. The default value is the current system locale. |
 
 **Return value:**
 

@@ -250,7 +250,7 @@ MIMEType?: PhotoViewMIMETypes
 
 可选择的媒体文件类型，若无此参数，则默认为图片和视频类型。
 
-**类型：** PhotoViewMIMETypes
+**类型：** [PhotoViewMIMETypes](arkts-medialibrary-photoaccesshelper-photoviewmimetypes-e.md)
 
 **起始版本：** 10
 

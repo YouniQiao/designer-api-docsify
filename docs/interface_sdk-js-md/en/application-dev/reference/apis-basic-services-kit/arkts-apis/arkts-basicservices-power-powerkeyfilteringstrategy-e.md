@@ -12,7 +12,7 @@ Enumerates the power key filtering strategies.
 DISABLE_LONG_PRESS_FILTERING = 0
 ```
 
-Disable the filtering of power key number-press event. This is the default value.
+Disable the filtering of power key long-press event. This is the default value.
 
 **Since:** 21
 
@@ -24,7 +24,7 @@ Disable the filtering of power key number-press event. This is the default value
 LONG_PRESS_FILTERING_ONCE = 1
 ```
 
-Filters the number-press event of the current power key once. The next is not filtered by default.
+Filters the long-press event of the current power key once. The next is not filtered by default.
 
 **Since:** 21
 

@@ -40,7 +40,7 @@ maskImage: image.PixelMap
 
 模糊气泡上升效果的遮罩图像，控制模糊气泡区域。被遮罩的区域有模糊效果，未遮罩的区域无模糊效果。
 
-**类型：** image.PixelMap
+**类型：** [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)
 
 **起始版本：** 26.0.0
 

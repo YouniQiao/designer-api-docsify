@@ -35,12 +35,3 @@ declare function fdatasyncSync(fd: number): void
 | 13900027 | Read-only file system |
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
-
-**示例**
-
-```TypeScript
-let filePath = pathDir + "/test.txt";
-let file = fileIo.openSync(filePath);
-fileIo.fdatasyncSync(file.fd);
-fileIo.closeSync(file);
-```

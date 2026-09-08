@@ -28,7 +28,7 @@ function closePipe(pipe: USBDevicePipe): number
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| pipe | USBDevicePipe | 是 | 用于确定USB设备消息控制通道。 |
+| pipe | [USBDevicePipe](arkts-basicservices-usb-usbdevicepipe-i.md) | 是 | 用于确定USB设备消息控制通道。 |
 
 **返回值：**
 

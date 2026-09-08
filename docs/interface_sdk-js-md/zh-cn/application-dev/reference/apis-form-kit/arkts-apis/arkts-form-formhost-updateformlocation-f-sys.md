@@ -29,7 +29,7 @@ function updateFormLocation(formId: string, location: formInfo.FormLocation): vo
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | formId | string | 是 | 卡片标识。 |
-| location | formInfo.FormLocation | 是 | 卡片位置。 |
+| location | [formInfo.FormLocation](arkts-form-forminfo-formlocation-e.md) | 是 | 卡片位置。 |
 
 **错误码：**
 

@@ -28,7 +28,7 @@ function createDeviceManager(bundleName: string): DeviceManager
 
 | 类型 | 说明 |
 | --- | --- |
-| DeviceManager | 返回设备管理器对象实例，用于获取可信设备列表以及本地设备的名称、类型、标识和网络标识等信息。 |
+| [DeviceManager](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md) | 返回设备管理器对象实例，用于获取可信设备列表以及本地设备的名称、类型、标识和网络标识等信息。 |
 
 **错误码：**
 

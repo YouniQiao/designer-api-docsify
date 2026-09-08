@@ -40,7 +40,7 @@ server端添加服务。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| service | GattService | 是 | 服务端的service数据。BLE广播的相关参数 |
+| service | [GattService](arkts-connectivity-bluetooth-gattservice-i.md) | 是 | 服务端的service数据。BLE广播的相关参数 |
 
 **返回值：**
 
@@ -136,7 +136,7 @@ server端特征值发生变化时，主动通知已连接的client设备。
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | deviceId | string | 是 | 接收通知的client端设备地址，例如“XX:XX:XX:XX:XX:XX”。 |
-| notifyCharacteristic | NotifyCharacteristic | 是 | 通知的特征值数据。 |
+| notifyCharacteristic | [NotifyCharacteristic](arkts-connectivity-bluetooth-notifycharacteristic-i.md) | 是 | 通知的特征值数据。 |
 
 **返回值：**
 
@@ -326,7 +326,7 @@ server端取消订阅BLE连接状态变化事件。
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'connectStateChange' | 是 | 填写"connectStateChange"字符串，表示BLE连接状态变化事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;BLEConnectChangedState&gt; | 否 | 表示取消订阅BLE连接状态变化事件。不填该参数则取消订阅该type对应的所有回调。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[BLEConnectChangedState](arkts-connectivity-bluetooth-bleconnectchangedstate-i.md)&gt; | 否 | 表示取消订阅BLE连接状态变化事件。不填该参数则取消订阅该type对应的所有回调。 |
 
 **示例**
 
@@ -581,7 +581,7 @@ server端订阅BLE连接状态变化事件。
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'connectStateChange' | 是 | 填写"connectStateChange"字符串，表示BLE连接状态变化事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;BLEConnectChangedState&gt; | 是 | 表示回调函数的入参，连接状态。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[BLEConnectChangedState](arkts-connectivity-bluetooth-bleconnectchangedstate-i.md)&gt; | 是 | 表示回调函数的入参，连接状态。 |
 
 **示例**
 
@@ -658,7 +658,7 @@ server端回复client端的读写请求。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| serverResponse | ServerResponse | 是 | server端回复的响应数据。 |
+| serverResponse | [ServerResponse](arkts-connectivity-bluetooth-serverresponse-i.md) | 是 | server端回复的响应数据。 |
 
 **返回值：**
 
@@ -714,9 +714,9 @@ startAdvertising(setting: AdvertiseSetting, advData: AdvertiseData, advResponse?
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| setting | AdvertiseSetting | 是 | BLE广播的相关参数。 |
-| advData | AdvertiseData | 是 | BLE广播包内容。 |
-| advResponse | AdvertiseData | 否 | BLE回复扫描请求回复响应。 |
+| setting | [AdvertiseSetting](arkts-connectivity-bluetooth-advertisesetting-i.md) | 是 | BLE广播的相关参数。 |
+| advData | [AdvertiseData](arkts-connectivity-bluetooth-advertisedata-i.md) | 是 | BLE广播包内容。 |
+| advResponse | [AdvertiseData](arkts-connectivity-bluetooth-advertisedata-i.md) | 否 | BLE回复扫描请求回复响应。 |
 
 **示例**
 

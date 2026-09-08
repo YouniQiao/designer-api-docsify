@@ -34,7 +34,7 @@ blur(blurRadius: number): Filter
 
 | 类型 | 说明 |
 | --- | --- |
-| Filter | 返回挂载了模糊效果的Filter，支持链式调用继续添加其他效果。 |
+| [Filter](arkts-arkgraphics2d-uieffect-filter-i.md) | 返回挂载了模糊效果的Filter，支持链式调用继续添加其他效果。 |
 
 **示例**
 
@@ -102,7 +102,7 @@ hdrBrightnessRatio(ratio: number): Filter
 
 | 类型 | 说明 |
 | --- | --- |
-| Filter | 返回挂载了HDR提亮效果的Filter，支持链式调用继续添加其他效果。 |
+| [Filter](arkts-arkgraphics2d-uieffect-filter-i.md) | 返回挂载了HDR提亮效果的Filter，支持链式调用继续添加其他效果。 |
 
 **错误码：**
 

@@ -33,7 +33,7 @@ photo?: image.PixelMap
 
 PixelMap格式的联系人头像。
 
-**类型：** image.PixelMap
+**类型：** [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)
 
 **起始版本：** 22
 
@@ -56,25 +56,3 @@ uri格式联系人头像。
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Applications.ContactsData
-
-**示例**
-
-使用JSON格式创建数据。
-
-```TypeScript
-import { contact } from '@kit.ContactsKit';
-import { image } from '@kit.ImageKit';
-
-async function SetPortraitUri(uri: string) {
-  let portrait: contact.Portrait = {
-    uri: uri
-  };
-}
-
-async function SetPortraitPixelMap(photo: image.PixelMap) {
-  let portrait: contact.Portrait = {
-    uri: '',
-    photo: photo
-  };
-}
-```

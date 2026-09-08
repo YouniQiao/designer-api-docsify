@@ -30,7 +30,7 @@ function setHotspotConfig(config: HotspotConfig): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| config | HotspotConfig | 是 | 热点配置信息。 |
+| config | [HotspotConfig](arkts-connectivity-wifi-hotspotconfig-i-sys.md) | 是 | 热点配置信息。 |
 
 **返回值：**
 

@@ -74,7 +74,7 @@ launchReason: LaunchReason
 
 An enumerated value indicating the reason for ability launch (for example, recovery from a fault, intent invocation, or atomic service sharing). For details, see [LaunchReason](arkts-ability-abilityconstant-launchreason-e.md).
 
-**Type:** LaunchReason
+**Type:** [LaunchReason](arkts-ability-abilityconstant-launchreason-e.md)
 
 **Since:** 9
 

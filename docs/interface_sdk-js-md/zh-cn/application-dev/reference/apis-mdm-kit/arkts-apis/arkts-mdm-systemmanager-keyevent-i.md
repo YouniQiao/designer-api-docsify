@@ -52,7 +52,7 @@ keyCode: KeyCode
 
 按键编码。
 
-**类型：** KeyCode
+**类型：** [KeyCode](arkts-mdm-systemmanager-keycode-e.md)
 
 **起始版本：** 23
 

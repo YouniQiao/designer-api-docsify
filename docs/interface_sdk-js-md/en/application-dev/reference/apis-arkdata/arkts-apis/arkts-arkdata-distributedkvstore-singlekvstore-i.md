@@ -968,110 +968,6 @@ try {
 }
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-const KEY_TEST_STRING_ELEMENT = 'key_test_string';
-const VALUE_TEST_STRING_ELEMENT = 'value-test-string';
-try {
-  kvStore.put(KEY_TEST_STRING_ELEMENT, VALUE_TEST_STRING_ELEMENT, (err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to put. Code: ${err.code}, message: ${err.message}`);
-      return;
-    }
-    console.info('Succeeded in putting');
-    if (kvStore != null) {
-      kvStore.get(KEY_TEST_STRING_ELEMENT, (err: BusinessError, data: boolean | string | number | Uint8Array) => {
-        if (err) {
-          console.error(`Failed to get. Code: ${err.code}, message: ${err.message}`);
-          return;
-        }
-        console.info(`Succeeded in getting data. Data=${data}`);
-      });
-    }
-  });
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`Failed to get. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-const KEY_TEST_STRING_ELEMENT = 'key_test_string';
-const VALUE_TEST_STRING_ELEMENT = 'value-test-string';
-try {
-  kvStore.put(KEY_TEST_STRING_ELEMENT, VALUE_TEST_STRING_ELEMENT).then(() => {
-    console.info(`Succeeded in putting data`);
-    if (kvStore != null) {
-      kvStore.get(KEY_TEST_STRING_ELEMENT).then((data: boolean | string | number | Uint8Array) => {
-        console.info(`Succeeded in getting data.data=${data}`);
-      }).catch((err: BusinessError) => {
-        console.error(`Failed to get. Code: ${err.code}, message: ${err.message}`);
-      });
-    }
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to put. Code: ${err.code}, message: ${err.message}`);
-  });
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`Failed to get. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-const KEY_TEST_STRING_ELEMENT = 'key_test_string_2';
-const VALUE_TEST_STRING_ELEMENT = 'value-string-002';
-try {
-  kvStore.put(KEY_TEST_STRING_ELEMENT, VALUE_TEST_STRING_ELEMENT, async (err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to put. Code: ${err.code}, message: ${err.message}`);
-      return;
-    }
-    console.info('Succeeded in putting');
-    if (kvStore != null) {
-      kvStore.get('localDeviceId', KEY_TEST_STRING_ELEMENT, (err: BusinessError, data: boolean | string | number | Uint8Array) => {
-        if (err) {
-          console.error(`Failed to get. Code: ${err.code}, message: ${err.message}`);
-          return;
-        }
-        console.info('Succeeded in getting');
-      });
-    }
-  })
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`Failed to get. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-const KEY_TEST_STRING_ELEMENT = 'key_test_string_2';
-const VALUE_TEST_STRING_ELEMENT = 'value-string-002';
-try {
-  kvStore.put(KEY_TEST_STRING_ELEMENT, VALUE_TEST_STRING_ELEMENT).then(async () => {
-    console.info('Succeeded in putting');
-    if (kvStore != null) {
-      kvStore.get('localDeviceId', KEY_TEST_STRING_ELEMENT).then((data: boolean | string | number | Uint8Array) => {
-        console.info('Succeeded in getting');
-      }).catch((err: BusinessError) => {
-        console.error(`Failed to get. Code: ${err.code}, message: ${err.message}`);
-      });
-    }
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to put. Code: ${error.code}, message: ${error.message}`);
-  });
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`Failed to get. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
 ## get
 
 ```TypeScript
@@ -1109,7 +1005,59 @@ Obtains the value of the specified key. This API uses a promise to return the re
 
 **Examples**
 
-See [get](#get)
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+
+const KEY_TEST_STRING_ELEMENT = 'key_test_string';
+const VALUE_TEST_STRING_ELEMENT = 'value-test-string';
+try {
+  kvStore.put(KEY_TEST_STRING_ELEMENT, VALUE_TEST_STRING_ELEMENT, (err: BusinessError) => {
+    if (err) {
+      console.error(`Failed to put. Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+    console.info('Succeeded in putting');
+    if (kvStore != null) {
+      kvStore.get(KEY_TEST_STRING_ELEMENT, (err: BusinessError, data: boolean | string | number | Uint8Array) => {
+        if (err) {
+          console.error(`Failed to get. Code: ${err.code}, message: ${err.message}`);
+          return;
+        }
+        console.info(`Succeeded in getting data.data=${data}`);
+      });
+    }
+  });
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to get. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+
+const KEY_TEST_STRING_ELEMENT = 'key_test_string';
+const VALUE_TEST_STRING_ELEMENT = 'value-test-string';
+try {
+  kvStore.put(KEY_TEST_STRING_ELEMENT, VALUE_TEST_STRING_ELEMENT).then(() => {
+    console.info(`Succeeded in putting data`);
+    if (kvStore != null) {
+      kvStore.get(KEY_TEST_STRING_ELEMENT).then((data: boolean | string | number | Uint8Array) => {
+        console.info(`Succeeded in getting data.data=${data}`);
+      }).catch((err: BusinessError) => {
+        console.error(`Failed to get. Code: ${err.code}, message: ${err.message}`);
+      });
+    }
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to put. Code: ${err.code}, message: ${err.message}`);
+  });
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to get. Code: ${error.code}, message: ${error.message}`);
+}
+```
 
 ## getEntries
 
@@ -1130,7 +1078,7 @@ Obtains all KV pairs that match the specified key prefix. This API uses an async
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | keyPrefix | string | Yes | Key prefix to match. It cannot contain '^'; otherwise, the predicate becomes invalid and all data in the RDB store will be returned. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Entry[]&gt; | Yes | Callback used to return the KV pairs that match the specified prefix. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Entry](arkts-arkdata-distributedkvstore-entry-i.md)[]&gt; | Yes | Callback used to return the KV pairs that match the specified prefix. |
 
 **Error codes:**
 
@@ -1207,7 +1155,7 @@ Obtains all KV pairs that match the specified key prefix. This API uses a promis
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Entry[]&gt; | Promise used to return the KV pairs that match the specified prefix. |
+| Promise&lt;[Entry](arkts-arkdata-distributedkvstore-entry-i.md)[]&gt; | Promise used to return the KV pairs that match the specified prefix. |
 
 **Error codes:**
 
@@ -1222,42 +1170,6 @@ Obtains all KV pairs that match the specified key prefix. This API uses a promis
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
-
-try {
-  let entries: distributedKVStore.Entry[] = [];
-  for (let i = 0; i < 10; i++) {
-    let key = 'batch_test_string_key';
-    let entry: distributedKVStore.Entry = {
-      key: key + i,
-      value: {
-        type: distributedKVStore.ValueType.STRING,
-        value: 'batch_test_string_value'
-      }
-    }
-    entries.push(entry);
-  }
-  console.info(`entries: ${entries}`);
-  kvStore.putBatch(entries).then(async () => {
-    console.info('Succeeded in putting Batch');
-    if (kvStore != null) {
-      kvStore.getEntries('batch_test_string_key').then((entries: distributedKVStore.Entry[]) => {
-        console.info('Succeeded in getting Entries');
-        console.info(`PutBatch ${entries}`);
-      }).catch((err: BusinessError) => {
-        console.error(`Failed to get Entries. Code: ${err.code}, message: ${err.message}`);
-      });
-    }
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to put Batch. Code: ${err.code}, message: ${err.message}`);
-  });
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
 
 try {
   let entries: distributedKVStore.Entry[] = [];
@@ -1310,8 +1222,8 @@ Obtains the KV pairs that match the specified **Query** object. This API uses an
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| query | Query | Yes | Key prefix to match. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Entry[]&gt; | Yes | Callback used to return the KV pairs that match the specified **Query** object. |
+| query | [Query](arkts-arkdata-distributedkvstore-query-c.md) | Yes | Key prefix to match. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Entry](arkts-arkdata-distributedkvstore-entry-i.md)[]&gt; | Yes | Callback used to return the KV pairs that match the specified **Query** object. |
 
 **Error codes:**
 
@@ -1367,50 +1279,6 @@ try {
 }
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let arr = new Uint8Array([21, 31]);
-  let entries: distributedKVStore.Entry[] = [];
-  for (let i = 0; i < 10; i++) {
-    let key = 'batch_test_bool_key';
-    let entry: distributedKVStore.Entry = {
-      key: key + i,
-      value: {
-        type: distributedKVStore.ValueType.BYTE_ARRAY,
-        value: arr
-      }
-    }
-    entries.push(entry);
-  }
-  console.info(`entries: ${entries}`);
-  kvStore.putBatch(entries, (err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to put Batch. Code: ${err.code}, message: ${err.message}`);
-      return;
-    }
-    console.info('Succeeded in putting Batch');
-    const query = new distributedKVStore.Query();
-    query.prefixKey('batch_test');
-    if (kvStore != null) {
-      kvStore.getEntries(query, (err: BusinessError, entries: distributedKVStore.Entry[]) => {
-        if (err) {
-          console.error(`Failed to get Entries. Code: ${err.code}, message: ${err.message}`);
-          return;
-        }
-        console.info('Succeeded in getting Entries');
-        console.info(`entries.length: ${entries.length}`);
-        console.info(`entries[0]: ${entries[0]}`);
-      });
-    }
-  });
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`Failed to get Entries. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
 ## getEntries
 
 ```TypeScript
@@ -1429,13 +1297,13 @@ Obtains the KV pairs that match the specified **Query** object. This API uses a 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| query | Query | Yes | Query** object to match. |
+| query | [Query](arkts-arkdata-distributedkvstore-query-c.md) | Yes | Query** object to match. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Entry[]&gt; | Promise used to return the KV pairs that match the specified **Query** object. |
+| Promise&lt;[Entry](arkts-arkdata-distributedkvstore-entry-i.md)[]&gt; | Promise used to return the KV pairs that match the specified **Query** object. |
 
 **Error codes:**
 
@@ -1567,55 +1435,6 @@ try {
 }
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let resultSet: distributedKVStore.KVStoreResultSet;
-  let entries: distributedKVStore.Entry[] = [];
-  for (let i = 0; i < 10; i++) {
-    let key = 'batch_test_string_key';
-    let entry: distributedKVStore.Entry = {
-      key: key + i,
-      value: {
-        type: distributedKVStore.ValueType.STRING,
-        value: 'batch_test_string_value'
-      }
-    }
-    entries.push(entry);
-  }
-  kvStore.putBatch(entries, async (err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to put batch. Code: ${err.code}, message: ${err.message}`);
-      return;
-    }
-    console.info('Succeeded in putting batch');
-    if (kvStore != null) {
-      kvStore.getResultSet('batch_test_string_key', async (err: BusinessError, result: distributedKVStore.KVStoreResultSet) => {
-        if (err) {
-          console.error(`Failed to get resultset. Code: ${err.code}, message: ${err.message}`);
-          return;
-        }
-        console.info('Succeeded in getting result set');
-        resultSet = result;
-        if (kvStore != null) {
-          kvStore.closeResultSet(resultSet, (err: BusinessError) => {
-            if (err) {
-              console.error(`Failed to close resultset. Code: ${err.code}, message: ${err.message}`);
-              return;
-            }
-            console.info('Succeeded in closing result set');
-          })
-        }
-      });
-    }
-  });
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
 ## getResultSet
 
 ```TypeScript
@@ -1694,47 +1513,6 @@ try {
 }
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let resultSet: distributedKVStore.KVStoreResultSet;
-  let entries: distributedKVStore.Entry[] = [];
-  for (let i = 0; i < 10; i++) {
-    let key = 'batch_test_string_key';
-    let entry: distributedKVStore.Entry = {
-      key: key + i,
-      value: {
-        type: distributedKVStore.ValueType.STRING,
-        value: 'batch_test_string_value'
-      }
-    }
-    entries.push(entry);
-  }
-  kvStore.putBatch(entries).then(async () => {
-    console.info('Succeeded in putting batch');
-    kvStore.getResultSet('batch_test_string_key').then((result: distributedKVStore.KVStoreResultSet) => {
-      console.info('Succeeded in getting result set');
-      resultSet = result;
-      if (kvStore != null) {
-        kvStore.closeResultSet(resultSet).then(() => {
-          console.info('Succeeded in closing result set');
-        }).catch((err: BusinessError) => {
-          console.error(`Failed to close resultset. Code: ${err.code}, message: ${err.message}`);
-        });
-      }
-    }).catch((err: BusinessError) => {
-      console.error(`Failed to get resultset. Code: ${err.code}, message: ${err.message}`);
-    });
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to put batch. Code: ${err.code}, message: ${err.message}`);
-  });
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
 ## getResultSet
 
 ```TypeScript
@@ -1753,7 +1531,7 @@ Obtains a **KVStoreResultSet** object that matches the specified **Query** objec
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| query | Query | Yes | Query** object to match. |
+| query | [Query](arkts-arkdata-distributedkvstore-query-c.md) | Yes | Query** object to match. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[KVStoreResultSet](arkts-arkdata-distributedkvstore-kvstoreresultset-i.md)&gt; | Yes | Callback used to return the **KVStoreResultSet** object obtained. |
 
 **Error codes:**
@@ -1808,57 +1586,6 @@ try {
 }
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let resultSet: distributedKVStore.KVStoreResultSet;
-  let entries: distributedKVStore.Entry[] = [];
-  for (let i = 0; i < 10; i++) {
-    let key = 'batch_test_string_key';
-    let entry: distributedKVStore.Entry = {
-      key: key + i,
-      value: {
-        type: distributedKVStore.ValueType.STRING,
-        value: 'batch_test_string_value'
-      }
-    }
-    entries.push(entry);
-  }
-  kvStore.putBatch(entries, async (err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to put batch. Code: ${err.code}, message: ${err.message}`);
-      return;
-    }
-    console.info('Succeeded in putting batch');
-    const query = new distributedKVStore.Query();
-    query.prefixKey('batch_test');
-    if (kvStore != null) {
-      kvStore.getResultSet(query, async (err: BusinessError, result: distributedKVStore.KVStoreResultSet) => {
-        if (err) {
-          console.error(`Failed to get resultSet. Code: ${err.code}, message: ${err.message}`);
-          return;
-        }
-        console.info('Succeeded in getting resultSet');
-        resultSet = result;
-        if (kvStore != null) {
-          kvStore.closeResultSet(resultSet, (err: BusinessError) => {
-            if (err) {
-              console.error(`Failed to close resultSet. Code: ${err.code}, message: ${err.message}`);
-              return;
-            }
-            console.info('Succeeded in closing resultSet');
-          })
-        }
-      });
-    }
-  });
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`Failed to get resultSet. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
 ## getResultSet
 
 ```TypeScript
@@ -1877,7 +1604,7 @@ Obtains a **KVStoreResultSet** object that matches the specified **Query** objec
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| query | Query | Yes | Query** object to match. |
+| query | [Query](arkts-arkdata-distributedkvstore-query-c.md) | Yes | Query** object to match. |
 
 **Return value:**
 
@@ -1930,42 +1657,6 @@ try {
 }
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let resultSet: distributedKVStore.KVStoreResultSet;
-  let entries: distributedKVStore.Entry[] = [];
-  for (let i = 0; i < 10; i++) {
-    let key = 'batch_test_string_key';
-    let entry: distributedKVStore.Entry = {
-      key: key + i,
-      value: {
-        type: distributedKVStore.ValueType.STRING,
-        value: 'batch_test_string_value'
-      }
-    }
-    entries.push(entry);
-  }
-  kvStore.putBatch(entries).then(async () => {
-    console.info('Succeeded in putting batch');
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to put batch. Code: ${err.code}, message: ${err.message}`);
-  });
-  const query = new distributedKVStore.Query();
-  query.prefixKey('batch_test');
-  kvStore.getResultSet(query).then((result: distributedKVStore.KVStoreResultSet) => {
-    console.info('Succeeded in getting result set');
-    resultSet = result;
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to get resultset. Code: ${err.code}, message: ${err.message}`);
-  });
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
 ## getResultSize
 
 ```TypeScript
@@ -1984,7 +1675,7 @@ Obtains the number of results that match the specified **Query** object. This AP
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| query | Query | Yes | Query** object to match. |
+| query | [Query](arkts-arkdata-distributedkvstore-query-c.md) | Yes | Query** object to match. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the number of results obtained. |
 
 **Error codes:**
@@ -2056,7 +1747,7 @@ Obtains the number of results that match the specified **Query** object. This AP
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| query | Query | Yes | Query** object to match. |
+| query | [Query](arkts-arkdata-distributedkvstore-query-c.md) | Yes | Query** object to match. |
 
 **Return value:**
 
@@ -2127,7 +1818,7 @@ Obtains the security level of this KV store. This API uses an asynchronous callb
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;SecurityLevel&gt; | Yes | Callback used to return the security level of the KV store. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SecurityLevel](arkts-arkdata-distributedkvstore-securitylevel-e.md)&gt; | Yes | Callback used to return the security level of the KV store. |
 
 **Error codes:**
 
@@ -2172,7 +1863,7 @@ Obtains the security level of this KV store. This API uses a promise to return t
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;SecurityLevel&gt; | Promise used to return the security level of the KV store. |
+| Promise&lt;[SecurityLevel](arkts-arkdata-distributedkvstore-securitylevel-e.md)&gt; | Promise used to return the security level of the KV store. |
 
 **Error codes:**
 
@@ -2214,7 +1905,7 @@ Unsubscribes from data changes.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | 'dataChange' | Yes | Event type. The value is **dataChange**, which indicates a data change event. |
-| listener | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ChangeNotification&gt; | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for data changes. |
+| listener | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ChangeNotification](arkts-arkdata-distributedkvstore-changenotification-i.md)&gt; | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for data changes. |
 
 **Error codes:**
 
@@ -2333,8 +2024,8 @@ Subscribes to data changes of the specified type.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | 'dataChange' | Yes | Event type. The value is **dataChange**, which indicates a data change event. |
-| type | SubscribeType | Yes | Type of data change. |
-| listener | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ChangeNotification&gt; | Yes | Callback used to return the object to be notified when the data changes. |
+| type | [SubscribeType](arkts-arkdata-distributedkvstore-subscribetype-e.md) | Yes | Type of data change. |
+| listener | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ChangeNotification](arkts-arkdata-distributedkvstore-changenotification-i.md)&gt; | Yes | Callback used to return the object to be notified when the data changes. |
 
 **Error codes:**
 
@@ -2426,7 +2117,7 @@ Adds a KV pair of the specified type to this KV store. This API uses an asynchro
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | key | string | Yes | Key of the KV pair to add. It cannot be empty, and the length cannot exceed [MAX_KEY_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md). |
-| value | Uint8Array \| string \| number \| number \| boolean | Yes | Value of the KV pair to add. The value type can be Uint 8Array, number , number, string, or boolean. A value of the Uint8Array or string type cannot exceed [MAX_VALUE_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md). |
+| value | Uint8Array \| string \| number \| number \| boolean | Yes | Value of the KV pair to add. The value type can be Uint 8Array, long , double, string, or boolean. A value of the Uint8Array or string type cannot exceed [MAX_VALUE_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md). |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
@@ -2495,7 +2186,7 @@ Adds a KV pair of the specified type to this KV store. This API uses a promise t
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | key | string | Yes | Key of the KV pair to add. It cannot be empty, and the length cannot exceed [MAX_KEY_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md). |
-| value | Uint8Array \| string \| number \| number \| boolean | Yes | Value of the KV pair to add. The value type can be Uint 8Array, number , number, string, or boolean. A value of the Uint8Array or string type cannot exceed [MAX_VALUE_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md). |
+| value | Uint8Array \| string \| number \| number \| boolean | Yes | Value of the KV pair to add. The value type can be Uint 8Array, long , double, string, or boolean. A value of the Uint8Array or string type cannot exceed [MAX_VALUE_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md). |
 
 **Return value:**
 
@@ -2534,7 +2225,7 @@ Batch inserts KV pairs to this single KV store. This API uses an asynchronous ca
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| entries | Entry[] | Yes | KV pairs to insert, which cannot exceed 512 MB. |
+| entries | [Entry](arkts-arkdata-distributedkvstore-entry-i.md)[] | Yes | KV pairs to insert, which cannot exceed 512 MB. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
@@ -2609,7 +2300,7 @@ Batch inserts KV pairs to this single KV store. This API uses a promise to retur
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| entries | Entry[] | Yes | KV pairs to insert, which cannot exceed 512 MB. |
+| entries | [Entry](arkts-arkdata-distributedkvstore-entry-i.md)[] | Yes | KV pairs to insert, which cannot exceed 512 MB. |
 
 **Return value:**
 
@@ -3460,7 +3151,7 @@ Starts cross-device data sync manually. For details about the sync modes of KV s
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | deviceIds | string[] | Yes | List of **networkId**s of the devices in the same networking environment to be synchronized. |
-| mode | SyncMode | Yes | Sync mode. |
+| mode | [SyncMode](arkts-arkdata-distributedkvstore-syncmode-e.md) | Yes | Sync mode. |
 | delayMs | number | No | Delay time allowed, in ms. The default value is **0**. If **delayMs** is set, data sync will be executed **delayMs** after **sync()** is called. If **delayMs** is not set, the delay set in [setSyncParam](#setsyncparam) is used. |
 
 **Error codes:**
@@ -3555,8 +3246,8 @@ Starts cross-device data sync manually. This API returns the result synchronousl
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | deviceIds | string[] | Yes | List of **networkId**s of the devices in the same networking environment to be synchronized. |
-| query | Query | Yes | Query** object to match. |
-| mode | SyncMode | Yes | Sync mode. |
+| query | [Query](arkts-arkdata-distributedkvstore-query-c.md) | Yes | Query** object to match. |
+| mode | [SyncMode](arkts-arkdata-distributedkvstore-syncmode-e.md) | Yes | Sync mode. |
 | delayMs | number | No | Delay time allowed, in ms. The default value is **0**. If **delayMs** is set, data sync will be executed **delayMs** after **sync()** is called. If **delayMs** is not set, the delay set in [setSyncParam](#setsyncparam) is used. |
 
 **Error codes:**

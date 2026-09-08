@@ -26,7 +26,7 @@ function createKeyboardController(): Promise<KeyboardController>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;KeyboardController&gt; | Promise对象，返回键盘控制器实例。 |
+| Promise&lt;[KeyboardController](arkts-input-inputeventclient-keyboardcontroller-i.md)&gt; | Promise对象，返回键盘控制器实例。 |
 
 **错误码：**
 

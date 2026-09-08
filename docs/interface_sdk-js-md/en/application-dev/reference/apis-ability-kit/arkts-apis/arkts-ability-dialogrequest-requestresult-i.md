@@ -20,7 +20,7 @@ result: ResultCode
 
 Result code of the request.
 
-**Type:** ResultCode
+**Type:** [ResultCode](arkts-ability-dialogrequest-resultcode-e.md)
 
 **Since:** 9
 

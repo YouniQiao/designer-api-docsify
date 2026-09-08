@@ -61,20 +61,6 @@ declare function rename(oldPath: string, newPath: string): Promise<void>
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let srcFile = pathDir + "/test.txt";
-let dstFile = pathDir + "/new.txt";
-fileIo.rename(srcFile, dstFile).then(() => {
-  console.info(`Succeeded in renaming.`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to rename. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
 
 ## rename
 
@@ -125,19 +111,3 @@ declare function rename(oldPath: string, newPath: string, callback: AsyncCallbac
 | 13900033 | Too many symbolic links encountered |
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let srcFile = pathDir + "/test.txt";
-let dstFile = pathDir + "/new.txt";
-fileIo.rename(srcFile, dstFile, (err: BusinessError) => {
-  if (err) {
-    console.error(`Failed to rename. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info(`Succeeded in renaming.`);
-  }
-});
-```

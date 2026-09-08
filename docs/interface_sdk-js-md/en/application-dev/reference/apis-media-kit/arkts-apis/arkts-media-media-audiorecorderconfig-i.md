@@ -132,7 +132,7 @@ location?: Location
 
 Geographical location information.
 
-**Type:** Location
+**Type:** [Location](arkts-media-media-location-i.md)
 
 **Since:** 6
 

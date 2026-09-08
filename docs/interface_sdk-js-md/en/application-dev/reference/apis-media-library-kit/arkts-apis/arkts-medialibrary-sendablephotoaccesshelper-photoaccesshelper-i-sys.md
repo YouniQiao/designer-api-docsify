@@ -50,7 +50,7 @@ For API versions 10 to 17, the following characters are considered invalid: . ..
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;PhotoAsset&gt; | Promise used to return the created asset. |
+| Promise&lt;[PhotoAsset](arkts-medialibrary-sendablephotoaccesshelper-photoasset-i.md)&gt; | Promise used to return the created asset. |
 
 **Error codes:**
 
@@ -112,13 +112,13 @@ For API versions 10 to 17, the following characters are considered invalid: . ..
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | displayName | string | Yes | File name of the asset to create. |
-| options | photoAccessHelper.PhotoCreateOptions | Yes | Options for creating the asset. |
+| options | [photoAccessHelper.PhotoCreateOptions](arkts-medialibrary-photoaccesshelper-photocreateoptions-i-sys.md) | Yes | Options for creating the asset. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;PhotoAsset&gt; | Promise used to return the created asset. |
+| Promise&lt;[PhotoAsset](arkts-medialibrary-sendablephotoaccesshelper-photoasset-i.md)&gt; | Promise used to return the created asset. |
 
 **Error codes:**
 
@@ -175,14 +175,14 @@ Obtains hidden albums based on the specified display mode and retrieval options.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | photoAccessHelper.HiddenPhotosDisplayMode | Yes | Display mode of hidden albums. |
-| options | photoAccessHelper.FetchOptions | No | Options for retrieving the albums. If this parameter is not specified, the albums are retrieved based on the display mode. |
+| mode | [photoAccessHelper.HiddenPhotosDisplayMode](arkts-medialibrary-photoaccesshelper-hiddenphotosdisplaymode-e-sys.md) | Yes | Display mode of hidden albums. |
+| options | [photoAccessHelper.FetchOptions](arkts-medialibrary-photoaccesshelper-fetchoptions-i.md) | No | Options for retrieving the albums. If this parameter is not specified, the albums are retrieved based on the display mode. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;FetchResult&lt;Album&gt;&gt; | Promise used to return the result. |
+| Promise&lt;[FetchResult](arkts-medialibrary-sendablephotoaccesshelper-fetchresult-i.md)&lt;[Album](arkts-medialibrary-sendablephotoaccesshelper-album-i.md)&gt;&gt; | Promise used to return the result. |
 
 **Error codes:**
 
@@ -269,13 +269,13 @@ Converts the **ValuesBucket** record to a **PhotoAsset** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| assetsData | photoAccessHelper.ValuesBucket[] | Yes | Array of asset records. Each element in the array contains the column name and value of the asset. The array can contain a maximum of 500 elements. Each element in the array must contain the following asset column information: **file_id**, **data**, **display_name**, **media_type**, and **subtype**. |
+| assetsData | [photoAccessHelper.ValuesBucket](arkts-medialibrary-photoaccesshelper-valuesbucket-t-sys.md)[] | Yes | Array of asset records. Each element in the array contains the column name and value of the asset. The array can contain a maximum of 500 elements. Each element in the array must contain the following asset column information: **file_id**, **data**, **display_name**, **media_type**, and **subtype**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;PhotoAsset[]&gt; | Promise used to return the PhotoAsset object array (which may be empty). |
+| Promise&lt;[PhotoAsset](arkts-medialibrary-sendablephotoaccesshelper-photoasset-i.md)[]&gt; | Promise used to return the PhotoAsset object array (which may be empty). |
 
 **Error codes:**
 
@@ -332,13 +332,13 @@ Fetch shared photo assets.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | photoAccessHelper.FetchOptions | Yes | Fetch options. |
+| options | [photoAccessHelper.FetchOptions](arkts-medialibrary-photoaccesshelper-fetchoptions-i.md) | Yes | Fetch options. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;SharedPhotoAsset&gt; | Returns the shared photo assets |
+| Array&lt;[SharedPhotoAsset](arkts-medialibrary-sendablephotoaccesshelper-sharedphotoasset-i-sys.md)&gt; | Returns the shared photo assets |
 
 **Error codes:**
 

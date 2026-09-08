@@ -26,7 +26,7 @@ Opens the Certificate Management dialog box to display the certificate details. 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | common.Context | Yes | Context of the application. |
+| context | [common.Context](../../apis-ability-kit/arkts-apis/arkts-ability-common-context-t.md) | Yes | Context of the application. |
 | cert | Uint8Array | Yes | The certificate Data. |
 | property | [CertificateDialogProperty](arkts-devicecertificate-certificatemanagerdialog-certificatedialogproperty-i.md) | Yes | Property of the certificate management dialog box. |
 

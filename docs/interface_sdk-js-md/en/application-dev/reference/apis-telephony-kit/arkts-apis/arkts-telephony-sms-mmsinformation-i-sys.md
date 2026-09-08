@@ -38,7 +38,7 @@ messageType: MessageType
 
 Message type.
 
-**Type:** MessageType
+**Type:** [MessageType](arkts-telephony-sms-messagetype-e-sys.md)
 
 **Since:** 8
 

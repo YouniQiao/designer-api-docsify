@@ -12,7 +12,7 @@ import { media } from '@kit.MediaKit';
 function createVideoRecorder(callback: AsyncCallback<VideoRecorder>): void
 ```
 
-该接口自API version 9起停止维护，建议使用AVRecorder。创建视频录制实例。
+创建视频录制实例（一台设备只允许创建一个录制实例）。使用callback异步回调。
 
 **起始版本：** 9
 
@@ -56,7 +56,7 @@ media.createVideoRecorder((error: BusinessError, video: media.VideoRecorder) => 
 function createVideoRecorder(): Promise<VideoRecorder>
 ```
 
-该接口自API version 9起停止维护，建议使用AVRecorder。创建视频录制实例。
+创建视频录制实例（一台设备只允许创建一个录制实例）。使用Promise异步回调。
 
 **起始版本：** 9
 

@@ -32,17 +32,9 @@ Obtains the type of this MIFARE Ultralight tag.
 
 | Type | Description |
 | --- | --- |
-| tag.MifareUltralightType | Type of the MIFARE Ultralight tag obtained. |
+| [tag.MifareUltralightType](arkts-connectivity-tag-mifareultralighttype-e.md) | Type of the MIFARE Ultralight tag obtained. |
 
 **Examples**
-
-```TypeScript
-import { tag } from '@kit.ConnectivityKit';
-
-// Obtain the correct MIFARE Classic tag by using the tag.TagInfo API in @ohos.nfc.tag.
-let getType : tag.MifareClassicType = mifareClassic.getType();
-console.info("mifareClassic getType: " + getType);
-```
 
 ```TypeScript
 import { tag } from '@kit.ConnectivityKit';

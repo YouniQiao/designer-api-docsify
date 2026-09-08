@@ -6,7 +6,7 @@
 const MAX_ALLOWABLE_REUSE_DURATION: 300000
 ```
 
-Maximum reuse duration of the authentication result, in milliseconds. The value is **300000** (5 minutes). This constant is used to limit the maximum duration for reusing an authentication result, preventing security risks caused by reusing expired authentication results for a number time. It can be used as the maximum value of the **reuseDuration** parameter in [ReuseUnlockResult](arkts-userauthentication-userauth-reuseunlockresult-i.md).
+Maximum reuse duration of the authentication result, in milliseconds. The value is **300000** (5 minutes). This constant is used to limit the maximum duration for reusing an authentication result, preventing security risks caused by reusing expired authentication results for a long time. It can be used as the maximum value of the **reuseDuration** parameter in [ReuseUnlockResult](arkts-userauthentication-userauth-reuseunlockresult-i.md).
 
 **Since:** 12
 

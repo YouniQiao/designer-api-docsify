@@ -71,12 +71,6 @@ AppStorage.setOrCreate('PropA', 47);
 let res: boolean = AppStorage.clear(); // true: There are no subscribers.
 ```
 
-```TypeScript
-let initialData: Record<string, number> = { 'PropA': 47 };
-let storage: LocalStorage = new LocalStorage(initialData);
-let res: boolean = storage.clear(); // true: There are no subscribers.
-```
-
 ## Delete
 
 ```TypeScript
@@ -175,16 +169,6 @@ AppStorage.setOrCreate('PropB', 48);
 let res1: boolean = AppStorage.delete('PropB'); // true: PropB is successfully deleted from AppStorage.
 ```
 
-```TypeScript
-let initialData: Record<string, number> = { 'PropA': 47 };
-let storage: LocalStorage = new LocalStorage(initialData);
-storage.link<number>('PropA');
-let res: boolean = storage.delete('PropA'); // false: PropA still has subscribers.
-let res1: boolean = storage.delete('PropB'); // false: PropB does not exist in LocalStorage.
-storage.setOrCreate('PropB', 48);
-let res2: boolean = storage.delete('PropB'); // true: PropB is successfully deleted from LocalStorage.
-```
-
 ## Get
 
 ```TypeScript
@@ -253,12 +237,6 @@ AppStorage.setOrCreate('PropA', 47);
 let value: number = AppStorage.get('PropA') as number; // 47
 ```
 
-```TypeScript
-let initialData: Record<string, number> = { 'PropA': 47 };
-let storage: LocalStorage = new LocalStorage(initialData);
-let value: number = storage.get('PropA') as number; // 47
-```
-
 ## Has
 
 ```TypeScript
@@ -323,12 +301,6 @@ Checks whether the property corresponding to **propName** exists in [AppStorage]
 
 ```TypeScript
 AppStorage.has('simpleProp');
-```
-
-```TypeScript
-let initialData: Record<string, number> = { 'PropA': 47 };
-let storage: LocalStorage = new LocalStorage(initialData);
-storage.has('PropA'); // true
 ```
 
 ## IsMutable
@@ -420,12 +392,6 @@ AppStorage.setOrCreate('PropB', 48);
 let keys: IterableIterator<string> = AppStorage.keys();
 ```
 
-```TypeScript
-let initialData: Record<string, number> = { 'PropA': 47 };
-let storage: LocalStorage = new LocalStorage(initialData);
-let keys: IterableIterator<string> = storage.keys();
-```
-
 ## Link
 
 ```TypeScript
@@ -504,14 +470,6 @@ AppStorage.setOrCreate('PropA', 47);
 let linkToPropA1: SubscribedAbstractProperty<number> = AppStorage.link('PropA');
 let linkToPropA2: SubscribedAbstractProperty<number> = AppStorage.link('PropA'); // linkToPropA2.get() == 47
 linkToPropA1.set(48); // Two-way synchronization: linkToPropA1.get() == linkToPropA2.get() == 48.
-```
-
-```TypeScript
-let initialData: Record<string, number> = { 'PropA': 47 };
-let storage: LocalStorage = new LocalStorage(initialData);
-let linkToPropA1: SubscribedAbstractProperty<number> = storage.link('PropA');
-let linkToPropA2: SubscribedAbstractProperty<number> = storage.link('PropA'); // linkToPropA2.get() == 47
-linkToPropA1.set(48); // Two-way synchronization: linkToPropA1.get() == linkToPropA2.get() == 48
 ```
 
 ## Prop
@@ -627,14 +585,6 @@ let refToPropA2: AbstractProperty<number> | undefined = AppStorage.ref('PropA');
 refToPropA1?.set(48); // Synchronously modify AppStorage: refToPropA1.get() == refToPropA2.get() == 48.
 ```
 
-```TypeScript
-let initialData: Record<string, number> = { 'PropA': 47 };
-let storage: LocalStorage = new LocalStorage(initialData);
-let refToPropA1: AbstractProperty<number> | undefined = storage.ref('PropA');
-let refToPropA2: AbstractProperty<number> | undefined = storage.ref('PropA'); // refToPropA2.get() == 47
-refToPropA1?.set(48); // refToPropA1.get() == refToPropA2.get() == 48
-```
-
 ## Set
 
 ```TypeScript
@@ -716,13 +666,6 @@ let res: boolean = AppStorage.set('PropA', 47); // true
 let res1: boolean = AppStorage.set('PropB', 47); // false
 ```
 
-```TypeScript
-let initialData: Record<string, number> = { 'PropA': 47 };
-let storage: LocalStorage = new LocalStorage(initialData);
-let res: boolean = storage.set('PropA', 47); // true
-let res1: boolean = storage.set('PropB', 47); // false
-```
-
 ## SetAndLink
 
 ```TypeScript
@@ -802,13 +745,6 @@ Similar to the [link](#link) API, establishes a two-way data binding with the pr
 AppStorage.setOrCreate('PropA', 47);
 let link1: SubscribedAbstractProperty<number> = AppStorage.setAndLink('PropB', 49); // Create PropB with the default value 49.
 let link2: SubscribedAbstractProperty<number> = AppStorage.setAndLink('PropA', 50); // PropA already exists with the value 47.
-```
-
-```TypeScript
-let initialData: Record<string, number> = { 'PropA': 47 };
-let storage: LocalStorage = new LocalStorage(initialData);
-let link1: SubscribedAbstractProperty<number> = storage.setAndLink('PropB', 49); // Create PropB with the default value 49.
-let link2: SubscribedAbstractProperty<number> = storage.setAndLink('PropA', 50); // PropA already exists with the value 47.
 ```
 
 ## SetAndProp
@@ -936,13 +872,6 @@ let ref1: AbstractProperty<number> = AppStorage.setAndRef('PropB', 49); // Creat
 let ref2: AbstractProperty<number> = AppStorage.setAndRef('PropA', 50); // PropA already exists with the value 47.
 ```
 
-```TypeScript
-let initialData: Record<string, number> = { 'PropA': 47 };
-let storage: LocalStorage = new LocalStorage(initialData);
-let ref1: AbstractProperty<number> = storage.setAndRef('PropB', 49); // Create PropB with the default value 49.
-let ref2: AbstractProperty<number> = storage.setAndRef('PropA', 50); // PropA already exists with the value 47.
-```
-
 ## SetOrCreate
 
 ```TypeScript
@@ -1066,12 +995,6 @@ Obtains the number of properties in [AppStorage](../../../ui/state-management/ar
 ```TypeScript
 AppStorage.setOrCreate('PropB', 48);
 let res: number = AppStorage.size(); // 1
-```
-
-```TypeScript
-let initialData: Record<string, number> = { 'PropA': 47 };
-let storage: LocalStorage = new LocalStorage(initialData);
-let res: number = storage.size(); // 1
 ```
 
 ## staticClear

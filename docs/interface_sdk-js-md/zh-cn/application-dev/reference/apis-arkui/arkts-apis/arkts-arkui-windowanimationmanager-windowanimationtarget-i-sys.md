@@ -70,7 +70,7 @@ readonly windowBounds: RRect
 
 /* 动画目标窗口所对应的实际大小。@readonly
 
-**类型：** RRect
+**类型：** [RRect](arkts-arkui-windowanimationmanager-rrect-i-sys.md)
 
 **起始版本：** 9
 

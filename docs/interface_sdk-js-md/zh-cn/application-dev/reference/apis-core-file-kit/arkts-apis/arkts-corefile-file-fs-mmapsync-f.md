@@ -61,14 +61,3 @@ declare function mmapSync(file: number | File, mode: MappingMode, offset: number
 | 13900038 | Value too large for defined data type |
 | 13900050 | Internal resource error |
 | 13900056 | Mmap does not support mapping this file |
-
-**示例**
-
-```TypeScript
-let filePath = pathDir + "/test.txt";
-let file = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE | fileIo.OpenMode.CREATE);
-let mapping = fileIo.mmapSync(file, fileIo.MappingMode.READ_WRITE, 0, 1024);
-console.info("Succeeded in mmapSync.");
-mapping.unmapSync();
-fileIo.closeSync(file);
-```

@@ -1,11 +1,11 @@
 # LongPressGestureInterface
 
-**LongPressGesture** is used to trigger a number press gesture. This gesture requires one or more fingers to be held down for a specified duration, which is 500 ms by default and can be adjusted using the **duration** parameter.
+**LongPressGesture** is used to trigger a long press gesture. This gesture requires one or more fingers to be held down for a specified duration, which is 500 ms by default and can be adjusted using the **duration** parameter.
 
 > **NOTE：**
 > 
-> Since API version 18, on some devices, the system's two-finger number press gesture may take precedence, causing
-> the application's two-finger number press gesture to be ineffective.
+> Since API version 18, on some devices, the system's two-finger long press gesture may take precedence, causing
+> the application's two-finger long press gesture to be ineffective.
 
 **Inheritance/Implementation:** LongPressGestureInterface extends GestureInterface<LongPressGestureInterface>
 
@@ -24,13 +24,13 @@
 (value?: { fingers?: number; repeat?: boolean; duration?: number }): LongPressGestureInterface
 ```
 
-Creates a number press gesture. Inherits from [GestureInterface&lt;T&gt;](arkts-arkui-gestureinterface-i.md).
+Creates a long press gesture. Inherits from [GestureInterface&lt;T&gt;](arkts-arkui-gestureinterface-i.md).
 
-In components that support drag actions by default, such as **Text**, **TextInput**, **TextArea**, **HyperLink**, **Image**, and **RichEditor**, the number press gesture may conflict with the drag action. If this occurs, the event priority is determined as follows:
+In components that support drag actions by default, such as **Text**, **TextInput**, **TextArea**, **HyperLink**, **Image**, and **RichEditor**, the long press gesture may conflict with the drag action. If this occurs, the event priority is determined as follows:
 
-If the number press duration is less than 500 milliseconds, the system prioritizes the number press event over the drag event.
+If the long press duration is less than 500 milliseconds, the system prioritizes the long press event over the drag event.
 
-If the number press duration reaches or exceeds 500 milliseconds, the system prioritizes the drag event over the number press event.
+If the long press duration reaches or exceeds 500 milliseconds, the system prioritizes the drag event over the long press event.
 
 **Since:** 7
 
@@ -42,7 +42,7 @@ If the number press duration reaches or exceeds 500 milliseconds, the system pri
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | { fingers?: number; repeat?: boolean; duration?: number } | No | Parameters for the number press gesture.     - **fingers**: minimum number of fingers to trigger a number press gesture. The value ranges from 1 to 10.    Default value: **1**.     - **repeat**: whether to continuously trigger the event callback. The value **true** means to continuously trigger the event callback, and **false** means the opposite.   Default value: **false**.     - **duration**: minimum hold-down time, in ms.   Default value: **500**. |
+| value | { fingers?: number; repeat?: boolean; duration?: number } | No | Parameters for the long press gesture.     - **fingers**: minimum number of fingers to trigger a long press gesture. The value ranges from 1 to 10.    Default value: **1**.     - **repeat**: whether to continuously trigger the event callback. The value **true** means to continuously trigger the event callback, and **false** means the opposite.   Default value: **false**.     - **duration**: minimum hold-down time, in ms.   Default value: **500**. |
 
 **Return value:**
 
@@ -56,13 +56,13 @@ If the number press duration reaches or exceeds 500 milliseconds, the system pri
 (options?: LongPressGestureHandlerOptions): LongPressGestureInterface
 ```
 
-Creates a number press gesture. Compared with LongPressGesture)}, this API adds the **isFingerCountLimited** parameter to **options**, which determines whether to enforce the exact number of fingers touching the screen.
+Creates a long press gesture. Compared with LongPressGesture)}, this API adds the **isFingerCountLimited** parameter to **options**, which determines whether to enforce the exact number of fingers touching the screen.
 
-In components that support drag actions by default, such as **Text**, **TextInput**, **TextArea**, **HyperLink**, **Image**, and **RichEditor**, the number press gesture may conflict with the drag action. If this occurs, the event priority is determined as follows:
+In components that support drag actions by default, such as **Text**, **TextInput**, **TextArea**, **HyperLink**, **Image**, and **RichEditor**, the long press gesture may conflict with the drag action. If this occurs, the event priority is determined as follows:
 
-If the number press duration is less than 500 milliseconds, the system prioritizes the number press event over the drag event.
+If the long press duration is less than 500 milliseconds, the system prioritizes the long press event over the drag event.
 
-If the number press duration reaches or exceeds 500 milliseconds, the system prioritizes the drag event over the number press event.
+If the long press duration reaches or exceeds 500 milliseconds, the system prioritizes the drag event over the long press event.
 
 **Since:** 15
 
@@ -76,7 +76,7 @@ If the number press duration reaches or exceeds 500 milliseconds, the system pri
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [LongPressGestureHandlerOptions](arkts-arkui-longpressgesturehandleroptions-i.md) | No | Parameters of the number press gesture handler. |
+| options | [LongPressGestureHandlerOptions](arkts-arkui-longpressgesturehandleroptions-i.md) | No | Parameters of the long press gesture handler. |
 
 **Return value:**
 
@@ -90,7 +90,7 @@ If the number press duration reaches or exceeds 500 milliseconds, the system pri
 onAction(event: (event: GestureEvent) => void): LongPressGestureInterface
 ```
 
-Registers the callback for successful number press gesture recognition.
+Registers the callback for successful long press gesture recognition.
 
 **Since:** 7
 
@@ -102,7 +102,7 @@ Registers the callback for successful number press gesture recognition.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | (event: GestureEvent) =&gt; void | Yes | Callback for successful number press gesture recognition. |
+| event | (event: GestureEvent) =&gt; void | Yes | Callback for successful long press gesture recognition. |
 
 **Return value:**
 
@@ -116,7 +116,7 @@ Registers the callback for successful number press gesture recognition.
 onActionCancel(event: () => void): LongPressGestureInterface
 ```
 
-Registers the callback for number press gesture cancellation. This callback is triggered when a touch cancellation event occurs after successful number press gesture recognition. No gesture event information is returned.
+Registers the callback for long press gesture cancellation. This callback is triggered when a touch cancellation event occurs after successful long press gesture recognition. No gesture event information is returned.
 
 **Since:** 7
 
@@ -128,7 +128,7 @@ Registers the callback for number press gesture cancellation. This callback is t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | () =&gt; void | Yes | Callback for number press gesture cancellation. |
+| event | () =&gt; void | Yes | Callback for long press gesture cancellation. |
 
 **Return value:**
 
@@ -142,7 +142,7 @@ Registers the callback for number press gesture cancellation. This callback is t
 onActionCancel(event: Callback<GestureEvent>): LongPressGestureInterface
 ```
 
-Registers the callback for number press gesture cancellation. This callback is triggered when a touch cancellation event occurs after successful number press gesture recognition. Gesture event information is returned.
+Registers the callback for long press gesture cancellation. This callback is triggered when a touch cancellation event occurs after successful long press gesture recognition. Gesture event information is returned.
 
 **Since:** 18
 
@@ -156,7 +156,7 @@ Registers the callback for number press gesture cancellation. This callback is t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | Callback&lt;[GestureEvent](arkts-arkui-gestureevent-i.md)&gt; | Yes | Callback for number press gesture cancellation. |
+| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;[GestureEvent](arkts-arkui-gestureevent-i.md)&gt; | Yes | Callback for long press gesture cancellation. |
 
 **Return value:**
 
@@ -170,7 +170,7 @@ Registers the callback for number press gesture cancellation. This callback is t
 onActionEnd(event: (event: GestureEvent) => void): LongPressGestureInterface
 ```
 
-Registers the callback for number press gesture completion. This callback is triggered when all fingers are lifted after successful recognition.
+Registers the callback for long press gesture completion. This callback is triggered when all fingers are lifted after successful recognition.
 
 **Since:** 7
 
@@ -182,7 +182,7 @@ Registers the callback for number press gesture completion. This callback is tri
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | (event: GestureEvent) =&gt; void | Yes | Callback for number press gesture completion. |
+| event | (event: GestureEvent) =&gt; void | Yes | Callback for long press gesture completion. |
 
 **Return value:**
 

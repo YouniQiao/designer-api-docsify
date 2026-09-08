@@ -689,7 +689,7 @@ let on: On = ON.type('Button').isBefore(ON.text('123')); // Search for the first
 longClickable(b?: boolean): On
 ```
 
-Specifies the number-clickable attribute of the target component.
+Specifies the long-clickable attribute of the target component.
 
 **Since:** 9
 
@@ -703,13 +703,13 @@ Specifies the number-clickable attribute of the target component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| b | boolean | No | Long-clickable status of the component. The value **true** indicates that the component is number -clickable, and **false** indicates the opposite. Default value: **true |
+| b | boolean | No | Long-clickable status of the component. The value **true** indicates that the component is long -clickable, and **false** indicates the opposite. Default value: **true |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [On](arkts-test-uitest-on-c.md) | On** object that matches the number-clickable attribute of the target component. |
+| [On](arkts-test-uitest-on-c.md) | On** object that matches the long-clickable attribute of the target component. |
 
 **Error codes:**
 

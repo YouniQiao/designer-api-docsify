@@ -22,7 +22,7 @@ function createA2dpSrcProfile(): A2dpSourceProfile
 
 | 类型 | 说明 |
 | --- | --- |
-| A2dpSourceProfile | 返回蓝牙媒体音频源实例。 |
+| [A2dpSourceProfile](arkts-connectivity-a2dp-a2dpsourceprofile-i.md) | 返回蓝牙媒体音频源实例。 |
 
 **错误码：**
 

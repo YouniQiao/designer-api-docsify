@@ -32,7 +32,7 @@ function getPixelMap(wallpaperType: WallpaperType, callback: AsyncCallback<image
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | wallpaperType | [WallpaperType](arkts-basicservices-wallpaper-wallpapertype-e.md) | 是 | 壁纸类型。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;image.PixelMap&gt; | 是 | 回调函数。当获取壁纸图片的像素图对象成功，err为undefined，data为获取到的像素图对象；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)&gt; | 是 | 回调函数。当获取壁纸图片的像素图对象成功，err为undefined，data为获取到的像素图对象；否则为错误对象。 |
 
 **示例**
 
@@ -81,7 +81,7 @@ function getPixelMap(wallpaperType: WallpaperType): Promise<image.PixelMap>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;image.PixelMap&gt; | Promise对象，返回壁纸图片的像素图对象。 |
+| Promise&lt;[image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)&gt; | Promise对象，返回壁纸图片的像素图对象。 |
 
 **示例**
 

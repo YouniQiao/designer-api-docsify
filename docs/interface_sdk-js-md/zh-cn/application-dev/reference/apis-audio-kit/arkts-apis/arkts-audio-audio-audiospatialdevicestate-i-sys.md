@@ -46,21 +46,6 @@ isHeadTrackingSupported: boolean
 
 **系统接口：** 此接口为系统接口。
 
-**示例**
-
-```TypeScript
-import { audio } from '@kit.AudioKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let isHeadTrackingSupported: boolean = audioSpatializationManager.isHeadTrackingSupported();
-  console.info(`AudioSpatializationManager isHeadTrackingSupported: ${isHeadTrackingSupported}`);
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`ERROR: ${error}`);
-}
-```
-
 ## isSpatializationSupported
 
 ```TypeScript
@@ -77,20 +62,6 @@ isSpatializationSupported: boolean
 
 **系统接口：** 此接口为系统接口。
 
-**示例**
-
-```TypeScript
-import { audio } from '@kit.AudioKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-try {
-  let isSpatializationSupported: boolean = audioSpatializationManager.isSpatializationSupported();
-  console.info(`AudioSpatializationManager isSpatializationSupported: ${isSpatializationSupported}`);
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`ERROR: ${error}`);
-}
-```
-
 ## spatialDeviceType
 
 ```TypeScript
@@ -106,16 +77,3 @@ spatialDeviceType: AudioSpatialDeviceType
 **系统能力：** SystemCapability.Multimedia.Audio.Spatialization
 
 **系统接口：** 此接口为系统接口。
-
-**示例**
-
-```TypeScript
-import { audio } from '@kit.AudioKit';
-
-let spatialDeviceState: audio.AudioSpatialDeviceState = {
-  address: "123",
-  isSpatializationSupported: true,
-  isHeadTrackingSupported: true,
-  spatialDeviceType: audio.AudioSpatialDeviceType.SPATIAL_DEVICE_TYPE_IN_EAR_HEADPHONE
-};
-```

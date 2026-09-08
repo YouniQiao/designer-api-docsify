@@ -613,7 +613,7 @@ console.info("result = " + result);
 readDoubleBE(offset?: number): number
 ```
 
-Reads a 64-bit, big-endian, number-precision floating-point number from this **Buffer** object at the specified offset.
+Reads a 64-bit, big-endian, double-precision floating-point number from this **Buffer** object at the specified offset.
 
 **Since:** 9
 
@@ -659,7 +659,7 @@ console.info("result = " + result);
 readDoubleLE(offset?: number): number
 ```
 
-Reads a 64-bit, little-endian, number-precision floating-point number from this **Buffer** object at the specified offset.
+Reads a 64-bit, little-endian, double-precision floating-point number from this **Buffer** object at the specified offset.
 
 **Since:** 9
 
@@ -1954,7 +1954,7 @@ console.info("result = " + result);
 writeDoubleBE(value: number, offset?: number): number
 ```
 
-Writes a 64-bit, big-endian, number-precision floating-point number to this **Buffer** object at the specified offset.
+Writes a 64-bit, big-endian, double-precision floating-point number to this **Buffer** object at the specified offset.
 
 **Since:** 9
 
@@ -1998,7 +1998,7 @@ console.info("result = " + result);
 writeDoubleLE(value: number, offset?: number): number
 ```
 
-Writes a 64-bit, little-endian, number-precision floating-point number to this **Buffer** object at the specified offset.
+Writes a 64-bit, little-endian, double-precision floating-point number to this **Buffer** object at the specified offset.
 
 **Since:** 9
 

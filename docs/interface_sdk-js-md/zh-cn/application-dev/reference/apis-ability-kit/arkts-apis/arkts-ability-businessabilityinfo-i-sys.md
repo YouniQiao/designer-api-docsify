@@ -48,7 +48,7 @@ readonly businessType: businessAbilityRouter.BusinessType
 
 标识枚举业务类型。
 
-**类型：** businessAbilityRouter.BusinessType
+**类型：** [businessAbilityRouter.BusinessType](arkts-ability-businessabilityrouter-businesstype-e-sys.md)
 
 **起始版本：** 10
 

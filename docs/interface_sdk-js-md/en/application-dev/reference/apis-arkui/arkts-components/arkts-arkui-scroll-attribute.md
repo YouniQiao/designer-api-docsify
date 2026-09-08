@@ -120,7 +120,7 @@ Sets the friction coefficient. It applies only to gestures in the scrolling area
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number \| Resource | Yes | Friction coefficient. Default value: &lt;em&gt;0.9&lt;/em&gt; for wearable devices and &lt;em&gt;0.6&lt;/em&gt; for non-wearable devices Since API version 11, the default value for non-wearable devices is &lt;em&gt;0.7&lt;/em&gt;. Since API version 12, the default value for non-wearable devices is &lt;em&gt;0.75&lt;/em&gt;. |
+| value | number \| [Resource](../arkts-apis/arkts-arkui-resource-t.md) | Yes | Friction coefficient. Default value: &lt;em&gt;0.9&lt;/em&gt; for wearable devices and &lt;em&gt;0.6&lt;/em&gt; for non-wearable devices Since API version 11, the default value for non-wearable devices is &lt;em&gt;0.7&lt;/em&gt;. Since API version 12, the default value for non-wearable devices is &lt;em&gt;0.75&lt;/em&gt;. |
 
 ## initialOffset
 
@@ -545,7 +545,7 @@ Sets the scrollbar color.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | Color \| number \| string | Yes | Scrollbar color.Default value: &lt;em&gt;'\#182431'&lt;/em&gt; (40% opacity) |
+| color | [Color](../arkts-apis/arkts-arkui-color-e.md) \| number \| string | Yes | Scrollbar color.Default value: &lt;em&gt;'\#182431'&lt;/em&gt; (40% opacity) |
 
 ## scrollBarColor
 
@@ -567,7 +567,7 @@ Sets the scrollbar color.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | Color \| number \| string \| Resource | Yes | Scrollbar color. Default value: &lt;em&gt;'\#182431'&lt;/em&gt; (40% opacity) A number value indicates a HEX color in RGB or ARGB format, for example, &lt;em&gt;0xffffff&lt;/em&gt;. A string value indicates a color in RGB or ARGB format, for example, &lt;em&gt;'#ffffff'&lt;/em&gt;. |
+| color | [Color](../arkts-apis/arkts-arkui-color-e.md) \| number \| string \| [Resource](../arkts-apis/arkts-arkui-resource-t.md) | Yes | Scrollbar color. Default value: &lt;em&gt;'\#182431'&lt;/em&gt; (40% opacity) A number value indicates a HEX color in RGB or ARGB format, for example, &lt;em&gt;0xffffff&lt;/em&gt;. A string value indicates a color in RGB or ARGB format, for example, &lt;em&gt;'#ffffff'&lt;/em&gt;. |
 
 ## scrollBarWidth
 
@@ -609,7 +609,7 @@ Sets the scrollbar width.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number \| string \| Resource | Yes | Scrollbar width. Unit: vp Default value: &lt;em&gt;4&lt;/em&gt; If this parameter is set to a value less than or equal to 0, the default value is used. The value &lt;em&gt;0&lt;/em&gt; means not to show the scrollbar. |
+| value | number \| string \| [Resource](../arkts-apis/arkts-arkui-resource-t.md) | Yes | Scrollbar width. Unit: vp Default value: &lt;em&gt;4&lt;/em&gt; If this parameter is set to a value less than or equal to 0, the default value is used. The value &lt;em&gt;0&lt;/em&gt; means not to show the scrollbar. |
 
 ## scrollSnap
 

@@ -112,6 +112,8 @@ export default {
 ```
 
 > NOTE
+> 
+> Directly using router can lead to the issue of [ambiguous UI context](../../../ui/arkts-global-interface.md#ambiguous-ui-context). To avoid this, obtain a [UIContext](arkts-apis-uicontext-uicontext.md) instance using getUIContext, and then obtain the associated router object using [getRouter](arkts-arkui-arkui-uicontext-uicontext-c.md#getrouter).
 
 ```TypeScript
 // Navigate to the target page through router.pushUrl with the params parameter carried.
@@ -231,6 +233,7 @@ struct Second {
 ```
 
 This example shows the redirection features of the router.replace and router.replaceUrl APIs in the web-like paradigm.
+The following describes the tree structure:
 
 ```TypeScript
 pages

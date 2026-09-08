@@ -20,7 +20,7 @@ dst:Array<Point>
 
 Coordinates of the destination point.
 
-**Type:** Array&lt;Point&gt;
+**Type:** Array&lt;[Point](arkts-arkui-matrix4-point-i.md)&gt;
 
 **Since:** 12
 
@@ -86,7 +86,7 @@ src: Array<Point>
 
 Coordinates of the source point.
 
-**Type:** Array&lt;Point&gt;
+**Type:** Array&lt;[Point](arkts-arkui-matrix4-point-i.md)&gt;
 
 **Since:** 12
 

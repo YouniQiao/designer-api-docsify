@@ -42,7 +42,7 @@ majorClass: MajorClass
 
 Major classes of Bluetooth devices.
 
-**Type:** MajorClass
+**Type:** [MajorClass](arkts-connectivity-bluetoothmanager-majorclass-e.md)
 
 **Since:** 9
 
@@ -60,7 +60,7 @@ majorMinorClass: MajorMinorClass
 
 Major and minor classes of Bluetooth devices.
 
-**Type:** MajorMinorClass
+**Type:** [MajorMinorClass](arkts-connectivity-bluetoothmanager-majorminorclass-e.md)
 
 **Since:** 9
 

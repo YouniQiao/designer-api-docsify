@@ -22,7 +22,7 @@ function getDeleteSqlInfo(predicates: RdbPredicates):SqlInfo
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| predicates | RdbPredicates | 是 | 与指定字段匹配的谓词。 |
+| predicates | [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | 是 | 与指定字段匹配的谓词。 |
 
 **返回值：**
 

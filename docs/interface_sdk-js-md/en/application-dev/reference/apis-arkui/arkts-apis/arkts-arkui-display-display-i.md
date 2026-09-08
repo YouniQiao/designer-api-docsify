@@ -36,7 +36,7 @@ This API can be properly called on devices running OpenHarmony 7.0.0 or later. F
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Rect&gt; | Promise used to return the available area, which is a rectangle. |
+| Promise&lt;[Rect](arkts-arkui-display-rect-i.md)&gt; | Promise used to return the available area, which is a rectangle. |
 
 **Error codes:**
 
@@ -281,7 +281,7 @@ This API can be properly called on devices running OpenHarmony 7.0.0 or later. F
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'availableAreaChange' | Yes | Event type. The event **'availableAreaChange'** is triggered when the available area of the display changes. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Rect&gt; | No | Callback used to return the new available area. If this parameter is not specified, all subscriptions to the specified event are canceled. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Rect](arkts-arkui-display-rect-i.md)&gt; | No | Callback used to return the new available area. If this parameter is not specified, all subscriptions to the specified event are canceled. |
 
 **Error codes:**
 
@@ -328,7 +328,7 @@ This API can be properly called on devices running OpenHarmony 7.0.0 or later. F
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'availableAreaChange' | Yes | Event type. The event **'availableAreaChange'** is triggered when the available area of the display changes. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Rect&gt; | Yes | Callback used to return the new available area. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Rect](arkts-arkui-display-rect-i.md)&gt; | Yes | Callback used to return the new available area. |
 
 **Error codes:**
 
@@ -414,7 +414,7 @@ colorSpaces: Array<colorSpaceManager.ColorSpace>
 
 All color spaces supported by the display.
 
-**Type:** Array&lt;colorSpaceManager.ColorSpace&gt;
+**Type:** Array&lt;[colorSpaceManager.ColorSpace](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-colorspacemanager-colorspace-e.md)&gt;
 
 **Since:** 11
 
@@ -462,7 +462,7 @@ hdrFormats: Array<hdrCapability.HDRFormat>
 
 All HDR formats supported by the display.
 
-**Type:** Array&lt;hdrCapability.HDRFormat&gt;
+**Type:** Array&lt;[hdrCapability.HDRFormat](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-hdrcapability-hdrformat-e.md)&gt;
 
 **Since:** 11
 
@@ -526,7 +526,7 @@ orientation: Orientation
 
 Orientation of the display.
 
-**Type:** Orientation
+**Type:** [Orientation](arkts-arkui-display-orientation-e.md)
 
 **Since:** 10
 

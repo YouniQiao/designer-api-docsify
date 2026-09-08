@@ -26,7 +26,7 @@ Obtains all the shared bundle information. This API uses an asynchronous callbac
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;SharedBundleInfo&gt;&gt; | Yes | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md) used to return the result. If the operation is successful, **err** is **null** and **data** is all the shared bundle information obtained. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[SharedBundleInfo](arkts-ability-bundlemanager-sharedbundleinfo-t-sys.md)&gt;&gt; | Yes | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md) used to return the result. If the operation is successful, **err** is **null** and **data** is all the shared bundle information obtained. |
 
 **Error codes:**
 
@@ -77,7 +77,7 @@ Obtains all the shared bundle information. This API uses a promise to return the
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;SharedBundleInfo&gt;&gt; | Promise used to return an array of the shared bundle information obtained. |
+| Promise&lt;Array&lt;[SharedBundleInfo](arkts-ability-bundlemanager-sharedbundleinfo-t-sys.md)&gt;&gt; | Promise used to return an array of the shared bundle information obtained. |
 
 **Error codes:**
 

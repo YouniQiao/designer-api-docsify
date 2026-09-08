@@ -246,7 +246,7 @@ dynamicRangeType: DynamicRangeType
 
 Dynamic range type of the media asset.
 
-**Type:** DynamicRangeType
+**Type:** [DynamicRangeType](arkts-medialibrary-photoaccesshelper-dynamicrangetype-e.md)
 
 **Since:** 13
 
@@ -342,7 +342,7 @@ mediaType: PhotoType
 
 Media type of the media asset.
 
-**Type:** PhotoType
+**Type:** [PhotoType](arkts-medialibrary-photoaccesshelper-phototype-e.md)
 
 **Since:** 13
 
@@ -358,7 +358,7 @@ movingPhotoEffectMode: MovingPhotoEffectMode
 
 Effect of the moving photo.
 
-**Type:** MovingPhotoEffectMode
+**Type:** [MovingPhotoEffectMode](arkts-medialibrary-photoaccesshelper-movingphotoeffectmode-e-sys.md)
 
 **Since:** 13
 
@@ -406,7 +406,7 @@ position: PositionType
 
 Location of the media asset.
 
-**Type:** PositionType
+**Type:** [PositionType](arkts-medialibrary-photoaccesshelper-positiontype-e.md)
 
 **Since:** 13
 
@@ -438,7 +438,7 @@ subtype: PhotoSubtype
 
 Subtype of the media asset.
 
-**Type:** PhotoSubtype
+**Type:** [PhotoSubtype](arkts-medialibrary-photoaccesshelper-photosubtype-e.md)
 
 **Since:** 13
 
@@ -502,7 +502,7 @@ thumbnailVisible: ThumbnailVisibility
 
 Whether the thumbnail of the media asset is visible.
 
-**Type:** ThumbnailVisibility
+**Type:** [ThumbnailVisibility](arkts-medialibrary-photoaccesshelper-thumbnailvisibility-e-sys.md)
 
 **Since:** 14
 

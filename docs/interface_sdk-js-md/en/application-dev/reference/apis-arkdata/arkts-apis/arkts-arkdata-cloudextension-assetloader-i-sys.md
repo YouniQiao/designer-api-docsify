@@ -41,7 +41,7 @@ Downloads assets. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;Result&lt;[CloudAsset](arkts-arkdata-cloudextension-cloudasset-i-sys.md)&gt;&gt;&gt; | Promise used to return the asset download result, including the asset IDs and asset hash values. |
+| Promise&lt;Array&lt;[Result](arkts-arkdata-relationalstore-result-i.md)&lt;[CloudAsset](arkts-arkdata-cloudextension-cloudasset-i-sys.md)&gt;&gt;&gt; | Promise used to return the asset download result, including the asset IDs and asset hash values. |
 
 **Examples**
 
@@ -82,7 +82,7 @@ Uploads assets. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;Result&lt;[CloudAsset](arkts-arkdata-cloudextension-cloudasset-i-sys.md)&gt;&gt;&gt; | Promise used to return the asset upload result, including the asset IDs and asset hash values. |
+| Promise&lt;Array&lt;[Result](arkts-arkdata-relationalstore-result-i.md)&lt;[CloudAsset](arkts-arkdata-cloudextension-cloudasset-i-sys.md)&gt;&gt;&gt; | Promise used to return the asset upload result, including the asset IDs and asset hash values. |
 
 **Examples**
 

@@ -78,7 +78,7 @@ Removes a **Preferences** instance from the cache. This API returns the result s
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | context | Context | Yes | Application context.For details about the application context of the FA model, see Context.For details about the application context of the stage model, see [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md). |
-| options | Options | Yes | Configuration options of the **Preferences** instance. |
+| options | [Options](arkts-arkdata-preferences-options-i.md) | Yes | Configuration options of the **Preferences** instance. |
 
 **Error codes:**
 

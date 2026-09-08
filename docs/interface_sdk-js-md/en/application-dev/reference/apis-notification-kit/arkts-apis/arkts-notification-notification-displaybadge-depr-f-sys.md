@@ -33,24 +33,6 @@ Sets whether to enable the notification badge for a specified application. This 
 | enable | boolean | Yes | Whether to enable notification. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
-**Examples**
-
-```TypeScript
-import Base from '@ohos.base';
-
-let displayBadgeCallback = (err: Base.BusinessError) => {
-  if (err) {
-    console.error("displayBadge failed " + JSON.stringify(err));
-  } else {
-    console.info("displayBadge success");
-  }
-}
-let bundle: Notification.BundleOption = {
-  bundle: "bundleName1",
-};
-Notification.displayBadge(bundle, false, displayBadgeCallback);
-```
-
 
 ## displayBadge
 
@@ -84,18 +66,3 @@ Sets whether to enable the notification badge for a specified application. This 
 | Type | Description |
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
-
-**Examples**
-
-```TypeScript
-import Base from '@ohos.base';
-
-let bundle: Notification.BundleOption = {
-  bundle: "bundleName1",
-};
-Notification.displayBadge(bundle, false).then(() => {
-  console.info("displayBadge success");
-}).catch((err: Base.BusinessError) => {
-  console.error(`displayBadge failed, code is ${err}`);
-});
-```

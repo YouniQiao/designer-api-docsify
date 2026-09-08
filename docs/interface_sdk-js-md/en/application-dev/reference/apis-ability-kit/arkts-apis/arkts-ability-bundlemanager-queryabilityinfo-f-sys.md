@@ -30,7 +30,7 @@ No permission is required for obtaining the caller's own information.
 | --- | --- | --- | --- |
 | want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want containing the bundle name to query. |
 | abilityFlags | number | Yes | Type of the ability information to obtain. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;AbilityInfo&gt;&gt; | Yes | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md) used to return the result. If the operation is successful, **err** is **null** and **data** is the array of ability information obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[AbilityInfo](arkts-ability-bundlemanager-abilityinfo-t.md)&gt;&gt; | Yes | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md) used to return the result. If the operation is successful, **err** is **null** and **data** is the array of ability information obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -98,7 +98,7 @@ No permission is required for obtaining the caller's own information.
 | want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want containing the bundle name to query. |
 | abilityFlags | number | Yes | Type of the ability information to obtain. |
 | userId | number | Yes | User ID, which can be obtained by calling [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid). |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;AbilityInfo&gt;&gt; | Yes | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md) used to return the result. If the operation is successful, **err** is **null** and **data** is the array of ability information obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[AbilityInfo](arkts-ability-bundlemanager-abilityinfo-t.md)&gt;&gt; | Yes | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md) used to return the result. If the operation is successful, **err** is **null** and **data** is the array of ability information obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -173,7 +173,7 @@ No permission is required for obtaining the caller's own information.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;AbilityInfo&gt;&gt; | Promise used to return the array of ability information obtained. |
+| Promise&lt;Array&lt;[AbilityInfo](arkts-ability-bundlemanager-abilityinfo-t.md)&gt;&gt; | Promise used to return the array of ability information obtained. |
 
 **Error codes:**
 
@@ -270,7 +270,7 @@ No permission is required for obtaining the caller's own information.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;AbilityInfo&gt;&gt; | Promise used to return an array of [AbilityInfo]{ |
+| Promise&lt;Array&lt;[AbilityInfo](arkts-ability-bundlemanager-abilityinfo-t.md)&gt;&gt; | Promise used to return an array of [AbilityInfo]{ |
 
 **Error codes:**
 

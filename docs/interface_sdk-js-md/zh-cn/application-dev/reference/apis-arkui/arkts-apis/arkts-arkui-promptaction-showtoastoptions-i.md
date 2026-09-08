@@ -40,7 +40,7 @@ backgroundBlurStyle?: BlurStyle
 Toast的背板模糊材质。默认值：从API版本26.0.0开始，为BlurStyle.NONE，API版本26.0.0之前，为BlurStyle.COMPONENT_ULTRA_THICK。  
 **说明：** 设置为BlurStyle.NONE即可关闭背景虚化。当设置了backgroundBlurStyle为非NONE值时，则不要设置backgroundColor，否则颜色显示将不符合预期效果。
 
-**类型：** BlurStyle
+**类型：** [BlurStyle](../arkts-components/arkts-arkui-blurstyle-e.md)
 
 **起始版本：** 12
 
@@ -151,7 +151,7 @@ message: string | Resource
 显示的文本信息。  
 **说明：** 默认字体为'Harmony Sans'，不支持设置其他字体。
 
-**类型：** string \| Resource
+**类型：** string \| [Resource](arkts-arkui-resource-t.md)
 
 **起始版本：** 9
 

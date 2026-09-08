@@ -26,7 +26,7 @@ function getScanInfoList(): Array<WifiScanInfo>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;WifiScanInfo&gt; | 返回扫描到的热点列表。如果应用申请了ohos.permission.GET_WIFI_PEERS_MAC权限，则返回结果中的bssid为真实设备地址，否则为随机设备地址。 |
+| Array&lt;[WifiScanInfo](arkts-connectivity-wifimanager-wifiscaninfo-i.md)&gt; | 返回扫描到的热点列表。如果应用申请了ohos.permission.GET_WIFI_PEERS_MAC权限，则返回结果中的bssid为真实设备地址，否则为随机设备地址。 |
 
 **错误码：**
 

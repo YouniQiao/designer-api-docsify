@@ -69,7 +69,7 @@ operationInfo: OperationInfo[]
 
 操作信息列表。
 
-**类型：** OperationInfo[]
+**类型：** [OperationInfo](arkts-ability-abilitytoolaccessctrl-operationinfo-i-sys.md)[]
 
 **起始版本：** 26.0.0
 

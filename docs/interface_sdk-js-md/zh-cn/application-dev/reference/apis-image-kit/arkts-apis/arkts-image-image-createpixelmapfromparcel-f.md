@@ -22,13 +22,13 @@ Creates a PixelMap object based on MessageSequence parameter.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| sequence | rpc.MessageSequence | 是 | rpc.MessageSequence parameter. |
+| sequence | [rpc.MessageSequence](../../apis-ipc-kit/arkts-apis/arkts-ipc-rpc-messagesequence-c.md) | 是 | rpc.MessageSequence parameter. |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| PixelMap | Returns the instance if the operation is successful;Otherwise, an exception will be thrown. |
+| [PixelMap](arkts-image-image-pixelmap-i.md) | Returns the instance if the operation is successful;Otherwise, an exception will be thrown. |
 
 **错误码：**
 

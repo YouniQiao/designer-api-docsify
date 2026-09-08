@@ -20,7 +20,7 @@ connectionState: constant.ProfileConnectionState
 
 表示设备的蓝牙连接状态。
 
-**类型：** constant.ProfileConnectionState
+**类型：** [constant.ProfileConnectionState](../../apis-connectivity-kit/arkts-apis/arkts-connectivity-constant-profileconnectionstate-e.md)
 
 **起始版本：** 12
 
@@ -52,7 +52,7 @@ state: access.BluetoothState
 
 表示设备的蓝牙状态。
 
-**类型：** access.BluetoothState
+**类型：** [access.BluetoothState](../../apis-connectivity-kit/arkts-apis/arkts-connectivity-access-bluetoothstate-e.md)
 
 **起始版本：** 12
 

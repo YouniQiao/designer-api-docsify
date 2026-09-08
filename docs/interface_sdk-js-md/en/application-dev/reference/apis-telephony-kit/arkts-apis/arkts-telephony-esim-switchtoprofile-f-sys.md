@@ -36,7 +36,7 @@ Switches to the specified profile. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ResultCode&gt; | Promise used to return the operation result. |
+| Promise&lt;[ResultCode](arkts-telephony-esim-resultcode-e-sys.md)&gt; | Promise used to return the operation result. |
 
 **Error codes:**
 

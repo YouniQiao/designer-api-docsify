@@ -2,7 +2,7 @@
 
 Enumeration type of filter operator.
 
-@enum { number } FilterOperator
+@enum { int } FilterOperator
 
 **Since:** 19
 

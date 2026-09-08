@@ -2,7 +2,7 @@
 
 Enumeration of play state.
 
-@enum { number }
+@enum { int }
 
 **Since:** 23
 

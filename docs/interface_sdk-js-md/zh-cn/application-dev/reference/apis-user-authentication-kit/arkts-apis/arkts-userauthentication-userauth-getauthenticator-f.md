@@ -26,7 +26,7 @@ function getAuthenticator(): Authenticator
 
 | 类型 | 说明 |
 | --- | --- |
-| Authenticator | 认证器对象。 |
+| [Authenticator](arkts-userauthentication-userauth-authenticator-i.md) | 认证器对象。 |
 
 **示例**
 

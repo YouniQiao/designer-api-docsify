@@ -46,16 +46,6 @@ This method unregisters the device and clears the registered callbacks and handl
 
 ```TypeScript
 import { AsyncCallback, BusinessError } from '@kit.BasicServicesKit';
-let server: ble.GattServer = ble.createGattServer();
-try {
-    server.close();
-} catch (err) {
-    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-}
-```
-
-```TypeScript
-import { AsyncCallback, BusinessError } from '@kit.BasicServicesKit';
 try {
     let device: ble.GattClientDevice = ble.createGattClientDevice('XX:XX:XX:XX:XX:XX');
     device.close();
@@ -166,7 +156,7 @@ Get the connection status of a specific device.
 
 | Type | Description |
 | --- | --- |
-| ProfileConnectionState | Connection state. |
+| [ProfileConnectionState](arkts-connectivity-ble-profileconnectionstate-t.md) | Connection state. |
 
 **Error codes:**
 
@@ -430,7 +420,7 @@ Starts discovering services.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;GattService&gt;&gt; | Yes | Callback used to catch the services. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[GattService](arkts-connectivity-ble-gattservice-i.md)&gt;&gt; | Yes | Callback used to catch the services. |
 
 **Error codes:**
 
@@ -497,7 +487,7 @@ Starts discovering services.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;GattService&gt;&gt; | Returns the list of services { |
+| Promise&lt;Array&lt;[GattService](arkts-connectivity-ble-gattservice-i.md)&gt;&gt; | Returns the list of services { |
 
 **Error codes:**
 
@@ -555,7 +545,7 @@ Unsubscribe characteristic value changed event.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'BLECharacteristicChange' | Yes | Type of the characteristic value changed event to listen for. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;BLECharacteristic&gt; | No | Callback used to listen for the characteristic value changed event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[BLECharacteristic](arkts-connectivity-ble-blecharacteristic-i.md)&gt; | No | Callback used to listen for the characteristic value changed event. |
 
 **Error codes:**
 
@@ -749,18 +739,6 @@ Unsubscribe phy updated event.
 function BlePhyCallback(data:ble.PhyValue) {
     console.info(`txPhy: ${data.txPhy}, rxPhy: ${data.rxPhy}`);
 }
-let gattServer: ble.GattServer = ble.createGattServer();
-try {
-    gattServer.offBlePhyUpdate(BlePhyCallback);
-} catch (err) {
-    console.error(`errCode: ${err.code}, errMessage: ${err.message}`);
-}
-```
-
-```TypeScript
-function BlePhyCallback(data:ble.PhyValue) {
-    console.info(`txPhy: ${data.txPhy}, rxPhy: ${data.rxPhy}`);
-}
 let gattClient: ble.GattClientDevice = ble.createGattClientDevice('XX:XX:XX:XX:XX:XX');
 try {
     gattClient.offBlePhyUpdate(BlePhyCallback);
@@ -792,7 +770,7 @@ Subscribe characteristic value changed event.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'BLECharacteristicChange' | Yes | Type of the characteristic value changed event to listen for. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;BLECharacteristic&gt; | Yes | Callback used to listen for the characteristic value changed event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[BLECharacteristic](arkts-connectivity-ble-blecharacteristic-i.md)&gt; | Yes | Callback used to listen for the characteristic value changed event. |
 
 **Error codes:**
 
@@ -997,18 +975,6 @@ Subscribe phy updated event.
 function BlePhyCallback(data:ble.PhyValue) {
     console.info(`txPhy: ${data.txPhy}, rxPhy: ${data.rxPhy}`);
 }
-let gattServer: ble.GattServer = ble.createGattServer();
-try {
-    gattServer.onBlePhyUpdate(BlePhyCallback);
-} catch (err) {
-    console.error(`errCode: ${err.code}, errMessage: ${err.message}`);
-}
-```
-
-```TypeScript
-function BlePhyCallback(data:ble.PhyValue) {
-    console.info(`txPhy: ${data.txPhy}, rxPhy: ${data.rxPhy}`);
-}
 let gattClient: ble.GattClientDevice = ble.createGattClientDevice('XX:XX:XX:XX:XX:XX');
 try {
     gattClient.onBlePhyUpdate(BlePhyCallback);
@@ -1039,8 +1005,8 @@ Reads the characteristic of a BLE peripheral device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| characteristic | BLECharacteristic | Yes | Indicates the characteristic to read. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;BLECharacteristic&gt; | Yes | Callback invoked to return the characteristic value read. |
+| characteristic | [BLECharacteristic](arkts-connectivity-ble-blecharacteristic-i.md) | Yes | Indicates the characteristic to read. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[BLECharacteristic](arkts-connectivity-ble-blecharacteristic-i.md)&gt; | Yes | Callback invoked to return the characteristic value read. |
 
 **Error codes:**
 
@@ -1116,13 +1082,13 @@ Reads the characteristic of a BLE peripheral device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| characteristic | BLECharacteristic | Yes | Indicates the characteristic to read. |
+| characteristic | [BLECharacteristic](arkts-connectivity-ble-blecharacteristic-i.md) | Yes | Indicates the characteristic to read. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;BLECharacteristic&gt; | Promise used to return the characteristic value read. |
+| Promise&lt;[BLECharacteristic](arkts-connectivity-ble-blecharacteristic-i.md)&gt; | Promise used to return the characteristic value read. |
 
 **Error codes:**
 
@@ -1189,8 +1155,8 @@ Reads the descriptor of a BLE peripheral device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| descriptor | BLEDescriptor | Yes | Indicates the descriptor to read. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;BLEDescriptor&gt; | Yes | Callback invoked to return the descriptor read. |
+| descriptor | [BLEDescriptor](arkts-connectivity-ble-bledescriptor-i.md) | Yes | Indicates the descriptor to read. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[BLEDescriptor](arkts-connectivity-ble-bledescriptor-i.md)&gt; | Yes | Callback invoked to return the descriptor read. |
 
 **Error codes:**
 
@@ -1259,13 +1225,13 @@ Reads the descriptor of a BLE peripheral device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| descriptor | BLEDescriptor | Yes | Indicates the descriptor to read. |
+| descriptor | [BLEDescriptor](arkts-connectivity-ble-bledescriptor-i.md) | Yes | Indicates the descriptor to read. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;BLEDescriptor&gt; | Promise used to return the descriptor read. |
+| Promise&lt;[BLEDescriptor](arkts-connectivity-ble-bledescriptor-i.md)&gt; | Promise used to return the descriptor read. |
 
 **Error codes:**
 
@@ -1462,7 +1428,7 @@ Enables or disables indication of a characteristic when value changed.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| characteristic | BLECharacteristic | Yes | Indicates the characteristic to indicate. |
+| characteristic | [BLECharacteristic](arkts-connectivity-ble-blecharacteristic-i.md) | Yes | Indicates the characteristic to indicate. |
 | enable | boolean | Yes | Specifies whether to enable indication of the characteristic. The value `true` indicates that indication is enabled, and the value `false` indicates that indication is disabled. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | the callback of setCharacteristicChangeIndication. |
 
@@ -1530,7 +1496,7 @@ Enables or disables indication of a characteristic when value changed.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| characteristic | BLECharacteristic | Yes | Indicates the characteristic to indicate. |
+| characteristic | [BLECharacteristic](arkts-connectivity-ble-blecharacteristic-i.md) | Yes | Indicates the characteristic to indicate. |
 | enable | boolean | Yes | Specifies whether to enable indication of the characteristic. The value `true` indicates that indication is enabled, and the value `false` indicates that indication is disabled. |
 
 **Return value:**
@@ -1601,7 +1567,7 @@ Enables or disables notification of a characteristic when value changed.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| characteristic | BLECharacteristic | Yes | Indicates the characteristic to indicate. |
+| characteristic | [BLECharacteristic](arkts-connectivity-ble-blecharacteristic-i.md) | Yes | Indicates the characteristic to indicate. |
 | enable | boolean | Yes | Specifies whether to enable indication of the characteristic. The value `true` indicates that notification is enabled, and the value `false` indicates that indication is disabled. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | the callback of setCharacteristicChangeNotification. |
 
@@ -1669,7 +1635,7 @@ Enables or disables indication of a characteristic when value changed.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| characteristic | BLECharacteristic | Yes | Indicates the characteristic to indicate. |
+| characteristic | [BLECharacteristic](arkts-connectivity-ble-blecharacteristic-i.md) | Yes | Indicates the characteristic to indicate. |
 | enable | boolean | Yes | Specifies whether to enable indication of the characteristic. The value `true` indicates that indication is enabled, and the value `false` indicates that indication is disabled. |
 
 **Return value:**
@@ -1844,7 +1810,7 @@ Writes the characteristic of a BLE peripheral device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| characteristic | BLECharacteristic | Yes | Indicates the characteristic to write. |
+| characteristic | [BLECharacteristic](arkts-connectivity-ble-blecharacteristic-i.md) | Yes | Indicates the characteristic to write. |
 | writeType | [GattWriteType](arkts-connectivity-ble-gattwritetype-e.md) | Yes | Write type of the characteristic. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
@@ -1920,7 +1886,7 @@ Writes the characteristic of a BLE peripheral device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| characteristic | BLECharacteristic | Yes | Indicates the characteristic to write. |
+| characteristic | [BLECharacteristic](arkts-connectivity-ble-blecharacteristic-i.md) | Yes | Indicates the characteristic to write. |
 | writeType | [GattWriteType](arkts-connectivity-ble-gattwritetype-e.md) | Yes | Write type of the characteristic. |
 
 **Return value:**
@@ -1995,7 +1961,7 @@ Writes the descriptor of a BLE peripheral device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| descriptor | BLEDescriptor | Yes | Indicates the descriptor to write. |
+| descriptor | [BLEDescriptor](arkts-connectivity-ble-bledescriptor-i.md) | Yes | Indicates the descriptor to write. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
@@ -2064,7 +2030,7 @@ Writes the descriptor of a BLE peripheral device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| descriptor | BLEDescriptor | Yes | Indicates the descriptor to write. |
+| descriptor | [BLEDescriptor](arkts-connectivity-ble-bledescriptor-i.md) | Yes | Indicates the descriptor to write. |
 
 **Return value:**
 

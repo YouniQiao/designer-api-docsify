@@ -34,7 +34,7 @@ aad: DataBlob
 
 Additional authentication data (AAD), which is of 0 to INT_MAX bytes.
 
-**Type:** DataBlob
+**Type:** [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md)
 
 **Since:** 9
 
@@ -54,7 +54,7 @@ Authentication tag, which is of 16 bytes.
 
 When GCM mode is used for encryption, you need to extract the last 16 bytes from the [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) returned by [doFinal()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#dofinal) or [doFinalSync()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#dofinalsync) and use them as **authTag** in **GcmParamsSpec** for [init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init) or [initSync()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#initsync).
 
-**Type:** DataBlob
+**Type:** [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md)
 
 **Since:** 9
 
@@ -72,7 +72,7 @@ iv: DataBlob
 
 IV, which is of 1 to 128 bytes. A 12-byte IV is commonly used.
 
-**Type:** DataBlob
+**Type:** [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md)
 
 **Since:** 9
 

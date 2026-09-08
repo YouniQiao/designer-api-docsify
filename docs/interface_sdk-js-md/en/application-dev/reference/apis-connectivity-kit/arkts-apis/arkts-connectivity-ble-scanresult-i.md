@@ -20,7 +20,7 @@ address?: BluetoothAddress
 
 The address object of a BLE peripheral device, including the address type.
 
-**Type:** BluetoothAddress
+**Type:** [BluetoothAddress](arkts-connectivity-ble-bluetoothaddress-t.md)
 
 **Since:** 23
 

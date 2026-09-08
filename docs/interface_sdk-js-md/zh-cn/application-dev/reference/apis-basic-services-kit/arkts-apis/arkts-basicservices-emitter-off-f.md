@@ -65,12 +65,6 @@ function off(eventId: string): void
 emitter.off('eventId1');
 ```
 
-```TypeScript
-let emitter1: emitter.Emitter = new emitter.Emitter();
-
-emitter1.off('eventId');
-```
-
 
 ## off
 
@@ -145,18 +139,6 @@ let callback: Callback<emitter.EventData> = (eventData: emitter.EventData) => {
 emitter.off('eventId1', callback);
 ```
 
-```TypeScript
-import { Callback } from '@kit.BasicServicesKit';
-
-let emitter1: emitter.Emitter = new emitter.Emitter();
-
-let callback: Callback<emitter.EventData> = (eventData: emitter.EventData) => {
-  console.info(`eventData: ${JSON.stringify(eventData)}`);
-};
-
-emitter1.off('eventId', callback);
-```
-
 
 ## off
 
@@ -206,30 +188,4 @@ let callback: Callback<emitter.GenericEventData<Sample>> = (eventData: emitter.G
 // 取消eventId为"eventId1"的事件回调处理函数，callback对象应使用订阅时的对象
 // 如果该回调处理函数没有被订阅，则不做任何处理
 emitter.off('eventId1', callback);
-```
-
-```TypeScript
-import { Callback } from '@kit.BasicServicesKit';
-
-@Sendable
-class Sample {
-  constructor() {
-    this.count = 100;
-  }
-  printCount() {
-    console.info('Print count : ' + this.count);
-  }
-  count: number;
-}
-
-let emitter1: emitter.Emitter = new emitter.Emitter();
-
-let callback: Callback<emitter.GenericEventData<Sample>> = (eventData: emitter.GenericEventData<Sample>): void => {
-  console.info(`eventData: ${JSON.stringify(eventData?.data)}`);
-  if (eventData?.data instanceof Sample) {
-    eventData?.data?.printCount();
-  }
-};
-
-emitter1.off('eventId', callback);
 ```

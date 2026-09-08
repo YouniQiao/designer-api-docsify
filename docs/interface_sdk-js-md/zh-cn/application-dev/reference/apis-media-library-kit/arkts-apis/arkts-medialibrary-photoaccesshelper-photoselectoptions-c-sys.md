@@ -47,14 +47,3 @@ userId?: number
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
-
-**示例**
-
-```TypeScript
-async function photoPicker() {
-    let picker = new photoAccessHelper.PhotoViewPicker();
-    let option = new photoAccessHelper.PhotoSelectOptions();
-    option.userId = 101;
-    picker.select(option);
-  }
-```

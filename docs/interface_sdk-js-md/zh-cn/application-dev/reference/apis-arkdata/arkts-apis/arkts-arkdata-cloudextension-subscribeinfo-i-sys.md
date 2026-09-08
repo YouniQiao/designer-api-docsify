@@ -45,26 +45,3 @@ subscribe: Record<string, Array<SubscribeId>>
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Server
 
 **系统接口：** 此接口为系统接口。
-
-**示例**
-
-```TypeScript
-let testTime: number = 10;
-class MyCloudService implements cloudExtension.CloudService {
-  constructor() {
-  }
-  // ...
-  async subscribe(subInfo: Record<string, Array<cloudExtension.Database>>, expirationTime: number): Promise<cloudExtension.Result<cloudExtension.SubscribeInfo>> {
-    console.info(`subscribe expirationTime: ${expirationTime}`);
-    // ...
-    return {
-      code: cloudExtension.ErrorCode.SUCCESS,
-      description: "subscribe success",
-      value: {
-        expirationTime: testTime,
-        subscribe: {}
-      }
-    };
-  }
-}
-```

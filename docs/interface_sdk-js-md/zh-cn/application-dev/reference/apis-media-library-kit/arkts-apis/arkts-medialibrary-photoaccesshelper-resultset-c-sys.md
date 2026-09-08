@@ -51,28 +51,6 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 }
 ```
 
-phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  console.info('fetchResultCloseDemo');
-  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-  let fetchOption: photoAccessHelper.FetchOptions = {
-    fetchColumns: [],
-    predicates: predicates
-  };
-  try {
-    let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> = await phAccessHelper.getAssets(fetchOption);
-    fetchResult.close();
-    console.info('close succeed.');
-  } catch (err) {
-    console.error(`close fail. error: ${err.code}, ${err.message}`);
-  }
-}
-```
-
 ## getRow
 
 ```TypeScript
@@ -91,7 +69,7 @@ getRow(): ValuesBucket
 
 | 类型 | 说明 |
 | --- | --- |
-| ValuesBucket | 返回指定行的值。 |
+| [ValuesBucket](arkts-medialibrary-photoaccesshelper-valuesbucket-t-sys.md) | 返回指定行的值。 |
 
 **错误码：**
 
@@ -140,7 +118,7 @@ getValue(columnIndex: number): ValueType
 
 | 类型 | 说明 |
 | --- | --- |
-| ValueType | 表示允许的数据字段类型。 |
+| [ValueType](arkts-medialibrary-photoaccesshelper-valuetype-t-sys.md) | 表示允许的数据字段类型。 |
 
 **错误码：**
 

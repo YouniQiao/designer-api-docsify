@@ -65,11 +65,3 @@ Indicates the content of text
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
-
-**Examples**
-
-```TypeScript
-let text = new unifiedDataChannel.PlainText();
-text.textContent = 'this is textContent';
-text.abstract = 'This is abstract';
-```

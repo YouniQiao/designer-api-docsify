@@ -2,7 +2,7 @@
 
 Enumeration of Sort type.
 
-@enum { number }
+@enum { int }
 
 **Since:** 23
 

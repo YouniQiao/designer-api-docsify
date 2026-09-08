@@ -94,10 +94,6 @@ A constructor used to create a CloudFileCache object.
 **示例**
 
 ```TypeScript
-let fileSync = new cloudSync.FileSync("com.ohos.demo")
-```
-
-```TypeScript
 let fileCache = new cloudSync.CloudFileCache("com.ohos.demo");
 ```
 
@@ -129,7 +125,7 @@ getDownloadList(uris: Array<string>): Promise<Array<DownloadProgress>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;DownloadProgress&gt;&gt; | Promise对象，返回文件下载进度列表的结果。 |
+| Promise&lt;Array&lt;[DownloadProgress](arkts-corefile-cloudsync-downloadprogress-i.md)&gt;&gt; | Promise对象，返回文件下载进度列表的结果。 |
 
 **错误码：**
 

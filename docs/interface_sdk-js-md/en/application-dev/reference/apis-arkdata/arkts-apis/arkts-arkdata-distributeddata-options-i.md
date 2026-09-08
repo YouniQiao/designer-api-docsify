@@ -99,7 +99,7 @@ kvStoreType?: KVStoreType
 
 Type of the KV store to create. The default value is **DEVICE_COLLABORATION**, which indicates a device KV store.
 
-**Type:** KVStoreType
+**Type:** [KVStoreType](arkts-arkdata-distributeddata-kvstoretype-e.md)
 
 **Since:** 7
 
@@ -117,7 +117,7 @@ schema?: Schema
 
 Schema that defines the values stored in the KV store. The default value is **undefined**, which means no schema is used.
 
-**Type:** Schema
+**Type:** [Schema](arkts-arkdata-distributeddata-schema-c.md)
 
 **Since:** 8
 
@@ -135,7 +135,7 @@ securityLevel?: SecurityLevel
 
 Security level (S1 to S4) of the KV store.
 
-**Type:** SecurityLevel
+**Type:** [SecurityLevel](arkts-arkdata-distributeddata-securitylevel-e.md)
 
 **Since:** 7
 

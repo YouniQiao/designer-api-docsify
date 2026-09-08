@@ -36,7 +36,7 @@ function getDowngradeDownloadTaskState(bundleNames: Array<string>): Promise<Arra
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;DownloadProgress&gt;&gt; | Promise对象，返回查询的全量下载任务的状态信息数组。 |
+| Promise&lt;Array&lt;[DownloadProgress](arkts-corefile-cloudsyncmanager-downloadprogress-c.md)&gt;&gt; | Promise对象，返回查询的全量下载任务的状态信息数组。 |
 
 **错误码：**
 

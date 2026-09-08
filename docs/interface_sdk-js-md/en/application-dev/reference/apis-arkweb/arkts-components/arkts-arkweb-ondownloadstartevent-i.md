@@ -90,24 +90,3 @@ User agent used for download.
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Web.Webview.Core
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-  @State userAgent:string = 'Mozilla/5.0 (Phone; OpenHarmony 5.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36 ArkWeb/4.1.6.1 Mobile DemoApp';
-
-  build() {
-    Column() {
-      Web({ src: 'www.example.com', controller: this.controller })
-        .userAgent(this.userAgent)
-    }
-  }
-}
-```

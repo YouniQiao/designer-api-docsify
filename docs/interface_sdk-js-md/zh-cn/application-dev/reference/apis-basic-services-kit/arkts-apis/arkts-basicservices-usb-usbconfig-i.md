@@ -60,7 +60,7 @@ interfaces: Array<USBInterface>
 
 配置支持的接口属性。
 
-**类型：** Array&lt;USBInterface&gt;
+**类型：** Array&lt;[USBInterface](arkts-basicservices-usb-usbinterface-i.md)&gt;
 
 **起始版本：** 8
 

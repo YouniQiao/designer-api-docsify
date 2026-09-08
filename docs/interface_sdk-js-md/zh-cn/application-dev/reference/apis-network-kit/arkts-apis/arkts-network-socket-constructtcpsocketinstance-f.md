@@ -22,7 +22,7 @@ function constructTCPSocketInstance(): TCPSocket
 
 | 类型 | 说明 |
 | --- | --- |
-| TCPSocket | 返回一个TCPSocket对象。 |
+| [TCPSocket](arkts-network-socket-tcpsocket-i.md) | 返回一个TCPSocket对象。 |
 
 **示例**
 

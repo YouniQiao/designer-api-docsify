@@ -201,6 +201,31 @@ Sets the status code description of the resource response.
 | --- | --- | --- | --- |
 | reason | string | Yes | Status code description of the resource response to set. The status code description is a textual explanation of the status code, usually used in correspondence with the status code. For example, when the status code is 200, the description can be set to "OK", and when the status code is 404, the description can be set to "Not Found". This description is included in the HTTP response, making it easier for the client or developer to understand the response result. |
 
+## setResponseBody
+
+```TypeScript
+setResponseBody(data: string | number | Resource | ArrayBuffer): void
+```
+
+Sets the response data.
+
+> **NOTE：**
+> 
+> - This API supports obtaining HSP resources based on Resource objects, which [setResponseData](#setresponsedata) does not
+> support.
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.Web.Webview.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| data | string \| number \| Resource \| ArrayBuffer | Yes | The response data. string type indicates strings in HTML format. number type indicates file handle. Resource type indicates \\$rawfile resource or HSP resource. ArrayBuffer type indicates binary data. |
+
 ## setResponseCode
 
 ```TypeScript
@@ -227,7 +252,12 @@ Sets the status code of the resource response.
 setResponseData(data: string | number | Resource | ArrayBuffer): void
 ```
 
-Sets the data in the resource response.
+Sets the response data.
+
+> **NOTE：**
+> 
+> - This API does not support obtaining HSP resources based on Resource objects. To obtain HSP resources,
+> use [setResponseBody](#setresponsebody) instead.
 
 **Since:** 9
 
@@ -239,7 +269,7 @@ Sets the data in the resource response.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | string \| number \| Resource \| ArrayBuffer | Yes | Resource response data to set. When set to a string, the value indicates a string in HTML format. When set to a number, the value indicates a file handle, which is closed by the system **Web** component. When set to a **Resource** object, the value indicates the file resources in the **rawfile** directory of the application. When set to an **ArrayBuffer** object, the value indicates the original binary data of a resource.<br>**Since:** 11 |
+| data | string \| number \| Resource \| ArrayBuffer | Yes | The response data. string type indicates strings in HTML format. number type indicates file handle. Resource type indicates \\$rawfile resource. ArrayBuffer type indicates binary data.<br>**Since:** 11 |
 
 ## setResponseEncoding
 

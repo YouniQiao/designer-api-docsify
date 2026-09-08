@@ -20,7 +20,7 @@ protocol: ProtocolType
 
 主机的不同通信协议类型。
 
-**类型：** ProtocolType
+**类型：** [ProtocolType](arkts-connectivity-hid-protocoltype-e.md)
 
 **起始版本：** 23
 

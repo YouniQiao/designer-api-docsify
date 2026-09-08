@@ -102,7 +102,7 @@
 | [TextDecorationStyle](arkts-arkui-textdecorationstyle-e.md) | The style of the text decoration. |
 | [TextDecorationType](arkts-arkui-textdecorationtype-e.md) | Text decoration type. |
 | [TextHeightAdaptivePolicy](arkts-arkui-textheightadaptivepolicy-e.md) | The mode of adjusting the text font size to adapt to the layout. |
-| [TextOverflow](arkts-arkui-textoverflow-e.md) | Display mode when the text is too number. |
+| [TextOverflow](arkts-arkui-textoverflow-e.md) | Display mode when the text is too long. |
 | [TextSelectableMode](arkts-arkui-textselectablemode-e.md) | Sets whether text can be selected and focused on. |
 | [TipsAnchorType](arkts-arkui-tipsanchortype-e.md) | Follow position type. |
 | [TitleHeight](arkts-arkui-titleheight-e.md) | Title height. |

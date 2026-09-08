@@ -40,7 +40,7 @@ getEncoded(): DataBlob
 
 | 类型 | 说明 |
 | --- | --- |
-| DataBlob | 获取的密钥数据。 |
+| [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | 获取的密钥数据。 |
 
 **错误码：**
 

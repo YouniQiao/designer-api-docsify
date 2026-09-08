@@ -12,4 +12,4 @@ Defines the type of key and value in a KV pair.
 
 **System API:** This is a system API.
 
-**Type:** Record&lt;string, ValueType&gt;
+**Type:** Record&lt;string, [ValueType](arkts-medialibrary-photoaccesshelper-valuetype-t-sys.md)&gt;

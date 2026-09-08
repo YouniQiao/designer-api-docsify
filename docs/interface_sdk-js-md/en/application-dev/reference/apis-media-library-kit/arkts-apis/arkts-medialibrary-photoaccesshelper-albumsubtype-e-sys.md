@@ -201,3 +201,19 @@ Highlights suggestion album.
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
+
+## SHARE
+
+```TypeScript
+SHARE = 8193
+```
+
+Share album.
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+**System API:** This is a system API.

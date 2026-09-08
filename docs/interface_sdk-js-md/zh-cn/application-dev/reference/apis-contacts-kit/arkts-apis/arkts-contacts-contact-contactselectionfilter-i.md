@@ -36,7 +36,7 @@ filterType: FilterType
 
 过滤类型。
 
-**类型：** FilterType
+**类型：** [FilterType](arkts-contacts-contact-filtertype-e.md)
 
 **起始版本：** 15
 

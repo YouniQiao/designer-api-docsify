@@ -23,7 +23,7 @@ foldStatus: FoldStatus
 
 当前设备的折叠状态。
 
-**类型：** FoldStatus
+**类型：** [FoldStatus](../arkts-apis/arkts-arkui-foldstatus-e.md)
 
 **起始版本：** 11
 

@@ -39,7 +39,7 @@ The AI enhancement generates an additional image. Together with the original ima
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | Yes | Context of the ability instance. |
-| asset | PhotoAsset | Yes | PhotoAsset to request. |
+| asset | [PhotoAsset](arkts-medialibrary-photoaccesshelper-photoasset-i.md) | Yes | PhotoAsset to request. |
 | dataHandler | [MediaAssetDataHandler](arkts-medialibrary-photoaccesshelper-mediaassetdatahandler-i.md)&lt;ArrayBuffer&gt; | Yes | Callback will be called when the requested data is ready. |
 
 **Return value:**

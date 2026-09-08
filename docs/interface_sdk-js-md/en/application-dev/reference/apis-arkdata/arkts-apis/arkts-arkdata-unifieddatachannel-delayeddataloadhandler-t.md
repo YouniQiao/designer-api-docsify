@@ -26,4 +26,4 @@ This API is an asynchronous function, which uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;UnifiedData \| null&gt; | Promise used to return the result. |
+| Promise&lt;[UnifiedData](arkts-arkdata-unifieddatachannel-unifieddata-c.md) \| null&gt; | Promise used to return the result. |

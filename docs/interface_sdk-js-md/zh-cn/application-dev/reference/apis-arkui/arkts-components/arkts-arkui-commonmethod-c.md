@@ -183,7 +183,7 @@ accessibilityDescription(description: Resource): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| description | Resource | 是 | 无障碍说明引用资源，用于为用户进一步说明当前组件，开发人员可为组件的该属性设置相对较详细的解释文本，帮助用户理解将要执行的操作。如帮助用户理解将要执行的操作可能导致什么后果，尤其是当这些后果无法从组件本身属性与无障碍文本中了解到时。若组件既拥有文本属性又拥有无障碍说明属性，则组件被选中时，先播报组件的文本属性，再播报无障碍说明属性的内容。 |
+| description | [Resource](../arkts-apis/arkts-arkui-resource-t.md) | 是 | 无障碍说明引用资源，用于为用户进一步说明当前组件，开发人员可为组件的该属性设置相对较详细的解释文本，帮助用户理解将要执行的操作。如帮助用户理解将要执行的操作可能导致什么后果，尤其是当这些后果无法从组件本身属性与无障碍文本中了解到时。若组件既拥有文本属性又拥有无障碍说明属性，则组件被选中时，先播报组件的文本属性，再播报无障碍说明属性的内容。 |
 
 **返回值：**
 
@@ -274,7 +274,7 @@ accessibilityGroup(isGroup: boolean, accessibilityOptions: AccessibilityOptions)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | isGroup | boolean | 是 | 无障碍分组，设置为true时表示该组件及其所有子组件为一整个可以选中的组件，无障碍服务将不再关注其子组件内容，会合并子组件的文本与无障碍信息，并将其发送至无障碍服务；设置为false表示不启用无障碍分组。默认值：false |
-| accessibilityOptions | AccessibilityOptions | 是 | 无障碍分组的配置选项对象，包含以下属性：  - accessibilityPreferred：设置为true时，使应用优先拼接无障碍文本进行朗读；设置为false时，应用进行屏幕朗读时不会优先使用无障碍文本。   - stateControllerRoleType或stateControllerId：从API version 23开始支持，指定一个特定子组件，使用该子组件的状态信息作为当前聚合组件的无障碍状态。   - actionControllerRoleType或actionControllerId：从API version 23开始支持，指定一个特定子组件，使用该子组件的点击事件作为当前聚合组件的无障碍操作。 |
+| accessibilityOptions | [AccessibilityOptions](../arkts-apis/arkts-arkui-accessibilityoptions-i.md) | 是 | 无障碍分组的配置选项对象，包含以下属性：  - accessibilityPreferred：设置为true时，使应用优先拼接无障碍文本进行朗读；设置为false时，应用进行屏幕朗读时不会优先使用无障碍文本。   - stateControllerRoleType或stateControllerId：从API version 23开始支持，指定一个特定子组件，使用该子组件的状态信息作为当前聚合组件的无障碍状态。   - actionControllerRoleType或actionControllerId：从API version 23开始支持，指定一个特定子组件，使用该子组件的点击事件作为当前聚合组件的无障碍操作。 |
 
 **返回值：**
 
@@ -485,7 +485,7 @@ accessibilityStateDescription(description: string | Resource | undefined): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| description | string \| Resource \| undefined | 是 | 需要播报组件当前状态的语音播报文本。设置文本超过1000字符时，截取前1000字符进行播报。undefined：播报文本默认为空。 |
+| description | string \| [Resource](../arkts-apis/arkts-arkui-resource-t.md) \| undefined | 是 | 需要播报组件当前状态的语音播报文本。设置文本超过1000字符时，截取前1000字符进行播报。undefined：播报文本默认为空。 |
 
 **返回值：**
 
@@ -545,7 +545,7 @@ accessibilityText(text: Resource): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| text | Resource | 是 | 无障碍文本引用资源，当组件不包含文本属性时，屏幕朗读选中此组件时不播报，使用者无法清楚地知道当前选中了什么组件。为了解决此场景，开发人员可为不包含文字信息的组件设置无障碍文本，当屏幕朗读选中此组件时播报无障碍文本的内容，帮助屏幕朗读的使用者清楚地知道自己选中了什么组件。**说明：**若组件既拥有文本属性，又拥有无障碍文本属性，则组件被选中时，仅播报无障碍文本内容。若组件设置了无障碍分组属性为true，但是既没有无障碍文本属性，也没有文本属性，会对其子节点的组件进行文本拼接（深度优先）。不对无障碍文本属性进行拼接，如需优先拼接无障碍文本，则需设置accessibilityGroup的accessibilityPreferred。 |
+| text | [Resource](../arkts-apis/arkts-arkui-resource-t.md) | 是 | 无障碍文本引用资源，当组件不包含文本属性时，屏幕朗读选中此组件时不播报，使用者无法清楚地知道当前选中了什么组件。为了解决此场景，开发人员可为不包含文字信息的组件设置无障碍文本，当屏幕朗读选中此组件时播报无障碍文本的内容，帮助屏幕朗读的使用者清楚地知道自己选中了什么组件。**说明：**若组件既拥有文本属性，又拥有无障碍文本属性，则组件被选中时，仅播报无障碍文本内容。若组件设置了无障碍分组属性为true，但是既没有无障碍文本属性，也没有文本属性，会对其子节点的组件进行文本拼接（深度优先）。不对无障碍文本属性进行拼接，如需优先拼接无障碍文本，则需设置accessibilityGroup的accessibilityPreferred。 |
 
 **返回值：**
 
@@ -1320,7 +1320,7 @@ backgroundColor(color: Optional<ResourceColor | ColorMetrics>): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| color | [Optional](arkts-arkui-optional-t.md)&lt;[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) \| ColorMetrics&gt; | 是 | 设置组件的背景色。当color的值为undefined时，恢复为默认透明的背景色。当需要设置P3广色域背景色时，需使用ColorMetrics类型参数。   **说明：** 当使用ColorMetrics设置P3色域颜色时，需先通过setColorSpace接口将当前窗口设置为广色域，否则P3色域颜色无法正确显示。 |
+| color | [Optional](arkts-arkui-optional-t.md)&lt;[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) \| [ColorMetrics](../arkts-apis/arkts-arkui-colormetrics-t.md)&gt; | 是 | 设置组件的背景色。当color的值为undefined时，恢复为默认透明的背景色。当需要设置P3广色域背景色时，需使用ColorMetrics类型参数。   **说明：** 当使用ColorMetrics设置P3色域颜色时，需先通过setColorSpace接口将当前窗口设置为广色域，否则P3色域颜色无法正确显示。 |
 
 **返回值：**
 
@@ -1682,7 +1682,7 @@ bindContentCover(isShow: boolean, builder: CustomBuilder, options?: ContentCover
 bindContextMenu(content: CustomBuilder, responseType: ResponseType, options?: ContextMenuOptions): T
 ```
 
-Binds a context menu to this component, which is displayed when the user number-presses or right-clicks the component. Only custom menu items are supported.
+Binds a context menu to this component, which is displayed when the user long-presses or right-clicks the component. Only custom menu items are supported.
 
 **起始版本：** 11
 
@@ -2448,7 +2448,7 @@ chainMode(direction: Axis, style: ChainStyle): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| direction | Axis | 是 | 链的方向。 |
+| direction | [Axis](../arkts-apis/arkts-arkui-axis-e.md) | 是 | 链的方向。 |
 | style | [ChainStyle](arkts-arkui-chainstyle-e.md) | 是 | 链的样式。 |
 
 **返回值：**
@@ -2488,10 +2488,6 @@ chainWeight(chainWeight: ChainWeightOptions): T
 | 类型 | 说明 |
 | --- | --- |
 | T | 返回当前组件。 |
-
-**示例**
-
-具体示例请参考[示例10（设置链中节点权重）](ts-container-relativecontainer.md#示例10设置链中节点权重)。
 
 ## clickEffect
 
@@ -2739,7 +2735,7 @@ colorBlend(value: Color | string | Resource): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | Color \| string \| Resource | 是 | 为当前组件添加颜色叠加效果，入参为叠加的颜色。取值可为Color类型、string类型或Resource类型，如使用Color.Green，或string类型如'0x000000'、'rgba(0,0,0,1)'。 |
+| value | [Color](../arkts-apis/arkts-arkui-color-e.md) \| string \| [Resource](../arkts-apis/arkts-arkui-resource-t.md) | 是 | 为当前组件添加颜色叠加效果，入参为叠加的颜色。取值可为Color类型、string类型或Resource类型，如使用Color.Green，或string类型如'0x000000'、'rgba(0,0,0,1)'。 |
 
 **返回值：**
 
@@ -2769,7 +2765,7 @@ colorBlend(color: Optional<Color | string | Resource>): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| color | [Optional](arkts-arkui-optional-t.md)&lt;Color \| string \| Resource&gt; | 是 | 为当前组件添加颜色叠加效果，入参为叠加的颜色。取值可为Color枚举值、string类型（如'0x000000'、'rgba(0,0,0,1)'）或Resource资源引用。当color的值为undefined时，恢复为无颜色叠加的效果。 |
+| color | [Optional](arkts-arkui-optional-t.md)&lt;[Color](../arkts-apis/arkts-arkui-color-e.md) \| string \| [Resource](../arkts-apis/arkts-arkui-resource-t.md)&gt; | 是 | 为当前组件添加颜色叠加效果，入参为叠加的颜色。取值可为Color枚举值、string类型（如'0x000000'、'rgba(0,0,0,1)'）或Resource资源引用。当color的值为undefined时，恢复为无颜色叠加的效果。 |
 
 **返回值：**
 
@@ -2980,7 +2976,7 @@ direction(value: Direction): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | Direction | 是 | 设置当前组件绘制区域内主轴方向上的布局。属性配置为auto的时候，按照系统语言方向进行布局。该属性在Column组件上不生效。默认值：Direction.Auto direction取undefined或null时按默认值处理。 |
+| value | [Direction](../arkts-apis/arkts-arkui-direction-e.md) | 是 | 设置当前组件绘制区域内主轴方向上的布局。属性配置为auto的时候，按照系统语言方向进行布局。该属性在Column组件上不生效。默认值：Direction.Auto direction取undefined或null时按默认值处理。 |
 
 **返回值：**
 
@@ -3915,7 +3911,7 @@ gesture(gesture: GestureType, mask?: GestureMask): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| gesture | GestureType | 是 | 绑定的手势类型。 |
+| gesture | [GestureType](../arkts-apis/arkts-arkui-gesturetype-t.md) | 是 | 绑定的手势类型。 |
 | mask | [GestureMask](../arkts-apis/arkts-arkui-gesturemask-e.md) | 否 | 事件响应设置。默认值：GestureMask.Normal |
 
 **返回值：**
@@ -4479,7 +4475,7 @@ keyboardShortcut(value: string | FunctionKey, keys: Array<ModifierKey>, action?:
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | string \| FunctionKey | 是 | 热键的单个字符（可以通过键盘输入的字符）或FunctionKey。空字符串意为取消快捷键绑定。 |
+| value | string \| [FunctionKey](../arkts-apis/arkts-arkui-functionkey-e.md) | 是 | 热键的单个字符（可以通过键盘输入的字符）或FunctionKey。空字符串意为取消快捷键绑定。 |
 | keys | Array&lt;[ModifierKey](../arkts-apis/arkts-arkui-modifierkey-e.md)&gt; | 是 | 热键组合。仅当value为FunctionKey的情况下keys的值可以为空。 |
 | action | () =&gt; void | 否 | 组合快捷键触发成功后的自定义事件回调。 |
 
@@ -5215,7 +5211,7 @@ offset(value: Position | Edges | LocalizedEdges): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | Position \| Edges \| [LocalizedEdges](../arkts-apis/arkts-arkui-localizededges-i.md) | 是 | 相对偏移，组件基于原本的布局位置进行偏移。offset属性不影响父组件布局，仅在绘制时调整位置。Position类型基于组件自身左上角偏移，Edges类型基于组件自身四边偏移。 offset属性设置{x: x, y: y}与设置{left: x, top: y}以及{right: -x, bottom: -y}效果相同，类型LocalizedEdges支持镜像模式：LTR模式下start等同于x，RTL模式下start等同于-x。API version 9及以前，默认值为：{x: 0, y: 0} 默认单位：vp API version 10：无默认值。设置异常值时该属性不生效。<br>**适用版本：** 12 |
+| value | Position \| [Edges](../arkts-apis/arkts-arkui-edges-i.md) \| [LocalizedEdges](../arkts-apis/arkts-arkui-localizededges-i.md) | 是 | 相对偏移，组件基于原本的布局位置进行偏移。offset属性不影响父组件布局，仅在绘制时调整位置。Position类型基于组件自身左上角偏移，Edges类型基于组件自身四边偏移。 offset属性设置{x: x, y: y}与设置{left: x, top: y}以及{right: -x, bottom: -y}效果相同，类型LocalizedEdges支持镜像模式：LTR模式下start等同于x，RTL模式下start等同于-x。API version 9及以前，默认值为：{x: 0, y: 0} 默认单位：vp API version 10：无默认值。设置异常值时该属性不生效。<br>**适用版本：** 12 |
 
 **返回值：**
 
@@ -6650,7 +6646,7 @@ opacity(value: number | Resource): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number \| Resource | 是 | 元素的不透明度，取值范围：[0, 1]（百分比），设置小于0的值时，则取值为0，设置大于1的值时，则取值为1，1表示完全不透明，0表示完全透明，达到隐藏组件的效果，但是在布局中占位。默认值：1，未设置该属性时组件呈现完全不透明状态   **说明：** 子组件会继承父组件的不透明度，并与自身的不透明度属性叠加。如：父组件不透明度为0.1，子组件设置不透明度为0.8，则子组件实际不透明度为0.1*0.8=0.08。 |
+| value | number \| [Resource](../arkts-apis/arkts-arkui-resource-t.md) | 是 | 元素的不透明度，取值范围：[0, 1]（百分比），设置小于0的值时，则取值为0，设置大于1的值时，则取值为1，1表示完全不透明，0表示完全透明，达到隐藏组件的效果，但是在布局中占位。默认值：1，未设置该属性时组件呈现完全不透明状态   **说明：** 子组件会继承父组件的不透明度，并与自身的不透明度属性叠加。如：父组件不透明度为0.1，子组件设置不透明度为0.8，则子组件实际不透明度为0.1*0.8=0.08。 |
 
 **返回值：**
 
@@ -6680,7 +6676,7 @@ opacity(opacity: Optional<number | Resource>): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| opacity | [Optional](arkts-arkui-optional-t.md)&lt;number \| Resource&gt; | 是 | 元素的不透明度，取值范围：[0, 1]（百分比），设置小于0的值时，则取值为0，设置大于1的值时，则取值为1，1表示完全不透明，0表示完全透明，达到隐藏组件的效果，但是在布局中占位。默认值：1，未设置该属性时组件呈现完全不透明状态   **说明：** 子组件会继承父组件的不透明度，并与自身的不透明度属性叠加。如：父组件不透明度为0.1，子组件设置不透明度为0.8，则子组件实际不透明度为0.1*0.8=0.08。当opacity的值为undefined时，恢复为默认不透明度为1的状态，此时该默认值仍会与父组件不透明度按继承规则叠加计算，即子组件实际不透明度等于父组件不透明度。 |
+| opacity | [Optional](arkts-arkui-optional-t.md)&lt;number \| [Resource](../arkts-apis/arkts-arkui-resource-t.md)&gt; | 是 | 元素的不透明度，取值范围：[0, 1]（百分比），设置小于0的值时，则取值为0，设置大于1的值时，则取值为1，1表示完全不透明，0表示完全透明，达到隐藏组件的效果，但是在布局中占位。默认值：1，未设置该属性时组件呈现完全不透明状态   **说明：** 子组件会继承父组件的不透明度，并与自身的不透明度属性叠加。如：父组件不透明度为0.1，子组件设置不透明度为0.8，则子组件实际不透明度为0.1*0.8=0.08。当opacity的值为undefined时，恢复为默认不透明度为1的状态，此时该默认值仍会与父组件不透明度按继承规则叠加计算，即子组件实际不透明度等于父组件不透明度。 |
 
 **返回值：**
 
@@ -7076,7 +7072,7 @@ parallelGesture(gesture: GestureType, mask?: GestureMask): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| gesture | GestureType | 是 | 绑定的手势对象。 |
+| gesture | [GestureType](../arkts-apis/arkts-arkui-gesturetype-t.md) | 是 | 绑定的手势对象。 |
 | mask | [GestureMask](../arkts-apis/arkts-arkui-gesturemask-e.md) | 否 | 事件响应设置。默认值：GestureMask.Normal |
 
 **返回值：**
@@ -7213,7 +7209,7 @@ position(value: Position | Edges | LocalizedEdges): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | Position \| Edges \| [LocalizedEdges](../arkts-apis/arkts-arkui-localizededges-i.md) | 是 | 绝对定位，确定子组件相对父组件内容区的位置，父组件内容区的大小为父组件大小减去[border](#border)、padding、[safeAreaPadding](#safeareapadding)后提供给子组件可布局的内容区域大小。设置异常值时该属性不生效。<br>**适用版本：** 12 |
+| value | Position \| [Edges](../arkts-apis/arkts-arkui-edges-i.md) \| [LocalizedEdges](../arkts-apis/arkts-arkui-localizededges-i.md) | 是 | 绝对定位，确定子组件相对父组件内容区的位置，父组件内容区的大小为父组件大小减去[border](#border)、padding、[safeAreaPadding](#safeareapadding)后提供给子组件可布局的内容区域大小。设置异常值时该属性不生效。<br>**适用版本：** 12 |
 
 **返回值：**
 
@@ -7246,7 +7242,7 @@ priorityGesture(gesture: GestureType, mask?: GestureMask): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| gesture | GestureType | 是 | 绑定的手势对象。 |
+| gesture | [GestureType](../arkts-apis/arkts-arkui-gesturetype-t.md) | 是 | 绑定的手势对象。 |
 | mask | [GestureMask](../arkts-apis/arkts-arkui-gesturemask-e.md) | 否 | 事件响应设置。默认值：GestureMask.Normal |
 
 **返回值：**
@@ -7703,7 +7699,7 @@ safeAreaPadding(paddingValue: Padding | LengthMetrics | LocalizedPadding): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| paddingValue | Padding \| LengthMetrics \| [LocalizedPadding](../arkts-apis/arkts-arkui-localizedpadding-i.md) | 是 | 设置组件的安全区边距，用于在组件内部创建组件级安全区域供子组件延伸使用。默认值：0 单位：vp paddingValue设置百分比时，上下左右内边距均以父容器的width作为基础值。 |
+| paddingValue | Padding \| [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md) \| [LocalizedPadding](../arkts-apis/arkts-arkui-localizedpadding-i.md) | 是 | 设置组件的安全区边距，用于在组件内部创建组件级安全区域供子组件延伸使用。默认值：0 单位：vp paddingValue设置百分比时，上下左右内边距均以父容器的width作为基础值。 |
 
 **返回值：**
 
@@ -8830,7 +8826,7 @@ visibility(value: Visibility): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | Visibility | 是 | 控制当前组件显示或隐藏。根据具体场景需要可使用[条件渲染](../../../ui/rendering-control/arkts-rendering-control-ifelse.md)代替。 |
+| value | [Visibility](../arkts-apis/arkts-arkui-visibility-e.md) | 是 | 控制当前组件显示或隐藏。根据具体场景需要可使用[条件渲染](../../../ui/rendering-control/arkts-rendering-control-ifelse.md)代替。 |
 
 **返回值：**
 

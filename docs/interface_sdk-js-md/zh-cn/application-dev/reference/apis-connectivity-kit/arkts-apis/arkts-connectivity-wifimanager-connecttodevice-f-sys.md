@@ -26,7 +26,7 @@ function connectToDevice(config: WifiDeviceConfig): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| config | WifiDeviceConfig | 是 | Wi-Fi配置信息。如果bssidType未指定值，则bssidType默认为随机设备地址类型。 |
+| config | [WifiDeviceConfig](arkts-connectivity-wifimanager-wifideviceconfig-i.md) | 是 | Wi-Fi配置信息。如果bssidType未指定值，则bssidType默认为随机设备地址类型。 |
 
 **错误码：**
 

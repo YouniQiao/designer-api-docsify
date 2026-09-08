@@ -19,7 +19,7 @@ backgroundBlurStyle?: BlurStyle
 
 工具栏背景模糊样式，设置后，工具栏将应用指定的模糊样式；不设置时关闭背景模糊效果。
 
-**类型：** BlurStyle
+**类型：** [BlurStyle](arkts-arkui-blurstyle-e.md)
 
 **起始版本：** 11
 

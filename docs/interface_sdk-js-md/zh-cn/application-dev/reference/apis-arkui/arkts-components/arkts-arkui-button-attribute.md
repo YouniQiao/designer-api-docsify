@@ -41,7 +41,7 @@ buttonStyle(value: ButtonStyleMode)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ButtonStyleMode](arkts-arkui-buttonstylemode-e.md) | 是 | Button组件的样式和重要程度。默认值：ButtonStyleMode.EMPHASIZED |
+| value | [ButtonStyleMode](arkts-arkui-buttonstylemode-e.md) | 是 | [Button组件的样式和重要程度。默认值：ButtonStyleMode.EMPHASIZED](arkts-arkui-buttonstylemode-e.md) |
 
 ## contentModifier
 
@@ -135,7 +135,7 @@ fontFamily(value: string | Resource)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | string \| Resource | 是 | 字体列表。默认字体'HarmonyOS Sans'，当前支持'HarmonyOS Sans'字体和[注册自定义字体](../arkts-apis/arkts-font.md)。 |
+| value | string \| [Resource](../arkts-apis/arkts-arkui-resource-t.md) | 是 | 字体列表。默认字体'HarmonyOS Sans'，当前支持'HarmonyOS Sans'字体和[注册自定义字体](../arkts-apis/arkts-font.md)。 |
 
 ## fontSize
 
@@ -179,7 +179,7 @@ fontStyle(value: FontStyle)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | FontStyle | 是 | 文本的字体样式。默认值：FontStyle.Normal |
+| value | [FontStyle](../arkts-apis/arkts-arkui-fontstyle-e.md) | 是 | 文本的字体样式。默认值：FontStyle.Normal |
 
 ## fontWeight
 
@@ -201,7 +201,7 @@ fontWeight(value: number | FontWeight | string)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number \| FontWeight \| string | 是 | 文本的字体粗细，number类型取值[100, 900]，取值间隔为100，取值越大，字体越粗。默认值：500string类型仅支持number类型取值的字符串形式，例如'400'，以及'bold'、'bolder'、'lighter'、'regular'、'medium'，分别对应FontWeight中相应的枚举值。当值为异常值或非法值时，字体粗细取值为400。 |
+| value | number \| [FontWeight](../arkts-apis/arkts-arkui-fontweight-e.md) \| string | 是 | 文本的字体粗细，number类型取值[100, 900]，取值间隔为100，取值越大，字体越粗。默认值：500string类型仅支持number类型取值的字符串形式，例如'400'，以及'bold'、'bolder'、'lighter'、'regular'、'medium'，分别对应FontWeight中相应的枚举值。当值为异常值或非法值时，字体粗细取值为400。 |
 
 ## labelStyle
 
@@ -245,7 +245,7 @@ maxFontScale(scale: number | Resource)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| scale | number \| Resource | 是 | 文本最大的字体缩放倍数。取值范围：[1, +∞)   **说明：** 设置的值小于1时，按值为1处理，异常值默认不生效。未设置最大缩放倍数时，圆形按钮最大缩放倍数为1倍，胶囊型按钮、普通按钮、圆角矩形按钮最大缩放倍数跟随系统设置。 |
+| scale | number \| [Resource](../arkts-apis/arkts-arkui-resource-t.md) | 是 | 文本最大的字体缩放倍数。取值范围：[1, +∞)   **说明：** 设置的值小于1时，按值为1处理，异常值默认不生效。未设置最大缩放倍数时，圆形按钮最大缩放倍数为1倍，胶囊型按钮、普通按钮、圆角矩形按钮最大缩放倍数跟随系统设置。 |
 
 ## minFontScale
 
@@ -267,7 +267,7 @@ minFontScale(scale: number | Resource)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| scale | number \| Resource | 是 | 文本最小的字体缩放倍数。取值范围：[0, 1]   **说明：** 设置的值小于0时，按值为0处理，设置的值大于1，按值为1处理，异常值默认不生效。 |
+| scale | number \| [Resource](../arkts-apis/arkts-arkui-resource-t.md) | 是 | 文本最小的字体缩放倍数。取值范围：[0, 1]   **说明：** 设置的值小于0时，按值为0处理，设置的值大于1，按值为1处理，异常值默认不生效。 |
 
 ## role
 

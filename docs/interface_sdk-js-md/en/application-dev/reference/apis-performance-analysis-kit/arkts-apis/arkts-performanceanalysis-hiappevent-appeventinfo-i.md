@@ -36,7 +36,7 @@ eventType: EventType
 
 Event type.
 
-**Type:** EventType
+**Type:** [EventType](arkts-performanceanalysis-hiappevent-eventtype-e.md)
 
 **Since:** 9
 

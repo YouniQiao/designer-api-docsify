@@ -30,4 +30,4 @@ import { AsyncCallback, BusinessError, Callback, ErrorCallback } from '@kit.Basi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | T | Yes | Common callback information. The type is defined by the developer. The callback is used to return data of the corresponding type. No data is returned if the callback fails. |
+| data | T | Yes | Common callback information. You need to define the callback type. The callback is used to return data of the corresponding type. No data is returned if the callback fails. |

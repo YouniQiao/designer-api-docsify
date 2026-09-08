@@ -26,7 +26,7 @@ Gets the list of addresses of the bound partner device for this application.
 
 | Type | Description |
 | --- | --- |
-| PartnerDeviceAddress[] | Returns the list of addresses of partner device. |
+| [PartnerDeviceAddress](arkts-connectivity-partneragent-partnerdeviceaddress-i.md)[] | Returns the list of addresses of partner device. |
 
 **Error codes:**
 

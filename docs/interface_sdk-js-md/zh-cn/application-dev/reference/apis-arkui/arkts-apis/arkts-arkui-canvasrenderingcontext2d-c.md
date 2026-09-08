@@ -114,7 +114,7 @@ constructor(settings?: RenderingContextSettings, unit?: LengthMetricsUnit)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | settings | [RenderingContextSettings](arkts-arkui-renderingcontextsettings-c.md) | 否 | 用来配置CanvasRenderingContext2D对象的参数，见[RenderingContextSettings](arkts-arkui-renderingcontextsettings-c.md)。异常值undefined和null按[RenderingContextSettings](arkts-arkui-renderingcontextsettings-c.md)的默认值处理。 |
-| unit | LengthMetricsUnit | 否 | 用来配置CanvasRenderingContext2D对象的单位模式，配置后无法更改。异常值undefined、NaN和Infinity按默认值处理。默认值：DEFAULT。 |
+| unit | [LengthMetricsUnit](arkts-arkui-lengthmetricsunit-t.md) | 否 | 用来配置CanvasRenderingContext2D对象的单位模式，配置后无法更改。异常值undefined、NaN和Infinity按默认值处理。默认值：DEFAULT。 |
 
 **示例**
 
@@ -210,7 +210,7 @@ off(type: 'onAttach', callback?: Callback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'onAttach' | 是 | 取消订阅CanvasRenderingContext2D与Canvas组件发生绑定的回调。异常值undefined或null按无效值处理。 |
-| callback | Callback&lt;void&gt; | 否 | 为空表示取消所有订阅CanvasRenderingContext2D与Canvas组件发生绑定后触发的回调。非空则取消订阅发生绑定对应的回调。异常值undefined或null按无效值处理。 |
+| callback | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;void&gt; | 否 | 为空表示取消所有订阅CanvasRenderingContext2D与Canvas组件发生绑定后触发的回调。非空则取消订阅发生绑定对应的回调。异常值undefined或null按无效值处理。 |
 
 **错误码：**
 
@@ -239,7 +239,7 @@ off(type: 'onDetach', callback?: Callback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'onDetach' | 是 | 取消订阅CanvasRenderingContext2D与Canvas组件解除绑定的回调。异常值undefined或null按无效值处理。 |
-| callback | Callback&lt;void&gt; | 否 | 为空代表取消所有订阅CanvasRenderingContext2D与Canvas组件解除绑定后触发的回调。非空代表取消订阅解除绑定对应的回调。异常值undefined或null按无效值处理。 |
+| callback | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;void&gt; | 否 | 为空代表取消所有订阅CanvasRenderingContext2D与Canvas组件解除绑定后触发的回调。非空代表取消订阅解除绑定对应的回调。异常值undefined或null按无效值处理。 |
 
 **错误码：**
 
@@ -373,7 +373,7 @@ on(type: 'onAttach', callback: Callback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'onAttach' | 是 | 订阅CanvasRenderingContext2D与Canvas组件发生绑定的回调。异常值undefined或null按无效值处理。 |
-| callback | Callback&lt;void&gt; | 是 | 订阅CanvasRenderingContext2D与Canvas组件发生绑定后触发的回调。异常值undefined或null按无效值处理。 |
+| callback | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;void&gt; | 是 | 订阅CanvasRenderingContext2D与Canvas组件发生绑定后触发的回调。异常值undefined或null按无效值处理。 |
 
 **错误码：**
 
@@ -410,7 +410,7 @@ on(type: 'onDetach', callback: Callback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'onDetach' | 是 | 订阅CanvasRenderingContext2D与Canvas组件解除绑定的回调。异常值undefined或null按无效值处理。 |
-| callback | Callback&lt;void&gt; | 是 | 订阅CanvasRenderingContext2D与Canvas组件解除绑定后触发的回调。异常值undefined或null按无效值处理。 |
+| callback | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;void&gt; | 是 | 订阅CanvasRenderingContext2D与Canvas组件解除绑定后触发的回调。异常值undefined或null按无效值处理。 |
 
 **错误码：**
 
@@ -614,35 +614,6 @@ struct CanvasExample {
 }
 ```
 
-```TypeScript
-// xxx.ets
-@Entry
-@Component
-struct ToDataURL {
-  private settings: RenderingContextSettings = new RenderingContextSettings(true);
-  private context: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings);
-  private offCanvas: OffscreenCanvas = new OffscreenCanvas(100, 100);
-  @State dataURL: string = "";
-
-  build() {
-    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
-      Canvas(this.context)
-        .width(100)
-        .height(100)
-        .onReady(() => {
-          let offContext = this.offCanvas.getContext("2d", this.settings)
-          offContext.fillRect(0, 0, 100, 100)
-          this.dataURL = offContext.toDataURL()
-        })
-      Text(this.dataURL)
-    }
-    .width('100%')
-    .height('100%')
-    .backgroundColor('#ffff00')
-  }
-}
-```
-
 ## canvas
 
 ```TypeScript
@@ -681,40 +652,6 @@ readonly height: number
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-**示例**
-
-```TypeScript
-// xxx.ets
-@Entry
-@Component
-struct OffscreenCanvasPage {
-  private settings: RenderingContextSettings = new RenderingContextSettings(true);
-  private context: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings);
-  private offCanvas: OffscreenCanvas = new OffscreenCanvas(200, 300);
-
-  build() {
-    Flex({ direction: FlexDirection.Row, alignItems: ItemAlign.Start, justifyContent: FlexAlign.Start }) {
-      Column() {
-        Canvas(this.context)
-          .width('100%')
-          .height('100%')
-          .borderWidth(5)
-          .borderColor('#057D02')
-          .backgroundColor('#FFFFFF')
-          .onReady(() => {
-            let offContext = this.offCanvas.getContext("2d", this.settings)
-            offContext.fillStyle = '#CDCDCD'
-            offContext.fillRect(0, 0, 100, this.offCanvas.height)
-            let image = this.offCanvas.transferToImageBitmap()
-            this.context.setTransform(1, 0, 0, 1, 50, 200)
-            this.context.transferFromImageBitmap(image)
-          })
-      }
-    }.width('100%').height('100%')
-  }
-}
-```
-
 ## width
 
 ```TypeScript
@@ -734,37 +671,3 @@ readonly width: number
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-**示例**
-
-```TypeScript
-// xxx.ets
-@Entry
-@Component
-struct OffscreenCanvasPage {
-  private settings: RenderingContextSettings = new RenderingContextSettings(true);
-  private context: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings);
-  private offCanvas: OffscreenCanvas = new OffscreenCanvas(200, 300);
-
-  build() {
-    Flex({ direction: FlexDirection.Row, alignItems: ItemAlign.Start, justifyContent: FlexAlign.Start }) {
-      Column() {
-        Canvas(this.context)
-          .width('100%')
-          .height('100%')
-          .borderWidth(5)
-          .borderColor('#057D02')
-          .backgroundColor('#FFFFFF')
-          .onReady(() => {
-            let offContext = this.offCanvas.getContext("2d", this.settings)
-            offContext.fillStyle = '#CDCDCD'
-            offContext.fillRect(0, 0, this.offCanvas.width, 150)
-            let image = this.offCanvas.transferToImageBitmap()
-            this.context.setTransform(1, 0, 0, 1, 50, 200)
-            this.context.transferFromImageBitmap(image)
-          })
-      }
-    }.width('100%').height('100%')
-  }
-}
-```

@@ -32,13 +32,13 @@ Obtains media assets. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | photoAccessHelper.FetchOptions | Yes | Retrieval options. |
+| options | [photoAccessHelper.FetchOptions](arkts-medialibrary-photoaccesshelper-fetchoptions-i.md) | Yes | Retrieval options. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;FetchResult&lt;PhotoAsset&gt;&gt; | Promise used to return the media assets obtained. |
+| Promise&lt;[FetchResult](arkts-medialibrary-sendablephotoaccesshelper-fetchresult-i.md)&lt;[PhotoAsset](arkts-medialibrary-sendablephotoaccesshelper-photoasset-i.md)&gt;&gt; | Promise used to return the media assets obtained. |
 
 **Error codes:**
 
@@ -47,64 +47,6 @@ Obtains media assets. This API uses a promise to return the result.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
 | 14000011 | Internal system error |
-
-**Examples**
-
-For details about how to create a phAccessHelper instance, see the example provided in sendablePhotoAccessHelper.getPhotoAccessHelper.
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-import { photoAccessHelper } from '@kit.MediaLibraryKit';
-
-async function example(phAccessHelper: sendablePhotoAccessHelper.PhotoAccessHelper) {
-  console.info('getAssets');
-  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-  let fetchOptions: photoAccessHelper.FetchOptions = {
-    fetchColumns: [],
-    predicates: predicates
-  };
-  try {
-    let fetchResult: sendablePhotoAccessHelper.FetchResult<sendablePhotoAccessHelper.PhotoAsset> = await phAccessHelper.getAssets(fetchOptions);
-    if (fetchResult !== undefined) {
-      console.info('fetchResult success');
-      let photoAsset: sendablePhotoAccessHelper.PhotoAsset = await fetchResult.getFirstObject();
-      if (photoAsset !== undefined) {
-        console.info('photoAsset.displayName :' + photoAsset.displayName);
-      }
-    }
-  } catch (err) {
-    console.error(`getAssets failed, error: ${err.code}, ${err.message}`);
-  }
-}
-```
-
-For details about how to create a phAccessHelper instance, see the example provided in sendablePhotoAccessHelper.getPhotoAccessHelper.
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { photoAccessHelper } from '@kit.MediaLibraryKit';
-
-async function example(phAccessHelper: sendablePhotoAccessHelper.PhotoAccessHelper) {
-  console.info('albumGetAssetsDemoPromise');
-  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-  let albumFetchOptions: photoAccessHelper.FetchOptions = {
-    fetchColumns: [],
-    predicates: predicates
-  };
-  let fetchOption: photoAccessHelper.FetchOptions = {
-    fetchColumns: [],
-    predicates: predicates
-  };
-  let albumList: sendablePhotoAccessHelper.FetchResult<sendablePhotoAccessHelper.Album> = await phAccessHelper.getAlbums(sendablePhotoAccessHelper.AlbumType.USER, sendablePhotoAccessHelper.AlbumSubtype.USER_GENERIC, albumFetchOptions);
-  let album: sendablePhotoAccessHelper.Album = await albumList.getFirstObject();
-  album.getAssets(fetchOption).then((albumFetchResult) => {
-    console.info('album getAssets successfully, getCount: ' + albumFetchResult.getCount());
-  }).catch((err: BusinessError) => {
-    console.error(`album getAssets failed with error: ${err.code}, ${err.message}`);
-  });
-}
-```
 
 ## albumName
 
@@ -128,7 +70,7 @@ readonly albumSubtype: AlbumSubtype
 
 Album subtype
 
-**Type:** AlbumSubtype
+**Type:** [AlbumSubtype](arkts-medialibrary-sendablephotoaccesshelper-albumsubtype-e.md)
 
 **Since:** 12
 
@@ -142,7 +84,7 @@ readonly albumType: AlbumType
 
 Album type
 
-**Type:** AlbumType
+**Type:** [AlbumType](arkts-medialibrary-sendablephotoaccesshelper-albumtype-e.md)
 
 **Since:** 12
 

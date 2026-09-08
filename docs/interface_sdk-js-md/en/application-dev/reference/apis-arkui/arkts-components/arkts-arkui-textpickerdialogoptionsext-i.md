@@ -137,7 +137,7 @@ backgroundBlurStyle?: BlurStyle
 
 Defines the textPickerDialog's background blur Style
 
-**Type:** BlurStyle
+**Type:** [BlurStyle](arkts-arkui-blurstyle-e.md)
 
 **Default:** BlurStyle.COMPONENT_ULTRA_THICK
 
@@ -403,7 +403,7 @@ offset?: Offset
 
 Defines the dialog offset.
 
-**Type:** Offset
+**Type:** [Offset](../arkts-apis/arkts-arkui-offset-t.md)
 
 **Since:** 20
 
@@ -421,7 +421,7 @@ onAccept?: Callback<TextPickerResult>
 
 Called when the OK button in the dialog is clicked.
 
-**Type:** Callback&lt;[TextPickerResult](arkts-arkui-textpickerresult-i.md)&gt;
+**Type:** [Callback](arkts-arkui-callback-i.md)&lt;[TextPickerResult](arkts-arkui-textpickerresult-i.md)&gt;
 
 **Since:** 20
 
@@ -439,7 +439,7 @@ onChange?: Callback<TextPickerResult>
 
 This event is triggered when a TextPicker text is selected in dialog.
 
-**Type:** Callback&lt;[TextPickerResult](arkts-arkui-textpickerresult-i.md)&gt;
+**Type:** [Callback](arkts-arkui-callback-i.md)&lt;[TextPickerResult](arkts-arkui-textpickerresult-i.md)&gt;
 
 **Since:** 20
 
@@ -457,7 +457,7 @@ onEnterSelectedArea?: Callback<TextPickerResult>
 
 This event is triggered when an item enters the selected area in dialog.
 
-**Type:** Callback&lt;[TextPickerResult](arkts-arkui-textpickerresult-i.md)&gt;
+**Type:** [Callback](arkts-arkui-callback-i.md)&lt;[TextPickerResult](arkts-arkui-textpickerresult-i.md)&gt;
 
 **Since:** 20
 
@@ -475,7 +475,7 @@ onScrollStop?: Callback<TextPickerResult>
 
 This event is triggered when a TextPicker text is selected and scrolling has stopped in dialog.
 
-**Type:** Callback&lt;[TextPickerResult](arkts-arkui-textpickerresult-i.md)&gt;
+**Type:** [Callback](arkts-arkui-callback-i.md)&lt;[TextPickerResult](arkts-arkui-textpickerresult-i.md)&gt;
 
 **Since:** 20
 

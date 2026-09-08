@@ -28,7 +28,7 @@ Queries the result of the sync operation. This API uses a promise to return the 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;SyncResult&gt; | Promise used to return the result obtained. |
+| Promise&lt;[SyncResult](arkts-assetstore-asset-syncresult-i.md)&gt; | Promise used to return the result obtained. |
 
 **Error codes:**
 

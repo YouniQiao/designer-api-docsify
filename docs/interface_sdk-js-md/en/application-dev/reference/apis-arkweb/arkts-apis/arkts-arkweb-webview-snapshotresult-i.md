@@ -36,7 +36,7 @@ imagePixelMap?: image.PixelMap
 
 The **image.PixelMap** format.
 
-**Type:** image.PixelMap
+**Type:** [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)
 
 **Since:** 12
 

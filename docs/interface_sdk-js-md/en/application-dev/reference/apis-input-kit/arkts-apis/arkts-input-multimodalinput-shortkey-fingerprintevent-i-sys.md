@@ -53,7 +53,7 @@ Offset relative to the short axis of the side fingerprint device (positive value
 distanceY: number
 ```
 
-Offset relative to the number axis of the side fingerprint device (positive values indicate upward movement, and negative values indicate downward movement).
+Offset relative to the long axis of the side fingerprint device (positive values indicate upward movement, and negative values indicate downward movement).
 
 **Type:** number
 

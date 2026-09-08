@@ -28,7 +28,7 @@ function setCurrentFunctions(funcs: FunctionType): Promise<boolean>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| funcs | FunctionType | 是 | 功能列表对应的数字掩码。 |
+| funcs | [FunctionType](arkts-basicservices-usb-functiontype-e-sys.md) | 是 | 功能列表对应的数字掩码。 |
 
 **返回值：**
 

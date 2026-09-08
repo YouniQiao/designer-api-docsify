@@ -107,7 +107,7 @@ clientCert?: ClientCert
 
 Client certificate.
 
-**Type:** ClientCert
+**Type:** [ClientCert](arkts-network-http-clientcert-i.md)
 
 **Since:** 11
 
@@ -121,7 +121,7 @@ clientEncCert?: ClientCert
 
 Client certificate, which is used by the server to verify the client identity.
 
-**Type:** ClientCert
+**Type:** [ClientCert](arkts-network-http-clientcert-i.md)
 
 **Since:** 20
 
@@ -561,7 +561,7 @@ sslType?: SslType
 
 Security communication protocol. You can use TLS (default) or TLCP. If TLCP is used, the related options (such as **caPath**, **clientCert**, and **clientEncCert**) must be set to valid values.
 
-**Type:** SslType
+**Type:** [SslType](arkts-network-http-ssltype-t.md)
 
 **Since:** 20
 
@@ -630,7 +630,7 @@ no proxy is used.
 - If **usingProxy** is of the **HttpProxy** type, the specified network proxy is used. The HttpProxy supports the  
 **username** and **password** fields from API version 22.
 
-**Type:** boolean \| HttpProxy
+**Type:** boolean \| [HttpProxy](arkts-network-http-httpproxy-t.md)
 
 **Since:** 10
 
@@ -646,7 +646,7 @@ usingSocks5Proxy?: Socks5Proxy
 
 Specifies the use of a SOCKS5 proxy. Note that this configuration takes precedence over usingProxy. It is recommended not to configure both simultaneously.
 
-**Type:** Socks5Proxy
+**Type:** [Socks5Proxy](arkts-network-http-socks5proxy-t.md)
 
 **Since:** 26.0.0
 

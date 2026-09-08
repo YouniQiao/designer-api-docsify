@@ -40,18 +40,6 @@ Closes this writeable stream.
 **Examples**
 
 ```TypeScript
-let filePath = pathDir + "/test.txt";
-let randomAccessFile = fileIo.createRandomAccessFileSync(filePath, fileIo.OpenMode.READ_WRITE | fileIo.OpenMode.CREATE);
-randomAccessFile.close();
-```
-
-```TypeScript
-const filePath = pathDir + "/test.txt";
-const rs = fileIo.createReadStream(filePath);
-rs.close();
-```
-
-```TypeScript
 const filePath = pathDir + "/test.txt";
 const ws = fileIo.createWriteStream(filePath);
 ws.close();
@@ -104,14 +92,6 @@ Adjusts the position of the writeable stream offset pointer.
 | 13900042 | Unknown error |
 
 **Examples**
-
-```TypeScript
-const filePath = pathDir + "/test.txt";
-const rs = fileIo.createReadStream(filePath);
-const curOff = rs.seek(5, fileIo.WhenceType.SEEK_SET);
-console.info(`Succeeded in seeking, current offset is ${curOff}`);
-rs.close();
-```
 
 ```TypeScript
 const filePath = pathDir + "/test.txt";

@@ -20,7 +20,7 @@ events?: Event[]
 
 Events of a service. If this field is not specified, the service does not provide any event.
 
-**Type:** Event[]
+**Type:** [Event](arkts-connectivity-ssap-event-i-sys.md)[]
 
 **Since:** 26.0.0
 

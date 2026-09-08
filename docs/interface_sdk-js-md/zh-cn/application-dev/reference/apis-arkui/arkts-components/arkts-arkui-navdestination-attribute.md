@@ -41,7 +41,7 @@ backButtonIcon(value: ResourceStr | PixelMap | SymbolGlyphModifier)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| PixelMap \| [SymbolGlyphModifier](arkts-arkui-symbolglyphmodifier-t.md) | 是 | 标题栏返回键图标。<br>**适用版本：** 11 |
+| value | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| [PixelMap](arkts-arkui-pixelmap-t.md) \| [SymbolGlyphModifier](arkts-arkui-symbolglyphmodifier-t.md) | 是 | 标题栏返回键图标。<br>**适用版本：** 11 |
 
 ## backButtonIcon
 
@@ -69,7 +69,7 @@ backButtonIcon(icon: ResourceStr | PixelMap | SymbolGlyphModifier, accessibility
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| icon | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| PixelMap \| [SymbolGlyphModifier](arkts-arkui-symbolglyphmodifier-t.md) | 是 | 标题栏返回键图标。 |
+| icon | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| [PixelMap](arkts-arkui-pixelmap-t.md) \| [SymbolGlyphModifier](arkts-arkui-symbolglyphmodifier-t.md) | 是 | 标题栏返回键图标。 |
 | accessibilityText | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | 否 | 返回键无障碍播报内容。默认值：系统语言是中文时为“返回”，系统语言是英文时为“back”。 |
 
 ## bindToNestedScrollable
@@ -943,7 +943,7 @@ title(value: string | CustomBuilder | NavDestinationCommonTitle | NavDestination
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | string \| [CustomBuilder](arkts-arkui-custombuilder-t.md) \| [NavDestinationCommonTitle](arkts-arkui-navdestinationcommontitle-i.md) \| [NavDestinationCustomTitle](arkts-arkui-navdestinationcustomtitle-i.md) \| Resource | 是 | 页面标题。<br>**适用版本：** 9 - 13 |
+| value | string \| [CustomBuilder](arkts-arkui-custombuilder-t.md) \| [NavDestinationCommonTitle](arkts-arkui-navdestinationcommontitle-i.md) \| [NavDestinationCustomTitle](arkts-arkui-navdestinationcustomtitle-i.md) \| [Resource](../arkts-apis/arkts-arkui-resource-t.md) | 是 | 页面标题。<br>**适用版本：** 9 - 13 |
 | options | [NavigationTitleOptions](arkts-arkui-navigationtitleoptions-i.md) | 否 | 标题栏选项。默认值：不设置时使用标题栏默认配置。**模型约束：** 此接口仅可在Stage模型下使用。<br>**适用版本：** 12 |
 
 ## toolbarConfiguration

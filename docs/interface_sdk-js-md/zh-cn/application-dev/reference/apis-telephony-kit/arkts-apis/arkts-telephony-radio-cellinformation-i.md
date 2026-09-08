@@ -20,7 +20,7 @@ networkType: NetworkType
 
 获取服务单元的网络类型。
 
-**类型：** NetworkType
+**类型：** [NetworkType](arkts-telephony-radio-networktype-e.md)
 
 **起始版本：** 8
 
@@ -34,7 +34,7 @@ signalInformation: SignalInformation
 
 信号信息。
 
-**类型：** SignalInformation
+**类型：** [SignalInformation](arkts-telephony-radio-signalinformation-i.md)
 
 **起始版本：** 8
 

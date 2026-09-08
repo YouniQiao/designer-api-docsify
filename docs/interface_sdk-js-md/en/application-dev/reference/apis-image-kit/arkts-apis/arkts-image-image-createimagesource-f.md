@@ -73,7 +73,7 @@ The SVG tags are supported since API version 10. The used version is (SVG) 1.1, 
 
 | Type | Description |
 | --- | --- |
-| ImageSource | ImageSource instance. If the operation fails, undefined is returned. |
+| [ImageSource](arkts-image-image-imagesource-i.md) | ImageSource instance. If the operation fails, undefined is returned. |
 
 **Examples**
 
@@ -156,7 +156,7 @@ The SVG tags are supported since API version 10. The used version is (SVG) 1.1, 
 
 | Type | Description |
 | --- | --- |
-| ImageSource | ImageSource instance. If the operation fails, undefined is returned. |
+| [ImageSource](arkts-image-image-imagesource-i.md) | ImageSource instance. If the operation fails, undefined is returned. |
 
 **Examples**
 
@@ -196,7 +196,7 @@ Images occupy a large amount of memory. When you finish using an ImageSource ins
 
 | Type | Description |
 | --- | --- |
-| ImageSource | ImageSource instance. If the operation fails, undefined is returned. |
+| [ImageSource](arkts-image-image-imagesource-i.md) | ImageSource instance. If the operation fails, undefined is returned. |
 
 **Examples**
 
@@ -241,7 +241,7 @@ Images occupy a large amount of memory. When you finish using an ImageSource ins
 
 | Type | Description |
 | --- | --- |
-| ImageSource | ImageSource instance. If the operation fails, undefined is returned. |
+| [ImageSource](arkts-image-image-imagesource-i.md) | ImageSource instance. If the operation fails, undefined is returned. |
 
 **Examples**
 
@@ -284,7 +284,7 @@ Creates an ImageSource instance based on buffers. The data passed by **buf** mus
 
 | Type | Description |
 | --- | --- |
-| ImageSource | ImageSource instance. If the operation fails, undefined is returned. |
+| [ImageSource](arkts-image-image-imagesource-i.md) | ImageSource instance. If the operation fails, undefined is returned. |
 
 **Examples**
 
@@ -323,7 +323,7 @@ Creates an ImageSource instance based on buffers. The data passed by **buf** mus
 
 | Type | Description |
 | --- | --- |
-| ImageSource | ImageSource instance. If the operation fails, undefined is returned. |
+| [ImageSource](arkts-image-image-imagesource-i.md) | ImageSource instance. If the operation fails, undefined is returned. |
 
 **Examples**
 
@@ -354,14 +354,14 @@ Creates an ImageSource instance based on the raw file descriptor of an image res
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rawfile | resourceManager.RawFileDescriptor | Yes | Raw file descriptor of the image resource file. |
+| rawfile | [resourceManager.RawFileDescriptor](../../apis-localization-kit/arkts-apis/arkts-localization-resourcemanager-rawfiledescriptor-t.md) | Yes | Raw file descriptor of the image resource file. |
 | options | [SourceOptions](arkts-image-image-sourceoptions-i.md) | No | Image properties, including the image pixel density, pixel format, and image size. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ImageSource | ImageSource instance. If the operation fails, undefined is returned. |
+| [ImageSource](arkts-image-image-imagesource-i.md) | ImageSource instance. If the operation fails, undefined is returned. |
 
 **Examples**
 

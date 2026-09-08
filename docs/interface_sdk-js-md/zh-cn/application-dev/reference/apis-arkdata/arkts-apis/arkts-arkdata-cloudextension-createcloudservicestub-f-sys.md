@@ -30,7 +30,7 @@ function createCloudServiceStub(instance: CloudService): Promise<rpc.RemoteObjec
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;rpc.RemoteObject&gt; | Promise对象，返回[CloudService]{ |
+| Promise&lt;[rpc.RemoteObject](../../apis-ipc-kit/arkts-apis/arkts-ipc-rpc-remoteobject-c.md)&gt; | Promise对象，返回[CloudService]{ |
 
 **示例**
 

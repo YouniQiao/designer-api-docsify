@@ -28,7 +28,7 @@ Creates a **DeviceManager** instance. The **DeviceManager** instance is the entr
 
 | Type | Description |
 | --- | --- |
-| DeviceManager | DeviceManager** instance created. |
+| [DeviceManager](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md) | DeviceManager** instance created. |
 
 **Error codes:**
 

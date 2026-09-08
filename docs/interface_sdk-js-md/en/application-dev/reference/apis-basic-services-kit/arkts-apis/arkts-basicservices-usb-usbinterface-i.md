@@ -60,7 +60,7 @@ endpoints: Array<USBEndpoint>
 
 Endpoints that belong to the USB interface.
 
-**Type:** Array&lt;USBEndpoint&gt;
+**Type:** Array&lt;[USBEndpoint](arkts-basicservices-usb-usbendpoint-i.md)&gt;
 
 **Since:** 8
 

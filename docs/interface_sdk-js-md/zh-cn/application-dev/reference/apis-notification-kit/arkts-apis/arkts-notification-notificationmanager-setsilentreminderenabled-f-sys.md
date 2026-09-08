@@ -26,7 +26,7 @@ function setSilentReminderEnabled(bundle: BundleOption, enabled: boolean): Promi
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| bundle | BundleOption | 是 | 指定应用的包信息。 |
+| bundle | [BundleOption](arkts-notification-notificationmanager-bundleoption-t.md) | 是 | 指定应用的包信息。 |
 | enabled | boolean | 是 | 表示是否开启通知静默提醒开关。true表示打开，false表示关闭。 |
 
 **返回值：**

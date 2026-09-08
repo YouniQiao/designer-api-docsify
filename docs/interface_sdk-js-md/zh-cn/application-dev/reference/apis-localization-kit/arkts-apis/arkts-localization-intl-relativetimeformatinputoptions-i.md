@@ -70,9 +70,9 @@ numeric?: string
 style?: string
 ```
 
-国际化消息的长度，取值包括："number", "short", "narrow"。
+国际化消息的长度，取值包括："long", "short", "narrow"。
 
-默认值：number。
+默认值：long。
 
 不同取值的显示效果请参考[附录表24](../../../reference/apis-localization-kit/js-apis-intl.md#附录)。
 

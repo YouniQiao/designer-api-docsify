@@ -84,7 +84,7 @@ ipType?: IpType
 
 IP地址类型，默认值DHCP。
 
-**类型：** IpType
+**类型：** [IpType](arkts-mdm-wifimanager-iptype-e.md)
 
 **起始版本：** 12
 
@@ -180,7 +180,7 @@ securityType: WifiSecurityType
 
 安全类型。
 
-**类型：** WifiSecurityType
+**类型：** [WifiSecurityType](arkts-mdm-wifimanager-wifisecuritytype-e.md)
 
 **起始版本：** 12
 

@@ -27,7 +27,7 @@ Creates a virtual screen. This API uses an asynchronous callback to return the r
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | options | [VirtualScreenOption](arkts-arkui-screen-virtualscreenoption-i-sys.md) | Yes | Virtual screen parameters. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Screen&gt; | Yes | Callback used to return the created virtual screen. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Screen](arkts-arkui-screen-screen-i-sys.md)&gt; | Yes | Callback used to return the created virtual screen. |
 
 **Error codes:**
 
@@ -100,7 +100,7 @@ Creates a virtual screen. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Screen&gt; | Promise used to return the created virtual screen. |
+| Promise&lt;[Screen](arkts-arkui-screen-screen-i-sys.md)&gt; | Promise used to return the created virtual screen. |
 
 **Error codes:**
 

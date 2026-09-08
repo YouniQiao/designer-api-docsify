@@ -12,4 +12,4 @@ Partner device address.
 
 **System capability:** SystemCapability.Communication.FusionConnectivity.Core
 
-**Type:** partnerAgent.PartnerDeviceAddress
+**Type:** [partnerAgent.PartnerDeviceAddress](arkts-connectivity-partneragent-partnerdeviceaddress-i.md)

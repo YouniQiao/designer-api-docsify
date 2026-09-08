@@ -84,7 +84,7 @@ Provides an accessibility description for the component. You can set detailed te
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| description | string \| Resource | Yes | Accessibility description for the component. Provides details about the component's operation, helping users understand what the current action does and its potential consequences. When the component is selected, if it has both text attributes and an accessibility description, the text content is announced first, followed by the accessibility description. The default value is an empty string. |
+| description | string \| [Resource](arkts-arkui-resource-t.md) | Yes | Accessibility description for the component. Provides details about the component's operation, helping users understand what the current action does and its potential consequences. When the component is selected, if it has both text attributes and an accessibility description, the text content is announced first, followed by the accessibility description. The default value is an empty string. |
 
 **Return value:**
 
@@ -424,7 +424,7 @@ Sets the parameters of the chain in which the component is the head. This API ta
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| direction | Axis | Yes | Direction of the chain layout. Specifies the arrangement direction of the chain headed by this component in the RelativeContainer. |
+| direction | [Axis](arkts-arkui-axis-e.md) | Yes | Direction of the chain layout. Specifies the arrangement direction of the chain headed by this component in the RelativeContainer. |
 | style | [ChainStyle](../arkts-components/arkts-arkui-chainstyle-e.md) | Yes | Style of the chain layout. Controls how child components are distributed within the chain, such as evenly distributed, aligned at both ends, or compactly arranged. For specific values and effects, see [ChainStyle](../arkts-components/arkts-arkui-chainstyle-e.md). |
 
 **Return value:**
@@ -595,7 +595,7 @@ Sets the font family of the text on the security component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | string \| Resource | Yes | Font family of the text on the security component. Default font:**'HarmonyOS Sans'**. |
+| value | string \| [Resource](arkts-arkui-resource-t.md) | Yes | Font family of the text on the security component. Default font:**'HarmonyOS Sans'**. |
 
 **Return value:**
 
@@ -651,7 +651,7 @@ Sets the font style of the text on the security component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | FontStyle | Yes | Font style of the text on the security component. Default value: FontStyle.Normal. |
+| value | [FontStyle](arkts-arkui-fontstyle-e.md) | Yes | Font style of the text on the security component. Default value: FontStyle.Normal. |
 
 **Return value:**
 
@@ -679,7 +679,7 @@ Sets the font weight of the text on the security component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number \| FontWeight \| string \| Resource | Yes | Font weight of the text on the security component. For the number type, the value ranges from 100 to 900, at an interval of 100. A larger value indicates a heavier font weight. For the string type, only numeric strings, for example, **'400'**, and the enumerated values of **FontWeight** are supported, including **'bold'**, **'bolder'**, **'lighter'**, **'regular'**, and **'medium'**. The Resource type is supported since API version 20. The Resource type supports only **'integer'** and **'string'** formats. Values follow the number type specifications for the **'integer'** type and the string type specifications for the **'string'** type, both described earlier. If **fontWeight** is not set for the component, the font weight is set to **FontWeight.Medium** by default. If **value** is **undefined** or **null**, a number outside the [100, 900] range, or a string that does not match the string format of **FontWeight** enums, the font weight is set to **FontWeight.Normal**.<br>**Since:** 20 |
+| value | number \| [FontWeight](arkts-arkui-fontweight-e.md) \| string \| [Resource](arkts-arkui-resource-t.md) | Yes | Font weight of the text on the security component. For the number type, the value ranges from 100 to 900, at an interval of 100. A larger value indicates a heavier font weight. For the string type, only numeric strings, for example, **'400'**, and the enumerated values of **FontWeight** are supported, including **'bold'**, **'bolder'**, **'lighter'**, **'regular'**, and **'medium'**. The Resource type is supported since API version 20. The Resource type supports only **'integer'** and **'string'** formats. Values follow the number type specifications for the **'integer'** type and the string type specifications for the **'string'** type, both described earlier. If **fontWeight** is not set for the component, the font weight is set to **FontWeight.Medium** by default. If **value** is **undefined** or **null**, a number outside the [100, 900] range, or a string that does not match the string format of **FontWeight** enums, the font weight is set to **FontWeight.Normal**.<br>**Since:** 20 |
 
 **Return value:**
 
@@ -910,7 +910,7 @@ This API can be used in conjunction with [minFontScale](#minfontscale). **maxFon
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scale | number \| Resource | Yes | Maximum font scale factor for the text. The value must be greater than or equal to 1.    **NOTE：**If the set value is less than 1, the value **1** is used. If the value is **undefined**, **null**, or another invalid value, the attribute has no effect. |
+| scale | number \| [Resource](arkts-arkui-resource-t.md) | Yes | Maximum font scale factor for the text. The value must be greater than or equal to 1.    **NOTE：**If the set value is less than 1, the value **1** is used. If the value is **undefined**, **null**, or another invalid value, the attribute has no effect. |
 
 **Return value:**
 
@@ -946,7 +946,7 @@ Sets the maximum font size for text display.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| maxSize | number \| string \| Resource | Yes | Maximum display font size of the text. The value must be greater than 0. When the unit is not explicitly specified, the unit is fp.    **NOTE：**When the set value is less than or equal to 0, the adaptive font size does not take effect. When an invalid value is set, this attribute does not take effect. |
+| maxSize | number \| string \| [Resource](arkts-arkui-resource-t.md) | Yes | Maximum display font size of the text. The value must be greater than 0. When the unit is not explicitly specified, the unit is fp.    **NOTE：**When the set value is less than or equal to 0, the adaptive font size does not take effect. When an invalid value is set, this attribute does not take effect. |
 
 **Return value:**
 
@@ -974,7 +974,7 @@ Sets the maximum number of lines for text. By default, text wraps automatically.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| line | number \| Resource | Yes | Maximum number of lines for the text. The number type accepts values in [1, +∞). The Resource type is supported since API version 20. The parameter of the Resource type supports only integers in the range [1, +∞).    **NOTE：**A value less than 1 is handled as the default value **1000000**.<br>**Since:** 20 |
+| line | number \| [Resource](arkts-arkui-resource-t.md) | Yes | Maximum number of lines for the text. The number type accepts values in [1, +∞). The Resource type is supported since API version 20. The parameter of the Resource type supports only integers in the range [1, +∞).    **NOTE：**A value less than 1 is handled as the default value **1000000**.<br>**Since:** 20 |
 
 **Return value:**
 
@@ -1004,7 +1004,7 @@ This API can be used in conjunction with [maxFontScale](#maxfontscale). **minFon
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scale | number \| Resource | Yes | Minimum font scale factor for the text. Value range: [0,1].    **NOTE：**If the set value is less than 0, the value **0** is used, meaning scaling down to any factor is allowed. If the set value is greater than 1, the value **1** is used, meaning font scaling is not allowed. If the value is **undefined**, **null**, or another invalid value, the attribute has no effect. |
+| scale | number \| [Resource](arkts-arkui-resource-t.md) | Yes | Minimum font scale factor for the text. Value range: [0,1].    **NOTE：**If the set value is less than 0, the value **0** is used, meaning scaling down to any factor is allowed. If the set value is greater than 1, the value **1** is used, meaning font scaling is not allowed. If the value is **undefined**, **null**, or another invalid value, the attribute has no effect. |
 
 **Return value:**
 
@@ -1041,7 +1041,7 @@ Sets the minimum font size for text display.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| minSize | number \| string \| Resource | Yes | Minimum display font size of the text. The value must be greater than 0. When the unit is not explicitly specified, the unit is fp.    **minFontSize** must be less than **maxFontSize**. If the set value is greater than **maxFontSize**, **maxFontSize** is used instead. If this parameter is less than or equal to 0, the adaptive font size does not take effect. |
+| minSize | number \| string \| [Resource](arkts-arkui-resource-t.md) | Yes | Minimum display font size of the text. The value must be greater than 0. When the unit is not explicitly specified, the unit is fp.    **minFontSize** must be less than **maxFontSize**. If the set value is greater than **maxFontSize**, **maxFontSize** is used instead. If this parameter is less than or equal to 0, the adaptive font size does not take effect. |
 
 **Return value:**
 
@@ -1069,7 +1069,7 @@ Sets the coordinate offset of the security component relative to its own layout 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Position \| Edges \| [LocalizedEdges](arkts-arkui-localizededges-i.md) | Yes | Coordinate offset of the security component relative to its own layout position. This attribute does not affect the layout in the parent container. The offset is used only during drawing. When the unit is not explicitly specified, the unit is vp. No default value. This attribute does not take effect when it is set to an invalid value.<br>**Since:** 12 |
+| value | Position \| [Edges](arkts-arkui-edges-i.md) \| [LocalizedEdges](arkts-arkui-localizededges-i.md) | Yes | Coordinate offset of the security component relative to its own layout position. This attribute does not affect the layout in the parent container. The offset is used only during drawing. When the unit is not explicitly specified, the unit is vp. No default value. This attribute does not take effect when it is set to an invalid value.<br>**Since:** 12 |
 
 **Return value:**
 

@@ -28,7 +28,7 @@ Obtains the type of the SIM card in the specified slot.
 
 | Type | Description |
 | --- | --- |
-| CardType | Type of the SIM card in the specified slot. |
+| [CardType](arkts-telephony-sim-cardtype-e.md) | Type of the SIM card in the specified slot. |
 
 **Examples**
 

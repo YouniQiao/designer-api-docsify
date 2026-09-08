@@ -29,6 +29,18 @@ import { FullScreenLaunchComponent } from '@kit.ArkUI';
 ## Examples
 
 This example demonstrates how to use the component and how to implement the provider-side atomic service. In actual running, use the appId of your own atomic service.
+The FullScreenLaunchComponent component must be invoked by the invoker. After the provider completes local installation, the provider's atomic service can be launched in full-screen embedded mode in the invoker's app or atomic service.
+> NOTE
+> 
+> Because the embedded atomic service runs in an independent process, its crash exceptions are not directly exposed in the host's logs. During local debugging, you can view the actual error stack as follows:
+> 
+> Open the HiLog panel in DevEco Studio.
+> 
+> Switch the mode in the upper left corner to User logs of selected app.
+> 
+> In the process list on the right, select the launched atomic service process (the bundle name of the launched atomic service, with the suffix "embeddable").
+
+User Implementation
 
 ```TypeScript
 // The content of the consumer entry page Index.ets is as follows:
@@ -73,6 +85,8 @@ function ColumnChild() {
 ```
 
 Provider Implementation
+You need to modify the following files for the atomic service provider:
+Entry point file: /src/main/ets/entryability/EntryAbility.ets
 
 ```TypeScript
 import { AbilityConstant, Want, EmbeddableUIAbility } from '@kit.AbilityKit';

@@ -41,32 +41,6 @@ addDeferredSurface(surfaceId: string): void
 | [7400101](../errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 13 - 23 |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function preview(cameraManager: camera.CameraManager, cameraInfo: camera.CameraDevice, previewProfile: camera.Profile, photoProfile: camera.Profile, mode: camera.SceneMode, previewSurfaceId: string): Promise<void> {
-  let cameraInput: camera.CameraInput = cameraManager.createCameraInput(cameraInfo);
-  let previewOutput: camera.PreviewOutput = cameraManager.createDeferredPreviewOutput(previewProfile);
-  let photoOutput: camera.PhotoOutput = cameraManager.createPhotoOutput(photoProfile);
-  let session: camera.Session  = cameraManager.createSession(mode);
-  session.beginConfig();
-  session.addInput(cameraInput);
-  session.addOutput(previewOutput);
-  session.addOutput(photoOutput);
-  await session.commitConfig();
-  try {
-    await session.start();
-  } catch (error) {
-    // 失败返回错误码error.code并处理。
-    let err = error as BusinessError;
-    console.error(`start session failed. error code: ${err.code}`);
-  }
-  previewOutput.addDeferredSurface(previewSurfaceId);
-}
-```
-
 ## enableBandwidthCompression
 
 ```TypeScript
@@ -102,22 +76,6 @@ enableBandwidthCompression(enabled: boolean): void
 | [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
 | [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function enableBandwidthCompression(previewOutput: camera.PreviewOutput, enabled: boolean): void {
-  try {
-    previewOutput.enableBandwidthCompression(enabled);
-  } catch (error) {
-    // 失败返回错误码error.code并处理。
-    let err = error as BusinessError;
-    console.error(`The previewOutput.enableBandwidthCompression call failed. error code: ${err.code}`);
-  }
-}
-```
-
 ## getActiveFrameRate
 
 ```TypeScript
@@ -139,22 +97,6 @@ getActiveFrameRate(): FrameRateRange
 | 类型 | 说明 |
 | --- | --- |
 | [FrameRateRange](arkts-camera-camera-frameraterange-i.md) | 帧率范围 |
-
-**示例**
-
-```TypeScript
-function getActiveFrameRate(previewOutput: camera.PreviewOutput): camera.FrameRateRange {
-  let activeFrameRate: camera.FrameRateRange = previewOutput.getActiveFrameRate();
-  return activeFrameRate;
-}
-```
-
-```TypeScript
-function getActiveFrameRate(videoOutput: camera.VideoOutput): camera.FrameRateRange {
-  let activeFrameRate: camera.FrameRateRange = videoOutput.getActiveFrameRate();
-  return activeFrameRate;
-}
-```
 
 ## getActiveProfile
 
@@ -181,40 +123,6 @@ getActiveProfile(): Profile
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function testGetActiveProfile(photoOutput: camera.PhotoOutput): camera.Profile | undefined {
-  let activeProfile: camera.Profile | undefined = undefined;
-  try {
-    activeProfile = photoOutput.getActiveProfile();
-  } catch (error) {
-    // 失败返回错误码error.code并处理。
-    let err = error as BusinessError;
-    console.error(`The photoOutput.getActiveProfile call failed. error code: ${err.code}`);
-  }
-  return activeProfile;
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function testGetActiveProfile(previewOutput: camera.PreviewOutput): camera.Profile | undefined {
-  let activeProfile: camera.Profile | undefined = undefined;
-  try {
-    activeProfile = previewOutput.getActiveProfile();
-  } catch (error) {
-    // 失败返回错误码error.code并处理。
-    let err = error as BusinessError;
-    console.error(`The previewOutput.getActiveProfile call failed. error code: ${err.code}`);
-  }
-  return activeProfile;
-}
-```
 
 ## getPreviewRotation
 
@@ -255,38 +163,6 @@ getPreviewRotation(displayRotation?: number): ImageRotation
 | [7400101](../errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect.<br>**适用版本：** 12 - 22 |
 | [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function testGetPreviewRotation(previewOutput: camera.PreviewOutput, imageRotation : camera.ImageRotation): camera.ImageRotation {
-  let previewRotation: camera.ImageRotation = camera.ImageRotation.ROTATION_0;
-  try {
-    previewRotation = previewOutput.getPreviewRotation(imageRotation);
-    console.info(`Preview rotation is: ${previewRotation}`);
-  } catch (error) {
-    // 失败返回错误码error.code并处理。
-    let err = error as BusinessError;
-    console.error(`The previewOutput.getPreviewRotation call failed. error code: ${err.code}`);
-  }
-  return previewRotation;
-}
-
-function testGetPreviewRotationWithOutParam(previewOutput: camera.PreviewOutput): camera.ImageRotation {
-  let previewRotation: camera.ImageRotation = camera.ImageRotation.ROTATION_0;
-  try {
-    previewRotation = previewOutput.getPreviewRotation();
-    console.info(`Preview rotation is: ${previewRotation}`);
-  } catch (error) {
-    // 失败返回错误码error.code并处理。
-    let err = error as BusinessError;
-    console.error(`The previewOutput.testGetPreviewRotationWithOutParam call failed. error code: ${err.code}`);
-  }
-  return previewRotation;
-}
-```
-
 ## getSupportedFrameRates
 
 ```TypeScript
@@ -307,22 +183,6 @@ getSupportedFrameRates(): Array<FrameRateRange>
 | --- | --- |
 | Array&lt;[FrameRateRange](arkts-camera-camera-frameraterange-i.md)&gt; | 支持的帧率范围列表。若接口调用失败，返回undefined。 |
 
-**示例**
-
-```TypeScript
-function getSupportedFrameRates(previewOutput: camera.PreviewOutput): Array<camera.FrameRateRange> {
-  let supportedFrameRatesArray: Array<camera.FrameRateRange> = previewOutput.getSupportedFrameRates();
-  return supportedFrameRatesArray;
-}
-```
-
-```TypeScript
-function getSupportedFrameRates(videoOutput: camera.VideoOutput): Array<camera.FrameRateRange> {
-  let supportedFrameRatesArray: Array<camera.FrameRateRange> = videoOutput.getSupportedFrameRates();
-  return supportedFrameRatesArray;
-}
-```
-
 ## isBandwidthCompressionSupported
 
 ```TypeScript
@@ -342,24 +202,6 @@ isBandwidthCompressionSupported(): boolean
 | 类型 | 说明 |
 | --- | --- |
 | boolean | 是否支持预览带宽压缩。true表示支持，false表示不支持。 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function isBandwidthCompressionSupported(previewOutput: camera.PreviewOutput): boolean {
-  let supported: boolean = false;
-  try {
-    supported = previewOutput.isBandwidthCompressionSupported();
-  } catch (error) {
-    // 失败返回错误码error.code并处理。
-    let err = error as BusinessError;
-    console.error(`The previewOutput.isBandwidthCompressionSupported call failed. error code: ${err.code}`);
-  }
-  return supported;
-}
-```
 
 ## isLogViewAssistSupported
 
@@ -386,24 +228,6 @@ LOG视频下，查询是否支持辅助监看功能。辅助监看开启后，�
 | 类型 | 说明 |
 | --- | --- |
 | boolean | 是否支持辅助监看功能。true表示支持，false表示不支持。 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function isLogViewAssistSupported(previewOutput: camera.PreviewOutput): boolean {
-  let supported: boolean = false;
-  try {
-      supported = previewOutput.isLogViewAssistSupported();
-  } catch (error) {
-      // 失败返回错误码error.code并处理。
-      let err = error as BusinessError;
-      console.error(`The previewOutput.isLogViewAssistSupported call failed. error code: ${err.code}`);
-  }
-  return supported;
-}
-```
 
 ## off('frameStart')
 
@@ -577,20 +401,6 @@ setFrameRate(minFps: number, maxFps: number): void
 | [7400101](../errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect. |
 | [7400110](../errorcode-camera.md#7400110-与当前配置存在冲突) | Unresolved conflicts with current configurations. |
 
-**示例**
-
-```TypeScript
-function setFrameRateRange(previewOutput: camera.PreviewOutput, frameRateRange: Array<number>): void {
-  previewOutput.setFrameRate(frameRateRange[0], frameRateRange[1]);
-}
-```
-
-```TypeScript
-function setFrameRateRange(videoOutput: camera.VideoOutput, frameRateRange: Array<number>): void {
-  videoOutput.setFrameRate(frameRateRange[0], frameRateRange[1]);
-}
-```
-
 ## setLogViewAssistEnable
 
 ```TypeScript
@@ -627,22 +437,6 @@ LOG视频下，使能辅助监看之前，可先使用方法[isLogViewAssistSupp
 | [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
 | [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function setLogViewAssistEnable(previewOutput: camera.PreviewOutput, enable: boolean): void {
-  try {
-      previewOutput.setLogViewAssistEnable(enable);
-  } catch (error) {
-      // 失败返回错误码error.code并处理。
-      let err = error as BusinessError;
-      console.error(`The previewOutput.setLogViewAssistEnable call failed. error code: ${err.code}`);
-  }
-}
-```
-
 ## setPreviewRotation
 
 ```TypeScript
@@ -670,23 +464,6 @@ setPreviewRotation(previewRotation: ImageRotation, isDisplayLocked?: boolean): v
 | --- | --- |
 | [7400101](../errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect. |
 | [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function testSetPreviewRotation(previewOutput: camera.PreviewOutput, previewRotation : camera.ImageRotation, isDisplayLocked: boolean): void {
-  try {
-    previewOutput.setPreviewRotation(previewRotation, isDisplayLocked);
-  } catch (error) {
-    // 失败返回错误码error.code并处理。
-    let err = error as BusinessError;
-    console.error(`The previewOutput.setPreviewRotation call failed. error code: ${err.code}`);
-  }
-  return;
-}
-```
 
 ## start
 
@@ -720,78 +497,6 @@ start(callback: AsyncCallback<void>): void
 | --- | --- |
 | [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function startCaptureSession(captureSession: camera.CaptureSession): void {
-  captureSession.start((err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to start the session, error code: ${err.code}.`);
-      return;
-    }
-    console.info('Callback invoked to indicate the session start success.');
-  });
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function startMetadataOutput(metadataOutput: camera.MetadataOutput): void {
-  metadataOutput.start((err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to start metadata output, error code: ${err.code}.`);
-      return;
-    }
-    console.info('Callback returned with metadata output started.');
-  });
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function startPreviewOutput(previewOutput: camera.PreviewOutput): void {
-  previewOutput.start((err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to start the preview output, error code: ${err.code}.`);
-      return;
-    }
-    console.info('Callback returned with preview output started.');
-  });
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function startCaptureSession(session: camera.Session): void {
-  session.start((err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to start the session, error code: ${err.code}.`);
-      return;
-    }
-    console.info('Callback invoked to indicate the session start success.');
-  });
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function startVideoOutput(videoOutput: camera.VideoOutput): void {
-  videoOutput.start((err: BusinessError) => {
-    if (err.code) {
-      console.error(`Failed to start the video output, error code: ${err.code}.`);
-      return;
-    }
-    console.info('Callback invoked to indicate the video output start success.');
-  });
-}
-```
-
 ## start
 
 ```TypeScript
@@ -824,80 +529,6 @@ start(): Promise<void>
 | --- | --- |
 | [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function startDepthDataOutput(depthDataOutput: camera.DepthDataOutput): void {
-  depthDataOutput.start().then(() => {
-    console.info('Promise returned to indicate that start method execution success.');
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to depth data output start, error code: ${error.code}.`);
-  });
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function startCaptureSession(captureSession: camera.CaptureSession): void {
-  captureSession.start().then(() => {
-    console.info('Promise returned to indicate the session start success.');
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to start the session, error code: ${err.code}.`);
-  });
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function startMetadataOutput(metadataOutput: camera.MetadataOutput): void {
-  metadataOutput.start().then(() => {
-    console.info('Callback returned with metadata output started.');
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to metadata output start, error code: ${error.code}`);
-  });
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function startPreviewOutput(previewOutput: camera.PreviewOutput): void {
-  previewOutput.start().then(() => {
-    console.info('Promise returned with preview output started.');
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to preview output start, error code: ${error.code}.`);
-  });
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function startCaptureSession(session: camera.Session): void {
-  session.start().then(() => {
-    console.info('Promise returned to indicate the session start success.');
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to start the session, error code: ${error.code}.`);
-  });
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function startVideoOutput(videoOutput: camera.VideoOutput): void {
-  videoOutput.start().then(() => {
-    console.info('Promise returned to indicate that start method execution success.');
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to video output start, error code: ${error.code}.`);
-  });
-}
-```
-
 ## stop
 
 ```TypeScript
@@ -924,72 +555,6 @@ stop(callback: AsyncCallback<void>): void
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当停止输出预览流成功，err为undefined，否则为错误对象。 |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function stopCaptureSession(captureSession: camera.CaptureSession): void {
-  captureSession.stop((err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to stop the session, error code: ${err.code}.`);
-      return;
-    }
-    console.info('Callback invoked to indicate the session stop success.');
-  });
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function stopMetadataOutput(metadataOutput: camera.MetadataOutput): void {
-  metadataOutput.stop((err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to stop the metadata output, error code: ${err.code}.`);
-      return;
-    }
-    console.info('Callback returned with metadata output stopped.');
-  })
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function stopPreviewOutput(previewOutput: camera.PreviewOutput): void {
-  previewOutput.stop((err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to stop the preview output, error code: ${err.code}.`);
-      return;
-    }
-    console.info('Returned with preview output stopped.');
-  })
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function stopCaptureSession(session: camera.Session): void {
-  session.stop((err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to stop the session, error code: ${err.code}.`);
-      return;
-    }
-    console.info('Callback invoked to indicate the session stop success.');
-  });
-}
-```
-
-```TypeScript
-function stopVideoOutput(videoOutput: camera.VideoOutput): void {
-  videoOutput.stop(() => {
-    console.info('Callback invoked to indicate the video output stop success.');
-  });
-}
-```
-
 ## stop
 
 ```TypeScript
@@ -1015,77 +580,3 @@ stop(): Promise<void>
 | 类型 | 说明 |
 | --- | --- |
 | Promise&lt;void&gt; | Promise对象，无返回结果。 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function stopDepthDataOutput(depthDataOutput: camera.DepthDataOutput): void {
-  depthDataOutput.stop().then(() => {
-    console.info('Promise returned to indicate that stop method execution success.');
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to depth data output stop, error code: ${error.code}.`);
-  });
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function stopCaptureSession(captureSession: camera.CaptureSession): void {
-  captureSession.stop().then(() => {
-    console.info('Promise returned to indicate the session stop success.');
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to stop the session, error code: ${err.code}.`);
-  });
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function stopMetadataOutput(metadataOutput: camera.MetadataOutput): void {
-  metadataOutput.stop().then(() => {
-    console.info('Callback returned with metadata output stopped.');
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to metadata output stop, error code: ${error.code}`);
-  });
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function stopPreviewOutput(previewOutput: camera.PreviewOutput): void {
-  previewOutput.stop().then(() => {
-    console.info('Callback returned with preview output stopped.');
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to preview output stop, error code: ${error.code}.`);
-  });
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function stopCaptureSession(session: camera.Session): void {
-  session.stop().then(() => {
-    console.info('Promise returned to indicate the session stop success.');
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to stop the session, error code: ${error.code}.`);
-  });
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function stopVideoOutput(videoOutput: camera.VideoOutput): void {
-  videoOutput.stop().then(() => {
-    console.info('Promise returned to indicate that stop method execution success.');
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to video output stop, error code: ${error.code}.`);
-  });
-}
-```

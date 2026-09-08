@@ -117,18 +117,6 @@ Hides the keyboard. This API uses an asynchronous callback to return the result.
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
-panel.hide((err: BusinessError) => {
-  if (err) {
-    console.error(`Failed to hide panel. Code is ${err.code}, message is ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in hiding the panel.');
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
 keyboardController.hide((err: BusinessError) => {
   if (err) {
     console.error(`Failed to hide. Code:${err.code}, message:${err.message}`);
@@ -163,16 +151,6 @@ Hides the keyboard. This API uses a promise to return the result.
 | [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
 
 **Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-panel.hide().then(() => {
-  console.info('Succeeded in hiding the panel.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to hide panel. Code is ${err.code}, message is ${err.message}`);
-});
-```
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

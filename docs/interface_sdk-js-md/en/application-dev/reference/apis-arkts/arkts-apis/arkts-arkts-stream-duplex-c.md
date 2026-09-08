@@ -31,19 +31,7 @@ A constructor used to create a **Duplex** object.
 **Examples**
 
 ```TypeScript
-let writableStream = new stream.Writable();
-```
-
-```TypeScript
-let readableStream = new stream.Readable();
-```
-
-```TypeScript
 let duplex = new stream.Duplex();
-```
-
-```TypeScript
-let transform = new stream.Transform();
 ```
 
 ## cork
@@ -67,22 +55,6 @@ Forces subsequent writes to be buffered. This API is called to optimize the perf
 | boolean | Operation result. **true** means successful; **false** otherwise. |
 
 **Examples**
-
-```TypeScript
-class TestWritable extends stream.Writable {
-  constructor() {
-    super();
-  }
-
-  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
-    callback();
-  }
-}
-
-let writableStream = new TestWritable();
-let result = writableStream.cork();
-console.info("Writable cork result", result); // Writable cork result true
-```
 
 ```TypeScript
 let duplexStream = new stream.Duplex();
@@ -113,22 +85,6 @@ A data write API. You need to implement this API but do not call it directly. Th
 | callback | Function | Yes | Callback function. |
 
 **Examples**
-
-```TypeScript
-class TestWritable extends stream.Writable {
-  constructor() {
-    super();
-  }
-
-  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
-    console.info("Writable chunk is", chunk); // Writable chunk is data
-    callback();
-  }
-}
-
-let writableStream = new TestWritable();
-writableStream.write('data', 'utf8');
-```
 
 ```TypeScript
 class TestDuplex extends stream.Duplex {
@@ -171,27 +127,6 @@ A batch data write API. You need to implement this API but do not call it direct
 | callback | Function | Yes | Callback function. |
 
 **Examples**
-
-```TypeScript
-class TestWritable extends stream.Writable {
-  constructor() {
-    super();
-  }
-
-  doWritev(chunks: string[] | Uint8Array[], callback: Function) {
-    console.info("Writable chunk", chunks);
-    callback();
-  }
-  // Writable chunk data1
-  // Writable chunk data2
-}
-
-let writableStream = new TestWritable();
-writableStream.write('data1', 'utf8');
-writableStream.write('data2', 'utf8');
-writableStream.uncork();
-writableStream.end();
-```
 
 ```TypeScript
 class TestDuplex extends stream.Duplex {
@@ -257,27 +192,6 @@ Ends the writing process in a duplex stream. If the value of **writableCorked** 
 **Examples**
 
 ```TypeScript
-class TestWritable extends stream.Writable {
-  constructor() {
-    super();
-  }
-
-  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
-    console.info("Writable chunk is", chunk);
-    callback();
-  }
-  // Writable chunk is test
-  // Writable chunk is finish
-}
-
-let writableStream = new TestWritable();
-writableStream.write('test', 'utf8');
-writableStream.end('finish', 'utf8', () => {
-  console.info("Writable is end"); // Writable is end
-});
-```
-
-```TypeScript
 class TestDuplex extends stream.Duplex {
   constructor() {
     super();
@@ -327,22 +241,6 @@ Sets the default encoding format for the writable stream.
 **Examples**
 
 ```TypeScript
-class TestWritable extends stream.Writable {
-  constructor() {
-    super();
-  }
-
-  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
-    callback();
-  }
-}
-
-let writableStream = new TestWritable();
-let result = writableStream.setDefaultEncoding('utf8');
-console.info("Writable is result", result); // Writable is result true
-```
-
-```TypeScript
 class TestDuplex extends stream.Duplex {
   constructor() {
     super();
@@ -382,28 +280,6 @@ Releases the cork state, flushing the buffered data and writing it to the target
 | boolean | Operation result. **true** means successful; **false** otherwise. |
 
 **Examples**
-
-```TypeScript
-class TestWritable extends stream.Writable {
-  constructor() {
-    super();
-  }
-
-  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
-    callback();
-  }
-}
-
-let writableStream = new TestWritable();
-writableStream.cork();
-writableStream.write('data1', 'utf8');
-writableStream.write('data2', 'utf8');
-writableStream.uncork();
-writableStream.end();
-writableStream.on('finish', () => {
-  console.info("all Data is End"); // all Data is End
-});
-```
 
 ```TypeScript
 let dataWritten = '';
@@ -466,22 +342,6 @@ Writes data to the buffer of the stream. This API uses an asynchronous callback 
 | [10200039](../errorcode-utils.md#10200039-dotransform-is-not-implemented) | The doTransform method has not been implemented for a class that inherits from Transform. |
 
 **Examples**
-
-```TypeScript
-class TestWritable extends stream.Writable {
-  constructor() {
-    super();
-  }
-
-  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
-    console.info("Writable chunk is", chunk); // Writable chunk is test
-    callback();
-  }
-}
-
-let writableStream = new TestWritable();
-writableStream.write('test', 'utf8');
-```
 
 ```TypeScript
 class TestDuplex extends stream.Duplex {

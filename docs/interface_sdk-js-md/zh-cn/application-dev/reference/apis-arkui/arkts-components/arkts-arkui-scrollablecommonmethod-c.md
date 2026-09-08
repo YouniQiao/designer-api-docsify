@@ -127,7 +127,7 @@ contentStartOffset + contentEndOffset超过滚动组件内容区长度后content
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| offset | number \| Resource | 是 | 内容区末尾偏移量。默认值：0单位：vp 取值范围：[0, +∞)设置异常值如负数、非数字Resource时，按默认值处理。 |
+| offset | number \| [Resource](../arkts-apis/arkts-arkui-resource-t.md) | 是 | 内容区末尾偏移量。默认值：0单位：vp 取值范围：[0, +∞)设置异常值如负数、非数字Resource时，按默认值处理。 |
 
 **返回值：**
 
@@ -157,7 +157,7 @@ contentStartOffset + contentEndOffset超过滚动组件内容区长度后content
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| offset | number \| Resource | 是 | 内容区域起始偏移量。默认值：0单位：vp 取值范围：[0, +∞)设置异常值如负数、非数字Resource时，按默认值处理。 |
+| offset | number \| [Resource](../arkts-apis/arkts-arkui-resource-t.md) | 是 | 内容区域起始偏移量。默认值：0单位：vp 取值范围：[0, +∞)设置异常值如负数、非数字Resource时，按默认值处理。 |
 
 **返回值：**
 
@@ -393,7 +393,7 @@ friction(value: number | Resource): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number \| Resource | 是 | 摩擦系数。默认值：非wearable设备为0.6，wearable设备为0.9。从API version 11开始，非wearable设备默认值为0.7。从API version 12开始，非wearable设备默认值为0.75。 取值范围：(0, +∞)，设置为小于等于0的值时，按默认值处理。 |
+| value | number \| [Resource](../arkts-apis/arkts-arkui-resource-t.md) | 是 | 摩擦系数。默认值：非wearable设备为0.6，wearable设备为0.9。从API version 11开始，非wearable设备默认值为0.7。从API version 12开始，非wearable设备默认值为0.75。 取值范围：(0, +∞)，设置为小于等于0的值时，按默认值处理。 |
 
 **返回值：**
 
@@ -870,7 +870,7 @@ scrollBarColor(color: Color | number | string): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| color | Color \| number \| string | 是 | 滚动条的颜色。 |
+| color | [Color](../arkts-apis/arkts-arkui-color-e.md) \| number \| string | 是 | 滚动条的颜色。 |
 
 **返回值：**
 
@@ -898,7 +898,7 @@ scrollBarColor(color: Color | number | string | Resource): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| color | Color \| number \| string \| Resource | 是 | 滚动条的颜色。 |
+| color | [Color](../arkts-apis/arkts-arkui-color-e.md) \| number \| string \| [Resource](../arkts-apis/arkts-arkui-resource-t.md) | 是 | 滚动条的颜色。 |
 
 **返回值：**
 
@@ -934,7 +934,7 @@ scrollBarHeight(height: LengthMetrics | undefined): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| height | LengthMetrics \| undefined | 是 | 滚动条滑轨高度。值必须大于等于0。设置为undefined或小于0时，自适应滚动组件高度，儿童智能表则恢复至默认值37vp。设置为0时，不显示滚动条。 |
+| height | [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md) \| undefined | 是 | 滚动条滑轨高度。值必须大于等于0。设置为undefined或小于0时，自适应滚动组件高度，儿童智能表则恢复至默认值37vp。设置为0时，不显示滚动条。 |
 
 **返回值：**
 
@@ -1020,7 +1020,7 @@ scrollBarWidth(value: number | string | Resource): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number \| string \| Resource | 是 | 滚动条的宽度。 |
+| value | number \| string \| [Resource](../arkts-apis/arkts-arkui-resource-t.md) | 是 | 滚动条的宽度。 |
 
 **返回值：**
 

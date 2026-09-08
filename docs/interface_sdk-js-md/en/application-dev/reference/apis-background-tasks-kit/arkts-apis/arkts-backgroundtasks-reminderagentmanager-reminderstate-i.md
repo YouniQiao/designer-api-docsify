@@ -25,7 +25,7 @@ buttonType: ActionButtonType
 
 Button type.
 
-**Type:** ActionButtonType
+**Type:** [ActionButtonType](arkts-backgroundtasks-reminderagentmanager-actionbuttontype-e.md)
 
 **Since:** 23
 

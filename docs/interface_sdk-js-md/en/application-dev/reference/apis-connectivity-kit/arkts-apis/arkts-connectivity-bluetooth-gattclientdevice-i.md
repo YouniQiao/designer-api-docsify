@@ -276,7 +276,7 @@ Starts discovering services.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;GattService&gt;&gt; | Yes | Callback used to catch the services. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[GattService](arkts-connectivity-bluetooth-gattservice-i.md)&gt;&gt; | Yes | Callback used to catch the services. |
 
 **Examples**
 
@@ -321,7 +321,7 @@ Starts discovering services.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;GattService&gt;&gt; | Returns the list of services { |
+| Promise&lt;Array&lt;[GattService](arkts-connectivity-bluetooth-gattservice-i.md)&gt;&gt; | Returns the list of services { |
 
 **Examples**
 
@@ -357,7 +357,7 @@ Unsubscribe characteristic value changed event.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'BLECharacteristicChange' | Yes | Type of the characteristic value changed event to listen for. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;BLECharacteristic&gt; | No | Callback used to listen for the characteristic value changed event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[BLECharacteristic](arkts-connectivity-bluetooth-blecharacteristic-i.md)&gt; | No | Callback used to listen for the characteristic value changed event. |
 
 **Examples**
 
@@ -389,7 +389,7 @@ Unsubscribe client connection state changed event.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'BLEConnectionStateChange' | Yes | Type of the connection state changed event to listen for. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;BLEConnectChangedState&gt; | No | Callback used to listen for the connection state changed event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[BLEConnectChangedState](arkts-connectivity-bluetooth-bleconnectchangedstate-i.md)&gt; | No | Callback used to listen for the connection state changed event. |
 
 **Examples**
 
@@ -421,7 +421,7 @@ Subscribe characteristic value changed event.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'BLECharacteristicChange' | Yes | Type of the characteristic value changed event to listen for. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;BLECharacteristic&gt; | Yes | Callback used to listen for the characteristic value changed event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[BLECharacteristic](arkts-connectivity-bluetooth-blecharacteristic-i.md)&gt; | Yes | Callback used to listen for the characteristic value changed event. |
 
 **Examples**
 
@@ -458,7 +458,7 @@ Subscribe client connection state changed event.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'BLEConnectionStateChange' | Yes | Type of the connection state changed event to listen for. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;BLEConnectChangedState&gt; | Yes | Callback used to listen for the connection state changed event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[BLEConnectChangedState](arkts-connectivity-bluetooth-bleconnectchangedstate-i.md)&gt; | Yes | Callback used to listen for the connection state changed event. |
 
 **Examples**
 
@@ -493,8 +493,8 @@ Reads the characteristic of a BLE peripheral device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| characteristic | BLECharacteristic | Yes | Indicates the characteristic to read. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;BLECharacteristic&gt; | Yes | Callback invoked to return the characteristic value read. |
+| characteristic | [BLECharacteristic](arkts-connectivity-bluetooth-blecharacteristic-i.md) | Yes | Indicates the characteristic to read. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[BLECharacteristic](arkts-connectivity-bluetooth-blecharacteristic-i.md)&gt; | Yes | Callback invoked to return the characteristic value read. |
 
 **Examples**
 
@@ -550,13 +550,13 @@ Reads the characteristic of a BLE peripheral device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| characteristic | BLECharacteristic | Yes | Indicates the characteristic to read. |
+| characteristic | [BLECharacteristic](arkts-connectivity-bluetooth-blecharacteristic-i.md) | Yes | Indicates the characteristic to read. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;BLECharacteristic&gt; | Promise used to return the characteristic value read. |
+| Promise&lt;[BLECharacteristic](arkts-connectivity-bluetooth-blecharacteristic-i.md)&gt; | Promise used to return the characteristic value read. |
 
 **Examples**
 
@@ -603,8 +603,8 @@ Reads the descriptor of a BLE peripheral device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| descriptor | BLEDescriptor | Yes | Indicates the descriptor to read. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;BLEDescriptor&gt; | Yes | Callback invoked to return the descriptor read. |
+| descriptor | [BLEDescriptor](arkts-connectivity-bluetooth-bledescriptor-i.md) | Yes | Indicates the descriptor to read. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[BLEDescriptor](arkts-connectivity-bluetooth-bledescriptor-i.md)&gt; | Yes | Callback invoked to return the descriptor read. |
 
 **Examples**
 
@@ -650,13 +650,13 @@ Reads the descriptor of a BLE peripheral device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| descriptor | BLEDescriptor | Yes | Indicates the descriptor to read. |
+| descriptor | [BLEDescriptor](arkts-connectivity-bluetooth-bledescriptor-i.md) | Yes | Indicates the descriptor to read. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;BLEDescriptor&gt; | Promise used to return the descriptor read. |
+| Promise&lt;[BLEDescriptor](arkts-connectivity-bluetooth-bledescriptor-i.md)&gt; | Promise used to return the descriptor read. |
 
 **Examples**
 
@@ -730,7 +730,7 @@ Enables or disables notification of a characteristic when value changed.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| characteristic | BLECharacteristic | Yes | BLE characteristic to listen for. |
+| characteristic | [BLECharacteristic](arkts-connectivity-bluetooth-blecharacteristic-i.md) | Yes | BLE characteristic to listen for. |
 | enable | boolean | Yes | Specifies whether to enable notification of the characteristic. The value `true` indicates that notification is enabled, and the value `false` indicates that notification is disabled. |
 
 **Return value:**
@@ -780,7 +780,7 @@ Writes the characteristic of a BLE peripheral device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| characteristic | BLECharacteristic | Yes | Indicates the characteristic to write. |
+| characteristic | [BLECharacteristic](arkts-connectivity-bluetooth-blecharacteristic-i.md) | Yes | Indicates the characteristic to write. |
 
 **Return value:**
 
@@ -837,7 +837,7 @@ Writes the descriptor of a BLE peripheral device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| descriptor | BLEDescriptor | Yes | Indicates the descriptor to write. |
+| descriptor | [BLEDescriptor](arkts-connectivity-bluetooth-bledescriptor-i.md) | Yes | Indicates the descriptor to write. |
 
 **Return value:**
 

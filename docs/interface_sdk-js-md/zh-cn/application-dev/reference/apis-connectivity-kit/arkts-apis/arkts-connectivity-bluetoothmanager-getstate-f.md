@@ -32,7 +32,7 @@ function getState(): BluetoothState
 
 | 类型 | 说明 |
 | --- | --- |
-| BluetoothState | 表示蓝牙开关状态。 |
+| [BluetoothState](arkts-connectivity-bluetoothmanager-bluetoothstate-e.md) | 表示蓝牙开关状态。 |
 
 **错误码：**
 

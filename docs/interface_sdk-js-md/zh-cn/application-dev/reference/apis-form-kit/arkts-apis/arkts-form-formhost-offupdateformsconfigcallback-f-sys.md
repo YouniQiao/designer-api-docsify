@@ -28,7 +28,7 @@ function offUpdateFormsConfigCallback(callback?: formInfo.UpdateFormsConfigCallb
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | formInfo.UpdateFormsConfigCallback | 否 | 回调函数，返回卡片配置更新信息。 |
+| callback | [formInfo.UpdateFormsConfigCallback](arkts-form-forminfo-updateformsconfigcallback-t-sys.md) | 否 | 回调函数，返回卡片配置更新信息。 |
 
 **错误码：**
 

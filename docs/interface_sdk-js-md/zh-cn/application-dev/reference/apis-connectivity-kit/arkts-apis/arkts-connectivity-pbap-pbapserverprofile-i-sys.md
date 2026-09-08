@@ -82,7 +82,7 @@ getPhoneBookAccessAuthorization(deviceId: string, callback: AsyncCallback<Access
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | deviceId | string | 是 | 表示远端设备地址，例如："XX:XX:XX:XX:XX:XX"。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;AccessAuthorization&gt; | 是 | 回调函数。当获取成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AccessAuthorization](arkts-connectivity-pbap-accessauthorization-t-sys.md)&gt; | 是 | 回调函数。当获取成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -137,7 +137,7 @@ getPhoneBookAccessAuthorization(deviceId: string): Promise<AccessAuthorization>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;AccessAuthorization&gt; | 以Promise的形式返回结果。如果成功，err为undefined，否则为错误对象。 |
+| Promise&lt;[AccessAuthorization](arkts-connectivity-pbap-accessauthorization-t-sys.md)&gt; | 以Promise的形式返回结果。如果成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -296,7 +296,7 @@ setPhoneBookAccessAuthorization(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | deviceId | string | 是 | 表示远端设备地址，例如："XX:XX:XX:XX:XX:XX"。 |
-| authorization | AccessAuthorization | 是 | 表示访问权限枚举值。 |
+| authorization | [AccessAuthorization](arkts-connectivity-pbap-accessauthorization-t-sys.md) | 是 | 表示访问权限枚举值。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当设置成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
@@ -347,7 +347,7 @@ setPhoneBookAccessAuthorization(deviceId: string, authorization: AccessAuthoriza
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | deviceId | string | 是 | 表示远端设备地址，例如："XX:XX:XX:XX:XX:XX"。 |
-| authorization | AccessAuthorization | 是 | 表示访问权限枚举值。 |
+| authorization | [AccessAuthorization](arkts-connectivity-pbap-accessauthorization-t-sys.md) | 是 | 表示访问权限枚举值。 |
 
 **返回值：**
 

@@ -645,6 +645,7 @@ struct ChipAccessibilityExample {
 ```
 
 该示例通过配置backgroundSystemMaterial和activatedBackgroundSystemMaterial实现系统材质样式，启用自动反色功能适配标签文本颜色。
+从API版本26.0.0开始，[ChipOptions](arkts-arkui-arkui-advanced-chip-chipoptions-i.md)新增backgroundSystemMaterial和activatedBackgroundSystemMaterial属性。
 
 ```TypeScript
 import { Chip, ChipOptions, uiMaterial } from '@kit.ArkUI';

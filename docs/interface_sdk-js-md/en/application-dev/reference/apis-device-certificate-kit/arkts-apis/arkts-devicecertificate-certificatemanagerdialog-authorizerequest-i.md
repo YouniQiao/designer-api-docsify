@@ -20,7 +20,7 @@ certPurpose?: certificateManager.CertificatePurpose
 
 Certificate usage. If the **certTypes** parameter contains the **CertificateType.CREDENTIAL_UKEY** type, the **certPurpose** parameter takes effect , indicating that the certificate credentials of the USB key are filtered based on the specified certificate usage.
 
-**Type:** certificateManager.CertificatePurpose
+**Type:** [certificateManager.CertificatePurpose](arkts-devicecertificate-certificatemanager-certificatepurpose-e.md)
 
 **Since:** 22
 

@@ -113,7 +113,7 @@ Registers the callback for pan gesture cancellation. This callback is triggered 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | Callback&lt;[GestureEvent](arkts-arkui-gestureevent-i.md)&gt; | Yes | Callback for pan gesture cancellation. |
+| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;[GestureEvent](arkts-arkui-gestureevent-i.md)&gt; | Yes | Callback for pan gesture cancellation. |
 
 **Return value:**
 

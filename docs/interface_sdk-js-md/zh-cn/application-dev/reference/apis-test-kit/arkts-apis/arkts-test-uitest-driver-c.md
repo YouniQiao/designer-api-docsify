@@ -113,16 +113,6 @@ async function demo() {
 }
 ```
 
-```TypeScript
-// xxx.test.ets
-import { UiDriver } from '@kit.TestKit';
-
-async function demo() {
-  let driver: UiDriver = UiDriver.create();
-  await driver.click(100, 100);
-}
-```
-
 ## clickAt
 
 ```TypeScript
@@ -400,16 +390,6 @@ async function demo() {
 }
 ```
 
-```TypeScript
-// xxx.test.ets
-import { UiDriver } from '@kit.TestKit';
-
-async function demo() {
-  let driver: UiDriver = UiDriver.create();
-  await driver.delayMs(1000);
-}
-```
-
 ## doubleClick
 
 ```TypeScript
@@ -454,16 +434,6 @@ import { Driver } from '@kit.TestKit';
 
 async function demo() {
   let driver: Driver = Driver.create();
-  await driver.doubleClick(100, 100);
-}
-```
-
-```TypeScript
-// xxx.test.ets
-import { UiDriver } from '@kit.TestKit';
-
-async function demo() {
-  let driver: UiDriver = UiDriver.create();
   await driver.doubleClick(100, 100);
 }
 ```
@@ -1821,16 +1791,6 @@ async function demo() {
 }
 ```
 
-```TypeScript
-// xxx.test.ets
-import { UiDriver } from '@kit.TestKit';
-
-async function demo() {
-  let driver: UiDriver = UiDriver.create();
-  await driver.longClick(100, 100);
-}
-```
-
 ## longClickAt
 
 ```TypeScript
@@ -2724,16 +2684,6 @@ async function demo() {
 }
 ```
 
-```TypeScript
-// xxx.test.ets
-import { UiDriver } from '@kit.TestKit';
-
-async function demo() {
-  let driver: UiDriver = UiDriver.create();
-  await driver.pressBack();
-}
-```
-
 ## pressBack
 
 ```TypeScript
@@ -2911,16 +2861,6 @@ import { Driver } from '@kit.TestKit';
 
 async function demo() {
   let driver: Driver = Driver.create();
-  await driver.screenCap('/data/storage/el2/base/cache/1.png');
-}
-```
-
-```TypeScript
-// xxx.test.ets
-import { UiDriver } from '@kit.TestKit';
-
-async function demo() {
-  let driver: UiDriver = UiDriver.create();
   await driver.screenCap('/data/storage/el2/base/cache/1.png');
 }
 ```
@@ -3521,17 +3461,6 @@ import { KeyCode } from '@kit.InputKit';
 
 async function demo() {
   let driver: Driver = Driver.create();
-  await driver.triggerKey(KeyCode.KEYCODE_BACK); // 返回键。
-}
-```
-
-```TypeScript
-// xxx.test.ets
-import { UiDriver } from '@kit.TestKit';
-import { KeyCode } from '@kit.InputKit';
-
-async function demo() {
-  let driver: UiDriver = UiDriver.create();
   await driver.triggerKey(KeyCode.KEYCODE_BACK); // 返回键。
 }
 ```

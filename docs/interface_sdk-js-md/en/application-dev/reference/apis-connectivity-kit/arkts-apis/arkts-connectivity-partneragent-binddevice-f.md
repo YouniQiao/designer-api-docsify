@@ -33,8 +33,8 @@ Note: The device must be paired first.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceAddress | PartnerDeviceAddress | Yes | The address of partner device. |
-| deviceCapability | DeviceCapability | Yes | The capability of partner device. |
+| deviceAddress | [PartnerDeviceAddress](arkts-connectivity-partneragent-partnerdeviceaddress-i.md) | Yes | The address of partner device. |
+| deviceCapability | [DeviceCapability](arkts-connectivity-partneragent-devicecapability-i.md) | Yes | The capability of partner device. |
 | businessCapability | [BusinessCapability](arkts-connectivity-partneragent-businesscapability-i.md) | Yes | The business capability of application. |
 | partnerAgentExtensionAbilityName | string | Yes | The name of PartnerAgentExtensionAbility. |
 

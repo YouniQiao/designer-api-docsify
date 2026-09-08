@@ -20,7 +20,7 @@ import { hiSysEvent } from '@kit.PerformanceAnalysisKit';
 onComplete: (reason: number, total: number) => void
 ```
 
-查询结果统计的回调方法(reason: number, total: number) =&gt; void。
+查询结果统计的回调方法(reason: int, total: int) =&gt; void。
 
 **起始版本：** 9
 

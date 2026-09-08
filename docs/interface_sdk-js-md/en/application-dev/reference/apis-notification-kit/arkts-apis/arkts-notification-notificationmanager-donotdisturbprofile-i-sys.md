@@ -54,7 +54,7 @@ trustlist?: Array<BundleOption>
 
 Trustlist in Do Not Disturb profile.
 
-**Type:** Array&lt;BundleOption&gt;
+**Type:** Array&lt;[BundleOption](arkts-notification-notificationmanager-bundleoption-t.md)&gt;
 
 **Since:** 12
 

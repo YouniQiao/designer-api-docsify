@@ -22,7 +22,7 @@ function getGeofenceSupportedCoordTypes(): Array<CoordinateSystemType>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;CoordinateSystemType&gt; | 地理围栏功能支持的坐标系列表。 |
+| Array&lt;[CoordinateSystemType](arkts-location-geolocationmanager-coordinatesystemtype-e.md)&gt; | 地理围栏功能支持的坐标系列表。 |
 
 **错误码：**
 

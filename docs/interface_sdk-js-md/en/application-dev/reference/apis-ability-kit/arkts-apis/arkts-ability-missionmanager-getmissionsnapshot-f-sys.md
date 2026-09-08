@@ -28,7 +28,7 @@ Obtains the snapshot of a given mission. This API uses an asynchronous callback 
 | --- | --- | --- | --- |
 | deviceId | string | Yes | Device ID. It is a null string by default for the local device. |
 | missionId | number | Yes | Mission ID. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;MissionSnapshot&gt; | Yes | Callback used to return the snapshot information obtained. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[MissionSnapshot](arkts-ability-missionmanager-missionsnapshot-t-sys.md)&gt; | Yes | Callback used to return the snapshot information obtained. |
 
 **Error codes:**
 
@@ -88,7 +88,7 @@ Obtains the snapshot of a given mission. This API uses a promise to return the r
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;MissionSnapshot&gt; | Promise used to return the snapshot information obtained. |
+| Promise&lt;[MissionSnapshot](arkts-ability-missionmanager-missionsnapshot-t-sys.md)&gt; | Promise used to return the snapshot information obtained. |
 
 **Error codes:**
 

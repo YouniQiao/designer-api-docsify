@@ -23,7 +23,7 @@ string格式可用于加载网络图片和本地图片。
 
 网络图片支持http或https协议的URL格式；本地图片支持应用资源路径格式。
 
-**类型：** string \| Resource
+**类型：** string \| [Resource](../arkts-apis/arkts-arkui-resource-t.md)
 
 **起始版本：** 10
 
@@ -45,7 +45,7 @@ string格式可用于加载网络图片和本地图片。
 
 网络图片支持http或https协议的URL格式；本地图片支持应用资源路径格式。
 
-**类型：** string \| Resource
+**类型：** string \| [Resource](../arkts-apis/arkts-arkui-resource-t.md)
 
 **起始版本：** 10
 

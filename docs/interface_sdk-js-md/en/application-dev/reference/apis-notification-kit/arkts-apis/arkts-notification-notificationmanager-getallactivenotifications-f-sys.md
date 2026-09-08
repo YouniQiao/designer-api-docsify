@@ -26,7 +26,7 @@ Obtains all active notifications. This API uses an asynchronous callback to retu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;NotificationRequest&gt;&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[NotificationRequest](arkts-notification-notificationmanager-notificationrequest-t.md)&gt;&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -76,7 +76,7 @@ Obtains all active notifications. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;NotificationRequest&gt;&gt; | Promise used to return the result. |
+| Promise&lt;Array&lt;[NotificationRequest](arkts-notification-notificationmanager-notificationrequest-t.md)&gt;&gt; | Promise used to return the result. |
 
 **Error codes:**
 

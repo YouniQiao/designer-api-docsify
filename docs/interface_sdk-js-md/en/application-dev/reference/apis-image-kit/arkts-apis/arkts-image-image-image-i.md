@@ -41,19 +41,6 @@ Obtains ImageBufferData from an image.
 | --- | --- |
 | [ImageBufferData](arkts-image-image-imagebufferdata-i.md) \| null | Struct that encapsulates the image data buffer. If no struct is obtained, **null** is returned. |
 
-**Examples**
-
-```TypeScript
-function GetBufferData(img: image.Image) {
-  const bufferData = img.getBufferData();
-  if (bufferData == null) {
-    console.error('Failed to get the bufferData: bufferData is null.');
-    return;
-  }
-  console.info('Succeeded in getting bufferData.');
-}
-```
-
 ## getComponent
 
 ```TypeScript
@@ -70,24 +57,8 @@ Obtains the component buffer from the Image instance based on the color componen
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| componentType | ComponentType | Yes | Component type. (Currently, only **ComponentType:JPEG** is supported. The actual format is determined by the producer, for example, camera.) |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Component&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the component buffer obtained; otherwise, **err** is an error object. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function GetComponent(img : image.Image) {
-  img.getComponent(image.ComponentType.JPEG, (err: BusinessError, component: image.Component) => {
-    if (err) {
-      console.error(`Failed to get the component.code ${err.code},message is ${err.message}`);
-    } else {
-      console.info('Succeeded in getting component.');
-    }
-  })
-}
-```
+| componentType | [ComponentType](arkts-image-image-componenttype-e.md) | Yes | Component type. (Currently, only **ComponentType:JPEG** is supported. The actual format is determined by the producer, for example, camera.) |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Component](arkts-image-image-component-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the component buffer obtained; otherwise, **err** is an error object. |
 
 ## getComponent
 
@@ -105,27 +76,13 @@ Obtains the component buffer from the Image instance based on the color componen
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| componentType | ComponentType | Yes | Component type. (Currently, only **ComponentType:JPEG** is supported. The actual format is determined by the producer, for example, camera.) |
+| componentType | [ComponentType](arkts-image-image-componenttype-e.md) | Yes | Component type. (Currently, only **ComponentType:JPEG** is supported. The actual format is determined by the producer, for example, camera.) |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Component&gt; | Promise used to return the component buffer. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function GetComponent(img : image.Image) {
-  img.getComponent(image.ComponentType.JPEG).then((component: image.Component) => {
-    console.info('Succeeded in getting component.');
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to get the component.code ${error.code},message is ${error.message}`);
-  })
-}
-```
+| Promise&lt;[Component](arkts-image-image-component-i.md)&gt; | Promise used to return the component buffer. |
 
 ## getMetadata
 
@@ -160,19 +117,6 @@ Obtains the HDR metadata from an image based on the HDR metadata type.
 | [7600206](../errorcode-image.md#7600206-invalid-parameter) | Invalid parameter. |
 | [7600302](../errorcode-image.md#7600302-memory-copy-failure) | Memory copy failed. |
 
-**Examples**
-
-```TypeScript
-async function GetMetadata(img : image.Image) {
-  try {
-    let staticMetadata = img.getMetadata(image.HdrMetadataKey.HDR_STATIC_METADATA);
-    console.info(`getMetadata:${staticMetadata}`);
-  } catch (err) {
-    console.error('Failed to getMetadata.' + err);
-  }
-}
-```
-
 ## release
 
 ```TypeScript
@@ -196,93 +140,6 @@ Before releasing the instance, ensure that all asynchronous operations associate
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function Release(img : image.Image) {
-  img.release((err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to release the image instance.code ${err.code},message is ${err.message}`);
-    } else {
-      console.info('Succeeded in releasing the image instance.');
-    }
-  })
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function Release(creator : image.ImageCreator) {
-  creator.release((err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to release the creator.code ${err.code},message is ${err.message}`);
-    } else {
-      console.info('Succeeded in releasing creator.');
-    }
-  });
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function Release() {
-  const imagePackerObj: image.ImagePacker = image.createImagePacker();
-  imagePackerObj.release((err: BusinessError)=>{
-    if (err) {
-      console.error(`Failed to release image packaging.code ${err.code},message is ${err.message}`);
-    } else {
-      console.info('Succeeded in releasing image packaging.');
-    }
-  })
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function Release(receiver : image.ImageReceiver) {
-  receiver.release((err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to release the receiver.code ${err.code},message is ${err.message}`);
-    } else {
-      console.info('Succeeded in releasing the receiver.');
-    }
-  })
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function Release(imageSourceObj : image.ImageSource) {
-  imageSourceObj.release((err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to release the image source instance.code ${err.code},message is ${err.message}`);
-    } else {
-      console.info('Succeeded in releasing the image source instance.');
-    }
-  })
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function release(pixelMap: image.PixelMap) {
-  pixelMap.release((err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to release the PixelMap object. Code: ${err.code}, message: ${err.message}`);
-      return;
-    }
-    console.info('Succeeded in releasing the PixelMap object.');
-  });
-}
-```
 
 ## release
 
@@ -308,81 +165,6 @@ Before releasing the instance, ensure that all asynchronous operations associate
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function Release(img : image.Image) {
-  img.release().then(() => {
-    console.info('Succeeded in releasing the image instance.');
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to release the image instance.code ${error.code},message is ${error.message}`);
-  })
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function Release(creator : image.ImageCreator) {
-  creator.release().then(() => {
-    console.info('Succeeded in releasing creator.');
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to release the creator.code ${error.code},message is ${error.message}`);
-  })
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function Release() {
-  const imagePackerObj: image.ImagePacker = image.createImagePacker();
-  imagePackerObj.release().then(() => {
-    console.info('Succeeded in releasing image packaging.');
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to release image packaging.code ${error.code},message is ${error.message}`);
-  })
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function Release(receiver : image.ImageReceiver) {
-  receiver.release().then(() => {
-    console.info('Succeeded in releasing the receiver.');
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to release the receiver.code ${error.code},message is ${error.message}`);
-  })
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function Release(imageSourceObj : image.ImageSource) {
-  imageSourceObj.release().then(() => {
-    console.info('Succeeded in releasing the image source instance.');
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to release the image source instance.code ${error.code},message is ${error.message}`);
-  })
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function release(pixelMap: image.PixelMap) {
-  pixelMap.release().then(() => {
-    console.info('Succeeded in releasing the PixelMap object.');
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to release the PixelMap object. Code: ${err.code}, message: ${err.message}`);
-  });
-}
-```
-
 ## clipRect
 
 ```TypeScript
@@ -391,7 +173,7 @@ clipRect: Region
 
 Image area to be cropped.
 
-**Type:** Region
+**Type:** [Region](arkts-image-image-region-i.md)
 
 **Since:** 9
 
@@ -405,7 +187,7 @@ readonly colorSpace: colorSpaceManager.ColorSpace
 
 Color space of the image.
 
-**Type:** colorSpaceManager.ColorSpace
+**Type:** [colorSpaceManager.ColorSpace](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-colorspacemanager-colorspace-e.md)
 
 **Since:** 23
 

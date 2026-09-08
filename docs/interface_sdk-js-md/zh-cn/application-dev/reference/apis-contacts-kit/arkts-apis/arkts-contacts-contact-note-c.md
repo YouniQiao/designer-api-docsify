@@ -27,13 +27,3 @@ noteContent: string
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Applications.ContactsData
-
-**示例**
-
-使用JSON格式创建数据。
-
-```TypeScript
-let note: contact.Note = {
-    noteContent: 'noteContent'
-};
-```

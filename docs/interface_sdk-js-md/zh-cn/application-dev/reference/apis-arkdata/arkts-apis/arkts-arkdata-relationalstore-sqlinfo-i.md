@@ -20,7 +20,7 @@ args: Array<ValueType>
 
 表示执行SQL中的参数信息。
 
-**类型：** Array&lt;ValueType&gt;
+**类型：** Array&lt;[ValueType](arkts-arkdata-relationalstore-valuetype-t.md)&gt;
 
 **起始版本：** 20
 

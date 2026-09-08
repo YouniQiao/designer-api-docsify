@@ -295,21 +295,6 @@ release(): void
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
-**示例**
-
-```TypeScript
-audioPlayer.release();
-audioPlayer = undefined;
-```
-
-```TypeScript
-audioRecorder.on('release', () => {    // 设置'release'事件回调。
-  console.info('audio recorder release called');
-});
-audioRecorder.release();
-audioRecorder = undefined;
-```
-
 ## removeDownloadTask
 
 ```TypeScript

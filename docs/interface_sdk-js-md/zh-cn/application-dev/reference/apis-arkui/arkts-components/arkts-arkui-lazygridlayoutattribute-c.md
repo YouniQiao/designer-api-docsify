@@ -35,7 +35,7 @@ columnsGap(value: LengthMetrics): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | LengthMetrics | 是 | 列与列的间距。取值范围：[0, +∞)。 |
+| value | [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md) | 是 | 列与列的间距。取值范围：[0, +∞)。 |
 
 **返回值：**
 
@@ -161,7 +161,7 @@ rowsGap(value: LengthMetrics): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | LengthMetrics | 是 | 行与行的间距。取值范围：[0, +∞)。 |
+| value | [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md) | 是 | 行与行的间距。取值范围：[0, +∞)。 |
 
 **返回值：**
 

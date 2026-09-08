@@ -1,6 +1,6 @@
 # WapiPskType
 
-Describes the WAPI pre-shared key Type. @enum { number }
+Describes the WAPI pre-shared key Type. @enum { int }
 
 **Since:** 12
 

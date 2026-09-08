@@ -36,7 +36,7 @@ function getRemoteDeviceClass(deviceId: string): DeviceClass
 
 | 类型 | 说明 |
 | --- | --- |
-| DeviceClass | 对端设备的类别。 |
+| [DeviceClass](arkts-connectivity-connection-deviceclass-i.md) | 对端设备的类别。 |
 
 **错误码：**
 

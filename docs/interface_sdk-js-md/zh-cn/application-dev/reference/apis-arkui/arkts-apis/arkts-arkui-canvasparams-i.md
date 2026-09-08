@@ -45,7 +45,7 @@ unit?: LengthMetricsUnit
 
 默认值：LengthMetricsUnit.DEFAULT
 
-**类型：** LengthMetricsUnit
+**类型：** [LengthMetricsUnit](arkts-arkui-lengthmetricsunit-t.md)
 
 **起始版本：** 23
 

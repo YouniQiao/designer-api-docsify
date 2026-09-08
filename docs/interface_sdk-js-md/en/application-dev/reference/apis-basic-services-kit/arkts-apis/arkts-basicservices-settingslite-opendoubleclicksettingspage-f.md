@@ -12,7 +12,7 @@ import { settingsLite } from '@kit.BasicServicesKit';
 function openDoubleClickSettingsPage(): void
 ```
 
-Opens the settings page for number-pressing the function key.
+Opens the settings page for double-pressing the function key.
 
 **Since:** 24
 

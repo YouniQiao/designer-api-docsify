@@ -2,7 +2,7 @@
 
 Version of the model.
 
-@enum { number }
+@enum { int }
 
 **Since:** 15
 

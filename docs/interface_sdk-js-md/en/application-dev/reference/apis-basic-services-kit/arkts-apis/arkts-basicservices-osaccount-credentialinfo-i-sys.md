@@ -70,7 +70,7 @@ credType: AuthType
 
 Authentication credential type.
 
-**Type:** AuthType
+**Type:** [AuthType](arkts-basicservices-osaccount-authtype-e-sys.md)
 
 **Since:** 8
 

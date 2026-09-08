@@ -39,7 +39,7 @@ notification: Notification
 
 通知栏自定义设置。默认值为`{}`
 
-**类型：** Notification
+**类型：** [Notification](arkts-basicservices-agent-notification-i.md)
 
 **起始版本：** 15
 

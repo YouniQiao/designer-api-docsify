@@ -142,7 +142,7 @@ function off(type: 'loopObserver', observer?: LoopObserver): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'loopObserver' | 是 | 填写'loopObserver'，表示应用主线程观测器。 |
-| observer | LoopObserver | 否 | 应用主线程观测器标志。 |
+| observer | [LoopObserver](arkts-ability-errormanager-loopobserver-t.md) | 否 | 应用主线程观测器标志。 |
 
 **错误码：**
 

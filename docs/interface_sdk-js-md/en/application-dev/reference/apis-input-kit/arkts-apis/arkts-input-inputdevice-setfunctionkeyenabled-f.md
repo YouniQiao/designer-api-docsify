@@ -24,7 +24,7 @@ Specifies whether to enable a function key (for example, **CapsLock**). This API
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| functionKey | FunctionKey | Yes | Type of the function key. |
+| functionKey | [FunctionKey](arkts-input-inputdevice-functionkey-e.md) | Yes | Type of the function key. |
 | enabled | boolean | Yes | Status of the function key. The value **true** indicates that the function key is enabled, and the value **false** indicates the opposite. |
 
 **Return value:**

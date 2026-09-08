@@ -23,13 +23,13 @@ Create PixelMap by data buffer.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | colors | ArrayBuffer | 是 | The image color buffer. |
-| options | image.InitializationOptions | 是 | Initialization options for PixelMap. |
+| options | [image.InitializationOptions](arkts-image-image-initializationoptions-i.md) | 是 | Initialization options for PixelMap. |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| PixelMap | Returns the instance if the operation is successful;Otherwise, return undefined. |
+| [PixelMap](arkts-image-sendableimage-pixelmap-i.md) | Returns the instance if the operation is successful;Otherwise, return undefined. |
 
 **错误码：**
 

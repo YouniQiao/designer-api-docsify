@@ -30,7 +30,7 @@ Obtains the window proxy of this UIExtensionAbility.
 
 | Type | Description |
 | --- | --- |
-| uiExtension.WindowProxy | Window proxy of the host application. |
+| [uiExtension.WindowProxy](../../apis-arkui/arkts-apis/arkts-arkui-uiextension-windowproxy-i.md) | Window proxy of the host application. |
 
 **Error codes:**
 

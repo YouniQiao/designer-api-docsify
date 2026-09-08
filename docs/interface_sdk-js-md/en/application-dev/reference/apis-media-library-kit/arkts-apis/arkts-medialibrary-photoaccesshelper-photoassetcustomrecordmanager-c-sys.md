@@ -202,13 +202,13 @@ Obtains custom user behavior recordings based on retrieval options. This API use
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| optionCheck | FetchOptions | Yes | Retrieval options. |
+| optionCheck | [FetchOptions](arkts-medialibrary-photoaccesshelper-fetchoptions-i.md) | Yes | Retrieval options. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;FetchResult&lt;[PhotoAssetCustomRecord](arkts-medialibrary-photoaccesshelper-photoassetcustomrecord-i-sys.md)&gt;&gt; | Promise used to return the collection of custom user behavior recordings. |
+| Promise&lt;[FetchResult](arkts-medialibrary-photoaccesshelper-fetchresult-i.md)&lt;[PhotoAssetCustomRecord](arkts-medialibrary-photoaccesshelper-photoassetcustomrecord-i-sys.md)&gt;&gt; | Promise used to return the collection of custom user behavior recordings. |
 
 **Error codes:**
 
@@ -260,7 +260,7 @@ Removes custom user behavior recordings based on retrieval options. This API use
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| optionCheck | FetchOptions | Yes | Retrieval options. |
+| optionCheck | [FetchOptions](arkts-medialibrary-photoaccesshelper-fetchoptions-i.md) | Yes | Retrieval options. |
 
 **Return value:**
 

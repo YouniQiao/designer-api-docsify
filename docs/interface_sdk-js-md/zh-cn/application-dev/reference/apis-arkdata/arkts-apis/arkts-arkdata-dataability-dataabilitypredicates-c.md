@@ -117,8 +117,8 @@ between(field: string, low: ValueType, high: ValueType): DataAbilityPredicates
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | field | string | 是 | 数据库表中的列名，不能为空字符串。 |
-| low | ValueType | 是 | 指示与谓词匹配的最小值。 |
-| high | ValueType | 是 | 指示与谓词匹配的最大值。 |
+| low | [ValueType](arkts-arkdata-dataability-valuetype-t.md) | 是 | 指示与谓词匹配的最小值。 |
+| high | [ValueType](arkts-arkdata-dataability-valuetype-t.md) | 是 | 指示与谓词匹配的最大值。 |
 
 **返回值：**
 
@@ -268,7 +268,7 @@ equalTo(field: string, value: ValueType): DataAbilityPredicates
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | field | string | 是 | 数据库表中的列名，不能为空字符串。 |
-| value | ValueType | 是 | 指示要与谓词匹配的值。 |
+| value | [ValueType](arkts-arkdata-dataability-valuetype-t.md) | 是 | 指示要与谓词匹配的值。 |
 
 **返回值：**
 
@@ -336,7 +336,7 @@ greaterThan(field: string, value: ValueType): DataAbilityPredicates
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | field | string | 是 | 数据库表中的列名，不能为空字符串。 |
-| value | ValueType | 是 | 指示要与谓词匹配的值。 |
+| value | [ValueType](arkts-arkdata-dataability-valuetype-t.md) | 是 | 指示要与谓词匹配的值。 |
 
 **返回值：**
 
@@ -367,7 +367,7 @@ greaterThanOrEqualTo(field: string, value: ValueType): DataAbilityPredicates
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | field | string | 是 | 数据库表中的列名，不能为空字符串。 |
-| value | ValueType | 是 | 指示要与谓词匹配的值。 |
+| value | [ValueType](arkts-arkdata-dataability-valuetype-t.md) | 是 | 指示要与谓词匹配的值。 |
 
 **返回值：**
 
@@ -428,7 +428,7 @@ in(field: string, value: Array<ValueType>): DataAbilityPredicates
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | field | string | 是 | 数据库表中的列名，不能为空字符串。 |
-| value | Array&lt;ValueType&gt; | 是 | 以ValueType类型数组形式指定的要匹配的值。 |
+| value | Array&lt;[ValueType](arkts-arkdata-dataability-valuetype-t.md)&gt; | 是 | 以ValueType类型数组形式指定的要匹配的值。 |
 
 **返回值：**
 
@@ -588,7 +588,7 @@ lessThan(field: string, value: ValueType): DataAbilityPredicates
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | field | string | 是 | 数据库表中的列名，不能为空字符串。 |
-| value | ValueType | 是 | 指示要与谓词匹配的值。 |
+| value | [ValueType](arkts-arkdata-dataability-valuetype-t.md) | 是 | 指示要与谓词匹配的值。 |
 
 **返回值：**
 
@@ -619,7 +619,7 @@ lessThanOrEqualTo(field: string, value: ValueType): DataAbilityPredicates
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | field | string | 是 | 数据库表中的列名，不能为空字符串。 |
-| value | ValueType | 是 | 指示要与谓词匹配的值。 |
+| value | [ValueType](arkts-arkdata-dataability-valuetype-t.md) | 是 | 指示要与谓词匹配的值。 |
 
 **返回值：**
 
@@ -713,8 +713,8 @@ notBetween(field: string, low: ValueType, high: ValueType): DataAbilityPredicate
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | field | string | 是 | 数据库表中的列名，不能为空字符串。 |
-| low | ValueType | 是 | 指示与谓词匹配的最小值。 |
-| high | ValueType | 是 | 指示与谓词匹配的最大值。 |
+| low | [ValueType](arkts-arkdata-dataability-valuetype-t.md) | 是 | 指示与谓词匹配的最小值。 |
+| high | [ValueType](arkts-arkdata-dataability-valuetype-t.md) | 是 | 指示与谓词匹配的最大值。 |
 
 **返回值：**
 
@@ -747,7 +747,7 @@ notEqualTo(field: string, value: ValueType): DataAbilityPredicates
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | field | string | 是 | 数据库表中的列名，不能为空字符串。 |
-| value | ValueType | 是 | 指示要与谓词匹配的值。 |
+| value | [ValueType](arkts-arkdata-dataability-valuetype-t.md) | 是 | 指示要与谓词匹配的值。 |
 
 **返回值：**
 
@@ -778,7 +778,7 @@ notIn(field: string, value: Array<ValueType>): DataAbilityPredicates
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | field | string | 是 | 数据库表中的列名，不能为空字符串。 |
-| value | Array&lt;ValueType&gt; | 是 | 以ValueType类型数组形式指定的要匹配的值。 |
+| value | Array&lt;[ValueType](arkts-arkdata-dataability-valuetype-t.md)&gt; | 是 | 以ValueType类型数组形式指定的要匹配的值。 |
 
 **返回值：**
 

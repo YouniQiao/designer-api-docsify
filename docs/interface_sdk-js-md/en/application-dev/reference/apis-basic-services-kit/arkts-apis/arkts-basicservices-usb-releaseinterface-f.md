@@ -28,8 +28,8 @@ Before you do this, ensure that you have claimed the interface by calling [usb.c
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pipe | USBDevicePipe | Yes | Device pipe, which is used to determine the bus number and device address. |
-| iface | USBInterface | Yes | USB interface, which is used to determine the index of the interface to release. |
+| pipe | [USBDevicePipe](arkts-basicservices-usb-usbdevicepipe-i.md) | Yes | Device pipe, which is used to determine the bus number and device address. |
+| iface | [USBInterface](arkts-basicservices-usb-usbinterface-i.md) | Yes | USB interface, which is used to determine the index of the interface to release. |
 
 **Return value:**
 

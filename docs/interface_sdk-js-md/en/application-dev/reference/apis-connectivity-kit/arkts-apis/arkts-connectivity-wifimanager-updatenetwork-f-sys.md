@@ -26,7 +26,7 @@ Update the specified Wi-Fi configuration.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | WifiDeviceConfig | Yes | Indicates the Wi-Fi configuration to update. |
+| config | [WifiDeviceConfig](arkts-connectivity-wifimanager-wifideviceconfig-i.md) | Yes | Indicates the Wi-Fi configuration to update. |
 
 **Return value:**
 

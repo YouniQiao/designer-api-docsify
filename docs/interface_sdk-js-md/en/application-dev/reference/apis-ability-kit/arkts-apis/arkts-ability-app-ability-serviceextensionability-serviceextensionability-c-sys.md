@@ -74,7 +74,7 @@ Called following **onCreate()** when a ServiceExtensionAbility is started by cal
 
 | Type | Description |
 | --- | --- |
-| rpc.RemoteObject \| Promise&lt;rpc.RemoteObject&gt; | RemoteObject or Promise used to return a RemoteObject, which is used for communication between the client and server. |
+| [rpc.RemoteObject](../../apis-ipc-kit/arkts-apis/arkts-ipc-rpc-remoteobject-c.md) \| Promise&lt;[rpc.RemoteObject](../../apis-ipc-kit/arkts-apis/arkts-ipc-rpc-remoteobject-c.md)&gt; | RemoteObject or Promise used to return a RemoteObject, which is used for communication between the client and server. |
 
 **Examples**
 

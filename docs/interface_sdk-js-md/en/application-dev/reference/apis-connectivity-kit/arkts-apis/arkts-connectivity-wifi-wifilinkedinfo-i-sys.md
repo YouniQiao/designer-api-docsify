@@ -86,7 +86,7 @@ suppState: SuppState
 
 The state of the supplicant of this Wi-Fi connection.
 
-**Type:** SuppState
+**Type:** [SuppState](arkts-connectivity-wifi-suppstate-e-sys.md)
 
 **Since:** 6
 

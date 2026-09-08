@@ -75,7 +75,7 @@ import { sms } from '@kit.TelephonyKit';
 | Name | Description |
 | --- | --- |
 | [IDeliveryShortMessageCallback](arkts-telephony-sms-ideliveryshortmessagecallback-i.md) | Provides the callback for the SMS message delivery report. |
-| [ISendShortMessageCallback](arkts-telephony-sms-isendshortmessagecallback-i.md) | Provides the callback for the SMS message sending result. It consists of three parts: SMS message sending result, URI for storing the sent SMS message, and whether the SMS message is the last part of a number SMS message. |
+| [ISendShortMessageCallback](arkts-telephony-sms-isendshortmessagecallback-i.md) | Provides the callback for the SMS message sending result. It consists of three parts: SMS message sending result, URI for storing the sent SMS message, and whether the SMS message is the last part of a long SMS message. |
 | [SendMessageOptions](arkts-telephony-sms-sendmessageoptions-i.md) | Provides the options (including callbacks) for sending SMS messages. For example, you can specify the SMS message type by the optional parameter **content**. |
 | [ShortMessage](arkts-telephony-sms-shortmessage-i.md) | Defines an SMS message instance. |
 

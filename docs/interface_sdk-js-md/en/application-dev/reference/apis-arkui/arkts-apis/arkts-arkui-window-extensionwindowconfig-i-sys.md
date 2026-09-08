@@ -94,7 +94,7 @@ windowRect: Rect
 
 Rectangular area of the window.
 
-**Type:** Rect
+**Type:** [Rect](arkts-arkui-window-rect-i.md)
 
 **Since:** 14
 

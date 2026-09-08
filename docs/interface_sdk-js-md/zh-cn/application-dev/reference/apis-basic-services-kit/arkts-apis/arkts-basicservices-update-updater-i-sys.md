@@ -1257,7 +1257,7 @@ getTaskInfo(callback: AsyncCallback<TaskInfo>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;TaskInfo&gt; | 是 | 回调函数，用于接收升级任务信息（TaskInfo）。回调参数包括： err（错误对象，成功时为null）和taskInfo（升级任务信息对象，包含existTask和taskBody字段）。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[TaskInfo](arkts-basicservices-agent-taskinfo-i.md)&gt; | 是 | 回调函数，用于接收升级任务信息（TaskInfo）。回调参数包括： err（错误对象，成功时为null）和taskInfo（升级任务信息对象，包含existTask和taskBody字段）。 |
 
 **错误码：**
 
@@ -1336,7 +1336,7 @@ getTaskInfo(): Promise<TaskInfo>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;TaskInfo&gt; | Promise对象。成功时resolve返回升级任务信息对象，用于查询和监控升级任务状态；失败时reject返回错误信息。 |
+| Promise&lt;[TaskInfo](arkts-basicservices-agent-taskinfo-i.md)&gt; | Promise对象。成功时resolve返回升级任务信息对象，用于查询和监控升级任务状态；失败时reject返回错误信息。 |
 
 **错误码：**
 
@@ -1568,26 +1568,6 @@ try {
 }
 ```
 
-```TypeScript
-const eventClassifyInfo: update.EventClassifyInfo = {
-  eventClassify: update.EventClassify.TASK, // 任务事件类型
-  extraInfo: ''
-};
-// 定义任务更新回调函数，用于处理升级任务事件
-let onTaskUpdate: update.UpgradeTaskCallback = (eventInfo: update.EventInfo) => {
-  console.info(`on eventInfo id `, eventInfo.eventId);
-};
-
-try {
-  // 获取本地升级对象
-  let localUpdater = update.getLocalUpdater();
-  // 取消本地升级事件监听
-  localUpdater.off(eventClassifyInfo, onTaskUpdate);
-} catch (error) {
-  console.error(`Fail to get localUpdater error: ${error}`);
-}
-```
-
 ## on
 
 ```TypeScript
@@ -1660,26 +1640,6 @@ try {
   });
 } catch (error) {
   console.error(`Fail to get onlineUpdater error: ${error}`);
-}
-```
-
-```TypeScript
-const eventClassifyInfo: update.EventClassifyInfo = {
-  eventClassify: update.EventClassify.TASK, // 任务事件类型
-  extraInfo: ''
-};
-// 定义任务更新回调函数，用于处理升级任务事件
-let onTaskUpdate: update.UpgradeTaskCallback = (eventInfo: update.EventInfo) => {
-  console.info(`on eventInfo id `, eventInfo.eventId);
-};
-
-try {
-  // 获取本地升级对象
-  let localUpdater = update.getLocalUpdater();
-  // 注册本地升级事件监听
-  localUpdater.on(eventClassifyInfo, onTaskUpdate);
-} catch (error) {
-  console.error(`Fail to get localUpdater error: ${error}`);
 }
 ```
 

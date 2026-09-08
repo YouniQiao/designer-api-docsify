@@ -86,7 +86,7 @@ ipType?: IpType
 
 IP address type. The default value is **DHCP**.
 
-**Type:** IpType
+**Type:** [IpType](arkts-mdm-wifimanager-iptype-e.md)
 
 **Since:** 12
 
@@ -182,7 +182,7 @@ securityType: WifiSecurityType
 
 Security type.
 
-**Type:** WifiSecurityType
+**Type:** [WifiSecurityType](arkts-mdm-wifimanager-wifisecuritytype-e.md)
 
 **Since:** 12
 

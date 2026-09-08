@@ -23,7 +23,7 @@ get height(): number
 
 Height of the cylinder, in scene units of the world coordinate system (such as cm, m, km, etc.). The value range is greater than 0.
 
-@return { number }
+@return { double }
 
 **Type:** number
 
@@ -51,7 +51,7 @@ get radius(): number
 
 Bottom radius of the cylinder, in scene units of the world coordinate system (such as cm, m, km, etc.). The value range is greater than 0.
 
-@return { number }
+@return { double }
 
 **Type:** number
 
@@ -79,7 +79,7 @@ get segmentCount(): number
 
 Use regular polygons to approximate the circular base of the cylinder, where segmentCount is the number of sides of the regular polygon used.
 
-@return { number }
+@return { int }
 
 **Type:** number
 

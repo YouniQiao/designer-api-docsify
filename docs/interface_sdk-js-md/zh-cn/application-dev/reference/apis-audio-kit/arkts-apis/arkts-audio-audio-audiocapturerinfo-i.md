@@ -36,7 +36,7 @@ source: SourceType
 
 音源类型。
 
-**类型：** SourceType
+**类型：** [SourceType](arkts-audio-audio-sourcetype-e.md)
 
 **起始版本：** 8
 

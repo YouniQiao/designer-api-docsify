@@ -51,7 +51,7 @@ Capsule进度条圆角半径（不支持百分比设置）。
 
 设置非法数值时，按照默认值处理。
 
-**类型：** LengthMetrics
+**类型：** [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md)
 
 **默认值：** min(width, height) / 2
 
@@ -123,7 +123,7 @@ font?: Font
 
 其他文本参数跟随Text组件的主题值。
 
-**类型：** Font
+**类型：** [Font](../arkts-apis/arkts-arkui-font-i.md)
 
 **起始版本：** 10
 

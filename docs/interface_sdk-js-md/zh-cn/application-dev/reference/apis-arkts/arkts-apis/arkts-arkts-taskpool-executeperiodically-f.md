@@ -31,8 +31,8 @@ function executePeriodically(period: number, task: Task, priority?: Priority): v
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | period | number | 是 | 周期时长。单位：ms。period值必须要大于等于0。 |
-| task | Task | 是 | 需要周期执行的任务。 |
-| priority | Priority | 否 | 周期执行的任务的优先级，该参数默认值为**taskpool.Priority.MEDIUM**。 |
+| task | [Task](arkts-arkts-taskpool-task-c.md) | 是 | 需要周期执行的任务。 |
+| priority | [Priority](arkts-arkts-taskpool-priority-e.md) | 否 | 周期执行的任务的优先级，该参数默认值为**taskpool.Priority.MEDIUM**。 |
 
 **错误码：**
 
@@ -106,7 +106,7 @@ function executePeriodically<A extends Array<Object>, R>(period: number, task: G
 | --- | --- | --- | --- |
 | period | number | 是 | 周期时长。单位：ms。period值必须要大于等于0。 |
 | task | [GenericsTask](arkts-arkts-taskpool-genericstask-c.md)&lt;A, R&gt; | 是 | 需要周期执行的泛型任务。 |
-| priority | Priority | 否 | 周期执行的任务的优先级，该参数默认值为**taskpool.Priority.MEDIUM**。 |
+| priority | [Priority](arkts-arkts-taskpool-priority-e.md) | 否 | 周期执行的任务的优先级，该参数默认值为**taskpool.Priority.MEDIUM**。 |
 
 **错误码：**
 

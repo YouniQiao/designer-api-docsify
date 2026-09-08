@@ -32,7 +32,7 @@ The menu is displayed when the component is right-clicked.
 LONG_PRESS = 1
 ```
 
-The menu is displayed when the component is number-pressed.
+The menu is displayed when the component is long-pressed.
 
 **Since:** 11
 
@@ -64,7 +64,7 @@ The menu is displayed when the component is selected.
 DEFAULT = 3
 ```
 
-When this type is registered but **RIGHT_CLICK**, **LONG_PRESS**, or **SELECT** types are not registered, this type will be triggered and displayed for right-click, number press, mouse selection, and [selection](arkts-arkui-text-attribute.md#selection) API calls.
+When this type is registered but **RIGHT_CLICK**, **LONG_PRESS**, or **SELECT** types are not registered, this type will be triggered and displayed for right-click, long press, mouse selection, and [selection](arkts-arkui-text-attribute.md#selection) API calls.
 
 **Since:** 15
 

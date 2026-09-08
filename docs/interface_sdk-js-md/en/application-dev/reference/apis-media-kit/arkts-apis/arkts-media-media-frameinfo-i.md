@@ -36,7 +36,7 @@ image?: image.PixelMap
 
 The image extracted from video.
 
-**Type:** image.PixelMap
+**Type:** [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)
 
 **Since:** 23
 
@@ -68,7 +68,7 @@ result: FetchResult
 
 The fetch result code - succeed, failed or cancelled.
 
-**Type:** FetchResult
+**Type:** [FetchResult](arkts-media-media-fetchresult-e.md)
 
 **Since:** 23
 

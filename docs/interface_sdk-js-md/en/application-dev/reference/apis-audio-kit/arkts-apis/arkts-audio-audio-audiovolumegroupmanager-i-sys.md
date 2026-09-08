@@ -326,18 +326,6 @@ audioVolumeGroupManager.mute(audio.AudioVolumeType.MEDIA, true, (err: BusinessEr
 });
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioManager.mute(audio.AudioVolumeType.MEDIA, true, (err: BusinessError) => {
-  if (err) {
-    console.error(`Failed to mute the stream. ${err}`);
-    return;
-  }
-  console.info('Callback invoked to indicate that the stream is muted.');
-});
-```
-
 ## mute
 
 ```TypeScript
@@ -371,12 +359,6 @@ Mutes a stream. This method uses a promise to return the result.
 
 ```TypeScript
 audioVolumeGroupManager.mute(audio.AudioVolumeType.MEDIA, true).then(() => {
-  console.info('Promise returned to indicate that the stream is muted.');
-});
-```
-
-```TypeScript
-audioManager.mute(audio.AudioVolumeType.MEDIA, true).then(() => {
   console.info('Promise returned to indicate that the stream is muted.');
 });
 ```
@@ -447,7 +429,7 @@ Mutes or unmutes the microphone. This method uses a promise to return the result
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | mute | boolean | Yes | Mute status to set. The value true means to mute the microphone, and false means the opposite. |
-| type | PolicyType | Yes | Mute status to set. This value represents the caller's type such as EDM or privacy. |
+| type | [PolicyType](arkts-audio-audio-policytype-e-sys.md) | Yes | Mute status to set. This value represents the caller's type such as EDM or privacy. |
 
 **Return value:**
 
@@ -509,18 +491,6 @@ audioVolumeGroupManager.setRingerMode(audio.AudioRingMode.RINGER_MODE_NORMAL, (e
 });
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioManager.setRingerMode(audio.AudioRingMode.RINGER_MODE_NORMAL, (err: BusinessError) => {
-  if (err) {
-    console.error(`Failed to set the ringer mode. ${err}`);
-    return;
-  }
-  console.info('Callback invoked to indicate a successful setting of the ringer mode.');
-});
-```
-
 ## setRingerMode
 
 ```TypeScript
@@ -553,12 +523,6 @@ Sets the ringer mode. This method uses a promise to return the result.
 
 ```TypeScript
 audioVolumeGroupManager.setRingerMode(audio.AudioRingMode.RINGER_MODE_NORMAL).then(() => {
-  console.info('Promise returned to indicate a successful setting of the ringer mode.');
-});
-```
-
-```TypeScript
-audioManager.setRingerMode(audio.AudioRingMode.RINGER_MODE_NORMAL).then(() => {
   console.info('Promise returned to indicate a successful setting of the ringer mode.');
 });
 ```
@@ -601,18 +565,6 @@ audioVolumeGroupManager.setVolume(audio.AudioVolumeType.MEDIA, 10, (err: Busines
 });
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioManager.setVolume(audio.AudioVolumeType.MEDIA, 10, (err: BusinessError) => {
-  if (err) {
-    console.error(`Failed to set the volume. ${err}`);
-    return;
-  }
-  console.info('Callback invoked to indicate a successful volume setting.');
-});
-```
-
 ## setVolume
 
 ```TypeScript
@@ -646,12 +598,6 @@ Sets the volume for a stream. This method uses a promise to return the result.
 
 ```TypeScript
 audioVolumeGroupManager.setVolume(audio.AudioVolumeType.MEDIA, 10).then(() => {
-  console.info('Promise returned to indicate a successful volume setting.');
-});
-```
-
-```TypeScript
-audioManager.setVolume(audio.AudioVolumeType.MEDIA, 10).then(() => {
   console.info('Promise returned to indicate a successful volume setting.');
 });
 ```

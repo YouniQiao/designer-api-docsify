@@ -34,7 +34,7 @@ Obtain the single Wi-Fi configuration with Network ID.
 
 | Type | Description |
 | --- | --- |
-| WifiDeviceConfig | Returns the Wi-Fi configuration corresponding to the network ID. |
+| [WifiDeviceConfig](arkts-connectivity-wifimanager-wifideviceconfig-i.md) | Returns the Wi-Fi configuration corresponding to the network ID. |
 
 **Error codes:**
 

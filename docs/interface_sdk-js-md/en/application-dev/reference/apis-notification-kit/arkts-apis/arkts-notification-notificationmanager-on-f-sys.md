@@ -90,7 +90,7 @@ This API can be properly called on devices other than wearables. If it is called
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'checkNotification' | Yes | Event type. The value is fixed to **'checkNotification'**. |
-| checkRequest | NotificationCheckRequest | Yes | Notification verification content. |
+| checkRequest | [NotificationCheckRequest](arkts-notification-notificationmanager-notificationcheckrequest-t-sys.md) | Yes | Notification verification content. |
 | callback | (checkInfo: NotificationCheckInfo) =&gt; Promise&lt;[NotificationCheckResult](arkts-notification-notificationmanager-notificationcheckresult-i-sys.md)&gt; | Yes | Pointer to the notification verification function. |
 
 **Error codes:**

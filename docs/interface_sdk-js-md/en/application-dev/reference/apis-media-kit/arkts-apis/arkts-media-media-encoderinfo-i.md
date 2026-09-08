@@ -20,7 +20,7 @@ bitRate?: Range
 
 Bit rate range of the encoder, with the minimum and maximum bit rates specified, in bit/s.
 
-**Type:** Range
+**Type:** [Range](arkts-media-media-range-i.md)
 
 **Since:** 11
 
@@ -34,7 +34,7 @@ channels?: Range
 
 Number of audio channels for the audio capturer, with the minimum and maximum numbers of audio channels specified. This parameter is available only for audio encoders.
 
-**Type:** Range
+**Type:** [Range](arkts-media-media-range-i.md)
 
 **Since:** 11
 
@@ -48,7 +48,7 @@ frameRate?: Range
 
 Video frame rate range, with the minimum and maximum frame rates specified, in fps. This parameter is available only for video encoders.
 
-**Type:** Range
+**Type:** [Range](arkts-media-media-range-i.md)
 
 **Since:** 11
 
@@ -62,7 +62,7 @@ height?: Range
 
 Video frame height range, with the minimum and maximum heights specified, in px. This parameter is available only for video encoders.
 
-**Type:** Range
+**Type:** [Range](arkts-media-media-range-i.md)
 
 **Since:** 11
 
@@ -118,7 +118,7 @@ width?: Range
 
 Video frame width range, with the minimum and maximum widths specified, in px. This parameter is available only for video encoders.
 
-**Type:** Range
+**Type:** [Range](arkts-media-media-range-i.md)
 
 **Since:** 11
 

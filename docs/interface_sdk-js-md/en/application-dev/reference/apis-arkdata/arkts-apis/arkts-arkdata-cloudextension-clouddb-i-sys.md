@@ -42,7 +42,7 @@ Deletes data from a cloud database table. This API uses a promise to return the 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;Result&lt;Record&lt;string, [CloudType](arkts-arkdata-cloudextension-cloudtype-t-sys.md)&gt;&gt;&gt;&gt; | Promise used to return the deleted data and operation result. |
+| Promise&lt;Array&lt;[Result](arkts-arkdata-relationalstore-result-i.md)&lt;Record&lt;string, [CloudType](arkts-arkdata-cloudextension-cloudtype-t-sys.md)&gt;&gt;&gt;&gt; | Promise used to return the deleted data and operation result. |
 
 **Examples**
 
@@ -84,7 +84,7 @@ Generates IDs for the data records inserted to the cloud database. The IDs are u
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Result&lt;Array&lt;string&gt;&gt;&gt; | Promise used to return the generated IDs in Result. |
+| Promise&lt;[Result](arkts-arkdata-relationalstore-result-i.md)&lt;Array&lt;string&gt;&gt;&gt; | Promise used to return the generated IDs in Result. |
 
 **Examples**
 
@@ -128,7 +128,7 @@ Extends the lock period of the database. This API uses a promise to return the r
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Result&lt;LockInfo&gt;&gt; | Promise used to return the lock ID and lock period. |
+| Promise&lt;[Result](arkts-arkdata-relationalstore-result-i.md)&lt;[LockInfo](arkts-arkdata-cloudextension-lockinfo-i-sys.md)&gt;&gt; | Promise used to return the lock ID and lock period. |
 
 **Examples**
 
@@ -184,7 +184,7 @@ Inserts data to a cloud database table. This API uses a promise to return the re
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;Result&lt;Record&lt;string, [CloudType](arkts-arkdata-cloudextension-cloudtype-t-sys.md)&gt;&gt;&gt;&gt; | Promise used to return the inserted data and operation result. |
+| Promise&lt;Array&lt;[Result](arkts-arkdata-relationalstore-result-i.md)&lt;Record&lt;string, [CloudType](arkts-arkdata-cloudextension-cloudtype-t-sys.md)&gt;&gt;&gt;&gt; | Promise used to return the inserted data and operation result. |
 
 **Examples**
 
@@ -220,7 +220,7 @@ Locks this cloud database. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Result&lt;LockInfo&gt;&gt; | Promise used to return the lock ID and lock period. |
+| Promise&lt;[Result](arkts-arkdata-relationalstore-result-i.md)&lt;[LockInfo](arkts-arkdata-cloudextension-lockinfo-i-sys.md)&gt;&gt; | Promise used to return the lock ID and lock period. |
 
 **Examples**
 
@@ -273,7 +273,7 @@ Queries data in a cloud database table. This API uses a promise to return the re
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Result&lt;[CloudData](arkts-arkdata-cloudextension-clouddata-i-sys.md)&gt;&gt; | Promise used to return the data and operation result. |
+| Promise&lt;[Result](arkts-arkdata-relationalstore-result-i.md)&lt;[CloudData](arkts-arkdata-cloudextension-clouddata-i-sys.md)&gt;&gt; | Promise used to return the data and operation result. |
 
 **Examples**
 
@@ -322,7 +322,7 @@ Unlocks a cloud database. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Result&lt;boolean&gt;&gt; | Promise used to return the result. The value true means the operation is successful; the value false means the opposite. |
+| Promise&lt;[Result](arkts-arkdata-relationalstore-result-i.md)&lt;boolean&gt;&gt; | Promise used to return the result. The value true means the operation is successful; the value false means the opposite. |
 
 **Examples**
 
@@ -373,7 +373,7 @@ Updates data in the cloud. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;Result&lt;Record&lt;string, [CloudType](arkts-arkdata-cloudextension-cloudtype-t-sys.md)&gt;&gt;&gt;&gt; | Promise used to return the update result and updated data. |
+| Promise&lt;Array&lt;[Result](arkts-arkdata-relationalstore-result-i.md)&lt;Record&lt;string, [CloudType](arkts-arkdata-cloudextension-cloudtype-t-sys.md)&gt;&gt;&gt;&gt; | Promise used to return the update result and updated data. |
 
 **Examples**
 

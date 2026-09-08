@@ -36,7 +36,7 @@ Callback invoked to return the collaboration result in multi-device collaboratio
 
 | Type | Description |
 | --- | --- |
-| AbilityConstant.CollaborateResult | Collaboration result, that is, whether the target application accepts the collaboration request. |
+| [AbilityConstant.CollaborateResult](../../apis-ability-kit/arkts-apis/arkts-ability-abilityconstant-collaborateresult-e.md) | Collaboration result, that is, whether the target application accepts the collaboration request. |
 
 **Examples**
 

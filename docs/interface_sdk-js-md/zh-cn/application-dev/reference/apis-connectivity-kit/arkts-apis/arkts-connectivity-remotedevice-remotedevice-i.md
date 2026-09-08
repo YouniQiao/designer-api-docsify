@@ -32,7 +32,7 @@ getAcbState(): AcbState
 
 | 类型 | 说明 |
 | --- | --- |
-| AcbState | 和远端设备的逻辑链路连接状态。 |
+| [AcbState](arkts-connectivity-remotedevice-acbstate-t.md) | 和远端设备的逻辑链路连接状态。 |
 
 **错误码：**
 
@@ -62,7 +62,7 @@ getConnectionState(): ConnectionState
 
 | 类型 | 说明 |
 | --- | --- |
-| ConnectionState | 本端设备和远端设备的连接状态。 |
+| [ConnectionState](arkts-connectivity-remotedevice-connectionstate-t.md) | 本端设备和远端设备的连接状态。 |
 
 **错误码：**
 
@@ -92,7 +92,7 @@ getDeviceClass(): DeviceClass
 
 | 类型 | 说明 |
 | --- | --- |
-| DeviceClass | 远端设备类型。 |
+| [DeviceClass](arkts-connectivity-remotedevice-deviceclass-t.md) | 远端设备类型。 |
 
 **错误码：**
 
@@ -182,7 +182,7 @@ getPairingState(): PairingState
 
 | 类型 | 说明 |
 | --- | --- |
-| PairingState | 和远端设备的配对状态。 |
+| [PairingState](arkts-connectivity-remotedevice-pairingstate-t.md) | 和远端设备的配对状态。 |
 
 **错误码：**
 

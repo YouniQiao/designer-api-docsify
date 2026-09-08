@@ -22,7 +22,7 @@ Obtains information about all sensors on the device. This API returns the result
 
 | Type | Description |
 | --- | --- |
-| Array&lt;Sensor&gt; | List of sensor attributes. |
+| Array&lt;[Sensor](arkts-sensorservice-sensor-sensor-i.md)&gt; | List of sensor attributes. |
 
 **Error codes:**
 

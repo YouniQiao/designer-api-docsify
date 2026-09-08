@@ -34,7 +34,7 @@ function addVlanIp(ifName: string, vlanId: number, address: LinkAddress): Promis
 | --- | --- | --- | --- |
 | ifName | string | 是 | 网卡名。 |
 | vlanId | number | 是 | vlan标识符，取值范围[0,4094]。 |
-| address | LinkAddress | 是 | 链路信息。 |
+| address | [LinkAddress](arkts-network-connection-linkaddress-i.md) | 是 | 链路信息。 |
 
 **返回值：**
 

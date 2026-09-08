@@ -46,4 +46,4 @@ Creates the context for a module. The [resourceManager.Configuration](../../apis
 | Error Code ID | Error Message |
 | --- | --- |
 | [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
-| 16000021 | The module does not exist. |
+| [16000021](../errorcode-ability.md#16000021-module-name-does-not-exist) | The module does not exist. |

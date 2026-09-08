@@ -27,7 +27,7 @@ Obtains the default pixel map of a wallpaper of the specified type. Returns the 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | wallpaperType | [WallpaperType](arkts-basicservices-wallpaper-wallpapertype-e.md) | Yes | indicates the wallpaper type. |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;image.PixelMap&gt; | Yes | the callback of getImage. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)&gt; | Yes | the callback of getImage. |
 
 **Error codes:**
 
@@ -79,7 +79,7 @@ Obtains the default pixel map of a wallpaper of the specified type. Returns the 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;image.PixelMap&gt; | the promise returned by the function. |
+| Promise&lt;[image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)&gt; | the promise returned by the function. |
 
 **Error codes:**
 

@@ -30,7 +30,7 @@ hasAuthorization(privilege: Privilege): Promise<boolean>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| privilege | Privilege | 是 | 目标特权。可用值请参阅[Privilege](arkts-basicservices-authorization-privilege-e.md)。 |
+| privilege | [Privilege](arkts-basicservices-authorization-privilege-e.md) | 是 | 目标特权。可用值请参阅[Privilege](arkts-basicservices-authorization-privilege-e.md)。 |
 
 **返回值：**
 
@@ -66,7 +66,7 @@ requestAuthorization(privilege: Privilege, context: UIAbilityContext): Promise<A
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| privilege | Privilege | 是 | 目标特权。有关可用值，请参阅[Privilege](arkts-basicservices-authorization-privilege-e.md)。 |
+| privilege | [Privilege](arkts-basicservices-authorization-privilege-e.md) | 是 | 目标特权。有关可用值，请参阅[Privilege](arkts-basicservices-authorization-privilege-e.md)。 |
 | context | [UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md) | 是 | 承载授权对话框的[UIAbility context](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md)。 |
 
 **返回值：**

@@ -26,13 +26,13 @@ function getProfileConnectionState(profileId?: ProfileId): ProfileConnectionStat
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| profileId | ProfileId | 否 | 表示Profile协议的枚举值。如果携带ProfileId，则返回指定Profile协议的连接状态。如果未携带ProfileId，则检查所有支持的Profile连接状态，按如下优先级顺序检查并返回：存在已连接的Profile协议，则返回[STATE_CONNECTED](arkts-connectivity-constant-profileconnectionstate-e.md)。存在正在连接的Profile协议，则返回[STATE_CONNECTING](arkts-connectivity-constant-profileconnectionstate-e.md)。存在正在断连的Profile协议，则返回[STATE_DISCONNECTING](arkts-connectivity-constant-profileconnectionstate-e.md)。以上条件均不满足，则返回[STATE_DISCONNECTED](arkts-connectivity-constant-profileconnectionstate-e.md)。 |
+| profileId | [ProfileId](arkts-connectivity-connection-profileid-t.md) | 否 | 表示Profile协议的枚举值。如果携带ProfileId，则返回指定Profile协议的连接状态。如果未携带ProfileId，则检查所有支持的Profile连接状态，按如下优先级顺序检查并返回：存在已连接的Profile协议，则返回[STATE_CONNECTED](arkts-connectivity-constant-profileconnectionstate-e.md)。存在正在连接的Profile协议，则返回[STATE_CONNECTING](arkts-connectivity-constant-profileconnectionstate-e.md)。存在正在断连的Profile协议，则返回[STATE_DISCONNECTING](arkts-connectivity-constant-profileconnectionstate-e.md)。以上条件均不满足，则返回[STATE_DISCONNECTED](arkts-connectivity-constant-profileconnectionstate-e.md)。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| ProfileConnectionState | Profile协议的连接状态。 |
+| [ProfileConnectionState](arkts-connectivity-connection-profileconnectionstate-t.md) | Profile协议的连接状态。 |
 
 **错误码：**
 

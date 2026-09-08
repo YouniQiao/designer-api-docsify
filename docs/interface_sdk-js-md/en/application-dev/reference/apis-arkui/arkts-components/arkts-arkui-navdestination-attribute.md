@@ -43,7 +43,7 @@ Sets the icon of the back button on the title bar.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| PixelMap \| [SymbolGlyphModifier](arkts-arkui-symbolglyphmodifier-t.md) | Yes | Icon of the back button on the title bar.<br>**Since:** 12 |
+| value | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| [PixelMap](arkts-arkui-pixelmap-t.md) \| [SymbolGlyphModifier](arkts-arkui-symbolglyphmodifier-t.md) | Yes | Icon of the back button on the title bar.<br>**Since:** 12 |
 
 ## backButtonIcon
 
@@ -73,7 +73,7 @@ Sets the icon and accessibility text for the back button on the title bar.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| icon | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| PixelMap \| [SymbolGlyphModifier](arkts-arkui-symbolglyphmodifier-t.md) | Yes | Icon of the back button on the title bar. |
+| icon | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| [PixelMap](arkts-arkui-pixelmap-t.md) \| [SymbolGlyphModifier](arkts-arkui-symbolglyphmodifier-t.md) | Yes | Icon of the back button on the title bar. |
 | accessibilityText | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | No | Accessibility text for the back button.Default value: **back** when the system language is English. |
 
 ## bindToNestedScrollable
@@ -956,7 +956,7 @@ title(value: string | CustomBuilder | NavDestinationCommonTitle | NavDestination
           options?: NavigationTitleOptions)
 ```
 
-Sets the page title. When the title string is too number: (1) If no subtitle is set, the string is scaled down, wrapped in two lines, and then clipped with an ellipsis (...) if it is still overlong. (2) If a subtitle is set, the subtitle is scaled down and then truncated with an ellipsis (...) if it is still overlong.
+Sets the page title. When the title string is too long: (1) If no subtitle is set, the string is scaled down, wrapped in two lines, and then clipped with an ellipsis (...) if it is still overlong. (2) If a subtitle is set, the subtitle is scaled down and then truncated with an ellipsis (...) if it is still overlong.
 
 > **NOTE：**
 
@@ -972,7 +972,7 @@ Sets the page title. When the title string is too number: (1) If no subtitle is 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | string \| [CustomBuilder](arkts-arkui-custombuilder-t.md) \| [NavDestinationCommonTitle](arkts-arkui-navdestinationcommontitle-i.md) \| [NavDestinationCustomTitle](arkts-arkui-navdestinationcustomtitle-i.md) \| Resource | Yes | Page title.<br>**Since:** 14 |
+| value | string \| [CustomBuilder](arkts-arkui-custombuilder-t.md) \| [NavDestinationCommonTitle](arkts-arkui-navdestinationcommontitle-i.md) \| [NavDestinationCustomTitle](arkts-arkui-navdestinationcustomtitle-i.md) \| [Resource](../arkts-apis/arkts-arkui-resource-t.md) | Yes | Page title.<br>**Since:** 14 |
 | options | [NavigationTitleOptions](arkts-arkui-navigationtitleoptions-i.md) | No | Title bar options.<br>**Since:** 12 |
 
 ## toolbarConfiguration

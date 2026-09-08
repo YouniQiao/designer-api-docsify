@@ -34,7 +34,7 @@ geofence: Geofence
 
 表示地理围栏信息，包含圆形围栏圆心坐标、半径等信息。
 
-**类型：** Geofence
+**类型：** [Geofence](arkts-location-geolocationmanager-geofence-i.md)
 
 **起始版本：** 12
 

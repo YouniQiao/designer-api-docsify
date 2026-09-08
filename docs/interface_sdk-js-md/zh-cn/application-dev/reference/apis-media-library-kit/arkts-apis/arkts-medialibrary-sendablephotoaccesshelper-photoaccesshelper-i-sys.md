@@ -50,7 +50,7 @@ API10-17，非法字符包括：. .. \ / : * ? " ' ` &lt; &gt; | { } [ ]
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;PhotoAsset&gt; | Promise对象，返回创建的图片和视频结果。 |
+| Promise&lt;[PhotoAsset](arkts-medialibrary-sendablephotoaccesshelper-photoasset-i.md)&gt; | Promise对象，返回创建的图片和视频结果。 |
 
 **错误码：**
 
@@ -112,13 +112,13 @@ API10-17，非法字符包括： . .. \ / : * ? " ' ` &lt; &gt; | { } [ ]
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | displayName | string | 是 | 创建的图片或者视频文件名。 |
-| options | photoAccessHelper.PhotoCreateOptions | 是 | 图片或视频的创建选项。 |
+| options | [photoAccessHelper.PhotoCreateOptions](arkts-medialibrary-photoaccesshelper-photocreateoptions-i-sys.md) | 是 | 图片或视频的创建选项。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;PhotoAsset&gt; | Promise used to return the created asset. |
+| Promise&lt;[PhotoAsset](arkts-medialibrary-sendablephotoaccesshelper-photoasset-i.md)&gt; | Promise used to return the created asset. |
 
 **错误码：**
 
@@ -175,14 +175,14 @@ getHiddenAlbums(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mode | photoAccessHelper.HiddenPhotosDisplayMode | 是 | 隐藏文件显示模式。 |
-| options | photoAccessHelper.FetchOptions | 否 | 检索选项，不填时默认根据隐藏文件显示模式检索。 |
+| mode | [photoAccessHelper.HiddenPhotosDisplayMode](arkts-medialibrary-photoaccesshelper-hiddenphotosdisplaymode-e-sys.md) | 是 | 隐藏文件显示模式。 |
+| options | [photoAccessHelper.FetchOptions](arkts-medialibrary-photoaccesshelper-fetchoptions-i.md) | 否 | 检索选项，不填时默认根据隐藏文件显示模式检索。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;FetchResult&lt;Album&gt;&gt; | Promise对象，返回获取相册的结果集。 |
+| Promise&lt;[FetchResult](arkts-medialibrary-sendablephotoaccesshelper-fetchresult-i.md)&lt;[Album](arkts-medialibrary-sendablephotoaccesshelper-album-i.md)&gt;&gt; | Promise对象，返回获取相册的结果集。 |
 
 **错误码：**
 
@@ -269,13 +269,13 @@ getPhotoAssets(assetsData: photoAccessHelper.ValuesBucket[]): Promise<PhotoAsset
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| assetsData | photoAccessHelper.ValuesBucket[] | 是 | 资产记录的数组。数组中的每个元素包含资产的列名称及其对应的值。数组的大小不能超过500个。数组中的每个元素必须包含以下资产列信息：file_id、data、display_name、media_type、subtype。 |
+| assetsData | [photoAccessHelper.ValuesBucket](arkts-medialibrary-photoaccesshelper-valuesbucket-t-sys.md)[] | 是 | 资产记录的数组。数组中的每个元素包含资产的列名称及其对应的值。数组的大小不能超过500个。数组中的每个元素必须包含以下资产列信息：file_id、data、display_name、media_type、subtype。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;PhotoAsset[]&gt; | Promise对象，返回PhotoAsset对象的数组（数组可能为空）。 |
+| Promise&lt;[PhotoAsset](arkts-medialibrary-sendablephotoaccesshelper-photoasset-i.md)[]&gt; | Promise对象，返回PhotoAsset对象的数组（数组可能为空）。 |
 
 **错误码：**
 
@@ -333,13 +333,13 @@ Fetch shared photo assets.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | photoAccessHelper.FetchOptions | 是 | Fetch options. |
+| options | [photoAccessHelper.FetchOptions](arkts-medialibrary-photoaccesshelper-fetchoptions-i.md) | 是 | Fetch options. |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;SharedPhotoAsset&gt; | Returns the shared photo assets |
+| Array&lt;[SharedPhotoAsset](arkts-medialibrary-sendablephotoaccesshelper-sharedphotoasset-i-sys.md)&gt; | Returns the shared photo assets |
 
 **错误码：**
 

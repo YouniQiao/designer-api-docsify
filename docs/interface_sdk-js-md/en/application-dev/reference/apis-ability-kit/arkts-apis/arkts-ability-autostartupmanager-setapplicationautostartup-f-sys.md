@@ -42,30 +42,6 @@ Sets an application component to automatically start upon system boot. This API 
 | [16000013](../errorcode-ability.md#16000013-application-controlled-by-edm) | The application is controlled by EDM. |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Failed to connect to the system service. |
 
-**Examples**
-
-```TypeScript
-import { autoStartupManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  autoStartupManager.setApplicationAutoStartup({
-    bundleName: 'com.example.autostartupapp',
-    abilityName: 'EntryAbility'
-  }, (err: BusinessError) => {
-    if (err) {
-      console.error(`setApplicationAutoStartup failed, err code: ${err.code}, err msg: ${err.message}.`);
-      return;
-    }
-    console.info(`setApplicationAutoStartup success.`);
-  });
-} catch (err) {
-  let code = (err as BusinessError).code;
-  let msg = (err as BusinessError).message;
-  console.error(`setApplicationAutoStartup failed, err code: ${code}, err msg: ${msg}.`);
-}
-```
-
 
 ## setApplicationAutoStartup
 
@@ -107,25 +83,3 @@ Sets an application component to automatically start upon system boot. This API 
 | [16000004](../errorcode-ability.md#16000004-visibility-verification-failure) | Cannot start an invisible component. |
 | [16000013](../errorcode-ability.md#16000013-application-controlled-by-edm) | The application is controlled by EDM. |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Failed to connect to the system service. |
-
-**Examples**
-
-```TypeScript
-import { autoStartupManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  autoStartupManager.setApplicationAutoStartup({
-    bundleName: 'com.example.autostartupapp',
-    abilityName: 'EntryAbility'
-  }).then((data: void) => {
-    console.info(`setApplicationAutoStartup success.`);
-  }).catch((err: BusinessError) => {
-    console.error(`setApplicationAutoStartup failed, err code: ${err.code}, err msg: ${err.message}.`);
-  });
-} catch (err) {
-  let code = (err as BusinessError).code;
-  let msg = (err as BusinessError).message;
-  console.error(`setApplicationAutoStartup failed, err code: ${code}, err msg: ${msg}.`);
-}
-```

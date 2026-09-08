@@ -16,7 +16,7 @@ Defines the color which can use resource.
 
 | 类型 | 说明 |
 | --- | --- |
-| Color |  |
+| [Color](arkts-arkui-color-e.md) |  |
 | number |  |
 | string |  |
 | [Resource](arkts-arkui-resource-t.md) |  |

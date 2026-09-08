@@ -43,22 +43,6 @@ addMetadataObjectTypes(types: Array<MetadataObjectType>): void
 | [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
 | [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function addMetadataObjectTypes(metadataOutput: camera.MetadataOutput, types: Array<camera.MetadataObjectType>): void {
-  try {
-    metadataOutput.addMetadataObjectTypes(types);
-  } catch (error) {
-    // 失败返回错误码error.code并处理。
-    let err = error as BusinessError;
-    console.error(`addMetadataObjectTypes error. error code: ${err.code}`);
-  }
-}
-```
-
 ## isLockMetadataObjectTrackingSupported
 
 ```TypeScript
@@ -80,15 +64,6 @@ isLockMetadataObjectTrackingSupported(): boolean
 | 类型 | 说明 |
 | --- | --- |
 | boolean | 表示是否支持锁定元数据对象追踪功能。true表示支持，false表示不支持。 |
-
-**示例**
-
-```TypeScript
-function checkLockMetadataSupport(metadataOutput: camera.MetadataOutput): void {
-  let isSupported: boolean = metadataOutput.isLockMetadataObjectTrackingSupported();
-  console.info(`Lock metadata object tracking supported: ${isSupported}`);
-}
-```
 
 ## lockMetadataObjectTracking
 
@@ -116,7 +91,7 @@ lockMetadataObjectTracking(point: Point): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| point | Point | 是 | 锁定元数据对象追踪的点位。 |
+| point | [Point](arkts-camera-camera-point-i.md) | 是 | 锁定元数据对象追踪的点位。 |
 
 **错误码：**
 
@@ -124,21 +99,6 @@ lockMetadataObjectTracking(point: Point): void
 | --- | --- |
 | [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config, only throw in session usage. |
 | [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function lockMetadata(metadataOutput: camera.MetadataOutput, point: camera.Point): void {
-  try {
-    metadataOutput.lockMetadataObjectTracking(point);
-  } catch (error) {
-    let err = error as BusinessError;
-    console.error(`lockMetadataObjectTracking error. error code: ${err.code}`);
-  }
-}
-```
 
 ## off('metadataObjectsAvailable')
 
@@ -261,22 +221,6 @@ removeMetadataObjectTypes(types: Array<MetadataObjectType>): void
 | [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
 | [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function removeMetadataObjectTypes(metadataOutput: camera.MetadataOutput, types: Array<camera.MetadataObjectType>): void {
-  try {
-    metadataOutput.removeMetadataObjectTypes(types);
-  } catch (error) {
-    // 失败返回错误码error.code并处理。
-    let err = error as BusinessError;
-    console.error(`removeMetadataObjectTypes error. error code: ${err.code}`);
-  }
-}
-```
-
 ## start
 
 ```TypeScript
@@ -303,78 +247,6 @@ start(callback: AsyncCallback<void>): void
 | --- | --- |
 | [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
 | [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function startCaptureSession(captureSession: camera.CaptureSession): void {
-  captureSession.start((err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to start the session, error code: ${err.code}.`);
-      return;
-    }
-    console.info('Callback invoked to indicate the session start success.');
-  });
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function startMetadataOutput(metadataOutput: camera.MetadataOutput): void {
-  metadataOutput.start((err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to start metadata output, error code: ${err.code}.`);
-      return;
-    }
-    console.info('Callback returned with metadata output started.');
-  });
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function startPreviewOutput(previewOutput: camera.PreviewOutput): void {
-  previewOutput.start((err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to start the preview output, error code: ${err.code}.`);
-      return;
-    }
-    console.info('Callback returned with preview output started.');
-  });
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function startCaptureSession(session: camera.Session): void {
-  session.start((err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to start the session, error code: ${err.code}.`);
-      return;
-    }
-    console.info('Callback invoked to indicate the session start success.');
-  });
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function startVideoOutput(videoOutput: camera.VideoOutput): void {
-  videoOutput.start((err: BusinessError) => {
-    if (err.code) {
-      console.error(`Failed to start the video output, error code: ${err.code}.`);
-      return;
-    }
-    console.info('Callback invoked to indicate the video output start success.');
-  });
-}
-```
 
 ## start
 
@@ -403,80 +275,6 @@ start(): Promise<void>
 | [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
 | [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function startDepthDataOutput(depthDataOutput: camera.DepthDataOutput): void {
-  depthDataOutput.start().then(() => {
-    console.info('Promise returned to indicate that start method execution success.');
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to depth data output start, error code: ${error.code}.`);
-  });
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function startCaptureSession(captureSession: camera.CaptureSession): void {
-  captureSession.start().then(() => {
-    console.info('Promise returned to indicate the session start success.');
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to start the session, error code: ${err.code}.`);
-  });
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function startMetadataOutput(metadataOutput: camera.MetadataOutput): void {
-  metadataOutput.start().then(() => {
-    console.info('Callback returned with metadata output started.');
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to metadata output start, error code: ${error.code}`);
-  });
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function startPreviewOutput(previewOutput: camera.PreviewOutput): void {
-  previewOutput.start().then(() => {
-    console.info('Promise returned with preview output started.');
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to preview output start, error code: ${error.code}.`);
-  });
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function startCaptureSession(session: camera.Session): void {
-  session.start().then(() => {
-    console.info('Promise returned to indicate the session start success.');
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to start the session, error code: ${error.code}.`);
-  });
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function startVideoOutput(videoOutput: camera.VideoOutput): void {
-  videoOutput.start().then(() => {
-    console.info('Promise returned to indicate that start method execution success.');
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to video output start, error code: ${error.code}.`);
-  });
-}
-```
-
 ## stop
 
 ```TypeScript
@@ -497,72 +295,6 @@ stop(callback: AsyncCallback<void>): void
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当停止输出metadata成功，err为undefined，否则为错误对象。 |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function stopCaptureSession(captureSession: camera.CaptureSession): void {
-  captureSession.stop((err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to stop the session, error code: ${err.code}.`);
-      return;
-    }
-    console.info('Callback invoked to indicate the session stop success.');
-  });
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function stopMetadataOutput(metadataOutput: camera.MetadataOutput): void {
-  metadataOutput.stop((err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to stop the metadata output, error code: ${err.code}.`);
-      return;
-    }
-    console.info('Callback returned with metadata output stopped.');
-  })
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function stopPreviewOutput(previewOutput: camera.PreviewOutput): void {
-  previewOutput.stop((err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to stop the preview output, error code: ${err.code}.`);
-      return;
-    }
-    console.info('Returned with preview output stopped.');
-  })
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function stopCaptureSession(session: camera.Session): void {
-  session.stop((err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to stop the session, error code: ${err.code}.`);
-      return;
-    }
-    console.info('Callback invoked to indicate the session stop success.');
-  });
-}
-```
-
-```TypeScript
-function stopVideoOutput(videoOutput: camera.VideoOutput): void {
-  videoOutput.stop(() => {
-    console.info('Callback invoked to indicate the video output stop success.');
-  });
-}
-```
-
 ## stop
 
 ```TypeScript
@@ -582,80 +314,6 @@ stop(): Promise<void>
 | 类型 | 说明 |
 | --- | --- |
 | Promise&lt;void&gt; | Promise对象，无返回结果。 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function stopDepthDataOutput(depthDataOutput: camera.DepthDataOutput): void {
-  depthDataOutput.stop().then(() => {
-    console.info('Promise returned to indicate that stop method execution success.');
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to depth data output stop, error code: ${error.code}.`);
-  });
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function stopCaptureSession(captureSession: camera.CaptureSession): void {
-  captureSession.stop().then(() => {
-    console.info('Promise returned to indicate the session stop success.');
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to stop the session, error code: ${err.code}.`);
-  });
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function stopMetadataOutput(metadataOutput: camera.MetadataOutput): void {
-  metadataOutput.stop().then(() => {
-    console.info('Callback returned with metadata output stopped.');
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to metadata output stop, error code: ${error.code}`);
-  });
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function stopPreviewOutput(previewOutput: camera.PreviewOutput): void {
-  previewOutput.stop().then(() => {
-    console.info('Callback returned with preview output stopped.');
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to preview output stop, error code: ${error.code}.`);
-  });
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function stopCaptureSession(session: camera.Session): void {
-  session.stop().then(() => {
-    console.info('Promise returned to indicate the session stop success.');
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to stop the session, error code: ${error.code}.`);
-  });
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function stopVideoOutput(videoOutput: camera.VideoOutput): void {
-  videoOutput.stop().then(() => {
-    console.info('Promise returned to indicate that stop method execution success.');
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to video output stop, error code: ${error.code}.`);
-  });
-}
-```
 
 ## unlockMetadataObjectTracking
 
@@ -679,18 +337,3 @@ unlockMetadataObjectTracking(): void
 | --- | --- |
 | [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config, only throw in session usage. |
 | [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function unlockMetadata(metadataOutput: camera.MetadataOutput): void {
-  try {
-    metadataOutput.unlockMetadataObjectTracking();
-  } catch (error) {
-    let err = error as BusinessError;
-    console.error(`unlockMetadataObjectTracking error. error code: ${err.code}`);
-  }
-}
-```

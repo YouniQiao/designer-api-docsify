@@ -49,27 +49,13 @@ Copies a file. This API uses a promise to return the result.
 | 13900018 | Not a directory |
 | 13900019 | Is a directory |
 | 13900020 | Invalid argument |
-| 13900030 | File name too number |
+| 13900030 | File name too long |
 | 13900031 | Function not implemented |
 | 13900033 | Too many symbolic links encountered |
 | 13900034 | Operation would block |
 | 13900038 | Value too large for defined data type |
 | 13900042 | Unknown error |
 | 13900044 | Network is unreachable<br>**Applicable version:** 12 and later |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let srcPath = pathDir + "/srcDir/test.txt";
-let dstPath = pathDir + "/dstDir/test.txt";
-fileIo.copyFile(srcPath, dstPath, 0).then(() => {
-  console.info(`Succeeded in copying file.`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to copy file. Code: ${err.code}, message: ${err.message}`);
-});
-```
 
 
 ## copyFile
@@ -109,28 +95,12 @@ Copies a file. This API overwrites the file with the same name in the destinatio
 | 13900018 | Not a directory |
 | 13900019 | Is a directory |
 | 13900020 | Invalid argument |
-| 13900030 | File name too number |
+| 13900030 | File name too long |
 | 13900031 | Function not implemented |
 | 13900033 | Too many symbolic links encountered |
 | 13900034 | Operation would block |
 | 13900038 | Value too large for defined data type |
 | 13900042 | Unknown error |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let srcPath = pathDir + "/srcDir/test.txt";
-let dstPath = pathDir + "/dstDir/test.txt";
-fileIo.copyFile(srcPath, dstPath, (err: BusinessError) => {
-  if (err) {
-    console.error(`Failed to copy file. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info(`Succeeded in copying file.`);
-  }
-});
-```
 
 
 ## copyFile
@@ -176,25 +146,9 @@ Copies a file with the specified mode. This API uses an asynchronous callback to
 | 13900018 | Not a directory |
 | 13900019 | Is a directory |
 | 13900020 | Invalid argument |
-| 13900030 | File name too number |
+| 13900030 | File name too long |
 | 13900031 | Function not implemented |
 | 13900033 | Too many symbolic links encountered |
 | 13900034 | Operation would block |
 | 13900038 | Value too large for defined data type |
 | 13900042 | Unknown error |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let srcPath = pathDir + "/srcDir/test.txt";
-let dstPath = pathDir + "/dstDir/test.txt";
-fileIo.copyFile(srcPath, dstPath, 0, (err: BusinessError) => {
-  if (err) {
-    console.error(`Failed to copy file. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info(`Succeeded in copying file.`);
-  }
-});
-```

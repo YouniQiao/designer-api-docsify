@@ -5,7 +5,7 @@
 | 名称 | 值 | 说明 |  
 | ------------ | -- | ------------------ |  
 | NONE | 0 | 不使用渐变模式。 |
-| LINEAR_GRADIENT | 1 | 线性渐变。 |
+| [LINEAR_GRADIENT](arkts-ime-inputmethodengine-gradientmode-e.md) | 1 | 线性渐变。 |
 
 **起始版本：** 20
 

@@ -24,7 +24,7 @@ Obtains the application context.
 
 | Type | Description |
 | --- | --- |
-| Context | Application context. |
+| [Context](arkts-ability-featureability-context-t.md) | Application context. |
 
 **Examples**
 

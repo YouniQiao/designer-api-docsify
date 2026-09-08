@@ -37,7 +37,7 @@ style?: TextDecorationStyle
 
 设置文本装饰线样式。默认值：TextDecorationStyle.SOLID。
 
-**类型：** TextDecorationStyle
+**类型：** [TextDecorationStyle](../arkts-apis/arkts-arkui-textdecorationstyle-e.md)
 
 **起始版本：** 12
 
@@ -74,7 +74,7 @@ type: TextDecorationType
 
 设置文本装饰线类型。
 
-**类型：** TextDecorationType
+**类型：** [TextDecorationType](../arkts-apis/arkts-arkui-textdecorationtype-e.md)
 
 **起始版本：** 12
 

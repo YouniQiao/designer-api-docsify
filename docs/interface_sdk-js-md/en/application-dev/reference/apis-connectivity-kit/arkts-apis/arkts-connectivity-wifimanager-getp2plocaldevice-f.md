@@ -24,7 +24,7 @@ Obtain the information about own device information. DeviceAddress in the return
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;WifiP2pDevice&gt; | Returns the information about own device info. |
+| Promise&lt;[WifiP2pDevice](arkts-connectivity-wifimanager-wifip2pdevice-i.md)&gt; | Returns the information about own device info. |
 
 **Error codes:**
 
@@ -71,7 +71,7 @@ Obtain the information about own device information. DeviceAddress in the return
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;WifiP2pDevice&gt; | Yes | Indicates callback of function. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[WifiP2pDevice](arkts-connectivity-wifimanager-wifip2pdevice-i.md)&gt; | Yes | Indicates callback of function. |
 
 **Error codes:**
 

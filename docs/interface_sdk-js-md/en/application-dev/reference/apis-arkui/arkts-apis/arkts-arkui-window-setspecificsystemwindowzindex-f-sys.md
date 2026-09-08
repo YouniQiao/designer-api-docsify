@@ -28,7 +28,7 @@ You are advised to set different **zIndex** values for different types of window
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| windowType | WindowType | Yes | Window type. Only the following types are supported: **TYPE_WALLET_SWIPE_CARD**, **TYPE_VOICE_INTERACTION**, **TYPE_SCREENSHOT**, **TYPE_SCREEN_CONTROL**, **TYPE_FLOAT_NAVIGATION**, and **TYPE_MUTISCREEN_COLLABORATION**. |
+| windowType | [WindowType](arkts-arkui-window-windowtype-e.md) | Yes | Window type. Only the following types are supported: **TYPE_WALLET_SWIPE_CARD**, **TYPE_VOICE_INTERACTION**, **TYPE_SCREENSHOT**, **TYPE_SCREEN_CONTROL**, **TYPE_FLOAT_NAVIGATION**, and **TYPE_MUTISCREEN_COLLABORATION**. |
 | zIndex | number | Yes | Z-level of the system window. The value must be an integer. Floating-point numbers are rounded down. The value **0** or a negative number will place the window below the home screen. |
 
 **Return value:**

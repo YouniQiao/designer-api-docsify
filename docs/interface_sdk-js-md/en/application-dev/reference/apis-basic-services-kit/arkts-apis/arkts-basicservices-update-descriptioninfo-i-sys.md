@@ -36,7 +36,7 @@ Content of the description file.
 descriptionType: DescriptionType
 ```
 
-Description type. The value **CONTENT** indicates that the description is content, which is applicable to scenarios where the description content is short or needs to be displayed immediately. **URI** indicates that the description is a link, which is applicable to scenarios where the description content is number or needs to be obtained from external resources. Select a value based on the description length and display mode.
+Description type. The value **CONTENT** indicates that the description is content, which is applicable to scenarios where the description content is short or needs to be displayed immediately. **URI** indicates that the description is a link, which is applicable to scenarios where the description content is long or needs to be obtained from external resources. Select a value based on the description length and display mode.
 
 **Type:** [DescriptionType](arkts-basicservices-update-descriptiontype-e-sys.md)
 

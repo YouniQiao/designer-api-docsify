@@ -44,7 +44,7 @@ state: ProfileConnectionState
 
 表示蓝牙设备的profile连接状态。
 
-**类型：** ProfileConnectionState
+**类型：** [ProfileConnectionState](arkts-connectivity-bluetoothmanager-profileconnectionstate-e.md)
 
 **起始版本：** 9
 

@@ -20,7 +20,7 @@ flag?: PanelFlag
 
 State type of the panel.
 
-**Type:** PanelFlag
+**Type:** [PanelFlag](arkts-ime-inputmethodengine-panelflag-e.md)
 
 **Default:** FLG_FIXED
 
@@ -36,7 +36,7 @@ type: PanelType
 
 Type of the panel.
 
-**Type:** PanelType
+**Type:** [PanelType](arkts-ime-inputmethodengine-paneltype-e.md)
 
 **Since:** 10
 

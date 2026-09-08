@@ -28,7 +28,7 @@ Subscribes to controls on cross-bundle widget addition to the home screen. This 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | formInfo.PublishFormCrossBundleControlCallback | Yes | Callback function used to return the control result on cross-bundle widget addition to the home screen. |
+| callback | [formInfo.PublishFormCrossBundleControlCallback](arkts-form-forminfo-publishformcrossbundlecontrolcallback-t-sys.md) | Yes | Callback function used to return the control result on cross-bundle widget addition to the home screen. |
 
 **Error codes:**
 
@@ -37,19 +37,3 @@ Subscribes to controls on cross-bundle widget addition to the home screen. This 
 | [201](../../errorcode-universal.md#201-permission-denied) | Permissions denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not a system application. |
 | [16500050](../errorcode-form.md#16500050-ipc-failure) | IPC connection error. |
-
-**Examples**
-
-```TypeScript
-import { formProvider, formInfo } from '@kit.FormKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  formProvider.onPublishFormCrossBundleControl((info: formInfo.PublishFormCrossBundleInfo) => {
-    return true;
-  });
-  console.info(`onPublishFormCrossBundleControl success`);
-} catch (error) {
-  console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
-}
-```

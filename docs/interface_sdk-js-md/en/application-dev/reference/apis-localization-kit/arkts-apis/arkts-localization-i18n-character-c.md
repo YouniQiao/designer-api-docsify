@@ -44,14 +44,6 @@ Obtains the type of the input character.
 | --- | --- |
 | string | Type of the input character. |
 
-**Examples**
-
-```TypeScript
-import { i18n } from '@kit.LocalizationKit';
-
-let unicodeType: string = i18n.Unicode.getType('a'); // unicodeType = 'U_LOWERCASE_LETTER'
-```
-
 ## isDigit
 
 ```TypeScript
@@ -79,14 +71,6 @@ Checks whether the input character is a digit.
 | Type | Description |
 | --- | --- |
 | boolean | true** if the input character is a digit, and **false** otherwise. |
-
-**Examples**
-
-```TypeScript
-import { i18n } from '@kit.LocalizationKit';
-
-let isDigit: boolean = i18n.Unicode.isDigit('1'); // isDigit = true
-```
 
 ## isIdeograph
 
@@ -116,14 +100,6 @@ Checks whether the input character is an ideographic character.
 | --- | --- |
 | boolean | true** if the input character an ideographic character, and **false** otherwise. |
 
-**Examples**
-
-```TypeScript
-import { i18n } from '@kit.LocalizationKit';
-
-let isIdeograph: boolean = i18n.Unicode.isIdeograph('a'); // isIdeograph = false
-```
-
 ## isLetter
 
 ```TypeScript
@@ -151,14 +127,6 @@ Checks whether the input character is a letter.
 | Type | Description |
 | --- | --- |
 | boolean | true** if the input character a letter, and **false** otherwise. |
-
-**Examples**
-
-```TypeScript
-import { i18n } from '@kit.LocalizationKit';
-
-let isLetter: boolean = i18n.Unicode.isLetter('a'); // isLetter = true
-```
 
 ## isLowerCase
 
@@ -188,14 +156,6 @@ Checks whether the input character is a lowercase letter.
 | --- | --- |
 | boolean | true** if the input character a lowercase letter, and **false** otherwise. |
 
-**Examples**
-
-```TypeScript
-import { i18n } from '@kit.LocalizationKit';
-
-let isLowercase: boolean = i18n.Unicode.isLowerCase('a'); // isLowercase = true
-```
-
 ## isRTL
 
 ```TypeScript
@@ -223,14 +183,6 @@ Checks whether the input character is of the right to left (RTL) language.
 | Type | Description |
 | --- | --- |
 | boolean | true** if the input character is of the RTL language, and **false** otherwise. |
-
-**Examples**
-
-```TypeScript
-import { i18n } from '@kit.LocalizationKit';
-
-let isRtl: boolean = i18n.Unicode.isRTL('a'); // isRtl = false
-```
 
 ## isSpaceChar
 
@@ -260,14 +212,6 @@ Checks whether the input character is a space.
 | --- | --- |
 | boolean | true** if the input character is a space, and **false** otherwise. |
 
-**Examples**
-
-```TypeScript
-import { i18n } from '@kit.LocalizationKit';
-
-let isSpacechar: boolean = i18n.Unicode.isSpaceChar('a'); // isSpacechar = false
-```
-
 ## isUpperCase
 
 ```TypeScript
@@ -296,14 +240,6 @@ Checks whether the input character is an uppercase letter.
 | --- | --- |
 | boolean | true** if the input character an uppercase letter, and **false** otherwise. |
 
-**Examples**
-
-```TypeScript
-import { i18n } from '@kit.LocalizationKit';
-
-let isUppercase: boolean = i18n.Unicode.isUpperCase('a'); // isUppercase = false
-```
-
 ## isWhitespace
 
 ```TypeScript
@@ -331,11 +267,3 @@ Checks whether the input character is a whitespace.
 | Type | Description |
 | --- | --- |
 | boolean | true** if the input character is a white space, and **false** otherwise. |
-
-**Examples**
-
-```TypeScript
-import { i18n } from '@kit.LocalizationKit';
-
-let isWhitespace: boolean = i18n.Unicode.isWhitespace('a'); // isWhitespace = false
-```

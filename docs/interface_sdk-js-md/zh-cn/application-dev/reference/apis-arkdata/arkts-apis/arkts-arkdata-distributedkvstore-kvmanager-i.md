@@ -102,7 +102,7 @@ closeKVStore(appId: string, storeId: string, kvConfig?: Options): Promise<void>
 | --- | --- | --- | --- |
 | appId | string | 是 | 应用的BundleName，不可为空且长度范围为1-256字节。 |
 | storeId | string | 是 | 要关闭的数据库唯一标识符，长度范围为1-[MAX_STORE_ID_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md)，且只能包含字母数字或下划线_。 |
-| kvConfig | Options | 否 | 要关闭的数据库的配置信息，默认为空。<br>**适用版本：** 24 |
+| kvConfig | [Options](arkts-arkdata-distributedkvstore-options-i.md) | 否 | 要关闭的数据库的配置信息，默认为空。<br>**适用版本：** 24 |
 
 **返回值：**
 
@@ -249,7 +249,7 @@ deleteKVStore(appId: string, storeId: string, kvConfig?: Options): Promise<void>
 | --- | --- | --- | --- |
 | appId | string | 是 | 应用的BundleName，不可为空且长度范围为1-256字节。 |
 | storeId | string | 是 | 要删除的数据库唯一标识符，长度范围为1-[MAX_STORE_ID_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md)，且只能包含字母数字或下划线_。 |
-| kvConfig | Options | 否 | 要删除的数据库的配置信息，默认为空。<br>**适用版本：** 24 |
+| kvConfig | [Options](arkts-arkdata-distributedkvstore-options-i.md) | 否 | 要删除的数据库的配置信息，默认为空。<br>**适用版本：** 24 |
 
 **返回值：**
 
@@ -429,7 +429,7 @@ getKVStore<T>(storeId: string, options: Options, callback: AsyncCallback<T>): vo
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | storeId | string | 是 | 数据库唯一标识符，长度范围为1-[MAX_STORE_ID_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md)，且只能包含字母数字或下划线_。 |
-| options | Options | 是 | 创建分布式键值实例的配置信息。 |
+| options | [Options](arkts-arkdata-distributedkvstore-options-i.md) | 是 | 创建分布式键值实例的配置信息。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;T&gt; | 是 | 回调函数。返回创建的分布式键值数据库实例（根据kvStoreType的不同，可以创建SingleKVStore实例和DeviceKVStore实例）。 |
 
 **错误码：**
@@ -497,7 +497,7 @@ getKVStore<T>(storeId: string, options: Options): Promise<T>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | storeId | string | 是 | 数据库唯一标识符，长度范围为1-[MAX_STORE_ID_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md)，且只能包含字母数字或下划线_。 |
-| options | Options | 是 | 创建分布式键值实例的配置信息。 |
+| options | [Options](arkts-arkdata-distributedkvstore-options-i.md) | 是 | 创建分布式键值实例的配置信息。 |
 
 **返回值：**
 

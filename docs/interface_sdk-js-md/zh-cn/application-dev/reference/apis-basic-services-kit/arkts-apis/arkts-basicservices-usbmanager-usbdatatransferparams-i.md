@@ -48,7 +48,7 @@ devPipe: USBDevicePipe
 
 用于确定总线地址和设备地址，需要调用[connectDevice](arkts-basicservices-usbmanager-connectdevice-f.md)获取。
 
-**类型：** USBDevicePipe
+**类型：** [USBDevicePipe](arkts-basicservices-usbmanager-usbdevicepipe-i.md)
 
 **起始版本：** 18
 

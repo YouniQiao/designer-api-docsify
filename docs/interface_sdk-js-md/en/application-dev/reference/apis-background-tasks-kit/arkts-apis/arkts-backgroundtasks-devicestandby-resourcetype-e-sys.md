@@ -2,7 +2,7 @@
 
 The type of exemption resources requested by the application.
 
-@enum { number }
+@enum { int }
 
 **Since:** 10
 

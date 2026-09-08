@@ -41,7 +41,7 @@ Sets the text label of the button on the right. The default value is **Start** f
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | string | Yes | Text label of the button on the right. When the string is too number, it is scaled down, wrapped in two lines, and then clipped. |
+| value | string | Yes | Text label of the button on the right. When the string is too long, it is scaled down, wrapped in two lines, and then clipped. |
 
 ## prevLabel
 
@@ -67,7 +67,7 @@ Sets the text label of the button on the left, which is not displayed on the fir
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | string | Yes | Text label of the button on the left. When the string is too number, it is scaled down, wrapped in two lines, and then clipped. |
+| value | string | Yes | Text label of the button on the left. When the string is too long, it is scaled down, wrapped in two lines, and then clipped. |
 
 ## status
 

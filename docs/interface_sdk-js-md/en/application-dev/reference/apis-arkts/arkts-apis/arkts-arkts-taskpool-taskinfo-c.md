@@ -52,7 +52,7 @@ state: State
 
 Task state. You are advised not to change the value.This API can be used in atomic services since API version 11.
 
-**Type:** State
+**Type:** [State](arkts-arkts-taskpool-state-e.md)
 
 **Default:** State::WAITING
 

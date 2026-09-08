@@ -24,7 +24,7 @@ Obtains information about all widgets that have been added to the home screen. T
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;formInfo.RunningFormInfo&gt;&gt; | Promise used to return the information about widgets that meet the requirements. |
+| Promise&lt;Array&lt;[formInfo.RunningFormInfo](arkts-form-forminfo-runningforminfo-i.md)&gt;&gt; | Promise used to return the information about widgets that meet the requirements. |
 
 **Error codes:**
 

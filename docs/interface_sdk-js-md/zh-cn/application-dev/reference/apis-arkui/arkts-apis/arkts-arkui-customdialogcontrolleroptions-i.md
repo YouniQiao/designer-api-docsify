@@ -93,7 +93,7 @@ backgroundBlurStyle?: BlurStyle
 
 设置为BlurStyle.NONE即可关闭背景虚化。当设置了backgroundBlurStyle为非NONE值时，则不要设置backgroundColor，否则颜色显示将不符合预期效果。
 
-**类型：** BlurStyle
+**类型：** [BlurStyle](../arkts-components/arkts-arkui-blurstyle-e.md)
 
 **默认值：** BlurStyle.COMPONENT_ULTRA_THICK
 
@@ -496,7 +496,7 @@ immersiveMode?: ImmersiveMode
 - 默认值：ImmersiveMode.DEFAULT  
 - 当且仅当levelMode属性设置为LevelMode.EMBEDDED时生效。
 
-**类型：** ImmersiveMode
+**类型：** [ImmersiveMode](arkts-arkui-immersivemode-t.md)
 
 **默认值：** ImmersiveMode.DEFAULT
 
@@ -544,7 +544,7 @@ keyboardAvoidDistance?: LengthMetrics
 - 默认单位：vp。  
 - 当且仅当keyboardAvoidMode属性设置为DEFAULT时生效。
 
-**类型：** LengthMetrics
+**类型：** [LengthMetrics](arkts-arkui-lengthmetrics-t.md)
 
 **起始版本：** 15
 
@@ -564,7 +564,7 @@ keyboardAvoidMode?: KeyboardAvoidMode
 
 默认值：KeyboardAvoidMode.DEFAULT
 
-**类型：** KeyboardAvoidMode
+**类型：** [KeyboardAvoidMode](../arkts-components/arkts-arkui-keyboardavoidmode-e.md)
 
 **默认值：** KeyboardAvoidMode.DEFAULT
 
@@ -589,7 +589,7 @@ levelMode?: LevelMode
 - 默认值：LevelMode.OVERLAY。  
 - 当且仅当showInSubWindow属性设置为false时生效。
 
-**类型：** LevelMode
+**类型：** [LevelMode](arkts-arkui-levelmode-t.md)
 
 **默认值：** LevelMode.OVERLAY
 
@@ -614,7 +614,7 @@ levelOrder?: LevelOrder
 - 默认值：LevelOrder.clamp(0)  
 - 不支持动态刷新顺序。
 
-**类型：** LevelOrder
+**类型：** [LevelOrder](arkts-arkui-levelorder-t.md)
 
 **默认值：** The value returns by LevelOrder.clamp(0)
 
@@ -704,7 +704,7 @@ offset?: Offset
 
 默认值：{ dx: 0, dy: 0 }
 
-**类型：** Offset
+**类型：** [Offset](arkts-arkui-offset-t.md)
 
 **起始版本：** 7
 
@@ -730,7 +730,7 @@ onDidAppear?: Callback<void>
 
 4.弹窗入场动效未完成时彻底关闭弹窗，动效打断，onDidAppear不会触发。
 
-**类型：** Callback&lt;void&gt;
+**类型：** [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;void&gt;
 
 **起始版本：** 19
 
@@ -752,7 +752,7 @@ onDidDisappear?: Callback<void>
 
 1.正常时序依次为：onWillAppear&gt;&gt;onDidAppear&gt;&gt;onWillDisappear&gt;&gt;onDidDisappear。
 
-**类型：** Callback&lt;void&gt;
+**类型：** [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;void&gt;
 
 **起始版本：** 19
 
@@ -776,7 +776,7 @@ onWillAppear?: Callback<void>
 
 2.在onWillAppear内设置改变弹窗显示效果的回调事件，二次弹出生效。
 
-**类型：** Callback&lt;void&gt;
+**类型：** [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;void&gt;
 
 **起始版本：** 19
 
@@ -798,7 +798,7 @@ onWillDisappear?: Callback<void>
 
 1.正常时序依次为：onWillAppear&gt;&gt;onDidAppear&gt;&gt;onWillDisappear&gt;&gt;onDidDisappear。
 
-**类型：** Callback&lt;void&gt;
+**类型：** [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;void&gt;
 
 **起始版本：** 19
 
@@ -822,7 +822,7 @@ onWillDismiss?: Callback<DismissDialogAction>
 
 2.在onWillDismiss回调中，不能再做onWillDismiss拦截。
 
-**类型：** Callback&lt;[DismissDialogAction](arkts-arkui-dismissdialogaction-i.md)&gt;
+**类型：** [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;[DismissDialogAction](arkts-arkui-dismissdialogaction-i.md)&gt;
 
 **起始版本：** 12
 

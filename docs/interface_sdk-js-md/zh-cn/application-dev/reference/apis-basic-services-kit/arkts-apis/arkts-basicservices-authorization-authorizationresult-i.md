@@ -20,7 +20,7 @@ privilege: Privilege
 
 该授权所对应的特权。
 
-**类型：** Privilege
+**类型：** [Privilege](arkts-basicservices-authorization-privilege-e.md)
 
 **起始版本：** 26.1.0
 
@@ -36,7 +36,7 @@ resultCode: AuthorizationResultCode
 
 授权结果码。如果授权获批，则返回 [AUTHORIZATION_GRANTED](arkts-basicservices-authorization-authorizationresultcode-e.md#authorization_granted)。否则，返回相应的错误码。详情请参见 [AuthorizationResultCode](arkts-basicservices-authorization-authorizationresultcode-e.md)。
 
-**类型：** AuthorizationResultCode
+**类型：** [AuthorizationResultCode](arkts-basicservices-authorization-authorizationresultcode-e.md)
 
 **起始版本：** 26.1.0
 

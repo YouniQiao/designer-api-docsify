@@ -47,7 +47,7 @@ Defines a callback triggered when the client connects to the **SelectionExtensio
 
 | Type | Description |
 | --- | --- |
-| rpc.RemoteObject | RemoteObject** communication stub object. You need to implement the remote message processing method (for example, **onRemoteMessageRequest**) of this object. The system passes this object to the client for IPC. |
+| [rpc.RemoteObject](../../apis-ipc-kit/arkts-apis/arkts-ipc-rpc-remoteobject-c.md) | RemoteObject** communication stub object. You need to implement the remote message processing method (for example, **onRemoteMessageRequest**) of this object. The system passes this object to the client for IPC. |
 
 **Examples**
 

@@ -20,7 +20,7 @@ state: CCallState
 
 Call type.
 
-**Type:** CCallState
+**Type:** [CCallState](arkts-telephony-observer-ccallstate-t.md)
 
 **Since:** 23
 

@@ -40,27 +40,3 @@ Checks whether an application exists, or whether a native application has been i
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | options | [CheckPackageHasInstalledOptions](arkts-ability-system-package-checkpackagehasinstalledoptions-i.md) | Yes | Options |
-
-**Examples**
-
-```TypeScript
-import Package from '@system.package';
-
-@Entry
-@Component
-struct MainPage {
-  hasInstalled() {
-    Package.hasInstalled({
-      bundleName: 'com.example.bundlename',
-      success: (data) => {
-        console.log('package has installed: ' + data);
-      },
-      fail: (msg:string, code) => {
-        console.log('query package fail, code: ' + code + ', data: ' + msg);
-      },
-    });
-  }
-  build() {
-  }
-}
-```

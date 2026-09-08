@@ -28,7 +28,7 @@ This parameter is mandatory when a domain name filtering rule is added.
 
 This parameter is optional when a domain name filtering rule is removed. If this parameter is left empty, all [Action](arkts-mdm-networkmanager-action-e.md) chains are cleared, and **domainName** and **appUid** must be also left empty.
 
-**Type:** Action
+**Type:** [Action](arkts-mdm-networkmanager-action-e.md)
 
 **Since:** 12
 
@@ -64,7 +64,7 @@ This parameter is optional when a domain name filtering rule is added. If this p
 
 This parameter is optional when a domain name filtering rule is removed. If the value is empty, all [Direction](arkts-mdm-networkmanager-direction-e.md) chains are cleared, and **domainName** and **appUid** must be empty.
 
-**Type:** Direction
+**Type:** [Direction](arkts-mdm-networkmanager-direction-e.md)
 
 **Since:** 15
 

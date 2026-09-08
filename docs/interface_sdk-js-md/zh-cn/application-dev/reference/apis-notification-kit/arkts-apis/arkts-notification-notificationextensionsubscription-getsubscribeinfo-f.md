@@ -28,7 +28,7 @@ function getSubscribeInfo(): Promise<NotificationExtensionSubscriptionInfo[]>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;NotificationExtensionSubscriptionInfo[]&gt; | Promise对象，返回一个[NotificationExtensionSubscriptionInfo]{ |
+| Promise&lt;[NotificationExtensionSubscriptionInfo](arkts-notification-notificationextensionsubscription-notificationextensionsubscriptioninfo-t.md)[]&gt; | Promise对象，返回一个[NotificationExtensionSubscriptionInfo]{ |
 
 **错误码：**
 

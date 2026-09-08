@@ -39,7 +39,7 @@ Text information.
 
 Note: Text truncation occurs when content exceeds column width.
 
-**Type:** string \| Resource
+**Type:** string \| [Resource](../arkts-apis/arkts-arkui-resource-t.md)
 
 **Since:** 10
 

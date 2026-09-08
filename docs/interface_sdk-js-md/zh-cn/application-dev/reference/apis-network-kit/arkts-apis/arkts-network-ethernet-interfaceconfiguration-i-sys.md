@@ -54,7 +54,7 @@ httpProxy?: HttpProxy
 
 以太网连接代理配置信息，默认情况下不配置任何代理信息。
 
-**类型：** HttpProxy
+**类型：** [HttpProxy](arkts-network-ethernet-httpproxy-t.md)
 
 **起始版本：** 10
 

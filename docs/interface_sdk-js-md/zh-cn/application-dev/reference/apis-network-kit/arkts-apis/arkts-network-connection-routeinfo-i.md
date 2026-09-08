@@ -20,7 +20,7 @@ destination: LinkAddress
 
 目的地址。
 
-**类型：** LinkAddress
+**类型：** [LinkAddress](arkts-network-connection-linkaddress-i.md)
 
 **起始版本：** 8
 
@@ -34,7 +34,7 @@ gateway: NetAddress
 
 网关地址。
 
-**类型：** NetAddress
+**类型：** [NetAddress](arkts-network-connection-netaddress-i.md)
 
 **起始版本：** 8
 

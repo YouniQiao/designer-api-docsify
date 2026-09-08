@@ -30,7 +30,7 @@ Query the business ability info of by the given filter. ohos.permission.GET_BUND
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | filter | [BusinessAbilityFilter](arkts-ability-businessabilityrouter-businessabilityfilter-i-sys.md) | Yes | Indicates the filter containing the business ability info to be queried. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;BusinessAbilityInfo&gt;&gt; | Yes | The callback of querying business ability info result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[BusinessAbilityInfo](arkts-ability-businessabilityrouter-businessabilityinfo-t-sys.md)&gt;&gt; | Yes | The callback of querying business ability info result. |
 
 **Error codes:**
 
@@ -89,7 +89,7 @@ Query the business ability info of by the given filter. ohos.permission.GET_BUND
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;BusinessAbilityInfo&gt;&gt; | Returns a list of business ability info objects. |
+| Promise&lt;Array&lt;[BusinessAbilityInfo](arkts-ability-businessabilityrouter-businessabilityinfo-t-sys.md)&gt;&gt; | Returns a list of business ability info objects. |
 
 **Error codes:**
 

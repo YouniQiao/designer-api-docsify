@@ -12,4 +12,4 @@ export type ModuleConfigInfo = _PackInfo.ModuleConfigInfo
 
 **系统接口：** 此接口为系统接口。
 
-**类型：** _PackInfo.ModuleConfigInfo
+**类型：** [_PackInfo.ModuleConfigInfo](arkts-ability-bundlepackinfo-moduleconfiginfo-i-sys.md)

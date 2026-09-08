@@ -91,7 +91,7 @@ function removePreferencesFromCacheSync(context: Context, options: Options): voi
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | context | Context | 是 | 应用上下文。FA模型的应用Context定义见Context。Stage模型的应用Context定义见[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md)。 |
-| options | Options | 是 | 与Preferences实例相关的配置选项。 |
+| options | [Options](arkts-arkdata-preferences-options-i.md) | 是 | 与Preferences实例相关的配置选项。 |
 
 **错误码：**
 

@@ -196,6 +196,24 @@ Whether the media asset is hidden. **true** if hidden, **false** otherwise.
 
 **System API:** This is a system API.
 
+## photoVisibility
+
+```TypeScript
+photoVisibility?: number
+```
+
+The visibility of photo. The value should be an integer.
+
+**Type:** number
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+**System API:** This is a system API.
+
 ## position
 
 ```TypeScript
@@ -204,9 +222,63 @@ position?: PositionType
 
 Position of the media asset.
 
-**Type:** PositionType
+**Type:** [PositionType](arkts-medialibrary-photoaccesshelper-positiontype-e.md)
 
 **Since:** 23
+
+**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+**System API:** This is a system API.
+
+## shareDateDay
+
+```TypeScript
+shareDateDay?: number
+```
+
+The date day of the share album asset to be shared. The value should be an integer.
+
+**Type:** number
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+**System API:** This is a system API.
+
+## shareGroup
+
+```TypeScript
+shareGroup?: number
+```
+
+The group of the share album assets to be shared. The value should be an integer.
+
+**Type:** number
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+**System API:** This is a system API.
+
+## shareRiskStatus
+
+```TypeScript
+shareRiskStatus?: ShareAlbumRiskStatus
+```
+
+The risk status of share album asset. The value should be an integer.
+
+**Type:** [ShareAlbumRiskStatus](arkts-medialibrary-photoaccesshelper-sharealbumriskstatus-e-sys.md)
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -252,7 +324,7 @@ thumbnailVisible: ThumbnailVisibility
 
 Accessibility status of the thumbnail.
 
-**Type:** ThumbnailVisibility
+**Type:** [ThumbnailVisibility](arkts-medialibrary-photoaccesshelper-thumbnailvisibility-e-sys.md)
 
 **Since:** 20
 

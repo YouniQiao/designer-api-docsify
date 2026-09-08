@@ -46,25 +46,8 @@ Creates a readable stream. This API returns the result synchronously.
 | 13900020 | Invalid argument |
 | 13900022 | Too many open files |
 | 13900024 | File too large |
-| 13900030 | File name too number |
+| 13900030 | File name too long |
 | 13900038 | Value too large for defined data type |
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
 | 13900044 | Network is unreachable |
-
-**Examples**
-
-```TypeScript
-// Create a readable stream.
-const rs = fileIo.createReadStream(`${pathDir}/read.txt`);
-// Create a writeable stream.
-const ws = fileIo.createWriteStream(`${pathDir}/write.txt`);
-// Copy files in paused mode.
-rs.on('readable', () => {
-  const data = rs.read();
-  if (!data) {
-    return;
-  }
-  ws.write(data);
-});
-```

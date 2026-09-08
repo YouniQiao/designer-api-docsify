@@ -20,7 +20,7 @@ flag?: PanelFlag
 
 面板的状态类型。
 
-**类型：** PanelFlag
+**类型：** [PanelFlag](arkts-ime-inputmethodengine-panelflag-e.md)
 
 **默认值：** FLG_FIXED
 
@@ -36,7 +36,7 @@ type: PanelType
 
 面板的类型。
 
-**类型：** PanelType
+**类型：** [PanelType](arkts-ime-inputmethodengine-paneltype-e.md)
 
 **起始版本：** 10
 

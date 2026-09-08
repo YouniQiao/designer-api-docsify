@@ -32,7 +32,7 @@ Obtains the color space type.
 
 | Type | Description |
 | --- | --- |
-| colorSpaceManager.ColorSpace | Color space type. |
+| [colorSpaceManager.ColorSpace](arkts-arkgraphics2d-colorspacemanager-colorspace-e.md) | Color space type. |
 
 **Error codes:**
 
@@ -94,7 +94,7 @@ Obtains the white point value of the color space. The chromaticity coordinates [
 
 | Type | Description |
 | --- | --- |
-| collections.Array&lt;number&gt; | Coordinates [x, y] of the white point. |
+| [collections.Array](../../apis-arkts/arkts-apis/arkts-arkts-collections-array-c.md)&lt;number&gt; | Coordinates [x, y] of the white point. |
 
 **Error codes:**
 

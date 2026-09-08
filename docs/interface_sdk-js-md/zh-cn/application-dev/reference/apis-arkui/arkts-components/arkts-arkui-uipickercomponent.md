@@ -777,6 +777,14 @@ struct UIPickerComponentExample {
 ```
 
 从API version 22开始，该示例实现了一个时间选择器，功能包含设置切换是否循环滚动、切换是否显示秒数、切换是否使用24小时制、切换是否显示前导0，还可按照当前系统语言显示对应语言的内容，并根据语言习惯调整各列的显示顺序。
+> 说明：
+> 
+> 该示例中，时间选择器的各列内容根据系统语言显示对应语言的内容，例如：英文系统显示AM/PM，中文系统显示上午/下午。
+> 
+> 该示例中，时间选择器的各列根据系统语言调整显示顺序，例如：英文系统显示时/分/秒/AMPM，中文系统显示上下午/时/分/秒。
+
+为实现“上午/下午”随系统语言切换，需要在工程的resource目录下添加对应语言的翻译，例如：
+中文（默认）：在resource目录下创建base目录，在base目录下创建element目录，在element目录添加string.json文件（若文件已存在，请在文件中追加以下"name"-"value"键值对，请勿直接覆盖原文件）。文件内容如下：
 
 ```TypeScript
 {
@@ -840,6 +848,7 @@ struct UIPickerComponentExample {
 ```
 
 其他语言依此类推。
+示例代码如下：
 
 ```TypeScript
 // xxx.ets
@@ -1238,6 +1247,7 @@ struct TimeUIPickerComponentExample {
 ```
 
 该示例通过[itemHeight](#itemheight)设置UIPickerComponent容器的选项高度。
+从API版本26.0.0开始，新增[itemHeight](#itemheight)属性。
 
 ```TypeScript
 // xxx.ets
@@ -1296,6 +1306,7 @@ struct UIPickerComponentItemHeightExample {
 ```
 
 该示例通过[displayedItemCount](arkts-arkui-uipickercomponent-attribute.md#displayeditemcount)设置UIPickerComponent容器的可见选项数量。
+从API版本26.0.0开始，新增[displayedItemCount](arkts-arkui-uipickercomponent-attribute.md#displayeditemcount)属性。
 
 ```TypeScript
 // xxx.ets

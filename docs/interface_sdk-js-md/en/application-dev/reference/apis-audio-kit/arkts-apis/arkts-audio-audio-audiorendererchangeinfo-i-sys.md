@@ -36,7 +36,7 @@ readonly rendererState: AudioState
 
 Audio state.
 
-**Type:** AudioState
+**Type:** [AudioState](arkts-audio-audio-audiostate-e.md)
 
 **Since:** 9
 

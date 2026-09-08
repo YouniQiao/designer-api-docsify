@@ -148,7 +148,7 @@ sources: Array<SourceType>
 
 输入设备的输入能力。包括键盘、鼠标、触摸屏、轨迹球、触控板、操纵杆等。
 
-**类型：** Array&lt;SourceType&gt;
+**类型：** Array&lt;[SourceType](arkts-input-inputdevice-sourcetype-t.md)&gt;
 
 **起始版本：** 8
 

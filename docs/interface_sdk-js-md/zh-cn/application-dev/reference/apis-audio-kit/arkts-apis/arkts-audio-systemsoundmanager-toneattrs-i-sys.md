@@ -110,10 +110,6 @@ getFileName(): string
 toneAttrs.getFileName();
 ```
 
-```TypeScript
-toneHapticsAttrs.getFileName();
-```
-
 ## getMediaType
 
 ```TypeScript
@@ -132,7 +128,7 @@ getMediaType():MediaType
 
 | 类型 | 说明 |
 | --- | --- |
-| MediaType | 媒体类型，如果应用未调用过setMediaType设置mediatype，则此函数返回的默认值为AUDIO。 |
+| [MediaType](arkts-audio-systemsoundmanager-mediatype-e-sys.md) | 媒体类型，如果应用未调用过setMediaType设置mediatype，则此函数返回的默认值为AUDIO。 |
 
 **错误码：**
 
@@ -178,10 +174,6 @@ getTitle(): string
 toneAttrs.getTitle();
 ```
 
-```TypeScript
-toneHapticsAttrs.getTitle();
-```
-
 ## getUri
 
 ```TypeScript
@@ -214,10 +206,6 @@ getUri(): string
 
 ```TypeScript
 toneAttrs.getUri();
-```
-
-```TypeScript
-toneHapticsAttrs.getUri();
 ```
 
 ## setCategory
@@ -308,7 +296,7 @@ setMediaType(type:MediaType):void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | MediaType | 是 | 媒体类型。 |
+| type | [MediaType](arkts-audio-systemsoundmanager-mediatype-e-sys.md) | 是 | 媒体类型。 |
 
 **错误码：**
 

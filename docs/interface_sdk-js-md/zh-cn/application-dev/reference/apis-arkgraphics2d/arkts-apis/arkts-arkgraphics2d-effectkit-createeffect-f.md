@@ -26,13 +26,13 @@ function createEffect(source: image.PixelMap): Filter
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| source | image.PixelMap | 是 | image模块创建的PixelMap实例。可通过图片解码或直接创建获得，具体可见[Image Kit简介](../../../media/image/image-overview.md)。 |
+| source | [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | 是 | image模块创建的PixelMap实例。可通过图片解码或直接创建获得，具体可见[Image Kit简介](../../../media/image/image-overview.md)。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Filter | 返回一个未添加任何效果的Filter实例，失败时返回null。 |
+| [Filter](arkts-arkgraphics2d-effectkit-filter-i.md) | 返回一个未添加任何效果的Filter实例，失败时返回null。 |
 
 **示例**
 

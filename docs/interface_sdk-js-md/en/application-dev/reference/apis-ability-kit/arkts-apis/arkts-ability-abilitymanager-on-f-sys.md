@@ -27,7 +27,7 @@ Registers an observer to listen for ability start or exit events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'abilityForegroundState' | Yes | Event type. It is fixed at **'abilityForegroundState'**. |
-| observer | AbilityForegroundStateObserver | Yes | Observer used to listen for ability start or exit events. |
+| observer | [AbilityForegroundStateObserver](arkts-ability-abilitymanager-abilityforegroundstateobserver-t-sys.md) | Yes | Observer used to listen for ability start or exit events. |
 
 **Error codes:**
 

@@ -123,7 +123,7 @@ fontStyle(value: FontStyle)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | FontStyle | 是 | 字体样式，例如斜体的字体样式。默认值：FontStyle.Normal |
+| value | [FontStyle](../arkts-apis/arkts-arkui-fontstyle-e.md) | 是 | 字体样式，例如斜体的字体样式。默认值：FontStyle.Normal |
 
 ## fontWeight
 
@@ -145,7 +145,7 @@ fontWeight(value: number | FontWeight | ResourceStr)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number \| FontWeight \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | 是 | 文本的字体粗细，number类型取值范围为[100, 900]，取值间隔为100，取值越大，字体越粗。number类型取值范围外的默认值为400。[ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)类型仅支持number类型取值的字符串形式，例如"400"，以及"bold"、"bolder"、"lighter"、"regular"、"medium"，分别对应FontWeight中相应的枚举值。默认值：FontWeight.Normal 从API version 20开始，支持Resource类型。<br>**适用版本：** 20 |
+| value | number \| [FontWeight](../arkts-apis/arkts-arkui-fontweight-e.md) \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | 是 | 文本的字体粗细，number类型取值范围为[100, 900]，取值间隔为100，取值越大，字体越粗。number类型取值范围外的默认值为400。[ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)类型仅支持number类型取值的字符串形式，例如"400"，以及"bold"、"bolder"、"lighter"、"regular"、"medium"，分别对应FontWeight中相应的枚举值。默认值：FontWeight.Normal 从API version 20开始，支持Resource类型。<br>**适用版本：** 20 |
 
 ## format
 

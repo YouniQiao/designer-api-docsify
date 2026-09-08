@@ -60,20 +60,6 @@ Moves a file. This API uses a promise to return the result.
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let srcPath = pathDir + "/source.txt";
-let destPath = pathDir + "/dest.txt";
-fileIo.moveFile(srcPath, destPath, 0).then(() => {
-  console.info(`Succeeded in moving file.`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to move file. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
 
 ## moveFile
 
@@ -122,22 +108,6 @@ Moves a file and forcibly overwrites the file with the same name in the destinat
 | 13900033 | Too many symbolic links encountered |
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let srcPath = pathDir + "/source.txt";
-let destPath = pathDir + "/dest.txt";
-fileIo.moveFile(srcPath, destPath, (err: BusinessError) => {
-  if (err) {
-    console.error(`Failed to move file. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info(`Succeeded in moving file.`);
-  }
-});
-```
 
 
 ## moveFile
@@ -188,19 +158,3 @@ Moves a file with the specified mode. This API uses an asynchronous callback to 
 | 13900033 | Too many symbolic links encountered |
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let srcPath = pathDir + "/source.txt";
-let destPath = pathDir + "/dest.txt";
-fileIo.moveFile(srcPath, destPath, 0, (err: BusinessError) => {
-  if (err) {
-    console.error(`Failed to move file. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info(`Succeeded in moving file.`);
-  }
-});
-```

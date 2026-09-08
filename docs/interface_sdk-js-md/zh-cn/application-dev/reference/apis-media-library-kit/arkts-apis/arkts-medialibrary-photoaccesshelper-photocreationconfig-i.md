@@ -36,7 +36,7 @@ photoType: PhotoType
 
 创建的文件类型[PhotoType](arkts-medialibrary-photoaccesshelper-phototype-e.md)，IMAGE或者VIDEO。
 
-**类型：** PhotoType
+**类型：** [PhotoType](arkts-medialibrary-photoaccesshelper-phototype-e.md)
 
 **起始版本：** 12
 
@@ -52,7 +52,7 @@ subtype?: PhotoSubtype
 
 图片或者视频的文件子类型[PhotoSubtype](arkts-medialibrary-photoaccesshelper-photosubtype-e.md)，不传入时默认为DEFAULT。
 
-**类型：** PhotoSubtype
+**类型：** [PhotoSubtype](arkts-medialibrary-photoaccesshelper-photosubtype-e.md)
 
 **起始版本：** 12
 

@@ -34,7 +34,7 @@ Gets zoom center point.
 
 | 类型 | 说明 |
 | --- | --- |
-| Point | The current zoom center point. |
+| [Point](arkts-camera-camera-point-i.md) | The current zoom center point. |
 
 **错误码：**
 
@@ -98,7 +98,7 @@ Sets zoom center point.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| point | Point | 是 | Target zoom center point. |
+| point | [Point](arkts-camera-camera-point-i.md) | 是 | Target zoom center point. |
 
 **错误码：**
 

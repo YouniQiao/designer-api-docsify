@@ -38,7 +38,7 @@ If the **addSigner** API is not called and only the certificate is added, the ge
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| cert | X509Cert | Yes | X.509 certificate to add. |
+| cert | [X509Cert](arkts-devicecertificate-cert-x509cert-i.md) | Yes | X.509 certificate to add. |
 
 **Error codes:**
 
@@ -244,7 +244,7 @@ Adds signer information to the CMS whose content type is **SIGNED_DATA**.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| cert | X509Cert | Yes | X.509 certificate. |
+| cert | [X509Cert](arkts-devicecertificate-cert-x509cert-i.md) | Yes | X.509 certificate. |
 | keyInfo | [PrivateKeyInfo](arkts-devicecertificate-cert-privatekeyinfo-i.md) | Yes | Private key information. |
 | config | [CmsSignerConfig](arkts-devicecertificate-cert-cmssignerconfig-i.md) | Yes | Signer configuration. |
 

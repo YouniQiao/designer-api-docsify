@@ -39,7 +39,7 @@ orientation?: Orientation
 
 图像方向。默认值为TOP_LEFT。
 
-**类型：** Orientation
+**类型：** [Orientation](arkts-image-image-orientation-e.md)
 
 **起始版本：** 26.0.0
 

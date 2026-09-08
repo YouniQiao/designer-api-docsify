@@ -65,8 +65,8 @@ createPanel(ctx: BaseContext, info: PanelInfo, callback: AsyncCallback<Panel>): 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | ctx | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | 是 | 当前输入法应用上下文信息。 |
-| info | PanelInfo | 是 | 输入法面板信息。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Panel&gt; | 是 | 回调函数。当输入法面板创建成功，err为undefined，data为获取到的Panel对象;否则为错误对象。 |
+| info | [PanelInfo](arkts-ime-inputmethodengine-panelinfo-i.md) | 是 | 输入法面板信息。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Panel](arkts-ime-inputmethodengine-panel-i.md)&gt; | 是 | 回调函数。当输入法面板创建成功，err为undefined，data为获取到的Panel对象;否则为错误对象。 |
 
 **错误码：**
 
@@ -143,13 +143,13 @@ createPanel(ctx: BaseContext, info: PanelInfo): Promise<Panel>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | ctx | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | 是 | 当前输入法应用上下文信息。 |
-| info | PanelInfo | 是 | 输入法面板信息。 |
+| info | [PanelInfo](arkts-ime-inputmethodengine-panelinfo-i.md) | 是 | 输入法面板信息。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Panel&gt; | Promise对象，返回Panel对象。 |
+| Promise&lt;[Panel](arkts-ime-inputmethodengine-panel-i.md)&gt; | Promise对象，返回Panel对象。 |
 
 **错误码：**
 
@@ -205,7 +205,7 @@ destroyPanel(panel: Panel, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| panel | Panel | 是 | 要销毁的面板对象。 |
+| panel | [Panel](arkts-ime-inputmethodengine-panel-i.md) | 是 | 要销毁的面板对象。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当输入法面板销毁成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
@@ -266,7 +266,7 @@ destroyPanel(panel: Panel): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| panel | Panel | 是 | 要销毁的面板对象。 |
+| panel | [Panel](arkts-ime-inputmethodengine-panel-i.md) | 是 | 要销毁的面板对象。 |
 
 **返回值：**
 
@@ -552,7 +552,7 @@ off(type: 'privateCommand', callback?: Callback<Record<string, CommandDataType>>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'privateCommand' | 是 | 设置监听类型，固定取值为'privateCommand'。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, CommandDataType&gt;&gt; | 否 | 取消订阅的回调函数。参数不填写时，取消订阅type对应的所有回调事件。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, [CommandDataType](arkts-ime-inputmethodengine-commanddatatype-t.md)&gt;&gt; | 否 | 取消订阅的回调函数。参数不填写时，取消订阅type对应的所有回调事件。 |
 
 **错误码：**
 
@@ -837,7 +837,7 @@ on(type: 'privateCommand', callback: Callback<Record<string, CommandDataType>>):
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'privateCommand' | 是 | 设置监听类型，固定取值为'privateCommand'。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, CommandDataType&gt;&gt; | 是 | 回调函数，返回向输入法应用发送的私有数据。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, [CommandDataType](arkts-ime-inputmethodengine-commanddatatype-t.md)&gt;&gt; | 是 | 回调函数，返回向输入法应用发送的私有数据。 |
 
 **错误码：**
 

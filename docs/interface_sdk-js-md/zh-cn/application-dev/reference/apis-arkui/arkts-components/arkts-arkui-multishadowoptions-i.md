@@ -19,7 +19,7 @@ offsetX?: number | Resource
 
 X轴偏移量。单位为：vp。默认值：5。
 
-**类型：** number \| Resource
+**类型：** number \| [Resource](../arkts-apis/arkts-arkui-resource-t.md)
 
 **默认值：** 5
 
@@ -41,7 +41,7 @@ offsetY?: number | Resource
 
 Y轴偏移量。单位为：vp。默认值：5。
 
-**类型：** number \| Resource
+**类型：** number \| [Resource](../arkts-apis/arkts-arkui-resource-t.md)
 
 **默认值：** 5
 
@@ -63,7 +63,7 @@ radius?: number | Resource
 
 投影模糊半径。API version 10及以前，5；API version 11及以后，单位为：vp。取值约束：(0, +∞)。默认值：20。设置小于等于0的值时，按默认值显示。
 
-**类型：** number \| Resource
+**类型：** number \| [Resource](../arkts-apis/arkts-arkui-resource-t.md)
 
 **默认值：** 5 [since 10 - 10] @default 20 [since 11]
 

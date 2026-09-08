@@ -28,7 +28,7 @@ Check permissions for the path.
 | --- | --- | --- | --- |
 | tokenID | number | Yes | Token ID of the application. |
 | policies | Array&lt;[PathPolicyInfo](arkts-corefile-fileshare-pathpolicyinfo-i.md)&gt; | Yes | Policy information to check on paths. |
-| policyType | PolicyType | Yes | Persistent or temporary type. |
+| policyType | [PolicyType](arkts-corefile-fileshare-policytype-e.md) | Yes | Persistent or temporary type. |
 
 **Return value:**
 

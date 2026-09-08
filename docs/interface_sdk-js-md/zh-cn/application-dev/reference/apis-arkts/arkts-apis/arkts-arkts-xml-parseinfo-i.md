@@ -18,7 +18,7 @@ import { xml } from '@kit.ArkTS';
 getAttributeCount(): number
 ```
 
-ArkTS-Sta: getAttributeCount(): number
+ArkTS-Sta: getAttributeCount(): int
 
 当前开始标记的属性数量，用于遍历和处理XML属性。
 
@@ -60,7 +60,7 @@ console.info(str);
 getColumnNumber(): number
 ```
 
-ArkTS-Sta: getColumnNumber(): number
+ArkTS-Sta: getColumnNumber(): int
 
 获取当前列号，从1开始计数。
 
@@ -102,7 +102,7 @@ console.info(str);
 getDepth(): number
 ```
 
-ArkTS-Sta: getDepth(): number
+ArkTS-Sta: getDepth(): int
 
 获取元素的当前深度。
 
@@ -152,7 +152,7 @@ console.info(str);
 getLineNumber(): number
 ```
 
-ArkTS-Sta: getLineNumber(): number
+ArkTS-Sta: getLineNumber(): int
 
 获取当前行号，从1开始。
 

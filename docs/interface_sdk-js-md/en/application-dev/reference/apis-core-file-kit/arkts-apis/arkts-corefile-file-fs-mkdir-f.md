@@ -47,23 +47,10 @@ Creates a directory. This API uses a promise to return the result.
 | 13900020 | Invalid argument |
 | 13900025 | No space left on device |
 | 13900028 | Too many links |
-| 13900030 | File name too number |
+| 13900030 | File name too long |
 | 13900033 | Too many symbolic links encountered |
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let dirPath = pathDir + "/testDir";
-fileIo.mkdir(dirPath).then(() => {
-  console.info(`Succeeded in making directory.`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to make directory. Code: ${err.code}, message: ${err.message}`);
-});
-```
 
 
 ## mkdir
@@ -108,23 +95,10 @@ Creates a directory. This API uses a promise to return the result. The value **t
 | 13900020 | Invalid argument |
 | 13900025 | No space left on device |
 | 13900028 | Too many links |
-| 13900030 | File name too number |
+| 13900030 | File name too long |
 | 13900033 | Too many symbolic links encountered |
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let dirPath = pathDir + "/testDir1/testDir2/testDir3";
-fileIo.mkdir(dirPath, true).then(() => {
-  console.info(`Succeeded in making directory.`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to make directory. Code: ${err.code}, message: ${err.message}`);
-});
-```
 
 
 ## mkdir
@@ -163,25 +137,10 @@ Creates a directory. This API uses an asynchronous callback to return the result
 | 13900020 | Invalid argument |
 | 13900025 | No space left on device |
 | 13900028 | Too many links |
-| 13900030 | File name too number |
+| 13900030 | File name too long |
 | 13900033 | Too many symbolic links encountered |
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let dirPath = pathDir + "/testDir";
-fileIo.mkdir(dirPath, (err: BusinessError) => {
-  if (err) {
-    console.error(`Failed to make directory. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info(`Succeeded in making directory.`);
-  }
-});
-```
 
 
 ## mkdir
@@ -221,22 +180,7 @@ Creates a directory. This API uses an asynchronous callback to return the result
 | 13900020 | Invalid argument |
 | 13900025 | No space left on device |
 | 13900028 | Too many links |
-| 13900030 | File name too number |
+| 13900030 | File name too long |
 | 13900033 | Too many symbolic links encountered |
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let dirPath = pathDir + "/testDir1/testDir2/testDir3";
-fileIo.mkdir(dirPath, true, (err: BusinessError) => {
-  if (err) {
-    console.error(`Failed to make directory. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info(`Succeeded in making directory.`);
-  }
-});
-```

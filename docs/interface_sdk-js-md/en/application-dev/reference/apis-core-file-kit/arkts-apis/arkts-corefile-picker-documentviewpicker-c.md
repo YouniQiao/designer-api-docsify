@@ -32,14 +32,6 @@ A constructor used to create a **DocumentViewPicker** instance. This constructor
 let documentPicker = new picker.DocumentViewPicker(); // Construction without parameter is not recommended. There is a possibility that the DocumentViewPicker instance fails to start.
 ```
 
-```TypeScript
-let audioPicker = new picker.AudioViewPicker(); // Construction without parameter is not recommended. There is a possibility that the AudioViewPicker instance fails to start.
-```
-
-```TypeScript
-let photoPicker = new picker.PhotoViewPicker(); // Construction without parameter is not recommended. There is a possibility that the PhotoViewPicker instance fails to start.
-```
-
 ## constructor
 
 ```TypeScript
@@ -88,58 +80,6 @@ struct Index {
 }
 ```
 
-```TypeScript
-import { common } from '@kit.AbilityKit';
-import  { picker } from '@kit.CoreFileKit';
-@Entry
-@Component
-struct Index {
-  @State message: string = 'hello World';
-
-  build() {
-    Row() {
-      Column() {
-        Text(this.message)
-          .fontSize(50)
-          .fontWeight(FontWeight.Bold)
-          .onClick(()=>{
-            let context = this.getUIContext().getHostContext() as common.UIAbilityContext; // Ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
-            let audioPicker = new picker.AudioViewPicker(context);
-          })
-      }
-      .width('100%')
-    }
-    .height('100%')
-  }
-}
-```
-
-```TypeScript
-import { common } from '@kit.AbilityKit';
-import  { picker } from '@kit.CoreFileKit';
-@Entry
-@Component
-struct Index {
-  @State message: string = 'hello World';
-
-  build() {
-    Row() {
-      Column() {
-        Text(this.message)
-          .fontSize(50)
-          .fontWeight(FontWeight.Bold)
-          .onClick(()=>{
-            let context = this.getUIContext().getHostContext() as common.UIAbilityContext; // Ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
-            let photoPicker = new picker.PhotoViewPicker(context);
-          })
-      }
-      .width('100%')
-    }
-    .height('100%')
-  }
-}
-```
-
 ## constructor
 
 ```TypeScript
@@ -161,7 +101,7 @@ A constructor used to create a **DocumentViewPicker** object in a window created
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | Yes | Application context (only **UIAbilityContext** is supported). For details about the application context of the stage model, see Context. |
-| window | window.Window | Yes | Window instance created by the application. |
+| window | [window.Window](../../apis-arkui/arkts-apis/arkts-arkui-window-window-i.md) | Yes | Window instance created by the application. |
 
 **Examples**
 
@@ -352,48 +292,6 @@ async function example12(context: common.UIAbilityContext) { // Ensure that cont
 }
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-import  { picker } from '@kit.CoreFileKit';
-async function example18(context: common.UIAbilityContext) { // Ensure that context is converted from UIAbilityContext.
-  try {
-    let audioPicker = new picker.AudioViewPicker(context);
-    audioPicker.save((err: BusinessError, audioSaveResult: Array<string>) => {
-      if (err) {
-        console.error(`AudioViewPicker.save failed with err, code is: ${err.code}, message is: ${err.message}`);
-        return;
-      }
-      console.info('AudioViewPicker.save successfully, audioSaveResult uri: ' + JSON.stringify(audioSaveResult));
-    });
-  } catch (error) {
-    let err: BusinessError = error as BusinessError;
-        console.error(`AudioViewPicker failed with err, code is: ${err.code}, message is: ${err.message}`);
-  }
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-import  { picker } from '@kit.CoreFileKit';
-async function example06(context: common.UIAbilityContext) { // Ensure that context is converted from UIAbilityContext.
-  try {
-    let photoPicker = new picker.PhotoViewPicker(context);
-    photoPicker.save((err: BusinessError, photoSaveResult: Array<string>) => {
-      if (err) {
-        console.error('PhotoViewPicker.save failed with err: ' + JSON.stringify(err));
-        return;
-      }
-      console.info('PhotoViewPicker.save successfully, photoSaveResult uri: ' + JSON.stringify(photoSaveResult));
-    });
-  } catch (error) {
-    let err: BusinessError = error as BusinessError;
-    console.error('PhotoViewPicker failed with err: ' + JSON.stringify(err));
-  }
-}
-```
-
 ## select
 
 ```TypeScript
@@ -526,27 +424,6 @@ async function example09(context: common.UIAbilityContext) { // Ensure that cont
   } catch (error) {
     let err: BusinessError = error as BusinessError;
     console.error(`DocumentViewPicker failed with err, code is: ${err.code}, message is: ${err.message}`);
-  }
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-import  { picker } from '@kit.CoreFileKit';
-async function example15(context: common.UIAbilityContext) { // Ensure that context is converted from UIAbilityContext.
-  try {
-    let audioPicker = new picker.AudioViewPicker(context);
-    audioPicker.select((err: BusinessError, audioSelectResult: Array<string>) => {
-      if (err) {
-        console.error(`AudioViewPicker.select failed with err, code is: ${err.code}, message is: ${err.message}`);
-        return;
-      }
-      console.info('AudioViewPicker.select successfully, audioSelectResult uri: ' + JSON.stringify(audioSelectResult));
-    });
-  } catch (error) {
-    let err: BusinessError = error as BusinessError;
-    console.error(`AudioViewPicker failed with err, code is: ${err.code}, message is: ${err.message}`);
   }
 }
 ```

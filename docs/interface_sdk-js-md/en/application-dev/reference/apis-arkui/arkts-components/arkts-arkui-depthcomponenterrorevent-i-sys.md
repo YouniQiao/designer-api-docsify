@@ -61,7 +61,7 @@ error?: BusinessError<void>
 
 Business Error.
 
-**Type:** BusinessError&lt;void&gt;
+**Type:** [BusinessError](arkts-arkui-businesserror-t.md)&lt;void&gt;
 
 **Since:** 26.0.0
 

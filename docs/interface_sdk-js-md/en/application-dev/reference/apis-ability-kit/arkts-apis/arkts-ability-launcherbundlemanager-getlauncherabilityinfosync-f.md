@@ -31,7 +31,7 @@ Obtains the [launcher ability information](arkts-ability-launcherabilityinfo-i.m
 
 | Type | Description |
 | --- | --- |
-| Array&lt;LauncherAbilityInfo&gt; | Array of the [LauncherAbilityInfo]{ |
+| Array&lt;[LauncherAbilityInfo](arkts-ability-launcherbundlemanager-launcherabilityinfo-t.md)&gt; | Array of the [LauncherAbilityInfo]{ |
 
 **Error codes:**
 

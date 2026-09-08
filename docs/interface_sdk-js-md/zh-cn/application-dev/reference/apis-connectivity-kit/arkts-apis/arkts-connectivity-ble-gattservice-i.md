@@ -20,7 +20,7 @@ characteristics: Array<BLECharacteristic>
 
 当前服务包含的特征值列表。
 
-**类型：** Array&lt;BLECharacteristic&gt;
+**类型：** Array&lt;[BLECharacteristic](arkts-connectivity-ble-blecharacteristic-i.md)&gt;
 
 **起始版本：** 10
 
@@ -38,7 +38,7 @@ includeServices?: Array<GattService>
 
 当前服务依赖的其它服务。若不设置此参数，则默认不依赖其它服务。
 
-**类型：** Array&lt;GattService&gt;
+**类型：** Array&lt;[GattService](arkts-connectivity-ble-gattservice-i.md)&gt;
 
 **起始版本：** 10
 

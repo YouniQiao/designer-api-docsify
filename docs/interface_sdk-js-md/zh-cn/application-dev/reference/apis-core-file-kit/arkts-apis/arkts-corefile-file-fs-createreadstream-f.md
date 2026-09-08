@@ -46,25 +46,8 @@ declare function createReadStream(path: string, options?: ReadStreamOptions): Re
 | 13900020 | Invalid argument |
 | 13900022 | Too many open files |
 | 13900024 | File too large |
-| 13900030 | File name too number |
+| 13900030 | File name too long |
 | 13900038 | Value too large for defined data type |
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
 | 13900044 | Network is unreachable |
-
-**示例**
-
-```TypeScript
-// 创建文件可读流
-const rs = fileIo.createReadStream(`${pathDir}/read.txt`);
-// 创建文件可写流
-const ws = fileIo.createWriteStream(`${pathDir}/write.txt`);
-// 暂停模式拷贝文件
-rs.on('readable', () => {
-  const data = rs.read();
-  if (!data) {
-    return;
-  }
-  ws.write(data);
-});
-```

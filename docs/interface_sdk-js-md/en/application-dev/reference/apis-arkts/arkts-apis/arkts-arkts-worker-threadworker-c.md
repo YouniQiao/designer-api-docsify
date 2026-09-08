@@ -58,19 +58,6 @@ workerInstance.addEventListener("alert", () => {
 workerInstance.dispatchEvent({type: "alert", timeStamp: 0}); // timeStamp is not supported yet.
 ```
 
-```TypeScript
-// worker.ets
-import { ErrorEvent, MessageEvents, ThreadWorkerGlobalScope, worker } from '@kit.ArkTS';
-
-const workerPort: ThreadWorkerGlobalScope = worker.workerPort;
-
-workerPort.onmessage = (event: MessageEvents) => {
-  workerPort.addEventListener("alert", () => {
-    console.info("alert listener callback");
-  })
-};
-```
-
 ## constructor
 
 ```TypeScript
@@ -109,16 +96,6 @@ import { worker } from '@kit.ArkTS';
 
 // URL of the Worker file: "entry/src/main/ets/workers/worker.ets"
 const workerInstance = new worker.ThreadWorker('entry/ets/workers/worker.ets', {name: "WorkerThread"});
-```
-
-The following uses the Index.ets file in the entry module of the stage model as an example to describe how to load the worker file. For details about how to use the library to load the Worker thread file, see [Precautions for File URLs](../../../arkts-utils/worker-introduction.md#precautions-for-file-urls).
-
-```TypeScript
-// Index.ets
-import { worker } from '@kit.ArkTS';
-
-// URL of the Worker file: "entry/src/main/ets/workers/worker.ets"
-const workerInstance = new worker.Worker('entry/ets/workers/worker.ets', {name: "WorkerThread"});
 ```
 
 ## dispatchEvent
@@ -168,62 +145,6 @@ workerInstance.addEventListener("alert", () => {
 let result: Boolean = workerInstance.dispatchEvent({type: "alert", timeStamp: 0}); // timeStamp is not supported yet.
 
 console.info("dispatchEvent result is: ", result);
-```
-
-```TypeScript
-// worker.ets
-import { ErrorEvent, MessageEvents, ThreadWorkerGlobalScope, worker } from '@kit.ArkTS';
-
-const workerPort: ThreadWorkerGlobalScope = worker.workerPort;
-
-workerPort.onmessage = (event: MessageEvents) => {
-  workerPort.addEventListener("alert", () => {
-    console.info("alert listener callback");
-  });
-
-  workerPort.dispatchEvent({type: "alert", timeStamp: 0}); // timeStamp is not supported yet.
-};
-```
-
-```TypeScript
-// worker.ets
-import { DedicatedWorkerGlobalScope, ErrorEvent, MessageEvents, worker } from '@kit.ArkTS';
-
-const workerPort: DedicatedWorkerGlobalScope = worker.parentPort;
-
-workerPort.addEventListener("alert_add", ()=>{
-  console.info("alert listener callback");
-})
-
-workerPort.dispatchEvent({type: 'alert_add', timeStamp: 0}); // timeStamp is not supported yet.
-```
-
-The dispatchEvent API can be used together with the addEventListener API. The sample code is as follows:
-
-```TypeScript
-// Index.ets
-import { worker } from '@kit.ArkTS';
-
-const workerInstance = new worker.Worker("entry/ets/workers/worker.ets");
-workerInstance.postMessage("hello world");
-workerInstance.onmessage = (): void => {
-    console.info("receive data from worker.ets");
-}
-```
-
-```TypeScript
-// worker.ets
-import { DedicatedWorkerGlobalScope, ErrorEvent, MessageEvents, worker } from '@kit.ArkTS';
-
-const workerPort: DedicatedWorkerGlobalScope = worker.parentPort;
-
-workerPort.addEventListener("alert", ()=>{
-  console.info("alert listener callback");
-})
-
-workerPort.onmessage = (event: MessageEvents) => {
-  workerPort.dispatchEvent({type:"alert", timeStamp:0}); // timeStamp is not supported yet.
-}
 ```
 
 ## off
@@ -609,16 +530,6 @@ struct Index {
 }
 ```
 
-```TypeScript
-// Index.ets
-import { worker } from '@kit.ArkTS';
-
-const workerInstance = new worker.Worker("entry/ets/workers/worker.ets");
-
-let buffer = new ArrayBuffer(8);
-workerInstance.postMessage(buffer, [buffer]);
-```
-
 ## postMessage
 
 ```TypeScript
@@ -663,18 +574,6 @@ workerInstance.postMessage(buffer, [buffer]);
 
 // When the options parameter is not provided, it defaults to undefined, and the buffer is sent to the Worker thread by copying the data.
 workerInstance.postMessage(buffer);
-```
-
-```TypeScript
-// Index.ets
-import { worker } from '@kit.ArkTS';
-
-const workerInstance = new worker.Worker("entry/ets/workers/worker.ets");
-
-workerInstance.postMessage("hello world");
-
-let buffer = new ArrayBuffer(8);
-workerInstance.postMessage(buffer, [buffer]);
 ```
 
 ## postMessageWithSharedSendable
@@ -745,36 +644,6 @@ const workerPort: ThreadWorkerGlobalScope = worker.workerPort;
 workerPort.onmessage = (e: MessageEvents) => {
   let obj: SendableObject = e.data;
   console.info("sendable obj is: " + obj.a);
-}
-```
-
-```TypeScript
-// The worker file path is entry/src/main/ets/workers/Worker.ets.
-// Worker.ets
-// Create a SendableObject instance and pass it to the host thread through the Worker thread.
-
-import { SendableObject } from '../pages/sendable';
-import { worker, ThreadWorkerGlobalScope, MessageEvents, ErrorEvent } from '@kit.ArkTS';
-
-const workerPort: ThreadWorkerGlobalScope = worker.workerPort;
-workerPort.onmessage = (e: MessageEvents) => {
-  let object: SendableObject = new SendableObject();
-  workerPort.postMessageWithSharedSendable(object);
-}
-```
-
-```TypeScript
-// Index.ets
-// Receive the data passed from the Worker thread to the host thread and access its properties.
-
-import { worker, MessageEvents } from '@kit.ArkTS';
-import { SendableObject } from './sendable';
-
-const workerInstance = new worker.ThreadWorker("entry/ets/workers/Worker.ets");
-workerInstance.postMessage(1);
-workerInstance.onmessage = (e: MessageEvents) => {
-  let obj: SendableObject = e.data;
-  console.info("sendable index obj is: " + obj.a);
 }
 ```
 
@@ -885,34 +754,6 @@ workerInstance.addEventListener("alert", () => {
 workerInstance.removeAllListener();
 ```
 
-```TypeScript
-// worker.ets
-import { ErrorEvent, MessageEvents, ThreadWorkerGlobalScope, worker } from '@kit.ArkTS';
-
-const workerPort: ThreadWorkerGlobalScope = worker.workerPort;
-
-workerPort.onmessage = (event: MessageEvents) => {
-  workerPort.addEventListener("alert", () => {
-    console.info("alert listener callback");
-  });
-
-  workerPort.removeAllListener();
-};
-```
-
-```TypeScript
-// worker.ets
-import { DedicatedWorkerGlobalScope, ErrorEvent, MessageEvents, worker } from '@kit.ArkTS';
-
-const workerPort: DedicatedWorkerGlobalScope = worker.parentPort;
-
-workerPort.addEventListener("alert_add", ()=>{
-  console.info("alert listener callback");
-})
-
-workerPort.removeAllListener();
-```
-
 ## removeEventListener
 
 ```TypeScript
@@ -957,21 +798,6 @@ workerInstance.dispatchEvent({type: "alert", timeStamp: 0}); // timeStamp is not
 workerInstance.removeEventListener("alert");
 ```
 
-```TypeScript
-// worker.ets
-import { ErrorEvent, MessageEvents, ThreadWorkerGlobalScope, worker } from '@kit.ArkTS';
-
-const workerPort: ThreadWorkerGlobalScope = worker.workerPort;
-
-workerPort.onmessage = (event: MessageEvents) => {
-  workerPort.addEventListener("alert", () => {
-    console.info("alert listener callback");
-  });
-
-  workerPort.removeEventListener("alert");
-};
-```
-
 ## terminate
 
 ```TypeScript
@@ -999,14 +825,6 @@ Terminates the Worker thread to stop it from receiving messages.
 import { worker } from '@kit.ArkTS';
 
 const workerInstance = new worker.ThreadWorker("entry/ets/workers/worker.ets");
-workerInstance.terminate();
-```
-
-```TypeScript
-// Index.ets
-import { worker } from '@kit.ArkTS';
-
-const workerInstance = new worker.Worker("entry/ets/workers/worker.ets");
 workerInstance.terminate();
 ```
 

@@ -34,10 +34,6 @@ getSchemeFilter(): ProxySchemeFilter
 | --- | --- |
 | [ProxySchemeFilter](arkts-arkweb-webview-proxyschemefilter-e.md) | 代理规则中的ProxySchemeFilter信息。 |
 
-**示例**
-
-完整示例代码参考[removeProxyOverride](./arkts-apis-webview-ProxyController.md#removeproxyoverride)。
-
 ## getUrl
 
 ```TypeScript
@@ -57,85 +53,3 @@ getUrl(): string
 | 类型 | 说明 |
 | --- | --- |
 | string | 代理规则中代理的URL信息。 |
-
-**示例**
-
-完整示例代码参考[removeProxyOverride](./arkts-apis-webview-ProxyController.md#removeproxyoverride)。
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-  delegate: webview.WebDownloadDelegate = new webview.WebDownloadDelegate();
-
-  build() {
-    Column() {
-      Button('setDownloadDelegate')
-        .onClick(() => {
-          try {
-            this.delegate.onBeforeDownload((webDownloadItem: webview.WebDownloadItem) => {
-              console.info("will start a download, url:" + webDownloadItem.getUrl());
-              // 传入一个下载路径，并开始下载。
-              webDownloadItem.start("/data/storage/el2/base/cache/web/" + webDownloadItem.getSuggestedFileName());
-            })
-            this.delegate.onDownloadUpdated((webDownloadItem: webview.WebDownloadItem) => {
-              console.info("download update percent complete: " + webDownloadItem.getPercentComplete());
-            })
-            this.delegate.onDownloadFailed((webDownloadItem: webview.WebDownloadItem) => {
-              console.error("download failed guid: " + webDownloadItem.getGuid());
-            })
-            this.delegate.onDownloadFinish((webDownloadItem: webview.WebDownloadItem) => {
-              console.info("download finish guid: " + webDownloadItem.getGuid());
-            })
-            this.controller.setDownloadDelegate(this.delegate);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Button('startDownload')
-        .onClick(() => {
-          try {
-            this.controller.startDownload('https://www.example.com');
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-完整示例代码参考constructor。
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('getUrl')
-        .onClick(() => {
-          try {
-            let url = this.controller.getUrl();
-            console.info("url: " + url);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```

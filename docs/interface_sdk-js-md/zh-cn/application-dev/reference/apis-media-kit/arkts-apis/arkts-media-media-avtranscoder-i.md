@@ -36,7 +36,7 @@ addWatermark(watermark: image.PixelMap, config: WatermarkConfiguration): Promise
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| watermark | image.PixelMap | 是 | : 水印图像。 |
+| watermark | [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | 是 | : 水印图像。 |
 | config | [WatermarkConfiguration](arkts-media-media-watermarkconfiguration-i.md) | 是 | : 水印配置参数。 |
 
 **返回值：**
@@ -53,77 +53,6 @@ addWatermark(watermark: image.PixelMap, config: WatermarkConfiguration): Promise
 | [5400103](../errorcode-media.md#5400103-出现io错误) | IO error. Return by promise. |
 | [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by promise. |
 | [5400108](../errorcode-media.md#5400108-参数超过取值范围) | The parameter check failed, parameter value out of range. |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { image } from '@kit.ImageKit';
-import { media } from '@kit.MediaKit';
-
-let watermark: image.PixelMap | undefined = undefined; // 通过image.createImageSource创建ImageSource对象后调用createPixelMap接口（@kit.ImageKit）获取PixelMap。水印图像不能为空。
-let watermarkConfig: media.WatermarkConfiguration = { top: 100, left: 100, width: 100, height: 100 };
-
-if (watermark) {
-    avRecorder.addWatermark(watermark, watermarkConfig).then((num: number) => {
-      console.info(`Succeeded in adding watermark, watermarkNum is ${num}`);
-    })
-    .catch((error: BusinessError) => {
-      console.error(`Failed to add watermark and catch error is: Code: ${error.code}, message: ${error.message}`);
-    });
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { image } from '@kit.ImageKit';
-import { media } from '@kit.MediaKit';
-
-async function testAddWaterMark() {
-  // 创建录屏实例。
-  let avScreenCaptureRecorder = await media.createAVScreenCaptureRecorder();
-
-  // 其余流程。
-
-  let watermark: image.PixelMap | undefined = undefined; // 可以通过获取本地资源文件并转换为PixelMap，水印图像不能为空。
-  let watermarkConfig: media.WatermarkConfiguration = { top: 100, left: 100, width: 100, height: 100 };
-
-  if (watermark && avScreenCaptureRecorder) {
-    avScreenCaptureRecorder.addWatermark(watermark, watermarkConfig).then((num: number) => {
-      console.info(`Succeeded in adding watermark, watermarkNum is ${num}`);
-    })
-    .catch((error: BusinessError) => {
-      console.error(`Failed to add watermark and catch error is: Code: ${error.code}, message: ${error.message}`);
-    });
-  }
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { media } from '@kit.MediaKit';
-import { image } from '@kit.ImageKit';
-
-async function test() {
-  // 创建转码实例。
-  let avTranscoder = await media.createAVTranscoder();
-  
-  // 配置水印参数。
-  let watermarkConfig: media.WatermarkConfiguration = {
-      // 根据实际需求配置水印参数，单位为像素（px）。
-      top: 40,
-      left: 40,
-      width: 200,
-      height: 300,
-  };
-
-  avTranscoder.addWatermark(watermarkPixelMap, watermarkConfig).then((watermarkId: number) => {
-    console.info('addWatermark success, watermarkId: ' + watermarkId);
-  }).catch((err: BusinessError) => {
-    console.error('addWatermark failed and catch error is ' + err.message);
-  });
-}
-```
 
 ## cancel
 
@@ -154,23 +83,6 @@ cancel(): Promise<void>
 | [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by promise. |
 | [5400103](../errorcode-media.md#5400103-出现io错误) | IO error. Return by promise. |
 | [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by promise. |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { media } from '@kit.MediaKit';
-
-async function test() {
-  // 创建转码实例。
-  let avTranscoder = await media.createAVTranscoder();
-  avTranscoder.cancel().then(() => {
-    console.info('cancel AVTranscoder success');
-  }).catch((err: BusinessError) => {
-    console.error('cancel AVTranscoder failed and catch error is ' + err.message);
-  });
-}
-```
 
 ## off('complete')
 
@@ -345,69 +257,6 @@ pause(): Promise<void>
 | [5400103](../errorcode-media.md#5400103-出现io错误) | IO error. Return by promise. |
 | [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by promise. |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// promise.
-videoRecorder.pause().then(() => {
-  console.info('pause videorecorder success');
-}).catch((err: BusinessError) => {
-  console.error('pause videorecorder failed and catch error is ' + err.message);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function test(){
-  let avPlayer = await media.createAVPlayer();
-  // 此处仅为示意，实际开发中需要在stateChange事件成功触发至playing状态后才能调用。
-  avPlayer.pause().then(() => {
-    console.info('Succeeded in pausing');
-  }, (err: BusinessError) => {
-    console.error(`Failed to pause. Code:${err.code},message:${err.message}`);
-  });
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-avRecorder.pause().then(() => {
-  console.info('Succeeded in pausing');
-}).catch((err: Error) => {
-  let error: BusinessError = err as BusinessError;
-  console.error(`Failed to pause AVRecorder and error is: Code: ${error.code}, message: ${error.message}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { media } from '@kit.MediaKit';
-
-async function test() {
-  // 创建转码实例。
-  let avTranscoder = await media.createAVTranscoder();
-  avTranscoder.pause().then(() => {
-    console.info('pause AVTranscoder success');
-  }).catch((err: BusinessError) => {
-    console.error('pause AVTranscoder failed and catch error is ' + err.message);
-  });
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-videoPlayer.pause().then(() => {
-  console.info('Succeeded in pausing');
-}).catch((error: BusinessError) => {
-  console.error(`video catchCallback, error:${error}`);
-});
-```
-
 ## prepare
 
 ```TypeScript
@@ -444,32 +293,6 @@ prepare(config: AVTranscoderConfig): Promise<void>
 | [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by promise. |
 | [5400106](../errorcode-media.md#5400106-不支持的规格) | Unsupported format. Returned by promise. |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { media } from '@kit.MediaKit';
-
-async function test() {
-  // 创建转码实例。
-  let avTranscoder = await media.createAVTranscoder();
-  // 配置参数以实际硬件设备支持的范围为准。
-  let avTranscoderConfig: media.AVTranscoderConfig = {
-    audioBitrate : 200000,
-    audioCodec : media.CodecMimeType.AUDIO_AAC,
-    fileFormat : media.ContainerFormatType.CFT_MPEG_4,
-    videoBitrate : 3000000,
-    videoCodec : media.CodecMimeType.VIDEO_AVC,
-  };
-
-  avTranscoder.prepare(avTranscoderConfig).then(() => {
-    console.info('prepare success');
-  }).catch((err: BusinessError) => {
-    console.error('prepare failed and catch error is ' + err.message);
-  });
-}
-```
-
 ## release
 
 ```TypeScript
@@ -498,129 +321,6 @@ release(): Promise<void>
 | --- | --- |
 | [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by promise. |
 | [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by promise. |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// promise.
-videoRecorder.release().then(() => {
-  console.info('release videorecorder success');
-}).catch((err: BusinessError) => {
-  console.error('release videorecorder failed and catch error is ' + err.message);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { media } from '@kit.MediaKit';
-
-let avImageGenerator: media.AVImageGenerator | undefined = undefined;
-
-// 释放资源。
-media.createAVImageGenerator((err: BusinessError, generator: media.AVImageGenerator) => {
-  if (generator) {
-    avImageGenerator = generator;
-    console.info(`Succeeded in creating AVImageGenerator`);
-    avImageGenerator.release().then(() => {
-      console.info(`Succeeded in releasing.`);
-    }).catch((error: BusinessError) => {
-      console.error(`Failed to release, code: ${error.code}, message: ${error.message}`);
-    });
-  } else {
-    console.error(`Failed to create AVImageGenerator, code: ${err.code}, message: ${err.message}`);
-  }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { media } from '@kit.MediaKit';
-
-async function test() {
-  // 创建AVMetadataExtractor对象。
-  let avMetadataExtractor: media.AVMetadataExtractor = await media.createAVMetadataExtractor();
-  if (avMetadataExtractor) {
-    avMetadataExtractor.release().then(() => {
-      console.info(`Succeeded in releasing.`);
-    }).catch((error: BusinessError) => {
-      console.error(`Failed to release, code: ${error.code} message: ${error.message}`);
-    });
-  }
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function test(){
-  let avPlayer = await media.createAVPlayer();
-  // 此处仅为示意，实际开发中需要在stateChange事件成功触发除released以外的状态才能调用。
-  avPlayer.release().then(() => {
-    console.info('Succeeded in releasing');
-  }, (err: BusinessError) => {
-    console.error(`Failed to release. Code:${err.code},message:${err.message}`);
-  });
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-avRecorder.release().then(() => {
-  console.info('Succeeded in releasing AVRecorder');
-}).catch((err: Error) => {
-  let error: BusinessError = err as BusinessError;
-  console.error(`Failed to release AVRecorder and error is: Code: ${error.code}, message: ${error.message}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { media } from '@kit.MediaKit';
-
-async function testRelease() {
-  // 创建录屏实例。
-  let avScreenCaptureRecorder = await media.createAVScreenCaptureRecorder();
-
-  // 其余流程。
-
-  // 调用release方法。
-  if (avScreenCaptureRecorder) {
-    avScreenCaptureRecorder.release().then(() => {
-      console.info('Succeeded in releasing avScreenCaptureRecorder');
-    }).catch((err: BusinessError) => {
-      console.error(`Failed to release avScreenCaptureRecorder. Code: ${err.code}, message: ${err.message}`);
-    });
-  }
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { media } from '@kit.MediaKit';
-
-async function test() {
-  // 创建转码实例。
-  let avTranscoder = await media.createAVTranscoder();
-  avTranscoder.release().then(() => {
-    console.info('release AVTranscoder success');
-  }).catch((err: BusinessError) => {
-    console.error('release AVTranscoder failed and catch error is ' + err.message);
-  });
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-videoPlayer.release().then(() => {
-  console.info('Succeeded in releasing');
-}).catch((error: BusinessError) => {
-  console.error(`video catchCallback, error:${error}`);
-});
-```
 
 ## resume
 
@@ -652,45 +352,6 @@ resume(): Promise<void>
 | [5400103](../errorcode-media.md#5400103-出现io错误) | IO error. Return by promise. |
 | [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by promise. |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// promise.
-videoRecorder.resume().then(() => {
-  console.info('resume videorecorder success');
-}).catch((err: BusinessError) => {
-  console.error('resume videorecorder failed and catch error is ' + err.message);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-avRecorder.resume().then(() => {
-  console.info('Succeeded in resuming AVRecorder');
-}).catch((err: Error) => {
-  let error: BusinessError = err as BusinessError;
-  console.error(`Failed to resume AVRecorder and error is: Code: ${error.code}, message: ${error.message}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { media } from '@kit.MediaKit';
-
-async function test() {
-  // 创建转码实例。
-  let avTranscoder = await media.createAVTranscoder();
-  avTranscoder.resume().then(() => {
-    console.info('resume AVTranscoder success');
-  }).catch((err: BusinessError) => {
-    console.error('resume AVTranscoder failed and catch error is ' + err.message);
-  });
-}
-```
-
 ## start
 
 ```TypeScript
@@ -720,45 +381,6 @@ start(): Promise<void>
 | [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by promise. |
 | [5400103](../errorcode-media.md#5400103-出现io错误) | IO error. Return by promise. |
 | [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by promise. |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// promise.
-videoRecorder.start().then(() => {
-  console.info('start videorecorder success');
-}).catch((err: BusinessError) => {
-  console.error('start videorecorder failed and catch error is ' + err.message);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-avRecorder.start().then(() => {
-  console.info('Succeeded in starting AVRecorder');
-}).catch((err: Error) => {
-  let error: BusinessError = err as BusinessError;
-  console.error(`Failed to start AVRecorder and error is: Code: ${error.code}, message: ${error.message}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { media } from '@kit.MediaKit';
-
-async function test() {
-  // 创建转码实例。
-  let avTranscoder = await media.createAVTranscoder();
-  avTranscoder.start().then(() => {
-    console.info('start AVTranscoder success');
-  }).catch((err: BusinessError) => {
-    console.error('start AVTranscoder failed and catch error is ' + err.message);
-  });
-}
-```
 
 ## fdDst
 

@@ -38,7 +38,7 @@ digest(callback: AsyncCallback<DataBlob>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DataBlob&gt; | 是 | 回调函数。当摘要计算成功时，err为undefined，data为获取到的摘要结果；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md)&gt; | 是 | 回调函数。当摘要计算成功时，err为undefined，data为获取到的摘要结果；否则为错误对象。 |
 
 **错误码：**
 
@@ -86,7 +86,7 @@ digest(): Promise<DataBlob>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;DataBlob&gt; | Promise对象，返回摘要计算结果。 |
+| Promise&lt;[DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md)&gt; | Promise对象，返回摘要计算结果。 |
 
 **错误码：**
 
@@ -216,7 +216,7 @@ digestSync(): DataBlob
 
 | 类型 | 说明 |
 | --- | --- |
-| DataBlob | 生成的消息摘要。 |
+| [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | 生成的消息摘要。 |
 
 **错误码：**
 
@@ -387,7 +387,7 @@ update(input: DataBlob, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| input | DataBlob | 是 | 传入的消息。 |
+| input | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | 是 | 传入的消息。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当摘要更新成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
@@ -425,7 +425,7 @@ update(input: DataBlob): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| input | DataBlob | 是 | 传入的消息。 |
+| input | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | 是 | 传入的消息。 |
 
 **返回值：**
 
@@ -466,7 +466,7 @@ updateSync(input: DataBlob): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| input | DataBlob | 是 | 传入的消息。 |
+| input | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | 是 | 传入的消息。 |
 
 **错误码：**
 

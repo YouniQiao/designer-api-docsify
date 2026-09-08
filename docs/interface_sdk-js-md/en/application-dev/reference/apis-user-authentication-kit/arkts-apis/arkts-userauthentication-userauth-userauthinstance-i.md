@@ -126,45 +126,44 @@ Unsubscribes from the user authentication result. This API is commonly used in t
 **Examples**
 
 ```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 import { userAuth } from '@kit.UserAuthenticationKit';
 
-let challenge = new Uint8Array([1, 2, 3, 4, 5, 6, 7, 8]);
-let authType = userAuth.UserAuthType.FACE;
-let authTrustLevel = userAuth.AuthTrustLevel.ATL1;
 try {
-  let auth = userAuth.getAuthInstance(challenge, authType, authTrustLevel);
-  // Subscribe to the authentication result.
-  auth.on('result', {
-    callback: (result: userAuth.AuthResultInfo) => {
-      console.info(`result: ${result.result}`);
+  const rand = cryptoFramework.createRandom();
+  const len: number = 16;
+  let randData: Uint8Array | null = null;
+  let retryCount = 0;
+  while (retryCount < 3) {
+    randData = rand?.generateRandomSync(len)?.data;
+    if (randData) {
+      break;
+    }
+    retryCount++;
+  }
+  if (!randData) {
+    return;
+  }
+  const authParam: userAuth.AuthParam = {
+    challenge: randData,
+    authType: [userAuth.UserAuthType.PIN],
+    authTrustLevel: userAuth.AuthTrustLevel.ATL3,
+  };
+  const widgetParam: userAuth.WidgetParam = {
+    title: 'Enter password',
+  };
+  const userAuthInstance = userAuth.getUserAuthInstance(authParam, widgetParam);
+  console.info('get userAuth instance successfully.');
+  userAuthInstance.off('result', {
+    onResult: (result) => {
+      console.info(`auth off result = ${result.result}`);
     }
   });
-  // Unsubscribe from the authentication result.
-  auth.off('result');
-  console.info('cancel subscribe authentication event successfully.');
-} catch (error) {
-  console.error(`cancel subscribe authentication event failed. Code: ${error?.code}, message: ${error?.message}`);
-  // do error.
-}
-```
-
-```TypeScript
-import { userAuth } from '@kit.UserAuthenticationKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-const userAuthWidgetMgrVersion = 1;
-try {
-  let userAuthWidgetMgr = userAuth.getUserAuthWidgetMgr(userAuthWidgetMgrVersion);
-  console.info('get userAuthWidgetMgr instance successfully.');
-  userAuthWidgetMgr.off('command', {
-    sendCommand: (cmdData) => {
-      console.info(`The cmdData is ${cmdData}`);
-    }
-  })
-  console.info('cancel subscribe authentication event successfully.');
+  console.info('auth off successfully.');
 } catch (error) {
   const err: BusinessError = error as BusinessError;
-  console.error(`userAuth widgetMgr failed. Code is ${err?.code}, message is ${err?.message}`);
+  console.error(`auth failed. Code is ${err?.code}, message is ${err?.message}`);
 }
 ```
 
@@ -202,7 +201,45 @@ Unsubscribes from the authentication tip information. This API is commonly used 
 
 **Examples**
 
-See off
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { userAuth } from '@kit.UserAuthenticationKit';
+
+try {
+  const rand = cryptoFramework.createRandom();
+  const len: number = 16;
+  let randData: Uint8Array | null = null;
+  let retryCount = 0;
+  while (retryCount < 3) {
+    randData = rand?.generateRandomSync(len)?.data;
+    if (randData) {
+      break;
+    }
+    retryCount++;
+  }
+  if (!randData) {
+    return;
+  }
+  const authParam: userAuth.AuthParam = {
+    challenge: randData,
+    authType: [userAuth.UserAuthType.PIN],
+    authTrustLevel: userAuth.AuthTrustLevel.ATL3,
+  };
+  const widgetParam: userAuth.WidgetParam = {
+    title: 'Enter password',
+  };
+  const userAuthInstance = userAuth.getUserAuthInstance(authParam, widgetParam);
+  console.info('get userAuth instance successfully.');
+  userAuthInstance.off('authTip', (authTipInfo: userAuth.AuthTipInfo) => {
+    console.info('userAuthInstance callback');
+  });
+  console.info('auth off successfully.');
+} catch (error) {
+  const err: BusinessError = error as BusinessError;
+  console.error(`auth failed. Code is ${err?.code}, message is ${err?.message}`);
+}
+```
 
 ## on('result')
 
@@ -240,65 +277,6 @@ Subscribes to the user authentication result. This API is used to obtain the fin
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified.  2. Incorrect parameter types.  3. Parameter verification failed. |
 | [12500002](../errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) | General operation error. |
-
-**Examples**
-
-```TypeScript
-import { userAuth } from '@kit.UserAuthenticationKit';
-
-let challenge = new Uint8Array([1, 2, 3, 4, 5, 6, 7, 8]);
-let authType = userAuth.UserAuthType.FACE;
-let authTrustLevel = userAuth.AuthTrustLevel.ATL1;
-try {
-  let auth = userAuth.getAuthInstance(challenge, authType, authTrustLevel);
-  // Subscribe to the authentication result.
-  auth.on('result', {
-    callback: (result: userAuth.AuthResultInfo) => {
-      console.info(`result: ${result.result}`);
-    }
-  });
-  // Subscribe to authentication tip information.
-  auth.on('tip', {
-    callback : (result : userAuth.TipInfo) => {
-      switch (result.tip) {
-        case userAuth.FaceTips.FACE_AUTH_TIP_TOO_BRIGHT:
-          // Do something.
-          break;
-        case userAuth.FaceTips.FACE_AUTH_TIP_TOO_DARK:
-          // Do something.
-          break;
-        default:
-          // do others.
-      }
-    }
-  } as userAuth.AuthEvent);
-  auth.start();
-  console.info('auth start successfully.');
-} catch (error) {
-  console.error(`auth failed. Code: ${error?.code}, message: ${error?.message}`);
-  // do error.
-}
-```
-
-```TypeScript
-import { userAuth } from '@kit.UserAuthenticationKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-const userAuthWidgetMgrVersion = 1;
-try {
-  let userAuthWidgetMgr = userAuth.getUserAuthWidgetMgr(userAuthWidgetMgrVersion);
-  console.info('get userAuthWidgetMgr instance successfully.');
-  userAuthWidgetMgr.on('command', {
-    sendCommand: (cmdData) => {
-      console.info(`The cmdData is ${cmdData}`);
-    }
-  })
-  console.info('subscribe authentication event successfully.');
-} catch (error) {
-  const err: BusinessError = error as BusinessError;
-  console.error(`userAuth widgetMgr failed. Code is ${err?.code}, message is ${err?.message}`);
-}
-```
 
 ## on('authTip')
 
@@ -338,7 +316,48 @@ Subscribes to authentication tip information. This API is used to obtain the wid
 
 **Examples**
 
-See on
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { userAuth } from '@kit.UserAuthenticationKit';
+
+try {
+  const rand = cryptoFramework.createRandom();
+  const len: number = 16;
+  let randData: Uint8Array | null = null;
+  let retryCount = 0;
+  while (retryCount < 3) {
+    randData = rand?.generateRandomSync(len)?.data;
+    if (randData) {
+      break;
+    }
+    retryCount++;
+  }
+  if (!randData) {
+    return;
+  }
+  const authParam: userAuth.AuthParam = {
+    challenge: randData,
+    authType: [userAuth.UserAuthType.PIN],
+    authTrustLevel: userAuth.AuthTrustLevel.ATL3,
+  };
+  const widgetParam: userAuth.WidgetParam = {
+    title: 'Enter password',
+  };
+  const userAuthInstance = userAuth.getUserAuthInstance(authParam, widgetParam);
+  console.info('get userAuth instance successfully.');
+  // The intermediate authentication status is returned by onAuthTip only after the authentication is started by start() of UserAuthInstance.
+  userAuthInstance.on('authTip', (authTipInfo: userAuth.AuthTipInfo) => {
+    console.info('userAuthInstance callback.');
+  });
+  console.info('auth on successfully.');
+  userAuthInstance.start();
+  console.info('auth start successfully.');
+} catch (error) {
+  const err: BusinessError = error as BusinessError;
+  console.error(`auth failed. Code is ${err?.code}, message is ${err?.message}`);
+}
+```
 
 ## start
 

@@ -2,7 +2,7 @@
 
 Enum for distance measurement technology types.
 
-@enum { number } TechnologyType
+@enum { int } TechnologyType
 
 **Since:** 23
 

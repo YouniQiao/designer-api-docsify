@@ -35,10 +35,6 @@ Constructor used to create a **StringDecoder** instance.
 **Examples**
 
 ```TypeScript
-let textEncoder = new util.TextEncoder("utf-8");
-```
-
-```TypeScript
 let decoder = new util.StringDecoder();
 ```
 

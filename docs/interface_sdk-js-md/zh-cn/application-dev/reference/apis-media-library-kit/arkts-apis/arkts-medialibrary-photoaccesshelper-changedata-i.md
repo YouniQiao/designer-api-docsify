@@ -34,7 +34,7 @@ type: NotifyType
 
 ChangeData的通知类型。
 
-**类型：** NotifyType
+**类型：** [NotifyType](arkts-medialibrary-photoaccesshelper-notifytype-e.md)
 
 **起始版本：** 10
 

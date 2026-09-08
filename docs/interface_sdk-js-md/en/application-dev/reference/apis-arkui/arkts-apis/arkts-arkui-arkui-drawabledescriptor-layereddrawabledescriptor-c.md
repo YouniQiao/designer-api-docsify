@@ -44,62 +44,6 @@ A constructor used to create a **LayeredDrawableDescriptor** object.
 | background | [DrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md) | No | Options for the background image of the layered drawable. |
 | mask | [DrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md) | No | Options for the mask of the layered drawable. |
 
-**Examples**
-
-The following is the sample code for creating a PixelMapDrawableDescriptor object using ResourceStr:
-
-```TypeScript
-// xxx.ets
-import { DrawableDescriptor, PixelMapDrawableDescriptor } from '@kit.ArkUI';
-
-@Entry
-@Component
-struct PixelMapDrawableDescriptorExample {
-  // Create a PixelMapDrawableDescriptor object using Resource.
-  // Replace $r('app.media.icon') with the image resource file you use.
-  @State drawable: DrawableDescriptor = new PixelMapDrawableDescriptor($r('app.media.icon'))
-
-  build() {
-    Column() {
-      Image(this.drawable)
-        .width(100)
-        .height(100)
-        .margin({ bottom: 20 })
-    }
-  }
-}
-```
-
-```TypeScript
-import { AnimationOptions, AnimatedDrawableDescriptor } from '@kit.ArkUI';
-import { fileUri } from '@kit.CoreFileKit';
-
-@Entry
-@Component
-struct Example {
-  options: AnimationOptions = { duration: 1000, iterations: -1, autoPlay: false };
-  // Sandbox paths (file://xx) and application resources are supported.
-  @State animated1: AnimatedDrawableDescriptor = new AnimatedDrawableDescriptor($r('app.media.gif'), this.options);
-  @State animated2: AnimatedDrawableDescriptor | undefined = undefined;
-
-  aboutToAppear() {
-    let files = this.getUIContext().getHostContext()?.filesDir
-    let originPath = files + "/flower.gif"
-    let resultPath = fileUri.getUriFromPath(originPath)
-    this.animated2 = new AnimatedDrawableDescriptor(resultPath, { iterations: -1 })
-  }
-
-  build() {
-    Column() {
-      Row() {
-        Image(this.animated1).width(100).height(100)
-        Image(this.animated2).width(100).height(100)
-      }
-    }
-  }
-}
-```
-
 ## getBackground
 
 ```TypeScript
@@ -374,7 +318,7 @@ Sets the blend mode of **LayeredDrawableDescriptor**. If this API is called for 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | drawing.BlendMode | Yes | Blend mode. |
+| mode | [drawing.BlendMode](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-drawing-blendmode-e.md) | Yes | Blend mode. |
 
 **Examples**
 
@@ -413,89 +357,6 @@ struct Index {
     }
     .height('100%')
     .width('100%')
-  }
-}
-```
-
-**Examples**
-
-This example creates a LayeredDrawableDescriptor object using a JSON file.
-
-```TypeScript
-// xxx.ets
-import { DrawableDescriptor, LayeredDrawableDescriptor } from '@kit.ArkUI';
-
-@Entry
-@Component
-struct Index {
-  private resManager = this.getUIContext().getHostContext()?.resourceManager;
-  // Replace $r('app.media.drawable') with the image resource file you use.
-  private layeredDrawableDescriptor: DrawableDescriptor | undefined =
-    this.resManager?.getDrawableDescriptor($r('app.media.drawable').id);
-
-  build() {
-    Row() {
-      Column() {
-        Image((this.layeredDrawableDescriptor instanceof LayeredDrawableDescriptor) ?
-          this.layeredDrawableDescriptor : undefined)
-        Image((this.layeredDrawableDescriptor instanceof LayeredDrawableDescriptor) ?
-          this.layeredDrawableDescriptor?.getForeground()?.getPixelMap() : undefined)
-      }.height('50%')
-    }.width('50%')
-  }
-}
-```
-
-This example creates a LayeredDrawableDescriptor object using a PixelMapDrawableDescriptor object.
-
-```TypeScript
-import { DrawableDescriptor, LayeredDrawableDescriptor, PixelMapDrawableDescriptor } from '@kit.ArkUI';
-import { image } from '@kit.ImageKit';
-
-@Entry
-@Component
-struct Index {
-  @State fore1: image.PixelMap | undefined = undefined;
-  @State back1: image.PixelMap | undefined = undefined;
-
-  @State foregroundDraw: DrawableDescriptor | undefined = undefined;
-  @State backgroundDraw: DrawableDescriptor | undefined = undefined;
-  @State maskDraw: DrawableDescriptor | undefined = undefined;
-  @State maskPixel: image.PixelMap | undefined = undefined;
-  @State draw: LayeredDrawableDescriptor | undefined = undefined;
-
-  async aboutToAppear() {
-    // Replace $r('app.media.foreground') with the image resource file you use.
-    this.fore1 = await this.getPixmapFromMedia($r('app.media.foreground'));
-    // Replace $r('app.media.background') with the image resource file you use.
-    this.back1 = await this.getPixmapFromMedia($r('app.media.background'));
-    // Replace $r('app.media.ohos_icon_mask') with the image resource file you use.
-    this.maskPixel = await this.getPixmapFromMedia($r('app.media.ohos_icon_mask'));
-    // Create a LayeredDrawableDescriptor object using PixelMapDrawableDescriptor.
-    this.foregroundDraw = new PixelMapDrawableDescriptor(this.fore1);
-    this.backgroundDraw = new PixelMapDrawableDescriptor(this.back1);
-    this.maskDraw = new PixelMapDrawableDescriptor(this.maskPixel);
-    this.draw = new LayeredDrawableDescriptor(this.foregroundDraw,this.backgroundDraw,this.maskDraw);
-  }
-
-  build() {
-    Row() {
-      Column() {
-          Image(this.draw)
-            .width(300)
-            .height(300)
-      }.height('100%').justifyContent(FlexAlign.Center)
-    }.width('100%').height("100%").backgroundColor(Color.Pink)
-  }
-  // Obtain pixelMap from a resource through the image framework based on the resource.
-  private async getPixmapFromMedia(resource: Resource) {
-    let unit8Array = await this.getUIContext().getHostContext()?.resourceManager?.getMediaContent(resource.id);
-    let imageSource = image.createImageSource(unit8Array?.buffer.slice(0, unit8Array.buffer.byteLength));
-    let createPixelMap: image.PixelMap = await imageSource.createPixelMap({
-      desiredPixelFormat: image.PixelMapFormat.BGRA_8888
-    });
-    await imageSource.release();
-    return createPixelMap;
   }
 }
 ```

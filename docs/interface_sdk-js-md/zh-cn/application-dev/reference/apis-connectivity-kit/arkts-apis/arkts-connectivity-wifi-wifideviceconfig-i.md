@@ -82,7 +82,7 @@ securityType: WifiSecurityType
 
 加密类型。
 
-**类型：** WifiSecurityType
+**类型：** [WifiSecurityType](arkts-connectivity-wifi-wifisecuritytype-e.md)
 
 **起始版本：** 6
 

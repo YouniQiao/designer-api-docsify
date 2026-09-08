@@ -18,4 +18,4 @@ Defines an OnColorModeUpdatedFn function.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| colorMode | ConfigurationConstant.ColorMode | Yes | Indicates the system's light or dark color mode |
+| colorMode | [ConfigurationConstant.ColorMode](arkts-ability-configurationconstant-colormode-e.md) | Yes | Indicates the system's light or dark color mode |

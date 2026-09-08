@@ -16,7 +16,7 @@ contentType: notificationManager.ContentType
 
 Notification type.
 
-**Type:** notificationManager.ContentType
+**Type:** [notificationManager.ContentType](arkts-notification-notificationmanager-contenttype-e.md)
 
 **Since:** 11
 
@@ -48,7 +48,7 @@ slotType: notificationManager.SlotType
 
 Notification slot type.
 
-**Type:** notificationManager.SlotType
+**Type:** [notificationManager.SlotType](arkts-notification-notificationmanager-slottype-e.md)
 
 **Since:** 11
 

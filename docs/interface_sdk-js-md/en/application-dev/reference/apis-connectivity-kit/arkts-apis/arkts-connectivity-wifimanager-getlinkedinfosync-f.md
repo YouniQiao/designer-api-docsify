@@ -24,7 +24,7 @@ Obtain connection information about the Wi-Fi connection.this apireturns the res
 
 | Type | Description |
 | --- | --- |
-| WifiLinkedInfo | Returns Wi-Fi linked information. |
+| [WifiLinkedInfo](arkts-connectivity-wifimanager-wifilinkedinfo-i.md) | Returns Wi-Fi linked information. |
 
 **Error codes:**
 

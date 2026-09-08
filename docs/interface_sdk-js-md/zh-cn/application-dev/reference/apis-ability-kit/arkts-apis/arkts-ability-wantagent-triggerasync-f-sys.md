@@ -27,14 +27,14 @@ function triggerAsync(agent: WantAgent, triggerInfo: TriggerInfo, context: Conte
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | agent | [WantAgent](arkts-ability-wantagent-t.md) | 是 | WantAgent对象。 |
-| triggerInfo | TriggerInfo | 是 | TriggerInfo对象。 |
+| triggerInfo | [TriggerInfo](arkts-ability-wantagent-triggerinfo-t.md) | 是 | TriggerInfo对象。 |
 | context | [Context](arkts-ability-context-c.md) | 是 | 请求触发WantAgent的UIAbility/ExtensionAbility的Context。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;CompleteData&gt; | Promise对象，返回主动激发WantAgent获得的数据。 |
+| Promise&lt;[CompleteData](arkts-ability-wantagent-completedata-i.md)&gt; | Promise对象，返回主动激发WantAgent获得的数据。 |
 
 **错误码：**
 

@@ -146,7 +146,7 @@ readonly permissionGrantStates: Array<bundleManager.PermissionGrantState>
 
 申请权限的授予状态，通过调用[getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md)接口，bundleFlags参数传入GET_BUNDLE_INFO_WITH_REQUESTED_PERMISSION获取。reqPermissionDetails数组和permissionGrantStates数组的索引顺序一一对应，即reqPermissionDetails[2]的授权状态为permissionGrantStates[2]。
 
-**类型：** Array&lt;bundleManager.PermissionGrantState&gt;
+**类型：** Array&lt;[bundleManager.PermissionGrantState](arkts-ability-bundlemanager-permissiongrantstate-e.md)&gt;
 
 **起始版本：** 9
 

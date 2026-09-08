@@ -130,7 +130,7 @@ fontFamily(value: string | Resource)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | string \| Resource | 是 | 字体列表。使用多个字体时，请用逗号','分隔，字体的优先级按顺序生效。例如：'Arial,HarmonyOS Sans'。 |
+| value | string \| [Resource](../arkts-apis/arkts-arkui-resource-t.md) | 是 | 字体列表。使用多个字体时，请用逗号','分隔，字体的优先级按顺序生效。例如：'Arial,HarmonyOS Sans'。 |
 
 ## fontSize
 
@@ -152,7 +152,7 @@ fontSize(value: number | string | Resource)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number \| string \| Resource | 是 | 字体大小。fontSize为number类型时，使用fp单位。string类型支持number类型取值的字符串形式，可以附带单位，例如"1 0"、"10fp"，不支持设置百分比字符串。从API version 20开始，支持Resource类型。 |
+| value | number \| string \| [Resource](../arkts-apis/arkts-arkui-resource-t.md) | 是 | 字体大小。fontSize为number类型时，使用fp单位。string类型支持number类型取值的字符串形式，可以附带单位，例如"1 0"、"10fp"，不支持设置百分比字符串。从API version 20开始，支持Resource类型。 |
 
 ## fontStyle
 
@@ -174,7 +174,7 @@ fontStyle(value: FontStyle)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | FontStyle | 是 | 字体样式。 |
+| value | [FontStyle](../arkts-apis/arkts-arkui-fontstyle-e.md) | 是 | 字体样式。 |
 
 ## fontVariations
 
@@ -198,7 +198,7 @@ fontVariations(fontVariations: Array<FontVariation>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| fontVariations | Array&lt;FontVariation&gt; | 是 | 可变字体的属性数组，每个数组元素包含axis（属性轴名称）和value（属性值）两个字段。fontVariations属性的优先级高于[fontWeight](#fontweight)。 |
+| fontVariations | Array&lt;[FontVariation](../arkts-apis/arkts-arkui-fontvariation-t.md)&gt; | 是 | 可变字体的属性数组，每个数组元素包含axis（属性轴名称）和value（属性值）两个字段。fontVariations属性的优先级高于[fontWeight](#fontweight)。 |
 
 ## fontWeight
 
@@ -224,7 +224,7 @@ fontWeight(value: number | FontWeight | ResourceStr)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number \| FontWeight \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | 是 | 文本的字体粗细。number类型取值[100, 900]，取值间隔为100，取值越大，字体越粗。string类型仅支持number类型取值的字符串形式，例如“400”，以及“bold”、“bolder”、“lighter”、“ regular”、“medium”，分别对应FontWeight中相应的枚举值。设置过大可能会在不同字体下有截断。传入超出取值范围或不符合间隔要求的值时取默认值。从API version 20开始，支持Resource类型。<br>**适用版本：** 20 |
+| value | number \| [FontWeight](../arkts-apis/arkts-arkui-fontweight-e.md) \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | 是 | 文本的字体粗细。number类型取值[100, 900]，取值间隔为100，取值越大，字体越粗。string类型仅支持number类型取值的字符串形式，例如“400”，以及“bold”、“bolder”、“lighter”、“ regular”、“medium”，分别对应FontWeight中相应的枚举值。设置过大可能会在不同字体下有截断。传入超出取值范围或不符合间隔要求的值时取默认值。从API version 20开始，支持Resource类型。<br>**适用版本：** 20 |
 
 ## fontWeight
 
@@ -252,7 +252,7 @@ fontWeight(weight: number | FontWeight | ResourceStr, fontWeightConfigs?: FontWe
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| weight | number \| FontWeight \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | 是 | 文本的字体粗细。number类型取值[100, 900]，取值间隔为100，取值越大，字体越粗。string类型仅支持number类型取值的字符串形式，例如“400”，以及“bold”、“bolder”、“lighter”、“ regular”、“medium”，分别对应FontWeight中相应的枚举值。设置过大可能会在不同字体下有截断。传入超出取值范围的值时取默认值。传入不符合间隔要求的值时，若设置fontWeightConfigs的enableVariableFontWeight为true，使用传入值；若设置为false，使用默认值。 |
+| weight | number \| [FontWeight](../arkts-apis/arkts-arkui-fontweight-e.md) \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | 是 | 文本的字体粗细。number类型取值[100, 900]，取值间隔为100，取值越大，字体越粗。string类型仅支持number类型取值的字符串形式，例如“400”，以及“bold”、“bolder”、“lighter”、“ regular”、“medium”，分别对应FontWeight中相应的枚举值。设置过大可能会在不同字体下有截断。传入超出取值范围的值时取默认值。传入不符合间隔要求的值时，若设置fontWeightConfigs的enableVariableFontWeight为true，使用传入值；若设置为false，使用默认值。 |
 | fontWeightConfigs | [FontWeightConfigs](../arkts-apis/arkts-arkui-fontweightconfigs-i.md) | 否 | 字体粗细配置对象，用于配置可变字体字重等选项。默认值继承[FontWeightConfigs](../arkts-apis/arkts-arkui-fontweightconfigs-i.md)。 |
 
 ## letterSpacing

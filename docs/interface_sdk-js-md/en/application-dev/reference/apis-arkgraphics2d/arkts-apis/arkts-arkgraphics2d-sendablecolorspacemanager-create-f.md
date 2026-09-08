@@ -22,13 +22,13 @@ Creates a criterion color space management instance that is sendable.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| colorSpaceName | colorSpaceManager.ColorSpace | Yes | Type of the color space.    **UNKNOWN** and **CUSTOM** cannot be used when creating standard color space objects. |
+| colorSpaceName | [colorSpaceManager.ColorSpace](arkts-arkgraphics2d-colorspacemanager-colorspace-e.md) | Yes | Type of the color space.    **UNKNOWN** and **CUSTOM** cannot be used when creating standard color space objects. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ColorSpaceManager | Sendable color space object created. |
+| [ColorSpaceManager](arkts-arkgraphics2d-sendablecolorspacemanager-colorspacemanager-i.md) | Sendable color space object created. |
 
 **Error codes:**
 
@@ -63,14 +63,14 @@ Creates a custom color space object that is sendable.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| primaries | colorSpaceManager.ColorSpacePrimaries | Yes | Primaries of the color space. |
+| primaries | [colorSpaceManager.ColorSpacePrimaries](arkts-arkgraphics2d-colorspacemanager-colorspaceprimaries-i.md) | Yes | Primaries of the color space. |
 | gamma | number | Yes | Gamma value of the color space, which is a floating point number greater than 0. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ColorSpaceManager | Sendable color space object created. |
+| [ColorSpaceManager](arkts-arkgraphics2d-sendablecolorspacemanager-colorspacemanager-i.md) | Sendable color space object created. |
 
 **Error codes:**
 

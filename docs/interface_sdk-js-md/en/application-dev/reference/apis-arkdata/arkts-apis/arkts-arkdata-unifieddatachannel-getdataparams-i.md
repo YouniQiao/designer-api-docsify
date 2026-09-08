@@ -74,7 +74,7 @@ fileConflictOptions?: FileConflictOptions
 
 Indicates file conflict options when dest path has file with same name.
 
-**Type:** FileConflictOptions
+**Type:** [FileConflictOptions](arkts-arkdata-unifieddatachannel-fileconflictoptions-e.md)
 
 **Since:** 15
 
@@ -92,7 +92,7 @@ progressIndicator: ProgressIndicator
 
 Indicates whether to use default system progress indicator.
 
-**Type:** ProgressIndicator
+**Type:** [ProgressIndicator](arkts-arkdata-unifieddatachannel-progressindicator-e.md)
 
 **Since:** 15
 

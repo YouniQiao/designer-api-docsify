@@ -27,20 +27,3 @@ Location attributes of a modal dialog box.
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
-
-**Examples**
-
-```TypeScript
-import { AbilityConstant, UIAbility, Want, dialogRequest } from '@kit.AbilityKit';
-
-export default class EntryAbility extends UIAbility {
-  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-    try {
-      let requestInfo = dialogRequest.getRequestInfo(want);
-      console.info(`getRequestInfo windowRect=, ${JSON.stringify(requestInfo.windowRect)}` );
-    } catch(err) {
-      console.error(`getRequestInfo err= ${JSON.stringify(err)}`);
-    }
-  }
-}
-```

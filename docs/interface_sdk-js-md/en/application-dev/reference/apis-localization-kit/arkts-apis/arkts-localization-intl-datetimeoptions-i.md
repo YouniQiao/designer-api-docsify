@@ -24,7 +24,7 @@ dateStyle?: string
 
 Date display format. The value can be:
 
-"number", "short", "medium", "full", or  "auto".
+"long", "short", "medium", "full", or  "auto".
 
 For details about their display effects, see [Table 1](../../../reference/apis-localization-kit/js-apis-intl.md#appendix).
 
@@ -74,7 +74,7 @@ dayPeriod?: string
 
 Time period display format. The value can be:
 
-"number", "short", "narrow", or  "auto".
+"long", "short", "narrow", or  "auto".
 
 For details about their display effects, see [Table 10](../../../reference/apis-localization-kit/js-apis-intl.md#appendix).
 
@@ -100,7 +100,7 @@ era?: string
 
 Epoch display format. The value can be:
 
-"number", "short", "narrow", or  "auto".
+"long", "short", "narrow", or  "auto".
 
 For details about their display effects, see [Table 9](../../../reference/apis-localization-kit/js-apis-intl.md#appendix).
 
@@ -300,7 +300,7 @@ month?: string
 
 Month display format. The value can be:
 
-"numeric", "2-digit", "number", "short", "narrow", or  "auto".
+"numeric", "2-digit", "long", "short", "narrow", or  "auto".
 
 For details about their display effects, see [Table 7](../../../reference/apis-localization-kit/js-apis-intl.md#appendix).
 
@@ -374,7 +374,7 @@ timeStyle?: string
 
 Time display format. The value can be:
 
-"number", "short", "medium", "full", or  "auto".
+"long", "short", "medium", "full", or  "auto".
 
 For details about their display effects, see [Table 2](../../../reference/apis-localization-kit/js-apis-intl.md#appendix).
 
@@ -422,7 +422,7 @@ timeZoneName?: string
 
 Localized representation of a time zone name. The value can be:
 
-"number", "short", or  "auto".
+"long", "short", or  "auto".
 
 For details about their display effects, see [Table 8](../../../reference/apis-localization-kit/js-apis-intl.md#appendix).
 
@@ -448,7 +448,7 @@ weekday?: string
 
 Week display format. The value can be:
 
-"number", "short", "narrow", or  "auto".
+"long", "short", "narrow", or  "auto".
 
 For details about their display effects, see [Table 4](../../../reference/apis-localization-kit/js-apis-intl.md#appendix).
 

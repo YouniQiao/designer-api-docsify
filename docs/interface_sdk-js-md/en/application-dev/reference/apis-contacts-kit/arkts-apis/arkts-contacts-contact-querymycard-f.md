@@ -78,6 +78,8 @@ Queries my card. This API uses an asynchronous callback to return the result.
 **Examples**
 
 > NOTE
+> 
+> In the examples in this document, this.context is used to obtain the UIAbilityContext, where this represents the UIAbility instance inherited from UIAbility. If you need to use the capabilities provided by UIAbilityContext in the UI, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -172,6 +174,8 @@ Queries my card. (The contact attribute list can be imported.) This API uses an 
 **Examples**
 
 > NOTE
+> 
+> In the examples in this document, this.context is used to obtain the UIAbilityContext, where this represents the UIAbility instance inherited from UIAbility. To use the capabilities provided by UIAbilityContext in the UI, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -274,6 +278,8 @@ Queries my card. (The contact attribute list can be imported.) This API uses a p
 **Examples**
 
 > NOTE
+> 
+> In the examples in this document, this.context is used to obtain the UIAbilityContext, where this represents the UIAbility instance inherited from UIAbility. If you need to use the capabilities provided by UIAbilityContext in the UI, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
 ```TypeScript
 import { contact } from '@kit.ContactsKit';

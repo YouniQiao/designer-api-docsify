@@ -27,7 +27,7 @@ Checks whether the specified authentication capability is supported. This API is
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | authType | [UserAuthType](arkts-userauthentication-userauth-userauthtype-e.md) | Yes | Authentication type. This parameter specifies the authentication type to be queried. The options are **FACE**, **FINGERPRINT**, **PIN**, and **COMPANION_DEVICE**. Note: PIN is supported since API version 11. COMPANION_DEVICE query is supported since API version 26.0.0. |
-| authTrustLevel | AuthTrustLevel | Yes | Authentication trust level. This parameter specifies the authentication trust level to be queried. The valid values are **ATL1(10000)**, **ATL2(20000)**, **ATL3(30000)**, and **ATL4(40000)**. A higher level indicates a higher requirement on the liveness detection capability of the authentication solution. |
+| authTrustLevel | [AuthTrustLevel](arkts-userauthentication-userauth-authtrustlevel-e.md) | Yes | Authentication trust level. This parameter specifies the authentication trust level to be queried. The valid values are **ATL1(10000)**, **ATL2(20000)**, **ATL3(30000)**, and **ATL4(40000)**. A higher level indicates a higher requirement on the liveness detection capability of the authentication solution. |
 
 **Error codes:**
 

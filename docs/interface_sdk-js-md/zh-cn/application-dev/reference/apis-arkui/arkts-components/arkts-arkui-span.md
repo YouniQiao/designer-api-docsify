@@ -28,7 +28,7 @@ Span(value: string | Resource)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | string \| Resource | 是 | 文本内容。 |
+| value | string \| [Resource](../arkts-apis/arkts-arkui-resource-t.md) | 是 | 文本内容。 |
 
 ## 汇总
 
@@ -313,6 +313,7 @@ struct SpanExample {
 ```
 
 该示例通过[fontVariations](#fontvariations)属性设置可变字体的属性。
+从API版本26.0.0开始，新增[fontVariations](#fontvariations)接口。
 
 ```TypeScript
 // xxx.ets

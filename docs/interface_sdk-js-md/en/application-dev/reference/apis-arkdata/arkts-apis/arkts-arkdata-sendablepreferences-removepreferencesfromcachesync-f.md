@@ -25,7 +25,7 @@ Removes a **Preferences** instance from the cache. This API returns the result s
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | context | Context | Yes | Application context. |
-| options | Options | Yes | Configuration options of the **Preferences** instance. |
+| options | [Options](arkts-arkdata-sendablepreferences-options-i.md) | Yes | Configuration options of the **Preferences** instance. |
 
 **Error codes:**
 

@@ -34,7 +34,7 @@ static auth(domainAccountInfo: DomainAccountInfo, credential: Uint8Array, callba
 | --- | --- | --- | --- |
 | domainAccountInfo | [DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i.md) | 是 | 指示域账号信息。 |
 | credential | Uint8Array | 是 | 指示域账号的凭据。 |
-| callback | IUserAuthCallback | 是 | 指示认证结果回调。 |
+| callback | [IUserAuthCallback](arkts-basicservices-osaccount-iuserauthcallback-i-sys.md) | 是 | 指示认证结果回调。 |
 
 **错误码：**
 
@@ -58,54 +58,6 @@ static auth(domainAccountInfo: DomainAccountInfo, credential: Uint8Array, callba
 | 12300211 | Server unreachable. |
 
 **示例**
-
-```TypeScript
-import { AsyncCallback, BusinessError } from '@kit.BasicServicesKit';
-
-let plugin: osAccount.DomainPlugin = {
-  auth: (domainAccountInfo: osAccount.DomainAccountInfo, credential: Uint8Array,
-        callback: osAccount.IUserAuthCallback) => {
-    // mock authentication
-    // notify authentication result
-    let result: osAccount.AuthResult = {
-      token: new Uint8Array([0]),
-      remainTimes: 5,
-      freezingTime: 0
-    };
-    callback.onResult(0, result);
-  },
-  authWithPopup: (domainAccountInfo: osAccount.DomainAccountInfo,
-                  callback: osAccount.IUserAuthCallback) => {},
-  authWithToken: (domainAccountInfo: osAccount.DomainAccountInfo, token: Uint8Array,
-                  callback: osAccount.IUserAuthCallback) => {},
-  getAccountInfo: (options: osAccount.GetDomainAccountInfoPluginOptions,
-                  callback: AsyncCallback<osAccount.DomainAccountInfo>) => {},
-  getAuthStatusInfo: (domainAccountInfo: osAccount.DomainAccountInfo,
-                    callback: AsyncCallback<osAccount.AuthStatusInfo>) => {},
-  bindAccount: (domainAccountInfo: osAccount.DomainAccountInfo, localId: number,
-                callback: AsyncCallback<void>) => {},
-  unbindAccount: (domainAccountInfo: osAccount.DomainAccountInfo, callback: AsyncCallback<void>) => {},
-  isAccountTokenValid: (domainAccountInfo: osAccount.DomainAccountInfo, token: Uint8Array,
-                        callback: AsyncCallback<boolean>) => {},
-  getAccessToken: (options: osAccount.GetDomainAccessTokenOptions, callback: AsyncCallback<Uint8Array>) => {}
-}
-osAccount.DomainAccountManager.registerPlugin(plugin);
-let userAuth = new osAccount.UserAuth();
-let challenge: Uint8Array = new Uint8Array([0]);
-let authType: osAccount.AuthType = osAccount.AuthType.DOMAIN;
-let authTrustLevel: osAccount.AuthTrustLevel = osAccount.AuthTrustLevel.ATL1;
-try {
-  userAuth.auth(challenge, authType, authTrustLevel, {
-    onResult: (resultCode: number, authResult: osAccount.AuthResult) => {
-        console.info('auth resultCode = ' + resultCode);
-        console.info('auth authResult = ' + JSON.stringify(authResult));
-    }
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`auth exception = code is ${err.code}, message is ${err.message}`);
-}
-```
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -155,7 +107,7 @@ static auth(
 | domainAccountInfo | [DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i.md) | 是 | 指示域账号信息。 |
 | credential | Uint8Array | 是 | 指示域账号的凭据。 |
 | options | [DomainAccountAuthOptions](arkts-basicservices-osaccount-domainaccountauthoptions-i-sys.md) | 是 | 表示域账号认证的选项。 |
-| callback | IUserAuthCallback | 是 | 指示认证结果回调。 |
+| callback | [IUserAuthCallback](arkts-basicservices-osaccount-iuserauthcallback-i-sys.md) | 是 | 指示认证结果回调。 |
 
 **错误码：**
 
@@ -229,7 +181,7 @@ static authWithPopup(callback: IUserAuthCallback): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | IUserAuthCallback | 是 | 指示认证结果回调。 |
+| callback | [IUserAuthCallback](arkts-basicservices-osaccount-iuserauthcallback-i-sys.md) | 是 | 指示认证结果回调。 |
 
 **错误码：**
 
@@ -291,7 +243,7 @@ static authWithPopup(localId: number, callback: IUserAuthCallback): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | localId | number | 是 | 指示绑定域账号的系统账号ID。 |
-| callback | IUserAuthCallback | 是 | 指示认证结果回调。 |
+| callback | [IUserAuthCallback](arkts-basicservices-osaccount-iuserauthcallback-i-sys.md) | 是 | 指示认证结果回调。 |
 
 **错误码：**
 

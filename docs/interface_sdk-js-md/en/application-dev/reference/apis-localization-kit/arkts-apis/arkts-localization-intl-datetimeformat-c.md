@@ -41,45 +41,8 @@ Creates a **DateTimeOptions** object for the specified locale.
 ```TypeScript
 import { intl } from '@kit.LocalizationKit';
 
-// The current locale ID is used by the default constructor.
-let locale = new intl.Locale();
-// Return the current system locale ID.
-let localeID = locale.toString();
-```
-
-```TypeScript
-import { intl } from '@kit.LocalizationKit';
-
 // Create a DateTimeFormat object using the current system locale ID.
 let formatter: intl.DateTimeFormat = new intl.DateTimeFormat();
-```
-
-```TypeScript
-import { intl } from '@kit.LocalizationKit';
-
-// Create a NumberFormat object using the current system locale ID.
-let formatter: intl.NumberFormat = new intl.NumberFormat();
-```
-
-```TypeScript
-import { intl } from '@kit.LocalizationKit';
-
-// Create a Collator object using the current system locale ID.
-let collator = new intl.Collator();
-```
-
-```TypeScript
-import { intl } from '@kit.LocalizationKit';
-
-// Create a PluralRules object using the current system locale ID.
-let pluralRules = new intl.PluralRules();
-```
-
-```TypeScript
-import { intl } from '@kit.LocalizationKit';
-
-// Create a RelativeTimeFormat object using the current system locale ID.
-let formatter: intl.RelativeTimeFormat = new intl.RelativeTimeFormat();
 ```
 
 ## constructor
@@ -107,7 +70,7 @@ Creates a **DateTimeOptions** object for the specified locale.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | locale | string \| Array&lt;string&gt; | Yes | Locale ID or locale ID array. If the input is a locale ID array, the first valid locale ID is used. |
-| options | DateTimeOptions | No | Options for creating the **DateTimeOptions** object. If no options are set, the default values of **year**, **month**, and **day** are **numeric**. |
+| options | [DateTimeOptions](arkts-localization-intl-datetimeoptions-i.md) | No | Options for creating the **DateTimeOptions** object. If no options are set, the default values of **year**, **month**, and **day** are **numeric**. |
 
 **Examples**
 
@@ -237,7 +200,7 @@ Obtains the options for creating a **DateTimeOptions** object.
 
 | Type | Description |
 | --- | --- |
-| DateTimeOptions | Options for the **DateTimeOptions** object. |
+| [DateTimeOptions](arkts-localization-intl-datetimeoptions-i.md) | Options for the **DateTimeOptions** object. |
 
 **Examples**
 

@@ -80,7 +80,7 @@ g: Point
 
 指定基点g。
 
-**类型：** Point
+**类型：** [Point](arkts-cryptoarchitecture-cryptoframework-point-i.md)
 
 **起始版本：** 10
 

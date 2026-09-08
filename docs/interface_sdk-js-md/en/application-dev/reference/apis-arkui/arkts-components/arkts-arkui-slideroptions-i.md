@@ -21,7 +21,7 @@ Whether the slider moves horizontally or vertically.
 
 Default value: **Axis.Horizontal**
 
-**Type:** Axis
+**Type:** [Axis](../arkts-apis/arkts-arkui-axis-e.md)
 
 **Default:** Axis.Horizontal [since 11]
 

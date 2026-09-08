@@ -2,7 +2,7 @@
 
 Enumeration of PhotoSource type
 
-@enum { number } PhotoSource
+@enum { int } PhotoSource
 
 **Since:** 20
 

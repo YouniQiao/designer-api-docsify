@@ -36,21 +36,6 @@ close(): void
 import { hilog } from '@kit.PerformanceAnalysisKit';
 import { omapi } from '@kit.ConnectivityKit';
 
-let seSession : omapi.Session;
-
-// 在使用seSession之前，需要对seSession进行初始化
-
-try {
-    seSession.close();
-} catch (error) {
-    hilog.error(0x0000, 'testTag', 'close error %{public}s', JSON.stringify(error));
-}
-```
-
-```TypeScript
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { omapi } from '@kit.ConnectivityKit';
-
 let seChannel : omapi.Channel;
 
 // 在使用seChannel之前，需要对seChannel进行初始化
@@ -118,7 +103,7 @@ getSession(): Session
 
 | 类型 | 说明 |
 | --- | --- |
-| Session | 该Channel绑定的Session 对象。 |
+| [Session](arkts-connectivity-omapi-session-i.md) | 该Channel绑定的Session 对象。 |
 
 **错误码：**
 
@@ -210,22 +195,6 @@ isClosed(): boolean
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
 
 **示例**
-
-```TypeScript
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { omapi } from '@kit.ConnectivityKit';
-
-let seSession : omapi.Session;
-
-// 在使用seSession之前，需要对seSession进行初始化
-
-try {
-    let isClosed = seSession.isClosed();
-    hilog.info(0x0000, 'testTag', 'isClosed %{public}s', JSON.stringify(isClosed));
-} catch (error) {
-    hilog.error(0x0000, 'testTag', 'isClosed error %{public}s', JSON.stringify(error));
-}
-```
 
 ```TypeScript
 import { hilog } from '@kit.PerformanceAnalysisKit';

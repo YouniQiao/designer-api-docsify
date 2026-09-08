@@ -26,8 +26,8 @@ Displays the menu.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | ActionMenuOptions | Yes | Options. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ActionMenuSuccessResponse&gt; | Yes |  |
+| options | [ActionMenuOptions](arkts-arkui-prompt-actionmenuoptions-i.md) | Yes | Options. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ActionMenuSuccessResponse](arkts-arkui-prompt-actionmenusuccessresponse-i.md)&gt; | Yes |  |
 
 **Examples**
 
@@ -75,13 +75,13 @@ Displays the menu.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | ActionMenuOptions | Yes | Options. |
+| options | [ActionMenuOptions](arkts-arkui-prompt-actionmenuoptions-i.md) | Yes | Options. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ActionMenuSuccessResponse&gt; |  |
+| Promise&lt;[ActionMenuSuccessResponse](arkts-arkui-prompt-actionmenusuccessresponse-i.md)&gt; |  |
 
 **Examples**
 

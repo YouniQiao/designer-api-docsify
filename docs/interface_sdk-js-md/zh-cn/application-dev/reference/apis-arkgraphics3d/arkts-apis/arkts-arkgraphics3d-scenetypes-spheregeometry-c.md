@@ -18,7 +18,7 @@ get radius(): number
 
 球体半径，单位为世界坐标系下的场景单位（比如cm、m、km等），取值范围大于0。
 
-@return { number }
+@return { double }
 
 **类型：** number
 
@@ -46,7 +46,7 @@ get segmentCount(): number
 
 在球体上以经纬度分割的段数，取值范围是大于等于3的正整数。
 
-@return { number }
+@return { int }
 
 **类型：** number
 

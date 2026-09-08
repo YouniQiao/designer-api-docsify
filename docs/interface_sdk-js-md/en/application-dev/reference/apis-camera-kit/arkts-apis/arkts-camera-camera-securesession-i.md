@@ -50,22 +50,6 @@ Marks a [PreviewOutput](arkts-camera-camera-previewoutput-i.md) stream as secure
 | [7400102](../errorcode-camera.md#7400102-invalid-operation) | Operation not allowed. |
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config.<br>**Applicable version:** 12 - 17 |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function addSecureOutput(session: camera.SecureSession, previewOutput: camera.PreviewOutput): void {
-  try {
-    session.addSecureOutput(previewOutput);
-  } catch (error) {
-    // If the operation fails, error.code is returned and processed.
-    let err = error as BusinessError;
-    console.error(`The addOutput call failed. error code: ${err.code}`);
-  }
-}
-```
-
 ## off('error')
 
 ```TypeScript

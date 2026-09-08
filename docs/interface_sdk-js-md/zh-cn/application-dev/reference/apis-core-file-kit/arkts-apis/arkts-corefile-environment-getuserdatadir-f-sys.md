@@ -34,17 +34,6 @@ function getUserDataDir(): Promise<string>
 | 13900020 | Invalid argument |
 | 13900042 | Unknown error |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-Environment.getUserDataDir().then((path: string) => {
-  console.info("getUserDataDir successfully, Path: " + path);
-}).catch((err: BusinessError) => {
-  console.error("getUserDataDir failed with error message: " + err.message + ", error code: " + err.code);
-});
-```
-
 
 ## getUserDataDir
 
@@ -73,16 +62,3 @@ function getUserDataDir(callback: AsyncCallback<string>): void
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | The caller is not a system application |
 | 13900020 | Invalid argument |
 | 13900042 | Unknown error |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-Environment.getUserDataDir((err: BusinessError, path: string) => {
-  if (err) {
-    console.error("getUserDataDir failed with error message: " + err.message + ", error code: " + err.code);
-  } else {
-    console.info("getUserDataDir successfully, Path: " + path);
-  }
-});
-```

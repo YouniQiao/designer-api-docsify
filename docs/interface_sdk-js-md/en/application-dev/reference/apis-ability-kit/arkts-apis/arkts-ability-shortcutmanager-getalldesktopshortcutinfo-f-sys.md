@@ -32,7 +32,7 @@ Obtains the information about all shortcuts of the given user.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;ShortcutInfo&gt;&gt; | Promise that returns the shortcut information defined in the application configuration file. |
+| Promise&lt;Array&lt;[ShortcutInfo](arkts-ability-shortcutmanager-shortcutinfo-t.md)&gt;&gt; | Promise that returns the shortcut information defined in the application configuration file. |
 
 **Error codes:**
 

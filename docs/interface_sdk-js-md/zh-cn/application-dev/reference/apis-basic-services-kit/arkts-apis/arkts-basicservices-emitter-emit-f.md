@@ -88,18 +88,6 @@ let eventData: emitter.EventData = {
 emitter.emit('eventId', eventData);
 ```
 
-```TypeScript
-let emitter1: emitter.Emitter = new emitter.Emitter();
-let eventData: emitter.EventData = {
-  data: {
-    "content": "content",
-    "id": 1,
-  }
-};
-
-emitter1.emit('eventId', eventData);
-```
-
 
 ## emit
 
@@ -146,27 +134,6 @@ let eventData: emitter.GenericEventData<Sample> = {
 emitter.emit('eventId', eventData);
 ```
 
-```TypeScript
-@Sendable
-class Sample {
-  constructor() {
-    this.count = 100;
-  }
-  printCount() {
-    console.info('Print count : ' + this.count);
-  }
-  count: number;
-}
-
-let emitter1: emitter.Emitter = new emitter.Emitter();
-
-let eventData: emitter.GenericEventData<Sample> = {
-  data: new Sample()
-};
-
-emitter1.emit('eventId', eventData);
-```
-
 
 ## emit
 
@@ -191,7 +158,7 @@ function emit(eventId: string, options: Options, data?: EventData): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | eventId | string | 是 | 发送的事件ID。不可为空字符串，大小不超过10240字节，超出部分会被截断。 |
-| options | Options | 是 | 事件优先级。 |
+| options | [Options](arkts-basicservices-emitter-options-i.md) | 是 | 事件优先级。 |
 | data | [EventData](arkts-basicservices-emitter-eventdata-i.md) | 否 | 事件携带的数据，默认为空。 |
 
 **示例**
@@ -209,22 +176,6 @@ let options: emitter.Options = {
 };
 
 emitter.emit('eventId', options, eventData);
-```
-
-```TypeScript
-let emitter1: emitter.Emitter = new emitter.Emitter();
-
-let options: emitter.Options = {
-  priority: emitter.EventPriority.HIGH
-};
-let eventData: emitter.EventData = {
-  data: {
-    "content": "content",
-    "id": 1,
-  }
-};
-
-emitter1.emit('eventId', options, eventData);
 ```
 
 
@@ -251,7 +202,7 @@ function emit<T>(eventId: string, options: Options, data?: GenericEventData<T>):
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | eventId | string | 是 | 发送的事件ID。不可为空字符串，大小不超过10240字节，超出部分会被截断。 |
-| options | Options | 是 | 事件优先级。 |
+| options | [Options](arkts-basicservices-emitter-options-i.md) | 是 | 事件优先级。 |
 | data | [GenericEventData](arkts-basicservices-emitter-genericeventdata-i.md)&lt;T&gt; | 否 | 事件携带的数据，默认为空。 |
 
 **示例**
@@ -276,28 +227,4 @@ let eventData: emitter.GenericEventData<Sample> = {
 };
 
 emitter.emit('eventId', options, eventData);
-```
-
-```TypeScript
-@Sendable
-class Sample {
-  constructor() {
-    this.count = 100;
-  }
-  printCount() {
-    console.info('Print count : ' + this.count);
-  }
-  count: number;
-}
-
-let emitter1: emitter.Emitter = new emitter.Emitter();
-
-let options: emitter.Options = {
-  priority: emitter.EventPriority.HIGH
-};
-let eventData: emitter.GenericEventData<Sample> = {
-  data: new Sample()
-};
-
-emitter1.emit('eventId', options, eventData);
 ```

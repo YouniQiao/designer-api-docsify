@@ -79,7 +79,7 @@ Default value: **16.0** (the background is a circle).
 
 If the value is **0.0**, the background is a right-angled rectangle. If the value is in the (0.0, 16.0) range, the background is a rounded rectangle. If the value is a negative number or greater than 16.0, the default value **16.0** is used, which means the background is a circle.
 
-**Type:** number \| Resource
+**Type:** number \| [Resource](../arkts-apis/arkts-arkui-resource-t.md)
 
 **Default:** 16.0
 

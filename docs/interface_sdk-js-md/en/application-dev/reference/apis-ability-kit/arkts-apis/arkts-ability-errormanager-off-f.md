@@ -142,7 +142,7 @@ This API can only be used in the main thread. If a thread error occurs, an error
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'loopObserver' | Yes | Event type. It is fixed at **'loopObserver'**, indicating an observer for the message processing duration of the main thread. |
-| observer | LoopObserver | No | Observer to unregister. |
+| observer | [LoopObserver](arkts-ability-errormanager-loopobserver-t.md) | No | Observer to unregister. |
 
 **Error codes:**
 

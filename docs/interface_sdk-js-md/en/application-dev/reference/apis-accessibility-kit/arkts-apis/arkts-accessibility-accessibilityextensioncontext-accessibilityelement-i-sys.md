@@ -1774,7 +1774,7 @@ Display layer of the element.
 longClickable?: boolean
 ```
 
-Whether the element is number-clickable. The value **true** indicates that the element is number-clickable, and **false** indicates the opposite.
+Whether the element is long-clickable. The value **true** indicates that the element is long-clickable, and **false** indicates the opposite.
 
 Default value: **false**.
 
@@ -2082,7 +2082,7 @@ Movement unit for text reading.
 
 Default value: **char**.
 
-**Type:** accessibility.TextMoveUnit
+**Type:** [accessibility.TextMoveUnit](arkts-accessibility-accessibility-textmoveunit-t.md)
 
 **Since:** 20
 

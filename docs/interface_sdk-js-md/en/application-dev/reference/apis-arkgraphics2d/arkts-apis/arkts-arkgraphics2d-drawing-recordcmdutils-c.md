@@ -37,7 +37,7 @@ Gets the canvas that records the drawing commands.
 
 | Type | Description |
 | --- | --- |
-| Canvas | Returns the canvas that records the drawing commands. |
+| [Canvas](arkts-arkgraphics2d-drawing-canvas-c.md) | Returns the canvas that records the drawing commands. |
 
 **Error codes:**
 
@@ -85,21 +85,6 @@ Gets the height of the recording canvas.
 | --- | --- |
 | number | Returns the height of recording canvas. |
 
-**Examples**
-
-```TypeScript
-import { RenderNode } from '@kit.ArkUI';
-import { drawing } from '@kit.ArkGraphics2D';
-
-class DrawingRenderNode extends RenderNode {
-  draw(context : DrawContext) {
-    const canvas = context.canvas;
-    let height = canvas.getHeight();
-    console.info('get canvas height:' + height);
-  }
-}
-```
-
 ## getWidth
 
 ```TypeScript
@@ -119,25 +104,3 @@ Gets the width of the recording canvas.
 | Type | Description |
 | --- | --- |
 | number | Returns the width of recording canvas. |
-
-**Examples**
-
-```TypeScript
-import { RenderNode } from '@kit.ArkUI';
-import { drawing } from '@kit.ArkGraphics2D';
-
-class DrawingRenderNode extends RenderNode {
-  draw(context : DrawContext) {
-    const canvas = context.canvas;
-    let width = canvas.getWidth();
-    console.info('get canvas width:' + width);
-  }
-}
-```
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-const pen = new drawing.Pen();
-let width = pen.getWidth();
-```

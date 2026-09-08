@@ -39,17 +39,6 @@ Creates an instance of ChildrenMainSize.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
 
-**Examples**
-
-```TypeScript
-@Builder
-function MyBuilder(value: string, size: number) {
-  Text(value)
-    .fontSize(size)
-}
-let builderVar: WrappedBuilder<[string, number]> = new WrappedBuilder<[string, number]>(MyBuilder);
-```
-
 ## splice
 
 ```TypeScript

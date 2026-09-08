@@ -40,7 +40,7 @@ authResult?: UserAuthResult
 
 授权结果。
 
-**类型：** UserAuthResult
+**类型：** [UserAuthResult](arkts-backgroundtasks-backgroundtaskmanager-userauthresult-e.md)
 
 **起始版本：** 22
 

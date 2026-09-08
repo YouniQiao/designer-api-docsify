@@ -28,8 +28,8 @@ Obtain latitude and longitude info from location address
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| request | GeoCodeRequest | Yes | Indicates the geocode query parameters. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;GeoAddress&gt;&gt; | Yes | Indicates the callback for reporting the latitude and longitude result. |
+| request | [GeoCodeRequest](arkts-location-geolocation-geocoderequest-i.md) | Yes | Indicates the geocode query parameters. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[GeoAddress](arkts-location-geolocation-geoaddress-i.md)&gt;&gt; | Yes | Indicates the callback for reporting the latitude and longitude result. |
 
 **Examples**
 
@@ -69,13 +69,13 @@ Obtain latitude and longitude info from location address
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| request | GeoCodeRequest | Yes | Indicates the geocode query parameters. |
+| request | [GeoCodeRequest](arkts-location-geolocation-geocoderequest-i.md) | Yes | Indicates the geocode query parameters. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;GeoAddress&gt;&gt; | The promise returned by the function. |
+| Promise&lt;Array&lt;[GeoAddress](arkts-location-geolocation-geoaddress-i.md)&gt;&gt; | The promise returned by the function. |
 
 **Examples**
 

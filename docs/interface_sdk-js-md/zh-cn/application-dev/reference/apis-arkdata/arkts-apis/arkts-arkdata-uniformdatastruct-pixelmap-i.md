@@ -36,7 +36,7 @@ pixelMap: image.PixelMap
 
 像素图对象。
 
-**类型：** image.PixelMap
+**类型：** [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)
 
 **起始版本：** 15
 
@@ -59,31 +59,3 @@ readonly uniformDataType: 'openharmony.pixel-map'
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
-
-**示例**
-
-```TypeScript
-import { unifiedDataChannel, uniformTypeDescriptor } from '@kit.ArkData';
-import { image } from '@kit.ImageKit';
-
-let u8Array = new Uint8Array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
-let arrayBuffer = new ArrayBuffer(4 * 200 * 200);
-let opt: image.InitializationOptions = {
-  editable: true,
-  pixelFormat: 3,
-  size: { height: 200, width: 200 },
-  alphaType: 3
-};
-let pixelMapDetails: Record<string, number | string | Uint8Array> = {
-  'pixelMapKey1': 123,
-  'pixelMapKey2': 'pixelMapValue',
-  'pixelMapKey3': u8Array
-};
-let pixelMap: uniformDataStruct.PixelMap = {
-  uniformDataType: 'openharmony.pixel-map',
-  pixelMap: image.createPixelMapSync(arrayBuffer, opt),
-  details: pixelMapDetails
-};
-console.info('pixelMap.uniformDataType: ' + pixelMap.uniformDataType);
-let record = new unifiedDataChannel.UnifiedRecord(uniformTypeDescriptor.UniformDataType.OPENHARMONY_PIXEL_MAP, pixelMap);
-```

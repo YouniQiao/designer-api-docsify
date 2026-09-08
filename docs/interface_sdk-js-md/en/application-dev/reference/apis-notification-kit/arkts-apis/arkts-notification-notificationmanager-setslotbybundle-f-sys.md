@@ -28,8 +28,8 @@ Before setting a notification slot, create a slot through [addSlot](arkts-notifi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundle | BundleOption | Yes | Bundle information of the application. |
-| slot | NotificationSlot | Yes | Notification slot. |
+| bundle | [BundleOption](arkts-notification-notificationmanager-bundleoption-t.md) | Yes | Bundle information of the application. |
+| slot | [NotificationSlot](arkts-notification-notificationmanager-notificationslot-t.md) | Yes | Notification slot. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
@@ -89,8 +89,8 @@ Before setting a notification slot, create a slot through [addSlot](arkts-notifi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundle | BundleOption | Yes | Bundle information of the application. |
-| slot | NotificationSlot | Yes | Notification slot. |
+| bundle | [BundleOption](arkts-notification-notificationmanager-bundleoption-t.md) | Yes | Bundle information of the application. |
+| slot | [NotificationSlot](arkts-notification-notificationmanager-notificationslot-t.md) | Yes | Notification slot. |
 
 **Return value:**
 

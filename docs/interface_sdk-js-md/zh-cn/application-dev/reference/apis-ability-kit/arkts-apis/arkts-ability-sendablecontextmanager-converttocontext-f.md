@@ -26,13 +26,13 @@ function convertToContext(sendableContext: SendableContext): common.Context
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| sendableContext | SendableContext | 是 |  |
+| sendableContext | [SendableContext](arkts-ability-sendablecontextmanager-sendablecontext-t.md) | 是 |  |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| common.Context | [Context]{ |
+| [common.Context](arkts-ability-common-context-t.md) | [Context]{ |
 
 **错误码：**
 

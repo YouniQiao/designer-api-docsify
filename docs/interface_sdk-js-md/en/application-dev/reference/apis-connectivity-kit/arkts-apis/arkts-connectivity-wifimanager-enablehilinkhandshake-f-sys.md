@@ -28,7 +28,7 @@ Enable hiLink handshake.
 | --- | --- | --- | --- |
 | isHiLinkEnable | boolean | Yes | Indicates the HiLink enable or not. |
 | bssid | string | Yes | Indicates the Wi-Fi bssid. |
-| config | WifiDeviceConfig | Yes | Indicates the Wi-Fi device config. |
+| config | [WifiDeviceConfig](arkts-connectivity-wifimanager-wifideviceconfig-i.md) | Yes | Indicates the Wi-Fi device config. |
 
 **Error codes:**
 

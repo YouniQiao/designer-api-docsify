@@ -34,7 +34,7 @@ state: DataConnectState
 
 数据连接状态。
 
-**类型：** DataConnectState
+**类型：** [DataConnectState](arkts-telephony-observer-dataconnectstate-t.md)
 
 **起始版本：** 11
 

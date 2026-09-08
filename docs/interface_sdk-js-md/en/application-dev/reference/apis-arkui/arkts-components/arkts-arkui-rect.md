@@ -108,6 +108,7 @@ struct RectExample {
 ```
 
 This example demonstrates how to use the universal attributes [linearGradient](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-gradient-color.md#lineargradient18) and [clipShape](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-sharp-clipping.md#clipshape18) to draw a gradient rectangle.
+The universal attributes linearGradient and clipShape are supported since API version 18.
 
 ```TypeScript
 // xxx.ets

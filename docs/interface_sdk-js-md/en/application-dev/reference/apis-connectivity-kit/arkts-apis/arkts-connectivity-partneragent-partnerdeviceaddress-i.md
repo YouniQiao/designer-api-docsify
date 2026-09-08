@@ -20,7 +20,7 @@ bluetoothAddress?: common.BluetoothAddress
 
 Bluetooth address of the partner device.
 
-**Type:** common.BluetoothAddress
+**Type:** [common.BluetoothAddress](arkts-connectivity-common-bluetoothaddress-i.md)
 
 **Since:** 23
 

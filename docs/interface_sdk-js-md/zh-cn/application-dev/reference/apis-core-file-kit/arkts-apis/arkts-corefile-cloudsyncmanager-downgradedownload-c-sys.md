@@ -129,7 +129,7 @@ startDownload(callback: Callback<DownloadProgress>): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DownloadProgress&gt; | 是 | 回调函数。全量下载进度，参数为DownloadProgress，返回值为void。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DownloadProgress](arkts-corefile-cloudsyncmanager-downloadprogress-c.md)&gt; | 是 | 回调函数。全量下载进度，参数为DownloadProgress，返回值为void。 |
 
 **返回值：**
 

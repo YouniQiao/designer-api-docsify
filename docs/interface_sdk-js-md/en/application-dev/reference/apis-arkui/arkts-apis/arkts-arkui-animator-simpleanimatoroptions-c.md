@@ -129,7 +129,7 @@ Sets the playback direction for this animator animation.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| direction | PlayMode | Yes | Playback direction.Default value: **PlayMode.Normal |
+| direction | [PlayMode](arkts-arkui-playmode-e.md) | Yes | Playback direction.Default value: **PlayMode.Normal |
 
 **Return value:**
 

@@ -32,48 +32,6 @@ constructor()
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
-**示例**
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-const brush = new drawing.Brush();
-```
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-let matrix = new drawing.Matrix();
-```
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-let path: drawing.Path = new drawing.Path();
-```
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-const pen = new drawing.Pen();
-```
-
-```TypeScript
-import { RenderNode, DrawContext } from '@kit.ArkUI';
-import { drawing } from '@kit.ArkGraphics2D';
-
-class DrawingRenderNode extends RenderNode {
-  draw(context: DrawContext) {
-    let samplingOptions = new drawing.SamplingOptions();
-  }
-}
-```
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-let typefaceArgument = new drawing.TypefaceArguments();
-```
-
 ## constructor
 
 ```TypeScript
@@ -90,34 +48,7 @@ constructor(region: Region)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| region | Region | 是 | 用于拷贝的区域。 |
-
-**示例**
-
-```TypeScript
-import { RenderNode } from '@kit.ArkUI';
-import { drawing } from '@kit.ArkGraphics2D';
-
-class DrawingRenderNode extends RenderNode {
-  draw(context: DrawContext) {
-    const canvas = context.canvas;
-    const pen = new drawing.Pen();
-    pen.setColor({
-      alpha: 255,
-      red: 255,
-      green: 0,
-      blue: 0
-    });
-    pen.setStrokeWidth(10);
-    canvas.attachPen(pen);
-    let region = new drawing.Region();
-    region.setRect(200, 200, 400, 400);
-    let region2 = new drawing.Region(region);
-    canvas.drawRegion(region2);
-    canvas.detachPen();
-  }
-}
-```
+| region | [Region](arkts-arkgraphics2d-drawing-region-c.md) | 是 | 用于拷贝的区域。 |
 
 ## constructor
 
@@ -140,31 +71,6 @@ constructor(left: number, top: number, right: number, bottom: number)
 | right | number | 是 | 矩形区域的右侧位置（矩形右下角横坐标）。该参数必须为整数。0表示坐标原点，负数表示位于坐标原点左侧，正数表示位于坐标原点右侧。单位为物理像素px。 |
 | bottom | number | 是 | 矩形区域的底部位置（矩形右下角纵坐标）。该参数必须为整数。0表示坐标原点，负数表示位于坐标原点上侧，正数表示位于坐标原点下侧。单位为物理像素px。 |
 
-**示例**
-
-```TypeScript
-import { RenderNode } from '@kit.ArkUI';
-import { drawing } from '@kit.ArkGraphics2D';
-
-class DrawingRenderNode extends RenderNode {
-  draw(context: DrawContext) {
-    const canvas = context.canvas;
-    const pen = new drawing.Pen();
-    pen.setColor({
-      alpha: 255,
-      red: 255,
-      green: 0,
-      blue: 0
-    });
-    pen.setStrokeWidth(10);
-    canvas.attachPen(pen);
-    let region = new drawing.Region(100, 100, 200, 200);
-    canvas.drawRegion(region);
-    canvas.detachPen();
-  }
-}
-```
-
 ## getBoundaryPath
 
 ```TypeScript
@@ -181,16 +87,7 @@ getBoundaryPath(): Path
 
 | 类型 | 说明 |
 | --- | --- |
-| Path | 返回当前区域边界的路径。 |
-
-**示例**
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-let region = new drawing.Region();
-let path = region.getBoundaryPath();
-```
+| [Path](arkts-arkgraphics2d-drawing-path-c.md) | 返回当前区域边界的路径。 |
 
 ## getBounds
 
@@ -208,29 +105,7 @@ getBounds(): common2D.Rect
 
 | 类型 | 说明 |
 | --- | --- |
-| common2D.Rect | 返回当前区域的边界矩形。 |
-
-**示例**
-
-```TypeScript
-import { common2D, drawing } from '@kit.ArkGraphics2D';
-
-const path = new drawing.Path();
-path.lineTo(50, 40);
-let rect : common2D.Rect = {left: 0, top: 0, right: 0, bottom: 0};
-rect = path.getBounds();
-console.info('test rect.left: ' + rect.left);
-console.info('test rect.top: ' + rect.top);
-console.info('test rect.right: ' + rect.right);
-console.info('test rect.bottom: ' + rect.bottom);
-```
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-let region = new drawing.Region();
-let rect = region.getBounds();
-```
+| [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) | 返回当前区域的边界矩形。 |
 
 ## isComplex
 
@@ -250,36 +125,6 @@ isComplex(): boolean
 | --- | --- |
 | boolean | 返回当前区域是否包含多个矩形的结果。true表示当前区域包含多个矩形，false表示当前区域不包含多个矩形。 |
 
-**示例**
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-import { RenderNode } from '@kit.ArkUI';
-
-class DrawingRenderNode extends RenderNode {
-  draw(context: DrawContext) {
-    const canvas = context.canvas;
-    const pen = new drawing.Pen();
-    pen.setColor({
-      alpha: 255,
-      red: 255,
-      green: 0,
-      blue: 0
-    });
-    pen.setStrokeWidth(10);
-    canvas.attachPen(pen);
-    let region = new drawing.Region();
-    region.setRect(100, 100, 200, 200);
-    region.op(new drawing.Region(220, 200, 280, 280), drawing.RegionOp.UNION);
-    let flag: boolean = false;
-    flag = region.isComplex();
-    console.info('flag :', flag);
-    canvas.drawRegion(region);
-    canvas.detachPen();
-  }
-}
-```
-
 ## isEmpty
 
 ```TypeScript
@@ -298,45 +143,6 @@ isEmpty(): boolean
 | --- | --- |
 | boolean | 返回当前区域是否为空的结果。true表示当前区域为空，false表示当前区域不为空。 |
 
-**示例**
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-let path = new drawing.Path();
-path.moveTo(10, 10);
-path.lineTo(20, 20);
-let isEmpty = path.isEmpty();
-console.info('isEmpty:', isEmpty);
-```
-
-```TypeScript
-import { RenderNode } from '@kit.ArkUI';
-import { drawing } from '@kit.ArkGraphics2D';
-
-class DrawingRenderNode extends RenderNode {
-  draw(context: DrawContext) {
-    const canvas = context.canvas;
-    const pen = new drawing.Pen();
-    pen.setColor({
-      alpha: 255,
-      red: 255,
-      green: 0,
-      blue: 0
-    });
-    pen.setStrokeWidth(10);
-    canvas.attachPen(pen);
-    let region = new drawing.Region();
-    let flag: boolean = region.isEmpty();
-    console.info('flag: ', flag);
-    region.setRect(100, 100, 400, 400);
-    flag = region.isEmpty();
-    console.info('flag: ', flag);
-    canvas.drawRegion(region);
-    canvas.detachPen();
-  }
-}
-```
-
 ## isEqual
 
 ```TypeScript
@@ -353,45 +159,13 @@ isEqual(other: Region): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| other | Region | 是 | 用于与当前区域进行比较的其他区域对象。 |
+| other | [Region](arkts-arkgraphics2d-drawing-region-c.md) | 是 | 用于与当前区域进行比较的其他区域对象。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
 | boolean | 返回其他区域是否与当前区域相等的结果。true表示相等，false表示不相等。 |
-
-**示例**
-
-```TypeScript
-import { RenderNode } from '@kit.ArkUI';
-import { drawing } from '@kit.ArkGraphics2D';
-
-class DrawingRenderNode extends RenderNode {
-  draw(context: DrawContext) {
-    const canvas = context.canvas;
-    const pen = new drawing.Pen();
-    pen.setColor({
-      alpha: 255,
-      red: 255,
-      green: 0,
-      blue: 0
-    });
-    pen.setStrokeWidth(10);
-    canvas.attachPen(pen);
-    let region = new drawing.Region();
-    let other = new drawing.Region();
-    region.setRect(100, 100, 400, 400);
-    other.setRect(150, 150, 250, 250);
-    let flag: boolean = false;
-    flag = region.isEqual(other);
-    console.info('flag: ', flag);
-    canvas.drawRegion(region);
-    canvas.drawRegion(other);
-    canvas.detachPen();
-  }
-}
-```
 
 ## isPointContained
 
@@ -424,36 +198,6 @@ isPointContained(x: number, y:number): boolean
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
 
-**示例**
-
-```TypeScript
-import { RenderNode } from '@kit.ArkUI';
-import { drawing } from '@kit.ArkGraphics2D';
-
-class DrawingRenderNode extends RenderNode {
-  draw(context: DrawContext) {
-    const canvas = context.canvas;
-    const pen = new drawing.Pen();
-    pen.setColor({
-      alpha: 255,
-      red: 255,
-      green: 0,
-      blue: 0
-    });
-    pen.setStrokeWidth(10);
-    canvas.attachPen(pen);
-    let region = new drawing.Region();
-    region.setRect(100, 100, 400, 400);
-    let flag: boolean = false;
-    flag = region.isPointContained(200, 200);
-    console.info("region isPointContained : " + flag);
-    canvas.drawPoint(200, 200);
-    canvas.drawRegion(region);
-    canvas.detachPen();
-  }
-}
-```
-
 ## isRect
 
 ```TypeScript
@@ -474,41 +218,6 @@ isRect(): boolean
 | --- | --- |
 | boolean | 返回当前区域是否等同于单个矩形的结果。true表示当前区域等同于单个矩形，false表示当前区域不等同于单个矩形。 |
 
-**示例**
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-import { RenderNode } from '@kit.ArkUI';
-
-class DrawingRenderNode extends RenderNode {
-  draw(context: DrawContext) {
-    const canvas = context.canvas;
-    const pen = new drawing.Pen();
-    pen.setColor({
-      alpha: 255,
-      red: 255,
-      green: 0,
-      blue: 0
-    });
-    pen.setStrokeWidth(10);
-    canvas.attachPen(pen);
-    let region = new drawing.Region();
-    let flag: boolean = false;
-    flag = region.isRect();
-    console.info('flag :', flag);
-    region.setRect(100, 100, 200, 200);
-    flag = region.isRect();
-    console.info('flag :', flag);
-    let other = new drawing.Region(220, 200, 280, 280);
-    region.op(other, drawing.RegionOp.UNION);
-    flag = region.isRect();
-    console.info('flag :', flag);
-    canvas.drawRegion(region);
-    canvas.detachPen();
-  }
-}
-```
-
 ## isRegionContained
 
 ```TypeScript
@@ -525,7 +234,7 @@ isRegionContained(other: Region): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| other | Region | 是 | 用于判断是否在当前区域内的其他区域对象。 |
+| other | [Region](arkts-arkgraphics2d-drawing-region-c.md) | 是 | 用于判断是否在当前区域内的其他区域对象。 |
 
 **返回值：**
 
@@ -538,38 +247,6 @@ isRegionContained(other: Region): boolean
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
-
-**示例**
-
-```TypeScript
-import { RenderNode } from '@kit.ArkUI';
-import { drawing } from '@kit.ArkGraphics2D';
-
-class DrawingRenderNode extends RenderNode {
-  draw(context: DrawContext) {
-    const canvas = context.canvas;
-    const pen = new drawing.Pen();
-    pen.setColor({
-      alpha: 255,
-      red: 255,
-      green: 0,
-      blue: 0
-    });
-    pen.setStrokeWidth(10);
-    canvas.attachPen(pen);
-    let region = new drawing.Region();
-    let other = new drawing.Region();
-    region.setRect(100, 100, 400, 400);
-    other.setRect(150, 150, 250, 250);
-    let flag: boolean = false;
-    flag = region.isRegionContained(other);
-    console.info("region isRegionContained : " + flag);
-    canvas.drawRegion(region);
-    canvas.drawRegion(other);
-    canvas.detachPen();
-  }
-}
-```
 
 ## offset
 
@@ -590,41 +267,6 @@ offset(dx: number, dy: number): void
 | dx | number | 是 | x轴方向平移量，正数往x轴正方向平移，负数往x轴负方向平移，该参数必须为整数。当输入的数字带小数时，小数部分会被舍去。单位为物理像素px。 |
 | dy | number | 是 | y轴方向平移量，正数往y轴正方向平移，负数往y轴负方向平移，该参数必须为整数。当输入的数字带小数时，小数部分会被舍去。单位为物理像素px。 |
 
-**示例**
-
-```TypeScript
-import { RenderNode } from '@kit.ArkUI';
-import { drawing } from '@kit.ArkGraphics2D';
-
-class DrawingRenderNode extends RenderNode {
-  draw(context: DrawContext) {
-    const canvas = context.canvas;
-    const pen = new drawing.Pen();
-    pen.setColor({
-      alpha: 255,
-      red: 255,
-      green: 0,
-      blue: 0
-    });
-    pen.setStrokeWidth(10);
-    canvas.attachPen(pen);
-    let region = new drawing.Region();
-    region.setRect(100, 100, 400, 400);
-    region.offset(10, 20);
-    canvas.drawPoint(200, 200);
-    canvas.drawRegion(region);
-    canvas.detachPen();
-  }
-}
-```
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-let roundRect: drawing.RoundRect = new drawing.RoundRect({left: 0, top: 0, right: 300, bottom: 300}, 50, 50);
-roundRect.offset(100, 100);
-```
-
 ## op
 
 ```TypeScript
@@ -641,7 +283,7 @@ op(region: Region, regionOp: RegionOp): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| region | Region | 是 | 用于与当前区域进行运算的指定区域对象。 |
+| region | [Region](arkts-arkgraphics2d-drawing-region-c.md) | 是 | 用于与当前区域进行运算的指定区域对象。 |
 | regionOp | [RegionOp](arkts-arkgraphics2d-drawing-regionop-e.md) | 是 | 区域运算操作类型。 |
 
 **返回值：**
@@ -655,37 +297,6 @@ op(region: Region, regionOp: RegionOp): boolean
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
-
-**示例**
-
-```TypeScript
-import { RenderNode } from '@kit.ArkUI';
-import { drawing } from '@kit.ArkGraphics2D';
-
-class DrawingRenderNode extends RenderNode {
-  draw(context: DrawContext) {
-    const canvas = context.canvas;
-    const pen = new drawing.Pen();
-    pen.setColor({
-      alpha: 255,
-      red: 255,
-      green: 0,
-      blue: 0
-    });
-    pen.setStrokeWidth(10);
-    canvas.attachPen(pen);
-    let region = new drawing.Region();
-    region.setRect(200, 200, 400, 400);
-    let othregion = new drawing.Region();
-    othregion.setRect(110, 110, 240, 240);
-    let flag: boolean = false;
-    flag = region.op(othregion, drawing.RegionOp.REPLACE);
-    console.info("region op : " + flag);
-    canvas.drawRegion(region);
-    canvas.detachPen();
-  }
-}
-```
 
 ## quickContains
 
@@ -715,39 +326,6 @@ quickContains(left: number, top: number, right: number, bottom: number): boolean
 | 类型 | 说明 |
 | --- | --- |
 | boolean | 返回判断结果。true表示当前区域等同于单个矩形且包含指定矩形，false表示当前区域不等同于单个矩形或不包含指定矩形。 |
-
-**示例**
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-import { RenderNode } from '@kit.ArkUI';
-
-class DrawingRenderNode extends RenderNode {
-  draw(context: DrawContext) {
-    const canvas = context.canvas;
-    const pen = new drawing.Pen();
-    pen.setColor({
-      alpha: 255,
-      red: 255,
-      green: 0,
-      blue: 0
-    });
-    pen.setStrokeWidth(10);
-    canvas.attachPen(pen);
-    let region = new drawing.Region();
-    let flag: boolean = false;
-    flag = region.quickContains(10, 10, 100, 100);
-    console.info('flag :', flag);
-    let other = new drawing.Region();
-    other.setRect(100, 100, 200, 200);
-    flag = other.quickContains(10, 10, 100, 100);
-    console.info('flag :', flag);
-    canvas.drawRegion(region);
-    canvas.drawRegion(other);
-    canvas.detachPen();
-  }
-}
-```
 
 ## quickReject
 
@@ -782,35 +360,6 @@ quickReject(left: number, top: number, right: number, bottom: number): boolean
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
 
-**示例**
-
-```TypeScript
-import { RenderNode } from '@kit.ArkUI';
-import { drawing } from '@kit.ArkGraphics2D';
-
-class DrawingRenderNode extends RenderNode {
-  draw(context: DrawContext) {
-    const canvas = context.canvas;
-    const pen = new drawing.Pen();
-    pen.setColor({
-      alpha: 255,
-      red: 255,
-      green: 0,
-      blue: 0
-    });
-    pen.setStrokeWidth(10);
-    canvas.attachPen(pen);
-    let region = new drawing.Region();
-    region.setRect(100, 100, 400, 400);
-    let flag: boolean = false;
-    flag = region.quickReject(50, 50, 70, 70);
-    console.info("region quickReject : " + flag);
-    canvas.drawRegion(region);
-    canvas.detachPen();
-  }
-}
-```
-
 ## quickRejectRegion
 
 ```TypeScript
@@ -827,43 +376,13 @@ quickRejectRegion(region: Region): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| region | Region | 是 | 用于判断是否与当前区域不相交的指定区域对象。 |
+| region | [Region](arkts-arkgraphics2d-drawing-region-c.md) | 是 | 用于判断是否与当前区域不相交的指定区域对象。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
 | boolean | 返回当前区域与另一个区域是否不相交的结果。true表示不相交，false表示相交。当两个区域仅点或边相交时，也返回true。 |
-
-**示例**
-
-```TypeScript
-import { RenderNode } from '@kit.ArkUI';
-import { drawing } from '@kit.ArkGraphics2D';
-
-class DrawingRenderNode extends RenderNode {
-  draw(context: DrawContext) {
-    const canvas = context.canvas;
-    const pen = new drawing.Pen();
-    pen.setColor({
-      alpha: 255,
-      red: 255,
-      green: 0,
-      blue: 0
-    });
-    pen.setStrokeWidth(10);
-    canvas.attachPen(pen);
-    let region = new drawing.Region();
-    let region2 = new drawing.Region();
-    region2.setRect(100, 100, 400, 400);
-    let flag: boolean = false;
-    flag = region.quickRejectRegion(region2);
-    console.info("region quickRejectRegion: " + flag);
-    canvas.drawRegion(region);
-    canvas.detachPen();
-  }
-}
-```
 
 ## setEmpty
 
@@ -876,25 +395,6 @@ setEmpty(): void
 **起始版本：** 20
 
 **系统能力：** SystemCapability.Graphics.Drawing
-
-**示例**
-
-```TypeScript
-import { RenderNode } from '@kit.ArkUI';
-import { drawing } from '@kit.ArkGraphics2D';
-
-class DrawingRenderNode extends RenderNode {
-  draw(context: DrawContext) {
-    let region = new drawing.Region();
-    region.setRect(100, 100, 200, 200);
-    let isEmpty = region.isEmpty();
-    console.info("isEmpty :" + isEmpty);
-    region.setEmpty();
-    isEmpty = region.isEmpty();
-    console.info("isEmpty :" + isEmpty);
-  }
-}
-```
 
 ## setPath
 
@@ -912,8 +412,8 @@ setPath(path: Path, clip: Region): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| path | Path | 是 | 用于设置区域轮廓的路径对象。 |
-| clip | Region | 是 | 裁剪区域对象，用于限定路径轮廓的有效范围，仅路径在裁剪区域内的部分会被用于设置区域。 |
+| path | [Path](arkts-arkgraphics2d-drawing-path-c.md) | 是 | 用于设置区域轮廓的路径对象。 |
+| clip | [Region](arkts-arkgraphics2d-drawing-region-c.md) | 是 | 裁剪区域对象，用于限定路径轮廓的有效范围，仅路径在裁剪区域内的部分会被用于设置区域。 |
 
 **返回值：**
 
@@ -926,37 +426,6 @@ setPath(path: Path, clip: Region): boolean
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
-
-**示例**
-
-```TypeScript
-import { RenderNode } from '@kit.ArkUI';
-import { drawing } from '@kit.ArkGraphics2D';
-
-class DrawingRenderNode extends RenderNode {
-  draw(context: DrawContext) {
-    const canvas = context.canvas;
-    const pen = new drawing.Pen();
-    pen.setColor({
-      alpha: 255,
-      red: 255,
-      green: 0,
-      blue: 0
-    });
-    pen.setStrokeWidth(10);
-    canvas.attachPen(pen);
-    let region = new drawing.Region();
-    let path = new drawing.Path();
-    region.setRect(100, 100, 400, 400);
-    path.arcTo(50, 50, 300, 300, 0, 359);
-    let flag: boolean = false;
-    flag = region.setPath(path, region);
-    console.info("region setPath : " + flag);
-    canvas.drawRegion(region);
-    canvas.detachPen();
-  }
-}
-```
 
 ## setRect
 
@@ -991,34 +460,6 @@ setRect(left: number, top: number, right: number, bottom: number): boolean
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
 
-**示例**
-
-```TypeScript
-import { RenderNode } from '@kit.ArkUI';
-import { drawing } from '@kit.ArkGraphics2D';
-
-class DrawingRenderNode extends RenderNode {
-  draw(context: DrawContext) {
-    const canvas = context.canvas;
-    const pen = new drawing.Pen();
-    pen.setColor({
-      alpha: 255,
-      red: 255,
-      green: 0,
-      blue: 0
-    });
-    pen.setStrokeWidth(10);
-    canvas.attachPen(pen);
-    let region = new drawing.Region();
-    let flag: boolean = false;
-    flag = region.setRect(50, 50, 300, 300);
-    console.info("region setRect : " + flag);
-    canvas.drawRegion(region);
-    canvas.detachPen();
-  }
-}
-```
-
 ## setRegion
 
 ```TypeScript
@@ -1035,32 +476,4 @@ setRegion(region: Region): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| region | Region | 是 | 用于设置当前区域内容的源区域对象。 |
-
-**示例**
-
-```TypeScript
-import { RenderNode } from '@kit.ArkUI';
-import { drawing } from '@kit.ArkGraphics2D';
-
-class DrawingRenderNode extends RenderNode {
-  draw(context: DrawContext) {
-    const canvas = context.canvas;
-    const pen = new drawing.Pen();
-    pen.setColor({
-      alpha: 255,
-      red: 255,
-      green: 0,
-      blue: 0
-    });
-    pen.setStrokeWidth(10);
-    canvas.attachPen(pen);
-    let region = new drawing.Region();
-    region.setRect(100, 100, 200, 200);
-    let region2 = new drawing.Region();
-    region2.setRegion(region);
-    canvas.drawRegion(region2);
-    canvas.detachPen();
-  }
-}
-```
+| region | [Region](arkts-arkgraphics2d-drawing-region-c.md) | 是 | 用于设置当前区域内容的源区域对象。 |

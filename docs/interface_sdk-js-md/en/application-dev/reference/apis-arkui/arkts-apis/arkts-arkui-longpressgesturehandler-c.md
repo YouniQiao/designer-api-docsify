@@ -1,6 +1,6 @@
 # LongPressGestureHandler
 
-Defines a number press gesture handler object.
+Defines a long press gesture handler object.
 
 **Inheritance/Implementation:** LongPressGestureHandler extends GestureHandler<LongPressGestureHandler>
 
@@ -19,7 +19,7 @@ Defines a number press gesture handler object.
 constructor(options?: LongPressGestureHandlerOptions)
 ```
 
-Constructor used to create a number press gesture handler instance.
+Constructor used to create a long press gesture handler instance.
 
 **Since:** 12
 
@@ -33,7 +33,7 @@ Constructor used to create a number press gesture handler instance.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [LongPressGestureHandlerOptions](arkts-arkui-longpressgesturehandleroptions-i.md) | No | Parameters of the number press gesture handler. |
+| options | [LongPressGestureHandlerOptions](arkts-arkui-longpressgesturehandleroptions-i.md) | No | Parameters of the long press gesture handler. |
 
 ## onAction
 
@@ -41,7 +41,7 @@ Constructor used to create a number press gesture handler instance.
 onAction(event: Callback<GestureEvent>): LongPressGestureHandler
 ```
 
-Sets the callback for successful number press gesture recognition.
+Sets the callback for successful long press gesture recognition.
 
 **Since:** 12
 
@@ -55,7 +55,7 @@ Sets the callback for successful number press gesture recognition.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | Callback&lt;[GestureEvent](arkts-arkui-gestureevent-i.md)&gt; | Yes | Callback invoked upon successful number press gesture recognition. |
+| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;[GestureEvent](arkts-arkui-gestureevent-i.md)&gt; | Yes | Callback invoked upon successful long press gesture recognition. |
 
 **Return value:**
 
@@ -69,7 +69,7 @@ Sets the callback for successful number press gesture recognition.
 onActionCancel(event: Callback<void>): LongPressGestureHandler
 ```
 
-Sets the callback for number press gesture cancellation. This callback is triggered when a touch cancellation event occurs after successful recognition. No gesture event information is returned.
+Sets the callback for long press gesture cancellation. This callback is triggered when a touch cancellation event occurs after successful recognition. No gesture event information is returned.
 
 **Since:** 12
 
@@ -83,7 +83,7 @@ Sets the callback for number press gesture cancellation. This callback is trigge
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | Callback&lt;void&gt; | Yes | Callback invoked when the number press gesture is cancelled. |
+| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;void&gt; | Yes | Callback invoked when the long press gesture is cancelled. |
 
 **Return value:**
 
@@ -97,7 +97,7 @@ Sets the callback for number press gesture cancellation. This callback is trigge
 onActionCancel(event: Callback<GestureEvent>): LongPressGestureHandler
 ```
 
-Sets the callback for number press gesture cancellation. This callback is triggered when a touch cancellation event occurs after successful recognition. Compared with [onActionCancel](#onactioncancel), this API returns gesture event information.
+Sets the callback for long press gesture cancellation. This callback is triggered when a touch cancellation event occurs after successful recognition. Compared with [onActionCancel](#onactioncancel), this API returns gesture event information.
 
 **Since:** 18
 
@@ -111,7 +111,7 @@ Sets the callback for number press gesture cancellation. This callback is trigge
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | Callback&lt;[GestureEvent](arkts-arkui-gestureevent-i.md)&gt; | Yes | Callback invoked when the number press gesture is cancelled. This callback returns gesture event information. |
+| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;[GestureEvent](arkts-arkui-gestureevent-i.md)&gt; | Yes | Callback invoked when the long press gesture is cancelled. This callback returns gesture event information. |
 
 **Return value:**
 
@@ -125,7 +125,7 @@ Sets the callback for number press gesture cancellation. This callback is trigge
 onActionEnd(event: Callback<GestureEvent>): LongPressGestureHandler
 ```
 
-Sets the callback for number press gesture recognition completion. This callback is triggered when all fingers are lifted after successful recognition.
+Sets the callback for long press gesture recognition completion. This callback is triggered when all fingers are lifted after successful recognition.
 
 **Since:** 12
 
@@ -139,7 +139,7 @@ Sets the callback for number press gesture recognition completion. This callback
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | Callback&lt;[GestureEvent](arkts-arkui-gestureevent-i.md)&gt; | Yes | Callback invoked when number press gesture recognition completes. |
+| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;[GestureEvent](arkts-arkui-gestureevent-i.md)&gt; | Yes | Callback invoked when long press gesture recognition completes. |
 
 **Return value:**
 

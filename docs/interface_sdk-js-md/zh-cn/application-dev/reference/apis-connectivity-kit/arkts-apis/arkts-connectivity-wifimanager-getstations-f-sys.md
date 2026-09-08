@@ -28,7 +28,7 @@ function getStations(): Array<StationInfo>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;StationInfo&gt; | 连接的设备数组。如果应用申请了ohos.permission.GET_WIFI_PEERS_MAC权限，则返回结果中的macAddress为真实设备地址，否则为随机设备地址。 |
+| Array&lt;[StationInfo](arkts-connectivity-wifimanager-stationinfo-i-sys.md)&gt; | 连接的设备数组。如果应用申请了ohos.permission.GET_WIFI_PEERS_MAC权限，则返回结果中的macAddress为真实设备地址，否则为随机设备地址。 |
 
 **错误码：**
 

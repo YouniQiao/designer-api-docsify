@@ -24,7 +24,7 @@ function getAbilityDelegator(): AbilityDelegator
 
 | 类型 | 说明 |
 | --- | --- |
-| AbilityDelegator | [AbilityDelegator]{ |
+| [AbilityDelegator](arkts-test-abilitydelegatorregistry-abilitydelegator-t.md) | [AbilityDelegator]{ |
 
 **示例**
 

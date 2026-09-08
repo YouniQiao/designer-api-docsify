@@ -358,8 +358,8 @@ Obtains the value of a key from this **Preferences** instance. This API uses an 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | key | string | Yes | Key to be obtained. The value cannot be empty. For details about its maximum length, see [MAX_KEY_LENGTH](../../../reference/apis-arkdata/js-apis-data-preferences.md#constants). |
-| defValue | ValueType | Yes | Default value to be returned. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ValueType&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the value obtained. Otherwise, **err** is an error object. |
+| defValue | [ValueType](arkts-arkdata-preferences-valuetype-t.md) | Yes | Default value to be returned. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ValueType](arkts-arkdata-preferences-valuetype-t.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the value obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -401,13 +401,13 @@ Obtains the value of a key from this **Preferences** instance. This API uses a p
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | key | string | Yes | Key to be obtained. The value cannot be empty. For details about its maximum length, see [MAX_KEY_LENGTH](../../../reference/apis-arkdata/js-apis-data-preferences.md#constants). |
-| defValue | ValueType | Yes | Default value to be returned. |
+| defValue | [ValueType](arkts-arkdata-preferences-valuetype-t.md) | Yes | Default value to be returned. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ValueType&gt; | Promise used to return the value obtained. |
+| Promise&lt;[ValueType](arkts-arkdata-preferences-valuetype-t.md)&gt; | Promise used to return the value obtained. |
 
 **Error codes:**
 
@@ -588,13 +588,13 @@ Obtains the value of a key from this **Preferences** instance. This API returns 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | key | string | Yes | Key to be obtained. The value cannot be empty. For details about its maximum length, see [MAX_KEY_LENGTH](../../../reference/apis-arkdata/js-apis-data-preferences.md#constants). |
-| defValue | ValueType | Yes | Default value to be returned. |
+| defValue | [ValueType](arkts-arkdata-preferences-valuetype-t.md) | Yes | Default value to be returned. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ValueType | Returns the value obtained. |
+| [ValueType](arkts-arkdata-preferences-valuetype-t.md) | Returns the value obtained. |
 
 **Error codes:**
 
@@ -865,7 +865,7 @@ Unsubscribes from changes of specific data.
 | --- | --- | --- | --- |
 | type | 'dataChange' | Yes | Event type. The value is **'dataChange'**, which indicates data changes. |
 | keys | Array&lt;string&gt; | Yes | Array of keys to be unsubscribed from. If this parameter is left empty, all keys are unsubscribed from. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, ValueType&gt;&gt; | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the changes of the specified data. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, [ValueType](arkts-arkdata-preferences-valuetype-t.md)&gt;&gt; | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the changes of the specified data. |
 
 **Error codes:**
 
@@ -1014,7 +1014,7 @@ Subscribes to changes of specific data. The registered callback will be invoked 
 | --- | --- | --- | --- |
 | type | 'dataChange' | Yes | Event type. The value is **'dataChange'**, which indicates data changes. |
 | keys | Array&lt;string&gt; | Yes | Array of the keys to be observed. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, ValueType&gt;&gt; | Yes | Callback used to return the changed data, in an array of KV pairs. The keys identify the data changed, and the values are the new values. The values support the following data types: number, string, boolean, Array&lt;number&gt;, Array&lt;string&gt;, Array&lt; boolean&gt;, Uint8Array, and object. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, [ValueType](arkts-arkdata-preferences-valuetype-t.md)&gt;&gt; | Yes | Callback used to return the changed data, in an array of KV pairs. The keys identify the data changed, and the values are the new values. The values support the following data types: number, string, boolean, Array&lt;number&gt;, Array&lt;string&gt;, Array&lt; boolean&gt;, Uint8Array, and object. |
 
 **Error codes:**
 
@@ -1066,7 +1066,7 @@ Writes data to this **Preferences** instance. This API uses an asynchronous call
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | key | string | Yes | Key to be modified. The value cannot be empty. For details about its maximum length, see [MAX_KEY_LENGTH](../../../reference/apis-arkdata/js-apis-data-preferences.md#constants). |
-| value | ValueType | Yes | Value to write. |
+| value | [ValueType](arkts-arkdata-preferences-valuetype-t.md) | Yes | Value to write. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
@@ -1109,7 +1109,7 @@ Writes data to this **Preferences** instance. This API uses a promise to return 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | key | string | Yes | Key to be modified. The value cannot be empty. For details about its maximum length, see [MAX_KEY_LENGTH](../../../reference/apis-arkdata/js-apis-data-preferences.md#constants). |
-| value | ValueType | Yes | Value to write. |
+| value | [ValueType](arkts-arkdata-preferences-valuetype-t.md) | Yes | Value to write. |
 
 **Return value:**
 
@@ -1156,7 +1156,7 @@ Writes data to this **Preferences** instance. This API returns the result synchr
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | key | string | Yes | Key to be modified. The value cannot be empty. For details about its maximum length, see [MAX_KEY_LENGTH](../../../reference/apis-arkdata/js-apis-data-preferences.md#constants). |
-| value | ValueType | Yes | Value to write. |
+| value | [ValueType](arkts-arkdata-preferences-valuetype-t.md) | Yes | Value to write. |
 
 **Error codes:**
 

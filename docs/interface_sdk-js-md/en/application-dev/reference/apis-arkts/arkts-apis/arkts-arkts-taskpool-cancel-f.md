@@ -24,7 +24,7 @@ Cancels a task in the task pool. If the task is in the internal queue of the tas
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| task | Task | Yes | Task to cancel. |
+| task | [Task](arkts-arkts-taskpool-task-c.md) | Yes | Task to cancel. |
 
 **Error codes:**
 

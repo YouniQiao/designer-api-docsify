@@ -30,7 +30,7 @@ Obtains an **IsoDepTag** object, which allows access to the tags that use the Is
 
 | Type | Description |
 | --- | --- |
-| IsoDepTag | IsoDepTag** object obtained. |
+| [IsoDepTag](arkts-connectivity-tag-isodeptag-t.md) | IsoDepTag** object obtained. |
 
 **Error codes:**
 

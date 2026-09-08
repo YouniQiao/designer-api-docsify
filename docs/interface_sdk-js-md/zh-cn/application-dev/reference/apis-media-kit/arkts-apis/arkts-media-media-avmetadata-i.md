@@ -218,7 +218,7 @@ hdrType?: HdrType
 
 媒体资源的HDR类型。不支持AVRecorder设置该属性。
 
-**类型：** HdrType
+**类型：** [HdrType](arkts-media-media-hdrtype-e.md)
 
 **起始版本：** 12
 
@@ -232,7 +232,7 @@ location?: Location
 
 视频的地理位置信息。
 
-**类型：** Location
+**类型：** [Location](arkts-media-media-location-i.md)
 
 **起始版本：** 12
 

@@ -24,7 +24,7 @@ Removes an event watcher.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| watcher | Watcher | Yes | Event watcher. |
+| watcher | [Watcher](arkts-performanceanalysis-hiappevent-watcher-i.md) | Yes | Event watcher. |
 
 **Error codes:**
 

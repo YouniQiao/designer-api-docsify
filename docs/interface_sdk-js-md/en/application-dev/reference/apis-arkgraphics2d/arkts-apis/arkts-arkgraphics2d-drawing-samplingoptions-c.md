@@ -33,50 +33,6 @@ Creates a **SamplingOptions** object, where the default value of [FilterMode](ar
 
 **System capability:** SystemCapability.Graphics.Drawing
 
-**Examples**
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-const brush = new drawing.Brush();
-```
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-let matrix = new drawing.Matrix();
-```
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-let path: drawing.Path = new drawing.Path();
-```
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-const pen = new drawing.Pen();
-```
-
-```TypeScript
-import { RenderNode } from '@kit.ArkUI';
-import { common2D, drawing } from '@kit.ArkGraphics2D';
-
-class DrawingRenderNode extends RenderNode {
-  draw(context : DrawContext) {
-    const canvas = context.canvas;
-    const pen = new drawing.Pen();
-    let samplingOptions = new drawing.SamplingOptions();
-  }
-}
-```
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-let typeFaceArgument = new drawing.TypefaceArguments();
-```
-
 ## constructor
 
 ```TypeScript
@@ -100,17 +56,3 @@ Creates a **SamplingOptions** object.
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
-
-**Examples**
-
-```TypeScript
-import { RenderNode } from '@kit.ArkUI';
-import { common2D, drawing } from '@kit.ArkGraphics2D';
-
-class DrawingRenderNode extends RenderNode {
-  draw(context : DrawContext) {
-    const canvas = context.canvas;
-    let samplingOptions = new drawing.SamplingOptions(drawing.FilterMode.FILTER_MODE_NEAREST);
-  }
-}
-```

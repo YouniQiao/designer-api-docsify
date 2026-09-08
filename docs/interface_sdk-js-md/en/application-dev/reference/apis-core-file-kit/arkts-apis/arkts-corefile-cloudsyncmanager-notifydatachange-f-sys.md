@@ -124,7 +124,7 @@ Notifies the device-cloud service of the cloud data change information of a spec
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | userId | number | Yes | User ID. |
-| extraData | ExtraData | Yes | Represents the cloud data change information. |
+| extraData | [ExtraData](arkts-corefile-cloudsyncmanager-extradata-i-sys.md) | Yes | Represents the cloud data change information. |
 
 **Return value:**
 
@@ -177,7 +177,7 @@ Notifies the device-cloud service of the cloud data change information of a spec
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | userId | number | Yes | User ID. |
-| extraData | ExtraData | Yes | Represents the cloud data change information. |
+| extraData | [ExtraData](arkts-corefile-cloudsyncmanager-extradata-i-sys.md) | Yes | Represents the cloud data change information. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the application data change in the cloud. |
 
 **Error codes:**

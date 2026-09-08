@@ -41,7 +41,7 @@ userInfo: UserInfo
 
 User information.
 
-**Type:** UserInfo
+**Type:** [UserInfo](arkts-arkdata-distributeddata-userinfo-i.md)
 
 **Since:** 7
 

@@ -132,7 +132,7 @@ function off(type: 'foldStatusChange', callback?: Callback<FoldStatus>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'foldStatusChange' | 是 | 监听事件，固定为'foldStatusChange'，表示折叠设备折叠状态发生变化。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;FoldStatus&gt; | 否 | 需要取消注册的回调函数。表示折叠设备折叠状态。若无此参数，则取消注册折叠状态变化监听的所有回调函数。<br>**适用版本：** 20 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[FoldStatus](arkts-arkui-display-foldstatus-e.md)&gt; | 否 | 需要取消注册的回调函数。表示折叠设备折叠状态。若无此参数，则取消注册折叠状态变化监听的所有回调函数。<br>**适用版本：** 20 |
 
 **错误码：**
 

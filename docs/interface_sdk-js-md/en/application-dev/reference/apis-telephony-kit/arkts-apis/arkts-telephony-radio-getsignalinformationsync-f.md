@@ -28,7 +28,7 @@ Obtains a list of signal strengths of the network with which the SIM card in the
 
 | Type | Description |
 | --- | --- |
-| Array&lt;SignalInformation&gt; | Array of child class objects derived from [SignalInformation]{ |
+| Array&lt;[SignalInformation](arkts-telephony-radio-signalinformation-i.md)&gt; | Array of child class objects derived from [SignalInformation]{ |
 
 **Examples**
 

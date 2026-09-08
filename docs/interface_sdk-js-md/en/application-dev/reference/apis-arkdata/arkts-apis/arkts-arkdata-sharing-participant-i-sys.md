@@ -54,7 +54,7 @@ privilege?: Privilege
 
 Permissions on the shared data. The Privilege defaults are used by default.
 
-**Type:** Privilege
+**Type:** [Privilege](arkts-arkdata-sharing-privilege-i-sys.md)
 
 **Since:** 11
 
@@ -70,7 +70,7 @@ role?: Role
 
 Role of the participant, inviter or invitee. The default value is undefined.
 
-**Type:** Role
+**Type:** [Role](arkts-arkdata-sharing-role-e-sys.md)
 
 **Since:** 11
 
@@ -86,7 +86,7 @@ state?: State
 
 State of the device-cloud sharing. The default value is undefined.
 
-**Type:** State
+**Type:** [State](arkts-arkdata-sharing-state-e-sys.md)
 
 **Since:** 11
 

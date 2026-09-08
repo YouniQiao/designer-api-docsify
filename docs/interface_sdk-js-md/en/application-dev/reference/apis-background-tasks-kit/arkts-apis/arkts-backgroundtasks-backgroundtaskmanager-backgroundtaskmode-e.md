@@ -167,7 +167,7 @@ Use scenarios: An application exports media files in the background or uses a th
 
 **NOTE：**
 
-1. If an application needs to run in the background for a number time,
+1. If an application needs to run in the background for a long time,
 it can request user authorization through the [requestAuthFromUser](arkts-backgroundtasks-backgroundtaskmanager-continuoustaskrequest-c.md#requestauthfromuser) API and check the authorization result via [checkSpecialScenarioAuth](arkts-backgroundtasks-backgroundtaskmanager-continuoustaskrequest-c.md#checkspecialscenarioauth).
 2. Since API version 24, this capability is available only to applications that have obtainedthe ACL permission  
 [ohos.permission.KEEP_BACKGROUND_RUNNING_SPECIAL_SCENARIO](../../../security/AccessToken/restricted-permissions.md#ohospermissionkeep_background_running_special_scenario). For API version 23 and earlier, this capability is available only to applications that have obtained the ACL permission [ohos.permission.KEEP_BACKGROUND_RUNNING_SYSTEM](../../../security/AccessToken/restricted-permissions.md#ohospermissionkeep_background_running_system). Applications that have obtained this permission are not affected for API version 24 and later.

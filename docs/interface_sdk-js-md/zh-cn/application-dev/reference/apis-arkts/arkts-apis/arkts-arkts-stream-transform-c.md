@@ -31,18 +31,6 @@ constructor()
 **示例**
 
 ```TypeScript
-let writableStream = new stream.Writable();
-```
-
-```TypeScript
-let readableStream = new stream.Readable();
-```
-
-```TypeScript
-let duplex = new stream.Duplex();
-```
-
-```TypeScript
 let transformStream = new stream.Transform();
 ```
 

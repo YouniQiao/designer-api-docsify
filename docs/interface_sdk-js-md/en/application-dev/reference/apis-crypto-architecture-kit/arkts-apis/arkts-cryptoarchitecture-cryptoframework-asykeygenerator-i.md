@@ -34,8 +34,8 @@ Converts asymmetric key data to a key pair object. This API uses an asynchronous
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pubKey | DataBlob | Yes | The public key data blob. |
-| priKey | DataBlob | Yes | The private key data blob. |
+| pubKey | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | Yes | The public key data blob. |
+| priKey | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | Yes | The private key data blob. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[KeyPair](arkts-cryptoarchitecture-cryptoframework-keypair-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the asymmetric key pair obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
@@ -48,52 +48,6 @@ Converts asymmetric key data to a key pair object. This API uses an asynchronous
 | [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed.<br>**Applicable version:** 26.0.0 and later |
 
 **Examples**
-
-```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
-
-function genKeyMaterialBlob(): cryptoFramework.DataBlob {
-  let arr = [
-    0xba, 0x3d, 0xc2, 0x71, 0x21, 0x1e, 0x30, 0x56,
-    0xad, 0x47, 0xfc, 0x5a, 0x46, 0x39, 0xee, 0x7c,
-    0xba, 0x3b, 0xc2, 0x71, 0xab, 0xa0, 0x30, 0x72]; // keyLen = 192 (24 bytes)
-  let keyMaterial = new Uint8Array(arr);
-  return { data: keyMaterial };
-}
-
-function testConvertKey() {
-  let symKeyGenerator = cryptoFramework.createSymKeyGenerator('3DES192');
-  let keyMaterialBlob = genKeyMaterialBlob();
-  symKeyGenerator.convertKey(keyMaterialBlob, (err, symKey) => {
-    console.info('Convert symKey result: success, algName: ' + symKey.algName);
-  });
-}
-```
-
-```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function genKeyMaterialBlob(): cryptoFramework.DataBlob {
-  let arr = [
-    0xba, 0x3d, 0xc2, 0x71, 0x21, 0x1e, 0x30, 0x56,
-    0xad, 0x47, 0xfc, 0x5a, 0x46, 0x39, 0xee, 0x7c,
-    0xba, 0x3b, 0xc2, 0x71, 0xab, 0xa0, 0x30, 0x72]; // keyLen = 192 (24 bytes)
-  let keyMaterial = new Uint8Array(arr);
-  return { data: keyMaterial };
-}
-
-function testConvertKey() {
-  let symKeyGenerator = cryptoFramework.createSymKeyGenerator('3DES192');
-  let keyMaterialBlob = genKeyMaterialBlob();
-  symKeyGenerator.convertKey(keyMaterialBlob)
-    .then(symKey => {
-      console.info('Convert symKey result: success, algName: ' + symKey.algName);
-    }).catch((error: BusinessError) => {
-      console.error(`Convert symKey failed, ${error.code}, ${error.message}`);
-    });
-}
-```
 
 ```TypeScript
 import { cryptoFramework } from '@kit.CryptoArchitectureKit';
@@ -161,8 +115,8 @@ Converts data into an asymmetric key pair. This API uses an asynchronous callbac
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pubKey | DataBlob \| null | Yes | Public key material to convert. If no public key needs to be converted, set this parameter to **null**. In versions earlier than API version 10, only **DataBlob** is supported. Since API version 10, **null** is also supported. |
-| priKey | DataBlob \| null | Yes | Private key material to convert. If no private key needs to be converted, set this parameter to **null**. In versions earlier than API version 10, only **DataBlob** is supported. Since API version 10, **null** is also supported. |
+| pubKey | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) \| null | Yes | Public key material to convert. If no public key needs to be converted, set this parameter to **null**. In versions earlier than API version 10, only **DataBlob** is supported. Since API version 10, **null** is also supported. |
+| priKey | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) \| null | Yes | Private key material to convert. If no private key needs to be converted, set this parameter to **null**. In versions earlier than API version 10, only **DataBlob** is supported. Since API version 10, **null** is also supported. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[KeyPair](arkts-cryptoarchitecture-cryptoframework-keypair-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the key pair obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
@@ -219,8 +173,8 @@ Converts asymmetric key data to a key pair object. This API uses a promise to re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pubKey | DataBlob | Yes | The public key data blob. |
-| priKey | DataBlob | Yes | The private key data blob. |
+| pubKey | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | Yes | The public key data blob. |
+| priKey | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | Yes | The private key data blob. |
 
 **Return value:**
 
@@ -239,7 +193,51 @@ Converts asymmetric key data to a key pair object. This API uses a promise to re
 
 **Examples**
 
-See [convertKey](#convertkey)
+```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+
+let pubKeyArray =
+  new Uint8Array([48, 89, 48, 19, 6, 7, 42, 134, 72, 206, 61, 2, 1, 6, 8, 42, 134, 72, 206, 61, 3, 1, 7, 3, 66, 0, 4,
+    83, 96, 142, 9, 86, 214, 126, 106, 247, 233, 92, 125, 4, 128, 138, 105, 246, 162, 215, 71, 81, 58, 202, 121, 26,
+    105, 211, 55, 130, 45, 236, 143, 55, 16, 248, 75, 167, 160, 167, 106, 2, 152, 243, 44, 68, 66, 0, 167, 99, 92, 235,
+    215, 159, 239, 28, 106, 124, 171, 34, 145, 124, 174, 57, 92]);
+let priKeyArray =
+  new Uint8Array([48, 49, 2, 1, 1, 4, 32, 115, 56, 137, 35, 207, 0, 60, 191, 90, 61, 136, 105, 210, 16, 27, 4, 171, 57,
+    10, 61, 123, 40, 189, 28, 34, 207, 236, 22, 45, 223, 10, 189, 160, 10, 6, 8, 42, 134, 72, 206, 61, 3, 1, 7]);
+let pubKeyBlob: cryptoFramework.DataBlob = { data: pubKeyArray }; // Binary data of the public key.
+let priKeyBlob: cryptoFramework.DataBlob = { data: priKeyArray }; // Binary data of the private key.
+let asyKeyGenerator = cryptoFramework.createAsyKeyGenerator('ECC256');
+asyKeyGenerator.convertKey(pubKeyBlob, priKeyBlob, (err, keyPair) => {
+  if (err) {
+    console.error(`convertKey failed, errCode: ${err.code}, errMsg: ${err.message}`);
+    return;
+  }
+  console.info('convertKey result: success.');
+});
+```
+
+```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let pubKeyArray =
+  new Uint8Array([48, 89, 48, 19, 6, 7, 42, 134, 72, 206, 61, 2, 1, 6, 8, 42, 134, 72, 206, 61, 3, 1, 7, 3, 66, 0, 4,
+    83, 96, 142, 9, 86, 214, 126, 106, 247, 233, 92, 125, 4, 128, 138, 105, 246, 162, 215, 71, 81, 58, 202, 121, 26,
+    105, 211, 55, 130, 45, 236, 143, 55, 16, 248, 75, 167, 160, 167, 106, 2, 152, 243, 44, 68, 66, 0, 167, 99, 92, 235,
+    215, 159, 239, 28, 106, 124, 171, 34, 145, 124, 174, 57, 92]);
+let priKeyArray =
+  new Uint8Array([48, 49, 2, 1, 1, 4, 32, 115, 56, 137, 35, 207, 0, 60, 191, 90, 61, 136, 105, 210, 16, 27, 4, 171, 57,
+    10, 61, 123, 40, 189, 28, 34, 207, 236, 22, 45, 223, 10, 189, 160, 10, 6, 8, 42, 134, 72, 206, 61, 3, 1, 7]);
+let pubKeyBlob: cryptoFramework.DataBlob = { data: pubKeyArray }; // Binary data of the public key.
+let priKeyBlob: cryptoFramework.DataBlob = { data: priKeyArray }; // Binary data of the private key.
+let asyKeyGenerator = cryptoFramework.createAsyKeyGenerator('ECC256');
+let keyGenPromise = asyKeyGenerator.convertKey(pubKeyBlob, priKeyBlob);
+keyGenPromise.then(keyPair => {
+  console.info('convertKey result: success.');
+}).catch((error: BusinessError) => {
+  console.error(`convertKey failed, errCode: ${error.code}, errMsg: ${error.message}`);
+});
+```
 
 ## convertKey
 
@@ -261,8 +259,8 @@ Converts data into an asymmetric key pair. This API uses a promise to return the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pubKey | DataBlob \| null | Yes | Public key material to convert. If no public key needs to be converted, set this parameter to **null**. In versions earlier than API version 10, only **DataBlob** is supported. Since API version 10, **null** is also supported. |
-| priKey | DataBlob \| null | Yes | Private key material to convert. If no private key needs to be converted, set this parameter to **null**. In versions earlier than API version 10, only **DataBlob** is supported. Since API version 10, **null** is also supported. |
+| pubKey | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) \| null | Yes | Public key material to convert. If no public key needs to be converted, set this parameter to **null**. In versions earlier than API version 10, only **DataBlob** is supported. Since API version 10, **null** is also supported. |
+| priKey | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) \| null | Yes | Private key material to convert. If no private key needs to be converted, set this parameter to **null**. In versions earlier than API version 10, only **DataBlob** is supported. Since API version 10, **null** is also supported. |
 
 **Return value:**
 
@@ -312,7 +310,7 @@ convertKeySync(pubKey: DataBlob | null, priKey: DataBlob | null): KeyPair
 
 Converts data into an asymmetric key pair. This API returns the result synchronously.
 
-**NOTE：**It is recommended to prioritize the use of asynchronous API, convertKey. Synchronous API may take a number time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
+**NOTE：**It is recommended to prioritize the use of asynchronous API, convertKey. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
 **Since:** 12
 
@@ -324,8 +322,8 @@ Converts data into an asymmetric key pair. This API returns the result synchrono
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pubKey | DataBlob \| null | Yes | Public key material. If no public key needs to be converted, set this parameter to **null**. Before API version 10, only **DataBlob** is supported. Since API version 10, **null** can be passed in. |
-| priKey | DataBlob \| null | Yes | Private key material. If no private key needs to be converted, set this parameter to **null**. Before API version 10, only **DataBlob** is supported. Since API version 10, **null** can be passed in. |
+| pubKey | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) \| null | Yes | Public key material. If no public key needs to be converted, set this parameter to **null**. Before API version 10, only **DataBlob** is supported. Since API version 10, **null** can be passed in. |
+| priKey | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) \| null | Yes | Private key material. If no private key needs to be converted, set this parameter to **null**. Before API version 10, only **DataBlob** is supported. Since API version 10, **null** can be passed in. |
 
 **Return value:**
 
@@ -557,7 +555,7 @@ Converts data into an asymmetric key pair. This API returns the result synchrono
 > [convertPemKey](#convertpemkey)
 > .
 
-**NOTE：**It is recommended to prioritize the use of asynchronous API, [convertPemKey](#convertpemkey). Synchronous API may take a number time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
+**NOTE：**It is recommended to prioritize the use of asynchronous API, [convertPemKey](#convertpemkey). Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
 **Since:** 12
 
@@ -643,7 +641,7 @@ Converts data into an asymmetric key pair. Encrypted private keys are supported.
 > [convertPemKey](#convertpemkey-1)
 > .
 
-**NOTE：**It is recommended to prioritize the use of asynchronous API, [convertPemKey](#convertpemkey). Synchronous API may take a number time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
+**NOTE：**It is recommended to prioritize the use of asynchronous API, [convertPemKey](#convertpemkey). Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
 **Since:** 18
 
@@ -757,47 +755,6 @@ asyKeyGenerator.generateKeyPair((err, keyPair) => {
 })
 ```
 
-```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
-
-// Set the common parameters of the DSA1024 public and private keys.
-function genDsa1024CommonSpecBigE() {
-  let dsaCommonSpec: cryptoFramework.DSACommonParamsSpec = {
-    algName: 'DSA',
-    specType: cryptoFramework.AsyKeySpecType.COMMON_PARAMS_SPEC,
-    p: BigInt('0xed1501551b8ab3547f6355ffdc2913856ddeca198833dbd04f020e5f25e47c50e0b3894f7690a0d2ea5ed3a7be25c54292a698e1f086eb3a97deb4dbf04fcad2dafd94a9f35c3ae338ab35477e16981ded6a5b13d5ff20bf55f1b262303ad3a80af71aa6aa2354d20e9c82647664bdb6b333b7bea0a5f49d55ca40bc312a1729'),
-    q: BigInt('0xd23304044019d5d382cfeabf351636c7ab219694ac845051f60b047b'),
-    g: BigInt('0x2cc266d8bd33c3009bd67f285a257ba74f0c3a7e12b722864632a0ac3f2c17c91c2f3f67eb2d57071ef47aaa8f8e17a21ad2c1072ee1ce281362aad01dcbcd3876455cd17e1dd55d4ed36fa011db40f0bbb8cba01d066f392b5eaa9404bfcb775f2196a6bc20eeec3db32d54e94d87ecdb7a0310a5a017c5cdb8ac78597778bd'),
-  }
-  return dsaCommonSpec;
-}
-
-// Set full parameters of the DSA1024 key pair.
-function genDsa1024KeyPairSpecBigE() {
-  let dsaCommonSpec = genDsa1024CommonSpecBigE();
-  let dsaKeyPairSpec: cryptoFramework.DSAKeyPairSpec = {
-    algName: 'DSA',
-    specType: cryptoFramework.AsyKeySpecType.KEY_PAIR_SPEC,
-    params: dsaCommonSpec,
-    sk: BigInt('0xa2dd2adb2d11392c2541930f61f1165c370aabd2d78d00342e0a2fd9'),
-    pk: BigInt('0xae6b5d5042e758f3fc9a02d009d896df115811a75b5f7b382d8526270dbb3c029403fafb8573ba4ef0314ea86f09d01e82a14d1ebb67b0c331f41049bd6b1842658b0592e706a5e4d20c14b67977e17df7bdd464cce14b5f13bae6607760fcdf394e0b73ac70aaf141fa4dafd736bd0364b1d6e6c0d7683a5de6b9221e7f2d6b'),
-  }
-  return dsaKeyPairSpec;
-}
-
-function testGenerateKeyPair() {
-  let asyKeyPairSpec = genDsa1024KeyPairSpecBigE(); // The input in JS must be a positive number in big-endian format.
-  let asyKeyGeneratorBySpec = cryptoFramework.createAsyKeyGeneratorBySpec(asyKeyPairSpec);
-  asyKeyGeneratorBySpec.generateKeyPair((err, keyPair) => {
-    if (err) {
-      console.error(`generateKeyPair failed, errCode: ${err.code}, errMsg: ${err.message}`);
-      return;
-    }
-    console.info('generateKeyPair result: success.');
-  })
-}
-```
-
 ## generateKeyPair
 
 ```TypeScript
@@ -843,47 +800,6 @@ keyGenPromise.then(keyPair => {
 });
 ```
 
-```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// Set the common parameters of the DSA1024 public and private keys.
-function genDsa1024CommonSpecBigE() {
-  let dsaCommonSpec: cryptoFramework.DSACommonParamsSpec = {
-    algName: 'DSA',
-    specType: cryptoFramework.AsyKeySpecType.COMMON_PARAMS_SPEC,
-    p: BigInt('0xed1501551b8ab3547f6355ffdc2913856ddeca198833dbd04f020e5f25e47c50e0b3894f7690a0d2ea5ed3a7be25c54292a698e1f086eb3a97deb4dbf04fcad2dafd94a9f35c3ae338ab35477e16981ded6a5b13d5ff20bf55f1b262303ad3a80af71aa6aa2354d20e9c82647664bdb6b333b7bea0a5f49d55ca40bc312a1729'),
-    q: BigInt('0xd23304044019d5d382cfeabf351636c7ab219694ac845051f60b047b'),
-    g: BigInt('0x2cc266d8bd33c3009bd67f285a257ba74f0c3a7e12b722864632a0ac3f2c17c91c2f3f67eb2d57071ef47aaa8f8e17a21ad2c1072ee1ce281362aad01dcbcd3876455cd17e1dd55d4ed36fa011db40f0bbb8cba01d066f392b5eaa9404bfcb775f2196a6bc20eeec3db32d54e94d87ecdb7a0310a5a017c5cdb8ac78597778bd'),
-  }
-  return dsaCommonSpec;
-}
-
-// Set full parameters of the DSA1024 key pair.
-function genDsa1024KeyPairSpecBigE() {
-  let dsaCommonSpec = genDsa1024CommonSpecBigE();
-  let dsaKeyPairSpec: cryptoFramework.DSAKeyPairSpec = {
-    algName: 'DSA',
-    specType: cryptoFramework.AsyKeySpecType.KEY_PAIR_SPEC,
-    params: dsaCommonSpec,
-    sk: BigInt('0xa2dd2adb2d11392c2541930f61f1165c370aabd2d78d00342e0a2fd9'),
-    pk: BigInt('0xae6b5d5042e758f3fc9a02d009d896df115811a75b5f7b382d8526270dbb3c029403fafb8573ba4ef0314ea86f09d01e82a14d1ebb67b0c331f41049bd6b1842658b0592e706a5e4d20c14b67977e17df7bdd464cce14b5f13bae6607760fcdf394e0b73ac70aaf141fa4dafd736bd0364b1d6e6c0d7683a5de6b9221e7f2d6b'),
-  }
-  return dsaKeyPairSpec;
-}
-
-function testGenerateKeyPair() {
-  let asyKeyPairSpec = genDsa1024KeyPairSpecBigE(); // The input in JS must be a positive number in big-endian format.
-  let asyKeyGeneratorBySpec = cryptoFramework.createAsyKeyGeneratorBySpec(asyKeyPairSpec);
-  let keyGenPromise = asyKeyGeneratorBySpec.generateKeyPair();
-  keyGenPromise.then(keyPair => {
-    console.info('generateKeyPair result: success.');
-  }).catch((error: BusinessError) => {
-    console.error(`generateKeyPair failed: errCode: ${error.code}, errMsg: ${error.message}`);
-  });
-}
-```
-
 ## generateKeyPairSync
 
 ```TypeScript
@@ -892,7 +808,7 @@ generateKeyPairSync(): KeyPair
 
 Generates a random key pair using this asymmetric key generator. This API returns the result synchronously.
 
-**NOTE：**It is recommended to prioritize the use of asynchronous API, generateKeyPair. Synchronous API may take a number time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
+**NOTE：**It is recommended to prioritize the use of asynchronous API, generateKeyPair. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
 **Since:** 12
 
@@ -929,52 +845,6 @@ try {
   }
 } catch (e) {
   console.error(`sync failed: errCode: ${e.code}, errMsg: ${e.message}`);
-}
-```
-
-```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// Set the common parameters of the DSA1024 public and private keys.
-function genDsa1024CommonSpecBigE() {
-  let dsaCommonSpec: cryptoFramework.DSACommonParamsSpec = {
-    algName: 'DSA',
-    specType: cryptoFramework.AsyKeySpecType.COMMON_PARAMS_SPEC,
-    p: BigInt('0xed1501551b8ab3547f6355ffdc2913856ddeca198833dbd04f020e5f25e47c50e0b3894f7690a0d2ea5ed3a7be25c54292a698e1f086eb3a97deb4dbf04fcad2dafd94a9f35c3ae338ab35477e16981ded6a5b13d5ff20bf55f1b262303ad3a80af71aa6aa2354d20e9c82647664bdb6b333b7bea0a5f49d55ca40bc312a1729'),
-    q: BigInt('0xd23304044019d5d382cfeabf351636c7ab219694ac845051f60b047b'),
-    g: BigInt('0x2cc266d8bd33c3009bd67f285a257ba74f0c3a7e12b722864632a0ac3f2c17c91c2f3f67eb2d57071ef47aaa8f8e17a21ad2c1072ee1ce281362aad01dcbcd3876455cd17e1dd55d4ed36fa011db40f0bbb8cba01d066f392b5eaa9404bfcb775f2196a6bc20eeec3db32d54e94d87ecdb7a0310a5a017c5cdb8ac78597778bd'),
-  }
-  return dsaCommonSpec;
-}
-
-// Set full parameters of the DSA1024 key pair.
-function genDsa1024KeyPairSpecBigE() {
-  let dsaCommonSpec = genDsa1024CommonSpecBigE();
-  let dsaKeyPairSpec: cryptoFramework.DSAKeyPairSpec = {
-    algName: 'DSA',
-    specType: cryptoFramework.AsyKeySpecType.KEY_PAIR_SPEC,
-    params: dsaCommonSpec,
-    sk: BigInt('0xa2dd2adb2d11392c2541930f61f1165c370aabd2d78d00342e0a2fd9'),
-    pk: BigInt('0xae6b5d5042e758f3fc9a02d009d896df115811a75b5f7b382d8526270dbb3c029403fafb8573ba4ef0314ea86f09d01e82a14d1ebb67b0c331f41049bd6b1842658b0592e706a5e4d20c14b67977e17df7bdd464cce14b5f13bae6607760fcdf394e0b73ac70aaf141fa4dafd736bd0364b1d6e6c0d7683a5de6b9221e7f2d6b'),
-  }
-  return dsaKeyPairSpec;
-}
-
-function testGenerateKeyPairSync() {
-  let asyKeyPairSpec = genDsa1024KeyPairSpecBigE(); // The input in JS must be a positive number in big-endian format.
-  let asyKeyGeneratorBySpec = cryptoFramework.createAsyKeyGeneratorBySpec(asyKeyPairSpec);
-  try {
-    let keyPairData = asyKeyGeneratorBySpec.generateKeyPairSync();
-    if (keyPairData != null) {
-      console.info('[Sync]: key pair result: success.');
-    } else {
-      console.error('[Sync]: get key pair result: fail.');
-    }
-  } catch (error) {
-    let e: BusinessError = error as BusinessError;
-    console.error(`sync failed: errCode: ${error.code}, errMsg: ${error.message}`);
-  }
 }
 ```
 

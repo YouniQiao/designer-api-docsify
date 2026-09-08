@@ -60,7 +60,7 @@ direction: USBRequestDirection
 
 Endpoint direction.
 
-**Type:** USBRequestDirection
+**Type:** [USBRequestDirection](arkts-basicservices-usb-usbrequestdirection-e.md)
 
 **Since:** 8
 

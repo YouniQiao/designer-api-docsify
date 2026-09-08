@@ -29,19 +29,7 @@ constructor()
 **示例**
 
 ```TypeScript
-let writableStream = new stream.Writable();
-```
-
-```TypeScript
 let readableStream = new stream.Readable();
-```
-
-```TypeScript
-let duplex = new stream.Duplex();
-```
-
-```TypeScript
-let transformStream = new stream.Transform();
 ```
 
 ## constructor
@@ -94,21 +82,6 @@ doInitialize(callback: Function): void
 | callback | Function | 是 | 回调函数。 |
 
 **示例**
-
-```TypeScript
-class MyWritable extends stream.Writable {
-  doInitialize(callback: Function) {
-    super.doInitialize(callback);
-    console.info("Writable doInitialize"); // Writable doInitialize
-  }
-
-  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
-    super.doWrite(chunk, encoding, callback);
-  }
-}
-
-new MyWritable();
-```
 
 ```TypeScript
 class MyReadable extends stream.Readable {
@@ -221,34 +194,9 @@ off(event: string, callback?: Callback<emitter.EventData>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | event | string | 是 | 事件回调类型，支持的事件包括：'close' \| 'data' \| 'end' \| 'error' \| 'readable' \| 'pause' \| 'resume'。   - 'close'：完成push()调用，传入null值，触发该事件。   - 'data'：当流传递给消费者一个数据块时触发该事件。   - 'end'：完成push()调用，传入null值，触发该事件。   - 'error'：流发生异常时触发。   - 'readable'：当有可从流中读取的数据时触发该事件。   - 'pause'：完成pause()调用，触发该事件。   - 'resume'：完成resume()调用，触发该事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;emitter.EventData&gt; | 否 | 指定事件的要注销的回调函数。不传入时注销指定事件的所有回调函数。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[emitter.EventData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-emitter-eventdata-i.md)&gt; | 否 | 指定事件的要注销的回调函数。不传入时注销指定事件的所有回调函数。 |
 
 **示例**
-
-```TypeScript
-class TestWritable extends stream.Writable {
-  constructor() {
-    super();
-  }
-
-  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
-    callback();
-  }
-}
-
-let writableStream = new TestWritable();
-let testListenerCalled = false;
-let testListener = () => {
-  testListenerCalled = true;
-};
-writableStream.on("finish", testListener);
-writableStream.off("finish");
-writableStream.write("test");
-writableStream.end();
-setTimeout(() => {
-  console.info("Writable off test", testListenerCalled.toString()); // Writable off test false
-}, 0);
-```
 
 ```TypeScript
 class TestReadable extends stream.Readable {
@@ -292,29 +240,9 @@ on(event: string, callback: Callback<emitter.EventData>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | event | string | 是 | 事件回调类型，支持的事件包括：'close' \| 'data' \| 'end' \| 'error' \| 'readable' \| 'pause' \| 'resume'。   - 'close'：完成push()调用，传入null值，触发该事件。   - 'data'：当流传递给消费者一个数据块时触发该事件。   - 'end'：完成push()调用，传入null值，触发该事件。   - 'error'：流发生异常时触发。   - 'readable'：当有可从流中读取的数据时触发该事件。   - 'pause'：完成pause()调用，触发该事件。   - 'resume'：完成resume()调用，触发该事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;emitter.EventData&gt; | 是 | 回调函数，返回事件数据。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[emitter.EventData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-emitter-eventdata-i.md)&gt; | 是 | 回调函数，返回事件数据。 |
 
 **示例**
-
-```TypeScript
-class TestWritable extends stream.Writable {
-  constructor() {
-    super();
-  }
-
-  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
-    callback(new Error());
-  }
-}
-
-let callbackCalled = false;
-let writableStream = new TestWritable();
-writableStream.on("error", () => {
-  console.info("Writable event test", callbackCalled.toString()); // Writable event test false
-});
-writableStream.write("hello", "utf8", () => {
-});
-```
 
 ```TypeScript
 class TestReadable extends stream.Readable {

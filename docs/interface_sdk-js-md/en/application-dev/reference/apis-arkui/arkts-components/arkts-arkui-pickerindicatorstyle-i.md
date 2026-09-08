@@ -58,7 +58,7 @@ in a unified manner.
 4. [LocalizedBorderRadiuses](../arkts-apis/arkts-arkui-localizedborderradiuses-i.md): Sets the size and unit of the four corner radii
 individually.
 
-**Type:** LengthMetrics \| [BorderRadiuses](../arkts-apis/arkts-arkui-borderradiuses-t.md) \| [LocalizedBorderRadiuses](../arkts-apis/arkts-arkui-localizedborderradiuses-i.md)
+**Type:** [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md) \| [BorderRadiuses](../arkts-apis/arkts-arkui-borderradiuses-t.md) \| [LocalizedBorderRadiuses](../arkts-apis/arkts-arkui-localizedborderradiuses-i.md)
 
 **Default:** { value:12, unit:LengthUnit.vp }
 
@@ -114,7 +114,7 @@ Value range: The sum of **startMargin** and **endMargin** must not exceed the wi
 
 This parameter takes effect only when **type** is set to **PickerIndicatorType.DIVIDER**.
 
-**Type:** LengthMetrics
+**Type:** [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md)
 
 **Default:** 0
 
@@ -144,7 +144,7 @@ NOTE
 
 This parameter takes effect only when **type** is set to **PickerIndicatorType.DIVIDER**.
 
-**Type:** LengthMetrics
+**Type:** [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md)
 
 **Default:** 0
 
@@ -176,7 +176,7 @@ NOTE
 2. If this parameter is set in **LengthMetrics.resource** mode, the value of a non-length attribute will be treated
 as 0 vp.
 
-**Type:** LengthMetrics
+**Type:** [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md)
 
 **Default:** 2.0px
 

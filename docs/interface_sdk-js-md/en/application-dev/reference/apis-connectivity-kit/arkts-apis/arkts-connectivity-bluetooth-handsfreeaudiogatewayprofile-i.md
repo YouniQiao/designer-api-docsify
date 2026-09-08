@@ -51,11 +51,6 @@ Connect to device with hfp.
 **Examples**
 
 ```TypeScript
-let a2dpSrc : bluetooth.A2dpSourceProfile = bluetooth.getProfile(bluetooth.ProfileId.PROFILE_A2DP_SOURCE) as bluetooth.A2dpSourceProfile;
-let ret : boolean = a2dpSrc.connect('XX:XX:XX:XX:XX:XX');
-```
-
-```TypeScript
 let hfpAg : bluetooth.HandsFreeAudioGatewayProfile= bluetooth.getProfile(bluetooth.ProfileId
     .PROFILE_HANDS_FREE_AUDIO_GATEWAY);
 let ret : boolean = hfpAg.connect('XX:XX:XX:XX:XX:XX');
@@ -94,11 +89,6 @@ Disconnect to device with hfp.
 **Examples**
 
 ```TypeScript
-let a2dpSrc : bluetooth.A2dpSourceProfile = bluetooth.getProfile(bluetooth.ProfileId.PROFILE_A2DP_SOURCE) as bluetooth.A2dpSourceProfile;
-let ret : boolean = a2dpSrc.disconnect('XX:XX:XX:XX:XX:XX');
-```
-
-```TypeScript
 let hfpAg : bluetooth.HandsFreeAudioGatewayProfile = bluetooth.getProfile(bluetooth.ProfileId
     .PROFILE_HANDS_FREE_AUDIO_GATEWAY);
 let ret : boolean = hfpAg.disconnect('XX:XX:XX:XX:XX:XX');
@@ -125,7 +115,7 @@ Unsubscribe the event reported when the profile connection state changes .
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'connectionStateChange' | Yes | Type of the profile connection state changes event to listen for . |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;StateChangeParam&gt; | No | Callback used to listen for event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[StateChangeParam](arkts-connectivity-bluetooth-statechangeparam-i.md)&gt; | No | Callback used to listen for event. |
 
 ## on('connectionStateChange')
 
@@ -148,4 +138,4 @@ Subscribe the event reported when the profile connection state changes .
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'connectionStateChange' | Yes | Type of the profile connection state changes event to listen for . |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;StateChangeParam&gt; | Yes | Callback used to listen for event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[StateChangeParam](arkts-connectivity-bluetooth-statechangeparam-i.md)&gt; | Yes | Callback used to listen for event. |

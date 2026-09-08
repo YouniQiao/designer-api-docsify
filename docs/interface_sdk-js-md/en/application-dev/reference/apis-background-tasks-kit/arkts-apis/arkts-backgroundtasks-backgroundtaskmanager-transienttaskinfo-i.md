@@ -34,7 +34,7 @@ transientTasks: DelaySuspendInfo[]
 
 All information about the requested transient task.
 
-**Type:** DelaySuspendInfo[]
+**Type:** [DelaySuspendInfo](arkts-backgroundtasks-backgroundtaskmanager-delaysuspendinfo-i.md)[]
 
 **Since:** 20
 

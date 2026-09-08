@@ -43,13 +43,6 @@ declare function rmdirSync(path: string): void
 | 13900018 | Not a directory |
 | 13900020 | Invalid argument |
 | 13900027 | Read-only file system |
-| 13900030 | File name too number |
+| 13900030 | File name too long |
 | 13900032 | Directory not empty |
 | 13900042 | Unknown error |
-
-**示例**
-
-```TypeScript
-let dirPath = pathDir + "/testDir";
-fileIo.rmdirSync(dirPath);
-```

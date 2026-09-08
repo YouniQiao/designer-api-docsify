@@ -165,7 +165,7 @@ valueResource?: Resource
 
 Content of the **SymbolSpan** component.
 
-**Type:** Resource
+**Type:** [Resource](../arkts-apis/arkts-arkui-resource-t.md)
 
 **Since:** 11
 

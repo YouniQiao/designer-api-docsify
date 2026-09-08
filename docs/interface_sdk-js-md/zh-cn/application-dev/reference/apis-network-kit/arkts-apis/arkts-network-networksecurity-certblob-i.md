@@ -34,7 +34,7 @@ type: CertType
 
 证书编码类型。
 
-**类型：** CertType
+**类型：** [CertType](arkts-network-networksecurity-certtype-e.md)
 
 **起始版本：** 11
 

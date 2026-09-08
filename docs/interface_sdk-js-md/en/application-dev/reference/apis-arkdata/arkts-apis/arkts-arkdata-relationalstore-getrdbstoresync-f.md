@@ -25,13 +25,13 @@ Obtains a RDB store. You can set parameters of the RDB store as required. This i
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | context | Context | Yes | Indicates the context of an application or ability. |
-| config | StoreConfig | Yes | Indicates the [StoreConfig](arkts-arkdata-relationalstore-storeconfig-i.md) configuration of the database related to this RDB store. |
+| config | [StoreConfig](arkts-arkdata-relationalstore-storeconfig-i.md) | Yes | Indicates the [StoreConfig](arkts-arkdata-relationalstore-storeconfig-i.md) configuration of the database related to this RDB store. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| RdbStore | The RDB store { |
+| [RdbStore](arkts-arkdata-relationalstore-rdbstore-i.md) | The RDB store { |
 
 **Error codes:**
 

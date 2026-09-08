@@ -2,7 +2,7 @@
 
 Enumerates the tone mapping types.
 
-@enum { number }
+@enum { int }
 
 **Since:** 12
 

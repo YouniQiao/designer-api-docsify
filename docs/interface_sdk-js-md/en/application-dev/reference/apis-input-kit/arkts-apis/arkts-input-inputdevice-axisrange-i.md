@@ -20,7 +20,7 @@ axis: AxisType
 
 Axis type of an input device.
 
-**Type:** AxisType
+**Type:** [AxisType](arkts-input-inputdevice-axistype-t.md)
 
 **Since:** 8
 
@@ -104,7 +104,7 @@ source: SourceType
 
 Input sources supported by the input device, including the keyboard, mouse, touchscreen, trackball, touchpad, and joystick.
 
-**Type:** SourceType
+**Type:** [SourceType](arkts-input-inputdevice-sourcetype-t.md)
 
 **Since:** 8
 

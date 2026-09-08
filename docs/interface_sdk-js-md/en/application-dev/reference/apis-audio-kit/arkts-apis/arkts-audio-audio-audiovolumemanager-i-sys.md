@@ -597,7 +597,7 @@ Gets the volume db value that system calculate by volume type, volume level and 
 | --- | --- | --- | --- |
 | volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | Yes | Audio volume type. |
 | volumeLevel | number | Yes | Volume level. |
-| device | DeviceType | Yes | Output device type. |
+| device | [DeviceType](arkts-audio-audio-devicetype-e.md) | Yes | Output device type. |
 
 **Return value:**
 

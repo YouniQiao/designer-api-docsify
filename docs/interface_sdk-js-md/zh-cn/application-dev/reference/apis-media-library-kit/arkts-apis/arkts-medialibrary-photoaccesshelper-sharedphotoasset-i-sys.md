@@ -246,7 +246,7 @@ dynamicRangeType: DynamicRangeType
 
 媒体文件的动态范围类型。
 
-**类型：** DynamicRangeType
+**类型：** [DynamicRangeType](arkts-medialibrary-photoaccesshelper-dynamicrangetype-e.md)
 
 **起始版本：** 13
 
@@ -342,7 +342,7 @@ mediaType: PhotoType
 
 图片资产的媒体类型。
 
-**类型：** PhotoType
+**类型：** [PhotoType](arkts-medialibrary-photoaccesshelper-phototype-e.md)
 
 **起始版本：** 13
 
@@ -358,7 +358,7 @@ movingPhotoEffectMode: MovingPhotoEffectMode
 
 动态照片效果模式。
 
-**类型：** MovingPhotoEffectMode
+**类型：** [MovingPhotoEffectMode](arkts-medialibrary-photoaccesshelper-movingphotoeffectmode-e-sys.md)
 
 **起始版本：** 13
 
@@ -406,7 +406,7 @@ position: PositionType
 
 图片资产存在位置。
 
-**类型：** PositionType
+**类型：** [PositionType](arkts-medialibrary-photoaccesshelper-positiontype-e.md)
 
 **起始版本：** 13
 
@@ -438,7 +438,7 @@ subtype: PhotoSubtype
 
 图片资产子类型。
 
-**类型：** PhotoSubtype
+**类型：** [PhotoSubtype](arkts-medialibrary-photoaccesshelper-photosubtype-e.md)
 
 **起始版本：** 13
 
@@ -502,7 +502,7 @@ thumbnailVisible: ThumbnailVisibility
 
 缩略图可见标识。
 
-**类型：** ThumbnailVisibility
+**类型：** [ThumbnailVisibility](arkts-medialibrary-photoaccesshelper-thumbnailvisibility-e-sys.md)
 
 **起始版本：** 14
 

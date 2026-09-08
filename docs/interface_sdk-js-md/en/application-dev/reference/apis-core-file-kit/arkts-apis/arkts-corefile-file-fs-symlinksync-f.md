@@ -44,14 +44,6 @@ Creates a symbolic link based on the file path. This API returns the result sync
 | 13900018 | Not a directory |
 | 13900025 | No space left on device |
 | 13900027 | Read-only file system |
-| 13900030 | File name too number |
+| 13900030 | File name too long |
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
-
-**Examples**
-
-```TypeScript
-let srcFile = pathDir + "/test.txt";
-let dstFile = pathDir + "/test";
-fileIo.symlinkSync(srcFile, dstFile);
-```

@@ -36,7 +36,7 @@ callback(result: EventInfo): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| result | EventInfo | 是 | 返回的认证结果信息或提示信息。 |
+| result | [EventInfo](arkts-userauthentication-userauth-eventinfo-t.md) | 是 | 返回的认证结果信息或提示信息。 |
 
 **示例**
 

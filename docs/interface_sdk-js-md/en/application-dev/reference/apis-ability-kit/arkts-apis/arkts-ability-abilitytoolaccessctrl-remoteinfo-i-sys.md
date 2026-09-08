@@ -69,7 +69,7 @@ role: Role
 
 Device role.
 
-**Type:** Role
+**Type:** [Role](arkts-ability-abilitytoolaccessctrl-role-e-sys.md)
 
 **Since:** 26.1.0
 

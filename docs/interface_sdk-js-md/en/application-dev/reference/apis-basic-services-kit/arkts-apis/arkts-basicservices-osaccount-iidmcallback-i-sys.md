@@ -71,7 +71,7 @@ Called to return the result code and request result information.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | result | number | Yes |  |
-| extraInfo | RequestResult | Yes |  |
+| extraInfo | [RequestResult](arkts-basicservices-osaccount-requestresult-i-sys.md) | Yes |  |
 
 **Examples**
 

@@ -24,13 +24,13 @@ Creates a subscriber synchronously.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| subscribeInfo | CommonEventSubscribeInfo | Yes | Subscriber information. |
+| subscribeInfo | [CommonEventSubscribeInfo](arkts-basicservices-commoneventmanager-commoneventsubscribeinfo-t.md) | Yes | Subscriber information. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| CommonEventSubscriber | Promise used to return the subscriber object. |
+| [CommonEventSubscriber](arkts-basicservices-commoneventmanager-commoneventsubscriber-t.md) | Promise used to return the subscriber object. |
 
 **Error codes:**
 

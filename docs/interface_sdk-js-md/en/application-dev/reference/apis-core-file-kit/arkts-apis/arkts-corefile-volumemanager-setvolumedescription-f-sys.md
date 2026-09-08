@@ -43,17 +43,6 @@ Sets volume description. This API uses an asynchronous callback to return the re
 | 13600008 | No such object. |
 | 13900042 | Unknown error. |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-let uuid: string = "";
-let description: string = "";
-volumeManager.setVolumeDescription(uuid, description, (error: BusinessError) => {
-  // Do something.   
-});
-```
-
 
 ## setVolumeDescription
 
@@ -96,16 +85,3 @@ Sets volume description. This API uses a promise to return the result.
 | 13600005 | Incorrect volume state. |
 | 13600008 | No such object. |
 | 13900042 | Unknown error. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-let uuid: string = "";
-let description: string = "";
-volumeManager.setVolumeDescription(uuid, description).then(() => {
-  console.info("setVolumeDescription successfully");
-}).catch((error: BusinessError) => {
-  console.error("setVolumeDescription failed with error:" + JSON.stringify(error));
-});
-```

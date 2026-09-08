@@ -25,22 +25,3 @@ type GetWantParamsCallback = (formInfo: Array<formInfo.FormInfo>) => Array<Recor
 | 类型 | 说明 |
 | --- | --- |
 | Array&lt;Record&lt;string, Object&gt;&gt; | 返回卡片参数列表，与输入的卡片信息列表一一对应。 |
-
-**示例**
-
-```TypeScript
-import { formInfo } from '@kit.FormKit';
-
-let getWantParamsCallback: formInfo.GetWantParamsCallback =
-  (formInfo: Array<formInfo.FormInfo>): Array<Record<string, Object>> => {
-    console.info('get want params callback, form count: ' + formInfo.length);
-    let wantParamsList: Array<Record<string, Object>> = [];
-    for (let i = 0; i < formInfo.length; i++) {
-      let params: Record<string, Object> = {
-        'key': 'value'
-      };
-      wantParamsList.push(params);
-    }
-    return wantParamsList;
-  };
-```

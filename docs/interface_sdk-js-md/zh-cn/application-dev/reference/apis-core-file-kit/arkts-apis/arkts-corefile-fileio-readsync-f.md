@@ -42,12 +42,3 @@ declare function readSync(
 | 类型 | 说明 |
 | --- | --- |
 | number | 实际读取的长度，单位为Byte。 |
-
-**示例**
-
-```TypeScript
-let filePath = pathDir + "/test.txt";
-let fd = fileio.openSync(filePath, 0o2);
-let buf = new ArrayBuffer(4096);
-let num = fileio.readSync(fd, buf);
-```

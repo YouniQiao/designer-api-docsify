@@ -38,7 +38,7 @@ fields: Array<Field>
 
 Field information in the table.
 
-**Type:** Array&lt;Field&gt;
+**Type:** Array&lt;[Field](arkts-arkdata-relationalstore-field-e.md)&gt;
 
 **Since:** 11
 

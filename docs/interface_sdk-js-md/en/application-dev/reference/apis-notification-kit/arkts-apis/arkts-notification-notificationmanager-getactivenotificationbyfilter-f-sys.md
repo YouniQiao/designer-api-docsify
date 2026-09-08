@@ -26,8 +26,8 @@ Obtains information about the common live view that matches the specified filter
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| filter | NotificationFilter | Yes | Filter criteria for querying the common live view. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;NotificationRequest&gt; | Yes | Callback used to return the result. |
+| filter | [NotificationFilter](arkts-notification-notificationmanager-notificationfilter-t-sys.md) | Yes | Filter criteria for querying the common live view. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[NotificationRequest](arkts-notification-notificationmanager-notificationrequest-t.md)&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -86,13 +86,13 @@ Obtains information about the common live view that matches the specified filter
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| filter | NotificationFilter | Yes | Filter criteria for querying the common live view. |
+| filter | [NotificationFilter](arkts-notification-notificationmanager-notificationfilter-t-sys.md) | Yes | Filter criteria for querying the common live view. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;NotificationRequest&gt; | Promise used to return the result. |
+| Promise&lt;[NotificationRequest](arkts-notification-notificationmanager-notificationrequest-t.md)&gt; | Promise used to return the result. |
 
 **Error codes:**
 

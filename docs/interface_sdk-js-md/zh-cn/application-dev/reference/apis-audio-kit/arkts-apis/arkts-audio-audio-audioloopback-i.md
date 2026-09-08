@@ -163,20 +163,6 @@ getVolume(): number
 | --- | --- |
 | number | 返回当前音频返听输出音量，范围为[0.0, 1.0]。 |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let value: number = audioRenderer.getVolume();
-  console.info(`Indicate that the volume is obtained ${value}.`);
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`Failed to obtain the volume, error ${error}.`);
-}
-```
-
 ## off('statusChange')
 
 ```TypeScript
@@ -316,15 +302,3 @@ setVolume(volume: number): Promise<void>
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed, form 0.0 to 1.0. |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioRenderer.setVolume(0.5).then(() => {
-  console.info('setVolume Success!');
-}).catch((err: BusinessError) => {
-  console.error(`setVolume Fail: ${err}`);
-});
-```

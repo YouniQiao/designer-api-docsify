@@ -32,8 +32,8 @@ function startBLEScan(filters: Array<ScanFilter>, options?: ScanOptions): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| filters | Array&lt;ScanFilter&gt; | 是 | 表示扫描结果过滤策略集合，如果不使用过滤的方式，该参数设置为null。 |
-| options | ScanOptions | 否 | 表示扫描的参数配置，可选参数。 |
+| filters | Array&lt;[ScanFilter](arkts-connectivity-ble-scanfilter-i.md)&gt; | 是 | 表示扫描结果过滤策略集合，如果不使用过滤的方式，该参数设置为null。 |
+| options | [ScanOptions](arkts-connectivity-ble-scanoptions-i.md) | 否 | 表示扫描的参数配置，可选参数。 |
 
 **错误码：**
 

@@ -22,7 +22,7 @@ bundle: BundleOption
 
 指定应用的包信息。
 
-**类型：** BundleOption
+**类型：** [BundleOption](arkts-notification-notificationmanager-bundleoption-t.md)
 
 **起始版本：** 21
 

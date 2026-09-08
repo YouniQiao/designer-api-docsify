@@ -22,7 +22,7 @@ imageTags?: image.PixelMap[]
 
 Tag descriptions of the setting content.
 
-**Type:** image.PixelMap[]
+**Type:** [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)[]
 
 **Since:** 23
 

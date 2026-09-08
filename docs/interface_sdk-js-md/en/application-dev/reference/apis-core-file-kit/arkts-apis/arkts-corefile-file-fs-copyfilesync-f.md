@@ -43,18 +43,10 @@ Copies a file. This API returns the result synchronously.
 | 13900018 | Not a directory |
 | 13900019 | Is a directory |
 | 13900020 | Invalid argument |
-| 13900030 | File name too number |
+| 13900030 | File name too long |
 | 13900031 | Function not implemented |
 | 13900033 | Too many symbolic links encountered |
 | 13900034 | Operation would block |
 | 13900038 | Value too large for defined data type |
 | 13900042 | Unknown error |
 | 13900044 | Network is unreachable<br>**Applicable version:** 12 and later |
-
-**Examples**
-
-```TypeScript
-let srcPath = pathDir + "/srcDir/test.txt";
-let dstPath = pathDir + "/dstDir/test.txt";
-fileIo.copyFileSync(srcPath, dstPath);
-```

@@ -32,8 +32,8 @@ This API is the synchronous version of [accessibility.getAccessibilityExtensionL
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| abilityType | AbilityType | Yes | Accessibility application type. |
-| stateType | AbilityState | Yes | Accessibility application status. |
+| abilityType | [AbilityType](arkts-accessibility-accessibility-abilitytype-t.md) | Yes | Accessibility application type. |
+| stateType | [AbilityState](arkts-accessibility-accessibility-abilitystate-t.md) | Yes | Accessibility application status. |
 
 **Return value:**
 

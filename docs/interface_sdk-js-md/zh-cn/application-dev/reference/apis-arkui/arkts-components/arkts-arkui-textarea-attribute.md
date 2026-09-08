@@ -149,7 +149,7 @@ contentType(contentType: ContentType)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| contentType | ContentType | 是 | 自动填充类型，用于指定输入框的自动填充内容类型，以便系统提供正确的自动填充建议。 |
+| contentType | [ContentType](arkts-arkui-contenttype-e.md) | 是 | 自动填充类型，用于指定输入框的自动填充内容类型，以便系统提供正确的自动填充建议。 |
 
 ## copyOption
 
@@ -171,7 +171,7 @@ copyOption(value: CopyOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | CopyOptions | 是 | 输入的文本是否可复制。 |
+| value | [CopyOptions](../arkts-apis/arkts-arkui-copyoptions-e.md) | 是 | 输入的文本是否可复制。 |
 
 ## customKeyboard
 
@@ -294,7 +294,7 @@ EllipsisMode.START和EllipsisMode.CENTER仅在[maxLines](#maxlines)设置为1生
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mode | [Optional](arkts-arkui-optional-t.md)&lt;EllipsisMode&gt; | 是 | 省略位置。需配合[textOverflow](#textoverflow)设置为TextOverflow.Ellipsis以及[maxLines](#maxlines)使用，单独设置不生效。EllipsisMode.START和EllipsisMode.CENTER仅在maxLines设置为1时生效。 |
+| mode | [Optional](arkts-arkui-optional-t.md)&lt;[EllipsisMode](../arkts-apis/arkts-arkui-ellipsismode-e.md)&gt; | 是 | 省略位置。需配合[textOverflow](#textoverflow)设置为TextOverflow.Ellipsis以及[maxLines](#maxlines)使用，单独设置不生效。EllipsisMode.START和EllipsisMode.CENTER仅在maxLines设置为1时生效。 |
 
 ## enableAutoFill
 
@@ -470,7 +470,7 @@ enterKeyType(value: EnterKeyType)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | EnterKeyType | 是 | 输入法回车键类型。 |
+| value | [EnterKeyType](arkts-arkui-enterkeytype-e.md) | 是 | 输入法回车键类型。 |
 
 ## fallbackLineSpacing
 
@@ -602,7 +602,7 @@ fontStyle(value: FontStyle)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | FontStyle | 是 | 字体样式。 |
+| value | [FontStyle](../arkts-apis/arkts-arkui-fontstyle-e.md) | 是 | 字体样式。 |
 
 ## fontWeight
 
@@ -622,7 +622,7 @@ fontWeight(value: number | FontWeight | ResourceStr)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number \| FontWeight \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | 是 | 文本的字体粗细number类型取值[100, 900]，取值间隔为100，取值越大，字体越粗。string类型仅支持number类型取值的字符串形式，例如“400”，以及“bold”、“bolder”、“lighter”、“ regular”、“medium”，分别对应FontWeight中相应的枚举值。设置过大可能会在不同字体下有截断。传入超出取值范围或不符合间隔要求的值时按400处理。从API version 20开始，支持Resource类型。<br>**适用版本：** 20 |
+| value | number \| [FontWeight](../arkts-apis/arkts-arkui-fontweight-e.md) \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | 是 | 文本的字体粗细number类型取值[100, 900]，取值间隔为100，取值越大，字体越粗。string类型仅支持number类型取值的字符串形式，例如“400”，以及“bold”、“bolder”、“lighter”、“ regular”、“medium”，分别对应FontWeight中相应的枚举值。设置过大可能会在不同字体下有截断。传入超出取值范围或不符合间隔要求的值时按400处理。从API version 20开始，支持Resource类型。<br>**适用版本：** 20 |
 
 ## halfLeading
 
@@ -796,7 +796,7 @@ letterSpacing(value: number | string | Resource)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number \| string \| Resource | 是 | 文本字符间距。设置为百分比时按默认值处理；设置为0时使用默认值；负值会导致文字压缩，过小时可能无内容显示。单位：[fp](../arkts-apis/arkts-arkui-length-t.md) |
+| value | number \| string \| [Resource](../arkts-apis/arkts-arkui-resource-t.md) | 是 | 文本字符间距。设置为百分比时按默认值处理；设置为0时使用默认值；负值会导致文字压缩，过小时可能无内容显示。单位：[fp](../arkts-apis/arkts-arkui-length-t.md) |
 
 ## lineBreakStrategy
 
@@ -840,7 +840,7 @@ lineHeight(value: number | string | Resource)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number \| string \| Resource | 是 | 文本的文本行高。需要显式指定像素单位，如'10px'，也可设置百分比字符串，如'100%'。   **说明：**不指定像素单位时，默认单位fp，如'10'，等同于10。 |
+| value | number \| string \| [Resource](../arkts-apis/arkts-arkui-resource-t.md) | 是 | 文本的文本行高。需要显式指定像素单位，如'10px'，也可设置百分比字符串，如'100%'。   **说明：**不指定像素单位时，默认单位fp，如'10'，等同于10。 |
 
 ## lineSpacing
 
@@ -907,7 +907,7 @@ maxFontScale(scale: Optional<number|Resource>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| scale | [Optional](arkts-arkui-optional-t.md)&lt;number \| Resource&gt; | 是 | 文本最大的字体缩放倍数，支持undefined类型。取值范围：1, +∞)    **说明：** 设置的值小于1时，按值为1处理。异常值默认不生效。使用前需在工程中配置configuration.json文件和app.json5文件，具体详见[示例17（设置最小字体范围与最大字体范围）。 |
+| scale | [Optional](arkts-arkui-optional-t.md)&lt;number \| [Resource](../arkts-apis/arkts-arkui-resource-t.md)&gt; | 是 | 文本最大的字体缩放倍数，支持undefined类型。取值范围：1, +∞)    **说明：** 设置的值小于1时，按值为1处理。异常值默认不生效。使用前需在工程中配置configuration.json文件和app.json5文件，具体详见[示例17（设置最小字体范围与最大字体范围）。 |
 
 ## maxFontSize
 
@@ -935,7 +935,7 @@ maxFontSize小于等于0或者maxFontSize小于minFontSize时，自适应字号�
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number \| string \| Resource | 是 | 文本最大显示字号。需配合minFontSize以及maxLines或布局大小限制使用，单独设置不生效。取值范围：(0, +∞)。超出取值范围时按照fontSize属性值生效。单位：[fp](../arkts-apis/arkts-arkui-length-t.md) |
+| value | number \| string \| [Resource](../arkts-apis/arkts-arkui-resource-t.md) | 是 | 文本最大显示字号。需配合minFontSize以及maxLines或布局大小限制使用，单独设置不生效。取值范围：(0, +∞)。超出取值范围时按照fontSize属性值生效。单位：[fp](../arkts-apis/arkts-arkui-length-t.md) |
 
 ## maxLength
 
@@ -1024,7 +1024,7 @@ minFontScale(scale: Optional<number|Resource>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| scale | [Optional](arkts-arkui-optional-t.md)&lt;number \| Resource&gt; | 是 | 文本最小的字体缩放倍数，支持undefined类型。取值范围：[0, 1]    **说明：** 设置的值小于0时，按值为0处理。设置的值大于1，按值为1处理。异常值默认不生效。使用前需在工程中配置configuration.json文件和app.json5文件，具体详见示例17（设置最小字体范围与最大字体范围）。 |
+| scale | [Optional](arkts-arkui-optional-t.md)&lt;number \| [Resource](../arkts-apis/arkts-arkui-resource-t.md)&gt; | 是 | 文本最小的字体缩放倍数，支持undefined类型。取值范围：[0, 1]    **说明：** 设置的值小于0时，按值为0处理。设置的值大于1，按值为1处理。异常值默认不生效。使用前需在工程中配置configuration.json文件和app.json5文件，具体详见示例17（设置最小字体范围与最大字体范围）。 |
 
 ## minFontSize
 
@@ -1052,7 +1052,7 @@ minFontSize小于或等于0时，自适应字号不生效，此时按照[fontSiz
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number \| string \| Resource | 是 | 文本最小显示字号。需配合maxFontSize以及maxLines或布局大小限制使用，单独设置不生效。取值范围：(0, maxFontSize]。超出取值范围时按照fontSize属性值生效。单位：[fp](../arkts-apis/arkts-arkui-length-t.md) |
+| value | number \| string \| [Resource](../arkts-apis/arkts-arkui-resource-t.md) | 是 | 文本最小显示字号。需配合maxFontSize以及maxLines或布局大小限制使用，单独设置不生效。取值范围：(0, maxFontSize]。超出取值范围时按照fontSize属性值生效。单位：[fp](../arkts-apis/arkts-arkui-length-t.md) |
 
 ## minLines
 
@@ -1886,7 +1886,7 @@ textAlign(value: TextAlign)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | TextAlign | 是 | 文本在输入框中的水平对齐方式。 |
+| value | [TextAlign](../arkts-apis/arkts-arkui-textalign-e.md) | 是 | 文本在输入框中的水平对齐方式。 |
 
 ## textDirection
 
@@ -1908,7 +1908,7 @@ textDirection(direction: TextDirection | undefined)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| direction | TextDirection \| undefined | 是 | 文本排版方向。设置为undefined时，按照TextDirection.DEFAULT处理，表现为文本排版方向遵循组件布局方向。 |
+| direction | [TextDirection](../arkts-apis/arkts-arkui-textdirection-e.md) \| undefined | 是 | 文本排版方向。设置为undefined时，按照TextDirection.DEFAULT处理，表现为文本排版方向遵循组件布局方向。 |
 
 ## textIndent
 
@@ -2008,4 +2008,4 @@ wordBreak(value: WordBreak)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | WordBreak | 是 | 文本断行规则。 |
+| value | [WordBreak](../arkts-apis/arkts-arkui-wordbreak-e.md) | 是 | 文本断行规则。 |

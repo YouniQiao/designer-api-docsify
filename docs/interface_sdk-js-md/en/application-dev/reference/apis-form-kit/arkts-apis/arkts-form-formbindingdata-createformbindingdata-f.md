@@ -30,7 +30,7 @@ Creates a **FormBindingData** object.
 
 | Type | Description |
 | --- | --- |
-| FormBindingData | FormBindingData** object created based on the passed data. |
+| [FormBindingData](arkts-form-formbindingdata-formbindingdata-i.md) | FormBindingData** object created based on the passed data. |
 
 **Error codes:**
 

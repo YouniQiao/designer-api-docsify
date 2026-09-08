@@ -32,14 +32,6 @@ constructor()
 let documentPicker = new picker.DocumentViewPicker(); // 不推荐使用无参构造，会出现概率性拉起失败问题
 ```
 
-```TypeScript
-let audioPicker = new picker.AudioViewPicker(); // 不推荐使用无参构造，会出现概率性拉起失败问题
-```
-
-```TypeScript
-let photoPicker = new picker.PhotoViewPicker(); // 不推荐使用无参构造，会出现概率性拉起失败问题
-```
-
 ## constructor
 
 ```TypeScript
@@ -88,58 +80,6 @@ struct Index {
 }
 ```
 
-```TypeScript
-import { common } from '@kit.AbilityKit';
-import { picker } from '@kit.CoreFileKit';
-@Entry
-@Component
-struct Index {
-  @State message: string = 'hello World';
-
-  build() {
-    Row() {
-      Column() {
-        Text(this.message)
-          .fontSize(50)
-          .fontWeight(FontWeight.Bold)
-          .onClick(() => {
-            let context = this.getUIContext().getHostContext() as common.UIAbilityContext; // 请确保this.getUIContext().getHostContext()返回结果为UIAbilityContext
-            let audioPicker = new picker.AudioViewPicker(context);
-          })
-      }
-      .width('100%')
-    }
-    .height('100%')
-  }
-}
-```
-
-```TypeScript
-import { common } from '@kit.AbilityKit';
-import { picker } from '@kit.CoreFileKit';
-@Entry
-@Component
-struct Index {
-  @State message: string = 'hello World';
-
-  build() {
-    Row() {
-      Column() {
-        Text(this.message)
-          .fontSize(50)
-          .fontWeight(FontWeight.Bold)
-          .onClick(() => {
-            let context = this.getUIContext().getHostContext() as common.UIAbilityContext; // 请确保this.getUIContext().getHostContext()返回结果为UIAbilityContext
-            let photoPicker = new picker.PhotoViewPicker(context);
-          })
-      }
-      .width('100%')
-    }
-    .height('100%')
-  }
-}
-```
-
 ## constructor
 
 ```TypeScript
@@ -161,7 +101,7 @@ constructor(context: Context, window: window.Window)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | 是 | 应用上下文（仅支持UIAbilityContext）。Stage模型的应用Context定义见Context。 |
-| window | window.Window | 是 | 应用创建的窗口实例。 |
+| window | [window.Window](../../apis-arkui/arkts-apis/arkts-arkui-window-window-i.md) | 是 | 应用创建的窗口实例。 |
 
 **示例**
 
@@ -352,48 +292,6 @@ async function example12(context: common.UIAbilityContext) { // 需确保 contex
 }
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-import { picker } from '@kit.CoreFileKit';
-async function example18(context: common.UIAbilityContext) { // 需确保 context 由 UIAbilityContext 转换而来
-  try {
-    let audioPicker = new picker.AudioViewPicker(context);
-    audioPicker.save((err: BusinessError, audioSaveResult: Array<string>) => {
-      if (err) {
-        console.error(`AudioViewPicker.save failed with err, code is: ${err.code}, message is: ${err.message}`);
-        return;
-      }
-      console.info('AudioViewPicker.save successfully, audioSaveResult uri: ' + JSON.stringify(audioSaveResult));
-    });
-  } catch (error) {
-    let err: BusinessError = error as BusinessError;
-    console.error(`AudioViewPicker failed with err, code is: ${err.code}, message is: ${err.message}`);
-  }
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-import { picker } from '@kit.CoreFileKit';
-async function example06(context: common.UIAbilityContext) { // 需确保 context 由 UIAbilityContext 转换而来
-  try {
-    let photoPicker = new picker.PhotoViewPicker(context);
-    photoPicker.save((err: BusinessError, photoSaveResult: Array<string>) => {
-      if (err) {
-        console.error(`PhotoViewPicker.save failed with err, code is: ${err.code}, message is: ${err.message}`);
-        return;
-      }
-      console.info('PhotoViewPicker.save successfully, photoSaveResult uri: ' + JSON.stringify(photoSaveResult));
-    });
-  } catch (error) {
-    let err: BusinessError = error as BusinessError;
-    console.error(`PhotoViewPicker failed with err, code is: ${err.code}, message is: ${err.message}`);
-  }
-}
-```
-
 ## select
 
 ```TypeScript
@@ -526,27 +424,6 @@ async function example09(context: common.UIAbilityContext) { // 需确保 contex
   } catch (error) {
     let err: BusinessError = error as BusinessError;
     console.error(`DocumentViewPicker failed with err, code is: ${err.code}, message is: ${err.message}`);
-  }
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-import { picker } from '@kit.CoreFileKit';
-async function example15(context: common.UIAbilityContext) { // 需确保 context 由 UIAbilityContext 转换而来
-  try {
-    let audioPicker = new picker.AudioViewPicker(context);
-    audioPicker.select((err: BusinessError, audioSelectResult: Array<string>) => {
-      if (err) {
-        console.error(`AudioViewPicker.select failed with err, code is: ${err.code}, message is: ${err.message}`);
-        return;
-      }
-      console.info('AudioViewPicker.select successfully, audioSelectResult uri: ' + JSON.stringify(audioSelectResult));
-    });
-  } catch (error) {
-    let err: BusinessError = error as BusinessError;
-    console.error(`AudioViewPicker failed with err, code is: ${err.code}, message is: ${err.message}`);
   }
 }
 ```

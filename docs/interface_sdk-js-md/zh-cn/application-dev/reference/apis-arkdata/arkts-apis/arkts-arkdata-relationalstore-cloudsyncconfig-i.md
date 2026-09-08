@@ -36,7 +36,7 @@ mode: SyncMode
 
 数据库同步模式。
 
-**类型：** SyncMode
+**类型：** [SyncMode](arkts-arkdata-relationalstore-syncmode-e.md)
 
 **起始版本：** 26.0.0
 
@@ -52,7 +52,7 @@ predicate?: RdbPredicates
 
 表级同步谓词。仅当enablePredicate为true时，此参数有效。
 
-**类型：** RdbPredicates
+**类型：** [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md)
 
 **起始版本：** 26.0.0
 

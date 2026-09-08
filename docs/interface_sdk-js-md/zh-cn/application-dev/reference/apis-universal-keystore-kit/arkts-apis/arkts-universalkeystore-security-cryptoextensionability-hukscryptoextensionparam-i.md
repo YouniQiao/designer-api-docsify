@@ -20,7 +20,7 @@ tag: huksExternalCrypto.HuksExternalCryptoTag | huks.HuksTag | number
 
 参数标签，用于区分参数。
 
-**类型：** huksExternalCrypto.HuksExternalCryptoTag \| huks.HuksTag \| number
+**类型：** [huksExternalCrypto.HuksExternalCryptoTag](arkts-universalkeystore-huksexternalcrypto-huksexternalcryptotag-e.md) \| [huks.HuksTag](arkts-universalkeystore-huks-hukstag-e.md) \| number
 
 **起始版本：** 26.0.0
 

@@ -41,45 +41,8 @@ constructor()
 ```TypeScript
 import { intl } from '@kit.LocalizationKit';
 
-// 默认构造函数使用系统当前区域ID创建
-let locale = new intl.Locale();
-// 返回系统当前区域ID
-let localeID = locale.toString();
-```
-
-```TypeScript
-import { intl } from '@kit.LocalizationKit';
-
 // 使用系统当前区域ID创建DateTimeFormat对象
 let formatter: intl.DateTimeFormat = new intl.DateTimeFormat();
-```
-
-```TypeScript
-import { intl } from '@kit.LocalizationKit';
-
-// 使用系统当前区域ID创建NumberFormat对象
-let formatter: intl.NumberFormat = new intl.NumberFormat();
-```
-
-```TypeScript
-import { intl } from '@kit.LocalizationKit';
-
-// 使用系统区域创建Collator对象
-let collator = new intl.Collator();
-```
-
-```TypeScript
-import { intl } from '@kit.LocalizationKit';
-
-// 使用系统区域创建PluralRules对象
-let pluralRules = new intl.PluralRules();
-```
-
-```TypeScript
-import { intl } from '@kit.LocalizationKit';
-
-// 使用系统区域创建RelativeTimeFormat对象
-let formatter: intl.RelativeTimeFormat = new intl.RelativeTimeFormat();
 ```
 
 ## constructor
@@ -107,7 +70,7 @@ constructor(locale: string | Array<string>, options?: DateTimeOptions)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | locale | string \| Array&lt;string&gt; | 是 | 区域ID或区域ID数组。输入是区域ID数组时，使用第一个有效的区域ID。 |
-| options | DateTimeOptions | 否 | 创建时间日期格式化对象时可设置的配置项。若所有选项均未设置时，year、month、day三个属性的默认值为numeric。默认值：所有属性都取默认值时的配置项。 |
+| options | [DateTimeOptions](arkts-localization-intl-datetimeoptions-i.md) | 否 | 创建时间日期格式化对象时可设置的配置项。若所有选项均未设置时，year、month、day三个属性的默认值为numeric。默认值：所有属性都取默认值时的配置项。 |
 
 **示例**
 
@@ -237,7 +200,7 @@ resolvedOptions(): DateTimeOptions
 
 | 类型 | 说明 |
 | --- | --- |
-| DateTimeOptions | 时间日期格式化对象设置的配置项。 |
+| [DateTimeOptions](arkts-localization-intl-datetimeoptions-i.md) | 时间日期格式化对象设置的配置项。 |
 
 **示例**
 

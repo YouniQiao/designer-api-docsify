@@ -48,26 +48,9 @@ declare function access(path: string, mode?: AccessModeType): Promise<boolean>
 | 13900018 | Not a directory |
 | 13900020 | Invalid argument |
 | 13900023 | Text file busy |
-| 13900030 | File name too number |
+| 13900030 | File name too long |
 | 13900033 | Too many symbolic links encountered |
 | 13900042 | Unknown error |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let filePath = pathDir + "/test.txt";
-fileIo.access(filePath).then((res: boolean) => {
-  if (res) {
-    console.info(`Succeeded in checking file, file exists.`);
-  } else {
-    console.info(`Succeeded in checking file, file does not exist.`);
-  }
-}).catch((err: BusinessError) => {
-  console.error(`Failed to access. Code: ${err.code}, message: ${err.message}`);
-});
-```
 
 
 ## access
@@ -104,28 +87,9 @@ declare function access(path: string, callback: AsyncCallback<boolean>): void
 | 13900018 | Not a directory |
 | 13900020 | Invalid argument |
 | 13900023 | Text file busy |
-| 13900030 | File name too number |
+| 13900030 | File name too long |
 | 13900033 | Too many symbolic links encountered |
 | 13900042 | Unknown error |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let filePath = pathDir + "/test.txt";
-fileIo.access(filePath, (err: BusinessError, res: boolean) => {
-  if (err) {
-    console.error(`Failed to access. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    if (res) {
-      console.info(`Succeeded in checking file, file exists.`);
-    } else {
-      console.info(`Succeeded in checking file, file does not exist.`);
-    }
-  }
-});
-```
 
 
 ## access
@@ -168,22 +132,5 @@ declare function access(path: string, mode: AccessModeType, flag: AccessFlagType
 | 13900018 | Not a directory |
 | 13900020 | Invalid argument |
 | 13900023 | Text file busy |
-| 13900030 | File name too number |
+| 13900030 | File name too long |
 | 13900033 | Too many symbolic links encountered |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let filePath = pathDir + "/test.txt";
-fileIo.access(filePath, fileIo.AccessModeType.EXIST, fileIo.AccessFlagType.LOCAL).then((res: boolean) => {
-  if (res) {
-    console.info(`Succeeded in checking file, file exists.`);
-  } else {
-    console.info(`Succeeded in checking file, file does not exist.`);
-  }
-}).catch((err: BusinessError) => {
-  console.error(`Failed to access. Code: ${err.code}, message: ${err.message}`);
-});
-```

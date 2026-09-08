@@ -37,25 +37,9 @@ declare function getxattrSync(path: string, key: string): string
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified;  2.Incorrect parameter types. |
 | 13900002 | No such file or directory |
-| 13900007 | Arg list too number |
+| 13900007 | Arg list too long |
 | 13900012 | Permission denied |
 | 13900031 | Function not implemented |
 | 13900037 | No data available |
 | 13900038 | Value too large for defined data type |
 | 13900042 | Unknown error |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let filePath = pathDir + "/test.txt";
-let attrKey = "user.comment";
-
-try {
-  let attrValue = fileIo.getxattrSync(filePath, attrKey);
-  console.info(`Succeeded in getting extended attribute, the value is: ${attrValue}`);
-} catch (err) {
-  console.error(`Failed to get extended attribute. Code: ${err.code}, message: ${err.message}`);
-}
-```

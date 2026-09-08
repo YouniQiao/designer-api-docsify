@@ -34,7 +34,7 @@ clientCert?: ClientCert
 
 Client certificate.
 
-**Type:** ClientCert
+**Type:** [ClientCert](arkts-network-websocket-clientcert-i.md)
 
 **Since:** 11
 

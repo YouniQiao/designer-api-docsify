@@ -418,7 +418,7 @@ levelMode?: LevelMode
 
 默认值：LevelMode.OVERLAY
 
-**类型：** LevelMode
+**类型：** [LevelMode](../arkts-apis/arkts-arkui-levelmode-t.md)
 
 **起始版本：** 26.0.0
 

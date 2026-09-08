@@ -55,19 +55,6 @@ Reads the text content of a file. This API uses a promise to return the result.
 | 13900042 | Unknown error |
 | 13900044 | Network is unreachable<br>**Applicable version:** 12 and later |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let filePath = pathDir + "/test.txt";
-fileIo.readText(filePath).then((str: string) => {
-  console.info(`Succeeded in reading text, text is: ${str}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to read text. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
 
 ## readText
 
@@ -107,21 +94,6 @@ Reads the text content of a file. This API uses an asynchronous callback to retu
 | 13900034 | Operation would block |
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let filePath = pathDir + "/test.txt";
-fileIo.readText(filePath, (err: BusinessError, str: string) => {
-  if (err) {
-    console.error(`Failed to read text. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info(`Succeeded in reading text, text is: ${str}`);
-  }
-});
-```
 
 
 ## readText
@@ -167,25 +139,3 @@ Reads the text content of a file. This API uses an asynchronous callback to retu
 | 13900034 | Operation would block |
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { ReadTextOptions } from '@kit.CoreFileKit';
-
-let filePath = pathDir + "/test.txt";
-let stat = fileIo.statSync(filePath);
-let readTextOption: ReadTextOptions = {
-    offset: 1,
-    length: stat.size,
-    encoding: 'utf-8'
-};
-fileIo.readText(filePath, readTextOption, (err: BusinessError, str: string) => {
-  if (err) {
-    console.error(`Failed to read text. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info(`Succeeded in reading text, text is: ${str}`);
-  }
-});
-```

@@ -112,6 +112,9 @@ async function huksAbort() {
 ```
 
 JS sample code:
+> NOTE
+> 
+> The JS sample code is used only for the lightweight devices.
 
 ```TypeScript
 <stack class="container">

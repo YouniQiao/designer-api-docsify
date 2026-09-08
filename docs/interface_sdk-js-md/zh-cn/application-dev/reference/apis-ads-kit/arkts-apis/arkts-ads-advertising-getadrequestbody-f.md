@@ -36,7 +36,7 @@ function getAdRequestBody(adParams: AdRequestParams[], adOptions: AdOptions): Pr
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Invalid input parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Device not supported. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
 | [21800001](../errorcode-ads.md#21800001-系统内部错误) | System internal error. |
 
 **示例**

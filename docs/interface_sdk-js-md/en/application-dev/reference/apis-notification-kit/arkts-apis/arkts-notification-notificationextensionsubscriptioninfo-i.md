@@ -28,7 +28,7 @@ type: notificationExtensionSubscription.SubscribeType
 
 Subscription type, specifying the subscription method for notification extension. Currently, only **SubscribeType.BLUETOOTH** is supported, indicating subscription to notifications via Bluetooth.
 
-**Type:** notificationExtensionSubscription.SubscribeType
+**Type:** [notificationExtensionSubscription.SubscribeType](arkts-notification-notificationextensionsubscription-subscribetype-e.md)
 
 **Since:** 22
 

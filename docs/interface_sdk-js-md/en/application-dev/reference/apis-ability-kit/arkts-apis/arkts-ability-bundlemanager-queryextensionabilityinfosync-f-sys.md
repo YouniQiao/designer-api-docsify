@@ -38,7 +38,7 @@ No permission is required for obtaining the caller's own information.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;ExtensionAbilityInfo&gt; | An array of ExtensionAbility information. |
+| Array&lt;[ExtensionAbilityInfo](arkts-ability-bundlemanager-extensionabilityinfo-t.md)&gt; | An array of ExtensionAbility information. |
 
 **Error codes:**
 
@@ -134,7 +134,7 @@ No permission is required for obtaining the caller's own information.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;ExtensionAbilityInfo&gt; | An array of ExtensionAbility information obtained. |
+| Array&lt;[ExtensionAbilityInfo](arkts-ability-bundlemanager-extensionabilityinfo-t.md)&gt; | An array of ExtensionAbility information obtained. |
 
 **Error codes:**
 
@@ -229,7 +229,7 @@ No permission is required for obtaining the caller's own information.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;ExtensionAbilityInfo&gt; | An array of ExtensionAbility information obtained. |
+| Array&lt;[ExtensionAbilityInfo](arkts-ability-bundlemanager-extensionabilityinfo-t.md)&gt; | An array of ExtensionAbility information obtained. |
 
 **Error codes:**
 

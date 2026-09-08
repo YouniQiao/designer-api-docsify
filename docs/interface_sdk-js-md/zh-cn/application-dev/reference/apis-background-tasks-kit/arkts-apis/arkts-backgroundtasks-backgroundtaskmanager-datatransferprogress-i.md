@@ -36,7 +36,7 @@ progressInfo: ProgressInfo
 
 通知进度信息。
 
-**类型：** ProgressInfo
+**类型：** [ProgressInfo](arkts-backgroundtasks-backgroundtaskmanager-progressinfo-i.md)
 
 **起始版本：** 26.1.0
 

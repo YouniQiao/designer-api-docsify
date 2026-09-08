@@ -30,7 +30,7 @@ Binds the TCPSocket or UDPSocket to the network specified by **NetHandle**. This
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| socketParam | TCPSocket \| UDPSocket | Yes | TCPSocket** or **UDPSocket** object. |
+| socketParam | [TCPSocket](arkts-network-connection-tcpsocket-t.md) \| [UDPSocket](arkts-network-connection-udpsocket-t.md) | Yes | TCPSocket** or **UDPSocket** object. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the **TCPSocket** or **UDPSocket** object is successfully bound to the current network, **error** is **undefined**. Otherwise, **error** is an error object. |
 
 **Error codes:**
@@ -120,7 +120,7 @@ Binds the TCPSocket or UDPSocket to the network specified by **NetHandle**. This
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| socketParam | TCPSocket \| UDPSocket | Yes | TCPSocket** or **UDPSocket** object. |
+| socketParam | [TCPSocket](arkts-network-connection-tcpsocket-t.md) \| [UDPSocket](arkts-network-connection-udpsocket-t.md) | Yes | TCPSocket** or **UDPSocket** object. |
 
 **Return value:**
 
@@ -213,7 +213,7 @@ Obtains the first IP address by using the network specified by **NetHandle** to 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | host | string | Yes | Host name to resolve. For example, www.example.com. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;NetAddress&gt; | Yes | Callback used to return the result. If the first IP address is obtained successfully, **error** is **undefined**, and **data** is the first obtained IP address. Otherwise, **error** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[NetAddress](arkts-network-connection-netaddress-i.md)&gt; | Yes | Callback used to return the result. If the first IP address is obtained successfully, **error** is **undefined**, and **data** is the first obtained IP address. Otherwise, **error** is an error object. |
 
 **Error codes:**
 
@@ -271,7 +271,7 @@ Obtains the first IP address by using the network specified by **NetHandle** to 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;NetAddress&gt; | Promise used to return the first IP address. |
+| Promise&lt;[NetAddress](arkts-network-connection-netaddress-i.md)&gt; | Promise used to return the first IP address. |
 
 **Error codes:**
 
@@ -321,7 +321,7 @@ Obtains all IP addresses by using the network specified by **NetHandle** to reso
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | host | string | Yes | Host name to resolve. For example, www.example.com. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;NetAddress&gt;&gt; | Yes | Callback used to return the result. If all IP addresses are successfully obtained, **error** is **undefined**, and **data** is the list of all obtained IP addresses. Otherwise, **error** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[NetAddress](arkts-network-connection-netaddress-i.md)&gt;&gt; | Yes | Callback used to return the result. If all IP addresses are successfully obtained, **error** is **undefined**, and **data** is the list of all obtained IP addresses. Otherwise, **error** is an error object. |
 
 **Error codes:**
 
@@ -334,19 +334,6 @@ Obtains all IP addresses by using the network specified by **NetHandle** to reso
 | [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
 
 **Examples**
-
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-connection.getAddressesByName("xxxx", (error: BusinessError, data: connection.NetAddress[]) => {
-  if (error) {
-    console.error(`Failed to get addresses. Code:${error.code}, message:${error.message}`);
-    return;
-  }
-  console.info("Succeeded to get data: " + JSON.stringify(data));
-});
-```
 
 ```TypeScript
 import { connection } from '@kit.NetworkKit';
@@ -394,7 +381,7 @@ Obtains all IP addresses by using the network specified by **NetHandle** to reso
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;NetAddress&gt;&gt; | Promise used to return all IP addresses. |
+| Promise&lt;Array&lt;[NetAddress](arkts-network-connection-netaddress-i.md)&gt;&gt; | Promise used to return all IP addresses. |
 
 **Error codes:**
 
@@ -407,14 +394,6 @@ Obtains all IP addresses by using the network specified by **NetHandle** to reso
 | [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
 
 **Examples**
-
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-
-connection.getAddressesByName("xxxx").then((data: connection.NetAddress[]) => {
-  console.info("Succeeded to get data: " + JSON.stringify(data));
-});
-```
 
 ```TypeScript
 import { connection } from '@kit.NetworkKit';
@@ -458,7 +437,7 @@ Performs DNS resolution using the network specified by **NetHandle** based on th
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;NetAddress&gt;&gt; | Promise used to return the queried IP address. In the command output, the port field has a fixed value of 0. |
+| Promise&lt;Array&lt;[NetAddress](arkts-network-connection-netaddress-i.md)&gt;&gt; | Promise used to return the queried IP address. In the command output, the port field has a fixed value of 0. |
 
 **Error codes:**
 
@@ -470,19 +449,6 @@ Performs DNS resolution using the network specified by **NetHandle** based on th
 | [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
 
 **Examples**
-
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-let option: connection.QueryOptions = {
-  family: connection.FamilyType.FAMILY_TYPE_IPV4
-};
-connection.getAddressesByNameWithOptions("www.example.com", option).then((data: connection.NetAddress[]) => {
-  console.info(`Succeeded to get data: ${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-  console.error(`get ERROR msg: ${JSON.stringify(err)}`)
-});
-```
 
 ```TypeScript
 import { connection } from '@kit.NetworkKit';

@@ -209,7 +209,7 @@ loadUrl(url: string | Resource, headers?: Array<WebHeader>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| url | string \| Resource | 是 | 需要加载的 URL，需为合法的URL格式。 |
+| url | string \| [Resource](arkts-arkui-resource-t.md) | 是 | 需要加载的 URL，需为合法的URL格式。 |
 | headers | Array&lt;[WebHeader](arkts-arkui-atomicservice-atomicserviceweb-webheader-i.md)&gt; | 否 | URL的附加HTTP请求头。默认值为空数组，即不添加附加请求头。 |
 
 **错误码：**

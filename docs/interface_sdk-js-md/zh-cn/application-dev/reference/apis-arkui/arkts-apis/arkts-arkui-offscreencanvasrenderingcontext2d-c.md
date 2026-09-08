@@ -31,48 +31,6 @@ constructor(width: number, height: number, settings?: RenderingContextSettings)
 | height | number | 是 | 离屏画布的高度，默认单位：vp。异常值NaN和Infinity按无效值处理。 |
 | settings | [RenderingContextSettings](arkts-arkui-renderingcontextsettings-c.md) | 否 | 用来配置OffscreenCanvasRenderingContext2D对象的参数，见RenderingContextSettings接口描述。异常值undefined按RenderingContextSettings的默认值处理。默认值：null。 |
 
-**示例**
-
-以下示例展示了配置CanvasRenderingContext2D对象的单位模式，默认单位模式为LengthMetricsUnit.DEFAULT，对应默认单位vp，配置后无法动态更改。详细说明见LengthMetricsUnit。
-
-```TypeScript
-// xxx.ets
-import { LengthMetricsUnit } from '@kit.ArkUI'
-
-@Entry
-@Component
-struct LengthMetricsUnitDemo {
-  private settings: RenderingContextSettings = new RenderingContextSettings(true);
-  private contextPX: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings, LengthMetricsUnit.PX);
-  private contextVP: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings);
-
-  build() {
-    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
-      Canvas(this.contextPX)
-        .width('100%')
-        .height(150)
-        .backgroundColor('#ffff00')
-        .onReady(() => {
-          // 使用px单位模式绘制图形
-          this.contextPX.fillRect(10, 10, 100, 100)
-          this.contextPX.clearRect(10, 10, 50, 50)
-        })
-
-      Canvas(this.contextVP)
-        .width('100%')
-        .height(150)
-        .backgroundColor('#ffff00')
-        .onReady(() => {
-          this.contextVP.fillRect(10, 10, 100, 100)
-          this.contextVP.clearRect(10, 10, 50, 50)
-        })
-    }
-    .width('100%')
-    .height('100%')
-  }
-}
-```
-
 ## constructor
 
 ```TypeScript
@@ -98,11 +56,7 @@ constructor(width: number, height: number, settings?: RenderingContextSettings, 
 | width | number | 是 | 离屏画布的宽度，默认单位：vp。异常值NaN和Infinity按无效值处理。 |
 | height | number | 是 | 离屏画布的高度，默认单位：vp。异常值NaN和Infinity按无效值处理。 |
 | settings | [RenderingContextSettings](arkts-arkui-renderingcontextsettings-c.md) | 否 | 用来配置OffscreenCanvasRenderingContext2D对象的参数，见RenderingContextSettings接口描述。异常值undefined按RenderingContextSettings的默认值处理。默认值：null。 |
-| unit | LengthMetricsUnit | 否 | 用来配置OffscreenCanvasRenderingContext2D对象的单位模式，配置后无法动态更改，配置方法同[CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md)。异常值undefined、NaN和Infinity按默认值处理。默认值：DEFAULT。 |
-
-**示例**
-
-参见 [constructor](#constructor)
+| unit | [LengthMetricsUnit](arkts-arkui-lengthmetricsunit-t.md) | 否 | 用来配置OffscreenCanvasRenderingContext2D对象的单位模式，配置后无法动态更改，配置方法同[CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md)。异常值undefined、NaN和Infinity按默认值处理。默认值：DEFAULT。 |
 
 ## toDataURL
 
@@ -134,35 +88,6 @@ toDataURL(type?: string, quality?: any): string
 | string | 图像的URL地址。 |
 
 **示例**
-
-```TypeScript
-// xxx.ets
-@Entry
-@Component
-struct CanvasExample {
-  private settings: RenderingContextSettings = new RenderingContextSettings(true)
-  private context: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings)
-  @State toDataURL: string = ""
-
-  build() {
-    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
-      Canvas(this.context)
-        .width(100)
-        .height(100)
-        .onReady(() =>{
-          this.context.fillStyle = "#00ff00"
-          this.context.fillRect(0,0,100,100)
-          // 生成PNG格式的图像URL
-          this.toDataURL = this.context.toDataURL("image/png", 0.92)
-        })
-      Text(this.toDataURL)
-    }
-    .width('100%')
-    .height('100%')
-    .backgroundColor('#ffff00')
-  }
-}
-```
 
 ```TypeScript
 // xxx.ets
@@ -216,40 +141,6 @@ transferToImageBitmap(): ImageBitmap
 | [ImageBitmap](arkts-arkui-imagebitmap-c.md) | 存储离屏画布上渲染的像素数据。 |
 
 **示例**
-
-```TypeScript
-// xxx.ets
-@Entry
-@Component
-struct OffscreenCanvasPage {
-  private settings: RenderingContextSettings = new RenderingContextSettings(true);
-  private context: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings);
-  private offCanvas: OffscreenCanvas = new OffscreenCanvas(400, 600);
-
-  build() {
-    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
-      Canvas(this.context)
-        .width('100%')
-        .height('100%')
-        .borderWidth(5)
-        .borderColor('rgb(39,135,217)')
-        .backgroundColor('#FFFFFF')
-        .onReady(() => {
-          let offContext = this.offCanvas.getContext("2d", this.settings)
-          offContext.fillStyle = '#CDCDCD'
-          offContext.fillRect(0, 0, 400, 600)
-          offContext.fillStyle = '#000000'
-          offContext.font = '40px serif bold'
-          offContext.fillText('Offscreen : Hello World!', 20, 60)
-          let image = this.offCanvas.transferToImageBitmap()
-          this.context.transferFromImageBitmap(image)
-        })
-    }
-    .width('100%')
-    .height('100%')
-  }
-}
-```
 
 ```TypeScript
 // xxx.ets

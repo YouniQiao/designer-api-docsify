@@ -134,7 +134,7 @@ fontStyle: FontStyle
 
 字体样式。
 
-**类型：** FontStyle
+**类型：** [FontStyle](../arkts-apis/arkts-arkui-fontstyle-e.md)
 
 **起始版本：** 10
 

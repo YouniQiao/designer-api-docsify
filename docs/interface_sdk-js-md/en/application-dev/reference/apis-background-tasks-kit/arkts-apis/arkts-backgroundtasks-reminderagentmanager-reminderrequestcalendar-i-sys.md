@@ -24,7 +24,7 @@ rruleWantAgent?: WantAgent
 
 Custom reminder, which specifies the ServiceExtensionAbility to start.
 
-**Type:** WantAgent
+**Type:** [WantAgent](arkts-backgroundtasks-reminderagentmanager-wantagent-i.md)
 
 **Since:** 12
 

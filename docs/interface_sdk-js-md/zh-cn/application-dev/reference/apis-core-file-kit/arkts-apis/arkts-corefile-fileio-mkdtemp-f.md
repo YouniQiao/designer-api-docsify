@@ -33,17 +33,6 @@ declare function mkdtemp(prefix: string): Promise<string>
 | --- | --- |
 | Promise&lt;string&gt; | Promise对象。返回生成的唯一目录路径。 |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@ohos.base';
-fileio.mkdtemp(pathDir + "/XXXXXX").then((pathDir: string) => {
-  console.info("mkdtemp succeed:" + pathDir);
-}).catch((err: BusinessError) => {
-  console.error("mkdtemp failed with error:" + err);
-});
-```
-
 
 ## mkdtemp
 
@@ -67,12 +56,3 @@ declare function mkdtemp(prefix: string, callback: AsyncCallback<string>): void
 | --- | --- | --- | --- |
 | prefix | string | 是 | 用随机产生的字符串替换以“XXXXXX”结尾目录路径。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 异步创建临时目录之后的回调。 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@ohos.base';
-fileio.mkdtemp(pathDir + "/XXXXXX", (err: BusinessError, res: string) => {
-  // do something
-});
-```

@@ -40,7 +40,7 @@ localAddresses?: Array<LinkAddress>
 
 The array of local addresses for VPN interface.
 
-**Type:** Array&lt;LinkAddress&gt;
+**Type:** Array&lt;[LinkAddress](arkts-network-vpn-linkaddress-t.md)&gt;
 
 **Since:** 26.0.0
 

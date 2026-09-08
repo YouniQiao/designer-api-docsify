@@ -44,36 +44,7 @@ addPath(path: Path2D, transform?: Matrix2D): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | path | [Path2D](arkts-arkui-path2d-c.md) | 是 | 需要添加到当前路径的路径对象。异常值undefined和null按无效值处理。 |
-| transform | Matrix2D | 否 | 新增路径的变换矩阵对象，用于对添加的路径进行平移、旋转、缩放等变换。当需要对添加的路径进行图形变换时传入此参数，不需要变换时可不传。不传入时默认为null，表示不对路径进行变换。异常值undefined和null按无效值处理。默认值：null |
-
-**示例**
-
-```TypeScript
-// xxx.ets
-@Entry
-@Component
-struct AddPath {
-  private settings: RenderingContextSettings = new RenderingContextSettings(true);
-  private context: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings);
-  private path2Da: Path2D = new Path2D('M250 150 L150 350 L350 350 Z');
-  private path2Db: Path2D = new Path2D();
-
-  build() {
-    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
-      Canvas(this.context)
-        .width('100%')
-        .height('100%')
-        .backgroundColor('#ffff00')
-        .onReady(() => {
-          this.path2Db.addPath(this.path2Da)
-          this.context.stroke(this.path2Db)
-        })
-    }
-    .width('100%')
-    .height('100%')
-  }
-}
-```
+| transform | [Matrix2D](arkts-arkui-matrix2d-c.md) | 否 | 新增路径的变换矩阵对象，用于对添加的路径进行平移、旋转、缩放等变换。当需要对添加的路径进行图形变换时传入此参数，不需要变换时可不传。不传入时默认为null，表示不对路径进行变换。异常值undefined和null按无效值处理。默认值：null |
 
 ## constructor
 
@@ -90,48 +61,6 @@ constructor()
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-**示例**
-
-以下示例展示了配置CanvasRenderingContext2D对象的单位模式，默认单位模式为LengthMetricsUnit.DEFAULT，对应默认单位vp，配置后无法动态更改。详细说明见LengthMetricsUnit。
-
-```TypeScript
-// xxx.ets
-import { LengthMetricsUnit } from '@kit.ArkUI'
-
-@Entry
-@Component
-struct LengthMetricsUnitDemo {
-  private settings: RenderingContextSettings = new RenderingContextSettings(true);
-  private contextPX: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings, LengthMetricsUnit.PX);
-  private contextVP: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings);
-
-  build() {
-    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
-      Canvas(this.contextPX)
-        .width('100%')
-        .height(150)
-        .backgroundColor('#ffff00')
-        .onReady(() => {
-          // 使用px单位模式绘制图形
-          this.contextPX.fillRect(10, 10, 100, 100)
-          this.contextPX.clearRect(10, 10, 50, 50)
-        })
-
-      Canvas(this.contextVP)
-        .width('100%')
-        .height(150)
-        .backgroundColor('#ffff00')
-        .onReady(() => {
-          this.contextVP.fillRect(10, 10, 100, 100)
-          this.contextVP.clearRect(10, 10, 50, 50)
-        })
-    }
-    .width('100%')
-    .height('100%')
-  }
-}
-```
 
 ## constructor
 
@@ -155,11 +84,7 @@ constructor(unit: LengthMetricsUnit)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| unit | LengthMetricsUnit | 是 | 用来配置Path2D对象的单位模式，配置后无法动态更改，配置方法同[CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md)。异常值NaN和Infinity按默认值处理。默认值：DEFAULT |
-
-**示例**
-
-参见 [constructor](#constructor)
+| unit | [LengthMetricsUnit](arkts-arkui-lengthmetricsunit-t.md) | 是 | 用来配置Path2D对象的单位模式，配置后无法动态更改，配置方法同[CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md)。异常值NaN和Infinity按默认值处理。默认值：DEFAULT |
 
 ## constructor
 
@@ -182,10 +107,6 @@ constructor(path: Path2D)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | path | [Path2D](arkts-arkui-path2d-c.md) | 是 | 需要复制的路径对象，新创建的Path2D对象将包含与原路径相同的路径数据。异常值null和undefined时创建空路径对象。 |
-
-**示例**
-
-参见 [constructor](#constructor)
 
 ## constructor
 
@@ -210,11 +131,7 @@ constructor(path: Path2D, unit: LengthMetricsUnit)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | path | [Path2D](arkts-arkui-path2d-c.md) | 是 | 需要复制的Path2D路径对象，用于基于现有路径创建新的Path2D对象。传入的路径对象不会被修改，新创建的对象将包含该路径的完整副本。 |
-| unit | LengthMetricsUnit | 是 | 用来配置Path2D对象的单位模式，配置后无法动态更改，配置方法同[CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md)。异常值NaN和Infinity按默认值处理。默认值：DEFAULT |
-
-**示例**
-
-参见 [constructor](#constructor)
+| unit | [LengthMetricsUnit](arkts-arkui-lengthmetricsunit-t.md) | 是 | 用来配置Path2D对象的单位模式，配置后无法动态更改，配置方法同[CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md)。异常值NaN和Infinity按默认值处理。默认值：DEFAULT |
 
 ## constructor
 
@@ -237,10 +154,6 @@ constructor(d: string)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | d | string | 是 | 符合SVG路径描述规范的路径字符串，格式参考SVG路径描述规范，异常值按无效值处理。 |
-
-**示例**
-
-参见 [constructor](#constructor)
 
 ## constructor
 
@@ -265,8 +178,4 @@ constructor(description: string, unit: LengthMetricsUnit)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | description | string | 是 | 符合SVG路径描述规范的路径字符串，格式参考SVG路径描述规范，异常值按无效值处理。 |
-| unit | LengthMetricsUnit | 是 | 用来配置Path2D对象的单位模式，配置后无法动态更改，配置方法同[CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md)。异常值NaN和Infinity按默认值处理。默认值：DEFAULT |
-
-**示例**
-
-参见 [constructor](#constructor)
+| unit | [LengthMetricsUnit](arkts-arkui-lengthmetricsunit-t.md) | 是 | 用来配置Path2D对象的单位模式，配置后无法动态更改，配置方法同[CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md)。异常值NaN和Infinity按默认值处理。默认值：DEFAULT |

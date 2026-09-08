@@ -58,17 +58,6 @@ constructor.
 
 **System API:** This is a system API.
 
-**Examples**
-
-```TypeScript
-@Builder
-function MyBuilder(value: string, size: number) {
-  Text(value)
-    .fontSize(size)
-}
-let builderVar: WrappedBuilder<[string, number]> = new WrappedBuilder<[string, number]>(MyBuilder);
-```
-
 ## edgeLight
 
 ```TypeScript
@@ -229,10 +218,6 @@ Specify whether the current component participates in the fusion effect of the a
 | --- | --- |
 | T | return the component attribute. |
 
-**Examples**
-
-For details, see [UnionEffectContainer Example](ts-container-unioneffectcomponent-sys.md#example).
-
 ## useUnionEffect
 
 ```TypeScript
@@ -261,7 +246,3 @@ Specify whether the current component participates in the fusion effect of the a
 | Type | Description |
 | --- | --- |
 | T | return the component attribute. |
-
-**Examples**
-
-See [useUnionEffect](#useunioneffect)

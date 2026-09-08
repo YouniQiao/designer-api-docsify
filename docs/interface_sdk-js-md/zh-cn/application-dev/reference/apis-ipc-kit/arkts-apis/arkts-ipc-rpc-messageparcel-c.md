@@ -44,23 +44,6 @@ static closeFileDescriptor(fd: number): void
 import { rpc } from '@kit.IPCKit';
 import { fileIo } from '@kit.CoreFileKit';
 import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let filePath = "path/to/file"; 
-  let file = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE | fileIo.OpenMode.CREATE);
-  rpc.MessageSequence.closeFileDescriptor(file.fd);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
-  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
-}
-```
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { fileIo } from '@kit.CoreFileKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
 
 try {
   let filePath = "path/to/file";
@@ -94,25 +77,6 @@ containFileDescriptors(): boolean
 | boolean | true：包含文件描述符，false：未包含文件描述符。 |
 
 **示例**
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { fileIo } from '@kit.CoreFileKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let sequence = rpc.MessageSequence.create();
-  let filePath = "path/to/file";
-  let file = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE | fileIo.OpenMode.CREATE);
-  let containFD = sequence.containFileDescriptors();
-  hilog.info(0x0000, 'testTag', 'sequence after write fd containFd result is ' + containFD);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
-  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
-}
-```
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -205,23 +169,6 @@ static dupFileDescriptor(fd: number): number
 import { rpc } from '@kit.IPCKit';
 import { fileIo } from '@kit.CoreFileKit';
 import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let filePath = "path/to/file"; 
-  let file = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE | fileIo.OpenMode.CREATE);
-  rpc.MessageSequence.dupFileDescriptor(file.fd);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
-  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
-}
-```
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { fileIo } from '@kit.CoreFileKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
 
 try {
   let filePath = "path/to/file";
@@ -255,22 +202,6 @@ getCapacity(): number
 | number | 获取的MessageParcel的容量大小。以字节为单位。 |
 
 **示例**
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let data = rpc.MessageSequence.create();
-  let result = data.getCapacity();
-  hilog.info(0x0000, 'testTag', 'capacity is ' + result);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
-  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
-}
-```
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -312,22 +243,6 @@ getRawDataCapacity(): number
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
 import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let sequence = rpc.MessageSequence.create();
-  let result = sequence.getRawDataCapacity();
-  hilog.info(0x0000, 'testTag', 'sequence get RawDataCapacity result is ' + result);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
-  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
-}
-```
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
 
 try {
   let parcel = new rpc.MessageParcel();
@@ -361,23 +276,6 @@ getReadableBytes(): number
 | number | 获取到的MessageParcel的可读字节空间。以字节为单位。 |
 
 **示例**
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let data = rpc.MessageSequence.create();
-  data.writeString("hello world");
-  let result = data.getReadableBytes();
-  hilog.info(0x0000, 'testTag', 'RpcServer: getReadableBytes is ' + result);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
-  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
-}
-```
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -420,23 +318,6 @@ getReadPosition(): number
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
 import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let data = rpc.MessageSequence.create();
-  data.writeString("hello world");
-  let readPos = data.getReadPosition();
-  hilog.info(0x0000, 'testTag', 'readPos is ' + readPos);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
-  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
-}
-```
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
 
 try {
   let data = rpc.MessageParcel.create();
@@ -470,22 +351,6 @@ getSize(): number
 | number | 获取的MessageParcel的数据大小。以字节为单位。 |
 
 **示例**
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let data = rpc.MessageSequence.create();
-  let size = data.getSize();
-  hilog.info(0x0000, 'testTag', 'size is ' + size);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
-  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
-}
-```
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -528,23 +393,6 @@ getWritableBytes(): number
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
 import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let data = rpc.MessageSequence.create();
-  data.setCapacity(100);
-  let getWritableBytes = data.getWritableBytes();
-  hilog.info(0x0000, 'testTag', 'RpcServer: getWritableBytes is ' + getWritableBytes);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
-  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
-}
-```
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
 
 try {
   let data = rpc.MessageParcel.create();
@@ -583,23 +431,6 @@ getWritePosition(): number
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
 import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let data = rpc.MessageSequence.create();
-  data.writeInt(10);
-  let bwPos = data.getWritePosition();
-  hilog.info(0x0000, 'testTag', 'bwPos is ' + bwPos);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
-  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
-}
-```
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
 
 try {
   let data = rpc.MessageParcel.create();
@@ -634,44 +465,6 @@ readAshmem(): Ashmem
 | [Ashmem](arkts-ipc-rpc-ashmem-c.md) | 返回匿名共享对象。 |
 
 **示例**
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let sequence = rpc.MessageSequence.create();
-  let ashmem = rpc.Ashmem.create("ashmem", 1024);
-  // ashmem里写入数据
-  let buffer = new ArrayBuffer(1024);
-  let int32View = new Int32Array(buffer);
-  for (let i = 0; i < int32View.length; i++) {
-    int32View[i] = i * 2 + 1;
-  }
-  let size = buffer.byteLength;
-  ashmem.mapReadWriteAshmem();
-  ashmem.writeDataToAshmem(buffer, size, 0);
-  // 将传递的数据大小写入messageSequence对象中
-  sequence.writeInt(size);
-  // 将ashmem对象写入messageSequence对象中
-  sequence.writeAshmem(ashmem);
-
-  // 读取传递的数据大小
-  let dataSize = sequence.readInt();
-  // 从messageSequence对象中读取ashmem对象
-  let ashmem1 = sequence.readAshmem();
-  // 从ashmem对象中读取数据
-  ashmem1.mapReadWriteAshmem();
-  let readResult = ashmem1.readDataFromAshmem(dataSize, 0);
-  let readInt32View = new Int32Array(readResult);
-  hilog.info(0x0000, 'testTag', 'read from Ashmem result is ' + readInt32View);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
-  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
-}
-```
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -716,23 +509,6 @@ readBoolean(): boolean
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
 import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let data = rpc.MessageSequence.create();
-  data.writeBoolean(false);
-  let ret = data.readBoolean();
-  hilog.info(0x0000, 'testTag', 'readBoolean is ' + ret);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
-  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
-}
-```
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
 
 try {
   let data = rpc.MessageParcel.create();
@@ -768,24 +544,6 @@ readBooleanArray(dataIn: boolean[]): void
 | dataIn | boolean[] | 是 | 要读取的布尔数组。 |
 
 **示例**
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let data = rpc.MessageSequence.create();
-  data.writeBooleanArray([false, true, false]);
-  let array: Array<boolean> = new Array(3);
-  data.readBooleanArray(array);
-  hilog.info(0x0000, 'testTag', 'readBooleanArray is ' + array);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
-  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
-}
-```
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -830,23 +588,6 @@ readBooleanArray(): boolean[]
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
 import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let data = rpc.MessageSequence.create();
-  data.writeBooleanArray([false, true, false]);
-  let array = data.readBooleanArray();
-  hilog.info(0x0000, 'testTag', 'readBooleanArray is ' + array);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
-  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
-}
-```
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
 
 try {
   let data = rpc.MessageParcel.create();
@@ -886,23 +627,6 @@ readByte(): number
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
 import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let data = rpc.MessageSequence.create();
-  data.writeByte(2);
-  let ret = data.readByte();
-  hilog.info(0x0000, 'testTag', 'readByte is: ' +  ret);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
-  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
-}
-```
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
 
 try {
   let data = rpc.MessageParcel.create();
@@ -938,26 +662,6 @@ readByteArray(dataIn: number[]): void
 | dataIn | number[] | 是 | 要读取的字节数组。 |
 
 **示例**
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let data = rpc.MessageSequence.create();
-  let ByteArrayVar = [1, 2, 3, 4, 5];
-  // 将字节数组写入MessageSequence对象
-  data.writeByteArray(ByteArrayVar);
-  let array: Array<number> = new Array(5);
-  data.readByteArray(array);
-  hilog.info(0x0000, 'testTag', 'readByteArray is  ' + array);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
-  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
-}
-```
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -1002,25 +706,6 @@ readByteArray(): number[]
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
 import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let data = rpc.MessageSequence.create();
-  let ByteArrayVar = [1, 2, 3, 4, 5];
-  // 将字节数组写入MessageSequence对象
-  data.writeByteArray(ByteArrayVar);
-  let array = data.readByteArray();
-  hilog.info(0x0000, 'testTag', 'readByteArray is  ' + array);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
-  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
-}
-```
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
 
 try {
   let data = rpc.MessageParcel.create();
@@ -1061,23 +746,6 @@ readChar(): number
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
 import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let data = rpc.MessageSequence.create();
-  data.writeChar(97);
-  let ret = data.readChar();
-  hilog.info(0x0000, 'testTag', 'readChar is ' + ret);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
-  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
-}
-```
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
 
 try {
   let data = rpc.MessageParcel.create();
@@ -1113,24 +781,6 @@ readCharArray(dataIn: number[]): void
 | dataIn | number[] | 是 | 要读取的单个字符数组。 |
 
 **示例**
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let data = rpc.MessageSequence.create();
-  data.writeCharArray([97, 98, 88]);
-  let array: Array<number> = new Array(3);
-  data.readCharArray(array);
-  hilog.info(0x0000, 'testTag', 'readCharArray is ' + array);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
-  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
-}
-```
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -1175,23 +825,6 @@ readCharArray(): number[]
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
 import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let data = rpc.MessageSequence.create();
-  data.writeCharArray([97, 98, 88]);
-  let array = data.readCharArray();
-  hilog.info(0x0000, 'testTag', 'readCharArray is ' + array);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
-  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
-}
-```
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
 
 try {
   let data = rpc.MessageParcel.create();
@@ -1231,23 +864,6 @@ readDouble(): number
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
 import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let data = rpc.MessageSequence.create();
-  data.writeDouble(10.2);
-  let ret = data.readDouble();
-  hilog.info(0x0000, 'testTag', 'readDouble is ' +  ret);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
-  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
-}
-```
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
 
 try {
   let data = rpc.MessageParcel.create();
@@ -1283,24 +899,6 @@ readDoubleArray(dataIn: number[]): void
 | dataIn | number[] | 是 | 要读取的双精度浮点数组。 |
 
 **示例**
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let data = rpc.MessageSequence.create();
-  data.writeDoubleArray([11.1, 12.2, 13.3]);
-  let array: Array<number> = new Array(3);
-  data.readDoubleArray(array);
-  hilog.info(0x0000, 'testTag', 'readDoubleArray is ' + array);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
-  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
-}
-```
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -1345,23 +943,6 @@ readDoubleArray(): number[]
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
 import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let data = rpc.MessageSequence.create();
-  data.writeDoubleArray([11.1, 12.2, 13.3]);
-  let array = data.readDoubleArray();
-  hilog.info(0x0000, 'testTag', 'readDoubleArray is ' + array);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
-  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
-}
-```
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
 
 try {
   let data = rpc.MessageParcel.create();
@@ -1393,6 +974,8 @@ readException(): void
 **示例**
 
 > 说明：
+> 
+> 在本文档的示例中，通过this.getUIContext().getHostContext()来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在页面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
 
 ```TypeScript
 // FA模型需要从@kit.AbilityKit导入featureAbility
@@ -1427,45 +1010,6 @@ let want: Want = {
 let context: common.UIAbilityContext = this.getUIContext().getHostContext(); // UIAbilityContext
 // 建立连接后返回的Id需要保存下来，在解绑服务时需要作为参数传入
 let connectionId = context.connectServiceExtensionAbility(want, connect);
-```
-
-上述onConnect回调函数中的proxy对象需要等ability异步连接成功后才会被赋值，然后才可调用proxy对象的sendMessageRequest接口方法发送消息
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-  
-try {
-  let option = new rpc.MessageOption();
-  let data = rpc.MessageSequence.create();
-  let reply = rpc.MessageSequence.create();
-  data.writeNoException();
-  data.writeInt(6);
-  if (proxy != undefined) {
-    proxy.sendMessageRequest(1, data, reply, option)
-      .then((result: rpc.RequestResult) => {
-        if (result.errCode === 0) {
-          hilog.info(0x0000, 'testTag', 'sendMessageRequest got result');
-          result.reply.readException();
-          let num = result.reply.readInt();
-          hilog.info(0x0000, 'testTag', 'reply num: ' + num);
-        } else {
-          hilog.error(0x0000, 'testTag', 'sendMessageRequest failed, errCode: ' + result.errCode);
-        }
-      }).catch((e: Error) => {
-        hilog.error(0x0000, 'testTag', 'sendMessageRequest got exception: ' + JSON.stringify(e));
-      }).finally(() => {
-        hilog.info(0x0000, 'testTag', 'sendMessageRequest ends, reclaim parcel');
-        data.reclaim();
-        reply.reclaim();
-      });
-  }
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
-  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
-}
 ```
 
 上述onConnect回调函数中的proxy对象需要等ability异步连接成功后才会被赋值，然后才可调用proxy对象的sendRequest接口方法发送消息
@@ -1533,26 +1077,6 @@ readFileDescriptor(): number
 import { rpc } from '@kit.IPCKit';
 import { fileIo } from '@kit.CoreFileKit';
 import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let sequence = rpc.MessageSequence.create();
-  let filePath = "path/to/file";
-  let file = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE | fileIo.OpenMode.CREATE);
-  sequence.writeFileDescriptor(file.fd);
-  let readFD = sequence.readFileDescriptor();
-  hilog.info(0x0000, 'testTag', 'readFileDescriptor is ' + readFD);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
-  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
-}
-```
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { fileIo } from '@kit.CoreFileKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
 
 try {
   let parcel = new rpc.MessageParcel();
@@ -1593,23 +1117,6 @@ readFloat(): number
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
 import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let data = rpc.MessageSequence.create();
-  data.writeFloat(1.2);
-  let ret = data.readFloat();
-  hilog.info(0x0000, 'testTag', 'readFloat is ' + ret);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
-  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
-}
-```
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
 
 try {
   let data = rpc.MessageParcel.create();
@@ -1645,24 +1152,6 @@ readFloatArray(dataIn: number[]): void
 | dataIn | number[] | 是 | 要读取的双精度浮点数组。由于系统内部对float类型的数据是按照double处理的，使用时对于数组所占的总字节数应按照double类型来计算。 |
 
 **示例**
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let data = rpc.MessageSequence.create();
-  data.writeFloatArray([1.2, 1.3, 1.4]);
-  let array: Array<number> = new Array(3);
-  data.readFloatArray(array);
-  hilog.info(0x0000, 'testTag', 'readFloatArray is ' + array);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
-  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
-}
-```
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -1707,23 +1196,6 @@ readFloatArray(): number[]
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
 import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let data = rpc.MessageSequence.create();
-  data.writeFloatArray([1.2, 1.3, 1.4]);
-  let array = data.readFloatArray();
-  hilog.info(0x0000, 'testTag', 'readFloatArray is ' + array);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
-  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
-}
-```
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
 
 try {
   let data = rpc.MessageParcel.create();
@@ -1759,24 +1231,6 @@ readInt(): number
 | number | 返回整数值。 |
 
 **示例**
-
-```TypeScript
-// 在原子化服务中，本示例仅用于说明readInt()接口的使用方法，示例中rpc.MessageSequence.create()暂不支持在原子化服务中调用。
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let data = rpc.MessageSequence.create();
-  data.writeInt(10);
-  let ret = data.readInt();
-  hilog.info(0x0000, 'testTag', 'readInt is ' + ret);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
-  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
-}
-```
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -1816,24 +1270,6 @@ readIntArray(dataIn: number[]): void
 | dataIn | number[] | 是 | 要读取的整数数组。 |
 
 **示例**
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let data = rpc.MessageSequence.create();
-  data.writeIntArray([100, 111, 112]);
-  let array: Array<number> = new Array(3);
-  data.readIntArray(array);
-  hilog.info(0x0000, 'testTag', 'readIntArray is  ' + array);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
-  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
-}
-```
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -1878,23 +1314,6 @@ readIntArray(): number[]
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
 import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let data = rpc.MessageSequence.create();
-  data.writeIntArray([100, 111, 112]);
-  let array = data.readIntArray();
-  hilog.info(0x0000, 'testTag', 'readIntArray is ' + array);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
-  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
-}
-```
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
 
 try {
   let data = rpc.MessageParcel.create();
@@ -1934,23 +1353,6 @@ readInterfaceToken(): string
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
 import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let data = rpc.MessageSequence.create();
-  data.writeInterfaceToken("aaa");
-  let interfaceToken = data.readInterfaceToken();
-  hilog.info(0x0000, 'testTag', 'RpcServer: interfaceToken is ' + interfaceToken);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
-  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
-}
-```
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
 
 try {
   let data = rpc.MessageParcel.create();
@@ -1985,23 +1387,6 @@ readLong(): number
 | number | 返回长整数值。 |
 
 **示例**
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let data = rpc.MessageSequence.create();
-  data.writeLong(10000);
-  let ret = data.readLong();
-  hilog.info(0x0000, 'testTag', 'readLong is ' + ret);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
-  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
-}
-```
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -2045,24 +1430,6 @@ readLongArray(dataIn: number[]): void
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
 import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let data = rpc.MessageSequence.create();
-  data.writeLongArray([1111, 1112, 1113]);
-  let array: Array<number> = new Array(3);
-  data.readLongArray(array);
-  hilog.info(0x0000, 'testTag', 'readLongArray is ' + array);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
-  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
-}
-```
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
 
 try {
   let data = rpc.MessageParcel.create();
@@ -2099,23 +1466,6 @@ readLongArray(): number[]
 | number[] | 返回长整数数组。 |
 
 **示例**
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let data = rpc.MessageSequence.create();
-  data.writeLongArray([1111, 1112, 1113]);
-  let array = data.readLongArray();
-  hilog.info(0x0000, 'testTag', 'readLongArray is ' + array);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
-  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
-}
-```
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -2165,25 +1515,6 @@ readRawData(size: number): number[]
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
 import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let sequence = rpc.MessageSequence.create();
-  let arr = [1, 2, 3, 4, 5];
-  sequence.writeRawData(arr, arr.length);
-  let size = arr.length;
-  let result = sequence.readRawData(size);
-  hilog.info(0x0000, 'testTag', 'sequence read raw data result is ' + result);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
-  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
-}
-```
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
 
 try {
   let parcel = new rpc.MessageParcel();
@@ -2220,35 +1551,6 @@ readRemoteObject(): IRemoteObject
 | [IRemoteObject](arkts-ipc-rpc-iremoteobject-c.md) | 读取到的远程对象，用于IPC/RPC通信。 |
 
 **示例**
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class TestRemoteObject extends rpc.RemoteObject {
-  constructor(descriptor: string) {
-    super(descriptor);
-  }
-  onRemoteMessageRequest(code: number, data: rpc.MessageSequence, reply: rpc.MessageSequence,
-    option: rpc.MessageOption): boolean | Promise<boolean> {
-    // 根据业务实际逻辑，进行相应处理
-    return true;
-  }
-}
-
-try {
-  let data = rpc.MessageSequence.create();
-  let testRemoteObject = new TestRemoteObject("testObject");
-  data.writeRemoteObject(testRemoteObject);
-  let proxy = data.readRemoteObject();
-  hilog.info(0x0000, 'testTag', 'readRemoteObject is ' + proxy);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
-  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
-}
-```
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -2303,36 +1605,6 @@ readRemoteObjectArray(objects: IRemoteObject[]): void
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
 import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class TestRemoteObject extends rpc.RemoteObject {
-  constructor(descriptor: string) {
-    super(descriptor);
-  }
-  onRemoteMessageRequest(code: number, data: rpc.MessageSequence, reply: rpc.MessageSequence,
-    option: rpc.MessageOption): boolean | Promise<boolean> {
-    // 根据业务实际逻辑，进行相应处理
-    return true;
-  }
-}
-
-try {
-  let a = [new TestRemoteObject("testObject1"), new TestRemoteObject("testObject2"), new TestRemoteObject("testObject3")];
-  let data = rpc.MessageSequence.create();
-  data.writeRemoteObjectArray(a);
-  let b: Array<rpc.IRemoteObject> = new Array(3);
-  data.readRemoteObjectArray(b);
-  hilog.info(0x0000, 'testTag', 'readRemoteObjectArray is ' + b);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
-  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
-}
-```
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
 
 class TestRemoteObject extends rpc.RemoteObject {
   constructor(descriptor: string) {
@@ -2381,34 +1653,6 @@ readRemoteObjectArray(): IRemoteObject[]
 | [IRemoteObject](arkts-ipc-rpc-iremoteobject-c.md)[] | 返回IRemoteObject对象数组。 |
 
 **示例**
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class TestRemoteObject extends rpc.RemoteObject {
-  constructor(descriptor: string) {
-    super(descriptor);
-  }
-  onRemoteMessageRequest(code: number, data: rpc.MessageSequence, reply: rpc.MessageSequence,
-    option: rpc.MessageOption): boolean | Promise<boolean> {
-    // 根据业务实际逻辑，进行相应处理
-    return true;
-  }
-}
-
-try {
-  let a = [new TestRemoteObject("testObject1"), new TestRemoteObject("testObject2"), new TestRemoteObject("testObject3")];
-  let data = rpc.MessageSequence.create();
-  let b = data.readRemoteObjectArray();
-  hilog.info(0x0000, 'testTag', 'readRemoteObjectArray is ' + b);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
-  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
-}
-```
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -2593,23 +1837,6 @@ readShort(): number
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
 import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let data = rpc.MessageSequence.create();
-  data.writeShort(8);
-  let ret = data.readShort();
-  hilog.info(0x0000, 'testTag', 'readShort is ' + ret);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
-  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
-}
-```
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
 
 try {
   let data = rpc.MessageParcel.create();
@@ -2645,24 +1872,6 @@ readShortArray(dataIn: number[]): void
 | dataIn | number[] | 是 | 要读取的短整数数组。 |
 
 **示例**
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let data = rpc.MessageSequence.create();
-  data.writeShortArray([11, 12, 13]);
-  let array: Array<number> = new Array(3);
-  data.readShortArray(array);
-  hilog.info(0x0000, 'testTag', 'readShortArray is  ' + array);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
-  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
-}
-```
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -2707,23 +1916,6 @@ readShortArray(): number[]
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
 import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let data = rpc.MessageSequence.create();
-  data.writeShortArray([11, 12, 13]);
-  let array = data.readShortArray();
-  hilog.info(0x0000, 'testTag', 'readShortArray is ' + array);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
-  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
-}
-```
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
 
 try {
   let data = rpc.MessageParcel.create();
@@ -2759,24 +1951,6 @@ readString(): string
 | string | 返回字符串值。 |
 
 **示例**
-
-```TypeScript
-// 在原子化服务中，本示例仅用于说明readString()接口的使用方法，示例中rpc.MessageSequence.create()暂不支持在原子化服务中调用。
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let data = rpc.MessageSequence.create();
-  data.writeString('abc');
-  let ret = data.readString();
-  hilog.info(0x0000, 'testTag', 'readString is ' + ret);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
-  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
-}
-```
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -2816,24 +1990,6 @@ readStringArray(dataIn: string[]): void
 | dataIn | string[] | 是 | 要读取的字符串数组。 |
 
 **示例**
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let data = rpc.MessageSequence.create();
-  data.writeStringArray(["abc", "def"]);
-  let array: Array<string> = new Array(2);
-  data.readStringArray(array);
-  hilog.info(0x0000, 'testTag', 'readStringArray is ' + array);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
-  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
-}
-```
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -2878,23 +2034,6 @@ readStringArray(): string[]
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
 import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let data = rpc.MessageSequence.create();
-  data.writeStringArray(["abc", "def"]);
-  let array = data.readStringArray();
-  hilog.info(0x0000, 'testTag', 'readStringArray is ' + array);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
-  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
-}
-```
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
 
 try {
   let data = rpc.MessageParcel.create();
@@ -2924,21 +2063,6 @@ reclaim(): void
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **示例**
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let reply = rpc.MessageSequence.create();
-  reply.reclaim();
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
-  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
-}
-```
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -3885,35 +3009,6 @@ writeNoException(): void
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **示例**
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class TestRemoteObject extends rpc.RemoteObject {
-  constructor(descriptor: string) {
-    super(descriptor);
-  }
-  onRemoteMessageRequest(code: number, data: rpc.MessageSequence, reply: rpc.MessageSequence,
-    option: rpc.MessageOption): boolean | Promise<boolean> {
-    if (code === 1) {
-      hilog.info(0x0000, 'testTag', 'RpcServer: onRemoteMessageRequest called');
-      try {
-        reply.writeNoException();
-      } catch (error) {
-        let e: BusinessError = error as BusinessError;
-        hilog.error(0x0000, 'testTag', 'rpc write no exception fail, errorCode ' + e.code);
-        hilog.error(0x0000, 'testTag', 'rpc write no exception fail, errorMessage ' + e.message);
-      }
-      return true;
-    } else {
-      hilog.error(0x0000, 'testTag', 'RpcServer: unknown code: ' + code);
-      return false;
-    }
-  }
-}
-```
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';

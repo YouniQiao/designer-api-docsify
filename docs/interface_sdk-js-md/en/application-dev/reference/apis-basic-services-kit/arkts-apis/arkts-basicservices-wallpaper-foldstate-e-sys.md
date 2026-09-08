@@ -2,7 +2,7 @@
 
 Define the folding state of wallpaper
 
-@enum { number } FoldState
+@enum { int } FoldState
 
 **Since:** 14
 

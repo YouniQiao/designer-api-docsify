@@ -22,7 +22,7 @@ function getCallState(callback: AsyncCallback<CallState>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;CallState&gt; | 是 | 回调函数，异步返回获取到的通话状态。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[CallState](arkts-telephony-call-callstate-e.md)&gt; | 是 | 回调函数，异步返回获取到的通话状态。 |
 
 **示例**
 
@@ -55,7 +55,7 @@ function getCallState(): Promise<CallState>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;CallState&gt; | 以Promise形式异步返回获取到的通话状态。 |
+| Promise&lt;[CallState](arkts-telephony-call-callstate-e.md)&gt; | 以Promise形式异步返回获取到的通话状态。 |
 
 **示例**
 

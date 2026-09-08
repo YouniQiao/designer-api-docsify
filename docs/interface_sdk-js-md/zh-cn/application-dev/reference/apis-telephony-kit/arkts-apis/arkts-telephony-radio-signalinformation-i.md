@@ -48,7 +48,7 @@ signalType: NetworkType
 
 网络信号强度类型。
 
-**类型：** NetworkType
+**类型：** [NetworkType](arkts-telephony-radio-networktype-e.md)
 
 **起始版本：** 6
 

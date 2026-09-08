@@ -20,7 +20,7 @@ color: string | Resource
 
 Text color of the button.
 
-**Type:** string \| Resource
+**Type:** string \| [Resource](arkts-arkui-resource-t.md)
 
 **Since:** 9
 
@@ -54,7 +54,7 @@ text: string | Resource
 
 Button text.
 
-**Type:** string \| Resource
+**Type:** string \| [Resource](arkts-arkui-resource-t.md)
 
 **Since:** 9
 

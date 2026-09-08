@@ -60,7 +60,7 @@ resultCode: AuthorizationResultCode
 
 Authorization result code.
 
-**Type:** AuthorizationResultCode
+**Type:** [AuthorizationResultCode](arkts-basicservices-authorization-authorizationresultcode-e.md)
 
 **Since:** 24
 

@@ -197,7 +197,7 @@ backgroundBlurStyle?: BlurStyle
 
 Background blur style of the dialog box.
 
-**Type:** BlurStyle
+**Type:** [BlurStyle](arkts-arkui-blurstyle-e.md)
 
 **Default:** BlurStyle.COMPONENT_ULTRA_THICK
 
@@ -481,7 +481,7 @@ offset?: Offset
 
 Offset of the dialog box based on the alignment settings.
 
-**Type:** Offset
+**Type:** [Offset](../arkts-apis/arkts-arkui-offset-t.md)
 
 **Default:** { dx: 0 , dy: 0 } [since 11]
 
@@ -503,7 +503,7 @@ Represents the callback triggered during the scrolling of the text picker when a
 
 <p>&lt;strong&gt;NOTE&lt;/strong&gt;: In scenarios where the picker contains linked columns, the use of this callback is not recommended. The reason is that it identifies nodes where items enter the divider area during scrolling. However, items that change in response to the scrolling do not themselves scroll. As a result, he callback's return values will only reflect changes for the currently scrolling column, while other non-scrolling columns will remain unchanged. </p>
 
-**Type:** Callback&lt;[TextPickerResult](arkts-arkui-textpickerresult-i.md)&gt;
+**Type:** [Callback](arkts-arkui-callback-i.md)&lt;[TextPickerResult](arkts-arkui-textpickerresult-i.md)&gt;
 
 **Since:** 18
 
@@ -521,7 +521,7 @@ onScrollStop?: Callback<TextPickerResult>
 
 Callback invoked when the scrolling in the text picker of the dialog box stops.
 
-**Type:** Callback&lt;[TextPickerResult](arkts-arkui-textpickerresult-i.md)&gt;
+**Type:** [Callback](arkts-arkui-callback-i.md)&lt;[TextPickerResult](arkts-arkui-textpickerresult-i.md)&gt;
 
 **Since:** 14
 

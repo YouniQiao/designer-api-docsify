@@ -59,42 +59,13 @@ A maximum of 10 cross-device copy tasks are allowed at the same time, and the nu
 | 13900025 | No space left on device |
 | 13900027 | Read-only file system |
 | 13900028 | Too many links |
-| 13900030 | File name too number |
+| 13900030 | File name too long |
 | 13900031 | Function not implemented |
 | 13900034 | Operation would block |
 | 13900038 | Value too large for defined data type |
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
 | 13900044 | Network is unreachable<br>**Applicable version:** 12 and later |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { fileUri } from '@kit.CoreFileKit';
-
-let srcDirPathLocal: string = pathDir + "/src";
-let dstDirPathLocal: string = pathDir + "/dest";
-
-let srcDirUriLocal: string = fileUri.getUriFromPath(srcDirPathLocal);
-let dstDirUriLocal: string = fileUri.getUriFromPath(dstDirPathLocal);
-
-let progressListener: fileIo.ProgressListener = (progress: fileIo.Progress) => {
-  console.info(`progressSize: ${progress.processedSize}, totalSize: ${progress.totalSize}`);
-};
-let copyOption: fileIo.CopyOptions = {
-  "progressListener" : progressListener
-}
-try {
-  fileIo.copy(srcDirUriLocal, dstDirUriLocal, copyOption).then(()=>{
-    console.info("Succeeded in copying.");
-  }).catch((err: BusinessError)=>{
-    console.error(`Failed to copy. Code: ${err.code}, message: ${err.message}`);
-  })
-} catch(err) {
-  console.error(`Failed to copy.Code: ${err.code}, message: ${err.message}`);
-}
-```
 
 
 ## copy
@@ -142,37 +113,12 @@ File copy across devices is supported. This API forcibly overwrites the file or 
 | 13900025 | No space left on device |
 | 13900027 | Read-only file system |
 | 13900028 | Too many links |
-| 13900030 | File name too number |
+| 13900030 | File name too long |
 | 13900031 | Function not implemented |
 | 13900034 | Operation would block |
 | 13900038 | Value too large for defined data type |
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { fileUri } from '@kit.CoreFileKit';
-
-let srcDirPathLocal: string = pathDir + "/src";
-let dstDirPathLocal: string = pathDir + "/dest";
-
-let srcDirUriLocal: string = fileUri.getUriFromPath(srcDirPathLocal);
-let dstDirUriLocal: string = fileUri.getUriFromPath(dstDirPathLocal);
-
-try {
-  fileIo.copy(srcDirUriLocal, dstDirUriLocal, (err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to copy. Code: ${err.code}, message: ${err.message}`);
-      return;
-    }
-    console.info("Succeeded in copying.");
-  })
-} catch(err) {
-  console.error(`Failed to copy. Code: ${err.code}, message: ${err.message}`);
-}
-```
 
 
 ## copy
@@ -221,40 +167,9 @@ File copy across devices is supported. This API forcibly overwrites the file or 
 | 13900025 | No space left on device |
 | 13900027 | Read-only file system |
 | 13900028 | Too many links |
-| 13900030 | File name too number |
+| 13900030 | File name too long |
 | 13900031 | Function not implemented |
 | 13900034 | Operation would block |
 | 13900038 | Value too large for defined data type |
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { fileUri } from '@kit.CoreFileKit';
-
-let srcDirPathLocal: string = pathDir + "/src";
-let dstDirPathLocal: string = pathDir + "/dest";
-
-let srcDirUriLocal: string = fileUri.getUriFromPath(srcDirPathLocal);
-let dstDirUriLocal: string = fileUri.getUriFromPath(dstDirPathLocal);
-
-try {
-  let progressListener: fileIo.ProgressListener = (progress: fileIo.Progress) => {
-    console.info(`progressSize: ${progress.processedSize}, totalSize: ${progress.totalSize}`);
-  };
-  let copyOption: fileIo.CopyOptions = {
-    "progressListener" : progressListener
-  }
-  fileIo.copy(srcDirUriLocal, dstDirUriLocal, copyOption, (err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to copy. Code: ${err.code}, message: ${err.message}`);
-      return;
-    }
-    console.info("Succeeded in copying.");
-  })
-} catch(err) {
-  console.error(`Failed to copy. Code: ${err.code}, message: ${err.message}`);
-}
-```

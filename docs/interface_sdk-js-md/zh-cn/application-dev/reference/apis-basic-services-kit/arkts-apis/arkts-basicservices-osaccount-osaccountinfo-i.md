@@ -48,7 +48,7 @@ distributedInfo: distributedAccount.DistributedInfo
 
 分布式账号信息，默认为空。
 
-**类型：** distributedAccount.DistributedInfo
+**类型：** [distributedAccount.DistributedInfo](arkts-basicservices-distributedaccount-distributedinfo-i.md)
 
 **起始版本：** 7
 

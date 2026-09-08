@@ -66,15 +66,3 @@ Invoked on a per-frame basis until the exit animation is complete, with the **pr
 | Type | Description |
 | --- | --- |
 | [PageTransitionExitInterface](arkts-arkui-pagetransitionexitinterface-i.md) |  |
-
-**Examples**
-
-```TypeScript
-pageTransition() {
-    PageTransitionExit({ duration: 1200, curve: Curve.Linear })
-      // During the transition animation, the exit animation has a type that represents the route type, and a progress that increases from 0 to 1.
-      .onExit((type: RouteType, progress: number) => {
-        // Service logic
-      })
-  }
-```

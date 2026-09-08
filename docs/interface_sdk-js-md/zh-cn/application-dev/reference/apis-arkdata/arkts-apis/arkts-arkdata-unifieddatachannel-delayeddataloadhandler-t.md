@@ -26,4 +26,4 @@ type DelayedDataLoadHandler = (acceptableInfo?: DataLoadInfo) => Promise<Unified
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;UnifiedData \| null&gt; | Promise对象。resolve返回根据接收方信息生成的UnifiedData对象或null，reject返回错误信息。 |
+| Promise&lt;[UnifiedData](arkts-arkdata-unifieddatachannel-unifieddata-c.md) \| null&gt; | Promise对象。resolve返回根据接收方信息生成的UnifiedData对象或null，reject返回错误信息。 |

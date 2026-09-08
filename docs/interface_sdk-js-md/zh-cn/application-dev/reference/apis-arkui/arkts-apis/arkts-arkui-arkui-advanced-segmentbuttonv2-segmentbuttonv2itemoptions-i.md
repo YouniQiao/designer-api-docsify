@@ -172,7 +172,7 @@ symbol?: Resource
 
 装饰器类型：@Trace
 
-**类型：** Resource
+**类型：** [Resource](arkts-arkui-resource-t.md)
 
 **起始版本：** 18
 

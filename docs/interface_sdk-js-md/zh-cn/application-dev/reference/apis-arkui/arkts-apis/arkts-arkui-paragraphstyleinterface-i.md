@@ -21,7 +21,7 @@ leadingMargin?: LengthMetrics | LeadingMarginPlaceholder
 
 默认值：0
 
-**类型：** LengthMetrics \| [LeadingMarginPlaceholder](../arkts-components/arkts-arkui-leadingmarginplaceholder-i.md)
+**类型：** [LengthMetrics](arkts-arkui-lengthmetrics-t.md) \| [LeadingMarginPlaceholder](../arkts-components/arkts-arkui-leadingmarginplaceholder-i.md)
 
 **起始版本：** 12
 
@@ -109,7 +109,7 @@ paragraphSpacing?: LengthMetrics
 
 段落间距默认大小为0。不支持百分比。
 
-**类型：** LengthMetrics
+**类型：** [LengthMetrics](arkts-arkui-lengthmetrics-t.md)
 
 **起始版本：** 19
 
@@ -149,7 +149,7 @@ tailIndents?: LengthMetrics | Array<LengthMetrics>
 
 设置文本段落的文本尾部缩进。不支持百分比。当提供一个单独的LengthMetrics值时，所有行共享相同的尾部缩进；当提供一个数组时，第i个元素指定第i行的尾部缩进；如果文本行数超过数组长度，则数组中的最后一个元素将用于剩余的行。默认值：0
 
-**类型：** LengthMetrics \| Array&lt;LengthMetrics&gt;
+**类型：** [LengthMetrics](arkts-arkui-lengthmetrics-t.md) \| Array&lt;[LengthMetrics](arkts-arkui-lengthmetrics-t.md)&gt;
 
 **起始版本：** 26.0.0
 
@@ -169,7 +169,7 @@ textAlign?: TextAlign
 
 默认值：TextAlign.Start
 
-**类型：** TextAlign
+**类型：** [TextAlign](arkts-arkui-textalign-e.md)
 
 **起始版本：** 12
 
@@ -189,7 +189,7 @@ textDirection?: TextDirection
 
 默认值：TextDirection.DEFAULT
 
-**类型：** TextDirection
+**类型：** [TextDirection](arkts-arkui-textdirection-e.md)
 
 **起始版本：** 23
 
@@ -209,7 +209,7 @@ textIndent?: LengthMetrics
 
 默认值：0
 
-**类型：** LengthMetrics
+**类型：** [LengthMetrics](arkts-arkui-lengthmetrics-t.md)
 
 **起始版本：** 12
 
@@ -229,7 +229,7 @@ textVerticalAlign?: TextVerticalAlign
 
 默认值：TextVerticalAlign.BASELINE
 
-**类型：** TextVerticalAlign
+**类型：** [TextVerticalAlign](arkts-arkui-textverticalalign-e.md)
 
 **起始版本：** 20
 
@@ -249,7 +249,7 @@ wordBreak?: WordBreak
 
 默认值：WordBreak.NORMAL
 
-**类型：** WordBreak
+**类型：** [WordBreak](arkts-arkui-wordbreak-e.md)
 
 **起始版本：** 12
 

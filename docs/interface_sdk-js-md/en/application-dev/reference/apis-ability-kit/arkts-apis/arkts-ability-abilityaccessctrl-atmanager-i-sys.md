@@ -51,7 +51,7 @@ Obtains the flags of a specified permission for a specified app. This API uses a
 | [12100001](../errorcode-access-token.md#12100001-invalid-parameters) | Invalid parameter. The tokenID is 0, or the permissionName exceeds 256 characters. |
 | [12100002](../errorcode-access-token.md#12100002-tokenid-not-exist) | The specified tokenID does not exist. |
 | [12100003](../errorcode-access-token.md#12100003-permission-not-exist) | The specified permission does not exist or is not declared in the module.json file. |
-| [12100006](../errorcode-access-token.md#12100006-permission-granting-or-revocation-not-supported) | The operation is not allowed. Either the application is a sandbox or the tokenID is from a remote device. |
+| [12100006](../errorcode-access-token.md#12100006-operation-not-allowed) | The operation is not allowed. Either the application is a sandbox or the tokenID is from a remote device. |
 | [12100007](../errorcode-access-token.md#12100007-system-service-not-working-properly) | Service exception. |
 
 **Examples**
@@ -313,7 +313,7 @@ Grants an app permission. After the call is successful, the specified app obtain
 | [12100001](../errorcode-access-token.md#12100001-invalid-parameters) | Invalid parameter. The tokenID is 0, the permissionName exceeds 256 characters or is not declared in the module.json file, or the flags value is invalid. |
 | [12100002](../errorcode-access-token.md#12100002-tokenid-not-exist) | The specified tokenID does not exist. |
 | [12100003](../errorcode-access-token.md#12100003-permission-not-exist) | The specified permission does not exist. |
-| [12100006](../errorcode-access-token.md#12100006-permission-granting-or-revocation-not-supported) | The application specified by the tokenID is not allowed to be granted with the specified permission. Either the application is a sandbox or the tokenID is from a remote device. |
+| [12100006](../errorcode-access-token.md#12100006-operation-not-allowed) | The application specified by the tokenID is not allowed to be granted with the specified permission. Either the application is a sandbox or the tokenID is from a remote device. |
 | [12100007](../errorcode-access-token.md#12100007-system-service-not-working-properly) | Service exception. |
 | [12100014](../errorcode-access-token.md#12100014-unexpected-permission) | Unexpected permission. The specified permission is not a user_grant or manual_settings permission. |
 
@@ -375,7 +375,7 @@ This API only supports granting permissions of the user_grant type. If you need 
 | [12100001](../errorcode-access-token.md#12100001-invalid-parameters) | Invalid parameter. The tokenID is 0, the permissionName exceeds 256 characters or is not declared in the module.json file, or the flags value is invalid. |
 | [12100002](../errorcode-access-token.md#12100002-tokenid-not-exist) | The specified tokenID does not exist. |
 | [12100003](../errorcode-access-token.md#12100003-permission-not-exist) | The specified permission does not exist or is not a user_grant permission. |
-| [12100006](../errorcode-access-token.md#12100006-permission-granting-or-revocation-not-supported) | The application specified by the tokenID is not allowed to be granted with the specified permission. Either the application is a sandbox or the tokenID is from a remote device. |
+| [12100006](../errorcode-access-token.md#12100006-operation-not-allowed) | The application specified by the tokenID is not allowed to be granted with the specified permission. Either the application is a sandbox or the tokenID is from a remote device. |
 | [12100007](../errorcode-access-token.md#12100007-system-service-not-working-properly) | Service exception. |
 
 **Examples**
@@ -434,7 +434,7 @@ Grants a user_grant permission to an app. This API uses an asynchronous callback
 | [12100001](../errorcode-access-token.md#12100001-invalid-parameters) | Invalid parameter. The tokenID is 0, the permissionName exceeds 256 characters or is not declared in the module.json file, or the flags value is invalid. |
 | [12100002](../errorcode-access-token.md#12100002-tokenid-not-exist) | The specified tokenID does not exist. |
 | [12100003](../errorcode-access-token.md#12100003-permission-not-exist) | The specified permission does not exist or is not a user_grant permission. |
-| [12100006](../errorcode-access-token.md#12100006-permission-granting-or-revocation-not-supported) | The application specified by the tokenID is not allowed to be granted with the specified permission. Either the application is a sandbox or the tokenID is from a remote device. |
+| [12100006](../errorcode-access-token.md#12100006-operation-not-allowed) | The application specified by the tokenID is not allowed to be granted with the specified permission. Either the application is a sandbox or the tokenID is from a remote device. |
 | [12100007](../errorcode-access-token.md#12100007-system-service-not-working-properly) | Service exception. |
 
 **Examples**
@@ -627,7 +627,7 @@ Queries all apps that have requested the specified permissions and their permiss
 | [12100001](../errorcode-access-token.md#12100001-invalid-parameters) | Invalid parameter. The permissionList is empty or exceeds the size limit. |
 | [12100003](../errorcode-access-token.md#12100003-permission-not-exist) | The specified permission does not exist. |
 | [12100007](../errorcode-access-token.md#12100007-system-service-not-working-properly) | Service exception. |
-| 12100015 | The queried data exceeds the upper limit. |
+| [12100015](../errorcode-access-token.md#12100015-queried-data-exceeds-the-upper-limit) | The queried data exceeds the upper limit. |
 
 **Examples**
 
@@ -683,7 +683,7 @@ Queries all permission statuses of an app based on its tokenID list. This API us
 | [12100001](../errorcode-access-token.md#12100001-invalid-parameters) | Invalid parameter. The tokenIDList is empty or exceeds the size limit. |
 | [12100002](../errorcode-access-token.md#12100002-tokenid-not-exist) | The specified tokenID does not exist. |
 | [12100007](../errorcode-access-token.md#12100007-system-service-not-working-properly) | Service exception. |
-| 12100015 | The queried data exceeds the upper limit. |
+| [12100015](../errorcode-access-token.md#12100015-queried-data-exceeds-the-upper-limit) | The queried data exceeds the upper limit. |
 
 **Examples**
 
@@ -800,6 +800,7 @@ If the user denies authorization, the dialog cannot be pulled up again. Permissi
 **Examples**
 
 For details about how to obtain the context in the example, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+For details about the process and example of applying for user authorization, see [Requesting User Authorization](../../../security/AccessToken/request-user-authorization.md).
 
 ```TypeScript
 import { abilityAccessCtrl, Context, PermissionRequestResult } from '@kit.AbilityKit';
@@ -868,7 +869,7 @@ When the killProcess parameter is true and the permission status changes from "a
 | [12100001](../errorcode-access-token.md#12100001-invalid-parameters) | Invalid parameter. The token ID is 0, the permission name exceeds 256 characters or is not declared in the module.json file, or the value of flags is invalid. |
 | [12100002](../errorcode-access-token.md#12100002-tokenid-not-exist) | The specified tokenID does not exist. |
 | [12100003](../errorcode-access-token.md#12100003-permission-not-exist) | The specified permission does not exist. |
-| [12100006](../errorcode-access-token.md#12100006-permission-granting-or-revocation-not-supported) | The specified permission is not allowed to be revoked from the application specified by the tokenID. Either the application is a sandbox or the tokenID is from a remote device. |
+| [12100006](../errorcode-access-token.md#12100006-operation-not-allowed) | The specified permission is not allowed to be revoked from the application specified by the tokenID. Either the application is a sandbox or the tokenID is from a remote device. |
 | [12100007](../errorcode-access-token.md#12100007-system-service-not-working-properly) | Service exception. |
 | [12100014](../errorcode-access-token.md#12100014-unexpected-permission) | Unexpected permission. The specified permission is not a user_grant or manual_settings permission. |
 
@@ -939,7 +940,7 @@ When the permission status changes from "authorized" to "unauthorized", the app 
 | [12100001](../errorcode-access-token.md#12100001-invalid-parameters) | Invalid parameter. The tokenID is 0, the permissionName exceeds 256 characters or is not declared in the module.json file, or the flags value is invalid. |
 | [12100002](../errorcode-access-token.md#12100002-tokenid-not-exist) | The specified tokenID does not exist. |
 | [12100003](../errorcode-access-token.md#12100003-permission-not-exist) | The specified permission does not exist or is not a user_grant permission. |
-| [12100006](../errorcode-access-token.md#12100006-permission-granting-or-revocation-not-supported) | The application specified by the tokenID is not allowed to be revoked with the specified permission. Either the application is a sandbox or the tokenID is from a remote device. |
+| [12100006](../errorcode-access-token.md#12100006-operation-not-allowed) | The application specified by the tokenID is not allowed to be revoked with the specified permission. Either the application is a sandbox or the tokenID is from a remote device. |
 | [12100007](../errorcode-access-token.md#12100007-system-service-not-working-properly) | Service exception. |
 
 **Examples**
@@ -998,7 +999,7 @@ Revokes a user_grant permission from an app. This API uses an asynchronous callb
 | [12100001](../errorcode-access-token.md#12100001-invalid-parameters) | Invalid parameter. The tokenID is 0, the permissionName exceeds 256 characters or is not declared in the module.json file, or the flags value is invalid. |
 | [12100002](../errorcode-access-token.md#12100002-tokenid-not-exist) | The specified tokenID does not exist. |
 | [12100003](../errorcode-access-token.md#12100003-permission-not-exist) | The specified permission does not exist or is not a user_grant permission. |
-| [12100006](../errorcode-access-token.md#12100006-permission-granting-or-revocation-not-supported) | The application specified by the tokenID is not allowed to be revoked with the specified permission. Either the application is a sandbox or the tokenID is from a remote device. |
+| [12100006](../errorcode-access-token.md#12100006-operation-not-allowed) | The application specified by the tokenID is not allowed to be revoked with the specified permission. Either the application is a sandbox or the tokenID is from a remote device. |
 | [12100007](../errorcode-access-token.md#12100007-system-service-not-working-properly) | Service exception. |
 
 **Examples**
@@ -1057,7 +1058,7 @@ Sets the dialog toggle status for a specified permission of the current user. Af
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. Interface caller is not a system app. |
 | [12100001](../errorcode-access-token.md#12100001-invalid-parameters) | Invalid parameter. The permissionName exceeds 256 characters, the specified permission is not a user_grant permission, or the status value is invalid. |
 | [12100003](../errorcode-access-token.md#12100003-permission-not-exist) | The specified permission does not exist. |
-| [12100006](../errorcode-access-token.md#12100006-permission-granting-or-revocation-not-supported) | Operation not allowed. The toggle status of the specified permission has already been set by [setPermissionRequestToggleStatus](#setpermissionrequesttogglestatus).<br>**Applicable version:** 26.1.0 and later |
+| [12100006](../errorcode-access-token.md#12100006-operation-not-allowed) | Operation not allowed. The toggle status of the specified permission has already been set by [setPermissionRequestToggleStatus](#setpermissionrequesttogglestatus).<br>**Applicable version:** 26.1.0 and later |
 | [12100007](../errorcode-access-token.md#12100007-system-service-not-working-properly) | Service exception. |
 | [12100009](../errorcode-access-token.md#12100009-internal-service-error) | Common inner error. A database error occurs. |
 
@@ -1121,7 +1122,7 @@ Sets the dialog toggle status for a specified permission under a specified sub-p
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [12100001](../errorcode-access-token.md#12100001-invalid-parameters) | Invalid parameter. The permissionName exceeds 256 characters, the specified permission is not a user_grant permission, the status value is invalid, or the specified subProfileId does not exist for the current user. |
 | [12100003](../errorcode-access-token.md#12100003-permission-not-exist) | The specified permission does not exist. |
-| [12100006](../errorcode-access-token.md#12100006-permission-granting-or-revocation-not-supported) | Operation not allowed. The toggle status of the specified permission has already been set by [setPermissionRequestToggleStatus](#setpermissionrequesttogglestatus). |
+| [12100006](../errorcode-access-token.md#12100006-operation-not-allowed) | Operation not allowed. The toggle status of the specified permission has already been set by [setPermissionRequestToggleStatus](#setpermissionrequesttogglestatus). |
 | [12100007](../errorcode-access-token.md#12100007-system-service-not-working-properly) | Service exception. |
 | [12100009](../errorcode-access-token.md#12100009-internal-service-error) | Common inner error. A database error occurs. |
 

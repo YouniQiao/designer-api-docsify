@@ -40,7 +40,7 @@ type: MaterialType
 
 Material type ID, indicating the material type corresponding to the current configuration. The value is used only for type identification and does not map to underlying features.
 
-**Type:** MaterialType
+**Type:** [MaterialType](arkts-arkui-uimaterial-materialtype-e.md)
 
 **Default:** MaterialType.IMMERSIVE
 

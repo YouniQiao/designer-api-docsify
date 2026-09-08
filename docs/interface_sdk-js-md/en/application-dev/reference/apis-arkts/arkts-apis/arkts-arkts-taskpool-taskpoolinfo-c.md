@@ -20,7 +20,7 @@ taskInfos: TaskInfo[]
 
 Internal information about the tasks. You are advised not to change the value.
 
-**Type:** TaskInfo[]
+**Type:** [TaskInfo](arkts-arkts-taskpool-taskinfo-c.md)[]
 
 **Since:** 10
 

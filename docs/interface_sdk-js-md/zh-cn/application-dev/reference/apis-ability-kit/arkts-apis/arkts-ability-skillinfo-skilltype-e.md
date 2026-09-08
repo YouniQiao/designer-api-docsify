@@ -2,7 +2,7 @@
 
 枚举Skill类型。
 
-@enum { number }
+@enum { int }
 
 **起始版本：** 26.0.0
 

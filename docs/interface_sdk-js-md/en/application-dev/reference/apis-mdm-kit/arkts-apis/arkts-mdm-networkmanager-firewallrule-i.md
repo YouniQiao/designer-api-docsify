@@ -28,7 +28,7 @@ This parameter is mandatory when a firewall filtering rule is added.
 
 This parameter is optional when a firewall is removed. If this parameter is left empty, all [Action](arkts-mdm-networkmanager-action-e.md) chains are cleared, and **srcAddr**, **destAddr**, **srcPort**, **destPort**, and **appUid** must be also left empty.
 
-**Type:** Action
+**Type:** [Action](arkts-mdm-networkmanager-action-e.md)
 
 **Since:** 12
 
@@ -96,7 +96,7 @@ This parameter is mandatory when a firewall filtering rule is added.
 
 This parameter is optional when a firewall is removed. If this parameter is left empty, all [Direction](arkts-mdm-networkmanager-direction-e.md) chains are cleared, and **srcAddr**, **destAddr**, **srcPort**, **destPort**, and **appUid** must be also left empty.
 
-**Type:** Direction
+**Type:** [Direction](arkts-mdm-networkmanager-direction-e.md)
 
 **Since:** 12
 
@@ -150,7 +150,7 @@ protocol?: Protocol
 
 Network protocol. If the value is **ALL** or **ICMP**, the settings of **srcPort** and **destPort** are invalid.
 
-**Type:** Protocol
+**Type:** [Protocol](arkts-mdm-networkmanager-protocol-e.md)
 
 **Since:** 12
 

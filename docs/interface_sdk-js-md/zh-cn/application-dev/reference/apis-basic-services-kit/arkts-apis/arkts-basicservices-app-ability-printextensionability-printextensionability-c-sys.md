@@ -32,7 +32,7 @@ onRequestPreview(jobInfo: print.PrintJob): string
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| jobInfo | print.PrintJob | 是 | 表示打印任务信息。 |
+| jobInfo | [print.PrintJob](arkts-basicservices-print-printjob-i.md) | 是 | 表示打印任务信息。 |
 
 **返回值：**
 

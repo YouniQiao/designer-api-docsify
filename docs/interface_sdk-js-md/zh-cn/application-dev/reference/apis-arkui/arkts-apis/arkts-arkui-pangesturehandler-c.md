@@ -55,7 +55,7 @@ onActionCancel(event: Callback<void>): PanGestureHandler
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | Callback&lt;void&gt; | 是 | 滑动手势处理器取消回调。 |
+| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;void&gt; | 是 | 滑动手势处理器取消回调。 |
 
 **返回值：**
 
@@ -83,7 +83,7 @@ onActionCancel(event: Callback<GestureEvent>): PanGestureHandler
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | Callback&lt;[GestureEvent](arkts-arkui-gestureevent-i.md)&gt; | 是 | 滑动手势处理器取消回调。返回手势事件信息。 |
+| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;[GestureEvent](arkts-arkui-gestureevent-i.md)&gt; | 是 | 滑动手势处理器取消回调。返回手势事件信息。 |
 
 **返回值：**
 
@@ -111,7 +111,7 @@ onActionEnd(event: Callback<GestureEvent>): PanGestureHandler
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | Callback&lt;[GestureEvent](arkts-arkui-gestureevent-i.md)&gt; | 是 | 滑动手势处理器结束回调。 |
+| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;[GestureEvent](arkts-arkui-gestureevent-i.md)&gt; | 是 | 滑动手势处理器结束回调。 |
 
 **返回值：**
 
@@ -139,7 +139,7 @@ onActionStart(event: Callback<GestureEvent>): PanGestureHandler
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | Callback&lt;[GestureEvent](arkts-arkui-gestureevent-i.md)&gt; | 是 | 滑动手势处理器识别成功回调。 |
+| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;[GestureEvent](arkts-arkui-gestureevent-i.md)&gt; | 是 | 滑动手势处理器识别成功回调。 |
 
 **返回值：**
 
@@ -167,7 +167,7 @@ onActionUpdate(event: Callback<GestureEvent>): PanGestureHandler
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | Callback&lt;[GestureEvent](arkts-arkui-gestureevent-i.md)&gt; | 是 | 滑动手势处理器更新回调。fingerList为多根手指时，该回调监听每次只会更新一根手指的位置信息。 |
+| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;[GestureEvent](arkts-arkui-gestureevent-i.md)&gt; | 是 | 滑动手势处理器更新回调。fingerList为多根手指时，该回调监听每次只会更新一根手指的位置信息。 |
 
 **返回值：**
 

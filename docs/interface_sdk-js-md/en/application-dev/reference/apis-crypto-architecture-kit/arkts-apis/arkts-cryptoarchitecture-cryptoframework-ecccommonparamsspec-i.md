@@ -80,7 +80,7 @@ g: Point
 
 Base point g.
 
-**Type:** Point
+**Type:** [Point](arkts-cryptoarchitecture-cryptoframework-point-i.md)
 
 **Since:** 10
 

@@ -36,13 +36,13 @@ Images occupy a large amount of memory. When you finish using a PixelMap instanc
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | image.DecodingOptions | No | Decoding options. |
+| options | [image.DecodingOptions](arkts-image-image-decodingoptions-i.md) | No | Decoding options. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;PixelMap&gt; | Promise used to return the PixelMap object. |
+| Promise&lt;[PixelMap](arkts-image-sendableimage-pixelmap-i.md)&gt; | Promise used to return the PixelMap object. |
 
 **Examples**
 
@@ -86,21 +86,6 @@ Before releasing the instance, ensure that all asynchronous operations associate
 **Examples**
 
 ```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { sendableImage } from '@kit.ImageKit';
-
-async function Release(pixelMap: sendableImage.PixelMap) {
-  if (pixelMap != undefined) {
-    await pixelMap.release().then(() => {
-      console.info('Succeeded in releasing pixelmap object.');
-    }).catch((error: BusinessError) => {
-      console.error(`Failed to release pixelmap object. code is ${error.code}, message is ${error.message}`);
-    })
-  }
-}
-```
-
-```TypeScript
 import { sendableImage } from '@kit.ImageKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
@@ -111,45 +96,6 @@ async function Release(context : Context) {
     console.info('Succeeded in releasing the image source instance.');
   }).catch((error: BusinessError) => {
     console.error(`Failed to release the image source instance. code ${error.code}, message is ${error.message}`);
-  })
-}
-```
-
-```TypeScript
-import { sendableImage } from '@kit.ImageKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { image } from '@kit.ImageKit';
-
-async function Release() {
-  let size: image.Size = {
-    height: 8192,
-    width: 8
-  }
-  let receiver: sendableImage.ImageReceiver = sendableImage.createImageReceiver(size, image.ImageFormat.JPEG, 8);
-  let img = await receiver.readNextImage();
-  img.release().then(() => {
-    console.info('Succeeded in releasing an image.');
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to release an image. Code: ${error.code}, message: ${error.message}.`);
-  })
-}
-```
-
-```TypeScript
-import { sendableImage } from '@kit.ImageKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { image } from '@kit.ImageKit';
-
-async function Release() {
-  let size: image.Size = {
-    height: 8192,
-    width: 8
-  }
-  let receiver: sendableImage.ImageReceiver = sendableImage.createImageReceiver(size, image.ImageFormat.JPEG, 8);
-  receiver.release().then(() => {
-    console.info('Succeeded in releasing an image receiver.');
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to release an image receiver. Code: ${error.code}, message: ${error.message}.`);
   })
 }
 ```

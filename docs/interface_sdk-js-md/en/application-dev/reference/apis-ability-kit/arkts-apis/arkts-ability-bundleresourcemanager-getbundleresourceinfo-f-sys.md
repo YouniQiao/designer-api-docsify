@@ -33,7 +33,7 @@ Obtains the resource information of an application based on the given bundle nam
 
 | Type | Description |
 | --- | --- |
-| BundleResourceInfo | Resource information of the application obtained. |
+| [BundleResourceInfo](arkts-ability-bundleresourcemanager-bundleresourceinfo-t-sys.md) | Resource information of the application obtained. |
 
 **Error codes:**
 
@@ -110,7 +110,7 @@ Obtains the resource information of an application based on the given bundle nam
 
 | Type | Description |
 | --- | --- |
-| BundleResourceInfo | Resource information of the application obtained. |
+| [BundleResourceInfo](arkts-ability-bundleresourcemanager-bundleresourceinfo-t-sys.md) | Resource information of the application obtained. |
 
 **Error codes:**
 

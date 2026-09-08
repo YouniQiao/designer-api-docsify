@@ -26,7 +26,7 @@ function setBluetoothScanMode(mode: ScanMode, duration: number): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mode | ScanMode | 是 | 蓝牙扫描模式。当扫描模式为SCAN_MODE_GENERAL_DISCOVERABLE时，超出duration持续时间（不为0），扫描模式会重新设置为SCAN_MODE_CONNECTABLE。 |
+| mode | [ScanMode](arkts-connectivity-connection-scanmode-e.md) | 是 | 蓝牙扫描模式。当扫描模式为SCAN_MODE_GENERAL_DISCOVERABLE时，超出duration持续时间（不为0），扫描模式会重新设置为SCAN_MODE_CONNECTABLE。 |
 | duration | number | 是 | 设备可被发现的持续时间，取值范围：[0, +∞)，单位：ms。设置为0则表示持续可发现。 |
 
 **错误码：**

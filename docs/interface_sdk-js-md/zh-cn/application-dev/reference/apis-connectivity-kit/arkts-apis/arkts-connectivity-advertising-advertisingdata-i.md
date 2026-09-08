@@ -52,7 +52,7 @@ serviceData?: ServiceData[]
 
 服务数据。若未配置则默认不携带该字段。
 
-**类型：** ServiceData[]
+**类型：** [ServiceData](arkts-connectivity-advertising-servicedata-i.md)[]
 
 **起始版本：** 26.0.0
 

@@ -24,4 +24,4 @@ Obtains an [AuthorizationManager](arkts-basicservices-authorization-authorizatio
 
 | Type | Description |
 | --- | --- |
-| AuthorizationManager | Instance of the authorization manager. |
+| [AuthorizationManager](arkts-basicservices-authorization-authorizationmanager-i.md) | Instance of the authorization manager. |

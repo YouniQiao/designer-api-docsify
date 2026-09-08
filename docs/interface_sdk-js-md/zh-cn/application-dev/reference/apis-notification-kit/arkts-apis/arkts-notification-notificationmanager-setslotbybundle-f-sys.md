@@ -28,8 +28,8 @@ function setSlotByBundle(bundle: BundleOption, slot: NotificationSlot, callback:
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| bundle | BundleOption | 是 | 指定应用的包信息。 |
-| slot | NotificationSlot | 是 | 通知渠道。 |
+| bundle | [BundleOption](arkts-notification-notificationmanager-bundleoption-t.md) | 是 | 指定应用的包信息。 |
+| slot | [NotificationSlot](arkts-notification-notificationmanager-notificationslot-t.md) | 是 | 通知渠道。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 设定通知渠道回调函数。 |
 
 **错误码：**
@@ -89,8 +89,8 @@ function setSlotByBundle(bundle: BundleOption, slot: NotificationSlot): Promise<
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| bundle | BundleOption | 是 | 指定应用的包信息。 |
-| slot | NotificationSlot | 是 | 通知渠道。 |
+| bundle | [BundleOption](arkts-notification-notificationmanager-bundleoption-t.md) | 是 | 指定应用的包信息。 |
+| slot | [NotificationSlot](arkts-notification-notificationmanager-notificationslot-t.md) | 是 | 通知渠道。 |
 
 **返回值：**
 

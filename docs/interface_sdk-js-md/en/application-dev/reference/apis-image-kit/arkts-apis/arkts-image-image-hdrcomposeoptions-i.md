@@ -20,7 +20,7 @@ desiredPixelFormat?: PixelMapFormat
 
 Pixel format used for composite image, RGBA_1010102\YCBCR_P010\YCRCB_P010 are supported.
 
-**Type:** PixelMapFormat
+**Type:** [PixelMapFormat](arkts-image-image-pixelmapformat-e.md)
 
 **Since:** 23
 

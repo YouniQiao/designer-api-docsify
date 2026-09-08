@@ -84,7 +84,7 @@ ipType?: IpType
 
 IP Type
 
-**Type:** IpType
+**Type:** [IpType](arkts-connectivity-wifimanager-iptype-e-sys.md)
 
 **Since:** 9
 
@@ -196,7 +196,7 @@ staticIp?: IpConfig
 
 IP config of static
 
-**Type:** IpConfig
+**Type:** [IpConfig](arkts-connectivity-wifimanager-ipconfig-i-sys.md)
 
 **Since:** 9
 

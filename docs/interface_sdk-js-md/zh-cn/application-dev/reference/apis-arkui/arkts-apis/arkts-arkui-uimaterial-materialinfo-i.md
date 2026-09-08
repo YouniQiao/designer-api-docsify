@@ -40,7 +40,7 @@ type: MaterialType
 
 系统材质类型标识，表示当前配置对应的材质类型。该值仅用于类型标识，不映射到底层功能。
 
-**类型：** MaterialType
+**类型：** [MaterialType](arkts-arkui-uimaterial-materialtype-e.md)
 
 **默认值：** MaterialType.IMMERSIVE
 

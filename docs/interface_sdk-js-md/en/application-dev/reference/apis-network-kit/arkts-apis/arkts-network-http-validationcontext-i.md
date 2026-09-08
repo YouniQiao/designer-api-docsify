@@ -68,7 +68,7 @@ x509Certs: X509Cert[]
 
 X509 certificate chain.
 
-**Type:** X509Cert[]
+**Type:** [X509Cert](arkts-network-http-x509cert-t.md)[]
 
 **Since:** 26.0.0
 

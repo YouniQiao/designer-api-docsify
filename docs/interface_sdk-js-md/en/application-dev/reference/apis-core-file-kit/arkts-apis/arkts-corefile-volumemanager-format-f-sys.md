@@ -43,17 +43,6 @@ Formats a volume. This API uses an asynchronous callback to return the result. C
 | 13600008 | No such object. |
 | 13900042 | Unknown error. |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-let volumeId: string = "";
-let fsType: string = "";
-volumeManager.format(volumeId, fsType, (error: BusinessError) => {
-  // Do something.   
-});
-```
-
 
 ## format
 
@@ -96,16 +85,3 @@ Formats a volume. This API uses a promise to return the result. Currently, only 
 | 13600005 | Incorrect volume state. |
 | 13600008 | No such object. |
 | 13900042 | Unknown error. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-let volumeId: string = "";
-let fsType: string = "";
-volumeManager.format(volumeId, fsType).then(() => {
-  console.info("format successfully");
-}).catch((error: BusinessError) => {
-  console.error("format failed with error:" + JSON.stringify(error));
-});
-```

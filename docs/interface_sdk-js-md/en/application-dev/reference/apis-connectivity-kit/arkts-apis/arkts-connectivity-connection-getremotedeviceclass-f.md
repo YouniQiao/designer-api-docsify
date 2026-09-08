@@ -34,7 +34,7 @@ Obtains the class of a peer Bluetooth device.
 
 | Type | Description |
 | --- | --- |
-| DeviceClass | The class of the remote device. |
+| [DeviceClass](arkts-connectivity-connection-deviceclass-i.md) | The class of the remote device. |
 
 **Error codes:**
 

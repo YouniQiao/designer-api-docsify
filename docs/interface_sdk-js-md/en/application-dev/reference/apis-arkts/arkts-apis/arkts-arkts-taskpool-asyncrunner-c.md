@@ -108,8 +108,8 @@ Adds a task to the asynchronous queue for execution. Before using this API, you 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| task | Task | Yes | Task to be added to the asynchronous queue. |
-| priority | Priority | No | Priority of the task. The default value is **taskpool.Priority.MEDIUM**. |
+| task | [Task](arkts-arkts-taskpool-task-c.md) | Yes | Task to be added to the asynchronous queue. |
+| priority | [Priority](arkts-arkts-taskpool-priority-e.md) | No | Priority of the task. The default value is **taskpool.Priority.MEDIUM**. |
 
 **Return value:**
 
@@ -128,27 +128,6 @@ Adds a task to the asynchronous queue for execution. Before using this API, you 
 | [10200057](../errorcode-utils.md#10200057-task-cannot-be-executed-by-two-apis) | The task cannot be executed by two APIs. |
 
 **Examples**
-
-```TypeScript
-@Concurrent
-function printArgs(args: number): number {
-    console.info("printArgs: " + args);
-    return args;
-}
-
-let task1: taskpool.Task = new taskpool.Task(printArgs, 100); // 100: test number
-let task2: taskpool.Task = new taskpool.Task(printArgs, 200); // 200: test number
-let task3: taskpool.Task = new taskpool.Task(printArgs, 300); // 300: test number
-taskpool.execute(task1, taskpool.Priority.LOW).then((value: Object) => {
-  console.info("taskpool result1: " + value);
-});
-taskpool.execute(task2, taskpool.Priority.MEDIUM).then((value: Object) => {
-  console.info("taskpool result2: " + value);
-});
-taskpool.execute(task3, taskpool.Priority.HIGH).then((value: Object) => {
-  console.info("taskpool result3: " + value);
-});
-```
 
 ```TypeScript
 import { taskpool } from '@kit.ArkTS';

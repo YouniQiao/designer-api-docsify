@@ -36,7 +36,7 @@ Extension生命周期回调，在多设备限定协同场景下，协同方应�
 
 | 类型 | 说明 |
 | --- | --- |
-| AbilityConstant.CollaborateResult | 表示协同方应用是否接受协同的结果。取值包括：**ACCEPT**表示接受协同，协同流程继续；**REJECT**表示拒绝协同，协同流程终止。 |
+| [AbilityConstant.CollaborateResult](../../apis-ability-kit/arkts-apis/arkts-ability-abilityconstant-collaborateresult-e.md) | 表示协同方应用是否接受协同的结果。取值包括：**ACCEPT**表示接受协同，协同流程继续；**REJECT**表示拒绝协同，协同流程终止。 |
 
 **示例**
 

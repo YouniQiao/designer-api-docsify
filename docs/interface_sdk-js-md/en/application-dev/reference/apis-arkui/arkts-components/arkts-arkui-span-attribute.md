@@ -126,7 +126,7 @@ Sets the font family.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | string \| Resource | Yes | Font family.Default font: **'HarmonyOS Sans'**To specify multiple fonts, separate them with commas (,), and fonts are applied in priority order. Example: **'Arial, HarmonyOS Sans'**. |
+| value | string \| [Resource](../arkts-apis/arkts-arkui-resource-t.md) | Yes | Font family.Default font: **'HarmonyOS Sans'**To specify multiple fonts, separate them with commas (,), and fonts are applied in priority order. Example: **'Arial, HarmonyOS Sans'**. |
 
 ## fontSize
 
@@ -148,7 +148,7 @@ Sets the font size.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number \| string \| Resource | Yes | Font size. If **fontSize** is of the number type, the unit fp is used. The default font size is 16 fp. For the string type, numeric string values with optional units, for example, **"10"** or **"10fp"**, are supported. Percentage values are not supported.Default value on wearable devices: **15fp**. |
+| value | number \| string \| [Resource](../arkts-apis/arkts-arkui-resource-t.md) | Yes | Font size. If **fontSize** is of the number type, the unit fp is used. The default font size is 16 fp. For the string type, numeric string values with optional units, for example, **"10"** or **"10fp"**, are supported. Percentage values are not supported.Default value on wearable devices: **15fp**. |
 
 ## fontStyle
 
@@ -170,7 +170,7 @@ Sets the font style.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | FontStyle | Yes | Font style.Default value: **FontStyle.Normal |
+| value | [FontStyle](../arkts-apis/arkts-arkui-fontstyle-e.md) | Yes | Font style.Default value: **FontStyle.Normal |
 
 ## fontVariations
 
@@ -194,7 +194,7 @@ Set the font variation.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fontVariations | Array&lt;FontVariation&gt; | Yes | Indicates the span font variation. |
+| fontVariations | Array&lt;[FontVariation](../arkts-apis/arkts-arkui-fontvariation-t.md)&gt; | Yes | Indicates the span font variation. |
 
 ## fontWeight
 
@@ -216,7 +216,7 @@ Sets the font weight. If the value is too large, the text may be clipped dependi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number \| FontWeight \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | Yes | Font weight. For the number type, the value range is [100, 900], at an interval of 100. The default value is **400**. A larger value indicates a heavier font weight. For the string type, only strings of the number type are supported, for example, **400**, **"bold"**, **"bolder"**, **"lighter"**, **"regular"**, and **"medium"**, which correspond to the enumerated values in **FontWeight**.Default value: **FontWeight.Normal**The Resource type is supported since API version 20.<br>**Since:** 20 |
+| value | number \| [FontWeight](../arkts-apis/arkts-arkui-fontweight-e.md) \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | Yes | Font weight. For the number type, the value range is [100, 900], at an interval of 100. The default value is **400**. A larger value indicates a heavier font weight. For the string type, only strings of the number type are supported, for example, **400**, **"bold"**, **"bolder"**, **"lighter"**, **"regular"**, and **"medium"**, which correspond to the enumerated values in **FontWeight**.Default value: **FontWeight.Normal**The Resource type is supported since API version 20.<br>**Since:** 20 |
 
 ## fontWeight
 
@@ -240,7 +240,7 @@ Called when the font weight is set.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| weight | number \| FontWeight \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | Yes | the span font weight. |
+| weight | number \| [FontWeight](../arkts-apis/arkts-arkui-fontweight-e.md) \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | Yes | the span font weight. |
 | fontWeightConfigs | [FontWeightConfigs](../arkts-apis/arkts-arkui-fontweightconfigs-i.md) | No | the configuration of font weight. If not specified, the default values of FontWeightConfigs are used: `enableVariableFontWeight` defaults to `false`, and `enableDeviceFontWeightCategory` defaults to `true`. |
 
 ## letterSpacing

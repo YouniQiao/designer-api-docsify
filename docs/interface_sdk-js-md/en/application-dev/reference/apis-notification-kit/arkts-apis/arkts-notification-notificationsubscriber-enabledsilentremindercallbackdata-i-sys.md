@@ -38,7 +38,7 @@ Enabling state of the application's silent reminder.
 - **SYSTEM_DEFAULT_OFF**: initial disabled state before user setting.  
 - **SYSTEM_DEFAULT_ON**: initial enabled state before user setting.
 
-**Type:** notificationManager.SwitchState
+**Type:** [notificationManager.SwitchState](arkts-notification-notificationmanager-switchstate-e-sys.md)
 
 **Since:** 24
 

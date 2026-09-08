@@ -15,4 +15,4 @@ WebGL 2.0
 | Type | Description |
 | --- | --- |
 | Uint32Array |  |
-| webgl.GLuint[] |  |
+| [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md)[] |  |

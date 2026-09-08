@@ -44,15 +44,8 @@ declare function statSync(file: string | number): Stat
 | 13900012 | Permission denied |
 | 13900013 | Bad address |
 | 13900018 | Not a directory |
-| 13900030 | File name too number |
+| 13900030 | File name too long |
 | 13900031 | Function not implemented |
 | 13900033 | Too many symbolic links encountered |
 | 13900038 | Value too large for defined data type |
 | 13900042 | Unknown error |
-
-**示例**
-
-```TypeScript
-let stat = fileIo.statSync(pathDir);
-console.info(`Succeeded in getting file info, the size of file is ${stat.size}`);
-```

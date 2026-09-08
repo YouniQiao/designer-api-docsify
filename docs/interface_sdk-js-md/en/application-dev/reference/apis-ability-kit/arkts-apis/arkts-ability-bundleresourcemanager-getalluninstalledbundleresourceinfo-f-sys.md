@@ -32,7 +32,7 @@ Obtains the bundle resource information of all uninstalled applications that hav
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;BundleResourceInfo&gt;&gt; | Promise used to return the BundleResourceInfo array. |
+| Promise&lt;Array&lt;[BundleResourceInfo](arkts-ability-bundleresourcemanager-bundleresourceinfo-t-sys.md)&gt;&gt; | Promise used to return the BundleResourceInfo array. |
 
 **Error codes:**
 

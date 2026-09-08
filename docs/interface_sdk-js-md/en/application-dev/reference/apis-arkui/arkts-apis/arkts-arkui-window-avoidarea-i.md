@@ -30,7 +30,7 @@ bottomRect: Rect
 
 Rectangle centered at the bottom of the window's two diagonals.
 
-**Type:** Rect
+**Type:** [Rect](arkts-arkui-window-rect-i.md)
 
 **Since:** 7
 
@@ -46,7 +46,7 @@ leftRect: Rect
 
 Rectangle centered to the left of the window's two diagonals.
 
-**Type:** Rect
+**Type:** [Rect](arkts-arkui-window-rect-i.md)
 
 **Since:** 7
 
@@ -62,7 +62,7 @@ rightRect: Rect
 
 Rectangle centered to the right of the window's two diagonals.
 
-**Type:** Rect
+**Type:** [Rect](arkts-arkui-window-rect-i.md)
 
 **Since:** 7
 
@@ -78,7 +78,7 @@ topRect: Rect
 
 Rectangle centered at the top of the window's two diagonals.
 
-**Type:** Rect
+**Type:** [Rect](arkts-arkui-window-rect-i.md)
 
 **Since:** 7
 

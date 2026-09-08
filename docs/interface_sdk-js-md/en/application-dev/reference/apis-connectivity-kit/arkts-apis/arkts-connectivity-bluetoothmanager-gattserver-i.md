@@ -42,7 +42,7 @@ The added service and its characteristics are provided by the local device. On A
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| service | GattService | Yes | Indicates the service to add. |
+| service | [GattService](arkts-connectivity-bluetoothmanager-gattservice-i.md) | Yes | Indicates the service to add. |
 
 **Error codes:**
 
@@ -133,16 +133,6 @@ try {
 }
 ```
 
-```TypeScript
-import { BusinessError } from '@ohos.base';
-try {
-    let device = bluetoothManager.BLE.createGattClientDevice('XX:XX:XX:XX:XX:XX');
-    device.close();
-} catch (err) {
-    console.error("errCode:" + (err as BusinessError).code + ",errMessage:" + (err as BusinessError).message);
-}
-```
-
 ## notifyCharacteristicChanged
 
 ```TypeScript
@@ -170,7 +160,7 @@ This method should be called for every BLE peripheral device that has requested 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | deviceId | string | Yes | Indicates the address of the BLE peripheral device to receive the notification. |
-| notifyCharacteristic | NotifyCharacteristic | Yes | Indicates the local characteristic that has changed. |
+| notifyCharacteristic | [NotifyCharacteristic](arkts-connectivity-bluetoothmanager-notifycharacteristic-i.md) | Yes | Indicates the local characteristic that has changed. |
 
 **Error codes:**
 
@@ -234,7 +224,7 @@ Unsubscribe characteristic read event. On API 10 and above, the permission requi
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'characteristicRead' | Yes | Type of the characteristic read event to listen for. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;CharacteristicReadRequest&gt; | No | Callback used to listen for the characteristic read event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CharacteristicReadRequest](arkts-connectivity-bluetoothmanager-characteristicreadrequest-i.md)&gt; | No | Callback used to listen for the characteristic read event. |
 
 **Error codes:**
 
@@ -281,7 +271,7 @@ Unsubscribe characteristic write event. On API 10 and above, the permission requ
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'characteristicWrite' | Yes | Type of the characteristic write event to listen for. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;CharacteristicWriteRequest&gt; | No | Callback used to listen for the characteristic write event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CharacteristicWriteRequest](arkts-connectivity-bluetoothmanager-characteristicwriterequest-i.md)&gt; | No | Callback used to listen for the characteristic write event. |
 
 **Error codes:**
 
@@ -328,7 +318,7 @@ Unsubscribe descriptor read event. On API 10 and above, the permission required 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'descriptorRead' | Yes | Type of the descriptor read event to listen for. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DescriptorReadRequest&gt; | No | Callback used to listen for the descriptor read event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DescriptorReadRequest](arkts-connectivity-bluetoothmanager-descriptorreadrequest-i.md)&gt; | No | Callback used to listen for the descriptor read event. |
 
 **Error codes:**
 
@@ -375,7 +365,7 @@ Unsubscribe descriptor write event. On API 10 and above, the permission required
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'descriptorWrite' | Yes | Type of the descriptor write event to listen for. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DescriptorWriteRequest&gt; | No | Callback used to listen for the descriptor write event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DescriptorWriteRequest](arkts-connectivity-bluetoothmanager-descriptorwriterequest-i.md)&gt; | No | Callback used to listen for the descriptor write event. |
 
 **Error codes:**
 
@@ -422,7 +412,7 @@ Unsubscribe server connection state changed event. On API 10 and above, the perm
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'connectStateChange' | Yes | Type of the connection state changed event to listen for. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;BLEConnectChangedState&gt; | No | Callback used to listen for the connection state changed event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[BLEConnectChangedState](arkts-connectivity-bluetoothmanager-bleconnectchangedstate-i.md)&gt; | No | Callback used to listen for the connection state changed event. |
 
 **Error codes:**
 
@@ -469,7 +459,7 @@ Subscribe characteristic read event. On API 10 and above, the permission require
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'characteristicRead' | Yes | Type of the characteristic read event to listen for. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;CharacteristicReadRequest&gt; | Yes | Callback used to listen for the characteristic read event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CharacteristicReadRequest](arkts-connectivity-bluetoothmanager-characteristicreadrequest-i.md)&gt; | Yes | Callback used to listen for the characteristic read event. |
 
 **Error codes:**
 
@@ -530,7 +520,7 @@ Subscribe characteristic write event. On API 10 and above, the permission requir
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'characteristicWrite' | Yes | Type of the characteristic write event to listen for. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;CharacteristicWriteRequest&gt; | Yes | Callback used to listen for the characteristic write event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CharacteristicWriteRequest](arkts-connectivity-bluetoothmanager-characteristicwriterequest-i.md)&gt; | Yes | Callback used to listen for the characteristic write event. |
 
 **Error codes:**
 
@@ -594,7 +584,7 @@ Subscribe descriptor read event. On API 10 and above, the permission required by
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'descriptorRead' | Yes | Type of the descriptor read event to listen for. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DescriptorReadRequest&gt; | Yes | Callback used to listen for the descriptor read event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DescriptorReadRequest](arkts-connectivity-bluetoothmanager-descriptorreadrequest-i.md)&gt; | Yes | Callback used to listen for the descriptor read event. |
 
 **Error codes:**
 
@@ -655,7 +645,7 @@ Subscribe descriptor write event. On API 10 and above, the permission required b
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'descriptorWrite' | Yes | Type of the descriptor write event to listen for. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DescriptorWriteRequest&gt; | Yes | Callback used to listen for the descriptor write event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DescriptorWriteRequest](arkts-connectivity-bluetoothmanager-descriptorwriterequest-i.md)&gt; | Yes | Callback used to listen for the descriptor write event. |
 
 **Error codes:**
 
@@ -719,7 +709,7 @@ Subscribe server connection state changed event. On API 10 and above, the permis
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'connectStateChange' | Yes | Type of the connection state changed event to listen for. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;BLEConnectChangedState&gt; | Yes | Callback used to listen for the connection state changed event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[BLEConnectChangedState](arkts-connectivity-bluetoothmanager-bleconnectchangedstate-i.md)&gt; | Yes | Callback used to listen for the connection state changed event. |
 
 **Error codes:**
 
@@ -819,7 +809,7 @@ Sends a response to a specified read or write request to a given BLE peripheral 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| serverResponse | ServerResponse | Yes | Indicates the response parameters [ServerResponse](arkts-connectivity-bluetoothmanager-serverresponse-i.md). |
+| serverResponse | [ServerResponse](arkts-connectivity-bluetoothmanager-serverresponse-i.md) | Yes | Indicates the response parameters [ServerResponse](arkts-connectivity-bluetoothmanager-serverresponse-i.md). |
 
 **Error codes:**
 
@@ -880,9 +870,9 @@ Starts BLE advertising. On API 10 and above, the permission required by this int
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| setting | AdvertiseSetting | Yes | Indicates the settings for BLE advertising. If you need to use the default value, set this parameter to `null`. |
-| advData | AdvertiseData | Yes | Indicates the advertising data. |
-| advResponse | AdvertiseData | No | Indicates the scan response associated with the advertising data. |
+| setting | [AdvertiseSetting](arkts-connectivity-bluetoothmanager-advertisesetting-i.md) | Yes | Indicates the settings for BLE advertising. If you need to use the default value, set this parameter to `null`. |
+| advData | [AdvertiseData](arkts-connectivity-bluetoothmanager-advertisedata-i.md) | Yes | Indicates the advertising data. |
+| advResponse | [AdvertiseData](arkts-connectivity-bluetoothmanager-advertisedata-i.md) | No | Indicates the scan response associated with the advertising data. |
 
 **Error codes:**
 

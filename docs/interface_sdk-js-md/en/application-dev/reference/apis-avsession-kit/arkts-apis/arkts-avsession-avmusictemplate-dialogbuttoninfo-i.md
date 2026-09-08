@@ -54,7 +54,7 @@ buttonType: ButtonType
 
 Button type.
 
-**Type:** ButtonType
+**Type:** [ButtonType](arkts-avsession-avmusictemplate-buttontype-e.md)
 
 **Since:** 23
 

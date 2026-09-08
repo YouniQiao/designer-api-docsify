@@ -26,7 +26,7 @@ function createServer(): Server
 
 | 类型 | 说明 |
 | --- | --- |
-| Server | SSAP服务端实例。 |
+| [Server](arkts-connectivity-ssap-server-i.md) | SSAP服务端实例。 |
 
 **错误码：**
 

@@ -24,7 +24,7 @@ Obtain the information about the found devices.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;WifiP2pDevice[]&gt; | Returns p2p device information. |
+| Promise&lt;[WifiP2pDevice](arkts-connectivity-wifimanager-wifip2pdevice-i.md)[]&gt; | Returns p2p device information. |
 
 **Error codes:**
 
@@ -71,7 +71,7 @@ Obtain the information about the found devices.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;WifiP2pDevice[]&gt; | Yes | Indicates callback of function. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[WifiP2pDevice](arkts-connectivity-wifimanager-wifip2pdevice-i.md)[]&gt; | Yes | Indicates callback of function. |
 
 **Error codes:**
 

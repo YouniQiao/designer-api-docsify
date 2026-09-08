@@ -30,7 +30,7 @@ function getChildProcessInfos(): Promise<Array<ChildProcessInformation>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;ChildProcessInformation&gt;&gt; | Promise用于返回孩子的信息当前应用的进程。 |
+| Promise&lt;Array&lt;[ChildProcessInformation](arkts-ability-childprocessmanager-childprocessinformation-t.md)&gt;&gt; | Promise用于返回孩子的信息当前应用的进程。 |
 
 **错误码：**
 

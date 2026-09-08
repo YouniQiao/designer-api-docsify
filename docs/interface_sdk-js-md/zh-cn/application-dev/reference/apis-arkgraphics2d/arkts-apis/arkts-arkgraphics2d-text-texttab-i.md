@@ -20,7 +20,7 @@ alignment: TextAlign
 
 段落中制表符之后的文本对齐方式，支持设置[TextAlign](arkts-arkgraphics2d-text-textalign-e.md)的LEFT左对齐、RIGHT右对齐和CENTER居中对齐方式，未列出的枚举值将视为左对齐，默认为左对齐。
 
-**类型：** TextAlign
+**类型：** [TextAlign](arkts-arkgraphics2d-text-textalign-e.md)
 
 **起始版本：** 18
 
@@ -43,7 +43,3 @@ location: number
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Graphics.Drawing
-
-**示例**
-
-alignment为CENTER，location为200，文本为"12/t345"：

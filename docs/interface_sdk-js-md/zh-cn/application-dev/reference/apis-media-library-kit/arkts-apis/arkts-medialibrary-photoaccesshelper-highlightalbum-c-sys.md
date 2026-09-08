@@ -32,7 +32,7 @@ constructor(album: Album)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| album | Album | 是 | 智慧相册。 |
+| album | [Album](arkts-medialibrary-photoaccesshelper-album-i.md) | 是 | 智慧相册。 |
 
 **错误码：**
 
@@ -62,96 +62,6 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 }
 ```
 
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-
-async function example(context: Context) {
-  console.info('MediaAnalysisAlbumChangeRequest constructorDemo');
-  let helper: photoAccessHelper.PhotoAccessHelper = photoAccessHelper.getPhotoAccessHelper(context);
-  let albumFetchOption: photoAccessHelper.FetchOptions = {
-    fetchColumns: [],
-    predicates: new dataSharePredicates.DataSharePredicates()
-  };
-  let albumFetchResult: photoAccessHelper.FetchResult<photoAccessHelper.Album> =
-    await helper.getAlbums(photoAccessHelper.AlbumType.SMART, photoAccessHelper.AlbumSubtype.HIGHLIGHT, albumFetchOption);
-  if (albumFetchResult.getCount() === 0) {
-    console.error('No album');
-    return;
-  }
-  let highlightAlbum: photoAccessHelper.Album = await albumFetchResult.getFirstObject();
-  albumFetchResult.close();
-  let changeRequest: photoAccessHelper.MediaAnalysisAlbumChangeRequest =
-    new photoAccessHelper.MediaAnalysisAlbumChangeRequest(highlightAlbum);
-}
-```
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-
-async function example(context: Context) {
-  console.info('MediaHighlightAlbumChangeRequest constructorDemo');
-  let helper: photoAccessHelper.PhotoAccessHelper = photoAccessHelper.getPhotoAccessHelper(context);
-  let albumFetchOption: photoAccessHelper.FetchOptions = {
-    fetchColumns: [],
-    predicates: new dataSharePredicates.DataSharePredicates()
-  };
-  let albumFetchResult: photoAccessHelper.FetchResult<photoAccessHelper.Album> =
-    await helper.getAlbums(photoAccessHelper.AlbumType.SMART, photoAccessHelper.AlbumSubtype.HIGHLIGHT, albumFetchOption);
-  if (albumFetchResult.getCount() === 0) {
-    console.error('No album');
-    return;
-  }
-  let highlightAlbum: photoAccessHelper.Album = await albumFetchResult.getFirstObject();
-  albumFetchResult.close();
-  let changeRequest: photoAccessHelper.MediaHighlightAlbumChangeRequest =
-    new photoAccessHelper.MediaHighlightAlbumChangeRequest(highlightAlbum);
-}
-```
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-
-async function example(context: Context) {
-  console.info('AnalysisAlbum constructorDemo');
-  let helper: photoAccessHelper.PhotoAccessHelper = photoAccessHelper.getPhotoAccessHelper(context);
-  let albumFetchOption: photoAccessHelper.FetchOptions = {
-    fetchColumns: [],
-    predicates: new dataSharePredicates.DataSharePredicates()
-  };
-  let albumFetchResult: photoAccessHelper.FetchResult<photoAccessHelper.Album> = 
-    await helper.getAlbums(photoAccessHelper.AlbumType.SMART, photoAccessHelper.AlbumSubtype.HIGHLIGHT, albumFetchOption);
-  if (albumFetchResult.getCount() === 0) {
-    console.error('No album');
-    return;
-  }
-  let highlightAlbum: photoAccessHelper.Album = await albumFetchResult.getFirstObject();
-  albumFetchResult.close();
-  let analysisAlbum: photoAccessHelper.AnalysisAlbum = new photoAccessHelper.AnalysisAlbum(highlightAlbum);
-}
-```
-
-phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  console.info('MediaAlbumChangeRequest constructorDemo');
-  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-  let fetchOptions: photoAccessHelper.FetchOptions = {
-    fetchColumns: [],
-    predicates: predicates
-  };
-  try {
-    let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.Album> = await phAccessHelper.getAlbums(photoAccessHelper.AlbumType.USER, photoAccessHelper.AlbumSubtype.USER_GENERIC, fetchOptions);
-    let album: photoAccessHelper.Album = await fetchResult.getFirstObject();
-    let albumChangeRequest: photoAccessHelper.MediaAlbumChangeRequest = new photoAccessHelper.MediaAlbumChangeRequest(album);
-  } catch (err) {
-    console.error(`MediaAlbumChangeRequest constructorDemo failed with error: ${err.code}, ${err.message}`);
-  }
-}
-```
-
 ## deleteHighlightAlbums
 
 ```TypeScript
@@ -173,7 +83,7 @@ static deleteHighlightAlbums(context: Context, albums: Array<Album>): Promise<nu
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | 是 | 传入Ability实例的Context。 |
-| albums | Array&lt;Album&gt; | 是 | 需要删除的时刻相册。 |
+| albums | Array&lt;[Album](arkts-medialibrary-photoaccesshelper-album-i.md)&gt; | 是 | 需要删除的时刻相册。 |
 
 **返回值：**
 

@@ -2,7 +2,7 @@
 
 Enumerates the polygon drawing mode.
 
-@enum { number }
+@enum { int }
 
 **Since:** 23
 

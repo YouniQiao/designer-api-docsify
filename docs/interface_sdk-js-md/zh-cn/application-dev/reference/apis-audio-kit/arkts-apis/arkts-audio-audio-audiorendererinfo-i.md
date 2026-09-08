@@ -26,7 +26,7 @@ API version 8、9为必填参数，从API version 10开始为可选参数，默�
 
 从API version 8开始支持，从API version 10开始废弃，建议使用usage替代。
 
-**类型：** ContentType
+**类型：** [ContentType](arkts-audio-audio-contenttype-e.md)
 
 **起始版本：** 8
 

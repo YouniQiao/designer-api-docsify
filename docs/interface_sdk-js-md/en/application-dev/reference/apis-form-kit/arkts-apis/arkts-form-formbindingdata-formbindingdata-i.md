@@ -36,7 +36,7 @@ proxies?: Array<ProxyData>
 
 proxies for updating.
 
-**Type:** Array&lt;ProxyData&gt;
+**Type:** Array&lt;[ProxyData](arkts-form-formbindingdata-proxydata-i.md)&gt;
 
 **Since:** 10
 

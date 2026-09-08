@@ -20,7 +20,7 @@ dutyMode?: ScanDuty
 
 扫描模式，默认值为SCAN_MODE_LOW_POWER。
 
-**类型：** ScanDuty
+**类型：** [ScanDuty](arkts-connectivity-ble-scanduty-e.md)
 
 **起始版本：** 10
 
@@ -78,7 +78,7 @@ matchMode?: MatchMode
 
 硬件的过滤匹配模式，默认值为MATCH_MODE_AGGRESSIVE。
 
-**类型：** MatchMode
+**类型：** [MatchMode](arkts-connectivity-ble-matchmode-e.md)
 
 **起始版本：** 10
 

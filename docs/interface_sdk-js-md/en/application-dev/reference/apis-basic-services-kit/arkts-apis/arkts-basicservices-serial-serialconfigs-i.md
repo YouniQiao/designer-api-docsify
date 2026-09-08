@@ -38,7 +38,7 @@ dataBits?: DataBits
 
 Data bits. Default value: EIGHT
 
-**Type:** DataBits
+**Type:** [DataBits](arkts-basicservices-serial-databits-e.md)
 
 **Default:** EIGHT
 
@@ -56,7 +56,7 @@ parity?: Parity
 
 Parity bit. Default value: NONE
 
-**Type:** Parity
+**Type:** [Parity](arkts-basicservices-serial-parity-e.md)
 
 **Default:** NONE
 
@@ -94,7 +94,7 @@ Stop bits.
 
 Default value: ONE
 
-**Type:** StopBits
+**Type:** [StopBits](arkts-basicservices-serial-stopbits-e.md)
 
 **Default:** ONE
 

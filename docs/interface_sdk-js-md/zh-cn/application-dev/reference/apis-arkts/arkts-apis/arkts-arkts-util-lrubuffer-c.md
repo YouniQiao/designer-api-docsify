@@ -41,19 +41,6 @@ import { util } from '@kit.ArkTS';
 **示例**
 
 ```TypeScript
-let pro = new util.LRUCache<number, number>();
-pro.put(2, 10);
-pro.put(3, 15);
-
-for (let value of pro) {
-  console.info(value[0]+ ', '+ value[1]);
-}
-// 输出结果：
-// 2, 10
-// 3, 15
-```
-
-```TypeScript
 let pro : util.LruBuffer<number,number> = new util.LruBuffer();
 pro.put(2,10);
 let result = pro[Symbol.iterator]();
@@ -128,18 +115,6 @@ clear(): void
 **示例**
 
 ```TypeScript
-let pro = new util.LRUCache<number, number>();
-pro.put(2, 10);
-let result = pro.length;
-pro.clear();
-let res = pro.length;
-console.info('result = ' + result);
-console.info('res = ' + res);
-// 输出结果：result = 1
-// 输出结果：res = 0
-```
-
-```TypeScript
 let pro : util.LruBuffer<number,number> = new util.LruBuffer();
 pro.put(2,10);
 let result = pro.length;
@@ -169,10 +144,6 @@ constructor(capacity?: number)
 | capacity | number | 否 | 要创建的缓存的容量。默认值为 **64**。 |
 
 **示例**
-
-```TypeScript
-let lruCache = new util.LRUCache<number, number>();
-```
 
 ```TypeScript
 let pro : util.LruBuffer<number,number> = new util.LruBuffer();
@@ -207,14 +178,6 @@ contains(key: K): boolean
 | boolean | 检查结果。如果缓存包含指定的 key，则返回 **true**；否则返回 **false**。 |
 
 **示例**
-
-```TypeScript
-let pro = new util.LRUCache<number, number>();
-pro.put(2, 10);
-let result = pro.contains(2);
-console.info('result = ' + result);
-// 输出结果：result = true
-```
 
 ```TypeScript
 let pro : util.LruBuffer<number,number> = new util.LruBuffer();
@@ -255,13 +218,6 @@ createDefault(key: K): V
 **示例**
 
 ```TypeScript
-let pro = new util.LRUCache<number, number>();
-let result = pro.createDefault(50);
-console.info('result = ' + result);
-// 输出结果：result = undefined
-```
-
-```TypeScript
 let pro : util.LruBuffer<number,number> = new util.LruBuffer();
 let result = pro.createDefault(50);
 ```
@@ -289,19 +245,6 @@ entries(): IterableIterator<[K, V]>
 | IterableIterator&lt;[K, V]&gt; | 可迭代的数组。 |
 
 **示例**
-
-```TypeScript
-let pro = new util.LRUCache<number, number>();
-pro.put(2, 10);
-pro.put(3, 15);
-let pair = pro.entries();
-for (let value of pair) {
-  console.info(value[0]+ ', '+ value[1]);
-}
-// 输出结果：
-// 2, 10
-// 3, 15
-```
 
 ```TypeScript
 let pro : util.LruBuffer<number,number> = new util.LruBuffer();
@@ -340,14 +283,6 @@ get(key: K): V | undefined
 **示例**
 
 ```TypeScript
-let pro = new util.LRUCache<number, number>();
-pro.put(2, 10);
-let result  = pro.get(2);
-console.info('result = ' + result);
-// 输出结果：result = 10
-```
-
-```TypeScript
 let pro : util.LruBuffer<number,number> = new util.LruBuffer();
 pro.put(2,10);
 let result  = pro.get(2);
@@ -378,13 +313,6 @@ getCapacity(): number
 | number | 缓存的容量。 |
 
 **示例**
-
-```TypeScript
-let pro = new util.LRUCache<number, number>();
-let result = pro.getCapacity();
-console.info('result = ' + result);
-// 输出结果：result = 64
-```
 
 ```TypeScript
 let pro : util.LruBuffer<number,number> = new util.LruBuffer();
@@ -418,26 +346,6 @@ getCreateCount(): number
 **示例**
 
 ```TypeScript
-// 创建新类ChildLRUCache继承LRUCache，重写createDefault方法，返回一个非undefined的值。
-class ChildLRUCache extends util.LRUCache<number, number> {
-  constructor() {
-    super();
-  }
-
-  createDefault(key: number): number {
-    return key;
-  }
-}
-let lru = new ChildLRUCache();
-lru.put(2, 10);
-lru.get(3);
-lru.get(5);
-let res = lru.getCreateCount();
-console.info('res = ' + res);
-// 输出结果：res = 2
-```
-
-```TypeScript
 let pro : util.LruBuffer<number,number> = new util.LruBuffer();
 pro.put(1,8);
 let result = pro.getCreateCount();
@@ -468,15 +376,6 @@ getMatchCount(): number
 | number | 查询值匹配的次数。 |
 
 **示例**
-
-```TypeScript
-let pro = new util.LRUCache<number, number>();
-pro.put(2, 10);
-pro.get(2);
-let result = pro.getMatchCount();
-console.info('result = ' + result);
-// 输出结果：result = 1
-```
 
 ```TypeScript
 let pro : util.LruBuffer<number,number> = new util.LruBuffer();
@@ -512,15 +411,6 @@ getMissCount(): number
 **示例**
 
 ```TypeScript
-let pro = new util.LRUCache<number, number>();
-pro.put(2, 10);
-pro.get(2);
-let result = pro.getMissCount();
-console.info('result = ' + result);
-// 输出结果：result = 0
-```
-
-```TypeScript
 let pro : util.LruBuffer<number,number> = new util.LruBuffer();
 pro.put(2,10);
 pro.get(2);
@@ -554,14 +444,6 @@ getPutCount(): number
 **示例**
 
 ```TypeScript
-let pro = new util.LRUCache<number, number>();
-pro.put(2, 10);
-let result = pro.getPutCount();
-console.info('result = ' + result);
-// 输出结果：result = 1
-```
-
-```TypeScript
 let pro : util.LruBuffer<number,number> = new util.LruBuffer();
 pro.put(2,10);
 let result = pro.getPutCount();
@@ -592,16 +474,6 @@ getRemovalCount(): number
 | number | 从缓存中移除的次数。 |
 
 **示例**
-
-```TypeScript
-let pro = new util.LRUCache<number, number>();
-pro.put(2, 10);
-pro.updateCapacity(2);
-pro.put(50, 22);
-let result = pro.getRemovalCount();
-console.info('result = ' + result);
-// 输出结果：result = 0
-```
 
 ```TypeScript
 let pro : util.LruBuffer<number,number> = new util.LruBuffer();
@@ -638,14 +510,6 @@ isEmpty(): boolean
 **示例**
 
 ```TypeScript
-let pro = new util.LRUCache<number, number>();
-pro.put(2, 10);
-let result = pro.isEmpty();
-console.info('result = ' + result);
-// 输出结果：result = false
-```
-
-```TypeScript
 let pro : util.LruBuffer<number,number> = new util.LruBuffer();
 pro.put(2,10);
 let result = pro.isEmpty();
@@ -676,24 +540,6 @@ keys(): K[]
 | K[] | 此缓存中的所有 key，按从最近最多访问到最近最少访问的顺序排列。 |
 
 **示例**
-
-```TypeScript
-let pro = new util.LRUCache<number, string>();
-pro.put(1, 'A');
-pro.put(2, "B");
-pro.put(3, 'C');
-pro.put(4, 'D')
-pro.put(5, 'E')
-pro.put(6, 'F')
-let result = pro.keys();
-console.info('result = ' + result);
-// 输出结果：result = 1,2,3,4,5,6
-pro.get(5);
-pro.get(3);
-result = pro.keys();
-console.info('result = ' + result);
-// 输出结果：result = 1,2,4,6,5,3
-```
 
 ```TypeScript
 let pro : util.LruBuffer<number,number> = new util.LruBuffer();
@@ -735,13 +581,6 @@ put(key: K, value: V): V
 **示例**
 
 ```TypeScript
-let pro = new util.LRUCache<number, number>();
-let result = pro.put(2, 10);
-console.info('result = ' + result);
-// 输出结果：result = 10
-```
-
-```TypeScript
 let pro : util.LruBuffer<number,number> = new util.LruBuffer();
 let result = pro.put(2,10);
 console.info("result = " + result);
@@ -779,14 +618,6 @@ remove(key: K): V | undefined
 **示例**
 
 ```TypeScript
-let pro = new util.LRUCache<number, number>();
-pro.put(2, 10);
-let result = pro.remove(20);
-console.info('result = ' + result);
-// 输出结果：result = undefined
-```
-
-```TypeScript
 let pro : util.LruBuffer<number,number> = new util.LruBuffer();
 pro.put(2,10);
 let result = pro.remove(20);
@@ -819,61 +650,6 @@ toString(): string
 **示例**
 
 ```TypeScript
-let rationalNumber = new util.RationalNumber(1,2);
-let result = rationalNumber.toString();
-console.info("result = " + result);
-// 输出结果：result = 1/2
-```
-
-API 9及以上建议使用以下写法：
-
-```TypeScript
-let rationalNumber = util.RationalNumber.parseRationalNumber(1,2);
-let result = rationalNumber.toString();
-console.info("result = " + result);
-// 输出结果：result = 1/2
-```
-
-```TypeScript
-let pro = new util.LRUCache<number, number>();
-pro.put(2, 10);
-pro.get(2);
-pro.get(3);
-console.info(pro.toString());
-// 输出结果：LRUCache[ maxSize = 64, hits = 1, misses = 1, hitRate = 50% ]
-// maxSize: 缓存区最大值 hits: 查询值匹配成功的次数 misses: 查询值匹配失败的次数 hitRate: 查询值匹配率
-```
-
-```TypeScript
-class Temperature implements util.ScopeComparable {
-  private readonly _temp: number;
-
-  constructor(value: number) {
-    this._temp = value;
-  }
-
-  compareTo(value: Temperature) {
-    return this._temp >= value.getTemp();
-  }
-
-  getTemp() {
-    return this._temp;
-  }
-
-  toString(): string {
-    return this._temp.toString();
-  }
-}
-
-let tempLower = new Temperature(30);
-let tempUpper = new Temperature(40);
-let range = new util.ScopeHelper(tempLower, tempUpper);
-let result = range.toString();
-console.info("result = " + result);
-// 输出结果：result = [30, 40]
-```
-
-```TypeScript
 let pro : util.LruBuffer<number,number> = new util.LruBuffer();
 pro.put(2,10);
 pro.get(2);
@@ -881,35 +657,6 @@ pro.remove(20);
 let result = pro.toString();
 console.info("result = " + result);
 // 输出结果：result = Lrubuffer[ maxSize = 64, hits = 1, misses = 0, hitRate = 100% ]
-```
-
-```TypeScript
-class Temperature implements util.ScopeComparable {
-  private readonly _temp: number;
-
-  constructor(value: number) {
-    this._temp = value;
-  }
-
-  compareTo(value: Temperature) {
-    return this._temp >= value.getTemp();
-  }
-
-  getTemp() {
-    return this._temp;
-  }
-
-  toString(): string {
-    return this._temp.toString();
-  }
-}
-
-let tempLower = new Temperature(30);
-let tempUpper = new Temperature(40);
-let range = new util.Scope(tempLower, tempUpper);
-let result = range.toString();
-console.info("result = " + result);
-// 输出结果：result = [30, 40]
 ```
 
 ## updateCapacity
@@ -935,11 +682,6 @@ updateCapacity(newCapacity: number): void
 | newCapacity | number | 是 | 缓存的新容量。 |
 
 **示例**
-
-```TypeScript
-let pro = new util.LRUCache<number, number>();
-pro.updateCapacity(100);
-```
 
 ```TypeScript
 let pro : util.LruBuffer<number,number> = new util.LruBuffer();
@@ -969,24 +711,6 @@ values(): V[]
 | V[] | 此缓存中的所有值，按从最近最多访问到最近最少访问的顺序排列。 |
 
 **示例**
-
-```TypeScript
-let pro = new util.LRUCache<number, string>();
-pro.put(1, 'A');
-pro.put(2, "B");
-pro.put(3, 'C');
-pro.put(4, 'D')
-pro.put(5, 'E')
-pro.put(6, 'F')
-let result = pro.values();
-console.info('result = ' + result);
-// 输出结果：result = A,B,C,D,E,F
-pro.get(1);
-pro.get(2);
-result = pro.values();
-console.info('result = ' + result);
-// 输出结果：result = C,D,E,F,A,B
-```
 
 ```TypeScript
 let pro : util.LruBuffer<number|string,number|string> = new util.LruBuffer();

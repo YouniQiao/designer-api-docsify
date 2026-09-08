@@ -95,6 +95,8 @@ class BackupExt extends BackupExtensionAbility {
 ```
 
 > NOTE
+> 
+> The following shows the sample code for asynchronous implementation.
 
 ```TypeScript
 import { BackupExtensionAbility, BundleVersion } from '@kit.CoreFileKit';
@@ -374,6 +376,8 @@ class BackupExt extends BackupExtensionAbility {
 ```
 
 > NOTE
+> 
+> The following shows the sample code for synchronous implementation.
 
 ```TypeScript
 import { BackupExtensionAbility, BundleVersion } from '@kit.CoreFileKit';

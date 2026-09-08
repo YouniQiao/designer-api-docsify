@@ -41,7 +41,7 @@ Adjusts the panel rectangle. After the API is called, the adjust request is subm
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| flag | PanelFlag | Yes | Type of the state of the target panel. It can be **FLG_FIXED** or **FLG_FLOATING**. |
+| flag | [PanelFlag](arkts-ime-inputmethodengine-panelflag-e.md) | Yes | Type of the state of the target panel. It can be **FLG_FIXED** or **FLG_FLOATING**. |
 | rect | [PanelRect](arkts-ime-inputmethodengine-panelrect-i.md) | Yes | Landscape rectangle and portrait rectangle of the target panel. For the panel of the fixed state, the height cannot exceed 70% of the screen height, and the width cannot exceed the screen width. For the panel of the floating state, the height cannot exceed the screen height, and the width cannot exceed the screen width. |
 
 **Error codes:**
@@ -109,7 +109,7 @@ Adjusts the panel rectangle, and customizes the avoid area and touch area.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| flag | PanelFlag | Yes | Type of the state of the target panel. It can be **FLG_FIXED** or **FLG_FLOATING**. |
+| flag | [PanelFlag](arkts-ime-inputmethodengine-panelflag-e.md) | Yes | Type of the state of the target panel. It can be **FLG_FIXED** or **FLG_FLOATING**. |
 | rect | [EnhancedPanelRect](arkts-ime-inputmethodengine-enhancedpanelrect-i.md) | Yes | The target panel rectangle, avoid area, and touch area. |
 
 **Error codes:**
@@ -169,7 +169,7 @@ Changes the state type ([PanelFlag](arkts-ime-inputmethodengine-panelflag-e.md))
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| flag | PanelFlag | Yes | Type of the state of the target panel. |
+| flag | [PanelFlag](arkts-ime-inputmethodengine-panelflag-e.md) | Yes | Type of the state of the target panel. |
 
 **Error codes:**
 
@@ -237,7 +237,7 @@ Obtains the immersive mode of the input method application.
 
 | Type | Description |
 | --- | --- |
-| ImmersiveMode | Immersive mode. |
+| [ImmersiveMode](arkts-ime-inputmethodengine-immersivemode-e.md) | Immersive mode. |
 
 **Examples**
 
@@ -332,18 +332,6 @@ panel.hide((err: BusinessError) => {
 });
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-keyboardController.hide((err: BusinessError) => {
-  if (err) {
-    console.error(`Failed to hide. Code:${err.code}, message:${err.message}`);
-    return;
-  }
-  console.info('Succeeded in hiding keyboard.');
-});
-```
-
 ## hide
 
 ```TypeScript
@@ -371,16 +359,6 @@ panel.hide().then(() => {
   console.info('Succeeded in hiding the panel.');
 }).catch((err: BusinessError) => {
   console.error(`Failed to hide panel. Code is ${err.code}, message is ${err.message}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-keyboardController.hide().then(() => {
-  console.info('Succeeded in hiding keyboard.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to hide. Code:${err.code}, message:${err.message}`);
 });
 ```
 
@@ -559,7 +537,7 @@ Disables listening for the panel size change. This API uses an asynchronous call
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'sizeChange' | Yes | Event type, which is **'sizeChange'**. |
-| callback | SizeChangeCallback | No | Callback used to return the size of the soft keyboard panel, including the width and height.<br>**Since:** 15 |
+| callback | [SizeChangeCallback](arkts-ime-inputmethodengine-sizechangecallback-t.md) | No | Callback used to return the size of the soft keyboard panel, including the width and height.<br>**Since:** 15 |
 
 **Examples**
 
@@ -657,7 +635,7 @@ Enables listening for the panel size change. This API uses an asynchronous callb
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'sizeChange' | Yes | Event type, which is **'sizeChange'**. |
-| callback | SizeChangeCallback | Yes | Callback used to return the size of the soft keyboard panel, including the width and height.<br>**Since:** 15 |
+| callback | [SizeChangeCallback](arkts-ime-inputmethodengine-sizechangecallback-t.md) | Yes | Callback used to return the size of the soft keyboard panel, including the width and height.<br>**Since:** 15 |
 
 **Examples**
 
@@ -837,7 +815,7 @@ Sets the immersive mode of the input method application. You can only set the im
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | ImmersiveMode | Yes | Immersive mode. |
+| mode | [ImmersiveMode](arkts-ime-inputmethodengine-immersivemode-e.md) | Yes | Immersive mode. |
 
 **Error codes:**
 
@@ -1266,7 +1244,7 @@ Update the panel rectangle. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| flag | PanelFlag | Yes | Type of the state of the target panel. It can be **FLG_FIXED** or **FLG_FLOATING**. |
+| flag | [PanelFlag](arkts-ime-inputmethodengine-panelflag-e.md) | Yes | Type of the state of the target panel. It can be **FLG_FIXED** or **FLG_FLOATING**. |
 | rect | [PanelRect](arkts-ime-inputmethodengine-panelrect-i.md) | Yes | Landscape rectangle and portrait rectangle of the target panel. For the panel of the fixed state, the height cannot exceed 70% of the screen height, and the width cannot exceed the screen width. For the panel of the floating state, the height cannot exceed the screen height, and the width cannot exceed the screen width. |
 
 **Return value:**
@@ -1308,7 +1286,7 @@ Update the panel rectangle, and customizes the avoid area and touch area. This A
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| flag | PanelFlag | Yes | Type of the state of the target panel. It can be **FLG_FIXED** or **FLG_FLOATING**. |
+| flag | [PanelFlag](arkts-ime-inputmethodengine-panelflag-e.md) | Yes | Type of the state of the target panel. It can be **FLG_FIXED** or **FLG_FLOATING**. |
 | rect | [EnhancedPanelRect](arkts-ime-inputmethodengine-enhancedpanelrect-i.md) | Yes | The target panel rectangle, avoid area, and touch area. |
 
 **Return value:**
@@ -1351,7 +1329,7 @@ Update the panel rectangle.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| flag | PanelFlag | Yes | Type of the state of the target panel. It can be **FLG_FIXED** or **FLG_FLOATING**. |
+| flag | [PanelFlag](arkts-ime-inputmethodengine-panelflag-e.md) | Yes | Type of the state of the target panel. It can be **FLG_FIXED** or **FLG_FLOATING**. |
 | rect | [PanelRect](arkts-ime-inputmethodengine-panelrect-i.md) | Yes | Landscape rectangle and portrait rectangle of the target panel. For the panel of the fixed state, the height cannot exceed 70% of the screen height, and the width cannot exceed the screen width. For the panel of the floating state, the height cannot exceed the screen height, and the width cannot exceed the screen width. |
 
 **Error codes:**
@@ -1387,7 +1365,7 @@ Update the panel rectangle, and customizes the avoid area and touch area.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| flag | PanelFlag | Yes | Type of the state of the target panel. It can be **FLG_FIXED** or **FLG_FLOATING**. |
+| flag | [PanelFlag](arkts-ime-inputmethodengine-panelflag-e.md) | Yes | Type of the state of the target panel. It can be **FLG_FIXED** or **FLG_FLOATING**. |
 | rect | [EnhancedPanelRect](arkts-ime-inputmethodengine-enhancedpanelrect-i.md) | Yes | The target panel rectangle, avoid area, and touch area. |
 
 **Error codes:**
@@ -1422,7 +1400,7 @@ Updates the hot zone on the input method panel in the current state.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| inputRegion | Array&lt;window.Rect&gt; | Yes | Region for receiving input events.    - The array size is limited to [1, 4].    - The input hot zone is relative to the left vertex of the input method panel window. |
+| inputRegion | Array&lt;[window.Rect](../../apis-arkui/arkts-apis/arkts-arkui-window-rect-i.md)&gt; | Yes | Region for receiving input events.    - The array size is limited to [1, 4].    - The input hot zone is relative to the left vertex of the input method panel window. |
 
 **Error codes:**
 

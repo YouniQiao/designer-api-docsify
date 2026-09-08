@@ -20,7 +20,7 @@ actionUponExpiry?: ActionType
 
 表示到期后文件是否允许打开（打开后拥有编辑权限），仅在expireTime不为空时生效，默认为空。
 
-**类型：** ActionType
+**类型：** [ActionType](arkts-dataprotection-dlppermission-actiontype-e.md)
 
 **起始版本：** 21
 

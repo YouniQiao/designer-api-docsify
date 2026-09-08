@@ -140,7 +140,7 @@ imageRes: ResourceStr | PixelMap
 
 展示的图片。
 
-**类型：** [ResourceStr](arkts-arkui-resourcestr-t.md) \| PixelMap
+**类型：** [ResourceStr](arkts-arkui-resourcestr-t.md) \| [PixelMap](../arkts-components/arkts-arkui-pixelmap-t.md)
 
 **起始版本：** 18
 

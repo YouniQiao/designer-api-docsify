@@ -28,7 +28,7 @@ function createGattServer(): GattServer
 
 | 类型 | 说明 |
 | --- | --- |
-| GattServer | server端类，使用server端方法之前需要创建该类的实例进行操作。 |
+| [GattServer](arkts-connectivity-ble-gattserver-i.md) | server端类，使用server端方法之前需要创建该类的实例进行操作。 |
 
 **示例**
 

@@ -20,7 +20,7 @@ advertisingData: AdvertiseData
 
 Indicates the advertising data.
 
-**Type:** AdvertiseData
+**Type:** [AdvertiseData](arkts-connectivity-ble-advertisedata-i.md)
 
 **Since:** 11
 
@@ -36,7 +36,7 @@ advertisingResponse?: AdvertiseData
 
 Indicates the advertising response.
 
-**Type:** AdvertiseData
+**Type:** [AdvertiseData](arkts-connectivity-ble-advertisedata-i.md)
 
 **Since:** 11
 
@@ -52,7 +52,7 @@ advertisingSettings: AdvertiseSetting
 
 Indicates the advertising settings.
 
-**Type:** AdvertiseSetting
+**Type:** [AdvertiseSetting](arkts-connectivity-ble-advertisesetting-i.md)
 
 **Since:** 11
 

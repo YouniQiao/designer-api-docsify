@@ -28,17 +28,7 @@ and(): RdbPredicates
 
 | 类型 | 说明 |
 | --- | --- |
-| RdbPredicates | 返回带有和条件的谓词。 |
-
-**示例**
-
-```TypeScript
-// 匹配数据表的"NAME"列中值为"Lisa"且"SALARY"列中值为"200.5"的字段
-let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
-predicates.equalTo("NAME", "Lisa")
-  .and()
-  .equalTo("SALARY", 200.5);
-```
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | 返回带有和条件的谓词。 |
 
 ## beginsWith
 
@@ -63,21 +53,13 @@ beginsWith(field: string, value: string): RdbPredicates
 
 | 类型 | 说明 |
 | --- | --- |
-| RdbPredicates | 返回与指定字段匹配的谓词。 |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | 返回与指定字段匹配的谓词。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
-
-**示例**
-
-```TypeScript
-// 匹配数据表的"NAME"列中以"Li"开头的字段，如"Lisa"
-let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
-predicates.beginsWith("NAME", "Li");
-```
 
 ## beginWrap
 
@@ -95,19 +77,7 @@ beginWrap(): RdbPredicates
 
 | 类型 | 说明 |
 | --- | --- |
-| RdbPredicates | 返回带有左括号的谓词。 |
-
-**示例**
-
-```TypeScript
-let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
-predicates.equalTo("NAME", "Lisa")
-  .beginWrap()
-  .equalTo("AGE", 18)
-  .or()
-  .equalTo("SALARY", 200.5)
-  .endWrap();
-```
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | 返回带有左括号的谓词。 |
 
 ## between
 
@@ -126,28 +96,20 @@ between(field: string, low: ValueType, high: ValueType): RdbPredicates
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | field | string | 是 | 数据库表中的列名，不能为空字符串。 |
-| low | ValueType | 是 | 指示与谓词匹配的最小值。 |
-| high | ValueType | 是 | 指示与谓词匹配的最大值。 |
+| low | [ValueType](arkts-arkdata-relationalstore-valuetype-t.md) | 是 | 指示与谓词匹配的最小值。 |
+| high | [ValueType](arkts-arkdata-relationalstore-valuetype-t.md) | 是 | 指示与谓词匹配的最大值。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| RdbPredicates | 返回与指定字段匹配的谓词。 |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | 返回与指定字段匹配的谓词。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
-
-**示例**
-
-```TypeScript
-// 匹配数据表的"AGE"列中大于等于10且小于等于50的值
-let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
-predicates.between("AGE", 10, 50);
-```
 
 ## constructor
 
@@ -173,12 +135,6 @@ constructor(name: string)
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
 
-**示例**
-
-```TypeScript
-let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
-```
-
 ## contains
 
 ```TypeScript
@@ -202,21 +158,13 @@ contains(field: string, value: string): RdbPredicates
 
 | 类型 | 说明 |
 | --- | --- |
-| RdbPredicates | 返回与指定字段匹配的谓词。 |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | 返回与指定字段匹配的谓词。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
-
-**示例**
-
-```TypeScript
-// 匹配数据表的"NAME"列中包含"os"的字段，如"Rose"
-let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
-predicates.contains("NAME", "os");
-```
 
 ## distinct
 
@@ -234,14 +182,7 @@ distinct(): RdbPredicates
 
 | 类型 | 说明 |
 | --- | --- |
-| RdbPredicates | 返回可用于过滤重复记录的谓词。 |
-
-**示例**
-
-```TypeScript
-let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
-predicates.equalTo("NAME", "Rose").distinct(); // 对NAME列值为Rose的结果集去重
-```
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | 返回可用于过滤重复记录的谓词。 |
 
 ## endsWith
 
@@ -266,21 +207,13 @@ endsWith(field: string, value: string): RdbPredicates
 
 | 类型 | 说明 |
 | --- | --- |
-| RdbPredicates | 返回与指定字段匹配的谓词。 |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | 返回与指定字段匹配的谓词。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
-
-**示例**
-
-```TypeScript
-// 匹配数据表的"NAME"列中以"se"结尾的字段，如"Rose"
-let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
-predicates.endsWith("NAME", "se");
-```
 
 ## endWrap
 
@@ -298,19 +231,7 @@ endWrap(): RdbPredicates
 
 | 类型 | 说明 |
 | --- | --- |
-| RdbPredicates | 返回带有右括号的谓词。 |
-
-**示例**
-
-```TypeScript
-let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
-predicates.equalTo("NAME", "Lisa")
-  .beginWrap()
-  .equalTo("AGE", 18)
-  .or()
-  .equalTo("SALARY", 200.5)
-  .endWrap();
-```
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | 返回带有右括号的谓词。 |
 
 ## equalTo
 
@@ -329,27 +250,19 @@ equalTo(field: string, value: ValueType): RdbPredicates
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | field | string | 是 | 数据库表中的列名，不能为空字符串。 |
-| value | ValueType | 是 | 指示要与谓词匹配的值，长度不超过1024字节。 |
+| value | [ValueType](arkts-arkdata-relationalstore-valuetype-t.md) | 是 | 指示要与谓词匹配的值，长度不超过1024字节。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| RdbPredicates | 返回与指定字段匹配的谓词。 |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | 返回与指定字段匹配的谓词。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
-
-**示例**
-
-```TypeScript
-// 匹配数据表的"NAME"列中值为"Lisa"的字段
-let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
-predicates.equalTo("NAME", "Lisa");
-```
 
 ## glob
 
@@ -374,21 +287,13 @@ glob(field: string, value: string): RdbPredicates
 
 | 类型 | 说明 |
 | --- | --- |
-| RdbPredicates | 返回与指定字段匹配的谓词。 |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | 返回与指定字段匹配的谓词。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
-
-**示例**
-
-```TypeScript
-// 匹配数据表的"NAME"列中类型为string且值为"?h*g"的字段
-let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
-predicates.glob("NAME", "?h*g");
-```
 
 ## greaterThan
 
@@ -407,27 +312,19 @@ greaterThan(field: string, value: ValueType): RdbPredicates
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | field | string | 是 | 数据库表中的列名，不能为空字符串。 |
-| value | ValueType | 是 | 指示要与谓词匹配的值，长度不超过1024字节。 |
+| value | [ValueType](arkts-arkdata-relationalstore-valuetype-t.md) | 是 | 指示要与谓词匹配的值，长度不超过1024字节。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| RdbPredicates | 返回与指定字段匹配的谓词。 |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | 返回与指定字段匹配的谓词。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
-
-**示例**
-
-```TypeScript
-// 匹配数据表的"AGE"列中大于18的值
-let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
-predicates.greaterThan("AGE", 18);
-```
 
 ## greaterThanOrEqualTo
 
@@ -446,27 +343,19 @@ greaterThanOrEqualTo(field: string, value: ValueType): RdbPredicates
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | field | string | 是 | 数据库表中的列名，不能为空字符串。 |
-| value | ValueType | 是 | 指示要与谓词匹配的值，长度不超过1024字节。 |
+| value | [ValueType](arkts-arkdata-relationalstore-valuetype-t.md) | 是 | 指示要与谓词匹配的值，长度不超过1024字节。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| RdbPredicates | 返回与指定字段匹配的谓词。 |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | 返回与指定字段匹配的谓词。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
-
-**示例**
-
-```TypeScript
-// 匹配数据表的"AGE"列中大于等于18的值
-let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
-predicates.greaterThanOrEqualTo("AGE", 18);
-```
 
 ## groupBy
 
@@ -490,20 +379,13 @@ groupBy(fields: Array<string>): RdbPredicates
 
 | 类型 | 说明 |
 | --- | --- |
-| RdbPredicates | 返回分组查询列的谓词。 |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | 返回分组查询列的谓词。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
-
-**示例**
-
-```TypeScript
-let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
-predicates.groupBy(["AGE", "NAME"]);
-```
 
 ## having
 
@@ -522,13 +404,13 @@ having(conditions: string, args?: Array<ValueType>): RdbPredicates
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | conditions | string | 是 | 用于过滤使用[groupBy](#groupby)获得的数据，conditions参数不能为空字符串且必须与[groupBy](#groupby)配合使用。 |
-| args | Array&lt;ValueType&gt; | 否 | 条件中使用的参数，用来替换条件语句中的占位符，不传时默认为空数组。 |
+| args | Array&lt;[ValueType](arkts-arkdata-relationalstore-valuetype-t.md)&gt; | 否 | 条件中使用的参数，用来替换条件语句中的占位符，不传时默认为空数组。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| RdbPredicates | 返回与指定字段匹配的谓词。 |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | 返回与指定字段匹配的谓词。 |
 
 **错误码：**
 
@@ -557,27 +439,19 @@ in(field: string, value: Array<ValueType>): RdbPredicates
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | field | string | 是 | 数据库表中的列名，不能为空字符串。 |
-| value | Array&lt;ValueType&gt; | 是 | 以ValueType型数组形式指定的要匹配的值。 |
+| value | Array&lt;[ValueType](arkts-arkdata-relationalstore-valuetype-t.md)&gt; | 是 | 以ValueType型数组形式指定的要匹配的值。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| RdbPredicates | 返回与指定字段匹配的谓词。 |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | 返回与指定字段匹配的谓词。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
-
-**示例**
-
-```TypeScript
-// 匹配数据表的"AGE"列中在[18, 20]中的值
-let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
-predicates.in("AGE", [18, 20]);
-```
 
 ## inAllDevices
 
@@ -595,14 +469,7 @@ inAllDevices(): RdbPredicates
 
 | 类型 | 说明 |
 | --- | --- |
-| RdbPredicates | 返回与指定字段匹配的谓词。 |
-
-**示例**
-
-```TypeScript
-let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
-predicates.inAllDevices();
-```
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | 返回与指定字段匹配的谓词。 |
 
 ## inDevices
 
@@ -636,38 +503,13 @@ inDevices(devices: Array<string>): RdbPredicates
 
 | 类型 | 说明 |
 | --- | --- |
-| RdbPredicates | 返回与指定字段匹配的谓词。 |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | 返回与指定字段匹配的谓词。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
-
-**示例**
-
-```TypeScript
-import { distributedDeviceManager } from '@kit.DistributedServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let dmInstance: distributedDeviceManager.DeviceManager;
-let deviceIds: Array<string> = [];
-
-try {
-  dmInstance = distributedDeviceManager.createDeviceManager("com.example.appdatamgrverify");
-  let devices: Array<distributedDeviceManager.DeviceBasicInfo> = dmInstance.getAvailableDeviceListSync();
-  for (let i = 0; i < devices.length; i++) {
-    deviceIds[i] = devices[i].networkId!;
-  }
-} catch (err) {
-  let code = (err as BusinessError).code;
-  let message = (err as BusinessError).message;
-  console.error("createDeviceManager errCode:" + code + ",errMessage:" + message);
-}
-
-let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
-predicates.inDevices(deviceIds);
-```
 
 ## indexedBy
 
@@ -691,20 +533,13 @@ indexedBy(field: string): RdbPredicates
 
 | 类型 | 说明 |
 | --- | --- |
-| RdbPredicates | 返回具有指定索引列的谓词。 |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | 返回具有指定索引列的谓词。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
-
-**示例**
-
-```TypeScript
-let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
-predicates.indexedBy("SALARY");
-```
 
 ## isNotNull
 
@@ -728,20 +563,13 @@ isNotNull(field: string): RdbPredicates
 
 | 类型 | 说明 |
 | --- | --- |
-| RdbPredicates | 返回与指定字段匹配的谓词。 |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | 返回与指定字段匹配的谓词。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
-
-**示例**
-
-```TypeScript
-let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
-predicates.isNotNull("NAME");
-```
 
 ## isNull
 
@@ -765,20 +593,13 @@ isNull(field: string): RdbPredicates
 
 | 类型 | 说明 |
 | --- | --- |
-| RdbPredicates | 返回与指定字段匹配的谓词。 |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | 返回与指定字段匹配的谓词。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
-
-**示例**
-
-```TypeScript
-let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
-predicates.isNull("NAME");
-```
 
 ## lessThan
 
@@ -797,27 +618,19 @@ lessThan(field: string, value: ValueType): RdbPredicates
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | field | string | 是 | 数据库表中的列名，不能为空字符串。 |
-| value | ValueType | 是 | 指示要与谓词匹配的值，长度不超过1024字节。 |
+| value | [ValueType](arkts-arkdata-relationalstore-valuetype-t.md) | 是 | 指示要与谓词匹配的值，长度不超过1024字节。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| RdbPredicates | 返回与指定字段匹配的谓词。 |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | 返回与指定字段匹配的谓词。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
-
-**示例**
-
-```TypeScript
-// 匹配数据表的"AGE"列中小于20的值
-let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
-predicates.lessThan("AGE", 20);
-```
 
 ## lessThanOrEqualTo
 
@@ -836,27 +649,19 @@ lessThanOrEqualTo(field: string, value: ValueType): RdbPredicates
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | field | string | 是 | 数据库表中的列名，不能为空字符串。 |
-| value | ValueType | 是 | 指示要与谓词匹配的值，长度不超过1024字节。 |
+| value | [ValueType](arkts-arkdata-relationalstore-valuetype-t.md) | 是 | 指示要与谓词匹配的值，长度不超过1024字节。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| RdbPredicates | 返回与指定字段匹配的谓词。 |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | 返回与指定字段匹配的谓词。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
-
-**示例**
-
-```TypeScript
-// 匹配数据表的"AGE"列中小于等于20的值
-let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
-predicates.lessThanOrEqualTo("AGE", 20);
-```
 
 ## like
 
@@ -881,21 +686,13 @@ like(field: string, value: string): RdbPredicates
 
 | 类型 | 说明 |
 | --- | --- |
-| RdbPredicates | 返回与指定字段匹配的谓词。 |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | 返回与指定字段匹配的谓词。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
-
-**示例**
-
-```TypeScript
-// 查询NAME列中包含"os"子串的数据，例如会匹配"Rose"。
-let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
-predicates.like("NAME", "%os%");
-```
 
 ## limitAs
 
@@ -919,20 +716,13 @@ limitAs(value: number): RdbPredicates
 
 | 类型 | 说明 |
 | --- | --- |
-| RdbPredicates | 返回可用于设置最大数据记录数的谓词。 |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | 返回可用于设置最大数据记录数的谓词。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
-
-**示例**
-
-```TypeScript
-let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
-predicates.equalTo("NAME", "Rose").limitAs(3);
-```
 
 ## notBetween
 
@@ -951,28 +741,20 @@ notBetween(field: string, low: ValueType, high: ValueType): RdbPredicates
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | field | string | 是 | 数据库表中的列名，不能为空字符串。 |
-| low | ValueType | 是 | 指示与谓词匹配的最小值。 |
-| high | ValueType | 是 | 指示与谓词匹配的最大值。 |
+| low | [ValueType](arkts-arkdata-relationalstore-valuetype-t.md) | 是 | 指示与谓词匹配的最小值。 |
+| high | [ValueType](arkts-arkdata-relationalstore-valuetype-t.md) | 是 | 指示与谓词匹配的最大值。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| RdbPredicates | 返回与指定字段匹配的谓词。 |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | 返回与指定字段匹配的谓词。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
-
-**示例**
-
-```TypeScript
-// 匹配数据表的"AGE"列中小于10或大于50的值
-let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
-predicates.notBetween("AGE", 10, 50);
-```
 
 ## notContains
 
@@ -997,21 +779,13 @@ notContains(field: string, value: string): RdbPredicates
 
 | 类型 | 说明 |
 | --- | --- |
-| RdbPredicates | 返回与指定字段匹配的谓词。 |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | 返回与指定字段匹配的谓词。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
-
-**示例**
-
-```TypeScript
-// 匹配数据表的"NAME"列中不包含"os"的字段，如列表中的"Lisa"
-let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
-predicates.notContains("NAME", "os");
-```
 
 ## notEqualTo
 
@@ -1030,27 +804,19 @@ notEqualTo(field: string, value: ValueType): RdbPredicates
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | field | string | 是 | 数据库表中的列名，不能为空字符串。 |
-| value | ValueType | 是 | 指示要与谓词匹配的值，长度不超过1024字节。 |
+| value | [ValueType](arkts-arkdata-relationalstore-valuetype-t.md) | 是 | 指示要与谓词匹配的值，长度不超过1024字节。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| RdbPredicates | 返回与指定字段匹配的谓词。 |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | 返回与指定字段匹配的谓词。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
-
-**示例**
-
-```TypeScript
-// 匹配数据表的"NAME"列中值不为"Lisa"的字段
-let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
-predicates.notEqualTo("NAME", "Lisa");
-```
 
 ## notIn
 
@@ -1069,27 +835,19 @@ notIn(field: string, value: Array<ValueType>): RdbPredicates
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | field | string | 是 | 数据库表中的列名，不能为空字符串。 |
-| value | Array&lt;ValueType&gt; | 是 | 以ValueType数组形式指定的要匹配的值。 |
+| value | Array&lt;[ValueType](arkts-arkdata-relationalstore-valuetype-t.md)&gt; | 是 | 以ValueType数组形式指定的要匹配的值。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| RdbPredicates | 返回与指定字段匹配的谓词。 |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | 返回与指定字段匹配的谓词。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
-
-**示例**
-
-```TypeScript
-// 匹配数据表的"NAME"列中不在["Lisa", "Rose"]中的值
-let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
-predicates.notIn("NAME", ["Lisa", "Rose"]);
-```
 
 ## notLike
 
@@ -1114,21 +872,13 @@ notLike(field: string, value: string): RdbPredicates
 
 | 类型 | 说明 |
 | --- | --- |
-| RdbPredicates | 返回与指定字段匹配的谓词。 |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | 返回与指定字段匹配的谓词。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
-
-**示例**
-
-```TypeScript
-// 查询NAME列中不包含"os"子串的数据，例如不会匹配"Rose"。
-let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
-predicates.notLike("NAME", "%os%");
-```
 
 ## offsetAs
 
@@ -1152,20 +902,13 @@ offsetAs(rowOffset: number): RdbPredicates
 
 | 类型 | 说明 |
 | --- | --- |
-| RdbPredicates | 返回具有指定返回结果起始位置的谓词。 |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | 返回具有指定返回结果起始位置的谓词。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
-
-**示例**
-
-```TypeScript
-let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
-predicates.equalTo("NAME", "Rose").limitAs(-1).offsetAs(3);
-```
 
 ## or
 
@@ -1183,17 +926,7 @@ or(): RdbPredicates
 
 | 类型 | 说明 |
 | --- | --- |
-| RdbPredicates | 返回带有或条件的谓词。 |
-
-**示例**
-
-```TypeScript
-// 匹配数据表的"NAME"列中值为"Lisa"或"Rose"的字段
-let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
-predicates.equalTo("NAME", "Lisa")
-  .or()
-  .equalTo("NAME", "Rose");
-```
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | 返回带有或条件的谓词。 |
 
 ## orderByAsc
 
@@ -1217,20 +950,13 @@ orderByAsc(field: string): RdbPredicates
 
 | 类型 | 说明 |
 | --- | --- |
-| RdbPredicates | 返回与指定字段匹配的谓词。 |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | 返回与指定字段匹配的谓词。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
-
-**示例**
-
-```TypeScript
-let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
-predicates.orderByAsc("NAME");
-```
 
 ## orderByDesc
 
@@ -1254,17 +980,10 @@ orderByDesc(field: string): RdbPredicates
 
 | 类型 | 说明 |
 | --- | --- |
-| RdbPredicates | 返回与指定字段匹配的谓词。 |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | 返回与指定字段匹配的谓词。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
-
-**示例**
-
-```TypeScript
-let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
-predicates.orderByDesc("AGE");
-```

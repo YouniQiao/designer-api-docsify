@@ -69,7 +69,7 @@ pictureInfo?: Record<string, Array<image.PixelMap>>
 
 实况通知附加内容中的图片信息。默认为空。
 
-**类型：** Record&lt;string, Array&lt;image.PixelMap&gt;&gt;
+**类型：** Record&lt;string, Array&lt;[image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)&gt;&gt;
 
 **起始版本：** 11
 

@@ -52,10 +52,10 @@ Describes the method for calling the server. For example, in a device control sc
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs. |
-| 36100003 | NearLink disabled. |
-| 36100043 | Invalid UUID. |
-| 36100044 | NearLink standard UUID not allowed. |
-| 36100099 | Operation failed. |
+| [36100003](../../apis-avsession-kit/errorcode-nearlink-service.md#36100003-nearlink-disabled) | NearLink disabled. |
+| [36100043](../../apis-avsession-kit/errorcode-nearlink-service.md#36100043-invalid-uuid) | Invalid UUID. |
+| [36100044](../../apis-avsession-kit/errorcode-nearlink-service.md#36100044-standard-nearlink-service-uuid-not-allowed) | NearLink standard UUID not allowed. |
+| [36100099](../../apis-avsession-kit/errorcode-nearlink-service.md#36100099-operation-failed) | Operation failed. |
 
 ## offEventNotify
 
@@ -77,7 +77,7 @@ Unsubscribes from event notification events. This API uses an asynchronous callb
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Event&gt; | No | Callback used to return the **Event** object of the service. If this parameter is specified, the current callback is unregistered. If this parameter is not set, all callbacks corresponding to the type are unsubscribed. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Event](arkts-connectivity-ssap-event-i-sys.md)&gt; | No | Callback used to return the **Event** object of the service. If this parameter is specified, the current callback is unregistered. If this parameter is not set, all callbacks corresponding to the type are unsubscribed. |
 
 ## onEventNotify
 
@@ -101,7 +101,7 @@ The app must have the **ohos.permission.ACCESS_NEARLINK** permission to receive 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Event&gt; | Yes | Callback used to return the **Event** object of the service. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Event](arkts-connectivity-ssap-event-i-sys.md)&gt; | Yes | Callback used to return the **Event** object of the service. |
 
 ## readDescriptor
 
@@ -139,10 +139,10 @@ Reads a server descriptor. This API can be used only after a connection is estab
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs. |
-| 36100003 | NearLink disabled. |
-| 36100043 | Invalid UUID in descriptor. |
-| 36100044 | NearLink standard UUID not allowed. |
-| 36100099 | Operation failed. |
+| [36100003](../../apis-avsession-kit/errorcode-nearlink-service.md#36100003-nearlink-disabled) | NearLink disabled. |
+| [36100043](../../apis-avsession-kit/errorcode-nearlink-service.md#36100043-invalid-uuid) | Invalid UUID in descriptor. |
+| [36100044](../../apis-avsession-kit/errorcode-nearlink-service.md#36100044-standard-nearlink-service-uuid-not-allowed) | NearLink standard UUID not allowed. |
+| [36100099](../../apis-avsession-kit/errorcode-nearlink-service.md#36100099-operation-failed) | Operation failed. |
 
 ## setPropertyIndication
 
@@ -181,11 +181,11 @@ Enables or disables indication for property value change. When the property valu
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs. |
-| 36100003 | NearLink disabled. |
+| [36100003](../../apis-avsession-kit/errorcode-nearlink-service.md#36100003-nearlink-disabled) | NearLink disabled. |
 | 36100030 | The connection is not established. |
-| 36100043 | Invalid UUID in property. |
-| 36100044 | NearLink standard UUID not allowed. |
-| 36100099 | Operation failed. |
+| [36100043](../../apis-avsession-kit/errorcode-nearlink-service.md#36100043-invalid-uuid) | Invalid UUID in property. |
+| [36100044](../../apis-avsession-kit/errorcode-nearlink-service.md#36100044-standard-nearlink-service-uuid-not-allowed) | NearLink standard UUID not allowed. |
+| [36100099](../../apis-avsession-kit/errorcode-nearlink-service.md#36100099-operation-failed) | Operation failed. |
 
 ## writeDescriptor
 
@@ -225,7 +225,7 @@ This API does not support writing the client property configuration descriptor (
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs. |
-| 36100003 | NearLink disabled. |
-| 36100043 | Invalid UUID in descriptor. |
-| 36100044 | NearLink standard UUID not allowed. |
-| 36100099 | Operation failed. |
+| [36100003](../../apis-avsession-kit/errorcode-nearlink-service.md#36100003-nearlink-disabled) | NearLink disabled. |
+| [36100043](../../apis-avsession-kit/errorcode-nearlink-service.md#36100043-invalid-uuid) | Invalid UUID in descriptor. |
+| [36100044](../../apis-avsession-kit/errorcode-nearlink-service.md#36100044-standard-nearlink-service-uuid-not-allowed) | NearLink standard UUID not allowed. |
+| [36100099](../../apis-avsession-kit/errorcode-nearlink-service.md#36100099-operation-failed) | Operation failed. |

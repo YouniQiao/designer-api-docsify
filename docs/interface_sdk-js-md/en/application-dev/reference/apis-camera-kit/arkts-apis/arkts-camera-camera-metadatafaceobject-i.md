@@ -54,7 +54,7 @@ readonly leftEyeBoundingBox: Rect
 
 Left eye area.
 
-**Type:** Rect
+**Type:** [Rect](arkts-camera-camera-rect-i.md)
 
 **Since:** 26.0.0
 
@@ -86,7 +86,7 @@ readonly rightEyeBoundingBox: Rect
 
 Right eye area.
 
-**Type:** Rect
+**Type:** [Rect](arkts-camera-camera-rect-i.md)
 
 **Since:** 26.0.0
 

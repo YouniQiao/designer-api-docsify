@@ -32,24 +32,6 @@ Removes all notifications for a specified application. This API uses an asynchro
 | bundle | BundleOption | Yes | Bundle information of the application. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
-**Examples**
-
-```TypeScript
-import Base from '@ohos.base';
-
-let removeAllCallback = (err: Base.BusinessError) => {
-  if (err) {
-    console.error("removeAll failed " + JSON.stringify(err));
-  } else {
-    console.info("removeAll success");
-  }
-}
-let bundle: Notification.BundleOption = {
-  bundle: "bundleName1",
-};
-Notification.removeAll(bundle, removeAllCallback);
-```
-
 
 ## removeAll
 
@@ -76,22 +58,6 @@ Removes all notifications. This API uses an asynchronous callback to return the 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
-
-**Examples**
-
-```TypeScript
-import Base from '@ohos.base';
-
-let removeAllCallback = (err: Base.BusinessError) => {
-  if (err) {
-    console.error("removeAll failed " + JSON.stringify(err));
-  } else {
-    console.info("removeAll success");
-  }
-}
-
-Notification.removeAll(removeAllCallback);
-```
 
 
 ## removeAll
@@ -120,23 +86,6 @@ Removes all notifications for a specified user. This API uses an asynchronous ca
 | --- | --- | --- | --- |
 | userId | number | Yes | User ID. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
-
-**Examples**
-
-```TypeScript
-import Base from '@ohos.base';
-
-function removeAllCallback(err: Base.BusinessError) {
-  if (err) {
-    console.error("removeAll failed " + JSON.stringify(err));
-  } else {
-    console.info("removeAll success");
-  }
-}
-
-let userId: number = 1;
-Notification.removeAll(userId, removeAllCallback);
-```
 
 
 ## removeAll
@@ -171,19 +120,6 @@ Removes all notifications for a specified user. This API uses a promise to retur
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
 
-**Examples**
-
-```TypeScript
-import Base from '@ohos.base';
-
-let userId: number = 1;
-Notification.removeAll(userId).then(() => {
-  console.info("removeAll success");
-}).catch((err: Base.BusinessError) => {
-  console.error(`removeAll failed, code is ${err}`);
-});
-```
-
 
 ## removeAll
 
@@ -216,16 +152,3 @@ Removes all notifications for a specified application. This API uses a promise t
 | Type | Description |
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
-
-**Examples**
-
-```TypeScript
-import Base from '@ohos.base';
-
-// If no application is specified, notifications of all applications are deleted.
-Notification.removeAll().then(() => {
-  console.info("removeAll success");
-}).catch((err: Base.BusinessError) => {
-  console.error(`removeAll failed, code is ${err}`);
-});
-```

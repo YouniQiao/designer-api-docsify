@@ -34,34 +34,10 @@ AnimatedDrawableDescriptor的构造函数。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| pixelMaps | Array&lt;image.PixelMap&gt; | 是 | PixelMap 数组类型参数，存储 PixelMap 图片数据。 |
+| pixelMaps | Array&lt;[image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)&gt; | 是 | PixelMap 数组类型参数，存储 PixelMap 图片数据。 |
 | options | [AnimationOptions](arkts-arkui-arkui-drawabledescriptor-animationoptions-i.md) | 否 | 动画控制选项。 |
 
 **示例**
-
-通过ResourceStr创建PixelMapDrawableDescriptor，示例代码如下。
-
-```TypeScript
-// xxx.ets
-import { DrawableDescriptor, PixelMapDrawableDescriptor } from '@kit.ArkUI';
-
-@Entry
-@Component
-struct PixelMapDrawableDescriptorExample {
-  // 使用Resource创建PixelMapDrawableDescriptor
-  // $r('app.media.icon')需要替换为开发者所需的图像资源文件。
-  @State drawable: DrawableDescriptor = new PixelMapDrawableDescriptor($r('app.media.icon'))
-
-  build() {
-    Column() {
-      Image(this.drawable)
-        .width(100)
-        .height(100)
-        .margin({ bottom: 20 })
-    }
-  }
-}
-```
 
 ```TypeScript
 import { AnimationOptions, AnimatedDrawableDescriptor } from '@kit.ArkUI';
@@ -113,7 +89,7 @@ AnimatedDrawableDescriptor的构造函数。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| src | [ResourceStr](arkts-arkui-resourcestr-t.md) \| Array&lt;image.PixelMap&gt; | 是 | 动图资源地址或者[PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)对象构成的数组。ResourceStr当前支持的范围：应用资源Resource，沙箱路径（file://&lt;bundleName&gt;/&lt;sandboxPath&gt;），BASE64字符串。 |
+| src | [ResourceStr](arkts-arkui-resourcestr-t.md) \| Array&lt;[image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)&gt; | 是 | 动图资源地址或者[PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)对象构成的数组。ResourceStr当前支持的范围：应用资源Resource，沙箱路径（file://&lt;bundleName&gt;/&lt;sandboxPath&gt;），BASE64字符串。 |
 | options | [AnimationOptions](arkts-arkui-arkui-drawabledescriptor-animationoptions-i.md) | 否 | 动画控制参数。 |
 
 **示例**

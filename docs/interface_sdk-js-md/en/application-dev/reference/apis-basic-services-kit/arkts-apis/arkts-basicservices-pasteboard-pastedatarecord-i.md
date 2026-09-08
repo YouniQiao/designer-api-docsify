@@ -29,7 +29,7 @@ Adds PasteData of an extra type to **PasteDataRecord**. The type added using thi
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | string | Yes | Type of extra data. The value can be a predefined MIME type listed in [Constants](../../../reference/apis-basic-services-kit/js-apis-pasteboard.md#constants), including HTML, Want, plain text, URI, and PixelMap, or a custom type. The value of **mimeType** cannot exceed 1024 bytes. |
-| value | ValueType | Yes | Content of extra data. |
+| value | [ValueType](arkts-basicservices-pasteboard-valuetype-t.md) | Yes | Content of extra data. |
 
 **Error codes:**
 
@@ -150,7 +150,7 @@ Obtains data of the specified type from **PasteDataRecord**.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ValueType&gt; | Promise used to return the data of the specified type in **PasteDataRecord**. If **PasteDataRecord** contains data of multiple types, the non-**PasteDataRecord** data of the default type can be obtained only through this API. |
+| Promise&lt;[ValueType](arkts-basicservices-pasteboard-valuetype-t.md)&gt; | Promise used to return the data of the specified type in **PasteDataRecord**. If **PasteDataRecord** contains data of multiple types, the non-**PasteDataRecord** data of the default type can be obtained only through this API. |
 
 **Error codes:**
 
@@ -311,7 +311,7 @@ pixelMap: image.PixelMap
 
 PixelMap content. Modifications to this attribute are ineffective. To refresh the attribute value, please use [addEntry](#addentry).
 
-**Type:** image.PixelMap
+**Type:** [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)
 
 **Since:** 9
 

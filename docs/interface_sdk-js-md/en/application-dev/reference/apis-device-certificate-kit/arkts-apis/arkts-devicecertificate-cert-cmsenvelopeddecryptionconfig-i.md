@@ -20,7 +20,7 @@ cert?: X509Cert
 
 Public key certificate. This parameter is left empty by default.
 
-**Type:** X509Cert
+**Type:** [X509Cert](arkts-devicecertificate-cert-x509cert-i.md)
 
 **Since:** 22
 

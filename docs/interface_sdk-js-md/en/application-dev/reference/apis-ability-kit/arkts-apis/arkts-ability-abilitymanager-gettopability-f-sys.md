@@ -33,19 +33,6 @@ Obtains the top ability, which is the ability that has the window focus. This AP
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. Interface caller is not a system app. |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 
-**Examples**
-
-```TypeScript
-import { abilityManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-abilityManager.getTopAbility().then((data) => {
-  console.info(`getTopAbility success, data: ${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-  console.error(`getTopAbility fail, err: ${JSON.stringify(err)}`);
-});
-```
-
 
 ## getTopAbility
 
@@ -74,18 +61,3 @@ Obtains the top ability, which is the ability that has the window focus. This AP
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. Interface caller is not a system app. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
-
-**Examples**
-
-```TypeScript
-import { abilityManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-abilityManager.getTopAbility((err: BusinessError, data) => {
-  if (err) {
-    console.error(`getTopAbility fail, err: ${JSON.stringify(err)}`);
-  } else {
-    console.info(`getTopAbility success, data: ${JSON.stringify(data)}`);
-  }
-});
-```

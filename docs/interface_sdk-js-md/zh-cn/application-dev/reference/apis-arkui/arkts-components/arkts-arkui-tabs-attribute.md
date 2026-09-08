@@ -111,7 +111,7 @@ barBackgroundBlurStyle(value: BlurStyle)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | BlurStyle | 是 | TabBar的背景模糊材质。默认值：BlurStyle.NONE |
+| value | [BlurStyle](arkts-arkui-blurstyle-e.md) | 是 | TabBar的背景模糊材质。默认值：BlurStyle.NONE |
 
 ## barBackgroundBlurStyle
 
@@ -133,7 +133,7 @@ barBackgroundBlurStyle(style: BlurStyle, options: BackgroundBlurStyleOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style | BlurStyle | 是 | 背景模糊样式。模糊样式中封装了模糊半径、蒙版颜色、蒙版透明度、饱和度、亮度五个参数。 |
+| style | [BlurStyle](arkts-arkui-blurstyle-e.md) | 是 | 背景模糊样式。模糊样式中封装了模糊半径、蒙版颜色、蒙版透明度、饱和度、亮度五个参数。 |
 | options | [BackgroundBlurStyleOptions](arkts-arkui-backgroundblurstyleoptions-i.md) | 是 | 背景模糊选项，用于自定义模糊效果。 |
 
 ## barBackgroundColor
@@ -332,7 +332,7 @@ barMode(value: BarMode, options?: ScrollableBarModeOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [BarMode](arkts-arkui-barmode-e.md) | 是 | 布局模式。默认值：BarMode.Fixed |
+| value | [BarMode](arkts-arkui-barmode-e.md) | 是 | [布局模式。默认值：BarMode.Fixed](arkts-arkui-barmode-e.md) |
 | options | [ScrollableBarModeOptions](arkts-arkui-scrollablebarmodeoptions-i.md) | 否 | Scrollable模式下的TabBar的布局样式。   **说明：** 仅Scrollable且水平模式下有效。<br>**适用版本：** 10 |
 
 ## barOverlap
@@ -418,7 +418,7 @@ cachedMaxCount(count: number, mode: TabsCacheMode)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | count | number | 是 | 子组件的最大缓存个数。取值范围：[0, +∞)。设置为小于0的值时，子组件不受缓存管理。超出缓存个数时自动释放不再需要的子组件。 |
-| mode | [TabsCacheMode](arkts-arkui-tabscachemode-e.md) | 是 | 子组件的缓存模式。默认值：TabsCacheMode.CACHE_BOTH_SIDE |
+| mode | [TabsCacheMode](arkts-arkui-tabscachemode-e.md) | 是 | [子组件的缓存模式。默认值：TabsCacheMode.CACHE_BOTH_SIDE](arkts-arkui-tabscachemode-e.md) |
 
 ## customContentTransition
 

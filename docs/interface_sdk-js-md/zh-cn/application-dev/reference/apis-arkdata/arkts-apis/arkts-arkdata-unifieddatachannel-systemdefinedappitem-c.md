@@ -217,22 +217,3 @@ set bundleName(value: string)
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
-
-**示例**
-
-```TypeScript
-let appItem = new unifiedDataChannel.SystemDefinedAppItem();
-appItem.appId = 'MyAppId';
-appItem.appName = 'MyAppName';
-appItem.appIconId = 'MyAppIconId';
-appItem.appLabelId = 'MyAppLabelId';
-appItem.bundleName = 'MyBundleName';
-appItem.abilityName = 'MyAbilityName';
-let u8Array = new Uint8Array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
-appItem.details = {
-  appItemKey1: 123,
-  appItemKey2: 'appItemValue',
-  appItemKey3: u8Array
-};
-let unifiedData = new unifiedDataChannel.UnifiedData(appItem);
-```

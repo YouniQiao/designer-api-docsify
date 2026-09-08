@@ -2,7 +2,7 @@
 
 Enumerates the node types.
 
-@enum { number }
+@enum { int }
 
 **Since:** 12
 

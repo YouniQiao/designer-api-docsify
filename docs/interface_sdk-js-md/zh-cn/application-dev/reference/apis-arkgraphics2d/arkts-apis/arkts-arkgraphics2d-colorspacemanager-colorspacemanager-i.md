@@ -30,7 +30,7 @@ getColorSpaceName(): ColorSpace
 
 | 类型 | 说明 |
 | --- | --- |
-| ColorSpace | 返回色域类型枚举值。 |
+| [ColorSpace](arkts-arkgraphics2d-colorspacemanager-colorspace-e.md) | 返回色域类型枚举值。 |
 
 **错误码：**
 

@@ -75,7 +75,7 @@ accessibilityDescription(description: string | Resource): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| description | string \| Resource | 是 | 控件的无障碍说明。用于补充组件的详细操作解释，帮助用户理解当前操作的具体内容及其潜在后果。控件被选中时，若组件同时包含文本属性和无障碍说明，优先播报文本内容，再播报无障碍说明。该参数的默认值为空字符串。 |
+| description | string \| [Resource](arkts-arkui-resource-t.md) | 是 | 控件的无障碍说明。用于补充组件的详细操作解释，帮助用户理解当前操作的具体内容及其潜在后果。控件被选中时，若组件同时包含文本属性和无障碍说明，优先播报文本内容，再播报无障碍说明。该参数的默认值为空字符串。 |
 
 **返回值：**
 
@@ -415,7 +415,7 @@ chainMode(direction: Axis, style: ChainStyle): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| direction | Axis | 是 | 链式布局的方向，用于指定以该组件为链头的链在RelativeContainer中的排列方向。 |
+| direction | [Axis](arkts-arkui-axis-e.md) | 是 | 链式布局的方向，用于指定以该组件为链头的链在RelativeContainer中的排列方向。 |
 | style | [ChainStyle](../arkts-components/arkts-arkui-chainstyle-e.md) | 是 | 链式布局的样式，用于控制链内子组件的分布方式，如均匀分布、两端对齐或紧凑排列等，具体取值及效果请参考[ChainStyle](../arkts-components/arkts-arkui-chainstyle-e.md)。 |
 
 **返回值：**
@@ -586,7 +586,7 @@ fontFamily(value: string | Resource): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | string \| Resource | 是 | 安全控件上文字的字体。默认字体：'HarmonyOS Sans'。 |
+| value | string \| [Resource](arkts-arkui-resource-t.md) | 是 | 安全控件上文字的字体。默认字体：'HarmonyOS Sans'。 |
 
 **返回值：**
 
@@ -642,7 +642,7 @@ fontStyle(value: FontStyle): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | FontStyle | 是 | 安全控件上文字的样式。默认值：FontStyle.Normal。 |
+| value | [FontStyle](arkts-arkui-fontstyle-e.md) | 是 | 安全控件上文字的样式。默认值：FontStyle.Normal。 |
 
 **返回值：**
 
@@ -670,7 +670,7 @@ fontWeight(value: number | FontWeight | string | Resource): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number \| FontWeight \| string \| Resource | 是 | 安全控件上文字粗细。number类型取值[100, 900]，取值间隔为100，取值越大，字体越粗。string类型支持使用数字字符串（如'400'），以及FontWeight中的枚举值对应的字符串（如'bold'、'bolder'、'lighter'、'regular'、'medium'）。从API version 20开始，支持Resource类型。Resource类型仅支持'integer'和'string'。类型为'integer'时，取值参考前述number类型；类型为'string'时，取值参考前述string类型。如果控件未设置fontWeight，文字粗细将默认设置为FontWeight.Medium。value入参为undefined、null，或number类型不在[100, 900]范围内，或string类型不符合FontWeight枚举值对应的字符串格式时，文字粗细将被设置为FontWeight.Normal。<br>**适用版本：** 20 |
+| value | number \| [FontWeight](arkts-arkui-fontweight-e.md) \| string \| [Resource](arkts-arkui-resource-t.md) | 是 | 安全控件上文字粗细。number类型取值[100, 900]，取值间隔为100，取值越大，字体越粗。string类型支持使用数字字符串（如'400'），以及FontWeight中的枚举值对应的字符串（如'bold'、'bolder'、'lighter'、'regular'、'medium'）。从API version 20开始，支持Resource类型。Resource类型仅支持'integer'和'string'。类型为'integer'时，取值参考前述number类型；类型为'string'时，取值参考前述string类型。如果控件未设置fontWeight，文字粗细将默认设置为FontWeight.Medium。value入参为undefined、null，或number类型不在[100, 900]范围内，或string类型不符合FontWeight枚举值对应的字符串格式时，文字粗细将被设置为FontWeight.Normal。<br>**适用版本：** 20 |
 
 **返回值：**
 
@@ -906,7 +906,7 @@ maxFontScale(scale: number | Resource): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| scale | number \| Resource | 是 | 文本最大的字体放大倍数。取值应≥1。   **说明：** 设置的值小于1时，按值为1处理；设置的值为undefined或null等非法值时，属性不生效。 |
+| scale | number \| [Resource](arkts-arkui-resource-t.md) | 是 | 文本最大的字体放大倍数。取值应≥1。   **说明：** 设置的值小于1时，按值为1处理；设置的值为undefined或null等非法值时，属性不生效。 |
 
 **返回值：**
 
@@ -940,7 +940,7 @@ maxFontSize(maxSize: number | string | Resource): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| maxSize | number \| string \| Resource | 是 | 文本最大显示字号。取值应&gt;0。未显式指定单位时，单位为fp。   **说明：**设置的值小于或等于0时，自适应字号不生效；设置异常值时该属性不生效。 |
+| maxSize | number \| string \| [Resource](arkts-arkui-resource-t.md) | 是 | 文本最大显示字号。取值应&gt;0。未显式指定单位时，单位为fp。   **说明：**设置的值小于或等于0时，自适应字号不生效；设置异常值时该属性不生效。 |
 
 **返回值：**
 
@@ -968,7 +968,7 @@ maxLines(line: number | Resource): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| line | number \| Resource | 是 | 文本的最大行数。number类型入参的取值范围： [1, +∞)。从API version 20开始，支持Resource类型。Resource类型仅支持'integer'，取值范围为[1, +∞)。**说明：** 设置的值小于1时，按默认值1000000处理。<br>**适用版本：** 18 - 19 |
+| line | number \| [Resource](arkts-arkui-resource-t.md) | 是 | 文本的最大行数。number类型入参的取值范围： [1, +∞)。从API version 20开始，支持Resource类型。Resource类型仅支持'integer'，取值范围为[1, +∞)。**说明：** 设置的值小于1时，按默认值1000000处理。<br>**适用版本：** 18 - 19 |
 
 **返回值：**
 
@@ -998,7 +998,7 @@ minFontScale(scale: number | Resource): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| scale | number \| Resource | 是 | 文本最小的字体缩小倍数。取值范围：[0,1]。   **说明：** 设置的值小于0时，按值为0处理，即允许缩小到任意倍数；设置的值大于1时，按值为1处理，即不允许缩小字体；设置的值为undefined或null等非法值时，属性不生效。 |
+| scale | number \| [Resource](arkts-arkui-resource-t.md) | 是 | 文本最小的字体缩小倍数。取值范围：[0,1]。   **说明：** 设置的值小于0时，按值为0处理，即允许缩小到任意倍数；设置的值大于1时，按值为1处理，即不允许缩小字体；设置的值为undefined或null等非法值时，属性不生效。 |
 
 **返回值：**
 
@@ -1033,7 +1033,7 @@ minFontSize(minSize: number | string | Resource): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| minSize | number \| string \| Resource | 是 | 文本最小显示字号。取值应&gt;0。未显式指定单位时，单位为fp。minFontSize应小于maxFontSize，若设置值大于maxFontSize，将按maxFontSize处理；小于或等于0时，自适应字号不生效。 |
+| minSize | number \| string \| [Resource](arkts-arkui-resource-t.md) | 是 | 文本最小显示字号。取值应&gt;0。未显式指定单位时，单位为fp。minFontSize应小于maxFontSize，若设置值大于maxFontSize，将按maxFontSize处理；小于或等于0时，自适应字号不生效。 |
 
 **返回值：**
 
@@ -1061,7 +1061,7 @@ offset(value: Position | Edges | LocalizedEdges): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | Position \| Edges \| [LocalizedEdges](arkts-arkui-localizededges-i.md) | 是 | 安全控件相对于自身布局位置的坐标偏移。设置后不会影响父容器布局，仅在绘制阶段调整控件显示位置。未显式指定单位时，单位为vp。无默认值。当入参异常时，该属性不生效。<br>**适用版本：** 12 |
+| value | Position \| [Edges](arkts-arkui-edges-i.md) \| [LocalizedEdges](arkts-arkui-localizededges-i.md) | 是 | 安全控件相对于自身布局位置的坐标偏移。设置后不会影响父容器布局，仅在绘制阶段调整控件显示位置。未显式指定单位时，单位为vp。无默认值。当入参异常时，该属性不生效。<br>**适用版本：** 12 |
 
 **返回值：**
 

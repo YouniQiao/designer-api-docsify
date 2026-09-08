@@ -40,7 +40,7 @@ Obtains the snapshot of a component that has been loaded based on the provided c
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | id | string | Yes | ID of the target component. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;image.PixelMap&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)&gt; | Yes | Callback used to return the result. |
 | options | [SnapshotOptions](arkts-arkui-componentsnapshot-snapshotoptions-i.md) | No | Custom settings of the snapshot.<br>**Since:** 12 |
 
 **Error codes:**
@@ -134,7 +134,7 @@ Obtains the snapshot of a component that has been loaded based on the provided c
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;image.PixelMap&gt; | Promise used to return the result. |
+| Promise&lt;[image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)&gt; | Promise used to return the result. |
 
 **Error codes:**
 

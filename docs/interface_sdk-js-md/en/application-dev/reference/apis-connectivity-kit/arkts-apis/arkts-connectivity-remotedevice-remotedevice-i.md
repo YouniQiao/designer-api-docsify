@@ -32,15 +32,15 @@ Obtains the logical link connection status with a remote device. This method is 
 
 | Type | Description |
 | --- | --- |
-| AcbState | Logical link connection state with a remote device. |
+| [AcbState](arkts-connectivity-remotedevice-acbstate-t.md) | Logical link connection state with a remote device. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| 36100003 | NearLink disabled. |
-| 36100099 | Operation failed. |
+| [36100003](../../apis-avsession-kit/errorcode-nearlink-service.md#36100003-nearlink-disabled) | NearLink disabled. |
+| [36100099](../../apis-avsession-kit/errorcode-nearlink-service.md#36100099-operation-failed) | Operation failed. |
 
 ## getConnectionState
 
@@ -62,15 +62,15 @@ Obtains the connection status between the local and remote devices. Unlike [getA
 
 | Type | Description |
 | --- | --- |
-| ConnectionState | Connection status between the local and remote devices. |
+| [ConnectionState](arkts-connectivity-remotedevice-connectionstate-t.md) | Connection status between the local and remote devices. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| 36100003 | NearLink disabled. |
-| 36100099 | Operation failed. |
+| [36100003](../../apis-avsession-kit/errorcode-nearlink-service.md#36100003-nearlink-disabled) | NearLink disabled. |
+| [36100099](../../apis-avsession-kit/errorcode-nearlink-service.md#36100099-operation-failed) | Operation failed. |
 
 ## getDeviceClass
 
@@ -92,15 +92,15 @@ Obtains the type of a remote device.
 
 | Type | Description |
 | --- | --- |
-| DeviceClass | Remote device type. |
+| [DeviceClass](arkts-connectivity-remotedevice-deviceclass-t.md) | Remote device type. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| 36100003 | NearLink disabled. |
-| 36100099 | Operation failed. |
+| [36100003](../../apis-avsession-kit/errorcode-nearlink-service.md#36100003-nearlink-disabled) | NearLink disabled. |
+| [36100099](../../apis-avsession-kit/errorcode-nearlink-service.md#36100099-operation-failed) | Operation failed. |
 
 ## getDeviceInformation
 
@@ -129,8 +129,8 @@ Obtains the information of a remote device.
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| 36100003 | NearLink disabled. |
-| 36100099 | Operation failed. |
+| [36100003](../../apis-avsession-kit/errorcode-nearlink-service.md#36100003-nearlink-disabled) | NearLink disabled. |
+| [36100099](../../apis-avsession-kit/errorcode-nearlink-service.md#36100099-operation-failed) | Operation failed. |
 
 ## getDeviceName
 
@@ -159,8 +159,8 @@ Obtains the name of a remote device.
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| 36100003 | NearLink disabled. |
-| 36100099 | Operation failed. |
+| [36100003](../../apis-avsession-kit/errorcode-nearlink-service.md#36100003-nearlink-disabled) | NearLink disabled. |
+| [36100099](../../apis-avsession-kit/errorcode-nearlink-service.md#36100099-operation-failed) | Operation failed. |
 
 ## getPairingState
 
@@ -182,15 +182,15 @@ Obtains the pairing status with a remote device.
 
 | Type | Description |
 | --- | --- |
-| PairingState | Pairing status with a remote device. |
+| [PairingState](arkts-connectivity-remotedevice-pairingstate-t.md) | Pairing status with a remote device. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| 36100003 | NearLink disabled. |
-| 36100099 | Operation failed. |
+| [36100003](../../apis-avsession-kit/errorcode-nearlink-service.md#36100003-nearlink-disabled) | NearLink disabled. |
+| [36100099](../../apis-avsession-kit/errorcode-nearlink-service.md#36100099-operation-failed) | Operation failed. |
 
 ## startPairing
 
@@ -219,5 +219,5 @@ Initiates pairing with a remote device. This API uses a promise to return the re
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| 36100003 | NearLink disabled. |
-| 36100099 | Operation failed. |
+| [36100003](../../apis-avsession-kit/errorcode-nearlink-service.md#36100003-nearlink-disabled) | NearLink disabled. |
+| [36100099](../../apis-avsession-kit/errorcode-nearlink-service.md#36100099-operation-failed) | Operation failed. |

@@ -38,7 +38,7 @@ Adds a specified service to be hosted. The added service and its characteristics
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| service | GattService | Yes | Indicates the service to add. |
+| service | [GattService](arkts-connectivity-bluetooth-gattservice-i.md) | Yes | Indicates the service to add. |
 
 **Return value:**
 
@@ -132,7 +132,7 @@ This method should be called for every BLE peripheral device that has requested 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | deviceId | string | Yes | Indicates the address of the BLE peripheral device to receive the notification. |
-| notifyCharacteristic | NotifyCharacteristic | Yes | Indicates the local characteristic that has changed. |
+| notifyCharacteristic | [NotifyCharacteristic](arkts-connectivity-bluetooth-notifycharacteristic-i.md) | Yes | Indicates the local characteristic that has changed. |
 
 **Return value:**
 
@@ -312,7 +312,7 @@ Unsubscribe server connection state changed event.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'connectStateChange' | Yes | Type of the connection state changed event to listen for. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;BLEConnectChangedState&gt; | No | Callback used to listen for the connection state changed event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[BLEConnectChangedState](arkts-connectivity-bluetooth-bleconnectchangedstate-i.md)&gt; | No | Callback used to listen for the connection state changed event. |
 
 **Examples**
 
@@ -557,7 +557,7 @@ Subscribe server connection state changed event.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'connectStateChange' | Yes | Type of the connection state changed event to listen for. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;BLEConnectChangedState&gt; | Yes | Callback used to listen for the connection state changed event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[BLEConnectChangedState](arkts-connectivity-bluetooth-bleconnectchangedstate-i.md)&gt; | Yes | Callback used to listen for the connection state changed event. |
 
 **Examples**
 
@@ -630,7 +630,7 @@ Sends a response to a specified read or write request to a given BLE peripheral 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| serverResponse | ServerResponse | Yes | Indicates the response parameters [ServerResponse](arkts-connectivity-bluetooth-serverresponse-i.md). |
+| serverResponse | [ServerResponse](arkts-connectivity-bluetooth-serverresponse-i.md) | Yes | Indicates the response parameters [ServerResponse](arkts-connectivity-bluetooth-serverresponse-i.md). |
 
 **Return value:**
 
@@ -684,9 +684,9 @@ Starts BLE advertising.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| setting | AdvertiseSetting | Yes | Indicates the settings for BLE advertising. If you need to use the default value, set this parameter to `null`. |
-| advData | AdvertiseData | Yes | Indicates the advertising data. |
-| advResponse | AdvertiseData | No | Indicates the scan response associated with the advertising data. |
+| setting | [AdvertiseSetting](arkts-connectivity-bluetooth-advertisesetting-i.md) | Yes | Indicates the settings for BLE advertising. If you need to use the default value, set this parameter to `null`. |
+| advData | [AdvertiseData](arkts-connectivity-bluetooth-advertisedata-i.md) | Yes | Indicates the advertising data. |
+| advResponse | [AdvertiseData](arkts-connectivity-bluetooth-advertisedata-i.md) | No | Indicates the scan response associated with the advertising data. |
 
 **Examples**
 

@@ -154,7 +154,7 @@ Attaches a self-drawing component to the input method. This API uses a promise t
 | --- | --- | --- | --- |
 | showKeyboard | boolean | Yes | Whether to start the input method keyboard after the self-drawing component is attached to the input method.    - **true** means to start the input method keyboard.    - **false** means not to start the input method keyboard. |
 | textConfig | [TextConfig](arkts-ime-inputmethod-textconfig-i.md) | Yes | Configuration of the edit box. |
-| requestKeyboardReason | RequestKeyboardReason | Yes | Reason for requesting the keyboard. |
+| requestKeyboardReason | [RequestKeyboardReason](arkts-ime-inputmethod-requestkeyboardreason-e.md) | Yes | Reason for requesting the keyboard. |
 
 **Return value:**
 
@@ -214,7 +214,7 @@ Attaches a self-drawing component to the input method. This API uses a promise t
 | --- | --- | --- | --- |
 | uiContext | [UIContext](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | UIContext** instance. |
 | textConfig | [TextConfig](arkts-ime-inputmethod-textconfig-i.md) | Yes | Configuration of the edit box. |
-| attachOptions | AttachOptions | No | Additional options for binding. |
+| attachOptions | [AttachOptions](arkts-ime-inputmethod-attachoptions-i.md) | No | Additional options for binding. |
 
 **Return value:**
 
@@ -664,7 +664,7 @@ Disables listening for the select-by-range event. This API uses an asynchronous 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'selectByRange' | Yes | Listening type. The value is fixed at **'selectByRange'**. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Range&gt; | No | Callback used for disable listening, which must be the same as that passed by the **on** API. If this parameter is not specified, listening will be disabled for all callbacks corresponding to the specified type. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Range](arkts-ime-inputmethod-range-i.md)&gt; | No | Callback used for disable listening, which must be the same as that passed by the **on** API. If this parameter is not specified, listening will be disabled for all callbacks corresponding to the specified type. |
 
 **Examples**
 
@@ -697,7 +697,7 @@ Disables listening for the select-by-cursor-movement event. This API uses an asy
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'selectByMovement' | Yes | Listening type. The value is fixed at **'selectByMovement'**. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Movement&gt; | No | Callback used for disable listening, which must be the same as that passed by the **on** API. If this parameter is not specified, listening will be disabled for all callbacks corresponding to the specified type. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Movement](arkts-ime-inputmethod-movement-i.md)&gt; | No | Callback used for disable listening, which must be the same as that passed by the **on** API. If this parameter is not specified, listening will be disabled for all callbacks corresponding to the specified type. |
 
 **Examples**
 
@@ -1146,7 +1146,7 @@ Enables listening for the select-by-range event. This API uses an asynchronous c
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'selectByRange' | Yes | Listening type. The value is fixed at **'selectByRange'**. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Range&gt; | Yes | Callback used to return the range of the text to be selected. The application needs to select the text based on the range returned in the callback. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Range](arkts-ime-inputmethod-range-i.md)&gt; | Yes | Callback used to return the range of the text to be selected. The application needs to select the text based on the range returned in the callback. |
 
 **Error codes:**
 
@@ -1179,7 +1179,7 @@ Enables listening for the select-by-cursor-movement event. This API uses an asyn
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'selectByMovement' | Yes | Listening type. The value is fixed at **'selectByMovement'**. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Movement&gt; | Yes | Callback used to return the direction in which the cursor moves. The application needs to select the text based on the direction returned in the callback. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Movement](arkts-ime-inputmethod-movement-i.md)&gt; | Yes | Callback used to return the direction in which the cursor moves. The application needs to select the text based on the direction returned in the callback. |
 
 **Error codes:**
 
@@ -1688,7 +1688,7 @@ Registers or unregisters MessageHandler.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| msgHandler | MessageHandler | No | This object receives custom communication data from the input method application through [onMessage](arkts-ime-inputmethod-messagehandler-i.md#onmessage) and receives a message for terminating the subscription to this object through [onTerminated](arkts-ime-inputmethod-messagehandler-i.md#onterminated). If no parameter is set, unregister [MessageHandler](arkts-ime-inputmethod-messagehandler-i.md). Its [onTerminated](arkts-ime-inputmethod-messagehandler-i.md#onterminated) callback will be triggered. |
+| msgHandler | [MessageHandler](arkts-ime-inputmethod-messagehandler-i.md) | No | This object receives custom communication data from the input method application through [onMessage](arkts-ime-inputmethod-messagehandler-i.md#onmessage) and receives a message for terminating the subscription to this object through [onTerminated](arkts-ime-inputmethod-messagehandler-i.md#onterminated). If no parameter is set, unregister [MessageHandler](arkts-ime-inputmethod-messagehandler-i.md). Its [onTerminated](arkts-ime-inputmethod-messagehandler-i.md#onterminated) callback will be triggered. |
 
 **Error codes:**
 
@@ -2074,7 +2074,7 @@ Enters the text editing mode. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| requestKeyboardReason | RequestKeyboardReason | Yes | Reason for requesting the keyboard. |
+| requestKeyboardReason | [RequestKeyboardReason](arkts-ime-inputmethod-requestkeyboardreason-e.md) | Yes | Reason for requesting the keyboard. |
 
 **Return value:**
 

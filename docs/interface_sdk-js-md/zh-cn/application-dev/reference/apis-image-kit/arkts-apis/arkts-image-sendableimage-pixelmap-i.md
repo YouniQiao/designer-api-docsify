@@ -32,7 +32,7 @@ This method is used to change color space of PixelMap. Pixel data will be change
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| targetColorSpace | colorSpaceManager.ColorSpaceManager | 是 | The color space for pixelmap. |
+| targetColorSpace | [colorSpaceManager.ColorSpaceManager](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-colorspacemanager-colorspacemanager-i.md) | 是 | The color space for pixelmap. |
 
 **返回值：**
 
@@ -84,7 +84,7 @@ Obtains new pixelmap with alpha information. This method uses a promise to retur
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;PixelMap&gt; | A Promise instance used to return the new image pixelmap. If the operation fails, an error message is returned. |
+| Promise&lt;[PixelMap](arkts-image-sendableimage-pixelmap-i.md)&gt; | A Promise instance used to return the new image pixelmap. If the operation fails, an error message is returned. |
 
 **示例**
 
@@ -118,7 +118,7 @@ Obtains new pixelmap with alpha information.
 
 | 类型 | 说明 |
 | --- | --- |
-| PixelMap | return the new image pixelmap. If the operation fails, an error message is returned. |
+| [PixelMap](arkts-image-sendableimage-pixelmap-i.md) | return the new image pixelmap. If the operation fails, an error message is returned. |
 
 **错误码：**
 
@@ -165,7 +165,7 @@ Crop the image. This method uses a promise to return the result.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| region | image.Region | 是 | The region to crop. |
+| region | [image.Region](arkts-image-image-region-i.md) | 是 | The region to crop. |
 
 **返回值：**
 
@@ -207,7 +207,7 @@ Crop the image.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| region | image.Region | 是 | The region to crop. |
+| region | [image.Region](arkts-image-image-region-i.md) | 是 | The region to crop. |
 
 **错误码：**
 
@@ -367,7 +367,7 @@ Get color space of pixelmap.
 
 | 类型 | 说明 |
 | --- | --- |
-| colorSpaceManager.ColorSpaceManager | If the operation fails, an error message is returned. |
+| [colorSpaceManager.ColorSpaceManager](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-colorspacemanager-colorspacemanager-i.md) | If the operation fails, an error message is returned. |
 
 **错误码：**
 
@@ -543,7 +543,7 @@ Marshalling PixelMap and write into MessageSequence.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| sequence | rpc.MessageSequence | 是 | rpc.MessageSequence parameter. |
+| sequence | [rpc.MessageSequence](../../apis-ipc-kit/arkts-apis/arkts-ipc-rpc-messagesequence-c.md) | 是 | rpc.MessageSequence parameter. |
 
 **错误码：**
 
@@ -711,7 +711,7 @@ Reads image pixelmap data in an area. This method uses a promise to return the d
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| area | image.PositionArea | 是 | Area from which the image pixelmap data will be read. |
+| area | [image.PositionArea](arkts-image-image-positionarea-i.md) | 是 | Area from which the image pixelmap data will be read. |
 
 **返回值：**
 
@@ -774,7 +774,7 @@ Reads image pixelmap data in an area.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| area | image.PositionArea | 是 | Area from which the image pixelmap data will be read. |
+| area | [image.PositionArea](arkts-image-image-positionarea-i.md) | 是 | Area from which the image pixelmap data will be read. |
 
 **错误码：**
 
@@ -922,60 +922,6 @@ function release(pixelMap: sendableImage.PixelMap) {
   }).catch((err: BusinessError) => {
     console.error(`Failed to release the PixelMap object. Code: ${err.code}, message: ${err.message}`);
   });
-}
-```
-
-```TypeScript
-import { sendableImage } from '@kit.ImageKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function Release(context : Context) {
-  const path: string = context.cacheDir + "/test.jpg";
-  const sendableImageSourceObj: sendableImage.ImageSource = sendableImage.createImageSource(path);
-  sendableImageSourceObj.release().then(() => {
-    console.info('Succeeded in releasing the image source instance.');
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to release the image source instance. code ${error.code}, message is ${error.message}`);
-  })
-}
-```
-
-```TypeScript
-import { sendableImage } from '@kit.ImageKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { image } from '@kit.ImageKit';
-
-async function Release() {
-  let size: image.Size = {
-    height: 8192,
-    width: 8
-  }
-  let receiver: sendableImage.ImageReceiver = sendableImage.createImageReceiver(size, image.ImageFormat.JPEG, 8);
-  let img = await receiver.readNextImage();
-  img.release().then(() => {
-    console.info('Succeeded in releasing an image.');
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to release an image. Code: ${error.code}, message: ${error.message}.`);
-  })
-}
-```
-
-```TypeScript
-import { sendableImage } from '@kit.ImageKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { image } from '@kit.ImageKit';
-
-async function Release() {
-  let size: image.Size = {
-    height: 8192,
-    width: 8
-  }
-  let receiver: sendableImage.ImageReceiver = sendableImage.createImageReceiver(size, image.ImageFormat.JPEG, 8);
-  receiver.release().then(() => {
-    console.info('Succeeded in releasing an image receiver.');
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to release an image receiver. Code: ${error.code}, message: ${error.message}.`);
-  })
 }
 ```
 
@@ -1171,7 +1117,7 @@ This method is only used to set the colorspace property of PixelMap, while all p
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| colorSpace | colorSpaceManager.ColorSpaceManager | 是 | The color space for pixelmap. |
+| colorSpace | [colorSpaceManager.ColorSpaceManager](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-colorspacemanager-colorspacemanager-i.md) | 是 | The color space for pixelmap. |
 
 **错误码：**
 
@@ -1304,13 +1250,13 @@ Creates a PixelMap object based on MessageSequence parameter.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| sequence | rpc.MessageSequence | 是 | rpc.MessageSequence parameter. |
+| sequence | [rpc.MessageSequence](../../apis-ipc-kit/arkts-apis/arkts-ipc-rpc-messagesequence-c.md) | 是 | rpc.MessageSequence parameter. |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;PixelMap&gt; | A Promise instance used to return the PixelMap object. |
+| Promise&lt;[PixelMap](arkts-image-sendableimage-pixelmap-i.md)&gt; | A Promise instance used to return the PixelMap object. |
 
 **错误码：**
 
@@ -1487,7 +1433,7 @@ Writes image pixelmap data to the specified area. This method uses a promise to 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| area | image.PositionArea | 是 | Area to which the image pixelmap data will be written. |
+| area | [image.PositionArea](arkts-image-image-positionarea-i.md) | 是 | Area to which the image pixelmap data will be written. |
 
 **返回值：**
 
@@ -1556,7 +1502,7 @@ Writes image pixelmap data to the specified area.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| area | image.PositionArea | 是 | Area to which the image pixelmap data will be written. |
+| area | [image.PositionArea](arkts-image-image-positionarea-i.md) | 是 | Area to which the image pixelmap data will be written. |
 
 **错误码：**
 

@@ -94,7 +94,7 @@ queryEntityParam: insightIntent.QueryEntityParam
 
 查询实体的param。
 
-**类型：** insightIntent.QueryEntityParam
+**类型：** [insightIntent.QueryEntityParam](arkts-ability-insightintent-queryentityparam-i.md)
 
 **起始版本：** 26.0.0
 

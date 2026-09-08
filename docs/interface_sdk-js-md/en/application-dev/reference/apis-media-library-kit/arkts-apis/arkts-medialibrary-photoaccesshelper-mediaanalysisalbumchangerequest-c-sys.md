@@ -34,7 +34,7 @@ Constructor.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| album | Album | Yes | Highlights** album. |
+| album | [Album](arkts-medialibrary-photoaccesshelper-album-i.md) | Yes | Highlights** album. |
 
 **Error codes:**
 
@@ -44,24 +44,6 @@ Constructor.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
 
 **Examples**
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  console.info('HighlightAlbum constructorDemo');
-  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-  let fetchOption: photoAccessHelper.FetchOptions = {
-    fetchColumns: [],
-    predicates: predicates
-  };
-  let albumFetchResult: photoAccessHelper.FetchResult<photoAccessHelper.Album> = await phAccessHelper.getAlbums(
-    photoAccessHelper.AlbumType.SMART, photoAccessHelper.AlbumSubtype.HIGHLIGHT, fetchOption);
-  let album: photoAccessHelper.Album = await albumFetchResult.getFirstObject();
-  let highlightAlbum: photoAccessHelper.HighlightAlbum = new photoAccessHelper.HighlightAlbum(album);
-  albumFetchResult.close();
-}
-```
 
 ```TypeScript
 import { dataSharePredicates } from '@kit.ArkData';
@@ -83,69 +65,6 @@ async function example(context: Context) {
   albumFetchResult.close();
   let changeRequest: photoAccessHelper.MediaAnalysisAlbumChangeRequest =
     new photoAccessHelper.MediaAnalysisAlbumChangeRequest(highlightAlbum);
-}
-```
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-
-async function example(context: Context) {
-  console.info('MediaHighlightAlbumChangeRequest constructorDemo');
-  let helper: photoAccessHelper.PhotoAccessHelper = photoAccessHelper.getPhotoAccessHelper(context);
-  let albumFetchOption: photoAccessHelper.FetchOptions = {
-    fetchColumns: [],
-    predicates: new dataSharePredicates.DataSharePredicates()
-  };
-  let albumFetchResult: photoAccessHelper.FetchResult<photoAccessHelper.Album> =
-    await helper.getAlbums(photoAccessHelper.AlbumType.SMART, photoAccessHelper.AlbumSubtype.HIGHLIGHT, albumFetchOption);
-  if (albumFetchResult.getCount() === 0) {
-    console.error('No album');
-    return;
-  }
-  let highlightAlbum: photoAccessHelper.Album = await albumFetchResult.getFirstObject();
-  albumFetchResult.close();
-  let changeRequest: photoAccessHelper.MediaHighlightAlbumChangeRequest =
-    new photoAccessHelper.MediaHighlightAlbumChangeRequest(highlightAlbum);
-}
-```
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-
-async function example(context: Context) {
-  console.info('AnalysisAlbum constructorDemo');
-  let helper: photoAccessHelper.PhotoAccessHelper = photoAccessHelper.getPhotoAccessHelper(context);
-  let albumFetchOption: photoAccessHelper.FetchOptions = {
-    fetchColumns: [],
-    predicates: new dataSharePredicates.DataSharePredicates()
-  };
-  let albumFetchResult: photoAccessHelper.FetchResult<photoAccessHelper.Album> = 
-    await helper.getAlbums(photoAccessHelper.AlbumType.SMART, photoAccessHelper.AlbumSubtype.HIGHLIGHT, albumFetchOption);
-  if (albumFetchResult.getCount() === 0) {
-    console.error('No album');
-    return;
-  }
-  let highlightAlbum: photoAccessHelper.Album = await albumFetchResult.getFirstObject();
-  albumFetchResult.close();
-  let analysisAlbum: photoAccessHelper.AnalysisAlbum = new photoAccessHelper.AnalysisAlbum(highlightAlbum);
-}
-```
-
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  console.info('MediaAlbumChangeRequest constructorDemo');
-  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-  let fetchOptions: photoAccessHelper.FetchOptions = {
-    fetchColumns: [],
-    predicates: predicates
-  };
-  let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.Album> = await phAccessHelper.getAlbums(photoAccessHelper.AlbumType.USER, photoAccessHelper.AlbumSubtype.USER_GENERIC, fetchOptions);
-  let album: photoAccessHelper.Album = await fetchResult.getFirstObject();
-  let albumChangeRequest: photoAccessHelper.MediaAlbumChangeRequest = new photoAccessHelper.MediaAlbumChangeRequest(album);
 }
 ```
 
@@ -184,7 +103,7 @@ Creates a change request for the **Analysis** album.
 | --- | --- | --- | --- |
 | context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | Yes | Context of the ability instance. |
 | name | string | Yes | Name of the album. |
-| subtype | AlbumSubtype | Yes | Subtype of the album. |
+| subtype | [AlbumSubtype](arkts-medialibrary-photoaccesshelper-albumsubtype-e.md) | Yes | Subtype of the album. |
 
 **Return value:**
 
@@ -316,7 +235,7 @@ Sets the sequence of assets in the **Analysis** album.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| assets | Array&lt;PhotoAsset&gt; | Yes | Assets in the album for which the sequence needs to be set. |
+| assets | Array&lt;[PhotoAsset](arkts-medialibrary-photoaccesshelper-photoasset-i.md)&gt; | Yes | Assets in the album for which the sequence needs to be set. |
 | position | Array&lt;number&gt; | Yes | Sequence of assets in the album. |
 
 **Error codes:**

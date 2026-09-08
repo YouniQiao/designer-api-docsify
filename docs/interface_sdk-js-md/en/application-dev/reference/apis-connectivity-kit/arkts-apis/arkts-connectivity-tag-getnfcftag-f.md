@@ -37,4 +37,4 @@ Obtains an **NfcFTag** object, which allows access to the tags that use the NFC-
 
 | Type | Description |
 | --- | --- |
-| NfcFTag | NfcFTag** object obtained. |
+| [NfcFTag](arkts-connectivity-tag-nfcftag-t.md) | NfcFTag** object obtained. |

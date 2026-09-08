@@ -26,43 +26,9 @@ Copies this matrix object.
 
 | Type | Description |
 | --- | --- |
-| Matrix4Transit | Copy object of the current matrix. |
+| [Matrix4Transit](arkts-arkui-matrix4-matrix4transit-i.md) | Copy object of the current matrix. |
 
 **Examples**
-
-```TypeScript
-// xxx.ets
-import { matrix4 } from '@kit.ArkUI';
-
-@Entry
-@Component
-struct Test {
-  private matrix1 = matrix4.identity().scale({ x: 1.5 });
-  private matrix2 = this.matrix1.copy().translate({ x: 200 });
-  imageSize: Length = '300px';
-
-  build() {
-    Column({ space: '50px' }) {
-      // Replace $r("app.media.testImage") with the image resource file you use.
-      Image($r("app.media.testImage"))
-        .width(this.imageSize)
-        .height(this.imageSize)
-      // Replace $r("app.media.testImage") with the image resource file you use.
-      Image($r("app.media.testImage"))
-        .width(this.imageSize)
-        .height(this.imageSize)
-        .transform(this.matrix1)
-      // Replace $r("app.media.testImage") with the image resource file you use.
-      Image($r("app.media.testImage"))
-        .width(this.imageSize)
-        .height(this.imageSize)
-        .transform(this.matrix2)
-    }.alignItems(HorizontalAlign.Center)
-    .height('100%').width('100%')
-    .justifyContent(FlexAlign.Center)
-  }
-}
-```
 
 ```TypeScript
 // xxx.ets

@@ -34,13 +34,13 @@ Fetch shared photo assets in an album.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | photoAccessHelper.FetchOptions | Yes | Fetch options. |
+| options | [photoAccessHelper.FetchOptions](arkts-medialibrary-photoaccesshelper-fetchoptions-i.md) | Yes | Fetch options. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;SharedPhotoAsset&gt; | Returns the shared photo assets |
+| Array&lt;[SharedPhotoAsset](arkts-medialibrary-sendablephotoaccesshelper-sharedphotoasset-i-sys.md)&gt; | Returns the shared photo assets |
 
 **Error codes:**
 

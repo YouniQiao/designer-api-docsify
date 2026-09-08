@@ -36,7 +36,7 @@ desiredColorSpace?: colorSpaceManager.ColorSpaceManager
 
 Target color space. The default value is **UNKNOWN**.
 
-**Type:** colorSpaceManager.ColorSpaceManager
+**Type:** [colorSpaceManager.ColorSpaceManager](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-colorspacemanager-colorspacemanager-i.md)
 
 **Since:** 11
 
@@ -68,7 +68,7 @@ desiredPixelFormat?: PixelMapFormat
 
 Pixel format for decoding. The default value is **RGBA_8888**. Only RGBA_8888, BGRA_8888, and RGB_565 are supported. RGB_565 is not supported for images with alpha channels, such as PNG, GIF, ICO, and WEBP.
 
-**Type:** PixelMapFormat
+**Type:** [PixelMapFormat](arkts-image-image-pixelmapformat-e.md)
 
 **Since:** 7
 
@@ -88,7 +88,7 @@ Rectangle specified by **Region** in the decoded image. When the original image 
 
 Note: If both **desiredSize** and **desiredRegion** are passed to the decoding API, you must also include **cropAndScaleStrategy** to determine whether to crop or scale first. **CROP_FIRST** is recommended.
 
-**Type:** Region
+**Type:** [Region](arkts-image-image-region-i.md)
 
 **Since:** 7
 
@@ -189,36 +189,6 @@ Rotation angle. The default value is **0**.
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function rotate(pixelMap: image.PixelMap) {
-  const angle: number = 90.0;
-  pixelMap.rotate(angle, (err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to rotate the PixelMap. Code: ${err.code}, message: ${err.message}`);
-      return;
-    }
-    console.info("Succeeded in rotating the PixelMap.");
-  });
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function rotate(pixelMap: image.PixelMap) {
-  const angle: number = 90.0;
-  pixelMap.rotate(angle).then(() => {
-    console.info('Succeeded in rotating the PixelMap.');
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to rotate the PixelMap. Code: ${err.code}, message: ${err.message}`);
-  });
-}
-```
 
 ## sampleSize
 

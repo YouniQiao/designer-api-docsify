@@ -40,7 +40,7 @@ images?: Array<ImageItem>
 
 Array of image items for import operation.
 
-**Type:** Array&lt;ImageItem&gt;
+**Type:** Array&lt;[ImageItem](arkts-arkui-imagegeneration-imageitem-i-sys.md)&gt;
 
 **Since:** 26.0.0
 

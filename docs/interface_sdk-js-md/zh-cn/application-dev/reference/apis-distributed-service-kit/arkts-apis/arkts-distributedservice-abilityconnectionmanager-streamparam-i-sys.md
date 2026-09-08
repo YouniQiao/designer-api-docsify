@@ -42,7 +42,7 @@ colorSpaceConversionTarget?: colorSpaceManager.ColorSpace
 
 表示转换的目标色彩空间。设置该参数后，视频流的色彩空间将转换为目标色彩空间，用于适配不同设备的色彩显示需求。不传此参数时不进行色彩空间转换。
 
-**类型：** colorSpaceManager.ColorSpace
+**类型：** [colorSpaceManager.ColorSpace](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-colorspacemanager-colorspace-e.md)
 
 **起始版本：** 18
 

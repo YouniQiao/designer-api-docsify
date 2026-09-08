@@ -48,7 +48,7 @@ mediaType: PhotoType
 
 Type of the media asset (image or video).
 
-**Type:** PhotoType
+**Type:** [PhotoType](arkts-medialibrary-photoaccesshelper-phototype-e.md)
 
 **Since:** 20
 

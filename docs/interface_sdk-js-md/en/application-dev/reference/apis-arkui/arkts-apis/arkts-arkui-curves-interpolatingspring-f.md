@@ -35,7 +35,7 @@ Creates an interpolating spring curve animated from 0 to 1. The actual animation
 
 | Type | Description |
 | --- | --- |
-| ICurve | Curve. |
+| [ICurve](arkts-arkui-curves-icurve-i.md) | Curve. |
 
 **Examples**
 

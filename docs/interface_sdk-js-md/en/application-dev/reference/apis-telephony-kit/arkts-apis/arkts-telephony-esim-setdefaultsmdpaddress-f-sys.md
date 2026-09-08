@@ -33,7 +33,7 @@ Sets or updates the default SM-DP+ address stored in the eUICC. This API uses a 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ResultCode&gt; | Promise used to return the operation result. |
+| Promise&lt;[ResultCode](arkts-telephony-esim-resultcode-e-sys.md)&gt; | Promise used to return the operation result. |
 
 **Error codes:**
 

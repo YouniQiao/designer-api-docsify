@@ -24,7 +24,7 @@ dnses: Array<NetAddress>
 
 网络地址，参考[NetAddress](arkts-network-connection-netaddress-i.md)。
 
-**类型：** Array&lt;NetAddress&gt;
+**类型：** Array&lt;[NetAddress](arkts-network-connection-netaddress-i.md)&gt;
 
 **起始版本：** 8
 
@@ -98,7 +98,7 @@ linkAddresses: Array<LinkAddress>
 
 链路信息。
 
-**类型：** Array&lt;LinkAddress&gt;
+**类型：** Array&lt;[LinkAddress](arkts-network-connection-linkaddress-i.md)&gt;
 
 **起始版本：** 8
 
@@ -126,7 +126,7 @@ routes: Array<RouteInfo>
 
 路由信息。
 
-**类型：** Array&lt;RouteInfo&gt;
+**类型：** Array&lt;[RouteInfo](arkts-network-connection-routeinfo-i.md)&gt;
 
 **起始版本：** 8
 

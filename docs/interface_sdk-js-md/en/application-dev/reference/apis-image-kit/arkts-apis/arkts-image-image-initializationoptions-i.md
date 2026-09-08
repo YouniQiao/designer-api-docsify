@@ -56,7 +56,7 @@ pixelFormat?: PixelMapFormat
 
 Pixel format of the generated PixelMap. The default value is **RGBA_8888**.
 
-**Type:** PixelMapFormat
+**Type:** [PixelMapFormat](arkts-image-image-pixelmapformat-e.md)
 
 **Since:** 8
 
@@ -110,7 +110,7 @@ srcPixelFormat?: PixelMapFormat
 
 Pixel format of the passed-in buffer data. The default value is **BGRA_8888**.
 
-**Type:** PixelMapFormat
+**Type:** [PixelMapFormat](arkts-image-image-pixelmapformat-e.md)
 
 **Since:** 12
 

@@ -32,7 +32,7 @@ readonly enableStatus: notificationManager.PriorityEnableStatus
 
 应用通知的优先使能状态。
 
-**类型：** notificationManager.PriorityEnableStatus
+**类型：** [notificationManager.PriorityEnableStatus](arkts-notification-notificationmanager-priorityenablestatus-e-sys.md)
 
 **起始版本：** 23
 

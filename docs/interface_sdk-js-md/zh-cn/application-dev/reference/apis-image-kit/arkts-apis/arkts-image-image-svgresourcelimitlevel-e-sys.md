@@ -81,17 +81,3 @@ HIGH = 3
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 **系统接口：** 此接口为系统接口。
-
-**示例**
-
-```TypeScript
-import { fileIo } from '@kit.CoreFileKit';
-
-async function CreateImageSource(context : Context) {
-  let sourceOptions: image.SourceOptions = { sourceDensity: 120, svgResourceLimitLevel: image.SVGResourceLimitLevel.MEDIUM};
-  // 此处'test.jpg'仅作示例，请开发者自行替换，否则imageSource创建失败会导致后续无法正常执行。
-  const filePath: string = context.filesDir + "/test.jpg";
-  let file = fileIo.openSync(filePath, fileIo.OpenMode.CREATE | fileIo.OpenMode.READ_WRITE);
-  const imageSourceObj: image.ImageSource = image.createImageSource(file.fd, sourceOptions);
-}
-```

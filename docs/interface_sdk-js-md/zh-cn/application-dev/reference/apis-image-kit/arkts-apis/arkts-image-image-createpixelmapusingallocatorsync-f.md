@@ -31,7 +31,7 @@ Create pixelmap by data buffer based on opts, the memory type used by the PixelM
 
 | 类型 | 说明 |
 | --- | --- |
-| PixelMap | Returns the instance if the operation is successful;Otherwise, return undefined. |
+| [PixelMap](arkts-image-image-pixelmap-i.md) | Returns the instance if the operation is successful;Otherwise, return undefined. |
 
 **错误码：**
 
@@ -92,7 +92,7 @@ Create an empty pixelmap by data buffer based on opts, the memory type used by t
 
 | 类型 | 说明 |
 | --- | --- |
-| PixelMap | Returns the instance if the operation is successful;Otherwise, return undefined. |
+| [PixelMap](arkts-image-image-pixelmap-i.md) | Returns the instance if the operation is successful;Otherwise, return undefined. |
 
 **错误码：**
 

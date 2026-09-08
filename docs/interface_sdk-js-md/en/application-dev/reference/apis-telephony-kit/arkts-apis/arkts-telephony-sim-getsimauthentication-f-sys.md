@@ -27,7 +27,7 @@ Performs SIM card authentication.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | slotId | number | Yes | Sim slot id. |
-| authType | AuthType | Yes | The authentication type. |
+| authType | [AuthType](arkts-telephony-sim-authtype-e-sys.md) | Yes | The authentication type. |
 | authData | string | Yes | Ser password or other authentication information. |
 
 **Return value:**

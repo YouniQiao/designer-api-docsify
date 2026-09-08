@@ -97,7 +97,7 @@ button: MouseButton
 
 鼠标按键。
 
-**类型：** MouseButton
+**类型：** [MouseButton](../arkts-apis/arkts-arkui-mousebutton-e.md)
 
 **起始版本：** 8
 
@@ -221,7 +221,7 @@ pressedButtons?: MouseButton[]
 
 当前按下的鼠标按键集合。
 
-**类型：** MouseButton[]
+**类型：** [MouseButton](../arkts-apis/arkts-arkui-mousebutton-e.md)[]
 
 **起始版本：** 15
 

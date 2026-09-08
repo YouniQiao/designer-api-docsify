@@ -27,7 +27,7 @@ authTrustLevel: AuthTrustLevel
 
 典型操作需要的身份认证可信等级，以及身份认证可信等级的划分请参见[认证可信等级划分原则](../../../security/UserAuthenticationKit/user-authentication-overview.md#生物认证可信等级划分原则)。
 
-**类型：** AuthTrustLevel
+**类型：** [AuthTrustLevel](arkts-userauthentication-userauth-authtrustlevel-e.md)
 
 **起始版本：** 10
 

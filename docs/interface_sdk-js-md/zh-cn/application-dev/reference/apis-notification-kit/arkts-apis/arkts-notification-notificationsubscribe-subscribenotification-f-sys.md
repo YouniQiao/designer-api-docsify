@@ -28,7 +28,7 @@ function subscribeNotification(subscriber: NotificationSubscriber): Promise<void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| subscriber | NotificationSubscriber | 是 | 通知订阅者。 |
+| subscriber | [NotificationSubscriber](arkts-notification-notificationsubscribe-notificationsubscriber-t-sys.md) | 是 | 通知订阅者。 |
 
 **返回值：**
 
@@ -87,8 +87,8 @@ function subscribeNotification(subscriber: NotificationSubscriber, info: Notific
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| subscriber | NotificationSubscriber | 是 | 通知订阅者。 |
-| info | NotificationSubscribeInfo | 是 | 通知订阅信息。 |
+| subscriber | [NotificationSubscriber](arkts-notification-notificationsubscribe-notificationsubscriber-t-sys.md) | 是 | 通知订阅者。 |
+| info | [NotificationSubscribeInfo](arkts-notification-notificationsubscribe-notificationsubscribeinfo-t-sys.md) | 是 | 通知订阅信息。 |
 
 **返回值：**
 

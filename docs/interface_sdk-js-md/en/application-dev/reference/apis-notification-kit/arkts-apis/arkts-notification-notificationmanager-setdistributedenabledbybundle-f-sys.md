@@ -28,7 +28,7 @@ This API can be properly called on devices other than wearables and TVs. If it i
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundle | BundleOption | Yes | Bundle information of the application. |
+| bundle | [BundleOption](arkts-notification-notificationmanager-bundleoption-t.md) | Yes | Bundle information of the application. |
 | deviceType | string | Yes | Device type. |
 | enable | boolean | Yes | Whether a specified application enables cross-device collaboration. The value **true** indicates that the cross-device collaboration is enabled, and the value **false** indicates the opposite. |
 

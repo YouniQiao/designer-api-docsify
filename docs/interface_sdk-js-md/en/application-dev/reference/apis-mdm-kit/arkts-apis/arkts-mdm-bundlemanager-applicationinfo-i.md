@@ -164,7 +164,7 @@ readonly descriptionResource: Resource
 
 Resource information of the application description, including the bundle name, module name, and ID of the resource.
 
-**Type:** Resource
+**Type:** [Resource](arkts-mdm-bundlemanager-resource-i.md)
 
 **Since:** 20
 
@@ -244,7 +244,7 @@ readonly iconResource: Resource
 
 Resource information of the application icon, including the bundle name, module name, and ID of the resource.
 
-**Type:** Resource
+**Type:** [Resource](arkts-mdm-bundlemanager-resource-i.md)
 
 **Since:** 20
 
@@ -314,7 +314,7 @@ readonly labelResource: Resource
 
 Resource information of the application label, including the bundle name, module name, and ID of the resource.
 
-**Type:** Resource
+**Type:** [Resource](arkts-mdm-bundlemanager-resource-i.md)
 
 **Since:** 20
 

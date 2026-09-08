@@ -24,7 +24,7 @@ Obtains the fold status of this foldable device.
 
 | Type | Description |
 | --- | --- |
-| FoldStatus | Fold status of the device. |
+| [FoldStatus](arkts-arkui-display-foldstatus-e.md) | Fold status of the device. |
 
 **Error codes:**
 

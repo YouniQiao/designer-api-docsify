@@ -24,7 +24,7 @@ address?: BluetoothAddress
 
 若deviceId与本参数同时指定，本参数生效，deviceId不生效。
 
-**类型：** BluetoothAddress
+**类型：** [BluetoothAddress](arkts-connectivity-ble-bluetoothaddress-t.md)
 
 **起始版本：** 23
 

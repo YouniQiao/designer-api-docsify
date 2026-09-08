@@ -20,7 +20,7 @@ sourceType: SourceType
 
 The system uses this to determine the recording scenario of the application according to the SourceType that the application expects to use for streaming, and provides users with the ability to select matching noise reduction modes. The supported source types include [SOURCE_TYPE_MIC](arkts-audio-audio-sourcetype-e.md#source_type_mic), [SOURCE_TYPE_CAMCORDER](arkts-audio-audio-sourcetype-e.md#source_type_camcorder), and [SOURCE_TYPE_LIVE](arkts-audio-audio-sourcetype-e.md#source_type_live).
 
-**Type:** SourceType
+**Type:** [SourceType](arkts-audio-audio-sourcetype-e.md)
 
 **Since:** 26.0.0
 

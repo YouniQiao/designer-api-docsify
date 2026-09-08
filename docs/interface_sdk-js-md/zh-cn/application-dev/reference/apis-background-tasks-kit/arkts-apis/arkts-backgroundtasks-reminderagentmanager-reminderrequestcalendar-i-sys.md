@@ -24,7 +24,7 @@ rruleWantAgent?: WantAgent
 
 自定义重复日程，指明需要拉起的 Service Extension。
 
-**类型：** WantAgent
+**类型：** [WantAgent](arkts-backgroundtasks-reminderagentmanager-wantagent-i.md)
 
 **起始版本：** 12
 

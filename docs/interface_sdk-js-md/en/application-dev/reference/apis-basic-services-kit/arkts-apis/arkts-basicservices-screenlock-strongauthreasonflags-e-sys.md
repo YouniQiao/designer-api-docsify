@@ -2,7 +2,7 @@
 
 Indicates the strong authentication reason flags used to request.
 
-@enum { number }
+@enum { int }
 
 **Since:** 12
 

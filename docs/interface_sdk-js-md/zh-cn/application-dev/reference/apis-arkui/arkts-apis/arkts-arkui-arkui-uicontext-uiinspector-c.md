@@ -43,50 +43,7 @@ createComponentObserver(id: string): inspector.ComponentObserver
 
 | 类型 | 说明 |
 | --- | --- |
-| inspector.ComponentObserver | 组件回调事件监听句柄，用于注册和取消注册监听回调。 |
-
-**示例**
-
-```TypeScript
-import { inspector, UIInspector } from '@kit.ArkUI';
-
-@Entry
-@Component
-struct UIInspectorExample {
-  build() {
-    Column() {
-      Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Start }) {
-        Row({ space: 5 }) {
-          Text('UIInspector')
-            .width(110)
-            .height(110)
-            .border({ width: 1 })
-            .id('TEXT_ID')
-        }.width(80)
-      }.width(80)
-    }.height(320).width(360).padding({ right: 10, top: 10 })
-  }
-
-  uiInspector: UIInspector = this.getUIContext().getUIInspector();
-  listener: inspector.ComponentObserver = this.uiInspector.createComponentObserver('TEXT_ID');
-
-  aboutToAppear() {
-    let onLayoutComplete: () => void = (): void => {
-      console.info('TEXT_ID layout complete');
-    }
-    let onDrawComplete: () => void = (): void => {
-      console.info('TEXT_ID draw complete');
-    }
-
-    this.listener.on('layout', onLayoutComplete);
-    this.listener.on('draw', onDrawComplete);
-
-    // 通过句柄取消注册对应组件的监听回调，由开发者自行决定在何时调用。
-    // this.listener.off('layout', onLayoutComplete)
-    // this.listener.off('draw', onDrawComplete)
-  }
-}
-```
+| [inspector.ComponentObserver](arkts-arkui-inspector-componentobserver-i.md) | 组件回调事件监听句柄，用于注册和取消注册监听回调。 |
 
 ## createComponentObserver
 
@@ -114,54 +71,4 @@ createComponentObserver(id: string | number): inspector.ComponentObserver
 
 | 类型 | 说明 |
 | --- | --- |
-| inspector.ComponentObserver | 组件回调事件监听句柄，用于注册和取消注册监听回调。 |
-
-**示例**
-
-```TypeScript
-import { inspector, UIInspector } from '@kit.ArkUI';
-
-@Entry
-@Component
-struct UIInspectorExample {
-  build() {
-    Column() {
-      Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Start }) {
-        Row({ space: 5 }) {
-          Text('UIInspector')
-            .width(110)
-            .height(110)
-            .border({ width: 1 })
-            .id('TEXT_ID')
-        }.width(80)
-      }.width(80)
-    }.height(320).width(360).padding({ right: 10, top: 10 })
-  }
-
-  uiInspector: UIInspector = this.getUIContext().getUIInspector();
-  listener: inspector.ComponentObserver = this.uiInspector.createComponentObserver('TEXT_ID');
-
-  aboutToAppear() {
-    let onLayoutComplete: () => void = (): void => {
-      console.info('TEXT_ID layout complete');
-    }
-    let onDrawComplete: () => void = (): void => {
-      console.info('TEXT_ID draw complete');
-    }
-    let onLayoutChildrenComplete: () => void = (): void => {
-      console.info('UIInspectorExample children layout');
-    }
-
-    this.listener.on('layout', onLayoutComplete);
-    this.listener.on('draw', onDrawComplete);
-
-    let listenerForThis = this.getUIContext().getUIInspector().createComponentObserver(this.getUniqueId());
-    listenerForThis.onLayoutChildren(onLayoutChildrenComplete);
-
-    // 通过句柄取消注册对应组件的监听回调，由开发者自行决定在何时调用。
-    // this.listener.off('layout', onLayoutComplete)
-    // this.listener.off('draw', onDrawComplete)
-    // listenerForThis.offLayoutChildren(onLayoutChildrenComplete)
-  }
-}
-```
+| [inspector.ComponentObserver](arkts-arkui-inspector-componentobserver-i.md) | 组件回调事件监听句柄，用于注册和取消注册监听回调。 |

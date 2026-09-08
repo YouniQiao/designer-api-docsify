@@ -26,7 +26,7 @@ characteristics: Array<BLECharacteristic>
 
 当前服务包含的特征列表。
 
-**类型：** Array&lt;BLECharacteristic&gt;
+**类型：** Array&lt;[BLECharacteristic](arkts-connectivity-bluetoothmanager-blecharacteristic-i.md)&gt;
 
 **起始版本：** 9
 
@@ -44,7 +44,7 @@ includeServices?: Array<GattService>
 
 当前服务依赖的其它服务。
 
-**类型：** Array&lt;GattService&gt;
+**类型：** Array&lt;[GattService](arkts-connectivity-bluetoothmanager-gattservice-i.md)&gt;
 
 **起始版本：** 9
 

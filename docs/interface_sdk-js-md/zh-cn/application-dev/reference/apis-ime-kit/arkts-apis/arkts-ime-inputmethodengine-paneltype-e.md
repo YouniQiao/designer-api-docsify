@@ -4,8 +4,8 @@
 
 | 名称 | 值 | 说明 |  
 | ------------ | -- | ------------------ |  
-| SOFT_KEYBOARD | 0 | 软键盘类型。 |
-| STATUS_BAR | 1 | 状态栏类型。 |
+| [SOFT_KEYBOARD](arkts-ime-inputmethodengine-paneltype-e.md) | 0 | 软键盘类型。 |
+| [STATUS_BAR](arkts-ime-inputmethodengine-paneltype-e.md) | 1 | 状态栏类型。 |
 
 **起始版本：** 10
 

@@ -54,7 +54,7 @@ albumSubType: AlbumSubtype
 
 subtype of album asset
 
-**类型：** AlbumSubtype
+**类型：** [AlbumSubtype](arkts-medialibrary-photoaccesshelper-albumsubtype-e.md)
 
 **起始版本：** 14
 
@@ -70,7 +70,7 @@ albumType: AlbumType
 
 type of album asset
 
-**类型：** AlbumType
+**类型：** [AlbumType](arkts-medialibrary-photoaccesshelper-albumtype-e.md)
 
 **起始版本：** 14
 

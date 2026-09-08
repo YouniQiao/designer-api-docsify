@@ -4,10 +4,10 @@
 
 | 名称 | 值 | 说明 |  
 | ----------------------------- | -- | -------------------- |  
-| STANDARD| 0 | 标准振动风格。 |
-| GENTLE | 1 | 轻柔振动风格。 |
+| [STANDARD](arkts-audio-audio-noisereductionmode-e.md) | 0 | 标准振动风格。 |
+| [GENTLE](arkts-audio-systemsoundmanager-tonehapticsfeature-e-sys.md) | 1 | 轻柔振动风格。 |
 
-@enum { number }
+@enum { int }
 
 **起始版本：** 13
 

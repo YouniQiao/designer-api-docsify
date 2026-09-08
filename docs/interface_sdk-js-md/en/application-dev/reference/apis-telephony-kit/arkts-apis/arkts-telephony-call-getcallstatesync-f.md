@@ -22,7 +22,7 @@ Obtains the call status.
 
 | Type | Description |
 | --- | --- |
-| CallState | Promise used to return the result. |
+| [CallState](arkts-telephony-call-callstate-e.md) | Promise used to return the result. |
 
 **Examples**
 

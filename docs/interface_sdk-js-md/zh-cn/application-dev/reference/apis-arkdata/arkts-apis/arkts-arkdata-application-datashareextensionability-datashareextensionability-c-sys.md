@@ -140,7 +140,7 @@ delete?(uri: string, predicates: dataSharePredicates.DataSharePredicates, callba
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | uri | string | 是 | 指示要删除的数据的路径。 |
-| predicates | dataSharePredicates.DataSharePredicates | 是 | 指示筛选条件。 |
+| predicates | [dataSharePredicates.DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | 是 | 指示筛选条件。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数。返回已删除的数据记录数。 |
 
 **示例**
@@ -382,7 +382,7 @@ query?(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | uri | string | 是 | 指示要查询的数据的路径。 |
-| predicates | dataSharePredicates.DataSharePredicates | 是 | 指示筛选条件。 |
+| predicates | [dataSharePredicates.DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | 是 | 指示筛选条件。 |
 | columns | Array&lt;string&gt; | 是 | 指示要查询的列。如果此参数为空，则查询所有列。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Object&gt; | 是 | 回调函数。返回查询到的结果集。 |
 
@@ -437,7 +437,7 @@ update?(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | uri | string | 是 | 指示要更新的数据的路径。 |
-| predicates | dataSharePredicates.DataSharePredicates | 是 | 指示筛选条件。 |
+| predicates | [dataSharePredicates.DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | 是 | 指示筛选条件。 |
 | valueBucket | [ValuesBucket](arkts-arkdata-valuesbucket-t.md) | 是 | 指示要更新的数据。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数。返回更新的数据记录数。 |
 

@@ -40,8 +40,8 @@ function bind(floatViewController: FloatViewController, floatingBallController: 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | floatViewController | [FloatViewController](arkts-arkui-floatview-floatviewcontroller-i.md) | 是 | 标准悬浮窗控制器。 |
-| floatingBallController | floatingBall.FloatingBallController | 是 | 闪控球控制器。 |
-| floatingBallParams | floatingBall.FloatingBallParams | 是 | 闪控球参数。绑定时设置的参数会覆盖掉闪控球控制器启动时已保存的参数。 |
+| floatingBallController | [floatingBall.FloatingBallController](arkts-arkui-floatingball-floatingballcontroller-i.md) | 是 | 闪控球控制器。 |
+| floatingBallParams | [floatingBall.FloatingBallParams](arkts-arkui-floatingball-floatingballparams-i.md) | 是 | 闪控球参数。绑定时设置的参数会覆盖掉闪控球控制器启动时已保存的参数。 |
 
 **返回值：**
 

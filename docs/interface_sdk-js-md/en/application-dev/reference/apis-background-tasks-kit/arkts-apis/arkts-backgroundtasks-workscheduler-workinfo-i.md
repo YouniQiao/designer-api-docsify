@@ -210,7 +210,7 @@ networkType?: NetworkType
 
 Network type.
 
-**Type:** NetworkType
+**Type:** [NetworkType](arkts-backgroundtasks-workscheduler-networktype-e.md)
 
 **Since:** 9
 

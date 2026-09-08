@@ -65,6 +65,7 @@ Imports a key securely for the specified user. This API uses a promise to return
 **Examples**
 
 Prerequisites: see Example of generateKeyItemAsUser.
+The values of the following cryptography-related variables (such as initializationVector, associatedData, and nonce) are for reference only and cannot be directly used in the service logic. You need to set them based on actual situation.
 
 ```TypeScript
 import { huks } from '@kit.UniversalKeystoreKit';

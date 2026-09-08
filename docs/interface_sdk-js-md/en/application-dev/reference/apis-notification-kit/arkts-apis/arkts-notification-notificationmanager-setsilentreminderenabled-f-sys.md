@@ -26,7 +26,7 @@ Sets the enabling status of the silent reminder. This API uses a promise to retu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundle | BundleOption | Yes | Bundle information of the application. |
+| bundle | [BundleOption](arkts-notification-notificationmanager-bundleoption-t.md) | Yes | Bundle information of the application. |
 | enabled | boolean | Yes | Whether to enable the silent reminder. The value **true** means to enable the silent reminder, and **false** means the opposite. |
 
 **Return value:**

@@ -20,7 +20,7 @@ cert?: X509Cert
 
 The certificate that matches the private key.
 
-**Type:** X509Cert
+**Type:** [X509Cert](arkts-devicecertificate-cert-x509cert-i.md)
 
 **Since:** 18
 
@@ -36,7 +36,7 @@ otherCerts?: Array<X509Cert>
 
 Other certificates.
 
-**Type:** Array&lt;X509Cert&gt;
+**Type:** Array&lt;[X509Cert](arkts-devicecertificate-cert-x509cert-i.md)&gt;
 
 **Since:** 18
 

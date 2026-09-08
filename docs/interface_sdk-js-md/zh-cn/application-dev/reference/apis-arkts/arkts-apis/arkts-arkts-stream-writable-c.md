@@ -32,18 +32,6 @@ constructor()
 let writableStream = new stream.Writable();
 ```
 
-```TypeScript
-let readableStream = new stream.Readable();
-```
-
-```TypeScript
-let duplex = new stream.Duplex();
-```
-
-```TypeScript
-let transformStream = new stream.Transform();
-```
-
 ## cork
 
 ```TypeScript
@@ -82,12 +70,6 @@ let result = writableStream.cork();
 console.info("Writable cork result", result); // Writable cork result true
 ```
 
-```TypeScript
-let duplexStream = new stream.Duplex();
-let result = duplexStream.cork();
-console.info("duplexStream cork result", result); // duplexStream cork result true
-```
-
 ## doInitialize
 
 ```TypeScript
@@ -123,22 +105,6 @@ class MyWritable extends stream.Writable {
 }
 
 new MyWritable();
-```
-
-```TypeScript
-class MyReadable extends stream.Readable {
-  doInitialize(callback: Function) {
-    super.doInitialize(callback);
-    console.info("Readable doInitialize"); // Readable doInitialize
-  }
-
-  doRead(size: number) {
-  }
-}
-
-let myReadable = new MyReadable();
-myReadable.on("data", () => {
-});
 ```
 
 ## doWrite
@@ -179,25 +145,6 @@ class TestWritable extends stream.Writable {
 
 let writableStream = new TestWritable();
 writableStream.write("data", "utf8");
-```
-
-```TypeScript
-class TestDuplex extends stream.Duplex {
-  constructor() {
-    super();
-  }
-
-  doRead(size: number) {
-  }
-
-  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
-    console.info("duplexStream chunk is", chunk); // duplexStream chunk is data
-    callback();
-  }
-}
-
-let duplexStream = new TestDuplex();
-duplexStream.write("data", "utf8");
 ```
 
 ## doWritev
@@ -242,33 +189,6 @@ writableStream.write("data1", "utf8");
 writableStream.write("data2", "utf8");
 writableStream.uncork();
 writableStream.end();
-```
-
-```TypeScript
-class TestDuplex extends stream.Duplex {
-  constructor() {
-    super();
-  }
-
-  doRead(size: number) {
-  }
-
-  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
-    callback();
-  }
-
-  doWritev(chunks: string[] | Uint8Array[], callback: Function) {
-    console.info("duplexStream chunk", chunks[0]); // duplexStream chunk data1
-    callback();
-  }
-}
-
-let duplexStream = new TestDuplex();
-duplexStream.cork();
-duplexStream.write("data1", "utf8");
-duplexStream.write("data2", "utf8");
-duplexStream.uncork();
-duplexStream.end();
 ```
 
 ## end
@@ -328,27 +248,6 @@ writableStream.end("finish", "utf8", () => {
 });
 ```
 
-```TypeScript
-class TestDuplex extends stream.Duplex {
-  constructor() {
-    super();
-  }
-
-  doRead(size: number) {
-  }
-
-  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
-    console.info("Duplex chunk is", chunk); // Duplex chunk is test
-    callback();
-  }
-}
-
-let duplexStream = new TestDuplex();
-duplexStream.end("test", "utf8", () => {
-  console.info("Duplex is end"); // Duplex is end
-});
-```
-
 ## off
 
 ```TypeScript
@@ -368,7 +267,7 @@ off(event: string, callback?: Callback<emitter.EventData>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | event | string | 是 | 事件回调类型，支持的事件包括：'close' \| 'drain' \| 'error' \| 'finish'。   - 'close'：完成end()调用，结束写入操作，触发该事件。   - 'drain'：在可写流缓冲区中数据清空时触发该事件。   - 'error'：在可写流发生异常时触发该事件。   - 'finish'：在数据缓冲区全部写入到目标后触发该事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;emitter.EventData&gt; | 否 | 指定事件的要注销的回调函数。不传入时注销指定事件的所有回调函数。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[emitter.EventData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-emitter-eventdata-i.md)&gt; | 否 | 指定事件的要注销的回调函数。不传入时注销指定事件的所有回调函数。 |
 
 **示例**
 
@@ -397,29 +296,6 @@ setTimeout(() => {
 }, 0);
 ```
 
-```TypeScript
-class TestReadable extends stream.Readable {
-  constructor() {
-    super();
-  }
-
-  doRead(size: number) {
-  }
-}
-
-let readableStream = new TestReadable();
-
-function read() {
-  console.info("read() called");
-}
-
-readableStream.setEncoding("utf8");
-readableStream.on("readable", read);
-readableStream.off("readable");
-readableStream.push("test");
-// off注销对readable事件的监听后，read函数不会被调用，"read() called"也不会被打印
-```
-
 ## on
 
 ```TypeScript
@@ -439,7 +315,7 @@ on(event: string, callback: Callback<emitter.EventData>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | event | string | 是 | 事件回调类型，支持的事件包括：'close' \| 'drain' \| 'error' \| 'finish'。   - 'close'：完成end()调用，结束写入操作，触发该事件。   - 'drain'：在可写流缓冲区中数据清空时触发该事件。   - 'error'：在可写流发生异常时触发该事件。   - 'finish'：在数据缓冲区全部写入到目标后触发该事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;emitter.EventData&gt; | 是 | 回调函数，返回事件传输的数据。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[emitter.EventData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-emitter-eventdata-i.md)&gt; | 是 | 回调函数，返回事件传输的数据。 |
 
 **示例**
 
@@ -460,24 +336,6 @@ writableStream.on("error", () => {
   console.info("Writable event test", callbackCalled.toString()); // Writable event test false
 });
 writableStream.write("hello", "utf8", () => {
-});
-```
-
-```TypeScript
-class TestReadable extends stream.Readable {
-  constructor() {
-    super();
-  }
-
-  doRead(size: number) {
-    throw new Error("Simulated error");
-  }
-}
-
-let readableStream = new TestReadable();
-readableStream.push("test");
-readableStream.on("error", () => {
-  console.error("error event called"); // error event called
 });
 ```
 
@@ -525,25 +383,6 @@ let result = writableStream.setDefaultEncoding("utf8");
 console.info("Writable is result", result); // Writable is result true
 ```
 
-```TypeScript
-class TestDuplex extends stream.Duplex {
-  constructor() {
-    super();
-  }
-
-  doRead(size: number) {
-  }
-
-  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
-    callback();
-  }
-}
-
-let duplexStream = new TestDuplex();
-let result = duplexStream.setDefaultEncoding("utf8");
-console.info("duplexStream is result", result); // duplexStream is result true
-```
-
 ## uncork
 
 ```TypeScript
@@ -586,30 +425,6 @@ writableStream.end();
 writableStream.on("finish", () => {
   console.info("all Data is End"); // all Data is End
 });
-```
-
-```TypeScript
-let dataWritten = "";
-class TestDuplex extends stream.Duplex {
-  constructor() {
-    super();
-  }
-
-  doRead(size: number) {
-  }
-
-  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
-    dataWritten += chunk;
-    callback();
-  }
-}
-
-let duplexStream = new TestDuplex();
-duplexStream.cork();
-duplexStream.write("a");
-duplexStream.write("b");
-duplexStream.uncork();
-console.info("Duplex test uncork", dataWritten); // Duplex test uncork ab
 ```
 
 ## write
@@ -664,26 +479,6 @@ class TestWritable extends stream.Writable {
 
 let writableStream = new TestWritable();
 writableStream.write("test", "utf8");
-```
-
-```TypeScript
-class TestDuplex extends stream.Duplex {
-  constructor() {
-    super();
-  }
-
-  doRead(size: number) {
-  }
-
-  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
-    console.info("duplexStream chunk is", chunk); // duplexStream chunk is test
-    callback();
-  }
-}
-
-let duplexStream = new TestDuplex();
-let result = duplexStream.write("test", "utf8");
-console.info("duplexStream result", result); // duplexStream result true
 ```
 
 ## writable

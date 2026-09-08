@@ -135,7 +135,7 @@ bindDialogTarget(token: rpc.RemoteObject, deathCallback: Callback<void>): Promis
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| token | rpc.RemoteObject | 是 | 目标窗口token值。 |
+| token | [rpc.RemoteObject](../../apis-ipc-kit/arkts-apis/arkts-ipc-rpc-remoteobject-c.md) | 是 | 目标窗口token值。 |
 | deathCallback | [Callback](arkts-arkui-window-callback-i.md)&lt;void&gt; | 是 | 目标窗口销毁监听。 |
 
 **返回值：**
@@ -223,7 +223,7 @@ bindDialogTarget(token: rpc.RemoteObject, deathCallback: Callback<void>, callbac
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| token | rpc.RemoteObject | 是 | 目标窗口token值。 |
+| token | [rpc.RemoteObject](../../apis-ipc-kit/arkts-apis/arkts-ipc-rpc-remoteobject-c.md) | 是 | 目标窗口token值。 |
 | deathCallback | [Callback](arkts-arkui-window-callback-i.md)&lt;void&gt; | 是 | 目标窗口销毁监听。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
 
@@ -308,7 +308,7 @@ bindDialogTarget(requestInfo: dialogRequest.RequestInfo, deathCallback: Callback
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| requestInfo | dialogRequest.RequestInfo | 是 | 目标窗口RequestInfo值。 |
+| requestInfo | [dialogRequest.RequestInfo](../../apis-ability-kit/arkts-apis/arkts-ability-dialogrequest-requestinfo-i.md) | 是 | 目标窗口RequestInfo值。 |
 | deathCallback | [Callback](arkts-arkui-window-callback-i.md)&lt;void&gt; | 是 | 目标窗口销毁监听。 |
 
 **返回值：**
@@ -384,7 +384,7 @@ bindDialogTarget(requestInfo: dialogRequest.RequestInfo, deathCallback: Callback
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| requestInfo | dialogRequest.RequestInfo | 是 | 目标窗口RequestInfo值。 |
+| requestInfo | [dialogRequest.RequestInfo](../../apis-ability-kit/arkts-apis/arkts-ability-dialogrequest-requestinfo-i.md) | 是 | 目标窗口RequestInfo值。 |
 | deathCallback | [Callback](arkts-arkui-window-callback-i.md)&lt;void&gt; | 是 | 目标窗口销毁监听。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
 
@@ -1562,7 +1562,7 @@ rotate(rotateOptions: RotateOptions): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| rotateOptions | RotateOptions | 是 | 旋转参数。 |
+| rotateOptions | [RotateOptions](../arkts-components/arkts-arkui-rotateoptions-i.md) | 是 | 旋转参数。 |
 
 **错误码：**
 
@@ -1608,7 +1608,7 @@ scale(scaleOptions: ScaleOptions): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| scaleOptions | ScaleOptions | 是 | 缩放参数。 |
+| scaleOptions | [ScaleOptions](../arkts-components/arkts-arkui-scaleoptions-i.md) | 是 | 缩放参数。 |
 
 **错误码：**
 
@@ -1697,7 +1697,7 @@ setBackdropBlurStyle(blurStyle: BlurStyle): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| blurStyle | BlurStyle | 是 | 表示窗口背景模糊类型。 |
+| blurStyle | [BlurStyle](../arkts-components/arkts-arkui-blurstyle-e.md) | 是 | 表示窗口背景模糊类型。 |
 
 **错误码：**
 
@@ -1837,34 +1837,6 @@ try {
 } catch (exception) {
   console.error(`Failed to set default density enabled. Cause code: ${exception.code}, message: ${exception.message}`);
 }
-```
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { window } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit'
-
-export default class EntryAbility extends UIAbility {
-  // ...
-
-  onWindowStageCreate(windowStage: window.WindowStage) {
-      windowStage.loadContent("pages/page2", (err: BusinessError) => {
-        let errCode: number = err.code;
-        if (errCode) {
-          console.error(`Failed to load the content. Cause code: ${err.code}, message: ${err.message}`);
-          return;
-        }
-        console.info('Succeeded in loading the content.');
-      try {
-        windowStage.setDefaultDensityEnabled(true);
-        console.info('Succeeded in setting default density enabled.');
-      } catch (exception) {
-        console.error(`Failed to set default density enabled. Cause code: ${exception.code}, message: ${exception.message}`);
-      }
-    });
-  }
-};
 ```
 
 ## setForbidSplitMove
@@ -2715,7 +2687,7 @@ setWindowMode(mode: WindowMode): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mode | WindowMode | 是 | 窗口模式。 |
+| mode | [WindowMode](arkts-arkui-window-windowmode-e-sys.md) | 是 | 窗口模式。 |
 
 **返回值：**
 
@@ -2785,7 +2757,7 @@ setWindowMode(mode: WindowMode, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mode | WindowMode | 是 | 窗口模式。 |
+| mode | [WindowMode](arkts-arkui-window-windowmode-e-sys.md) | 是 | 窗口模式。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
 
 **错误码：**
@@ -2854,7 +2826,7 @@ setWindowType(type: WindowType): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | WindowType | 是 | 窗口类型。 |
+| type | [WindowType](arkts-arkui-window-windowtype-e.md) | 是 | 窗口类型。 |
 
 **返回值：**
 
@@ -2896,7 +2868,7 @@ setWindowType(type: WindowType, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | WindowType | 是 | 窗口类型。 |
+| type | [WindowType](arkts-arkui-window-windowtype-e.md) | 是 | 窗口类型。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
 
 **示例**
@@ -3019,7 +2991,7 @@ translate(translateOptions: TranslateOptions): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| translateOptions | TranslateOptions | 是 | 平移参数，单位为px。 |
+| translateOptions | [TranslateOptions](../arkts-components/arkts-arkui-translateoptions-i.md) | 是 | 平移参数，单位为px。 |
 
 **错误码：**
 

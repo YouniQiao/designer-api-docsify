@@ -36,7 +36,7 @@ function getApplicationInfoSync(bundleName: string, applicationFlags: number, us
 
 | 类型 | 说明 |
 | --- | --- |
-| ApplicationInfo | 返回ApplicationInfo对象。 |
+| [ApplicationInfo](arkts-ability-bundlemanager-applicationinfo-t.md) | 返回ApplicationInfo对象。 |
 
 **错误码：**
 
@@ -99,7 +99,7 @@ function getApplicationInfoSync(bundleName: string, applicationFlags: number) : 
 
 | 类型 | 说明 |
 | --- | --- |
-| ApplicationInfo | 返回ApplicationInfo对象。 |
+| [ApplicationInfo](arkts-ability-bundlemanager-applicationinfo-t.md) | 返回ApplicationInfo对象。 |
 
 **错误码：**
 

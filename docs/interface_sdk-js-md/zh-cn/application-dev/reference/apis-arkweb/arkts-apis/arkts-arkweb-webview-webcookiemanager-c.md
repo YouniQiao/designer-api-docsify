@@ -44,36 +44,6 @@ static clearAllCookies(): Promise<void>
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. |
 
-**示例**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('clearAllCookies')
-        .onClick(() => {
-          webview.WebCookieManager.clearAllCookies()
-            .then(() => {
-              console.info("clearAllCookies success!");
-            })
-            .catch((error: BusinessError) => {
-              console.error("error: " + error);
-            });
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
 ## clearAllCookies
 
 ```TypeScript
@@ -100,38 +70,6 @@ static clearAllCookies(callback: AsyncCallback<void>): void
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.  2. Incorrect parameter types. |
 
-**示例**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('clearAllCookies')
-        .onClick(() => {
-          try {
-            webview.WebCookieManager.clearAllCookies((error) => {
-              if (error) {
-                console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-              }
-            })
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
 ## clearAllCookiesSync
 
 ```TypeScript
@@ -151,29 +89,6 @@ static clearAllCookiesSync(incognito?: boolean): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | incognito | boolean | 否 | true表示清除隐私模式下Webview的所有内存cookies，false表示清除正常非隐私模式下的持久化cookies。默认值：false。传入undefined或null时不清除cookies。 |
-
-**示例**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('clearAllCookiesSync')
-        .onClick(() => {
-          webview.WebCookieManager.clearAllCookiesSync();
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
 
 ## clearSessionCookie
 
@@ -201,40 +116,6 @@ static clearSessionCookie(): Promise<void>
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. |
 
-**示例**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('clearSessionCookie')
-        .onClick(() => {
-          try {
-            webview.WebCookieManager.clearSessionCookie()
-              .then(() => {
-                console.info("clearSessionCookie success!");
-              })
-              .catch((error: BusinessError) => {
-                console.error("error: " + error);
-              });
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
 ## clearSessionCookie
 
 ```TypeScript
@@ -261,38 +142,6 @@ static clearSessionCookie(callback: AsyncCallback<void>): void
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.  2. Incorrect parameter types. |
 
-**示例**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('clearSessionCookie')
-        .onClick(() => {
-          try {
-            webview.WebCookieManager.clearSessionCookie((error) => {
-              if (error) {
-                console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-              }
-            })
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
 ## clearSessionCookieSync
 
 ```TypeScript
@@ -306,29 +155,6 @@ static clearSessionCookieSync(): void
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
-
-**示例**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('clearSessionCookieSync')
-        .onClick(() => {
-          webview.WebCookieManager.clearSessionCookieSync();
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
 
 ## configCookie
 
@@ -382,40 +208,6 @@ static configCookie(url: string, value: string): Promise<void>
 | [17100002](../errorcode-webview.md#17100002-url格式错误) | URL error. No valid cookie found for the specified URL. |
 | [17100005](../errorcode-webview.md#17100005-cookie-value格式错误) | The provided cookie value is invalid. It must follow the format specified in RFC 6265. |
 
-**示例**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('configCookie')
-        .onClick(() => {
-          try {
-            webview.WebCookieManager.configCookie('https://www.example.com', 'a=b')
-              .then(() => {
-                console.info('configCookie success!');
-              })
-              .catch((error: BusinessError) => {
-                console.info('error: ' + JSON.stringify(error));
-              })
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
 ## configCookie
 
 ```TypeScript
@@ -466,40 +258,6 @@ static configCookie(url: string, value: string, incognito: boolean, includeHttpO
 | [17100002](../errorcode-webview.md#17100002-url格式错误) | URL error. No valid cookie found for the specified URL. |
 | [17100005](../errorcode-webview.md#17100005-cookie-value格式错误) | The provided cookie value is invalid. It must follow the format specified in RFC 6265. |
 
-**示例**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('configCookie')
-        .onClick(() => {
-          try {
-            webview.WebCookieManager.configCookie('https://www.example.com', 'a=b', false, false)
-              .then(() => {
-                console.info('configCookie success!');
-              })
-              .catch((error: BusinessError) => {
-                console.info('error: ' + JSON.stringify(error));
-              })
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
 ## configCookie
 
 ```TypeScript
@@ -546,38 +304,6 @@ static configCookie(url: string, value: string, callback: AsyncCallback<void>): 
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.  2. Incorrect parameter types. |
 | [17100002](../errorcode-webview.md#17100002-url格式错误) | URL error. No valid cookie found for the specified URL. |
 | [17100005](../errorcode-webview.md#17100005-cookie-value格式错误) | The provided cookie value is invalid. It must follow the format specified in RFC 6265. |
-
-**示例**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('configCookie')
-        .onClick(() => {
-          try {
-            webview.WebCookieManager.configCookie('https://www.example.com', "a=b", (error) => {
-              if (error) {
-                console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-              }
-            })
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
 
 ## configCookieSync
 
@@ -626,35 +352,6 @@ static configCookieSync(url: string, value: string, incognito?: boolean): void
 | [17100002](../errorcode-webview.md#17100002-url格式错误) | URL error. No valid cookie found for the specified URL. |
 | [17100005](../errorcode-webview.md#17100005-cookie-value格式错误) | The provided cookie value is invalid. It must follow the format specified in RFC 6265. |
 
-**示例**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('configCookieSync')
-        .onClick(() => {
-          try {
-            // configCookieSync每次仅支持设置单个cookie值。
-            webview.WebCookieManager.configCookieSync('https://www.example.com', 'a=b');
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
 ## configCookieSync
 
 ```TypeScript
@@ -699,35 +396,6 @@ static configCookieSync(url: string, value: string, incognito: boolean, includeH
 | [17100002](../errorcode-webview.md#17100002-url格式错误) | URL error. No valid cookie found for the specified URL. |
 | [17100005](../errorcode-webview.md#17100005-cookie-value格式错误) | The provided cookie value is invalid. It must follow the format specified in RFC 6265. |
 
-**示例**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('configCookieSync')
-        .onClick(() => {
-          try {
-            // 仅支持设置单个cookie值。
-            webview.WebCookieManager.configCookieSync('https://www.example.com', 'a=b', false, false);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
 ## deleteEntireCookie
 
 ```TypeScript
@@ -744,29 +412,6 @@ static deleteEntireCookie(): void
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
-**示例**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('deleteEntireCookie')
-        .onClick(() => {
-          webview.WebCookieManager.deleteEntireCookie();
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
 ## deleteSessionCookie
 
 ```TypeScript
@@ -782,29 +427,6 @@ static deleteSessionCookie(): void
 **替代接口：** [clearSessionCookieSync](#clearsessioncookiesync)
 
 **系统能力：** SystemCapability.Web.Webview.Core
-
-**示例**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('deleteSessionCookie')
-        .onClick(() => {
-          webview.WebCookieManager.deleteSessionCookie();
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
 
 ## existCookie
 
@@ -832,30 +454,6 @@ static existCookie(incognito?: boolean): boolean
 | --- | --- |
 | boolean | true表示存在cookie，false表示不存在cookie。 |
 
-**示例**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('existCookie')
-        .onClick(() => {
-          let result = webview.WebCookieManager.existCookie();
-          console.info("result: " + result);
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
 ## fetchAllCookies
 
 ```TypeScript
@@ -879,47 +477,6 @@ static fetchAllCookies(incognito: boolean):  Promise<Array<WebHttpCookie>>
 | 类型 | 说明 |
 | --- | --- |
 | Promise&lt;Array&lt;[WebHttpCookie](arkts-arkweb-webview-webhttpcookie-i.md)&gt;&gt; | Promise对象，用于获取所有cookie及其对应的字段值。 |
-
-**示例**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController()
-
-  build() {
-    Row() {
-      Column() {
-        Button('Config Cookie')
-        .onClick(() => {
-          try {
-            webview.WebCookieManager.configCookieSync('https://www.example.com', 'a=b');
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-
-        Button('Get All Cookies')
-        .onClick(() => {
-          webview.WebCookieManager.fetchAllCookies(false).then((cookies) => {
-            for (let i = 0; i < cookies.length; i++) {
-              console.info('fetchAllCookies cookie[' + i + '].name = ' + cookies[i].name);
-              console.info('fetchAllCookies cookie[' + i + '].value = ' + cookies[i].value);
-            }
-          })
-        })
-
-        Web({ src: 'https://www.example.com', controller: this.controller})
-      }
-    }
-  }
-}
-```
 
 ## fetchCookie
 
@@ -954,40 +511,6 @@ static fetchCookie(url: string): Promise<string>
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.  2. Incorrect parameter types. |
 | [17100002](../errorcode-webview.md#17100002-url格式错误) | URL error. No valid cookie found for the specified URL. |
 
-**示例**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('fetchCookie')
-        .onClick(() => {
-          try {
-            webview.WebCookieManager.fetchCookie('https://www.example.com')
-              .then(cookie => {
-                console.info("fetchCookie cookie = " + cookie);
-              })
-              .catch((error: BusinessError) => {
-                console.error(`ErrorCode: ${error.code},  Message: ${error.message}`);
-              })
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
 ## fetchCookie
 
 ```TypeScript
@@ -1019,40 +542,6 @@ static fetchCookie(url: string, incognito: boolean): Promise<string>
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.  2. Incorrect parameter types. |
 | [17100002](../errorcode-webview.md#17100002-url格式错误) | URL error. No valid cookie found for the specified URL. |
-
-**示例**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('fetchCookie')
-        .onClick(() => {
-          try {
-            webview.WebCookieManager.fetchCookie('https://www.example.com', false)
-              .then(cookie => {
-                console.info("fetchCookie cookie = " + cookie);
-              })
-              .catch((error: BusinessError) => {
-                console.error(`ErrorCode: ${error.code},  Message: ${error.message}`);
-              })
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
 
 ## fetchCookie
 
@@ -1090,40 +579,6 @@ static fetchCookie(url: string, incognito: boolean, includePartitionedCookies: b
 | --- | --- |
 | [17100002](../errorcode-webview.md#17100002-url格式错误) | URL error. No valid cookie found for the specified URL. |
 
-**示例**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('fetchCookie')
-        .onClick(() => {
-          try {
-            webview.WebCookieManager.fetchCookie('https://www.example.com', false, true)
-              .then(cookie => {
-                console.info("fetchCookie cookie = " + cookie);
-              })
-              .catch((error: BusinessError) => {
-                console.error(`ErrorCode: ${error.code},  Message: ${error.message}`);
-              })
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
 ## fetchCookie
 
 ```TypeScript
@@ -1151,42 +606,6 @@ static fetchCookie(url: string, callback: AsyncCallback<string>): void
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.  2. Incorrect parameter types. |
 | [17100002](../errorcode-webview.md#17100002-url格式错误) | URL error. No valid cookie found for the specified URL. |
-
-**示例**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('fetchCookie')
-        .onClick(() => {
-          try {
-            webview.WebCookieManager.fetchCookie('https://www.example.com', (error, cookie) => {
-              if (error) {
-                console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-                return;
-              }
-              if (cookie) {
-                console.info('fetchCookie cookie = ' + cookie);
-              }
-            })
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
 
 ## fetchCookieSync
 
@@ -1230,35 +649,6 @@ static fetchCookieSync(url: string, incognito?: boolean): string
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.  2. Incorrect parameter types. |
 | [17100002](../errorcode-webview.md#17100002-url格式错误) | URL error. No valid cookie found for the specified URL. |
 
-**示例**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('fetchCookieSync')
-        .onClick(() => {
-          try {
-            let value = webview.WebCookieManager.fetchCookieSync('https://www.example.com');
-            console.info("fetchCookieSync cookie = " + value);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
 ## fetchCookieSync
 
 ```TypeScript
@@ -1301,35 +691,6 @@ static fetchCookieSync(url: string, incognito?: boolean, includePartitionedCooki
 | --- | --- |
 | [17100002](../errorcode-webview.md#17100002-url格式错误) | URL error. No valid cookie found for the specified URL. |
 
-**示例**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('fetchCookieSync')
-        .onClick(() => {
-          try {
-            let value = webview.WebCookieManager.fetchCookieSync('https://www.example.com', false, true);
-            console.info("fetchCookieSync cookie = " + value);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
 ## getCookie
 
 ```TypeScript
@@ -1365,35 +726,6 @@ static getCookie(url: string): string
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.  2. Incorrect parameter types. 3.Parameter verification failed. |
 | [17100002](../errorcode-webview.md#17100002-url格式错误) | URL error. No valid cookie found for the specified URL. |
 
-**示例**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('getCookie')
-        .onClick(() => {
-          try {
-            let value = webview.WebCookieManager.getCookie('https://www.example.com');
-            console.info("value: " + value);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
 ## isCookieAllowed
 
 ```TypeScript
@@ -1414,30 +746,6 @@ static isCookieAllowed(): boolean
 | --- | --- |
 | boolean | 是否拥有发送和接收cookie的权限。 |
 
-**示例**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('isCookieAllowed')
-        .onClick(() => {
-          let result = webview.WebCookieManager.isCookieAllowed();
-          console.info("result: " + result);
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
 ## isThirdPartyCookieAllowed
 
 ```TypeScript
@@ -1457,30 +765,6 @@ static isThirdPartyCookieAllowed(): boolean
 | 类型 | 说明 |
 | --- | --- |
 | boolean | 是否拥有发送和接收第三方cookie的权限。 |
-
-**示例**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('isThirdPartyCookieAllowed')
-        .onClick(() => {
-          let result = webview.WebCookieManager.isThirdPartyCookieAllowed();
-          console.info("result: " + result);
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
 
 ## putAcceptCookieEnabled
 
@@ -1508,34 +792,6 @@ static putAcceptCookieEnabled(accept: boolean): void
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.  2. Incorrect parameter types. 3.Parameter verification failed. |
 
-**示例**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('putAcceptCookieEnabled')
-        .onClick(() => {
-          try {
-            webview.WebCookieManager.putAcceptCookieEnabled(false);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
 ## putAcceptThirdPartyCookieEnabled
 
 ```TypeScript
@@ -1561,34 +817,6 @@ static putAcceptThirdPartyCookieEnabled(accept: boolean): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.  2. Incorrect parameter types. 3.Parameter verification failed. |
-
-**示例**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('putAcceptThirdPartyCookieEnabled')
-        .onClick(() => {
-          try {
-            webview.WebCookieManager.putAcceptThirdPartyCookieEnabled(false);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
 
 ## saveCookieAsync
 
@@ -1621,40 +849,6 @@ static saveCookieAsync(): Promise<void>
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.  2. Incorrect parameter types. 3.Parameter verification failed. |
 
-**示例**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('saveCookieAsync')
-        .onClick(() => {
-          try {
-            webview.WebCookieManager.saveCookieAsync()
-              .then(() => {
-                console.info("saveCookieAsync success!");
-              })
-              .catch((error: BusinessError) => {
-                console.error("error: " + error);
-              });
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
 ## saveCookieAsync
 
 ```TypeScript
@@ -1686,38 +880,6 @@ static saveCookieAsync(callback: AsyncCallback<void>): void
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.  2. Incorrect parameter types. 3.Parameter verification failed. |
 
-**示例**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('saveCookieAsync')
-        .onClick(() => {
-          try {
-            webview.WebCookieManager.saveCookieAsync((error) => {
-              if (error) {
-                console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-              }
-            })
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
 ## saveCookieSync
 
 ```TypeScript
@@ -1736,34 +898,6 @@ static saveCookieSync(): void
 **起始版本：** 15
 
 **系统能力：** SystemCapability.Web.Webview.Core
-
-**示例**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('saveCookieSync')
-        .onClick(() => {
-          try {
-            webview.WebCookieManager.saveCookieSync();
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
 
 ## setCookie
 
@@ -1796,34 +930,6 @@ static setCookie(url: string, value: string): void
 | [17100002](../errorcode-webview.md#17100002-url格式错误) | URL error. No valid cookie found for the specified URL. |
 | [17100005](../errorcode-webview.md#17100005-cookie-value格式错误) | The provided cookie value is invalid. It must follow the format specified in RFC 6265. |
 
-**示例**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('setCookie')
-        .onClick(() => {
-          try {
-            webview.WebCookieManager.setCookie('https://www.example.com', 'a=b');
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
 ## setLazyInitializeWebEngine
 
 ```TypeScript
@@ -1848,29 +954,3 @@ static setLazyInitializeWebEngine(lazy: boolean): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | lazy | boolean | 是 | Controls whether to delay the initialization of the web engine. |
-
-**示例**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-webview.WebCookieManager.setLazyInitializeWebEngine(true);
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  aboutToAppear(): void {
-    webview.WebCookieManager.configCookieSync('https://www.example.com', 'a=b');
-    webview.WebCookieManager.fetchCookieSync('https://www.example.com');
-  }
-
-  build() {
-    Column() {
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```

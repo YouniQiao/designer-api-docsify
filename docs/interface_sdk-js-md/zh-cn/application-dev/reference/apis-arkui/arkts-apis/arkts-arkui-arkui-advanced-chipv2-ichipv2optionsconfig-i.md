@@ -168,7 +168,7 @@ activatedBackgroundSystemMaterial?: uiMaterial.Material
 
 默认值：undefined，不应用材质样式。
 
-**类型：** uiMaterial.Material
+**类型：** [uiMaterial.Material](arkts-arkui-uimaterial-material-c.md)
 
 **起始版本：** 26.0.0
 
@@ -238,7 +238,7 @@ backgroundSystemMaterial?: uiMaterial.Material
 
 默认值：undefined，不应用材质样式。
 
-**类型：** uiMaterial.Material
+**类型：** [uiMaterial.Material](arkts-arkui-uimaterial-material-c.md)
 
 **起始版本：** 26.0.0
 
@@ -314,7 +314,7 @@ direction?: Direction
 
 值为undefined时，按默认值处理。
 
-**类型：** Direction
+**类型：** [Direction](arkts-arkui-direction-e.md)
 
 **起始版本：** 26.0.0
 
@@ -411,7 +411,7 @@ ChipV2组件文本与图标的最大字体缩放倍数。
 
 值为undefined时，按默认值处理。
 
-**类型：** number \| Resource
+**类型：** number \| [Resource](arkts-arkui-resource-t.md)
 
 **起始版本：** 26.0.0
 
@@ -437,7 +437,7 @@ ChipV2组件文本与图标的最小字体缩放倍数。
 
 值为undefined时，按默认值处理。
 
-**类型：** number \| Resource
+**类型：** number \| [Resource](arkts-arkui-resource-t.md)
 
 **起始版本：** 26.0.0
 

@@ -41,14 +41,3 @@ The default value is an empty dictionary object.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
-
-**Examples**
-
-```TypeScript
-let text = new unifiedDataChannel.Text();
-text.details = {
-  title: 'MyTitle',
-  content: 'This is content'
-};
-let unifiedData = new unifiedDataChannel.UnifiedData(text);
-```

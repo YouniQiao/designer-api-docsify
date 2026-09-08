@@ -48,7 +48,7 @@ bundleType: bundleManager.BundleType
 
 Type of the bundle running in the process.
 
-**Type:** bundleManager.BundleType
+**Type:** [bundleManager.BundleType](arkts-ability-bundlemanager-bundletype-e.md)
 
 **Since:** 12
 
@@ -121,7 +121,7 @@ state: appManager.ProcessState
 
 Running status of the process.
 
-**Type:** appManager.ProcessState
+**Type:** [appManager.ProcessState](arkts-ability-appmanager-processstate-e.md)
 
 **Since:** 10
 

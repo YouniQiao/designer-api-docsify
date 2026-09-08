@@ -83,7 +83,7 @@ fontSize?: LengthMetrics
 
 单位：[fp](arkts-arkui-length-t.md) 
 
-**类型：** LengthMetrics
+**类型：** [LengthMetrics](arkts-arkui-lengthmetrics-t.md)
 
 **起始版本：** 12
 
@@ -103,7 +103,7 @@ fontStyle?: FontStyle
 
 默认值：FontStyle.Normal
 
-**类型：** FontStyle
+**类型：** [FontStyle](arkts-arkui-fontstyle-e.md)
 
 **起始版本：** 12
 
@@ -125,7 +125,7 @@ fontVariations?: Array<FontVariation>
 
 fontVariations属性的优先级高于fontWeight。
 
-**类型：** Array&lt;FontVariation&gt;
+**类型：** Array&lt;[FontVariation](arkts-arkui-fontvariation-t.md)&gt;
 
 **起始版本：** 26.0.0
 
@@ -147,7 +147,7 @@ number类型取值[100, 900]，取值间隔为100，默认为400，取值越大
 
 默认值：FontWeight.Normal
 
-**类型：** number \| FontWeight \| string
+**类型：** number \| [FontWeight](arkts-arkui-fontweight-e.md) \| string
 
 **起始版本：** 12
 
@@ -209,7 +209,7 @@ strokeWidth?: LengthMetrics
 
 默认值为0。
 
-**类型：** LengthMetrics
+**类型：** [LengthMetrics](arkts-arkui-lengthmetrics-t.md)
 
 **起始版本：** 20
 

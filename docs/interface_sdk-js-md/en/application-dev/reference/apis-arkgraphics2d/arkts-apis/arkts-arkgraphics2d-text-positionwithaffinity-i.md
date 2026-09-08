@@ -20,7 +20,7 @@ affinity: Affinity
 
 Affinity of the position.
 
-**Type:** Affinity
+**Type:** [Affinity](arkts-arkgraphics2d-text-affinity-e.md)
 
 **Since:** 12
 

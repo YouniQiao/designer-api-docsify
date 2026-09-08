@@ -217,31 +217,6 @@ const eventClassifyInfo: update.EventClassifyInfo = {
   eventClassify: update.EventClassify.TASK, // 任务事件类型
   extraInfo: ''
 };
-try {
-  // 定义升级信息对象
-  const upgradeInfo: update.UpgradeInfo = {
-    upgradeApp: 'com.ohos.ota.updateclient',  // 调用方包名
-    businessType: {
-      vendor: update.BusinessVendor.PUBLIC, // 供应商类型
-      subType: update.BusinessSubType.FIRMWARE // 升级类型为固件
-    }
-  };
-  // 获取在线升级对象
-  let onlineUpdater = update.getOnlineUpdater(upgradeInfo);
-  // 取消事件监听
-  onlineUpdater.off(eventClassifyInfo, (eventInfo: update.EventInfo) => {
-    console.info(`onlineUpdater off ${JSON.stringify(eventInfo)}`);
-  });
-} catch (error) {
-  console.error(`Fail to get onlineUpdater error: ${error}`);
-}
-```
-
-```TypeScript
-const eventClassifyInfo: update.EventClassifyInfo = {
-  eventClassify: update.EventClassify.TASK, // 任务事件类型
-  extraInfo: ''
-};
 // 定义任务更新回调函数，用于处理升级任务事件
 let onTaskUpdate: update.UpgradeTaskCallback = (eventInfo: update.EventInfo) => {
   console.info(`on eventInfo id `, eventInfo.eventId);
@@ -302,31 +277,6 @@ on(eventClassifyInfo: EventClassifyInfo, taskCallback: UpgradeTaskCallback): voi
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
 **示例**
-
-```TypeScript
-const eventClassifyInfo: update.EventClassifyInfo = {
-  eventClassify: update.EventClassify.TASK, // 任务事件类型
-  extraInfo: '' // 额外信息，此处为空表示无额外信息
-};
-try {
-  // 定义升级信息对象
-  const upgradeInfo: update.UpgradeInfo = {
-    upgradeApp: 'com.ohos.ota.updateclient',  // 调用方包名
-    businessType: {
-      vendor: update.BusinessVendor.PUBLIC, // 供应商类型
-      subType: update.BusinessSubType.FIRMWARE // 升级类型为固件
-    }
-  };
-  // 获取在线升级对象
-  let onlineUpdater = update.getOnlineUpdater(upgradeInfo);
-  // 注册事件监听，实时监控升级状态
-  onlineUpdater.on(eventClassifyInfo, (eventInfo: update.EventInfo) => {
-    console.info(`updater on ${JSON.stringify(eventInfo)}`);
-  });
-} catch (error) {
-  console.error(`Fail to get onlineUpdater error: ${error}`);
-}
-```
 
 ```TypeScript
 const eventClassifyInfo: update.EventClassifyInfo = {

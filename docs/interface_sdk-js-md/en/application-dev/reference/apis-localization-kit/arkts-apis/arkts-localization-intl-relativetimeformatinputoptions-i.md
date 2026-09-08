@@ -68,9 +68,9 @@ For details about their display effects, see [Table 23](../../../reference/apis-
 style?: string
 ```
 
-Length of an internationalized message. The value can be **number**, **short**, or **narrow**.
+Length of an internationalized message. The value can be **long**, **short**, or **narrow**.
 
-The default value is **number**.
+The default value is **long**.
 
 **Type:** string
 

@@ -24,10 +24,10 @@
 **表3：enableArrow为true且placement未设置或者值为非法值的菜单默认位置**  
 | 接口 | 菜单默认位置 |  
 |------|-------------|  
-| [bindMenu](arkts-arkui-commonmethod-c.md#bindmenu) | Placement.BottomLeft |
-| [bindMenu&lt;sup&gt;11+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#bindmenu) | Placement.BottomLeft |
+| [bindMenu](arkts-arkui-commonmethod-c.md#bindmenu) | [Placement.BottomLeft](../arkts-apis/arkts-arkui-placement-e.md) |
+| [bindMenu&lt;sup&gt;11+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#bindmenu) | [Placement.BottomLeft](../arkts-apis/arkts-arkui-placement-e.md) |
 | [bindContextMenu&lt;sup&gt;8+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#bindcontextmenu) | Placement.Top |
-| [bindContextMenu&lt;sup&gt;12+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#bindcontextmenu) | Placement.BottomLeft |
+| [bindContextMenu&lt;sup&gt;12+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#bindcontextmenu) | [Placement.BottomLeft](../arkts-apis/arkts-arkui-placement-e.md) |
 | [bindContextMenuWithResponse&lt;sup&gt;23+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#bindcontextmenuwithresponse) | Placement.Top |
 
 **起始版本：** 10
@@ -539,7 +539,7 @@ maxHeight?: LengthMetrics
 
 如果菜单所有选项的实际高度之和小于设定的高度，菜单的高度按实际高度显示。
 
-**类型：** LengthMetrics
+**类型：** [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md)
 
 **起始版本：** 26.0.0
 
@@ -561,7 +561,7 @@ minKeyboardAvoidDistance?: LengthMetrics
 
 未设置、设置为负数或undefined时，按照8vp处理。仅在keyboardAvoidMode设置为避让软键盘时生效。
 
-**类型：** LengthMetrics
+**类型：** [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md)
 
 **起始版本：** 23
 
@@ -971,7 +971,7 @@ targetSpace?: LengthMetrics
 - anchorPosition的优先级要高于targetSpace。  
 - 不支持设置百分比。
 
-**类型：** LengthMetrics
+**类型：** [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md)
 
 **起始版本：** 26.0.0
 

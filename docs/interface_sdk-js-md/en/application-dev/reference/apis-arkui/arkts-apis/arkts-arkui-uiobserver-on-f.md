@@ -28,7 +28,7 @@ Subscribes to status changes of the **NavDestination** component. Compared with 
 | --- | --- | --- | --- |
 | type | 'navDestinationUpdate' | Yes | Event type. Set to **'navDestinationUpdate'** for **NavDestination** component status change events. |
 | options | { navigationId: ResourceStr } | Yes | ID of the target **Navigation** component. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;NavDestinationInfo&gt; | Yes | Callback used to return the result. It provides the current state of the **NavDestination** component. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[NavDestinationInfo](arkts-arkui-uiobserver-navdestinationinfo-i.md)&gt; | Yes | Callback used to return the result. It provides the current state of the **NavDestination** component. |
 
 **Examples**
 
@@ -108,7 +108,7 @@ Subscribes to status changes of the **NavDestination** component.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'navDestinationUpdate' | Yes | Event type. Set to **'navDestinationUpdate'** for **NavDestination** component status change events. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;NavDestinationInfo&gt; | Yes | Callback used to return the result. It provides the current state of the **NavDestination** component. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[NavDestinationInfo](arkts-arkui-uiobserver-navdestinationinfo-i.md)&gt; | Yes | Callback used to return the result. It provides the current state of the **NavDestination** component. |
 
 **Examples**
 
@@ -187,7 +187,7 @@ Registers a callback function to be called when the scroll event start or stop.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'scrollEvent' | Yes | The type of event to listen for. Must be 'scrollEvent'. |
-| options | ObserverOptions | Yes | The options object. |
+| options | [ObserverOptions](arkts-arkui-uiobserver-observeroptions-i.md) | Yes | The options object. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ScrollEventInfo](arkts-arkui-uiobserver-scrolleventinfo-i.md)&gt; | Yes | The callback function to be called when the scroll event start or stop. |
 
 
@@ -237,7 +237,7 @@ Subscribes to state changes of the page during routing.
 | --- | --- | --- | --- |
 | type | 'routerPageUpdate' | Yes | Event type. The value is fixed at **'routerPageUpdate'**, which indicates the state change event of the page during routing. |
 | context | [UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md) \| UIContext | Yes | Context information, which is used to specify the target page scope. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;RouterPageInfo&gt; | Yes | Callback used to return the result. If **pageInfo** is passed, the current page state is returned. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[RouterPageInfo](arkts-arkui-uiobserver-routerpageinfo-c.md)&gt; | Yes | Callback used to return the result. If **pageInfo** is passed, the current page state is returned. |
 
 **Examples**
 
@@ -447,7 +447,7 @@ Subscribes to **TabContent** page switching events for the specified **Tabs** co
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'tabContentUpdate' | Yes | Event type. Set to **'tabContentUpdate'** for **TabContent** page switching events. |
-| options | ObserverOptions | Yes | ID of the target **Tabs** component. |
+| options | [ObserverOptions](arkts-arkui-uiobserver-observeroptions-i.md) | Yes | ID of the target **Tabs** component. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[TabContentInfo](arkts-arkui-uiobserver-tabcontentinfo-i.md)&gt; | Yes | Callback used to return the result. It provides information about **TabContent** switch events through **TabContentInfo**. |
 
 **Examples**

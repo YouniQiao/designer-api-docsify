@@ -67,15 +67,6 @@ try {
 }
 ```
 
-```TypeScript
-try {
-    let hf = hfp.createHfpHfProfile();
-    hf.connect('XX:XX:XX:XX:XX:XX');
-} catch (err) {
-    console.error(`errCode: ${err.code}, errMessage: ${err.message}`);
-}
-```
-
 ## disconnect
 
 ```TypeScript
@@ -122,14 +113,5 @@ try {
     hfpAg.disconnect('XX:XX:XX:XX:XX:XX');
 } catch (err) {
     console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-}
-```
-
-```TypeScript
-try {
-    let hf = hfp.createHfpHfProfile();
-    hf.disconnect('XX:XX:XX:XX:XX:XX');
-} catch (err) {
-    console.error(`errCode: ${err.code}, errMessage: ${err.message}`);
 }
 ```

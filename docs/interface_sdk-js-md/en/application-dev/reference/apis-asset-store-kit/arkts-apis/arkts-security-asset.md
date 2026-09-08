@@ -1,4 +1,4 @@
-# @ohos.security.asset
+# @ohos.security.asset(Asset Store Service)
 
 This module provides the capabilities for life cycle management of sensitive user data (Asset) such as passwords and tokens, including adding, removing, updating, and querying.
 

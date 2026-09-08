@@ -43,13 +43,3 @@ Opacity of the window during the transition animation. If this parameter is set 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Window.SessionManager
-
-**Examples**
-
-```TypeScript
-try {
-  windowClass.opacity(0.5);
-} catch (exception) {
-  console.error(`Failed to opacity. Cause code: ${exception.code}, message: ${exception.message}`);
-}
-```

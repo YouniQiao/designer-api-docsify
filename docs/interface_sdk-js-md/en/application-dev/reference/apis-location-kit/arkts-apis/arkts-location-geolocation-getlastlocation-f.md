@@ -28,7 +28,7 @@ Obtain last known location
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Location&gt; | Yes | Indicates the callback for reporting the location result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Location](arkts-location-geolocation-location-i.md)&gt; | Yes | Indicates the callback for reporting the location result. |
 
 **Examples**
 
@@ -67,7 +67,7 @@ Obtain last known location
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Location&gt; | The promise returned by the function. |
+| Promise&lt;[Location](arkts-location-geolocation-location-i.md)&gt; | The promise returned by the function. |
 
 **Examples**
 

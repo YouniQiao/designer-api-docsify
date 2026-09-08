@@ -24,7 +24,7 @@ dateTime: LocalDateTime
 
 Reminder time.
 
-**Type:** LocalDateTime
+**Type:** [LocalDateTime](arkts-backgroundtasks-reminderagentmanager-localdatetime-i.md)
 
 **Since:** 9
 
@@ -52,7 +52,7 @@ endDateTime?: LocalDateTime
 
 End time of the reminder.
 
-**Type:** LocalDateTime
+**Type:** [LocalDateTime](arkts-backgroundtasks-reminderagentmanager-localdatetime-i.md)
 
 **Since:** 12
 

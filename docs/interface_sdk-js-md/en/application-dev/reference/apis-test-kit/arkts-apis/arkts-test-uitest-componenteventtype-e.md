@@ -48,7 +48,7 @@ Component clicked event.
 COMPONENT_LONG_CLICKED = 2
 ```
 
-Component number-clicked event.
+Component long-clicked event.
 
 **Since:** 22
 

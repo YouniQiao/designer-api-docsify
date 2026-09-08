@@ -1439,7 +1439,7 @@ setCurrentSingle(single: Single): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| single | Single | 是 | 当前单曲。 |
+| single | [Single](arkts-avsession-avmusictemplate-single-i.md) | 是 | 当前单曲。 |
 
 **返回值：**
 
@@ -1474,7 +1474,7 @@ setCustomElements(actionType: ActionType, customType: CustomType,
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| actionType | ActionType | 是 | 操作类型 |
+| actionType | [ActionType](arkts-avsession-avmusictemplate-actiontype-t.md) | 是 | 操作类型 |
 | customType | [CustomType](arkts-avsession-avmusictemplate-customtype-t.md) | 是 | 自定义数据的类型 |
 | customElement | [CustomElement](arkts-avsession-avmusictemplate-customelement-i.md) | 是 | 自定义数据 |
 
@@ -1750,7 +1750,7 @@ setUserInfo(userInfo: UserInfo): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| userInfo | UserInfo | 是 | 用户信息。 |
+| userInfo | [UserInfo](arkts-avsession-avmusictemplate-userinfo-i.md) | 是 | 用户信息。 |
 
 **返回值：**
 

@@ -20,7 +20,7 @@ bearerTypes: Array<NetBearType>
 
 Network type. The array contains only one network type.
 
-**Type:** Array&lt;NetBearType&gt;
+**Type:** Array&lt;[NetBearType](arkts-network-connection-netbeartype-e.md)&gt;
 
 **Since:** 8
 

@@ -48,47 +48,6 @@ Adds an application account implicitly based on the specified authentication typ
 | options | { [key: string]: any } | Yes | Options for the authentication. |
 | callback | [AuthenticatorCallback](arkts-basicservices-appaccount-authenticatorcallback-i.md) | Yes | Authenticator callback used to return the result. |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { Want, common } from '@kit.AbilityKit';
-
-@Entry
-@Component
-struct Index {
-  context = this.getUIContext().getHostContext() as common.UIAbilityContext; // UIAbilityContext
-
-  onResultCallback(code: number, result: Record<string, Object>): void {
-    console.info('resultCode: ' + code);
-    console.info('result: ' + JSON.stringify(result));
-  }
-
-  onRequestRedirectedCallback(request: Want): void {
-    let wantInfo: Want = {
-      deviceId: '',
-      bundleName: 'com.example.accountjsdemo',
-      action: 'ohos.want.action.viewData',
-      entities: ['entity.system.default'],
-    }
-    this.context.startAbility(wantInfo).then(() => {
-      console.info('startAbility successfully');
-    }).catch((err: BusinessError) => {
-      console.error(`startAbility err: code is ${err.code}, message is ${err.message}`);
-    })
-  }
-
-  aboutToAppear(): void {
-    appAccountManager.addAccountImplicitly('com.example.accountjsdemo', 'getSocialData', {}, {
-      onResult: this.onResultCallback,
-      onRequestRedirected: this.onRequestRedirectedCallback
-    });
-  }
-
-  build() {}
-}
-```
-
 ## auth
 
 ```TypeScript
@@ -109,99 +68,6 @@ Authenticates an application account. This API uses an asynchronous callback to 
 | authType | string | Yes | Authentication type. The value is user-defined and contains a maximum of 1024 characters. |
 | options | Record&lt;string, Object&gt; | Yes | Options for the authentication. |
 | callback | [AuthCallback](arkts-basicservices-appaccount-authcallback-i.md) | Yes | Authenticator callback used to return the result. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { Want, common } from '@kit.AbilityKit';
-
-@Entry
-@Component
-struct Index {
-  context = this.getUIContext().getHostContext() as common.UIAbilityContext; // UIAbilityContext
-
-  onResultCallback(code: number, authResult?: appAccount.AuthResult): void {
-    console.info('resultCode: ' + code);
-    console.info('authResult: ' + JSON.stringify(authResult));
-  }
-
-  onRequestRedirectedCallback(request: Want): void {
-    let wantInfo: Want = {
-      deviceId: '',
-      bundleName: 'com.example.accountjsdemo',
-      action: 'ohos.want.action.viewData',
-      entities: ['entity.system.default'],
-    }
-    this.context.startAbility(wantInfo).then(() => {
-      console.info('startAbility successfully');
-    }).catch((err: BusinessError) => {
-      console.error(`startAbility err: code is ${err.code}, message is ${err.message}`);
-    })
-  }
-
-  aboutToAppear(): void {
-    try {
-      appAccountManager.auth('LiSi', 'com.example.accountjsdemo', 'getSocialData', {
-        onResult: this.onResultCallback,
-        onRequestRedirected: this.onRequestRedirectedCallback
-      });
-    } catch (e) {
-      const err = e as BusinessError;
-      console.error(`auth exception: code is ${err.code}, message is ${err.message}`);
-    }
-  }
-
-  build() {}
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { Want, common } from '@kit.AbilityKit';
-
-@Entry
-@Component
-struct Index {
-  context = this.getUIContext().getHostContext() as common.UIAbilityContext; // UIAbilityContext
-
-  onResultCallback(code: number, authResult?: appAccount.AuthResult): void {
-    console.info('resultCode: ' + code);
-    console.info('authResult: ' + JSON.stringify(authResult));
-  }
-
-  onRequestRedirectedCallback(request: Want): void {
-    let wantInfo: Want = {
-      deviceId: '',
-      bundleName: 'com.example.accountjsdemo',
-      action: 'ohos.want.action.viewData',
-      entities: ['entity.system.default'],
-    }
-    this.context.startAbility(wantInfo).then(() => {
-      console.info('startAbility successfully');
-    }).catch((err: BusinessError) => {
-      console.error(`startAbility err: code is ${err.code}, message is ${err.message}`);
-    })
-  }
-
-  aboutToAppear(): void {
-    let options: Record<string, Object> = {
-      'password': 'xxxx',
-    };
-    try {
-      appAccountManager.auth('LiSi', 'com.example.accountjsdemo', 'getSocialData', options, {
-        onResult: this.onResultCallback,
-        onRequestRedirected: this.onRequestRedirectedCallback
-      });
-    } catch (e) {
-      const err = e as BusinessError;
-      console.error(`auth exception: code is ${err.code}, message is ${err.message}`);
-    }
-  }
-
-  build() {}
-}
-```
 
 ## authenticate
 
@@ -241,47 +107,6 @@ Authenticates an application account to obtain the OAuth token. This API uses an
 | options | { [key: string]: any } | Yes | Options for the authentication. |
 | callback | [AuthenticatorCallback](arkts-basicservices-appaccount-authenticatorcallback-i.md) | Yes | Authenticator callback used to return the result. |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { Want, common } from '@kit.AbilityKit';
-
-@Entry
-@Component
-struct Index {
-  context = this.getUIContext().getHostContext() as common.UIAbilityContext; // UIAbilityContext
-
-  onResultCallback(code: number, result: Record<string, Object>): void {
-    console.info('resultCode: ' + code);
-    console.info('result: ' + JSON.stringify(result));
-  }
-
-  onRequestRedirectedCallback(request: Want): void {
-    let wantInfo: Want = {
-      deviceId: '',
-      bundleName: 'com.example.accountjsdemo',
-      action: 'ohos.want.action.viewData',
-      entities: ['entity.system.default'],
-    }
-    this.context.startAbility(wantInfo).then(() => {
-      console.info('startAbility successfully');
-    }).catch((err: BusinessError) => {
-      console.error(`startAbility err: code is ${err.code}, message is ${err.message}`);
-    })
-  }
-
-  aboutToAppear(): void {
-    appAccountManager.authenticate('LiSi', 'com.example.accountjsdemo', 'getSocialData', {}, {
-      onResult: this.onResultCallback,
-      onRequestRedirected: this.onRequestRedirectedCallback
-    });
-  }
-
-  build() {}
-}
-```
-
 ## checkAccountLabels
 
 ```TypeScript
@@ -305,6 +130,7 @@ Checks the account labels. This API uses an asynchronous callback to return the 
 **Examples**
 
 This API must be used together with the getRemoteObject API. For details, see the example of the [getRemoteObject](#getremoteobject) API.
+- simpleType:
 
 ## checkAccountRemovable
 
@@ -328,6 +154,7 @@ Checks whether an application account can be deleted. This API uses an asynchron
 **Examples**
 
 This API must be used together with the getRemoteObject API. For details, see the example of the [getRemoteObject](#getremoteobject) API.
+- simpleType:
 
 ## createAccountImplicitly
 
@@ -348,98 +175,6 @@ Creates an application account implicitly based on the specified account owner. 
 | options | [CreateAccountImplicitlyOptions](arkts-basicservices-appaccount-createaccountimplicitlyoptions-i.md) | Yes | Options for implicitly creating the account. |
 | callback | [AuthCallback](arkts-basicservices-appaccount-authcallback-i.md) | Yes | Authenticator callback used to return the result. |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { Want, common } from '@kit.AbilityKit';
-
-@Entry
-@Component
-struct Index {
-  context = this.getUIContext().getHostContext() as common.UIAbilityContext; // UIAbilityContext
-
-  onResultCallback(code: number, result?: appAccount.AuthResult): void {
-    console.info('resultCode: ' + code);
-    console.info('result: ' + JSON.stringify(result));
-  }
-
-  onRequestRedirectedCallback(request: Want): void {
-    let wantInfo: Want = {
-      deviceId: '',
-      bundleName: 'com.example.accountjsdemo',
-      action: 'ohos.want.action.viewData',
-      entities: ['entity.system.default'],
-    }
-    this.context.startAbility(wantInfo).then(() => {
-      console.info('startAbility successfully');
-    }).catch((err: BusinessError) => {
-      console.error(`startAbility err: code is ${err.code}, message is ${err.message}`);
-    })
-  }
-
-  aboutToAppear(): void {
-    try {
-      appAccountManager.createAccountImplicitly('com.example.accountjsdemo', {
-        onResult: this.onResultCallback,
-        onRequestRedirected: this.onRequestRedirectedCallback
-      });
-    } catch (e) {
-      const err = e as BusinessError;
-      console.error(`createAccountImplicitly exception: code is ${err.code}, message is ${err.message}`);
-    }
-  }
-  build() {}
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { Want, common } from '@kit.AbilityKit';
-
-@Entry
-@Component
-struct Index {
-  context = this.getUIContext().getHostContext() as common.UIAbilityContext; // UIAbilityContext
-
-  onResultCallback(code: number, result?: appAccount.AuthResult): void {
-    console.info('resultCode: ' + code);
-    console.info('result: ' + JSON.stringify(result));
-  }
-
-  onRequestRedirectedCallback(request: Want): void {
-    let wantInfo: Want = {
-      deviceId: '',
-      bundleName: 'com.example.accountjsdemo',
-      action: 'ohos.want.action.viewData',
-      entities: ['entity.system.default'],
-    }
-    this.context.startAbility(wantInfo).then(() => {
-      console.info('startAbility successfully');
-    }).catch((err: BusinessError) => {
-      console.error(`startAbility err: code is ${err.code}, message is ${err.message}`);
-    })
-  }
-
-  aboutToAppear(): void {
-    let options: appAccount.CreateAccountImplicitlyOptions = {
-      authType: 'getSocialData',
-      requiredLabels: ['student']
-    };
-    try {
-      appAccountManager.createAccountImplicitly('com.example.accountjsdemo', options, {
-        onResult: this.onResultCallback,
-        onRequestRedirected: this.onRequestRedirectedCallback
-      });
-    } catch (e) {
-      const err = e as BusinessError;
-      console.error(`createAccountImplicitly exception: code is ${err.code}, message is ${err.message}`);
-    }
-  }
-  build() {}
-}
-```
-
 ## getRemoteObject
 
 ```TypeScript
@@ -456,7 +191,7 @@ Obtains the remote object of an authenticator. This API cannot be overloaded.
 
 | Type | Description |
 | --- | --- |
-| rpc.RemoteObject | Remote object of the authenticator, which is used for inter-process communication. |
+| [rpc.RemoteObject](../../apis-ipc-kit/arkts-apis/arkts-ipc-rpc-remoteobject-c.md) | Remote object of the authenticator, which is used for inter-process communication. |
 
 **Examples**
 
@@ -529,6 +264,7 @@ Sets the authenticator properties. This API uses an asynchronous callback to ret
 **Examples**
 
 This API must be used together with the getRemoteObject API. For details, see the example of the [getRemoteObject](#getremoteobject) API.
+- simpleType:
 
 ## verifyCredential
 
@@ -553,3 +289,4 @@ Verifies the credential of an application account. This API uses an asynchronous
 **Examples**
 
 This API must be used together with the getRemoteObject API. For details, see the example of the [getRemoteObject](#getremoteobject) API.
+- simpleType:

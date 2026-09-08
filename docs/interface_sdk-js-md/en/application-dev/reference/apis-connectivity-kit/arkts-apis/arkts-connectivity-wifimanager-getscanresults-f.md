@@ -28,7 +28,7 @@ Obtain the scanned sta list.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;WifiScanInfo&gt;&gt; | Returns information about scanned Wi-Fi hotspot if any. |
+| Promise&lt;Array&lt;[WifiScanInfo](arkts-connectivity-wifimanager-wifiscaninfo-i.md)&gt;&gt; | Returns information about scanned Wi-Fi hotspot if any. |
 
 **Error codes:**
 
@@ -106,7 +106,7 @@ Obtain the scanned sta list.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;WifiScanInfo&gt;&gt; | Yes | Returns information about scanned Wi-Fi hotspot if any. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[WifiScanInfo](arkts-connectivity-wifimanager-wifiscaninfo-i.md)&gt;&gt; | Yes | Returns information about scanned Wi-Fi hotspot if any. |
 
 **Error codes:**
 

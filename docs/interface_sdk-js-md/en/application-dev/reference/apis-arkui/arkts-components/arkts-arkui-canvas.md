@@ -165,6 +165,9 @@ struct CanvasExample {
 ```
 
 This example demonstrates how to use [attributeModifier](ts-universal-attributes-attribute-modifier.md#attributemodifier) to dynamically set the [enableAnalyzer](#enableanalyzer12) attribute and [onReady](#onready) method of the Canvas component.
+> NOTE
+> 
+> The resources in this example are not located in the src > main > resource directory. Starting from DevEco Studio 6.0.0 Beta2, when creating a project or module, the default module does not package resources outside the resources directory. You need to enable the related switch: set buildOption > resOptions > copyCodeResource > enable to true in the module's build-profile.json5. For details, see [copyCodeResource](https://developer.huawei.com/consumer/en/doc/harmonyos-guides/ide-hvigor-build-profile#section754823013348) in resOptions.
 
 ```TypeScript
 // xxx.ets
@@ -245,6 +248,7 @@ struct attributeDemo {
 ```
 
 This example demonstrates how to use [CanvasParams](arkts-arkui-canvasparams-i.md) to create a Canvas component that does not cache commands for drawing.
+The CanvasParams API is supported since API version 23.
 
 ```TypeScript
 // xxx.ets

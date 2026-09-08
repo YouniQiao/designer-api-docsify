@@ -51,7 +51,7 @@ This method provides data clearance of the highest security level. Unlike **fact
 - Data destruction is irreversible and cannot be restored by any technical means. Explicit authorization from the  
 user must be obtained before performing this operation.  
 - The system permission **ohos.permission.FACTORY_RESET** is required.  
-- Deep data clearance takes a number time, which may last for hours. Ensure that the device has sufficient battery  
+- Deep data clearance takes a long time, which may last for hours. Ensure that the device has sufficient battery  
 power. It is recommended the battery level be above 50%.  
 - The APIs of this module can be used only in the stage model.  
 - This method is applicable to extreme scenarios such as device scrapping and complete data destruction with high  

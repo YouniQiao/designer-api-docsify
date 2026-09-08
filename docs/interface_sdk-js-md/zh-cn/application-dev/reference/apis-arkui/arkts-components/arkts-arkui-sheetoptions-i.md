@@ -768,7 +768,7 @@ radius?: LengthMetrics | BorderRadiuses | LocalizedBorderRadiuses
 4. 当圆角的半径大于半模态页面宽度一半时，圆角的半径取值为半模态页面宽度的一半。
 5. 当半模态页面高度过小且圆角半径设置过大时，可能导致显示异常。
 
-**类型：** LengthMetrics \| [BorderRadiuses](../arkts-apis/arkts-arkui-borderradiuses-t.md) \| [LocalizedBorderRadiuses](../arkts-apis/arkts-arkui-localizedborderradiuses-i.md)
+**类型：** [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md) \| [BorderRadiuses](../arkts-apis/arkts-arkui-borderradiuses-t.md) \| [LocalizedBorderRadiuses](../arkts-apis/arkts-arkui-localizedborderradiuses-i.md)
 
 **起始版本：** 15
 
@@ -869,7 +869,7 @@ false：不显示关闭图标。
 1. Resource需要为boolean类型。
 2. 全屏模态样式（CONTENT_COVER）下不支持显示关闭按钮，该属性设置无效。
 
-**类型：** boolean \| Resource
+**类型：** boolean \| [Resource](../arkts-apis/arkts-arkui-resource-t.md)
 
 **默认值：** true
 

@@ -68,7 +68,7 @@ x509Certs: X509Cert[]
 
 X509证书链
 
-**类型：** X509Cert[]
+**类型：** [X509Cert](arkts-network-http-x509cert-t.md)[]
 
 **起始版本：** 26.0.0
 

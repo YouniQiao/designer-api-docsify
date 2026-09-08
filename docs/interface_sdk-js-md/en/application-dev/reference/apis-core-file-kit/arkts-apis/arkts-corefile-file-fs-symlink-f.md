@@ -50,23 +50,9 @@ Creates a symbolic link based on a file path. This API uses a promise to return 
 | 13900018 | Not a directory |
 | 13900025 | No space left on device |
 | 13900027 | Read-only file system |
-| 13900030 | File name too number |
+| 13900030 | File name too long |
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let srcFile = pathDir + "/test.txt";
-let dstFile = pathDir + "/test";
-fileIo.symlink(srcFile, dstFile).then(() => {
-  console.info(`Succeeded in creating symbolic link.`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to create symbolic link. Code: ${err.code}, message: ${err.message}`);
-});
-```
 
 
 ## symlink
@@ -108,22 +94,6 @@ Creates a symbolic link based on the file path. This API uses an asynchronous ca
 | 13900018 | Not a directory |
 | 13900025 | No space left on device |
 | 13900027 | Read-only file system |
-| 13900030 | File name too number |
+| 13900030 | File name too long |
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let srcFile = pathDir + "/test.txt";
-let dstFile = pathDir + "/test";
-fileIo.symlink(srcFile, dstFile, (err: BusinessError) => {
-  if (err) {
-    console.error(`Failed to create symbolic link. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info(`Succeeded in creating symbolic link.`);
-  }
-});
-```

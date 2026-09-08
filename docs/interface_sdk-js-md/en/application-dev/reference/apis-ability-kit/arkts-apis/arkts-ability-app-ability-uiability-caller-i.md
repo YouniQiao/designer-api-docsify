@@ -31,7 +31,7 @@ Used by a Caller UIAbility to send serialized data, as agreed upon by both parti
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | method | string | Yes | Method name agreed upon by the Caller UIAbility and Callee UIAbility, used by the Callee UIAbility to identify the type of message. |
-| data | rpc.Parcelable | Yes | Message content sent from the Caller UIAbility to the Callee UIAbility, which is in serialized form. |
+| data | [rpc.Parcelable](../../apis-ipc-kit/arkts-apis/arkts-ipc-rpc-parcelable-i.md) | Yes | Message content sent from the Caller UIAbility to the Callee UIAbility, which is in serialized form. |
 
 **Return value:**
 
@@ -125,13 +125,13 @@ Used by a Caller UIAbility to send serialized data to a Callee UIAbility and ret
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | method | string | Yes | Method name agreed upon by the Caller UIAbility and Callee UIAbility, used by the Callee UIAbility to identify the type of message. |
-| data | rpc.Parcelable | Yes | Message content sent from the Caller UIAbility to the Callee UIAbility, which is in serialized form. |
+| data | [rpc.Parcelable](../../apis-ipc-kit/arkts-apis/arkts-ipc-rpc-parcelable-i.md) | Yes | Message content sent from the Caller UIAbility to the Callee UIAbility, which is in serialized form. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;rpc.MessageSequence&gt; | Promise used to return the response data from the Callee UIAbility. |
+| Promise&lt;[rpc.MessageSequence](../../apis-ipc-kit/arkts-apis/arkts-ipc-rpc-messagesequence-c.md)&gt; | Promise used to return the response data from the Callee UIAbility. |
 
 **Error codes:**
 
@@ -233,18 +233,30 @@ Unregisters the listener for disconnection notifications from the Callee UIAbili
 **Examples**
 
 ```TypeScript
-import { UIAbility, AbilityConstant, Want } from '@kit.AbilityKit';
-
-let method = 'call_Function';
+import { UIAbility, Caller, OnReleaseCallback } from '@kit.AbilityKit';
+import { window } from '@kit.ArkUI';
+import { BusinessError } from '@kit.BasicServicesKit';
 
 export default class MainUIAbility extends UIAbility {
-  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam) {
-    console.info('Callee onCreate is called');
-    try {
-      this.callee.off(method);
-    } catch (error) {
-      console.error(`Callee.off catch error, error.code: ${error.code}, error.message: ${error.message}`);
-    }
+  onWindowStageCreate(windowStage: window.WindowStage) {
+    this.context.startAbilityByCall({
+      bundleName: 'com.example.myservice',
+      abilityName: 'MainUIAbility',
+      deviceId: ''
+    }).then((obj) => {
+      let caller: Caller = obj;
+      try {
+        let onReleaseCallBack: OnReleaseCallback = (str) => {
+          console.info(`Caller OnRelease CallBack is called ${str}`);
+        };
+        caller.on('release', onReleaseCallBack);
+        caller.off('release', onReleaseCallBack);
+      } catch (error) {
+        console.error(`Caller.on or Caller.off catch error, error.code: ${error.code}, error.message: ${error.message}`);
+      }
+    }).catch((err: BusinessError) => {
+      console.error(`Caller GetCaller error, error.code: ${err.code}, error.message: ${err.message}`);
+    });
   }
 }
 ```
@@ -277,7 +289,36 @@ Unregisters the listener for disconnection notifications from the Callee UIAbili
 
 **Examples**
 
-See off
+```TypeScript
+import { UIAbility, Caller, OnReleaseCallback } from '@kit.AbilityKit';
+import { window } from '@kit.ArkUI';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let caller: Caller;
+
+export default class MainUIAbility extends UIAbility {
+  onWindowStageCreate(windowStage: window.WindowStage) {
+    this.context.startAbilityByCall({
+      bundleName: 'com.example.myservice',
+      abilityName: 'MainUIAbility',
+      deviceId: ''
+    }).then((obj) => {
+      caller = obj;
+      try {
+        let onReleaseCallBack: OnReleaseCallback = (str) => {
+          console.info(`Caller OnRelease CallBack is called ${str}`);
+        };
+        caller.on('release', onReleaseCallBack);
+        caller.off('release');
+      } catch (error) {
+        console.error(`Caller.on or Caller.off catch error, error.code: ${error.code}, error.message: ${error.message}`);
+      }
+    }).catch((err: BusinessError) => {
+      console.error(`Caller GetCaller error, error.code: ${err.code}, error.message: ${err.message}`);
+    });
+  }
+}
+```
 
 ## on('release')
 
@@ -310,50 +351,29 @@ Used by the Caller UIAbility to register a listener for disconnection notificati
 **Examples**
 
 ```TypeScript
-import { UIAbility, AbilityConstant, Want } from '@kit.AbilityKit';
-import { rpc } from '@kit.IPCKit';
-
-class MyMessageAble implements rpc.Parcelable {
-  name: string
-  str: string
-  num: number = 1
-
-  constructor(name: string, str: string) {
-    this.name = name;
-    this.str = str;
-  }
-
-  marshalling(messageSequence: rpc.MessageSequence) {
-    messageSequence.writeInt(this.num);
-    messageSequence.writeString(this.str);
-    console.info(`MyMessageAble marshalling num[${this.num}] str[${this.str}]`);
-    return true;
-  }
-
-  unmarshalling(messageSequence: rpc.MessageSequence) {
-    this.num = messageSequence.readInt();
-    this.str = messageSequence.readString();
-    console.info(`MyMessageAble unmarshalling num[${this.num}] str[${this.str}]`);
-    return true;
-  }
-}
-
-let method = 'call_Function';
-
-function funcCallBack(pdata: rpc.MessageSequence) {
-  let msg = new MyMessageAble('test', '');
-  pdata.readParcelable(msg);
-  return new MyMessageAble('test1', 'Callee test');
-}
+import { UIAbility, Caller } from '@kit.AbilityKit';
+import { window } from '@kit.ArkUI';
+import { BusinessError } from '@kit.BasicServicesKit';
 
 export default class MainUIAbility extends UIAbility {
-  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam) {
-    console.info('Callee onCreate is called');
-    try {
-      this.callee.on(method, funcCallBack);
-    } catch (error) {
-      console.error(`Callee.on catch error, error.code: ${error.code}, error.message: ${error.message}`);
-    }
+  onWindowStageCreate(windowStage: window.WindowStage) {
+    let dstDeviceId: string = 'xxxx';
+    this.context.startAbilityByCall({
+      bundleName: 'com.example.myservice',
+      abilityName: 'MainUIAbility',
+      deviceId: dstDeviceId
+    }).then((obj) => {
+      let caller: Caller = obj;
+      try {
+        caller.on('release', (str) => {
+          console.info(`Caller OnRelease CallBack is called ${str}`);
+        });
+      } catch (error) {
+        console.error(`Caller.on catch error, error.code: ${error.code}, error.message: ${error.message}`);
+      }
+    }).catch((err: BusinessError) => {
+      console.error(`Caller GetCaller error, error.code: ${err.code}, error.message: ${err.message}`);
+    });
   }
 }
 ```

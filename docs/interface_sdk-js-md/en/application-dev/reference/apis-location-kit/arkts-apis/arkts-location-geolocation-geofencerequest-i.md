@@ -26,7 +26,7 @@ import { geolocation } from '@kit.LocationKit';
 geofence: Geofence
 ```
 
-**Type:** Geofence
+**Type:** [Geofence](arkts-location-geolocation-geofence-i.md)
 
 **Since:** 8
 
@@ -42,7 +42,7 @@ geofence: Geofence
 priority: LocationRequestPriority
 ```
 
-**Type:** LocationRequestPriority
+**Type:** [LocationRequestPriority](arkts-location-geolocation-locationrequestpriority-e.md)
 
 **Since:** 8
 
@@ -58,7 +58,7 @@ priority: LocationRequestPriority
 scenario: LocationRequestScenario
 ```
 
-**Type:** LocationRequestScenario
+**Type:** [LocationRequestScenario](arkts-location-geolocation-locationrequestscenario-e.md)
 
 **Since:** 8
 

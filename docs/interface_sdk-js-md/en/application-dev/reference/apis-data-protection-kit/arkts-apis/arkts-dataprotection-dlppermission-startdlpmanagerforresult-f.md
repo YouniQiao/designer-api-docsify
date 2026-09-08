@@ -30,7 +30,7 @@ This API starts the DLP manager application to configure file permissions and re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | common.UIAbilityContext | Yes | [UIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md) context. |
+| context | [common.UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-common-uiabilitycontext-t.md) | Yes | [UIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md) context. |
 | want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | Request object, which must contain the **uri** and **displayName** fields. |
 
 **Return value:**
@@ -97,9 +97,9 @@ This API starts the DLP manager application to configure file permissions and re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | common.Context | Yes | Ability context information. |
+| context | [common.Context](../../apis-ability-kit/arkts-apis/arkts-ability-common-context-t.md) | Yes | Ability context information. |
 | want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | Request object, which must contain the **uri** and **displayName** fields. |
-| window | window.Window | Yes | Window object used to start the DLP manager application. |
+| window | [window.Window](../../apis-arkui/arkts-apis/arkts-arkui-window-window-i.md) | Yes | Window object used to start the DLP manager application. |
 
 **Return value:**
 

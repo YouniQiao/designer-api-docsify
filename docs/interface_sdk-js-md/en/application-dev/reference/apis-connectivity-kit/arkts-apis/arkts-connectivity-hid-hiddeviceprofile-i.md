@@ -34,7 +34,7 @@ Initiate an HID connection to a remote HID host device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceId | BluetoothAddress | Yes | Indicates the address of the remote Bluetooth device. |
+| deviceId | [BluetoothAddress](arkts-connectivity-hid-bluetoothaddress-t.md) | Yes | Indicates the address of the remote Bluetooth device. |
 
 **Error codes:**
 
@@ -643,7 +643,7 @@ Reply report to a remote HID host device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | ReportType | Yes | Report type for reply |
+| type | [ReportType](arkts-connectivity-hid-reporttype-e.md) | Yes | Report type for reply |
 | id | number | Yes | Report Id, as defined in descriptor. It can be 0 in case Report Id are not defined in descriptor. |
 | reportData | Uint8Array | Yes | Report Data send to host. |
 

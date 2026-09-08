@@ -24,7 +24,7 @@ Obtains all NDEF records.
 
 | Type | Description |
 | --- | --- |
-| tag.NdefRecord[] | List of NDEF records obtained. For details, see *NFCForum-TS-NDEF_1.0*. |
+| [tag.NdefRecord](arkts-connectivity-tag-ndefrecord-i.md)[] | List of NDEF records obtained. For details, see *NFCForum-TS-NDEF_1.0*. |
 
 **Examples**
 

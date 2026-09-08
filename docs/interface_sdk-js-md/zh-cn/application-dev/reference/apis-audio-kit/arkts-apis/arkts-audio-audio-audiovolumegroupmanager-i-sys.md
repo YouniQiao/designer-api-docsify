@@ -320,18 +320,6 @@ audioVolumeGroupManager.mute(audio.AudioVolumeType.MEDIA, true, (err: BusinessEr
 });
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioManager.mute(audio.AudioVolumeType.MEDIA, true, (err: BusinessError) => {
-  if (err) {
-    console.error(`Failed to mute the stream. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in muting the stream.');
-});
-```
-
 ## mute
 
 ```TypeScript
@@ -366,16 +354,6 @@ mute(volumeType: AudioVolumeType, mute: boolean): Promise<void>
 ```TypeScript
 audioVolumeGroupManager.mute(audio.AudioVolumeType.MEDIA, true).then(() => {
   console.info('Promise returned to indicate that the stream is muted.');
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioManager.mute(audio.AudioVolumeType.MEDIA, true).then(() => {
-  console.info('Succeeded in muting the stream.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to mute the stream. Code: ${err.code}, message: ${err.message}`);
 });
 ```
 
@@ -445,7 +423,7 @@ setMicMutePersistent(mute: boolean, type: PolicyType): Promise<void>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | mute | boolean | 是 | 待设置的静音状态，true为静音，false为非静音。 |
-| type | PolicyType | 是 | 静音策略类型。 |
+| type | [PolicyType](arkts-audio-audio-policytype-e-sys.md) | 是 | 静音策略类型。 |
 
 **返回值：**
 
@@ -507,18 +485,6 @@ audioVolumeGroupManager.setRingerMode(audio.AudioRingMode.RINGER_MODE_NORMAL, (e
 });
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioManager.setRingerMode(audio.AudioRingMode.RINGER_MODE_NORMAL, (err: BusinessError) => {
-  if (err) {
-    console.error(`Failed to set the ringer mode. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in setting the ringer mode.');
-});
-```
-
 ## setRingerMode
 
 ```TypeScript
@@ -552,16 +518,6 @@ setRingerMode(mode: AudioRingMode): Promise<void>
 ```TypeScript
 audioVolumeGroupManager.setRingerMode(audio.AudioRingMode.RINGER_MODE_NORMAL).then(() => {
   console.info('Promise returned to indicate a successful setting of the ringer mode.');
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioManager.setRingerMode(audio.AudioRingMode.RINGER_MODE_NORMAL).then(() => {
-  console.info('Succeeded in setting the ringer mode.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to set the ringer mode. Code: ${err.code}, message: ${err.message}`);
 });
 ```
 
@@ -603,18 +559,6 @@ audioVolumeGroupManager.setVolume(audio.AudioVolumeType.MEDIA, 10, (err: Busines
 });
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioManager.setVolume(audio.AudioVolumeType.MEDIA, 10, (err: BusinessError) => {
-  if (err) {
-    console.error(`Failed to set the volume. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in setting the volume.');
-});
-```
-
 ## setVolume
 
 ```TypeScript
@@ -649,16 +593,6 @@ setVolume(volumeType: AudioVolumeType, volume: number): Promise<void>
 ```TypeScript
 audioVolumeGroupManager.setVolume(audio.AudioVolumeType.MEDIA, 10).then(() => {
   console.info('Promise returned to indicate a successful volume setting.');
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioManager.setVolume(audio.AudioVolumeType.MEDIA, 10).then(() => {
-  console.info('Succeeded in setting the volume.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to set the volume. Code: ${err.code}, message: ${err.message}`);
 });
 ```
 

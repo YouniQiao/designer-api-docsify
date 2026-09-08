@@ -32,4 +32,4 @@ import { videoProcessingEngine } from '@kit.ImageKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [QualityLevel](arkts-image-videoprocessingengine-qualitylevel-e.md) | 细节增强的处理质量等级。@enum {number} |
+| [QualityLevel](arkts-image-videoprocessingengine-qualitylevel-e.md) | 细节增强的处理质量等级。@enum {int} |

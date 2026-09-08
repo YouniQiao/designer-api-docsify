@@ -26,7 +26,7 @@ Install the user CA certificate. Use Promise asynchronous callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| certificate | CertBlob | Yes | Certificate information. |
+| certificate | [CertBlob](arkts-devicecertificate-certificatemanager-certblob-i.md) | Yes | Certificate information. |
 
 **Return value:**
 

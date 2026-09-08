@@ -1,6 +1,6 @@
 # DragController
 
-Provides APIs for initiating drag actions. When receiving a gesture event, such as a touch or number-press event, an application can initiate a drag action and carry drag information therein.
+Provides APIs for initiating drag actions. When receiving a gesture event, such as a touch or long-press event, an application can initiate a drag action and carry drag information therein.
 
 > **NOTE：**
 > 

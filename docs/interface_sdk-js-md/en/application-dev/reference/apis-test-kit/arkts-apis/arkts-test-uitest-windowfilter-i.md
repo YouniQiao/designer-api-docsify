@@ -109,22 +109,6 @@ Whether the window is focused. The value **true** indicates that the window is f
 
 **Test API:** This API is used only in automated test scripts.
 
-**Examples**
-
-```TypeScript
-// xxx.test.ets
-import { On, ON } from '@kit.TestKit';
-
-let on: On = ON.focused(true); // Use the static constructor ON to create an On object and specify the focused attribute of the target component.
-```
-
-```TypeScript
-// xxx.test.ets
-import { By, BY } from '@kit.TestKit';
-
-let by: By = BY.focused(true); // Use the static constructor BY to create a By object and specify the focused attribute of the target component.
-```
-
 ## title
 
 ```TypeScript

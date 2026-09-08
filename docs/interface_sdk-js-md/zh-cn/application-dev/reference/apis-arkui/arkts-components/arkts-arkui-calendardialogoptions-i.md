@@ -174,7 +174,7 @@ backgroundBlurStyle?: BlurStyle
 > 设置为BlurStyle.NONE即可关闭背景虚化。当设置了backgroundBlurStyle为非NONE值时，则不要设置backgroundColor，否则背景颜色显示效果
 > 不符合预期。设置backgroundEffect后将覆盖本属性效果。
 
-**类型：** BlurStyle
+**类型：** [BlurStyle](arkts-arkui-blurstyle-e.md)
 
 **默认值：** BlurStyle.COMPONENT_ULTRA_THICK
 
@@ -365,7 +365,7 @@ onAccept?: Callback<Date>
 
 回调函数的参数表示选中的日期值。
 
-**类型：** Callback&lt;Date&gt;
+**类型：** [Callback](arkts-arkui-callback-i.md)&lt;Date&gt;
 
 **起始版本：** 10
 
@@ -385,7 +385,7 @@ onChange?: Callback<Date>
 
 回调函数的参数表示选中的日期值。
 
-**类型：** Callback&lt;Date&gt;
+**类型：** [Callback](arkts-arkui-callback-i.md)&lt;Date&gt;
 
 **起始版本：** 10
 

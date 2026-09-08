@@ -34,7 +34,7 @@ Obtains the mask combination for the supported mode list of a given USB port.
 
 | Type | Description |
 | --- | --- |
-| PortModeType | Mask combination for the supported mode list. |
+| [PortModeType](arkts-basicservices-usb-portmodetype-e-sys.md) | Mask combination for the supported mode list. |
 
 **Examples**
 

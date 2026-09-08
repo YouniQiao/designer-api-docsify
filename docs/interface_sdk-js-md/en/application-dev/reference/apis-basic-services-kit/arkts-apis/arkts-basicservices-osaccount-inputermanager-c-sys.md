@@ -34,7 +34,7 @@ Registers a credential inputer.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| authType | AuthType | Yes | Authentication credential type. |
+| authType | [AuthType](arkts-basicservices-osaccount-authtype-e-sys.md) | Yes | Authentication credential type. |
 | inputer | [IInputer](arkts-basicservices-osaccount-iinputer-i-sys.md) | Yes | Credential inputer to register. |
 
 **Error codes:**
@@ -89,7 +89,7 @@ Unregisters a credential inputer.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| authType | AuthType | Yes | Authentication credential type. |
+| authType | [AuthType](arkts-basicservices-osaccount-authtype-e-sys.md) | Yes | Authentication credential type. |
 
 **Error codes:**
 

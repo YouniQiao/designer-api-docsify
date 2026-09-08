@@ -32,68 +32,7 @@ onExecute(): Promise<insightIntent.IntentResult<T>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;insightIntent.IntentResult&lt;T&gt;&gt; | Promise对象。返回[insightIntent.IntentResult&lt;T&gt;]{ |
-
-**示例**
-
-```TypeScript
-import { insightIntent, InsightIntentEntry, InsightIntentEntryExecutor } from '@kit.AbilityKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-const LOG_TAG: string = 'testTag-EntryIntent';
-
-// 使用@InsightIntentEntry装饰器定义意图
-@InsightIntentEntry({
-  intentName: 'PlayMusic',
-  domain: 'MusicDomain',
-  intentVersion: '1.0.1',
-  displayName: '播放歌曲',
-  displayDescription: '播放音乐意图',
-  icon: $r('app.media.app_icon'), // $r表示本地图标，需要在资源目录中定义
-  llmDescription: '支持传递歌曲名称，播放音乐',
-  keywords: ['音乐播放', '播放歌曲', 'PlayMusic'],
-  abilityName: 'EntryAbility',
-  executeMode: [insightIntent.ExecuteMode.UI_ABILITY_FOREGROUND],
-  parameters: {
-    'schema': 'http://json-schema.org/draft-07/schema#',
-    'type': 'object',
-    'title': 'Song Schema',
-    'description': 'A schema for describing songs and their artists',
-    'properties': {
-      'songName': {
-        'type': 'string',
-        'description': 'The name of the song',
-        'minLength': 1
-      }
-    },
-    'required': ['songName']
-  }
-})
-export default class PlayMusicDemo extends InsightIntentEntryExecutor<string> {
-  songName: string = '';
-
-  onExecute(): Promise<insightIntent.IntentResult<string>> {
-    hilog.info(0x0000, LOG_TAG, 'PlayMusicDemo executeMode %{public}s', JSON.stringify(this.executeMode));
-    hilog.info(0x0000, LOG_TAG, '%{public}s', JSON.stringify(this));
-    let storage = new LocalStorage();
-    storage.setOrCreate('songName', this.songName);
-    // 根据executeMode参数的不同情况，提供不同拉起PlayMusicPage页面的方式。
-    if (this.executeMode == insightIntent.ExecuteMode.UI_ABILITY_FOREGROUND) {
-      this.windowStage?.loadContent('pages/PlayMusicPage', storage);
-    } else if (this.executeMode == insightIntent.ExecuteMode.UI_EXTENSION_ABILITY) {
-      this.uiExtensionSession?.loadContent('pages/PlayMusicPage', storage);
-    }
-    // 定义意图的执行结果
-    let result: insightIntent.IntentResult<string> = {
-      code: 123,
-      result: 'result'
-    };
-    hilog.info(0x0000, LOG_TAG, 'PlayMusicDemo return %{public}s', JSON.stringify(result));
-    // 以Promise的方式返回意图执行结果
-    return Promise.reject(result);
-  }
-}
-```
+| Promise&lt;[insightIntent.IntentResult](arkts-ability-insightintent-intentresult-i.md)&lt;T&gt;&gt; | Promise对象。返回[insightIntent.IntentResult&lt;T&gt;]{ |
 
 ## context
 
@@ -121,7 +60,7 @@ executeMode: insightIntent.ExecuteMode
 
 表示意图执行模式。即拉起绑定的Ability组件时支持的执行模式。
 
-**类型：** insightIntent.ExecuteMode
+**类型：** [insightIntent.ExecuteMode](arkts-ability-insightintent-executemode-e.md)
 
 **起始版本：** 20
 
@@ -157,7 +96,7 @@ windowStage?: window.WindowStage
 
 表示windowStage实例对象，和[onWindowStageCreate](arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagecreate)接口的windowStage实例是同一个，可用于加载意图执行的页面。仅当executeMode字段取值为UI_ABILITY_FOREGROUND（即意图执行需要将UIAbility显示在前台时），该属性生效。
 
-**类型：** window.WindowStage
+**类型：** [window.WindowStage](../../apis-arkui/arkts-apis/arkts-arkui-window-windowstage-i.md)
 
 **起始版本：** 20
 

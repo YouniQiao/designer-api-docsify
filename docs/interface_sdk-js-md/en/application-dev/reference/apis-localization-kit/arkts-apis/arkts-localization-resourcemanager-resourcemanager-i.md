@@ -280,7 +280,7 @@ Closes the file descriptor (fd) of a specific rawfile in the **resources/rawfile
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | path | string | Yes | rawfile path relative to the **resources/rawfile** directory, such as **test.txt** or **subdir/test.txt**. The path must not start with a slash (/). |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-localization-resourcemanager-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Examples**
 
@@ -429,7 +429,7 @@ Obtains a Boolean value based on the specified resource object. This API returns
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resource | Resource | Yes | Resource object. |
+| resource | [Resource](arkts-localization-resourcemanager-resource-t.md) | Yes | Resource object. |
 
 **Return value:**
 
@@ -742,7 +742,7 @@ Obtains the color value corresponding to the specified resource object. This API
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resource | Resource | Yes | Resource object. |
+| resource | [Resource](arkts-localization-resourcemanager-resource-t.md) | Yes | Resource object. |
 | callback | _AsyncCallback&lt;number&gt; | Yes | Callback used to return the color value (decimal). |
 
 **Error codes:**
@@ -811,7 +811,7 @@ Obtains the color value corresponding to the specified resource object. This API
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resource | Resource | Yes | Resource object. |
+| resource | [Resource](arkts-localization-resourcemanager-resource-t.md) | Yes | Resource object. |
 
 **Return value:**
 
@@ -1154,7 +1154,7 @@ Obtains a color value based on the specified resource object. This API returns t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resource | Resource | Yes | Resource object. |
+| resource | [Resource](arkts-localization-resourcemanager-resource-t.md) | Yes | Resource object. |
 
 **Return value:**
 
@@ -1223,7 +1223,7 @@ Obtains the configuration of a device. This API uses an asynchronous callback to
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | _AsyncCallback&lt;Configuration&gt; | Yes | Callback used to return the device configuration. |
+| callback | _AsyncCallback&lt;[Configuration](arkts-localization-resourcemanager-configuration-c.md)&gt; | Yes | Callback used to return the device configuration. |
 
 **Examples**
 
@@ -1268,7 +1268,7 @@ Obtains the configuration of a device. This API uses a promise to return the res
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Configuration&gt; | Promise used to return the device configuration. |
+| Promise&lt;[Configuration](arkts-localization-resourcemanager-configuration-c.md)&gt; | Promise used to return the device configuration. |
 
 **Examples**
 
@@ -1311,7 +1311,7 @@ Obtains the device configuration. This API returns the result synchronously.
 
 | Type | Description |
 | --- | --- |
-| Configuration | Device configuration. |
+| [Configuration](arkts-localization-resourcemanager-configuration-c.md) | Device configuration. |
 
 **Examples**
 
@@ -1349,7 +1349,7 @@ Obtains the device capabilities of a device. This API uses an asynchronous callb
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | _AsyncCallback&lt;DeviceCapability&gt; | Yes | Callback used to return the device capability. |
+| callback | _AsyncCallback&lt;[DeviceCapability](arkts-localization-resourcemanager-devicecapability-c.md)&gt; | Yes | Callback used to return the device capability. |
 
 **Examples**
 
@@ -1394,7 +1394,7 @@ Obtains the device capabilities of a device. This API uses a promise to return t
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;DeviceCapability&gt; | Promise used to return the device capability. |
+| Promise&lt;[DeviceCapability](arkts-localization-resourcemanager-devicecapability-c.md)&gt; | Promise used to return the device capability. |
 
 **Examples**
 
@@ -1437,7 +1437,7 @@ Obtains the device capability. This API returns the result synchronously.
 
 | Type | Description |
 | --- | --- |
-| DeviceCapability | Device capability. |
+| [DeviceCapability](arkts-localization-resourcemanager-devicecapability-c.md) | Device capability. |
 
 **Examples**
 
@@ -1666,7 +1666,7 @@ Obtains the [plural](../../../internationalization/l10n-singular-plural.md) stri
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resource | Resource | Yes | Resource object. |
+| resource | [Resource](arkts-localization-resourcemanager-resource-t.md) | Yes | Resource object. |
 | num | number | Yes | Quantity value (a floating point number), used to obtain the corresponding string representation based on the current language's [plural rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html). |
 | args | Array&lt;string \| number&gt; | Yes | Parameters for the formatted string resource. Supported parameter types include `%d`, `%f`, `%s`, `%%`, `%number\\$d`, `%number\\$f`, and `%number\\$s`.    **NOTE：** - `%%` is escaped as `%`. For example, `%%d` is formatted as `%d`. - In `%number\\$d`, `number` indicates the parameter index, starting from `1`. For example, `%1\\$d` uses `args[0]` for formatting, `%2\\$d` uses `args[1]`, and so on. |
 
@@ -1828,7 +1828,7 @@ Obtains a **DrawableDescriptor** object for icon display based on the specified 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resource | Resource | Yes | Resource object. |
+| resource | [Resource](arkts-localization-resourcemanager-resource-t.md) | Yes | Resource object. |
 | density | number | No | Screen density. The default value or value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md). |
 | type | number | No | Icon type. The default value is **0**.    **0**: Icon resource of the application.    **1**: Layered icon resource of the application in the theme resource package. |
 
@@ -2163,7 +2163,7 @@ Obtains the [plural](../../../internationalization/l10n-singular-plural.md) stri
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resource | Resource | Yes | Resource object. |
+| resource | [Resource](arkts-localization-resourcemanager-resource-t.md) | Yes | Resource object. |
 | num | number | Yes | Integer number used to obtain the corresponding string representation based on the current language's [plural rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html). |
 | args | Array&lt;string \| number&gt; | Yes | Parameters for the formatted string resource. Supported parameter types include `%d`, `%f`, `%s`, `%%`, `%number\\$d`, `%number\\$f`, and `%number\\$s`.    **NOTE：** - `%%` is escaped as `%`. For example, `%%d` is formatted as `%d`. - In `%number\\$d`, `number` indicates the parameter index, starting from `1`. For example, `%1\\$d` uses `args[0]` for formatting, `%2\\$d` uses `args[1]`, and so on. |
 
@@ -2317,7 +2317,7 @@ Obtains the content of the media file corresponding to the specified resource ID
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resId | number | Yes | Resource ID. |
-| callback | AsyncCallback&lt;Uint8Array&gt; | Yes | Callback used to return the media file content. |
+| callback | [AsyncCallback](arkts-localization-resourcemanager-asynccallback-i.md)&lt;Uint8Array&gt; | Yes | Callback used to return the media file content. |
 
 **Examples**
 
@@ -2396,7 +2396,7 @@ Obtains the Base64 encoding of the image resource corresponding to the specified
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resId | number | Yes | Resource ID. |
-| callback | AsyncCallback&lt;string&gt; | Yes | Callback used to return the Base64 encoding of the image. |
+| callback | [AsyncCallback](arkts-localization-resourcemanager-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the Base64 encoding of the image. |
 
 **Examples**
 
@@ -3062,7 +3062,7 @@ Obtains the content of the media file corresponding to the specified resource ob
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resource | Resource | Yes | Resource object. |
+| resource | [Resource](arkts-localization-resourcemanager-resource-t.md) | Yes | Resource object. |
 | callback | _AsyncCallback&lt;Uint8Array&gt; | Yes | Callback used to return the media file content. |
 
 **Error codes:**
@@ -3123,7 +3123,7 @@ Obtains the media file content for the specified screen density based on the spe
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resource | Resource | Yes | Resource object. |
+| resource | [Resource](arkts-localization-resourcemanager-resource-t.md) | Yes | Resource object. |
 | density | number | Yes | Screen density. The value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md). |
 | callback | _AsyncCallback&lt;Uint8Array&gt; | Yes | Callback used to return the media file content. |
 
@@ -3185,7 +3185,7 @@ Obtains the content of the media file corresponding to the specified resource ob
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resource | Resource | Yes | Resource object. |
+| resource | [Resource](arkts-localization-resourcemanager-resource-t.md) | Yes | Resource object. |
 
 **Return value:**
 
@@ -3249,7 +3249,7 @@ Obtains the media file content for the specified screen density based on the spe
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resource | Resource | Yes | Resource object. |
+| resource | [Resource](arkts-localization-resourcemanager-resource-t.md) | Yes | Resource object. |
 | density | number | Yes | Screen density. The value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md). |
 
 **Return value:**
@@ -3543,7 +3543,7 @@ Obtains the Base64 encoding of the image resource corresponding to the specified
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resource | Resource | Yes | Resource object. |
+| resource | [Resource](arkts-localization-resourcemanager-resource-t.md) | Yes | Resource object. |
 | callback | _AsyncCallback&lt;string&gt; | Yes | Callback used to return the Base64 encoding of the image. |
 
 **Error codes:**
@@ -3604,7 +3604,7 @@ Obtains the Base64 encoding of the image resource corresponding to the specified
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resource | Resource | Yes | Resource object. |
+| resource | [Resource](arkts-localization-resourcemanager-resource-t.md) | Yes | Resource object. |
 | density | number | Yes | Screen density. The value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md). |
 | callback | _AsyncCallback&lt;string&gt; | Yes | Callback used to return the Base64 encoding of the image. |
 
@@ -3666,7 +3666,7 @@ Obtains the Base64 encoding of the image resource corresponding to the specified
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resource | Resource | Yes | Resource object. |
+| resource | [Resource](arkts-localization-resourcemanager-resource-t.md) | Yes | Resource object. |
 
 **Return value:**
 
@@ -3730,7 +3730,7 @@ Obtains the Base64 encoding of the image resource corresponding to the specified
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resource | Resource | Yes | Resource object. |
+| resource | [Resource](arkts-localization-resourcemanager-resource-t.md) | Yes | Resource object. |
 | density | number | Yes | Screen density. The value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md). |
 
 **Return value:**
@@ -4087,7 +4087,7 @@ Obtains an image's Base64 encoding for the default or specified screen density b
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resource | Resource | Yes | Resource object. |
+| resource | [Resource](arkts-localization-resourcemanager-resource-t.md) | Yes | Resource object. |
 | density | number | No | Screen density. The default value or value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md). |
 
 **Return value:**
@@ -4220,7 +4220,7 @@ Obtains the media file content for the default or specified screen density based
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resource | Resource | Yes | Resource object. |
+| resource | [Resource](arkts-localization-resourcemanager-resource-t.md) | Yes | Resource object. |
 | density | number | No | Screen density. The default value or value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md). |
 
 **Return value:**
@@ -4384,7 +4384,7 @@ Obtains an integer or float number based on the specified resource object. This 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resource | Resource | Yes | Resource object. |
+| resource | [Resource](arkts-localization-resourcemanager-resource-t.md) | Yes | Resource object. |
 
 **Return value:**
 
@@ -4551,7 +4551,7 @@ For both the common resource management object and the differentiated resource m
 
 | Type | Description |
 | --- | --- |
-| Configuration | Configuration of differentiated resources. |
+| [Configuration](arkts-localization-resourcemanager-configuration-c.md) | Configuration of differentiated resources. |
 
 **Examples**
 
@@ -4596,7 +4596,7 @@ The resource configuration (including the language, color mode, resolution, and 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| configuration | Configuration | No | Resource configuration. After obtaining the configuration of differentiated resources through [getOverrideConfiguration](#getoverrideconfiguration), modify the configuration items as required, and then pass these items as input parameters to the API. If no configuration is specified, the current system configuration is used. |
+| configuration | [Configuration](arkts-localization-resourcemanager-configuration-c.md) | No | Resource configuration. After obtaining the configuration of differentiated resources through [getOverrideConfiguration](#getoverrideconfiguration), modify the configuration items as required, and then pass these items as input parameters to the API. If no configuration is specified, the current system configuration is used. |
 
 **Return value:**
 
@@ -4660,7 +4660,7 @@ Obtains the plural string based on the specified resource ID and the specified r
 | --- | --- | --- | --- |
 | resId | number | Yes | Resource ID. |
 | num | number | Yes | Quantity value, used to obtain the corresponding string representation based on the current language's [plural rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html). |
-| callback | AsyncCallback&lt;string&gt; | Yes | Callback used to return the obtained singular/plural string. |
+| callback | [AsyncCallback](arkts-localization-resourcemanager-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the obtained singular/plural string. |
 
 **Examples**
 
@@ -5000,7 +5000,7 @@ Obtains the plural string based on the specified resource information and the sp
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resource | Resource | Yes | Resource object. |
+| resource | [Resource](arkts-localization-resourcemanager-resource-t.md) | Yes | Resource object. |
 | num | number | Yes | Quantity value, used to obtain the corresponding string representation based on the current language's [plural rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html). |
 | callback | _AsyncCallback&lt;string&gt; | Yes | Callback used to return the obtained singular/plural string. |
 
@@ -5087,7 +5087,7 @@ Obtains the plural string based on the specified resource information and the sp
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resource | Resource | Yes | Resource object. |
+| resource | [Resource](arkts-localization-resourcemanager-resource-t.md) | Yes | Resource object. |
 | num | number | Yes | Quantity value, used to obtain the corresponding string representation based on the current language's [plural rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html). |
 
 **Return value:**
@@ -5424,7 +5424,7 @@ Obtains singular/plural strings based on the specified quantity and resource obj
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resource | Resource | Yes | Resource object. |
+| resource | [Resource](arkts-localization-resourcemanager-resource-t.md) | Yes | Resource object. |
 | num | number | Yes | Quantity value, used to obtain the corresponding string representation based on the current language's [plural rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html). |
 
 **Return value:**
@@ -5514,7 +5514,7 @@ Obtains the file descriptor (fd) of the HAP where a specific rawfile in the **re
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | path | string | Yes | rawfile path relative to the **resources/rawfile** directory, such as **test.txt** or **subdir/test.txt**. The path must not start with a slash (/). |
-| callback | _AsyncCallback&lt;RawFileDescriptor&gt; | Yes | Callback used to return the fd of the HAP. |
+| callback | _AsyncCallback&lt;[RawFileDescriptor](arkts-localization-resourcemanager-rawfiledescriptor-t.md)&gt; | Yes | Callback used to return the fd of the HAP. |
 
 **Error codes:**
 
@@ -5584,7 +5584,7 @@ Obtains the file descriptor (fd) of the HAP where a specific rawfile in the **re
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;RawFileDescriptor&gt; | Promise used to return the fd of the HAP. |
+| Promise&lt;[RawFileDescriptor](arkts-localization-resourcemanager-rawfiledescriptor-t.md)&gt; | Promise used to return the fd of the HAP. |
 
 **Error codes:**
 
@@ -5652,7 +5652,7 @@ Obtains the file descriptor (fd) of the HAP where the rawfile file in the resour
 
 | Type | Description |
 | --- | --- |
-| RawFileDescriptor | fd of the HAP where the rawfile is located. |
+| [RawFileDescriptor](arkts-localization-resourcemanager-rawfiledescriptor-t.md) | fd of the HAP where the rawfile is located. |
 
 **Error codes:**
 
@@ -5704,7 +5704,7 @@ Obtain the content of a rawfile in the **resources/rawfile** directory. This API
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | path | string | Yes | rawfile path relative to the **resources/rawfile** directory, such as **test.txt** or **subdir/test.txt**. The path must not start with a slash (/). |
-| callback | AsyncCallback&lt;Uint8Array&gt; | Yes | Callback used to return the rawfile content. |
+| callback | [AsyncCallback](arkts-localization-resourcemanager-asynccallback-i.md)&lt;Uint8Array&gt; | Yes | Callback used to return the rawfile content. |
 
 **Examples**
 
@@ -5959,7 +5959,7 @@ Obtains the file descriptor (fd) of a specific rawfile in the **resources/rawfil
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | path | string | Yes | rawfile path relative to the **resources/rawfile** directory, such as **test.txt** or **subdir/test.txt**. The path must not start with a slash (/). |
-| callback | AsyncCallback&lt;RawFileDescriptor&gt; | Yes | Callback used to return the obtained fd. |
+| callback | [AsyncCallback](arkts-localization-resourcemanager-asynccallback-i.md)&lt;[RawFileDescriptor](arkts-localization-resourcemanager-rawfiledescriptor-t.md)&gt; | Yes | Callback used to return the obtained fd. |
 
 **Examples**
 
@@ -6007,7 +6007,7 @@ Obtains the file descriptor (fd) of a specific rawfile in the **resources/rawfil
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;RawFileDescriptor&gt; | Promise used to return the obtained fd. |
+| Promise&lt;[RawFileDescriptor](arkts-localization-resourcemanager-rawfiledescriptor-t.md)&gt; | Promise used to return the obtained fd. |
 
 **Examples**
 
@@ -6290,7 +6290,7 @@ Obtains the string corresponding to the specified resource ID. This API uses an 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resId | number | Yes | Resource ID. |
-| callback | AsyncCallback&lt;string&gt; | Yes | Callback used to return the obtained string. |
+| callback | [AsyncCallback](arkts-localization-resourcemanager-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the obtained string. |
 
 **Examples**
 
@@ -6369,7 +6369,7 @@ Obtains the string array corresponding to the specified resource ID. This API us
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resId | number | Yes | Resource ID. |
-| callback | AsyncCallback&lt;Array&lt;string&gt;&gt; | Yes | Callback used to return the obtained string array. |
+| callback | [AsyncCallback](arkts-localization-resourcemanager-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | Yes | Callback used to return the obtained string array. |
 
 **Examples**
 
@@ -6664,7 +6664,7 @@ Obtains the string array corresponding to the specified resource object. This AP
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resource | Resource | Yes | Resource object. |
+| resource | [Resource](arkts-localization-resourcemanager-resource-t.md) | Yes | Resource object. |
 | callback | _AsyncCallback&lt;Array&lt;string&gt;&gt; | Yes | Callback used to return the obtained string array. |
 
 **Error codes:**
@@ -6737,7 +6737,7 @@ Obtains the string array corresponding to the specified resource object. This AP
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resource | Resource | Yes | Resource object. |
+| resource | [Resource](arkts-localization-resourcemanager-resource-t.md) | Yes | Resource object. |
 
 **Return value:**
 
@@ -7028,7 +7028,7 @@ Obtains a string array based on the specified resource object. This API returns 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resource | Resource | Yes | Resource object. |
+| resource | [Resource](arkts-localization-resourcemanager-resource-t.md) | Yes | Resource object. |
 
 **Return value:**
 
@@ -7516,7 +7516,7 @@ Obtains a string based on the specified resource object. This API returns the re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resource | Resource | Yes | Resource object. |
+| resource | [Resource](arkts-localization-resourcemanager-resource-t.md) | Yes | Resource object. |
 
 **Return value:**
 
@@ -7591,7 +7591,7 @@ Obtains the string corresponding to the specified resource object, and replaces 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resource | Resource | Yes | Resource object. |
+| resource | [Resource](arkts-localization-resourcemanager-resource-t.md) | Yes | Resource object. |
 | args | Array&lt;string \| number&gt; | Yes | Parameters for the formatted string resource. Supported parameter types include `%d`, `%f`, `%s`, `%%`, `%number\\$d`, `%number\\$f`, and `%number\\$s`.    **NOTE：** - `%%` is escaped as `%`. For example, `%%d` is formatted as `%d`. - In `%number\\$d`, `number` indicates the parameter index, starting from `1`. For example, `%1\\$d` uses `args[0]` for formatting, `%2\\$d` uses `args[1]`, and so on. |
 
 **Return value:**
@@ -7668,7 +7668,7 @@ Obtains the string corresponding to the specified resource object. This API uses
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resource | Resource | Yes | Resource object. |
+| resource | [Resource](arkts-localization-resourcemanager-resource-t.md) | Yes | Resource object. |
 | callback | _AsyncCallback&lt;string&gt; | Yes | Callback used to return the obtained string. |
 
 **Error codes:**
@@ -7737,7 +7737,7 @@ Obtains the string corresponding to the specified resource object. This API uses
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resource | Resource | Yes | Resource object. |
+| resource | [Resource](arkts-localization-resourcemanager-resource-t.md) | Yes | Resource object. |
 
 **Return value:**
 
@@ -8002,7 +8002,7 @@ Obtains the Unicode of a [symbol](https://developer.huawei.com/consumer/en/desig
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resource | Resource | Yes | Resource object. |
+| resource | [Resource](arkts-localization-resourcemanager-resource-t.md) | Yes | Resource object. |
 
 **Return value:**
 
@@ -8260,7 +8260,7 @@ This API updates the configuration of the differentiated resource management obj
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| configuration | Configuration | Yes | Configuration of differentiated resources. After obtaining the configuration of differentiated resources through [getOverrideConfiguration](#getoverrideconfiguration), modify the configuration items as required, and then pass these items as input parameters to the API. |
+| configuration | [Configuration](arkts-localization-resourcemanager-configuration-c.md) | Yes | Configuration of differentiated resources. After obtaining the configuration of differentiated resources through [getOverrideConfiguration](#getoverrideconfiguration), modify the configuration items as required, and then pass these items as input parameters to the API. |
 
 **Error codes:**
 

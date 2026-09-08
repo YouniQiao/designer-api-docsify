@@ -76,7 +76,7 @@ manufactureData: Array<ManufactureData>
 
 The specified manufacturer data list to this advertisement
 
-**Type:** Array&lt;ManufactureData&gt;
+**Type:** Array&lt;[ManufactureData](arkts-connectivity-ble-manufacturedata-i.md)&gt;
 
 **Since:** 10
 
@@ -94,7 +94,7 @@ serviceData: Array<ServiceData>
 
 The specified service data list to this advertisement
 
-**Type:** Array&lt;ServiceData&gt;
+**Type:** Array&lt;[ServiceData](arkts-connectivity-ble-servicedata-i.md)&gt;
 
 **Since:** 10
 

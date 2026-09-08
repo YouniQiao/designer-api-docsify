@@ -46,7 +46,7 @@ goBand: GroupOwnerBand
 
 群组带宽。
 
-**类型：** GroupOwnerBand
+**类型：** [GroupOwnerBand](arkts-connectivity-wifi-groupownerband-e.md)
 
 **起始版本：** 8
 

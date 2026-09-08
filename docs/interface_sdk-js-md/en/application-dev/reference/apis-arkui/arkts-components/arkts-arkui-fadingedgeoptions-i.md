@@ -19,7 +19,7 @@ fadingEdgeLength?: LengthMetrics
 
 The length of FadingEdge.
 
-**Type:** LengthMetrics
+**Type:** [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md)
 
 **Default:** 32vp
 

@@ -36,6 +36,8 @@
 ## Examples
 
 When setting the partial dark/light mode, you need to add the dark.json resource file for the dark/light mode to take effect.
+resources_dark
+Example of the dark.json file content:
 
 ```TypeScript
 {

@@ -20,7 +20,7 @@ priority?: Priority
 
 任务的优先级。默认值为taskpool.Priority.MEDIUM。
 
-**类型：** Priority
+**类型：** [Priority](arkts-arkts-taskpool-priority-e.md)
 
 **起始版本：** 24
 

@@ -30,7 +30,7 @@ Unregisters the observer for cell information change events. This API uses an as
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'cellInfoChange' | Yes | Cell information change event. This field has a fixed value of **cellInfoChange**. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;CellInformation&gt;&gt; | No | Callback used to return the result. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[CellInformation](arkts-telephony-radio-cellinformation-i.md)&gt;&gt; | No | Callback used to return the result. |
 
 **Error codes:**
 

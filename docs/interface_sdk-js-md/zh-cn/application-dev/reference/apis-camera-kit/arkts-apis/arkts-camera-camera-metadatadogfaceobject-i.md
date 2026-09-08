@@ -22,7 +22,7 @@ readonly leftEyeBoundingBox: Rect
 
 左眼区域框。
 
-**类型：** Rect
+**类型：** [Rect](arkts-camera-camera-rect-i.md)
 
 **起始版本：** 26.0.0
 
@@ -38,7 +38,7 @@ readonly rightEyeBoundingBox: Rect
 
 右眼区域框。
 
-**类型：** Rect
+**类型：** [Rect](arkts-camera-camera-rect-i.md)
 
 **起始版本：** 26.0.0
 

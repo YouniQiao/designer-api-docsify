@@ -26,7 +26,7 @@ Invalid tag type.
 HUKS_TAG_TYPE_INT = 1 << 28
 ```
 
-Number of the number type.
+Number of the int type.
 
 **Since:** 8
 

@@ -190,7 +190,7 @@ Connects this UIAbility to a [ServiceExtensionAbility](../../../application-mode
 | [16000008](../errorcode-ability.md#16000008-crowdtesting-application-expires) | The crowdtesting application expires.<br>**Applicable version:** 10 and later |
 | [16000012](../errorcode-ability.md#16000012-application-under-control) | The application is controlled.<br>**Applicable version:** 10 and later |
 | [16000013](../errorcode-ability.md#16000013-application-controlled-by-edm) | The application is controlled by EDM.<br>**Applicable version:** 10 and later |
-| [16000053](../errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) | The ability is not on the top of the UI.<br>**Applicable version:** 10 and later |
+| [16000053](../errorcode-ability.md#16000053-ability-not-in-the-foreground) | The ability is not on the top of the UI.<br>**Applicable version:** 10 and later |
 | [16000055](../errorcode-ability.md#16000055-installation-free-timeout) | Installation-free timed out.<br>**Applicable version:** 10 and later |
 
 **Examples**
@@ -821,7 +821,7 @@ Moves this UIAbility from the foreground to the background. This API uses a prom
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 | [16000061](../errorcode-ability.md#16000061-unsupported-operation) | Operation not supported. |
 | [16000065](../errorcode-ability.md#16000065-api-can-be-called-only-for-a-foreground-ability) | The API can be called only when the ability is running in the foreground. |
-| [16000066](../errorcode-ability.md#16000066-ability-cannot-be-switched-to-the-foreground-or-background-in-wukong-mode) | An ability cannot switch to the foreground or background in Wukong mode. |
+| [16000066](../errorcode-ability.md#16000066-ability-cannot-be-moved-to-the-foregroundbackground-in-wukong-mode) | An ability cannot switch to the foreground or background in Wukong mode. |
 
 **Examples**
 
@@ -909,7 +909,7 @@ service calls [terminateSelfWithResult](#terminateselfwithresult) to terminate i
 | [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
 | [16000012](../errorcode-ability.md#16000012-application-under-control) | The application is controlled. |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
-| [16000053](../errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) | The ability is not on the top of the UI. |
+| [16000053](../errorcode-ability.md#16000053-ability-not-in-the-foreground) | The ability is not on the top of the UI. |
 | [16000055](../errorcode-ability.md#16000055-installation-free-timeout) | Installation-free timed out. |
 | [16200001](../errorcode-ability.md#16200001-caller-released) | The caller has been released. |
 
@@ -1003,9 +1003,9 @@ If you want to obtain the result after the started UIAbility is terminated, set 
 | [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
 | [16000012](../errorcode-ability.md#16000012-application-under-control) | The application is controlled. |
 | [16000013](../errorcode-ability.md#16000013-application-controlled-by-edm) | The application is controlled by EDM. |
-| [16000019](../errorcode-ability.md#16000019-no-matching-ability-is-found-during-implicit-startup) | No matching ability is found. |
+| [16000019](../errorcode-ability.md#16000019-no-matching-ability-found-for-implicit-start) | No matching ability is found. |
 | [16200001](../errorcode-ability.md#16200001-caller-released) | The caller has been released. |
-| [16000053](../errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) | The ability is not on the top of the UI. |
+| [16000053](../errorcode-ability.md#16000053-ability-not-in-the-foreground) | The ability is not on the top of the UI. |
 | [16000136](../errorcode-ability.md#16000136-prohibited-from-launching-the-applications-own-uiability-via-app-linking) | The UIAbility is prohibited from launching itself via App Linking.<br>**Applicable version:** 23 and later |
 
 **Examples**
@@ -1147,7 +1147,7 @@ Starts a ServiceExtensionAbility that supports modal dialog boxes. After the Ser
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want information for starting the ServiceExtensionAbility. |
-| result | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;dialogRequest.RequestResult&gt; | Yes | Callback used to return the result. If the API call is successful, **code** in **err** is **0** and **data** the result of the request for a modal dialog box. Otherwise, **err** contains the corresponding error code and error information. |
+| result | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[dialogRequest.RequestResult](arkts-ability-dialogrequest-requestresult-i.md)&gt; | Yes | Callback used to return the result. If the API call is successful, **code** in **err** is **0** and **data** the result of the request for a modal dialog box. Otherwise, **err** contains the corresponding error code and error information. |
 
 **Error codes:**
 
@@ -1164,7 +1164,7 @@ Starts a ServiceExtensionAbility that supports modal dialog boxes. After the Ser
 | [16000010](../errorcode-ability.md#16000010-continuation-flag-is-forbidden) | The call with the continuation and prepare continuation flag is forbidden. |
 | [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
-| [16000053](../errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) | The ability is not on the top of the UI. |
+| [16000053](../errorcode-ability.md#16000053-ability-not-in-the-foreground) | The ability is not on the top of the UI. |
 | [16000055](../errorcode-ability.md#16000055-installation-free-timeout) | Installation-free timed out. |
 | [16200001](../errorcode-ability.md#16200001-caller-released) | The caller has been released. |
 | [201](../../errorcode-universal.md#201-permission-denied) | The application does not have permission to call the interface.<br>**Applicable version:** 10 and later |
@@ -1234,7 +1234,7 @@ Starts a ServiceExtensionAbility that supports modal dialog boxes. After the Ser
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;dialogRequest.RequestResult&gt; | Promise that returns no value. |
+| Promise&lt;[dialogRequest.RequestResult](arkts-ability-dialogrequest-requestresult-i.md)&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -1251,7 +1251,7 @@ Starts a ServiceExtensionAbility that supports modal dialog boxes. After the Ser
 | [16000010](../errorcode-ability.md#16000010-continuation-flag-is-forbidden) | The call with the continuation and prepare continuation flag is forbidden. |
 | [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
-| [16000053](../errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) | The ability is not on the top of the UI. |
+| [16000053](../errorcode-ability.md#16000053-ability-not-in-the-foreground) | The ability is not on the top of the UI. |
 | [16000055](../errorcode-ability.md#16000055-installation-free-timeout) | Installation-free timed out. |
 | [16200001](../errorcode-ability.md#16200001-caller-released) | The caller has been released. |
 | [201](../../errorcode-universal.md#201-permission-denied) | The application does not have permission to call the interface.<br>**Applicable version:** 10 and later |
@@ -1466,6 +1466,12 @@ When the first UIAbility launched under a module needs to redirect to another UI
 **Examples**
 
 Set a DelegatorAbility.
+Configure abilitySrcEntryDelegator and abilityStageSrcEntryDelegator in the [module.json5](../../../quick-start/module-configuration-file.md) file. When the first UIAbility of the module is cold started, the system preferentially starts the UIAbility specified by abilitySrcEntryDelegator.
+> NOTE
+> 
+> If the UIAbility is started by calling [startAbilityByCall](#startabilitybycall), the system ignores abilitySrcEntryDelegator and abilityStageSrcEntryDelegator configured in the [module.json5](../../../quick-start/module-configuration-file.md) file.
+> 
+> The module name specified by abilityStageSrcEntryDelegator must be different from the current module name.
 
 ```TypeScript
 {
@@ -1517,7 +1523,7 @@ Sets the icon and label for this UIAbility. The icon and label can be displayed 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | label | string | Yes | New icon label. The label cannot be an empty string, and can contain a maximum of 1024 bytes. |
-| icon | image.PixelMap | Yes | Icon. The recommended icon size is 512 px * 512 px. |
+| icon | [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | Yes | Icon. The recommended icon size is 512 px * 512 px. |
 
 **Return value:**
 
@@ -1612,7 +1618,7 @@ Sets the dark/light color mode for this UIAbility. Before calling this API, ensu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| colorMode | ConfigurationConstant.ColorMode | Yes | Color mode. The options are as follows:    - **COLOR_MODE_DARK**: dark mode.    - **COLOR_MODE_LIGHT**: light mode.    - **COLOR_MODE_NOT_SET**: not set (following the system or application). |
+| colorMode | [ConfigurationConstant.ColorMode](arkts-ability-configurationconstant-colormode-e.md) | Yes | Color mode. The options are as follows:    - **COLOR_MODE_DARK**: dark mode.    - **COLOR_MODE_LIGHT**: light mode.    - **COLOR_MODE_NOT_SET**: not set (following the system or application). |
 
 **Error codes:**
 
@@ -1661,7 +1667,7 @@ Sets the mission continuation state of this UIAbility. This API uses an asynchro
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| state | AbilityConstant.ContinueState | Yes | Mission continuation state. |
+| state | [AbilityConstant.ContinueState](arkts-ability-abilityconstant-continuestate-e.md) | Yes | Mission continuation state. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the API call is successful, **code** in **err** is **0**. Otherwise, **err** contains the corresponding error code and error information. |
 
 **Error codes:**
@@ -1707,7 +1713,7 @@ Sets the mission continuation state of this UIAbility. This API uses a promise t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| state | AbilityConstant.ContinueState | Yes | Mission continuation state. |
+| state | [AbilityConstant.ContinueState](arkts-ability-abilityconstant-continuestate-e.md) | Yes | Mission continuation state. |
 
 **Return value:**
 
@@ -1869,7 +1875,7 @@ Sets the icon for this UIAbility, which is displayed in the application window, 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| windowIcon | image.PixelMap | Yes | Icon of the UIAbility displayed in the application window, application card in the mission center, and window snapshot in the shortcut bar. The icon must be a square and its size must not exceed 128 MB. Otherwise, error code 401 is returned. |
+| windowIcon | [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | Yes | Icon of the UIAbility displayed in the application window, application card in the mission center, and window snapshot in the shortcut bar. The icon must be a square and its size must not exceed 128 MB. Otherwise, error code 401 is returned. |
 
 **Return value:**
 
@@ -2185,14 +2191,14 @@ Starts a UIAbility. This API uses an asynchronous callback to return the result.
 | [16000010](../errorcode-ability.md#16000010-continuation-flag-is-forbidden) | The call with the continuation and prepare continuation flag is forbidden. |
 | [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
-| [16000053](../errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) | The ability is not on the top of the UI. |
+| [16000053](../errorcode-ability.md#16000053-ability-not-in-the-foreground) | The ability is not on the top of the UI. |
 | [16000055](../errorcode-ability.md#16000055-installation-free-timeout) | Installation-free timed out. |
 | [16200001](../errorcode-ability.md#16200001-caller-released) | The caller has been released. |
 | [201](../../errorcode-universal.md#201-permission-denied) | The application does not have permission to call the interface.<br>**Applicable version:** 10 and later |
 | [16000012](../errorcode-ability.md#16000012-application-under-control) | The application is controlled.<br>**Applicable version:** 10 and later |
 | [16000013](../errorcode-ability.md#16000013-application-controlled-by-edm) | The application is controlled by EDM.<br>**Applicable version:** 10 and later |
 | [16000018](../errorcode-ability.md#16000018-restricting-redirection-to-third-party-applications-of-api-version-11-or-later) | Redirection to a third-party application is not allowed in API version greater than 11.<br>**Applicable version:** 12 and later |
-| [16000019](../errorcode-ability.md#16000019-no-matching-ability-is-found-during-implicit-startup) | No matching ability is found.<br>**Applicable version:** 12 and later |
+| [16000019](../errorcode-ability.md#16000019-no-matching-ability-found-for-implicit-start) | No matching ability is found.<br>**Applicable version:** 12 and later |
 | [16000073](../errorcode-ability.md#16000073-appcloneindex-is-invalid) | The app clone index is invalid.<br>**Applicable version:** 12 and later |
 | [16000071](../errorcode-ability.md#16000071-application-clone-is-not-supported) | App clone is not supported.<br>**Applicable version:** 14 and later |
 | [16000072](../errorcode-ability.md#16000072-multi-app-mode-is-not-supported) | App clone or multi-instance is not supported.<br>**Applicable version:** 14 and later |
@@ -2279,7 +2285,7 @@ Starts a UIAbility. This API uses an asynchronous callback to return the result.
 | [16000010](../errorcode-ability.md#16000010-continuation-flag-is-forbidden) | The call with the continuation and prepare continuation flag is forbidden.<br>**Applicable version:** 9 |
 | [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
-| [16000053](../errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) | The ability is not on the top of the UI. |
+| [16000053](../errorcode-ability.md#16000053-ability-not-in-the-foreground) | The ability is not on the top of the UI. |
 | [16000055](../errorcode-ability.md#16000055-installation-free-timeout) | Installation-free timed out. |
 | [16200001](../errorcode-ability.md#16200001-caller-released) | The caller has been released. |
 | [201](../../errorcode-universal.md#201-permission-denied) | The application does not have permission to call the interface.<br>**Applicable version:** 10 and later |
@@ -2287,7 +2293,7 @@ Starts a UIAbility. This API uses an asynchronous callback to return the result.
 | [16000013](../errorcode-ability.md#16000013-application-controlled-by-edm) | The application is controlled by EDM.<br>**Applicable version:** 10 and later |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not support.<br>**Applicable version:** 12 and later |
 | [16000018](../errorcode-ability.md#16000018-restricting-redirection-to-third-party-applications-of-api-version-11-or-later) | Redirection to a third-party application is not allowed in API version greater than 11.<br>**Applicable version:** 12 and later |
-| [16000019](../errorcode-ability.md#16000019-no-matching-ability-is-found-during-implicit-startup) | No matching ability is found.<br>**Applicable version:** 12 and later |
+| [16000019](../errorcode-ability.md#16000019-no-matching-ability-found-for-implicit-start) | No matching ability is found.<br>**Applicable version:** 12 and later |
 | [16000067](../errorcode-ability.md#16000067-ability-startup-parameter-verification-failure) | The StartOptions check failed.<br>**Applicable version:** 12 and later |
 | [16000068](../errorcode-ability.md#16000068-ability-is-already-running) | The ability is already running.<br>**Applicable version:** 12 and later |
 | [16300003](../errorcode-ability.md#16300003-target-application-is-not-the-invoker-application) | The target application is not the current application.<br>**Applicable version:** 12 and later |
@@ -2386,7 +2392,7 @@ Starts a UIAbility. This API uses a promise to return the result. It can be call
 | [16000010](../errorcode-ability.md#16000010-continuation-flag-is-forbidden) | The call with the continuation and prepare continuation flag is forbidden. |
 | [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
-| [16000053](../errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) | The ability is not on the top of the UI. |
+| [16000053](../errorcode-ability.md#16000053-ability-not-in-the-foreground) | The ability is not on the top of the UI. |
 | [16000055](../errorcode-ability.md#16000055-installation-free-timeout) | Installation-free timed out. |
 | [16200001](../errorcode-ability.md#16200001-caller-released) | The caller has been released. |
 | [201](../../errorcode-universal.md#201-permission-denied) | The application does not have permission to call the interface.<br>**Applicable version:** 10 and later |
@@ -2394,7 +2400,7 @@ Starts a UIAbility. This API uses a promise to return the result. It can be call
 | [16000013](../errorcode-ability.md#16000013-application-controlled-by-edm) | The application is controlled by EDM.<br>**Applicable version:** 10 and later |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not support.<br>**Applicable version:** 12 and later |
 | [16000018](../errorcode-ability.md#16000018-restricting-redirection-to-third-party-applications-of-api-version-11-or-later) | Redirection to a third-party application is not allowed in API version greater than 11.<br>**Applicable version:** 12 and later |
-| [16000019](../errorcode-ability.md#16000019-no-matching-ability-is-found-during-implicit-startup) | No matching ability is found.<br>**Applicable version:** 12 and later |
+| [16000019](../errorcode-ability.md#16000019-no-matching-ability-found-for-implicit-start) | No matching ability is found.<br>**Applicable version:** 12 and later |
 | [16000067](../errorcode-ability.md#16000067-ability-startup-parameter-verification-failure) | The StartOptions check failed.<br>**Applicable version:** 12 and later |
 | [16000068](../errorcode-ability.md#16000068-ability-is-already-running) | The ability is already running.<br>**Applicable version:** 12 and later |
 | [16300003](../errorcode-ability.md#16300003-target-application-is-not-the-invoker-application) | The target application is not the current application.<br>**Applicable version:** 12 and later |
@@ -2836,14 +2842,14 @@ UIAbility is started multiple times by different applications calling this API, 
 | [16000010](../errorcode-ability.md#16000010-continuation-flag-is-forbidden) | The call with the continuation and prepare continuation flag is forbidden. |
 | [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
-| [16000053](../errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) | The ability is not on the top of the UI. |
+| [16000053](../errorcode-ability.md#16000053-ability-not-in-the-foreground) | The ability is not on the top of the UI. |
 | [16000055](../errorcode-ability.md#16000055-installation-free-timeout) | Installation-free timed out. |
 | [16200001](../errorcode-ability.md#16200001-caller-released) | The caller has been released. |
 | [201](../../errorcode-universal.md#201-permission-denied) | The application does not have permission to call the interface.<br>**Applicable version:** 10 and later |
 | [16000012](../errorcode-ability.md#16000012-application-under-control) | The application is controlled.<br>**Applicable version:** 10 and later |
 | [16000013](../errorcode-ability.md#16000013-application-controlled-by-edm) | The application is controlled by EDM.<br>**Applicable version:** 10 and later |
 | [16000018](../errorcode-ability.md#16000018-restricting-redirection-to-third-party-applications-of-api-version-11-or-later) | Redirection to a third-party application is not allowed in API version greater than 11.<br>**Applicable version:** 12 and later |
-| [16000019](../errorcode-ability.md#16000019-no-matching-ability-is-found-during-implicit-startup) | No matching ability is found.<br>**Applicable version:** 12 and later |
+| [16000019](../errorcode-ability.md#16000019-no-matching-ability-found-for-implicit-start) | No matching ability is found.<br>**Applicable version:** 12 and later |
 | [16000073](../errorcode-ability.md#16000073-appcloneindex-is-invalid) | The app clone index is invalid.<br>**Applicable version:** 12 and later |
 | [16000071](../errorcode-ability.md#16000071-application-clone-is-not-supported) | App clone is not supported.<br>**Applicable version:** 14 and later |
 | [16000072](../errorcode-ability.md#16000072-multi-app-mode-is-not-supported) | App clone or multi-instance is not supported.<br>**Applicable version:** 14 and later |
@@ -2938,14 +2944,14 @@ UIAbility is started multiple times by different applications calling this API, 
 | [16000010](../errorcode-ability.md#16000010-continuation-flag-is-forbidden) | The call with the continuation and prepare continuation flag is forbidden.<br>**Applicable version:** 9 |
 | [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
-| [16000053](../errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) | The ability is not on the top of the UI. |
+| [16000053](../errorcode-ability.md#16000053-ability-not-in-the-foreground) | The ability is not on the top of the UI. |
 | [16000055](../errorcode-ability.md#16000055-installation-free-timeout) | Installation-free timed out. |
 | [16200001](../errorcode-ability.md#16200001-caller-released) | The caller has been released. |
 | [201](../../errorcode-universal.md#201-permission-denied) | The application does not have permission to call the interface.<br>**Applicable version:** 10 and later |
 | [16000012](../errorcode-ability.md#16000012-application-under-control) | The application is controlled.<br>**Applicable version:** 10 and later |
 | [16000013](../errorcode-ability.md#16000013-application-controlled-by-edm) | The application is controlled by EDM.<br>**Applicable version:** 10 and later |
 | [16000018](../errorcode-ability.md#16000018-restricting-redirection-to-third-party-applications-of-api-version-11-or-later) | Redirection to a third-party application is not allowed in API version greater than 11.<br>**Applicable version:** 12 and later |
-| [16000019](../errorcode-ability.md#16000019-no-matching-ability-is-found-during-implicit-startup) | No matching ability is found.<br>**Applicable version:** 12 and later |
+| [16000019](../errorcode-ability.md#16000019-no-matching-ability-found-for-implicit-start) | No matching ability is found.<br>**Applicable version:** 12 and later |
 | [16000073](../errorcode-ability.md#16000073-appcloneindex-is-invalid) | The app clone index is invalid.<br>**Applicable version:** 12 and later |
 | [16000071](../errorcode-ability.md#16000071-application-clone-is-not-supported) | App clone is not supported.<br>**Applicable version:** 14 and later |
 | [16000072](../errorcode-ability.md#16000072-multi-app-mode-is-not-supported) | App clone or multi-instance is not supported.<br>**Applicable version:** 14 and later |
@@ -3048,14 +3054,14 @@ UIAbility is started multiple times by different applications calling this API, 
 | [16000010](../errorcode-ability.md#16000010-continuation-flag-is-forbidden) | The call with the continuation and prepare continuation flag is forbidden. |
 | [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
-| [16000053](../errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) | The ability is not on the top of the UI. |
+| [16000053](../errorcode-ability.md#16000053-ability-not-in-the-foreground) | The ability is not on the top of the UI. |
 | [16000055](../errorcode-ability.md#16000055-installation-free-timeout) | Installation-free timed out. |
 | [16200001](../errorcode-ability.md#16200001-caller-released) | The caller has been released. |
 | [201](../../errorcode-universal.md#201-permission-denied) | The application does not have permission to call the interface.<br>**Applicable version:** 10 and later |
 | [16000012](../errorcode-ability.md#16000012-application-under-control) | The application is controlled.<br>**Applicable version:** 10 and later |
 | [16000013](../errorcode-ability.md#16000013-application-controlled-by-edm) | The application is controlled by EDM.<br>**Applicable version:** 10 and later |
 | [16000018](../errorcode-ability.md#16000018-restricting-redirection-to-third-party-applications-of-api-version-11-or-later) | Redirection to a third-party application is not allowed in API version greater than 11.<br>**Applicable version:** 12 and later |
-| [16000019](../errorcode-ability.md#16000019-no-matching-ability-is-found-during-implicit-startup) | No matching ability is found.<br>**Applicable version:** 12 and later |
+| [16000019](../errorcode-ability.md#16000019-no-matching-ability-found-for-implicit-start) | No matching ability is found.<br>**Applicable version:** 12 and later |
 | [16000073](../errorcode-ability.md#16000073-appcloneindex-is-invalid) | The app clone index is invalid.<br>**Applicable version:** 12 and later |
 | [16000071](../errorcode-ability.md#16000071-application-clone-is-not-supported) | App clone is not supported.<br>**Applicable version:** 14 and later |
 | [16000072](../errorcode-ability.md#16000072-multi-app-mode-is-not-supported) | App clone or multi-instance is not supported.<br>**Applicable version:** 14 and later |
@@ -3149,7 +3155,7 @@ Starts an [AppServiceExtensionAbility](../../../reference/apis-ability-kit/js-ap
 | [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
 | [16000012](../errorcode-ability.md#16000012-application-under-control) | The application is controlled. |
 | [16000013](../errorcode-ability.md#16000013-application-controlled-by-edm) | The application is controlled by EDM. |
-| [16000019](../errorcode-ability.md#16000019-no-matching-ability-is-found-during-implicit-startup) | No matching ability is found. |
+| [16000019](../errorcode-ability.md#16000019-no-matching-ability-found-for-implicit-start) | No matching ability is found. |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 | [16000200](../errorcode-ability.md#16000200-caller-is-not-allowed-to-start-a-background-service-of-the-application) | The caller is not in the appIdentifierAllowList of the target application. |
 
@@ -3214,7 +3220,7 @@ Bring the current UIAbility instance to the foreground.
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported, because starting self to foreground from background is not supported in current device or current UIAbility is a non-native UIAbility. |
 | [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. Connect to system service failed. |
-| 16000082 | The UIAbility is being started. The UIAbility has not completed onCreate or onWindowStageCreate. |
+| [16000082](../errorcode-ability.md#16000082-uiability-is-being-started) | The UIAbility is being started. The UIAbility has not completed onCreate or onWindowStageCreate. |
 
 ## startSelfUIAbilityInChildProcess
 
@@ -3253,7 +3259,7 @@ Launch the application's own UIAbility in the child process. If the launchMode o
 | [16000009](../errorcode-ability.md#16000009-ability-start-or-stop-failure-in-wukong-mode) | An ability cannot be started or stopped in Wukong mode. |
 | [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. Connect to system service failed. |
-| [16000053](../errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) | The ability is not on the top of the UI. |
+| [16000053](../errorcode-ability.md#16000053-ability-not-in-the-foreground) | The ability is not on the top of the UI. |
 | [16000122](../errorcode-ability.md#16000122-target-component-is-intercepted-by-the-system-control-module) | The target component is blocked by the system module and does not support startup. |
 | [16000123](../errorcode-ability.md#16000123-implicit-startup-is-not-supported) | Implicit startup is not supported. |
 | [16000124](../errorcode-ability.md#16000124-starting-a-distributed-uiability-is-not-supported) | Starting a remote UIAbility is not supported. |
@@ -3307,7 +3313,7 @@ Starts the application's own UIAbility within the current process. This API can 
 | [16000009](../errorcode-ability.md#16000009-ability-start-or-stop-failure-in-wukong-mode) | An ability cannot be started or stopped in Wukong mode. |
 | [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. Connect to system service failed. |
-| [16000053](../errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) | The ability is not on the top of the UI. |
+| [16000053](../errorcode-ability.md#16000053-ability-not-in-the-foreground) | The ability is not on the top of the UI. |
 | [16000122](../errorcode-ability.md#16000122-target-component-is-intercepted-by-the-system-control-module) | The target component is blocked by the system module and does not support startup. |
 | [16000123](../errorcode-ability.md#16000123-implicit-startup-is-not-supported) | Implicit startup is not supported. |
 | [16000124](../errorcode-ability.md#16000124-starting-a-distributed-uiability-is-not-supported) | Starting a remote UIAbility is not supported. |
@@ -3394,7 +3400,7 @@ Starts a UIServiceExtensionAbility. This API uses a promise to return the result
 | [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
 | [16000012](../errorcode-ability.md#16000012-application-under-control) | The application is controlled. |
 | [16000013](../errorcode-ability.md#16000013-application-controlled-by-edm) | The application is controlled by EDM. |
-| [16000019](../errorcode-ability.md#16000019-no-matching-ability-is-found-during-implicit-startup) | No matching ability is found. |
+| [16000019](../errorcode-ability.md#16000019-no-matching-ability-found-for-implicit-start) | No matching ability is found. |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 | [16200001](../errorcode-ability.md#16200001-caller-released) | The caller has been released. |
 
@@ -3912,7 +3918,7 @@ windowStage: window.WindowStage
 
 WindowStage object. It can be called only on the main thread.
 
-**Type:** window.WindowStage
+**Type:** [window.WindowStage](../../apis-arkui/arkts-apis/arkts-arkui-window-windowstage-i.md)
 
 **Since:** 12
 

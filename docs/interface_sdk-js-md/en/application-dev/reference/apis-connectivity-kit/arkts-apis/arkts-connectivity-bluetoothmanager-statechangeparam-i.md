@@ -42,7 +42,7 @@ state: ProfileConnectionState
 
 Profile state value
 
-**Type:** ProfileConnectionState
+**Type:** [ProfileConnectionState](arkts-connectivity-bluetoothmanager-profileconnectionstate-e.md)
 
 **Since:** 9
 

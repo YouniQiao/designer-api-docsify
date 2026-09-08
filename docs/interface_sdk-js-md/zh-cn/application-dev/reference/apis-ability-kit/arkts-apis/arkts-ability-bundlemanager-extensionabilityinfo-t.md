@@ -12,4 +12,4 @@ ExtensionAbility信息。
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
-**类型：** _ExtensionAbilityInfo.ExtensionAbilityInfo
+**类型：** [_ExtensionAbilityInfo.ExtensionAbilityInfo](arkts-ability-extensionabilityinfo-i.md)

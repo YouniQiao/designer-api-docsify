@@ -34,12 +34,3 @@ declare function createWatcher(filename: string, events: number, callback: Async
 | 类型 | 说明 |
 | --- | --- |
 | [Watcher](arkts-corefile-fileio-watcher-depr-i.md) | Promise对象。返回文件变化监听的实例。 |
-
-**示例**
-
-```TypeScript
-let filePath = pathDir + "/test.txt";
-fileio.createWatcher(filePath, 1, (err: BusinessError, event: number) => {
-  console.info("event: " + event + "errmsg: " + JSON.stringify(err));
-});
-```

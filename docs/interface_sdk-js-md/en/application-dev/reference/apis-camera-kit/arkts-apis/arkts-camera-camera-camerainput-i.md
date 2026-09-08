@@ -40,22 +40,6 @@ Closes this camera device. This API uses an asynchronous callback to return the 
 | --- | --- |
 | [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function closeCameraInput(cameraInput: camera.CameraInput): void {
-  cameraInput.close((err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to close the cameras, error code: ${err.code}.`);
-      return;
-    }
-    console.info('Callback returned with camera closed.');
-  });
-}
-```
-
 ## close
 
 ```TypeScript
@@ -82,20 +66,6 @@ Closes this camera device. This API uses a promise to return the result.
 | --- | --- |
 | [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function closeCameraInput(cameraInput: camera.CameraInput): void {
-  cameraInput.close().then(() => {
-    console.info('Promise returned with camera closed.');
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to close the cameras, error code: ${error.code}.`);
-  }); 
-}
-```
-
 ## getPhysicalCameraOrientation
 
 ```TypeScript
@@ -116,15 +86,6 @@ Obtains the physical camera orientation in the current fold state of the device.
 | --- | --- |
 | number | Physical camera orientation. |
 
-**Examples**
-
-```TypeScript
-function getPhysicalCameraOrientation(cameraInput: camera.CameraInput): number {
-  let physicalCameraOrientation: number = cameraInput.getPhysicalCameraOrientation();
-  return physicalCameraOrientation;
-}
-```
-
 ## isPhysicalCameraOrientationVariable
 
 ```TypeScript
@@ -144,15 +105,6 @@ Checks whether the physical camera orientation is adjustable in different fold s
 | Type | Description |
 | --- | --- |
 | boolean | Checks whether the physical camera orientation is adjustable in different fold states of the device. **true** if adjustable, **false** otherwise. If the API call fails, undefined is returned. |
-
-**Examples**
-
-```TypeScript
-function isPhysicalCameraOrientationVariable(cameraInput: camera.CameraInput): boolean {
-  let isVariable: boolean = cameraInput.isPhysicalCameraOrientationVariable();
-  return isVariable;
-}
-```
 
 ## off('error')
 
@@ -288,22 +240,6 @@ Opens this camera device. This API uses an asynchronous callback to return the r
 | [7400108](../errorcode-camera.md#7400108-camera-disabled-due-to-security-reasons) | Camera disabled cause of security reason. |
 | [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function openCameraInput(cameraInput: camera.CameraInput): void {
-  cameraInput.open((err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to open camera, error code: ${err.code}.`);
-      return;
-    }
-    console.info('Callback returned with camera opened.');
-  });
-}
-```
-
 ## open
 
 ```TypeScript
@@ -332,20 +268,6 @@ Opens this camera device. This API uses a promise to return the result.
 | [7400107](../errorcode-camera.md#7400107-camera-conflict) | Can not use camera cause of conflict. |
 | [7400108](../errorcode-camera.md#7400108-camera-disabled-due-to-security-reasons) | Camera disabled cause of security reason. |
 | [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function openCameraInput(cameraInput: camera.CameraInput): void {
-  cameraInput.open().then(() => {
-    console.info('Promise returned with camera opened.');
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to open camera, error code: ${error.code}.`);
-  });
-}
-```
 
 ## open
 
@@ -380,20 +302,6 @@ Opens this camera device. This API uses a promise to return the result.
 | [7400107](../errorcode-camera.md#7400107-camera-conflict) | Can not use camera cause of conflict. |
 | [7400108](../errorcode-camera.md#7400108-camera-disabled-due-to-security-reasons) | Camera disabled cause of security reason. |
 | [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function openCameraInput(cameraInput: camera.CameraInput): void {
-  cameraInput.open(true).then(() => {
-    console.info('Promise returned with camera opened.');
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to open camera, error code: ${error.code}.`);
-  });
-}
-```
 
 ## open
 
@@ -430,20 +338,6 @@ Opens the camera with the specified concurrency type. This API uses a promise to
 | [7400108](../errorcode-camera.md#7400108-camera-disabled-due-to-security-reasons) | Camera disabled cause of security reason. |
 | [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function openCameraInput(cameraInput: camera.CameraInput): void {
-  cameraInput.open(0).then(() => {
-    console.info('Promise returned with camera opened.');
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to open camera, error code: ${error.code}.`);
-  });
-}
-```
-
 ## usePhysicalCameraOrientation
 
 ```TypeScript
@@ -470,18 +364,3 @@ Enables or disables the use of the physical camera orientation.
 | --- | --- |
 | [7400102](../errorcode-camera.md#7400102-invalid-operation) | Operation not allowed. |
 | [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function usePhysicalCameraOrientation(cameraInput: camera.CameraInput, isUsed: boolean): void {
-  try {
-    cameraInput.usePhysicalCameraOrientation(isUsed);
-  } catch (error) {
-    let err = error as BusinessError;
-    console.error(`The usePhysicalCameraOrientation call failed. error code: ${err.code}`);
-  }
-}
-```

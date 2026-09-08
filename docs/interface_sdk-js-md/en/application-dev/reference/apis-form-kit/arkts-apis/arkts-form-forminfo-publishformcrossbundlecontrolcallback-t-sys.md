@@ -25,15 +25,3 @@ publish form cross bundle control callback.
 | Type | Description |
 | --- | --- |
 | boolean | Publish form cross bundle control result, true indicates success, false indicates failure. |
-
-**Examples**
-
-```TypeScript
-import { formInfo } from '@kit.FormKit';
-
-let publishFormCrossBundleControlCallback: formInfo.PublishFormCrossBundleControlCallback =
-  (info: formInfo.PublishFormCrossBundleInfo): boolean => {
-    console.info('publish form cross bundle info callback success.');
-    return true;
-  };
-```

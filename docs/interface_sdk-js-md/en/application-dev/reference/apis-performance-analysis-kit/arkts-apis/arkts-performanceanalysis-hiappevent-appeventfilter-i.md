@@ -41,7 +41,7 @@ eventTypes?: EventType[]
 
 Event types. If this parameter is not set, events are not filtered by default.
 
-**Type:** EventType[]
+**Type:** [EventType](arkts-performanceanalysis-hiappevent-eventtype-e.md)[]
 
 **Since:** 9
 

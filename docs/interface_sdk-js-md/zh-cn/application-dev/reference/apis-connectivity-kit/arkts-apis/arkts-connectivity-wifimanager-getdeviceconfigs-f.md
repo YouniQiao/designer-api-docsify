@@ -24,7 +24,7 @@ function getDeviceConfigs(): Array<WifiDeviceConfig>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;WifiDeviceConfig&gt; | 网络配置数组。 |
+| Array&lt;[WifiDeviceConfig](arkts-connectivity-wifimanager-wifideviceconfig-i.md)&gt; | 网络配置数组。 |
 
 **错误码：**
 

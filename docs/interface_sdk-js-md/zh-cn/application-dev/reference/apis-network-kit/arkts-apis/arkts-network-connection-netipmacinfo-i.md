@@ -34,7 +34,7 @@ ipAddress: NetAddress
 
 IP地址相关信息。
 
-**类型：** NetAddress
+**类型：** [NetAddress](arkts-network-connection-netaddress-i.md)
 
 **起始版本：** 22
 

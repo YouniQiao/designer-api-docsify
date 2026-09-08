@@ -20,7 +20,7 @@ pickRect: Rect
 
 Region of the screen to capture.
 
-**Type:** Rect
+**Type:** [Rect](arkts-arkui-screenshot-rect-i.md)
 
 **Since:** 12
 
@@ -36,7 +36,7 @@ pixelMap: image.PixelMap
 
 PixelMap object of the captured image.
 
-**Type:** image.PixelMap
+**Type:** [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)
 
 **Since:** 12
 

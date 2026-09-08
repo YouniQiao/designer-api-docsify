@@ -43,7 +43,7 @@ Deletes image or video assets from the trash. Before the operation, ensure that 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| assets | Array&lt;PhotoAsset&gt; | Yes | Array of the image or video assets to delete. |
+| assets | Array&lt;[PhotoAsset](arkts-medialibrary-photoaccesshelper-photoasset-i.md)&gt; | Yes | Array of the image or video assets to delete. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback that returns no value. |
 
 **Error codes:**
@@ -117,7 +117,7 @@ Deletes image or video assets from the trash. Before the operation, ensure that 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| assets | Array&lt;PhotoAsset&gt; | Yes | Array of the image or video assets to delete. |
+| assets | Array&lt;[PhotoAsset](arkts-medialibrary-photoaccesshelper-photoasset-i.md)&gt; | Yes | Array of the image or video assets to delete. |
 
 **Return value:**
 
@@ -366,14 +366,14 @@ Obtains portrait album assets that meet filter criteria.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| optionCheck | FetchOptions | Yes | Fetch options, which limit the number of assets returned. |
+| optionCheck | [FetchOptions](arkts-medialibrary-photoaccesshelper-fetchoptions-i.md) | Yes | Fetch options, which limit the number of assets returned. |
 | filter | string | No | Filter option, which must be a JSON string. Currently, only **currentFileId** is supported, which indicates the file ID of the currently displayed featured portrait card. An example is '{"currentFileId":"123"}'. If this parameter is not provided, assets are returned from the beginning. If **currentFileId** is provided, assets with scores less than or equal to the calculated score based on the **currentFileId** are returned. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;FetchResult&lt;PhotoAsset&gt;&gt; | Promise used to return the image information. |
+| Promise&lt;[FetchResult](arkts-medialibrary-photoaccesshelper-fetchresult-i.md)&lt;[PhotoAsset](arkts-medialibrary-photoaccesshelper-photoasset-i.md)&gt;&gt; | Promise used to return the image information. |
 
 **Error codes:**
 
@@ -466,7 +466,7 @@ Recovers image or video assets from the trash. Before the operation, ensure that
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| assets | Array&lt;PhotoAsset&gt; | Yes | Array of the image or video assets to recover. |
+| assets | Array&lt;[PhotoAsset](arkts-medialibrary-photoaccesshelper-photoasset-i.md)&gt; | Yes | Array of the image or video assets to recover. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback that returns no value. |
 
 **Error codes:**
@@ -535,7 +535,7 @@ Recovers image or video assets from the trash. Before the operation, ensure that
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| assets | Array&lt;PhotoAsset&gt; | Yes | Array of the image or video assets to recover. |
+| assets | Array&lt;[PhotoAsset](arkts-medialibrary-photoaccesshelper-photoasset-i.md)&gt; | Yes | Array of the image or video assets to recover. |
 
 **Return value:**
 
@@ -727,40 +727,23 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 }
 ```
 
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
+## cloudId
 
 ```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  console.info('setCoverUriDemo');
-  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-  let fetchOptions: photoAccessHelper.FetchOptions = {
-    fetchColumns: [],
-    predicates: predicates
-  };
-  try {
-    let albumFetchResult: photoAccessHelper.FetchResult<photoAccessHelper.Album> = await phAccessHelper.getAlbums(photoAccessHelper.AlbumType.USER, photoAccessHelper.AlbumSubtype.USER_GENERIC);
-    let album: photoAccessHelper.Album = await albumFetchResult.getFirstObject();
-    if (albums === undefined) {
-      console.error('getHiddenAlbumsViewCallback albums is undefined');
-      return;
-    }
-    let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> = await album.getAssets(fetchOptions);
-    let asset: photoAccessHelper.PhotoAsset = await fetchResult.getFirstObject();
-    if (asset === undefined) {
-      console.error('asset is undefined');
-      return;
-    }
-    let albumChangeRequest: photoAccessHelper.MediaAlbumChangeRequest = new photoAccessHelper.MediaAlbumChangeRequest(album);
-    albumChangeRequest.setCoverUri(asset.uri);
-    await phAccessHelper.applyChanges(albumChangeRequest);
-    console.info('setCoverUri successfully');
-  } catch (err) {
-    console.error(`setCoverUriDemo failed with error: ${err.code}, ${err.message}`);
-  }
-}
+readonly cloudId?: string
 ```
+
+CloudId of album.
+
+**Type:** string
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+**System API:** This is a system API.
 
 ## dateAdded
 
@@ -789,6 +772,60 @@ Time when the album was modified.
 **Type:** number
 
 **Since:** 18
+
+**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+**System API:** This is a system API.
+
+## shareAlbumOwner
+
+```TypeScript
+readonly shareAlbumOwner?: string
+```
+
+The owner of share album.
+
+**Type:** string
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+**System API:** This is a system API.
+
+## shareRiskStatus
+
+```TypeScript
+readonly shareRiskStatus?: ShareAlbumRiskStatus
+```
+
+Risk status of share album.
+
+**Type:** [ShareAlbumRiskStatus](arkts-medialibrary-photoaccesshelper-sharealbumriskstatus-e-sys.md)
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+**System API:** This is a system API.
+
+## shareRiskType
+
+```TypeScript
+readonly shareRiskType?: string
+```
+
+Risk type of share album.
+
+**Type:** string
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

@@ -33,7 +33,7 @@ icon?: string | Resource
 
 菜单栏单个选项的图标资源路径。
 
-**类型：** string \| Resource
+**类型：** string \| [Resource](../arkts-apis/arkts-arkui-resource-t.md)
 
 **起始版本：** 8
 
@@ -91,7 +91,7 @@ API version 9：显示菜单栏单个选项的文本。
 
 从API version 10开始，不显示菜单栏单个选项的文本。
 
-**类型：** string \| Resource
+**类型：** string \| [Resource](../arkts-apis/arkts-arkui-resource-t.md)
 
 **起始版本：** 8
 

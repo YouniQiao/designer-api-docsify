@@ -34,7 +34,7 @@ addArc(rect: common2D.Rect, startAngle: number, sweepAngle: number): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| rect | common2D.Rect | 是 | 包含弧的椭圆的矩形边界。 |
+| rect | [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) | 是 | 包含弧的椭圆的矩形边界。 |
 | startAngle | number | 是 | 弧的起始角度，单位为度，0°为x轴正方向，该参数为浮点数。当对90取余接近于0且sweepAngle不在(-360, 360)区间内时，将添加整个椭圆而非圆弧。 |
 | sweepAngle | number | 是 | 扫描角度，单位为度。正数表示顺时针方向，负数表示逆时针方向。当参数不在(-360, 360)区间内且startAngle对90取余接近于0时，将添加整个椭圆而非圆弧；其余情况下实际扫描角度为该入参对360取余的结果。该参数为浮点数。 |
 
@@ -43,16 +43,6 @@ addArc(rect: common2D.Rect, startAngle: number, sweepAngle: number): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
-
-**示例**
-
-```TypeScript
-import { common2D, drawing } from '@kit.ArkGraphics2D';
-
-let path = new drawing.Path();
-const rect: common2D.Rect = {left:100, top:100, right:500, bottom:500};
-path.addArc(rect, 90, 180);
-```
 
 ## addCircle
 
@@ -81,15 +71,6 @@ addCircle(x: number, y: number, radius: number, pathDirection?: PathDirection): 
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
 
-**示例**
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-let path = new drawing.Path();
-path.addCircle(100, 200, 50, drawing.PathDirection.CLOCKWISE);
-```
-
 ## addOval
 
 ```TypeScript
@@ -106,7 +87,7 @@ addOval(rect: common2D.Rect, start: number, pathDirection?: PathDirection): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| rect | common2D.Rect | 是 | 椭圆的矩形边界。 |
+| rect | [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) | 是 | 椭圆的矩形边界。 |
 | start | number | 是 | 表示椭圆初始点的索引，取值范围为不小于0的整数，0、1、2、3分别对应椭圆的上端点、右端点、下端点、左端点，大于等于4时会对4取余。 |
 | pathDirection | [PathDirection](arkts-arkgraphics2d-drawing-pathdirection-e.md) | 否 | 表示路径方向。不传入时默认为顺时针方向。 |
 
@@ -115,16 +96,6 @@ addOval(rect: common2D.Rect, start: number, pathDirection?: PathDirection): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
-
-**示例**
-
-```TypeScript
-import { common2D, drawing } from '@kit.ArkGraphics2D';
-
-let path = new drawing.Path();
-const rect: common2D.Rect = {left:100, top:100, right:500, bottom:500};
-path.addOval(rect, 5, drawing.PathDirection.CLOCKWISE);
-```
 
 ## addPath
 
@@ -142,7 +113,7 @@ addPath(path: Path, matrix?: Matrix | null): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| path | Path | 是 | 要添加到当前路径的源路径对象，经过矩阵变换后将被追加到当前路径中。 |
+| path | [Path](arkts-arkgraphics2d-drawing-path-c.md) | 是 | 要添加到当前路径的源路径对象，经过矩阵变换后将被追加到当前路径中。 |
 | matrix | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) \| null | 否 | 表示矩阵对象，用于对源路径进行变换（如旋转、缩放、平移等）。当需要对源路径进行几何变换后再添加到当前路径时传入此参数；当仅需原样添加源路径时可不传入，不传入时默认为单位矩阵（即不进行任何变换）。 |
 
 **错误码：**
@@ -150,20 +121,6 @@ addPath(path: Path, matrix?: Matrix | null): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
-
-**示例**
-
-```TypeScript
-import { common2D, drawing } from '@kit.ArkGraphics2D';
-
-let path = new drawing.Path();
-let matrix = new drawing.Matrix();
-const rect: common2D.Rect = {left:100, top:100, right:500, bottom:500};
-let roundRect = new drawing.RoundRect(rect, 50, 50);
-path.addRoundRect(roundRect, drawing.PathDirection.CLOCKWISE);
-let dstPath = new drawing.Path();
-dstPath.addPath(path, matrix);
-```
 
 ## addPolygon
 
@@ -181,7 +138,7 @@ addPolygon(points: Array<common2D.Point>, close: boolean): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| points | Array&lt;common2D.Point&gt; | 是 | 多边形各顶点的坐标点数组，按数组顺序依次连接各点形成连续线段。 |
+| points | Array&lt;[common2D.Point](arkts-arkgraphics2d-common2d-point-i.md)&gt; | 是 | 多边形各顶点的坐标点数组，按数组顺序依次连接各点形成连续线段。 |
 | close | boolean | 是 | 表示是否将路径闭合，即是否添加路径起始点到终点的连线。true表示将路径闭合，false表示不将路径闭合。 |
 
 **错误码：**
@@ -189,24 +146,6 @@ addPolygon(points: Array<common2D.Point>, close: boolean): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
-
-**示例**
-
-```TypeScript
-import { common2D, drawing } from '@kit.ArkGraphics2D';
-
-let pointsArray = new Array<common2D.Point>();
-const point1: common2D.Point = { x: 200, y: 200 };
-const point2: common2D.Point = { x: 400, y: 200 };
-const point3: common2D.Point = { x: 100, y: 400 };
-const point4: common2D.Point = { x: 300, y: 400 };
-pointsArray.push(point1);
-pointsArray.push(point2);
-pointsArray.push(point3);
-pointsArray.push(point4);
-const path = new drawing.Path();
-path.addPolygon(pointsArray, false);
-```
 
 ## addRect
 
@@ -224,7 +163,7 @@ addRect(rect: common2D.Rect, pathDirection?: PathDirection): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| rect | common2D.Rect | 是 | 向路径中添加的矩形轮廓，rect参数需为有效的common2D.Rect对象，left需小于right、top需小于bottom。 |
+| rect | [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) | 是 | 向路径中添加的矩形轮廓，rect参数需为有效的common2D.Rect对象，left需小于right、top需小于bottom。 |
 | pathDirection | [PathDirection](arkts-arkgraphics2d-drawing-pathdirection-e.md) | 否 | 表示路径方向。不传入时默认为顺时针方向。 |
 
 **错误码：**
@@ -232,16 +171,6 @@ addRect(rect: common2D.Rect, pathDirection?: PathDirection): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
-
-**示例**
-
-```TypeScript
-import { common2D, drawing } from '@kit.ArkGraphics2D';
-
-let path = new drawing.Path();
-const rect: common2D.Rect = {left:100, top:100, right:500, bottom:500};
-path.addRect(rect, drawing.PathDirection.CLOCKWISE);
-```
 
 ## addRoundRect
 
@@ -259,7 +188,7 @@ addRoundRect(roundRect: RoundRect, pathDirection?: PathDirection): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| roundRect | RoundRect | 是 | 向路径中添加的圆角矩形对象，需为有效的RoundRect对象。 |
+| roundRect | [RoundRect](arkts-arkgraphics2d-drawing-roundrect-c.md) | 是 | 向路径中添加的圆角矩形对象，需为有效的RoundRect对象。 |
 | pathDirection | [PathDirection](arkts-arkgraphics2d-drawing-pathdirection-e.md) | 否 | 表示路径方向。不传入时默认为顺时针方向。 |
 
 **错误码：**
@@ -267,17 +196,6 @@ addRoundRect(roundRect: RoundRect, pathDirection?: PathDirection): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
-
-**示例**
-
-```TypeScript
-import { common2D, drawing } from '@kit.ArkGraphics2D';
-
-let path = new drawing.Path();
-const rect: common2D.Rect = {left:100, top:100, right:500, bottom:500};
-let roundRect = new drawing.RoundRect(rect, 50, 50);
-path.addRoundRect(roundRect, drawing.PathDirection.CLOCKWISE);
-```
 
 ## approximate
 
@@ -317,20 +235,6 @@ approximate(acceptableError: number): Array<number>
 | --- | --- |
 | [25900001](../errorcode-drawing.md#25900001-参数值异常) | Parameter error. Possible causes: Incorrect parameter range. |
 
-**示例**
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-let path: drawing.Path = new drawing.Path();
-path.moveTo(100, 100);
-path.lineTo(500, 500);
-let points: number[] = path.approximate(0.5);
-for (let i = 0; i < points.length; i += 3) {
-  console.info('PathApproximate Fraction =' + points[i] + ', X =' + points[i + 1] + ', Y =' + points[i + 2] + '\n');
-}
-```
-
 ## arcTo
 
 ```TypeScript
@@ -362,16 +266,6 @@ arcTo(x1: number, y1: number, x2: number, y2: number, startDeg: number, sweepDeg
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
 
-**示例**
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-let path = new drawing.Path();
-path.moveTo(10, 10);
-path.arcTo(10, 15, 10, 10, 10, 10);
-```
-
 ## buildFromSvgString
 
 ```TypeScript
@@ -402,20 +296,6 @@ buildFromSvgString(str: string): boolean
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
 
-**示例**
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-let path: drawing.Path = new drawing.Path();
-let svgString: string = "M150 100 L75 300 L225 300 Z";
-if (path.buildFromSvgString(svgString)) {
-  console.info('buildFromSvgString return true');
-} else {
-  console.info('buildFromSvgString return false');
-}
-```
-
 ## close
 
 ```TypeScript
@@ -427,17 +307,6 @@ close(): void
 **起始版本：** 11
 
 **系统能力：** SystemCapability.Graphics.Drawing
-
-**示例**
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-let path = new drawing.Path();
-path.moveTo(10, 10);
-path.cubicTo(10, 10, 10, 10, 15, 15);
-path.close();
-```
 
 ## conicTo
 
@@ -469,15 +338,6 @@ conicTo(ctrlX: number, ctrlY: number, endX: number, endY: number, weight: number
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
 
-**示例**
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-const path = new drawing.Path();
-path.conicTo(200, 400, 100, 200, 0);
-```
-
 ## constructor
 
 ```TypeScript
@@ -491,48 +351,6 @@ constructor()
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Graphics.Drawing
-
-**示例**
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-const brush = new drawing.Brush();
-```
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-let matrix = new drawing.Matrix();
-```
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-let path: drawing.Path = new drawing.Path();
-```
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-const pen = new drawing.Pen();
-```
-
-```TypeScript
-import { RenderNode, DrawContext } from '@kit.ArkUI';
-import { drawing } from '@kit.ArkGraphics2D';
-
-class DrawingRenderNode extends RenderNode {
-  draw(context: DrawContext) {
-    let samplingOptions = new drawing.SamplingOptions();
-  }
-}
-```
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-let typefaceArgument = new drawing.TypefaceArguments();
-```
 
 ## constructor
 
@@ -552,28 +370,7 @@ constructor(path: Path)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| path | Path | 是 | 待复制的路径对象。 |
-
-**示例**
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-let path: drawing.Path = new drawing.Path();
-path.moveTo(0, 0);
-path.lineTo(0, 700);
-path.lineTo(700, 0);
-path.close();
-let path1: drawing.Path = new drawing.Path(path);
-```
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-let path: drawing.Path = new drawing.Path();
-let iter: drawing.PathIterator = new drawing.PathIterator(path);
-console.info('PathIterator created successfully');
-```
+| path | [Path](arkts-arkgraphics2d-drawing-path-c.md) | 是 | 待复制的路径对象。 |
 
 ## contains
 
@@ -606,18 +403,6 @@ contains(x: number, y: number): boolean
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
 
-**示例**
-
-```TypeScript
-import { common2D, drawing } from '@kit.ArkGraphics2D';
-
-const path = new drawing.Path();
-let rect : common2D.Rect = {left: 50, top: 50, right: 250, bottom: 250};
-path.addRect(rect, drawing.PathDirection.CLOCKWISE);
-console.info('test contains: ' + path.contains(0, 0));
-console.info('test contains: ' + path.contains(60, 60));
-```
-
 ## convertToSvgString
 
 ```TypeScript
@@ -637,19 +422,6 @@ convertToSvgString(): string
 | 类型 | 说明 |
 | --- | --- |
 | string | 转换后的SVG字符串，以SVG路径格式描述当前路径的几何形状。 |
-
-**示例**
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-let path: drawing.Path = new drawing.Path();
-path.moveTo(0, 0);
-path.lineTo(0, 700);
-path.close();
-let svgString = path.convertToSvgString();
-console.info('svgString: ', svgString);
-```
 
 ## cubicTo
 
@@ -682,16 +454,6 @@ cubicTo(ctrlX1: number, ctrlY1: number, ctrlX2: number, ctrlY2: number, endX: nu
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
 
-**示例**
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-let path = new drawing.Path();
-path.moveTo(10, 10);
-path.cubicTo(100, 100, 80, 150, 300, 150);
-```
-
 ## getBounds
 
 ```TypeScript
@@ -708,29 +470,7 @@ getBounds(): common2D.Rect
 
 | 类型 | 说明 |
 | --- | --- |
-| common2D.Rect | 包含路径的最小矩形区域。 |
-
-**示例**
-
-```TypeScript
-import { common2D, drawing } from '@kit.ArkGraphics2D';
-
-const path = new drawing.Path();
-path.lineTo(50, 40);
-let rect : common2D.Rect = {left: 0, top: 0, right: 0, bottom: 0};
-rect = path.getBounds();
-console.info('test rect.left: ' + rect.left);
-console.info('test rect.top: ' + rect.top);
-console.info('test rect.right: ' + rect.right);
-console.info('test rect.bottom: ' + rect.bottom);
-```
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-let region = new drawing.Region();
-let rect = region.getBounds();
-```
+| [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) | 包含路径的最小矩形区域。 |
 
 ## getConicWeightData
 
@@ -762,18 +502,6 @@ getConicWeightData(): Array<number>
 | --- | --- |
 | Array&lt;number&gt; | 类型为浮点数，取值范围≥0。取值为0.0时，该控制点完全无效，曲线不经过此点，曲线实际由其余控制点定义。取值为1.0时，该控制点对应的曲线变为标准贝塞尔曲线，此时权重不产生额外形变效果。取值大于1时，权重值越大，曲线越靠近该控制点；小于1.0但大于0.0时，曲线则相对远离该控制点。 |
 
-**示例**
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-let path: drawing.Path = new drawing.Path();
-path.moveTo(0, 0);
-path.conicTo(100, 100, 200, 0, 0.5);
-let conicWeightData: Array<number> = path.getConicWeightData();
-console.info('conicWeightData size: ', conicWeightData.length);
-console.info('conicWeightData[0]: ', conicWeightData[0]);
-```
-
 ## getFillType
 
 ```TypeScript
@@ -791,16 +519,6 @@ getFillType(): PathFillType
 | 类型 | 说明 |
 | --- | --- |
 | [PathFillType](arkts-arkgraphics2d-drawing-pathfilltype-e.md) | 路径的填充类型，决定路径内部区域的定义方式。 |
-
-**示例**
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-const path = new drawing.Path();
-path.setFillType(drawing.PathFillType.WINDING);
-let type = path.getFillType();
-console.info('type :' + type);
-```
 
 ## getLastPoint
 
@@ -820,19 +538,7 @@ getLastPoint(): common2D.Point
 
 | 类型 | 说明 |
 | --- | --- |
-| common2D.Point | 路径最后点位置坐标。如果路径为空，则返回undefined。 |
-
-**示例**
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-const path = new drawing.Path();
-path.moveTo(0, 0);
-path.lineTo(100, 100);
-let lastPoint = path.getLastPoint();
-console.info('lastPoint.x:', lastPoint?.x);
-console.info('lastPoint.y:', lastPoint?.y);
-```
+| [common2D.Point](arkts-arkgraphics2d-common2d-point-i.md) | 路径最后点位置坐标。如果路径为空，则返回undefined。 |
 
 ## getLength
 
@@ -857,17 +563,6 @@ getLength(forceClosed: boolean): number
 | 类型 | 说明 |
 | --- | --- |
 | number | 路径长度。单位为物理像素px。 |
-
-**示例**
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-let path = new drawing.Path();
-path.arcTo(20, 20, 180, 180, 180, 90);
-let len = path.getLength(false);
-console.info('path length = ' + len);
-```
 
 ## getMatrix
 
@@ -902,22 +597,6 @@ getMatrix(forceClosed: boolean, distance: number, matrix: Matrix, flags: PathMea
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
 
-**示例**
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-let path: drawing.Path = new drawing.Path();
-path.moveTo(0, 0);
-path.lineTo(0, 700);
-let matrix = new drawing.Matrix();
-if (path.getMatrix(false, 10, matrix, drawing.PathMeasureMatrixFlags.GET_TANGENT_MATRIX)) {
-  console.info('path.getMatrix return true');
-} else {
-  console.info('path.getMatrix return false');
-}
-```
-
 ## getPathIterator
 
 ```TypeScript
@@ -935,15 +614,6 @@ getPathIterator(): PathIterator
 | 类型 | 说明 |
 | --- | --- |
 | [PathIterator](arkts-arkgraphics2d-drawing-pathiterator-c.md) | 路径的迭代器对象，用于遍历路径中的绘图指令和点数据，可通过迭代器逐条获取路径的verb指令及对应的坐标点。 |
-
-**示例**
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-let path: drawing.Path = new drawing.Path();
-let iter = path.getPathIterator();
-```
 
 ## getPointData
 
@@ -973,21 +643,7 @@ getPointData(): Array<common2D.Point>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;common2D.Point&gt; | 返回路径的点数据数组，每个元素为common2D.Point对象，其x、y坐标为浮点数。理论取值范围为全体实数，但实际受限于渲染坐标系的有效范围（如-2^31到2^31-1或屏幕可见区域）；超出范围可能导致图形不可见或裁剪。 |
-
-**示例**
-
-```TypeScript
-import { drawing, common2D } from '@kit.ArkGraphics2D';
-let path: drawing.Path = new drawing.Path();
-path.moveTo(0, 0);
-path.lineTo(100, 100);
-path.quadTo(150, 150, 200, 100);
-let pointData: Array<common2D.Point> = path.getPointData();
-console.info('pointData size: ', pointData.length);
-console.info('pointData[0].x: ', pointData[0].x);
-console.info('pointData[0].y: ', pointData[0].y);
-```
+| Array&lt;[common2D.Point](arkts-arkgraphics2d-common2d-point-i.md)&gt; | 返回路径的点数据数组，每个元素为common2D.Point对象，其x、y坐标为浮点数。理论取值范围为全体实数，但实际受限于渲染坐标系的有效范围（如-2^31到2^31-1或屏幕可见区域）；超出范围可能导致图形不可见或裁剪。 |
 
 ## getPositionAndTangent
 
@@ -1007,8 +663,8 @@ getPositionAndTangent(forceClosed: boolean, distance: number, position: common2D
 | --- | --- | --- | --- |
 | forceClosed | boolean | 是 | 表示是否按照闭合路径测量，true表示测量时路径会被强制视为已闭合，false表示会根据路径的实际闭合状态测量。 |
 | distance | number | 是 | 表示与路径起始点的距离，小于0时会被视作0，大于路径长度时会被视作路径长度。该参数为浮点数。单位为物理像素px。 |
-| position | common2D.Point | 是 | 存储获取到的距离路径起始点distance处的点的坐标。 |
-| tangent | common2D.Point | 是 | 存储获取到的距离路径起始点distance处的点的切线值，tangent.x表示该点切线的余弦值，tangent.y表示该点切线的正弦值。 |
+| position | [common2D.Point](arkts-arkgraphics2d-common2d-point-i.md) | 是 | 存储获取到的距离路径起始点distance处的点的坐标。 |
+| tangent | [common2D.Point](arkts-arkgraphics2d-common2d-point-i.md) | 是 | 存储获取到的距离路径起始点distance处的点的切线值，tangent.x表示该点切线的余弦值，tangent.y表示该点切线的正弦值。 |
 
 **返回值：**
 
@@ -1021,25 +677,6 @@ getPositionAndTangent(forceClosed: boolean, distance: number, position: common2D
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
-
-**示例**
-
-```TypeScript
-import { common2D, drawing } from '@kit.ArkGraphics2D';
-
-let path: drawing.Path = new drawing.Path();
-path.moveTo(0, 0);
-path.lineTo(0, 700);
-path.lineTo(700, 0);
-let position: common2D.Point = { x: 0.0, y: 0.0 };
-let tangent: common2D.Point = { x: 0.0, y: 0.0 };
-if (path.getPositionAndTangent(false, 0.1, position, tangent)) {
-  console.info('getPositionAndTangent-----position:  ' + position.x);
-  console.info('getPositionAndTangent-----position:  ' + position.y);
-  console.info('getPositionAndTangent-----tangent:  ' + tangent.x);
-  console.info('getPositionAndTangent-----tangent:  ' + tangent.y);
-}
-```
 
 ## getSegment
 
@@ -1061,26 +698,13 @@ getSegment(forceClosed: boolean, start: number, stop: number, startWithMoveTo: b
 | start | number | 是 | 表示与路径起始点的距离，距离路径起始点start距离的位置即为截取路径片段的起始点，小于0时会被视作0，大于等于stop时会截取失败。该参数为浮点数。单位为物理像素px。 |
 | stop | number | 是 | 表示与路径起始点的距离，距离路径起始点stop距离的位置即为截取路径片段的终点，小于等于start时会截取失败，大于路径长度时会被视作路径长度。该参数为浮点数。单位为物理像素px。 |
 | startWithMoveTo | boolean | 是 | 表示是否在目标路径执行[moveTo](#moveto)移动到截取路径片段的起始点位置。true表示执行moveTo；false表示不执行moveTo。 |
-| dst | Path | 是 | 目标路径，截取成功时会将得到的路径片段追加到目标路径上，截取失败时不做改变。 |
+| dst | [Path](arkts-arkgraphics2d-drawing-path-c.md) | 是 | 目标路径，截取成功时会将得到的路径片段追加到目标路径上，截取失败时不做改变。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
 | boolean | 表示是否成功截取路径片段。true表示截取成功，false表示截取失败。 |
-
-**示例**
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-let path: drawing.Path = new drawing.Path();
-path.moveTo(0, 0);
-path.lineTo(0, 700);
-path.lineTo(700, 0);
-let dstPath: drawing.Path = new drawing.Path();
-console.info('getSegment-----result:  ' + path.getSegment(true, 10.0, 20.0, true, dstPath));
-```
 
 ## getVerbData
 
@@ -1112,21 +736,6 @@ getVerbData(): Array<PathIteratorVerb>
 | --- | --- |
 | Array&lt;[PathIteratorVerb](arkts-arkgraphics2d-drawing-pathiteratorverb-e.md)&gt; | 返回路径的指令数据数组，每个数组元素对应为路径中的基本绘图动作类型，与点数据一一对应。 |
 
-**示例**
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-let path: drawing.Path = new drawing.Path();
-path.moveTo(0, 0);
-path.lineTo(100, 100);
-path.close();
-let verbData: Array<drawing.PathIteratorVerb> = path.getVerbData();
-console.info('verbData size: ', verbData.length);
-console.info('verbData[0]: ', verbData[0]);
-console.info('verbData[1]: ', verbData[1]);
-```
-
 ## interpolate
 
 ```TypeScript
@@ -1143,9 +752,9 @@ interpolate(other: Path, weight: number, interpolatedPath: Path): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| other | Path | 是 | 表示另一条路径对象。 |
+| other | [Path](arkts-arkgraphics2d-drawing-path-c.md) | 是 | 表示另一条路径对象。 |
 | weight | number | 是 | 表示插值权重，取值范围为[0.0, 1.0]。该参数为浮点数。 |
-| interpolatedPath | Path | 是 | 表示用于存储插值结果的目标路径对象。 |
+| interpolatedPath | [Path](arkts-arkgraphics2d-drawing-path-c.md) | 是 | 表示用于存储插值结果的目标路径对象。 |
 
 **返回值：**
 
@@ -1158,26 +767,6 @@ interpolate(other: Path, weight: number, interpolatedPath: Path): boolean
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [25900001](../errorcode-drawing.md#25900001-参数值异常) | Parameter error. Possible causes: Incorrect parameter range. |
-
-**示例**
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-let path: drawing.Path = new drawing.Path();
-path.moveTo(50, 50);
-path.lineTo(100, 100);
-path.lineTo(200, 200);
-let other: drawing.Path = new drawing.Path();
-other.moveTo(80, 80);
-other.lineTo(300, 300);
-let interpolatedPath: drawing.Path = new drawing.Path();
-if (path.interpolate(other, 0.0, interpolatedPath)) {
-  console.info('interpolate return true');
-} else {
-  console.info('interpolate return false');
-}
-```
 
 ## isClosed
 
@@ -1197,21 +786,6 @@ isClosed(): boolean
 | --- | --- |
 | boolean | 表示当前路径是否闭合，true表示闭合，false表示不闭合。 |
 
-**示例**
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-let path: drawing.Path = new drawing.Path();
-path.moveTo(0, 0);
-path.lineTo(0, 700);
-if (path.isClosed()) {
-  console.info('path is closed.');
-} else {
-  console.info('path is not closed.');
-}
-```
-
 ## isEmpty
 
 ```TypeScript
@@ -1229,45 +803,6 @@ isEmpty(): boolean
 | 类型 | 说明 |
 | --- | --- |
 | boolean | 路径是否为空。true表示当前路径为空，false表示路径不为空。 |
-
-**示例**
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-let path = new drawing.Path();
-path.moveTo(10, 10);
-path.lineTo(20, 20);
-let isEmpty = path.isEmpty();
-console.info('isEmpty:', isEmpty);
-```
-
-```TypeScript
-import { RenderNode } from '@kit.ArkUI';
-import { drawing } from '@kit.ArkGraphics2D';
-
-class DrawingRenderNode extends RenderNode {
-  draw(context: DrawContext) {
-    const canvas = context.canvas;
-    const pen = new drawing.Pen();
-    pen.setColor({
-      alpha: 255,
-      red: 255,
-      green: 0,
-      blue: 0
-    });
-    pen.setStrokeWidth(10);
-    canvas.attachPen(pen);
-    let region = new drawing.Region();
-    let flag: boolean = region.isEmpty();
-    console.info('flag: ', flag);
-    region.setRect(100, 100, 400, 400);
-    flag = region.isEmpty();
-    console.info('flag: ', flag);
-    canvas.drawRegion(region);
-    canvas.detachPen();
-  }
-}
-```
 
 ## isEqual
 
@@ -1287,31 +822,13 @@ isEqual(path: Path): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| path | Path | 是 | 另一条路径对象。 |
+| path | [Path](arkts-arkgraphics2d-drawing-path-c.md) | 是 | 另一条路径对象。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
 | boolean | 返回当前路径与另一条路径是否相等的结果。true表示路径相等，false表示路径不相等。 |
-
-**示例**
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-let path: drawing.Path = new drawing.Path();
-path.moveTo(0, 0);
-path.lineTo(100, 100);
-let other: drawing.Path = new drawing.Path();
-other.moveTo(0, 0);
-other.lineTo(100, 100);
-if (path.isEqual(other)) {
-  console.info('isEqual return true');
-} else {
-  console.info('isEqual return false');
-}
-```
 
 ## isInterpolate
 
@@ -1329,31 +846,13 @@ isInterpolate(other: Path): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| other | Path | 是 | 表示另一条路径对象。 |
+| other | [Path](arkts-arkgraphics2d-drawing-path-c.md) | 是 | 表示另一条路径对象。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
 | boolean | 返回当前路径与另一条路径是否兼容插值的结果。true表示兼容插值，false表示不兼容插值。 |
-
-**示例**
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-let path: drawing.Path = new drawing.Path();
-path.moveTo(0, 0);
-path.lineTo(100, 100);
-let other: drawing.Path = new drawing.Path();
-other.moveTo(0, 1);
-other.lineTo(200, 200);
-if (path.isInterpolate(other)) {
-  console.info('isInterpolate return true');
-} else {
-  console.info('isInterpolate return false');
-}
-```
 
 ## isInverseFillType
 
@@ -1373,20 +872,6 @@ isInverseFillType(): boolean
 | --- | --- |
 | boolean | 检查当前路径填充类型是否是反向填充类型。true表示是反向填充类型，false表示不是反向填充类型。 |
 
-**示例**
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-let path: drawing.Path = new drawing.Path();
-path.setFillType(drawing.PathFillType.WINDING);
-if (path.isInverseFillType()) {
-  console.info('path is inverse FillType.');
-} else {
-  console.info('path is not inverse FillType.');
-}
-```
-
 ## isRect
 
 ```TypeScript
@@ -1403,31 +888,13 @@ isRect(rect: common2D.Rect | null): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| rect | common2D.Rect \| null | 是 | 矩形对象，作为出参使用，路径构成矩形时，会被改写为路径表示的矩形，否则不会改变。可以为null，表示无需获取路径表示的矩形。 |
+| rect | [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) \| null | 是 | 矩形对象，作为出参使用，路径构成矩形时，会被改写为路径表示的矩形，否则不会改变。可以为null，表示无需获取路径表示的矩形。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
 | boolean | 返回路径是否构成矩形。true表示路径构成矩形，false表示路径不构成矩形。 |
-
-**示例**
-
-```TypeScript
-import { common2D, drawing } from '@kit.ArkGraphics2D';
-
-let path = new drawing.Path();
-path.moveTo(10, 10);
-path.lineTo(20, 10);
-let isRect = path.isRect(null);
-console.info('isRect: ', isRect);
-let rect: common2D.Rect = { left : 100, top : 100, right : 400, bottom : 500 };
-path.lineTo(20, 20);
-path.lineTo(10, 20);
-path.lineTo(10, 10);
-isRect = path.isRect(rect);
-console.info('isRect: ', isRect);
-```
 
 ## lineTo
 
@@ -1456,16 +923,6 @@ lineTo(x: number, y: number): void
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
 
-**示例**
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-let path = new drawing.Path();
-path.moveTo(10, 10);
-path.lineTo(10, 15);
-```
-
 ## moveTo
 
 ```TypeScript
@@ -1493,15 +950,6 @@ moveTo(x: number, y: number): void
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
 
-**示例**
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-let path = new drawing.Path();
-path.moveTo(10, 10);
-```
-
 ## offset
 
 ```TypeScript
@@ -1525,24 +973,13 @@ offset(dx: number, dy: number): Path
 
 | 类型 | 说明 |
 | --- | --- |
-| Path | 返回当前路径偏移(dx,dy)后生成的新路径对象。 |
+| [Path](arkts-arkgraphics2d-drawing-path-c.md) | 返回当前路径偏移(dx,dy)后生成的新路径对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
-
-**示例**
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-const path = new drawing.Path();
-path.moveTo(200, 200);
-path.lineTo(300, 300);
-const dstPath = path.offset(200, 200);
-```
 
 ## op
 
@@ -1560,7 +997,7 @@ op(path: Path, pathOp: PathOp): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| path | Path | 是 | 路径对象，用于与当前路径合并。 |
+| path | [Path](arkts-arkgraphics2d-drawing-path-c.md) | 是 | 路径对象，用于与当前路径合并。 |
 | pathOp | [PathOp](arkts-arkgraphics2d-drawing-pathop-e.md) | 是 | 路径操作类型枚举，用于指定两条路径的布尔运算方式。 |
 
 **返回值：**
@@ -1574,17 +1011,6 @@ op(path: Path, pathOp: PathOp): boolean
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
-
-**示例**
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-const path = new drawing.Path();
-const path2 = new drawing.Path();
-path.addCircle(100, 200, 100, drawing.PathDirection.CLOCKWISE);
-console.info('get pathOp: ', path2.op(path, drawing.PathOp.DIFFERENCE));
-```
 
 ## quadTo
 
@@ -1615,16 +1041,6 @@ quadTo(ctrlX: number, ctrlY: number, endX: number, endY: number): void
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
 
-**示例**
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-let path = new drawing.Path();
-path.moveTo(10, 10);
-path.quadTo(10, 15, 10, 10);
-```
-
 ## rConicTo
 
 ```TypeScript
@@ -1654,15 +1070,6 @@ rConicTo(ctrlX: number, ctrlY: number, endX: number, endY: number, weight: numbe
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
-
-**示例**
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-const path = new drawing.Path();
-path.rConicTo(200, 400, 100, 200, 0);
-```
 
 ## rCubicTo
 
@@ -1695,15 +1102,6 @@ rCubicTo(ctrlX1: number, ctrlY1: number, ctrlX2: number, ctrlY2: number, endX: n
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
 
-**示例**
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-const path = new drawing.Path();
-path.rCubicTo(200, 0, 0, 200, -20, 0);
-```
-
 ## reset
 
 ```TypeScript
@@ -1716,40 +1114,6 @@ reset(): void
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
-**示例**
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-const brush = new drawing.Brush();
-brush.reset();
-```
-
-```TypeScript
-import { drawing } from "@kit.ArkGraphics2D";
-
-let matrix = new drawing.Matrix();
-matrix.postScale(2, 3, 4, 5);
-matrix.reset();
-console.info("matrix= "+matrix.getAll().toString());
-```
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-let path = new drawing.Path();
-path.moveTo(10, 10);
-path.cubicTo(10, 10, 10, 10, 15, 15);
-path.reset();
-```
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-const pen = new drawing.Pen();
-pen.reset();
-```
-
 ## rewind
 
 ```TypeScript
@@ -1761,18 +1125,6 @@ rewind(): void
 **起始版本：** 20
 
 **系统能力：** SystemCapability.Graphics.Drawing
-
-**示例**
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-let path = new drawing.Path();
-path.moveTo(10, 10);
-path.lineTo(20, 20);
-path.rewind();
-let empty = path.isEmpty();
-console.info('empty : ', empty);
-```
 
 ## rLineTo
 
@@ -1801,15 +1153,6 @@ rLineTo(dx: number, dy: number): void
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
 
-**示例**
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-const path = new drawing.Path();
-path.rLineTo(400, 200);
-```
-
 ## rMoveTo
 
 ```TypeScript
@@ -1836,15 +1179,6 @@ rMoveTo(dx: number, dy: number): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
-
-**示例**
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-const path = new drawing.Path();
-path.rMoveTo(10, 10);
-```
 
 ## rQuadTo
 
@@ -1875,15 +1209,6 @@ rQuadTo(dx1: number, dy1: number, dx2: number, dy2: number): void
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
 
-**示例**
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-const path = new drawing.Path();
-path.rQuadTo(100, 0, 0, 200);
-```
-
 ## set
 
 ```TypeScript
@@ -1902,20 +1227,7 @@ set(src: Path): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| src | Path | 是 | 用于替换当前路径内容的源路径对象。 |
-
-**示例**
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-let path: drawing.Path = new drawing.Path();
-path.moveTo(0, 0);
-path.lineTo(0, 700);
-path.lineTo(700, 0);
-path.close();
-let path1: drawing.Path = new drawing.Path();
-path1.set(path);
-```
+| src | [Path](arkts-arkgraphics2d-drawing-path-c.md) | 是 | 用于替换当前路径内容的源路径对象。 |
 
 ## setFillType
 
@@ -1941,15 +1253,6 @@ setFillType(pathFillType: PathFillType): void
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
 
-**示例**
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-const path = new drawing.Path();
-path.setFillType(drawing.PathFillType.WINDING);
-```
-
 ## setLastPoint
 
 ```TypeScript
@@ -1969,23 +1272,6 @@ setLastPoint(x: number, y: number): void
 | x | number | 是 | 指定点的x轴坐标，该参数为浮点数。0表示坐标原点，负数表示位于坐标原点左侧，正数表示位于坐标原点右侧。单位为物理像素px。 |
 | y | number | 是 | 指定点的y轴坐标，该参数为浮点数。0表示坐标原点，负数表示位于坐标原点上侧，正数表示位于坐标原点下侧。单位为物理像素px。 |
 
-**示例**
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-const path = new drawing.Path();
-path.moveTo(0, 0);
-path.lineTo(0, 700);
-let isEmpty = path.isEmpty();
-console.info('isEmpty:', isEmpty);
-path.reset();
-isEmpty = path.isEmpty();
-console.info('isEmpty:', isEmpty);
-path.setLastPoint(50, 50);
-isEmpty = path.isEmpty();
-console.info('isEmpty:', isEmpty);
-```
-
 ## toggleInverseFillType
 
 ```TypeScript
@@ -1997,17 +1283,6 @@ toggleInverseFillType(): void
 **起始版本：** 23
 
 **系统能力：** SystemCapability.Graphics.Drawing
-
-**示例**
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-let path: drawing.Path = new drawing.Path();
-path.setFillType(drawing.PathFillType.WINDING);
-path.toggleInverseFillType();
-console.info('path fillType = ', path.getFillType());
-```
 
 ## transform
 
@@ -2032,17 +1307,3 @@ transform(matrix: Matrix): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
-
-**示例**
-
-```TypeScript
-import { common2D, drawing } from '@kit.ArkGraphics2D';
-
-let path = new drawing.Path();
-let matrix = new drawing.Matrix();
-matrix.setScale(1.5, 1.5, 10, 10);
-const rect: common2D.Rect = {left:100, top:100, right:500, bottom:500};
-let roundRect = new drawing.RoundRect(rect, 50, 50);
-path.addRoundRect(roundRect, drawing.PathDirection.CLOCKWISE);
-path.transform(matrix);
-```

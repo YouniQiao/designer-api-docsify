@@ -5,7 +5,7 @@ Enumerates the gradient modes of the input method.
 | Name | Value| Description |  
 | ------------ | -- | ------------------ |  
 | NONE | 0 | The gradient mode is not used.|
-| LINEAR_GRADIENT | 1 | Linear gradient.|
+| [LINEAR_GRADIENT](arkts-ime-inputmethodengine-gradientmode-e.md) | 1 | Linear gradient.|
 
 **Since:** 20
 

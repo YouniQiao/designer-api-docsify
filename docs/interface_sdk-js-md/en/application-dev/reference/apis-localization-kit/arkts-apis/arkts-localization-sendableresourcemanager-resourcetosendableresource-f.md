@@ -24,13 +24,13 @@ Converts a `Resource` object to a `SendableResource` object that can be used for
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resource | Resource | Yes | Resource** object. |
+| resource | [Resource](arkts-localization-sendableresourcemanager-resource-t.md) | Yes | Resource** object. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| SendableResource | SendableResource** object after conversion. |
+| [SendableResource](arkts-localization-sendableresourcemanager-sendableresource-t.md) | SendableResource** object after conversion. |
 
 **Error codes:**
 

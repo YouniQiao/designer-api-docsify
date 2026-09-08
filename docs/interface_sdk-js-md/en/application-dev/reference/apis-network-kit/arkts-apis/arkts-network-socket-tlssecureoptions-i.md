@@ -104,7 +104,7 @@ protocols?: Protocol | Array<Protocol>
 
 TLS protocol version. The default value is **TLSv1.2**.
 
-**Type:** Protocol \| Array&lt;Protocol&gt;
+**Type:** [Protocol](arkts-network-socket-protocol-e.md) \| Array&lt;[Protocol](arkts-network-socket-protocol-e.md)&gt;
 
 **Since:** 9
 

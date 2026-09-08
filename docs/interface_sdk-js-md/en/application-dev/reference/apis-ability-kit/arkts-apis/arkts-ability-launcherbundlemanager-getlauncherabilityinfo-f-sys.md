@@ -28,7 +28,7 @@ Obtains the [launcher ability information](arkts-ability-launcherabilityinfo-i.m
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name. |
 | userId | number | Yes | User ID, which can be obtained by calling [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid). |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;LauncherAbilityInfo&gt;&gt; | Yes | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md) used to return the result. If the operation is successful, **err** is **null**, and **data** is the array of [LauncherAbilityInfo](arkts-ability-launcherabilityinfo-i.md) objects obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[LauncherAbilityInfo](arkts-ability-launcherbundlemanager-launcherabilityinfo-t.md)&gt;&gt; | Yes | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md) used to return the result. If the operation is successful, **err** is **null**, and **data** is the array of [LauncherAbilityInfo](arkts-ability-launcherabilityinfo-i.md) objects obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -91,7 +91,7 @@ Obtains the [launcher ability information](arkts-ability-launcherabilityinfo-i.m
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;LauncherAbilityInfo&gt;&gt; | Promise used to return the array of [LauncherAbilityInfo]{ |
+| Promise&lt;Array&lt;[LauncherAbilityInfo](arkts-ability-launcherbundlemanager-launcherabilityinfo-t.md)&gt;&gt; | Promise used to return the array of [LauncherAbilityInfo]{ |
 
 **Error codes:**
 

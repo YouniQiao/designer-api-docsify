@@ -186,7 +186,7 @@ attach(showKeyboard: boolean, textConfig: TextConfig, requestKeyboardReason: Req
 | --- | --- | --- | --- |
 | showKeyboard | boolean | 是 | 绑定输入法成功后，是否拉起输入法键盘。   - true表示拉起。   - false表示不拉起。 |
 | textConfig | [TextConfig](arkts-ime-inputmethod-textconfig-i.md) | 是 | 编辑框的配置信息。 |
-| requestKeyboardReason | RequestKeyboardReason | 是 | 请求键盘输入的原因。 |
+| requestKeyboardReason | [RequestKeyboardReason](arkts-ime-inputmethod-requestkeyboardreason-e.md) | 是 | 请求键盘输入的原因。 |
 
 **返回值：**
 
@@ -246,7 +246,7 @@ attachWithUIContext(uiContext: UIContext, textConfig: TextConfig, attachOptions?
 | --- | --- | --- | --- |
 | uiContext | [UIContext](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 | UIContext实例对象。 |
 | textConfig | [TextConfig](arkts-ime-inputmethod-textconfig-i.md) | 是 | 编辑框的配置信息。 |
-| attachOptions | AttachOptions | 否 | 绑定附加选项。 |
+| attachOptions | [AttachOptions](arkts-ime-inputmethod-attachoptions-i.md) | 否 | 绑定附加选项。 |
 
 **返回值：**
 
@@ -722,7 +722,7 @@ off(type: 'selectByRange', callback?: Callback<Range>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'selectByRange' | 是 | 设置监听类型，固定取值为'selectByRange'。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Range&gt; | 否 | 取消订阅的回调函数，需要与on接口传入的保持一致。参数不填写时，取消订阅type对应的所有回调事件。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Range](arkts-ime-inputmethod-range-i.md)&gt; | 否 | 取消订阅的回调函数，需要与on接口传入的保持一致。参数不填写时，取消订阅type对应的所有回调事件。 |
 
 **示例**
 
@@ -755,7 +755,7 @@ off(type: 'selectByMovement', callback?: Callback<Movement>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'selectByMovement' | 是 | 设置监听类型，固定取值为'selectByMovement'。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Movement&gt; | 否 | 取消订阅的回调函数，需要与on接口传入的保持一致。参数不填写时，取消订阅type对应的所有回调事件。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Movement](arkts-ime-inputmethod-movement-i.md)&gt; | 否 | 取消订阅的回调函数，需要与on接口传入的保持一致。参数不填写时，取消订阅type对应的所有回调事件。 |
 
 **示例**
 
@@ -1204,7 +1204,7 @@ on(type: 'selectByRange', callback: Callback<Range>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'selectByRange' | 是 | 设置监听类型，固定取值为'selectByRange'。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Range&gt; | 是 | 回调函数，返回需要选中的文本范围。根据传入的文本范围，开发者在回调函数中编辑框中相应文本。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Range](arkts-ime-inputmethod-range-i.md)&gt; | 是 | 回调函数，返回需要选中的文本范围。根据传入的文本范围，开发者在回调函数中编辑框中相应文本。 |
 
 **错误码：**
 
@@ -1237,7 +1237,7 @@ on(type: 'selectByMovement', callback: Callback<Movement>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'selectByMovement' | 是 | 设置监听类型，固定取值为'selectByMovement'。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Movement&gt; | 是 | 回调函数，返回光标移动的方向。根据传入的光标移动方向，选中编辑框中相应文本。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Movement](arkts-ime-inputmethod-movement-i.md)&gt; | 是 | 回调函数，返回光标移动的方向。根据传入的光标移动方向，选中编辑框中相应文本。 |
 
 **错误码：**
 
@@ -1766,7 +1766,7 @@ recvMessage(msgHandler?: MessageHandler): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| msgHandler | MessageHandler | 否 | 该对象通过[onMessage](arkts-ime-inputmethod-messagehandler-i.md#onmessage)接收来自输入法应用所发送的自定义通信数据，并通过[onTerminated](arkts-ime-inputmethod-messagehandler-i.md#onterminated)接收终止此对象订阅的消息。若不填写此参数，则取消全局已注册的[MessageHandler](arkts-ime-inputmethod-messagehandler-i.md)对象，同时触发其[onTerminated](arkts-ime-inputmethod-messagehandler-i.md#onterminated)回调函数。 |
+| msgHandler | [MessageHandler](arkts-ime-inputmethod-messagehandler-i.md) | 否 | 该对象通过[onMessage](arkts-ime-inputmethod-messagehandler-i.md#onmessage)接收来自输入法应用所发送的自定义通信数据，并通过[onTerminated](arkts-ime-inputmethod-messagehandler-i.md#onterminated)接收终止此对象订阅的消息。若不填写此参数，则取消全局已注册的[MessageHandler](arkts-ime-inputmethod-messagehandler-i.md)对象，同时触发其[onTerminated](arkts-ime-inputmethod-messagehandler-i.md#onterminated)回调函数。 |
 
 **错误码：**
 
@@ -2164,7 +2164,7 @@ showTextInput(requestKeyboardReason: RequestKeyboardReason): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| requestKeyboardReason | RequestKeyboardReason | 是 | 请求键盘输入的原因。 |
+| requestKeyboardReason | [RequestKeyboardReason](arkts-ime-inputmethod-requestkeyboardreason-e.md) | 是 | 请求键盘输入的原因。 |
 
 **返回值：**
 

@@ -20,7 +20,7 @@ bearerTypes: Array<NetBearType>
 
 网络类型。数组里面只包含了一种网络类型。
 
-**类型：** Array&lt;NetBearType&gt;
+**类型：** Array&lt;[NetBearType](arkts-network-connection-netbeartype-e.md)&gt;
 
 **起始版本：** 8
 

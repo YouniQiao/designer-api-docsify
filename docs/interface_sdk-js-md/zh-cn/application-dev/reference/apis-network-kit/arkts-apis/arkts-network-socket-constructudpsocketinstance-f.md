@@ -22,7 +22,7 @@ function constructUDPSocketInstance(): UDPSocket
 
 | 类型 | 说明 |
 | --- | --- |
-| UDPSocket | 返回一个UDPSocket对象。 |
+| [UDPSocket](arkts-network-socket-udpsocket-i.md) | 返回一个UDPSocket对象。 |
 
 **示例**
 

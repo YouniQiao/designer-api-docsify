@@ -23,7 +23,7 @@ Task action.
 - **UPLOAD**: Upload tasks.  
 - **DOWNLOAD**: Download tasks.
 
-**Type:** Action
+**Type:** [Action](arkts-basicservices-agent-action-e.md)
 
 **Since:** 10
 
@@ -191,7 +191,7 @@ readonly progress: Progress
 
 Task progress.
 
-**Type:** Progress
+**Type:** [Progress](arkts-basicservices-agent-progress-i.md)
 
 **Since:** 10
 

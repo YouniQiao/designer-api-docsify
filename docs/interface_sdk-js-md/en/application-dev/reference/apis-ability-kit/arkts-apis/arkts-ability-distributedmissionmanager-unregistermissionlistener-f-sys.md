@@ -28,7 +28,7 @@ Unregisters a mission status listener. This API uses an asynchronous callback to
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| parameter | MissionDeviceInfo | Yes | Information about the device to listen for. |
+| parameter | [MissionDeviceInfo](arkts-ability-distributedmissionmanager-missiondeviceinfo-t-sys.md) | Yes | Information about the device to listen for. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the listener is unregistered, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
@@ -82,7 +82,7 @@ Unregisters a mission status listener. This API uses a promise to return the res
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| parameter | MissionDeviceInfo | Yes | Information about the device to listen for. |
+| parameter | [MissionDeviceInfo](arkts-ability-distributedmissionmanager-missiondeviceinfo-t-sys.md) | Yes | Information about the device to listen for. |
 
 **Return value:**
 

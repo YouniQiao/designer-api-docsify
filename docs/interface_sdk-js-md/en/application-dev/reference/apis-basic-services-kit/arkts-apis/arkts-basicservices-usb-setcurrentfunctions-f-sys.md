@@ -28,7 +28,7 @@ Sets the current USB function list in Device mode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| funcs | FunctionType | Yes | USB function list in numeric mask format. |
+| funcs | [FunctionType](arkts-basicservices-usb-functiontype-e-sys.md) | Yes | USB function list in numeric mask format. |
 
 **Return value:**
 

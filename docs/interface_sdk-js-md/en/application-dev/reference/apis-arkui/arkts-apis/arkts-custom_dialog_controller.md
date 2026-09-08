@@ -182,6 +182,7 @@ struct CustomDialogUser {
 ```
 
 This example demonstrates how to configure a dialog box to display outside the main window on a 2-in-1 device by setting [showInSubWindow](arkts-arkui-customdialogcontrolleroptions-i.md) to true.
+Since API version 26.0.0, the displayModeInSubWindow attribute is added to [CustomDialogControllerOptions](arkts-arkui-customdialogcontrolleroptions-i.md).
 
 ```TypeScript
 // xxx.ets
@@ -445,6 +446,7 @@ struct CustomDialogUser {
 ```
 
 This example demonstrates how to call getState in [CustomDialogController](arkts-arkui-customdialogcontroller-c.md) to obtain the current status of the dialog box.
+The getState API is added to CustomDialogController since API version 20.
 
 ```TypeScript
 // xxx.ets
@@ -703,6 +705,7 @@ struct CustomDialogUser {
 ```
 
 This example demonstrates how to listen for keyboard changes and adjust the [bottom](ts-types.md#margin) of [margin](ts-universal-attributes-size.md#margin) to achieve the same effect as using [keyboardAvoidDistance](arkts-arkui-customdialogcontrolleroptions-i.md) to adjust the spacing between the dialog box and the soft keyboard.
+Since API version 15, the keyboardAvoidDistance attribute is added to CustomDialogControllerOptions.
 
 ```TypeScript
 import { window } from '@kit.ArkUI';
@@ -836,6 +839,7 @@ struct CustomDialogUser {
 ```
 
 This example demonstrates how to configure the lifecycle callbacks for the dialog box.
+Since API version 19, the onDidAppear, onDidDisappear, onWillAppear, and onWillDisappear attributes are added to [CustomDialogControllerOptions](arkts-arkui-customdialogcontrolleroptions-i.md).
 
 ```TypeScript
 // xxx.ets
@@ -1009,6 +1013,7 @@ struct CustomDialogUser {
 ```
 
 This example demonstrates how to customize the background blur effect by configuring [backgroundBlurStyleOptions](arkts-arkui-customdialogcontrolleroptions-i.md).
+Since API version 19, the backgroundBlurStyleOptions attribute is added to [CustomDialogControllerOptions](arkts-arkui-customdialogcontrolleroptions-i.md).
 
 ```TypeScript
 @CustomDialog
@@ -1065,6 +1070,7 @@ struct CustomDialogUser {
 ```
 
 This example demonstrates how to customize the background effect by configuring [backgroundEffect](arkts-arkui-customdialogcontrolleroptions-i.md).
+Since API version 19, the backgroundEffect attribute is added to [CustomDialogControllerOptions](arkts-arkui-customdialogcontrolleroptions-i.md).
 
 ```TypeScript
 @CustomDialog
@@ -1185,6 +1191,7 @@ struct CustomDialogUser {
 ```
 
 This example demonstrates how to implement the system material effect by setting [systemMaterial](arkts-arkui-customdialogcontrolleroptions-i.md).
+Since API version 26.0.0, the systemMaterial attribute is added to [CustomDialogControllerOptions](arkts-arkui-customdialogcontrolleroptions-i.md).
 
 ```TypeScript
 import { uiMaterial } from '@kit.ArkUI';

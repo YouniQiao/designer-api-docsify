@@ -41,15 +41,3 @@ Duplicates the file descriptor and returns the corresponding **File** object.
 | 13900020 | Invalid argument |
 | 13900022 | Too many open files |
 | 13900042 | Unknown error |
-
-**Examples**
-
-```TypeScript
-let filePath = pathDir + "/test.txt";
-let file1 = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE);
-let fd: number = file1.fd;
-let file2 = fileIo.dup(fd);
-console.info(`Succeeded in getting file name of the file2 is ${file2.name}`);
-fileIo.closeSync(file1);
-fileIo.closeSync(file2);
-```

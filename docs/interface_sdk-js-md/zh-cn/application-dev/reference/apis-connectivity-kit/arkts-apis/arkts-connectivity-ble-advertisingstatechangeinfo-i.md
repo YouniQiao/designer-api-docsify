@@ -36,7 +36,7 @@ state: AdvertisingState
 
 操作广播后，收到的BLE广播状态。
 
-**类型：** AdvertisingState
+**类型：** [AdvertisingState](arkts-connectivity-ble-advertisingstate-e.md)
 
 **起始版本：** 11
 

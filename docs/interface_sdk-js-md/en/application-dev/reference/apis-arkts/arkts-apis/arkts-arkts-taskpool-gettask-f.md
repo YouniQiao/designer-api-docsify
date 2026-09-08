@@ -41,7 +41,7 @@ Obtains the corresponding task instance by task ID, or by task ID and task name.
 
 | Type | Description |
 | --- | --- |
-| Task \| undefined | Task instance. If an exception occurs, **undefined** is returned. For details, see the preceding description. |
+| [Task](arkts-arkts-taskpool-task-c.md) \| undefined | Task instance. If an exception occurs, **undefined** is returned. For details, see the preceding description. |
 
 **Examples**
 

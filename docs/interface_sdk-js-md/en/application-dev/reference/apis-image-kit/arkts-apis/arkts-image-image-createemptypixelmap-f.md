@@ -36,7 +36,7 @@ The following pixel format is not supported for PixelMap creation: ASTC_4x4.
 
 | Type | Description |
 | --- | --- |
-| PixelMap | The new PixelMap created. |
+| [PixelMap](arkts-image-image-pixelmap-i.md) | The new PixelMap created. |
 
 **Error codes:**
 

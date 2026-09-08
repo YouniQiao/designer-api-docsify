@@ -62,7 +62,7 @@ type: ChangeType
 
 表示发生变化的数据的类型，数据或者资产附件发生变化。
 
-**类型：** ChangeType
+**类型：** [ChangeType](arkts-arkdata-relationalstore-changetype-e.md)
 
 **起始版本：** 10
 

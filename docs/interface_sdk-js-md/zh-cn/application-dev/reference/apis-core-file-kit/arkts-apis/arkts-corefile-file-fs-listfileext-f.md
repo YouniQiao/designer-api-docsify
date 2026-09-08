@@ -46,30 +46,3 @@ declare function listFileExt(
 | 13900011 | Out of memory |
 | 13900018 | Not a directory |
 | 13900020 | Invalid argument |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { fileIo, ListFileExtOptions, FileFilter } from '@kit.CoreFileKit';
-
-let filter: FileFilter = {
-  filter: (name: string): boolean => {
-    return name.endsWith('.txt');
-  }
-};
-let options: ListFileExtOptions = {
-  recursion: false,
-  listNum: 0,
-  fileFilter: filter
-};
-fileIo.listFileExt(pathDir, options).then((filenames: Array<string>) => {
-  console.info(`Succeeded in listing file.`);
-  for (let i = 0; i < filenames.length; i++) {
-    console.info(`Succeeded in listing file, file name: ${filenames[i]}`);
-  }
-}).catch((error: Error) => {
-  let err: BusinessError = error as BusinessError;
-  console.error(`Failed to list file. Code: ${err.code}, message: ${err.message}`);
-});
-```

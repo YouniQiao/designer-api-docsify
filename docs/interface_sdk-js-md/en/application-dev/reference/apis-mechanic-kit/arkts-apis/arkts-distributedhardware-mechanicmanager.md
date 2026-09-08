@@ -46,8 +46,8 @@ import { mechanicManager } from '@kit.MechanicKit';
 | [isSupportAction](arkts-mechanic-mechanicmanager-issupportaction-f-sys.md) | Check whether the specific action type is supported. |
 | [move](arkts-mechanic-mechanicmanager-move-f-sys.md) | Move a mechanical device with the specified parameters. |
 | [moveBySpeed](arkts-mechanic-mechanicmanager-movebyspeed-f-sys.md) | Move a mechanical device at the specified speed. |
-| off | Unregister a listener for axis state changes. |
-| on | Register a listener for axis state changes. The status of the rotation axis changes dynamically, which needs to be monitored. |
+| [off](arkts-mechanic-mechanicmanager-off-f.md) | Unregister a listener for axis state changes. |
+| [on](arkts-mechanic-mechanicmanager-on-f.md) | Register a listener for axis state changes. The status of the rotation axis changes dynamically, which needs to be monitored. |
 | [rotate](arkts-mechanic-mechanicmanager-rotate-f-sys.md) | Rotates a mechanical device to the relative angles. |
 | [rotateBySpeed](arkts-mechanic-mechanicmanager-rotatebyspeed-f-sys.md) | Rotates a mechanical device at the specified speed. |
 | [rotateToEulerAngles](arkts-mechanic-mechanicmanager-rotatetoeulerangles-f-sys.md) | Rotates a mechanical device to the absolute angles. |
@@ -94,9 +94,9 @@ import { mechanicManager } from '@kit.MechanicKit';
 | Name | Description |
 | --- | --- |
 | [AttachState](arkts-mechanic-mechanicmanager-attachstate-e.md) | Device attach states. |
-| [CameraTrackingLayout](arkts-mechanic-mechanicmanager-cameratrackinglayout-e.md) | Enumerates the camera tracking layouts. @enum { number } |
-| [MechDeviceType](arkts-mechanic-mechanicmanager-mechdevicetype-e.md) | Enumerates the mechanical device types. @enum { number } |
-| [TrackingEvent](arkts-mechanic-mechanicmanager-trackingevent-e.md) | Enumerates the tracking events. @enum { number } |
+| [CameraTrackingLayout](arkts-mechanic-mechanicmanager-cameratrackinglayout-e.md) | Enumerates the camera tracking layouts. @enum { int } |
+| [MechDeviceType](arkts-mechanic-mechanicmanager-mechdevicetype-e.md) | Enumerates the mechanical device types. @enum { int } |
+| [TrackingEvent](arkts-mechanic-mechanicmanager-trackingevent-e.md) | Enumerates the tracking events. @enum { int } |
 
 <!--Del-->
 ### Enums(System API)
@@ -106,11 +106,11 @@ import { mechanicManager } from '@kit.MechanicKit';
 | [ActionType](arkts-mechanic-mechanicmanager-actiontype-e-sys.md) | Type of action sequence. |
 | [AddressType](arkts-mechanic-mechanicmanager-addresstype-e-sys.md) | Mechanic device address type. |
 | [MarchingMode](arkts-mechanic-mechanicmanager-marchingmode-e-sys.md) | Marching mode definition. |
-| [MechDeviceType](arkts-mechanic-mechanicmanager-mechdevicetype-e-sys.md) | Enumerates the mechanical device types. @enum { number } |
+| [MechDeviceType](arkts-mechanic-mechanicmanager-mechdevicetype-e-sys.md) | Enumerates the mechanical device types. @enum { int } |
 | [MechEventType](arkts-mechanic-mechanicmanager-mecheventtype-e-sys.md) | Mechanic event definition. |
-| [Operation](arkts-mechanic-mechanicmanager-operation-e-sys.md) | Enumerates the user operations. @enum { number } |
+| [Operation](arkts-mechanic-mechanicmanager-operation-e-sys.md) | Enumerates the user operations. @enum { int } |
 | [Result](arkts-mechanic-mechanicmanager-result-e-sys.md) | Rotation execution results. |
-| [RotationAxisLimited](arkts-mechanic-mechanicmanager-rotationaxislimited-e-sys.md) | Enumerates the rotation axis limit states. @enum { number } |
+| [RotationAxisLimited](arkts-mechanic-mechanicmanager-rotationaxislimited-e-sys.md) | Enumerates the rotation axis limit states. @enum { int } |
 | [SearchDirection](arkts-mechanic-mechanicmanager-searchdirection-e-sys.md) | Search direction. |
 | [SpeedGear](arkts-mechanic-mechanicmanager-speedgear-e-sys.md) | Speed gear definition. |
 | [TargetType](arkts-mechanic-mechanicmanager-targettype-e-sys.md) | Target type. |

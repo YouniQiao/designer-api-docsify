@@ -30,7 +30,7 @@ Obtains the color space type.
 
 | Type | Description |
 | --- | --- |
-| ColorSpace | Color space type. |
+| [ColorSpace](arkts-arkgraphics2d-colorspacemanager-colorspace-e.md) | Color space type. |
 
 **Error codes:**
 

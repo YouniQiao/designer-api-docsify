@@ -40,7 +40,7 @@ sourceType?: SourceType
 
 The expected audio source type configured by the application when enabling the recording controller. It is used to match the corresponding recording scenario and noise reduction mode.
 
-**Type:** SourceType
+**Type:** [SourceType](arkts-audio-audio-sourcetype-e.md)
 
 **Since:** 26.0.0
 

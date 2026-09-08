@@ -22,7 +22,7 @@ create the instance of hid profile.
 
 | Type | Description |
 | --- | --- |
-| HidHostProfile | Returns the instance of hid profile. |
+| [HidHostProfile](arkts-connectivity-bluetoothmanager-hidhostprofile-i.md) | Returns the instance of hid profile. |
 
 **Error codes:**
 

@@ -87,6 +87,7 @@ struct Index {
 ```
 
 该示例主要演示使用Colors中的brand、primary、onPrimary和container设置组件主题色。
+从API版本26.0.0开始，Colors新增primary、onPrimary和container属性。
 
 ```TypeScript
 import { CustomColors } from '@kit.ArkUI';

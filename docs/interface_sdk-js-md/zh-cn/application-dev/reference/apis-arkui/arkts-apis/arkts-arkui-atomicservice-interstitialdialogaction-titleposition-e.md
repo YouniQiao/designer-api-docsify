@@ -4,8 +4,8 @@
 
 | 名称 | 值 | 说明 |  
 | - | - | - |  
-| TOP | 0 | 设置主标题位于副标题之上。默认值。 |
-| BOTTOM | 1 | 设置主标题位于副标题之下。 |
+| [TOP](arkts-arkui-atomicservice-interstitialdialogaction-titleposition-e.md) | 0 | 设置主标题位于副标题之上。默认值。 |
+| [BOTTOM](arkts-arkui-atomicservice-interstitialdialogaction-titleposition-e.md) | 1 | 设置主标题位于副标题之下。 |
 
 **起始版本：** 12
 

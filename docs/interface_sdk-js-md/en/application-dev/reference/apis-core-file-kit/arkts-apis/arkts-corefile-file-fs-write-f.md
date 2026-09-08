@@ -55,23 +55,6 @@ Writes data into a file. This API uses a promise to return the result.
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let filePath = pathDir + "/test.txt";
-let file = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE | fileIo.OpenMode.CREATE);
-let str: string = "hello, world";
-fileIo.write(file.fd, str).then((writeLen: number) => {
-  console.info(`Succeeded in writing data to file, size is: ${writeLen}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to write data to file. Code: ${err.code}, message: ${err.message}`);
-}).finally(() => {
-  fileIo.closeSync(file);
-});
-```
-
 
 ## write
 
@@ -111,24 +94,6 @@ Writes data to a file. This API uses an asynchronous callback to return the resu
 | 13900034 | Operation would block |
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let filePath = pathDir + "/test.txt";
-let file = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE | fileIo.OpenMode.CREATE);
-let str: string = "hello, world";
-fileIo.write(file.fd, str, (err: BusinessError, writeLen: number) => {
-  if (err) {
-    console.error(`Failed to write data to file. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info(`Succeeded in writing data to file, size is: ${writeLen}`);
-  }
-  fileIo.closeSync(file);
-});
-```
 
 
 ## write
@@ -175,26 +140,3 @@ Writes data to a file. This API uses an asynchronous callback to return the resu
 | 13900034 | Operation would block |
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { WriteOptions } from '@kit.CoreFileKit';
-
-let filePath = pathDir + "/test.txt";
-let file = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE | fileIo.OpenMode.CREATE);
-let str: string = "hello, world";
-let writeOptions: WriteOptions = {
-  offset: 1,
-  length: 5
-};
-fileIo.write(file.fd, str, writeOptions, (err: BusinessError, writeLen: number) => {
-  if (err) {
-    console.error(`Failed to write data to file. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info(`Succeeded in writing data to file, size is: ${writeLen}`);
-  }
-  fileIo.closeSync(file);
-});
-```

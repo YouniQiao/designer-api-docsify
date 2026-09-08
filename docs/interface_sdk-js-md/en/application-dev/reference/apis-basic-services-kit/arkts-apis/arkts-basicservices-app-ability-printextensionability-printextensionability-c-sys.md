@@ -32,7 +32,7 @@ Called once to request preview and send result to Print SA.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| jobInfo | print.PrintJob | Yes | Indicates the information of job. |
+| jobInfo | [print.PrintJob](arkts-basicservices-print-printjob-i.md) | Yes | Indicates the information of job. |
 
 **Return value:**
 

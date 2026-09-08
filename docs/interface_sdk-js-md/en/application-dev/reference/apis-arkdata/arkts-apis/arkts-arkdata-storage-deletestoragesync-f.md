@@ -24,18 +24,3 @@ Deletes the singleton **Storage** instance of a file from the memory, and delete
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | path | string | Yes | Path of the target file. |
-
-**Examples**
-
-```TypeScript
-import featureAbility from '@ohos.ability.featureAbility';
-
-let path;
-let context = featureAbility.getContext();
-context.getFilesDir().then((filePath) => {
-    path = filePath;
-    console.info("======================>getFilesDirPromise====================>");
-
-    data_storage.deleteStorageSync(path + '/mystore');
-});
-```

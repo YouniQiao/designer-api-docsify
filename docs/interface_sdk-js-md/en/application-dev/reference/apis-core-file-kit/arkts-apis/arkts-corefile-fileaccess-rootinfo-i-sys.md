@@ -74,7 +74,7 @@ Obtains a **FileIterator** object that lists the next-level files or directories
 | 13900025 | No space left on device |
 | 13900027 | Read-only file system |
 | 13900029 | Resource deadlock would occur |
-| 13900030 | File name too number |
+| 13900030 | File name too long |
 | 13900033 | Too many symbolic links encountered |
 | 13900034 | Operation would block |
 | 13900038 | Value too large for defined data type |
@@ -90,36 +90,6 @@ Obtains a **FileIterator** object that lists the next-level files or directories
 | 14300004 | Get wrong result |
 
 **Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-// fileInfoDir indicates information about a directory.
-// let filter = { suffix : [".txt", ".jpg", ".xlsx"] };
-let fileInfoDir :Array<fileAccess.FileInfo> = [];
-let subfileInfos: Array<fileAccess.FileInfo> = [];
-let isDone: boolean = false;
-try {
-  for (let i = 0; i < fileInfoDir.length; ++i) {
-    let fileIterator = fileInfoDir[i].listFile();
-    // listFile() with the filter implementation.
-    // let fileIterator = fileInfoDir.listFile(filter);
-    if (!fileIterator) {
-      console.error("listFile interface returns an undefined object");
-    }
-    while (!isDone) {
-      let result = fileIterator.next();
-      console.info("next result = " + JSON.stringify(result));
-      isDone = result.done;
-      if (!isDone) {
-        subfileInfos.push(result.value);
-      }
-    }
-  }
-} catch (err) {
-  let error: BusinessError = err as BusinessError;
-  console.error("listFile failed, errCode:" + error.code + ", errMessage:" + error.message);
-}
-```
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -207,7 +177,7 @@ Obtains a **FileIterator** object that recursively retrieves the files matching 
 | 13900025 | No space left on device |
 | 13900027 | Read-only file system |
 | 13900029 | Resource deadlock would occur |
-| 13900030 | File name too number |
+| 13900030 | File name too long |
 | 13900033 | Too many symbolic links encountered |
 | 13900034 | Operation would block |
 | 13900038 | Value too large for defined data type |
@@ -223,36 +193,6 @@ Obtains a **FileIterator** object that recursively retrieves the files matching 
 | 14300004 | Get wrong result |
 
 **Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-// fileInfoDir indicates information about a directory.
-// let filter = {suffix : [".txt", ".jpg", ".xlsx"]};
-let fileInfoDir: Array<fileAccess.FileInfo> = [];
-let subfileInfos: Array<fileAccess.FileInfo> = [];
-let isDone: boolean = false;
-try {
-  for (let i = 0; i < fileInfoDir.length; ++i) {
-    let fileIterator = fileInfoDir[i].scanFile();
-    // scanFile() with the filter implementation.
-    // let fileIterator = fileInfoDir.scanFile(filter);
-    if (!fileIterator) {
-      console.error("scanFile interface returns an undefined object");
-    }
-    while (!isDone) {
-      let result = fileIterator.next();
-      console.info("next result = " + JSON.stringify(result));
-      isDone = result.done;
-      if (!isDone) {
-        subfileInfos.push(result.value);
-      }
-    }
-  }
-} catch (err) {
-  let error: BusinessError = err as BusinessError;
-  console.error("scanFile failed, errCode:" + error.code + ", errMessage:" + error.message);
-}
-```
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

@@ -34,7 +34,7 @@ data: Array<RequestData>
 
 Form data in the request body.
 
-**Type:** Array&lt;RequestData&gt;
+**Type:** Array&lt;[RequestData](arkts-basicservices-request-requestdata-i.md)&gt;
 
 **Since:** 6
 
@@ -62,7 +62,7 @@ files: Array<File>
 
 List of files to upload. The files are submitted in multipart/form-data format.
 
-**Type:** Array&lt;File&gt;
+**Type:** Array&lt;[File](arkts-basicservices-request-file-i.md)&gt;
 
 **Since:** 6
 

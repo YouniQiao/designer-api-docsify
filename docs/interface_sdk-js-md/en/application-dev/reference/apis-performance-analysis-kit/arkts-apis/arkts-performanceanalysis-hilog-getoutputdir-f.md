@@ -35,6 +35,7 @@ hilog.info(0x0001, "testTag", 'sandbox output dir:%{public}s', dir);
 ```
 
 Log result:
+Console output.
 
 ```TypeScript
 05-15 16:57:04.238  40518-40518  A00001/testTag  com.example.hilogDemo  I  sandbox output dir:/data/storage/el2/log/hiapplog/

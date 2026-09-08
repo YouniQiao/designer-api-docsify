@@ -19,14 +19,3 @@ callback for deleting the forms.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | formIds | Array&lt;string&gt; | Yes | the form Id list of the forms to delete. |
-
-**Examples**
-
-```TypeScript
-import { formInfo } from '@kit.FormKit';
-
-let deleteFormsCallback: formInfo.DeleteFormsCallback =
-  (formIds: Array<string>): void => {
-    console.info('delete forms callback, form count: ' + formIds.length);
-  };
-```

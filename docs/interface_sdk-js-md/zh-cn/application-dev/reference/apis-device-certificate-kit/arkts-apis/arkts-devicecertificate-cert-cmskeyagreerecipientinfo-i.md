@@ -20,7 +20,7 @@ cert: X509Cert
 
 EC证书。
 
-**类型：** X509Cert
+**类型：** [X509Cert](arkts-devicecertificate-cert-x509cert-i.md)
 
 **起始版本：** 22
 

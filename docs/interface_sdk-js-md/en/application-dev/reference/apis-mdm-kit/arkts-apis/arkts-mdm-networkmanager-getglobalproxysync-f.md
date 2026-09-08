@@ -32,7 +32,7 @@ Obtains the global network proxy. This API is suitable for enterprise network ma
 
 | Type | Description |
 | --- | --- |
-| connection.HttpProxy | Global HTTP proxy configuration information. |
+| [connection.HttpProxy](../../apis-network-kit/arkts-apis/arkts-network-connection-httpproxy-i.md) | Global HTTP proxy configuration information. |
 
 **Error codes:**
 

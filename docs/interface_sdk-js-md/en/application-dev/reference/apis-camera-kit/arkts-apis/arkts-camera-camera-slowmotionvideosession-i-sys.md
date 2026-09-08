@@ -395,7 +395,7 @@ Sets an area for slow-motion detection.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| area | Rect | Yes | Area. |
+| area | [Rect](arkts-camera-camera-rect-i.md) | Yes | Area. |
 
 **Error codes:**
 

@@ -275,7 +275,7 @@ Unsubscribe P2P connection change events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'p2pConnectionChange' | Yes | event name. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;WifiP2pLinkedInfo&gt; | No | the callback of on |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[WifiP2pLinkedInfo](arkts-connectivity-wifi-wifip2plinkedinfo-i.md)&gt; | No | the callback of on |
 
 **Examples**
 
@@ -317,7 +317,7 @@ Unsubscribe P2P local device change events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'p2pDeviceChange' | Yes | event name. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;WifiP2pDevice&gt; | No | the callback of on |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[WifiP2pDevice](arkts-connectivity-wifi-wifip2pdevice-i.md)&gt; | No | the callback of on |
 
 **Examples**
 
@@ -359,7 +359,7 @@ Unsubscribe P2P peer device change events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'p2pPeerDeviceChange' | Yes | event name. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;WifiP2pDevice[]&gt; | No | the callback of on |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[WifiP2pDevice](arkts-connectivity-wifi-wifip2pdevice-i.md)[]&gt; | No | the callback of on |
 
 **Examples**
 

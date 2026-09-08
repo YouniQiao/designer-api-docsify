@@ -44,24 +44,6 @@ getExposureMeteringMode(): ExposureMeteringMode
 | [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config, only throw in session usage. |
 | [7400102](../errorcode-camera.md#7400102-非法操作) | Operation not allowed, the inputDevice or the session is abnormal.<br>**适用版本：** 24+ |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function getExposureMeteringMode(photoSession: camera.PhotoSession): camera.ExposureMeteringMode {
-  let meteringMode: camera.ExposureMeteringMode = camera.ExposureMeteringMode.MATRIX;
-  try {
-    meteringMode = photoSession.getExposureMeteringMode();
-  } catch (error) {
-    // 失败返回错误码error.code并处理。
-    let err = error as BusinessError;
-    console.error(`The getExposureMeteringMode call failed. error code: ${err.code}`);
-  }
-  return meteringMode;
-}
-```
-
 ## getExposureMode
 
 ```TypeScript
@@ -92,40 +74,6 @@ getExposureMode(): ExposureMode
 | --- | --- |
 | [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function getExposureMode(photoSession: camera.PhotoSession): camera.ExposureMode | undefined {
-  let exposureMode: camera.ExposureMode | undefined = undefined;
-  try {
-    exposureMode = photoSession.getExposureMode();
-  } catch (error) {
-    // 失败返回错误码error.code并处理。
-    let err = error as BusinessError;
-    console.error(`The getExposureMode call failed. error code: ${err.code}`);
-  }
-  return exposureMode;
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function getExposureMode(captureSession: camera.CaptureSession): camera.ExposureMode | undefined {
-  let exposureMode: camera.ExposureMode | undefined = undefined;
-  try {
-    exposureMode = captureSession.getExposureMode();
-  } catch (error) {
-    // 失败返回错误码error.code并处理。
-    let err = error as BusinessError;
-    console.error(`The getExposureMode call failed. error code: ${err.code}`);
-  }
-  return exposureMode;
-}
-```
-
 ## getExposureValue
 
 ```TypeScript
@@ -152,42 +100,6 @@ getExposureValue(): number
 | --- | --- |
 | [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function getExposureValue(photoSession: camera.PhotoSession): number {
-  const invalidValue: number = -1;
-  let exposureValue: number = invalidValue;
-  try {
-    exposureValue = photoSession.getExposureValue();
-  } catch (error) {
-    // 失败返回错误码error.code并处理。
-    let err = error as BusinessError;
-    console.error(`The getExposureValue call failed. error code: ${err.code}`);
-  }
-  return exposureValue;
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function getExposureValue(captureSession: camera.CaptureSession): number {
-  const invalidValue: number = -1;
-  let exposureValue: number = invalidValue;
-  try {
-    exposureValue = captureSession.getExposureValue();
-  } catch (error) {
-    // 失败返回错误码error.code并处理。
-    let err = error as BusinessError;
-    console.error(`The getExposureValue call failed. error code: ${err.code}`);
-  }
-  return exposureValue;
-}
-```
-
 ## getMeteringPoint
 
 ```TypeScript
@@ -206,47 +118,13 @@ getMeteringPoint(): Point
 
 | 类型 | 说明 |
 | --- | --- |
-| Point | 获取当前曝光点。接口调用失败会返回相应错误码，错误码类型[CameraErrorCode]{ |
+| [Point](arkts-camera-camera-point-i.md) | 获取当前曝光点。接口调用失败会返回相应错误码，错误码类型[CameraErrorCode]{ |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function getMeteringPoint(photoSession: camera.PhotoSession): camera.Point | undefined {
-  let exposurePoint: camera.Point | undefined = undefined;
-  try {
-    exposurePoint = photoSession.getMeteringPoint();
-  } catch (error) {
-    // 失败返回错误码error.code并处理。
-    let err = error as BusinessError;
-    console.error(`The getMeteringPoint call failed. error code: ${err.code}`);
-  }
-  return exposurePoint;
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function getMeteringPoint(captureSession: camera.CaptureSession): camera.Point | undefined {
-  let exposurePoint: camera.Point | undefined = undefined;
-  try {
-    exposurePoint = captureSession.getMeteringPoint();
-  } catch (error) {
-    // 失败返回错误码error.code并处理。
-    let err = error as BusinessError;
-    console.error(`The getMeteringPoint call failed. error code: ${err.code}`);
-  }
-  return exposurePoint;
-}
-```
 
 ## offExposureStateChange
 
@@ -270,24 +148,6 @@ offExposureStateChange(callback?: Callback<ExposureState>): void
 | --- | --- | --- | --- |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ExposureState](arkts-camera-camera-exposurestate-e.md)&gt; | 否 | 回调函数，如果指定参数则取消对应callback，callback对象如果为空或为匿名函数，则取消所有callback。 |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function callback(exposureState: camera.ExposureState): void {
-  console.info(`exposureState: ${exposureState}`);
-}
-
-function unregisterPhotoOutputCaptureStart(captureSession: camera.PhotoSession): void {
-  captureSession.offExposureStateChange(callback);
-}
-
-function unregisterPhotoOutputCaptureStartWithoutParam(captureSession: camera.PhotoSession): void {
-  captureSession.offExposureStateChange();
-}
-```
-
 ## onExposureStateChange
 
 ```TypeScript
@@ -309,20 +169,6 @@ onExposureStateChange(callback: Callback<ExposureState>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ExposureState](arkts-camera-camera-exposurestate-e.md)&gt; | 是 | 回调函数，返回当前曝光状态。 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function callback(exposureState: camera.ExposureState): void {
-  console.info(`exposureState: ${exposureState}`);
-}
-
-function registerPhotoOutputCaptureStart(captureSession: camera.PhotoSession): void {
-  captureSession.onExposureStateChange(callback);
-}
-```
 
 ## setExposureBias
 
@@ -353,42 +199,6 @@ setExposureBias(exposureBias: number): void
 | [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
 | [7400102](../errorcode-camera.md#7400102-非法操作) | Operation not allowed.<br>**适用版本：** 12+ |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function setExposureBias(photoSession: camera.PhotoSession, biasRangeArray: Array<number>): void {
-  if (biasRangeArray && biasRangeArray.length > 0) {
-    let exposureBias = biasRangeArray[0];
-    try {
-      photoSession.setExposureBias(exposureBias);
-    } catch (error) {
-      // 失败返回错误码error.code并处理。
-      let err = error as BusinessError;
-      console.error(`The setExposureBias call failed. error code: ${err.code}`);
-    }
-  }
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function setExposureBias(captureSession: camera.CaptureSession, biasRangeArray: Array<number>): void {
-  if (biasRangeArray && biasRangeArray.length > 0) {
-    let exposureBias = biasRangeArray[0];
-    try {
-      captureSession.setExposureBias(exposureBias);
-    } catch (error) {
-      // 失败返回错误码error.code并处理。
-      let err = error as BusinessError;
-      console.error(`The setExposureBias call failed. error code: ${err.code}`);
-    }
-  }
-}
-```
-
 ## setExposureMeteringMode
 
 ```TypeScript
@@ -418,22 +228,6 @@ setExposureMeteringMode(aeMeteringMode: ExposureMeteringMode): void
 | [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config, only throw in session usage. |
 | [7400102](../errorcode-camera.md#7400102-非法操作) | Operation not allowed, the inputDevice or the session is abnormal.<br>**适用版本：** 24+ |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function setExposureMeteringMode(photoSession: camera.PhotoSession, aeMeteringMode: camera.ExposureMeteringMode): void {
-  try {
-    photoSession.setExposureMeteringMode(aeMeteringMode);
-  } catch (error) {
-    // 失败返回错误码error.code并处理。
-    let err = error as BusinessError;
-    console.error(`The setExposureMeteringMode call failed. error code: ${err.code}`);
-  }
-}
-```
-
 ## setExposureMode
 
 ```TypeScript
@@ -461,36 +255,6 @@ setExposureMode(aeMode: ExposureMode): void
 | [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
 | [7400102](../errorcode-camera.md#7400102-非法操作) | Operation not allowed.<br>**适用版本：** 19+ |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function setExposureMode(photoSession: camera.PhotoSession): void {
-  try {
-    photoSession.setExposureMode(camera.ExposureMode.EXPOSURE_MODE_LOCKED);
-  } catch (error) {
-    // 失败返回错误码error.code并处理。
-    let err = error as BusinessError;
-    console.error(`The setExposureMode call failed. error code: ${err.code}`);
-  }
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function setExposureMode(captureSession: camera.CaptureSession): void {
-  try {
-    captureSession.setExposureMode(camera.ExposureMode.EXPOSURE_MODE_LOCKED);
-  } catch (error) {
-    // 失败返回错误码error.code并处理。
-    let err = error as BusinessError;
-    console.error(`The setExposureMode call failed. error code: ${err.code}`);
-  }
-}
-```
-
 ## setMeteringPoint
 
 ```TypeScript
@@ -511,42 +275,10 @@ setMeteringPoint(point: Point): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| point | Point | 是 | 曝光点，x、y设置范围应在[0，1]之内，超过范围，如果小于0设置0，大于1设置1。 |
+| point | [Point](arkts-camera-camera-point-i.md) | 是 | 曝光点，x、y设置范围应在[0，1]之内，超过范围，如果小于0设置0，大于1设置1。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function setMeteringPoint(photoSession: camera.PhotoSession): void {
-  const point: camera.Point = {x: 1, y: 1};
-  try {
-    photoSession.setMeteringPoint(point);
-  } catch (error) {
-    // 失败返回错误码error.code并处理。
-    let err = error as BusinessError;
-    console.error(`The setMeteringPoint call failed. error code: ${err.code}`);
-  }
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function setMeteringPoint(captureSession: camera.CaptureSession): void {
-  const point: camera.Point = {x: 1, y: 1};
-  try {
-    captureSession.setMeteringPoint(point);
-  } catch (error) {
-    // 失败返回错误码error.code并处理。
-    let err = error as BusinessError;
-    console.error(`The setMeteringPoint call failed. error code: ${err.code}`);
-  }
-}
-```

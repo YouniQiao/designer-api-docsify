@@ -25,7 +25,7 @@ subtype?: PhotoSubtype
 
 Subtype of the image or video file.
 
-**Type:** PhotoSubtype
+**Type:** [PhotoSubtype](arkts-medialibrary-photoaccesshelper-photosubtype-e.md)
 
 **Since:** 12
 

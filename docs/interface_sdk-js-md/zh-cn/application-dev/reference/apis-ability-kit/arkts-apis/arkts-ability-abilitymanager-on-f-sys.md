@@ -27,7 +27,7 @@ function on(type: 'abilityForegroundState', observer: AbilityForegroundStateObse
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'abilityForegroundState' | 是 | 调用接口类型，固定填'abilityForegroundState'字符串。 |
-| observer | AbilityForegroundStateObserver | 是 | Ability状态观测器，用于观测Ability的启动和退出。 |
+| observer | [AbilityForegroundStateObserver](arkts-ability-abilitymanager-abilityforegroundstateobserver-t-sys.md) | 是 | Ability状态观测器，用于观测Ability的启动和退出。 |
 
 **错误码：**
 

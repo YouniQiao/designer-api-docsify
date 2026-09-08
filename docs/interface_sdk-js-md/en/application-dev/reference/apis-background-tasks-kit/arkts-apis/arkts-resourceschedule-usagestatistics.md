@@ -1,4 +1,4 @@
-# @ohos.resourceschedule.usageStatistics
+# @ohos.resourceschedule.usageStatistics(Device Usage Statistics)
 
 Provides methods for managing bundle usage statistics, including the methods for querying bundle usage information and state data.
 

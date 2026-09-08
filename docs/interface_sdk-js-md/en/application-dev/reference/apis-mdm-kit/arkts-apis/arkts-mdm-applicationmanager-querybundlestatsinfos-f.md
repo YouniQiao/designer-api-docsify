@@ -35,7 +35,7 @@ Queries the accumulated foreground runtime statistics of applications under a sp
 
 | Type | Description |
 | --- | --- |
-| Array&lt;BundleStatsInfo&gt; | Array of application bundle statistics. |
+| Array&lt;[BundleStatsInfo](arkts-mdm-applicationmanager-bundlestatsinfo-i.md)&gt; | Array of application bundle statistics. |
 
 **Error codes:**
 

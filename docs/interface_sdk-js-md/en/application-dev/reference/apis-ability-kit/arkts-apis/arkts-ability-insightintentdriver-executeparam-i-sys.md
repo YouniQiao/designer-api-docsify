@@ -94,7 +94,7 @@ executeMode: insightIntent.ExecuteMode
 
 Intent execution mode. If an intent defined by the [@InsightIntentLink](../../../reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintentlink) decorator is used to implement application redirection, this parameter must be filled (with any value that conforms to the definition), although it will not actually take effect.
 
-**Type:** insightIntent.ExecuteMode
+**Type:** [insightIntent.ExecuteMode](arkts-ability-insightintent-executemode-e.md)
 
 **Since:** 11
 

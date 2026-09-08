@@ -27,4 +27,4 @@ Register for an event
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | string | Yes | Indicates the type of event registered. |
-| listener | EventListener | Yes | Represents the registered event function |
+| listener | [EventListener](arkts-arkts-process-eventlistener-t.md) | Yes | Represents the registered event function |

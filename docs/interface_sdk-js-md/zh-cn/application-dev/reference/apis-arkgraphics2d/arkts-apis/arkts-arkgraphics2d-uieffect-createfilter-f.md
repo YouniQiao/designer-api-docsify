@@ -22,7 +22,7 @@ function createFilter(): Filter
 
 | 类型 | 说明 |
 | --- | --- |
-| Filter | 返回Filter实例，支持添加多种Filter效果。 |
+| [Filter](arkts-arkgraphics2d-uieffect-filter-i.md) | 返回Filter实例，支持添加多种Filter效果。 |
 
 **示例**
 

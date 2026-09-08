@@ -36,7 +36,7 @@ Adds an event, with no event ID, instanceStartTime, and instanceEndTime specifie
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | Event | Yes | Event object. |
+| event | [Event](arkts-calendar-calendarmanager-event-i.md) | Yes | Event object. |
 
 **Return value:**
 
@@ -105,7 +105,7 @@ Adds an event, with no event ID, instanceStartTime, and instanceEndTime specifie
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | Event | Yes | Event object. |
+| event | [Event](arkts-calendar-calendarmanager-event-i.md) | Yes | Event object. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the event ID. The event ID is the unique identifier of an event and is the auto-increment primary key of the database. If the value is less than 0, the event creation fails; if the value is greater than 0, the event creation succeeds. |
 
 **Error codes:**
@@ -167,7 +167,7 @@ Adds events in batches, with no event ID, instanceStartTime, and instanceEndTime
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| events | Event[] | Yes | Array of Event objects. |
+| events | [Event](arkts-calendar-calendarmanager-event-i.md)[] | Yes | Array of Event objects. |
 
 **Return value:**
 
@@ -241,7 +241,7 @@ Adds events in batches, with no event ID, instanceStartTime, and instanceEndTime
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| events | Event[] | Yes | Array of Event objects. |
+| events | [Event](arkts-calendar-calendarmanager-event-i.md)[] | Yes | Array of Event objects. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
@@ -679,7 +679,7 @@ Obtains all events in a calendar that match the filter criteria. This API uses a
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Event[]&gt; | Promise used to return the result, which is an array of Event objects. |
+| Promise&lt;[Event](arkts-calendar-calendarmanager-event-i.md)[]&gt; | Promise used to return the result, which is an array of Event objects. |
 
 **Error codes:**
 
@@ -751,7 +751,7 @@ Obtains all events in a calendar that match the filter criteria. This API uses a
 | --- | --- | --- | --- |
 | eventFilter | [EventFilter](arkts-calendar-calendarmanager-eventfilter-c.md) | Yes | Filter criteria. |
 | eventKey | (keyof Event)[] | Yes | Filter field. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Event[]&gt; | Yes | Callback used to return an array of events. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Event](arkts-calendar-calendarmanager-event-i.md)[]&gt; | Yes | Callback used to return an array of events. |
 
 **Error codes:**
 
@@ -836,7 +836,7 @@ For versions earlier than API version 20, the default fields to be obtained incl
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Event[]&gt; | Yes | Callback used to return an array of events. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Event](arkts-calendar-calendarmanager-event-i.md)[]&gt; | Yes | Callback used to return an array of events. |
 
 **Error codes:**
 
@@ -991,7 +991,7 @@ Queries the event instance with a specified event key in a calendar. This API us
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Event[]&gt; | Promise used to return the result, which is an array of Event objects. |
+| Promise&lt;[Event](arkts-calendar-calendarmanager-event-i.md)[]&gt; | Promise used to return the result, which is an array of Event objects. |
 
 **Error codes:**
 
@@ -1173,7 +1173,7 @@ Updates an event, with the ID of the updated event specified in Event. This API 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | Event | Yes | Event object. |
+| event | [Event](arkts-calendar-calendarmanager-event-i.md) | Yes | Event object. |
 
 **Return value:**
 
@@ -1239,7 +1239,7 @@ Updates an event. The ID of the updated event must be specified in Event. If not
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | Event | Yes | Event object. |
+| event | [Event](arkts-calendar-calendarmanager-event-i.md) | Yes | Event object. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The callback of updateEvent. |
 
 **Examples**

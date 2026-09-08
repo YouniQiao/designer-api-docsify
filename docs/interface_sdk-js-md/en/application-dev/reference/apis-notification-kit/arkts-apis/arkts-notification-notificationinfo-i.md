@@ -112,7 +112,7 @@ readonly notificationSlotType: notificationManager.SlotType
 
 Notification slot type, which identifies the slot category of the notification (such as social communication and service reminder). Different slot types correspond to different reminder types.
 
-**Type:** notificationManager.SlotType
+**Type:** [notificationManager.SlotType](arkts-notification-notificationmanager-slottype-e.md)
 
 **Since:** 22
 

@@ -22,13 +22,13 @@ function create(colorSpaceName: ColorSpace): ColorSpaceManager
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| colorSpaceName | ColorSpace | 是 | 标准色域类型枚举值。UNKNOWN与CUSTOM不可用于直接创建色域对象。 |
+| colorSpaceName | [ColorSpace](arkts-arkgraphics2d-colorspacemanager-colorspace-e.md) | 是 | 标准色域类型枚举值。UNKNOWN与CUSTOM不可用于直接创建色域对象。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| ColorSpaceManager | 返回当前创建的色域对象实例。 |
+| [ColorSpaceManager](arkts-arkgraphics2d-colorspacemanager-colorspacemanager-i.md) | 返回当前创建的色域对象实例。 |
 
 **错误码：**
 
@@ -72,7 +72,7 @@ function create(primaries: ColorSpacePrimaries, gamma: number): ColorSpaceManage
 
 | 类型 | 说明 |
 | --- | --- |
-| ColorSpaceManager | 返回当前创建的色域对象实例。 |
+| [ColorSpaceManager](arkts-arkgraphics2d-colorspacemanager-colorspacemanager-i.md) | 返回当前创建的色域对象实例。 |
 
 **错误码：**
 

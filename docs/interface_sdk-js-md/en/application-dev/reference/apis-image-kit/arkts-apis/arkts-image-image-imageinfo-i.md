@@ -88,7 +88,7 @@ pixelFormat: PixelMapFormat
 
 Pixel format.
 
-**Type:** PixelMapFormat
+**Type:** [PixelMapFormat](arkts-image-image-pixelmapformat-e.md)
 
 **Since:** 12
 

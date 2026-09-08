@@ -12,8 +12,8 @@ import { settings } from '@kit.BasicServicesKit';
 function openDoubleClickSettingsPage(context: Context): void
 ```
 
-1. Opens the settings page for number-pressing the Down key.
-2. This API is used to set the default application started by number-pressing the Down key.
+1. Opens the settings page for double-pressing the Down key.
+2. This API is used to set the default application started by double-pressing the Down key.
 
 **Since:** 24
 
@@ -25,7 +25,7 @@ function openDoubleClickSettingsPage(context: Context): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | Yes | 1. Application context. 2. Specify this parameter to set the application started by number-pressing the Down key. |
+| context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | Yes | 1. Application context. 2. Specify this parameter to set the application started by double-pressing the Down key. |
 
 **Error codes:**
 

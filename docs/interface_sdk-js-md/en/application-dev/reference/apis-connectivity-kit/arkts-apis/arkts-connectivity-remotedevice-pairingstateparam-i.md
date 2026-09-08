@@ -36,7 +36,7 @@ preState: PairingState
 
 Indicates the previous pairing state.
 
-**Type:** PairingState
+**Type:** [PairingState](arkts-connectivity-remotedevice-pairingstate-t.md)
 
 **Since:** 26.0.0
 
@@ -84,7 +84,7 @@ state: PairingState
 
 Indicates the current pairing state.
 
-**Type:** PairingState
+**Type:** [PairingState](arkts-connectivity-remotedevice-pairingstate-t.md)
 
 **Since:** 26.0.0
 

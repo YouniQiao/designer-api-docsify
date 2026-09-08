@@ -94,7 +94,7 @@ onTerminated?: Callback<TerminationInfo>
 
 Callback triggered when an embedded atomic service exits normally. Exit scenarios include user-triggered exit button taps or edge swipes, or calls to terminateSelfWithResult or terminateSelf.
 
-**Type:** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;TerminationInfo&gt;
+**Type:** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[TerminationInfo](../arkts-components/arkts-arkui-terminationinfo-i.md)&gt;
 
 **Since:** 18
 

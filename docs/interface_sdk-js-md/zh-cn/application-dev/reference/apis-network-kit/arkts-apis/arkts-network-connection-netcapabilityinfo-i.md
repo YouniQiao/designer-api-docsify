@@ -36,7 +36,7 @@ netHandle: NetHandle
 
 网络句柄。
 
-**类型：** NetHandle
+**类型：** [NetHandle](arkts-network-connection-nethandle-i.md)
 
 **起始版本：** 10
 

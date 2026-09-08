@@ -48,7 +48,7 @@ primaryKey: commonType.ValuesBucket
 
 待绑定资产在所属的数据库中的主键。
 
-**类型：** commonType.ValuesBucket
+**类型：** [commonType.ValuesBucket](arkts-arkdata-commontype-valuesbucket-t.md)
 
 **起始版本：** 11
 

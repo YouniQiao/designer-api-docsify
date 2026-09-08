@@ -32,7 +32,7 @@ Obtains the information about all bundles of the current user based on the given
 
 | Type | Description |
 | --- | --- |
-| Array&lt;BundleInfo&gt; | An array of bundle information. |
+| Array&lt;[BundleInfo](arkts-ability-bundlemanager-bundleinfo-t.md)&gt; | An array of bundle information. |
 
 **Error codes:**
 

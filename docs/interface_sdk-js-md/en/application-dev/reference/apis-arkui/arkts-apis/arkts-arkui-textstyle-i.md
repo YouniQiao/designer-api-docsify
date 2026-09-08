@@ -21,7 +21,7 @@ Word break rule.
 
 Default value: **WordBreak.BREAK_ALL**
 
-**Type:** WordBreak
+**Type:** [WordBreak](arkts-arkui-wordbreak-e.md)
 
 **Since:** 12
 

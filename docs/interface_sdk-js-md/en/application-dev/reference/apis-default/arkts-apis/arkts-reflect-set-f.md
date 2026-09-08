@@ -43,7 +43,7 @@ function set(target: object, propertyKey: PropertyKey, value: any, receiver?: an
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | target | object | Yes |  |
-| propertyKey | PropertyKey | Yes |  |
+| propertyKey | [PropertyKey](arkts-propertykey-t.md) | Yes |  |
 | value | any | Yes |  |
 | receiver | any | No |  |
 

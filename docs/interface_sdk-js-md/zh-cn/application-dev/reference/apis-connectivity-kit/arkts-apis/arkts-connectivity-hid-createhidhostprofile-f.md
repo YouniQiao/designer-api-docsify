@@ -22,7 +22,7 @@ function createHidHostProfile(): HidHostProfile
 
 | 类型 | 说明 |
 | --- | --- |
-| HidHostProfile | 返回HID Host实例。该类继承于[BaseProfile]{ |
+| [HidHostProfile](arkts-connectivity-bluetoothmanager-hidhostprofile-i.md) | 返回HID Host实例。该类继承于[BaseProfile]{ |
 
 **错误码：**
 

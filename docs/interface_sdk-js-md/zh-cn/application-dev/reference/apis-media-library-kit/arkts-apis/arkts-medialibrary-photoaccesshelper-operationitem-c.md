@@ -44,7 +44,7 @@ operationType: OperationType
 
 各类谓词的枚举。
 
-**类型：** OperationType
+**类型：** [OperationType](arkts-medialibrary-photoaccesshelper-operationtype-e.md)
 
 **起始版本：** 22
 

@@ -31,7 +31,7 @@ Intercepts the HTTP processing and modifies it as required.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | reqContext | [HttpRequestContext](arkts-network-http-httprequestcontext-i.md) | Yes | the context of the target HTTP request. |
-| rspContext | HttpResponse | Yes | the context of the target HTTP response. |
+| rspContext | [HttpResponse](arkts-network-http-httpresponse-i.md) | Yes | the context of the target HTTP response. |
 
 **Return value:**
 
@@ -42,6 +42,11 @@ Intercepts the HTTP processing and modifies it as required.
 **Examples**
 
 interceptorHandle(reqContext: HttpRequestContext, rspContext: HttpResponse): Promise<ChainContinue>
+Intercepts the HTTP processing and modifies it as required.
+Atomic service API: This API can be used in atomic services since API version 22.
+System capability: SystemCapability.Communication.NetStack
+Parameters
+Return value
 
 ```TypeScript
 import { http } from '@kit.NetworkKit';

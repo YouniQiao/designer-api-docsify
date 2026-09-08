@@ -36,7 +36,7 @@ photoType: PhotoType
 
 Type of the file to create, which can be **IMAGE** or **VIDEO**. See [PhotoType](arkts-medialibrary-photoaccesshelper-phototype-e.md).
 
-**Type:** PhotoType
+**Type:** [PhotoType](arkts-medialibrary-photoaccesshelper-phototype-e.md)
 
 **Since:** 12
 
@@ -52,7 +52,7 @@ subtype?: PhotoSubtype
 
 Image or video file subtype. The default value is **DEFAULT**. See [PhotoSubtype](arkts-medialibrary-photoaccesshelper-photosubtype-e.md).
 
-**Type:** PhotoSubtype
+**Type:** [PhotoSubtype](arkts-medialibrary-photoaccesshelper-photosubtype-e.md)
 
 **Since:** 12
 

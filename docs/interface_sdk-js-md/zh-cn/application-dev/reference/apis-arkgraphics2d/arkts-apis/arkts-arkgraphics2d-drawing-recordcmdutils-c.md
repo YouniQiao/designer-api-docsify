@@ -37,7 +37,7 @@ beginRecording(width: number, height: number): Canvas
 
 | 类型 | 说明 |
 | --- | --- |
-| Canvas | 返回用于录制绘制指令的画布对象。 |
+| [Canvas](arkts-arkgraphics2d-drawing-canvas-c.md) | 返回用于录制绘制指令的画布对象。 |
 
 **错误码：**
 
@@ -85,21 +85,6 @@ getHeight(): number
 | --- | --- |
 | number | 返回录制画布的高度。 |
 
-**示例**
-
-```TypeScript
-import { RenderNode } from '@kit.ArkUI';
-import { drawing } from '@kit.ArkGraphics2D';
-
-class DrawingRenderNode extends RenderNode {
-  draw(context : DrawContext) {
-    const canvas = context.canvas;
-    let height = canvas.getHeight();
-    console.info('get canvas height:' + height);
-  }
-}
-```
-
 ## getWidth
 
 ```TypeScript
@@ -119,25 +104,3 @@ getWidth(): number
 | 类型 | 说明 |
 | --- | --- |
 | number | 返回录制画布的宽度。 |
-
-**示例**
-
-```TypeScript
-import { RenderNode } from '@kit.ArkUI';
-import { drawing } from '@kit.ArkGraphics2D';
-
-class DrawingRenderNode extends RenderNode {
-  draw(context : DrawContext) {
-    const canvas = context.canvas;
-    let width = canvas.getWidth();
-    console.info('get canvas width:' + width);
-  }
-}
-```
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-const pen = new drawing.Pen();
-let width = pen.getWidth();
-```

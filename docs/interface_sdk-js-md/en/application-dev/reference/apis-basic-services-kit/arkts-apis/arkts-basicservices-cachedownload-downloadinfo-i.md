@@ -20,7 +20,7 @@ readonly network: NetworkInfo
 
 Pre-downloaded network information.
 
-**Type:** NetworkInfo
+**Type:** [NetworkInfo](arkts-basicservices-cachedownload-networkinfo-i.md)
 
 **Since:** 20
 

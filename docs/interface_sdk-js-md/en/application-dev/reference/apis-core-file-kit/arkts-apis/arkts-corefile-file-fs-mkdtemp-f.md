@@ -45,22 +45,10 @@ Creates a temporary directory. This API uses a promise to return the result.
 | 13900020 | Invalid argument |
 | 13900025 | No space left on device |
 | 13900028 | Too many links |
-| 13900030 | File name too number |
+| 13900030 | File name too long |
 | 13900033 | Too many symbolic links encountered |
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-fileIo.mkdtemp(pathDir + "/XXXXXX").then((dir: string) => {
-  console.info(`Succeeded in making temporary directory.`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to make temporary directory. Code: ${err.code}, message: ${err.message}`);
-});
-```
 
 
 ## mkdtemp
@@ -97,21 +85,7 @@ Creates a temporary directory. This API uses an asynchronous callback to return 
 | 13900020 | Invalid argument |
 | 13900025 | No space left on device |
 | 13900028 | Too many links |
-| 13900030 | File name too number |
+| 13900030 | File name too long |
 | 13900033 | Too many symbolic links encountered |
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-fileIo.mkdtemp(pathDir + "/XXXXXX", (err: BusinessError, res: string) => {
-  if (err) {
-    console.error(`Failed to make temporary directory. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info(`Succeeded in making temporary directory.`);
-  }
-});
-```

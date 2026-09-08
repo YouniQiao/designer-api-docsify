@@ -32,18 +32,6 @@ getAppVolumePercentage(): Promise<number>
 | --- | --- |
 | Promise&lt;number&gt; | Promise对象，返回应用的音量。 |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioVolumeManager.getAppVolumePercentage().then((value: number) => {
-  console.info(`Succeeded in obtaining the app volume percentage, appVolumePercentage: ${value}.`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to obtain the app volume percentage. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
 ## getMaxVolumeByStream
 
 ```TypeScript
@@ -75,21 +63,6 @@ getMaxVolumeByStream(streamUsage: StreamUsage): number
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 获取指定音频流的最大音量。
-try {
-  let volume: number = audio.getAudioManager().getVolumeManager().getMaxVolumeByStream(audio.StreamUsage.STREAM_USAGE_MUSIC);
-  console.info(`Succeeded in obtaining the maximum volume by stream, maxVolume: ${volume}.`);
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`Failed to obtain the maximum volume by stream. Code: ${error.code}, message: ${error.message}`);
-}
-```
 
 ## getMinVolumeByStream
 
@@ -123,21 +96,6 @@ getMinVolumeByStream(streamUsage: StreamUsage): number
 | --- | --- |
 | [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 获取指定音频流的最小音量。
-try {
-  let volume: number = audio.getAudioManager().getVolumeManager().getMinVolumeByStream(audio.StreamUsage.STREAM_USAGE_MUSIC);
-  console.info(`Succeeded in obtaining the minimum volume by stream, minVolume: ${volume}.`);
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`Failed to obtain the minimum volume by stream. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
 ## getVolumeByStream
 
 ```TypeScript
@@ -170,21 +128,6 @@ getVolumeByStream(streamUsage: StreamUsage): number
 | --- | --- |
 | [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 获取指定音频流的音量值。
-try {
-  let volume: number = audio.getAudioManager().getVolumeManager().getVolumeByStream(audio.StreamUsage.STREAM_USAGE_MUSIC);
-  console.info(`Succeeded in obtaining the volume by stream, volume: ${volume}.`);
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`Failed to obtain the volume by stream. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
 ## getVolumeGroupManager
 
 ```TypeScript
@@ -203,24 +146,6 @@ getVolumeGroupManager(groupId: number, callback: AsyncCallback<AudioVolumeGroupM
 | --- | --- | --- | --- |
 | groupId | number | 是 | 音量组id，默认使用DEFAULT_VOLUME_GROUP_ID。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AudioVolumeGroupManager](arkts-audio-audio-audiovolumegroupmanager-i.md)&gt; | 是 | 回调函数。当获取音频组音量管理器实例成功，err为undefined，data为获取到的音频组音量管理器实例；否则为错误对象。 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let groupId: number = audio.DEFAULT_VOLUME_GROUP_ID;
-let audioVolumeGroupManager: audio.AudioVolumeGroupManager;
-
-audioVolumeManager.getVolumeGroupManager(groupId, (err: BusinessError, value: audio.AudioVolumeGroupManager) => {
-  if (err) {
-    console.error(`Failed to obtain the volume group manager. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  audioVolumeGroupManager = value;
-  console.info('Succeeded in obtaining the volume group manager.');
-});
-```
 
 ## getVolumeGroupManager
 
@@ -245,22 +170,6 @@ getVolumeGroupManager(groupId: number): Promise<AudioVolumeGroupManager>
 | 类型 | 说明 |
 | --- | --- |
 | Promise&lt;[AudioVolumeGroupManager](arkts-audio-audio-audiovolumegroupmanager-i.md)&gt; | Promise对象，返回音频组音量管理器实例。 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let groupId: number = audio.DEFAULT_VOLUME_GROUP_ID;
-let audioVolumeGroupManager: audio.AudioVolumeGroupManager;
-
-audioVolumeManager.getVolumeGroupManager(groupId).then((value: audio.AudioVolumeGroupManager) => {
-  audioVolumeGroupManager = value;
-  console.info('Succeeded in obtaining the volume group manager.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to obtain the volume group manager. Code: ${err.code}, message: ${err.message}`);
-});
-```
 
 ## getVolumeGroupManagerSync
 
@@ -295,20 +204,6 @@ getVolumeGroupManagerSync(groupId: number): AudioVolumeGroupManager
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
 | [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let audioVolumeGroupManager: audio.AudioVolumeGroupManager = audioVolumeManager.getVolumeGroupManagerSync(audio.DEFAULT_VOLUME_GROUP_ID);
-  console.info('Succeeded in obtaining the volume group manager.');
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`Failed to obtain the volume group manager. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
 ## getVolumeInUnitOfDbByStream
 
 ```TypeScript
@@ -327,7 +222,7 @@ getVolumeInUnitOfDbByStream(streamUsage: StreamUsage, volumeLevel: number, devic
 | --- | --- | --- | --- |
 | streamUsage | [StreamUsage](arkts-audio-audio-streamusage-e.md) | 是 | 音频流。 |
 | volumeLevel | number | 是 | 音量等级。 |
-| device | DeviceType | 是 | 设备类型。 |
+| device | [DeviceType](arkts-audio-audio-devicetype-e.md) | 是 | 设备类型。 |
 
 **返回值：**
 
@@ -340,21 +235,6 @@ getVolumeInUnitOfDbByStream(streamUsage: StreamUsage, volumeLevel: number, devic
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 获取系统通过音频流、音量等级和设备类型计算出的音量dB值。
-try {
-  let volumeInDb: number = audio.getAudioManager().getVolumeManager().getVolumeInUnitOfDbByStream(audio.StreamUsage.STREAM_USAGE_MUSIC, 5, audio.DeviceType.SPEAKER);
-  console.info(`Succeeded in obtaining the volume in dB by stream, volumeInDb: ${volumeInDb}.`);
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`Failed to obtain the volume in dB by stream. Code: ${error.code}, message: ${error.message}`);
-}
-```
 
 ## isSystemMutedForStream
 
@@ -385,21 +265,6 @@ isSystemMutedForStream(streamUsage: StreamUsage): boolean
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 检查指定音频流是否静音。
-try {
-  let isMuted: boolean = audio.getAudioManager().getVolumeManager().isSystemMutedForStream(audio.StreamUsage.STREAM_USAGE_MUSIC);
-  console.info(`Succeeded in checking whether the system is muted for the stream, isMuted: ${isMuted}.`);
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`Failed to check whether the system is muted for the stream. Code: ${error.code}, message: ${error.message}`);
-}
-```
 
 ## off('volumeChange')
 
@@ -598,15 +463,3 @@ setAppVolumePercentage(volume: number): Promise<void>
 | --- | --- |
 | [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 | [6800301](../errorcode-audio.md#6800301-系统处理异常) | Crash or blocking occurs in system process. |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioVolumeManager.setAppVolumePercentage(20).then(() => {
-  console.info('Succeeded in setting the app volume percentage.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to set the app volume percentage. Code: ${err.code}, message: ${err.message}`);
-});
-```

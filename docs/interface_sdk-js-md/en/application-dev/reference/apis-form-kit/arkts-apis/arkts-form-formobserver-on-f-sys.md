@@ -27,7 +27,7 @@ Listens to the event of add form. <p>You can use this method to listen to the ev
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'formAdd' | Yes | Indicates event type. |
-| observerCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;formInfo.RunningFormInfo&gt; | Yes | The callback is used to return the running form info. |
+| observerCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[formInfo.RunningFormInfo](arkts-form-forminfo-runningforminfo-i.md)&gt; | Yes | The callback is used to return the running form info. |
 
 **Error codes:**
 
@@ -59,7 +59,7 @@ Listens to the event of add form. <p>You can use this method to listen to the ev
 | --- | --- | --- | --- |
 | type | 'formAdd' | Yes | Indicates event type. |
 | hostBundleName | string | Yes | Indicates the bundle name of the form host application. |
-| observerCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;formInfo.RunningFormInfo&gt; | Yes | The callback is used to return the running form info. |
+| observerCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[formInfo.RunningFormInfo](arkts-form-forminfo-runningforminfo-i.md)&gt; | Yes | The callback is used to return the running form info. |
 
 **Error codes:**
 
@@ -90,7 +90,7 @@ Listens to the event of remove form. <p>You can use this method to listen to the
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'formRemove' | Yes | Indicates event type. |
-| observerCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;formInfo.RunningFormInfo&gt; | Yes | The callback is used to return the running form info. |
+| observerCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[formInfo.RunningFormInfo](arkts-form-forminfo-runningforminfo-i.md)&gt; | Yes | The callback is used to return the running form info. |
 
 **Error codes:**
 
@@ -122,7 +122,7 @@ Listens to the event of remove form. <p>You can use this method to listen to the
 | --- | --- | --- | --- |
 | type | 'formRemove' | Yes | Indicates event type. |
 | hostBundleName | string | Yes | Indicates the bundle name of the form host application. |
-| observerCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;formInfo.RunningFormInfo&gt; | Yes | The callback is used to return the running form info. |
+| observerCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[formInfo.RunningFormInfo](arkts-form-forminfo-runningforminfo-i.md)&gt; | Yes | The callback is used to return the running form info. |
 
 **Error codes:**
 
@@ -153,7 +153,7 @@ Listens to the event of notifyVisible type change. <p>You can use this method to
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'notifyVisible' | Yes | Indicates event type. |
-| observerCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;formInfo.RunningFormInfo&gt;&gt; | Yes | The callback is used to return the running form info. |
+| observerCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[formInfo.RunningFormInfo](arkts-form-forminfo-runningforminfo-i.md)&gt;&gt; | Yes | The callback is used to return the running form info. |
 
 **Error codes:**
 
@@ -189,7 +189,7 @@ Listens to the event of notifyVisible type change. <p>You can use this method to
 | --- | --- | --- | --- |
 | type | 'notifyVisible' | Yes | Indicates event type. |
 | hostBundleName | string | Yes | Indicates the bundle name of the form host application. |
-| observerCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;formInfo.RunningFormInfo&gt;&gt; | Yes | The callback is used to return the running form info. |
+| observerCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[formInfo.RunningFormInfo](arkts-form-forminfo-runningforminfo-i.md)&gt;&gt; | Yes | The callback is used to return the running form info. |
 
 **Error codes:**
 
@@ -220,7 +220,7 @@ Listens to the event of notifyInvisible type change. <p>You can use this method 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'notifyInvisible' | Yes | Indicates event type. |
-| observerCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;formInfo.RunningFormInfo&gt;&gt; | Yes | The callback is used to return the running form info. |
+| observerCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[formInfo.RunningFormInfo](arkts-form-forminfo-runningforminfo-i.md)&gt;&gt; | Yes | The callback is used to return the running form info. |
 
 **Error codes:**
 
@@ -256,7 +256,7 @@ Listens to the event of notifyInvisible type change. <p>You can use this method 
 | --- | --- | --- | --- |
 | type | 'notifyInvisible' | Yes | Indicates event type. |
 | hostBundleName | string | Yes | Indicates the bundle name of the form host application. |
-| observerCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;formInfo.RunningFormInfo&gt;&gt; | Yes | The callback is used to return the running form info. |
+| observerCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[formInfo.RunningFormInfo](arkts-form-forminfo-runningforminfo-i.md)&gt;&gt; | Yes | The callback is used to return the running form info. |
 
 **Error codes:**
 
@@ -287,7 +287,7 @@ Router event listening in registered form. <p>This interface requires permission
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'router' | Yes | Indicates event type. |
-| observerCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;formInfo.RunningFormInfo&gt; | Yes | The callback is used to return the running form info. |
+| observerCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[formInfo.RunningFormInfo](arkts-form-forminfo-runningforminfo-i.md)&gt; | Yes | The callback is used to return the running form info. |
 
 **Error codes:**
 
@@ -319,7 +319,7 @@ Router event listening in registered form. <p>This interface requires permission
 | --- | --- | --- | --- |
 | type | 'router' | Yes | Indicates event type. |
 | hostBundleName | string | Yes | Indicates the bundle name of the form host application. |
-| observerCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;formInfo.RunningFormInfo&gt; | Yes | The callback is used to return the running form info. |
+| observerCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[formInfo.RunningFormInfo](arkts-form-forminfo-runningforminfo-i.md)&gt; | Yes | The callback is used to return the running form info. |
 
 **Error codes:**
 
@@ -350,7 +350,7 @@ Message event listening in registered form. <p>This interface requires permissio
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'message' | Yes | Indicates event type. |
-| observerCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;formInfo.RunningFormInfo&gt; | Yes | The callback is used to return the running form info. |
+| observerCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[formInfo.RunningFormInfo](arkts-form-forminfo-runningforminfo-i.md)&gt; | Yes | The callback is used to return the running form info. |
 
 **Error codes:**
 
@@ -382,7 +382,7 @@ Message event listening in registered form. <p>This interface requires permissio
 | --- | --- | --- | --- |
 | type | 'message' | Yes | Indicates event type. |
 | hostBundleName | string | Yes | Indicates the bundle name of the form host application. |
-| observerCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;formInfo.RunningFormInfo&gt; | Yes | The callback is used to return the running form info. |
+| observerCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[formInfo.RunningFormInfo](arkts-form-forminfo-runningforminfo-i.md)&gt; | Yes | The callback is used to return the running form info. |
 
 **Error codes:**
 
@@ -413,7 +413,7 @@ Call event listening in registered form. <p>This interface requires permission t
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'call' | Yes | Indicates event type. |
-| observerCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;formInfo.RunningFormInfo&gt; | Yes | The callback is used to return the running form info. |
+| observerCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[formInfo.RunningFormInfo](arkts-form-forminfo-runningforminfo-i.md)&gt; | Yes | The callback is used to return the running form info. |
 
 **Error codes:**
 
@@ -445,7 +445,7 @@ Call event listening in registered form. <p>This interface requires permission t
 | --- | --- | --- | --- |
 | type | 'call' | Yes | Indicates event type. |
 | hostBundleName | string | Yes | Indicates the bundle name of the form host application. |
-| observerCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;formInfo.RunningFormInfo&gt; | Yes | The callback is used to return the running form info. |
+| observerCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[formInfo.RunningFormInfo](arkts-form-forminfo-runningforminfo-i.md)&gt; | Yes | The callback is used to return the running form info. |
 
 **Error codes:**
 

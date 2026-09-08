@@ -22,13 +22,13 @@ Creates a sendable image PixelMap from image PixelMap.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pixelmap | image.PixelMap | Yes | the src pixelmap. |
+| pixelmap | [image.PixelMap](arkts-image-image-pixelmap-i.md) | Yes | the src pixelmap. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| PixelMap | Returns the instance if the operation is successful. Otherwise, an exception will be thrown. |
+| [PixelMap](arkts-image-sendableimage-pixelmap-i.md) | Returns the instance if the operation is successful. Otherwise, an exception will be thrown. |
 
 **Error codes:**
 

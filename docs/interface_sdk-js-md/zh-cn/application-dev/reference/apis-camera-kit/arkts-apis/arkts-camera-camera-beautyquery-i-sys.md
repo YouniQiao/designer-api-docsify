@@ -66,17 +66,6 @@ function getSupportedBeautyRange(portraitPhotoSession: camera.PortraitPhotoSessi
 }
 ```
 
-```TypeScript
-function getSupportedBeautyRange(captureSession: camera.CaptureSession): Array<number> {
-  let beautyTypes: Array<camera.BeautyType> = captureSession.getSupportedBeautyTypes();
-  if (beautyTypes === undefined || beautyTypes.length <= 0) {
-    return [];
-  }
-  let beautyLevels: Array<number> = captureSession.getSupportedBeautyRange(beautyTypes[0]);
-  return beautyLevels;
-}
-```
-
 ## getSupportedBeautyTypes
 
 ```TypeScript
@@ -109,13 +98,6 @@ Obtains the supported beauty types.
 ```TypeScript
 function getSupportedBeautyTypes(portraitPhotoSession: camera.PortraitPhotoSession): Array<camera.BeautyType> {
   let beautyTypes: Array<camera.BeautyType> = portraitPhotoSession.getSupportedBeautyTypes();
-  return beautyTypes;
-}
-```
-
-```TypeScript
-function getSupportedBeautyTypes(captureSession: camera.CaptureSession): Array<camera.BeautyType> {
-  let beautyTypes: Array<camera.BeautyType> = captureSession.getSupportedBeautyTypes();
   return beautyTypes;
 }
 ```

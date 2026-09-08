@@ -27,7 +27,7 @@ Default value: **{ value:24, unit:LengthUnit.VP }**, meaning 24 vp for all corne
 2. [BorderRadiuses](../arkts-apis/arkts-arkui-borderradiuses-t.md): per-corner radius values (vp units only)
 3. [LocalizedBorderRadiuses](../arkts-apis/arkts-arkui-localizedborderradiuses-i.md): per-corner radius values with individual units
 
-**Type:** LengthMetrics \| [BorderRadiuses](../arkts-apis/arkts-arkui-borderradiuses-t.md) \| [LocalizedBorderRadiuses](../arkts-apis/arkts-arkui-localizedborderradiuses-i.md)
+**Type:** [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md) \| [BorderRadiuses](../arkts-apis/arkts-arkui-borderradiuses-t.md) \| [LocalizedBorderRadiuses](../arkts-apis/arkts-arkui-localizedborderradiuses-i.md)
 
 **Default:** { value:24, unit:LengthUnit.VP }
 

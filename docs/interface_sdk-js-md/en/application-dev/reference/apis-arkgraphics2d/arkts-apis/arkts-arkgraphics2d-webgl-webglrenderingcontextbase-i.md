@@ -2194,7 +2194,7 @@ Sets a texture parameter (float)
 texParameteri(target: GLenum, pname: GLenum, param: GLint): void
 ```
 
-Sets a texture parameter (number)
+Sets a texture parameter (int)
 
 **Since:** 7
 
@@ -4315,7 +4315,7 @@ Precision: high float
 readonly HIGH_INT: GLenum
 ```
 
-Precision: high number
+Precision: high int
 
 **Type:** [GLenum](arkts-arkgraphics2d-glenum-t.md)
 
@@ -4395,7 +4395,7 @@ Stencil operation: increment wrap
 readonly INT: GLenum
 ```
 
-Data type: number
+Data type: int
 
 **Type:** [GLenum](arkts-arkgraphics2d-glenum-t.md)
 
@@ -4411,7 +4411,7 @@ Data type: number
 readonly INT_VEC2: GLenum
 ```
 
-Uniform type: number vec2
+Uniform type: int vec2
 
 **Type:** [GLenum](arkts-arkgraphics2d-glenum-t.md)
 
@@ -4427,7 +4427,7 @@ Uniform type: number vec2
 readonly INT_VEC3: GLenum
 ```
 
-Uniform type: number vec3
+Uniform type: int vec3
 
 **Type:** [GLenum](arkts-arkgraphics2d-glenum-t.md)
 
@@ -4443,7 +4443,7 @@ Uniform type: number vec3
 readonly INT_VEC4: GLenum
 ```
 
-Uniform type: number vec4
+Uniform type: int vec4
 
 **Type:** [GLenum](arkts-arkgraphics2d-glenum-t.md)
 
@@ -4731,7 +4731,7 @@ Precision: low float
 readonly LOW_INT: GLenum
 ```
 
-Precision: low number
+Precision: low int
 
 **Type:** [GLenum](arkts-arkgraphics2d-glenum-t.md)
 
@@ -4971,7 +4971,7 @@ Precision: medium float
 readonly MEDIUM_INT: GLenum
 ```
 
-Precision: medium number
+Precision: medium int
 
 **Type:** [GLenum](arkts-arkgraphics2d-glenum-t.md)
 
@@ -7167,7 +7167,7 @@ Data type: unsigned byte
 readonly UNSIGNED_INT: GLenum
 ```
 
-Data type: unsigned number
+Data type: unsigned int
 
 **Type:** [GLenum](arkts-arkgraphics2d-glenum-t.md)
 

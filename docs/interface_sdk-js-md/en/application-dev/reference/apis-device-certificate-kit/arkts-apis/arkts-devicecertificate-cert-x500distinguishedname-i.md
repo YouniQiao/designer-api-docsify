@@ -46,44 +46,6 @@ Obtains the DER-encoded data of the X.500 Distinguished Name.
 import { cert } from '@kit.DeviceCertificateKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
-// Binary data of the certificate extension, which needs to be set to match your case.
-let extData = new Uint8Array([
-  0x30, 0x40, 0x30, 0x0F, 0x06, 0x03, 0x55, 0x1D,
-  0x13, 0x01, 0x01, 0xFF, 0x04, 0x05, 0x30, 0x03,
-  0x01, 0x01, 0xFF, 0x30, 0x0E, 0x06, 0x03, 0x55,
-  0x1D, 0x0F, 0x01, 0x01, 0xFF, 0x04, 0x04, 0x03,
-  0x02, 0x01, 0xC6, 0x30, 0x1D, 0x06, 0x03, 0x55,
-  0x1D, 0x0E, 0x04, 0x16, 0x04, 0x14, 0xE0, 0x8C,
-  0x9B, 0xDB, 0x25, 0x49, 0xB3, 0xF1, 0x7C, 0x86,
-  0xD6, 0xB2, 0x42, 0x87, 0x0B, 0xD0, 0x6B, 0xA0,
-  0xD9, 0xE4
-]);
-
-let encodingBlob: cert.EncodingBlob = {
-  data: extData,
-  // Assign a value based on the encodingData format. Currently, only FORMAT_DER is supported.
-  encodingFormat: cert.EncodingFormat.FORMAT_DER
-};
-
-cert.createCertExtension(encodingBlob, (error, certExt) => {
-  if (error) {
-    console.error(`createCertExtension failed, errCode: ${error.code}, errMsg: ${error.message}`);
-  } else {
-    console.info('createCertExtension result: success.');
-    try {
-      let extEncodedBlob = certExt.getEncoded();
-    } catch (err) {
-      let e: BusinessError = err as BusinessError;
-      console.error(`ext getEncoded failed, errCode: ${e.code}, errMsg: ${e.message}`);
-    }
-  }
-});
-```
-
-```TypeScript
-import { cert } from '@kit.DeviceCertificateKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
 let nameStr = '/CN=Example CA/OU=test cert/O=test/L=XA/ST=SX/C=CN/CN=RSA CA/CN=XTS';
 async function getEncoded() {
   try {

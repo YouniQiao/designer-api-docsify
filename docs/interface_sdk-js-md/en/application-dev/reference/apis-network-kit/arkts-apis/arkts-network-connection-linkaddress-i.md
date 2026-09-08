@@ -20,7 +20,7 @@ address: NetAddress
 
 Link address.
 
-**Type:** NetAddress
+**Type:** [NetAddress](arkts-network-connection-netaddress-i.md)
 
 **Since:** 8
 

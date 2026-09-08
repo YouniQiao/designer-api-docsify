@@ -36,7 +36,7 @@ wantAgent?: WantAgent
 
 Information about the ability that is displayed after the button is clicked.
 
-**Type:** WantAgent
+**Type:** [WantAgent](arkts-backgroundtasks-reminderagentmanager-wantagent-i.md)
 
 **Since:** 10
 

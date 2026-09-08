@@ -121,7 +121,7 @@ hasAxis(axisType: AxisType): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| axisType | AxisType | 是 | 轴事件的轴类型。 |
+| axisType | [AxisType](../arkts-apis/arkts-arkui-axistype-e.md) | 是 | 轴事件的轴类型。 |
 
 **返回值：**
 

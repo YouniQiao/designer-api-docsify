@@ -20,7 +20,7 @@ readonly bottom: Rect
 
 Rectangle of the curved area at the bottom of the waterfall display.
 
-**Type:** Rect
+**Type:** [Rect](arkts-arkui-display-rect-i.md)
 
 **Since:** 9
 
@@ -36,7 +36,7 @@ readonly left: Rect
 
 Rectangle of the curved area on the left of the waterfall display.
 
-**Type:** Rect
+**Type:** [Rect](arkts-arkui-display-rect-i.md)
 
 **Since:** 9
 
@@ -52,7 +52,7 @@ readonly right: Rect
 
 Rectangle of the curved area on the right of the waterfall display.
 
-**Type:** Rect
+**Type:** [Rect](arkts-arkui-display-rect-i.md)
 
 **Since:** 9
 
@@ -68,7 +68,7 @@ readonly top: Rect
 
 Rectangle of the curved area on the top of the waterfall display.
 
-**Type:** Rect
+**Type:** [Rect](arkts-arkui-display-rect-i.md)
 
 **Since:** 9
 

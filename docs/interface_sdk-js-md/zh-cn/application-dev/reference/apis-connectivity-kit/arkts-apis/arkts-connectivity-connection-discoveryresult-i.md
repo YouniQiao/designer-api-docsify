@@ -20,7 +20,7 @@ deviceClass: DeviceClass
 
 扫描到的设备类型。
 
-**类型：** DeviceClass
+**类型：** [DeviceClass](arkts-connectivity-connection-deviceclass-i.md)
 
 **起始版本：** 18
 

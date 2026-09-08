@@ -152,7 +152,7 @@ function cancelAsBundle(representativeBundle: BundleOption, id: number): Promise
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| representativeBundle | BundleOption | 是 | 被代理应用的包信息。 |
+| representativeBundle | [BundleOption](arkts-notification-notificationmanager-bundleoption-t.md) | 是 | 被代理应用的包信息。 |
 | id | number | 是 | 通知ID。 |
 
 **返回值：**

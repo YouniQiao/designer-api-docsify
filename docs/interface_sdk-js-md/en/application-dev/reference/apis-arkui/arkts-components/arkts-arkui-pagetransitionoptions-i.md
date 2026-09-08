@@ -27,7 +27,7 @@ For the string type, this parameter indicates an animation interpolation curve. 
 
 Default value: **Curve.Linear**
 
-**Type:** Curve \| string \| ICurve
+**Type:** [Curve](../arkts-apis/arkts-arkui-curve-e.md) \| string \| [ICurve](arkts-arkui-icurve-i.md)
 
 **Default:** Curve.Linear
 

@@ -30,7 +30,7 @@ function getBarcodeTag(tagInfo: TagInfo): BarcodeTag
 
 | 类型 | 说明 |
 | --- | --- |
-| BarcodeTag | BarcodeTag类型Tag对象。 |
+| [BarcodeTag](arkts-connectivity-tag-barcodetag-t.md) | BarcodeTag类型Tag对象。 |
 
 **错误码：**
 

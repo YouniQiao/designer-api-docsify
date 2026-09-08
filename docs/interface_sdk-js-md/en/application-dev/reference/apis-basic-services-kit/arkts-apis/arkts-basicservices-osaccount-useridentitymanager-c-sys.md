@@ -202,14 +202,6 @@ A **constructor()** used to create an instance for managing the user identity.
 **Examples**
 
 ```TypeScript
-let userAuth = new osAccount.UserAuth();
-```
-
-```TypeScript
-let pinAuth: osAccount.PINAuth = new osAccount.PINAuth();
-```
-
-```TypeScript
 let userIDM = new osAccount.UserIdentityManager();
 ```
 
@@ -394,7 +386,7 @@ Obtains authentication information of the specified type. This API uses an async
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| authType | AuthType | Yes | Authentication credential type. |
+| authType | [AuthType](arkts-basicservices-osaccount-authtype-e-sys.md) | Yes | Authentication credential type. |
 | callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[EnrolledCredInfo](arkts-basicservices-osaccount-enrolledcredinfo-i-sys.md)&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the information about all enrolled credentials of the specified type. Otherwise, **err** is an error object. |
 
 **Error codes:**
@@ -448,7 +440,7 @@ Obtains authentication information. This API uses a promise to return the result
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| authType | AuthType | Yes | Authentication type, which indicates that information about all authentication types is obtained. |
+| authType | [AuthType](arkts-basicservices-osaccount-authtype-e-sys.md) | Yes | Authentication type, which indicates that information about all authentication types is obtained. |
 
 **Return value:**
 
@@ -565,7 +557,7 @@ Obtains the ID of the enrolled credential based on the credential type and accou
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| authType | AuthType | Yes | Credential type. |
+| authType | [AuthType](arkts-basicservices-osaccount-authtype-e-sys.md) | Yes | Credential type. |
 | accountId | number | No | OS account ID, which is left blank by default. |
 
 **Return value:**
@@ -691,7 +683,7 @@ Subscribes to one or more types of credential change events. This API uses a cal
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| credentialTypes | AuthType[] | Yes | Credential types subscribed. |
+| credentialTypes | [AuthType](arkts-basicservices-osaccount-authtype-e-sys.md)[] | Yes | Credential types subscribed. |
 | callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[CredentialChangeInfo](arkts-basicservices-osaccount-credentialchangeinfo-i-sys.md)&gt; | Yes | Callback used to listen for the credential change events. |
 
 **Error codes:**

@@ -12,7 +12,7 @@ import { pointer } from '@kit.InputKit';
 function setTouchpadDoubleTapAndDragState(isOpen: boolean, callback: AsyncCallback<void>): void
 ```
 
-Sets the touchpad number-tap and drag switch state. This API uses an asynchronous callback to return the result.
+Sets the touchpad double-tap and drag switch state. This API uses an asynchronous callback to return the result.
 
 **Since:** 14
 
@@ -24,7 +24,7 @@ Sets the touchpad number-tap and drag switch state. This API uses an asynchronou
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isOpen | boolean | Yes | State of the number-tap and drag switch. The value **true** indicates that the switch is enabled, and the value **false** indicates the opposite. |
+| isOpen | boolean | Yes | State of the double-tap and drag switch. The value **true** indicates that the switch is enabled, and the value **false** indicates the opposite. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
@@ -72,7 +72,7 @@ struct Index {
 function setTouchpadDoubleTapAndDragState(isOpen: boolean): Promise<void>
 ```
 
-Sets the touchpad number-tap and drag switch state. This API uses a promise to return the result.
+Sets the touchpad double-tap and drag switch state. This API uses a promise to return the result.
 
 **Since:** 14
 
@@ -84,7 +84,7 @@ Sets the touchpad number-tap and drag switch state. This API uses a promise to r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isOpen | boolean | Yes | State of the number-tap and drag switch. The value **true** indicates that the switch is enabled, and the value **false** indicates the opposite. |
+| isOpen | boolean | Yes | State of the double-tap and drag switch. The value **true** indicates that the switch is enabled, and the value **false** indicates the opposite. |
 
 **Return value:**
 

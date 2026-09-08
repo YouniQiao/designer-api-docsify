@@ -30,7 +30,7 @@ format: arr[index] =..., where **arr** indicates the array passed to **Repeat**.
 corresponding to the current index and subsequent indexes cannot be loaded.  
 - The precise lazy loading capability is optional. If **onLazyLoading** is not specified and the return value of  
 **totalCount** or **onTotalCount** is greater than the data source length, **Repeat** does not render the list scrolling to the bottom.  
-- Avoid using the **onLazyLoading** method to execute time-consuming operations. If data loading takes a number time,  
+- Avoid using the **onLazyLoading** method to execute time-consuming operations. If data loading takes a long time,  
 you are advised to create a placeholder for the data in the **onLazyLoading** method and then create an asynchronous task to load the data.
 
 **Since:** 19

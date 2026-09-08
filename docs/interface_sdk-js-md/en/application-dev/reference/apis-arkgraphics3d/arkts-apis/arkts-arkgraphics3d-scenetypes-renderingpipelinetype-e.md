@@ -2,7 +2,7 @@
 
 Enumerates the rendering pipeline types.
 
-@enum { number }
+@enum { int }
 
 **Since:** 21
 

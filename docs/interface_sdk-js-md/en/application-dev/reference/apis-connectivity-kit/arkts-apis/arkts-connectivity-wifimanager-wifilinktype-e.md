@@ -1,6 +1,6 @@
 # WifiLinkType
 
-Wi-Fi link type. @enum { number }
+Wi-Fi link type. @enum { int }
 
 **Since:** 18
 

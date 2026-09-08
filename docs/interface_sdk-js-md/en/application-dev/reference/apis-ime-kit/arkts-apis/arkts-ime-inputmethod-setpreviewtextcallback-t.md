@@ -15,4 +15,4 @@ Callback triggered when the input method framework needs to display the text pre
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | text | string | Yes | Text preview. |
-| range | Range | Yes | Describes the range of the selected text. |
+| range | [Range](arkts-ime-inputmethod-range-i.md) | Yes | Describes the range of the selected text. |

@@ -26,11 +26,18 @@ Navigates to a specified page in the application.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | RouterOptions | Yes | Page routing parameters. |
+| options | [RouterOptions](arkts-arkui-router-routeroptions-i.md) | Yes | Page routing parameters. |
 
 **Examples**
 
 push(options: RouterOptions): void
+Navigates to a specified page in the application.
+> NOTE
+> 
+> This API is supported since API version 8 and deprecated since API version 9. You are advised to use pushUrl(options: router.RouterOptions) instead.
+
+System capability: SystemCapability.ArkUI.ArkUI.Full
+Parameters
 
 ```TypeScript
 import { router } from '@kit.ArkUI';

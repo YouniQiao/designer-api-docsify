@@ -262,7 +262,7 @@ setConnectionInterval(interval: ConnectionInterval): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| interval | ConnectionInterval | 是 | 要设置的连接间隔。 |
+| interval | [ConnectionInterval](arkts-connectivity-remotedevice-connectioninterval-t-sys.md) | 是 | 要设置的连接间隔。 |
 
 **错误码：**
 

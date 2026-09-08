@@ -28,7 +28,7 @@ Obtains the profile UUIDs supported by the local device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;ProfileUuids&gt;&gt; | Yes | the callback of getLocalProfileUuids. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[ProfileUuids](arkts-connectivity-connection-profileuuids-t.md)&gt;&gt; | Yes | the callback of getLocalProfileUuids. |
 
 **Error codes:**
 
@@ -78,7 +78,7 @@ Obtains the profile UUIDs supported by the local device.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;ProfileUuids&gt;&gt; | Returns the promise object. |
+| Promise&lt;Array&lt;[ProfileUuids](arkts-connectivity-connection-profileuuids-t.md)&gt;&gt; | Returns the promise object. |
 
 **Error codes:**
 

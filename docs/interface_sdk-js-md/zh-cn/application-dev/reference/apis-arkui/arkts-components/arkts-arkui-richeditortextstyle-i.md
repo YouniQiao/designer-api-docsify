@@ -135,7 +135,7 @@ fontStyle?: FontStyle
 
 默认值：FontStyle.Normal。
 
-**类型：** FontStyle
+**类型：** [FontStyle](../arkts-apis/arkts-arkui-fontstyle-e.md)
 
 **起始版本：** 10
 
@@ -159,7 +159,7 @@ string类型仅支持number类型取值的字符串形式，例如"400"，以及
 
 默认值：FontWeight.Normal。
 
-**类型：** number \| FontWeight \| string
+**类型：** number \| [FontWeight](../arkts-apis/arkts-arkui-fontweight-e.md) \| string
 
 **起始版本：** 10
 
@@ -221,7 +221,7 @@ lineHeight?: number | string | Resource
 
 number类型取值范围：(0, +∞)，设置值不大于0时，不限制文本行高，自适应字体大小。number类型时单位为fp，不支持设置百分比字符串。当lineHeight设置值小于当前字号下文本渲染出的实际高度时，[fallbackLineSpacing](arkts-arkui-richeditor-attribute.md#fallbacklinespacing)属性将生效。
 
-**类型：** number \| string \| Resource
+**类型：** number \| string \| [Resource](../arkts-apis/arkts-arkui-resource-t.md)
 
 **起始版本：** 12
 
@@ -291,7 +291,7 @@ strokeWidth?: LengthMetrics | number
 
 与[shaderStyle](arkts-arkui-richeditorparagraphstyle-i.md)同时设置时，shaderStyle不生效。
 
-**类型：** LengthMetrics \| number
+**类型：** [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md) \| number
 
 **起始版本：** 23
 

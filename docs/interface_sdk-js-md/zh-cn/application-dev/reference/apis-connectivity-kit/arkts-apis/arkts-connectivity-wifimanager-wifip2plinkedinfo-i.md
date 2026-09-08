@@ -20,7 +20,7 @@ connectState: P2pConnectState
 
 P2P连接状态。
 
-**类型：** P2pConnectState
+**类型：** [P2pConnectState](arkts-connectivity-wifimanager-p2pconnectstate-e.md)
 
 **起始版本：** 9
 

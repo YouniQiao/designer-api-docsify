@@ -44,7 +44,7 @@ The device is leaving the geofence.
 GEOFENCE_TRANSITION_EVENT_NEAR_WANDER = 32
 ```
 
-The device is approaching the fence from the outside and already very near to it for number time.
+The device is approaching the fence from the outside and already very near to it for long time.
 
 **Since:** 26.0.0
 

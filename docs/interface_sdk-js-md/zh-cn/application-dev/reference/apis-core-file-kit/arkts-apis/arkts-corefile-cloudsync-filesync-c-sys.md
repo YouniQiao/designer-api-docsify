@@ -45,10 +45,6 @@ constructor(bundleName: string)
 let fileSync = new cloudSync.FileSync("com.ohos.demo")
 ```
 
-```TypeScript
-let fileCache = new cloudSync.CloudFileCache("com.ohos.demo");
-```
-
 ## getUploadList
 
 ```TypeScript

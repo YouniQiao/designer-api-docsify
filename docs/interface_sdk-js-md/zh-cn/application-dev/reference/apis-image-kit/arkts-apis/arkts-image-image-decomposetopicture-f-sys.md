@@ -26,7 +26,7 @@ function decomposeToPicture(hdrPixelMap : PixelMap, options?: HdrDecomposeOption
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| hdrPixelMap | PixelMap | 是 | HDR PixelMap，像素格式需为RGBA_F16、RGBA_1010102、YCBCR_P010或YCRCB_P010。 |
+| hdrPixelMap | [PixelMap](arkts-image-image-pixelmap-i.md) | 是 | HDR PixelMap，像素格式需为RGBA_F16、RGBA_1010102、YCBCR_P010或YCRCB_P010。 |
 | options | [HdrDecomposeOptions](arkts-image-image-hdrdecomposeoptions-i-sys.md) | 否 | HDR分解配置选项，包含增益图尺寸和像素格式设置。 |
 
 **返回值：**

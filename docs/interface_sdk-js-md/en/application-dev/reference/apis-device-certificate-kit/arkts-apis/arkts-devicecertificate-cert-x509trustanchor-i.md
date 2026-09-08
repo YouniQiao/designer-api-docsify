@@ -20,7 +20,7 @@ CACert?: X509Cert
 
 Trusted CA certificate. If **CACert** is set, only **CACert** is used to validate the certificate chain. **CAPubKey** and **CASubject** are not used.
 
-**Type:** X509Cert
+**Type:** [X509Cert](arkts-devicecertificate-cert-x509cert-i.md)
 
 **Since:** 11
 

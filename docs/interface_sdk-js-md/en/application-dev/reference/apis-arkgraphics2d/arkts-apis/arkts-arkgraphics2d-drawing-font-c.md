@@ -51,16 +51,6 @@ Obtains the number of glyphs represented by text.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
 
-**Examples**
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-let font = new drawing.Font();
-let resultNumber: number = font.countText('ABCDE');
-console.info("count text number: " + resultNumber);
-```
-
 ## createPathForGlyph
 
 ```TypeScript
@@ -85,28 +75,7 @@ Obtains the outline path of a glyph.
 
 | Type | Description |
 | --- | --- |
-| Path | Outline path of the glyph. |
-
-**Examples**
-
-```TypeScript
-import { RenderNode } from '@kit.ArkUI';
-import { drawing } from '@kit.ArkGraphics2D';
-
-class DrawingRenderNode extends RenderNode {
-  draw(context : DrawContext) {
-    const canvas = context.canvas;
-    let font = new drawing.Font();
-    font.setSize(50);
-    let text: string = 'Hello';
-    let glyphs: number[] = font.textToGlyphs(text);
-    for (let index = 0; index < glyphs.length; index++) {
-      let path: drawing.Path = font.createPathForGlyph(glyphs[index]);
-      canvas.drawPath(path);
-    }
-  }
-}
-```
+| [Path](arkts-arkgraphics2d-drawing-path-c.md) | Outline path of the glyph. |
 
 ## enableEmbolden
 
@@ -134,15 +103,6 @@ Enables emboldened fonts.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
 
-**Examples**
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-let font = new drawing.Font();
-font.enableEmbolden(true);
-```
-
 ## enableLinearMetrics
 
 ```TypeScript
@@ -168,15 +128,6 @@ Enables linear font scaling.
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
-
-**Examples**
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-let font = new drawing.Font();
-font.enableLinearMetrics(true);
-```
 
 ## enableSubpixel
 
@@ -204,15 +155,6 @@ Enables subpixel font rendering.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
 
-**Examples**
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-let font = new drawing.Font();
-font.enableSubpixel(true);
-```
-
 ## getBounds
 
 ```TypeScript
@@ -237,22 +179,7 @@ Obtains the rectangular bounding box of each glyph in an array.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;common2D.Rect&gt; | Array that holds the rectangular bounding boxes. |
-
-**Examples**
-
-```TypeScript
-import { common2D, drawing } from '@kit.ArkGraphics2D';
-
-let font: drawing.Font = new drawing.Font();
-let text: string = 'hello world';
-let glyphs: number[] = font.textToGlyphs(text);
-let fontBounds: Array<common2D.Rect> = font.getBounds(glyphs);
-for (let index = 0; index < fontBounds.length; index++) {
-  console.info("get fontWidths[", index, "] left:", fontBounds[index].left, " top:", fontBounds[index].top,
-    " right:", fontBounds[index].right, " bottom:", fontBounds[index].bottom);
-}
-```
+| Array&lt;[common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md)&gt; | Array that holds the rectangular bounding boxes. |
 
 ## getEdging
 
@@ -274,15 +201,6 @@ Obtains the font edging effect.
 | --- | --- |
 | [FontEdging](arkts-arkgraphics2d-drawing-fontedging-e.md) | Font edging effect. |
 
-**Examples**
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-let font: drawing.Font = new drawing.Font();
-console.info("values=" + font.getEdging());
-```
-
 ## getHinting
 
 ```TypeScript
@@ -302,15 +220,6 @@ Obtains the font hinting effect.
 | Type | Description |
 | --- | --- |
 | [FontHinting](arkts-arkgraphics2d-drawing-fonthinting-e.md) | Font hinting effect. |
-
-**Examples**
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-let font: drawing.Font = new drawing.Font();
-console.info("values=" + font.getHinting());
-```
 
 ## getMetrics
 
@@ -332,15 +241,6 @@ Obtains the font metrics of the typeface.
 | --- | --- |
 | [FontMetrics](arkts-arkgraphics2d-drawing-fontmetrics-i.md) | Font metrics. |
 
-**Examples**
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-let font = new drawing.Font();
-let metrics = font.getMetrics();
-```
-
 ## getScaleX
 
 ```TypeScript
@@ -360,16 +260,6 @@ Obtains the horizontal scale ratio of this font.
 | Type | Description |
 | --- | --- |
 | number | Horizontal scale ratio. |
-
-**Examples**
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-let font: drawing.Font = new drawing.Font();
-font.setScaleX(2);
-console.info("values=" + font.getScaleX());
-```
 
 ## getSize
 
@@ -391,16 +281,6 @@ Obtains the font size.
 | --- | --- |
 | number | Font size. The value is a floating point number. |
 
-**Examples**
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-let font = new drawing.Font();
-font.setSize(5);
-let fontSize = font.getSize();
-```
-
 ## getSkewX
 
 ```TypeScript
@@ -420,16 +300,6 @@ Obtains the horizontal skew factor of this font.
 | Type | Description |
 | --- | --- |
 | number | Horizontal skew factor. |
-
-**Examples**
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-let font: drawing.Font = new drawing.Font();
-font.setSkewX(-1);
-console.info("values=" + font.getSkewX());
-```
 
 ## getTextPath
 
@@ -458,33 +328,13 @@ Obtains the outline path of a text.
 
 | Type | Description |
 | --- | --- |
-| Path | Outline path of the text. |
+| [Path](arkts-arkgraphics2d-drawing-path-c.md) | Outline path of the text. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
-
-**Examples**
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-import { buffer } from '@kit.ArkTS';
-import { RenderNode } from '@kit.ArkUI';
-
-class DrawingRenderNode extends RenderNode {
-  draw(context : DrawContext) {
-    const canvas = context.canvas;
-    let font = new drawing.Font();
-    font.setSize(50);
-    let myString: string = "Hello";
-    let length: number = buffer.from(myString).length;
-    let path = font.getTextPath(myString, length, 0, 100);
-    canvas.drawPath(path);
-  }
-}
-```
 
 ## getTextPathWithFallback
 
@@ -513,30 +363,7 @@ Gets the path outline for the given text with font fallback support.
 
 | Type | Description |
 | --- | --- |
-| Path | Outline path of the text. |
-
-**Examples**
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-import { buffer } from '@kit.ArkTS';
-import { RenderNode, DrawContext } from '@kit.ArkUI';
-
-class DrawingRenderNode extends RenderNode {
-  draw(context : DrawContext) {
-    const canvas = context.canvas;
-    let font = new drawing.Font();
-    font.setSize(50);
-    let myString: string = "Hello";
-    let length = buffer.from(myString).length;
-    let path = font.getTextPathWithFallback(myString, length, 0, 100);
-    if (path == undefined) {
-      return;
-    }
-    canvas.drawPath(path);
-  }
-}
-```
+| [Path](arkts-arkgraphics2d-drawing-path-c.md) | Outline path of the text. |
 
 ## getTypeface
 
@@ -557,15 +384,6 @@ Obtains the typeface.
 | Type | Description |
 | --- | --- |
 | [Typeface](arkts-arkgraphics2d-drawing-typeface-c.md) | Font. |
-
-**Examples**
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-let font = new drawing.Font();
-let typeface = font.getTypeface();
-```
 
 ## getWidths
 
@@ -599,20 +417,6 @@ Obtains the width of each glyph in an array.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
 
-**Examples**
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-let font: drawing.Font = new drawing.Font();
-let text: string = 'hello world';
-let glyphs: number[] = font.textToGlyphs(text);
-let fontWidths: Array<number> = font.getWidths(glyphs);
-for (let index = 0; index < fontWidths.length; index++) {
-  console.info("get fontWidths[", index, "]:", fontWidths[index]);
-}
-```
-
 ## isBaselineSnap
 
 ```TypeScript
@@ -632,17 +436,6 @@ Checks whether baselines are requested to be snapped to pixels when the current 
 | Type | Description |
 | --- | --- |
 | boolean | Check result. The value **true** means that the baselines are requested to be snapped to pixels, and **false** means the opposite. |
-
-**Examples**
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-let font : drawing.Font = new drawing.Font();
-font.setTypeface(new drawing.Typeface());
-font.setBaselineSnap(true);
-console.info("drawing font isBaselineSnap: " + font.isBaselineSnap());
-```
 
 ## isEmbeddedBitmaps
 
@@ -664,17 +457,6 @@ Checks whether bitmaps are used in this font.
 | --- | --- |
 | boolean | Check result. The value **true** means that the bitmaps are used, and **false** means the opposite. |
 
-**Examples**
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-let font : drawing.Font = new drawing.Font();
-font.setTypeface(new drawing.Typeface());
-font.setEmbeddedBitmaps(true);
-console.info("draw isEmbeddedBitmaps: " + font.isEmbeddedBitmaps());
-```
-
 ## isEmbolden
 
 ```TypeScript
@@ -694,16 +476,6 @@ Checks whether the bold effect is set for this font.
 | Type | Description |
 | --- | --- |
 | boolean | Check result. The value **true** means that the bold effect is set, and **false** means the opposite. |
-
-**Examples**
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-let font: drawing.Font = new drawing.Font();
-font.enableEmbolden(true);
-console.info("values=" + font.isEmbolden());
-```
 
 ## isForceAutoHinting
 
@@ -725,17 +497,6 @@ Checks whether auto hinting is forcibly used.
 | --- | --- |
 | boolean | Check result. The value **true** means that auto hinting is forcibly used, and **false** means the opposite. |
 
-**Examples**
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-let font : drawing.Font = new drawing.Font();
-font.setTypeface(new drawing.Typeface());
-font.setForceAutoHinting(false);
-console.info("drawing isForceAutoHinting:  " + font.isForceAutoHinting());
-```
-
 ## isLinearMetrics
 
 ```TypeScript
@@ -756,16 +517,6 @@ Checks whether linear scaling is used for this font.
 | --- | --- |
 | boolean | Check result. The value **true** means that linear scaling is used, and **false** means the opposite. |
 
-**Examples**
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-let font: drawing.Font = new drawing.Font();
-font.enableLinearMetrics(true);
-console.info("values=" + font.isLinearMetrics());
-```
-
 ## isSubpixel
 
 ```TypeScript
@@ -785,16 +536,6 @@ Checks whether sub-pixel rendering is used for a font.
 | Type | Description |
 | --- | --- |
 | boolean | Check result. The value **true** means that sub-pixel rendering is used, and **false** means the opposite. |
-
-**Examples**
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-let font: drawing.Font = new drawing.Font();
-font.enableSubpixel(true)
-console.info("values=" + font.isSubpixel());
-```
 
 ## isThemeFontFollowed
 
@@ -848,22 +589,6 @@ Measures the width of a single character. If the typeface of the current font do
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
 
-**Examples**
-
-```TypeScript
-import { RenderNode } from '@kit.ArkUI';
-import { drawing } from '@kit.ArkGraphics2D';
-
-class DrawingRenderNode extends RenderNode {
-  draw(context : DrawContext) {
-    const canvas = context.canvas;
-    const font = new drawing.Font();
-    font.setSize(20);
-    let width = font.measureSingleCharacter("H");
-  }
-}
-```
-
 ## measureSingleCharacterWithFeatures
 
 ```TypeScript
@@ -883,7 +608,7 @@ Measures the width of a single character with font features. If the typeface of 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | text | string | Yes | Pointer to the single character to measure. The length of the string must be **1**. |
-| features | Array&lt;FontFeature&gt; | Yes | Array of the font feature object. For an empty array, the preset font features in the TrueType Font (TTF) file are used. |
+| features | Array&lt;[FontFeature](arkts-arkgraphics2d-drawing-fontfeature-i.md)&gt; | Yes | Array of the font feature object. For an empty array, the preset font features in the TrueType Font (TTF) file are used. |
 
 **Return value:**
 
@@ -896,23 +621,6 @@ Measures the width of a single character with font features. If the typeface of 
 | Error Code ID | Error Message |
 | --- | --- |
 | [25900001](../errorcode-drawing.md#25900001-abnormal-parameter-value) | Parameter error. Possible causes: Incorrect parameter range. |
-
-**Examples**
-
-```TypeScript
-import { RenderNode } from '@kit.ArkUI';
-import { drawing } from '@kit.ArkGraphics2D';
-
-class DrawingRenderNode extends RenderNode {
-  draw(context : DrawContext) {
-    const font = new drawing.Font();
-    font.setSize(20);
-    let fontFeatures : Array<drawing.FontFeature> = [];
-    fontFeatures.push({name: 'calt', value: 0});
-    let width = font.measureSingleCharacterWithFeatures("H", fontFeatures);
-  }
-}
-```
 
 ## measureText
 
@@ -938,7 +646,7 @@ Measures the text width.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | text | string | Yes | Content of the item in the operation area. |
-| encoding | TextEncoding | Yes | Pointer to the encoding format. |
+| encoding | [TextEncoding](arkts-arkgraphics2d-drawing-textencoding-e.md) | Yes | Pointer to the encoding format. |
 
 **Return value:**
 
@@ -951,15 +659,6 @@ Measures the text width.
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
-
-**Examples**
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-let font = new drawing.Font();
-font.measureText("drawing", drawing.TextEncoding.TEXT_ENCODING_UTF8);
-```
 
 ## setBaselineSnap
 
@@ -987,16 +686,6 @@ Sets whether to request that baselines be snapped to pixels when the current can
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
 
-**Examples**
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-let font : drawing.Font = new drawing.Font();
-font.setBaselineSnap(true);
-console.info("drawing font isBaselineSnap: " + font.isBaselineSnap());
-```
-
 ## setEdging
 
 ```TypeScript
@@ -1022,15 +711,6 @@ Sets a font edging effect.
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
-
-**Examples**
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-let font = new drawing.Font();
-font.setEdging(drawing.FontEdging.SUBPIXEL_ANTI_ALIAS);
-```
 
 ## setEmbeddedBitmaps
 
@@ -1058,17 +738,6 @@ Sets whether to use bitmaps in this font.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
 
-**Examples**
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-let font : drawing.Font = new drawing.Font();
-font.setTypeface(new drawing.Typeface());
-font.setEmbeddedBitmaps(false);
-console.info("draw isEmbeddedBitmaps: " + font.isEmbeddedBitmaps());
-```
-
 ## setForceAutoHinting
 
 ```TypeScript
@@ -1094,17 +763,6 @@ Sets whether to forcibly use auto hinting, that is, whether to always hint glyph
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
-
-**Examples**
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-let font : drawing.Font = new drawing.Font();
-font.setTypeface(new drawing.Typeface());
-font.setForceAutoHinting(false);
-console.info("drawing isForceAutoHinting:  " + font.isForceAutoHinting());
-```
 
 ## setHinting
 
@@ -1132,15 +790,6 @@ Sets a font hinting effect.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
 
-**Examples**
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-let font = new drawing.Font();
-font.setHinting(drawing.FontHinting.FULL);
-```
-
 ## setScaleX
 
 ```TypeScript
@@ -1166,28 +815,6 @@ Sets a horizontal scale factor for this font.
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
-
-**Examples**
-
-```TypeScript
-import { RenderNode } from '@kit.ArkUI';
-import { common2D, drawing } from '@kit.ArkGraphics2D';
-
-class DrawingRenderNode extends RenderNode {
-  draw(context : DrawContext) {
-    const canvas = context.canvas;
-    const pen = new drawing.Pen();
-    pen.setStrokeWidth(5);
-    pen.setColor({alpha: 255, red: 255, green: 0, blue: 0});
-    canvas.attachPen(pen);
-    let font = new drawing.Font();
-    font.setSize(100);
-    font.setScaleX(2);
-    const textBlob = drawing.TextBlob.makeFromString("hello", font, drawing.TextEncoding.TEXT_ENCODING_UTF8);
-    canvas.drawTextBlob(textBlob, 200, 200);
-  }
-}
-```
 
 ## setSize
 
@@ -1215,15 +842,6 @@ Sets the font size.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
 
-**Examples**
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-let font = new drawing.Font();
-font.setSize(5);
-```
-
 ## setSkewX
 
 ```TypeScript
@@ -1249,28 +867,6 @@ Sets a horizontal skew factor for this font.
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
-
-**Examples**
-
-```TypeScript
-import { RenderNode } from '@kit.ArkUI';
-import { common2D, drawing } from '@kit.ArkGraphics2D';
-
-class DrawingRenderNode extends RenderNode {
-  draw(context : DrawContext) {
-    const canvas = context.canvas;
-    const pen = new drawing.Pen();
-    pen.setStrokeWidth(5);
-    pen.setColor({alpha: 255, red: 255, green: 0, blue: 0});
-    canvas.attachPen(pen);
-    let font = new drawing.Font();
-    font.setSize(100);
-    font.setSkewX(1);
-    const textBlob = drawing.TextBlob.makeFromString("hello", font, drawing.TextEncoding.TEXT_ENCODING_UTF8);
-    canvas.drawTextBlob(textBlob, 200, 200);
-  }
-}
-```
 
 ## setThemeFontFollowed
 
@@ -1298,16 +894,6 @@ Sets whether to follow the theme font. When **followed** is set to **true**, the
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
 
-**Examples**
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-let font : drawing.Font = new drawing.Font();
-font.setThemeFontFollowed(true);
-console.info("font is theme font followed: " + font.isThemeFontFollowed());
-```
-
 ## setTypeface
 
 ```TypeScript
@@ -1333,15 +919,6 @@ Sets the typeface style (including attributes such as font name, weight, and ita
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
-
-**Examples**
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-let font = new drawing.Font();
-font.setTypeface(new drawing.Typeface());
-```
 
 ## textToGlyphs
 
@@ -1375,14 +952,3 @@ Converts text into glyph indexes.
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
-
-**Examples**
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-let font : drawing.Font = new drawing.Font();
-let text : string = 'hello world';
-let glyphs : number[] = font.textToGlyphs(text);
-console.info("drawing text toglyphs OnTestFunction num =  " + glyphs.length );
-```

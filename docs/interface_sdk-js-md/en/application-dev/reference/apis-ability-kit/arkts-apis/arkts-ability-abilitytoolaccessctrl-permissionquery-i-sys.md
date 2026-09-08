@@ -69,7 +69,7 @@ operationInfo: OperationInfo[]
 
 Operation information list.
 
-**Type:** OperationInfo[]
+**Type:** [OperationInfo](arkts-ability-abilitytoolaccessctrl-operationinfo-i-sys.md)[]
 
 **Since:** 26.0.0
 

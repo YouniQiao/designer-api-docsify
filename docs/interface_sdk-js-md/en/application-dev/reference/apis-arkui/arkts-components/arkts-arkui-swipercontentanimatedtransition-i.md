@@ -41,7 +41,7 @@ transition: Callback<SwiperContentTransitionProxy>
 
 Content of the custom page transition animation.
 
-**Type:** Callback&lt;[SwiperContentTransitionProxy](arkts-arkui-swipercontenttransitionproxy-i.md)&gt;
+**Type:** [Callback](arkts-arkui-callback-i.md)&lt;[SwiperContentTransitionProxy](arkts-arkui-swipercontenttransitionproxy-i.md)&gt;
 
 **Since:** 12
 

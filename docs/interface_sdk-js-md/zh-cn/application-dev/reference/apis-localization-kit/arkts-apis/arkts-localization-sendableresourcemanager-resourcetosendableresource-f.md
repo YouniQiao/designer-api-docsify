@@ -24,13 +24,13 @@ export function resourceToSendableResource(resource: Resource): SendableResource
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| resource | Resource | 是 | Resource对象。 |
+| resource | [Resource](arkts-localization-sendableresourcemanager-resource-t.md) | 是 | Resource对象。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| SendableResource | 转换后的SendableResource对象。 |
+| [SendableResource](arkts-localization-sendableresourcemanager-sendableresource-t.md) | 转换后的SendableResource对象。 |
 
 **错误码：**
 

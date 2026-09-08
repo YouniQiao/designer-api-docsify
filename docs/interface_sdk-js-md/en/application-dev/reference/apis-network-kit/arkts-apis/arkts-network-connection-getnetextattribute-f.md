@@ -26,7 +26,7 @@ Obtains the extended attributes of the network specified by **netHandle** to det
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| netHandle | NetHandle | Yes | Network handle. |
+| netHandle | [NetHandle](arkts-network-connection-nethandle-i.md) | Yes | Network handle. |
 
 **Return value:**
 

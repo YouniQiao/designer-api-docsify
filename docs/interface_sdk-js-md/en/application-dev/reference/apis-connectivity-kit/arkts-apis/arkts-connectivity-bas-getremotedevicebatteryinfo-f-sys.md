@@ -34,7 +34,7 @@ Get remote device battery information.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;BatteryInfo&gt; | Returns the battery info. |
+| Promise&lt;[BatteryInfo](arkts-connectivity-connection-batteryinfo-i.md)&gt; | Returns the battery info. |
 
 **Error codes:**
 

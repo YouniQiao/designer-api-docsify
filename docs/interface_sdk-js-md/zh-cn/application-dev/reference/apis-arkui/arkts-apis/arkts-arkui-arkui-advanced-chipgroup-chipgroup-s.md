@@ -32,7 +32,7 @@ backgroundSystemMaterial?: uiMaterial.Material
 
 值为undefined时，不应用材质样式。
 
-**类型：** uiMaterial.Material
+**类型：** [uiMaterial.Material](arkts-arkui-uimaterial-material-c.md)
 
 **起始版本：** 26.0.0
 
@@ -202,7 +202,7 @@ selectedBackgroundSystemMaterial?: uiMaterial.Material
 
 值为undefined时，不应用选中状态的材质样式。
 
-**类型：** uiMaterial.Material
+**类型：** [uiMaterial.Material](arkts-arkui-uimaterial-material-c.md)
 
 **起始版本：** 26.0.0
 

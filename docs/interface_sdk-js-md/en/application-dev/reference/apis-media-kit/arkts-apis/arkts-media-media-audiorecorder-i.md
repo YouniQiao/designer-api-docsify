@@ -216,22 +216,6 @@ Pauses audio recording. This API can be called only after the **'start'** event 
 
 **System capability:** SystemCapability.Multimedia.Media.AudioRecorder
 
-**Examples**
-
-```TypeScript
-audioPlayer.on('pause', () => {    // Set the 'pause' event callback.
-  console.info('audio pause called');
-});
-audioPlayer.pause();
-```
-
-```TypeScript
-audioRecorder.on('pause', () => {    // Set the 'pause' event callback.
-  console.info('audio recorder pause called');
-});
-audioRecorder.pause();
-```
-
 ## prepare
 
 ```TypeScript
@@ -262,24 +246,6 @@ Prepares for recording.
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | permission denied.<br>**Applicable version:** 12 and later |
 
-**Examples**
-
-```TypeScript
-let audioRecorderConfig: media.AudioRecorderConfig = {
-  audioEncoder : media.AudioEncoder.AAC_LC,
-  audioEncodeBitRate : 64000,
-  audioSampleRate : 44100,
-  numberOfChannels : 2,
-  format : media.AudioOutputFormat.AAC_ADTS,
-  uri : 'fd://1',       // The file must be created by the caller and granted with proper permissions.
-  location : { latitude : 30, longitude : 130},
-};
-audioRecorder.on('prepare', () => {    // Set the 'prepare' event callback.
-  console.info('prepare called');
-});
-audioRecorder.prepare(audioRecorderConfig);
-```
-
 ## release
 
 ```TypeScript
@@ -295,21 +261,6 @@ Releases the audio recording resources.
 **Substitutes:** [release](arkts-media-media-avrecorder-i.md#release)(callback: AsyncCallback&lt;void&gt;)
 
 **System capability:** SystemCapability.Multimedia.Media.AudioRecorder
-
-**Examples**
-
-```TypeScript
-audioPlayer.release();
-audioPlayer = undefined;
-```
-
-```TypeScript
-audioRecorder.on('release', () => {    // Set the 'release' event callback.
-  console.info('audio recorder release called');
-});
-audioRecorder.release();
-audioRecorder = undefined;
-```
 
 ## reset
 
@@ -329,22 +280,6 @@ Before resetting audio recording, you must call **stop()** to stop recording. Af
 
 **System capability:** SystemCapability.Multimedia.Media.AudioRecorder
 
-**Examples**
-
-```TypeScript
-audioPlayer.on('reset', () => {    // Set the 'reset' event callback.
-  console.info('audio reset called');
-});
-audioPlayer.reset();
-```
-
-```TypeScript
-audioRecorder.on('reset', () => {    // Set the 'reset' event callback.
-  console.info('audio recorder reset called');
-});
-audioRecorder.reset();
-```
-
 ## resume
 
 ```TypeScript
@@ -360,15 +295,6 @@ Resumes audio recording. This API can be called only after the **'pause'** event
 **Substitutes:** [resume](arkts-media-media-avrecorder-i.md#resume)(callback: AsyncCallback&lt;void&gt;)
 
 **System capability:** SystemCapability.Multimedia.Media.AudioRecorder
-
-**Examples**
-
-```TypeScript
-audioRecorder.on('resume', () => {    // Set the 'resume' event callback.
-  console.info('audio recorder resume called');
-});
-audioRecorder.resume();
-```
 
 ## start
 
@@ -386,15 +312,6 @@ Starts audio recording. This API can be called only after the **'prepare'** even
 
 **System capability:** SystemCapability.Multimedia.Media.AudioRecorder
 
-**Examples**
-
-```TypeScript
-audioRecorder.on('start', () => {    // Set the 'start' event callback.
-  console.info('audio recorder start called');
-});
-audioRecorder.start();
-```
-
 ## stop
 
 ```TypeScript
@@ -410,19 +327,3 @@ Stops audio recording.
 **Substitutes:** [stop](arkts-media-media-avrecorder-i.md#stop)(callback: AsyncCallback&lt;void&gt;)
 
 **System capability:** SystemCapability.Multimedia.Media.AudioRecorder
-
-**Examples**
-
-```TypeScript
-audioPlayer.on('stop', () => {    // Set the 'stop' event callback.
-  console.info('audio stop called');
-});
-audioPlayer.stop();
-```
-
-```TypeScript
-audioRecorder.on('stop', () => {    // Set the 'stop' event callback.
-  console.info('audio recorder stop called');
-});
-audioRecorder.stop();
-```

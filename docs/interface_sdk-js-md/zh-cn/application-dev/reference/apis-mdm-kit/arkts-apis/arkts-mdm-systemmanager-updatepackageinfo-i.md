@@ -52,7 +52,7 @@ packages: Array<Package>
 
 系统更新包详情。
 
-**类型：** Array&lt;Package&gt;
+**类型：** Array&lt;[Package](arkts-mdm-systemmanager-package-i.md)&gt;
 
 **起始版本：** 12
 

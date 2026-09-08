@@ -28,8 +28,8 @@ Before you do this, call [usb.getDevices](arkts-basicservices-usb-getdevices-f.m
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pipe | USBDevicePipe | Yes | Device pipe, which is used to determine the bus number and device address. |
-| iface | USBInterface | Yes | USB interface, which is used to determine the index of the interface to claim. |
+| pipe | [USBDevicePipe](arkts-basicservices-usb-usbdevicepipe-i.md) | Yes | Device pipe, which is used to determine the bus number and device address. |
+| iface | [USBInterface](arkts-basicservices-usb-usbinterface-i.md) | Yes | USB interface, which is used to determine the index of the interface to claim. |
 | force | boolean | No | Whether to forcibly claim the USB interface. The default value is **false**, indicating not to forcibly claim the USB interface. |
 
 **Return value:**

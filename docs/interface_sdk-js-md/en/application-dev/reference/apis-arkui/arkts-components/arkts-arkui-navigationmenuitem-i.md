@@ -33,7 +33,7 @@ icon?: string | Resource
 
 Icon path of the menu item.
 
-**Type:** string \| Resource
+**Type:** string \| [Resource](../arkts-apis/arkts-arkui-resource-t.md)
 
 **Since:** 8
 
@@ -89,7 +89,7 @@ API version 9: visible.
 
 Since API version 10: invisible.
 
-**Type:** string \| Resource
+**Type:** string \| [Resource](../arkts-apis/arkts-arkui-resource-t.md)
 
 **Since:** 8
 

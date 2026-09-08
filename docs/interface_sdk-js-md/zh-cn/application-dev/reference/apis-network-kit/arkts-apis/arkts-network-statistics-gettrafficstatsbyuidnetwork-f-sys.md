@@ -27,7 +27,7 @@ function getTrafficStatsByUidNetwork(uid: number, networkInfo: NetworkInfo): Pro
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | uid | number | 是 | 指定查询的应用 UID。 |
-| networkInfo | NetworkInfo | 是 | 指定查询的网络信息，参见[NetworkInfo](arkts-network-statistics-networkinfo-i.md)。 |
+| networkInfo | [NetworkInfo](arkts-network-statistics-networkinfo-i.md) | 是 | 指定查询的网络信息，参见[NetworkInfo](arkts-network-statistics-networkinfo-i.md)。 |
 
 **返回值：**
 

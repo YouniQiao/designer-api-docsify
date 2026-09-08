@@ -35,7 +35,7 @@ Adds a specified IP address and subnet mask for the VLAN specified by **vlanId**
 | --- | --- | --- | --- |
 | ifName | string | Yes | NIC name. |
 | vlanId | number | Yes | VLAN ID. The value range is [0, 4094]. |
-| address | LinkAddress | Yes | Network link information. |
+| address | [LinkAddress](arkts-network-connection-linkaddress-i.md) | Yes | Network link information. |
 
 **Return value:**
 

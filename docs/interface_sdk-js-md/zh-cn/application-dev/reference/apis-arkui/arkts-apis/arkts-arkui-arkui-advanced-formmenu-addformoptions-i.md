@@ -34,7 +34,7 @@ formBindingData?: formBindingData.FormBindingData
 
 Indicates the form data.
 
-**类型：** formBindingData.FormBindingData
+**类型：** [formBindingData.FormBindingData](../../apis-form-kit/arkts-apis/arkts-form-formbindingdata-formbindingdata-i.md)
 
 **起始版本：** 12
 

@@ -25,11 +25,11 @@ function parse(text: string, reviver?: Transformer, options?: ParseOptions): ISe
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | text | string | 是 | 有效的JSON字符串。 |
-| reviver | Transformer | 否 | 转换函数，传入该参数，可以用来修改解析生成的原始值。默认值是undefined。该参数目前仅支持传入undefined值，其他值会被忽略或视为无效。 |
-| options | ParseOptions | 否 | 解析的配置，传入该参数，可以用来控制解析生成的结果类型。默认值是undefined。 |
+| reviver | [Transformer](arkts-arkts-ason-transformer-t.md) | 否 | 转换函数，传入该参数，可以用来修改解析生成的原始值。默认值是undefined。该参数目前仅支持传入undefined值，其他值会被忽略或视为无效。 |
+| options | [ParseOptions](arkts-arkts-ason-parseoptions-i.md) | 否 | 解析的配置，传入该参数，可以用来控制解析生成的结果类型。默认值是undefined。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| ISendable \| null | 返回ISendable数据或null。入参为null时，返回null。 |
+| [ISendable](arkts-arkts-ason-isendable-t.md) \| null | 返回ISendable数据或null。入参为null时，返回null。 |

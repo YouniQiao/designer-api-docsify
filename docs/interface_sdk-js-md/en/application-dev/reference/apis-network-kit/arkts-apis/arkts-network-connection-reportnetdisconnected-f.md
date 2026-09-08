@@ -26,7 +26,7 @@ Reports the network unavailability to the network management module. This API us
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| netHandle | NetHandle | Yes | Network handle. For details, see [NetHandle](arkts-network-connection-nethandle-i.md). |
+| netHandle | [NetHandle](arkts-network-connection-nethandle-i.md) | Yes | Network handle. For details, see [NetHandle](arkts-network-connection-nethandle-i.md). |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the network status is reported successfully, **error** is **undefined**. Otherwise, **error** is an error object. |
 
 **Error codes:**
@@ -81,7 +81,7 @@ Reports the network unavailability to the network management module. This API us
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| netHandle | NetHandle | Yes | Network handle. |
+| netHandle | [NetHandle](arkts-network-connection-nethandle-i.md) | Yes | Network handle. |
 
 **Return value:**
 

@@ -22,11 +22,13 @@ Obtains the serial port device list, including the device name and port number.
 
 | Type | Description |
 | --- | --- |
-| Readonly&lt;SerialPort&gt;[] | Serial port information list. |
+| Readonly&lt;[SerialPort](arkts-basicservices-serialmanager-serialport-i.md)&gt;[] | Serial port information list. |
 
 **Examples**
 
 > NOTE
+> 
+> The following sample code shows the basic process for calling the getPortList API and it needs to be executed in a specific method. In actual calling, you must comply with the device-related protocols.
 
 ```TypeScript
 import { JSON } from '@kit.ArkTS';

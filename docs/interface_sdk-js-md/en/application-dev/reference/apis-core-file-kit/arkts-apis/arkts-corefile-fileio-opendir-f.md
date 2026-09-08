@@ -33,18 +33,6 @@ Opens a directory. This API uses a promise to return the result.
 | --- | --- |
 | Promise&lt;[Dir](arkts-corefile-fileio-dir-depr-i.md)&gt; | Promise that returns the **Dir** object opened. |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@ohos.base';
-let dirPath = pathDir + "/testDir";
-fileio.opendir(dirPath).then((dir: fileio.Dir) => {
-  console.info("opendir succeed");
-}).catch((err: BusinessError) => {
-  console.error("opendir failed with error:" + err);
-});
-```
-
 
 ## opendir
 
@@ -68,13 +56,3 @@ Opens a file directory. This API uses an asynchronous callback to return the res
 | --- | --- | --- | --- |
 | path | string | Yes | Application sandbox path of the directory to open. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Dir](arkts-corefile-fileio-dir-depr-i.md)&gt; | Yes | Callback invoked when the directory is opened asynchronously. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@ohos.base';
-fileio.opendir(pathDir, (err: BusinessError, dir: fileio.Dir) => {
-  // Example code in Dir struct
-  // Use read/readSync/close.
-});
-```

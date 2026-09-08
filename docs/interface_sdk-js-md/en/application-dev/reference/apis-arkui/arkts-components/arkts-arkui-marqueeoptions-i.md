@@ -103,7 +103,7 @@ The spacing between two rounds of marquee.
 
 Default value is marquee width.
 
-**Type:** LengthMetrics
+**Type:** [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md)
 
 **Since:** 23
 

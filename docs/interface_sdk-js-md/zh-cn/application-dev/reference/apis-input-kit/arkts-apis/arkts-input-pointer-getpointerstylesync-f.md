@@ -28,7 +28,7 @@ function getPointerStyleSync(windowId: number): PointerStyle
 
 | 类型 | 说明 |
 | --- | --- |
-| PointerStyle | 返回鼠标样式类型。 |
+| [PointerStyle](arkts-input-pointer-pointerstyle-e.md) | 返回鼠标样式类型。 |
 
 **错误码：**
 

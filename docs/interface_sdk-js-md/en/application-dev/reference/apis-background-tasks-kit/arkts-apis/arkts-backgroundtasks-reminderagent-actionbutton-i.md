@@ -42,7 +42,7 @@ type: ActionButtonType
 
 Button type.
 
-**Type:** ActionButtonType
+**Type:** [ActionButtonType](arkts-backgroundtasks-reminderagent-actionbuttontype-e.md)
 
 **Since:** 7
 

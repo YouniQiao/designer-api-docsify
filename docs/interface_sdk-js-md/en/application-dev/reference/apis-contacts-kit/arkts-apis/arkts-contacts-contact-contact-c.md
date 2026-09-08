@@ -36,7 +36,7 @@ emails?: Email[]
 
 List of email addresses of the contact.
 
-**Type:** Email[]
+**Type:** [Email](arkts-contacts-contact-email-c.md)[]
 
 **Since:** 7
 
@@ -52,7 +52,7 @@ events?: Event[]
 
 List of important dates such as birthdays and anniversaries of the contact.
 
-**Type:** Event[]
+**Type:** [Event](arkts-contacts-contact-event-c.md)[]
 
 **Since:** 7
 
@@ -212,7 +212,7 @@ phoneNumbers?: PhoneNumber[]
 
 List of phone numbers of the contact.
 
-**Type:** PhoneNumber[]
+**Type:** [PhoneNumber](arkts-contacts-contact-phonenumber-c.md)[]
 
 **Since:** 7
 
@@ -228,7 +228,7 @@ portrait?: Portrait
 
 Contact portrait.
 
-**Type:** Portrait
+**Type:** [Portrait](arkts-contacts-contact-portrait-c.md)
 
 **Since:** 7
 
@@ -299,24 +299,3 @@ List of websites of the contact.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Applications.ContactsData
-
-**Examples**
-
-Creates contact data in JSON format.
-
-```TypeScript
-import { contact } from '@kit.ContactsKit';
-
-let myContact: contact.Contact = {
-    phoneNumbers: [{
-        phoneNumber: '138xxxxxxxx'
-    }],
-    name: {
-        fullName: 'fullName',
-        namePrefix: 'namePrefix'
-    },
-    nickName: {
-        nickName: 'nickName'
-    }
-};
-```

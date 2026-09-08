@@ -70,7 +70,7 @@ drawableRect: Rect
 
 Size of the rectangle that can be drawn in the window. The upper boundary and left boundary are calculated relative to the top-left vertex of the window. In the stage model, this property should be obtained after [loadContent()](arkts-arkui-window-window-i.md#loadcontent) or [setUIContent()](arkts-arkui-window-window-i.md#setuicontent) is called to load the page content.
 
-**Type:** Rect
+**Type:** [Rect](arkts-arkui-window-rect-i.md)
 
 **Since:** 11
 
@@ -102,7 +102,7 @@ globalDisplayRect?: Rect
 
 Window size in the global coordinate system. In extended screen scenarios, the top-left corner of the primary screen is used as the coordinate origin. In virtual screen scenarios, the top-left corner of the virtual screen is used as the coordinate origin. The default value is [0, 0, 0, 0].
 
-**Type:** Rect
+**Type:** [Rect](arkts-arkui-window-rect-i.md)
 
 **Since:** 20
 
@@ -266,7 +266,7 @@ type: WindowType
 
 Window type.
 
-**Type:** WindowType
+**Type:** [WindowType](arkts-arkui-window-windowtype-e.md)
 
 **Since:** 7
 
@@ -286,7 +286,7 @@ windowRect: Rect
 
 Window size, which can be obtained from the page lifecycle [onPageShow](../arkts-components/arkts-arkui-basecustomcomponent-c.md#onpageshow) or the application lifecycle [onForeground](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md#onforeground).
 
-**Type:** Rect
+**Type:** [Rect](arkts-arkui-window-rect-i.md)
 
 **Since:** 7
 
@@ -302,7 +302,7 @@ windowType?: WindowType
 
 Window type
 
-**Type:** WindowType
+**Type:** [WindowType](arkts-arkui-window-windowtype-e.md)
 
 **Since:** 26.0.0
 

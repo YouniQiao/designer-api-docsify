@@ -42,7 +42,7 @@ state: BondState
 
 Profile connection state of the device.
 
-**Type:** BondState
+**Type:** [BondState](arkts-connectivity-bluetoothmanager-bondstate-e.md)
 
 **Since:** 9
 

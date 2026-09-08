@@ -28,11 +28,4 @@ function getPorts(): Array<USBPort>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;USBPort&gt; | USB端口描述信息列表。 |
-
-**示例**
-
-```TypeScript
-// 获取所有USB端口描述信息
-let ret: Array<usbManager.USBPort> = usbManager.getPorts();
-```
+| Array&lt;[USBPort](arkts-basicservices-usbmanager-usbport-i-sys.md)&gt; | USB端口描述信息列表。 |

@@ -52,7 +52,7 @@ fileConflictOptions?: FileConflictOptions
 
 File conflict options for a paste task. The default value is **OVERWRITE**.
 
-**Type:** FileConflictOptions
+**Type:** [FileConflictOptions](arkts-basicservices-pasteboard-fileconflictoptions-e.md)
 
 **Default:** FileConflictOptions.OVERWRITE
 
@@ -70,7 +70,7 @@ progressIndicator: ProgressIndicator
 
 Progress indicator options. You can choose whether to use the default progress indicator.
 
-**Type:** ProgressIndicator
+**Type:** [ProgressIndicator](arkts-basicservices-pasteboard-progressindicator-e.md)
 
 **Since:** 15
 

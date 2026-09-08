@@ -38,7 +38,7 @@ responseResult: ResultCode
 
 操作结果码。
 
-**类型：** ResultCode
+**类型：** [ResultCode](arkts-telephony-esim-resultcode-e-sys.md)
 
 **起始版本：** 18
 

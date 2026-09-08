@@ -128,17 +128,3 @@ The process is in the background and the available memory of the entire device i
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
-
-**Examples**
-
-```TypeScript
-import { UIAbility, AbilityConstant } from '@kit.AbilityKit';
-
-export default class MyAbility extends UIAbility {
-  onMemoryLevel(level: AbilityConstant.MemoryLevel) {
-    if (level === AbilityConstant.MemoryLevel.MEMORY_LEVEL_CRITICAL) {
-      console.info('The memory of device is critical, please release some memory.');
-    }
-  }
-}
-```

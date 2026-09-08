@@ -42,29 +42,3 @@ function dataMigration(callback: DataMigrationCallback): number
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 | [31100110](../errorcode-font-manager.md#31100110-系统异常导致接口调用失败) | Call failed due to system error. |
 | [31100111](../errorcode-font-manager.md#31100111-迁移任务执行中) | Data migration is in progress. |
-
-**示例**
-
-```TypeScript
-import { fontManager } from '@kit.LocalizationKit';
-
-async function dataMigration() {
-  const callback: fontManager.DataMigrationCallback = {
-    onHeartBeat: () => {
-      console.info('onHeartBeat callback');
-    },
-    onProgress: (progress : fontManager.DataMigrationProgress) => {
-      console.info('onProgress callback');
-    },
-    onResult: (result : number) => {
-      console.info('onResult callback');
-    }
-  }
-  try {
-    let res = await fontManager.dataMigration(callback);
-    console.info('dataMigration suc. res is ' + res);
-  } catch (error) {
-    console.error('dataMigration err.' + error.code);
-  }
-}
-```

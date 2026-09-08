@@ -32,7 +32,7 @@ function p2pConnect(config: WifiP2PConfig): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| config | WifiP2PConfig | 是 | 连接配置信息。 |
+| config | [WifiP2PConfig](arkts-connectivity-wifi-wifip2pconfig-i.md) | 是 | 连接配置信息。 |
 
 **返回值：**
 

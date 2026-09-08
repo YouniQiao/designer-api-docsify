@@ -24,10 +24,10 @@ Configures menu item information.
 **Table 3 Default menu position when enableArrow is set to true and placement is not set or set to an invalid value**  
 | API| Default Menu Position|  
 |------|-------------|  
-| [bindMenu](arkts-arkui-commonmethod-c.md#bindmenu) | Placement.BottomLeft |
-| [bindMenu&lt;sup&gt;11+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#bindmenu) | Placement.BottomLeft |
+| [bindMenu](arkts-arkui-commonmethod-c.md#bindmenu) | [Placement.BottomLeft](../arkts-apis/arkts-arkui-placement-e.md) |
+| [bindMenu&lt;sup&gt;11+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#bindmenu) | [Placement.BottomLeft](../arkts-apis/arkts-arkui-placement-e.md) |
 | [bindContextMenu&lt;sup&gt;8+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#bindcontextmenu) | Placement.Top |
-| [bindContextMenu&lt;sup&gt;12+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#bindcontextmenu) | Placement.BottomLeft |
+| [bindContextMenu&lt;sup&gt;12+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#bindcontextmenu) | [Placement.BottomLeft](../arkts-apis/arkts-arkui-placement-e.md) |
 | [bindContextMenuWithResponse&lt;sup&gt;23+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#bindcontextmenuwithresponse) | Placement.Top |
 
 **Since:** 10
@@ -521,7 +521,7 @@ maxHeight?: LengthMetrics
 
 Defines the max height of menu.
 
-**Type:** LengthMetrics
+**Type:** [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md)
 
 **Since:** 26.0.0
 
@@ -543,7 +543,7 @@ Minimum distance for the menu to avoid the soft keyboard.
 
 If this parameter is not set, or set to a negative value or **undefined**, the value will be treated as 8 vp. This API is valid only when **keyboardAvoidMode** is set to avoid the soft keyboard.
 
-**Type:** LengthMetrics
+**Type:** [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md)
 
 **Since:** 23
 
@@ -815,7 +815,7 @@ Preferred position of the context menu. If the set position is insufficient for 
 preview?: MenuPreviewMode | CustomBuilder
 ```
 
-Preview displayed when the context menu is triggered by a number-press or by calling [bindContextMenu&lt;sup&gt;12+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#bindcontextmenu). It can be a screenshot of the target component or custom content.
+Preview displayed when the context menu is triggered by a long-press or by calling [bindContextMenu&lt;sup&gt;12+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#bindcontextmenu). It can be a screenshot of the target component or custom content.
 
 Default value: **MenuPreviewMode.NONE**, indicating no preview.
 
@@ -844,7 +844,7 @@ Default value: **MenuPreviewMode.NONE**, indicating no preview.
 previewAnimationOptions?: ContextMenuAnimationOptions
 ```
 
-Display effect of the number-press preview.
+Display effect of the long-press preview.
 
 Default value: **{ scale: [0.95, 1.1], transition: undefined, hoverScale: undefined }**
 
@@ -966,7 +966,7 @@ targetSpace?: LengthMetrics
 
 Sets the space between the menu and target. When both targetSpace and offset are set, they take effect additively. It is recommended to use targetSpace to set the space between the menu and target, and use offset for additional offset.
 
-**Type:** LengthMetrics
+**Type:** [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md)
 
 **Since:** 26.0.0
 

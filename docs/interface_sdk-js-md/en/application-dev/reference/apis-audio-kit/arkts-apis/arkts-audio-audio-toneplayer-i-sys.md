@@ -121,30 +121,6 @@ tonePlayer.release((err: BusinessError) => {
 });
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioCapturer.release((err: BusinessError) => {
-  if (err) {
-    console.error('capturer release failed');
-  } else {
-    console.info('capturer released.');
-  }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioRenderer.release((err: BusinessError) => {
-  if (err) {
-    console.error('Renderer release failed');
-  } else {
-    console.info('Renderer released.');
-  }
-});
-```
-
 ## release
 
 ```TypeScript
@@ -172,28 +148,6 @@ tonePlayer.release().then(() => {
   console.info('promise call release');
 }).catch(() => {
   console.error('promise call release fail');
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioCapturer.release().then(() => {
-  console.info('AudioFrameworkRecLog: ---------RELEASE RECORD---------');
-  console.info('AudioFrameworkRecLog: Capturer release : SUCCESS');
-  console.info(`AudioFrameworkRecLog: AudioCapturer : STATE : ${audioCapturer.state}`);
-}).catch((err: BusinessError) => {
-  console.error(`AudioFrameworkRecLog: Capturer stop: ERROR: ${err}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioRenderer.release().then(() => {
-  console.info('Renderer released successfully');
-}).catch((err: BusinessError) => {
-  console.error(`ERROR: ${err}`);
 });
 ```
 
@@ -232,30 +186,6 @@ tonePlayer.start((err: BusinessError) => {
 });
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioCapturer.start((err: BusinessError) => {
-  if (err) {
-    console.error('Capturer start failed.');
-  } else {
-    console.info('Capturer start success.');
-  }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioRenderer.start((err: BusinessError) => {
-  if (err) {
-    console.error('Renderer start failed.');
-  } else {
-    console.info('Renderer start success.');
-  }
-});
-```
-
 ## start
 
 ```TypeScript
@@ -283,29 +213,6 @@ tonePlayer.start().then(() => {
   console.info('promise call start');
 }).catch(() => {
   console.error('promise call start fail');
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioCapturer.start().then(() => {
-  console.info('Succeeded in doing start.');
-  if (audioCapturer.state == audio.AudioState.STATE_RUNNING) {
-    console.info('AudioFrameworkRecLog: AudioCapturer is in Running State');
-  }
-}).catch((err: BusinessError) => {
-  console.error(`Failed to start. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioRenderer.start().then(() => {
-  console.info('Renderer started');
-}).catch((err: BusinessError) => {
-  console.error(`ERROR: ${err}`);
 });
 ```
 
@@ -344,30 +251,6 @@ tonePlayer.stop((err: BusinessError) => {
 });
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioCapturer.stop((err: BusinessError) => {
-  if (err) {
-    console.error('Capturer stop failed');
-  } else {
-    console.info('Capturer stopped.');
-  }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioRenderer.stop((err: BusinessError) => {
-  if (err) {
-    console.error('Renderer stop failed');
-  } else {
-    console.info('Renderer stopped.');
-  }
-});
-```
-
 ## stop
 
 ```TypeScript
@@ -395,28 +278,5 @@ tonePlayer.stop().then(() => {
   console.info('promise call stop finish');
 }).catch(() => {
   console.error('promise call stop fail');
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioCapturer.stop().then(() => {
-  console.info('Succeeded in doing stop.');
-  if (audioCapturer.state == audio.AudioState.STATE_STOPPED){
-    console.info('AudioFrameworkRecLog: State is Stopped:');
-  }
-}).catch((err: BusinessError) => {
-  console.error(`Failed to stop. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioRenderer.stop().then(() => {
-  console.info('Renderer stopped successfully');
-}).catch((err: BusinessError) => {
-  console.error(`ERROR: ${err}`);
 });
 ```

@@ -43,23 +43,8 @@ declare function readLinesSync(filePath: string, options?: Options): ReaderItera
 | 13900022 | Too many open files |
 | 13900025 | No space left on device |
 | 13900027 | Read-only file system |
-| 13900030 | File name too number |
+| 13900030 | File name too long |
 | 13900033 | Too many symbolic links encountered |
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
 | 13900044 | Network is unreachable<br>**适用版本：** 12+ |
-
-**示例**
-
-```TypeScript
-import { Options } from '@kit.CoreFileKit';
-
-let filePath = pathDir + "/test.txt";
-let options: Options = {
-  encoding: 'utf-8'
-};
-let readerIterator = fileIo.readLinesSync(filePath, options);
-for (let it = readerIterator.next(); !it.done; it = readerIterator.next()) {
-  console.info(`Succeeded in reading lines, content: ${it.value}`);
-}
-```

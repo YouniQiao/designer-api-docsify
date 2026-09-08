@@ -30,13 +30,13 @@ Obtains the connection state of profile. On API 10 and above, the permission req
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| profileId | ProfileId | Yes | The profile id. |
+| profileId | [ProfileId](arkts-connectivity-bluetoothmanager-profileid-e.md) | Yes | The profile id. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ProfileConnectionState | Returns the connection state. |
+| [ProfileConnectionState](arkts-connectivity-bluetoothmanager-profileconnectionstate-e.md) | Returns the connection state. |
 
 **Error codes:**
 

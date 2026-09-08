@@ -36,7 +36,7 @@ You can use this method to create a theme form.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;formInfo.RunningFormInfo&gt; | Return the form info. |
+| Promise&lt;[formInfo.RunningFormInfo](arkts-form-forminfo-runningforminfo-i.md)&gt; | Return the form info. |
 
 **Error codes:**
 

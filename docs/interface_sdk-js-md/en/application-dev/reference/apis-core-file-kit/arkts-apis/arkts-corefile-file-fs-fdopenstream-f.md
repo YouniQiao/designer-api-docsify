@@ -58,29 +58,12 @@ Opens a stream based on an FD. This API uses a promise to return the result. To 
 | 13900025 | No space left on device |
 | 13900027 | Read-only file system |
 | 13900029 | Resource deadlock would occur |
-| 13900030 | File name too number |
+| 13900030 | File name too long |
 | 13900033 | Too many symbolic links encountered |
 | 13900034 | Operation would block |
 | 13900038 | Value too large for defined data type |
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let filePath = pathDir + "/test.txt";
-let file = fileIo.openSync(filePath);
-fileIo.fdopenStream(file.fd, "r+").then((stream: fileIo.Stream) => {
-  console.info(`Succeeded in opening stream.`);
-  stream.closeSync();
-}).catch((err: BusinessError) => {
-  console.error(`Failed to open stream. Code: ${err.code}, message: ${err.message}`);
-  // If the file stream fails to be opened, the FD must be manually closed.
-  fileIo.closeSync(file);
-});
-```
 
 
 ## fdopenStream
@@ -130,28 +113,9 @@ Opens a stream based on an FD. This API uses an asynchronous callback to return 
 | 13900025 | No space left on device |
 | 13900027 | Read-only file system |
 | 13900029 | Resource deadlock would occur |
-| 13900030 | File name too number |
+| 13900030 | File name too long |
 | 13900033 | Too many symbolic links encountered |
 | 13900034 | Operation would block |
 | 13900038 | Value too large for defined data type |
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let filePath = pathDir + "/test.txt";
-let file = fileIo.openSync(filePath, fileIo.OpenMode.READ_ONLY);
-fileIo.fdopenStream(file.fd, "r+", (err: BusinessError, stream: fileIo.Stream) => {
-  if (err) {
-    console.error(`Failed to fdopen stream. Code: ${err.code}, message: ${err.message}`);
-    // If the file stream fails to be opened, the FD must be manually closed.
-    fileIo.closeSync(file);
-  } else {
-    console.info(`Succeeded in fdopening stream.`);
-    stream.closeSync();
-  }
-});
-```

@@ -36,7 +36,7 @@ eventType: EventType
 
 事件类型。
 
-**类型：** EventType
+**类型：** [EventType](arkts-performanceanalysis-hiappevent-eventtype-e.md)
 
 **起始版本：** 9
 

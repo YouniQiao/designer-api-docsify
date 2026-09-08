@@ -26,7 +26,7 @@ Obtains an **Authenticator** instance for user authentication.
 
 | Type | Description |
 | --- | --- |
-| Authenticator | Authenticator** instance obtained. |
+| [Authenticator](arkts-userauthentication-userauth-authenticator-i.md) | Authenticator** instance obtained. |
 
 **Examples**
 

@@ -2,7 +2,7 @@
 
 Wi-Fi IP type enumeration.
 
-@enum { number }
+@enum { int }
 
 **Since:** 9
 

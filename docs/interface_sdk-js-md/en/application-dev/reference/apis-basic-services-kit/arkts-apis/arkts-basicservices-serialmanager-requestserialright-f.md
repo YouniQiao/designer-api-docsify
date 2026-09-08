@@ -42,6 +42,8 @@ Requests the permission for the application to access the serial port device. Af
 **Examples**
 
 > NOTE
+> 
+> The following sample code shows the basic process for calling the requestSerialRight API and it needs to be executed in a specific method. In actual calling, you must comply with the device-related protocols.
 
 ```TypeScript
 import { JSON } from '@kit.ArkTS';

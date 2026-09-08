@@ -38,7 +38,7 @@ reason: DisconnectedReason
 
 通话结束原因。
 
-**类型：** DisconnectedReason
+**类型：** [DisconnectedReason](arkts-telephony-call-disconnectedreason-e-sys.md)
 
 **起始版本：** 9
 

@@ -36,4 +36,4 @@ Sends a request to the system to release file page cache of specified files. The
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 16000163 | File type error. File name does not end with .so,hap, or .hsp. |
+| [16000163](../errorcode-ability.md#16000163-file-type-error) | File type error. File name does not end with .so,hap, or .hsp. |

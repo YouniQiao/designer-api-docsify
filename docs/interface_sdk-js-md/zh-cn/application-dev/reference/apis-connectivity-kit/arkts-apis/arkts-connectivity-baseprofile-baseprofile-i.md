@@ -90,7 +90,7 @@ getConnectionState(deviceId: string): ProfileConnectionState
 
 | 类型 | 说明 |
 | --- | --- |
-| ProfileConnectionState | 返回Profile的连接状态。 |
+| [ProfileConnectionState](arkts-connectivity-baseprofile-profileconnectionstate-t.md) | 返回Profile的连接状态。 |
 
 **错误码：**
 
@@ -139,7 +139,7 @@ off(type: 'connectionStateChange', callback?: Callback<StateChangeParam>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'connectionStateChange' | 是 | 事件回调类型，支持的事件为'connectionStateChange'，表示Profile连接状态变化事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;StateChangeParam&gt; | 否 | 指定取消订阅的回调函数。若传参，则需与on('connectionStateChange')中的回调函数一致，此时取消订阅该回调函数；若传入的回调与已订阅的回调不一致，则无法取消对应订阅；若无传参，则取消订阅该type对应的所有回调函数。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[StateChangeParam](arkts-connectivity-baseprofile-statechangeparam-i.md)&gt; | 否 | 指定取消订阅的回调函数。若传参，则需与on('connectionStateChange')中的回调函数一致，此时取消订阅该回调函数；若传入的回调与已订阅的回调不一致，则无法取消对应订阅；若无传参，则取消订阅该type对应的所有回调函数。 |
 
 **错误码：**
 
@@ -173,7 +173,7 @@ on(type: 'connectionStateChange', callback: Callback<StateChangeParam>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'connectionStateChange' | 是 | 事件回调类型，支持的事件为'connectionStateChange'，表示Profile连接状态变化事件。当Profile连接状态变化时，触发该事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;StateChangeParam&gt; | 是 | 指定订阅的回调函数，会携带Profile连接状态。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[StateChangeParam](arkts-connectivity-baseprofile-statechangeparam-i.md)&gt; | 是 | 指定订阅的回调函数，会携带Profile连接状态。 |
 
 **错误码：**
 

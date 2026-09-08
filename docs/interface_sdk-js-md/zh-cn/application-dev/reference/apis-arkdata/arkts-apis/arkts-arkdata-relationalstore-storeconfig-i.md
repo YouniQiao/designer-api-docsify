@@ -228,7 +228,7 @@ securityLevel: SecurityLevel
 
 设置数据库安全级别。
 
-**类型：** SecurityLevel
+**类型：** [SecurityLevel](arkts-arkdata-relationalstore-securitylevel-e.md)
 
 **起始版本：** 9
 

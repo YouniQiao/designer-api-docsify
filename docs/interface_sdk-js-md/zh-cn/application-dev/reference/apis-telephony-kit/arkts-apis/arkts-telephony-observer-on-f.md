@@ -25,7 +25,7 @@ function on(type: 'networkStateChange', callback: Callback<NetworkState>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'networkStateChange' | 是 | 网络状态变化事件，参数固定为'networkStateChange'。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;NetworkState&gt; | 是 | 回调函数，返回网络状态对象。参考radio的[NetworkState](arkts-telephony-radio-networkstate-i.md)。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[NetworkState](arkts-telephony-observer-networkstate-t.md)&gt; | 是 | 回调函数，返回网络状态对象。参考radio的[NetworkState](arkts-telephony-radio-networkstate-i.md)。 |
 
 **错误码：**
 
@@ -70,8 +70,8 @@ function on(type: 'networkStateChange', options: ObserverOptions, callback: Call
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'networkStateChange' | 是 | 网络状态变化事件，参数固定为'networkStateChange'。 |
-| options | ObserverOptions | 是 | 电话相关事件订阅参数可选项。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;NetworkState&gt; | 是 | 回调函数，返回网络状态对象。参考radio的[NetworkState](arkts-telephony-radio-networkstate-i.md)。 |
+| options | [ObserverOptions](arkts-telephony-observer-observeroptions-i.md) | 是 | 电话相关事件订阅参数可选项。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[NetworkState](arkts-telephony-observer-networkstate-t.md)&gt; | 是 | 回调函数，返回网络状态对象。参考radio的[NetworkState](arkts-telephony-radio-networkstate-i.md)。 |
 
 **错误码：**
 
@@ -115,7 +115,7 @@ function on(type: 'signalInfoChange', callback: Callback<Array<SignalInformation
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'signalInfoChange' | 是 | 信号状态变化事件，参数固定为'signalInfoChange'。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;SignalInformation&gt;&gt; | 是 | 回调函数，返回信号强度对象。参考radio的[SignalInformation](arkts-telephony-radio-signalinformation-i.md)。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[SignalInformation](arkts-telephony-observer-signalinformation-t.md)&gt;&gt; | 是 | 回调函数，返回信号强度对象。参考radio的[SignalInformation](arkts-telephony-radio-signalinformation-i.md)。 |
 
 **错误码：**
 
@@ -155,8 +155,8 @@ function on(type: 'signalInfoChange', options: ObserverOptions, callback: Callba
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'signalInfoChange' | 是 | 信号状态变化事件，参数固定为'signalInfoChange'。 |
-| options | ObserverOptions | 是 | 电话相关事件订阅参数可选项。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;SignalInformation&gt;&gt; | 是 | 回调函数，返回信号强度对象。参考radio的[SignalInformation](arkts-telephony-radio-signalinformation-i.md)。 |
+| options | [ObserverOptions](arkts-telephony-observer-observeroptions-i.md) | 是 | 电话相关事件订阅参数可选项。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[SignalInformation](arkts-telephony-observer-signalinformation-t.md)&gt;&gt; | 是 | 回调函数，返回信号强度对象。参考radio的[SignalInformation](arkts-telephony-radio-signalinformation-i.md)。 |
 
 **错误码：**
 
@@ -238,7 +238,7 @@ function on(type: 'cellularDataConnectionStateChange', options: ObserverOptions,
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'cellularDataConnectionStateChange' | 是 | 蜂窝数据链路连接状态事件，参数固定为'cellularDataConnectionStateChange'。 |
-| options | ObserverOptions | 是 | 电话相关事件订阅参数可选项。 |
+| options | [ObserverOptions](arkts-telephony-observer-observeroptions-i.md) | 是 | 电话相关事件订阅参数可选项。 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DataConnectionStateInfo](arkts-telephony-observer-dataconnectionstateinfo-i.md)&gt; | 是 | 回调函数，返回蜂窝数据链路连接状态信息对象。参考data的[DataConnectState](arkts-telephony-data-dataconnectstate-e.md)，radio的[RadioTechnology](arkts-telephony-radio-radiotechnology-e.md)。 |
 
 **错误码：**
@@ -280,7 +280,7 @@ function on(type: 'cellularDataFlowChange', callback: Callback<DataFlowType>): v
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'cellularDataFlowChange' | 是 | 蜂窝数据业务的上下行数据流状态事件，参数固定为'cellularDataFlowChange'。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DataFlowType&gt; | 是 | 回调函数，返回数据流状态对象。参考data的[DataFlowType](arkts-telephony-data-dataflowtype-e.md)。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DataFlowType](arkts-telephony-observer-dataflowtype-t.md)&gt; | 是 | 回调函数，返回数据流状态对象。参考data的[DataFlowType](arkts-telephony-data-dataflowtype-e.md)。 |
 
 **错误码：**
 
@@ -320,8 +320,8 @@ function on(type: 'cellularDataFlowChange', options: ObserverOptions, callback: 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'cellularDataFlowChange' | 是 | 蜂窝数据业务的上下行数据流状态事件，参数固定为'cellularDataFlowChange'。 |
-| options | ObserverOptions | 是 | 电话相关事件订阅参数可选项。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DataFlowType&gt; | 是 | 回调函数，返回数据流状态对象。参考data的[DataFlowType](arkts-telephony-data-dataflowtype-e.md)。 |
+| options | [ObserverOptions](arkts-telephony-observer-observeroptions-i.md) | 是 | 电话相关事件订阅参数可选项。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DataFlowType](arkts-telephony-observer-dataflowtype-t.md)&gt; | 是 | 回调函数，返回数据流状态对象。参考data的[DataFlowType](arkts-telephony-data-dataflowtype-e.md)。 |
 
 **错误码：**
 
@@ -402,7 +402,7 @@ function on(type: 'callStateChange', options: ObserverOptions, callback: Callbac
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'callStateChange' | 是 | 通话状态变化事件，参数固定为'callStateChange'。 |
-| options | ObserverOptions | 是 | 电话相关事件订阅参数可选项。 |
+| options | [ObserverOptions](arkts-telephony-observer-observeroptions-i.md) | 是 | 电话相关事件订阅参数可选项。 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CallStateInfo](arkts-telephony-observer-callstateinfo-i.md)&gt; | 是 | 回调函数，返回通话状态信息对象。应用可获取到CallStateInfo。其中，三方应用仅能获取state通话状态。number受系统权限管控，仅面向系统应用开放。 |
 
 **错误码：**
@@ -444,8 +444,8 @@ function on(type: 'callStateChangeEx', callback: Callback<TelCallState>, options
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'callStateChangeEx' | 是 | 通话状态变化事件，参数固定为'callStateChangeEx'。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;TelCallState&gt; | 是 | 回调函数，返回通话状态对象。应用可获取到TelCallState。 |
-| options | ObserverOptions | 否 | 电话相关事件订阅参数可选项。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[TelCallState](arkts-telephony-observer-telcallstate-t.md)&gt; | 是 | 回调函数，返回通话状态对象。应用可获取到TelCallState。 |
+| options | [ObserverOptions](arkts-telephony-observer-observeroptions-i.md) | 否 | 电话相关事件订阅参数可选项。 |
 
 **错误码：**
 
@@ -540,7 +540,7 @@ function on(type: 'simStateChange', options: ObserverOptions, callback: Callback
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'simStateChange' | 是 | sim状态更改事件，参数固定为'simStateChange'。 |
-| options | ObserverOptions | 是 | 电话相关事件订阅参数可选项。 |
+| options | [ObserverOptions](arkts-telephony-observer-observeroptions-i.md) | 是 | 电话相关事件订阅参数可选项。 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SimStateData](arkts-telephony-observer-simstatedata-i.md)&gt; | 是 | 回调函数，返回卡状态数据对象。 |
 
 **错误码：**

@@ -112,7 +112,7 @@ mediaType: MediaType
 
 媒体的类型。
 
-**类型：** MediaType
+**类型：** [MediaType](arkts-arkweb-webview-mediatype-e.md)
 
 **起始版本：** 12
 

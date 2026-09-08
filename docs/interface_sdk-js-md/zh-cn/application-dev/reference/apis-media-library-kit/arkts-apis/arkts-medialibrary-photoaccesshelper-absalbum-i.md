@@ -31,7 +31,7 @@ getAssets(options: FetchOptions, callback: AsyncCallback<FetchResult<PhotoAsset>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | options | [FetchOptions](arkts-medialibrary-photoaccesshelper-fetchoptions-i.md) | 是 | 检索选项。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;FetchResult&lt;PhotoAsset&gt;&gt; | 是 | 回调函数。当获取相册中的文件成功，err为undefined，data为获取到的图片和视频数据结果集[FetchResult](arkts-file-photoaccesshelper.md)；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[FetchResult](arkts-medialibrary-photoaccesshelper-fetchresult-i.md)&lt;[PhotoAsset](arkts-medialibrary-photoaccesshelper-photoasset-i.md)&gt;&gt; | 是 | 回调函数。当获取相册中的文件成功，err为undefined，data为获取到的图片和视频数据结果集[FetchResult](arkts-file-photoaccesshelper.md)；否则为错误对象。 |
 
 **错误码：**
 
@@ -42,67 +42,6 @@ getAssets(options: FetchOptions, callback: AsyncCallback<FetchResult<PhotoAsset>
 | 13900012 | Permission denied<br>**适用版本：** 10 - 11 |
 | 13900020 | Invalid argument |
 | 14000011 | System inner fail |
-
-**示例**
-
-参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例创建phAccessHelper。
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  console.info('albumGetAssetsDemoCallback');
-  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-  let albumFetchOptions: photoAccessHelper.FetchOptions = {
-    fetchColumns: [],
-    predicates: predicates
-  };
-  let fetchOption: photoAccessHelper.FetchOptions = {
-    fetchColumns: [],
-    predicates: predicates
-  };
-  let albumList: photoAccessHelper.FetchResult<photoAccessHelper.Album> = await phAccessHelper.getAlbums(photoAccessHelper.AlbumType.USER, photoAccessHelper.AlbumSubtype.USER_GENERIC, albumFetchOptions);
-  let album: photoAccessHelper.Album = await albumList.getFirstObject();
-  album.getAssets(fetchOption, (err, albumFetchResult) => {
-    if (!err) {
-      console.info('album getAssets successfully, getCount: ' + albumFetchResult.getCount());
-    } else {
-      console.error(`album getAssets failed with error: ${err.code}, ${err.message}`);
-    }
-  });
-}
-```
-
-phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  console.info('getAssets');
-  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-  let fetchOptions: photoAccessHelper.FetchOptions = {
-    fetchColumns: [],
-    predicates: predicates
-  };
-
-  phAccessHelper.getAssets(fetchOptions, async (err, fetchResult) => {
-    if (err) {
-      console.error(`fetchResult fail with error: ${err.code}, ${err.message}`);
-      return;
-    }
-    if (fetchResult !== undefined) {
-      console.info('fetchResult success');
-      let photoAsset: photoAccessHelper.PhotoAsset = await fetchResult.getFirstObject();
-      if (photoAsset !== undefined) {
-        console.info('photoAsset.displayName : ' + photoAsset.displayName);
-      }
-    } else {
-      console.error(`fetchResult fail with error: ${err.code}, ${err.message}`);
-    }
-  });
-}
-```
 
 ## getAssets
 
@@ -130,7 +69,7 @@ getAssets(options: FetchOptions): Promise<FetchResult<PhotoAsset>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;FetchResult&lt;PhotoAsset&gt;&gt; | Promise对象，返回图片和视频数据结果集。 |
+| Promise&lt;[FetchResult](arkts-medialibrary-photoaccesshelper-fetchresult-i.md)&lt;[PhotoAsset](arkts-medialibrary-photoaccesshelper-photoasset-i.md)&gt;&gt; | Promise对象，返回图片和视频数据结果集。 |
 
 **错误码：**
 
@@ -141,62 +80,6 @@ getAssets(options: FetchOptions): Promise<FetchResult<PhotoAsset>>
 | 13900012 | Permission denied<br>**适用版本：** 10 - 19 |
 | 13900020 | Invalid argument |
 | 14000011 | System inner fail |
-
-**示例**
-
-参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例创建phAccessHelper。
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  console.info('albumGetAssetsDemoPromise');
-  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-  let albumFetchOptions: photoAccessHelper.FetchOptions = {
-    fetchColumns: [],
-    predicates: predicates
-  };
-  let fetchOption: photoAccessHelper.FetchOptions = {
-    fetchColumns: [],
-    predicates: predicates
-  };
-  let albumList: photoAccessHelper.FetchResult<photoAccessHelper.Album> = await phAccessHelper.getAlbums(photoAccessHelper.AlbumType.USER, photoAccessHelper.AlbumSubtype.USER_GENERIC, albumFetchOptions);
-  let album: photoAccessHelper.Album = await albumList.getFirstObject();
-  album.getAssets(fetchOption).then((albumFetchResult) => {
-    console.info('album getAssets successfully, getCount: ' + albumFetchResult.getCount());
-  }).catch((err: BusinessError) => {
-    console.error(`album getAssets failed with error: ${err.code}, ${err.message}`);
-  });
-}
-```
-
-phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  console.info('getAssets');
-  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-  let fetchOptions: photoAccessHelper.FetchOptions = {
-    fetchColumns: [],
-    predicates: predicates
-  };
-  try {
-    let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> = await phAccessHelper.getAssets(fetchOptions);
-    if (fetchResult !== undefined) {
-      console.info('fetchResult success');
-      let photoAsset: photoAccessHelper.PhotoAsset = await fetchResult.getFirstObject();
-      if (photoAsset !== undefined) {
-        console.info('photoAsset.displayName :' + photoAsset.displayName);
-      }
-    }
-  } catch (err) {
-    console.error(`getAssets failed, error: ${err.code}, ${err.message}`);
-  }
-}
-```
 
 ## albumName
 
@@ -220,7 +103,7 @@ readonly albumSubtype: AlbumSubtype
 
 相册子类型。
 
-**类型：** AlbumSubtype
+**类型：** [AlbumSubtype](arkts-medialibrary-photoaccesshelper-albumsubtype-e.md)
 
 **起始版本：** 10
 
@@ -234,7 +117,7 @@ readonly albumType: AlbumType
 
 相册类型。
 
-**类型：** AlbumType
+**类型：** [AlbumType](arkts-medialibrary-photoaccesshelper-albumtype-e.md)
 
 **起始版本：** 10
 

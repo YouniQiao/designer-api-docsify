@@ -53,7 +53,7 @@ Default value: min(width, height)/2
 
 If an invalid value is set, the default value is used.
 
-**Type:** LengthMetrics
+**Type:** [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md)
 
 **Default:** min(width, height) / 2
 
@@ -117,7 +117,7 @@ Font size (percentage values are not supported): **12fp**
 
 Other text parameters are subject to the theme values of the Text component.
 
-**Type:** Font
+**Type:** [Font](../arkts-apis/arkts-arkui-font-i.md)
 
 **Since:** 10
 

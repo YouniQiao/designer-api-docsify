@@ -58,7 +58,7 @@ Value range: [1, 2]
 
 Values less than 1 are treated as 1, and values greater than 2 are treated as 2.
 
-**Type:** number \| Resource
+**Type:** number \| [Resource](arkts-arkui-resource-t.md)
 
 **Since:** 14
 

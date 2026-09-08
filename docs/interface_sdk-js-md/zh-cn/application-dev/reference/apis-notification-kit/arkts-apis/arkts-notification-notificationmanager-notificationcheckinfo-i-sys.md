@@ -40,7 +40,7 @@ contentType: ContentType
 
 通知类型。
 
-**类型：** ContentType
+**类型：** [ContentType](arkts-notification-notificationmanager-contenttype-e.md)
 
 **起始版本：** 10
 
@@ -130,7 +130,7 @@ slotType: SlotType
 
 渠道类型。
 
-**类型：** SlotType
+**类型：** [SlotType](arkts-notification-notificationmanager-slottype-e.md)
 
 **起始版本：** 11
 

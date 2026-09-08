@@ -30,7 +30,7 @@ Constructor.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | common.Context | Yes | Context of the ability or application. |
+| context | [common.Context](../../apis-ability-kit/arkts-apis/arkts-ability-common-context-t.md) | Yes | Context of the ability or application. |
 
 **Examples**
 
@@ -72,10 +72,10 @@ Loads an ad.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid input parameter. Possible causes: 1. Mandatory parameters are left unspecified.2. Incorrect parameter types. 3.Parameter verification failed |
+| [401](../errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.2. Incorrect parameter types. 3.Parameter verification failed |
 | [21800001](../errorcode-ads.md#21800001-internal-system-error) | System internal error. |
 | [21800003](../errorcode-ads.md#21800003-ad-loading-failure) | Failed to load the ad request. |
-| [801](../errorcode-ads.md#801-ad-request-failure) | Device not supported.<br>**Applicable version:** 12 and later |
+| [801](../errorcode-ads.md#801-ad-request-failure) | Capability not supported.<br>**Applicable version:** 12 and later |
 
 **Examples**
 
@@ -134,10 +134,10 @@ Loads multiple ads.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid input parameter. Possible causes: 1. Mandatory parameters are left unspecified.2. Incorrect parameter types. 3.Parameter verification failed |
+| [401](../errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.2. Incorrect parameter types. 3.Parameter verification failed |
 | [21800001](../errorcode-ads.md#21800001-internal-system-error) | System internal error. |
 | [21800003](../errorcode-ads.md#21800003-ad-loading-failure) | Failed to load the ad request. |
-| [801](../errorcode-ads.md#801-ad-request-failure) | Device not supported.<br>**Applicable version:** 12 and later |
+| [801](../errorcode-ads.md#801-ad-request-failure) | Capability not supported.<br>**Applicable version:** 12 and later |
 
 **Examples**
 

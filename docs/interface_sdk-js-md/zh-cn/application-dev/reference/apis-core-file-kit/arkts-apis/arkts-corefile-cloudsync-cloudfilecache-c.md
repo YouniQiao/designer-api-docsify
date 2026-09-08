@@ -109,23 +109,7 @@ A constructor used to create a **CloudFileCache** instance. Data is not shared b
 **示例**
 
 ```TypeScript
-let fileSync = new cloudSync.FileSync()
-```
-
-```TypeScript
 let fileCache = new cloudSync.CloudFileCache();
-```
-
-```TypeScript
-let fileVersion = new cloudSync.FileVersion();
-```
-
-```TypeScript
-let gallerySync = new cloudSync.GallerySync()
-```
-
-```TypeScript
-let download = new cloudSync.Download()
 ```
 
 ## getCachedTotalSize
@@ -184,7 +168,7 @@ off(event: 'progress', callback?: Callback<DownloadProgress>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | event | 'progress' | 是 | 取消订阅的事件类型，取值为'progress'（同步过程事件）。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DownloadProgress&gt; | 否 | 回调函数。云文件下载过程事件。若填写，将视为取消指定的回调函数；否则为取消当前订阅的所有回调函数。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DownloadProgress](arkts-corefile-cloudsync-downloadprogress-i.md)&gt; | 否 | 回调函数。云文件下载过程事件。若填写，将视为取消指定的回调函数；否则为取消当前订阅的所有回调函数。 |
 
 **错误码：**
 
@@ -275,7 +259,7 @@ on(event: 'progress', callback: Callback<DownloadProgress>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | event | 'progress' | 是 | 订阅的事件类型，取值为'progress'（下载过程事件）。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DownloadProgress&gt; | 是 | 回调函数。云文件下载过程事件。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DownloadProgress](arkts-corefile-cloudsync-downloadprogress-i.md)&gt; | 是 | 回调函数。云文件下载过程事件。 |
 
 **错误码：**
 
@@ -411,23 +395,6 @@ fileCache.start(uri).then(() => {
 });
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let download = new cloudSync.Download();
-let uri: string = "file:///media/Photo/1";
-
-download.on('progress', (pg: cloudSync.DownloadProgress) => {
-  console.info("download state: " + pg.state);
-});
-
-download.start(uri).then(() => {
-  console.info("start download successfully");
-}).catch((err: BusinessError) => {
-  console.error(`start download failed with error message: ${err.message}, error code: ${err.code}`);
-});
-```
-
 ## start
 
 ```TypeScript
@@ -470,21 +437,6 @@ let uri = fileUri.getUriFromPath(path);
 fileCache.start(uri, (err: BusinessError) => {
   if (err) {
     console.error("start download failed with error message: " + err.message + ", error code: " + err.code);
-  } else {
-    console.info("start download successfully");
-  }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let download = new cloudSync.Download();
-let uri: string = "file:///media/Photo/1";
-
-download.start(uri, (err: BusinessError) => {
-  if (err) {
-    console.error(`start download failed with error message: ${err.message}, error code: ${err.code}`);
   } else {
     console.info("start download successfully");
   }
@@ -647,21 +599,6 @@ let uri = fileUri.getUriFromPath(path);
 fileCache.stop(uri, (err: BusinessError) => {
   if (err) {
     console.error("stop download failed with error message: " + err.message + ", error code: " + err.code);
-  } else {
-    console.info("stop download successfully");
-  }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let download = new cloudSync.Download();
-let uri: string = "file:///media/Photo/1";
-
-download.stop(uri, (err: BusinessError) => {
-  if (err) {
-    console.error(`stop download failed with error message: ${err.message}, error code: ${err.code}`);
   } else {
     console.info("stop download successfully");
   }

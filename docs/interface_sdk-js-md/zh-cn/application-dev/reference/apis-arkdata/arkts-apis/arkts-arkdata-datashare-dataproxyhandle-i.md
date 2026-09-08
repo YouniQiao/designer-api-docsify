@@ -383,7 +383,7 @@ publish(data: ProxyData[], config: DataProxyConfig): Promise<DataProxyResult[]>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| data | ProxyData[] | 是 | 表示需要创建或者更新的共享配置项数组。API版本26.0.0之前，数组最大长度为32；从API版本26.0.0开始，数组最大长度为64。 |
+| data | [ProxyData](arkts-arkdata-datashare-proxydata-i.md)[] | 是 | 表示需要创建或者更新的共享配置项数组。API版本26.0.0之前，数组最大长度为32；从API版本26.0.0开始，数组最大长度为64。 |
 | config | [DataProxyConfig](arkts-arkdata-datashare-dataproxyconfig-i.md) | 是 | 表示数据代理操作的配置。从API版本26.0.0开始，如果发布的配置项中存在任一值的长度超过[DataProxyConfig](arkts-arkdata-datashare-dataproxyconfig-i.md)中maxValueLength字段配置的最大长度限制，则当前发布操作失败。 |
 
 **返回值：**

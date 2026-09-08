@@ -34,7 +34,7 @@ remote: rpc.IRemoteObject
 
 Remote driver object.
 
-**Type:** rpc.IRemoteObject
+**Type:** [rpc.IRemoteObject](../../apis-ipc-kit/arkts-apis/arkts-ipc-rpc-iremoteobject-c.md)
 
 **Since:** 11
 

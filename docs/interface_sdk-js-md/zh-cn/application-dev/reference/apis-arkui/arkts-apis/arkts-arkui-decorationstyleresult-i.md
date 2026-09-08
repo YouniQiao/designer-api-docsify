@@ -37,7 +37,7 @@ style?: TextDecorationStyle
 
 装饰线样式。
 
-**类型：** TextDecorationStyle
+**类型：** [TextDecorationStyle](arkts-arkui-textdecorationstyle-e.md)
 
 **起始版本：** 12
 
@@ -79,7 +79,7 @@ type: TextDecorationType
 
 装饰线类型。
 
-**类型：** TextDecorationType
+**类型：** [TextDecorationType](arkts-arkui-textdecorationtype-e.md)
 
 **起始版本：** 12
 

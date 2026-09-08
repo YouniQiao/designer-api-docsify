@@ -67,12 +67,12 @@ import { window } from '@kit.ArkUI';
 | [setSpecificSystemWindowZIndex](arkts-arkui-window-setspecificsystemwindowzindex-f-sys.md) | 设置系统窗口的窗口层级。使用Promise异步回调。 |
 | [getTopNavDestinationName](arkts-arkui-window-gettopnavdestinationname-f-sys.md) | 获取指定的前台窗口当前栈顶Navigation中的NavDestination名称，使用Promise异步回调。 |
 | [getSnapshot](arkts-arkui-window-getsnapshot-f-sys.md) | 获取指定窗口相同尺寸截图，使用Promise异步回调。若当前窗口设置为隐私模式（可通过[setWindowPrivacyMode](arkts-arkui-window-window-i.md#setwindowprivacymode)接口设置），截图结果为白屏。 |
-| on | 开启状态栏、导航栏属性变化的监听。 |
-| off | 关闭状态栏、导航栏属性变化的监听。 |
-| on | 添加手势导航启用状态变化的监听。 |
-| off | 移除手势导航启用状态变化的监听。 |
-| on | 添加水印启用状态变化的监听。 |
-| off | 移除水印启用状态变化的监听。 |
+| [on](arkts-arkui-canvasrenderingcontext2d-c.md) | 开启状态栏、导航栏属性变化的监听。 |
+| [off](arkts-arkui-canvasrenderingcontext2d-c.md) | 关闭状态栏、导航栏属性变化的监听。 |
+| [on](arkts-arkui-canvasrenderingcontext2d-c.md) | 添加手势导航启用状态变化的监听。 |
+| [off](arkts-arkui-canvasrenderingcontext2d-c.md) | 移除手势导航启用状态变化的监听。 |
+| [on](arkts-arkui-canvasrenderingcontext2d-c.md) | 添加水印启用状态变化的监听。 |
+| [off](arkts-arkui-canvasrenderingcontext2d-c.md) | 移除水印启用状态变化的监听。 |
 | [notifyScreenshotEvent](arkts-arkui-window-notifyscreenshotevent-f-sys.md) | 通知屏幕截屏的事件类型，使用Promise异步回调。 |
 | [moveMainWindowToTargetDisplay](arkts-arkui-window-movemainwindowtotargetdisplay-f-sys.md) | 将指定的主窗口迁移到指定的屏幕上。使用Promise异步回调。 |
 <!--DelEnd-->

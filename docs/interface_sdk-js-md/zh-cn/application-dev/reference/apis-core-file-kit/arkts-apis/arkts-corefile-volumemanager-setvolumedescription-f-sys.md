@@ -43,22 +43,6 @@ function setVolumeDescription(uuid: string, description: string, callback: Async
 | 13600008 | No such object. |
 | 13900042 | Unknown error. |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-// uuid可通过getAllVolumes()接口获取卷设备信息后获得
-let uuid: string = "";
-let description: string = "";
-volumeManager.setVolumeDescription(uuid, description, (error: BusinessError) => {
-  if (error) {
-    console.error(`setVolumeDescription failed, code is: ${error.code}, message is: ${error.message}`);
-    return;
-  }
-  // 设置卷设备描述成功的回调
-});
-```
-
 
 ## setVolumeDescription
 
@@ -101,17 +85,3 @@ function setVolumeDescription(uuid: string, description: string): Promise<void>
 | 13600005 | Incorrect volume state. |
 | 13600008 | No such object. |
 | 13900042 | Unknown error. |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-// uuid可通过getAllVolumes()接口获取卷设备信息后获得
-let uuid: string = "";
-let description: string = "";
-volumeManager.setVolumeDescription(uuid, description).then(() => {
-  console.info("setVolumeDescription successfully");
-}).catch((error: BusinessError) => {
-  console.error(`Failed to setVolumeDescription. Code: ${error.code}, message: ${error.message}`);
-});
-```

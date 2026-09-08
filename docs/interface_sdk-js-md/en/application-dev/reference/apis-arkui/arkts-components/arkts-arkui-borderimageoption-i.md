@@ -103,7 +103,7 @@ Source or gradient color of the border image. When the type is string, this para
 
 <p>&lt;strong&gt;NOTE&lt;/strong&gt;: The border image source applies only to container components, such as Row, Column, and Flex. </p>
 
-**Type:** string \| Resource \| [LinearGradient](arkts-arkui-lineargradient-i.md)
+**Type:** string \| [Resource](../arkts-apis/arkts-arkui-resource-t.md) \| [LinearGradient](arkts-arkui-lineargradient-i.md)
 
 **Since:** 11
 

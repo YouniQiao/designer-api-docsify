@@ -28,7 +28,7 @@ Obtains the data flow type of the cellular network (corresponding to the uplink 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DataFlowType&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[DataFlowType](arkts-telephony-data-dataflowtype-e.md)&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -74,7 +74,7 @@ Obtains the data flow type of the cellular network (corresponding to the uplink 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;DataFlowType&gt; | Promise used to return the data flow type of the cellular network (corresponding to the uplink and downlink arrows next to the signal bar). |
+| Promise&lt;[DataFlowType](arkts-telephony-data-dataflowtype-e.md)&gt; | Promise used to return the data flow type of the cellular network (corresponding to the uplink and downlink arrows next to the signal bar). |
 
 **Error codes:**
 

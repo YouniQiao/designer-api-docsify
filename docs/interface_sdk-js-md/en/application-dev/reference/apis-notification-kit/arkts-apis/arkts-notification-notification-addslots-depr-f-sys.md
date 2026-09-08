@@ -32,31 +32,6 @@ Adds an array of notification slots. This API uses an asynchronous callback to r
 | slots | Array&lt;[NotificationSlot](arkts-notification-notificationslot-notificationslot-i.md)&gt; | Yes | Notification slots to add. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
-**Examples**
-
-```TypeScript
-import NotificationManager from '@ohos.notificationManager';
-import Base from '@ohos.base';
-
-// addSlots callback
-let addSlotsCallBack = (err: Base.BusinessError) => {
-  if (err) {
-    console.error("addSlots failed " + JSON.stringify(err));
-  } else {
-    console.info("addSlots success");
-  }
-}
-// NotificationSlot object
-let notificationSlot: NotificationManager.NotificationSlot = {
-  type: Notification.SlotType.SOCIAL_COMMUNICATION
-};
-// NotificationSlotArray object
-let notificationSlotArray: NotificationManager.NotificationSlot[] = new Array();
-notificationSlotArray[0] = notificationSlot;
-
-Notification.addSlots(notificationSlotArray, addSlotsCallBack);
-```
-
 
 ## addSlots
 
@@ -89,24 +64,3 @@ Adds an array of notification slots. This API uses a promise to return the resul
 | Type | Description |
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
-
-**Examples**
-
-```TypeScript
-import NotificationManager from '@ohos.notificationManager';
-import Base from '@ohos.base';
-
-// NotificationSlot object
-let notificationSlot: NotificationManager.NotificationSlot = {
-  type: Notification.SlotType.SOCIAL_COMMUNICATION
-};
-// NotificationSlotArray object
-let notificationSlotArray: NotificationManager.NotificationSlot[] = new Array();
-notificationSlotArray[0] = notificationSlot;
-
-Notification.addSlots(notificationSlotArray).then(() => {
-  console.info("addSlots success");
-}).catch((err: Base.BusinessError) => {
-  console.error(`addSlot failed, code is ${err}`);
-});
-```

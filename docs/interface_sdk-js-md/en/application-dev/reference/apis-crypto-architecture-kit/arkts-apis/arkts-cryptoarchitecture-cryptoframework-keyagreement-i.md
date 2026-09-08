@@ -36,7 +36,7 @@ Generates a shared secret based on the given private key and public key. This AP
 | --- | --- | --- | --- |
 | priKey | [PriKey](arkts-cryptoarchitecture-cryptoframework-prikey-i.md) | Yes | Private key used for key agreement. |
 | pubKey | [PubKey](arkts-cryptoarchitecture-cryptoframework-pubkey-i.md) | Yes | Public key used for key agreement. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DataBlob&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the shared secret obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the shared secret obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -46,96 +46,6 @@ Generates a shared secret based on the given private key and public key. This AP
 | [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
 | [17620002](../errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) | Failed to obtain the native object or convert parameters. |
 | [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
-
-**Examples**
-
-PBKDF2
-
-```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
-
-let spec: cryptoFramework.PBKDF2Spec = {
-  algName: 'PBKDF2',
-  password: '123456',
-  salt: new Uint8Array(16),
-  iterations: 10000,
-  keySize: 32
-};
-let kdf = cryptoFramework.createKdf('PBKDF2|SHA256');
-kdf.generateSecret(spec, (err, secret) => {
-  if (err) {
-    console.error(`key derivation failed, errCode: ${err.code}, errMsg: ${err.message}`);
-    return;
-  }
-  console.info('key derivation output = ' + secret.data);
-});
-```
-
-HKDF
-
-```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
-
-let spec: cryptoFramework.HKDFSpec = {
-  algName: 'HKDF',
-  key: '123456',
-  salt: new Uint8Array(16),
-  info: new Uint8Array(16),
-  keySize: 32
-};
-let kdf = cryptoFramework.createKdf('HKDF|SHA256|EXTRACT_AND_EXPAND');
-kdf.generateSecret(spec, (err, secret) => {
-  if (err) {
-    console.error(`key derivation failed, errCode: ${err.code}, errMsg: ${err.message}`);
-    return;
-  }
-  console.info('key derivation output = ' + secret.data);
-});
-```
-
-PBKDF2
-
-```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let spec: cryptoFramework.PBKDF2Spec = {
-  algName: 'PBKDF2',
-  password: '123456',
-  salt: new Uint8Array(16),
-  iterations: 10000,
-  keySize: 32
-};
-let kdf = cryptoFramework.createKdf('PBKDF2|SHA256');
-let kdfPromise = kdf.generateSecret(spec);
-kdfPromise.then(secret => {
-  console.info('key derivation output = ' + secret.data);
-}).catch((error: BusinessError) => {
-  console.error(`key derivation failed: errCode: ${error.code}, errMsg: ${error.message}`);
-});
-```
-
-HKDF
-
-```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let spec: cryptoFramework.HKDFSpec = {
-  algName: 'HKDF',
-  key: '123456',
-  salt: new Uint8Array(16),
-  info: new Uint8Array(16),
-  keySize: 32
-};
-let kdf = cryptoFramework.createKdf('HKDF|SHA256|EXTRACT_AND_EXPAND');
-let kdfPromise = kdf.generateSecret(spec);
-kdfPromise.then(secret => {
-  console.info('key derivation output = ' + secret.data);
-}).catch((error: BusinessError) => {
-  console.error(`key derivation failed: errCode: ${error.code}, errMsg: ${error.message}`);
-});
-```
 
 ## generateSecret
 
@@ -164,7 +74,7 @@ Generates a shared secret based on the given private key and public key. This AP
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;DataBlob&gt; | Promise used to return the shared secret of key agreement. |
+| Promise&lt;[DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md)&gt; | Promise used to return the shared secret of key agreement. |
 
 **Error codes:**
 
@@ -175,10 +85,6 @@ Generates a shared secret based on the given private key and public key. This AP
 | [17620002](../errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) | Failed to obtain the native object or convert parameters. |
 | [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
 
-**Examples**
-
-See [generateSecret](#generatesecret)
-
 ## generateSecretSync
 
 ```TypeScript
@@ -187,7 +93,7 @@ generateSecretSync(priKey: PriKey, pubKey: PubKey): DataBlob
 
 Generates a shared secret based on the given private key and public key. This API returns the shared secret generated synchronously.
 
-**NOTE：**It is recommended to prioritize the use of asynchronous API, generateSecret. Synchronous API may take a number time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
+**NOTE：**It is recommended to prioritize the use of asynchronous API, generateSecret. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
 **Since:** 12
 
@@ -206,7 +112,7 @@ Generates a shared secret based on the given private key and public key. This AP
 
 | Type | Description |
 | --- | --- |
-| DataBlob | Returns the shared secret generated. |
+| [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | Returns the shared secret generated. |
 
 **Error codes:**
 

@@ -24,7 +24,7 @@ function setAppNet(netHandle: NetHandle, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| netHandle | NetHandle | 是 | 网络句柄。 |
+| netHandle | [NetHandle](arkts-network-connection-nethandle-i.md) | 是 | 网络句柄。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当成功绑定App到指定网络时，error为undefined，否则为错误对象。 |
 
 **错误码：**
@@ -40,6 +40,7 @@ function setAppNet(netHandle: NetHandle, callback: AsyncCallback<void>): void
 **示例**
 
 当应用绑定WIFI网络，WIFI弱信号或者断开时，如果不解绑，会导致应用无法上网。
+以下示例以绑定WIFI网络为例，结合[on('netAvailable')](arkts-network-connection-netconnection-i.md#onnetavailable)、[on('netLost')](arkts-network-connection-netconnection-i.md#onnetlost)接口，当监听到WIFI网络可用时绑定WIFI网络，不可用时解绑，使用默认网络。
 
 ```TypeScript
 import { connection } from '@kit.NetworkKit';
@@ -105,7 +106,7 @@ function setAppNet(netHandle: NetHandle): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| netHandle | NetHandle | 是 | 网络句柄。 |
+| netHandle | [NetHandle](arkts-network-connection-nethandle-i.md) | 是 | 网络句柄。 |
 
 **返回值：**
 
@@ -126,6 +127,7 @@ function setAppNet(netHandle: NetHandle): Promise<void>
 **示例**
 
 当应用绑定WIFI网络，WIFI弱信号或者断开时，如果不解绑，会导致应用无法上网。
+以下示例以绑定WIFI网络为例，结合[on('netAvailable')](arkts-network-connection-netconnection-i.md#onnetavailable)、[on('netLost')](arkts-network-connection-netconnection-i.md#onnetlost)接口，当监听到WIFI网络可用时绑定WIFI网络，不可用时解绑，使用默认网络。
 
 ```TypeScript
 import { connection } from '@kit.NetworkKit';

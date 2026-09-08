@@ -2,7 +2,7 @@
 
 跟踪事件
 
-@enum { number }
+@enum { int }
 
 **起始版本：** 20
 

@@ -94,7 +94,7 @@ queryEntityParam: insightIntent.QueryEntityParam
 
 Indicates the param for query entity.
 
-**Type:** insightIntent.QueryEntityParam
+**Type:** [insightIntent.QueryEntityParam](arkts-ability-insightintent-queryentityparam-i.md)
 
 **Since:** 26.0.0
 

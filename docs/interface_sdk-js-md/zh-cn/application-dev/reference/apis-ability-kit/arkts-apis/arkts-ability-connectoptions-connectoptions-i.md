@@ -23,7 +23,7 @@ onConnect(elementName: ElementName, remote: rpc.IRemoteObject): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | elementName | [ElementName](arkts-ability-elementname-i.md) | 是 | 目标Ability的elementName。 |
-| remote | rpc.IRemoteObject | 是 | 用于与目标Ability进行IPC通信的IRemoteObject实例。 |
+| remote | [rpc.IRemoteObject](../../apis-ipc-kit/arkts-apis/arkts-ipc-rpc-iremoteobject-c.md) | 是 | 用于与目标Ability进行IPC通信的IRemoteObject实例。 |
 
 **示例**
 

@@ -100,7 +100,7 @@ readonly style?: TextDecorationStyle
 
 获取属性字符串的文本装饰线样式。
 
-**类型：** TextDecorationStyle
+**类型：** [TextDecorationStyle](arkts-arkui-textdecorationstyle-e.md)
 
 **起始版本：** 12
 
@@ -136,7 +136,7 @@ readonly type: TextDecorationType
 
 获取属性字符串的文本装饰线类型。
 
-**类型：** TextDecorationType
+**类型：** [TextDecorationType](arkts-arkui-textdecorationtype-e.md)
 
 **起始版本：** 12
 

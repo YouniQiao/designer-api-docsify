@@ -32,7 +32,7 @@ Reads the average color value from the image and writes the result to a Color in
 
 | Type | Description |
 | --- | --- |
-| Color | Average color value. If the operation fails, null is returned. |
+| [Color](arkts-arkgraphics2d-effectkit-color-i.md) | Average color value. If the operation fails, null is returned. |
 
 **Examples**
 
@@ -87,7 +87,7 @@ Reads the color value with the highest saturation from the image and writes the 
 
 | Type | Description |
 | --- | --- |
-| Color | Color value of the color with the highest saturation. If the operation fails, null is returned. |
+| [Color](arkts-arkgraphics2d-effectkit-color-i.md) | Color value of the color with the highest saturation. If the operation fails, null is returned. |
 
 **Examples**
 
@@ -142,7 +142,7 @@ Reads the color value with the largest proportion in the image and writes the re
 
 | Type | Description |
 | --- | --- |
-| Color | Color value of the color with the largest proportion. If the operation fails, null is returned. |
+| [Color](arkts-arkgraphics2d-effectkit-color-i.md) | Color value of the color with the largest proportion. If the operation fails, null is returned. |
 
 **Examples**
 
@@ -197,7 +197,7 @@ Reads the color value of the main color from the image and writes the result to 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Color&gt; | Promise used to return the color value of the main color. If the operation fails, an error message is returned. |
+| Promise&lt;[Color](arkts-arkgraphics2d-effectkit-color-i.md)&gt; | Promise used to return the color value of the main color. If the operation fails, an error message is returned. |
 
 **Examples**
 
@@ -254,7 +254,7 @@ Reads the color value of the main color from the image and writes the result to 
 
 | Type | Description |
 | --- | --- |
-| Color | Color value of the main color. If the operation fails, null is returned. |
+| [Color](arkts-arkgraphics2d-effectkit-color-i.md) | Color value of the main color. If the operation fails, null is returned. |
 
 **Examples**
 
@@ -315,7 +315,7 @@ Reads the top proportion colors from the image, with the number specified by col
 
 | Type | Description |
 | --- | --- |
-| Array&lt;Color \| null&gt; | Array of colors, i.e., the top colorCount color values by proportion in the image, sorted by proportion. |
+| Array&lt;[Color](arkts-arkgraphics2d-effectkit-color-i.md) \| null&gt; | Array of colors, i.e., the top colorCount color values by proportion in the image, sorted by proportion. |
 
 **Examples**
 

@@ -29,7 +29,7 @@ function on(type: 'stateChange', callback: Callback<BluetoothState>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'stateChange' | 是 | 事件回调类型，支持的事件为'stateChange'，表示蓝牙开关状态变化事件。如：当调用[access.enableBluetooth](arkts-connectivity-access-enablebluetooth-f.md)或[access.disableBluetooth](arkts-connectivity-access-disablebluetooth-f.md)时，可触发该事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;BluetoothState&gt; | 是 | 指定订阅的回调函数，会携带蓝牙开关状态。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[BluetoothState](arkts-connectivity-access-bluetoothstate-e.md)&gt; | 是 | 指定订阅的回调函数，会携带蓝牙开关状态。 |
 
 **错误码：**
 

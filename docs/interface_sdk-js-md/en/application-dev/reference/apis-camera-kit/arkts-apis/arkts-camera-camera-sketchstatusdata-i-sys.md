@@ -22,7 +22,7 @@ centerPointOffset: Point
 
 Offset of PiP.
 
-**Type:** Point
+**Type:** [Point](arkts-camera-camera-point-i.md)
 
 **Since:** 20
 

@@ -76,7 +76,7 @@ status: TransferStatus
 
 Enumerates call transfer states.
 
-**Type:** TransferStatus
+**Type:** [TransferStatus](arkts-telephony-call-transferstatus-e.md)
 
 **Since:** 26.0.0
 

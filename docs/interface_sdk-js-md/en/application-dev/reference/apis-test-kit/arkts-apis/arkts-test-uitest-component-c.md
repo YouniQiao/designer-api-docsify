@@ -102,17 +102,6 @@ async function demo() {
 }
 ```
 
-```TypeScript
-// xxx.test.ets
-import { UiDriver, BY, UiComponent } from '@kit.TestKit';
-
-async function demo() {
-  let driver: UiDriver = UiDriver.create();
-  let button: UiComponent = await driver.findComponent(BY.type('Button'));
-  await button.click();
-}
-```
-
 ## doubleClick
 
 ```TypeScript
@@ -151,17 +140,6 @@ import { Component, Driver, ON } from '@kit.TestKit';
 async function demo() {
   let driver: Driver = Driver.create();
   let button: Component = await driver.findComponent(ON.type('Button'));
-  await button.doubleClick();
-}
-```
-
-```TypeScript
-// xxx.test.ets
-import { UiDriver, BY, UiComponent } from '@kit.TestKit';
-
-async function demo() {
-  let driver: UiDriver = UiDriver.create();
-  let button: UiComponent = await driver.findComponent(BY.type('Button'));
   await button.doubleClick();
 }
 ```
@@ -259,20 +237,6 @@ async function demo() {
   let driver: Driver = Driver.create();
   let button: Component = await driver.findComponent(ON.type('Button'));
   let rect = await button.getBounds();
-}
-```
-
-```TypeScript
-// xxx.test.ets
-import { Driver, UiWindow } from '@kit.TestKit';
-
-async function demo() {
-  // Create a Driver object.
-  let driver: Driver = Driver.create();
-  // Search for the active window.
-  let window: UiWindow = await driver.findWindow({ active: true });
-  // Obtain the bounds information of the window.
-  let rect = await window.getBounds();
 }
 ```
 
@@ -399,17 +363,6 @@ async function demo() {
   let driver: Driver = Driver.create();
   let button: Component = await driver.findComponent(ON.type('TextInput'));
   let displayId = await button.getDisplayId();
-}
-```
-
-```TypeScript
-// xxx.test.ets
-import { UiWindow, Driver } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  let window: UiWindow = await driver.findWindow({ active: true });
-  let id = await window.getDisplayId();
 }
 ```
 
@@ -588,17 +541,6 @@ async function demo() {
 }
 ```
 
-```TypeScript
-// xxx.test.ets
-import { UiDriver, BY, UiComponent } from '@kit.TestKit';
-
-async function demo() {
-  let driver: UiDriver = UiDriver.create();
-  let button: UiComponent = await driver.findComponent(BY.type('Button'));
-  let text = await button.getText();
-}
-```
-
 ## getType
 
 ```TypeScript
@@ -637,17 +579,6 @@ import { Component, Driver, ON } from '@kit.TestKit';
 async function demo() {
   let driver: Driver = Driver.create();
   let button: Component = await driver.findComponent(ON.type('Button'));
-  let type = await button.getType();
-}
-```
-
-```TypeScript
-// xxx.test.ets
-import { UiDriver, BY, UiComponent } from '@kit.TestKit';
-
-async function demo() {
-  let driver: UiDriver = UiDriver.create();
-  let button: UiComponent = await driver.findComponent(BY.type('Button'));
   let type = await button.getType();
 }
 ```
@@ -700,17 +631,6 @@ async function demo() {
   // Search for the component whose text is 'hello world'.
   let text: Component = await driver.findComponent(ON.text('hello world'));
   // Clear the original text and enter '123'.
-  await text.inputText('123');
-}
-```
-
-```TypeScript
-// xxx.test.ets
-import { UiDriver, BY, UiComponent } from '@kit.TestKit';
-
-async function demo() {
-  let driver: UiDriver = UiDriver.create();
-  let text: UiComponent = await driver.findComponent(BY.text('hello world'));
   await text.inputText('123');
 }
 ```
@@ -904,21 +824,6 @@ async function demo() {
 }
 ```
 
-```TypeScript
-// xxx.test.ets
-import { UiDriver, BY, UiComponent } from '@kit.TestKit';
-
-async function demo() {
-  let driver: UiDriver = UiDriver.create();
-  let button: UiComponent = await driver.findComponent(BY.type('Button'));
-  if (await button.isClickable()) {
-    console.info('This button can be Clicked');
-  } else {
-    console.info('This button cannot be Clicked');
-  }
-}
-```
-
 ## isEnabled
 
 ```TypeScript
@@ -957,21 +862,6 @@ import { Component, Driver, ON } from '@kit.TestKit';
 async function demo() {
   let driver: Driver = Driver.create();
   let button: Component = await driver.findComponent(ON.type('Button'));
-  if (await button.isEnabled()) {
-    console.info('This button can be operated');
-  } else {
-    console.info('This button cannot be operated');
-  }
-}
-```
-
-```TypeScript
-// xxx.test.ets
-import { UiDriver, BY, UiComponent } from '@kit.TestKit';
-
-async function demo() {
-  let driver: UiDriver = UiDriver.create();
-  let button: UiComponent = await driver.findComponent(BY.type('Button'));
   if (await button.isEnabled()) {
     console.info('This button can be operated');
   } else {
@@ -1026,39 +916,13 @@ async function demo() {
 }
 ```
 
-```TypeScript
-// xxx.test.ets
-import { Driver, UiWindow } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  let window: UiWindow = await driver.findWindow({ active: true });
-  let focused = await window.isFocused();
-}
-```
-
-```TypeScript
-// xxx.test.ets
-import { UiDriver, BY, UiComponent } from '@kit.TestKit';
-
-async function demo() {
-  let driver: UiDriver = UiDriver.create();
-  let button: UiComponent = await driver.findComponent(BY.type('Button'));
-  if (await button.isFocused()) {
-    console.info('This button is focused');
-  } else {
-    console.info('This button is not focused');
-  }
-}
-```
-
 ## isLongClickable
 
 ```TypeScript
 isLongClickable(): Promise<boolean>
 ```
 
-Obtains the number-clickable status of this component. This API uses a promise to return the result.
+Obtains the long-clickable status of this component. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -1072,7 +936,7 @@ Obtains the number-clickable status of this component. This API uses a promise t
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return whether the component object is number-clickable. The value **true** indicates that the component is number-clickable, and **false** indicates the opposite. |
+| Promise&lt;boolean&gt; | Promise used to return whether the component object is long-clickable. The value **true** indicates that the component is long-clickable, and **false** indicates the opposite. |
 
 **Error codes:**
 
@@ -1144,21 +1008,6 @@ async function demo() {
 }
 ```
 
-```TypeScript
-// xxx.test.ets
-import { UiDriver, BY, UiComponent } from '@kit.TestKit';
-
-async function demo() {
-  let driver: UiDriver = UiDriver.create();
-  let scrollBar: UiComponent = await driver.findComponent(BY.scrollable(true));
-  if (await scrollBar.isScrollable()) {
-    console.info('This scrollBar can be operated');
-  } else {
-    console.info('This scrollBar cannot be operated');
-  }
-}
-```
-
 ## isSelected
 
 ```TypeScript
@@ -1205,21 +1054,6 @@ async function demo() {
 }
 ```
 
-```TypeScript
-// xxx.test.ets
-import { UiDriver, BY, UiComponent } from '@kit.TestKit';
-
-async function demo() {
-  let driver: UiDriver = UiDriver.create();
-  let button: UiComponent = await driver.findComponent(BY.type('Button'));
-  if (await button.isSelected()) {
-    console.info('This button is selected');
-  } else {
-    console.info('This button is not selected');
-  }
-}
-```
-
 ## longClick
 
 ```TypeScript
@@ -1258,17 +1092,6 @@ import { Component, Driver, ON } from '@kit.TestKit';
 async function demo() {
   let driver: Driver = Driver.create();
   let button: Component = await driver.findComponent(ON.type('Button'));
-  await button.longClick();
-}
-```
-
-```TypeScript
-// xxx.test.ets
-import { UiDriver, BY, UiComponent } from '@kit.TestKit';
-
-async function demo() {
-  let driver: UiDriver = UiDriver.create();
-  let button: UiComponent = await driver.findComponent(BY.type('Button'));
   await button.longClick();
 }
 ```

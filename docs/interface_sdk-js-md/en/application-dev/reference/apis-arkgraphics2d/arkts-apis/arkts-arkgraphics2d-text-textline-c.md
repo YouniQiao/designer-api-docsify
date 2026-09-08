@@ -33,7 +33,7 @@ Creates a truncated text line object.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | width | number | Yes | Line width after truncation, which is a floating-point value in physical pixels (px). |
-| ellipsisMode | EllipsisMode | Yes | Ellipsis mode. Currently, only **START** and **END** are supported. |
+| ellipsisMode | [EllipsisMode](arkts-arkgraphics2d-text-ellipsismode-e.md) | Yes | Ellipsis mode. Currently, only **START** and **END** are supported. |
 | ellipsis | string | Yes | String used to mark truncation. |
 
 **Return value:**
@@ -163,10 +163,6 @@ Obtains the number of glyphs in this text line.
 let glyphCount = lines[0].getGlyphCount();
 ```
 
-```TypeScript
-let glyphs = runs[0].getGlyphCount();
-```
-
 ## getGlyphRuns
 
 ```TypeScript
@@ -221,16 +217,12 @@ Obtains the image boundaries of this text line. The image boundaries, equivalent
 
 | Type | Description |
 | --- | --- |
-| common2D.Rect | Image boundary of a text line, in physical pixels (px). |
+| [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) | Image boundary of a text line, in physical pixels (px). |
 
 **Examples**
 
 ```TypeScript
 let imageBounds = lines[0].getImageBounds();
-```
-
-```TypeScript
-let bounds = runs[0].getImageBounds();
 ```
 
 ## getOffsetForStringIndex
@@ -283,7 +275,7 @@ Obtains the index of a character at the specified position in the original strin
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| point | common2D.Point | Yes | Coordinate position for finding the character index. The coordinates are relative to the top-left origin of the text line, in physical pixels (px). x indicates the horizontal coordinate, and y indicates the vertical coordinate. |
+| point | [common2D.Point](arkts-arkgraphics2d-common2d-point-i.md) | Yes | Coordinate position for finding the character index. The coordinates are relative to the top-left origin of the text line, in physical pixels (px). x indicates the horizontal coordinate, and y indicates the vertical coordinate. |
 
 **Return value:**
 
@@ -316,7 +308,7 @@ Obtains the range of the text in this text line in the entire paragraph.
 
 | Type | Description |
 | --- | --- |
-| Range | Range of the text in this text line in the entire paragraph. |
+| [Range](arkts-arkgraphics2d-text-range-i.md) | Range of the text in this text line in the entire paragraph. |
 
 **Examples**
 
@@ -388,10 +380,6 @@ let bounds = lines[0].getTypographicBounds();
 console.info('textLine ascent:' + bounds.ascent + ', descent:' + bounds.descent + ', leading:' + bounds.leading + ', width:' + bounds.width);
 ```
 
-```TypeScript
-let typographicBounds = runs[0].getTypographicBounds();
-```
-
 ## paint
 
 ```TypeScript
@@ -410,19 +398,11 @@ Paints this text line on the canvas with the coordinate point (x, y) as the uppe
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| canvas | drawing.Canvas | Yes | Target canvas. |
+| canvas | [drawing.Canvas](arkts-arkgraphics2d-drawing-canvas-c.md) | Yes | Target canvas. |
 | x | number | Yes | Horizontal coordinate of the upper left corner, which is a floating-point value, in physical pixels (px). |
 | y | number | Yes | Vertical coordinate of the upper left corner, which is a floating-point value, in physical pixels (px). |
 
 **Examples**
-
-```TypeScript
-const color: ArrayBuffer = new ArrayBuffer(160000);
-let opts: image.InitializationOptions = { editable: true, pixelFormat: 3, size: { height: 200, width: 200 } }
-let pixelMap: image.PixelMap = image.createPixelMapSync(color, opts);
-let canvas = new drawing.Canvas(pixelMap);
-paragraph.paint(canvas, 0, 0);
-```
 
 ```TypeScript
 import { drawing } from '@kit.ArkGraphics2D'
@@ -431,37 +411,6 @@ import { image } from '@kit.ImageKit'
 function textFunc(pixelmap: PixelMap) {
   let canvas = new drawing.Canvas(pixelmap);
   lines[0].paint(canvas, 0, 0);
-}
-
-@Entry
-@Component
-struct Index {
-  @State pixelmap?: PixelMap = undefined;
-  fun: Function = textFunc;
-  build() {
-    Column() {
-      Image(this.pixelmap).width(200).height(200);
-      Button().onClick(() => {
-        if (this.pixelmap == undefined) {
-          const color: ArrayBuffer = new ArrayBuffer(160000);
-          let opts: image.InitializationOptions = { editable: true, pixelFormat: 3, size: { height: 200, width: 200 } }
-          this.pixelmap = image.createPixelMapSync(color, opts);
-        }
-        this.fun(this.pixelmap);
-      })
-    }
-  }
-}
-```
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D'
-import { text } from '@kit.ArkGraphics2D'
-import { image } from '@kit.ImageKit'
-
-function textFunc(pixelmap: PixelMap) {
-  let canvas = new drawing.Canvas(pixelmap);
-  runs[0].paint(canvas, 0, 0);
 }
 
 @Entry

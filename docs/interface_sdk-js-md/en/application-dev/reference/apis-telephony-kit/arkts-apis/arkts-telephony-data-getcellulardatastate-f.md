@@ -28,7 +28,7 @@ Obtains the cellular data connection status. This API uses an asynchronous callb
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DataConnectState&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[DataConnectState](arkts-telephony-data-dataconnectstate-e.md)&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -74,7 +74,7 @@ Obtains the cellular data connection status. This API uses a promise to return t
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;DataConnectState&gt; | Promise used to return the result. |
+| Promise&lt;[DataConnectState](arkts-telephony-data-dataconnectstate-e.md)&gt; | Promise used to return the result. |
 
 **Error codes:**
 

@@ -34,11 +34,11 @@ Obtains SkillInfo of the calling application based on moduleName and skillName.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;SkillInfo&gt; | Returns the SkillInfo object of the specified skill. |
+| Promise&lt;[SkillInfo](arkts-ability-skillmanager-skillinfo-t.md)&gt; | Returns the SkillInfo object of the specified skill. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [17700002](../errorcode-bundle.md#17700002-module-name-does-not-exist) | The specified module is not found. |
-| 17700093 | The specified skillName is not found. |
+| [17700093](../errorcode-bundle.md#17700093-the-specified-skillname-does-not-exist) | The specified skillName is not found. |

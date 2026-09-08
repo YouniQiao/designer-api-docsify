@@ -70,7 +70,7 @@ addTask(task: Task): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| task | Task | 是 | 需要添加到任务组中的任务。 |
+| task | [Task](arkts-arkts-taskpool-task-c.md) | 是 | 需要添加到任务组中的任务。 |
 
 **错误码：**
 

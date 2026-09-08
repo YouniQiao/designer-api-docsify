@@ -34,7 +34,7 @@ data: Array<RequestData>
 
 请求的表单数据。
 
-**类型：** Array&lt;RequestData&gt;
+**类型：** Array&lt;[RequestData](arkts-basicservices-request-requestdata-i.md)&gt;
 
 **起始版本：** 6
 
@@ -62,7 +62,7 @@ files: Array<File>
 
 要上传的文件列表。文件以HTTP的multipart/form-data格式提交。
 
-**类型：** Array&lt;File&gt;
+**类型：** Array&lt;[File](arkts-basicservices-request-file-i.md)&gt;
 
 **起始版本：** 6
 

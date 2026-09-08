@@ -100,7 +100,7 @@ policyType: PolicyType
 
 表示升级策略类型。
 
-**类型：** PolicyType
+**类型：** [PolicyType](arkts-mdm-systemmanager-policytype-e.md)
 
 **起始版本：** 12
 

@@ -24,13 +24,13 @@ function createSubscriberSync(subscribeInfo: CommonEventSubscribeInfo): CommonEv
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| subscribeInfo | CommonEventSubscribeInfo | 是 | 表示订阅信息。 |
+| subscribeInfo | [CommonEventSubscribeInfo](arkts-basicservices-commoneventmanager-commoneventsubscribeinfo-t.md) | 是 | 表示订阅信息。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| CommonEventSubscriber | 返回订阅者对象。 |
+| [CommonEventSubscriber](arkts-basicservices-commoneventmanager-commoneventsubscriber-t.md) | 返回订阅者对象。 |
 
 **错误码：**
 

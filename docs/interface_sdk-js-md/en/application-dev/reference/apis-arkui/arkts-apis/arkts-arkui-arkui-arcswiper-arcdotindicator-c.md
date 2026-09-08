@@ -44,7 +44,7 @@ Sets the direction of the arc navigation indicator.
 backgroundColor(color: Optional<ResourceColor>): ArcDotIndicator
 ```
 
-Sets the color of the arc navigation indicator when it is number-pressed.
+Sets the color of the arc navigation indicator when it is long-pressed.
 
 **Since:** 18
 
@@ -56,7 +56,7 @@ Sets the color of the arc navigation indicator when it is number-pressed.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[ResourceColor](arkts-arkui-resourcecolor-t.md)&gt; | Yes | Color of the arc navigation indicator when it is number-pressed.Default value: **'#FF404040' |
+| color | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[ResourceColor](arkts-arkui-resourcecolor-t.md)&gt; | Yes | Color of the arc navigation indicator when it is long-pressed.Default value: **'#FF404040' |
 
 **Return value:**
 

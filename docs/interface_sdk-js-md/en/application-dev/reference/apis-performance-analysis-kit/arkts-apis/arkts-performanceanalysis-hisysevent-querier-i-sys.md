@@ -20,7 +20,7 @@ import { hiSysEvent } from '@kit.PerformanceAnalysisKit';
 onComplete: (reason: number, total: number) => void
 ```
 
-Callback used to return the query result statistics: (reason: number, total: number) =&gt; void
+Callback used to return the query result statistics: (reason: int, total: int) =&gt; void
 
 **Since:** 9
 

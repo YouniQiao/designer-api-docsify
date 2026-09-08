@@ -20,7 +20,7 @@ color?: common2D.Color
 
 Color of the decoration. The default value is the text color.
 
-**Type:** common2D.Color
+**Type:** [common2D.Color](arkts-arkgraphics2d-common2d-color-i.md)
 
 **Since:** 12
 
@@ -36,7 +36,7 @@ decorationStyle?: TextDecorationStyle
 
 Style of the decoration. The default value is **SOLID**.
 
-**Type:** TextDecorationStyle
+**Type:** [TextDecorationStyle](arkts-arkgraphics2d-text-textdecorationstyle-e.md)
 
 **Since:** 12
 
@@ -68,7 +68,7 @@ textDecoration?: TextDecorationType
 
 Type of the decoration. The default value is **NONE**.
 
-**Type:** TextDecorationType
+**Type:** [TextDecorationType](arkts-arkgraphics2d-text-textdecorationtype-e.md)
 
 **Since:** 12
 

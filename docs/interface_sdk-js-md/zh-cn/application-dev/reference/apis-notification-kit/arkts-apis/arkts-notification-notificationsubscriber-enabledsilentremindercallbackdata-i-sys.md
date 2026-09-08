@@ -38,7 +38,7 @@ readonly enableStatus: notificationManager.SwitchState
 - SYSTEM_DEFAULT_OFF：用户设置前的初始关闭状态。  
 - SYSTEM_DEFAULT_ON：用户设置前的初始开启状态。
 
-**类型：** notificationManager.SwitchState
+**类型：** [notificationManager.SwitchState](arkts-notification-notificationmanager-switchstate-e-sys.md)
 
 **起始版本：** 24
 

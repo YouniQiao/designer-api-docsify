@@ -25,22 +25,3 @@ Get want parameters callback.
 | Type | Description |
 | --- | --- |
 | Array&lt;Record&lt;string, Object&gt;&gt; | The want parameters list of the forms. |
-
-**Examples**
-
-```TypeScript
-import { formInfo } from '@kit.FormKit';
-
-let getWantParamsCallback: formInfo.GetWantParamsCallback =
-  (formInfo: Array<formInfo.FormInfo>): Array<Record<string, Object>> => {
-    console.info('get want params callback, form count: ' + formInfo.length);
-    let wantParamsList: Array<Record<string, Object>> = [];
-    for (let i = 0; i < formInfo.length; i++) {
-      let params: Record<string, Object> = {
-        'key': 'value'
-      };
-      wantParamsList.push(params);
-    }
-    return wantParamsList;
-  };
-```

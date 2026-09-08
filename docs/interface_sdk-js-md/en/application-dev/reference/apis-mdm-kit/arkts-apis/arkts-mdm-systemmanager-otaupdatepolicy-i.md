@@ -100,7 +100,7 @@ policyType: PolicyType
 
 Type of the update policy.
 
-**Type:** PolicyType
+**Type:** [PolicyType](arkts-mdm-systemmanager-policytype-e.md)
 
 **Since:** 12
 

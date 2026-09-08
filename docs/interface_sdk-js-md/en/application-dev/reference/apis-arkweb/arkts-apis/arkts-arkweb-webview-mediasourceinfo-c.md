@@ -52,7 +52,7 @@ type: SourceType
 
 Type of the media source.
 
-**Type:** SourceType
+**Type:** [SourceType](arkts-arkweb-webview-sourcetype-e.md)
 
 **Since:** 12
 

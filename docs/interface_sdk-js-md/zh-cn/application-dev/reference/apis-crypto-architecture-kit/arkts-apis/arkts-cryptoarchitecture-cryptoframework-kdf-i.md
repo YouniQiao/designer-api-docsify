@@ -35,7 +35,7 @@ generateSecret(params: KdfSpec, callback: AsyncCallback<DataBlob>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | params | [KdfSpec](arkts-cryptoarchitecture-cryptoframework-kdfspec-i.md) | 是 | 设置密钥派生函数的参数。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DataBlob&gt; | 是 | 回调函数。当密钥派生成功时，err为undefined，data为派生的密钥；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md)&gt; | 是 | 回调函数。当密钥派生成功时，err为undefined，data为派生的密钥；否则为错误对象。 |
 
 **错误码：**
 
@@ -118,7 +118,7 @@ generateSecret(params: KdfSpec): Promise<DataBlob>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;DataBlob&gt; | Promise对象，返回派生的密钥。 |
+| Promise&lt;[DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md)&gt; | Promise对象，返回派生的密钥。 |
 
 **错误码：**
 
@@ -201,7 +201,7 @@ generateSecretSync(params: KdfSpec): DataBlob
 
 | 类型 | 说明 |
 | --- | --- |
-| DataBlob | 用于获取派生得到的密钥DataBlob数据。 |
+| [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | 用于获取派生得到的密钥DataBlob数据。 |
 
 **错误码：**
 

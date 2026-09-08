@@ -73,7 +73,7 @@ fontFamily?: Resource | string
 
 Describes the button font family.
 
-**Type:** Resource \| string
+**Type:** [Resource](../arkts-apis/arkts-arkui-resource-t.md) \| string
 
 **Since:** 12
 
@@ -109,7 +109,7 @@ fontStyle?: FontStyle
 
 Describes the button font style.
 
-**Type:** FontStyle
+**Type:** [FontStyle](../arkts-apis/arkts-arkui-fontstyle-e.md)
 
 **Since:** 12
 
@@ -127,7 +127,7 @@ fontWeight?: FontWeight | number | string
 
 Describes the button font weight.
 
-**Type:** FontWeight \| number \| string
+**Type:** [FontWeight](../arkts-apis/arkts-arkui-fontweight-e.md) \| number \| string
 
 **Since:** 12
 
@@ -199,7 +199,7 @@ type?: ButtonType
 
 Describes the button type.
 
-**Type:** ButtonType
+**Type:** [ButtonType](arkts-arkui-buttontype-e.md)
 
 **Since:** 12
 

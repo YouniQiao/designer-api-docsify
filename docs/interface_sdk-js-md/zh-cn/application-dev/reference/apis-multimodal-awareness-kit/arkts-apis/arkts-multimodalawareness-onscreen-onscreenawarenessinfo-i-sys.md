@@ -112,7 +112,7 @@ entityInfo?: EntityInfo[]
 
 实体信息。
 
-**类型：** EntityInfo[]
+**类型：** [EntityInfo](arkts-multimodalawareness-onscreen-entityinfo-i-sys.md)[]
 
 **起始版本：** 23
 

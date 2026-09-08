@@ -39,7 +39,7 @@ client端向指定的server端特征值写入数据，适用于需要获取serve
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| characteristic | BLECharacteristic | 是 | 需要写入的特征值，包含写入的数据内容。单次可写入的数据长度限制为（MTU-3）字节，可通过setBLEMtuSize接口调整。 |
+| characteristic | [BLECharacteristic](arkts-connectivity-ble-blecharacteristic-i.md) | 是 | 需要写入的特征值，包含写入的数据内容。单次可写入的数据长度限制为（MTU-3）字节，可通过setBLEMtuSize接口调整。 |
 | writeType | [GattWriteType](arkts-connectivity-ble-gattwritetype-e.md) | 是 | 写入特征值的方式，当前仅支持WRITE类型。 |
 
 **返回值：**

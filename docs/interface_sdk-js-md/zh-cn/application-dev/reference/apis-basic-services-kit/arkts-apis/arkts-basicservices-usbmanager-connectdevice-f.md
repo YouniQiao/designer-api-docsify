@@ -25,13 +25,13 @@ function connectDevice(device: USBDevice): Readonly<USBDevicePipe>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| device | USBDevice | 是 | USB设备信息，用[getDevices](arkts-basicservices-usbmanager-getdevices-f.md)获取的busNum和devAddress确定设备，当前其他属性（如name、vendorId等）不参与设备匹配。 |
+| device | [USBDevice](arkts-basicservices-usbmanager-usbdevice-i.md) | 是 | USB设备信息，用[getDevices](arkts-basicservices-usbmanager-getdevices-f.md)获取的busNum和devAddress确定设备，当前其他属性（如name、vendorId等）不参与设备匹配。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Readonly&lt;USBDevicePipe&gt; | USB设备连接通道对象，用于后续的数据传输和设备控制操作。 |
+| Readonly&lt;[USBDevicePipe](arkts-basicservices-usbmanager-usbdevicepipe-i.md)&gt; | USB设备连接通道对象，用于后续的数据传输和设备控制操作。 |
 
 **错误码：**
 

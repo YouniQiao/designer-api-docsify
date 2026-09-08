@@ -48,7 +48,7 @@ Sets whether nested scrolling is enabled.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enabled | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes | Whether nested scrolling is enabled. The value **true** means that nested scrolling is enabled, and **false** means the opposite.Default value: **false |
+| enabled | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes | Whether nested scrolling is enabled. The value **true** means that nested scrolling is enabled, and **false** means the opposite. Default value: **false |
 
 ## scrollBarColor
 
@@ -70,4 +70,4 @@ Sets the color of the scrollbar slider. This parameter is valid only when the sc
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | [Optional](arkts-arkui-optional-t.md)&lt;ColorMetrics&gt; | Yes | Scrollbar color.Default value: **ColorMetrics.numeric(0x66182431) |
+| color | [Optional](arkts-arkui-optional-t.md)&lt;ColorMetrics&gt; | Yes | Scrollbar color. Default value: **ColorMetrics.numeric(0x66182431) |

@@ -71,10 +71,13 @@ import { photoAccessHelper } from '@kit.MediaLibraryKit';
 | [MediaAssetManager](arkts-medialibrary-photoaccesshelper-mediaassetmanager-c-sys.md) | The MediaAssetManager class is used for manipulating the read and write operations of media assets. |
 | [MediaAssetsChangeRequest](arkts-medialibrary-photoaccesshelper-mediaassetschangerequest-c-sys.md) | Represents a request for changing multiple assets. |
 | [MediaHighlightAlbumChangeRequest](arkts-medialibrary-photoaccesshelper-mediahighlightalbumchangerequest-c-sys.md) | Provides APIs for managing the media album change request. It inherits from [MediaAnalysisAlbumChangeRequest](arkts-medialibrary-photoaccesshelper-mediaanalysisalbumchangerequest-c-sys.md). |
+| [MediaShareAlbumChangeRequest](arkts-medialibrary-photoaccesshelper-mediasharealbumchangerequest-c-sys.md) | Represents a change request for managing the share album. |
+| [MemberInfo](arkts-medialibrary-photoaccesshelper-memberinfo-c-sys.md) | Member information |
 | [PhotoAssetCustomRecordManager](arkts-medialibrary-photoaccesshelper-photoassetcustomrecordmanager-c-sys.md) | Provides APIs for custom user behavior recording for Gallery. |
 | [PhotoSelectOptions](arkts-medialibrary-photoaccesshelper-photoselectoptions-c-sys.md) | Defines additional options for selecting media assets from Gallery. It inherits from **BaseSelectOptions**. It is used to start the picker of the corresponding user ID space. |
 | [RecommendationOptions](arkts-medialibrary-photoaccesshelper-recommendationoptions-c-sys.md) | Defines the image recommendation options. The image recommendation feature depends on the image data analysis capability, which varies with devices. |
 | [ResultSet](arkts-medialibrary-photoaccesshelper-resultset-c-sys.md) | Defines APIs to access the result set obtained by querying the RDB store. |
+| [ShareAlbumMemberInfo](arkts-medialibrary-photoaccesshelper-sharealbummemberinfo-c-sys.md) | Member information of shared album |
 | [TaskSignal](arkts-medialibrary-photoaccesshelper-tasksignal-c-sys.md) | for interrupting batch operations. |
 <!--DelEnd-->
 
@@ -240,6 +243,8 @@ import { photoAccessHelper } from '@kit.MediaLibraryKit';
 | [RequestPhotoType](arkts-medialibrary-photoaccesshelper-requestphototype-e-sys.md) | Enumerates the types of the operation for obtaining image or video thumbnails. |
 | [ResourceType](arkts-medialibrary-photoaccesshelper-resourcetype-e-sys.md) | Enumerates the types of the resources to write. |
 | [SearchSuggestionType](arkts-medialibrary-photoaccesshelper-searchsuggestiontype-e-sys.md) | Search Suggestion Type. |
+| [ShareAlbumRiskStatus](arkts-medialibrary-photoaccesshelper-sharealbumriskstatus-e-sys.md) | Enumerates the risk status of share album. |
+| [ShareMemberStatus](arkts-medialibrary-photoaccesshelper-sharememberstatus-e-sys.md) | Enumerates the member status of share album. |
 | [SourceMode](arkts-medialibrary-photoaccesshelper-sourcemode-e-sys.md) | Enumerates the types of the file to read. |
 | [StrongAssociationType](arkts-medialibrary-photoaccesshelper-strongassociationtype-e-sys.md) | Enumerates the strong association types of photos. |
 | [SupportedImageFormat](arkts-medialibrary-photoaccesshelper-supportedimageformat-e-sys.md) | Enumerates the supported image formats. |

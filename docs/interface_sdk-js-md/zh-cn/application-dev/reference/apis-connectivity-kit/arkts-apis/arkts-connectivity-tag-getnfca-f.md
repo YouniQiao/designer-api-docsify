@@ -30,7 +30,7 @@ function getNfcA(tagInfo: TagInfo): NfcATag
 
 | 类型 | 说明 |
 | --- | --- |
-| NfcATag | NFC A类型Tag对象。 |
+| [NfcATag](arkts-connectivity-tag-nfcatag-t.md) | NFC A类型Tag对象。 |
 
 **错误码：**
 

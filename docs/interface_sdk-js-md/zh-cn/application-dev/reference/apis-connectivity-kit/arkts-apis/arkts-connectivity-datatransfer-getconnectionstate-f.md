@@ -32,7 +32,7 @@ function getConnectionState(params: ConnectionStateParams): ConnectionState
 
 | 类型 | 说明 |
 | --- | --- |
-| ConnectionState | 和远端设备的星闪端口通道连接状态。 |
+| [ConnectionState](arkts-connectivity-datatransfer-connectionstate-t.md) | 和远端设备的星闪端口通道连接状态。 |
 
 **错误码：**
 

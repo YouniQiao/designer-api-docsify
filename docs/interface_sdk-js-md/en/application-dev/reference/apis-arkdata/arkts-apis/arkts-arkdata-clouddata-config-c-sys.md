@@ -40,7 +40,7 @@ Queries the last synchronization information in batch
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | accountId | string | Yes | Indicates the account ID. The account ID is required by hashing cloud account. |
-| bundleInfos | Array&lt;BundleInfo&gt; | Yes | BundleInfo configuration array. |
+| bundleInfos | Array&lt;[BundleInfo](arkts-arkdata-clouddata-bundleinfo-i-sys.md)&gt; | Yes | BundleInfo configuration array. |
 
 **Return value:**
 
@@ -504,8 +504,8 @@ Synchronizes data of a specified application on the device to the cloud. This AP
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Name of the application to sync. |
 | storeId | string | Yes | Name of the database to sync. |
-| mode | relationalStore.SyncMode | Yes | Device-cloud sync mode. |
-| progress | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;relationalStore.ProgressDetails&gt; | Yes | Callback used to return the sync progress. |
+| mode | [relationalStore.SyncMode](arkts-arkdata-relationalstore-syncmode-e.md) | Yes | Device-cloud sync mode. |
+| progress | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[relationalStore.ProgressDetails](arkts-arkdata-relationalstore-progressdetails-i.md)&gt; | Yes | Callback used to return the sync progress. |
 
 **Return value:**
 
@@ -568,9 +568,9 @@ Sync data to cloud. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleInfo | BundleInfo | Yes | BundleInfo configuration. the instance object of [BundleInfo](arkts-arkdata-clouddata-bundleinfo-i-sys.md) |
-| config | relationalStore.CloudSyncConfig | Yes | Indicates cloud sync configuration. the instance object of [CloudSyncConfig](arkts-arkdata-relationalstore-cloudsyncconfig-i.md) |
-| progress | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;relationalStore.ProgressDetails&gt; | Yes | Callback used to return the sync progress. |
+| bundleInfo | [BundleInfo](arkts-arkdata-clouddata-bundleinfo-i-sys.md) | Yes | BundleInfo configuration. the instance object of [BundleInfo](arkts-arkdata-clouddata-bundleinfo-i-sys.md) |
+| config | [relationalStore.CloudSyncConfig](arkts-arkdata-relationalstore-cloudsyncconfig-i.md) | Yes | Indicates cloud sync configuration. the instance object of [CloudSyncConfig](arkts-arkdata-relationalstore-cloudsyncconfig-i.md) |
+| progress | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[relationalStore.ProgressDetails](arkts-arkdata-relationalstore-progressdetails-i.md)&gt; | Yes | Callback used to return the sync progress. |
 
 **Return value:**
 
@@ -859,7 +859,7 @@ Notifies the data changes in the cloud. This API uses a promise to return the re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| extInfo | ExtraData | Yes | Transparently transmitted data, including information about the application that has data changes. |
+| extInfo | [ExtraData](arkts-arkdata-clouddata-extradata-i-sys.md) | Yes | Transparently transmitted data, including information about the application that has data changes. |
 | userId | number | No | User ID. This parameter is optional. The default value is the current user ID. If this parameter is specified, the value must be an existing user ID in the system. |
 
 **Return value:**
@@ -919,7 +919,7 @@ Notifies the data changes in the cloud with the specified information, such as t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| extInfo | ExtraData | Yes | Transparently transmitted data, including information about the application that has data changes. |
+| extInfo | [ExtraData](arkts-arkdata-clouddata-extradata-i-sys.md) | Yes | Transparently transmitted data, including information about the application that has data changes. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
@@ -974,7 +974,7 @@ Notifies the data changes of a user in the cloud. This API uses an asynchronous 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| extInfo | ExtraData | Yes | Transparently transmitted data, including information about the application that has data changes. |
+| extInfo | [ExtraData](arkts-arkdata-clouddata-extradata-i-sys.md) | Yes | Transparently transmitted data, including information about the application that has data changes. |
 | userId | number | Yes | User ID in the system. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
@@ -1147,7 +1147,7 @@ Remove specified observer of specified type from the database.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleInfos | Array&lt;BundleInfo&gt; | Yes | BundleInfo configuration array. |
+| bundleInfos | Array&lt;[BundleInfo](arkts-arkdata-clouddata-bundleinfo-i-sys.md)&gt; | Yes | BundleInfo configuration array. |
 | progress | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, Record&lt;string, [SyncInfo](arkts-arkdata-clouddata-syncinfo-i-sys.md)&gt;&gt;&gt; | No | Optional progress callback. |
 
 **Error codes:**
@@ -1223,7 +1223,7 @@ Subscribes to changes in the sync information of a specified application.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleInfos | Array&lt;BundleInfo&gt; | Yes | BundleInfo configuration array. |
+| bundleInfos | Array&lt;[BundleInfo](arkts-arkdata-clouddata-bundleinfo-i-sys.md)&gt; | Yes | BundleInfo configuration array. |
 | progress | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, Record&lt;string, [SyncInfo](arkts-arkdata-clouddata-syncinfo-i-sys.md)&gt;&gt;&gt; | Yes | progress. |
 
 **Error codes:**
@@ -1398,7 +1398,7 @@ Sets a global device-cloud sync strategy. This API uses a promise to return the 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | strategy | [StrategyType](arkts-arkdata-clouddata-strategytype-e.md) | Yes | Type of the strategy to set. |
-| param | Array&lt;commonType.ValueType&gt; | No | Strategy parameters to set. If this parameter is not specified, the strategy configuration is deleted by default. |
+| param | Array&lt;[commonType.ValueType](arkts-arkdata-commontype-valuetype-t.md)&gt; | No | Strategy parameters to set. If this parameter is not specified, the strategy configuration is deleted by default. |
 
 **Return value:**
 
@@ -1449,7 +1449,7 @@ Stops syncing data to the cloud.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleInfos | Array&lt;BundleInfo&gt; | Yes | BundleInfo configuration array. |
+| bundleInfos | Array&lt;[BundleInfo](arkts-arkdata-clouddata-bundleinfo-i-sys.md)&gt; | Yes | BundleInfo configuration array. |
 
 **Return value:**
 

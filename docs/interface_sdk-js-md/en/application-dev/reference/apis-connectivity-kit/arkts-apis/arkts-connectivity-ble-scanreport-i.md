@@ -38,7 +38,7 @@ scanResult: Array<ScanResult>
 
 Describes the contents of the scan results.
 
-**Type:** Array&lt;ScanResult&gt;
+**Type:** Array&lt;[ScanResult](arkts-connectivity-ble-scanresult-i.md)&gt;
 
 **Since:** 15
 

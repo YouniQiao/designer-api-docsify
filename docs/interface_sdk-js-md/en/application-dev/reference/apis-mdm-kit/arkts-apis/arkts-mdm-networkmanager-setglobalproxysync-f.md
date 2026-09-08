@@ -27,7 +27,7 @@ Sets the global network proxy. This API is suitable for enterprise network manag
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
-| httpProxy | connection.HttpProxy | Yes | Global HTTP proxy to set. |
+| httpProxy | [connection.HttpProxy](../../apis-network-kit/arkts-apis/arkts-network-connection-httpproxy-i.md) | Yes | Global HTTP proxy to set. |
 
 **Error codes:**
 

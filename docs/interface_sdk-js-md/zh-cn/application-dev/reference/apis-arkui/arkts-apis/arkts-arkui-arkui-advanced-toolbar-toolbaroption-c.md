@@ -174,7 +174,7 @@ icon?: Resource
 
 当设置了toolBarSymbolOptions属性时，icon属性将不生效。
 
-**类型：** Resource
+**类型：** [Resource](arkts-arkui-resource-t.md)
 
 **起始版本：** 10
 

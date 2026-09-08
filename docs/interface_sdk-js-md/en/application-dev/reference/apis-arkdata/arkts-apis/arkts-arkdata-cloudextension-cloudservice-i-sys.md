@@ -39,7 +39,7 @@ Connects to an asset loader by obtaining a RemoteObject instance of AssetLoader,
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;rpc.RemoteObject&gt; | Promise used to return the RemoteObject instance of AssetLoader. |
+| Promise&lt;[rpc.RemoteObject](../../apis-ipc-kit/arkts-apis/arkts-ipc-rpc-remoteobject-c.md)&gt; | Promise used to return the RemoteObject instance of AssetLoader. |
 
 **Examples**
 
@@ -85,7 +85,7 @@ Connects to a cloud database by obtaining a RemoteObject instance of CloudDB, wh
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;rpc.RemoteObject&gt; | Promise used to return the RemoteObject instance of CloudDB. |
+| Promise&lt;[rpc.RemoteObject](../../apis-ipc-kit/arkts-apis/arkts-ipc-rpc-remoteobject-c.md)&gt; | Promise used to return the RemoteObject instance of CloudDB. |
 
 **Examples**
 
@@ -131,7 +131,7 @@ Connects to ShareCenter by obtaining a RemoteObject instance of ShareCenter, whi
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;rpc.RemoteObject&gt; | Promise used to return the RemoteObject instance of ShareCenter. |
+| Promise&lt;[rpc.RemoteObject](../../apis-ipc-kit/arkts-apis/arkts-ipc-rpc-remoteobject-c.md)&gt; | Promise used to return the RemoteObject instance of ShareCenter. |
 
 **Examples**
 
@@ -218,7 +218,7 @@ Obtains the application database schema information. This API uses a promise to 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Result&lt;[AppSchema](arkts-arkdata-cloudextension-appschema-i-sys.md)&gt;&gt; | Promise used to return the schema information obtained. |
+| Promise&lt;[Result](arkts-arkdata-relationalstore-result-i.md)&lt;[AppSchema](arkts-arkdata-cloudextension-appschema-i-sys.md)&gt;&gt; | Promise used to return the schema information obtained. |
 
 **Examples**
 
@@ -316,7 +316,7 @@ Subscribes to data. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Result&lt;SubscribeInfo&gt;&gt; | Promise used to return the result, including the subscription expiration time and subscription information. |
+| Promise&lt;[Result](arkts-arkdata-relationalstore-result-i.md)&lt;[SubscribeInfo](arkts-arkdata-cloudextension-subscribeinfo-i-sys.md)&gt;&gt; | Promise used to return the result, including the subscription expiration time and subscription information. |
 
 **Examples**
 

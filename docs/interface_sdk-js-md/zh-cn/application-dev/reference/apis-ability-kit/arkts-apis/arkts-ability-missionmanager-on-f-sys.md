@@ -27,7 +27,7 @@ function on(type: 'mission', listener: MissionListener): number
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'mission' | 是 | 监听的任务名称。固定值：'mission'，表示系统任务状态监听器。 |
-| listener | MissionListener | 是 | 系统任务监听器。 |
+| listener | [MissionListener](arkts-ability-missionmanager-missionlistener-t-sys.md) | 是 | 系统任务监听器。 |
 
 **返回值：**
 

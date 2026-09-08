@@ -14,4 +14,4 @@ Defines the information about an auto-update request.
 
 **System API:** This is a system API.
 
-**Type:** _AutoFillRequest.UpdateRequest
+**Type:** [_AutoFillRequest.UpdateRequest](arkts-ability-autofillrequest-updaterequest-i-sys.md)

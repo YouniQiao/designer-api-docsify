@@ -23,13 +23,13 @@ Create PixelMap by data buffer.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | colors | ArrayBuffer | Yes | The image color buffer. |
-| options | image.InitializationOptions | Yes | Initialization options for PixelMap. |
+| options | [image.InitializationOptions](arkts-image-image-initializationoptions-i.md) | Yes | Initialization options for PixelMap. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;PixelMap&gt; | A Promise instance used to return the PixelMap object. |
+| Promise&lt;[PixelMap](arkts-image-sendableimage-pixelmap-i.md)&gt; | A Promise instance used to return the PixelMap object. |
 
 **Examples**
 

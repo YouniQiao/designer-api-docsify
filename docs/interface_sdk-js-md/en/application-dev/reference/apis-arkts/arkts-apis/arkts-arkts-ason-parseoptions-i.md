@@ -20,7 +20,7 @@ bigIntMode: BigIntMode
 
 Enum defining modes for handling bigint.
 
-**Type:** BigIntMode
+**Type:** [BigIntMode](arkts-arkts-ason-bigintmode-e.md)
 
 **Since:** 12
 

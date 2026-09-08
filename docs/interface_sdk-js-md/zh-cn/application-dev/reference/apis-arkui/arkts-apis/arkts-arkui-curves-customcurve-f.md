@@ -32,7 +32,7 @@ function customCurve(interpolate: (fraction: number) => number): ICurve
 
 | 类型 | 说明 |
 | --- | --- |
-| ICurve | 曲线的插值对象，可通过其interpolate方法获取指定归一化时间点的曲线插值。 |
+| [ICurve](arkts-arkui-curves-icurve-i.md) | 曲线的插值对象，可通过其interpolate方法获取指定归一化时间点的曲线插值。 |
 
 **示例**
 

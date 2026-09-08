@@ -26,7 +26,7 @@ Obtains a WantAgent object. This API uses an asynchronous callback to return the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| info | WantAgentInfo | Yes | Information about the WantAgent object to obtain. |
+| info | [WantAgentInfo](arkts-ability-wantagent-wantagentinfo-t.md) | Yes | Information about the WantAgent object to obtain. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[WantAgent](arkts-ability-wantagent-t.md)&gt; | Yes | Callback used to return the WantAgent object. |
 
 **Error codes:**
@@ -111,7 +111,7 @@ Obtains a WantAgent object. This API uses a promise to return the result. If the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| info | WantAgentInfo | Yes | Information about the WantAgent object to obtain. |
+| info | [WantAgentInfo](arkts-ability-wantagent-wantagentinfo-t.md) | Yes | Information about the WantAgent object to obtain. |
 
 **Return value:**
 

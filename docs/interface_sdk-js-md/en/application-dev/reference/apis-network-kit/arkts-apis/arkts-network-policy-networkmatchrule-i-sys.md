@@ -42,7 +42,7 @@ netType: NetBearType
 
 Network type.
 
-**Type:** NetBearType
+**Type:** [NetBearType](arkts-network-policy-netbeartype-t.md)
 
 **Since:** 10
 

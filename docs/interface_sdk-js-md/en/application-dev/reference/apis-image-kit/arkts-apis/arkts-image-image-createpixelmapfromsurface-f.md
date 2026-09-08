@@ -23,13 +23,13 @@ Creates a PixelMap object from surface id.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | surfaceId | string | Yes | surface id. |
-| region | Region | Yes | The region to surface. |
+| region | [Region](arkts-image-image-region-i.md) | Yes | The region to surface. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;PixelMap&gt; | Returns the instance if the operation is successful;Otherwise, an exception will be thrown. |
+| Promise&lt;[PixelMap](arkts-image-image-pixelmap-i.md)&gt; | Returns the instance if the operation is successful;Otherwise, an exception will be thrown. |
 
 **Error codes:**
 
@@ -77,7 +77,7 @@ Creates a PixelMap object from surface id.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;PixelMap&gt; | Returns the instance if the operation is successful;Otherwise, an exception will be thrown. |
+| Promise&lt;[PixelMap](arkts-image-image-pixelmap-i.md)&gt; | Returns the instance if the operation is successful;Otherwise, an exception will be thrown. |
 
 **Error codes:**
 

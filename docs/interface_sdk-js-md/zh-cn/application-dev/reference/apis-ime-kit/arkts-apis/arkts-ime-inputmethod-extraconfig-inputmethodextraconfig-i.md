@@ -35,33 +35,3 @@ customSettings: Record<string, CustomValueType>
 **起始版本：** 22
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
-
-**示例**
-
-```TypeScript
-// 以下代码需要在EntryAbility的page页面中执行
-@Entry
-@Component
-struct Index2 {
-  // 1. 构造输入法扩展信息
-  private extraConfig: InputMethodExtraConfig = {
-    customSettings: {
-      'inputMode': 'chat',
-      'showEmojiPanel': true,
-      'themeColor': 'dark',
-      'autoCapitalize': false
-    }
-  };
-
-  build() {
-    Column() {
-      TextInput()
-        .onWillAttachIME((client: IMEClient): void => {
-          client.setExtraConfig(this.extraConfig);
-        })
-    }
-    .height('100%')
-    .width('100%')
-  }
-}
-```

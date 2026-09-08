@@ -52,13 +52,3 @@ Reads data from a file. This API returns the result synchronously.
 | 13900034 | Operation would block |
 | 13900042 | Unknown error |
 | 13900044 | Network is unreachable<br>**Applicable version:** 12 and later |
-
-**Examples**
-
-```TypeScript
-let filePath = pathDir + "/test.txt";
-let file = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE);
-let buf = new ArrayBuffer(4096);
-fileIo.readSync(file.fd, buf);
-fileIo.closeSync(file);
-```

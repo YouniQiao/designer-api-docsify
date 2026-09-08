@@ -295,21 +295,6 @@ Release resources used for AVDownloaderManager.
 
 **System capability:** SystemCapability.Multimedia.Media.Core
 
-**Examples**
-
-```TypeScript
-audioPlayer.release();
-audioPlayer = undefined;
-```
-
-```TypeScript
-audioRecorder.on('release', () => {    // Set the 'release' event callback.
-  console.info('audio recorder release called');
-});
-audioRecorder.release();
-audioRecorder = undefined;
-```
-
 ## removeDownloadTask
 
 ```TypeScript

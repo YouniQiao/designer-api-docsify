@@ -36,7 +36,7 @@ IV parameter for encryption/decryption. Common lengths are listed below:
 - In the CBC, OFB, or CFB mode of 3DES: The IV length is 8 bytes.  
 - In the CBC, CTR, OFB, or CFB mode of SM4&lt;sup&gt;10+&lt;/sup&gt;: The IV length is 16 bytes.
 
-**Type:** DataBlob
+**Type:** [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md)
 
 **Since:** 9
 

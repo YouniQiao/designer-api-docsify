@@ -419,7 +419,7 @@ Draws an image.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| image | image.PixelMap | Yes | Image resource. |
+| image | [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | Yes | Image resource. |
 | dx | number | Yes | X-coordinate of the upper left corner of the drawing area on the canvas. |
 | dy | number | Yes | Y-coordinate of the upper left corner of the drawing area on the canvas. |
 | dWidth | number | Yes | Width of the drawing area. |
@@ -453,7 +453,7 @@ Draws an image.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| image | image.PixelMap | Yes | Image resource. |
+| image | [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | Yes | Image resource. |
 | sx | number | Yes | X-coordinate of the upper left corner of the rectangle used to crop the source image. |
 | sy | number | Yes | Y-coordinate of the upper left corner of the rectangle used to crop the source image. |
 | sWidth | number | Yes | Target width of the image to crop. |
@@ -634,7 +634,7 @@ Get an PixelMap object.
 
 | Type | Description |
 | --- | --- |
-| image.PixelMap | PixelMap A PixelMap object that contains the rectangular ImageData given by the canvas. |
+| [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | PixelMap A PixelMap object that contains the rectangular ImageData given by the canvas. |
 
 ## lineTo
 

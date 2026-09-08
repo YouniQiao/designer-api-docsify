@@ -23,7 +23,7 @@ function setCustomCursorSync(windowId: number, pixelMap: image.PixelMap, focusX?
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | windowId | number | 是 | 窗口ID。取值为大于0的整数。 |
-| pixelMap | image.PixelMap | 是 | 自定义光标资源。 |
+| pixelMap | [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | 是 | 自定义光标资源。 |
 | focusX | number | 否 | 自定义光标焦点x，取值范围：大于等于0，默认为0，单位为像素（px）。 |
 | focusY | number | 否 | 自定义光标焦点y，取值范围：大于等于0，默认为0，单位为像素（px）。 |
 

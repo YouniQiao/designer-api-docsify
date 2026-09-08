@@ -182,7 +182,7 @@ publicKey?: DataBlob
 
 指定证书公钥，DER编码格式。
 
-**类型：** DataBlob
+**类型：** [DataBlob](arkts-devicecertificate-cert-datablob-i.md)
 
 **起始版本：** 11
 
@@ -294,7 +294,7 @@ x509Cert?: X509Cert
 
 指定具体的证书对象。
 
-**类型：** X509Cert
+**类型：** [X509Cert](arkts-devicecertificate-cert-x509cert-i.md)
 
 **起始版本：** 11
 

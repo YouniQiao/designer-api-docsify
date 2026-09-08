@@ -20,7 +20,7 @@ type: ValueType
 
 Type of the value.
 
-**Type:** ValueType
+**Type:** [ValueType](arkts-arkdata-distributedkvstore-valuetype-e.md)
 
 **Since:** 9
 

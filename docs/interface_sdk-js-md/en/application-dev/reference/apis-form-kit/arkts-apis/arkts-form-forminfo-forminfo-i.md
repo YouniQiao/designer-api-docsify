@@ -52,7 +52,7 @@ colorMode: ColorMode
 
 Obtains the color mode of this form.
 
-**Type:** ColorMode
+**Type:** [ColorMode](arkts-form-forminfo-colormode-e.md)
 
 **Since:** 9
 
@@ -344,7 +344,7 @@ type: FormType
 
 Obtains the type of this form. Currently, JS forms are supported.
 
-**Type:** FormType
+**Type:** [FormType](arkts-form-forminfo-formtype-e.md)
 
 **Since:** 9
 

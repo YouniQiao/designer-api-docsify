@@ -40,7 +40,7 @@ Starts listening.
 | 13900021 | File table overflow |
 | 13900022 | Too many open files |
 | 13900025 | No space left on device |
-| 13900030 | File name too number |
+| 13900030 | File name too long |
 | 13900042 | Unknown error |
 
 **Examples**
@@ -80,7 +80,7 @@ Stops listening and removes the **Watcher** object.
 | 13900021 | File table overflow |
 | 13900022 | Too many open files |
 | 13900025 | No space left on device |
-| 13900030 | File name too number |
+| 13900030 | File name too long |
 | 13900042 | Unknown error |
 
 **Examples**

@@ -36,7 +36,7 @@ readonly appInfo: ApplicationInfo
 
 Application information.
 
-**Type:** ApplicationInfo
+**Type:** [ApplicationInfo](arkts-mdm-bundlemanager-applicationinfo-i.md)
 
 **Since:** 20
 
@@ -116,7 +116,7 @@ readonly signatureInfo: SignatureInfo
 
 Signature information of the bundle.
 
-**Type:** SignatureInfo
+**Type:** [SignatureInfo](arkts-mdm-bundlemanager-signatureinfo-i.md)
 
 **Since:** 20
 

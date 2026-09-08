@@ -672,7 +672,7 @@ Event indicating the two-finger single-tap gesture.
 TYPE_TWO_FINGER_DOUBLE_TAP = 47
 ```
 
-Event indicating the two-finger number-tap gesture.
+Event indicating the two-finger double-tap gesture.
 
 **Since:** 20
 
@@ -686,7 +686,7 @@ Event indicating the two-finger number-tap gesture.
 TYPE_TWO_FINGER_DOUBLE_TAP_AND_HOLD = 48
 ```
 
-Event indicating the two-finger number-tap-and-hold gesture.
+Event indicating the two-finger double-tap-and-hold gesture.
 
 **Since:** 20
 
@@ -742,7 +742,7 @@ Event indicating the three-finger single-tap gesture.
 TYPE_THREE_FINGER_DOUBLE_TAP = 52
 ```
 
-Event indicating the three-finger number-tap gesture.
+Event indicating the three-finger double-tap gesture.
 
 **Since:** 20
 
@@ -756,7 +756,7 @@ Event indicating the three-finger number-tap gesture.
 TYPE_THREE_FINGER_DOUBLE_TAP_AND_HOLD = 53
 ```
 
-Event indicating the three-finger number-tap-and-hold gesture.
+Event indicating the three-finger double-tap-and-hold gesture.
 
 **Since:** 20
 
@@ -812,7 +812,7 @@ Event indicating the four-finger single-tap gesture.
 TYPE_FOUR_FINGER_DOUBLE_TAP = 57
 ```
 
-Event indicating the four-finger number-tap gesture.
+Event indicating the four-finger double-tap gesture.
 
 **Since:** 20
 
@@ -826,7 +826,7 @@ Event indicating the four-finger number-tap gesture.
 TYPE_FOUR_FINGER_DOUBLE_TAP_AND_HOLD = 58
 ```
 
-Event indicating the four-finger number-tap-and-hold gesture.
+Event indicating the four-finger double-tap-and-hold gesture.
 
 **Since:** 20
 
@@ -1026,7 +1026,7 @@ Focus becomes invisible.
 TYPE_ONE_FINGER_DOUBLE_TAP = 72
 ```
 
-Single-finger number tap gesture.
+Single-finger double tap gesture.
 
 **Since:** 26.0.0
 

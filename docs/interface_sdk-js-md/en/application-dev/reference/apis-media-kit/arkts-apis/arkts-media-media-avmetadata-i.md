@@ -218,7 +218,7 @@ hdrType?: HdrType
 
 HDR type of the media asset. This parameter is not supported in AVRecorder settings.
 
-**Type:** HdrType
+**Type:** [HdrType](arkts-media-media-hdrtype-e.md)
 
 **Since:** 12
 
@@ -232,7 +232,7 @@ location?: Location
 
 Geographical location of the media asset.
 
-**Type:** Location
+**Type:** [Location](arkts-media-media-location-i.md)
 
 **Since:** 12
 

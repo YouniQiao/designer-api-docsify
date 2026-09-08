@@ -31,13 +31,6 @@ Chooses files of the specified types. This API uses a promise to return the resu
 | --- | --- |
 | Promise&lt;string&gt; | Promise used to return the result. An error code is returned. |
 
-**Examples**
-
-```TypeScript
-let types: Array<string> = [];
-document.choose(types);
-```
-
 
 ## choose
 
@@ -58,15 +51,6 @@ Chooses a file. This API uses an asynchronous callback to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the result. An error code is returned. |
-
-**Examples**
-
-```TypeScript
-let uri: string = "";
-document.choose((err: TypeError, uri: string) => {
-  // Do something with the URI. 
-});
-```
 
 
 ## choose
@@ -89,13 +73,3 @@ Chooses files of the specified types. This API uses an asynchronous callback to 
 | --- | --- | --- | --- |
 | types | string[] | Yes | Types of the files to choose. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the result. An error code is returned. |
-
-**Examples**
-
-```TypeScript
-let types: Array<string> = [];
-let uri: string = "";
-document.choose(types, (err: TypeError, uri: string) => {
-  // Do something with the URI. 
-});
-```

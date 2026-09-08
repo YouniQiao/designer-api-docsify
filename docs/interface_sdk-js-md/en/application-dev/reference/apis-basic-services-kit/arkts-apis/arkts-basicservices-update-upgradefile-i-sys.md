@@ -38,7 +38,7 @@ fileType: ComponentType
 
 File type, which specifies the type of the upgrade package. If this parameter is set to **OTA**, the system performs the firmware upgrade based on the OTA type, including integrity check and system partition writing.
 
-**Type:** ComponentType
+**Type:** [ComponentType](arkts-basicservices-update-componenttype-e-sys.md)
 
 **Since:** 9
 

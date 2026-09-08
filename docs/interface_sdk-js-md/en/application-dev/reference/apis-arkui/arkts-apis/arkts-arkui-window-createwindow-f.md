@@ -32,7 +32,7 @@ In freeform window mode, the child window created uses an immersive layout when 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | Configuration | Yes | Parameters for window creation. |
+| config | [Configuration](arkts-arkui-window-configuration-i.md) | Yes | Parameters for window creation. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Window](arkts-arkui-window-window-i.md)&gt; | Yes | Callback used to return the window created. |
 
 **Error codes:**
@@ -109,7 +109,7 @@ In freeform window mode, the child window created uses an immersive layout when 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | Configuration | Yes | Parameters for window creation. |
+| config | [Configuration](arkts-arkui-window-configuration-i.md) | Yes | Parameters for window creation. |
 
 **Return value:**
 

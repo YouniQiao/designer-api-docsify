@@ -26,7 +26,7 @@ Sets a user operation.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| operation | Operation | Yes | Operation type. |
+| operation | [Operation](arkts-mechanic-mechanicmanager-operation-e-sys.md) | Yes | Operation type. |
 | mac | string | Yes | MAC address. |
 | params | string | Yes | Operation parameters. |
 

@@ -28,7 +28,7 @@ function getScanResultsSync(): Array<WifiScanInfo>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;WifiScanInfo&gt; | 扫描结果数组。 |
+| Array&lt;[WifiScanInfo](arkts-connectivity-wifimanager-wifiscaninfo-i.md)&gt; | 扫描结果数组。 |
 
 **错误码：**
 

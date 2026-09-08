@@ -28,7 +28,7 @@ function releaseAccess(dataType: DataType): ReleaseStatus
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| dataType | DataType | 是 | 锁屏下访问的敏感数据类型。dataType需要与acquireAccess接口使用的dataType保持一致。 |
+| dataType | [DataType](arkts-ability-screenlockfilemanager-datatype-e.md) | 是 | 锁屏下访问的敏感数据类型。dataType需要与acquireAccess接口使用的dataType保持一致。 |
 
 **返回值：**
 

@@ -98,7 +98,7 @@ const DTMF_TONE_TYPE_WHILE_DIALING: string
 
 Indicates the type of the dual-tone multifrequency (DTMF) tone played when dialing.
 
-<p>The value `0` indicates the normal short sound effect, and `1` indicates the number sound effect.
+<p>The value `0` indicates the normal short sound effect, and `1` indicates the long sound effect.
 
 **Type:** string
 

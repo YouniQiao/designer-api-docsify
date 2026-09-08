@@ -109,7 +109,7 @@ triggerChange: Callback<number>
 
 Callback triggered when the rating value changes.
 
-**Type:** Callback&lt;number&gt;
+**Type:** [Callback](arkts-arkui-callback-i.md)&lt;number&gt;
 
 **Since:** 12
 

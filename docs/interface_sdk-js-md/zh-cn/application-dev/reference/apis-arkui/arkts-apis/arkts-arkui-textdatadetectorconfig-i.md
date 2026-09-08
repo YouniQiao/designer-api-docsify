@@ -95,7 +95,7 @@ onDetectResultUpdate?: Callback<string>
 
 默认值：undefined，不触发回调。
 
-**类型：** Callback&lt;string&gt;
+**类型：** [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;string&gt;
 
 **起始版本：** 11
 

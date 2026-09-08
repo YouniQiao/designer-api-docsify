@@ -274,7 +274,7 @@ onFileReady: AsyncCallback<File>
 
 Callback called when the backup service tries to send files to the client. The File argument indicates a file to send to the client. The returned file is owned by the backup service and will be cleaned by the service once the file is closed.
 
-**Type:** [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;File&gt;
+**Type:** [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[File](arkts-corefile-file-fs-file-i.md)&gt;
 
 **Since:** 10
 

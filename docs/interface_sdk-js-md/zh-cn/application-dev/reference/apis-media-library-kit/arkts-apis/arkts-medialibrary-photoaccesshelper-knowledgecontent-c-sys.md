@@ -38,13 +38,13 @@ static getRelatedEntity (topic: string, context: ContextMap, option?: Options): 
 | --- | --- | --- | --- |
 | topic | string | 是 | Searching topic string. |
 | context | [ContextMap](arkts-medialibrary-photoaccesshelper-contextmap-i-sys.md) | 是 | Context Map indicates topic filed. |
-| option | Options | 否 | Options for getRelatedEntity. |
+| option | [Options](arkts-medialibrary-photoaccesshelper-options-i-sys.md) | 否 | Options for getRelatedEntity. |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Entity[]&gt; | 返回推荐标签内容 |
+| Promise&lt;[Entity](arkts-medialibrary-photoaccesshelper-entity-i-sys.md)[]&gt; | 返回推荐标签内容 |
 
 **错误码：**
 
@@ -83,7 +83,7 @@ static getSearchResult(query: SearchQuery): Promise<SearchResult>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;SearchResult&gt; | Promise用于返回包含匹配资产的搜索结果。 |
+| Promise&lt;[SearchResult](arkts-medialibrary-photoaccesshelper-searchresult-i-sys.md)&gt; | Promise用于返回包含匹配资产的搜索结果。 |
 
 **错误码：**
 

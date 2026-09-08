@@ -25,8 +25,8 @@ Changes the invitation confirmation state based on the shared resource ID. This 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | sharingResource | string | Yes | Shared resource ID. |
-| state | State | Yes | New confirmation state of the invitation. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Result&lt;void&gt;&gt; | Yes | Callback used to return the result. |
+| state | [State](arkts-arkdata-sharing-state-e-sys.md) | Yes | New confirmation state of the invitation. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Result](arkts-arkdata-relationalstore-result-i.md)&lt;void&gt;&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -70,13 +70,13 @@ Changes the invitation confirmation state based on the shared resource ID. This 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | sharingResource | string | Yes | Shared resource ID. |
-| state | State | Yes | New confirmation state of the invitation. |
+| state | [State](arkts-arkdata-sharing-state-e-sys.md) | Yes | New confirmation state of the invitation. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Result&lt;void&gt;&gt; | Promise used to return the result. |
+| Promise&lt;[Result](arkts-arkdata-relationalstore-result-i.md)&lt;void&gt;&gt; | Promise used to return the result. |
 
 **Error codes:**
 

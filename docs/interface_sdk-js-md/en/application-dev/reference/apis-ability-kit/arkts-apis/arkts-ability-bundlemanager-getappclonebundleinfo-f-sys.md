@@ -37,7 +37,7 @@ No permission is required for obtaining the caller's own information.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;BundleInfo&gt; | Promise used to return the bundle information. |
+| Promise&lt;[BundleInfo](arkts-ability-bundlemanager-bundleinfo-t.md)&gt; | Promise used to return the bundle information. |
 
 **Error codes:**
 

@@ -110,7 +110,7 @@ processState?: appManager.ProcessState
 
 Process status of the ability when it last exited.
 
-**Type:** appManager.ProcessState
+**Type:** [appManager.ProcessState](arkts-ability-appmanager-processstate-e.md)
 
 **Since:** 20
 
@@ -191,26 +191,3 @@ UID of the application.
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
-
-**Examples**
-
-```TypeScript
-import { UIAbility, Want, AbilityConstant } from '@kit.AbilityKit';
-
-export default class MyAbility extends UIAbility {
-  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam) {
-    if (launchParam.lastExitDetailInfo) {
-      console.info(`pid: ${launchParam.lastExitDetailInfo.pid}
-      \n processName: ${launchParam.lastExitDetailInfo.processName}
-      \n uid: ${launchParam.lastExitDetailInfo.uid}
-      \n exitSubReason: ${launchParam.lastExitDetailInfo.exitSubReason}
-      \n exitMsg: ${launchParam.lastExitDetailInfo.exitMsg}
-      \n rss: ${launchParam.lastExitDetailInfo.rss}
-      \n pss: ${launchParam.lastExitDetailInfo.pss}
-      \n timestamp: ${launchParam.lastExitDetailInfo.timestamp}
-      \n processState: ${launchParam.lastExitDetailInfo.processState}.`
-      );
-    }
-  }
-}
-```

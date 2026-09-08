@@ -37,7 +37,7 @@ Sets the icon of the back button in the title bar.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | string \| PixelMap \| Resource \| [SymbolGlyphModifier](arkts-arkui-symbolglyphmodifier-t.md) | Yes | Icon of the back button in the title bar.<br>**Since:** 12 |
+| value | string \| [PixelMap](arkts-arkui-pixelmap-t.md) \| [Resource](../arkts-apis/arkts-arkui-resource-t.md) \| [SymbolGlyphModifier](arkts-arkui-symbolglyphmodifier-t.md) | Yes | Icon of the back button in the title bar.<br>**Since:** 12 |
 
 ## backButtonIcon
 
@@ -67,7 +67,7 @@ Sets the icon and accessibility text for the back button on the title bar.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| icon | string \| PixelMap \| Resource \| [SymbolGlyphModifier](arkts-arkui-symbolglyphmodifier-t.md) | Yes | Icon of the back button in the title bar. |
+| icon | string \| [PixelMap](arkts-arkui-pixelmap-t.md) \| [Resource](../arkts-apis/arkts-arkui-resource-t.md) \| [SymbolGlyphModifier](arkts-arkui-symbolglyphmodifier-t.md) | Yes | Icon of the back button in the title bar. |
 | accessibilityText | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | No | Accessibility text for the back button.Default value: **back** when the system language is English. |
 
 ## configuration
@@ -811,7 +811,7 @@ Sets the page title.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| [CustomBuilder](arkts-arkui-custombuilder-t.md) \| [NavigationCommonTitle](arkts-arkui-navigationcommontitle-i.md) \| [NavigationCustomTitle](arkts-arkui-navigationcustomtitle-i.md) | Yes | Page title. When the NavigationCustomTitle type is used to set the height, [titleMode](#titlemode) does not take effect.When the title string is too number:   - If no subtitle is set, the string is scaled down, wrapped in two lines, and then clipped.    - If a subtitle is set, the subtitle is scaled down and then clipped.<br>**Since:** 10 |
+| value | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| [CustomBuilder](arkts-arkui-custombuilder-t.md) \| [NavigationCommonTitle](arkts-arkui-navigationcommontitle-i.md) \| [NavigationCustomTitle](arkts-arkui-navigationcustomtitle-i.md) | Yes | Page title. When the NavigationCustomTitle type is used to set the height, [titleMode](#titlemode) does not take effect.When the title string is too long:   - If no subtitle is set, the string is scaled down, wrapped in two lines, and then clipped.    - If a subtitle is set, the subtitle is scaled down and then clipped.<br>**Since:** 10 |
 | options | [NavigationTitleOptions](arkts-arkui-navigationtitleoptions-i.md) | No | Defines the title bar options. Title bar options include the background color, background blur style, blur options, background properties, layout style, and padding at the start and end of the title bar, as well as main title attribute modifier, subtitle attribute modifier, and whether to respond when the device is in semi-folded mode..<br>**Since:** 11 |
 
 ## titleMode

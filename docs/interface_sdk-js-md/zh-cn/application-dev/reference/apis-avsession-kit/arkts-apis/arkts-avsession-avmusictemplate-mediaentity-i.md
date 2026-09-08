@@ -118,7 +118,7 @@ playState: PlaybackState
 
 媒体资源的播放状态。
 
-**类型：** PlaybackState
+**类型：** [PlaybackState](arkts-avsession-avmusictemplate-playbackstate-e.md)
 
 **起始版本：** 23
 

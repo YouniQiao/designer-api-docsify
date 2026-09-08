@@ -31,4 +31,4 @@ Unsubscribes from the connection state change event of the port channel. This AP
 | Error Code ID | Error Message |
 | --- | --- |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported because the chip does not support it. |
-| 36100099 | Operation failed. |
+| [36100099](../../apis-avsession-kit/errorcode-nearlink-service.md#36100099-operation-failed) | Operation failed. |

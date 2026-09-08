@@ -32,11 +32,3 @@ Opens a directory. This API returns the result synchronously.
 | Type | Description |
 | --- | --- |
 | [Dir](arkts-corefile-fileio-dir-depr-i.md) | Dir** object opened. |
-
-**Examples**
-
-```TypeScript
-let dir = fileio.opendirSync(pathDir);
-// Example code in Dir struct
-// Use read/readSync/close.
-```

@@ -12,4 +12,4 @@ type RowData = Array<ValueType>
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
-**类型：** Array&lt;ValueType&gt;
+**类型：** Array&lt;[ValueType](arkts-arkdata-relationalstore-valuetype-t.md)&gt;

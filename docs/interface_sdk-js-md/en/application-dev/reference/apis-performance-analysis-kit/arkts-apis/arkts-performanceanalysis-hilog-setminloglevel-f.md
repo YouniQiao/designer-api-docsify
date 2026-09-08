@@ -48,6 +48,9 @@ hilog.info(0x0001, "testTag", 'this is an info level log, id: %{public}d', 5);
 ```
 
 The first log is printed properly because the global log level is INFO.
+After the minimum log level of the process is set to WARN, the second log does not meet the log level and fails to be printed. The third log is printed properly.
+After the minimum log level of the process is set to DEBUG, the fourth log does not meet the global log level and fails to be printed. The fifth log is printed.
+The log result is as follows:
 
 ```TypeScript
 08-07 23:50:01.532   13694-13694   A00001/testTag                  com.example.hilogDemo  I     this is an info level log, id: 1

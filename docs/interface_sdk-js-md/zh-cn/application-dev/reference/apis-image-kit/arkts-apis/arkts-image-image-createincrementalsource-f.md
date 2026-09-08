@@ -43,7 +43,7 @@ function CreateIncrementalSource(buf: ArrayBuffer): ImageSource
 
 | 类型 | 说明 |
 | --- | --- |
-| ImageSource | 返回ImageSource，失败时返回undefined。 |
+| [ImageSource](arkts-image-image-imagesource-i.md) | 返回ImageSource，失败时返回undefined。 |
 
 **示例**
 
@@ -97,7 +97,7 @@ function CreateIncrementalSource(buf: ArrayBuffer, options?: SourceOptions): Ima
 
 | 类型 | 说明 |
 | --- | --- |
-| ImageSource | 返回ImageSource，失败时返回undefined。 |
+| [ImageSource](arkts-image-image-imagesource-i.md) | 返回ImageSource，失败时返回undefined。 |
 
 **示例**
 

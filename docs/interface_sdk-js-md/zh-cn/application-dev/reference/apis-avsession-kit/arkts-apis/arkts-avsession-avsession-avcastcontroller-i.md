@@ -40,28 +40,6 @@ getAVPlaybackState(callback: AsyncCallback<AVPlaybackState>): void
 | --- | --- |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
 
-**示例**
-
-```TypeScript
-avCastController.getAVPlaybackState((err: BusinessError, state: avSession.AVPlaybackState) => {
-  if (err) {
-    console.error(`Failed to get AV playback state, code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in getting AV playback state.');
-});
-```
-
-```TypeScript
-avcontroller.getAVPlaybackState((err: BusinessError, state: avSession.AVPlaybackState) => {
-  if (err) {
-    console.error(`Failed to get AV playback state, code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in getting AV playback state.');
-});
-```
-
 ## getAVPlaybackState
 
 ```TypeScript
@@ -88,22 +66,6 @@ getAVPlaybackState(): Promise<AVPlaybackState>
 | --- | --- |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
 
-**示例**
-
-```TypeScript
-avCastController.getAVPlaybackState().then((state: avSession.AVPlaybackState) => {
-  console.info('Succeeded in getting AV playback state.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to get AV playback state, code: ${err.code}, message: ${err.message}`);
-});
-```
-
-```TypeScript
-avcontroller.getAVPlaybackState().then((state: avSession.AVPlaybackState) => {
-  console.info('Succeeded in getting AV playback state.');
-});
-```
-
 ## getCurrentItem
 
 ```TypeScript
@@ -127,18 +89,6 @@ getCurrentItem(callback: AsyncCallback<AVQueueItem>): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
-
-**示例**
-
-```TypeScript
-avCastController.getCurrentItem((err: BusinessError, value: avSession.AVQueueItem) => {
-  if (err) {
-    console.error(`Failed to get current item, code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in getting current item.');
-});
-```
 
 ## getCurrentItem
 
@@ -165,16 +115,6 @@ getCurrentItem(): Promise<AVQueueItem>
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
-
-**示例**
-
-```TypeScript
-avCastController.getCurrentItem().then((value: avSession.AVQueueItem) => {
-  console.info('Succeeded in getting current item.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to get current item, code: ${err.code}, message: ${err.message}`);
-});
-```
 
 ## getRecommendedResolutionLevel
 
@@ -208,17 +148,6 @@ getRecommendedResolutionLevel(decoderType: DecoderType): Promise<ResolutionLevel
 | --- | --- |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
 
-**示例**
-
-```TypeScript
-let decoderType = avSession.DecoderType.OH_AVCODEC_MIMETYPE_VIDEO_AVC;
-avCastController.getRecommendedResolutionLevel(decoderType).then((resolutionLevel: avSession.ResolutionLevel) => {
-  console.info('Succeeded in getting recommended resolution level.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to get recommended resolution level, code: ${err.code}, message: ${err.message}`);
-});
-```
-
 ## getSupportedDecoders
 
 ```TypeScript
@@ -245,19 +174,6 @@ getSupportedDecoders(): Promise<Array<DecoderType>>
 | --- | --- |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
 
-**示例**
-
-```TypeScript
-avCastController.getSupportedDecoders().then((decoderTypes: avSession.DecoderType[]) => {
-  console.info(`Succeeded in getting supported decoders, length: ${decoderTypes.length}`);
-  if (decoderTypes.length > 0 ) {
-    console.info(`Succeeded in getting supported decoder: ${decoderTypes[0]}`);
-  }
-}).catch((err: BusinessError) => {
-  console.error(`Failed to get supported decoders, code: ${err.code}, message: ${err.message}`);
-});
-```
-
 ## getSupportedHdrCapabilities
 
 ```TypeScript
@@ -276,28 +192,13 @@ getSupportedHdrCapabilities(): Promise<Array<hdrCapability.HDRFormat>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;hdrCapability.HDRFormat&gt;&gt; | Promise对象。返回远端设备所支持的HDR能力。 |
+| Promise&lt;Array&lt;[hdrCapability.HDRFormat](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-hdrcapability-hdrformat-e.md)&gt;&gt; | Promise对象。返回远端设备所支持的HDR能力。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
-
-**示例**
-
-```TypeScript
-import { type hdrCapability } from '@kit.ArkGraphics2D';
-
-avCastController.getSupportedHdrCapabilities().then((hdrFormats: hdrCapability.HDRFormat[]) => {
-  console.info(`Succeeded in getting supported HDR capabilities, length: ${hdrFormats.length}`);
-  if (hdrFormats.length > 0 ) {
-    console.info(`Succeeded in getting supported HDR capability: ${hdrFormats[0]}`);
-  }
-}).catch((err: BusinessError) => {
-  console.error(`Failed to get supported HDR capabilities, code: ${err.code}, message: ${err.message}`);
-});
-```
 
 ## getSupportedPlaySpeeds
 
@@ -325,25 +226,6 @@ getSupportedPlaySpeeds(): Promise<Array<number>>
 | --- | --- |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
 
-**示例**
-
-```TypeScript
-avCastController.getSupportedPlaySpeeds().then((nums: number[]) => {
-  console.info(`Succeeded in getting supported play speeds, length: ${nums.length}`);
-  if (nums.length > 0 ) {
-    console.info(`Succeeded in getting supported play speed: ${nums[0]}`);
-  }
-}).catch((err: BusinessError) => {
-  console.error(`Failed to get supported play speeds, code: ${err.code}, message: ${err.message}`);
-});
-```
-
-```TypeScript
-avcontroller.getSupportedPlaySpeeds().then((speeds: number[]) => {
-  console.info(`Succeeded in getting supported play speeds, size: ${speeds.length}`);
-});
-```
-
 ## getValidCommands
 
 ```TypeScript
@@ -368,18 +250,6 @@ getValidCommands(callback: AsyncCallback<Array<AVCastControlCommandType>>): void
 | --- | --- |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
 
-**示例**
-
-```TypeScript
-avCastController.getValidCommands((err: BusinessError, state: avSession.AVCastControlCommandType[]) => {
-  if (err) {
-    console.error(`Failed to get valid commands, code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in getting valid commands.');
-});
-```
-
 ## getValidCommands
 
 ```TypeScript
@@ -403,16 +273,6 @@ getValidCommands(): Promise<Array<AVCastControlCommandType>>
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-
-**示例**
-
-```TypeScript
-avCastController.getValidCommands().then((state: avSession.AVCastControlCommandType[]) => {
-  console.info('Succeeded in getting valid commands.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to get valid commands, code: ${err.code}, message: ${err.message}`);
-});
-```
 
 ## off('playbackStateChange')
 
@@ -1533,36 +1393,6 @@ prepare(item: AVQueueItem, callback: AsyncCallback<void>): void
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
 | [6600109](../errorcode-avsession.md#6600109-远端会话不存在) | The remote connection is not established |
 
-**示例**
-
-```TypeScript
-// 设置播放参数，开始播放。
-let playItem: avSession.AVQueueItem = {
-  itemId: 0,
-  description: {
-    assetId: '12345',
-    mediaType: 'AUDIO',
-    mediaUri: 'http://resource1_address',
-    mediaSize: 12345,
-    startPosition: 0,
-    duration: 0,
-    artist: 'mysong',
-    albumTitle: 'song1_title',
-    albumCoverUri: 'http://resource1_album_address',
-    lyricUri: 'http://resource1_lyric_address',
-    appName: 'MyMusic'
-  }
-};
-// 准备播放，这个不会触发真正的播放，会进行加载和缓冲。
-avCastController.prepare(playItem, (err: BusinessError) => {
-  if (err) {
-    console.error(`Failed to prepare, code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in preparing.');
-});
-```
-
 ## prepare
 
 ```TypeScript
@@ -1596,34 +1426,6 @@ prepare(item: AVQueueItem): Promise<void>
 | [401](../../errorcode-universal.md#401-参数检查失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
 | [6600109](../errorcode-avsession.md#6600109-远端会话不存在) | The remote connection is not established |
-
-**示例**
-
-```TypeScript
-// 设置播放参数，开始播放。
-let playItem: avSession.AVQueueItem = {
-  itemId: 0,
-  description: {
-    assetId: '12345',
-    mediaType: 'AUDIO',
-    mediaUri: 'http://resource1_address',
-    mediaSize: 12345,
-    startPosition: 0,
-    duration: 0,
-    artist: 'mysong',
-    albumTitle: 'song1_title',
-    albumCoverUri: 'http://resource1_album_address',
-    lyricUri: 'http://resource1_lyric_address',
-    appName: 'MyMusic'
-  }
-};
-// 准备播放，这个不会触发真正的播放，会进行加载和缓冲。
-avCastController.prepare(playItem).then(() => {
-  console.info('Succeeded in preparing.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to prepare, code: ${err.code}, message: ${err.message}`);
-});
-```
 
 ## processMediaKeyResponse
 
@@ -1659,23 +1461,6 @@ processMediaKeyResponse(assetId: string, response: Uint8Array): Promise<void>
 | [401](../../errorcode-universal.md#401-参数检查失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
 
-**示例**
-
-```TypeScript
-let keyRequestCallback: avSession.KeyRequestCallback = async(assetId: string, requestData: Uint8Array) => {
-  // 根据assetId获取对应的DRM url。
-  let drmUrl = 'http://license.xxx.xxx.com:8080/drmproxy/getLicense';
-  // 从服务器获取许可证，需要开发者根据实际情况进行赋值。
-  let licenseResponseData: Uint8Array = new Uint8Array();
-  console.info(`Succeeded in get license by ${drmUrl}.`);
-  avCastController.processMediaKeyResponse(assetId, licenseResponseData).then(() => {
-    console.info('Succeeded in processing media key response.');
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to process media key response, code: ${err.code}, message: ${err.message}`);
-  });
-}
-```
-
 ## release
 
 ```TypeScript
@@ -1699,18 +1484,6 @@ release(callback: AsyncCallback<void>): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-
-**示例**
-
-```TypeScript
-avCastController.release((err: BusinessError) => {
-  if (err) {
-    console.error(`Failed to release, code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in releasing.');
-});
-```
 
 ## release
 
@@ -1737,16 +1510,6 @@ release(): Promise<void>
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-
-**示例**
-
-```TypeScript
-avCastController.release().then(() => {
-  console.info('Succeeded in releasing.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to release, code: ${err.code}, message: ${err.message}`);
-});
-```
 
 ## sendControlCommand
 
@@ -1775,19 +1538,6 @@ sendControlCommand(command: AVCastControlCommand, callback: AsyncCallback<void>)
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
 | [6600105](../errorcode-avsession.md#6600105-无效会话命令) | Invalid session command |
 | [6600109](../errorcode-avsession.md#6600109-远端会话不存在) | The remote connection is not established |
-
-**示例**
-
-```TypeScript
-let avCommand: avSession.AVCastControlCommand = {command: 'play'};
-avCastController.sendControlCommand(avCommand, (err: BusinessError) => {
-  if (err) {
-    console.error(`Failed to send control command, code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in sending control command.');
-});
-```
 
 ## sendControlCommand
 
@@ -1824,17 +1574,6 @@ sendControlCommand(command: AVCastControlCommand): Promise<void>
 | [6600105](../errorcode-avsession.md#6600105-无效会话命令) | Invalid session command |
 | [6600109](../errorcode-avsession.md#6600109-远端会话不存在) | The remote connection is not established |
 
-**示例**
-
-```TypeScript
-let avCommand: avSession.AVCastControlCommand = {command: 'play'};
-avCastController.sendControlCommand(avCommand).then(() => {
-  console.info('Succeeded in sending control command.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to send control command, code: ${err.code}, message: ${err.message}`);
-});
-```
-
 ## sendCustomData
 
 ```TypeScript
@@ -1866,58 +1605,6 @@ sendCustomData(data: Record<string, Object>): Promise<void>
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-
-**示例**
-
-```TypeScript
-avCastController.sendCustomData({customData: 'This is custom data'}).then(() => {
-  console.info('Succeeded in sending custom data.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to send custom data, code: ${err.code}, message: ${err.message}`);
-});
-```
-
-```TypeScript
-currentAVSession.sendCustomData({customData : "This is custom data"}).then(() => {
-  console.info('Succeeded in sending custom data.');
-});
-```
-
-```TypeScript
-// Index.ets
-import { avSession } from '@kit.AVSessionKit';
-
-@Entry
-@Component
-struct Index {
-  private tag: string = "createNewSession";
-  private sessionId: string = "";
-  private controller: avSession.AVSessionController | undefined = undefined;
-  private currentAVSession?: avSession.AVSession;
-
-  aboutToAppear(): void {
-    avSession.createAVSession(this.getUIContext().getHostContext(), this.tag, "audio")
-      .then(async (data: avSession.AVSession) => {
-        this.currentAVSession = data;
-        this.sessionId = this.currentAVSession.sessionId;
-        this.controller = await this.currentAVSession.getController();
-        console.info(`Succeeded in creating AV session, sessionId: ${this.sessionId}`);
-        (this.controller as avSession.AVSessionController).sendCustomData({ customData: "This is my data" });
-      });
-  }
-
-  build() {
-    Column() {
-      Text('AVSession Demo')
-        .fontSize(20)
-        .margin(10)
-    }
-    .width('100%')
-    .height('100%')
-    .justifyContent(FlexAlign.Center)
-  }
-}
-```
 
 ## start
 
@@ -1951,37 +1638,6 @@ start(item: AVQueueItem, callback: AsyncCallback<void>): void
 | [401](../../errorcode-universal.md#401-参数检查失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
 | [6600109](../errorcode-avsession.md#6600109-远端会话不存在) | The remote connection is not established |
-
-**示例**
-
-```TypeScript
-// 设置播放参数，开始播放。
-let playItem: avSession.AVQueueItem = {
-  itemId: 0,
-  description: {
-    assetId: '12345',
-    mediaType: 'AUDIO',
-    mediaUri: 'http://resource1_address',
-    mediaSize: 12345,
-    startPosition: 0,
-    duration: 0,
-    artist: 'mysong',
-    albumTitle: 'song1_title',
-    albumCoverUri: 'http://resource1_album_address',
-    lyricUri: 'http://resource1_lyric_address',
-    appName: 'MyMusic'
-  }
-};
-
-// 启动播放。
-avCastController.start(playItem, (err: BusinessError) => {
-  if (err) {
-    console.error(`Failed to start, code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in starting.');
-});
-```
 
 ## start
 
@@ -2022,34 +1678,6 @@ start(item: AVQueueItem): Promise<void>
 | [401](../../errorcode-universal.md#401-参数检查失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
 | [6600109](../errorcode-avsession.md#6600109-远端会话不存在) | The remote connection is not established |
-
-**示例**
-
-```TypeScript
-// 设置播放参数，开始播放。
-let playItem: avSession.AVQueueItem = {
-  itemId: 0,
-  description: {
-    assetId: '12345',
-    mediaType: 'AUDIO',
-    mediaUri: 'http://resource1_address',
-    mediaSize: 12345,
-    startPosition: 0,
-    duration: 0,
-    artist: 'mysong',
-    albumTitle: 'song1_title',
-    albumCoverUri: 'http://resource1_album_address',
-    lyricUri: 'http://resource1_lyric_address',
-    appName: 'MyMusic'
-  }
-};
-// 启动播放。
-avCastController.start(playItem).then(() => {
-  console.info('Succeeded in starting.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to start, code: ${err.code}, message: ${err.message}`);
-});
-```
 
 ## update
 

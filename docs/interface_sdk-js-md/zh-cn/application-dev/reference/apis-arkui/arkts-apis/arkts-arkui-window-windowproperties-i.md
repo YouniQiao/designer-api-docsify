@@ -70,7 +70,7 @@ drawableRect: Rect
 
 窗口内的可绘制区域尺寸，其中左边界上边界是相对于窗口左上顶点计算。在Stage模型下，需要在调用[loadContent()](arkts-arkui-window-window-i.md#loadcontent)或[setUIContent()](arkts-arkui-window-window-i.md#setuicontent)加载页面内容后获取该属性。
 
-**类型：** Rect
+**类型：** [Rect](arkts-arkui-window-rect-i.md)
 
 **起始版本：** 11
 
@@ -102,7 +102,7 @@ globalDisplayRect?: Rect
 
 全局坐标系下的窗口尺寸。扩展屏场景下以主屏左上角为坐标原点，虚拟屏场景下以虚拟屏左上角为坐标原点。默认值：[0, 0, 0, 0]。
 
-**类型：** Rect
+**类型：** [Rect](arkts-arkui-window-rect-i.md)
 
 **起始版本：** 20
 
@@ -268,7 +268,7 @@ type: WindowType
 
 当前存在主窗使用[getWindowProperties()](arkts-arkui-window-window-i.md#getwindowproperties)接口返回type不准确的问题，开发者在创建窗口时已指明窗口类型，无需通过getWindowProperties()接口获取窗口类型。
 
-**类型：** WindowType
+**类型：** [WindowType](arkts-arkui-window-windowtype-e.md)
 
 **起始版本：** 7
 
@@ -288,7 +288,7 @@ windowRect: Rect
 
 窗口尺寸，其中左边界上边界是相对于窗口所在屏幕左上顶点计算，可在页面生命周期[onPageShow](../arkts-components/arkts-arkui-basecustomcomponent-c.md#onpageshow)或应用生命周期[onForeground](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md#onforeground)阶段获取。
 
-**类型：** Rect
+**类型：** [Rect](arkts-arkui-window-rect-i.md)
 
 **起始版本：** 7
 
@@ -304,7 +304,7 @@ windowType?: WindowType
 
 含义：窗口类型使用场景：判断当前窗口主窗口还是子窗口等
 
-**类型：** WindowType
+**类型：** [WindowType](arkts-arkui-window-windowtype-e.md)
 
 **起始版本：** 26.0.0
 

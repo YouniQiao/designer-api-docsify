@@ -19,7 +19,7 @@ backgroundBlurStyle?: BlurStyle
 
 标题栏背景模糊样式，设置后，标题栏将应用指定的模糊样式；不设置时关闭背景模糊效果。
 
-**类型：** BlurStyle
+**类型：** [BlurStyle](arkts-arkui-blurstyle-e.md)
 
 **起始版本：** 11
 
@@ -183,7 +183,7 @@ paddingEnd?: LengthMetrics
 
 LengthMetrics.resource(`\$r('sys.float.margin_right')`)
 
-**类型：** LengthMetrics
+**类型：** [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md)
 
 **默认值：** LengthMetrics.resource($r('sys.float.margin_right'))
 
@@ -212,7 +212,7 @@ paddingStart?: LengthMetrics
 
 LengthMetrics.resource(`\$r('sys.float.margin_left')`)。
 
-**类型：** LengthMetrics
+**类型：** [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md)
 
 **默认值：** LengthMetrics.resource($r('sys.float.margin_left'))
 

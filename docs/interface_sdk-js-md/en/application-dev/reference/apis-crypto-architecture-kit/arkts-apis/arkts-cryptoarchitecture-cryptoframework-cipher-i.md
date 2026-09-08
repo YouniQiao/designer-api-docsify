@@ -43,8 +43,8 @@ Finishes the crypto operation, encrypts or decrypts the input data, and then fee
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | DataBlob | Yes | Indicates the data to be finally encrypted or decrypted. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DataBlob&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the encrypted or decrypted data obtained. Otherwise, **err** is an error object. |
+| data | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | Yes | Indicates the data to be finally encrypted or decrypted. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the encrypted or decrypted data obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -54,7 +54,7 @@ Finishes the crypto operation, encrypts or decrypts the input data, and then fee
 | [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
 | [17620002](../errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) | Failed to obtain the native object or convert parameters. |
 | [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
-| [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed. Possible causes:  1. The data is too number.<br>**Applicable version:** 22 and later |
+| [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed. Possible causes:  1. The data is too long.<br>**Applicable version:** 22 and later |
 
 **Examples**
 
@@ -153,48 +153,6 @@ async function cipherByPromise() {
 }
 ```
 
-For more HMAC operation examples, see [Generating an HMAC by Passing In Data by Segment](../../../security/CryptoArchitectureKit/crypto-compute-hmac.md#generating-an-hmac-by-passing-in-data-by-segment).
-
-```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
-import { buffer } from '@kit.ArkTS';
-
-function hmacByCallback() {
-  let mac = cryptoFramework.createMac('SHA256');
-  let keyBlob: cryptoFramework.DataBlob = { data: new Uint8Array(buffer.from('12345678abcdefgh', 'utf-8').buffer) };
-  let symKeyGenerator = cryptoFramework.createSymKeyGenerator('AES128');
-  symKeyGenerator.convertKey(keyBlob, (err, symKey) => {
-    mac.init(symKey, (err) => {
-      mac.update({ data: new Uint8Array(buffer.from('hmacTestMessage', 'utf-8').buffer) }, (err) => {
-        mac.doFinal((err, output) => {
-          console.info('[Callback]: HMAC result: ' + output.data);
-          console.info('[Callback]: MAC len: ' + mac.getMacLength());
-        });
-      });
-    });
-  });
-}
-```
-
-For more HMAC operation examples, see [Generating an HMAC by Passing In Data by Segment](../../../security/CryptoArchitectureKit/crypto-compute-hmac.md#generating-an-hmac-by-passing-in-data-by-segment).
-
-```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
-import { buffer } from '@kit.ArkTS';
-
-async function hmacByPromise() {
-  let mac = cryptoFramework.createMac('SHA256');
-  let keyBlob: cryptoFramework.DataBlob = { data: new Uint8Array(buffer.from('12345678abcdefgh', 'utf-8').buffer) };
-  let symKeyGenerator = cryptoFramework.createSymKeyGenerator('AES128');
-  let symKey = await symKeyGenerator.convertKey(keyBlob);
-  await mac.init(symKey);
-  await mac.update({ data: new Uint8Array(buffer.from('hmacTestMessage', 'utf-8').buffer) });
-  let macOutput = await mac.doFinal();
-  console.info('[Promise]: HMAC result: ' + macOutput.data);
-  console.info('[Promise]: MAC len: ' + mac.getMacLength());
-}
-```
-
 ## doFinal
 
 ```TypeScript
@@ -245,8 +203,8 @@ of **update()** and **doFinal()** throughout the process will yield the complete
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | DataBlob \| null | Yes | Data to encrypt or decrypt. In symmetric encryption and decryption, this parameter can be **null**, but **{data: Uint8Array (empty)}** cannot be passed in. Before API version 10, only **DataBlob** is supported. Since API version 10, **null** is also supported. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DataBlob&gt; | Yes | Callback used to return the result. If the encryption or decryption is successful, **err** is **undefined**, and **data** is the encryption or decryption result obtained. Otherwise, **err** is an error object. |
+| data | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) \| null | Yes | Data to encrypt or decrypt. In symmetric encryption and decryption, this parameter can be **null**, but **{data: Uint8Array (empty)}** cannot be passed in. Before API version 10, only **DataBlob** is supported. Since API version 10, **null** is also supported. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md)&gt; | Yes | Callback used to return the result. If the encryption or decryption is successful, **err** is **undefined**, and **data** is the encryption or decryption result obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -256,7 +214,7 @@ of **update()** and **doFinal()** throughout the process will yield the complete
 | [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
 | [17620002](../errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) | Failed to obtain the native object or convert parameters. |
 | [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
-| [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed. Possible causes:  1. The data is too number.<br>**Applicable version:** 22 and later |
+| [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed. Possible causes:  1. The data is too long.<br>**Applicable version:** 22 and later |
 
 **Examples**
 
@@ -330,13 +288,13 @@ Finishes the crypto operation, encrypts or decrypts the input data, and then fee
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | DataBlob | Yes | Indicates the data to be finally encrypted or decrypted. |
+| data | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | Yes | Indicates the data to be finally encrypted or decrypted. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;DataBlob&gt; | Promise used to return the encrypted or decrypted data. |
+| Promise&lt;[DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md)&gt; | Promise used to return the encrypted or decrypted data. |
 
 **Error codes:**
 
@@ -346,11 +304,104 @@ Finishes the crypto operation, encrypts or decrypts the input data, and then fee
 | [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
 | [17620002](../errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) | Failed to obtain the native object or convert parameters. |
 | [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
-| [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed. Possible causes:  1. The data is too number.<br>**Applicable version:** 22 and later |
+| [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed. Possible causes:  1. The data is too long.<br>**Applicable version:** 22 and later |
 
 **Examples**
 
-See [doFinal](#dofinal)
+For more encryption and decryption examples, see [Encryption and Decryption with an AES Symmetric Key (GCM Mode)](../../../security/CryptoArchitectureKit/crypto-aes-sym-encrypt-decrypt-gcm.md).
+
+```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { buffer } from '@kit.ArkTS';
+
+function generateRandom(len: number) {
+  let rand = cryptoFramework.createRandom();
+  let generateRandSync = rand.generateRandomSync(len);
+  return generateRandSync;
+}
+
+function genGcmParamsSpec() {
+  let ivBlob = generateRandom(12);
+  let arr = [1, 2, 3, 4, 5, 6, 7, 8];
+  let dataAad = new Uint8Array(arr);
+  let aadBlob: cryptoFramework.DataBlob = { data: dataAad };
+  arr = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+  let dataTag = new Uint8Array(arr);
+  let tagBlob: cryptoFramework.DataBlob = {
+    data: dataTag
+  };
+  let gcmParamsSpec: cryptoFramework.GcmParamsSpec = {
+    iv: ivBlob,
+    aad: aadBlob,
+    authTag: tagBlob,
+    algName: 'GcmParamsSpec'
+  };
+  return gcmParamsSpec;
+}
+
+function cipherByCallback() {
+  let gcmParams = genGcmParamsSpec();
+  let symKeyGenerator = cryptoFramework.createSymKeyGenerator('AES128');
+  let cipher = cryptoFramework.createCipher('AES128|GCM|PKCS7');
+  symKeyGenerator.generateSymKey((err, symKey) => {
+    cipher.init(cryptoFramework.CryptoMode.ENCRYPT_MODE, symKey, gcmParams, (err) => {
+      let message = 'This is a test';
+      let plainText: cryptoFramework.DataBlob = { data: new Uint8Array(buffer.from(message, 'utf-8').buffer) };
+      cipher.update(plainText, (err, encryptUpdate) => {
+        cipher.doFinal(null, (err, tag) => {
+          gcmParams.authTag = tag;
+          console.info('encryptUpdate plainText: ' + encryptUpdate.data);
+        });
+      });
+    });
+  });
+}
+```
+
+For more encryption and decryption examples, see [Encryption and Decryption with an AES Symmetric Key (GCM Mode)](../../../security/CryptoArchitectureKit/crypto-aes-sym-encrypt-decrypt-gcm.md).
+
+```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { buffer } from '@kit.ArkTS';
+
+function generateRandom(len: number) {
+  let rand = cryptoFramework.createRandom();
+  let generateRandSync = rand.generateRandomSync(len);
+  return generateRandSync;
+}
+
+function genGcmParamsSpec() {
+  let ivBlob = generateRandom(12);
+  let arr = [1, 2, 3, 4, 5, 6, 7, 8];
+  let dataAad = new Uint8Array(arr);
+  let aadBlob: cryptoFramework.DataBlob = { data: dataAad };
+  arr = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+  let dataTag = new Uint8Array(arr);
+  let tagBlob: cryptoFramework.DataBlob = {
+    data: dataTag
+  };
+  let gcmParamsSpec: cryptoFramework.GcmParamsSpec = {
+    iv: ivBlob,
+    aad: aadBlob,
+    authTag: tagBlob,
+    algName: 'GcmParamsSpec'
+  };
+  return gcmParamsSpec;
+}
+
+async function cipherByPromise() {
+  let gcmParams = genGcmParamsSpec();
+  let symKeyGenerator = cryptoFramework.createSymKeyGenerator('AES128');
+  let cipher = cryptoFramework.createCipher('AES128|GCM|PKCS7');
+  let symKey = await symKeyGenerator.generateSymKey();
+  await cipher.init(cryptoFramework.CryptoMode.ENCRYPT_MODE, symKey, gcmParams);
+  let message = 'This is a test';
+  let plainText: cryptoFramework.DataBlob = { data: new Uint8Array(buffer.from(message, 'utf-8').buffer) };
+  let encryptUpdate = await cipher.update(plainText);
+  gcmParams.authTag = await cipher.doFinal(null);
+  console.info('encryptUpdate plainText: ' + encryptUpdate.data);
+}
+```
 
 ## doFinal
 
@@ -409,13 +460,13 @@ of **update()** and **doFinal()** throughout the process will yield the complete
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | DataBlob \| null | Yes | Data to encrypt or decrypt. It can be **null**, but cannot be {data:Uint8Array(empty)}. In versions earlier than API version 10, only **DataBlob** is supported. Since API version 10, **null** is also supported. |
+| data | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) \| null | Yes | Data to encrypt or decrypt. It can be **null**, but cannot be {data:Uint8Array(empty)}. In versions earlier than API version 10, only **DataBlob** is supported. Since API version 10, **null** is also supported. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;DataBlob&gt; | Promise used to return the **DataBlob**, which is the encryption or decryption result of the remaining data. |
+| Promise&lt;[DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md)&gt; | Promise used to return the **DataBlob**, which is the encryption or decryption result of the remaining data. |
 
 **Error codes:**
 
@@ -425,7 +476,7 @@ of **update()** and **doFinal()** throughout the process will yield the complete
 | [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
 | [17620002](../errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) | Failed to obtain the native object or convert parameters. |
 | [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
-| [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed. Possible causes:  1. The data is too number.<br>**Applicable version:** 22 and later |
+| [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed. Possible causes:  1. The data is too long.<br>**Applicable version:** 22 and later |
 
 **Examples**
 
@@ -499,7 +550,7 @@ of **updateSync()** and **doFinalSync()** throughout the process will yield the 
 
 See **NOTE：**in [doFinal()](#dofinal) for other precautions.
 
-**NOTE：**It is recommended to prioritize the use of asynchronous API, doFinal. Synchronous API may take a number time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
+**NOTE：**It is recommended to prioritize the use of asynchronous API, doFinal. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
 **Since:** 12
 
@@ -511,13 +562,13 @@ See **NOTE：**in [doFinal()](#dofinal) for other precautions.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | DataBlob \| null | Yes | Data to encrypt or decrypt. It can be **null** in symmetric encryption or decryption, but cannot be {data:Uint8Array(empty)}. |
+| data | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) \| null | Yes | Data to encrypt or decrypt. It can be **null** in symmetric encryption or decryption, but cannot be {data:Uint8Array(empty)}. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| DataBlob | Encrypted or decrypted data. |
+| [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | Encrypted or decrypted data. |
 
 **Error codes:**
 
@@ -527,7 +578,7 @@ See **NOTE：**in [doFinal()](#dofinal) for other precautions.
 | [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
 | [17620002](../errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) | Failed to obtain the native object or convert parameters. |
 | [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
-| [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed. Possible causes:  1. The data is too number.<br>**Applicable version:** 22 and later |
+| [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed. Possible causes:  1. The data is too long.<br>**Applicable version:** 22 and later |
 
 **Examples**
 
@@ -649,7 +700,7 @@ Initializes the crypto operation with the given crypto mode, key and parameters.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | opMode | [CryptoMode](arkts-cryptoarchitecture-cryptoframework-cryptomode-e.md) | Yes | Operation (encryption or decryption) to perform. |
-| key | Key | Yes | Key for encryption or decryption. |
+| key | [Key](arkts-cryptoarchitecture-cryptoframework-key-i.md) | Yes | Key for encryption or decryption. |
 | params | [ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md) | Yes | Indicates the algorithm parameters such as IV. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
@@ -686,7 +737,7 @@ Initializes the [cipher](arkts-cryptoarchitecture-cryptoframework-cipher-i.md) o
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | opMode | [CryptoMode](arkts-cryptoarchitecture-cryptoframework-cryptomode-e.md) | Yes | Operation (encryption or decryption) to perform. |
-| key | Key | Yes | Key for encryption or decryption. |
+| key | [Key](arkts-cryptoarchitecture-cryptoframework-key-i.md) | Yes | Key for encryption or decryption. |
 | params | [ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md) \| null | Yes | Parameters for encryption or decryption. For algorithm modes without parameters (such as ECB), set this parameter to **null**. In versions earlier than API version 10, only **ParamsSpec** is supported. Since API version 10, **null** is also supported. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
@@ -723,7 +774,7 @@ Initializes the crypto operation with the given crypto mode, key and parameters.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | opMode | [CryptoMode](arkts-cryptoarchitecture-cryptoframework-cryptomode-e.md) | Yes | Operation (encryption or decryption) to perform. |
-| key | Key | Yes | Key for encryption or decryption. |
+| key | [Key](arkts-cryptoarchitecture-cryptoframework-key-i.md) | Yes | Key for encryption or decryption. |
 | params | [ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md) | Yes | Indicates the algorithm parameters such as IV. |
 
 **Return value:**
@@ -765,7 +816,7 @@ Initializes the cipher object for encryption and decryption. This API uses a pro
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | opMode | [CryptoMode](arkts-cryptoarchitecture-cryptoframework-cryptomode-e.md) | Yes | Operation (encryption or decryption) to perform. |
-| key | Key | Yes | Key for encryption or decryption. |
+| key | [Key](arkts-cryptoarchitecture-cryptoframework-key-i.md) | Yes | Key for encryption or decryption. |
 | params | [ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md) \| null | Yes | Parameters for encryption or decryption. For algorithm modes without parameters (such as ECB), set this parameter to **null**. Before API version 10, only **ParamsSpec** is supported. Since API version 10, **null** is also supported. |
 
 **Return value:**
@@ -794,7 +845,7 @@ Initializes a [cipher](arkts-cryptoarchitecture-cryptoframework-cipher-i.md) ins
 
 **initSync**, **updateSync**, and **doFinalSync** must be used together. **initSync** and **doFinalSync** are mandatory, and **updateSync** is optional.
 
-**NOTE：**It is recommended to prioritize the use of asynchronous API, init. Synchronous API may take a number time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
+**NOTE：**It is recommended to prioritize the use of asynchronous API, init. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
 **Since:** 12
 
@@ -807,7 +858,7 @@ Initializes a [cipher](arkts-cryptoarchitecture-cryptoframework-cipher-i.md) ins
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | opMode | [CryptoMode](arkts-cryptoarchitecture-cryptoframework-cryptomode-e.md) | Yes | Operation (encryption or decryption) to perform. |
-| key | Key | Yes | Key for encryption or decryption. |
+| key | [Key](arkts-cryptoarchitecture-cryptoframework-key-i.md) | Yes | Key for encryption or decryption. |
 | params | [ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md) \| null | Yes | Parameters for encryption or decryption. For algorithm modes without parameters (such as ECB), set this parameter to **null**. |
 
 **Error codes:**
@@ -886,7 +937,7 @@ For example, in ECB and CBC modes, encryption and decryption are performed by bl
 > data input by **update()** is an integer multiple of the block size, and **update()** returns the newly
 > processed block data.
 > 
-That is, data is returned as number as the data passed in by **update()** reaches the size of a block. Otherwise,   
+That is, data is returned as long as the data passed in by **update()** reaches the size of a block. Otherwise,   
 > **null** is returned and the data will be retained until a block is formed in the next **update()** or
 > **doFinal()**.
 > 
@@ -923,8 +974,8 @@ For details about the sample code for passing data in multiple **update()** call
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | DataBlob | Yes | Data to be encrypted or decrypted. It cannot be null. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DataBlob&gt; | Yes | Callback used to return the result. If the data is updated successfully, **err** is **undefined**, and **data** is the encryption or decryption result obtained. Otherwise, **err** is an error object. |
+| data | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | Yes | Data to be encrypted or decrypted. It cannot be null. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md)&gt; | Yes | Callback used to return the result. If the data is updated successfully, **err** is **undefined**, and **data** is the encryption or decryption result obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -934,7 +985,7 @@ For details about the sample code for passing data in multiple **update()** call
 | [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
 | [17620002](../errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) | Failed to obtain the native object or convert parameters. |
 | [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
-| [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed. Possible causes:  1. The data is too number.<br>**Applicable version:** 22 and later |
+| [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed. Possible causes:  1. The data is too long.<br>**Applicable version:** 22 and later |
 
 ## update
 
@@ -957,7 +1008,7 @@ For example, in ECB and CBC modes, encryption and decryption are performed by bl
 > data input by **update()** is an integer multiple of the block size, and **update()** returns the newly
 > processed block data.
 > 
-That is, data is returned as number as the data passed in by **update()** reaches the size of a block. Otherwise,   
+That is, data is returned as long as the data passed in by **update()** reaches the size of a block. Otherwise,   
 > **null** is returned and the data will be retained until a block is formed in the next **update()** or
 > **doFinal()**.
 > 
@@ -994,13 +1045,13 @@ For details about the sample code for passing data in multiple **update()** call
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | DataBlob | Yes | Data to encrypt or decrypt. It cannot be null. |
+| data | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | Yes | Data to encrypt or decrypt. It cannot be null. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;DataBlob&gt; | Promise used to return the **DataBlob** (containing the encrypted or decrypted data). |
+| Promise&lt;[DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md)&gt; | Promise used to return the **DataBlob** (containing the encrypted or decrypted data). |
 
 **Error codes:**
 
@@ -1010,7 +1061,7 @@ For details about the sample code for passing data in multiple **update()** call
 | [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
 | [17620002](../errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) | Failed to obtain the native object or convert parameters. |
 | [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
-| [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed. Possible causes:  1. The data is too number.<br>**Applicable version:** 22 and later |
+| [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed. Possible causes:  1. The data is too long.<br>**Applicable version:** 22 and later |
 
 ## updateSync
 
@@ -1024,7 +1075,7 @@ This API can be called only after the [Cipher](arkts-cryptoarchitecture-cryptofr
 
 See **NOTE：**in **update()** for other precautions.
 
-**NOTE：**It is recommended to prioritize the use of asynchronous API, update. Synchronous API may take a number time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
+**NOTE：**It is recommended to prioritize the use of asynchronous API, update. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
 **Since:** 12
 
@@ -1036,13 +1087,13 @@ See **NOTE：**in **update()** for other precautions.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | DataBlob | Yes | Data to encrypt or decrypt. It cannot be null. |
+| data | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | Yes | Data to encrypt or decrypt. It cannot be null. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| DataBlob | Encryption/decryption result. |
+| [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | Encryption/decryption result. |
 
 **Error codes:**
 
@@ -1052,7 +1103,7 @@ See **NOTE：**in **update()** for other precautions.
 | [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
 | [17620002](../errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) | Failed to obtain the native object or convert parameters. |
 | [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
-| [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed. Possible causes:  1. The data is too number.<br>**Applicable version:** 22 and later |
+| [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed. Possible causes:  1. The data is too long.<br>**Applicable version:** 22 and later |
 
 ## algName
 

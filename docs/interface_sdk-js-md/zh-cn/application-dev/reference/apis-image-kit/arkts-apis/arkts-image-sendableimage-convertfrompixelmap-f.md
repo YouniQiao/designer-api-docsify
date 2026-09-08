@@ -22,13 +22,13 @@ Creates a sendable image PixelMap from image PixelMap.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| pixelmap | image.PixelMap | 是 | the src pixelmap. |
+| pixelmap | [image.PixelMap](arkts-image-image-pixelmap-i.md) | 是 | the src pixelmap. |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| PixelMap | Returns the instance if the operation is successful. Otherwise, an exception will be thrown. |
+| [PixelMap](arkts-image-sendableimage-pixelmap-i.md) | Returns the instance if the operation is successful. Otherwise, an exception will be thrown. |
 
 **错误码：**
 

@@ -40,7 +40,7 @@ distributedInfo?: distributedAccount.DistributedInfo
 
 Distributed account information bound to the OS account sub-profile. The default value is **undefined**.
 
-**Type:** distributedAccount.DistributedInfo
+**Type:** [distributedAccount.DistributedInfo](arkts-basicservices-distributedaccount-distributedinfo-i.md)
 
 **Since:** 26.0.0
 

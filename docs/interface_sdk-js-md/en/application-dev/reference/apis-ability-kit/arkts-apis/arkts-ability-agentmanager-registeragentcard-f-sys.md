@@ -46,6 +46,6 @@ Registers an AgentCard. If `agentCard.type` is not specified, it defaults to `ag
 | [16000002](../errorcode-ability.md#16000002-incorrect-ability-type) | Incorrect ability type. |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. Possible causes: 1.Connect to system service failed. 2.System service failed to communicate with dependency module. |
 | [18500001](../errorcode-ability.md#18500001-invalid-bundle-name) | The bundle does not exist or no patch has been applied. |
-| 35600005 | The specified AgentCard version is invalid. |
-| 35600006 | The specified AgentCard has already been registered. Use updateAgentCard instead. |
-| 35600008 | The number of AgentCards in the bundle reaches the limit. |
+| [35600005](../errorcode-ability.md#35600005-the-specified-agentcard-version-is-invalid) | The specified AgentCard version is invalid. |
+| [35600006](../errorcode-ability.md#35600006-the-specified-agentcard-has-already-been-registered) | The specified AgentCard has already been registered. Use updateAgentCard instead. |
+| [35600008](../errorcode-ability.md#35600008-the-number-of-agentcards-in-the-same-application-reaches-the-limit) | The number of AgentCards in the bundle reaches the limit. |

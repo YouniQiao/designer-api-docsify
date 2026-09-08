@@ -10,4 +10,4 @@ Defines the types of the key and value in a KV pair.
 
 **System capability:** SystemCapability.DistributedDataManager.CommonType
 
-**Type:** Record&lt;string, ValueType&gt;
+**Type:** Record&lt;string, [ValueType](arkts-arkdata-commontype-valuetype-t.md)&gt;

@@ -54,20 +54,3 @@ declare function readTextSync(
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
 | 13900044 | Network is unreachable<br>**适用版本：** 12+ |
-
-**示例**
-
-```TypeScript
-import { ReadTextOptions } from '@kit.CoreFileKit';
-
-let filePath = pathDir + "/test.txt";
-let readTextOptions: ReadTextOptions = {
-  offset: 1,
-  length: 0,
-  encoding: 'utf-8'
-};
-let stat = fileIo.statSync(filePath);
-readTextOptions.length = stat.size;
-let str = fileIo.readTextSync(filePath, readTextOptions);
-console.info(`Succeeded in reading text, text is: ${str}`);
-```

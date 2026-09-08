@@ -26,10 +26,3 @@ Removes a directory. This API returns the result synchronously.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | path | string | Yes | Application sandbox path of the directory. |
-
-**Examples**
-
-```TypeScript
-let dirPath = pathDir + '/testDir';
-fileio.rmdirSync(dirPath);
-```

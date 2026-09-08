@@ -29,30 +29,7 @@ constructor()
 **示例**
 
 ```TypeScript
-let textDecoder = new util.TextDecoder();
-let retStr = textDecoder.encoding;
-console.info('retStr = ' + retStr);
-// 输出结果：retStr = utf-8
-```
-
-```TypeScript
-let textEncoder = new util.TextEncoder();
-```
-
-```TypeScript
-let rationalNumber = new util.RationalNumber();
-```
-
-```TypeScript
 let base64 = new util.Base64Helper();
-```
-
-```TypeScript
-let type = new util.types();
-```
-
-```TypeScript
-let base64 = new  util.Base64();
 ```
 
 ## decode
@@ -74,7 +51,7 @@ decode(src: Uint8Array | string, options?: Type): Promise<Uint8Array>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | src | Uint8Array \| string | 是 | 要解码的 Uint8Array 对象或字符串。 |
-| options | Type | 否 | 解码格式。可取值如下：   - **util.Type.BASIC**（默认）：Base64 解码。   - **util.Type.MIME**：Base64 解码。输入参数 **src** 包含回车符和换行符。   - **util.Type.BASIC_URL_SAFE**：Base64URL 解码。   - **util.Type.MIME_URL_SAFE**：Base64URL 解码。输入参数 **src** 包含回车符和换行符。<br>**适用版本：** 10 |
+| options | [Type](arkts-arkts-util-type-e.md) | 否 | 解码格式。可取值如下：   - **util.Type.BASIC**（默认）：Base64 解码。   - **util.Type.MIME**：Base64 解码。输入参数 **src** 包含回车符和换行符。   - **util.Type.BASIC_URL_SAFE**：Base64URL 解码。   - **util.Type.MIME_URL_SAFE**：Base64URL 解码。输入参数 **src** 包含回车符和换行符。<br>**适用版本：** 10 |
 
 **返回值：**
 
@@ -114,7 +91,7 @@ decodeSync(src: Uint8Array | string, options?: Type): Uint8Array
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | src | Uint8Array \| string | 是 | 要解码的 Uint8Array 对象或字符串。 |
-| options | Type | 否 | 解码格式。可取值如下：   - **util.Type.BASIC**（默认）：Base64 解码。   - **util.Type.MIME**：Base64 解码。输入参数 **src** 包含回车符和换行符。   - **util.Type.BASIC_URL_SAFE**：Base64URL 解码。   - **util.Type.MIME_URL_SAFE**：Base64URL 解码。输入参数 **src** 包含回车符和换行符。<br>**适用版本：** 10 |
+| options | [Type](arkts-arkts-util-type-e.md) | 否 | 解码格式。可取值如下：   - **util.Type.BASIC**（默认）：Base64 解码。   - **util.Type.MIME**：Base64 解码。输入参数 **src** 包含回车符和换行符。   - **util.Type.BASIC_URL_SAFE**：Base64URL 解码。   - **util.Type.MIME_URL_SAFE**：Base64URL 解码。输入参数 **src** 包含回车符和换行符。<br>**适用版本：** 10 |
 
 **返回值：**
 
@@ -153,7 +130,7 @@ encode(src: Uint8Array, options?: Type): Promise<Uint8Array>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | src | Uint8Array | 是 | 要编码的 Uint8Array 对象。 |
-| options | Type | 否 | 编码格式。可取值如下：   - **util.Type.BASIC**（默认）：Base64 编码。   - **util.Type.BASIC_URL_SAFE**：Base64URL 编码。<br>**适用版本：** 12 |
+| options | [Type](arkts-arkts-util-type-e.md) | 否 | 编码格式。可取值如下：   - **util.Type.BASIC**（默认）：Base64 编码。   - **util.Type.BASIC_URL_SAFE**：Base64URL 编码。<br>**适用版本：** 12 |
 
 **返回值：**
 
@@ -191,7 +168,7 @@ encodeSync(src: Uint8Array, options?: Type): Uint8Array
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | src | Uint8Array | 是 | 要编码的 Uint8Array 对象。 |
-| options | Type | 否 | 编码格式。可取值如下：   - **util.Type.BASIC**（默认）：Base64 编码。   - **util.Type.BASIC_URL_SAFE**：Base64URL 编码。<br>**适用版本：** 12 |
+| options | [Type](arkts-arkts-util-type-e.md) | 否 | 编码格式。可取值如下：   - **util.Type.BASIC**（默认）：Base64 编码。   - **util.Type.BASIC_URL_SAFE**：Base64URL 编码。<br>**适用版本：** 12 |
 
 **返回值：**
 
@@ -228,7 +205,7 @@ encodeToString(src: Uint8Array, options?: Type): Promise<string>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | src | Uint8Array | 是 | 要编码的 Uint8Array 对象。 |
-| options | Type | 否 | 编码格式。可取值如下：   - **util.Type.BASIC**（默认）：Base64 编码。返回值不包含回车符或换行符。   - **util.Type.MIME**：Base64 编码。返回值每行最多 76 个字符且以 '\r\n' 结尾。   - **util.Type.BASIC_URL_SAFE**：Base64URL 编码。返回值不包含回车符或换行符。   - **util.Type.MIME_URL_SAFE**：Base64URL 编码。返回值每行最多 76 个字符且以 '\r\n' 结尾。<br>**适用版本：** 10 |
+| options | [Type](arkts-arkts-util-type-e.md) | 否 | 编码格式。可取值如下：   - **util.Type.BASIC**（默认）：Base64 编码。返回值不包含回车符或换行符。   - **util.Type.MIME**：Base64 编码。返回值每行最多 76 个字符且以 '\r\n' 结尾。   - **util.Type.BASIC_URL_SAFE**：Base64URL 编码。返回值不包含回车符或换行符。   - **util.Type.MIME_URL_SAFE**：Base64URL 编码。返回值每行最多 76 个字符且以 '\r\n' 结尾。<br>**适用版本：** 10 |
 
 **返回值：**
 
@@ -271,7 +248,7 @@ encodeToStringSync(src: Uint8Array, options?: Type): string
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | src | Uint8Array | 是 | 要编码的 Uint8Array 对象。 |
-| options | Type | 否 | 编码格式。可取值如下：   - **util.Type.BASIC**（默认）：Base64 编码。返回值不包含回车符或换行符。   - **util.Type.MIME**：Base64 编码。如果返回值超过 76 个字符，则每 76 个字符插入一个换行，每行以 '\r\n' 结尾。如果返回值少于 76 个字符，则抛出异常。   - **util.Type.BASIC_URL_SAFE**：Base64URL 编码。返回值不包含回车符或换行符。   - **util.Type.MIME_URL_SAFE**：Base64URL 编码。返回值每行最多 76 个字符且以'\r\n' 结尾。<br>**适用版本：** 12 |
+| options | [Type](arkts-arkts-util-type-e.md) | 否 | 编码格式。可取值如下：   - **util.Type.BASIC**（默认）：Base64 编码。返回值不包含回车符或换行符。   - **util.Type.MIME**：Base64 编码。如果返回值超过 76 个字符，则每 76 个字符插入一个换行，每行以 '\r\n' 结尾。如果返回值少于 76 个字符，则抛出异常。   - **util.Type.BASIC_URL_SAFE**：Base64URL 编码。返回值不包含回车符或换行符。   - **util.Type.MIME_URL_SAFE**：Base64URL 编码。返回值每行最多 76 个字符且以'\r\n' 结尾。<br>**适用版本：** 12 |
 
 **返回值：**
 

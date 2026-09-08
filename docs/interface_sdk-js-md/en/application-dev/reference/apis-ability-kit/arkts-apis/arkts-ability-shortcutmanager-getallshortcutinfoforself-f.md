@@ -22,7 +22,7 @@ Obtains all the shortcut information defined in the [configuration](../../../qui
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;ShortcutInfo&gt;&gt; | Promise that returns all the shortcut information defined in the configuration file. |
+| Promise&lt;Array&lt;[ShortcutInfo](arkts-ability-shortcutmanager-shortcutinfo-t.md)&gt;&gt; | Promise that returns all the shortcut information defined in the configuration file. |
 
 **Examples**
 

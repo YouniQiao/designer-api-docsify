@@ -298,8 +298,8 @@ get(key: string, defValue: ValueType, callback: AsyncCallback<ValueType>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | key | string | 是 | 要获取的存储key名称，不能为空。 |
-| defValue | ValueType | 是 | 默认返回值。支持number、string、boolean。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ValueType&gt; | 是 | 回调函数。 |
+| defValue | [ValueType](arkts-arkdata-storage-valuetype-t.md) | 是 | 默认返回值。支持number、string、boolean。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ValueType](arkts-arkdata-storage-valuetype-t.md)&gt; | 是 | 回调函数。 |
 
 **示例**
 
@@ -332,13 +332,13 @@ get(key: string, defValue: ValueType): Promise<ValueType>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | key | string | 是 | 要获取的存储key名称，不能为空。 |
-| defValue | ValueType | 是 | 默认返回值。支持number、string、boolean。 |
+| defValue | [ValueType](arkts-arkdata-storage-valuetype-t.md) | 是 | 默认返回值。支持number、string、boolean。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;ValueType&gt; | Promise实例，用于异步获取结果。 |
+| Promise&lt;[ValueType](arkts-arkdata-storage-valuetype-t.md)&gt; | Promise实例，用于异步获取结果。 |
 
 **示例**
 
@@ -370,13 +370,13 @@ getSync(key: string, defValue: ValueType): ValueType
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | key | string | 是 | 要获取的存储key名称，不能为空。 |
-| defValue | ValueType | 是 | 给定key的存储不存在，则要返回的默认值。支持number、string、boolean。 |
+| defValue | [ValueType](arkts-arkdata-storage-valuetype-t.md) | 是 | 给定key的存储不存在，则要返回的默认值。支持number、string、boolean。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| ValueType | 键对应的值，如果值为null或者非默认值类型，返回默认数据。 |
+| [ValueType](arkts-arkdata-storage-valuetype-t.md) | 键对应的值，如果值为null或者非默认值类型，返回默认数据。 |
 
 **示例**
 
@@ -581,7 +581,7 @@ put(key: string, value: ValueType, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | key | string | 是 | 要修改的存储的key，不能为空。 |
-| value | ValueType | 是 | 存储的新值。支持number、string、boolean。 |
+| value | [ValueType](arkts-arkdata-storage-valuetype-t.md) | 是 | 存储的新值。支持number、string、boolean。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
 
 **示例**
@@ -615,7 +615,7 @@ put(key: string, value: ValueType): Promise<void>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | key | string | 是 | 要修改的存储的key，不能为空。 |
-| value | ValueType | 是 | 存储的新值。支持number、string、boolean。 |
+| value | [ValueType](arkts-arkdata-storage-valuetype-t.md) | 是 | 存储的新值。支持number、string、boolean。 |
 
 **返回值：**
 
@@ -653,7 +653,7 @@ putSync(key: string, value: ValueType): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | key | string | 是 | 要修改的存储的key，不能为空。 |
-| value | ValueType | 是 | 存储的新值。支持number、string、boolean。 |
+| value | [ValueType](arkts-arkdata-storage-valuetype-t.md) | 是 | 存储的新值。支持number、string、boolean。 |
 
 **示例**
 

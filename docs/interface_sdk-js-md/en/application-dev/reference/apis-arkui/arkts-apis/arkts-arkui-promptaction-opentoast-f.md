@@ -38,7 +38,7 @@ Shows a toast. This API uses a promise to return the toast ID.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | ShowToastOptions | Yes | Toast configuration options. |
+| options | [ShowToastOptions](arkts-arkui-promptaction-showtoastoptions-i.md) | Yes | Toast configuration options. |
 
 **Return value:**
 

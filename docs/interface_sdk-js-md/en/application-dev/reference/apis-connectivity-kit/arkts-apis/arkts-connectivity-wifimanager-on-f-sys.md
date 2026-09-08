@@ -95,7 +95,7 @@ Subscribe Wi-Fi hotspot sta join events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'hotspotStaJoin' | Yes | event name. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;StationInfo&gt; | Yes | the callback of on |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[StationInfo](arkts-connectivity-wifimanager-stationinfo-i-sys.md)&gt; | Yes | the callback of on |
 
 **Error codes:**
 
@@ -129,7 +129,7 @@ Subscribe Wi-Fi hotspot sta leave events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'hotspotStaLeave' | Yes | event name. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;StationInfo&gt; | Yes | the callback of on |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[StationInfo](arkts-connectivity-wifimanager-stationinfo-i-sys.md)&gt; | Yes | the callback of on |
 
 **Error codes:**
 

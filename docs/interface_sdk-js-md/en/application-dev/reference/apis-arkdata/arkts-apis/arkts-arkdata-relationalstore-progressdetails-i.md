@@ -66,7 +66,7 @@ schedule: Progress
 
 Describes the status of data sync progress.
 
-**Type:** Progress
+**Type:** [Progress](arkts-arkdata-relationalstore-progress-e.md)
 
 **Since:** 10
 

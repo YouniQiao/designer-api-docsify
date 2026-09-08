@@ -75,31 +75,6 @@ async function example(phAccessHelper: sendablePhotoAccessHelper.PhotoAccessHelp
 }
 ```
 
-For details about how to create a phAccessHelper instance, see the example provided in sendablePhotoAccessHelper.getPhotoAccessHelper.
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { photoAccessHelper } from '@kit.MediaLibraryKit';
-
-async function example(phAccessHelper: sendablePhotoAccessHelper.PhotoAccessHelper) {
-  console.info('albumCommitModifyDemo');
-  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-  let albumFetchOptions: photoAccessHelper.FetchOptions = {
-    fetchColumns: [],
-    predicates: predicates
-  };
-  let albumList: sendablePhotoAccessHelper.FetchResult<sendablePhotoAccessHelper.Album> = await phAccessHelper.getAlbums(sendablePhotoAccessHelper.AlbumType.USER, sendablePhotoAccessHelper.AlbumSubtype.USER_GENERIC, albumFetchOptions);
-  let album: sendablePhotoAccessHelper.Album = await albumList.getFirstObject();
-  album.albumName = 'hello';
-  album.commitModify().then(() => {
-    console.info('commitModify successfully');
-  }).catch((err: BusinessError) => {
-    console.error(`commitModify failed with error: ${err.code}, ${err.message}`);
-  });
-}
-```
-
 ## convertToPhotoAsset
 
 ```TypeScript
@@ -116,7 +91,7 @@ Converts a Sendable PhotoAsset object to a non-Sendable PhotoAsset object.
 
 | Type | Description |
 | --- | --- |
-| photoAccessHelper.PhotoAsset | [PhotoAsset]{ |
+| [photoAccessHelper.PhotoAsset](arkts-medialibrary-photoaccesshelper-photoasset-i.md) | [PhotoAsset]{ |
 
 **Error codes:**
 
@@ -173,7 +148,7 @@ Obtains a **PhotoAsset** member parameter.
 
 | Type | Description |
 | --- | --- |
-| photoAccessHelper.MemberType | PhotoAsset** member parameter obtained. |
+| [photoAccessHelper.MemberType](arkts-medialibrary-photoaccesshelper-membertype-t.md) | PhotoAsset** member parameter obtained. |
 
 **Error codes:**
 
@@ -230,13 +205,13 @@ Obtains the file thumbnail of the given size. This API uses a promise to return 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| size | image.Size | No | Size of the thumbnail. |
+| size | [image.Size](../../apis-image-kit/arkts-apis/arkts-image-image-size-i.md) | No | Size of the thumbnail. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;image.PixelMap&gt; | Promise used to return the PixelMap of the thumbnail. |
+| Promise&lt;[image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)&gt; | Promise used to return the PixelMap of the thumbnail. |
 
 **Error codes:**
 
@@ -352,7 +327,7 @@ readonly photoType: PhotoType
 
 Photo type, image or video
 
-**Type:** PhotoType
+**Type:** [PhotoType](arkts-medialibrary-sendablephotoaccesshelper-phototype-e.md)
 
 **Since:** 12
 

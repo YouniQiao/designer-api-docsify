@@ -28,8 +28,8 @@ Registers a mission status listener. This API uses an asynchronous callback to r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| parameter | MissionDeviceInfo | Yes | Information about the device to listen for. |
-| options | MissionCallback | Yes | Callback to register. |
+| parameter | [MissionDeviceInfo](arkts-ability-distributedmissionmanager-missiondeviceinfo-t-sys.md) | Yes | Information about the device to listen for. |
+| options | [MissionCallback](arkts-ability-distributedmissionmanager-missioncallback-t-sys.md) | Yes | Callback to register. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the listener is registered, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
@@ -101,8 +101,8 @@ Registers a mission status listener. This API uses a promise to return the resul
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| parameter | MissionDeviceInfo | Yes | Information about the device to listen for. |
-| options | MissionCallback | Yes | Callback to register. |
+| parameter | [MissionDeviceInfo](arkts-ability-distributedmissionmanager-missiondeviceinfo-t-sys.md) | Yes | Information about the device to listen for. |
+| options | [MissionCallback](arkts-ability-distributedmissionmanager-missioncallback-t-sys.md) | Yes | Callback to register. |
 
 **Return value:**
 

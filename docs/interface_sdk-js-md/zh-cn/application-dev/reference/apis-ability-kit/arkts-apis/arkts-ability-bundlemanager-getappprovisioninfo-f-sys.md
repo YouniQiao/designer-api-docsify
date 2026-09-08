@@ -29,7 +29,7 @@ function getAppProvisionInfo(bundleName: string, callback: AsyncCallback<AppProv
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | bundleName | string | 是 | 指定应用的bundleName。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;AppProvisionInfo&gt; | 是 | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)，当获取成功时，err为undefined，data为指定bundleName的provision配置文件信息。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AppProvisionInfo](arkts-ability-bundlemanager-appprovisioninfo-t-sys.md)&gt; | 是 | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)，当获取成功时，err为undefined，data为指定bundleName的provision配置文件信息。 |
 
 **错误码：**
 
@@ -88,7 +88,7 @@ function getAppProvisionInfo(bundleName: string, userId: number, callback: Async
 | --- | --- | --- | --- |
 | bundleName | string | 是 | 指定应用的bundleName。 |
 | userId | number | 是 | 指定用户ID，可以通过[getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid)获取。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;AppProvisionInfo&gt; | 是 | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)，当获取成功时，err为undefined，data为指定bundleName的provision配置文件信息。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AppProvisionInfo](arkts-ability-bundlemanager-appprovisioninfo-t-sys.md)&gt; | 是 | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)，当获取成功时，err为undefined，data为指定bundleName的provision配置文件信息。 |
 
 **错误码：**
 
@@ -154,7 +154,7 @@ function getAppProvisionInfo(bundleName: string, userId?: number): Promise<AppPr
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;AppProvisionInfo&gt; | Promise对象，返回应用的provision配置文件信息。 |
+| Promise&lt;[AppProvisionInfo](arkts-ability-bundlemanager-appprovisioninfo-t-sys.md)&gt; | Promise对象，返回应用的provision配置文件信息。 |
 
 **错误码：**
 

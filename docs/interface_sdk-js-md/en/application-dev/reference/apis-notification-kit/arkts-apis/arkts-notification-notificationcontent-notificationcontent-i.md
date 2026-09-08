@@ -14,7 +14,7 @@ contentType?: notification.ContentType
 
 Notification content type.
 
-**Type:** notification.ContentType
+**Type:** [notification.ContentType](arkts-notification-notification-contenttype-depr-e.md)
 
 **Since:** 7
 
@@ -30,7 +30,7 @@ Notification content type.
 longText?: NotificationLongTextContent
 ```
 
-Long text notification content. This parameter is used when **notificationContentType** is **NOTIFICATION_CONTENT_LONG_TEXT**. The complete number text content can be displayed after the notification is expanded.
+Long text notification content. This parameter is used when **notificationContentType** is **NOTIFICATION_CONTENT_LONG_TEXT**. The complete long text content can be displayed after the notification is expanded.
 
 **Type:** [NotificationLongTextContent](arkts-notification-notificationcontent-notificationlongtextcontent-i.md)
 
@@ -74,7 +74,7 @@ notificationContentType?: notificationManager.ContentType
 
 Notification content type, used to specify the content layout type of the notification, which determines the display style of the notification in the notification center. It must be used together with the corresponding notification content object. For example, when this parameter is set to **NOTIFICATION_CONTENT_BASIC_TEXT**, the **normal** field must be specified at the same time.
 
-**Type:** notificationManager.ContentType
+**Type:** [notificationManager.ContentType](arkts-notification-notificationmanager-contenttype-e.md)
 
 **Since:** 11
 

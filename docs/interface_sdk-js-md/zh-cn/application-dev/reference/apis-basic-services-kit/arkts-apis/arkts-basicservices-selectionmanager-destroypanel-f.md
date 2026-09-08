@@ -24,7 +24,7 @@ function destroyPanel(panel: Panel): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| panel | Panel | 是 | 要销毁的面板对象。 |
+| panel | [Panel](arkts-basicservices-selectionmanager-panel-i.md) | 是 | 要销毁的面板对象。 |
 
 **返回值：**
 

@@ -228,7 +228,7 @@ Unregisters the listener for **connectResult** events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'connectResult' | Yes | Event type, which is **connectResult**. This event is triggered when `connect()` is called. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ConnectResult&gt; | No | Registered callback. The callback last registered using **on** needs to be passed to unregister the callback. The default effect is the same as the passing behavior. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ConnectResult](arkts-distributedservice-linkenhance-connectresult-i.md)&gt; | No | Registered callback. The callback last registered using **on** needs to be passed to unregister the callback. The default effect is the same as the passing behavior. |
 
 **Error codes:**
 
@@ -397,7 +397,7 @@ Registers a listener for **connectResult** events. This API uses an asynchronous
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'connectResult' | Yes | Event type, which is **connectResult**. This event is triggered when `connect()` is called. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ConnectResult&gt; | Yes | Registered callback. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ConnectResult](arkts-distributedservice-linkenhance-connectresult-i.md)&gt; | Yes | Registered callback. |
 
 **Error codes:**
 

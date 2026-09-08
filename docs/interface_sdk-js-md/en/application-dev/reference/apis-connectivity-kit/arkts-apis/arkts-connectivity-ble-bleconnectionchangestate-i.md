@@ -74,7 +74,7 @@ state: ProfileConnectionState
 
 Connection state of the Gatt profile
 
-**Type:** ProfileConnectionState
+**Type:** [ProfileConnectionState](arkts-connectivity-ble-profileconnectionstate-t.md)
 
 **Since:** 10
 

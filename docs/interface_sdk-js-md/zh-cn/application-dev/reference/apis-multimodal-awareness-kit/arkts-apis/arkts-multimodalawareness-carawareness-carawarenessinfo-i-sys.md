@@ -40,7 +40,7 @@ capability: Capability
 
 表示特定能力。
 
-**类型：** Capability
+**类型：** [Capability](arkts-multimodalawareness-carawareness-capability-e.md)
 
 **起始版本：** 26.1.0
 

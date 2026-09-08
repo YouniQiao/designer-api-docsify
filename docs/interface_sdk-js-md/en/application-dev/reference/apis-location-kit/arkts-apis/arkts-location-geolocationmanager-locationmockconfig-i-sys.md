@@ -22,7 +22,7 @@ locations: Array<Location>
 
 Mock location array.
 
-**Type:** Array&lt;Location&gt;
+**Type:** Array&lt;[Location](arkts-location-geolocationmanager-location-i.md)&gt;
 
 **Since:** 9
 

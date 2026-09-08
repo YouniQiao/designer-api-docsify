@@ -28,7 +28,7 @@ function createHttp(): HttpRequest
 
 | 类型 | 说明 |
 | --- | --- |
-| HttpRequest | 返回一个HttpRequest对象，里面包括request、requestInStream、requestSync、enableAutoCookie、destroy、on和off方法。 |
+| [HttpRequest](arkts-network-http-httprequest-i.md) | 返回一个HttpRequest对象，里面包括request、requestInStream、requestSync、enableAutoCookie、destroy、on和off方法。 |
 
 **示例**
 

@@ -22,7 +22,7 @@ businessType: BusinessType
 
 Upgrade service type.
 
-**Type:** BusinessType
+**Type:** [BusinessType](arkts-basicservices-update-businesstype-i-sys.md)
 
 **Since:** 9
 

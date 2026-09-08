@@ -66,7 +66,7 @@ batchGetPhotoAssetParams(assets: PhotoAsset[], members: string[]): PhotoAssetPar
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| assets | PhotoAsset[] | 是 | 需要批量获取属性的文件数组。 |
+| assets | [PhotoAsset](arkts-medialibrary-photoaccesshelper-photoasset-i.md)[] | 是 | 需要批量获取属性的文件数组。 |
 | members | string[] | 是 | 需要批量获取的属性数组。 |
 
 **返回值：**
@@ -338,7 +338,7 @@ cloneAssetsByPath(assets: string[], target: Album, option?: BatchOperationOption
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | assets | string[] | 是 | 文管公共目录的图片 |
-| target | Album | 是 | 相册 |
+| target | [Album](arkts-medialibrary-photoaccesshelper-album-i.md) | 是 | 相册 |
 | option | [BatchOperationOptions](arkts-medialibrary-photoaccesshelper-batchoperationoptions-i-sys.md) | 否 | 批量操作选项 |
 
 **返回值：**
@@ -396,15 +396,15 @@ cloneToAlbum(assets: PhotoAsset[], target: Album, option?: BatchOperationOptions
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| assets | PhotoAsset[] | 是 | 资产 |
-| target | Album | 是 | 相册 |
+| assets | [PhotoAsset](arkts-medialibrary-photoaccesshelper-photoasset-i.md)[] | 是 | 资产 |
+| target | [Album](arkts-medialibrary-photoaccesshelper-album-i.md) | 是 | 相册 |
 | option | [BatchOperationOptions](arkts-medialibrary-photoaccesshelper-batchoperationoptions-i-sys.md) | 否 | 批量操作选项 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;PhotoAsset[]&gt; | Returns list of successful assets. |
+| Promise&lt;[PhotoAsset](arkts-medialibrary-photoaccesshelper-photoasset-i.md)[]&gt; | Returns list of successful assets. |
 
 **错误码：**
 
@@ -531,13 +531,13 @@ convertAssetToCompatibleAsset(assets: Array<PhotoAsset>): Promise<Array<PhotoAss
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| assets | Array&lt;PhotoAsset&gt; | 是 | 需要转换。 |
+| assets | Array&lt;[PhotoAsset](arkts-medialibrary-photoaccesshelper-photoasset-i.md)&gt; | 是 | 需要转换。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;PhotoAsset&gt;&gt; | Promise用于返回已转换的资产。 |
+| Promise&lt;Array&lt;[PhotoAsset](arkts-medialibrary-photoaccesshelper-photoasset-i.md)&gt;&gt; | Promise用于返回已转换的资产。 |
 
 **错误码：**
 
@@ -598,7 +598,7 @@ convertToAsset(path: string): Promise<PhotoAsset>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;PhotoAsset&gt; | Returns successed asset. |
+| Promise&lt;[PhotoAsset](arkts-medialibrary-photoaccesshelper-photoasset-i.md)&gt; | Returns successed asset. |
 
 **错误码：**
 
@@ -659,7 +659,7 @@ createAlbum(name: string, callback: AsyncCallback<Album>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | name | string | 是 | 待创建相册的相册名。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Album&gt; | 是 | callback返回创建的相册实例。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Album](arkts-medialibrary-photoaccesshelper-album-i.md)&gt; | 是 | callback返回创建的相册实例。 |
 
 **错误码：**
 
@@ -729,7 +729,7 @@ createAlbum(name: string): Promise<Album>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Album&gt; | Promise对象，返回创建的相册实例。 |
+| Promise&lt;[Album](arkts-medialibrary-photoaccesshelper-album-i.md)&gt; | Promise对象，返回创建的相册实例。 |
 
 **错误码：**
 
@@ -791,7 +791,7 @@ API10-17，非法字符包括：. .. \ / : * ? " ' ` &lt; &gt; | { } [ ]
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | displayName | string | 是 | 创建的图片或者视频文件名。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;PhotoAsset&gt; | 是 | callback返回创建的图片和视频结果。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[PhotoAsset](arkts-medialibrary-photoaccesshelper-photoasset-i.md)&gt; | 是 | callback返回创建的图片和视频结果。 |
 
 **错误码：**
 
@@ -859,7 +859,7 @@ API10-17，非法字符包括：. .. \ / : * ? " ' ` &lt; &gt; | { } [ ]
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;PhotoAsset&gt; | Promise对象，返回创建的图片和视频结果。 |
+| Promise&lt;[PhotoAsset](arkts-medialibrary-photoaccesshelper-photoasset-i.md)&gt; | Promise对象，返回创建的图片和视频结果。 |
 
 **错误码：**
 
@@ -927,7 +927,7 @@ API10-17，非法字符包括：. .. \ / : * ? " ' ` &lt; &gt; | { } [ ]
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;PhotoAsset&gt; | Promise对象，返回创建的图片和视频结果。 |
+| Promise&lt;[PhotoAsset](arkts-medialibrary-photoaccesshelper-photoasset-i.md)&gt; | Promise对象，返回创建的图片和视频结果。 |
 
 **错误码：**
 
@@ -993,7 +993,7 @@ API10-17，非法字符包括：. .. \ / : * ? " ' ` &lt; &gt; | { } [ ]
 | --- | --- | --- | --- |
 | displayName | string | 是 | 创建的图片或者视频文件名。 |
 | options | [PhotoCreateOptions](arkts-medialibrary-photoaccesshelper-photocreateoptions-i-sys.md) | 是 | 图片或视频的创建选项。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;PhotoAsset&gt; | 是 | callback返回创建的图片和视频结果。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[PhotoAsset](arkts-medialibrary-photoaccesshelper-photoasset-i.md)&gt; | 是 | callback返回创建的图片和视频结果。 |
 
 **错误码：**
 
@@ -1371,7 +1371,7 @@ deleteAlbums(albums: Array<Album>, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| albums | Array&lt;Album&gt; | 是 | 待删除相册的数组。 |
+| albums | Array&lt;[Album](arkts-medialibrary-photoaccesshelper-album-i.md)&gt; | 是 | 待删除相册的数组。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | callback返回void。 |
 
 **错误码：**
@@ -1437,7 +1437,7 @@ deleteAlbums(albums: Array<Album>): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| albums | Array&lt;Album&gt; | 是 | 待删除相册的数组。 |
+| albums | Array&lt;[Album](arkts-medialibrary-photoaccesshelper-album-i.md)&gt; | 是 | 待删除相册的数组。 |
 
 **返回值：**
 
@@ -1712,7 +1712,7 @@ getAlbumsByIds(albumIds: Array<number>): Promise<Map<number, Album>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Map&lt;number, Album&gt;&gt; | Promise对象。返回相册信息map对象。 |
+| Promise&lt;Map&lt;number, [Album](arkts-medialibrary-photoaccesshelper-album-i.md)&gt;&gt; | Promise对象。返回相册信息map对象。 |
 
 **错误码：**
 
@@ -1816,7 +1816,7 @@ getAssetCompatibleUris(bundleName: string, assets: Array<PhotoAsset>, compatible
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | bundleName | string | 是 | 应用捆绑包名称 |
-| assets | Array&lt;PhotoAsset&gt; | 是 | 资产的数组 |
+| assets | Array&lt;[PhotoAsset](arkts-medialibrary-photoaccesshelper-photoasset-i.md)&gt; | 是 | 资产的数组 |
 | compatibleFlag | number | 否 | 兼容配置掩码标志取值范围为全体整数。 |
 
 **返回值：**
@@ -2114,7 +2114,7 @@ getHiddenAlbums(mode: HiddenPhotosDisplayMode, options: FetchOptions, callback: 
 | --- | --- | --- | --- |
 | mode | [HiddenPhotosDisplayMode](arkts-medialibrary-photoaccesshelper-hiddenphotosdisplaymode-e-sys.md) | 是 | 隐藏文件显示模式。 |
 | options | [FetchOptions](arkts-medialibrary-photoaccesshelper-fetchoptions-i.md) | 是 | 检索选项。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;FetchResult&lt;Album&gt;&gt; | 是 | callback返回获取相册的结果集。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[FetchResult](arkts-medialibrary-photoaccesshelper-fetchresult-i.md)&lt;[Album](arkts-medialibrary-photoaccesshelper-album-i.md)&gt;&gt; | 是 | callback返回获取相册的结果集。 |
 
 **错误码：**
 
@@ -2184,7 +2184,7 @@ getHiddenAlbums(mode: HiddenPhotosDisplayMode, callback: AsyncCallback<FetchResu
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | mode | [HiddenPhotosDisplayMode](arkts-medialibrary-photoaccesshelper-hiddenphotosdisplaymode-e-sys.md) | 是 | Display mode of hidden albums. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;FetchResult&lt;Album&gt;&gt; | 是 | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[FetchResult](arkts-medialibrary-photoaccesshelper-fetchresult-i.md)&lt;[Album](arkts-medialibrary-photoaccesshelper-album-i.md)&gt;&gt; | 是 | Callback used to return the result. |
 
 **错误码：**
 
@@ -2284,7 +2284,7 @@ getHiddenAlbums(mode: HiddenPhotosDisplayMode, options?: FetchOptions): Promise<
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;FetchResult&lt;Album&gt;&gt; | Promise对象，返回获取相册的结果集。 |
+| Promise&lt;[FetchResult](arkts-medialibrary-photoaccesshelper-fetchresult-i.md)&lt;[Album](arkts-medialibrary-photoaccesshelper-album-i.md)&gt;&gt; | Promise对象，返回获取相册的结果集。 |
 
 **错误码：**
 
@@ -2435,7 +2435,7 @@ getPhotoAlbumOrder(orderStyle: number, options?: FetchOptions): Promise<FetchRes
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;FetchResult&lt;[AlbumOrder](arkts-medialibrary-photoaccesshelper-albumorder-i-sys.md)&gt;&gt; | Promise对象，返回获取相册排序的结果集。 |
+| Promise&lt;[FetchResult](arkts-medialibrary-photoaccesshelper-fetchresult-i.md)&lt;[AlbumOrder](arkts-medialibrary-photoaccesshelper-albumorder-i-sys.md)&gt;&gt; | Promise对象，返回获取相册排序的结果集。 |
 
 **错误码：**
 
@@ -2504,7 +2504,7 @@ getPhotoAlbums(options?: FetchOptions):Promise<FetchResult<Album>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;FetchResult&lt;Album&gt;&gt; | Promise对象，返回获取相册的结果集。 |
+| Promise&lt;[FetchResult](arkts-medialibrary-photoaccesshelper-fetchresult-i.md)&lt;[Album](arkts-medialibrary-photoaccesshelper-album-i.md)&gt;&gt; | Promise对象，返回获取相册的结果集。 |
 
 **错误码：**
 
@@ -2563,13 +2563,13 @@ getPhotoAssets(assetsData: ValuesBucket[]): Promise<PhotoAsset[]>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| assetsData | ValuesBucket[] | 是 | 资产记录的数组。数组中的每个元素包含资产的列名称及其对应的值。数组的大小不能超过500个。数组中的每个元素必须包含以下资产列信息：file_id、data、display_name、media_type、subtype。 |
+| assetsData | [ValuesBucket](arkts-medialibrary-photoaccesshelper-valuesbucket-t-sys.md)[] | 是 | 资产记录的数组。数组中的每个元素包含资产的列名称及其对应的值。数组的大小不能超过500个。数组中的每个元素必须包含以下资产列信息：file_id、data、display_name、media_type、subtype。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;PhotoAsset[]&gt; | Promise对象，返回PhotoAsset对象的数组（数组可能为空）。 |
+| Promise&lt;[PhotoAsset](arkts-medialibrary-photoaccesshelper-photoasset-i.md)[]&gt; | Promise对象，返回PhotoAsset对象的数组（数组可能为空）。 |
 
 **错误码：**
 
@@ -2850,7 +2850,7 @@ getSharedPhotoAssets(options: FetchOptions): Array<SharedPhotoAsset>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;SharedPhotoAsset&gt; | 返回共享的照片资产。 |
+| Array&lt;[SharedPhotoAsset](arkts-medialibrary-photoaccesshelper-sharedphotoasset-i-sys.md)&gt; | 返回共享的照片资产。 |
 
 **错误码：**
 
@@ -3375,7 +3375,7 @@ moveAssetsByPath(assets: string[], target: Album, option?: BatchOperationOptions
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | assets | string[] | 是 | 文管公共目录的资产 |
-| target | Album | 是 | 图库相册 |
+| target | [Album](arkts-medialibrary-photoaccesshelper-album-i.md) | 是 | 图库相册 |
 | option | [BatchOperationOptions](arkts-medialibrary-photoaccesshelper-batchoperationoptions-i-sys.md) | 否 | 批量操作的选项 |
 
 **返回值：**
@@ -4370,7 +4370,7 @@ query(sql: string): Promise<ResultSet>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;ResultSet&gt; | Promise对象，如果操作成功，则返回ResultSet对象。如果操作失败，则抛出异常。 |
+| Promise&lt;[ResultSet](arkts-medialibrary-photoaccesshelper-resultset-c-sys.md)&gt; | Promise对象，如果操作成功，则返回ResultSet对象。如果操作失败，则抛出异常。 |
 
 **错误码：**
 
@@ -4460,7 +4460,7 @@ removeFormInfo(info: FormInfo, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| info | FormInfo | 是 | 图库卡片信息，包括图库卡片的id和卡片绑定的图片的uri。 |
+| info | [FormInfo](arkts-medialibrary-photoaccesshelper-forminfo-i-sys.md) | 是 | 图库卡片信息，包括图库卡片的id和卡片绑定的图片的uri。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | callback返回void。 |
 
 **错误码：**
@@ -4517,7 +4517,7 @@ removeFormInfo(info: FormInfo): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| info | FormInfo | 是 | 图库卡片信息，包括图库卡片的id和卡片绑定的图片的uri。 |
+| info | [FormInfo](arkts-medialibrary-photoaccesshelper-forminfo-i-sys.md) | 是 | 图库卡片信息，包括图库卡片的id和卡片绑定的图片的uri。 |
 
 **返回值：**
 
@@ -4634,7 +4634,7 @@ saveFormInfo(info: FormInfo, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| info | FormInfo | 是 | 图库卡片信息，包括图库卡片的id和卡片绑定的图片的uri。 |
+| info | [FormInfo](arkts-medialibrary-photoaccesshelper-forminfo-i-sys.md) | 是 | 图库卡片信息，包括图库卡片的id和卡片绑定的图片的uri。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | callback返回void。 |
 
 **错误码：**
@@ -4700,7 +4700,7 @@ saveFormInfo(info: FormInfo): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| info | FormInfo | 是 | 图库卡片信息，包括图库卡片的id和卡片绑定的图片的uri。 |
+| info | [FormInfo](arkts-medialibrary-photoaccesshelper-forminfo-i-sys.md) | 是 | 图库卡片信息，包括图库卡片的id和卡片绑定的图片的uri。 |
 
 **返回值：**
 
@@ -5215,7 +5215,7 @@ startThumbnailCreationTask(predicate: dataSharePredicates.DataSharePredicates, c
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| predicate | dataSharePredicates.DataSharePredicates | 是 | 生成缩略图选项。 |
+| predicate | [dataSharePredicates.DataSharePredicates](../../apis-arkdata/arkts-apis/arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | 是 | 生成缩略图选项。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当成功时标识通知任务结束，err为undefined，否则为错误对象。 |
 
 **返回值：**
@@ -5278,7 +5278,7 @@ startThumbnailCreationTask(predicate: dataSharePredicates.DataSharePredicates, c
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| predicate | dataSharePredicates.DataSharePredicates | 是 | 用于生成缩略图的查询条件。 |
+| predicate | [dataSharePredicates.DataSharePredicates](../../apis-arkdata/arkts-apis/arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | 是 | 用于生成缩略图的查询条件。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当操作成功完成时通知任务结束。 |
 | response | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数。返回是否有未生成的缩略图，返回1表示所有缩略图已生成完成，返回0表示未生成完成。 |
 

@@ -34,7 +34,7 @@ readonly componentType: ComponentType
 
 组件类型。
 
-**类型：** ComponentType
+**类型：** [ComponentType](arkts-image-image-componenttype-e.md)
 
 **起始版本：** 9
 

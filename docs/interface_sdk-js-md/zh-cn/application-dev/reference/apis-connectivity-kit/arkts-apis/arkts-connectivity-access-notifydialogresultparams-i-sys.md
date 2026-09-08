@@ -38,7 +38,7 @@ dialogType: DialogType
 
 表示对话框的类型。
 
-**类型：** DialogType
+**类型：** [DialogType](arkts-connectivity-access-dialogtype-e-sys.md)
 
 **起始版本：** 20
 

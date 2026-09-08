@@ -104,7 +104,7 @@ protocols?: Protocol | Array<Protocol>
 
 TLS的协议版本，默认为"TLSv1.2"。
 
-**类型：** Protocol \| Array&lt;Protocol&gt;
+**类型：** [Protocol](arkts-network-socket-protocol-e.md) \| Array&lt;[Protocol](arkts-network-socket-protocol-e.md)&gt;
 
 **起始版本：** 9
 

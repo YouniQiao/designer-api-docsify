@@ -34,5 +34,5 @@ import { AsyncCallback, BusinessError, Callback, ErrorCallback } from '@kit.Basi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| err | [BusinessError](arkts-basicservices-base-businesserror-i.md)&lt;E&gt; | Yes | Common error information returned when the API fails to be called, including the error code and optional additional data. If the **E** parameter is not specified, the default value **void** is used. In this case, **BusinessError** contains only the error code. If the API call succeeds, this parameter returns **null**. |
-| data | T | Yes | Data returned asynchronously when the API is successfully called. The data type is defined by the developer. This parameter is unavailable when the API fails to be called. |
+| err | [BusinessError](arkts-basicservices-base-businesserror-i.md)&lt;E&gt; | Yes | Common error information returned when the API call fails, including the error code and optional additional data. If the parameter of the **E** type is not specified, the default value **void** is used. In this case, **BusinessError** contains only the error code. If the API call succeeds, this parameter returns **null**. |
+| data | T | Yes | Data returned asynchronously when the API is successfully called. The data type is defined by the developer. This parameter is unavailable when the API call fails. |

@@ -32,7 +32,7 @@ function springMotion(response?: number, dampingFraction?: number, overlapDurati
 
 | 类型 | 说明 |
 | --- | --- |
-| ICurve | 曲线对象。 |
+| [ICurve](arkts-arkui-curves-icurve-i.md) | 曲线对象。 |
 
 **示例**
 

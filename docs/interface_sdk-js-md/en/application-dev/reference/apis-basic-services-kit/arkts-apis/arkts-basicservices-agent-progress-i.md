@@ -84,7 +84,7 @@ readonly state: State
 
 Current task status.
 
-**Type:** State
+**Type:** [State](arkts-basicservices-agent-state-e.md)
 
 **Since:** 10
 

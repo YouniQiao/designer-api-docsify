@@ -107,15 +107,7 @@ A constructor used to create a **CloudFileCache** instance. Data is not shared b
 **Examples**
 
 ```TypeScript
-let fileSync = new cloudSync.FileSync()
-```
-
-```TypeScript
-let gallerySync = new cloudSync.GallerySync()
-```
-
-```TypeScript
-let download = new cloudSync.Download()
+let fileCache = new cloudSync.CloudFileCache();
 ```
 
 ## getCachedTotalSize
@@ -161,7 +153,7 @@ Removes the specified callback from the device-cloud file cache progress.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | 'progress' | Yes | Event type. The value is **progress**, which indicates the sync progress event. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DownloadProgress&gt; | No | Callback used to return the file download progress. If this parameter is not specified, this API unregisters all callbacks for the download progress event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DownloadProgress](arkts-corefile-cloudsync-downloadprogress-i.md)&gt; | No | Callback used to return the file download progress. If this parameter is not specified, this API unregisters all callbacks for the download progress event. |
 
 **Error codes:**
 
@@ -252,7 +244,7 @@ Registers a listener for the download progress of a file from the Drive Kit.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | 'progress' | Yes | Event. The value is **progress**, which indicates the download progress event of a cloud file. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DownloadProgress&gt; | Yes | Callback used to return the file download progress. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DownloadProgress](arkts-corefile-cloudsync-downloadprogress-i.md)&gt; | Yes | Callback used to return the file download progress. |
 
 **Error codes:**
 
@@ -388,23 +380,6 @@ fileCache.start(uri).then(() => {
 });
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let download = new cloudSync.Download();
-let uri: string = "file:///media/Photo/1";
-
-download.on('progress', (pg: cloudSync.DownloadProgress) => {
-  console.info("download state: " + pg.state);
-});
-
-download.start(uri).then(() => {
-  console.info("start download successfully");
-}).catch((err: BusinessError) => {
-  console.error("start download failed with error message: " + err.message + ", error code: " + err.code);
-});
-```
-
 ## start
 
 ```TypeScript
@@ -445,21 +420,6 @@ let path = "/data/storage/el2/cloud/1.txt";
 let uri = fileUri.getUriFromPath(path);
 
 fileCache.start(uri, (err: BusinessError) => {
-  if (err) {
-    console.error("start download failed with error message: " + err.message + ", error code: " + err.code);
-  } else {
-    console.info("start download successfully");
-  }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let download = new cloudSync.Download();
-let uri: string = "file:///media/Photo/1";
-
-download.start(uri, (err: BusinessError) => {
   if (err) {
     console.error("start download failed with error message: " + err.message + ", error code: " + err.code);
   } else {
@@ -622,21 +582,6 @@ let path = "/data/storage/el2/cloud/1.txt";
 let uri = fileUri.getUriFromPath(path);
 
 fileCache.stop(uri, (err: BusinessError) => {
-  if (err) {
-    console.error("stop download failed with error message: " + err.message + ", error code: " + err.code);
-  } else {
-    console.info("stop download successfully");
-  }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let download = new cloudSync.Download();
-let uri: string = "file:///media/Photo/1";
-
-download.stop(uri, (err: BusinessError) => {
   if (err) {
     console.error("stop download failed with error message: " + err.message + ", error code: " + err.code);
   } else {

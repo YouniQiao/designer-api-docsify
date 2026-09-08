@@ -41,7 +41,7 @@ value: Value
 
 Value of the KV pair stored in the KV store.
 
-**Type:** Value
+**Type:** [Value](arkts-arkdata-distributeddata-value-i.md)
 
 **Since:** 7
 

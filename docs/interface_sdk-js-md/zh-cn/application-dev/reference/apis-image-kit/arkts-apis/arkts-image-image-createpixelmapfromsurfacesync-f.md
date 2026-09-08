@@ -23,13 +23,13 @@ Creates a PixelMap object from surface id.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | surfaceId | string | 是 | surface id. |
-| region | Region | 是 | The region to surface. |
+| region | [Region](arkts-image-image-region-i.md) | 是 | The region to surface. |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| PixelMap | Returns the instance if the operation is successful;Otherwise, an exception will be thrown. |
+| [PixelMap](arkts-image-image-pixelmap-i.md) | Returns the instance if the operation is successful;Otherwise, an exception will be thrown. |
 
 **错误码：**
 
@@ -79,7 +79,7 @@ Creates a PixelMap object from surface id.
 
 | 类型 | 说明 |
 | --- | --- |
-| PixelMap | Returns the instance if the operation is successful;Otherwise, an exception will be thrown. |
+| [PixelMap](arkts-image-image-pixelmap-i.md) | Returns the instance if the operation is successful;Otherwise, an exception will be thrown. |
 
 **错误码：**
 

@@ -64,7 +64,7 @@ connState: ConnState
 
 Wi-Fi连接状态。
 
-**类型：** ConnState
+**类型：** [ConnState](arkts-connectivity-wifi-connstate-e.md)
 
 **起始版本：** 6
 

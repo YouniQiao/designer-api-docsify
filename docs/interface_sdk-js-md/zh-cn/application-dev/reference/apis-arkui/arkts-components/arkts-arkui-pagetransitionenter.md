@@ -151,6 +151,7 @@ struct Page1 {
 ```
 
 pageTransition1
+自定义方式2：配置了当前页面的入场动画为从左侧滑入，退场为平移加透明度变化。
 
 ```TypeScript
 // Index.ets 
@@ -291,6 +292,7 @@ struct Page1 {
 ```
 
 pageTransition1
+自定义方式2：使用系统默认的退入场效果，将系统语言排版模式改为RTL。
 
 ```TypeScript
 // Index.ets

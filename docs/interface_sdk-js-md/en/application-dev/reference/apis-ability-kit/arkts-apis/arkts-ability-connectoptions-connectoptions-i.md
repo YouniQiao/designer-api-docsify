@@ -23,7 +23,7 @@ Called when a connection is set up.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | elementName | [ElementName](arkts-ability-elementname-i.md) | Yes | Element name of the target ability. |
-| remote | rpc.IRemoteObject | Yes | IRemoteObject instance used for IPC with the target ability. |
+| remote | [rpc.IRemoteObject](../../apis-ipc-kit/arkts-apis/arkts-ipc-rpc-iremoteobject-c.md) | Yes | IRemoteObject instance used for IPC with the target ability. |
 
 **Examples**
 

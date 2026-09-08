@@ -20,7 +20,7 @@ colorMode: ColorMode
 
 颜色模式。
 
-**类型：** ColorMode
+**类型：** [ColorMode](arkts-localization-resourcemanager-colormode-e.md)
 
 **起始版本：** 12
 
@@ -36,7 +36,7 @@ deviceType: DeviceType
 
 设备类型。
 
-**类型：** DeviceType
+**类型：** [DeviceType](arkts-localization-resourcemanager-devicetype-e.md)
 
 **起始版本：** 12
 
@@ -52,7 +52,7 @@ direction: Direction
 
 屏幕方向。
 
-**类型：** Direction
+**类型：** [Direction](arkts-localization-resourcemanager-direction-e.md)
 
 **起始版本：** 6
 
@@ -116,7 +116,7 @@ screenDensity: ScreenDensity
 
 屏幕密度。
 
-**类型：** ScreenDensity
+**类型：** [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md)
 
 **起始版本：** 12
 

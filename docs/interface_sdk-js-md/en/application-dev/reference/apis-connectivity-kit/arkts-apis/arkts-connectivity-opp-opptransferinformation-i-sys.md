@@ -148,7 +148,7 @@ status: TransferStatus
 
 File transfer status
 
-**Type:** TransferStatus
+**Type:** [TransferStatus](arkts-connectivity-opp-transferstatus-e-sys.md)
 
 **Since:** 16
 

@@ -38,5 +38,5 @@ Configuration file path: {Module directory}/src/main/resources/rawfile/memory_op
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 16000163 | File type error. File names in the evictFilePages array of the configuration file do not end with .so,hap, or .hsp. |
-| 16000164 | Failed to parse configuration file. |
+| [16000163](../errorcode-ability.md#16000163-file-type-error) | File type error. File names in the evictFilePages array of the configuration file do not end with .so,hap, or .hsp. |
+| [16000164](../errorcode-ability.md#16000164-failed-to-parse-the-configuration-file) | Failed to parse configuration file. |

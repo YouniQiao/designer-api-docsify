@@ -4,7 +4,7 @@
 type VideoRecordState = 'idle' | 'prepared' | 'playing' | 'paused' | 'stopped' | 'error'
 ```
 
-从API version 9起停止维护，请使用AVRecorderState。描述视频录制状态。
+视频录制的状态机。可通过state属性获取当前状态。
 
 **起始版本：** 9
 
@@ -14,9 +14,9 @@ type VideoRecordState = 'idle' | 'prepared' | 'playing' | 'paused' | 'stopped' |
 
 | 类型 | 说明 |
 | --- | --- |
-| 'idle' | 空闲状态。视频录制器已创建但未初始化。 |
-| 'prepared' | 准备就绪状态。视频录制器已准备好录制。 |
-| 'playing' | 播放状态。视频录制器正在录制。 |
-| 'paused' | 暂停状态。视频录制器已暂停。 |
-| 'stopped' | 停止状态。视频录制器已停止。 |
-| 'error' | 错误状态。发生错误。 |
+| 'idle' | 视频录制空闲。 |
+| 'prepared' | 视频录制参数设置完成。 |
+| 'playing' | 视频正在录制。 |
+| 'paused' | 视频暂停录制。 |
+| 'stopped' | 视频录制停止。 |
+| 'error' | 错误状态。 |

@@ -25,15 +25,3 @@ type PublishFormCrossBundleControlCallback = (info: PublishFormCrossBundleInfo) 
 | 类型 | 说明 |
 | --- | --- |
 | boolean | 跨应用加卡管控结果。 |
-
-**示例**
-
-```TypeScript
-import { formInfo } from '@kit.FormKit';
-
-let publishFormCrossBundleControlCallback: formInfo.PublishFormCrossBundleControlCallback =
-  (info: formInfo.PublishFormCrossBundleInfo): boolean => {
-    console.info('publish form cross bundle info callback success.');
-    return true;
-  };
-```

@@ -37,14 +37,6 @@ A constructor used to create a PhotoViewPicker instance. This constructor is not
 **Examples**
 
 ```TypeScript
-let documentPicker = new picker.DocumentViewPicker(); // Construction without parameter is not recommended. There is a possibility that the DocumentViewPicker instance fails to start.
-```
-
-```TypeScript
-let audioPicker = new picker.AudioViewPicker(); // Construction without parameter is not recommended. There is a possibility that the AudioViewPicker instance fails to start.
-```
-
-```TypeScript
 let photoPicker = new picker.PhotoViewPicker(); // Construction without parameter is not recommended. There is a possibility that the PhotoViewPicker instance fails to start.
 ```
 
@@ -71,58 +63,6 @@ A constructor used to create a PhotoViewPicker instance. This constructor is rec
 | context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | Yes | Application context (only **UIAbilityContext** is supported). For details about the application context of the stage model, see Context. |
 
 **Examples**
-
-```TypeScript
-import { common } from '@kit.AbilityKit';
-import  { picker } from '@kit.CoreFileKit';
-@Entry
-@Component
-struct Index {
-  @State message: string = 'hello World';
-
-  build() {
-    Row() {
-      Column() {
-        Text(this.message)
-          .fontSize(50)
-          .fontWeight(FontWeight.Bold)
-          .onClick(()=>{
-            let context = this.getUIContext().getHostContext() as common.UIAbilityContext; // Ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
-            let documentPicker = new picker.DocumentViewPicker(context);
-          })
-      }
-      .width('100%')
-    }
-    .height('100%')
-  }
-}
-```
-
-```TypeScript
-import { common } from '@kit.AbilityKit';
-import  { picker } from '@kit.CoreFileKit';
-@Entry
-@Component
-struct Index {
-  @State message: string = 'hello World';
-
-  build() {
-    Row() {
-      Column() {
-        Text(this.message)
-          .fontSize(50)
-          .fontWeight(FontWeight.Bold)
-          .onClick(()=>{
-            let context = this.getUIContext().getHostContext() as common.UIAbilityContext; // Ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
-            let audioPicker = new picker.AudioViewPicker(context);
-          })
-      }
-      .width('100%')
-    }
-    .height('100%')
-  }
-}
-```
 
 ```TypeScript
 import { common } from '@kit.AbilityKit';
@@ -277,48 +217,6 @@ Starts a **photoPicker** page for the user to save one or more images or videos.
 import { BusinessError } from '@kit.BasicServicesKit';
 import { common } from '@kit.AbilityKit';
 import  { picker } from '@kit.CoreFileKit';
-async function example12(context: common.UIAbilityContext) { // Ensure that context is converted from UIAbilityContext.
-  try {
-    let documentPicker = new picker.DocumentViewPicker(context);
-    documentPicker.save((err: BusinessError, documentSaveResult: Array<string>) => {
-      if (err) {
-        console.error(`DocumentViewPicker.save failed with err, code is: ${err.code}, message is: ${err.message}`);
-        return;
-      }
-      console.info('DocumentViewPicker.save successfully, documentSaveResult uri: ' + JSON.stringify(documentSaveResult));
-    });
-  } catch (error) {
-    let err: BusinessError = error as BusinessError;
-    console.error(`DocumentViewPicker failed with err, code is: ${err.code}, message is: ${err.message}`);
-  }
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-import  { picker } from '@kit.CoreFileKit';
-async function example18(context: common.UIAbilityContext) { // Ensure that context is converted from UIAbilityContext.
-  try {
-    let audioPicker = new picker.AudioViewPicker(context);
-    audioPicker.save((err: BusinessError, audioSaveResult: Array<string>) => {
-      if (err) {
-        console.error(`AudioViewPicker.save failed with err, code is: ${err.code}, message is: ${err.message}`);
-        return;
-      }
-      console.info('AudioViewPicker.save successfully, audioSaveResult uri: ' + JSON.stringify(audioSaveResult));
-    });
-  } catch (error) {
-    let err: BusinessError = error as BusinessError;
-        console.error(`AudioViewPicker failed with err, code is: ${err.code}, message is: ${err.message}`);
-  }
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-import  { picker } from '@kit.CoreFileKit';
 async function example06(context: common.UIAbilityContext) { // Ensure that context is converted from UIAbilityContext.
   try {
     let photoPicker = new picker.PhotoViewPicker(context);
@@ -358,13 +256,13 @@ Starts a **photoPicker** page for the user to select one or more images or video
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| option | PhotoSelectOptions | No | Options for selecting images or videos. If this parameter is not specified, images and videos are selected by default. A maximum of 50 files can be selected. |
+| option | [PhotoSelectOptions](arkts-corefile-picker-photoselectoptions-c.md) | No | Options for selecting images or videos. If this parameter is not specified, images and videos are selected by default. A maximum of 50 files can be selected. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;PhotoSelectResult&gt; | Promise used to return the URIs of the images or videos selected. |
+| Promise&lt;[PhotoSelectResult](arkts-corefile-picker-photoselectresult-c.md)&gt; | Promise used to return the URIs of the images or videos selected. |
 
 **Examples**
 
@@ -412,8 +310,8 @@ Starts a **photoPicker** page for the user to select one or more images or video
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| option | PhotoSelectOptions | Yes | Options for selecting images or videos. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;PhotoSelectResult&gt; | Yes | Callback used to return the images or videos selected.    **Note：**: The **photoUris** in the **PhotoSelectResult** object returned by this API can be used only by [photoAccessHelper.getAssets](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#getassets). For details, see [Using a Media File URI](../../../file-management/user-file-uri-intro.md#using-a-media-file-uri). |
+| option | [PhotoSelectOptions](arkts-corefile-picker-photoselectoptions-c.md) | Yes | Options for selecting images or videos. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[PhotoSelectResult](arkts-corefile-picker-photoselectresult-c.md)&gt; | Yes | Callback used to return the images or videos selected.    **Note：**: The **photoUris** in the **PhotoSelectResult** object returned by this API can be used only by [photoAccessHelper.getAssets](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#getassets). For details, see [Using a Media File URI](../../../file-management/user-file-uri-intro.md#using-a-media-file-uri). |
 
 **Examples**
 
@@ -463,7 +361,7 @@ Starts a **photoPicker** page for the user to select one or more images or video
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;PhotoSelectResult&gt; | Yes | Callback used to return the images or videos selected.    **Note：**: The **photoUris** in the **PhotoSelectResult** object returned by this API can be used only by [photoAccessHelper.getAssets](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#getassets). For details, see [Using a Media File URI](../../../file-management/user-file-uri-intro.md#using-a-media-file-uri). |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[PhotoSelectResult](arkts-corefile-picker-photoselectresult-c.md)&gt; | Yes | Callback used to return the images or videos selected.    **Note：**: The **photoUris** in the **PhotoSelectResult** object returned by this API can be used only by [photoAccessHelper.getAssets](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#getassets). For details, see [Using a Media File URI](../../../file-management/user-file-uri-intro.md#using-a-media-file-uri). |
 
 **Examples**
 

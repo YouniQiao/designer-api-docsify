@@ -33,11 +33,5 @@ Obtains the list of preferred languages.
 ```TypeScript
 import { i18n } from '@kit.LocalizationKit';
 
-let preferredLanguageList: Array<string> = i18n.System.getPreferredLanguageList();
-```
-
-```TypeScript
-import { i18n } from '@kit.LocalizationKit';
-
 let preferredLanguageList: Array<string> = i18n.getPreferredLanguageList();
 ```

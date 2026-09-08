@@ -226,7 +226,7 @@ readonly launchType: bundleManager.LaunchType
 
 Ability的启动模式，在启动的时候是否以多实例启动，详情参考[启动模式枚举](arkts-ability-bundlemanager-launchtype-e.md) 。
 
-**类型：** bundleManager.LaunchType
+**类型：** [bundleManager.LaunchType](arkts-ability-bundlemanager-launchtype-e.md)
 
 **起始版本：** 9
 
@@ -290,7 +290,7 @@ readonly orientation: bundleManager.DisplayOrientation
 
 Ability的显示模式。来源于[module.json5](../../../quick-start/module-configuration-file.md)中abilities标签下配置的orientation字段，如果module.json5配置文件中orientation配置枚举，orientation属性有值且非0，取值详情参考[显示模式枚举](arkts-ability-bundlemanager-displayorientation-e.md)；如果配置文件中配置的是资源索引，orientation属性值为0。
 
-**类型：** bundleManager.DisplayOrientation
+**类型：** [bundleManager.DisplayOrientation](arkts-ability-bundlemanager-displayorientation-e.md)
 
 **起始版本：** 9
 
@@ -388,7 +388,7 @@ readonly supportWindowModes: Array<bundleManager.SupportWindowMode>
 
 Ability支持的窗口模式。
 
-**类型：** Array&lt;bundleManager.SupportWindowMode&gt;
+**类型：** Array&lt;[bundleManager.SupportWindowMode](arkts-ability-bundlemanager-supportwindowmode-e.md)&gt;
 
 **起始版本：** 9
 
@@ -406,7 +406,7 @@ Ability类型。
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
-**类型：** bundleManager.AbilityType
+**类型：** [bundleManager.AbilityType](arkts-ability-bundlemanager-abilitytype-e.md)
 
 **起始版本：** 9
 

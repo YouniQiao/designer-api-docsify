@@ -28,8 +28,8 @@ Before you do this, call [usb.getDevices](arkts-basicservices-usb-getdevices-f.m
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pipe | USBDevicePipe | Yes | Device pipe, which is used to determine the bus number and device address. |
-| iface | USBInterface | Yes | USB interface to set. |
+| pipe | [USBDevicePipe](arkts-basicservices-usb-usbdevicepipe-i.md) | Yes | Device pipe, which is used to determine the bus number and device address. |
+| iface | [USBInterface](arkts-basicservices-usb-usbinterface-i.md) | Yes | USB interface to set. |
 
 **Return value:**
 

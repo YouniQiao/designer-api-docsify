@@ -34,7 +34,7 @@ ipAddress: NetAddress
 
 IP address information.
 
-**Type:** NetAddress
+**Type:** [NetAddress](arkts-network-connection-netaddress-i.md)
 
 **Since:** 22
 

@@ -38,7 +38,7 @@ onAcquireFormState?(want: Want): formInfo.FormState
 
 | 类型 | 说明 |
 | --- | --- |
-| formInfo.FormState | formInfo.FormState枚举，表示卡片当前的状态。 |
+| [formInfo.FormState](arkts-form-forminfo-formstate-e.md) | formInfo.FormState枚举，表示卡片当前的状态。 |
 
 **示例**
 
@@ -85,7 +85,7 @@ onAddForm(want: Want): formBindingData.FormBindingData
 
 | 类型 | 说明 |
 | --- | --- |
-| formBindingData.FormBindingData | formBindingData.FormBindingData对象，卡片要显示的数据。可通过[formBindingData.createFormBindingData()]{ |
+| [formBindingData.FormBindingData](arkts-form-formbindingdata-formbindingdata-i.md) | formBindingData.FormBindingData对象，卡片要显示的数据。可通过[formBindingData.createFormBindingData()]{ |
 
 **示例**
 
@@ -291,7 +291,7 @@ onFormLocationChanged(formId: string, newFormLocation: formInfo.FormLocation): v
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | formId | string | 是 | 发生位置变化的卡片标识。 |
-| newFormLocation | formInfo.FormLocation | 是 | 卡片最新位置的枚举值，表示卡片当前所在的位置（如桌面、卡片中心等）。 |
+| newFormLocation | [formInfo.FormLocation](arkts-form-forminfo-formlocation-e.md) | 是 | 卡片最新位置的枚举值，表示卡片当前所在的位置（如桌面、卡片中心等）。 |
 
 **示例**
 
@@ -367,8 +367,8 @@ onSizeChanged(formId: string, newDimension: formInfo.FormDimension, newRect: for
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | formId | string | 是 | 发生大小变化的卡片标识。 |
-| newDimension | formInfo.FormDimension | 是 | 卡片尺寸，例如 Dimension_1_2，表示 1 x 2 卡片。 |
-| newRect | formInfo.Rect | 是 | 卡片位置信息，包括卡片左上角顶点的xy坐标和卡片的宽高。 |
+| newDimension | [formInfo.FormDimension](arkts-form-forminfo-formdimension-e.md) | 是 | 卡片尺寸，例如 Dimension_1_2，表示 1 x 2 卡片。 |
+| newRect | [formInfo.Rect](arkts-form-forminfo-rect-i.md) | 是 | 卡片位置信息，包括卡片左上角顶点的xy坐标和卡片的宽高。 |
 
 **示例**
 

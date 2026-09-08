@@ -41,9 +41,9 @@ static createImageLattice(xDivs: Array<number>, yDivs: Array<number>, fXCount: n
 | yDivs | Array&lt;number&gt; | 是 | 用于划分图像的Y坐标值数组，单位为物理像素px。数组元素需为整数。若传入小数，会直接舍弃小数部分，转为整数。 |
 | fXCount | number | 是 | X坐标值数组的元素个数，需与xDivs数组的长度一致。基于功能和性能的考虑，取值范围为[0, 5]。 |
 | fYCount | number | 是 | Y坐标值数组的元素个数，需与yDivs数组的长度一致。基于功能和性能的考虑，取值范围为[0, 5]。 |
-| fBounds | common2D.Rect \| null | 否 | 要绘制的原始边界矩形。当仅需绘制图像的局部区域时传入此参数，不传入时默认为原始图像矩形大小。矩形参数需为整数，单位为物理像素px（若矩形参数为小数，会直接舍弃小数部分，转为整数）。 |
-| fRectTypes | Array&lt;RectType&gt; \| null | 否 | 填充矩形网格类型的数组，用于指定每个矩形网格的绘制类型，默认为空。如果设置，大小必须为(fXCount + 1) * (fYCount + 1)。 |
-| fColors | Array&lt;common2D.Color&gt; \| null | 否 | 填充网格的颜色数组，用于为每个网格单元格指定填充颜色，设置后对应网格区域将以指定颜色进行纯色填充，替换原有图像内容。不传入时默认为空（网格不使用自定义颜色填充，保留原始图像内容）。如果设置，大小必须为(fXCount + 1) * (fYCount + 1)。 |
+| fBounds | [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) \| null | 否 | 要绘制的原始边界矩形。当仅需绘制图像的局部区域时传入此参数，不传入时默认为原始图像矩形大小。矩形参数需为整数，单位为物理像素px（若矩形参数为小数，会直接舍弃小数部分，转为整数）。 |
+| fRectTypes | Array&lt;[RectType](arkts-arkgraphics2d-drawing-recttype-e.md)&gt; \| null | 否 | 填充矩形网格类型的数组，用于指定每个矩形网格的绘制类型，默认为空。如果设置，大小必须为(fXCount + 1) * (fYCount + 1)。 |
+| fColors | Array&lt;[common2D.Color](arkts-arkgraphics2d-common2d-color-i.md)&gt; \| null | 否 | 填充网格的颜色数组，用于为每个网格单元格指定填充颜色，设置后对应网格区域将以指定颜色进行纯色填充，替换原有图像内容。不传入时默认为空（网格不使用自定义颜色填充，保留原始图像内容）。如果设置，大小必须为(fXCount + 1) * (fYCount + 1)。 |
 
 **返回值：**
 
@@ -56,21 +56,6 @@ static createImageLattice(xDivs: Array<number>, yDivs: Array<number>, fXCount: n
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
-
-**示例**
-
-```TypeScript
-import { RenderNode, DrawContext } from '@kit.ArkUI';
-import { drawing } from '@kit.ArkGraphics2D';
-
-class DrawingRenderNode extends RenderNode {
-  draw(context: DrawContext) {
-    let xDivs: Array<number> = [1, 2, 4];
-    let yDivs: Array<number> = [1, 2, 4];
-    let lattice = drawing.Lattice.createImageLattice(xDivs, yDivs, 3, 3); // 划分(3+1)*(3+1)的网格，下图蓝色填充矩形为固定网格
-  }
-}
-```
 
 ## createImageLattice
 
@@ -93,8 +78,8 @@ static createImageLattice(xDivs: Array<number>, yDivs: Array<number>, fXCount: n
 | yDivs | Array&lt;number&gt; | 是 | 用于划分图像的Y坐标值数组，单位为物理像素px。数组元素需为整数。若传入小数，会直接舍弃小数部分，转为整数。 |
 | fXCount | number | 是 | X坐标值数组的元素个数，需与xDivs数组的长度一致。基于功能和性能的考虑，取值范围为[0, 5]。 |
 | fYCount | number | 是 | Y坐标值数组的元素个数，需与yDivs数组的长度一致。基于功能和性能的考虑，取值范围为[0, 5]。 |
-| fBounds | common2D.Rect \| null | 否 | 要绘制的原始边界矩形。当仅需绘制图像的局部区域时传入此参数，不传入时默认为原始图像矩形大小。矩形参数需为整数，单位为物理像素px（若矩形参数为小数，会直接舍弃小数部分，转为整数）。 |
-| fRectTypes | Array&lt;RectType&gt; \| null | 否 | 填充矩形网格类型的数组，用于指定每个矩形网格的绘制类型，默认为空。如果设置，大小必须为(fXCount + 1) * (fYCount + 1)。 |
+| fBounds | [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) \| null | 否 | 要绘制的原始边界矩形。当仅需绘制图像的局部区域时传入此参数，不传入时默认为原始图像矩形大小。矩形参数需为整数，单位为物理像素px（若矩形参数为小数，会直接舍弃小数部分，转为整数）。 |
+| fRectTypes | Array&lt;[RectType](arkts-arkgraphics2d-drawing-recttype-e.md)&gt; \| null | 否 | 填充矩形网格类型的数组，用于指定每个矩形网格的绘制类型，默认为空。如果设置，大小必须为(fXCount + 1) * (fYCount + 1)。 |
 | fColors | Array&lt;number&gt; \| null | 否 | 填充网格的颜色数组，用于为每个网格单元格指定填充颜色，设置后对应网格区域将以指定颜色进行纯色填充，替换原有图像内容。颜色用16进制ARGB格式的32位无符号整数表示，取值范围[0, 4294967295]。不传入时默认为空（网格不使用自定义颜色填充，保留原始图像内容）。如果设置，大小必须为(fXCount + 1) * (fYCount + 1)。 |
 
 **返回值：**
@@ -108,19 +93,3 @@ static createImageLattice(xDivs: Array<number>, yDivs: Array<number>, fXCount: n
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
-
-**示例**
-
-```TypeScript
-import { RenderNode, DrawContext } from '@kit.ArkUI';
-import { drawing } from '@kit.ArkGraphics2D';
-
-class DrawingRenderNode extends RenderNode {
-  draw(context: DrawContext) {
-    let xDivs: Array<number> = [1, 2, 4];
-    let yDivs: Array<number> = [1, 2, 4];
-    let colorArray: Array<number> = [0xffffffff, 0x44444444, 0x99999999, 0xffffffff, 0x44444444, 0x99999999, 0xffffffff, 0x44444444, 0x99999999, 0x44444444, 0x99999999, 0xffffffff, 0x44444444, 0x99999999, 0xffffffff, 0x44444444];
-    let lattice = drawing.Lattice.createImageLattice(xDivs, yDivs, 3, 3, null, null, colorArray);
-  }
-}
-```

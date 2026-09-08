@@ -49,20 +49,6 @@ const adLoaderListener: advertising.AdLoadListener = {
 }
 ```
 
-```TypeScript
-import { advertising } from '@kit.AdsKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-const multiSlotsAdLoadListener: advertising.MultiSlotsAdLoadListener = {
-  onAdLoadFailure: (errorCode: number, errorMsg: string) => {
-    hilog.error(0x0000, 'testTag', `Failed to load ad. Code is ${errorCode}, message is ${errorMsg}`);
-  },
-  onAdLoadSuccess: (adsMap: Map<string, Array<advertising.Advertisement>>) => {
-    hilog.info(0x0000, 'testTag', 'Succeeded in loading ad');
-  }
-}
-```
-
 ## onAdLoadSuccess
 
 ```TypeScript
@@ -81,7 +67,7 @@ onAdLoadSuccess(ads: Array<Advertisement>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| ads | Array&lt;Advertisement&gt; | 是 | 广告数据。 |
+| ads | Array&lt;[Advertisement](arkts-ads-advertising-advertisement-t.md)&gt; | 是 | 广告数据。 |
 
 **示例**
 

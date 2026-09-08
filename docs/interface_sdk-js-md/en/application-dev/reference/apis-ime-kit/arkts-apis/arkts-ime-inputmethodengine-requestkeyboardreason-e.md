@@ -5,9 +5,9 @@ Enumerates the reasons for requesting keyboard input.
 | Name | Value| Description |  
 | ------------ | -- | ------------------ |  
 | NONE | 0 | The keyboard request is triggered for no reason.|
-| MOUSE | 1 | The keyboard request is triggered by a mouse operation.|
-| TOUCH | 2 | The keyboard request is triggered by a touch operation.|
-| OTHER | 20 | The keyboard request is triggered by other reasons.|
+| [MOUSE](arkts-ime-inputmethodengine-requestkeyboardreason-e.md) | 1 | The keyboard request is triggered by a mouse operation.|
+| [TOUCH](arkts-ime-inputmethodengine-requestkeyboardreason-e.md) | 2 | The keyboard request is triggered by a touch operation.|
+| [OTHER](arkts-ime-inputmethodengine-requestkeyboardreason-e.md) | 20 | The keyboard request is triggered by other reasons.|
 
 **Since:** 19
 

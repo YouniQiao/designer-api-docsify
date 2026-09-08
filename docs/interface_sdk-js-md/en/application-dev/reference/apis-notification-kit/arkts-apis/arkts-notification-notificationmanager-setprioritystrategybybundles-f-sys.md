@@ -28,7 +28,7 @@ Sets the application priority notification strategies in batches. This API uses 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| strategies | Map&lt;BundleOption, number&gt; | Yes | Key-value pair set of the application notification priority strategies. This parameter is obtained by performing the bitwise OR operation with the enumeration of [PriorityStrategyStatus](arkts-notification-notificationmanager-prioritystrategystatus-e-sys.md). |
+| strategies | Map&lt;[BundleOption](arkts-notification-notificationmanager-bundleoption-t.md), number&gt; | Yes | Key-value pair set of the application notification priority strategies. This parameter is obtained by performing the bitwise OR operation with the enumeration of [PriorityStrategyStatus](arkts-notification-notificationmanager-prioritystrategystatus-e-sys.md). |
 
 **Return value:**
 

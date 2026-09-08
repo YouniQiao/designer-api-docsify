@@ -60,20 +60,6 @@ declare function moveFile(src: string, dest: string, mode?: number): Promise<voi
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let srcPath = pathDir + "/source.txt";
-let destPath = pathDir + "/dest.txt";
-fileIo.moveFile(srcPath, destPath, 0).then(() => {
-  console.info(`Succeeded in moving file.`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to move file. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
 
 ## moveFile
 
@@ -122,22 +108,6 @@ declare function moveFile(src: string, dest: string, callback: AsyncCallback<voi
 | 13900033 | Too many symbolic links encountered |
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let srcPath = pathDir + "/source.txt";
-let destPath = pathDir + "/dest.txt";
-fileIo.moveFile(srcPath, destPath, (err: BusinessError) => {
-  if (err) {
-    console.error(`Failed to move file. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info(`Succeeded in moving file.`);
-  }
-});
-```
 
 
 ## moveFile
@@ -188,19 +158,3 @@ declare function moveFile(src: string, dest: string, mode: number, callback: Asy
 | 13900033 | Too many symbolic links encountered |
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let srcPath = pathDir + "/source.txt";
-let destPath = pathDir + "/dest.txt";
-fileIo.moveFile(srcPath, destPath, 0, (err: BusinessError) => {
-  if (err) {
-    console.error(`Failed to move file. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info(`Succeeded in moving file.`);
-  }
-});
-```

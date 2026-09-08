@@ -28,7 +28,7 @@ function unRegisterMissionListener(parameter: MissionDeviceInfo, callback: Async
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| parameter | MissionDeviceInfo | 是 | 取消监听时指定的设备信息，deviceId为设备标识符。 |
+| parameter | [MissionDeviceInfo](arkts-ability-distributedmissionmanager-missiondeviceinfo-t-sys.md) | 是 | 取消监听时指定的设备信息，deviceId为设备标识符。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，取消监听成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
@@ -83,7 +83,7 @@ function unRegisterMissionListener(parameter: MissionDeviceInfo): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| parameter | MissionDeviceInfo | 是 | 取消监听时的设备信息，deviceId为设备标识符。 |
+| parameter | [MissionDeviceInfo](arkts-ability-distributedmissionmanager-missiondeviceinfo-t-sys.md) | 是 | 取消监听时的设备信息，deviceId为设备标识符。 |
 
 **返回值：**
 

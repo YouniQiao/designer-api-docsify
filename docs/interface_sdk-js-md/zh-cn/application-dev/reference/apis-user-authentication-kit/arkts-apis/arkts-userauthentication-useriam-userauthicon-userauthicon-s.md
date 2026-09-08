@@ -40,7 +40,7 @@ onAuthResult: (result: userAuth.UserAuthResult) => void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| result | userAuth.UserAuthResult | 是 | Authentication result information. |
+| result | [userAuth.UserAuthResult](arkts-userauthentication-userauth-userauthresult-i.md) | 是 | Authentication result information. |
 
 ## onIconClick
 
@@ -64,7 +64,7 @@ authParam: userAuth.AuthParam
 
 用户认证相关参数。包含挑战值（challenge）、认证类型列表（authType）、认证可信等级（authTrustLevel）等配置。挑战值用于防重放攻击，认证类型指定可用的认证方式（如人脸、指纹、PIN），认证可信等级决定认证的安全强度。
 
-**类型：** userAuth.AuthParam
+**类型：** [userAuth.AuthParam](arkts-userauthentication-userauth-authparam-i.md)
 
 **起始版本：** 12
 
@@ -116,7 +116,7 @@ widgetParam: userAuth.WidgetParam
 
 用户认证界面配置相关参数。包含认证界面标题（title）、导航按钮文本（navigationButtonText）等配置，用于自定义认证弹窗的显示内容。
 
-**类型：** userAuth.WidgetParam
+**类型：** [userAuth.WidgetParam](arkts-userauthentication-userauth-widgetparam-i.md)
 
 **起始版本：** 12
 

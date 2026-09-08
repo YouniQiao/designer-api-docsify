@@ -67,11 +67,11 @@ Default value:
 enablePreviewMenu?: boolean
 ```
 
-Whether to enable the preview menu displayed when number-pressing recognized text. The value **true** means to enable the preview menu, and **false** means the opposite.
+Whether to enable the preview menu displayed when long-pressing recognized text. The value **true** means to enable the preview menu, and **false** means the opposite.
 
 Default value: **false**
 
-When copyOptions is set to **None**, even if **enablePreviewMenu** is set to **true**, number-pressing AI entities will not display the preview menu.
+When copyOptions is set to **None**, even if **enablePreviewMenu** is set to **true**, long-pressing AI entities will not display the preview menu.
 
 This API can be properly called on phones and tablets, but has no effect on other devices such as PCs, 2-in-1 devices, TVs, and wearables.
 
@@ -93,7 +93,7 @@ onDetectResultUpdate?: Callback<string>
 
 Callback invoked when text recognition succeeds.
 
-**Type:** Callback&lt;string&gt;
+**Type:** [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;string&gt;
 
 **Since:** 11
 

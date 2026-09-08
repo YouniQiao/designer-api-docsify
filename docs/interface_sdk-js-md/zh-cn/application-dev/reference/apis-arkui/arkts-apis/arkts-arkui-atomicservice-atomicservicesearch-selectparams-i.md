@@ -114,7 +114,7 @@ menuBackgroundBlurStyle?: BlurStyle
 
 下拉菜单的背景模糊材质。默认值：BlurStyle.COMPONENT_ULTRA_THICK。
 
-**类型：** BlurStyle
+**类型：** [BlurStyle](../arkts-components/arkts-arkui-blurstyle-e.md)
 
 **起始版本：** 18
 

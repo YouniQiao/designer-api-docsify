@@ -149,7 +149,7 @@ function on(type: 'mouse', rect: display.Rect[], receiver: Callback<MouseEvent>)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'mouse' | 是 | 输入设备事件类型，取值'mouse'。 |
-| rect | display.Rect[] | 是 | 可以触发回调任务的矩形区域，可传入1至2个。 |
+| rect | [display.Rect](../../apis-arkui/arkts-apis/arkts-arkui-display-rect-i.md)[] | 是 | 可以触发回调任务的矩形区域，可传入1至2个。 |
 | receiver | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MouseEvent](arkts-input-multimodalinput-mouseevent-mouseevent-i.md)&gt; | 是 | 回调函数，返回鼠标输入事件。 |
 
 **错误码：**

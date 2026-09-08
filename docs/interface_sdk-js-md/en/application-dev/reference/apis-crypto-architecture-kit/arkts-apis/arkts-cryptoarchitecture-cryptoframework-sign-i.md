@@ -166,7 +166,7 @@ Initializes the **Sign** instance with a private key. This API returns the resul
 
 The **Sign** instance does not support repeated use of **initSync**.
 
-**NOTE：**It is recommended to prioritize the use of asynchronous API, init. Synchronous API may take a number time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
+**NOTE：**It is recommended to prioritize the use of asynchronous API, init. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
 **Since:** 12
 
@@ -362,8 +362,8 @@ Signs the data, including data added via the update interface. This API uses an 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | DataBlob | Yes | The data to be signed. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DataBlob&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the signature obtained. Otherwise, **err** is an error object. |
+| data | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | Yes | The data to be signed. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the signature obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -395,8 +395,8 @@ Signs data. This API uses an asynchronous callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | DataBlob \| null | Yes | Data to pass in. In versions earlier than API version 10, only **DataBlob** is supported. Since API version 10, **null** is also supported. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DataBlob&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the signature obtained. Otherwise, **err** is an error object. |
+| data | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) \| null | Yes | Data to pass in. In versions earlier than API version 10, only **DataBlob** is supported. Since API version 10, **null** is also supported. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the signature obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -428,13 +428,13 @@ Signs the data, including data added via the update interface. This API uses a p
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | DataBlob | Yes | The data to be signed. |
+| data | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | Yes | The data to be signed. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;DataBlob&gt; | Promise used to return the signature. |
+| Promise&lt;[DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md)&gt; | Promise used to return the signature. |
 
 **Error codes:**
 
@@ -466,13 +466,13 @@ Signs data. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | DataBlob \| null | Yes | Data to pass in. |
+| data | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) \| null | Yes | Data to pass in. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;DataBlob&gt; | Promise used to return the signature. |
+| Promise&lt;[DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md)&gt; | Promise used to return the signature. |
 
 **Error codes:**
 
@@ -492,7 +492,7 @@ signSync(data: DataBlob | null): DataBlob
 
 Signs the data. This API returns the result synchronously.
 
-**NOTE：**It is recommended to prioritize the use of asynchronous API, [sign](arkts-cryptoarchitecture-cryptoframework-sign-i.md). Synchronous API may take a number time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
+**NOTE：**It is recommended to prioritize the use of asynchronous API, [sign](arkts-cryptoarchitecture-cryptoframework-sign-i.md). Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
 **Since:** 12
 
@@ -504,13 +504,13 @@ Signs the data. This API returns the result synchronously.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | DataBlob \| null | Yes | Data to pass in. |
+| data | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) \| null | Yes | Data to pass in. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| DataBlob | Signature. |
+| [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | Signature. |
 
 **Error codes:**
 
@@ -754,7 +754,7 @@ This API can be called only after the [Sign](arkts-cryptoarchitecture-cryptofram
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | DataBlob | Yes | Data to pass in. |
+| data | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | Yes | Data to pass in. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
@@ -808,7 +808,7 @@ Before using this API, you must initialize the [Sign](arkts-cryptoarchitecture-c
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | DataBlob | Yes | Data to pass in. |
+| data | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | Yes | Data to pass in. |
 
 **Return value:**
 
@@ -856,7 +856,7 @@ This API can be called only after the [Sign](arkts-cryptoarchitecture-cryptofram
 > If the DSA algorithm is used for signing and the digest algorithm is **NoHash**, **updateSync** is not
 > supported. If **updateSync** is called in this case, **ERR_CRYPTO_OPERATION** will be returned.
 
-**NOTE：**It is recommended to prioritize the use of asynchronous API, update. Synchronous API may take a number time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
+**NOTE：**It is recommended to prioritize the use of asynchronous API, update. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
 **Since:** 12
 
@@ -868,7 +868,7 @@ This API can be called only after the [Sign](arkts-cryptoarchitecture-cryptofram
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | DataBlob | Yes | Data to pass in. |
+| data | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | Yes | Data to pass in. |
 
 **Error codes:**
 

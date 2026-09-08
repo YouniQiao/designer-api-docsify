@@ -46,19 +46,3 @@ Installs a font file from a specified path into the system font library. This AP
 | [31100104](../errorcode-font-manager.md#31100104-font-file-already-installed) | The font file is installed. |
 | [31100105](../errorcode-font-manager.md#31100105-number-of-installed-font-files-reaching-the-maximum) | Exceeded the maximum number of installed files. |
 | [31100106](../errorcode-font-manager.md#31100106-font-file-installation-failed-due-to-other-errors) | The system ability works abnormally. |
-
-**Examples**
-
-```TypeScript
-import { fontManager } from '@kit.LocalizationKit';
-
-async function installFont() {
-  try {
-    let res = await fontManager.installFont('fontPath');
-    console.info('installFont suc. res is ' + res);
-  } catch (error) {
-    console.error('installFont err.' + error.code);
-  }
-  return;
-}
-```

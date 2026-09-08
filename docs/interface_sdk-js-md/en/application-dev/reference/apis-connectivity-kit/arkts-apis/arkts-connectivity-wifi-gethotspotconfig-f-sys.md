@@ -30,7 +30,7 @@ Obtains the Wi-Fi hotspot configuration.
 
 | Type | Description |
 | --- | --- |
-| HotspotConfig | Returns the configuration of an existing or enabled Wi-Fi hotspot. |
+| [HotspotConfig](arkts-connectivity-wifi-hotspotconfig-i-sys.md) | Returns the configuration of an existing or enabled Wi-Fi hotspot. |
 
 **Examples**
 

@@ -288,7 +288,7 @@ client端获取蓝牙低功耗设备的所有服务，即服务发现 。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;GattService&gt;&gt; | 是 | client进行服务发现，通过注册回调函数获取。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[GattService](arkts-connectivity-bluetooth-gattservice-i.md)&gt;&gt; | 是 | client进行服务发现，通过注册回调函数获取。 |
 
 **示例**
 
@@ -335,7 +335,7 @@ client端获取蓝牙低功耗设备的所有服务，即服务发现。
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;GattService&gt;&gt; | client进行服务发现，通过promise形式获取。 |
+| Promise&lt;Array&lt;[GattService](arkts-connectivity-bluetooth-gattservice-i.md)&gt;&gt; | client进行服务发现，通过promise形式获取。 |
 
 **示例**
 
@@ -373,7 +373,7 @@ off(type: 'BLECharacteristicChange', callback?: Callback<BLECharacteristic>): vo
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'BLECharacteristicChange' | 是 | 填写"BLECharacteristicChange"字符串，表示特征值变化事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;BLECharacteristic&gt; | 否 | 表示取消订阅蓝牙低功耗设备的特征值变化事件。不填该参数则取消订阅该type对应的所有回调。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[BLECharacteristic](arkts-connectivity-bluetooth-blecharacteristic-i.md)&gt; | 否 | 表示取消订阅蓝牙低功耗设备的特征值变化事件。不填该参数则取消订阅该type对应的所有回调。 |
 
 **示例**
 
@@ -407,7 +407,7 @@ off(type: 'BLEConnectionStateChange', callback?: Callback<BLEConnectChangedState
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'BLEConnectionStateChange' | 是 | 填写"BLEConnectionStateChange"字符串，表示连接状态变化事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;BLEConnectChangedState&gt; | 否 | 表示取消订阅蓝牙低功耗设备的连接状态变化事件。不填该参数则取消订阅该type对应的所有回调。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[BLEConnectChangedState](arkts-connectivity-bluetooth-bleconnectchangedstate-i.md)&gt; | 否 | 表示取消订阅蓝牙低功耗设备的连接状态变化事件。不填该参数则取消订阅该type对应的所有回调。 |
 
 **示例**
 
@@ -441,7 +441,7 @@ on(type: 'BLECharacteristicChange', callback: Callback<BLECharacteristic>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'BLECharacteristicChange' | 是 | 填写"BLECharacteristicChange"字符串，表示特征值变化事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;BLECharacteristic&gt; | 是 | 表示蓝牙低功耗设备的特征值变化事件的回调函数。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[BLECharacteristic](arkts-connectivity-bluetooth-blecharacteristic-i.md)&gt; | 是 | 表示蓝牙低功耗设备的特征值变化事件的回调函数。 |
 
 **示例**
 
@@ -480,7 +480,7 @@ client端订阅蓝牙低功耗设备的连接状态变化事件。
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'BLEConnectionStateChange' | 是 | 填写"BLEConnectionStateChange"字符串，表示连接状态变化事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;BLEConnectChangedState&gt; | 是 | 表示连接状态，已连接或断开。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[BLEConnectChangedState](arkts-connectivity-bluetooth-bleconnectchangedstate-i.md)&gt; | 是 | 表示连接状态，已连接或断开。 |
 
 **示例**
 
@@ -517,8 +517,8 @@ client端读取蓝牙低功耗设备特定服务的特征值。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| characteristic | BLECharacteristic | 是 | 待读取的特征值。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;BLECharacteristic&gt; | 是 | client读取特征值，通过注册回调函数获取。 |
+| characteristic | [BLECharacteristic](arkts-connectivity-bluetooth-blecharacteristic-i.md) | 是 | 待读取的特征值。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[BLECharacteristic](arkts-connectivity-bluetooth-blecharacteristic-i.md)&gt; | 是 | client读取特征值，通过注册回调函数获取。 |
 
 **示例**
 
@@ -576,13 +576,13 @@ client端读取蓝牙低功耗设备特定服务的特征值。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| characteristic | BLECharacteristic | 是 | 待读取的特征值。 |
+| characteristic | [BLECharacteristic](arkts-connectivity-bluetooth-blecharacteristic-i.md) | 是 | 待读取的特征值。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;BLECharacteristic&gt; | client读取特征值，通过promise形式获取。 |
+| Promise&lt;[BLECharacteristic](arkts-connectivity-bluetooth-blecharacteristic-i.md)&gt; | client读取特征值，通过promise形式获取。 |
 
 **示例**
 
@@ -631,8 +631,8 @@ client端读取蓝牙低功耗设备特定的特征包含的描述符。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| descriptor | BLEDescriptor | 是 | 待读取的描述符。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;BLEDescriptor&gt; | 是 | client读取描述符，通过注册回调函数获取。 |
+| descriptor | [BLEDescriptor](arkts-connectivity-bluetooth-bledescriptor-i.md) | 是 | 待读取的描述符。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[BLEDescriptor](arkts-connectivity-bluetooth-bledescriptor-i.md)&gt; | 是 | client读取描述符，通过注册回调函数获取。 |
 
 **示例**
 
@@ -680,13 +680,13 @@ client端读取蓝牙低功耗设备特定的特征包含的描述符。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| descriptor | BLEDescriptor | 是 | 待读取的描述符。 |
+| descriptor | [BLEDescriptor](arkts-connectivity-bluetooth-bledescriptor-i.md) | 是 | 待读取的描述符。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;BLEDescriptor&gt; | client读取描述符，通过promise形式获取。 |
+| Promise&lt;[BLEDescriptor](arkts-connectivity-bluetooth-bledescriptor-i.md)&gt; | client读取描述符，通过promise形式获取。 |
 
 **示例**
 
@@ -764,7 +764,7 @@ setNotifyCharacteristicChanged(characteristic: BLECharacteristic, enable: boolea
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| characteristic | BLECharacteristic | 是 | 蓝牙低功耗特征。 |
+| characteristic | [BLECharacteristic](arkts-connectivity-bluetooth-blecharacteristic-i.md) | 是 | 蓝牙低功耗特征。 |
 | enable | boolean | 是 | 启用接收notify设置为true，否则设置为false。 |
 
 **返回值：**
@@ -816,7 +816,7 @@ client端向低功耗蓝牙设备写入特定的特征值。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| characteristic | BLECharacteristic | 是 | 蓝牙设备特征对应的二进制值及其它参数。 |
+| characteristic | [BLECharacteristic](arkts-connectivity-bluetooth-blecharacteristic-i.md) | 是 | 蓝牙设备特征对应的二进制值及其它参数。 |
 
 **返回值：**
 
@@ -875,7 +875,7 @@ client端向低功耗蓝牙设备特定的描述符写入二进制数据。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| descriptor | BLEDescriptor | 是 | 蓝牙设备描述符的二进制值及其它参数。 |
+| descriptor | [BLEDescriptor](arkts-connectivity-bluetooth-bledescriptor-i.md) | 是 | 蓝牙设备描述符的二进制值及其它参数。 |
 
 **返回值：**
 

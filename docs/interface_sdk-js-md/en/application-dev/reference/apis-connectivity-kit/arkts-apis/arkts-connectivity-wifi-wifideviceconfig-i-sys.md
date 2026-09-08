@@ -66,7 +66,7 @@ ipType: IpType
 
 IP Type
 
-**Type:** IpType
+**Type:** [IpType](arkts-connectivity-wifi-iptype-e-sys.md)
 
 **Since:** 6
 
@@ -146,7 +146,7 @@ staticIp: IpConfig
 
 IP config of static
 
-**Type:** IpConfig
+**Type:** [IpConfig](arkts-connectivity-wifi-ipconfig-i-sys.md)
 
 **Since:** 6
 

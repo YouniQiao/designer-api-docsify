@@ -529,7 +529,7 @@ setInterruptMode(interruptMode: media.SoundInterruptMode): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| interruptMode | media.SoundInterruptMode | 是 | 同一ID音频在播放时的打断模式，通过media.SoundInterruptMode枚举获取。 |
+| interruptMode | [media.SoundInterruptMode](arkts-media-media-soundinterruptmode-e.md) | 是 | 同一ID音频在播放时的打断模式，通过media.SoundInterruptMode枚举获取。 |
 
 ## setLoop
 
@@ -670,7 +670,7 @@ setRate(streamID: number, rate: audio.AudioRendererRate, callback: AsyncCallback
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | streamID | number | 是 | 音频流ID，通过play方法获取。 |
-| rate | audio.AudioRendererRate | 是 | 音频rate相关参数。 |
+| rate | [audio.AudioRendererRate](../../apis-audio-kit/arkts-apis/arkts-audio-audio-audiorendererrate-e.md) | 是 | 音频rate相关参数。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当音频池setRate方法回调成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
@@ -698,7 +698,7 @@ setRate(streamID: number, rate: audio.AudioRendererRate): Promise<void>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | streamID | number | 是 | 音频流ID，通过play方法获取。 |
-| rate | audio.AudioRendererRate | 是 | 音频rate相关参数。 |
+| rate | [audio.AudioRendererRate](../../apis-audio-kit/arkts-apis/arkts-audio-audio-audiorendererrate-e.md) | 是 | 音频rate相关参数。 |
 
 **返回值：**
 

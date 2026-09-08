@@ -411,7 +411,7 @@ off(event: 'dataChange', listener?: Callback<ChangeNotification>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | event | 'dataChange' | 是 | 取消订阅的事件名，固定为'dataChange'，表示数据变更事件。 |
-| listener | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ChangeNotification&gt; | 否 | 取消订阅的函数。如不设置callback，则取消所有订阅的函数。 |
+| listener | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ChangeNotification](arkts-arkdata-distributeddata-changenotification-i.md)&gt; | 否 | 取消订阅的函数。如不设置callback，则取消所有订阅的函数。 |
 
 **示例**
 
@@ -499,8 +499,8 @@ on(event: 'dataChange', type: SubscribeType, listener: Callback<ChangeNotificati
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | event | 'dataChange' | 是 | 订阅的事件名，固定为'dataChange'，表示数据变更事件。 |
-| type | SubscribeType | 是 | 表示订阅的类型。 |
-| listener | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ChangeNotification&gt; | 是 | 回调函数。 |
+| type | [SubscribeType](arkts-arkdata-distributeddata-subscribetype-e.md) | 是 | 表示订阅的类型。 |
+| listener | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ChangeNotification](arkts-arkdata-distributeddata-changenotification-i.md)&gt; | 是 | 回调函数。 |
 
 **示例**
 
@@ -652,7 +652,7 @@ putBatch(entries: Entry[], callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| entries | Entry[] | 是 | 表示要批量插入的键值对。 |
+| entries | [Entry](arkts-arkdata-distributeddata-entry-i.md)[] | 是 | 表示要批量插入的键值对。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
 
 **示例**
@@ -706,7 +706,7 @@ putBatch(entries: Entry[]): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| entries | Entry[] | 是 | 表示要批量插入的键值对。 |
+| entries | [Entry](arkts-arkdata-distributeddata-entry-i.md)[] | 是 | 表示要批量插入的键值对。 |
 
 **返回值：**
 

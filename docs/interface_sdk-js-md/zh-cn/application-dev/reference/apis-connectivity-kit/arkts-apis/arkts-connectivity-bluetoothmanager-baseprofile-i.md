@@ -99,7 +99,7 @@ getDeviceState(device: string): ProfileConnectionState
 
 | 类型 | 说明 |
 | --- | --- |
-| ProfileConnectionState | 返回profile的连接状态。 |
+| [ProfileConnectionState](arkts-connectivity-bluetoothmanager-profileconnectionstate-e.md) | 返回profile的连接状态。 |
 
 **错误码：**
 

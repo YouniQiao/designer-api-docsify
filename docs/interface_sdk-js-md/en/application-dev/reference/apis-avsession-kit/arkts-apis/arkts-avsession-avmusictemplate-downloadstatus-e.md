@@ -2,7 +2,7 @@
 
 Enumeration of DownloadStatus.
 
-@enum { number }
+@enum { int }
 
 **Since:** 23
 

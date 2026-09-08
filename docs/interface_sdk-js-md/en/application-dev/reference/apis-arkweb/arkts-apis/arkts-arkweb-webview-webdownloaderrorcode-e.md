@@ -68,7 +68,7 @@ The disk space is insufficient.
 FILE_NAME_TOO_LONG = 5
 ```
 
-The file name is too number.
+The file name is too long.
 
 **Since:** 11
 
@@ -124,7 +124,7 @@ Access to the file is blocked due to certain local policies.
 FILE_TOO_SHORT = 13
 ```
 
-The file to resume downloading is not number enough. It may not exist.
+The file to resume downloading is not long enough. It may not exist.
 
 **Since:** 11
 

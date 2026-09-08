@@ -54,7 +54,7 @@ buttonType: ButtonType
 
 按钮的类型。
 
-**类型：** ButtonType
+**类型：** [ButtonType](arkts-avsession-avmusictemplate-buttontype-e.md)
 
 **起始版本：** 23
 

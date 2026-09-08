@@ -29,7 +29,7 @@ function off(type: 'cellInfoChange', callback?: Callback<Array<CellInformation>>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'cellInfoChange' | 是 | 小区信息变化事件，固定为'cellInfoChange'。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;CellInformation&gt;&gt; | 否 | 以callback形式异步返回结果。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[CellInformation](arkts-telephony-radio-cellinformation-i.md)&gt;&gt; | 否 | 以callback形式异步返回结果。 |
 
 **错误码：**
 

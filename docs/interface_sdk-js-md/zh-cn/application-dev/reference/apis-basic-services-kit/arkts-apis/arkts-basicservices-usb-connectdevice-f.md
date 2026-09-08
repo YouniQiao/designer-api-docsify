@@ -28,13 +28,13 @@ function connectDevice(device: USBDevice): Readonly<USBDevicePipe>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| device | USBDevice | 是 | USB设备信息。 |
+| device | [USBDevice](arkts-basicservices-usb-usbdevice-i.md) | 是 | USB设备信息。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Readonly&lt;USBDevicePipe&gt; | 指定的传输通道对象。 |
+| Readonly&lt;[USBDevicePipe](arkts-basicservices-usb-usbdevicepipe-i.md)&gt; | 指定的传输通道对象。 |
 
 **示例**
 

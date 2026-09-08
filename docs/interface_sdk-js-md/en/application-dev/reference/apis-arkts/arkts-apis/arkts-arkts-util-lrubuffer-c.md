@@ -41,19 +41,6 @@ Specifies the default iterator for an object.
 **Examples**
 
 ```TypeScript
-let pro = new util.LRUCache<number, number>();
-pro.put(2, 10);
-pro.put(3, 15);
-
-for (let value of pro) {
-  console.info(value[0]+ ', '+ value[1]);
-}
-// Output:
-// 2, 10
-// 3, 15
-```
-
-```TypeScript
 let pro : util.LruBuffer<number,number> = new util.LruBuffer();
 pro.put(2,10);
 let result = pro[Symbol.iterator]();
@@ -128,18 +115,6 @@ Clears key-value pairs from this cache. The **afterRemoval()** API will be calle
 **Examples**
 
 ```TypeScript
-let pro = new util.LRUCache<number, number>();
-pro.put(2, 10);
-let result = pro.length;
-pro.clear();
-let res = pro.length;
-console.info('result = ' + result);
-console.info('res = ' + res);
-// Output: result = 1
-// Output: res = 0
-```
-
-```TypeScript
 let pro : util.LruBuffer<number,number> = new util.LruBuffer();
 pro.put(2,10);
 let result = pro.length;
@@ -169,10 +144,6 @@ A constructor used to create a **LruBuffer** instance. The default capacity of t
 | capacity | number | No | Capacity of the cache to create. The default value is **64**. |
 
 **Examples**
-
-```TypeScript
-let pro = new util.LRUCache<number, number>();
-```
 
 ```TypeScript
 let pro : util.LruBuffer<number,number> = new util.LruBuffer();
@@ -207,14 +178,6 @@ Checks whether this cache contains the specified key.
 | boolean | Check result. The value **true** is returned if the cache contains the specified key; otherwise, **false** is returned. |
 
 **Examples**
-
-```TypeScript
-let pro = new util.LRUCache<number, number>();
-pro.put(2, 10);
-let result = pro.contains(2);
-console.info('result = ' + result);
-// Output: result = true
-```
 
 ```TypeScript
 let pro : util.LruBuffer<number,number> = new util.LruBuffer();
@@ -255,13 +218,6 @@ Creates a value if the value of the specified key is not available.
 **Examples**
 
 ```TypeScript
-let pro = new util.LRUCache<number, number>();
-let result = pro.createDefault(50);
-console.info('result = ' + result);
-// Output: result = undefined
-```
-
-```TypeScript
 let pro : util.LruBuffer<number,number> = new util.LruBuffer();
 let result = pro.createDefault(50);
 ```
@@ -289,19 +245,6 @@ Obtains a new iterator object that contains all key-value pairs in this object.
 | [IterableIterator](../../apis-default/arkts-apis/arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;[K, V]&gt; | Iterable array. |
 
 **Examples**
-
-```TypeScript
-let pro = new util.LRUCache<number, number>();
-pro.put(2, 10);
-pro.put(3, 15);
-let pair = pro.entries();
-for (let value of pair) {
-  console.info(value[0]+ ', '+ value[1]);
-}
-// Output:
-// 2, 10
-// 3, 15
-```
 
 ```TypeScript
 let pro : util.LruBuffer<number,number> = new util.LruBuffer();
@@ -340,14 +283,6 @@ Obtains the value of the specified key.
 **Examples**
 
 ```TypeScript
-let pro = new util.LRUCache<number, number>();
-pro.put(2, 10);
-let result  = pro.get(2);
-console.info('result = ' + result);
-// Output: result = 10
-```
-
-```TypeScript
 let pro : util.LruBuffer<number,number> = new util.LruBuffer();
 pro.put(2,10);
 let result  = pro.get(2);
@@ -378,13 +313,6 @@ Obtains the capacity of this cache.
 | number | Capacity of the cache. |
 
 **Examples**
-
-```TypeScript
-let pro = new util.LRUCache<number, number>();
-let result = pro.getCapacity();
-console.info('result = ' + result);
-// Output: result = 64
-```
 
 ```TypeScript
 let pro : util.LruBuffer<number,number> = new util.LruBuffer();
@@ -418,26 +346,6 @@ Obtains the number of return values for **createDefault()**.
 **Examples**
 
 ```TypeScript
-// Create the ChildLRUCache class that inherits LRUCache, and override createDefault() to return a non-undefined value.
-class ChildLRUCache extends util.LRUCache<number, number> {
-  constructor() {
-    super();
-  }
-
-  createDefault(key: number): number {
-    return key;
-  }
-}
-let lru = new ChildLRUCache();
-lru.put(2, 10);
-lru.get(3);
-lru.get(5);
-let res = lru.getCreateCount();
-console.info('res = ' + res);
-// Output: res = 2
-```
-
-```TypeScript
 let pro : util.LruBuffer<number,number> = new util.LruBuffer();
 pro.put(1,8);
 let result = pro.getCreateCount();
@@ -468,15 +376,6 @@ Obtains the number of times that the queried values are matched.
 | number | Number of times that the queried values are matched. |
 
 **Examples**
-
-```TypeScript
-let pro = new util.LRUCache<number, number>();
-pro.put(2, 10);
-pro.get(2);
-let result = pro.getMatchCount();
-console.info('result = ' + result);
-// Output: result = 1
-```
 
 ```TypeScript
 let pro : util.LruBuffer<number,number> = new util.LruBuffer();
@@ -512,15 +411,6 @@ Obtains the number of times that the queried values are mismatched.
 **Examples**
 
 ```TypeScript
-let pro = new util.LRUCache<number, number>();
-pro.put(2, 10);
-pro.get(2);
-let result = pro.getMissCount();
-console.info('result = ' + result);
-// Output: result = 0
-```
-
-```TypeScript
 let pro : util.LruBuffer<number,number> = new util.LruBuffer();
 pro.put(2,10);
 pro.get(2);
@@ -554,14 +444,6 @@ Obtains the number of additions to this cache.
 **Examples**
 
 ```TypeScript
-let pro = new util.LRUCache<number, number>();
-pro.put(2, 10);
-let result = pro.getPutCount();
-console.info('result = ' + result);
-// Output: result = 1
-```
-
-```TypeScript
 let pro : util.LruBuffer<number,number> = new util.LruBuffer();
 pro.put(2,10);
 let result = pro.getPutCount();
@@ -592,16 +474,6 @@ Obtains the number of removals from this cache.
 | number | Number of removals from the cache. |
 
 **Examples**
-
-```TypeScript
-let pro = new util.LRUCache<number, number>();
-pro.put(2, 10);
-pro.updateCapacity(2);
-pro.put(50, 22);
-let result = pro.getRemovalCount();
-console.info('result = ' + result);
-// Output: result = 0
-```
 
 ```TypeScript
 let pro : util.LruBuffer<number,number> = new util.LruBuffer();
@@ -638,14 +510,6 @@ Checks whether this cache is empty.
 **Examples**
 
 ```TypeScript
-let pro = new util.LRUCache<number, number>();
-pro.put(2, 10);
-let result = pro.isEmpty();
-console.info('result = ' + result);
-// Output: result = false
-```
-
-```TypeScript
 let pro : util.LruBuffer<number,number> = new util.LruBuffer();
 pro.put(2,10);
 let result = pro.isEmpty();
@@ -676,24 +540,6 @@ Obtains all keys in this cache, listed from the most to the least recently acces
 | K[] | All keys in the cache, listed from the most to the least recently accessed. |
 
 **Examples**
-
-```TypeScript
-let pro = new util.LRUCache<number, string>();
-pro.put(1, 'A');
-pro.put(2, "B");
-pro.put(3, 'C');
-pro.put(4, 'D')
-pro.put(5, 'E')
-pro.put(6, 'F')
-let result = pro.keys();
-console.info('result = ' + result);
-// Output: result = 1,2,3,4,5,6
-pro.get(5);
-pro.get(3);
-result = pro.keys();
-console.info('result = ' + result);
-// Output: result = 1,2,4,6,5,3
-```
 
 ```TypeScript
 let pro : util.LruBuffer<number,number> = new util.LruBuffer();
@@ -735,13 +581,6 @@ Adds a key-value pair to this cache.
 **Examples**
 
 ```TypeScript
-let pro = new util.LRUCache<number, number>();
-let result = pro.put(2, 10);
-console.info('result = ' + result);
-// Output: result = 10
-```
-
-```TypeScript
 let pro : util.LruBuffer<number,number> = new util.LruBuffer();
 let result = pro.put(2,10);
 console.info("result = " + result);
@@ -779,14 +618,6 @@ Removes the specified key and its value from this cache.
 **Examples**
 
 ```TypeScript
-let pro = new util.LRUCache<number, number>();
-pro.put(2, 10);
-let result = pro.remove(20);
-console.info('result = ' + result);
-// Output: result = undefined
-```
-
-```TypeScript
 let pro : util.LruBuffer<number,number> = new util.LruBuffer();
 pro.put(2,10);
 let result = pro.remove(20);
@@ -819,61 +650,6 @@ Obtains the string representation of this cache.
 **Examples**
 
 ```TypeScript
-let rationalNumber = new util.RationalNumber(1,2);
-let result = rationalNumber.toString();
-console.info("result = " + result);
-// Output: result = 1/2
-```
-
-You are advised to use the following code snippet for API version 9 and later versions:
-
-```TypeScript
-let rationalNumber = util.RationalNumber.parseRationalNumber(1,2);
-let result = rationalNumber.toString();
-console.info("result = " + result);
-// Output: result = 1/2
-```
-
-```TypeScript
-let pro = new util.LRUCache<number, number>();
-pro.put(2, 10);
-pro.get(2);
-pro.get(3);
-console.info(pro.toString());
-// Output: LRUCache[ maxSize = 64, hits = 1, misses = 1, hitRate = 50% ]
-// maxSize: maximum size of the cache. hits: number of matched queries. misses: number of mismatched queries. hitRate: matching rate.
-```
-
-```TypeScript
-class Temperature implements util.ScopeComparable {
-  private readonly _temp: number;
-
-  constructor(value: number) {
-    this._temp = value;
-  }
-
-  compareTo(value: Temperature) {
-    return this._temp >= value.getTemp();
-  }
-
-  getTemp() {
-    return this._temp;
-  }
-
-  toString(): string {
-    return this._temp.toString();
-  }
-}
-
-let tempLower = new Temperature(30);
-let tempUpper = new Temperature(40);
-let range = new util.ScopeHelper(tempLower, tempUpper);
-let result = range.toString();
-console.info("result = " + result);
-// Output: result = [30, 40]
-```
-
-```TypeScript
 let pro : util.LruBuffer<number,number> = new util.LruBuffer();
 pro.put(2,10);
 pro.get(2);
@@ -881,35 +657,6 @@ pro.remove(20);
 let result = pro.toString();
 console.info("result = " + result);
 // Output: result = Lrubuffer[ maxSize = 64, hits = 1, misses = 0, hitRate = 100% ]
-```
-
-```TypeScript
-class Temperature implements util.ScopeComparable {
-  private readonly _temp: number;
-
-  constructor(value: number) {
-    this._temp = value;
-  }
-
-  compareTo(value: Temperature) {
-    return this._temp >= value.getTemp();
-  }
-
-  getTemp() {
-    return this._temp;
-  }
-
-  toString(): string {
-    return this._temp.toString();
-  }
-}
-
-let tempLower = new Temperature(30);
-let tempUpper = new Temperature(40);
-let range = new util.Scope(tempLower, tempUpper);
-let result = range.toString();
-console.info("result = " + result);
-// Output: result = [30, 40]
 ```
 
 ## updateCapacity
@@ -935,11 +682,6 @@ Changes the cache capacity. If the new capacity is less than or equal to **0**, 
 | newCapacity | number | Yes | New capacity of the cache. |
 
 **Examples**
-
-```TypeScript
-let pro = new util.LRUCache<number, number>();
-pro.updateCapacity(100);
-```
 
 ```TypeScript
 let pro : util.LruBuffer<number,number> = new util.LruBuffer();
@@ -969,24 +711,6 @@ Obtains all values in this cache, listed from the most to the least recently acc
 | V[] | All values in the cache, listed from the most to the least recently accessed. |
 
 **Examples**
-
-```TypeScript
-let pro = new util.LRUCache<number, string>();
-pro.put(1, 'A');
-pro.put(2, "B");
-pro.put(3, 'C');
-pro.put(4, 'D')
-pro.put(5, 'E')
-pro.put(6, 'F')
-let result = pro.values();
-console.info('result = ' + result);
-// Output: result = A,B,C,D,E,F
-pro.get(1);
-pro.get(2);
-result = pro.values();
-console.info('result = ' + result);
-// Output: result = C,D,E,F,A,B
-```
 
 ```TypeScript
 let pro : util.LruBuffer<number|string,number|string> = new util.LruBuffer();

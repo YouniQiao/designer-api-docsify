@@ -342,7 +342,7 @@ getKVStore<T extends KVStore>(storeId: string, options: Options): Promise<T>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | storeId | string | 是 | 数据库唯一标识符，长度不大于[MAX_STORE_ID_LENGTH](arkts-arkdata-distributeddata-constants-n.md)。 |
-| options | Options | 是 | 创建KVStore实例的配置信息。 |
+| options | [Options](arkts-arkdata-distributeddata-options-i.md) | 是 | 创建KVStore实例的配置信息。 |
 
 **返回值：**
 
@@ -396,7 +396,7 @@ getKVStore<T extends KVStore>(storeId: string, options: Options, callback: Async
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | storeId | string | 是 | 数据库唯一标识符，长度不大于[MAX_STORE_ID_LENGTH](arkts-arkdata-distributeddata-constants-n.md)。 |
-| options | Options | 是 | 创建KVStore实例的配置信息。 |
+| options | [Options](arkts-arkdata-distributeddata-options-i.md) | 是 | 创建KVStore实例的配置信息。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;T&gt; | 是 | 回调函数。返回创建的KVStore数据库实例。 |
 
 **示例**

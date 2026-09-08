@@ -24,7 +24,7 @@ Checks whether an ability is enabled. This API returns the result synchronously.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| info | AbilityInfo | Yes | Information about the target ability. |
+| info | [AbilityInfo](arkts-ability-bundlemanager-abilityinfo-t.md) | Yes | Information about the target ability. |
 
 **Return value:**
 

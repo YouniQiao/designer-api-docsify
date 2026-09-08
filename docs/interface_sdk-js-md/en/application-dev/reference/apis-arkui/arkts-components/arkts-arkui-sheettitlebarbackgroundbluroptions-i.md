@@ -37,7 +37,7 @@ effectiveDistance?: LengthMetrics
 
 Sliding distance required for the blur effect to transition from fully hidden to fully visible. Value range: greater than or equal to 0; values less than 0 are treated as 0. Default value: **8vp**.
 
-**Type:** LengthMetrics
+**Type:** [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md)
 
 **Since:** 26.2.0
 
@@ -73,7 +73,7 @@ maskExtraHeight?: LengthMetrics
 
 Extra height of the gradient mask. Additional mask coverage height beyond the title bar height. Default value: **32vp**.
 
-**Type:** LengthMetrics
+**Type:** [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md)
 
 **Since:** 26.2.0
 

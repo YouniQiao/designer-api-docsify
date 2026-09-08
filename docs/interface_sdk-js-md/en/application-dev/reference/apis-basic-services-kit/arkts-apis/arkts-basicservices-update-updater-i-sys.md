@@ -1297,7 +1297,7 @@ determine the follow-up procedure.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;TaskInfo&gt; | Yes | Callback used to receive the upgrade task information (**TaskInfo**). The callback parameters include **err** and **taskInfo**. If the operation is successful, **err** is **null**; if the operation fails, **err** is an error object. **taskInfo** indicates the upgrade task information, including the **existTask** and **taskBody** fields. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[TaskInfo](arkts-basicservices-agent-taskinfo-i.md)&gt; | Yes | Callback used to receive the upgrade task information (**TaskInfo**). The callback parameters include **err** and **taskInfo**. If the operation is successful, **err** is **null**; if the operation fails, **err** is an error object. **taskInfo** indicates the upgrade task information, including the **existTask** and **taskBody** fields. |
 
 **Error codes:**
 
@@ -1383,7 +1383,7 @@ determine the follow-up procedure.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;TaskInfo&gt; | Promise used to return the result. If the operation is successful, the return value of **resolve** is a **TaskInfo** object, which is used to query and monitor the upgrade task status. If the operation fails, the return value of **reject** is an error message. |
+| Promise&lt;[TaskInfo](arkts-basicservices-agent-taskinfo-i.md)&gt; | Promise used to return the result. If the operation is successful, the return value of **resolve** is a **TaskInfo** object, which is used to query and monitor the upgrade task status. If the operation fails, the return value of **reject** is an error message. |
 
 **Error codes:**
 
@@ -1616,26 +1616,6 @@ try {
 }
 ```
 
-```TypeScript
-const eventClassifyInfo: update.EventClassifyInfo = {
-  eventClassify: update.EventClassify.TASK, // Task event type
-  extraInfo: ''
-};
-// Define the callback for task updates, which is used to process the upgrade task event.
-let onTaskUpdate: update.UpgradeTaskCallback = (eventInfo: update.EventInfo) => {
-  console.info(`on eventInfo id `, eventInfo.eventId);
-};
-
-try {
-  // Obtain a LocalUpdater object.
-  let localUpdater = update.getLocalUpdater();
-  // Unregister the local upgrade event listener.
-  localUpdater.off(eventClassifyInfo, onTaskUpdate);
-} catch (error) {
-  console.error(`Fail to get localUpdater error: ${error}`);
-}
-```
-
 ## on
 
 ```TypeScript
@@ -1659,7 +1639,7 @@ listener when it is no longer needed.
 
 **Suggestions**
 
-- Register a listener before performing number-time operations such as calling **download** or **upgrade**.  
+- Register a listener before performing long-time operations such as calling **download** or **upgrade**.  
 - Unregister the listener after the operation is complete or the final event (such as **EVENT_DOWNLOAD_SUCCESS**  
 or **EVENT_UPGRADE_SUCCESS**) is received.
 
@@ -1710,26 +1690,6 @@ try {
   });
 } catch (error) {
   console.error(`Fail to get onlineUpdater error: ${error}`);
-}
-```
-
-```TypeScript
-const eventClassifyInfo: update.EventClassifyInfo = {
-  eventClassify: update.EventClassify.TASK, // Task event type
-  extraInfo: ''
-};
-// Define the callback for task updates, which is used to process the upgrade task event.
-let onTaskUpdate: update.UpgradeTaskCallback = (eventInfo: update.EventInfo) => {
-  console.info(`on eventInfo id `, eventInfo.eventId);
-};
-
-try {
-  // Obtain a LocalUpdater object.
-  let localUpdater = update.getLocalUpdater();
-  // Register a local upgrade event listener.
-  localUpdater.on(eventClassifyInfo, onTaskUpdate);
-} catch (error) {
-  console.error(`Fail to get localUpdater error: ${error}`);
 }
 ```
 

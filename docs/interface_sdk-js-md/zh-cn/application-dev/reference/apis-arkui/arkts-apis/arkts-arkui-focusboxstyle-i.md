@@ -21,7 +21,7 @@ margin?: LengthMetrics
 
 正数代表外侧，负数代表内侧。不支持百分比。
 
-**类型：** LengthMetrics
+**类型：** [LengthMetrics](arkts-arkui-lengthmetrics-t.md)
 
 **起始版本：** 12
 
@@ -39,7 +39,7 @@ strokeColor?: ColorMetrics
 
 焦点框颜色。
 
-**类型：** ColorMetrics
+**类型：** [ColorMetrics](arkts-arkui-colormetrics-t.md)
 
 **起始版本：** 12
 
@@ -59,7 +59,7 @@ strokeWidth?: LengthMetrics
 
 不支持负数与百分比。
 
-**类型：** LengthMetrics
+**类型：** [LengthMetrics](arkts-arkui-lengthmetrics-t.md)
 
 **起始版本：** 12
 

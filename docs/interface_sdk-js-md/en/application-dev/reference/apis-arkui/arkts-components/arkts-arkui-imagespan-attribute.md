@@ -37,7 +37,7 @@ Sets the placeholder image displayed during image loading.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | PixelMap | Yes | Placeholder image displayed during image loading. The [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) type is supported.Default value: **null |
+| value | [PixelMap](arkts-arkui-pixelmap-t.md) | Yes | Placeholder image displayed during image loading. The [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) type is supported.Default value: **null |
 
 ## colorFilter
 
@@ -59,7 +59,7 @@ Sets the color filter for the image.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| filter | ColorFilter \| [DrawingColorFilter](arkts-arkui-drawingcolorfilter-t.md) | Yes | 1. Color filter of the image. The input parameter is a 4 x 5 RGBA transformation matrix. The first row of the matrix represents a vector value of R (red), the second row represents a vector value of G (green), the third row represents a vector value of B (blue), and the fourth row represents a vector value of A (alpha). The four rows represent different RGBA vector values.If the matrix contains entries of 1 on the diagonal and entries of 0 in other places, the original color of the image is retained.    **Calculation rule:**If the input filter matrix is as follows:! [image-matrix-1](../../../reference/apis-arkui/arkui-ts/figures/image_matrix_1.png)And the pixel point is [R, G, B, A] with color values in the [0, 255] range,Then the color after filtering is [R', G', B', A']. 2. The ColorFilter type of **@ohos.graphics.drawing** can be used as the input parameter.   **NOTE：**The DrawingColorfilter type can be used in atomic services. The SVG image source takes effect only for the stroke attribute. |
+| filter | [ColorFilter](../arkts-apis/arkts-arkui-colorfilter-c.md) \| [DrawingColorFilter](arkts-arkui-drawingcolorfilter-t.md) | Yes | 1. Color filter of the image. The input parameter is a 4 x 5 RGBA transformation matrix. The first row of the matrix represents a vector value of R (red), the second row represents a vector value of G (green), the third row represents a vector value of B (blue), and the fourth row represents a vector value of A (alpha). The four rows represent different RGBA vector values.If the matrix contains entries of 1 on the diagonal and entries of 0 in other places, the original color of the image is retained.    **Calculation rule:**If the input filter matrix is as follows:! [image-matrix-1](../../../reference/apis-arkui/arkui-ts/figures/image_matrix_1.png)And the pixel point is [R, G, B, A] with color values in the [0, 255] range,Then the color after filtering is [R', G', B', A']. 2. The ColorFilter type of **@ohos.graphics.drawing** can be used as the input parameter.   **NOTE：**The DrawingColorfilter type can be used in atomic services. The SVG image source takes effect only for the stroke attribute. |
 
 ## objectFit
 

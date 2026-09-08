@@ -19,7 +19,7 @@ backgroundBlurStyle?: BlurStyle
 
 Background blur style of the title bar. If this parameter is not set, the background blur effect is disabled.
 
-**Type:** BlurStyle
+**Type:** [BlurStyle](arkts-arkui-blurstyle-e.md)
 
 **Since:** 11
 
@@ -188,7 +188,7 @@ Default value:
 
 LengthMetrics.resource(`\$r('sys.float.margin_right')`)
 
-**Type:** LengthMetrics
+**Type:** [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md)
 
 **Default:** LengthMetrics.resource($r('sys.float.margin_right'))
 
@@ -217,7 +217,7 @@ Default value:
 
 LengthMetrics.resource(**\$r('sys.float.margin_left')**)
 
-**Type:** LengthMetrics
+**Type:** [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md)
 
 **Default:** LengthMetrics.resource($r('sys.float.margin_left'))
 

@@ -18,7 +18,7 @@ import { systemManager } from '@kit.MDMKit';
 actionTime: number
 ```
 
-Time when the key action occurs. The value is a microsecond-level timestamp after the system is powered on. For number-press key events, this parameter remains unchanged in subsequent key events. Apps can use this timestamp to determine whether the event is a number-press event and execute the corresponding number-press event logic accordingly.
+Time when the key action occurs. The value is a microsecond-level timestamp after the system is powered on. For long-press key events, this parameter remains unchanged in subsequent key events. Apps can use this timestamp to determine whether the event is a long-press event and execute the corresponding long-press event logic accordingly.
 
 **Type:** number
 
@@ -52,7 +52,7 @@ keyCode: KeyCode
 
 Key code.
 
-**Type:** KeyCode
+**Type:** [KeyCode](arkts-mdm-systemmanager-keycode-e.md)
 
 **Since:** 23
 

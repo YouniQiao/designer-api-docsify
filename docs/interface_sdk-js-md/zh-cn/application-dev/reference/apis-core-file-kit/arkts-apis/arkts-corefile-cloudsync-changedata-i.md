@@ -34,7 +34,7 @@ type: NotifyType
 
 更改的通知类型。
 
-**类型：** NotifyType
+**类型：** [NotifyType](arkts-corefile-cloudsync-notifytype-e.md)
 
 **起始版本：** 12
 

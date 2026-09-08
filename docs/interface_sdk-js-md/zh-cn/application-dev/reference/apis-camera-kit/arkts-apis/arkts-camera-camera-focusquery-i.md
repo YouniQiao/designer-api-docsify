@@ -34,7 +34,7 @@ isFocusModeSupported(afMode: FocusMode): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| afMode | FocusMode | 是 | 指定的焦距模式。传参为null或者undefined，作为0处理，手动对焦模式。 |
+| afMode | [FocusMode](arkts-camera-camera-focusmode-e.md) | 是 | 指定的焦距模式。传参为null或者undefined，作为0处理，手动对焦模式。 |
 
 **返回值：**
 
@@ -47,40 +47,6 @@ isFocusModeSupported(afMode: FocusMode): boolean
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config, only throw in session usage. |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function isFocusModeSupported(captureSession: camera.CaptureSession): boolean {
-  let status: boolean = false;
-  try {
-    status = captureSession.isFocusModeSupported(camera.FocusMode.FOCUS_MODE_AUTO);
-  } catch (error) {
-    // 失败返回错误码error.code并处理。
-    let err = error as BusinessError;
-    console.error(`The isFocusModeSupported call failed. error code: ${err.code}`);
-  }
-  return status;
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function isFocusModeSupported(photoSession: camera.PhotoSession): boolean {
-  let status: boolean = false;
-  try {
-    status = photoSession.isFocusModeSupported(camera.FocusMode.FOCUS_MODE_AUTO);
-  } catch (error) {
-    // 失败返回错误码error.code并处理。
-    let err = error as BusinessError;
-    console.error(`The isFocusModeSupported call failed. error code: ${err.code}`);
-  }
-  return status;
-}
-```
 
 ## isLockFocusTrackingSupported
 
@@ -109,21 +75,3 @@ isLockFocusTrackingSupported(): boolean
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config, only throw in session usage. |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function isLockFocusTrackSupported(photoSession: camera.PhotoSession): boolean {
-  let isSupported: boolean = false;
-  try {
-    isSupported = photoSession.isLockFocusTrackingSupported();
-  } catch (error) {
-    // 失败返回错误码error.code并处理。
-    let err = error as BusinessError;
-    console.error(`The isLockFocusTrackingSupported call failed. error code: ${err.code}`);
-  }
-  return isSupported;
-}
-```

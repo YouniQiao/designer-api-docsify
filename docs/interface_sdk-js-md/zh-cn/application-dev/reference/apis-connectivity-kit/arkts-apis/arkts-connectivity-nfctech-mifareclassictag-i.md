@@ -514,7 +514,7 @@ getType(): tag.MifareClassicType
 
 | 类型 | 说明 |
 | --- | --- |
-| tag.MifareClassicType | MifareClassic标签的类型。 |
+| [tag.MifareClassicType](arkts-connectivity-tag-mifareclassictype-e.md) | MifareClassic标签的类型。 |
 
 **示例**
 
@@ -524,14 +524,6 @@ import { tag } from '@kit.ConnectivityKit';
 // 参考 @ohos.nfc.tag（标准NFC-Tag）中 tag.TagInfo 接口，获取正确的 mifareClassic
 let getType : tag.MifareClassicType = mifareClassic.getType();
 console.info("mifareClassic getType: " + getType);
-```
-
-```TypeScript
-import { tag } from '@kit.ConnectivityKit';
-
-// 参考 @ohos.nfc.tag（标准NFC-Tag）中 tag.TagInfo 接口，获取正确的 mifareUltralight
-let getType : tag.MifareUltralightType = mifareUltralight.getType();
-console.info("mifareUltralight getType: " + getType);
 ```
 
 ## incrementBlock

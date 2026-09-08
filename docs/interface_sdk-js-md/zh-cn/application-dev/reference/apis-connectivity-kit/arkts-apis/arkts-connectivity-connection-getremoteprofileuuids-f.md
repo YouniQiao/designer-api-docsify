@@ -29,7 +29,7 @@ function getRemoteProfileUuids(deviceId: string, callback: AsyncCallback<Array<P
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | deviceId | string | 是 | 表示对端设备地址，例如："XX:XX:XX:XX:XX:XX"。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;ProfileUuids&gt;&gt; | 是 | 回调函数。当获取UUID成功，err为undefined，获取到的是Profile协议能力集合；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[ProfileUuids](arkts-connectivity-connection-profileuuids-t.md)&gt;&gt; | 是 | 回调函数。当获取UUID成功，err为undefined，获取到的是Profile协议能力集合；否则为错误对象。 |
 
 **错误码：**
 
@@ -85,7 +85,7 @@ function getRemoteProfileUuids(deviceId: string): Promise<Array<ProfileUuids>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;ProfileUuids&gt;&gt; | Promise对象，返回支持的Profile协议能力集合。 |
+| Promise&lt;Array&lt;[ProfileUuids](arkts-connectivity-connection-profileuuids-t.md)&gt;&gt; | Promise对象，返回支持的Profile协议能力集合。 |
 
 **错误码：**
 

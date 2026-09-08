@@ -242,7 +242,7 @@ onAdminPolicyChanged(event: common.PolicyChangedEvent): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | common.PolicyChangedEvent | 是 | 策略变更事件，包含策略变更的详细信息，如变更的应用包名（bundleName）、变更的函数名（functionName）、变更的参数（parameters）和变更时间（time），超级设备管理应用可根据这些信息进行策略审计或同步。 |
+| event | [common.PolicyChangedEvent](arkts-mdm-common-policychangedevent-i.md) | 是 | 策略变更事件，包含策略变更的详细信息，如变更的应用包名（bundleName）、变更的函数名（functionName）、变更的参数（parameters）和变更时间（time），超级设备管理应用可根据这些信息进行策略审计或同步。 |
 
 **示例**
 
@@ -735,7 +735,7 @@ onKeyEvent(keyEvent: systemManager.KeyEvent): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| keyEvent | systemManager.KeyEvent | 是 | 当前发生的按键事件信息，包含按键码（keyCode）、按键动作（keyAction，如按下/抬起）、触发时间（actionTime）、已按下按键列表（keyItems）等，用于识别和处理用户的按键操作。 |
+| keyEvent | [systemManager.KeyEvent](arkts-mdm-systemmanager-keyevent-i.md) | 是 | 当前发生的按键事件信息，包含按键码（keyCode）、按键动作（keyAction，如按下/抬起）、触发时间（actionTime）、已按下按键列表（keyItems）等，用于识别和处理用户的按键操作。 |
 
 **示例**
 
@@ -928,7 +928,7 @@ onLogCollected(result: common.Result): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| result | common.Result | 是 | 日志收集结果，用于标识日志收集是否成功，常见值为SUCCESS（收集成功）或FAIL（收集失败），开发者可根据结果判断是否执行后续的日志获取操作。 |
+| result | [common.Result](arkts-mdm-common-result-e.md) | 是 | 日志收集结果，用于标识日志收集是否成功，常见值为SUCCESS（收集成功）或FAIL（收集失败），开发者可根据结果判断是否执行后续的日志获取操作。 |
 
 **示例**
 
@@ -991,7 +991,7 @@ onMarketAppInstallResult(bundleName: string, result: common.InstallationResult):
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | bundleName | string | 是 | 应用市场应用包名。 |
-| result | common.InstallationResult | 是 | 安装结果，表示应用市场应用的安装状态，包含安装成功或失败的状态信息。 |
+| result | [common.InstallationResult](arkts-mdm-common-installationresult-i.md) | 是 | 安装结果，表示应用市场应用的安装状态，包含安装成功或失败的状态信息。 |
 
 **示例**
 
@@ -1049,7 +1049,7 @@ onStartupGuideCompleted(scene: common.StartupScene): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| scene | common.StartupScene | 是 | 开机向导完成场景，标识触发回调的具体场景类型，如用户设置完成（USER_SETUP）、OTA升级完成（OTA）、设备配置完成（DEVICE_PROVISION）等，开发者可根据不同场景执行相应的业务逻辑。 |
+| scene | [common.StartupScene](arkts-mdm-common-startupscene-e.md) | 是 | 开机向导完成场景，标识触发回调的具体场景类型，如用户设置完成（USER_SETUP）、OTA升级完成（OTA）、设备配置完成（DEVICE_PROVISION）等，开发者可根据不同场景执行相应的业务逻辑。 |
 
 **示例**
 
@@ -1102,7 +1102,7 @@ onSystemUpdate(systemUpdateInfo: systemManager.SystemUpdateInfo): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| systemUpdateInfo | systemManager.SystemUpdateInfo | 是 | 系统更新的版本信息，用于通知设备管理应用系统版本更新情况。 |
+| systemUpdateInfo | [systemManager.SystemUpdateInfo](arkts-mdm-systemmanager-systemupdateinfo-i.md) | 是 | 系统更新的版本信息，用于通知设备管理应用系统版本更新情况。 |
 
 **示例**
 

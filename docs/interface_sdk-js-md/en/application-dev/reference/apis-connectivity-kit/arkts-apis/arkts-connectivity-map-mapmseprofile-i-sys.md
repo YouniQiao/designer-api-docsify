@@ -49,18 +49,6 @@ Disconnect the map connection with the remote device.
 | 2900004 | Profile not supported. |
 | 2900099 | Operation failed. |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-try {
-    let mapMseProfile = map.createMapMseProfile();
-    mapMseProfile.disconnect('XX:XX:XX:XX:XX:XX');
-} catch (err) {
-    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-}
-```
-
 ## getMessageAccessAuthorization
 
 ```TypeScript
@@ -87,7 +75,7 @@ Get the message access authorization.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;AccessAuthorization&gt; | Returns the promise object. |
+| Promise&lt;[AccessAuthorization](arkts-connectivity-map-accessauthorization-t-sys.md)&gt; | Returns the promise object. |
 
 **Error codes:**
 
@@ -101,20 +89,6 @@ Get the message access authorization.
 | 2900003 | Bluetooth disabled. |
 | 2900004 | Profile not supported. |
 | 2900099 | Operation failed. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-try {
-    let mapMseProfile = map.createMapMseProfile();
-    mapMseProfile.getMessageAccessAuthorization('XX:XX:XX:XX:XX:XX').then((authorization) => {
-        console.info('authorization ' + authorization);
-    });
-} catch (err) {
-    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-}
-```
 
 ## setMessageAccessAuthorization
 
@@ -137,7 +111,7 @@ Set the message access authorization.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | deviceId | string | Yes | Indicates device ID. For example, "11:22:33:AA:BB:FF". |
-| authorization | AccessAuthorization | Yes | Indicates the permission. |
+| authorization | [AccessAuthorization](arkts-connectivity-map-accessauthorization-t-sys.md) | Yes | Indicates the permission. |
 
 **Return value:**
 
@@ -157,17 +131,3 @@ Set the message access authorization.
 | 2900003 | Bluetooth disabled. |
 | 2900004 | Profile not supported. |
 | 2900099 | Operation failed. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-try {
-    let mapMseProfile = map.createMapMseProfile();
-    mapMseProfile.setMessageAccessAuthorization('XX:XX:XX:XX:XX:XX', 0).then(() => {
-        console.info('setMessageAccessAuthorization');
-    });
-} catch (err) {
-    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-}
-```

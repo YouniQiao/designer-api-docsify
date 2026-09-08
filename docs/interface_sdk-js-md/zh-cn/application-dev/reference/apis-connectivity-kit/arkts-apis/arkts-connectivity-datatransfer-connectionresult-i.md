@@ -52,7 +52,7 @@ state: ConnectionState
 
 与远端设备的连接状态。
 
-**类型：** ConnectionState
+**类型：** [ConnectionState](arkts-connectivity-datatransfer-connectionstate-t.md)
 
 **起始版本：** 26.0.0
 

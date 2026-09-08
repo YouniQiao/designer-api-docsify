@@ -30,7 +30,7 @@ Obtains a **BarcodeTag** object, which allows access to the tags in the BarcodeT
 
 | Type | Description |
 | --- | --- |
-| BarcodeTag | BarcodeTag** object obtained. |
+| [BarcodeTag](arkts-connectivity-tag-barcodetag-t.md) | BarcodeTag** object obtained. |
 
 **Error codes:**
 

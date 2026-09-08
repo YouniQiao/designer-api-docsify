@@ -20,7 +20,7 @@ deleteEntries: Entry[]
 
 数据删除记录。
 
-**类型：** Entry[]
+**类型：** [Entry](arkts-arkdata-distributedkvstore-entry-i.md)[]
 
 **起始版本：** 9
 
@@ -44,23 +44,6 @@ deviceId: string
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-    let query: distributedKVStore.Query | null = new distributedKVStore.Query();
-    if (query != null) {
-      query.deviceId('deviceId');
-      console.info(`query is ${query.getSqlLike()}`);
-    }
-} catch (err) {
-    let error = err as BusinessError;
-    console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
 ## insertEntries
 
 ```TypeScript
@@ -69,7 +52,7 @@ insertEntries: Entry[]
 
 数据添加记录。
 
-**类型：** Entry[]
+**类型：** [Entry](arkts-arkdata-distributedkvstore-entry-i.md)[]
 
 **起始版本：** 9
 
@@ -85,7 +68,7 @@ updateEntries: Entry[]
 
 数据更新记录。
 
-**类型：** Entry[]
+**类型：** [Entry](arkts-arkdata-distributedkvstore-entry-i.md)[]
 
 **起始版本：** 9
 

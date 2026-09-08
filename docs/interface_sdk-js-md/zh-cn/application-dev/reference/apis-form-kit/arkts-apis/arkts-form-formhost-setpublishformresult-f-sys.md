@@ -29,7 +29,7 @@ function setPublishFormResult(formId: string, result: formInfo.PublishFormResult
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | formId | string | 是 | 卡片标识。 |
-| result | formInfo.PublishFormResult | 是 | 发布卡片加桌结果。 |
+| result | [formInfo.PublishFormResult](arkts-form-forminfo-publishformresult-i-sys.md) | 是 | 发布卡片加桌结果。 |
 
 **错误码：**
 

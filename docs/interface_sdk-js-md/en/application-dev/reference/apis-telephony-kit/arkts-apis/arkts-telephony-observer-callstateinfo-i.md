@@ -34,7 +34,7 @@ state: CallState
 
 Call type.
 
-**Type:** CallState
+**Type:** [CallState](arkts-telephony-observer-callstate-t.md)
 
 **Since:** 11
 

@@ -37,15 +37,7 @@ constructor()
 **示例**
 
 ```TypeScript
-let userAuth = new osAccount.UserAuth();
-```
-
-```TypeScript
 let pinAuth: osAccount.PINAuth = new osAccount.PINAuth();
-```
-
-```TypeScript
-let userIDM = new osAccount.UserIdentityManager();
 ```
 
 ## registerInputer

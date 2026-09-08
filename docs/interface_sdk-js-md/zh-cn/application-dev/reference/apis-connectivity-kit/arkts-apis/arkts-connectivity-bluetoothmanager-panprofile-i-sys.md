@@ -59,48 +59,6 @@ disconnect(device: string): void
 | [2900004](../errorcode-bluetoothManager.md#2900004-配置文件不支持) | Profile not supported. |
 | [2900099](../errorcode-bluetoothManager.md#2900099-操作失败) | Operation failed. |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@ohos.base';
-try {
-    let a2dpSrc: bluetoothManager.A2dpSourceProfile = bluetoothManager.getProfileInstance(bluetoothManager.ProfileId.PROFILE_A2DP_SOURCE) as bluetoothManager.A2dpSourceProfile;
-    a2dpSrc.disconnect('XX:XX:XX:XX:XX:XX');
-} catch (err) {
-    console.error("errCode:" + (err as BusinessError).code + ",errMessage:" + (err as BusinessError).message);
-}
-```
-
-```TypeScript
-import { BusinessError } from '@ohos.base';
-try {
-    let hfpAg: bluetoothManager.HandsFreeAudioGatewayProfile = bluetoothManager.getProfileInstance(bluetoothManager.ProfileId.PROFILE_HANDS_FREE_AUDIO_GATEWAY) as bluetoothManager.HandsFreeAudioGatewayProfile;
-    hfpAg.disconnect('XX:XX:XX:XX:XX:XX');
-} catch (err) {
-    console.error("errCode:" + (err as BusinessError).code + ",errMessage:" + (err as BusinessError).message);
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-try {
-    let hidHostProfile: bluetoothManager.HidHostProfile = bluetoothManager.getProfileInstance(bluetoothManager.ProfileId.PROFILE_HID_HOST) as bluetoothManager.HidHostProfile;
-    hidHostProfile.disconnect('XX:XX:XX:XX:XX:XX');
-} catch (err) {
-    console.error("errCode:" + (err as BusinessError).code + ",errMessage:" + (err as BusinessError).message);
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-try {
-    let panProfile: bluetoothManager.PanProfile = bluetoothManager.getProfileInstance(bluetoothManager.ProfileId.PROFILE_PAN_NETWORK) as bluetoothManager.PanProfile;
-    panProfile.disconnect('XX:XX:XX:XX:XX:XX');
-} catch (err) {
-    console.error("errCode:" + (err as BusinessError).code + ",errMessage:" + (err as BusinessError).message);
-}
-```
-
 ## isTetheringOn
 
 ```TypeScript
@@ -133,18 +91,6 @@ isTetheringOn(): boolean
 | --- | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Non-system applications are not allowed to use system APIs. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-try {
-    let panProfile: bluetoothManager.PanProfile = bluetoothManager.getProfileInstance(bluetoothManager.ProfileId.PROFILE_PAN_NETWORK) as bluetoothManager.PanProfile;
-    panProfile.isTetheringOn();
-} catch (err) {
-    console.error("errCode:" + (err as BusinessError).code + ",errMessage:" + (err as BusinessError).message);
-}
-```
 
 ## setTethering
 
@@ -184,15 +130,3 @@ setTethering(enable: boolean): void
 | [2900003](../errorcode-bluetoothManager.md#2900003-蓝牙开关关闭) | Bluetooth disabled. |
 | [2900004](../errorcode-bluetoothManager.md#2900004-配置文件不支持) | Profile not supported. |
 | [2900099](../errorcode-bluetoothManager.md#2900099-操作失败) | Operation failed. |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-try {
-    let panProfile: bluetoothManager.PanProfile = bluetoothManager.getProfileInstance(bluetoothManager.ProfileId.PROFILE_PAN_NETWORK) as bluetoothManager.PanProfile;
-    panProfile.setTethering(true);
-} catch (err) {
-    console.error("errCode:" + (err as BusinessError).code + ",errMessage:" + (err as BusinessError).message);
-}
-```

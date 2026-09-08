@@ -15,7 +15,3 @@ Defines a callback triggered when the **param** element embedded in the same-lay
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | [NativeEmbedParamDataInfo](arkts-arkweb-nativeembedparamdatainfo-i.md) | Yes | Detailed information about the changes of the **param** element embedded in the **object** tag. |
-
-**Examples**
-
-For details about the sample code, see [onNativeEmbedObjectParamChange](./arkts-basic-components-web-events.md#onnativeembedobjectparamchange).

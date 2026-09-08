@@ -32,7 +32,7 @@ Obtains the list of detailed information about peripherals. If the device has no
 
 | Type | Description |
 | --- | --- |
-| Array&lt;Readonly&lt;DeviceInfo&gt;&gt; | List of detailed information about peripherals. |
+| Array&lt;Readonly&lt;[DeviceInfo](arkts-driverdevelopment-devicemanager-deviceinfo-i-sys.md)&gt;&gt; | List of detailed information about peripherals. |
 
 **Error codes:**
 

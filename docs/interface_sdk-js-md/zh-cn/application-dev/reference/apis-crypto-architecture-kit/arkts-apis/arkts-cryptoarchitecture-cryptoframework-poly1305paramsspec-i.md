@@ -37,7 +37,7 @@ aad: DataBlob
 
 指明加解密参数aad。
 
-**类型：** DataBlob
+**类型：** [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md)
 
 **起始版本：** 22
 
@@ -53,7 +53,7 @@ authTag: DataBlob
 
 指定加解密参数authTag，长度为16字节。
 
-**类型：** DataBlob
+**类型：** [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md)
 
 **起始版本：** 22
 
@@ -69,7 +69,7 @@ iv: DataBlob
 
 Nonce（通过iv字段传入），长度为12字节。
 
-**类型：** DataBlob
+**类型：** [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md)
 
 **起始版本：** 22
 

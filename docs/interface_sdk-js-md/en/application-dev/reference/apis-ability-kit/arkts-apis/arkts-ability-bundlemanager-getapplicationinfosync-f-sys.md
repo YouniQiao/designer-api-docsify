@@ -36,7 +36,7 @@ No permission is required for obtaining the caller's own information.
 
 | Type | Description |
 | --- | --- |
-| ApplicationInfo | Application information obtained. |
+| [ApplicationInfo](arkts-ability-bundlemanager-applicationinfo-t.md) | Application information obtained. |
 
 **Error codes:**
 
@@ -99,7 +99,7 @@ No permission is required for obtaining the caller's own information.
 
 | Type | Description |
 | --- | --- |
-| ApplicationInfo | Application information obtained. |
+| [ApplicationInfo](arkts-ability-bundlemanager-applicationinfo-t.md) | Application information obtained. |
 
 **Error codes:**
 

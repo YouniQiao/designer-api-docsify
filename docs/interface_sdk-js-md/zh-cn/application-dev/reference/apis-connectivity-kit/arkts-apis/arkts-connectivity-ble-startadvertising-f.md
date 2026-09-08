@@ -32,9 +32,9 @@ function startAdvertising(setting: AdvertiseSetting, advData: AdvertiseData, adv
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| setting | AdvertiseSetting | 是 | BLE广播的相关参数。 |
-| advData | AdvertiseData | 是 | BLE广播报文内容。 |
-| advResponse | AdvertiseData | 否 | BLE扫描回复广播报文。若不填写，则不携带扫描回复广播报文。 |
+| setting | [AdvertiseSetting](arkts-connectivity-ble-advertisesetting-i.md) | 是 | BLE广播的相关参数。 |
+| advData | [AdvertiseData](arkts-connectivity-ble-advertisedata-i.md) | 是 | BLE广播报文内容。 |
+| advResponse | [AdvertiseData](arkts-connectivity-ble-advertisedata-i.md) | 否 | BLE扫描回复广播报文。若不填写，则不携带扫描回复广播报文。 |
 
 **错误码：**
 
@@ -123,7 +123,7 @@ function startAdvertising(advertisingParams: AdvertisingParams, callback: AsyncC
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| advertisingParams | AdvertisingParams | 是 | 启动BLE广播的相关参数。 |
+| advertisingParams | [AdvertisingParams](arkts-connectivity-ble-advertisingparams-i.md) | 是 | 启动BLE广播的相关参数。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数。当广播启动成功，err为undefined，data为分配的广播ID标识；否则为错误对象。 |
 
 **错误码：**
@@ -227,7 +227,7 @@ function startAdvertising(advertisingParams: AdvertisingParams): Promise<number>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| advertisingParams | AdvertisingParams | 是 | 启动BLE广播的相关参数。 |
+| advertisingParams | [AdvertisingParams](arkts-connectivity-ble-advertisingparams-i.md) | 是 | 启动BLE广播的相关参数。 |
 
 **返回值：**
 

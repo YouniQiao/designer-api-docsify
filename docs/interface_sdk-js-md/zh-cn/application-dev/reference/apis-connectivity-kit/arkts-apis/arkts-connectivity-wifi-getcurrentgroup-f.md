@@ -32,7 +32,7 @@ function getCurrentGroup(): Promise<WifiP2pGroupInfo>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;WifiP2pGroupInfo&gt; | Promise对象。表示当前组信息。 |
+| Promise&lt;[WifiP2pGroupInfo](arkts-connectivity-wifi-wifip2pgroupinfo-i.md)&gt; | Promise对象。表示当前组信息。 |
 
 **示例**
 
@@ -79,7 +79,7 @@ function getCurrentGroup(callback: AsyncCallback<WifiP2pGroupInfo>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;WifiP2pGroupInfo&gt; | 是 | 回调函数。当操作成功时，err为0，data表示当前组信息。如果err为非0，表示处理出现错误。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[WifiP2pGroupInfo](arkts-connectivity-wifi-wifip2pgroupinfo-i.md)&gt; | 是 | 回调函数。当操作成功时，err为0，data表示当前组信息。如果err为非0，表示处理出现错误。 |
 
 **示例**
 

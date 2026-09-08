@@ -213,9 +213,9 @@ if (resultSet != undefined) {
 getDouble(columnIndex: number): number
 ```
 
-Obtains the value in the form of a number-precision floating-point number based on the specified column and the current row.
+Obtains the value in the form of a double-precision floating-point number based on the specified column and the current row.
 
-If the specified column or key is empty or the value is not of the number type, you need to determine whether to throw an exception.
+If the specified column or key is empty or the value is not of the double type, you need to determine whether to throw an exception.
 
 **Since:** 9
 
@@ -254,9 +254,9 @@ if (resultSet != undefined) {
 getLong(columnIndex: number): number
 ```
 
-Obtains the value in the form of a number integer based on the specified column and the current row.
+Obtains the value in the form of a long integer based on the specified column and the current row.
 
-If the specified column or key is empty or the value is not of the number type, you need to determine whether to throw an exception.
+If the specified column or key is empty or the value is not of the long type, you need to determine whether to throw an exception.
 
 **Since:** 9
 

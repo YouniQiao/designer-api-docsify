@@ -37,7 +37,7 @@ style?: TextDecorationStyle
 
 Style of the text decoration.
 
-**Type:** TextDecorationStyle
+**Type:** [TextDecorationStyle](arkts-arkui-textdecorationstyle-e.md)
 
 **Since:** 12
 
@@ -79,7 +79,7 @@ type: TextDecorationType
 
 Type of the text decoration.
 
-**Type:** TextDecorationType
+**Type:** [TextDecorationType](arkts-arkui-textdecorationtype-e.md)
 
 **Since:** 12
 

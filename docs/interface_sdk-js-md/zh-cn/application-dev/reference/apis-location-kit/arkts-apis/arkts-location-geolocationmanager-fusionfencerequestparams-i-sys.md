@@ -166,7 +166,7 @@ poiLocation: Point
 
 表示POI位置信息。
 
-**类型：** Point
+**类型：** [Point](arkts-location-geolocationmanager-point-i.md)
 
 **起始版本：** 26.0.0
 

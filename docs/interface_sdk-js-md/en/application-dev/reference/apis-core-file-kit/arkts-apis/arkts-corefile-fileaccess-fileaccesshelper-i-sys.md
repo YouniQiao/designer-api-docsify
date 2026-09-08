@@ -72,7 +72,7 @@ Checks whether a file or directory exists. This API uses a promise to return the
 | 13900025 | No space left on device |
 | 13900027 | Read-only file system |
 | 13900029 | Resource deadlock would occur |
-| 13900030 | File name too number |
+| 13900030 | File name too long |
 | 13900033 | Too many symbolic links encountered |
 | 13900034 | Operation would block |
 | 13900038 | Value too large for defined data type |
@@ -165,7 +165,7 @@ Checks whether a file or directory exists. This API uses an asynchronous callbac
 | 13900025 | No space left on device |
 | 13900027 | Read-only file system |
 | 13900029 | Resource deadlock would occur |
-| 13900030 | File name too number |
+| 13900030 | File name too long |
 | 13900033 | Too many symbolic links encountered |
 | 13900034 | Operation would block |
 | 13900038 | Value too large for defined data type |
@@ -504,7 +504,7 @@ Copies a file with an alternative file name. This API uses a promise to return t
 | 13900024 | File too large |
 | 13900025 | No space left on device |
 | 13900027 | Read-only file system |
-| 13900030 | File name too number |
+| 13900030 | File name too long |
 | 13900042 | Unknown error |
 | 14300001 | IPC error |
 | 14300002 | Invalid uri |
@@ -591,7 +591,7 @@ Copies a file with an alternative file name. This API uses an asynchronous callb
 | 13900024 | File too large |
 | 13900025 | No space left on device |
 | 13900027 | Read-only file system |
-| 13900030 | File name too number |
+| 13900030 | File name too long |
 | 13900042 | Unknown error |
 | 14300001 | IPC error |
 | 14300002 | Invalid uri |
@@ -679,7 +679,7 @@ Creates a file in a directory. This API uses a promise to return the result.
 | 13900025 | No space left on device |
 | 13900027 | Read-only file system |
 | 13900029 | Resource deadlock would occur |
-| 13900030 | File name too number |
+| 13900030 | File name too long |
 | 13900033 | Too many symbolic links encountered |
 | 13900034 | Operation would block |
 | 13900038 | Value too large for defined data type |
@@ -775,7 +775,7 @@ Creates a file in a directory. This API uses an asynchronous callback to return 
 | 13900025 | No space left on device |
 | 13900027 | Read-only file system |
 | 13900029 | Resource deadlock would occur |
-| 13900030 | File name too number |
+| 13900030 | File name too long |
 | 13900033 | Too many symbolic links encountered |
 | 13900034 | Operation would block |
 | 13900038 | Value too large for defined data type |
@@ -872,7 +872,7 @@ Deletes a file or directory. This API uses a promise to return the result.
 | 13900025 | No space left on device |
 | 13900027 | Read-only file system |
 | 13900029 | Resource deadlock would occur |
-| 13900030 | File name too number |
+| 13900030 | File name too long |
 | 13900033 | Too many symbolic links encountered |
 | 13900034 | Operation would block |
 | 13900038 | Value too large for defined data type |
@@ -962,7 +962,7 @@ Deletes a file or directory. This API uses an asynchronous callback to return th
 | 13900025 | No space left on device |
 | 13900027 | Read-only file system |
 | 13900029 | Resource deadlock would occur |
-| 13900030 | File name too number |
+| 13900030 | File name too long |
 | 13900033 | Too many symbolic links encountered |
 | 13900034 | Operation would block |
 | 13900038 | Value too large for defined data type |
@@ -1032,7 +1032,7 @@ Obtains a **FileInfo** object based on a relative path. This API uses a promise 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;FileInfo&gt; | Returns a FileInfo. |
+| Promise&lt;[FileInfo](arkts-corefile-fileaccess-fileinfo-i-sys.md)&gt; | Returns a FileInfo. |
 
 **Examples**
 
@@ -1080,7 +1080,7 @@ Obtains a **FileInfo** object based on a relative path. This API uses an asynchr
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | relativePath | string | Yes | Indicates the selected file or directory. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;FileInfo&gt; | Yes | The callback is used to return a fileinfo object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[FileInfo](arkts-corefile-fileaccess-fileinfo-i-sys.md)&gt; | Yes | The callback is used to return a fileinfo object. |
 
 **Examples**
 
@@ -1137,7 +1137,7 @@ Obtains a **FileInfo** object based on a URI. This API uses a promise to return 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;FileInfo&gt; | Returns a FileInfo. |
+| Promise&lt;[FileInfo](arkts-corefile-fileaccess-fileinfo-i-sys.md)&gt; | Returns a FileInfo. |
 
 **Examples**
 
@@ -1186,7 +1186,7 @@ Obtains a **FileInfo** object based on a URI. This API uses an asynchronous call
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uri | string | Yes | Indicates the selected file or directory. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;FileInfo&gt; | Yes | The callback is used to return a fileinfo object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[FileInfo](arkts-corefile-fileaccess-fileinfo-i-sys.md)&gt; | Yes | The callback is used to return a fileinfo object. |
 
 **Examples**
 
@@ -1262,7 +1262,7 @@ Obtains information about the device root nodes of the file management services 
 | 13900025 | No space left on device |
 | 13900027 | Read-only file system |
 | 13900029 | Resource deadlock would occur |
-| 13900030 | File name too number |
+| 13900030 | File name too long |
 | 13900033 | Too many symbolic links encountered |
 | 13900034 | Operation would block |
 | 13900038 | Value too large for defined data type |
@@ -1356,7 +1356,7 @@ Obtains information about the device root nodes of the file management services 
 | 13900025 | No space left on device |
 | 13900027 | Read-only file system |
 | 13900029 | Resource deadlock would occur |
-| 13900030 | File name too number |
+| 13900030 | File name too long |
 | 13900033 | Too many symbolic links encountered |
 | 13900034 | Operation would block |
 | 13900038 | Value too large for defined data type |
@@ -1460,7 +1460,7 @@ Creates a directory in a specified directory. This API uses a promise to return 
 | 13900025 | No space left on device |
 | 13900027 | Read-only file system |
 | 13900029 | Resource deadlock would occur |
-| 13900030 | File name too number |
+| 13900030 | File name too long |
 | 13900033 | Too many symbolic links encountered |
 | 13900034 | Operation would block |
 | 13900038 | Value too large for defined data type |
@@ -1556,7 +1556,7 @@ Creates a directory in a specified directory. This API uses an asynchronous call
 | 13900025 | No space left on device |
 | 13900027 | Read-only file system |
 | 13900029 | Resource deadlock would occur |
-| 13900030 | File name too number |
+| 13900030 | File name too long |
 | 13900033 | Too many symbolic links encountered |
 | 13900034 | Operation would block |
 | 13900038 | Value too large for defined data type |
@@ -1654,7 +1654,7 @@ Moves a file or directory. This API uses a promise to return the result. Current
 | 13900025 | No space left on device |
 | 13900027 | Read-only file system |
 | 13900029 | Resource deadlock would occur |
-| 13900030 | File name too number |
+| 13900030 | File name too long |
 | 13900033 | Too many symbolic links encountered |
 | 13900034 | Operation would block |
 | 13900038 | Value too large for defined data type |
@@ -1745,7 +1745,7 @@ Moves a file or directory. This API uses an asynchronous callback to return the 
 | 13900025 | No space left on device |
 | 13900027 | Read-only file system |
 | 13900029 | Resource deadlock would occur |
-| 13900030 | File name too number |
+| 13900030 | File name too long |
 | 13900033 | Too many symbolic links encountered |
 | 13900034 | Operation would block |
 | 13900038 | Value too large for defined data type |
@@ -1844,7 +1844,7 @@ Moves a file, and renames it if a file with the same name already exists in the 
 | 13900024 | File too large |
 | 13900025 | No space left on device |
 | 13900027 | Read-only file system |
-| 13900030 | File name too number |
+| 13900030 | File name too long |
 | 13900042 | Unknown error |
 | 14300001 | IPC error |
 | 14300002 | Invalid uri |
@@ -1929,7 +1929,7 @@ Moves a file, and renames it if a file with the same name already exists in the 
 | 13900024 | File too large |
 | 13900025 | No space left on device |
 | 13900027 | Read-only file system |
-| 13900030 | File name too number |
+| 13900030 | File name too long |
 | 13900042 | Unknown error |
 | 14300001 | IPC error |
 | 14300002 | Invalid uri |
@@ -2021,7 +2021,7 @@ Moves a file or directory. This API uses a promise to return the result. You can
 | 13900024 | File too large |
 | 13900025 | No space left on device |
 | 13900027 | Read-only file system |
-| 13900030 | File name too number |
+| 13900030 | File name too long |
 | 13900042 | Unknown error |
 | 14300001 | IPC error |
 | 14300002 | Invalid uri |
@@ -2148,7 +2148,7 @@ Moves a file or directory. This API uses an asynchronous callback to return the 
 | 13900024 | File too large |
 | 13900025 | No space left on device |
 | 13900027 | Read-only file system |
-| 13900030 | File name too number |
+| 13900030 | File name too long |
 | 13900042 | Unknown error |
 | 14300001 | IPC error |
 | 14300002 | Invalid uri |
@@ -2243,7 +2243,7 @@ Moves a file or directory. This API uses an asynchronous callback to return the 
 | 13900024 | File too large |
 | 13900025 | No space left on device |
 | 13900027 | Read-only file system |
-| 13900030 | File name too number |
+| 13900030 | File name too long |
 | 13900042 | Unknown error |
 | 14300001 | IPC error |
 | 14300002 | Invalid uri |
@@ -2342,7 +2342,7 @@ Opens a file. This API uses a promise to return the result.
 | 13900025 | No space left on device |
 | 13900027 | Read-only file system |
 | 13900029 | Resource deadlock would occur |
-| 13900030 | File name too number |
+| 13900030 | File name too long |
 | 13900033 | Too many symbolic links encountered |
 | 13900034 | Operation would block |
 | 13900038 | Value too large for defined data type |
@@ -2431,7 +2431,7 @@ Opens a file. This API uses an asynchronous callback to return the result.
 | 13900025 | No space left on device |
 | 13900027 | Read-only file system |
 | 13900029 | Resource deadlock would occur |
-| 13900030 | File name too number |
+| 13900030 | File name too long |
 | 13900033 | Too many symbolic links encountered |
 | 13900034 | Operation would block |
 | 13900038 | Value too large for defined data type |
@@ -2672,7 +2672,7 @@ Renames a file or directory. This API uses a promise to return the result.
 | 13900025 | No space left on device |
 | 13900027 | Read-only file system |
 | 13900029 | Resource deadlock would occur |
-| 13900030 | File name too number |
+| 13900030 | File name too long |
 | 13900033 | Too many symbolic links encountered |
 | 13900034 | Operation would block |
 | 13900038 | Value too large for defined data type |
@@ -2762,7 +2762,7 @@ Renames a file or directory. This API uses an asynchronous callback to return th
 | 13900025 | No space left on device |
 | 13900027 | Read-only file system |
 | 13900029 | Resource deadlock would occur |
-| 13900030 | File name too number |
+| 13900030 | File name too long |
 | 13900033 | Too many symbolic links encountered |
 | 13900034 | Operation would block |
 | 13900038 | Value too large for defined data type |

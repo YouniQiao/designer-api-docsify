@@ -12,4 +12,4 @@ X509 certificate.
 
 **System capability:** SystemCapability.Communication.NetStack
 
-**Type:** cert.X509Cert
+**Type:** [cert.X509Cert](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-cert-x509cert-i.md)

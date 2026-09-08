@@ -28,8 +28,8 @@ Obtain current location
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| request | CurrentLocationRequest | Yes | Indicates the location request parameters. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Location&gt; | Yes | Indicates the callback for reporting the location result. |
+| request | [CurrentLocationRequest](arkts-location-geolocation-currentlocationrequest-i.md) | Yes | Indicates the location request parameters. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Location](arkts-location-geolocation-location-i.md)&gt; | Yes | Indicates the callback for reporting the location result. |
 
 **Examples**
 
@@ -71,7 +71,7 @@ Obtain current location
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Location&gt; | Yes | Indicates the callback for reporting the location result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Location](arkts-location-geolocation-location-i.md)&gt; | Yes | Indicates the callback for reporting the location result. |
 
 **Examples**
 
@@ -112,13 +112,13 @@ Obtain current location
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| request | CurrentLocationRequest | No | Indicates the location request parameters. |
+| request | [CurrentLocationRequest](arkts-location-geolocation-currentlocationrequest-i.md) | No | Indicates the location request parameters. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Location&gt; | The promise returned by the function. |
+| Promise&lt;[Location](arkts-location-geolocation-location-i.md)&gt; | The promise returned by the function. |
 
 **Examples**
 

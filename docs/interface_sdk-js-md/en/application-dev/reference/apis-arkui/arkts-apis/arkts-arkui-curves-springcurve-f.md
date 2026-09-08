@@ -33,7 +33,7 @@ Creates a spring curve. The curve shape is subject to the spring parameters, and
 
 | Type | Description |
 | --- | --- |
-| ICurve | Interpolation curve. |
+| [ICurve](arkts-arkui-curves-icurve-i.md) | Interpolation curve. |
 
 **Examples**
 

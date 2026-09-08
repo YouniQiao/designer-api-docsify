@@ -248,7 +248,7 @@ type?: agentConstant.AgentCardType
 
 The type of the AgentCard. When `type` is `agentConstant.AgentCardType.LOW_CODE`, the corresponding application must be a system application. Otherwise, the agent card cannot be registered, installed, or updated.
 
-**Type:** agentConstant.AgentCardType
+**Type:** [agentConstant.AgentCardType](arkts-ability-agentconstant-agentcardtype-e.md)
 
 **Default:** AgentCardType.APP
 

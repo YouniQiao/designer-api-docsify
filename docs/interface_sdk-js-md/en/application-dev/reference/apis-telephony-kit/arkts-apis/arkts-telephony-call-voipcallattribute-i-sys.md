@@ -118,7 +118,7 @@ userProfile: image.PixelMap
 
 User profile picture.
 
-**Type:** image.PixelMap
+**Type:** [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)
 
 **Since:** 11
 

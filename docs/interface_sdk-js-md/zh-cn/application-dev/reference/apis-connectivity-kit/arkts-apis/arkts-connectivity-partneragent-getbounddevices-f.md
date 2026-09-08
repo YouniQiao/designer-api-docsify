@@ -28,7 +28,7 @@ function getBoundDevices(): PartnerDeviceAddress[]
 
 | 类型 | 说明 |
 | --- | --- |
-| PartnerDeviceAddress[] | 应用注册过的所有设备。 |
+| [PartnerDeviceAddress](arkts-connectivity-partneragent-partnerdeviceaddress-i.md)[] | 应用注册过的所有设备。 |
 
 **错误码：**
 

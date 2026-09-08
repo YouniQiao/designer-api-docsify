@@ -24,7 +24,7 @@ function setBadgeNumberByBundle(bundle: BundleOption, badgeNumber: number): Prom
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| bundle | BundleOption | 是 | 指定应用的包信息。 |
+| bundle | [BundleOption](arkts-notification-notificationmanager-bundleoption-t.md) | 是 | 指定应用的包信息。 |
 | badgeNumber | number | 是 | 角标个数。 |
 
 **返回值：**

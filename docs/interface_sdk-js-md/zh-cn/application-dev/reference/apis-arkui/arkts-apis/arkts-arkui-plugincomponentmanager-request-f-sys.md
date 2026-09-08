@@ -36,30 +36,26 @@ import { pluginComponentManager } from '@kit.ArkUI';
 
 pluginComponentManager.request(
   {
-    owner: {
-      bundleName: "com.example.user",
-      abilityName: "com.example.user.MainAbility",
-    },
-    target: {
+    want: {
       bundleName: "com.example.provider",
       abilityName: "com.example.provider.MainAbility",
     },
     name: "plugintemplate",
     data: {
-      "key1": "myapplication plugin component test",
+      "key_1": "plugin component test",
+      "key_2": 1111111,
     },
     jsonPath: "",
   },
   (err, data) => {
     if (err) {
-      console.error(`Failed to request. Code: ${err.code}, message: ${err.message}`);
-      return;
-    }
-    if (!data) {
+      console.error(`request_callback: err.code = ${err.code}, err.message = ${err.message}`);
       return;
     }
     console.info("request_callback: componentTemplate.ability=" + data.componentTemplate.ability);
     console.info("request_callback: componentTemplate.source=" + data.componentTemplate.source);
+    console.info("request_callback: data=" + JSON.stringify(data.data));
+    console.info("request_callback: extraData=" + JSON.stringify(data.extraData));
   }
-);
+)
 ```

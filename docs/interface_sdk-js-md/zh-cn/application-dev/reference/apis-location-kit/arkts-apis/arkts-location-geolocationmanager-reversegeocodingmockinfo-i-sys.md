@@ -22,7 +22,7 @@ geoAddress: GeoAddress
 
 表示地名信息。
 
-**类型：** GeoAddress
+**类型：** [GeoAddress](arkts-location-geolocationmanager-geoaddress-i.md)
 
 **起始版本：** 9
 
@@ -38,7 +38,7 @@ location: ReverseGeoCodeRequest
 
 表示经纬度信息。
 
-**类型：** ReverseGeoCodeRequest
+**类型：** [ReverseGeoCodeRequest](arkts-location-geolocationmanager-reversegeocoderequest-i.md)
 
 **起始版本：** 9
 

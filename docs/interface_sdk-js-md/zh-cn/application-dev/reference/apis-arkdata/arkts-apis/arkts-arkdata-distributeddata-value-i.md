@@ -23,7 +23,7 @@ type: ValueType
 
 值类型。
 
-**类型：** ValueType
+**类型：** [ValueType](arkts-arkdata-distributeddata-valuetype-e.md)
 
 **起始版本：** 7
 

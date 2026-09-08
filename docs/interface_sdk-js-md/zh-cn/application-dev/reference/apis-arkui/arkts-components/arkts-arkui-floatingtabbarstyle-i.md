@@ -129,7 +129,7 @@ systemMaterial?: UIMaterial.ImmersiveMaterial
 
 材质的样式。
 
-**类型：** UIMaterial.ImmersiveMaterial
+**类型：** [UIMaterial.ImmersiveMaterial](../arkts-apis/arkts-arkui-uimaterial-immersivematerial-c.md)
 
 **起始版本：** 26.0.0
 

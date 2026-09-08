@@ -99,7 +99,7 @@ When **cachedCount** is set for the list, the system preloads and lays out the *
 > 
 > You are advised to set cachedCount to n/2 (n indicates the number of list items displayed on one screen). You
 > also need to consider other factors to balance the experience and memory usage. For best practices, see
-> [Cache List Items](https://developer.huawei.com/consumer/en/doc/best-practices/bpta-best-practices-number-list#section11667144010222).
+> [Cache List Items](https://developer.huawei.com/consumer/en/doc/best-practices/bpta-best-practices-long-list#section11667144010222).
 
 **Since:** 14
 
@@ -142,7 +142,7 @@ Default behavior: The **count** parameter is of the **number** type by default, 
 > higher value, such as twice the minimum cache count, to utilize the UI thread's idle time for node creation. This
 > reduces the need to create nodes during scrolling for preloading and enhances scrolling smoothness. For best
 > practices, see
-> [Cache List Items](https://developer.huawei.com/consumer/en/doc/best-practices/bpta-best-practices-number-list#section11667144010222).
+> [Cache List Items](https://developer.huawei.com/consumer/en/doc/best-practices/bpta-best-practices-long-list#section11667144010222).
 
 **Since:** 22
 
@@ -288,7 +288,7 @@ If the sum of **contentStartOffset** and **contentEndOffset** exceeds the length
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | number \| Resource | Yes | Offset from the end of the list content to the boundary of the list display area.Default value: **0**If the parameter type is number, the unit is vp.Invalid values (negative numbers or non-numeric Resource values) are treated as the default value. |
+| offset | number \| [Resource](../arkts-apis/arkts-arkui-resource-t.md) | Yes | Offset from the end of the list content to the boundary of the list display area.Default value: **0**If the parameter type is number, the unit is vp.Invalid values (negative numbers or non-numeric Resource values) are treated as the default value. |
 
 ## contentStartOffset
 
@@ -336,7 +336,7 @@ If the sum of **contentStartOffset** and **contentEndOffset** exceeds the length
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | number \| Resource | Yes | Offset from the start of the list content to the boundary of the list display area.Default value: **0**If the parameter type is number, the unit is vp.Invalid values (negative numbers or non-numeric Resource values) are treated as the default value. |
+| offset | number \| [Resource](../arkts-apis/arkts-arkui-resource-t.md) | Yes | Offset from the start of the list content to the boundary of the list display area.Default value: **0**If the parameter type is number, the unit is vp.Invalid values (negative numbers or non-numeric Resource values) are treated as the default value. |
 
 ## divider
 
@@ -529,7 +529,7 @@ Sets the friction coefficient. It applies only to gestures in the scrolling area
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number \| Resource | Yes | Friction coefficient.Default value: **0.6** for non-wearable devices and **0.9** for wearable devices.Since API version 11, the default value for non-wearable devices is **0.7**.Since API version 12, the default value for non-wearable devices is **0.75**. |
+| value | number \| [Resource](../arkts-apis/arkts-arkui-resource-t.md) | Yes | Friction coefficient.Default value: **0.6** for non-wearable devices and **0.9** for wearable devices.Since API version 11, the default value for non-wearable devices is **0.7**.Since API version 12, the default value for non-wearable devices is **0.75**. |
 
 ## lanes
 
@@ -609,7 +609,7 @@ Sets the direction in which the list items are arranged.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Axis | Yes | Direction in which the list items are arranged.Default value: **Axis.Vertical |
+| value | [Axis](../arkts-apis/arkts-arkui-axis-e.md) | Yes | Direction in which the list items are arranged.Default value: **Axis.Vertical |
 
 ## maintainVisibleContentPosition
 

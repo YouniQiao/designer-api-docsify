@@ -38,7 +38,7 @@ state: CallState
 
 Current call state. See [CallState](arkts-avsession-avsession-callstate-e.md)
 
-**Type:** CallState
+**Type:** [CallState](arkts-avsession-avsession-callstate-e.md)
 
 **Since:** 11
 

@@ -39,27 +39,6 @@ Obtains information about all auto-startup application components. This API uses
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Failed to connect to the system service. |
 
-**Examples**
-
-```TypeScript
-import { autoStartupManager, common } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  autoStartupManager.queryAllAutoStartupApplications((err: BusinessError, data: common.AutoStartupInfo[]) => {
-    if (err) {
-      console.error(`queryAllAutoStartupApplications failed, err code: ${err.code}, err msg: ${err.message}.`);
-      return;
-    }
-    console.info(`queryAllAutoStartupApplications success, data: ${JSON.stringify(data)}.`);
-  });
-} catch (err) {
-  let code = (err as BusinessError).code;
-  let msg = (err as BusinessError).message;
-  console.error(`queryAllAutoStartupApplications failed, err code: ${code}, err msg: ${msg}.`);
-}
-```
-
 
 ## queryAllAutoStartupApplications
 
@@ -93,22 +72,3 @@ Obtains information about all auto-startup application components. This API uses
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Failed to connect to the system service. |
-
-**Examples**
-
-```TypeScript
-import { autoStartupManager, common } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  autoStartupManager.queryAllAutoStartupApplications().then((data: common.AutoStartupInfo[]) => {
-    console.info(`queryAllAutoStartupApplications success, data: ${JSON.stringify(data)}.`);
-  }).catch((err: BusinessError) => {
-    console.error(`queryAllAutoStartupApplications failed, err code: ${err.code}, err msg: ${err.message}.`);
-  });
-} catch (err) {
-  let code = (err as BusinessError).code;
-  let msg = (err as BusinessError).message;
-  console.error(`queryAllAutoStartupApplications failed, err code: ${code}, err msg: ${msg}.`);
-}
-```

@@ -42,7 +42,7 @@ delete(
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;Result&lt;Record&lt;string, [CloudType](arkts-arkdata-cloudextension-cloudtype-t-sys.md)&gt;&gt;&gt;&gt; | Promise对象，返回被删除的数据和删除结果。 |
+| Promise&lt;Array&lt;[Result](arkts-arkdata-relationalstore-result-i.md)&lt;Record&lt;string, [CloudType](arkts-arkdata-cloudextension-cloudtype-t-sys.md)&gt;&gt;&gt;&gt; | Promise对象，返回被删除的数据和删除结果。 |
 
 **示例**
 
@@ -84,7 +84,7 @@ generateId(count: number): Promise<Result<Array<string>>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Result&lt;Array&lt;string&gt;&gt;&gt; | Promise对象，以[Result](../../../reference/apis-arkdata/js-apis-data-cloudExtension-sys.md#resultt)结构将生成的ID以数组形式返回。 |
+| Promise&lt;[Result](arkts-arkdata-relationalstore-result-i.md)&lt;Array&lt;string&gt;&gt;&gt; | Promise对象，以[Result](../../../reference/apis-arkdata/js-apis-data-cloudExtension-sys.md#resultt)结构将生成的ID以数组形式返回。 |
 
 **示例**
 
@@ -128,7 +128,7 @@ heartbeat(lockId: number): Promise<Result<LockInfo>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Result&lt;LockInfo&gt;&gt; | Promise对象，返回锁的信息，包含加锁时长和锁的ID。 |
+| Promise&lt;[Result](arkts-arkdata-relationalstore-result-i.md)&lt;[LockInfo](arkts-arkdata-cloudextension-lockinfo-i-sys.md)&gt;&gt; | Promise对象，返回锁的信息，包含加锁时长和锁的ID。 |
 
 **示例**
 
@@ -184,7 +184,7 @@ insert(
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;Result&lt;Record&lt;string, [CloudType](arkts-arkdata-cloudextension-cloudtype-t-sys.md)&gt;&gt;&gt;&gt; | Promise对象，返回插入的数据和插入结果。 |
+| Promise&lt;Array&lt;[Result](arkts-arkdata-relationalstore-result-i.md)&lt;Record&lt;string, [CloudType](arkts-arkdata-cloudextension-cloudtype-t-sys.md)&gt;&gt;&gt;&gt; | Promise对象，返回插入的数据和插入结果。 |
 
 **示例**
 
@@ -220,7 +220,7 @@ lock(): Promise<Result<LockInfo>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Result&lt;LockInfo&gt;&gt; | Promise对象，返回加锁的信息，包含加锁时长和锁的ID。 |
+| Promise&lt;[Result](arkts-arkdata-relationalstore-result-i.md)&lt;[LockInfo](arkts-arkdata-cloudextension-lockinfo-i-sys.md)&gt;&gt; | Promise对象，返回加锁的信息，包含加锁时长和锁的ID。 |
 
 **示例**
 
@@ -273,7 +273,7 @@ query(table: string, fields: Array<string>, queryCount: number, queryCursor: str
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Result&lt;[CloudData](arkts-arkdata-cloudextension-clouddata-i-sys.md)&gt;&gt; | Promise对象，返回被查询的数据和查询结果。 |
+| Promise&lt;[Result](arkts-arkdata-relationalstore-result-i.md)&lt;[CloudData](arkts-arkdata-cloudextension-clouddata-i-sys.md)&gt;&gt; | Promise对象，返回被查询的数据和查询结果。 |
 
 **示例**
 
@@ -322,7 +322,7 @@ unlock(lockId: number): Promise<Result<boolean>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Result&lt;boolean&gt;&gt; | Promise对象，返回解锁结果，true表示解锁成功，false表示解锁失败。 |
+| Promise&lt;[Result](arkts-arkdata-relationalstore-result-i.md)&lt;boolean&gt;&gt; | Promise对象，返回解锁结果，true表示解锁成功，false表示解锁失败。 |
 
 **示例**
 
@@ -373,7 +373,7 @@ update(
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;Result&lt;Record&lt;string, [CloudType](arkts-arkdata-cloudextension-cloudtype-t-sys.md)&gt;&gt;&gt;&gt; | Promise对象，返回更新的数据和更新结果。 |
+| Promise&lt;Array&lt;[Result](arkts-arkdata-relationalstore-result-i.md)&lt;Record&lt;string, [CloudType](arkts-arkdata-cloudextension-cloudtype-t-sys.md)&gt;&gt;&gt;&gt; | Promise对象，返回更新的数据和更新结果。 |
 
 **示例**
 

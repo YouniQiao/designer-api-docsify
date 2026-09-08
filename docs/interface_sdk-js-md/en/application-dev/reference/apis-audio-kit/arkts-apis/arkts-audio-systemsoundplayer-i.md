@@ -24,7 +24,7 @@ Loads a system sound.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| soundType | systemSoundManager.SystemSoundType | Yes | type of sound to preload. |
+| soundType | [systemSoundManager.SystemSoundType](arkts-audio-systemsoundmanager-systemsoundtype-e.md) | Yes | type of sound to preload. |
 
 **Return value:**
 
@@ -70,7 +70,7 @@ Plays a system sound.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| soundType | systemSoundManager.SystemSoundType | Yes | type of sound to play. |
+| soundType | [systemSoundManager.SystemSoundType](arkts-audio-systemsoundmanager-systemsoundtype-e.md) | Yes | type of sound to play. |
 
 **Return value:**
 
@@ -154,7 +154,7 @@ Unloads a system sound that has been loaded before.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| soundType | systemSoundManager.SystemSoundType | Yes | type of sound to unload. |
+| soundType | [systemSoundManager.SystemSoundType](arkts-audio-systemsoundmanager-systemsoundtype-e.md) | Yes | type of sound to unload. |
 
 **Return value:**
 

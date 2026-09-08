@@ -55,23 +55,6 @@ deleteBackward(length: number, callback: AsyncCallback<boolean>): void
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let length: number = 1;
-inputClient.deleteBackward(length, (err: BusinessError, result: boolean) => {
-  if (err) {
-    console.error(`Failed to deleteBackward. Code is ${err.code}, message is ${err.message}`);
-    return;
-  }
-  if (result) {
-    console.info('Succeeded in deleting backward.');
-  } else {
-    console.error(`Failed to deleteBackward.`);
-  }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let length: number = 1;
 textInputClient.deleteBackward(length, (err: BusinessError, result: boolean) => {
   if (err) {
     console.error(`Failed to deleteBackward. Code is ${err.code}, message is ${err.message}`);
@@ -124,21 +107,6 @@ deleteBackward(length: number): Promise<boolean>
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let length: number = 1;
-inputClient.deleteBackward(length).then((result: boolean) => {
-  if (result) {
-    console.info('Succeeded in deleting backward.');
-  } else {
-    console.error('Failed to deleteBackward.');
-  }
-}).catch((err: BusinessError) => {
-  console.error(`Failed to deleteBackward. Code is ${err.code}, message is ${err.message}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let length: number = 1;
 textInputClient.deleteBackward(length).then((result: boolean) => {
   if (result) {
     console.info('Succeeded in deleting backward.');
@@ -179,23 +147,6 @@ deleteForward(length: number, callback: AsyncCallback<boolean>): void
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。当光标前固定长度的文本删除成功，err为undefined，data为true；当光标前固定长度的文本删除失败，err为undefined，data为false；否则为错误对象。 |
 
 **示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let length: number = 1;
-inputClient.deleteForward(length, (err: BusinessError, result: boolean) => {
-  if (err) {
-    console.error(`Failed to deleteForward. Code is ${err.code}, message is ${err.message}`);
-    return;
-  }
-  if (result) {
-    console.info('Succeeded in deleting forward.');
-  } else {
-    console.error(`Failed to deleteForward.`);
-  }
-});
-```
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -253,21 +204,6 @@ deleteForward(length: number): Promise<boolean>
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let length: number = 1;
-inputClient.deleteForward(length).then((result: boolean) => {
-  if (result) {
-    console.info('Succeeded in deleting forward.');
-  } else {
-    console.error('Failed to delete Forward.');
-  }
-}).catch((err: BusinessError) => {
-  console.error(`Failed to deleteForward. Code is ${err.code}, message is ${err.message}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let length: number = 1;
 textInputClient.deleteForward(length).then((result: boolean) => {
   if (result) {
     console.info('Succeeded in deleting forward.');
@@ -308,19 +244,6 @@ getBackward(length: number, callback: AsyncCallback<string>): void
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数。当光标后固定长度的文本获取成功，err为undefined，data为获取到的文本；否则为错误对象。 |
 
 **示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let length: number = 1;
-inputClient.getBackward(length, (err: BusinessError, text: string) => {
-  if (err) {
-    console.error(`Failed to getBackward. Code is ${err.code}, message is ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in getting backward, text: ' + text);
-});
-```
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -369,17 +292,6 @@ getBackward(length: number): Promise<string>
 | Promise&lt;string&gt; | Promise对象，返回光标后固定长度的文本。 |
 
 **示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let length: number = 1;
-inputClient.getBackward(length).then((text: string) => {
-  console.info('Succeeded in getting backward, text: ' + text);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to getBackward. Code is ${err.code}, message is ${err.message}`);
-});
-```
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -468,17 +380,6 @@ getEditorAttribute(): Promise<EditorAttribute>
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
-inputClient.getEditorAttribute().then((editorAttribute: inputMethodEngine.EditorAttribute) => {
-  console.info(`editorAttribute.inputPattern:  ${editorAttribute.inputPattern}`);
-  console.info(`editorAttribute.enterKeyType:  ${editorAttribute.enterKeyType}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to getEditorAttribute. Code is ${err.code}, message is ${err.message}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
 textInputClient.getEditorAttribute().then((editorAttribute: inputMethodEngine.EditorAttribute) => {
   console.info(`editorAttribute.inputPattern: ${editorAttribute.inputPattern}`);
   console.info(`editorAttribute.enterKeyType: ${editorAttribute.enterKeyType}`);
@@ -516,19 +417,6 @@ getForward(length: number, callback: AsyncCallback<string>): void
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数。当光标前固定长度的文本获取成功，err为undefined，data为获取到的文本；否则为错误对象。 |
 
 **示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let length: number = 1;
-inputClient.getForward(length, (err: BusinessError, text: string) => {
-  if (err) {
-    console.error(`Failed to getForward. Code is ${err.code}, message is ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in getting forward, text: ' + text);
-});
-```
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -582,17 +470,6 @@ getForward(length: number): Promise<string>
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let length: number = 1;
-inputClient.getForward(length).then((text: string) => {
-  console.info('Succeeded in getting forward, text: ' + text);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to getForward. Code is ${err.code}, message is ${err.message}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let length: number = 1;
 textInputClient.getForward(length).then((text: string) => {
   console.info('Succeeded in getting forward, text: ' + text);
 }).catch((err: BusinessError) => {
@@ -629,23 +506,6 @@ insertText(text: string, callback: AsyncCallback<boolean>): void
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。当文本插入成功，err为undefined，data为true；否则为错误对象。 |
 
 **示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-
-inputClient.insertText('test', (err: BusinessError, result: boolean) => {
-  if (err) {
-    console.error(`Failed to insertText. Code is ${err.code}, message is ${err.message}`);
-    return;
-  }
-  if (result) {
-    console.info('Succeeded in inserting text.');
-  } else {
-    console.error('Failed to insertText.');
-  }
-});
-```
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -701,20 +561,6 @@ insertText(text: string): Promise<boolean>
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
-inputClient.insertText('test').then((result: boolean) => {
-  if (result) {
-    console.info('Succeeded in inserting text.');
-  } else {
-    console.error('Failed to insertText.');
-  }
-}).catch((err: BusinessError) => {
-  console.error(`Failed to insertText. Code is ${err.code}, message is ${err.message}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
 textInputClient.insertText('test').then((result: boolean) => {
   if (result) {
     console.info('Succeeded in inserting text.');
@@ -755,24 +601,6 @@ sendKeyFunction(action: number, callback: AsyncCallback<boolean>): void
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。当功能键发送成功，err为undefined，data为true；当功能键发送失败，err为undefined，data为false；否则为错误对象。 |
 
 **示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let action: number = 1;
-
-inputClient.sendKeyFunction(action, (err: BusinessError, result: boolean) => {
-  if (err) {
-    console.error(`Failed to sendKeyFunction. Code is ${err.code}, message is ${err.message}`);
-    return;
-  }
-  if (result) {
-    console.info('Succeeded in sending key function.');
-  } else {
-    console.error('Failed to sendKeyFunction.');
-  }
-});
-```
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -825,21 +653,6 @@ sendKeyFunction(action: number): Promise<boolean>
 | Promise&lt;boolean&gt; | Promise对象。返回true表示发送功能键成功；返回false表示发送功能键失败。 |
 
 **示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let action: number = 1;
-inputClient.sendKeyFunction(action).then((result: boolean) => {
-  if (result) {
-    console.info('Succeeded in sending key function.');
-  } else {
-    console.error('Failed to sendKeyFunction.');
-  }
-}).catch((err: BusinessError) => {
-  console.error(`Failed to sendKeyFunction. Code is ${err.code}, message is ${err.message}`);
-});
-```
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

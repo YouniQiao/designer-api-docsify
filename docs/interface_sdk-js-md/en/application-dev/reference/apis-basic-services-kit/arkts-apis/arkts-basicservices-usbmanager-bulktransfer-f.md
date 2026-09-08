@@ -36,8 +36,8 @@ Performs bulk transfer. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pipe | USBDevicePipe | Yes | USB device pipe. You need to call [usbManager.connectDevice](arkts-basicservices-usbmanager-connectdevice-f.md) to obtain its value. |
-| endpoint | USBEndpoint | Yes | USB endpoint, which is used to determine the USB interface for data transfer. You need to call [usbManager.getDevices](arkts-basicservices-usbmanager-getdevices-f.md) to obtain the device information list and endpoint. Wherein, **address** is used to determine the endpoint address, **direction** is used to determine the endpoint direction, and **interfaceId** is used to determine the USB interface to which the endpoint belongs. Other parameters are passed transparently. |
+| pipe | [USBDevicePipe](arkts-basicservices-usbmanager-usbdevicepipe-i.md) | Yes | USB device pipe. You need to call [usbManager.connectDevice](arkts-basicservices-usbmanager-connectdevice-f.md) to obtain its value. |
+| endpoint | [USBEndpoint](arkts-basicservices-usbmanager-usbendpoint-i.md) | Yes | USB endpoint, which is used to determine the USB interface for data transfer. You need to call [usbManager.getDevices](arkts-basicservices-usbmanager-getdevices-f.md) to obtain the device information list and endpoint. Wherein, **address** is used to determine the endpoint address, **direction** is used to determine the endpoint direction, and **interfaceId** is used to determine the USB interface to which the endpoint belongs. Other parameters are passed transparently. |
 | buffer | Uint8Array | Yes | Buffer for writing or reading data. |
 | timeout | number | No | Timeout interval.Unit: milliseconds. This parameter is optional. If the bulk transfer is complete within the specified time, the size of the transferred or received data block is returned; otherwise, a timeout error is returned. The default value is **0**, indicating that the system waits infinitely until the control transfer is complete. Set this parameter as required. |
 
@@ -57,6 +57,8 @@ Performs bulk transfer. This API uses a promise to return the result.
 **Examples**
 
 > NOTE
+> 
+> The following sample code is only a basic process for calling the bulkTransfer API. In actual calling, you must comply with the device-related protocols to ensure correct data transfer and device compatibility.
 
 ```TypeScript
 // Call usbManager.getDevices to obtain a data set. Then, obtain a USB device and its access permission.

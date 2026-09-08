@@ -35,28 +35,6 @@ Closes this **resultSet** to release memory. If the **resultSet** is not closed,
 | [14800012](../errorcode-data-rdb.md#14800012-empty-result-set-or-invalid-position) | ResultSet is empty or pointer index is out of bounds. |
 | [14800000](../errorcode-data-rdb.md#14800000-internal-error) | Inner error.<br>**Applicable version:** 12 and later |
 
-**Examples**
-
-```TypeScript
-if (resultSet != undefined) {
-  (resultSet as relationalStore.ResultSet).close();
-}
-```
-
-```TypeScript
-async function closeExample(store : relationalStore.RdbStore) {
-  try {
-    let resultSet: relationalStore.LiteResultSet | undefined;
-    resultSet = await store.querySqlWithoutRowCount('select * from EMPLOYEE where name = ?', ["Rose"]);
-    if (resultSet != undefined) {
-      resultSet.close();
-    }
-  } catch (err) {
-    console.error(`failed, code is ${err.code}, message is ${err.message}`);
-  }
-}
-```
-
 ## getAsset
 
 ```TypeScript
@@ -79,7 +57,7 @@ Obtains the value from the specified column in the current row, and returns the 
 
 | Type | Description |
 | --- | --- |
-| Asset | Value obtained. |
+| [Asset](arkts-arkdata-relationalstore-asset-i.md) | Value obtained. |
 
 **Error codes:**
 
@@ -105,30 +83,6 @@ Obtains the value from the specified column in the current row, and returns the 
 | [14800032](../errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) | SQLite: Abort due to constraint violation.<br>**Applicable version:** 12 and later |
 | [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) | SQLite: Data type mismatch.<br>**Applicable version:** 12 and later |
 | [14800034](../errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) | SQLite: Library used incorrectly.<br>**Applicable version:** 12 and later |
-
-**Examples**
-
-```TypeScript
-if (resultSet != undefined) {
-  const doc = (resultSet as relationalStore.ResultSet).getAsset((resultSet as relationalStore.ResultSet).getColumnIndex("DOC"));
-}
-```
-
-```TypeScript
-async function getAssetExample(store : relationalStore.RdbStore) {
-  try {
-    let resultSet: relationalStore.LiteResultSet | undefined;
-    resultSet = await store.querySqlWithoutRowCount('select * from EMPLOYEE where name = ?', ["Rose"]);
-    if (resultSet != undefined) {
-      resultSet.goToNextRow();
-      const doc = resultSet.getAsset(resultSet.getColumnIndex("DOC"));
-      resultSet!.close();
-    }
-  } catch (err) {
-    console.error(`failed, code is ${err.code}, message is ${err.message}`);
-  }
-}
-```
 
 ## getAssets
 
@@ -152,7 +106,7 @@ Obtains the value from the specified column in the current row, and returns the 
 
 | Type | Description |
 | --- | --- |
-| Assets | Value obtained. |
+| [Assets](arkts-arkdata-relationalstore-assets-t.md) | Value obtained. |
 
 **Error codes:**
 
@@ -178,30 +132,6 @@ Obtains the value from the specified column in the current row, and returns the 
 | [14800032](../errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) | SQLite: Abort due to constraint violation.<br>**Applicable version:** 12 and later |
 | [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) | SQLite: Data type mismatch.<br>**Applicable version:** 12 and later |
 | [14800034](../errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) | SQLite: Library used incorrectly.<br>**Applicable version:** 12 and later |
-
-**Examples**
-
-```TypeScript
-if (resultSet != undefined) {
-  const docs = (resultSet as relationalStore.ResultSet).getAssets((resultSet as relationalStore.ResultSet).getColumnIndex("DOCS"));
-}
-```
-
-```TypeScript
-async function getAssetsExample(store : relationalStore.RdbStore) {
-  try {
-    let resultSet: relationalStore.LiteResultSet | undefined;
-    resultSet = await store.querySqlWithoutRowCount('select * from EMPLOYEE where name = ?', ["Rose"]);
-    if (resultSet != undefined) {
-      resultSet.goToNextRow();
-      const name = resultSet.getAssets(resultSet.getColumnIndex("DOCS"));
-      resultSet!.close();
-    }
-  } catch (err) {
-    console.error(`failed, code is ${err.code}, message is ${err.message}`);
-  }
-}
-```
 
 ## getBlob
 
@@ -254,30 +184,6 @@ If the type of the value in the specified column is INTEGER, DOUBLE, TEXT, or BL
 | [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) | SQLite: Data type mismatch.<br>**Applicable version:** 12 and later |
 | [14800034](../errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) | SQLite: Library used incorrectly.<br>**Applicable version:** 12 and later |
 
-**Examples**
-
-```TypeScript
-if (resultSet != undefined) {
-  const codes = (resultSet as relationalStore.ResultSet).getBlob((resultSet as relationalStore.ResultSet).getColumnIndex("CODES"));
-}
-```
-
-```TypeScript
-async function getBlobExample(store : relationalStore.RdbStore) {
-  try {
-    let resultSet: relationalStore.LiteResultSet | undefined;
-    resultSet = await store.querySqlWithoutRowCount('select * from EMPLOYEE where name = ?', ["Rose"]);
-    if (resultSet != undefined) {
-      resultSet.goToNextRow();
-      const name = resultSet.getBlob(resultSet.getColumnIndex("CODES"));
-      resultSet!.close();
-    }
-  } catch (err) {
-    console.error(`failed, code is ${err.code}, message is ${err.message}`);
-  }
-}
-```
-
 ## getColumnIndex
 
 ```TypeScript
@@ -326,35 +232,6 @@ Obtains the column index based on the column name.
 | [14800032](../errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) | SQLite: Abort due to constraint violation.<br>**Applicable version:** 12 and later |
 | [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) | SQLite: Data type mismatch.<br>**Applicable version:** 12 and later |
 | [14800034](../errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) | SQLite: Library used incorrectly.<br>**Applicable version:** 12 and later |
-
-**Examples**
-
-```TypeScript
-if (resultSet != undefined) {
-  const id = resultSet.getLong(resultSet.getColumnIndex("ID"));
-  const name = resultSet.getString(resultSet.getColumnIndex("NAME"));
-  const age = resultSet.getLong(resultSet.getColumnIndex("AGE"));
-  const salary = resultSet.getDouble(resultSet.getColumnIndex("SALARY"));
-}
-```
-
-```TypeScript
-async function getColumnIndexExample(store : relationalStore.RdbStore){
-  try {
-    let resultSet: relationalStore.LiteResultSet | undefined;
-    resultSet = await store.querySqlWithoutRowCount('select * from EMPLOYEE where name = ?', ["Rose"]);
-    if (resultSet != undefined) {
-      const idIndex = resultSet.getColumnIndex("ID");
-      const nameIndex = resultSet.getColumnIndex("NAME");
-      const ageIndex = resultSet.getColumnIndex("AGE");
-      const salaryIndex = resultSet.getColumnIndex("SALARY");
-      resultSet!.close();
-    }
-  } catch (err) {
-    console.error(`failed, code is ${err.code}, message is ${err.message}`);
-  }
-}
-```
 
 ## getColumnName
 
@@ -405,34 +282,6 @@ Obtains the column name based on the column index.
 | [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) | SQLite: Data type mismatch.<br>**Applicable version:** 12 and later |
 | [14800034](../errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) | SQLite: Library used incorrectly.<br>**Applicable version:** 12 and later |
 
-**Examples**
-
-```TypeScript
-if (resultSet != undefined) {
-  const id = (resultSet as relationalStore.ResultSet).getColumnName(0);
-  const name = (resultSet as relationalStore.ResultSet).getColumnName(1);
-  const age = (resultSet as relationalStore.ResultSet).getColumnName(2);
-}
-```
-
-```TypeScript
-async function getColumnNameExample(store : relationalStore.RdbStore){
-  try {
-    let resultSet: relationalStore.LiteResultSet | undefined;
-    resultSet = await store.querySqlWithoutRowCount('select * from EMPLOYEE where name = ?', ["Rose"]);
-    if (resultSet != undefined) {
-      const id = resultSet.getColumnName(0);
-      const name = resultSet.getColumnName(1);
-      const age = resultSet.getColumnName(2);
-      const salary = resultSet.getColumnName(3);
-      resultSet!.close();
-    }
-  } catch (err) {
-    console.error(`failed, code is ${err.code}, message is ${err.message}`);
-  }
-}
-```
-
 ## getColumnNames
 
 ```TypeScript
@@ -467,37 +316,6 @@ The column names are returned in a string array. The sequence of strings in the 
 | [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) | SQLite: The database is out of memory. |
 | [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) | SQLite: Some kind of disk I/O error occurred. |
 | [14800030](../errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) | SQLite: Unable to open the database file. |
-
-**Examples**
-
-```TypeScript
-try {
-  // Query EMPLOYEE1 and EMPLOYEE2 and obtain the duplicate column names. store is the obtained RdbStore instance.
-  let resultSet: relationalStore.ResultSet = await store.querySql("SELECT e1.NAME, e2.NAME, e1.AGE, e2.AGE FROM EMPLOYEE1 e1 LEFT JOIN EMPLOYEE2 e2 ON e1.SALARY=e2.SALARY");
-  if (resultSet != undefined) {
-    const names = resultSet.getColumnNames();
-    resultSet.close();
-  }
-} catch (err) {
-  console.error(`Failed to get column names: code:${err.code}, message:${err.message}`);
-}
-```
-
-```TypeScript
-async function getColumnNamesExample(store: relationalStore.RdbStore) {
-  try {
-    let resultSet: relationalStore.LiteResultSet | undefined;
-    // Query EMPLOYEE1 and EMPLOYEE2 and obtain the duplicate column names. store is the obtained RdbStore instance.
-    resultSet = await store.querySqlWithoutRowCount("SELECT e1.NAME, e2.NAME, e1.AGE, e2.AGE FROM EMPLOYEE1 e1 LEFT JOIN EMPLOYEE2 e2 ON e1.SALARY=e2.SALARY");
-    if (resultSet != undefined) {
-      const names = resultSet.getColumnNames();
-      resultSet!.close();
-    }
-  } catch (err) {
-    console.error(`Failed to get column names: code:${err.code}, message:${err.message}`);
-  }
-}
-```
 
 ## getColumnType
 
@@ -549,48 +367,6 @@ Obtains the column type based on the specified column index or column name. This
 | [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) | SQLite: Data type mismatch. |
 | [14800034](../errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) | SQLite: Library used incorrectly. |
 
-**Examples**
-
-```TypeScript
-if (resultSet != undefined) {
-  let idType = await (resultSet as relationalStore.ResultSet).getColumnType("ID") as relationalStore.ColumnType;
-  let nameType = await (resultSet as relationalStore.ResultSet).getColumnType("NAME") as relationalStore.ColumnType;
-  let ageType = await (resultSet as relationalStore.ResultSet).getColumnType("AGE") as relationalStore.ColumnType;
-  let salaryType = await (resultSet as relationalStore.ResultSet).getColumnType("SALARY") as relationalStore.ColumnType;
-  let codesType = await (resultSet as relationalStore.ResultSet).getColumnType("CODES") as relationalStore.ColumnType;
-  let identityType = await (resultSet as relationalStore.ResultSet).getColumnType(5) as relationalStore.ColumnType;
-  let assetDataType = await (resultSet as relationalStore.ResultSet).getColumnType(6) as relationalStore.ColumnType;
-  let assetsDataType = await (resultSet as relationalStore.ResultSet).getColumnType(7) as relationalStore.ColumnType;
-  let floatArrayType = await (resultSet as relationalStore.ResultSet).getColumnType(8) as relationalStore.ColumnType;
-}
-```
-
-```TypeScript
-async function getColumnTypeExample(store : relationalStore.RdbStore){
-  try {
-    let resultSet: relationalStore.LiteResultSet | undefined;
-    resultSet = await store.querySqlWithoutRowCount('select * from EMPLOYEE where name = ?', ["Rose"]);
-    if (resultSet != undefined) {
-      resultSet.goToNextRow();
-      //Method 1: Obtain the column type by column name.
-      let idType = await resultSet.getColumnType("ID");
-      let nameType = await resultSet.getColumnType("NAME");
-      let ageType = await resultSet.getColumnType("AGE");
-      let salaryType = await resultSet.getColumnType("SALARY");
-      let codesType = await resultSet.getColumnType("CODES");
-      //Method 2: Obtain the column type by column index.
-      let identityType = await resultSet.getColumnType(5);
-      let assetDataType = await resultSet.getColumnType(6);
-      let assetsDataType = await resultSet.getColumnType(7);
-      let floatArrayType = await resultSet.getColumnType(8);
-      resultSet!.close();
-    }
-  } catch (err) {
-    console.error(`failed, code is ${err.code}, message is ${err.message}`);
-  }
-}
-```
-
 ## getColumnTypeSync
 
 ```TypeScript
@@ -641,48 +417,6 @@ Obtains the column type based on the specified column index or column name. This
 | [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) | SQLite: Data type mismatch. |
 | [14800034](../errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) | SQLite: Library used incorrectly. |
 
-**Examples**
-
-```TypeScript
-if (resultSet != undefined) {
-  let idType = (resultSet as relationalStore.ResultSet).getColumnTypeSync("ID") as relationalStore.ColumnType;
-  let nameType = (resultSet as relationalStore.ResultSet).getColumnTypeSync("NAME") as relationalStore.ColumnType;
-  let ageType = (resultSet as relationalStore.ResultSet).getColumnTypeSync("AGE") as relationalStore.ColumnType;
-  let salaryType = (resultSet as relationalStore.ResultSet).getColumnTypeSync("SALARY") as relationalStore.ColumnType;
-  let codesType = (resultSet as relationalStore.ResultSet).getColumnTypeSync("CODES") as relationalStore.ColumnType;
-  let identityType = (resultSet as relationalStore.ResultSet).getColumnTypeSync(5) as relationalStore.ColumnType;
-  let assetDataType = (resultSet as relationalStore.ResultSet).getColumnTypeSync(6) as relationalStore.ColumnType;
-  let assetsDataType = (resultSet as relationalStore.ResultSet).getColumnTypeSync(7) as relationalStore.ColumnType;
-  let floatArrayType = (resultSet as relationalStore.ResultSet).getColumnTypeSync(8) as relationalStore.ColumnType;
-}
-```
-
-```TypeScript
-async function getColumnTypeSyncExample(store : relationalStore.RdbStore){
-  try {
-    let resultSet: relationalStore.LiteResultSet | undefined;
-    resultSet = await store.querySqlWithoutRowCount('select * from EMPLOYEE where name = ?', ["Rose"]);
-    if (resultSet != undefined) {
-      resultSet.goToNextRow();
-      //Method 1: Obtain the column type by column name.
-      let idType = resultSet.getColumnTypeSync("ID");
-      let nameType = resultSet.getColumnTypeSync("NAME");
-      let ageType = resultSet.getColumnTypeSync("AGE");
-      let salaryType = resultSet.getColumnTypeSync("SALARY");
-      let codesType = resultSet.getColumnTypeSync("CODES");
-      //Method 2: Obtain the column type by column index.
-      let identityType = resultSet.getColumnTypeSync(5);
-      let assetDataType = resultSet.getColumnTypeSync(6);
-      let assetsDataType = resultSet.getColumnTypeSync(7);
-      let floatArrayType = resultSet.getColumnTypeSync(8);
-      resultSet!.close();
-    }
-  } catch (err) {
-    console.error(`failed, code is ${err.code}, message is ${err.message}`);
-  }
-}
-```
-
 ## getCurrentRowData
 
 ```TypeScript
@@ -716,40 +450,6 @@ Obtains the values of all columns in this row.
 | [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) | SQLite: The database is out of memory. |
 | [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) | SQLite: Some kind of disk I/O error occurred. |
 | [14800030](../errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) | SQLite: Unable to open the database file. |
-
-**Examples**
-
-```TypeScript
-try {
-  // Query EMPLOYEE1 and EMPLOYEE2 and obtain the values of the current row that contain duplicate column names. store is the obtained RdbStore instance.
-  let resultSet: relationalStore.ResultSet = await store.querySql("SELECT e1.NAME, e2.NAME, e1.AGE, e2.AGE FROM EMPLOYEE1 e1 LEFT JOIN EMPLOYEE2 e2 ON e1.SALARY=e2.SALARY");
-  if (resultSet != undefined) {
-    resultSet.goToFirstRow();
-    const rowData = resultSet.getCurrentRowData();
-    resultSet.close();
-  }
-} catch (err) {
-  console.error(`Failed to get row data: code:${err.code}, message:${err.message}`);
-}
-```
-
-```TypeScript
-async function getCurrentRowDataExample(store : relationalStore.RdbStore) {
-  try {
-    let resultSet: relationalStore.LiteResultSet | undefined;
-    // Query EMPLOYEE1 and EMPLOYEE2 and obtain the values of the current row that contain duplicate column names. store is the obtained RdbStore instance.
-    resultSet = await store.querySqlWithoutRowCount("SELECT e1.NAME, e2.NAME, e1.AGE, e2.AGE FROM EMPLOYEE1 e1 LEFT JOIN EMPLOYEE2 e2 ON e1.SALARY=e2.SALARY");
-    if (resultSet != undefined) {
-      resultSet.goToNextRow();
-      const rowData = resultSet.getCurrentRowData();
-      console.info(`rowData: ${JSON.stringify(rowData)}`);
-      resultSet!.close();
-    }
-  } catch (err) {
-    console.error(`Failed to get row data: code:${err.code}, message:${err.message}`);
-  }
-}
-```
 
 ## getDouble
 
@@ -802,36 +502,6 @@ If the type of the value in the specified column is INTEGER, DOUBLE, TEXT, or BL
 | [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) | SQLite: Data type mismatch.<br>**Applicable version:** 12 and later |
 | [14800034](../errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) | SQLite: Library used incorrectly.<br>**Applicable version:** 12 and later |
 
-**Examples**
-
-```TypeScript
-if (resultSet !== undefined) {
-  while (resultSet.goToNextRow()) {
-    const colIndex = resultSet.getColumnIndex("SALARY");
-    if (colIndex > -1) {
-      const salary = resultSet.getDouble(colIndex);
-      console.info(`Get double success, salary is ${salary}`);
-    }
-  }
-}
-```
-
-```TypeScript
-async function getDoubleExample(store : relationalStore.RdbStore) {
-  try {
-    let resultSet: relationalStore.LiteResultSet | undefined;
-    resultSet = await store.querySqlWithoutRowCount('select * from EMPLOYEE where name = ?', ["Rose"]);
-    if (resultSet != undefined) {
-      resultSet.goToNextRow();
-      const salary = resultSet.getDouble(resultSet.getColumnIndex("SALARY"));
-      resultSet!.close();
-    }
-  } catch (err) {
-    console.error(`failed, code is ${err.code}, message is ${err.message}`);
-  }
-}
-```
-
 ## getLong
 
 ```TypeScript
@@ -883,36 +553,6 @@ If the type of the value in the specified column is INTEGER, DOUBLE, TEXT, or BL
 | [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) | SQLite: Data type mismatch.<br>**Applicable version:** 12 and later |
 | [14800034](../errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) | SQLite: Library used incorrectly.<br>**Applicable version:** 12 and later |
 
-**Examples**
-
-```TypeScript
-if (resultSet !== undefined) {
-  while (resultSet.goToNextRow()) {
-    const colIndex = resultSet.getColumnIndex("AGE");
-    if (colIndex > -1) {
-      const age = resultSet.getLong(colIndex);
-      console.info(`Get long success, age is ${age}`);
-    }
-  }
-}
-```
-
-```TypeScript
-async function getLongExample(store : relationalStore.RdbStore) {
-  try {
-    let resultSet: relationalStore.LiteResultSet | undefined;
-    resultSet = await store.querySqlWithoutRowCount('select * from EMPLOYEE where name = ?', ["Rose"]);
-    if (resultSet != undefined) {
-      resultSet.goToNextRow();
-      const age = resultSet.getLong(resultSet.getColumnIndex("AGE"));
-      resultSet!.close();
-    }
-  } catch (err) {
-    console.error(`failed, code is ${err.code}, message is ${err.message}`);
-  }
-}
-```
-
 ## getRow
 
 ```TypeScript
@@ -929,7 +569,7 @@ Obtains this row.
 
 | Type | Description |
 | --- | --- |
-| ValuesBucket | Value of the specified row. If the result set contains duplicate column names, the return value is not as expected. You are advised to use the [getCurrentRowData]{ |
+| [ValuesBucket](arkts-arkdata-relationalstore-valuesbucket-t.md) | Value of the specified row. If the result set contains duplicate column names, the return value is not as expected. You are advised to use the [getCurrentRowData]{ |
 
 **Error codes:**
 
@@ -955,31 +595,6 @@ Obtains this row.
 | [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) | SQLite: Data type mismatch.<br>**Applicable version:** 12 and later |
 | [14800034](../errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) | SQLite: Library used incorrectly.<br>**Applicable version:** 12 and later |
 
-**Examples**
-
-```TypeScript
-if (resultSet != undefined) {
-  const row = (resultSet as relationalStore.ResultSet).getRow();
-}
-```
-
-```TypeScript
-async function getRowExample(store : relationalStore.RdbStore) {
-  try {
-    let resultSet: relationalStore.LiteResultSet | undefined;
-    resultSet = await store.querySqlWithoutRowCount('select * from EMPLOYEE where name = ?', ["Rose"]);
-    if (resultSet != undefined) {
-      resultSet.goToNextRow();
-      const rowData = resultSet.getRow();
-      console.info(`rowData: ${JSON.stringify(rowData)}`);
-      resultSet!.close();
-    }
-  } catch (err) {
-    console.error(`failed, code is ${err.code}, message is ${err.message}`);
-  }
-}
-```
-
 ## getRows
 
 ```TypeScript
@@ -1003,7 +618,7 @@ Obtains a specified amount of data from the result set. This API uses a promise 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;ValuesBucket&gt;&gt; | Promise used to return **maxCount** rows of data obtained. If the number of remaining records is less than **maxCount**, the remaining records are returned. Returning an empty array indicates that the end of the result set is reached. If the result set contains duplicate column names, the return values are not as expected. You are advised to use the [getRowsData]{ |
+| Promise&lt;Array&lt;[ValuesBucket](arkts-arkdata-relationalstore-valuesbucket-t.md)&gt;&gt; | Promise used to return **maxCount** rows of data obtained. If the number of remaining records is less than **maxCount**, the remaining records are returned. Returning an empty array indicates that the end of the result set is reached. If the result set contains duplicate column names, the return values are not as expected. You are advised to use the [getRowsData]{ |
 
 **Error codes:**
 
@@ -1026,69 +641,6 @@ Obtains a specified amount of data from the result set. This API uses a promise 
 | [14800031](../errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) | SQLite: TEXT or BLOB exceeds size limit. |
 | [14800032](../errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) | SQLite: Abort due to constraint violation. |
 | [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) | SQLite: Data type mismatch. |
-
-**Examples**
-
-```TypeScript
-// Obtain 100 rows of data.
-async function processRows(resultSet: relationalStore.ResultSet) {
-  // Example 1: Specify only maxCount.
-  if (resultSet != undefined) {
-    let rows: Array<relationalStore.ValuesBucket>;
-    let maxCount: number = 50;
-    // Obtain data from the current row of the result set. By default, the first fetch starts from the first row of the current result set. Subsequent fetches start from the row following the last row retrieved.
-    // getRows automatically moves the current row of the result set to the row following the last row retrieved by the previous getRows call. You do not need to use APIs such as goToFirstRow and goToNextRow.
-    while ((rows = await (resultSet as relationalStore.ResultSet).getRows(maxCount)).length != 0) {
-      console.info(JSON.stringify(rows[0]));
-    }
-  }
-
-  // Example 2: Specify maxCount and position.
-  if (resultSet != undefined) {
-    let rows: Array<relationalStore.ValuesBucket>;
-    let maxCount: number = 50;
-    let position: number = 50;
-    while ((rows = await (resultSet as relationalStore.ResultSet).getRows(maxCount, position)).length != 0) {
-      console.info(JSON.stringify(rows[0]));
-      position += rows.length;
-    }
-  }
-}
-```
-
-```TypeScript
-async function getRowsExample(store : relationalStore.RdbStore) {
-  // Obtain 100 rows of data.
-  try {
-    let resultSet: relationalStore.LiteResultSet | undefined;
-    resultSet = await store.querySqlWithoutRowCount('select * from EMPLOYEE where name = ?', ["Rose"]);
-    // Example 1: Specify only maxCount.
-    if (resultSet != undefined) {
-      let rows: Array<relationalStore.ValuesBucket>;
-      let maxCount: number = 50;
-      // Obtain data from the current row of the result set. By default, the first fetch starts from the first row of the current result set. Subsequent fetches start from the row following the last row retrieved.
-      // getRows automatically moves the current row of the result set to the next row after the end position of the last retrieval by getRows. You do not need to use the goToNextRow API to move the row.
-      while ((rows = await resultSet.getRows(maxCount)).length != 0) {
-        console.info(JSON.stringify(rows[0]));
-      }
-    }
-  
-    // Example 2: Specify maxCount and position.
-    if (resultSet != undefined) {
-      let rows: Array<relationalStore.ValuesBucket>;
-      let maxCount: number = 50;
-      let position: number = 50;
-      while ((rows = await resultSet.getRows(maxCount, position)).length != 0) {
-        console.info(JSON.stringify(rows[0]));
-        position += rows.length;
-      }
-      resultSet!.close();
-    }
-  } catch (err) {
-    console.error(`failed, code is ${err.code}, message is ${err.message}`);
-  }
-}
-```
 
 ## getRowsData
 
@@ -1132,91 +684,6 @@ Obtains data of a specified number of rows from the specified position. This API
 | [14800030](../errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) | SQLite: Unable to open the database file. |
 | [14800031](../errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) | SQLite: TEXT or BLOB exceeds size limit. |
 
-**Examples**
-
-```TypeScript
-try {
-  // Query EMPLOYEE1 and EMPLOYEE2 and obtain the values of multiple rows that contain duplicate column names. store is the obtained RdbStore instance.
-  let resultSet: relationalStore.ResultSet = await store.querySql("SELECT e1.NAME, e2.NAME, e1.AGE, e2.AGE FROM EMPLOYEE1 e1 LEFT JOIN EMPLOYEE2 e2 ON e1.SALARY=e2.SALARY");
-  // Obtain 50 rows of data.
-  // Example 1: Specify only maxCount.
-  if (resultSet != undefined) {
-    let rowsData: relationalStore.RowsData;
-    // Obtain data from the current row of the result set. By default, the first fetch starts from the first row of the current result set. Subsequent fetches start from the row following the last row retrieved.
-    // getRowsData automatically moves the current row of the result set to the next row after the end position of the last retrieval by getRowsData. You do not need to use APIs such as goToFirstRow and goToNextRow.
-    let maxCount: number = 50;
-    let rowCount: number = 0;
-    while ((rowsData = await resultSet.getRowsData(maxCount)).length != 0) {
-      rowsData.forEach((rowData, index) => {
-        // Query result of the row specified by rowCount + index + 1
-        console.info(`${rowCount + index + 1}: ${rowData}`);
-      });
-      rowCount += rowsData.length;
-    }
-  }
-
-  // Example 2: Specify maxCount and position.
-  if (resultSet != undefined) {
-    let rowsData: relationalStore.RowsData;
-    let maxCount: number = 50;
-    let position: number = 50;
-    while ((rowsData = await resultSet.getRowsData(maxCount, position)).length != 0) {
-      rowsData.forEach((rowData, index) => {
-        // Query result of the row specified by position + index + 1
-        console.info(`${position + index + 1}: ${rowData}`);
-      });
-      position += rowsData.length;
-    }
-  }
-  resultSet.close();
-} catch (err) {
-  console.error(`Failed to get rows data: code:${err.code}, message:${err.message}`);
-}
-```
-
-```TypeScript
-async function getRowsDataExample(store : relationalStore.RdbStore) {
-  try {
-    let resultSet: relationalStore.LiteResultSet | undefined;
-    // Query EMPLOYEE1 and EMPLOYEE2 and obtain the values of multiple rows that contain duplicate column names. store is the obtained RdbStore instance.
-    resultSet = await store.querySqlWithoutRowCount("SELECT e1.NAME, e2.NAME, e1.AGE, e2.AGE FROM EMPLOYEE1 e1 LEFT JOIN EMPLOYEE2 e2 ON e1.SALARY=e2.SALARY");
-    // Obtain 50 rows of data.
-    // Example 1: Specify only maxCount.
-    if (resultSet != undefined) {
-      let rowsData: relationalStore.RowsData;
-      // Obtain data from the current row of the result set. By default, the first fetch starts from the first row of the current result set. Subsequent fetches start from the row following the last row retrieved.
-      // getRowsData automatically moves the current row of the result set to the next row after the end position of the last retrieval by getRowsData. You do not need to use the goToNextRow API to move the row.
-      let maxCount: number = 50;
-      let rowCount: number = 0;
-      while ((rowsData = await resultSet.getRowsData(maxCount)).length != 0) {
-        rowsData.forEach((rowData, index) => {
-          // Query result of the row specified by rowCount + index + 1
-          console.info(`${rowCount + index + 1}: ${rowData}`);
-        });
-        rowCount += rowsData.length;
-      }
-    }
-  
-    // Example 2: Specify maxCount and position.
-    if (resultSet != undefined) {
-      let rowsData: relationalStore.RowsData;
-      let maxCount: number = 50;
-      let position: number = 50;
-      while ((rowsData = await resultSet.getRowsData(maxCount, position)).length != 0) {
-        rowsData.forEach((rowData, index) => {
-          // Query result of the row specified by position + index + 1
-          console.info(`${position + index + 1}: ${rowData}`);
-        });
-        position += rowsData.length;
-      }
-      resultSet!.close();
-    }
-  } catch (err) {
-    console.error(`Failed to get rows data: code:${err.code}, message:${err.message}`);
-  }
-}
-```
-
 ## getSendableRow
 
 ```TypeScript
@@ -1233,7 +700,7 @@ Obtains the sendable data from the current row. The sendable data can be passed 
 
 | Type | Description |
 | --- | --- |
-| sendableRelationalStore.ValuesBucket | Sendable data obtained for cross-thread transfer. |
+| [sendableRelationalStore.ValuesBucket](arkts-arkdata-sendablerelationalstore-valuesbucket-t.md) | Sendable data obtained for cross-thread transfer. |
 
 **Error codes:**
 
@@ -1258,56 +725,6 @@ Obtains the sendable data from the current row. The sendable data can be passed 
 | [14800032](../errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) | SQLite: Abort due to constraint violation. |
 | [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) | SQLite: Data type mismatch. |
 | [14800034](../errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) | SQLite: Library used incorrectly. |
-
-**Examples**
-
-For details about the definition of this.context in the sample code, see the application [context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) of the stage model.
-
-```TypeScript
-// EntryAbility.ets
-import { window } from '@kit.ArkUI';
-import { UIAbility } from '@kit.AbilityKit';
-import { relationalStore } from '@kit.ArkData';
-import { taskpool } from '@kit.ArkTS';
-import { common } from '@kit.AbilityKit';
-import { sendableRelationalStore } from '@kit.ArkData';
-
-@Concurrent
-async function getDataByName(name: string, context: common.UIAbilityContext) {
-  const STORE_CONFIG: relationalStore.StoreConfig = {
-    name: "RdbTest.db",
-    securityLevel: relationalStore.SecurityLevel.S3
-  };
-  const store = await relationalStore.getRdbStore(context, STORE_CONFIG);
-  const predicates = new relationalStore.RdbPredicates("EMPLOYEE");
-  predicates.equalTo("NAME", name);
-  const resultSet = store.querySync(predicates);
-
-  if (resultSet.rowCount > 0) {
-    resultSet.goToFirstRow();
-    const sendableValuesBucket = resultSet.getSendableRow();
-    resultSet.close();
-    return sendableValuesBucket;
-  } else {
-    resultSet.close();
-    return null;
-  }
-}
-
-export default class EntryAbility extends UIAbility {
-  async onWindowStageCreate(windowStage: window.WindowStage) {
-    const task = new taskpool.Task(getDataByName, 'Lisa', this.context);
-    const sendableValuesBucket = await taskpool.execute(task) as sendableRelationalStore.ValuesBucket;
-
-    if (sendableValuesBucket) {
-      const columnCount = sendableValuesBucket.size;
-      const age = sendableValuesBucket.get('age');
-      const name = sendableValuesBucket.get('name');
-      console.info(`Query data in taskpool succeeded, name is "${name}", age is "${age}"`);
-    }
-  }
-}
-```
 
 ## getString
 
@@ -1360,30 +777,6 @@ If the type of the value in the specified column is INTEGER, DOUBLE, TEXT, or BL
 | [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) | SQLite: Data type mismatch.<br>**Applicable version:** 12 and later |
 | [14800034](../errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) | SQLite: Library used incorrectly.<br>**Applicable version:** 12 and later |
 
-**Examples**
-
-```TypeScript
-if (resultSet != undefined) {
-  const name = resultSet.getString(resultSet.getColumnIndex("NAME"));
-}
-```
-
-```TypeScript
-async function getStringExample(store : relationalStore.RdbStore) {
-  try {
-    let resultSet: relationalStore.LiteResultSet | undefined;
-    resultSet = await store.querySqlWithoutRowCount('select * from EMPLOYEE where name = ?', ["Rose"]);
-    if (resultSet != undefined) {
-      resultSet.goToNextRow();
-      const name = resultSet.getString(resultSet.getColumnIndex("NAME"));
-      resultSet!.close();
-    }
-  } catch (err) {
-    console.error(`failed, code is ${err.code}, message is ${err.message}`);
-  }
-}
-```
-
 ## getValue
 
 ```TypeScript
@@ -1406,7 +799,7 @@ Obtains the value from the specified column in the current row. If the value typ
 
 | Type | Description |
 | --- | --- |
-| ValueType | Allowed data field types. |
+| [ValueType](arkts-arkdata-relationalstore-valuetype-t.md) | Allowed data field types. |
 
 **Error codes:**
 
@@ -1432,36 +825,6 @@ Obtains the value from the specified column in the current row. If the value typ
 | [14800032](../errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) | SQLite: Abort due to constraint violation. |
 | [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) | SQLite: Data type mismatch. |
 | [14800034](../errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) | SQLite: Library used incorrectly. |
-
-**Examples**
-
-```TypeScript
-if (resultSet !== undefined) {
-  while (resultSet.goToNextRow()) {
-    const colIndex = resultSet.getColumnIndex("NAME");
-    if (colIndex > -1) {
-      const name = resultSet.getValue(colIndex);
-      console.info(`Get value success, name is ${name}`);
-    }
-  }
-}
-```
-
-```TypeScript
-async function getValueExample(store : relationalStore.RdbStore) {
-  try {
-    let resultSet: relationalStore.LiteResultSet | undefined;
-    resultSet = await store.querySqlWithoutRowCount('select * from EMPLOYEE where name = ?', ["Rose"]);
-    if (resultSet != undefined) {
-      resultSet.goToNextRow();
-      const name = resultSet.getValue(resultSet.getColumnIndex("NAME"));
-      resultSet!.close();
-    }
-  } catch (err) {
-    console.error(`failed, code is ${err.code}, message is ${err.message}`);
-  }
-}
-```
 
 ## goTo
 
@@ -1512,14 +875,6 @@ Moves the result set pointer based on the offset specified.
 | [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) | SQLite: Data type mismatch.<br>**Applicable version:** 12 and later |
 | [14800034](../errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) | SQLite: Library used incorrectly.<br>**Applicable version:** 12 and later |
 
-**Examples**
-
-```TypeScript
-if (resultSet != undefined) {
-  (resultSet as relationalStore.ResultSet).goTo(1);
-}
-```
-
 ## goToFirstRow
 
 ```TypeScript
@@ -1561,14 +916,6 @@ Moves to the first row of the result set.
 | [14800032](../errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) | SQLite: Abort due to constraint violation.<br>**Applicable version:** 12 and later |
 | [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) | SQLite: Data type mismatch.<br>**Applicable version:** 12 and later |
 | [14800034](../errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) | SQLite: Library used incorrectly.<br>**Applicable version:** 12 and later |
-
-**Examples**
-
-```TypeScript
-if (resultSet != undefined) {
-  (resultSet as relationalStore.ResultSet).goToFirstRow();
-}
-```
 
 ## goToLastRow
 
@@ -1612,14 +959,6 @@ Moves to the last row of the result set.
 | [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) | SQLite: Data type mismatch.<br>**Applicable version:** 12 and later |
 | [14800034](../errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) | SQLite: Library used incorrectly.<br>**Applicable version:** 12 and later |
 
-**Examples**
-
-```TypeScript
-if (resultSet != undefined) {
-  (resultSet as relationalStore.ResultSet).goToLastRow();
-}
-```
-
 ## goToNextRow
 
 ```TypeScript
@@ -1662,29 +1001,6 @@ Moves to the next row in the result set.
 | [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) | SQLite: Data type mismatch.<br>**Applicable version:** 12 and later |
 | [14800034](../errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) | SQLite: Library used incorrectly.<br>**Applicable version:** 12 and later |
 
-**Examples**
-
-```TypeScript
-if (resultSet != undefined) {
-  (resultSet as relationalStore.ResultSet).goToNextRow();
-}
-```
-
-```TypeScript
-async function goToNextRowExample(store : relationalStore.RdbStore) {
-  try {
-    let resultSet: relationalStore.LiteResultSet | undefined;
-    resultSet = await store.querySqlWithoutRowCount('select * from EMPLOYEE where name = ?', ["Rose"]);
-    if (resultSet != undefined) {
-      resultSet.goToNextRow();
-      resultSet!.close();
-    }
-  } catch (err) {
-    console.error(`failed, code is ${err.code}, message is ${err.message}`);
-  }
-}
-```
-
 ## goToPreviousRow
 
 ```TypeScript
@@ -1726,14 +1042,6 @@ Moves to the previous row in the result set.
 | [14800032](../errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) | SQLite: Abort due to constraint violation.<br>**Applicable version:** 12 and later |
 | [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) | SQLite: Data type mismatch.<br>**Applicable version:** 12 and later |
 | [14800034](../errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) | SQLite: Library used incorrectly.<br>**Applicable version:** 12 and later |
-
-**Examples**
-
-```TypeScript
-if (resultSet != undefined) {
-  (resultSet as relationalStore.ResultSet).goToPreviousRow();
-}
-```
 
 ## goToRow
 
@@ -1784,14 +1092,6 @@ Moves to the specified row in the result set.
 | [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) | SQLite: Data type mismatch.<br>**Applicable version:** 12 and later |
 | [14800034](../errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) | SQLite: Library used incorrectly.<br>**Applicable version:** 12 and later |
 
-**Examples**
-
-```TypeScript
-if (resultSet != undefined) {
-  (resultSet as relationalStore.ResultSet).goToRow(5);
-}
-```
-
 ## isColumnNull
 
 ```TypeScript
@@ -1840,36 +1140,6 @@ Checks whether the value in the specified column is null.
 | [14800032](../errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) | SQLite: Abort due to constraint violation.<br>**Applicable version:** 12 and later |
 | [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) | SQLite: Data type mismatch.<br>**Applicable version:** 12 and later |
 | [14800034](../errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) | SQLite: Library used incorrectly.<br>**Applicable version:** 12 and later |
-
-**Examples**
-
-```TypeScript
-if (resultSet !== undefined) {
-  while (resultSet.goToNextRow()) {
-    const colIndex = resultSet.getColumnIndex("CODES");
-    if (colIndex > -1) {
-      const isColumnNull = resultSet.isColumnNull(colIndex);
-      console.info(`Column is null: ${isColumnNull}`);
-    }
-  }
-}
-```
-
-```TypeScript
-async function isColumnNullExample(store : relationalStore.RdbStore) {
-  try {
-    let resultSet: relationalStore.LiteResultSet | undefined;
-    resultSet = await store.querySqlWithoutRowCount('select * from EMPLOYEE where name = ?', ["Rose"]);
-    if (resultSet != undefined) {
-      resultSet.goToNextRow();
-      const name = resultSet.isColumnNull(resultSet.getColumnIndex("NAME"));
-      resultSet!.close();
-    }
-  } catch (err) {
-    console.error(`failed, code is ${err.code}, message is ${err.message}`);
-  }
-}
-```
 
 ## columnCount
 

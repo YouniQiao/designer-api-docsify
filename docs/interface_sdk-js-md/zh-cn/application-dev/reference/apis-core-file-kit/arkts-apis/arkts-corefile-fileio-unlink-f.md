@@ -33,18 +33,6 @@ declare function unlink(path: string): Promise<void>
 | --- | --- |
 | Promise&lt;void&gt; | Promise对象。无返回值。 |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@ohos.base';
-let filePath = pathDir + "/test.txt";
-fileio.unlink(filePath).then(() => {
-  console.info("remove file succeed");
-}).catch((error: BusinessError) => {
-  console.error("remove file failed with error:" + error);
-});
-```
-
 
 ## unlink
 
@@ -68,13 +56,3 @@ declare function unlink(path: string, callback: AsyncCallback<void>): void
 | --- | --- | --- | --- |
 | path | string | 是 | 待删除文件的应用沙箱路径。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 异步删除文件之后的回调。 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@ohos.base';
-let filePath = pathDir + "/test.txt";
-fileio.unlink(filePath, (err: BusinessError) => {
-  console.info("remove file succeed");
-});
-```

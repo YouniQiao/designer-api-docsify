@@ -39,7 +39,7 @@ Obtains the network proxy for a specified user. This API is suitable for network
 
 | Type | Description |
 | --- | --- |
-| connection.HttpProxy | HTTP proxy configuration of the network. |
+| [connection.HttpProxy](../../apis-network-kit/arkts-apis/arkts-network-connection-httpproxy-i.md) | HTTP proxy configuration of the network. |
 
 **Error codes:**
 

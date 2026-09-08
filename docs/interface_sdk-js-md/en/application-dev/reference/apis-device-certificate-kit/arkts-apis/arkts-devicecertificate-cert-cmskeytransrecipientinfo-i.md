@@ -20,7 +20,7 @@ cert: X509Cert
 
 RSA certificate.
 
-**Type:** X509Cert
+**Type:** [X509Cert](arkts-devicecertificate-cert-x509cert-i.md)
 
 **Since:** 22
 

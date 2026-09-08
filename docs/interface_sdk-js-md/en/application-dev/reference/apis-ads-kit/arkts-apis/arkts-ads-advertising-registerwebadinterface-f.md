@@ -25,13 +25,13 @@ Injects an ad JavaScript object to the **Web** component (this API is only open 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | controller | web_webview.WebviewController | Yes | Web component controller. |
-| context | common.UIAbilityContext | Yes | Context of the UIAbility. |
+| context | [common.UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-common-uiabilitycontext-t.md) | Yes | Context of the UIAbility. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid input parameter. Possible causes: 1. Mandatory parameters are left unspecified. |
+| [401](../errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. |
 | [21800001](../errorcode-ads.md#21800001-internal-system-error) | System internal error. |
 
 **Examples**
@@ -84,14 +84,14 @@ Injects an ad JavaScript object to the **Web** component (this API is only open 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | controller | web_webview.WebviewController | Yes | Web component controller. |
-| context | common.UIAbilityContext | Yes | Context of the UIAbility. |
+| context | [common.UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-common-uiabilitycontext-t.md) | Yes | Context of the UIAbility. |
 | needRefresh | boolean | Yes | Whether to refresh the page (true: yes; false: no). |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid input parameter. Possible causes: Mandatory parameters are left unspecified. |
+| [401](../errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
 | [21800001](../errorcode-ads.md#21800001-internal-system-error) | System internal error. |
 
 **Examples**

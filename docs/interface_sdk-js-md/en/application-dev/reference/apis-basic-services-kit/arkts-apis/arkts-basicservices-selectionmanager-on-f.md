@@ -25,7 +25,7 @@ off('selectionCompleted') is used to unsubscribe from the event.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'selectionCompleted' | Yes | Event type, which is **'selectionCompleted'**. |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[SelectionInfo](arkts-basicservices-selectionmanager-selectioninfo-i.md)&gt; | Yes | Callback used to return [SelectionInfo](arkts-basicservices-selectionmanager-selectioninfo-i.md). This callback is triggered only when the user selects text using the mouse or touchpad (by number-clicking, triple-clicking, or sliding the left mouse button) and then presses **Ctrl**. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[SelectionInfo](arkts-basicservices-selectionmanager-selectioninfo-i.md)&gt; | Yes | Callback used to return [SelectionInfo](arkts-basicservices-selectionmanager-selectioninfo-i.md). This callback is triggered only when the user selects text using the mouse or touchpad (by double-clicking, triple-clicking, or sliding the left mouse button) and then presses **Ctrl**. |
 
 **Error codes:**
 

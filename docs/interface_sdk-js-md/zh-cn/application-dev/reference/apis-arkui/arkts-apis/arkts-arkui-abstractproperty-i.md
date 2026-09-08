@@ -35,14 +35,6 @@ get(): T
 | --- | --- |
 | T | AppStorage/LocalStorage中所引用属性的数据。 |
 
-**示例**
-
-```TypeScript
-AppStorage.setOrCreate('PropA', 47);
-let ref1: AbstractProperty<number> | undefined = AppStorage.ref('PropA');
-ref1?.get(); // ref1.get()=47
-```
-
 ## info
 
 ```TypeScript
@@ -63,20 +55,6 @@ info(): string
 | --- | --- |
 | string | AppStorage/LocalStorage中所引用属性的属性名。 |
 
-**示例**
-
-```TypeScript
-AppStorage.setOrCreate('PropA', 47);
-let ref1: AbstractProperty<number> | undefined = AppStorage.ref('PropA');
-ref1?.info(); // ref1.info()='PropA'
-```
-
-```TypeScript
-AppStorage.setOrCreate('PropA', 47); 
-let prop1: SubscribedAbstractProperty<number> = AppStorage.prop('PropA');
-prop1.info(); // prop1.info() = 'PropA'
-```
-
 ## set
 
 ```TypeScript
@@ -96,22 +74,3 @@ set(newValue: T): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | newValue | T | 是 | AppStorage/LocalStorage中所引用属性的新值，可以为null或undefined。 |
-
-**示例**
-
-```TypeScript
-AppStorage.setOrCreate('PropA', 47);
-let ref1: AbstractProperty<number> | undefined = AppStorage.ref('PropA');
-ref1?.set(1); // ref1.get()=1
-let mapValue: Map<string, number> = new Map([['1', 0]]);
-let ref2 = AppStorage.setAndRef('MapA', mapValue);
-ref2.set(mapValue);
-let setValue: Set<string> = new Set(['1']);
-let ref3 = AppStorage.setAndRef('SetB', setValue);
-ref3.set(setValue);
-let dateValue: Date = new Date('2024');
-let ref4 = AppStorage.setAndRef('DateC', dateValue);
-ref4.set(dateValue);
-ref2.set(null);
-ref3.set(undefined);
-```

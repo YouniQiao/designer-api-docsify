@@ -2,7 +2,7 @@
 
 P2P connection status.
 
-@enum { number }
+@enum { int }
 
 **Since:** 9
 

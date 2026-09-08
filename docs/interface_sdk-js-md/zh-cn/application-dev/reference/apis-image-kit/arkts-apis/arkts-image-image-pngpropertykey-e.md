@@ -27,8 +27,8 @@
 | GAMMA | 'PngGamma' | PNG图像的系数伽马的值。 |
 | [CHROMATICITIES](arkts-image-image-pngpropertykey-e.md) | 'PngChromaticities' | PNG图像的原色与白点色度坐标cHRM（primary chromaticities and white point）。该信息可用于与设备无关的色彩校正。 |
 | [DESCRIPTION](arkts-image-image-pngpropertykey-e.md) | 'PngDescription' | PNG图像的描述。 |
-| TITLE | 'PngTitle' | PNG图像的标题。 |
-| COMMENT | 'PngComment' | PNG图像的注释。 |
+| [TITLE](arkts-image-image-pngpropertykey-e.md) | 'PngTitle' | PNG图像的标题。 |
+| [COMMENT](arkts-image-image-pngpropertykey-e.md) | 'PngComment' | PNG图像的注释。 |
 | [DISCLAIMER](arkts-image-image-pngpropertykey-e.md) | 'PngDisclaimer' | PNG图像的免责声明。 |
 
 **起始版本：** 26.0.0

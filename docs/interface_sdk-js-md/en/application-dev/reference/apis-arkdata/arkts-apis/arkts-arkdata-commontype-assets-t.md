@@ -10,4 +10,4 @@ Represents an array of Assets.
 
 **System capability:** SystemCapability.DistributedDataManager.CommonType
 
-**Type:** Array&lt;Asset&gt;
+**Type:** Array&lt;[Asset](arkts-arkdata-commontype-asset-i.md)&gt;

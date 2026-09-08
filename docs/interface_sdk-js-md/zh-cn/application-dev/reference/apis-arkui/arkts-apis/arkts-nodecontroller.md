@@ -11,6 +11,8 @@
 ## 示例
 
 该示例通过aboutToResize、onTouchEvent，实现了NodeContainer节点布局、收到Touch事件时的生命周期回调功能。
+并通过aboutToAppear、aboutToDisappear接口，实现了NodeContainer节点挂载至主节点树、从主节点树卸载时的生命周期回调功能。
+该示例还通过NodeController挂载BuilderNode节点。
 
 ```TypeScript
 import { NodeController, BuilderNode, Size, FrameNode, UIContext } from '@kit.ArkUI';
@@ -77,6 +79,7 @@ struct Index {
 ```
 
 该示例通过onAttach、onDetach接口，实现了NodeContainer节点上下主节点树的生命周期回调功能。
+并通过onWillBind、onWillUnbind、onBind、onUnbind接口，实现了NodeContainer节点绑定和解绑前后的生命周期回调功能。
 
 ```TypeScript
 import { NodeController, BuilderNode, FrameNode, UIContext } from '@kit.ArkUI';

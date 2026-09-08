@@ -39,28 +39,6 @@ accessBackward(): boolean
 | --- | --- |
 | boolean | 可以后退返回true，否则返回false。 |
 
-**示例**
-
-```TypeScript
-// xxx.ets
-@Entry
-@Component
-struct WebComponent {
-  controller: WebController = new WebController()
-
-  build() {
-    Column() {
-      Button('accessBackward')
-        .onClick(() => {
-          let result = this.controller.accessBackward()
-          console.info('result:' + result)
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
 ## accessForward
 
 ```TypeScript
@@ -82,28 +60,6 @@ accessForward(): boolean
 | 类型 | 说明 |
 | --- | --- |
 | boolean | 返回true表示当前页面可以前进，返回false表示当前页面不可以前进。 |
-
-**示例**
-
-```TypeScript
-// xxx.ets
-@Entry
-@Component
-struct WebComponent {
-  controller: WebController = new WebController()
-
-  build() {
-    Column() {
-      Button('accessForward')
-        .onClick(() => {
-          let result = this.controller.accessForward()
-          console.info('result:' + result)
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
 
 ## accessStep
 
@@ -133,29 +89,6 @@ accessStep(step: number): boolean
 | --- | --- |
 | boolean | 页面是否可以前进或后退给定的step步。true表示可以，false为不可以。 |
 
-**示例**
-
-```TypeScript
-// xxx.ets
-@Entry
-@Component
-struct WebComponent {
-  controller: WebController = new WebController()
-  @State steps: number = 2
-
-  build() {
-    Column() {
-      Button('accessStep')
-        .onClick(() => {
-          let result = this.controller.accessStep(this.steps)
-          console.info('result:' + result)
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
 ## backward
 
 ```TypeScript
@@ -172,27 +105,6 @@ backward()
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
-**示例**
-
-```TypeScript
-// xxx.ets
-@Entry
-@Component
-struct WebComponent {
-  controller: WebController = new WebController()
-
-  build() {
-    Column() {
-      Button('backward')
-        .onClick(() => {
-          this.controller.backward()
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
 ## clearHistory
 
 ```TypeScript
@@ -208,27 +120,6 @@ clearHistory(): void
 **替代接口：** clearHistory
 
 **系统能力：** SystemCapability.Web.Webview.Core
-
-**示例**
-
-```TypeScript
-// xxx.ets
-@Entry
-@Component
-struct WebComponent {
-  controller: WebController = new WebController()
-
-  build() {
-    Column() {
-      Button('clearHistory')
-        .onClick(() => {
-          this.controller.clearHistory()
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
 
 ## constructor
 
@@ -268,28 +159,6 @@ deleteJavaScriptRegister(name: string)
 | --- | --- | --- | --- |
 | name | string | 是 | 注册对象的名称，可在网页侧JavaScript中通过此名称调用应用侧JavaScript对象。 |
 
-**示例**
-
-```TypeScript
-// xxx.ets
-@Entry
-@Component
-struct WebComponent {
-  controller: WebController = new WebController()
-  @State name: string = 'Object'
-
-  build() {
-    Column() {
-      Button('deleteJavaScriptRegister')
-        .onClick(() => {
-          this.controller.deleteJavaScriptRegister(this.name)
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
 ## forward
 
 ```TypeScript
@@ -305,27 +174,6 @@ forward()
 **替代接口：** forward
 
 **系统能力：** SystemCapability.Web.Webview.Core
-
-**示例**
-
-```TypeScript
-// xxx.ets
-@Entry
-@Component
-struct WebComponent {
-  controller: WebController = new WebController()
-
-  build() {
-    Column() {
-      Button('forward')
-        .onClick(() => {
-          this.controller.forward()
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
 
 ## getCookieManager
 
@@ -349,27 +197,6 @@ getCookieManager(): WebCookie
 | --- | --- |
 | [WebCookie](arkts-arkweb-webcookie-c.md) | Web组件cookie管理对象，参考[WebCookie]{ |
 
-**示例**
-
-```TypeScript
-// xxx.ets
-@Entry
-@Component
-struct WebComponent {
-  controller: WebController = new WebController()
-
-  build() {
-    Column() {
-      Button('getCookieManager')
-        .onClick(() => {
-          let cookieManager = this.controller.getCookieManager()
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
 ## getHitTest
 
 ```TypeScript
@@ -391,28 +218,6 @@ getHitTest(): HitTestType
 | 类型 | 说明 |
 | --- | --- |
 | [HitTestType](arkts-arkweb-hittesttype-e.md) | 被点击区域的元素类型。 |
-
-**示例**
-
-```TypeScript
-// xxx.ets
-@Entry
-@Component
-struct WebComponent {
-  controller: WebController = new WebController()
-
-  build() {
-    Column() {
-      Button('getHitTest')
-        .onClick(() => {
-          let hitType = this.controller.getHitTest()
-          console.info("hitType: " + hitType)
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
 
 ## loadData
 
@@ -440,31 +245,6 @@ baseUrl为空时，通过“data”协议加载指定的一段字符串。
 | --- | --- | --- | --- |
 | options | { data: string, mimeType: string, encoding: string, baseUrl?: string, historyUrl?: string } | 是 | The options with the data or URL and other information. |
 
-**示例**
-
-```TypeScript
-// xxx.ets
-@Entry
-@Component
-struct WebComponent {
-  controller: WebController = new WebController()
-
-  build() {
-    Column() {
-      Button('loadData')
-        .onClick(() => {
-          this.controller.loadData({
-            data: "<html><body bgcolor=\"white\">Source:<pre>source</pre></body></html>",
-            mimeType: "text/html",
-            encoding: "UTF-8"
-          })
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
 ## loadUrl
 
 ```TypeScript
@@ -491,27 +271,6 @@ loadUrl(options: { url: string | Resource, headers?: Array<Header> })
 | --- | --- | --- | --- |
 | options | { url: string \| Resource, headers?: Array&lt;[Header](arkts-arkweb-header-i.md)&gt; } | 是 | The options with the URL and other information. |
 
-**示例**
-
-```TypeScript
-// xxx.ets
-@Entry
-@Component
-struct WebComponent {
-  controller: WebController = new WebController()
-
-  build() {
-    Column() {
-      Button('loadUrl')
-        .onClick(() => {
-          this.controller.loadUrl({ url: 'www.example.com' })
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
 ## onActive
 
 ```TypeScript
@@ -527,27 +286,6 @@ onActive(): void
 **替代接口：** onActive
 
 **系统能力：** SystemCapability.Web.Webview.Core
-
-**示例**
-
-```TypeScript
-// xxx.ets
-@Entry
-@Component
-struct WebComponent {
-  controller: WebController = new WebController()
-
-  build() {
-    Column() {
-      Button('onActive')
-        .onClick(() => {
-          this.controller.onActive()
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
 
 ## onInactive
 
@@ -565,27 +303,6 @@ onInactive(): void
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
-**示例**
-
-```TypeScript
-// xxx.ets
-@Entry
-@Component
-struct WebComponent {
-  controller: WebController = new WebController()
-
-  build() {
-    Column() {
-      Button('onInactive')
-        .onClick(() => {
-          this.controller.onInactive()
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
 ## refresh
 
 ```TypeScript
@@ -601,27 +318,6 @@ refresh()
 **替代接口：** refresh
 
 **系统能力：** SystemCapability.Web.Webview.Core
-
-**示例**
-
-```TypeScript
-// xxx.ets
-@Entry
-@Component
-struct WebComponent {
-  controller: WebController = new WebController()
-
-  build() {
-    Column() {
-      Button('refresh')
-        .onClick(() => {
-          this.controller.refresh()
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
 
 ## registerJavaScriptProxy
 
@@ -645,67 +341,6 @@ registerJavaScriptProxy(options: { object: object, name: string, methodList: Arr
 | --- | --- | --- | --- |
 | options | { object: object, name: string, methodList: Array&lt;string&gt; } | 是 | The option with the JavaScript object and method list. |
 
-**示例**
-
-```TypeScript
-// xxx.ets
-class TestObj {
-  constructor() {
-  }
-
-  test(): string {
-    return "ArkUI Web Component"
-  }
-
-  toString(): void {
-    console.info('Web Component toString')
-  }
-}
-
-@Entry
-@Component
-struct Index {
-  controller: WebController = new WebController()
-  testObj = new TestObj();
-  build() {
-    Column() {
-      Row() {
-        Button('Register JavaScript To Window').onClick(() => {
-          this.controller.registerJavaScriptProxy({
-            object: this.testObj,
-            name: "objName",
-            methodList: ["test", "toString"],
-          })
-        })
-      }
-      Web({ src: $rawfile('index.html'), controller: this.controller })
-        .javaScriptAccess(true)
-    }
-  }
-}
-```
-
-加载的HTML文件。
-
-```TypeScript
-<!-- index.html -->
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-    </head>
-    <body>
-        Hello world!
-        <script type="text/javascript">
-            function htmlTest() {
-                str = objName.test("test function")
-                console.info('objName.test result:'+ str)
-            }
-        </script>
-    </body>
-</html>
-```
-
 ## requestFocus
 
 ```TypeScript
@@ -721,27 +356,6 @@ requestFocus()
 **替代接口：** requestFocus
 
 **系统能力：** SystemCapability.Web.Webview.Core
-
-**示例**
-
-```TypeScript
-// xxx.ets
-@Entry
-@Component
-struct WebComponent {
-  controller: WebController = new WebController()
-
-  build() {
-    Column() {
-      Button('requestFocus')
-        .onClick(() => {
-          this.controller.requestFocus()
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
 
 ## runJavaScript
 
@@ -765,57 +379,6 @@ runJavaScript(options: { script: string, callback?: (result: string) => void })
 | --- | --- | --- | --- |
 | options | { script: string, callback?: (result: string) =&gt; void } | 是 | The options with a piece of code and a callback. |
 
-**示例**
-
-```TypeScript
-// xxx.ets
-@Entry
-@Component
-struct WebComponent {
-  controller: WebController = new WebController()
-  @State webResult: string = ''
-  build() {
-    Column() {
-      Text(this.webResult).fontSize(20)
-      Web({ src: $rawfile('index.html'), controller: this.controller })
-      .javaScriptAccess(true)
-      .onPageEnd((event) => {
-        this.controller.runJavaScript({
-          script: 'test()',
-          callback: (result: string) => {
-            this.webResult = result
-            console.info(`The test() return value is: ${result}`)
-          }})
-        if (event) {
-          console.info('url: ', event.url)
-        }
-      })
-    }
-  }
-}
-```
-
-加载的HTML文件。
-
-```TypeScript
-<!-- index.html -->
-<!DOCTYPE html>
-<html>
-  <head>
-      <meta charset="utf-8">
-  </head>
-  <body>
-      Hello world!
-      <script type="text/javascript">
-          function test() {
-              console.info('Ark WebComponent')
-              return "This value is from index.html"
-          }
-      </script>
-  </body>
-</html>
-```
-
 ## stop
 
 ```TypeScript
@@ -831,27 +394,6 @@ stop()
 **替代接口：** stop
 
 **系统能力：** SystemCapability.Web.Webview.Core
-
-**示例**
-
-```TypeScript
-// xxx.ets
-@Entry
-@Component
-struct WebComponent {
-  controller: WebController = new WebController()
-
-  build() {
-    Column() {
-      Button('stop')
-        .onClick(() => {
-          this.controller.stop()
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
 
 ## zoom
 
@@ -874,25 +416,3 @@ zoom(factor: number): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | factor | number | 是 | The zoom factor. |
-
-**示例**
-
-```TypeScript
-// xxx.ets
-@Entry
-@Component
-struct WebComponent {
-  controller: WebController = new WebController()
-  @State factor: number = 1
-
-  build() {
-    Column() {
-      Button('zoom')
-        .onClick(() => {
-          this.controller.zoom(this.factor)
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```

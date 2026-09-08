@@ -392,7 +392,7 @@ largeIcon?: image.PixelMap
 
 通知大图标，默认为空。图标像素的总字节数不超过192KB（图标像素的总字节数通过[getPixelBytesNumber](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md#getpixelbytesnumber)获取），超出后设置不生效。未设置`largeIcon`时，通知将不展示大图标。建议图标像素长宽为128*128。实际显示效果依赖于设备能力和通知中心UI样式。
 
-**类型：** image.PixelMap
+**类型：** [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)
 
 **起始版本：** 7
 
@@ -422,7 +422,7 @@ notificationSlotType?: notificationManager.SlotType
 
 通知渠道类型，默认值为OTHER_TYPES。不同渠道类型的通知提醒方式不同。
 
-**类型：** notificationManager.SlotType
+**类型：** [notificationManager.SlotType](arkts-notification-notificationmanager-slottype-e.md)
 
 **起始版本：** 11
 
@@ -438,7 +438,7 @@ overlayIcon?: image.PixelMap
 
 此接口只在[notificationSlotType](arkts-notification-notificationrequest-notificationrequest-i.md)类型设置为SOCIAL_COMMUNICATION时生效。建议图标像素长宽为128*128。实际显示效果依赖于设备能力和通知中心UI样式。
 
-**类型：** image.PixelMap
+**类型：** [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)
 
 **起始版本：** 23
 
@@ -452,7 +452,7 @@ priorityNotificationType?: notificationManager.PriorityNotificationType
 
 通知优先级类型，默认值为OTHER。设置该参数可使通知置顶，并且在通知中心以突出方式显示。<!--RP2--><!--RP2End-->实际显示效果依赖于设备能力和通知中心UI样式。
 
-**类型：** notificationManager.PriorityNotificationType
+**类型：** [notificationManager.PriorityNotificationType](arkts-notification-notificationmanager-prioritynotificationtype-e.md)
 
 **起始版本：** 23
 
@@ -498,7 +498,7 @@ slotType?: notification.SlotType
 
 通知渠道类型，默认值为OTHER_TYPES。
 
-**类型：** notification.SlotType
+**类型：** [notification.SlotType](arkts-notification-notification-slottype-depr-e.md)
 
 **起始版本：** 7
 
@@ -516,7 +516,7 @@ smallIcon?: image.PixelMap
 
 通知小图标，默认为空。图标像素的总字节数不超过192KB（图标像素的总字节数通过[getPixelBytesNumber](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md#getpixelbytesnumber)获取），超出后设置不生效。未设置`smallIcon`时，通知将展示应用默认图标。建议图标像素长宽为128*128。实际显示效果依赖于设备能力和通知中心UI样式。
 
-**类型：** image.PixelMap
+**类型：** [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)
 
 **起始版本：** 7
 

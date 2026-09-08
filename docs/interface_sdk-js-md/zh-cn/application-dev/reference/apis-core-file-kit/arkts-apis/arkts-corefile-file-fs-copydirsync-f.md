@@ -42,27 +42,10 @@ declare function copyDirSync(src: string, dest: string, mode?: number): void
 | 13900018 | Not a directory |
 | 13900019 | Is a directory |
 | 13900020 | Invalid argument |
-| 13900030 | File name too number |
+| 13900030 | File name too long |
 | 13900031 | Function not implemented |
 | 13900033 | Too many symbolic links encountered |
 | 13900034 | Operation would block |
 | 13900038 | Value too large for defined data type |
 | 13900042 | Unknown error |
 | 13900044 | Network is unreachable<br>**适用版本：** 12+ |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// copy directory from srcPath to destPath
-let srcPath = pathDir + "/srcDir/";
-let destPath = pathDir + "/destDir/";
-try {
-  fileIo.copyDirSync(srcPath, destPath, 0);
-  console.info(`Succeeded in copying directory.`);
-} catch (error) {
-  let err: BusinessError = error as BusinessError;
-  console.error(`Failed to copy directory. Code: ${err.code}, message: ${err.message}`);
-}
-```

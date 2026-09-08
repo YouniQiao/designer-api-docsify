@@ -142,24 +142,6 @@ workerPort.onmessage = (e: MessageEvents): void => {
 }
 ```
 
-```TypeScript
-// Index.ets
-import { worker } from '@kit.ArkTS';
-
-const workerInstance = new worker.Worker("entry/ets/workers/worker.ets");
-workerInstance.postMessage("hello world");
-```
-
-```TypeScript
-// worker.ets
-import { worker } from '@kit.ArkTS';
-
-const parentPort = worker.parentPort;
-parentPort.onmessage = (): void => {
-    parentPort.close()
-}
-```
-
 ## onmessage
 
 ```TypeScript
@@ -268,31 +250,6 @@ workerPort.onmessage = (e: MessageEvents): void => {
 }
 ```
 
-```TypeScript
-// Index.ets
-import { worker } from '@kit.ArkTS';
-
-const workerInstance = new worker.Worker("entry/ets/workers/worker.ets");
-workerInstance.postMessage("hello world");
-workerInstance.onmessage = (e: MessageEvents): void => {
-    // let data = e.data;
-    console.info("receive data from worker.ets");
-}
-```
-
-```TypeScript
-// worker.ets
-import { DedicatedWorkerGlobalScope, worker } from '@kit.ArkTS';
-
-const workerPort: DedicatedWorkerGlobalScope = worker.parentPort;
-
-workerPort.onmessage = (): void => {
-    // let data = e.data;
-    let buffer = new ArrayBuffer(5)
-    workerPort.postMessage(buffer, [buffer]);
-}
-```
-
 ## postMessage
 
 ```TypeScript
@@ -341,27 +298,6 @@ import { worker, MessageEvents } from '@kit.ArkTS';
 const workerPort = worker.workerPort;
 workerPort.onmessage = (e: MessageEvents): void => {
     workerPort.postMessage("receive data from main thread");
-}
-```
-
-```TypeScript
-// Index.ets
-import { worker } from '@kit.ArkTS';
-
-const workerInstance = new worker.Worker("entry/ets/workers/worker.ets");
-workerInstance.postMessage("hello world");
-workerInstance.onmessage = (): void => {
-    console.info("receive data from worker.ets");
-}
-```
-
-```TypeScript
-// worker.ets
-import { ErrorEvent, MessageEvents, worker } from '@kit.ArkTS';
-
-const parentPort = worker.parentPort;
-parentPort.onmessage = (e: MessageEvents) => {
-  parentPort.postMessage("receive data from main thread");
 }
 ```
 
@@ -427,47 +363,6 @@ Sends a message from the Worker thread to the host thread. In the message, a sen
 **Examples**
 
 ```TypeScript
-// Index.ets
-// Create a SendableObject instance and pass it to the Worker thread through the host thread.
-
-import { worker } from '@kit.ArkTS';
-import { SendableObject } from './sendable';
-
-const workerInstance = new worker.ThreadWorker("entry/ets/workers/Worker.ets");
-let object: SendableObject = new SendableObject();
-workerInstance.postMessageWithSharedSendable(object);
-
-// Use the postMessage API to pass Sendable objects by copying the data.
-workerInstance.postMessage(object);
-```
-
-```TypeScript
-// sendable.ets
-// Define SendableObject.
-
-@Sendable
-export class SendableObject {
-  a:number = 45;
-}
-```
-
-```TypeScript
-// The worker file path is entry/src/main/ets/workers/Worker.ets.
-// Worker.ets
-// Receive and access the data passed from the host thread to the Worker thread.
-
-import { SendableObject } from '../pages/sendable';
-import { worker, ThreadWorkerGlobalScope, MessageEvents, ErrorEvent } from '@kit.ArkTS';
-
-const workerPort: ThreadWorkerGlobalScope = worker.workerPort;
-
-workerPort.onmessage = (e: MessageEvents) => {
-  let obj: SendableObject = e.data;
-  console.info("sendable obj is: " + obj.a);
-}
-```
-
-```TypeScript
 // The worker file path is entry/src/main/ets/workers/Worker.ets.
 // Worker.ets
 // Create a SendableObject instance and pass it to the host thread through the Worker thread.
@@ -479,6 +374,16 @@ const workerPort: ThreadWorkerGlobalScope = worker.workerPort;
 workerPort.onmessage = (e: MessageEvents) => {
   let object: SendableObject = new SendableObject();
   workerPort.postMessageWithSharedSendable(object);
+}
+```
+
+```TypeScript
+// sendable.ets
+// Define SendableObject.
+
+@Sendable
+export class SendableObject {
+  a:number = 45;
 }
 ```
 

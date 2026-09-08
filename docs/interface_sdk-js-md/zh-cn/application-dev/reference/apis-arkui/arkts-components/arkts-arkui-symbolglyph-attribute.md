@@ -133,7 +133,7 @@ fontSize(value: number | string | Resource)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number \| string \| Resource | 是 | SymbolGlyph组件字体大小。取值范围：[0, +∞) 单位：[fp](../arkts-apis/arkts-arkui-length-t.md) 不支持设置百分比字符串。 |
+| value | number \| string \| [Resource](../arkts-apis/arkts-arkui-resource-t.md) | 是 | SymbolGlyph组件字体大小。取值范围：[0, +∞) 单位：[fp](../arkts-apis/arkts-arkui-length-t.md) 不支持设置百分比字符串。 |
 
 ## fontWeight
 
@@ -163,7 +163,7 @@ sys.symbol.ohos_lungs图标不支持设置fontWeight。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number \| FontWeight \| string | 是 | SymbolGlyph组件字体粗细。number类型取值[100, 900]，取值间隔为100，默认为400，取值越大，字体越粗。string类型仅支持number类型取值的字符串形式，例如“400”，以及“bold”、“bolder”、“ lighter”、“regular”、“medium”，分别对应FontWeight中相应的枚举值。设置过大可能会在不同字体下有截断。传入超出取值范围或不符合间隔要求的值时取默认值。 |
+| value | number \| [FontWeight](../arkts-apis/arkts-arkui-fontweight-e.md) \| string | 是 | SymbolGlyph组件字体粗细。number类型取值[100, 900]，取值间隔为100，默认为400，取值越大，字体越粗。string类型仅支持number类型取值的字符串形式，例如“400”，以及“bold”、“bolder”、“ lighter”、“regular”、“medium”，分别对应FontWeight中相应的枚举值。设置过大可能会在不同字体下有截断。传入超出取值范围或不符合间隔要求的值时取默认值。 |
 
 ## fontWeight
 
@@ -187,7 +187,7 @@ fontWeight(value: number | FontWeight | ResourceStr, fontWeightConfigs?: FontWei
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number \| FontWeight \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | 是 | SymbolGlyph组件图标小符号的粗细。number类型取值[100, 900]，取值间隔为100，默认为400，取值越大，字体越粗。string类型仅支持number类型取值的字符串形式，例如“400”，以及“bold”、“bolder”、“ lighter”、“regular”、“medium”，分别对应FontWeight中相应的枚举值。设置过大可能会在不同字体下有截断。传入超出取值范围的值时取默认值。传入不符合间隔要求的值时，若设置fontWeightConfigs的enableVariableFontWeight为true，使用传入值；若设置为false，使用默认值。 |
+| value | number \| [FontWeight](../arkts-apis/arkts-arkui-fontweight-e.md) \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | 是 | SymbolGlyph组件图标小符号的粗细。number类型取值[100, 900]，取值间隔为100，默认为400，取值越大，字体越粗。string类型仅支持number类型取值的字符串形式，例如“400”，以及“bold”、“bolder”、“ lighter”、“regular”、“medium”，分别对应FontWeight中相应的枚举值。设置过大可能会在不同字体下有截断。传入超出取值范围的值时取默认值。传入不符合间隔要求的值时，若设置fontWeightConfigs的enableVariableFontWeight为true，使用传入值；若设置为false，使用默认值。 |
 | fontWeightConfigs | [FontWeightConfigs](../arkts-apis/arkts-arkui-fontweightconfigs-i.md) | 否 | 字体粗细配置。当需要启用可变字重调节（设置非100整数倍的精细字重值如220、660）或跟随设备字体粗细级别自动更新字重时传入此参数。默认值继承[FontWeightConfigs](../arkts-apis/arkts-arkui-fontweightconfigs-i.md)。 |
 
 ## maxFontScale
@@ -210,7 +210,7 @@ maxFontScale(scale: Optional<number|Resource>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| scale | [Optional](arkts-arkui-optional-t.md)&lt;number \| Resource&gt; | 是 | SymbolGlyph组件最大的字体缩放倍数。取值范围：[1, +∞)    **说明：** 设置的值小于1时，按值为1处理。 |
+| scale | [Optional](arkts-arkui-optional-t.md)&lt;number \| [Resource](../arkts-apis/arkts-arkui-resource-t.md)&gt; | 是 | SymbolGlyph组件最大的字体缩放倍数。取值范围：[1, +∞)    **说明：** 设置的值小于1时，按值为1处理。 |
 
 ## minFontScale
 
@@ -232,7 +232,7 @@ minFontScale(scale: Optional<number|Resource>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| scale | [Optional](arkts-arkui-optional-t.md)&lt;number \| Resource&gt; | 是 | SymbolGlyph组件最小的字体缩放倍数。取值范围：[0, 1] 设置为0，缩放最小。   **说明：** 设置的值小于0时，按值为0处理。设置的值大于1，按值为1处理。异常值默认不生效。 |
+| scale | [Optional](arkts-arkui-optional-t.md)&lt;number \| [Resource](../arkts-apis/arkts-arkui-resource-t.md)&gt; | 是 | SymbolGlyph组件最小的字体缩放倍数。取值范围：[0, 1] 设置为0，缩放最小。   **说明：** 设置的值小于0时，按值为0处理。设置的值大于1，按值为1处理。异常值默认不生效。 |
 
 ## renderingStrategy
 

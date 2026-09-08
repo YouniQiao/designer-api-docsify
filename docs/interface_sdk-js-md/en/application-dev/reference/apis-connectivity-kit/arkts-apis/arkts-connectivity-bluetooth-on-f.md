@@ -64,7 +64,7 @@ Subscribe the event reported when a remote Bluetooth device is bonded.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'bondStateChange' | Yes | Type of the bond state event to listen for. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;BondStateParam&gt; | Yes | Callback used to listen for the bond state event, [BondStateParam](arkts-connectivity-bluetooth-bondstateparam-i.md). |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[BondStateParam](arkts-connectivity-bluetooth-bondstateparam-i.md)&gt; | Yes | Callback used to listen for the bond state event, [BondStateParam](arkts-connectivity-bluetooth-bondstateparam-i.md). |
 
 **Examples**
 
@@ -99,7 +99,7 @@ Subscribe the event of a pairing request from a remote Bluetooth device.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'pinRequired' | Yes | Type of the pairing request event to listen for. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;PinRequiredParam&gt; | Yes | Callback used to listen for the pairing request event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PinRequiredParam](arkts-connectivity-bluetooth-pinrequiredparam-i.md)&gt; | Yes | Callback used to listen for the pairing request event. |
 
 **Examples**
 
@@ -134,7 +134,7 @@ Subscribe the event reported when the Bluetooth state changes.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'stateChange' | Yes | Type of the Bluetooth state changes event to listen for. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;BluetoothState&gt; | Yes | Callback used to listen for the Bluetooth state event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[BluetoothState](arkts-connectivity-bluetooth-bluetoothstate-e.md)&gt; | Yes | Callback used to listen for the Bluetooth state event. |
 
 **Examples**
 

@@ -20,7 +20,7 @@ rect: window.Rect
 
 Rectangular area of the window.
 
-**Type:** window.Rect
+**Type:** [window.Rect](../../apis-arkui/arkts-apis/arkts-arkui-window-rect-i.md)
 
 **Since:** 12
 
@@ -34,7 +34,7 @@ status: window.WindowStatusType
 
 Window status type.
 
-**Type:** window.WindowStatusType
+**Type:** [window.WindowStatusType](../../apis-arkui/arkts-apis/arkts-arkui-window-windowstatustype-e.md)
 
 **Since:** 12
 

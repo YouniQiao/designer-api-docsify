@@ -1573,6 +1573,8 @@ Configure "routerMap": "$profile:router_map" in the module field of the configur
 ```
 
 This example demonstrates the following:
+The routing stack operation can be conducted even when [NavPathStack](#navpathstack10) is not declared as a state variable.
+[NavDestination](ts-basic-components-navdestination.md) can obtain the corresponding [NavPathInfo](arkts-arkui-navpathinfo-c.md) and its belonging [NavPathStack](#navpathstack10) via the [onReady](ts-basic-components-navdestination.md#onready11) event.
 
 ```TypeScript
 class PageParam {
@@ -2628,6 +2630,8 @@ Configure "routerMap": "$profile:router_map" in the module field of the configur
 ```
 
 This example demonstrates the effect of the Navigation component in the split-column mode. The [splitPlaceholder](arkts-arkui-navigation-attribute.md#splitplaceholder) attribute is used to set the default placeholder page on the right side of the split column, the [navBarWidthRange](#navbarwidthrange10) attribute is used to configure the width range of the navigation bar, and the [divider](#divider23) attribute is used to customize the style of the divider between the navigation bar and the content area.
+The splitPlaceholder attribute is added since API version 20, and the divider attribute is added since API version 23.
+Before running this example, you need to set orientation to auto_rotation in the abilities field of the project configuration file [module.json5](../../../quick-start/module-configuration-file.md).
 
 ```TypeScript
 import { ComponentContent } from '@kit.ArkUI';
@@ -2756,6 +2760,8 @@ struct NavigationExample {
 ```
 
 This example demonstrates how to enable and disable the self-adaptation capability of the navigation toolbar using the [enableToolBarAdaptation](arkts-arkui-navigation-attribute.md#enabletoolbaradaptation) attribute.
+The enableToolBarAdaptation attribute is added since API version 19.
+In the [module.json5](../../../quick-start/module-configuration-file.md) file, set orientation to landscape in the abilities field. (This configuration is used only to demonstrate the toolbar adaptation capability of Navigation in landscape mode. You can set orientation to auto_rotation as required.)
 
 ```TypeScript
 import { SymbolGlyphModifier } from '@kit.ArkUI';
@@ -2819,6 +2825,7 @@ struct NavigationExample {
 ```
 
 This example demonstrates how to configure the [homeDestination](#navigation) parameter to implement the [NavDestination](ts-basic-components-navdestination.md) root navigation page effect of the Navigation component.
+This new way to create the Navigation component is added since API version 20.
 
 ```TypeScript
 @Component
@@ -2900,6 +2907,7 @@ Configure "routerMap": "$profile:router_map" in the module field of the configur
 ```
 
 This example demonstrates how to implement route interception by setting the [setInterception](arkts-arkui-navpathstack-c.md#setinterception) method and obtain mode using the [NavDestinationContext](ts-basic-components-navdestination.md#navdestinationcontext11) object.
+The interception API is added to the [NavigationInterception](arkts-arkui-navigationinterception-i.md) parameter type of setInterception since API version 22.
 
 ```TypeScript
 // Index.ets
@@ -3164,6 +3172,7 @@ Configure "routerMap": "$profile:router_map" in the module field of the project 
 ```
 
 This example demonstrates how to set Navigation as recoverable by using the [recoverable](#recoverable14) API. You need to enable the [UIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md) backup and restore function during module initialization. For details, see [UIAbility Backup and Restore](../../../application-models/ability-recover-guideline.md).
+The recoverable API is supported since API version 14.
 
 ```TypeScript
 // Index.ets
@@ -3317,6 +3326,7 @@ Configure "routerMap": "$profile:router_map" in the module field of the configur
 ```
 
 This example demonstrates how to use [ScrollEffectOptions](#scrolleffectoptions) item to enable the scroll blur effect for the title bar.
+Since API version 26.0.0, the [scrollEffectOptions](#scrolleffectoptions) attribute has been added to the options parameter of the [title](#title) API.
 
 ```TypeScript
 // xxx.ets
@@ -3381,6 +3391,7 @@ struct NavigationExample {
 ```
 
 This example demonstrates how to use the systemMaterial attribute to enable the material effect for the title bar.
+The systemMaterial attribute is added to [NavigationTitleOptions](arkts-arkui-navigationtitleoptions-i.md) since API version 26.0.0.
 
 ```TypeScript
 // xxx.ets
@@ -3513,6 +3524,7 @@ struct NavigationTitleMaterialDemo {
 ```
 
 This example demonstrates how to use the clearContentStackOnPrimaryNavigation attribute to enable the stack clearing effect from left to right on the navigation page.
+The clearContentStackOnPrimaryNavigation attribute is added to [NavigationConfiguration](arkts-arkui-navigationconfiguration-i.md) since API version 26.1.0.
 
 ```TypeScript
 // xxx.ets

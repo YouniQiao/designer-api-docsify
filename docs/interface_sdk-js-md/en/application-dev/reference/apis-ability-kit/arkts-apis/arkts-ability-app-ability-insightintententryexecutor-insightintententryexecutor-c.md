@@ -34,68 +34,7 @@ Called when insight intent execute.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;insightIntent.IntentResult&lt;T&gt;&gt; | The result of insight intent execution, support promise. |
-
-**Examples**
-
-```TypeScript
-import { insightIntent, InsightIntentEntry, InsightIntentEntryExecutor } from '@kit.AbilityKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-const LOG_TAG: string = 'testTag-EntryIntent';
-
-// Use the @InsightIntentEntry decorator to define an intent.
-@InsightIntentEntry({
-  intentName: 'PlayMusic',
-  domain: 'MusicDomain',
-  intentVersion: '1.0.1',
-  displayName: 'Play Music',
-  displayDescription: 'Intent to play music',
-  icon: $r('app.media.app_icon'), // $r indicates a local icon, which must be defined in the resource catalog.
-  llmDescription: 'Supports passing song names to play music',
-  keywords: ['music playback', 'play music', 'PlayMusic'],
-  abilityName: 'EntryAbility',
-  executeMode: [insightIntent.ExecuteMode.UI_ABILITY_FOREGROUND],
-  parameters: {
-    'schema': 'http://json-schema.org/draft-07/schema#',
-    'type': 'object',
-    'title': 'Song Schema',
-    'description': 'A schema for describing songs and their artists',
-    'properties': {
-      'songName': {
-        'type': 'string',
-        'description': 'The name of the song',
-        'minLength': 1
-      }
-    },
-    'required': ['songName']
-  }
-})
-export default class PlayMusicDemo extends InsightIntentEntryExecutor<string> {
-  songName: string = '';
-
-  onExecute(): Promise<insightIntent.IntentResult<string>> {
-    hilog.info(0x0000, LOG_TAG, 'PlayMusicDemo executeMode %{public}s', JSON.stringify(this.executeMode));
-    hilog.info(0x0000, LOG_TAG, '%{public}s', JSON.stringify(this));
-    let storage = new LocalStorage();
-    storage.setOrCreate('songName', this.songName);
-    // Start the PlayMusicPage page based on the executeMode parameter.
-    if (this.executeMode == insightIntent.ExecuteMode.UI_ABILITY_FOREGROUND) {
-      this.windowStage?.loadContent('pages/PlayMusicPage', storage);
-    } else if (this.executeMode == insightIntent.ExecuteMode.UI_EXTENSION_ABILITY) {
-      this.uiExtensionSession?.loadContent('pages/PlayMusicPage', storage);
-    }
-    // Define the intent execution result.
-    let result: insightIntent.IntentResult<string> = {
-      code: 123,
-      result: 'result'
-    }
-    hilog.info(0x0000, LOG_TAG, 'PlayMusicDemo return %{public}s', JSON.stringify(result));
-    // Return the intent execution result in Promise mode.
-    return Promise.reject(result);
-  }
-}
-```
+| Promise&lt;[insightIntent.IntentResult](arkts-ability-insightintent-intentresult-i.md)&lt;T&gt;&gt; | The result of insight intent execution, support promise. |
 
 ## context
 
@@ -123,7 +62,7 @@ executeMode: insightIntent.ExecuteMode
 
 The insight intent execute mode.
 
-**Type:** insightIntent.ExecuteMode
+**Type:** [insightIntent.ExecuteMode](arkts-ability-insightintent-executemode-e.md)
 
 **Since:** 20
 
@@ -159,7 +98,7 @@ windowStage?: window.WindowStage
 
 The window stage.
 
-**Type:** window.WindowStage
+**Type:** [window.WindowStage](../../apis-arkui/arkts-apis/arkts-arkui-window-windowstage-i.md)
 
 **Since:** 20
 

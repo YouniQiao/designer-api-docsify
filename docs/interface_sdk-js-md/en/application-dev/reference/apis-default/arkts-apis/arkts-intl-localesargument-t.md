@@ -11,7 +11,7 @@ The locale(s) to use
 | Type | Description |
 | --- | --- |
 | [UnicodeBCP47LocaleIdentifier](arkts-intl-unicodebcp47localeidentifier-t.md) |  |
-| Locale |  |
+| [Locale](arkts-intl-locale-i.md) |  |
 | readonly (UnicodeBCP47LocaleIdentifier |  |
 | Locale)[] |  |
 | undefined |  |

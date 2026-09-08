@@ -66,7 +66,7 @@ type: NetBearType
 
 **注意：** 当type为蜂窝网络时，需指定simId字段。
 
-**类型：** NetBearType
+**类型：** [NetBearType](arkts-network-statistics-netbeartype-t.md)
 
 **起始版本：** 22
 

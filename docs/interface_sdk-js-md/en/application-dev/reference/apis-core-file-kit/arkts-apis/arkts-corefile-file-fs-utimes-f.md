@@ -35,13 +35,3 @@ Changes the time when the file was last modified.
 | 13900020 | Invalid argument |
 | 13900027 | Read-only file system |
 | 13900042 | Unknown error |
-
-**Examples**
-
-```TypeScript
-let filePath = pathDir + "/test.txt";
-let file = fileIo.openSync(filePath, fileIo.OpenMode.CREATE | fileIo.OpenMode.READ_WRITE);
-fileIo.writeSync(file.fd, 'test data');
-fileIo.closeSync(file);
-fileIo.utimes(filePath, new Date().getTime());
-```

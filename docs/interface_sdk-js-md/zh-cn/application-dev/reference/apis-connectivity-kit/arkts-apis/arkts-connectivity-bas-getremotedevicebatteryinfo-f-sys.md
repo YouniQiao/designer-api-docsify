@@ -36,7 +36,7 @@ function getRemoteDeviceBatteryInfo(deviceId: BluetoothAddress): Promise<Battery
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;BatteryInfo&gt; | Promise对象，返回远端设备的电量信息。 |
+| Promise&lt;[BatteryInfo](arkts-connectivity-connection-batteryinfo-i.md)&gt; | Promise对象，返回远端设备的电量信息。 |
 
 **错误码：**
 

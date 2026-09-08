@@ -113,22 +113,6 @@ readonly text: string
 
 **测试接口：** 此接口仅在自动化测试脚本中使用。
 
-**示例**
-
-```TypeScript
-// xxx.test.ets
-import { On, ON } from '@kit.TestKit';
-
-let on: On = ON.text('123'); // 使用静态构造器ON创建On对象，指定目标控件的text属性。
-```
-
-```TypeScript
-// xxx.test.ets
-import { BY, By } from '@kit.TestKit';
-
-let by: By = BY.text('123'); // 使用静态构造器BY创建By对象，指定目标控件的text属性。
-```
-
 ## type
 
 ```TypeScript
@@ -148,29 +132,6 @@ readonly type: string
 **系统能力：** SystemCapability.Test.UiTest
 
 **测试接口：** 此接口仅在自动化测试脚本中使用。
-
-**示例**
-
-```TypeScript
-// xxx.test.ets
-import { On, ON } from '@kit.TestKit';
-
-let on: On = ON.type('Button'); // 使用静态构造器ON创建On对象，指定目标控件的控件类型属性。
-```
-
-```TypeScript
-// xxx.test.ets
-import { On, ON, MatchPattern } from '@kit.TestKit';
-
-let on: On = ON.type('Button', MatchPattern.EQUALS); // 使用静态构造器ON创建On对象，指定目标控件的控件类型属性。
-```
-
-```TypeScript
-// xxx.test.ets
-import { By, BY } from '@kit.TestKit';
-
-let by: By = BY.type('Button'); // 使用静态构造器BY创建By对象，指定目标控件的控件类型属性。
-```
 
 ## windowChangeType
 

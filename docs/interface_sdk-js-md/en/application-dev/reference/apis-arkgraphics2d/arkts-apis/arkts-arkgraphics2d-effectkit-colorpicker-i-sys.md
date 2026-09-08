@@ -198,7 +198,7 @@ Generates a stronger immersion color that merges with the background color and i
 
 | Type | Description |
 | --- | --- |
-| Color | Color value of the deepened immersion color. If the image processing fails or the immersion color cannot be generated, null is returned. |
+| [Color](arkts-arkgraphics2d-effectkit-color-i.md) | Color value of the deepened immersion color. If the image processing fails or the immersion color cannot be generated, null is returned. |
 
 **Examples**
 
@@ -250,7 +250,7 @@ Generates an immersive background color that creates an immersive visual effect,
 
 | Type | Description |
 | --- | --- |
-| Color | Color value of the immersive background color. If the image processing fails or the immersive background color cannot be generated, null is returned. |
+| [Color](arkts-arkgraphics2d-effectkit-color-i.md) | Color value of the immersive background color. If the image processing fails or the immersive background color cannot be generated, null is returned. |
 
 **Examples**
 
@@ -302,7 +302,7 @@ Generates an immersive foreground color that creates an immersive visual effect 
 
 | Type | Description |
 | --- | --- |
-| Color | Color value of the immersive foreground color. If the image processing fails or the immersive foreground color cannot be generated, null is returned. |
+| [Color](arkts-arkgraphics2d-effectkit-color-i.md) | Color value of the immersive foreground color. If the image processing fails or the immersive foreground color cannot be generated, null is returned. |
 
 **Examples**
 
@@ -354,7 +354,7 @@ Obtains the Morandi shadow color from the dominant color of the image and writes
 
 | Type | Description |
 | --- | --- |
-| Color | Color value of the Morandi shadow color. If the image processing fails or the Morandi shadow color cannot be obtained, null is returned. |
+| [Color](arkts-arkgraphics2d-effectkit-color-i.md) | Color value of the Morandi shadow color. If the image processing fails or the Morandi shadow color cannot be obtained, null is returned. |
 
 **Examples**
 
@@ -406,7 +406,7 @@ Generates a reverse color based on the image brightness discrimination result, a
 
 | Type | Description |
 | --- | --- |
-| Color | Color value of the reverse color. If the image processing fails or the reverse color cannot be generated, null is returned. |
+| [Color](arkts-arkgraphics2d-effectkit-color-i.md) | Color value of the reverse color. If the image processing fails or the reverse color cannot be generated, null is returned. |
 
 **Examples**
 
@@ -518,7 +518,7 @@ Synchronously returns the top proportion colors and their corresponding percenta
 
 | Type | Description |
 | --- | --- |
-| Map&lt;Color \| null, number \| null&gt; | Map of the top colorCount color values and their corresponding percentages by proportion in the image. The percentage value range is [0, 1]. |
+| Map&lt;[Color](arkts-arkgraphics2d-effectkit-color-i.md) \| null, number \| null&gt; | Map of the top colorCount color values and their corresponding percentages by proportion in the image. The percentage value range is [0, 1]. |
 
 **Error codes:**
 

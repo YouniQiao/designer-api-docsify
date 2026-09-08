@@ -20,7 +20,7 @@ host?: NetAddress
 
 IP address of the device that provides the MDNS service. The IP address is not effective when an MDNS service is added or removed.
 
-**Type:** NetAddress
+**Type:** [NetAddress](arkts-network-mdns-netaddress-t.md)
 
 **Since:** 10
 

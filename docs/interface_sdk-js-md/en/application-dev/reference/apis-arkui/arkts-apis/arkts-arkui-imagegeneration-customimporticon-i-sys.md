@@ -38,7 +38,7 @@ image: image.PixelMap | ResourceStr
 
 Icon image information.
 
-**Type:** image.PixelMap \| [ResourceStr](arkts-arkui-resourcestr-t.md)
+**Type:** [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) \| [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 26.0.0
 

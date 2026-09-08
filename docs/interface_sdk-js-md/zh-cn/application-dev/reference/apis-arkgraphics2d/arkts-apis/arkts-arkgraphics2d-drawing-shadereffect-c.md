@@ -50,14 +50,6 @@ static createColorShader(color: number): ShaderEffect
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
 
-**示例**
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-let shaderEffect = drawing.ShaderEffect.createColorShader(0xFFFF0000);
-```
-
 ## createComposeShader
 
 ```TypeScript
@@ -77,7 +69,7 @@ static createComposeShader(dstShaderEffect: ShaderEffect, srcShaderEffect: Shade
 | --- | --- | --- | --- |
 | dstShaderEffect | [ShaderEffect](arkts-arkgraphics2d-drawing-shadereffect-c.md) | 是 | 在混合模式中作为目标色的着色器。 |
 | srcShaderEffect | [ShaderEffect](arkts-arkgraphics2d-drawing-shadereffect-c.md) | 是 | 在混合模式中作为源色的着色器。 |
-| blendMode | BlendMode | 是 | 混合模式，用于指定两个着色器叠加时的颜色混合算法。 |
+| blendMode | [BlendMode](arkts-arkgraphics2d-drawing-blendmode-e.md) | 是 | 混合模式，用于指定两个着色器叠加时的颜色混合算法。 |
 
 **返回值：**
 
@@ -90,16 +82,6 @@ static createComposeShader(dstShaderEffect: ShaderEffect, srcShaderEffect: Shade
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [25900001](../errorcode-drawing.md#25900001-参数值异常) | Parameter error. Possible causes: Incorrect parameter range. |
-
-**示例**
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-let dstShader = drawing.ShaderEffect.createColorShader(0xFF0000FF);
-let srcShader = drawing.ShaderEffect.createColorShader(0xFFFF0000);
-let shader = drawing.ShaderEffect.createComposeShader(dstShader, srcShader, drawing.BlendMode.SRC);
-```
 
 ## createConicalGradient
 
@@ -119,12 +101,12 @@ static createConicalGradient(startPt: common2D.Point, startRadius: number, endPt
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| startPt | common2D.Point | 是 | 表示渐变的起始圆的圆心。 |
+| startPt | [common2D.Point](arkts-arkgraphics2d-common2d-point-i.md) | 是 | 表示渐变的起始圆的圆心。 |
 | startRadius | number | 是 | 表示渐变的起始圆的半径，小于0时无效。该参数为浮点数。单位为物理像素px。 |
-| endPt | common2D.Point | 是 | 表示渐变的结束圆的圆心。 |
+| endPt | [common2D.Point](arkts-arkgraphics2d-common2d-point-i.md) | 是 | 表示渐变的结束圆的圆心。 |
 | endRadius | number | 是 | 表示渐变的结束圆的半径，小于0时无效。该参数为浮点数。单位为物理像素px。 |
 | colors | Array&lt;number&gt; | 是 | 表示在起始圆和结束圆之间分布的颜色数组，数组中的值为32位（ARGB）无符号整数。 |
-| mode | TileMode | 是 | 着色器效果平铺模式。 |
+| mode | [TileMode](arkts-arkgraphics2d-drawing-tilemode-e.md) | 是 | 着色器效果平铺模式。 |
 | pos | Array&lt;number&gt; \| null | 否 | 表示每种对应颜色在颜色数组中的相对位置。数组长度需和colors保持一致，数组的首个元素应当是0.0，末尾元素应当是1.0，中间的元素应当在0与1之间并且逐下标递增，表示colors中每个对应颜色的相对位置。默认为null，表示颜色均匀分布在起始圆和结束圆之间。 |
 | matrix | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) \| null | 否 | 矩阵对象，用于对着色器做矩阵变换。默认为null，表示单位矩阵。 |
 
@@ -139,16 +121,6 @@ static createConicalGradient(startPt: common2D.Point, startRadius: number, endPt
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
-
-**示例**
-
-```TypeScript
-import { common2D, drawing } from '@kit.ArkGraphics2D';
-
-let startPt: common2D.Point = { x: 100, y: 100 };
-let endPt: common2D.Point = { x: 200, y: 200 };
-let shaderEffect = drawing.ShaderEffect.createConicalGradient(startPt, 100, endPt, 50, [0xFF00FF00, 0xFFFF0000], drawing.TileMode.REPEAT);
-```
 
 ## createImageShader
 
@@ -167,9 +139,9 @@ static createImageShader(pixelmap: image.PixelMap, tileX: TileMode, tileY: TileM
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| pixelmap | image.PixelMap | 是 | 进行采样的图片对象。 |
-| tileX | TileMode | 是 | 水平方向的平铺模式。 |
-| tileY | TileMode | 是 | 竖直方向的平铺模式。 |
+| pixelmap | [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | 是 | 进行采样的图片对象。 |
+| tileX | [TileMode](arkts-arkgraphics2d-drawing-tilemode-e.md) | 是 | 水平方向的平铺模式。 |
+| tileY | [TileMode](arkts-arkgraphics2d-drawing-tilemode-e.md) | 是 | 竖直方向的平铺模式。 |
 | samplingOptions | [SamplingOptions](arkts-arkgraphics2d-drawing-samplingoptions-c.md) | 是 | 图片采样参数，用于指定图像采样时的过滤模式。 |
 | matrix | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) \| null | 否 | 矩阵对象，用于对着色器做矩阵变换。默认为null，表示单位矩阵。 |
 
@@ -184,47 +156,6 @@ static createImageShader(pixelmap: image.PixelMap, tileX: TileMode, tileY: TileM
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [25900001](../errorcode-drawing.md#25900001-参数值异常) | Parameter error. Possible causes: Incorrect parameter range. |
-
-**示例**
-
-```TypeScript
-import { RenderNode, DrawContext } from '@kit.ArkUI';
-import { image } from '@kit.ImageKit';
-import { drawing } from '@kit.ArkGraphics2D';
-
-class DrawingRenderNode extends RenderNode {
-  draw(context: DrawContext) {
-    const width = 1000;
-    const height = 1000;
-    const bufferSize = width * height * 4;
-    const color: ArrayBuffer = new ArrayBuffer(bufferSize);
-
-    const colorData = new Uint8Array(color);
-    for (let i = 0; i < colorData.length; i += 4) {
-      colorData[i] = 255;
-      colorData[i + 1] = 156;
-      colorData[i + 2] = 0;
-      colorData[i + 3] = 255;
-    }
-
-  let opts: image.InitializationOptions = {
-      editable: true,
-      pixelFormat: 3,
-      size: { height, width }
-    };
-
-    let pixelMap: image.PixelMap = image.createPixelMapSync(color, opts);
-    let matrix = new drawing.Matrix();
-    let options = new drawing.SamplingOptions(drawing.FilterMode.FILTER_MODE_NEAREST);
-    if (pixelMap != null) {
-      let imageShader =
-        drawing.ShaderEffect.createImageShader(pixelMap, drawing.TileMode.REPEAT, drawing.TileMode.MIRROR, options,
-          matrix);
-    }
-    pixelMap.release();
-  }
-}
-```
 
 ## createLinearGradient
 
@@ -243,10 +174,10 @@ static createLinearGradient(startPt: common2D.Point, endPt: common2D.Point, colo
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| startPt | common2D.Point | 是 | 表示渐变的起点。 |
-| endPt | common2D.Point | 是 | 表示渐变的终点。 |
+| startPt | [common2D.Point](arkts-arkgraphics2d-common2d-point-i.md) | 是 | 表示渐变的起点。 |
+| endPt | [common2D.Point](arkts-arkgraphics2d-common2d-point-i.md) | 是 | 表示渐变的终点。 |
 | colors | Array&lt;number&gt; | 是 | 表示在两个点之间分布的颜色数组，数组中的值为32位（ARGB）无符号整数。 |
-| mode | TileMode | 是 | 着色器效果平铺模式。 |
+| mode | [TileMode](arkts-arkgraphics2d-drawing-tilemode-e.md) | 是 | 着色器效果平铺模式。 |
 | pos | Array&lt;number&gt; \| null | 否 | 表示每种对应颜色在颜色数组中的相对位置。数组长度需和colors保持一致，数组的首个元素应当是0.0，末尾元素应当是1.0，中间的元素应当在0与1之间并且逐下标递增，表示colors中每个对应颜色的相对位置。默认为null，表示颜色均匀分布在起点和终点之间。 |
 | matrix | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) \| null | 否 | 矩阵对象，用于对着色器做矩阵变换。默认为null，表示单位矩阵。 |
 
@@ -261,16 +192,6 @@ static createLinearGradient(startPt: common2D.Point, endPt: common2D.Point, colo
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
-
-**示例**
-
-```TypeScript
-import { common2D, drawing } from '@kit.ArkGraphics2D';
-
-let startPt: common2D.Point = { x: 100, y: 100 };
-let endPt: common2D.Point = { x: 300, y: 300 };
-let shaderEffect = drawing.ShaderEffect.createLinearGradient(startPt, endPt, [0xFF00FF00, 0xFFFF0000], drawing.TileMode.REPEAT);
-```
 
 ## createRadialGradient
 
@@ -289,10 +210,10 @@ static createRadialGradient(centerPt: common2D.Point, radius: number, colors: Ar
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| centerPt | common2D.Point | 是 | 表示渐变的圆心。 |
+| centerPt | [common2D.Point](arkts-arkgraphics2d-common2d-point-i.md) | 是 | 表示渐变的圆心。 |
 | radius | number | 是 | 表示渐变的半径，小于等于0时无效，该参数为浮点数。单位为物理像素px。 |
 | colors | Array&lt;number&gt; | 是 | 表示在圆心和圆边界之间分布的颜色数组，数组中的值为32位（ARGB）无符号整数。 |
-| mode | TileMode | 是 | 着色器效果平铺模式。 |
+| mode | [TileMode](arkts-arkgraphics2d-drawing-tilemode-e.md) | 是 | 着色器效果平铺模式。 |
 | pos | Array&lt;number&gt; \| null | 否 | 表示每种对应颜色在颜色数组中的相对位置。数组长度需和colors保持一致，数组的首个元素应当是0.0，末尾元素应当是1.0，中间的元素应当在0与1之间并且逐下标递增，表示colors中每个对应颜色的相对位置。默认为null，表示颜色均匀分布在圆心和圆边界之间。 |
 | matrix | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) \| null | 否 | 矩阵对象，用于对着色器做矩阵变换。默认为null，表示单位矩阵。 |
 
@@ -307,15 +228,6 @@ static createRadialGradient(centerPt: common2D.Point, radius: number, colors: Ar
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
-
-**示例**
-
-```TypeScript
-import { common2D, drawing } from '@kit.ArkGraphics2D';
-
-let centerPt: common2D.Point = { x: 100, y: 100 };
-let shaderEffect = drawing.ShaderEffect.createRadialGradient(centerPt, 100, [0xFF00FF00, 0xFFFF0000], drawing.TileMode.REPEAT);
-```
 
 ## createSweepGradient
 
@@ -335,9 +247,9 @@ static createSweepGradient(centerPt: common2D.Point, colors: Array<number>,
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| centerPt | common2D.Point | 是 | 表示渐变的圆心。 |
+| centerPt | [common2D.Point](arkts-arkgraphics2d-common2d-point-i.md) | 是 | 表示渐变的圆心。 |
 | colors | Array&lt;number&gt; | 是 | 表示在起始角度和结束角度之间分布的颜色数组，数组中的值为32位（ARGB）无符号整数。 |
-| mode | TileMode | 是 | 着色器效果平铺模式。 |
+| mode | [TileMode](arkts-arkgraphics2d-drawing-tilemode-e.md) | 是 | 着色器效果平铺模式。 |
 | startAngle | number | 是 | 表示扇形渐变的起始角度，单位为度。0度时为x轴正方向，正数往顺时针方向偏移，负数往逆时针方向偏移。该参数为浮点数。 |
 | endAngle | number | 是 | 表示扇形渐变的结束角度，单位为度。0度时为x轴正方向，正数往顺时针方向偏移，负数往逆时针方向偏移。小于起始角度时无效。该参数为浮点数。 |
 | pos | Array&lt;number&gt; \| null | 否 | 表示每种对应颜色在颜色数组中的相对位置。数组长度需和colors保持一致，数组的首个元素应当是0.0，末尾元素应当是1.0，中间的元素应当在0与1之间并且逐下标递增，表示colors中每个对应颜色的相对位置。默认为null，表示颜色均匀分布在起始角度和结束角度之间。 |
@@ -354,12 +266,3 @@ static createSweepGradient(centerPt: common2D.Point, colors: Array<number>,
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
-
-**示例**
-
-```TypeScript
-import { common2D, drawing } from '@kit.ArkGraphics2D';
-
-let centerPt: common2D.Point = { x: 100, y: 100 };
-let shaderEffect = drawing.ShaderEffect.createSweepGradient(centerPt, [0xFF00FF00, 0xFFFF0000], drawing.TileMode.REPEAT, 100, 200);
-```

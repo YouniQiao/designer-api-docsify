@@ -114,7 +114,7 @@ get root(): FieldNode
 
 Get the root json object.
 
-**Type:** FieldNode
+**Type:** [FieldNode](arkts-arkdata-distributedkvstore-fieldnode-c.md)
 
 **Since:** 9
 
@@ -128,7 +128,7 @@ set root(root: FieldNode)
 
 Set the root json object.
 
-**Type:** FieldNode
+**Type:** [FieldNode](arkts-arkdata-distributedkvstore-fieldnode-c.md)
 
 **Since:** 9
 

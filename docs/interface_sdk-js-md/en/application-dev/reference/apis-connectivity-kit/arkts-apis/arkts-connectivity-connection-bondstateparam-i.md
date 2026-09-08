@@ -68,7 +68,7 @@ state: BondState
 
 Profile connection state of the device.
 
-**Type:** BondState
+**Type:** [BondState](arkts-connectivity-connection-bondstate-e.md)
 
 **Since:** 10
 

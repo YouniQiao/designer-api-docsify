@@ -46,16 +46,6 @@ close(): void
 
 ```TypeScript
 import { AsyncCallback, BusinessError } from '@kit.BasicServicesKit';
-let server: ble.GattServer = ble.createGattServer();
-try {
-    server.close();
-} catch (err) {
-    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-}
-```
-
-```TypeScript
-import { AsyncCallback, BusinessError } from '@kit.BasicServicesKit';
 try {
     let device: ble.GattClientDevice = ble.createGattClientDevice('XX:XX:XX:XX:XX:XX');
     device.close();
@@ -168,7 +158,7 @@ getConnectedState(): ProfileConnectionState
 
 | 类型 | 说明 |
 | --- | --- |
-| ProfileConnectionState | 蓝牙设备的profile连接状态。 |
+| [ProfileConnectionState](arkts-connectivity-ble-profileconnectionstate-t.md) | 蓝牙设备的profile连接状态。 |
 
 **错误码：**
 
@@ -454,7 +444,7 @@ setCharacteristicChangeIndication
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;GattService&gt;&gt; | 是 | 回调函数。当读取成功，err为undefined，data为server端的服务列表。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[GattService](arkts-connectivity-ble-gattservice-i.md)&gt;&gt; | 是 | 回调函数。当读取成功，err为undefined，data为server端的服务列表。 |
 
 **错误码：**
 
@@ -523,7 +513,7 @@ client端获取server端支持的所有服务能力，即服务发现流程。�
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;GattService&gt;&gt; | Promise对象，返回获取到的server端服务列表。 |
+| Promise&lt;Array&lt;[GattService](arkts-connectivity-ble-gattservice-i.md)&gt;&gt; | Promise对象，返回获取到的server端服务列表。 |
 
 **错误码：**
 
@@ -581,7 +571,7 @@ client端取消订阅server端特征值变化事件。
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'BLECharacteristicChange' | 是 | 事件回调类型，支持的事件为'BLECharacteristicChange'，表示server端特征值变化事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;BLECharacteristic&gt; | 否 | 指定取消订阅的回调函数通知。若传参，则需与on('BLECharacteristicChange')中的回调函数一致；若无传参，则取消订阅该type对应的所有回调函数通知。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[BLECharacteristic](arkts-connectivity-ble-blecharacteristic-i.md)&gt; | 否 | 指定取消订阅的回调函数通知。若传参，则需与on('BLECharacteristicChange')中的回调函数一致；若无传参，则取消订阅该type对应的所有回调函数通知。 |
 
 **错误码：**
 
@@ -777,18 +767,6 @@ offBlePhyUpdate(callback?: Callback<PhyValue>): void
 function BlePhyCallback(data:ble.PhyValue) {
     console.info(`txPhy: ${data.txPhy}, rxPhy: ${data.rxPhy}`);
 }
-let gattServer: ble.GattServer = ble.createGattServer();
-try {
-    gattServer.offBlePhyUpdate(BlePhyCallback);
-} catch (err) {
-    console.error(`errCode: ${err.code}, errMessage: ${err.message}`);
-}
-```
-
-```TypeScript
-function BlePhyCallback(data:ble.PhyValue) {
-    console.info(`txPhy: ${data.txPhy}, rxPhy: ${data.rxPhy}`);
-}
 let gattClient: ble.GattClientDevice = ble.createGattClientDevice('XX:XX:XX:XX:XX:XX');
 try {
     gattClient.offBlePhyUpdate(BlePhyCallback);
@@ -822,7 +800,7 @@ client端订阅server端特征值变化事件。使用Callback异步回调。
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'BLECharacteristicChange' | 是 | 事件回调类型，支持的事件为'BLECharacteristicChange'，表示server端特征值变化事件。当client端收到server端特征值内容变更的通知或者指示时，触发该事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;BLECharacteristic&gt; | 是 | 指定订阅的回调函数，会携带server端变化后的特征值内容。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[BLECharacteristic](arkts-connectivity-ble-blecharacteristic-i.md)&gt; | 是 | 指定订阅的回调函数，会携带server端变化后的特征值内容。 |
 
 **错误码：**
 
@@ -1029,18 +1007,6 @@ onBlePhyUpdate(callback: Callback<PhyValue>): void
 function BlePhyCallback(data:ble.PhyValue) {
     console.info(`txPhy: ${data.txPhy}, rxPhy: ${data.rxPhy}`);
 }
-let gattServer: ble.GattServer = ble.createGattServer();
-try {
-    gattServer.onBlePhyUpdate(BlePhyCallback);
-} catch (err) {
-    console.error(`errCode: ${err.code}, errMessage: ${err.message}`);
-}
-```
-
-```TypeScript
-function BlePhyCallback(data:ble.PhyValue) {
-    console.info(`txPhy: ${data.txPhy}, rxPhy: ${data.rxPhy}`);
-}
 let gattClient: ble.GattClientDevice = ble.createGattClientDevice('XX:XX:XX:XX:XX:XX');
 try {
     gattClient.onBlePhyUpdate(BlePhyCallback);
@@ -1073,8 +1039,8 @@ client端从指定的server端特征值读取数据。使用Callback异步回调
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| characteristic | BLECharacteristic | 是 | 需要读取的特征值。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;BLECharacteristic&gt; | 是 | 回调函数。当读取成功，err为undefined，data为获取到的特征值对象，包含读取到的数据内容；否则为错误对象。 |
+| characteristic | [BLECharacteristic](arkts-connectivity-ble-blecharacteristic-i.md) | 是 | 需要读取的特征值。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[BLECharacteristic](arkts-connectivity-ble-blecharacteristic-i.md)&gt; | 是 | 回调函数。当读取成功，err为undefined，data为获取到的特征值对象，包含读取到的数据内容；否则为错误对象。 |
 
 **错误码：**
 
@@ -1152,13 +1118,13 @@ client端从指定的server端特征值读取数据。使用Promise异步回调�
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| characteristic | BLECharacteristic | 是 | 需要读取的特征值。 |
+| characteristic | [BLECharacteristic](arkts-connectivity-ble-blecharacteristic-i.md) | 是 | 需要读取的特征值。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;BLECharacteristic&gt; | Promise对象，返回获取到的特征值对象，包含读取到的数据内容。 |
+| Promise&lt;[BLECharacteristic](arkts-connectivity-ble-blecharacteristic-i.md)&gt; | Promise对象，返回获取到的特征值对象，包含读取到的数据内容。 |
 
 **错误码：**
 
@@ -1227,8 +1193,8 @@ client端从指定的server端描述符读取数据。使用Callback异步回调
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| descriptor | BLEDescriptor | 是 | 需要读取的描述符。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;BLEDescriptor&gt; | 是 | 回调函数。当读取成功，err为undefined，data为获取到的描述符对象，包含读取到的数据内容；否则为错误对象。 |
+| descriptor | [BLEDescriptor](arkts-connectivity-ble-bledescriptor-i.md) | 是 | 需要读取的描述符。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[BLEDescriptor](arkts-connectivity-ble-bledescriptor-i.md)&gt; | 是 | 回调函数。当读取成功，err为undefined，data为获取到的描述符对象，包含读取到的数据内容；否则为错误对象。 |
 
 **错误码：**
 
@@ -1299,13 +1265,13 @@ client端从指定的server端描述符读取数据。使用Promise异步回调�
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| descriptor | BLEDescriptor | 是 | 需要读取的描述符。 |
+| descriptor | [BLEDescriptor](arkts-connectivity-ble-bledescriptor-i.md) | 是 | 需要读取的描述符。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;BLEDescriptor&gt; | Promise对象，返回获取到的描述符对象，包含读取到的数据内容。 |
+| Promise&lt;[BLEDescriptor](arkts-connectivity-ble-bledescriptor-i.md)&gt; | Promise对象，返回获取到的描述符对象，包含读取到的数据内容。 |
 
 **错误码：**
 
@@ -1523,7 +1489,7 @@ client端启用或者禁用接收server端特征值内容变更指示的能力�
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| characteristic | BLECharacteristic | 是 | 需要管理的server端特征值。 |
+| characteristic | [BLECharacteristic](arkts-connectivity-ble-blecharacteristic-i.md) | 是 | 需要管理的server端特征值。 |
 | enable | boolean | 是 | 是否启用接收server端特征值指示的能力。true表示启用，false表示禁用。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当调用成功，err为undefined，否则为错误对象。 |
 
@@ -1593,7 +1559,7 @@ client端启用或者禁用接收server端特征值内容变更指示的能力�
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| characteristic | BLECharacteristic | 是 | 需要管理的server端特征值。 |
+| characteristic | [BLECharacteristic](arkts-connectivity-ble-blecharacteristic-i.md) | 是 | 需要管理的server端特征值。 |
 | enable | boolean | 是 | 是否启用接收server端特征值指示的能力。true表示启用，false表示禁用。 |
 
 **返回值：**
@@ -1666,7 +1632,7 @@ client端启用或者禁用接收server端特征值内容变更通知的能力�
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| characteristic | BLECharacteristic | 是 | 需要管理的server端特征值。 |
+| characteristic | [BLECharacteristic](arkts-connectivity-ble-blecharacteristic-i.md) | 是 | 需要管理的server端特征值。 |
 | enable | boolean | 是 | 是否启用接收server端特征值通知的能力。true表示启用，false表示禁用。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当调用成功，err为undefined，否则为错误对象。 |
 
@@ -1736,7 +1702,7 @@ client端启用或者禁用接收server端特征值内容变更通知的能力�
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| characteristic | BLECharacteristic | 是 | 需要管理的server端特征值。 |
+| characteristic | [BLECharacteristic](arkts-connectivity-ble-blecharacteristic-i.md) | 是 | 需要管理的server端特征值。 |
 | enable | boolean | 是 | 是否启用接收server端特征值通知的能力。true表示启用，false表示禁用。 |
 
 **返回值：**
@@ -1917,7 +1883,7 @@ client端向指定的server端特征值写入数据。使用Callback异步回调
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| characteristic | BLECharacteristic | 是 | 需要写入的特征值，包含写入的数据内容。 |
+| characteristic | [BLECharacteristic](arkts-connectivity-ble-blecharacteristic-i.md) | 是 | 需要写入的特征值，包含写入的数据内容。 |
 | writeType | [GattWriteType](arkts-connectivity-ble-gattwritetype-e.md) | 是 | 写入特征值的方式。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当写入成功，err为undefined，否则为错误对象。 |
 
@@ -1995,7 +1961,7 @@ client端向指定的server端特征值写入数据。使用Promise异步回调�
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| characteristic | BLECharacteristic | 是 | 需要写入的特征值，包含写入的数据内容。 |
+| characteristic | [BLECharacteristic](arkts-connectivity-ble-blecharacteristic-i.md) | 是 | 需要写入的特征值，包含写入的数据内容。 |
 | writeType | [GattWriteType](arkts-connectivity-ble-gattwritetype-e.md) | 是 | 写入特征值的方式。 |
 
 **返回值：**
@@ -2072,7 +2038,7 @@ client端向指定的server端描述符写入数据。使用Callback异步回调
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| descriptor | BLEDescriptor | 是 | 需要写入的描述符，包含写入的数据内容。 |
+| descriptor | [BLEDescriptor](arkts-connectivity-ble-bledescriptor-i.md) | 是 | 需要写入的描述符，包含写入的数据内容。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当写入成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
@@ -2143,7 +2109,7 @@ client端向指定的server端描述符写入数据。使用Promise异步回调�
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| descriptor | BLEDescriptor | 是 | 需要写入的描述符，包含写入的数据内容。 |
+| descriptor | [BLEDescriptor](arkts-connectivity-ble-bledescriptor-i.md) | 是 | 需要写入的描述符，包含写入的数据内容。 |
 
 **返回值：**
 

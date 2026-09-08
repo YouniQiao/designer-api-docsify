@@ -30,13 +30,13 @@ Combines the effects of two matrices to generate a new matrix object. The matrix
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | Matrix4Transit | Yes | Matrix object to be combined. |
+| options | [Matrix4Transit](arkts-arkui-matrix4-matrix4transit-i.md) | Yes | Matrix object to be combined. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Matrix4Transit | Object after matrix combination. |
+| [Matrix4Transit](arkts-arkui-matrix4-matrix4transit-i.md) | Object after matrix combination. |
 
 **Examples**
 
@@ -88,7 +88,7 @@ Copies this matrix object.
 
 | Type | Description |
 | --- | --- |
-| Matrix4Transit | Copy object of the current matrix. |
+| [Matrix4Transit](arkts-arkui-matrix4-matrix4transit-i.md) | Copy object of the current matrix. |
 
 **Examples**
 
@@ -126,35 +126,6 @@ struct Test {
 }
 ```
 
-```TypeScript
-// xxx.ets
-import { matrix4 } from '@kit.ArkUI';
-
-@Entry
-@Component
-struct Test {
-  private matrix1 = matrix4.identity().translate({ x: 100 });
-  // Perform the scale operation on the copy matrix of matrix1, which does not affect matrix1.
-  private matrix2 = this.matrix1.copy().scale({ x: 2 });
-
-  build() {
-    Column() {
-      // Replace $r("app.media.bg1") with the image resource file you use.
-      Image($r("app.media.bg1"))
-        .width('40%')
-        .height(100)
-        .transform(this.matrix1)
-      // Replace $r("app.media.bg2") with the image resource file you use.
-      Image($r("app.media.bg2"))
-        .width("40%")
-        .height(100)
-        .margin({ top: 50 })
-        .transform(this.matrix2)
-    }
-  }
-}
-```
-
 ## invert
 
 ```TypeScript
@@ -173,7 +144,7 @@ Inverts this matrix object. The matrix that calls this API will be changed.
 
 | Type | Description |
 | --- | --- |
-| Matrix4Transit | Inverse matrix object of the current matrix. |
+| [Matrix4Transit](arkts-arkui-matrix4-matrix4transit-i.md) | Inverse matrix object of the current matrix. |
 
 **Examples**
 
@@ -230,7 +201,7 @@ Rotates this matrix object along the x, y, and z axes. The matrix that calls thi
 
 | Type | Description |
 | --- | --- |
-| Matrix4Transit | Matrix object after the rotation. |
+| [Matrix4Transit](arkts-arkui-matrix4-matrix4transit-i.md) | Matrix object after the rotation. |
 
 **Examples**
 
@@ -284,7 +255,7 @@ Scales this matrix object along the x, y, and z axes. The matrix that calls this
 
 | Type | Description |
 | --- | --- |
-| Matrix4Transit | Matrix object after the scaling. |
+| [Matrix4Transit](arkts-arkui-matrix4-matrix4transit-i.md) | Matrix object after the scaling. |
 
 **Examples**
 
@@ -341,7 +312,7 @@ Maps the vertex coordinates of a polygon to those of another polygon.
 
 | Type | Description |
 | --- | --- |
-| Matrix4Transit | Matrix object after the mapping. |
+| [Matrix4Transit](arkts-arkui-matrix4-matrix4transit-i.md) | Matrix object after the mapping. |
 
 **Examples**
 
@@ -399,7 +370,7 @@ Skews this matrix object along the x and y axes. The matrix that calls this API 
 
 | Type | Description |
 | --- | --- |
-| Matrix4Transit | Matrix object after the skewing. |
+| [Matrix4Transit](arkts-arkui-matrix4-matrix4transit-i.md) | Matrix object after the skewing. |
 
 **Examples**
 
@@ -514,7 +485,7 @@ Translates this matrix object along the x, y, and z axes. The matrix that calls 
 
 | Type | Description |
 | --- | --- |
-| Matrix4Transit | Matrix object after the translation. |
+| [Matrix4Transit](arkts-arkui-matrix4-matrix4transit-i.md) | Matrix object after the translation. |
 
 **Examples**
 

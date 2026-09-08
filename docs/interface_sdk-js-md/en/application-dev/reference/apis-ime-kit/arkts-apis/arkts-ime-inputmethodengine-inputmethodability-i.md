@@ -36,8 +36,8 @@ Creates an input method panel. This API can be called only by the input method a
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | ctx | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | Yes | Current context of the input method. |
-| info | PanelInfo | Yes | Information about the input method panel. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Panel&gt; | Yes | Callback used to return the result. If the operation is successful, the created input method panel is returned. |
+| info | [PanelInfo](arkts-ime-inputmethodengine-panelinfo-i.md) | Yes | Information about the input method panel. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Panel](arkts-ime-inputmethodengine-panel-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, the created input method panel is returned. |
 
 **Error codes:**
 
@@ -101,13 +101,13 @@ Creates an input method panel. This API can be called only by the input method a
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | ctx | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | Yes | Current context of the input method. |
-| info | PanelInfo | Yes | Information about the input method panel. |
+| info | [PanelInfo](arkts-ime-inputmethodengine-panelinfo-i.md) | Yes | Information about the input method panel. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Panel&gt; | the promise returned by the function. |
+| Promise&lt;[Panel](arkts-ime-inputmethodengine-panel-i.md)&gt; | the promise returned by the function. |
 
 **Error codes:**
 
@@ -159,7 +159,7 @@ Destroys the specified input method panel. This API uses an asynchronous callbac
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| panel | Panel | Yes | Input method panel to destroy. |
+| panel | [Panel](arkts-ime-inputmethodengine-panel-i.md) | Yes | Input method panel to destroy. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
@@ -218,7 +218,7 @@ Destroys the specified input method panel. This API uses a promise to return the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| panel | Panel | Yes | Input method panel to destroy. |
+| panel | [Panel](arkts-ime-inputmethodengine-panel-i.md) | Yes | Input method panel to destroy. |
 
 **Return value:**
 
@@ -502,7 +502,7 @@ Disables listening for the private data event of the input method. This API uses
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'privateCommand' | Yes | Event type, which is **'privateCommand'**. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, CommandDataType&gt;&gt; | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, [CommandDataType](arkts-ime-inputmethodengine-commanddatatype-t.md)&gt;&gt; | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
 
 **Error codes:**
 
@@ -788,7 +788,7 @@ Enables listening for the private data event of the input method. This API uses 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'privateCommand' | Yes | Event type, which is **'privateCommand'**. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, CommandDataType&gt;&gt; | Yes | Callback used to return the private data sent to the input method application. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, [CommandDataType](arkts-ime-inputmethodengine-commanddatatype-t.md)&gt;&gt; | Yes | Callback used to return the private data sent to the input method application. |
 
 **Error codes:**
 

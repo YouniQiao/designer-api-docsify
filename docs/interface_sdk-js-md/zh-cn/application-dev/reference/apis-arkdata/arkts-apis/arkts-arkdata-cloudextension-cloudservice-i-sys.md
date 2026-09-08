@@ -39,7 +39,7 @@ connectAssetLoader(bundleName: string, database: Database): Promise<rpc.RemoteOb
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;rpc.RemoteObject&gt; | Promise对象，返回[AssetLoader]{ |
+| Promise&lt;[rpc.RemoteObject](../../apis-ipc-kit/arkts-apis/arkts-ipc-rpc-remoteobject-c.md)&gt; | Promise对象，返回[AssetLoader]{ |
 
 **示例**
 
@@ -85,7 +85,7 @@ connectDB(bundleName: string, database: Database): Promise<rpc.RemoteObject>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;rpc.RemoteObject&gt; | Promise对象，返回[CloudDB]{ |
+| Promise&lt;[rpc.RemoteObject](../../apis-ipc-kit/arkts-apis/arkts-ipc-rpc-remoteobject-c.md)&gt; | Promise对象，返回[CloudDB]{ |
 
 **示例**
 
@@ -131,7 +131,7 @@ connectShareCenter(userId: number, bundleName: string): Promise<rpc.RemoteObject
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;rpc.RemoteObject&gt; | Promise对象，返回[ShareCenter]{ |
+| Promise&lt;[rpc.RemoteObject](../../apis-ipc-kit/arkts-apis/arkts-ipc-rpc-remoteobject-c.md)&gt; | Promise对象，返回[ShareCenter]{ |
 
 **示例**
 
@@ -218,7 +218,7 @@ getAppSchema(bundleName: string): Promise<Result<AppSchema>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Result&lt;[AppSchema](arkts-arkdata-cloudextension-appschema-i-sys.md)&gt;&gt; | Promise对象，返回数据库的schema信息。 |
+| Promise&lt;[Result](arkts-arkdata-relationalstore-result-i.md)&lt;[AppSchema](arkts-arkdata-cloudextension-appschema-i-sys.md)&gt;&gt; | Promise对象，返回数据库的schema信息。 |
 
 **示例**
 
@@ -316,7 +316,7 @@ subscribe(
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Result&lt;SubscribeInfo&gt;&gt; | Promise对象，返回订阅的结果，包含订阅的过期时间和订阅信息。 |
+| Promise&lt;[Result](arkts-arkdata-relationalstore-result-i.md)&lt;[SubscribeInfo](arkts-arkdata-cloudextension-subscribeinfo-i-sys.md)&gt;&gt; | Promise对象，返回订阅的结果，包含订阅的过期时间和订阅信息。 |
 
 **示例**
 

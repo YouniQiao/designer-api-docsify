@@ -182,7 +182,7 @@ publicKey?: DataBlob
 
 Public key of the certificate, in DER format.
 
-**Type:** DataBlob
+**Type:** [DataBlob](arkts-devicecertificate-cert-datablob-i.md)
 
 **Since:** 11
 
@@ -294,7 +294,7 @@ x509Cert?: X509Cert
 
 Certificate object.
 
-**Type:** X509Cert
+**Type:** [X509Cert](arkts-devicecertificate-cert-x509cert-i.md)
 
 **Since:** 11
 

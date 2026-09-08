@@ -42,7 +42,7 @@ getPlayingState(deviceId: string): PlayingState
 
 | 类型 | 说明 |
 | --- | --- |
-| PlayingState | 蓝牙媒体音频播放状态。 |
+| [PlayingState](arkts-connectivity-a2dp-playingstate-e.md) | 蓝牙媒体音频播放状态。 |
 
 **错误码：**
 

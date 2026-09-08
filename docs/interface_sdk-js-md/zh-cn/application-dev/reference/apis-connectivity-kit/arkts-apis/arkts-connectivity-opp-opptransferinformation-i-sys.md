@@ -150,7 +150,7 @@ status: TransferStatus
 
 传输状态。
 
-**类型：** TransferStatus
+**类型：** [TransferStatus](arkts-connectivity-opp-transferstatus-e-sys.md)
 
 **起始版本：** 16
 

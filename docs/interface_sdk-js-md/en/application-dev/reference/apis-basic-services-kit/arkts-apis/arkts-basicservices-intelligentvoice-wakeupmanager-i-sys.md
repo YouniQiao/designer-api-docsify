@@ -172,32 +172,6 @@ if (wakeupManager != null) {
 }
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-if (enrollIntelligentVoiceEngine != null) {
-  (enrollIntelligentVoiceEngine as intelligentVoice.EnrollIntelligentVoiceEngine).getParameter('key').then((data: string) => {
-    let param: string = data;
-    console.info(`Succeeded in getting parameter, param:${param}`);
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to get parameter, Code:${err.code}, message:${err.message}`);
-  });
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-if (wakeupIntelligentVoiceEngine != null) {
-  (wakeupIntelligentVoiceEngine as intelligentVoice.WakeupIntelligentVoiceEngine).getParameter('key').then((data: string) => {
-    let param: string = data;
-    console.info(`Succeeded in getting parameter, param:${param}`);
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to get parameter, Code:${err.code}, message:${err.message}`);
-  });
-}
-```
-
 ## getUploadFiles
 
 ```TypeScript
@@ -345,30 +319,6 @@ import { BusinessError } from '@kit.BasicServicesKit';
 
 if (wakeupManager != null) {
   (wakeupManager as intelligentVoice.WakeupManager).setParameter('wakeup_phrase', 'xiaohuaxiaohua').then(() => {
-    console.info(`Succeeded in setting parameter`);
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to set parameter, Code:${err.code}, message:${err.message}`);
-  });
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-if (enrollIntelligentVoiceEngine != null) {
-  (enrollIntelligentVoiceEngine as intelligentVoice.EnrollIntelligentVoiceEngine).setParameter('scene', '0').then(() => {
-    console.info(`Succeeded in setting parameter`);
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to set parameter, Code:${err.code}, message:${err.message}`);
-  });
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-if (wakeupIntelligentVoiceEngine != null) {
-  (wakeupIntelligentVoiceEngine as intelligentVoice.WakeupIntelligentVoiceEngine).setParameter('scene', '0').then(() => {
     console.info(`Succeeded in setting parameter`);
   }).catch((err: BusinessError) => {
     console.error(`Failed to set parameter, Code:${err.code}, message:${err.message}`);

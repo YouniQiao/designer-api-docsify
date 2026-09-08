@@ -35,7 +35,7 @@ No permission is required for obtaining the caller's own information.
 
 | Type | Description |
 | --- | --- |
-| AppProvisionInfo | Provision profile. |
+| [AppProvisionInfo](arkts-ability-bundlemanager-appprovisioninfo-t-sys.md) | Provision profile. |
 
 **Error codes:**
 

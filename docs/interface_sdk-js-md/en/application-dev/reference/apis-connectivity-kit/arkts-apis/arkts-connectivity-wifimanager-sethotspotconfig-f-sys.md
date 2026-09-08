@@ -26,7 +26,7 @@ Set the hotspot configuration for the device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | HotspotConfig | Yes | Indicates the Wi-Fi hotspot configuration. The SSID and `securityType` must be available and correct. If `securityType` is not `open`, `preSharedKey` must be available and correct. |
+| config | [HotspotConfig](arkts-connectivity-wifimanager-hotspotconfig-i-sys.md) | Yes | Indicates the Wi-Fi hotspot configuration. The SSID and `securityType` must be available and correct. If `securityType` is not `open`, `preSharedKey` must be available and correct. |
 
 **Error codes:**
 

@@ -33,7 +33,7 @@ Obtains the PixelMap of an icon based on the bundle name, module name, and abili
 | bundleName | string | Yes | Bundle name of the application to be queried. |
 | moduleName | string | Yes | Module name of the application to be queried. |
 | abilityName | string | Yes | Ability component name to be queried. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;image.PixelMap&gt; | Yes | Callback used to return the result. If getApplicationInfos is successful, **err** is **undefined**, and PixelMap as the input parameter for starting the application. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)&gt; | Yes | Callback used to return the result. If getApplicationInfos is successful, **err** is **undefined**, and PixelMap as the input parameter for starting the application. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -61,16 +61,14 @@ let moduleName: string = "entry";
 let abilityName: string = "EntryAbility";
 
 try {
-  bundleManager.getAbilityIcon(bundleName, moduleName, abilityName, (err, data) => {
-    if (err) {
-      hilog.error(0x0000, 'testTag', 'getAbilityIcon failed: %{public}s', err.message);
-    } else {
-      hilog.info(0x0000, 'testTag', 'getAbilityIcon successfully: %{public}s', JSON.stringify(data));
-    }
-  });
+  bundleManager.getAbilityIcon(bundleName, moduleName, abilityName).then((data) => {
+    hilog.info(0x0000,'testTag', 'getAbilityIcon successful. Data: %{public}s',JSON.stringify(data));
+  }).catch((error: BusinessError) => {
+    hilog.error(0x0000,'testTag', 'getAbilityIcon failed. Cause: %{public}s',error.message);
+  })
 } catch (err) {
   let message = (err as BusinessError).message;
-  hilog.error(0x0000, 'testTag', 'getAbilityIcon failed: %{public}s', message);
+  hilog.error(0x0000, 'testTag', 'getAbilityIcon failed. Cause: %{public}s', message);
 }
 ```
 
@@ -107,7 +105,7 @@ Obtains the PixelMap of an icon based on the bundle name, module name, and abili
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;image.PixelMap&gt; | Promise used to return the PixelMap. |
+| Promise&lt;[image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)&gt; | Promise used to return the PixelMap. |
 
 **Error codes:**
 

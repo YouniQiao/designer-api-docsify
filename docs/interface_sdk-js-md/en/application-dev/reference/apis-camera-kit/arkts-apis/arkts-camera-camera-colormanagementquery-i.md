@@ -30,22 +30,10 @@ Obtains the supported color spaces.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;colorSpaceManager.ColorSpace&gt; | Array of color spaces supported. If the API call fails, undefined is returned. |
+| Array&lt;[colorSpaceManager.ColorSpace](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-colorspacemanager-colorspace-e.md)&gt; | Array of color spaces supported. If the API call fails, undefined is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config, only throw in session usage.<br>**Applicable version:** 12 - 17 |
-
-**Examples**
-
-```TypeScript
-import { colorSpaceManager } from '@kit.ArkGraphics2D';
-
-function getSupportedColorSpaces(session: camera.PhotoSession): Array<colorSpaceManager.ColorSpace> {
-  let colorSpaces: Array<colorSpaceManager.ColorSpace> = [];
-  colorSpaces = session.getSupportedColorSpaces();
-  return colorSpaces;
-}
-```

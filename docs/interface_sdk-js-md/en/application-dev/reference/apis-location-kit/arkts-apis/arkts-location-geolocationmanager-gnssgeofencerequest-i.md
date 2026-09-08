@@ -34,7 +34,7 @@ geofence: Geofence
 
 Circular fence information.
 
-**Type:** Geofence
+**Type:** [Geofence](arkts-location-geolocationmanager-geofence-i.md)
 
 **Since:** 12
 

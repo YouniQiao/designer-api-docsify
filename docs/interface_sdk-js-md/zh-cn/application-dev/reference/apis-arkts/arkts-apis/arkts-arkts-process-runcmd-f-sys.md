@@ -36,4 +36,4 @@ function runCmd(
 
 | 类型 | 说明 |
 | --- | --- |
-| ChildProcess | 返回一个子进程对象。 |
+| [ChildProcess](arkts-arkts-process-childprocess-i-sys.md) | 返回一个子进程对象。 |

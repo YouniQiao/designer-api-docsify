@@ -33,7 +33,7 @@ Obtains the bundle information of the entry ability of an application based on t
 
 | Type | Description |
 | --- | --- |
-| Array&lt;LauncherAbilityResourceInfo&gt; | Resource information of the entry ability obtained. |
+| Array&lt;[LauncherAbilityResourceInfo](arkts-ability-bundleresourcemanager-launcherabilityresourceinfo-t-sys.md)&gt; | Resource information of the entry ability obtained. |
 
 **Error codes:**
 
@@ -110,7 +110,7 @@ Obtains the launcher ability resource information of an application based on the
 
 | Type | Description |
 | --- | --- |
-| Array&lt;LauncherAbilityResourceInfo&gt; | Resource information of the entry ability obtained. |
+| Array&lt;[LauncherAbilityResourceInfo](arkts-ability-bundleresourcemanager-launcherabilityresourceinfo-t-sys.md)&gt; | Resource information of the entry ability obtained. |
 
 **Error codes:**
 

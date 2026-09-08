@@ -48,7 +48,7 @@ mediaType: PhotoType
 
 媒体资产的类型（图片/视频）。
 
-**类型：** PhotoType
+**类型：** [PhotoType](arkts-medialibrary-photoaccesshelper-phototype-e.md)
 
 **起始版本：** 20
 

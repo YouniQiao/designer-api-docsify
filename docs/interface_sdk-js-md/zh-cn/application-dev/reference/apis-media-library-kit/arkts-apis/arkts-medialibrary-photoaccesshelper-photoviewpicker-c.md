@@ -40,13 +40,13 @@ select(option?: PhotoSelectOptions): Promise<PhotoSelectResult>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| option | PhotoSelectOptions | 否 | photoPicker选择选项，若无此参数，则默认选择媒体文件类型为图片和视频类型，默认选择媒体文件数量的最大值为50。 |
+| option | [PhotoSelectOptions](arkts-medialibrary-photoaccesshelper-photoselectoptions-c.md) | 否 | photoPicker选择选项，若无此参数，则默认选择媒体文件类型为图片和视频类型，默认选择媒体文件数量的最大值为50。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;PhotoSelectResult&gt; | Promise对象。返回photoPicker选择后的结果集 |
+| Promise&lt;[PhotoSelectResult](arkts-medialibrary-photoaccesshelper-photoselectresult-c.md)&gt; | Promise对象。返回photoPicker选择后的结果集 |
 
 **错误码：**
 
@@ -55,29 +55,6 @@ select(option?: PhotoSelectOptions): Promise<PhotoSelectResult>
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
 | 13900042 | Unknown error |
 | [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | Scene parameters validate failed, possible causes:  1. An illegal enumeration value was passed to PhotoSelectOptions.globalMovingPhotoState. Only MOVING_PHOTO_ENABLED and MOVING_PHOTO_DISABLED are supported for configuration;  2. An illegal enumeration value was passed to PhotoSelectOptions.assetCompatibleAbility.<br>**适用版本：** 12+ |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function example01(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  try {
-    let photoSelectOptions = new photoAccessHelper.PhotoSelectOptions();
-    photoSelectOptions.MIMEType = photoAccessHelper.PhotoViewMIMETypes.IMAGE_TYPE;
-    photoSelectOptions.maxSelectNumber = 5;
-    let photoPicker = new photoAccessHelper.PhotoViewPicker();
-    photoPicker.select(photoSelectOptions).then((photoSelectResult: photoAccessHelper.PhotoSelectResult) => {
-      console.info('PhotoViewPicker.select successfully, photoSelectResult uri: ' + JSON.stringify(photoSelectResult));
-    }).catch((err: BusinessError) => {
-      console.error(`PhotoViewPicker.select failed with err: ${err.code}, ${err.message}`);
-    });
-  } catch (error) {
-    let err: BusinessError = error as BusinessError;
-    console.error(`PhotoViewPicker failed with err: ${err.code}, ${err.message}`);
-  }
-}
-```
 
 ## select
 
@@ -103,8 +80,8 @@ select(option: PhotoSelectOptions, callback: AsyncCallback<PhotoSelectResult>): 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| option | PhotoSelectOptions | 是 | photoPicker选择选项。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;PhotoSelectResult&gt; | 是 | callback 返回photoPicker选择后的结果集。 |
+| option | [PhotoSelectOptions](arkts-medialibrary-photoaccesshelper-photoselectoptions-c.md) | 是 | photoPicker选择选项。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[PhotoSelectResult](arkts-medialibrary-photoaccesshelper-photoselectresult-c.md)&gt; | 是 | callback 返回photoPicker选择后的结果集。 |
 
 **错误码：**
 
@@ -113,31 +90,6 @@ select(option: PhotoSelectOptions, callback: AsyncCallback<PhotoSelectResult>): 
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
 | 13900042 | Unknown error |
 | [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | Scene parameters validate failed, possible causes:  1. An illegal enumeration value was passed to PhotoSelectOptions.globalMovingPhotoState. Only MOVING_PHOTO_ENABLED and MOVING_PHOTO_DISABLED are supported for configuration;<br>**适用版本：** 12+ |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function example02(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  try {
-    let photoSelectOptions = new photoAccessHelper.PhotoSelectOptions();
-    photoSelectOptions.MIMEType = photoAccessHelper.PhotoViewMIMETypes.IMAGE_TYPE;
-    photoSelectOptions.maxSelectNumber = 5;
-    let photoPicker = new photoAccessHelper.PhotoViewPicker();
-    photoPicker.select(photoSelectOptions, (err: BusinessError, photoSelectResult: photoAccessHelper.PhotoSelectResult) => {
-      if (err) {
-        console.error(`PhotoViewPicker.select failed with err: ${err.code}, ${err.message}`);
-        return;
-      }
-      console.info('PhotoViewPicker.select successfully, photoSelectResult uri: ' + JSON.stringify(photoSelectResult));
-    });
-  } catch (error) {
-    let err: BusinessError = error as BusinessError;
-    console.error(`PhotoViewPicker failed with err: ${err.code}, ${err.message}`);
-  }
-}
-```
 
 ## select
 
@@ -163,7 +115,7 @@ select(callback: AsyncCallback<PhotoSelectResult>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;PhotoSelectResult&gt; | 是 | callback 返回photoPicker选择后的结果集。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[PhotoSelectResult](arkts-medialibrary-photoaccesshelper-photoselectresult-c.md)&gt; | 是 | callback 返回photoPicker选择后的结果集。 |
 
 **错误码：**
 
@@ -171,25 +123,3 @@ select(callback: AsyncCallback<PhotoSelectResult>): void
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
 | 13900042 | Unknown error |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function example03(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  try {
-    let photoPicker = new photoAccessHelper.PhotoViewPicker();
-    photoPicker.select((err: BusinessError, photoSelectResult: photoAccessHelper.PhotoSelectResult) => {
-      if (err) {
-        console.error(`PhotoViewPicker.select failed with err: ${err.code}, ${err.message}`);
-        return;
-      }
-      console.info('PhotoViewPicker.select successfully, photoSelectResult uri: ' + JSON.stringify(photoSelectResult));
-    });
-  } catch (error) {
-    let err: BusinessError = error as BusinessError;
-    console.error(`PhotoViewPicker failed with err: ${err.code}, ${err.message}`);
-  }
-}
-```

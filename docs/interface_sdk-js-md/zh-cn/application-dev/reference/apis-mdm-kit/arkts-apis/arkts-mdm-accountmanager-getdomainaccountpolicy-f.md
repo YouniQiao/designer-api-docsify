@@ -27,7 +27,7 @@ function getDomainAccountPolicy(admin: Want, domainAccountInfo: osAccount.Domain
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
-| domainAccountInfo | osAccount.DomainAccountInfo | 是 | 域账号信息。若传入的domainAccountInfo内部属性均为空，则查询全局域账号策略。若传入的domainAccountInfo内部属性不为空，则查询指定域账号策略。   **说明：**若查询指定域账号策略，DomainAccountInfo的serverConfigId字段必填。 |
+| domainAccountInfo | [osAccount.DomainAccountInfo](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-domainaccountinfo-i.md) | 是 | 域账号信息。若传入的domainAccountInfo内部属性均为空，则查询全局域账号策略。若传入的domainAccountInfo内部属性不为空，则查询指定域账号策略。   **说明：**若查询指定域账号策略，DomainAccountInfo的serverConfigId字段必填。 |
 
 **返回值：**
 

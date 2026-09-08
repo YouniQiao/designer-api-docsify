@@ -91,7 +91,7 @@ fill Opacity
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number \| string \| Resource | 是 |  |
+| value | number \| string \| [Resource](../arkts-apis/arkts-arkui-resource-t.md) | 是 |  |
 
 **返回值：**
 
@@ -287,7 +287,7 @@ Sets the opacity of the border.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number \| string \| Resource | 是 |  |
+| value | number \| string \| [Resource](../arkts-apis/arkts-arkui-resource-t.md) | 是 |  |
 
 **返回值：**
 

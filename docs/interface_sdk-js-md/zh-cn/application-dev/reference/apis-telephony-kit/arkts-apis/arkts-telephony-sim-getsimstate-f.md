@@ -23,7 +23,7 @@ function getSimState(slotId: number, callback: AsyncCallback<SimState>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | slotId | number | 是 | 卡槽ID。   - 0：卡槽1。   - 1：卡槽2。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;SimState&gt; | 是 | 回调函数。参考[SimState](arkts-telephony-sim-simstate-e.md)。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SimState](arkts-telephony-sim-simstate-e.md)&gt; | 是 | 回调函数。参考[SimState](arkts-telephony-sim-simstate-e.md)。 |
 
 **错误码：**
 
@@ -73,7 +73,7 @@ function getSimState(slotId: number): Promise<SimState>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;SimState&gt; | 以Promise形式返回获取指定卡槽的SIM卡状态。 |
+| Promise&lt;[SimState](arkts-telephony-sim-simstate-e.md)&gt; | 以Promise形式返回获取指定卡槽的SIM卡状态。 |
 
 **错误码：**
 

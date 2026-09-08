@@ -2,7 +2,7 @@
 
 Enumerates the types of the moving photo badge.
 
-@enum { number } MovingPhotoBadgeStateType
+@enum { int } MovingPhotoBadgeStateType
 
 **Since:** 22
 

@@ -48,7 +48,7 @@ readonly capitalizeMode?: CapitalizeMode
 
 编辑框设置大小写模式。如果没有设置或设置非法值，默认不进行任何首字母大写处理。
 
-**类型：** CapitalizeMode
+**类型：** [CapitalizeMode](arkts-ime-inputmethodengine-capitalizemode-e.md)
 
 **起始版本：** 20
 
@@ -136,7 +136,7 @@ readonly immersiveMode?: ImmersiveMode
 
 输入法沉浸模式。
 
-**类型：** ImmersiveMode
+**类型：** [ImmersiveMode](arkts-ime-inputmethodengine-immersivemode-e.md)
 
 **起始版本：** 15
 

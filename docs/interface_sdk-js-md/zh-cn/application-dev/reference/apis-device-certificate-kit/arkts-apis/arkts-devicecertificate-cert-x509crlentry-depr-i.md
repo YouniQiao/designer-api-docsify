@@ -45,7 +45,7 @@ getCertIssuer(): DataBlob
 
 | 类型 | 说明 |
 | --- | --- |
-| DataBlob | 被吊销的证书的颁发者名称。 |
+| [DataBlob](arkts-devicecertificate-cert-datablob-i.md) | 被吊销的证书的颁发者名称。 |
 
 **错误码：**
 
@@ -104,53 +104,6 @@ cert.createX509Crl(encodingBlob, (err, x509Crl) => {
 });
 ```
 
-```TypeScript
-import { cert } from '@kit.DeviceCertificateKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// string转Uint8Array。
-function stringToUint8Array(str: string): Uint8Array {
-  let arr: Array<number> = [];
-  for (let i = 0, j = str.length; i < j; i++) {
-    arr.push(str.charCodeAt(i));
-  }
-  return new Uint8Array(arr);
-}
-
-let crlData = '-----BEGIN X509 CRL-----\n' +
-  'MIHzMF4CAQMwDQYJKoZIhvcNAQEEBQAwFTETMBEGA1UEAxMKQ1JMIGlzc3VlchcN\n' +
-  'MTcwODA3MTExOTU1WhcNMzIxMjE0MDA1MzIwWjAVMBMCAgPoFw0zMjEyMTQwMDUz\n' +
-  'MjBaMA0GCSqGSIb3DQEBBAUAA4GBACEPHhlaCTWA42ykeaOyR0SGQIHIOUR3gcDH\n' +
-  'J1LaNwiL+gDxI9rMQmlhsUGJmPIPdRs9uYyI+f854lsWYisD2PUEpn3DbEvzwYeQ\n' +
-  '5SqQoPDoM+YfZZa23hoTLsu52toXobP74sf/9K501p/+8hm4ROMLBoRT86GQKY6g\n' +
-  'eavsH0Q3\n' +
-  '-----END X509 CRL-----\n';
-
-let encodingBlob: cert.EncodingBlob = {
-  data: stringToUint8Array(crlData),
-  // 根据encodingData的格式进行赋值，支持FORMAT_PEM和FORMAT_DER。
-  encodingFormat: cert.EncodingFormat.FORMAT_PEM
-};
-
-cert.createX509CRL(encodingBlob, (err, x509CRL) => {
-  if (err) {
-    console.error(`createX509CRL failed, errCode: ${err.code}, errMsg: ${err.message}`);
-  } else {
-    console.info('createX509CRL result: success.');
-
-    try {
-      let serialNumber = BigInt(1000);
-      let crlEntry = x509CRL.getRevokedCert(serialNumber);
-      let issuer = crlEntry.getCertIssuer();
-      console.info('issuer = ' + issuer.data);
-    } catch (error) {
-      let e: BusinessError = error as BusinessError;
-      console.error(`getRevokedCert or getCertIssuer failed, errCode: ${e.code}, errMsg: ${e.message}`);
-    }
-  }
-});
-```
-
 ## getEncoded
 
 ```TypeScript
@@ -191,139 +144,6 @@ getEncoded(callback: AsyncCallback<EncodingBlob>): void
 
 ```TypeScript
 import { cert } from '@kit.DeviceCertificateKit';
-
-// string转Uint8Array。
-function stringToUint8Array(str: string): Uint8Array {
-  let arr: Array<number> = [];
-  for (let i = 0, j = str.length; i < j; i++) {
-    arr.push(str.charCodeAt(i));
-  }
-  return new Uint8Array(arr);
-}
-
-// 证书二进制数据，需业务自行赋值。
-let certData = '-----BEGIN CERTIFICATE-----\n' +
-  'MIIBHTCBwwICA+gwCgYIKoZIzj0EAwIwGjEYMBYGA1UEAwwPRXhhbXBsZSBSb290\n' +
-  'IENBMB4XDTIzMDkwNTAyNDgyMloXDTI2MDUzMTAyNDgyMlowGjEYMBYGA1UEAwwP\n' +
-  'RXhhbXBsZSBSb290IENBMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEHjG74yMI\n' +
-  'ueO7z3T+dyuEIrhxTg2fqgeNB3SGfsIXlsiUfLTatUsU0i/sePnrKglj2H8Abbx9\n' +
-  'PK0tsW/VgqwDIDAKBggqhkjOPQQDAgNJADBGAiEApVZno/Z7WyDc/muRN1y57uaY\n' +
-  'Mjrgnvp/AMdE8qmFiDwCIQCrIYdHVO1awaPgcdALZY+uLQi6mEs/oMJLUcmaag3E\n' +
-  'Qw==\n' +
-  '-----END CERTIFICATE-----\n';
-
-let encodingBlob: cert.EncodingBlob = {
-  data: stringToUint8Array(certData),
-  // 根据encodingData的格式进行赋值，支持FORMAT_PEM和FORMAT_DER。
-  encodingFormat: cert.EncodingFormat.FORMAT_PEM
-};
-
-cert.createX509Cert(encodingBlob, (error, x509Cert) => {
-  if (error) {
-    console.error(`createX509Cert failed, errCode: ${error.code}, errMsg: ${error.message}`);
-  } else {
-    console.info('createX509Cert result: success.');
-    x509Cert.getEncoded((error, _data) => {
-      if (error) {
-        console.error(`getEncoded failed, errCode: ${error.code}, errMsg: ${error.message}`);
-      } else {
-        console.info('getEncoded result: success.');
-      }
-    });
-  }
-});
-```
-
-```TypeScript
-import { cert } from '@kit.DeviceCertificateKit';
-
-// string转Uint8Array。
-function stringToUint8Array(str: string): Uint8Array {
-  let arr: Array<number> = [];
-  for (let i = 0, j = str.length; i < j; i++) {
-    arr.push(str.charCodeAt(i));
-  }
-  return new Uint8Array(arr);
-}
-
-let crlData = '-----BEGIN X509 CRL-----\n' +
-  'MIHzMF4CAQMwDQYJKoZIhvcNAQEEBQAwFTETMBEGA1UEAxMKQ1JMIGlzc3VlchcN\n' +
-  'MTcwODA3MTExOTU1WhcNMzIxMjE0MDA1MzIwWjAVMBMCAgPoFw0zMjEyMTQwMDUz\n' +
-  'MjBaMA0GCSqGSIb3DQEBBAUAA4GBACEPHhlaCTWA42ykeaOyR0SGQIHIOUR3gcDH\n' +
-  'J1LaNwiL+gDxI9rMQmlhsUGJmPIPdRs9uYyI+f854lsWYisD2PUEpn3DbEvzwYeQ\n' +
-  '5SqQoPDoM+YfZZa23hoTLsu52toXobP74sf/9K501p/+8hm4ROMLBoRT86GQKY6g\n' +
-  'eavsH0Q3\n' +
-  '-----END X509 CRL-----\n';
-
-// 证书吊销列表二进制数据，需业务自行赋值。
-let encodingBlob: cert.EncodingBlob = {
-  data: stringToUint8Array(crlData),
-  // 根据encodingData的格式进行赋值，支持FORMAT_PEM和FORMAT_DER。
-  encodingFormat: cert.EncodingFormat.FORMAT_PEM
-};
-
-cert.createX509Crl(encodingBlob, (error, x509Crl) => {
-  if (error) {
-    console.error(`createX509Crl failed, errCode: ${error.code}, errMsg: ${error.message}`);
-  } else {
-    console.info('createX509Crl result: success.');
-    x509Crl.getEncoded((error, _data) => {
-      if (error) {
-        console.error(`getEncoded failed, errCode: ${error.code}, errMsg: ${error.message}`);
-      } else {
-        console.info('getEncoded result: success.');
-      }
-    });
-  }
-});
-```
-
-```TypeScript
-import { cert } from '@kit.DeviceCertificateKit';
-
-// string转Uint8Array。
-function stringToUint8Array(str: string): Uint8Array {
-  let arr: Array<number> = [];
-  for (let i = 0, j = str.length; i < j; i++) {
-    arr.push(str.charCodeAt(i));
-  }
-  return new Uint8Array(arr);
-}
-
-let crlData = '-----BEGIN X509 CRL-----\n' +
-  'MIHzMF4CAQMwDQYJKoZIhvcNAQEEBQAwFTETMBEGA1UEAxMKQ1JMIGlzc3VlchcN\n' +
-  'MTcwODA3MTExOTU1WhcNMzIxMjE0MDA1MzIwWjAVMBMCAgPoFw0zMjEyMTQwMDUz\n' +
-  'MjBaMA0GCSqGSIb3DQEBBAUAA4GBACEPHhlaCTWA42ykeaOyR0SGQIHIOUR3gcDH\n' +
-  'J1LaNwiL+gDxI9rMQmlhsUGJmPIPdRs9uYyI+f854lsWYisD2PUEpn3DbEvzwYeQ\n' +
-  '5SqQoPDoM+YfZZa23hoTLsu52toXobP74sf/9K501p/+8hm4ROMLBoRT86GQKY6g\n' +
-  'eavsH0Q3\n' +
-  '-----END X509 CRL-----\n';
-
-// 证书吊销列表二进制数据，需业务自行赋值。
-let encodingBlob: cert.EncodingBlob = {
-  data: stringToUint8Array(crlData),
-  // 根据encodingData的格式进行赋值，支持FORMAT_PEM和FORMAT_DER。
-  encodingFormat: cert.EncodingFormat.FORMAT_PEM
-};
-
-cert.createX509CRL(encodingBlob, (error, x509CRL) => {
-  if (error) {
-    console.error(`createX509CRL failed, errCode: ${error.code}, errMsg: ${error.message}`);
-  } else {
-    console.info('createX509CRL result: success.');
-    x509CRL.getEncoded((error, _data) => {
-      if (error) {
-        console.error(`getEncoded failed, errCode: ${error.code}, errMsg: ${error.message}`);
-      } else {
-        console.info('getEncoded result: success.');
-      }
-    });
-  }
-});
-```
-
-```TypeScript
-import { cert } from '@kit.DeviceCertificateKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 // string转Uint8Array。
@@ -359,58 +179,6 @@ cert.createX509Crl(encodingBlob, (err, x509Crl) => {
     try {
       let serialNumber = 1000;
       let crlEntry = x509Crl.getRevokedCert(serialNumber);
-      crlEntry.getEncoded((error, _data) => {
-        if (error) {
-          console.error(`getEncoded failed, errCode: ${error.code}, errMsg: ${error.message}`);
-        } else {
-          console.info('getEncoded result: success.');
-        }
-      });
-    } catch (error) {
-      let e: BusinessError = error as BusinessError;
-      console.error(`getRevokedCert failed, errCode: ${e.code}, errMsg: ${e.message}`);
-    }
-  }
-});
-```
-
-```TypeScript
-import { cert } from '@kit.DeviceCertificateKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// string转Uint8Array。
-function stringToUint8Array(str: string): Uint8Array {
-  let arr: Array<number> = [];
-  for (let i = 0, j = str.length; i < j; i++) {
-    arr.push(str.charCodeAt(i));
-  }
-  return new Uint8Array(arr);
-}
-
-let crlData = '-----BEGIN X509 CRL-----\n' +
-  'MIHzMF4CAQMwDQYJKoZIhvcNAQEEBQAwFTETMBEGA1UEAxMKQ1JMIGlzc3VlchcN\n' +
-  'MTcwODA3MTExOTU1WhcNMzIxMjE0MDA1MzIwWjAVMBMCAgPoFw0zMjEyMTQwMDUz\n' +
-  'MjBaMA0GCSqGSIb3DQEBBAUAA4GBACEPHhlaCTWA42ykeaOyR0SGQIHIOUR3gcDH\n' +
-  'J1LaNwiL+gDxI9rMQmlhsUGJmPIPdRs9uYyI+f854lsWYisD2PUEpn3DbEvzwYeQ\n' +
-  '5SqQoPDoM+YfZZa23hoTLsu52toXobP74sf/9K501p/+8hm4ROMLBoRT86GQKY6g\n' +
-  'eavsH0Q3\n' +
-  '-----END X509 CRL-----\n';
-
-let encodingBlob: cert.EncodingBlob = {
-  data: stringToUint8Array(crlData),
-  // 根据encodingData的格式进行赋值，支持FORMAT_PEM和FORMAT_DER。
-  encodingFormat: cert.EncodingFormat.FORMAT_PEM
-};
-
-cert.createX509CRL(encodingBlob, (err, x509CRL) => {
-  if (err) {
-    console.error(`createX509CRL failed, errCode: ${err.code}, errMsg: ${err.message}`);
-  } else {
-    console.info('create x509 CRL result: success.');
-
-    try {
-      let serialNumber = BigInt(1000);
-      let crlEntry = x509CRL.getRevokedCert(serialNumber);
       crlEntry.getEncoded((error, _data) => {
         if (error) {
           console.error(`getEncoded failed, errCode: ${error.code}, errMsg: ${error.message}`);
@@ -476,130 +244,6 @@ function stringToUint8Array(str: string): Uint8Array {
   return new Uint8Array(arr);
 }
 
-// 证书二进制数据，需业务自行赋值。
-let certData = '-----BEGIN CERTIFICATE-----\n' +
-  'MIIBLzCB1QIUO/QDVJwZLIpeJyPjyTvE43xvE5cwCgYIKoZIzj0EAwIwGjEYMBYG\n' +
-  'A1UEAwwPRXhhbXBsZSBSb290IENBMB4XDTIzMDkwNDExMjAxOVoXDTI2MDUzMDEx\n' +
-  'MjAxOVowGjEYMBYGA1UEAwwPRXhhbXBsZSBSb290IENBMFkwEwYHKoZIzj0CAQYI\n' +
-  'KoZIzj0DAQcDQgAEHjG74yMIueO7z3T+dyuEIrhxTg2fqgeNB3SGfsIXlsiUfLTa\n' +
-  'tUsU0i/sePnrKglj2H8Abbx9PK0tsW/VgqwDIDAKBggqhkjOPQQDAgNJADBGAiEA\n' +
-  '0ce/fvA4tckNZeB865aOApKXKlBjiRlaiuq5mEEqvNACIQDPD9WyC21MXqPBuRUf\n' +
-  'BetUokslUfjT6+s/X4ByaxycAA==\n' +
-  '-----END CERTIFICATE-----\n';
-
-// 证书二进制数据，需业务自行赋值。
-let encodingBlob: cert.EncodingBlob = {
-  data: stringToUint8Array(certData),
-  // 根据encodingData的格式进行赋值，支持FORMAT_PEM和FORMAT_DER。
-  encodingFormat: cert.EncodingFormat.FORMAT_PEM
-};
-cert.createX509Cert(encodingBlob).then(x509Cert => {
-  console.info('createX509Cert result: success.');
-  x509Cert.getEncoded().then(_result => {
-    console.info('getEncoded result: success.');
-  }).catch((error: BusinessError) => {
-    console.error(`getEncoded failed, errCode: ${error.code}, errMsg: ${error.message}`);
-  });
-}).catch((error: BusinessError) => {
-  console.error(`createX509Cert failed, errCode: ${error.code}, errMsg: ${error.message}`);
-});
-```
-
-```TypeScript
-import { cert } from '@kit.DeviceCertificateKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// string转Uint8Array。
-function stringToUint8Array(str: string): Uint8Array {
-  let arr: Array<number> = [];
-  for (let i = 0, j = str.length; i < j; i++) {
-    arr.push(str.charCodeAt(i));
-  }
-  return new Uint8Array(arr);
-}
-
-let crlData = '-----BEGIN X509 CRL-----\n' +
-  'MIHzMF4CAQMwDQYJKoZIhvcNAQEEBQAwFTETMBEGA1UEAxMKQ1JMIGlzc3VlchcN\n' +
-  'MTcwODA3MTExOTU1WhcNMzIxMjE0MDA1MzIwWjAVMBMCAgPoFw0zMjEyMTQwMDUz\n' +
-  'MjBaMA0GCSqGSIb3DQEBBAUAA4GBACEPHhlaCTWA42ykeaOyR0SGQIHIOUR3gcDH\n' +
-  'J1LaNwiL+gDxI9rMQmlhsUGJmPIPdRs9uYyI+f854lsWYisD2PUEpn3DbEvzwYeQ\n' +
-  '5SqQoPDoM+YfZZa23hoTLsu52toXobP74sf/9K501p/+8hm4ROMLBoRT86GQKY6g\n' +
-  'eavsH0Q3\n' +
-  '-----END X509 CRL-----\n';
-
-// 证书吊销列表二进制数据，需业务自行赋值。
-let encodingBlob: cert.EncodingBlob = {
-  data: stringToUint8Array(crlData),
-  // 根据encodingData的格式进行赋值，支持FORMAT_PEM和FORMAT_DER。
-  encodingFormat: cert.EncodingFormat.FORMAT_PEM
-};
-
-cert.createX509Crl(encodingBlob).then(x509Crl => {
-  console.info('createX509Crl result: success.');
-  x509Crl.getEncoded().then(_result => {
-    console.info('getEncoded result: success.');
-  }).catch((error: BusinessError) => {
-    console.error(`getEncoded failed, errCode: ${error.code}, errMsg: ${error.message}`);
-  });
-}).catch((error: BusinessError) => {
-  console.error(`createX509Crl failed, errCode: ${error.code}, errMsg: ${error.message}`);
-});
-```
-
-```TypeScript
-import { cert } from '@kit.DeviceCertificateKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// string转Uint8Array。
-function stringToUint8Array(str: string): Uint8Array {
-  let arr: Array<number> = [];
-  for (let i = 0, j = str.length; i < j; i++) {
-    arr.push(str.charCodeAt(i));
-  }
-  return new Uint8Array(arr);
-}
-
-let crlData = '-----BEGIN X509 CRL-----\n' +
-  'MIHzMF4CAQMwDQYJKoZIhvcNAQEEBQAwFTETMBEGA1UEAxMKQ1JMIGlzc3VlchcN\n' +
-  'MTcwODA3MTExOTU1WhcNMzIxMjE0MDA1MzIwWjAVMBMCAgPoFw0zMjEyMTQwMDUz\n' +
-  'MjBaMA0GCSqGSIb3DQEBBAUAA4GBACEPHhlaCTWA42ykeaOyR0SGQIHIOUR3gcDH\n' +
-  'J1LaNwiL+gDxI9rMQmlhsUGJmPIPdRs9uYyI+f854lsWYisD2PUEpn3DbEvzwYeQ\n' +
-  '5SqQoPDoM+YfZZa23hoTLsu52toXobP74sf/9K501p/+8hm4ROMLBoRT86GQKY6g\n' +
-  'eavsH0Q3\n' +
-  '-----END X509 CRL-----\n';
-
-// 证书吊销列表二进制数据，需业务自行赋值。
-let encodingBlob: cert.EncodingBlob = {
-  data: stringToUint8Array(crlData),
-  // 根据encodingData的格式进行赋值，支持FORMAT_PEM和FORMAT_DER。
-  encodingFormat: cert.EncodingFormat.FORMAT_PEM
-};
-
-cert.createX509CRL(encodingBlob).then(x509CRL => {
-  console.info('createX509CRL result: success.');
-  x509CRL.getEncoded().then(_result => {
-    console.info('getEncoded result: success.');
-  }).catch((error: BusinessError) => {
-    console.error(`getEncoded failed, errCode: ${error.code}, errMsg: ${error.message}`);
-  });
-}).catch((error: BusinessError) => {
-  console.error(`createX509CRL failed, errCode: ${error.code}, errMsg: ${error.message}`);
-});
-```
-
-```TypeScript
-import { cert } from '@kit.DeviceCertificateKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// string转Uint8Array。
-function stringToUint8Array(str: string): Uint8Array {
-  let arr: Array<number> = [];
-  for (let i = 0, j = str.length; i < j; i++) {
-    arr.push(str.charCodeAt(i));
-  }
-  return new Uint8Array(arr);
-}
-
 let crlData = '-----BEGIN X509 CRL-----\n' +
   'MIHzMF4CAQMwDQYJKoZIhvcNAQEEBQAwFTETMBEGA1UEAxMKQ1JMIGlzc3VlchcN\n' +
   'MTcwODA3MTExOTU1WhcNMzIxMjE0MDA1MzIwWjAVMBMCAgPoFw0zMjEyMTQwMDUz\n' +
@@ -624,56 +268,6 @@ cert.createX509Crl(encodingBlob, (err, x509Crl) => {
     try {
       let serialNumber = 1000;
       let crlEntry = x509Crl.getRevokedCert(serialNumber);
-      crlEntry.getEncoded().then(_result => {
-        console.info('getEncoded result: success.');
-      }).catch((error: BusinessError) => {
-        console.error(`getEncoded failed, errCode: ${error.code}, errMsg: ${error.message}`);
-      });
-    } catch (error) {
-      let e: BusinessError = error as BusinessError;
-      console.error(`getRevokedCert failed, errCode: ${e.code}, errMsg: ${e.message}`);
-    }
-  }
-});
-```
-
-```TypeScript
-import { cert } from '@kit.DeviceCertificateKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// string转Uint8Array。
-function stringToUint8Array(str: string): Uint8Array {
-  let arr: Array<number> = [];
-  for (let i = 0, j = str.length; i < j; i++) {
-    arr.push(str.charCodeAt(i));
-  }
-  return new Uint8Array(arr);
-}
-
-let crlData = '-----BEGIN X509 CRL-----\n' +
-  'MIHzMF4CAQMwDQYJKoZIhvcNAQEEBQAwFTETMBEGA1UEAxMKQ1JMIGlzc3VlchcN\n' +
-  'MTcwODA3MTExOTU1WhcNMzIxMjE0MDA1MzIwWjAVMBMCAgPoFw0zMjEyMTQwMDUz\n' +
-  'MjBaMA0GCSqGSIb3DQEBBAUAA4GBACEPHhlaCTWA42ykeaOyR0SGQIHIOUR3gcDH\n' +
-  'J1LaNwiL+gDxI9rMQmlhsUGJmPIPdRs9uYyI+f854lsWYisD2PUEpn3DbEvzwYeQ\n' +
-  '5SqQoPDoM+YfZZa23hoTLsu52toXobP74sf/9K501p/+8hm4ROMLBoRT86GQKY6g\n' +
-  'eavsH0Q3\n' +
-  '-----END X509 CRL-----\n';
-
-let encodingBlob: cert.EncodingBlob = {
-  data: stringToUint8Array(crlData),
-  // 根据encodingData的格式进行赋值，支持FORMAT_PEM和FORMAT_DER。
-  encodingFormat: cert.EncodingFormat.FORMAT_PEM
-};
-
-cert.createX509CRL(encodingBlob, (err, x509CRL) => {
-  if (err) {
-    console.error(`createX509CRL failed, errCode: ${err.code}, errMsg: ${err.message}`);
-  } else {
-    console.info('create x509 CRL result: success.');
-
-    try {
-      let serialNumber = BigInt(1000);
-      let crlEntry = x509CRL.getRevokedCert(serialNumber);
       crlEntry.getEncoded().then(_result => {
         console.info('getEncoded result: success.');
       }).catch((error: BusinessError) => {
@@ -771,53 +365,6 @@ cert.createX509Crl(encodingBlob, (err, x509Crl) => {
 });
 ```
 
-```TypeScript
-import { cert } from '@kit.DeviceCertificateKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// string转Uint8Array。
-function stringToUint8Array(str: string): Uint8Array {
-  let arr: Array<number> = [];
-  for (let i = 0, j = str.length; i < j; i++) {
-    arr.push(str.charCodeAt(i));
-  }
-  return new Uint8Array(arr);
-}
-
-let crlData = '-----BEGIN X509 CRL-----\n' +
-  'MIHzMF4CAQMwDQYJKoZIhvcNAQEEBQAwFTETMBEGA1UEAxMKQ1JMIGlzc3VlchcN\n' +
-  'MTcwODA3MTExOTU1WhcNMzIxMjE0MDA1MzIwWjAVMBMCAgPoFw0zMjEyMTQwMDUz\n' +
-  'MjBaMA0GCSqGSIb3DQEBBAUAA4GBACEPHhlaCTWA42ykeaOyR0SGQIHIOUR3gcDH\n' +
-  'J1LaNwiL+gDxI9rMQmlhsUGJmPIPdRs9uYyI+f854lsWYisD2PUEpn3DbEvzwYeQ\n' +
-  '5SqQoPDoM+YfZZa23hoTLsu52toXobP74sf/9K501p/+8hm4ROMLBoRT86GQKY6g\n' +
-  'eavsH0Q3\n' +
-  '-----END X509 CRL-----\n';
-
-let encodingBlob: cert.EncodingBlob = {
-  data: stringToUint8Array(crlData),
-  // 根据encodingData的格式进行赋值，支持FORMAT_PEM和FORMAT_DER。
-  encodingFormat: cert.EncodingFormat.FORMAT_PEM
-};
-
-cert.createX509CRL(encodingBlob, (err, x509CRL) => {
-  if (err) {
-    console.error(`createX509CRL failed, errCode: ${err.code}, errMsg: ${err.message}`);
-  } else {
-    console.info('createX509CRL result: success.');
-
-    try {
-      let serialNumber = BigInt(1000);
-      let crlEntry = x509CRL.getRevokedCert(serialNumber);
-      let date = crlEntry.getRevocationDate();
-      console.info('date = ' + date);
-    } catch (error) {
-      let e: BusinessError = error as BusinessError;
-      console.error(`getRevokedCert or getRevocationDate failed, errCode: ${e.code}, errMsg: ${e.message}`);
-    }
-  }
-});
-```
-
 ## getSerialNumber
 
 ```TypeScript
@@ -846,46 +393,6 @@ getSerialNumber(): number
 | number | 表示被吊销的证书的序列号。 |
 
 **示例**
-
-```TypeScript
-import { cert } from '@kit.DeviceCertificateKit';
-
-// string转Uint8Array。
-function stringToUint8Array(str: string): Uint8Array {
-  let arr: Array<number> = [];
-  for (let i = 0, j = str.length; i < j; i++) {
-    arr.push(str.charCodeAt(i));
-  }
-  return new Uint8Array(arr);
-}
-
-// 证书二进制数据，需业务自行赋值。
-let certData = '-----BEGIN CERTIFICATE-----\n' +
-  'MIIBHTCBwwICA+gwCgYIKoZIzj0EAwIwGjEYMBYGA1UEAwwPRXhhbXBsZSBSb290\n' +
-  'IENBMB4XDTIzMDkwNTAyNDgyMloXDTI2MDUzMTAyNDgyMlowGjEYMBYGA1UEAwwP\n' +
-  'RXhhbXBsZSBSb290IENBMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEHjG74yMI\n' +
-  'ueO7z3T+dyuEIrhxTg2fqgeNB3SGfsIXlsiUfLTatUsU0i/sePnrKglj2H8Abbx9\n' +
-  'PK0tsW/VgqwDIDAKBggqhkjOPQQDAgNJADBGAiEApVZno/Z7WyDc/muRN1y57uaY\n' +
-  'Mjrgnvp/AMdE8qmFiDwCIQCrIYdHVO1awaPgcdALZY+uLQi6mEs/oMJLUcmaag3E\n' +
-  'Qw==\n' +
-  '-----END CERTIFICATE-----\n';
-
-let encodingBlob: cert.EncodingBlob = {
-  data: stringToUint8Array(certData),
-  // 根据encodingData的格式进行赋值，支持FORMAT_PEM和FORMAT_DER。
-  encodingFormat: cert.EncodingFormat.FORMAT_PEM
-};
-
-cert.createX509Cert(encodingBlob, (error, x509Cert) => {
-  if (error) {
-    console.error(`createX509Cert failed, errCode: ${error.code}, errMsg: ${error.message}`);
-  } else {
-    console.info('createX509Cert result: success.');
-    let serialNumber = x509Cert.getSerialNumber();
-    console.info('serialNumber = ' + serialNumber);
-  }
-});
-```
 
 ```TypeScript
 import { cert } from '@kit.DeviceCertificateKit';

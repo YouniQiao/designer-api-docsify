@@ -62,7 +62,7 @@ readonly backgroundSystemMaterial?: uiMaterial.Material
 
 该成员只读，不支持更改。
 
-**类型：** uiMaterial.Material
+**类型：** [uiMaterial.Material](arkts-arkui-uimaterial-material-c.md)
 
 **起始版本：** 26.0.0
 
@@ -84,7 +84,7 @@ readonly buttonBackgroundBlurStyle?: BlurStyle
 
 该成员只读，不支持更改。
 
-**类型：** BlurStyle
+**类型：** [BlurStyle](../arkts-components/arkts-arkui-blurstyle-e.md)
 
 **起始版本：** 18
 
@@ -368,7 +368,7 @@ items设置textModifier/fontWeight属性值时，itemFontWeight不生效。
 
 该成员只读，不支持更改。
 
-**类型：** FontWeight
+**类型：** [FontWeight](arkts-arkui-fontweight-e.md)
 
 **起始版本：** 18
 
@@ -456,7 +456,7 @@ readonly itemMaxFontScale?: number | Resource
 
 该成员只读，不支持更改。
 
-**类型：** number \| Resource
+**类型：** number \| [Resource](arkts-arkui-resource-t.md)
 
 **起始版本：** 18
 
@@ -484,7 +484,7 @@ readonly itemMinFontScale?: number | Resource
 
 该成员只读，不支持更改。
 
-**类型：** number \| Resource
+**类型：** number \| [Resource](arkts-arkui-resource-t.md)
 
 **起始版本：** 18
 
@@ -672,7 +672,7 @@ items设置textModifier/fontWeight属性值时，itemSelectedFontWeight不生效
 
 该成员只读，不支持更改。
 
-**类型：** FontWeight
+**类型：** [FontWeight](arkts-arkui-fontweight-e.md)
 
 **起始版本：** 18
 
@@ -868,7 +868,7 @@ readonly languageDirection?: Direction
 
 该成员只读，不支持更改。
 
-**类型：** Direction
+**类型：** [Direction](arkts-arkui-direction-e.md)
 
 **起始版本：** 18
 

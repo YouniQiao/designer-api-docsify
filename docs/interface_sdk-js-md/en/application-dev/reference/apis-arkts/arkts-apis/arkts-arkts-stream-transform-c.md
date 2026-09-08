@@ -31,18 +31,6 @@ A constructor used to create a **Transform** object.
 **Examples**
 
 ```TypeScript
-let writableStream = new stream.Writable();
-```
-
-```TypeScript
-let readableStream = new stream.Readable();
-```
-
-```TypeScript
-let duplex = new stream.Duplex();
-```
-
-```TypeScript
 let transform = new stream.Transform();
 ```
 

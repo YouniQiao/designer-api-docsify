@@ -98,7 +98,7 @@ List设置cachedCount后，显示区域外上下各会预加载并布局cachedCo
 > **说明：**
 > 
 > 通常建议设置cachedCount=n/2（n代表一屏显示的列表项数量），同时需考虑其他因素以实现体验和内存使用的平衡。最佳实践请参考
-> [优化长列表加载慢丢帧问题-缓存列表项](https://developer.huawei.com/consumer/cn/doc/best-practices/bpta-best-practices-number-list#section11667144010222)
+> [优化长列表加载慢丢帧问题-缓存列表项](https://developer.huawei.com/consumer/cn/doc/best-practices/bpta-best-practices-long-list#section11667144010222)
 
 **起始版本：** 14
 
@@ -137,7 +137,7 @@ cachedCount(count: number | CacheCountInfo, show: boolean)
 > 
 > 通常建议设置cachedCount=n/2（n代表一屏显示的列表项数量），同时需考虑其他因素以实现体验和内存使用的平衡。从API version 22开始，支持设置最大最小缓存数，可以将最大缓存数设置稍大，如设置为最小缓存数的
 > 两倍，利用UI线程空闲时间创建节点，减少滚动过程中预加载创建节点，提升滚动流畅性。最佳实践请参考
-> [优化长列表加载慢丢帧问题-缓存列表项](https://developer.huawei.com/consumer/cn/doc/best-practices/bpta-best-practices-number-list#section11667144010222)
+> [优化长列表加载慢丢帧问题-缓存列表项](https://developer.huawei.com/consumer/cn/doc/best-practices/bpta-best-practices-long-list#section11667144010222)
 
 **起始版本：** 22
 
@@ -270,7 +270,7 @@ contentStartOffset + contentEndOffset超过List内容区长度后contentStartOff
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| offset | number \| Resource | 是 | 内容区末尾偏移量。默认值：0参数类型为number时单位为vp。 设置异常值如负数、非数字Resource时，按默认值处理。参数类型为number时取值范围：[0, +∞) |
+| offset | number \| [Resource](../arkts-apis/arkts-arkui-resource-t.md) | 是 | 内容区末尾偏移量。默认值：0参数类型为number时单位为vp。 设置异常值如负数、非数字Resource时，按默认值处理。参数类型为number时取值范围：[0, +∞) |
 
 ## contentStartOffset
 
@@ -318,7 +318,7 @@ contentStartOffset + contentEndOffset超过List内容区长度后contentStartOff
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| offset | number \| Resource | 是 | 内容区域起始偏移量。默认值：0参数类型为number时单位为vp。 设置异常值如负数、非数字Resource时，按默认值处理。参数类型为number时取值范围：0, +∞) |
+| offset | number \| [Resource](../arkts-apis/arkts-arkui-resource-t.md) | 是 | 内容区域起始偏移量。默认值：0参数类型为number时单位为vp。 设置异常值如负数、非数字Resource时，按默认值处理。参数类型为number时取值范围：0, +∞) |
 
 ## divider
 
@@ -510,7 +510,7 @@ friction(value: number | Resource)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number \| Resource | 是 | 摩擦系数。默认值：非Wearable设备为0.6，Wearable设备为0.9。从API version 11开始，非Wearable设备默认值为0.7。从API version 12开始，非Wearable设备默认值为0.75。取值范围：(0, +∞) |
+| value | number \| [Resource](../arkts-apis/arkts-arkui-resource-t.md) | 是 | 摩擦系数。默认值：非Wearable设备为0.6，Wearable设备为0.9。从API version 11开始，非Wearable设备默认值为0.7。从API version 12开始，非Wearable设备默认值为0.75。取值范围：(0, +∞) |
 
 ## lanes
 
@@ -589,7 +589,7 @@ listDirection(value: Axis)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | Axis | 是 | 组件的排列方向。默认值：Axis.Vertical |
+| value | [Axis](../arkts-apis/arkts-arkui-axis-e.md) | 是 | 组件的排列方向。默认值：Axis.Vertical |
 
 ## maintainVisibleContentPosition
 

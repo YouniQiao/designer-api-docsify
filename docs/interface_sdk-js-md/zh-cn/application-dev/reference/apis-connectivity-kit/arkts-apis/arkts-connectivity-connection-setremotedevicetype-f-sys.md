@@ -29,7 +29,7 @@ function setRemoteDeviceType(deviceId: string, type: DeviceType): Promise<void>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | deviceId | string | 是 | 表示远端设备MAC地址，例如："XX:XX:XX:XX:XX:XX"。 |
-| type | DeviceType | 是 | 表示设备类型。 |
+| type | [DeviceType](arkts-connectivity-connection-devicetype-e-sys.md) | 是 | 表示设备类型。 |
 
 **返回值：**
 

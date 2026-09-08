@@ -28,7 +28,7 @@ The launched ability can obtain the launch reason through the **launchReasonMess
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| shortcutInfo | ShortcutInfo | Yes | Shortcut information of the application. |
+| shortcutInfo | [ShortcutInfo](arkts-ability-launcherbundlemanager-shortcutinfo-t.md) | Yes | Shortcut information of the application. |
 | startReason | string | Yes | Reason for launching the shortcut. The value can be [AbilityConstant.REASON_MESSAGE_DESKTOP_SHORTCUT](../../../reference/apis-ability-kit/js-apis-app-ability-abilityConstant.md#constants), indicating a home screen shortcut launch. |
 | options | [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c.md) | No | Parameters used to specify the window mode of the target ability. |
 

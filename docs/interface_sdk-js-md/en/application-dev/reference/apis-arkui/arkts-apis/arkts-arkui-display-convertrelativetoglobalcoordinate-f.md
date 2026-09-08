@@ -30,7 +30,7 @@ Converts relative coordinates (based on the top-left corner of the screen) into 
 
 | Type | Description |
 | --- | --- |
-| Position | Global coordinates based on the top-left corner of the primary screen. |
+| [Position](arkts-arkui-display-position-i.md) | Global coordinates based on the top-left corner of the primary screen. |
 
 **Error codes:**
 

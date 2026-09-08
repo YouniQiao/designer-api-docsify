@@ -36,7 +36,7 @@ priority?: LocationRequestPriority
 
 Priority of the location request.
 
-**Type:** LocationRequestPriority
+**Type:** [LocationRequestPriority](arkts-location-geolocationmanager-locationrequestpriority-e.md)
 
 **Since:** 9
 
@@ -52,7 +52,7 @@ scenario?: LocationRequestScenario
 
 User scenario of the location request.
 
-**Type:** LocationRequestScenario
+**Type:** [LocationRequestScenario](arkts-location-geolocationmanager-locationrequestscenario-e.md)
 
 **Since:** 9
 

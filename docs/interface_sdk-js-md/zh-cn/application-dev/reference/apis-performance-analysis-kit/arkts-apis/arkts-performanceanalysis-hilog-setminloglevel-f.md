@@ -47,6 +47,9 @@ hilog.info(0x0001, "testTag", 'this is an info level log, id: %{public}d', 5);
 ```
 
 由于全局日志起始为INFO，第一条日志可以正常打印。
+在设置进程最低可打印日志级别为WARN后，第二条日志不符合该日志级别，第二条日志打印失败，第三条日志可以正常打印。
+在设置进程最低日志级别为DEBUG后，但是此时全局日志级别为INFO，所以第四条日志不满足全局日志级别，打印失败，第五条日志可以打印。
+最终打印结果如下所示：
 
 ```TypeScript
 08-07 23:50:01.532   13694-13694   A00001/testTag                  com.example.hilogDemo  I     this is an info level log, id: 1

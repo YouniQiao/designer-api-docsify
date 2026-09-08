@@ -36,7 +36,7 @@ value: Value
 
 Indicates the value
 
-**Type:** Value
+**Type:** [Value](arkts-arkdata-distributedkvstore-value-i.md)
 
 **Since:** 9
 

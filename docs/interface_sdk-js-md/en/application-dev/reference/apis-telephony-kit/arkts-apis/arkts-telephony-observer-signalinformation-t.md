@@ -10,4 +10,4 @@ Defines the signal strength.
 
 **System capability:** SystemCapability.Telephony.StateRegistry
 
-**Type:** radio.SignalInformation
+**Type:** [radio.SignalInformation](arkts-telephony-radio-signalinformation-i.md)

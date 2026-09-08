@@ -111,7 +111,7 @@ readLatestImage(): Promise<Image>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Image&gt; | 异步返回最新图片。 |
+| Promise&lt;[Image](arkts-image-sendableimage-image-i.md)&gt; | 异步返回最新图片。 |
 
 **示例**
 
@@ -155,7 +155,7 @@ readNextImage(): Promise<Image>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Image&gt; | 异步返回下一张图片。 |
+| Promise&lt;[Image](arkts-image-sendableimage-image-i.md)&gt; | 异步返回下一张图片。 |
 
 **示例**
 
@@ -203,53 +203,6 @@ release(): Promise<void>
 **示例**
 
 ```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function release(pixelMap: sendableImage.PixelMap) {
-  pixelMap.release().then(() => {
-    console.info('Succeeded in releasing the PixelMap object.');
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to release the PixelMap object. Code: ${err.code}, message: ${err.message}`);
-  });
-}
-```
-
-```TypeScript
-import { sendableImage } from '@kit.ImageKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function Release(context : Context) {
-  const path: string = context.cacheDir + "/test.jpg";
-  const sendableImageSourceObj: sendableImage.ImageSource = sendableImage.createImageSource(path);
-  sendableImageSourceObj.release().then(() => {
-    console.info('Succeeded in releasing the image source instance.');
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to release the image source instance. code ${error.code}, message is ${error.message}`);
-  })
-}
-```
-
-```TypeScript
-import { sendableImage } from '@kit.ImageKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { image } from '@kit.ImageKit';
-
-async function Release() {
-  let size: image.Size = {
-    height: 8192,
-    width: 8
-  }
-  let receiver: sendableImage.ImageReceiver = sendableImage.createImageReceiver(size, image.ImageFormat.JPEG, 8);
-  let img = await receiver.readNextImage();
-  img.release().then(() => {
-    console.info('Succeeded in releasing an image.');
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to release an image. Code: ${error.code}, message: ${error.message}.`);
-  })
-}
-```
-
-```TypeScript
 import { sendableImage } from '@kit.ImageKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 import { image } from '@kit.ImageKit';
@@ -290,7 +243,7 @@ readonly format: image.ImageFormat
 
 图像格式。
 
-**类型：** image.ImageFormat
+**类型：** [image.ImageFormat](arkts-image-image-imageformat-e.md)
 
 **起始版本：** 12
 
@@ -304,7 +257,7 @@ readonly size: image.Size
 
 图片大小。
 
-**类型：** image.Size
+**类型：** [image.Size](arkts-image-image-size-i.md)
 
 **起始版本：** 12
 

@@ -31,7 +31,7 @@ function pairDeviceOutOfBand(transport: BluetoothTransport, p192Data: OobData | 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| transport | BluetoothTransport | 是 | 表示在配对对端设备时使用的传输方式。若使用传统蓝牙（BR/EDR），则传入TRANSPORT_BR_EDR。若使用低功耗蓝牙（BLE），则传入TRANSPORT_LE。不支持其他[BluetoothTransport](arkts-connectivity-connection-bluetoothtransport-e.md)类型。 |
+| transport | [BluetoothTransport](arkts-connectivity-connection-bluetoothtransport-e.md) | 是 | 表示在配对对端设备时使用的传输方式。若使用传统蓝牙（BR/EDR），则传入TRANSPORT_BR_EDR。若使用低功耗蓝牙（BLE），则传入TRANSPORT_LE。不支持其他[BluetoothTransport](arkts-connectivity-connection-bluetoothtransport-e.md)类型。 |
 | p192Data | [OobData](arkts-connectivity-connection-oobdata-i-sys.md) \| null | 是 | 配对过程中使用的OOB数据。P-192指一种椭圆曲线算法，其密钥长度为192位，在蓝牙4.1及以前的传统配对方案中广泛使用。若不使用该值，需传入null。p192Data与p256Data需至少传入一个有效值，若两者同时传入，则p256Data生效，p192Data不生效。 |
 | p256Data | [OobData](arkts-connectivity-connection-oobdata-i-sys.md) \| null | 是 | 配对过程中使用的OOB数据。P-256指一种椭圆曲线算法，其密钥长度为256位，自蓝牙4.2开始成为安全连接的核心基础。基于P-256的OOB数据相比基于P -192的OOB数据具有更强的抗攻击能力与保密性。若非必须兼容蓝牙4.1或更早版本的旧设备，推荐使用p256Data。若不使用该值，需传入null。p192Data与p256Data需至少传入一个有效值，若两者同时传入，则p256Data生效，p192Data不生效。 |
 

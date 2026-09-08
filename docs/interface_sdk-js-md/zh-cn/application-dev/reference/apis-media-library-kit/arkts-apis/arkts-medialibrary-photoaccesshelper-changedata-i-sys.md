@@ -36,7 +36,7 @@ sharedExtraPhotoAssets: Array<SharedPhotoAsset>
 
 sharedExtraPhotoAssets of the same type
 
-**类型：** Array&lt;SharedPhotoAsset&gt;
+**类型：** Array&lt;[SharedPhotoAsset](arkts-medialibrary-photoaccesshelper-sharedphotoasset-i-sys.md)&gt;
 
 **起始版本：** 14
 
@@ -52,7 +52,7 @@ sharedPhotoAssets: Array<SharedPhotoAsset>
 
 sharedPhotoAssets of the same type
 
-**类型：** Array&lt;SharedPhotoAsset&gt;
+**类型：** Array&lt;[SharedPhotoAsset](arkts-medialibrary-photoaccesshelper-sharedphotoasset-i-sys.md)&gt;
 
 **起始版本：** 14
 

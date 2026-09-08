@@ -57,7 +57,7 @@ adjustPanelRect(flag: PanelFlag, rect: PanelRect): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| flag | PanelFlag | 是 | 目标面板状态类型。类型为FLG_FIXED或FLG_FLOATING。 |
+| flag | [PanelFlag](arkts-ime-inputmethodengine-panelflag-e.md) | 是 | 目标面板状态类型。类型为FLG_FIXED或FLG_FLOATING。 |
 | rect | [PanelRect](arkts-ime-inputmethodengine-panelrect-i.md) | 是 | 目标面板横屏状态及竖屏状态的横坐标，纵坐标，宽度以及高度。固定态：高度不能超过屏幕高度的70%，宽度不能超过屏幕宽度；悬浮态：高度不能超过屏幕高度，宽度不能超过屏幕宽度。超出范围时返回错误码401。 |
 
 **错误码：**
@@ -144,7 +144,7 @@ adjustPanelRect(flag: PanelFlag, rect: EnhancedPanelRect): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| flag | PanelFlag | 是 | 目标面板状态类型。类型为FLG_FIXED或FLG_FLOATING。 |
+| flag | [PanelFlag](arkts-ime-inputmethodengine-panelflag-e.md) | 是 | 目标面板状态类型。类型为FLG_FIXED或FLG_FLOATING。 |
 | rect | [EnhancedPanelRect](arkts-ime-inputmethodengine-enhancedpanelrect-i.md) | 是 | 目标面板横屏状态及竖屏状态的位置、大小、避让区域以及热区。 |
 
 **错误码：**
@@ -204,7 +204,7 @@ changeFlag(flag: PanelFlag): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| flag | PanelFlag | 是 | 目标面板状态类型。 |
+| flag | [PanelFlag](arkts-ime-inputmethodengine-panelflag-e.md) | 是 | 目标面板状态类型。 |
 
 **错误码：**
 
@@ -272,7 +272,7 @@ getImmersiveMode(): ImmersiveMode
 
 | 类型 | 说明 |
 | --- | --- |
-| ImmersiveMode | 沉浸模式。 |
+| [ImmersiveMode](arkts-ime-inputmethodengine-immersivemode-e.md) | 沉浸模式。 |
 
 **示例**
 
@@ -372,18 +372,6 @@ panel.hide((err: BusinessError) => {
 });
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-keyboardController.hide((err: BusinessError) => {
-  if (err) {
-    console.error(`Failed to hide. Code:${err.code}, message:${err.message}`);
-    return;
-  }
-  console.info('Succeeded in hiding keyboard.');
-});
-```
-
 ## hide
 
 ```TypeScript
@@ -411,16 +399,6 @@ panel.hide().then(() => {
   console.info('Succeeded in hiding the panel.');
 }).catch((err: BusinessError) => {
   console.error(`Failed to hide panel. Code is ${err.code}, message is ${err.message}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-keyboardController.hide().then(() => {
-  console.info('Succeeded in hiding keyboard.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to hide. Code:${err.code}, message:${err.message}`);
 });
 ```
 
@@ -607,7 +585,7 @@ off(type: 'sizeChange', callback?: SizeChangeCallback): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'sizeChange' | 是 | 监听当前面板的大小是否产生变化，固定取值为'sizeChange'。 |
-| callback | SizeChangeCallback | 否 | 回调函数。返回当前软键盘面板的大小，包含宽度和高度值。参数不填写时，取消订阅type对应的所有回调事件。<br>**适用版本：** 15 |
+| callback | [SizeChangeCallback](arkts-ime-inputmethodengine-sizechangecallback-t.md) | 否 | 回调函数。返回当前软键盘面板的大小，包含宽度和高度值。参数不填写时，取消订阅type对应的所有回调事件。<br>**适用版本：** 15 |
 
 **示例**
 
@@ -709,7 +687,7 @@ on(type: 'sizeChange', callback: SizeChangeCallback): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'sizeChange' | 是 | 监听当前面板的大小是否产生变化，固定值为'sizeChange'。 |
-| callback | SizeChangeCallback | 是 | 回调函数。返回当前软键盘面板的大小，包含宽度和高度值。<br>**适用版本：** 15 |
+| callback | [SizeChangeCallback](arkts-ime-inputmethodengine-sizechangecallback-t.md) | 是 | 回调函数。返回当前软键盘面板的大小，包含宽度和高度值。<br>**适用版本：** 15 |
 
 **示例**
 
@@ -893,7 +871,7 @@ setImmersiveMode(mode: ImmersiveMode): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mode | ImmersiveMode | 是 | 沉浸模式。 |
+| mode | [ImmersiveMode](arkts-ime-inputmethodengine-immersivemode-e.md) | 是 | 沉浸模式。 |
 
 **错误码：**
 
@@ -1331,7 +1309,7 @@ updatePanelRect(flag: PanelFlag, rect: PanelRect): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| flag | PanelFlag | 是 | 目标面板状态类型。类型为FLG_FIXED或FLG_FLOATING。 |
+| flag | [PanelFlag](arkts-ime-inputmethodengine-panelflag-e.md) | 是 | 目标面板状态类型。类型为FLG_FIXED或FLG_FLOATING。 |
 | rect | [PanelRect](arkts-ime-inputmethodengine-panelrect-i.md) | 是 | 目标面板横屏状态及竖屏状态的横坐标，纵坐标，宽度以及高度。固定态：高度不能超过屏幕高度的70%，宽度不能超过屏幕宽度；悬浮态：高度不能超过屏幕高度，宽度不能超过屏幕宽度。超出范围时返回错误码401。 |
 
 **返回值：**
@@ -1416,7 +1394,7 @@ updatePanelRect(flag: PanelFlag, rect: EnhancedPanelRect): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| flag | PanelFlag | 是 | 目标面板状态类型。类型为FLG_FIXED或FLG_FLOATING。 |
+| flag | [PanelFlag](arkts-ime-inputmethodengine-panelflag-e.md) | 是 | 目标面板状态类型。类型为FLG_FIXED或FLG_FLOATING。 |
 | rect | [EnhancedPanelRect](arkts-ime-inputmethodengine-enhancedpanelrect-i.md) | 是 | 目标面板横屏状态及竖屏状态的位置、大小、避让区域以及热区。 |
 
 **返回值：**
@@ -1502,7 +1480,7 @@ updatePanelRectSync(flag: PanelFlag, rect: PanelRect): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| flag | PanelFlag | 是 | 目标面板状态类型。类型为FLG_FIXED或FLG_FLOATING。 |
+| flag | [PanelFlag](arkts-ime-inputmethodengine-panelflag-e.md) | 是 | 目标面板状态类型。类型为FLG_FIXED或FLG_FLOATING。 |
 | rect | [PanelRect](arkts-ime-inputmethodengine-panelrect-i.md) | 是 | 目标面板横屏状态及竖屏状态的横坐标，纵坐标，宽度以及高度。固定态：高度不能超过屏幕高度的70%，宽度不能超过屏幕宽度；悬浮态：高度不能超过屏幕高度，宽度不能超过屏幕宽度。超出范围时返回错误码401。 |
 
 **错误码：**
@@ -1587,7 +1565,7 @@ updatePanelRectSync(flag: PanelFlag, rect: EnhancedPanelRect): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| flag | PanelFlag | 是 | 目标面板状态类型。类型为FLG_FIXED或FLG_FLOATING。 |
+| flag | [PanelFlag](arkts-ime-inputmethodengine-panelflag-e.md) | 是 | 目标面板状态类型。类型为FLG_FIXED或FLG_FLOATING。 |
 | rect | [EnhancedPanelRect](arkts-ime-inputmethodengine-enhancedpanelrect-i.md) | 是 | 目标面板横屏状态及竖屏状态的位置、大小、避让区域以及热区。 |
 
 **错误码：**
@@ -1659,7 +1637,7 @@ updateRegion(inputRegion: Array<window.Rect>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| inputRegion | Array&lt;window.Rect&gt; | 是 | 面板内接收输入事件的区域。   - 数组大小限制为[1, 4]。   - 传入的热区位置是相对于输入法面板窗口左顶点的位置。 |
+| inputRegion | Array&lt;[window.Rect](../../apis-arkui/arkts-apis/arkts-arkui-window-rect-i.md)&gt; | 是 | 面板内接收输入事件的区域。   - 数组大小限制为[1, 4]。   - 传入的热区位置是相对于输入法面板窗口左顶点的位置。 |
 
 **错误码：**
 

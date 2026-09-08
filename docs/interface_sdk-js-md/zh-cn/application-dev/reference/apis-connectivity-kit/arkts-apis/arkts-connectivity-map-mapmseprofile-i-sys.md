@@ -53,18 +53,6 @@ disconnect(deviceId: string): void
 | [2900004](../errorcode-bluetoothManager.md#2900004-配置文件不支持) | Profile not supported. |
 | [2900099](../errorcode-bluetoothManager.md#2900099-操作失败) | Operation failed. |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-try {
-    let mapMseProfile = map.createMapMseProfile();
-    mapMseProfile.disconnect('XX:XX:XX:XX:XX:XX');
-} catch (err) {
-    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-}
-```
-
 ## getMessageAccessAuthorization
 
 ```TypeScript
@@ -91,7 +79,7 @@ getMessageAccessAuthorization(deviceId: string): Promise<AccessAuthorization>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;AccessAuthorization&gt; | 以Promise的形式返回结果。如果成功，err为undefined，否则为错误对象。 |
+| Promise&lt;[AccessAuthorization](arkts-connectivity-map-accessauthorization-t-sys.md)&gt; | 以Promise的形式返回结果。如果成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -105,20 +93,6 @@ getMessageAccessAuthorization(deviceId: string): Promise<AccessAuthorization>
 | [2900003](../errorcode-bluetoothManager.md#2900003-蓝牙开关关闭) | Bluetooth disabled. |
 | [2900004](../errorcode-bluetoothManager.md#2900004-配置文件不支持) | Profile not supported. |
 | [2900099](../errorcode-bluetoothManager.md#2900099-操作失败) | Operation failed. |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-try {
-    let mapMseProfile = map.createMapMseProfile();
-    mapMseProfile.getMessageAccessAuthorization('XX:XX:XX:XX:XX:XX').then((authorization) => {
-        console.info('authorization ' + authorization);
-    });
-} catch (err) {
-    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-}
-```
 
 ## setMessageAccessAuthorization
 
@@ -141,7 +115,7 @@ setMessageAccessAuthorization(deviceId: string, authorization: AccessAuthorizati
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | deviceId | string | 是 | 表示远端设备地址，例如："XX:XX:XX:XX:XX:XX"。 |
-| authorization | AccessAuthorization | 是 | 表示对信息访问的授权状态，例如允许访问（ACCESS_ALLOWED）、拒绝访问（ACCESS_DENIED）等。具体枚举值及含义详见[AccessAuthorization](arkts-connectivity-constant-accessauthorization-e-sys.md)。 |
+| authorization | [AccessAuthorization](arkts-connectivity-map-accessauthorization-t-sys.md) | 是 | 表示对信息访问的授权状态，例如允许访问（ACCESS_ALLOWED）、拒绝访问（ACCESS_DENIED）等。具体枚举值及含义详见[AccessAuthorization](arkts-connectivity-constant-accessauthorization-e-sys.md)。 |
 
 **返回值：**
 
@@ -161,17 +135,3 @@ setMessageAccessAuthorization(deviceId: string, authorization: AccessAuthorizati
 | [2900003](../errorcode-bluetoothManager.md#2900003-蓝牙开关关闭) | Bluetooth disabled. |
 | [2900004](../errorcode-bluetoothManager.md#2900004-配置文件不支持) | Profile not supported. |
 | [2900099](../errorcode-bluetoothManager.md#2900099-操作失败) | Operation failed. |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-try {
-    let mapMseProfile = map.createMapMseProfile();
-    mapMseProfile.setMessageAccessAuthorization('XX:XX:XX:XX:XX:XX', 0).then(() => {
-        console.info('setMessageAccessAuthorization');
-    });
-} catch (err) {
-    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-}
-```

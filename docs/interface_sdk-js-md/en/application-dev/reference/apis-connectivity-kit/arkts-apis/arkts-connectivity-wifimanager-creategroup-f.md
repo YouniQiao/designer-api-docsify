@@ -24,7 +24,7 @@ Create a P2P group.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | WifiP2PConfig | Yes | Indicates the configuration for a group. |
+| config | [WifiP2PConfig](arkts-connectivity-wifimanager-wifip2pconfig-i.md) | Yes | Indicates the configuration for a group. |
 
 **Error codes:**
 

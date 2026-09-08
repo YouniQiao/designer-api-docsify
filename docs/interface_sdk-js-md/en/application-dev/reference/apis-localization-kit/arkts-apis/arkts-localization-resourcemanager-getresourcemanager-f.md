@@ -24,7 +24,7 @@ Obtains the **ResourceManager** object of the current application. This API uses
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;[ResourceManager](arkts-localization-resourcemanager-resourcemanager-i.md)&gt; | Yes | Callback used to return the **ResourceManager** object. |
+| callback | [AsyncCallback](arkts-localization-resourcemanager-asynccallback-i.md)&lt;[ResourceManager](arkts-localization-resourcemanager-resourcemanager-i.md)&gt; | Yes | Callback used to return the **ResourceManager** object. |
 
 **Examples**
 
@@ -73,7 +73,7 @@ Obtains the **ResourceManager** object of the specified application. This API us
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name of the application. |
-| callback | AsyncCallback&lt;[ResourceManager](arkts-localization-resourcemanager-resourcemanager-i.md)&gt; | Yes | Callback used to return the **ResourceManager** object. |
+| callback | [AsyncCallback](arkts-localization-resourcemanager-asynccallback-i.md)&lt;[ResourceManager](arkts-localization-resourcemanager-resourcemanager-i.md)&gt; | Yes | Callback used to return the **ResourceManager** object. |
 
 **Examples**
 

@@ -78,7 +78,7 @@ sslType?: SslType
 
 使用安全通信协议TLS或TLCP，默认使用TLS。当前TLS和TLCP均不支持双向认证。
 
-**类型：** SslType
+**类型：** [SslType](arkts-basicservices-cachedownload-ssltype-e.md)
 
 **起始版本：** 21
 

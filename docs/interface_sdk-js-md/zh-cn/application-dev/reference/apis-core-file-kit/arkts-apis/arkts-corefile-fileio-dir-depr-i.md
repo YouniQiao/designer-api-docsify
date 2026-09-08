@@ -41,17 +41,6 @@ close(): Promise<void>
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
-let filePath = pathDir + "/test.txt";
-let ss = fileio.createStreamSync(filePath, "r+");
-ss.close().then(() => {
-  console.info("close fileStream succeed");
-}).catch((err: BusinessError) => {
-  console.error("close fileStream  failed with error:" + err);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@ohos.base';
 dir.close().then(() => {
   console.info("close dir successfully");
 });
@@ -83,15 +72,6 @@ close(callback: AsyncCallback<void>): void
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
-let filePath = pathDir + "/test.txt";
-let ss = fileio.createStreamSync(filePath, "r+");
-ss.close((err: BusinessError) => {
-  // do something
-});
-```
-
-```TypeScript
-import { BusinessError } from '@ohos.base';
 dir.close((err: BusinessError) => {
   console.info("close dir successfully");
 });
@@ -114,12 +94,6 @@ closeSync(): void
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **示例**
-
-```TypeScript
-let filePath = pathDir + "/test.txt";
-let ss = fileio.createStreamSync(filePath, "r+");
-ss.closeSync();
-```
 
 ```TypeScript
 dir.closeSync();

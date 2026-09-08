@@ -228,7 +228,7 @@ off(type: 'connectResult', callback?: Callback<ConnectResult>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'connectResult' | 是 | 事件回调类型，支持的事件为'connectResult'，完成`connect()`调用，触发该事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ConnectResult&gt; | 否 | 注册的回调函数。需传入对应on方法最后一次注册的回调函数，用于取消该回调的订阅，默认缺省效果与传入行为一致。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ConnectResult](arkts-distributedservice-linkenhance-connectresult-i.md)&gt; | 否 | 注册的回调函数。需传入对应on方法最后一次注册的回调函数，用于取消该回调的订阅，默认缺省效果与传入行为一致。 |
 
 **错误码：**
 
@@ -397,7 +397,7 @@ on(type: 'connectResult', callback: Callback<ConnectResult>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'connectResult' | 是 | 事件回调类型，支持的事件为'connectResult'，完成`connect()`调用，触发该事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ConnectResult&gt; | 是 | 注册的回调函数。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ConnectResult](arkts-distributedservice-linkenhance-connectresult-i.md)&gt; | 是 | 注册的回调函数。 |
 
 **错误码：**
 

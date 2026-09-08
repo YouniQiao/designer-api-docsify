@@ -36,11 +36,3 @@ declare function closeSync(file: number | File): void
 | 13900025 | No space left on device |
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
-
-**示例**
-
-```TypeScript
-let filePath = pathDir + "/test.txt";
-let file = fileIo.openSync(filePath);
-fileIo.closeSync(file);
-```

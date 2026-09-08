@@ -126,7 +126,7 @@ copyOptions?: CopyOptions
 
 输入的文本是否可复制。默认值：`CopyOptions.LocalDevice`，支持设备内复制。
 
-**类型：** CopyOptions
+**类型：** [CopyOptions](arkts-arkui-copyoptions-e.md)
 
 **起始版本：** 18
 
@@ -224,7 +224,7 @@ enterKeyType?: EnterKeyType
 
 输入法回车键类型。默认值：`EnterKeyType.Search`。
 
-**类型：** EnterKeyType
+**类型：** [EnterKeyType](../arkts-components/arkts-arkui-enterkeytype-e.md)
 
 **起始版本：** 18
 
@@ -318,7 +318,7 @@ letterSpacing?: number | string | Resource
 
 设置文本字符间距。正数拉开字符距离，负数则拉近字符距离。浮点数默认值为0.0，单位为物理像素px。若输入类型非number且无法解析为数字，则使用默认值。
 
-**类型：** number \| string \| Resource
+**类型：** number \| string \| [Resource](arkts-arkui-resource-t.md)
 
 **起始版本：** 18
 
@@ -334,7 +334,7 @@ maxFontSize?: number | string | Resource
 
 设置文本最大显示字号。需要配合minFontSize以及布局大小限制使用，单独设置不生效。默认值为`undefined`。取值为number类型时，单位：fp。
 
-**类型：** number \| string \| Resource
+**类型：** number \| string \| [Resource](arkts-arkui-resource-t.md)
 
 **起始版本：** 18
 
@@ -366,7 +366,7 @@ minFontSize?: number | string | Resource
 
 设置文本最小显示字号。需要配合maxFontSize以及布局大小限制使用，单独设置不生效。默认值为`undefined`。取值为number类型时，单位：fp。
 
-**类型：** number \| string \| Resource
+**类型：** number \| string \| [Resource](arkts-arkui-resource-t.md)
 
 **起始版本：** 18
 
@@ -630,7 +630,7 @@ textAlign?: TextAlign
 
 文本在搜索框中的对齐方式。默认值：`TextAlign.Start`。
 
-**类型：** TextAlign
+**类型：** [TextAlign](arkts-arkui-textalign-e.md)
 
 **起始版本：** 18
 

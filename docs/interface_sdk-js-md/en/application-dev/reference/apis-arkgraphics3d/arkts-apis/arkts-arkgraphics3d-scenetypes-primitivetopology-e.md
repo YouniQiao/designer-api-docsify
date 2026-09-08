@@ -2,7 +2,7 @@
 
 Enumerates the vertex processing methods.
 
-@enum { number }
+@enum { int }
 
 **Since:** 18
 

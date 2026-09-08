@@ -713,7 +713,7 @@ Updates the PiP node content. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| contentNode | typeNode.XComponent | Yes | Content to be rendered in the PiP window. The parameter value cannot be empty. |
+| contentNode | [typeNode.XComponent](arkts-arkui-typenode-xcomponent-t.md) | Yes | Content to be rendered in the PiP window. The parameter value cannot be empty. |
 
 **Return value:**
 

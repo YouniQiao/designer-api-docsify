@@ -104,18 +104,6 @@ Clicks a specific point of this **UiDriver** object based on the given coordinat
 
 ```TypeScript
 // xxx.test.ets
-import { Driver } from '@kit.TestKit';
-
-async function demo() {
-  // Create a Driver object.
-  let driver: Driver = Driver.create();
-  // Perform a tap operation at coordinates (100,100).
-  await driver.click(100, 100);
-}
-```
-
-```TypeScript
-// xxx.test.ets
 import { UiDriver } from '@kit.TestKit';
 
 async function demo() {
@@ -198,16 +186,6 @@ Delays a duration of time. This API uses a promise to return the result.
 
 ```TypeScript
 // xxx.test.ets
-import { Driver } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  await driver.delayMs(1000);
-}
-```
-
-```TypeScript
-// xxx.test.ets
 import { UiDriver } from '@kit.TestKit';
 
 async function demo() {
@@ -248,16 +226,6 @@ Double-clicks a specific point of this **UiDriver** object based on the given co
 | Promise&lt;void&gt; | Promise that returns no value. |
 
 **Examples**
-
-```TypeScript
-// xxx.test.ets
-import { Driver } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  await driver.doubleClick(100, 100);
-}
-```
 
 ```TypeScript
 // xxx.test.ets
@@ -388,16 +356,6 @@ Long-clicks a specific point of this **UiDriver** object based on the given coor
 
 ```TypeScript
 // xxx.test.ets
-import { Driver } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  await driver.longClick(100, 100);
-}
-```
-
-```TypeScript
-// xxx.test.ets
 import { UiDriver } from '@kit.TestKit';
 
 async function demo() {
@@ -431,16 +389,6 @@ Presses the Back button on this **UiDriver** object. This API uses a promise to 
 | Promise&lt;void&gt; | Promise that returns no value. |
 
 **Examples**
-
-```TypeScript
-// xxx.test.ets
-import { Driver } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  await driver.pressBack();
-}
-```
 
 ```TypeScript
 // xxx.test.ets
@@ -483,16 +431,6 @@ Captures the current screen of this **UiDriver** object and saves it as a PNG im
 | Promise&lt;boolean&gt; | Promise used to return whether the screenshot operation is successful. The value **true** indicates the screenshot operation is successful, and **false** indicates the opposite. |
 
 **Examples**
-
-```TypeScript
-// xxx.test.ets
-import { Driver } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  await driver.screenCap('/data/storage/el2/base/cache/1.png');
-}
-```
 
 ```TypeScript
 // xxx.test.ets
@@ -580,17 +518,6 @@ Triggers a key event by passing the key code value. This API uses a promise to r
 | Promise&lt;void&gt; | Promise that returns no value. |
 
 **Examples**
-
-```TypeScript
-// xxx.test.ets
-import { Driver } from '@kit.TestKit';
-import { KeyCode } from '@kit.InputKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  await driver.triggerKey(KeyCode.KEYCODE_BACK); // Back button
-}
-```
 
 ```TypeScript
 // xxx.test.ets

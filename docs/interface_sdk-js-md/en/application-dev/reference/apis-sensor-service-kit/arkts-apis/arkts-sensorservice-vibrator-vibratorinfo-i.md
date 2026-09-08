@@ -54,23 +54,6 @@ Whether HD vibration is supported. The value **true** indicates that HD vibratio
 
 **System capability:** SystemCapability.Sensors.MiscDevice
 
-**Examples**
-
-```TypeScript
-import { vibrator } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// Use try catch to capture possible exceptions.
-try {
-  // Check whether HD vibration is supported.
-  let ret = vibrator.isHdHapticSupported();
-  console.info(`The query result is ${ret}`);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  console.error(`An unexpected error occurred. Code: ${e.code}, message: ${e.message}`);
-}
-```
-
 ## isLocalVibrator
 
 ```TypeScript

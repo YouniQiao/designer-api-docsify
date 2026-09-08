@@ -69,8 +69,8 @@ import { settings } from '@kit.BasicServicesKit';
 | [openAboutDeviceSettingsPage](arkts-basicservices-settings-openaboutdevicesettingspage-f.md) | Open the about device settings page. |
 | [openNfcSettingsPage](arkts-basicservices-settings-opennfcsettingspage-f.md) | Open the NFC settings page. |
 | [openAppDetailSettingsPage](arkts-basicservices-settings-openappdetailsettingspage-f.md) | Open the app detail settings page. |
-| [openDoubleClickSettingsPage](arkts-basicservices-settings-opendoubleclicksettingspage-f.md) | 1. Opens the settings page for number-pressing the Down key. 2. This API is used to set the default application started by number-pressing the Down key. |
-| [isDoubleClickAppForSelf](arkts-basicservices-settings-isdoubleclickappforself-f.md) | 1. Checks whether the application started by number-pressing the Down key is the application itself. 2. This API is triggered to check whether number-pressing the Down key starts the application itself. |
+| [openDoubleClickSettingsPage](arkts-basicservices-settings-opendoubleclicksettingspage-f.md) | 1. Opens the settings page for double-pressing the Down key. 2. This API is used to set the default application started by double-pressing the Down key. |
+| [isDoubleClickAppForSelf](arkts-basicservices-settings-isdoubleclickappforself-f.md) | 1. Checks whether the application started by double-pressing the Down key is the application itself. 2. This API is triggered to check whether double-pressing the Down key starts the application itself. |
 
 <!--Del-->
 ### Functions(System API)

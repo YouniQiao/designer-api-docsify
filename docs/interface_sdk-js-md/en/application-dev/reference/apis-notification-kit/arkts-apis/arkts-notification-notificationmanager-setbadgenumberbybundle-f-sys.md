@@ -28,7 +28,7 @@ This API can be properly called on devices other than wearables. If it is called
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundle | BundleOption | Yes | Bundle information of the application. |
+| bundle | [BundleOption](arkts-notification-notificationmanager-bundleoption-t.md) | Yes | Bundle information of the application. |
 | badgeNumber | number | Yes | Notification badge number to set. |
 
 **Return value:**

@@ -34,7 +34,7 @@ Obtains the authorization information of a continuous task.
 
 | Type | Description |
 | --- | --- |
-| UserAuthResult | Authorization result. |
+| [UserAuthResult](arkts-backgroundtasks-backgroundtaskmanager-userauthresult-e.md) | Authorization result. |
 
 **Error codes:**
 

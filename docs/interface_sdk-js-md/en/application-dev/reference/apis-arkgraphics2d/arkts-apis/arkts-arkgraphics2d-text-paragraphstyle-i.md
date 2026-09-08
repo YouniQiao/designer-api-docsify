@@ -20,7 +20,7 @@ align?: TextAlign
 
 Text alignment mode. The default value is **START**. This parameter is invalid when the **tab** parameter is configured.
 
-**Type:** TextAlign
+**Type:** [TextAlign](arkts-arkgraphics2d-text-textalign-e.md)
 
 **Since:** 12
 
@@ -293,7 +293,7 @@ textDirection?: TextDirection
 
 Text direction. The default value is **LTR**.
 
-**Type:** TextDirection
+**Type:** [TextDirection](arkts-arkgraphics2d-text-textdirection-e.md)
 
 **Since:** 12
 
@@ -325,7 +325,7 @@ textStyle?: TextStyle
 
 Text style applied to the paragraph. The default value is the initial text style.
 
-**Type:** TextStyle
+**Type:** [TextStyle](arkts-arkgraphics2d-text-textstyle-i.md)
 
 **Since:** 12
 
@@ -357,7 +357,7 @@ verticalAlign?: TextVerticalAlign
 
 Text vertical alignment mode. The default value is BASELINE, which means text baseline alignment. This attribute takes effect when line height scaling is enabled (that is, when [TextStyle](arkts-arkgraphics2d-text-textstyle-i.md)'s heightScale is set) or when text in different font sizes is mixed in a line (that is, when [TextStyle](arkts-arkgraphics2d-text-textstyle-i.md)'s fontSize is set). If there is superscript or subscript text in the line (that is, text with [TextStyle](arkts-arkgraphics2d-text-textstyle-i.md)'s badgeType attribute set), the superscript or subscript text participates in vertical alignment in the same way as normal text.
 
-**Type:** TextVerticalAlign
+**Type:** [TextVerticalAlign](arkts-arkgraphics2d-text-textverticalalign-e.md)
 
 **Since:** 20
 
@@ -373,7 +373,7 @@ wordBreak?: WordBreak
 
 Word break type. The default value is **BREAK_WORD**.
 
-**Type:** WordBreak
+**Type:** [WordBreak](arkts-arkgraphics2d-text-wordbreak-e.md)
 
 **Since:** 12
 

@@ -26,7 +26,7 @@ Obtain the latest disconnected reason.
 
 | Type | Description |
 | --- | --- |
-| DisconnectedReason | Returns the latest disconnected reason. |
+| [DisconnectedReason](arkts-connectivity-wifimanager-disconnectedreason-e-sys.md) | Returns the latest disconnected reason. |
 
 **Error codes:**
 

@@ -35,29 +35,20 @@ Creates a **ColorFilter** object with a given color and blend mode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | common2D.Color | Yes | Color in ARGB format. The value of each color channel is an integer ranging from 0 to 255. |
-| mode | BlendMode | Yes | Blend mode. |
+| color | [common2D.Color](arkts-arkgraphics2d-common2d-color-i.md) | Yes | Color in ARGB format. The value of each color channel is an integer ranging from 0 to 255. |
+| mode | [BlendMode](arkts-arkgraphics2d-drawing-blendmode-e.md) | Yes | Blend mode. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ColorFilter | Color filter. |
+| [ColorFilter](arkts-arkgraphics2d-drawing-colorfilter-c.md) | Color filter. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
-
-**Examples**
-
-```TypeScript
-import { common2D, drawing } from '@kit.ArkGraphics2D';
-
-const color : common2D.Color = { alpha: 255, red: 255, green: 0, blue: 0 };
-let colorFilter = drawing.ColorFilter.createBlendModeColorFilter(color, drawing.BlendMode.SRC);
-```
 
 ## createBlendModeColorFilter
 
@@ -75,28 +66,20 @@ Creates a **ColorFilter** object with a given color and blend mode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | common2D.Color \| number | Yes | Color, represented by an unsigned integer in hexadecimal ARGB format. |
-| mode | BlendMode | Yes | Blend mode. |
+| color | [common2D.Color](arkts-arkgraphics2d-common2d-color-i.md) \| number | Yes | Color, represented by an unsigned integer in hexadecimal ARGB format. |
+| mode | [BlendMode](arkts-arkgraphics2d-drawing-blendmode-e.md) | Yes | Blend mode. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ColorFilter | Color filter. |
+| [ColorFilter](arkts-arkgraphics2d-drawing-colorfilter-c.md) | Color filter. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
-
-**Examples**
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-let colorFilter = drawing.ColorFilter.createBlendModeColorFilter(0xffff0000, drawing.BlendMode.SRC);
-```
 
 ## createComposeColorFilter
 
@@ -114,31 +97,20 @@ Creates a **ColorFilter** object by combining another two color filters.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| outer | ColorFilter | Yes | Color filter that takes effect later in the new filter. |
-| inner | ColorFilter | Yes | Color filter that takes effect first in the new filter. |
+| outer | [ColorFilter](arkts-arkgraphics2d-drawing-colorfilter-c.md) | Yes | Color filter that takes effect later in the new filter. |
+| inner | [ColorFilter](arkts-arkgraphics2d-drawing-colorfilter-c.md) | Yes | Color filter that takes effect first in the new filter. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ColorFilter | Color filter. |
+| [ColorFilter](arkts-arkgraphics2d-drawing-colorfilter-c.md) | Color filter. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
-
-**Examples**
-
-```TypeScript
-import { common2D, drawing } from '@kit.ArkGraphics2D';
-
-const color : common2D.Color = { alpha: 255, red: 255, green: 0, blue: 0 };
-let colorFilter1 = drawing.ColorFilter.createBlendModeColorFilter(color, drawing.BlendMode.SRC);
-let colorFilter2 = drawing.ColorFilter.createBlendModeColorFilter(color, drawing.BlendMode.DST);
-let colorFilter = drawing.ColorFilter.createComposeColorFilter(colorFilter1, colorFilter2);
-```
 
 ## createLightingColorFilter
 
@@ -156,23 +128,14 @@ Creates a lighting color filter. It multiplies the RGB channel values by one col
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mutColor | common2D.Color \| number | Yes | Color used for multiplication. The value is in the ARGB format, and each color channel is an integer ranging from 0 to 255. If the value is of the number type, it must be an unsigned integer in the hexadecimal ARGB format. |
-| addColor | common2D.Color \| number | Yes | Color used for addition. The value is in the ARGB format, and each color channel is an integer ranging from 0 to 255. If the value is of the number type, it must be an unsigned integer in the hexadecimal ARGB format. |
+| mutColor | [common2D.Color](arkts-arkgraphics2d-common2d-color-i.md) \| number | Yes | Color used for multiplication. The value is in the ARGB format, and each color channel is an integer ranging from 0 to 255. If the value is of the number type, it must be an unsigned integer in the hexadecimal ARGB format. |
+| addColor | [common2D.Color](arkts-arkgraphics2d-common2d-color-i.md) \| number | Yes | Color used for addition. The value is in the ARGB format, and each color channel is an integer ranging from 0 to 255. If the value is of the number type, it must be an unsigned integer in the hexadecimal ARGB format. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ColorFilter | ColorFilter** object created. |
-
-**Examples**
-
-```TypeScript
-import { common2D, drawing } from '@kit.ArkGraphics2D';
-let mulColor : common2D.Color = { alpha: 0, red: 0, green: 0, blue: 20 };
-let addColor : common2D.Color = { alpha: 0, red: 0, green: 0, blue: 125 };
-let colorFilter = drawing.ColorFilter.createLightingColorFilter(mulColor, addColor);
-```
+| [ColorFilter](arkts-arkgraphics2d-drawing-colorfilter-c.md) | ColorFilter** object created. |
 
 ## createLinearToSRGBGamma
 
@@ -190,15 +153,7 @@ Creates a **ColorFilter** object that applies the sRGB gamma curve to the RGB ch
 
 | Type | Description |
 | --- | --- |
-| ColorFilter | Color filter. |
-
-**Examples**
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-let colorFilter = drawing.ColorFilter.createLinearToSRGBGamma();
-```
+| [ColorFilter](arkts-arkgraphics2d-drawing-colorfilter-c.md) | Color filter. |
 
 ## createLumaColorFilter
 
@@ -216,15 +171,7 @@ Creates a **ColorFilter** object that multiplies the luma into the alpha channel
 
 | Type | Description |
 | --- | --- |
-| ColorFilter | Color filter. |
-
-**Examples**
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-let colorFilter = drawing.ColorFilter.createLumaColorFilter();
-```
+| [ColorFilter](arkts-arkgraphics2d-drawing-colorfilter-c.md) | Color filter. |
 
 ## createMatrixColorFilter
 
@@ -248,27 +195,13 @@ Creates a color filter object with a 4*5 color matrix.
 
 | Type | Description |
 | --- | --- |
-| ColorFilter | Color filter. |
+| [ColorFilter](arkts-arkgraphics2d-drawing-colorfilter-c.md) | Color filter. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
-
-**Examples**
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-let matrix: Array<number> = [
-  1, 0, 0, 0, 0,
-  0, 1, 0, 0, 0,
-  0, 0, 100, 0, 0,
-  0, 0, 0, 1, 0
-];
-let colorFilter = drawing.ColorFilter.createMatrixColorFilter(matrix);
-```
 
 ## createSRGBGammaToLinear
 
@@ -286,12 +219,4 @@ Creates a **ColorFilter** object that applies the RGB channels to the sRGB gamma
 
 | Type | Description |
 | --- | --- |
-| ColorFilter | Color filter. |
-
-**Examples**
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-let colorFilter = drawing.ColorFilter.createSRGBGammaToLinear();
-```
+| [ColorFilter](arkts-arkgraphics2d-drawing-colorfilter-c.md) | Color filter. |

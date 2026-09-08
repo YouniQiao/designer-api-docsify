@@ -2,7 +2,7 @@
 
 Enumerates pixel map formats.
 
-@enum { number }
+@enum { int }
 
 **Since:** 14
 

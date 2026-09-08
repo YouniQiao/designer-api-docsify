@@ -34,7 +34,7 @@ getAvailableArea(): Promise<Rect>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Rect&gt; | Promise对象。返回当前屏幕可用矩形区域。 |
+| Promise&lt;[Rect](arkts-arkui-display-rect-i.md)&gt; | Promise对象。返回当前屏幕可用矩形区域。 |
 
 **错误码：**
 
@@ -277,7 +277,7 @@ off(type: 'availableAreaChange', callback?: Callback<Rect>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'availableAreaChange' | 是 | 监听事件，固定为'availableAreaChange'，表示屏幕可用区域变更。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Rect&gt; | 否 | 需要取消注册的回调函数。返回改变后的可用区域。若无此参数，则取消注册屏幕可用区域变化监听的所有回调函数。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Rect](arkts-arkui-display-rect-i.md)&gt; | 否 | 需要取消注册的回调函数。返回改变后的可用区域。若无此参数，则取消注册屏幕可用区域变化监听的所有回调函数。 |
 
 **错误码：**
 
@@ -323,7 +323,7 @@ on(type: 'availableAreaChange', callback: Callback<Rect>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'availableAreaChange' | 是 | 监听事件。固定为'availableAreaChange'，表示屏幕可用区域变更。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Rect&gt; | 是 | 回调函数。返回改变后的可用区域。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Rect](arkts-arkui-display-rect-i.md)&gt; | 是 | 回调函数。返回改变后的可用区域。 |
 
 **错误码：**
 
@@ -418,7 +418,7 @@ colorSpaces: Array<colorSpaceManager.ColorSpace>
 
 SystemCapability.WindowManager.WindowManager.Core
 
-**类型：** Array&lt;colorSpaceManager.ColorSpace&gt;
+**类型：** Array&lt;[colorSpaceManager.ColorSpace](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-colorspacemanager-colorspace-e.md)&gt;
 
 **起始版本：** 11
 
@@ -474,7 +474,7 @@ hdrFormats: Array<hdrCapability.HDRFormat>
 
 SystemCapability.WindowManager.WindowManager.Core
 
-**类型：** Array&lt;hdrCapability.HDRFormat&gt;
+**类型：** Array&lt;[hdrCapability.HDRFormat](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-hdrcapability-hdrformat-e.md)&gt;
 
 **起始版本：** 11
 
@@ -546,7 +546,7 @@ orientation: Orientation
 
 SystemCapability.WindowManager.WindowManager.Core
 
-**类型：** Orientation
+**类型：** [Orientation](arkts-arkui-display-orientation-e.md)
 
 **起始版本：** 10
 

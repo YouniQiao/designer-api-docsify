@@ -64,7 +64,7 @@ priority?: LocationRequestPriority
 
 表示优先级信息。取值范围见[LocationRequestPriority](arkts-location-geolocation-locationrequestpriority-e.md)的定义。
 
-**类型：** LocationRequestPriority
+**类型：** [LocationRequestPriority](arkts-location-geolocation-locationrequestpriority-e.md)
 
 **起始版本：** 7
 
@@ -82,7 +82,7 @@ scenario?: LocationRequestScenario
 
 表示场景信息。取值范围见[LocationRequestScenario](arkts-location-geolocation-locationrequestscenario-e.md)的定义。
 
-**类型：** LocationRequestScenario
+**类型：** [LocationRequestScenario](arkts-location-geolocation-locationrequestscenario-e.md)
 
 **起始版本：** 7
 

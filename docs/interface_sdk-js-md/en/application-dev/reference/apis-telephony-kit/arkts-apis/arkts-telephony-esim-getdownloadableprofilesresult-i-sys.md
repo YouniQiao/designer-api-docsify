@@ -38,7 +38,7 @@ responseResult: ResultCode
 
 Promise used to return the operation result.
 
-**Type:** ResultCode
+**Type:** [ResultCode](arkts-telephony-esim-resultcode-e-sys.md)
 
 **Since:** 18
 

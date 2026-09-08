@@ -62,7 +62,7 @@ credential?: Credential
 
 表示凭据详情。
 
-**类型：** Credential
+**类型：** [Credential](arkts-devicecertificate-certificatemanager-credential-i.md)
 
 **起始版本：** 11
 
@@ -76,7 +76,7 @@ credentialDetailList?: Array<Credential>
 
 表示凭据详细信息。
 
-**类型：** Array&lt;Credential&gt;
+**类型：** Array&lt;[Credential](arkts-devicecertificate-certificatemanager-credential-i.md)&gt;
 
 **起始版本：** 22
 

@@ -62,7 +62,7 @@ visibility?: Visibility
 
 表示数据的可见性等级，仅公共数据通路可使用，取值为[Visibility](arkts-arkdata-unifieddatachannel-visibility-e.md)枚举类型。只在写入数据的时候填写才生效，若不填写默认是Visibility.ALL。
 
-**类型：** Visibility
+**类型：** [Visibility](arkts-arkdata-unifieddatachannel-visibility-e.md)
 
 **起始版本：** 20
 

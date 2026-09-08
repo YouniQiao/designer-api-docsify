@@ -37,7 +37,7 @@ The following pixel formats are not supported for PixelMap creation: RGBA_101010
 
 | Type | Description |
 | --- | --- |
-| PixelMap | The new PixelMap created. |
+| [PixelMap](arkts-image-image-pixelmap-i.md) | The new PixelMap created. |
 
 **Error codes:**
 

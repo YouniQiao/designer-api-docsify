@@ -22,7 +22,7 @@ topicField: FieldType[]
 
 Field Types
 
-**Type:** FieldType[]
+**Type:** [FieldType](arkts-medialibrary-photoaccesshelper-fieldtype-e-sys.md)[]
 
 **Since:** 23
 

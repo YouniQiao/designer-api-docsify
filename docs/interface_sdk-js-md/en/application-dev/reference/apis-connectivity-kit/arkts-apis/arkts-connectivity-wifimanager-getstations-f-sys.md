@@ -26,7 +26,7 @@ Obtain the list of stations that are connected to the Wi-Fi hotspot. This method
 
 | Type | Description |
 | --- | --- |
-| Array&lt;StationInfo&gt; | the list of clients that are connected to the Wi-Fi hotspot. |
+| Array&lt;[StationInfo](arkts-connectivity-wifimanager-stationinfo-i-sys.md)&gt; | the list of clients that are connected to the Wi-Fi hotspot. |
 
 **Error codes:**
 

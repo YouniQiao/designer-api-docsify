@@ -41,7 +41,7 @@ Obtains the byte stream of the key data. This API returns the result synchronous
 
 | Type | Description |
 | --- | --- |
-| DataBlob | Key obtained. |
+| [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | Key obtained. |
 
 **Error codes:**
 

@@ -43,7 +43,7 @@ Obtains the status information about a page by its index.
 
 | Type | Description |
 | --- | --- |
-| RouterState \| undefined | State information about the target page; **undefined** if the specified index does not exist. |
+| [RouterState](arkts-arkui-router-routerstate-i.md) \| undefined | State information about the target page; **undefined** if the specified index does not exist. |
 
 **Examples**
 

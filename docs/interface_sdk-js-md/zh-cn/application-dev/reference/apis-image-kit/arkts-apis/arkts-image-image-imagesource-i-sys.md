@@ -45,7 +45,7 @@ createWideGamutSdrPixelMap(): Promise<PixelMap>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;PixelMap&gt; | Promise对象，返回PixelMap。 |
+| Promise&lt;[PixelMap](arkts-image-image-pixelmap-i.md)&gt; | Promise对象，返回PixelMap。 |
 
 **错误码：**
 

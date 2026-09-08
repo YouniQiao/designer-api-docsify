@@ -98,94 +98,6 @@ Disposes of this **NodeAdapter** object. Bindings, if any, of the object will be
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Examples**
-
-```TypeScript
-import { NodeController, FrameNode, BuilderNode } from '@kit.ArkUI';
-
-@Component
-struct TestComponent {
-  build() {
-    Column() {
-      Text('This is a BuilderNode.')
-        .fontSize(16)
-        .fontWeight(FontWeight.Bold)
-    }
-    .width('100%')
-    .backgroundColor(Color.Gray)
-  }
-
-  aboutToAppear() {
-    console.info('aboutToAppear');
-  }
-
-  aboutToDisappear() {
-    console.info('aboutToDisappear');
-  }
-}
-
-@Builder
-function buildComponent() {
-  TestComponent()
-}
-
-// Implement a custom UI controller by extending NodeController.
-class MyNodeController extends NodeController {
-  private rootNode: FrameNode | null = null;
-  private builderNode: BuilderNode<[]> | null = null;
-
-  makeNode(uiContext: UIContext): FrameNode | null {
-    this.rootNode = new FrameNode(uiContext);
-    this.builderNode = new BuilderNode(uiContext, { selfIdealSize: { width: 200, height: 100 } });
-    this.builderNode.build(new WrappedBuilder(buildComponent));
-
-    const rootRenderNode = this.rootNode.getRenderNode();
-    if (rootRenderNode !== null) {
-      rootRenderNode.size = { width: 200, height: 200 };
-      rootRenderNode.backgroundColor = 0xffd5d5d5;
-      rootRenderNode.appendChild(this.builderNode!.getFrameNode()!.getRenderNode());
-    }
-
-    return this.rootNode;
-  }
-
-  disposeFrameNode() {
-    if (this.rootNode !== null && this.builderNode !== null) {
-      // Remove all child nodes from rootNode before clearing the reference relationships.
-      this.rootNode.removeChild(this.builderNode.getFrameNode());
-      // Release the reference between builderNode and FrameNode.
-      this.builderNode.dispose();
-      // Release the reference between rootNode and FrameNode.
-      this.rootNode.dispose();
-    }
-  }
-
-  removeBuilderNode() {
-    const rootRenderNode = this.rootNode!.getRenderNode();
-    if (rootRenderNode !== null && this.builderNode !== null && this.builderNode.getFrameNode() !== null) {
-      rootRenderNode.removeChild(this.builderNode!.getFrameNode()!.getRenderNode());
-    }
-  }
-}
-
-@Entry
-@Component
-struct Index {
-  private myNodeController: MyNodeController = new MyNodeController();
-
-  build() {
-    Column({ space: 4 }) {
-      NodeContainer(this.myNodeController)
-      Button('FrameNode dispose')
-        .onClick(() => {
-          this.myNodeController.disposeFrameNode();
-        })
-        .width('100%')
-    }
-  }
-}
-```
-
 ## getAllAvailableItems
 
 ```TypeScript
@@ -255,9 +167,8 @@ Checks whether the NodeAdapter's backend reference has been released. Frontend n
 
 **Examples**
 
-See [FrameNode Validity Check Example.
-
-See NodeAdapter Validity Check Example.
+See [NodeAdapter Validity Check Example.
+- simpleType:
 
 ## moveItem
 
@@ -536,3 +447,4 @@ Get the total number of node count.
 **Examples**
 
 See the example for [NodeAdapter Usage Example.
+- simpleType:

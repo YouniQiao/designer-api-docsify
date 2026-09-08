@@ -26,7 +26,7 @@ Obtains the current OS account authorization manager.
 
 | Type | Description |
 | --- | --- |
-| AuthorizationManager | Instance object of the OS account authorization manager. |
+| [AuthorizationManager](arkts-basicservices-authorization-authorizationmanager-i.md) | Instance object of the OS account authorization manager. |
 
 **Error codes:**
 

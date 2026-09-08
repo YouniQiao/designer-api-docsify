@@ -39,11 +39,3 @@ Checks whether a UID belongs to this application.
 ```TypeScript
 let result = process.isAppUid(688);
 ```
-
-```TypeScript
-let pro = new process.ProcessManager();
-// Use process.uid to obtain the UID.
-let pres = process.uid;
-let result = pro.isAppUid(pres);
-console.info("result: " + result); // result: true
-```

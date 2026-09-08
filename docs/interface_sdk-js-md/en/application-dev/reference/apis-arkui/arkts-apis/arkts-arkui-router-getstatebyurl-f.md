@@ -43,7 +43,7 @@ Obtains the status information about a page by its URL.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;RouterState&gt; | Page routing state. |
+| Array&lt;[RouterState](arkts-arkui-router-routerstate-i.md)&gt; | Page routing state. |
 
 **Examples**
 

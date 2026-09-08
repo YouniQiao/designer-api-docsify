@@ -28,13 +28,13 @@ Before you do this, call [usb.getDevices](arkts-basicservices-usb-getdevices-f.m
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| device | USBDevice | Yes | USB device information. |
+| device | [USBDevice](arkts-basicservices-usb-usbdevice-i.md) | Yes | USB device information. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Readonly&lt;USBDevicePipe&gt; | USB device pipe for data transfer. |
+| Readonly&lt;[USBDevicePipe](arkts-basicservices-usb-usbdevicepipe-i.md)&gt; | USB device pipe for data transfer. |
 
 **Examples**
 

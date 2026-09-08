@@ -34,7 +34,7 @@ dataBits?: DataBits
 
 Data bits. The default value is **8**.
 
-**Type:** DataBits
+**Type:** [DataBits](arkts-basicservices-serialmanager-databits-e.md)
 
 **Default:** DATABIT_8
 
@@ -50,7 +50,7 @@ parity?: Parity
 
 Parity check. The default value is **None**, indicating that no parity check is performed.
 
-**Type:** Parity
+**Type:** [Parity](arkts-basicservices-serialmanager-parity-e.md)
 
 **Default:** NONE
 
@@ -66,7 +66,7 @@ stopBits?: StopBits
 
 Stop bits. The default value is **1**.
 
-**Type:** StopBits
+**Type:** [StopBits](arkts-basicservices-serialmanager-stopbits-e.md)
 
 **Default:** STOPBIT_1
 

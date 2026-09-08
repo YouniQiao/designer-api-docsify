@@ -55,7 +55,7 @@ grantStatus: GrantStatus
 
 Permission authorization status.
 
-**Type:** GrantStatus
+**Type:** [GrantStatus](arkts-ability-abilityaccessctrl-grantstatus-e.md)
 
 **Since:** 26.0.0
 

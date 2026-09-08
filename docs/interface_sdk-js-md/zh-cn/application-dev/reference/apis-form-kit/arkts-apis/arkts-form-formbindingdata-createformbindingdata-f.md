@@ -30,7 +30,7 @@ function createFormBindingData(obj?: Object | string): FormBindingData
 
 | 类型 | 说明 |
 | --- | --- |
-| FormBindingData | 根据传入数据创建的FormBindingData对象，用于卡片数据绑定，向卡片提供要展示的数据。 |
+| [FormBindingData](arkts-form-formbindingdata-formbindingdata-i.md) | 根据传入数据创建的FormBindingData对象，用于卡片数据绑定，向卡片提供要展示的数据。 |
 
 **错误码：**
 

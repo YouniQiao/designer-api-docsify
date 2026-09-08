@@ -90,7 +90,7 @@ status?: AssetStatus
 
 资产的状态，默认值为ASSET_NORMAL。
 
-**类型：** AssetStatus
+**类型：** [AssetStatus](arkts-arkdata-commontype-assetstatus-e.md)
 
 **起始版本：** 11
 

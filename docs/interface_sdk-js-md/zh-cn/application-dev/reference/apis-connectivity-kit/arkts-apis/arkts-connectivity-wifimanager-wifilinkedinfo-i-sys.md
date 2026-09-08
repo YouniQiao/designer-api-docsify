@@ -94,7 +94,7 @@ suppState: SuppState
 
 **系统接口：** 此接口为系统接口。
 
-**类型：** SuppState
+**类型：** [SuppState](arkts-connectivity-wifimanager-suppstate-e-sys.md)
 
 **起始版本：** 9
 

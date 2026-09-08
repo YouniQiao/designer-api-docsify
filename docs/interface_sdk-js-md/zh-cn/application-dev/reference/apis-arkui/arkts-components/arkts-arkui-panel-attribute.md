@@ -364,4 +364,4 @@ type(value: PanelType)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [PanelType](arkts-arkui-paneltype-e.md) | 是 | 设置可滑动面板的类型。默认值：PanelType.Foldable |
+| value | [PanelType](arkts-arkui-paneltype-e.md) | 是 | [设置可滑动面板的类型。默认值：PanelType.Foldable](arkts-arkui-paneltype-e.md) |

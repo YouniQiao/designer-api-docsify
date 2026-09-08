@@ -192,7 +192,7 @@ build(): Paragraph
 
 | 类型 | 说明 |
 | --- | --- |
-| Paragraph | 可用于后续渲染的 Paragraph 对象。 |
+| [Paragraph](arkts-arkgraphics2d-text-paragraph-c.md) | 可用于后续渲染的 Paragraph 对象。 |
 
 **示例**
 
@@ -295,7 +295,7 @@ ParagraphBuilder对象的构造函数。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| paragraphStyle | ParagraphStyle | 是 | 段落样式。 |
+| paragraphStyle | [ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md) | 是 | 段落样式。 |
 | fontCollection | [FontCollection](arkts-arkgraphics2d-text-fontcollection-c.md) | 是 | 字体集对象，提供文本排版所需的字体资源，用于在段落构建过程中进行字形匹配和文本渲染。 |
 
 **示例**
@@ -405,7 +405,7 @@ pushStyle(textStyle: TextStyle): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| textStyle | TextStyle | 是 | 包含了对文本的各种视觉属性的定义，如字体、字号、颜色、字重、字间距、行距、装饰（如下划线、删除线）、文本阴影等。 |
+| textStyle | [TextStyle](arkts-arkgraphics2d-text-textstyle-i.md) | 是 | 包含了对文本的各种视觉属性的定义，如字体、字号、颜色、字重、字间距、行距、装饰（如下划线、删除线）、文本阴影等。 |
 
 **示例**
 

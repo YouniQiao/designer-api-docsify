@@ -42,38 +42,10 @@ static makeColorFromResourceColor(resourceColor: ResourceColor): common2D.Color
 
 | 类型 | 说明 |
 | --- | --- |
-| common2D.Color | 转换后的common2D.Color颜色对象，若转换失败则返回undefined。 |
+| [common2D.Color](arkts-arkgraphics2d-common2d-color-i.md) | 转换后的common2D.Color颜色对象，若转换失败则返回undefined。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
-
-**示例**
-
-```TypeScript
-import { drawing, common2D } from '@kit.ArkGraphics2D';
-
-// Color
-let color1: common2D.Color = drawing.Tool.makeColorFromResourceColor(Color.Blue);
-
-// Number
-let color2: common2D.Color = drawing.Tool.makeColorFromResourceColor(0xffc0cb);
-let color3: common2D.Color = drawing.Tool.makeColorFromResourceColor(0x11ffa500);
-
-// String
-let color4: common2D.Color = drawing.Tool.makeColorFromResourceColor('#ff0000');
-let color5: common2D.Color = drawing.Tool.makeColorFromResourceColor('#110000ff');
-let color6: common2D.Color = drawing.Tool.makeColorFromResourceColor('#00f');
-let color7: common2D.Color = drawing.Tool.makeColorFromResourceColor('#100f');
-let color8: common2D.Color = drawing.Tool.makeColorFromResourceColor('rgb(255, 100, 255)');
-let color9: common2D.Color = drawing.Tool.makeColorFromResourceColor('rgba(255, 100, 255, 0.5)');
-
-// Resource
-let color10: common2D.Color = drawing.Tool.makeColorFromResourceColor($r('sys.color.ohos_id_color_secondary'));
-
-// Use color
-let brush = new drawing.Brush();
-brush.setColor(color1);
-```

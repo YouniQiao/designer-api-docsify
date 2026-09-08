@@ -116,7 +116,7 @@ copyOption(value: Optional<CopyOptions>): SelectionContainerAttribute
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;CopyOptions&gt; | 是 | 复制粘贴配置项，用于设置文本的可复制范围。具体说明请参考CopyOptions枚举。 |
+| value | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[CopyOptions](arkts-arkui-copyoptions-e.md)&gt; | 是 | 复制粘贴配置项，用于设置文本的可复制范围。具体说明请参考CopyOptions枚举。 |
 
 **返回值：**
 

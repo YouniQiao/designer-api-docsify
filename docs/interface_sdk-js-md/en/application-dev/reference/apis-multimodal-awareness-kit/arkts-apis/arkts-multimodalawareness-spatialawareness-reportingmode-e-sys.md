@@ -1,6 +1,6 @@
 # ReportingMode (System API)
 
-Enum for distance measurement result reporting modes. @enum { number } ReportingMode
+Enum for distance measurement result reporting modes. @enum { int } ReportingMode
 
 **Since:** 23
 

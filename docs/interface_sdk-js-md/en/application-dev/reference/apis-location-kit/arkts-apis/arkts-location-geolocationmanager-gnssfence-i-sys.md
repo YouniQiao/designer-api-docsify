@@ -22,7 +22,7 @@ circularFence?: Geofence
 
 Indicates circular fence.
 
-**Type:** Geofence
+**Type:** [Geofence](arkts-location-geolocationmanager-geofence-i.md)
 
 **Since:** 26.0.0
 
@@ -58,7 +58,7 @@ polygon?: Array<Point>
 
 Indicates polygonal fence.
 
-**Type:** Array&lt;Point&gt;
+**Type:** Array&lt;[Point](arkts-location-geolocationmanager-point-i.md)&gt;
 
 **Since:** 26.0.0
 

@@ -30,7 +30,7 @@ function updateNetwork(config: WifiDeviceConfig): number
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| config | WifiDeviceConfig | 是 | Wi-Fi配置信息。 |
+| config | [WifiDeviceConfig](arkts-connectivity-wifi-wifideviceconfig-i.md) | 是 | Wi-Fi配置信息。 |
 
 **返回值：**
 

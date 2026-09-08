@@ -73,7 +73,7 @@ function createImageSource(uri: string): ImageSource
 
 | 类型 | 说明 |
 | --- | --- |
-| ImageSource | 返回ImageSource类实例，失败时返回undefined。 |
+| [ImageSource](arkts-image-sendableimage-imagesource-i.md) | 返回ImageSource类实例，失败时返回undefined。 |
 
 **示例**
 
@@ -113,7 +113,7 @@ function createImageSource(fd: number): ImageSource
 
 | 类型 | 说明 |
 | --- | --- |
-| ImageSource | 返回ImageSource类实例，失败时返回undefined。 |
+| [ImageSource](arkts-image-sendableimage-imagesource-i.md) | 返回ImageSource类实例，失败时返回undefined。 |
 
 **示例**
 
@@ -157,7 +157,7 @@ function createImageSource(buf: ArrayBuffer): ImageSource
 
 | 类型 | 说明 |
 | --- | --- |
-| ImageSource | 返回ImageSource类实例，失败时返回undefined。 |
+| [ImageSource](arkts-image-sendableimage-imagesource-i.md) | 返回ImageSource类实例，失败时返回undefined。 |
 
 **示例**
 

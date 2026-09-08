@@ -21,7 +21,7 @@ Playback duration of each image frame, in milliseconds.
 
 Default value: **0**
 
-Negative numbers are not supported. Setting negative values will cause the image to stay in the current frame for a number time, affecting normal playback.
+Negative numbers are not supported. Setting negative values will cause the image to stay in the current frame for a long time, affecting normal playback.
 
 **Type:** number
 
@@ -83,7 +83,7 @@ src: string | Resource | PixelMap
 
 Image path. The image format can be .jpg,jpeg,svg,png,bmp,webp,ico, or .heif. The Resource type is supported since API version 9, and the [PixelMap](../../../reference/apis-arkui/arkui-ts/ts-image-common.md#pixelmap) type is supported since API version 12.
 
-**Type:** string \| Resource \| PixelMap
+**Type:** string \| [Resource](../arkts-apis/arkts-arkui-resource-t.md) \| [PixelMap](arkts-arkui-pixelmap-t.md)
 
 **Since:** 7
 

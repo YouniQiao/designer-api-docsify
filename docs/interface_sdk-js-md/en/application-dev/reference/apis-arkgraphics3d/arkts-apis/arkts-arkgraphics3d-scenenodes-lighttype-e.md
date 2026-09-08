@@ -2,7 +2,7 @@
 
 Enumerates the light types.
 
-@enum { number }
+@enum { int }
 
 **Since:** 12
 

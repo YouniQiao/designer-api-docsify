@@ -28,7 +28,7 @@ function getLocalProfileUuids(callback: AsyncCallback<Array<ProfileUuids>>): voi
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;ProfileUuids&gt;&gt; | 是 | 回调函数。当获取UUID成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[ProfileUuids](arkts-connectivity-connection-profileuuids-t.md)&gt;&gt; | 是 | 回调函数。当获取UUID成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -78,7 +78,7 @@ function getLocalProfileUuids(): Promise<Array<ProfileUuids>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;ProfileUuids&gt;&gt; | Promise对象，返回本地设备的ProfileUuids数组。 |
+| Promise&lt;Array&lt;[ProfileUuids](arkts-connectivity-connection-profileuuids-t.md)&gt;&gt; | Promise对象，返回本地设备的ProfileUuids数组。 |
 
 **错误码：**
 

@@ -20,7 +20,7 @@ keyCode: KeyCode
 
 Key code.
 
-**Type:** KeyCode
+**Type:** [KeyCode](arkts-mdm-systemmanager-keycode-e.md)
 
 **Since:** 23
 

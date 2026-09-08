@@ -4,11 +4,11 @@
 
 | 名称 | 值 | 说明 |  
 | ----------------------------- | -- | -------------------- |  
-| NONE | 0 | 无振动模式。 |
-| SYNC | 1 | 与铃音同步模式。 |
+| [NONE](arkts-audio-systemsoundmanager-tonehapticsmode-e-sys.md) | 0 | 无振动模式。 |
+| [SYNC](arkts-audio-systemsoundmanager-tonehapticsmode-e-sys.md) | 1 | 与铃音同步模式。 |
 | [NON_SYNC](arkts-audio-systemsoundmanager-tonehapticsmode-e-sys.md) | 2 | 非同步模式。 |
 
-@enum {number}
+@enum {int}
 
 **起始版本：** 14
 

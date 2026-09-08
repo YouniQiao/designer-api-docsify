@@ -22,7 +22,7 @@ Converts a KV pair that can be passed across threads into the data that cannot b
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| valuesBucket | ValuesBucket | Yes | Data that can be passed across threads. |
+| valuesBucket | [ValuesBucket](arkts-arkdata-sendablerelationalstore-valuesbucket-t.md) | Yes | Data that can be passed across threads. |
 
 **Return value:**
 

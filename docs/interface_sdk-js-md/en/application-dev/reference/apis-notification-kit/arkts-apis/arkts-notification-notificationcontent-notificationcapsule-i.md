@@ -32,7 +32,7 @@ icon?: image.PixelMap
 
 Capsule icon. The total bytes of the icon pixel does not exceed 192 KB (the total bytes of the icon pixel is obtained through getPixelBytesNumber). It is recommended that the icon pixel dimensions be 128 x 128.
 
-**Type:** image.PixelMap
+**Type:** [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)
 
 **Since:** 11
 

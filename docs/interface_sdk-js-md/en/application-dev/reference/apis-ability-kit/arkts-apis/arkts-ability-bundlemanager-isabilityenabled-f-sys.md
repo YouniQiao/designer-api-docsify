@@ -24,7 +24,7 @@ Checks whether an ability of an application or an application clone is enabled. 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| info | AbilityInfo | Yes | Information about the target ability. |
+| info | [AbilityInfo](arkts-ability-bundlemanager-abilityinfo-t.md) | Yes | Information about the target ability. |
 | appIndex | number | Yes | Index of the application clone.The value **0** means to obtain the enabled status of the ability of the main application. A value greater than 0 means to obtain the enabled status of the ability of the application clone. |
 
 **Return value:**
@@ -96,7 +96,7 @@ Checks whether an ability is enabled. This API uses an asynchronous callback to 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| info | AbilityInfo | Yes | Information about the target ability. |
+| info | [AbilityInfo](arkts-ability-bundlemanager-abilityinfo-t.md) | Yes | Information about the target ability. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md) used to return the result. **true** if enabled, **false** otherwise. |
 
 **Error codes:**
@@ -163,7 +163,7 @@ Checks whether an ability is enabled. This API uses a promise to return the resu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| info | AbilityInfo | Yes | Information about the target ability. |
+| info | [AbilityInfo](arkts-ability-bundlemanager-abilityinfo-t.md) | Yes | Information about the target ability. |
 
 **Return value:**
 

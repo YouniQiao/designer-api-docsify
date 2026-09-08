@@ -48,7 +48,7 @@ updateConfiguration(config: DragSpringLoadingConfiguration): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| config | DragSpringLoadingConfiguration | 是 | 悬停检测配置。 |
+| config | [DragSpringLoadingConfiguration](arkts-arkui-dragcontroller-dragspringloadingconfiguration-i.md) | 是 | 悬停检测配置。 |
 
 ## currentConfig
 
@@ -58,7 +58,7 @@ currentConfig?: DragSpringLoadingConfiguration
 
 当前回调中的配置信息，当悬停检测状态为CANCEL时缺失，为undefined时取[DragSpringLoadingConfiguration](arkts-arkui-dragcontroller-dragspringloadingconfiguration-i.md)默认值。
 
-**类型：** DragSpringLoadingConfiguration
+**类型：** [DragSpringLoadingConfiguration](arkts-arkui-dragcontroller-dragspringloadingconfiguration-i.md)
 
 **起始版本：** 20
 

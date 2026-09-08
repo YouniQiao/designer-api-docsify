@@ -48,7 +48,7 @@ errInfo?: huksExternalCrypto.HuksExternalErrorInfo
 
 返回详细错误信息
 
-**类型：** huksExternalCrypto.HuksExternalErrorInfo
+**类型：** [huksExternalCrypto.HuksExternalErrorInfo](arkts-universalkeystore-huksexternalcrypto-huksexternalerrorinfo-i.md)
 
 **起始版本：** 26.0.0
 
@@ -92,7 +92,7 @@ property?: Array<huksExternalCrypto.HuksExternalCryptoParam>
 
 返回的属性信息。
 
-**类型：** Array&lt;huksExternalCrypto.HuksExternalCryptoParam&gt;
+**类型：** Array&lt;[huksExternalCrypto.HuksExternalCryptoParam](arkts-universalkeystore-huksexternalcrypto-huksexternalcryptoparam-i.md)&gt;
 
 **起始版本：** 22
 

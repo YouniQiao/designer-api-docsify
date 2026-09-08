@@ -97,27 +97,3 @@ Stop all test cases.
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **Test API:** This API is used only in automated test scripts.
-
-**Examples**
-
-```TypeScript
-import { TestRunner } from '@kit.TestKit';
-
-// Implement a custom test runner.
-export default class UserTestRunner implements TestRunner {
-  // Prepare the unit test environment.
-  onPrepare() {
-    console.info('Trigger onPrepare');
-  }
-
-  // Run test cases.
-  onRun() {
-    console.info('Trigger onRun');
-  }
-
-  // Callback processing when the test is complete
-  onStop() {
-    console.info('Trigger onStop');
-  }
-}
-```

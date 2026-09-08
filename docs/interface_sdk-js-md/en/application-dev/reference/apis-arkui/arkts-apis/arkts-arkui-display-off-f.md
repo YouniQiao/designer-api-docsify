@@ -130,7 +130,7 @@ Unsubscribes from fold status change events of the foldable device.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'foldStatusChange' | Yes | Event type. The event **'foldStatusChange'** is triggered when the fold status of the device changes. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;FoldStatus&gt; | No | Callback used to return the fold status. If this parameter is not specified, all subscriptions to the specified event are canceled.<br>**Since:** 20 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[FoldStatus](arkts-arkui-display-foldstatus-e.md)&gt; | No | Callback used to return the fold status. If this parameter is not specified, all subscriptions to the specified event are canceled.<br>**Since:** 20 |
 
 **Error codes:**
 

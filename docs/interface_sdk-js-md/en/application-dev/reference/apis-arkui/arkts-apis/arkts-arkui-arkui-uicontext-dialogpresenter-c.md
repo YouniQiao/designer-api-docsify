@@ -70,7 +70,7 @@ Presents a fixed-style dialog box.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | dialog.DialogStyleOptions | No | Dialog options. |
+| options | [dialog.DialogStyleOptions](arkts-arkui-dialog-dialogstyleoptions-i.md) | No | Dialog options. |
 
 **Return value:**
 
@@ -112,7 +112,7 @@ isModal = true and showInSubWindow = true cannot be used at the same time.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | content | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) \| [CustomBuilderWithId](arkts-arkui-custombuilderwithid-t.md) \| [ComponentContent](arkts-arkui-componentcontent-c.md)&lt;Object&gt; | Yes | Custom dialog content. |
-| options | dialog.DialogCustomOptions | No | Custom dialog options. |
+| options | [dialog.DialogCustomOptions](arkts-arkui-dialog-dialogcustomoptions-i.md) | No | Custom dialog options. |
 
 **Return value:**
 
@@ -150,7 +150,7 @@ Updates a presented custom dialog box.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | content | [ComponentContent](arkts-arkui-componentcontent-c.md)&lt;Object&gt; | Yes | The content used to identify the dialog. |
-| options | dialog.DialogBaseOptions | No | Options to update. |
+| options | [dialog.DialogBaseOptions](arkts-arkui-dialog-dialogbaseoptions-i.md) | No | Options to update. |
 
 **Return value:**
 

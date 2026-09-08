@@ -194,28 +194,6 @@ class Stub extends rpc.RemoteObject {
 }
 ```
 
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-class TestRemoteObject extends rpc.RemoteObject {
-  constructor(descriptor: string) {
-    super(descriptor);
-  }
-  onRemoteMessageRequest(code: number, data: rpc.MessageSequence, reply: rpc.MessageSequence,
-    option: rpc.MessageOption): boolean | Promise<boolean> {
-    // 根据业务实际逻辑，进行相应处理
-    return true;
-  }
-}
-try {
-  let testRemoteObject = new TestRemoteObject("testObject");
-  hilog.info(0x0000, 'testTag', 'RpcServer: getCallingPid: ' + testRemoteObject.getCallingPid());
-} catch (error) {
-  hilog.error(0x0000, 'testTag', 'error: ' + error);
-}
-```
-
 ## getCallingTokenId
 
 ```TypeScript
@@ -289,28 +267,6 @@ class Stub extends rpc.RemoteObject {
     }
     return true;
   }
-}
-```
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-class TestRemoteObject extends rpc.RemoteObject {
-  constructor(descriptor: string) {
-    super(descriptor);
-  }
-  onRemoteMessageRequest(code: number, data: rpc.MessageSequence, reply: rpc.MessageSequence,
-    option: rpc.MessageOption): boolean | Promise<boolean> {
-    // 根据业务实际逻辑，进行相应处理
-    return true;
-  }
-}
-try {
-  let testRemoteObject = new TestRemoteObject("testObject");
-  hilog.info(0x0000, 'testTag', 'RpcServer: getCallingUid: ' + testRemoteObject.getCallingUid());
-} catch (error) {
-  hilog.error(0x0000, 'testTag', 'error: ' + error);
 }
 ```
 

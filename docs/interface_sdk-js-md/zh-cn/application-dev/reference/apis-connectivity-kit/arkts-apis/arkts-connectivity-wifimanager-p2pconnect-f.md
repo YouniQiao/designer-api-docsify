@@ -26,7 +26,7 @@ function p2pConnect(config: WifiP2PConfig): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| config | WifiP2PConfig | 是 | 连接配置信息。如果DeviceAddressType未指定值，则DeviceAddressType默认为随机设备地址类型。 |
+| config | [WifiP2PConfig](arkts-connectivity-wifimanager-wifip2pconfig-i.md) | 是 | 连接配置信息。如果DeviceAddressType未指定值，则DeviceAddressType默认为随机设备地址类型。 |
 
 **错误码：**
 

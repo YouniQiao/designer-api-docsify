@@ -54,7 +54,7 @@ movingPhoto: photoAccessHelper.MovingPhoto
 
 moving photo data.
 
-**Type:** photoAccessHelper.MovingPhoto
+**Type:** [photoAccessHelper.MovingPhoto](arkts-medialibrary-photoaccesshelper-movingphoto-i.md)
 
 **Since:** 12
 

@@ -82,19 +82,6 @@ workerInstance.addEventListener("alert", () => {
 workerInstance.dispatchEvent({type: "alert", timeStamp: 0}); // timeStamp暂未支持
 ```
 
-```TypeScript
-// worker.ets
-import { ErrorEvent, MessageEvents, ThreadWorkerGlobalScope, worker } from '@kit.ArkTS';
-
-const workerPort: ThreadWorkerGlobalScope = worker.workerPort;
-
-workerPort.onmessage = (event: MessageEvents) => {
-  workerPort.addEventListener("alert", () => {
-    console.info("alert listener callback");
-  })
-};
-```
-
 ## constructor
 
 ```TypeScript
@@ -133,16 +120,6 @@ import { worker } from '@kit.ArkTS';
 
 // worker文件所在路径："entry/src/main/ets/workers/worker.ets"
 const workerInstance = new worker.ThreadWorker('entry/ets/workers/worker.ets', {name: "WorkerThread"});
-```
-
-此处以在Stage模型的entry模块Index.ets文件中加载Worker线程文件为例，使用Library加载Worker线程文件的场景参考[文件路径注意事项](../../../arkts-utils/worker-introduction.md#文件路径注意事项)。
-
-```TypeScript
-// Index.ets
-import { worker } from '@kit.ArkTS';
-
-// worker文件所在路径："entry/src/main/ets/workers/worker.ets"
-const workerInstance = new worker.Worker('entry/ets/workers/worker.ets', {name: "WorkerThread"});
 ```
 
 ## dispatchEvent
@@ -192,62 +169,6 @@ workerInstance.addEventListener("alert", () => {
 let result: boolean = workerInstance.dispatchEvent({type: "alert", timeStamp: 0}); // timeStamp暂未支持
 
 console.info("dispatchEvent result is: ", result);
-```
-
-```TypeScript
-// worker.ets
-import { ErrorEvent, MessageEvents, ThreadWorkerGlobalScope, worker } from '@kit.ArkTS';
-
-const workerPort: ThreadWorkerGlobalScope = worker.workerPort;
-
-workerPort.onmessage = (event: MessageEvents) => {
-  workerPort.addEventListener("alert", () => {
-    console.info("alert listener callback");
-  });
-
-  workerPort.dispatchEvent({type: "alert", timeStamp: 0}); // timeStamp暂未支持
-};
-```
-
-```TypeScript
-// worker.ets
-import { DedicatedWorkerGlobalScope, ErrorEvent, MessageEvents, worker } from '@kit.ArkTS';
-
-const workerPort: DedicatedWorkerGlobalScope = worker.parentPort;
-
-workerPort.addEventListener("alert_add", ()=>{
-  console.info("alert listener callback");
-})
-
-workerPort.dispatchEvent({type: 'alert_add', timeStamp: 0}); // timeStamp暂未支持
-```
-
-分发事件（dispatchEvent）可与监听接口（addEventListener）搭配使用，示例如下：
-
-```TypeScript
-// Index.ets
-import { worker } from '@kit.ArkTS';
-
-const workerInstance = new worker.Worker("entry/ets/workers/worker.ets");
-workerInstance.postMessage("hello world");
-workerInstance.onmessage = (): void => {
-    console.info("receive data from worker.ets");
-}
-```
-
-```TypeScript
-// worker.ets
-import { DedicatedWorkerGlobalScope, ErrorEvent, MessageEvents, worker } from '@kit.ArkTS';
-
-const workerPort: DedicatedWorkerGlobalScope = worker.parentPort;
-
-workerPort.addEventListener("alert", ()=>{
-  console.info("alert listener callback");
-})
-
-workerPort.onmessage = (event: MessageEvents) => {
-  workerPort.dispatchEvent({type:"alert", timeStamp:0}); // timeStamp暂未支持
-}
 ```
 
 ## off
@@ -626,16 +547,6 @@ struct Index {
 }
 ```
 
-```TypeScript
-// Index.ets
-import { worker } from '@kit.ArkTS';
-
-const workerInstance = new worker.Worker("entry/ets/workers/worker.ets");
-
-let buffer = new ArrayBuffer(8);
-workerInstance.postMessage(buffer, [buffer]);
-```
-
 ## postMessage
 
 ```TypeScript
@@ -677,18 +588,6 @@ let buffer = new ArrayBuffer(8);
 
 // 填入options参数，buffer的所有权会转移到Worker线程，在宿主线程中将不可用
 workerInstance.postMessage(buffer, {transfer: [buffer]});
-```
-
-```TypeScript
-// Index.ets
-import { worker } from '@kit.ArkTS';
-
-const workerInstance = new worker.Worker("entry/ets/workers/worker.ets");
-
-workerInstance.postMessage("hello world");
-
-let buffer = new ArrayBuffer(8);
-workerInstance.postMessage(buffer, [buffer]);
 ```
 
 ## postMessageWithSharedSendable
@@ -759,46 +658,6 @@ const workerPort: ThreadWorkerGlobalScope = worker.workerPort;
 workerPort.onmessage = (e: MessageEvents) => {
   let obj: SendableObject = e.data;
   console.info("sendable obj is: " + obj.value);
-}
-```
-
-```TypeScript
-// worker文件路径为：entry/src/main/ets/workers/Worker.ets
-// Worker.ets
-// 新建SendableObject实例并通过Worker线程传递至宿主线程
-
-import { SendableObject } from '../pages/sendable';
-import { worker, ThreadWorkerGlobalScope, MessageEvents, ErrorEvent } from '@kit.ArkTS';
-
-const workerPort: ThreadWorkerGlobalScope = worker.workerPort;
-workerPort.onmessage = (e: MessageEvents) => {
-  let object: SendableObject = new SendableObject();
-  workerPort.postMessageWithSharedSendable(object);
-}
-```
-
-```TypeScript
-// sendable.ets
-// 定义SendableObject
-
-@Sendable
-export class SendableObject {
-  a:number = 45;
-}
-```
-
-```TypeScript
-// Index.ets
-// 接收Worker线程传递至宿主线程的数据并访问其属性
-
-import { worker, MessageEvents } from '@kit.ArkTS';
-import { SendableObject } from './sendable';
-
-const workerInstance = new worker.ThreadWorker("entry/ets/workers/Worker.ets");
-workerInstance.postMessage(1);
-workerInstance.onmessage = (e: MessageEvents) => {
-  let obj: SendableObject = e.data;
-  console.info("sendable index obj is: " + obj.a);
 }
 ```
 
@@ -909,34 +768,6 @@ workerInstance.addEventListener("alert", () => {
 workerInstance.removeAllListener();
 ```
 
-```TypeScript
-// worker.ets
-import { ErrorEvent, MessageEvents, ThreadWorkerGlobalScope, worker } from '@kit.ArkTS';
-
-const workerPort: ThreadWorkerGlobalScope = worker.workerPort;
-
-workerPort.onmessage = (event: MessageEvents) => {
-  workerPort.addEventListener("alert", () => {
-    console.info("alert listener callback");
-  });
-
-  workerPort.removeAllListener();
-};
-```
-
-```TypeScript
-// worker.ets
-import { DedicatedWorkerGlobalScope, ErrorEvent, MessageEvents, worker } from '@kit.ArkTS';
-
-const workerPort: DedicatedWorkerGlobalScope = worker.parentPort;
-
-workerPort.addEventListener("alert_add", ()=>{
-  console.info("alert listener callback");
-})
-
-workerPort.removeAllListener();
-```
-
 ## removeEventListener
 
 ```TypeScript
@@ -981,21 +812,6 @@ workerInstance.dispatchEvent({type: "alert", timeStamp: 0}); // timeStamp暂未�
 workerInstance.removeEventListener("alert");
 ```
 
-```TypeScript
-// worker.ets
-import { ErrorEvent, MessageEvents, ThreadWorkerGlobalScope, worker } from '@kit.ArkTS';
-
-const workerPort: ThreadWorkerGlobalScope = worker.workerPort;
-
-workerPort.onmessage = (event: MessageEvents) => {
-  workerPort.addEventListener("alert", () => {
-    console.info("alert listener callback");
-  });
-
-  workerPort.removeEventListener("alert");
-};
-```
-
 ## terminate
 
 ```TypeScript
@@ -1023,14 +839,6 @@ terminate(): void
 import { worker } from '@kit.ArkTS';
 
 const workerInstance = new worker.ThreadWorker("entry/ets/workers/worker.ets");
-workerInstance.terminate();
-```
-
-```TypeScript
-// Index.ets
-import { worker } from '@kit.ArkTS';
-
-const workerInstance = new worker.Worker("entry/ets/workers/worker.ets");
 workerInstance.terminate();
 ```
 

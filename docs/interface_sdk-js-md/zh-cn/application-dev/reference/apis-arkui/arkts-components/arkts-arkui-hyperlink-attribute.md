@@ -33,4 +33,4 @@ color(value: Color | number | string | Resource)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | Color \| number \| string \| Resource | 是 | 超链接文本的颜色。<!--RP1-->默认值：'#ff007dff'，显示为蓝色。<!--RP1End--> |
+| value | [Color](../arkts-apis/arkts-arkui-color-e.md) \| number \| string \| [Resource](../arkts-apis/arkts-arkui-resource-t.md) | 是 | 超链接文本的颜色。<!--RP1-->默认值：'#ff007dff'，显示为蓝色。<!--RP1End--> |

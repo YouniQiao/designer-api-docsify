@@ -36,7 +36,7 @@ function getRemoteDeviceClass(deviceId: string): DeviceClass
 
 | 类型 | 说明 |
 | --- | --- |
-| DeviceClass | 远程设备的类别。 |
+| [DeviceClass](arkts-connectivity-bluetooth-deviceclass-i.md) | 远程设备的类别。 |
 
 **示例**
 

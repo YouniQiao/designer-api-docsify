@@ -33,10 +33,3 @@ declare function createStreamSync(path: string, mode: string): Stream
 | 类型 | 说明 |
 | --- | --- |
 | [Stream](arkts-corefile-fileio-stream-depr-i.md) | 返回文件流的结果。 |
-
-**示例**
-
-```TypeScript
-let filePath = pathDir + "/test.txt";
-let ss = fileio.createStreamSync(filePath, "r+");
-```

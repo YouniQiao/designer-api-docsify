@@ -48,7 +48,7 @@ readonly capitalizeMode?: CapitalizeMode
 
 Whether to capitalize the first letter in the edit box. If it is not set or is set to an invalid value, the first letter is not capitalized by default.
 
-**Type:** CapitalizeMode
+**Type:** [CapitalizeMode](arkts-ime-inputmethodengine-capitalizemode-e.md)
 
 **Since:** 20
 
@@ -134,7 +134,7 @@ readonly immersiveMode?: ImmersiveMode
 
 Immersive mode of the input method.
 
-**Type:** ImmersiveMode
+**Type:** [ImmersiveMode](arkts-ime-inputmethodengine-immersivemode-e.md)
 
 **Since:** 15
 

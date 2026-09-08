@@ -192,7 +192,7 @@ onTouchEvent?(event: TouchEvent): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | TouchEvent | 是 | 触摸事件，包含触摸点的坐标、触摸动作类型等信息，具体结构详见TouchEvent。 |
+| event | [TouchEvent](../arkts-components/arkts-arkui-touchevent-i.md) | 是 | 触摸事件，包含触摸点的坐标、触摸动作类型等信息，具体结构详见TouchEvent。 |
 
 ## onUnbind
 

@@ -30,7 +30,7 @@ function getNdef(tagInfo: TagInfo): NdefTag
 
 | 类型 | 说明 |
 | --- | --- |
-| NdefTag | NDEF类型Tag对象，通过该对象访问NDEF类型的相关接口。 |
+| [NdefTag](arkts-connectivity-tag-ndeftag-t.md) | NDEF类型Tag对象，通过该对象访问NDEF类型的相关接口。 |
 
 **错误码：**
 

@@ -180,7 +180,7 @@ friction(value: number | Resource)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number \| Resource | 是 | 摩擦系数。默认值：非可穿戴设备为0.6，可穿戴设备为0.9。从API version 11开始，非可穿戴设备默认值为0.7。从API version 12开始，非可穿戴设备默认值为0.75。取值范围：(0, +∞)，设置为小于等于0的值时，按默认值处理。 |
+| value | number \| [Resource](../arkts-apis/arkts-arkui-resource-t.md) | 是 | 摩擦系数。默认值：非可穿戴设备为0.6，可穿戴设备为0.9。从API version 11开始，非可穿戴设备默认值为0.7。从API version 12开始，非可穿戴设备默认值为0.75。取值范围：(0, +∞)，设置为小于等于0的值时，按默认值处理。 |
 
 ## itemConstraintSize
 

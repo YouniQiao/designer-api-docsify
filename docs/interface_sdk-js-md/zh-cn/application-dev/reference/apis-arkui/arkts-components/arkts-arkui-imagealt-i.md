@@ -19,7 +19,7 @@ error?: ResourceStr | PixelMap
 
 加载失败的占位图。
 
-**类型：** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| PixelMap
+**类型：** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| [PixelMap](arkts-arkui-pixelmap-t.md)
 
 **起始版本：** 22
 
@@ -39,7 +39,7 @@ placeholder?: ResourceStr | PixelMap
 
 加载过程中的占位图。
 
-**类型：** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| PixelMap
+**类型：** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| [PixelMap](arkts-arkui-pixelmap-t.md)
 
 **起始版本：** 22
 

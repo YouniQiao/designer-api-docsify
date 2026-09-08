@@ -76,32 +76,6 @@ async function example(phAccessHelper: sendablePhotoAccessHelper.PhotoAccessHelp
 }
 ```
 
-phAccessHelper的创建请参考sendablePhotoAccessHelper.getPhotoAccessHelper的示例使用。
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { photoAccessHelper } from '@kit.MediaLibraryKit';
-
-async function example(phAccessHelper: sendablePhotoAccessHelper.PhotoAccessHelper) {
-  console.info('albumCommitModifyDemo');
-  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-  let albumFetchOptions: photoAccessHelper.FetchOptions = {
-    fetchColumns: [],
-    predicates: predicates
-  };
-  let albumList: sendablePhotoAccessHelper.FetchResult<sendablePhotoAccessHelper.Album> = await phAccessHelper.getAlbums(sendablePhotoAccessHelper.AlbumType.USER, sendablePhotoAccessHelper.AlbumSubtype.USER_GENERIC, albumFetchOptions);
-  let album: sendablePhotoAccessHelper.Album = await albumList.getFirstObject();
- // 修改相册名称并将修改提交到数据库进行持久化保存。
-  album.albumName = 'hello';
-  album.commitModify().then(() => {
-    console.info('commitModify successfully');
-  }).catch((err: BusinessError) => {
-    console.error(`commitModify failed with error: ${err.code}, ${err.message}`);
-  });
-}
-```
-
 ## convertToPhotoAsset
 
 ```TypeScript
@@ -118,7 +92,7 @@ convertToPhotoAsset(): photoAccessHelper.PhotoAsset
 
 | 类型 | 说明 |
 | --- | --- |
-| photoAccessHelper.PhotoAsset | 返回非Sendable类型的[PhotoAsset]{ |
+| [photoAccessHelper.PhotoAsset](arkts-medialibrary-photoaccesshelper-photoasset-i.md) | 返回非Sendable类型的[PhotoAsset]{ |
 
 **错误码：**
 
@@ -175,7 +149,7 @@ get(member: string): photoAccessHelper.MemberType
 
 | 类型 | 说明 |
 | --- | --- |
-| photoAccessHelper.MemberType | 获取PhotoAsset成员参数的值。 |
+| [photoAccessHelper.MemberType](arkts-medialibrary-photoaccesshelper-membertype-t.md) | 获取PhotoAsset成员参数的值。 |
 
 **错误码：**
 
@@ -232,13 +206,13 @@ getThumbnail(size?: image.Size): Promise<image.PixelMap>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| size | image.Size | 否 | 缩略图尺寸。 |
+| size | [image.Size](../../apis-image-kit/arkts-apis/arkts-image-image-size-i.md) | 否 | 缩略图尺寸。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;image.PixelMap&gt; | Promise对象，返回缩略图的PixelMap。 |
+| Promise&lt;[image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)&gt; | Promise对象，返回缩略图的PixelMap。 |
 
 **错误码：**
 
@@ -354,7 +328,7 @@ readonly photoType: PhotoType
 
 媒体文件类型。
 
-**类型：** PhotoType
+**类型：** [PhotoType](arkts-medialibrary-sendablephotoaccesshelper-phototype-e.md)
 
 **起始版本：** 12
 

@@ -36,7 +36,7 @@ generateSecret(priKey: PriKey, pubKey: PubKey, callback: AsyncCallback<DataBlob>
 | --- | --- | --- | --- |
 | priKey | [PriKey](arkts-cryptoarchitecture-cryptoframework-prikey-i.md) | 是 | 设置密钥协商的私钥输入。 |
 | pubKey | [PubKey](arkts-cryptoarchitecture-cryptoframework-pubkey-i.md) | 是 | 设置密钥协商的公钥输入。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DataBlob&gt; | 是 | 回调函数。当密钥协商成功时，err为undefined，data为协商的共享密钥；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md)&gt; | 是 | 回调函数。当密钥协商成功时，err为undefined，data为协商的共享密钥；否则为错误对象。 |
 
 **错误码：**
 
@@ -46,96 +46,6 @@ generateSecret(priKey: PriKey, pubKey: PubKey, callback: AsyncCallback<DataBlob>
 | [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | Memory operation failed. |
 | [17620002](../errorcode-crypto-framework.md#17620002-获取native对象失败或参数转换失败) | Failed to obtain the native object or convert parameters. |
 | [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | Crypto operation error. |
-
-**示例**
-
-PBKDF2算法
-
-```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
-
-let spec: cryptoFramework.PBKDF2Spec = {
-  algName: 'PBKDF2',
-  password: '123456',
-  salt: new Uint8Array(16),
-  iterations: 10000,
-  keySize: 32
-};
-let kdf = cryptoFramework.createKdf('PBKDF2|SHA256');
-kdf.generateSecret(spec, (err, secret) => {
-  if (err) {
-    console.error(`key derivation failed, errCode: ${err.code}, errMsg: ${err.message}`);
-    return;
-  }
-  console.info('key derivation output = ' + secret.data);
-});
-```
-
-HKDF算法
-
-```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
-
-let spec: cryptoFramework.HKDFSpec = {
-  algName: 'HKDF',
-  key: '123456',
-  salt: new Uint8Array(16),
-  info: new Uint8Array(16),
-  keySize: 32
-};
-let kdf = cryptoFramework.createKdf('HKDF|SHA256|EXTRACT_AND_EXPAND');
-kdf.generateSecret(spec, (err, secret) => {
-  if (err) {
-    console.error(`key derivation failed, errCode: ${err.code}, errMsg: ${err.message}`);
-    return;
-  }
-  console.info('key derivation output = ' + secret.data);
-});
-```
-
-PBKDF2算法
-
-```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let spec: cryptoFramework.PBKDF2Spec = {
-  algName: 'PBKDF2',
-  password: '123456',
-  salt: new Uint8Array(16),
-  iterations: 10000,
-  keySize: 32
-};
-let kdf = cryptoFramework.createKdf('PBKDF2|SHA256');
-let kdfPromise = kdf.generateSecret(spec);
-kdfPromise.then(secret => {
-  console.info('key derivation output = ' + secret.data);
-}).catch((error: BusinessError) => {
-  console.error(`key derivation failed: errCode: ${error.code}, errMsg: ${error.message}`);
-});
-```
-
-HKDF算法
-
-```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let spec: cryptoFramework.HKDFSpec = {
-  algName: 'HKDF',
-  key: '123456',
-  salt: new Uint8Array(16),
-  info: new Uint8Array(16),
-  keySize: 32
-};
-let kdf = cryptoFramework.createKdf('HKDF|SHA256|EXTRACT_AND_EXPAND');
-let kdfPromise = kdf.generateSecret(spec);
-kdfPromise.then(secret => {
-  console.info('key derivation output = ' + secret.data);
-}).catch((error: BusinessError) => {
-  console.error(`key derivation failed: errCode: ${error.code}, errMsg: ${error.message}`);
-});
-```
 
 ## generateSecret
 
@@ -164,7 +74,7 @@ generateSecret(priKey: PriKey, pubKey: PubKey): Promise<DataBlob>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;DataBlob&gt; | Promise对象，返回密钥协商的共享密钥。 |
+| Promise&lt;[DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md)&gt; | Promise对象，返回密钥协商的共享密钥。 |
 
 **错误码：**
 
@@ -174,10 +84,6 @@ generateSecret(priKey: PriKey, pubKey: PubKey): Promise<DataBlob>
 | [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | Memory operation failed. |
 | [17620002](../errorcode-crypto-framework.md#17620002-获取native对象失败或参数转换失败) | Failed to obtain the native object or convert parameters. |
 | [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | Crypto operation error. |
-
-**示例**
-
-参见 [generateSecret](#generatesecret)
 
 ## generateSecretSync
 
@@ -206,7 +112,7 @@ generateSecretSync(priKey: PriKey, pubKey: PubKey): DataBlob
 
 | 类型 | 说明 |
 | --- | --- |
-| DataBlob | 共享密钥。 |
+| [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | 共享密钥。 |
 
 **错误码：**
 

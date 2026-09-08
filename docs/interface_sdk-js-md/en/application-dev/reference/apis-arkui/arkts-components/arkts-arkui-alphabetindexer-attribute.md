@@ -50,9 +50,9 @@ autoCollapse(value: boolean)
 
 Sets whether to enable the adaptive collapse behavior for the indexer.
 
-When the first index item is **"#"**: Remaining items ≤ 9: Full display mode; 9 &lt; Remaining items ≤ 13: Adapts between full display and short collapse modes based on the indexer height; remaining items &gt; 13: Adapts between short and number collapse modes based on the indexer height.
+When the first index item is **"#"**: Remaining items ≤ 9: Full display mode; 9 &lt; Remaining items ≤ 13: Adapts between full display and short collapse modes based on the indexer height; remaining items &gt; 13: Adapts between short and long collapse modes based on the indexer height.
 
-When the first index item is not **"#"**: All items ≤ 9: Full display mode; 9 &lt; All items ≤ 13: Adapts between full display and short collapse modes based on the indexer height; all items &gt; 13: Adapts between short and number collapse modes based on the indexer height.
+When the first index item is not **"#"**: All items ≤ 9: Full display mode; 9 &lt; All items ≤ 13: Adapts between full display and short collapse modes based on the indexer height; all items &gt; 13: Adapts between short and long collapse modes based on the indexer height.
 
 > **NOTE：**
 
@@ -308,7 +308,7 @@ Sets the background blur style of the pop-up window. In versions earlier than AP
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | BlurStyle | Yes | Background blur style of the pop-up window.The background blur effect can affect [popupBackground](#popupbackground). You can disable the effect by setting it to **NONE**. |
+| value | [BlurStyle](arkts-arkui-blurstyle-e.md) | Yes | Background blur style of the pop-up window.The background blur effect can affect [popupBackground](#popupbackground). You can disable the effect by setting it to **NONE**. |
 
 ## popupColor
 

@@ -22,7 +22,7 @@ error: ErrorType
 
 The error type of upload.
 
-**Type:** ErrorType
+**Type:** [ErrorType](arkts-corefile-cloudsync-errortype-e.md)
 
 **Since:** 26.0.0
 

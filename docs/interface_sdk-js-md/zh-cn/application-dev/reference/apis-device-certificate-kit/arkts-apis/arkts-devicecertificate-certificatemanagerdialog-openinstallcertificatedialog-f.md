@@ -26,7 +26,7 @@ function openInstallCertificateDialog(context: common.Context, certType: Certifi
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | common.Context | 是 | 表示应用的上下文信息。 |
+| context | [common.Context](../../apis-ability-kit/arkts-apis/arkts-ability-common-context-t.md) | 是 | 表示应用的上下文信息。 |
 | certType | [CertificateType](arkts-devicecertificate-certificatemanagerdialog-certificatetype-e.md) | 是 | 表示安装证书类型，目前仅支持CA_CERT、CREDENTIAL_USER、CREDENTIAL_SYSTEM。 |
 | certScope | [CertificateScope](arkts-devicecertificate-certificatemanagerdialog-certificatescope-e.md) | 是 | 表示安装证书的使用范围，目前仅支持CURRENT_USER、NOT_SPECIFIED。 |
 | cert | Uint8Array | 是 | 表示证书数据，大小不超过8KB。当certType为CA_CERT，应为PEM或DER编码格式的证书数据。当certType为CREDENTIAL_USER或CREDENTIAL_SYSTEM，应为P12编码格式的证书凭据数据。 |

@@ -377,6 +377,7 @@ struct ActionSheetExample {
 ```
 
 该示例为弹窗配置生命周期回调。
+从API version 19开始，在ActionSheetOptions中新增了onDidAppear、onDidDisappear、onWillAppear和onWillDisappear属性。
 
 ```TypeScript
 // xxx.ets
@@ -449,6 +450,7 @@ struct Example1 {
 ```
 
 该示例通过配置backgroundBlurStyleOptions，实现自定义背景模糊效果。
+从API version 19开始，在ActionSheetOptions中新增了backgroundBlurStyleOptions属性。
 
 ```TypeScript
 @Entry
@@ -503,6 +505,7 @@ struct ActionSheetExample {
 ```
 
 该示例通过配置backgroundEffect，实现自定义背景效果。
+从API version 19开始，在ActionSheetOptions中新增了backgroundEffect属性。
 
 ```TypeScript
 @Entry
@@ -558,6 +561,8 @@ struct ActionSheetExample {
 ```
 
 该示例通过ActionSheetOptions中的systemMaterial属性设置组件的系统材质，实现沉浸光感效果。
+组件沉浸光感效果会根据设备算力与用户在系统中设置的沉浸光感效果自适应调整，开发者无需额外适配。
+从API版本26.0.0开始，在ActionSheetOptions中新增了systemMaterial属性。
 
 ```TypeScript
 import { uiMaterial } from '@kit.ArkUI';

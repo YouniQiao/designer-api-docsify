@@ -2,7 +2,7 @@
 
 Enumeration of button type.
 
-@enum { number }
+@enum { int }
 
 **Since:** 23
 

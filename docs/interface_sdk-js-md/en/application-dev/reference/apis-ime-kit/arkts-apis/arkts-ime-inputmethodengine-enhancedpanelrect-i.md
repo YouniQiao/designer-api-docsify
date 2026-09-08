@@ -58,7 +58,7 @@ Region where the panel receives input events in landscape mode.
 - The array size is limited to [1, 4]. The default value is the panel size in landscape mode.   
 - The input hot zone is relative to the left vertex of the input method panel window.
 
-**Type:** Array&lt;window.Rect&gt;
+**Type:** Array&lt;[window.Rect](../../apis-arkui/arkts-apis/arkts-arkui-window-rect-i.md)&gt;
 
 **Since:** 15
 
@@ -73,7 +73,7 @@ landscapeRect?: window.Rect
 Size of the input method panel window in landscape mode.   
 - This attribute is mandatory when **fullScreenMode** is not set or is set to **false**.
 
-**Type:** window.Rect
+**Type:** [window.Rect](../../apis-arkui/arkts-apis/arkts-arkui-window-rect-i.md)
 
 **Since:** 15
 
@@ -107,7 +107,7 @@ Region where the panel receives input events in portrait mode.
 - The array size is limited to [1, 4]. The default value is the panel size in portrait mode.   
 - The input hot zone is relative to the left vertex of the input method panel window.
 
-**Type:** Array&lt;window.Rect&gt;
+**Type:** Array&lt;[window.Rect](../../apis-arkui/arkts-apis/arkts-arkui-window-rect-i.md)&gt;
 
 **Since:** 15
 
@@ -122,7 +122,7 @@ portraitRect?: window.Rect
 Size of the input method panel window in portrait mode.   
 - This attribute is mandatory when **fullScreenMode** is not set or is set to **false**.
 
-**Type:** window.Rect
+**Type:** [window.Rect](../../apis-arkui/arkts-apis/arkts-arkui-window-rect-i.md)
 
 **Since:** 15
 

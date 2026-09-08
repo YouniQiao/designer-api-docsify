@@ -30,22 +30,7 @@ Obtains the widget information provided by a given application on the device. Th
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name of the application. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;formInfo.FormInfo&gt;&gt; | Yes | Callback used to return the result. If the widget information is obtained, **error** is undefined and **data** is the information obtained; otherwise, **error** is an error object. |
-
-**Examples**
-
-```TypeScript
-import formInfo from '@ohos.app.form.formInfo';
-import Base from '@ohos.base';
-
-formHost.getFormsInfo('com.example.ohos.formjsdemo', (error: Base.BusinessError, data: formInfo.FormInfo[]) => {
-  if (error.code) {
-    console.error(`formHost getFormsInfo, error: ${JSON.stringify(error)}`);
-  } else {
-    console.info(`formHost getFormsInfo, data: ${JSON.stringify(data)}`);
-  }
-});
-```
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[formInfo.FormInfo](arkts-form-forminfo-forminfo-i.md)&gt;&gt; | Yes | Callback used to return the result. If the widget information is obtained, **error** is undefined and **data** is the information obtained; otherwise, **error** is an error object. |
 
 
 ## getFormsInfo
@@ -78,22 +63,7 @@ Obtains the widget information provided by a given application on the device. Th
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name of the application. |
 | moduleName | string | Yes | Module name. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;formInfo.FormInfo&gt;&gt; | Yes | Callback used to return the result. If the widget information is obtained, **error** is undefined and **data** is the information obtained; otherwise, **error** is an error object. |
-
-**Examples**
-
-```TypeScript
-import formInfo from '@ohos.app.form.formInfo';
-import Base from '@ohos.base';
-
-formHost.getFormsInfo('com.example.ohos.formjsdemo', 'entry', (error: Base.BusinessError, data: formInfo.FormInfo[]) => {
-  if (error.code) {
-    console.error(`formHost getFormsInfo, error: ${JSON.stringify(error)}`);
-  } else {
-    console.info(`formHost getFormsInfo, data: ${JSON.stringify(data)}`);
-  }
-});
-```
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[formInfo.FormInfo](arkts-form-forminfo-forminfo-i.md)&gt;&gt; | Yes | Callback used to return the result. If the widget information is obtained, **error** is undefined and **data** is the information obtained; otherwise, **error** is an error object. |
 
 
 ## getFormsInfo
@@ -127,17 +97,4 @@ Obtains the widget information provided by a given application on the device. Th
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;formInfo.FormInfo&gt;&gt; | Promise used to return the information obtained. |
-
-**Examples**
-
-```TypeScript
-import formInfo from '@ohos.app.form.formInfo';
-import Base from '@ohos.base';
-
-formHost.getFormsInfo('com.example.ohos.formjsdemo', 'entry').then((data: formInfo.FormInfo[]) => {
-  console.info(`formHost getFormsInfo, data: ${JSON.stringify(data)}`);
-}).catch((error: Base.BusinessError) => {
-  console.error(`formHost getFormsInfo, error: ${JSON.stringify(error)}`);
-});
-```
+| Promise&lt;Array&lt;[formInfo.FormInfo](arkts-form-forminfo-forminfo-i.md)&gt;&gt; | Promise used to return the information obtained. |

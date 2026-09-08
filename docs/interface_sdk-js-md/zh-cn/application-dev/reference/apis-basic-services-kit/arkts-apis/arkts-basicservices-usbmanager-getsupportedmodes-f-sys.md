@@ -34,17 +34,10 @@ function getSupportedModes(portId: number): PortModeType
 
 | 类型 | 说明 |
 | --- | --- |
-| PortModeType | 支持的模式列表的组合掩码。 |
+| [PortModeType](arkts-basicservices-usbmanager-portmodetype-e-sys.md) | 支持的模式列表的组合掩码。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:  1.Mandatory parameters are left unspecified.  2.Incorrect parameter types. |
-
-**示例**
-
-```TypeScript
-// 获取端口ID为0的端口支持的模式
-let ret: usbManager.PortModeType = usbManager.getSupportedModes(0);
-```

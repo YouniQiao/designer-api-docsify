@@ -31,8 +31,8 @@ function create(context: BaseContext, config: Config, callback: AsyncCallback<Ta
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | context | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | 是 | 基于应用程序的上下文。 |
-| config | Config | 是 | 上传/下载任务的配置信息。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Task&gt; | 是 | 回调函数。当创建上传或下载任务成功，err为undefined，data为获取到的Task对象；否则为错误对象。 |
+| config | [Config](arkts-basicservices-agent-config-i.md) | 是 | 上传/下载任务的配置信息。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[Task](arkts-basicservices-agent-task-i.md)&gt; | 是 | 回调函数。当创建上传或下载任务成功，err为undefined，data为获取到的Task对象；否则为错误对象。 |
 
 **错误码：**
 
@@ -71,13 +71,13 @@ function create(context: BaseContext, config: Config): Promise<Task>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | context | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | 是 | 基于应用程序的上下文。 |
-| config | Config | 是 | 上传/下载任务的配置信息。 |
+| config | [Config](arkts-basicservices-agent-config-i.md) | 是 | 上传/下载任务的配置信息。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Task&gt; | Promise对象。返回任务配置信息的Promise对象。 |
+| Promise&lt;[Task](arkts-basicservices-agent-task-i.md)&gt; | Promise对象。返回任务配置信息的Promise对象。 |
 
 **错误码：**
 

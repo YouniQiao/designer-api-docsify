@@ -32,7 +32,7 @@ function rotateBySpeed(mechId: number, speed: RotationSpeed, duration: number): 
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Result&gt; | 返回执行结果 |
+| Promise&lt;[Result](arkts-mechanic-mechanicmanager-result-e-sys.md)&gt; | 返回执行结果 |
 
 **错误码：**
 

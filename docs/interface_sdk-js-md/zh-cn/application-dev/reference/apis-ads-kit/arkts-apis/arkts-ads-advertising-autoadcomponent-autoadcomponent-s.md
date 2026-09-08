@@ -36,7 +36,7 @@ adOptions: advertising.AdOptions
 
 广告配置参数。
 
-**类型：** advertising.AdOptions
+**类型：** [advertising.AdOptions](arkts-ads-advertising-adoptions-i.md)
 
 **起始版本：** 11
 
@@ -52,7 +52,7 @@ adParam: advertising.AdRequestParams
 
 广告请求参数。
 
-**类型：** advertising.AdRequestParams
+**类型：** [advertising.AdRequestParams](arkts-ads-advertising-adrequestparams-i.md)
 
 **起始版本：** 11
 
@@ -68,7 +68,7 @@ displayOptions: advertising.AdDisplayOptions
 
 广告展示参数。
 
-**类型：** advertising.AdDisplayOptions
+**类型：** [advertising.AdDisplayOptions](arkts-ads-advertising-addisplayoptions-i.md)
 
 **起始版本：** 11
 
@@ -84,7 +84,7 @@ interactionListener: advertising.AdInteractionListener
 
 广告状态变化回调。
 
-**类型：** advertising.AdInteractionListener
+**类型：** [advertising.AdInteractionListener](arkts-ads-advertising-adinteractionlistener-i.md)
 
 **起始版本：** 11
 

@@ -60,7 +60,7 @@ direction: USBRequestDirection
 
 端点的方向。
 
-**类型：** USBRequestDirection
+**类型：** [USBRequestDirection](arkts-basicservices-usb-usbrequestdirection-e.md)
 
 **起始版本：** 8
 

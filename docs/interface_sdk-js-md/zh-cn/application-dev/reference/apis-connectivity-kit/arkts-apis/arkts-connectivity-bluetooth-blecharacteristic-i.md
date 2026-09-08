@@ -62,7 +62,7 @@ descriptors: Array<BLEDescriptor>
 
 特定特征的描述符列表。
 
-**类型：** Array&lt;BLEDescriptor&gt;
+**类型：** Array&lt;[BLEDescriptor](arkts-connectivity-bluetooth-bledescriptor-i.md)&gt;
 
 **起始版本：** 7
 

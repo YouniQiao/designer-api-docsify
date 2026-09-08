@@ -46,7 +46,7 @@ predicates?: dataAbility.DataAbilityPredicates
 
 Indicates the filter criteria to set. If this parameter is null, all data records will be operated by default.
 
-**Type:** dataAbility.DataAbilityPredicates
+**Type:** [dataAbility.DataAbilityPredicates](../../apis-arkdata/arkts-apis/arkts-arkdata-dataability-dataabilitypredicates-c.md)
 
 **Since:** 7
 
@@ -78,7 +78,7 @@ type: featureAbility.DataAbilityOperationType
 
 Indicates a operation type.
 
-**Type:** featureAbility.DataAbilityOperationType
+**Type:** [featureAbility.DataAbilityOperationType](arkts-ability-featureability-dataabilityoperationtype-e.md)
 
 **Since:** 7
 
@@ -110,7 +110,7 @@ valueBackReferences?: rdb.ValuesBucket
 
 Indicates the valuesBucket object containing a set of key-value pairs.
 
-**Type:** rdb.ValuesBucket
+**Type:** [rdb.ValuesBucket](../../apis-arkdata/arkts-apis/arkts-arkdata-rdb-valuesbucket-t.md)
 
 **Since:** 7
 
@@ -126,7 +126,7 @@ valuesBucket?: rdb.ValuesBucket
 
 Indicates the data values to be set.
 
-**Type:** rdb.ValuesBucket
+**Type:** [rdb.ValuesBucket](../../apis-arkdata/arkts-apis/arkts-arkdata-rdb-valuesbucket-t.md)
 
 **Since:** 7
 

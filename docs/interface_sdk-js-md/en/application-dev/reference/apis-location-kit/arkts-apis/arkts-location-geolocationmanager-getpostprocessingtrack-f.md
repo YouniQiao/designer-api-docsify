@@ -38,7 +38,7 @@ Returns data within 24 hours since tracking started; Subsequent calls return onl
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;Location&gt;&gt; | Promise used to return `Array&lt;Location&gt;`. |
+| Promise&lt;Array&lt;[Location](arkts-location-geolocationmanager-location-i.md)&gt;&gt; | Promise used to return `Array&lt;Location&gt;`. |
 
 **Error codes:**
 

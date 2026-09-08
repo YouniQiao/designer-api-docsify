@@ -36,7 +36,7 @@ addTemplate(uri: string, subscriberId: string, template: Template): void
 | --- | --- | --- | --- |
 | uri | string | 是 | 要插入的数据的路径。 |
 | subscriberId | string | 是 | 要添加模板的订阅者ID，每个订阅者的ID是唯一的。 |
-| template | Template | 是 | 要添加的数据模板。 |
+| template | [Template](arkts-arkdata-datashare-template-i-sys.md) | 是 | 要添加的数据模板。 |
 
 **错误码：**
 
@@ -212,7 +212,7 @@ batchUpdate(operations: Record<string, Array<UpdateOperation>>): Promise<Record<
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| operations | Record&lt;string, Array&lt;UpdateOperation&gt;&gt; | 是 | 要更新数据的路径、筛选条件和数据集合。 |
+| operations | Record&lt;string, Array&lt;[UpdateOperation](arkts-arkdata-datashare-updateoperation-i-sys.md)&gt;&gt; | 是 | 要更新数据的路径、筛选条件和数据集合。 |
 
 **返回值：**
 
@@ -345,7 +345,7 @@ delete(uri: string, predicates: dataSharePredicates.DataSharePredicates, callbac
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | uri | string | 是 | 要删除的数据的路径。 |
-| predicates | dataSharePredicates.DataSharePredicates | 是 | 筛选条件。delete接口所支持的谓词方法取决于服务端所选用的数据库，如KVDB的删除目前仅支持inKeys谓词。静默场景下谓词内方法为空时，默认全表删除。非静默场景下规格由数据提供方制定。 |
+| predicates | [dataSharePredicates.DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | 是 | 筛选条件。delete接口所支持的谓词方法取决于服务端所选用的数据库，如KVDB的删除目前仅支持inKeys谓词。静默场景下谓词内方法为空时，默认全表删除。非静默场景下规格由数据提供方制定。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数。当从数据库中删除一条或多条数据记录成功，err为undefined，data为获取到的已删除的数据记录数；否则为错误对象。因部分数据库（如KVDB）的相应接口并不提供相应支持，故若服务端使用此数据库，则此callback也无法返回删除的数据记录数。 |
 
 **错误码：**
@@ -403,7 +403,7 @@ delete(uri: string, predicates: dataSharePredicates.DataSharePredicates): Promis
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | uri | string | 是 | 要删除的数据的路径。 |
-| predicates | dataSharePredicates.DataSharePredicates | 是 | 筛选条件。delete接口所支持的谓词方法取决于服务端所选用的数据库，如KVDB的删除目前仅支持inKeys谓词。静默场景下谓词内方法为空时，默认全表删除。非静默场景下规格由数据提供方制定。 |
+| predicates | [dataSharePredicates.DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | 是 | 筛选条件。delete接口所支持的谓词方法取决于服务端所选用的数据库，如KVDB的删除目前仅支持inKeys谓词。静默场景下谓词内方法为空时，默认全表删除。非静默场景下规格由数据提供方制定。 |
 
 **返回值：**
 
@@ -1029,7 +1029,7 @@ notifyChange(data: ChangeInfo): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| data | ChangeInfo | 是 | 表示数据变更类型、变化的uri、变更的数据内容。 |
+| data | [ChangeInfo](arkts-arkdata-relationalstore-changeinfo-i.md) | 是 | 表示数据变更类型、变化的uri、变更的数据内容。 |
 
 **返回值：**
 
@@ -1131,7 +1131,7 @@ off(event: 'dataChange', type:SubscriptionType, uri: string, callback?: AsyncCal
 | event | 'dataChange' | 是 | 取消订阅的事件/回调类型，支持的事件为'dataChange'。 |
 | type | [SubscriptionType](arkts-arkdata-datashare-subscriptiontype-e-sys.md) | 是 | 表示数据更改时按指定数据路径通知变更。 |
 | uri | string | 是 | 表示指定的数据路径。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ChangeInfo&gt; | 否 | 表示指定取消订阅的callback通知，如果为空、为undefined、null，则取消订阅该uri下所有的通知事件。如果不为空，传入的callback必须和注册为同一个。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ChangeInfo](arkts-arkdata-relationalstore-changeinfo-i.md)&gt; | 否 | 表示指定取消订阅的callback通知，如果为空、为undefined、null，则取消订阅该uri下所有的通知事件。如果不为空，传入的callback必须和注册为同一个。 |
 
 **错误码：**
 
@@ -1348,7 +1348,7 @@ on(event: 'dataChange', type:SubscriptionType, uri: string, callback: AsyncCallb
 | event | 'dataChange' | 是 | 订阅的事件/回调类型，支持的事件为'dataChange'，当有其他用户触发了变更通知时，触发该事件。 |
 | type | [SubscriptionType](arkts-arkdata-datashare-subscriptiontype-e-sys.md) | 是 | 表示数据更改时按指定数据路径通知变更。 |
 | uri | string | 是 | 表示指定的数据路径。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ChangeInfo&gt; | 是 | 回调函数。当有其他用户触发了变更通知时会回调该函数。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ChangeInfo](arkts-arkdata-relationalstore-changeinfo-i.md)&gt; | 是 | 回调函数。当有其他用户触发了变更通知时会回调该函数。 |
 
 **错误码：**
 
@@ -1706,7 +1706,7 @@ query(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | uri | string | 是 | 要查询的数据的路径。 |
-| predicates | dataSharePredicates.DataSharePredicates | 是 | 筛选条件。query接口所支持的谓词方法取决于服务端所选用的数据库，如KVDB目前仅支持inKeys和prefixKey。静默场景下谓词内方法为空时，默认全表查询。非静默场景下规格由数据提供方制定。 |
+| predicates | [dataSharePredicates.DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | 是 | 筛选条件。query接口所支持的谓词方法取决于服务端所选用的数据库，如KVDB目前仅支持inKeys和prefixKey。静默场景下谓词内方法为空时，默认全表查询。非静默场景下规格由数据提供方制定。 |
 | columns | Array&lt;string&gt; | 是 | 要查询的列。如果此参数为空，则查询所有列。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[DataShareResultSet](arkts-arkdata-data-datashareresultset-datashareresultset-i-sys.md)&gt; | 是 | 回调函数。当查询数据库中的数据成功，err为undefined，data为获取到的查询到的结果集；否则为错误对象。 |
 
@@ -1770,7 +1770,7 @@ query(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | uri | string | 是 | 要查询的数据的路径。 |
-| predicates | dataSharePredicates.DataSharePredicates | 是 | 筛选条件。query接口所支持的谓词方法取决于服务端所选用的数据库，如KVDB目前仅支持inKeys和prefixKey。静默场景下谓词内方法为空时，默认全表查询。非静默场景下规格由数据提供方制定。 |
+| predicates | [dataSharePredicates.DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | 是 | 筛选条件。query接口所支持的谓词方法取决于服务端所选用的数据库，如KVDB目前仅支持inKeys和prefixKey。静默场景下谓词内方法为空时，默认全表查询。非静默场景下规格由数据提供方制定。 |
 | columns | Array&lt;string&gt; | 是 | 要查询的列。如果此参数为空，则查询所有列。 |
 
 **返回值：**
@@ -1838,7 +1838,7 @@ update(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | uri | string | 是 | 要更新的数据的路径。 |
-| predicates | dataSharePredicates.DataSharePredicates | 是 | 筛选条件。update接口所支持的谓词筛选条件取决于服务端所选用的数据库，如KVDB目前并不支持谓词筛选条件，仅RDB支持。静默场景下谓词内方法为空时，默认全表更新。非静默场景下规格由数据提供方制定。 |
+| predicates | [dataSharePredicates.DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | 是 | 筛选条件。update接口所支持的谓词筛选条件取决于服务端所选用的数据库，如KVDB目前并不支持谓词筛选条件，仅RDB支持。静默场景下谓词内方法为空时，默认全表更新。非静默场景下规格由数据提供方制定。 |
 | value | [ValuesBucket](arkts-arkdata-valuesbucket-t.md) | 是 | 要更新的数据的值。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数。当更新数据库中的数据记录成功，err为undefined，data为获取到的更新的数据记录数；否则为错误对象。因部分数据库（如KVDB）的相应接口并不提供相应支持，故若服务端使用此数据库，则此callback也无法返回更新的数据记录数。 |
 
@@ -1908,7 +1908,7 @@ update(uri: string, predicates: dataSharePredicates.DataSharePredicates, value: 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | uri | string | 是 | 要更新的数据的路径。 |
-| predicates | dataSharePredicates.DataSharePredicates | 是 | 筛选条件。update接口所支持的谓词筛选条件取决于服务端所选用的数据库，如KVDB目前并不支持谓词筛选条件，仅RDB支持。静默场景下谓词内方法为空时，默认全表更新。非静默场景下规格由数据提供方制定。 |
+| predicates | [dataSharePredicates.DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | 是 | 筛选条件。update接口所支持的谓词筛选条件取决于服务端所选用的数据库，如KVDB目前并不支持谓词筛选条件，仅RDB支持。静默场景下谓词内方法为空时，默认全表更新。非静默场景下规格由数据提供方制定。 |
 | value | [ValuesBucket](arkts-arkdata-valuesbucket-t.md) | 是 | 要更新的数据的值。 |
 
 **返回值：**

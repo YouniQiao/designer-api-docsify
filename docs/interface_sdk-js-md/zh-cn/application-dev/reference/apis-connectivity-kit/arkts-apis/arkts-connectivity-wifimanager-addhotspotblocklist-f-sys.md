@@ -26,7 +26,7 @@ function addHotspotBlockList(stationInfo: StationInfo): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| stationInfo | StationInfo | 是 | 将添加到热点的阻止列表中的设备。 |
+| stationInfo | [StationInfo](arkts-connectivity-wifimanager-stationinfo-i-sys.md) | 是 | 将添加到热点的阻止列表中的设备。 |
 
 **错误码：**
 

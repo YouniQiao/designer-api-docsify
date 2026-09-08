@@ -76,7 +76,7 @@ Obtains the KV pair from the current position.
 
 | Type | Description |
 | --- | --- |
-| Entry | KV pair obtained. |
+| [Entry](arkts-arkdata-distributedkvstore-entry-i.md) | KV pair obtained. |
 
 **Examples**
 

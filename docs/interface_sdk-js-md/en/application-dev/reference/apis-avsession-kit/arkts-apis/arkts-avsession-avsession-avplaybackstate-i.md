@@ -178,7 +178,7 @@ state?: PlaybackState
 
 Current playback state. See [PlaybackState](arkts-avsession-avsession-playbackstate-e.md)
 
-**Type:** PlaybackState
+**Type:** [PlaybackState](arkts-avsession-avsession-playbackstate-e.md)
 
 **Since:** 10
 

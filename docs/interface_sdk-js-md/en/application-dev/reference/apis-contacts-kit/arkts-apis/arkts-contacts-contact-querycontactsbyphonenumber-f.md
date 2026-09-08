@@ -80,6 +80,8 @@ Queries a contact based on the specified phone number. This API uses an asynchro
 **Examples**
 
 > NOTE
+> 
+> In the examples in this document, this.context is used to obtain the UIAbilityContext, where this represents the UIAbility instance inherited from UIAbility. To use the capabilities provided by UIAbilityContext in a page, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -178,6 +180,8 @@ Queries a contact based on the specified phone number and holder. This API uses 
 **Examples**
 
 > NOTE
+> 
+> In the examples in this document, this.context is used to obtain the UIAbilityContext, where this represents the UIAbility instance that inherits from UIAbility. If you need to use the capabilities provided by UIAbilityContext in a page, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -277,6 +281,8 @@ Queries a contact based on the specified phone number and attributes. This API u
 **Examples**
 
 > NOTE
+> 
+> In the examples in this document, this.context is used to obtain the UIAbilityContext, where this represents a UIAbility instance inherited from UIAbility. To use the capabilities provided by UIAbilityContext in a page, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -381,6 +387,8 @@ Queries a contact based on the specified phone number, holder, and attributes. T
 **Examples**
 
 > NOTE
+> 
+> In the examples in this document, this.context is used to obtain the UIAbilityContext, where this represents a UIAbility instance inherited from UIAbility. To use the capabilities provided by UIAbilityContext in a page, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -494,6 +502,8 @@ Queries a contact based on the specified phone number, holder, and attributes. T
 **Examples**
 
 > NOTE
+> 
+> In the examples in this document, this.context is used to obtain the UIAbilityContext, where this represents the UIAbility instance inherited from UIAbility. If you need to use the capabilities provided by UIAbilityContext in the UI, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
 ```TypeScript
 import { contact } from '@kit.ContactsKit';

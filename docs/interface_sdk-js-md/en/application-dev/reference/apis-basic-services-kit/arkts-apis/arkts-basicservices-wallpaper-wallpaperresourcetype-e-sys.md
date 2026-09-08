@@ -2,7 +2,7 @@
 
 Indicates the resource type of the wallpaper.
 
-@enum { number } WallpaperResourceType
+@enum { int } WallpaperResourceType
 
 **Since:** 10
 

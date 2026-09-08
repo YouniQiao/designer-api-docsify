@@ -22,7 +22,7 @@ function isFunctionKeyEnabled(functionKey: FunctionKey): Promise<boolean>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| functionKey | FunctionKey | 是 | 需要设置的功能键类型。 |
+| functionKey | [FunctionKey](arkts-input-inputdevice-functionkey-e.md) | 是 | 需要设置的功能键类型。 |
 
 **返回值：**
 

@@ -70,7 +70,7 @@ state: BondState
 
 配对状态。
 
-**类型：** BondState
+**类型：** [BondState](arkts-connectivity-connection-bondstate-e.md)
 
 **起始版本：** 10
 

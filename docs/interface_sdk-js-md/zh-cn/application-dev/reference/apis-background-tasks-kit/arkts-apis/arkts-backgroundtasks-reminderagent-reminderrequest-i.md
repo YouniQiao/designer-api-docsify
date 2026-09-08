@@ -78,7 +78,7 @@ maxScreenWantAgent?: MaxScreenWantAgent
 
 提醒到达时跳转的目标包。如果设备正在使用中，则弹出一个通知框。
 
-**类型：** MaxScreenWantAgent
+**类型：** [MaxScreenWantAgent](arkts-backgroundtasks-reminderagent-maxscreenwantagent-i.md)
 
 **起始版本：** 7
 
@@ -114,7 +114,7 @@ reminderType: ReminderType
 
 指明提醒类型。
 
-**类型：** ReminderType
+**类型：** [ReminderType](arkts-backgroundtasks-reminderagent-remindertype-e.md)
 
 **起始版本：** 7
 
@@ -150,7 +150,7 @@ slotType?: notification.SlotType
 
 指明提醒的slot类型。
 
-**类型：** notification.SlotType
+**类型：** [notification.SlotType](../../apis-notification-kit/arkts-apis/arkts-notification-notification-slottype-depr-e.md)
 
 **起始版本：** 7
 
@@ -240,7 +240,7 @@ wantAgent?: WantAgent
 
 点击通知后需要跳转的目标ability信息。
 
-**类型：** WantAgent
+**类型：** [WantAgent](arkts-backgroundtasks-reminderagent-wantagent-i.md)
 
 **起始版本：** 7
 

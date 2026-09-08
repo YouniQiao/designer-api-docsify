@@ -103,7 +103,7 @@ setIcon(icon: Resource)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| icon | Resource | 是 | 自定义图标资源信息，仅支持Resource类型的数据源。可支持的图片格式：png、jpg、jpeg、bmp、svg、webp、gif和heif等，支持的图片格式范围见[Image]{@link./image}。当资源为非图片资源或不支持的格式时，图标显示为空白。从API版本26.0.0开始，支持Symbol格式的Resource类型的数据源。若应用不具备ohos.permission.CUS TOMIZE_SAVE_BUTTON权限，则自定义图标设置不生效，保存控件保持默认样式。 |
+| icon | [Resource](../arkts-apis/arkts-arkui-resource-t.md) | 是 | 自定义图标资源信息，仅支持Resource类型的数据源。可支持的图片格式：png、jpg、jpeg、bmp、svg、webp、gif和heif等，支持的图片格式范围见[Image]{@link./image}。当资源为非图片资源或不支持的格式时，图标显示为空白。从API版本26.0.0开始，支持Symbol格式的Resource类型的数据源。若应用不具备ohos.permission.CUS TOMIZE_SAVE_BUTTON权限，则自定义图标设置不生效，保存控件保持默认样式。 |
 
 ## setText
 
@@ -127,7 +127,7 @@ setText(text: string | Resource)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| text | string \| Resource | 是 | 自定义文本信息。适用于需要使用与业务强相关的文本替代系统预置描述的场景。传入字符串时直接使用文本内容；传入Resource时，可配合资源管理实现多语言文本。若应用不具备ohos.permission.CUSTOMIZE_SAVE_BUTTON权限，则该设置不生效，保存控件保持默认样式。 |
+| text | string \| [Resource](../arkts-apis/arkts-arkui-resource-t.md) | 是 | 自定义文本信息。适用于需要使用与业务强相关的文本替代系统预置描述的场景。传入字符串时直接使用文本内容；传入Resource时，可配合资源管理实现多语言文本。若应用不具备ohos.permission.CUSTOMIZE_SAVE_BUTTON权限，则该设置不生效，保存控件保持默认样式。 |
 
 ## stateEffect
 
@@ -178,7 +178,7 @@ symbolFontWeight(fontWeight: number | FontWeight | string | Resource)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| fontWeight | number \| FontWeight \| string \| Resource | 是 | 设置保存控件Symbol图标粗细。支持number类型：取值范围为[100, 900]，取值间隔为100，数值越大字体越粗。支持string类型：可传入number类型的数字字符串（如"400"），或FontWeight的枚举值的小写字符串（如"normal"）。默认值：FontWeight.Normal（对应数值400）。若应用不具备ohos.permission.CUSTOMIZE_SAVE_ BUTTON权限，则该设置不生效。 |
+| fontWeight | number \| [FontWeight](../arkts-apis/arkts-arkui-fontweight-e.md) \| string \| [Resource](../arkts-apis/arkts-arkui-resource-t.md) | 是 | 设置保存控件Symbol图标粗细。支持number类型：取值范围为[100, 900]，取值间隔为100，数值越大字体越粗。支持string类型：可传入number类型的数字字符串（如"400"），或FontWeight的枚举值的小写字符串（如"normal"）。默认值：FontWeight.Normal（对应数值400）。若应用不具备ohos.permission.CUSTOMIZE_SAVE_ BUTTON权限，则该设置不生效。 |
 
 ## symbolIconColor
 

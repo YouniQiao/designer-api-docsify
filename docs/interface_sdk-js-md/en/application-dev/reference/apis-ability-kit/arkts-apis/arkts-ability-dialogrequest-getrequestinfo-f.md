@@ -35,7 +35,7 @@ Obtains the request information from Want.
 
 | Type | Description |
 | --- | --- |
-| RequestInfo | RequestInfo object obtained, which is used to bind a modal dialog box. |
+| [RequestInfo](arkts-ability-dialogrequest-requestinfo-i.md) | RequestInfo object obtained, which is used to bind a modal dialog box. |
 
 **Error codes:**
 

@@ -30,15 +30,6 @@ Checks whether spatial audio rendering is enabled for the current device. This A
 | --- | --- |
 | boolean | Check result for whether spatial audio rendering is enabled. **true** if enabled, **false** otherwise. |
 
-**Examples**
-
-```TypeScript
-import { audio } from '@kit.AudioKit';
-
-let isSpatializationEnabledForCurrentDevice: boolean = audioSpatializationManager.isSpatializationEnabledForCurrentDevice();
-console.info(`AudioSpatializationManager isSpatializationEnabledForCurrentDevice: ${isSpatializationEnabledForCurrentDevice}`);
-```
-
 ## off('spatializationEnabledChangeForCurrentDevice')
 
 ```TypeScript

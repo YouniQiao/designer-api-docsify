@@ -192,7 +192,7 @@ copyOption(value: CopyOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | CopyOptions | 是 | 组件是否支持文本可复制粘贴。 |
+| value | [CopyOptions](../arkts-apis/arkts-arkui-copyoptions-e.md) | 是 | 组件是否支持文本可复制粘贴。 |
 
 ## dataDetectorConfig
 
@@ -334,7 +334,7 @@ EllipsisMode.START和EllipsisMode.CENTER仅在单行文本超长时生效。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | EllipsisMode | 是 | 省略位置。 |
+| value | [EllipsisMode](../arkts-apis/arkts-arkui-ellipsismode-e.md) | 是 | 省略位置。 |
 
 ## enableAutoSpacing
 
@@ -571,7 +571,7 @@ fontFamily(value: string | Resource)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | string \| Resource | 是 | 字体族。使用多个字体时，请用逗号','分隔，字体的优先级按顺序生效。例如：'Arial,HarmonyOS Sans'。 |
+| value | string \| [Resource](../arkts-apis/arkts-arkui-resource-t.md) | 是 | 字体族。使用多个字体时，请用逗号','分隔，字体的优先级按顺序生效。例如：'Arial,HarmonyOS Sans'。 |
 
 ## fontFeature
 
@@ -642,7 +642,7 @@ fontSize(value: number | string | Resource)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number \| string \| Resource | 是 | 字体大小。fontSize为number类型时，使用fp单位。string类型支持number类型取值的字符串形式，可以附带单位，例如"1 0"、"10fp"。不支持设置百分比字符串。 |
+| value | number \| string \| [Resource](../arkts-apis/arkts-arkui-resource-t.md) | 是 | 字体大小。fontSize为number类型时，使用fp单位。string类型支持number类型取值的字符串形式，可以附带单位，例如"1 0"、"10fp"。不支持设置百分比字符串。 |
 
 ## fontStyle
 
@@ -664,7 +664,7 @@ fontStyle(value: FontStyle)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | FontStyle | 是 | 字体样式。 |
+| value | [FontStyle](../arkts-apis/arkts-arkui-fontstyle-e.md) | 是 | 字体样式。 |
 
 ## fontVariations
 
@@ -688,7 +688,7 @@ fontVariations(fontVariations: Array<FontVariation>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| fontVariations | Array&lt;FontVariation&gt; | 是 | 可变字体的属性数组，数组成员为可变字体的各种属性。fontVariations属性的优先级高于[fontWeight](#fontweight)。 |
+| fontVariations | Array&lt;[FontVariation](../arkts-apis/arkts-arkui-fontvariation-t.md)&gt; | 是 | 可变字体的属性数组，数组成员为可变字体的各种属性。fontVariations属性的优先级高于[fontWeight](#fontweight)。 |
 
 ## fontWeight
 
@@ -712,7 +712,7 @@ fontWeight(value: number | FontWeight | ResourceStr)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number \| FontWeight \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | 是 | 文本的字体粗细。number类型取值[100, 900]，取值间隔为100，默认为400，取值越大，字体越粗。string类型仅支持number类型取值的字符串形式，例如“400”，以及“bold”、“bolder”、“ lighter”、“regular”、“medium”，分别对应FontWeight中相应的枚举值。设置过大可能会在不同字体下有截断。传入超出取值范围或不符合间隔要求的值时取默认值。从API version 20开始，支持Resource类型。<br>**适用版本：** 20 |
+| value | number \| [FontWeight](../arkts-apis/arkts-arkui-fontweight-e.md) \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | 是 | 文本的字体粗细。number类型取值[100, 900]，取值间隔为100，默认为400，取值越大，字体越粗。string类型仅支持number类型取值的字符串形式，例如“400”，以及“bold”、“bolder”、“ lighter”、“regular”、“medium”，分别对应FontWeight中相应的枚举值。设置过大可能会在不同字体下有截断。传入超出取值范围或不符合间隔要求的值时取默认值。从API version 20开始，支持Resource类型。<br>**适用版本：** 20 |
 
 ## fontWeight
 
@@ -738,7 +738,7 @@ fontWeight(weight: number | FontWeight | ResourceStr, options?: FontSettingOptio
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| weight | number \| FontWeight \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | 是 | 设置文本字重number类型取值[100, 900]，取值间隔为100，默认为400，取值越大，字体越粗。string类型仅支持number类型取值的字符串形式，例如“400”，以及“bold”、“bolder”、“ lighter”、“regular”、“medium”，分别对应FontWeight中相应的枚举值。设置过大可能会在不同字体下有截断。传入超出取值范围的值时取默认值。传入不符合间隔要求的值时，若设置fontWeightConfigs的enableVariableFontWeight为true，使用传入值；若设置为false，使用默认值。从API version 20开始，支持Resource类型。<br>**适用版本：** 20 |
+| weight | number \| [FontWeight](../arkts-apis/arkts-arkui-fontweight-e.md) \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | 是 | 设置文本字重number类型取值[100, 900]，取值间隔为100，默认为400，取值越大，字体越粗。string类型仅支持number类型取值的字符串形式，例如“400”，以及“bold”、“bolder”、“ lighter”、“regular”、“medium”，分别对应FontWeight中相应的枚举值。设置过大可能会在不同字体下有截断。传入超出取值范围的值时取默认值。传入不符合间隔要求的值时，若设置fontWeightConfigs的enableVariableFontWeight为true，使用传入值；若设置为false，使用默认值。从API version 20开始，支持Resource类型。<br>**适用版本：** 20 |
 | options | [FontSettingOptions](../arkts-apis/arkts-arkui-fontsettingoptions-i.md) | 否 | 设置字体配置项，用于启用可变字重调节功能。当需要使用可变字体的字重属性进行精细调节时传入此参数（设置enableVariableFontWeight为true）。不传入时使用默认字体配置（禁用可变字重调节，仅支持整百字重值）。enableVariableFontWeight为false时禁用可变字重调节，weight取整百值时字重为weight，非整百值时字重为400；enableVariableFontWeight为true时启用可变字重调节，weight取任意整数时字重为weight。 |
 
 ## halfLeading
@@ -922,7 +922,7 @@ lineHeight(value: number | string | Resource)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number \| string \| Resource | 是 | 文本行高。number类型时单位为fp。 |
+| value | number \| string \| [Resource](../arkts-apis/arkts-arkui-resource-t.md) | 是 | 文本行高。number类型时单位为fp。 |
 
 ## lineHeightMultiple
 
@@ -1050,7 +1050,7 @@ maxFontScale(scale: number | Resource)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| scale | number \| Resource | 是 | 文本最大的字体缩放倍数。取值范围：[1, +∞)    **说明：** 设置的值小于1时，按值为1处理，其余异常值默认不生效。 |
+| scale | number \| [Resource](../arkts-apis/arkts-arkui-resource-t.md) | 是 | 文本最大的字体缩放倍数。取值范围：[1, +∞)    **说明：** 设置的值小于1时，按值为1处理，其余异常值默认不生效。 |
 
 ## maxFontSize
 
@@ -1082,7 +1082,7 @@ maxFontSize小于等于0或者maxFontSize小于minFontSize时，自适应字号�
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number \| string \| Resource | 是 | 文本最大显示字号。取值范围：大于0且大于等于minFontSize。单位：[fp](../arkts-apis/arkts-arkui-length-t.md)    **说明：** 设置的值≤0或小于minFontSize时，自适应字号不生效，此时按照fontSize属性的值生效。 |
+| value | number \| string \| [Resource](../arkts-apis/arkts-arkui-resource-t.md) | 是 | 文本最大显示字号。取值范围：大于0且大于等于minFontSize。单位：[fp](../arkts-apis/arkts-arkui-length-t.md)    **说明：** 设置的值≤0或小于minFontSize时，自适应字号不生效，此时按照fontSize属性的值生效。 |
 
 ## maxLineHeight
 
@@ -1154,7 +1154,7 @@ minFontScale(scale: number | Resource)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| scale | number \| Resource | 是 | 文本最小的字体缩放倍数。取值范围：[0, 1]    **说明：** 设置的值小于0时按0处理，大于1时按1处理，其余异常值默认不生效。 |
+| scale | number \| [Resource](../arkts-apis/arkts-arkui-resource-t.md) | 是 | 文本最小的字体缩放倍数。取值范围：[0, 1]    **说明：** 设置的值小于0时按0处理，大于1时按1处理，其余异常值默认不生效。 |
 
 ## minFontSize
 
@@ -1186,7 +1186,7 @@ minFontSize小于或等于0时，自适应字号不生效，此时按照[fontSiz
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number \| string \| Resource | 是 | 文本最小显示字号。取值范围：大于0。单位：[fp](../arkts-apis/arkts-arkui-length-t.md)    **说明：** 设置的值≤0时，自适应字号不生效，此时按照fontSize属性的值生效。 |
+| value | number \| string \| [Resource](../arkts-apis/arkts-arkui-resource-t.md) | 是 | 文本最小显示字号。取值范围：大于0。单位：[fp](../arkts-apis/arkts-arkui-length-t.md)    **说明：** 设置的值≤0时，自适应字号不生效，此时按照fontSize属性的值生效。 |
 
 ## minLineHeight
 
@@ -1597,7 +1597,7 @@ textAlign(value: TextAlign)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | TextAlign | 是 | 文本段落在水平方向的对齐方式。   **说明：** 当设置为TextAlign.JUSTIFY时，需要根据文本内容设置[wordBreak](#wordbreak)属性，且最后一行文本水平对齐首部，不参与两端对齐。 |
+| value | [TextAlign](../arkts-apis/arkts-arkui-textalign-e.md) | 是 | 文本段落在水平方向的对齐方式。   **说明：** 当设置为TextAlign.JUSTIFY时，需要根据文本内容设置[wordBreak](#wordbreak)属性，且最后一行文本水平对齐首部，不参与两端对齐。 |
 
 ## textCase
 
@@ -1665,7 +1665,7 @@ textDirection(direction: TextDirection | undefined)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| direction | TextDirection \| undefined | 是 | 文本排版方向。设置为undefined时，按照TextDirection.DEFAULT处理，表现为文本排版方向遵循组件布局方向。 |
+| direction | [TextDirection](../arkts-apis/arkts-arkui-textdirection-e.md) \| undefined | 是 | 文本排版方向。设置为undefined时，按照TextDirection.DEFAULT处理，表现为文本排版方向遵循组件布局方向。 |
 
 ## textIndent
 
@@ -1813,7 +1813,7 @@ textVerticalAlign(textVerticalAlign: Optional<TextVerticalAlign>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| textVerticalAlign | [Optional](arkts-arkui-optional-t.md)&lt;TextVerticalAlign&gt; | 是 | 文本段落在垂直方向的对齐方式。 |
+| textVerticalAlign | [Optional](arkts-arkui-optional-t.md)&lt;[TextVerticalAlign](../arkts-apis/arkts-arkui-textverticalalign-e.md)&gt; | 是 | 文本段落在垂直方向的对齐方式。 |
 
 ## wordBreak
 
@@ -1839,4 +1839,4 @@ WordBreak.BREAK_ALL与{overflow:&nbsp;TextOverflow.Ellipsis}、maxLines组合使
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | WordBreak | 是 | 断行规则。 |
+| value | [WordBreak](../arkts-apis/arkts-arkui-wordbreak-e.md) | 是 | 断行规则。 |

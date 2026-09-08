@@ -26,7 +26,7 @@ function getAuthorizationManager(): AuthorizationManager
 
 | 类型 | 说明 |
 | --- | --- |
-| AuthorizationManager | 返回系统账号授权管理的实例对象。 |
+| [AuthorizationManager](arkts-basicservices-authorization-authorizationmanager-i.md) | 返回系统账号授权管理的实例对象。 |
 
 **错误码：**
 

@@ -34,7 +34,7 @@ function getDeviceConfig(networkId: number): WifiDeviceConfig
 
 | 类型 | 说明 |
 | --- | --- |
-| WifiDeviceConfig | 指定网络ID的网络配置。 |
+| [WifiDeviceConfig](arkts-connectivity-wifimanager-wifideviceconfig-i.md) | 指定网络ID的网络配置。 |
 
 **错误码：**
 

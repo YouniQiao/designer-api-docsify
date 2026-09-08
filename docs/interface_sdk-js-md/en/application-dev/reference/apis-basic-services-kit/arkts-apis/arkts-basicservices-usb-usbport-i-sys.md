@@ -46,7 +46,7 @@ status: USBPortStatus
 
 USB port role.
 
-**Type:** USBPortStatus
+**Type:** [USBPortStatus](arkts-basicservices-usb-usbportstatus-i-sys.md)
 
 **Since:** 9
 
@@ -66,7 +66,7 @@ supportedModes: PortModeType
 
 Numeric mask combination for the supported mode list.
 
-**Type:** PortModeType
+**Type:** [PortModeType](arkts-basicservices-usb-portmodetype-e-sys.md)
 
 **Since:** 9
 

@@ -2,7 +2,7 @@
 
 Error of form.
 
-@enum { number }
+@enum { int }
 
 **Since:** 8
 

@@ -30,7 +30,7 @@ Injects a click action.
 DOUBLE_CLICK = 2
 ```
 
-Injects a number-click action.
+Injects a double-click action.
 
 **Since:** 26.0.0
 
@@ -46,7 +46,7 @@ Injects a number-click action.
 LONG_CLICK = 3
 ```
 
-Injects a number-click action.
+Injects a long-click action.
 
 **Since:** 26.0.0
 

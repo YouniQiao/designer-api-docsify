@@ -25,8 +25,8 @@ Proactively triggers a WantAgent object. This API uses an asynchronous callback 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | agent | [WantAgent](arkts-ability-wantagent-t.md) | Yes | Target WantAgent object. |
-| triggerInfo | TriggerInfo | Yes | [TriggerInfo](arkts-ability-wantagent-triggerinfo-t.md) object. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;CompleteData&gt; | No | Callback used to return the result. |
+| triggerInfo | [TriggerInfo](arkts-ability-wantagent-triggerinfo-t.md) | Yes | [TriggerInfo](arkts-ability-wantagent-triggerinfo-t.md) object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[CompleteData](arkts-ability-wantagent-completedata-i.md)&gt; | No | Callback used to return the result. |
 
 **Error codes:**
 

@@ -26,7 +26,7 @@ function getDeviceFunctions(): FunctionType
 
 | 类型 | 说明 |
 | --- | --- |
-| FunctionType | 当前的USB功能列表的数字组合掩码。 |
+| [FunctionType](arkts-basicservices-usbmanager-functiontype-e-sys.md) | 当前的USB功能列表的数字组合掩码。 |
 
 **错误码：**
 
@@ -35,10 +35,3 @@ function getDeviceFunctions(): FunctionType
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API.<br>**适用版本：** 18+ |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied. Normal application do not have permission to use system api. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.<br>**适用版本：** 18+ |
-
-**示例**
-
-```TypeScript
-// 获取当前USB功能的数字掩码
-let ret: usbManager.FunctionType = usbManager.getDeviceFunctions();
-```

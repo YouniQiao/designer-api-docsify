@@ -52,17 +52,6 @@ addEmptyElement(name: string): void
 ```TypeScript
 import { util } from '@kit.ArkTS';
 
-let arrayBuffer = new ArrayBuffer(2048);
-let thatSer = new xml.XmlSerializer(arrayBuffer);
-thatSer.addEmptyElement("d");
-let uint8 = new Uint8Array(arrayBuffer);
-let result = util.TextDecoder.create().decodeToString(uint8);
-console.info(result); // <d/>
-```
-
-```TypeScript
-import { util } from '@kit.ArkTS';
-
 let serializer = new xml.XmlDynamicSerializer('utf-8');
 serializer.addEmptyElement("d");
 let arrayBuffer = serializer.getOutput();
@@ -129,20 +118,6 @@ endElement(): void
 | [10200065](../errorcode-utils.md#10200065-元素开始标记与元素结束标记未匹配使用) | startElement和endElement不匹配。 |
 
 **示例**
-
-```TypeScript
-import { util } from '@kit.ArkTS';
-
-let arrayBuffer = new ArrayBuffer(2048);
-let thatSer = new xml.XmlSerializer(arrayBuffer);
-thatSer.startElement("note");
-thatSer.setText("Happy");
-thatSer.endElement();
-let uint8 = new Uint8Array(arrayBuffer);
-let result = util.TextDecoder.create().decodeToString(uint8);
-console.info(result);
-// <note>Happy</note>
-```
 
 ```TypeScript
 import { util } from '@kit.ArkTS';
@@ -226,19 +201,6 @@ setAttributes(name: string, value: string): void
 | [10200064](../errorcode-utils.md#10200064-入参字符串不能为空) | 不能为空字符串。 |
 
 **示例**
-
-```TypeScript
-import { util } from '@kit.ArkTS';
-
-let arrayBuffer = new ArrayBuffer(2048);
-let thatSer = new xml.XmlSerializer(arrayBuffer);
-thatSer.startElement("note");
-thatSer.setAttributes("importance", "high");
-thatSer.endElement();
-let uint8 = new Uint8Array(arrayBuffer);
-let result = util.TextDecoder.create().decodeToString(uint8);
-console.info(result); // <note importance="high"/>
-```
 
 ```TypeScript
 import { util } from '@kit.ArkTS';
@@ -329,17 +291,6 @@ setComment(text: string): void
 ```TypeScript
 import { util } from '@kit.ArkTS';
 
-let arrayBuffer = new ArrayBuffer(2048);
-let thatSer = new xml.XmlSerializer(arrayBuffer);
-thatSer.setComment("Hello, World!");
-let uint8 = new Uint8Array(arrayBuffer);
-let result = util.TextDecoder.create().decodeToString(uint8);
-console.info(result); // <!--Hello, World!-->
-```
-
-```TypeScript
-import { util } from '@kit.ArkTS';
-
 let serializer = new xml.XmlDynamicSerializer('utf-8');
 serializer.setComment("Hello, World!");
 let arrayBuffer = serializer.getOutput();
@@ -370,18 +321,6 @@ setDeclaration(): void
 | [10200063](../errorcode-utils.md#10200063-xml文件声明或属性位置设置错误) | xml位置非法。 |
 
 **示例**
-
-```TypeScript
-import { util } from '@kit.ArkTS';
-
-let arrayBuffer = new ArrayBuffer(2048);
-let thatSer = new xml.XmlSerializer(arrayBuffer);
-thatSer.setDeclaration();
-let uint8 = new Uint8Array(arrayBuffer);
-let result = util.TextDecoder.create().decodeToString(uint8);
-console.info(result);
-// <?xml version="1.0" encoding="utf-8"?>
-```
 
 ```TypeScript
 import { util } from '@kit.ArkTS';
@@ -422,17 +361,6 @@ setDocType(text: string): void
 | [10200064](../errorcode-utils.md#10200064-入参字符串不能为空) | 不能为空字符串。 |
 
 **示例**
-
-```TypeScript
-import { util } from '@kit.ArkTS';
-
-let arrayBuffer = new ArrayBuffer(2048);
-let thatSer = new xml.XmlSerializer(arrayBuffer);
-thatSer.setDocType('root SYSTEM "http://www.test.org/test.dtd"');
-let uint8 = new Uint8Array(arrayBuffer);
-let result = util.TextDecoder.create().decodeToString(uint8);
-console.info(result); // <!DOCTYPE root SYSTEM "http://www.test.org/test.dtd">
-```
 
 ```TypeScript
 import { util } from '@kit.ArkTS';
@@ -485,20 +413,6 @@ setNamespace(prefix: string, namespace: string): void
 ```TypeScript
 import { util } from '@kit.ArkTS';
 
-let arrayBuffer = new ArrayBuffer(2048);
-let thatSer = new xml.XmlSerializer(arrayBuffer);
-thatSer.setNamespace("h", "http://www.w3.org/TR/html4/");
-thatSer.startElement("note");
-thatSer.endElement();
-let uint8 = new Uint8Array(arrayBuffer);
-let result = util.TextDecoder.create().decodeToString(uint8);
-console.info(result);
-// <h:note xmlns:h="http://www.w3.org/TR/html4/"/>
-```
-
-```TypeScript
-import { util } from '@kit.ArkTS';
-
 let serializer = new xml.XmlDynamicSerializer('utf-8');
 serializer.setNamespace("h", "http://www.w3.org/TR/html4/");
 serializer.startElement("note");
@@ -542,20 +456,6 @@ setText(text: string): void
 | [10200064](../errorcode-utils.md#10200064-入参字符串不能为空) | 不能为空字符串。 |
 
 **示例**
-
-```TypeScript
-import { util } from '@kit.ArkTS';
-
-let arrayBuffer = new ArrayBuffer(2048);
-let thatSer = new xml.XmlSerializer(arrayBuffer);
-thatSer.startElement("note");
-thatSer.setAttributes("importance", "high");
-thatSer.setText("Happy");
-thatSer.endElement();
-let uint8 = new Uint8Array(arrayBuffer);
-let result = util.TextDecoder.create().decodeToString(uint8);
-console.info(result); // <note importance="high">Happy</note>
-```
 
 ```TypeScript
 import { util } from '@kit.ArkTS';
@@ -605,20 +505,6 @@ startElement(name: string): void
 | [10200064](../errorcode-utils.md#10200064-入参字符串不能为空) | 不能为空字符串。 |
 
 **示例**
-
-```TypeScript
-import { util } from '@kit.ArkTS';
-
-let arrayBuffer = new ArrayBuffer(2048);
-let thatSer = new xml.XmlSerializer(arrayBuffer);
-thatSer.startElement("note");
-thatSer.setText("Happy");
-thatSer.endElement();
-let uint8 = new Uint8Array(arrayBuffer);
-let result = util.TextDecoder.create().decodeToString(uint8);
-console.info(result);
-// <note>Happy</note>
-```
 
 ```TypeScript
 import { util } from '@kit.ArkTS';

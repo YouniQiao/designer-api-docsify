@@ -86,7 +86,7 @@ type: FieldType
 
 Type of the field. For details, see [FieldType](arkts-arkdata-cloudextension-fieldtype-e-sys.md).
 
-**Type:** FieldType
+**Type:** [FieldType](arkts-arkdata-cloudextension-fieldtype-e-sys.md)
 
 **Since:** 11
 

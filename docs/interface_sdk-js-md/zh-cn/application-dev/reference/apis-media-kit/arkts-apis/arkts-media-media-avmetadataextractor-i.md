@@ -32,25 +32,6 @@ cancelAllFetchFrames(): void
 
 **系统能力：** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { media } from '@kit.MediaKit';
-
-let avMetadataExtractor: media.AVMetadataExtractor | undefined = undefined;
-
-media.createAVMetadataExtractor((error: BusinessError, extractor: media.AVMetadataExtractor) => {
-  if (extractor) {
-    avMetadataExtractor = extractor;
-    console.info('Succeeded in creating AVMetadataExtractor');
-    avMetadataExtractor.cancelAllFetchFrames();
-  } else {
-    console.error(`Failed to create AVMetadataExtractor, code: ${error.code} message: ${error.message}`);
-  }
-});
-```
-
 ## fetchAlbumCover
 
 ```TypeScript
@@ -67,7 +48,7 @@ fetchAlbumCover(callback: AsyncCallback<image.PixelMap>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;image.PixelMap&gt; | 是 | 回调函数。当获取音频专辑封面成功，err为undefined，data为获取到的PixelMap实例，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)&gt; | 是 | 回调函数。当获取音频专辑封面成功，err为undefined，data为获取到的PixelMap实例，否则为错误对象。 |
 
 **错误码：**
 
@@ -75,28 +56,6 @@ fetchAlbumCover(callback: AsyncCallback<image.PixelMap>): void
 | --- | --- |
 | [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by callback. |
 | [5400106](../errorcode-media.md#5400106-不支持的规格) | Unsupported format. Returned by callback. |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { image } from '@kit.ImageKit';
-import { media } from '@kit.MediaKit';
-
-async function test() {
-  // 创建AVMetadataExtractor对象。
-  let avMetadataExtractor: media.AVMetadataExtractor = await media.createAVMetadataExtractor();
-  let pixel_map: image.PixelMap | undefined = undefined;
-
-  avMetadataExtractor.fetchAlbumCover((error: BusinessError, pixelMap: image.PixelMap) => {
-    if (error) {
-      console.error(`Failed to fetch AlbumCover, code: ${error.code} message: ${error.message}`);
-      return;
-    }
-    pixel_map = pixelMap;
-  });
-}
-```
 
 ## fetchAlbumCover
 
@@ -114,7 +73,7 @@ fetchAlbumCover(): Promise<image.PixelMap>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;image.PixelMap&gt; | Promise对象。异步返回专辑封面。 |
+| Promise&lt;[image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)&gt; | Promise对象。异步返回专辑封面。 |
 
 **错误码：**
 
@@ -122,26 +81,6 @@ fetchAlbumCover(): Promise<image.PixelMap>
 | --- | --- |
 | [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Returned by promise. |
 | [5400106](../errorcode-media.md#5400106-不支持的规格) | Unsupported format. Returned by promise. |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { image } from '@kit.ImageKit';
-import { media } from '@kit.MediaKit';
-
-async function test() {
-  // 创建AVMetadataExtractor对象。
-  let avMetadataExtractor: media.AVMetadataExtractor = await media.createAVMetadataExtractor();
-  let pixel_map: image.PixelMap | undefined = undefined;
-
-  avMetadataExtractor.fetchAlbumCover().then((pixelMap: image.PixelMap) => {
-    pixel_map = pixelMap;
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to fetch AlbumCover, code:${error.code} message:${error.message}`);
-  });
-}
-```
 
 ## fetchFrameByTime
 
@@ -167,7 +106,7 @@ fetchFrameByTime(timeUs: number, options: AVImageQueryOptions, param: PixelMapPa
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;image.PixelMap&gt; | Promise对象，返回视频缩略图对象。 |
+| Promise&lt;[image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)&gt; | Promise对象，返回视频缩略图对象。 |
 
 **错误码：**
 
@@ -177,75 +116,6 @@ fetchFrameByTime(timeUs: number, options: AVImageQueryOptions, param: PixelMapPa
 | [5400106](../errorcode-media.md#5400106-不支持的规格) | Unsupported format. Returned by promise. |
 | [5400108](../errorcode-media.md#5400108-参数超过取值范围) | Parameter check failed. Returned by promise. |
 | [5411012](../errorcode-media.md#5411012-http明文拦截导致请求不受支持) | Http cleartext traffic is not permitted.<br>**适用版本：** 23+ |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { image } from '@kit.ImageKit';
-import { media } from '@kit.MediaKit';
-
-let avImageGenerator: media.AVImageGenerator | undefined = undefined;
-let pixel_map: image.PixelMap | undefined = undefined;
-
-// 初始化入参。
-let timeUs: number = 0;
-
-let queryOption: media.AVImageQueryOptions = media.AVImageQueryOptions.AV_IMAGE_QUERY_NEXT_SYNC;
-
-let param: media.PixelMapParams = {
-  width: 300,
-  height: 300,
-};
-
-// 获取缩略图。
-media.createAVImageGenerator(async (err: BusinessError, generator: media.AVImageGenerator) => {
-  if (generator) {
-    avImageGenerator = generator;
-    console.info(`Succeeded in creating AVImageGenerator`);
-    let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-    generator.fdSrc = await context.resourceManager.getRawFd('H264_AAC.mp4');
-    avImageGenerator.fetchFrameByTime(timeUs, queryOption, param).then((pixelMap: image.PixelMap) => {
-      pixel_map = pixelMap;
-    }).catch((error: BusinessError) => {
-      console.error(`Failed to fetch FrameByTime, code: ${error.code}, message: ${error.message}`);
-    });
-  } else {
-    console.error(`Failed to create AVImageGenerator, code: ${err.code}, message: ${err.message}`);
-  }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { image } from '@kit.ImageKit';
-import { media } from '@kit.MediaKit';
-
-let avMetadataExtractor: media.AVMetadataExtractor | undefined = undefined;
-let pixelMap: image.PixelMap | undefined = undefined;
-
-// 初始化入参。
-let timeUs: number = 0;
-let queryOption: media.AVImageQueryOptions = media.AVImageQueryOptions.AV_IMAGE_QUERY_PREVIOUS_SYNC;
-let param: media.PixelMapParams = {
-  width: 300,
-  height: 300
-};
-// 获取缩略图。
-media.createAVMetadataExtractor((error: BusinessError, extractor: media.AVMetadataExtractor) => {
-  if (extractor) {
-    avMetadataExtractor = extractor;
-    console.info('Succeeded in creating AVMetadataExtractor');
-    avMetadataExtractor.fetchFrameByTime(timeUs, queryOption, param).then((fetchedPixelMap: image.PixelMap) => {
-      pixelMap = fetchedPixelMap;
-    }).catch((error: BusinessError) => {
-      console.error(`Failed to fetch FrameByTime, code:${error.code} message:${error.message}`);
-    });
-  } else {
-    console.error(`Failed to create AVMetadataExtractor, code: ${error.code} message: ${error.message}`);
-  }
-});
-```
 
 ## fetchFrameByTimeWithTimeout
 
@@ -275,7 +145,7 @@ fetchFrameByTimeWithTimeout(timeUs: number, options: AVImageQueryOptions, param:
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;image.PixelMap \| undefined&gt; | Promise对象，返回视频缩略图对象。 |
+| Promise&lt;[image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) \| undefined&gt; | Promise对象，返回视频缩略图对象。 |
 
 **错误码：**
 
@@ -286,40 +156,6 @@ fetchFrameByTimeWithTimeout(timeUs: number, options: AVImageQueryOptions, param:
 | [5400106](../errorcode-media.md#5400106-不支持的规格) | Unsupported format. Returned by promise. |
 | [5400108](../errorcode-media.md#5400108-参数超过取值范围) | Parameter check failed. Returned by promise. |
 | [5411012](../errorcode-media.md#5411012-http明文拦截导致请求不受支持) | Http cleartext traffic is not permitted. |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { image } from '@kit.ImageKit';
-import { media } from '@kit.MediaKit';
-
-let avMetadataExtractor: media.AVMetadataExtractor | undefined = undefined;
-let pixelMap: image.PixelMap | undefined = undefined;
-
-// 初始化入参。
-let timeUs: number = 0;
-let timeoutMs: number = 3000;
-let queryOption: media.AVImageQueryOptions = media.AVImageQueryOptions.AV_IMAGE_QUERY_PREVIOUS_SYNC;
-let param: media.PixelMapParams = {
-  width: 300,
-  height: 300
-};
-// 获取缩略图。
-media.createAVMetadataExtractor((error: BusinessError, extractor: media.AVMetadataExtractor) => {
-  if (extractor) {
-    avMetadataExtractor = extractor;
-    console.info('Succeeded in creating AVMetadataExtractor');
-    avMetadataExtractor.fetchFrameByTimeWithTimeout(timeUs, queryOption, param, timeoutMs).then((fetchedPixelMap: image.PixelMap | undefined) => {
-      pixelMap = fetchedPixelMap;
-    }).catch((error: BusinessError) => {
-      console.error(`Failed to fetch FrameByTime, code: ${error.code}, message: ${error.message}`);
-    });
-  } else {
-    console.error(`Failed to create AVMetadataExtractor, code: ${error.code}, message: ${error.message}`);
-  }
-});
-```
 
 ## fetchFramesByTimes
 
@@ -361,37 +197,6 @@ fetchFramesByTimes(timesUs: number[], queryOption: AVImageQueryOptions, param: P
 | [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. |
 | [5400108](../errorcode-media.md#5400108-参数超过取值范围) | Parameter check failed. e.g. The size of timesUs is larger than 4096. |
 | [5411012](../errorcode-media.md#5411012-http明文拦截导致请求不受支持) | Http cleartext not permitted. |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { image } from '@kit.ImageKit';
-import { media } from '@kit.MediaKit';
-
-async function fetchFramesByTimesDemo() {
-  // 初始化入参。
-  let timesUs: number[] = [0];
-  let queryOption: media.AVImageQueryOptions = media.AVImageQueryOptions.AV_IMAGE_QUERY_PREVIOUS_SYNC;
-  let param: media.PixelMapParams = {
-    width: 300,
-    height: 300
-  };
-  // 获取缩略图。
-  let avMetadataExtractor = await media.createAVMetadataExtractor();
-  if (avMetadataExtractor) {
-    console.info('Succeeded in creating AVMetadataExtractor');
-    avMetadataExtractor.fetchFramesByTimes(timesUs, queryOption, param, (frameInfo: media.FrameInfo, err: BusinessError) => {
-      if (err) {
-        console.info(`fetchFramesByTimes callback failed, code: ${err.code} message: ${err.message}`);
-        return;
-      }
-      if (frameInfo != undefined && frameInfo.image != undefined) {
-        this.pixelMap = frameInfo.image;
-      }});
-  }
-}
-```
 
 ## fetchFramesByTimesWithTimeout
 
@@ -437,38 +242,6 @@ fetchFramesByTimesWithTimeout(timesUs: number[], queryOption: AVImageQueryOption
 | [5400108](../errorcode-media.md#5400108-参数超过取值范围) | Parameter check failed. e.g. The size of timesUs is larger than 4096. |
 | [5411012](../errorcode-media.md#5411012-http明文拦截导致请求不受支持) | Http cleartext not permitted. |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { image } from '@kit.ImageKit';
-import { media } from '@kit.MediaKit';
-
-async function fetchFramesByTimesDemo() {
-  // 初始化入参。
-  let timesUs: number[] = [0];
-  let timeoutMs: number = 3000;
-  let queryOption: media.AVImageQueryOptions = media.AVImageQueryOptions.AV_IMAGE_QUERY_PREVIOUS_SYNC;
-  let param: media.PixelMapParams = {
-    width: 300,
-    height: 300
-  };
-  // 获取缩略图。
-  let avMetadataExtractor = await media.createAVMetadataExtractor();
-  if (avMetadataExtractor) {
-    console.info('Succeeded in creating AVMetadataExtractor');
-    avMetadataExtractor.fetchFramesByTimesWithTimeout(timesUs, queryOption, param, timeoutMs, (frameInfo: media.FrameInfo, err: BusinessError) => {
-      if (err) {
-        console.error(`fetchFramesByTimes callback failed, code: ${err.code}, message: ${err.message}`);
-        return;
-      }
-      if (frameInfo != undefined && frameInfo.image != undefined) {
-        this.pixelMap = frameInfo.image;
-      }});
-  }
-}
-```
-
 ## fetchMetadata
 
 ```TypeScript
@@ -485,7 +258,7 @@ fetchMetadata(callback: AsyncCallback<AVMetadata>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;AVMetadata&gt; | 是 | 回调函数。当获取媒体元数据成功，err为undefined，data为获取到的AVMetadata实例，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AVMetadata](arkts-media-media-avmetadata-i.md)&gt; | 是 | 回调函数。当获取媒体元数据成功，err为undefined，data为获取到的AVMetadata实例，否则为错误对象。 |
 
 **错误码：**
 
@@ -494,25 +267,6 @@ fetchMetadata(callback: AsyncCallback<AVMetadata>): void
 | [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Returned by callback. |
 | [5400106](../errorcode-media.md#5400106-不支持的规格) | Unsupported format. Returned by callback. |
 | [5411012](../errorcode-media.md#5411012-http明文拦截导致请求不受支持) | Http cleartext traffic is not permitted.<br>**适用版本：** 23+ |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { media } from '@kit.MediaKit';
-
-async function test() {
-  // 创建AVMetadataExtractor对象。
-  let avMetadataExtractor: media.AVMetadataExtractor = await media.createAVMetadataExtractor();
-  avMetadataExtractor.fetchMetadata((error: BusinessError, metadata: media.AVMetadata) => {
-    if (error) {
-      console.error(`Failed to fetch Metadata, code: ${error.code} message: ${error.message}`);
-      return;
-    }
-    console.info(`Succeeded in fetching Metadata, genre: ${metadata.genre}`);
-  });
-}
-```
 
 ## fetchMetadata
 
@@ -530,7 +284,7 @@ fetchMetadata(): Promise<AVMetadata>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;AVMetadata&gt; | Promise对象。异步返回音视频元数据对象（AVMetadata）。 |
+| Promise&lt;[AVMetadata](arkts-media-media-avmetadata-i.md)&gt; | Promise对象。异步返回音视频元数据对象（AVMetadata）。 |
 
 **错误码：**
 
@@ -539,23 +293,6 @@ fetchMetadata(): Promise<AVMetadata>
 | [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Returned by promise. |
 | [5400106](../errorcode-media.md#5400106-不支持的规格) | Unsupported format. Returned by promise. |
 | [5411012](../errorcode-media.md#5411012-http明文拦截导致请求不受支持) | Http cleartext traffic is not permitted.<br>**适用版本：** 23+ |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { media } from '@kit.MediaKit';
-
-async function test() {
-  // 创建AVMetadataExtractor对象。
-  let avMetadataExtractor: media.AVMetadataExtractor = await media.createAVMetadataExtractor();
-  avMetadataExtractor.fetchMetadata().then((metadata: media.AVMetadata) => {
-    console.info(`Succeeded in fetching Metadata, genre: ${metadata.genre}`);
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to fetch Metadata, code: ${error.code} message: ${error.message}`);
-  });
-}
-```
 
 ## fetchMetadataWithTimeout
 
@@ -581,7 +318,7 @@ fetchMetadataWithTimeout(timeoutMs: number): Promise<AVMetadata | undefined>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;AVMetadata \| undefined&gt; | Promise对象，异步返回音视频元数据对象（AVMetadata）。 |
+| Promise&lt;[AVMetadata](arkts-media-media-avmetadata-i.md) \| undefined&gt; | Promise对象，异步返回音视频元数据对象（AVMetadata）。 |
 
 **错误码：**
 
@@ -592,26 +329,6 @@ fetchMetadataWithTimeout(timeoutMs: number): Promise<AVMetadata | undefined>
 | [5400106](../errorcode-media.md#5400106-不支持的规格) | Unsupported format. Returned by promise. |
 | [5400108](../errorcode-media.md#5400108-参数超过取值范围) | Parameter check failed. Returned by promise. |
 | [5411012](../errorcode-media.md#5411012-http明文拦截导致请求不受支持) | Http cleartext traffic is not permitted. |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { media } from '@kit.MediaKit';
-
-async function test() {
-  // 创建AVMetadataExtractor对象。
-  let avMetadataExtractor: media.AVMetadataExtractor = await media.createAVMetadataExtractor();
-  let timeoutMs = 3000;
-  avMetadataExtractor.fetchMetadataWithTimeout(timeoutMs).then((metadata: media.AVMetadata | undefined) => {
-    if (metadata) {
-      console.info(`Succeeded in fetching Metadata, genre: ${metadata.genre}`);
-    }
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to fetch Metadata, code: ${error.code}, message: ${error.message}`);
-  });
-}
-```
 
 ## release
 
@@ -637,102 +354,6 @@ release(callback: AsyncCallback<void>): void
 | --- | --- |
 | [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Returned by callback. |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// asyncallback.
-videoRecorder.release((err: BusinessError) => {
-  if (err == null) {
-    console.info('release videorecorder success');
-  } else {
-    console.error('release videorecorder failed and error is ' + err.message);
-  }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { media } from '@kit.MediaKit';
-
-let avImageGenerator: media.AVImageGenerator | undefined = undefined;
-
-// 释放资源。
-media.createAVImageGenerator((err: BusinessError, generator: media.AVImageGenerator) => {
-  if (generator) {
-    avImageGenerator = generator;
-    console.info(`Succeeded in creating AVImageGenerator`);
-    avImageGenerator.release((error: BusinessError) => {
-      if (error) {
-        console.error(`Failed to release, code: ${error.code}, message: ${error.message}`);
-        return;
-      }
-      console.info(`Succeeded in releasing`);
-    });
-  } else {
-    console.error(`Failed to create AVImageGenerator, code: ${err.code}, message: ${err.message}`);
-  }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { media } from '@kit.MediaKit';
-
-async function test() {
-  // 创建AVMetadataExtractor对象。
-  let avMetadataExtractor: media.AVMetadataExtractor = await media.createAVMetadataExtractor();
-  avMetadataExtractor.release((error: BusinessError) => {
-    if (error) {
-      console.error(`Failed to release, code: ${error.code} message: ${error.message}`);
-      return;
-    }
-    console.info(`Succeeded in releasing.`);
-  });
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function test(){
-  let avPlayer = await media.createAVPlayer();
-  // 此处仅为示意，实际开发中需要在stateChange事件成功触发除released以外的状态才能调用。
-  avPlayer.release((err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to release. Code:${err.code},message:${err.message}`);
-    } else {
-      console.info('Succeeded in releasing');
-    }
-  });
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-avRecorder.release((err: BusinessError) => {
-  if (err) {
-    console.error(`Failed to release AVRecorder and error is: Code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info('Succeeded in releasing AVRecorder');
-  }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-videoPlayer.release((err: BusinessError) => {
-  if (err) {
-    console.error('Failed to release!');
-  } else {
-    console.info('Succeeded in releasing!');
-  }
-});
-```
-
 ## release
 
 ```TypeScript
@@ -757,129 +378,6 @@ release(): Promise<void>
 | --- | --- |
 | [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Returned by promise. |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// promise.
-videoRecorder.release().then(() => {
-  console.info('release videorecorder success');
-}).catch((err: BusinessError) => {
-  console.error('release videorecorder failed and catch error is ' + err.message);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { media } from '@kit.MediaKit';
-
-let avImageGenerator: media.AVImageGenerator | undefined = undefined;
-
-// 释放资源。
-media.createAVImageGenerator((err: BusinessError, generator: media.AVImageGenerator) => {
-  if (generator) {
-    avImageGenerator = generator;
-    console.info(`Succeeded in creating AVImageGenerator`);
-    avImageGenerator.release().then(() => {
-      console.info(`Succeeded in releasing.`);
-    }).catch((error: BusinessError) => {
-      console.error(`Failed to release, code: ${error.code}, message: ${error.message}`);
-    });
-  } else {
-    console.error(`Failed to create AVImageGenerator, code: ${err.code}, message: ${err.message}`);
-  }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { media } from '@kit.MediaKit';
-
-async function test() {
-  // 创建AVMetadataExtractor对象。
-  let avMetadataExtractor: media.AVMetadataExtractor = await media.createAVMetadataExtractor();
-  if (avMetadataExtractor) {
-    avMetadataExtractor.release().then(() => {
-      console.info(`Succeeded in releasing.`);
-    }).catch((error: BusinessError) => {
-      console.error(`Failed to release, code: ${error.code} message: ${error.message}`);
-    });
-  }
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function test(){
-  let avPlayer = await media.createAVPlayer();
-  // 此处仅为示意，实际开发中需要在stateChange事件成功触发除released以外的状态才能调用。
-  avPlayer.release().then(() => {
-    console.info('Succeeded in releasing');
-  }, (err: BusinessError) => {
-    console.error(`Failed to release. Code:${err.code},message:${err.message}`);
-  });
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-avRecorder.release().then(() => {
-  console.info('Succeeded in releasing AVRecorder');
-}).catch((err: Error) => {
-  let error: BusinessError = err as BusinessError;
-  console.error(`Failed to release AVRecorder and error is: Code: ${error.code}, message: ${error.message}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { media } from '@kit.MediaKit';
-
-async function testRelease() {
-  // 创建录屏实例。
-  let avScreenCaptureRecorder = await media.createAVScreenCaptureRecorder();
-
-  // 其余流程。
-
-  // 调用release方法。
-  if (avScreenCaptureRecorder) {
-    avScreenCaptureRecorder.release().then(() => {
-      console.info('Succeeded in releasing avScreenCaptureRecorder');
-    }).catch((err: BusinessError) => {
-      console.error(`Failed to release avScreenCaptureRecorder. Code: ${err.code}, message: ${err.message}`);
-    });
-  }
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { media } from '@kit.MediaKit';
-
-async function test() {
-  // 创建转码实例。
-  let avTranscoder = await media.createAVTranscoder();
-  avTranscoder.release().then(() => {
-    console.info('release AVTranscoder success');
-  }).catch((err: BusinessError) => {
-    console.error('release AVTranscoder failed and catch error is ' + err.message);
-  });
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-videoPlayer.release().then(() => {
-  console.info('Succeeded in releasing');
-}).catch((error: BusinessError) => {
-  console.error(`video catchCallback, error:${error}`);
-});
-```
-
 ## setUrlSource
 
 ```TypeScript
@@ -898,29 +396,6 @@ setUrlSource(url: string, headers?: Record<string, string>): void
 | --- | --- | --- | --- |
 | url | string | 是 | 媒体资源URL。 1. 支持的视频格式包括：mp4、mpeg-ts、mkv。 2. 支持的音频格式包括：m4a、aac、mp3、ogg、wav、flac、amr。   **支持路径示例**： 1. http网络播放：`http://xx`。 2. https网络播放：`https://xx`。   **说明：** 不支持设置HLS/Dash、直播资源。 |
 | headers | Record&lt;string, string&gt; | 否 | 支持访问网络资源HttpHeader自定义。默认为空。 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { media } from '@kit.MediaKit';
-
-let avMetadataExtractor: media.AVMetadataExtractor | undefined = undefined;
-
-media.createAVMetadataExtractor((error: BusinessError, extractor: media.AVMetadataExtractor) => {
-  if (extractor) {
-    avMetadataExtractor = extractor;
-    console.info('Succeeded in creating AVMetadataExtractor');
-    let url = "http://xx";
-    let headers: Record<string, string> = {
-      "User-Agent": "User-Agent-Value"
-    };
-    avMetadataExtractor.setUrlSource(url, headers);
-  } else {
-    console.error(`Failed to create AVMetadataExtractor, code: ${error.code} message: ${error.message}`);
-  }
-});
-```
 
 ## dataSrc
 

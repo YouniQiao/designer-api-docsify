@@ -68,7 +68,7 @@ state: ProfileConnectionState
 
 Profile state value
 
-**Type:** ProfileConnectionState
+**Type:** [ProfileConnectionState](arkts-connectivity-baseprofile-profileconnectionstate-t.md)
 
 **Since:** 10
 

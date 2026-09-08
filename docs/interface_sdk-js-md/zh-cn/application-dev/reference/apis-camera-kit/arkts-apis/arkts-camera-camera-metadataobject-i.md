@@ -20,7 +20,7 @@ readonly boundingBox: Rect
 
 metadata 区域框。
 
-**类型：** Rect
+**类型：** [Rect](arkts-camera-camera-rect-i.md)
 
 **起始版本：** 10
 

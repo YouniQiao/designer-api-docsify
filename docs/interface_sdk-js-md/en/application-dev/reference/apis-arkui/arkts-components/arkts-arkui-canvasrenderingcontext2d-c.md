@@ -124,7 +124,7 @@ Creates a **CanvasRenderingContext2D** object, allowing for initial configuratio
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | settings | [RenderingContextSettings](arkts-arkui-renderingcontextsettings-c.md) | No | Settings of the **CanvasRenderingContext2D** object. For details, see [RenderingContextSettings](arkts-arkui-renderingcontextsettings-c.md). If the value is **undefined** or **null**, the default value of [RenderingContextSettings](arkts-arkui-renderingcontextsettings-c.md) is used. |
-| unit | LengthMetricsUnit | No | Unit mode of the **CanvasRenderingContext2D** object. The value cannot be dynamically changed once set. Invalid values **undefined**, **NaN** and **Infinity** are treated as the default value. Default value: **DEFAULT**. |
+| unit | [LengthMetricsUnit](../arkts-apis/arkts-arkui-lengthmetricsunit-t.md) | No | Unit mode of the **CanvasRenderingContext2D** object. The value cannot be dynamically changed once set. Invalid values **undefined**, **NaN** and **Infinity** are treated as the default value. Default value: **DEFAULT**. |
 
 **Examples**
 
@@ -223,7 +223,7 @@ Unsubscribes from the event when a **CanvasRenderingContext2D** object is bound 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'onAttach' | Yes | Event type, which is **'onAttach'** in this case.    **undefined** and **null** are treated as invalid values. |
-| callback | Callback&lt;void&gt; | No | If this parameter is left empty, all callbacks triggered after the **CanvasRenderingContext2D** object is bound to the **Canvas** component are unsubscribed.If this parameter is not left empty, the callback corresponding to the bind event is unsubscribed.   **undefined** and **null** are treated as invalid values. |
+| callback | [Callback](arkts-arkui-callback-i.md)&lt;void&gt; | No | If this parameter is left empty, all callbacks triggered after the **CanvasRenderingContext2D** object is bound to the **Canvas** component are unsubscribed.If this parameter is not left empty, the callback corresponding to the bind event is unsubscribed.   **undefined** and **null** are treated as invalid values. |
 
 **Error codes:**
 
@@ -252,7 +252,7 @@ Unsubscribes from the event when a **CanvasRenderingContext2D** object is unboun
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'onDetach' | Yes | Event type, which is **'onDetach'** in this case.    **undefined** and **null** are treated as invalid values. |
-| callback | Callback&lt;void&gt; | No | If this parameter is left empty, all callbacks triggered after the **CanvasRenderingContext2D** object is unbound from the **Canvas** component are unsubscribed.If this parameter is not left empty, the callback corresponding to the unbind event is unsubscribed.   **undefined** and **null** are treated as invalid values. |
+| callback | [Callback](arkts-arkui-callback-i.md)&lt;void&gt; | No | If this parameter is left empty, all callbacks triggered after the **CanvasRenderingContext2D** object is unbound from the **Canvas** component are unsubscribed.If this parameter is not left empty, the callback corresponding to the unbind event is unsubscribed.   **undefined** and **null** are treated as invalid values. |
 
 **Error codes:**
 
@@ -396,7 +396,7 @@ Subscribes to the event when a **CanvasRenderingContext2D** object is bound to a
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'onAttach' | Yes | Event type, which is **'onAttach'** in this case.    **undefined** and **null** are treated as invalid values. |
-| callback | Callback&lt;void&gt; | Yes | Callback triggered when the **CanvasRenderingContext2D** object is bound to the **Canvas** component.   **undefined** and **null** are treated as invalid values. |
+| callback | [Callback](arkts-arkui-callback-i.md)&lt;void&gt; | Yes | Callback triggered when the **CanvasRenderingContext2D** object is bound to the **Canvas** component.   **undefined** and **null** are treated as invalid values. |
 
 **Error codes:**
 
@@ -438,7 +438,7 @@ Subscribes to the event when a **CanvasRenderingContext2D** object is unbound fr
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'onDetach' | Yes | Event type, which is **'onDetach'** in this case.    **undefined** and **null** are treated as invalid values. |
-| callback | Callback&lt;void&gt; | Yes | Callback triggered when the **CanvasRenderingContext2D** object is unbound from the **Canvas** component.   **undefined** and **null** are treated as invalid values. |
+| callback | [Callback](arkts-arkui-callback-i.md)&lt;void&gt; | Yes | Callback triggered when the **CanvasRenderingContext2D** object is unbound from the **Canvas** component.   **undefined** and **null** are treated as invalid values. |
 
 **Error codes:**
 
@@ -638,35 +638,6 @@ struct CanvasExample {
 }
 ```
 
-```TypeScript
-// xxx.ets
-@Entry
-@Component
-struct ToDataURL {
-  private settings: RenderingContextSettings = new RenderingContextSettings(true);
-  private context: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings);
-  private offCanvas: OffscreenCanvas = new OffscreenCanvas(100, 100);
-  @State dataURL: string = "";
-
-  build() {
-    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
-      Canvas(this.context)
-        .width(100)
-        .height(100)
-        .onReady(() => {
-          let offContext = this.offCanvas.getContext("2d", this.settings)
-          offContext.fillRect(0, 0, 100, 100)
-          this.dataURL = offContext.toDataURL()
-        })
-      Text(this.dataURL)
-    }
-    .width('100%')
-    .height('100%')
-    .backgroundColor('#ffff00')
-  }
-}
-```
-
 ## canvas
 
 ```TypeScript
@@ -707,40 +678,6 @@ Default unit: vp
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Examples**
-
-```TypeScript
-// xxx.ets
-@Entry
-@Component
-struct OffscreenCanvasPage {
-  private settings: RenderingContextSettings = new RenderingContextSettings(true);
-  private context: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings);
-  private offCanvas: OffscreenCanvas = new OffscreenCanvas(200, 300);
-
-  build() {
-    Flex({ direction: FlexDirection.Row, alignItems: ItemAlign.Start, justifyContent: FlexAlign.Start }) {
-      Column() {
-        Canvas(this.context)
-          .width('100%')
-          .height('100%')
-          .borderWidth(5)
-          .borderColor('#057D02')
-          .backgroundColor('#FFFFFF')
-          .onReady(() => {
-            let offContext = this.offCanvas.getContext("2d", this.settings)
-            offContext.fillStyle = '#CDCDCD'
-            offContext.fillRect(0, 0, 100, this.offCanvas.height)
-            let image = this.offCanvas.transferToImageBitmap()
-            this.context.setTransform(1, 0, 0, 1, 50, 200)
-            this.context.transferFromImageBitmap(image)
-          })
-      }
-    }.width('100%').height('100%')
-  }
-}
-```
-
 ## width
 
 ```TypeScript
@@ -760,37 +697,3 @@ Default unit: vp
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-@Entry
-@Component
-struct OffscreenCanvasPage {
-  private settings: RenderingContextSettings = new RenderingContextSettings(true);
-  private context: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings);
-  private offCanvas: OffscreenCanvas = new OffscreenCanvas(200, 300);
-
-  build() {
-    Flex({ direction: FlexDirection.Row, alignItems: ItemAlign.Start, justifyContent: FlexAlign.Start }) {
-      Column() {
-        Canvas(this.context)
-          .width('100%')
-          .height('100%')
-          .borderWidth(5)
-          .borderColor('#057D02')
-          .backgroundColor('#FFFFFF')
-          .onReady(() => {
-            let offContext = this.offCanvas.getContext("2d", this.settings)
-            offContext.fillStyle = '#CDCDCD'
-            offContext.fillRect(0, 0, this.offCanvas.width, 150)
-            let image = this.offCanvas.transferToImageBitmap()
-            this.context.setTransform(1, 0, 0, 1, 50, 200)
-            this.context.transferFromImageBitmap(image)
-          })
-      }
-    }.width('100%').height('100%')
-  }
-}
-```

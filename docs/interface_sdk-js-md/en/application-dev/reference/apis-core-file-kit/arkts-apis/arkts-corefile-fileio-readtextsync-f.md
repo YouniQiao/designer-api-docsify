@@ -40,18 +40,3 @@ Reads the text content of a file. This API returns the result synchronously.
 | Type | Description |
 | --- | --- |
 | string | File content read. |
-
-**Examples**
-
-```TypeScript
-let filePath = pathDir + "/test.txt";
-class Option {
-  length: number = 4096;
-  position: number = 0;
-  encoding: string = 'utf-8';
-}
-let option = new Option();
-option.position = 1;
-option.length = 3;
-let str = fileio.readTextSync(filePath, option);
-```

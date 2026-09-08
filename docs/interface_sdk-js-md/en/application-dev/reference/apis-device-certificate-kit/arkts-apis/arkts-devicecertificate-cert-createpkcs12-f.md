@@ -39,7 +39,7 @@ Creates P12. This API uses a promise to return the result.
 | --- | --- |
 | [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
 | [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes:  1. Memory copy failed;  2. A null pointer occurs inside the system;  3. Failed to obtain the native object or convert parameters. |
-| [19020003](../errorcode-cert.md#19020003-parameter-check-failure) | Parameter check failed. Possible causes:  1. The password is too short or too number;  2. The private key does not match the certificate;  3. Invalid encryption algorithm parameters. |
+| [19020003](../errorcode-cert.md#19020003-parameter-check-failure) | Parameter check failed. Possible causes:  1. The password is too short or too long;  2. The private key does not match the certificate;  3. Invalid encryption algorithm parameters. |
 | [19030001](../errorcode-cert.md#19030001-failed-to-invoke-the-third-party-cryptographic-api) | Crypto operation error. |
 
 **Examples**

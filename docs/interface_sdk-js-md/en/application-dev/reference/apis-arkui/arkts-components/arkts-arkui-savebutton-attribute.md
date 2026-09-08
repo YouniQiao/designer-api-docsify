@@ -103,7 +103,7 @@ Sets the icon of the **SaveButton** component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| icon | Resource | Yes | Custom icon resource information. Only data sources of the Resource type are supported. Images in the following formats are supported: PNG, JPG, JPEG, BMP, SVG, WebP, GIF, and HEIF. For details about the supported image formats, see Image. If the resource is not an image resource or the format is not supported, the icon is displayed as blank. Since API version 26.0.0, data sources of the Resource type in Symbol format are supported. If the app does not have the **ohos.permission.CUSTOMIZE_SAVE_BUTTON** permission, the custom icon does not take effect and the save button uses the default style. |
+| icon | [Resource](../arkts-apis/arkts-arkui-resource-t.md) | Yes | Custom icon resource information. Only data sources of the Resource type are supported. Images in the following formats are supported: PNG, JPG, JPEG, BMP, SVG, WebP, GIF, and HEIF. For details about the supported image formats, see Image. If the resource is not an image resource or the format is not supported, the icon is displayed as blank. Since API version 26.0.0, data sources of the Resource type in Symbol format are supported. If the app does not have the **ohos.permission.CUSTOMIZE_SAVE_BUTTON** permission, the custom icon does not take effect and the save button uses the default style. |
 
 ## setText
 
@@ -127,7 +127,7 @@ Sets the text of the **SaveButton** component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| text | string \| Resource | Yes | Custom text, used to replace the default system text for business-specific scenarios. When a string is passed, the text content is directly used. When a Resource is passed, multi- language adaptation is implemented via resource management. If the app does not have the **ohos.permission.CUSTOMIZE_SAVE_BUTTON** permission, this setting does not take effect and the save button uses the default style. |
+| text | string \| [Resource](../arkts-apis/arkts-arkui-resource-t.md) | Yes | Custom text, used to replace the default system text for business-specific scenarios. When a string is passed, the text content is directly used. When a Resource is passed, multi- language adaptation is implemented via resource management. If the app does not have the **ohos.permission.CUSTOMIZE_SAVE_BUTTON** permission, this setting does not take effect and the save button uses the default style. |
 
 ## stateEffect
 
@@ -179,7 +179,7 @@ style icon resource (i.e., **\$r('sys.symbol.*xxx*')**).
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fontWeight | number \| FontWeight \| string \| Resource | Yes | Symbol icon font weight of the save button. For the number type: The value range is [100, 900] with an increment of 100. Larger values result in bolder font weight. For the string type: The value can be a numeric string of the number type (for example, **"400"**) or a lowercase string of the enumerated value of FontWeight (for example, **"normal"**). Default value: **FontWeight.Normal** (the corresponding value is **400**) If the app does not have the **ohos.permission.CUSTOMIZE_SAVE_BUTTON** permission, the setting does not take effect. |
+| fontWeight | number \| [FontWeight](../arkts-apis/arkts-arkui-fontweight-e.md) \| string \| [Resource](../arkts-apis/arkts-arkui-resource-t.md) | Yes | Symbol icon font weight of the save button. For the number type: The value range is [100, 900] with an increment of 100. Larger values result in bolder font weight. For the string type: The value can be a numeric string of the number type (for example, **"400"**) or a lowercase string of the enumerated value of FontWeight (for example, **"normal"**). Default value: **FontWeight.Normal** (the corresponding value is **400**) If the app does not have the **ohos.permission.CUSTOMIZE_SAVE_BUTTON** permission, the setting does not take effect. |
 
 ## symbolIconColor
 

@@ -36,11 +36,3 @@ Closes a file or directory. This API returns the result synchronously.
 | 13900025 | No space left on device |
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
-
-**Examples**
-
-```TypeScript
-let filePath = pathDir + "/test.txt";
-let file = fileIo.openSync(filePath);
-fileIo.closeSync(file);
-```

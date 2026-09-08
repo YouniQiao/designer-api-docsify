@@ -32,7 +32,7 @@ create a JavaScript Gatt client device instance.
 
 | Type | Description |
 | --- | --- |
-| GattClientDevice | Returns a JavaScript Gatt client device instance { |
+| [GattClientDevice](arkts-connectivity-ble-gattclientdevice-i.md) | Returns a JavaScript Gatt client device instance { |
 
 **Error codes:**
 

@@ -38,7 +38,7 @@ backgroundBlurStyle?: BlurStyle
 Background blur style of the toast.Default value: **BlurStyle.COMPONENT_ULTRA_THICK**  
 **NOTE：**Setting this parameter to **BlurStyle.NONE** disables the background blur. When **backgroundBlurStyle** is set to a value other than **NONE**, do not set **backgroundColor**. If you do, the color display may not produce the expected visual effect.
 
-**Type:** BlurStyle
+**Type:** [BlurStyle](../arkts-components/arkts-arkui-blurstyle-e.md)
 
 **Since:** 12
 
@@ -149,7 +149,7 @@ message: string | Resource
 Text to display.   
 **NOTE：**The default font is **'Harmony Sans'**. Other fonts are not supported.
 
-**Type:** string \| Resource
+**Type:** string \| [Resource](arkts-arkui-resource-t.md)
 
 **Since:** 9
 

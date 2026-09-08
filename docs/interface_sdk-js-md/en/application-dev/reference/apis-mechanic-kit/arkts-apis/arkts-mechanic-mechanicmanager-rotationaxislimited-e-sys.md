@@ -1,6 +1,6 @@
 # RotationAxisLimited (System API)
 
-Enumerates the rotation axis limit states. @enum { number }
+Enumerates the rotation axis limit states. @enum { int }
 
 **Since:** 20
 

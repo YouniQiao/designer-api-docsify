@@ -30,7 +30,7 @@ addRoute(routes: RouteInfo[], vpnId?: string): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| routes | RouteInfo[] | 是 | VPN接口的路由数组。 |
+| routes | [RouteInfo](arkts-network-vpnextension-routeinfo-t.md)[] | 是 | VPN接口的路由数组。 |
 | vpnId | string | 否 | vpn唯一标识 |
 
 **返回值：**
@@ -68,7 +68,7 @@ create(config: VpnConfig): Promise<number>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| config | VpnConfig | 是 | 指定VPN网络的配置信息。 |
+| config | [VpnConfig](arkts-network-vpnextension-vpnconfig-i.md) | 是 | 指定VPN网络的配置信息。 |
 
 **返回值：**
 
@@ -184,7 +184,7 @@ delRoute(routes: RouteInfo[], vpnId?: string): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| routes | RouteInfo[] | 是 | VPN接口的路由数组。 |
+| routes | [RouteInfo](arkts-network-vpnextension-routeinfo-t.md)[] | 是 | VPN接口的路由数组。 |
 | vpnId | string | 否 | vpn唯一标识。 |
 
 **返回值：**

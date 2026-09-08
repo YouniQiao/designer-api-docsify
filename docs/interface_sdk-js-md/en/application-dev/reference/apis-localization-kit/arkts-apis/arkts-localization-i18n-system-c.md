@@ -89,13 +89,6 @@ try {
 }
 ```
 
-```TypeScript
-import { i18n } from '@kit.LocalizationKit';
-
-let countryName: string = i18n.getDisplayCountry('zh-CN', 'en-GB', true); // countryName = 'China'
-countryName = i18n.getDisplayCountry('zh-CN', 'en-GB'); // countryName = 'China'
-```
-
 ## getDisplayLanguage
 
 ```TypeScript
@@ -144,13 +137,6 @@ try {
   let err: BusinessError = error as BusinessError;
   console.error(`call System.getDisplayLanguage failed, error code: ${err.code}, message: ${err.message}.`);
 }
-```
-
-```TypeScript
-import { i18n } from '@kit.LocalizationKit';
-
-let languageName: string = i18n.getDisplayLanguage('zh', 'en-GB', true); // languageName = 'Chinese'
-languageName = i18n.getDisplayLanguage('zh', 'en-GB'); // languageName = 'Chinese'
 ```
 
 ## getFirstDayOfWeek
@@ -209,12 +195,6 @@ import { i18n } from '@kit.LocalizationKit';
 let firstPreferredLanguage: string = i18n.System.getFirstPreferredLanguage();
 ```
 
-```TypeScript
-import { i18n } from '@kit.LocalizationKit';
-
-let firstPreferredLanguage: string = i18n.getFirstPreferredLanguage();
-```
-
 ## getPreferredLanguageList
 
 ```TypeScript
@@ -241,12 +221,6 @@ Obtains the list of preferred languages.
 import { i18n } from '@kit.LocalizationKit';
 
 let preferredLanguageList: Array<string> = i18n.System.getPreferredLanguageList();
-```
-
-```TypeScript
-import { i18n } from '@kit.LocalizationKit';
-
-let preferredLanguageList: Array<string> = i18n.getPreferredLanguageList();
 ```
 
 ## getSimplifiedLanguage
@@ -377,12 +351,6 @@ import { i18n } from '@kit.LocalizationKit';
 let systemLanguage: string = i18n.System.getSystemLanguage(); // If the system language is simplified Chinese, then systemLanguage is 'zh-Hans'.
 ```
 
-```TypeScript
-import { i18n } from '@kit.LocalizationKit';
-
-let systemLanguage: string = i18n.getSystemLanguage();
-```
-
 ## getSystemLanguages
 
 ```TypeScript
@@ -444,12 +412,6 @@ import { i18n } from '@kit.LocalizationKit';
 let systemLocale: string = i18n.System.getSystemLocale(); // If the system language is simplified Chinese and the system region is China, then systemLocale is zh-Hans-CN.
 ```
 
-```TypeScript
-import { i18n } from '@kit.LocalizationKit';
-
-let locale: string = i18n.getSystemLocale();
-```
-
 ## getSystemLocaleInstance
 
 ```TypeScript
@@ -468,7 +430,7 @@ Obtains the current system locale. To listen for system locale changes, enable l
 
 | Type | Description |
 | --- | --- |
-| Intl.Locale | the locale object currently used by the system. |
+| [Intl.Locale](arkts-localization-intl-locale-c.md) | the locale object currently used by the system. |
 
 **Examples**
 
@@ -504,12 +466,6 @@ Obtains the current system country/region. To listen for system region changes, 
 import { i18n } from '@kit.LocalizationKit';
 
 let systemRegion: string = i18n.System.getSystemRegion(); // If the system region is China, then systemRegion is CN.
-```
-
-```TypeScript
-import { i18n } from '@kit.LocalizationKit';
-
-let region: string = i18n.getSystemRegion();
 ```
 
 ## getTemperatureName
@@ -643,12 +599,6 @@ Checks whether the 24-hour clock is used. To listen for system time format chang
 import { i18n } from '@kit.LocalizationKit';
 
 let is24HourClock: boolean = i18n.System.is24HourClock(); // If the 24-hour clock is used, then is24HourClock is true.
-```
-
-```TypeScript
-import { i18n } from '@kit.LocalizationKit';
-
-let is24HourClock: boolean = i18n.is24HourClock();
 ```
 
 ## isSuggested

@@ -47,24 +47,3 @@ You can configure the **recursion** parameter in **options** to recursively list
 | 13900011 | Out of memory |
 | 13900018 | Not a directory |
 | 13900042 | Unknown error |
-
-**Examples**
-
-```TypeScript
-import { Filter, ListFileOptions} from '@kit.CoreFileKit';
-
-let listFileOption: ListFileOptions = {
-  recursion: false,
-  listNum: 0,
-  filter: {
-    suffix: [".png", ".jpg", ".jpeg"],
-    displayName: ["*abc", "efg*"],
-    fileSizeOver: 1024
-  }
-};
-let filenames = fileIo.listFileSync(pathDir, listFileOption);
-console.info(`Succeeded in listing file.`);
-for (let i = 0; i < filenames.length; i++) {
-  console.info(`Succeeded in listing file, file name: ${filenames[i]}`);
-}
-```

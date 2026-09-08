@@ -21,17 +21,3 @@ type SourceCloseCallback = (uuid: number) => void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | uuid | number | 是 | 资源句柄的标识。 |
-
-**示例**
-
-```TypeScript
-import { HashMap } from '@kit.ArkTS';
-
-let requests: HashMap<number, media.MediaSourceLoadingRequest> = new HashMap();
-
-let sourceCloseCallback: media.SourceCloseCallback = (uuid: number) => {
-  console.info(`Closing resource with handle ${uuid}`);
-  // 清除当前uuid相关资源。
-  requests.remove(uuid);
-};
-```

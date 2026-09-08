@@ -24,13 +24,13 @@ Converts a `SendableResource` object transmitted across threads to a `Resource` 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resource | SendableResource | Yes | SendableResource** object. |
+| resource | [SendableResource](arkts-localization-sendableresourcemanager-sendableresource-t.md) | Yes | SendableResource** object. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Resource | Resource** object after conversion. |
+| [Resource](arkts-localization-sendableresourcemanager-resource-t.md) | Resource** object after conversion. |
 
 **Error codes:**
 

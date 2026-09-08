@@ -242,13 +242,13 @@ Obtains the value of a key from this **Preferences** instance. This API uses a p
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | key | string | Yes | Key to be obtained. The value cannot be empty, and the maximum length is 1024 bytes. For details, see [MAX_KEY_LENGTH](../../../reference/apis-arkdata/js-apis-data-sendablePreferences.md#constants). |
-| defValue | lang.ISendable | Yes | Default value to be returned. |
+| defValue | [lang.ISendable](../../apis-arkts/arkts-apis/arkts-arkts-lang-isendable-i.md) | Yes | Default value to be returned. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;lang.ISendable&gt; | Promise used to return the value obtained. |
+| Promise&lt;[lang.ISendable](../../apis-arkts/arkts-apis/arkts-arkts-lang-isendable-i.md)&gt; | Promise used to return the value obtained. |
 
 **Error codes:**
 
@@ -290,7 +290,7 @@ Obtains all KV pairs from this **Preferences** instance. This API uses a promise
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;lang.ISendable&gt; | Promise used to return the KV pairs obtained. |
+| Promise&lt;[lang.ISendable](../../apis-arkts/arkts-apis/arkts-arkts-lang-isendable-i.md)&gt; | Promise used to return the KV pairs obtained. |
 
 **Error codes:**
 
@@ -332,7 +332,7 @@ Obtains all KV pairs from this **Preferences** instance. This API returns the re
 
 | Type | Description |
 | --- | --- |
-| lang.ISendable | All KV pairs obtained. |
+| [lang.ISendable](../../apis-arkts/arkts-apis/arkts-arkts-lang-isendable-i.md) | All KV pairs obtained. |
 
 **Error codes:**
 
@@ -370,13 +370,13 @@ Obtains the value of a key from this **Preferences** instance. This API returns 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | key | string | Yes | Key to be obtained. The value cannot be empty, and the maximum length is 1024 bytes. For details, see [MAX_KEY_LENGTH](../../../reference/apis-arkdata/js-apis-data-sendablePreferences.md#constants). |
-| defValue | lang.ISendable | Yes | Default value to be returned. |
+| defValue | [lang.ISendable](../../apis-arkts/arkts-apis/arkts-arkts-lang-isendable-i.md) | Yes | Default value to be returned. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| lang.ISendable | Value obtained. |
+| [lang.ISendable](../../apis-arkts/arkts-apis/arkts-arkts-lang-isendable-i.md) | Value obtained. |
 
 **Error codes:**
 
@@ -598,7 +598,7 @@ Unsubscribes from changes of specific data.
 | --- | --- | --- | --- |
 | type | 'dataChange' | Yes | Event type. The value is **'dataChange'**, which indicates data changes. |
 | keys | Array&lt;string&gt; | Yes | Keys to be unsubscribed from. If this parameter is not specified, this API unsubscribes from the changes of all keys. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;lang.ISendable&gt; | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the changes of the specified data. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[lang.ISendable](../../apis-arkts/arkts-apis/arkts-arkts-lang-isendable-i.md)&gt; | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the changes of the specified data. |
 
 **Error codes:**
 
@@ -739,7 +739,7 @@ Subscribes to changes of specific data. The registered callback will be invoked 
 | --- | --- | --- | --- |
 | type | 'dataChange' | Yes | Event type. The value is **'dataChange'**, which indicates data changes. |
 | keys | Array&lt;string&gt; | Yes | Keys to be observed. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;lang.ISendable&gt; | Yes | Callback used to return the KV pairs changed. The keys are the keys observed, and the values are the new values. The values support the following types: number, string, boolean, bigint, and serializable object. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[lang.ISendable](../../apis-arkts/arkts-apis/arkts-arkts-lang-isendable-i.md)&gt; | Yes | Callback used to return the KV pairs changed. The keys are the keys observed, and the values are the new values. The values support the following types: number, string, boolean, bigint, and serializable object. |
 
 **Error codes:**
 
@@ -787,7 +787,7 @@ Writes data to this **Preferences** instance. This API uses a promise to return 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | key | string | Yes | Key to be modified. The value cannot be empty, and the maximum length is 1024 bytes. For details, see [MAX_KEY_LENGTH](../../../reference/apis-arkdata/js-apis-data-sendablePreferences.md#constants). |
-| value | lang.ISendable | Yes | Value to write. |
+| value | [lang.ISendable](../../apis-arkts/arkts-apis/arkts-arkts-lang-isendable-i.md) | Yes | Value to write. |
 
 **Return value:**
 
@@ -834,7 +834,7 @@ Writes data to this **Preferences** instance. This API returns the result synchr
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | key | string | Yes | Key to be modified. The value cannot be empty, and the maximum length is 1024 bytes. For details, see [MAX_KEY_LENGTH](../../../reference/apis-arkdata/js-apis-data-sendablePreferences.md#constants). |
-| value | lang.ISendable | Yes | Value to write. |
+| value | [lang.ISendable](../../apis-arkts/arkts-apis/arkts-arkts-lang-isendable-i.md) | Yes | Value to write. |
 
 **Error codes:**
 

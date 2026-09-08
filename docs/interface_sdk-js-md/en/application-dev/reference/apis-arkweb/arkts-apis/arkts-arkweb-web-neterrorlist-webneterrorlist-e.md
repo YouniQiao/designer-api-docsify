@@ -250,7 +250,7 @@ The file already exists.
 ERR_FILE_PATH_TOO_LONG = -17
 ```
 
-The path or file name is too number.
+The path or file name is too long.
 
 **Since:** 12
 
@@ -1645,7 +1645,7 @@ The certificate claimed DNS names that are in violation of name constraints.
 ERR_CERT_VALIDITY_TOO_LONG = -213
 ```
 
-The certificate's validity period is too number.
+The certificate's validity period is too long.
 
 **Since:** 12
 

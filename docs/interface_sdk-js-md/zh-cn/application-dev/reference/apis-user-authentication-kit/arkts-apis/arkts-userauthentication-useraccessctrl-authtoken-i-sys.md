@@ -22,7 +22,7 @@ authTrustLevel: userAuth.AuthTrustLevel
 
 认证信任等级。表示本次认证达到的安全强度等级，值为ATL1（10000）、ATL2（20000）、ATL3（30000）或ATL4（40000）。等级越高，表示活体检测能力越强、身份识别越精确。
 
-**类型：** userAuth.AuthTrustLevel
+**类型：** [userAuth.AuthTrustLevel](arkts-userauthentication-userauth-authtrustlevel-e.md)
 
 **起始版本：** 18
 
@@ -38,7 +38,7 @@ authType: userAuth.UserAuthType
 
 身份认证的凭据类型。表示本次认证使用的认证方式，如PIN（1）、FACE（2）、FINGERPRINT（4）等。
 
-**类型：** userAuth.UserAuthType
+**类型：** [userAuth.UserAuthType](arkts-userauthentication-userauth-userauthtype-e.md)
 
 **起始版本：** 18
 

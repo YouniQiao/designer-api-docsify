@@ -44,8 +44,8 @@ Binds the float view and floating ball. You need to create the [float view contr
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | floatViewController | [FloatViewController](arkts-arkui-floatview-floatviewcontroller-i.md) | Yes | Float view controller. |
-| floatingBallController | floatingBall.FloatingBallController | Yes | Floating ball controller. |
-| floatingBallParams | floatingBall.FloatingBallParams | Yes | Floating ball parameters. The parameters set during binding will overwrite the parameters saved when the floating ball controller is started. |
+| floatingBallController | [floatingBall.FloatingBallController](arkts-arkui-floatingball-floatingballcontroller-i.md) | Yes | Floating ball controller. |
+| floatingBallParams | [floatingBall.FloatingBallParams](arkts-arkui-floatingball-floatingballparams-i.md) | Yes | Floating ball parameters. The parameters set during binding will overwrite the parameters saved when the floating ball controller is started. |
 
 **Return value:**
 

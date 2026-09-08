@@ -143,7 +143,7 @@ location?: Location
 音频采集的地理位置。  
 **说明：** 从API version 6开始支持，从API version 9开始废弃，建议使用[AVMetadata](arkts-media-media-avmetadata-i.md)中的location替代。
 
-**类型：** Location
+**类型：** [Location](arkts-media-media-location-i.md)
 
 **起始版本：** 6
 

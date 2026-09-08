@@ -188,30 +188,30 @@ import { wifiManager } from '@kit.ConnectivityKit';
 | Name | Description |
 | --- | --- |
 | [ConnState](arkts-connectivity-wifimanager-connstate-e.md) | The state of Wi-Fi connection enumeration. |
-| [DeviceAddressType](arkts-connectivity-wifimanager-deviceaddresstype-e.md) | Wi-Fi device address( mac / bssid ) type. @enum { number } |
-| [EapMethod](arkts-connectivity-wifimanager-eapmethod-e.md) | Wi-Fi EAP method. @enum { number } |
+| [DeviceAddressType](arkts-connectivity-wifimanager-deviceaddresstype-e.md) | Wi-Fi device address( mac / bssid ) type. @enum { int } |
+| [EapMethod](arkts-connectivity-wifimanager-eapmethod-e.md) | Wi-Fi EAP method. @enum { int } |
 | [GroupOwnerBand](arkts-connectivity-wifimanager-groupownerband-e.md) | P2P group owner band. |
 | [P2pConnectState](arkts-connectivity-wifimanager-p2pconnectstate-e.md) | P2P connection status. |
 | [P2pDeviceStatus](arkts-connectivity-wifimanager-p2pdevicestatus-e.md) | P2P device status. |
 | [P2pServiceProtocolType](arkts-connectivity-wifimanager-p2pserviceprotocoltype-e.md) | Enumerates the P2P service protocol types. |
-| [Phase2Method](arkts-connectivity-wifimanager-phase2method-e.md) | Wi-Fi phase 2 method. @enum { number } |
-| [WapiPskType](arkts-connectivity-wifimanager-wapipsktype-e.md) | Describes the WAPI pre-shared key Type. @enum { number } |
-| [WifiBandType](arkts-connectivity-wifimanager-wifibandtype-e.md) | Wi-Fi band type. @enum { number } |
+| [Phase2Method](arkts-connectivity-wifimanager-phase2method-e.md) | Wi-Fi phase 2 method. @enum { int } |
+| [WapiPskType](arkts-connectivity-wifimanager-wapipsktype-e.md) | Describes the WAPI pre-shared key Type. @enum { int } |
+| [WifiBandType](arkts-connectivity-wifimanager-wifibandtype-e.md) | Wi-Fi band type. @enum { int } |
 | [WifiCapability](arkts-connectivity-wifimanager-wificapability-e.md) | Wi-Fi Capability |
-| [WifiCategory](arkts-connectivity-wifimanager-wificategory-e.md) | Wi-Fi Category. @enum { number } |
-| [WifiChannelWidth](arkts-connectivity-wifimanager-wifichannelwidth-e.md) | Describes the wifi channel width. @enum { number } |
-| [WifiLinkType](arkts-connectivity-wifimanager-wifilinktype-e.md) | Wi-Fi link type. @enum { number } |
-| [WifiSecurityType](arkts-connectivity-wifimanager-wifisecuritytype-e.md) | Describes the wifi security type. @enum { number } |
-| [WifiStandard](arkts-connectivity-wifimanager-wifistandard-e.md) | Wi-Fi standard. @enum { number } |
+| [WifiCategory](arkts-connectivity-wifimanager-wificategory-e.md) | Wi-Fi Category. @enum { int } |
+| [WifiChannelWidth](arkts-connectivity-wifimanager-wifichannelwidth-e.md) | Describes the wifi channel width. @enum { int } |
+| [WifiLinkType](arkts-connectivity-wifimanager-wifilinktype-e.md) | Wi-Fi link type. @enum { int } |
+| [WifiSecurityType](arkts-connectivity-wifimanager-wifisecuritytype-e.md) | Describes the wifi security type. @enum { int } |
+| [WifiStandard](arkts-connectivity-wifimanager-wifistandard-e.md) | Wi-Fi standard. @enum { int } |
 
 <!--Del-->
 ### Enums(System API)
 
 | Name | Description |
 | --- | --- |
-| [DisconnectedReason](arkts-connectivity-wifimanager-disconnectedreason-e-sys.md) | Wi-Fi disconnected reason. @enum { number } |
+| [DisconnectedReason](arkts-connectivity-wifimanager-disconnectedreason-e-sys.md) | Wi-Fi disconnected reason. @enum { int } |
 | [IpType](arkts-connectivity-wifimanager-iptype-e-sys.md) | Wi-Fi IP type enumeration. |
-| [ProxyMethod](arkts-connectivity-wifimanager-proxymethod-e-sys.md) | Wi-Fi Proxy method. @enum { number } |
+| [ProxyMethod](arkts-connectivity-wifimanager-proxymethod-e-sys.md) | Wi-Fi Proxy method. @enum { int } |
 | [SuppState](arkts-connectivity-wifimanager-suppstate-e-sys.md) | The state of the supplicant enumeration. |
-| [WifiDetailState](arkts-connectivity-wifimanager-wifidetailstate-e-sys.md) | Wi-Fi detail state. @enum { number } WifiDetailState |
+| [WifiDetailState](arkts-connectivity-wifimanager-wifidetailstate-e-sys.md) | Wi-Fi detail state. @enum { int } WifiDetailState |
 <!--DelEnd-->

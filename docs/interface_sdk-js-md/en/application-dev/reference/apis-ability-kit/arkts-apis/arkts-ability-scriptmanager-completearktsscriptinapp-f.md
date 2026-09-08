@@ -28,7 +28,7 @@ complete arkTS script for in-app skills.
 | --- | --- | --- | --- |
 | context | [Context](arkts-ability-context-c.md) | Yes | Ability context, Used for temporary file authorization. |
 | requestCode | string | Yes | Identifying the current operation. It is from ArkTSScriptInfo.requestCode. |
-| result | ExecuteResult | Yes | The result of arkTS script execution. |
+| result | [ExecuteResult](arkts-ability-scriptmanager-executeresult-i.md) | Yes | The result of arkTS script execution. |
 
 **Return value:**
 

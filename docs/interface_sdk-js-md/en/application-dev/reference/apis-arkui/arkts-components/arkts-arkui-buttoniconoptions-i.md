@@ -25,7 +25,7 @@ hidden: string | PixelMap | Resource
 
 Icon of the control button when the sidebar is hidden.
 
-**Type:** string \| PixelMap \| Resource
+**Type:** string \| [PixelMap](arkts-arkui-pixelmap-t.md) \| [Resource](../arkts-apis/arkts-arkui-resource-t.md)
 
 **Since:** 8
 
@@ -41,7 +41,7 @@ shown: string | PixelMap | Resource
 
 Icon of the control button when the sidebar is displayed.
 
-**Type:** string \| PixelMap \| Resource
+**Type:** string \| [PixelMap](arkts-arkui-pixelmap-t.md) \| [Resource](../arkts-apis/arkts-arkui-resource-t.md)
 
 **Since:** 8
 
@@ -57,7 +57,7 @@ switching?: string | PixelMap | Resource
 
 Icon of the control button when the sidebar is switching between the shown and hidden states.
 
-**Type:** string \| PixelMap \| Resource
+**Type:** string \| [PixelMap](arkts-arkui-pixelmap-t.md) \| [Resource](../arkts-apis/arkts-arkui-resource-t.md)
 
 **Since:** 8
 

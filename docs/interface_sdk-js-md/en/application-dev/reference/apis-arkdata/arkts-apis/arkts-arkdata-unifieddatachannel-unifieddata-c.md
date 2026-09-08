@@ -125,10 +125,6 @@ Defines a constructor used to create a **UnifiedData** object.
 let unifiedData = new unifiedDataChannel.UnifiedData();
 ```
 
-```TypeScript
-let unifiedRecord = new unifiedDataChannel.UnifiedRecord();
-```
-
 ## getRecords
 
 ```TypeScript
@@ -230,48 +226,6 @@ let link = new unifiedDataChannel.UnifiedRecord(uniformTypeDescriptor.UniformDat
 unifiedData.addRecord(link);
 
 let types = unifiedData.getTypes();
-```
-
-```TypeScript
-import { uniformDataStruct, uniformTypeDescriptor } from '@kit.ArkData';
-
-let fileUriDetails: Record<string, string> = {
-  'attr1': 'value1',
-  'attr2': 'value2'
-};
-let fileUri: uniformDataStruct.FileUri = {
-  uniformDataType: 'general.file-uri',
-  oriUri: 'file://data/image/1.png',
-  fileType: 'general.image',
-  details: fileUriDetails
-};
-let formDetails: Record<string, string> = {
-  'attr1': 'value1',
-  'attr2': 'value2'
-};
-let form: uniformDataStruct.Form = {
-  uniformDataType: 'openharmony.form',
-  formId: 1,
-  formName: 'form',
-  bundleName: 'com.xx.app',
-  abilityName: 'ability',
-  module: 'module',
-  details: formDetails
-};
-
-let unifiedData = new unifiedDataChannel.UnifiedData();
-let record = new unifiedDataChannel.UnifiedRecord(uniformTypeDescriptor.UniformDataType.OPENHARMONY_FORM, form);
-record.addEntry(uniformTypeDescriptor.UniformDataType.FILE_URI, fileUri);
-unifiedData.addRecord(record);
-
-let records = unifiedData.getRecords();
-for (let i = 0; i < records.length; i++) {
-  let unifiedDataRecord = records[i] as unifiedDataChannel.UnifiedRecord;
-  let types: Array<string> = unifiedDataRecord.getTypes();
-  if (types.includes(uniformTypeDescriptor.UniformDataType.OPENHARMONY_FORM)) {
-    console.info(`Types include: ${uniformTypeDescriptor.UniformDataType.OPENHARMONY_FORM}`);
-  }
-};
 ```
 
 ## hasType

@@ -31,7 +31,7 @@ function getLinkedInfoSync(): WifiLinkedInfo
 
 | 类型 | 说明 |
 | --- | --- |
-| WifiLinkedInfo | 表示Wi-Fi连接信息。 |
+| [WifiLinkedInfo](arkts-connectivity-wifimanager-wifilinkedinfo-i.md) | 表示Wi-Fi连接信息。 |
 
 **错误码：**
 

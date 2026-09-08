@@ -32,17 +32,9 @@ getType(): tag.MifareUltralightType
 
 | 类型 | 说明 |
 | --- | --- |
-| tag.MifareUltralightType | MIFARE Ultralight标签的类型。 |
+| [tag.MifareUltralightType](arkts-connectivity-tag-mifareultralighttype-e.md) | MIFARE Ultralight标签的类型。 |
 
 **示例**
-
-```TypeScript
-import { tag } from '@kit.ConnectivityKit';
-
-// 参考 @ohos.nfc.tag（标准NFC-Tag）中 tag.TagInfo 接口，获取正确的 mifareClassic
-let getType : tag.MifareClassicType = mifareClassic.getType();
-console.info("mifareClassic getType: " + getType);
-```
 
 ```TypeScript
 import { tag } from '@kit.ConnectivityKit';

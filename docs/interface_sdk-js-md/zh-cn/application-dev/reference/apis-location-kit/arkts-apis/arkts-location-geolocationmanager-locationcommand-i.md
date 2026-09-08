@@ -34,7 +34,7 @@ scenario: LocationRequestScenario
 
 表示定位场景。
 
-**类型：** LocationRequestScenario
+**类型：** [LocationRequestScenario](arkts-location-geolocationmanager-locationrequestscenario-e.md)
 
 **起始版本：** 9
 

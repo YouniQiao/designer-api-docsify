@@ -24,7 +24,7 @@ Matrix的初始化函数，可以返回一个初始的单位矩阵对象，可�
 
 | 类型 | 说明 |
 | --- | --- |
-| Matrix4Transit | 单位矩阵对象。 |
+| [Matrix4Transit](arkts-arkui-matrix4-matrix4transit-i.md) | 单位矩阵对象。 |
 
 **示例**
 

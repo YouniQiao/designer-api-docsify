@@ -23,7 +23,7 @@ radius: VP
 
 取值范围：[0, +∞)
 
-**类型：** VP
+**类型：** [VP](../arkts-apis/arkts-arkui-vp-t.md)
 
 **起始版本：** 10
 

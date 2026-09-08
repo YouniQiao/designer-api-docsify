@@ -27,7 +27,7 @@ Registers an observer for cell information change events. This API uses an async
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'cellInfoChange' | Yes | Cell information change event. This field has a fixed value of **cellInfoChange**. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;CellInformation&gt;&gt; | Yes | Callback used to return the result. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[CellInformation](arkts-telephony-radio-cellinformation-i.md)&gt;&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -73,8 +73,8 @@ Registers an observer for signal status change events of the SIM card in the spe
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'cellInfoChange' | Yes | Cell information change event. This field has a fixed value of **cellInfoChange**. |
-| options | ObserverOptions | Yes | Event subscription parameters. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;CellInformation&gt;&gt; | Yes | Callback used to return the result. |
+| options | [ObserverOptions](arkts-telephony-observer-observeroptions-i.md) | Yes | Event subscription parameters. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[CellInformation](arkts-telephony-radio-cellinformation-i.md)&gt;&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 

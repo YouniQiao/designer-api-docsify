@@ -28,7 +28,7 @@ Unregister the callback for updating form config.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | formInfo.UpdateFormsConfigCallback | No | Identifies the callback for updating form config. |
+| callback | [formInfo.UpdateFormsConfigCallback](arkts-form-forminfo-updateformsconfigcallback-t-sys.md) | No | Identifies the callback for updating form config. |
 
 **Error codes:**
 

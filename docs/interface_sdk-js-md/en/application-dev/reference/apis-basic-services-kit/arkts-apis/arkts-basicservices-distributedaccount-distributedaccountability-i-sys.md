@@ -35,7 +35,7 @@ Obtains the distributed account information about an OS account. This API uses a
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | localId | number | Yes | ID of the target OS account. |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;DistributedInfo&gt; | Yes | Callback used to return the result. If the distributed account information is obtained successfully, **err** is **undefined** and **data** is the distributed account information obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[DistributedInfo](arkts-basicservices-distributedaccount-distributedinfo-i.md)&gt; | Yes | Callback used to return the result. If the distributed account information is obtained successfully, **err** is **undefined** and **data** is the distributed account information obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -96,7 +96,7 @@ Obtains the distributed account information about an OS account. This API uses a
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;DistributedInfo&gt; | Promise used to return the distributed account information obtained. |
+| Promise&lt;[DistributedInfo](arkts-basicservices-distributedaccount-distributedinfo-i.md)&gt; | Promise used to return the distributed account information obtained. |
 
 **Error codes:**
 
@@ -148,7 +148,7 @@ Sets the distributed account information about an OS account. This API uses an a
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | localId | number | Yes | ID of the target OS account. |
-| distributedInfo | DistributedInfo | Yes | Distributed account information to set. |
+| distributedInfo | [DistributedInfo](arkts-basicservices-distributedaccount-distributedinfo-i.md) | Yes | Distributed account information to set. |
 | callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the distributed account information is set successfully, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
@@ -208,7 +208,7 @@ Sets the distributed account information about an OS account. This API uses a pr
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | localId | number | Yes | ID of the target OS account. |
-| distributedInfo | DistributedInfo | Yes | Distributed account information to set. |
+| distributedInfo | [DistributedInfo](arkts-basicservices-distributedaccount-distributedinfo-i.md) | Yes | Distributed account information to set. |
 
 **Return value:**
 

@@ -62,7 +62,7 @@ state: State
 
 File download state.
 
-**Type:** State
+**Type:** [State](arkts-corefile-cloudsync-state-e.md)
 
 **Since:** 11
 

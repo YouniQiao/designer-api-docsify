@@ -70,7 +70,7 @@ paragraphs?: Paragraph[]
 
 Paragraph information of the onscreen content. This parameter is available only when **options.textOnly** is set to **True**.
 
-**Type:** Paragraph[]
+**Type:** [Paragraph](arkts-multimodalawareness-onscreen-paragraph-i-sys.md)[]
 
 **Since:** 20
 

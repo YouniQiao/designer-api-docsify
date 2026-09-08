@@ -27,7 +27,7 @@ Queries specified task details. Creates a group based on GroupConfig
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | id | string | Yes | the task id. |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;TaskInfo&gt; | Yes | callback function with a `TaskInfo` argument for informations of the current task. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[TaskInfo](arkts-basicservices-agent-taskinfo-i.md)&gt; | Yes | callback function with a `TaskInfo` argument for informations of the current task. |
 
 **Error codes:**
 
@@ -38,26 +38,6 @@ Queries specified task details. Creates a group based on GroupConfig
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:   1. Missing mandatory parameters.   2. Incorrect parameter type. |
 | [13400003](../errorcode-request.md#13400003-service-error) | Task service ability error. |
 | [21900006](../errorcode-request.md#21900006-task-not-found) | Task removed or not found. |
-
-**Examples**
-
-```TypeScript
-downloadTask.query().then((downloadInfo) => {    
-  console.info('Succeeded in querying the download task.')
-}).catch((err: BusinessError) => {
-  console.error(`Failed to query the download task. Code: ${err.code}, message: ${err.message}`)
-});
-```
-
-```TypeScript
-downloadTask.query((err: BusinessError, downloadInfo: request.DownloadInfo)=>{
-  if(err) {
-    console.error(`Failed to query the download mimeType. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info('Succeeded in querying the download task.');
-  }
-});
-```
 
 
 ## query
@@ -86,7 +66,7 @@ Queries specified task details.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;TaskInfo&gt; | the promise returned by the function. |
+| Promise&lt;[TaskInfo](arkts-basicservices-agent-taskinfo-i.md)&gt; | the promise returned by the function. |
 
 **Error codes:**
 
@@ -97,7 +77,3 @@ Queries specified task details.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:   1. Missing mandatory parameters.   2. Incorrect parameter type. |
 | [13400003](../errorcode-request.md#13400003-service-error) | Task service ability error. |
 | [21900006](../errorcode-request.md#21900006-task-not-found) | Task removed or not found. |
-
-**Examples**
-
-See [query](#query)

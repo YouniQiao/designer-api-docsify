@@ -38,7 +38,7 @@ subtype?: PhotoSubtype
 
 图片或者视频的子类型。
 
-**类型：** PhotoSubtype
+**类型：** [PhotoSubtype](arkts-medialibrary-photoaccesshelper-photosubtype-e.md)
 
 **起始版本：** 10
 

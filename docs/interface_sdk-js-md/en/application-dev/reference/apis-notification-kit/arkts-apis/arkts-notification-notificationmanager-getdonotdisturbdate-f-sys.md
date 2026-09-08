@@ -28,7 +28,7 @@ This API can be properly called on devices other than wearables and TVs. If it i
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DoNotDisturbDate&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[DoNotDisturbDate](arkts-notification-notificationmanager-donotdisturbdate-i-sys.md)&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -82,7 +82,7 @@ This API can be properly called on devices other than wearables and TVs. If it i
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;DoNotDisturbDate&gt; | Promise used to return the result. |
+| Promise&lt;[DoNotDisturbDate](arkts-notification-notificationmanager-donotdisturbdate-i-sys.md)&gt; | Promise used to return the result. |
 
 **Error codes:**
 
@@ -132,7 +132,7 @@ This API can be properly called on devices other than wearables and TVs. If it i
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | userId | number | Yes | User ID. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DoNotDisturbDate&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[DoNotDisturbDate](arkts-notification-notificationmanager-donotdisturbdate-i-sys.md)&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -196,7 +196,7 @@ This API can be properly called on devices other than wearables and TVs. If it i
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;DoNotDisturbDate&gt; | Promise used to return the result. |
+| Promise&lt;[DoNotDisturbDate](arkts-notification-notificationmanager-donotdisturbdate-i-sys.md)&gt; | Promise used to return the result. |
 
 **Error codes:**
 

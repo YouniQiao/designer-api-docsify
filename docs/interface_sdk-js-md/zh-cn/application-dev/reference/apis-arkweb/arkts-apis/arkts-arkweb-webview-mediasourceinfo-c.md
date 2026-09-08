@@ -52,7 +52,7 @@ type: SourceType
 
 媒体源的类型。
 
-**类型：** SourceType
+**类型：** [SourceType](arkts-arkweb-webview-sourcetype-e.md)
 
 **起始版本：** 12
 

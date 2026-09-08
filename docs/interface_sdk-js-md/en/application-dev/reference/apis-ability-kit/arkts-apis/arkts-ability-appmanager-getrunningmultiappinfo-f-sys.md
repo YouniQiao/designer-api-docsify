@@ -34,7 +34,7 @@ Obtains the information about running applications in multi-app mode. The multi-
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;RunningMultiAppInfo&gt; | Promise used to return the information about running applications with multi- app mode. |
+| Promise&lt;[RunningMultiAppInfo](arkts-ability-appmanager-runningmultiappinfo-t-sys.md)&gt; | Promise used to return the information about running applications with multi- app mode. |
 
 **Error codes:**
 

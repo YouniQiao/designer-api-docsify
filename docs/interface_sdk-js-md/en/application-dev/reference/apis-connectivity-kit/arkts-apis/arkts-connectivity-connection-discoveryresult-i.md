@@ -20,7 +20,7 @@ deviceClass: DeviceClass
 
 The class of the device
 
-**Type:** DeviceClass
+**Type:** [DeviceClass](arkts-connectivity-connection-deviceclass-i.md)
 
 **Since:** 18
 

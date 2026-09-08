@@ -22,13 +22,13 @@ Creates a standard color space object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| colorSpaceName | ColorSpace | Yes | Type of the color space.    **UNKNOWN** and **CUSTOM** cannot be used when creating standard color space objects. |
+| colorSpaceName | [ColorSpace](arkts-arkgraphics2d-colorspacemanager-colorspace-e.md) | Yes | Type of the color space.    **UNKNOWN** and **CUSTOM** cannot be used when creating standard color space objects. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ColorSpaceManager | Color space object created. |
+| [ColorSpaceManager](arkts-arkgraphics2d-colorspacemanager-colorspacemanager-i.md) | Color space object created. |
 
 **Error codes:**
 
@@ -72,7 +72,7 @@ Creates a custom color space object.
 
 | Type | Description |
 | --- | --- |
-| ColorSpaceManager | Color space object created. |
+| [ColorSpaceManager](arkts-arkgraphics2d-colorspacemanager-colorspacemanager-i.md) | Color space object created. |
 
 **Error codes:**
 

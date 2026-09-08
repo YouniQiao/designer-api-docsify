@@ -20,7 +20,7 @@ capitalizeMode?: CapitalizeMode
 
 Whether to capitalize the first letter in the edit box. If it is not set or is set to an invalid value, the first letter is not capitalized by default.
 
-**Type:** CapitalizeMode
+**Type:** [CapitalizeMode](arkts-ime-inputmethod-capitalizemode-e.md)
 
 **Default:** CapitalizeMode.NONE
 
@@ -78,7 +78,7 @@ selection?: Range
 
 Text selection range.
 
-**Type:** Range
+**Type:** [Range](arkts-ime-inputmethod-range-i.md)
 
 **Since:** 10
 

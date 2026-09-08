@@ -26,7 +26,7 @@ Obtains all applications that have requested the ohos.permission.SUBSCRIBE_NOTIF
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;BundleOption[]&gt; | Promise used to return the applications that have requested the ohos.permission.SUBSCRIBE_NOTIFICATION permission and implemented NotificationSubscriberExtensionAbility. |
+| Promise&lt;[BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md)[]&gt; | Promise used to return the applications that have requested the ohos.permission.SUBSCRIBE_NOTIFICATION permission and implemented NotificationSubscriberExtensionAbility. |
 
 **Error codes:**
 

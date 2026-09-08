@@ -38,48 +38,6 @@ Obtains the audio track information. It can be called only after the **'dataLoad
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[MediaDescription](arkts-media-media-mediadescription-i.md)&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the MediaDescription array obtained; otherwise, **err** is an error object. |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioPlayer.getTrackDescription((error: BusinessError, arrList: Array<media.MediaDescription>) => {
-  if (arrList != null) {
-    console.info('Succeeded in getting TrackDescription');
-  } else {
-    console.error(`Failed to get TrackDescription, error:${error}`);
-  }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function  test(){
-  let avPlayer = await media.createAVPlayer();
-  // Here is only an example. In real development, you must wait for the stateChange event to successfully trigger and reach the prepared, playing, or paused state before proceeding.
-  avPlayer.getTrackDescription((error: BusinessError, arrList: Array<media.MediaDescription>) => {
-    if ((arrList) != null) {
-      console.info('Succeeded in doing getTrackDescription');
-    } else {
-      console.error(`Failed to do getTrackDescription, error:${error}`);
-    }
-  });
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-videoPlayer.getTrackDescription((error: BusinessError, arrList: Array<media.MediaDescription>) => {
-  if ((arrList) != null) {
-    console.info('Succeeded in getting TrackDescription');
-  } else {
-    console.error(`Failed to get TrackDescription, error:${error}`);
-  }
-});
-```
-
 ## getTrackDescription
 
 ```TypeScript
@@ -101,46 +59,6 @@ Obtains the audio track information. It can be called only after the **'dataLoad
 | Type | Description |
 | --- | --- |
 | Promise&lt;Array&lt;[MediaDescription](arkts-media-media-mediadescription-i.md)&gt;&gt; | Promise used to return a **MediaDescription** array, which records the audio track information. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioPlayer.getTrackDescription().then((arrList: Array<media.MediaDescription>) => {
-  console.info('Succeeded in getting TrackDescription');
-}).catch((error: BusinessError) => {
-  console.error(`Failed to get TrackDescription, error:${error}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function  test(){
-  let avPlayer = await media.createAVPlayer();
-  // Here is only an example. In real development, you must wait for the stateChange event to successfully trigger and reach the prepared, playing, or paused state before proceeding.
-  avPlayer.getTrackDescription().then((arrList: Array<media.MediaDescription>) => {
-    console.info('Succeeded in getting TrackDescription');
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to get TrackDescription, error:${error}`);
-  });
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-videoPlayer.getTrackDescription().then((arrList: Array<media.MediaDescription>) => {
-  if (arrList != null) {
-    console.info('Succeeded in getting TrackDescription');
-  } else {
-    console.error('Failed to get TrackDescription');
-  }
-}).catch((error: BusinessError) => {
-  console.error(`video catchCallback, error:${error}`);
-});
-```
 
 ## on('bufferingUpdate')
 
@@ -411,22 +329,6 @@ Pauses audio playback.
 
 **System capability:** SystemCapability.Multimedia.Media.AudioPlayer
 
-**Examples**
-
-```TypeScript
-audioPlayer.on('pause', () => {    // Set the 'pause' event callback.
-  console.info('audio pause called');
-});
-audioPlayer.pause();
-```
-
-```TypeScript
-audioRecorder.on('pause', () => {    // Set the 'pause' event callback.
-  console.info('audio recorder pause called');
-});
-audioRecorder.pause();
-```
-
 ## play
 
 ```TypeScript
@@ -442,15 +344,6 @@ Starts to play an audio asset. This API can be called only after the **'dataLoad
 **Substitutes:** [play](arkts-media-media-avplayer-i.md#play)(callback: AsyncCallback&lt;void&gt;)
 
 **System capability:** SystemCapability.Multimedia.Media.AudioPlayer
-
-**Examples**
-
-```TypeScript
-audioPlayer.on('play', () => {    // Set the 'play' event callback.
-  console.info('audio play called');
-});
-audioPlayer.play();
-```
 
 ## release
 
@@ -468,21 +361,6 @@ Releases the audio playback resources.
 
 **System capability:** SystemCapability.Multimedia.Media.AudioPlayer
 
-**Examples**
-
-```TypeScript
-audioPlayer.release();
-audioPlayer = undefined;
-```
-
-```TypeScript
-audioRecorder.on('release', () => {    // Set the 'release' event callback.
-  console.info('audio recorder release called');
-});
-audioRecorder.release();
-audioRecorder = undefined;
-```
-
 ## reset
 
 ```TypeScript
@@ -498,22 +376,6 @@ Resets the audio asset to be played.
 **Substitutes:** [reset](arkts-media-media-avplayer-i.md#reset)(callback: AsyncCallback&lt;void&gt;)
 
 **System capability:** SystemCapability.Multimedia.Media.AudioPlayer
-
-**Examples**
-
-```TypeScript
-audioPlayer.on('reset', () => {    // Set the 'reset' event callback.
-  console.info('audio reset called');
-});
-audioPlayer.reset();
-```
-
-```TypeScript
-audioRecorder.on('reset', () => {    // Set the 'reset' event callback.
-  console.info('audio recorder reset called');
-});
-audioRecorder.reset();
-```
 
 ## seek
 
@@ -537,19 +399,6 @@ Seeks to the specified playback position.
 | --- | --- | --- | --- |
 | timeMs | number | Yes | Position to seek to, in ms. The value range is [0, duration]. |
 
-**Examples**
-
-```TypeScript
-audioPlayer.on('timeUpdate', (seekDoneTime: number) => {    // Set the 'timeUpdate' event callback.
-  if (seekDoneTime == null) {
-    console.error('Failed to seek');
-    return;
-  }
-  console.info('Succeeded in seek. seekDoneTime: ' + seekDoneTime);
-});
-audioPlayer.seek(30000);    // Seek to 30000 ms.
-```
-
 ## setVolume
 
 ```TypeScript
@@ -572,15 +421,6 @@ Sets the volume.
 | --- | --- | --- | --- |
 | vol | number | Yes | Relative volume. The value ranges from 0.00 to 1.00. The value **1.00** indicates the maximum volume (100%). |
 
-**Examples**
-
-```TypeScript
-audioPlayer.on('volumeChange', () => {    // Set the 'volumeChange' event callback.
-  console.info('audio volumeChange called');
-});
-audioPlayer.setVolume(1);    // Set the volume to 100%.
-```
-
 ## stop
 
 ```TypeScript
@@ -597,22 +437,6 @@ Stops audio playback.
 
 **System capability:** SystemCapability.Multimedia.Media.AudioPlayer
 
-**Examples**
-
-```TypeScript
-audioPlayer.on('stop', () => {    // Set the 'stop' event callback.
-  console.info('audio stop called');
-});
-audioPlayer.stop();
-```
-
-```TypeScript
-audioRecorder.on('stop', () => {    // Set the 'stop' event callback.
-  console.info('audio recorder stop called');
-});
-audioRecorder.stop();
-```
-
 ## audioInterruptMode
 
 ```TypeScript
@@ -621,7 +445,7 @@ audioInterruptMode?: audio.InterruptMode
 
 Audio interruption mode.
 
-**Type:** audio.InterruptMode
+**Type:** [audio.InterruptMode](../../apis-audio-kit/arkts-apis/arkts-audio-audio-interruptmode-e.md)
 
 **Since:** 9
 
@@ -757,7 +581,7 @@ readonly state: AudioState
 
 Audio playback state. This state cannot be used as the condition for triggering the call of **play()**, **pause()**, or **stop()**.
 
-**Type:** AudioState
+**Type:** [AudioState](arkts-media-media-audiostate-t.md)
 
 **Since:** 6
 

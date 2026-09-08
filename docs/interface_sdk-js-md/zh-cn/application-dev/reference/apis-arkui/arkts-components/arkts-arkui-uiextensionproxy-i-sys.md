@@ -34,7 +34,7 @@ off(type: 'asyncReceiverRegister', callback?: Callback<UIExtensionProxy>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'asyncReceiverRegister' | 是 | 事件类型，取值为'asyncReceiverRegister'，表示取消订阅扩展Ability发生异步注册回调。 |
-| callback | Callback&lt;[UIExtensionProxy](arkts-arkui-uiextensionproxy-i-sys.md)&gt; | 否 | 回调函数。为空代表取消订阅所有扩展Ability异步注册后触发回调；非空代表取消订阅对应的异步注册回调。<br>**适用版本：** 18 |
+| callback | [Callback](arkts-arkui-callback-i.md)&lt;[UIExtensionProxy](arkts-arkui-uiextensionproxy-i-sys.md)&gt; | 否 | 回调函数。为空代表取消订阅所有扩展Ability异步注册后触发回调；非空代表取消订阅对应的异步注册回调。<br>**适用版本：** 18 |
 
 ## off('syncReceiverRegister')
 
@@ -57,7 +57,7 @@ off(type: 'syncReceiverRegister', callback?: Callback<UIExtensionProxy>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'syncReceiverRegister' | 是 | 事件类型，取值为'asyncReceiverRegister'，表示取消订阅扩展Ability发生异步注册回调。 |
-| callback | Callback&lt;[UIExtensionProxy](arkts-arkui-uiextensionproxy-i-sys.md)&gt; | 否 | 回调函数。为空代表取消订阅所有扩展Ability同步注册后触发回调；非空代表取消订阅对应的同步注册回调。<br>**适用版本：** 18 |
+| callback | [Callback](arkts-arkui-callback-i.md)&lt;[UIExtensionProxy](arkts-arkui-uiextensionproxy-i-sys.md)&gt; | 否 | 回调函数。为空代表取消订阅所有扩展Ability同步注册后触发回调；非空代表取消订阅对应的同步注册回调。<br>**适用版本：** 18 |
 
 ## on('asyncReceiverRegister')
 
@@ -80,7 +80,7 @@ on(type: 'asyncReceiverRegister', callback: Callback<UIExtensionProxy>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'asyncReceiverRegister' | 是 | 事件类型，取值为'asyncReceiverRegister'，表示订阅扩展Ability发生异步注册回调。 |
-| callback | Callback&lt;[UIExtensionProxy](arkts-arkui-uiextensionproxy-i-sys.md)&gt; | 是 | 回调函数。订阅扩展Ability注册setReceiveDataCallback后触发的回调。<br>**适用版本：** 18 |
+| callback | [Callback](arkts-arkui-callback-i.md)&lt;[UIExtensionProxy](arkts-arkui-uiextensionproxy-i-sys.md)&gt; | 是 | 回调函数。订阅扩展Ability注册setReceiveDataCallback后触发的回调。<br>**适用版本：** 18 |
 
 ## on('syncReceiverRegister')
 
@@ -103,7 +103,7 @@ on(type: 'syncReceiverRegister', callback: Callback<UIExtensionProxy>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'syncReceiverRegister' | 是 | 事件类型，取值为'asyncReceiverRegister'，表示订阅扩展Ability发生异步注册回调。 |
-| callback | Callback&lt;[UIExtensionProxy](arkts-arkui-uiextensionproxy-i-sys.md)&gt; | 是 | 回调函数。订阅扩展Ability注册setReceiveDataCallback后触发的回调。<br>**适用版本：** 18 |
+| callback | [Callback](arkts-arkui-callback-i.md)&lt;[UIExtensionProxy](arkts-arkui-uiextensionproxy-i-sys.md)&gt; | 是 | 回调函数。订阅扩展Ability注册setReceiveDataCallback后触发的回调。<br>**适用版本：** 18 |
 
 ## send
 

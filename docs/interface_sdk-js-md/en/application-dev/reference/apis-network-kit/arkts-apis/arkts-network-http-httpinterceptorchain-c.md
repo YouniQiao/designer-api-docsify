@@ -54,6 +54,17 @@ Adds an interceptor to the HTTP client.
 **Examples**
 
 addChain(chain: HttpInterceptor[]): boolean
+Adds an interceptor to the HTTP client.
+> NOTE
+> 
+> An interceptor chain cannot contain interceptor instances of the same type. If interceptors of the same type are passed in, the error code 2300802 (Duplicated interceptor type in the chain) is reported.
+
+Atomic service API: This API can be used in atomic services since API version 22.
+System capability: SystemCapability.Communication.NetStack
+Parameters
+Return value
+Error codes
+For details about the error codes, see [Common Error Codes](../../errorcode-universal.md) and [HTTP Error Codes](../errorcode-net-http.md).The HTTP error code mapping is in the format of 2300000 + Curl error code. For more common error codes, see [Curl Error Codes](https://curl.se/libcurl/c/libcurl-errors.html).
 
 ```TypeScript
 import { http } from '@kit.NetworkKit';
@@ -129,7 +140,7 @@ Adds an interceptor chain to the target HTTP request. Each HTTP request instance
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| httpRequest | HttpRequest | Yes | [HttpRequest](arkts-network-http-httprequest-i.md) that initiates an HTTP request. |
+| httpRequest | [HttpRequest](arkts-network-http-httprequest-i.md) | Yes | [HttpRequest](arkts-network-http-httprequest-i.md) that initiates an HTTP request. |
 
 **Return value:**
 
@@ -147,6 +158,17 @@ Adds an interceptor chain to the target HTTP request. Each HTTP request instance
 **Examples**
 
 apply(httpRequest: HttpRequest): boolean
+Adds an interceptor chain to the target HTTP request. Each HTTP request instance can have only one interceptor chain attached.
+> NOTE
+> 
+> After an interceptor chain is attached to an HttpRequest instance, when the instance initiates an HTTP request, interceptors of the corresponding type in the attached interceptor chain are triggered.For more information about how to trigger interceptors using HTTP requests, see [HTTP Interceptor Function Code Example](../../../network/http-request.md#http-interceptor).The HTTP interceptor feature is supported only by HttpRequest.request APIs, and is not supported by [HttpRequest.requestInStream](arkts-network-http-httprequest-i.md#requestinstream) APIs (streaming transmission).
+
+Atomic service API: This API can be used in atomic services since API version 22.
+System capability: SystemCapability.Communication.NetStack
+Parameters
+Return value
+Error codes
+For details about the error codes, see [Common Error Codes](../../errorcode-universal.md) and [HTTP Error Codes](../errorcode-net-http.md).The HTTP error code mapping is in the format of 2300000 + Curl error code. For more common error codes, see [Curl Error Codes](https://curl.se/libcurl/c/libcurl-errors.html).
 
 ```TypeScript
 import { http } from '@kit.NetworkKit';
@@ -234,6 +256,10 @@ Obtains all interceptor instances in the current interceptor chain.
 **Examples**
 
 getChain(): HttpInterceptor[]
+Obtains all interceptor instances in the current interceptor chain.
+Atomic service API: This API can be used in atomic services since API version 22.
+System capability: SystemCapability.Communication.NetStack
+Return value
 
 ```TypeScript
 import { http } from '@kit.NetworkKit';
@@ -267,14 +293,4 @@ try {
 // Obtain all interceptors in the current interceptor chain.
 let chain = interceptorChain.getChain();
 console.info(`Current interceptor chain has ${chain.length} interceptors`);
-```
-
-**Examples**
-
-Defines HTTP interceptor chain.
-
-```TypeScript
-import { http } from '@kit.NetworkKit';
-
-let interceptorChain = new http.HttpInterceptorChain();
 ```

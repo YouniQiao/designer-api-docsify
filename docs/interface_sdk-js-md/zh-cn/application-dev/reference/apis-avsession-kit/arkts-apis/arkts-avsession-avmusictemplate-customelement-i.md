@@ -72,7 +72,7 @@ userInfo?: UserInfo
 
 用户信息。
 
-**类型：** UserInfo
+**类型：** [UserInfo](arkts-avsession-avmusictemplate-userinfo-i.md)
 
 **起始版本：** 23
 

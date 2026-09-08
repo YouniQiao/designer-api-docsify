@@ -183,7 +183,7 @@ Sets the accessibility description, with support for resource references using R
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| description | Resource | Yes | set description of accessibility |
+| description | [Resource](../arkts-apis/arkts-arkui-resource-t.md) | Yes | set description of accessibility |
 
 **Return value:**
 
@@ -280,7 +280,7 @@ When accessibilityPreferred is set to true, the system will prioritize concatena
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | isGroup | boolean | Yes | set group with accessibility, default value is false. |
-| accessibilityOptions | AccessibilityOptions | Yes | accessibilityOptions for accessibility, default value is false. |
+| accessibilityOptions | [AccessibilityOptions](../arkts-apis/arkts-arkui-accessibilityoptions-i.md) | Yes | accessibilityOptions for accessibility, default value is false. |
 
 **Return value:**
 
@@ -527,7 +527,7 @@ Sets the state description of a component for broadcasting, which clearly descri
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| description | string \| Resource \| undefined | Yes | Text to be broadcasted for the current state of the component. If the text contains more than 1000 characters, the first 1000 characters will be broadcasted.    **undefined**: The text is empty by default. |
+| description | string \| [Resource](../arkts-apis/arkts-arkui-resource-t.md) \| undefined | Yes | Text to be broadcasted for the current state of the component. If the text contains more than 1000 characters, the first 1000 characters will be broadcasted.    **undefined**: The text is empty by default. |
 
 **Return value:**
 
@@ -589,7 +589,7 @@ Sets the accessibility text.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| text | Resource | Yes | set accessibility text |
+| text | [Resource](../arkts-apis/arkts-arkui-resource-t.md) | Yes | set accessibility text |
 
 **Return value:**
 
@@ -1336,7 +1336,7 @@ Background color
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | [Optional](arkts-arkui-optional-t.md)&lt;[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) \| ColorMetrics&gt; | Yes |  |
+| color | [Optional](arkts-arkui-optional-t.md)&lt;[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) \| [ColorMetrics](../arkts-apis/arkts-arkui-colormetrics-t.md)&gt; | Yes |  |
 
 **Return value:**
 
@@ -1682,7 +1682,7 @@ Binds a full-screen modal to the component, which can be displayed when the comp
 bindContextMenu(content: CustomBuilder, responseType: ResponseType, options?: ContextMenuOptions): T
 ```
 
-Binds a context menu to this component, which is displayed when the user number-presses or right-clicks the component. Only custom menu items are supported.
+Binds a context menu to this component, which is displayed when the user long-presses or right-clicks the component. Only custom menu items are supported.
 
 **Since:** 8
 
@@ -1724,7 +1724,7 @@ Binds a context menu to the component, whose visibility is subject to the isShow
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isShown | boolean | Yes | true means display content, false means hide content, default is false. <p>&lt;strong&gt;NOTE&lt;/strong&gt;: The menu can be displayed properly only when the related page has been constructed. If this parameter is set to true before the construction is complete, display issues, such as misplacement, distortion, or failure to pop up, may occur. To trigger dragging by number presses is not supported. </p> |
+| isShown | boolean | Yes | true means display content, false means hide content, default is false. <p>&lt;strong&gt;NOTE&lt;/strong&gt;: The menu can be displayed properly only when the related page has been constructed. If this parameter is set to true before the construction is complete, display issues, such as misplacement, distortion, or failure to pop up, may occur. To trigger dragging by long presses is not supported. </p> |
 | content | [CustomBuilder](arkts-arkui-custombuilder-t.md) | Yes | Indicates the content of context menu. |
 | options | [ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md) | No | Indicates the options of context menu. |
 
@@ -1754,7 +1754,7 @@ Binds a context menu to the component, whose visibility is subject to the isShow
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isShow | boolean | Yes | true means display content, false means hide content, default is false. <p>&lt;strong&gt;NOTE&lt;/strong&gt;: The menu can be displayed properly only when the related page has been constructed. If this parameter is set to true before the construction is complete, display issues, such as misplacement, distortion, or failure to pop up, may occur. Dragging via number press is not supported. </p>. |
+| isShow | boolean | Yes | true means display content, false means hide content, default is false. <p>&lt;strong&gt;NOTE&lt;/strong&gt;: The menu can be displayed properly only when the related page has been constructed. If this parameter is set to true before the construction is complete, display issues, such as misplacement, distortion, or failure to pop up, may occur. Dragging via long press is not supported. </p>. |
 | content | [CustomBuilder](arkts-arkui-custombuilder-t.md) \| Array&lt;[MenuElement](arkts-arkui-menuelement-i.md)&gt; | Yes | Indicates the content of context menu. |
 | options | [ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md) | No | Indicates the options of context menu. |
 
@@ -1771,7 +1771,7 @@ bindContextMenuByResponseType(content: CustomBuilder | Array<MenuElement>, respo
       options?: ContextMenuOptions): T
 ```
 
-Binds a context menu to this component, which is displayed when the user number-presses or right-clicks the component. Custom or fixed-style menu items are supported.
+Binds a context menu to this component, which is displayed when the user long-presses or right-clicks the component. Custom or fixed-style menu items are supported.
 
 **Since:** 26.0.0
 
@@ -1801,7 +1801,7 @@ Binds a context menu to this component, which is displayed when the user number-
 bindContextMenuWithResponse(content: CustomBuilderT<ResponseType> | undefined, options?: ContextMenuOptions): T
 ```
 
-Binds a context menu to this component, which is displayed when the user number-presses or right-clicks the component. Only custom menu items are supported. Long pressing with a mouse device is not supported.
+Binds a context menu to this component, which is displayed when the user long-presses or right-clicks the component. Only custom menu items are supported. Long pressing with a mouse device is not supported.
 
 **Since:** 23
 
@@ -1831,7 +1831,7 @@ bindContextMenuWithResponse(content: CustomBuilderT<ResponseType> | Array<MenuEl
     options?: ContextMenuOptions): T
 ```
 
-Binds a context menu to this component, which is displayed when the user number-presses or right-clicks the component. Custom or fixed-style menu items are supported. Long pressing with a mouse device is not supported.
+Binds a context menu to this component, which is displayed when the user long-presses or right-clicks the component. Custom or fixed-style menu items are supported. Long pressing with a mouse device is not supported.
 
 **Since:** 26.0.0
 
@@ -2436,7 +2436,7 @@ Sets the parameters of the chain in which the component is the head. This attrib
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| direction | Axis | Yes | indicates direction of the chain |
+| direction | [Axis](../arkts-apis/arkts-arkui-axis-e.md) | Yes | indicates direction of the chain |
 | style | [ChainStyle](arkts-arkui-chainstyle-e.md) | Yes | indicates style of the chain |
 
 **Return value:**
@@ -2476,10 +2476,6 @@ Since API version 23, dynamic configuration via [attributeModifier](#attributemo
 | Type | Description |
 | --- | --- |
 | T | Current component. |
-
-**Examples**
-
-For details, see [Example 10: Setting Component Weights in a Chain](ts-container-relativecontainer.md#example-10-setting-component-weights-in-a-chain).
 
 ## clickEffect
 
@@ -2731,7 +2727,7 @@ Applies a color blend effect to the component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Color \| string \| Resource | Yes | Color to blend with the component. The value can be a string, for example, **'0x000000'** or **'rgba(0,0,0,1)'**. |
+| value | [Color](../arkts-apis/arkts-arkui-color-e.md) \| string \| [Resource](../arkts-apis/arkts-arkui-resource-t.md) | Yes | Color to blend with the component. The value can be a string, for example, **'0x000000'** or **'rgba(0,0,0,1)'**. |
 
 **Return value:**
 
@@ -2761,7 +2757,7 @@ Applies a color blend effect to the component. Compared with [colorBlend](#color
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | [Optional](arkts-arkui-optional-t.md)&lt;Color \| string \| Resource&gt; | Yes | Color to blend with the component. The value can be a string, for example, **'0x000000'** or **'rgba(0,0,0,1)'**.If **color** is **undefined**, the component reverts to its original effect with no color blending. |
+| color | [Optional](arkts-arkui-optional-t.md)&lt;[Color](../arkts-apis/arkts-arkui-color-e.md) \| string \| [Resource](../arkts-apis/arkts-arkui-resource-t.md)&gt; | Yes | Color to blend with the component. The value can be a string, for example, **'0x000000'** or **'rgba(0,0,0,1)'**.If **color** is **undefined**, the component reverts to its original effect with no color blending. |
 
 **Return value:**
 
@@ -2986,7 +2982,7 @@ Sets how elements are laid out along the main axis of the container. This attrib
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Direction | Yes | How elements are laid out along the main axis of the container. If this parameter is set to **auto**, the layout is subject to the system language. The setting does not take effect in the **Column** component. Default value: **Direction.Auto**. If the **direction** attribute receives an **undefined** or **null** input parameter, the system will apply the default value |
+| value | [Direction](../arkts-apis/arkts-arkui-direction-e.md) | Yes | How elements are laid out along the main axis of the container. If this parameter is set to **auto**, the layout is subject to the system language. The setting does not take effect in the **Column** component. Default value: **Direction.Auto**. If the **direction** attribute receives an **undefined** or **null** input parameter, the system will apply the default value |
 
 **Return value:**
 
@@ -3028,7 +3024,7 @@ Sets the display priority for the component in the layout container. This parame
 doubleSided(value: Optional<boolean>): T
 ```
 
-Sets whether to component is number-sided.
+Sets whether to component is double-sided.
 
 **Since:** 26.0.0
 
@@ -3044,7 +3040,7 @@ Sets whether to component is number-sided.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes | Whether to draw both sides of component. **true**: Both front and back sides are visible (default). **false**: Only to front side is visible, to back side is hidden when rotated. When **value** is **undefined**, the component reverts to default number-sided setting (**true**). |
+| value | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes | Whether to draw both sides of component. **true**: Both front and back sides are visible (default). **false**: Only to front side is visible, to back side is hidden when rotated. When **value** is **undefined**, the component reverts to default double-sided setting (**true**). |
 
 **Return value:**
 
@@ -3933,7 +3929,7 @@ Gesture to bind.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| gesture | GestureType | Yes | Type of the gesture to bind. |
+| gesture | [GestureType](../arkts-apis/arkts-arkui-gesturetype-t.md) | Yes | Type of the gesture to bind. |
 | mask | [GestureMask](../arkts-apis/arkts-arkui-gesturemask-e.md) | No | Mask for gesture events.Default value: **GestureMask.Normal**. |
 
 **Return value:**
@@ -4502,7 +4498,7 @@ Sets a keyboard shortcut for the component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | string \| FunctionKey | Yes | Character key (which can be entered through the keyboard) or function key.An empty string means to disable the keyboard shortcut. |
+| value | string \| [FunctionKey](../arkts-apis/arkts-arkui-functionkey-e.md) | Yes | Character key (which can be entered through the keyboard) or function key.An empty string means to disable the keyboard shortcut. |
 | keys | Array&lt;[ModifierKey](../arkts-apis/arkts-arkui-modifierkey-e.md)&gt; | Yes | Modifier keys.This parameter can be left empty only when **value** is set to a function key. |
 | action | () =&gt; void | No | Callback for a custom event after the keyboard shortcut is triggered. |
 
@@ -5225,7 +5221,7 @@ Sets the offset of the component relative to its original position. When **offse
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Position \| Edges \| [LocalizedEdges](../arkts-apis/arkts-arkui-localizededges-i.md) | Yes | Offset of the component relative to its original layout position. The **offset** attribute does not affect the layout of the parent container. It adjusts the component position only during drawing. If of the Position type, this parameter sets the offset relative to the upper left corner of the component. If of the Edges type, this parameter sets the offset relative to the four edges of the component. **{x: x, y: y}** has the same effect as **{left: x, top: y}** and **{right: -x, bottom: -y}**. The [LocalizedEdges](../arkts-apis/arkts-arkui-localizededges-i.md) type supports the mirror mode: **start** is equivalent to **x** with left-to-right scripts and **-x** with right-to-left scripts. API version 9 and earlier: The default value is **{x: 0, y: 0}**. Default unit: vp API version 10: no default value. This attribute does not take effect when it is set to an abnormal value.<br>**Since:** 12 |
+| value | Position \| [Edges](../arkts-apis/arkts-arkui-edges-i.md) \| [LocalizedEdges](../arkts-apis/arkts-arkui-localizededges-i.md) | Yes | Offset of the component relative to its original layout position. The **offset** attribute does not affect the layout of the parent container. It adjusts the component position only during drawing. If of the Position type, this parameter sets the offset relative to the upper left corner of the component. If of the Edges type, this parameter sets the offset relative to the four edges of the component. **{x: x, y: y}** has the same effect as **{left: x, top: y}** and **{right: -x, bottom: -y}**. The [LocalizedEdges](../arkts-apis/arkts-arkui-localizededges-i.md) type supports the mirror mode: **start** is equivalent to **x** with left-to-right scripts and **-x** with right-to-left scripts. API version 9 and earlier: The default value is **{x: 0, y: 0}**. Default unit: vp API version 10: no default value. This attribute does not take effect when it is set to an abnormal value.<br>**Since:** 12 |
 
 **Return value:**
 
@@ -5887,7 +5883,7 @@ For details about the hover detection triggering mechanism and usage, see [Sprin
 onDragStart(event: (event: DragEvent, extraParams?: string) => CustomBuilder | DragItemInfo): T
 ```
 
-In a gesture-based drag scenario, this callback is triggered when a user number-presses a draggable component for more than 500 ms and then moves the finger more than 10 vp. In a mouse-drag scenario, it is triggered when the left mouse button is pressed on a draggable component and moved more than 1 vp.
+In a gesture-based drag scenario, this callback is triggered when a user long-presses a draggable component for more than 500 ms and then moves the finger more than 10 vp. In a mouse-drag scenario, it is triggered when the left mouse button is pressed on a draggable component and moved more than 1 vp.
 
 For components that provide drag and drop capabilities by default, a custom **onDragStart** event, if set, is executed and:
 
@@ -6663,7 +6659,7 @@ Sets the opacity of the component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number \| Resource | Yes | Component opacity. Value range: 0 to 1. Values less than 0 are treated as 0. Values greater than 1 are treated as 1. **1**: fully opaque. **0**: fully transparent (where the component is hidden but occupies layout space).Default value: **1**.   **NOTE：**Child components inherit parent opacity and combine with their own opacity. Example: Parent opacity 0.1 x Child opacity 0.8 = Effective opacity 0.08. |
+| value | number \| [Resource](../arkts-apis/arkts-arkui-resource-t.md) | Yes | Component opacity. Value range: 0 to 1. Values less than 0 are treated as 0. Values greater than 1 are treated as 1. **1**: fully opaque. **0**: fully transparent (where the component is hidden but occupies layout space).Default value: **1**.   **NOTE：**Child components inherit parent opacity and combine with their own opacity. Example: Parent opacity 0.1 x Child opacity 0.8 = Effective opacity 0.08. |
 
 **Return value:**
 
@@ -6693,7 +6689,7 @@ Sets the opacity of the component. Compared with [opacity](../../../reference/ap
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| opacity | [Optional](arkts-arkui-optional-t.md)&lt;number \| Resource&gt; | Yes | Component opacity. Value range: 0 to 1. Values less than 0 are treated as 0. Values greater than 1 are treated as 1. **1**: fully opaque. **0**: fully transparent (where the component is hidden but occupies layout space).Default value: **1**.   **NOTE：**Child components inherit parent opacity and combine with their own opacity. Example: Parent opacity 0.1 x Child opacity 0.8 = Effective opacity 0.08.When **opacity** is **undefined**, the component reverts to the default opacity of **1**. |
+| opacity | [Optional](arkts-arkui-optional-t.md)&lt;number \| [Resource](../arkts-apis/arkts-arkui-resource-t.md)&gt; | Yes | Component opacity. Value range: 0 to 1. Values less than 0 are treated as 0. Values greater than 1 are treated as 1. **1**: fully opaque. **0**: fully transparent (where the component is hidden but occupies layout space).Default value: **1**.   **NOTE：**Child components inherit parent opacity and combine with their own opacity. Example: Parent opacity 0.1 x Child opacity 0.8 = Effective opacity 0.08.When **opacity** is **undefined**, the component reverts to the default opacity of **1**. |
 
 **Return value:**
 
@@ -7089,7 +7085,7 @@ Gesture that can be recognized at once by the component and its child component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| gesture | GestureType | Yes | Gesture object to bind. |
+| gesture | [GestureType](../arkts-apis/arkts-arkui-gesturetype-t.md) | Yes | Gesture object to bind. |
 | mask | [GestureMask](../arkts-apis/arkts-arkui-gesturemask-e.md) | No | Mask for gesture events.Default value: **GestureMask.Normal**. |
 
 **Return value:**
@@ -7235,7 +7231,7 @@ component has [alignRules](#alignrules) set, the **position** attribute will not
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Position \| Edges \| [LocalizedEdges](../arkts-apis/arkts-arkui-localizededges-i.md) | Yes | Absolute positioning that determines the child component's position relative to the parent's content area. The content area of the parent component is calculated by subtracting the [border](#border), padding, and [safeAreaPadding](#safeareapadding) values from the parent component's total size. This resulting content area defines the available layout space for child components. This attribute does not take effect when it is set to an abnormal value.<br>**Since:** 12 |
+| value | Position \| [Edges](../arkts-apis/arkts-arkui-edges-i.md) \| [LocalizedEdges](../arkts-apis/arkts-arkui-localizededges-i.md) | Yes | Absolute positioning that determines the child component's position relative to the parent's content area. The content area of the parent component is calculated by subtracting the [border](#border), padding, and [safeAreaPadding](#safeareapadding) values from the parent component's total size. This resulting content area defines the available layout space for child components. This attribute does not take effect when it is set to an abnormal value.<br>**Since:** 12 |
 
 **Return value:**
 
@@ -7253,7 +7249,7 @@ Gesture to preferentially recognize.
 
 1. By default, the child component preferentially recognizes the gesture specified by **gesture**, and the parent
 component preferentially recognizes the gesture specified by **priorityGesture** (if set).
-2. For number press gestures, the component with the shortest minimum hold-down time responds first, ignoring the  
+2. For long press gestures, the component with the shortest minimum hold-down time responds first, ignoring the  
 **priorityGesture** settings.
 
 > **NOTE：**
@@ -7270,7 +7266,7 @@ component preferentially recognizes the gesture specified by **priorityGesture**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| gesture | GestureType | Yes | Gesture object to bind. |
+| gesture | [GestureType](../arkts-apis/arkts-arkui-gesturetype-t.md) | Yes | Gesture object to bind. |
 | mask | [GestureMask](../arkts-apis/arkts-arkui-gesturemask-e.md) | No | Mask for gesture events.Default value: **GestureMask.Normal**. |
 
 **Return value:**
@@ -7724,7 +7720,7 @@ Sets the safe area padding. This allows the container to add a component-level s
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| paddingValue | Padding \| LengthMetrics \| [LocalizedPadding](../arkts-apis/arkts-arkui-localizedpadding-i.md) | Yes | Safe area padding. Unit: vp. Default value: **0**. |
+| paddingValue | Padding \| [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md) \| [LocalizedPadding](../arkts-apis/arkts-arkui-localizedpadding-i.md) | Yes | Safe area padding. Unit: vp. Default value: **0**. |
 
 **Return value:**
 
@@ -8822,7 +8818,7 @@ Sets the visibility of the component. If **visibility** is not set, the componen
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Visibility | Yes | Whether the component is visible. When appropriate, consider using [conditional rendering](../../../ui/rendering-control/arkts-rendering-control-ifelse.md) as a substitute. |
+| value | [Visibility](../arkts-apis/arkts-arkui-visibility-e.md) | Yes | Whether the component is visible. When appropriate, consider using [conditional rendering](../../../ui/rendering-control/arkts-rendering-control-ifelse.md) as a substitute. |
 
 **Return value:**
 

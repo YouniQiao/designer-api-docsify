@@ -27,8 +27,8 @@ Sets the role types supported by a specified port, which can be **powerRole** (f
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | portId | number | Yes | Port number. |
-| powerRole | PowerRoleType | Yes | Role for charging. |
-| dataRole | DataRoleType | Yes | Role for data transfer. |
+| powerRole | [PowerRoleType](arkts-basicservices-usbmanager-powerroletype-e-sys.md) | Yes | Role for charging. |
+| dataRole | [DataRoleType](arkts-basicservices-usbmanager-dataroletype-e-sys.md) | Yes | Role for data transfer. |
 
 **Return value:**
 
@@ -45,16 +45,3 @@ Sets the role types supported by a specified port, which can be **powerRole** (f
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:  1.Mandatory parameters are left unspecified.  2.Incorrect parameter types. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported.<br>**Applicable version:** 18 and later |
 | [14400003](../errorcode-usb.md#14400003-port-role-switching-unsupported) | Unsupported operation. The current device does not support port role switching. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let portId: number = 1;
-usbManager.setPortRoleTypes(portId, usbManager.PowerRoleType.SOURCE, usbManager.DataRoleType.HOST).then(() => {
-  console.info('usb setPortRoleTypes successfully.');
-}).catch((err : BusinessError) => {
-  console.error('usb setPortRoleTypes failed: ' + err.code + ' message: ' + err.message);
-});
-```

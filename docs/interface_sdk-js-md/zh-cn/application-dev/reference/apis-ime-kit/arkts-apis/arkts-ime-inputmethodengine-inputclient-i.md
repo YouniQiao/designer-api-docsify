@@ -69,23 +69,6 @@ inputClient.deleteBackward(length, (err: BusinessError, result: boolean) => {
 });
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let length: number = 1;
-textInputClient.deleteBackward(length, (err: BusinessError, result: boolean) => {
-  if (err) {
-    console.error(`Failed to deleteBackward. Code is ${err.code}, message is ${err.message}`);
-    return;
-  }
-  if (result) {
-    console.info('Succeeded in deleting backward.');
-  } else {
-    console.error('Failed to deleteBackward.');
-  }
-});
-```
-
 ## deleteBackward
 
 ```TypeScript
@@ -125,21 +108,6 @@ import { BusinessError } from '@kit.BasicServicesKit';
 
 let length: number = 1;
 inputClient.deleteBackward(length).then((result: boolean) => {
-  if (result) {
-    console.info('Succeeded in deleting backward.');
-  } else {
-    console.error('Failed to deleteBackward.');
-  }
-}).catch((err: BusinessError) => {
-  console.error(`Failed to deleteBackward. Code is ${err.code}, message is ${err.message}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let length: number = 1;
-textInputClient.deleteBackward(length).then((result: boolean) => {
   if (result) {
     console.info('Succeeded in deleting backward.');
   } else {
@@ -236,23 +204,6 @@ inputClient.deleteForward(length, (err: BusinessError, result: boolean) => {
 });
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let length: number = 1;
-textInputClient.deleteForward(length, (err: BusinessError, result: boolean) => {
-  if (err) {
-    console.error(`Failed to deleteForward. Code is ${err.code}, message is ${err.message}`);
-    return;
-  }
-  if (result) {
-    console.info('Succeeded in deleting forward.');
-  } else {
-    console.error('Failed to deleteForward.');
-  }
-});
-```
-
 ## deleteForward
 
 ```TypeScript
@@ -296,21 +247,6 @@ inputClient.deleteForward(length).then((result: boolean) => {
     console.info('Succeeded in deleting forward.');
   } else {
     console.error('Failed to delete Forward.');
-  }
-}).catch((err: BusinessError) => {
-  console.error(`Failed to deleteForward. Code is ${err.code}, message is ${err.message}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let length: number = 1;
-textInputClient.deleteForward(length).then((result: boolean) => {
-  if (result) {
-    console.info('Succeeded in deleting forward.');
-  } else {
-    console.error('Failed to delete forward.');
   }
 }).catch((err: BusinessError) => {
   console.error(`Failed to deleteForward. Code is ${err.code}, message is ${err.message}`);
@@ -453,7 +389,7 @@ getAttachOptions(): AttachOptions
 
 | 类型 | 说明 |
 | --- | --- |
-| AttachOptions | 返回绑定输入法时的附加选项内容。 |
+| [AttachOptions](arkts-ime-inputmethodengine-attachoptions-i.md) | 返回绑定输入法时的附加选项内容。 |
 
 **错误码：**
 
@@ -510,19 +446,6 @@ inputClient.getBackward(length, (err: BusinessError, text: string) => {
 });
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let length: number = 1;
-textInputClient.getBackward(length, (err: BusinessError, text: string) => {
-  if (err) {
-    console.error(`Failed to getBackward. Code is ${err.code}, message is ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in getting backward, text: ' + text);
-});
-```
-
 ## getBackward
 
 ```TypeScript
@@ -563,17 +486,6 @@ import { BusinessError } from '@kit.BasicServicesKit';
 let length: number = 1;
 inputClient.getBackward(length).then((text: string) => {
   console.info('Succeeded in getting backward, text: ' + text);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to getBackward. Code is ${err.code}, message is ${err.message}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let length: number = 1;
-textInputClient.getBackward(length).then((text: string) => {
-  console.info(`Succeeded in getting backward: ${text}`);
 }).catch((err: BusinessError) => {
   console.error(`Failed to getBackward. Code is ${err.code}, message is ${err.message}`);
 });
@@ -647,7 +559,7 @@ getCallingWindowInfo(): Promise<WindowInfo>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;WindowInfo&gt; | Promise对象，返回拉起输入法的输入框所在应用窗口信息。 |
+| Promise&lt;[WindowInfo](arkts-ime-inputmethodengine-windowinfo-i.md)&gt; | Promise对象，返回拉起输入法的输入框所在应用窗口信息。 |
 
 **错误码：**
 
@@ -699,15 +611,11 @@ getEditorAttribute(callback: AsyncCallback<EditorAttribute>): void
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
-
-textInputClient.getEditorAttribute((err: BusinessError,
-  editorAttribute: inputMethodEngine.EditorAttribute) => {
-  if (err) {
-    console.error(`Failed to getEditorAttribute. Code is ${err.code}, message is ${err.message}`);
-    return;
-  }
-  console.info(`editorAttribute.inputPattern: ${editorAttribute.inputPattern}`);
-  console.info(`editorAttribute.enterKeyType: ${editorAttribute.enterKeyType}`);
+inputClient.getEditorAttribute().then((editorAttribute: inputMethodEngine.EditorAttribute) => {
+  console.info(`editorAttribute.inputPattern:  ${editorAttribute.inputPattern}`);
+  console.info(`editorAttribute.enterKeyType:  ${editorAttribute.enterKeyType}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to getEditorAttribute. Code is ${err.code}, message is ${err.message}`);
 });
 ```
 
@@ -743,17 +651,6 @@ import { BusinessError } from '@kit.BasicServicesKit';
 inputClient.getEditorAttribute().then((editorAttribute: inputMethodEngine.EditorAttribute) => {
   console.info(`editorAttribute.inputPattern:  ${editorAttribute.inputPattern}`);
   console.info(`editorAttribute.enterKeyType:  ${editorAttribute.enterKeyType}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to getEditorAttribute. Code is ${err.code}, message is ${err.message}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-textInputClient.getEditorAttribute().then((editorAttribute: inputMethodEngine.EditorAttribute) => {
-  console.info(`editorAttribute.inputPattern: ${editorAttribute.inputPattern}`);
-  console.info(`editorAttribute.enterKeyType: ${editorAttribute.enterKeyType}`);
 }).catch((err: BusinessError) => {
   console.error(`Failed to getEditorAttribute. Code is ${err.code}, message is ${err.message}`);
 });
@@ -842,19 +739,6 @@ inputClient.getForward(length, (err: BusinessError, text: string) => {
 });
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let length: number = 1;
-textInputClient.getForward(length, (err: BusinessError, text: string) => {
-  if (err) {
-    console.error(`Failed to getForward. Code is ${err.code}, message is ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in getting forward, text: ' + text);
-});
-```
-
 ## getForward
 
 ```TypeScript
@@ -894,17 +778,6 @@ import { BusinessError } from '@kit.BasicServicesKit';
 
 let length: number = 1;
 inputClient.getForward(length).then((text: string) => {
-  console.info('Succeeded in getting forward, text: ' + text);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to getForward. Code is ${err.code}, message is ${err.message}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let length: number = 1;
-textInputClient.getForward(length).then((text: string) => {
   console.info('Succeeded in getting forward, text: ' + text);
 }).catch((err: BusinessError) => {
   console.error(`Failed to getForward. Code is ${err.code}, message is ${err.message}`);
@@ -1119,22 +992,6 @@ inputClient.insertText('test', (err: BusinessError, result: boolean) => {
 });
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-textInputClient.insertText('test', (err: BusinessError, result: boolean) => {
-  if (err) {
-    console.error(`Failed to insertText. Code is ${err.code}, message is ${err.message}`);
-    return;
-  }
-  if (result) {
-    console.info('Succeeded in inserting text.');
-  } else {
-    console.error('Failed to insertText.');
-  }
-});
-```
-
 ## insertText
 
 ```TypeScript
@@ -1173,20 +1030,6 @@ insertText(text: string): Promise<boolean>
 import { BusinessError } from '@kit.BasicServicesKit';
 
 inputClient.insertText('test').then((result: boolean) => {
-  if (result) {
-    console.info('Succeeded in inserting text.');
-  } else {
-    console.error('Failed to insertText.');
-  }
-}).catch((err: BusinessError) => {
-  console.error(`Failed to insertText. Code is ${err.code}, message is ${err.message}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-textInputClient.insertText('test').then((result: boolean) => {
   if (result) {
     console.info('Succeeded in inserting text.');
   } else {
@@ -1374,7 +1217,7 @@ off(type: 'attachOptionsDidChange', callback?: Callback<AttachOptions>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'attachOptionsDidChange' | 是 | 绑定输入法时的附加选项变更事件，固定取值为'attachOptionsDidChange'。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AttachOptions&gt; | 否 | 取消订阅的回调函数。参数不填写时，默认取消订阅type对应的所有回调事件。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AttachOptions](arkts-ime-inputmethodengine-attachoptions-i.md)&gt; | 否 | 取消订阅的回调函数。参数不填写时，默认取消订阅type对应的所有回调事件。 |
 
 **示例**
 
@@ -1407,7 +1250,7 @@ on(type: 'attachOptionsDidChange', callback: Callback<AttachOptions>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'attachOptionsDidChange' | 是 | 绑定输入法时的附加选项变更事件，固定取值为'attachOptionsDidChange'。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AttachOptions&gt; | 是 | 回调函数，返回绑定输入法时的附加选项。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AttachOptions](arkts-ime-inputmethodengine-attachoptions-i.md)&gt; | 是 | 回调函数，返回绑定输入法时的附加选项。 |
 
 **错误码：**
 
@@ -1461,7 +1304,7 @@ recvMessage(msgHandler?: MessageHandler): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| msgHandler | MessageHandler | 否 | 该对象将通过[onMessage](arkts-ime-inputmethodengine-messagehandler-i.md#onmessage)接收来自已绑定当前输入法应用的编辑框应用所发送的自定义通信数据，并通过[onTerminated](arkts-ime-inputmethodengine-messagehandler-i.md#onterminated)接收终止此对象订阅的消息。若不填写此参数，则取消全局已注册的[MessageHandler](arkts-ime-inputmethodengine-messagehandler-i.md)对象，同时触发其[onTerminated](arkts-ime-inputmethodengine-messagehandler-i.md#onterminated)回调函数。 |
+| msgHandler | [MessageHandler](arkts-ime-inputmethodengine-messagehandler-i.md) | 否 | 该对象将通过[onMessage](arkts-ime-inputmethodengine-messagehandler-i.md#onmessage)接收来自已绑定当前输入法应用的编辑框应用所发送的自定义通信数据，并通过[onTerminated](arkts-ime-inputmethodengine-messagehandler-i.md#onterminated)接收终止此对象订阅的消息。若不填写此参数，则取消全局已注册的[MessageHandler](arkts-ime-inputmethodengine-messagehandler-i.md)对象，同时触发其[onTerminated](arkts-ime-inputmethodengine-messagehandler-i.md#onterminated)回调函数。 |
 
 **错误码：**
 
@@ -1505,7 +1348,7 @@ selectByMovement(movement: Movement, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| movement | Movement | 是 | 选中时光标移动的方向。 |
+| movement | [Movement](arkts-ime-inputmethodengine-movement-i.md) | 是 | 选中时光标移动的方向。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当成功发送选中事件后，err为undefined，否则为错误对象。 |
 
 **错误码：**
@@ -1547,7 +1390,7 @@ selectByMovement(movement: Movement): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| movement | Movement | 是 | 选中时光标移动的方向。 |
+| movement | [Movement](arkts-ime-inputmethodengine-movement-i.md) | 是 | 选中时光标移动的方向。 |
 
 **返回值：**
 
@@ -1599,7 +1442,7 @@ selectByMovementSync(movement: Movement): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| movement | Movement | 是 | 选中时光标移动的方向。 |
+| movement | [Movement](arkts-ime-inputmethodengine-movement-i.md) | 是 | 选中时光标移动的方向。 |
 
 **错误码：**
 
@@ -1632,7 +1475,7 @@ selectByRange(range: Range, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| range | Range | 是 | 选中文本的范围。 |
+| range | [Range](arkts-ime-inputmethodengine-range-i.md) | 是 | 选中文本的范围。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当成功发送选中事件后，err为undefined，否则为错误对象。 |
 
 **错误码：**
@@ -1675,7 +1518,7 @@ selectByRange(range: Range): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| range | Range | 是 | 选中文本的范围。 |
+| range | [Range](arkts-ime-inputmethodengine-range-i.md) | 是 | 选中文本的范围。 |
 
 **返回值：**
 
@@ -1730,7 +1573,7 @@ selectByRangeSync(range: Range): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| range | Range | 是 | 选中文本的范围。 |
+| range | [Range](arkts-ime-inputmethodengine-range-i.md) | 是 | 选中文本的范围。 |
 
 **错误码：**
 
@@ -1781,7 +1624,7 @@ sendExtendAction(action: ExtendAction, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| action | ExtendAction | 是 | 要发送的扩展操作。 |
+| action | [ExtendAction](arkts-ime-inputmethodengine-extendaction-e.md) | 是 | 要发送的扩展操作。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。发送成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
@@ -1839,7 +1682,7 @@ sendExtendAction(action: ExtendAction): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| action | ExtendAction | 是 | 要发送的扩展操作。 |
+| action | [ExtendAction](arkts-ime-inputmethodengine-extendaction-e.md) | 是 | 要发送的扩展操作。 |
 
 **返回值：**
 
@@ -1913,23 +1756,6 @@ inputClient.sendKeyFunction(action, (err: BusinessError, result: boolean) => {
 });
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let action: number = 1;
-textInputClient.sendKeyFunction(action, (err: BusinessError, result: boolean) => {
-  if (err) {
-    console.error(`Failed to sendKeyFunction. Code is ${err.code}, message is ${err.message}`);
-    return;
-  }
-  if (result) {
-    console.info('Succeeded in sending key function.');
-  } else {
-    console.error('Failed to sendKeyFunction.');
-  }
-});
-```
-
 ## sendKeyFunction
 
 ```TypeScript
@@ -1975,21 +1801,6 @@ inputClient.sendKeyFunction(action).then((result: boolean) => {
   }
 }).catch((err: BusinessError) => {
   console.error(`Failed to sendKeyFunction. Code is ${err.code}, message is ${err.message}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let action: number = 1;
-textInputClient.sendKeyFunction(action).then((result: boolean) => {
-  if (result) {
-    console.info('Succeeded in sending key function.');
-  } else {
-    console.error('Failed to sendKeyFunction.');
-  }
-}).catch((err: BusinessError) => {
-  console.error(`Failed to sendKeyFunction:. Code is ${err.code}, message is ${err.message}`);
 });
 ```
 
@@ -2081,7 +1892,7 @@ sendPrivateCommand(commandData: Record<string, CommandDataType>): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| commandData | Record&lt;string, CommandDataType&gt; | 是 | 私有数据。 |
+| commandData | Record&lt;string, [CommandDataType](arkts-ime-inputmethodengine-commanddatatype-t.md)&gt; | 是 | 私有数据。 |
 
 **返回值：**
 
@@ -2135,7 +1946,7 @@ setPreviewText(text: string, range: Range): Promise<void>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | text | string | 是 | 预上屏的文本。 |
-| range | Range | 是 | 替换的文本范围。   - 当值为{ start: -1, end: -1 }时，默认将参数text替换当前预上屏区域全部文本。   - 当start等于end，默认将参数text插入start对应的光标位置。   - 当start不等于end，将参数text替换range对应区域的文本。   - 当start与end为其他含有负数值的组合，按照参数错误返回。   - 当输入框已有预上屏文本，参数range不得超过预上屏文本范围，否则按照参数错误返回。   - 当输入框无预上屏文本，参数range不得超过输入框文本范围，否则按照参数错误返回。 |
+| range | [Range](arkts-ime-inputmethodengine-range-i.md) | 是 | 替换的文本范围。   - 当值为{ start: -1, end: -1 }时，默认将参数text替换当前预上屏区域全部文本。   - 当start等于end，默认将参数text插入start对应的光标位置。   - 当start不等于end，将参数text替换range对应区域的文本。   - 当start与end为其他含有负数值的组合，按照参数错误返回。   - 当输入框已有预上屏文本，参数range不得超过预上屏文本范围，否则按照参数错误返回。   - 当输入框无预上屏文本，参数range不得超过输入框文本范围，否则按照参数错误返回。 |
 
 **返回值：**
 
@@ -2188,7 +1999,7 @@ setPreviewTextSync(text: string, range: Range): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | text | string | 是 | 预上屏的文本。 |
-| range | Range | 是 | 替换的文本范围。   - 当值为{ start: -1, end: -1 }时，默认将参数text替换当前预上屏区域全部文本。   - 当start等于end，默认将参数text插入start对应的光标位置。   - 当start不等于end，将参数text替换range对应区域的文本。   - 当start与end为其他含有负数值的组合，按照参数错误返回。   - 当输入框已有预上屏文本，参数range不得超过预上屏文本范围，否则按照参数错误返回。   - 当输入框无预上屏文本，参数range不得超过输入框文本范围，否则按照参数错误返回。 |
+| range | [Range](arkts-ime-inputmethodengine-range-i.md) | 是 | 替换的文本范围。   - 当值为{ start: -1, end: -1 }时，默认将参数text替换当前预上屏区域全部文本。   - 当start等于end，默认将参数text插入start对应的光标位置。   - 当start不等于end，将参数text替换range对应区域的文本。   - 当start与end为其他含有负数值的组合，按照参数错误返回。   - 当输入框已有预上屏文本，参数range不得超过预上屏文本范围，否则按照参数错误返回。   - 当输入框无预上屏文本，参数range不得超过输入框文本范围，否则按照参数错误返回。 |
 
 **错误码：**
 

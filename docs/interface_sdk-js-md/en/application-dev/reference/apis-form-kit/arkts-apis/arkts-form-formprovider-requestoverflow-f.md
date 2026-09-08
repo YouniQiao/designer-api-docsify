@@ -27,7 +27,7 @@ Requests an animation. This API takes effect only for [scene-based widgets](../.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | formId | string | Yes | Widget ID. |
-| overflowInfo | formInfo.OverflowInfo | Yes | Animation request parameter information. |
+| overflowInfo | [formInfo.OverflowInfo](arkts-form-forminfo-overflowinfo-i.md) | Yes | Animation request parameter information. |
 
 **Return value:**
 

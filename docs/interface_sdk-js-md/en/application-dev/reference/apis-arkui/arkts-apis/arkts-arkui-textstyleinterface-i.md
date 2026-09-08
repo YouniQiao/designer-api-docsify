@@ -83,7 +83,7 @@ If **unit** of **LengthMetrics** is percent, the setting does not take effect, a
 
 Unit: fp
 
-**Type:** LengthMetrics
+**Type:** [LengthMetrics](arkts-arkui-lengthmetrics-t.md)
 
 **Since:** 12
 
@@ -103,7 +103,7 @@ Font style.
 
 Default value: **FontStyle.Normal**.
 
-**Type:** FontStyle
+**Type:** [FontStyle](arkts-arkui-fontstyle-e.md)
 
 **Since:** 12
 
@@ -127,7 +127,7 @@ The priority of **fontVariations** is higher than that of **fontWeight**.
 
 **Since**: 26.0.0
 
-**Type:** Array&lt;FontVariation&gt;
+**Type:** Array&lt;[FontVariation](arkts-arkui-fontvariation-t.md)&gt;
 
 **Since:** 26.0.0
 
@@ -147,7 +147,7 @@ Font weight.
 
 For the number type, the value ranges from 100 to 900, at an interval of 100. A larger value indicates a heavier font weight. The default value is **400**. For the string type, only strings that represent a number, for example, **400**, and the following enumerated values of **FontWeight** are supported: **bold**, **bolder**, **lighter**, **regular**, and **medium**.
 
-**Type:** number \| FontWeight \| string
+**Type:** number \| [FontWeight](arkts-arkui-fontweight-e.md) \| string
 
 **Since:** 12
 
@@ -211,7 +211,7 @@ If the value is less than 0, the text is solid. If the value is greater than 0, 
 
 Default value: **0**.
 
-**Type:** LengthMetrics
+**Type:** [LengthMetrics](arkts-arkui-lengthmetrics-t.md)
 
 **Since:** 20
 

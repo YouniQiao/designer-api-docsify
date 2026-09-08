@@ -42,6 +42,8 @@ function setAttribute(portId: number, attribute: SerialAttribute): void
 **示例**
 
 > 说明：
+> 
+> 以下示例代码只是调用setAttribute接口的必要流程，需要放入具体的方法中执行。实际调用时，设备开发者需要遵循设备相关协议进行调用。
 
 ```TypeScript
 import { JSON } from '@kit.ArkTS';

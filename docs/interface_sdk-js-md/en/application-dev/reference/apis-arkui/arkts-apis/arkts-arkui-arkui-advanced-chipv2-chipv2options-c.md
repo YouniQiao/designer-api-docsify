@@ -160,7 +160,7 @@ public activatedBackgroundSystemMaterial?: uiMaterial.Material
 
 Set system-styled materials for the component which is activated. Different materials have different effects, which can influence the backgroundColor, border, shadow, and other visual attributes of the component.
 
-**Type:** uiMaterial.Material
+**Type:** [uiMaterial.Material](arkts-arkui-uimaterial-material-c.md)
 
 **Since:** 26.0.0
 
@@ -220,7 +220,7 @@ public backgroundSystemMaterial?: uiMaterial.Material
 
 Set system-styled materials for the component. Different materials have different effects, which can influence the backgroundColor, border, shadow, and other visual attributes of the component.
 
-**Type:** uiMaterial.Material
+**Type:** [uiMaterial.Material](arkts-arkui-uimaterial-material-c.md)
 
 **Since:** 26.0.0
 
@@ -280,7 +280,7 @@ public direction?: Direction
 
 Indicates the attribute of the current chip direction.
 
-**Type:** Direction
+**Type:** [Direction](arkts-arkui-direction-e.md)
 
 **Since:** 26.0.0
 
@@ -360,7 +360,7 @@ public maxFontScale?: number | Resource
 
 Maximum font scale for Chip.
 
-**Type:** number \| Resource
+**Type:** number \| [Resource](arkts-arkui-resource-t.md)
 
 **Since:** 26.0.0
 
@@ -380,7 +380,7 @@ public minFontScale?: number | Resource
 
 Minimum font scale for Chip.
 
-**Type:** number \| Resource
+**Type:** number \| [Resource](arkts-arkui-resource-t.md)
 
 **Since:** 26.0.0
 

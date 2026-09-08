@@ -32,7 +32,7 @@ Obtains a PhotoAccessHelper instance, which can be used for accessing and modify
 
 | Type | Description |
 | --- | --- |
-| PhotoAccessHelper | PhotoAccessHelper instance obtained. |
+| [PhotoAccessHelper](arkts-medialibrary-sendablephotoaccesshelper-photoaccesshelper-i.md) | PhotoAccessHelper instance obtained. |
 
 **Error codes:**
 

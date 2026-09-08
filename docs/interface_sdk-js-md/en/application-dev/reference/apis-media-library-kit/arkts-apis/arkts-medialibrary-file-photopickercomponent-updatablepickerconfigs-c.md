@@ -38,7 +38,7 @@ autoPlayScenes?: Array<photoAccessHelper.AutoPlayScene>
 
 Playback mode of the moving photo. The maximum array length is 2. If this limit is exceeded, the first two elements are used, and the extra ones are automatically ignored.
 
-**Type:** Array&lt;photoAccessHelper.AutoPlayScene&gt;
+**Type:** Array&lt;[photoAccessHelper.AutoPlayScene](arkts-medialibrary-photoaccesshelper-autoplayscene-c.md)&gt;
 
 **Since:** 23
 
@@ -260,7 +260,7 @@ MIME types.
 
 If this parameter is not specified, **IMAGE_VIDEO_TYPE** is used by default.
 
-**Type:** photoAccessHelper.PhotoViewMIMETypes
+**Type:** [photoAccessHelper.PhotoViewMIMETypes](arkts-medialibrary-photoaccesshelper-photoviewmimetypes-e.md)
 
 **Since:** 22
 
@@ -280,7 +280,7 @@ Configuration for file type filtering. Multiple types can be specified.
 - When this parameter is set, only media files of the configured filter type are displayed. You are advised to  
 notify users that only images or videos of the specified type can be selected.
 
-**Type:** photoAccessHelper.MimeTypeFilter
+**Type:** [photoAccessHelper.MimeTypeFilter](arkts-medialibrary-photoaccesshelper-mimetypefilter-c.md)
 
 **Since:** 22
 
@@ -366,7 +366,7 @@ singleSelectionMode?: photoAccessHelper.SingleSelectionMode
 
 Single selection mode. The default value is **SingleSelectionMode.BROWSER_MODE**.
 
-**Type:** photoAccessHelper.SingleSelectionMode
+**Type:** [photoAccessHelper.SingleSelectionMode](arkts-medialibrary-photoaccesshelper-singleselectionmode-e.md)
 
 **Since:** 22
 

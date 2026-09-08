@@ -35,7 +35,7 @@ Appends a child node to this **FieldNode**.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| child | FieldNode | Yes | Child node to append. |
+| child | [FieldNode](arkts-arkdata-distributeddata-fieldnode-c.md) | Yes | Child node to append. |
 
 **Return value:**
 

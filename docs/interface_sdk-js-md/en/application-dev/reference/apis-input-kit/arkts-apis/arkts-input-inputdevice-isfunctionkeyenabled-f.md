@@ -22,7 +22,7 @@ Checks whether the specified function key (for example, **CapsLock**) is enabled
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| functionKey | FunctionKey | Yes | Type of the function key. |
+| functionKey | [FunctionKey](arkts-input-inputdevice-functionkey-e.md) | Yes | Type of the function key. |
 
 **Return value:**
 

@@ -40,22 +40,6 @@ getReceivingSurfaceId(callback: AsyncCallback<string>): void
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数，当获取surface id成功，err为undefined，data为获取到的surface id；否则为错误对象。 |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function GetReceivingSurfaceId(receiver : image.ImageReceiver) {
-  receiver.getReceivingSurfaceId((err: BusinessError, id: string) => {
-    if (err) {
-      console.error(`Failed to get the ReceivingSurfaceId.code ${err.code},message is ${err.message}`);
-    } else {
-      console.info('Succeeded in getting the ReceivingSurfaceId.');
-    }
-  });
-}
-```
-
 ## getReceivingSurfaceId
 
 ```TypeScript
@@ -73,20 +57,6 @@ getReceivingSurfaceId(): Promise<string>
 | 类型 | 说明 |
 | --- | --- |
 | Promise&lt;string&gt; | Promise对象，返回surface id。 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function GetReceivingSurfaceId(receiver : image.ImageReceiver) {
-  receiver.getReceivingSurfaceId().then((id: string) => { 
-    console.info('Succeeded in getting the ReceivingSurfaceId.');
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to get the ReceivingSurfaceId.code ${error.code},message is ${error.message}`);
-  })
-}
-```
 
 ## off('imageArrival')
 
@@ -107,18 +77,6 @@ off(type: 'imageArrival', callback?: AsyncCallback<void>): void
 | type | 'imageArrival' | 是 | 注册事件的类型，固定为'imageArrival'，释放buffer时触发。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 否 | 移除的回调函数。 |
 
-**示例**
-
-```TypeScript
-async function Off(receiver : image.ImageReceiver) {
-  let callbackFunc = ()=>{
-      // 实现回调函数逻辑。
-  };
-  receiver.on('imageArrival', callbackFunc);
-  receiver.off('imageArrival', callbackFunc);
-}
-```
-
 ## on('imageArrival')
 
 ```TypeScript
@@ -137,22 +95,6 @@ on(type: 'imageArrival', callback: AsyncCallback<void>): void
 | --- | --- | --- | --- |
 | type | 'imageArrival' | 是 | 注册事件的类型，固定为'imageArrival'，接收图片到达时触发。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，当注册事件触发成功，err为undefined，否则为错误对象。 |
-
-**示例**
-
-```TypeScript
-async function On(receiver : image.ImageReceiver) {
-  receiver.on('imageArrival', () => {
-    // 图片到达回调触发后，读取最新或下一张图片进行处理。
-    receiver.readLatestImage().then((img: image.Image) => {
-      console.info('Succeeded in reading the latest Image.');
-      // 处理图片数据。
-    }).catch((error: BusinessError) => {
-      console.error(`Failed to read the latest Image.`);
-    });
-  });
-}
-```
 
 ## readLatestImage
 
@@ -176,36 +118,7 @@ readLatestImage(callback: AsyncCallback<Image>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Image&gt; | 是 | 回调函数，当读取最新图片成功，err为undefined，data为获取到的最新图片；否则为错误对象。 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function ReadLatestImage(receiver : image.ImageReceiver) {
-  receiver.readLatestImage((err: BusinessError, latestImage: image.Image) => {
-    if (err || latestImage === undefined) {
-      console.error('Failed to readLatestImage.');
-      return;
-    }
-    // 解析图像内容。
-    latestImage.getComponent(image.ComponentType.JPEG, async (err: BusinessError,
-      imgComponent: image.Component) => {
-      if (err || imgComponent === undefined) {
-        console.error('Failed to getComponent.');
-        return;
-      }
-      if (imgComponent.byteBuffer) {
-        // 处理二进制图像数据。
-        console.info(`getComponent with width:${latestImage.size.width} height:${latestImage.size.height}`);
-      } else {
-        console.error('byteBuffer is null');
-      }
-    })
-  });
-}
-```
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Image](arkts-image-image-image-i.md)&gt; | 是 | 回调函数，当读取最新图片成功，err为undefined，data为获取到的最新图片；否则为错误对象。 |
 
 ## readLatestImage
 
@@ -229,34 +142,7 @@ readLatestImage(): Promise<Image>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Image&gt; | Promise对象，返回最新图片。 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function ReadLatestImage(receiver : image.ImageReceiver) {
-  receiver.readLatestImage().then((latestImage: image.Image) => {
-    // 解析图像内容。
-    latestImage.getComponent(image.ComponentType.JPEG, async (err: BusinessError,
-      imgComponent: image.Component) => {
-      if (err || imgComponent === undefined) {
-        console.error('Failed to getComponent.');
-        return;
-      }
-      if (imgComponent.byteBuffer) {
-        // 处理二进制图像数据。
-        console.info(`getComponent with width:${latestImage.size.width} height:${latestImage.size.height}`);
-      } else {
-        console.error('byteBuffer is null');
-      }
-    })    
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to read the latest Image.code ${error.code},message is ${error.message}`);
-  });
-}
-```
+| Promise&lt;[Image](arkts-image-image-image-i.md)&gt; | Promise对象，返回最新图片。 |
 
 ## readNextImage
 
@@ -280,36 +166,7 @@ readNextImage(callback: AsyncCallback<Image>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Image&gt; | 是 | 回调函数，当获取下一张图片成功，err为undefined，data为获取到的下一张图片；否则为错误对象。 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function ReadNextImage(receiver : image.ImageReceiver) {
-  receiver.readNextImage((err: BusinessError, nextImage: image.Image) => {
-    if (err || nextImage === undefined) {
-      console.error('Failed to readNextImage.');
-      return;
-    }
-    // 解析图像内容。
-    nextImage.getComponent(image.ComponentType.JPEG, async (err: BusinessError,
-      imgComponent: image.Component) => {
-      if (err || imgComponent === undefined) {
-        console.error('Failed to getComponent.');
-        return;
-      }
-      if (imgComponent.byteBuffer) {
-        // 处理二进制图像数据。
-        console.info(`getComponent with width:${nextImage.size.width} height:${nextImage.size.height} stride:${imgComponent.rowStride}`);
-      } else {
-        console.error('byteBuffer is null');
-      }
-    })
-  });
-}
-```
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Image](arkts-image-image-image-i.md)&gt; | 是 | 回调函数，当获取下一张图片成功，err为undefined，data为获取到的下一张图片；否则为错误对象。 |
 
 ## readNextImage
 
@@ -333,34 +190,7 @@ readNextImage(): Promise<Image>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Image&gt; | Promise对象，返回下一张图片。 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function ReadNextImage(receiver : image.ImageReceiver) {
-  receiver.readNextImage().then((nextImage: image.Image) => {
-    console.info('Succeeded in reading the next Image.');
-    nextImage.getComponent(image.ComponentType.JPEG, async (err: BusinessError,
-      imgComponent: image.Component) => {
-      if (err || imgComponent === undefined) {
-        console.error('Failed to getComponent.');
-        return;
-      }
-      if (imgComponent.byteBuffer) {
-        // 处理二进制图像数据。
-        console.info(`getComponent with width:${nextImage.size.width} height:${nextImage.size.height} stride:${imgComponent.rowStride}`);
-      } else {
-        console.error('byteBuffer is null');
-      }
-    })
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to read the next Image.code ${error.code},message is ${error.message}`);
-  });
-}
-```
+| Promise&lt;[Image](arkts-image-image-image-i.md)&gt; | Promise对象，返回下一张图片。 |
 
 ## release
 
@@ -384,93 +214,6 @@ release(callback: AsyncCallback<void>): void
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，当释放ImageReceiver实例成功，err为undefined，否则为错误对象。 |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function Release(img : image.Image) {
-  img.release((err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to release the image instance.code ${err.code},message is ${err.message}`);
-    } else {
-      console.info('Succeeded in releasing the image instance.');
-    }
-  })
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function Release(creator : image.ImageCreator) {
-  creator.release((err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to release the creator.code ${err.code},message is ${err.message}`);
-    } else {
-      console.info('Succeeded in releasing creator.');
-    }
-  });
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function Release() {
-  const imagePackerObj: image.ImagePacker = image.createImagePacker();
-  imagePackerObj.release((err: BusinessError)=>{
-    if (err) {
-      console.error(`Failed to release image packaging.code ${err.code},message is ${err.message}`);
-    } else {
-      console.info('Succeeded in releasing image packaging.');
-    }
-  })
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function Release(receiver : image.ImageReceiver) {
-  receiver.release((err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to release the receiver.code ${err.code},message is ${err.message}`);
-    } else {
-      console.info('Succeeded in releasing the receiver.');
-    }
-  })
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function Release(imageSourceObj : image.ImageSource) {
-  imageSourceObj.release((err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to release the image source instance.code ${err.code},message is ${err.message}`);
-    } else {
-      console.info('Succeeded in releasing the image source instance.');
-    }
-  })
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function release(pixelMap: image.PixelMap) {
-  pixelMap.release((err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to release the PixelMap object. Code: ${err.code}, message: ${err.message}`);
-      return;
-    }
-    console.info('Succeeded in releasing the PixelMap object.');
-  });
-}
-```
-
 ## release
 
 ```TypeScript
@@ -492,81 +235,6 @@ release(): Promise<void>
 | 类型 | 说明 |
 | --- | --- |
 | Promise&lt;void&gt; | Promise对象，无返回结果。 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function Release(img : image.Image) {
-  img.release().then(() => {
-    console.info('Succeeded in releasing the image instance.');
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to release the image instance.code ${error.code},message is ${error.message}`);
-  })
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function Release(creator : image.ImageCreator) {
-  creator.release().then(() => {
-    console.info('Succeeded in releasing creator.');
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to release the creator.code ${error.code},message is ${error.message}`);
-  })
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function Release() {
-  const imagePackerObj: image.ImagePacker = image.createImagePacker();
-  imagePackerObj.release().then(() => {
-    console.info('Succeeded in releasing image packaging.');
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to release image packaging.code ${error.code},message is ${error.message}`);
-  })
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function Release(receiver : image.ImageReceiver) {
-  receiver.release().then(() => {
-    console.info('Succeeded in releasing the receiver.');
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to release the receiver.code ${error.code},message is ${error.message}`);
-  })
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function Release(imageSourceObj : image.ImageSource) {
-  imageSourceObj.release().then(() => {
-    console.info('Succeeded in releasing the image source instance.');
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to release the image source instance.code ${error.code},message is ${error.message}`);
-  })
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function release(pixelMap: image.PixelMap) {
-  pixelMap.release().then(() => {
-    console.info('Succeeded in releasing the PixelMap object.');
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to release the PixelMap object. Code: ${err.code}, message: ${err.message}`);
-  });
-}
-```
 
 ## setMemoryName
 
@@ -595,34 +263,6 @@ setMemoryName(name: string): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [7900201](../errorcode-image.md#7900201-无效参数) | 参数无效。可能原因：&lt;ol&gt;&lt;li&gt;name为空。&lt;/li&gt; &lt;li&gt;过滤后name中无可视字符。&lt;/li&gt; &lt;li&gt;name的长度超过256字节。&lt;/li&gt; &lt;li&gt;请确保name参数包含可见ASCII字符。&lt;/li&gt;&lt;/ol&gt; |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function setMemoryNameSync(receiver: image.ImageReceiver) {
-  try {
-    // 建议在注册imageArrival回调并读取图片前设置内存标识符。
-    receiver.setMemoryName('ImageReceiverNameTest');
-    console.info('Succeeded in setting memory name.');
-  } catch (e) {
-    const err = e as BusinessError;
-    console.error(`Failed to set memory name. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-
-  receiver.on('imageArrival', () => {
-    receiver.readNextImage().then((nextImage: image.Image) => {
-      console.info('Succeeded in reading the next Image.');
-      // 处理图片数据。
-      nextImage.release();
-    }).catch((error: BusinessError) => {
-      console.error(`Failed to read the next Image. Code: ${error.code}, message: ${error.message}`);
-    });
-  });
-}
-```
 
 ## capacity
 

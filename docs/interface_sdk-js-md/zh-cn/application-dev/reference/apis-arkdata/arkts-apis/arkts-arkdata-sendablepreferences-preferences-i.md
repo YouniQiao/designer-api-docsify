@@ -252,13 +252,13 @@ get(key: string, defValue: lang.ISendable): Promise<lang.ISendable>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | key | string | 是 | 要获取的存储Key名称，不能为空，最大长度限制为[MAX_KEY_LENGTH](../../../reference/apis-arkdata/js-apis-data-sendablePreferences.md#constants)。 |
-| defValue | lang.ISendable | 是 | 默认返回值。 |
+| defValue | [lang.ISendable](../../apis-arkts/arkts-apis/arkts-arkts-lang-isendable-i.md) | 是 | 默认返回值。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;lang.ISendable&gt; | Promise对象，返回键对应的值。 |
+| Promise&lt;[lang.ISendable](../../apis-arkts/arkts-apis/arkts-arkts-lang-isendable-i.md)&gt; | Promise对象，返回键对应的值。 |
 
 **错误码：**
 
@@ -300,7 +300,7 @@ getAll(): Promise<lang.ISendable>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;lang.ISendable&gt; | Promise对象，返回所有包含的键值数据。 |
+| Promise&lt;[lang.ISendable](../../apis-arkts/arkts-apis/arkts-arkts-lang-isendable-i.md)&gt; | Promise对象，返回所有包含的键值数据。 |
 
 **错误码：**
 
@@ -342,7 +342,7 @@ getAllSync(): lang.ISendable
 
 | 类型 | 说明 |
 | --- | --- |
-| lang.ISendable | 返回所有包含的键值数据。 |
+| [lang.ISendable](../../apis-arkts/arkts-apis/arkts-arkts-lang-isendable-i.md) | 返回所有包含的键值数据。 |
 
 **错误码：**
 
@@ -380,13 +380,13 @@ getSync(key: string, defValue: lang.ISendable): lang.ISendable
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | key | string | 是 | 要获取的存储Key名称，不能为空，最大长度限制为[MAX_KEY_LENGTH](../../../reference/apis-arkdata/js-apis-data-sendablePreferences.md#constants)。 |
-| defValue | lang.ISendable | 是 | 默认返回值。 |
+| defValue | [lang.ISendable](../../apis-arkts/arkts-apis/arkts-arkts-lang-isendable-i.md) | 是 | 默认返回值。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| lang.ISendable | 返回键对应的值。 |
+| [lang.ISendable](../../apis-arkts/arkts-apis/arkts-arkts-lang-isendable-i.md) | 返回键对应的值。 |
 
 **错误码：**
 
@@ -611,7 +611,7 @@ off(type: 'dataChange', keys: Array<string>, callback?: Callback<lang.ISendable>
 | --- | --- | --- | --- |
 | type | 'dataChange' | 是 | 事件类型，固定值'dataChange'，表示精确的数据变更。 |
 | keys | Array&lt;string&gt; | 是 | 需要取消订阅的Key集合，当Keys为空数组时，表示取消订阅全部Key；当Keys为非空数组时，表示只取消订阅Key集合中的Key。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;lang.ISendable&gt; | 否 | 需要取消的回调函数，若不填写，表示取消所有已注册的回调函数；若填写，表示只取消指定的回调函数。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[lang.ISendable](../../apis-arkts/arkts-apis/arkts-arkts-lang-isendable-i.md)&gt; | 否 | 需要取消的回调函数，若不填写，表示取消所有已注册的回调函数；若填写，表示只取消指定的回调函数。 |
 
 **错误码：**
 
@@ -782,7 +782,7 @@ on(type: 'dataChange', keys: Array<string>, callback: Callback<lang.ISendable>):
 | --- | --- | --- | --- |
 | type | 'dataChange' | 是 | 事件类型，固定值'dataChange'，表示精确的数据变更。 |
 | keys | Array&lt;string&gt; | 是 | 需要订阅的Key集合。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;lang.ISendable&gt; | 是 | 回调函数。回调支持返回多个键值对，其中键为发生变更的订阅Key，值为变更后的数据：支持number、string、boolean、bigint以及可序列化的object。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[lang.ISendable](../../apis-arkts/arkts-apis/arkts-arkts-lang-isendable-i.md)&gt; | 是 | 回调函数。回调支持返回多个键值对，其中键为发生变更的订阅Key，值为变更后的数据：支持number、string、boolean、bigint以及可序列化的object。 |
 
 **错误码：**
 
@@ -836,7 +836,7 @@ put(key: string, value: lang.ISendable): Promise<void>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | key | string | 是 | 要修改的存储的Key，不能为空，最大长度限制为[MAX_KEY_LENGTH](../../../reference/apis-arkdata/js-apis-data-sendablePreferences.md#constants)。 |
-| value | lang.ISendable | 是 | 存储的新值。 |
+| value | [lang.ISendable](../../apis-arkts/arkts-apis/arkts-arkts-lang-isendable-i.md) | 是 | 存储的新值。 |
 
 **返回值：**
 
@@ -889,7 +889,7 @@ putSync(key: string, value: lang.ISendable): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | key | string | 是 | 要修改的存储的Key，不能为空，最大长度限制为[MAX_KEY_LENGTH](../../../reference/apis-arkdata/js-apis-data-sendablePreferences.md#constants)。 |
-| value | lang.ISendable | 是 | 存储的新值。 |
+| value | [lang.ISendable](../../apis-arkts/arkts-apis/arkts-arkts-lang-isendable-i.md) | 是 | 存储的新值。 |
 
 **错误码：**
 

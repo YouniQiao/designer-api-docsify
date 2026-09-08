@@ -30,7 +30,7 @@ A constructor used to create a **SequenceRunner** instance.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| priority | Priority | No | Priority of the task. The default value is **taskpool.Priority.MEDIUM**. |
+| priority | [Priority](arkts-arkts-taskpool-priority-e.md) | No | Priority of the task. The default value is **taskpool.Priority.MEDIUM**. |
 
 **Examples**
 
@@ -64,7 +64,7 @@ A constructor used to create a **SequenceRunner** instance. This instance repres
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | name | string | Yes | Name of a serial queue. |
-| priority | Priority | No | Priority of the task. The default value is **taskpool.Priority.MEDIUM**. |
+| priority | [Priority](arkts-arkts-taskpool-priority-e.md) | No | Priority of the task. The default value is **taskpool.Priority.MEDIUM**. |
 
 **Examples**
 
@@ -96,7 +96,7 @@ Adds a task to the serial queue for execution. Before using this API, you must c
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| task | Task | Yes | Task to be added to the serial queue. |
+| task | [Task](arkts-arkts-taskpool-task-c.md) | Yes | Task to be added to the serial queue. |
 
 **Return value:**
 

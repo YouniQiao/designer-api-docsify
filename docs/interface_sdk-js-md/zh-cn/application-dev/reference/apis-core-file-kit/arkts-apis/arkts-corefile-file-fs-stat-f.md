@@ -44,24 +44,11 @@ declare function stat(file: string | number): Promise<Stat>
 | 13900012 | Permission denied |
 | 13900013 | Bad address |
 | 13900018 | Not a directory |
-| 13900030 | File name too number |
+| 13900030 | File name too long |
 | 13900031 | Function not implemented |
 | 13900033 | Too many symbolic links encountered |
 | 13900038 | Value too large for defined data type |
 | 13900042 | Unknown error |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let filePath = pathDir + "/test.txt";
-fileIo.stat(filePath).then((stat: fileIo.Stat) => {
-  console.info(`Succeeded in getting file info, the size of file is ${stat.size}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to get file info. Code: ${err.code}, message: ${err.message}`);
-});
-```
 
 
 ## stat
@@ -97,22 +84,8 @@ declare function stat(file: string | number, callback: AsyncCallback<Stat>): voi
 | 13900012 | Permission denied |
 | 13900013 | Bad address |
 | 13900018 | Not a directory |
-| 13900030 | File name too number |
+| 13900030 | File name too long |
 | 13900031 | Function not implemented |
 | 13900033 | Too many symbolic links encountered |
 | 13900038 | Value too large for defined data type |
 | 13900042 | Unknown error |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-fileIo.stat(pathDir, (err: BusinessError, stat: fileIo.Stat) => {
-  if (err) {
-    console.error(`Failed to get file info. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info(`Succeeded in getting file info, the size of file is ${stat.size}`);
-  }
-});
-```

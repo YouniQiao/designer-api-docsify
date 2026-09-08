@@ -26,7 +26,7 @@ Batch sets whether to display badges for specified applications. This API uses a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| badges | Map&lt;BundleOption, boolean&gt; | Yes | List containing bundle names and badge display statuses. |
+| badges | Map&lt;[BundleOption](arkts-notification-notificationmanager-bundleoption-t.md), boolean&gt; | Yes | List containing bundle names and badge display statuses. |
 
 **Return value:**
 

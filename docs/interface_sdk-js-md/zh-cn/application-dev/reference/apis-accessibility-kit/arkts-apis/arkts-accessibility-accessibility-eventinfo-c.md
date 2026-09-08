@@ -67,9 +67,9 @@ constructor(type: EventType, bundleName: string, triggerAction: Action)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | EventType | 是 | 无障碍事件类型。 |
+| type | [EventType](arkts-accessibility-accessibility-eventtype-t.md) | 是 | 无障碍事件类型。 |
 | bundleName | string | 是 | 目标应用的Bundle名称。 |
-| triggerAction | Action | 是 | 触发事件的Action。 |
+| triggerAction | [Action](arkts-accessibility-accessibility-action-t.md) | 是 | 触发事件的Action。 |
 
 **示例**
 
@@ -363,7 +363,7 @@ triggerAction: Action
 
 触发事件的Action，不可缺省。
 
-**类型：** Action
+**类型：** [Action](arkts-accessibility-accessibility-action-t.md)
 
 **起始版本：** 7
 
@@ -381,7 +381,7 @@ type: EventType
 
 无障碍事件类型，不可缺省。
 
-**类型：** EventType
+**类型：** [EventType](arkts-accessibility-accessibility-eventtype-t.md)
 
 **起始版本：** 7
 

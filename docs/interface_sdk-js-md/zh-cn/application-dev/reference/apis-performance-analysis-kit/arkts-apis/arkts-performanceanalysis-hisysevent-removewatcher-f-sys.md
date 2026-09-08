@@ -26,7 +26,7 @@ function removeWatcher(watcher: Watcher): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| watcher | Watcher | 是 | 系统事件订阅者对象。 |
+| watcher | [Watcher](arkts-performanceanalysis-hiappevent-watcher-i.md) | 是 | 系统事件订阅者对象。 |
 
 **错误码：**
 

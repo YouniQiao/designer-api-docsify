@@ -29,7 +29,7 @@ center?: PositionT<LengthMetrics>
 
 圆环的圆心坐标，组件的左上角为坐标原点。默认值：{x:LengthMetrics.percent(0.5),y:LengthMetrics.percent(0.5)}
 
-**类型：** [PositionT](arkts-arkui-positiont-t.md)&lt;LengthMetrics&gt;
+**类型：** [PositionT](arkts-arkui-positiont-t.md)&lt;[LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md)&gt;
 
 **默认值：** {x:LengthMetrics.percent(0.5),y:LengthMetrics.percent(0.5)}
 
@@ -75,7 +75,7 @@ innerRadius: LengthMetrics
 
 圆环的内圆半径。小于零或使用百分比单位时按零进行处理。当outerRadius小于innerRadius时，会将当前较小的值作为新的内圆半径，将较大的值作为新的外圆半径。
 
-**类型：** LengthMetrics
+**类型：** [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md)
 
 **起始版本：** 20
 
@@ -93,7 +93,7 @@ outerRadius: LengthMetrics
 
 圆环的外圆半径。小于零或使用百分比单位时按零进行处理。当outerRadius小于innerRadius时，会将当前较小的值作为新的内圆半径，将较大的值作为新的外圆半径。
 
-**类型：** LengthMetrics
+**类型：** [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md)
 
 **起始版本：** 20
 

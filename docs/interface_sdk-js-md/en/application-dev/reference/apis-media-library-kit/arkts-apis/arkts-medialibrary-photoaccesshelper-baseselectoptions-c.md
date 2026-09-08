@@ -250,7 +250,7 @@ MIMEType?: PhotoViewMIMETypes
 
 Available media file types. **IMAGE_VIDEO_TYPE** is used by default.
 
-**Type:** PhotoViewMIMETypes
+**Type:** [PhotoViewMIMETypes](arkts-medialibrary-photoaccesshelper-photoviewmimetypes-e.md)
 
 **Since:** 10
 

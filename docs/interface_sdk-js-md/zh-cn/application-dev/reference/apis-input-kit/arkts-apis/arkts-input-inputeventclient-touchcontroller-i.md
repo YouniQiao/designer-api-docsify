@@ -34,7 +34,7 @@ touchDown(touch: TouchPoint): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| touch | TouchPoint | 是 | 与屏幕接触的触点信息。 |
+| touch | [TouchPoint](arkts-input-inputeventclient-touchpoint-i.md) | 是 | 与屏幕接触的触点信息。 |
 
 **返回值：**
 
@@ -124,7 +124,7 @@ touchMove(touch: TouchPoint): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| touch | TouchPoint | 是 | 需要移动的触点信息。 |
+| touch | [TouchPoint](arkts-input-inputeventclient-touchpoint-i.md) | 是 | 需要移动的触点信息。 |
 
 **返回值：**
 
@@ -143,6 +143,7 @@ touchMove(touch: TouchPoint): Promise<void>
 **示例**
 
 参见[touchDown](#touchdown)示例。
+- simpleType:
 
 ## touchUp
 
@@ -164,7 +165,7 @@ touchUp(touch: TouchPoint): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| touch | TouchPoint | 是 | 即将离开屏幕的触点信息。 |
+| touch | [TouchPoint](arkts-input-inputeventclient-touchpoint-i.md) | 是 | 即将离开屏幕的触点信息。 |
 
 **返回值：**
 
@@ -183,3 +184,4 @@ touchUp(touch: TouchPoint): Promise<void>
 **示例**
 
 参见[touchDown](#touchdown)示例。
+- simpleType:

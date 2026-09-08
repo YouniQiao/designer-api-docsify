@@ -36,7 +36,7 @@ beginRect: Rect
 
 动画开始前软键盘的位置和大小。
 
-**类型：** Rect
+**类型：** [Rect](arkts-arkui-window-rect-i.md)
 
 **起始版本：** 18
 
@@ -68,7 +68,7 @@ endRect: Rect
 
 动画结束后软键盘的位置和大小。
 
-**类型：** Rect
+**类型：** [Rect](arkts-arkui-window-rect-i.md)
 
 **起始版本：** 18
 

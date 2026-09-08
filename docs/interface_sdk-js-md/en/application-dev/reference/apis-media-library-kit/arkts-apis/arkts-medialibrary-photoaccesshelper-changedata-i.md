@@ -34,7 +34,7 @@ type: NotifyType
 
 Notification type.
 
-**Type:** NotifyType
+**Type:** [NotifyType](arkts-medialibrary-photoaccesshelper-notifytype-e.md)
 
 **Since:** 10
 

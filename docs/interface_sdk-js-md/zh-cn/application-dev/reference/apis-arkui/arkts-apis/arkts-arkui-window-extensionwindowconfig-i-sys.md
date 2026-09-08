@@ -94,7 +94,7 @@ windowRect: Rect
 
 窗口矩形区域。
 
-**类型：** Rect
+**类型：** [Rect](arkts-arkui-window-rect-i.md)
 
 **起始版本：** 14
 

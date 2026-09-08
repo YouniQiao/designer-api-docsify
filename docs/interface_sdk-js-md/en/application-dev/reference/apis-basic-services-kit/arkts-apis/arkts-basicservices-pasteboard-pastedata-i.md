@@ -94,7 +94,7 @@ Adds a data record to the PasteData, and adds its type to **mimeTypes** in [Past
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | mimeType | string | Yes | MIME type of PasteData. The length cannot exceed 1024 bytes. |
-| value | ValueType | Yes | Data content. |
+| value | [ValueType](arkts-basicservices-pasteboard-valuetype-t.md) | Yes | Data content. |
 
 **Error codes:**
 
@@ -310,7 +310,7 @@ Obtains the PixelMap of the primary record.
 
 | Type | Description |
 | --- | --- |
-| image.PixelMap | PixelMap. |
+| [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | PixelMap. |
 
 **Examples**
 

@@ -40,7 +40,7 @@ readonly executeMode: insightIntent.ExecuteMode[]
 
 Intent execution mode. that is, execution mode supported when the bound ability is started.
 
-**Type:** insightIntent.ExecuteMode[]
+**Type:** [insightIntent.ExecuteMode](arkts-ability-insightintent-executemode-e.md)[]
 
 **Since:** 20
 

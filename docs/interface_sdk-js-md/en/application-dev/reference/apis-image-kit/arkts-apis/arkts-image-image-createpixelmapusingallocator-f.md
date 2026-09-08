@@ -31,7 +31,7 @@ Create pixelmap by data buffer based on opts, the memory type used by the PixelM
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;PixelMap&gt; | A Promise instance used to return the PixelMap object. |
+| Promise&lt;[PixelMap](arkts-image-image-pixelmap-i.md)&gt; | A Promise instance used to return the PixelMap object. |
 
 **Error codes:**
 

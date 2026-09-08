@@ -36,7 +36,7 @@ Called to return the authentication result or authentication tip information.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| result | EventInfo | Yes | Authentication result or tip information. |
+| result | [EventInfo](arkts-userauthentication-userauth-eventinfo-t.md) | Yes | Authentication result or tip information. |
 
 **Examples**
 

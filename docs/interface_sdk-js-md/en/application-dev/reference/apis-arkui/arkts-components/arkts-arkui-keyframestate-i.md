@@ -45,7 +45,7 @@ Default value: **Curve.EaseInOut**
 
 Because the [springMotion](../arkts-apis/arkts-arkui-curves-springmotion-f.md), [responsiveSpringMotion](../arkts-apis/arkts-arkui-curves-responsivespringmotion-f.md), and [interpolatingSpring](../arkts-apis/arkts-arkui-curves-interpolatingspring-f.md) curves do not have effective duration settings, they are not supported.
 
-**Type:** Curve \| string \| [ICurve](arkts-arkui-icurve-i.md)
+**Type:** [Curve](../arkts-apis/arkts-arkui-curve-e.md) \| string \| [ICurve](arkts-arkui-icurve-i.md)
 
 **Default:** Curve.EaseInOut
 

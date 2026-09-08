@@ -79,15 +79,6 @@ getCollaborativeManager(): AudioCollaborativeManager
 | --- | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
 
-**示例**
-
-```TypeScript
-import { audio } from '@kit.AudioKit';
-
-let audioManager: audio.AudioManager = audio.getAudioManager();
-let audioCollaborativeManager: audio.AudioCollaborativeManager = audioManager.getCollaborativeManager();
-```
-
 ## getEffectManager
 
 ```TypeScript
@@ -197,12 +188,6 @@ getRecordingManager(): AudioRecordingManager
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
-
-**示例**
-
-```TypeScript
-let audioRecordingManager: audio.AudioRecordingManager = audioManager.getRecordingManager();
-```
 
 ## on('volumeChange')
 

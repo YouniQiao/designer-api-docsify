@@ -28,7 +28,7 @@ Indicates that the value type is string.
 INTEGER = 1
 ```
 
-Indicates that the value type is number.
+Indicates that the value type is int.
 
 **Since:** 9
 
@@ -80,7 +80,7 @@ Indicates that the value type is boolean.
 DOUBLE = 5
 ```
 
-Indicates that the value type is number.
+Indicates that the value type is double.
 
 **Since:** 9
 

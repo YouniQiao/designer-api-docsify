@@ -27,8 +27,8 @@ Creates a subscriber. This API uses an asynchronous callback to return the resul
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| subscribeInfo | CommonEventSubscribeInfo | Yes | Subscriber information. |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;CommonEventSubscriber&gt; | Yes | Callback used to receive the created subscriber object. When a common event subscriber is successfully created, **err** is **undefined** and **data** is the **CommonEventSubscriber** object created. If the subscriber fails to be created, **err** is an error object. |
+| subscribeInfo | [CommonEventSubscribeInfo](arkts-basicservices-commoneventmanager-commoneventsubscribeinfo-t.md) | Yes | Subscriber information. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[CommonEventSubscriber](arkts-basicservices-commoneventmanager-commoneventsubscriber-t.md)&gt; | Yes | Callback used to receive the created subscriber object. When a common event subscriber is successfully created, **err** is **undefined** and **data** is the **CommonEventSubscriber** object created. If the subscriber fails to be created, **err** is an error object. |
 
 **Error codes:**
 
@@ -84,13 +84,13 @@ Creates a subscriber. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| subscribeInfo | CommonEventSubscribeInfo | Yes | Subscriber information. |
+| subscribeInfo | [CommonEventSubscribeInfo](arkts-basicservices-commoneventmanager-commoneventsubscribeinfo-t.md) | Yes | Subscriber information. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;CommonEventSubscriber&gt; | Promise used to return the created subscriber object. |
+| Promise&lt;[CommonEventSubscriber](arkts-basicservices-commoneventmanager-commoneventsubscriber-t.md)&gt; | Promise used to return the created subscriber object. |
 
 **Error codes:**
 

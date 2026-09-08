@@ -124,45 +124,44 @@ off(type: 'result', callback?: IAuthCallback): void
 **示例**
 
 ```TypeScript
-import { userAuth } from '@kit.UserAuthenticationKit';
-
-let challenge = new Uint8Array([1, 2, 3, 4, 5, 6, 7, 8]);
-let authType = userAuth.UserAuthType.FACE;
-let authTrustLevel = userAuth.AuthTrustLevel.ATL1;
-try {
-  let auth = userAuth.getAuthInstance(challenge, authType, authTrustLevel);
-  // 订阅认证结果。
-  auth.on('result', {
-    callback: (result: userAuth.AuthResultInfo) => {
-      console.info(`result: ${result.result}`);
-    }
-  });
-  // 取消订阅结果。
-  auth.off('result');
-  console.info('cancel subscribe authentication event successfully.');
-} catch (error) {
-  console.error(`Failed to cancel subscribe authentication event. Code: ${error?.code}, message: ${error?.message}`);
-  // do error.
-}
-```
-
-```TypeScript
-import { userAuth } from '@kit.UserAuthenticationKit';
 import { BusinessError } from '@kit.BasicServicesKit';
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { userAuth } from '@kit.UserAuthenticationKit';
 
-const userAuthWidgetMgrVersion = 1;
 try {
-  let userAuthWidgetMgr = userAuth.getUserAuthWidgetMgr(userAuthWidgetMgrVersion);
-  console.info('get userAuthWidgetMgr instance successfully.');
-  userAuthWidgetMgr.off('command', {
-    sendCommand: (cmdData) => {
-      console.info(`The cmdData is ${cmdData}`);
+  const rand = cryptoFramework.createRandom();
+  const len: number = 16;
+  let randData: Uint8Array | null = null;
+  let retryCount = 0;
+  while (retryCount < 3) {
+    randData = rand?.generateRandomSync(len)?.data;
+    if (randData) {
+      break;
+    }
+    retryCount++;
+  }
+  if (!randData) {
+    return;
+  }
+  const authParam: userAuth.AuthParam = {
+    challenge: randData,
+    authType: [userAuth.UserAuthType.PIN],
+    authTrustLevel: userAuth.AuthTrustLevel.ATL3,
+  };
+  const widgetParam: userAuth.WidgetParam = {
+    title: '请输入密码',
+  };
+  const userAuthInstance = userAuth.getUserAuthInstance(authParam, widgetParam);
+  console.info('get userAuth instance successfully.');
+  userAuthInstance.off('result', {
+    onResult: (result) => {
+      console.info(`auth off result = ${result.result}`);
     }
   });
-  console.info('cancel subscribe authentication event successfully.');
+  console.info('auth off successfully.');
 } catch (error) {
   const err: BusinessError = error as BusinessError;
-  console.error(`Failed to operate userAuthWidgetMgr. Code: ${err?.code}, message: ${err?.message}`);
+  console.error(`Failed to auth. Code: ${err?.code}, message: ${err?.message}`);
 }
 ```
 
@@ -199,7 +198,45 @@ off(type: 'authTip', callback?: AuthTipCallback): void
 
 **示例**
 
-参见 off
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { userAuth } from '@kit.UserAuthenticationKit';
+
+try {
+  const rand = cryptoFramework.createRandom();
+  const len: number = 16;
+  let randData: Uint8Array | null = null;
+  let retryCount = 0;
+  while (retryCount < 3) {
+    randData = rand?.generateRandomSync(len)?.data;
+    if (randData) {
+      break;
+    }
+    retryCount++;
+  }
+  if (!randData) {
+    return;
+  }
+  const authParam: userAuth.AuthParam = {
+    challenge: randData,
+    authType: [userAuth.UserAuthType.PIN],
+    authTrustLevel: userAuth.AuthTrustLevel.ATL3,
+  };
+  const widgetParam: userAuth.WidgetParam = {
+    title: '请输入密码',
+  };
+  const userAuthInstance = userAuth.getUserAuthInstance(authParam, widgetParam);
+  console.info('get userAuth instance successfully.');
+  userAuthInstance.off('authTip', (authTipInfo: userAuth.AuthTipInfo) => {
+    console.info('userAuthInstance callback');
+  });
+  console.info('auth off successfully.');
+} catch (error) {
+  const err: BusinessError = error as BusinessError;
+  console.error(`Failed to auth. Code: ${err?.code}, message: ${err?.message}`);
+}
+```
 
 ## on('result')
 
@@ -235,65 +272,6 @@ on(type: 'result', callback: IAuthCallback): void
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified.  2. Incorrect parameter types.  3. Parameter verification failed. |
 | [12500002](../errorcode-useriam.md#12500002-身份认证系统通用错误码) | General operation error. |
-
-**示例**
-
-```TypeScript
-import { userAuth } from '@kit.UserAuthenticationKit';
-
-let challenge = new Uint8Array([1, 2, 3, 4, 5, 6, 7, 8]);
-let authType = userAuth.UserAuthType.FACE;
-let authTrustLevel = userAuth.AuthTrustLevel.ATL1;
-try {
-  let auth = userAuth.getAuthInstance(challenge, authType, authTrustLevel);
-  // 订阅认证结果。
-  auth.on('result', {
-    callback: (result: userAuth.AuthResultInfo) => {
-      console.info(`result: ${result.result}`);
-    }
-  });
-  // 订阅认证过程中的提示信息。
-  auth.on('tip', {
-    callback: (result: userAuth.TipInfo) => {
-      switch (result.tip) {
-        case userAuth.FaceTips.FACE_AUTH_TIP_TOO_BRIGHT:
-          // do something;
-          break;
-        case userAuth.FaceTips.FACE_AUTH_TIP_TOO_DARK:
-          // do something;
-          break;
-        default:
-          // do others.
-      }
-    }
-  } as userAuth.AuthEvent);
-  auth.start();
-  console.info('auth start successfully.');
-} catch (error) {
-  console.error(`Failed to auth. Code: ${error?.code}, message: ${error?.message}`);
-  // do error.
-}
-```
-
-```TypeScript
-import { userAuth } from '@kit.UserAuthenticationKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-const userAuthWidgetMgrVersion = 1;
-try {
-  let userAuthWidgetMgr = userAuth.getUserAuthWidgetMgr(userAuthWidgetMgrVersion);
-  console.info('get userAuthWidgetMgr instance successfully.');
-  userAuthWidgetMgr.on('command', {
-    sendCommand: (cmdData) => {
-      console.info(`The cmdData is ${cmdData}`);
-    }
-  });
-  console.info('subscribe authentication event successfully.');
-} catch (error) {
-  const err: BusinessError = error as BusinessError;
-  console.error(`Failed to operate userAuthWidgetMgr. Code: ${err?.code}, message: ${err?.message}`);
-}
-```
 
 ## on('authTip')
 
@@ -331,7 +309,48 @@ on(type: 'authTip', callback: AuthTipCallback): void
 
 **示例**
 
-参见 on
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { userAuth } from '@kit.UserAuthenticationKit';
+
+try {
+  const rand = cryptoFramework.createRandom();
+  const len: number = 16;
+  let randData: Uint8Array | null = null;
+  let retryCount = 0;
+  while (retryCount < 3) {
+    randData = rand?.generateRandomSync(len)?.data;
+    if (randData) {
+      break;
+    }
+    retryCount++;
+  }
+  if (!randData) {
+    return;
+  }
+  const authParam: userAuth.AuthParam = {
+    challenge: randData,
+    authType: [userAuth.UserAuthType.PIN],
+    authTrustLevel: userAuth.AuthTrustLevel.ATL3,
+  };
+  const widgetParam: userAuth.WidgetParam = {
+    title: '请输入密码',
+  };
+  const userAuthInstance = userAuth.getUserAuthInstance(authParam, widgetParam);
+  console.info('get userAuth instance successfully.');
+  // 需要调用UserAuthInstance的start()接口，启动认证后，才能通过onAuthTip获取到认证中间状态。
+  userAuthInstance.on('authTip', (authTipInfo: userAuth.AuthTipInfo) => {
+    console.info('userAuthInstance callback.');
+  });
+  console.info('auth on successfully.');
+  userAuthInstance.start();
+  console.info('auth start successfully.');
+} catch (error) {
+  const err: BusinessError = error as BusinessError;
+  console.error(`Failed to auth. Code: ${err?.code}, message: ${err?.message}`);
+}
+```
 
 ## start
 

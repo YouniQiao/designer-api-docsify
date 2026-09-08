@@ -60,7 +60,7 @@ reqType: USBControlRequestType
 
 请求控制类型。
 
-**类型：** USBControlRequestType
+**类型：** [USBControlRequestType](arkts-basicservices-usb-usbcontrolrequesttype-e.md)
 
 **起始版本：** 8
 
@@ -96,7 +96,7 @@ target: USBRequestTargetType
 
 请求目标类型。
 
-**类型：** USBRequestTargetType
+**类型：** [USBRequestTargetType](arkts-basicservices-usb-usbrequesttargettype-e.md)
 
 **起始版本：** 8
 

@@ -30,7 +30,7 @@ Creates a **Query** object with the AND condition.
 
 | Type | Description |
 | --- | --- |
-| Query | Query** object created. |
+| [Query](arkts-arkdata-distributedkvstore-query-c.md) | Query** object created. |
 
 **Examples**
 
@@ -70,7 +70,7 @@ Creates a **Query** object for a query condition group with a left parenthesis.
 
 | Type | Description |
 | --- | --- |
-| Query | Query** object created. |
+| [Query](arkts-arkdata-distributedkvstore-query-c.md) | Query** object created. |
 
 **Examples**
 
@@ -106,26 +106,6 @@ Defines a constructor used to create a **Query** instance.
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
-**Examples**
-
-```TypeScript
-let child1 = new distributedKVStore.FieldNode('id');
-child1.type = distributedKVStore.ValueType.INTEGER;
-child1.nullable = false;
-child1.default = '1';
-let child2 = new distributedKVStore.FieldNode('name');
-child2.type = distributedKVStore.ValueType.STRING;
-child2.nullable = false;
-child2.default = 'zhangsan';
-
-let schema = new distributedKVStore.Schema();
-schema.root.appendChild(child1);
-schema.root.appendChild(child2);
-schema.indexes = ['$.id', '$.name'];
-schema.mode = 1;
-schema.skip = 0;
-```
-
 ## deviceId
 
 ```TypeScript
@@ -158,7 +138,7 @@ Creates a **Query** object with the device ID as the key prefix.
 
 | Type | Description |
 | --- | --- |
-| Query | Query** object created. |
+| [Query](arkts-arkdata-distributedkvstore-query-c.md) | Query** object created. |
 
 **Error codes:**
 
@@ -201,7 +181,7 @@ Creates a **Query** object for a query condition group with a right parenthesis.
 
 | Type | Description |
 | --- | --- |
-| Query | Query** object created. |
+| [Query](arkts-arkdata-distributedkvstore-query-c.md) | Query** object created. |
 
 **Examples**
 
@@ -256,7 +236,7 @@ Creates a **Query** object to match the specified field whose value is equal to 
 
 | Type | Description |
 | --- | --- |
-| Query | Query** object created. |
+| [Query](arkts-arkdata-distributedkvstore-query-c.md) | Query** object created. |
 
 **Error codes:**
 
@@ -352,7 +332,7 @@ Creates a **Query** object to match the specified field whose value is greater t
 
 | Type | Description |
 | --- | --- |
-| Query | Query** object created. |
+| [Query](arkts-arkdata-distributedkvstore-query-c.md) | Query** object created. |
 
 **Error codes:**
 
@@ -411,7 +391,7 @@ Creates a **Query** object to match the specified field whose value is greater t
 
 | Type | Description |
 | --- | --- |
-| Query | Query** object created. |
+| [Query](arkts-arkdata-distributedkvstore-query-c.md) | Query** object created. |
 
 **Error codes:**
 
@@ -470,7 +450,7 @@ Creates a **Query** object to match the specified field whose value is within th
 
 | Type | Description |
 | --- | --- |
-| Query | Query** object created. |
+| [Query](arkts-arkdata-distributedkvstore-query-c.md) | Query** object created. |
 
 **Error codes:**
 
@@ -529,7 +509,7 @@ Creates a **Query** object to match the specified field whose value is within th
 
 | Type | Description |
 | --- | --- |
-| Query | Query** object created. |
+| [Query](arkts-arkdata-distributedkvstore-query-c.md) | Query** object created. |
 
 **Error codes:**
 
@@ -587,7 +567,7 @@ Creates a **Query** object to match the specified field whose value is not **nul
 
 | Type | Description |
 | --- | --- |
-| Query | Query** object created. |
+| [Query](arkts-arkdata-distributedkvstore-query-c.md) | Query** object created. |
 
 **Error codes:**
 
@@ -645,7 +625,7 @@ Creates a **Query** object to match the specified field whose value is **null**.
 
 | Type | Description |
 | --- | --- |
-| Query | Query** object created. |
+| [Query](arkts-arkdata-distributedkvstore-query-c.md) | Query** object created. |
 
 **Error codes:**
 
@@ -704,7 +684,7 @@ Creates a **Query** object to match the specified field whose value is less than
 
 | Type | Description |
 | --- | --- |
-| Query | Query** object created. |
+| [Query](arkts-arkdata-distributedkvstore-query-c.md) | Query** object created. |
 
 **Error codes:**
 
@@ -763,7 +743,7 @@ Creates a **Query** object to match the specified field whose value is less than
 
 | Type | Description |
 | --- | --- |
-| Query | Query** object created. |
+| [Query](arkts-arkdata-distributedkvstore-query-c.md) | Query** object created. |
 
 **Error codes:**
 
@@ -822,7 +802,7 @@ Creates a **Query** object to match the specified field whose value is similar t
 
 | Type | Description |
 | --- | --- |
-| Query | Query** object created. |
+| [Query](arkts-arkdata-distributedkvstore-query-c.md) | Query** object created. |
 
 **Error codes:**
 
@@ -873,7 +853,7 @@ Creates a **Query** object to specify the number of records of the query result 
 
 | Type | Description |
 | --- | --- |
-| Query | Query** object created. |
+| [Query](arkts-arkdata-distributedkvstore-query-c.md) | Query** object created. |
 
 **Error codes:**
 
@@ -935,7 +915,7 @@ Creates a **Query** object to match the specified field whose value is not equal
 
 | Type | Description |
 | --- | --- |
-| Query | Query** object created. |
+| [Query](arkts-arkdata-distributedkvstore-query-c.md) | Query** object created. |
 
 **Error codes:**
 
@@ -994,7 +974,7 @@ Creates a **Query** object to match the specified field whose value is not withi
 
 | Type | Description |
 | --- | --- |
-| Query | Query** object created. |
+| [Query](arkts-arkdata-distributedkvstore-query-c.md) | Query** object created. |
 
 **Error codes:**
 
@@ -1053,7 +1033,7 @@ Creates a **Query** object to match the specified field whose value is not withi
 
 | Type | Description |
 | --- | --- |
-| Query | Query** object created. |
+| [Query](arkts-arkdata-distributedkvstore-query-c.md) | Query** object created. |
 
 **Error codes:**
 
@@ -1097,7 +1077,7 @@ Creates a **Query** object with the OR condition.
 
 | Type | Description |
 | --- | --- |
-| Query | Query** object created. |
+| [Query](arkts-arkdata-distributedkvstore-query-c.md) | Query** object created. |
 
 **Examples**
 
@@ -1151,7 +1131,7 @@ Creates a **Query** object to sort the query results in ascending order.
 
 | Type | Description |
 | --- | --- |
-| Query | Query** object created. |
+| [Query](arkts-arkdata-distributedkvstore-query-c.md) | Query** object created. |
 
 **Error codes:**
 
@@ -1210,7 +1190,7 @@ Creates a **Query** object to sort the query results in descending order.
 
 | Type | Description |
 | --- | --- |
-| Query | Query** object created. |
+| [Query](arkts-arkdata-distributedkvstore-query-c.md) | Query** object created. |
 
 **Error codes:**
 
@@ -1261,7 +1241,7 @@ Creates a **Query** object with a specified key prefix.
 
 | Type | Description |
 | --- | --- |
-| Query | Query** object created. |
+| [Query](arkts-arkdata-distributedkvstore-query-c.md) | Query** object created. |
 
 **Error codes:**
 
@@ -1306,7 +1286,7 @@ Resets the **Query** object.
 
 | Type | Description |
 | --- | --- |
-| Query | Query** object reset. |
+| [Query](arkts-arkdata-distributedkvstore-query-c.md) | Query** object reset. |
 
 **Examples**
 
@@ -1352,7 +1332,7 @@ Creates a **Query** object with an index preferentially used for query.
 
 | Type | Description |
 | --- | --- |
-| Query | Query** object created. |
+| [Query](arkts-arkdata-distributedkvstore-query-c.md) | Query** object created. |
 
 **Error codes:**
 
@@ -1412,7 +1392,7 @@ Creates a **Query** object to match the specified field whose value is not simil
 
 | Type | Description |
 | --- | --- |
-| Query | Query** object created. |
+| [Query](arkts-arkdata-distributedkvstore-query-c.md) | Query** object created. |
 
 **Error codes:**
 

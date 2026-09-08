@@ -34,7 +34,7 @@ getAnalysisData(analysisType: photoAccessHelper.AnalysisType): Promise<string>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| analysisType | photoAccessHelper.AnalysisType | 是 | 需要获取的智慧分析类型。 |
+| analysisType | [photoAccessHelper.AnalysisType](arkts-medialibrary-photoaccesshelper-analysistype-e-sys.md) | 是 | 需要获取的智慧分析类型。 |
 
 **返回值：**
 

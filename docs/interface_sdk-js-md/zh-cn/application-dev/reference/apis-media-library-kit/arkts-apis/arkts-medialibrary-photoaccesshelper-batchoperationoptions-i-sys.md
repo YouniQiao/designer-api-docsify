@@ -88,7 +88,7 @@ taskSignal?: TaskSignal
 
 复制操作的中断信号。
 
-**类型：** TaskSignal
+**类型：** [TaskSignal](arkts-medialibrary-photoaccesshelper-tasksignal-c-sys.md)
 
 **起始版本：** 26.0.0
 

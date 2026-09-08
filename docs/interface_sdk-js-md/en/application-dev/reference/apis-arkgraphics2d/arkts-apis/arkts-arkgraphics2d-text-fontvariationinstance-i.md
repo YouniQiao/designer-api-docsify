@@ -20,7 +20,7 @@ coordinates: Array<FontVariation>
 
 Array of font variations.
 
-**Type:** Array&lt;FontVariation&gt;
+**Type:** Array&lt;[FontVariation](arkts-arkgraphics2d-text-fontvariation-i.md)&gt;
 
 **Since:** 24
 

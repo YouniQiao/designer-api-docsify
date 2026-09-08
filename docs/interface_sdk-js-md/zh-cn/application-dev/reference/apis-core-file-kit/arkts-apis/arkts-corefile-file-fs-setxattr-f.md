@@ -46,19 +46,3 @@ declare function setxattr(path: string, key: string, value: string): Promise<voi
 | 13900038 | Value too large for defined data type |
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let filePath = pathDir + "/test.txt";
-let attrKey = "user.comment";
-let attrValue = "Test file.";
-
-fileIo.setxattr(filePath, attrKey, attrValue).then(() => {
-  console.info(`Succeeded in setting extended attribute.`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to set extended attribute. Code: ${err.code}, message: ${err.message}`);
-});
-```

@@ -30,7 +30,7 @@ function subscribe(info: NotificationExtensionSubscriptionInfo[]): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| info | NotificationExtensionSubscriptionInfo[] | 是 | 订阅的信息列表（数组）。 |
+| info | [NotificationExtensionSubscriptionInfo](arkts-notification-notificationextensionsubscription-notificationextensionsubscriptioninfo-t.md)[] | 是 | 订阅的信息列表（数组）。 |
 
 **返回值：**
 

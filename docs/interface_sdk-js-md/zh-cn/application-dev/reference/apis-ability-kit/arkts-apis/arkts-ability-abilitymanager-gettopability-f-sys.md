@@ -33,19 +33,6 @@ function getTopAbility(): Promise<ElementName>
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
 | [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
 
-**示例**
-
-```TypeScript
-import { abilityManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-abilityManager.getTopAbility().then((data) => {
-  console.info(`getTopAbility success, data: ${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-  console.error(`getTopAbility fail, err: ${JSON.stringify(err)}`);
-});
-```
-
 
 ## getTopAbility
 
@@ -74,18 +61,3 @@ function getTopAbility(callback: AsyncCallback<ElementName>): void
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
-
-**示例**
-
-```TypeScript
-import { abilityManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-abilityManager.getTopAbility((err: BusinessError, data) => {
-  if (err) {
-    console.error(`getTopAbility fail, err: ${JSON.stringify(err)}`);
-  } else {
-    console.info(`getTopAbility success, data: ${JSON.stringify(data)}`);
-  }
-});
-```

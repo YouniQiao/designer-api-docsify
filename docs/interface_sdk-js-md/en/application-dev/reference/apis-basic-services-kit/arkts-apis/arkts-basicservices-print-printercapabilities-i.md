@@ -46,7 +46,7 @@ List of color modes supported by the printer.
 supportedDuplexModes: Array<PrintDuplexMode>
 ```
 
-List of single- and number-sided modes supported by the printer.
+List of single- and double-sided modes supported by the printer.
 
 **Type:** Array&lt;[PrintDuplexMode](arkts-basicservices-print-printduplexmode-e.md)&gt;
 

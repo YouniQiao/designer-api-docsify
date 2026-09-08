@@ -36,7 +36,7 @@ credential: Credential
 
 服务器的凭证。默认值为undefined。
 
-**类型：** Credential
+**类型：** [Credential](arkts-network-http-credential-i.md)
 
 **起始版本：** 18
 

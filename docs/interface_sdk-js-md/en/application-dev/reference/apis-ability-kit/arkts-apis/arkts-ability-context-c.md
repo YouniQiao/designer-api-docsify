@@ -28,7 +28,7 @@ Creates an application context with a specific data encryption level. You can ca
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| areaMode | contextConstant.AreaMode | Yes | Data encryption level. |
+| areaMode | [contextConstant.AreaMode](arkts-ability-contextconstant-areamode-e.md) | Yes | Data encryption level. |
 
 **Return value:**
 
@@ -355,7 +355,7 @@ Checks if the current instance is associated with the specified context type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| contextType | contextConstant.ContextType | Yes | Indicates the context type. |
+| contextType | [contextConstant.ContextType](arkts-ability-contextconstant-contexttype-e.md) | Yes | Indicates the context type. |
 
 **Return value:**
 
@@ -389,7 +389,7 @@ area: contextConstant.AreaMode
 
 Information about file partitions, which are divided according to the encryption level specified by AreaMode.
 
-**Type:** contextConstant.AreaMode
+**Type:** [contextConstant.AreaMode](arkts-ability-contextconstant-areamode-e.md)
 
 **Since:** 9
 
@@ -610,7 +610,7 @@ resourceManager: resmgr.ResourceManager
 
 Object for resource management.
 
-**Type:** resmgr.ResourceManager
+**Type:** [resmgr.ResourceManager](../../apis-localization-kit/arkts-apis/arkts-localization-resourcemanager-resourcemanager-i.md)
 
 **Since:** 9
 

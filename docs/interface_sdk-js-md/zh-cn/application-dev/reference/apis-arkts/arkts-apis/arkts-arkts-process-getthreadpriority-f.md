@@ -40,12 +40,3 @@ function getThreadPriority(v: number): number
 let tid = process.tid;
 let pres = process.getThreadPriority(tid);
 ```
-
-```TypeScript
-// 创建ProcessManager实例
-let processManager = new process.ProcessManager();
-// 获取当前线程tid
-let tid = process.tid;
-// 根据tid获取线程优先级
-let pres = processManager.getThreadPriority(tid);
-```

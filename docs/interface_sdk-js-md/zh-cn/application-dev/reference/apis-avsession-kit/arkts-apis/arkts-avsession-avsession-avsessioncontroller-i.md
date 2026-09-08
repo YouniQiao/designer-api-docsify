@@ -43,30 +43,6 @@ destroy(callback: AsyncCallback<void>): void
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-currentAVSession.destroy((err: BusinessError) => {
-  if (err) {
-    console.error(`Failed to destroy, code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in destroying.');
-});
-```
-
-```TypeScript
-avcontroller.destroy((err: BusinessError) => {
-  if (err) {
-    console.error(`Failed to destroy controller, code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in destroying.');
-});
-```
-
 ## destroy
 
 ```TypeScript
@@ -94,20 +70,6 @@ destroy(): Promise<void>
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
-**示例**
-
-```TypeScript
-currentAVSession.destroy().then(() => {
-  console.info('Succeeded in destroying.');
-});
-```
-
-```TypeScript
-avcontroller.destroy().then(() => {
-  console.info('Succeeded in destroying.');
-});
-```
-
 ## getAVCallState
 
 ```TypeScript
@@ -133,18 +95,6 @@ getAVCallState(callback: AsyncCallback<AVCallState>): void
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
-
-**示例**
-
-```TypeScript
-avcontroller.getAVCallState((err: BusinessError, callstate: avSession.AVCallState) => {
-  if (err) {
-    console.error(`Failed to get AV call state, code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in getting AV call state: ${callstate.state}`);
-});
-```
 
 ## getAVCallState
 
@@ -172,14 +122,6 @@ getAVCallState(): Promise<AVCallState>
 | [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
-**示例**
-
-```TypeScript
-avcontroller.getAVCallState().then((callstate: avSession.AVCallState) => {
-  console.info(`Succeeded in getting AV call state: ${callstate.state}`);
-});
-```
-
 ## getAVMetadata
 
 ```TypeScript
@@ -196,7 +138,7 @@ getAVMetadata(callback: AsyncCallback<AVMetadata>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;AVMetadata&gt; | 是 | 回调函数，返回会话元数据。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AVMetadata](arkts-avsession-avsession-avmetadata-i.md)&gt; | 是 | 回调函数，返回会话元数据。 |
 
 **错误码：**
 
@@ -205,18 +147,6 @@ getAVMetadata(callback: AsyncCallback<AVMetadata>): void
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
-
-**示例**
-
-```TypeScript
-avcontroller.getAVMetadata((err: BusinessError, metadata: avSession.AVMetadata) => {
-  if (err) {
-    console.error(`Failed to get AV metadata, code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in getting AV metadata, assetId: ${metadata.assetId}`);
-});
-```
 
 ## getAVMetadata
 
@@ -236,7 +166,7 @@ getAVMetadata(): Promise<AVMetadata>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;AVMetadata&gt; | Promise对象，返回会话元数据。 |
+| Promise&lt;[AVMetadata](arkts-avsession-avsession-avmetadata-i.md)&gt; | Promise对象，返回会话元数据。 |
 
 **错误码：**
 
@@ -245,14 +175,6 @@ getAVMetadata(): Promise<AVMetadata>
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
-
-**示例**
-
-```TypeScript
-avcontroller.getAVMetadata().then((metadata: avSession.AVMetadata) => {
-  console.info(`Succeeded in getting AV metadata, assetId: ${metadata.assetId}`);
-});
-```
 
 ## getAVMetadataSync
 
@@ -272,7 +194,7 @@ getAVMetadataSync(): AVMetadata
 
 | 类型 | 说明 |
 | --- | --- |
-| AVMetadata | 会话元数据。 |
+| [AVMetadata](arkts-avsession-avsession-avmetadata-i.md) | 会话元数据。 |
 
 **错误码：**
 
@@ -281,12 +203,6 @@ getAVMetadataSync(): AVMetadata
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
-
-**示例**
-
-```TypeScript
-let metaData: avSession.AVMetadata = avcontroller.getAVMetadataSync();
-```
 
 ## getAVPlaybackState
 
@@ -313,28 +229,6 @@ getAVPlaybackState(callback: AsyncCallback<AVPlaybackState>): void
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
-
-**示例**
-
-```TypeScript
-avCastController.getAVPlaybackState((err: BusinessError, state: avSession.AVPlaybackState) => {
-  if (err) {
-    console.error(`Failed to get AV playback state, code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in getting AV playback state.');
-});
-```
-
-```TypeScript
-avcontroller.getAVPlaybackState((err: BusinessError, state: avSession.AVPlaybackState) => {
-  if (err) {
-    console.error(`Failed to get AV playback state, code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in getting AV playback state.');
-});
-```
 
 ## getAVPlaybackState
 
@@ -364,22 +258,6 @@ getAVPlaybackState(): Promise<AVPlaybackState>
 | [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
-**示例**
-
-```TypeScript
-avCastController.getAVPlaybackState().then((state: avSession.AVPlaybackState) => {
-  console.info('Succeeded in getting AV playback state.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to get AV playback state, code: ${err.code}, message: ${err.message}`);
-});
-```
-
-```TypeScript
-avcontroller.getAVPlaybackState().then((state: avSession.AVPlaybackState) => {
-  console.info('Succeeded in getting AV playback state.');
-});
-```
-
 ## getAVPlaybackStateSync
 
 ```TypeScript
@@ -408,12 +286,6 @@ getAVPlaybackStateSync(): AVPlaybackState
 | [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
-**示例**
-
-```TypeScript
-let playbackState: avSession.AVPlaybackState = avcontroller.getAVPlaybackStateSync();
-```
-
 ## getAVQueueItems
 
 ```TypeScript
@@ -439,18 +311,6 @@ getAVQueueItems(callback: AsyncCallback<Array<AVQueueItem>>): void
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
-
-**示例**
-
-```TypeScript
-avcontroller.getAVQueueItems((err: BusinessError, items: avSession.AVQueueItem[]) => {
-  if (err) {
-    console.error(`Failed to get AV queue items, code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in getting AV queue items, length: ${items.length}`);
-});
-```
 
 ## getAVQueueItems
 
@@ -480,14 +340,6 @@ getAVQueueItems(): Promise<Array<AVQueueItem>>
 | [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
-**示例**
-
-```TypeScript
-avcontroller.getAVQueueItems().then((items: avSession.AVQueueItem[]) => {
-  console.info(`Succeeded in getting AV queue items, length: ${items.length}`);
-});
-```
-
 ## getAVQueueItemsSync
 
 ```TypeScript
@@ -516,12 +368,6 @@ getAVQueueItemsSync(): Array<AVQueueItem>
 | [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
-**示例**
-
-```TypeScript
-let currentQueueItems: Array<avSession.AVQueueItem> = avcontroller.getAVQueueItemsSync();
-```
-
 ## getAVQueueTitle
 
 ```TypeScript
@@ -547,18 +393,6 @@ getAVQueueTitle(callback: AsyncCallback<string>): void
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
-
-**示例**
-
-```TypeScript
-avcontroller.getAVQueueTitle((err: BusinessError, title: string) => {
-  if (err) {
-    console.error(`Failed to get AV queue title, code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in getting AV queue title: ${title}`);
-});
-```
 
 ## getAVQueueTitle
 
@@ -588,14 +422,6 @@ getAVQueueTitle(): Promise<string>
 | [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
-**示例**
-
-```TypeScript
-avcontroller.getAVQueueTitle().then((title: string) => {
-  console.info(`Succeeded in getting AV queue title: ${title}`);
-});
-```
-
 ## getAVQueueTitleSync
 
 ```TypeScript
@@ -624,12 +450,6 @@ getAVQueueTitleSync(): string
 | [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
-**示例**
-
-```TypeScript
-let currentQueueTitle: string = avcontroller.getAVQueueTitleSync();
-```
-
 ## getCallMetadata
 
 ```TypeScript
@@ -656,18 +476,6 @@ getCallMetadata(callback: AsyncCallback<CallMetadata>): void
 | [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
-**示例**
-
-```TypeScript
-avcontroller.getCallMetadata((err: BusinessError, calldata: avSession.CallMetadata) => {
-  if (err) {
-    console.error(`Failed to get call metadata, code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in getting call metadata, name: ${calldata.name}`);
-});
-```
-
 ## getCallMetadata
 
 ```TypeScript
@@ -693,14 +501,6 @@ getCallMetadata(): Promise<CallMetadata>
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
-
-**示例**
-
-```TypeScript
-avcontroller.getCallMetadata().then((calldata: avSession.CallMetadata) => {
-  console.info(`Succeeded in getting call metadata, name: ${calldata.name}`);
-});
-```
 
 ## getDesktopLyricState
 
@@ -732,21 +532,6 @@ getDesktopLyricState(): Promise<DesktopLyricState>
 | [6600110](../errorcode-avsession.md#6600110-应用程序的桌面歌词功能未开启) | The desktop lyrics feature of this application is not enabled. |
 | [6600111](../errorcode-avsession.md#6600111-当前设备不支持桌面歌词功能) | The desktop lyrics feature is not supported. |
 
-**示例**
-
-```TypeScript
-if (currentAVSession !== undefined) {
-  (currentAVSession as avSession.AVSession).getDesktopLyricState()
-    .then((state: avSession.DesktopLyricState) => {
-    console.info(`getDesktopLyricState: ${state.isLocked}`);
-  })
-}
-```
-
-```TypeScript
-avcontroller.getDesktopLyricState();
-```
-
 ## getExtras
 
 ```TypeScript
@@ -775,18 +560,6 @@ getExtras(callback: AsyncCallback<{[key: string]: Object}>): void
 | [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 | [6600105](../errorcode-avsession.md#6600105-无效会话命令) | Invalid session command. |
 | [6600107](../errorcode-avsession.md#6600107-命令消息过载) | Too many commands or events. |
-
-**示例**
-
-```TypeScript
-avcontroller.getExtras((err: BusinessError, extras) => {
-  if (err) {
-    console.error(`Failed to get extras, code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in getting extras: ${extras}`);
-});
-```
 
 ## getExtras
 
@@ -818,47 +591,6 @@ getExtras(): Promise<{[key: string]: Object}>
 | [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 | [6600105](../errorcode-avsession.md#6600105-无效会话命令) | Invalid session command. |
 | [6600107](../errorcode-avsession.md#6600107-命令消息过载) | Too many commands or events. |
-
-**示例**
-
-```TypeScript
-// Index.ets
-import { avSession } from '@kit.AVSessionKit';
-
-@Entry
-@Component
-struct Index {
-  private tag: string = "createNewSession";
-  private sessionId: string = "";
-  private controller: avSession.AVSessionController | undefined = undefined;
-  private currentAVSession?: avSession.AVSession;
-
-  aboutToAppear(): void {
-
-    avSession.createAVSession(this.getUIContext().getHostContext(), this.tag, "audio")
-      .then(async (data: avSession.AVSession) => {
-        this.currentAVSession = data;
-        this.sessionId = this.currentAVSession.sessionId;
-        this.controller = await this.currentAVSession.getController();
-        console.info(`Succeeded in creating AV session, sessionId: ${this.sessionId}`);
-        (this.controller as avSession.AVSessionController).getExtras().then((extras) => {
-          console.info(`Succeeded in getting extras: ${extras}`);
-        });
-      });
-  }
-
-  build() {
-    Column() {
-      Text('AVSession Demo')
-        .fontSize(20)
-        .margin(10)
-    }
-    .width('100%')
-    .height('100%')
-    .justifyContent(FlexAlign.Center)
-  }
-}
-```
 
 ## getExtrasWithEvent
 
@@ -893,28 +625,6 @@ getExtrasWithEvent(extraEvent: string): Promise<ExtraInfo>
 | [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 | [6600105](../errorcode-avsession.md#6600105-无效会话命令) | Invalid session command. |
 
-**示例**
-
-```TypeScript
-let controller: avSession.AVSessionController | undefined;
-const COMMON_COMMAND_STRING_1 = 'AUDIO_GET_VOLUME';
-const COMMON_COMMAND_STRING_2 = 'AUDIO_GET_AVAILABLE_DEVICES';
-const COMMON_COMMAND_STRING_3 = 'AUDIO_GET_PREFERRED_OUTPUT_DEVICE_FOR_RENDERER_INFO';
-if (controller !== undefined) {
-  controller.getExtrasWithEvent(COMMON_COMMAND_STRING_1).then(() => {
-    console.info(`${[COMMON_COMMAND_STRING_1]}`);
-  })
-
-  controller.getExtrasWithEvent(COMMON_COMMAND_STRING_2).then(() => {
-    console.info(`${[COMMON_COMMAND_STRING_2]}`);
-  })
-
-  controller.getExtrasWithEvent(COMMON_COMMAND_STRING_3).then(() => {
-    console.info(`${[COMMON_COMMAND_STRING_3]}`);
-  })
-}
-```
-
 ## getLaunchAbility
 
 ```TypeScript
@@ -940,20 +650,6 @@ getLaunchAbility(callback: AsyncCallback<WantAgent>): void
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
-
-**示例**
-
-```TypeScript
-import { WantAgent } from '@kit.AbilityKit';
-
-avcontroller.getLaunchAbility((err: BusinessError, agent: WantAgent) => {
-  if (err) {
-    console.error(`Failed to get launch ability, code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in getting launch ability: ${agent}`);
-});
-```
 
 ## getLaunchAbility
 
@@ -982,16 +678,6 @@ getLaunchAbility(): Promise<WantAgent>
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
-
-**示例**
-
-```TypeScript
-import { WantAgent } from '@kit.AbilityKit';
-
-avcontroller.getLaunchAbility().then((agent: WantAgent) => {
-  console.info(`Succeeded in getting launch ability: ${agent}`);
-});
-```
 
 ## getMediaCenterControlType
 
@@ -1022,14 +708,6 @@ getMediaCenterControlType(): Promise<Array<AVMediaCenterControlType>>
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
-**示例**
-
-```TypeScript
-avcontroller.getMediaCenterControlType().then((types: avSession.AVMediaCenterControlType[]) => {
-  console.info(`Succeeded in getting media center control types, size: ${types.length}`);
-});
-```
-
 ## getOutputDevice
 
 ```TypeScript
@@ -1054,30 +732,6 @@ getOutputDevice(callback: AsyncCallback<OutputDeviceInfo>): void
 | --- | --- |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-currentAVSession.getOutputDevice((err: BusinessError, outputDeviceInfo: avSession.OutputDeviceInfo) => {
-  if (err) {
-    console.error(`Failed to get output device, code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in getting output device, devices length: ${outputDeviceInfo.devices.length}`);
-});
-```
-
-```TypeScript
-avcontroller.getOutputDevice((err: BusinessError, deviceInfo: avSession.OutputDeviceInfo) => {
-  if (err) {
-    console.error(`Failed to get output device, code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in getting output device.');
-});
-```
 
 ## getOutputDevice
 
@@ -1106,20 +760,6 @@ getOutputDevice(): Promise<OutputDeviceInfo>
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
-**示例**
-
-```TypeScript
-currentAVSession.getOutputDevice().then((outputDeviceInfo: avSession.OutputDeviceInfo) => {
-  console.info(`Succeeded in getting output device, devices length: ${outputDeviceInfo.devices.length}`);
-})
-```
-
-```TypeScript
-avcontroller.getOutputDevice().then((deviceInfo: avSession.OutputDeviceInfo) => {
-  console.info('Succeeded in getting output device.');
-});
-```
-
 ## getOutputDeviceSync
 
 ```TypeScript
@@ -1147,16 +787,6 @@ getOutputDeviceSync(): OutputDeviceInfo
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
-**示例**
-
-```TypeScript
-let currentOutputDevice: avSession.OutputDeviceInfo = currentAVSession.getOutputDeviceSync();
-```
-
-```TypeScript
-let currentOutputDevice: avSession.OutputDeviceInfo = avcontroller.getOutputDeviceSync();
-```
-
 ## getRealPlaybackPositionSync
 
 ```TypeScript
@@ -1183,12 +813,6 @@ getRealPlaybackPositionSync(): number
 | --- | --- |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
-
-**示例**
-
-```TypeScript
-let time: number = avcontroller.getRealPlaybackPositionSync();
-```
 
 ## getSupportedLoopModes
 
@@ -1221,14 +845,6 @@ getSupportedLoopModes(): Promise<Array<LoopMode>>
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
 | [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
-**示例**
-
-```TypeScript
-avcontroller.getSupportedLoopModes().then((loopModes: avSession.LoopMode[]) => {
-  console.info(`Succeeded in getting supported loop modes, size: ${loopModes.length}`);
-});
-```
-
 ## getSupportedPlaySpeeds
 
 ```TypeScript
@@ -1260,25 +876,6 @@ getSupportedPlaySpeeds(): Promise<Array<number>>
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
 | [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
-**示例**
-
-```TypeScript
-avCastController.getSupportedPlaySpeeds().then((nums: number[]) => {
-  console.info(`Succeeded in getting supported play speeds, length: ${nums.length}`);
-  if (nums.length > 0 ) {
-    console.info(`Succeeded in getting supported play speed: ${nums[0]}`);
-  }
-}).catch((err: BusinessError) => {
-  console.error(`Failed to get supported play speeds, code: ${err.code}, message: ${err.message}`);
-});
-```
-
-```TypeScript
-avcontroller.getSupportedPlaySpeeds().then((speeds: number[]) => {
-  console.info(`Succeeded in getting supported play speeds, size: ${speeds.length}`);
-});
-```
-
 ## getValidCommands
 
 ```TypeScript
@@ -1304,18 +901,6 @@ getValidCommands(callback: AsyncCallback<Array<AVControlCommandType>>): void
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
-
-**示例**
-
-```TypeScript
-avcontroller.getValidCommands((err: BusinessError, validCommands: avSession.AVControlCommandType[]) => {
-  if (err) {
-    console.error(`Failed to get valid commands, code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in getting valid commands, size: ${validCommands.length}`);
-});
-```
 
 ## getValidCommands
 
@@ -1345,14 +930,6 @@ getValidCommands(): Promise<Array<AVControlCommandType>>
 | [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
-**示例**
-
-```TypeScript
-avcontroller.getValidCommands().then((validCommands: avSession.AVControlCommandType[]) => {
-  console.info(`Succeeded in getting valid commands, size: ${validCommands.length}`);
-});
-```
-
 ## getValidCommandsSync
 
 ```TypeScript
@@ -1381,12 +958,6 @@ getValidCommandsSync(): Array<AVControlCommandType>
 | [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
-**示例**
-
-```TypeScript
-let validCommands: Array<avSession.AVControlCommandType> = avcontroller.getValidCommandsSync();
-```
-
 ## isActive
 
 ```TypeScript
@@ -1412,18 +983,6 @@ isActive(callback: AsyncCallback<boolean>): void
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
-
-**示例**
-
-```TypeScript
-avcontroller.isActive((err: BusinessError, isActive: boolean) => {
-  if (err) {
-    console.error(`Failed to check active state, code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in checking active state: ${isActive}`);
-});
-```
 
 ## isActive
 
@@ -1453,14 +1012,6 @@ isActive(): Promise<boolean>
 | [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
-**示例**
-
-```TypeScript
-avcontroller.isActive().then((isActive: boolean) => {
-  console.info(`Succeeded in checking active state: ${isActive}`);
-});
-```
-
 ## isActiveSync
 
 ```TypeScript
@@ -1488,12 +1039,6 @@ isActiveSync(): boolean
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
-
-**示例**
-
-```TypeScript
-let isActive: boolean = avcontroller.isActiveSync();
-```
 
 ## isDesktopLyricEnabled
 
@@ -1553,20 +1098,6 @@ isDesktopLyricVisible(): Promise<boolean>
 | [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 | [6600110](../errorcode-avsession.md#6600110-应用程序的桌面歌词功能未开启) | The desktop lyrics feature of this application is not enabled. |
 | [6600111](../errorcode-avsession.md#6600111-当前设备不支持桌面歌词功能) | The desktop lyrics feature is not supported. |
-
-**示例**
-
-```TypeScript
-if (currentAVSession !== undefined) {
-  (currentAVSession as avSession.AVSession).isDesktopLyricVisible().then((visible: boolean) => {
-    console.info(`isDesktopLyricVisible: ${visible}`);
-  })
-}
-```
-
-```TypeScript
-avcontroller.isDesktopLyricVisible();
-```
 
 ## off('metadataChange')
 
@@ -1971,12 +1502,6 @@ offDesktopLyricEnabled(callback?: Callback<boolean>): void
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
-**示例**
-
-```TypeScript
-avcontroller.offDesktopLyricEnabled();
-```
-
 ## offDesktopLyricStateChanged
 
 ```TypeScript
@@ -2004,18 +1529,6 @@ offDesktopLyricStateChanged(callback?: Callback<DesktopLyricState>): void
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
-**示例**
-
-```TypeScript
-if (currentAVSession !== undefined) {
-  (currentAVSession as avSession.AVSession).offDesktopLyricStateChanged();
-}
-```
-
-```TypeScript
-avcontroller.offDesktopLyricStateChanged();
-```
-
 ## offDesktopLyricVisibilityChanged
 
 ```TypeScript
@@ -2042,18 +1555,6 @@ offDesktopLyricVisibilityChanged(callback?: Callback<boolean>): void
 | --- | --- |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
-
-**示例**
-
-```TypeScript
-if (currentAVSession !== undefined) {
-  (currentAVSession as avSession.AVSession).offDesktopLyricVisibilityChanged();
-}
-```
-
-```TypeScript
-avcontroller.offDesktopLyricVisibilityChanged();
-```
 
 ## offMediaCenterControlTypeChanged
 
@@ -2083,12 +1584,6 @@ offMediaCenterControlTypeChanged(callback?: Callback<Array<AVMediaCenterControlT
 | --- | --- |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
-
-**示例**
-
-```TypeScript
-avcontroller.offMediaCenterControlTypeChanged();
-```
 
 ## offSupportedLoopModesChange
 
@@ -2121,12 +1616,6 @@ offSupportedLoopModesChange(callback?: Callback<Array<LoopMode>>): void
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
 | [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
-**示例**
-
-```TypeScript
-avcontroller.offSupportedLoopModesChange();
-```
-
 ## offSupportedPlaySpeedsChange
 
 ```TypeScript
@@ -2157,12 +1646,6 @@ offSupportedPlaySpeedsChange(callback?: Callback<Array<number>>): void
 | --- | --- |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
 | [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
-
-**示例**
-
-```TypeScript
-avcontroller.offSupportedPlaySpeedsChange();
-```
 
 ## on('metadataChange')
 
@@ -2591,14 +2074,6 @@ onDesktopLyricEnabled(callback: Callback<boolean>): void
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
-**示例**
-
-```TypeScript
-avcontroller.onDesktopLyricEnabled((enabled: boolean) => {
-  console.info(`desktop lyric enabled state : ${enabled}`);
-})
-```
-
 ## onDesktopLyricStateChanged
 
 ```TypeScript
@@ -2626,22 +2101,6 @@ onDesktopLyricStateChanged(callback: Callback<DesktopLyricState>): void
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
-**示例**
-
-```TypeScript
-if (currentAVSession !== undefined) {
-  (currentAVSession as avSession.AVSession).onDesktopLyricStateChanged((state: avSession.DesktopLyricState) => {
-    console.info(`desktop lyric isLocked : ${state.isLocked}`);
-  })
-}
-```
-
-```TypeScript
-avcontroller.onDesktopLyricStateChanged((state: avSession.DesktopLyricState) => {
-  console.info(`desktop lyric isLocked : ${state.isLocked}`);
-})
-```
-
 ## onDesktopLyricVisibilityChanged
 
 ```TypeScript
@@ -2668,22 +2127,6 @@ onDesktopLyricVisibilityChanged(callback: Callback<boolean>): void
 | --- | --- |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
-
-**示例**
-
-```TypeScript
-if (currentAVSession !== undefined) {
-  (currentAVSession as avSession.AVSession).onDesktopLyricVisibilityChanged((visible: boolean) => {
-    console.info(`desktop lyric visible state: ${visible}`);
-  });
-}
-```
-
-```TypeScript
-avcontroller.onDesktopLyricVisibilityChanged((visible: boolean) => {
-  console.info(`desktop lyric visible state: ${visible}`);
-});
-```
 
 ## onMediaCenterControlTypeChanged
 
@@ -2713,14 +2156,6 @@ onMediaCenterControlTypeChanged(callback: Callback<Array<AVMediaCenterControlTyp
 | --- | --- |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
-
-**示例**
-
-```TypeScript
-avcontroller.onMediaCenterControlTypeChanged((types: avSession.AVMediaCenterControlType[]) => {
-  console.info(`Media center control types changed, size: ${types.length}`);
-});
-```
 
 ## onSupportedLoopModesChange
 
@@ -2753,14 +2188,6 @@ onSupportedLoopModesChange(callback: Callback<Array<LoopMode>>): void
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
 | [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
-**示例**
-
-```TypeScript
-avcontroller.onSupportedLoopModesChange((loopModes: avSession.LoopMode[]) => {
-  console.info(`Supported loop modes changed, size: ${loopModes.length}`);
-});
-```
-
 ## onSupportedPlaySpeedsChange
 
 ```TypeScript
@@ -2792,14 +2219,6 @@ onSupportedPlaySpeedsChange(callback: Callback<Array<number>>): void
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
 | [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
-**示例**
-
-```TypeScript
-avcontroller.onSupportedPlaySpeedsChange((speeds: number[]) => {
-  console.info(`Supported play speeds changed, size: ${speeds.length}`);
-});
-```
-
 ## sendAVKeyEvent
 
 ```TypeScript
@@ -2829,23 +2248,6 @@ sendAVKeyEvent(event: KeyEvent, callback: AsyncCallback<void>): void
 | [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 | [6600105](../errorcode-avsession.md#6600105-无效会话命令) | Invalid session command. |
 | [6600106](../errorcode-avsession.md#6600106-会话未激活) | The session is not activated. |
-
-**示例**
-
-```TypeScript
-import { Key, KeyEvent } from '@kit.InputKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let keyItem: Key = {code:0x49, pressedTime:2, deviceId:0};
-let event:KeyEvent = {id:1, deviceId:0, actionTime:1, screenId:1, windowId:1, action:2, key:keyItem, unicodeChar:0, keys:[keyItem], ctrlKey:false, altKey:false, shiftKey:false, logoKey:false, fnKey:false, capsLock:false, numLock:false, scrollLock:false};
-avcontroller.sendAVKeyEvent(event, (err: BusinessError) => {
-  if (err) {
-    console.error(`Failed to send AV key event, code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in sending AV key event.');
-});
-```
 
 ## sendAVKeyEvent
 
@@ -2884,19 +2286,6 @@ sendAVKeyEvent(event: KeyEvent): Promise<void>
 | [6600105](../errorcode-avsession.md#6600105-无效会话命令) | Invalid session command. |
 | [6600106](../errorcode-avsession.md#6600106-会话未激活) | The session is not activated. |
 
-**示例**
-
-```TypeScript
-import { Key, KeyEvent } from '@kit.InputKit';
-
-let keyItem: Key = {code:0x49, pressedTime:2, deviceId:0};
-let event:KeyEvent = {id:1, deviceId:0, actionTime:1, screenId:1, windowId:1, action:2, key:keyItem, unicodeChar:0, keys:[keyItem], ctrlKey:false, altKey:false, shiftKey:false, logoKey:false, fnKey:false, capsLock:false, numLock:false, scrollLock:false};
-
-avcontroller.sendAVKeyEvent(event).then(() => {
-  console.info('Succeeded in sending AV key event.');
-});
-```
-
 ## sendCommonCommand
 
 ```TypeScript
@@ -2928,19 +2317,6 @@ sendCommonCommand(command: string, args: {[key: string]: Object}, callback: Asyn
 | [6600105](../errorcode-avsession.md#6600105-无效会话命令) | Invalid session command. |
 | [6600106](../errorcode-avsession.md#6600106-会话未激活) | The session is not activated. |
 | [6600107](../errorcode-avsession.md#6600107-命令消息过载) | Too many commands or events. |
-
-**示例**
-
-```TypeScript
-let commandName = "my_command";
-avcontroller.sendCommonCommand(commandName, {command : "This is my command"}, (err: BusinessError) => {
-  if (err) {
-    console.error(`Failed to send common command, code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in sending common command.');
-})
-```
 
 ## sendCommonCommand
 
@@ -2981,15 +2357,6 @@ sendCommonCommand(command: string, args: {[key: string]: Object}): Promise<void>
 | [6600106](../errorcode-avsession.md#6600106-会话未激活) | The session is not activated. |
 | [6600107](../errorcode-avsession.md#6600107-命令消息过载) | Too many commands or events. |
 
-**示例**
-
-```TypeScript
-let commandName = "my_command";
-avcontroller.sendCommonCommand(commandName, {command : "This is my command"}).then(() => {
-  console.info('Succeeded in sending common command.');
-});
-```
-
 ## sendControlCommand
 
 ```TypeScript
@@ -3026,19 +2393,6 @@ sendControlCommand(command: AVControlCommand, callback: AsyncCallback<void>): vo
 | [6600105](../errorcode-avsession.md#6600105-无效会话命令) | Invalid session command. |
 | [6600106](../errorcode-avsession.md#6600106-会话未激活) | The session is not activated. |
 | [6600107](../errorcode-avsession.md#6600107-命令消息过载) | Too many commands or events. |
-
-**示例**
-
-```TypeScript
-let avCommand: avSession.AVControlCommand = {command:'play'};
-avcontroller.sendControlCommand(avCommand, (err: BusinessError) => {
-  if (err) {
-    console.error(`Failed to send control command, code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in sending control command.');
-});
-```
 
 ## sendControlCommand
 
@@ -3084,15 +2438,6 @@ sendControlCommand(command: AVControlCommand): Promise<void>
 | [6600106](../errorcode-avsession.md#6600106-会话未激活) | The session is not activated. |
 | [6600107](../errorcode-avsession.md#6600107-命令消息过载) | Too many commands or events. |
 
-**示例**
-
-```TypeScript
-let avCommand: avSession.AVControlCommand = {command:'play'};
-avcontroller.sendControlCommand(avCommand).then(() => {
-  console.info('Succeeded in sending control command.');
-});
-```
-
 ## sendCustomData
 
 ```TypeScript
@@ -3126,58 +2471,6 @@ sendCustomData(data: Record<string, Object>): Promise<void>
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
-
-**示例**
-
-```TypeScript
-avCastController.sendCustomData({customData: 'This is custom data'}).then(() => {
-  console.info('Succeeded in sending custom data.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to send custom data, code: ${err.code}, message: ${err.message}`);
-});
-```
-
-```TypeScript
-currentAVSession.sendCustomData({customData : "This is custom data"}).then(() => {
-  console.info('Succeeded in sending custom data.');
-});
-```
-
-```TypeScript
-// Index.ets
-import { avSession } from '@kit.AVSessionKit';
-
-@Entry
-@Component
-struct Index {
-  private tag: string = "createNewSession";
-  private sessionId: string = "";
-  private controller: avSession.AVSessionController | undefined = undefined;
-  private currentAVSession?: avSession.AVSession;
-
-  aboutToAppear(): void {
-    avSession.createAVSession(this.getUIContext().getHostContext(), this.tag, "audio")
-      .then(async (data: avSession.AVSession) => {
-        this.currentAVSession = data;
-        this.sessionId = this.currentAVSession.sessionId;
-        this.controller = await this.currentAVSession.getController();
-        console.info(`Succeeded in creating AV session, sessionId: ${this.sessionId}`);
-        (this.controller as avSession.AVSessionController).sendCustomData({ customData: "This is my data" });
-      });
-  }
-
-  build() {
-    Column() {
-      Text('AVSession Demo')
-        .fontSize(20)
-        .margin(10)
-    }
-    .width('100%')
-    .height('100%')
-    .justifyContent(FlexAlign.Center)
-  }
-}
-```
 
 ## setDesktopLyricState
 
@@ -3215,24 +2508,6 @@ setDesktopLyricState(state: DesktopLyricState): Promise<void>
 | [6600110](../errorcode-avsession.md#6600110-应用程序的桌面歌词功能未开启) | The desktop lyrics feature of this application is not enabled. |
 | [6600111](../errorcode-avsession.md#6600111-当前设备不支持桌面歌词功能) | The desktop lyrics feature is not supported. |
 
-**示例**
-
-```TypeScript
-let state: avSession.DesktopLyricState = {
-  isLocked: true,
-};
-currentAVSession.setDesktopLyricState(state).then(() => {
-  console.info('Succeeded in setting desktop lyric state.');
-})
-```
-
-```TypeScript
-let state: avSession.DesktopLyricState = {
-  isLocked: true,
-};
-avcontroller.setDesktopLyricState(state);
-```
-
 ## setDesktopLyricVisible
 
 ```TypeScript
@@ -3269,18 +2544,6 @@ setDesktopLyricVisible(visible: boolean): Promise<void>
 | [6600110](../errorcode-avsession.md#6600110-应用程序的桌面歌词功能未开启) | The desktop lyrics feature of this application is not enabled. |
 | [6600111](../errorcode-avsession.md#6600111-当前设备不支持桌面歌词功能) | The desktop lyrics feature is not supported. |
 
-**示例**
-
-```TypeScript
-currentAVSession.setDesktopLyricVisible(true).then(() => {
-  console.info('Succeeded in setting desktop lyric visible.');
-});
-```
-
-```TypeScript
-avcontroller.setDesktopLyricVisible(true);
-```
-
 ## skipToQueueItem
 
 ```TypeScript
@@ -3308,19 +2571,6 @@ skipToQueueItem(itemId: number, callback: AsyncCallback<void>): void
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
-
-**示例**
-
-```TypeScript
-let queueItemId = 0;
-avcontroller.skipToQueueItem(queueItemId, (err: BusinessError) => {
-  if (err) {
-    console.error(`Failed to skip to queue item, code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in skipping to queue item.');
-});
-```
 
 ## skipToQueueItem
 
@@ -3356,15 +2606,6 @@ skipToQueueItem(itemId: number): Promise<void>
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
-
-**示例**
-
-```TypeScript
-let queueItemId = 0;
-avcontroller.skipToQueueItem(queueItemId).then(() => {
-  console.info('Succeeded in skipping to queue item.');
-});
-```
 
 ## sessionId
 

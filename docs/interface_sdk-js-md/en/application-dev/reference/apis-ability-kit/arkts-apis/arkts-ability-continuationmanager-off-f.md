@@ -135,7 +135,7 @@ Unsubscribes from device connection events. This API uses an asynchronous callba
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'deviceConnect' | Yes | Event type. The value is fixed at **deviceConnect**. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ContinuationResult&gt; | No | Callback invoked when a device is selected from the device list provided by the device selection module. This callback returns the device ID, type, and name. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ContinuationResult](arkts-ability-continuationmanager-continuationresult-t.md)&gt; | No | Callback invoked when a device is selected from the device list provided by the device selection module. This callback returns the device ID, type, and name. |
 
 **Examples**
 

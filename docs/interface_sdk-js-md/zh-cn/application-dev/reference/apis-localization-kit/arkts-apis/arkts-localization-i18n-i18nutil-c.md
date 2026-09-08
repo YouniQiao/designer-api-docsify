@@ -297,7 +297,7 @@ static getUnicodeWrappedFilePath(path: string, delimiter?: string, locale?: Intl
 | --- | --- | --- | --- |
 | path | string | 是 | 待处理的路径，如：/data/out/tmp。 |
 | delimiter | string | 否 | 路径分隔符，默认值：/。 |
-| locale | Intl.Locale | 否 | 区域对象，默认值：系统区域对象。 |
+| locale | [Intl.Locale](arkts-localization-intl-locale-c.md) | 否 | 区域对象，默认值：系统区域对象。 |
 
 **返回值：**
 
@@ -355,7 +355,7 @@ static getUnicodeWrappedFilePath(path: string, delimiter?: string, locale?: intl
 | --- | --- | --- | --- |
 | path | string | 是 | 待处理的路径，如：/data/out/tmp。 |
 | delimiter | string | 否 | 路径分隔符，默认值：/。 |
-| locale | intl.Locale | 否 | 区域对象，默认值：系统区域对象。 |
+| locale | [intl.Locale](arkts-localization-intl-locale-c.md) | 否 | 区域对象，默认值：系统区域对象。 |
 
 **返回值：**
 
@@ -458,7 +458,7 @@ static unitConvert(fromUnit: UnitInfo, toUnit: UnitInfo, value: number, locale: 
 | toUnit | [UnitInfo](arkts-localization-i18n-unitinfo-i.md) | 是 | 转换成的目标单位。 |
 | value | number | 是 | 需要转换的单位的数量值。 |
 | locale | string | 是 | [表示区域ID的字符串](../../../internationalization/i18n-locale-culture.md#实现原理)，由语言、脚本、国家地区组成，如：zh-Hans-CN。 |
-| style | string | 否 | 格式化使用的风格，取值包括：'number', 'short', 'narrow'。默认值：short。不同取值显示效果请参考[数字与度量衡国际化](../../../internationalization/i18n-numbers-weights-measures.md)。 |
+| style | string | 否 | 格式化使用的风格，取值包括：'long', 'short', 'narrow'。默认值：short。不同取值显示效果请参考[数字与度量衡国际化](../../../internationalization/i18n-numbers-weights-measures.md)。 |
 
 **返回值：**
 

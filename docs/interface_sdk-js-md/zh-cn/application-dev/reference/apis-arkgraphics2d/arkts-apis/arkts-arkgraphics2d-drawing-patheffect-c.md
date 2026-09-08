@@ -45,22 +45,6 @@ static createComposePathEffect(outer: PathEffect, inner: PathEffect): PathEffect
 | --- | --- |
 | [PathEffect](arkts-arkgraphics2d-drawing-patheffect-c.md) | 返回创建的组合路径效果对象，可通过[Pen.setPathEffect]{ |
 
-**示例**
-
-```TypeScript
-import { RenderNode } from '@kit.ArkUI';
-import { drawing } from '@kit.ArkGraphics2D';
-
-class DrawingRenderNode extends RenderNode {
-  draw(context : DrawContext) {
-    const canvas = context.canvas;
-    let outerPathEffect = drawing.PathEffect.createCornerPathEffect(100);
-    let innerPathEffect = drawing.PathEffect.createCornerPathEffect(10);
-    let effect = drawing.PathEffect.createComposePathEffect(outerPathEffect, innerPathEffect);
-  }
-}
-```
-
 ## createCornerPathEffect
 
 ```TypeScript
@@ -90,20 +74,6 @@ static createCornerPathEffect(radius: number): PathEffect
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
-
-**示例**
-
-```TypeScript
-import { RenderNode } from '@kit.ArkUI';
-import { drawing } from '@kit.ArkGraphics2D';
-
-class DrawingRenderNode extends RenderNode {
-  draw(context : DrawContext) {
-    const canvas = context.canvas;
-    let effect = drawing.PathEffect.createCornerPathEffect(30);
-  }
-}
-```
 
 ## createDashPathEffect
 
@@ -136,20 +106,6 @@ static createDashPathEffect(intervals: Array<number>, phase: number): PathEffect
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
 
-**示例**
-
-```TypeScript
-import { RenderNode } from '@kit.ArkUI';
-import { drawing } from '@kit.ArkGraphics2D';
-
-class DrawingRenderNode extends RenderNode {
-  draw(context : DrawContext) {
-    let intervals = [10, 5];
-    let effect = drawing.PathEffect.createDashPathEffect(intervals, 5);
-  }
-}
-```
-
 ## createDiscretePathEffect
 
 ```TypeScript
@@ -176,20 +132,6 @@ static createDiscretePathEffect(segLength: number, dev: number, seedAssist?: num
 | --- | --- |
 | [PathEffect](arkts-arkgraphics2d-drawing-patheffect-c.md) | 返回创建的离散路径效果对象，可通过[Pen.setPathEffect]{ |
 
-**示例**
-
-```TypeScript
-import { RenderNode } from '@kit.ArkUI';
-import { drawing } from '@kit.ArkGraphics2D';
-
-class DrawingRenderNode extends RenderNode {
-  draw(context : DrawContext) {
-    const canvas = context.canvas;
-    let effect = drawing.PathEffect.createDiscretePathEffect(100, -50, 0);
-  }
-}
-```
-
 ## createPathDashEffect
 
 ```TypeScript
@@ -206,7 +148,7 @@ static createPathDashEffect(path: Path, advance: number, phase: number, style: P
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| path | Path | 是 | 通过该路径生成一个图形，用来填充每个虚线段。 |
+| path | [Path](arkts-arkgraphics2d-drawing-path-c.md) | 是 | 通过该路径生成一个图形，用来填充每个虚线段。 |
 | advance | number | 是 | 虚线段的步长，取值范围&gt;0，否则会抛错误码。单位为物理像素px。 |
 | phase | number | 是 | 表示虚线段内图形在虚线步长范围内的偏移量，该参数为浮点数，效果为先对偏移量取绝对值，然后对步长取模。单位为物理像素px。 |
 | style | [PathDashStyle](arkts-arkgraphics2d-drawing-pathdashstyle-e.md) | 是 | 指定虚线效果的样式，决定虚线段图形在路径上的变换方式。 |
@@ -222,43 +164,6 @@ static createPathDashEffect(path: Path, advance: number, phase: number, style: P
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
-
-**示例**
-
-```TypeScript
-import { RenderNode, DrawContext } from '@kit.ArkUI';
-import { common2D, drawing } from '@kit.ArkGraphics2D';
-
-class DrawingRenderNode extends RenderNode {
-  draw(context : DrawContext) {
-    const canvas = context.canvas;
-    let pen = new drawing.Pen();
-    const penColor: common2D.Color = { alpha: 255, red: 255, green: 0, blue: 0 };
-    pen.setColor(penColor);
-    pen.setStrokeWidth(10);
-    pen.setAntiAlias(true);
-
-    const path = new drawing.Path();
-    path.moveTo(100, 100);
-    path.lineTo(150, 50);
-    path.lineTo(200, 100);
-
-    const dashShapePath = new drawing.Path();
-    dashShapePath.moveTo(0, 0);
-    dashShapePath.lineTo(10, 0);
-    dashShapePath.lineTo(20, 10);
-    dashShapePath.lineTo(0, 10);
-
-    let pathEffect: drawing.PathEffect = drawing.PathEffect.createPathDashEffect(dashShapePath, 50, -30,
-        drawing.PathDashStyle.MORPH);
-    pen.setPathEffect(pathEffect);
-
-    canvas.attachPen(pen);
-    canvas.drawPath(path);
-    canvas.detachPen();
-  }
-}
-```
 
 ## createSumPathEffect
 
@@ -284,20 +189,3 @@ static createSumPathEffect(firstPathEffect: PathEffect, secondPathEffect: PathEf
 | 类型 | 说明 |
 | --- | --- |
 | [PathEffect](arkts-arkgraphics2d-drawing-patheffect-c.md) | 返回创建的叠加路径效果对象，可通过[Pen.setPathEffect]{ |
-
-**示例**
-
-```TypeScript
-import { RenderNode } from '@kit.ArkUI';
-import { drawing } from '@kit.ArkGraphics2D';
-
-class DrawingRenderNode extends RenderNode {
-  draw(context : DrawContext) {
-    const canvas = context.canvas;
-    let intervals = [10, 5];
-    let firstPathEffect = drawing.PathEffect.createDashPathEffect(intervals, 5);
-    let secondPathEffect = drawing.PathEffect.createDashPathEffect(intervals, 10);
-    let effect = drawing.PathEffect.createSumPathEffect(firstPathEffect, secondPathEffect);
-  }
-}
-```

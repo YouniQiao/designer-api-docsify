@@ -26,7 +26,7 @@ function getCellularDataFlowType(callback: AsyncCallback<DataFlowType>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DataFlowType&gt; | 是 | 以callback形式异步返回结果。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[DataFlowType](arkts-telephony-data-dataflowtype-e.md)&gt; | 是 | 以callback形式异步返回结果。 |
 
 **错误码：**
 
@@ -70,7 +70,7 @@ function getCellularDataFlowType(): Promise<DataFlowType>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;DataFlowType&gt; | 以Promise形式返回蜂窝网络的数据流类型（对应信号栏旁边的上下行箭头）。 |
+| Promise&lt;[DataFlowType](arkts-telephony-data-dataflowtype-e.md)&gt; | 以Promise形式返回蜂窝网络的数据流类型（对应信号栏旁边的上下行箭头）。 |
 
 **错误码：**
 

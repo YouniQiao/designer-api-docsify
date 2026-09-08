@@ -38,7 +38,7 @@ scanResult: Array<ScanResult>
 
 扫描到符合过滤条件的BLE广播报文后，上报的扫描数据。
 
-**类型：** Array&lt;ScanResult&gt;
+**类型：** Array&lt;[ScanResult](arkts-connectivity-ble-scanresult-i.md)&gt;
 
 **起始版本：** 15
 

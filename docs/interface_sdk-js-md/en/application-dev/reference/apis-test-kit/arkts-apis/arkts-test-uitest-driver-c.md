@@ -113,16 +113,6 @@ async function demo() {
 }
 ```
 
-```TypeScript
-// xxx.test.ets
-import { UiDriver } from '@kit.TestKit';
-
-async function demo() {
-  let driver: UiDriver = UiDriver.create();
-  await driver.click(100, 100);
-}
-```
-
 ## clickAt
 
 ```TypeScript
@@ -400,16 +390,6 @@ async function demo() {
 }
 ```
 
-```TypeScript
-// xxx.test.ets
-import { UiDriver } from '@kit.TestKit';
-
-async function demo() {
-  let driver: UiDriver = UiDriver.create();
-  await driver.delayMs(1000);
-}
-```
-
 ## doubleClick
 
 ```TypeScript
@@ -454,16 +434,6 @@ import { Driver } from '@kit.TestKit';
 
 async function demo() {
   let driver: Driver = Driver.create();
-  await driver.doubleClick(100, 100);
-}
-```
-
-```TypeScript
-// xxx.test.ets
-import { UiDriver } from '@kit.TestKit';
-
-async function demo() {
-  let driver: UiDriver = UiDriver.create();
   await driver.doubleClick(100, 100);
 }
 ```
@@ -521,7 +491,7 @@ async function demo() {
 drag(startx: number, starty: number, endx: number, endy: number, speed?: number): Promise<void>
 ```
 
-Drags from the start coordinate point to the target coordinate point. This method can be used only on the default screen of the device, and the number-click duration before dragging cannot be customized. To specify a screen or number-click duration, use [dragBetween](#dragbetween). This API uses a promise to return the result.
+Drags from the start coordinate point to the target coordinate point. This method can be used only on the default screen of the device, and the long-click duration before dragging cannot be customized. To specify a screen or long-click duration, use [dragBetween](#dragbetween). This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -1640,7 +1610,7 @@ async function demo() {
 isComponentPresentWhenLongClick(on: On, point: Point, duration?: number): Promise<boolean>
 ```
 
-Long-clicks at the specified coordinates and checks whether the target component exists. This method is applicable to verifying the UI elements that dynamically appear after a number-click, such as the context menu or edit button. This API uses a promise to return the result.
+Long-clicks at the specified coordinates and checks whether the target component exists. This method is applicable to verifying the UI elements that dynamically appear after a long-click, such as the context menu or edit button. This API uses a promise to return the result.
 
 **Since:** 22
 
@@ -1655,14 +1625,14 @@ Long-clicks at the specified coordinates and checks whether the target component
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | on | [On](arkts-test-uitest-on-c.md) | Yes | Attributes of the target [Component](arkts-test-uitest-component-c.md). |
-| point | [Point](arkts-test-uitest-point-i.md) | Yes | Coordinates of the number-clicked point. |
+| point | [Point](arkts-test-uitest-point-i.md) | Yes | Coordinates of the long-clicked point. |
 | duration | number | No | Long-click duration, in ms. The value is an integer greater than or equal to 1500. The default value is 1500. If the value is less than 1500, the 17000007 error code is thrown. If the value is **null** or **undefined**, the default value is used. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return whether the target component exists during a number-click operation. The value **true** indicates that the target component exists, and **false** indicates the opposite. |
+| Promise&lt;boolean&gt; | Promise used to return whether the target component exists during a long-click operation. The value **true** indicates that the target component exists, and **false** indicates the opposite. |
 
 **Error codes:**
 
@@ -1794,7 +1764,7 @@ async function demo() {
 longClick(x: number, y: number): Promise<void>
 ```
 
-Long-clicks the target coordinate point. This method can be used only on the default screen of the device, and the number-click duration cannot be customized. To specify a screen or number-click duration, use [longClickAt](#longclickat). This API uses a promise to return the result.
+Long-clicks the target coordinate point. This method can be used only on the default screen of the device, and the long-click duration cannot be customized. To specify a screen or long-click duration, use [longClickAt](#longclickat). This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -1832,16 +1802,6 @@ import { Driver } from '@kit.TestKit';
 
 async function demo() {
   let driver: Driver = Driver.create();
-  await driver.longClick(100, 100);
-}
-```
-
-```TypeScript
-// xxx.test.ets
-import { UiDriver } from '@kit.TestKit';
-
-async function demo() {
-  let driver: UiDriver = UiDriver.create();
   await driver.longClick(100, 100);
 }
 ```
@@ -1915,7 +1875,7 @@ LongClick on the specified location on the screen, with optional touch settings.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | point | [Point](arkts-test-uitest-point-i.md) | Yes | the coordinate point where the finger touches the screen. |
-| options | [TouchOptions](arkts-test-uitest-touchoptions-i.md) | No | the options for the number click operation. Only the 'duration' and 'pressure' properties are applicable for this method. Setting other properties will result in a BusinessError 17000007. Default value: Refer to the default value of TouchOptions. |
+| options | [TouchOptions](arkts-test-uitest-touchoptions-i.md) | No | the options for the long click operation. Only the 'duration' and 'pressure' properties are applicable for this method. Setting other properties will result in a BusinessError 17000007. Default value: Refer to the default value of TouchOptions. |
 
 **Return value:**
 
@@ -2003,7 +1963,7 @@ async function demo() {
 mouseDoubleClick(p: Point, btnId: MouseButton, key1?: number, key2?: number): Promise<void>
 ```
 
-Injects a number-click action at the specified coordinates, with the optional key or key combination. This API uses a promise to return the result. For example, if the key code value is **2072**, the **Ctrl** button is pressed with the number-click.
+Injects a double-click action at the specified coordinates, with the optional key or key combination. This API uses a promise to return the result. For example, if the key code value is **2072**, the **Ctrl** button is pressed with the double-click.
 
 **Since:** 11
 
@@ -2017,7 +1977,7 @@ Injects a number-click action at the specified coordinates, with the optional ke
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| p | [Point](arkts-test-uitest-point-i.md) | Yes | Coordinates of the number-click. |
+| p | [Point](arkts-test-uitest-point-i.md) | Yes | Coordinates of the double-click. |
 | btnId | [MouseButton](arkts-test-uitest-mousebutton-e.md) | Yes | Mouse button pressed. |
 | key1 | number | No | First key code value. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md). Default value: 0 |
 | key2 | number | No | Second key code value. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md). Default value: 0 |
@@ -2211,7 +2171,7 @@ async function demo() {
 mouseLongClick(p: Point, btnId: MouseButton, key1?: number, key2?: number): Promise<void>
 ```
 
-Injects a mouse number-click action at the specified coordinates, with the optional key or key combination. This API uses a promise to return the result. For example, if the key code value is **2072**, the **Ctrl** button is number-clicked with the mouse device.
+Injects a mouse long-click action at the specified coordinates, with the optional key or key combination. This API uses a promise to return the result. For example, if the key code value is **2072**, the **Ctrl** button is long-clicked with the mouse device.
 
 **Since:** 11
 
@@ -2225,7 +2185,7 @@ Injects a mouse number-click action at the specified coordinates, with the optio
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| p | [Point](arkts-test-uitest-point-i.md) | Yes | Coordinates of the number-click of the mouse device. |
+| p | [Point](arkts-test-uitest-point-i.md) | Yes | Coordinates of the long-click of the mouse device. |
 | btnId | [MouseButton](arkts-test-uitest-mousebutton-e.md) | Yes | Mouse button pressed. |
 | key1 | number | No | First key code value. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md). Default value: 0 |
 | key2 | number | No | Second key code value. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md). Default value: 0 |
@@ -2262,7 +2222,7 @@ async function demo() {
 mouseLongClick(p: Point, btnId: MouseButton, key1?: number, key2?: number, duration?: number): Promise<void>
 ```
 
-Injects a mouse number-click action at the specified coordinates, with the optional key or key combination and the specified duration. This API uses a promise to return the result. For example, if the key code value is **2072**, the **Ctrl** button is pressed with the number-click.
+Injects a mouse long-click action at the specified coordinates, with the optional key or key combination and the specified duration. This API uses a promise to return the result. For example, if the key code value is **2072**, the **Ctrl** button is pressed with the long-click.
 
 **Since:** 20
 
@@ -2276,7 +2236,7 @@ Injects a mouse number-click action at the specified coordinates, with the optio
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| p | [Point](arkts-test-uitest-point-i.md) | Yes | Coordinates of the number-click of the mouse device. |
+| p | [Point](arkts-test-uitest-point-i.md) | Yes | Coordinates of the long-click of the mouse device. |
 | btnId | [MouseButton](arkts-test-uitest-mousebutton-e.md) | Yes | Mouse button pressed. |
 | key1 | number | No | First key code value. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md). Default value: 0 |
 | key2 | number | No | Second key code value. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md). Default value: 0 |
@@ -2560,7 +2520,7 @@ async function demo() {
 penDoubleClick(point: Point): Promise<void>
 ```
 
-Simulates a pen number-click operation. This API uses a promise to return the result.
+Simulates a pen double-click operation. This API uses a promise to return the result.
 
 **Since:** 18
 
@@ -2574,7 +2534,7 @@ Simulates a pen number-click operation. This API uses a promise to return the re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| point | [Point](arkts-test-uitest-point-i.md) | Yes | Coordinates of the number-clicked point. |
+| point | [Point](arkts-test-uitest-point-i.md) | Yes | Coordinates of the double-clicked point. |
 
 **Return value:**
 
@@ -2607,7 +2567,7 @@ async function demo() {
 penLongClick(point: Point, pressure?: number): Promise<void>
 ```
 
-Simulates a pen number-click operation. This API uses a promise to return the result.
+Simulates a pen long-click operation. This API uses a promise to return the result.
 
 **Since:** 18
 
@@ -2621,7 +2581,7 @@ Simulates a pen number-click operation. This API uses a promise to return the re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| point | [Point](arkts-test-uitest-point-i.md) | Yes | Coordinates of the number-clicked point. |
+| point | [Point](arkts-test-uitest-point-i.md) | Yes | Coordinates of the long-clicked point. |
 | pressure | number | No | Long-click pressure of the pen. The value ranges from 0.0 to 1.0. The default value is **1.0**. If the value is **null** or **undefined**, the default value is used. If the value is out of the value range, error code 401 is thrown. |
 
 **Return value:**
@@ -2740,16 +2700,6 @@ import { Driver } from '@kit.TestKit';
 
 async function demo() {
   let driver: Driver = Driver.create();
-  await driver.pressBack();
-}
-```
-
-```TypeScript
-// xxx.test.ets
-import { UiDriver } from '@kit.TestKit';
-
-async function demo() {
-  let driver: UiDriver = UiDriver.create();
   await driver.pressBack();
 }
 ```
@@ -2931,16 +2881,6 @@ import { Driver } from '@kit.TestKit';
 
 async function demo() {
   let driver: Driver = Driver.create();
-  await driver.screenCap('/data/storage/el2/base/cache/1.png');
-}
-```
-
-```TypeScript
-// xxx.test.ets
-import { UiDriver } from '@kit.TestKit';
-
-async function demo() {
-  let driver: UiDriver = UiDriver.create();
   await driver.screenCap('/data/storage/el2/base/cache/1.png');
 }
 ```
@@ -3545,17 +3485,6 @@ async function demo() {
 }
 ```
 
-```TypeScript
-// xxx.test.ets
-import { UiDriver } from '@kit.TestKit';
-import { KeyCode } from '@kit.InputKit';
-
-async function demo() {
-  let driver: UiDriver = UiDriver.create();
-  await driver.triggerKey(KeyCode.KEYCODE_BACK); // Back button
-}
-```
-
 ## triggerKey
 
 ```TypeScript
@@ -3633,7 +3562,7 @@ HANDWRITING key with CLICK or DOUBLE_CLICK operation, SMART key with CLICK opera
 | --- | --- | --- | --- |
 | key | [PenKey](arkts-test-uitest-penkey-e.md) | Yes | Stylus key type, which specifies the stylus key to be used for the operation, such as the handwriting key, air mouse key, and smart key. |
 | mode | [PenMode](arkts-test-uitest-penmode-e.md) | Yes | Stylus mode, which specifies the current operation mode of the stylus, such as the handwriting mode or air mouse mode. |
-| operation | [PenKeyOperation](arkts-test-uitest-penkeyoperation-e.md) | Yes | Stylus key operation mode, which specifies the operation mode of the key, such as single-tap or number-tap. |
+| operation | [PenKeyOperation](arkts-test-uitest-penkeyoperation-e.md) | Yes | Stylus key operation mode, which specifies the operation mode of the key, such as single-tap or double-tap. |
 | options | [PenKeyOperationOptions](arkts-test-uitest-penkeyoperationoptions-i.md) | No | Operation options, including optional coordinates. The default values are inherited from the default values of the properties in [PenKeyOperationOptions](arkts-test-uitest-penkeyoperationoptions-i.md).    **Note：**: When **mode** is set to [AIR_MOUSE](arkts-test-uitest-penmode-e.md#air_mouse) and **key** is set to [AIR_MOUSE](arkts-test-uitest-penkey-e.md#air_mouse), the **point** attribute in **options** must be set. Otherwise, error code 17000007 will be thrown. |
 
 **Return value:**

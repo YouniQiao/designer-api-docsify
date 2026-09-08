@@ -12,4 +12,4 @@ Defines the router table configuration of the module.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
-**Type:** _HapModuleInfo.RouterItem
+**Type:** [_HapModuleInfo.RouterItem](arkts-ability-hapmoduleinfo-routeritem-i.md)

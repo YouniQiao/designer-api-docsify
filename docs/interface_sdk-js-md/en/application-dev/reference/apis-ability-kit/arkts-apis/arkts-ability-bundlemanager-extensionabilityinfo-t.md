@@ -12,4 +12,4 @@ Defines the ExtensionAbility information.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
-**Type:** _ExtensionAbilityInfo.ExtensionAbilityInfo
+**Type:** [_ExtensionAbilityInfo.ExtensionAbilityInfo](arkts-ability-extensionabilityinfo-i.md)

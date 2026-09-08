@@ -36,7 +36,7 @@ function getRemoteDeviceType(deviceId: string): Promise<DeviceType>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;DeviceType&gt; | 以Promise形式返回获取蓝牙远端设备类型的结果，返回值为设备类型。 |
+| Promise&lt;[DeviceType](arkts-connectivity-connection-devicetype-e-sys.md)&gt; | 以Promise形式返回获取蓝牙远端设备类型的结果，返回值为设备类型。 |
 
 **错误码：**
 

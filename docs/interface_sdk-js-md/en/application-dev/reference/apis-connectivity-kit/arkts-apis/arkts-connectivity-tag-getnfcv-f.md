@@ -30,7 +30,7 @@ Obtains an **NfcVTag** object, which allows access to the tags that use the NFC-
 
 | Type | Description |
 | --- | --- |
-| NfcVTag | NfcVTag** object obtained. |
+| [NfcVTag](arkts-connectivity-tag-nfcvtag-t.md) | NfcVTag** object obtained. |
 
 **Error codes:**
 

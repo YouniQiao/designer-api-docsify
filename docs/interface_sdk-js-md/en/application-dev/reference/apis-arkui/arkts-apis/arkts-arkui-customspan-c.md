@@ -49,7 +49,7 @@ Called to draw a custom span.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | DrawContext | Yes | Drawing context.   **NOTE：**The **canvas** method of **DrawContext** obtains the canvas of the **Text** component. As such, the custom span does not extend beyond the area of the **Text** component. |
+| context | [DrawContext](../arkts-components/arkts-arkui-drawcontext-t.md) | Yes | Drawing context.   **NOTE：**The **canvas** method of **DrawContext** obtains the canvas of the **Text** component. As such, the custom span does not extend beyond the area of the **Text** component. |
 | drawInfo | [CustomSpanDrawInfo](arkts-arkui-customspandrawinfo-i.md) | Yes | Drawing information of the custom span. |
 
 ## onMeasure

@@ -152,7 +152,7 @@ Cancels a notification published through the reminder agent. This API uses a pro
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| representativeBundle | BundleOption | Yes | Bundle information of the application whose notification function is taken over by the reminder agent. |
+| representativeBundle | [BundleOption](arkts-notification-notificationmanager-bundleoption-t.md) | Yes | Bundle information of the application whose notification function is taken over by the reminder agent. |
 | id | number | Yes | Notification ID. |
 
 **Return value:**

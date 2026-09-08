@@ -53,7 +53,7 @@ location?: Location
 
 Geographical location of the recorded video. By default, the geographical location information is not recorded. This API is supported since API version 6 and deprecated since API version 12. You are advised to use **AVMetadata.location** instead. If both parameters are set, **AVMetadata.location** is used.
 
-**Type:** Location
+**Type:** [Location](arkts-media-media-location-i.md)
 
 **Since:** 9
 
@@ -85,7 +85,7 @@ metadata?: AVMetadata
 
 Metadata. For details, see @AVMetadata.
 
-**Type:** AVMetadata
+**Type:** [AVMetadata](arkts-media-media-avmetadata-i.md)
 
 **Since:** 12
 

@@ -78,7 +78,7 @@ sslType?: SslType
 
 Secure communication protocol, such as TSL or TLCP. TLS is used by default. Currently, TLS and TLCP do not support two-way authentication.
 
-**Type:** SslType
+**Type:** [SslType](arkts-basicservices-cachedownload-ssltype-e.md)
 
 **Since:** 21
 

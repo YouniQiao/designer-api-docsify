@@ -25,7 +25,7 @@ export function grantToolPermissionsByUser(userAuthResult: UserAuthResult[]): Pr
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| userAuthResult | UserAuthResult[] | 是 | 用户授权结果列表 |
+| userAuthResult | [UserAuthResult](arkts-ability-abilitytoolaccessctrl-userauthresult-i-sys.md)[] | 是 | 用户授权结果列表 |
 
 **返回值：**
 

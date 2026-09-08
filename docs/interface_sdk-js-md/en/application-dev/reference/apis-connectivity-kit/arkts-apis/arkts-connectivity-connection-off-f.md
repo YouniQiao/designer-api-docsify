@@ -125,7 +125,7 @@ Unsubscribe the event reported when a remote Bluetooth device is bonded.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'bondStateChange' | Yes | Type of the bond state event to listen for. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;BondStateParam&gt; | No | Callback used to listen for the bond state event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[BondStateParam](arkts-connectivity-connection-bondstateparam-i.md)&gt; | No | Callback used to listen for the bond state event. |
 
 **Error codes:**
 
@@ -173,7 +173,7 @@ Unsubscribe the event of a pairing request from a remote Bluetooth device.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'pinRequired' | Yes | Type of the pairing request event to listen for. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;PinRequiredParam&gt; | No | Callback used to listen for the pairing request event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PinRequiredParam](arkts-connectivity-connection-pinrequiredparam-i.md)&gt; | No | Callback used to listen for the pairing request event. |
 
 **Error codes:**
 
@@ -221,7 +221,7 @@ Unsubscribe the event of battery state changed from a remote device.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'batteryChange' | Yes | Type of the battery event to listen for. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;BatteryInfo&gt; | No | Callback used to listen. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[BatteryInfo](arkts-connectivity-connection-batteryinfo-i.md)&gt; | No | Callback used to listen. |
 
 **Error codes:**
 

@@ -21,7 +21,7 @@ authStatusInfo?: AuthStatusInfo
 
 Authorization status information.
 
-**Type:** AuthStatusInfo
+**Type:** [AuthStatusInfo](arkts-ability-abilitytoolaccessctrl-authstatusinfo-i-sys.md)
 
 **Since:** 26.0.0
 
@@ -53,7 +53,7 @@ permissionStatus: abilityAccessCtrl.PermissionStatus
 
 Permission status.
 
-**Type:** abilityAccessCtrl.PermissionStatus
+**Type:** [abilityAccessCtrl.PermissionStatus](arkts-ability-abilityaccessctrl-permissionstatus-e.md)
 
 **Since:** 26.0.0
 

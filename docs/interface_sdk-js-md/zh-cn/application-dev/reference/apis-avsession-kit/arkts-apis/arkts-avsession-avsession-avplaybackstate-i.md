@@ -178,7 +178,7 @@ state?: PlaybackState
 
 播放状态。
 
-**类型：** PlaybackState
+**类型：** [PlaybackState](arkts-avsession-avsession-playbackstate-e.md)
 
 **起始版本：** 10
 

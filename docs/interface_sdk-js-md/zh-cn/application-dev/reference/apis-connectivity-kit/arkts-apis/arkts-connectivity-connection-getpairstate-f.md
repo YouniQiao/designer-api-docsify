@@ -36,7 +36,7 @@ function getPairState(deviceId: string): BondState
 
 | 类型 | 说明 |
 | --- | --- |
-| BondState | 表示设备的蓝牙配对状态。 |
+| [BondState](arkts-connectivity-connection-bondstate-e.md) | 表示设备的蓝牙配对状态。 |
 
 **错误码：**
 

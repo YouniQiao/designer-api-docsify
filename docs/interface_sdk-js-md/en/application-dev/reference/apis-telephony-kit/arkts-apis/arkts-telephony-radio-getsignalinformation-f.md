@@ -23,7 +23,7 @@ Obtains a list of signal strengths of the network with which the SIM card in the
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | slotId | number | Yes | Card slot ID.    - **0**: card slot 1.    - **1**: card slot 2 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;SignalInformation&gt;&gt; | Yes | Callback used to return the result, which is an array of child class objects derived from [SignalInformation](arkts-telephony-radio-signalinformation-i.md). |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[SignalInformation](arkts-telephony-radio-signalinformation-i.md)&gt;&gt; | Yes | Callback used to return the result, which is an array of child class objects derived from [SignalInformation](arkts-telephony-radio-signalinformation-i.md). |
 
 **Error codes:**
 
@@ -73,7 +73,7 @@ Obtains a list of signal strengths of the network with which the SIM card in the
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;SignalInformation&gt;&gt; | Promise used to return the result, which is a list of child class objects derived from [SignalInformation]{ |
+| Promise&lt;Array&lt;[SignalInformation](arkts-telephony-radio-signalinformation-i.md)&gt;&gt; | Promise used to return the result, which is a list of child class objects derived from [SignalInformation]{ |
 
 **Error codes:**
 

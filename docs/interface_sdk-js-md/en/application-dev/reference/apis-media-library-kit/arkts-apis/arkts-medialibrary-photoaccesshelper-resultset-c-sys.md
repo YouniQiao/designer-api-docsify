@@ -51,28 +51,6 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 }
 ```
 
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  console.info('fetchResultCloseDemo');
-  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-  let fetchOption: photoAccessHelper.FetchOptions = {
-    fetchColumns: [],
-    predicates: predicates
-  };
-  try {
-    let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> = await phAccessHelper.getAssets(fetchOption);
-    fetchResult.close();
-    console.info('close succeed.');
-  } catch (err) {
-    console.error(`close fail. error: ${err.code}, ${err.message}`);
-  }
-}
-```
-
 ## getRow
 
 ```TypeScript
@@ -91,7 +69,7 @@ Obtains the values of all columns in the specified row.
 
 | Type | Description |
 | --- | --- |
-| ValuesBucket | Values of all columns in the specified row. |
+| [ValuesBucket](arkts-medialibrary-photoaccesshelper-valuesbucket-t-sys.md) | Values of all columns in the specified row. |
 
 **Error codes:**
 
@@ -140,7 +118,7 @@ Obtains the value of the specified column in the current row.
 
 | Type | Description |
 | --- | --- |
-| ValueType | Allowed data field types. |
+| [ValueType](arkts-medialibrary-photoaccesshelper-valuetype-t-sys.md) | Allowed data field types. |
 
 **Error codes:**
 

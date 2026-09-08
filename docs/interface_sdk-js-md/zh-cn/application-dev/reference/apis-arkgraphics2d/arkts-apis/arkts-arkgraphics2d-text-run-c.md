@@ -32,13 +32,13 @@ getAdvances(range: Range): Array<common2D.Point>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| range | Range | 是 | 要获取的字形位置范围。range.start表示范围开始的位置，range.end表示范围的长度。如果长度是0表示从range.start开始获取到渲染块结束。当range.end、range.start为负数，或者传入null、undefined时，该方法将返回undefined。 |
+| range | [Range](arkts-arkgraphics2d-text-range-i.md) | 是 | 要获取的字形位置范围。range.start表示范围开始的位置，range.end表示范围的长度。如果长度是0表示从range.start开始获取到渲染块结束。当range.end、range.start为负数，或者传入null、undefined时，该方法将返回undefined。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;common2D.Point&gt; | 返回该排版单元中每个字形相对于水平方向的字形宽度数组。其中，[common2D.Point]{ |
+| Array&lt;[common2D.Point](arkts-arkgraphics2d-common2d-point-i.md)&gt; | 返回该排版单元中每个字形相对于水平方向的字形宽度数组。其中，[common2D.Point]{ |
 
 **示例**
 
@@ -67,7 +67,7 @@ getFont(): drawing.Font
 
 | 类型 | 说明 |
 | --- | --- |
-| drawing.Font | 该排版单元的字体属性对象实例。 |
+| [drawing.Font](arkts-arkgraphics2d-drawing-font-c.md) | 该排版单元的字体属性对象实例。 |
 
 **示例**
 
@@ -96,10 +96,6 @@ getGlyphCount(): number
 | number | 该排版单元中字形数量，整数。 |
 
 **示例**
-
-```TypeScript
-let glyphCount = lines[0].getGlyphCount();
-```
 
 ```TypeScript
 let glyphs = runs[0].getGlyphCount();
@@ -149,7 +145,7 @@ getGlyphs(range: Range): Array<number>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| range | Range | 是 | 要获取的字形序号范围，range.start表示范围开始的位置，range.end表示范围的长度，当range.end为0时表示从range.start开始获取到渲染块结束。当range.end、range.start为负数，或者传入null、undefined时，该方法将返回undefined。 |
+| range | [Range](arkts-arkgraphics2d-text-range-i.md) | 是 | 要获取的字形序号范围，range.start表示范围开始的位置，range.end表示范围的长度，当range.end为0时表示从range.start开始获取到渲染块结束。当range.end、range.start为负数，或者传入null、undefined时，该方法将返回undefined。 |
 
 **返回值：**
 
@@ -213,13 +209,9 @@ getImageBounds(): common2D.Rect
 
 | 类型 | 说明 |
 | --- | --- |
-| common2D.Rect | 该排版单元的图像边界，单位为物理像素px。 |
+| [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) | 该排版单元的图像边界，单位为物理像素px。 |
 
 **示例**
-
-```TypeScript
-let imageBounds = lines[0].getImageBounds();
-```
 
 ```TypeScript
 let bounds = runs[0].getImageBounds();
@@ -243,7 +235,7 @@ getOffsets(): Array<common2D.Point>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;common2D.Point&gt; | 该排版单元中每个字形相对于其索引的偏移量。 |
+| Array&lt;[common2D.Point](arkts-arkgraphics2d-common2d-point-i.md)&gt; | 该排版单元中每个字形相对于其索引的偏移量。 |
 
 **示例**
 
@@ -269,7 +261,7 @@ getPositions(): Array<common2D.Point>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;common2D.Point&gt; | 该排版单元中每个字形相对于每行的字形位置。 |
+| Array&lt;[common2D.Point](arkts-arkgraphics2d-common2d-point-i.md)&gt; | 该排版单元中每个字形相对于每行的字形位置。 |
 
 **示例**
 
@@ -295,13 +287,13 @@ getPositions(range: Range): Array<common2D.Point>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| range | Range | 是 | 要获取的字形位置范围，range.start表示范围开始的位置，range.end表示范围的长度，如果长度是0表示从范围range.start开始获取到渲染块结束。当range.end、range.start为负数，或者传入null、undefined时，该方法将返回undefined。 |
+| range | [Range](arkts-arkgraphics2d-text-range-i.md) | 是 | 要获取的字形位置范围，range.start表示范围开始的位置，range.end表示范围的长度，如果长度是0表示从范围range.start开始获取到渲染块结束。当range.end、range.start为负数，或者传入null、undefined时，该方法将返回undefined。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;common2D.Point&gt; | 该排版单元中每个字形相对于每行的字形位置。 |
+| Array&lt;[common2D.Point](arkts-arkgraphics2d-common2d-point-i.md)&gt; | 该排版单元中每个字形相对于每行的字形位置。 |
 
 **示例**
 
@@ -349,7 +341,7 @@ getStringIndices(range?: Range): Array<number>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| range | Range | 否 | 要获取的字符索引范围，range.start表示范围开始的位置，range.end表示范围的长度，如果长度是0表示从范围range.start开始获取到渲染块结束。当range.end、range.start为负数，或者传入null、undefined时，该方法将返回undefined。不传该参数时，默认获取整个渲染块。 |
+| range | [Range](arkts-arkgraphics2d-text-range-i.md) | 否 | 要获取的字符索引范围，range.start表示范围开始的位置，range.end表示范围的长度，如果长度是0表示从范围range.start开始获取到渲染块结束。当range.end、range.start为负数，或者传入null、undefined时，该方法将返回undefined。不传该参数时，默认获取整个渲染块。 |
 
 **返回值：**
 
@@ -403,7 +395,7 @@ getStringRange(): Range
 
 | 类型 | 说明 |
 | --- | --- |
-| Range | 排版单元生成字形的字符范围，Range类型中的start表示字符范围的开始位置，该位置是相对于整个段落的索引，Range类型中的end表示字符范围的长度。 |
+| [Range](arkts-arkgraphics2d-text-range-i.md) | 排版单元生成字形的字符范围，Range类型中的start表示字符范围的开始位置，该位置是相对于整个段落的索引，Range类型中的end表示字符范围的长度。 |
 
 **示例**
 
@@ -431,7 +423,7 @@ getTextDirection(): TextDirection
 
 | 类型 | 说明 |
 | --- | --- |
-| TextDirection | 返回该排版单元的文本方向。 |
+| [TextDirection](arkts-arkgraphics2d-text-textdirection-e.md) | 返回该排版单元的文本方向。 |
 
 **示例**
 
@@ -459,7 +451,7 @@ getTextStyle(): TextStyle
 
 | 类型 | 说明 |
 | --- | --- |
-| TextStyle | 该排版单元的文本样式。 |
+| [TextStyle](arkts-arkgraphics2d-text-textstyle-i.md) | 该排版单元的文本样式。 |
 
 **示例**
 
@@ -554,11 +546,6 @@ getTypographicBounds(): TypographicBounds
 **示例**
 
 ```TypeScript
-let bounds = lines[0].getTypographicBounds();
-console.info('textLine ascent:' + bounds.ascent + ', descent:' + bounds.descent + ', leading:' + bounds.leading + ', width:' + bounds.width);
-```
-
-```TypeScript
 let typographicBounds = runs[0].getTypographicBounds();
 ```
 
@@ -580,49 +567,11 @@ paint(canvas: drawing.Canvas, x: number, y: number): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| canvas | drawing.Canvas | 是 | 绘制的目标 canvas。 |
+| canvas | [drawing.Canvas](arkts-arkgraphics2d-drawing-canvas-c.md) | 是 | 绘制的目标 canvas。 |
 | x | number | 是 | 绘制的左上角位置的横坐标，浮点数，单位为物理像素px。 |
 | y | number | 是 | 绘制的左上角位置的纵坐标，浮点数，单位为物理像素px。 |
 
 **示例**
-
-```TypeScript
-const color: ArrayBuffer = new ArrayBuffer(160000);
-let opts: image.InitializationOptions = { editable: true, pixelFormat: 3, size: { height: 200, width: 200 } }
-let pixelMap: image.PixelMap = image.createPixelMapSync(color, opts);
-let canvas = new drawing.Canvas(pixelMap);
-paragraph.paint(canvas, 0, 0);
-```
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D'
-import { image } from '@kit.ImageKit'
-
-function textFunc(pixelmap: PixelMap) {
-  let canvas = new drawing.Canvas(pixelmap);
-  lines[0].paint(canvas, 0, 0);
-}
-
-@Entry
-@Component
-struct Index {
-  @State pixelmap?: PixelMap = undefined;
-  fun: Function = textFunc;
-  build() {
-    Column() {
-      Image(this.pixelmap).width(200).height(200);
-      Button().onClick(() => {
-        if (this.pixelmap == undefined) {
-          const color: ArrayBuffer = new ArrayBuffer(160000);
-          let opts: image.InitializationOptions = { editable: true, pixelFormat: 3, size: { height: 200, width: 200 } }
-          this.pixelmap = image.createPixelMapSync(color, opts);
-        }
-        this.fun(this.pixelmap);
-      })
-    }
-  }
-}
-```
 
 ```TypeScript
 import { drawing } from '@kit.ArkGraphics2D'

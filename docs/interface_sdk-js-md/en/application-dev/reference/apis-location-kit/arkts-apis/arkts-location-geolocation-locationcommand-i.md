@@ -42,7 +42,7 @@ command: string
 scenario: LocationRequestScenario
 ```
 
-**Type:** LocationRequestScenario
+**Type:** [LocationRequestScenario](arkts-location-geolocation-locationrequestscenario-e.md)
 
 **Since:** 8
 

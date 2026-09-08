@@ -20,7 +20,7 @@ error: ErrorType
 
 Sync error.
 
-**Type:** ErrorType
+**Type:** [ErrorType](arkts-corefile-cloudsync-errortype-e.md)
 
 **Since:** 12
 

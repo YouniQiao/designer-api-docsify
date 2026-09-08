@@ -28,7 +28,7 @@ Subscribes to notifications. After the subscription, the new message is received
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| subscriber | NotificationSubscriber | Yes | Notification subscriber. |
+| subscriber | [NotificationSubscriber](arkts-notification-notificationsubscribe-notificationsubscriber-t-sys.md) | Yes | Notification subscriber. |
 
 **Return value:**
 
@@ -87,8 +87,8 @@ Subscribes to notifications. After the subscription, the new message is received
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| subscriber | NotificationSubscriber | Yes | Notification subscriber. |
-| info | NotificationSubscribeInfo | Yes | Notification subscription information. |
+| subscriber | [NotificationSubscriber](arkts-notification-notificationsubscribe-notificationsubscriber-t-sys.md) | Yes | Notification subscriber. |
+| info | [NotificationSubscribeInfo](arkts-notification-notificationsubscribe-notificationsubscribeinfo-t-sys.md) | Yes | Notification subscription information. |
 
 **Return value:**
 

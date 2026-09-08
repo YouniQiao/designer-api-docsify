@@ -36,7 +36,7 @@ readonly rendererState: AudioState
 
 音频状态。
 
-**类型：** AudioState
+**类型：** [AudioState](arkts-audio-audio-audiostate-e.md)
 
 **起始版本：** 9
 

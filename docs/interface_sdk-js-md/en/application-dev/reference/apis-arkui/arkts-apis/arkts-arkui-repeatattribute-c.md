@@ -52,14 +52,6 @@ Component generator. When the return value of [.templateId()](#templateid) does 
 | --- | --- |
 | [RepeatAttribute](arkts-arkui-repeatattribute-c.md)&lt;T&gt; |  |
 
-**Examples**
-
-```TypeScript
-// Create a Text component for each item in the arr array of the Array<string> type.
-Repeat<string>(this.arr)
-  .each((obj: RepeatItem<string>) => { Text(obj.item) })
-```
-
 ## key
 
 ```TypeScript
@@ -93,16 +85,6 @@ Key generator.
 | Type | Description |
 | --- | --- |
 | [RepeatAttribute](arkts-arkui-repeatattribute-c.md)&lt;T&gt; |  |
-
-**Examples**
-
-```TypeScript
-// Create a Text component for each item in the arr array of the Array<string> type.
-// Use the string value as its key.
-Repeat<string>(this.arr)
-  .each((obj: RepeatItem<string>) => { Text(obj.item) })
-  .key((obj: string) => obj)
-```
 
 ## template
 
@@ -138,20 +120,6 @@ Renders the corresponding template child component based on the template type.
 | --- | --- |
 | [RepeatAttribute](arkts-arkui-repeatattribute-c.md)&lt;T&gt; |  |
 
-**Examples**
-
-```TypeScript
-// arr is an array of the Array<string> type.
-// Use Repeat in a List container component with virtual scrolling enabled.
-// Define a reusable template temp for generating Text components.
-List() {
-  Repeat<string>(this.arr)
-    .each((obj: RepeatItem<string>) => {})
-    .virtualScroll()
-    .template('temp', (obj: RepeatItem<string>) => { ListItem() { Text(obj.item) }})
-}
-```
-
 ## templateId
 
 ```TypeScript
@@ -184,22 +152,6 @@ Assigns a template type for this data item.
 | --- | --- |
 | [RepeatAttribute](arkts-arkui-repeatattribute-c.md)&lt;T&gt; |  |
 
-**Examples**
-
-```TypeScript
-// arr is an array of the Array<string> type.
-// Use Repeat in a List container component with virtual scrolling enabled.
-// Define a reusable template temp for generating Text components.
-// Use the temp template for all data items.
-List() {
-  Repeat<string>(this.arr)
-    .each((obj: RepeatItem<string>) => {})
-    .virtualScroll()
-    .template('temp', (obj: RepeatItem<string>) => { ListItem() { Text(obj.item) }})
-    .templateId((item: string, index: number) => { return 'temp' })
-}
-```
-
 ## virtualScroll
 
 ```TypeScript
@@ -231,15 +183,3 @@ Enables virtual scrolling for **Repeat**.
 | Type | Description |
 | --- | --- |
 | [RepeatAttribute](arkts-arkui-repeatattribute-c.md)&lt;T&gt; |  |
-
-**Examples**
-
-```TypeScript
-// Create a Text component for each item in the arr array of the Array<string> type.
-// Use Repeat in a List container component with virtual scrolling enabled.
-List() {
-  Repeat<string>(this.arr)
-    .each((obj: RepeatItem<string>) => { ListItem() { Text(obj.item) }})
-    .virtualScroll()
-}
-```

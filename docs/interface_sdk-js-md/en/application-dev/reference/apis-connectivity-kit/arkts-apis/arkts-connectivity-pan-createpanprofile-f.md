@@ -24,7 +24,7 @@ create the instance of pan profile.
 
 | Type | Description |
 | --- | --- |
-| PanProfile | Returns the instance of pan profile. |
+| [PanProfile](arkts-connectivity-pan-panprofile-i.md) | Returns the instance of pan profile. |
 
 **Error codes:**
 

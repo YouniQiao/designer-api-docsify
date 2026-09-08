@@ -20,7 +20,7 @@ colorMode: ColorMode
 
 Color mode.
 
-**Type:** ColorMode
+**Type:** [ColorMode](arkts-localization-resourcemanager-colormode-e.md)
 
 **Since:** 12
 
@@ -36,7 +36,7 @@ deviceType: DeviceType
 
 Device type.
 
-**Type:** DeviceType
+**Type:** [DeviceType](arkts-localization-resourcemanager-devicetype-e.md)
 
 **Since:** 12
 
@@ -52,7 +52,7 @@ direction: Direction
 
 Screen orientation modes.
 
-**Type:** Direction
+**Type:** [Direction](arkts-localization-resourcemanager-direction-e.md)
 
 **Since:** 6
 
@@ -116,7 +116,7 @@ screenDensity: ScreenDensity
 
 Screen density
 
-**Type:** ScreenDensity
+**Type:** [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md)
 
 **Since:** 12
 

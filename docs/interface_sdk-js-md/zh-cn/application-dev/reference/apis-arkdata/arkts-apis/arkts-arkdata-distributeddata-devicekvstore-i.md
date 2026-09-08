@@ -45,22 +45,6 @@ closeResultSet(resultSet: KvStoreResultSet, callback: AsyncCallback<void>): void
 ```TypeScript
 let kvStore;
 try {
-    let resultSet = null;
-    kvStore.closeResultSet(resultSet, function (err, data) {
-        if (err == undefined) {
-            console.info('closeResultSet success');
-        } else {
-            console.error('closeResultSet fail');
-        }
-    });
-}catch(e) {
-    console.error('CloseResultSet e ' + e);
-}
-```
-
-```TypeScript
-let kvStore;
-try {
     console.info('CloseResultSet success');
     let resultSet = null;
     kvStore.closeResultSet(resultSet, function (err, data) {
@@ -104,20 +88,6 @@ closeResultSet(resultSet: KvStoreResultSet): Promise<void>
 | Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **示例**
-
-```TypeScript
-let kvStore;
-try {
-    let resultSet = null;
-    kvStore.closeResultSet(resultSet).then(() => {
-        console.info('closeResultSet success');
-    }).catch((err) => {
-        console.error('closeResultSet fail ' + JSON.stringify(err));
-    });
-}catch(e) {
-    console.error('CloseResultSet e ' + e);
-}
-```
 
 ```TypeScript
 let kvStore;
@@ -249,7 +219,7 @@ getEntries(deviceId: string, keyPrefix: string, callback: AsyncCallback<Entry[]>
 | --- | --- | --- | --- |
 | deviceId | string | 是 | 标识要查询其数据的设备。 |
 | keyPrefix | string | 是 | 表示要匹配的键前缀。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Entry[]&gt; | 是 | 回调函数，返回满足给定条件的所有键值对的列表。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Entry](arkts-arkdata-distributeddata-entry-i.md)[]&gt; | 是 | 回调函数，返回满足给定条件的所有键值对的列表。 |
 
 **示例**
 
@@ -309,7 +279,7 @@ getEntries(deviceId: string, keyPrefix: string): Promise<Entry[]>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Entry[]&gt; | Promise对象。返回匹配给定条件的所有键值对的列表。 |
+| Promise&lt;[Entry](arkts-arkdata-distributeddata-entry-i.md)[]&gt; | Promise对象。返回匹配给定条件的所有键值对的列表。 |
 
 **示例**
 
@@ -368,43 +338,10 @@ getEntries(query: Query, callback: AsyncCallback<Entry[]>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| query | Query | 是 | 表示查询对象。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Entry[]&gt; | 是 | 回调函数，返回与指定Query对象匹配的键值对列表。 |
+| query | [Query](arkts-arkdata-distributeddata-query-c.md) | 是 | 表示查询对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Entry](arkts-arkdata-distributeddata-entry-i.md)[]&gt; | 是 | 回调函数，返回与指定Query对象匹配的键值对列表。 |
 
 **示例**
-
-```TypeScript
-let kvStore;
-try {
-    var arr = new Uint8Array([21,31]);
-    let entries = [];
-    for (var i = 0; i < 10; i++) {
-        var key = 'batch_test_bool_key';
-        var entry = {
-            key : key + i,
-            value : {
-                type : distributedData.ValueType.BYTE_ARRAY,
-                value : arr
-            }
-        }
-        entries.push(entry);
-    }
-    console.info('entries: ' + JSON.stringify(entries));
-    kvStore.putBatch(entries, async function (err,data) {
-        console.info('putBatch success');
-        const query = new distributedData.Query();
-        query.prefixKey("batch_test");
-        kvStore.getEntries(query, function (err,entries) {
-            console.info('getEntries success');
-            console.info('entries.length: ' + entries.length);
-            console.info('entries[0]: ' + JSON.stringify(entries[0]));
-        });
-    });
-    console.info('GetEntries success');
-}catch(e) {
-    console.error('GetEntries e ' + e);
-}
-```
 
 ```TypeScript
 let kvStore;
@@ -460,13 +397,13 @@ getEntries(query: Query): Promise<Entry[]>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| query | Query | 是 | 表示查询对象。 |
+| query | [Query](arkts-arkdata-distributeddata-query-c.md) | 是 | 表示查询对象。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Entry[]&gt; | Promise对象。返回与指定Query对象匹配的键值对列表。 |
+| Promise&lt;[Entry](arkts-arkdata-distributeddata-entry-i.md)[]&gt; | Promise对象。返回与指定Query对象匹配的键值对列表。 |
 
 **示例**
 
@@ -526,8 +463,8 @@ getEntries(deviceId: string, query: Query, callback: AsyncCallback<Entry[]>): vo
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | deviceId | string | 是 | 键值对所属的设备ID。 |
-| query | Query | 是 | 表示查询对象。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Entry[]&gt; | 是 | 回调函数。返回与指定设备ID和Query对象匹配的键值对列表。 |
+| query | [Query](arkts-arkdata-distributeddata-query-c.md) | 是 | 表示查询对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Entry](arkts-arkdata-distributeddata-entry-i.md)[]&gt; | 是 | 回调函数。返回与指定设备ID和Query对象匹配的键值对列表。 |
 
 **示例**
 
@@ -586,13 +523,13 @@ getEntries(deviceId: string, query: Query): Promise<Entry[]>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | deviceId | string | 是 | 键值对所属的设备ID。 |
-| query | Query | 是 | 表示查询对象。 |
+| query | [Query](arkts-arkdata-distributeddata-query-c.md) | 是 | 表示查询对象。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Entry[]&gt; | Promise对象。返回与指定设备ID和Query对象匹配的键值对列表。 |
+| Promise&lt;[Entry](arkts-arkdata-distributeddata-entry-i.md)[]&gt; | Promise对象。返回与指定设备ID和Query对象匹配的键值对列表。 |
 
 **示例**
 
@@ -745,40 +682,10 @@ getResultSet(query: Query, callback: AsyncCallback<KvStoreResultSet>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| query | Query | 是 | 表示查询对象。 |
+| query | [Query](arkts-arkdata-distributeddata-query-c.md) | 是 | 表示查询对象。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[KvStoreResultSet](arkts-arkdata-distributeddata-kvstoreresultset-i.md)&gt; | 是 | 回调函数，返回与指定Query对象匹配的KvStoreResultSet对象。 |
 
 **示例**
-
-```TypeScript
-let kvStore;
-try {
-    let resultSet;
-    let entries = [];
-    for (var i = 0; i < 10; i++) {
-        var key = 'batch_test_string_key';
-        var entry = {
-            key : key + i,
-            value : {
-                type : distributedData.ValueType.STRING,
-                value : 'batch_test_string_value'
-            }
-        }
-        entries.push(entry);
-    }
-    kvStore.putBatch(entries, async function (err, data) {
-        console.info('putBatch success');
-        const query = new distributedData.Query();
-        query.prefixKey("batch_test");
-        kvStore.getResultSet(query, async function (err, result) {
-            console.info('getResultSet succeed.');
-            resultSet = result;
-        });
-    });
-} catch(e) {
-    console.error('GetResultSet e ' + e);
-}
-```
 
 ```TypeScript
 let kvStore;
@@ -834,7 +741,7 @@ getResultSet(query: Query): Promise<KvStoreResultSet>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| query | Query | 是 | 表示查询对象。 |
+| query | [Query](arkts-arkdata-distributeddata-query-c.md) | 是 | 表示查询对象。 |
 
 **返回值：**
 
@@ -843,40 +750,6 @@ getResultSet(query: Query): Promise<KvStoreResultSet>
 | Promise&lt;[KvStoreResultSet](arkts-arkdata-distributeddata-kvstoreresultset-i.md)&gt; | Promise对象。返回与指定Query对象匹配的KvStoreResultSet对象。 |
 
 **示例**
-
-```TypeScript
-let kvStore;
-try {
-    let resultSet;
-    let entries = [];
-    for (var i = 0; i < 10; i++) {
-        var key = 'batch_test_string_key';
-        var entry = {
-            key : key + i,
-            value : {
-                type : distributedData.ValueType.STRING,
-                value : 'batch_test_string_value'
-            }
-        }
-        entries.push(entry);
-    }
-    kvStore.putBatch(entries).then(async (err) => {
-        console.info('putBatch success');
-    }).catch((err) => {
-        console.error('putBatch fail ' + JSON.stringify(err));
-    });
-    const query = new distributedData.Query();
-    query.prefixKey("batch_test");
-    kvStore.getResultSet(query).then((result) => {
-        console.info(' getResultSet succeed.');
-        resultSet = result;
-    }).catch((err) => {
-        console.error('getResultSet failed: ' + JSON.stringify(err));
-    });
-}catch(e) {
-    console.error('GetResultSet e ' + e);
-}
-```
 
 ```TypeScript
 let kvStore;
@@ -940,7 +813,7 @@ getResultSet(deviceId: string, query: Query, callback: AsyncCallback<KvStoreResu
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | deviceId | string | 是 | KvStoreResultSet对象所属的设备ID。 |
-| query | Query | 是 | 表示查询对象。 |
+| query | [Query](arkts-arkdata-distributeddata-query-c.md) | 是 | 表示查询对象。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[KvStoreResultSet](arkts-arkdata-distributeddata-kvstoreresultset-i.md)&gt; | 是 | 回调函数。返回与指定设备ID和Query对象匹配的KvStoreResultSet对象。 |
 
 **示例**
@@ -999,7 +872,7 @@ getResultSet(deviceId: string, query: Query): Promise<KvStoreResultSet>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | deviceId | string | 是 | KvStoreResultSet对象所属的设备ID。 |
-| query | Query | 是 | 表示查询对象。 |
+| query | [Query](arkts-arkdata-distributeddata-query-c.md) | 是 | 表示查询对象。 |
 
 **返回值：**
 
@@ -1071,38 +944,10 @@ getResultSize(query: Query, callback: AsyncCallback<number>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| query | Query | 是 | 表示查询对象。 |
+| query | [Query](arkts-arkdata-distributeddata-query-c.md) | 是 | 表示查询对象。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数，返回与指定Query对象匹配的结果数。 |
 
 **示例**
-
-```TypeScript
-let kvStore;
-try {
-    let entries = [];
-    for (var i = 0; i < 10; i++) {
-        var key = 'batch_test_string_key';
-        var entry = {
-            key : key + i,
-            value : {
-                type : distributedData.ValueType.STRING,
-                value : 'batch_test_string_value'
-            }
-        }
-        entries.push(entry);
-    }
-    kvStore.putBatch(entries, async function (err, data) {
-        console.info('putBatch success');
-        const query = new distributedData.Query();
-        query.prefixKey("batch_test");
-        kvStore.getResultSize(query, async function (err, resultSize) {
-            console.info('getResultSet succeed.');
-        });
-    });
-} catch(e) {
-    console.error('GetResultSize e ' + e);
-}
-```
 
 ```TypeScript
 let kvStore;
@@ -1153,7 +998,7 @@ getResultSize(query: Query): Promise<number>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| query | Query | 是 | 表示查询对象。 |
+| query | [Query](arkts-arkdata-distributeddata-query-c.md) | 是 | 表示查询对象。 |
 
 **返回值：**
 
@@ -1162,38 +1007,6 @@ getResultSize(query: Query): Promise<number>
 | Promise&lt;number&gt; | Promise对象。返回与指定Query对象匹配的结果数。 |
 
 **示例**
-
-```TypeScript
-let kvStore;
-try {
-    let entries = [];
-    for (var i = 0; i < 10; i++) {
-        var key = 'batch_test_string_key';
-        var entry = {
-            key : key + i,
-            value : {
-                type : distributedData.ValueType.STRING,
-                value : 'batch_test_string_value'
-            }
-        }
-        entries.push(entry);
-    }
-    kvStore.putBatch(entries).then(async (err) => {
-        console.info('putBatch success');
-    }).catch((err) => {
-        console.error('putBatch fail ' + JSON.stringify(err));
-    });
-    const query = new distributedData.Query();
-    query.prefixKey("batch_test");
-    kvStore.getResultSize(query).then((resultSize) => {
-        console.info('getResultSet succeed.');
-    }).catch((err) => {
-        console.error('getResultSet failed: ' + JSON.stringify(err));
-    });
-}catch(e) {
-    console.error('GetResultSize e ' + e);
-}
-```
 
 ```TypeScript
 let kvStore;
@@ -1249,7 +1062,7 @@ getResultSize(deviceId: string, query: Query, callback: AsyncCallback<number>): 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | deviceId | string | 是 | KvStoreResultSet对象所属的设备ID。 |
-| query | Query | 是 | 表示查询对象。 |
+| query | [Query](arkts-arkdata-distributeddata-query-c.md) | 是 | 表示查询对象。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数。返回与指定设备ID和Query对象匹配的结果数。 |
 
 **示例**
@@ -1303,7 +1116,7 @@ getResultSize(deviceId: string, query: Query): Promise<number>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | deviceId | string | 是 | KvStoreResultSet对象所属的设备ID。 |
-| query | Query | 是 | 表示查询对象。 |
+| query | [Query](arkts-arkdata-distributeddata-query-c.md) | 是 | 表示查询对象。 |
 
 **返回值：**
 
@@ -1366,7 +1179,7 @@ off(event: 'dataChange', listener?: Callback<ChangeNotification>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | event | 'dataChange' | 是 | 取消订阅的事件名，固定为'dataChange'，表示数据变更事件。 |
-| listener | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ChangeNotification&gt; | 否 | 取消订阅的函数。如不设置callback，则取消所有订阅的函数。 |
+| listener | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ChangeNotification](arkts-arkdata-distributeddata-changenotification-i.md)&gt; | 否 | 取消订阅的函数。如不设置callback，则取消所有订阅的函数。 |
 
 **示例**
 
@@ -1454,8 +1267,8 @@ on(event: 'dataChange', type: SubscribeType, listener: Callback<ChangeNotificati
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | event | 'dataChange' | 是 | 订阅的事件名，固定为'dataChange'，表示数据变更事件。 |
-| type | SubscribeType | 是 | 表示订阅的类型。 |
-| listener | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ChangeNotification&gt; | 是 | 回调函数。 |
+| type | [SubscribeType](arkts-arkdata-distributeddata-subscribetype-e.md) | 是 | 表示订阅的类型。 |
+| listener | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ChangeNotification](arkts-arkdata-distributeddata-changenotification-i.md)&gt; | 是 | 回调函数。 |
 
 **示例**
 
@@ -1536,30 +1349,6 @@ removeDeviceData(deviceId: string, callback: AsyncCallback<void>): void
 
 ```TypeScript
 let kvStore;
-const KEY_TEST_STRING_ELEMENT = 'key_test_string_2';
-const VALUE_TEST_STRING_ELEMENT = 'value-string-002';
-try {
-    kvStore.put(KEY_TEST_STRING_ELEMENT, VALUE_TEST_STRING_ELEMENT, async function (err,data) {
-        console.info('put success');
-        const deviceid = 'no_exist_device_id';
-        kvStore.removeDeviceData(deviceid, async function (err,data) {
-            if (err == undefined) {
-                console.info('removeDeviceData success');
-            } else {
-                console.error('removeDeviceData fail');
-                kvStore.get(KEY_TEST_STRING_ELEMENT, async function (err,data) {
-                    console.info('RemoveDeviceData get success');
-                });
-            }
-        });
-    });
-}catch(e) {
-    console.error('RemoveDeviceData e ' + e);
-}
-```
-
-```TypeScript
-let kvStore;
 const KEY_TEST_STRING_ELEMENT = 'key_test_string';
 const VALUE_TEST_STRING_ELEMENT = 'value-string-001';
 try {
@@ -1614,32 +1403,6 @@ removeDeviceData(deviceId: string): Promise<void>
 
 ```TypeScript
 let kvStore;
-const KEY_TEST_STRING_ELEMENT = 'key_test_string_2';
-const VALUE_TEST_STRING_ELEMENT = 'value-string-001';
-try {
-    kvStore.put(KEY_TEST_STRING_ELEMENT, VALUE_TEST_STRING_ELEMENT).then((err) => {
-        console.info('removeDeviceData put success');
-    }).catch((err) => {
-        console.error('put fail ' + JSON.stringify(err));
-    });
-    const deviceid = 'no_exist_device_id';
-    kvStore.removeDeviceData(deviceid).then((err) => {
-        console.info('removeDeviceData success');
-    }).catch((err) => {
-        console.error('removeDeviceData fail ' + JSON.stringify(err));
-    });
-    kvStore.get(KEY_TEST_STRING_ELEMENT).then((data) => {
-        console.info('get success data:' + data);
-    }).catch((err) => {
-        console.error('RemoveDeviceData get fail ' + JSON.stringify(err));
-    });
-}catch(e) {
-    console.error('RemoveDeviceData e ' + e);
-}
-```
-
-```TypeScript
-let kvStore;
 const KEY_TEST_STRING_ELEMENT = 'key_test_string';
 const VALUE_TEST_STRING_ELEMENT = 'value-string-001';
 try {
@@ -1687,7 +1450,7 @@ sync(deviceIds: string[], mode: SyncMode, delayMs?: number): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | deviceIds | string[] | 是 | 需要同步DeviceKVStore数据库的设备networkId列表。 |
-| mode | SyncMode | 是 | 同步模式。 |
+| mode | [SyncMode](arkts-arkdata-distributeddata-syncmode-e.md) | 是 | 同步模式。 |
 | delayMs | number | 否 | 可选参数，允许延时时间，单位：ms（毫秒），默认为0。 |
 
 **示例**

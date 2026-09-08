@@ -22,8 +22,8 @@ export function certVerification(cert: CertBlob, caCert?: CertBlob): Promise<num
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| cert | CertBlob | 是 | 被校验的证书。 |
-| caCert | CertBlob | 否 | 传入自定义的CA证书。 |
+| cert | [CertBlob](arkts-network-networksecurity-certblob-i.md) | 是 | 被校验的证书。 |
+| caCert | [CertBlob](arkts-network-networksecurity-certblob-i.md) | 否 | 传入自定义的CA证书。 |
 
 **返回值：**
 

@@ -20,7 +20,7 @@ destination: LinkAddress
 
 Destination address.
 
-**Type:** LinkAddress
+**Type:** [LinkAddress](arkts-network-connection-linkaddress-i.md)
 
 **Since:** 8
 
@@ -34,7 +34,7 @@ gateway: NetAddress
 
 Gateway address.
 
-**Type:** NetAddress
+**Type:** [NetAddress](arkts-network-connection-netaddress-i.md)
 
 **Since:** 8
 

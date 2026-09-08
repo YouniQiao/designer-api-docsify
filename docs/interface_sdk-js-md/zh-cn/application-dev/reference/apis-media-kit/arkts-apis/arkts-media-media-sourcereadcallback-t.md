@@ -23,12 +23,3 @@ type SourceReadCallback = (uuid: number, requestedOffset: number, requestedLengt
 | uuid | number | 是 | 资源句柄的标识。 |
 | requestedOffset | number | 是 | 当前媒体数据相对于资源起始位置的偏移量。 |
 | requestedLength | number | 是 | 当前请求的长度。值为-1时，表示到达资源末尾，此时推送完成后需通过[finishLoading](arkts-media-media-mediasourceloadingrequest-i.md#finishloading)方法通知播放器推送结束。 |
-
-**示例**
-
-```TypeScript
-let sourceReadCallback: media.SourceReadCallback = (uuid: number, requestedOffset: number, requestedLength: number) => {
-  console.info(`Reading resource with handle ${uuid}, offset: ${requestedOffset}, length: ${requestedLength}`);
-  // 判断uuid是否合法、存储read请求，不要在read请求阻塞去推送数据和头信息。
-};
-```

@@ -26,10 +26,6 @@ Hostnames without a period character will bypass the proxy and directly connect 
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-**Examples**
-
-For details about the sample code, see [removeProxyOverride](./arkts-apis-webview-ProxyController.md#removeproxyoverride).
-
 ## clearImplicitRules
 
 ```TypeScript
@@ -43,10 +39,6 @@ Overrides the default behavior and forcibly sends the local host address or loca
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
 **System capability:** SystemCapability.Web.Webview.Core
-
-**Examples**
-
-For details about the sample code, see [removeProxyOverride](./arkts-apis-webview-ProxyController.md#removeproxyoverride).
 
 ## enableReverseBypass
 
@@ -74,10 +66,6 @@ Reverses the bypass rule.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.  2. Incorrect parameter types. |
 
-**Examples**
-
-For details about the sample code, see [removeProxyOverride](./arkts-apis-webview-ProxyController.md#removeproxyoverride).
-
 ## getBypassRules
 
 ```TypeScript
@@ -98,10 +86,6 @@ Obtains the list of URLs that do not use the proxy.
 | --- | --- |
 | Array&lt;string&gt; | List of URLs that do not use the proxy. |
 
-**Examples**
-
-For details about the sample code, see [removeProxyOverride](./arkts-apis-webview-ProxyController.md#removeproxyoverride).
-
 ## getProxyRules
 
 ```TypeScript
@@ -121,10 +105,6 @@ Obtains proxy rules.
 | Type | Description |
 | --- | --- |
 | Array&lt;[ProxyRule](arkts-arkweb-webview-proxyrule-c.md)&gt; | Proxy rule. Each ProxyRule object represents a configured proxy rule. |
-
-**Examples**
-
-For details about the sample code, see [removeProxyOverride](./arkts-apis-webview-ProxyController.md#removeproxyoverride).
 
 ## insertBypassRule
 
@@ -151,10 +131,6 @@ Inserts a bypass rule, specifying which URLs should bypass the proxy and directl
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.  2. Incorrect parameter types. |
-
-**Examples**
-
-For details about the sample code, see [removeProxyOverride](./arkts-apis-webview-ProxyController.md#removeproxyoverride).
 
 ## insertDirectRule
 
@@ -190,10 +166,6 @@ Inserts a direct rule, specifying that URLs matching the schemeFilter condition 
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.  2. Incorrect parameter types. |
-
-**Examples**
-
-For details about the sample code, see [removeProxyOverride](./arkts-apis-webview-ProxyController.md#removeproxyoverride).
 
 ## insertProxyRule
 
@@ -240,10 +212,6 @@ For example:
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.  2. Incorrect parameter types. |
 
-**Examples**
-
-For details about the sample code, see [removeProxyOverride](./arkts-apis-webview-ProxyController.md#removeproxyoverride).
-
 ## isReverseBypassEnabled
 
 ```TypeScript
@@ -263,7 +231,3 @@ Obtains the value of [enableReverseBypass](#enablereversebypass). For details, s
 | Type | Description |
 | --- | --- |
 | boolean | Value of [enableReverseBypass]{ |
-
-**Examples**
-
-For details about the sample code, see [removeProxyOverride](./arkts-apis-webview-ProxyController.md#removeproxyoverride).

@@ -36,7 +36,7 @@ image?: image.PixelMap
 
 从视频中输出缩略图的格式参数。
 
-**类型：** image.PixelMap
+**类型：** [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)
 
 **起始版本：** 23
 
@@ -68,7 +68,7 @@ result: FetchResult
 
 获取单张缩略图任务的结果。例如成功，失败或任务被取消。
 
-**类型：** FetchResult
+**类型：** [FetchResult](arkts-media-media-fetchresult-e.md)
 
 **起始版本：** 23
 

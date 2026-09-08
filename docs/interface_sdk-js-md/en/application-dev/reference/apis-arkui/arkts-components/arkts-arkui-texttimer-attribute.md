@@ -123,7 +123,7 @@ Sets the font style.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | FontStyle | Yes | Font style, for example, italic.Default value: **FontStyle.Normal |
+| value | [FontStyle](../arkts-apis/arkts-arkui-fontstyle-e.md) | Yes | Font style, for example, italic.Default value: **FontStyle.Normal |
 
 ## fontWeight
 
@@ -145,7 +145,7 @@ Sets the font weight of the text. If the value is too large, the text in differe
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number \| FontWeight \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | Yes | Font weight of the text. The value range of the number type is [100, 900]. The value interval is 100. A larger value indicates a wider font. If the value of the number type is not within the value range, the default value is **400**. The [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) type supports only strings of the number type, such as **"400"**, **"bold"**, **"bolder"**, **"lighter"**, **"regular"**, and **"medium"**, corresponding to the enums in **FontWeight**.Default value: **FontWeight.Normal**The Resource type is supported since API version 20.<br>**Since:** 20 |
+| value | number \| [FontWeight](../arkts-apis/arkts-arkui-fontweight-e.md) \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | Yes | Font weight of the text. The value range of the number type is [100, 900]. The value interval is 100. A larger value indicates a wider font. If the value of the number type is not within the value range, the default value is **400**. The [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) type supports only strings of the number type, such as **"400"**, **"bold"**, **"bolder"**, **"lighter"**, **"regular"**, and **"medium"**, corresponding to the enums in **FontWeight**.Default value: **FontWeight.Normal**The Resource type is supported since API version 20.<br>**Since:** 20 |
 
 ## format
 

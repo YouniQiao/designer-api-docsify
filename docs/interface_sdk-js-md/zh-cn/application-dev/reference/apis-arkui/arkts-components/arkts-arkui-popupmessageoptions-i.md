@@ -24,7 +24,7 @@ font?: Font
 1. 不支持设置family。
 2. Font中的weight属性不支持传入number类型。
 
-**类型：** Font
+**类型：** [Font](../arkts-apis/arkts-arkui-font-i.md)
 
 **起始版本：** 10
 

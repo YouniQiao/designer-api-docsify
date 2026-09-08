@@ -51,19 +51,6 @@ generateKeyPair(callback: AsyncCallback<KeyPair>): void
 ```TypeScript
 import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 
-let asyKeyGenerator = cryptoFramework.createAsyKeyGenerator('ECC256');
-asyKeyGenerator.generateKeyPair((err, keyPair) => {
-  if (err) {
-    console.error(`generateKeyPair failed, errCode: ${err.code}, errMsg: ${err.message}`);
-    return;
-  }
-  console.info('generateKeyPair result: success.');
-})
-```
-
-```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
-
 // 配置DSA1024公钥和私钥中包含的公共参数。
 function genDsa1024CommonSpecBigE() {
   let dsaCommonSpec: cryptoFramework.DSACommonParamsSpec = {
@@ -140,19 +127,6 @@ generateKeyPair(): Promise<KeyPair>
 import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
-let asyKeyGenerator = cryptoFramework.createAsyKeyGenerator('ECC256');
-let keyGenPromise = asyKeyGenerator.generateKeyPair();
-keyGenPromise.then(keyPair => {
-  console.info('generateKeyPair result: success.');
-}).catch((error: BusinessError) => {
-  console.error(`generateKeyPair failed, ${error.code}, ${error.message}`);
-});
-```
-
-```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
 // 配置DSA1024公钥和私钥中包含的公共参数。
 function genDsa1024CommonSpecBigE() {
   let dsaCommonSpec: cryptoFramework.DSACommonParamsSpec = {
@@ -223,22 +197,6 @@ generateKeyPairSync(): KeyPair
 | [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | Crypto operation error. |
 
 **示例**
-
-```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
-
-let asyKeyGenerator = cryptoFramework.createAsyKeyGenerator('ECC256');
-try {
-  let keyPairData = asyKeyGenerator.generateKeyPairSync();
-  if (keyPairData != null) {
-    console.info('[Sync]: key pair result: success.');
-  } else {
-    console.error('[Sync]: get key pair result: fail.');
-  }
-} catch (e) {
-  console.error(`sync failed: errCode: ${e.code}, errMsg: ${e.message}`);
-}
-```
 
 ```TypeScript
 import { cryptoFramework } from '@kit.CryptoArchitectureKit';

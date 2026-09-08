@@ -332,7 +332,7 @@ sendResponse(response: ServerResponse): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| response | ServerResponse | 是 | 回复客户端的响应数据。 |
+| response | [ServerResponse](arkts-connectivity-ssap-serverresponse-i.md) | 是 | 回复客户端的响应数据。 |
 
 **错误码：**
 

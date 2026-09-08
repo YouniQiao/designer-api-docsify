@@ -41,7 +41,7 @@ Called during the ServiceExtensionAbility lifecycle when the ServiceExtensionAbi
 
 | Type | Description |
 | --- | --- |
-| insightIntent.ExecuteResult \| Promise&lt;insightIntent.ExecuteResult&gt; | Intent execution result or a Promise object containing the intent execution result, representing the data returned to the system entry point from this intent execution. |
+| [insightIntent.ExecuteResult](arkts-ability-insightintent-executeresult-i.md) \| Promise&lt;[insightIntent.ExecuteResult](arkts-ability-insightintent-executeresult-i.md)&gt; | Intent execution result or a Promise object containing the intent execution result, representing the data returned to the system entry point from this intent execution. |
 
 **Examples**
 
@@ -151,7 +151,7 @@ intent execution: onExecuteInUIAbilityBackgroundMode.
 
 | Type | Description |
 | --- | --- |
-| insightIntent.ExecuteResult \| Promise&lt;insightIntent.ExecuteResult&gt; | Intent execution result or a Promise object containing the intent execution result, representing the data returned to the system entry point from this intent execution. |
+| [insightIntent.ExecuteResult](arkts-ability-insightintent-executeresult-i.md) \| Promise&lt;[insightIntent.ExecuteResult](arkts-ability-insightintent-executeresult-i.md)&gt; | Intent execution result or a Promise object containing the intent execution result, representing the data returned to the system entry point from this intent execution. |
 
 **Examples**
 
@@ -230,13 +230,13 @@ following sequence during intent execution: onExecuteInUIAbilityForegroundMode.
 | --- | --- | --- | --- |
 | name | string | Yes | Intent name. |
 | param | Record&lt;string, Object&gt; | Yes | Intent parameter, which is the data passed from the system entry point to the application for this intent execution. |
-| pageLoader | window.WindowStage | Yes | WindowStage instance, which is the same as the WindowStage instance in the [onWindowStageCreate](arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagecreate) API and can be used to load the page for intent execution. |
+| pageLoader | [window.WindowStage](../../apis-arkui/arkts-apis/arkts-arkui-window-windowstage-i.md) | Yes | WindowStage instance, which is the same as the WindowStage instance in the [onWindowStageCreate](arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagecreate) API and can be used to load the page for intent execution. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| insightIntent.ExecuteResult \| Promise&lt;insightIntent.ExecuteResult&gt; | Intent execution result or a Promise object containing the intent execution result, representing the data returned to the system entry point from this intent execution. |
+| [insightIntent.ExecuteResult](arkts-ability-insightintent-executeresult-i.md) \| Promise&lt;[insightIntent.ExecuteResult](arkts-ability-insightintent-executeresult-i.md)&gt; | Intent execution result or a Promise object containing the intent execution result, representing the data returned to the system entry point from this intent execution. |
 
 **Examples**
 
@@ -355,7 +355,7 @@ Called during the UIExtensionAbility lifecycle when the [UIExtensionAbility](ark
 
 | Type | Description |
 | --- | --- |
-| insightIntent.ExecuteResult \| Promise&lt;insightIntent.ExecuteResult&gt; | Intent execution result or a Promise object containing the intent execution result, representing the data returned to the system entry point from this intent execution. |
+| [insightIntent.ExecuteResult](arkts-ability-insightintent-executeresult-i.md) \| Promise&lt;[insightIntent.ExecuteResult](arkts-ability-insightintent-executeresult-i.md)&gt; | Intent execution result or a Promise object containing the intent execution result, representing the data returned to the system entry point from this intent execution. |
 
 **Examples**
 

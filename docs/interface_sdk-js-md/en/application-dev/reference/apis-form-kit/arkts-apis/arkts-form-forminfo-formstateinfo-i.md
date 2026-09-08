@@ -20,7 +20,7 @@ formState: FormState
 
 Obtains the form state.
 
-**Type:** FormState
+**Type:** [FormState](arkts-form-forminfo-formstate-e.md)
 
 **Since:** 9
 

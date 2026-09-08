@@ -31,7 +31,7 @@ Starting from API 26.0.0, it is recommended to use [createPixelMapFromPixelsSync
 
 | Type | Description |
 | --- | --- |
-| PixelMap | Returns the instance if the operation is successful;Otherwise, return undefined. |
+| [PixelMap](arkts-image-image-pixelmap-i.md) | Returns the instance if the operation is successful;Otherwise, return undefined. |
 
 **Error codes:**
 
@@ -87,7 +87,7 @@ Starting from API 26.0.0, it is recommended to use [createEmptyPixelMap](arkts-i
 
 | Type | Description |
 | --- | --- |
-| PixelMap | Returns the instance if the operation is successful;Otherwise, return undefined. |
+| [PixelMap](arkts-image-image-pixelmap-i.md) | Returns the instance if the operation is successful;Otherwise, return undefined. |
 
 **Error codes:**
 

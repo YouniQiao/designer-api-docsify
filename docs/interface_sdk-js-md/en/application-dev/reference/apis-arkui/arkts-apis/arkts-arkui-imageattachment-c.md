@@ -199,7 +199,7 @@ readonly value: PixelMap
 
 Image data source of the styled string.
 
-**Type:** PixelMap
+**Type:** [PixelMap](../arkts-components/arkts-arkui-pixelmap-t.md)
 
 **Since:** 12
 

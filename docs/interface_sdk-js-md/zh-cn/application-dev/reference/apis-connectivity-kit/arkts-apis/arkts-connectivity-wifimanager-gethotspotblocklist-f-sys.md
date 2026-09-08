@@ -26,7 +26,7 @@ function getHotspotBlockList(): Array<StationInfo>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;StationInfo&gt; | 热点的阻止列表。 |
+| Array&lt;[StationInfo](arkts-connectivity-wifimanager-stationinfo-i-sys.md)&gt; | 热点的阻止列表。 |
 
 **错误码：**
 

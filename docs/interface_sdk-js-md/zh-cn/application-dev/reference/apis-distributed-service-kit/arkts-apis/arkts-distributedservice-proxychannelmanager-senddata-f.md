@@ -45,7 +45,7 @@ function sendData(channelId: number, data: ArrayBuffer): Promise<void>
 | [32390006](../errorcode-proxyChannelManager.md#32390006-参数错误) | Parameter error. |
 | [32390100](../errorcode-proxyChannelManager.md#32390100-内部异常) | Internal error. |
 | [32390101](../errorcode-proxyChannelManager.md#32390101-调用受限) | Call is restricted. |
-| [32390103](../errorcode-proxyChannelManager.md#32390103-发送数据超长) | Data too number. |
+| [32390103](../errorcode-proxyChannelManager.md#32390103-发送数据超长) | Data too long. |
 | [32390104](../errorcode-proxyChannelManager.md#32390104-发送数据失败) | Send failed. |
 
 **示例**

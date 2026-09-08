@@ -24,7 +24,7 @@ type?: MaterialType
 
 默认值：MaterialType.NONE
 
-**类型：** MaterialType
+**类型：** [MaterialType](arkts-arkui-uimaterial-materialtype-e.md)
 
 **默认值：** uiMaterial.MaterialType.NONE
 

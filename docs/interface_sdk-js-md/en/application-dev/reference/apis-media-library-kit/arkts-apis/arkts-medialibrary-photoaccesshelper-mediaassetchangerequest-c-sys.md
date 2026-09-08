@@ -36,7 +36,7 @@ Adds resources using **PhotoProxy** data.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | ResourceType | Yes | Type of the resource to add. |
+| type | [ResourceType](arkts-medialibrary-photoaccesshelper-resourcetype-e.md) | Yes | Type of the resource to add. |
 | proxy | [PhotoProxy](arkts-medialibrary-photoaccesshelper-photoproxy-i-sys.md) | Yes | PhotoProxy data of the resource to add. |
 
 **Error codes:**
@@ -93,7 +93,7 @@ Adds a resource using fileUri from file management directory
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | ResourceType | Yes | Type of the resource to add. |
+| type | [ResourceType](arkts-medialibrary-photoaccesshelper-resourcetype-e.md) | Yes | Type of the resource to add. |
 | fileUri | string | Yes | Data source of the resource to be added, which is specified by a URI in the application sandbox directory. |
 
 **Error codes:**
@@ -104,28 +104,6 @@ Adds a resource using fileUri from file management directory
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
 | [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. You are advised to retry and check the logs. Possible causes:  1. The database is corrupted.  2. The file system is abnormal.  3. The IPC request timed out. |
 | [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |  |
-
-**Examples**
-
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
-```TypeScript
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper, context: Context) {
-  console.info('addResourceForPickerByFileUriDemo');
-  try {
-    let photoType: photoAccessHelper.PhotoType = photoAccessHelper.PhotoType.IMAGE;
-    let extension: string = 'jpg';
-    let assetChangeRequest: photoAccessHelper.MediaAssetChangeRequest = photoAccessHelper.MediaAssetChangeRequest.createAssetRequest(context, photoType, extension);
-    // Ensure that the asset specified by fileUri exists.
-    let fileUri = 'file://com.example.temptest/data/storage/el2/base/haps/entry/files/test.jpg';
-    assetChangeRequest.addResourceForPicker(photoAccessHelper.ResourceType.IMAGE_RESOURCE, fileUri);
-    await phAccessHelper.applyChanges(assetChangeRequest);
-    console.info('addResourceForPickerByFileUri successfully');
-  } catch (err) {
-    console.error(`addResourceForPickerByFileUriDemo failed with error: ${err.code}, ${err.message}`);
-  }
-}
-```
 
 ## createAssetRequest
 
@@ -157,7 +135,7 @@ For API versions 10 to 17, the following characters are considered invalid: . ..
 | --- | --- | --- | --- |
 | context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | Yes | Context of the ability instance. |
 | displayName | string | Yes | File name of the image or video to create. |
-| options | PhotoCreateOptions | No | Options for creating an image or video asset. |
+| options | [PhotoCreateOptions](arkts-medialibrary-photoaccesshelper-photocreateoptions-i-sys.md) | No | Options for creating an image or video asset. |
 
 **Return value:**
 
@@ -343,7 +321,7 @@ Permanently deletes images or videos in batches. This API uses a promise to retu
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | Yes | Context of the ability instance. |
-| assets | Array&lt;PhotoAsset&gt; | Yes | Array of images or videos to be permanently deleted. The array can contain a maximum of 500 elements. |
+| assets | Array&lt;[PhotoAsset](arkts-medialibrary-photoaccesshelper-photoasset-i.md)&gt; | Yes | Array of images or videos to be permanently deleted. The array can contain a maximum of 500 elements. |
 
 **Return value:**
 
@@ -827,7 +805,7 @@ Sets the effect of this moving photo.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | MovingPhotoEffectMode | Yes | Effect to set. |
+| mode | [MovingPhotoEffectMode](arkts-medialibrary-photoaccesshelper-movingphotoeffectmode-e-sys.md) | Yes | Effect to set. |
 
 **Error codes:**
 
@@ -963,31 +941,6 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
   let assetChangeRequest: photoAccessHelper.MediaAssetChangeRequest = new photoAccessHelper.MediaAssetChangeRequest(asset);
   assetChangeRequest.setHidden(true);
   phAccessHelper.applyChanges(assetChangeRequest).then(() => {
-    console.info('apply setHidden successfully');
-  }).catch((err: BusinessError) => {
-    console.error(`apply setHidden failed with error: ${err.code}, ${err.message}`);
-  });
-}
-```
-
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  console.info('setHiddenDemo');
-  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-  let fetchOption: photoAccessHelper.FetchOptions = {
-    fetchColumns: [],
-    predicates: predicates
-  };
-  let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> = await phAccessHelper.getAssets(fetchOption);
-  let photoAssetList: Array<photoAccessHelper.PhotoAsset> = await fetchResult.getAllObjects();
-  let assetsChangeRequest: photoAccessHelper.MediaAssetsChangeRequest = new photoAccessHelper.MediaAssetsChangeRequest(photoAssetList);
-  assetsChangeRequest.setHidden(true);
-  phAccessHelper.applyChanges(assetsChangeRequest).then(() => {
     console.info('apply setHidden successfully');
   }).catch((err: BusinessError) => {
     console.error(`apply setHidden failed with error: ${err.code}, ${err.message}`);
@@ -1245,31 +1198,6 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 }
 ```
 
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  console.info('setUserCommentDemo');
-  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-  let fetchOption: photoAccessHelper.FetchOptions = {
-    fetchColumns: [],
-    predicates: predicates
-  };
-  let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> = await phAccessHelper.getAssets(fetchOption);
-  let photoAssetList: Array<photoAccessHelper.PhotoAsset> = await fetchResult.getAllObjects();
-  let assetsChangeRequest: photoAccessHelper.MediaAssetsChangeRequest = new photoAccessHelper.MediaAssetsChangeRequest(photoAssetList);
-  assetsChangeRequest.setUserComment('test_set_user_comment');
-  phAccessHelper.applyChanges(assetsChangeRequest).then(() => {
-    console.info('apply setUserComment successfully');
-  }).catch((err: BusinessError) => {
-    console.error(`apply setUserComment failed with error: ${err.code}, ${err.message}`);
-  });
-}
-```
-
 ## setVideoEnhancementAttr
 
 ```TypeScript
@@ -1299,20 +1227,3 @@ Set video enhancement attribute
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
 | 14000011 | Internal system error |
 | 14000016 | Operation Not Support |
-
-**Examples**
-
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
-```TypeScript
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper, asset: photoAccessHelper.PhotoAsset) {
-  try {
-    let assetChangeRequest: photoAccessHelper.MediaAssetChangeRequest = new photoAccessHelper.MediaAssetChangeRequest(asset);
-    let photoId = "202410011800";
-    assetChangeRequest.setVideoEnhancementAttr(photoAccessHelper.VideoEnhancementType.QUALITY_ENHANCEMENT_LOCAL, photoId);
-    await phAccessHelper.applyChanges(assetChangeRequest);
-  } catch (err) {
-    console.error(`setVideoEnhancementAttr fail with error: ${err.code}, ${err.message}`);
-  }
-}
-```

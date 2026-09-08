@@ -32,4 +32,4 @@ import { videoProcessingEngine } from '@kit.ImageKit';
 
 | Name | Description |
 | --- | --- |
-| [QualityLevel](arkts-image-videoprocessingengine-qualitylevel-e.md) | Levels of processing quality for detail enhancement. @enum {number} |
+| [QualityLevel](arkts-image-videoprocessingengine-qualitylevel-e.md) | Levels of processing quality for detail enhancement. @enum {int} |

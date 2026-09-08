@@ -34,13 +34,13 @@ Fetch shared photo assets in an album.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | photoAccessHelper.FetchOptions | 是 | Fetch options. |
+| options | [photoAccessHelper.FetchOptions](arkts-medialibrary-photoaccesshelper-fetchoptions-i.md) | 是 | Fetch options. |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;SharedPhotoAsset&gt; | Returns the shared photo assets |
+| Array&lt;[SharedPhotoAsset](arkts-medialibrary-sendablephotoaccesshelper-sharedphotoasset-i-sys.md)&gt; | Returns the shared photo assets |
 
 **错误码：**
 

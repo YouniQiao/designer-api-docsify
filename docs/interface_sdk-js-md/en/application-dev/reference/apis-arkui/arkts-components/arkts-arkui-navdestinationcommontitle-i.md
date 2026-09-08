@@ -19,7 +19,7 @@ main: string | Resource
 
 Main title.
 
-**Type:** string \| Resource
+**Type:** string \| [Resource](../arkts-apis/arkts-arkui-resource-t.md)
 
 **Since:** 9
 
@@ -35,7 +35,7 @@ sub: string | Resource
 
 Subtitle.
 
-**Type:** string \| Resource
+**Type:** string \| [Resource](../arkts-apis/arkts-arkui-resource-t.md)
 
 **Since:** 9
 

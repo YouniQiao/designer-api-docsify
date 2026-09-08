@@ -35,7 +35,7 @@ Deletes the configured IP address and subnet mask from the VLAN specified by **v
 | --- | --- | --- | --- |
 | ifName | string | Yes | NIC name. |
 | vlanId | number | Yes | VLAN ID. The value range is [0, 4094]. |
-| address | LinkAddress | Yes | Network link information. |
+| address | [LinkAddress](arkts-network-connection-linkaddress-i.md) | Yes | Network link information. |
 
 **Return value:**
 

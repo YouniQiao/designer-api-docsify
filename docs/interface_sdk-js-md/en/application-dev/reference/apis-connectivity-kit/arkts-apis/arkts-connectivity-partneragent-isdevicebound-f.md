@@ -26,7 +26,7 @@ Checks whether a device is bound to this application.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceAddress | PartnerDeviceAddress | Yes | The address of partner device. |
+| deviceAddress | [PartnerDeviceAddress](arkts-connectivity-partneragent-partnerdeviceaddress-i.md) | Yes | The address of partner device. |
 
 **Return value:**
 

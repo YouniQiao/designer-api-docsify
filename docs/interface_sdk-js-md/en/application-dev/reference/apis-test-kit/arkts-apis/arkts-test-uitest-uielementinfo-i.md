@@ -105,22 +105,6 @@ Text information of the component or window.
 
 **Test API:** This API is used only in automated test scripts.
 
-**Examples**
-
-```TypeScript
-// xxx.test.ets
-import { On, ON } from '@kit.TestKit';
-
-let on: On = ON.text('123'); // Use the static constructor ON to create an On object and specify the text attribute of the target component.
-```
-
-```TypeScript
-// xxx.test.ets
-import { BY, By } from '@kit.TestKit';
-
-let by: By = BY.text('123'); // Use the static constructor BY to create a By object and specify the text attribute of the target component.
-```
-
 ## type
 
 ```TypeScript
@@ -138,29 +122,6 @@ Component or window type.
 **System capability:** SystemCapability.Test.UiTest
 
 **Test API:** This API is used only in automated test scripts.
-
-**Examples**
-
-```TypeScript
-// xxx.test.ets
-import { On, ON } from '@kit.TestKit';
-
-let on: On = ON.type('Button'); // Use the static constructor ON to create an On object and specify the type attribute of the target component.
-```
-
-```TypeScript
-// xxx.test.ets
-import { On, ON, MatchPattern } from '@kit.TestKit';
-
-let on: On = ON.type('Button', MatchPattern.EQUALS); // Use the static constructor ON to create an On object and specify the type attribute of the target component.
-```
-
-```TypeScript
-// xxx.test.ets
-import { By, BY } from '@kit.TestKit';
-
-let by: By = BY.type('Button'); // Use the static constructor BY to create a By object and specify the type attribute of the target component.
-```
 
 ## windowChangeType
 

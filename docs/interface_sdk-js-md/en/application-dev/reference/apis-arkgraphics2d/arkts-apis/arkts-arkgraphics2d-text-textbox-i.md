@@ -20,7 +20,7 @@ direction: TextDirection
 
 Text direction.
 
-**Type:** TextDirection
+**Type:** [TextDirection](arkts-arkgraphics2d-text-textdirection-e.md)
 
 **Since:** 12
 
@@ -36,7 +36,7 @@ rect: common2D.Rect
 
 Rectangular area information, in physical pixels (px).
 
-**Type:** common2D.Rect
+**Type:** [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md)
 
 **Since:** 12
 

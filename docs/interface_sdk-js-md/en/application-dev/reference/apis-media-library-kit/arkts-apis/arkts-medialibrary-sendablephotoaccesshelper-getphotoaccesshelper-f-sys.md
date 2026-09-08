@@ -35,7 +35,7 @@ Obtains a PhotoAccessHelper instance for the specified user, letting you access 
 
 | Type | Description |
 | --- | --- |
-| PhotoAccessHelper | PhotoAccessHelper instance obtained. |
+| [PhotoAccessHelper](arkts-medialibrary-sendablephotoaccesshelper-photoaccesshelper-i.md) | PhotoAccessHelper instance obtained. |
 
 **Error codes:**
 

@@ -10,4 +10,4 @@ Defines the network status.
 
 **System capability:** SystemCapability.Telephony.StateRegistry
 
-**Type:** radio.NetworkState
+**Type:** [radio.NetworkState](arkts-telephony-radio-networkstate-i.md)

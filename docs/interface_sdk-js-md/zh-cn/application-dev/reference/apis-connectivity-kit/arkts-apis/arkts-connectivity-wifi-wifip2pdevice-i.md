@@ -64,7 +64,7 @@ deviceStatus: P2pDeviceStatus
 
 设备状态。
 
-**类型：** P2pDeviceStatus
+**类型：** [P2pDeviceStatus](arkts-connectivity-wifi-p2pdevicestatus-e.md)
 
 **起始版本：** 8
 

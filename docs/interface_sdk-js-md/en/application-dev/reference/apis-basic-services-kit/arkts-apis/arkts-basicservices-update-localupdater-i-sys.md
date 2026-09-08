@@ -229,31 +229,6 @@ const eventClassifyInfo: update.EventClassifyInfo = {
   eventClassify: update.EventClassify.TASK, // Task event type
   extraInfo: ''
 };
-try {
-  // Define an UpgradeInfo object.
-  const upgradeInfo: update.UpgradeInfo = {
-    upgradeApp: 'com.ohos.ota.updateclient',  // App package name
-    businessType: {
-      vendor: update.BusinessVendor.PUBLIC, // Vendor type
-      subType: update.BusinessSubType.FIRMWARE // The update type is firmware.
-    }
-  };
-  // Obtain an OnlineUpdater object.
-  let onlineUpdater = update.getOnlineUpdater(upgradeInfo);
-  // Unregister the event listener.
-  onlineUpdater.off(eventClassifyInfo, (eventInfo: update.EventInfo) => {
-    console.info(`onlineUpdater off ${JSON.stringify(eventInfo)}`);
-  });
-} catch (error) {
-  console.error(`Fail to get onlineUpdater error: ${error}`);
-}
-```
-
-```TypeScript
-const eventClassifyInfo: update.EventClassifyInfo = {
-  eventClassify: update.EventClassify.TASK, // Task event type
-  extraInfo: ''
-};
 // Define the callback for task updates, which is used to process the upgrade task event.
 let onTaskUpdate: update.UpgradeTaskCallback = (eventInfo: update.EventInfo) => {
   console.info(`on eventInfo id `, eventInfo.eventId);
@@ -292,7 +267,7 @@ listener when it is no longer needed.
 
 **Suggestions**
 
-- Register a listener before performing number-time operations such as calling **applyNewVersion**.  
+- Register a listener before performing long-time operations such as calling **applyNewVersion**.  
 - Unregister the listener after the operation is complete or the final event is received.
 
 **Since:** 9
@@ -315,31 +290,6 @@ listener when it is no longer needed.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 **Examples**
-
-```TypeScript
-const eventClassifyInfo: update.EventClassifyInfo = {
-  eventClassify: update.EventClassify.TASK, // Task event type
-  extraInfo: '' // Additional information. If this parameter is left empty, no additional information is available.
-};
-try {
-  // Define an UpgradeInfo object.
-  const upgradeInfo: update.UpgradeInfo = {
-    upgradeApp: 'com.ohos.ota.updateclient',  // App package name
-    businessType: {
-      vendor: update.BusinessVendor.PUBLIC, // Vendor type
-      subType: update.BusinessSubType.FIRMWARE // The update type is firmware.
-    }
-  };
-  // Obtain an OnlineUpdater object.
-  let onlineUpdater = update.getOnlineUpdater(upgradeInfo);
-  // Register an event listener to monitor the update status in real time.
-  onlineUpdater.on(eventClassifyInfo, (eventInfo: update.EventInfo) => {
-    console.info(`updater on ${JSON.stringify(eventInfo)}`);
-  });
-} catch (error) {
-  console.error(`Fail to get onlineUpdater error: ${error}`);
-}
-```
 
 ```TypeScript
 const eventClassifyInfo: update.EventClassifyInfo = {

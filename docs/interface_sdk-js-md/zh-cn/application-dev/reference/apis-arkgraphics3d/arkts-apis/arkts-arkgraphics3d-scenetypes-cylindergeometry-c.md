@@ -22,7 +22,7 @@ get height(): number
 
 圆柱体的高度，单位为世界坐标系下的场景单位（比如cm、m、km等），取值范围大于0。
 
-@return { number }
+@return { double }
 
 **类型：** number
 
@@ -50,7 +50,7 @@ get radius(): number
 
 圆柱体的底面半径，单位为世界坐标系下的场景单位（比如cm、m、km等），取值范围大于0。
 
-@return { number }
+@return { double }
 
 **类型：** number
 
@@ -78,7 +78,7 @@ get segmentCount(): number
 
 圆柱体圆周方向的分段面数量，取值范围是大于等于3的正整数，若设为浮点数将自动向下取整。该数值直接影响圆柱体侧面的光滑度：数值越大，侧面包含的面片数量越多，视觉上越接近光滑曲面；数值越小，侧面会呈现明显的多边形轮廓。注意数值过大会延长几何创建耗时，还可能导致线程阻塞。
 
-@return { number }
+@return { int }
 
 **类型：** number
 

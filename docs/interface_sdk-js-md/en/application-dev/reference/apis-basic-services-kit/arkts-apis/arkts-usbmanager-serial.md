@@ -28,8 +28,8 @@ import { serialManager } from '@kit.BasicServicesKit';
 | [readSync](arkts-basicservices-serialmanager-readsync-f.md) | Reads data from the serial port device synchronously. |
 | [requestSerialRight](arkts-basicservices-serialmanager-requestserialright-f.md) | Requests the permission for the application to access the serial port device. After the application exits, the access permission on the serial port device is automatically removed. After the application is restarted, you need to request the permission again. This API uses a promise to return the result. |
 | [setAttribute](arkts-basicservices-serialmanager-setattribute-f.md) | Sets the parameters of the serial port. If this method is not called, the default configuration parameters are used (baud rate: 9600 bit/s; data bit: 8; parity bit: 0; stop bit: 1). |
-| [write](arkts-basicservices-serialmanager-write-f.md) | Writes data to the serial port device asynchronously. The length of data written each time cannot exceed 4 KB; otherwise, data loss may occur. You are advised to write number data in multiple packets. This API uses a promise to return the result. |
-| [writeSync](arkts-basicservices-serialmanager-writesync-f.md) | Writes data to the serial port device synchronously. The length of data written each time cannot exceed 4 KB; otherwise, data loss may occur. You are advised to write number data in multiple packets. |
+| [write](arkts-basicservices-serialmanager-write-f.md) | Writes data to the serial port device asynchronously. The length of data written each time cannot exceed 4 KB; otherwise, data loss may occur. You are advised to write long data in multiple packets. This API uses a promise to return the result. |
+| [writeSync](arkts-basicservices-serialmanager-writesync-f.md) | Writes data to the serial port device synchronously. The length of data written each time cannot exceed 4 KB; otherwise, data loss may occur. You are advised to write long data in multiple packets. |
 
 <!--Del-->
 ### Functions(System API)

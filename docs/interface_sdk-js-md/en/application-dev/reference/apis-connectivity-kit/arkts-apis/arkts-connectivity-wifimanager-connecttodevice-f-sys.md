@@ -26,7 +26,7 @@ Connect to Wi-Fi hotspot by WifiDeviceConfig.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | WifiDeviceConfig | Yes | Indicates the device configuration for connection to the Wi-Fi hotspot. |
+| config | [WifiDeviceConfig](arkts-connectivity-wifimanager-wifideviceconfig-i.md) | Yes | Indicates the device configuration for connection to the Wi-Fi hotspot. |
 
 **Error codes:**
 

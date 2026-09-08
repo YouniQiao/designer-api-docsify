@@ -44,7 +44,7 @@ Layout width of the measured text.
 
 The default unit is vp. The value cannot be a percentage. If this parameter is not set, the value of **SizeOptions** is the maximum width allowed for the single-line text.
 
-**Type:** number \| string \| Resource
+**Type:** number \| string \| [Resource](arkts-arkui-resource-t.md)
 
 **Since:** 10
 
@@ -64,7 +64,7 @@ Font family of the measured text. Default value: **'HarmonyOS Sans'**
 
 Only the default font is supported.
 
-**Type:** string \| Resource
+**Type:** string \| [Resource](arkts-arkui-resource-t.md)
 
 **Since:** 9
 
@@ -88,7 +88,7 @@ The value cannot be a percentage.
 
 Since API version 12, the fp unit is used when **fontSize** is of the number type.
 
-**Type:** number \| string \| Resource
+**Type:** number \| string \| [Resource](arkts-arkui-resource-t.md)
 
 **Since:** 9
 
@@ -108,7 +108,7 @@ Default value: **FontStyle.Normal**
 
 Value range for the number type: [0, 1], with intervals of 1, corresponding to the values in the **FontStyle** enum
 
-**Type:** number \| FontStyle
+**Type:** number \| [FontStyle](arkts-arkui-fontstyle-e.md)
 
 **Since:** 9
 
@@ -126,7 +126,7 @@ Font width of the measured text. For the number type, the value ranges from 100 
 
 Default value: **FontWeight.Normal**
 
-**Type:** number \| string \| FontWeight
+**Type:** number \| string \| [FontWeight](arkts-arkui-fontweight-e.md)
 
 **Since:** 9
 
@@ -160,7 +160,7 @@ lineHeight?: number | string | Resource
 
 Line height of the measured text.
 
-**Type:** number \| string \| Resource
+**Type:** number \| string \| [Resource](arkts-arkui-resource-t.md)
 
 **Since:** 10
 
@@ -196,7 +196,7 @@ Value range: [0, *INT32_MAX*]
 overflow?: number | TextOverflow
 ```
 
-Display mode when the measured text is too number.
+Display mode when the measured text is too long.
 
 Default value: **1**
 
@@ -224,7 +224,7 @@ Default value: **TextAlign.Start**
 
 Value range for the number type: [0, 3], with intervals of 1, corresponding to the values in the **TextAlign** enum
 
-**Type:** number \| TextAlign
+**Type:** number \| [TextAlign](arkts-arkui-textalign-e.md)
 
 **Since:** 10
 
@@ -264,7 +264,7 @@ textContent: string | Resource
 
 Content of the measured text.
 
-**Type:** string \| Resource
+**Type:** string \| [Resource](arkts-arkui-resource-t.md)
 
 **Since:** 9
 
@@ -304,7 +304,7 @@ Default value: **WordBreak.BREAK_WORD**
 
 When used with **{overflow: TextOverflow.Ellipsis}** and **maxLines**, **WordBreak.BREAK_ALL** can insert line breaks between letters when overflow occurs and display excess content with an ellipsis (...).
 
-**Type:** WordBreak
+**Type:** [WordBreak](arkts-arkui-wordbreak-e.md)
 
 **Since:** 11
 

@@ -2,7 +2,7 @@
 
 相机跟踪布局
 
-@enum { number }
+@enum { int }
 
 **起始版本：** 20
 

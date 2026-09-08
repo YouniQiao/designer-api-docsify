@@ -20,4 +20,4 @@ Progress callback, which can be the size or numberof files.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| progress | Progress | Yes | progress info. |
+| progress | [Progress](arkts-medialibrary-photoaccesshelper-progress-i-sys.md) | Yes | progress info. |

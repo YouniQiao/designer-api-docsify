@@ -26,7 +26,7 @@ Get all the stations in the block list. If does't have the permission of ohos.pe
 
 | Type | Description |
 | --- | --- |
-| Array&lt;StationInfo&gt; | stations in the block list. |
+| Array&lt;[StationInfo](arkts-connectivity-wifimanager-stationinfo-i-sys.md)&gt; | stations in the block list. |
 
 **Error codes:**
 

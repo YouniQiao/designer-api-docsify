@@ -30,7 +30,7 @@ function startPairOutOfBand(deviceId: string, transport: BluetoothTransport, p19
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | deviceId | string | 是 | 设备ID。例如，“11:22:33:AA:BB:FF”。 |
-| transport | BluetoothTransport | 是 | 指示远程蓝牙设备的传输。 |
+| transport | [BluetoothTransport](arkts-connectivity-connection-bluetoothtransport-e.md) | 是 | 指示远程蓝牙设备的传输。 |
 | p192Data | [OobData](arkts-connectivity-connection-oobdata-i-sys.md) | 否 | 带外数据(P192)。 |
 | p256Data | [OobData](arkts-connectivity-connection-oobdata-i-sys.md) | 否 | 带外数据(P256)。 |
 

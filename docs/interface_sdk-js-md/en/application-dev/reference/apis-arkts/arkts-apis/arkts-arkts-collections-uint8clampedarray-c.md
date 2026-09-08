@@ -230,7 +230,7 @@ Copies elements within a given range from this ArkTS Uint8ClampedArray to anothe
 
 | Type | Description |
 | --- | --- |
-| Uint8ClampedArray | Uint8ClampedArray after being modified. |
+| [Uint8ClampedArray](arkts-arkts-collections-uint8clampedarray-c.md) | Uint8ClampedArray after being modified. |
 
 **Error codes:**
 
@@ -286,7 +286,7 @@ Checks whether all elements in this ArkTS Uint8ClampedArray meet a given conditi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| predicate | [TypedArrayPredicateFn](arkts-arkts-collections-typedarraypredicatefn-t.md)&lt;number, Uint8ClampedArray&gt; | Yes | Assertion function used for the test. |
+| predicate | [TypedArrayPredicateFn](arkts-arkts-collections-typedarraypredicatefn-t.md)&lt;number, [Uint8ClampedArray](arkts-arkts-collections-uint8clampedarray-c.md)&gt; | Yes | Assertion function used for the test. |
 
 **Return value:**
 
@@ -327,7 +327,7 @@ Fills all elements in a given range in this ArkTS Uint8ClampedArray with a value
 
 | Type | Description |
 | --- | --- |
-| Uint8ClampedArray | Filled ArkTS Uint8ClampedArray. |
+| [Uint8ClampedArray](arkts-arkts-collections-uint8clampedarray-c.md) | Filled ArkTS Uint8ClampedArray. |
 
 **Error codes:**
 
@@ -356,13 +356,13 @@ Returns a new ArkTS Uint8ClampedArray that contains all elements that meet the g
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| predicate | [TypedArrayPredicateFn](arkts-arkts-collections-typedarraypredicatefn-t.md)&lt;number, Uint8ClampedArray&gt; | Yes | Assertion function used for the test. |
+| predicate | [TypedArrayPredicateFn](arkts-arkts-collections-typedarraypredicatefn-t.md)&lt;number, [Uint8ClampedArray](arkts-arkts-collections-uint8clampedarray-c.md)&gt; | Yes | Assertion function used for the test. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Uint8ClampedArray | Filtered ArkTS Uint8ClampedArray. |
+| [Uint8ClampedArray](arkts-arkts-collections-uint8clampedarray-c.md) | Filtered ArkTS Uint8ClampedArray. |
 
 **Error codes:**
 
@@ -391,7 +391,7 @@ Returns the value of the first element that passes a test provided by a callback
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| predicate | [TypedArrayPredicateFn](arkts-arkts-collections-typedarraypredicatefn-t.md)&lt;number, Uint8ClampedArray&gt; | Yes | Assertion function used for the test. |
+| predicate | [TypedArrayPredicateFn](arkts-arkts-collections-typedarraypredicatefn-t.md)&lt;number, [Uint8ClampedArray](arkts-arkts-collections-uint8clampedarray-c.md)&gt; | Yes | Assertion function used for the test. |
 
 **Return value:**
 
@@ -426,7 +426,7 @@ Returns the index of the first element that passes a test provided by a callback
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| predicate | [TypedArrayPredicateFn](arkts-arkts-collections-typedarraypredicatefn-t.md)&lt;number, Uint8ClampedArray&gt; | Yes | Assertion function used for the test. |
+| predicate | [TypedArrayPredicateFn](arkts-arkts-collections-typedarraypredicatefn-t.md)&lt;number, [Uint8ClampedArray](arkts-arkts-collections-uint8clampedarray-c.md)&gt; | Yes | Assertion function used for the test. |
 
 **Return value:**
 
@@ -459,7 +459,7 @@ Calls a callback function for each element in this ArkTS Uint8ClampedArray.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackFn | [TypedArrayForEachCallback](arkts-arkts-collections-typedarrayforeachcallback-t.md)&lt;number, Uint8ClampedArray&gt; | Yes | Callback function to run for each element. |
+| callbackFn | [TypedArrayForEachCallback](arkts-arkts-collections-typedarrayforeachcallback-t.md)&lt;number, [Uint8ClampedArray](arkts-arkts-collections-uint8clampedarray-c.md)&gt; | Yes | Callback function to run for each element. |
 
 **Error codes:**
 
@@ -492,7 +492,7 @@ Creates an ArkTS Uint8ClampedArray from an array-like or iterator object.
 
 | Type | Description |
 | --- | --- |
-| Uint8ClampedArray | New ArkTS Uint8ClampedArray generated. |
+| [Uint8ClampedArray](arkts-arkts-collections-uint8clampedarray-c.md) | New ArkTS Uint8ClampedArray generated. |
 
 ## from
 
@@ -519,7 +519,7 @@ Creates an ArkTS Uint8ClampedArray from an array-like object.
 
 | Type | Description |
 | --- | --- |
-| Uint8ClampedArray | New ArkTS Uint8ClampedArray generated. |
+| [Uint8ClampedArray](arkts-arkts-collections-uint8clampedarray-c.md) | New ArkTS Uint8ClampedArray generated. |
 
 ## from
 
@@ -546,7 +546,7 @@ Creates an ArkTS Uint8ClampedArray from an iterator object.
 
 | Type | Description |
 | --- | --- |
-| Uint8ClampedArray | New ArkTS Uint8ClampedArray generated. |
+| [Uint8ClampedArray](arkts-arkts-collections-uint8clampedarray-c.md) | New ArkTS Uint8ClampedArray generated. |
 
 ## includes
 
@@ -728,13 +728,13 @@ Applies a callback function to each element in this ArkTS Uint8ClampedArray and 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackFn | [TypedArrayMapCallback](arkts-arkts-collections-typedarraymapcallback-t.md)&lt;number, Uint8ClampedArray&gt; | Yes | A function that accepts up to three arguments. The map method calls the callbackfn function one time for each element in the array. |
+| callbackFn | [TypedArrayMapCallback](arkts-arkts-collections-typedarraymapcallback-t.md)&lt;number, [Uint8ClampedArray](arkts-arkts-collections-uint8clampedarray-c.md)&gt; | Yes | A function that accepts up to three arguments. The map method calls the callbackfn function one time for each element in the array. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Uint8ClampedArray | New ArkTS Uint8ClampedArray. |
+| [Uint8ClampedArray](arkts-arkts-collections-uint8clampedarray-c.md) | New ArkTS Uint8ClampedArray. |
 
 **Error codes:**
 
@@ -767,7 +767,7 @@ Creates an ArkTS Uint8ClampedArray with a variable number of parameters.
 
 | Type | Description |
 | --- | --- |
-| Uint8ClampedArray | New ArkTS Uint8ClampedArray instance. Possible causes: 1. Mandatory parameters are left unspecified; |
+| [Uint8ClampedArray](arkts-arkts-collections-uint8clampedarray-c.md) | New ArkTS Uint8ClampedArray instance. Possible causes: 1. Mandatory parameters are left unspecified; |
 
 ## reduce
 
@@ -787,7 +787,7 @@ Applies a reduce function on each element in this ArkTS Uint8ClampedArray and re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackFn | [TypedArrayReduceCallback](arkts-arkts-collections-typedarrayreducecallback-t.md)&lt;number, number, Uint8ClampedArray&gt; | Yes | A function that accepts up to four arguments. The reduce method calls the callbackfn function one time for each element in the array. |
+| callbackFn | [TypedArrayReduceCallback](arkts-arkts-collections-typedarrayreducecallback-t.md)&lt;number, number, [Uint8ClampedArray](arkts-arkts-collections-uint8clampedarray-c.md)&gt; | Yes | A function that accepts up to four arguments. The reduce method calls the callbackfn function one time for each element in the array. |
 
 **Return value:**
 
@@ -820,7 +820,7 @@ Applies a reduce function for each element in this ArkTS Uint8ClampedArray, rece
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackFn | [TypedArrayReduceCallback](arkts-arkts-collections-typedarrayreducecallback-t.md)&lt;U, number, Uint8ClampedArray&gt; | Yes | A function that accepts up to four arguments. The reduce method calls the callbackfn function one time for each element in the array. |
+| callbackFn | [TypedArrayReduceCallback](arkts-arkts-collections-typedarrayreducecallback-t.md)&lt;U, number, [Uint8ClampedArray](arkts-arkts-collections-uint8clampedarray-c.md)&gt; | Yes | A function that accepts up to four arguments. The reduce method calls the callbackfn function one time for each element in the array. |
 | initialValue | U | Yes | If initialValue is specified, it is used as the initial value to start the accumulation. The first call to the callbackfn function provides this value as an argument instead of an array value. |
 
 **Return value:**
@@ -854,7 +854,7 @@ Reversely traverses this ArkTS Uint8ClampedArray, applies a reduce function for 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackFn | [TypedArrayReduceCallback](arkts-arkts-collections-typedarrayreducecallback-t.md)&lt;U, number, Uint8ClampedArray&gt; | Yes | A function that is called for each element in the Uint8ClampedArray. |
+| callbackFn | [TypedArrayReduceCallback](arkts-arkts-collections-typedarrayreducecallback-t.md)&lt;U, number, [Uint8ClampedArray](arkts-arkts-collections-uint8clampedarray-c.md)&gt; | Yes | A function that is called for each element in the Uint8ClampedArray. |
 | initialValue | U | Yes | A value to use as the first argument to the first call of the callback. If no initial value is provided, the last element of the Uint8ClampedArray will be used, and the callback will start with the second-to-last element. |
 
 **Return value:**
@@ -888,7 +888,7 @@ Reversely traverses this ArkTS Uint8ClampedArray, applies a reduce function on e
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackFn | [TypedArrayReduceCallback](arkts-arkts-collections-typedarrayreducecallback-t.md)&lt;number, number, Uint8ClampedArray&gt; | Yes | A function that is called for each element in the Uint8ClampedArray. |
+| callbackFn | [TypedArrayReduceCallback](arkts-arkts-collections-typedarrayreducecallback-t.md)&lt;number, number, [Uint8ClampedArray](arkts-arkts-collections-uint8clampedarray-c.md)&gt; | Yes | A function that is called for each element in the Uint8ClampedArray. |
 
 **Return value:**
 
@@ -921,7 +921,7 @@ Reverses this ArkTS Uint8ClampedArray.
 
 | Type | Description |
 | --- | --- |
-| Uint8ClampedArray | Reversed ArkTS Uint8ClampedArray. |
+| [Uint8ClampedArray](arkts-arkts-collections-uint8clampedarray-c.md) | Reversed ArkTS Uint8ClampedArray. |
 
 **Error codes:**
 
@@ -983,7 +983,7 @@ Selects a range of elements in this ArkTS Uint8ClampedArray to create an ArkTS U
 
 | Type | Description |
 | --- | --- |
-| Uint8ClampedArray | New ArkTS Uint8ClampedArray. |
+| [Uint8ClampedArray](arkts-arkts-collections-uint8clampedarray-c.md) | New ArkTS Uint8ClampedArray. |
 
 **Error codes:**
 
@@ -1012,7 +1012,7 @@ Checks whether any element in this ArkTS Uint8ClampedArray meets a given conditi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| predicate | [TypedArrayPredicateFn](arkts-arkts-collections-typedarraypredicatefn-t.md)&lt;number, Uint8ClampedArray&gt; | Yes | Assertion function used for the test. |
+| predicate | [TypedArrayPredicateFn](arkts-arkts-collections-typedarraypredicatefn-t.md)&lt;number, [Uint8ClampedArray](arkts-arkts-collections-uint8clampedarray-c.md)&gt; | Yes | Assertion function used for the test. |
 
 **Return value:**
 
@@ -1051,7 +1051,7 @@ Sorts elements in this ArkTS Uint8ClampedArray and returns the sorted ArkTS Uint
 
 | Type | Description |
 | --- | --- |
-| Uint8ClampedArray | Sorted ArkTS Uint8ClampedArray. |
+| [Uint8ClampedArray](arkts-arkts-collections-uint8clampedarray-c.md) | Sorted ArkTS Uint8ClampedArray. |
 
 **Error codes:**
 
@@ -1085,7 +1085,7 @@ Truncates an array from a specified position and returns a new ArkTS Uint8Clampe
 
 | Type | Description |
 | --- | --- |
-| Uint8ClampedArray | New ArkTS Uint8ClampedArray. |
+| [Uint8ClampedArray](arkts-arkts-collections-uint8clampedarray-c.md) | New ArkTS Uint8ClampedArray. |
 
 **Error codes:**
 

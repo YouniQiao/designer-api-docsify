@@ -24,7 +24,7 @@ Obtain the IPv4 information of the Wi-Fi connection. The IP information includes
 
 | Type | Description |
 | --- | --- |
-| IpInfo | Returns the IP information of the Wi-Fi connection. |
+| [IpInfo](arkts-connectivity-wifimanager-ipinfo-i.md) | Returns the IP information of the Wi-Fi connection. |
 
 **Error codes:**
 

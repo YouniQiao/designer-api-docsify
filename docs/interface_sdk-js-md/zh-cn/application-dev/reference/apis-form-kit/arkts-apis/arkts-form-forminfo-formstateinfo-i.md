@@ -20,7 +20,7 @@ formState: FormState
 
 卡片状态，用于标识卡片当前状态（如未知、默认、就绪）。
 
-**类型：** FormState
+**类型：** [FormState](arkts-form-forminfo-formstate-e.md)
 
 **起始版本：** 9
 

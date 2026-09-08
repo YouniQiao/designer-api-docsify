@@ -28,7 +28,7 @@ function toSendableValuesBucket(valuesBucket: NonSendableBucket): ValuesBucket
 
 | 类型 | 说明 |
 | --- | --- |
-| ValuesBucket | 可用于跨线程传递的ValuesBucket数据。 |
+| [ValuesBucket](arkts-arkdata-sendablerelationalstore-valuesbucket-t.md) | 可用于跨线程传递的ValuesBucket数据。 |
 
 **错误码：**
 

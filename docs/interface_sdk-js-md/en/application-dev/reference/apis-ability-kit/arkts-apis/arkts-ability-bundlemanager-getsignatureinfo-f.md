@@ -30,7 +30,7 @@ Obtains the [signature information](arkts-ability-bundleinfo-signatureinfo-i.md)
 
 | Type | Description |
 | --- | --- |
-| SignatureInfo | SignatureInfo object. |
+| [SignatureInfo](arkts-ability-bundlemanager-signatureinfo-t.md) | SignatureInfo object. |
 
 **Error codes:**
 

@@ -56,7 +56,7 @@ Obtains information about all Wants with **extension** set to **fileAccess** in 
 | 13900025 | No space left on device |
 | 13900027 | Read-only file system |
 | 13900029 | Resource deadlock would occur |
-| 13900030 | File name too number |
+| 13900030 | File name too long |
 | 13900033 | Too many symbolic links encountered |
 | 13900034 | Operation would block |
 | 13900038 | Value too large for defined data type |
@@ -139,7 +139,7 @@ Obtains information about all Wants with **extension** set to **fileAccess** in 
 | 13900025 | No space left on device |
 | 13900027 | Read-only file system |
 | 13900029 | Resource deadlock would occur |
-| 13900030 | File name too number |
+| 13900030 | File name too long |
 | 13900033 | Too many symbolic links encountered |
 | 13900034 | Operation would block |
 | 13900038 | Value too large for defined data type |

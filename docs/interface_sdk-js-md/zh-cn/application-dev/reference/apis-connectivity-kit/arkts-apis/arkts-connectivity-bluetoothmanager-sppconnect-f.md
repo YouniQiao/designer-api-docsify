@@ -33,7 +33,7 @@ function sppConnect(device: string, option: SppOption, callback: AsyncCallback<n
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | device | string | 是 | 对端设备地址，例如："XX:XX:XX:XX:XX:XX"。 |
-| option | SppOption | 是 | spp客户端连接配置参数。 |
+| option | [SppOption](arkts-connectivity-bluetoothmanager-sppoption-i.md) | 是 | spp客户端连接配置参数。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 表示回调函数的入参，客户端socket的id。 |
 
 **错误码：**

@@ -2,7 +2,7 @@
 
 Provides stream output result type definition.
 
-@enum { number } Constants
+@enum { int } Constants
 
 **Since:** 23
 

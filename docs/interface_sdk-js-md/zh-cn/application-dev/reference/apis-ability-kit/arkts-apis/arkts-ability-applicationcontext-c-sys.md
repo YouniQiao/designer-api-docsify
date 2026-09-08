@@ -36,7 +36,7 @@ getProcessRunningInformation(): Promise<Array<ProcessInformation>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;ProcessInformation&gt;&gt; | Promise对象，返回接口运行结果及有关运行进程的信息，可进行错误处理或其他自定义处理。 |
+| Promise&lt;Array&lt;[ProcessInformation](arkts-ability-processinformation-i.md)&gt;&gt; | Promise对象，返回接口运行结果及有关运行进程的信息，可进行错误处理或其他自定义处理。 |
 
 **错误码：**
 
@@ -88,7 +88,7 @@ getProcessRunningInformation(callback: AsyncCallback<Array<ProcessInformation>>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;Array&lt;ProcessInformation&gt;&gt; | 是 | 回调函数，返回有关运行进程的信息。 |
+| callback | AsyncCallback&lt;Array&lt;[ProcessInformation](arkts-ability-processinformation-i.md)&gt;&gt; | 是 | 回调函数，返回有关运行进程的信息。 |
 
 **错误码：**
 

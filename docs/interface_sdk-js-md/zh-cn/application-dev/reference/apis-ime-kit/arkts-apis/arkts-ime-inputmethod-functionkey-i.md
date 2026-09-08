@@ -20,7 +20,7 @@ enterKeyType: EnterKeyType
 
 输入法enter键类型。
 
-**类型：** EnterKeyType
+**类型：** [EnterKeyType](arkts-ime-inputmethod-enterkeytype-e.md)
 
 **起始版本：** 10
 

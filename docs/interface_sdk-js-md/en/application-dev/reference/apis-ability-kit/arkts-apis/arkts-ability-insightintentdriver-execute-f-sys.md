@@ -29,7 +29,7 @@ Executes a call to an intent. This API uses an asynchronous callback to return t
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | param | [ExecuteParam](arkts-ability-insightintentdriver-executeparam-i-sys.md) | Yes | Parameter used to execute the intent call. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;insightIntent.ExecuteResult&gt; | Yes | Callback used to return the intent call execution result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[insightIntent.ExecuteResult](arkts-ability-insightintent-executeresult-i.md)&gt; | Yes | Callback used to return the intent call execution result. |
 
 **Error codes:**
 
@@ -50,10 +50,10 @@ Executes a call to an intent. This API uses an asynchronous callback to return t
 | [16000012](../errorcode-ability.md#16000012-application-under-control) | The application is controlled. |
 | [16000013](../errorcode-ability.md#16000013-application-controlled-by-edm) | The application is controlled by EDM. |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
-| [16000053](../errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) | The ability is not on the top of the UI. |
+| [16000053](../errorcode-ability.md#16000053-ability-not-in-the-foreground) | The ability is not on the top of the UI. |
 | [16000055](../errorcode-ability.md#16000055-installation-free-timeout) | Installation-free timed out. |
-| 16000137 | Cross-device execution failed due to a connection error.<br>**Applicable version:** 26.0.0 and later |
-| 16000138 | Device disconnected during cross-device intent execution.<br>**Applicable version:** 26.0.0 and later |
+| [16000137](../errorcode-ability.md#16000137-cross-device-intent-execution-connection-failed) | Cross-device execution failed due to a connection error.<br>**Applicable version:** 26.0.0 and later |
+| [16000138](../errorcode-ability.md#16000138-device-disconnected-during-cross-device-intent-execution) | Device disconnected during cross-device intent execution.<br>**Applicable version:** 26.0.0 and later |
 
 **Examples**
 
@@ -118,7 +118,7 @@ Executes a call to an intent. This API uses a promise to return the result. When
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;insightIntent.ExecuteResult&gt; | Promise used to return the intent call execution result. |
+| Promise&lt;[insightIntent.ExecuteResult](arkts-ability-insightintent-executeresult-i.md)&gt; | Promise used to return the intent call execution result. |
 
 **Error codes:**
 
@@ -139,10 +139,10 @@ Executes a call to an intent. This API uses a promise to return the result. When
 | [16000012](../errorcode-ability.md#16000012-application-under-control) | The application is controlled. |
 | [16000013](../errorcode-ability.md#16000013-application-controlled-by-edm) | The application is controlled by EDM. |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
-| [16000053](../errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) | The ability is not on the top of the UI. |
+| [16000053](../errorcode-ability.md#16000053-ability-not-in-the-foreground) | The ability is not on the top of the UI. |
 | [16000055](../errorcode-ability.md#16000055-installation-free-timeout) | Installation-free timed out. |
-| 16000137 | Cross-device execution failed due to a connection error.<br>**Applicable version:** 26.0.0 and later |
-| 16000138 | Device disconnected during cross-device intent execution.<br>**Applicable version:** 26.0.0 and later |
+| [16000137](../errorcode-ability.md#16000137-cross-device-intent-execution-connection-failed) | Cross-device execution failed due to a connection error.<br>**Applicable version:** 26.0.0 and later |
+| [16000138](../errorcode-ability.md#16000138-device-disconnected-during-cross-device-intent-execution) | Device disconnected during cross-device intent execution.<br>**Applicable version:** 26.0.0 and later |
 
 **Examples**
 

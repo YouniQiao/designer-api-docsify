@@ -46,47 +46,6 @@ addAccountImplicitly(
 | options | { [key: string]: any } | 是 | 鉴权所需要的可选项。 |
 | callback | [AuthenticatorCallback](arkts-basicservices-appaccount-authenticatorcallback-i.md) | 是 | 认证器回调，用于返回鉴权结果。 |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { Want, common } from '@kit.AbilityKit';
-
-@Entry
-@Component
-struct Index {
-  context = this.getUIContext().getHostContext() as common.UIAbilityContext; // UIAbilityContext
-
-  onResultCallback(code: number, result: Record<string, Object>): void {
-    console.info('resultCode: ' + code);
-    console.info('result: ' + JSON.stringify(result));
-  }
-
-  onRequestRedirectedCallback(request: Want): void {
-    let wantInfo: Want = {
-      deviceId: '',
-      bundleName: 'com.example.accountjsdemo',
-      action: 'ohos.want.action.viewData',
-      entities: ['entity.system.default'],
-    }
-    this.context.startAbility(wantInfo).then(() => {
-      console.info('startAbility successfully');
-    }).catch((err: BusinessError) => {
-      console.error(`startAbility err: code is ${err.code}, message is ${err.message}`);
-    })
-  }
-
-  aboutToAppear(): void {
-    appAccountManager.addAccountImplicitly('com.example.accountjsdemo', 'getSocialData', {}, {
-      onResult: this.onResultCallback,
-      onRequestRedirected: this.onRequestRedirectedCallback
-    });
-  }
-
-  build() {}
-}
-```
-
 ## auth
 
 ```TypeScript
@@ -107,99 +66,6 @@ auth(name: string, authType: string, options: Record<string, Object>, callback: 
 | authType | string | 是 | 应用账号的鉴权类型。自定义数据，最大长度为1024个字符。 |
 | options | Record&lt;string, Object&gt; | 是 | 鉴权所需要的可选项。 |
 | callback | [AuthCallback](arkts-basicservices-appaccount-authcallback-i.md) | 是 | 回调对象，用于返回鉴权结果。 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { Want, common } from '@kit.AbilityKit';
-
-@Entry
-@Component
-struct Index {
-  context = this.getUIContext().getHostContext() as common.UIAbilityContext; // UIAbilityContext
-
-  onResultCallback(code: number, authResult?: appAccount.AuthResult): void {
-    console.info('resultCode: ' + code);
-    console.info('authResult: ' + JSON.stringify(authResult));
-  }
-
-  onRequestRedirectedCallback(request: Want): void {
-    let wantInfo: Want = {
-      deviceId: '',
-      bundleName: 'com.example.accountjsdemo',
-      action: 'ohos.want.action.viewData',
-      entities: ['entity.system.default'],
-    }
-    this.context.startAbility(wantInfo).then(() => {
-      console.info('startAbility successfully');
-    }).catch((err: BusinessError) => {
-      console.error(`startAbility err: code is ${err.code}, message is ${err.message}`);
-    })
-  }
-
-  aboutToAppear(): void {
-    try {
-      appAccountManager.auth('LiSi', 'com.example.accountjsdemo', 'getSocialData', {
-        onResult: this.onResultCallback,
-        onRequestRedirected: this.onRequestRedirectedCallback
-      });
-    } catch (e) {
-      const err = e as BusinessError;
-      console.error(`auth exception: code is ${err.code}, message is ${err.message}`);
-    }
-  }
-
-  build() {}
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { Want, common } from '@kit.AbilityKit';
-
-@Entry
-@Component
-struct Index {
-  context = this.getUIContext().getHostContext() as common.UIAbilityContext; // UIAbilityContext
-
-  onResultCallback(code: number, authResult?: appAccount.AuthResult): void {
-    console.info('resultCode: ' + code);
-    console.info('authResult: ' + JSON.stringify(authResult));
-  }
-
-  onRequestRedirectedCallback(request: Want): void {
-    let wantInfo: Want = {
-      deviceId: '',
-      bundleName: 'com.example.accountjsdemo',
-      action: 'ohos.want.action.viewData',
-      entities: ['entity.system.default'],
-    }
-    this.context.startAbility(wantInfo).then(() => {
-      console.info('startAbility successfully');
-    }).catch((err: BusinessError) => {
-      console.error(`startAbility err: code is ${err.code}, message is ${err.message}`);
-    })
-  }
-
-  aboutToAppear(): void {
-    let options: Record<string, Object> = {
-      'password': 'xxxx',
-    };
-    try {
-      appAccountManager.auth('LiSi', 'com.example.accountjsdemo', 'getSocialData', options, {
-        onResult: this.onResultCallback,
-        onRequestRedirected: this.onRequestRedirectedCallback
-      });
-    } catch (e) {
-      const err = e as BusinessError;
-      console.error(`auth exception: code is ${err.code}, message is ${err.message}`);
-    }
-  }
-
-  build() {}
-}
-```
 
 ## authenticate
 
@@ -237,47 +103,6 @@ authenticate(
 | options | { [key: string]: any } | 是 | 鉴权所需要的可选项。 |
 | callback | [AuthenticatorCallback](arkts-basicservices-appaccount-authenticatorcallback-i.md) | 是 | 认证器回调，用于返回鉴权结果。 |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { Want, common } from '@kit.AbilityKit';
-
-@Entry
-@Component
-struct Index {
-  context = this.getUIContext().getHostContext() as common.UIAbilityContext; // UIAbilityContext
-
-  onResultCallback(code: number, result: Record<string, Object>): void {
-    console.info('resultCode: ' + code);
-    console.info('result: ' + JSON.stringify(result));
-  }
-
-  onRequestRedirectedCallback(request: Want): void {
-    let wantInfo: Want = {
-      deviceId: '',
-      bundleName: 'com.example.accountjsdemo',
-      action: 'ohos.want.action.viewData',
-      entities: ['entity.system.default'],
-    }
-    this.context.startAbility(wantInfo).then(() => {
-      console.info('startAbility successfully');
-    }).catch((err: BusinessError) => {
-      console.error(`startAbility err: code is ${err.code}, message is ${err.message}`);
-    })
-  }
-
-  aboutToAppear(): void {
-    appAccountManager.authenticate('LiSi', 'com.example.accountjsdemo', 'getSocialData', {}, {
-      onResult: this.onResultCallback,
-      onRequestRedirected: this.onRequestRedirectedCallback
-    });
-  }
-
-  build() {}
-}
-```
-
 ## checkAccountLabels
 
 ```TypeScript
@@ -301,6 +126,7 @@ checkAccountLabels(name: string, labels: Array<string>, callback: AuthCallback):
 **示例**
 
 接口需组合使用，请查看[getRemoteObject](#getremoteobject)中的示例。
+- simpleType:
 
 ## checkAccountRemovable
 
@@ -324,6 +150,7 @@ checkAccountRemovable(name: string, callback: AuthCallback): void
 **示例**
 
 接口需组合使用，请查看[getRemoteObject](#getremoteobject)中的示例。
+- simpleType:
 
 ## createAccountImplicitly
 
@@ -344,98 +171,6 @@ createAccountImplicitly(options: CreateAccountImplicitlyOptions, callback: AuthC
 | options | [CreateAccountImplicitlyOptions](arkts-basicservices-appaccount-createaccountimplicitlyoptions-i.md) | 是 | 隐式创建账号的选项。 |
 | callback | [AuthCallback](arkts-basicservices-appaccount-authcallback-i.md) | 是 | 认证器回调对象，用于返回创建结果。 |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { Want, common } from '@kit.AbilityKit';
-
-@Entry
-@Component
-struct Index {
-  context = this.getUIContext().getHostContext() as common.UIAbilityContext; // UIAbilityContext
-
-  onResultCallback(code: number, result?: appAccount.AuthResult): void {
-    console.info('resultCode: ' + code);
-    console.info('result: ' + JSON.stringify(result));
-  }
-
-  onRequestRedirectedCallback(request: Want): void {
-    let wantInfo: Want = {
-      deviceId: '',
-      bundleName: 'com.example.accountjsdemo',
-      action: 'ohos.want.action.viewData',
-      entities: ['entity.system.default'],
-    }
-    this.context.startAbility(wantInfo).then(() => {
-      console.info('startAbility successfully');
-    }).catch((err: BusinessError) => {
-      console.error(`startAbility err: code is ${err.code}, message is ${err.message}`);
-    })
-  }
-
-  aboutToAppear(): void {
-    try {
-      appAccountManager.createAccountImplicitly('com.example.accountjsdemo', {
-        onResult: this.onResultCallback,
-        onRequestRedirected: this.onRequestRedirectedCallback
-      });
-    } catch (e) {
-      const err = e as BusinessError;
-      console.error(`createAccountImplicitly exception: code is ${err.code}, message is ${err.message}`);
-    }
-  }
-  build() {}
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { Want, common } from '@kit.AbilityKit';
-
-@Entry
-@Component
-struct Index {
-  context = this.getUIContext().getHostContext() as common.UIAbilityContext; // UIAbilityContext
-
-  onResultCallback(code: number, result?: appAccount.AuthResult): void {
-    console.info('resultCode: ' + code);
-    console.info('result: ' + JSON.stringify(result));
-  }
-
-  onRequestRedirectedCallback(request: Want): void {
-    let wantInfo: Want = {
-      deviceId: '',
-      bundleName: 'com.example.accountjsdemo',
-      action: 'ohos.want.action.viewData',
-      entities: ['entity.system.default'],
-    }
-    this.context.startAbility(wantInfo).then(() => {
-      console.info('startAbility successfully');
-    }).catch((err: BusinessError) => {
-      console.error(`startAbility err: code is ${err.code}, message is ${err.message}`);
-    })
-  }
-
-  aboutToAppear(): void {
-    let options: appAccount.CreateAccountImplicitlyOptions = {
-      authType: 'getSocialData',
-      requiredLabels: ['student']
-    };
-    try {
-      appAccountManager.createAccountImplicitly('com.example.accountjsdemo', options, {
-        onResult: this.onResultCallback,
-        onRequestRedirected: this.onRequestRedirectedCallback
-      });
-    } catch (e) {
-      const err = e as BusinessError;
-      console.error(`createAccountImplicitly exception: code is ${err.code}, message is ${err.message}`);
-    }
-  }
-  build() {}
-}
-```
-
 ## getRemoteObject
 
 ```TypeScript
@@ -452,7 +187,7 @@ getRemoteObject(): rpc.RemoteObject
 
 | 类型 | 说明 |
 | --- | --- |
-| rpc.RemoteObject | 认证器Authenticator的远程对象。用于跨进程通信。 |
+| [rpc.RemoteObject](../../apis-ipc-kit/arkts-apis/arkts-ipc-rpc-remoteobject-c.md) | 认证器Authenticator的远程对象。用于跨进程通信。 |
 
 **示例**
 
@@ -549,6 +284,7 @@ setProperties(options: SetPropertiesOptions, callback: AuthCallback): void
 **示例**
 
 接口需组合使用，请查看[getRemoteObject](#getremoteobject)中的示例。
+- simpleType:
 
 ## verifyCredential
 
@@ -573,3 +309,4 @@ verifyCredential(name: string, options: VerifyCredentialOptions, callback: AuthC
 **示例**
 
 接口需组合使用，请查看[getRemoteObject](#getremoteobject)中的示例。
+- simpleType:

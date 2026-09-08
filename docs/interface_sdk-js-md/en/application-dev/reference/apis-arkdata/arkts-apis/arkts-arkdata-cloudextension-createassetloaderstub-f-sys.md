@@ -30,7 +30,7 @@ Creates a RemoteObject instance based on an AssetLoader instance. The system use
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;rpc.RemoteObject&gt; | Promise used to return the rpc.RemoteObject instance of AssetLoader. |
+| Promise&lt;[rpc.RemoteObject](../../apis-ipc-kit/arkts-apis/arkts-ipc-rpc-remoteobject-c.md)&gt; | Promise used to return the rpc.RemoteObject instance of AssetLoader. |
 
 **Examples**
 

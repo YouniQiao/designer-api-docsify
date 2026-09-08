@@ -2,7 +2,7 @@
 
 用户操作
 
-@enum { number }
+@enum { int }
 
 **起始版本：** 20
 

@@ -40,7 +40,7 @@ sourceType?: SourceType
 
 应用程序在启用录音控制器时配置的预期音频源类型。用于匹配相应的录音场景和降噪模式。
 
-**类型：** SourceType
+**类型：** [SourceType](arkts-audio-audio-sourcetype-e.md)
 
 **起始版本：** 26.0.0
 

@@ -20,7 +20,7 @@ wordBreak?: WordBreak
 
 Set the word break type.
 
-**Type:** WordBreak
+**Type:** [WordBreak](arkts-arkui-wordbreak-e.md)
 
 **Since:** 26.1.0
 

@@ -97,7 +97,7 @@ button: MouseButton
 
 Mouse button.
 
-**Type:** MouseButton
+**Type:** [MouseButton](../arkts-apis/arkts-arkui-mousebutton-e.md)
 
 **Since:** 8
 
@@ -223,7 +223,7 @@ pressedButtons?: MouseButton[]
 
 Set of buttons being pressed.
 
-**Type:** MouseButton[]
+**Type:** [MouseButton](../arkts-apis/arkts-arkui-mousebutton-e.md)[]
 
 **Since:** 15
 

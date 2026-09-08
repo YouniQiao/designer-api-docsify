@@ -35,7 +35,7 @@ up important data in advance.
 and **getDeepFactoryResetInfo**.  
 - The **ohos.permission.FORCE_FACTORY_RESET** permission is required for calling **forceFactoryReset**.  
 - During the operation, the device automatically restarts. The app status needs to be saved.  
-- **deepFactoryReset** takes a number time (1 to 4 hours depending on the device storage capacity). Ensure that the  
+- **deepFactoryReset** takes a long time (1 to 4 hours depending on the device storage capacity). Ensure that the  
 device has sufficient battery power (recommended battery level:   
 > 50%).
 - You are advised to perform the factory reset operation after clicking the confirmation button in the dialog box  

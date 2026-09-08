@@ -310,7 +310,7 @@ popupBackgroundBlurStyle(value: BlurStyle)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | BlurStyle | 是 | 设置提示弹窗的背景模糊材质。弹窗的背景模糊材质效果会对背景色[popupBackground](#popupbackground)产生影响，可通过设置属性值为NONE关闭背景模糊材质效果。 |
+| value | [BlurStyle](arkts-arkui-blurstyle-e.md) | 是 | 设置提示弹窗的背景模糊材质。弹窗的背景模糊材质效果会对背景色[popupBackground](#popupbackground)产生影响，可通过设置属性值为NONE关闭背景模糊材质效果。 |
 
 ## popupColor
 

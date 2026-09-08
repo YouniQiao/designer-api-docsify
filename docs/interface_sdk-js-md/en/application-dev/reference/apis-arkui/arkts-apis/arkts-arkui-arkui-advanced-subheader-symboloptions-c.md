@@ -70,7 +70,7 @@ For the string type, numeric string values with optional units, for example, **"
 
 Default value: system default value
 
-**Type:** number \| string \| Resource
+**Type:** number \| string \| [Resource](arkts-arkui-resource-t.md)
 
 **Since:** 12
 
@@ -94,7 +94,7 @@ For the string type, only strings of the number type are supported, for example,
 
 Default value: **FontWeight.Normal**.
 
-**Type:** number \| FontWeight \| string
+**Type:** number \| [FontWeight](arkts-arkui-fontweight-e.md) \| string
 
 **Since:** 12
 

@@ -20,7 +20,7 @@ readonly foldStatus: FoldStatus
 
 Fold state.
 
-**Type:** FoldStatus
+**Type:** [FoldStatus](arkts-camera-camera-foldstatus-e.md)
 
 **Since:** 12
 

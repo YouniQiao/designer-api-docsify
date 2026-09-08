@@ -22,7 +22,7 @@ Background blur style of the arc button.
 
 Default value: **BlurStyle.NONE**
 
-**Type:** BlurStyle
+**Type:** [BlurStyle](../arkts-components/arkts-arkui-blurstyle-e.md)
 
 **Since:** 18
 
@@ -78,7 +78,7 @@ fontFamily?: string | Resource
 
 Font family of the arc button.
 
-**Type:** string \| Resource
+**Type:** string \| [Resource](arkts-arkui-resource-t.md)
 
 **Since:** 18
 
@@ -132,7 +132,7 @@ Font style of the arc button.
 
 Default value: **FontStyle.Normal**
 
-**Type:** FontStyle
+**Type:** [FontStyle](arkts-arkui-fontstyle-e.md)
 
 **Since:** 18
 
@@ -180,7 +180,7 @@ onTouch?: Callback<TouchEvent>
 
 Callback triggered by touch actions on the arc button.
 
-**Type:** Callback&lt;TouchEvent&gt;
+**Type:** Callback&lt;[TouchEvent](../arkts-components/arkts-arkui-touchevent-i.md)&gt;
 
 **Since:** 18
 

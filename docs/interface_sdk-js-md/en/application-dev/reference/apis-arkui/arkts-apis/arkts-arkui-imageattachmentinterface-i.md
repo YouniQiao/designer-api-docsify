@@ -113,7 +113,7 @@ value: PixelMap
 
 Image data source.
 
-**Type:** PixelMap
+**Type:** [PixelMap](../arkts-components/arkts-arkui-pixelmap-t.md)
 
 **Since:** 12
 

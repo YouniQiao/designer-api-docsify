@@ -27,7 +27,7 @@ Sends an accessibility event. The event will be distributed to registered access
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | EventInfo | Yes | Accessibility event object. |
+| event | [EventInfo](arkts-accessibility-accessibility-eventinfo-c.md) | Yes | Accessibility event object. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the accessibility event is sent successfully, err is undefined; otherwise, err is an error object. |
 
 **Error codes:**
@@ -136,7 +136,7 @@ Sends an accessibility event. The event will be distributed to registered access
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | EventInfo | Yes | Accessibility event. |
+| event | [EventInfo](arkts-accessibility-accessibility-eventinfo-c.md) | Yes | Accessibility event. |
 
 **Return value:**
 

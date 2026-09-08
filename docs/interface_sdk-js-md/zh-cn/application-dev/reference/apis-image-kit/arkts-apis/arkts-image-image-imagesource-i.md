@@ -45,29 +45,6 @@ createImageRawData(): Promise<ImageRawData>
 | [7700101](../errorcode-image.md#7700101-图片源存在问题) | Bad source. |
 | [7700102](../errorcode-image.md#7700102-不支持的mime类型) | Unsupported MIME type. |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function createImageRawData(imageSourceObj: image.ImageSource) {
-  await imageSourceObj.createImageRawData().then((data: image.ImageRawData) => {
-    console.info(`createImageRawData successfully. length: ${data.buffer.byteLength}, bitPerPixel:${data.bitsPerPixel}`);
-    if (data.bitsPerPixel == 16) {
-      let array: Uint16Array = new Uint16Array();
-      let value: string = "";
-      array = new Uint16Array(data.buffer);
-      for (let i = 0; i < array.length && i < 10; i++) {
-        value += array[i] + ', ';
-      }
-      console.info(`get dng rawdata is:${value}.`);
-    }
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to create image rawData. error.code is ${error.code}, error.message is ${error.message}`);
-  });
-}
-```
-
 ## createPicture
 
 ```TypeScript
@@ -103,22 +80,6 @@ createPicture(options?: DecodingOptionsForPicture): Promise<Picture>
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
 | [7700301](../errorcode-image.md#7700301-解码失败) | Decode failed. |
 | [7700203](../errorcode-image.md#7700203-不支持的选项) | Unsupported options. For example, unsupported desiredPixelFormat causes a failure in converting an image into the desired pixel format.<br>**适用版本：** 24+ |
-
-**示例**
-
-```TypeScript
-async function CreatePicture(imageSourceObj : image.ImageSource) {
-  let options: image.DecodingOptionsForPicture = {
-    desiredAuxiliaryPictures: [image.AuxiliaryPictureType.GAINMAP] // GAINMAP为需要解码的辅助图类型。 
-  };
-  let pictureObj: image.Picture = await imageSourceObj.createPicture(options);
-  if (pictureObj != null) {
-    console.info('Succeeded in creating picture.');
-  } else {
-    console.error('Failed to create picture.');
-  }
-}
-```
 
 ## createPictureAtIndex
 
@@ -162,22 +123,6 @@ createPictureAtIndex(index: number): Promise<Picture>
 | [7700203](../errorcode-image.md#7700203-不支持的选项) | Unsupported options. For example, index is invalid. |
 | [7700301](../errorcode-image.md#7700301-解码失败) | Decoding failed. |
 
-**示例**
-
-```TypeScript
-async function CreatePictures(imageSourceObj : image.ImageSource) {
-  let frameCount: number = await imageSourceObj.getFrameCount();
-  for (let index = 0; index < frameCount; index++) {
-    try {
-      let pictureObj: image.Picture = await imageSourceObj.createPictureAtIndex(index);
-      console.info('Succeeded in creating picture for frame: ' + index);
-    } catch (e) {
-      console.error('Failed to create picture for frame: ' + index);
-    }
-  }
-}
-```
-
 ## createPixelMap
 
 ```TypeScript
@@ -214,21 +159,7 @@ createPixelMap(options?: DecodingOptions): Promise<PixelMap>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;PixelMap&gt; | Promise对象，返回PixelMap。 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function CreatePixelMap(imageSourceObj : image.ImageSource) {
-  imageSourceObj.createPixelMap().then((pixelMap: image.PixelMap) => {
-    console.info('Succeeded in creating pixelMap object through image decoding parameters.');
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to create pixelMap object through image decoding parameters, error.code ${error.code}, error.message ${error.message}`);
-  })
-}
-```
+| Promise&lt;[PixelMap](arkts-image-image-pixelmap-i.md)&gt; | Promise对象，返回PixelMap。 |
 
 ## createPixelMap
 
@@ -260,23 +191,7 @@ createPixelMap(callback: AsyncCallback<PixelMap>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;PixelMap&gt; | 是 | 回调函数，当创建PixelMap对象成功，err为undefined，data为获取到的PixelMap对象；否则为错误对象。 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function CreatePixelMap(imageSourceObj : image.ImageSource) {
-  imageSourceObj.createPixelMap((err: BusinessError, pixelMap: image.PixelMap) => {
-    if (err) {
-      console.error(`Failed to create pixelMap.code is ${err.code},message is ${err.message}`);
-    } else {
-      console.info('Succeeded in creating pixelMap object.');
-    }
-  })
-}
-```
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[PixelMap](arkts-image-image-pixelmap-i.md)&gt; | 是 | 回调函数，当创建PixelMap对象成功，err为undefined，data为获取到的PixelMap对象；否则为错误对象。 |
 
 ## createPixelMap
 
@@ -309,34 +224,7 @@ createPixelMap(options: DecodingOptions, callback: AsyncCallback<PixelMap>): voi
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | options | [DecodingOptions](arkts-image-image-decodingoptions-i.md) | 是 | 解码参数。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;PixelMap&gt; | 是 | 回调函数，当创建PixelMap对象成功，err为undefined，data为获取到的PixelMap对象；否则为错误对象。 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function CreatePixelMap(imageSourceObj : image.ImageSource) {
-  let decodingOptions: image.DecodingOptions = {
-    sampleSize: 1,
-    editable: true,
-    desiredSize: { width: 1, height: 2 },
-    rotate: 10,
-    desiredPixelFormat: image.PixelMapFormat.RGBA_8888,
-    desiredRegion: { size: { width: 1, height: 2 }, x: 0, y: 0 },
-    // 若解码接口同时传入了desiredSize参数与desiredRegion参数，需进一步传入cropAndScaleStrategy参数指定缩放与裁剪的先后顺序，推荐设置CROP_FIRST。
-    cropAndScaleStrategy: image.CropAndScaleStrategy.CROP_FIRST,
-    index: 0
-  };
-  imageSourceObj.createPixelMap(decodingOptions, (err: BusinessError, pixelMap: image.PixelMap) => {
-    if (err) {
-      console.error(`Failed to create pixelMap.code is ${err.code},message is ${err.message}`);
-    } else {
-      console.info('Succeeded in creating pixelMap object.');
-    }
-  })
-}
-```
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[PixelMap](arkts-image-image-pixelmap-i.md)&gt; | 是 | 回调函数，当创建PixelMap对象成功，err为undefined，data为获取到的PixelMap对象；否则为错误对象。 |
 
 ## createPixelMapList
 
@@ -373,7 +261,7 @@ createPixelMapList(options?: DecodingOptions): Promise<Array<PixelMap>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;PixelMap&gt;&gt; | 异步返回PixelMap数组。 |
+| Promise&lt;Array&lt;[PixelMap](arkts-image-image-pixelmap-i.md)&gt;&gt; | 异步返回PixelMap数组。 |
 
 **错误码：**
 
@@ -392,28 +280,6 @@ createPixelMapList(options?: DecodingOptions): Promise<Array<PixelMap>>
 | [62980137](../errorcode-image.md#62980137-图片操作无效) | Invalid media operation. |
 | [62980173](../errorcode-image.md#62980173-dma内存空间错误) | The DMA memory does not exist. |
 | [62980174](../errorcode-image.md#62980174-dma内存数据异常) | The DMA memory data is abnormal. |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function CreatePixelMapList(imageSourceObj : image.ImageSource) {
-  let decodeOpts: image.DecodingOptions = {
-    sampleSize: 1,
-    editable: true,
-    desiredSize: { width: 198, height: 202 },
-    rotate: 0,
-    desiredPixelFormat: image.PixelMapFormat.RGBA_8888,
-    index: 0,
-  };
-  imageSourceObj.createPixelMapList(decodeOpts).then((pixelMapList: Array<image.PixelMap>) => {
-    console.info('Succeeded in creating pixelMapList object.');
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to create pixelMapList object, error code is ${err}`);
-  })
-}
-```
 
 ## createPixelMapList
 
@@ -443,7 +309,7 @@ createPixelMapList(callback: AsyncCallback<Array<PixelMap>>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;PixelMap&gt;&gt; | 是 | 回调函数，当创建PixelMap对象数组成功，err为undefined，data为获取到的PixelMap对象数组；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[PixelMap](arkts-image-image-pixelmap-i.md)&gt;&gt; | 是 | 回调函数，当创建PixelMap对象数组成功，err为undefined，data为获取到的PixelMap对象数组；否则为错误对象。 |
 
 **错误码：**
 
@@ -462,22 +328,6 @@ createPixelMapList(callback: AsyncCallback<Array<PixelMap>>): void
 | [62980137](../errorcode-image.md#62980137-图片操作无效) | Invalid media operation. |
 | [62980173](../errorcode-image.md#62980173-dma内存空间错误) | The DMA memory does not exist. |
 | [62980174](../errorcode-image.md#62980174-dma内存数据异常) | The DMA memory data is abnormal. |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function CreatePixelMapList(imageSourceObj : image.ImageSource) {
-  imageSourceObj.createPixelMapList((err: BusinessError, pixelMapList: Array<image.PixelMap>) => {
-    if (err) {
-      console.error(`Failed to create pixelMapList object, error code is ${err}`);
-    } else {
-      console.info('Succeeded in creating pixelMapList object.');
-    }
-  })
-}
-```
 
 ## createPixelMapList
 
@@ -508,7 +358,7 @@ createPixelMapList(options: DecodingOptions, callback: AsyncCallback<Array<Pixel
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | options | [DecodingOptions](arkts-image-image-decodingoptions-i.md) | 是 | 解码参数。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;PixelMap&gt;&gt; | 是 | 回调函数，当创建PixelMap对象数组成功，err为undefined，data为获取到的PixelMap对象数组；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[PixelMap](arkts-image-image-pixelmap-i.md)&gt;&gt; | 是 | 回调函数，当创建PixelMap对象数组成功，err为undefined，data为获取到的PixelMap对象数组；否则为错误对象。 |
 
 **错误码：**
 
@@ -527,30 +377,6 @@ createPixelMapList(options: DecodingOptions, callback: AsyncCallback<Array<Pixel
 | [62980137](../errorcode-image.md#62980137-图片操作无效) | Invalid media operation. |
 | [62980173](../errorcode-image.md#62980173-dma内存空间错误) | The DMA memory does not exist. |
 | [62980174](../errorcode-image.md#62980174-dma内存数据异常) | The DMA memory data is abnormal. |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function CreatePixelMapList(imageSourceObj : image.ImageSource) {
-  let decodeOpts: image.DecodingOptions = {
-    sampleSize: 1,
-    editable: true,
-    desiredSize: { width: 198, height: 202 },
-    rotate: 0,
-    desiredPixelFormat: image.PixelMapFormat.RGBA_8888,
-    index: 0,
-  };
-  imageSourceObj.createPixelMapList(decodeOpts, (err: BusinessError, pixelMapList: Array<image.PixelMap>) => {
-    if (err) {
-      console.error(`Failed to create pixelMapList object, error code is ${err}`);
-    } else {
-      console.info('Succeeded in creating pixelMapList object.');
-    }
-  })
-}
-```
 
 ## createPixelMapSync
 
@@ -585,34 +411,7 @@ createPixelMapSync(options?: DecodingOptions): PixelMap
 
 | 类型 | 说明 |
 | --- | --- |
-| PixelMap | 用于同步返回创建结果。 |
-
-**示例**
-
-```TypeScript
-function CreatePixelMapSync(context : Context) {
-  // 此处'test.jpg'仅作示例，请开发者自行替换，否则imageSource创建失败会导致后续无法正常执行。
-  let filePath: string = context.filesDir + "/test.jpg";
-  let imageSource = image.createImageSource(filePath);
-  let decodingOptions: image.DecodingOptions = {
-    sampleSize: 1,
-    editable: true,
-    desiredSize: { width: 1, height: 2 },
-    rotate: 10,
-    desiredPixelFormat: image.PixelMapFormat.RGBA_8888,
-    desiredRegion: { size: { width: 1, height: 2 }, x: 0, y: 0 },
-    // 若解码接口同时传入了desiredSize参数与desiredRegion参数，需进一步传入cropAndScaleStrategy参数指定缩放与裁剪的先后顺序，推荐设置CROP_FIRST。
-    cropAndScaleStrategy: image.CropAndScaleStrategy.CROP_FIRST,
-    index: 0
-  };
-  let pixelmap = imageSource.createPixelMapSync(decodingOptions);
-  if (pixelmap != undefined) {
-    console.info('Succeeded in creating pixelMap object.');
-  } else {
-    console.error('Failed to create pixelMap.');
-  }
-}
-```
+| [PixelMap](arkts-image-image-pixelmap-i.md) | 用于同步返回创建结果。 |
 
 ## createPixelMapUsingAllocator
 
@@ -645,7 +444,7 @@ createPixelMapUsingAllocator(options?: DecodingOptions, allocatorType?: Allocato
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;PixelMap&gt; | Promise对象，返回PixelMap。 |
+| Promise&lt;[PixelMap](arkts-image-image-pixelmap-i.md)&gt; | Promise对象，返回PixelMap。 |
 
 **错误码：**
 
@@ -659,32 +458,6 @@ createPixelMapUsingAllocator(options?: DecodingOptions, allocatorType?: Allocato
 | [7700203](../errorcode-image.md#7700203-不支持的选项) | Unsupported options, e.g, cannot convert image into desired pixel format. |
 | [7700301](../errorcode-image.md#7700301-解码失败) | Failed to decode image. |
 | [7700302](../errorcode-image.md#7700302-内存分配失败) | Failed to allocate memory. |
-
-**示例**
-
-```TypeScript
-async function CreatePixelMapUsingAllocator(context : Context) {
-  // 此处'test.jpg'仅作示例，请开发者自行替换，否则imageSource创建失败会导致后续无法正常执行。
-  let filePath: string = context.filesDir + "/test.jpg";
-  let imageSource = image.createImageSource(filePath);
-  let decodingOptions: image.DecodingOptions = {
-    editable: true,
-    desiredSize: { width: 3072, height: 4096 },
-    rotate: 10,
-    desiredPixelFormat: image.PixelMapFormat.RGBA_8888,
-    desiredRegion: { size: { width: 3072, height: 4096 }, x: 0, y: 0 },
-    // 若解码接口同时传入了desiredSize参数与desiredRegion参数，需进一步传入cropAndScaleStrategy参数指定缩放与裁剪的先后顺序，推荐设置CROP_FIRST。
-    cropAndScaleStrategy: image.CropAndScaleStrategy.CROP_FIRST,
-    index: 0
-  };
-  let pixelmap = imageSource.createPixelMapUsingAllocator(decodingOptions, image.AllocatorType.AUTO);
-  if (pixelmap != undefined) {
-    console.info('Succeeded in creating pixelMap object.');
-  } else {
-    console.error('Failed to create pixelMap.');
-  }
-}
-```
 
 ## createPixelMapUsingAllocatorSync
 
@@ -718,7 +491,7 @@ createPixelMapUsingAllocatorSync(options?: DecodingOptions, allocatorType?: Allo
 
 | 类型 | 说明 |
 | --- | --- |
-| PixelMap | 用于同步返回创建结果。 |
+| [PixelMap](arkts-image-image-pixelmap-i.md) | 用于同步返回创建结果。 |
 
 **错误码：**
 
@@ -732,32 +505,6 @@ createPixelMapUsingAllocatorSync(options?: DecodingOptions, allocatorType?: Allo
 | [7700203](../errorcode-image.md#7700203-不支持的选项) | Unsupported options, e.g, cannot convert image into desired pixel format. |
 | [7700301](../errorcode-image.md#7700301-解码失败) | Failed to decode image. |
 | [7700302](../errorcode-image.md#7700302-内存分配失败) | Failed to allocate memory. |
-
-**示例**
-
-```TypeScript
-async function CreatePixelMapUsingAllocator(context : Context) {
-  // 此处'test.jpg'仅作示例，请开发者自行替换，否则imageSource创建失败会导致后续无法正常执行。
-  let filePath: string = context.filesDir + "/test.jpg";
-  let imageSource = image.createImageSource(filePath);
-  let decodingOptions: image.DecodingOptions = {
-    editable: true,
-    desiredSize: { width: 3072, height: 4096 },
-    rotate: 10,
-    desiredPixelFormat: image.PixelMapFormat.RGBA_8888,
-    desiredRegion: { size: { width: 3072, height: 4096 }, x: 0, y: 0 },
-    // 若解码接口同时传入了desiredSize参数与desiredRegion参数，需进一步传入cropAndScaleStrategy参数指定缩放与裁剪的先后顺序，推荐设置CROP_FIRST。
-    cropAndScaleStrategy: image.CropAndScaleStrategy.CROP_FIRST,
-    index: 0
-  };
-  let pixelmap = imageSource.createPixelMapUsingAllocatorSync(decodingOptions, image.AllocatorType.AUTO);
-  if (pixelmap != undefined) {
-    console.info('Succeeded in creating pixelMap object.');
-  } else {
-    console.error('Failed to create pixelMap.');
-  }
-}
-```
 
 ## createThumbnail
 
@@ -795,7 +542,7 @@ createThumbnail(options?: DecodingOptionsForThumbnail): Promise<PixelMap | undef
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;PixelMap \| undefined&gt; | Promise对象，返回PixelMap。 |
+| Promise&lt;[PixelMap](arkts-image-image-pixelmap-i.md) \| undefined&gt; | Promise对象，返回PixelMap。 |
 
 **错误码：**
 
@@ -807,42 +554,6 @@ createThumbnail(options?: DecodingOptionsForThumbnail): Promise<PixelMap | undef
 | [7700301](../errorcode-image.md#7700301-解码失败) | Decode failed. |
 | [7700303](../errorcode-image.md#7700303-图片不包含缩略图数据) | Image does not carry thumbnail data. |
 | [7700305](../errorcode-image.md#7700305-缩略图生成失败) | Thumbnail generation failed. |
-
-**示例**
-
-```TypeScript
-async function CreateThumbnail(imageSource: image.ImageSource): Promise<image.PixelMap | undefined> {
-  try {
-    if (!imageSource) {
-      console.error('CreateThumbnail: imageSource is null or undefined');
-      return undefined;
-    }
-    const imageInfo = await imageSource.getImageInfo();
-    const supportedMimeTypes = ['image/jpeg', 'image/heif', 'image/heic'];
-    if (!supportedMimeTypes.includes(imageInfo.mimeType)) {
-      console.error(`CreateThumbnail: Unsupported MIME type: ${imageInfo.mimeType}`);
-      return undefined;
-    }
-
-    const decodingOptions: image.DecodingOptionsForThumbnail = {
-      generateThumbnailIfAbsent: true,
-      maxGeneratedPixelDimension: 200,
-    };
-
-    const pixelmap = await imageSource.createThumbnail(decodingOptions);
-    if (pixelmap) {
-      console.info('Succeeded in creating thumbnail pixelMap object.');
-      return pixelmap;
-    } else {
-      console.error('Failed to create thumbnail pixelMap.');
-      return undefined;
-    }
-  } catch (error) {
-    console.error('CreateThumbnail error:', JSON.stringify(error));
-    return undefined;
-  }
-}
-```
 
 ## createThumbnailSync
 
@@ -881,7 +592,7 @@ createThumbnailSync(options?: DecodingOptionsForThumbnail): PixelMap | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| PixelMap \| undefined | 用于同步返回创建结果。 |
+| [PixelMap](arkts-image-image-pixelmap-i.md) \| undefined | 用于同步返回创建结果。 |
 
 **错误码：**
 
@@ -893,43 +604,6 @@ createThumbnailSync(options?: DecodingOptionsForThumbnail): PixelMap | undefined
 | [7700301](../errorcode-image.md#7700301-解码失败) | Decode failed. |
 | [7700303](../errorcode-image.md#7700303-图片不包含缩略图数据) | Image does not carry thumbnail data. |
 | [7700305](../errorcode-image.md#7700305-缩略图生成失败) | Thumbnail generation failed. |
-
-**示例**
-
-```TypeScript
-async function CreateThumbnailSync(imageSource: image.ImageSource): Promise<image.PixelMap | undefined> {
-  try {
-    if (!imageSource) {
-      console.error('CreateThumbnailSync: imageSource is null or undefined');
-      return undefined;
-    }
-    const imageInfo = await imageSource.getImageInfo();
-    const supportedMimeTypes = ['image/jpeg', 'image/heif', 'image/heic'];
-    if (!supportedMimeTypes.includes(imageInfo.mimeType)) {
-      console.error(`CreateThumbnailSync: Unsupported MIME type: ${imageInfo.mimeType}`);
-      return undefined;
-    }
-
-    const decodingOptionsForThumbnail: image.DecodingOptionsForThumbnail = {
-      generateThumbnailIfAbsent: true,
-      maxGeneratedPixelDimension: 200,
-    };
-
-    const pixelmap = imageSource.createThumbnailSync(decodingOptionsForThumbnail);
-
-    if (pixelmap) {
-      console.info('Succeeded in creating thumbnail pixelMap object.');
-      return pixelmap;
-    } else {
-      console.error('Failed to create thumbnail pixelMap.');
-      return undefined;
-    }
-  } catch (error) {
-    console.error('CreateThumbnailSync error:', JSON.stringify(error));
-    return undefined;
-  }
-}
-```
 
 ## getDelayTimeList
 
@@ -962,20 +636,6 @@ getDelayTimeList(): Promise<Array<number>>
 | [62980122](../errorcode-image.md#62980122-解码图片头异常) | Failed to decode the image header. |
 | [62980149](../errorcode-image.md#62980149-图片参数无效) | Invalid MIME type for the image source. |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function GetDelayTimeList(imageSourceObj : image.ImageSource) {
-  imageSourceObj.getDelayTimeList().then((delayTimes: Array<number>) => {
-    console.info('Succeeded in getting delayTimes object.');
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to get delayTimes object.code is ${err.code},message is ${err.message}`);
-  })
-}
-```
-
 ## getDelayTimeList
 
 ```TypeScript
@@ -1007,22 +667,6 @@ getDelayTimeList(callback: AsyncCallback<Array<number>>): void
 | [62980122](../errorcode-image.md#62980122-解码图片头异常) | Failed to decode the image header. |
 | [62980149](../errorcode-image.md#62980149-图片参数无效) | Invalid MIME type for the image source. |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function GetDelayTimeList(imageSourceObj : image.ImageSource) {
-  imageSourceObj.getDelayTimeList((err: BusinessError, delayTimes: Array<number>) => {
-    if (err) {
-      console.error(`Failed to get delayTimes object.code is ${err.code},message is ${err.message}`);
-    } else {
-      console.info('Succeeded in getting delayTimes object.');
-    }
-  })
-}
-```
-
 ## getDisposalTypeList
 
 ```TypeScript
@@ -1049,20 +693,6 @@ getDisposalTypeList(): Promise<Array<number>>
 | [62980101](../errorcode-image.md#62980101-图片输入数据错误) | The image data is abnormal. |
 | [62980137](../errorcode-image.md#62980137-图片操作无效) | Invalid media operation. |
 | [62980149](../errorcode-image.md#62980149-图片参数无效) | Invalid MIME type for the image source. |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function GetDisposalTypeList(imageSourceObj : image.ImageSource) {
-  imageSourceObj.getDisposalTypeList().then((disposalTypes: Array<number>) => {
-    console.info('Succeeded in getting disposalTypes object.');
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to get disposalTypes object.code ${err.code},message is ${err.message}`);
-  })
-}
-```
 
 ## getFrameCount
 
@@ -1096,20 +726,6 @@ getFrameCount(): Promise<number>
 | [62980122](../errorcode-image.md#62980122-解码图片头异常) | Failed to decode the image header. |
 | [62980137](../errorcode-image.md#62980137-图片操作无效) | Invalid media operation. |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function GetFrameCount(imageSourceObj : image.ImageSource) {
-  imageSourceObj.getFrameCount().then((frameCount: number) => {
-    console.info('Succeeded in getting frame count.');
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to get frame count.code is ${err.code},message is ${err.message}`);
-  })
-}
-```
-
 ## getFrameCount
 
 ```TypeScript
@@ -1142,22 +758,6 @@ getFrameCount(callback: AsyncCallback<number>): void
 | [62980122](../errorcode-image.md#62980122-解码图片头异常) | Failed to decode the image header. |
 | [62980137](../errorcode-image.md#62980137-图片操作无效) | Invalid media operation. |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function GetFrameCount(imageSourceObj : image.ImageSource) {
-  imageSourceObj.getFrameCount((err: BusinessError, frameCount: number) => {
-    if (err) {
-      console.error(`Failed to get frame count.code is ${err.code},message is ${err.message}`);
-    } else {
-      console.info('Succeeded in getting frame count.');
-    }
-  })
-}
-```
-
 ## getImageInfo
 
 ```TypeScript
@@ -1181,22 +781,6 @@ getImageInfo(index: number, callback: AsyncCallback<ImageInfo>): void
 | index | number | 是 | 创建ImageSource时的序号。默认值为0，表示第一张图片。当取值为N时，表示第N+1张图片。单帧图片场景中index取值只能为0，动图等多帧图片场景中index的取值范围为：[0, (帧数-1)]。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ImageInfo](arkts-image-image-imageinfo-i.md)&gt; | 是 | 回调函数。当获取图片信息成功，err为undefined，data为获取到的图片信息；否则为错误对象。 |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function GetImageInfo(imageSourceObj : image.ImageSource) {
-  imageSourceObj.getImageInfo(0, (error: BusinessError, imageInfo: image.ImageInfo) => {
-    if (error) {
-      console.error(`Failed to obtain the image information.code is ${error.code}, message is ${error.message}`);
-    } else {
-      console.info('Succeeded in obtaining the image information.');
-    }
-  })
-}
-```
-
 ## getImageInfo
 
 ```TypeScript
@@ -1218,36 +802,6 @@ getImageInfo(callback: AsyncCallback<ImageInfo>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ImageInfo](arkts-image-image-imageinfo-i.md)&gt; | 是 | 回调函数。当获取图片信息成功，err为undefined，data为获取到的图片信息；否则为错误对象。 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function GetImageInfo(imageSourceObj : image.ImageSource) {
-  imageSourceObj.getImageInfo((err: BusinessError, imageInfo: image.ImageInfo) => {
-    if (err) {
-      console.error(`Failed to obtain the image information.code is ${err.code}, message is ${err.message}`);
-    } else {
-      console.info('Succeeded in obtaining the image information.');
-    }
-  })
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function getImageInfo(pixelMap: image.PixelMap) {
-  pixelMap.getImageInfo((err: BusinessError, imageInfo: image.ImageInfo) => {
-    if (err) {
-      console.error(`Failed to obtain information of the PixelMap. Code: ${err.code}, message: ${err.message}`);
-      return;
-    }
-    console.info(`Succeeded in obtaining information of the PixelMap with size ${imageInfo.size} and pixel format ${imageInfo.pixelFormat}.`);
-  });
-}
-```
 
 ## getImageInfo
 
@@ -1277,21 +831,6 @@ getImageInfo(index?: number): Promise<ImageInfo>
 | --- | --- |
 | Promise&lt;[ImageInfo](arkts-image-image-imageinfo-i.md)&gt; | Promise对象，返回获取到的图片信息。 |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function GetImageInfo(imageSourceObj : image.ImageSource) {
-  imageSourceObj.getImageInfo(0)
-    .then((imageInfo: image.ImageInfo) => {
-      console.info('Succeeded in obtaining the image information.');
-    }).catch((error: BusinessError) => {
-      console.error(`Failed to obtain the image information.code is ${error.code}, message is ${error.message}`);
-    })
-}
-```
-
 ## getImageInfoSync
 
 ```TypeScript
@@ -1320,24 +859,6 @@ getImageInfoSync(index?: number): ImageInfo
 | 类型 | 说明 |
 | --- | --- |
 | [ImageInfo](arkts-image-image-imageinfo-i.md) | 同步返回获取到的图片信息。 |
-
-**示例**
-
-```TypeScript
-function GetImageInfoSync(context : Context) {
-  // 此处'test.jpg'仅作示例，请开发者自行替换，否则imageSource创建失败会导致后续无法正常执行。
-  let filePath: string = context.filesDir + "/test.jpg";
-  let imageSource = image.createImageSource(filePath);
-  let imageInfo = imageSource.getImageInfoSync(0);
-  if (imageInfo == undefined) {
-    console.error('Failed to obtain the image information.');
-  } else {
-    console.info('Succeeded in obtaining the image information.');
-    console.info('imageInfo.size.height:' + imageInfo.size.height);
-    console.info('imageInfo.size.width:' + imageInfo.size.width);
-  }
-}
-```
 
 ## getImageProperties
 
@@ -1374,27 +895,6 @@ getImageProperties(key: Array<PropertyKey>): Promise<Record<PropertyKey, string|
 | [62980110](../errorcode-image.md#62980110-图片源数据错误) | The image source data is incorrect. |
 | [62980113](../errorcode-image.md#62980113-图片未知格式) | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
 | [62980116](../errorcode-image.md#62980116-解码失败) | Failed to decode the image. |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function GetImageProperties(imageSourceObj : image.ImageSource) {
-  let key = [image.PropertyKey.IMAGE_WIDTH, image.PropertyKey.IMAGE_LENGTH];
-  imageSourceObj.getImageProperties(key).then((data) => {
-    console.info(JSON.stringify(data));
-  }).catch((err: BusinessError | BusinessError[]) => {
-    if (Array.isArray(err)) {
-      (err as BusinessError[]).forEach(e => {
-        console.error(`Failed to get the properties, error.code ${e.code}, error.message ${e.message}`);
-      });
-    } else {
-      console.error(`Failed to get the properties, error.code ${err.code}, error.message ${err.message}`);
-    }
-  });
-}
-```
 
 ## getImageProperty
 
@@ -1440,22 +940,6 @@ getImageProperty(key: PropertyKey, options?: ImagePropertyOptions): Promise<stri
 | [62980123](../errorcode-image.md#62980123-图片不支持exif解码) | The image does not support EXIF decoding. |
 | [62980135](../errorcode-image.md#62980135-图片属性值无效) | The EXIF value is invalid. |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function GetImageProperty(imageSourceObj : image.ImageSource) {
-  let options: image.ImagePropertyOptions = { index: 0, defaultValue: '9999' }
-  imageSourceObj.getImageProperty(image.PropertyKey.BITS_PER_SAMPLE, options)
-    .then((data: string) => {
-      console.info('Succeeded in getting the value of the specified attribute key of the image.');
-    }).catch((error: BusinessError) => {
-    console.error(`Failed to get the value of the specified attribute key of the image, error.code ${error.code}, error.message ${error.message}`);
-  })
-}
-```
-
 ## getImageProperty
 
 ```TypeScript
@@ -1493,21 +977,6 @@ getImageProperty(key: string, options?: GetImagePropertyOptions): Promise<string
 | --- | --- |
 | Promise&lt;string&gt; | Promise对象，返回图片属性值，如获取失败则返回属性默认值。 |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function GetImageProperty(imageSourceObj : image.ImageSource) {
-  imageSourceObj.getImageProperty("BitsPerSample")
-    .then((data: string) => {
-      console.info('Succeeded in getting the value of the specified attribute key of the image.');
-    }).catch((error: BusinessError) => {
-    console.error(`Failed to get the value of the specified attribute key of the image, error.code ${error.code}, error.message ${error.message}`);
-  })
-}
-```
-
 ## getImageProperty
 
 ```TypeScript
@@ -1538,22 +1007,6 @@ getImageProperty(key: string, callback: AsyncCallback<string>): void
 | --- | --- | --- | --- |
 | key | string | 是 | 图片属性名。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数，当获取图片属性值成功，err为undefined，data为获取到的图片属性值；否则为错误对象。 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function GetImageProperty(imageSourceObj : image.ImageSource) {
-  imageSourceObj.getImageProperty("BitsPerSample", (error: BusinessError, data: string) => {
-    if (error) {
-      console.error('Failed to get the value of the specified attribute key of the image.');
-    } else {
-      console.info('Succeeded in getting the value of the specified attribute key of the image.');
-    }
-  })
-}
-```
 
 ## getImageProperty
 
@@ -1586,23 +1039,6 @@ getImageProperty(key: string, options: GetImagePropertyOptions, callback: AsyncC
 | key | string | 是 | 图片属性名。 |
 | options | [GetImagePropertyOptions](arkts-image-image-getimagepropertyoptions-i.md) | 是 | 图片属性，包括图片序号与默认属性值。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数，当获取图片属性值成功，err为undefined，data为获取到的图片属性值；否则为错误对象。 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function GetImageProperty(imageSourceObj : image.ImageSource) {
-  let property: image.GetImagePropertyOptions = { index: 0, defaultValue: '9999' }
-  imageSourceObj.getImageProperty("BitsPerSample", property, (error: BusinessError, data: string) => {
-    if (error) {
-      console.error('Failed to get the value of the specified attribute key of the image.');
-    } else {
-      console.info('Succeeded in getting the value of the specified attribute key of the image.');
-    }
-  })
-}
-```
 
 ## getImagePropertySync
 
@@ -1645,23 +1081,6 @@ getImagePropertySync(key: PropertyKey): string
 | [7700102](../errorcode-image.md#7700102-不支持的mime类型) | Unsupported MIME type. |
 | [7700202](../errorcode-image.md#7700202-不支持的元数据) | Unsupported metadata. For example, key is not supported. |
 
-**示例**
-
-```TypeScript
-function GetImagePropertySync(context : Context) {
-  let resourceMgr = context.resourceManager;
-  if (resourceMgr == null) {
-    return;
-  }
-  let fd = resourceMgr.getRawFdSync("example.jpg");
-
-  const imageSourceObj = image.createImageSource(fd);
-  console.info("getImagePropertySync");
-  let bits_per_sample = imageSourceObj.getImagePropertySync(image.PropertyKey.BITS_PER_SAMPLE);
-  console.info("bits_per_sample : " + bits_per_sample);
-}
-```
-
 ## modifyImageProperties
 
 ```TypeScript
@@ -1703,29 +1122,6 @@ modifyImageProperties(records: Record<PropertyKey, string|null>): Promise<void>
 | [62980123](../errorcode-image.md#62980123-图片不支持exif解码) | The image does not support EXIF decoding. |
 | [62980135](../errorcode-image.md#62980135-图片属性值无效) | The EXIF value is invalid. |
 | [62980146](../errorcode-image.md#62980146-图片属性值写入文件失败) | The EXIF data failed to be written to the file. |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function ModifyImageProperties(imageSourceObj : image.ImageSource) {
-  let keyValues: Record<PropertyKey, string|null> = {
-    [image.PropertyKey.IMAGE_WIDTH] : "1024",
-    [image.PropertyKey.IMAGE_LENGTH] : "1024"
-  };
-  let checkKey = [image.PropertyKey.IMAGE_WIDTH, image.PropertyKey.IMAGE_LENGTH];
-  imageSourceObj.modifyImageProperties(keyValues).then(() => {
-    imageSourceObj.getImageProperties(checkKey).then((data) => {
-      console.info(`Image Width and Image Height:${data}`);
-    }).catch((err: BusinessError) => {
-      console.error(`Failed to modify the Image Width and Image Height, error.code ${err.code}, error.message ${err.message}`);
-    });
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to modify the Image Width and Image Height, error.code ${err.code}, error.message ${err.message}`);
-  });
-}
-```
 
 ## modifyImagePropertiesEnhanced
 
@@ -1772,30 +1168,6 @@ modifyImagePropertiesEnhanced(records: Record<string, string | null>): Promise<v
 | [7700202](../errorcode-image.md#7700202-不支持的元数据) | Unsupported metadata. For example, the property key is not supported, or the property value is invalid. |
 | [7700304](../errorcode-image.md#7700304-图片信息写入文件失败) | Failed to write image properties to the file. |
 
-**示例**
-
-```TypeScript
-import { image } from '@kit.ImageKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function ModifyImagePropertiesEnhanced(imageSourceObj : image.ImageSource) {
-  let keyValues: Record<string, string|null> = {
-    "ImageWidth" : "1024",
-    "ImageLength" : "1024"
-  };
-  let checkKey = [image.PropertyKey.IMAGE_WIDTH, image.PropertyKey.IMAGE_LENGTH];
-  imageSourceObj.modifyImagePropertiesEnhanced(keyValues).then(() => {
-    imageSourceObj.getImageProperties(checkKey).then((data) => {
-      console.info(`Image Width and Image Height:${data}`);
-    }).catch((err: BusinessError) => {
-      console.error(`Failed to modify the Image Width and Image Height, error.code ${err.code}, error.message ${err.message}`);
-    });
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to modify the Image Width and Image Height, error.code ${err.code}, error.message ${err.message}`);
-  });
-}
-```
-
 ## modifyImageProperty
 
 ```TypeScript
@@ -1840,24 +1212,6 @@ modifyImageProperty(key: PropertyKey, value: string): Promise<void>
 | [62980135](../errorcode-image.md#62980135-图片属性值无效) | The EXIF value is invalid. |
 | [62980146](../errorcode-image.md#62980146-图片属性值写入文件失败) | The EXIF data failed to be written to the file. |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function ModifyImageProperty(imageSourceObj : image.ImageSource) {
-  imageSourceObj.modifyImageProperty(image.PropertyKey.IMAGE_WIDTH, "120").then(() => {
-    imageSourceObj.getImageProperty(image.PropertyKey.IMAGE_WIDTH).then((width: string) => {
-      console.info(`ImageWidth is :${width}`);
-    }).catch((error: BusinessError) => {
-      console.error(`Failed to get the Image Width, error.code ${error.code}, error.message ${error.message}`);
-    })
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to modify the Image Width, error.code ${error.code}, error.message ${error.message}`);
-  })
-}
-```
-
 ## modifyImageProperty
 
 ```TypeScript
@@ -1899,24 +1253,6 @@ modifyImageProperty(key: string, value: string): Promise<void>
 | --- | --- |
 | Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function ModifyImageProperty(imageSourceObj : image.ImageSource) {
-  imageSourceObj.modifyImageProperty("ImageWidth", "120").then(() => {
-    imageSourceObj.getImageProperty("ImageWidth").then((width: string) => {
-      console.info(`ImageWidth is :${width}`);
-    }).catch((error: BusinessError) => {
-      console.error(`Failed to get the Image Width, error.code ${error.code}, error.message ${error.message}`);
-    })
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to modify the Image Width, error.code ${error.code}, error.message ${error.message}`);
-  })
-}
-```
-
 ## modifyImageProperty
 
 ```TypeScript
@@ -1952,22 +1288,6 @@ modifyImageProperty(key: string, value: string, callback: AsyncCallback<void>): 
 | key | string | 是 | 图片属性名。 |
 | value | string | 是 | 属性值。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，当修改图片属性值成功，err为undefined，否则为错误对象。 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function ModifyImageProperty(imageSourceObj : image.ImageSource) {
-  imageSourceObj.modifyImageProperty("ImageWidth", "120", (err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to modify the Image Width.code is ${err.code}, message is ${err.message}`);
-    } else {
-      console.info('Succeeded in modifying the Image Width.');
-    }
-  })
-}
-```
 
 ## readImageMetadata
 
@@ -2045,25 +1365,6 @@ readImageMetadata(propertyKeys?: string[], index?: number): Promise<ImageMetadat
 | [7700202](../errorcode-image.md#7700202-不支持的元数据) | Unsupported metadata. |
 | [7700204](../errorcode-image.md#7700204-无效参数) | Invalid parameter. Possible causes: 1. The index is negative. 2. The index is greater than or equal to the number of frames in the image. |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function ReadImageMetadata(imageSourceObj : image.ImageSource) {
-  let propertyKeys = ["ImageWidth", "HwMnoteIsXmageSupported"];
-  await imageSourceObj.readImageMetadata(propertyKeys).then((metaData: image.ImageMetadata) => {
-    if (metaData != undefined && metaData.exifMetadata != undefined &&
-      metaData.makerNoteHuaweiMetadata != undefined) {
-      console.info("ImageWidth: " + metaData.exifMetadata.imageWidth +
-        " HwMnoteIsXmageSupported: " + metaData.makerNoteHuaweiMetadata.isXmageSupported);
-    }
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to read image metadata. error.code is ${error.code}, error.message is ${error.message}`);
-  })
-}
-```
-
 ## readImageMetadataByType
 
 ```TypeScript
@@ -2126,24 +1427,6 @@ readImageMetadataByType(metadataTypes?: MetadataType[], index?: number): Promise
 | [7700202](../errorcode-image.md#7700202-不支持的元数据) | Unsupported metadata. |
 | [7700204](../errorcode-image.md#7700204-无效参数) | Invalid parameter. Possible causes: 1.The index is negative. 2. The index is greater than or equal to the number of frames in the image. |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { image } from '@kit.ImageKit';
-
-async function ReadImageMetadataByType(imageSource : image.ImageSource, type: image.MetadataType) {
-  let types: image.MetadataType[] = [type];
-  await imageSource.readImageMetadataByType(types, 0).then((metaData: image.ImageMetadata) => {
-    if (metaData != undefined && metaData.exifMetadata != undefined) {
-      console.info("ImageWidth: " + metaData.exifMetadata.imageWidth);
-    }
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to read image metadata by type. error.code is ${error.code}, error.message is ${error.message}`);
-  })
-}
-```
-
 ## release
 
 ```TypeScript
@@ -2166,93 +1449,6 @@ release(callback: AsyncCallback<void>): void
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，当资源释放成功，err为undefined，否则为错误对象。 |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function Release(img : image.Image) {
-  img.release((err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to release the image instance.code ${err.code},message is ${err.message}`);
-    } else {
-      console.info('Succeeded in releasing the image instance.');
-    }
-  })
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function Release(creator : image.ImageCreator) {
-  creator.release((err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to release the creator.code ${err.code},message is ${err.message}`);
-    } else {
-      console.info('Succeeded in releasing creator.');
-    }
-  });
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function Release() {
-  const imagePackerObj: image.ImagePacker = image.createImagePacker();
-  imagePackerObj.release((err: BusinessError)=>{
-    if (err) {
-      console.error(`Failed to release image packaging.code ${err.code},message is ${err.message}`);
-    } else {
-      console.info('Succeeded in releasing image packaging.');
-    }
-  })
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function Release(receiver : image.ImageReceiver) {
-  receiver.release((err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to release the receiver.code ${err.code},message is ${err.message}`);
-    } else {
-      console.info('Succeeded in releasing the receiver.');
-    }
-  })
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function Release(imageSourceObj : image.ImageSource) {
-  imageSourceObj.release((err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to release the image source instance.code ${err.code},message is ${err.message}`);
-    } else {
-      console.info('Succeeded in releasing the image source instance.');
-    }
-  })
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function release(pixelMap: image.PixelMap) {
-  pixelMap.release((err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to release the PixelMap object. Code: ${err.code}, message: ${err.message}`);
-      return;
-    }
-    console.info('Succeeded in releasing the PixelMap object.');
-  });
-}
-```
-
 ## release
 
 ```TypeScript
@@ -2274,81 +1470,6 @@ release(): Promise<void>
 | 类型 | 说明 |
 | --- | --- |
 | Promise&lt;void&gt; | Promise对象，无返回结果。 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function Release(img : image.Image) {
-  img.release().then(() => {
-    console.info('Succeeded in releasing the image instance.');
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to release the image instance.code ${error.code},message is ${error.message}`);
-  })
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function Release(creator : image.ImageCreator) {
-  creator.release().then(() => {
-    console.info('Succeeded in releasing creator.');
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to release the creator.code ${error.code},message is ${error.message}`);
-  })
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function Release() {
-  const imagePackerObj: image.ImagePacker = image.createImagePacker();
-  imagePackerObj.release().then(() => {
-    console.info('Succeeded in releasing image packaging.');
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to release image packaging.code ${error.code},message is ${error.message}`);
-  })
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function Release(receiver : image.ImageReceiver) {
-  receiver.release().then(() => {
-    console.info('Succeeded in releasing the receiver.');
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to release the receiver.code ${error.code},message is ${error.message}`);
-  })
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function Release(imageSourceObj : image.ImageSource) {
-  imageSourceObj.release().then(() => {
-    console.info('Succeeded in releasing the image source instance.');
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to release the image source instance.code ${error.code},message is ${error.message}`);
-  })
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function release(pixelMap: image.PixelMap) {
-  pixelMap.release().then(() => {
-    console.info('Succeeded in releasing the PixelMap object.');
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to release the PixelMap object. Code: ${err.code}, message: ${err.message}`);
-  });
-}
-```
 
 ## updateData
 
@@ -2377,21 +1498,6 @@ updateData(buf: ArrayBuffer, isFinished: boolean, offset: number, length: number
 | --- | --- |
 | Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function UpdateDatay(imageSourceObj : image.ImageSource) {
-  const array: ArrayBuffer = new ArrayBuffer(100);
-  imageSourceObj.updateData(array, false, 0, 10).then(() => {
-    console.info('Succeeded in updating data.');
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to update data.code is ${err.code},message is ${err.message}`);
-  })
-}
-```
-
 ## updateData
 
 ```TypeScript
@@ -2419,23 +1525,6 @@ updateData(
 | offset | number | 是 | 即当前buffer中的数据首地址，相对于整个图片文件首地址的偏移量。单位：字节（Byte）。<br>**适用版本：** 11 |
 | length | number | 是 | 当前buffer的长度。单位：字节（Byte）。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，当更新增量数据成功，err为undefined，否则为错误对象。 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function UpdateDatay(imageSourceObj : image.ImageSource) {
-  const array: ArrayBuffer = new ArrayBuffer(100);
-  imageSourceObj.updateData(array, false, 0, 10, (err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to update data.code is ${err.code},message is ${err.message}`);
-    } else {
-      console.info('Succeeded in updating data.');
-    }
-  })
-}
-```
 
 ## writeImageMetadata
 
@@ -2486,25 +1575,6 @@ writeImageMetadata(imageMetadata: ImageMetadata): Promise<void>
 | [7700102](../errorcode-image.md#7700102-不支持的mime类型) | Unsupported MIME type. |
 | [7700202](../errorcode-image.md#7700202-不支持的元数据) | Unsupported metadata. |
 | [7700204](../errorcode-image.md#7700204-无效参数) | Invalid parameter. Possible causes: The imageSource object is released. |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function WriteImageMetadata(imageSourceObj : image.ImageSource) {
-  let propertyKeys = ["ImageWidth", "HwMnoteIsXmageSupported"];
-  let metaData = await imageSourceObj.readImageMetadata(propertyKeys);
-  if (metaData != undefined && metaData.exifMetadata != undefined) {
-    metaData.exifMetadata.imageLength = 3072;
-  }
-  await imageSourceObj.writeImageMetadata(metaData).then(() => {
-    console.info(`Succeeded in writing image metadata.`);
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to write image metadata. error.code is ${error.code}, error.message is ${error.message}`);
-  });
-}
-```
 
 ## supportedFormats
 

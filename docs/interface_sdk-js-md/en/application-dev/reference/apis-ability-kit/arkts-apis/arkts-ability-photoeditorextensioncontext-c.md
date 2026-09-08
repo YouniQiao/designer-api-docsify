@@ -26,8 +26,8 @@ Save image data by image pixmap.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pixeMap | image.PixelMap | Yes | Image pixmap. |
-| option | image.PackingOption | Yes | Option for image packing. |
+| pixeMap | [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | Yes | Image pixmap. |
+| option | [image.PackingOption](../../apis-image-kit/arkts-apis/arkts-image-image-packingoption-i.md) | Yes | Option for image packing. |
 
 **Return value:**
 
@@ -41,7 +41,7 @@ Save image data by image pixmap.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Params error. Possible causes: 1.Mandatory parameters are left unspecified.  2.Incorrect parameter types. |
 | [29600001](../errorcode-ability.md#29600001-internal-error-during-image-editing) | Internal error. |
-| [29600002](../errorcode-ability.md#29600002-internal-error-during-image-editing) | Image input error. |
+| [29600002](../errorcode-ability.md#29600002-image-input-error) | Image input error. |
 | [29600003](../errorcode-ability.md#29600003-image-too-large) | Image too big. |
 
 **Examples**
@@ -116,7 +116,7 @@ Save image data by uri.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Params error. Possible causes: 1.Mandatory parameters are left unspecified.  2.Incorrect parameter types. |
 | [29600001](../errorcode-ability.md#29600001-internal-error-during-image-editing) | Internal error. |
-| [29600002](../errorcode-ability.md#29600002-internal-error-during-image-editing) | Image input error. |
+| [29600002](../errorcode-ability.md#29600002-image-input-error) | Image input error. |
 | [29600003](../errorcode-ability.md#29600003-image-too-large) | Image too big. |
 
 **Examples**

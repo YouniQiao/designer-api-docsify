@@ -99,7 +99,7 @@ kvStoreType?: KVStoreType
 
 设置要创建的数据库类型，默认为DEVICE_COLLABORATION，即多设备协同数据库。
 
-**类型：** KVStoreType
+**类型：** [KVStoreType](arkts-arkdata-distributeddata-kvstoretype-e.md)
 
 **起始版本：** 7
 
@@ -117,7 +117,7 @@ schema?: Schema
 
 设置定义存储在数据库中的值，默认为undefined，即不使用schema。
 
-**类型：** Schema
+**类型：** [Schema](arkts-arkdata-distributeddata-schema-c.md)
 
 **起始版本：** 8
 
@@ -135,7 +135,7 @@ securityLevel?: SecurityLevel
 
 设置数据库安全级别(S1-S4)。
 
-**类型：** SecurityLevel
+**类型：** [SecurityLevel](arkts-arkdata-distributeddata-securitylevel-e.md)
 
 **起始版本：** 7
 

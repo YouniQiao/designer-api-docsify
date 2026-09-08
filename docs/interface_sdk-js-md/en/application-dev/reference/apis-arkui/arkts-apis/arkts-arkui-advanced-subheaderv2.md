@@ -546,6 +546,7 @@ struct SubHeaderExample {
 ```
 
 This example demonstrates how to set defaultFocus in SubHeaderV2 to ensure the right-side button obtains focus by default in the focused state.
+The defaultFocus API is added to [SubHeaderV2OperationItem](arkts-arkui-arkui-advanced-subheaderv2-subheaderv2operationitemoptions-i.md) since API version 18.
 
 ```TypeScript
 import {

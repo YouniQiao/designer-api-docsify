@@ -164,7 +164,7 @@ readonly orientation?: Orientation
 
 Indicates image orientation for correct display rotation/flip.
 
-**类型：** Orientation
+**类型：** [Orientation](arkts-image-image-orientation-e.md)
 
 **起始版本：** 26.0.0
 

@@ -28,7 +28,7 @@ Obtain the scanned sta list.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;WifiScanInfo&gt; | Returns information about scanned Wi-Fi hotspot if any. |
+| Array&lt;[WifiScanInfo](arkts-connectivity-wifimanager-wifiscaninfo-i.md)&gt; | Returns information about scanned Wi-Fi hotspot if any. |
 
 **Error codes:**
 

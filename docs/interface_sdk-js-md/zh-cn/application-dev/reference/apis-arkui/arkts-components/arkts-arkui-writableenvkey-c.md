@@ -21,7 +21,7 @@ static readonly DIRECTION: WritableSystemEnvKey<Direction>
 
 当该装饰器声明在[@Component](../../../ui/state-management/arkts-create-custom-components.md#component)或[@ComponentV2](../../../ui/state-management/arkts-create-custom-components.md#componentv2)中时，用于获取窗口所在屏幕的布局方向。
 
-**类型：** [WritableSystemEnvKey](arkts-arkui-writablesystemenvkey-c.md)&lt;Direction&gt;
+**类型：** [WritableSystemEnvKey](arkts-arkui-writablesystemenvkey-c.md)&lt;[Direction](../arkts-apis/arkts-arkui-direction-e.md)&gt;
 
 **起始版本：** 26.0.0
 

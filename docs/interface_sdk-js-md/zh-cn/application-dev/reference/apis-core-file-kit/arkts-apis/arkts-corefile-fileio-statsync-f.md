@@ -32,10 +32,3 @@ declare function statSync(path: string): Stat
 | 类型 | 说明 |
 | --- | --- |
 | [Stat](arkts-corefile-fileio-stat-depr-i.md) | 表示文件的具体信息。 |
-
-**示例**
-
-```TypeScript
-let stat = fileio.statSync(pathDir);
-// example code in Stat
-```

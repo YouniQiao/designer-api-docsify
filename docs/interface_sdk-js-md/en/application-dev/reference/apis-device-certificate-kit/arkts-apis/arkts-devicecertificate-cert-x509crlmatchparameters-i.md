@@ -84,7 +84,7 @@ x509Cert?: X509Cert
 
 Certificate object.
 
-**Type:** X509Cert
+**Type:** [X509Cert](arkts-devicecertificate-cert-x509cert-i.md)
 
 **Since:** 11
 

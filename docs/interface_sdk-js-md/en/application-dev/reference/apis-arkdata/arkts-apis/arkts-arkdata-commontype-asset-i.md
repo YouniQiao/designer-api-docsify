@@ -90,7 +90,7 @@ status?: AssetStatus
 
 Asset status. The default value is ASSET_NORMAL.
 
-**Type:** AssetStatus
+**Type:** [AssetStatus](arkts-arkdata-commontype-assetstatus-e.md)
 
 **Since:** 11
 

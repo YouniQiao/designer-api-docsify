@@ -27,7 +27,7 @@ function on(type: 'formAdd', observerCallback: Callback<formInfo.RunningFormInfo
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'formAdd' | 是 | 填写'formAdd'，表示卡片新增事件。 |
-| observerCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;formInfo.RunningFormInfo&gt; | 是 | 回调函数。返回当前新增卡片的信息。 |
+| observerCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[formInfo.RunningFormInfo](arkts-form-forminfo-runningforminfo-i.md)&gt; | 是 | 回调函数。返回当前新增卡片的信息。 |
 
 **错误码：**
 
@@ -71,7 +71,7 @@ function on(type: 'formAdd', hostBundleName: string, observerCallback: Callback<
 | --- | --- | --- | --- |
 | type | 'formAdd' | 是 | 填写'formAdd'，表示卡片新增事件。 |
 | hostBundleName | string | 是 | 指定订阅卡片使用方包的bundleName。 |
-| observerCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;formInfo.RunningFormInfo&gt; | 是 | 回调函数。返回指定卡片使用方应用新增卡片的信息。 |
+| observerCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[formInfo.RunningFormInfo](arkts-form-forminfo-runningforminfo-i.md)&gt; | 是 | 回调函数。返回指定卡片使用方应用新增卡片的信息。 |
 
 **错误码：**
 
@@ -116,7 +116,7 @@ function on(type: 'formRemove', observerCallback: Callback<formInfo.RunningFormI
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'formRemove' | 是 | 填写'formRemove'，表示卡片删除事件。 |
-| observerCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;formInfo.RunningFormInfo&gt; | 是 | 回调函数。返回当前删除卡片的信息。 |
+| observerCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[formInfo.RunningFormInfo](arkts-form-forminfo-runningforminfo-i.md)&gt; | 是 | 回调函数。返回当前删除卡片的信息。 |
 
 **错误码：**
 
@@ -160,7 +160,7 @@ function on(type: 'formRemove', hostBundleName: string, observerCallback: Callba
 | --- | --- | --- | --- |
 | type | 'formRemove' | 是 | 填写'formRemove'，表示卡片删除事件。 |
 | hostBundleName | string | 是 | 指定订阅卡片使用方包的bundleName。 |
-| observerCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;formInfo.RunningFormInfo&gt; | 是 | 回调函数。返回指定卡片使用方应用被删除卡片的信息。 |
+| observerCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[formInfo.RunningFormInfo](arkts-form-forminfo-runningforminfo-i.md)&gt; | 是 | 回调函数。返回指定卡片使用方应用被删除卡片的信息。 |
 
 **错误码：**
 
@@ -207,7 +207,7 @@ function on(type: 'notifyVisible', observerCallback: Callback<Array<formInfo.Run
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'notifyVisible' | 是 | 仅允许填写'notifyVisible'，表示订阅通知卡片可见的事件。 |
-| observerCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;formInfo.RunningFormInfo&gt;&gt; | 是 | 回调函数。返回订阅该事件的卡片信息列表。 |
+| observerCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[formInfo.RunningFormInfo](arkts-form-forminfo-runningforminfo-i.md)&gt;&gt; | 是 | 回调函数。返回订阅该事件的卡片信息列表。 |
 
 **错误码：**
 
@@ -259,7 +259,7 @@ function on(
 | --- | --- | --- | --- |
 | type | 'notifyVisible' | 是 | 仅允许填写'notifyVisible'，表示订阅通知卡片可见的事件。 |
 | hostBundleName | string | 是 | 指定卡片使用方的bundleName，用于订阅卡片在该使用方的可见状态变更事件。 |
-| observerCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;formInfo.RunningFormInfo&gt;&gt; | 是 | 回调函数。返回订阅该事件的卡片信息列表。 |
+| observerCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[formInfo.RunningFormInfo](arkts-form-forminfo-runningforminfo-i.md)&gt;&gt; | 是 | 回调函数。返回订阅该事件的卡片信息列表。 |
 
 **错误码：**
 
@@ -308,7 +308,7 @@ function on(type: 'notifyInvisible', observerCallback: Callback<Array<formInfo.R
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'notifyInvisible' | 是 | 仅允许填写'notifyInvisible'，表示订阅卡片不可见的事件。 |
-| observerCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;formInfo.RunningFormInfo&gt;&gt; | 是 | 回调函数。返回订阅通知卡片不可见的卡片信息列表。 |
+| observerCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[formInfo.RunningFormInfo](arkts-form-forminfo-runningforminfo-i.md)&gt;&gt; | 是 | 回调函数。返回订阅通知卡片不可见的卡片信息列表。 |
 
 **错误码：**
 
@@ -360,7 +360,7 @@ function on(
 | --- | --- | --- | --- |
 | type | 'notifyInvisible' | 是 | 仅允许填写'notifyInvisible'，表示订阅卡片不可见的事件。 |
 | hostBundleName | string | 是 | 指定卡片使用方的bundleName，用于订阅卡片在该使用方的可见状态变更事件。 |
-| observerCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;formInfo.RunningFormInfo&gt;&gt; | 是 | 回调函数。返回订阅通知卡片不可见的卡片信息列表。 |
+| observerCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[formInfo.RunningFormInfo](arkts-form-forminfo-runningforminfo-i.md)&gt;&gt; | 是 | 回调函数。返回订阅通知卡片不可见的卡片信息列表。 |
 
 **错误码：**
 
@@ -391,7 +391,7 @@ function on(type: 'router', observerCallback: Callback<formInfo.RunningFormInfo>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'router' | 是 | 填写'router'，表示订阅卡片的router事件。 |
-| observerCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;formInfo.RunningFormInfo&gt; | 是 | 回调函数。返回触发router事件的卡片信息。 |
+| observerCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[formInfo.RunningFormInfo](arkts-form-forminfo-runningforminfo-i.md)&gt; | 是 | 回调函数。返回触发router事件的卡片信息。 |
 
 **错误码：**
 
@@ -434,7 +434,7 @@ function on(type: 'router', hostBundleName: string, observerCallback: Callback<f
 | --- | --- | --- | --- |
 | type | 'router' | 是 | 填写'router'，表示订阅卡片的router事件。 |
 | hostBundleName | string | 是 | 指定卡片使用方的bundleName。 |
-| observerCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;formInfo.RunningFormInfo&gt; | 是 | 回调函数。返回触发router事件的卡片信息。 |
+| observerCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[formInfo.RunningFormInfo](arkts-form-forminfo-runningforminfo-i.md)&gt; | 是 | 回调函数。返回触发router事件的卡片信息。 |
 
 **错误码：**
 
@@ -477,7 +477,7 @@ function on(type: 'message', observerCallback: Callback<formInfo.RunningFormInfo
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'message' | 是 | 填写'message'，表示订阅卡片的message事件。 |
-| observerCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;formInfo.RunningFormInfo&gt; | 是 | 回调函数。返回触发message事件的卡片信息。 |
+| observerCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[formInfo.RunningFormInfo](arkts-form-forminfo-runningforminfo-i.md)&gt; | 是 | 回调函数。返回触发message事件的卡片信息。 |
 
 **错误码：**
 
@@ -520,7 +520,7 @@ function on(type: 'message', hostBundleName: string, observerCallback: Callback<
 | --- | --- | --- | --- |
 | type | 'message' | 是 | 填写'message'，表示订阅卡片的message事件。 |
 | hostBundleName | string | 是 | 指定卡片使用方的bundleName。 |
-| observerCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;formInfo.RunningFormInfo&gt; | 是 | 回调函数。返回触发message事件的卡片的信息。 |
+| observerCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[formInfo.RunningFormInfo](arkts-form-forminfo-runningforminfo-i.md)&gt; | 是 | 回调函数。返回触发message事件的卡片的信息。 |
 
 **错误码：**
 
@@ -563,7 +563,7 @@ function on(type: 'call', observerCallback: Callback<formInfo.RunningFormInfo>):
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'call' | 是 | 填写'call'，表示订阅卡片的call事件。 |
-| observerCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;formInfo.RunningFormInfo&gt; | 是 | 回调函数。返回触发call事件的卡片信息。 |
+| observerCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[formInfo.RunningFormInfo](arkts-form-forminfo-runningforminfo-i.md)&gt; | 是 | 回调函数。返回触发call事件的卡片信息。 |
 
 **错误码：**
 
@@ -606,7 +606,7 @@ function on(type: 'call', hostBundleName: string, observerCallback: Callback<for
 | --- | --- | --- | --- |
 | type | 'call' | 是 | 填写'call'，表示订阅卡片的call事件。 |
 | hostBundleName | string | 是 | 指定卡片使用方的bundleName。 |
-| observerCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;formInfo.RunningFormInfo&gt; | 是 | 回调函数。返回触发call事件的卡片信息。 |
+| observerCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[formInfo.RunningFormInfo](arkts-form-forminfo-runningforminfo-i.md)&gt; | 是 | 回调函数。返回触发call事件的卡片信息。 |
 
 **错误码：**
 

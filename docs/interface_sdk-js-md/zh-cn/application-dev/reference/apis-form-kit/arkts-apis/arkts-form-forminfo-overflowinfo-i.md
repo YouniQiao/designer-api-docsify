@@ -20,7 +20,7 @@ area: Rect
 
 描述互动卡片动效区域范围，以卡片左上角为原点。
 
-**类型：** Rect
+**类型：** [Rect](arkts-form-forminfo-rect-i.md)
 
 **起始版本：** 20
 

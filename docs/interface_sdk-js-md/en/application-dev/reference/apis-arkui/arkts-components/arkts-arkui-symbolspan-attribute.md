@@ -119,7 +119,7 @@ Sets the size of the symbol span. When using the string type, numeric string val
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number \| string \| Resource | Yes | Size of the symbol span.Default value: **16fp**Unit: fp |
+| value | number \| string \| [Resource](../arkts-apis/arkts-arkui-resource-t.md) | Yes | Size of the symbol span.Default value: **16fp**Unit: fp |
 
 ## fontWeight
 
@@ -149,7 +149,7 @@ The **sys.symbol.ohos_lungs** icon does not support font weight setting.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number \| FontWeight \| string | Yes | Weight of the symbol span.Default value: **FontWeight.Normal |
+| value | number \| [FontWeight](../arkts-apis/arkts-arkui-fontweight-e.md) \| string | Yes | Weight of the symbol span.Default value: **FontWeight.Normal |
 
 ## fontWeight
 
@@ -173,7 +173,7 @@ Used to set the font weight of SymbolSpan.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number \| FontWeight \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | Yes | the SymbolSpan font weight. For the number type, the value range is [100, 900]. When enableVariableFontWeight in fontWeightConfigs is **false**, the value must be a multiple of 100; when **true**, any integer within [100, 900] is supported. The default value is **FontWeight.Normal**. |
+| value | number \| [FontWeight](../arkts-apis/arkts-arkui-fontweight-e.md) \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | Yes | the SymbolSpan font weight. For the number type, the value range is [100, 900]. When enableVariableFontWeight in fontWeightConfigs is **false**, the value must be a multiple of 100; when **true**, any integer within [100, 900] is supported. The default value is **FontWeight.Normal**. |
 | fontWeightConfigs | [FontWeightConfigs](../arkts-apis/arkts-arkui-fontweightconfigs-i.md) | No | the configuration of font weight. If not specified, the default values of FontWeightConfigs are used: enableVariableFontWeight defaults to **false**, and enableDeviceFontWeightCategory defaults to **true**. |
 
 ## renderingStrategy

@@ -24,8 +24,8 @@ import { securityGuard } from '@kit.SecurityGuardKit';
 | 名称 | 说明 |
 | --- | --- |
 | [getModelResult](arkts-securityguard-securityguard-getmodelresult-f-sys.md) | 请求安全模型检测结果。 |
-| off | 解订阅安全事件。 |
-| on | 订阅安全事件。 |
+| [off](arkts-securityguard-securityguard-off-f-sys.md) | 解订阅安全事件。 |
+| [on](arkts-securityguard-securityguard-on-f-sys.md) | 订阅安全事件。 |
 | [querySecurityEvent](arkts-securityguard-securityguard-querysecurityevent-f-sys.md) | 用于获取安全事件信息。 |
 | [reportSecurityEvent](arkts-securityguard-securityguard-reportsecurityevent-f-sys.md) | 安全事件上报接口。 |
 | [startSecurityEventCollector](arkts-securityguard-securityguard-startsecurityeventcollector-f-sys.md) | 开始采集事件。 |

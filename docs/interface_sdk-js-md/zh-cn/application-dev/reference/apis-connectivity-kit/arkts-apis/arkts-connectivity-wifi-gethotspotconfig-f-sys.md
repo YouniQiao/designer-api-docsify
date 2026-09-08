@@ -30,7 +30,7 @@ function getHotspotConfig(): HotspotConfig
 
 | 类型 | 说明 |
 | --- | --- |
-| HotspotConfig | 热点的配置信息。 |
+| [HotspotConfig](arkts-connectivity-wifi-hotspotconfig-i-sys.md) | 热点的配置信息。 |
 
 **示例**
 

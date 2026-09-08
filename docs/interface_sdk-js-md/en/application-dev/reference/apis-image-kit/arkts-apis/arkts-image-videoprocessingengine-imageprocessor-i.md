@@ -30,16 +30,16 @@ The function generate the destinationImage from sourceImage with necessary scali
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sourceImage | image.PixelMap | Yes | The source pixelmap. |
+| sourceImage | [image.PixelMap](arkts-image-image-pixelmap-i.md) | Yes | The source pixelmap. |
 | width | number | Yes | The zoom value of width. |
 | height | number | Yes | The zoom value of height. |
-| level | QualityLevel | No | The quality level. |
+| level | [QualityLevel](arkts-image-videoprocessingengine-qualitylevel-e.md) | No | The quality level. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;image.PixelMap&gt; | A Promise instance used to return the PixelMap object. |
+| Promise&lt;[image.PixelMap](arkts-image-image-pixelmap-i.md)&gt; | A Promise instance used to return the PixelMap object. |
 
 **Error codes:**
 
@@ -81,15 +81,15 @@ The function generate the destinationImage from sourceImage with necessary scali
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sourceImage | image.PixelMap | Yes | The source pixelmap. |
+| sourceImage | [image.PixelMap](arkts-image-image-pixelmap-i.md) | Yes | The source pixelmap. |
 | scale | number | Yes | The zoom ratio. |
-| level | QualityLevel | No | The quality level. |
+| level | [QualityLevel](arkts-image-videoprocessingengine-qualitylevel-e.md) | No | The quality level. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;image.PixelMap&gt; | A Promise instance used to return the PixelMap object. |
+| Promise&lt;[image.PixelMap](arkts-image-image-pixelmap-i.md)&gt; | A Promise instance used to return the PixelMap object. |
 
 **Error codes:**
 
@@ -131,16 +131,16 @@ The function generate the destinationImage from sourceImage with necessary scali
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sourceImage | image.PixelMap | Yes | The source pixelmap. |
+| sourceImage | [image.PixelMap](arkts-image-image-pixelmap-i.md) | Yes | The source pixelmap. |
 | width | number | Yes | The zoom value of width. |
 | height | number | Yes | The zoom value of height. |
-| level | QualityLevel | No | The quality level. |
+| level | [QualityLevel](arkts-image-videoprocessingengine-qualitylevel-e.md) | No | The quality level. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| image.PixelMap | Returns the destination pixelmap instance . |
+| [image.PixelMap](arkts-image-image-pixelmap-i.md) | Returns the destination pixelmap instance . |
 
 **Error codes:**
 
@@ -183,15 +183,15 @@ The function generate the destinationImage from sourceImage with necessary scali
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sourceImage | image.PixelMap | Yes | The source pixelmap. |
+| sourceImage | [image.PixelMap](arkts-image-image-pixelmap-i.md) | Yes | The source pixelmap. |
 | scale | number | Yes | The zoom ratio. |
-| level | QualityLevel | No | The quality level. |
+| level | [QualityLevel](arkts-image-videoprocessingengine-qualitylevel-e.md) | No | The quality level. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| image.PixelMap | Returns the destination pixelmap instance |
+| [image.PixelMap](arkts-image-image-pixelmap-i.md) | Returns the destination pixelmap instance |
 
 **Error codes:**
 

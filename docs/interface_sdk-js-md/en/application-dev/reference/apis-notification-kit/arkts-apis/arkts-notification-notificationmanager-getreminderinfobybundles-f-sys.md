@@ -26,7 +26,7 @@ Batch obtains reminders of specified applications. This API uses a promise to re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundles | Array&lt;BundleOption&gt; | Yes | Bundles whose reminders are to be obtained. |
+| bundles | Array&lt;[BundleOption](arkts-notification-notificationmanager-bundleoption-t.md)&gt; | Yes | Bundles whose reminders are to be obtained. |
 
 **Return value:**
 

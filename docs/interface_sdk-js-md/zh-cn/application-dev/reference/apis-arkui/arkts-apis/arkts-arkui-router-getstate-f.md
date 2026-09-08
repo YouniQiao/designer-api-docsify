@@ -39,7 +39,7 @@ function getState(): RouterState
 
 | 类型 | 说明 |
 | --- | --- |
-| RouterState | 栈顶页面的状态信息，包含页面索引、名称、路径和参数。 |
+| [RouterState](arkts-arkui-router-routerstate-i.md) | 栈顶页面的状态信息，包含页面索引、名称、路径和参数。 |
 
 **示例**
 

@@ -135,7 +135,7 @@ eapMethod: EapMethod
 
 EAP认证方式。
 
-**类型：** EapMethod
+**类型：** [EapMethod](arkts-connectivity-wifimanager-eapmethod-e.md)
 
 **起始版本：** 10
 
@@ -191,7 +191,7 @@ phase2Method: Phase2Method
 
 第二阶段认证方式。只有eapMethod为EAP_PEAP或EAP_TTLS时需要填写。
 
-**类型：** Phase2Method
+**类型：** [Phase2Method](arkts-connectivity-wifimanager-phase2method-e.md)
 
 **起始版本：** 10
 

@@ -38,7 +38,7 @@ Obtains shortcut info by bundleName, moduleName, abilityName, userId and appInde
 
 | Type | Description |
 | --- | --- |
-| Array&lt;ShortcutInfo&gt; | An array of ShortcutInfo objects. |
+| Array&lt;[ShortcutInfo](arkts-ability-shortcutmanager-shortcutinfo-t.md)&gt; | An array of ShortcutInfo objects. |
 
 **Error codes:**
 

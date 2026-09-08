@@ -33,7 +33,7 @@ Obtains the ability information based on the given resource identifier and abili
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;AbilityInfo&gt;&gt; | Promise used to return an array of ability information. |
+| Promise&lt;Array&lt;[AbilityInfo](arkts-ability-bundlemanager-abilityinfo-t.md)&gt;&gt; | Promise used to return an array of ability information. |
 
 **Error codes:**
 

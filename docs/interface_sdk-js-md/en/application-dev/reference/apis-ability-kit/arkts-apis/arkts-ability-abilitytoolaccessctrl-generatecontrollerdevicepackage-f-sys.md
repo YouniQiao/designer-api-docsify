@@ -40,7 +40,7 @@ Generates an authorization package for the controller device. This function gene
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denial. The interface caller does not have permission "ohos.permission.QUERY_TOOL_PERMISSIONS". |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
-| 24010000 | Invalid parameter. OperationType and operationInfo do not match, specified callerTokenId does not exist, etc. |
-| 24010001 | Service is abnormal. Possible cause: IPC failed. |
-| 24010002 | Common internal error. Possible cause: dependent service unavailable, resource access failure, etc. |
-| 24010003 | The account is not logged in, network is unavailable, timeout, etc. |
+| [24010000](../errorcode-abilityToolAccessCtrl-sys.md#24010000-invalid-parameter) | Invalid parameter. OperationType and operationInfo do not match, specified callerTokenId does not exist, etc. |
+| [24010001](../errorcode-abilityToolAccessCtrl-sys.md#24010001-system-service-abnormal) | Service is abnormal. Possible cause: IPC failed. |
+| [24010002](../errorcode-abilityToolAccessCtrl-sys.md#24010002-internal-service-error) | Common internal error. Possible cause: dependent service unavailable, resource access failure, etc. |
+| [24010003](../errorcode-abilityToolAccessCtrl-sys.md#24010003-environment-error) | The account is not logged in, network is unavailable, timeout, etc. |

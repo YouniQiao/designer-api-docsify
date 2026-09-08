@@ -70,6 +70,8 @@ Construct the UIExtensionComponent.Called when the UIExtensionComponent is used.
 ## Examples
 
 The UIExtensionComponent component can be used by both the host and provider. This example shows only the method used by the component and the UIExtensionAbility. For the code to run properly, you need to install the ability whose bundleName is com.example.newdemo and abilityName is UIExtensionProvider on the device.
+Component host
+The content of the user's entry page Index.ets is as follows:
 
 ```TypeScript
 import { ComponentContent } from '@kit.ArkUI';
@@ -182,6 +184,8 @@ function syncRegisterCallback2(proxy: UIExtensionProxy) {
 ```
 
 Component provider
+The provider has three files that need to be modified:
+/src/main/ets/uiextensionability/UIExtensionProvider.ets
 
 ```TypeScript
 import { UIExtensionAbility, UIExtensionContentSession, Want } from '@kit.AbilityKit';
@@ -343,6 +347,13 @@ The provider's extension Ability. Add the corresponding configuration to the mod
 ```
 
 This example demonstrates a scenario where both the UIExtensionComponent host and the UIExtensionAbility use [Scroll](ts-container-scroll.md) containers. By setting gesture interception on UIExtensionComponent, it achieves that external components do not respond to scrolling when the internal layer of the UIExtensionComponent is being scrolled.
+Gesture usage:
+Scrolling inside the component: scrolling within the component using touch gestures
+Scrolling outside the component: scrolling of the outer container using the scrollbar
+Before running, ensure that an ability whose bundleName is com.example.newdemo and abilityName as UIExtensionProvider is installed on the device.
+The entry point file UIExtensionProvider.ets and the module configuration file UIExtensionProvider.ets are identical to those in [Example 1](#example-1-loading-a-uiextension).
+The provider's extension Ability and module configuration file are the same as the module.json5 code of the extension module in [Example 1](#example-1-loading-a-uiextension).
+Example of the user's component usage:
 
 ```TypeScript
 @Entry

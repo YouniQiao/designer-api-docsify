@@ -198,7 +198,7 @@ getDeepenImmersionColor(): Color
 
 | 类型 | 说明 |
 | --- | --- |
-| Color | Color实例，即图像强沉浸色对应的颜色值。当图像处理失败或无法生成沉浸色时返回null。 |
+| [Color](arkts-arkgraphics2d-effectkit-color-i.md) | Color实例，即图像强沉浸色对应的颜色值。当图像处理失败或无法生成沉浸色时返回null。 |
 
 **示例**
 
@@ -250,7 +250,7 @@ getImmersiveBackgroundColor(): Color
 
 | 类型 | 说明 |
 | --- | --- |
-| Color | Color实例，即图像沉浸式背景色对应的颜色值。当图像处理失败或无法生成沉浸式背景色时返回null。 |
+| [Color](arkts-arkgraphics2d-effectkit-color-i.md) | Color实例，即图像沉浸式背景色对应的颜色值。当图像处理失败或无法生成沉浸式背景色时返回null。 |
 
 **示例**
 
@@ -302,7 +302,7 @@ getImmersiveForegroundColor(): Color
 
 | 类型 | 说明 |
 | --- | --- |
-| Color | Color实例，即图像沉浸式前景色对应的颜色值。当图像处理失败或无法生成沉浸式前景色时返回null。 |
+| [Color](arkts-arkgraphics2d-effectkit-color-i.md) | Color实例，即图像沉浸式前景色对应的颜色值。当图像处理失败或无法生成沉浸式前景色时返回null。 |
 
 **示例**
 
@@ -354,7 +354,7 @@ getMorandiShadowColor(): Color
 
 | 类型 | 说明 |
 | --- | --- |
-| Color | Color实例，即图像莫兰迪阴影色对应的颜色值。当图像处理失败或无法获取莫兰迪阴影色时返回null。 |
+| [Color](arkts-arkgraphics2d-effectkit-color-i.md) | Color实例，即图像莫兰迪阴影色对应的颜色值。当图像处理失败或无法获取莫兰迪阴影色时返回null。 |
 
 **示例**
 
@@ -406,7 +406,7 @@ getReverseColor(): Color
 
 | 类型 | 说明 |
 | --- | --- |
-| Color | Color实例，即图像反向颜色对应的颜色值。当图像处理失败或无法生成反向颜色时返回null。 |
+| [Color](arkts-arkgraphics2d-effectkit-color-i.md) | Color实例，即图像反向颜色对应的颜色值。当图像处理失败或无法生成反向颜色时返回null。 |
 
 **示例**
 
@@ -518,7 +518,7 @@ getTopProportionColorsAndPercentage(colorCount: number): Map<Color | null, numbe
 
 | 类型 | 说明 |
 | --- | --- |
-| Map&lt;Color \| null, number \| null&gt; | 图像占比前`colorCount`的颜色值与对应比例的字典，比例的取值范围为[0,1]。 |
+| Map&lt;[Color](arkts-arkgraphics2d-effectkit-color-i.md) \| null, number \| null&gt; | 图像占比前`colorCount`的颜色值与对应比例的字典，比例的取值范围为[0,1]。 |
 
 **错误码：**
 

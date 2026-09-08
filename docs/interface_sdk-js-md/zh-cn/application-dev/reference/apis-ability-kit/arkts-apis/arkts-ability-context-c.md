@@ -28,7 +28,7 @@ createAreaModeContext(areaMode: contextConstant.AreaMode): Context
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| areaMode | contextConstant.AreaMode | 是 | 指定的数据加密等级。 |
+| areaMode | [contextConstant.AreaMode](arkts-ability-contextconstant-areamode-e.md) | 是 | 指定的数据加密等级。 |
 
 **返回值：**
 
@@ -357,7 +357,7 @@ isContextOf(contextType: contextConstant.ContextType): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| contextType | contextConstant.ContextType | 是 | 上下文类型。 |
+| contextType | [contextConstant.ContextType](arkts-ability-contextconstant-contexttype-e.md) | 是 | 上下文类型。 |
 
 **返回值：**
 
@@ -407,7 +407,7 @@ area: contextConstant.AreaMode
 
 文件分区信息，按加密等级AreaMode进行分区。
 
-**类型：** contextConstant.AreaMode
+**类型：** [contextConstant.AreaMode](arkts-ability-contextconstant-areamode-e.md)
 
 **起始版本：** 9
 
@@ -627,7 +627,7 @@ resourceManager: resmgr.ResourceManager
 
 资源管理对象。
 
-**类型：** resmgr.ResourceManager
+**类型：** [resmgr.ResourceManager](../../apis-localization-kit/arkts-apis/arkts-localization-resourcemanager-resourcemanager-i.md)
 
 **起始版本：** 9
 

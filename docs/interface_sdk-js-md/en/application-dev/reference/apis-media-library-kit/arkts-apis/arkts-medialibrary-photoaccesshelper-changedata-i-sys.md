@@ -36,7 +36,7 @@ sharedExtraPhotoAssets: Array<SharedPhotoAsset>
 
 sharedExtraPhotoAssets of the same type
 
-**Type:** Array&lt;SharedPhotoAsset&gt;
+**Type:** Array&lt;[SharedPhotoAsset](arkts-medialibrary-photoaccesshelper-sharedphotoasset-i-sys.md)&gt;
 
 **Since:** 14
 
@@ -52,7 +52,7 @@ sharedPhotoAssets: Array<SharedPhotoAsset>
 
 sharedPhotoAssets of the same type
 
-**Type:** Array&lt;SharedPhotoAsset&gt;
+**Type:** Array&lt;[SharedPhotoAsset](arkts-medialibrary-photoaccesshelper-sharedphotoasset-i-sys.md)&gt;
 
 **Since:** 14
 

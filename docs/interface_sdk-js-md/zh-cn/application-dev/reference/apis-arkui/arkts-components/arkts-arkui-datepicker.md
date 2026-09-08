@@ -110,6 +110,7 @@ struct DatePickerExample {
 ```
 
 该示例通过配置mode参数实现显示年、月和月、日列。
+从API version 18开始，新增了[DatePickerOptions](#datepickeroptions对象说明)的mode属性。
 
 ```TypeScript
 // xxx.ets

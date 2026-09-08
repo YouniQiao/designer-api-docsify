@@ -20,7 +20,7 @@ maxSize: window.Size
 
 Maximum size of the float view.
 
-**Type:** window.Size
+**Type:** [window.Size](arkts-arkui-window-size-i.md)
 
 **Since:** 26.0.0
 
@@ -36,7 +36,7 @@ minSize: window.Size
 
 Minimum size of the float view.
 
-**Type:** window.Size
+**Type:** [window.Size](arkts-arkui-window-size-i.md)
 
 **Since:** 26.0.0
 

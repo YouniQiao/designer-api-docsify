@@ -328,7 +328,7 @@ space(space: LengthMetrics): DotIndicator
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| space | LengthMetrics | 是 | 设置圆点导航点间距，不支持设置百分比。默认值：PC/2in1设备上为10，其他设备为8。单位：vp取值范围：[0, +∞) |
+| space | [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md) | 是 | 设置圆点导航点间距，不支持设置百分比。默认值：PC/2in1设备上为10，其他设备为8。单位：vp取值范围：[0, +∞) |
 
 **返回值：**
 

@@ -150,7 +150,7 @@ Sets the content type for autofill.<!--RP3--><!--RP3End-->
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| contentType | ContentType | Yes | Content type for autofill. |
+| contentType | [ContentType](arkts-arkui-contenttype-e.md) | Yes | Content type for autofill. |
 
 ## copyOption
 
@@ -172,7 +172,7 @@ If this attribute is set to **CopyOptions.None**, drag and drop operations are n
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | CopyOptions | Yes | Whether the input text can be copied.Default value: **CopyOptions.LocalDevice |
+| value | [CopyOptions](../arkts-apis/arkts-arkui-copyoptions-e.md) | Yes | Whether the input text can be copied.Default value: **CopyOptions.LocalDevice |
 
 ## customKeyboard
 
@@ -285,7 +285,7 @@ Sets the ellipsis position. For the settings to work, [textOverflow](#textoverfl
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | [Optional](arkts-arkui-optional-t.md)&lt;EllipsisMode&gt; | Yes | Ellipsis position.Default value: **EllipsisMode.END |
+| mode | [Optional](arkts-arkui-optional-t.md)&lt;[EllipsisMode](../arkts-apis/arkts-arkui-ellipsismode-e.md)&gt; | Yes | Ellipsis position.Default value: **EllipsisMode.END |
 
 ## enableAutoFill
 
@@ -455,7 +455,7 @@ Sets the type of the Enter key.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | EnterKeyType | Yes | Type of the Enter key.Default value: **EnterKeyType.NEW_LINE |
+| value | [EnterKeyType](arkts-arkui-enterkeytype-e.md) | Yes | Type of the Enter key.Default value: **EnterKeyType.NEW_LINE |
 
 ## fallbackLineSpacing
 
@@ -587,7 +587,7 @@ Sets the font style.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | FontStyle | Yes | Font style.Default value: **FontStyle.Normal |
+| value | [FontStyle](../arkts-apis/arkts-arkui-fontstyle-e.md) | Yes | Font style.Default value: **FontStyle.Normal |
 
 ## fontWeight
 
@@ -607,7 +607,7 @@ Sets the font weight. If the value is too large, the text may be clipped dependi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number \| FontWeight \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | Yes | Font weight. For the number type, the value range is [100, 900], at an interval of 100. The default value is **400**. A larger value indicates a heavier font weight. For the string type, only strings that represent a number, for example, **"400"**, and the following enumerated values of **FontWeight** are supported: **"bold"**, **"bolder"**, **"lighter"**, **"regular"**, and **"medium"**.Default value: **FontWeight.Normal**The Resource type is supported since API version 2 0.<br>**Since:** 20 |
+| value | number \| [FontWeight](../arkts-apis/arkts-arkui-fontweight-e.md) \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | Yes | Font weight. For the number type, the value range is [100, 900], at an interval of 100. The default value is **400**. A larger value indicates a heavier font weight. For the string type, only strings that represent a number, for example, **"400"**, and the following enumerated values of **FontWeight** are supported: **"bold"**, **"bolder"**, **"lighter"**, **"regular"**, and **"medium"**.Default value: **FontWeight.Normal**The Resource type is supported since API version 2 0.<br>**Since:** 20 |
 
 ## halfLeading
 
@@ -783,7 +783,7 @@ This setting applies to every character, including those at line endings.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number \| string \| Resource | Yes | Letter spacing.Unit: fp |
+| value | number \| string \| [Resource](../arkts-apis/arkts-arkui-resource-t.md) | Yes | Letter spacing.Unit: fp |
 
 ## lineBreakStrategy
 
@@ -827,7 +827,7 @@ Text line height. If the value is less than or equal to 0, the line height is no
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number \| string \| Resource | Yes | Text line height. String type. Specifies the length pixel unit explicitly, for example, **'10px'**, or provides the length in percentage, for example, **'100%'**.Note: If no pixel unit is specified, the default unit is fp, in which case **'10'** is equivalent to 10 fp. |
+| value | number \| string \| [Resource](../arkts-apis/arkts-arkui-resource-t.md) | Yes | Text line height. String type. Specifies the length pixel unit explicitly, for example, **'10px'**, or provides the length in percentage, for example, **'100%'**.Note: If no pixel unit is specified, the default unit is fp, in which case **'10'** is equivalent to 10 fp. |
 
 ## lineSpacing
 
@@ -894,7 +894,7 @@ Sets the maximum font scale factor for text.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scale | [Optional](arkts-arkui-optional-t.md)&lt;number \| Resource&gt; | Yes | Maximum font scale factor for text. The **undefined** type is supported.Value range: [1, +∞)   **NOTE：**Values less than 1 are treated as **1**. Abnormal values are ineffective by default.Before use, the **configuration.json** file and **app.json5** file must be configured in the project. For details, see [Example 17: Setting the Minimum and Maximum Font Scale Factors](../../../reference/apis-arkui/arkui-ts/ts-basic-components-textarea.md#example-17-setting-the-minimum-and-maximum-font-scale-factors). |
+| scale | [Optional](arkts-arkui-optional-t.md)&lt;number \| [Resource](../arkts-apis/arkts-arkui-resource-t.md)&gt; | Yes | Maximum font scale factor for text. The **undefined** type is supported.Value range: [1, +∞)   **NOTE：**Values less than 1 are treated as **1**. Abnormal values are ineffective by default.Before use, the **configuration.json** file and **app.json5** file must be configured in the project. For details, see [Example 17: Setting the Minimum and Maximum Font Scale Factors](../../../reference/apis-arkui/arkui-ts/ts-basic-components-textarea.md#example-17-setting-the-minimum-and-maximum-font-scale-factors). |
 
 ## maxFontSize
 
@@ -922,7 +922,7 @@ If the value of **maxFontSize** is less than or equal to 0 or is less than the v
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number \| string \| Resource | Yes | Maximum font size.Unit: fp |
+| value | number \| string \| [Resource](../arkts-apis/arkts-arkui-resource-t.md) | Yes | Maximum font size.Unit: fp |
 
 ## maxLength
 
@@ -1014,7 +1014,7 @@ Sets the minimum font scale factor for text.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scale | [Optional](arkts-arkui-optional-t.md)&lt;number \| Resource&gt; | Yes | Minimum font scale factor for text. The **undefined** type is supported.Value range: [0, 1]   **NOTE：**A value less than 0 is handled as **0**. A value greater than 1 is handled as **1**. Abnormal values are ineffective by default.Before use, the **configuration.json** file and **app.json5** file must be configured in the project. For details, see [Example 17: Setting the Minimum and Maximum Font Scale Factors](../../../reference/apis-arkui/arkui-ts/ts-basic-components-textarea.md#example-17-setting-the-minimum-and-maximum-font-scale-factors). |
+| scale | [Optional](arkts-arkui-optional-t.md)&lt;number \| [Resource](../arkts-apis/arkts-arkui-resource-t.md)&gt; | Yes | Minimum font scale factor for text. The **undefined** type is supported.Value range: [0, 1]   **NOTE：**A value less than 0 is handled as **0**. A value greater than 1 is handled as **1**. Abnormal values are ineffective by default.Before use, the **configuration.json** file and **app.json5** file must be configured in the project. For details, see [Example 17: Setting the Minimum and Maximum Font Scale Factors](../../../reference/apis-arkui/arkui-ts/ts-basic-components-textarea.md#example-17-setting-the-minimum-and-maximum-font-scale-factors). |
 
 ## minFontSize
 
@@ -1042,7 +1042,7 @@ If the value of **minFontSize** is less than or equal to 0, the adaptive font si
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number \| string \| Resource | Yes | Minimum font size.Unit: fp |
+| value | number \| string \| [Resource](../arkts-apis/arkts-arkui-resource-t.md) | Yes | Minimum font size.Unit: fp |
 
 ## minLines
 
@@ -1620,7 +1620,7 @@ Sets whether to hide the system text selection menu.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean | Yes | Whether to hide the system text selection menu.   **true**: The system text selection menu does not appear under the following circumstances: clicking the text box cursor, number-pressing the text box, number-tapping the text box, triple-tapping the text box, or right-clicking the text box.   **false**: The system text selection menu appears under the following circumstances: clicking the text box cursor, number- pressing the text box, number-tapping the text box, triple-tapping the text box, or right-clicking the text box.Default value: **false |
+| value | boolean | Yes | Whether to hide the system text selection menu.   **true**: The system text selection menu does not appear under the following circumstances: clicking the text box cursor, long-pressing the text box, double-tapping the text box, triple-tapping the text box, or right-clicking the text box.   **false**: The system text selection menu appears under the following circumstances: clicking the text box cursor, long- pressing the text box, double-tapping the text box, triple-tapping the text box, or right-clicking the text box.Default value: **false |
 
 ## shaderStyle
 
@@ -1822,7 +1822,7 @@ When **textAlign** is set to **TextAlign.JUSTIFY**, the text in the last line is
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | TextAlign | Yes | Horizontal alignment of the text.Default value: **TextAlign.Start |
+| value | [TextAlign](../arkts-apis/arkts-arkui-textalign-e.md) | Yes | Horizontal alignment of the text.Default value: **TextAlign.Start |
 
 ## textDirection
 
@@ -1844,7 +1844,7 @@ Specifies the text layout direction. If this attribute is not set, the default t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| direction | TextDirection \| undefined | Yes | Text layout direction.If this parameter is set to **undefined**, the text layout direction follows the component layout direction as defined by **TextDirection.DEFAULT**. |
+| direction | [TextDirection](../arkts-apis/arkts-arkui-textdirection-e.md) \| undefined | Yes | Text layout direction.If this parameter is set to **undefined**, the text layout direction follows the component layout direction as defined by **TextDirection.DEFAULT**. |
 
 ## textIndent
 
@@ -1874,7 +1874,7 @@ Sets the indent of the first line text.
 textOverflow(value: TextOverflow)
 ```
 
-Sets the display mode when the text is too number.
+Sets the display mode when the text is too long.
 
 In inline style, the effect of truncating text according to [maxLines](#maxlines) only applies when **textOverflow** is set.
 
@@ -1899,7 +1899,7 @@ If **textOverflow** is set to **TextOverflow.None**, **TextOverflow.Clip**, or *
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [TextOverflow](../arkts-apis/arkts-arkui-textoverflow-e.md) | Yes | Display mode when the text is too number.Default value: **TextOverflow.Clip |
+| value | [TextOverflow](../arkts-apis/arkts-arkui-textoverflow-e.md) | Yes | Display mode when the text is too long.Default value: **TextOverflow.Clip |
 
 ## type
 
@@ -1945,4 +1945,4 @@ Sets the word break rule. This attribute does not take effect for the placeholde
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | WordBreak | Yes | Word break rule.Default value: **WordBreak.BREAK_WORD |
+| value | [WordBreak](../arkts-apis/arkts-arkui-wordbreak-e.md) | Yes | Word break rule.Default value: **WordBreak.BREAK_WORD |

@@ -24,10 +24,10 @@ function initCurve(curve?: Curve): ICurve
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| curve | Curve | 否 | 曲线类型。默认值：Curve.Linear |
+| curve | [Curve](arkts-arkui-curves-curve-e.md) | 否 | [曲线类型。默认值：Curve.Linear](arkts-arkui-curves-curve-e.md) |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| ICurve | 曲线的插值对象，可通过其interpolate方法获取指定归一化时间点的曲线插值。 |
+| [ICurve](arkts-arkui-curves-icurve-i.md) | 曲线的插值对象，可通过其interpolate方法获取指定归一化时间点的曲线插值。 |

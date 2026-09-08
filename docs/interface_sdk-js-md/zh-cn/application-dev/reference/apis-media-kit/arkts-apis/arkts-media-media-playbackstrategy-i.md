@@ -52,7 +52,7 @@ mutedMediaType?: MediaType
 
 播放时静音指定的媒体流。
 
-**类型：** MediaType
+**类型：** [MediaType](arkts-media-media-mediatype-e.md)
 
 **起始版本：** 12
 

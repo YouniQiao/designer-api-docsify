@@ -74,7 +74,7 @@ listFile(filter?: Filter): FileIterator
 | 13900025 | No space left on device |
 | 13900027 | Read-only file system |
 | 13900029 | Resource deadlock would occur |
-| 13900030 | File name too number |
+| 13900030 | File name too long |
 | 13900033 | Too many symbolic links encountered |
 | 13900034 | Operation would block |
 | 13900038 | Value too large for defined data type |
@@ -112,36 +112,6 @@ try {
       isDone = result.done;
       if (!isDone) {
         subfileInfos.push(result.value);
-      }
-    }
-  }
-} catch (err) {
-  let error: BusinessError = err as BusinessError;
-  console.error("listFile failed, errCode:" + error.code + ", errMessage:" + error.message);
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-// rootInfo 从getRoots()获取
-// let filter = {suffix : [".txt", ".jpg", ".xlsx"]};
-let rootInfo: Array<fileAccess.FileInfo> = [];
-let fileInfos: Array<fileAccess.FileInfo> = [];
-let isDone: boolean = false;
-try {
-  for (let i = 0; i < rootInfo.length; ++i) {
-    let fileIterator = rootInfo[i].listFile();
-    // 含过滤器实现的listFile
-    // let fileIterator = rootInfo.listFile(filter);
-    if (!fileIterator) {
-      console.error("listFile interface returns an undefined object");
-    }
-    while (!isDone) {
-      let result = fileIterator.next();
-      console.info("next result = " + JSON.stringify(result));
-      isDone = result.done;
-      if (!isDone) {
-        fileInfos.push(result.value);
       }
     }
   }
@@ -207,7 +177,7 @@ scanFile(filter?: Filter): FileIterator
 | 13900025 | No space left on device |
 | 13900027 | Read-only file system |
 | 13900029 | Resource deadlock would occur |
-| 13900030 | File name too number |
+| 13900030 | File name too long |
 | 13900033 | Too many symbolic links encountered |
 | 13900034 | Operation would block |
 | 13900038 | Value too large for defined data type |
@@ -245,36 +215,6 @@ try {
       isDone = result.done;
       if (!isDone) {
         subfileInfos.push(result.value);
-      }
-    }
-  }
-} catch (err) {
-  let error: BusinessError = err as BusinessError;
-  console.error("scanFile failed, errCode:" + error.code + ", errMessage:" + error.message);
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-// rootInfo 从 getRoots()获取
-// let filter = {suffix : [".txt", ".jpg", ".xlsx"]};
-let rootInfo: Array<fileAccess.FileInfo> = [];
-let fileInfos: Array<fileAccess.FileInfo> = [];
-let isDone: boolean = false;
-try {
-  for (let i = 0; i < rootInfo.length; ++i) {
-    let fileIterator = rootInfo[i].scanFile();
-    // 含过滤器实现的scanFile
-    // let fileIterator = rootInfo.scanFile(filter);
-    if (!fileIterator) {
-      console.error("scanFile interface returns undefined object");
-    }
-    while (!isDone) {
-      let result = fileIterator.next();
-      console.info("next result = " + JSON.stringify(result));
-      isDone = result.done;
-      if (!isDone) {
-        fileInfos.push(result.value);
       }
     }
   }

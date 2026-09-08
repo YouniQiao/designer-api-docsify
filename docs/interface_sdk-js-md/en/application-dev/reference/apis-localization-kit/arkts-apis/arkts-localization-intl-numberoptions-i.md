@@ -18,7 +18,7 @@ import { intl } from '@kit.LocalizationKit';
 compactDisplay?: string
 ```
 
-Compact display format. The value can be **number** or **short**.
+Compact display format. The value can be **long** or **short**.
 
 The default value is **short**.
 
@@ -438,7 +438,7 @@ This API can be used in atomic services since API version 12.
 unitDisplay?: string
 ```
 
-Display format of units. The value can be **number**, **short**, or **narrow**.
+Display format of units. The value can be **long**, **short**, or **narrow**.
 
 The default value is **short**.
 

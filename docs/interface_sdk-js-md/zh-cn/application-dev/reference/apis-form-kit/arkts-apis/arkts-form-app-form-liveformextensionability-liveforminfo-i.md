@@ -56,7 +56,7 @@ rect: formInfo.Rect
 
 卡片位置和大小信息。
 
-**类型：** formInfo.Rect
+**类型：** [formInfo.Rect](arkts-form-forminfo-rect-i.md)
 
 **起始版本：** 20
 

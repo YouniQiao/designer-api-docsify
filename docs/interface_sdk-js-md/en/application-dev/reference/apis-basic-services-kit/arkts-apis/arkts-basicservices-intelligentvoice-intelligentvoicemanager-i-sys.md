@@ -84,8 +84,8 @@ Unsubscribes service change events.
 **Examples**
 
 ```TypeScript
-if (wakeupIntelligentVoiceEngine != null) {
-  (wakeupIntelligentVoiceEngine as intelligentVoice.WakeupIntelligentVoiceEngine).off('wakeupIntelligentVoiceEvent');
+if (intelligentVoiceManager != null) {
+  intelligentVoiceManager.off('serviceChange');
 }
 ```
 
@@ -122,11 +122,7 @@ Subscribes service change events. When the state of intelligent voice service ch
 **Examples**
 
 ```TypeScript
-if (wakeupIntelligentVoiceEngine != null) {
-  (wakeupIntelligentVoiceEngine as intelligentVoice.WakeupIntelligentVoiceEngine).on('wakeupIntelligentVoiceEvent',
-    (info: intelligentVoice.WakeupIntelligentVoiceEngineCallbackInfo) => {
-    let callbackInfo: intelligentVoice.WakeupIntelligentVoiceEngineCallbackInfo = info;
-    console.info(`wakeup intelligentvoice event, info:${callbackInfo}`);
-  });
+if (intelligentVoiceManager != null) {
+  intelligentVoiceManager.on('serviceChange', (serviceChangeType: intelligentVoice.ServiceChangeType) => {});
 }
 ```

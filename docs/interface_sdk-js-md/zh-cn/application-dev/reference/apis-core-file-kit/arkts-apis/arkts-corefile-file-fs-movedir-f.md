@@ -60,20 +60,6 @@ declare function moveDir(src: string, dest: string, mode?: number): Promise<void
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let srcPath = pathDir + "/srcDir";
-let destPath = pathDir + "/destDir";
-fileIo.moveDir(srcPath, destPath, 1).then(() => {
-  console.info(`Succeeded in moving directory.`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to move directory. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
 
 ## moveDir
 
@@ -124,22 +110,6 @@ declare function moveDir(src: string, dest: string, callback: AsyncCallback<void
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let srcPath = pathDir + "/srcDir";
-let destPath = pathDir + "/destDir";
-fileIo.moveDir(srcPath, destPath, (err: BusinessError) => {
-  if (err) {
-    console.error(`Failed to move directory. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info(`Succeeded in moving directory.`);
-  }
-});
-```
-
 
 ## moveDir
 
@@ -172,27 +142,6 @@ declare function moveDir(src: string, dest: string, callback: AsyncCallback<void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | 13900015 | File exists |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { ConflictFiles } from '@kit.CoreFileKit';
-
-let srcPath = pathDir + "/srcDir";
-let destPath = pathDir + "/destDir";
-fileIo.moveDir(srcPath, destPath, (err: BusinessError<Array<ConflictFiles>>) => {
-  if (err && err.code == 13900015 && err.data?.length !== undefined) {
-    for (let i = 0; i < err.data.length; i++) {
-      console.error(`Failed to move directory, with conflicting files: ${err.data[i].srcFile} ${err.data[i].destFile}`);
-    }
-  } else if (err) {
-    console.error(`Failed to move directory. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info(`Succeeded in moving directory.`);
-  }
-});
-```
 
 
 ## moveDir
@@ -239,22 +188,6 @@ declare function moveDir(src: string, dest: string, mode: number, callback: Asyn
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let srcPath = pathDir + "/srcDir";
-let destPath = pathDir + "/destDir";
-fileIo.moveDir(srcPath, destPath, 1, (err: BusinessError) => {
-  if (err) {
-    console.error(`Failed to move directory. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info(`Succeeded in moving directory.`);
-  }
-});
-```
-
 
 ## moveDir
 
@@ -286,24 +219,3 @@ declare function moveDir(src: string, dest: string, mode: number, callback: Asyn
 | 错误码ID | 错误信息 |
 | --- | --- |
 | 13900015 | File exists |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { ConflictFiles } from '@kit.CoreFileKit';
-
-let srcPath = pathDir + "/srcDir";
-let destPath = pathDir + "/destDir";
-fileIo.moveDir(srcPath, destPath, 1, (err: BusinessError<Array<ConflictFiles>>) => {
-  if (err && err.code == 13900015 && err.data?.length !== undefined) {
-    for (let i = 0; i < err.data.length; i++) {
-      console.error(`Failed to move directory, with conflicting files: ${err.data[i].srcFile} ${err.data[i].destFile}`);
-    }
-  } else if (err) {
-    console.error(`Failed to move directory. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info(`Succeeded in moving directory.`);
-  }
-});
-```

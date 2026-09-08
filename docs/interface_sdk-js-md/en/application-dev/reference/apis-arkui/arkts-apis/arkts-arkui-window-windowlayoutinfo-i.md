@@ -38,7 +38,7 @@ windowRect: Rect
 
 Window rectangle, that is, the position and size of the window on the display.
 
-**Type:** Rect
+**Type:** [Rect](arkts-arkui-window-rect-i.md)
 
 **Since:** 15
 
