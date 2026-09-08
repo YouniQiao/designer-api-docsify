@@ -125,7 +125,7 @@
 - [@ohos.InputMethodSubtype(输入法子类型)](arkts-inputmethodsubtype.md)
   - [InputMethodSubtype](arkts-ime-inputmethodsubtype-i.md)
 <!--Del-->
-- [@ohos.inputMethodSystemPanelManager](arkts-inputmethodsystempanelmanager.md)<!--DelEnd-->
+- [@ohos.inputMethodSystemPanelManager(输入法系统面板管理器(系统接口))](arkts-inputmethodsystempanelmanager.md)<!--DelEnd-->
   <!--Del-->
   - [connectSystemChannel(系统接口)](arkts-ime-inputmethodsystempanelmanager-connectsystemchannel-f-sys.md)<!--DelEnd-->
   <!--Del-->

@@ -1,12 +1,12 @@
 # ArkTS API<!--arkts-arkdata-->
 
 <!--Del-->
-- [@ohos.application.DataShareExtensionAbility](arkts-application-datashareextensionability.md)<!--DelEnd-->
+- [@ohos.application.DataShareExtensionAbility(DataShare ExtensionAbility)](arkts-application-datashareextensionability.md)<!--DelEnd-->
   <!--Del-->
   - [DataShareExtensionAbility(system api)](arkts-arkdata-application-datashareextensionability-datashareextensionability-c-sys.md)<!--DelEnd-->
   <!--Del-->
   - [UpdateOperation(system api)](arkts-arkdata-updateoperation-t-sys.md)<!--DelEnd-->
-- [@ohos.data.cloudData](arkts-data-clouddata.md)
+- [@ohos.data.cloudData(Device-Cloud Service)](arkts-data-clouddata.md)
   - [cloudData](arkts-arkdata-clouddata-n.md)
     - [sharing](arkts-arkdata-clouddata-sharing-n.md)
       <!--Del-->
@@ -70,7 +70,7 @@
     - [SyncStatus(system api)](arkts-arkdata-clouddata-syncstatus-e-sys.md)<!--DelEnd-->
     <!--Del-->
     - [Constants(system api)](arkts-arkdata-clouddata-con-sys.md)<!--DelEnd-->
-- [@ohos.data.cloudExtension](arkts-data-cloudextension.md)
+- [@ohos.data.cloudExtension(Device-Cloud Sharing Extension)](arkts-data-cloudextension.md)
   <!--Del-->
   - [createAssetLoaderStub(system api)](arkts-arkdata-cloudextension-createassetloaderstub-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -125,17 +125,17 @@
   - [FieldType(system api)](arkts-arkdata-cloudextension-fieldtype-e-sys.md)<!--DelEnd-->
   <!--Del-->
   - [Flag(system api)](arkts-arkdata-cloudextension-flag-e-sys.md)<!--DelEnd-->
-- [@ohos.data.commonType](arkts-data-commontype.md)
+- [@ohos.data.commonType(Common Data Types)](arkts-data-commontype.md)
   - [Asset](arkts-arkdata-commontype-asset-i.md)
   - [Assets](arkts-arkdata-commontype-assets-t.md)
   - [ValuesBucket](arkts-arkdata-commontype-valuesbucket-t.md)
   - [ValueType](arkts-arkdata-commontype-valuetype-t.md)
   - [AssetStatus](arkts-arkdata-commontype-assetstatus-e.md)
-- [@ohos.data.dataAbility](arkts-data-dataability.md)
+- [@ohos.data.dataAbility(DataAbility Predicates)](arkts-data-dataability.md)
   - [createRdbPredicates](arkts-arkdata-dataability-createrdbpredicates-f.md)
   - [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md)
   - [ValueType](arkts-arkdata-dataability-valuetype-t.md)
-- [@ohos.data.dataShare](arkts-data-datashare.md)
+- [@ohos.data.dataShare(DataShare)](arkts-data-datashare.md)
   - [createDataProxyHandle](arkts-arkdata-datashare-createdataproxyhandle-f.md)
   <!--Del-->
   - [createDataShareHelper(system api)](arkts-arkdata-datashare-createdatasharehelper-f-sys.md)<!--DelEnd-->
@@ -175,12 +175,12 @@
   - [DataProxyType](arkts-arkdata-datashare-dataproxytype-e.md)
   <!--Del-->
   - [SubscriptionType(system api)](arkts-arkdata-datashare-subscriptiontype-e-sys.md)<!--DelEnd-->
-- [@ohos.data.dataSharePredicates](arkts-data-datasharepredicates.md)
+- [@ohos.data.dataSharePredicates(DataShare Predicates)](arkts-data-datasharepredicates.md)
   - [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md)
   <!--Del-->
   - [DataSharePredicates(system api)](arkts-arkdata-datasharepredicates-datasharepredicates-c-sys.md)<!--DelEnd-->
 <!--Del-->
-- [@ohos.data.DataShareResultSet](arkts-data-datashareresultset.md)<!--DelEnd-->
+- [@ohos.data.DataShareResultSet(DataShare Result Set)](arkts-data-datashareresultset.md)<!--DelEnd-->
   <!--Del-->
   - [DataShareResultSet(system api)](arkts-arkdata-data-datashareresultset-datashareresultset-i-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -210,7 +210,7 @@
     - [SyncMode](arkts-arkdata-distributeddata-syncmode-e.md)
     - [UserType](arkts-arkdata-distributeddata-usertype-e.md)
     - [ValueType](arkts-arkdata-distributeddata-valuetype-e.md)
-- [@ohos.data.distributedDataObject](arkts-data-distributeddataobject.md)
+- [@ohos.data.distributedDataObject(Distributed Data Object)](arkts-data-distributeddataobject.md)
   - [create](arkts-arkdata-distributeddataobject-create-f.md)
   - [createDistributedObject](arkts-arkdata-distributeddataobject-createdistributedobject-f.md)
   - [genSessionId](arkts-arkdata-distributeddataobject-gensessionid-f.md)
@@ -222,7 +222,7 @@
   - [DataObserver](arkts-arkdata-distributeddataobject-dataobserver-t.md)
   - [ProgressObserver](arkts-arkdata-distributeddataobject-progressobserver-t.md)
   - [StatusObserver](arkts-arkdata-distributeddataobject-statusobserver-t.md)
-- [@ohos.data.distributedKVStore](arkts-data-distributedkvstore.md)
+- [@ohos.data.distributedKVStore(Distributed KV Store)](arkts-data-distributedkvstore.md)
   - [createKVManager](arkts-arkdata-distributedkvstore-createkvmanager-f.md)
   - [FieldNode](arkts-arkdata-distributedkvstore-fieldnode-c.md)
   - [Query](arkts-arkdata-distributedkvstore-query-c.md)
@@ -247,7 +247,7 @@
   - [SubscribeType](arkts-arkdata-distributedkvstore-subscribetype-e.md)
   - [SyncMode](arkts-arkdata-distributedkvstore-syncmode-e.md)
   - [ValueType](arkts-arkdata-distributedkvstore-valuetype-e.md)
-- [@ohos.data.intelligence](arkts-data-intelligence.md)
+- [@ohos.data.intelligence(ArkData Intelligence Platform)](arkts-data-intelligence.md)
   - [getImageEmbeddingModel](arkts-arkdata-intelligence-getimageembeddingmodel-f.md)
   - [getSupportedCloudModel](arkts-arkdata-intelligence-getsupportedcloudmodel-f.md)
   - [getTextEmbeddingModel](arkts-arkdata-intelligence-gettextembeddingmodel-f.md)
@@ -260,7 +260,7 @@
   - [Image](arkts-arkdata-intelligence-image-t.md)
   - [ModelVersion](arkts-arkdata-intelligence-modelversion-e.md)
   - [NetworkPolicy](arkts-arkdata-intelligence-networkpolicy-e.md)
-- [@ohos.data.preferences](arkts-data-preferences.md)
+- [@ohos.data.preferences(User Preferences)](arkts-data-preferences.md)
   - [deletePreferences](arkts-arkdata-preferences-deletepreferences-f.md)
   - [getPreferences](arkts-arkdata-preferences-getpreferences-f.md)
   - [getPreferencesSync](arkts-arkdata-preferences-getpreferencessync-f.md)
@@ -272,7 +272,7 @@
   - [ValueType](arkts-arkdata-preferences-valuetype-t.md)
   - [StorageType](arkts-arkdata-preferences-storagetype-e.md)
   - [Constants](arkts-arkdata-preferences-con.md)
-- [@ohos.data.rdb](arkts-data-rdb.md)
+- [@ohos.data.rdb(RDB Store)](arkts-data-rdb.md)
   - [deleteRdbStore](arkts-arkdata-rdb-deleterdbstore-f.md)
   - [getRdbStore](arkts-arkdata-rdb-getrdbstore-f.md)
   - [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md)
@@ -283,7 +283,7 @@
   - [ValueType](arkts-arkdata-rdb-valuetype-t.md)
   - [SubscribeType](arkts-arkdata-rdb-subscribetype-e.md)
   - [SyncMode](arkts-arkdata-rdb-syncmode-e.md)
-- [@ohos.data.relationalStore](arkts-data-relationalstore.md)
+- [@ohos.data.relationalStore(RDB Store)](arkts-data-relationalstore.md)
   - [deleteRdbStore](arkts-arkdata-relationalstore-deleterdbstore-f.md)
   - [getDeleteSqlInfo](arkts-arkdata-relationalstore-getdeletesqlinfo-f.md)
   - [getInsertSqlInfo](arkts-arkdata-relationalstore-getinsertsqlinfo-f.md)
@@ -388,7 +388,7 @@
   - [NonSendableValues](arkts-arkdata-sendablerelationalstore-nonsendablevalues-t.md)
   - [ValuesBucket](arkts-arkdata-sendablerelationalstore-valuesbucket-t.md)
   - [ValueType](arkts-arkdata-sendablerelationalstore-valuetype-t.md)
-- [@ohos.data.storage](arkts-data-storage.md)
+- [@ohos.data.storage(Lightweight Data Storage)](arkts-data-storage.md)
   - [deleteStorage](arkts-arkdata-storage-deletestorage-f.md)
   - [deleteStorageSync](arkts-arkdata-storage-deletestoragesync-f.md)
   - [getStorage](arkts-arkdata-storage-getstorage-f.md)
@@ -402,7 +402,7 @@
 - [@ohos.data.UdmfComponents](arkts-data-udmfcomponents.md)
   - [ContentFormCard](arkts-arkdata-data-udmfcomponents-contentformcard-s.md)
   - [FormType](arkts-arkdata-data-udmfcomponents-formtype-e.md)
-- [@ohos.data.unifiedDataChannel](arkts-data-unifieddatachannel.md)
+- [@ohos.data.unifiedDataChannel(Unified Data Channel)](arkts-data-unifieddatachannel.md)
   - [convertRecordsToEntries](arkts-arkdata-unifieddatachannel-convertrecordstoentries-f.md)
   - [deleteData](arkts-arkdata-unifieddatachannel-deletedata-f.md)
   - [insertData](arkts-arkdata-unifieddatachannel-insertdata-f.md)
@@ -445,7 +445,7 @@
   - [ShareOptions](arkts-arkdata-unifieddatachannel-shareoptions-e.md)
   - [UriPermission](arkts-arkdata-unifieddatachannel-uripermission-e.md)
   - [Visibility](arkts-arkdata-unifieddatachannel-visibility-e.md)
-- [@ohos.data.uniformDataStruct](arkts-data-uniformdatastruct.md)
+- [@ohos.data.uniformDataStruct(Uniform Data Structs)](arkts-data-uniformdatastruct.md)
   - [ContentForm](arkts-arkdata-uniformdatastruct-contentform-i.md)
   - [FileUri](arkts-arkdata-uniformdatastruct-fileuri-i.md)
   - [Form](arkts-arkdata-uniformdatastruct-form-i.md)
@@ -454,7 +454,7 @@
   - [OpenHarmonyAppItem](arkts-arkdata-uniformdatastruct-openharmonyappitem-i.md)
   - [PixelMap](arkts-arkdata-uniformdatastruct-pixelmap-i.md)
   - [PlainText](arkts-arkdata-uniformdatastruct-plaintext-i.md)
-- [@ohos.data.uniformTypeDescriptor](arkts-data-uniformtypedescriptor.md)
+- [@ohos.data.uniformTypeDescriptor(Uniform Data Definition and Description)](arkts-data-uniformtypedescriptor.md)
   - [getTypeDescriptor](arkts-arkdata-uniformtypedescriptor-gettypedescriptor-f.md)
   - [getUniformDataTypeByFilenameExtension](arkts-arkdata-uniformtypedescriptor-getuniformdatatypebyfilenameextension-f.md)
   - [getUniformDataTypeByMIMEType](arkts-arkdata-uniformtypedescriptor-getuniformdatatypebymimetype-f.md)
@@ -466,10 +466,10 @@
   - [unregisterTypeDescriptors(system api)](arkts-arkdata-uniformtypedescriptor-unregistertypedescriptors-f-sys.md)<!--DelEnd-->
   - [TypeDescriptor](arkts-arkdata-uniformtypedescriptor-typedescriptor-c.md)
   - [UniformDataType](arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md)
-- [@ohos.data.ValuesBucket](arkts-data-valuesbucket.md)
+- [@ohos.data.ValuesBucket(Data Set)](arkts-data-valuesbucket.md)
   - [ValuesBucket](arkts-arkdata-valuesbucket-t.md)
   - [ValueType](arkts-arkdata-valuetype-t.md)
-- [@system.storage](arkts-system-storage.md)
+- [@system.storage(Data Storage)](arkts-system-storage.md)
   - [Storage](arkts-arkdata-system-storage-storage-c.md)
   - [ClearStorageOptions](arkts-arkdata-system-storage-clearstorageoptions-i.md)
   - [DeleteStorageOptions](arkts-arkdata-system-storage-deletestorageoptions-i.md)

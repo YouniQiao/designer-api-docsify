@@ -1,4 +1,4 @@
-# @ohos.WallpaperExtensionAbility
+# @ohos.WallpaperExtensionAbility(WallpaperExtensionAbility)
 
 ## Modules to Import
 

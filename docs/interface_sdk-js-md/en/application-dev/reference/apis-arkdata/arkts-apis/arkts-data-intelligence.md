@@ -1,4 +1,4 @@
-# @ohos.data.intelligence
+# @ohos.data.intelligence(ArkData Intelligence Platform)
 
 Provides methods for intelligent data processing.
 

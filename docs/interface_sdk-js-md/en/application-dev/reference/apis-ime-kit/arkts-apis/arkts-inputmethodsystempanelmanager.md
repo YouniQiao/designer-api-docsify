@@ -1,4 +1,4 @@
-# @ohos.inputMethodSystemPanelManager
+# @ohos.inputMethodSystemPanelManager(Input Method System Panel Manager (System API))
 
 This module provides the input method system panel management functions, which are used for communication and state synchronization between the input method system panel and the system-default input method application.
 

@@ -125,7 +125,7 @@
 - [@ohos.InputMethodSubtype(Input Method Subtype)](arkts-inputmethodsubtype.md)
   - [InputMethodSubtype](arkts-ime-inputmethodsubtype-i.md)
 <!--Del-->
-- [@ohos.inputMethodSystemPanelManager](arkts-inputmethodsystempanelmanager.md)<!--DelEnd-->
+- [@ohos.inputMethodSystemPanelManager(Input Method System Panel Manager (System API))](arkts-inputmethodsystempanelmanager.md)<!--DelEnd-->
   <!--Del-->
   - [connectSystemChannel(system api)](arkts-ime-inputmethodsystempanelmanager-connectsystemchannel-f-sys.md)<!--DelEnd-->
   <!--Del-->

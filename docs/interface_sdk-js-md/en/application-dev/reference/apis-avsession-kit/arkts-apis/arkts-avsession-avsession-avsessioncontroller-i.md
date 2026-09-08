@@ -1031,8 +1031,8 @@ Get output device information
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 600101 | Session service exception. |
-| 600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
 **Examples**
 
@@ -1082,8 +1082,8 @@ Get output device information
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 600101 | Session service exception. |
-| 600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
 **Examples**
 
@@ -2765,11 +2765,11 @@ Send media key event to this session
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
-| 600101 | Session service exception. |
-| 600102 | The session does not exist. |
-| 600103 | The session controller does not exist. |
-| 600105 | Invalid session command. |
-| 600106 | The session is not activated. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
+| [6600105](../errorcode-avsession.md#6600105-invalid-session-command) | Invalid session command. |
+| [6600106](../errorcode-avsession.md#6600106-session-not-activated) | The session is not activated. |
 
 **Examples**
 
@@ -2819,11 +2819,11 @@ Send media key event to this session
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
-| 600101 | Session service exception. |
-| 600102 | The session does not exist. |
-| 600103 | The session controller does not exist. |
-| 600105 | Invalid session command. |
-| 600106 | The session is not activated. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
+| [6600105](../errorcode-avsession.md#6600105-invalid-session-command) | Invalid session command. |
+| [6600106](../errorcode-avsession.md#6600106-session-not-activated) | The session is not activated. |
 
 **Examples**
 

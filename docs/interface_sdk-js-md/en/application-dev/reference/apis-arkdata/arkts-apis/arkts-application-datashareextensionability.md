@@ -1,4 +1,4 @@
-# @ohos.application.DataShareExtensionAbility
+# @ohos.application.DataShareExtensionAbility(DataShare ExtensionAbility)
 
 The **DataShareExtensionAbility** module provides data share services based on the ExtensionAbility.
 

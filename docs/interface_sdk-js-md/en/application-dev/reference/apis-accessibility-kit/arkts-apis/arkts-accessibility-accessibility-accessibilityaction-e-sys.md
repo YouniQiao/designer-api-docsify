@@ -16,7 +16,7 @@ An accessibility node element refers to a component on the UI that can perform a
 ACCESSIBILITY_FOCUS = 0
 ```
 
-Gains accessibility focus. The [Parameter](arkts-accessibility-accessibilityextensioncontext-parameter-c-sys.md). accessibilityFocusScene parameter must be configured, with the parameter value being the accessibility focus scenario type.
+Gains accessibility focus. The [Parameter](arkts-accessibility-accessibilityextensioncontext-parameter-c-sys.md).accessibilityFocusScene parameter must be configured, with the parameter value being the accessibility focus scenario type.
 
 **Since:** 20
 

@@ -1,4 +1,4 @@
-# @ohos.data.cloudExtension
+# @ohos.data.cloudExtension(Device-Cloud Sharing Extension)
 
 The cloudExtension module provides APIs for third-party vendors to implement the device-cloud sharing service. You can use these APIs to share the device data to the server and implement device-cloud data sharing, including sharing and unsharing data, exiting a share,changing the privilege (operation permissions) on the shared data, querying participants by data identifier or invitation code, and confirming or changing a sharing invitation.
 

@@ -1135,7 +1135,7 @@
   - [DataBits](arkts-basicservices-serialmanager-databits-e.md)
   - [Parity](arkts-basicservices-serialmanager-parity-e.md)
   - [StopBits](arkts-basicservices-serialmanager-stopbits-e.md)
-- [@ohos.wallpaper](arkts-wallpaper.md)
+- [@ohos.wallpaper(Wallpaper)](arkts-wallpaper.md)
   - [getColors](arkts-basicservices-wallpaper-getcolors-f.md)
   <!--Del-->
   - [getColorsSync(system api)](arkts-basicservices-wallpaper-getcolorssync-f-sys.md)<!--DelEnd-->
@@ -1184,7 +1184,7 @@
   - [WallpaperResourceType(system api)](arkts-basicservices-wallpaper-wallpaperresourcetype-e-sys.md)<!--DelEnd-->
   - [WallpaperType](arkts-basicservices-wallpaper-wallpapertype-e.md)
 <!--Del-->
-- [@ohos.WallpaperExtensionAbility](arkts-wallpaperextensionability.md)<!--DelEnd-->
+- [@ohos.WallpaperExtensionAbility(WallpaperExtensionAbility)](arkts-wallpaperextensionability.md)<!--DelEnd-->
   <!--Del-->
   - [WallpaperExtensionAbility(system api)](arkts-basicservices-wallpaperextensionability-c-sys.md)<!--DelEnd-->
 - [@ohos.zlib](arkts-zlib.md)

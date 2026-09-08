@@ -1,4 +1,4 @@
-# cloudData
+# cloudData(Device-Cloud Service)
 
 The **cloudData** module provides APIs for implementing device-cloud synergy and device-cloud sharing, and setting the device-cloud sync strategy.
 

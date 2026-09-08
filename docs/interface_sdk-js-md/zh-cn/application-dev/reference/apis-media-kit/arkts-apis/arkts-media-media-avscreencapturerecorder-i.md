@@ -2,8 +2,11 @@
 
 屏幕录制管理类，用于进行屏幕录制，支持录屏初始化、开始/暂停/恢复/停止录制、添加水印、隐私窗口豁免、麦克风开关控制、Picker模式选择和内容自动旋转等功能。适用于需要在应用内完成屏幕录制流程控制的场景，可帮助开发者灵活管理录屏生命周期、保护用户隐私并自定义录制输出。在调用AVScreenCaptureRecorder的方法前，需要先通过[createAVScreenCaptureRecorder()](arkts-media-media-createavscreencapturerecorder-f.md)创建一个AVScreenCaptureRecorder实例。
 
+典型使用流程：createAVScreenCaptureRecorder → init → startRecording → pauseRecording/resumeRecording → stopRecording → release。
+
 > **说明：**
 > 
+> - 本模块首批接口从API version 6开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。
 > - 本Interface首批接口从API version 12开始支持。
 
 **起始版本：** 12
@@ -135,6 +138,8 @@ excludePickerWindows(excludedWindows: Array<number>): Promise<void>
 
 设置在Picker中隐藏的窗口列表，在下一次显示Picker时生效。使用Promise异步回调。
 
+在需要排除特定窗口不被用户选择时调用此接口，例如隐藏应用自身窗口、隐私窗口或不相关的后台窗口。
+
 **起始版本：** 22
 
 **系统能力：** SystemCapability.Multimedia.Media.AVScreenCapture
@@ -200,7 +205,7 @@ init(config: AVScreenCaptureRecordConfig): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| config | [AVScreenCaptureRecordConfig](arkts-media-media-avscreencapturerecordconfig-i.md) | 是 | 配置屏幕录制的相关参数。 |
+| config | [AVScreenCaptureRecordConfig](arkts-media-media-avscreencapturerecordconfig-i.md) | 是 | 配置录屏的相关参数。关键配置项包括：fd（文件描述符）、frameWidth（视频宽度）、frameHeight（视频高度）等。详细配置说明请参考[AVScreenCaptureRecordConfig](arkts-media-media-avscreencapturerecordconfig-i.md)。文件（通常是MP4）需要先由开发者创建，并赋予写权限，再将文件fd传给此参数。 |
 
 **返回值：**
 
@@ -339,7 +344,7 @@ on(type: 'error', callback: ErrorCallback): void
 pauseRecording(): Promise<void>
 ```
 
-暂停录屏。使用Promise异步回调。
+暂停录屏。使用Promise异步回调。在录制过程中需要临时中断录制时调用此接口，例如用户临时离开或需要切换应用时。
 
 **起始版本：** 26.0.0
 

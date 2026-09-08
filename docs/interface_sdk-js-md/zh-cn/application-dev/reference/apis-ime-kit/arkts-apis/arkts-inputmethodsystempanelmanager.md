@@ -1,4 +1,4 @@
-# @ohos.inputMethodSystemPanelManager
+# @ohos.inputMethodSystemPanelManager(输入法系统面板管理器(系统接口))
 
 输入法系统面板管理器。
 

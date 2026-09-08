@@ -1,4 +1,4 @@
-# @ohos.data.distributedDataObject
+# @ohos.data.distributedDataObject(Distributed Data Object)
 
 The distributedDataObject module provides basic data object management, including creating, querying, deleting, modifying, and subscribing to data objects, and distributed data object collaboration for the same application among multiple devices. Although this module does not parse user data, you are advised not to transfer sensitive personal data or privacy data due to low-level security of storage path.
 

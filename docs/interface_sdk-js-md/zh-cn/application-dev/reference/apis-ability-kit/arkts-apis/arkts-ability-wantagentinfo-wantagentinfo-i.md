@@ -98,7 +98,7 @@ operationType?: wantAgent.OperationType
 requestCode: number
 ```
 
-开发者自定义的请求码，用于标识将被执行的动作。从API version 7开始支持。
+开发者自定义的请求码，用于标识将被执行的动作。
 
 **类型：** number
 

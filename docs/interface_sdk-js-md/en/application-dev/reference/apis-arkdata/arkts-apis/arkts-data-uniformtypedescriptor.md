@@ -1,4 +1,4 @@
-# @ohos.data.uniformTypeDescriptor
+# @ohos.data.uniformTypeDescriptor(Uniform Data Definition and Description)
 
 The **uniformTypeDescriptor** module abstracts and defines uniform data types.
 

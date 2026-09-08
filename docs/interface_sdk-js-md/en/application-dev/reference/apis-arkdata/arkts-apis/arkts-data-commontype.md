@@ -1,4 +1,4 @@
-# @ohos.data.commonType
+# @ohos.data.commonType(Common Data Types)
 
 The commonType module defines common data types in data management.
 

@@ -1,4 +1,4 @@
-# @ohos.data.dataSharePredicates
+# @ohos.data.dataSharePredicates(DataShare Predicates)
 
 **DataSharePredicates** provides a filter object to query data in a database by using **DataShare** APIs. It is often used to update, delete, and query data.
 

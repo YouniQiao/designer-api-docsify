@@ -32,7 +32,7 @@ Configured when executing [AccessibilityAction](arkts-accessibility-accessibilit
 customAction?: string
 ```
 
-Configured when executing [AccessibilityAction](arkts-accessibility-accessibility-accessibilityaction-e-sys.md). EXECUTE_CUSTOM_ACTION. Name of the custom action.
+Configured when executing [AccessibilityAction](arkts-accessibility-accessibility-accessibilityaction-e-sys.md).EXECUTE_CUSTOM_ACTION. Name of the custom action.
 
 **Type:** string
 

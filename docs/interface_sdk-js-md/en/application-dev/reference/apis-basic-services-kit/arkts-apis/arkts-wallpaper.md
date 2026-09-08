@@ -1,4 +1,4 @@
-# @ohos.wallpaper
+# @ohos.wallpaper(Wallpaper)
 
 System wallpaper
 
