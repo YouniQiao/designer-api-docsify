@@ -1,4 +1,4 @@
-# @ohos.enterprise.EnterpriseAdminExtensionAbility
+# @ohos.enterprise.EnterpriseAdminExtensionAbility(企业设备管理扩展能力)
 
 ## 导入模块
 

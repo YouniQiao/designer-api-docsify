@@ -24,7 +24,7 @@ function startWork(work: WorkInfo): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| work | [WorkInfo](arkts-backgroundtasks-workscheduler-workinfo-i.md) | 是 | The info of work. |
+| work | [WorkInfo](arkts-backgroundtasks-workscheduler-workinfo-i.md) | 是 | 指定延迟任务具体信息，比如延迟任务ID、触发条件等。 |
 
 **错误码：**
 

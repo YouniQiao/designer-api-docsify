@@ -1,6 +1,6 @@
 # ArkTS API<!--arkts-backgroundtaskskit-->
 
-- [@ohos.backgroundTaskManager](arkts-backgroundtaskmanager.md)
+- [@ohos.backgroundTaskManager(后台任务管理)](arkts-backgroundtaskmanager.md)
   - [cancelSuspendDelay](arkts-backgroundtasks-backgroundtaskmanager-cancelsuspenddelay-depr-f.md)
   - [getRemainingDelayTime](arkts-backgroundtasks-backgroundtaskmanager-getremainingdelaytime-depr-f.md)
   - [requestSuspendDelay](arkts-backgroundtasks-backgroundtaskmanager-requestsuspenddelay-depr-f.md)
@@ -98,7 +98,7 @@
   - [setProcessPriority](arkts-backgroundtasks-backgroundprocessmanager-setprocesspriority-f.md)
   - [PowerSaveMode](arkts-backgroundtasks-backgroundprocessmanager-powersavemode-e.md)
   - [ProcessPriority](arkts-backgroundtasks-backgroundprocessmanager-processpriority-e.md)
-- [@ohos.resourceschedule.backgroundTaskManager](arkts-resourceschedule-backgroundtaskmanager.md)
+- [@ohos.resourceschedule.backgroundTaskManager(后台任务管理)](arkts-resourceschedule-backgroundtaskmanager.md)
   <!--Del-->
   - [applyEfficiencyResources(系统接口)](arkts-backgroundtasks-backgroundtaskmanager-applyefficiencyresources-f-sys.md)<!--DelEnd-->
   - [cancelSuspendDelay](arkts-backgroundtasks-backgroundtaskmanager-cancelsuspenddelay-f.md)
@@ -228,7 +228,7 @@
   - [GroupType(系统接口)](arkts-backgroundtasks-usagestatistics-grouptype-e-sys.md)<!--DelEnd-->
   <!--Del-->
   - [IntervalType(系统接口)](arkts-backgroundtasks-usagestatistics-intervaltype-e-sys.md)<!--DelEnd-->
-- [@ohos.resourceschedule.workScheduler](arkts-resourceschedule-workscheduler.md)
+- [@ohos.resourceschedule.workScheduler(延迟任务调度)](arkts-resourceschedule-workscheduler.md)
   - [getWorkStatus](arkts-backgroundtasks-workscheduler-getworkstatus-f.md)
   - [isLastWorkTimeOut](arkts-backgroundtasks-workscheduler-islastworktimeout-f.md)
   - [obtainAllWorks](arkts-backgroundtasks-workscheduler-obtainallworks-f.md)
@@ -248,7 +248,7 @@
   - [StorageRequest](arkts-backgroundtasks-workscheduler-storagerequest-e.md)
   <!--Del-->
   - [常量(系统接口)](arkts-backgroundtasks-workscheduler-con-sys.md)<!--DelEnd-->
-- [@ohos.WorkSchedulerExtensionAbility](arkts-workschedulerextensionability.md)
+- [@ohos.WorkSchedulerExtensionAbility(延迟任务调度回调)](arkts-workschedulerextensionability.md)
   - [WorkSchedulerExtensionAbility](arkts-backgroundtasks-workschedulerextensionability-c.md)
   - [WorkSchedulerExtensionContext](arkts-backgroundtasks-workschedulerextensioncontext-t.md)
 - application<!--arkts-backgroundtaskskit-application-->

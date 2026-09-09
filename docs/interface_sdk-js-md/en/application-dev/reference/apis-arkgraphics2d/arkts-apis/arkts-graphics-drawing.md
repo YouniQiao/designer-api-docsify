@@ -1,4 +1,4 @@
-# @ohos.graphics.drawing
+# @ohos.graphics.drawing(Drawing Module)
 
 During application development, you often need to draw different elements. Typically, you can use ArkUI components to draw the desired elements or effects. However, sometimes these components cannot meet the needs for custom graphics or effects. In such cases, you can turn to the Drawing module for flexible custom drawing. This module provides basic drawing capabilities, such as drawing rectangles, circles, points, straight lines, custom paths, and fonts.
 

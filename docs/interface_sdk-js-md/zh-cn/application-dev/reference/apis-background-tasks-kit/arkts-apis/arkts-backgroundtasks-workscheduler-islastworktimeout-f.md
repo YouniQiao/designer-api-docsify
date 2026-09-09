@@ -28,8 +28,8 @@ function isLastWorkTimeOut(workId: number, callback: AsyncCallback<void>): boole
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| workId | number | 是 | 指定延迟任务的Id。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
+| workId | number | 是 | 延迟任务ID。指定延迟任务的唯一标识符，用于检查延迟任务的最后一次执行是否超时。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当检查延迟任务的最后一次执行是否超时成功时，error为undefined，否则为错误对象。 |
 
 **返回值：**
 
@@ -94,8 +94,8 @@ function isLastWorkTimeOut(workId: number, callback: AsyncCallback<boolean>): vo
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| workId | number | 是 | 指定延迟任务的Id。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。 |
+| workId | number | 是 | 延迟任务ID。指定延迟任务的唯一标识符，用于检查延迟任务的最后一次执行是否超时 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。返回true表示指定任务的最后一次执行超时，false表示未超时。 |
 
 **错误码：**
 
@@ -129,7 +129,7 @@ workScheduler.isLastWorkTimeOut(500, (error: BusinessError, res: boolean) => {
 function isLastWorkTimeOut(workId: number): Promise<boolean>
 ```
 
-检查延迟任务的最后一次执行是否超时，使用Promise异步回调。
+检查延迟任务的最后一次执行是否超时，使用Promise形式返回。
 
 **起始版本：** 9
 
@@ -141,7 +141,7 @@ function isLastWorkTimeOut(workId: number): Promise<boolean>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| workId | number | 是 | 指定延迟任务的Id。 |
+| workId | number | 是 | 延迟任务ID。指定延迟任务的唯一标识符，用于检查延迟任务的最后一次执行是否超时。 |
 
 **返回值：**
 

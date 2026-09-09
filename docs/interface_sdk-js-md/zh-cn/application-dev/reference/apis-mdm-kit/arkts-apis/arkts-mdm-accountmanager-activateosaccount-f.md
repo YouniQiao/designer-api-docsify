@@ -12,7 +12,7 @@ import { accountManager } from '@kit.MDMKit';
 function activateOsAccount(admin: Want, accountId: number): Promise<void>
 ```
 
-切换系统账号。当前仅支持手机、平板设备使用，只能在[createNormalOsAccount](arkts-mdm-accountmanager-createnormalosaccount-f.md)创建的普通系统账号和默认系统账号 (ID为10 0) 之间切换。
+切换系统账号。当前仅支持手机、平板设备使用，只能在[createNormalOsAccount](arkts-mdm-accountmanager-createnormalosaccount-f.md)创建的普通系统账号和默认系统账号(ID为100) 之间切换。
 
 **起始版本：** 26.0.0
 

@@ -18,7 +18,7 @@ import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
 actualDelayTime: number
 ```
 
-Actual duration of the transient task requested by the application, in milliseconds. Unit:ms
+应用实际申请的短时任务时间，单位：ms。Unit:ms
 
 **说明：** 申请时间最长为3分钟，低电量（[BatteryCapacityLevel](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-batteryinfo-batterycapacitylevel-e.md)为LEVEL_LOW）时最长为1分钟。
 
@@ -34,7 +34,7 @@ Actual duration of the transient task requested by the application, in milliseco
 requestId: number
 ```
 
-应用实际申请的短时任务时间，单位：ms。
+短时任务的请求ID。
 
 **类型：** number
 

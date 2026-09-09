@@ -114,6 +114,8 @@ TASK_KEEPING = 9
 
 计算任务（仅在特定设备生效）。
 
+**说明：** 从API version 21开始，对PC/2in1设备、非PC/2in1设备但申请了ACL权限为[ohos.permission.KEEP_BACKGROUND_RUNNING_SYSTEM](../../../security/AccessToken/restricted-permissions.md#ohospermissionkeep_background_running_system)的应用开放。 API version 20及之前版本，仅对PC/2in1设备开放。
+
 **起始版本：** 8
 
 **废弃版本：** 9

@@ -11,7 +11,7 @@
 function getRemainingDelayTime(requestId: number, callback: AsyncCallback<number>): void
 ```
 
-获取本次短时任务的剩余时间，使用callback异步回调。
+获取应用程序进入挂起状态前的剩余时间，使用callback异步回调。
 
 **起始版本：** 7
 
@@ -51,7 +51,7 @@ backgroundTaskManager.getRemainingDelayTime(delayInfo.requestId, (err: BusinessE
 function getRemainingDelayTime(requestId: number): Promise<number>
 ```
 
-获取本次短时任务的剩余时间，使用Promise异步回调。
+获取应用程序进入挂起状态前的剩余时间，使用Promise异步回调。
 
 **起始版本：** 7
 
@@ -71,7 +71,7 @@ function getRemainingDelayTime(requestId: number): Promise<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;number&gt; | Promise对象，返回本次短时任务的剩余时间，单位：ms。 |
+| Promise&lt;number&gt; | Promise对象。返回应用程序进入挂起状态之前的剩余时间，单位：ms。 |
 
 **示例**
 

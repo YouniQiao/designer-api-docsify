@@ -1,4 +1,4 @@
-# @ohos.charger
+# @ohos.charger(充电类型)
 
 提供充电类型。
 

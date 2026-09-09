@@ -1,6 +1,6 @@
 # FrequencyInfo（系统接口）
 
-执行频率信息.
+执行频率的具体信息，用于设置应用所在活跃分组的执行频率。
 
 **起始版本：** 26.1.0
 
@@ -20,7 +20,7 @@ import { workScheduler } from '@kit.BackgroundTasksKit';
 interval: number
 ```
 
-执行频率。单位为：毫秒。
+活跃分组执行频率，单位：ms，取值限定为整数，取值范围[7200000, 2147483647)。
 
 **类型：** number
 
@@ -38,7 +38,7 @@ interval: number
 uid: number
 ```
 
-应用uid。取值限定为整数。
+由系统自动分配的uid，取值限定为整数。
 
 **类型：** number
 
@@ -56,7 +56,7 @@ uid: number
 workId: number
 ```
 
-延迟任务id。取值限定为整数。
+用于任务调度系统的延迟任务ID，取值限定为整数。
 
 **类型：** number
 

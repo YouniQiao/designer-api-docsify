@@ -20,7 +20,7 @@ maxHeight: number
 
 Maximum height of a component screenshot.
 
-Value range: (-∞, +∞)
+The normal value range is (0, +∞). A value of -1 indicates that the component snapshot size limitation query failed.
 
 Unit: px.
 
@@ -42,7 +42,7 @@ maxWidth: number
 
 Maximum width of a component screenshot.
 
-Value range: (-∞, +∞)
+The normal value range is (0, +∞). A value of -1 indicates that the component snapshot size limitation query failed.
 
 Unit: px.
 

@@ -182,7 +182,7 @@
   - [BusinessError](arkts-basicservices-base-businesserror-i.md)
   - [Callback](arkts-basicservices-base-callback-i.md)
   - [ErrorCallback](arkts-basicservices-base-errorcallback-i.md)
-- [@ohos.batteryInfo](arkts-batteryinfo.md)
+- [@ohos.batteryInfo(电量信息)](arkts-batteryinfo.md)
   <!--Del-->
   - [getBatteryConfig(系统接口)](arkts-basicservices-batteryinfo-getbatteryconfig-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -198,7 +198,7 @@
   <!--Del-->
   - [常量(系统接口)](arkts-basicservices-batteryinfo-con-sys.md)<!--DelEnd-->
 <!--Del-->
-- [@ohos.batteryStatistics](arkts-batterystatistics.md)<!--DelEnd-->
+- [@ohos.batteryStatistics(耗电统计)](arkts-batterystatistics.md)<!--DelEnd-->
   <!--Del-->
   - [getAppPowerPercent(系统接口)](arkts-basicservices-batterystats-getapppowerpercent-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -214,7 +214,7 @@
   <!--Del-->
   - [ConsumptionType(系统接口)](arkts-basicservices-batterystats-consumptiontype-e-sys.md)<!--DelEnd-->
 <!--Del-->
-- [@ohos.brightness](arkts-brightness.md)<!--DelEnd-->
+- [@ohos.brightness(屏幕亮度)](arkts-brightness.md)<!--DelEnd-->
   <!--Del-->
   - [setValue(系统接口)](arkts-basicservices-brightness-setvalue-f-sys.md)<!--DelEnd-->
 - [@ohos.busManager.serial(串口通信管理)](arkts-busmanager-serial.md)
@@ -228,7 +228,7 @@
   - [Parity](arkts-basicservices-serial-parity-e.md)
   - [StopBits](arkts-basicservices-serial-stopbits-e.md)
 <!--Del-->
-- [@ohos.charger](arkts-charger.md)<!--DelEnd-->
+- [@ohos.charger(充电类型)](arkts-charger.md)<!--DelEnd-->
   <!--Del-->
   - [ChargeType(系统接口)](arkts-basicservices-charger-chargetype-e-sys.md)<!--DelEnd-->
 - [@ohos.commonEvent](arkts-commonevent.md)
@@ -321,7 +321,7 @@
   - [ProgressIndicator](arkts-basicservices-pasteboard-progressindicator-e.md)
   - [ShareOption](arkts-basicservices-pasteboard-shareoption-e.md)
   - [常量](arkts-basicservices-pasteboard-con.md)
-- [@ohos.power](arkts-power.md)
+- [@ohos.power(系统电源管理)](arkts-power.md)
   <!--Del-->
   - [getPowerConfig(系统接口)](arkts-basicservices-power-getpowerconfig-f-sys.md)<!--DelEnd-->
   - [getPowerMode](arkts-basicservices-power-getpowermode-f.md)
@@ -585,7 +585,7 @@
   - [off](arkts-basicservices-systemload-off-f.md)
   - [on](arkts-basicservices-systemload-on-f.md)
   - [SystemLoadLevel](arkts-basicservices-systemload-systemloadlevel-e.md)
-- [@ohos.runningLock](arkts-runninglock.md)
+- [@ohos.runningLock(RunningLock锁)](arkts-runninglock.md)
   - [create](arkts-basicservices-runninglock-create-f.md)
   - [createRunningLock](arkts-basicservices-runninglock-createrunninglock-f.md)
   - [isRunningLockTypeSupported](arkts-basicservices-runninglock-isrunninglocktypesupported-f.md)
@@ -713,7 +713,7 @@
   - [TimerOptions(系统接口)](arkts-basicservices-systemtimer-timeroptions-i-sys.md)<!--DelEnd-->
   <!--Del-->
   - [常量(系统接口)](arkts-basicservices-systemtimer-con-sys.md)<!--DelEnd-->
-- [@ohos.thermal](arkts-thermal.md)
+- [@ohos.thermal(热管理)](arkts-thermal.md)
   - [getLevel](arkts-basicservices-thermal-getlevel-f.md)
   - [getThermalLevel](arkts-basicservices-thermal-getthermallevel-f.md)
   - [registerThermalLevelCallback](arkts-basicservices-thermal-registerthermallevelcallback-f.md)
@@ -1060,11 +1060,11 @@
   - [ParallelStrategy](arkts-basicservices-zlib-parallelstrategy-e.md)
   - [PathSeparatorStrategy](arkts-basicservices-zlib-pathseparatorstrategy-e.md)
   - [ReturnStatus](arkts-basicservices-zlib-returnstatus-e.md)
-- [@system.battery](arkts-system-battery.md)
+- [@system.battery(电量信息)](arkts-system-battery.md)
   - [Battery](arkts-basicservices-system-battery-battery-c.md)
   - [BatteryResponse](arkts-basicservices-system-battery-batteryresponse-i.md)
   - [GetStatusOptions](arkts-basicservices-system-battery-getstatusoptions-i.md)
-- [@system.brightness](arkts-system-brightness.md)
+- [@system.brightness(屏幕亮度)](arkts-system-brightness.md)
   - [Brightness](arkts-basicservices-system-brightness-brightness-c.md)
   - [BrightnessModeResponse](arkts-basicservices-system-brightness-brightnessmoderesponse-i.md)
   - [BrightnessResponse](arkts-basicservices-system-brightness-brightnessresponse-i.md)

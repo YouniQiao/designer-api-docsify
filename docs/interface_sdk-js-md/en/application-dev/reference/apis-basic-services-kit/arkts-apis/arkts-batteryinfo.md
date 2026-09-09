@@ -1,4 +1,4 @@
-# @ohos.batteryInfo
+# @ohos.batteryInfo(Battery Information)
 
 The **batteryInfo** module provides APIs for querying the charger type, battery health status, and battery charging status.
 

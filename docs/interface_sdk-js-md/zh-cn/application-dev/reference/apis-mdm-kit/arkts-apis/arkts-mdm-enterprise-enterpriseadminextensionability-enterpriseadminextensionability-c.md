@@ -199,7 +199,7 @@ onAdminEnabled(): void
 
 当前设备管理应用被激活后，触发该回调。企业管理员或者员工部署并激活设备管理应用，系统通知设备管理应用已激活admin权限。设备管理应用可在此回调函数中进行初始化策略设置。无需注册，激活后默认触发该回调。
 
-与onDeviceAdminEnabled的区别：
+**与onDeviceAdminEnabled的区别：**
 
 - onAdminEnabled：设备管理应用自身被激活时触发，用于设备管理应用初始化自己的策略。  
 - onDeviceAdminEnabled：超级设备管理应用监听普通设备管理应用激活事件，用于超级设备管理应用对普通设备管理应用进行管理。
@@ -915,8 +915,7 @@ onLogCollected(result: common.Result): void
 > **说明：**
 > 
 > 日志收集成功时，必须在应用的EnterpriseAdminExtensionAbility中访问沙箱目录（/data/edm/log）获取日志，获取日志方式参考下列示例代码。应用取走日志后，建议调用
-> [systemManager.finishLogCollected](arkts-mdm-systemmanager-finishlogcollected-f.md)删除已收集到的日
-> 志。
+> [systemManager.finishLogCollected](arkts-mdm-systemmanager-finishlogcollected-f.md)删除已收集到的日志。
 
 **起始版本：** 23
 

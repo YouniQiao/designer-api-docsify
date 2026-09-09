@@ -380,6 +380,7 @@
   - [getAppClipboardPolicy](arkts-mdm-securitymanager-getappclipboardpolicy-f.md)
   <!--Del-->
   - [getDeviceEncryptionStatus(system api)](arkts-mdm-securitymanager-getdeviceencryptionstatus-f-sys.md)<!--DelEnd-->
+  - [getDeviceSecurityLevelPolicy](arkts-mdm-securitymanager-getdevicesecuritylevelpolicy-f.md)
   - [getDisallowedPermissions](arkts-mdm-securitymanager-getdisallowedpermissions-f.md)
   - [getExternalSourceExtensionsPolicy](arkts-mdm-securitymanager-getexternalsourceextensionspolicy-f.md)
   - [getPasswordPolicy](arkts-mdm-securitymanager-getpasswordpolicy-f.md)
@@ -396,6 +397,7 @@
   - [isScreenLockDisabledForAccount](arkts-mdm-securitymanager-isscreenlockdisabledforaccount-f.md)
   - [removeAllowedPermissionBundle](arkts-mdm-securitymanager-removeallowedpermissionbundle-f.md)
   - [setAppClipboardPolicy](arkts-mdm-securitymanager-setappclipboardpolicy-f.md)
+  - [setDeviceSecurityLevelPolicy](arkts-mdm-securitymanager-setdevicesecuritylevelpolicy-f.md)
   - [setDisallowedPermission](arkts-mdm-securitymanager-setdisallowedpermission-f.md)
   - [setExternalSourceExtensionsPolicy](arkts-mdm-securitymanager-setexternalsourceextensionspolicy-f.md)
   - [setPasswordPolicy](arkts-mdm-securitymanager-setpasswordpolicy-f.md)
@@ -412,6 +414,7 @@
   - [PasswordPolicy](arkts-mdm-securitymanager-passwordpolicy-i.md)
   - [WatermarkProperties](arkts-mdm-securitymanager-watermarkproperties-i.md)
   - [ClipboardPolicy](arkts-mdm-securitymanager-clipboardpolicy-e.md)
+  - [DeviceSecurityLevelPolicy](arkts-mdm-securitymanager-devicesecuritylevelpolicy-e.md)
   - [PasswordAlgs](arkts-mdm-securitymanager-passwordalgs-e.md)
   - [PermissionManagedState](arkts-mdm-securitymanager-permissionmanagedstate-e.md)
 - [@ohos.enterprise.systemManager(System Management)](arkts-enterprise-systemmanager.md)
@@ -526,5 +529,5 @@
   - [Phase2Method](arkts-mdm-wifimanager-phase2method-e.md)
   - [WifiSecurityType](arkts-mdm-wifimanager-wifisecuritytype-e.md)
 - application<!--arkts-mdmkit-application-->
-  - [EnterpriseAdminExtensionContext](arkts-enterpriseadminextensioncontext.md)
+  - [EnterpriseAdminExtensionContext(EnterpriseAdminExtensionContext)](arkts-enterpriseadminextensioncontext.md)
     - [EnterpriseAdminExtensionContext](arkts-mdm-enterpriseadminextensioncontext-c.md)

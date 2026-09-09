@@ -1,4 +1,4 @@
-# @system.brightness
+# @system.brightness(Screen Brightness)
 
 ## Modules to Import
 

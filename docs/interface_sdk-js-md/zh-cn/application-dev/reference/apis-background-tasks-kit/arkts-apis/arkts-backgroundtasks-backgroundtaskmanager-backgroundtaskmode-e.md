@@ -1,6 +1,10 @@
 # BackgroundTaskMode
 
-长时任务主类型。通常与长时任务子类型[BackgroundTaskSubmode](arkts-backgroundtasks-backgroundtaskmanager-backgroundtasksubmode-e.md)配合使用，对照关系请参考长时任务主类型与子类型对照表，两者共同作为API version 21新增的[申请](arkts-backgroundtasks-backgroundtaskmanager-startbackgroundrunning-f.md)、[更新](arkts-backgroundtasks-backgroundtaskmanager-updatebackgroundrunning-f.md)长时任务接口入参，用于指定长时任务类型。&lt;/br&gt;仅当主类型为MODE_SPECIAL_SCENARIO_PROCESSING特殊场景类型，或非PC/2in1设备主类型为MODE_TASK_KEEPING计算任务时，调用长时任务相关接口时需同时申请ACL权限[ohos.permission.KEEP_BACKGROUND_RUNNING_SYSTEM](../../../security/AccessToken/restricted-permissions.md#ohospermissionkeep_background_running_system)，其他场景无需申请该权限。
+长时任务主类型。
+
+通常与长时任务子类型[BackgroundTaskSubmode](arkts-backgroundtasks-backgroundtaskmanager-backgroundtasksubmode-e.md)配合使用，对照关系请参考长时任务主类型与子类型对照表，两者共同作为API version 21新增的[申请](arkts-backgroundtasks-backgroundtaskmanager-startbackgroundrunning-f.md)、[更新](arkts-backgroundtasks-backgroundtaskmanager-updatebackgroundrunning-f.md)长时任务接口入参，用于指定长时任务类型。
+
+仅当主类型为MODE_SPECIAL_SCENARIO_PROCESSING特殊场景类型，或非PC/2in1设备主类型为MODE_TASK_KEEPING计算任务时，调用长时任务相关接口时需同时申请ACL权限[ohos.permission.KEEP_BACKGROUND_RUNNING_SYSTEM](../../../security/AccessToken/restricted-permissions.md#ohospermissionkeep_background_running_system)，其他场景无需申请该权限。
 
 **起始版本：** 21
 
@@ -159,7 +163,7 @@ MODE_SPECIAL_SCENARIO_PROCESSING = 13
 
 特殊场景类型（仅对Phone、Tablet、PC/2in1设备开放）。
 
-使用场景举例：应用在后台导出媒体文件、应用使用三方投播组件在后台进行投播，场景需与长时任务子类型相匹配。
+使用场景举例：应用在后台导出媒体文件、应用使用三方投播组件在后台进行投播、应用在后台有室内运动场景，场景需与长时任务子类型相匹配。
 
 **说明：**
 

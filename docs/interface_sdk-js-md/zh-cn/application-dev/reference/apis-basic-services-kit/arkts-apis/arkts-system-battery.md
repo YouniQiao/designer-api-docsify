@@ -1,4 +1,4 @@
-# @system.battery
+# @system.battery(电量信息)
 
 ## 导入模块
 

@@ -12,7 +12,7 @@ import { workScheduler } from '@kit.BackgroundTasksKit';
 function resetExecFrequency(uid: number): void
 ```
 
-重置执行频率信息。
+重置应用所在活跃分组的执行频率。
 
 **起始版本：** 26.1.0
 
@@ -28,13 +28,13 @@ function resetExecFrequency(uid: number): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| uid | number | 是 | 应用uid。取值限定为整数。 |
+| uid | number | 是 | 由系统自动分配的UID。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | 没有权限。 |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | 非系统应用 |
-| [9700003](../errorcode-workScheduler.md#9700003-系统服务失败) | 系统服务异常。 |
-| [9700006](../errorcode-workScheduler.md#9700006-执行频率参数校验失败) | 执行频率参数检查失败。 |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [9700003](../errorcode-workScheduler.md#9700003-系统服务失败) | System service operation failed. |
+| [9700006](../errorcode-workScheduler.md#9700006-执行频率参数校验失败) | Failed to check the execution frequency parameters. |

@@ -18,7 +18,7 @@ import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
 continuousTaskId: number
 ```
 
-长时任务ID。取值限定为整数。
+长时任务ID。必须是存在的ID。
 
 **类型：** number
 
@@ -50,7 +50,7 @@ progressInfo: ProgressInfo
 wantAgent?: WantAgent
 ```
 
-通知参数，用于指定点击长时任务通知后跳转的界面。
+通知参数，用于指定点击长时任务通知后跳转的界面。默认为申请长时任务时传入的wantAgent。
 
 **类型：** [WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-depr-t.md)
 

@@ -35,3 +35,19 @@ Deletes the local metadata and thumbnail of the original files from the home sto
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
+
+## SHARE_RETAIN_FORCE
+
+```TypeScript
+SHARE_RETAIN_FORCE = 2
+```
+
+Deletes the local metadata and thumbnails of shared files and shared albums from the cloud.
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+**System API:** This is a system API.

@@ -6,7 +6,7 @@
 const EXECUTE_IMMEDIATE: string
 ```
 
-请求的任务是否立即执行。
+表示请求的任务是否立即执行。可以作为workInfo.parameters的key值，在申请延迟任务接口[startWork](arkts-backgroundtasks-workscheduler-startwork-f.md)中使用。
 
 **类型：** string
 
@@ -24,7 +24,7 @@ const EXECUTE_IMMEDIATE: string
 const WORK_SCHEDULER_CONDITION: string
 ```
 
-当前任务触发时满足的最后一个条件。
+当前任务触发时满足的最后一个条件。可以作为workInfo.parameters的key值，在延迟任务调度回调接口[onWorkStart](arkts-backgroundtasks-workschedulerextensionability-c.md#onworkstart)中使用。
 
 **类型：** string
 

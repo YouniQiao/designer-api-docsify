@@ -48,7 +48,7 @@ suspendMessage?: SuspendMessage
 suspendReason: ContinuousTaskSuspendReason
 ```
 
-长时任务暂停原因。
+长时任务暂停原因，恒为-1。建议使用[suspendMessage](arkts-backgroundtasks-backgroundtaskmanager-suspendmessage-i.md)字段获取长时任务暂停的具体原因。
 
 **类型：** [ContinuousTaskSuspendReason](arkts-backgroundtasks-backgroundtaskmanager-continuoustasksuspendreason-e.md)
 

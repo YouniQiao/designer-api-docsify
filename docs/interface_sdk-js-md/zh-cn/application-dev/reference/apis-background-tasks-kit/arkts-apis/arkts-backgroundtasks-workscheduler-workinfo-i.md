@@ -34,7 +34,7 @@ abilityName: string
 batteryLevel?: number
 ```
 
-电量。
+电量。当设备电量高于或等于该值时触发延迟任务回调。
 
 取值范围：[0, 100]
 
@@ -84,7 +84,7 @@ bundleName: string
 chargerType?: ChargingType
 ```
 
-充电类型。
+充电类型。需要与isCharging参数配合使用，当isCharging为true时，可进一步指定触发延迟任务的充电器类型。
 
 **类型：** [ChargingType](arkts-backgroundtasks-workscheduler-chargingtype-e.md)
 
@@ -100,7 +100,7 @@ chargerType?: ChargingType
 earliestStartTime?: number
 ```
 
-任务首次执行时间距离任务申请时间的间隔，单位：ms，默认为0，范围大于等于0。取值范围为全体整数。
+任务首次执行时间距离任务申请时间的间隔，单位：ms，默认为0，范围大于等于0。
 
 **类型：** number
 

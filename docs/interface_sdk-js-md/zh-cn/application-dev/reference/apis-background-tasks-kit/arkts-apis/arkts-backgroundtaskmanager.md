@@ -1,4 +1,4 @@
-# @ohos.backgroundTaskManager
+# @ohos.backgroundTaskManager(后台任务管理)
 
 本模块提供后台任务管理能力。
 
@@ -28,8 +28,8 @@
 | 名称 | 说明 |
 | --- | --- |
 | [cancelSuspendDelay](arkts-backgroundtasks-backgroundtaskmanager-cancelsuspenddelay-depr-f.md#cancelsuspenddelay) | 取消延迟挂起。 |
-| [getRemainingDelayTime](arkts-backgroundtasks-backgroundtaskmanager-getremainingdelaytime-depr-f.md#getremainingdelaytime) | 获取本次短时任务的剩余时间，使用callback异步回调。 |
-| [getRemainingDelayTime](arkts-backgroundtasks-backgroundtaskmanager-getremainingdelaytime-depr-f.md#getremainingdelaytime) | 获取本次短时任务的剩余时间，使用Promise异步回调。 |
+| [getRemainingDelayTime](arkts-backgroundtasks-backgroundtaskmanager-getremainingdelaytime-depr-f.md#getremainingdelaytime) | 获取应用程序进入挂起状态前的剩余时间，使用callback异步回调。 |
+| [getRemainingDelayTime](arkts-backgroundtasks-backgroundtaskmanager-getremainingdelaytime-depr-f.md#getremainingdelaytime) | 获取应用程序进入挂起状态前的剩余时间，使用Promise异步回调。 |
 | [requestSuspendDelay](arkts-backgroundtasks-backgroundtaskmanager-requestsuspenddelay-depr-f.md#requestsuspenddelay) | 后台应用申请延迟挂起。 |
 | [startBackgroundRunning](arkts-backgroundtasks-backgroundtaskmanager-startbackgroundrunning-depr-f.md#startbackgroundrunning) | 向系统申请长时任务，使用callback异步回调。 |
 | [startBackgroundRunning](arkts-backgroundtasks-backgroundtaskmanager-startbackgroundrunning-depr-f.md#startbackgroundrunning) | 向系统申请长时任务，使用promise异步回调。 |

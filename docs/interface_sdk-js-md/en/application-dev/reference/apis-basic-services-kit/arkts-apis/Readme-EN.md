@@ -236,7 +236,7 @@
   - [BusinessError](arkts-basicservices-base-businesserror-i.md)
   - [Callback](arkts-basicservices-base-callback-i.md)
   - [ErrorCallback](arkts-basicservices-base-errorcallback-i.md)
-- [@ohos.batteryInfo](arkts-batteryinfo.md)
+- [@ohos.batteryInfo(Battery Information)](arkts-batteryinfo.md)
   <!--Del-->
   - [getBatteryConfig(system api)](arkts-basicservices-batteryinfo-getbatteryconfig-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -252,7 +252,7 @@
   <!--Del-->
   - [Constants(system api)](arkts-basicservices-batteryinfo-con-sys.md)<!--DelEnd-->
 <!--Del-->
-- [@ohos.batteryStatistics](arkts-batterystatistics.md)<!--DelEnd-->
+- [@ohos.batteryStatistics(Battery Statistics)](arkts-batterystatistics.md)<!--DelEnd-->
   <!--Del-->
   - [getAppPowerPercent(system api)](arkts-basicservices-batterystats-getapppowerpercent-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -268,7 +268,7 @@
   <!--Del-->
   - [ConsumptionType(system api)](arkts-basicservices-batterystats-consumptiontype-e-sys.md)<!--DelEnd-->
 <!--Del-->
-- [@ohos.brightness](arkts-brightness.md)<!--DelEnd-->
+- [@ohos.brightness(Screen Brightness)](arkts-brightness.md)<!--DelEnd-->
   <!--Del-->
   - [setValue(system api)](arkts-basicservices-brightness-setvalue-f-sys.md)<!--DelEnd-->
 - [@ohos.busManager.serial](arkts-busmanager-serial.md)
@@ -282,7 +282,7 @@
   - [Parity](arkts-basicservices-serial-parity-e.md)
   - [StopBits](arkts-basicservices-serial-stopbits-e.md)
 <!--Del-->
-- [@ohos.charger](arkts-charger.md)<!--DelEnd-->
+- [@ohos.charger(Charger)](arkts-charger.md)<!--DelEnd-->
   <!--Del-->
   - [ChargeType(system api)](arkts-basicservices-charger-chargetype-e-sys.md)<!--DelEnd-->
 - [@ohos.commonEvent](arkts-commonevent.md)
@@ -385,7 +385,7 @@
   - [ProgressIndicator](arkts-basicservices-pasteboard-progressindicator-e.md)
   - [ShareOption](arkts-basicservices-pasteboard-shareoption-e.md)
   - [Constants](arkts-basicservices-pasteboard-con.md)
-- [@ohos.power](arkts-power.md)
+- [@ohos.power(Power Management)](arkts-power.md)
   <!--Del-->
   - [getPowerConfig(system api)](arkts-basicservices-power-getpowerconfig-f-sys.md)<!--DelEnd-->
   - [getPowerMode](arkts-basicservices-power-getpowermode-f.md)
@@ -649,7 +649,7 @@
   - [off](arkts-basicservices-systemload-off-f.md)
   - [on](arkts-basicservices-systemload-on-f.md)
   - [SystemLoadLevel](arkts-basicservices-systemload-systemloadlevel-e.md)
-- [@ohos.runningLock](arkts-runninglock.md)
+- [@ohos.runningLock(RunningLock)](arkts-runninglock.md)
   - [create](arkts-basicservices-runninglock-create-f.md)
   - [createRunningLock](arkts-basicservices-runninglock-createrunninglock-f.md)
   - [isRunningLockTypeSupported](arkts-basicservices-runninglock-isrunninglocktypesupported-f.md)
@@ -876,7 +876,7 @@
   - [TimerOptions(system api)](arkts-basicservices-systemtimer-timeroptions-i-sys.md)<!--DelEnd-->
   <!--Del-->
   - [Constants(system api)](arkts-basicservices-systemtimer-con-sys.md)<!--DelEnd-->
-- [@ohos.thermal](arkts-thermal.md)
+- [@ohos.thermal(Thermal Management)](arkts-thermal.md)
   - [getLevel](arkts-basicservices-thermal-getlevel-f.md)
   - [getThermalLevel](arkts-basicservices-thermal-getthermallevel-f.md)
   - [registerThermalLevelCallback](arkts-basicservices-thermal-registerthermallevelcallback-f.md)
@@ -1223,11 +1223,11 @@
   - [ParallelStrategy](arkts-basicservices-zlib-parallelstrategy-e.md)
   - [PathSeparatorStrategy](arkts-basicservices-zlib-pathseparatorstrategy-e.md)
   - [ReturnStatus](arkts-basicservices-zlib-returnstatus-e.md)
-- [@system.battery](arkts-system-battery.md)
+- [@system.battery(Battery Information)](arkts-system-battery.md)
   - [Battery](arkts-basicservices-system-battery-battery-c.md)
   - [BatteryResponse](arkts-basicservices-system-battery-batteryresponse-i.md)
   - [GetStatusOptions](arkts-basicservices-system-battery-getstatusoptions-i.md)
-- [@system.brightness](arkts-system-brightness.md)
+- [@system.brightness(Screen Brightness)](arkts-system-brightness.md)
   - [Brightness](arkts-basicservices-system-brightness-brightness-c.md)
   - [BrightnessModeResponse](arkts-basicservices-system-brightness-brightnessmoderesponse-i.md)
   - [BrightnessResponse](arkts-basicservices-system-brightness-brightnessresponse-i.md)

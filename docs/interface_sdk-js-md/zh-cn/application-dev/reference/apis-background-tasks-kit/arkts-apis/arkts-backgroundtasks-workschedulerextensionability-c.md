@@ -18,7 +18,7 @@ import { WorkSchedulerExtensionAbility, WorkSchedulerExtensionContext } from '@k
 onWorkStart(work: workScheduler.WorkInfo): void
 ```
 
-开始延迟任务调度回调。
+开始延迟任务调度回调。当满足调度条件时触发该回调。
 
 **起始版本：** 9
 

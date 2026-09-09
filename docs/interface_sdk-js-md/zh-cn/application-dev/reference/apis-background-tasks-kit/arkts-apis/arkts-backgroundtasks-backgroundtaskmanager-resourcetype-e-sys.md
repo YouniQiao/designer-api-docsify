@@ -126,7 +126,7 @@ RUNNING_LOCK资源，申请后挂起状态不会代理RUNNING_BACKGROUND锁。
 SENSOR = 1 << 8
 ```
 
-申请后不拦截Sensor回调。
+申请后不拦截SENSOR回调。
 
 **起始版本：** 10
 

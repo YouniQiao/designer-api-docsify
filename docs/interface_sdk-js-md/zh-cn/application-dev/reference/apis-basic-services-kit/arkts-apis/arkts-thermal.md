@@ -1,4 +1,4 @@
-# @ohos.thermal
+# @ohos.thermal(热管理)
 
 该模块提供热管理相关的接口，包括热档位查询及注册回调等功能。系统根据设备温度阈值将热状态划分为多个档位层级（参见[ThermalLevel](arkts-basicservices-thermal-thermallevel-e.md)），当设备温度跨越档位阈值时触发回调通知，开发者可根据档位等级执行相应的业务降级策略。
 

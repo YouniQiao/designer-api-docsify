@@ -1,4 +1,4 @@
-# @ohos.resourceschedule.workScheduler
+# @ohos.resourceschedule.workScheduler(延迟任务调度)
 
 本模块提供延迟任务注册、取消、查询的能力。在开发过程中，对于实时性要求不高的任务，可以调用本模块接口注册延迟任务，在系统空闲时根据性能、功耗、热等情况进行调度执行。开发指导请参考[延迟任务开发指南](../../../task-management/work-scheduler.md)。
 
@@ -24,21 +24,21 @@ import { workScheduler } from '@kit.BackgroundTasksKit';
 | [getWorkStatus](arkts-backgroundtasks-workscheduler-getworkstatus-f.md) | 通过workId获取延迟任务，使用Promise异步回调。 |
 | [isLastWorkTimeOut](arkts-backgroundtasks-workscheduler-islastworktimeout-f.md) | 检查延迟任务的最后一次执行是否超时，使用Callback异步回调。 |
 | [isLastWorkTimeOut](arkts-backgroundtasks-workscheduler-islastworktimeout-f.md) | 检查延迟任务的最后一次执行是否超时，使用Callback异步回调。 |
-| [isLastWorkTimeOut](arkts-backgroundtasks-workscheduler-islastworktimeout-f.md) | 检查延迟任务的最后一次执行是否超时，使用Promise异步回调。 |
+| [isLastWorkTimeOut](arkts-backgroundtasks-workscheduler-islastworktimeout-f.md) | 检查延迟任务的最后一次执行是否超时，使用Promise形式返回。 |
 | [obtainAllWorks](arkts-backgroundtasks-workscheduler-obtainallworks-f.md) | 获取当前应用所有的延迟任务，使用Callback异步回调。 |
 | [obtainAllWorks](arkts-backgroundtasks-workscheduler-obtainallworks-f.md) | 获取当前应用所有的延迟任务，使用Callback异步回调。 |
 | [obtainAllWorks](arkts-backgroundtasks-workscheduler-obtainallworks-f.md) | 获取当前应用所有的延迟任务，使用Promise异步回调。 |
 | [startWork](arkts-backgroundtasks-workscheduler-startwork-f.md) | 申请延迟任务，成功后会把任务添加到执行队列，满足触发条件后由系统调度执行。 |
-| [stopAndClearWorks](arkts-backgroundtasks-workscheduler-stopandclearworks-f.md) | 停止和取消当前应用所有的延迟任务。 |
-| [stopWork](arkts-backgroundtasks-workscheduler-stopwork-f.md) | 取消延迟任务。 |
+| [stopAndClearWorks](arkts-backgroundtasks-workscheduler-stopandclearworks-f.md) | 停止和取消当前应用所有的延迟任务。适用于应用退出或卸载时清理所有延迟任务的场景。 |
+| [stopWork](arkts-backgroundtasks-workscheduler-stopwork-f.md) | 停止当前执行的延迟任务，或移除周期性延迟任务，后续不再执行。 |
 
 <!--Del-->
 ### 函数（系统接口）
 
 | 名称 | 说明 |
 | --- | --- |
-| [resetExecFrequency](arkts-backgroundtasks-workscheduler-resetexecfrequency-f-sys.md) | 重置执行频率信息。 |
-| [setExecFrequency](arkts-backgroundtasks-workscheduler-setexecfrequency-f-sys.md) | 设置执行频率信息. |
+| [resetExecFrequency](arkts-backgroundtasks-workscheduler-resetexecfrequency-f-sys.md) | 重置应用所在活跃分组的执行频率。 |
+| [setExecFrequency](arkts-backgroundtasks-workscheduler-setexecfrequency-f-sys.md) | 设置应用所在活跃分组的执行频率。 |
 <!--DelEnd-->
 
 ### 接口
@@ -52,7 +52,7 @@ import { workScheduler } from '@kit.BackgroundTasksKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [FrequencyInfo](arkts-backgroundtasks-workscheduler-frequencyinfo-i-sys.md) | 执行频率信息. |
+| [FrequencyInfo](arkts-backgroundtasks-workscheduler-frequencyinfo-i-sys.md) | 执行频率的具体信息，用于设置应用所在活跃分组的执行频率。 |
 <!--DelEnd-->
 
 ### 枚举
@@ -69,6 +69,6 @@ import { workScheduler } from '@kit.BackgroundTasksKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [EXECUTE_IMMEDIATE](arkts-backgroundtasks-workscheduler-con-sys.md#execute_immediate) | 请求的任务是否立即执行。 |
-| [WORK_SCHEDULER_CONDITION](arkts-backgroundtasks-workscheduler-con-sys.md#work_scheduler_condition) | 当前任务触发时满足的最后一个条件。 |
+| [EXECUTE_IMMEDIATE](arkts-backgroundtasks-workscheduler-con-sys.md#execute_immediate) | 表示请求的任务是否立即执行。可以作为workInfo.parameters的key值，在申请延迟任务接口[startWork](arkts-backgroundtasks-workscheduler-startwork-f.md)中使用。 |
+| [WORK_SCHEDULER_CONDITION](arkts-backgroundtasks-workscheduler-con-sys.md#work_scheduler_condition) | 当前任务触发时满足的最后一个条件。可以作为workInfo.parameters的key值，在延迟任务调度回调接口[onWorkStart](arkts-backgroundtasks-workschedulerextensionability-c.md#onworkstart)中使用。 |
 <!--DelEnd-->

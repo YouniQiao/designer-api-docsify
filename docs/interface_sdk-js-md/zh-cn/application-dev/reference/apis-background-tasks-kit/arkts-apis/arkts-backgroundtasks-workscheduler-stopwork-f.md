@@ -12,7 +12,7 @@ import { workScheduler } from '@kit.BackgroundTasksKit';
 function stopWork(work: WorkInfo, needCancel?: boolean): void
 ```
 
-取消延迟任务。
+停止当前执行的延迟任务，或移除周期性延迟任务，后续不再执行。
 
 **起始版本：** 9
 
@@ -25,7 +25,7 @@ function stopWork(work: WorkInfo, needCancel?: boolean): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | work | [WorkInfo](arkts-backgroundtasks-workscheduler-workinfo-i.md) | 是 | 要停止或移除的延迟任务。 |
-| needCancel | boolean | 否 | 是否需要移除任务。true表示停止并移除，false表示只停止不移除。默认为false。 |
+| needCancel | boolean | 否 | 是否需要移除任务。  true表示停止并移除，false表示只停止不移除。默认为false。如果任务后续不再需要，建议设置为true以释放系统资源；如果任务可能需要重新触发，建议设置为false。 |
 
 **错误码：**
 

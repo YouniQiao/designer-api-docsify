@@ -1,4 +1,4 @@
-# @ohos.charger
+# @ohos.charger(Charger)
 
 The **charger** module enumerates charging types.
 

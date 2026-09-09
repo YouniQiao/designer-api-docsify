@@ -1,4 +1,4 @@
-# @ohos.graphics.drawing
+# @ohos.graphics.drawing(绘制模块)
 
 开发者在绘制界面元素时，若ArkUI组件无法满足自定义图形需求，可使用Drawing模块实现灵活的自定义绘制效果。Drawing模块提供基础的图形绘制能力，包括绘制矩形、圆形、点、直线、自定义Path和字体等。
 

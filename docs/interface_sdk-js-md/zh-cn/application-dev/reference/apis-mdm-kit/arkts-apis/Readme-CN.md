@@ -276,7 +276,7 @@
   - [SettingsMenu](arkts-mdm-devicesettings-settingsmenu-e.md)
   - [SwitchKey](arkts-mdm-devicesettings-switchkey-e.md)
   - [SwitchStatus](arkts-mdm-devicesettings-switchstatus-e.md)
-- [@ohos.enterprise.EnterpriseAdminExtensionAbility](arkts-enterprise-enterpriseadminextensionability.md)
+- [@ohos.enterprise.EnterpriseAdminExtensionAbility(企业设备管理扩展能力)](arkts-enterprise-enterpriseadminextensionability.md)
   - [EnterpriseAdminExtensionAbility](arkts-mdm-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md)
 - [@ohos.enterprise.locationManager(位置服务管理)](arkts-enterprise-locationmanager.md)
   - [getLocationPolicy](arkts-mdm-locationmanager-getlocationpolicy-f.md)
@@ -524,5 +524,5 @@
   - [Phase2Method](arkts-mdm-wifimanager-phase2method-e.md)
   - [WifiSecurityType](arkts-mdm-wifimanager-wifisecuritytype-e.md)
 - application<!--arkts-mdmkit-application-->
-  - [EnterpriseAdminExtensionContext](arkts-enterpriseadminextensioncontext.md)
+  - [EnterpriseAdminExtensionContext(企业设备管理扩展能力上下文环境)](arkts-enterpriseadminextensioncontext.md)
     - [EnterpriseAdminExtensionContext](arkts-mdm-enterpriseadminextensioncontext-c.md)

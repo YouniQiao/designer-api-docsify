@@ -153,7 +153,7 @@ off(type:'progressUpdate', callback?: Callback<number>):void
 on(type:'complete', callback: Callback<void>):void
 ```
 
-注册转码完成事件，并通过注册的回调方法通知开发者。开发者只能注册一个进度更新事件的回调方法，当开发者重复注册时，以最后一次注册的回调接口为准。使用callback异步回调。
+注册转码完成事件，并通过注册的回调方法通知开发者。开发者只能注册一个完成事件的回调方法，当开发者重复注册时，以最后一次注册的回调接口为准。使用callback异步回调。
 
 当AVTranscoder上报complete事件时，当前转码操作已完成，开发者需要通过[release()](#release)退出转码操作。
 
@@ -225,7 +225,7 @@ on(type:'progressUpdate', callback: Callback<number>):void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'progressUpdate' | 是 | 进度更新事件回调类型，支持的事件：'progressUpdate'，在转码过程中系统会自动触发此事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 是 | 回调函数，返回进度更新事件，函数中的参数number，表示当前转码进度。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 是 | 回调函数，返回进度更新事件，函数中的参数number，表示当前转码百分比进度。 |
 
 ## pause
 

@@ -42,6 +42,8 @@ SYSTEM_CANCEL_AUDIO_PLAYBACK_NOT_RUNNING = 6
 
 申请AUDIO_PLAYBACK类型长时任务，但是未播放音视频。
 
+**说明：** 需要先注册暂停回调on('continuousTaskSuspend')，当连续检测失败时，系统取消对应的长时任务，返回该取消原因。
+
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。

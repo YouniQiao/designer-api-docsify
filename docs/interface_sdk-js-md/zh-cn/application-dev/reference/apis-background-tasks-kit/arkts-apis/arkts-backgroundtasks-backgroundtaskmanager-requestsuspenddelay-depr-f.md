@@ -34,7 +34,7 @@ function requestSuspendDelay(reason: string, callback: Callback<void>): DelaySus
 
 | 类型 | 说明 |
 | --- | --- |
-| DelaySuspendInfo | 返回延迟挂起信息。 |
+| DelaySuspendInfo | 返回延迟挂起信息。包含当前任务的任务ID和剩余时间。 |
 
 **示例**
 

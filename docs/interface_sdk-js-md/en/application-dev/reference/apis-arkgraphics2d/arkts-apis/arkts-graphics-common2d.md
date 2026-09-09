@@ -1,4 +1,4 @@
-# @ohos.graphics.common2D
+# @ohos.graphics.common2D(Common Data Types of 2D Graphics)
 
 This module defines some common data types in the 2D graphics field.
 

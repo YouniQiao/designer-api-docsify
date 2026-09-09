@@ -62,6 +62,24 @@ Resource ID, which can be mapped to the alias displayed in the File Manager list
 
 **System API:** This is a system API.
 
+## isSupportPlaceHolder
+
+```TypeScript
+isSupportPlaceHolder?: boolean
+```
+
+Whether the synchronization root supports placeholders. Value constraint: true indicates that the synchronization root supports placeholders. false indicates that the synchronization root does not support placeholders. Default value: false.
+
+**Type:** boolean
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.FileManagement.CloudDiskManager
+
+**System API:** This is a system API.
+
 ## path
 
 ```TypeScript

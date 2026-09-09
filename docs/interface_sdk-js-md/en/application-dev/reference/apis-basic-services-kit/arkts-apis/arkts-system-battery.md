@@ -1,4 +1,4 @@
-# @system.battery
+# @system.battery(Battery Information)
 
 ## Modules to Import
 

@@ -22,7 +22,7 @@ EnterpriseAdminExtensionContext是[EnterpriseAdminExtensionAbility](arkts-mdm-en
 startAbilityByAdmin(admin: Want, want: Want): Promise<void>
 ```
 
-在[EnterpriseAdminExtensionAbility](arkts-mdm-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md)组件中直接启动另外一个组件（页面没有弹窗提醒），目前支持[UIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md)，[AppServiceExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-appserviceextensionability-appserviceextensionability-c.md)。使用Promise异步回调。
+在[EnterpriseAdminExtensionAbility](arkts-mdm-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md)组件中直接启动另外一个组件（页面没有弹窗提醒），目前支持[UIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md)，[AppServiceExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-appserviceextensionability-appserviceextensionability-c.md)。调用成功后，目标组件将被启动并进入运行状态。使用Promise异步回调。
 
 > **说明：**
 > 
@@ -46,8 +46,8 @@ startAbilityByAdmin(admin: Want, want: Want): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
-| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 启动组件的必要信息，Want中必须包含被启动组件的abilityName和所在应用的bundleName。 |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 企业设备管理扩展组件。admin参数需传入当前应用自身的企业设备管理扩展组件信息，Want中必须包含当前应用的企业设备管理扩展能力的abilityName和所在应用的bundleName。设置后系统将以此参数验证调用方的设备管理员身份和权限。 |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 启动组件的必要信息，Want中必须包含被启动组件的abilityName和所在应用的bundleName。设置后系统将根据bundleName定位目标应用，根据abilityName定位并启动目标组件。 |
 
 **返回值：**
 

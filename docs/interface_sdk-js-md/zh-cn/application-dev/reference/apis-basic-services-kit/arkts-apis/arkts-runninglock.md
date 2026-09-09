@@ -1,4 +1,4 @@
-# @ohos.runningLock
+# @ohos.runningLock(RunningLock锁)
 
 该模块为RunningLock锁相关操作的接口，提供阻止系统睡眠和使能接近光控制亮灭屏的能力，适用于设备灭屏后保持后台任务持续运行、接近光控制亮灭屏、以及阻止系统闲时自动睡眠等场景，保证关键任务的持续执行。包括创建、查询、持锁、释放锁等操作，类型详情见[RunningLockType](arkts-basicservices-runninglock-runninglocktype-e.md)。
 

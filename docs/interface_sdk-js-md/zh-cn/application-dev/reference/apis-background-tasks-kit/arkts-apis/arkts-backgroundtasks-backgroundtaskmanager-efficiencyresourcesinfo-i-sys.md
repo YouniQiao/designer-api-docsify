@@ -38,7 +38,7 @@ cpuLevel?: EfficiencyResourcesCpuLevel
 isForProcess: boolean
 ```
 
-进程或应用申请，取值为true表示进程申请。取值为false表示应用申请。
+进程或应用申请，取值为true表示进程申请。取值为false表示应用申请，能效资源对整个应用的所有进程有效。
 
 **类型：** boolean
 

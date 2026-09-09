@@ -1,4 +1,4 @@
-# @system.brightness
+# @system.brightness(屏幕亮度)
 
 ## 导入模块
 

@@ -20,7 +20,7 @@ import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
 appIndex: number
 ```
 
-应用分身ID。取值范围为全体整数。
+应用分身ID。
 
 **类型：** number
 
@@ -38,7 +38,7 @@ appIndex: number
 authResult?: UserAuthResult
 ```
 
-授权结果。
+授权结果，表示长时任务授权状态。
 
 **类型：** [UserAuthResult](arkts-backgroundtasks-backgroundtaskmanager-userauthresult-e.md)
 
@@ -74,7 +74,7 @@ bundleName: string
 userId: number
 ```
 
-用户ID。取值范围为全体整数。
+用户ID。
 
 **类型：** number
 
