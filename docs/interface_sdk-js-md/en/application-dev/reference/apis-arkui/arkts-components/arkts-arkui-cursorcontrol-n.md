@@ -36,23 +36,23 @@ struct Index {
   build() {
     Row() {
       Column() {
-        Text("hello world")
+        Text('hello world')
           .backgroundColor(Color.Blue)
           .fontSize(50)
           .fontWeight(FontWeight.Bold)
           .onClick(() => {
-            console.info("Text click");
+            console.info('Text click');
           })
       }
       .width(400)
       .height(300)
       .backgroundColor(Color.Pink)
       .onClick(() => {
-        console.info("Column click");
+        console.info('Column click');
       })
       // Call onTouchIntercept to modify the HitTestMode attribute of the component.
       .onTouchIntercept((event: TouchEvent) => {
-        console.info("OnTouchIntercept + " + JSON.stringify(event));
+        console.info('OnTouchIntercept + ' + JSON.stringify(event));
         // Check whether touches is empty before using it.
         if (event && event.touches) {
           let touches = event.touches;
@@ -60,6 +60,7 @@ struct Index {
             console.info('onTouchIntercept touches:', JSON.stringify(touches[i]));
           }
         }
+        // Return HitTestMode.None to exclude the component from the hit testing when the custom interception condition is met.
         if (this.isPolygon(event)) {
           return HitTestMode.None;
         }
@@ -223,24 +224,149 @@ struct AnimatablePropertyExample {
 }
 ```
 
-The example demonstrates how to use the onAccessibilityActionIntercept event to intercept a click event on a Toggle component in accessibility mode before the click event is processed.
+The following example enables the Edge Light Effect animation by setting the edgeLightMode attribute, and uses the systemMaterial API in [SheetOptions](ts-universal-attributes-sheet-transition.md#sheetoptions) to implement a semi-transparent material effect.
+Since API version 26.0.0, the edgeLightMode attribute is added to [SheetOptions](arkts-arkui-sheetoptions-i.md).
+
+```TypeScript
+// xxx.ets
+import { uiMaterial } from '@kit.ArkUI';
+
+@Entry
+@Component
+struct SheetMaterialExample {
+  @State isShow: boolean = false;
+  @State sheetHeight: number = 300;
+  @State sheetMaterial: SystemUiMaterial | undefined = new uiMaterial.ImmersiveMaterial({
+    style: uiMaterial.ImmersiveStyle.ULTRA_THIN,
+  });
+
+  @Builder
+  sheetBuilder() {
+    Column({ space: 10 }) {
+      Text('Text')
+        .fontSize(20)
+        .margin(10)
+    }
+    .width('100%')
+    .height('100%')
+  }
+
+  build() {
+    Stack() {
+      // Replace this with the actual resource file.
+      Image($r('app.media.startIcon'))
+      Column() {
+        Button('open Sheet')
+          .onClick(() => {
+            this.isShow = true;
+          })
+          .fontSize(20)
+          .margin(10)
+          .bindSheet($$this.isShow, this.sheetBuilder(), {
+            height: this.sheetHeight,
+            backgroundColor: Color.Transparent,
+            edgeLightMode: EdgeLightMode.EDGELIGHT_ENABLED,
+            systemMaterial: this.sheetMaterial
+          })
+      }
+      .justifyContent(FlexAlign.Center)
+      .width('100%')
+      .height('100%')
+    }
+  }
+}
+```
+
+The following example enables blur optimization by setting the blurSnapshot attribute. When the systemMaterial API in [SheetOptions](ts-universal-attributes-sheet-transition.md#sheetoptions) is used to set a material effect, or the blurStyle API in [SheetOptions](ts-universal-attributes-sheet-transition.md#sheetoptions) is used to set blur, and a significant increase in power consumption is observed, you can try enabling blur optimization.
+Since API version 26.0.0, [SheetOptions](arkts-arkui-sheetoptions-i.md) adds the blurSnapshot attribute.
+
+```TypeScript
+// xxx.ets
+import { uiMaterial } from '@kit.ArkUI';
+
+@Entry
+@Component
+struct SheetTransitionExample {
+  @State isShow: boolean = false;
+  @State rotateAngle: number = 0;
+  @State sheetMaterial: SystemUiMaterial | undefined = new uiMaterial.ImmersiveMaterial({
+    style: uiMaterial.ImmersiveStyle.ULTRA_THIN,
+  });
+
+  @Builder
+  sheetBuilder() {
+    Text('Context')
+  }
+
+  build() {
+    Stack() {
+      Button('This is Text')
+        .margin(100)
+        .rotate({
+          x: 0,
+          y: 0,
+          z: 1,
+          angle: this.rotateAngle
+        })
+        .onAppear(() => {
+          this.getUIContext()?.animateTo({
+            duration: 1200,
+            curve: Curve.Friction,
+            delay: 500,
+            iterations: -1,
+            expectedFrameRateRange: {
+              min: 10,
+              max: 120,
+              expected: 60,
+            }
+          }, () => {
+            this.rotateAngle = 360;
+          })
+        })
+      Column() {
+        Button('Open BindSheet')
+          .onClick(() => {
+            this.isShow = true;
+          })
+          .fontSize(20)
+          .margin(10)
+          .bindSheet($$this.isShow, this.sheetBuilder(), {
+            height: 400,
+            showClose: true,
+            backgroundColor: Color.Transparent,
+            // If a significant increase in power consumption is observed when setting blurStyle or systemMaterial, try enabling blur optimization.
+            blurStyle: BlurStyle.Thin,
+            // systemMaterial: this.sheetMaterial,
+            blurSnapshot: { enableFreeze: true },
+          })
+      }
+      .justifyContent(FlexAlign.Start)
+      .width('100%')
+      .height('100%')
+    }
+  }
+}
+```
+
+This example demonstrates how to use the onAccessibilityActionIntercept event to intercept the click event of a Toggle component before it is triggered in accessibility mode, and the developer decides whether to allow the click event.
 
 ```TypeScript
 // xxx.ets
 @Entry
 @Component
-struct SwitchBootcamp {
+struct OnAccessibilityActionInterceptExample {
   @State private isOn: boolean = false;
 
   build() {
     NavDestination() {
       Column() {
-        Text('onTouchIntercept')
+        Text('onAccessibilityActionIntercept')
         Row() {
           Text('Label message')
           Blank()
           Toggle({ type: ToggleType.Switch, isOn: $$this.isOn })
-            .onAccessibilityActionIntercept((action : AccessibilityAction) => {
+            .onAccessibilityActionIntercept((action: AccessibilityAction) => {
+              // When an accessibility click operation is triggered, display a confirmation dialog box for the user to decide whether to allow it.
               if (action === AccessibilityAction.ACCESSIBILITY_CLICK) {
                 this.getUIContext().showAlertDialog({
                   title: 'Title',
@@ -256,9 +382,11 @@ struct SwitchBootcamp {
                     action: () => {
                     }
                   }
-                })
+                });
+                // Intercept this click and prevent the default click behavior of the component.
                 return AccessibilityActionInterceptResult.ACTION_INTERCEPT;
               } else {
+                // Do not intercept other accessibility operations; allow them directly.
                 return AccessibilityActionInterceptResult.ACTION_CONTINUE;
               }
             })
@@ -271,7 +399,7 @@ struct SwitchBootcamp {
 }
 ```
 
-Since API version 18, this callback is triggered when the focus status changes. This example demonstrates the basic usage of [onAccessibilityFocus](ts-universal-accessibility-event.md#onaccessibilityfocus). When the focus is on onAccessibilityFocus takes effect, [testingTag] isFocus current is true is logged. When the focus is on any other area, [testingTag] isFocus current is false is logged.
+Since API version 18, the callback is triggered when the focus acquisition or blur state changes. This example demonstrates the basic usage of [onAccessibilityFocus](arkts-arkui-commonmethod-c.md#onaccessibilityfocus). When the focus moves to "onAccessibilityFocus takes effect", "[testingTag] isFocus current is true" is printed. When the focus moves to a position other than "onAccessibilityFocus takes effect", "[testingTag] isFocus current is false" is printed.
 
 ```TypeScript
 // xxx.ets
@@ -283,10 +411,10 @@ struct OnAccessibilityFocusExample {
     NavDestination() {
       Column() {
         Text("onAccessibilityFocus doesn't take effect")
-        Text("onAccessibilityFocus takes effect")
-        .onAccessibilityFocus((isFocus)=>{
-          console.info('[testingTag] isFocus current is ${isFocus}')
-          })
+        Text('onAccessibilityFocus takes effect')
+        .onAccessibilityFocus((isFocus: boolean) => {
+          console.info(`[testingTag] isFocus current is ${isFocus}`);
+        })
       }
       .padding(24)
       .width('100%')
@@ -314,30 +442,30 @@ struct HoverExample {
           .backgroundColor(Color.Gray)
           .position({ x: 40, y: 120 })
           .hoverEffect(HoverEffect.Scale)
-          .onHover((isHover?: boolean) => {
-            console.info(`Scale isHover: ${isHover}`)
-            this.isHoverVal = isHover as boolean
+          .onHover((isHover: boolean) => {
+            console.info(`Scale isHover: ${isHover}`);
+            this.isHoverVal = isHover;
           })
 
-        Text('Board').fontSize(20).fontColor(Color.Gray).width('90%').position({ x: 0, y: 380 })
+        Text('Board').fontSize(20).fontColor(Color.Gray).width('90%').position({ x: 0, y: 380 });
         Column()
           .width('80%')
           .height(200)
           .backgroundColor(Color.Yellow)
           .hoverEffect(HoverEffect.Highlight)
           .position({ x: 40, y: 420 })
-          .onHover((isHover?: boolean) => {
-            console.info(`Highlight isHover: ${isHover}`)
-            this.isHoverVal = isHover as boolean
+          .onHover((isHover: boolean) => {
+            console.info(`Highlight isHover: ${isHover}`);
+            this.isHoverVal = isHover;
           })
       }
       .hoverEffect(HoverEffect.None)
       .width('100%')
       .height('100%')
       .border({ width: 1 })
-      .onHover((isHover?: boolean) => {
-        console.info('HoverEffect.None')
-        this.isHoverVal = isHover as boolean
+      .onHover((isHover: boolean) => {
+        console.info('HoverEffect.None');
+        this.isHoverVal = isHover;
       })
     }
   }
@@ -391,7 +519,6 @@ struct Index {
         Text('This is gradient color.').textAlign(TextAlign.Center).height(50).width(200)
           .borderImage({
             source: {
-              angle: 90,
               direction: GradientDirection.Left,
               colors: [[0xAEE1E1, 0.0], [0xD3E0DC, 0.3], [0xFCD1D1, 1.0]],
               repeating: false
@@ -409,7 +536,7 @@ struct Index {
 }
 ```
 
-This example demonstrates how to dynamically adjust the properties of the [borderImage](arkts-arkui-commonmethod-c.md#borderimage) API using the [<slider>](../../apis-arkui/arkui-js/js-components-basic-slider.md) component.
+Dynamically adjusts the property values in the [borderImage](arkts-arkui-commonmethod-c.md#borderimage) API via the [Slider](../../apis-arkui/arkui-js/js-components-basic-slider.md) API.
 
 ```TypeScript
 // xxx.ets
@@ -568,7 +695,7 @@ struct BorderImage {
         }
 
         Column() {
-          Text(`borderImageEndSliceStart = ${this.SliceEndValue}px`)
+          Text(`borderImageSliceEnd = ${this.SliceEndValue}px`)
           Slider({
             value: this.SliceEndValue,
             min: 0,
@@ -663,26 +790,26 @@ struct BorderImage {
 // xxx.ets
 @Entry
 @Component
-struct TouchAbleExample {
-  @State text1: string = ''
-  @State text2: string = ''
+struct TouchableExample {
+  @State text1: string = '';
+  @State text2: string = '';
 
   build() {
     Stack() {
       Rect()
         .fill(Color.Gray).width(150).height(150)
         .onClick(() => {
-          console.info(this.text1 = 'Rect Clicked')
+          console.info(this.text1 = 'Rect Clicked');
         })
         .overlay(this.text1, { align: Alignment.Bottom, offset: { x: 0, y: 20 } })
       Ellipse()
         .fill(Color.Pink).width(150).height(80)
         .touchable(false) // When the Ellipse area is touched, the message "Ellipse Clicked" is not displayed.
         .onClick(() => {
-          console.info(this.text2 = 'Ellipse Clicked')
+          console.info(this.text2 = 'Ellipse Clicked');
         })
         .overlay(this.text2, { align: Alignment.Bottom, offset: { x: 0, y: 20 } })
-    }.margin(100)
+    }.margin(100);
   }
 }
 ```
@@ -746,7 +873,8 @@ struct TipsExample {
 }
 ```
 
-This example implements the system material effect of bindTips by setting the systemMaterial attribute in [TipsOptions](arkts-arkui-tipsoptions-i.md).
+This example sets the system material of a component through the systemMaterial attribute in [TipsOptions](arkts-arkui-tipsoptions-i.md), implementing the immersive light-sensing visual effect of bindTips.
+The immersive light-sensing effect of a component is adaptively adjusted based on the device computing power and the immersive light-sensing effect set by the user in the system, requiring no additional adaptation by developers.
 Since API version 26.0.0, the systemMaterial attribute is added to TipsOptions.
 
 ```TypeScript
@@ -760,7 +888,7 @@ struct TipsExample {
     Flex({ direction: FlexDirection.Column }) {
       Button('Hover Tips')
         .bindTips("Floating Bubble Test", {
-          // Control whether to set the system material.
+          // Control whether to set the system material interface.
           systemMaterial: new uiMaterial.ImmersiveMaterial({
             style: uiMaterial.ImmersiveStyle.THIN
           })
@@ -888,13 +1016,13 @@ This example demonstrates how to set a touch target for a button using responseR
 @Entry
 @Component
 struct TouchTargetExample {
-  @State text: string = "";
+  @State text: string = '';
 
   build() {
     Column({ space: 20 }) {
       Text("{x:0,y:0,width:'50%',height:'100%'}")
       // The width of the touch target is half of that of the button. No response after touching the right part of button1.
-      Button("button1")
+      Button('button1')
         .responseRegion({
           x: 0,
           y: 0,
@@ -902,13 +1030,13 @@ struct TouchTargetExample {
           height: '100%'
         })
         .onClick(() => {
-          this.text = 'button1 clicked'
+          this.text = 'button1 clicked';
         })
 
       // Add multiple touch targets for a component.
       Text("[{x:'100%',y:0,width:'50%',height:'100%'}," +
         "\n{ x: 0, y: 0, width: '50%', height: '100%' }]")
-      Button("button2")
+      Button('button2')
         .responseRegion([
           {
             x: '100%',
@@ -921,14 +1049,14 @@ struct TouchTargetExample {
             y: 0,
             width: '50%',
             height: '100%'
-          }// The width of the second touch target is half of the button width. The touch event is triggered if the left part of button2 is clicked.
+          } // The second touch target is half the width of the button. Click the left half of button2 to trigger the click event.
         ])
         .onClick(() => {
-          this.text = 'button2 clicked'
+          this.text = 'button2 clicked';
         })
       // The touch target is located downward by one button height, with its size equal to the button size. The touch event is triggered if the area below the button3 is clicked.
       Text("{x:0,y:'100%',width:'100%',height:'100%'}")
-      Button("button3")
+      Button('button3')
         .responseRegion({
           x: 0,
           y: '100%',
@@ -936,7 +1064,7 @@ struct TouchTargetExample {
           height: '100%'
         })
         .onClick(() => {
-          this.text = 'button3 clicked'
+          this.text = 'button3 clicked';
         })
 
       Text(this.text).margin({ top: 50 })
@@ -955,13 +1083,13 @@ import { LengthMetrics } from '@kit.ArkUI';
 @Entry
 @Component
 struct TouchTargetExample {
-  @State text: string = "";
+  @State text: string = '';
 
   build() {
     Column({ space: 20 }) {
-      Text("left part of button1")
+      Text('left part of button1')
       // The width of the touch target is half of that of the button. No response after touching the right part of button1.
-      Button("button1")
+      Button('button1')
         .responseRegionList([{
           x: LengthMetrics.vp(0),
           y: LengthMetrics.vp(0),
@@ -969,13 +1097,13 @@ struct TouchTargetExample {
           height: LengthMetrics.percent(1),
         }])
         .onClick(() => {
-          this.text = 'button1 clicked'
+          this.text = 'button1 clicked';
         })
 
-      // Touch target 1 is located rightward by one button width, with its size equal to the entire button size. The touch event is triggered if the left part of button2 is clicked.
+      // Set the size of touch target one to the entire button and shift it right by one button width. Click the button-sized area to the right of button2 to trigger the click event.
       // Touch target 2 is located downward by one button height, with its size equal to the entire button size. The touch event is triggered if the area below the button2 is clicked.
-      Text("one button size right of button2," + "\n one button size below button2")
-      Button("button2")
+      Text('one button size right of button2,' + '\n one button size below button2')
+      Button('button2')
         .responseRegionList([{
           x: LengthMetrics.percent(1),
           y: LengthMetrics.vp(0),
@@ -989,7 +1117,7 @@ struct TouchTargetExample {
           height: 'calc(100% - 0px)',
         }])
         .onClick(() => {
-          this.text = 'button2 clicked'
+          this.text = 'button2 clicked';
         })
 
       Text(this.text).margin({ top: 50 })
@@ -998,7 +1126,7 @@ struct TouchTargetExample {
 }
 ```
 
-This example demonstrates how to set the mouse touch target using [mouseResponseRegion](ts-universal-attributes-touch-target.md#mouseresponseregion10) to respond to click events.
+This example uses [mouseResponseRegion](arkts-arkui-commonmethod-c.md#mouseresponseregion) to set the mouse touch target to respond to click events.
 
 ```TypeScript
 // xxx.ets
@@ -1086,129 +1214,6 @@ struct MouseResponseRegionExample {
 }
 ```
 
-This example demonstrates how to configure priorityGesture and parallelGesture to set up gesture recognition where the parent component has priority in recognizing gestures, and both parent and child components can trigger gestures simultaneously.
-
-```TypeScript
-// xxx.ets
-@Entry
-@Component
-struct GestureSettingsExample {
-  @State priorityTestValue: string = ''
-  @State parallelTestValue: string = ''
-
-  build() {
-    Column() {
-      Column() {
-        Text('TapGesture:' + this.priorityTestValue).fontSize(28)
-          .gesture(
-            TapGesture()
-              .onAction((event: GestureEvent) => {
-                this.priorityTestValue += '\nText'
-              }))
-      }
-      .height(200)
-      .width(250)
-      .padding(20)
-      .margin(20)
-      .border({ width: 3 })
-      // When priorityGesture is set, the tap gesture on the Column component is prioritized over the tap gesture on the child Text component.
-      .priorityGesture(
-        TapGesture()
-          .onAction((event: GestureEvent) => {
-            this.priorityTestValue += '\nColumn'
-          }), GestureMask.IgnoreInternal)
-
-      Column() {
-        Text('TapGesture:' + this.parallelTestValue).fontSize(28)
-          .gesture(
-            TapGesture()
-              .onAction((event: GestureEvent) => {
-                this.parallelTestValue += '\nText'
-              }))
-      }
-      .height(200)
-      .width(250)
-      .padding(20)
-      .margin(20)
-      .border({ width: 3 })
-      // When parallelGesture is set, the tap gestures on the Column component and on the child Text component are both recognized.
-      .parallelGesture(
-        TapGesture()
-          .onAction((event: GestureEvent) => {
-            this.parallelTestValue += '\nColumn'
-          }), GestureMask.Normal)
-    }
-  }
-}
-```
-
-This example demonstrates how to configure fingerInfos to monitor the number of effective touch points involved in a swipe gesture in real time.
-
-```TypeScript
-// xxx.ets
-@Entry
-@Component
-struct PanGestureWithFingerCount {
-  @State offsetX: number = 0
-  @State offsetY: number = 0
-  @State positionX: number = 0
-  @State positionY: number = 0
-  @State fingerCount: number = 0 // Used to record the number of touch points involved in the gesture.
-  private panOption: PanGestureOptions = new PanGestureOptions({
-    direction: PanDirection.All,
-    fingers: 1
-  })
-
-  build() {
-    Column() {
-      // Display the number of effective touch points.
-      Text(`Touch Points: ${this.fingerCount}`)
-        .fontSize(20)
-        .margin(10)
-
-      Column() {
-        Text('PanGesture offset:\nX: ' + this.offsetX + '\n' + 'Y: ' + this.offsetY)
-      }
-      .height(200)
-      .width(300)
-      .padding(20)
-      .border({ width: 3 })
-      .margin(50)
-      .translate({ x: this.offsetX, y: this.offsetY, z: 0 })
-      .gesture(
-        PanGesture(this.panOption)
-          .onActionStart((event: GestureEvent) => {
-            console.info('Pan start')
-            this.fingerCount = event.fingerInfos?.length || 0 // Record the number of touch points.
-          })
-          .onActionUpdate((event: GestureEvent) => {
-            if (event) {
-              console.info(`fingerInfos ${JSON.stringify(event.fingerInfos)}`)
-              this.offsetX = this.positionX + event.offsetX
-              this.offsetY = this.positionY + event.offsetY
-              this.fingerCount = event.fingerInfos?.length || 0 // Update the number of touch points, recording the effective touch points involved in the current gesture.
-            }
-          })
-          .onActionEnd((event: GestureEvent) => {
-            this.positionX = this.offsetX
-            this.positionY = this.offsetY
-            this.fingerCount = 0 // Reset the value to zero when the touch points leave the touch target.
-            console.info('Pan end')
-          })
-          .onActionCancel(() => {
-            this.fingerCount = 0 // Reset the value to zero when the gesture is canceled.
-          })
-      )
-
-      Button('Switch to Two-Finger Swipe')
-        .onClick(() => {
-          this.panOption.setFingers(2)
-        })
-    }
-  }
-}
-```
-
 This example demonstrates how to apply content blur to an image using foregroundBlurStyle.
 
 ```TypeScript
@@ -1248,7 +1253,7 @@ struct CustomPropertyExample {
         // Obtain the frameNode corresponding to the Column and query the set custom properties.
         const uiContext: UIContext = this.getUIContext();
         if (uiContext) {
-          const node: FrameNode | null = uiContext.getFrameNodeById("Test_Column") || null;
+          const node: FrameNode | null = uiContext.getFrameNodeById('Test_Column');
           if (node) {
             for (let i = 1; i < 4; i++) {
               const key = 'customProperty' + i;
@@ -1314,7 +1319,6 @@ struct CustomLayout {
   };
 
   @BuilderParam builder: () => void = this.doNothingBuilder;
-  @State startSize: number = 100;
   result: SizeResult = {
     width: 0,
     height: 0
@@ -2439,7 +2443,8 @@ struct Alone {
 }
 ```
 
-This example sets the system material of a menu by setting the systemMaterial attribute in [ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md).
+This example uses the systemMaterial attribute in [ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md) to set the system material of the component, thereby achieving the immersive light effect for the menu.
+The immersive light effect of the component will be automatically adjusted based on the device computing power and the immersive light effect set by the user in the system. You do not need to perform additional adaptation.
 The systemMaterial attribute is added to ContextMenuOptions as of API version 26.0.0.
 
 ```TypeScript
@@ -2468,7 +2473,8 @@ struct Index {
     }
     .height('100%')
     .width('100%')
-    .backgroundColor(Color.Gray)
+    // Replace it with the actual resource file.
+    .backgroundImage($r("app.media.img"))
   }
 }
 ```
@@ -2935,7 +2941,8 @@ struct PopupExample {
 }
 ```
 
-This example demonstrates how to implement the system material effect of a popup by setting the systemMaterial attribute in [PopupOptions](#popupoptions).
+This example implements the immersive light-sensing visual effect of a popup by using the systemMaterial attribute in [PopupOptions](#popupoptions) to set the system material of the component.
+The immersive light-sensing effect of the component is automatically adjusted based on the device computing power and the immersive light-sensing effect set by the user in the system, so developers do not need to perform additional adaptation.
 The systemMaterial attribute is added to PopupOptions as of API version 26.0.0.
 
 ```TypeScript
@@ -2963,7 +2970,7 @@ struct PopupExample {
         .bindPopup(this.handlePopup!!, {
           message: 'This is a popup with PopupOptions',
           placement: Placement.Top,
-          // Control whether to set the system material.
+          // Control whether to set the system material interface.
           systemMaterial: new uiMaterial.ImmersiveMaterial({
             style: uiMaterial.ImmersiveStyle.THIN
           })
@@ -3125,14 +3132,15 @@ struct TouchExample {
             if (event.type === TouchType.Move) {
               this.eventType = 'Move';
             }
-            // 1. The cancel event is triggered when the user touches the home button to return to the home screen while keeping a finger on the screen.
-            // 2. On a foldable phone, the cancel event is triggered when the user folds the phone to switch to the external screen while keeping a finger on the screen.
+            // 1. Press and hold the screen and tap the Home key to return to the home screen. In this case, Cancel is triggered.
+            // 2. On a foldable phone, fold the phone to switch to the external screen while pressing and holding the screen. In this case, Cancel is triggered.
             if (event.type === TouchType.Cancel) {
               this.eventType = 'Cancel';
             }
-            if (event.touches) {
+            if (event.touches.length > 0) {
               this.text = 'TouchType:' + this.eventType
                 + '\nDistance between touch point and touch element:'
+                + '\n  id: ' + event.touches[0].id
                 + '\n  x: ' + event.touches[0].x + '\n  y: ' + event.touches[0].y
                 + '\n  width: ' + event.touches[0].width + '\n  height: ' + event.touches[0].height
                 + '\n  pressedTime: ' + event.touches[0].pressedTime
@@ -3156,14 +3164,15 @@ struct TouchExample {
             if (event.type === TouchType.Move) {
               this.eventType = 'Move';
             }
-            // 1. The cancel event is triggered when the user touches the home button to return to the home screen while keeping a finger on the screen.
-            // 2. On a foldable phone, the cancel event is triggered when the user folds the phone to switch to the external screen while keeping a finger on the screen.
+            // 1. Press and hold the screen and tap the Home key to return to the home screen. In this case, Cancel is triggered.
+            // 2. On a foldable phone, fold the phone to switch to the external screen while pressing and holding the screen. In this case, Cancel is triggered.
             if (event.type === TouchType.Cancel) {
               this.eventType = 'Cancel';
             }
-            if (event.touches) {
+            if (event.touches.length > 0) {
               this.text = 'TouchType:' + this.eventType
                 + '\nDistance between touch point and touch element:'
+                + '\n  id: ' + event.touches[0].id
                 + '\n  x: ' + event.touches[0].x + '\n  y: ' + event.touches[0].y
                 + '\n  width: ' + event.touches[0].width + '\n  height: ' + event.touches[0].height
                 + '\n  pressedTime: ' + event.touches[0].pressedTime
@@ -3177,6 +3186,36 @@ struct TouchExample {
         })
       Text(this.text)
     }.width('100%').padding(30)
+  }
+}
+```
+
+This example uses the [getCurrentLocalPosition](#getcurrentlocalposition) method to obtain the coordinates of the touch position relative to the upper left corner of the current component's real-time position.
+The getCurrentLocalPosition API is supported since API version 26.0.0.
+
+```TypeScript
+// xxx.ets
+@Entry
+@Component
+struct GetCurrentLocalPositionExample {
+  @State positionText: string = '';
+  @State textOffsetY: number = 0;
+
+  build() {
+    Column() {
+      Button('Tap to obtain the coordinates of the tap position relative to the upper left corner of the component's real-time position').translate({ y: this.textOffsetY })
+        .onTouch((event?: TouchEvent) => {
+          if (event) {
+            this.textOffsetY = -200;
+            setTimeout(() => {
+              let localPos: Coordinate2D | undefined = event.touches.length > 0 ? event.touches[0].getCurrentLocalPosition?.() : undefined;
+              this.positionText = `Coordinates relative to the upper left corner of the component's real-time position:\n  x: ${localPos?.x}\n  y: ${localPos?.y}`;
+            }, 2000);
+          }
+        })
+
+      Text(this.positionText)
+    }.width('100%')
   }
 }
 ```
@@ -3252,7 +3291,7 @@ struct SheetTransitionExample {
 ```
 
 This example demonstrates how to use the detents attribute of bindSheet to set three different height detents for a sheet.
-The drag bar is only effective when there are multiple height detents.
+The drag bar is effective only when there are multiple height detents.
 Unlike the height attribute, which can set different heights at different times, the detents attribute provides a gesture to switch between detent heights and is more suitable for fixed height intervals.
 If the height range is uncertain or there may be more than three different heights, avoid using the detents attribute.
 
@@ -3383,9 +3422,9 @@ struct BindSheetExample {
           preferType: SheetType.CENTER,
 
           onWillDismiss: ((dismissSheetAction: DismissSheetAction) => {
-            // Only when the user performs a downward swipe gesture, the dismiss function is called to close the sheet modal page.
+            // Call dismiss to close the half-modal page only when the user swipes down.
             if (dismissSheetAction.reason == DismissReason.SLIDE_DOWN) {
-                dismissSheetAction.dismiss(); // Close the sheet page.
+                dismissSheetAction.dismiss(); // Close the half-modal page.
             }
           }),
 
@@ -3399,7 +3438,7 @@ struct BindSheetExample {
 }
 ```
 
-This example shows how to use ScrollSizeMode.CONTINUOUS, which continuously updates the content and is suitable for detents with multiple height settings.
+ScrollSizeMode.CONTINUOUS continuously updates the content and is suitable for scenarios where detents switch between multiple heights.
 Whenever possible, minimize UI loading time within the builder, as real-time content refreshing during scrolling has higher performance requirements.
 
 ```TypeScript
@@ -3449,8 +3488,8 @@ This example demonstrates how to adjust the scrollable content within a sheet wh
 
 ```TypeScript
 // xxx.ets
-import { window } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit';
+import window from '@ohos.window';
+import { BusinessError } from '@ohos.base';
 
 @Entry
 @Component
@@ -3760,8 +3799,8 @@ struct ContentCoverExample {
 }
 ```
 
-This example demonstrates how to set the system material using the sheet systemMaterial attribute.
-From API version 26.0.0, the systemMaterial attribute is added to [SheetOptions](arkts-arkui-sheetoptions-i.md).
+This example sets the system material through the systemMaterial attribute of the half-modal.
+Since API version 26.0.0, the [SheetOptions](arkts-arkui-sheetoptions-i.md) adds the systemMaterial attribute.
 
 ```TypeScript
 // xxx.ets
@@ -3789,7 +3828,7 @@ struct SheetMaterialExample {
 
   build() {
     Stack() {
-      // Replace it with the actual resource file.
+      // Replace this with the actual resource file.
       Image($r('app.media.startIcon'))
       Column() {
         Button("open Sheet")
@@ -3800,14 +3839,14 @@ struct SheetMaterialExample {
           .margin(10)
           .bindSheet($$this.isShow, this.myBuilder(), {
             height: this.sheetHeight,
-            // The following APIs are not recommended to be used together with systemMaterial.
+            // The following APIs are not recommended for use together with systemMaterial.
             // borderWidth: 20,
             // borderColor: Color.Red,
             // backgroundColor: Color.Green,
             // shadow: { radius: 30, type: ShadowType.COLOR, color: Color.Yellow },
-            // Some material effects do not have a background and will be covered by the color set by backgroundColor. To display such material effects, you are advised to change the background color to transparent.
+            // Some material effects do not have a background of their own and will be overridden by the color set through backgroundColor. To present such material effects, set the background color to transparent.
             backgroundColor: Color.Transparent,
-            systemMaterial: this.myMaterial // The systemMaterial attribute is added in API version 26.0.0.
+            systemMaterial: this.myMaterial // The systemMaterial attribute is added since API version 26.0.0.
           })
       }
       .justifyContent(FlexAlign.Center)
@@ -3831,7 +3870,7 @@ struct ModalTransitionExample {
   @Builder
   myBuilder2() {
     Column() {
-      Button("close modal 2")
+      Button('close modal 2')
         .margin(10)
         .fontSize(20)
         .onClick(() => {
@@ -3854,7 +3893,7 @@ struct ModalTransitionExample {
         modalTransition: ModalTransition.NONE,
         backgroundColor: Color.Orange,
         onWillAppear: () => {
-          console.info("BindContentCover onWillAppear.");
+          console.info('BindContentCover onWillAppear.');
         },
         onAppear: () => {
           console.info("BindContentCover onAppear.");
@@ -3923,21 +3962,21 @@ import { curves } from '@kit.ArkUI';
 struct ModalTransitionExample {
   @State @Watch("isShow1Change") isShow: boolean = false;
   @State @Watch("isShow2Change") isShow2: boolean = false;
-  @State isScale1: number = 1;
-  @State isScale2: number = 1;
+  @State scale1: number = 1;
+  @State scale2: number = 1;
 
   isShow1Change() {
-    this.isShow ? this.isScale1 = 0.95 : this.isScale1 = 1;
+    this.isShow ? this.scale1 = 0.95 : this.scale1 = 1;
   }
 
   isShow2Change() {
-    this.isShow2 ? this.isScale2 = 0.95 : this.isScale2 = 1;
+    this.isShow2 ? this.scale2 = 0.95 : this.scale2 = 1;
   }
 
   @Builder
   myBuilder2() {
     Column() {
-      Button("close modal 2")
+      Button('close modal 2')
         .margin(10)
         .fontSize(20)
         .onClick(() => {
@@ -3951,7 +3990,7 @@ struct ModalTransitionExample {
   @Builder
   myBuilder() {
     Column() {
-      Button("transition modal 2")
+      Button('transition modal 2')
         .margin(10)
         .fontSize(20)
         .onClick(() => {
@@ -3973,7 +4012,7 @@ struct ModalTransitionExample {
         }
       })
 
-      Button("close modal 1")
+      Button('close modal 1')
         .margin(10)
         .fontSize(20)
         .onClick(() => {
@@ -3983,7 +4022,7 @@ struct ModalTransitionExample {
     .width('100%')
     .height('100%')
     .justifyContent(FlexAlign.Center)
-    .scale({ x: this.isScale2, y: this.isScale2 })
+    .scale({ x: this.scale2, y: this.scale2 })
     .animation({ curve: curves.springMotion() })
   }
 
@@ -4016,7 +4055,7 @@ struct ModalTransitionExample {
     .backgroundColor("#ff49c8ab")
     .width('100%')
     .height('100%')
-    .scale({ x: this.isScale1, y: this.isScale1 })
+    .scale({ x: this.scale1, y: this.scale1 })
     .animation({ curve: curves.springMotion() })
   }
 }
@@ -4035,7 +4074,7 @@ struct ModalTransitionExample {
   @Builder
   myBuilder2() {
     Column() {
-      Button("close modal 2")
+      Button('close modal 2')
         .margin(10)
         .fontSize(20)
         .onClick(() => {
@@ -4049,7 +4088,7 @@ struct ModalTransitionExample {
   @Builder
   myBuilder() {
     Column() {
-      Button("transition modal 2")
+      Button('transition modal 2')
         .margin(10)
         .fontSize(20)
         .onClick(() => {
@@ -4071,7 +4110,7 @@ struct ModalTransitionExample {
         }
       })
 
-      Button("close modal 1")
+      Button('close modal 1')
         .margin(10)
         .fontSize(20)
         .onClick(() => {
@@ -4129,7 +4168,7 @@ struct ModalTransitionExample {
   @Builder
   myBuilder2() {
     Column() {
-      Button("close modal 2")
+      Button('close modal 2')
         .margin(10)
         .fontSize(20)
         .onClick(() => {
@@ -4144,7 +4183,7 @@ struct ModalTransitionExample {
   @Builder
   myBuilder() {
     Column() {
-      Button("transition modal 2")
+      Button('transition modal 2')
         .margin(10)
         .fontSize(20)
         .onClick(() => {
@@ -4166,7 +4205,7 @@ struct ModalTransitionExample {
         }
       })
 
-      Button("close modal 1")
+      Button('close modal 1')
         .margin(10)
         .fontSize(20)
         .onClick(() => {
@@ -4211,7 +4250,7 @@ struct ModalTransitionExample {
 }
 ```
 
-This example demonstrates custom transitions for modals, including rotation and translation effects.
+This example mainly demonstrates custom transitions for full-screen modals, including rotation and translation effects.
 
 ```TypeScript
 // xxx.ets
@@ -4252,8 +4291,9 @@ struct ModalTransitionExample {
             modalTransition: ModalTransition.DEFAULT,
             backgroundColor: Color.Gray,
             transition: TransitionEffect.SLIDE.animation({ duration: 5000, curve: Curve.LinearOutSlowIn }),
+            // Handle the close reason and call dismiss() to close the modal.
             onWillDismiss: ((dismissContentCoverAction: DismissContentCoverAction) => {
-              if (dismissContentCoverAction.reason == DismissReason.PRESS_BACK) {
+              if (dismissContentCoverAction.reason === DismissReason.PRESS_BACK) {
                 console.info("BindContentCover dismiss reason is back pressed");
               }
               dismissContentCoverAction.dismiss();
@@ -4261,6 +4301,7 @@ struct ModalTransitionExample {
             onAppear: () => {
               console.info("BindContentCover onAppear.");
             },
+            // Synchronize the state variable when the modal disappears.
             onDisappear: () => {
               this.isShow2 = false;
               console.info("BindContentCover onDisappear.");
@@ -4301,7 +4342,7 @@ struct ModalTransitionExample {
                 TransitionEffect.rotate({ z: 1, angle: 180 }).animation({ duration: 1300 }))
             ),
             onWillDismiss: ((dismissContentCoverAction: DismissContentCoverAction) => {
-              if (dismissContentCoverAction.reason == DismissReason.PRESS_BACK) {
+              if (dismissContentCoverAction.reason === DismissReason.PRESS_BACK) {
                 console.info("back pressed");
               }
               dismissContentCoverAction.dismiss();
@@ -4323,7 +4364,7 @@ struct ModalTransitionExample {
 }
 ```
 
-Starting from API version 20, this example demonstrates the content effect when enableSafeArea is set to true to adapt the full-screen modal to the safe area. The background color of the full-screen modal is light blue, the content color is gray, and the content is laid out in the safe area.
+Starting from API version 20, this example mainly demonstrates the content effect when enableSafeArea is set to true to adapt the full-screen modal to the safe area. The background color of the full-screen modal container is light blue, the content color is gray, and the content is laid out within the safe area.
 
 ```TypeScript
 // xxx.ets
@@ -4331,7 +4372,7 @@ Starting from API version 20, this example demonstrates the content effect when 
 @Component
 struct SafeAreaController {
   @State isShow: boolean = false;
-  @State SafeArea: boolean | undefined = true;
+  @State isSafeArea: boolean | undefined = true;
   @State heightMode: string = '100%';
 
   @Builder
@@ -4370,9 +4411,9 @@ struct SafeAreaController {
         .margin(10)
         .bindContentCover(this.isShow, this.myBuilder(), {
           modalTransition: ModalTransition.ALPHA,
-          backgroundColor: 0x87CEEB,
+          backgroundColor: 0xFF87CEEB,
           // Set the safe zone mode dynamically.
-          enableSafeArea: this.SafeArea
+          enableSafeArea: this.isSafeArea
         })
     }
     .justifyContent(FlexAlign.Center)
@@ -4447,8 +4488,8 @@ struct TransitionEffectExample2 {
         })
       if (this.flag) {
         // Apply different transition effects to the appearance and disappearance of the image.
-        // When the image appears, its opacity changes 0 to 1 (default value) over the duration of 1000 ms, and after 1000 ms has elapsed, its rotation angle changes from 180° around the z-axis to 0° (default value) over the duration of 1000 ms.
-        // When the image disappears, after 1000 ms has elapsed, its opacity changes 1 (default value) to 0 over the duration of 1000 ms, and its rotation angle changes from 0° (default value) to 180° around the z-axis over the duration of 1000 ms.
+        // When the image appears, its opacity changes from 0 to 1 (default value) over the duration of 1000 ms, and after 1000 ms has elapsed, its rotation angle changes from 180° around the z-axis to 0° (default value) over the duration of 1000 ms.
+        // When the image disappears, after 1000 ms has elapsed, its opacity changes from 1 (default value) to 0 over the duration of 1000 ms, and its rotation angle changes from 0° (default value) to 180° around the z-axis over the duration of 1000 ms.
         // Replace $r('app.media.testImg') with the image resource file you use.
         Image($r('app.media.testImg')).width(200).height(200)
           .transition(
@@ -4504,7 +4545,7 @@ struct TransitionEffectExample3 {
         Column() {
           Row() {
             // Replace $r('app.media.testImg') with the image resource file you use.
-            Image($r('app.media.testImg')).width(150).height(150).id("image1")
+            Image($r('app.media.testImg')).width(150).height(150).id('image1')
               .transition(TransitionEffect.OPACITY.animation({ duration: 1000 }))
           }
 
@@ -4513,11 +4554,12 @@ struct TransitionEffectExample3 {
             .width(150)
             .height(150)
             .margin({ top: 50 })
-            .id("image2")
+            .id('image2')
             .transition(TransitionEffect.scale({ x: 0, y: 0 }).animation({ duration: 1000 }))
-          Text("view").margin({ top: 50 })
+          Text('view').margin({ top: 50 })
         }
-        .id("column1")
+        .id('column1')
+        // Use opacity(0.99) instead of 1 for the root component to avoid the transition animation not being triggered when the property value equals the default value.
         .transition(TransitionEffect.opacity(0.99).animation({ duration: 1000 }),
           // The end callback is set on the first layer of disappearing nodes to ensure that there is a callback at the end of the disappearance.
           (transitionIn: boolean) => {
@@ -4530,7 +4572,40 @@ struct TransitionEffectExample3 {
 }
 ```
 
-This example demonstrates how to animate a component along a custom path.
+This example demonstrates the dual-animation composite effect produced when [transition](#transition) animation is superimposed on layout animation as [visibility](ts-universal-attributes-visibility.md#visibility) switches between Visibility.Visible and Visibility.None.
+
+```TypeScript
+// xxx.ets
+@Entry
+@Component
+struct TransitionVisibilityExample {
+  @State isVisible: boolean = true;
+
+  build() {
+    Column() {
+      Button('toggle visibility').width(150).height(30).margin(30)
+        .onClick(() => {
+          this.getUIContext()?.animateTo({ duration: 1000 }, () => {
+            this.isVisible = !this.isVisible;
+          });
+        })
+      Column() {
+        Text('Hello World')
+          .fontSize(20)
+          .fontColor(Color.White)
+      }
+      .width(200)
+      .height(100)
+      .backgroundColor('#317AF7')
+      .justifyContent(FlexAlign.Center)
+      .transition(TransitionEffect.OPACITY.animation({ duration: 1000 }))
+      .visibility(this.isVisible ? Visibility.Visible : Visibility.None)
+    }.width('100%').height('100%').justifyContent(FlexAlign.Center)
+  }
+}
+```
+
+This example demonstrates how to set the motion path for the translation animation of a component. This method only configures the motion path parameters. To produce an actual translation animation effect, it must be used together with animation trigger methods such as animateTo and changes in component attribute states. Setting motionPath alone does not trigger an animation.
 
 ```TypeScript
 // xxx.ets
@@ -4547,7 +4622,7 @@ struct MotionPathExample {
           from: 0.0,
           to: 1.0,
           rotatable: true
-        }) // Execute the animation: Move from the start point to (300,200), then to (300,500), and finally to the end point.
+        }) // Set the motion path: from the start point through (300,200) and (300,500) to the end point.
         .onClick(() => {
           this.getUIContext()?.animateTo({ duration: 4000, curve: Curve.Linear }, () => {
             this.toggle = !this.toggle; // Change the component's position using this.toggle.
@@ -4692,8 +4767,8 @@ This example demonstrates how to use accessibilityText and accessibilityDescript
 @Entry
 @Component
 struct Index {
-
-  @Builder customAccessibilityNode() {
+  @Builder
+  customAccessibilityNode() {
     Column() {
       Text(`virtual node`)
     }
@@ -4704,7 +4779,7 @@ struct Index {
   build() {
     Row() {
       Column() {
-        Text("Text 1")
+        Text('Text 1')
           .fontSize(50)
           .fontWeight(FontWeight.Bold)
         Text("Text 2")
@@ -4731,7 +4806,7 @@ This example shows how to prioritize reading the accessibility text of child com
 // xxx.ets
 @Entry
 @Component
-struct Focus {
+struct Index {
   build() {
     Column({ space: 10 }) {
       Text('123456')
@@ -4742,7 +4817,7 @@ struct Focus {
       Button().accessibilityLevel("yes").accessibilityText("Accessibility text is announced if no text is present")
       Button("Text content is announced if no accessibility text is present").accessibilityLevel("yes")
       Button()
-      Button('btn123').accessibilityText("Button with both accessibility and text btn123").accessibilityLevel("yes")
+      Button('btn123').accessibilityText('has accessibility has text btn123').accessibilityLevel('yes')
       Button('btn123').accessibilityLevel("yes")
     }
     .accessibilityGroup(true, { accessibilityPreferred: true })
@@ -4823,7 +4898,7 @@ struct Index {
 }
 ```
 
-This example demonstrates the use of accessibilityScrollTriggerable to set whether an accessibility node supports screen reading scroll, accessibilityFocusDrawLevel to set the drawing level of the accessibility focus highlight frame, and accessibilityUseSamePage for cross-process embedded components, such as [EmbeddedComponent](ts-container-embedded-component.md).
+This example demonstrates how to use accessibilityScrollTriggerable to set whether the accessibility node supports Screen Reader scrolling, accessibilityFocusDrawLevel to set the drawing level of the accessibility focus green frame, and accessibilityUseSamePage to set the same-page mode for components displayed across processes in embedded mode (such as [EmbeddedComponent](ts-container-embedded-component.md)).
 
 ```TypeScript
 // xxx.ets
@@ -4834,7 +4909,7 @@ import { Want } from '@kit.AbilityKit';
 struct Index {
   @State message: string = 'Message: ';
   private want: Want = {
-    // Bundle name of the EmbeddedComponent provider. Configure it as required.
+    // Configure the bundleName of the EmbeddedComponent provider based on actual conditions.
     bundleName: 'com.example.embeddeddemo',
     // Ability name of the EmbeddedComponent provider. Configure it as required.
     abilityName: 'ExampleEmbeddedAbility',
@@ -4851,8 +4926,6 @@ struct Index {
               .fontWeight(FontWeight.Medium)
             Column() {
               EmbeddedComponent(this.want, EmbeddedType.EMBEDDED_UI_EXTENSION)
-                .width('100%')
-                .height('90%')
                 .onTerminated((info) => {
                   this.message = 'Termination: code = ' + info.code + ', want = ' + JSON.stringify(info.want);
                 })
@@ -4908,6 +4981,7 @@ struct Index {
             .margin({ top: 15 })
             .accessibilityText($r('app.string.app_name'))
             .accessibilityDescription($r('app.string.module_desc'))
+
             Column() {
               Text('Text 4')
                 .fontSize(18)
@@ -4934,12 +5008,11 @@ This example demonstrates how to use the optional parameters stateControllerRole
 @Entry
 @Component
 struct Index {
-  @State isSelected: boolean = false;
 
   build() {
     Column({ space: 20 }) {
-      Flex({ justifyContent: FlexAlign.SpaceEvenly, alignItems: ItemAlign.Center}) {
-        Text("Enable Feature")
+      Flex({ justifyContent: FlexAlign.SpaceEvenly, alignItems: ItemAlign.Center }) {
+        Text('Enable feature?')
         Toggle({ type: ToggleType.Switch, isOn: false })
           .selectedColor('#007DFF')
           .switchPointColor('#FFFFFF')
@@ -4947,12 +5020,14 @@ struct Index {
             console.info('Component status:' + isOn);
           })
       }
-      .accessibilityGroup(true, {stateControllerRoleType : AccessibilityRoleType.TOGGLER,
-                                 actionControllerRoleType : AccessibilityRoleType.TOGGLER})
+      .accessibilityGroup(true, {
+        stateControllerRoleType: AccessibilityRoleType.TOGGLER,
+        actionControllerRoleType: AccessibilityRoleType.TOGGLER
+      })
       .width('80%')
-      .border({ color : Color.Black, width : 2 })
+      .border({ color: Color.Black, width: 2 })
 
-      Flex({ justifyContent: FlexAlign.SpaceEvenly, alignItems: ItemAlign.Center}) {
+      Flex({ justifyContent: FlexAlign.SpaceEvenly, alignItems: ItemAlign.Center }) {
         Text("Enable Feature")
         Toggle({ type: ToggleType.Switch, isOn: false })
           .selectedColor('#007DFF')
@@ -4962,10 +5037,12 @@ struct Index {
           })
           .id("TestToggle")
       }
-      .accessibilityGroup(true, {stateControllerId : "TestToggle",
-                                 actionControllerId : "TestToggle"})
+      .accessibilityGroup(true, {
+        stateControllerId: "TestToggle",
+        actionControllerId: "TestToggle"
+      })
       .width('80%')
-      .border({ color : Color.Black, width : 2 })
+      .border({ color: Color.Black, width: 2 })
 
     }
     .height('100%')
@@ -4974,7 +5051,7 @@ struct Index {
 }
 ```
 
-In this example, the [accessibilityStateDescription](ts-universal-attributes-accessibility.md#accessibilitystatedescription23) API is used to modify the state description of a component. After the accessibility feature is enabled, when a component is focused or tapped, the screen reader reads the component state description.
+This example uses the [accessibilityStateDescription](#accessibilitystatedescription23) API to modify the Status Announcement of a component. After the accessibility feature is enabled, when the component is focused or clicked, the Screen Reader announces the state information of the component.
 The accessibilityStateDescription API is available since API version 23.
 
 ```TypeScript
@@ -5015,13 +5092,60 @@ struct Index {
           max: 100,
           style: SliderStyle.OutSet
         })
-          // Adjust the Slider step when using screen reader gestures.
-          .accessibilityActionOptions({ scrollStep : 10 })
+        // Adjust the step size of slider sliding under screen reader gestures.
+          .accessibilityActionOptions({ scrollStep: 10 })
       }
       .width('80%')
     }
     .height('100%')
     .width('100%')
+  }
+}
+```
+
+This example demonstrates how to use [accessibilityCustomActions](arkts-arkui-commonmethod-c.md#accessibilitycustomactions) to set custom accessibility actions for a component. Developers can bind callbacks for custom actions by action name.
+Since API version 26.0.0, accessibilityCustomActions is added.
+
+```TypeScript
+// xxx.ets
+@Entry
+@Component
+struct Index {
+  @State listData: Array<string> = ['List item 1', 'List item 2', 'List item 3', 'List item 4'];
+
+  build() {
+    Column() {
+      List({ space: 10 }) {
+        ForEach(this.listData, (item: string, index: number) => {
+          ListItem() {
+            Row() {
+              Text(item)
+                .fontSize(16)
+              Blank()
+              Text('Delete')
+                .fontSize(14)
+                .fontColor(Color.Red)
+            }
+            .width('100%')
+            .padding(10)
+            .onClick(() => {
+              console.info('[TestTag] click success!')
+            })
+            .accessibilityLevel('yes')
+            .accessibilityCustomActions([
+              {
+                name: 'deleteItem',
+                onAction: () => {
+                  this.listData.splice(index, 1);
+                }
+              }
+            ])
+          }
+        }, (item: string) => item)
+      }
+      .width('100%')
+      .height('100%')
+    }
   }
 }
 ```
@@ -5033,28 +5157,28 @@ This example demonstrates how to use the id APIs to obtain attributes of a compo
 import { IntentionCode } from '@kit.InputKit';
 
 class Utils {
-  static rect_left: number;
-  static rect_top: number;
-  static rect_right: number;
-  static rect_bottom: number;
-  static rect_value: Record<string, number>;
+  static rectLeft: number;
+  static rectTop: number;
+  static rectRight: number;
+  static rectBottom: number;
+  static rectValue: Record<string, number>;
 
   // Obtain the coordinates of the rectangular area occupied by the component.
   static getComponentRect(key: string): Record<string, number> {
     let strJson = getInspectorByKey(key);
     let obj: Record<string, string> = JSON.parse(strJson);
-    console.info("[getInspectorByKey] current component obj is: " + JSON.stringify(obj));
+    console.info('[getInspectorByKey] current component obj is: ' + JSON.stringify(obj));
     let rectInfo: string[] = JSON.parse('[' + obj.$rect + ']');
-    console.info("[getInspectorByKey] rectInfo is: " + rectInfo);
-    Utils.rect_left = JSON.parse('[' + rectInfo[0] + ']')[0]; // Horizontal coordinate relative to the upper left corner of the component.
-    Utils.rect_top = JSON.parse('[' + rectInfo[0] + ']')[1]; // Vertical coordinate relative to the upper left corner of the component.
-    Utils.rect_right = JSON.parse('[' + rectInfo[1] + ']')[0]; // Horizontal coordinate relative to the lower right corner of the component.
-    Utils.rect_bottom = JSON.parse('[' + rectInfo[1] + ']')[1]; // Vertical coordinate relative to the lower right corner of the component.
-    return Utils.rect_value = {
-      "left": Utils.rect_left,
-      "top": Utils.rect_top,
-      "right": Utils.rect_right,
-      "bottom": Utils.rect_bottom
+    console.info('[getInspectorByKey] rectInfo is: ' + rectInfo);
+    Utils.rectLeft = JSON.parse('[' + rectInfo[0] + ']')[0]; // Horizontal coordinate of the upper-left corner of the component relative to the upper-left corner of the window.
+    Utils.rectTop = JSON.parse('[' + rectInfo[0] + ']')[1]; // Vertical coordinate of the upper-left corner of the component relative to the upper-left corner of the window.
+    Utils.rectRight = JSON.parse('[' + rectInfo[1] + ']')[0]; // Horizontal coordinate of the lower-right corner of the component relative to the upper-left corner of the window.
+    Utils.rectBottom = JSON.parse('[' + rectInfo[1] + ']')[1]; // Vertical coordinate of the lower-right corner of the component relative to the upper-left corner of the window.
+    return Utils.rectValue = {
+      "left": Utils.rectLeft,
+      "top": Utils.rectTop,
+      "right": Utils.rectRight,
+      "bottom": Utils.rectBottom
     };
   };
 }
@@ -5071,18 +5195,18 @@ struct IdExample {
         Text('onKeyTab').fontSize(25).fontWeight(FontWeight.Bold)
       }.margin({ top: 20 }).backgroundColor('#0D9FFB')
       .onKeyEvent(() => {
-        this.text = "onKeyTab";
+        this.text = 'onKeyTab';
       })
 
       Button() {
         Text('click to start').fontSize(25).fontWeight(FontWeight.Bold)
       }.margin({ top: 20 })
       .onClick(() => {
-        console.info(getInspectorByKey("click"));
+        console.info(getInspectorByKey('click'));
         console.info(JSON.stringify(getInspectorTree()));
         this.text = "Button 'click to start' is clicked";
         setTimeout(() => {
-          sendEventByKey("longClick", 11, ""); // Send a long-click event to the component whose ID is "longClick".
+          sendEventByKey('longClick', 11, ''); // Send a long press event to the component whose id is "longClick".
         }, 2000)
       }).id('click')
 
@@ -5100,12 +5224,12 @@ struct IdExample {
               type: TouchType.Down,
               x: rect.left + (rect.right - rect.left) / 2, // X coordinate relative to the upper left corner of the component.
               y: rect.top + (rect.bottom - rect.top) / 2, // Y coordinate relative to the upper left corner of the component.
-              screenX: rect.left + (rect.right - rect.left) / 2, // X coordinate relative to the upper left corner of the application window. This API is deprecated since API version 10. Use windowX instead.
-              screenY: rect.top + (rect.bottom - rect.top) / 2, // Y-coordinate relative to the upper left corner of the application window. This API is deprecated since API version 10. Use windowY instead.
               windowX: rect.left + (rect.right - rect.left) / 2, // X coordinate relative to the upper left corner of the application window.
-              windowY: rect.top + (rect.bottom - rect.top), // Y-coordinate relative to the upper left corner of the application window.
+              windowY: rect.top + (rect.bottom - rect.top) / 2, // Vertical coordinate relative to the upper-left corner of the application window.
               displayX: rect.left + (rect.right - rect.left) / 2, // X coordinate relative to the upper left corner of the device screen.
               displayY: rect.top + (rect.bottom - rect.top) / 2, // Y-coordinate relative to the upper left corner of the device screen.
+              screenX: rect.left + (rect.right - rect.left) / 2, // Horizontal coordinate relative to the upper-left corner of the application window.
+              screenY: rect.top + (rect.bottom - rect.top) / 2, // Vertical coordinate relative to the upper-left corner of the application window.
             };
             sendTouchEvent(touchPoint); // Send a touch event.
             touchPoint.type = TouchType.Up;
@@ -5126,12 +5250,12 @@ struct IdExample {
             action: MouseAction.Press,
             x: rect.left + (rect.right - rect.left) / 2, // X coordinate relative to the upper left corner of the component.
             y: rect.top + (rect.bottom - rect.top) / 2, // Y coordinate relative to the upper left corner of the component.
-            screenX: rect.left + (rect.right - rect.left) / 2, // X coordinate relative to the upper left corner of the application window. This API is deprecated since API version 10. Use windowX instead.
-            screenY: rect.left + (rect.right - rect.left) / 2, // Y coordinate relative to the upper left corner of the application window. This API is deprecated since API version 10. Use windowY instead.
             windowX: rect.left + (rect.right - rect.left) / 2, // X coordinate relative to the upper left corner of the application window.
-            windowY: rect.left + (rect.right - rect.left) / 2, // Y coordinate relative to the upper left corner of the application window.
+            windowY: rect.top + (rect.bottom - rect.top) / 2, // Vertical coordinate relative to the upper-left corner of the application window.
             displayX: rect.left + (rect.right - rect.left) / 2, // X coordinate relative to the upper left corner of the device screen.
-            displayY: rect.left + (rect.right - rect.left) / 2, // Y coordinate relative to the upper left corner of the device screen.
+            displayY: rect.top + (rect.bottom - rect.top) / 2, // Vertical coordinate relative to the upper-left corner of the device screen.
+            screenX: rect.left + (rect.right - rect.left) / 2, // Horizontal coordinate relative to the upper-left corner of the application window.
+            screenY: rect.top + (rect.bottom - rect.top) / 2, // Vertical coordinate relative to the upper-left corner of the application window.
             stopPropagation: () => {
             },
             timestamp: 1,
@@ -5196,20 +5320,20 @@ This example demonstrates how to use reuseId to identify the reuse group of a cu
 @Entry
 @Component
 struct MyComponent {
-  @State switch: boolean = true;
-  private type: string = "type1";
+  @State isShow: boolean = true;
+  private type: string = 'type1';
 
   build() {
     Column() {
-      Button("ChangeType")
+      Button('ChangeType')
         .onClick(() => {
-          this.type = "type2"
+          this.type = 'type2';
         })
-      Button("Switch")
+      Button('Switch')
         .onClick(() => {
-          this.switch = !this.switch
+          this.isShow = !this.isShow;
         })
-      if (this.switch) {
+      if (this.isShow) {
         ReusableChildComponent({ type: this.type })
           .reuseId(this.type)
       }
@@ -5222,14 +5346,14 @@ struct MyComponent {
 @Reusable
 @Component
 struct ReusableChildComponent {
-  @State type: string = ''
+  @State type: string = '';
 
   aboutToAppear() {
-    console.info(`ReusableChildComponent Appear ${this.type}`)
+    console.info(`ReusableChildComponent Appear ${this.type}`);
   }
 
   aboutToReuse(params: ESObject) {
-    console.info(`ReusableChildComponent Reuse ${this.type}`)
+    console.info(`ReusableChildComponent Reuse ${this.type}`);
     this.type = params.type;
   }
 
@@ -5374,7 +5498,7 @@ struct FlexExample {
 }
 ```
 
-This example configures a click event for a button. When the button is clicked, it obtains relevant parameters of the click event.
+This example configures a click event [ClickEvent](arkts-arkui-clickevent-i.md) for a button. When the button is clicked, the relevant parameters of the click event can be obtained.
 
 ```TypeScript
 // xxx.ets
@@ -5390,19 +5514,50 @@ struct ClickExample {
           .onClick((event?: ClickEvent) => {
             if (event) {
               this.text =
-                `Click Point:\n  windowX:${event.windowX}\n  windowY:${event.windowY}\n  x:${event.x}\n  y:${event.y}\n target:\n  component globalPos:(${event.target.area.globalPosition.x},${event.target.area.globalPosition.y})\n  width:${event.target.area.width}\n  height:${event.target.area.height}\n  id:${event.target.id}\ntargetDisplayId:${event.targetDisplayId}\ntimestamp${event.timestamp}`
+                `Click Point:\n  windowX:${event.windowX}\n  windowY:${event.windowY}\n  x:${event.x}\n  y:${event.y}\n target:\n  component globalPos:(${event.target.area.globalPosition.x},${event.target.area.globalPosition.y})\n  width:${event.target.area.width}\n  height:${event.target.area.height}\n  id:${event.target.id}\ntargetDisplayId:${event.targetDisplayId}\ntimestamp:${event.timestamp}`;
             }
           }, 20)
         Button('Click2').width(200).height(50).id('click2')
           .onClick((event?: ClickEvent) => {
             if (event) {
               this.text =
-                `Click Point:\n  windowX:${event.windowX}\n  windowY:${event.windowY}\n  x:${event.x}\n  y:${event.y}\n target:\n  component globalPos:(${event.target.area.globalPosition.x},${event.target.area.globalPosition.y})\n  width:${event.target.area.width}\n  height:${event.target.area.height}\n  id:${event.target.id}\ntargetDisplayId:${event.targetDisplayId}\ntimestamp${event.timestamp}`
+                `Click Point:\n  windowX:${event.windowX}\n  windowY:${event.windowY}\n  x:${event.x}\n  y:${event.y}\n target:\n  component globalPos:(${event.target.area.globalPosition.x},${event.target.area.globalPosition.y})\n  width:${event.target.area.width}\n  height:${event.target.area.height}\n  id:${event.target.id}\ntargetDisplayId:${event.targetDisplayId}\ntimestamp:${event.timestamp}`;
             }
           }, 20)
       }.margin(20)
 
       Text(this.text).margin(15)
+    }.width('100%')
+  }
+}
+```
+
+This example uses the [getCurrentLocalPosition](#getcurrentlocalposition) method to obtain the coordinates of the upper-left corner of the current component based on its real-time position.
+The getCurrentLocalPosition API is supported since API version 26.0.0.
+
+```TypeScript
+// xxx.ets
+@Entry
+@Component
+struct GetCurrentLocalPositionExample {
+  @State positionText: string = '';
+  @State textOffsetY: number = 0;
+
+  build() {
+    Column() {
+      Button('Click to obtain the coordinates of the click position relative to the top-left corner of the component's real-time position').translate({ y: this.textOffsetY })
+        .onClick((event?: ClickEvent) => {
+          if (event) {
+            this.textOffsetY = -200;
+            // After the component position changes, obtain the coordinates of the click position relative to the top-left corner of the component's real-time position after a delay.
+            setTimeout(() => {
+              let localPos: Coordinate2D | undefined = event.getCurrentLocalPosition?.();
+              this.positionText = `Coordinates relative to the top-left corner of the component's real-time position:\n  x: ${localPos?.x}\n  y: ${localPos?.y}`;
+            }, 2000);
+          }
+        })
+
+      Text(this.positionText)
     }.width('100%')
   }
 }
@@ -5421,7 +5576,7 @@ struct ForEachSort {
       List() {
         ForEach(this.arr, (item: string) => {
           ListItem() {
-            Text(item.toString())
+            Text(item)
               .fontSize(16)
               .textAlign(TextAlign.Center)
               .size({height: 100, width: '100%'})
@@ -5429,7 +5584,8 @@ struct ForEachSort {
           .borderRadius(10)
           .backgroundColor('#FFFFFFFF')
         }, (item: string) => item)
-          .onMove((from:number, to:number) => {
+          .onMove((from: number, to: number) => {
+            // Move data based on the drag start and end indexes to ensure that the data order is consistent with the drag result.
             let tmp = this.arr.splice(from, 1);
             this.arr.splice(to, 0, tmp[0]);
           })
@@ -5454,7 +5610,7 @@ This example demonstrates how to use onMove with additional drag event callbacks
 @Entry
 @Component
 struct ListOnMoveExample {
-  private arr: number[] = [0, 1, 2, 3, 4, 5, 6];
+  @State arr: number[] = [0, 1, 2, 3, 4, 5, 6];
 
   build() {
     Column() {
@@ -5469,8 +5625,9 @@ struct ListOnMoveExample {
               .borderRadius(10)
               .backgroundColor(0xFFFFFF)
           }
-        }, (item: string) => item)
+        }, (item: number) => item.toString())
           .onMove((from: number, to: number) => {
+            // Move data based on the drag start and end indices to ensure the data order matches the drag result.
             let tmp = this.arr.splice(from, 1);
             this.arr.splice(to, 0, tmp[0]);
             console.info('List onMove From: ' + from);
@@ -5499,10 +5656,581 @@ struct ListOnMoveExample {
 }
 ```
 
-This example shows how to combine the drawing of special effects, including background blur.
+Supported since API version 26.0.0, the following example shows the callback event triggered after the Grid component sets the drag effect for ForEach. All GridItems in the Grid are regular.
 
 ```TypeScript
-//Index.ets
+// xxx.ets
+@Entry
+@Component
+struct GridOnMoveExample {
+  private arr: Array<string> = [];
+
+  build() {
+    Row() {
+      Grid() {
+        ForEach(this.arr, (item: string) => {
+          GridItem() {
+            Text(item.toString())
+              .fontSize(16)
+              .textAlign(TextAlign.Center)
+              .size({height: 100, width: '100%'})
+          }.margin(10)
+          .borderRadius(10)
+          .backgroundColor(0xF9CF93)
+        }, (item: string) => item)
+          // Triggered when the dragged item is released and its final position differs from its position before dragging. from is the start index, and to is the target index.
+          .onMove((from: number, to: number) => {
+            let tmp = this.arr.splice(from, 1);  // Remove the dragged element from its original position.
+            this.arr.splice(to, 0, tmp[0]);      // Insert the removed dragged element into the target position.
+            console.info('Grid onMove From: ' + from);
+            console.info('Grid onMove To: ' + to);
+          },
+            {
+              onLongPress: (index: number) => {
+                // Triggered when a GridItem is lifted after a long press.
+                console.info('Grid onLongPress: ' + index);
+              },
+              onDrop: (index: number) => {
+                // Triggered when the dragged GridItem is released.
+                console.info('Grid onDrop: ' + index);
+              },
+              onDragStart: (index: number) => {
+                // Triggered when a GridItem is lifted after a long press and dragging starts.
+                console.info('Grid onDragStart: ' + index);
+              },
+              onMoveThrough: (from: number, to: number) => {
+                // Triggered continuously while the GridItem is being dragged.
+                console.info('Grid onMoveThrough From: ' + from);
+                console.info('Grid onMoveThrough To: ' + to);
+              }
+            }
+          )
+      }
+      .columnsTemplate('1fr 1fr')  // Two-column equal-width layout.
+      .width('100%')
+      .height('100%')
+      .backgroundColor(0xFAEEE0)
+    }
+  }
+  aboutToAppear(): void {
+    // Initialize 100 data items as the Grid content.
+    for (let i = 0; i < 100; i++) {
+      this.arr.push(i.toString())
+    }
+  }
+}
+```
+
+Since API version 26.0.0, the following example shows the callback event triggered after the Grid component sets the drag effect for ForEach, where the Grid contains irregular GridItems. The application can use [irregularIndexes](ts-container-grid.md#gridlayoutoptions10) to set which indexes are irregular nodes, and adjust the number of rows and columns occupied by the GridItem by modifying the rectSize of the corresponding index.
+
+```TypeScript
+// xxx.ets
+class Rects {
+  id: number = 0
+  // rectSize indicates the number of [rows, columns] occupied by the GridItem. The default [1, 1] is a regular node.
+  rectSize: [number, number] = [1, 1]
+  constructor(id_: number) {
+    this.id = id_
+  }
+}
+
+@Entry
+@Component
+struct GridOnMoveExample {
+  @State arr: Array<Rects> = [];
+
+  // Grid layout options (actually effective), declaring the indexes of irregular nodes and the number of rows and columns each occupies.
+  @State layoutOptions: GridLayoutOptions = {
+    regularSize: [1, 1],
+    irregularIndexes: [8],   // The GridItem with index 8 is an irregular node.
+    onGetIrregularSizeByIndex: (index: number) => {
+      return this.arr[index].rectSize
+    }
+  };
+
+  // Layout options (backup), used to trigger a layoutOptions refresh through overall assignment during dragging.
+  layoutOptions_back: GridLayoutOptions = {
+    regularSize: [1, 1],
+    irregularIndexes: [8],   // The GridItem with index 8 is an irregular node.
+    onGetIrregularSizeByIndex: (index: number) => {
+      return this.arr[index].rectSize
+    }
+  };
+
+  build() {
+    Row() {
+      Grid(undefined, this.layoutOptions) {
+        ForEach(this.arr, (item: Rects) => {
+          GridItem() {
+            Text(item.id.toString())
+              .fontSize(16)
+              .textAlign(TextAlign.Center)
+              .size({ height: 100 * item.rectSize[0] + (item.rectSize[0] - 1) * 20, width: '100%'}) // Set the height. A GridItem spanning multiple rows needs extra margins (the spacing of a regular GridItem is 2*10) for interface alignment.
+          }.margin(10)
+          .borderRadius(10)
+          .backgroundColor(0xF9CF93)
+        }, (item: Rects) => item.id.toString())
+          // Triggered when the dragged item is released and its final position differs from its position before dragging. from is the start index, and to is the target index.
+          .onMove((from:number, to:number) => {
+            console.info("Grid onMove from " + from + " to " + to)
+            // Update the this.arr data source.
+            let tmp = this.arr.splice(from, 1);
+            this.arr.splice(to, 0, tmp[0]);
+            if (from < to) {  // The index of the dragged item is smaller than the target position index.
+              // First save the position of the dragged item in the irregularIndexes array to avoid indexOf locating errors caused by duplicate values generated in subsequent loop updates.
+              let from_idx = -1
+              if (this.layoutOptions.irregularIndexes?.includes(from)) {
+                from_idx = this.layoutOptions.irregularIndexes.indexOf(from)
+              }
+
+              // Shift the elements between the dragged item and the target position forward by one position (index -1).
+              if (this.layoutOptions.irregularIndexes != undefined) {
+                let len = this.layoutOptions.irregularIndexes.length
+                for (let i = len - 1; i >= 0; i --) {
+                  let irregularIndex = this.layoutOptions.irregularIndexes[i]
+                  if (irregularIndex > from && irregularIndex <= to) {
+                    this.layoutOptions.irregularIndexes[i] --
+                  }
+                }
+              }
+
+              // If the dragged item itself is an irregular node, update its index to the target position.
+              if (from_idx != -1 && this.layoutOptions.irregularIndexes != undefined) {
+                this.layoutOptions.irregularIndexes[from_idx] = to
+              }
+            } else {  // The index of the dragged item is greater than or equal to the target position index.
+              // First save the position of the dragged item in the irregularIndexes array to avoid indexOf locating errors caused by duplicate values generated in subsequent loop updates.
+              let from_idx = -1
+              if (this.layoutOptions.irregularIndexes?.includes(from)) {
+                from_idx = this.layoutOptions.irregularIndexes.indexOf(from)
+              }
+
+              // Shift the elements between the target position and the dragged item backward by one position (index +1).
+              if (this.layoutOptions.irregularIndexes != undefined) {
+                let len = this.layoutOptions.irregularIndexes.length
+                for (let i = 0; i < len; i ++) {
+                  let irregularIndex = this.layoutOptions.irregularIndexes[i]
+                  if (irregularIndex >= to && irregularIndex < from) {
+                    this.layoutOptions.irregularIndexes[i] ++
+                  }
+                }
+              }
+
+              // If the dragged item itself is an irregular node, update its index to the target position.
+              if (from_idx != -1 && this.layoutOptions.irregularIndexes != undefined) {
+                this.layoutOptions.irregularIndexes[from_idx] = to
+              }
+            }
+            // Force layoutOptions to refresh and take effect through overall assignment of the backup object.
+            this.layoutOptions_back.irregularIndexes = this.layoutOptions.irregularIndexes
+            this.layoutOptions = this.layoutOptions_back
+            console.info("Grid this.layoutOptions.irregularIndexes " + this.layoutOptions.irregularIndexes)
+          },
+            {
+              onLongPress: (index: number) => {
+                // Triggered when a GridItem is lifted after a long press.
+                console.info('Grid onLongPress: ' + index);
+              },
+              onDrop: (index: number) => {
+                // Triggered when the dragged GridItem is released.
+                console.info('Grid onDrop: ' + index);
+              },
+              onDragStart: (index: number) => {
+                // Triggered when a GridItem is lifted after a long press and dragging starts.
+                console.info('Grid onDragStart: ' + index);
+              },
+              onMoveThrough: (from: number, to: number) => {
+                // Triggered continuously while the GridItem is being dragged.
+                console.info('Grid onMoveThrough From: ' + from + ' to: ' + to);
+              }
+            })
+      }
+      .columnsTemplate('1fr 1fr 1fr 1fr')   // Four-column equal-width layout.
+      .width('100%')
+      .height('100%')
+      .backgroundColor(0xFAEEE0)
+    }
+  }
+  aboutToAppear(): void {
+    // Initialize 100 rectangle data items and set index 8 as a 2x2 irregular node.
+    for (let i = 0; i < 100; i++) {
+      this.arr.push(new Rects(i));
+    }
+    this.arr[8].rectSize = [2, 2] // 2 rows and 2 columns.
+  }
+}
+```
+
+Starting from API version 26.0.0, the following example demonstrates the callback event triggered after the drag effect is set for the Grid component using LazyForEach, where the Grid contains irregular GridItems. The application can use irregularIndexes to set which indexes are irregular nodes, and adjust the number of rows and columns occupied by the GridItem by modifying the rectSize of the corresponding index.
+
+```TypeScript
+// RectGridDataSource.ets
+export class Rects {
+  id: number = 0
+  // rectSize indicates the number of [rows, columns] occupied by the GridItem. The default [1, 1] is a regular node.
+  rectSize: [number, number] = [1, 1]
+  constructor(id_: number) {
+    this.id = id_
+  }
+}
+
+// Data source of LazyForEach, implementing the IDataSource interface and responsible for managing data and notifying the UI to refresh.
+export class RectGridDataSource implements IDataSource {
+  private list: Array<Rects> = [];
+  private listeners: DataChangeListener[] = [];
+
+  constructor(list: Rects[]) {
+    this.list = list;
+  }
+
+  // Return the total number of data items.
+  totalCount(): number {
+    return this.list.length;
+  }
+
+  // Obtain the corresponding data item by index.
+  getData(index: number): Rects {
+    return this.list[index];
+  }
+
+  // Register a data change listener.
+  registerDataChangeListener(listener: DataChangeListener): void {
+    if (this.listeners.indexOf(listener) < 0) {
+      this.listeners.push(listener);
+    }
+  }
+
+  // Unregister a data change listener.
+  unregisterDataChangeListener(listener: DataChangeListener): void {
+    const pos = this.listeners.indexOf(listener);
+    if (pos >= 0) {
+      this.listeners.splice(pos, 1);
+    }
+  }
+
+  // Notify the controller of a data position change.
+  notifyDataMove(from: number, to: number): void {
+    this.listeners.forEach(listener => {
+      listener.onDataMove(from, to);
+    })
+  }
+
+  // Reload all data.
+  notifyDataReload(): void {
+    this.listeners.forEach(listener => {
+      listener.onDataReloaded();
+    })
+  }
+
+  // Move the element at the from position to the to position and notify the UI to reload all data.
+  public moveItem(from: number, to: number): void {
+    let tmp = this.list.splice(from, 1);  // First remove the dragged item.
+    this.list.splice(to, 0, tmp[0]);      // Insert the dragged item into the target position.
+    this.notifyDataReload()
+  }
+}
+```
+
+```TypeScript
+// xxx.ets
+import { RectGridDataSource, Rects } from './RectGridDataSource';
+
+@Entry
+@Component
+struct GridOnMoveExample {
+  numbers: RectGridDataSource = new RectGridDataSource([]);
+
+  // Grid layout options (actually effective), declaring the indexes of irregular nodes and the number of rows and columns each occupies.
+  @State layoutOptions: GridLayoutOptions = {
+    regularSize: [1, 1],
+    irregularIndexes: [4, 5, 6, 7, 8, 13],   // Set which indexes correspond to GridItems that are irregular nodes.
+    onGetIrregularSizeByIndex: (index: number) => {
+      return this.numbers.getData(index).rectSize
+    }
+  };
+
+  // Layout options (backup), used to trigger a layoutOptions refresh through overall assignment during dragging.
+  layoutOptions_back: GridLayoutOptions = {
+    regularSize: [1, 1],
+    irregularIndexes: [4, 5, 6, 7, 8, 13],
+    onGetIrregularSizeByIndex: (index: number) => {
+      return this.numbers.getData(index).rectSize
+    }
+  };
+
+  build() {
+    Row() {
+      Grid(undefined, this.layoutOptions) {
+        LazyForEach(this.numbers, (item: Rects) => {
+          GridItem() {
+            Text(item.id.toString())
+              .fontSize(16)
+              .textAlign(TextAlign.Center)
+              // Set the height. A GridItem spanning multiple rows needs extra margins (the spacing of a regular GridItem is 2*10) for interface alignment.
+              .size({ height: 100 * item.rectSize[0] + (item.rectSize[0] - 1) * 20, width: '100%'})
+          }.margin(10)
+          .borderRadius(10)
+          .backgroundColor(0xF9CF93)
+        }, (index: Rects) => index.id.toString())
+          // Triggered when the dragged item is released and its final position differs from its position before dragging. from is the start index, and to is the target index.
+          .onMove((from:number, to:number) => {
+            console.info("Grid onMove from " + from + " to " + to)
+            // Update the data source.
+            this.numbers.moveItem(from, to)
+            if (from < to) {  // The index of the dragged item is smaller than the target position index.
+              // First save the position of the dragged item in the irregularIndexes array to avoid indexOf locating errors caused by duplicate values generated in subsequent loop updates.
+              let from_idx = -1
+              if (this.layoutOptions.irregularIndexes?.includes(from)) {
+                from_idx = this.layoutOptions.irregularIndexes.indexOf(from)
+              }
+
+              // Shift the elements between the dragged item and the target position forward by one position (index -1).
+              if (this.layoutOptions.irregularIndexes != undefined) {
+                let len = this.layoutOptions.irregularIndexes.length
+                for (let i = len - 1; i >= 0; i --) {
+                  let irregularIndex = this.layoutOptions.irregularIndexes[i]
+                  if (irregularIndex > from && irregularIndex <= to) {
+                    this.layoutOptions.irregularIndexes[i] --
+                  }
+                }
+              }
+
+              // If the dragged item itself is an irregular node, update its index to the target position.
+              if (from_idx != -1 && this.layoutOptions.irregularIndexes != undefined) {
+                this.layoutOptions.irregularIndexes[from_idx] = to
+              }
+            } else {  // The index of the dragged item is greater than or equal to the target position index.
+              // First save the position of the dragged item in the irregularIndexes array to avoid indexOf locating errors caused by duplicate values generated in subsequent loop updates.
+              let from_idx = -1
+              if (this.layoutOptions.irregularIndexes?.includes(from)) {
+                from_idx = this.layoutOptions.irregularIndexes.indexOf(from)
+              }
+
+              // Shift the elements between the target position and the dragged item backward by one position (index +1).
+              if (this.layoutOptions.irregularIndexes != undefined) {
+                let len = this.layoutOptions.irregularIndexes.length
+                for (let i = 0; i < len; i ++) {
+                  let irregularIndex = this.layoutOptions.irregularIndexes[i]
+                  if (irregularIndex >= to && irregularIndex < from) {
+                    this.layoutOptions.irregularIndexes[i] ++
+                  }
+                }
+              }
+
+              // If the dragged item itself is an irregular node, update its index to the target position.
+              if (from_idx != -1 && this.layoutOptions.irregularIndexes != undefined) {
+                this.layoutOptions.irregularIndexes[from_idx] = to
+              }
+            }
+            // Force layoutOptions to refresh and take effect through overall assignment of the backup object.
+            this.layoutOptions_back.irregularIndexes = this.layoutOptions.irregularIndexes
+            this.layoutOptions = this.layoutOptions_back
+            console.info("Grid this.layoutOptions.irregularIndexes " + this.layoutOptions.irregularIndexes)
+          },
+            {
+              onLongPress: (index: number) => {
+                // Triggered when a GridItem is lifted after a long press.
+                console.info('Grid onLongPress: ' + index);
+              },
+              onDrop: (index: number) => {
+                // Triggered when the dragged GridItem is released.
+                console.info('Grid onDrop: ' + index);
+              },
+              onDragStart: (index: number) => {
+                // Triggered when a GridItem is lifted after a long press and dragging starts.
+                console.info('Grid onDragStart: ' + index);
+              },
+              onMoveThrough: (from: number, to: number) => {
+                // Triggered continuously while the GridItem is being dragged.
+                console.info('Grid onMoveThrough From: ' + from + ' to: ' + to);
+              }
+            })
+      }
+      .columnsTemplate('1fr 1fr 1fr 1fr')   // Four-column equal-width layout.
+      .width('100%')
+      .height('100%')
+      .backgroundColor(0xFAEEE0)
+    }
+  }
+
+  aboutToAppear(): void {
+    // Initialize 100 rectangle data items and set the spanning size of each irregular node.
+    let list: Rects[] = [];
+    for (let i = 0; i < 100; i++) {
+      list.push(new Rects(i));
+    }
+    list[4].rectSize = [2, 2] // 2 rows and 2 columns.
+    list[5].rectSize = [1, 2] // 1 row and 2 columns.
+    list[6].rectSize = [1, 2] // 1 row and 2 columns.
+    list[7].rectSize = [2, 1] // 2 rows and 1 column.
+    list[8].rectSize = [2, 1] // 2 rows and 1 column.
+    list[13].rectSize = [1, 4]  // 1 row and 4 columns.
+    this.numbers = new RectGridDataSource(list);
+  }
+}
+```
+
+Supported since API version 26.0.0, the example below shows the callback event triggered after Repeat sets the drag effect in the Grid component, where the Grid contains irregular GridItems. The application can use irregularIndexes to set which indexes are irregular nodes, and adjust the number of rows and columns occupied by the GridItem by modifying the rectSize of the corresponding index.
+
+```TypeScript
+// xxx.ets
+class Rects {
+  id: number = 0
+  // rectSize indicates the number of [rows, columns] occupied by the GridItem. The default [1, 1] is a regular node.
+  rectSize: [number, number] = [1, 1]
+  constructor(id_: number) {
+    this.id = id_
+  }
+}
+
+@Entry
+@ComponentV2
+struct GridOnMoveExample {
+  @Local arr: Array<Rects> = [];
+
+  // Grid layout options (actually effective), declaring the indexes of irregular nodes and the number of rows and columns each occupies.
+  @Local layoutOptions: GridLayoutOptions = {
+    regularSize: [1, 1],
+    irregularIndexes: [4, 5, 6, 7, 8, 13],   // Set which indexes correspond to GridItems that are irregular nodes.
+    onGetIrregularSizeByIndex: (index: number) => {
+      return this.arr[index].rectSize
+    }
+  };
+
+  // Layout options (backup), used to trigger a layoutOptions refresh through overall assignment during dragging.
+  layoutOptions_back: GridLayoutOptions = {
+    regularSize: [1, 1],
+    irregularIndexes: [4, 5, 6, 7, 8, 13],
+    onGetIrregularSizeByIndex: (index: number) => {
+      return this.arr[index].rectSize
+    }
+  };
+
+  aboutToAppear(): void {
+    // Initialize 100 rectangle data items.
+    for (let i = 0; i < 100; i++) {
+      this.arr.push(new Rects(i));
+    }
+    // Set the spanning size of each irregular node.
+    this.arr[4].rectSize = [2, 2] // 2 rows and 2 columns.
+    this.arr[5].rectSize = [1, 2] // 1 row and 2 columns.
+    this.arr[6].rectSize = [1, 2] // 1 row and 2 columns.
+    this.arr[7].rectSize = [2, 1] // 2 rows and 1 column.
+    this.arr[8].rectSize = [2, 1] // 2 rows and 1 column.
+    this.arr[13].rectSize = [1, 4] // 1 row and 4 columns.
+  }
+
+  build() {
+    Column() {
+      Grid(undefined, this.layoutOptions) {
+        Repeat<Rects>(this.arr)
+        // Triggered when the dragged item is released and its final position differs from its position before dragging. from is the start index, and to is the target index.
+          .onMove((from: number, to: number) => {
+            if (from == to) {
+              return
+            }
+            console.info("Grid onMove from " + from + " to " + to)
+            // Update the this.arr data source.
+            let tmp = this.arr.splice(from, 1);
+            this.arr.splice(to, 0, tmp[0]);
+            if (from < to) {  // The index of the dragged item is smaller than the target position index.
+              // First save the position of the dragged item in the irregularIndexes array to avoid indexOf locating errors caused by duplicate values generated in subsequent loop updates.
+              let from_idx = -1
+              if (this.layoutOptions.irregularIndexes?.includes(from)) {
+                from_idx = this.layoutOptions.irregularIndexes.indexOf(from)
+              }
+
+              // Shift the elements between the dragged item and the target position forward by one position (index -1).
+              if (this.layoutOptions.irregularIndexes != undefined) {
+                let len = this.layoutOptions.irregularIndexes.length
+                for (let i = len - 1; i >= 0; i --) {
+                  let irregularIndex = this.layoutOptions.irregularIndexes[i]
+                  if (irregularIndex > from && irregularIndex <= to) {
+                    this.layoutOptions.irregularIndexes[i] --
+                  }
+                }
+              }
+
+              // If the dragged item itself is an irregular node, update its index to the target position.
+              if (from_idx != -1 && this.layoutOptions.irregularIndexes != undefined) {
+                this.layoutOptions.irregularIndexes[from_idx] = to
+              }
+            } else {  // The index of the dragged item is greater than or equal to the target position index.
+              // First save the position of the dragged item in the irregularIndexes array to avoid indexOf locating errors caused by duplicate values generated in subsequent loop updates.
+              let from_idx = -1
+              if (this.layoutOptions.irregularIndexes?.includes(from)) {
+                from_idx = this.layoutOptions.irregularIndexes.indexOf(from)
+              }
+
+              // Shift the elements between the target position and the dragged item backward by one position (index +1).
+              if (this.layoutOptions.irregularIndexes != undefined) {
+                let len = this.layoutOptions.irregularIndexes.length
+                for (let i = 0; i < len; i ++) {
+                  let irregularIndex = this.layoutOptions.irregularIndexes[i]
+                  if (irregularIndex >= to && irregularIndex < from) {
+                    this.layoutOptions.irregularIndexes[i] ++
+                  }
+                }
+              }
+
+              // If the dragged item itself is an irregular node, update its index to the target position.
+              if (from_idx != -1 && this.layoutOptions.irregularIndexes != undefined) {
+                this.layoutOptions.irregularIndexes[from_idx] = to
+              }
+            }
+            // Force layoutOptions to refresh and take effect through overall assignment of the backup object.
+            this.layoutOptions_back.irregularIndexes = this.layoutOptions.irregularIndexes
+            this.layoutOptions = this.layoutOptions_back
+            console.info("Grid this.layoutOptions.irregularIndexes " + this.layoutOptions.irregularIndexes)
+          },
+            {
+              onLongPress: (index: number) => {
+                // Triggered when a GridItem is lifted after a long press.
+                console.info('Grid onLongPress: ' + index);
+              },
+              onDrop: (index: number) => {
+                // Triggered when the dragged GridItem is released.
+                console.info('Grid onDrop: ' + index);
+              },
+              onDragStart: (index: number) => {
+                // Triggered when a GridItem is lifted after a long press and dragging starts.
+                console.info('Grid onDragStart: ' + index);
+              },
+              onMoveThrough: (from: number, to: number) => {
+                // Triggered continuously while the GridItem is being dragged.
+                console.info('Grid onMoveThrough From: ' + from + ' to: ' + to);
+              }
+            })
+          .each((obj: RepeatItem<Rects>) => {
+            GridItem() {
+              Text(obj.item.id.toString())
+                .fontSize(16)
+                .textAlign(TextAlign.Center)
+                // Set the height. A GridItem spanning multiple rows needs extra margins (the spacing of a regular GridItem is 2*10) for interface alignment.
+                .size({ height: 100 * this.arr[obj.index].rectSize[0] + (this.arr[obj.index].rectSize[0] - 1) * 20, width: '100%' })
+            }.margin(10)
+            .borderRadius(10)
+            .backgroundColor(0xF9CF93)
+          })
+          .key((item: Rects, index: number) => {
+            return item.id.toString();
+          })
+          .virtualScroll({ totalCount: this.arr.length })   // Enable virtual scrolling to render only visible items for better performance.
+      }
+      .columnsTemplate('1fr 1fr 1fr 1fr')   // Four-column equal-width layout.
+      .border({ width: 1 })
+      .backgroundColor(0xFAEEE0)
+      .width('100%')
+      .height('100%')
+    }
+  }
+}
+```
+
+This example demonstrates the merging of drawing for background blur and other effects.
+
+```TypeScript
+// Index.ets
 @Entry
 @Component
 struct Index {
@@ -5510,7 +6238,7 @@ struct Index {
 
   build() {
     Stack() {
-      Image($r("app.media.mountain"))
+      Image($r('app.media.mountain'))
         .autoResize(true)
       EffectComponent() {
         Column({ space: 20 }) {
@@ -5562,7 +6290,7 @@ struct Index {
 }
 ```
 
-This example demonstrates how to set a size change event for a Text component. When the size of the Text component changes, the onSizeChange event is triggered, allowing you to obtain relevant parameters.
+This example sets the component size change event on the Text component. When the Text size changes, the onSizeChange event is triggered to obtain the oldValue and newValue parameters.
 
 ```TypeScript
 // xxx.ets
@@ -5579,11 +6307,11 @@ struct AreaExample {
         .margin(30)
         .fontSize(20)
         .onClick(() => {
-          this.value = this.value + 'Text'
+          this.value = this.value + 'Text';
         })
         .onSizeChange((oldValue: SizeOptions, newValue: SizeOptions) => {
-          console.info(`Ace: on size change, oldValue is ${JSON.stringify(oldValue)} value is ${JSON.stringify(newValue)}`)
-          this.sizeValue = JSON.stringify(newValue)
+          console.info(`Ace: on size change, oldValue is ${JSON.stringify(oldValue)} newValue is ${JSON.stringify(newValue)}`);
+          this.sizeValue = JSON.stringify(newValue);
         })
       Text('new area is: \n' + this.sizeValue).margin({ right: 30, left: 30 })
     }
@@ -5592,7 +6320,7 @@ struct AreaExample {
 }
 ```
 
-This example demonstrates how to use the [animateToImmediately](#animatetoimmediately) API to deliver an explicit animation immediately.
+This example demonstrates how to use [animateToImmediately](#animatetoimmediately) to implement the immediate delivery of explicit animations.
 
 ```TypeScript
 // xxx.ets
@@ -5614,6 +6342,8 @@ struct AnimateToImmediatelyExample {
       Button('change size')
         .margin(30)
         .onClick(() => {
+          // Compare and demonstrate, through if/else branches, the difference in effect between the immediate delivery of animation by animateToImmediately and the delayed delivery of animation by animateTo.
+          // Demonstrate the flag switching scenario: when true, opacity is delivered immediately and size is delivered with delay; when false, size is delivered immediately and opacity is delivered with delay.
           if (this.flag) {
             animateToImmediately({
               delay: 0,
@@ -5650,7 +6380,7 @@ struct AnimateToImmediatelyExample {
 }
 ```
 
-This example demonstrates how to create a custom check box using ContentModifier. This check box comes in the custom pentagon style instead of the original check box style. When selected, the check box shows a red triangle pattern inside, and the title displays the word "Selected;" when deselected, the check box hides the red triangle pattern inside, and the title displays the word "Unselected."
+This example demonstrates how to create a custom check box using ContentModifier. This check box comes in the custom pentagon style instead of the original check box style. When selected, the check box shows a red triangle pattern inside, and the title displays the word "selected"; when deselected, the check box hides the red triangle pattern inside, and the title displays the word "unselected."
 
 ```TypeScript
 // xxx.ets
@@ -5734,7 +6464,7 @@ This example demonstrates how to add a brightness effect to a component using ad
 
 ```TypeScript
 // xxx.ets
-import { uiEffect } from "@kit.ArkGraphics2D";
+import { uiEffect } from '@kit.ArkGraphics2D';
 
 // Use uiEffect.createBrightnessBlender to create a BrightnessBlender instance, which can be used to apply the brightness effect to a component.
 let blender: uiEffect.BrightnessBlender = uiEffect.createBrightnessBlender({
@@ -5747,8 +6477,8 @@ let blender: uiEffect.BrightnessBlender = uiEffect.createBrightnessBlender({
   negativeCoefficient: [0.5, 2.0, 0.5],
   fraction: 0.5
 });
-// Using a custom object as a parameter will not take effect.
-let blender1: uiEffect.BrightnessBlender = {
+// Caution: Using a custom object as the Blender input parameter does not take effect. Use the uiEffect.createBrightnessBlender method to create a Blender instance.
+let customBlender: uiEffect.BrightnessBlender = {
   cubicRate: 0.5,
   quadraticRate: 0.5,
   linearRate: 0.5,
@@ -5780,7 +6510,7 @@ struct Index {
 
         Text(String.fromCodePoint(0x1F600) + 'TEST')
           .fontSize(60)
-          .advancedBlendMode(blender1)
+          .advancedBlendMode(customBlender)
       }
     }
   }
@@ -5808,7 +6538,8 @@ struct ExcludeFromRenderGroupDemo {
           .width(100)
           .height(100)
           .backgroundColor(this.myColor)
-          .excludeFromRenderGroup(this.isExcluded)// Set the excludeFromRenderGroup attribute. When the background color animation is performed for the component, the actual display effect needs to be frequently updated. The component area only occupies a part of the render group area. Therefore, setting the excludeFromRenderGroup attribute helps reuse the render group cache.
+          // Set the excludeFromRenderGroup attribute. When this component performs a background color animation, the actual display effect requires frequent attribute updates, and the component area occupies only part of the render group area. Therefore, set the excludeFromRenderGroup attribute to reuse the render group cache.
+          .excludeFromRenderGroup(this.isExcluded)
           .onClick(() => {
             this.isExcluded = true; // Before playing the animation, change the is attribute of the render group to true.
             this.animationCnt++;
@@ -5816,8 +6547,8 @@ struct ExcludeFromRenderGroupDemo {
               duration: 600,
               onFinish: () => {
                 this.animationCnt--;
-                if (this.animationCnt == 0) { // If the value of animationCnt is 0, all animations have ended.
-                  this.isExcluded = false; // After the animations of the component ends, if no attribute change occurs on the component, you can reset this attribute of the render group.
+                if (this.animationCnt === 0) { // animationCnt becomes 0, indicating that all animations have ended.
+                  this.isExcluded = false; // After the animations of the component end, if no attribute change occurs on the component, you can reset this attribute of the render group.
                 }
               }
             }, () => {
@@ -5825,10 +6556,10 @@ struct ExcludeFromRenderGroupDemo {
             })
           })
         // Other components in the render group.
-        Image($r('app.media.bg1'))// Replace $r('app.media.bg1') with the image resource file you use.
+        Image($r('app.media.bg1')) // $r('app.media.bg1') needs to be replaced with the image resource file required by the developer.
           .width(100)
           .height(100)
-        Image($r('app.media.bg1'))// Replace $r('app.media.bg1') with the image resource file you use.
+        Image($r('app.media.bg1')) // $r('app.media.bg1') needs to be replaced with the image resource file required by the developer.
           .width(100)
           .height(100)
       }.renderGroup(true)
@@ -5898,7 +6629,48 @@ struct Index {
 }
 ```
 
-This example demonstrates how to set the keyframe animation using keyframeAnimateTo.
+This example demonstrates how to add an edge glow effect to a component through [edgeLight](#edgelight).
+Since API version 26.0.0, the edgeLight method is added.
+
+```TypeScript
+// xxx.ets
+import { curves } from '@kit.ArkUI';
+@Entry
+@Component
+struct Index {
+  @State animate: boolean = false;
+  @State edgeLightPosition: EdgeLightPosition = EdgeLightPosition.TOP_LEFT;
+  build() {
+    Column() {
+      Column()
+        .height(300)
+        .width(300)
+        .backgroundColor(Color.Gray)
+        .borderRadius(20)
+        .edgeLight({
+          position: this.edgeLightPosition,
+          length: 90,
+          intensity: 1,
+          color: Color.White,
+          thickness: 2
+        })
+        .onClick(() => {
+          this.getUIContext()?.animateTo({ curve: curves.springMotion(), duration: 3000}, () => {
+            this.animate = !this.animate;
+            this.edgeLightPosition = this.animate ? EdgeLightPosition.BOTTOM_RIGHT : EdgeLightPosition.TOP_LEFT;
+          })
+        })
+    }
+    .height('100%')
+    .width('100%')
+    .justifyContent(FlexAlign.Center)
+    .alignItems(HorizontalAlign.Center)
+    .backgroundColor('#aaaaaa')
+  }
+}
+```
+
+This example demonstrates how to set a keyframe animation through keyframeAnimateTo, including the delay, the onFinish completion callback, and the curve configuration of each keyframe.
 
 ```TypeScript
 // xxx.ets
@@ -5919,18 +6691,23 @@ struct KeyframeDemo {
       Circle()
         .width(100)
         .height(100)
-        .fill("#46B1E3")
+        .fill('#46B1E3')
         .margin(100)
         .scale({ x: this.myScale, y: this.myScale })
         .onClick(() => {
           if (!this.uiContext) {
-            console.info("no uiContext, keyframe failed");
+            console.info('no uiContext, keyframe failed');
             return;
           }
           this.myScale = 1;
-          // Set the keyframe animation to play three times.
+          // Set the keyframe animation to play three times in total, with a delay of 200 ms, and trigger the onFinish callback when it ends.
           this.uiContext.keyframeAnimateTo({
               iterations: 3,
+              delay: 200,
+              onFinish: () => {
+                console.info('keyframe animate finish');
+              },
+              // expectedFrameRateRange is added since API version 19.
               expectedFrameRateRange: {
                 min: 10,
                 max: 120,
@@ -5938,15 +6715,17 @@ struct KeyframeDemo {
               }
             }, [
             {
-              // The first keyframe animation lasts for 800 ms, during which the scale attribute changes from 1 to 1.5.
+              // The first keyframe animation lasts 800 ms, uses the EaseIn curve, and animates the scale attribute from 1 to 1.5.
               duration: 800,
+              curve: Curve.EaseIn,
               event: () => {
                 this.myScale = 1.5;
               }
             },
             {
-              // The second keyframe animation lasts for 500 ms, during which the scale attribute changes from 1.5 to 1.
+              // The second keyframe animation lasts 500 ms, uses the EaseOut curve, and animates the scale attribute from 1.5 to 1.
               duration: 500,
+              curve: Curve.EaseOut,
               event: () => {
                 this.myScale = 1;
               }
@@ -5969,23 +6748,23 @@ struct VisibilityExample {
     Column() {
       Column() {
         // The component is hidden and does not take up space in the layout.
-        Text('None').fontSize(9).width('90%').fontColor(0xCCCCCC)
-        Row().visibility(Visibility.None).width('90%').height(80).backgroundColor(0xAFEEEE)
+        Text('None').fontSize(9).width('90%').fontColor(0xCCCCCC);
+        Row().visibility(Visibility.None).width('90%').height(80).backgroundColor(0xAFEEEE);
 
         // The component is hidden but takes up space in the layout.
-        Text('Hidden').fontSize(9).width('90%').fontColor(0xCCCCCC)
-        Row().visibility(Visibility.Hidden).width('90%').height(80).backgroundColor(0xAFEEEE)
+        Text('Hidden').fontSize(9).width('90%').fontColor(0xCCCCCC);
+        Row().visibility(Visibility.Hidden).width('90%').height(80).backgroundColor(0xAFEEEE);
 
         // The component is visible, which is the default display mode.
-        Text('Visible').fontSize(9).width('90%').fontColor(0xCCCCCC)
-        Row().visibility(Visibility.Visible).width('90%').height(80).backgroundColor(0xAFEEEE)
-      }.width('90%').border({ width: 1 })
-    }.width('100%').margin({ top: 5 })
+        Text('Visible').fontSize(9).width('90%').fontColor(0xCCCCCC);
+        Row().visibility(Visibility.Visible).width('90%').height(80).backgroundColor(0xAFEEEE);
+      }.width('90%').border({ width: 1 });
+    }.width('100%').margin({ top: 5 });
   }
 }
 ```
 
-This example demonstrates how to implement custom judgment for long press, swipe, and pan gestures using [onGestureJudgeBegin](arkts-arkui-commonmethod-c.md#ongesturejudgebegin). Starting from API version 21, axisPinch property of [BaseEvent](arkts-arkui-baseevent-i.md) can be used to obtain the two-finger pinch scale ratio.
+In this example, the [onGestureJudgeBegin](arkts-arkui-commonmethod-c.md#ongesturejudgebegin) event is configured to implement customized judgment of the press and hold, fast swipe, swipe, pinch, and drag gestures. From API version 21, the [BaseEvent](ts-universal-events-click.md#baseevent8) axisPinch attribute can be used to obtain the two-finger zoom ratio.
 
 ```TypeScript
 // xxx.ets
@@ -6005,40 +6784,40 @@ struct Index {
     .height(200)
     .borderWidth(2)
     .onDragStart(() => {
-      this.message = 'drag'
-      console.info("Drag start.")
+      this.message = 'drag';
+      console.info('Drag start.');
     })
     .gesture(
       TapGesture()
-        .tag("tap1")// Tag for the tap gesture.
+        .tag('tap1') // Set the tap gesture flag.
         .onAction(() => {
-          this.message = 'tap1'
+          this.message = 'tap1';
         })
     )
     .gesture(
       LongPressGesture()
-        .tag("longPress1")// Tag for the long press gesture.
+        .tag('longPress1') // Set the long press gesture flag.
         .onAction(() => {
-          this.message = 'longPress'
+          this.message = 'longPress';
         })
     )
     .gesture(
       SwipeGesture()
-        .tag("swipe1")// Tag for the swipe gesture.
+        .tag('swipe1') // Set the fast swipe gesture flag.
         .onAction(() => {
-          this.message = 'swipe1'
+          this.message = 'swipe1';
         })
     )
     .gesture(
       PanGesture()
-        .tag("pan1")// Tag for the pan gesture.
+        .tag('pan1') // Set the swipe gesture flag.
         .onActionStart(() => {
-          this.message = 'pan1'
+          this.message = 'pan1';
         })
     )
     .gesture(
       PinchGesture()
-        .tag("pinch1")// Tag for the pinch gesture.
+        .tag('pinch1') // Set the pinch gesture flag.
         .onActionStart(() => {
           this.message = 'pinch1'
         })
@@ -6047,22 +6826,22 @@ struct Index {
       // If the gesture type is a long press gesture, convert the event to a long press gesture event.
       if (gestureInfo.type == GestureControl.GestureType.LONG_PRESS_GESTURE) {
         let longPressEvent = event as LongPressGestureEvent;
-        console.info(`repeat ${longPressEvent.repeat}`)
+        console.info(`repeat ${longPressEvent.repeat}`);
       }
       // If the gesture type is a swipe gesture, convert the event to a swipe event.
       if (gestureInfo.type == GestureControl.GestureType.SWIPE_GESTURE) {
         let swipeEvent = event as SwipeGestureEvent;
-        console.info(`angle ${swipeEvent.angle}`)
+        console.info(`angle ${swipeEvent.angle}`);
       }
       // If the gesture type is a swipe gesture, convert the event to a swipe gesture event.
       if (gestureInfo.type == GestureControl.GestureType.PAN_GESTURE) {
         let panEvent = event as PanGestureEvent;
-        console.info(`velocity ${panEvent.velocity}`)
+        console.info(`velocity ${panEvent.velocity}`);
       }
       // If the gesture type is a pinch gesture, convert the event to a pinch event.
       if (gestureInfo.type == GestureControl.GestureType.PINCH_GESTURE) {
         let pinchEvent = event as PinchGestureEvent;
-        console.info(`axisPinch ${pinchEvent.axisPinch}`)
+        console.info(`axisPinch ${pinchEvent.axisPinch}`);
       }
       // Custom criteria
       if (gestureInfo.type == GestureControl.GestureType.DRAG) {
@@ -6078,7 +6857,7 @@ struct Index {
 }
 ```
 
-This example demonstrates how to use onGestureJudgeBegin to determine whether to respond to long press and pan gestures based on the area.
+This example uses onGestureJudgeBegin to determine whether to respond to the press and hold gesture and drag gesture based on the area where the gesture is triggered.
 
 ```TypeScript
 // xxx.ets
@@ -6093,7 +6872,7 @@ struct Index {
   build() {
     Scroll(this.scroller) {
       Column({ space: 8 }) {
-        Text("The upper red area is bound to the long press gesture, and the lower blue area is bound to a drag gesture. If a pan is performed after a long press in the upper red area, the area only responds to the long press. In the same case, the lower blue area only responds to the drag.")
+        Text('The upper red area is bound to the long press gesture, and the lower blue area is bound to a drag gesture. If a pan is performed after a long press in the upper red area, the area only responds to the long press. In the same case, the lower blue area only responds to the drag.')
           .width('100%')
           .fontSize(20)
           .fontColor('0xffdd00')
@@ -6101,32 +6880,32 @@ struct Index {
         Stack({ alignContent: Alignment.Center }) {
           Column() {
             // Simulate the upper and lower half areas.
-            Stack().width('200vp').height('100vp').backgroundColor(Color.Red)
-            Stack().width('200vp').height('100vp').backgroundColor(Color.Blue)
+            Stack().width('200').height('100').backgroundColor(Color.Red)
+            Stack().width('200').height('100').backgroundColor(Color.Blue)
           }.width('200vp').height('200vp')
 
           // The lower part of the Stack component is the image area bound to the pan gesture.
           Image($r('sys.media.ohos_app_icon'))
             .draggable(true)
             .onDragStart(() => {
-              this.promptAction.showToast({ message: "When the blue area is dragged, the image responds." })
+              this.promptAction.showToast({ message: 'When the blue area is dragged, the image responds.' })
             })
-            .width('200vp').height('200vp')
+            .width('200').height('200')
           // The upper part of the Stack component is the floating area bound to the long press gesture.
           Stack() {
           }
-          .width('200vp')
-          .height('200vp')
+          .width('200')
+          .height('200')
           .hitTestBehavior(HitTestMode.Transparent)
           .onGestureJudgeBegin((gestureInfo: GestureInfo, event: BaseGestureEvent) => {
             // Check whether the tag of gestureInfo has a value.
             if (gestureInfo.tag) {
-              console.info(`gestureInfo tag ${gestureInfo.tag.toString()}`)
+              console.info(`gestureInfo tag ${gestureInfo.tag.toString()}`);
             }
             console.info(`gestureInfo Type ${gestureInfo.type.toString()}`);
             console.info(`isSystemGesture ${gestureInfo.isSystemGesture}`);
-            console.info(`zqs pressure ${event.pressure}\nfingerList.length ${event.fingerList.length}\ntimeStamp ${event.timestamp}\nsourceType ${event.source.toString()}\n` +
-              `tiltX ${event.tiltX}\ntiltY ${event.tiltY}\nrollAngle ${event.rollAngle}\nsourcePool ${event.sourceTool.toString()}`);
+            console.info(`pressure ${event.pressure}\nfingerList.length ${event.fingerList.length}\ntimeStamp ${event.timestamp}\nsourceType ${event.source.toString()}\n` +
+              `tiltX ${event.tiltX}\ntiltY ${event.tiltY}\nrollAngle ${event.rollAngle}\nsourceTool ${event.sourceTool.toString()}`);
             // If the gesture is a long press gesture, check whether the touch position is in the upper half area.
             if (gestureInfo.type == GestureControl.GestureType.LONG_PRESS_GESTURE) {
               if (event.fingerList.length > 0 && event.fingerList[0].localY < 100) {
@@ -6140,9 +6919,9 @@ struct Index {
           .gesture(GestureGroup(GestureMode.Parallel,
             LongPressGesture()
               .onAction((event: GestureEvent) => {
-                this.promptAction.showToast({ message: "Long-press the upper red area. The red area responds." })
+                this.promptAction.showToast({ message: 'Long-press the upper red area. The red area responds.' })
               })
-              .tag("tap111")
+              .tag('tap111')
           ))
 
         }.width('100%')
@@ -6152,7 +6931,7 @@ struct Index {
 }
 ```
 
-This example demonstrates real-time monitoring of active touch points participating in gestures, including their count, IDs, and coordinates, by configuring fingerInfos.
+This example configures the onGestureJudgeBegin callback to read fingerInfos to detect the number of valid touch points, ID of each touch point, and coordinates of each touch point in real time.
 
 ```TypeScript
 // xxx.ets
@@ -6208,20 +6987,21 @@ struct GestureDetectorExample {
               })
               .onActionEnd(() => {
                 this.message = 'Drag ended'
-                this.fingerCount = 0
-                this.fingerDetails = ''
+                this.fingerCount = 0;
+                this.fingerDetails = '';
               })
           )
         )
-        .onGestureJudgeBegin((gestureInfo: GestureInfo, event: BaseGestureEvent) => {
+        .onGestureJudgeBegin((_gestureInfo: GestureInfo, event: BaseGestureEvent) => {
           // Access fingerInfos data.
           if (event?.fingerInfos) {
-            this.fingerCount = event.fingerInfos.length
+            this.fingerCount = event.fingerInfos.length;
             this.fingerDetails = event.fingerInfos.map(finger =>
             `ID: ${finger.id}: (${finger.localX.toFixed(1)}, ${finger.localY.toFixed(1)})`
-            ).join('\n')
+            ).join('\n');
             console.info(`Touch point data: ${JSON.stringify(event.fingerInfos)}`)
           }
+          // When the number of touch points exceeds 2, the current gesture is rejected.
           if (this.fingerCount > 2) {
             return GestureJudgeResult.REJECT
           }
@@ -6235,7 +7015,7 @@ struct GestureDetectorExample {
 }
 ```
 
-In this example, clicking and dragging in the blank area below the List component causes the List component to scroll. The Button component still responds to onClick events.
+In this example, click the blank area below the List and drag to make the List scroll. When the Button is pressed, the Button responds to the onClick event.
 
 ```TypeScript
 // xxx.ets
@@ -6244,9 +7024,9 @@ import { PromptAction } from '@kit.ArkUI';
 @Entry
 @Component
 struct ListExample {
-  private arr: number[] = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+  private arr: number[] = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
   promptAction: PromptAction = this.getUIContext().getPromptAction();
-  @State text: string = 'Button'
+  @State text: string = 'Button';
 
   build() {
     Column() {
@@ -6267,11 +7047,11 @@ struct ListExample {
       .scrollBar(BarState.Off)
       .edgeEffect(EdgeEffect.Spring)
       .onScrollIndex((start: number, end: number) => {
-        console.info(`first ${start}`)
-        console.info(`last ${end}`)
+        console.info(`first ${start}`);
+        console.info(`last ${end}`);
       })
       .onDidScroll((scrollOffset: number, scrollState: ScrollState) => {
-        console.info(`onScroll scrollState = ScrollState ${scrollState.toString()}, scrollOffset = ${scrollOffset}`)
+        console.info(`onScroll scrollState = ScrollState ${scrollState.toString()}, scrollOffset = ${scrollOffset}`);
       })
       .width('100%')
       .height('65%')
@@ -6285,8 +7065,8 @@ struct ListExample {
         .fontWeight(FontWeight.Medium)
         .margin({ top: 80 })
         .onClick(() => {
-          this.text = 'click the button'
-          this.promptAction.showToast({ message: 'you click the button.', duration: 3000 })
+          this.text = 'click the button';
+          this.promptAction.showToast({ message: 'you click the button.', duration: 3000 });
         })
     }
     .width('100%')
@@ -6296,7 +7076,7 @@ struct ListExample {
     .padding({ left: 12, right: 12, bottom: 24 })
     .onChildTouchTest((touchInfo) => {
       for (let info of touchInfo) {
-        if (info.id == 'MyList') {
+        if (info.id === 'MyList') {
           return { id: info.id, strategy: TouchTestStrategy.FORWARD_COMPETITION }
         }
       }
@@ -6315,9 +7095,9 @@ import { PromptAction } from '@kit.ArkUI';
 @Entry
 @Component
 struct ListExample {
-  private arr: number[] = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+  private arr: number[] = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
   promptAction: PromptAction = this.getUIContext().getPromptAction();
-  @State text: string = 'Button'
+  @State text: string = 'Button';
 
   build() {
     Column() {
@@ -6338,11 +7118,11 @@ struct ListExample {
       .scrollBar(BarState.Off)
       .edgeEffect(EdgeEffect.Spring)
       .onScrollIndex((start: number, end: number) => {
-        console.info(`first ${start}`)
-        console.info(`last ${end}`)
+        console.info(`first ${start}`);
+        console.info(`last ${end}`);
       })
       .onDidScroll((scrollOffset: number, scrollState: ScrollState) => {
-        console.info(`onScroll scrollState = ScrollState ${scrollState.toString()}, scrollOffset = ${scrollOffset}`)
+        console.info(`onScroll scrollState = ScrollState ${scrollState.toString()}, scrollOffset = ${scrollOffset}`);
       })
       .width('100%')
       .height('65%')
@@ -6356,8 +7136,8 @@ struct ListExample {
         .fontWeight(FontWeight.Medium)
         .margin({ top: 80 })
         .onClick(() => {
-          this.text = 'click the button'
-          this.promptAction.showToast({ message: 'you click the button.', duration: 3000 })
+          this.text = 'click the button';
+          this.promptAction.showToast({ message: 'you click the button.', duration: 3000 });
         })
     }
     .width('100%')
@@ -6367,7 +7147,7 @@ struct ListExample {
     .padding({ left: 12, right: 12, bottom: 24 })
     .onChildTouchTest((touchInfo) => {
       for (let info of touchInfo) {
-        if (info.id == 'MyList') {
+        if (info.id === 'MyList') {
           return { id: info.id, strategy: TouchTestStrategy.FORWARD }
         }
       }
@@ -6386,9 +7166,9 @@ import { PromptAction } from '@kit.ArkUI';
 @Entry
 @Component
 struct ListExample {
-  private arr: number[] = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+  private arr: number[] = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
   promptAction: PromptAction = this.getUIContext().getPromptAction();
-  @State text: string = 'Button'
+  @State text: string = 'Button';
 
   build() {
     Column() {
@@ -6409,11 +7189,11 @@ struct ListExample {
       .scrollBar(BarState.Off)
       .edgeEffect(EdgeEffect.Spring)
       .onScrollIndex((start: number, end: number) => {
-        console.info(`first ${start}`)
-        console.info(`last ${end}`)
+        console.info(`first ${start}`);
+        console.info(`last ${end}`);
       })
       .onDidScroll((scrollOffset: number, scrollState: ScrollState) => {
-        console.info(`onScroll scrollState = ScrollState ${scrollState.toString()}, scrollOffset = ${scrollOffset}`)
+        console.info(`onScroll scrollState = ScrollState ${scrollState.toString()}, scrollOffset = ${scrollOffset}`);
       })
       .width('100%')
       .height('65%')
@@ -6427,8 +7207,8 @@ struct ListExample {
         .fontWeight(FontWeight.Medium)
         .margin({ top: 80 })
         .onClick(() => {
-          this.text = 'click the button'
-          this.promptAction.showToast({ message: 'you click the button.', duration: 3000 })
+          this.text = 'click the button';
+          this.promptAction.showToast({ message: 'you click the button.', duration: 3000 });
         })
     }
     .width('100%')
@@ -6436,7 +7216,7 @@ struct ListExample {
     .backgroundColor(0xF1F3F5)
     .justifyContent(FlexAlign.End)
     .padding({ left: 12, right: 12, bottom: 24 })
-    .onChildTouchTest((touchInfo) => {
+    .onChildTouchTest(() => {
       return { strategy: TouchTestStrategy.DEFAULT }
     })
   }
@@ -6481,7 +7261,7 @@ struct AttributeDemo {
 }
 ```
 
-This example demonstrates how to implement a pressed state effect for a Button component by binding it to a modifier. For details about how to use the attribute modifier with state management V2, see [Modifier](../../../ui/state-management/arkts-v1-v2-migration-inner-object.md#modifier).
+This example implements the pressed state effect by binding a modifier to a Button. For details about using it with state management V2, see [Modifier and makeObserved](../../../ui/state-management/arkts-v1-v2-migration-inner-object.md#modifier).
 
 ```TypeScript
 // xxx.ets
@@ -6567,7 +7347,7 @@ struct Index {
 }
 ```
 
-In this example, the width, height, and margin attributes are set using a custom Modifier. When the button is clicked, the [borderStyle](ts-appendix-enums.md#borderstyle) and [borderWidth](ts-universal-attributes-border.md#borderwidth) attributes are set. After the button is clicked, the five attributes take effect at the same time.
+This example sets width, height, and margin through a custom modifier. When the button is clicked, [borderStyle](ts-appendix-enums.md#borderstyle) and [borderWidth](ts-universal-attributes-border.md#borderwidth) are set. After the click, all five attributes take effect.
 
 ```TypeScript
 import { CommonModifier } from '@kit.ArkUI';
@@ -6704,7 +7484,7 @@ struct AttributeDemo {
 }
 ```
 
-This example uses Radio to bind Modifier to implement the style effect when a component is selected.
+This example implements the style effect when a component is selected by binding a modifier to a Radio.
 
 ```TypeScript
 // Set the custom AttributeModifier for the Radio component attributes.
@@ -6792,8 +7572,8 @@ struct ChildComponent {
 }
 ```
 
-In this example, the mouse hover state is implemented by binding a button to a Modifier. When the mouse pointer moves to the button, the background color of the button changes to red, indicating the hovered state. When the mouse pointer leaves the button, the background color of the button changes to black, indicating the normal state. In addition, you can use the [applyHoveredAttribute](arkts-arkui-attributemodifier-i.md#applyhoveredattribute) API to set the hovered state style.
-The [applyHoveredAttribute](arkts-arkui-attributemodifier-i.md#applyhoveredattribute) API is added since API version 26.0.0.
+This example implements the mouse hover effect by binding a modifier to aButton. When the mouse moves over the Button, the background color of the Button changes to red, which is the hover effect; when the mouse leaves the Button, the background color changes to black, which is the normal state effect. The hover style is set through the [applyHoveredAttribute](arkts-arkui-attributemodifier-i.md#applyhoveredattribute) API.
+Since API version 26.0.0, the [applyHoveredAttribute](arkts-arkui-attributemodifier-i.md#applyhoveredattribute) API is added.
 
 ```TypeScript
 // xxx.ets
@@ -6803,7 +7583,7 @@ class MyButtonModifier implements AttributeModifier<ButtonAttribute> {
     instance.backgroundColor(Color.Black);
   }
 
-  // Set the hovered state style.
+  // Set the hover state style.
   applyHoveredAttribute(instance: ButtonAttribute): void {
     instance.backgroundColor(Color.Red);
   }
@@ -6823,6 +7603,115 @@ struct AttributeHoveredDemo {
       .width('100%')
     }
     .height('100%')
+  }
+}
+```
+
+This example sets [dragAnimationType](#attributes) to FOLLOW_HAND_MORPH to implement the follow-hand morph drag animation effect, and executes a custom drop animation through [executeFollowHandMorphDropAnimation](arkts-arkui-dragevent-i-sys.md#executefollowhandmorphdropanimation) when the drag ends.
+Since API version 26.0.0, the [dragAnimationType](#attributes) attribute, the [executeFollowHandMorphDropAnimation](arkts-arkui-dragevent-i-sys.md#executefollowhandmorphdropanimation) method, and the [interruptFollowHandMorphDropAnimation](../arkts-apis/arkts-arkui-arkui-uicontext-dragcontroller-c-sys.md#interruptfollowhandmorphdropanimation) method are added.
+
+```TypeScript
+// xxx.ets
+// Animation parameter class.
+class AnimationOption {
+  CubicCurveEnable: boolean = false;
+  SpringEnable: boolean = false;
+  dropAnimationCurve: number[] = [];
+  dropPosition: number[] = [];
+  dropSize: number[] = [];
+}
+
+@Entry
+@Component
+struct FollowHandMorphDemo {
+  @State dragInfo: string = 'Not dragged';
+  @State animationInfo: string = '';
+  @State interruptResult: string = '';
+
+  build() {
+    Column({ space: 20 }) {
+      Text('Follow-hand morph drag animation example')
+        .fontSize(20)
+        .fontWeight(FontWeight.Bold)
+
+      Text('Instructions: Long press the square on the left and drag it to the area on the right')
+        .fontSize(14)
+        .fontColor('#666666')
+
+      Row({ space: 30 }) {
+        // Drag source
+        Column() {
+          Text('Drag source')
+            .fontSize(14)
+          Text('Long press to drag')
+            .fontSize(12)
+            .fontColor('#999999')
+        }
+        .width(100)
+        .height(100)
+        .backgroundColor('#DDEEFF')
+        .borderRadius(12)
+        .justifyContent(FlexAlign.Center)
+        .draggable(true)
+        .onDragStart((event: DragEvent) => {
+          // Set the follow-hand morph animation mode.
+          event.dragAnimationType = DragAnimationType.FOLLOW_HAND_MORPH;
+          this.dragInfo = 'onDragStart: dragAnimationType=1';
+        })
+
+        // Target area
+        Column() {
+          Text('Target area')
+            .fontSize(14)
+          Text('Release here')
+            .fontSize(12)
+            .fontColor('#999999')
+        }
+        .width(100)
+        .height(100)
+        .backgroundColor('#EAF8EA')
+        .borderRadius(12)
+        .justifyContent(FlexAlign.Center)
+        .onDrop((event: DragEvent) => {
+          this.dragInfo = 'onDrop triggered';
+
+          // Build the animation parameters.
+          let animationOption = new AnimationOption();
+          animationOption.CubicCurveEnable = false;
+          animationOption.SpringEnable = true;
+          animationOption.dropAnimationCurve = [0.416, 0.99, 0];
+          animationOption.dropPosition = [830, 600];
+          animationOption.dropSize = [100, 100];
+
+          // Execute the follow-hand morph drop animation.
+          event.executeFollowHandMorphDropAnimation(() => {
+            this.animationInfo = 'Follow-hand morph animation completed';
+          }, JSON.stringify(animationOption));
+        })
+      }
+
+      // Status display
+      Column({ space: 8 }) {
+        Text(`Drag status: ${this.dragInfo}`).fontSize(12)
+        Text(`Animation status: ${this.animationInfo}`).fontSize(12)
+        Text(`Interruption result: ${this.interruptResult}`).fontSize(12)
+      }
+      .width('100%')
+      .padding(12)
+      .backgroundColor('#F7F7F7')
+      .borderRadius(8)
+
+      // Button for interrupting the animation
+      Button('Interrupt the pending follow-hand morph animation')
+        .onClick(() => {
+          let result = this.getUIContext().getDragController().interruptFollowHandMorphDropAnimation();
+          this.interruptResult = result ? 'Interrupted successfully' : 'No pending animation to interrupt';
+        })
+    }
+    .width('100%')
+    .height('100%')
+    .padding(20)
+    .backgroundColor('#FFFFFF')
   }
 }
 ```
@@ -7329,7 +8218,7 @@ struct Index {
           .width(300)
           .height(400)
           .offset({ y: 100 })
-          .geometryTransition("picture", { follow: false })
+          .geometryTransition('picture', { follow: false })
           .transition(TransitionEffect.OPACITY)
       } else {
         // geometryTransition is bound to a container. Therefore, a relative layout must be configured for the child components of the container.
@@ -7347,7 +8236,7 @@ struct Index {
         // In other words, corner radius settings of the container are synchronized, and those of the child components are not.
         .borderRadius(20)
         .clip(true)
-        .geometryTransition("picture")
+        .geometryTransition('picture')
         // transition ensures that the component is not destructed immediately when it exits. You can customize the transition effect.
         .transition(TransitionEffect.OPACITY)
       }
@@ -7381,12 +8270,12 @@ struct TransformExample {
           centerX: '50%',
           centerY: '50%',
           angle: 300
-        })// The component rotates around the center point of the rotation axis (0, 0, 1) clockwise by 300 degrees.
+        }) // Rotate the component 300 degrees clockwise around its center point with the vector (0,0,1) as the rotation axis.
         .width(100).height(100).backgroundColor(0xAFEEEE)
 
       Text('translate').width('90%').fontColor(0xCCCCCC).padding(10).fontSize(14)
       Row()
-        .translate({ x: 100, y: 10 })// The component translates by 100 along the x-axis and by 10 along the y-axis.
+        .translate({ x: 100, y: 10 }) // Translate 100 along the x-axis and 10 along the y-axis.
         .width(100)
         .height(100)
         .backgroundColor(0xAFEEEE)
@@ -7394,7 +8283,7 @@ struct TransformExample {
 
       Text('scale').width('90%').fontColor(0xCCCCCC).padding(15).fontSize(14)
       Row()
-        .scale({ x: 2, y: 0.5 })// The height is reduced by half, and the width is doubled. The z‑axis has no effect in 2D.
+        .scale({ x: 2, y: 0.5 }) // Reduce the height by half and double the width; the z-axis has no effect in 2D.
         .width(100).height(100).backgroundColor(0xAFEEEE)
 
       Text('Matrix4').width('90%').fontColor(0xCCCCCC).padding(15).fontSize(14)
@@ -7440,7 +8329,7 @@ struct Index {
                 console.info('play end');
               }
             }, () => {
-              this.prep = 500 // Change the component's perspective from 10 to 500.
+              this.prep = 500; // Transform the component view distance from 10 to 500.
             })
           })
       }
@@ -7512,7 +8401,7 @@ struct MatrixExample {
           y: 1,
           centerX: 100,
           centerY: 60
-        })// If centerX and centerY are not specified, the rotation uses the component's own anchor as the center.
+        }) // For transform's rotate without specifying centerX and centerY, the rotation center has no additional offset relative to the component's own anchor point.
           // Here, the component rotates around (100 vp, 60 vp) through the anchor set by scale, achieving the same rotation effect as "Hello2."
         .transform(matrix4.identity().rotate({ z: 1, angle: 90 }))
     }.width('100%')
@@ -7526,16 +8415,17 @@ This example demonstrates how to implement image transformation by setting [tran
 ```TypeScript
 import { matrix4 } from '@kit.ArkUI';
 
+// Initialize the 3D transformation matrix to demonstrate the graphic transformation effect of transform3D.
 let matrix: matrix4.Matrix4Transit = matrix4.init([
   0.53033, 0, -0.53033, 0.00053033,
   0, 0.75, 0, 0,
   0.707107, 0, 0.707107, -0.000707107,
   0, 0, 0, 1
-])
+]);
 
 @Entry
 @Component
-struct Tests {
+struct Transform3DExample {
   build() {
     Column() {
       Stack() {
@@ -7570,10 +8460,10 @@ struct Index {
           .backgroundColor(Color.Blue)
           .rotate({ angleZ: -45 })
         Button('rotateAngle')
-          .width("40%")
+          .width('40%')
           .margin({ top: 100 })
           .rotate({ angleY: 30, centerX: '90%', perspective: 10 })
-        Image($r("app.media.startIcon"))
+        Image($r('app.media.startIcon'))
           .width(200)
           .height(200)
           .rotate({
@@ -7678,8 +8568,8 @@ This example demonstrates how to make a component disappear after the animation 
 @Component
 struct AttrAnimationExample {
   @State heightSize: number = 100;
-  @State isShow: boolean= true;
-  @State count: number= 0;
+  @State isShow: boolean = true;
+  @State count: number = 0;
   private isToBottom: boolean = true; // Direction: moving downward.
 
   build() {
@@ -7697,12 +8587,14 @@ struct AttrAnimationExample {
               iterations: 1,
               playMode: PlayMode.Normal,
               onFinish: () => {
+                // Decrease the count when the animation is complete. The count reaching zero indicates that all animations have ended.
                 this.count--;
-                if (this.count == 0 &&!this.isToBottom) { // The component disappears only after completing the downward animation.
+                if (this.count == 0 && !this.isToBottom) { // The component disappears only after completing the downward animation.
                   this.isShow = false;
                 }
               }
             }, () => {
+              // Increase the count when the animation starts. This count is used in the onFinish callback to determine whether the animation is complete.
               this.count++;
               if (this.isToBottom) {
                 this.heightSize = 60;
@@ -7729,7 +8621,7 @@ struct BorderExample {
   build() {
     Column() {
       Flex({ justifyContent: FlexAlign.SpaceAround, alignItems: ItemAlign.Center }) {
-        // Dashed border
+        // Dashed line.
         Text('dashed')
           .borderStyle(BorderStyle.Dashed)
           .borderWidth(5)
@@ -7757,6 +8649,7 @@ struct BorderExample {
         .fontSize(50)
         .width(300)
         .height(300)
+        // Use the border attribute to set the width, color, corner radius, and style of the left, right, top, and bottom edges respectively.
         .border({
           width: {
             left: 3,
@@ -7789,7 +8682,7 @@ struct BorderExample {
 }
 ```
 
-In this example, the width, radius, and color properties of the border attribute use the LocalizedEdgeWidths and LocalizedEdgeColors types.
+The width, radius, and color attribute values of the border attribute use the LocalizedEdgeWidths, LocalizedBorderRadiuses, and LocalizedEdgeColors types, respectively.
 
 ```TypeScript
 // xxx.ets
@@ -7801,7 +8694,7 @@ struct BorderExample {
   build() {
     Column() {
       Flex({ justifyContent: FlexAlign.SpaceAround, alignItems: ItemAlign.Center }) {
-        // Dashed border
+        // Dashed line.
         Text('dashed')
           .borderStyle(BorderStyle.Dashed)
           .borderWidth(5)
@@ -7829,6 +8722,7 @@ struct BorderExample {
         .fontSize(50)
         .width(300)
         .height(300)
+        // Use the LocalizedEdgeWidths and LocalizedBorderRadiuses types to adapt the start/end directions to RTL/LTR layouts.
         .border({
           width: {
             start: LengthMetrics.vp(3),
@@ -7871,6 +8765,7 @@ struct RenderStrategyExample {
   build() {
     NavDestination() {
       Column({ space: 20 }) {
+        // Fast rendering mode: suitable for regular corner radius scenarios, with better performance.
         Stack() {
           Column()
             .width(320)
@@ -7886,7 +8781,7 @@ struct RenderStrategyExample {
               }
 
               Column()
-                .blur(50)
+                .blur(50) // Set the blur effect.
                 .width(300)
                 .height(100)
                 .position({ x: 0, y: 0 })
@@ -7895,10 +8790,11 @@ struct RenderStrategyExample {
           .width(300)
           .height(300)
           .backgroundColor(Color.Pink)
-          .borderRadius(50, RenderStrategy.FAST)
+          .borderRadius(50, RenderStrategy.FAST) // Set the corner radius in fast rendering mode.
           .clip(true)
         }
 
+        // Offscreen rendering mode: suitable for corner radius scenarios with blur effects, avoiding clipping anomalies.
         Stack() {
           Column()
             .width(320)
@@ -7914,7 +8810,7 @@ struct RenderStrategyExample {
               }
 
               Column()
-                .blur(50)
+                .blur(50) // Set the blur effect.
                 .width(300)
                 .height(100)
                 .position({ x: 0, y: 0 })
@@ -7923,7 +8819,7 @@ struct RenderStrategyExample {
           .width(300)
           .height(300)
           .backgroundColor(Color.Pink)
-          .borderRadius(50, RenderStrategy.OFFSCREEN)
+          .borderRadius(50, RenderStrategy.OFFSCREEN) // Set the corner radius in offscreen rendering mode.
           .clip(true)
         }
       }
@@ -7934,7 +8830,37 @@ struct RenderStrategyExample {
 }
 ```
 
-This example demonstrates setting the alignment mode of content within a component and the layout of child components along the main axis of the parent container.
+This example uses [borderRadius](#borderradius) to set four different corner radius values. When one of the corner radius values exceeds half of the smaller value of the height or width, the irregular corner radius is drawn by value ratio.
+
+```TypeScript
+// xxx.ets
+@Entry
+@Component
+struct BorderExample {
+  build() {
+    Column() {
+      Flex({ justifyContent: FlexAlign.SpaceAround, alignItems: ItemAlign.Center }) {
+        Text('Text')
+          .borderWidth(5)
+          .borderColor(0xAFEEEE)
+          // topLeft: 2000 exceeds half of the minimum value (100), draw the irregular corner radius by value ratio.
+          .borderRadius({
+            topLeft: 2000,
+            topRight: 10,
+            bottomLeft: 30,
+            bottomRight: 50
+          })
+          .width(100)
+          .height(100)
+          .textAlign(TextAlign.Center)
+          .fontSize(16)
+      }
+    }
+  }
+}
+```
+
+Sets the alignment mode of the content within the element and the layout of child elements along the main axis of the parent component.
 
 ```TypeScript
 // xxx.ets
@@ -7944,7 +8870,7 @@ struct PositionExample1 {
   build() {
     Column() {
       Column({ space: 10 }) {
-        // When the component content is within the area specified by the component width and height, set the alignment mode of the content in the component.
+        // When the element content is smaller than the element width and height, set the alignment mode of the content within the element.
         Text('align').fontSize(9).fontColor(0xCCCCCC).width('90%')
         Stack() {
           Text('First show in bottom end').height('65%').backgroundColor(0xD2B48C)
@@ -7956,7 +8882,7 @@ struct PositionExample1 {
         }.width('90%').height(50).margin({ top: 5 }).backgroundColor(0xFFE4C4)
         .align(Alignment.TopStart)
 
-        // To arrange the child components from left to right, set direction of the parent container to Direction.Ltr.
+        // The parent component sets direction to Direction.Ltr, and child elements are arranged from left to right.
         Text('direction').fontSize(9).fontColor(0xCCCCCC).width('90%')
         Row() {
           Text('1').height(50).width('25%').fontSize(16).backgroundColor(0xF5DEB3)
@@ -7966,7 +8892,7 @@ struct PositionExample1 {
         }
         .width('90%')
         .direction(Direction.Ltr)
-        // To arrange the child components from right to left, set direction of the parent container to Direction.Rtl.
+        // The parent component sets direction to Direction.Rtl, and child elements are arranged from right to left.
         Row() {
           Text('1').height(50).width('25%').fontSize(16).backgroundColor(0xF5DEB3).textAlign(TextAlign.End)
           Text('2').height(50).width('25%').fontSize(16).backgroundColor(0xD2B48C).textAlign(TextAlign.End)
@@ -8239,7 +9165,7 @@ struct Example4 {
 }
 ```
 
-This example demonstrates setting the alignment mode of content within a component and the layout of child components along the main axis of the parent container.
+Sets the alignment mode of the content within the element and the layout of child elements along the main axis of the parent component.
 
 ```TypeScript
 // xxx.ets
@@ -8362,7 +9288,7 @@ struct Index5 {
 }
 ```
 
-This example implements the custom transition of a shared image during redirection from one page to another, which is triggered by a click on the image.
+The sample code implements the custom transition animation of a shared element image when a click on the image area triggers page redirection.
 
 ```TypeScript
 // xxx.ets
@@ -8377,7 +9303,7 @@ struct SharedTransitionExample {
         .sharedTransition('sharedImage', { duration: 800, curve: Curve.Linear, delay: 100 }) 
     }.width('100%').height('100%').alignItems(HorizontalAlign.Start)
     .onClick(() => {
-      this.getUIContext().getRouter().pushUrl({ url: 'pages/PageB' })
+      this.getUIContext().getRouter().pushUrl({ url: 'pages/PageB' });
     })
   }
 
@@ -8492,7 +9418,7 @@ struct BackgroundBlurStyleDemo {
   build() {
     Column() {
       Row() {
-        Text("Thin Material")
+        Text('Thin Material')
       }
       .width('50%')
       .height('50%')
@@ -8583,7 +9509,7 @@ struct BlurEffectsExample {
         Text('blur')
           .blur(5).margin(10)
         Text('blur')
-          .blur(10, undefined).margin(10) // Set the foreground blur radius to 5 and disable system adaptive adjustment.
+          .blur(10, undefined).margin(10) // Content blur radius is 10, with no grayscale set.
         Text('blur')
           .blur(15).margin(10)
       }.width('90%').height(40)
@@ -8605,22 +9531,22 @@ struct BlurEffectsExample {
 }
 ```
 
-This example demonstrates how to use [blendMode](./ts-universal-attributes-image-effect.md#blendmode11) and backgroundEffect to implement the text blur effect.If unwanted lines appear, make sure the sizes of the two owning components of blendMode are the same. If the issue persists, the component bounds may have fallen on the floating-point coordinates. In this case, set the universal attribute [pixelRound](ts-universal-attributes-pixelRoundForComponent.md#pixelround) to align the component bounds on both sides of the unwanted lines with the integer pixel coordinates.
+This example uses [blendMode](ts-universal-attributes-image-effect.md#blendmode11) and backgroundEffect to implement an irregular text blur effect.If line leakage occurs, developers should first ensure that the components where the two blendMode attributes are set have exactly the same size. If the sizes are confirmed to be the same, the component boundary may fall on floating-point coordinates. In this case, try setting the [pixelRound](ts-universal-attributes-pixelRoundForComponent.md#pixelround) universal attribute to align the component boundaries on both sides of the generated white or dark lines to integer pixel coordinates.
 
 ```TypeScript
 // xxx.ets
 @Entry
 @Component
 struct Index {
-  @State shColor: Color = Color.White;
-  @State sizeDate: number = 20;
-  @State rVal: number = 255;
-  @State gVal: number = 255;
-  @State bVal: number = 255;
-  @State aVal: number = 0.1;
-  @State rad: number = 40;
-  @State satVal: number = 0.8;
-  @State briVal: number = 1.5;
+  @State shadowColor: Color = Color.White;
+  @State dateFontSize: number = 20;
+  @State redValue: number = 255;
+  @State greenValue: number = 255;
+  @State blueValue: number = 255;
+  @State alphaValue: number = 0.1;
+  @State blurRadius: number = 40;
+  @State saturationValue: number = 0.8;
+  @State brightnessValue: number = 1.5;
   build() {
     Stack() {
       // Replace $r('app.media.image') with the image resource file you use.
@@ -8654,12 +9580,12 @@ struct Index {
               })
             Row() {
               Text('October 16')
-                .fontSize(this.sizeDate)
+                .fontSize(this.dateFontSize)
                 .height(22)
                 .fontWeight('medium')
                 .fontColor('rgba(255,255,255,1)')
               Text('Monday')
-                .fontSize(this.sizeDate)
+                .fontSize(this.dateFontSize)
                 .height(22)
                 .fontWeight('medium')
                 .fontColor('rgba(255,255,255,1)')
@@ -8676,11 +9602,11 @@ struct Index {
         }
         // Use offscreen rendering for blendMode. In SRC_OVER mode, the content of the current component is displayed over the underlying canvas.
         .blendMode(BlendMode.SRC_OVER, BlendApplyType.OFFSCREEN)
-        // backgroundEffect configures the rounded corners, saturation, brightness, and dynamic RGBA color of the component background.
+        // Configure the blur radius, saturation, brightness, and dynamic RGBA color of the component background through backgroundEffect.
         .backgroundEffect({
-          radius: this.rad,
-          saturation: this.satVal,
-          brightness: this.briVal,
+          radius: this.blurRadius,
+          saturation: this.saturationValue,
+          brightness: this.brightnessValue,
           color: this.getVolumeDialogWindowColor()
         })
         .justifyContent(FlexAlign.Center)
@@ -8694,18 +9620,18 @@ struct Index {
     }
   }
   getVolumeDialogWindowColor(): ResourceColor | string {
-    return `rgba(${this.rVal.toFixed(0)}, ${this.gVal.toFixed(0)}, ${this.bVal.toFixed(0)}, ${this.aVal.toFixed(0)})`;
+    return `rgba(${this.redValue.toFixed(0)}, ${this.greenValue.toFixed(0)}, ${this.blueValue.toFixed(0)}, ${this.alphaValue.toFixed(2)})`;
   }
 }
 ```
 
-This example compares three different blur effects: backgroundEffect, backDropBlur, and backgroundBlurStyle.
+This example compares three different blur effects: [backgroundEffect11+](#backgroundeffect11), [backdropBlur](arkts-arkui-commonmethod-c.md#backdropblur), and [backgroundBlurStyle9+](#backgroundblurstyle9).
 
 ```TypeScript
 // xxx.ets
 @Entry
 @Component
-struct BackGroundBlur {
+struct BackgroundBlur {
   private imageSize: number = 150;
 
   build() {
@@ -8722,7 +9648,7 @@ struct BackGroundBlur {
           .backgroundBlurStyle(BlurStyle.Thin)
       }
 
-      // backgroundEffect allows for custom settings for blur radius, brightness, saturation, and more.
+      // backgroundEffect can customize parameters such as blur radius, brightness, and saturation.
       Stack() {
         // Replace $r('app.media.test') with the image resource file you use.
         Image($r('app.media.test'))
@@ -8950,6 +9876,7 @@ struct DrawModifierExample {
       begin: 0,
       end: 2
     });
+    // Set the frame callback to dynamically update the scale value and trigger redraw.
     this.drawAnimator.onFrame = (value: number) => {
       console.info('frame value =', value);
       const tempModifier = self.modifier as MyFullDrawModifier | MyFrontDrawModifier;
@@ -9079,7 +10006,7 @@ struct DrawModifierExample {
 }
 ```
 
-This example demonstrates how to use enabled to set whether a button responds to user interactions.
+This example uses enabled to set whether a button is interactive.
 
 ```TypeScript
 // xxx.ets
@@ -9106,7 +10033,7 @@ import { curves } from '@kit.ArkUI';
 
 @Entry
 @Component
-struct motionBlurTest {
+struct MotionBlurTest {
   @State widthSize: number = 300
   @State heightSize: number = 240
   @State flag: boolean = true
@@ -9121,8 +10048,9 @@ struct motionBlurTest {
         Image($r('app.media.test'))
           .width(this.widthSize)
           .height(this.heightSize)
-          .scale({ x: this.flag ? 1 : 0.8,y: this.flag ? 1 : 0.8 ,centerX: "50%", centerY: "50%" })
+          .scale({ x: this.flag ? 1 : 0.8, y: this.flag ? 1 : 0.8, centerX: '50%', centerY: '50%' })
           .onClick(() => {
+            // Set the motion blur parameters and trigger the scaling animation on tap.
             this.radius = 50;
             this.x = 0.5;
             this.y = 0.5;
@@ -9134,8 +10062,9 @@ struct motionBlurTest {
             playMode:PlayMode.Alternate, // Animation playback mode: plays forward on odd-numbered iterations (1st, 3rd, 5th...) and reverse on even-numbered iterations (2nd, 4th, 6th...).
             curve: curves.springCurve(10, 1, 228, 30), // Animation curve.
             onFinish: () => {
+              // Set the blur radius to 0 after the animation ends to clear the motion blur effect.
               this.radius = 0;
-              console.info("onFinish")
+              console.info('onFinish');
             },
           })
           .motionBlur({ radius: this.radius, anchor: { x: this.x, y: this.y } })
@@ -9157,11 +10086,11 @@ struct FocusAxisEventExample {
   @State axisValue: string = ''
 
   aboutToAppear(): void {
-    this.getUIContext().getFocusController().activate(true)
+    this.getUIContext().getFocusController().activate(true);
   }
 
   aboutToDisappear(): void {
-    this.getUIContext().getFocusController().activate(false)
+    this.getUIContext().getFocusController().activate(false);
   }
 
   build() {
@@ -9169,6 +10098,7 @@ struct FocusAxisEventExample {
       Button('FocusAxisEvent')
         .defaultFocus(true)
         .onFocusAxisEvent((event: FocusAxisEvent) => {
+          // Obtain the axis values in the focus axis event and update the page display content.
           let absX = event.axisMap.get(AxisModel.ABS_X);
           let absY = event.axisMap.get(AxisModel.ABS_Y);
           let absZ = event.axisMap.get(AxisModel.ABS_Z);
@@ -9189,14 +10119,14 @@ struct FocusAxisEventExample {
 }
 ```
 
-This example demonstrates how to register a crown event on a component and receive event data.
+This example registers a crown event for a component and reports the received crown event data.
 
 ```TypeScript
 // xxx.ets
 @Entry
 @Component
 struct CityList {
-  @State message: string = "onDigitalCrown";
+  @State message: string = 'onDigitalCrown';
 
   build() {
     Column() {
@@ -9205,7 +10135,7 @@ struct CityList {
           Text(this.message)
             .fontSize(20)
             .fontColor(Color.White)
-            .backgroundColor("#262626")
+            .backgroundColor('#262626')
             .textAlign(TextAlign.Center)
             .focusable(true)
             .focusOnTouch(true)
@@ -9216,11 +10146,11 @@ struct CityList {
             .borderRadius(110)
             .onDigitalCrown((event: CrownEvent) => {
               event.stopPropagation();
-              this.message = "CrownEvent\n\n" + JSON.stringify(event);
+              this.message = 'CrownEvent\n\n' + JSON.stringify(event);
               console.info(`action: ${event.action}, angularVelocity: ${event.angularVelocity}, degree: ${event.degree}, timestamp: ${event.timestamp}`);
             })
-        }.width("100%").height("100%")
-      }.width("100%").height("100%")
+        }.width('100%').height('100%')
+      }.width('100%').height('100%')
     }
   }
 }
@@ -9235,7 +10165,7 @@ struct Example {
     Column() {
       Flex({ wrap: FlexWrap.Wrap }) {
         Column() {
-          Text("width(220)")
+          Text('width(220)')
             .width(220)
             .height(40)
             .backgroundColor(0xF9CF93)
@@ -9274,7 +10204,7 @@ struct Example {
         }.margin(5)
 
         Column() {
-          Text("width(vp2px(220) + 'px')")
+          Text("width(getUIContext().vp2px(220) + 'px')")
             .width(this.getUIContext().vp2px(220) + 'px')
             .height(40)
             .backgroundColor(0xF9CF93)
@@ -9294,7 +10224,7 @@ struct Example {
         }.margin(5)
 
         Column() {
-          Text("width(px2vp(220))")
+          Text('width(px2vp(220))')
             .width(this.getUIContext().px2vp(220))
             .height(40)
             .backgroundColor(0xF9CF93)
@@ -9314,6 +10244,7 @@ This example shows how to use pixelRound to guide layout adjustments when there 
 @Entry
 @Component
 struct PixelRoundExample {
+    // State variable: records the current width of the parent component to demonstrate floating-point width changes.
     @State curWidth : number = 300;
 
     build() {
@@ -9322,6 +10253,7 @@ struct PixelRoundExample {
                 Text(this.curWidth.toString())
             }
             .onClick(() => {
+                // Increase by 0.1 px on each click to simulate a floating-point width.
                 this.curWidth += 0.1;
             })
             .height(200)
@@ -9331,19 +10263,22 @@ struct PixelRoundExample {
             Blank().height(20)
 
             Row() {
+                // Child component: fills the parent container by 100%.
                 Row() {
                 }
                 .width('100%')
                 .height('100%')
                 .backgroundColor(Color.Yellow)
+                // Disable pixel rounding in the start and end directions of the child component.
                 .pixelRound({
                     start : PixelRoundCalcPolicy.NO_FORCE_ROUND,
                     end : PixelRoundCalcPolicy.NO_FORCE_ROUND,
                 })
             }
             .width(this.curWidth.toString() + 'px')
-            .height('300.6px')
+            .height('300.6px') // Use a floating-point height to test the rounding behavior in the top and bottom directions.
             .backgroundColor(Color.Red)
+            // Disable pixel rounding in the start and end directions of the parent component.
             .pixelRound({
                 start : PixelRoundCalcPolicy.NO_FORCE_ROUND,
                 end : PixelRoundCalcPolicy.NO_FORCE_ROUND,
@@ -9376,8 +10311,8 @@ struct Index {
         .pointLight({
           lightSource: {
             intensity: this.lightIntensity,
-            positionX: "50%",
-            positionY: "50%",
+            positionX: '50%',
+            positionY: '50%',
             positionZ: 80
           },
           bloom: this.bloomValue
@@ -9387,8 +10322,9 @@ struct Index {
         .size({ width: 50, height: 50 })
         .borderRadius(25)
         .onTouch((event: TouchEvent) => {
+          // Enhance the light source intensity and luminous intensity when pressed, and restore the default effect when released or canceled.
           if (event.type === TouchType.Down) {
-            this.lightIntensity = 2;
+            this.lightIntensity = 1;
             this.bloomValue = 1;
           } else if (event.type === TouchType.Up || event.type === TouchType.Cancel) {
             this.lightIntensity = 0;
@@ -9427,7 +10363,7 @@ struct FatherControlChild {
     Stack({ alignContent: Alignment.TopStart }) {
       Scroll(this.scroller) { // Outer scrollable container.
         Column() {
-          Text("Scroll Area")
+          Text('Scroll Area')
             .width('90%')
             .height(150)
             .backgroundColor(0xFFFFFF)
@@ -9437,7 +10373,7 @@ struct FatherControlChild {
             .margin({ top: 10 })
           Scroll(this.scroller2) { // Inner scrollable container.
             Column() {
-              Text("Scroll Area2")
+              Text('Scroll Area2')
                 .width('90%')
                 .height(150)
                 .backgroundColor(0xFFFFFF)
@@ -9455,16 +10391,16 @@ struct FatherControlChild {
                     .fontSize(16)
                     .textAlign(TextAlign.Center)
                     .margin({ top: 10 })
-                }, (item: string) => item)
+                }, (item: number) => item.toString())
               }.width('100%')
             }
           }
-          .id("inner")
+          .id('inner')
           .width('100%')
           .height(800)
         }.width('100%')
       }
-      .id("outer")
+      .id('outer')
       .height(600)
       .scrollable(ScrollDirection.Vertical) // The scrollbar scrolls in the vertical direction.
       .scrollBar(BarState.On) // The scrollbar is always displayed.
@@ -9475,7 +10411,7 @@ struct FatherControlChild {
         for (let i = 0; i < others.length; i++) {
           let target = others[i].getEventTargetInfo();
           if (target) {
-            if (target.getId() == "inner" && others[i].isBuiltIn() &&
+            if (target.getId() == 'inner' && others[i].isBuiltIn() &&
               others[i].getType() == GestureControl.GestureType.PAN_GESTURE) { // Identify the recognizer that to be bound to parallelGesture.
               this.currentRecognizer = current; // Save the recognizer of the current component.
               this.childRecognizer = others[i]; // Save the recognizer to form a parallel gesture.
@@ -9490,12 +10426,12 @@ struct FatherControlChild {
         if (current) {
           let target = current.getEventTargetInfo();
           if (target) {
-            if (target.getId() == "outer" && current.isBuiltIn() &&
+            if (target.getId() == 'outer' && current.isBuiltIn() &&
               current.getType() == GestureControl.GestureType.PAN_GESTURE) {
               if (others) {
                 for (let i = 0; i < others.length; i++) {
                   let target = others[i].getEventTargetInfo() as ScrollableTargetInfo;
-                  if (target instanceof ScrollableTargetInfo && target.getId() == "inner") { // Identify the recognizer to work in parallel on the response chain.
+                  if (target instanceof ScrollableTargetInfo && target.getId() == 'inner') { // Find the recognizer that is parallel to the corresponding one on the response chain.
                     let panEvent = event as PanGestureEvent;
                     if (target.isEnd()) { // Dynamically control the recognizer's enabled state based on the current component state and direction of movement.
                       if (panEvent && panEvent.offsetY < 0) {
@@ -9572,8 +10508,8 @@ struct FatherControlChild {
 }
 ```
 
-This example demonstrates how to set the exposeInnerGesture parameter to true to enable a first-level Tabs container to intercept the swipe gestures of a nested second-level Tabs container, thereby triggering the swipe gestures of the built-in Swiper component of first-level Tabs container.
-You can define variables to record the index of the inner Tabs container and use this index to determine when to trigger the callback to block the swipe gestures of the outer Tabs container when the inner Tabs container reaches its boundaries.
+This example demonstrates how to set the exposeInnerGesture parameter to true to enable a first-level Tabs container to intercept the swipe gestures of a nested second-level Tabs container, thereby triggering the swipe gestures of the built-in Swiper component of the first-level Tabs container.
+You can define variables to record the index of the inner Tabs container and use this index to determine whether the swipe has reached the boundary of the inner Tabs container. When the boundary is reached, the callback is triggered to return a rejection result, blocking the swipe gesture of the inner Tabs container so that the outer Tabs container generates the swipe gesture.
 
 ```TypeScript
 // xxx.ets
@@ -9620,24 +10556,24 @@ struct Index {
               Column().width('100%').height('100%').backgroundColor(Color.Pink)
             }.tabBar(new SubTabBarStyle('pink'))
           }
-          .onAnimationStart((index: number, targetIndex: number) => {
-            console.info(`ets onGestureRecognizerJudgeBegin child: ${targetIndex}`)
-            this.innerSelectedIndex = targetIndex
+          .onAnimationStart((_index: number, targetIndex: number) => {
+            console.info(`ets onGestureRecognizerJudgeBegin child: ${targetIndex}`);
+            this.innerSelectedIndex = targetIndex;
           })
           .onGestureRecognizerJudgeBegin((event: BaseGestureEvent, current: GestureRecognizer,
-            others: Array<GestureRecognizer>): GestureJudgeResult => { // When gesture recognition is about to be successful, set the recognizer's enabled state based on the current component state.
-            console.info('ets onGestureRecognizerJudgeBegin child')
+            others: Array<GestureRecognizer>): GestureJudgeResult => { // Return the gesture recognition result based on the inner Tabs index and swipe direction when the recognizer is about to succeed.
+            console.info('ets onGestureRecognizerJudgeBegin child');
             if (current) {
               let target = current.getEventTargetInfo();
               if (target && current.isBuiltIn() && current.getType() == GestureControl.GestureType.PAN_GESTURE) {
-                console.info('ets onGestureRecognizerJudgeBegin child PAN_GESTURE')
+                console.info('ets onGestureRecognizerJudgeBegin child PAN_GESTURE');
                 let panEvent = event as PanGestureEvent;
                 if (panEvent && panEvent.velocityX < 0 && this.innerSelectedIndex === 1) { // The inner Tabs component has reached the end.
-                  console.info('ets onGestureRecognizerJudgeBegin child reject end')
+                  console.info('ets onGestureRecognizerJudgeBegin child reject end');
                   return GestureJudgeResult.REJECT;
                 }
                 if (panEvent && panEvent.velocityX > 0 && this.innerSelectedIndex === 0) { // The inner Tabs component has reached the beginning.
-                  console.info('ets onGestureRecognizerJudgeBegin child reject begin')
+                  console.info('ets onGestureRecognizerJudgeBegin child reject begin');
                   return GestureJudgeResult.REJECT;
                 }
               }
@@ -9650,16 +10586,16 @@ struct Index {
           Column().width('100%').height('100%').backgroundColor(Color.Brown)
         }.tabBar(this.tabBuilder(2, 'brown'))
       }
-      .onAnimationStart((index: number, targetIndex: number, event: TabsAnimationEvent) => {
+      .onAnimationStart((_index: number, targetIndex: number, _event: TabsAnimationEvent) => {
         // Triggered when the switching animation starts. The target tab shows an underline.
-        this.selectedIndex = targetIndex
+        this.selectedIndex = targetIndex;
       })
     }
   }
 }
 ```
 
-This example demonstrates how to use the onGestureRecognizerJudgeBegin API to determine the gesture recognizer type and obtain corresponding properties.
+This example configures onGestureRecognizerJudgeBegin to recognize gestures and obtain property parameters such as the gesture distance, number of fingers, whether to limit the number of fingers, repeated trigger state, duration, number of taps, rotation angle, swipe direction, and speed threshold.
 
 ```TypeScript
 // xxx.ets
@@ -9739,7 +10675,7 @@ struct Index {
 }
 ```
 
-This example demonstrates how to use onGestureRecognizerJudgeBegin to implement gesture judgment. When the parent container's gesture is successfully triggered, it calls cancelTouch() to forcibly cancel touch events on child components, enabling precise switching between parent and child gesture control.
+This example demonstrates how to use onGestureRecognizerJudgeBegin to implement gesture recognition. When the parent container's gesture is successfully triggered, it calls cancelTouch() to forcibly cancel touch events on child components, enabling precise switching between parent and child gesture control.
 
 ```TypeScript
 // xxx.ets
@@ -9747,20 +10683,20 @@ This example demonstrates how to use onGestureRecognizerJudgeBegin to implement 
 @Component
 struct FatherControlChild {
   scroller: Scroller = new Scroller();
-  scroller2: Scroller = new Scroller()
+  scroller2: Scroller = new Scroller();
   private arr: number[] = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
   private childRecognizer: GestureRecognizer = new GestureRecognizer();
   private currentRecognizer: GestureRecognizer = new GestureRecognizer();
   private lastOffset: number = 0;
-  @State outerState: string = "IDLE";
-  @State innerState: string = "IDLE";
+  @State outerState: string = 'IDLE';
+  @State innerState: string = 'IDLE';
   @State willCancel: boolean = false;
 
   build() {
     Stack({ alignContent: Alignment.TopStart }) {
       Scroll(this.scroller) { // Outer scrollable container.
         Column() {
-          Text("Scroll Area")
+          Text('Scroll Area')
             .width('90%')
             .height(150)
             .backgroundColor(0xFFFFFF)
@@ -9771,7 +10707,7 @@ struct FatherControlChild {
 
           Scroll(this.scroller2) { // Inner scrollable container.
             Column() {
-              Text("Scroll Area2")
+              Text('Scroll Area2')
                 .width('90%')
                 .height(150)
                 .backgroundColor(0xFFFFFF)
@@ -9794,28 +10730,28 @@ struct FatherControlChild {
               }.width('100%')
             }
           }
-          .id("inner")
+          .id('inner')
           .width('100%')
           .height(800)
           .onTouch((event) => {
             if (event.type === TouchType.Down) {
-              this.innerState = "TOUCHING";
+              this.innerState = 'TOUCHING';
               this.willCancel = false;
             } else if (event.type === TouchType.Up || event.type === TouchType.Cancel) {
               if (this.willCancel) {
-                this.innerState = "CANCELLED";
+                this.innerState = 'CANCELLED';
                 setTimeout(() => {
-                  this.innerState = "IDLE";
+                  this.innerState = 'IDLE';
                   this.willCancel = false;
                 }, 1000);
               } else {
-                this.innerState = "IDLE";
+                this.innerState = 'IDLE';
               }
             }
           })
         }.width('100%')
       }
-      .id("outer")
+      .id('outer')
       .height('100%')
       .scrollable(ScrollDirection.Vertical)
       .scrollBar(BarState.On)
@@ -9826,8 +10762,8 @@ struct FatherControlChild {
         for (let i = 0; i < others.length; i++) {
           let target = others[i].getEventTargetInfo();
           if (target) {
-            if (target.getId() == "inner" && others[i].isBuiltIn() &&
-              others[i].getType() == GestureControl.GestureType.PAN_GESTURE) { // Identify the recognizer that to be bound to parallelGesture.
+            if (target.getId() == 'inner' && others[i].isBuiltIn() &&
+              others[i].getType() == GestureControl.GestureType.PAN_GESTURE) { // Identify the recognizer to be bound to parallelGesture.
               this.currentRecognizer = current; // Save the recognizer of the current component.
               this.childRecognizer = others[i]; // Save the recognizer to form a parallel gesture.
               return others[i]; // Return the recognizer to form a parallel gesture.
@@ -9838,18 +10774,18 @@ struct FatherControlChild {
       })
       .onGestureRecognizerJudgeBegin((event: BaseGestureEvent, current: GestureRecognizer,
         others: Array<GestureRecognizer>,
-        touchRecognizers?: Array<TouchRecognizer>) => { // When the implementation is about to succeed, set the recognizer enabling state based on the current component state.
+        touchRecognizers?: Array<TouchRecognizer>) => { // Find the child component touch recognizer and cancel its Touch event when the recognizer is about to succeed.
         if (current && touchRecognizers) {
           let target = current.getEventTargetInfo();
           if (target) {
-            if (target.getId() == "outer" && current.isBuiltIn() &&
+            if (target.getId() == 'outer' && current.isBuiltIn() &&
               current.getType() == GestureControl.GestureType.PAN_GESTURE) {
-              return GestureJudgeResult.CONTINUE
+              return GestureJudgeResult.CONTINUE;
             }
             for (let index = 0; index < touchRecognizers.length; index++) {
-              const element = touchRecognizers![index];
-              let touchTarget = element.getEventTargetInfo()
-              if (touchTarget && touchTarget.getId() == "inner") {
+              const element = touchRecognizers[index];
+              let touchTarget = element.getEventTargetInfo();
+              if (touchTarget && touchTarget.getId() == 'inner') {
                 this.willCancel = true;
                 element.cancelTouch();
               }
@@ -9860,9 +10796,9 @@ struct FatherControlChild {
       })
       .onTouch((event) => {
         if (event.type === TouchType.Down) {
-          this.outerState = "TOUCHING";
+          this.outerState = 'TOUCHING';
         } else if (event.type === TouchType.Up || event.type === TouchType.Cancel) {
-          this.outerState = "IDLE";
+          this.outerState = 'IDLE';
         }
       })
       .parallelGesture( // Bind a pan gesture as a dynamic controller.
@@ -9877,23 +10813,23 @@ struct FatherControlChild {
             if (target instanceof ScrollableTargetInfo && currentTarget instanceof ScrollableTargetInfo) {
               if (target.isEnd()) { // Adjust the enabled state of the gesture recognizers based on the current component state during movement.
                 if ((event.offsetY - this.lastOffset) < 0) {
-                  this.childRecognizer.setEnabled(false)
+                  this.childRecognizer.setEnabled(false);
                   if (currentTarget.isEnd()) {
-                    this.currentRecognizer.setEnabled(false)
+                    this.currentRecognizer.setEnabled(false);
                   } else {
-                    this.currentRecognizer.setEnabled(true)
+                    this.currentRecognizer.setEnabled(true);
                   }
                 } else {
-                  this.childRecognizer.setEnabled(true)
-                  this.currentRecognizer.setEnabled(false)
+                  this.childRecognizer.setEnabled(true);
+                  this.currentRecognizer.setEnabled(false);
                 }
               } else if (target.isBegin()) {
                 if ((event.offsetY - this.lastOffset) > 0) {
-                  this.childRecognizer.setEnabled(false)
+                  this.childRecognizer.setEnabled(false);
                   if (currentTarget.isBegin()) {
-                    this.currentRecognizer.setEnabled(false)
+                    this.currentRecognizer.setEnabled(false);
                   } else {
-                    this.currentRecognizer.setEnabled(true)
+                    this.currentRecognizer.setEnabled(true);
                   }
                 } else {
                   this.childRecognizer.setEnabled(true)
@@ -9904,21 +10840,21 @@ struct FatherControlChild {
                 this.currentRecognizer.setEnabled(false)
               }
             }
-            this.lastOffset = event.offsetY
+            this.lastOffset = event.offsetY;
           })
       )
 
       Column() { // Display the outer layer status.
         Text(`outer: ${this.outerState}`)
           .fontSize(24)
-          .fontColor(this.outerState === "TOUCHING" ? Color.Green : Color.Gray)
+          .fontColor(this.outerState === 'TOUCHING' ? Color.Green : Color.Gray)
           .margin({ bottom: 10 })
         // Display the inner layer status.
-        Text(`inner: ${this.innerState === "TOUCHING" ? "TOUCHING" : this.innerState}`)
+        Text(`inner: ${this.innerState === 'TOUCHING' ? 'TOUCHING' : this.innerState}`)
           .fontSize(24)
           .fontColor(
-            this.innerState === "TOUCHING" ? Color.Blue :
-              this.innerState === "CANCELLED" ? Color.Red : Color.Gray
+            this.innerState === 'TOUCHING' ? Color.Blue :
+              this.innerState === 'CANCELLED' ? Color.Red : Color.Gray
           )
       }
       .width('90%')
@@ -9993,7 +10929,7 @@ struct TouchTestDoneExample {
         console.info(`event is ${JSON.stringify(event)}`);
         for (let i = 0; i < recognizers.length; i++) {
           let recognizer = recognizers[i];
-          console.info(`type is ${JSON.stringify(recognizer.getType())}`)
+          console.info(`type is ${JSON.stringify(recognizer.getType())}`);
           // Block specific gesture recognizers based on the tag value.
           if (recognizer.getTag() == this.tagList[this.tagId]) {
             recognizer.preventBegin();
@@ -10019,6 +10955,234 @@ struct TouchTestDoneExample {
 }
 ```
 
+This example configures [onGestureCollectIntercept](arkts-arkui-commonmethod-c.md#ongesturecollectintercept) to specify whether a gesture recognizer or touch recognizer is passed through to other nodes. When button2 is tapped, the touch event is not passed through to Column. When button1 is tapped, the touch event is passed through to Column, and Column changes color.
+The onGestureCollectIntercept API is added since API version 26.0.0.
+
+```TypeScript
+// xxx.ets
+@Entry
+@Component
+struct Index {
+  @State backgroundColorButton1: string = '#D5D5D5';
+  @State backgroundColorButton2: string = '#D5D5D5';
+  @State backgroundColorRow: string = '#FFFFFF';
+  @State backgroundColorColumn: string = '#FFFFFF';
+
+  build() {
+    Column() {
+      Column() {
+        Row({ space: 20 } as RowOptions) {
+          // Component button1 has no click event set.
+          Button('button1')
+            .width('30%')
+            .height(40)
+            .id('button1')
+            .onTouch((touchEvent?: TouchEvent) => {
+              this.backgroundColorButton1 = '#E5E5E5';
+            })
+            .backgroundColor(this.backgroundColorButton1)
+          // Component button2 has a click event set.
+          Button('button2')
+            .width('30%')
+            .height(40)
+            .id('button2')
+            .onTouch((touchEvent?: TouchEvent) => {
+              this.backgroundColorButton2 = '#E5E5E5';
+            })
+            .onClick((clickEvent?: ClickEvent) => {
+              console.info('button2 is clicked');
+            })
+            .backgroundColor(this.backgroundColorButton2)
+        }
+        .justifyContent(FlexAlign.Center)
+        .width('90%')
+        .height(200)
+        .margin(25)
+        .onTouch((e?: TouchEvent) => {
+          this.backgroundColorRow = '#666666';
+        })
+        .backgroundColor(this.backgroundColorRow)
+        .onGestureCollectIntercept((recognizers: Array<GestureRecognizer>,
+          touchRecognizers?: Array<TouchRecognizer> | undefined) => {
+          if (!touchRecognizers) {
+            return GestureCollectIntervention.CONTINUE;
+          } else {
+            for (let i = 0; i < touchRecognizers.length; i++) {
+              let id = touchRecognizers[i].getEventTargetInfo().getId();
+              // When the hit area button2 with a click event is touched, the event does not need to be passed to Column.
+              if (id == 'button2') {
+                return GestureCollectIntervention.DISCARD_LOWER;
+              }
+            }
+          }
+          return GestureCollectIntervention.CONTINUE;
+        })
+      }
+      .margin(25)
+      .padding(20)
+      .width('90%')
+      .height(250)
+      .borderWidth(2)
+      .onTouch((e?: TouchEvent) => {
+        this.backgroundColorColumn = '#E5E5E5';
+      })
+      .backgroundColor(this.backgroundColorColumn)
+    }
+    .padding(15)
+  }
+}
+```
+
+The component tree corresponding to the example is shown in the following figure.
+
+```TypeScript
+graph TD
+    A((Column))
+    B((Column))
+    C((Row))
+    D((Button1))
+    E((Button2))
+
+    A --> B
+    A --> C
+    C --> D
+    C --> E
+```
+
+This example implements nested scrolling using [shouldRecognizerParallelWith](arkts-arkui-commonmethod-c.md#shouldrecognizerparallelwith) and [onGestureRecognizerJudgeBegin](arkts-arkui-commonmethod-c.md#ongesturerecognizerjudgebegin). The inner component takes precedence in responding to the swipe gesture. When the inner component scrolls to the top or bottom, the outer component can take over the scrolling.
+The shouldRecognizerParallelWith API is added since API version 26.0.0.
+
+```TypeScript
+// xxx.ets
+@Entry
+@Component
+struct FatherControlChild {
+  scroller: Scroller = new Scroller();
+  scroller2: Scroller = new Scroller();
+  private arr: number[] = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+  private childRecognizer: GestureRecognizer = new GestureRecognizer();
+  private currentRecognizer: GestureRecognizer = new GestureRecognizer();
+  private lastOffset: number = 0;
+
+  build() {
+    Stack({ alignContent: Alignment.TopStart }) {
+      Scroll(this.scroller) { // Outer scroll container
+        Column() {
+          Text('Scroll Area')
+            .width('90%')
+            .height(150)
+            .backgroundColor(0xFFFFFF)
+            .borderRadius(15)
+            .fontSize(16)
+            .textAlign(TextAlign.Center)
+            .margin({ top: 10 })
+          Scroll(this.scroller2) { // Inner scroll container
+            Column() {
+              Text('Scroll Area2')
+                .width('90%')
+                .height(150)
+                .backgroundColor(0xFFFFFF)
+                .borderRadius(15)
+                .fontSize(16)
+                .textAlign(TextAlign.Center)
+                .margin({ top: 10 })
+              Column() {
+                ForEach(this.arr, (item: number) => {
+                  Text(item.toString())
+                    .width('90%')
+                    .height(150)
+                    .backgroundColor(0xFFFFFF)
+                    .borderRadius(15)
+                    .fontSize(16)
+                    .textAlign(TextAlign.Center)
+                    .margin({ top: 10 })
+                }, (item: string) => item)
+              }.width('100%')
+            }
+          }
+          .id('inner')
+          .width('100%')
+          .height(800)
+        }.width('100%')
+      }
+      .id('outer')
+      .height(600)
+      .scrollable(ScrollDirection.Vertical) // Scroll direction: vertical
+      .scrollBar(BarState.On) // Scroll bar always displayed
+      .scrollBarColor(Color.Gray) // Scroll bar color
+      .scrollBarWidth(10) // Scroll bar width
+      .edgeEffect(EdgeEffect.None)
+      .enableScrollInteraction(false)
+      .gesture(
+        PanGesture()
+          .onActionStart(() => {
+            this.lastOffset = this.scroller.currentOffset().yOffset; // Record the current scroll position when the gesture starts.
+          })
+          .onActionUpdate((event: GestureEvent) => {
+            let moveY = event.offsetY; // Calculate the new position when the gesture moves.
+            let targetOffset = this.lastOffset - moveY; // Target position = initial position - movement distance
+            this.scroller.scrollTo({ xOffset: 0, yOffset: targetOffset });
+          })
+      )
+      .shouldRecognizerParallelWith((current: GestureRecognizer, others: Array<GestureRecognizer>) => {
+        for (let i = 0; i < others.length; i++) {
+          let target = others[i].getEventTargetInfo();
+          if (target) {
+            if (target.getId() == 'inner' && others[i].isBuiltIn() &&
+              others[i].getType() == GestureControl.GestureType.PAN_GESTURE) { // Find the recognizer that will form a parallel gesture.
+              this.currentRecognizer = current; // Save the recognizer of the current component.
+              this.childRecognizer = others[i]; // Save the recognizer that will form a parallel gesture.
+              return others[i]; // Return the recognizer that will form a parallel gesture.
+            }
+          }
+        }
+        return undefined;
+      })
+      .onGestureRecognizerJudgeBegin((event: BaseGestureEvent, current: GestureRecognizer,
+        others: Array<GestureRecognizer>) => { // When the recognizer is about to succeed, set the recognizer enabled state based on the current component state.
+        if (current) {
+          let target = current.getEventTargetInfo();
+          if (target) {
+            if (target.getId() == 'outer' &&
+              current.getType() == GestureControl.GestureType.PAN_GESTURE) {
+              if (others) {
+                for (let i = 0; i < others.length; i++) {
+                  let target = others[i].getEventTargetInfo() as ScrollableTargetInfo;
+                  if (target instanceof ScrollableTargetInfo && target.getId() == 'inner') { // Find the corresponding parallel recognizer on the response chain.
+                    let panEvent = event as PanGestureEvent;
+                    if (target.isEnd()) { // Dynamically control the recognizer enabled state based on the current component state and movement direction.
+                      if (panEvent && panEvent.offsetY < 0) {
+                        this.childRecognizer.setEnabled(false);
+                        this.currentRecognizer.setEnabled(true);
+                      } else {
+                        this.childRecognizer.setEnabled(true);
+                        this.currentRecognizer.setEnabled(false);
+                      }
+                    } else if (target.isBegin()) {
+                      if (panEvent.offsetY > 0) {
+                        this.childRecognizer.setEnabled(false);
+                        this.currentRecognizer.setEnabled(true);
+                      } else {
+                        this.childRecognizer.setEnabled(true);
+                        this.currentRecognizer.setEnabled(false);
+                      }
+                    } else {
+                      this.childRecognizer.setEnabled(true);
+                      this.currentRecognizer.setEnabled(false);
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+        return GestureJudgeResult.CONTINUE;
+      })
+    }.width('100%').height('100%').backgroundColor(0xDCDCDC)
+  }
+}
+```
+
 In this example, the [onNeedSoftkeyboard](arkts-arkui-commonmethod-c.md#onneedsoftkeyboard) API is used to enable the keyboard continuation for a button. After the keyboard is started by the text box, switch the focus to the button upon a tap. In this case, the keyboard will not collapse. Tap the text box again to continue entering text.
 The [onNeedSoftkeyboard](arkts-arkui-commonmethod-c.md#onneedsoftkeyboard) API is available since API version 24.
 
@@ -10030,7 +11194,7 @@ struct Index {
     Column() {
       Button('Switch Focus to the Button')
         .onClick(() => {
-          this.getUIContext().getFocusController().requestFocus('Button')
+          this.getUIContext().getFocusController().requestFocus('Button');
         })
         .key('Button')
         .fontSize(20)
@@ -10092,11 +11256,10 @@ import { unifiedDataChannel, uniformTypeDescriptor } from '@kit.ArkData';
 @Entry
 @Component
 struct ImageExample {
-  @State uri: string = "";
-  @State aBlockArr: string[] = [];
-  @State bBlockArr: string[] = [];
-  @State AVisible: Visibility = Visibility.Visible;
-  @State dragSuccess: Boolean = false;
+  @State uri: string = '';
+  @State disallowedBlockArr: string[] = [];
+  @State allowedBlockArr: string[] = [];
+  @State disallowedAreaVisible: Visibility = Visibility.Visible;
 
   build() {
     Column() {
@@ -10108,16 +11271,16 @@ struct ImageExample {
           .width(100)
           .height(100)
           .border({ width: 1 })
-          .visibility(this.AVisible)
+          .visibility(this.disallowedAreaVisible)
           .draggable(true)
           .onDragEnd((event: DragEvent) => {
             let ret = event.getResult();
             if (ret == 0) {
-              console.info("enter ret == 0")
-              this.AVisible = Visibility.Hidden;
+              console.info('enter ret == 0');
+              this.disallowedAreaVisible = Visibility.Hidden;
             } else {
-              console.info("enter ret != 0")
-              this.AVisible = Visibility.Visible;
+              console.info('enter ret != 0');
+              this.disallowedAreaVisible = Visibility.Visible;
             }
           })
       }
@@ -10129,7 +11292,7 @@ struct ImageExample {
             .fontSize('15dp')
             .height('10%')
           List() {
-            ForEach(this.aBlockArr, (item: string, index) => {
+            ForEach(this.disallowedBlockArr, (item: string, index) => {
               ListItem() {
                 Image(item)
                   .width(100)
@@ -10144,13 +11307,13 @@ struct ImageExample {
           .allowDrop([uniformTypeDescriptor.UniformDataType.TEXT])
           .onDrop((event?: DragEvent, extraParams?: string) => {
             this.uri = JSON.parse(extraParams as string)?.extraInfo;
-            this.aBlockArr.splice(JSON.parse(extraParams as string)?.insertIndex, 0, this.uri);
-            console.info("ondrop not udmf data");
+            this.disallowedBlockArr.splice(JSON.parse(extraParams as string)?.insertIndex, 0, this.uri);
+            console.info('ondrop not udmf data');
           })
           .border({ width: 1 })
         }
-        .height("50%")
-        .width("45%")
+        .height('50%')
+        .width('45%')
         .border({ width: 1 })
         .margin({ left: 12 })
 
@@ -10159,7 +11322,7 @@ struct ImageExample {
             .fontSize('15dp')
             .height('10%')
           List() {
-            ForEach(this.bBlockArr, (item: string, index) => {
+            ForEach(this.allowedBlockArr, (item: string, index) => {
               ListItem() {
                 Image(item)
                   .width(100)
@@ -10174,26 +11337,25 @@ struct ImageExample {
           .width('100%')
           .allowDrop([uniformTypeDescriptor.UniformDataType.IMAGE])
           .onDrop((event?: DragEvent, extraParams?: string) => {
-            console.info("enter onDrop")
+            console.info('enter onDrop');
             let dragData: UnifiedData = (event as DragEvent).getData() as UnifiedData;
             if (dragData != undefined) {
               let arr: Array<unifiedDataChannel.UnifiedRecord> = dragData.getRecords();
               if (arr.length > 0) {
                 let image = arr[0] as unifiedDataChannel.Image;
                 this.uri = image.imageUri;
-                this.bBlockArr.splice(JSON.parse(extraParams as string)?.insertIndex, 0, this.uri);
+                this.allowedBlockArr.splice(JSON.parse(extraParams as string)?.insertIndex, 0, this.uri);
               } else {
-                console.info(`dragData arr is null`)
+                console.info(`dragData arr is null`);
               }
             } else {
-              console.info(`dragData  is undefined`)
+              console.info(`dragData  is undefined`);
             }
-            console.info("ondrop udmf data");
-            this.dragSuccess = true
+            console.info('ondrop udmf data');
           })
         }
-        .height("50%")
-        .width("45%")
+        .height('50%')
+        .width('45%')
         .border({ width: 1 })
         .margin({ left: 12 })
       }
@@ -10212,7 +11374,7 @@ struct DragPreviewDemo {
   @Builder
   dragPreviewBuilder() {
     Column() {
-      Text("dragPreview")
+      Text('dragPreview')
         .width(150)
         .height(50)
         .fontSize(20)
@@ -10224,9 +11386,9 @@ struct DragPreviewDemo {
   }
 
   @Builder
-  MenuBuilder() {
+  menuBuilder() {
     Flex({ direction: FlexDirection.Column, justifyContent: FlexAlign.Center, alignItems: ItemAlign.Center }) {
-      Text("menu item 1")
+      Text('menu item 1')
         .fontSize(15)
         .width(100)
         .height(40)
@@ -10235,7 +11397,7 @@ struct DragPreviewDemo {
         .backgroundColor(Color.Pink)
       Divider()
         .height(5)
-      Text("menu item 2")
+      Text('menu item 2')
         .fontSize(15)
         .width(100)
         .height(40)
@@ -10251,17 +11413,17 @@ struct DragPreviewDemo {
       Column() {
         // Replace $r('app.media.image') with the image resource file you use.
         Image($r('app.media.image'))
-          .width("30%")
+          .width('30%')
           .draggable(true)
-          .bindContextMenu(this.MenuBuilder, ResponseType.LongPress)
+          .bindContextMenu(this.menuBuilder, ResponseType.LongPress)
           .onDragStart(() => {
-            console.info("Image onDragStart")
+            console.info('Image onDragStart');
           })
           .dragPreview(this.dragPreviewBuilder)
       }
-      .width("100%")
+      .width('100%')
     }
-    .height("100%")
+    .height('100%')
   }
 }
 ```
@@ -10272,20 +11434,20 @@ This example demonstrates how to configure the drag preview style using [dragPre
 // xxx.ets
 @Entry
 @Component
-struct dragPreviewOptionsDemo {
+struct DragPreviewOptionsDemo {
   build() {
     Row() {
       Column() {
         // Replace $r('app.media.image') with the image resource file you use.
         Image($r('app.media.image'))
           .margin({ top: 10 })
-          .width("30%")
+          .width('30%')
           .draggable(true)
           .dragPreviewOptions({ mode: DragPreviewMode.AUTO })
         // Replace $r('app.media.image') with the image resource file you use.
         Image($r('app.media.image'))
           .margin({ top: 10 })
-          .width("30%")
+          .width('30%')
           .border({
             radius: {
               topLeft: 1,
@@ -10296,15 +11458,15 @@ struct dragPreviewOptionsDemo {
           })
           .draggable(true)
           .onDragStart(() => {
-            console.info("Image onDragStart")
+            console.info('Image onDragStart');
           })
           .dragPreviewOptions({
             mode: [DragPreviewMode.ENABLE_DEFAULT_SHADOW, DragPreviewMode.ENABLE_DEFAULT_RADIUS,
               DragPreviewMode.ENABLE_DRAG_ITEM_GRAY_EFFECT]
           })
       }
-      .width("100%")
-      .height("100%")
+      .width('100%')
+      .height('100%')
     }
   }
 }
@@ -10336,7 +11498,7 @@ struct Example {
           .onDragStart(() => {
 
           })
-        }, (item: string) => item)
+        }, (item: number) => item.toString())
       }
       .columnsTemplate('1fr 1fr 1fr')
       .rowsTemplate('1fr 1fr 1fr')
@@ -10373,7 +11535,7 @@ struct Example {
           .onDragStart(() => {
 
           })
-        }, (item: string) => item)
+        }, (item: number) => item.toString())
       }
       .columnsTemplate('1fr 1fr 1fr')
       .rowsTemplate('1fr 1fr 1fr')
@@ -10392,40 +11554,35 @@ import { ImageModifier } from '@kit.ArkUI';
 
 @Entry
 @Component
-struct dragPreviewOptionsDemo {
+struct DragPreviewOptionsDemo {
   @State myModifier: ImageAttribute = new ImageModifier().opacity(0.5)
-  @State vis: boolean = true
-  @State changeValue: string = ''
-  @State submitValue: string = ''
-  @State positionInfo: CaretOffset = { index: 0, x: 0, y: 0 }
-  controller: SearchController = new SearchController()
-  @State OpacityIndex: number = 0
-  @State OpacityList: (number | undefined | null)[] = [
+  @State opacityIndex: number = 0
+  @State opacityList: (number | undefined | null)[] = [
     0.3, 0.5, 0.7, 1, -50, 0, 10, undefined, null
   ]
 
   build() {
     Row() {
       Column() {
-        Text(this.OpacityList[this.OpacityIndex] + "")
-        Button("Opacity")
+        Text(this.opacityList[this.opacityIndex] + '')
+        Button('Opacity')
           .onClick(() => {
-            this.OpacityIndex++
-            if (this.OpacityIndex > this.OpacityList.length - 1) {
-              this.OpacityIndex = 0
+            this.opacityIndex++;
+            if (this.opacityIndex > this.opacityList.length - 1) {
+              this.opacityIndex = 0;
             }
           })
         // Replace $r('app.media.image') with the image resource file you use.
         Image($r('app.media.image'))
           .margin({ top: 10 })
-          .width("100%")
+          .width('100%')
           .draggable(true)
           .dragPreviewOptions({
-            modifier: this.myModifier.opacity(this.OpacityList[this.OpacityIndex]) as ImageModifier
+            modifier: this.myModifier.opacity(this.opacityList[this.opacityIndex]) as ImageModifier
           })
       }
-      .width("50%")
-      .height("50%")
+      .width('50%')
+      .height('50%')
     }
   }
 }
@@ -10453,19 +11610,19 @@ struct ImageDrag {
   filesDir = this.context?.filesDir;
 
   public async createPixelMap(pixelMap: unifiedDataChannel.SystemDefinedPixelMap): Promise<image.PixelMap | null> {
-    let mWidth: number = (pixelMap.details?.width ?? -1) as number;
-    let mHeight: number = (pixelMap.details?.height ?? -1) as number;
-    let mPixelFormat: image.PixelMapFormat =
+    let pixelMapWidth: number = (pixelMap.details?.width ?? -1) as number;
+    let pixelMapHeight: number = (pixelMap.details?.height ?? -1) as number;
+    let pixelMapPixelFormat: image.PixelMapFormat =
       (pixelMap.details?.['pixel-format'] ?? image.PixelMapFormat.UNKNOWN) as image.PixelMapFormat;
-    let mItemPixelMapData: Uint8Array = pixelMap.rawData;
+    let itemPixelMapData: Uint8Array = pixelMap.rawData;
     const opts: image.InitializationOptions = {
-      editable: false, pixelFormat: mPixelFormat, size: {
-        height: mHeight,
-        width: mWidth
+      editable: false, pixelFormat: pixelMapPixelFormat, size: {
+        height: pixelMapHeight,
+        width: pixelMapWidth
       }
     };
-    const buffer: ArrayBuffer = mItemPixelMapData.buffer.slice(mItemPixelMapData.byteOffset,
-      mItemPixelMapData.byteLength + mItemPixelMapData.byteOffset);
+    const buffer: ArrayBuffer = itemPixelMapData.buffer.slice(itemPixelMapData.byteOffset,
+      itemPixelMapData.byteLength + itemPixelMapData.byteOffset);
     try {
       let pixelMap: image.PixelMap = await image.createPixelMap(buffer, opts);
       return pixelMap;
@@ -10481,7 +11638,7 @@ struct ImageDrag {
         // Drag an online image.
         Column() {
           Text('Online Image').fontSize(14)
-          Image('https://www.example.com/xxx.png')// Enter a specific online image URL.
+          Image('https://www.example.com/xxx.png') // Fill in a specific network image address.
             .objectFit(ImageFit.Contain)
             .draggable(true)
             .onDragStart(() => {
@@ -10566,7 +11723,7 @@ struct ImageDrag {
                   let buf = buffer.from(arrayBuffer, 0, readLen);
                   console.info(`The content of file: ${buf.toString()}`);
                   fileIo.closeSync(file);
-                })
+                });
               } catch (error) {
               }
             }
@@ -10629,14 +11786,16 @@ struct ImageDrag {
 
               // Save data to local storage.
               const imagePackerApi = image.createImagePacker();
-              let packOpts: image.PackingOption = { format: "image/jpeg", quality: 98 };
+              let packOpts: image.PackingOption = { format: 'image/jpeg', quality: 98 };
               const path: string = this.context?.cacheDir + "/pixel_map.jpg";
               let file = fileIo.openSync(path, fileIo.OpenMode.CREATE | fileIo.OpenMode.READ_WRITE);
               imagePackerApi.packToFile(this.targetImage3, file.fd, packOpts).then(() => {
                 // Pack the image into the file.
+                fileIo.closeSync(file);
               }).catch((error: BusinessError) => {
+                fileIo.closeSync(file);
                 console.error('Failed to pack the image. And the error is: ' + error);
-              })
+              });
             }
           })
       }
@@ -10664,9 +11823,9 @@ This example demonstrates enabling haptic feedback during image drag operations 
 @Component
 struct DragPreviewDemo {
   @Builder
-  MenuBuilder() {
+  menuBuilder() {
     Flex({ direction: FlexDirection.Column, justifyContent: FlexAlign.Center, alignItems: ItemAlign.Center }) {
-      Text("menu item 1")
+      Text('menu item 1')
         .fontSize(15)
         .width(100)
         .height(40)
@@ -10675,7 +11834,7 @@ struct DragPreviewDemo {
         .backgroundColor(Color.Pink)
       Divider()
         .height(5)
-      Text("menu item 2")
+      Text('menu item 2')
         .fontSize(15)
         .width(100)
         .height(40)
@@ -10691,18 +11850,18 @@ struct DragPreviewDemo {
       Column() {
         // Replace $r('app.media.app_icon') with the image resource file you use.
         Image($r('app.media.app_icon'))
-          .width("30%")
+          .width('30%')
           .draggable(true)
           .dragPreviewOptions({},
             { isMultiSelectionEnabled: true, defaultAnimationBeforeLifting: true, enableHapticFeedback: true })
-          .bindContextMenu(this.MenuBuilder, ResponseType.LongPress)
+          .bindContextMenu(this.menuBuilder, ResponseType.LongPress)
           .onDragStart(() => {
-            console.info("Image onDragStart")
+            console.info('Image onDragStart');
           })
       }
-      .width("100%")
+      .width('100%')
     }
-    .height("100%")
+    .height('100%')
   }
 }
 ```
@@ -10717,7 +11876,7 @@ struct LiftingExampleDemo {
   @Builder
   dragPreviewBuilder() {
     Column() {
-      Text("dragPreview builder")
+      Text('dragPreview builder')
         .width(150)
         .height(50)
         .fontSize(20)
@@ -10729,9 +11888,9 @@ struct LiftingExampleDemo {
   }
 
   @Builder
-  MenuBuilder() {
+  menuBuilder() {
     Flex({ direction: FlexDirection.Column, justifyContent: FlexAlign.Center, alignItems: ItemAlign.Center }) {
-      Text("menu 1")
+      Text('menu 1')
         .fontSize(25)
         .width(200)
         .height(60)
@@ -10740,7 +11899,7 @@ struct LiftingExampleDemo {
         .backgroundColor(Color.Green)
       Divider()
         .height(5)
-      Text("menu 2")
+      Text('menu 2')
         .fontSize(25)
         .width(200)
         .height(60)
@@ -10754,17 +11913,17 @@ struct LiftingExampleDemo {
   build() {
     Column() {
       Column() {
-        Text("Lifting effect disabled")
+        Text('Lifting effect disabled')
           .fontSize(30)
           .height(30)
           .backgroundColor('#FFFFFF')
           .margin({ top: 30 })
         // Replace $r('app.media.startIcon') with the image resource file you use.
         Image($r('app.media.startIcon'))
-          .width("40%")
+          .width('40%')
           .draggable(true)
           .margin({ top: 15 })
-          .bindContextMenu(this.MenuBuilder, ResponseType.LongPress)
+          .bindContextMenu(this.menuBuilder, ResponseType.LongPress)
           .onDragStart(() => {
           })
           .dragPreviewOptions({}, {
@@ -10774,17 +11933,17 @@ struct LiftingExampleDemo {
             onlyForLifting: true,
             delayCreating: true
           })
-      }.width("%")
+      }.width('100%')
 
       Column() {
-        Text("Lifting effect only")
+        Text('Lifting effect only')
           .fontSize(30)
           .height(30)
           .backgroundColor('#FFFFFF')
           .margin({ top: 80 })
         // Replace $r('app.media.startIcon') with the image resource file you use.
         Image($r('app.media.startIcon'))
-          .width("40%")
+          .width('40%')
           .draggable(true)
           .margin({ top: 15 })
           .onDragStart(() => {
@@ -10796,23 +11955,23 @@ struct LiftingExampleDemo {
             onlyForLifting: true,
             delayCreating: true
           })
-      }.width("100%")
-    }.height("100%")
+      }.width('100%')
+    }.height('100%')
   }
 }
 ```
 
-This example configures [DragPreviewMode](arkts-arkui-dragpreviewmode-e.md) as ENABLE_TOUCH_POINT_CALCULATION_BASED_ON_FINAL_PREVIEW to calculate touch point positions using the initial drag preview size, supported since API version 19. This setting has no effect when [DragPreviewMode](arkts-arkui-dragpreviewmode-e.md) is set to ENABLE_MULTI_TILE_EFFECT.
+Since API version 19, Example 10 implements the calculation of the follow-finger point position during the drag process based on the original size of the final drag preview image by configuring [DragPreviewMode](arkts-arkui-draginteractionoptions-i.md) to ENABLE_TOUCH_POINT_CALCULATION_BASED_ON_FINAL_PREVIEW. When [DragPreviewMode](arkts-arkui-dragpreviewmode-e.md) is set to ENABLE_MULTI_TILE_EFFECT, this attribute does not take effect.
 
 ```TypeScript
 @Entry
 @Component
 struct Index {
   // Replace $r('app.media.app_icon') with the image resource file you use.
-  private iconStr: ResourceStr = $r("app.media.app_icon")
+  private iconStr: ResourceStr = $r('app.media.app_icon')
 
   @Builder
-  MyPreview() {
+  myPreview() {
     // Replace $r('app.media.image') with the image resource file you use.
     Image($r('app.media.image'))
       .width(100)
@@ -10820,7 +11979,7 @@ struct Index {
   }
 
   @Builder
-  MyMenuPreview() {
+  myMenuPreview() {
     Column() {
       // Replace $r('app.media.image') with the image resource file you use.
       Image($r('app.media.image'))
@@ -10833,18 +11992,10 @@ struct Index {
   }
 
   @Builder
-  MyMenu() {
+  myMenu() {
     Menu() {
-      MenuItem({ startIcon: this.iconStr, content: "Menu option" })
-      MenuItem({ startIcon: this.iconStr, content: "Menu option" })
-    }
-  }
-
-  @Builder
-  SubMenu() {
-    Menu() {
-      MenuItem({ content: "Copy", labelInfo: "Ctrl+C" })
-      MenuItem({ content: "Paste", labelInfo: "Ctrl+V" })
+      MenuItem({ startIcon: this.iconStr, content: 'Menu option' })
+      MenuItem({ startIcon: this.iconStr, content: 'Menu option' })
     }
   }
 
@@ -10852,26 +12003,26 @@ struct Index {
     NavDestination() {
       Scroll() {
         Column() {
-          Text("no ENABLE_TOUCH_POINT_CALCULATION_BASED_ON_FINAL_PREVIEW")
+          Text('no ENABLE_TOUCH_POINT_CALCULATION_BASED_ON_FINAL_PREVIEW')
           // Replace $r('app.media.image') with the image resource file you use.
           Image($r('app.media.image'))
             .width(200)
             .height(200)
-            .bindContextMenu(this.MyMenu, ResponseType.LongPress, {
-              preview: this.MyPreview
+            .bindContextMenu(this.myMenu, ResponseType.LongPress, {
+              preview: this.myPreview
             })
-            .dragPreview(this.MyMenuPreview)
+            .dragPreview(this.myMenuPreview)
             .draggable(true)
 
-          Text("ENABLE_TOUCH_POINT_CALCULATION_BASED_ON_FINAL_PREVIEW")
+          Text('ENABLE_TOUCH_POINT_CALCULATION_BASED_ON_FINAL_PREVIEW')
           // Replace $r('app.media.image') with the image resource file you use.
           Image($r('app.media.image'))
             .width(200)
             .height(200)
-            .bindContextMenu(this.MyMenu, ResponseType.LongPress, {
-              preview: this.MyPreview
+            .bindContextMenu(this.myMenu, ResponseType.LongPress, {
+              preview: this.myPreview
             })
-            .dragPreview(this.MyMenuPreview)
+            .dragPreview(this.myMenuPreview)
             .draggable(true)
             .dragPreviewOptions({
               mode: [DragPreviewMode.ENABLE_TOUCH_POINT_CALCULATION_BASED_ON_FINAL_PREVIEW]
@@ -10892,10 +12043,10 @@ This example demonstrates how to implement different transition effects between 
 @Component
 struct Index {
   // Replace $r('app.media.app_icon') with the image resource file you use.
-  private iconStr: ResourceStr = $r("app.media.app_icon")
+  private iconStr: ResourceStr = $r('app.media.app_icon');
 
   @Builder
-  MyPreview() {
+  myPreview() {
     // Replace $r('app.media.image') with the image resource file you use.
     Image($r('app.media.image'))
       .width(200)
@@ -10903,7 +12054,7 @@ struct Index {
   }
 
   @Builder
-  MyMenuPreviewSame() {
+  myMenuPreviewSame() {
     Column() {
       // Replace $r('app.media.image') with the image resource file you use.
       Image($r('app.media.image'))
@@ -10913,7 +12064,7 @@ struct Index {
   }
 
   @Builder
-  MyMenuPreview() {
+  myMenuPreview() {
     Column() {
       // Replace $r('app.media.startIcon') with the image resource file you use.
       Image($r('app.media.startIcon'))
@@ -10923,48 +12074,40 @@ struct Index {
   }
 
   @Builder
-  MyMenu() {
+  myMenu() {
     Menu() {
-      MenuItem({ startIcon: this.iconStr, content: "Menu option" })
-      MenuItem({ startIcon: this.iconStr, content: "Menu option" })
-    }
-  }
-
-  @Builder
-  SubMenu() {
-    Menu() {
-      MenuItem({ content: "Copy", labelInfo: "Ctrl+C" })
-      MenuItem({ content: "Paste", labelInfo: "Ctrl+V" })
+      MenuItem({ startIcon: this.iconStr, content: 'Menu option' })
+      MenuItem({ startIcon: this.iconStr, content: 'Menu option' })
     }
   }
 
   build() {
     Column() {
-      Text("sizeChangeEffect: SIZE_TRANSITION - Long press to open menu, and drag to transition from menu preview to drag preview with scaling effect (no overlay).")
+      Text('sizeChangeEffect: SIZE_TRANSITION - Long press to open menu, and drag to transition from menu preview to drag preview with scaling effect (no overlay).')
         .margin({ top: 10 })
       // Replace $r('app.media.image') with the image resource file you use.
       Image($r('app.media.image'))
         .width(200)
         .height(200)
-        .bindContextMenu(this.MyMenu, ResponseType.LongPress, {
-          preview: this.MyMenuPreviewSame
+        .bindContextMenu(this.myMenu, ResponseType.LongPress, {
+          preview: this.myMenuPreviewSame
         })
-        .dragPreview(this.MyPreview)
+        .dragPreview(this.myPreview)
         .dragPreviewOptions({
           sizeChangeEffect: DraggingSizeChangeEffect.SIZE_TRANSITION
         })
         .draggable(true)
 
-      Text("sizeChangeEffect: SIZE_CONTENT_TRANSITION - Long press to open menu, and drag to transition with two-layer overlay effect (menu preview and drag preview).")
+      Text('sizeChangeEffect: SIZE_CONTENT_TRANSITION - Long press to open menu, and drag to transition with two-layer overlay effect (menu preview and drag preview).')
         .margin({ top: 10 })
       // Replace $r('app.media.image') with the image resource file you use.
       Image($r('app.media.image'))
         .width(200)
         .height(200)
-        .bindContextMenu(this.MyMenu, ResponseType.LongPress, {
-          preview: this.MyMenuPreview
+        .bindContextMenu(this.myMenu, ResponseType.LongPress, {
+          preview: this.myMenuPreview
         })
-        .dragPreview(this.MyPreview)
+        .dragPreview(this.myPreview)
         .dragPreviewOptions({
           sizeChangeEffect: DraggingSizeChangeEffect.SIZE_CONTENT_TRANSITION
         })
@@ -11012,7 +12155,7 @@ struct CustomExample {
               let customCardData: Record<string, string> = {
                 'uniformDataType': 'custom.card',
                 'value': 'Custom card'
-              }
+              };
               let unifiedRecord = new unifiedDataChannel.UnifiedRecord('custom.card', customCardData);
               let unifiedData = new unifiedDataChannel.UnifiedData(unifiedRecord);
               event.setData(unifiedData);
@@ -11050,12 +12193,12 @@ struct CustomExample {
         .allowDrop(['custom.card'])
         .onDrop((event: DragEvent) => {
           console.info('setData onDrop success');
-          let data = event.getData()
+          let data = event.getData();
           let arr: Array<unifiedDataChannel.UnifiedRecord> = data.getRecords();
           if (arr.length > 0) {
             if (arr[0].getTypes()[0] === 'custom.card') {
               let customCardData = arr[0].getValue() as Record<string, string>;
-              this.droppedItems.push(customCardData.value)
+              this.droppedItems.push(customCardData.value);
             }
           }
         })
@@ -11079,8 +12222,8 @@ struct CustomExample {
 // Custom card.
 @Component
 struct CustomCard {
-  title: string ='Default Title'
-  color: Color = Color.Gray
+  title: string = 'Default Title';
+  color: Color = Color.Gray;
 
   build() {
     Column() {
@@ -11099,6 +12242,89 @@ struct CustomCard {
     .borderRadius(12)
     .width(120)
     .height(100)
+  }
+}
+```
+
+This example sets the material effect of the drag backdrop by configuring the [systemMaterial](ts-universal-attributes-image-effect.md#systemmaterial) attribute in [allowDrop](arkts-arkui-commonmethod-c.md#allowdrop).
+Since API version 26.0.0, the modifier parameter in the [DragPreviewOptions](arkts-arkui-imagemodifier-t.md) interface additionally supports the [systemMaterial](ts-universal-attributes-image-effect.md#systemmaterial) attribute.
+
+```TypeScript
+// xxx.ets
+import { ImageModifier } from '@kit.ArkUI';
+import { uiMaterial } from '@kit.ArkUI';
+
+@Entry
+@Component
+struct DragPreviewMaterialDemo {
+  @State materialIndex: number = 0;
+  @State materialName: string = 'ULTRA_THIN';
+  // Material style list
+  @State materialList: uiMaterial.ImmersiveStyle[] = [
+    uiMaterial.ImmersiveStyle.ULTRA_THIN,
+    uiMaterial.ImmersiveStyle.THIN,
+    uiMaterial.ImmersiveStyle.REGULAR,
+    uiMaterial.ImmersiveStyle.THICK,
+    uiMaterial.ImmersiveStyle.ULTRA_THICK
+  ]
+  @State materialNames: string[] = [
+    'ULTRA_THIN', 'THIN', 'REGULAR', 'THICK', 'ULTRA_THICK'
+  ]
+
+  build() {
+    Row() {
+      Column() {
+        Text('Current material style:' + this.materialName)
+          .fontSize(16)
+          .margin({ bottom: 10 })
+
+        Button('Switch material style')
+          .onClick(() => {
+            this.materialIndex++;
+            if (this.materialIndex > this.materialList.length - 1) {
+              this.materialIndex = 0;
+            }
+            this.materialName = this.materialNames[this.materialIndex];
+          })
+          .margin({ bottom: 20 })
+
+        Column() {
+          Text('Material effect')
+            .fontSize(20)
+            .fontColor(Color.White)
+            .margin({ top: 30, bottom: 10 })
+          Text('Drag to view the effect')
+            .fontSize(14)
+            .fontColor(Color.White)
+        }
+        .width(150)
+        .height(150)
+        .backgroundColor('rgba(100, 150, 255, 0.3)')
+        .justifyContent(FlexAlign.Center)
+        .draggable(true)
+        .onDragStart((event: DragEvent) => {
+        })
+        .dragPreviewOptions({
+          modifier: new ImageModifier().systemMaterial(
+            new uiMaterial.ImmersiveMaterial({
+              style: this.materialList[this.materialIndex]
+            })
+          ) as ImageModifier
+        })
+
+        Text('Instructions: long press the square and drag\nView different material effects')
+          .fontSize(14)
+          .fontColor(Color.Gray)
+          .margin({ top: 20 })
+          .textAlign(TextAlign.Center)
+      }
+      .width('100%')
+      .height('100%')
+      .padding(20)
+    }
+    .width('100%')
+    .height('100%')
+    .backgroundColor('#f5f5f5')
   }
 }
 ```
@@ -11417,7 +12643,7 @@ struct CustomLayoutText {
 }
 ```
 
-This example demonstrates key event handling through a Button component. When the button is focused, pressing a key triggers the onKeyEvent callback. For details about the process and specific timing of the key event triggering, see [Key Event Data Flow](../../../ui/arkts-interaction-development-guide-keyboard.md#key-event-data-flow).
+This example sets a key event for a button. When the button obtains focus, pressing a key triggers the onKeyEvent callback. For details about the process and specific timing of the key event triggering, see [Key Event Data Flow](../../../ui/arkts-interaction-development-guide-keyboard.md#key-event-data-flow).
 
 ```TypeScript
 // xxx.ets
@@ -11434,13 +12660,13 @@ struct KeyEventExample {
         .onKeyEvent((event?: KeyEvent) => {
           if (event) {
             if (event.type === KeyType.Down) {
-              this.eventType = 'Down'
+              this.eventType = 'Down';
             }
             if (event.type === KeyType.Up) {
-              this.eventType = 'Up'
+              this.eventType = 'Up';
             }
             this.text = 'KeyType:' + this.eventType + '\nkeyCode:' + event.keyCode + '\nkeyText:' + event.keyText +
-              '\nintentionCode:' + event.intentionCode
+              '\nintentionCode:' + event.intentionCode;
           }
         })
       Text(this.text).padding(15)
@@ -11466,21 +12692,21 @@ struct KeyEventExample {
         .onKeyEvent((event?: KeyEvent) => {
           if (event) {
             if (event.type === KeyType.Down) {
-              this.eventType = 'Down'
+              this.eventType = 'Down';
             }
             if (event.type === KeyType.Up) {
-              this.eventType = 'Up'
+              this.eventType = 'Up';
             }
-            if (event.unicode == 97) {
-              this.keyType = 'a'
-            } else if (event.unicode == 65) {
-              this.keyType = 'A'
+            if (event.unicode === 97) {
+              this.keyType = 'a';
+            } else if (event.unicode === 65) {
+              this.keyType = 'A';
             } else {
-              this.keyType = ' '
+              this.keyType = ' ';
             }
             this.text =
               'KeyType:' + this.eventType + '\nUnicode:' + event.unicode + '\nkeyCode:' + event.keyCode + '\nkeyType:' +
-              this.keyType
+              this.keyType;
           }
         })
       Text(this.text).padding(15)
@@ -11497,22 +12723,18 @@ import { KeyCode } from '@kit.InputKit';
 @Entry
 @Component
 struct PreImeEventExample {
-  @State buttonText: string = '';
-  @State buttonType: string = '';
-  @State columnText: string = '';
-  @State columnType: string = '';
 
   build() {
     Column() {
       Search({
-        placeholder: "Search..."
+        placeholder: 'Search...'
       })
-        .width("80%")
-        .height("40vp")
-        .border({ radius: "20vp" })
+        .width('80%')
+        .height('40vp')
+        .border({ radius: '20vp' })
         .onKeyPreIme((event: KeyEvent) => {
           // Prevent the left arrow key from working.
-          if (event.keyCode == KeyCode.KEYCODE_DPAD_LEFT) {
+          if (event.keyCode === KeyCode.KEYCODE_DPAD_LEFT) {
             return true;
           }
           return false;
@@ -11525,11 +12747,11 @@ struct PreImeEventExample {
 This example demonstrates event bubbling prevention using stopPropagation. Adding event.stopPropagation() to the Button component's onKeyEvent callback ensures only the Button component responds to keyboard events, while the parent Column remains unresponsive.
 > NOTE
 > 
-> onKeyEvent events bubble by default.
+> The onKeyEvent event bubbles by default.
 > 
-> Event bubbling is a form of event propagation in the document object model (DOM), where an event is first handled by an element and then passed to its parent element for further processing.
+> Event bubbling: In a tree structure, after a child node finishes processing an event, the event is passed to its parent node for processing.
 > 
-> In [onKeyEvent15+](#onkeyevent15), returning true consumes the key event and prevents bubbling, achieving the same effect as stopPropagation.
+> In [onKeyEvent15+](#onkeyevent15), you can return true to consume the key event and prevent bubbling, which is equivalent to calling stopPropagation.
 
 ```TypeScript
 @Entry
@@ -11548,9 +12770,7 @@ struct KeyEventExample {
         .onKeyEvent((event?: KeyEvent) => {
           // Use stopPropagation to prevent the key event from bubbling up.
           if (event) {
-            if (event.stopPropagation) {
-              event.stopPropagation();
-            }
+            event.stopPropagation();
             if (event.type === KeyType.Down) {
               this.buttonType = 'Down';
             }
@@ -11759,13 +12979,13 @@ struct ZIndexExample {
   build() {
     Column() {
       Stack() {
-        // Components in the Stack container overlap, with later-defined components are on top by default. Components with higher zIndex values appear in front of those with lower zIndex values.
+        // Components in the Stack container overlap, with later-defined components on top by default. Components with higher zIndex values appear in front of those with lower zIndex values.
         // Set the zIndex value of Text1 to 2.
         Text('1, zIndex(2)')
           .size({ width: '40%', height: '30%' }).backgroundColor(0xbbb2cb)
           .zIndex(2)
         // Set the zIndex value of Text2 to 1.
-        Text('2, default zIndex(1)')
+        Text('2, zIndex(1)')
           .size({ width: '70%', height: '50%' }).backgroundColor(0xd2cab3).align(Alignment.TopStart)
           .zIndex(1)
         // Set the zIndex value of Text3 to 0.
@@ -11785,13 +13005,14 @@ This example demonstrates dynamically modifying the zIndex attribute on a Button
 @Entry
 @Component
 struct ZIndexExample {
-  @State zIndex_ : number = 0
+  @State zIndexValue: number = 0;
+
   build() {
     Column() {
       // Clicking the Button component changes the zIndex value. Components are sorted stably based on their previous stacking order.
-      Button("change Text2 zIndex")
-        .onClick(()=>{
-          this.zIndex_ = (this.zIndex_ + 1) % 3;
+      Button('change Text2 zIndex')
+        .onClick(() => {
+          this.zIndexValue = (this.zIndexValue + 1) % 3;
         })
       Stack() {
         // Set the zIndex value of Text1 to 1.
@@ -11799,16 +13020,16 @@ struct ZIndexExample {
           .size({ width: '70%', height: '50%' }).backgroundColor(0xd2cab3).align(Alignment.TopStart)
           .zIndex(1)
         // Set the zIndex value of Text2 to the default value 0.
-        Text('2, default zIndex(0), now zIndex:' + this.zIndex_)
+        Text('2, default zIndex(0), now zIndex:' + this.zIndexValue)
           .size({ width: '90%', height: '80%' }).backgroundColor(0xc1cbac).align(Alignment.TopStart)
-          .zIndex(this.zIndex_)
+          .zIndex(this.zIndexValue)
       }.width('100%').height(200)
     }.width('100%').height(200)
   }
 }
 ```
 
-This example shows how to set zIndex for components in different containers. Text1, Text2, and Text3 are placed in separate Stack containers. Although Text3 has the smallest zIndex value, Text1 and Text2 cannot be displayed above Text3.
+This example sets the zIndex attribute for components in different containers. Text1 and Text2 are in the same Stack container, while Text3 is in another Stack container. Although Text3 has the smallest zIndex value, Text1 and Text2 still cannot be displayed above Text3 based on their zIndex values.
 
 ```TypeScript
 // xxx.ets
@@ -11823,7 +13044,7 @@ struct ZIndexExample {
           .size({ width: '40%', height: '30%' }).backgroundColor(0xbbb2cb)
           .zIndex(2)
         // Set the zIndex value of Text2 to 1.
-        Text('2, default zIndex(1)')
+        Text('2, zIndex(1)')
           .size({ width: '70%', height: '50%' }).backgroundColor(0xd2cab3).align(Alignment.TopStart)
           .zIndex(1)
       }.width('100%').height(200)
@@ -11847,10 +13068,10 @@ This example demonstrates how to set an [onVisibleAreaChange](arkts-arkui-common
 @Entry
 @Component
 struct ScrollExample {
-  scroller: Scroller = new Scroller()
-  private arr: number[] = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-  @State testTextStr: string = 'test'
-  @State testRowStr: string = 'test'
+  scroller: Scroller = new Scroller();
+  private arr: number[] = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+  @State testTextStr: string = 'test';
+  @State testRowStr: string = 'test';
 
   build() {
     Column() {
@@ -11867,22 +13088,22 @@ struct ScrollExample {
 
       Scroll(this.scroller) {
         Column() {
-          Text("Test Text Visible Change")
+          Text('Test Text Visible Change')
             .fontSize(20)
             .height(200)
             .margin({ top: 50, bottom: 20 })
             .backgroundColor(Color.Green)
             // Set ratios to [0.0, 1.0] to invoke the callback when the component is fully visible or invisible on screen.
             .onVisibleAreaChange([0.0, 1.0], (isExpanding: boolean, currentRatio: number) => {
-              console.info(`Test Text isExpanding: ${isExpanding}, currentRatio: ${currentRatio}`)
+              console.info(`Test Text isExpanding: ${isExpanding}, currentRatio: ${currentRatio}`);
               if (isExpanding && currentRatio >= 1.0) {
-                console.info(`Test Text is fully visible. currentRatio: ${currentRatio}`)
-                this.testTextStr = 'Test Text is fully visible'
+                console.info(`Test Text is fully visible. currentRatio: ${currentRatio}`);
+                this.testTextStr = 'Test Text is fully visible';
               }
 
               if (!isExpanding && currentRatio <= 0.0) {
-                console.info('Test Text is completely invisible.')
-                this.testTextStr = 'Test Text is completely invisible'
+                console.info('Test Text is completely invisible.');
+                this.testTextStr = 'Test Text is completely invisible';
               }
             })
 
@@ -11895,15 +13116,15 @@ struct ScrollExample {
           .height(200)
           .backgroundColor(Color.Yellow)
           .onVisibleAreaChange([0.0, 1.0], (isExpanding: boolean, currentRatio: number) => {
-            console.info(`Test Text isExpanding: ${isExpanding}, currentRatio: ${currentRatio}`)
+            console.info(`Test Row isExpanding: ${isExpanding}, currentRatio: ${currentRatio}`);
             if (isExpanding && currentRatio >= 1.0) {
-              console.info('Test Row is fully visible.')
-              this.testRowStr = 'Test Row is fully visible'
+              console.info('Test Row is fully visible.');
+              this.testRowStr = 'Test Row is fully visible';
             }
 
             if (!isExpanding && currentRatio <= 0.0) {
-              console.info('Test Row is completely invisible.')
-              this.testRowStr = 'Test Row is completely invisible'
+              console.info('Test Row is completely invisible.');
+              this.testRowStr = 'Test Row is completely invisible';
             }
           })
 
@@ -11925,14 +13146,14 @@ struct ScrollExample {
       .scrollBar(BarState.On)
       .scrollBarColor(Color.Gray)
       .scrollBarWidth(10)
-      .onWillScroll((xOffset: number, yOffset: number, scrollState: ScrollState) => {
-        console.info(`${xOffset} ${yOffset}`)
+      .onWillScroll((xOffset: number, yOffset: number) => {
+        console.info(`${xOffset} ${yOffset}`);
       })
-      .onScrollEdge((side: Edge) => {
-        console.info('To the edge')
+      .onScrollEdge(() => {
+        console.info('To the edge');
       })
       .onScrollStop(() => {
-        console.info('Scroll Stop')
+        console.info('Scroll Stop');
       })
 
     }.width('100%').height('100%').backgroundColor(0xDCDCDC)
@@ -11947,10 +13168,10 @@ This example demonstrates how to set an [onVisibleAreaApproximateChange](arkts-a
 @Entry
 @Component
 struct ScrollExample {
-  scroller: Scroller = new Scroller()
-  private arr: number[] = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-  @State testTextStr: string = 'test'
-  @State testRowStr: string = 'test'
+  scroller: Scroller = new Scroller();
+  private arr: number[] = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+  @State testTextStr: string = 'test';
+  @State testRowStr: string = 'test';
 
   build() {
     Column() {
@@ -11967,7 +13188,7 @@ struct ScrollExample {
 
       Scroll(this.scroller) {
         Column() {
-          Text("Test Text Visible Change")
+          Text('Test Text Visible Change')
             .fontSize(20)
             .height(200)
             .margin({ top: 50, bottom: 20 })
@@ -11975,15 +13196,15 @@ struct ScrollExample {
             // Set ratios to [0.0, 1.0] to invoke the callback when the component is fully visible or invisible on screen.
             .onVisibleAreaApproximateChange({ ratios: [0.0, 1.0], expectedUpdateInterval: 1000 },
               (isExpanding: boolean, currentRatio: number) => {
-                console.info(`Test Text isExpanding: ${isExpanding}, currentRatio: ${currentRatio}`)
+                console.info(`Test Text isExpanding: ${isExpanding}, currentRatio: ${currentRatio}`);
                 if (isExpanding && currentRatio >= 1.0) {
-                  console.info(`Test Text is fully visible. currentRatio: ${currentRatio}`)
-                  this.testTextStr = 'Test Text is fully visible'
+                  console.info(`Test Text is fully visible. currentRatio: ${currentRatio}`);
+                  this.testTextStr = 'Test Text is fully visible';
                 }
 
                 if (!isExpanding && currentRatio <= 0.0) {
-                  console.info('Test Text is completely invisible.')
-                  this.testTextStr = 'Test Text is completely invisible'
+                  console.info('Test Text is completely invisible.');
+                  this.testTextStr = 'Test Text is completely invisible';
                 }
               })
 
@@ -11995,16 +13216,16 @@ struct ScrollExample {
           }
           .height(200)
           .backgroundColor(Color.Yellow)
-          .onVisibleAreaChange([0.0, 1.0], (isExpanding: boolean, currentRatio: number) => {
-            console.info(`Test Text isExpanding: ${isExpanding}, currentRatio: ${currentRatio}`)
+          .onVisibleAreaApproximateChange({ ratios: [0.0, 1.0], expectedUpdateInterval: 1000 }, (isExpanding: boolean, currentRatio: number) => {
+            console.info(`Test Row isExpanding: ${isExpanding}, currentRatio: ${currentRatio}`);
             if (isExpanding && currentRatio >= 1.0) {
-              console.info('Test Row is fully visible.')
-              this.testRowStr = 'Test Row is fully visible'
+              console.info('Test Row is fully visible.');
+              this.testRowStr = 'Test Row is fully visible';
             }
 
             if (!isExpanding && currentRatio <= 0.0) {
-              console.info('Test Row is completely invisible.')
-              this.testRowStr = 'Test Row is completely invisible'
+              console.info('Test Row is completely invisible.');
+              this.testRowStr = 'Test Row is completely invisible';
             }
           })
 
@@ -12026,14 +13247,14 @@ struct ScrollExample {
       .scrollBar(BarState.On)
       .scrollBarColor(Color.Gray)
       .scrollBarWidth(10)
-      .onWillScroll((xOffset: number, yOffset: number, scrollState: ScrollState) => {
-        console.info(`${xOffset} ${yOffset}`)
+      .onWillScroll((xOffset: number, yOffset: number) => {
+        console.info(`${xOffset} ${yOffset}`);
       })
-      .onScrollEdge((side: Edge) => {
-        console.info('To the edge')
+      .onScrollEdge(() => {
+        console.info('To the edge');
       })
       .onScrollStop(() => {
-        console.info('Scroll Stop')
+        console.info('Scroll Stop');
       })
 
     }.width('100%').height('100%').backgroundColor(0xDCDCDC)
@@ -12041,7 +13262,7 @@ struct ScrollExample {
 }
 ```
 
-In API version 22 and later versions, this example demonstrates the effect comparison of setting measureFromViewport in the onVisibleAreaChange event. The core difference lies in the returned component visible ratio (currentRatio): When measureFromViewport is set to true, the returned currentRatio value better aligns with the actual visual effect. The currentRatio value varies slightly on different devices.
+Starting from API version 22, this example demonstrates the effect comparison after setting the measureFromViewport parameter for the onVisibleAreaChange event. The main difference is reflected in the component visibility ratio (currentRatio) returned by the callback. When measureFromViewport is set to true, the returned component visibility ratio (currentRatio) better matches the actual effect. Because different devices have different screen pixel densities, the calculation of the visible area change event involves decimal rounding, and currentRatio may have slight differences.
 
 ```TypeScript
 @Entry
@@ -12069,10 +13290,10 @@ struct OnVisibleAreaChangeSample {
             expectedUpdateInterval: 500,
             measureFromViewport: true
           }, (isExpanding: boolean, currentRatio: number) => {
-            console.info(`onVisibleAreaApproximateChange1 isExpanding: ${isExpanding} currentRatio: ${currentRatio}`)
+            console.info(`onVisibleAreaApproximateChange1 isExpanding: ${isExpanding} currentRatio: ${currentRatio}`);
           })
           .onVisibleAreaChange([0.0, 1.0], (isExpanding: boolean, currentRatio: number) => {
-            this.ratio1 = currentRatio
+            this.ratio1 = currentRatio;
           }, true)
         }
         .backgroundColor(Color.Pink)
@@ -12097,10 +13318,10 @@ struct OnVisibleAreaChangeSample {
           // If measureFromViewport is not set (which will be treated as false) and clip(true) is not set for the parent component, any area of the child component that extends beyond its parent component's bounds is regarded as an invisible area.
           .onVisibleAreaApproximateChange({ ratios: [0.0, 1.0], expectedUpdateInterval: 500 },
             (isExpanding: boolean, currentRatio: number) => {
-              console.info(`onVisibleAreaApproximateChange2 isExpanding: ${isExpanding} currentRatio: ${currentRatio}`)
+              console.info(`onVisibleAreaApproximateChange2 isExpanding: ${isExpanding} currentRatio: ${currentRatio}`);
             })
           .onVisibleAreaChange([0.0, 1.0], (isExpanding: boolean, currentRatio: number) => {
-            this.ratio2 = currentRatio
+            this.ratio2 = currentRatio;
           })
         }
         .backgroundColor(Color.Pink)
@@ -12128,10 +13349,10 @@ struct OnVisibleAreaChangeSample {
             expectedUpdateInterval: 500,
             measureFromViewport: true
           }, (isExpanding: boolean, currentRatio: number) => {
-            console.info(`onVisibleAreaApproximateChange3 isExpanding: ${isExpanding} currentRatio: ${currentRatio}`)
+            console.info(`onVisibleAreaApproximateChange3 isExpanding: ${isExpanding} currentRatio: ${currentRatio}`);
           })
           .onVisibleAreaChange([0.0, 1.0], (isExpanding: boolean, currentRatio: number) => {
-            this.ratio3 = currentRatio
+            this.ratio3 = currentRatio;
           }, true)
         }
         .clip(true)
@@ -12190,14 +13411,14 @@ struct Index {
     }
     .onClick(() => {
       this.getUIContext()?.animateTo({ duration: 1000 }, () => {
-        this.isShow = !this.isShow
+        this.isShow = !this.isShow;
       })
     })
   }
 }
 ```
 
-This example demonstrates how to change the mouse cursor style using setCursor.
+This example sets the mouse cursor style using setCursor.
 
 ```TypeScript
 // xxx.ets
@@ -12206,9 +13427,6 @@ import { pointer } from '@kit.InputKit';
 @Entry
 @Component
 struct CursorControlExample {
-  @State text: string = '';
-  controller: TextInputController = new TextInputController()
-
   build() {
     Column() {
       Row()
@@ -12219,10 +13437,10 @@ struct CursorControlExample {
         .onHover((flag) => {
           if (flag) {
             // You are advised to use this.getUIContext().getCursorController().setCursor().
-            cursorControl.setCursor(pointer.PointerStyle.EAST)
+            cursorControl.setCursor(pointer.PointerStyle.EAST);
           } else {
             // You are advised to use this.getUIContext().getCursorController().restoreDefault().
-            cursorControl.restoreDefault()
+            cursorControl.restoreDefault();
           }
         })
       Row()
@@ -12233,10 +13451,10 @@ struct CursorControlExample {
         .onHover((flag) => {
           if (flag) {
             // You are advised to use this.getUIContext().getCursorController().setCursor().
-            cursorControl.setCursor(pointer.PointerStyle.WEST)
+            cursorControl.setCursor(pointer.PointerStyle.WEST);
           } else {
             // You are advised to use this.getUIContext().getCursorController().restoreDefault().
-            cursorControl.restoreDefault()
+            cursorControl.restoreDefault();
           }
         })
     }.width('100%')
@@ -12251,8 +13469,8 @@ This example demonstrates how to set an area change event for a Text component. 
 @Entry
 @Component
 struct AreaExample {
-  @State value: string = 'Text'
-  @State sizeValue: string = ''
+  @State value: string = 'Text';
+  @State sizeValue: string = '';
 
   build() {
     Column() {
@@ -12261,12 +13479,44 @@ struct AreaExample {
         .margin(30)
         .fontSize(20)
         .onClick(() => {
-          this.value = this.value + 'Text'
+          this.value = this.value + 'Text';
         })
         .onAreaChange((oldValue: Area, newValue: Area) => {
-          console.info(`Ace: on area change, oldValue is ${JSON.stringify(oldValue)} value is ${JSON.stringify(newValue)}`)
-          this.sizeValue = JSON.stringify(newValue)
+          console.info(`Ace: on area change, oldValue is ${JSON.stringify(oldValue)} newValue is ${JSON.stringify(newValue)}`);
+          this.sizeValue = JSON.stringify(newValue);
         })
+      Text('new area is: \n' + this.sizeValue).margin({ right: 30, left: 30 })
+    }
+    .width('100%').height('100%').margin({ top: 30 })
+  }
+}
+```
+
+In this example, by setting [expectedUpdateInterval](arkts-arkui-areachangeoptions-i.md), the [onAreaChange](#onareachange-1) event can be triggered when the Text layout changes, achieving the effect of interval callbacks.
+Since API version 26.0.0, [onAreaChange](#onareachange-1), [AreaChangeCallback](arkts-arkui-areachangecallback-t.md), and [AreaChangeOptions](arkts-arkui-areachangeoptions-i.md) are added.
+
+```TypeScript
+// xxx.ets
+@Entry
+@Component
+struct AreaExample {
+  @State value: string = 'Text';
+  @State sizeValue: string = '';
+
+  build() {
+    Column() {
+      Text(this.value)
+        .backgroundColor(Color.Green)
+        .margin(30)
+        .fontSize(20)
+        .onClick(() => {
+          this.value = this.value + 'Text';
+        })
+        // When expectedUpdateInterval is set, the area change callback is triggered at the set interval.
+        .onAreaChange((oldValue: Area, newValue: Area) => {
+          console.info(`ACE: on area change, oldValue is ${JSON.stringify(oldValue)} newValue is ${JSON.stringify(newValue)}`);
+          this.sizeValue = JSON.stringify(newValue);
+        }, {expectedUpdateInterval: 1000})
       Text('new area is: \n' + this.sizeValue).margin({ right: 30, left: 30 })
     }
     .width('100%').height('100%').margin({ top: 30 })
@@ -12281,7 +13531,7 @@ This example demonstrates how to use restoreId to set the ID of the List compone
 @Entry
 @Component
 struct RestoreIdExample {
-  private arr: number[] = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+  private arr: number[] = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
   build() {
     Column() {
       List({ space: 20 }) {
@@ -12297,13 +13547,14 @@ struct RestoreIdExample {
           }
         }, (item:number) => (item.toString()))
       }
-      .restoreId(1)
+      .restoreId(1);
     }
   }
 }
 ```
 
-This example demonstrates the style changes of the Text component when its state is pressed or disabled.
+This example shows the style changes of the Text component when the state is set to hovered, pressed, and disabled using [stateStyles](#statestyles).
+The hovered attribute is added to [stateStyles](#statestyles) as of API version 26.0.0.
 
 ```TypeScript
 // xxx.ets
@@ -12313,12 +13564,24 @@ struct StyleExample {
   @State isEnable: boolean = true
 
   @Styles
-  pressedStyles(): void {
-    .backgroundColor("#ED6F21")
+  hoveredStyles(): void {
+    .backgroundColor('#12db70')
     .borderRadius(10)
     .borderStyle(BorderStyle.Dashed)
     .borderWidth(2)
-    .borderColor("#33000000")
+    .borderColor('#33000000')
+    .width(120)
+    .height(30)
+    .opacity(1)
+  }
+
+  @Styles
+  pressedStyles(): void {
+    .backgroundColor('#ED6F21')
+    .borderRadius(10)
+    .borderStyle(BorderStyle.Dashed)
+    .borderWidth(2)
+    .borderColor('#33000000')
     .width(120)
     .height(30)
     .opacity(1)
@@ -12326,11 +13589,11 @@ struct StyleExample {
 
   @Styles
   disabledStyles(): void {
-    .backgroundColor("#E5E5E5")
+    .backgroundColor('#E5E5E5')
     .borderRadius(10)
     .borderStyle(BorderStyle.Solid)
     .borderWidth(2)
-    .borderColor("#2a4c1919")
+    .borderColor('#2a4c1919')
     .width(90)
     .height(25)
     .opacity(1)
@@ -12338,11 +13601,11 @@ struct StyleExample {
 
   @Styles
   normalStyles(): void {
-    .backgroundColor("#0A59F7")
+    .backgroundColor('#0A59F7')
     .borderRadius(10)
     .borderStyle(BorderStyle.Solid)
     .borderWidth(2)
-    .borderColor("#33000000")
+    .borderColor('#33000000')
     .width(100)
     .height(25)
     .opacity(1)
@@ -12350,7 +13613,7 @@ struct StyleExample {
 
   build() {
     Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center }) {
-      Text("normal")
+      Text('normal')
         .fontSize(14)
         .fontColor(Color.White)
         .opacity(0.5)
@@ -12360,8 +13623,25 @@ struct StyleExample {
         })
         .margin({ bottom: 20 })
         .textAlign(TextAlign.Center)
-      Text("pressed")
-        .backgroundColor("#0A59F7")
+      Text('hovered')
+        .backgroundColor('#0A59F7')
+        .borderRadius(20)
+        .borderStyle(BorderStyle.Dotted)
+        .borderWidth(2)
+        .borderColor(Color.Red)
+        .width(100)
+        .height(25)
+        .opacity(1)
+        .fontSize(14)
+        .fontColor(Color.White)
+        // stateStyles: sets the style of the component when the mouse pointer is hovered over the component.
+        .stateStyles({
+          hovered: this.hoveredStyles,
+        })
+        .margin({ bottom: 20 })
+        .textAlign(TextAlign.Center)
+      Text('pressed')
+        .backgroundColor('#0A59F7')
         .borderRadius(20)
         .borderStyle(BorderStyle.Dotted)
         .borderWidth(2)
@@ -12377,8 +13657,8 @@ struct StyleExample {
         })
         .margin({ bottom: 20 })
         .textAlign(TextAlign.Center)
-      Text(this.isEnable == true ? "effective" : "disabled")
-        .backgroundColor("#0A59F7")
+      Text(this.isEnable ? 'effective' : 'disabled')
+        .backgroundColor('#0A59F7')
         .borderRadius(20)
         .borderStyle(BorderStyle.Solid)
         .borderWidth(2)
@@ -12394,10 +13674,10 @@ struct StyleExample {
           disabled: this.disabledStyles,
         })
         .textAlign(TextAlign.Center)
-      Text("control disabled")
+      Text('control disabled')
         .onClick(() => {
-          this.isEnable = !this.isEnable
-          console.info(`${this.isEnable}`)
+          this.isEnable = !this.isEnable;
+          console.info(`${this.isEnable}`);
         })
     }
     .width(350).height(300)
@@ -12412,17 +13692,17 @@ This example demonstrates the style changes of the Radio component when its stat
 @Entry
 @Component
 struct Index {
-  @State value: boolean = false
-  @State value2: boolean = false
+  @State isRadio1Selected: boolean = false
+  @State isRadio2Selected: boolean = false
 
   @Styles
-  normalStyles(): void{
-    .backgroundColor("#E5E5E1")
+  normalStyles(): void {
+    .backgroundColor('#E5E5E1')
   }
 
   @Styles
-  selectStyles(): void{
-    .backgroundColor("#ED6F21")
+  selectStyles(): void {
+    .backgroundColor('#ED6F21')
     .borderWidth(2)
   }
 
@@ -12432,13 +13712,13 @@ struct Index {
         Text('Radio1')
           .fontSize(25)
         Radio({ value: 'Radio1', group: 'radioGroup1' })
-          .checked(this.value)
+          .checked(this.isRadio1Selected)
           .height(50)
           .width(50)
           .borderWidth(0)
           .borderRadius(30)
           .onClick(() => {
-            this.value = !this.value
+            this.isRadio1Selected = !this.isRadio1Selected;
           })
           .stateStyles({
             normal: this.normalStyles,
@@ -12451,7 +13731,7 @@ struct Index {
         Text('Radio2')
           .fontSize(25)
         Radio({ value: 'Radio2', group: 'radioGroup2' })
-          .checked($$this.value2)
+          .checked($$this.isRadio2Selected)
           .height(50)
           .width(50)
           .borderWidth(0)
@@ -12467,7 +13747,7 @@ struct Index {
 }
 ```
 
-This example demonstrates the style changes of the Builder component when it is in pressed state.
+This example shows the style change of the custom component in @Builder when the state is pressed.
 
 ```TypeScript
 import { ComponentContent } from '@kit.ArkUI';
@@ -12504,18 +13784,18 @@ struct Index {
 
   build() {
     Column() {
-      Button().margin({ top: 200 }).onClick((event: ClickEvent) => {
+      Button().margin({ top: 200 }).onClick(() => {
         this.getUIContext()
           .getPromptAction()
           .openCustomDialog(this.contentNode)
           .then(() => {
-            console.info('OpenCustomDialog complete.')
+            console.info('OpenCustomDialog complete.');
           })
           .catch((error: BusinessError) => {
-            let message = (error as BusinessError).message;
-            let code = (error as BusinessError).code;
+            let message = error.message;
+            let code = error.code;
             console.error(`OpenCustomDialog args error code is ${code}, message is ${message}`);
-          })
+          });
       })
     }
     .width('100%')
@@ -12524,7 +13804,7 @@ struct Index {
 }
 ```
 
-This example applies different image effects.
+Sets image effects, including shadow, grayscale, highlight, saturation, contrast, image inversion, color blending, hue rotation, and so on.
 
 ```TypeScript
 // xxx.ets
@@ -12579,7 +13859,7 @@ struct ImageEffectsExample {
       // Replace $r("app.media.image") with the image resource file you use.
       Image($r('app.media.image')).width('90%').height(30).saturate(0.7)
 
-      // Apply the contrast effect. If the value is 1, the source image is displayed. If the value is greater than 1, a larger value indicates a higher contrast and a clearer image. If the value is less than 1, a smaller value indicates a lower contrast is.
+      // Apply the contrast effect. If the value is 1, the source image is displayed. If the value is greater than 1, a larger value indicates a higher contrast and a clearer image. If the value is less than 1, a smaller value indicates a lower contrast.
       Text('contrast').fontSize(15).fontColor(0xCCCCCC).width('90%')
       // Replace $r("app.media.image") with the image resource file you use.
       Image($r('app.media.image')).width('90%').height(30).contrast(2.0)
@@ -12955,8 +14235,8 @@ struct Index {
 }
 ```
 
-This example demonstrates how to enable/disable double-sided rendering using [doubleSided](arkts-arkui-commonmethod-c.md#doublesided).
-Since API version 26.0.0, the doubleSided method is added.
+This example demonstrates how to use [doubleSided](arkts-arkui-commonmethod-c.md#doublesided) to set whether the component is double-sided.
+The doubleSided method is added since API version 26.0.0.
 
 ```TypeScript
 // xxx.ets
@@ -12968,7 +14248,7 @@ struct DoubleSided {
   @State isDoubleSided: boolean = true;
   build() {
     Column({space: 30}) {
-      Text('Double-Sided Rendering Verification (Back-Face Culling)')
+      Text('DoubleSided back-face culling verification')
         .fontSize(24)
         .fontWeight(FontWeight.Bold)
         .fontColor(Color.White)
@@ -12987,10 +14267,10 @@ struct DoubleSided {
       }
       .width(300)
       .height(300)
-      Text('Y-axis rotation: ${Math.round(this.angleY)}°`)
+      Text(`Y-axis rotation: ${Math.round(this.angleY)}°`)
         .fontSize(16)
         .fontColor(Color.White)
-      Button(this.isAnimating ? 'Reset' : 'Flip')
+      Button(this.isAnimating ? 'Restore' : 'Flip')
         .onClick(() => {
           if (this.isAnimating) {
             this.angleY = 0
@@ -13227,7 +14507,7 @@ struct ListExample {
 }
 ```
 
-This example demonstrates how to use the onAccessibilityHover event to customize a button in accessibility mode.
+This example demonstrates how to use the onAccessibilityHover event to configure a button in accessibility mode.
 
 ```TypeScript
 // xxx.ets
@@ -13242,8 +14522,8 @@ struct OnAccessibilityHoverEventExample {
       Button(this.hoverText)
         .width(180).height(80)
         .backgroundColor(this.color)
-        .onAccessibilityHover((isHover: boolean, event: AccessibilityHoverEvent) => {
-          // Use the onAccessibilityHover event to dynamically change the text content and background color of a button when the finger is hovered on it.
+        .onAccessibilityHover((isHover: boolean) => {
+          // Dynamically modify the text content and background color of the button when the accessibility hover event (finger touch enter/exit) occurs through the onAccessibilityHover event.
           if (isHover) {
             this.hoverText = 'hover';
             this.color = Color.Pink;
@@ -13258,27 +14538,27 @@ struct OnAccessibilityHoverEventExample {
 ```
 
 This example shows how to capture touch events from a component that cannot receive focus in accessibility mode using the onAccessibilityHoverTransparent API and display event details in the text area below.
-Starting from API version 20, the [onAccessibilityHoverTransparent](arkts-arkui-commonmethod-c.md#onaccessibilityhovertransparent) API with the input parameter AccessibilityTransparentCallback has been added.
+Starting from API version 20, the [onAccessibilityHoverTransparent](arkts-arkui-commonmethod-c.md#onaccessibilityhovertransparent) API with the input parameter type AccessibilityTransparentCallback has been added.
 
 ```TypeScript
 @Entry
 @Component
-struct TestExample {
+struct OnAccessibilityHoverTransparentExample {
   @State text: string = '';
   @State eventType: string = '';
 
   build() {
     Column({ space: 50 }) {
       Column() {
-        Button("Test Button")
-          .accessibilityLevel("no")
+        Button('Test Button')
+          .accessibilityLevel('no')
       }.margin({ top: 20 })
 
       Text(this.text)
     }
     .width('100%')
     .height('100%')
-    .onAccessibilityHoverTransparent((event?: TouchEvent) => {
+    .onAccessibilityHoverTransparent((event: TouchEvent) => {
       if (event) {
         // Triggered on finger press.
         if (event.type === TouchType.HOVER_ENTER) {
@@ -13306,12 +14586,11 @@ struct TestExample {
 }
 ```
 
-This example demonstrates how to set draggable and droppable areas for certain components, such as Image and Text.
+Example 1 shows how to set the drag and drop area for some components (such as Image and Text).
 
 ```TypeScript
 // xxx.ets
 import { unifiedDataChannel, uniformTypeDescriptor } from '@kit.ArkData';
-import { BusinessError } from '@kit.BasicServicesKit';
 
 @Entry
 @Component
@@ -13321,22 +14600,11 @@ struct Index {
   @State imageWidth: number = 100;
   @State imageHeight: number = 100;
   @State imgState: Visibility = Visibility.Visible;
-  @State abstractContent: string = "abstract";
-  @State textContent: string = "";
+  @State abstractContent: string = 'abstract';
+  @State textContent: string = '';
   @State backGroundColor: Color = Color.Transparent;
 
-  @Builder
-  pixelMapBuilder() {
-    Column() {
-      // Replace $r('app.media.icon') with the image resource file you use.
-      Image($r('app.media.icon'))
-        .width(120)
-        .height(120)
-        .backgroundColor(Color.Yellow)
-    }
-  }
-
-  // Obtain UDMF data.
+  // Obtain the Udmf data.
   getDataFromUdmfRetry(event: DragEvent, callback: (data: DragEvent) => void) {
     try {
       let data: UnifiedData = event.getData();
@@ -13349,13 +14617,13 @@ struct Index {
       }
       callback(event);
       return true;
-    } catch (e) {
-      console.error(`getData failed, code = ${(e as BusinessError).code}, message = ${(e as BusinessError).message}`);
+    } catch (error) {
+      console.error(`Failed to get data. Code: ${error.code}, message: ${error.message}`);
       return false;
     }
   }
 
-  // Automatically retry after the first failure to obtain UDMF data.
+  // Automatically retry after the first attempt to obtain the Udmf data fails.
   getDataFromUdmf(event: DragEvent, callback: (data: DragEvent) => void) {
     if (this.getDataFromUdmfRetry(event, callback)) {
       return;
@@ -13365,8 +14633,8 @@ struct Index {
     }, 1500);
   }
 
-  // Change the background color based on the state before drag.
-  private PreDragChange(preDragStatus: PreDragStatus): void {
+  // Change the background color based on the different stages before the drag starts.
+  private preDragChange(preDragStatus: PreDragStatus): void {
     if (preDragStatus == PreDragStatus.READY_TO_TRIGGER_DRAG_ACTION) {
       this.backGroundColor = Color.Red;
     } else if (preDragStatus == PreDragStatus.ACTION_CANCELED_BEFORE_DRAG
@@ -13384,7 +14652,7 @@ struct Index {
           .height(40)
           .margin(10)
           .backgroundColor('#008888')
-        // Replace $r('app.media.icon') with the image resource file you use.
+        // $r('app.media.icon') needs to be replaced with the image resource file required by the developer.
         Image($r('app.media.icon'))
           .width(100)
           .height(100)
@@ -13392,7 +14660,7 @@ struct Index {
           .margin({ left: 15 })
           .visibility(this.imgState)
           .onDragEnd((event) => {
-            // The result value obtained from onDragEnd is set in onDrop of the drop target.
+            // The result value obtained in onDragEnd is set in the receiver's onDrop.
             if (event.getResult() === DragResult.DRAG_SUCCESSFUL) {
               this.getUIContext().getPromptAction().showToast({ duration: 100, message: 'Drag Success' });
             } else if (event.getResult() === DragResult.DRAG_FAILED) {
@@ -13410,7 +14678,7 @@ struct Index {
           .width('100%')
           .height(50)
           .draggable(true)
-        Search({ placeholder: 'please input you word' })
+        Search({ placeholder: 'please input your word' })
           .searchButton('Search')
           .width('100%')
           .height(80)
@@ -13432,7 +14700,7 @@ struct Index {
           (event as DragEvent).setData(new unifiedDataChannel.UnifiedData(data));
         })
         .onPreDrag((status: PreDragStatus) => {
-          this.PreDragChange(status);
+          this.preDragChange(status);
         })
         .backgroundColor(this.backGroundColor)
       }.width('45%')
@@ -13461,9 +14729,9 @@ struct Index {
               this.targetImage = (records[0] as unifiedDataChannel.Image).imageUri;
               event.useCustomDropAnimation = false;
               this.imgState = Visibility.None;
-              // If result is explicitly set to successful, the value is passed in to onDragEnd of the drag source.
+              // Explicitly set result to successful to pass the value to the drag initiator's onDragEnd.
               event.setResult(DragResult.DRAG_SUCCESSFUL);
-            })
+            });
           })
 
         Text(this.targetText)
@@ -13477,7 +14745,7 @@ struct Index {
               let records: Array<unifiedDataChannel.UnifiedRecord> = event.getData().getRecords();
               let plainText: unifiedDataChannel.PlainText = records[0] as unifiedDataChannel.PlainText;
               this.targetText = plainText.textContent;
-            })
+            });
           })
 
         Column() {
@@ -13495,18 +14763,18 @@ struct Index {
             let plainText: unifiedDataChannel.PlainText = records[0] as unifiedDataChannel.PlainText;
             this.abstractContent = plainText.abstract as string;
             this.textContent = plainText.textContent;
-          })
+          });
         })
       }.width('45%')
       .height('100%')
-      .margin({ left: '5%' })
+      .margin({ left: '5%' });
     }
     .height('100%')
   }
 }
 ```
 
-In API version 18 and later versions, this example demonstrates how to implement a drop animation by using the custom API [executeDropAnimation](arkts-arkui-dragevent-i.md#executedropanimation).
+Since API version 18, Example 2 demonstrates how to implement a custom drop animation through the [executeDropAnimation](arkts-arkui-dragevent-i.md#executedropanimation) API.
 
 ```TypeScript
 import { unifiedDataChannel, uniformTypeDescriptor } from '@kit.ArkData';
@@ -13530,7 +14798,7 @@ struct DropAnimationExample {
   build() {
     Row() {
       Column() {
-        // Replace $r('app.media.app_icon') with the image resource file you use.
+        // Replace $r('app.media.app_icon') with the image resource file required by the developer.
         Image($r('app.media.app_icon'))
           .width(100)
           .height(100)
@@ -13566,7 +14834,7 @@ struct DropAnimationExample {
         .margin({ left: 15 })
         .border({ color: Color.Black, width: 1 })
         .allowDrop([uniformTypeDescriptor.UniformDataType.IMAGE])
-        // onDrop callback, which is used to obtain the information (size included) of the dragged image, update the display, and enable and execute the custom drop animation.
+        // In the onDrop callback, obtain the information and size of the dragged image, update the display, and enable and execute the custom drop animation.
         .onDrop((dragEvent: DragEvent) => {
           let records: Array<unifiedDataChannel.UnifiedRecord> = dragEvent.getData().getRecords();
           let rect: Rectangle = dragEvent.getPreviewRect();
@@ -13574,7 +14842,7 @@ struct DropAnimationExample {
           this.imageHeight = Number(rect.height);
           this.targetImage = (records[0] as unifiedDataChannel.Image).imageUri;
           dragEvent.useCustomDropAnimation = true;
-          dragEvent.executeDropAnimation(this.customDropAnimation)
+          dragEvent.executeDropAnimation(this.customDropAnimation);
         })
         .width(this.imageWidth)
         .height(this.imageHeight)
@@ -13587,27 +14855,27 @@ struct DropAnimationExample {
 }
 ```
 
-In API version 15 and later versions, this example shows how to obtain data asynchronously through drag-and-drop by using the [startDataLoading](arkts-arkui-dragevent-i.md#startdataloading) API.
+Since API version 15, Example 3 demonstrates asynchronously obtaining data during drag through [startDataLoading](arkts-arkui-dragevent-i.md#startdataloading).
 
 ```TypeScript
 import { unifiedDataChannel, uniformTypeDescriptor } from '@kit.ArkData';
-import { fileUri, fileIo as fs } from '@kit.CoreFileKit';
+import { fileUri, fileIo } from '@kit.CoreFileKit';
 import { common } from '@kit.AbilityKit';
 
 @Entry
 @Component
 struct ImageExample {
-  @State uri: string = "";
+  @State uri: string = '';
   @State blockArr: string[] = [];
   uiContext = this.getUIContext();
   udKey: string = '';
 
   build() {
     Column() {
-      Text('Image drag and drop')
+      Text('Image drag')
         .fontSize('30dp')
       Flex({ direction: FlexDirection.Row, alignItems: ItemAlign.Center, justifyContent: FlexAlign.SpaceAround }) {
-        // Replace $r('app.media.startIcon') with the image resource file you use.
+        // Replace $r('app.media.startIcon') with the image resource file required by the developer.
         Image($r('app.media.startIcon'))
           .width(100)
           .height(100)
@@ -13619,9 +14887,13 @@ struct ImageExample {
               let data = context.resourceManager.getMediaContentSync($r('app.media.startIcon').id, 120);
               const arrayBuffer: ArrayBuffer = data.buffer.slice(data.byteOffset, data.byteLength + data.byteOffset);
               let filePath = context.filesDir + '/test.png';
-              let file = fs.openSync(filePath, fs.OpenMode.CREATE | fs.OpenMode.READ_WRITE);
-              fs.writeSync(file.fd, arrayBuffer);
-              // Obtain the image URI.
+              let file = fileIo.openSync(filePath, fileIo.OpenMode.CREATE | fileIo.OpenMode.READ_WRITE);
+              try {
+                fileIo.writeSync(file.fd, arrayBuffer);
+              } finally {
+                fileIo.closeSync(file.fd);
+              }
+              // Obtain the URI of the image.
               let uri = fileUri.getUriFromPath(filePath);
               let image: unifiedDataChannel.Image = new unifiedDataChannel.Image();
               image.imageUri = uri;
@@ -13634,7 +14906,7 @@ struct ImageExample {
 
       Row() {
         Column() {
-          Text('Valid drop target')
+          Text('Droppable area')
             .fontSize('15dp')
             .height('10%')
           List() {
@@ -13652,20 +14924,20 @@ struct ImageExample {
           .height('90%')
           .width('100%')
           .onDrop((event?: DragEvent, extraParams?: string) => {
-            console.info("enter onDrop")
+            console.info('enter onDrop');
             let context = this.uiContext.getHostContext() as common.UIAbilityContext;
             let pathDir: string = context.distributedFilesDir;
             let destUri = fileUri.getUriFromPath(pathDir);
-            // Create DataProgressListener to monitor the data transfer progress.
+            // Create a DataProgressListener to listen for data transfer progress.
             let progressListener: unifiedDataChannel.DataProgressListener =
               (progress: unifiedDataChannel.ProgressInfo, dragData: UnifiedData | null) => {
                 if (dragData != null) {
-                  // Obtain the data array.
+                  // Obtain the data record array.
                   let arr: Array<unifiedDataChannel.UnifiedRecord> = dragData.getRecords();
                   if (arr.length > 0) {
-                    // Check whether the first record is of the IMAGE type.
+                    // Check whether the type of the first record is IMAGE.
                     if (arr[0].getType() === uniformTypeDescriptor.UniformDataType.IMAGE) {
-                      // If the type matches, record the URI.
+                      // The type matches. Record the data URI.
                       let image = arr[0] as unifiedDataChannel.Image;
                       this.uri = image.imageUri;
                       this.blockArr.splice(JSON.parse(extraParams as string).insertIndex, 0, this.uri);
@@ -13678,7 +14950,7 @@ struct ImageExample {
                 }
                 console.info(`percentage: ${progress.progress}`);
               };
-            // Set the asynchronous data loading parameters.
+            // Set the asynchronous data loading parameter item.
             let options: DataSyncOptions = {
               destUri: destUri,
               fileConflictOptions: unifiedDataChannel.FileConflictOptions.OVERWRITE,
@@ -13690,12 +14962,12 @@ struct ImageExample {
               this.udKey = (event as DragEvent).startDataLoading(options);
               console.info(`udKey: ${this.udKey}`);
             } catch (e) {
-              console.error(`startDataLoading errorCode: ${e.code}, errorMessage: ${e.message}`);
+              console.error(`Failed to start data loading. Code: ${e.code}, message: ${e.message}`);
             }
           }, { disableDataPrefetch: true })
         }
-        .height("50%")
-        .width("90%")
+        .height('50%')
+        .width('90%')
         .border({ width: 1 })
       }
 
@@ -13704,7 +14976,7 @@ struct ImageExample {
           try {
             this.getUIContext().getDragController().cancelDataLoading(this.udKey);
           } catch (e) {
-            console.error(`cancelDataLoading errorCode: ${e.code}, errorMessage: ${e.message}`);
+            console.error(`Failed to cancel data loading. Code: ${e.code}, message: ${e.message}`);
           }
         })
         .margin({ top: 10 })
@@ -13713,11 +14985,10 @@ struct ImageExample {
 }
 ```
 
-In API version 20 and later versions, this example shows how to obtain the drag event by calling the onDragXXX (not onDragEnd) API and obtain the screen ID by calling the [getDisplayId](#getdisplayid20) API in the drag event.
+Since API version 20, Example 4 shows how to obtain the drag event through the onDragXXX (onDragEnd not supported) API and call the [getDisplayId](#getdisplayid20) API of the drag event to obtain the screen ID.
 
 ```TypeScript
 import { unifiedDataChannel, uniformTypeDescriptor } from '@kit.ArkData';
-import { BusinessError } from '@kit.BasicServicesKit';
 
 @Entry
 @Component
@@ -13733,17 +15004,6 @@ struct Index {
   @State leaveDisplayId: number = -1;
   @State dropDisplayId: number = -1;
 
-  @Builder
-  pixelMapBuilder() {
-    Column() {
-      // Replace $r('app.media.app_icon') with the image resource file you use.
-      Image($r('app.media.app_icon'))
-        .width(120)
-        .height(120)
-        .backgroundColor(Color.Yellow)
-    }
-  }
-
   getDataFromUdmfRetry(event: DragEvent, callback: (data: DragEvent) => void) {
     try {
       let data: UnifiedData = event.getData();
@@ -13756,8 +15016,8 @@ struct Index {
       }
       callback(event);
       return true;
-    } catch (e) {
-      console.error(`getData failed, code = ${(e as BusinessError).code}, message = ${(e as BusinessError).message}`);
+    } catch (error) {
+      console.error(`Failed to get data. Code: ${error.code}, message: ${error.message}`);
       return false;
     }
   }
@@ -13771,7 +15031,7 @@ struct Index {
     }, 1500);
   }
 
-  private PreDragChange(preDragStatus: PreDragStatus): void {
+  private preDragChange(preDragStatus: PreDragStatus): void {
     if (preDragStatus == PreDragStatus.READY_TO_TRIGGER_DRAG_ACTION) {
       this.backGroundColor = Color.Red;
     } else if (preDragStatus == PreDragStatus.ACTION_CANCELED_BEFORE_DRAG
@@ -13789,7 +15049,7 @@ struct Index {
           .height(40)
           .margin(10)
           .backgroundColor('#008888')
-        // Replace $r('app.media.startIcon') with the image resource file you use.
+        // Replace $r('app.media.startIcon') with the image resource file required by the developer.
         Image($r('app.media.startIcon'))
           .width(100)
           .height(100)
@@ -13835,7 +15095,7 @@ struct Index {
           .draggable(true)
           .margin({ left: 15 })
           .onPreDrag((status: PreDragStatus) => {
-            this.PreDragChange(status);
+            this.preDragChange(status);
           })
       }.width('45%')
       .height('100%')
@@ -13878,7 +15138,7 @@ struct Index {
               event.useCustomDropAnimation = false;
               this.imgState = Visibility.None;
               event.setResult(DragResult.DRAG_SUCCESSFUL);
-            })
+            });
           })
       }.width('45%')
       .height('100%')
@@ -13889,7 +15149,7 @@ struct Index {
 }
 ```
 
-In API version 20 and later versions, this example shows how to obtain the drag event by calling the onDragXXX API, obtain the package name by calling the [getDragSource](arkts-arkui-dragevent-i.md#getdragsource) API in the drag event, and obtain the cross-device status by calling the isRemote API.
+Starting from API version 20, Example 5 shows how to obtain a drag event through the onDragXXX API, call the [getDragSource](arkts-arkui-dragevent-i.md#getdragsource) API of the drag event to obtain the package name, and call the isRemote API to determine whether it is a cross-device drag.
 
 ```TypeScript
 @Entry
@@ -13911,7 +15171,7 @@ struct Index {
             .height(40)
             .margin(10)
             .backgroundColor('#008888')
-          // Replace $r('app.media.startIcon') with the image resource file you use.
+          // Replace $r('app.media.startIcon') with the image resource file required by the developer.
           Image($r('app.media.startIcon'))
             .onDragStart((event) => {
               this.startDragSource = (event as DragEvent).getDragSource();
@@ -13968,14 +15228,13 @@ struct Index {
 }
 ```
 
-In API version 20 and later versions, this example demonstrates how to register a callback by calling the [onDragSpringLoading](arkts-arkui-commonmethod-c.md#ondragspringloading) API and obtain the context (current status and notification sequence) by calling the [SpringLoadingContext](#springloadingcontext20) API.
+Since API version 20, Example 6 demonstrates registering a callback through the [onDragSpringLoading](arkts-arkui-commonmethod-c.md#ondragspringloading) API and obtaining context information (current state and notification sequence) through [SpringLoadingContext](#springloadingcontext20) in the callback.
 
 ```TypeScript
 // xxx.ets
 @Entry
 @Component
 struct Index {
-  @State targetText: string = 'Drag Text';
   @State state: number = 0;
   @State currentNotifySequence: number = 0;
   @State config: DragSpringLoadingConfiguration = {
@@ -13994,19 +15253,19 @@ struct Index {
           .height(40)
           .margin(10)
           .backgroundColor('#008888')
-        // Replace $r('app.media.startIcon') with the image resource file you use.
+        // Replace $r('app.media.startIcon') with the image resource file required by the developer.
         Image($r('app.media.startIcon'))
-          .id("ori_image")
+          .id('ori_image')
           .width(100)
           .height(100)
           .draggable(true)
           .margin({ left: 15 })
-        Text('Current state: ' + this.state)
+        Text('Current state is: ' + this.state)
           .fontSize(18)
           .width('100%')
           .height(40)
           .margin(10)
-        Text('Current notification sequence: ' + this.currentNotifySequence)
+        Text('Current notification sequence is: ' + this.currentNotifySequence)
           .fontSize(18)
           .width('100%')
           .height(40)
@@ -14022,8 +15281,8 @@ struct Index {
           .height(40)
           .margin(10)
           .backgroundColor('#008888')
-          .id("text")
-        Image("")
+          .id('text')
+        Image('')
           .width(100)
           .height(100)
           .draggable(true)
@@ -14041,7 +15300,7 @@ struct Index {
         this.state = context.state;
         this.currentNotifySequence = context.currentNotifySequence;
       }, this.config)
-      .id("column")
+      .id('column')
       .backgroundColor(Color.Grey)
     }
     .height('100%')
@@ -14049,27 +15308,27 @@ struct Index {
 }
 ```
 
-In API version 20 and later versions, this example shows how to call [setDataLoadParams](arkts-arkui-dragevent-i.md#setdataloadparams) in [onDragStart](#ondragstart) to delay data provision and call [startDataLoading](arkts-arkui-dragevent-i.md#startdataloading) in [onDrop](#ondrop) to asynchronously obtain data.
+Starting from API version 20, Example 7 demonstrates calling [setDataLoadParams](arkts-arkui-dragevent-i.md#setdataloadparams) in [onDragStart](#ondragstart) to delay data provision, and calling [startDataLoading](arkts-arkui-dragevent-i.md#startdataloading) in [onDrop](#ondrop) to obtain data asynchronously.
 
 ```TypeScript
 import { unifiedDataChannel, uniformDataStruct, uniformTypeDescriptor } from '@kit.ArkData';
-import { fileUri, fileIo as fs } from '@kit.CoreFileKit';
+import { fileUri, fileIo } from '@kit.CoreFileKit';
 import { common } from '@kit.AbilityKit';
 
 @Entry
 @Component
 struct VideoExample {
-  @State uri: string = "";
+  @State uri: string = '';
   @State blockArr: string[] = [];
   uiContext = this.getUIContext();
   udKey: string = '';
 
   build() {
     Column() {
-      Text('Video drag and drop')
+      Text('video drag')
         .fontSize('30dp')
       Flex({ direction: FlexDirection.Row, alignItems: ItemAlign.Center, justifyContent: FlexAlign.SpaceAround }) {
-        // Replace **$rawfile('test1.mp4')** with the resource file you use.
+        // $rawfile('test1.mp4') needs to be replaced with the resource file required by the developer.
         Video({ src: $rawfile('test1.mp4'), controller: new VideoController() })
           .width(200)
           .height(200)
@@ -14078,6 +15337,7 @@ struct VideoExample {
           .onDragStart((event: DragEvent) => {
             const context: Context | undefined = this.uiContext.getHostContext();
             if (context) {
+              // Define the delayed data loading callback, which reads the video resource and encapsulates it into UnifiedData when the target requests data.
               let loadHandler: unifiedDataChannel.DataLoadHandler = (acceptableInfo) => {
                 console.info(`acceptableInfo recordCount ${acceptableInfo?.recordCount}`);
                 if (acceptableInfo?.types) {
@@ -14087,25 +15347,27 @@ struct VideoExample {
                 }
                 let data = context.resourceManager.getRawFdSync('test1.mp4');
                 let filePath = context.filesDir + '/test1.mp4';
-                let file: fs.File = null!;
+                let file: fileIo.File = null!;
                 try {
-                  file = fs.openSync(filePath, fs.OpenMode.CREATE | fs.OpenMode.READ_WRITE);
+                  file = fileIo.openSync(filePath, fileIo.OpenMode.CREATE | fileIo.OpenMode.READ_WRITE);
                   let bufferSize = data.length as number;
                   let buf = new ArrayBuffer(bufferSize);
-                  fs.readSync(data.fd, buf, { offset: data.offset, length: bufferSize });
-                  fs.writeSync(file.fd, buf, { offset: 0, length: bufferSize });
+                  fileIo.readSync(data.fd, buf, { offset: data.offset, length: bufferSize });
+                  fileIo.writeSync(file.fd, buf, { offset: 0, length: bufferSize });
                 } catch (error) {
-                  console.error(`openSync errorCode: ${error.code}, errorMessage: ${error.message}`);
+                  console.error(`Failed to open file. Code: ${error.code}, message: ${error.message}`);
                 } finally {
-                  fs.closeSync(file.fd);
+                  if (file !== null) {
+                    fileIo.closeSync(file.fd);
+                  }
                 }
-                context.resourceManager.closeRawFdSync('test1.mp4')
+                context.resourceManager.closeRawFdSync('test1.mp4');
                 this.uri = fileUri.getUriFromPath(filePath);
                 let videoMp: uniformDataStruct.FileUri = {
                   uniformDataType: 'general.file-uri',
                   oriUri: this.uri,
                   fileType: 'general.video',
-                }
+                };
                 let unifiedRecord = new unifiedDataChannel.UnifiedRecord();
                 let unifiedData = new unifiedDataChannel.UnifiedData();
                 unifiedRecord.addEntry(uniformTypeDescriptor.UniformDataType.FILE_URI, videoMp);
@@ -14123,7 +15385,7 @@ struct VideoExample {
 
       Row() {
         Column() {
-          Text('Valid drop target')
+          Text('Droppable area')
             .fontSize('15dp')
             .height('10%')
           List() {
@@ -14161,7 +15423,7 @@ struct VideoExample {
                 console.info(`percentage: ${progress.progress}`);
               };
             let info: unifiedDataChannel.DataLoadInfo =
-              { types: new Set([uniformTypeDescriptor.UniformDataType.VIDEO]), recordCount: 100 }
+              { types: new Set([uniformTypeDescriptor.UniformDataType.VIDEO]), recordCount: 100 };
             let options: DataSyncOptions = {
               destUri: destUri,
               fileConflictOptions: unifiedDataChannel.FileConflictOptions.OVERWRITE,
@@ -14170,24 +15432,25 @@ struct VideoExample {
               acceptableInfo: info,
             }
             try {
+              // Start asynchronous data loading and save the data loading identifier for subsequent cancellation of the transfer.
               this.udKey = (event as DragEvent).startDataLoading(options);
               console.info(`udKey: ${this.udKey}`);
-            } catch (e) {
-              console.error(`startDataLoading errorCode: ${e.code}, errorMessage: ${e.message}`);
+            } catch (error) {
+              console.error(`startDataLoading errorCode: ${error.code}, errorMessage: ${error.message}`);
             }
           }, { disableDataPrefetch: true })
         }
-        .height("50%")
-        .width("90%")
+        .height('50%')
+        .width('90%')
         .border({ width: 1 })
       }
 
-      Button('Cancel Data Transfer')
+      Button('Cancel data transfer')
         .onClick(() => {
           try {
             this.getUIContext().getDragController().cancelDataLoading(this.udKey);
-          } catch (e) {
-            console.error(`cancelDataLoading errorCode: ${e.code}, errorMessage: ${e.message}`);
+          } catch (error) {
+            console.error(`cancelDataLoading errorCode: ${error.code}, errorMessage: ${error.message}`);
           }
         })
         .margin({ top: 10 })
@@ -14196,7 +15459,131 @@ struct VideoExample {
 }
 ```
 
-This example demonstrates how to set different widths for various device types and individually configure the span and offset attributes for components. It also shows how to implement the same effect using useSizeType for sm-sized devices.
+This example uses the [autoHideComponentUniqueIds](#attributes) attribute of DragEvent to automatically hide a specified component after a drag is successfully initiated.
+Since API version 26.0.0, DragEvent adds the autoHideComponentUniqueIds attribute.
+
+```TypeScript
+import { unifiedDataChannel } from '@kit.ArkData';
+
+@Entry
+@Component
+struct DragEventAutoHideSample {
+  @State sourceVisibility: Visibility = Visibility.Visible;
+  @State badgeVisibility: Visibility = Visibility.Visible;
+  @State statusText: string = 'Status: Waiting for drag';
+
+  private buildData(textValue: string): unifiedDataChannel.UnifiedData {
+    let plainText = new unifiedDataChannel.PlainText();
+    plainText.textContent = textValue;
+    plainText.abstract = textValue;
+    return new unifiedDataChannel.UnifiedData(plainText);
+  }
+
+  private collectHideIds(): number[] {
+    let hideIds: number[] = [];
+    let sourceNode = this.getUIContext().getFrameNodeById('drag_source');
+    let badgeNode = this.getUIContext().getFrameNodeById('drag_badge');
+    if (sourceNode?.getUniqueId() !== undefined) {
+      hideIds.push(sourceNode.getUniqueId());
+    }
+    if (badgeNode?.getUniqueId() !== undefined) {
+      hideIds.push(badgeNode.getUniqueId());
+    }
+    return hideIds;
+  }
+
+  private hideTargets(): void {
+    this.sourceVisibility = Visibility.Hidden;
+    this.badgeVisibility = Visibility.Hidden;
+    this.statusText = 'Status: Dragging, target component hidden';
+  }
+
+  private restoreTargets(): void {
+    this.sourceVisibility = Visibility.Visible;
+    this.badgeVisibility = Visibility.Visible;
+    this.statusText = 'Status: Drag ended, component restored';
+  }
+
+  build() {
+    Column({ space: 12 }) {
+      Text(this.statusText)
+        .width('100%')
+        .fontSize(14)
+        .fontColor('#BF360C')
+
+      Row({ space: 12 }) {
+        Column() {
+          Text('Drag source')
+            .fontColor(Color.White)
+            .fontWeight(FontWeight.Medium)
+          Text('id: drag_source')
+            .fontSize(10)
+            .fontColor('#E8F5E9')
+        }
+          .id('drag_source')
+          .width(140)
+          .height(90)
+          .backgroundColor('#2E7D32')
+          .borderRadius(12)
+          .justifyContent(FlexAlign.Center)
+          .visibility(this.sourceVisibility)
+          .draggable(true)
+          .onDragStart((event: DragEvent) => {
+            let hideIds = this.collectHideIds();
+            event.autoHideComponentUniqueIds = hideIds;
+            event.setData(this.buildData('drag event auto hide test data'));
+            this.hideTargets();
+            return () => {
+              Text('Drag preview')
+            };
+          })
+          .onDragEnd(() => {
+            this.restoreTargets();
+          })
+
+        Column() {
+          Text('Follow hidden component')
+            .fontColor(Color.White)
+            .fontWeight(FontWeight.Medium)
+          Text('id: drag_badge')
+            .fontSize(10)
+            .fontColor('#E3F2FD')
+        }
+          .id('drag_badge')
+          .width(140)
+          .height(90)
+          .backgroundColor('#1565C0')
+          .borderRadius(12)
+          .justifyContent(FlexAlign.Center)
+          .visibility(this.badgeVisibility)
+      }
+
+      Column() {
+        Text('Drop target')
+          .fontWeight(FontWeight.Medium)
+        Text('Restore the component display after release')
+          .fontSize(10)
+          .fontColor('#6D4C41')
+      }
+        .width('100%')
+        .height(120)
+        .backgroundColor('#FFE082')
+        .borderRadius(12)
+        .justifyContent(FlexAlign.Center)
+        .onDrop(() => {
+          this.restoreTargets();
+        })
+    }
+    .width('100%')
+    .padding(16)
+  }
+}
+```
+
+Set the grid configuration for different device types. gridSpan and gridOffset are used to set the default occupied column count and offset column count, and they take effect only when the corresponding size is not configured in useSizeType. In the example, useSizeType configures the value for the sm size (span: 2, offset: 1). To achieve the same grid effect for other unconfigured sizes, set the default values through gridSpan and gridOffset.
+> NOTE
+> 
+> This example demonstrates the usage of deprecated APIs. It is recommended to use the new components [GridCol](ts-container-gridcol.md) and [GridRow](ts-container-gridrow.md) to implement the grid layout.
 
 ```TypeScript
 // xxx.ets
@@ -14313,7 +15700,7 @@ struct HoverEventExample {
 }
 ```
 
-This example demonstrates how to configure the [onHoverMove](arkts-arkui-commonmethod-c.md#onhovermove) event on a button, available since API version 15. When a stylus hovers over the button, the UI displays the current stylus position.
+Since API version 15, this example sets the [onHoverMove](arkts-arkui-commonmethod-c.md#onhovermove) event of the button. When a stylus hovers over the button, the UI displays the current hover position of the stylus.
 
 ```TypeScript
 // xxx.ets
@@ -14334,37 +15721,6 @@ struct OnHoverMoveEventExample {
 
       Text(this.hoverMoveText)
     }.padding({ top: 30 }).width('100%')
-  }
-}
-```
-
-This example sets the system material of a menu by setting the systemMaterial attribute in [ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md).
-The systemMaterial attribute is added to ContextMenuOptions since API version 23.
-
-```TypeScript
-import { uiMaterial } from '@kit.ArkUI';
-
-@Entry
-@Component
-struct Index {
-  @Builder
-  MyMenu() {
-    Menu() {
-      MenuItem({ startIcon: this.iconStr, content: 'Menu option' })
-      MenuItem({ startIcon: this.iconStr, content: 'Menu option' })
-      MenuItem({ startIcon: this.iconStr, content: 'Menu option' })
-    }
-  }
-
-  build() {
-    Column() {
-      Button('bindMenu with THICK material')
-        .bindMenu(this.MyMenu, {
-          systemMaterial: new uiMaterial.Material({ type: uiMaterial.MaterialType.SEMI_TRANSPARENT })
-        })
-    }
-    // Replace $r('app.media.img') with the image resource file you use.
-    .backgroundImage($r('app.media.img'))
   }
 }
 ```
@@ -14423,7 +15779,7 @@ struct OutlineExample {
   build() {
     Column() {
       Flex({ justifyContent: FlexAlign.SpaceAround, alignItems: ItemAlign.Center }) {
-        // Dashed line
+        // Dashed line.
         Text('DASHED')
           .backgroundColor(Color.Pink)
           .outlineStyle(OutlineStyle.DASHED).outlineWidth(5).outlineColor(0xAFEEEE).outlineRadius(10)
@@ -14442,6 +15798,7 @@ struct OutlineExample {
         .height(300)
         .outline({
           width: { left: 3, right: 6, top: 10, bottom: 15 },
+          // color uses the LocalizedEdgeColors type, where start and end correspond to the start edge and end edge colors in different display directions, respectively.
           color: { start: '#e3bbbb', end: Color.Blue, top: Color.Red, bottom: Color.Green },
           radius: { topLeft: 10, topRight: 20, bottomLeft: 40, bottomRight: 80 },
           style: {
@@ -14465,9 +15822,9 @@ import { uiEffect } from '@kit.ArkGraphics2D';
 @Entry
 @Component
 struct FilterEffectExample {
-  @State filterTest1: uiEffect.Filter = uiEffect.createFilter().blur(10);
-  @State filterTest2: uiEffect.Filter = uiEffect.createFilter().blur(10);
-  @State filterTest3: uiEffect.Filter = uiEffect.createFilter().blur(10);
+  @State foregroundBlurFilter: uiEffect.Filter = uiEffect.createFilter().blur(10);
+  @State backgroundBlurFilter: uiEffect.Filter = uiEffect.createFilter().blur(10);
+  @State compositingBlurFilter: uiEffect.Filter = uiEffect.createFilter().blur(10);
 
   build() {
     Column({ space: 15 }) {
@@ -14477,10 +15834,10 @@ struct FilterEffectExample {
         .width(100)
         .height(100)
         .backgroundColor('#ADD8E6')
-        // Replace $r("app.media.app_icon") with the resource file you use.
-        .backgroundImage($r("app.media.app_icon"))
+        // $r("app.media.app_icon") requires an image resource file named app_icon to be prepared in the "resources/base/media" directory of the project.
+        .backgroundImage($r('app.media.app_icon'))
         .backgroundImageSize({ width: 80, height: 80 })
-        .foregroundFilter(this.filterTest1) // Set the blur effect using foregroundFilter.
+        .foregroundFilter(this.foregroundBlurFilter) // Set the blur effect through foregroundFilter.
 
       Text('backgroundFilter').fontSize(20).width('75%').fontColor('#DCDCDC')
       Text('Background filter')
@@ -14488,9 +15845,9 @@ struct FilterEffectExample {
         .height(100)
         .backgroundColor('#ADD8E6')
         // Replace $r("app.media.app_icon") with the resource file you use.
-        .backgroundImage($r("app.media.app_icon"))
+        .backgroundImage($r('app.media.app_icon'))
         .backgroundImageSize({ width: 80, height: 80 })
-        .backgroundFilter(this.filterTest2) // Set the blur effect using backgroundFilter.
+        .backgroundFilter(this.backgroundBlurFilter) // Set the blur effect through backgroundFilter.
 
       Text('compositingFilter').fontSize(20).width('75%').fontColor('#DCDCDC')
       Text('Compositing filter')
@@ -14498,9 +15855,9 @@ struct FilterEffectExample {
         .height(100)
         .backgroundColor('#ADD8E6')
         // Replace $r("app.media.app_icon") with the resource file you use.
-        .backgroundImage($r("app.media.app_icon"))
+        .backgroundImage($r('app.media.app_icon'))
         .backgroundImageSize({ width: 80, height: 80 })
-        .compositingFilter(this.filterTest3) // Set the blur effect using compositingFilter.
+        .compositingFilter(this.compositingBlurFilter) // Set the blur effect through compositingFilter.
     }
     .height('100%')
     .width('100%')
@@ -14508,7 +15865,130 @@ struct FilterEffectExample {
 }
 ```
 
-This example demonstrates how to set monopolizeEvents to determine whether a component exclusively handles events.
+This example uses priorityGesture and parallelGesture to implement parent component priority gesture recognition and simultaneous gesture triggering by parent and child components, respectively.
+
+```TypeScript
+// xxx.ets
+@Entry
+@Component
+struct GestureSettingsExample {
+  @State priorityTestValue: string = ''
+  @State parallelTestValue: string = ''
+
+  build() {
+    Column() {
+      Column() {
+        Text('TapGesture:' + this.priorityTestValue).fontSize(28)
+          .gesture(
+            TapGesture()
+              .onAction(() => {
+                this.priorityTestValue += '\nText';
+              }))
+      }
+      .height(200)
+      .width(250)
+      .padding(20)
+      .margin(20)
+      .border({ width: 3 })
+      // When priorityGesture is set, tapping the text ignores the TapGesture event of the Text component and prioritizes the TapGesture event of the parent Column component.
+      .priorityGesture(
+        TapGesture()
+          .onAction((event: GestureEvent) => {
+            this.priorityTestValue += '\nColumn';
+          }), GestureMask.IgnoreInternal)
+
+      Column() {
+        Text('TapGesture:' + this.parallelTestValue).fontSize(28)
+          .gesture(
+            TapGesture()
+              .onAction((event: GestureEvent) => {
+                this.parallelTestValue += '\nText';
+              }))
+      }
+      .height(200)
+      .width(250)
+      .padding(20)
+      .margin(20)
+      .border({ width: 3 })
+      // When parallelGesture is set, tapping the text simultaneously triggers the TapGesture events of the child Text component and the parent Column component.
+      .parallelGesture(
+        TapGesture()
+          .onAction((event: GestureEvent) => {
+            this.parallelTestValue += '\nColumn';
+          }), GestureMask.Normal)
+    }
+  }
+}
+```
+
+This example reads fingerInfos to monitor the number of valid touch points involved in a swipe gesture in real time.
+
+```TypeScript
+// xxx.ets
+@Entry
+@Component
+struct PanGestureWithFingerCount {
+  @State offsetX: number = 0
+  @State offsetY: number = 0
+  @State positionX: number = 0
+  @State positionY: number = 0
+  @State fingerCount: number = 0 // Record the number of touch points involved in the gesture.
+  private panOption: PanGestureOptions = new PanGestureOptions({
+    direction: PanDirection.All,
+    fingers: 1
+  })
+
+  build() {
+    Column() {
+      // Display the current number of valid touch points.
+      Text(`Touch points: ${this.fingerCount}`)
+        .fontSize(20)
+        .margin(10)
+
+      Column() {
+        Text('PanGesture offset:\nX: ' + this.offsetX + '\n' + 'Y: ' + this.offsetY)
+      }
+      .height(200)
+      .width(300)
+      .padding(20)
+      .border({ width: 3 })
+      .margin(50)
+      .translate({ x: this.offsetX, y: this.offsetY, z: 0 })
+      .gesture(
+        PanGesture(this.panOption)
+          .onActionStart((event: GestureEvent) => {
+            console.info('Pan start');
+            this.fingerCount = event.fingerInfos?.length || 0; // Record the number of touch points.
+          })
+          .onActionUpdate((event: GestureEvent) => {
+            if (event) {
+              console.info(`fingerInfos ${JSON.stringify(event.fingerInfos)}`);
+              this.offsetX = this.positionX + event.offsetX;
+              this.offsetY = this.positionY + event.offsetY;
+              this.fingerCount = event.fingerInfos?.length || 0; // Update the number of touch points and record the number of valid touch points involved in the current gesture.
+            }
+          })
+          .onActionEnd(() => {
+            this.positionX = this.offsetX;
+            this.positionY = this.offsetY;
+            this.fingerCount = 0; // Reset to zero after the touch point leaves the touch area.
+            console.info('Pan end');
+          })
+          .onActionCancel(() => {
+            this.fingerCount = 0; // Reset to zero after the gesture is canceled.
+          })
+      )
+
+      Button('Switch to two-finger swipe')
+        .onClick(() => {
+          this.panOption.setFingers(2);
+        })
+    }
+  }
+}
+```
+
+This example demonstrates how to set whether a component monopolizes events by configuring monopolizeEvents.
 
 ```TypeScript
 // xxx.ets
@@ -14534,48 +16014,48 @@ struct Index {
       Button('clean')
         .fontSize(22)
         .margin(10)
-        // Change the value of the column's monopolizeEvents attribute through the button's click event.
+        // Clear the touch event prompt information of the inner and outer columns through the button click event.
         .onClick(() => {
-          this.messageOut = " "
-          this.messageInner = " "
+          this.messageOut = ' ';
+          this.messageInner = ' ';
         })
       Button('change monopolizeEvents')
         .fontSize(22)
         .margin(10)
-        // Change the value of the column's monopolizeEvents attribute through the button's click event.
+        // Toggle the monopolization control attribute of the inner column through the button click event.
         .onClick(() => {
-          this.monopolize = !this.monopolize
+          this.monopolize = !this.monopolize;
           if (!this.monopolize) {
-            this.message = "set monopolizeEvents false"
+            this.message = 'set monopolizeEvents false';
           } else {
-            this.message = "set monopolizeEvents true"
+            this.message = 'set monopolizeEvents true';
           }
         })
       Column() {
         Column() {
         }
-        // When this.monopolize is true, clicking the inner column triggers only a touch event on it, but not on the outer column.
-        // When this.monopolize is false, clicking the inner column triggers a touch event on it and the outer column.
+        // When this.monopolize is true, tapping the inner column triggers only its own touch event, not the touch event of the outer column.
+        // When this.monopolize is false, tapping the inner column triggers both its own touch event and the touch event of the outer column.
         .monopolizeEvents(this.monopolize)
         .width('100%')
         .height('40%')
         .backgroundColor(Color.Blue)
-        // Bind the inner column to the touch event.
+        // Bind the touch event to the inner column.
         .onTouch((event: TouchEvent) => {
           if (event.type == TouchType.Down) {
-            console.info("inner column touch down")
-            this.messageInner = "inner column touch down"
+            console.info('inner column touch down');
+            this.messageInner = 'inner column touch down';
           }
         })
       }
       .backgroundColor(Color.Gray)
       .height('100%')
       .width('100%')
-      // Bind the outer column to the touch event.
+      // Bind the touch event to the outer column.
       .onTouch((event) => {
         if (event.type == TouchType.Down) {
-          console.info("outside column touch down")
-          this.messageOut = "outside column touch down"
+          console.info('outside column touch down');
+          this.messageOut = 'outside column touch down';
         }
       })
     }
@@ -14590,34 +16070,34 @@ This example demonstrates how to set up keyboard shortcuts for components. This 
 @Entry
 @Component
 struct Index {
-  @State message: string = 'Hello World'
+  @State message: string = 'Hello World';
 
   build() {
     Row() {
       Column({ space: 5 }) {
-        Text(this.message)
-        Button("Test short cut 1").onClick((event: ClickEvent) => {
-          this.message = "I clicked Button 1";
-          console.info("I clicked 1");
+        Text(this.message);
+        Button('Test short cut 1').onClick(() => {
+          this.message = 'I clicked Button 1';
+          console.info('I clicked 1');
         }).keyboardShortcut('.', [ModifierKey.SHIFT, ModifierKey.CTRL, ModifierKey.ALT])
           .onKeyEvent((event: KeyEvent) => {
-            console.info("event.keyCode: " + JSON.stringify(event));
-          })
-        Button("Test short cut 2").onClick((event: ClickEvent) => {
-          this.message = "I clicked Button 2";
-          console.info("I clicked 2");
-        }).keyboardShortcut('1', [ModifierKey.CTRL])
-        Button("Test short cut 3").onClick((event: ClickEvent) => {
-          this.message = "I clicked Button 3";
-          console.info("I clicked 3");
-        }).keyboardShortcut('A', [ModifierKey.SHIFT])
-        Button("Test short cut 4").onClick((event: ClickEvent) => {
-          this.message = "I clicked Button 4";
-          console.info("I clicked 4");
+            console.info('event.keyCode: ' + JSON.stringify(event));
+          });
+        Button('Test short cut 2').onClick(() => {
+          this.message = 'I clicked Button 2';
+          console.info('I clicked 2');
+        }).keyboardShortcut('1', [ModifierKey.CTRL]);
+        Button('Test short cut 3').onClick(() => {
+          this.message = 'I clicked Button 3';
+          console.info('I clicked 3');
+        }).keyboardShortcut('A', [ModifierKey.SHIFT]);
+        Button('Test short cut 4').onClick(() => {
+          this.message = 'I clicked Button 4';
+          console.info('I clicked 4');
         }).keyboardShortcut(FunctionKey.F5, [], () => {
-          this.message = "I clicked Button 4";
-          console.info("I clicked user callback.");
-        }).keyboardShortcut(FunctionKey.F3, [])
+          this.message = 'I clicked Button 4';
+          console.info('I clicked user callback.');
+        }).keyboardShortcut(FunctionKey.F3, []);
       }
       .width('100%')
     }
@@ -14632,28 +16112,28 @@ This example demonstrates how to bind and unbind keyboard shortcuts.
 @Entry
 @Component
 struct Index {
-  @State message: string = 'disable'
-  @State shortCutEnable: boolean = false
-  @State keyValue: string = ''
+  @State message: string = 'disable';
+  @State shortCutEnable: boolean = false;
+  @State keyValue: string = '';
 
   build() {
     Row() {
       Column({ space: 5 }) {
-        Text('Ctrl+A is ' + this.message)
-        Button("Test short cut").onClick((event: ClickEvent) => {
-          this.message = "I clicked Button";
-          console.info("I clicked");
-        }).keyboardShortcut(this.keyValue, [ModifierKey.CTRL])
-        Button(this.message + 'shortCut').onClick((event: ClickEvent) => {
+        Text('Ctrl+A is ' + this.message);
+        Button('Test short cut').onClick(() => {
+          this.message = 'I clicked Button';
+          console.info('I clicked');
+        }).keyboardShortcut(this.keyValue, [ModifierKey.CTRL]);
+        Button(this.message + 'shortCut').onClick(() => {
           this.shortCutEnable = !this.shortCutEnable;
           this.message = this.shortCutEnable ? 'enable' : 'disable';
           this.keyValue = this.shortCutEnable ? 'a' : '';
-        })
-        Button('multi-shortcut').onClick((event: ClickEvent) => {
-          console.info('Trigger keyboard shortcut success.')
+        });
+        Button('multi-shortcut').onClick(() => {
+          console.info('Trigger keyboard shortcut success.');
         }).keyboardShortcut('q', [ModifierKey.CTRL])
           .keyboardShortcut('w', [ModifierKey.CTRL])
-          .keyboardShortcut('', []) // Unbinding does not work when there are multi-bound shortcuts.
+          .keyboardShortcut('', []); // Does not take effect. A component bound with multiple keyboard shortcuts cannot unbind them.
       }
       .width('100%')
     }
@@ -14674,33 +16154,35 @@ struct HitTestBehaviorExample {
     Stack() {
       Button('outer button')
         .onTouch((event) => {
-          console.info(`outer button touched type: ${(event as TouchEvent).type}`)
+          console.info(`outer button touched type: ${(event as TouchEvent).type}`);
         })
       // inner stack
       Stack() {
         Button('inner button')
           .onTouch((event) => {
-            console.info(`inner button touched type: ${(event as TouchEvent).type}`)
+            console.info(`inner button touched type: ${(event as TouchEvent).type}`);
           })
       }
-      .width("100%").height("100%")
+      .width('100%').height('100%')
+      // Set the hit test type to Block. The node responds to the hit test but prevents sibling nodes from participating in the hit test.
       .hitTestBehavior(HitTestMode.Block)
       .onTouch((event) => {
-        console.info(`stack touched type: ${(event as TouchEvent).type}`)
+        console.info(`stack touched type: ${(event as TouchEvent).type}`);
       })
 
       Text('Transparent')
+        // Set the hit test type to Transparent. The node does not intercept the hit test and allows lower-layer nodes to respond to the hit test.
         .hitTestBehavior(HitTestMode.Transparent)
-        .width("100%").height("100%")
+        .width('100%').height('100%')
         .onTouch((event) => {
-          console.info(`text touched type: ${(event as TouchEvent).type}`)
+          console.info(`text touched type: ${(event as TouchEvent).type}`);
         })
     }.width(300).height(300)
   }
 }
 ```
 
-This example demonstrates the hit test effect when the hit test type is set to BLOCK_HIERARCHY, supported since API version 20.
+Starting from API version 20, this example demonstrates the hit test effect when the hit test mode is set to BLOCK_HIERARCHY.
 
 ```TypeScript
 // xxx.ets
@@ -14748,7 +16230,7 @@ struct BlockHierarchy {
             })
             .hitTestBehavior(HitTestMode.Transparent)
         }
-        .width("100%").height("100%")
+        .width('100%').height('100%')
         // Set the hit test mode: The node itself and its child nodes respond to the hit test, preventing all sibling nodes and parent nodes with lower priority from participating in the hit test.
         .hitTestBehavior(HitTestMode.BLOCK_HIERARCHY)
         .onTouch((event) => {
@@ -14757,7 +16239,7 @@ struct BlockHierarchy {
 
         Text('Transparent')
           .hitTestBehavior(HitTestMode.Transparent)
-          .width("100%").height("100%")
+          .width('100%').height('100%')
           .onTouch((event) => {
             console.info(`HitTestMode text touched type: ${(event as TouchEvent).type}`);
           })
@@ -14775,7 +16257,7 @@ struct BlockHierarchy {
 }
 ```
 
-This example demonstrates the hit test effect when the hit test type is set to BLOCK_DESCENDANTS, supported since API version 20.
+Starting from API version 20, this example demonstrates the hit test effect when the hit test mode is set to BLOCK_DESCENDANTS.
 
 ```TypeScript
 // xxx.ets
@@ -14802,8 +16284,8 @@ struct BlockDescendants {
               console.info(`HitTestMode inner button touched type: ${(event as TouchEvent).type}`);
             })
         }
-        .width("100%").height("100%")
-        // Set the hit test mode: The node does not respond to hit tests, and none of its descendants (including children and grandchildren) participate in hit tests either.
+        .width('100%').height('100%')
+        // Set the hit test mode so that the node itself does not respond to the hit test, and all its descendants (children, grandchildren, and so on) do not respond to the hit test either, without affecting the hit test of ancestor nodes.
         .hitTestBehavior(HitTestMode.BLOCK_DESCENDANTS)
         .onTouch((event) => {
           console.info(`HitTestMode stack touched type: ${(event as TouchEvent).type}`);
@@ -14811,7 +16293,7 @@ struct BlockDescendants {
 
         Text('Transparent')
           .hitTestBehavior(HitTestMode.Transparent)
-          .width("100%").height("100%")
+          .width('100%').height('100%')
           .onTouch((event) => {
             console.info(`HitTestMode text touched type: ${(event as TouchEvent).type}`);
           })
@@ -14829,7 +16311,7 @@ struct BlockDescendants {
 }
 ```
 
-This example demonstrates the hit testing effect when multiple nodes have overlapping touch areas within a Stack component. If [HitTestMode](./ts-appendix-enums.md#hittestmode9) is set to None, the overlapping background area cannot respond to hit testing. The background area respond to hit testing only when the attribute is set to Transparent.
+This example demonstrates the hit testing effect when multiple nodes have overlapping touch areas within a Stack component. If [HitTestMode](./ts-appendix-enums.md#hittestmode9) is set to None, the overlapping background area cannot respond to hit testing. The background area responds to hit testing only when the attribute is set to Transparent.
 
 ```TypeScript
 // xxx.ets
@@ -14849,7 +16331,7 @@ struct Index {
         .height('100%')
         .width('100%')
         .onTouch(() => {
-          console.info('background hit test!')
+          console.info('background hit test!');
         })
       Stack() {
         // Click the button to perform hit testing.
@@ -15186,56 +16668,53 @@ struct FocusEventExample {
 
   build() {
     Column({ space: 20 }) {
-      // Activate the focus by pressing **Tab** on an external keyboard and navigate it among the three buttons using the up/down arrow keys. The focused button receives a color highlight, which disappears when focus moves away.
+      // When the focus moves among the three buttons, the button changes color when it gains focus and restores its original background color when it loses focus.
       Button('First Button')
         .backgroundColor(this.oneButtonColor)
         .width(260)
         .height(70)
         .fontColor(Color.Black)
-        .focusable(true)
         .onFocus(() => {
-          this.oneButtonColor = '#FFFFFF'
+          this.oneButtonColor = '#FFFFFF';
         })
         .onBlur(() => {
-          this.oneButtonColor = '#0066FF'
+          this.oneButtonColor = '#0066FF';
         })
       Button('Second Button')
         .backgroundColor(this.twoButtonColor)
         .width(260)
         .height(70)
         .fontColor(Color.Black)
-        .focusable(true)
         .onFocus(() => {
-          this.twoButtonColor = '#FFFFFF'
+          this.twoButtonColor = '#FFFFFF';
         })
         .onBlur(() => {
-          this.twoButtonColor = '#87CEFA'
+          this.twoButtonColor = '#87CEFA';
         })
       Button('Third Button')
         .backgroundColor(this.threeButtonColor)
         .width(260)
         .height(70)
         .fontColor(Color.Black)
-        .focusable(true)
         .onFocus(() => {
-          this.threeButtonColor = '#FFFFFF'
+          this.threeButtonColor = '#FFFFFF';
         })
         .onBlur(() => {
-          this.threeButtonColor = '#90EE90'
+          this.threeButtonColor = '#90EE90';
         })
     }.width('100%').margin({ top: 20 })
   }
 }
 ```
 
-This example shows how to set up an axis event on a button. When the user scrolls the mouse wheel over the button, the event parameters are captured and displayed. Starting from API version 21, this example uses [axisPinch](./ts-gesture-customize-judge.md#properties) and [getPinchAxisScaleValue](arkts-arkui-axisevent-i.md#getpinchaxisscalevalue) to obtain the two-finger pinch scale ratio. Starting from API version 22, this example uses [hasAxis](arkts-arkui-axisevent-i.md#hasaxis) to determine whether the axis event contains the specified axis type.
+This example shows how to set up an axis event on a button. When the user scrolls the mouse wheel, the axis event parameters are captured. Starting from API version 21, this example uses the  attribute of [BaseEvent](./ts-universal-events-click.md#baseevent8) and [getPinchAxisScaleValue](arkts-arkui-axisevent-i.md#getpinchaxisscalevalue) to obtain the pinch scale value. Starting from API version 22, this example uses [hasAxis](arkts-arkui-axisevent-i.md#hasaxis) to check whether the axis event contains the specified axis type.
 
 ```TypeScript
 // xxx.ets
 @Entry
 @Component
 struct AxisEventExample {
-  @State text: string = ''
+  @State text: string = '';
 
   build() {
     Column() {
@@ -15255,6 +16734,37 @@ struct AxisEventExample {
       }.margin(20)
 
       Text(this.text).margin(15)
+    }.width('100%')
+  }
+}
+```
+
+This example uses the [getCurrentLocalPosition](#getcurrentlocalposition) method to obtain the coordinates of the mouse cursor position relative to the upper-left corner of the current component's real-time position.
+The getCurrentLocalPosition API is supported since API version 26.0.0.
+
+```TypeScript
+// xxx.ets
+@Entry
+@Component
+struct GetCurrentLocalPositionExample {
+  @State positionText: string = '';
+  @State textOffsetY: number = 0;
+
+  build() {
+    Column() {
+      Button('Obtain the coordinates of the mouse cursor position relative to the top-left corner of the component's current real-time position').translate({ y: this.textOffsetY })
+        .onAxisEvent((event?: AxisEvent) => {
+          if (event) {
+            // Move the button first, then obtain the coordinates of the mouse cursor relative to the top-left corner of the component's real-time position after a delay.
+            this.textOffsetY = -200;
+            setTimeout(() => {
+              let localPos: Coordinate2D | undefined = event?.getCurrentLocalPosition?.();
+              this.positionText = `Coordinates relative to the top-left corner of the component's current real-time position:\n  x: ${localPos?.x}\n  y: ${localPos?.y}`;
+            }, 2000);
+          }
+        })
+
+      Text(this.positionText)
     }.width('100%')
   }
 }
@@ -15310,8 +16820,7 @@ This example demonstrates how to mask an image using [mask](#mask12).
 @Entry
 @Component
 struct ProgressMaskExample {
-  @State progressFlag1: boolean = true;
-  @State color: Color = 0x01006CDE;
+  @State isRedColor: boolean = true;
   @State value: number = 10.0;
   @State enableBreathingAnimation: boolean = false;
   @State progress: ProgressMask = new ProgressMask(10.0, 100.0, Color.Gray);
@@ -15319,7 +16828,7 @@ struct ProgressMaskExample {
   build() {
     Column({ space: 15 }) {
       Text('progress mask').fontSize(12).width('75%').fontColor('#DCDCDC')
-      // Add a 280 × 280 px progress mask to the image.
+      // Add a progress mask to the image.
       // Replace $r("app.media.testImg") with the image resource file you use.
       Image($r('app.media.testImg'))
         .width('500px').height('280px')
@@ -15330,7 +16839,7 @@ struct ProgressMaskExample {
           delay: 0, // Animation delay.
           iterations: 1, // Number of playback times.
           playMode: PlayMode.Normal // Animation playback mode.
-        }) // Animation configuration for the width and height attributes of the <Button> component.
+        }) // Configure the animation for the mask progress change of the Image component.
 
       // Update the progress value of the progress mask.
       Button('updateProgress')
@@ -15342,12 +16851,12 @@ struct ProgressMaskExample {
       // Update the color of the progress mask.
       Button('updateColor')
         .onClick((event?: ClickEvent) => {
-          if (this.progressFlag1) {
+          if (this.isRedColor) {
             this.progress.updateColor(0x9fff0000);
           } else {
             this.progress.updateColor(0x9f0000ff);
           }
-          this.progressFlag1 = !this.progressFlag1
+          this.isRedColor = !this.isRedColor;
         }).width(200).height(50).margin(20)
 
       // Enable or disable the breathing animation.
@@ -15358,7 +16867,7 @@ struct ProgressMaskExample {
         }).width(200).height(50).margin(20)
 
       // Restore the progress mask.
-      Button('click reset!')
+      Button('click reset')
         .onClick((event?: ClickEvent) => {
           this.value = 0;
           this.progress.updateProgress(this.value);
@@ -15385,7 +16894,7 @@ struct Index {
         .width('200')
         .enableClickSoundEffect(false)
         .onClick(() => {
-          // Customize the sound effect. For details, see the guide of using SoundPool.
+          // Customize the sound here. For details, see the guide on playing short audio with SoundPool.
         })
     }
     .width('100%')
@@ -15404,6 +16913,7 @@ class MyButtonModifier implements GestureModifier {
   supportDoubleTap: boolean = true;
 
   applyGesture(event: UIGestureEvent): void {
+    // Bind the double-tap gesture or drag gesture based on the supportDoubleTap state.
     if (this.supportDoubleTap) {
       event.addGesture(
         new TapGestureHandler({
@@ -15412,12 +16922,12 @@ class MyButtonModifier implements GestureModifier {
           // The distanceThreshold attribute is added since API version 23.
           distanceThreshold: 100
         })
-          .tag("aaa")
+          .tag('doubleTapGesture')
           .onAction((event: GestureEvent) => {
             console.info('Gesture Info is', JSON.stringify(event));
             console.info('button tap');
           })
-      )
+      );
     } else {
       event.addGesture(
         new PanGestureHandler()
@@ -15479,7 +16989,7 @@ class MyButtonModifier implements GestureModifier {
           console.info('event info is', JSON.stringify(event));
           console.info('ExclusiveGroupGesture PanGesture onActionEnd is called');
         })]
-      }))
+      }));
     } else {
       // Bind a parallel gesture group.
       event.addGesture(new GestureGroupHandler({
@@ -15497,7 +17007,7 @@ class MyButtonModifier implements GestureModifier {
           console.info('event info is', JSON.stringify(event));
           console.info('ParallelGroupGesture PanGesture onActionEnd is called');
         })]
-      }))
+      }));
     }
   }
 }
@@ -15536,61 +17046,61 @@ This example demonstrates how to set different content fill modes for a componen
 @Entry
 @Component
 struct RenderFitExample {
-  @State width1: number = 100;
-  @State height1: number = 30;
-  flag: boolean = true;
+  @State currentWidth: number = 100;
+  @State currentHeight: number = 30;
+  isExpanded: boolean = true;
 
   build() {
     Column() {
-      Text("Hello")
-        .width(this.width1)
-        .height(this.height1)
+      Text('Hello')
+        .width(this.currentWidth)
+        .height(this.currentHeight)
         .borderWidth(1)
         .textAlign(TextAlign.Start)
-        .renderFit(RenderFit.LEFT)// The component's content stays at the final size and always aligned with the left of the component.
+        .renderFit(RenderFit.LEFT) // Set the renderFit to LEFT. During the animation process, the final-state content stays left-aligned with the component.
         .margin(20)
 
-      Text("Hello")
-        .width(this.width1)
-        .height(this.height1)
+      Text('Hello')
+        .width(this.currentWidth)
+        .height(this.currentHeight)
         .textAlign(TextAlign.Center)
         .borderWidth(1)
-        .renderFit(RenderFit.CENTER)// The component's content stays at the final size and always aligned with the center of the component.
+        .renderFit(RenderFit.CENTER) // Set the renderFit to CENTER. During the animation process, the final-state content stays center-aligned with the component.
         .margin(20)
 
-      Button("animate")
+      Button('animate')
         .onClick(() => {
           this.getUIContext()?.animateTo({ curve: Curve.Ease }, () => {
-            if (this.flag) {
-              this.width1 = 150;
-              this.height1 = 50;
+            if (this.isExpanded) {
+              this.currentWidth = 150;
+              this.currentHeight = 50;
             } else {
-              this.width1 = 100;
-              this.height1 = 30;
+              this.currentWidth = 100;
+              this.currentHeight = 30;
             }
-            this.flag = !this.flag;
+            this.isExpanded = !this.isExpanded;
           })
         })
-    }.width("100%").height("100%").alignItems(HorizontalAlign.Center)
+    }.width('100%').height('100%').alignItems(HorizontalAlign.Center)
   }
 }
 ```
 
-This example demonstrates how to: 1. Bind the universal toolbar attribute to a [Button](ts-basic-components-button.md) component under [Navigation](ts-basic-components-navigation.md), adding two button toolbar items at the start of the Navbar section in the title bar. 2. Bind the toolbar attribute to a [Text](ts-basic-components-text.md) component under [NavDestination](ts-basic-components-navdestination.md) to add a slider and a search bar component as toolbar items at the end of the NavDestination section in the title bar.
+In this example, the toolbar universal attribute is bound to the [Button](ts-basic-components-button.md) component under [Navigation](ts-basic-components-navigation.md) to add a toolbar item containing two [Button](ts-basic-components-button.md) components at the beginning of the NavBar column of the title bar. The toolbar universal attribute is bound to the [Text](ts-basic-components-text.md) component under [NavDestination](ts-basic-components-navdestination.md) to add a toolbar item containing a slider component and a search bar component at the end of the NavDestination column of the title bar.
 
 ```TypeScript
 // xxx.ets
 @Entry
 @Component
-struct SideBarContainerExample {
-  normalIcon: Resource = $r("app.media.startIcon")
+struct ToolbarExample {
+  normalIcon: Resource = $r('app.media.startIcon')
   selectedIcon: Resource = $r("app.media.startIcon")
   @State arr: number[] = [1, 2, 3]
   @State current: number = 1
   @Provide('navPathStack') navPathStack: NavPathStack = new NavPathStack()
 
   @Builder
-  MyToolBar() {
+  MyToolbar() {
     ToolBarItem({ placement: ToolBarItemPlacement.TOP_BAR_LEADING }) {
       Button("left").height("30vp")
     }
@@ -15619,7 +17129,7 @@ struct SideBarContainerExample {
           .fontSize(30)
           .toolbar(this.MyToolbarNavDest())
       }
-      .backgroundColor(Color.Grey)
+      .backgroundColor(Color.Gray)
     }
   }
 
@@ -15635,7 +17145,7 @@ struct SideBarContainerExample {
               .fontFamily('source-sans-pro,cursive,sans-serif')
           }
           .onClick(() => {
-            this.current = item
+            this.current = item;
           })
         }, (item: number) => item.toString())
       }.width('100%')
@@ -15648,13 +17158,13 @@ struct SideBarContainerExample {
             .width('20%')
             .height(40)
             .margin(20)
-            .toolbar(this.MyToolBar)
+            .toolbar(this.MyToolbar())
           Button('showNavDest', { stateEffect: true, type: ButtonType.Capsule })
             .width('20%')
             .height(40)
             .margin(20)
             .onClick(() => {
-              this.navPathStack.pushPath({ name: "1" })
+              this.navPathStack.pushPath({ name: '1' });
             })
         }
         .width('100%')
@@ -15673,7 +17183,7 @@ struct SideBarContainerExample {
     .maxSideBarWidth(300)
     .minContentWidth(0)
     .onChange((value: boolean) => {
-      console.info('status:' + value)
+      console.info('status:' + value);
     })
     .divider({
       strokeWidth: '1vp',
@@ -15925,7 +17435,7 @@ struct DisplayPriorityExample {
 }
 ```
 
-This example demonstrates how to set the foreground effect using foregroundEffect.
+This example demonstrates how to set the foreground attributes through the foregroundEffect API.
 
 ```TypeScript
 // xxx.ets
@@ -15934,10 +17444,11 @@ This example demonstrates how to set the foreground effect using foregroundEffec
 struct Index {
   build() {
     Row() {
-      // Replace $r("app.media.icon") with the image resource file you use.
+      // Replace $r('app.media.icon') with the image resource file required by the developer.
       Image($r('app.media.icon'))
           .width(100)
           .height(100)
+          // Set the foreground blur effect with a blur radius of 20.
           .foregroundEffect({ radius: 20 })
     }
     .width('100%')
@@ -15954,9 +17465,6 @@ This example demonstrates how to use the expandSafeArea attribute to expand the 
 @Entry
 @Component
 struct SafeAreaExample1 {
-  @State text: string = ''
-  controller: TextInputController = new TextInputController()
-
   build() {
     Row() {
       Column()
@@ -16048,9 +17556,8 @@ export default class EntryAbility extends UIAbility{
     hilog.info(0x0000, 'testTag', '%{public}s', 'Ability onWindowStageCreate');
 
     windowStage.loadContent('pages/Index', (err, data) => {
-      let keyboardAvoidMode = windowStage.getMainWindowSync().getUIContext().getKeyboardAvoidMode();
       // When the virtual keyboard is displayed, the page is resized to its original height minus the keyboard height.
-    windowStage.getMainWindowSync().getUIContext().setKeyboardAvoidMode(KeyboardAvoidMode.RESIZE);
+      windowStage.getMainWindowSync().getUIContext().setKeyboardAvoidMode(KeyboardAvoidMode.RESIZE);
       if (err.code) {
         hilog.error(0x0000, 'testTag', 'Failed to load the content. Cause: %{public}s', JSON.stringify(err) ?? '');
         return;
@@ -16098,9 +17605,8 @@ export default class EntryAbility extends UIAbility{
     hilog.info(0x0000, 'testTag', '%{public}s', 'Ability onWindowStageCreate');
 
     windowStage.loadContent('pages/Index', (err, data) => {
-      let keyboardAvoidMode = windowStage.getMainWindowSync().getUIContext().getKeyboardAvoidMode();
       // When the virtual keyboard is displayed, the page is moved up until the caret is displayed.
-    windowStage.getMainWindowSync().getUIContext().setKeyboardAvoidMode(KeyboardAvoidMode.OFFSET);
+      windowStage.getMainWindowSync().getUIContext().setKeyboardAvoidMode(KeyboardAvoidMode.OFFSET);
       if (err.code) {
         hilog.error(0x0000, 'testTag', 'Failed to load the content. Cause: %{public}s', JSON.stringify(err) ?? '');
         return;
@@ -16142,9 +17648,9 @@ This example demonstrates how to switch between OFFSET, RESIZE, and NONE modes u
 ```TypeScript
 import { hilog } from '@kit.PerformanceAnalysisKit';
 import { KeyboardAvoidMode } from '@kit.ArkUI';
+
 @Entry
 @Component
-
 struct KeyboardAvoidExample3 {
   build() {
     Column() {
@@ -16329,8 +17835,6 @@ struct IgnoreLayoutSafeAreaTest2 {
 This example demonstrates the layout effects of a container with expandSafeArea and ignoreLayoutSafeArea set, respectively, and their impact on the layout of child components. In both cases, the container visibly extends. However, the child components of the container with expandSafeArea are not affected by the container's extension, while the child components of the container with ignoreLayoutSafeArea have their positions adjusted due to the container's extension.
 
 ```TypeScript
-import { LengthMetrics } from '@kit.ArkUI'
-
 @Entry
 @Component
 struct IgnoreLayoutSafeAreaTest3 {
@@ -16451,7 +17955,7 @@ struct OverlayExample {
           // Replace $r('app.media.img') with the image resource file you use.
           Image($r('app.media.img'))
             .width(240).height(240)
-            .overlay("Winter is a beautiful season, especially when it snows.", {
+            .overlay('Winter is a beautiful season, especially when it snows.', {
               align: Alignment.Bottom,
               offset: { x: 0, y: -15 }
             })
@@ -16470,11 +17974,11 @@ This example demonstrates how to set an overlay using a custom builder.
 @Component
 struct OverlayExample {
   @Builder
-  OverlayNode() {
+  overlayNode() {
     Column() {
       // Replace $r('app.media.img1') with the image resource file you use.
       Image($r('app.media.img1'))
-      Text("This is overlayNode").fontSize(20).fontColor(Color.White)
+      Text('This is overlayNode').fontSize(20).fontColor(Color.White)
     }
     .width(180)
     .height(180)
@@ -16486,7 +17990,7 @@ struct OverlayExample {
     Column() {
       // Replace $r('app.media.img2') with the image resource file you use.
       Image($r('app.media.img2'))
-        .overlay(this.OverlayNode(), { align: Alignment.Center })
+        .overlay(this.overlayNode(), { align: Alignment.Center })
         .objectFit(ImageFit.Contain)
     }.width('100%')
     .border({ color: Color.Black, width: 2 }).padding(20)
@@ -16494,14 +17998,14 @@ struct OverlayExample {
 }
 ```
 
-This example demonstrates how to use ComponentContent to dynamically change the background color of the overlay.
+This example uses overlay to pass in ComponentContent, and updates the ComponentContent parameters through the update method, so that backgroundColor keeps changing.
 
 ```TypeScript
 // xxx.ets
 import { ComponentContent } from '@kit.ArkUI';
 
 class Params {
-  backgroundColor: string | Resource = ""
+  backgroundColor: string | Resource = '';
 
   constructor(backgroundColor: string | Resource) {
     this.backgroundColor = backgroundColor;
@@ -16516,22 +18020,22 @@ function overlayBuilder(params: Params) {
 
 @Entry
 @Component
-struct Page_4040 {
+struct OverlayContentPage {
   @State overlayColor: string = 'rgba(0, 0, 0, 0.6)';
   private uiContext: UIContext = this.getUIContext();
   private overlayNode: ComponentContent<Params> =
-    new ComponentContent(this.uiContext, wrapBuilder(overlayBuilder), new Params(this.overlayColor))
+    new ComponentContent(this.uiContext, wrapBuilder(overlayBuilder), new Params(this.overlayColor));
 
   aboutToAppear(): void {
     setInterval(() => {
       if (this.overlayColor.includes('0.6')) {
-        this.overlayColor = 'rgba(0, 0, 0, 0.1)'
+        this.overlayColor = 'rgba(0, 0, 0, 0.1)';
         this.overlayNode.update(new Params(this.overlayColor));
       } else {
-        this.overlayColor = 'rgba(0, 0, 0, 0.6)'
+        this.overlayColor = 'rgba(0, 0, 0, 0.6)';
         this.overlayNode.update(new Params(this.overlayColor));
       }
-    }, 1000)
+    }, 1000);
   }
 
   build() {

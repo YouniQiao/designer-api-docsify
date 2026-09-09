@@ -160,7 +160,7 @@ let dlpProperty: dlpPermission.DLPProperty = {
 };
 dlpPermission.generateDLPFile(file, dlp, dlpProperty, (err, res) => { // Generate a DLP file.
   if (err) {
-    console.error('generateDLPFile error,', err.code, err.message);
+    console.error(`Failed to generate DLPFile. Code: ${err.code}, message: ${err.message}`);
   } else {
     console.info('res', JSON.stringify(res));
   }

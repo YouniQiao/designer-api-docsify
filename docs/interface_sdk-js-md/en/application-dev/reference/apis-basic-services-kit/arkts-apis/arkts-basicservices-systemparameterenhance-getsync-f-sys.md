@@ -45,10 +45,12 @@ Obtains a value of the specified key. This API uses a promise to return the resu
 **Examples**
 
 ```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
 try {
-    let info: string = systemParameterEnhance.getSync("const.ohos.apiversion");
-    console.info(JSON.stringify(info));
-} catch(e) {
-    console.error("getSync unexpected error: " + e);
+  let info: string = systemParameterEnhance.getSync('const.ohos.apiversion');
+  console.info('getSync result: ' + info);
+} catch (e) {
+  console.error(`getSync failed. Code: ${(e as BusinessError).code}, message: ${(e as BusinessError).message}`);
 }
 ```

@@ -34,11 +34,10 @@ Obtains the list of USB accessories connected to the host.
 **Examples**
 
 ```TypeScript
-import { hilog } from '@kit.PerformanceAnalysisKit';
 try {
-  let accList: usbManager.USBAccessory[] = usbManager.getAccessoryList()
-  hilog.info(0, 'testTag ui', `getAccessoryList success, accList: ${JSON.stringify(accList)}`)
+  let accList: usbManager.USBAccessory[] = usbManager.getAccessoryList();
+  console.info(`getAccessoryList success, accList: ${JSON.stringify(accList)}`);
 } catch (error) {
-  hilog.error(0, 'testTag ui', `getAccessoryList error ${error.code}, message is ${error.message}`)
+  console.error(`getAccessoryList error ${error.code}, message is ${error.message}`);
 }
 ```

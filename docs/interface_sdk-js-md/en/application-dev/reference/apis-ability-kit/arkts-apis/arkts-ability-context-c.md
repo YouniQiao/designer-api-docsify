@@ -41,6 +41,7 @@ Creates an application context with a specific data encryption level. You can ca
 ```TypeScript
 import { common, UIAbility, contextConstant } from '@kit.AbilityKit';
 import { hilog } from '@kit.PerformanceAnalysisKit';
+import { BusinessError } from '@kit.BasicServicesKit';
 
 export default class EntryAbility extends UIAbility {
   onCreate() {
@@ -48,9 +49,11 @@ export default class EntryAbility extends UIAbility {
     let areaMode: contextConstant.AreaMode = contextConstant.AreaMode.EL2;
     let areaModeContext: common.Context;
     try {
+      // Create an application context with a specific data encryption level.
       areaModeContext = this.context.createAreaModeContext(areaMode);
     } catch (error) {
-      hilog.error(0x0000, 'testTag', 'createAreaModeContext error is:%{public}s', JSON.stringify(error));
+      const err: BusinessError = error as BusinessError;
+    hilog.error(0x0000, 'testTag', 'Failed to create area mode context. Code: %{public}d, message: %{public}s', err.code, err.message);
     }
   }
 }
@@ -95,15 +98,18 @@ Creates an application context based on the specified display ID with screen inf
 ```TypeScript
 import { common, UIAbility } from '@kit.AbilityKit';
 import { hilog } from '@kit.PerformanceAnalysisKit';
+import { BusinessError } from '@kit.BasicServicesKit';
 
 export default class EntryAbility extends UIAbility {
   onCreate() {
     hilog.info(0x0000, 'testTag', '%{public}s', 'Ability onCreate');
     let displayContext: common.Context;
     try {
+      // Obtain displayId through APIs such as display.getDefaultDisplay(). For details, see the screen management development guide.
       displayContext = this.context.createDisplayContext(0);
     } catch (error) {
-      hilog.error(0x0000, 'testTag', 'createDisplayContext error is:%{public}s', JSON.stringify(error));
+      const err: BusinessError = error as BusinessError;
+      hilog.error(0x0000, 'testTag', 'Failed to create display context. Code: %{public}d, message: %{public}s', err.code, err.message);
     }
   }
 }
@@ -171,6 +177,7 @@ export default class EntryAbility extends UIAbility {
     console.info('MyAbility onCreate');
     let moduleContext: common.Context;
     try {
+      // Create a context based on the module name.
       moduleContext = this.context.createModuleContext('entry');
     } catch (error) {
       console.error(`createModuleContext failed, error.code: ${(error as BusinessError).code}, error.message: ${(error as BusinessError).message}`);
@@ -218,9 +225,10 @@ export default class EntryAbility extends UIAbility {
     console.info('MyAbility onCreate');
     let applicationContext: common.Context;
     try {
+      // Obtain the current application context.
       applicationContext = this.context.getApplicationContext();
     } catch (error) {
-      console.error(`getApplicationContext failed, error.code: ${(error as BusinessError).code}, error.message: ${(error as BusinessError).message}`);
+      console.error(`Failed to get application context. Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
     }
   }
 }
@@ -267,7 +275,8 @@ export default class EntryAbility extends UIAbility {
     console.info('MyAbility onCreate');
     let getGroupDirContext: common.Context = this.context;
 
-    getGroupDirContext.getGroupDir("1", (err: BusinessError, data) => {
+    // Obtain the shared directory by group ID (callback mode).
+    getGroupDirContext.getGroupDir('1', (err: BusinessError, data) => {
       if (err) {
         console.error(`getGroupDir failed, err: ${JSON.stringify(err)}`);
       } else {
@@ -322,14 +331,15 @@ import { BusinessError } from '@kit.BasicServicesKit';
 export default class EntryAbility extends UIAbility {
   onCreate() {
     console.info('MyAbility onCreate');
-    let groupId = "1";
+    let groupId = '1';
     let getGroupDirContext: common.Context = this.context;
     try {
+      // Obtain the shared directory by group ID (Promise mode).
       getGroupDirContext.getGroupDir(groupId).then(data => {
-        console.info("getGroupDir result:" + data);
+        console.info('getGroupDir result:' + data);
       })
     } catch (error) {
-      console.error(`getGroupDirContext failed, error.code: ${(error as BusinessError).code}, error.message: ${(error as BusinessError).message}`);
+      console.error(`Failed to get group directory. Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
     }
   }
 }
@@ -362,6 +372,22 @@ Checks if the current instance is associated with the specified context type.
 | Type | Description |
 | --- | --- |
 | boolean | Returns { |
+
+**Examples**
+
+```TypeScript
+import { UIAbility, contextConstant } from '@kit.AbilityKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate() {
+    hilog.info(0x0000, 'testTag', `%{public}s`, 'Ability onCreate');
+    // Check whether the current Context is of the specified ContextType type.
+    let result = this.context.isContextOf(contextConstant.ContextType.UIABILITY_CONTEXT);
+    hilog.info(0x0000, 'testTag', `match contextType result is:%{public}s`, JSON.stringify(result));
+  }
+}
+```
 
 ## applicationInfo
 

@@ -40,7 +40,7 @@ struct Index {
     Button("Start to Recover Ability")
       .fontSize(40)
       .fontWeight(FontWeight.Bold)
-      .onClick(()=> {
+      .onClick(() => {
         // set restart want
         let want: Want = {
           bundleName: "ohos.samples.recovery",

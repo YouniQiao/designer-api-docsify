@@ -64,6 +64,7 @@ export default class AutoFillAbility extends AutoFillExtensionAbility {
     callback: autoFillManager.FillRequestCallback) {
     hilog.info(0x0000, 'testTag', '%{public}s', 'autofill onFillRequest');
     try {
+      // Create a LocalStorage and store the data required for autofill.
       let storage_fill: LocalStorage = new LocalStorage(
         {
           'session': session,
@@ -117,14 +118,15 @@ struct AccountPage {
           .onClick(() => {
             if (this.viewData != undefined) {
               if (this.context != undefined) {
+                // Call the reloadInModal API to retrigger autofill and pass custom data for the modal page.
                 this.context.reloadInModal({ data: { viewData: 20, text: 'HelloWorld789456' } }).then(() => {
                   console.info('reloadInModal successfully.')
                 }).catch((err: BusinessError) => {
-                  console.error('reloadInModal failed.')
+                  console.error(`reloadInModal failed. Code: ${err.code}, message: ${err.message}`);
                 })
               }
             }
-          })
+          });
         }
         // ...
       }

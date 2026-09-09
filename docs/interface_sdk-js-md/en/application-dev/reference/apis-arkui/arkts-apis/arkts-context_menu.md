@@ -15,7 +15,7 @@
 
 ## Examples
 
-This example demonstrates how to call the ContextMenu.close API to close a context menu that is bound to a component using bindContextMenu.
+This example demonstrates how to use ContextMenu.close to close the menu bound through bindContextMenu when dragging starts.
 > NOTE
 > 
 > You are advised to use the [getContextMenuController](../arkts-apis-uicontext-uicontext.md#getcontextmenucontroller) API in [UIContext](../arkts-apis-uicontext-uicontext.md) to specify the UI execution context.
@@ -48,7 +48,7 @@ struct Index {
           .textAlign(TextAlign.Center)
       }
       .bindContextMenu(this.MenuBuilder, ResponseType.LongPress)
-      .onDragStart(()=>{
+      .onDragStart(() => {
         // Close the menu when the component is dragged.
         ContextMenu.close() // You are advised to use this.getUIContext().getContextMenuController().close() to obtain the UI context.
       })

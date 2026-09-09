@@ -3390,7 +3390,7 @@ struct NavigationExample {
 }
 ```
 
-This example demonstrates how to use the systemMaterial attribute to enable the material effect for the title bar.
+This example demonstrates how to use the systemMaterial attribute to set the system material of the component and enable the immersive light effect for the title bar.
 The systemMaterial attribute is added to [NavigationTitleOptions](arkts-arkui-navigationtitleoptions-i.md) since API version 26.0.0.
 
 ```TypeScript

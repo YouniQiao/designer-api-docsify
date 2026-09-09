@@ -1,7 +1,4 @@
-# @system.configuration
-
-应用配置
-
+# @system.configuration(应用配置)
 
 ## 导入模块
 

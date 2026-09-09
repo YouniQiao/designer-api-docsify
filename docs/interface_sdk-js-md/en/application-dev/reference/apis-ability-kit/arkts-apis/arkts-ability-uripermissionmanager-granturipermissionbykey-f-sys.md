@@ -50,8 +50,8 @@ Grants the URI access permission of the current application to the target applic
 **Examples**
 
 ```TypeScript
-// The bundle name of the API caller is com.example.test.
-// ExntryAbility.ets
+// The bundle name of the API caller application is com.example.test.
+// EntryAbility.ets
 import { AbilityConstant, UIAbility, Want, wantConstant, uriPermissionManager } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 

@@ -82,7 +82,7 @@
 
 ## Examples
 
-This example demonstrates the marshalling and unmarshalling of styled strings using the marshalling and unmarshalling APIs.
+This example implements the serialization and deserialization of a styled string through the marshalling and unmarshalling methods.
 
 ```TypeScript
 // xxx.ets
@@ -91,9 +91,9 @@ import { LengthMetrics } from '@kit.ArkUI';
 @Entry
 @Component
 struct Index {
-  @State textTitle: string = "Marshalling and unmarshalling APIs";
-  @State textResult: string = "Hello world";
-  @State serializeStr: string = "Marshalling";
+  @State textTitle: string = 'Marshalling and unmarshalling APIs';
+  @State textResult: string = 'Hello world';
+  @State serializeStr: string = 'Marshalling';
   @State flag: boolean = false;
   private textAreaController: TextAreaController = new TextAreaController();
   private buff: Uint8Array = new Uint8Array();
@@ -105,7 +105,7 @@ struct Index {
     fontStyle: FontStyle.Normal
   });
   // Create a styled string object.
-  styledString: StyledString = new StyledString("Hello world",
+  styledString: StyledString = new StyledString('Hello world',
     [{
       start: 0,
       length: 11,
@@ -126,38 +126,40 @@ struct Index {
         .onClick(async () => {
           this.flag = !this.flag;
           if (!this.flag) {
-            console.info("Debug: Unmarshalling");
+            console.info('Debug: Unmarshalling');
+            // Deserialize the ArrayBuffer to restore the styled string object.
             let styles: StyledString = await StyledString.unmarshalling(this.buff.buffer);
-            this.textTitle = "After decodeTlv is called, the result of unmarshalling is: ";
+            this.textTitle = 'After decodeTlv is called, the result of unmarshalling is: ';
             if (styles == undefined) {
-              console.error("Debug: Failed to obtain the styled string.");
+              console.error('Debug: Failed to obtain the styled string.');
               return;
             }
             this.textResult = styles.getString();
-            console.info("Debug: this.textResult = " + this.textResult);
+            console.info('Debug: this.textResult = ' + this.textResult);
             let stylesArr = styles.getStyles(0, this.textResult.length, StyledStringKey.FONT);
-            console.info("Debug: stylesArr.length = " + stylesArr.length);
+            console.info('Debug: stylesArr.length = ' + stylesArr.length);
             for (let i = 0; i < stylesArr.length; ++i) {
-              console.info("Debug: style.start = " + stylesArr[i].start);
-              console.info("Debug: style.length = " + stylesArr[i].length);
-              console.info("Debug: style.styledKey = " + stylesArr[i].styledKey);
+              console.info('Debug: style.start = ' + stylesArr[i].start);
+              console.info('Debug: style.length = ' + stylesArr[i].length);
+              console.info('Debug: style.styledKey = ' + stylesArr[i].styledKey);
               let font = stylesArr[i].styledValue as TextStyle;
-              console.info("Debug: style.fontColor = " + font.fontColor);
-              console.info("Debug: style.fontSize = " + font.fontSize);
-              console.info("Debug: style.fontFamily = " + font.fontFamily);
-              console.info("Debug: style.fontStyle = " + font.fontStyle);
+              console.info('Debug: style.fontColor = ' + font.fontColor);
+              console.info('Debug: style.fontSize = ' + font.fontSize);
+              console.info('Debug: style.fontFamily = ' + font.fontFamily);
+              console.info('Debug: style.fontStyle = ' + font.fontStyle);
             }
             let subStr = styles.subStyledString(0, 2);
-            console.info("Debug: subStr = " + subStr.getString());
-            this.serializeStr = "Marshalling";
+            console.info('Debug: subStr = ' + subStr.getString());
+            this.serializeStr = 'Marshalling';
           } else {
-            console.info("Debug: Marshalling");
+            console.info('Debug: Marshalling');
+            // Serialize the styled string to return an ArrayBuffer for storage or transfer.
             let resultBuffer = StyledString.marshalling(this.styledString);
             this.buff = new Uint8Array(resultBuffer);
-            this.textTitle = "After encodeTlv is called, the result of marshalling is: ";
+            this.textTitle = 'After encodeTlv is called, the result of marshalling is: ';
             this.textResult = this.buff.toString();
-            console.info("Debug: buff = " + this.buff.toString());
-            this.serializeStr = "Unmarshalling";
+            console.info('Debug: buff = ' + this.buff.toString());
+            this.serializeStr = 'Unmarshalling';
           }
         })
     }.margin(10)
@@ -187,39 +189,39 @@ class MyUserData extends UserDataSpan {
   }
 
   marshalling() {
-    console.info("MyUserData marshalling...");
-    const text = "MyUserData1";
+    console.info('MyUserData marshalling...');
+    const text = 'MyUserData1';
     const buffer = new ArrayBuffer(text.length + 1);
     const uint8View = new Uint8Array(buffer);
     // Write the type.
     uint8View[0] = MyUserDataType.TYPE1;
-    for (let i = 1; i < text.length; i++) {
-      uint8View[i] = text.charCodeAt(i);
+    for (let i = 0; i < text.length; i++) {
+      uint8View[i + 1] = text.charCodeAt(i);
     }
     return uint8View.buffer;
   }
 
   unmarshalling() {
-    console.info("MyUserData unmarshalling...");
+    console.info('MyUserData unmarshalling...');
     return new MyUserData();
   }
 }
 
 class MyUserData2 extends UserDataSpan {
   marshalling() {
-    console.info("MyUserData2 marshalling...");
-    const text = "MyUserData2";
+    console.info('MyUserData2 marshalling...');
+    const text = 'MyUserData2';
     const buffer = new ArrayBuffer(text.length + 1);
     const uint8View = new Uint8Array(buffer);
     uint8View[0] = MyUserDataType.TYPE2;
-    for (let i = 1; i < text.length; i++) {
-      uint8View[i] = text.charCodeAt(i);
+    for (let i = 0; i < text.length; i++) {
+      uint8View[i + 1] = text.charCodeAt(i);
     }
     return uint8View.buffer;
   }
 
   unmarshalling() {
-    console.info("MyUserData2 unmarshalling...");
+    console.info('MyUserData2 unmarshalling...');
     return new MyUserData2();
   }
 }
@@ -232,11 +234,11 @@ struct MarshallExample1 {
   build() {
     Column() {
       Text(undefined, { controller: this.controller })
-      Button("Marshall&UnMarshall")
+      Button('Marshall&UnMarshall')
         .onClick(async () => {
           let myData = new MyUserData();
           let myData2 = new MyUserData2();
-          let myStyledString = new MutableStyledString("12345", [{
+          let myStyledString = new MutableStyledString('12345', [{
             start: 0,
             length: 3,
             styledKey: StyledStringKey.USER_DATA,
@@ -249,37 +251,38 @@ struct MarshallExample1 {
           }]);
 
           let buffer = StyledString.marshalling(myStyledString, (marshallingValue: StyledStringMarshallingValue) => {
-            // Perform marshalling based on the type.
+            // Call the corresponding serialization method based on the specific type of UserDataSpan.
             if (marshallingValue instanceof MyUserData) {
-              console.info("StyledString.marshalling MyUserData");
-              let value = marshallingValue as MyUserData;
-              return value.marshalling();
+              console.info('StyledString.marshalling MyUserData');
+              return marshallingValue.marshalling();
             } else if (marshallingValue instanceof MyUserData2) {
-              console.info("StyledString.marshalling MyUserData2");
-              let value = marshallingValue as MyUserData2;
-              return value.marshalling();
+              console.info('StyledString.marshalling MyUserData2');
+              return marshallingValue.marshalling();
             }
-            console.info("StyledString.marshalling default");
+            console.info('StyledString.marshalling default');
             return new ArrayBuffer(10);
           });
 
           let newStyledString = await StyledString.unmarshalling(buffer, (value: ArrayBuffer) => {
-            // 1. Read the type from the buffer.
-            // 2. Based on the type, choose the appropriate API to parse the buffer.
+            // Read the type identifier from the buffer, and call the corresponding deserialization method based on the type.
             const uint8View = new Uint8Array(value);
             let type = uint8View[0];
-            console.info("unmarshalling length:" + uint8View.length);
+            console.info('unmarshalling length:' + uint8View.length);
             if (type == MyUserDataType.TYPE1) {
-              console.info("unmarshalling type1:" + type);
+              console.info('unmarshalling type1:' + type);
               let myUserData = new MyUserData();
               return myUserData.unmarshalling();
             } else if (type == MyUserDataType.TYPE2) {
-              console.info("unmarshalling type2:" + type);
+              console.info('unmarshalling type2:' + type);
               let myUserData = new MyUserData2();
               return myUserData.unmarshalling();
             }
-            return new ArrayBuffer(0);
+            return new MyUserData();
           });
+          if (newStyledString == undefined) {
+            console.error('Failed to obtain newStyledString.');
+            return;
+          }
           this.controller.setStyledString(newStyledString);
         })
         .fontSize(20)
@@ -646,7 +649,7 @@ struct StyledStringSetTextStyleDemo {
   build() {
     Column() {
       Column({ space: 10 }) {
-        // Display the styled string with various font styles configured. For conflicting parts, the styled string configuration takes effect; for non-conflicting parts, the Text component attribute settings take effect.
+        // Display the attribute string configured with various font styles. The Text component also configures the conflicting parts to take effect from the attribute string configuration, while the non-conflicting ranges take effect from the Text component's attribute settings.
         Text(undefined, this.options)
           .fontColor(this.fontColor1)
           .font({ size: 20, weight: 500, style: FontStyle.Normal })

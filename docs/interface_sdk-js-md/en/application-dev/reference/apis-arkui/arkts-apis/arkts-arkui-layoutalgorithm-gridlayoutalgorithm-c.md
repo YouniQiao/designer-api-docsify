@@ -39,6 +39,11 @@ Constructs the grid layout algorithm class.
 | --- | --- | --- | --- |
 | option | [GridLayoutAlgorithmOptions](arkts-arkui-layoutalgorithm-gridlayoutalgorithmoptions-i.md) | No | Input parameters for constructing the grid layout algorithm, which are used to set the number of columns, column spacing, and row spacing of the grid layout. |
 
+**Examples**
+
+For details, see [Example 2: Switching the Layout Algorithm](../arkui-ts/ts-container-dynamiclayout.md#example-2-switching-the-layout-algorithm).
+- simpleType:
+
 ## columnsGap
 
 ```TypeScript

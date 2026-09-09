@@ -42,6 +42,7 @@ Listens for global touchscreen input events. This API uses an asynchronous callb
 ```TypeScript
 import { inputMonitor } from '@kit.InputKit';
 import { TouchEvent } from '@kit.InputKit';
+import { BusinessError } from '@kit.BasicServicesKit';
 
 @Entry
 @Component
@@ -102,6 +103,7 @@ Enables listening for global mouse events. This API uses an asynchronous callbac
 ```TypeScript
 import { inputMonitor } from '@kit.InputKit';
 import { MouseEvent } from '@kit.InputKit';
+import { BusinessError } from '@kit.BasicServicesKit';
 
 @Entry
 @Component
@@ -164,6 +166,7 @@ Enables listening for mouse events. When the mouse pointer moves to the specifie
 import { inputMonitor } from '@kit.InputKit';
 import { MouseEvent } from '@kit.InputKit';
 import { display } from '@kit.ArkUI';
+import { BusinessError } from '@kit.BasicServicesKit';
 
 @Entry
 @Component
@@ -246,6 +249,7 @@ Enables listening for global touchpad pinch events. This API uses an asynchronou
 
 ```TypeScript
 import { inputMonitor } from '@kit.InputKit';
+import { BusinessError } from '@kit.BasicServicesKit';
 
 @Entry
 @Component
@@ -307,6 +311,7 @@ Enables listening for global touchpad pinch events. This API uses an asynchronou
 ```TypeScript
 import { inputMonitor } from '@kit.InputKit';
 import { Pinch } from '@kit.InputKit';
+import { BusinessError } from '@kit.BasicServicesKit';
 
 @Entry
 @Component
@@ -368,6 +373,7 @@ Enables listening for rotation events of the touchpad. This API uses an asynchro
 ```TypeScript
 import { inputMonitor } from '@kit.InputKit';
 import { Rotate } from '@kit.InputKit';
+import { BusinessError } from '@kit.BasicServicesKit';
 
 @Entry
 @Component
@@ -427,6 +433,7 @@ Enables listening for three-finger swipe events. This API uses an asynchronous c
 
 ```TypeScript
 import { inputMonitor } from '@kit.InputKit';
+import { BusinessError } from '@kit.BasicServicesKit';
 
 @Entry
 @Component
@@ -486,6 +493,7 @@ Enables listening for four-finger swipe events. This API uses an asynchronous ca
 
 ```TypeScript
 import { inputMonitor } from '@kit.InputKit';
+import { BusinessError } from '@kit.BasicServicesKit';
 
 @Entry
 @Component
@@ -545,6 +553,7 @@ Enables listening for three-finger tap events. This API uses an asynchronous cal
 
 ```TypeScript
 import { inputMonitor } from '@kit.InputKit';
+import { BusinessError } from '@kit.BasicServicesKit';
 
 @Entry
 @Component
@@ -604,6 +613,7 @@ Enables listening for fingerprint gesture input events. This API uses an asynchr
 
 ```TypeScript
 import { inputMonitor } from '@kit.InputKit';
+import { BusinessError } from '@kit.BasicServicesKit';
 
 @Entry
 @Component
@@ -663,6 +673,7 @@ Listens for inward swipe events. This API uses an asynchronous callback to retur
 
 ```TypeScript
 import { inputMonitor } from '@kit.InputKit';
+import { BusinessError } from '@kit.BasicServicesKit';
 
 @Entry
 @Component
@@ -724,6 +735,7 @@ Enables listening for touchscreen swipe events. This API uses an asynchronous ca
 ```TypeScript
 import { inputMonitor } from '@kit.InputKit';
 import { TouchGestureEvent } from '@kit.InputKit';
+import { BusinessError } from '@kit.BasicServicesKit';
 
 @Entry
 @Component
@@ -785,6 +797,7 @@ Enables listening for touchscreen pinch events. This API uses an asynchronous ca
 ```TypeScript
 import { inputMonitor } from '@kit.InputKit';
 import { TouchGestureEvent } from '@kit.InputKit';
+import { BusinessError } from '@kit.BasicServicesKit';
 
 @Entry
 @Component
@@ -846,6 +859,7 @@ Listens for the press and release events of the specified key, which can be the 
 
 ```TypeScript
 import { inputMonitor, KeyEvent, KeyCode } from '@kit.InputKit';
+import { BusinessError } from '@kit.BasicServicesKit';
 
 @Entry
 @Component

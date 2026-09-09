@@ -50,7 +50,7 @@ import { BusinessError } from '@kit.BasicServicesKit';
 // Create a buffer for image effects.
 const colorBuffer = new ArrayBuffer(96);
 // Set image initialization options.
-let opts : image.InitializationOptions = {
+let opts: image.InitializationOptions = {
   editable: true,
   pixelFormat: 3,
   size: {
@@ -64,7 +64,7 @@ image.createPixelMap(colorBuffer, opts).then((pixelMap) => {
   // Create a ColorPicker instance.
   effectKit.createColorPicker(pixelMap).then(colorPicker => {
     console.info('Succeeded in creating colorPicker.');
-  }).catch((err : BusinessError) => {
+  }).catch((err: BusinessError) => {
     console.error(`Failed to create colorPicker. Code: ${err.code}, message: ${err.message}`);
   });
 });
@@ -116,7 +116,7 @@ import { BusinessError } from '@kit.BasicServicesKit';
 // Create a buffer for image effects.
 const colorBuffer = new ArrayBuffer(96);
 // Set image initialization options.
-let opts : image.InitializationOptions = {
+let opts: image.InitializationOptions = {
   editable: true,
   pixelFormat: 3,
   size: {
@@ -130,7 +130,7 @@ image.createPixelMap(colorBuffer, opts).then((pixelMap) => {
   // Create a ColorPicker instance for the specified color sampling area.
   effectKit.createColorPicker(pixelMap, [0, 0, 1, 1]).then(colorPicker => {
     console.info('Succeeded in creating colorPicker.');
-  }).catch((err : BusinessError) => {
+  }).catch((err: BusinessError) => {
     console.error(`Failed to create colorPicker. Code: ${err.code}, message: ${err.message}`);
   });
 });
@@ -175,7 +175,7 @@ import { effectKit } from '@kit.ArkGraphics2D';
 // Create a buffer for image effects.
 const colorBuffer = new ArrayBuffer(96);
 // Set image initialization options.
-let opts : image.InitializationOptions = {
+let opts: image.InitializationOptions = {
   editable: true,
   pixelFormat: 3,
   size: {
@@ -236,7 +236,7 @@ import { effectKit } from '@kit.ArkGraphics2D';
 // Create a buffer for image effects.
 const colorBuffer = new ArrayBuffer(96);
 // Set image initialization options.
-let opts : image.InitializationOptions = {
+let opts: image.InitializationOptions = {
   editable: true,
   pixelFormat: 3,
   size: {

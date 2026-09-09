@@ -43,6 +43,19 @@ Obtains information about the running processes. This API uses a promise to retu
 | --- | --- |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. Possible causes: 1. Failed to connect to the system service; |
 
+**Examples**
+
+```TypeScript
+import appManager from '@ohos.application.appManager';
+import { BusinessError } from '@ohos.base';
+
+appManager.getProcessRunningInformation().then((data) => {
+  console.info(`The process running infos is: ${JSON.stringify(data)}`);
+}).catch((error: BusinessError) => {
+  console.error(`error: ${JSON.stringify(error)}`);
+});
+```
+
 
 ## getProcessRunningInformation
 
@@ -82,3 +95,17 @@ Obtains information about the running processes. This API uses an asynchronous c
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. Possible causes: 1. Failed to connect to the system service; |
+
+**Examples**
+
+```TypeScript
+import appManager from '@ohos.application.appManager';
+
+appManager.getProcessRunningInformation((error, data) => {
+  if (error && error.code !== 0) {
+    console.error(`GetProcessRunningInformation failed, error code: ${error.code}, error msg: ${error.message}.`);
+  } else {
+    console.info(`getProcessRunningInformation success, data: ${JSON.stringify(data)}`);
+  }
+});
+```

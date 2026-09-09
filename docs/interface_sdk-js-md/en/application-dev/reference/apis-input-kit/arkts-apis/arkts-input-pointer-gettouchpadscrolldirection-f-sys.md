@@ -48,7 +48,11 @@ struct Index {
         .onClick(() => {
           try {
             // Obtain the touchpad scroll direction.
-            pointer.getTouchpadScrollDirection ((error: BusinessError, state: boolean) => {
+            pointer.getTouchpadScrollDirection((error: BusinessError, state: boolean) => {
+              if (error) {
+                console.error(`Failed to get touchpad scroll direction, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+                return;
+              }
               console.info(`Succeeded in getting touchpad scroll direction, state: ${JSON.stringify(state)}.`);
             });
           } catch (error) {

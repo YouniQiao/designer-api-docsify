@@ -34,12 +34,13 @@ Copies this matrix object.
 // xxx.ets
 import { matrix4 } from '@kit.ArkUI';
 
+let matrix1 = matrix4.identity().translate({ x: 100 });
+// Perform a scale operation on the copy of matrix1 without affecting matrix1.
+let matrix2 = matrix1.copy().scale({ x: 2 });
+
 @Entry
 @Component
 struct Test {
-  private matrix1 = matrix4.identity().translate({ x: 100 });
-  // Perform the scale operation on the copy matrix of matrix1, which does not affect matrix1.
-  private matrix2 = this.matrix1.copy().scale({ x: 2 });
 
   build() {
     Column() {
@@ -47,13 +48,13 @@ struct Test {
       Image($r("app.media.bg1"))
         .width('40%')
         .height(100)
-        .transform(this.matrix1)
+        .transform(matrix1)
       // Replace $r("app.media.bg2") with the image resource file you use.
       Image($r("app.media.bg2"))
         .width("40%")
         .height(100)
         .margin({ top: 50 })
-        .transform(this.matrix2)
+        .transform(matrix2)
     }
   }
 }

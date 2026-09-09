@@ -56,6 +56,29 @@ getCurrentState(): CustomComponentLifecycleState
 | --- | --- |
 | [CustomComponentLifecycleState](arkts-arkui-arkui-statemanagement-customcomponentlifecyclestate-e.md) | Current lifecycle status of a custom component. |
 
+**Examples**
+
+```TypeScript
+import { UIUtils, ComponentBuilt } from '@kit.ArkUI';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+@Entry
+@Component
+struct Index {
+  @ComponentBuilt
+  myBuilt() {
+    // CustomComponentLifecycle.getCurrentState is used to obtain the current lifecycle state of a custom component.
+    hilog.info(0x0000, 'testTag', 'Index Lifecycle is %{public}d', UIUtils.getLifecycle(this).getCurrentState());
+  }
+  build() {
+    Column() {
+      Text(`HelloWorld`)
+    }
+    .height('100%')
+    .width('100%')
+  }
+}
+```
+
 ## removeObserver
 
 ```TypeScript

@@ -48,6 +48,7 @@ Below is an example of setting the return mode of the intent execution result to
 
 ```TypeScript
 import { insightIntent, InsightIntentEntry, InsightIntentEntryExecutor } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
 
 class PlayVideoResultDef {
   resultCode: number = 0;
@@ -71,9 +72,6 @@ class PlayVideoResultDef {
   executeMode: [insightIntent.ExecuteMode.UI_ABILITY_FOREGROUND],
 })
 export default class PlayVideo extends InsightIntentEntryExecutor<PlayVideoResultDef> {
-  entityId: string = 'zhz';
-  episodeId: string = '50';
-  episodeNumber: number = 12;
 
   onExecute(): Promise<insightIntent.IntentResult<PlayVideoResultDef>> {
     console.info('testTag', 'PlayVideo onExecute success')
@@ -137,7 +135,7 @@ struct Index {
 
   build() {
     Column() {
-      // Return the intent execution result using the sendExecuteResult API.
+      // Proactively return the intent execution result through the sendIntentResult API.
       Button('insightIntentProvider sendIntentResult')
         .onClick(() => {
           try {

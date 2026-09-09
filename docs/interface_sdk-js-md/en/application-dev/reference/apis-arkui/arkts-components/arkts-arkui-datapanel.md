@@ -56,7 +56,7 @@ This example shows how to set the data panel type using the type attribute of [D
 @Entry
 @Component
 struct DataPanelExample {
-  public valueArr: number[] = [10, 10, 10, 10, 10, 10, 10, 10, 10]
+  public valueArr: number[] = [10, 10, 10, 10, 10, 10, 10, 10, 10];
 
   build() {
     Column({ space: 5 }) {
@@ -108,28 +108,28 @@ This example demonstrates how to set gradient colors and shadows using the [valu
 @Entry
 @Component
 struct LinearGradientDataPanelExample {
-  public values1: number[] = [20, 20, 20, 20]
+  public values1: number[] = [20, 20, 20, 20];
   public color1: LinearGradient =
-    new LinearGradient([{ color: '#65EEC9A3', offset: 0 }, { color: '#FFEF629F', offset: 1 }])
+      new LinearGradient([{ color: '#65EEC9A3', offset: 0 }, { color: '#FFEF629F', offset: 1 }]);
   public color2: LinearGradient =
-    new LinearGradient([{ color: '#FF67F9D4', offset: 0 }, { color: '#FFFF9554', offset: 1 }])
+      new LinearGradient([{ color: '#FF67F9D4', offset: 0 }, { color: '#FFFF9554', offset: 1 }]);
   public colorShadow1: LinearGradient =
-    new LinearGradient([{ color: '#65EEC9A3', offset: 0 }, { color: '#65EF629F', offset: 1 }])
+      new LinearGradient([{ color: '#65EEC9A3', offset: 0 }, { color: '#65EF629F', offset: 1 }]);
   public colorShadow2: LinearGradient =
-    new LinearGradient([{ color: '#65e26709', offset: 0 }, { color: '#65efbd08', offset: 1 }])
+      new LinearGradient([{ color: '#65e26709', offset: 0 }, { color: '#65efbd08', offset: 1 }]);
   public colorShadow3: LinearGradient =
-    new LinearGradient([{ color: '#6572B513', offset: 0 }, { color: '#6508efa6', offset: 1 }])
+      new LinearGradient([{ color: '#6572B513', offset: 0 }, { color: '#6508efa6', offset: 1 }]);
   public colorShadow4: LinearGradient =
-    new LinearGradient([{ color: '#65ed08f5', offset: 0 }, { color: '#65ef0849', offset: 1 }])
+      new LinearGradient([{ color: '#65ed08f5', offset: 0 }, { color: '#65ef0849', offset: 1 }]);
   @State shadowColorArray: Array<LinearGradient | ResourceColor> =
-    [this.colorShadow1, this.colorShadow2, this.colorShadow3, this.colorShadow4]
-  @State color3: string = '#00FF00'
-  @State color4: string = '#20FF0000'
-  @State colorArray: Array<LinearGradient | ResourceColor> = [this.color1, this.color2, this.color3, this.color4]
-  @State bgColor: string = '#08182431'
-  @State offsetX: number = 15
-  @State offsetY: number = 15
-  @State radius: number = 5
+      [this.colorShadow1, this.colorShadow2, this.colorShadow3, this.colorShadow4];
+  @State color3: string = '#00FF00';
+  @State color4: string = '#20FF0000';
+  @State colorArray: Array<LinearGradient | ResourceColor> = [this.color1, this.color2, this.color3, this.color4];
+  @State bgColor: string = '#08182431';
+  @State offsetX: number = 15;
+  @State offsetY: number = 15;
+  @State radius: number = 5;
 
   build() {
     Column({ space: 5 }) {
@@ -156,35 +156,22 @@ struct LinearGradientDataPanelExample {
 }
 ```
 
-This example demonstrates how to disable animations and shadows using the [closeEffect](arkts-arkui-datapanel-attribute.md#closeeffect) attribute.
+This example demonstrates how to disable the rotation and shadow effects for the data proportion chart using the [closeEffect](arkts-arkui-datapanel-attribute.md#closeeffect) API.
 
 ```TypeScript
 // xxx.ets
 @Entry
 @Component
 struct LinearGradientDataPanelExample {
-  public values1: number[] = [20, 20, 20, 20]
+  public values1: number[] = [20, 20, 20, 20];
   public color1: LinearGradient =
-    new LinearGradient([{ color: '#65EEC9A3', offset: 0 }, { color: '#FFEF629F', offset: 1 }])
+    new LinearGradient([{ color: '#65EEC9A3', offset: 0 }, { color: '#FFEF629F', offset: 1 }]);
   public color2: LinearGradient =
-    new LinearGradient([{ color: '#FF67F9D4', offset: 0 }, { color: '#FFFF9554', offset: 1 }])
-  public colorShadow1: LinearGradient =
-    new LinearGradient([{ color: '#65EEC9A3', offset: 0 }, { color: '#65EF629F', offset: 1 }])
-  public colorShadow2: LinearGradient =
-    new LinearGradient([{ color: '#65e26709', offset: 0 }, { color: '#65efbd08', offset: 1 }])
-  public colorShadow3: LinearGradient =
-    new LinearGradient([{ color: '#6572B513', offset: 0 }, { color: '#6508efa6', offset: 1 }])
-  public colorShadow4: LinearGradient =
-    new LinearGradient([{ color: '#65ed08f5', offset: 0 }, { color: '#65ef0849', offset: 1 }])
-  @State shadowColorArray: Array<LinearGradient | ResourceColor> =
-    [this.colorShadow1, this.colorShadow2, this.colorShadow3, this.colorShadow4]
-  @State color3: string = '#00FF00'
-  @State color4: string = '#20FF0000'
-  @State colorArray: Array<LinearGradient | ResourceColor> = [this.color1, this.color2, this.color3, this.color4]
-  @State bgColor: string = '#08182431'
-  @State offsetX: number = 15
-  @State offsetY: number = 15
-  @State radius: number = 5
+    new LinearGradient([{ color: '#FF67F9D4', offset: 0 }, { color: '#FFFF9554', offset: 1 }]);
+  @State color3: string = '#00FF00';
+  @State color4: string = '#20FF0000';
+  @State colorArray: Array<LinearGradient | ResourceColor> = [this.color1, this.color2, this.color3, this.color4];
+  @State bgColor: string = '#08182431';
 
   build() {
     Column({ space: 5 }) {
@@ -268,7 +255,7 @@ struct ChildItem {
   public color4: string = '#6595ff00'
   public color5: string = '#65000dff'
   public color6: string = '#650099ff'
-  public colorArray: Array<string> = [this.color1, this.color2, this.color3, this.color4, this.color5, this.color6]
+  public colorArray: Array<string> = [this.color1, this.color2, this.color3, this.color4, this.color5, this.color6];
 
   build() {
     RelativeContainer() {

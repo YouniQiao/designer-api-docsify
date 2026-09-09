@@ -43,19 +43,20 @@ Clears a given mission, regardless of whether it is locked. This API uses an asy
 import { missionManager } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
+// testMissionId is the mission ID, which can be obtained through the getMissionInfos API to get a real and valid mission ID.
 let testMissionId = 2;
 
 try {
   missionManager.clearMission(testMissionId, (err: BusinessError, data: void) => {
     if (err) {
-      console.error(`clearMission failed: ${err.message}`);
+      console.error(`clearMission failed. Code: ${err.code}, message: ${err.message}.`);
     } else {
       console.info(`clearMission successfully: ${JSON.stringify(data)}`);
     }
   });
 } catch (error) {
   let err: BusinessError = error as BusinessError;
-  console.error(`clearMission failed: ${err.message}`);
+  console.error(`clearMission failed. Code: ${err.code}, message: ${err.message}.`);
 }
 ```
 
@@ -102,16 +103,17 @@ Clears a given mission, regardless of whether it is locked. This API uses a prom
 import { missionManager } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
+// testMissionId is the mission ID, which can be obtained through the getMissionInfos API.
 let testMissionId = 2;
 
 try {
   missionManager.clearMission(testMissionId).then((data: void) => {
     console.info(`clearMission successfully. Data: ${JSON.stringify(data)}`);
   }).catch((error: BusinessError) => {
-    console.error(`clearMission failed. Cause: ${error.message}`);
+    console.error(`clearMission failed. Code: ${error.code}, message: ${error.message}.`);
   });
 } catch (error) {
   let err: BusinessError = error as BusinessError;
-  console.error(`clearMission failed. Cause: ${err.message}`);
+  console.error(`clearMission failed. Code: ${err.code}, message: ${err.message}.`);
 }
 ```

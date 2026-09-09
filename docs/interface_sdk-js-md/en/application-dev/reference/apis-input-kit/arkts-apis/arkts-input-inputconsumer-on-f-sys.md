@@ -46,6 +46,7 @@ Enables listening for system hotkey change events. This API uses an asynchronous
 
 ```TypeScript
 import { inputConsumer } from '@kit.InputKit';
+import { BusinessError } from '@kit.BasicServicesKit';
 
 @Entry
 @Component
@@ -63,12 +64,13 @@ struct Index {
             finalKeyDownDuration: 0
           };
           let callback = (keyOptions: inputConsumer.KeyOptions) => {
-            console.info(`keyOptions: ${JSON.stringify(keyOptions)}`);
-          }
+            console.info(`Succeeded in consuming key, keyOptions: ${JSON.stringify(keyOptions)}.`);
+          };
           try {
-            inputConsumer.on("key", keyOptions, callback);
+            // Subscribe to the key event.
+            inputConsumer.on('key', keyOptions, callback);
           } catch (error) {
-            console.error(`Subscribe failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
+            console.error(`Failed to subscribe, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
           }
         })
     }

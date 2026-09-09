@@ -48,7 +48,7 @@ struct Index {
       Text()
         .onClick(() => {
           try {
-            // Set the mouse pointer size.
+            // Set the mouse cursor size.
             pointer.setPointerSize(1, (error: BusinessError) => {
               if (error) {
                 console.error(`Failed to set pointer size, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);

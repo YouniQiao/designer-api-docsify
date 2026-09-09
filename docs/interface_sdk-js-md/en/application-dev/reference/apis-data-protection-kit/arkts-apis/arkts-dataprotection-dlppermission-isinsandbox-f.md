@@ -83,7 +83,7 @@ import { dlpPermission } from '@kit.DataProtectionKit';
 
 dlpPermission.isInSandbox((err, isInSandbox) => {
   if (err) {
-    console.error('isInSandbox error', err.code, err.message);
+    console.error(`Failed to check sandbox status. Code: ${err.code}, message: ${err.message}`);
   } else {
     console.info('isInSandbox: ', JSON.stringify(isInSandbox));
   }

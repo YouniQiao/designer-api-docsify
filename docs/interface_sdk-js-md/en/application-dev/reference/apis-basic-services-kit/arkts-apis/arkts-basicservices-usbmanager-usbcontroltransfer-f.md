@@ -42,36 +42,46 @@ Performs control transfer. This API uses a promise to return the result.
 **Examples**
 
 ```TypeScript
-class PARA {
-  bmRequestType: number = 0
-  bRequest: number = 0
-  wValue: number = 0
-  wIndex: number = 0
-  wLength: number = 0
-  data: Uint8Array = new Uint8Array()
-}
-
-let param: PARA = {
+import {BusinessError} from '@kit.BasicServicesKit';
+// Control transfer parameters: Set each field based on the USB protocol specifications, device descriptor, or device specifications document.
+// bmRequestType: request control type. Common values are as follows: 0x00 (standard request, from the host to the device), 0x20 (class request, from the host to the device), 0x40 (vendor request, from the host to the device), and 0x80 (standard request, from the device to the host).
+// bRequest: specific control request command (such as obtaining a descriptor or setting an address)
+// wValue: content of the request parameter
+// wIndex: index of the request parameter
+// wLength: data length
+// data: buffer for writing or reading data
+let param: usbManager.USBDeviceRequestParams = {
   bmRequestType: 0x80,
   bRequest: 0x06,
-
-  wValue:0x01 << 8 | 0,
+  wValue: 0x01 << 8 | 0,
   wIndex: 0,
   wLength: 18,
   data: new Uint8Array(18)
 };
 
-function usbControlTransfer() {
+async function usbControlTransfer() {
   let devicesList: Array<usbManager.USBDevice> = usbManager.getDevices();
   if (!devicesList || devicesList.length == 0) {
     console.info(`device list is empty`);
     return;
   }
 
-  usbManager.requestRight(devicesList?.[0]?.name);
-  let devicepipe: usbManager.USBDevicePipe = usbManager.connectDevice(devicesList?.[0]);
-  usbManager.usbControlTransfer(devicepipe, param).then((ret: number) => {
-  console.info(`usbControlTransfer = ${ret}`);
-  })
+  let rightResult = await usbManager.requestRight(devicesList?.[0]?.name);
+  if (!rightResult) {
+    console.error(`request right failed`);
+    return;
+  }
+  let devicePipe: usbManager.USBDevicePipe = usbManager.connectDevice(devicesList?.[0]);
+  if (devicePipe == undefined) {
+    console.error(`connect device failed`);
+    return;
+  }
+  usbManager.usbControlTransfer(devicePipe, param).then((ret: number) => {
+    console.info(`usbControlTransfer = ${ret}`);
+  }).catch((error: BusinessError) => {
+    console.error(`usbControlTransfer failed: ${error.code}, message: ${error.message}`);
+  }).finally(() => {
+    usbManager.closePipe(devicePipe);
+  });
 }
 ```

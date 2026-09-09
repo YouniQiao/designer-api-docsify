@@ -36,18 +36,21 @@ Unlocks a given mission. This API uses an asynchronous callback to return the re
 
 ```TypeScript
 import missionManager from '@ohos.application.missionManager';
+import { BusinessError } from '@ohos.base';
 
 let testMissionId = 2;
 try {
+  // Unlock the specified mission.
   missionManager.unlockMission(testMissionId, (err, data) => {
     if (err) {
-      console.error(`unlockMission failed: ${err.message}`);
+      console.error(`unlockMission failed. Code: ${err.code}, message: ${err.message}.`);
     } else {
-      console.info(`unlockMission successfully: ${JSON.stringify(data)}`);
+      console.info(`unlockMission successfully. Data: ${JSON.stringify(data)}`);
     }
   });
 } catch (err) {
-  console.error(`unlockMission failed: ${err.message}`);
+  let error = err as BusinessError;
+  console.error(`unlockMission sync failed. Code: ${error.code}, message: ${error.message}.`);
 }
 ```
 
@@ -92,12 +95,14 @@ import { BusinessError } from '@ohos.base';
 
 let testMissionId = 2;
 try {
+  // Unlock the specified mission.
   missionManager.unlockMission(testMissionId).then((data) => {
     console.info(`unlockMission successfully. Data: ${JSON.stringify(data)}`);
   }).catch((error: BusinessError) => {
-    console.error(`unlockMission failed. Cause: ${error.message}`);
+    console.error(`unlockMission failed. Code: ${error.code}, message: ${error.message}.`);
   });
 } catch (error) {
-  console.error(`unlockMission failed. Cause: ${error.message}`);
+  let err = error as BusinessError;
+  console.error(`unlockMission sync failed. Code: ${err.code}, message: ${err.message}.`);
 }
 ```

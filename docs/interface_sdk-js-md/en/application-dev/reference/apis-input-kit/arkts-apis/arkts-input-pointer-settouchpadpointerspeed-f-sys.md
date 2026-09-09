@@ -48,7 +48,7 @@ struct Index {
       Text()
         .onClick(() => {
           try {
-            // Set the touchpad pointer speed.
+            // Set the touchpad cursor speed.
             pointer.setTouchpadPointerSpeed(1, (error: BusinessError) => {
               if (error) {
                 console.error(`Failed to set touchpad pointer speed, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);

@@ -42,6 +42,7 @@ Injects key events (for both single keys and combination keys).
 
 ```TypeScript
 import { inputEventClient } from '@kit.InputKit';
+import { BusinessError } from '@kit.BasicServicesKit';
 
 @Entry
 @Component

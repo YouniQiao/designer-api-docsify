@@ -116,7 +116,7 @@ import { dlpPermission } from '@kit.DataProtectionKit';
 let uri = 'file://docs/storage/Users/currentUser/Desktop/test.txt.dlp';
 dlpPermission.installDLPSandbox('com.ohos.note', dlpPermission.DLPFileAccess.READ_ONLY, 100, uri, (err, res) => {
   if (err) {
-    console.error('installDLPSandbox error,', err.code, err.message);
+    console.error(`Failed to install DLPSandbox. Code: ${err.code}, message: ${err.message}`);
   } else {
     console.info('res', JSON.stringify(res));
   }

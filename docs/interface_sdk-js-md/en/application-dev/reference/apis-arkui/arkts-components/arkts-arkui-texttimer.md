@@ -57,7 +57,7 @@ struct TextTimerExample {
         .fontColor(Color.Black)
         .fontSize(50)
         .onTimer((utc: number, elapsedTime: number) => {
-          console.info('textTimer notCountDown utc is: ' + utc + ', elapsedTime: ' + elapsedTime);
+          console.info('textTimer countDown utc is: ' + utc + ', elapsedTime: ' + elapsedTime);
         })
       Row() {
         Button('start').onClick(() => {
@@ -204,14 +204,12 @@ struct TextTimerStart {
 
   build() {
     Column() {
-      Scroll()
-        .height('20%')
       TextTimer({ isCountDown: true, count: 30000, controller: this.textTimerController })
         .format(this.format)
         .fontColor(Color.Black)
         .fontSize(50)
         .onTimer((utc: number, elapsedTime: number) => {
-          console.info('textTimer notCountDown utc is: ' + utc + ', elapsedTime: ' + elapsedTime);
+          console.info('textTimer countDown utc is: ' + utc + ', elapsedTime: ' + elapsedTime);
         })
         .onAppear(() => {
           this.textTimerController.start();
@@ -230,38 +228,38 @@ This example shows text effects in different styles using the [fontColor](#fontc
 // xxx.ets
 @Entry
 @Component
-struct demo {
+struct TextTimerDemo {
+  // textTimerController is used to control the start and stop of the timer. This example mainly demonstrates style configuration.
   textTimerController: TextTimerController = new TextTimerController();
-  @State format: string = 'HH:mm:ss.SS';
   @State countValue: number = 5025678;
 
   build() {
     Column({ space: 10 }) {
-      Text ('Set the font color').fontColor(0xCCCCCC)
+      Text('Set the font color').fontColor(0xCCCCCC)
       TextTimer({ isCountDown: true, count: this.countValue, controller: this.textTimerController })
         .fontColor(Color.Blue)
       TextTimer({ isCountDown: true, count: this.countValue, controller: this.textTimerController })
         .fontColor(Color.Gray)
 
-      Text ('Set the font size').fontColor(0xCCCCCC)
+      Text('Set the font size').fontColor(0xCCCCCC)
       TextTimer({ isCountDown: true, count: this.countValue, controller: this.textTimerController })
         .fontSize(10)
       TextTimer({ isCountDown: true, count: this.countValue, controller: this.textTimerController })
         .fontSize(30)
 
-      Text ('Set the font style').fontColor(0xCCCCCC)
+      Text('Set the font style').fontColor(0xCCCCCC)
       TextTimer({ isCountDown: true, count: this.countValue, controller: this.textTimerController })
         .fontStyle(FontStyle.Normal)
       TextTimer({ isCountDown: true, count: this.countValue, controller: this.textTimerController })
         .fontStyle(FontStyle.Italic)
 
-      Text ('Set the font weight').fontColor(0xCCCCCC)
+      Text('Set the font weight').fontColor(0xCCCCCC)
       TextTimer({ isCountDown: true, count: this.countValue, controller: this.textTimerController })
         .fontWeight(FontWeight.Lighter)
       TextTimer({ isCountDown: true, count: this.countValue, controller: this.textTimerController })
         .fontWeight(FontWeight.Bolder)
 
-      Text ('Set the font family').fontColor(0xCCCCCC)
+      Text('Set the font family').fontColor(0xCCCCCC)
       TextTimer({ isCountDown: true, count: this.countValue, controller: this.textTimerController })
         .fontFamily('HMOS Color Emoji')
       TextTimer({ isCountDown: true, count: this.countValue, controller: this.textTimerController })
@@ -270,6 +268,42 @@ struct demo {
     .width('100%')
     .height('100%')
     .justifyContent(FlexAlign.Center)
+  }
+}
+```
+
+This example sets the initial timing time of the timer through the startTime attribute of [TextTimerOptions](arkts-arkui-texttimeroptions-i.md).
+Since API version 26.0.0, the startTime attribute has been added to [TextTimerOptions](arkts-arkui-texttimeroptions-i.md).
+
+```TypeScript
+// xxx.ets
+@Entry
+@Component
+struct TextTimerExample {
+  textTimerController: TextTimerController = new TextTimerController();
+  @State format: string = 'mm:ss.SS';
+
+  build() {
+    Column() {
+      TextTimer({ isCountDown: false, controller: this.textTimerController, startTime: 30000 })
+        .format(this.format)
+        .fontColor(Color.Black)
+        .fontSize(50)
+        .onTimer((utc: number, elapsedTime: number) => {
+          console.info('textTimer notCountDown utc is: ' + utc + ', elapsedTime: ' + elapsedTime);
+        })
+      Row({ space: 10 }) {
+        Button('start').onClick(() => {
+          this.textTimerController.start();
+        })
+        Button('pause').onClick(() => {
+          this.textTimerController.pause();
+        })
+        Button('reset').onClick(() => {
+          this.textTimerController.reset();
+        })
+      }
+    }
   }
 }
 ```

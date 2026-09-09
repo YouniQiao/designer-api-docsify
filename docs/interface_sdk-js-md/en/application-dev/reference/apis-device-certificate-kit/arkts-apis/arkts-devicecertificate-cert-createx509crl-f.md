@@ -65,7 +65,7 @@ let encodingBlob: cert.EncodingBlob = {
   encodingFormat: cert.EncodingFormat.FORMAT_PEM
 };
 
-cert.createX509CRL(encodingBlob, (error, X509CRL) => {
+cert.createX509CRL(encodingBlob, (error, _X509CRL) => {
   if (error) {
     console.error(`createX509CRL failed, errCode: ${error.code}, errMsg: ${error.message}`);
   } else {
@@ -140,7 +140,7 @@ let encodingBlob: cert.EncodingBlob = {
   encodingFormat: cert.EncodingFormat.FORMAT_PEM
 };
 
-cert.createX509CRL(encodingBlob).then(X509CRL => {
+cert.createX509CRL(encodingBlob).then(_X509CRL => {
   console.info('createX509CRL result: success.');
 }).catch((error: BusinessError) => {
   console.error(`createX509CRL failed, errCode: ${error.code}, errMsg: ${error.message}`);

@@ -25,3 +25,17 @@ Indicates whether the current device supports EmbeddedUIExtensionAbility.
 | Type | Description |
 | --- | --- |
 | boolean | Returns { |
+
+**Examples**
+
+```TypeScript
+import { abilityManager, UIAbility } from '@kit.AbilityKit';
+
+export default class EntryAbility extends UIAbility {
+  onForeground() {
+    // Determine whether the current device supports EmbeddedUIExtensionAbility.
+    let isSupported: boolean = abilityManager.isEmbeddedUIExtensionSupported();
+    console.info(`isEmbeddedUIExtensionSupported is ${isSupported}`);
+  }
+}
+```

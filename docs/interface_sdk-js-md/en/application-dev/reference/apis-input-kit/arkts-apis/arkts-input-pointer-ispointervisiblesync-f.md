@@ -28,6 +28,7 @@ Checks whether the mouse pointer is visible in the current window. This API retu
 
 ```TypeScript
 import { pointer } from '@kit.InputKit';
+import { BusinessError } from '@kit.BasicServicesKit';
 
 @Entry
 @Component

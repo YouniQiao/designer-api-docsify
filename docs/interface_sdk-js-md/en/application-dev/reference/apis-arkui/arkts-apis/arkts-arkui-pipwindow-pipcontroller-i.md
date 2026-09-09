@@ -137,7 +137,7 @@ Check whether the PiP window is active. This API uses a promise to return the re
 ```TypeScript
 let pipActiveStatus: boolean | undefined = undefined;
 try {
-  // Check whether the PiP window is active.
+  // Obtain the active status of the PiP window.
   let promise : Promise<boolean> | undefined = this.pipController?.isPiPActive();
   promise?.then((data) => {
     // Save the obtained active status of the PiP window.

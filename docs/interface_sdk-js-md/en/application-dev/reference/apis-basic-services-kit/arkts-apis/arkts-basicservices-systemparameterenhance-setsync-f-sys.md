@@ -42,8 +42,9 @@ Sets a value for the specified key. This API uses a promise to return the result
 import { BusinessError } from '@kit.BasicServicesKit';
 
 try {
-    systemParameterEnhance.setSync("test.parameter.key", "default");
-} catch(e) {
-    console.error("set unexpected error: " + e);
+  systemParameterEnhance.setSync('test.parameter.key', 'default');
+} catch (e) {
+  const err: BusinessError = e as BusinessError;
+  console.error(`Failed to set system parameter. Code: ${err.code}, message: ${err.message}`);
 }
 ```

@@ -40,7 +40,7 @@ Creates a CDSM client instance.
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported because the chip does not support it. |
-| [36100003](../../apis-avsession-kit/errorcode-nearlink-service.md#36100003-nearlink-disabled) | NearLink disabled. |
-| [36100041](../../apis-avsession-kit/errorcode-nearlink-service.md#36100041-invalid-url) | Invalid address. |
-| [36100050](../../apis-avsession-kit/errorcode-nearlink-service.md#36100050-coordinated-device-set-management-not-supported) | Coordinated Devices Set Management not supported. |
-| [36100099](../../apis-avsession-kit/errorcode-nearlink-service.md#36100099-operation-failed) | Operation failed. |
+| [36100003](../errorcode-nearlink-service.md#36100003-nearlink-disabled) | NearLink disabled. |
+| [36100041](../errorcode-nearlink-service.md#36100041-invalid-url) | Invalid address. |
+| [36100050](../errorcode-nearlink-service.md#36100050-coordinated-device-set-management-not-supported) | Coordinated Devices Set Management not supported. |
+| [36100099](../errorcode-nearlink-service.md#36100099-operation-failed) | Operation failed. |

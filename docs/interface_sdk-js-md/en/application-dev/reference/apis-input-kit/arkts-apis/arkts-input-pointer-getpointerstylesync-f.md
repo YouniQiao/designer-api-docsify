@@ -40,6 +40,7 @@ Queries the mouse pointer style type of a specified window, such as east arrow, 
 
 ```TypeScript
 import { pointer } from '@kit.InputKit';
+import { BusinessError } from '@kit.BasicServicesKit';
 
 @Entry
 @Component

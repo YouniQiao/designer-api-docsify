@@ -42,6 +42,7 @@ import { BusinessError } from '@kit.BasicServicesKit';
 export default class EntryAbility extends UIAbility {
   onForeground() {
     try {
+      // Obtains the auto-start on boot status of the current application.
       autoStartupManager.getAutoStartupStatusForSelf().then((isAutoStartup: boolean) => {
         console.info(`getAutoStartupStatusForSelf success, isAutoStartup: ${JSON.stringify(isAutoStartup)}.`);
       }).catch((err: BusinessError) => {

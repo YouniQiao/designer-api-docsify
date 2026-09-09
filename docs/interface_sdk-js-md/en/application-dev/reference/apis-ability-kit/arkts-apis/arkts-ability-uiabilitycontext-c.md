@@ -131,6 +131,7 @@ export default class EntryAbility extends UIAbility {
     let connection: number;
 
     try {
+      // Connect to AppServiceExtensionAbility.
       connection = this.context.connectAppServiceExtensionAbility(want, callback);
     } catch (err) {
       // Process input parameter errors.
@@ -223,6 +224,7 @@ export default class EntryAbility extends UIAbility {
     let connection: number;
 
     try {
+      // Connect ServiceExtensionAbility.
       connection = this.context.connectServiceExtensionAbility(want, options);
     } catch (err) {
       // Process input parameter errors.
@@ -324,12 +326,12 @@ struct UIServiceExtensionAbility {
         }).catch((err: Error) => {
         let code = (err as BusinessError).code;
         let message = (err as BusinessError).message;
-        console.info(TAG + `connectUIServiceExtensionAbility failed, code is ${code}, message is ${message}`);
+        console.error(TAG + `connectUIServiceExtensionAbility failed, code is ${code}, message is ${message}`);
       });
     } catch (err) {
       let code = (err as BusinessError).code;
       let message = (err as BusinessError).message;
-      console.info(TAG + `connectUIServiceExtensionAbility failed, code is ${code}, message is ${message}`);
+      console.error(TAG + `connectUIServiceExtensionAbility failed, code is ${code}, message is ${message}`);
     };
   }
 
@@ -399,6 +401,7 @@ export default class EntryAbility extends UIAbility {
     let commRemote: rpc.IRemoteObject | null;
 
     try {
+      // Disconnect from the AppServiceExtensionAbility.
       this.context.disconnectAppServiceExtensionAbility(connection).then(() => {
         commRemote = null;
         // Carry out normal service processing.
@@ -461,6 +464,7 @@ export default class EntryAbility extends UIAbility {
     let commRemote: rpc.IRemoteObject | null;
 
     try {
+      // Disconnect from the ServiceExtensionAbility.
       this.context.disconnectServiceExtensionAbility(connection, (err: BusinessError) => {
         commRemote = null;
         if (err.code) {
@@ -530,6 +534,7 @@ export default class EntryAbility extends UIAbility {
     let commRemote: rpc.IRemoteObject | null;
 
     try {
+      // Disconnect from the ServiceExtensionAbility.
       this.context.disconnectServiceExtensionAbility(connection).then(() => {
         commRemote = null;
         // Carry out normal service processing.
@@ -638,12 +643,12 @@ struct UIServiceExtensionAbility {
         }).catch((err: Error) => {
         let code = (err as BusinessError).code;
         let message = (err as BusinessError).message;
-        console.info(TAG + `disconnectUIServiceExtensionAbility failed, code is ${code}, message is ${message}`);
+        console.error(TAG + `disconnectUIServiceExtensionAbility failed, code is ${code}, message is ${message}`);
       });
     } catch (err) {
       let code = (err as BusinessError).code;
       let message = (err as BusinessError).message;
-      console.info(TAG + `disconnectUIServiceExtensionAbility failed, code is ${code}, message is ${message}`);
+      console.error(TAG + `disconnectUIServiceExtensionAbility failed, code is ${code}, message is ${message}`);
     }
   }
 }
@@ -698,6 +703,7 @@ struct Index {
           .onClick(() => {
             let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
 
+            // Hide the current UIAbility.
             context.hideAbility().then(() => {
               console.info(`hideAbility success`);
             }).catch((err: BusinessError) => {
@@ -843,10 +849,11 @@ struct Index {
           .onClick(() => {
             let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
 
+            // Move the UIAbility in the foreground to the background.
             context.moveAbilityToBackground().then(() => {
               console.info(`moveAbilityToBackground success.`);
             }).catch((err: BusinessError) => {
-              console.info(`moveAbilityToBackground error: ${JSON.stringify(err)}.`);
+              console.error(`moveAbilityToBackground error: ${JSON.stringify(err)}.`);
             });
           });
       }
@@ -927,6 +934,7 @@ export default class EntryAbility extends UIAbility {
     };
 
     try {
+      // Start the Atomic service.
       this.context.openAtomicService(appId, options)
         .then((result: common.AbilityResult) => {
           // Carry out normal service processing.
@@ -1033,6 +1041,7 @@ struct Index {
           };
 
           try {
+            // Start the UIAbility through App Linking.
             context.openLink(
               link,
               openLinkOptions,
@@ -1048,7 +1057,7 @@ struct Index {
             });
           }
           catch (e) {
-            hilog.error(DOMAIN, TAG, `exception occured, errCode ${JSON.stringify(e.code)}`);
+            hilog.error(DOMAIN, TAG, `exception occurred, errCode ${JSON.stringify(e.code)}`);
           }
         })
     }
@@ -1372,6 +1381,7 @@ struct Index {
           };
           let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
           try {
+            // Restarts the process where the current UIAbility resides and starts the specified UIAbility.
             await context.restartApp(want);
           } catch (err) {
             hilog.error(0x0000, 'testTag', `restart failed: ${err.code}, ${err.message}`);
@@ -1570,6 +1580,7 @@ export default class EntryAbility extends UIAbility {
         editable: true, pixelFormat: image.PixelMapFormat.RGBA_8888, size: { height: 512, width: 512 }
       };
       let imagePixelMap: image.PixelMap = await image.createPixelMap(color, opts);
+      // Set the icon and label information of the UIAbility instance.
       this.context.setAbilityInstanceInfo(newLabel, imagePixelMap)
         .then(() => {
           console.info('setAbilityInstanceInfo success');
@@ -1640,6 +1651,7 @@ export default class MyAbility extends UIAbility {
         hilog.error(0x0000, 'testTag', 'Failed to load the content.');
         return;
       }
+      // Set the light/dark color mode of the UIAbility.
       let uiAbilityContext = this.context;
       uiAbilityContext.setColorMode(ConfigurationConstant.ColorMode.COLOR_MODE_DARK);
     });
@@ -1686,9 +1698,19 @@ import { BusinessError } from '@kit.BasicServicesKit';
 
 export default class EntryAbility extends UIAbility {
   onForeground() {
-    this.context.setMissionContinueState(AbilityConstant.ContinueState.INACTIVE, (result: BusinessError) => {
-      console.info(`setMissionContinueState: ${JSON.stringify(result)}`);
-    });
+    try {
+      this.context.setMissionContinueState(AbilityConstant.ContinueState.INACTIVE, (err: BusinessError) => {
+        if (err.code) {
+          console.error(`setMissionContinueState failed, code is ${err.code}, message is ${err.message}`);
+          return;
+        }
+        console.info('setMissionContinueState succeed');
+      });
+    } catch (err) {
+      let code = (err as BusinessError).code;
+      let message = (err as BusinessError).message;
+      console.error(`setMissionContinueState failed, code is ${code}, message is ${message}`);
+    }
   }
 }
 ```
@@ -1785,8 +1807,12 @@ import { BusinessError } from '@kit.BasicServicesKit';
 
 export default class EntryAbility extends UIAbility {
   onCreate(want: Want, launchParam: AbilityConstant.LaunchParam) {
-    this.context.setMissionLabel('test', (result: BusinessError) => {
-      console.info(`setMissionLabel: ${JSON.stringify(result)}`);
+    this.context.setMissionLabel('test', (err: BusinessError) => {
+      if (err.code) {
+        console.error(`setMissionLabel failed, code is ${err.code}, message is ${err.message}`);
+        return;
+      }
+      console.info('setMissionLabel succeed');
     });
   }
 }
@@ -1981,6 +2007,7 @@ export default class EntryAbility extends UIAbility {
       contextConstant.Scenarios.SCENARIO_BACK_TO_CALLER_ABILITY_WITH_RESULT;
 
     try {
+      // Set that starting a UIAbility in specific scenarios does not trigger the onNewWant lifecycle callback.
       this.context.setOnNewWantSkipScenarios(scenarios).then(() => {
         // Carry out normal service processing.
         console.info('setOnNewWantSkipScenarios succeed');
@@ -2096,6 +2123,7 @@ struct Index {
           .onClick(() => {
             let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
 
+            // Display the current UIAbility.
             context.showAbility().then(() => {
               console.info(`showAbility success`);
             }).catch((err: BusinessError) => {
@@ -2222,6 +2250,7 @@ export default class EntryAbility extends UIAbility {
     };
 
     try {
+      // Start the UIAbility.
       this.context.startAbility(want, (err: BusinessError) => {
         if (err.code) {
           // Process service logic errors.
@@ -2324,6 +2353,7 @@ export default class EntryAbility extends UIAbility {
     };
 
     try {
+      // Start the UIAbility.
       this.context.startAbility(want, options, (err: BusinessError) => {
         if (err.code) {
           // Process service logic errors.
@@ -2430,6 +2460,7 @@ export default class EntryAbility extends UIAbility {
     };
 
     try {
+      // Start the UIAbility.
       this.context.startAbility(want, options)
         .then(() => {
           // Carry out normal service processing.
@@ -2564,6 +2595,7 @@ export default class EntryAbility extends UIAbility {
     };
 
     try {
+      // Obtain the Caller communication object and start the UIAbility in the background.
       caller = await this.context.startAbilityByCall(wantBackground);
       await caller.call('TEST_CALL', new TestParcelable());
       caller.release();
@@ -2642,6 +2674,7 @@ export default class EntryAbility extends UIAbility {
     };
 
     try {
+      // Obtain the Caller communication object and start the UIAbility in the foreground.
       caller = await this.context.startAbilityByCall(wantForeground);
       caller.release();
     } catch (err) {
@@ -2702,7 +2735,7 @@ export default class EntryAbility extends UIAbility {
     };
     let abilityStartCallback: common.AbilityStartCallback = {
       onError: (code: number, name: string, message: string) => {
-        console.info(`code:` + code + `name:` + name + `message:` + message);
+        console.error(`code:` + code + `name:` + name + `message:` + message);
       },
       onResult: (abilityResult: common.AbilityResult) => {
         console.info(`resultCode:` + abilityResult.resultCode + `bundleName:` + abilityResult.want?.bundleName);
@@ -2776,7 +2809,7 @@ export default class EntryAbility extends UIAbility {
     };
     let abilityStartCallback: common.AbilityStartCallback = {
       onError: (code: number, name: string, message: string) => {
-        console.info(`code:` + code + `name:` + name + `message:` + message);
+        console.error(`code:` + code + `name:` + name + `message:` + message);
       },
       onResult: (abilityResult: common.AbilityResult) => {
         console.info(`resultCode:` + abilityResult.resultCode + `bundleName:` + abilityResult.want?.bundleName);
@@ -2874,6 +2907,7 @@ export default class EntryAbility extends UIAbility {
     };
 
     try {
+      // Start the UIAbility and obtain the return result.
       this.context.startAbilityForResult(want, (err: BusinessError, result: common.AbilityResult) => {
         if (err.code) {
           // Process service logic errors.
@@ -2979,6 +3013,7 @@ export default class EntryAbility extends UIAbility {
     };
 
     try {
+      // Start the UIAbility and obtain the return result.
       this.context.startAbilityForResult(want, options, (err: BusinessError, result: common.AbilityResult) => {
         if (err.code) {
           // Process service logic errors.
@@ -3088,6 +3123,7 @@ export default class EntryAbility extends UIAbility {
     };
 
     try {
+      // Start the UIAbility and obtain the return result.
       this.context.startAbilityForResult(want, options)
         .then((result: common.AbilityResult) => {
           // Carry out normal service processing.
@@ -3174,6 +3210,7 @@ export default class EntryAbility extends UIAbility {
     };
 
     try {
+      // Start the AppServiceExtensionAbility.
       this.context.startAppServiceExtensionAbility(want)
         .then(() => {
           // Carry out normal service processing.
@@ -3222,6 +3259,34 @@ Bring the current UIAbility instance to the foreground.
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. Connect to system service failed. |
 | [16000082](../errorcode-ability.md#16000082-uiability-is-being-started) | The UIAbility is being started. The UIAbility has not completed onCreate or onWindowStageCreate. |
 
+**Examples**
+
+```TypeScript
+import { UIAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate() {
+    try {
+      setTimeout((): void => {
+        // Start the current UIAbility instance and switch it to the foreground.
+        this.context.startSelf()
+          .then((): void => {
+            console.info('startSelf succeed');
+          })
+          .catch((err: BusinessError): void => {
+            console.error(`startSelf failed, code is ${err.code}, message is ${err.message}`);
+          });
+      }, 100);
+    } catch (err) {
+      let code = (err as BusinessError).code;
+      let message = (err as BusinessError).message;
+      console.error(`startSelf failed, code is ${code}, message is ${message}`);
+    }
+  }
+}
+```
+
 ## startSelfUIAbilityInChildProcess
 
 ```TypeScript
@@ -3265,6 +3330,37 @@ Launch the application's own UIAbility in the child process. If the launchMode o
 | [16000124](../errorcode-ability.md#16000124-starting-a-distributed-uiability-is-not-supported) | Starting a remote UIAbility is not supported. |
 | [16000130](../errorcode-ability.md#16000130-uiability-does-not-belong-to-the-caller) | The UIAbility not belong to caller. |
 | [16000131](../errorcode-ability.md#16000131-uiability-already-started) | The UIAbility is already exist, can not start again. |
+
+**Examples**
+
+```TypeScript
+import { UIAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onForeground() {
+    let want: Want = {
+      bundleName: 'com.example.myapplication',
+      abilityName: 'ChildProcessAbility'
+    };
+    let instanceFlag = 'instance1';
+    try {
+      // Start the UIAbility of the current application in a child process.
+      this.context.startSelfUIAbilityInChildProcess(want, instanceFlag)
+        .then(() => {
+          console.info('startSelfUIAbilityInChildProcess succeed');
+        })
+        .catch((err: BusinessError) => {
+          console.error(`startSelfUIAbilityInChildProcess failed, code is ${err.code}, message is ${err.message}`);
+        });
+    } catch (err) {
+      let code = (err as BusinessError).code;
+      let message = (err as BusinessError).message;
+      console.error(`startSelfUIAbilityInChildProcess failed, code is ${code}, message is ${message}`);
+    }
+  }
+}
+```
 
 ## startSelfUIAbilityInCurrentProcess
 
@@ -3341,6 +3437,7 @@ export default class EntryAbility extends UIAbility {
     let instanceFlag = 'instance1';
 
     try {
+      // Start the application's own UIAbility in the current process.
       this.context.startSelfUIAbilityInCurrentProcess(want, instanceFlag, options);
     } catch (err) {
       // Process input parameter errors.
@@ -3430,10 +3527,10 @@ struct Index {
               context.startUIServiceExtensionAbility(startWant).then(() => {
                 console.info('startUIServiceExtensionAbility success');
               }).catch((error: BusinessError) => {
-                console.info('startUIServiceExtensionAbility error', JSON.stringify(error));
+                console.error('startUIServiceExtensionAbility error', JSON.stringify(error));
               })
             } catch (err) {
-              console.info('startUIServiceExtensionAbility failed', JSON.stringify(err));
+              console.error('startUIServiceExtensionAbility failed', JSON.stringify(err));
             }
           })
       }
@@ -3505,6 +3602,7 @@ export default class EntryAbility extends UIAbility {
     };
 
     try {
+      // Stop the AppServiceExtensionAbility.
       this.context.stopAppServiceExtensionAbility(want)
         .then(() => {
           // Carry out normal service processing.
@@ -3574,6 +3672,7 @@ import { BusinessError } from '@kit.BasicServicesKit';
 export default class EntryAbility extends UIAbility {
   onForeground() {
     try {
+      // Destroy the current UIAbility.
       this.context.terminateSelf((err: BusinessError) => {
         if (err.code) {
           // Process service logic errors.
@@ -3658,6 +3757,7 @@ import { BusinessError } from '@kit.BasicServicesKit';
 export default class EntryAbility extends UIAbility {
   onForeground() {
     try {
+      // Destroy the current UIAbility.
       this.context.terminateSelf()
         .then(() => {
           // Carry out normal service processing.
@@ -3753,6 +3853,7 @@ export default class EntryAbility extends UIAbility {
     };
 
     try {
+      // Destroy the current UIAbility.
       this.context.terminateSelfWithResult(abilityResult, (err: BusinessError) => {
         if (err.code) {
           // Process service logic errors.
@@ -3837,6 +3938,7 @@ export default class EntryAbility extends UIAbility {
     };
 
     try {
+      // Destroy the current UIAbility.
       this.context.terminateSelfWithResult(abilityResult)
         .then(() => {
           // Carry out normal service processing.

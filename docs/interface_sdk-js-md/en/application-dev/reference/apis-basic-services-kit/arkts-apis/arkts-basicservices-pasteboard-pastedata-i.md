@@ -261,7 +261,7 @@ const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteb
 systemPasteboard.getData().then((pasteData: pasteboard.PasteData) => {
     let htmlText: string = pasteData.getPrimaryHtml();
 }).catch((err: BusinessError) => {
-    console.error('Failed to get PasteData. Cause: ' + err.message);
+    console.error(`Failed to get PasteData. errorCode: ${err.code}, errorMessage: ${err.message}.`);
 });
 ```
 
@@ -367,7 +367,7 @@ systemPasteboard.getData().then((pasteData: pasteboard.PasteData) => {
     let text: string = pasteData.getPrimaryText();
 }).catch((err: BusinessError) => {
     // Handle the failure of obtaining the content.
-    console.error('Failed to get PasteData. Cause: ' + err.message);
+    console.error(`Failed to get PasteData. errorCode: ${err.code}, errorMessage: ${err.message}.`);
 });
 ```
 
@@ -400,7 +400,7 @@ const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteb
 systemPasteboard.getData().then((pasteData: pasteboard.PasteData) => {
     let uri: string = pasteData.getPrimaryUri();
 }).catch((err: BusinessError) => {
-    console.error('Failed to get PasteData. Cause: ' + err.message);
+    console.error(`Failed to get PasteData. errorCode: ${err.code}, errorMessage: ${err.message}.`);
 });
 ```
 
@@ -434,7 +434,7 @@ const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteb
 systemPasteboard.getData().then((pasteData: pasteboard.PasteData) => {
     let want: Want = pasteData.getPrimaryWant();
 }).catch((err: BusinessError) => {
-    console.error('Failed to get PasteData. Cause: ' + err.message);
+    console.error(`Failed to get PasteData. errorCode: ${err.code}, errorMessage: ${err.message}.`);
 });
 ```
 
@@ -700,7 +700,7 @@ import { BusinessError } from '@kit.BasicServicesKit';
 const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteboard();
 systemPasteboard.getData((err: BusinessError, pasteData: pasteboard.PasteData) => {
     if (err) {
-        console.error('Failed to get PasteData. Cause: ' + err.message);
+        console.error(`Failed to get PasteData. errorCode: ${err.code}, errorMessage: ${err.message}.`);
         return;
     }
     pasteData.pasteStart();
@@ -729,7 +729,7 @@ import { BusinessError } from '@kit.BasicServicesKit';
 const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteboard();
 systemPasteboard.getData((err: BusinessError, pasteData: pasteboard.PasteData) => {
     if (err) {
-        console.error('Failed to get PasteData. Cause: ' + err.message);
+        console.error(`Failed to get PasteData. errorCode: ${err.code}, errorMessage: ${err.message}.`);
         return;
     }
     pasteData.pasteStart();

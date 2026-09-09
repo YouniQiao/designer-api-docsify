@@ -92,6 +92,7 @@ export default class MainUIAbility extends UIAbility {
     }).then((obj) => {
       let caller: Caller = obj;
       let msg = new MyMessageAble('msg', 'world'); // See the definition of Parcelable.
+      // Send a message to the Callee.
       caller.call(method, msg)
         .then(() => {
           console.info('Caller call() called');
@@ -150,7 +151,7 @@ import { window } from '@kit.ArkUI';
 import { rpc } from '@kit.IPCKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
-class MyMessageAble implements rpc.Parcelable {
+class MyMessageable implements rpc.Parcelable {
   name: string
   str: string
   num: number = 1
@@ -187,11 +188,12 @@ export default class MainUIAbility extends UIAbility {
     }).then((obj) => {
       caller = obj;
       let msg = new MyMessageAble('msg', 'world');
+      // Send a message to the Callee and obtain the return result.
       caller.callWithResult(method, msg)
         .then((data) => {
           console.info('Caller callWithResult() called');
           let retMsg = new MyMessageAble('msg', 'world');
-          data.readParcelable(retMsg);
+          data.readParcelable(retMsg); // Read the Parcelable data returned by the Callee.
         })
         .catch((callErr: BusinessError) => {
           console.error(`Caller.callWithResult catch error, error.code: ${callErr.code}, error.message: ${callErr.message}`);
@@ -246,11 +248,12 @@ export default class MainUIAbility extends UIAbility {
     }).then((obj) => {
       let caller: Caller = obj;
       try {
+        // Define the callback for the disconnect event.
         let onReleaseCallBack: OnReleaseCallback = (str) => {
           console.info(`Caller OnRelease CallBack is called ${str}`);
         };
-        caller.on('release', onReleaseCallBack);
-        caller.off('release', onReleaseCallBack);
+        caller.on('release', onReleaseCallBack); // Register the listener for the disconnect event.
+        caller.off('release', onReleaseCallBack); // Unregister the listener for the disconnect event.
       } catch (error) {
         console.error(`Caller.on or Caller.off catch error, error.code: ${error.code}, error.message: ${error.message}`);
       }
@@ -309,7 +312,7 @@ export default class MainUIAbility extends UIAbility {
           console.info(`Caller OnRelease CallBack is called ${str}`);
         };
         caller.on('release', onReleaseCallBack);
-        caller.off('release');
+        caller.off('release'); // Unregister all disconnection listeners.
       } catch (error) {
         console.error(`Caller.on or Caller.off catch error, error.code: ${error.code}, error.message: ${error.message}`);
       }
@@ -365,6 +368,7 @@ export default class MainUIAbility extends UIAbility {
     }).then((obj) => {
       let caller: Caller = obj;
       try {
+        // Register the release event listener.
         caller.on('release', (str) => {
           console.info(`Caller OnRelease CallBack is called ${str}`);
         });
@@ -421,6 +425,7 @@ export default class MainUIAbility extends UIAbility {
     }).then((obj) => {
       let caller: Caller = obj;
       try {
+        // Register the listener for disconnection from the Callee UIAbility.
         caller.onRelease((str) => {
           console.info(`Caller OnRelease CallBack is called ${str}`);
         });
@@ -478,14 +483,17 @@ export default class MainAbility extends UIAbility {
     }).then((obj) => {
       let caller: Caller = obj;
       try {
+        // Register the listener for cross-device component state changes in collaboration scenarios.
         caller.onRemoteStateChange((str) => {
           console.info('Remote state changed ' + str);
         });
       } catch (error) {
-        console.error(`Caller.onRemoteStateChange catch error, error.code: ${JSON.stringify(error.code)}, error.message: ${JSON.stringify(error.message)}`);
+        let code = (error as BusinessError).code;
+        let msg = (error as BusinessError).message; 
+        console.error(`Caller.onRemoteStateChange catch error, error.code: ${code}, error.message: ${msg}.`);
       }
     }).catch((err: BusinessError) => {
-      console.error(`Caller GetCaller error, error.code: ${JSON.stringify(err.code)}, error.message: ${JSON.stringify(err.message)}`);
+      console.error(`Caller GetCaller error, error.code: ${err.code}, error.message: ${err.message}`);
     });
   }
 }
@@ -530,6 +538,7 @@ export default class MainUIAbility extends UIAbility {
     }).then((obj) => {
       caller = obj;
       try {
+        // Release the connection between Caller and Callee.
         caller.release();
       } catch (releaseErr) {
         console.error(`Caller.release catch error, error.code: ${releaseErr.code}, error.message: ${releaseErr.message}`);

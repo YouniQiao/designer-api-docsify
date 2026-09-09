@@ -46,13 +46,15 @@ import { AbilityConstant, UIAbility, Want, dialogRequest } from '@kit.AbilityKit
 export default class EntryAbility extends UIAbility {
   onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
     try {
+      // Obtain the RequestCallback of the requester from Want.
       let requestCallback = dialogRequest.getRequestCallback(want);
       let myResult: dialogRequest.RequestResult = {
         result : dialogRequest.ResultCode.RESULT_CANCEL,
       };
+      // Set the request result of the modal dialog.
       requestCallback.setRequestResult(myResult);
-    } catch(err) {
-      console.error(`getRequestInfo err= ${JSON.stringify(err)}`);
+    } catch (err) {
+      console.error(`Failed to setRequestResult. Code: ${err.code}, message: ${err.message}`);
     }
   }
 }

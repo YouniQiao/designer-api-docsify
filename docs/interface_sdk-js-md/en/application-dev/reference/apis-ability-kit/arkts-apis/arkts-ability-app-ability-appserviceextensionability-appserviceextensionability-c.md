@@ -54,7 +54,8 @@ class StubTest extends rpc.RemoteObject {
     super(des);
   }
 
-  onConnect(code: number, data: rpc.MessageSequence, reply: rpc.MessageSequence, option: rpc.MessageOption) {
+  onRemoteMessageRequest(code: number, data: rpc.MessageSequence, reply: rpc.MessageSequence, options: rpc.MessageOption): boolean {
+    return true;
   }
 }
 

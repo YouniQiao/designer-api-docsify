@@ -30,6 +30,19 @@ Called when the ability stage is about to create the first ability. If both this
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
+**Examples**
+
+```TypeScript
+import { AbilityStage } from '@kit.AbilityKit';
+
+export default class MyAbilityStage extends AbilityStage {
+  onAboutToCreateAbility(): void {
+    console.info('About to create first ability, preparing...');
+    // Add the preparation work before creating the first ability here.
+  }
+}
+```
+
 ## onAboutToCreateAbilityAsync
 
 ```TypeScript
@@ -49,6 +62,26 @@ Called when the ability stage is about to create the first ability. This API use
 | Type | Description |
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
+
+**Examples**
+
+```TypeScript
+import { AbilityStage } from '@kit.AbilityKit';
+
+export default class MyAbilityStage extends AbilityStage {
+  async onAboutToCreateAbilityAsync(): Promise<void> {
+    console.info('About to create first ability, preparing...');
+    // Perform the asynchronous initialization.
+    await new Promise<void>((resolve) => {
+      setTimeout(() => {
+        console.info('Async preparation completed');
+        resolve();
+      }, 1000);
+    });
+    // The ability is created only after the initialization is complete.
+  }
+}
+```
 
 ## onAcceptWant
 
@@ -131,12 +164,13 @@ If a UIAbility instance with the same ID already exists in the system, that inst
 **Examples**
 
 ```TypeScript
-import { AbilityStage } from '@kit.AbilityKit';
+import { AbilityStage, Want } from '@kit.AbilityKit';
 
 class MyAbilityStage extends AbilityStage {
-  async onAcceptWantAsync(): Promise<string> {
+  async onAcceptWantAsync(want: Want): Promise<string> {
     await new Promise<string>((res, rej) => {
       setTimeout(res, 1000); // Execute the operation after 1 second.
+      console.info(`onAcceptWantAsync, want: ${JSON.stringify(want)}`);
     });
     return 'default';
   }
@@ -255,6 +289,19 @@ Called when the process is launched from HyperSnap.
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
+
+**Examples**
+
+```TypeScript
+import { AbilityStage } from '@kit.AbilityKit';
+
+export default class MyAbilityStage extends AbilityStage {
+  onLaunchFromHyperSnap(): void {
+    console.info('Launched from Hyper Snap, reinitializing resources...');
+    // Add the initialization logic for quick startup here.
+  }
+}
+```
 
 ## onMemoryLevel
 
@@ -394,12 +441,13 @@ The **isolationProcess** field can be set to **true** in the [module.json5](../.
 **Examples**
 
 ```TypeScript
-import { AbilityStage } from '@kit.AbilityKit';
+import { AbilityStage, Want } from '@kit.AbilityKit';
 
 class MyAbilityStage extends AbilityStage {
-  async onNewProcessRequestAsync(): Promise<string> {
+  async onNewProcessRequestAsync(want: Want): Promise<string> {
     await new Promise<string>((res, rej) => {
       setTimeout(res, 1000); // Execute the operation after 1 second.
+      console.info(`onNewProcessRequestAsync, want: ${JSON.stringify(want)}`);
     });
     return '';
   }

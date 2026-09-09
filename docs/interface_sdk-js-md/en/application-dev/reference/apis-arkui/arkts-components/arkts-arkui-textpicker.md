@@ -63,11 +63,6 @@ The columnWidths attribute of [TextPickerOptions](arkts-arkui-textpickeroptions-
 // xxx.ets
 import { LengthMetrics } from '@kit.ArkUI';
 
-class Bottom {
-  bottom: number = 50;
-}
-
-let bott: Bottom = new Bottom();
 @Entry
 @Component
 struct TextPickerExample {
@@ -117,7 +112,7 @@ struct TextPickerExample {
         })
         .onScrollStop((value: string | string[], index: number | number[]) => {
           console.info('Picker scroll stopped, value: ' + value + ', index: ' + index);
-        }).margin(bott)
+        }).margin({ bottom: 50 })
         .onEnterSelectedArea((value: string | string[], index: number | number[]) => {
           console.info('Picker item enter selected area, value: ' + value + ', index: ' + index);
         })
@@ -128,7 +123,7 @@ struct TextPickerExample {
         })
         .onScrollStop((value: string | string[], index: number | number[]) => {
           console.info('TextPicker multi-column: onScrollStop ' + JSON.stringify(value) + ', ' + 'index: ' + JSON.stringify(index));
-        }).margin(bott)
+        }).margin({ bottom: 50 })
         .onEnterSelectedArea((value: string | string[], index: number | number[]) => {
           console.info('TextPicker multi-column: onEnterSelectedArea ' + JSON.stringify(value) + ', ' + 'index: ' + JSON.stringify(index));
         })
@@ -201,9 +196,9 @@ struct TextPickerExample {
         .onScrollStop((value: string | string[], index: number | number[]) => {
           console.info('Picker scroll stopped, value: ' + value + ', index: ' + index);
         })
-        .disappearTextStyle({color: Color.Red, font: {size: 15, weight: FontWeight.Lighter}})
-        .textStyle({color: Color.Black, font: {size: 20, weight: FontWeight.Normal}})
-        .selectedTextStyle({color: Color.Blue, font: {size: 30, weight: FontWeight.Bolder}})
+        .disappearTextStyle({ color: Color.Red, font: { size: 15, weight: FontWeight.Lighter } })
+        .textStyle({ color: Color.Black, font: { size: 20, weight: FontWeight.Normal } })
+        .selectedTextStyle({ color: Color.Blue, font: { size: 30, weight: FontWeight.Bolder } })
         .divider(null)
     }.width('100%').height('100%')
   }
@@ -229,9 +224,9 @@ struct TextPickerExample {
         .onScrollStop((value: string | string[], index: number | number[]) => {
           console.info('Picker scroll stopped, value: ' + value + ', index: ' + index);
         })
-        .disappearTextStyle({color: Color.Red, font: {size: 15, weight: FontWeight.Lighter}})
-        .textStyle({color: Color.Black, font: {size: 20, weight: FontWeight.Normal}})
-        .selectedTextStyle({color: Color.Blue, font: {size: 30, weight: FontWeight.Bolder}})
+        .disappearTextStyle({ color: Color.Red, font: { size: 15, weight: FontWeight.Lighter } })
+        .textStyle({ color: Color.Black, font: { size: 20, weight: FontWeight.Normal } })
+        .selectedTextStyle({ color: Color.Blue, font: { size: 30, weight: FontWeight.Bolder } })
         .divider({
           strokeWidth: 10,
           color: Color.Red,
@@ -262,9 +257,9 @@ struct TextPickerExample {
         .onScrollStop((value: string | string[], index: number | number[]) => {
           console.info('Picker scroll stopped, value: ' + value + ', index: ' + index);
         })
-        .disappearTextStyle({color: Color.Red, font: {size: 15, weight: FontWeight.Lighter}})
-        .textStyle({color: Color.Black, font: {size: 20, weight: FontWeight.Normal}})
-        .selectedTextStyle({color: Color.Blue, font: {size: 30, weight: FontWeight.Bolder}})
+        .disappearTextStyle({ color: Color.Red, font: { size: 15, weight: FontWeight.Lighter } })
+        .textStyle({ color: Color.Black, font: { size: 20, weight: FontWeight.Normal } })
+        .selectedTextStyle({ color: Color.Blue, font: { size: 30, weight: FontWeight.Bolder } })
         .gradientHeight(100)
     }.width('100%').height('100%')
   }
@@ -422,7 +417,7 @@ struct TextPickerExample {
               topStart: { value: 5, unit: LengthUnit.VP },
               topEnd: { value: 10, unit: LengthUnit.VP },
               bottomStart: { value: 15, unit: LengthUnit.VP },
-              bottomEnd: { value: 20, unit: LengthUnit.VP },
+              bottomEnd: { value: 20, unit: LengthUnit.VP }
             }
           })
       }

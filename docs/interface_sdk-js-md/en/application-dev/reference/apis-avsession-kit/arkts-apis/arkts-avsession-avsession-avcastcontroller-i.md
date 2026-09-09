@@ -1015,6 +1015,7 @@ Register listener for video size change event, used at remote side.
 **Examples**
 
 ```TypeScript
+// Obtain the avCastController instance through avSession.getAVCastController.
 avCastController.on('videoSizeChange', (width: number, height: number) => {
   console.info(`width : ${width} `);
   console.info(`height: ${height} `);

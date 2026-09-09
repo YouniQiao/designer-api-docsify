@@ -32,6 +32,7 @@ Terminates this ability. This API uses an asynchronous callback to return the re
 ```TypeScript
 import { featureAbility, wantConstant } from '@kit.AbilityKit';
 
+// Stop the current Ability and return the result.
 featureAbility.terminateSelfWithResult(
   {
     resultCode: 1,
@@ -96,6 +97,7 @@ Terminates this ability. This API uses a promise to return the result. If the ab
 ```TypeScript
 import { featureAbility, wantConstant } from '@kit.AbilityKit';
 
+// Stop the current Ability and return the result.
 featureAbility.terminateSelfWithResult(
   {
     resultCode: 1,

@@ -12,7 +12,9 @@ import { media } from '@kit.MediaKit';
 function reportAVScreenCaptureUserChoice(sessionId: number, choice: string): Promise<void>
 ```
 
-Reports the user selection result in the screen capture privacy dialog box to the AVScreenCapture server to determine whether to start screen capture. Screen capture starts only when the user touches a button to continue the operation. This API is called by the system application that creates the dialog box.
+上报录屏隐私弹窗的选择结果到ScreenCapture的服务端，用于判断是否开始录屏。如果用户选择“不允许”则不进行录屏，如果用户选择“允许”则开始录屏。使用Promise异步回调。
+
+此接口提供给创建弹窗的系统应用调用。
 
 **起始版本：** 12
 
@@ -24,14 +26,14 @@ Reports the user selection result in the screen capture privacy dialog box to th
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| sessionId | number | 是 | Session ID of the AVScreenCapture service, which is sent to the application when the AVScreenCapture server starts the privacy dialog box. |
-| choice | string | 是 | User choice, including whether screen capture is agreed, selected display ID, and window ID. For details, see JsonData in the example below. |
+| sessionId | number | 是 | AVScreenCapture服务会话Id，会由AVScreenCapture拉起隐私弹窗时传给应用。 |
+| choice | string | 是 | 用户的选择内容，包含是否同意录屏、选择的屏幕Id和窗口Id等。可见示例中JsonData样例。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 

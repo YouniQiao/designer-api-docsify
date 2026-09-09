@@ -43,9 +43,10 @@ Cancels the permission to access the serial port device when the application is 
 ```TypeScript
 import { JSON } from '@kit.ArkTS';
 import { serialManager } from '@kit.BasicServicesKit';
+import { BusinessError } from '@kit.BasicServicesKit';
 
 // Obtain the serial port list.
-function cancelSerialRight() {
+async function cancelSerialRightExample() {
   let portList: serialManager.SerialPort[] = serialManager.getPortList();
   console.info('usbSerial portList: ' + JSON.stringify(portList));
   if (!portList || portList.length === 0) {
@@ -56,23 +57,23 @@ function cancelSerialRight() {
 
   // Check whether the device can be accessed by the application.
   if (!serialManager.hasSerialRight(portId)) {
-    serialManager.requestSerialRight(portId).then(result => {
-      if (!result) {
-        // If the application does not have the access permission and the user does not grant the permission, the application exits.
-        console.error('user is not granted the operation permission');
-        return;
-      } else {
-        console.info('grant permission successfully');
-      }
-    });
+    let result = await serialManager.requestSerialRight(portId);
+    if (!result) {
+      // If the app does not have the access permission and the user does not grant the permission, the app exits.
+      console.error('user is not granted the operation permission');
+      return;
+    } else {
+      console.info('grant permission successfully');
+    }
   }
 
   // Cancel the granted permission.
   try {
     serialManager.cancelSerialRight(portId);
-    console.info('cancelSerialRight success, portId: ', portId);
+    console.info('cancelSerialRight success, portId: ' + portId);
   } catch (error) {
-    console.error('cancelSerialRight error, ', JSON.stringify(error));
+    const err: BusinessError = error as BusinessError;
+    console.error(`Failed to cancel serial right. Code: ${err.code}, message: ${err.message}`);
   }
 }
 ```

@@ -37,8 +37,8 @@ Closes the client and disconnects from the remote server. To terminate the curre
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [36100003](../../apis-avsession-kit/errorcode-nearlink-service.md#36100003-nearlink-disabled) | NearLink disabled. |
-| [36100099](../../apis-avsession-kit/errorcode-nearlink-service.md#36100099-operation-failed) | Operation failed. |
+| [36100003](../errorcode-nearlink-service.md#36100003-nearlink-disabled) | NearLink disabled. |
+| [36100099](../errorcode-nearlink-service.md#36100099-operation-failed) | Operation failed. |
 
 ## connect
 
@@ -67,8 +67,8 @@ Initiates a connection to the server. This API uses a promise to return the resu
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [36100003](../../apis-avsession-kit/errorcode-nearlink-service.md#36100003-nearlink-disabled) | NearLink disabled. |
-| [36100099](../../apis-avsession-kit/errorcode-nearlink-service.md#36100099-operation-failed) | Operation failed. |
+| [36100003](../errorcode-nearlink-service.md#36100003-nearlink-disabled) | NearLink disabled. |
+| [36100099](../errorcode-nearlink-service.md#36100099-operation-failed) | Operation failed. |
 
 ## disconnect
 
@@ -97,8 +97,8 @@ Initiates a disconnection to the server, disconnecting an existing connection or
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [36100003](../../apis-avsession-kit/errorcode-nearlink-service.md#36100003-nearlink-disabled) | NearLink disabled. |
-| [36100099](../../apis-avsession-kit/errorcode-nearlink-service.md#36100099-operation-failed) | Operation failed. |
+| [36100003](../errorcode-nearlink-service.md#36100003-nearlink-disabled) | NearLink disabled. |
+| [36100099](../errorcode-nearlink-service.md#36100099-operation-failed) | Operation failed. |
 
 ## getServices
 
@@ -127,8 +127,8 @@ Obtains the list of services supported by the server. This API uses a promise to
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [36100003](../../apis-avsession-kit/errorcode-nearlink-service.md#36100003-nearlink-disabled) | NearLink disabled. |
-| [36100099](../../apis-avsession-kit/errorcode-nearlink-service.md#36100099-operation-failed) | Operation failed. |
+| [36100003](../errorcode-nearlink-service.md#36100003-nearlink-disabled) | NearLink disabled. |
+| [36100099](../errorcode-nearlink-service.md#36100099-operation-failed) | Operation failed. |
 
 ## offConnectionStateChange
 
@@ -289,10 +289,10 @@ Reads a server attribute. This API uses a promise to return the result.
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [36100003](../../apis-avsession-kit/errorcode-nearlink-service.md#36100003-nearlink-disabled) | NearLink disabled. |
-| [36100043](../../apis-avsession-kit/errorcode-nearlink-service.md#36100043-invalid-uuid) | Invalid UUID in property. |
-| [36100044](../../apis-avsession-kit/errorcode-nearlink-service.md#36100044-standard-nearlink-service-uuid-not-allowed) | NearLink standard UUID not allowed. |
-| [36100099](../../apis-avsession-kit/errorcode-nearlink-service.md#36100099-operation-failed) | Operation failed. |
+| [36100003](../errorcode-nearlink-service.md#36100003-nearlink-disabled) | NearLink disabled. |
+| [36100043](../errorcode-nearlink-service.md#36100043-invalid-uuid) | Invalid UUID in property. |
+| [36100044](../errorcode-nearlink-service.md#36100044-standard-nearlink-service-uuid-not-allowed) | NearLink standard UUID not allowed. |
+| [36100099](../errorcode-nearlink-service.md#36100099-operation-failed) | Operation failed. |
 
 ## requestMtuSize
 
@@ -327,8 +327,8 @@ Initiates an MTU negotiation request. This API uses a promise to return the resu
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [36100003](../../apis-avsession-kit/errorcode-nearlink-service.md#36100003-nearlink-disabled) | NearLink disabled. |
-| [36100099](../../apis-avsession-kit/errorcode-nearlink-service.md#36100099-operation-failed) | Operation failed. |
+| [36100003](../errorcode-nearlink-service.md#36100003-nearlink-disabled) | NearLink disabled. |
+| [36100099](../errorcode-nearlink-service.md#36100099-operation-failed) | Operation failed. |
 
 ## setPropertyNotification
 
@@ -364,10 +364,10 @@ Sets a [Property](arkts-connectivity-ssap-property-i.md) change notification. Th
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [36100003](../../apis-avsession-kit/errorcode-nearlink-service.md#36100003-nearlink-disabled) | NearLink disabled. |
-| [36100043](../../apis-avsession-kit/errorcode-nearlink-service.md#36100043-invalid-uuid) | Invalid UUID in property. |
-| [36100044](../../apis-avsession-kit/errorcode-nearlink-service.md#36100044-standard-nearlink-service-uuid-not-allowed) | NearLink standard UUID not allowed. |
-| [36100099](../../apis-avsession-kit/errorcode-nearlink-service.md#36100099-operation-failed) | Operation failed. |
+| [36100003](../errorcode-nearlink-service.md#36100003-nearlink-disabled) | NearLink disabled. |
+| [36100043](../errorcode-nearlink-service.md#36100043-invalid-uuid) | Invalid UUID in property. |
+| [36100044](../errorcode-nearlink-service.md#36100044-standard-nearlink-service-uuid-not-allowed) | NearLink standard UUID not allowed. |
+| [36100099](../errorcode-nearlink-service.md#36100099-operation-failed) | Operation failed. |
 
 ## writeProperty
 
@@ -403,7 +403,7 @@ Writes a property to the server. This API uses a promise to return the result.
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [36100003](../../apis-avsession-kit/errorcode-nearlink-service.md#36100003-nearlink-disabled) | NearLink disabled. |
-| [36100043](../../apis-avsession-kit/errorcode-nearlink-service.md#36100043-invalid-uuid) | Invalid UUID in property. |
-| [36100044](../../apis-avsession-kit/errorcode-nearlink-service.md#36100044-standard-nearlink-service-uuid-not-allowed) | NearLink standard UUID not allowed. |
-| [36100099](../../apis-avsession-kit/errorcode-nearlink-service.md#36100099-operation-failed) | Operation failed. |
+| [36100003](../errorcode-nearlink-service.md#36100003-nearlink-disabled) | NearLink disabled. |
+| [36100043](../errorcode-nearlink-service.md#36100043-invalid-uuid) | Invalid UUID in property. |
+| [36100044](../errorcode-nearlink-service.md#36100044-standard-nearlink-service-uuid-not-allowed) | NearLink standard UUID not allowed. |
+| [36100099](../errorcode-nearlink-service.md#36100099-operation-failed) | Operation failed. |

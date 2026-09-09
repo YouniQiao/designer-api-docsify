@@ -50,6 +50,7 @@ Below is an example of setting the return mode of the intent execution result to
 import { InsightIntentExecutor, insightIntent } from '@kit.AbilityKit';
 import { window } from '@kit.ArkUI';
 import { hilog } from '@kit.PerformanceAnalysisKit';
+import { BusinessError } from '@kit.BasicServicesKit';
 
 export default class InsightIntentExecutorUI extends InsightIntentExecutor {
   onExecuteInUIAbilityForegroundMode(name: string, param: Record<string, Object>,
@@ -68,7 +69,7 @@ export default class InsightIntentExecutorUI extends InsightIntentExecutor {
     } catch (error) {
       let code = (error as BusinessError).code;
       let msg = (error as BusinessError).message;
-      console.error(`testTag setReturnModeForUIExtensionAbility fail, error code: ${code}, error msg: ${msg}.`);
+      console.error(`testTag setReturnModeForUIAbilityForeground fail, error code: ${code}, error msg: ${msg}.`);
     }
     // Pass the intent instance ID to the target page through localStorage.
     let localStorageData: Record<string, number> = {
@@ -115,15 +116,15 @@ struct Index {
             };
             insightIntentProvider.sendExecuteResult(this.insightId, result)
               .then(() => {
-                console.info('testTag setExecuteResult success');
+                console.info('testTag sendExecuteResult success');
               })
               .catch((error: BusinessError) => {
-                console.error(`testTag setExecuteResult fail1, error code: ${error.code}, error msg: ${error.message}.`);
+                console.error(`testTag sendExecuteResult fail 1, error code: ${error.code}, error msg: ${error.message}.`);
               });
           } catch (e) {
             let code = (e as BusinessError).code;
             let msg = (e as BusinessError).message;
-            console.error(`testTag setExecuteResult fail2, error code: ${code}, error msg: ${msg}`);
+            console.error(`testTag sendExecuteResult fail 2, error code: ${code}, error msg: ${msg}`);
           }
         })
     }

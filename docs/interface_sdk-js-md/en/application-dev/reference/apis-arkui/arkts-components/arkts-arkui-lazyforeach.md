@@ -93,3 +93,67 @@ Enter the value to obtain the LazyForEach.
 | [LazyForEachCustomComponentFreezeMode](arkts-arkui-lazyforeachcustomcomponentfreezemode-e.md) | Enumerates the freeze modes for cached custom nodes that have been removed from the component tree in LazyForEach. |
 | [LazyForEachMemOptStrategy](arkts-arkui-lazyforeachmemoptstrategy-e.md) | Defines a type for memory optimization strategy. |
 | [LazyForEachReleaseStrategy](arkts-arkui-lazyforeachreleasestrategy-e.md) | Enumerates the release strategies for LazyForEach discarded nodes. |
+
+## Examples
+
+In the following example, the automatic memory optimization strategy is used through the memoryOptimizationStrategy attribute of [LazyForEachOptions](arkts-arkui-lazyforeachoptions-i.md). When the application moves to the background, the cache is cleared. When the application returns to the foreground, the cache is restored.
+Since API version 26.0.0, the LazyForEachOptions API is added.
+For the BasicDataSource code, see the BasicDataSource sample code at the end of the LazyForEach developer guide: [BasicDataSource implementation for the string array](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md#basicdatasource-implementation-for-the-string-array).
+
+```TypeScript
+import { BasicDataSource } from './BasicDataSource';
+
+class DataSource extends BasicDataSource {
+  public dataArray: string[] = [];
+  public totalCount(): number {
+    return this.dataArray.length;
+  }
+  public getData(index: number): string {
+    return this.dataArray[index];
+  }
+  public pushData(data: string): void {
+    this.dataArray.push(data);
+    this.notifyDataAdd(this.dataArray.length - 1);
+  }
+}
+
+@Component
+struct ChildComponent {
+  aboutToAppear() {
+    console.info('ChildComponent aboutToAppear');
+  }
+  aboutToDisappear() {
+    console.info('ChildComponent aboutToDisappear');
+  }
+  build() {
+    Text('ChildComponent')
+  }
+}
+
+@Entry
+@Component
+struct MemoryOptimizeDemo {
+  private data: DataSource = new DataSource();
+  aboutToAppear() {
+    for (let i = 0; i < 100; i++) {
+      this.data.pushData(`item ${i}`);
+    }
+  }
+  build() {
+    Column() {
+      List() {
+        LazyForEach(this.data,
+          (item: string, index: number) => {
+            ListItem() {
+              ChildComponent()
+            }
+          },
+          (item: string, index: number) => item,
+          { memoryOptimizationStrategy: LazyForEachMemOptStrategy.ENABLE_AUTO_CACHE_OPTIMIZATION } // Use the automatic memory optimization strategy.
+        )
+      }
+      .cachedCount(5)
+    }
+  }
+}
+```

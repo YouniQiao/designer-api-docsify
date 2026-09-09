@@ -48,11 +48,12 @@ Deletes a scanner. This API uses a promise to return the result.
 import { scan } from '@kit.BasicServicesKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
+// Obtain the unique ID of the added scanner through getAddedScanners() or from the scan.on('scanDeviceAdd') event callback.
 let uniqueId: string = 'unique_scanner_001';
 let discoveryMode: scan.ScannerDiscoveryMode = scan.ScannerDiscoveryMode.TCP_STR;
 scan.deleteScanner(uniqueId, discoveryMode).then(() => {
     console.info('delete scanner success');
 }).catch((error: BusinessError) => {
-    console.error('delete scanner failed: ' + JSON.stringify(error));
-})
+    console.error(`Failed to delete scanner. Code: ${error.code}, message: ${error.message}`);
+});
 ```

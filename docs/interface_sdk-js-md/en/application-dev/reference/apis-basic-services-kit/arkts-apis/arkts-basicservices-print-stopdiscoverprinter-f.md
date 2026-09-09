@@ -41,9 +41,9 @@ Stops discovering printers. This API uses an asynchronous callback to return the
 import { print } from '@kit.BasicServicesKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
-print.stopDiscoverPrinter((err: BusinessError) => {
-    if (err) {
-        console.error('failed to stop Discover Printer because : ' + JSON.stringify(err));
+print.stopDiscoverPrinter((error: BusinessError) => {
+    if (error) {
+        console.error(`Failed to stopDiscoverPrinter. Code: ${error.code}, message: ${error.message}`);
     } else {
         console.info('stop Discover Printer success');
     }
@@ -89,6 +89,6 @@ import { BusinessError } from '@kit.BasicServicesKit';
 print.stopDiscoverPrinter().then(() => {
     console.info('stop Discovery success');
 }).catch((error: BusinessError) => {
-    console.error('failed to stop Discovery because : ' + JSON.stringify(error));
+    console.error(`Failed to stopDiscoverPrinter. Code: ${error.code}, message: ${error.message}`);
 })
 ```

@@ -49,10 +49,10 @@ struct Index {
       Text()
         .onClick(() => {
           try {
-            // Set the infrared carrier frequency and infrared level signal mode
+            // Set the infrared frequency and infrared level signal mode.
             infraredEmitter.transmitInfrared(38000, [100, 200, 300, 400]);
           } catch (error) {
-            console.error(`Failed to set infrared frequencies, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+            console.error(`Failed to transmit infrared signal, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
           }
         })
     }

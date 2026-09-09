@@ -50,12 +50,13 @@ struct Index {
     Column() {
       Button('getKioskInfo').margin({ top: 10 })
         .onClick(() => {
+          // Obtain the Kiosk mode status information.
           kioskManager.getKioskStatus()
             .then((data: kioskManager.KioskStatus) => {
-              hilog.info(0x0000, 'testTag', '%{public}s', `getKioskinfo success: ${JSON.stringify(data)}`);
+              hilog.info(0x0000, 'testTag', '%{public}s', `getKioskStatus success: ${JSON.stringify(data)}`);
             })
             .catch((error: BusinessError) => {
-              hilog.error(0x0000, 'testTag', '%{public}s', `getKioskinfo failed:${JSON.stringify(error)}`);
+              hilog.error(0x0000, 'testTag', '%{public}s', `getKioskStatus failed. Code: ${error.code}, message: ${error.message}`);
             });
         })
     }

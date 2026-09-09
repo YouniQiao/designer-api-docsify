@@ -12,7 +12,7 @@ import { media } from '@kit.MediaKit';
 function getScreenCaptureMonitor(): Promise<ScreenCaptureMonitor>
 ```
 
-Obtains a **ScreenCaptureMonitor** instance. This API uses a promise to return the result.
+获取录屏监控模块实例。使用Promise异步回调。
 
 **起始版本：** 18
 
@@ -24,7 +24,7 @@ Obtains a **ScreenCaptureMonitor** instance. This API uses a promise to return t
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[ScreenCaptureMonitor](arkts-media-media-screencapturemonitor-i-sys.md)&gt; | Promise used to return the result. The instance can be used to query and monitor the status of the system screen recorder. |
+| Promise&lt;[ScreenCaptureMonitor](arkts-media-media-screencapturemonitor-i-sys.md)&gt; | Promise对象，返回ScreenCaptureMonitor实例，失败时返回null。 |
 
 **错误码：**
 

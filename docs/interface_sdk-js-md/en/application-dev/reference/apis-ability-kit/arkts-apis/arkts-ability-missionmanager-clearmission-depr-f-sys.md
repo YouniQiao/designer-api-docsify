@@ -36,18 +36,21 @@ Clears a given mission, regardless of whether it is locked. This API uses an asy
 
 ```TypeScript
 import missionManager from '@ohos.application.missionManager';
+import { BusinessError } from '@ohos.base';
 
 let testMissionId = 2;
 try {
+  // Clear the specified mission.
   missionManager.clearMission(testMissionId, (err, data) => {
     if (err) {
-      console.error(`clearMission failed: ${err.message}`);
+      console.error(`clearMission failed. Code: ${err.code}, message: ${err.message}.`);
     } else {
-      console.info(`clearMission successfully: ${JSON.stringify(data)}`);
+      console.info(`clearMission successfully. Data: ${JSON.stringify(data)}`);
     }
   });
 } catch (err) {
-  console.error(`clearMission failed: ${err.message}`);
+  let error = err as BusinessError;
+  console.error(`clearMission sync failed. Code: ${error.code}, message: ${error.message}.`);
 }
 ```
 
@@ -92,12 +95,14 @@ import { BusinessError } from '@ohos.base';
 
 let testMissionId = 2;
 try {
+  // Clear the specified mission.
   missionManager.clearMission(testMissionId).then((data) => {
     console.info(`clearMission successfully. Data: ${JSON.stringify(data)}`);
   }).catch((error: BusinessError) => {
-    console.error(`clearMission failed. Cause: ${error.message}`);
+    console.error(`clearMission failed. Code: ${error.code}, message: ${error.message}.`);
   });
 } catch (error) {
-  console.error(`clearMission failed. Cause: ${error.message}`);
+  let err = error as BusinessError;
+  console.error(`clearMission sync failed. Code: ${err.code}, message: ${err.message}.`);
 }
 ```

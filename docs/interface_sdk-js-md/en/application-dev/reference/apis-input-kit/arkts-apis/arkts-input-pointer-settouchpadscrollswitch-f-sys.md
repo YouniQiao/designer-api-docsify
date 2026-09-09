@@ -48,7 +48,7 @@ struct Index {
       Text()
         .onClick(() => {
           try {
-            // Set the touchpad scroll switch state.
+            // Set the touchpad scroll switch.
             pointer.setTouchpadScrollSwitch(true, (error: BusinessError) => {
               if (error) {
                 console.error(`Failed to set touchpad scroll switch, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);

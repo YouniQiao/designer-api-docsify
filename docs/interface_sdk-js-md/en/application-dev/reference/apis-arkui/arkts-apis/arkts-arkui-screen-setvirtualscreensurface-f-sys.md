@@ -51,15 +51,15 @@ struct Index {
   xComponentController: XComponentController = new XComponentController();
 
   setVirtualScreenSurface = () => {
-    let screenId: number = 1;
+    let screenId: number = 1; // Obtain the screen ID through getAllScreens() or from the return value of createVirtualScreen().
     let surfaceId = this.xComponentController.getXComponentSurfaceId();
     // Set the surface of the virtual screen.
     screen.setVirtualScreenSurface(screenId, surfaceId, (err: BusinessError) => {
-    const errCode: number = err.code;
-    if (errCode) {
-      console.error(`Failed to set the surface for the virtual screen. Code: ${err.code}, message: ${err.message}`);
-      return;
-    }
+      const errCode: number = err.code;
+      if (errCode) {
+        console.error(`Failed to set the surface for the virtual screen. Code: ${err.code}, message: ${err.message}`);
+        return;
+      }
       console.info('Succeeded in setting the surface for the virtual screen.');
     });
   }
@@ -132,7 +132,7 @@ struct Index {
   xComponentController: XComponentController = new XComponentController();
 
   setVirtualScreenSurface = () => {
-    let screenId: number = 1;
+    let screenId: number = 1; // Obtain the screen ID through getAllScreens() or from the return value of createVirtualScreen().
     let surfaceId = this.xComponentController.getXComponentSurfaceId();
     // Set the surface of the virtual screen.
     screen.setVirtualScreenSurface(screenId, surfaceId).then(() => {

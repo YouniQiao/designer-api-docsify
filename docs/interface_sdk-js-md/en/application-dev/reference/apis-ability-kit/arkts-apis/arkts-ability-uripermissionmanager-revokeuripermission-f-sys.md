@@ -60,12 +60,13 @@ import { uriPermissionManager } from '@kit.AbilityKit';
 let targetBundleName = 'com.example.test_case2';
 let uri = "file://com.example.test_case1/data/storage/el2/base/haps/entry_test/files/newDir";
 
+// Revoke the URI permission of the specified application.
 uriPermissionManager.revokeUriPermission(uri, targetBundleName, (error) => {
   if (error && error.code !== 0) {
-    console.error("revokeUriPermission failed, error.code = " + error.code);
+    console.error(`revokeUriPermission failed. Code: ${error.code}, message: ${error.message}.`);
     return;
   }
-  console.info("revokeUriPermission success");
+  console.info('revokeUriPermission success');
 });
 ```
 
@@ -130,6 +131,7 @@ import { BusinessError } from '@kit.BasicServicesKit';
 let targetBundleName = 'com.example.test_case2';
 let uri = 'file://com.example.test_case1/data/storage/el2/base/haps/entry_test/files/newDir';
 
+// Revoke the URI permission of the specified application.
 uriPermissionManager.revokeUriPermission(uri, targetBundleName)
   .then((data) => {
     console.info(`Verification success, data: ${JSON.stringify(data)}.`);
@@ -205,7 +207,7 @@ export default class EntryAbility extends UIAbility {
     let targetBundleName: string = 'com.example.demo1';
     let filePath: string = this.context.filesDir + "/test.txt";
     let uri: string = fileUri.getUriFromPath(filePath);
-    // revoke uri permission of main application
+    // Revoke the URI permission of the main application.
     try {
       let appCloneIndex: number = 0;
       uriPermissionManager.revokeUriPermission(uri, targetBundleName, appCloneIndex)
@@ -218,7 +220,7 @@ export default class EntryAbility extends UIAbility {
       console.error(`revokeUriPermission failed. error: ${JSON.stringify(error)}.`);
     }
 
-    // revoke uri permission of clone application
+    // Revoke the URI permission of the clone application.
     try {
       let appCloneIndex: number = 1;
       uriPermissionManager.revokeUriPermission(uri, targetBundleName, appCloneIndex)

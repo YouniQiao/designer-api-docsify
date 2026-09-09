@@ -79,13 +79,14 @@ import { hilog } from '@kit.PerformanceAnalysisKit';
 @Component
 struct AutoFillPage {
   storage: LocalStorage | undefined = this.getUIContext().getSharedLocalStorage();
+  // fillCallback is passed into LocalStorage by the onFillRequest callback of AutoFillExtensionAbility.
   fillCallback: autoFillManager.FillRequestCallback | undefined =
     this.storage?.get<autoFillManager.FillRequestCallback>('fillCallback');
 
   build() {
     Row() {
       Column() {
-        Text('Hello World')
+        Text('AutoFill Page')
           .fontSize(50)
           .fontWeight(FontWeight.Bold)
       }
@@ -171,6 +172,7 @@ import { hilog } from '@kit.PerformanceAnalysisKit';
 @Component
 struct AutoFillPage {
   storage: LocalStorage | undefined = this.getUIContext().getSharedLocalStorage();
+  // Pass fillCallback to LocalStorage through the onFillRequest callback of AutoFillExtensionAbility.
   fillCallback: autoFillManager.FillRequestCallback | undefined =
     this.storage?.get<autoFillManager.FillRequestCallback>('fillCallback');
   
@@ -242,6 +244,7 @@ class MyAutoFillExtensionAbility extends AutoFillExtensionAbility {
     callback: autoFillManager.FillRequestCallback) {
     hilog.info(0x0000, 'testTag', '%{public}s', 'autofill onFillRequest');
     try {
+      // Initialize LocalStorage.
       let storageData: Record<string, string | autoFillManager.FillRequestCallback | autoFillManager.ViewData> = {
         'fillCallback': callback,
         'message': 'AutoFill Page',
@@ -270,6 +273,7 @@ import { hilog } from '@kit.PerformanceAnalysisKit';
 @Component
 struct AutoFillPage {
   storage: LocalStorage | undefined = this.getUIContext().getSharedLocalStorage();
+  // Pass fillCallback and viewData to LocalStorage through the onFillRequest callback of AutoFillExtensionAbility.
   fillCallback: autoFillManager.FillRequestCallback | undefined =
     this.storage?.get<autoFillManager.FillRequestCallback>('fillCallback');
   viewData: autoFillManager.ViewData | undefined = this.storage?.get<autoFillManager.ViewData>('viewData');
@@ -398,6 +402,7 @@ export default class AutoFillAbility extends AutoFillExtensionAbility {
     console.info(`testTag. Get fill request type: ${JSON.stringify(request.type)}.`);
 
     try {
+      // Initialize LocalStorage to store the save callback.
       let localStorageData: Record<string, string | autoFillManager.FillRequestCallback | autoFillManager.ViewData | autoFillManager.AutoFillType> =
         {
           'message': 'AutoFill Page',
@@ -427,6 +432,7 @@ export default class AutoFillAbility extends AutoFillExtensionAbility {
     callback: autoFillManager.SaveRequestCallback) {
     hilog.info(0x0000, 'testTag', '%{public}s', 'autofill onSaveRequest');
     try {
+      // Initialize LocalStorage to store the save callback.
       let localStorageData: Record<string, string | autoFillManager.SaveRequestCallback> = {
         'message': 'AutoFill Page',
         'saveCallback': callback

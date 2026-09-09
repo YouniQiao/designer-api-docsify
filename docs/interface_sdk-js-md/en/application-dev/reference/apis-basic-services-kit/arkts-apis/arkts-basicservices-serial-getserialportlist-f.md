@@ -36,8 +36,7 @@ Obtains the serial port list. This API returns the result asynchronously through
 **Examples**
 
 ```TypeScript
-import { serial } from "@kit.BasicServicesKit";
-
+// Import BusinessError from @kit.BasicServicesKit.
 // Obtain the serial port list.
 serial.getSerialPortList().then((portList: serial.SerialPort[]) => {
   console.info(`getSerialPortList success, length: ${portList.length}`);
@@ -45,7 +44,7 @@ serial.getSerialPortList().then((portList: serial.SerialPort[]) => {
     let portInfo: serial.SerialPortInfo = portList[0].portInfo;
     console.info(`portName: ${portInfo.portName}`);
   }
-}).catch((error: Error) => {
-  console.error(`getSerialPortList error: ${JSON.stringify(error)}`);
+}).catch((error: BusinessError) => {
+  console.error(`Failed to get serial port list. Code: ${error.code}, message: ${error.message}`);
 });
 ```

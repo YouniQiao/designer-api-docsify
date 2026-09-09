@@ -48,6 +48,7 @@ class ExpandOption {
   startX: number = 0;
   startY: number = 0;
 }
+// Obtain the screen ID through getAllScreens().
 let mainScreenOption: ExpandOption = { screenId: 0, startX: 0, startY: 0 };
 let otherScreenOption: ExpandOption = { screenId: 1, startX: 1080, startY: 0 };
 let expandOptionArray : ExpandOption[] = [ mainScreenOption, otherScreenOption ];

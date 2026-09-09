@@ -76,7 +76,7 @@ let priKey = '-----BEGIN PRIVATE KEY-----\n' +
   'a20rj9HG4sb8tUIHPBv0dgY=\n' +
   '-----END PRIVATE KEY-----\n';
 
-let othercert = '-----BEGIN CERTIFICATE-----\n' +
+let otherCert = '-----BEGIN CERTIFICATE-----\n' +
   'MIIDZTCCAk0CFAoqA7Irtoo7/3+sfOHy0s91pKkiMA0GCSqGSIb3DQEBCwUAMG8x\n' +
   'CzAJBgNVBAYTAkVOMQ0wCwYDVQQIDARURVNUMQ0wCwYDVQQHDAR4aWFuMQ8wDQYD\n' +
   'VQQKDAZodWF3ZWkxDTALBgNVBAsMBHhpYW4xDTALBgNVBAMMBHhpYW4xEzARBgkq\n' +
@@ -147,26 +147,26 @@ async function createX509Cert(certData: string): Promise<cert.X509Cert> {
 }
 
 async function doTestCreatePkcs12Sync() {
-  const caCert = await createX509Cert(othercert);
+  const caCert = await createX509Cert(otherCert);
   const x509Cert = await createX509Cert(certData);
 
   let data: cert.Pkcs12Data = {
     privateKey: priKey,
     cert: x509Cert,
     otherCerts: [caCert]
-  }
+  };
 
   let keyParam: cert.PbesParams = {
     saltLen: 16,
     iterations: 2048,
     encryptionAlgorithm: cert.PbesEncryptionAlgorithm.AES_192_CBC
-  }
+  };
 
   let certParam: cert.PbesParams = {
     saltLen: 16,
     iterations: 2048,
     encryptionAlgorithm: cert.PbesEncryptionAlgorithm.AES_256_CBC
-  }
+  };
 
   let config: cert.Pkcs12CreationConfig = {
     password: '123456',
@@ -176,7 +176,7 @@ async function doTestCreatePkcs12Sync() {
     macSaltLen: 16,
     macIterations: 2048,
     macDigestAlgorithm: cert.Pkcs12MacDigestAlgorithm.SHA384
-  }
+  };
   try {
     let p12 = cert.createPkcs12Sync(data, config);
     console.info('createPkcs12Sync result: success, p12 = ' + p12);

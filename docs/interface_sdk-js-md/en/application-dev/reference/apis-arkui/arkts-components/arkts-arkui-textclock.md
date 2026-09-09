@@ -50,7 +50,7 @@ This example uses the [onDateChange](#ondatechange) callback to update accumulat
 @Component
 struct Second {
   @State accumulateTime: number = 0;
-  // Objects to import
+  // Create the controller object.
   controller: TextClockController = new TextClockController();
 
   build() {
@@ -83,7 +83,7 @@ struct Second {
 }
 ```
 
-This example shows how to set the text shadow style for the text clock using the [textShadow](#textshadow11) attribute.
+This example sets the shadow style of the clock text through [textShadow](#textshadow11).
 
 ```TypeScript
 @Entry
@@ -148,6 +148,9 @@ function buildTextClock(config: TextClockConfiguration) {
         .fontSize(20)
         .margin(20)
       TimePicker({
+        // Calculate the local time based on the UTC seconds and time zone offset: config.timeValue is the UTC seconds, which needs to be multiplied by 1000 to convert to milliseconds;
+        // currentTimeZoneOffset is the current system time zone offset, and timeZoneOffset is the target time zone offset,
+        // The difference between the two, multiplied by 3600000, gives the time zone adjustment in milliseconds.
         selected: (new Date(config.timeValue * 1000 +
           ((config.contentModifier as MyTextClockStyle).currentTimeZoneOffset - config.timeZoneOffset) * 60 * 60 *
             1000)),

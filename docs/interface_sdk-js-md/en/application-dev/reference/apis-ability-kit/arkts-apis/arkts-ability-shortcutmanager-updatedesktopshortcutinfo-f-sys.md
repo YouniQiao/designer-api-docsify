@@ -48,3 +48,38 @@ Updates a shortcut for the given user. This API uses a promise to return the res
 | [17700026](../errorcode-bundle.md#17700026-bundle-disabled) | The specified bundle is disabled. |
 | [17700061](../errorcode-bundle.md#17700061-appindex-for-a-clone-is-invalid) | The specified app index is invalid. |
 | 18100002 | The specified shortcut to be updated is not found. |
+
+**Examples**
+
+```TypeScript
+import { shortcutManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+// Replace with the actual shortcut information and user ID.
+let shortcutInfo: shortcutManager.ShortcutInfo = {
+  id: 'test1',
+  bundleName: 'com.example.myapplication',
+  moduleName: '',
+  hostAbility: '',
+  icon: '',
+  iconId: 1,
+  label: 'hello',
+  labelId: 1,
+  wants: [],
+  appIndex: 0,
+  sourceType: 0,
+};
+
+try {
+  shortcutManager.updateDesktopShortcutInfo(shortcutInfo, 100)
+    .then(() => {
+      hilog.info(0x0000, 'testTag', 'updateDesktopShortcutInfo successfully');
+    }).catch((err: Error) => {
+      hilog.error(0x0000, 'testTag', 'updateDesktopShortcutInfo failed. Cause: %{public}s', err.message);
+    });
+} catch (err) {
+  let message = (err as BusinessError).message;
+  hilog.error(0x0000, 'testTag', 'updateDesktopShortcutInfo failed. Cause: %{public}s', message);
+}
+```

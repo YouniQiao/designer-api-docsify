@@ -57,24 +57,25 @@ function onContinueDone(resultCode: number): void {
   console.info('onContinueDone resultCode: ' + JSON.stringify(resultCode));
 };
 try {
-  // Call continueMission.
+  // Migrate the mission by mission ID.
+  // Obtain the actual mission ID through the system API.
   distributedMissionManager.continueMission(
     {
-      srcDeviceId: "",
-      dstDeviceId: "",
+      srcDeviceId: '',
+      dstDeviceId: '',
       missionId: 1,
-      wantParam: {"key": "value"}
+      wantParam: {'key': 'value'}
     },
     { onContinueDone: onContinueDone },
     (error: BusinessError) => {
       if (error) {
-        console.error('continueMission failed, cause: ' + JSON.stringify(error));
+        console.error(`continueMission failed. Code: ${error.code}, message: ${error.message}`);
         return;
       }
       console.info('continueMission finished');
   })
 } catch (error) {
-  console.error('continueMission failed, cause: ' + JSON.stringify(error));
+  console.error(`continueMission failed. Code: ${error.code}, message: ${error.message}`);
 }
 ```
 
@@ -135,21 +136,22 @@ function onContinueDone(resultCode: number): void {
   console.info('onContinueDone resultCode: ' + JSON.stringify(resultCode));
 };
 try {
-  // Call continueMission.
+  // Continue the mission by mission ID.
+  // Obtain the actual mission ID through the system API for missionId.
   distributedMissionManager.continueMission(
     {
-      srcDeviceId: "",
-      dstDeviceId: "",
+      srcDeviceId: '',
+      dstDeviceId: '',
       missionId: 1,
-      wantParam: {"key": "value"}
+      wantParam: {'key': 'value'}
     },
     { onContinueDone: onContinueDone }).then(() => {
       console.info('continueMission finished successfully');
     }).catch((error: BusinessError) => {
-    console.error('continueMission failed, cause: ' + JSON.stringify(error));
-  })
+    console.error(`continueMission failed. Code: ${error.code}, message: ${error.message}`);
+  });
 } catch (error) {
-  console.error('continueMission failed, cause: ' + JSON.stringify(error));
+  console.error(`continueMission failed. Code: ${error.code}, message: ${error.message}`);
 }
 ```
 
@@ -202,20 +204,20 @@ import { BusinessError } from '@kit.BasicServicesKit';
 try {
   distributedMissionManager.continueMission(
     {
-      srcDeviceId: "",
-      dstDeviceId: "",
-      bundleName: "ohos.test.continueapp",
-      wantParam: {"key": "value"}
+      srcDeviceId: '',
+      dstDeviceId: '',
+      bundleName: 'ohos.test.continueapp',
+      wantParam: {'key': 'value'}
     },
     (error: BusinessError) => {
       if (error) {
-        console.error('continueMission failed, cause: ' + JSON.stringify(error));
+        console.error(`continueMission failed. Code: ${error.code}, message: ${error.message}`);
         return;
       }
       console.info('continueMission finished');
   })
 } catch (error) {
-  console.error('continueMission failed, cause: ' + JSON.stringify(error));
+  console.error(`continueMission failed. Code: ${error.code}, message: ${error.message}`);
 }
 ```
 
@@ -273,17 +275,17 @@ import { BusinessError } from '@kit.BasicServicesKit';
 try {
     distributedMissionManager.continueMission(
       {
-        srcDeviceId: "",
-        dstDeviceId: "",
-        bundleName: "ohos.test.continueapp",
+        srcDeviceId: '',
+        dstDeviceId: '',
+        bundleName: 'ohos.test.continueapp',
         wantParam: {"key": "value"}
       }
     ).then(() => {
         console.info('continueMission finished successfully');
     }).catch((error: BusinessError) => {
-        console.error('continueMission failed, cause: ' + JSON.stringify(error));
-    })
+        console.error(`Failed to continue mission. Code: ${error.code}, message: ${error.message}`);
+    });
 } catch (error) {
-    console.error('continueMission failed, cause: ' + JSON.stringify(error));
+    console.error(`Failed to continue mission. Code: ${error.code}, message: ${error.message}`);
 }
 ```

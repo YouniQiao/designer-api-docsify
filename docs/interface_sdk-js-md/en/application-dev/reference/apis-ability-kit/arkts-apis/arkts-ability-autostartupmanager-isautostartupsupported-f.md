@@ -25,3 +25,17 @@ Check whether the current device supports auto startup on this device.
 | Type | Description |
 | --- | --- |
 | boolean | `true`: Device supports auto startup. |
+
+**Examples**
+
+```TypeScript
+import { autoStartupManager, UIAbility } from '@kit.AbilityKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate() {
+    // Check whether the current device supports auto-start on boot.
+    const isSupported: boolean = autoStartupManager.isAutoStartupSupported();
+    console.info(`isAutoStartupSupported: ${isSupported}.`);
+  }
+}
+```

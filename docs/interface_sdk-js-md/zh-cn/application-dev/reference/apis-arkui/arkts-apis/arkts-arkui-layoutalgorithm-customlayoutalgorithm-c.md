@@ -47,6 +47,11 @@ onLayout(self: FrameNode, position: Position): void
 | self | [FrameNode](arkts-arkui-framenode-c.md) | 是 | 动态布局组件在组件树上的实体节点。 |
 | position | [Position](arkts-arkui-position-t.md) | 是 | 动态布局组件进行布局时使用的位置信息。 |
 
+**示例**
+
+请参考DynamicLayout组件[示例1（自定义布局算法实现瀑布流布局）](../arkui-ts/ts-container-dynamiclayout.md#示例1自定义布局算法实现瀑布流布局)。
+- simpleType:
+
 ## onMeasure
 
 ```TypeScript

@@ -37,6 +37,11 @@ constructor(option?: GridLayoutAlgorithmOptions)
 | --- | --- | --- | --- |
 | option | [GridLayoutAlgorithmOptions](arkts-arkui-layoutalgorithm-gridlayoutalgorithmoptions-i.md) | 否 | 网格布局算法的构造入参，设置网格布局的列数、列间距、行间距。 |
 
+**示例**
+
+请参考DynamicLayout组件[示例2（切换布局算法）](../arkui-ts/ts-container-dynamiclayout.md#示例2切换布局算法)。
+- simpleType:
+
 ## columnsGap
 
 ```TypeScript

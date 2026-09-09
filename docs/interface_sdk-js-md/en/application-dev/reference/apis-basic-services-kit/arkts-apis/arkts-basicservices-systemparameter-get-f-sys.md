@@ -37,14 +37,15 @@ Obtains a value of the specified key. This API uses an asynchronous callback to 
 import { BusinessError } from '@ohos.base';
 
 try {
-    systemParameter.get("const.ohos.apiversion", (err: BusinessError, data: string) => {
-    if (err == undefined) {
-        console.info("get test.parameter.key value success:" + data)
+  systemParameter.get('const.ohos.apiversion', (err: BusinessError, data: string) => {
+    if (err) {
+      console.error(`Failed to get system parameter. Code: ${err.code}, message: ${err.message}`);
     } else {
-        console.error(" get test.parameter.key value err:" + err.code)
-    }});
-} catch(e) {
-    console.error("get unexpected error: " + e);
+      console.info('get const.ohos.apiversion success: ' + data);
+    }
+  });
+} catch (e) {
+  console.error('get unexpected error: ' + e);
 }
 ```
 
@@ -81,15 +82,15 @@ Obtains a value of the specified key. This API uses an asynchronous callback to 
 import { BusinessError } from '@ohos.base';
 
 try {
-    systemParameter.get("const.ohos.apiversion", "default", (err: BusinessError, data: string) => {
-        if (err == undefined) {
-            console.info("get test.parameter.key value success:" + data)
-        } else {
-            console.error(" get test.parameter.key value err:" + err.code)
-        }
-    });
-} catch(e) {
-    console.error("get unexpected error:" + e)
+  systemParameter.get('const.ohos.apiversion', 'default', (err: BusinessError, data: string) => {
+    if (err) {
+      console.error(`Failed to get system parameter. Code: ${err.code}, message: ${err.message}`);
+    } else {
+      console.info('get const.ohos.apiversion success: ' + data);
+    }
+  });
+} catch (e) {
+  console.error('get unexpected error: ' + e);
 }
 ```
 
@@ -131,13 +132,13 @@ Obtains a value of the specified key. This API uses a promise to return the resu
 import { BusinessError } from '@ohos.base';
 
 try {
-    let p: Promise<string> = systemParameter.get("const.ohos.apiversion");
-    p.then((value: string) => {
-        console.info("get test.parameter.key success: " + value);
-    }).catch((err: BusinessError) => {
-        console.error("get test.parameter.key error: " + err.code);
-    });
-} catch(e) {
-    console.error("get unexpected error: " + e);
+  let getPromise: Promise<string> = systemParameter.get('const.ohos.apiversion');
+  getPromise.then((value: string) => {
+    console.info('get const.ohos.apiversion success: ' + value);
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to get system parameter. Code: ${err.code}, message: ${err.message}`);
+  });
+} catch (e) {
+  console.error('get unexpected error: ' + e);
 }
 ```

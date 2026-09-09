@@ -102,28 +102,28 @@ struct ParticleExample {
               particle: {
                 type: ParticleType.POINT, // Particle type.
                 config: {
-                  radius: 10// Point radius.
+                  radius: 10 // Dot radius.
                 },
                 count: 500, // Total number of particles.
-                lifetime: 10000, // Particle lifetime, in ms.
-                lifetimeRange: 100// Range of particle lifetime values, in ms.
+                lifetime: 10000, // Particle lifecycle, in ms.
+                lifetimeRange: 100 // Value range of the particle lifecycle, in ms.
               },
               emitRate: 10, // Number of particles emitted per second.
               position: [0, 0],
-              shape: ParticleEmitterShape.RECTANGLE// Emitter shape.
+              shape: ParticleEmitterShape.RECTANGLE // Emitter shape.
             },
             color: {
               range: [Color.Red, Color.Yellow], // Initial color range.
-              distributionType: DistributionType.GAUSSIAN, // Random distribution of initial color values.
+              distributionType: DistributionType.GAUSSIAN, // Distribution of random initial color values.
               updater: {
-                type: ParticleUpdater.CURVE, // Change with the animation curve.
+                type: ParticleUpdater.CURVE, // Change mode is curve.
                 config: [
                   {
-                    from: Color.White, // Initial value of the change.
-                    to: Color.Pink, // Target value of the change.
+                    from: Color.White, // Start value of the change.
+                    to: Color.Pink, // End value of the change.
                     startMillis: 0, // Start time.
                     endMillis: 3000, // End time.
-                    curve: Curve.EaseIn// Animation curve.
+                    curve: Curve.EaseIn // Change curve.
                   },
                   {
                     from: Color.Pink,
@@ -143,7 +143,7 @@ struct ParticleExample {
               }
             },
             opacity: {
-              range: [0.0, 1.0], // The initial value of particle opacity is randomly generated from the [0.0, 1.0] range.
+              range: [0.0, 1.0], // The initial particle opacity is randomly generated from [0.0 to 1.0].
               updater: {
                 type: ParticleUpdater.CURVE,
                 config: [
@@ -180,11 +180,11 @@ struct ParticleExample {
               }
             },
             acceleration: {
-              // Acceleration. speed indicates the acceleration speed, and angle indicates the acceleration direction.
+              // Configuration of the acceleration, which changes in two dimensions: magnitude and direction. speed indicates the acceleration magnitude, and angle indicates the acceleration direction.
               speed: {
                 range: [3, 9],
                 updater: {
-                  type: ParticleUpdater.RANDOM, // The speed changes randomly.
+                  type: ParticleUpdater.RANDOM, // The change mode of Speed is random uniform change.
                   config: [1, 20]
                 }
               },
@@ -201,7 +201,7 @@ struct ParticleExample {
 }
 ```
 
-This example demonstrates the basic usage of particle animations by initializing particles with images.
+Describes the basic usage of particle animation, where particles are initialized through images. This example configures two different types of image particles to demonstrate the combined effect of multiple particle types.
 
 ```TypeScript
 @Entry
@@ -209,389 +209,102 @@ This example demonstrates the basic usage of particle animations by initializing
 struct ParticleExample {
   @State
   myCount: number = 100
-  flag: boolean = false;
+
+  // Reduce duplicate code through parameterized configuration. imageSrc is the image resource, scaleTo is the target scale value, and durationMs is the animation duration.
+  private createImageParticle(imageSrc: ResourceStr, scaleTo: number, durationMs: number)
+    : ParticleOptions<ParticleType.IMAGE, ParticleUpdater.CURVE, ParticleUpdater.CURVE,
+  ParticleUpdater.CURVE, ParticleUpdater.CURVE, ParticleUpdater.CURVE, ParticleUpdater.CURVE>
+  {
+    return {
+      emitter: {
+        particle: {
+          type: ParticleType.IMAGE,
+          config: {
+            src: imageSrc,
+            size: [10, 10]
+          },
+          count: this.myCount,
+          lifetime: 10000,
+          lifetimeRange: 100
+        },
+        emitRate: 3,
+        shape: ParticleEmitterShape.CIRCLE
+      },
+      color: {
+        range: [Color.White, Color.White]
+      },
+      opacity: {
+        range: [1.0, 1.0],
+        updater: {
+          type: ParticleUpdater.CURVE,
+          config: [
+            { from: 0, to: 1.0, startMillis: 0, endMillis: 6000 },
+            { from: 1.0, to: 0, startMillis: 6000, endMillis: 10000 }
+          ]
+        }
+      },
+      scale: {
+        range: [0.1, 1.0],
+        updater: {
+          type: ParticleUpdater.CURVE,
+          config: [
+            { from: 0, to: scaleTo, startMillis: 0, endMillis: durationMs, curve: Curve.EaseIn }
+          ]
+        }
+      },
+      acceleration: {
+        speed: {
+          range: [3, 9],
+          updater: {
+            type: ParticleUpdater.CURVE,
+            config: [
+              { from: 10, to: 20, startMillis: 0, endMillis: 3000, curve: Curve.EaseIn },
+              { from: 10, to: 2, startMillis: 3000, endMillis: 8000, curve: Curve.EaseIn }
+            ]
+          }
+        },
+        angle: {
+          range: [0, 180],
+          updater: {
+            type: ParticleUpdater.CURVE,
+            config: [
+              { from: 1, to: 2, startMillis: 0, endMillis: 1000, curve: Curve.EaseIn },
+              { from: 50, to: -50, startMillis: 1000, endMillis: 3000, curve: Curve.EaseIn },
+              { from: 3, to: 5, startMillis: 3000, endMillis: durationMs, curve: Curve.EaseIn }
+            ]
+          }
+        }
+      },
+      spin: {
+        range: [0.1, 1.0],
+        updater: {
+          type: ParticleUpdater.CURVE,
+          config: [
+            { from: 0, to: 360, startMillis: 0, endMillis: durationMs, curve: Curve.EaseIn }
+          ]
+        }
+      },
+    }
+  }
 
   build() {
     Column() {
       Stack() {
         Particle({
           particles: [
-            {
-              emitter: {
-                particle: {
-                  type: ParticleType.IMAGE,
-                  config: {
-                    src: $r("app.media.book"),
-                    size: [10, 10]
-                  },
-                  count: this.myCount,
-                  lifetime: 10000,
-                  lifetimeRange: 100
-                },
-                emitRate: 3,
-                shape: ParticleEmitterShape.CIRCLE
-              },
-              color: {
-                range: [Color.White, Color.White]
-              },
-              opacity: {
-                range: [1.0, 1.0],
-                updater: {
-                  type: ParticleUpdater.CURVE,
-                  config: [
-                    {
-                      from: 0,
-                      to: 1.0,
-                      startMillis: 0,
-                      endMillis: 6000
-                    },
-                    {
-                      from: 1.0,
-                      to: 0,
-                      startMillis: 6000,
-                      endMillis: 10000
-                    }
-                  ]
-                }
-              },
-              scale: {
-                range: [0.1, 1.0],
-                updater: {
-                  type: ParticleUpdater.CURVE,
-                  config: [
-                    {
-                      from: 0,
-                      to: 1.5,
-                      startMillis: 0,
-                      endMillis: 8000,
-                      curve: Curve.EaseIn
-                    }
-
-                  ]
-                }
-              },
-              acceleration: {
-                speed: {
-                  range: [3, 9],
-                  updater: {
-                    type: ParticleUpdater.CURVE,
-                    config: [
-                      {
-                        from: 10,
-                        to: 20,
-                        startMillis: 0,
-                        endMillis: 3000,
-                        curve: Curve.EaseIn
-                      },
-                      {
-                        from: 10,
-                        to: 2,
-                        startMillis: 3000,
-                        endMillis: 8000,
-                        curve: Curve.EaseIn
-                      }
-                    ]
-                  }
-                },
-                angle: {
-                  range: [0, 180],
-                  updater: {
-                    type: ParticleUpdater.CURVE,
-                    config: [{
-                      from: 1,
-                      to: 2,
-                      startMillis: 0,
-                      endMillis: 1000,
-                      curve: Curve.EaseIn
-                    },
-                      {
-                        from: 50,
-                        to: -50,
-                        startMillis: 1000,
-                        endMillis: 3000,
-                        curve: Curve.EaseIn
-                      },
-                      {
-                        from: 3,
-                        to: 5,
-                        startMillis: 3000,
-                        endMillis: 8000,
-                        curve: Curve.EaseIn
-                      }
-                    ]
-                  }
-                }
-              },
-              spin: {
-                range: [0.1, 1.0],
-                updater: {
-                  type: ParticleUpdater.CURVE,
-                  config: [
-                    {
-                      from: 0,
-                      to: 360,
-                      startMillis: 0,
-                      endMillis: 8000,
-                      curve: Curve.EaseIn
-                    }
-                  ]
-                }
-              },
-            }
-            , {
-            emitter: {
-              particle: {
-                type: ParticleType.IMAGE,
-                config: {
-                  src: $r('app.media.heart'),
-                  size: [10, 10]
-                },
-                count: this.myCount,
-                lifetime: 10000,
-                lifetimeRange: 100
-              },
-              emitRate: 3,
-              shape: ParticleEmitterShape.CIRCLE
-            },
-            color: {
-              range: [Color.White, Color.White]
-            },
-            opacity: {
-              range: [1.0, 1.0],
-              updater: {
-                type: ParticleUpdater.CURVE,
-                config: [
-                  {
-                    from: 0,
-                    to: 1.0,
-                    startMillis: 0,
-                    endMillis: 6000
-                  },
-                  {
-                    from: 1.0,
-                    to: 0,
-                    startMillis: 6000,
-                    endMillis: 10000
-                  }
-                ]
-              }
-            },
-            scale: {
-              range: [0.1, 1.0],
-              updater: {
-                type: ParticleUpdater.CURVE,
-                config: [
-                  {
-                    from: 0,
-                    to: 2.0,
-                    startMillis: 0,
-                    endMillis: 10000,
-                    curve: Curve.EaseIn
-                  }
-
-                ]
-              }
-            },
-            acceleration: {
-              speed: {
-                range: [3, 9],
-                updater: {
-                  type: ParticleUpdater.CURVE,
-                  config: [
-                    {
-                      from: 10,
-                      to: 20,
-                      startMillis: 0,
-                      endMillis: 3000,
-                      curve: Curve.EaseIn
-                    },
-                    {
-                      from: 10,
-                      to: 2,
-                      startMillis: 3000,
-                      endMillis: 8000,
-                      curve: Curve.EaseIn
-                    }
-                  ]
-                }
-              },
-              angle: {
-                range: [0, 180],
-                updater: {
-                  type: ParticleUpdater.CURVE,
-                  config: [{
-                    from: 1,
-                    to: 2,
-                    startMillis: 0,
-                    endMillis: 1000,
-                    curve: Curve.EaseIn
-                  },
-                    {
-                      from: 50,
-                      to: -50,
-                      startMillis: 0,
-                      endMillis: 3000,
-                      curve: Curve.EaseIn
-                    },
-                    {
-                      from: 3,
-                      to: 5,
-                      startMillis: 3000,
-                      endMillis: 10000,
-                      curve: Curve.EaseIn
-                    }
-                  ]
-                }
-              }
-            },
-            spin: {
-              range: [0.1, 1.0],
-              updater: {
-                type: ParticleUpdater.CURVE,
-                config: [
-                  {
-                    from: 0,
-                    to: 360,
-                    startMillis: 0,
-                    endMillis: 10000,
-                    curve: Curve.EaseIn
-                  }
-                ]
-              }
-            },
-          }, {
-            emitter: {
-              particle: {
-                type: ParticleType.IMAGE,
-                config: {
-                  src: $r('app.media.sun'),
-                  size: [10, 10]
-                },
-                count: this.myCount,
-                lifetime: 10000,
-                lifetimeRange: 100
-              },
-              emitRate: 3,
-              shape: ParticleEmitterShape.CIRCLE
-            },
-            color: {
-              range: [Color.White, Color.White]
-            },
-            opacity: {
-              range: [1.0, 1.0],
-              updater: {
-                type: ParticleUpdater.CURVE,
-                config: [
-                  {
-                    from: 0,
-                    to: 1.0,
-                    startMillis: 0,
-                    endMillis: 6000
-                  },
-                  {
-                    from: 1.0,
-                    to: 0,
-                    startMillis: 6000,
-                    endMillis: 10000
-                  }
-                ]
-              }
-            },
-            scale: {
-              range: [0.1, 1.0],
-              updater: {
-                type: ParticleUpdater.CURVE,
-                config: [
-                  {
-                    from: 0,
-                    to: 2.0,
-                    startMillis: 0,
-                    endMillis: 10000,
-                    curve: Curve.EaseIn
-                  }
-
-                ]
-              }
-            },
-            acceleration: {
-              speed: {
-                range: [3, 9],
-                updater: {
-                  type: ParticleUpdater.CURVE,
-                  config: [
-                    {
-                      from: 10,
-                      to: 20,
-                      startMillis: 0,
-                      endMillis: 3000,
-                      curve: Curve.EaseIn
-                    },
-                    {
-                      from: 10,
-                      to: 2,
-                      startMillis: 3000,
-                      endMillis: 8000,
-                      curve: Curve.EaseIn
-                    }
-                  ]
-                }
-              },
-              angle: {
-                range: [0, 180],
-                updater: {
-                  type: ParticleUpdater.CURVE,
-                  config: [{
-                    from: 1,
-                    to: 2,
-                    startMillis: 0,
-                    endMillis: 1000,
-                    curve: Curve.EaseIn
-                  },
-                    {
-                      from: 50,
-                      to: -50,
-                      startMillis: 1000,
-                      endMillis: 3000,
-                      curve: Curve.EaseIn
-                    },
-                    {
-                      from: 3,
-                      to: 5,
-                      startMillis: 3000,
-                      endMillis: 8000,
-                      curve: Curve.EaseIn
-                    }
-                  ]
-                }
-              }
-            },
-            spin: {
-              range: [0.1, 1.0],
-              updater: {
-                type: ParticleUpdater.CURVE,
-                config: [
-                  {
-                    from: 0,
-                    to: 360,
-                    startMillis: 0,
-                    endMillis: 10000,
-                    curve: Curve.EaseIn
-                  }
-                ]
-              }
-            },
-          }
+            this.createImageParticle($r("app.media.book"), 1.5, 8000),   // book particle: scale to 1.5x, lasting 8000 ms
+            this.createImageParticle($r('app.media.heart'), 2.0, 10000),  // heart particle: scale to 2.0x, lasting 10000 ms
           ]
         }).width(300).height(300)
 
       }.width(500).height(500).align(Alignment.Center)
-    }.width("100%").height("100%")
+    }.width('100%').height('100%')
 
   }
 }
 ```
 
-This example demonstrates how to change the motion trajectories of particles by applying disturbances through the particle disturbance field.
+This example demonstrates the effect of particle motion trajectory changes under the interference of a disturbance field.
 
 ```TypeScript
 @Entry
@@ -608,26 +321,26 @@ struct ParticleExample3 {
               particle: {
                 type: ParticleType.POINT, // Particle type.
                 config: {
-                  radius: 10// Point radius.
+                  radius: 10 // Dot radius.
                 },
                 count: 500, // Total number of particles.
-                lifetime: 10000// Particle lifetime, in ms.
+                lifetime: 10000 // Particle lifecycle, in ms.
               },
               emitRate: 10, // Number of particles emitted per second.
               position: [0, 0],
-              shape: ParticleEmitterShape.RECTANGLE// Emitter shape.
+              shape: ParticleEmitterShape.RECTANGLE // Emitter shape.
             },
             color: {
               range: [Color.Red, Color.Yellow], // Initial color range.
               updater: {
-                type: ParticleUpdater.CURVE, // Change with the animation curve.
+                type: ParticleUpdater.CURVE, // Change mode is curve.
                 config: [
                   {
-                    from: Color.White, // Initial value of the change.
-                    to: Color.Pink, // Target value of the change.
+                    from: Color.White, // Start value of the change.
+                    to: Color.Pink, // End value of the change.
                     startMillis: 0, // Start time.
                     endMillis: 3000, // End time.
-                    curve: Curve.EaseIn// Animation curve.
+                    curve: Curve.EaseIn // Change curve.
                   },
                   {
                     from: Color.Pink,
@@ -647,7 +360,7 @@ struct ParticleExample3 {
               }
             },
             opacity: {
-              range: [0.0, 1.0], // The initial value of particle opacity is randomly generated from the [0.0, 1.0] range.
+              range: [0.0, 1.0], // Initial particle opacity is randomly generated from [0.0, 1.0].
               updater: {
                 type: ParticleUpdater.CURVE,
                 config: [
@@ -684,7 +397,7 @@ struct ParticleExample3 {
               }
             },
             acceleration: {
-              // Acceleration. speed indicates the acceleration speed, and angle indicates the acceleration direction.
+              // Acceleration configuration, which changes in two dimensions: magnitude and direction. speed indicates the acceleration magnitude, and angle indicates the acceleration direction.
               speed: {
                 range: [3, 9],
                 updater: {
@@ -699,15 +412,16 @@ struct ParticleExample3 {
 
           }
         ]
+      // Set the particle disturbance field to interfere with the particle motion trajectory.
       }).width(300).height(300).disturbanceFields([{
-        strength: 10,
-        shape: DisturbanceFieldShape.RECT,
-        size: { width: 100, height: 100 },
-        position: { x: 100, y: 100 },
-        feather: 15,
-        noiseScale: 10,
-        noiseFrequency: 15,
-        noiseAmplitude: 5
+        strength: 10, // Field strength, indicating the intensity of the repulsive or attractive force.
+        shape: DisturbanceFieldShape.RECT, // Disturbance field shape is rectangle.
+        size: { width: 100, height: 100 }, // Disturbance field size.
+        position: { x: 100, y: 100 }, // Disturbance field position.
+        feather: 15, // Feather value, indicating the degree of attenuation of the field from the center to the edge.
+        noiseScale: 10, // Noise scale.
+        noiseFrequency: 15, // Noise frequency.
+        noiseAmplitude: 5 // Noise amplitude.
       }])
     }.width('100%').height('100%').align(Alignment.Center)
   }
@@ -740,14 +454,14 @@ struct ParticleExample4 {
               particle: {
                 type: ParticleType.POINT, // Particle type.
                 config: {
-                  radius: 5// Point radius.
+                  radius: 5 // Radius of the dot.
                 },
                 count: 400, // Total number of particles.
-                lifetime: -1// Particle lifetime. The value -1 indicates that the lifetime of the particle is infinite.
+                lifetime: -1 // Lifecycle of the particle. -1 indicates an infinite lifecycle.
               },
               emitRate: 10, // Number of particles emitted per second.
               position: [0, 0], // Emitter position.
-              shape: ParticleEmitterShape.CIRCLE// Emitter shape.
+              shape: ParticleEmitterShape.CIRCLE // Emitter shape.
             },
             color: {
               range: [Color.Red, Color.Yellow], // Initial color range.
@@ -789,7 +503,7 @@ struct ParticleExample4 {
 }
 ```
 
-This example describes the basic usage of creating a ring emitter.
+This example demonstrates how to create a annulus emitter, where particles are statically emitted across the entire annulus range (from the start angle 0 to the end angle 360).
 
 ```TypeScript
 import { LengthMetrics } from '@kit.ArkUI';
@@ -808,20 +522,20 @@ struct ParticleExample5 {
               particle: {
                 type: ParticleType.POINT, // Particle type.
                 config: {
-                  radius: 5 // Dot radius
+                  radius: 5 // Dot radius.
                 },
-                count: 2000, // Total number of particles
-                lifetime: 10000, // Particle lifetime, in ms.
-                lifetimeRange: 100// Range of particle lifetime values, in ms.
+                count: 2000, // Total number of particles.
+                lifetime: 10000, // Particle lifecycle, in ms.
+                lifetimeRange: 100 // Value range of the particle lifecycle, in ms.
               },
-              emitRate: 100, // Number of particles emitted per second
-              shape: ParticleEmitterShape.ANNULUS, // Ring emitter
+              emitRate: 100, // Number of particles emitted per second.
+              shape: ParticleEmitterShape.ANNULUS, // Annulus emitter.
               annulusRegion:{
-                center:{x:LengthMetrics.percent(0.5),y:LengthMetrics.percent(0.5)}, // Coordinates of the center of the ring
-                innerRadius:LengthMetrics.vp(100), // Outer radius of the ring
-                outerRadius:LengthMetrics.vp(120), // Inner radius of the ring
-                startAngle:0, // Start angle of the ring
-                endAngle:360 // End angle of the ring
+                center:{x:LengthMetrics.percent(0.5),y:LengthMetrics.percent(0.5)}, // Coordinates of the center of the annulus
+                innerRadius:LengthMetrics.vp(100), // Inner radius of the annulus.
+                outerRadius:LengthMetrics.vp(120), // Outer radius of the annulus.
+                startAngle:0, // Start angle of the annulus
+                endAngle:360 // End angle of the annulus
               }
             },
             color: {
@@ -872,52 +586,77 @@ struct ParticleExample5 {
 }
 ```
 
-This example describes the basic usage of updating the ring emitter of a particle animation.
+This example describes the basic usage of updating the annulus emitter of a particle animation.
 
 ```TypeScript
-import { LengthMetrics } from '@kit.ArkUI'
+import { LengthMetrics } from '@kit.ArkUI';
 
 @Entry
 @Component
 struct ParticleExample6 {
-
   @State radius: number = 1;
-  @State shape: ParticleEmitterShape = ParticleEmitterShape.ANNULUS;
+  @State shape: ParticleEmitterShape = ParticleEmitterShape.ANNULUS; // Annulus.
   @State emitRate: number = 200;
-  @State count: number = 2000;
+  @State count: number = 4000;
   private timerID: number = -1;
   private centerX: LengthMetrics = LengthMetrics.percent(0.5);
   private centerY: LengthMetrics = LengthMetrics.percent(0.5);
   private inRadius: LengthMetrics = LengthMetrics.vp(120);
   private outRadius: LengthMetrics = LengthMetrics.vp(120);
-  private startAngle: number = 0;
-  private endAngle: number = 90;
+  private startAngle: number = -90;   // 12 o'clock direction.
+  private endAngle: number = -60;   // 1 o'clock direction.
+
+  // Set the update parameters of the annulus emitter for the particle animation.
   @State emitterProperties: Array<EmitterProperty> = [
     {
       index: 0,
       emitRate: 100,
       annulusRegion: {
-        center:{x:this.centerX, y: this.centerY}, // Center coordinates of the ring
-        outerRadius: this.outRadius, // Outer radius of the ring
-        innerRadius: this.inRadius, // Inner radius of the ring
-        startAngle: -90, // Start angle of the ring
-        endAngle: 0 // End angle of the ring
+        center: {x:this.centerX, y: this.centerY}, // Center coordinates of the annulus.
+        outerRadius: this.outRadius, // Outer radius of the annulus
+        innerRadius: this.inRadius, // Inner radius of the annulus
+        startAngle: this.startAngle, // Start angle of the annulus.
+        endAngle: this.endAngle // End angle of the annulus.
       }
     }
   ]
+
+  // Set the initial parameters of the annulus emitter upon creation.
   @State region: ParticleAnnulusRegion = {
-    center:{x:this.centerX, y: this.centerY},
+    center: {x:this.centerX, y: this.centerY},
     outerRadius: this.outRadius,
     innerRadius: this.inRadius,
     startAngle: -90,
-    endAngle: 0
+    endAngle: -60
   }
 
-  aboutToDisappear(): void {
-    // Clear the timer when the page is destroyed.
-    if (this.timerID != -1) {
-      clearInterval(this.timerID);
-    }
+  onPageShow(): void {
+    // Create a timer (updated every second).
+    this.timerID = setInterval(() => {
+      this.emitterProperties = [
+        {
+          index: 0,
+          emitRate: this.emitRate,
+          annulusRegion: {
+            center:{x:this.centerX, y: this.centerY},
+            outerRadius: this.outRadius,
+            innerRadius: this.inRadius,
+            startAngle: this.startAngle,
+            endAngle: this.endAngle
+          }
+        }
+      ];
+      if (this.endAngle >= 360) {
+        if (this.timerID != -1) {
+          clearInterval(this.timerID);
+        }
+        return;
+      }
+      // Update the angle value (30 degrees per second).
+      this.startAngle += 30;
+      this.endAngle += 30;
+      console.info("angle: " + this.startAngle + ", " + this.endAngle);
+    }, 1000);
   }
 
   build() {
@@ -939,7 +678,7 @@ struct ParticleExample6 {
                   lifetime: -1 // Particle lifecycle. The value -1 indicates that the particle lifecycle is infinite.
                 },
                 emitRate: this.emitRate, // Number of particles emitted per second
-                shape: this.shape, // Shape of the emitter
+                shape: this.shape, // Emitter shape.
                 annulusRegion: this.region
               },
               color: {
@@ -950,39 +689,6 @@ struct ParticleExample6 {
         }).width('100%')
           .height('100%')
           .emitter(this.emitterProperties)
-          .onClick(()=>{
-            // Clear the existing timer.
-            if (this.timerID != -1) {
-              clearInterval(this.timerID);
-            }
-
-            // Create a timer (update every second).
-            this.timerID = setInterval(() => {
-              this.emitterProperties = [
-                {
-                  index: 0,
-                  emitRate: this.emitRate,
-                  annulusRegion: {
-                    center:{x:this.centerX, y: this.centerY},
-                    outerRadius: this.outRadius,
-                    innerRadius: this.inRadius,
-                    startAngle: this.startAngle,
-                    endAngle: this.endAngle
-                  }
-                }
-              ];
-              if (this.endAngle >= 270) {
-                if (this.timerID != -1) {
-                  clearInterval(this.timerID);
-                }
-                return;
-              }
-              // Update the angle value (30 degrees per second).
-              this.startAngle += 30;
-              this.endAngle += 30;
-            }, 1000);
-
-          })
       }
       .width('100%')
       .height('100%')
@@ -992,7 +698,7 @@ struct ParticleExample6 {
 }
 ```
 
-Starting from API version 22, the ripple field and velocity field can be set for particles. This example shows how to use the rippleFields API to set the ripple field of particles to produce a ripple effect. The velocityFields API is used to set the velocity field of particles, so that the velocity specified by the velocity field is added to the original velocity of particles.
+Since API version 22, particle ripple fields and velocity fields can be set. This example demonstrates how to set a particle ripple field through the rippleFields API to produce an effect similar to ripple diffusion. The velocityFields API is used to set a particle velocity field, so that the velocity specified by the velocity field is superimposed on the original velocity of the particles.
 
 ```TypeScript
 // xxx.ets
@@ -1001,17 +707,17 @@ Starting from API version 22, the ripple field and velocity field can be set for
 struct ParticleExample {
   @State count: number = 1000
   @State particle: EmitterParticleOptions<ParticleType> = {
-    type: ParticleType.POINT, // Particle type.
+    type: ParticleType.POINT, // Particle type
     config: {
-      radius: 1 // Radius of the dot
+      radius: 1 // Dot radius
     },
     count: this.count, // Total number of particles
-    lifetime: 9000, //Particle lifetime, in ms
-    lifetimeRange: 100 // Range of particle lifetime values, in ms.
+    lifetime: 9000, // Particle lifecycle, in ms
+    lifetimeRange: 100 // Particle lifecycle value range, in ms
   }
   build() {
     Column() {
-      Text('Wave field')
+      Text('Fluctuation field')
         .fontSize(30)
         .fontWeight(FontWeight.Bold)
       Stack() {
@@ -1022,39 +728,39 @@ struct ParticleExample {
             {
               emitter: {
                 particle: this.particle,
-                emitRate: 10000, //Number of particles emitted per second
+                emitRate: 10000, // Number of particles emitted per second
                 position: [0, 0],
-                shape: ParticleEmitterShape.RECTANGLE // Emitter shape.
+                shape: ParticleEmitterShape.RECTANGLE // Emitter shape
               },
               color: {
-                range: [Color.White, Color.White], // initial color range
+                range: [Color.White, Color.White], // Initial color range
               },
               scale: {
-                range: [0.2, 1.5], //Initial size range
+                range: [0.2, 1.5], // Initial size range
               },
               opacity : {
-                range: [0.2, 0.8], //Initial transparency range
+                range: [0.2, 0.8], // Initial opacity range
               }
             }
           ]
         }).width(300).height(300)
           .rippleFields([
             {
-              amplitude: 120, //Amplitude of the wave field
-              wavelength: 500, //Wavelength of the wave field
-              waveSpeed: 220, //Wave speed of the wave field
-              center: { x: 150, y: 150 }, //Center of the force field of the wave field
-              attenuation: 0, //Attenuation coefficient of the wave field over time
+              amplitude: 120, // Fluctuation field amplitude
+              wavelength: 500, // Wavelength of the ripple field
+              waveSpeed: 220, // Wave speed of the ripple field
+              center: { x: 150, y: 150 }, // Center of the force of the ripple field
+              attenuation: 0, // Attenuation coefficient of the ripple field over time
               region: {
-                //Affected area of the wave field.
-                shape: DisturbanceFieldShape.RECT, // Shape of the disturbance field's affected area
-                position: { x: 150, y: 150 }, // Center of the disturbance field's affected area
-                size: { width: 300, height: 300 } // Size of the disturbance field's affected area
+                // Influence region of the ripple field
+                shape: DisturbanceFieldShape.RECT, // Shape of the influence region of the ripple field
+                position: { x: 150, y: 150 }, // Center of the influence region of the ripple field
+                size: { width: 300, height: 300 } // Size of the influence region of the ripple field
               }
             }
           ])
-      }.width("100%").height(300).align(Alignment.Center)
-      Text ('Velocity field')
+      }.width('100%').height(300).align(Alignment.Center)
+      Text('Velocity field')
         .fontSize(30)
         .fontWeight(FontWeight.Bold)
       Stack() {
@@ -1065,26 +771,26 @@ struct ParticleExample {
             {
               emitter: {
                 particle: {
-                  type: ParticleType.POINT, // Particle type.
+                  type: ParticleType.POINT, // Particle type
                   config: {
-                    radius: 2 // Radius of the dot
+                    radius: 2 // Dot radius
                   },
                   count: 1000, // Total number of particles
-                  lifetime: 1000, // Particle lifetime, in ms
-                  lifetimeRange: 0 // Particle lifetime range, in ms
+                  lifetime: 1000, // Particle lifecycle, in ms
+                  lifetimeRange: 0 // Particle lifecycle value range, in ms
                 },
                 emitRate: 120, // Number of particles emitted per second
                 position: [0, 0],
                 size: [300, 300],
-                shape: ParticleEmitterShape.RECTANGLE // Emitter shape.
+                shape: ParticleEmitterShape.RECTANGLE // Emitter shape
               },
               color: {
-                range: [Color.White, Color.White], // initial color range
+                range: [Color.White, Color.White], // Initial color range
               },
               opacity: {
                 range: [1.0, 1.0],
                 updater: {
-                  type: ParticleUpdater.CURVE, // Transparency changes by curve
+                  type: ParticleUpdater.CURVE, // Opacity changes along a curve
                   config: [
                     {
                       from: 1.0,
@@ -1102,16 +808,16 @@ struct ParticleExample {
           .margin({ top: 30 })
           .velocityFields([
             {
-              velocity: { x: 100, y: 0 }, // Velocity of the velocity field
+              velocity: { x: 100, y: 0 }, // Velocity value of the velocity field
               region: {
-                // Affected area of the velocity field
-                shape: DisturbanceFieldShape.RECT, // Shape of the velocity field's affected area
-                position: { x: 150, y: 150 }, // Center of the area affected by the velocity field
-                size: { width: 200, height: 200 } // Size of the area affected by the velocity field.
+                // Influence region of the velocity field
+                shape: DisturbanceFieldShape.RECT, // Shape of the influence region of the velocity field
+                position: { x: 150, y: 150 }, // Center of the influence region of the velocity field
+                size: { width: 200, height: 200 } // Size of the influence region of the velocity field
               }
             }
           ])
-      }.width("100%").height(300).align(Alignment.Center)
+      }.width('100%').height(300).align(Alignment.Center)
     }
   }
 }

@@ -55,9 +55,9 @@ struct Index {
           .onClick(()=>{
             avSession.getAllSessionDescriptors().then((descriptors: avSession.AVSessionDescriptor[]) => {
               console.info(`Succeeded in getting all session descriptors, length: ${descriptors.length}`);
-              if (descriptors.length > 0 ) {
-avSession.createController(descriptors[0]?.sessionId, (avcontroller: avSession.AVSessionController) => { 
-                    console.info('Succeeded in creating controller.'); 
+              if (descriptors.length > 0) {
+                avSession.createController(descriptors[0]?.sessionId, (avcontroller: avSession.AVSessionController) => { 
+                  console.info('Succeeded in creating controller.'); 
                 });
               }
             });

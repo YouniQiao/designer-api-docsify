@@ -48,20 +48,21 @@ Obtains the low-resolution snapshot of a given mission. This API uses an asynchr
 import { missionManager } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
+// testMissionId is the mission ID. You can obtain a valid mission ID through the getMissionInfos API.
 let testMissionId = 2;
 
 try {
   missionManager.getLowResolutionMissionSnapShot('', testMissionId,
     (err: BusinessError, data: missionManager.MissionSnapshot) => {
       if (err) {
-        console.error(`getLowResolutionMissionSnapShot failed: ${err.message}`);
+        console.error(`getLowResolutionMissionSnapShot failed. Code: ${err.code}, message: ${err.message}.`);
       } else {
         console.info(`getLowResolutionMissionSnapShot successfully: ${JSON.stringify(data)}`);
       }
     });
 } catch (error) {
   let err: BusinessError = error as BusinessError;
-  console.error(`getLowResolutionMissionSnapShot failed: ${err.message}`);
+  console.error(`getLowResolutionMissionSnapShot failed. Code: ${err.code}, message: ${err.message}.`);
 }
 ```
 
@@ -109,16 +110,17 @@ Obtains the low-resolution snapshot of a given mission. This API uses a promise 
 import { missionManager } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
+// testMissionId is the mission ID, which can be obtained through the getMissionInfos API.
 let testMissionId = 2;
 
 try {
   missionManager.getLowResolutionMissionSnapShot('', testMissionId).then((data: missionManager.MissionSnapshot) => {
     console.info(`getLowResolutionMissionSnapShot successfully. Data: ${JSON.stringify(data)}`);
   }).catch((error: BusinessError) => {
-    console.error(`getLowResolutionMissionSnapShot failed. Cause: ${error.message}`);
+    console.error(`getLowResolutionMissionSnapShot failed. Code: ${error.code}, message: ${error.message}.`);
   });
 } catch (error) {
   let err: BusinessError = error as BusinessError;
-  console.error(`getLowResolutionMissionSnapShot failed. Cause: ${err.message}`);
+  console.error(`getLowResolutionMissionSnapShot failed. Code: ${err.code}, message: ${err.message}.`);
 }
 ```

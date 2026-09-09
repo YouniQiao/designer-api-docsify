@@ -1,4 +1,4 @@
-# @system.configuration
+# @system.configuration(Application configuration)
 
 ## Modules to Import
 

@@ -48,6 +48,6 @@ let scannerId: string = 'scanner_001';
 scan.getPictureScanProgress(scannerId).then((progress: scan.PictureScanProgress) => {
     console.info('get picture scan progress success: ' + JSON.stringify(progress));
 }).catch((error: BusinessError) => {
-    console.error('get picture scan progress failed: ' + JSON.stringify(error));
-})
+    console.error(`Failed to get picture scan progress. Code: ${error.code}, message: ${error.message}`);
+});
 ```

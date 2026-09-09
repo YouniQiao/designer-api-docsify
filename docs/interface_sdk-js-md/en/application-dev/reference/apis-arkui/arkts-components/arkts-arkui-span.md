@@ -40,7 +40,7 @@ Defines the constructor of Span.
 
 ## Examples
 
-This example demonstrates how to apply different text styles and configure click events for the Span component.
+This example demonstrates how to apply different text styles and configure click events for the Span.
 
 ```TypeScript
 // xxx.ets
@@ -162,7 +162,7 @@ struct SpanExample {
           })
       }
 
-      // Sets text font configurations. The fontConfigs attribute is supported since API version 24.
+      // Text font configuration settings. Starting from API version 24, the fontConfigs attribute is supported.
       Text('Font with FontConfigs').fontSize(9).fontColor(0xCCCCCC).margin({ top: 12 })
       Text() {
         Span('span font with configs')
@@ -178,7 +178,7 @@ struct SpanExample {
           })
       }
 
-      // Sets text font weight configurations. The fontWeightConfigs attribute is supported since API version 24.
+      // Text font weight configuration settings. Starting from API version 24, the fontWeightConfigs attribute is supported.
       Text('FontWeight with FontWeightConfigs').fontSize(9).fontColor(0xCCCCCC).margin({ top: 12 })
       Text() {
         Span('span fontWeight 850 with configs')
@@ -271,7 +271,7 @@ struct SpanExample {
       Text() {
         Span('   Hello World !   ')
           .fontSize('20fp')
-          .textBackgroundStyle({ color: "#7F007DFF", radius: "5vp" })
+          .textBackgroundStyle({ color: '#7F007DFF', radius: '5vp' })
           .fontColor(Color.White)
       }
     }.width('100%').margin({ bottom: '5vp' }).alignItems(HorizontalAlign.Center)
@@ -312,8 +312,8 @@ struct SpanExample {
 }
 ```
 
-This example demonstrates how to set text font variations using [fontVariations](#fontvariations).
-The [fontVariations](#fontvariations) API is added since API version 26.0.0.
+This example sets the variable font attribute through the [fontVariations](#fontvariations) attribute.
+Since API version 26.0.0, the [fontVariations](#fontvariations) API is added.
 
 ```TypeScript
 // xxx.ets
@@ -326,11 +326,11 @@ struct SpanExample {
     Column() {
       Text() {
         Span('Hello World !')
-          // wght indicates the weight of the variable font.
+          // wght represents the font weight attribute of a variable font.
           .fontVariations([{ axis: 'wght', value: this.weightValue }])
       }
 
-      Button('Weight: ' + this.weightValue)
+      Button('Font weight: ' + this.weightValue)
         .margin(10)
         .onClick(() => {
           this.weightValue += 100;

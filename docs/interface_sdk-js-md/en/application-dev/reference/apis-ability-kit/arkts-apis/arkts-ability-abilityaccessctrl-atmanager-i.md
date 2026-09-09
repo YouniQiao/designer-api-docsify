@@ -414,6 +414,26 @@ When an app needs to use functions such as the camera, microphone, or location t
 | [12100009](../errorcode-access-token.md#12100009-internal-service-error) | Common inner error. An error occurs when creating the pop-up window or obtaining user operation result. |
 | [12100013](../errorcode-access-token.md#12100013-global-switch-enabled) | The specific global switch is already open. |
 
+**Examples**
+
+For details about how to obtain the context in the example, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+
+```TypeScript
+import { abilityAccessCtrl, Context, common } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Create a permission manager instance
+let atManager: abilityAccessCtrl.AtManager = abilityAccessCtrl.createAtManager();
+// Obtain the context within the component.
+let context: Context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+// Open the global switch settings dialog box
+atManager.requestGlobalSwitch(context, abilityAccessCtrl.SwitchType.CAMERA).then((data: boolean) => {
+  console.info(`requestGlobalSwitch success, result: ${data}`);
+}).catch((err: BusinessError): void => {
+  console.error(`requestGlobalSwitch fail, code: ${err.code}, message: ${err.message}`);
+});
+```
+
 ## requestPermissionOnSetting
 
 ```TypeScript
@@ -463,6 +483,26 @@ Before calling this API, the app needs to call [requestPermissionsFromUser](#req
 | [12100011](../errorcode-access-token.md#12100011-all-requested-permissions-granted) | All permissions in the permission list have been granted. |
 | [12100012](../errorcode-access-token.md#12100012-not-all-permissions-are-rejected-by-the-user) | The permission list contains the permission that has not been revoked by the user. |
 | [12100014](../errorcode-access-token.md#12100014-unexpected-permission) | Unexpected permission. You cannot request this type of permission from users via a pop-up window.<br>**Applicable version:** 21 and later |
+
+**Examples**
+
+For details about how to obtain the context in the example, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+
+```TypeScript
+import { abilityAccessCtrl, Context, common } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Create a permission manager instance
+let atManager: abilityAccessCtrl.AtManager = abilityAccessCtrl.createAtManager();
+// Obtain the context within the component.
+let context: Context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+// Open the permission settings dialog box
+atManager.requestPermissionOnSetting(context, ['ohos.permission.CAMERA']).then((data: Array<abilityAccessCtrl.GrantStatus>) => {
+  console.info(`requestPermissionOnSetting success, result: ${data}`);
+}).catch((err: BusinessError): void => {
+  console.error(`requestPermissionOnSetting fail, code: ${err.code}, message: ${err.message}`);
+});
+```
 
 ## requestPermissionsFromUser
 

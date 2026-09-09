@@ -54,7 +54,7 @@ Starts an [ArkTS child process](../../../application-models/ability-terminology.
 **Examples**
 
 ```TypeScript
-// Create the child process class DemoProcess.ets in src/main/ets/process of the entry module.
+// Create the DemoProcess.ets child process class under src/main/ets/process in the entry module.
 // entry/src/main/ets/process/DemoProcess.ets
 import { ChildProcess } from '@kit.AbilityKit';
 
@@ -66,7 +66,7 @@ export default class DemoProcess extends ChildProcess {
 ```
 
 ```TypeScript
-// Call childProcessManager.startChildProcess to start the child process.
+// Start the child process by calling childProcessManager.startChildProcess.
 // entry/src/main/ets/tool/Tool.ets
 import { childProcessManager } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -80,7 +80,7 @@ try {
     }, (err: BusinessError) => {
       console.error(`startChildProcess error, errorCode: ${err.code}`);
     })
-} catch (err) {
+} catch (err: BusinessError) {
   console.error(`startChildProcess error, errorCode: ${(err as BusinessError).code}, errorMsg: ${(err as BusinessError).message}.`);
 }
 ```
@@ -129,7 +129,7 @@ Starts an [ArkTS child process](../../../application-models/ability-terminology.
 **Examples**
 
 ```TypeScript
-// Create the child process class DemoProcess.ets in src/main/ets/process of the entry module.
+// Create the DemoProcess.ets child process class under src/main/ets/process in the entry module:
 // entry/src/main/ets/process/DemoProcess.ets
 import { ChildProcess } from '@kit.AbilityKit';
 
@@ -141,7 +141,7 @@ export default class DemoProcess extends ChildProcess {
 ```
 
 ```TypeScript
-// Call childProcessManager.startChildProcess to start the child process.
+// Start a child process by calling childProcessManager.startChildProcess:
 // entry/src/main/ets/tool/Tool.ets
 import { childProcessManager } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -150,13 +150,13 @@ import DemoProcess from '../process/DemoProcess';
 try {
   DemoProcess.toString(); // Call any API of the DemoProcess class to prevent the code from being directly optimized by the compiler because it is not being referenced.
   childProcessManager.startChildProcess("./ets/process/DemoProcess.ets", childProcessManager.StartMode.SELF_FORK, (err, data) => {
-    if (data) {
-      console.info(`startChildProcess success, pid: ${data}`);
+    if (err) {
+      console.error(`startChildProcess error. Code: ${err.code}, message: ${err.message}`);
     } else {
-      console.error(`startChildProcess error, errorCode: ${err.code}`);
+      console.info(`startChildProcess success, pid: ${data}`);
     }
   });
-} catch (err) {
+} catch (err: BusinessError) {
   console.error(`startChildProcess error, errorCode: ${(err as BusinessError).code}, errorMsg: ${(err as BusinessError).message}.`);
 }
 ```

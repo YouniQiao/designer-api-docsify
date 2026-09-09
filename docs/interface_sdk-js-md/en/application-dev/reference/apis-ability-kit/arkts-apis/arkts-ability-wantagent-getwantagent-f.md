@@ -75,16 +75,17 @@ let wantAgentInfo: wantAgent.WantAgentInfo = {
 };
 
 // getWantAgent callback.
-function getWantAgentCallback(err: BusinessError, data: WantAgent) {
+let getWantAgentCallback = (err: BusinessError, data: WantAgent) => {
   if (err.code) {
-    console.error(`getWantAgent failed, code: ${JSON.stringify(err.code)}, message: ${JSON.stringify(err.message)}`);
-  } else {
-    wantAgentData = data;
-  }
+      console.error(`getWantAgent failed, code: ${err.code}, message: ${err.message}`);
+    } else {
+      wantAgentData = data;
+    }
 }
 
 try {
-  wantAgent.getWantAgent(wantAgentInfo, getWantAgentCallback);
+  // Call the getWantAgent API to create a WantAgent object.
+wantAgent.getWantAgent(wantAgentInfo, getWantAgentCallback);
 } catch (err) {
   console.error(`getWantAgent failed, error: ${JSON.stringify(err)}`);
 }
@@ -165,6 +166,7 @@ let wantAgentInfo: wantAgent.WantAgentInfo = {
 
 try {
   wantAgent.getWantAgent(wantAgentInfo).then((data) => {
+    // Create the WantAgent successfully and save the returned WantAgent object.
     wantAgentData = data;
   }).catch((err: BusinessError) => {
     console.error(`getWantAgent failed, code: ${JSON.stringify(err.code)}, message: ${JSON.stringify(err.message)}`);

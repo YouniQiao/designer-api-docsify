@@ -37,4 +37,4 @@ Creates a **RemoteDevice** instance.
 | Error Code ID | Error Message |
 | --- | --- |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported because the chip does not support it. |
-| [36100041](../../apis-avsession-kit/errorcode-nearlink-service.md#36100041-invalid-url) | Invalid address. |
+| [36100041](../errorcode-nearlink-service.md#36100041-invalid-url) | Invalid address. |

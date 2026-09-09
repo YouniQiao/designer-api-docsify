@@ -212,7 +212,7 @@ struct SliderExample {
               value: this.vInSetValueOne,
               style: SliderStyle.InSet,
               direction: Axis.Vertical,
-              reverse: true // By default, at the top of the vertical slider is the min value and at the bottom is the max value. Therefore, if you want to slide from bottom to top, set reverse to true.
+              reverse: true // For a vertical Slider, the top end is the min value and the bottom end is the max value by default. To slide from bottom to top, set reverse to true.
             })
               .showTips(true)
               .onChange((value: number, mode: SliderChangeMode) => {
@@ -290,7 +290,7 @@ struct SliderExample {
 }
 ```
 
-This example demonstrates how to customize the Slider component using a style builder to define the content area. Clicking the increase button will increment the progress bar by the step size set in the original Slider component, and clicking the decrease button will decrement the progress bar, triggering the onChange event of the original component.
+Customizes the content area of the Slider component through a style Builder. When the increase button is tapped, the progress bar increases by the step size set for the original Slider; when the decrease button is tapped, the progress bar decreases, and the onChange event of the original component is triggered.
 
 ```TypeScript
 // xxx.ets
@@ -405,7 +405,7 @@ struct SliderExample {
 }
 ```
 
-This example demonstrates how to a color gradient effect to the slider using colorGradient and implement support for digital crown interactions through focusable, defaultFocus, and focusOnTouch.
+In this example, selectedColor is used to set the gradient color of the slider, and focusable, defaultFocus, and focusOnTouch are used to enable the slider to support digital crown operations.
 
 ```TypeScript
 // xxx.ets
@@ -484,7 +484,7 @@ struct SliderExample {
 }
 ```
 
-This example demonstrates how to set the prefix and suffix of the slider using prefix and suffix, defining their custom content and accessibility configuration. After the accessibility configuration is specified, the screen reader announces the accessibility text accordingly.
+Sets the prefix and suffix content of the slider through the prefix and suffix attributes, and customizes its content area and accessibility attributes. After the accessibility attributes are set, the screen reader reads the set accessibility content.
 
 ```TypeScript
 // xxx.ets
@@ -697,7 +697,7 @@ struct SliderExample {
 }
 ```
 
-This example demonstrates how to set accessibility text for step markers in a Slider component using [showSteps](arkts-arkui-slider-attribute.md#showsteps). The screen reader announces the set accessibility text accordingly. The [showSteps](arkts-arkui-slider-attribute.md#showsteps) attribute is added since API version 20.
+Sets the accessibility text information of the step points through the [showSteps](arkts-arkui-slider-attribute.md#showsteps) attribute. After it is set, the screen reader reads the set accessibility content. Since API version 20, the [showSteps](arkts-arkui-slider-attribute.md#showsteps) method adds the optional parameter options.
 
 ```TypeScript
 class SliderBlockBorderColorModifier1 implements AttributeModifier<SliderAttribute>{
@@ -761,7 +761,7 @@ struct SliderExample {
 }
 ```
 
-This example shows how to implement data synchronization by binding the value property of [SliderOptions](arkts-arkui-slideroptions-i.md) to a variable using the [$$](../../../ui/state-management/arkts-two-way-sync.md) two-way binding operator, available since API version 11.
+Since API version 11, set the value attribute of [SliderOptions](arkts-arkui-slideroptions-i.md) to a variable bound by [$$](../../../ui/state-management/arkts-two-way-sync.md) to implement data synchronization.
 
 ```TypeScript
 // xxx.ets
@@ -790,7 +790,7 @@ struct SliderExample {
 }
 ```
 
-This example demonstrates how to set a gradient color for the Slider component's thumb using the blockColor attribute.
+Sets the gradient color of the block through the blockColor attribute.
 
 ```TypeScript
 @Entry
@@ -905,7 +905,7 @@ struct SliderExample {
 }
 ```
 
-This example demonstrates how to set the gradient color stop of the specified color gamut, including the offset and color, using [trackColorMetrics](arkts-arkui-slider-attribute.md#trackcolormetrics). In this example, colorSpace is of the ColorSpace.DISPLAY_P3 type. You need to call the setWindowColorSpace API of the corresponding window to set the current window to the wide color gamut mode. For details, see [setWindowColorSpace](../arkts-apis-window-Window.md#setwindowcolorspace).
+Sets the gradient color stop values in the specified color space through [trackColorMetrics](arkts-arkui-slider-attribute.md#trackcolormetrics). In the example, colorSpace uses the ColorSpace.DISPLAY_P3 type, which requires the corresponding window to call the setWindowColorSpace API to set the current window to wide color gamut mode. For details about setting the window color space mode to wide color gamut, see [setWindowColorSpace](../arkts-apis-window-Window.md#setwindowcolorspace).
 The trackColorMetrics API is supported since API version 23.
 
 ```TypeScript
@@ -940,6 +940,38 @@ struct SliderExample {
         })
     }.alignItems(HorizontalAlign.Center)
     .width('100%')
+  }
+}
+```
+
+This example uses the universal attribute [systemMaterial](ts-universal-attributes-image-effect.md#systemmaterial) to set the system material of the slider, implementing the immersive light sensing effect. After the system material is set, a particle animation effect is generated during the sliding of the Slider.
+The immersive light sensing effect of the component is adaptively adjusted based on the device computing capability and the immersive light sensing effect set by the user in the system, and no additional adaptation is required from developers.
+The systemMaterial API is supported since API version 26.0.0.
+
+```TypeScript
+// xxx.ets
+import { uiMaterial } from '@kit.ArkUI';
+
+@Entry
+@Component
+struct SliderSystemMaterial {
+  build() {
+    RelativeContainer() {
+      Slider({
+        style: SliderStyle.InSet
+      })
+        .alignRules({
+          center: { anchor: '__container__', align: VerticalAlign.Center },
+          middle: { anchor: '__container__', align: HorizontalAlign.Center },
+        })
+        .systemMaterial(new uiMaterial.ImmersiveMaterial({
+          style: uiMaterial.ImmersiveStyle.ULTRA_THIN,
+        }))
+    }
+    .height('100%')
+    .width('100%')
+    // Replace it with the actual resource file.
+    .backgroundImage($r("app.media.img"))
   }
 }
 ```

@@ -86,6 +86,7 @@ import { BusinessError } from '@kit.BasicServicesKit';
 let observer: errorManager.ErrorObserver = {
   onUnhandledException(errorMsg) {
     console.error('onUnhandledException, errorMsg: ', errorMsg);
+    // context is the context of the UIAbility instance. Use an arrow function or save it in advance outside the callback.
     appRecovery.saveAppState(this.context);
   }
 };

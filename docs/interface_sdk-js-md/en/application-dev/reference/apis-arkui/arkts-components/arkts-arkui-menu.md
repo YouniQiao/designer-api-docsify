@@ -59,54 +59,53 @@ Creates a fixed container for a menu. This API does not have any parameters.
 
 ## Examples
 
-This example demonstrates how to implement a multi-level menu by configuring the builder parameter in MenuItem.
+This example implements a multi-level menu by configuring the builder parameter in MenuItem.
 
 ```TypeScript
 @Entry
 @Component
 struct Index {
-  @State select: boolean = true;
-  // Replace $r('app.media.xxx') with the image resource file you use.
-  private iconStr: ResourceStr = $r("app.media.view_list_filled");
-  private iconStr2: ResourceStr = $r("app.media.arrow_right_filled");
+  // $r('app.media.xxx') needs to be replaced with the image resource file required by the developer.
+  private iconStr: ResourceStr = $r('app.media.view_list_filled');
+  private iconStr2: ResourceStr = $r('app.media.arrow_right_filled');
 
   @Builder
   SubMenu() {
     Menu() {
-      MenuItem({ content: "Copy", labelInfo: "Ctrl+C" })
-      MenuItem({ content: "Paste", labelInfo: "Ctrl+V" })
+      MenuItem({ content: 'Copy', labelInfo: 'Ctrl+C' })
+      MenuItem({ content: 'Paste', labelInfo: 'Ctrl+V' })
     }
   }
 
   @Builder
-  MyMenu(){
+  MyMenu() {
     Menu() {
-      MenuItem({ startIcon: $r("app.media.icon"), content: "Menu item" })
-      MenuItem({ startIcon: $r("app.media.icon"), content: "Menu item" })
+      MenuItem({ startIcon: $r('app.media.icon'), content: 'Menu option' })
+      MenuItem({ startIcon: $r('app.media.icon'), content: 'Menu option' })
         .enabled(false)
       MenuItem({
         startIcon: this.iconStr,
-        content: "Menu item",
+        content: 'Menu option',
         endIcon: this.iconStr2,
-        builder: ():void=>this.SubMenu()
+        builder: (): void => this.SubMenu()
       })
       MenuItemGroup({ header: 'Subtitle' }) {
         MenuItem({
           startIcon: this.iconStr,
-          content: "Menu item",
+          content: 'Menu option',
           endIcon: this.iconStr2,
-          builder: ():void=>this.SubMenu()
+          builder: (): void => this.SubMenu()
         })
         MenuItem({
-          startIcon: $r("app.media.app_icon"),
-          content: "Menu item",
+          startIcon: $r('app.media.app_icon'),
+          content: 'Menu option',
           endIcon: this.iconStr2,
-          builder: ():void=>this.SubMenu()
+          builder: (): void => this.SubMenu()
         })
       }
       MenuItem({
         startIcon: this.iconStr,
-        content: "Menu item",
+        content: 'Menu option',
       })
     }
   }
@@ -126,7 +125,7 @@ struct Index {
 }
 ```
 
-This example demonstrates how to implement a menu with symbol icons by configuring symbolStartIcon and symbolEndIcon.
+This example implements a menu with symbol-type icons by configuring symbolStartIcon and symbolEndIcon.
 
 ```TypeScript
 // xxx.ets
@@ -144,39 +143,39 @@ struct Index {
   @Builder
   SubMenu() {
     Menu() {
-      MenuItem({ content: "Copy", labelInfo: "Ctrl+C" })
-      MenuItem({ content: "Paste", labelInfo: "Ctrl+V" })
+      MenuItem({ content: 'Copy', labelInfo: 'Ctrl+C' })
+      MenuItem({ content: 'Paste', labelInfo: 'Ctrl+V' })
     }
   }
 
   @Builder
   MyMenu() {
     Menu() {
-      MenuItem({ symbolStartIcon: this.startIconModifier, content: "Menu item" })
-      MenuItem({ symbolStartIcon: this.startIconModifier, content: "Menu item" })
+      MenuItem({ symbolStartIcon: this.startIconModifier, content: 'Menu option' })
+      MenuItem({ symbolStartIcon: this.startIconModifier, content: 'Menu option' })
         .enabled(false)
       MenuItem({
         symbolStartIcon: this.startIconModifier,
-        content: "Menu item",
+        content: 'Menu option',
         symbolEndIcon: this.endIconModifier,
         builder: (): void => this.SubMenu()
       })
       MenuItemGroup({ header: 'Subtitle' }) {
         MenuItem({
           symbolStartIcon: this.startIconModifier,
-          content: "Menu item",
+          content: 'Menu option',
           symbolEndIcon: this.endIconModifier,
           builder: (): void => this.SubMenu()
         })
         MenuItem({
           symbolStartIcon: this.startIconModifier,
-          content: "Menu item",
+          content: 'Menu option',
           symbolEndIcon: this.endIconModifier,
           builder: (): void => this.SubMenu()
         })
       }
       MenuItem({
-        content: "Menu item",
+        content: 'Menu option',
       }).selected(this.select).selectIcon(this.selectIconModifier)
     }
   }
@@ -196,7 +195,7 @@ struct Index {
 }
 ```
 
-This example demonstrates how to configure the expand symbol color for menu submenus using subMenuExpandSymbol.
+This example configures the color and size of the Menu submenu expansion symbol through subMenuExpandSymbol.
 
 ```TypeScript
 import { SymbolGlyphModifier } from '@kit.ArkUI';
@@ -214,11 +213,11 @@ struct Index {
     Menu() {
       MenuItem({
         symbolStartIcon: this.startIconModifier,
-        content: "Icons"
+        content: 'Icon'
       })
       MenuItem({
         symbolStartIcon: this.startIconModifier,
-        content: "List"
+        content: 'List'
       })
     }.backgroundColor(Color.Grey)
   }
@@ -229,22 +228,24 @@ struct Index {
       MenuItem({
         symbolStartIcon: this.startIconModifier,
         symbolEndIcon: this.endIconModifier,
-        content: "New folder",
+        content: 'New folder',
         builder: (): void => this.SubMenu(),
       })
       MenuItem({
         symbolStartIcon: this.startIconModifier,
-        content: "Sort by",
+        content: 'Sort by',
         builder: (): void => this.SubMenu(),
       })
       MenuItem({
         symbolStartIcon: this.startIconModifier,
-        content: "View mode",
+        content: 'View by',
         builder: (): void => this.SubMenu(),
       })
     }
+    // Set the submenu expansion style to embedded expansion.
     .subMenuExpandingMode(SubMenuExpandingMode.EMBEDDED_EXPAND)
     .backgroundColor(Color.Grey)
+    // Set the submenu expansion symbol.
     .subMenuExpandSymbol(this.expandSymbolModifier)
   }
 
@@ -256,7 +257,7 @@ struct Index {
 }
 ```
 
-This example demonstrates how to implement the divider style using menuItemGroupDivider.
+This example implements the divider style by setting the menuItemDivider and menuItemGroupDivider attributes.
 
 ```TypeScript
 import { LengthMetrics } from '@kit.ArkUI'
@@ -268,20 +269,22 @@ struct Index {
   @Builder
   MyMenu() {
     Menu() {
-      MenuItem({ content: "Item Content" })
-      MenuItem({ content: "Item Content" })
-      MenuItem({ content: "Item Content" })
+      MenuItem({ content: 'Item Content' })
+      MenuItem({ content: 'Item Content' })
+      MenuItem({ content: 'Item Content' })
       MenuItemGroup() {
-        MenuItem({ content: "Group Child" })
-        MenuItem({ content: "Group Child" })
+        MenuItem({ content: 'Group Child' })
+        MenuItem({ content: 'Group Child' })
       }
-      MenuItem({ content: "Item Content" })
+      MenuItem({ content: 'Item Content' })
     }
+    // Set the menu item divider style.
     .menuItemDivider({
       strokeWidth: LengthMetrics.vp(5),
       color: '#d5d5d5',
       mode: DividerMode.EMBEDDED_IN_MENU
     })
+    // Set the menu item group divider style.
     .menuItemGroupDivider({
       strokeWidth: LengthMetrics.vp(5),
       color: '#707070',
@@ -291,11 +294,63 @@ struct Index {
 
   build() {
     RelativeContainer() {
-      Button("show menu")
-        .bindMenu(this.MyMenu())
+      Button('show menu')
+        .bindMenu(this.MyMenu)
     }
     .height('100%')
     .width('100%')
+  }
+}
+```
+
+This example adds a multi-level menu to custom menu items by setting the subMenuBuilder attribute.
+Since API version 26.0.0, the [subMenuBuilder](ts-basic-components-menuitem.md#submenubuilder) attribute is added.
+
+```TypeScript
+import { LengthMetrics } from '@kit.ArkUI';
+
+@Entry
+@Component
+struct Index {
+
+  @Builder
+  SubMenu() {
+    Menu() {
+      MenuItem({ content: 'Copy', labelInfo: 'Ctrl+C' })
+      MenuItem({ content: 'Paste', labelInfo: 'Ctrl+V' })
+    }
+  }
+
+  @Builder
+  SubMenuContent() {
+    Row() {
+      // Replace $r('app.media.startIcon') with the image resource file required by the developer.
+      Image($r('app.media.startIcon')).width(20).height(20)
+      Text('Custom Menu Item').margin({start: LengthMetrics.vp(5)})
+    }.padding(20)
+  }
+
+  @Builder
+  MyMenu() {
+    Menu() {
+      MenuItem(this.SubMenuContent)
+      MenuItem(this.SubMenuContent)
+        .enabled(false)
+      MenuItem(this.SubMenuContent).subMenuBuilder(this.SubMenu)
+    }
+  }
+
+  build() {
+    Row() {
+      Column() {
+        Text('click to show menu')
+          .fontSize(50)
+          .fontWeight(FontWeight.Bold)
+      }
+      .bindMenu(this.MyMenu)
+      .width('100%')
+    }
+    .height('100%')
   }
 }
 ```

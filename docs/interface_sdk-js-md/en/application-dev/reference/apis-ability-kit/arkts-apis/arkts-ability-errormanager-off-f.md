@@ -45,11 +45,11 @@ import { BusinessError } from '@kit.BasicServicesKit';
 
 let observerId = 100;
 
-function unregisterErrorObserverCallback(err: BusinessError) {
+const unregisterErrorObserverCallback = (err: BusinessError) => {
   if (err) {
     console.error('------------ unregisterErrorObserverCallback ------------', err);
   }
-}
+};
 
 try {
   errorManager.off('error', observerId, unregisterErrorObserverCallback);
@@ -111,7 +111,7 @@ try {
       console.info('----------- unregisterErrorObserver success ----------', data);
     })
     .catch((err: BusinessError) => {
-      console.error('----------- unregisterErrorObserver fail ----------', err);
+      console.error(`Failed to unregister error observer. Code: ${err.code}, message: ${err.message}`);
     });
 } catch (paramError) {
   let code = (paramError as BusinessError).code;
@@ -154,8 +154,15 @@ This API can only be used in the main thread. If a thread error occurs, an error
 
 ```TypeScript
 import { errorManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
 
-errorManager.off("loopObserver");
+try {
+  errorManager.off('loopObserver');
+} catch (paramError) {
+  let code = (paramError as BusinessError).code;
+  let message = (paramError as BusinessError).message;
+  console.error(`error: ${code}, ${message}`);
+}
 ```
 
 
@@ -197,22 +204,22 @@ import { errorManager } from '@kit.AbilityKit';
 
 let observer: errorManager.UnhandledRejectionObserver = (reason: Error, promise: Promise<void>) => {
   if (promise === promise1) {
-    console.info("promise1 is rejected");
+    console.info('promise1 is rejected');
   }
-  console.info("reason.name: ", reason.name);
-  console.info("reason.message: ", reason.message);
+  console.info('reason.name: ', reason.name);
+  console.info('reason.message: ', reason.message);
   if (reason.stack) {
-    console.info("reason.stack: ", reason.stack);
+    console.info('reason.stack: ', reason.stack);
   }
 };
 
-errorManager.on("unhandledRejection", observer);
+errorManager.on('unhandledRejection', observer);
 
 let promise1 = new Promise<void>(() => {}).then(() => {
-  throw new Error("uncaught error")
+  throw new Error('uncaught error')
 })
 
-errorManager.off("unhandledRejection");
+errorManager.off('unhandledRejection');
 ```
 
 Or:
@@ -222,22 +229,22 @@ import { errorManager } from '@kit.AbilityKit';
 
 let observer: errorManager.UnhandledRejectionObserver = (reason: Error, promise: Promise<void>) => {
   if (promise === promise1) {
-    console.info("promise1 is rejected");
+    console.info('promise1 is rejected');
   }
-  console.info("reason.name: ", reason.name);
-  console.info("reason.message: ", reason.message);
+  console.info('reason.name: ', reason.name);
+  console.info('reason.message: ', reason.message);
   if (reason.stack) {
-    console.info("reason.stack: ", reason.stack);
+    console.info('reason.stack: ', reason.stack);
   }
 };
 
-errorManager.on("unhandledRejection", observer);
+errorManager.on('unhandledRejection', observer);
 
 let promise1 = new Promise<void>(() => {}).then(() => {
-  throw new Error("uncaught error")
+  throw new Error('uncaught error')
 })
 
-errorManager.off("unhandledRejection", observer);
+errorManager.off('unhandledRejection', observer);
 ```
 
 
@@ -277,25 +284,25 @@ If the observer passed in is not in the observer queue registered via the **on**
 ```TypeScript
 import { errorManager } from '@kit.AbilityKit';
 
-function promiseFunc(observer: errorManager.GlobalError) {
-  console.info("result name :" + observer.name);
-  console.info("result message :" + observer.message);
-  console.info("result stack :" + observer.stack);
-  console.info("result instanceName :" + observer.instanceName);
-  console.info("result instanceType :" + observer.instanceType);
-}
+const promiseFunc = (observer: errorManager.GlobalError) => {
+  console.info('result name :' + observer.name);
+  console.info('result message :' + observer.message);
+  console.info('result stack :' + observer.stack);
+  console.info('result instanceName :' + observer.instanceName);
+  console.info('result instanceType :' + observer.instanceType);
+};
 
-errorManager.on("globalUnhandledRejectionDetected", promiseFunc);
+errorManager.on('globalUnhandledRejectionDetected', promiseFunc);
 
-async function throwError() {
-  throw new Error("uncaught error");
-}
+const throwError = async () => {
+  throw new Error('uncaught error');
+};
 
 let promise1 = new Promise<void>(() => {}).then(() => {
   throwError();
 });
 
-errorManager.off("globalUnhandledRejectionDetected", promiseFunc);
+errorManager.off('globalUnhandledRejectionDetected', promiseFunc);
 ```
 
 
@@ -335,12 +342,19 @@ If the observer passed in does not match the observer registered via the **on** 
 
 ```TypeScript
 import { errorManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
 
-function freezeCallback() {
-    console.info("freezecallback");
+const freezeCallback = () => {
+  console.info('freezecallback');
+};
+try {
+  errorManager.on('freeze', freezeCallback);
+  errorManager.off('freeze', freezeCallback);
+} catch (paramError) {
+  let code = (paramError as BusinessError).code;
+  let message = (paramError as BusinessError).message;
+  console.error(`error: ${code}, ${message}`);
 }
-errorManager.on("freeze", freezeCallback);
-errorManager.off("freeze", freezeCallback);
 ```
 
 
@@ -381,12 +395,12 @@ If the observer passed in is not in the observer queue registered via the **on**
 import { errorManager } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
-function errorFunc(observer: errorManager.GlobalError) {
-    console.info("result name :" + observer.name);
-    console.info("result message :" + observer.message);
-    console.info("result stack :" + observer.stack);
-    console.info("result instanceName :" + observer.instanceName);
-    console.info("result instanceType :" + observer.instanceType);
+const errorFunc = (observer: errorManager.GlobalError) => {
+  console.info('result name :' + observer.name);
+  console.info('result message :' + observer.message);
+  console.info('result stack :' + observer.stack);
+  console.info('result instanceName :' + observer.instanceName);
+  console.info('result instanceType :' + observer.instanceType);
 }
 
 try {

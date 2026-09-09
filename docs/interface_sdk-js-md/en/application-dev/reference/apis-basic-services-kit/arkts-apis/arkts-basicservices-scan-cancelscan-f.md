@@ -48,6 +48,6 @@ let scannerId: string = 'scanner_001';
 scan.cancelScan(scannerId).then(() => {
     console.info('cancel scan success');
 }).catch((error: BusinessError) => {
-    console.error('cancel scan failed: ' + JSON.stringify(error));
-})
+    console.error(`Failed to cancel scan. Code: ${error.code}, message: ${error.message}`);
+});
 ```

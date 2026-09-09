@@ -46,8 +46,8 @@ Queries information about the coordinated devices set of a remote device.
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [36100003](../../apis-avsession-kit/errorcode-nearlink-service.md#36100003-nearlink-disabled) | NearLink disabled. |
-| [36100099](../../apis-avsession-kit/errorcode-nearlink-service.md#36100099-operation-failed) | Operation failed. |
+| [36100003](../errorcode-nearlink-service.md#36100003-nearlink-disabled) | NearLink disabled. |
+| [36100099](../errorcode-nearlink-service.md#36100099-operation-failed) | Operation failed. |
 
 ## offCdsmInfoChange
 

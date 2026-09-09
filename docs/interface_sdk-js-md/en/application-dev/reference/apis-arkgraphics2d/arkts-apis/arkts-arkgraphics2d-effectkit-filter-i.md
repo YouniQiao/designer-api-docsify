@@ -51,10 +51,10 @@ import { image } from '@kit.ImageKit';
 import { effectKit } from '@kit.ArkGraphics2D';
 import { common } from '@kit.AbilityKit';
 // Pass the image data to be read.
-function imageBlur(imageData: ArrayBuffer): Promise<image.PixelMap> {
+function imageBlur(imageBuffer: ArrayBuffer): Promise<image.PixelMap> {
   return new Promise(async (resolve) => {
     // Create an image source.
-    let imageSource = image.createImageSource(imageData);
+    let imageSource = image.createImageSource(imageBuffer);
     await imageSource.createPixelMap().then(async (pixelMap: image.PixelMap) => {
       // Set the blur radius.
       let radius = 5;
@@ -146,10 +146,10 @@ import { image } from '@kit.ImageKit';
 import { effectKit } from '@kit.ArkGraphics2D';
 import { common } from '@kit.AbilityKit';
 // Pass the image data to be read.
-function imageBlur(Image: ArrayBuffer): Promise<image.PixelMap> {
+function imageBlur(imageBuffer: ArrayBuffer): Promise<image.PixelMap> {
   return new Promise(async (resolve) => {
     // Create the image source.
-    let imageSource = image.createImageSource(Image);
+    let imageSource = image.createImageSource(imageBuffer);
     await imageSource.createPixelMap().then(async (pixelMap: image.PixelMap) => {
       // Set the blur radius.
       let radius = 30;
@@ -240,10 +240,10 @@ import { image } from '@kit.ImageKit';
 import { effectKit } from '@kit.ArkGraphics2D';
 import { common } from '@kit.AbilityKit';
 // Pass the image data to be read.
-function imageBrightness(imageData: ArrayBuffer): Promise<image.PixelMap> {
+function imageBrightness(imageBuffer: ArrayBuffer): Promise<image.PixelMap> {
   return new Promise(async (resolve) => {
     // Create the image source.
-    let imageSource = image.createImageSource(imageData);
+    let imageSource = image.createImageSource(imageBuffer);
     await imageSource.createPixelMap().then(async (pixelMap: image.PixelMap) => {
       // Set the brightness value.
       let bright = 0.5;
@@ -334,7 +334,7 @@ import { effectKit } from '@kit.ArkGraphics2D';
 // Create a buffer for image effects.
 const colorBuffer = new ArrayBuffer(96);
 // Set image initialization options.
-let opts : image.InitializationOptions = {
+let opts: image.InitializationOptions = {
   editable: true,
   pixelFormat: 3,
   size: {
@@ -392,7 +392,7 @@ import { effectKit } from '@kit.ArkGraphics2D';
 // Create a buffer for the image effect.
 const colorBuffer = new ArrayBuffer(96);
 // Set the image initialization options.
-let opts : image.InitializationOptions = {
+let opts: image.InitializationOptions = {
   editable: true,
   pixelFormat: 3,
   size: {
@@ -442,7 +442,7 @@ import { image } from '@kit.ImageKit';
 import { effectKit } from '@kit.ArkGraphics2D';
 
 const colorBuffer = new ArrayBuffer(96);
-let opts : image.InitializationOptions = {
+let opts: image.InitializationOptions = {
   editable: true,
   pixelFormat: 3,
   size: {
@@ -485,10 +485,10 @@ import { image } from '@kit.ImageKit';
 import { effectKit } from '@kit.ArkGraphics2D';
 import { common } from '@kit.AbilityKit';
 // Pass the image data to be read.
-function imageGrayscale(imageData: ArrayBuffer): Promise<image.PixelMap> {
+function imageGrayscale(imageBuffer: ArrayBuffer): Promise<image.PixelMap> {
   return new Promise(async (resolve) => {
     // Create the image source.
-    let imageSource = image.createImageSource(imageData);
+    let imageSource = image.createImageSource(imageBuffer);
     await imageSource.createPixelMap().then(async (pixelMap: image.PixelMap) => {
       // Create a Filter instance.
       let headFilter = effectKit.createEffect(pixelMap);
@@ -567,10 +567,10 @@ import { image } from '@kit.ImageKit';
 import { effectKit } from '@kit.ArkGraphics2D';
 import { common } from '@kit.AbilityKit';
 // Pass the image data to be read.
-function imageInvert(imageData: ArrayBuffer): Promise<image.PixelMap> {
+function imageInvert(imageBuffer: ArrayBuffer): Promise<image.PixelMap> {
   return new Promise(async (resolve) => {
     // Create the image source.
-    let imageSource = image.createImageSource(imageData);
+    let imageSource = image.createImageSource(imageBuffer);
     await imageSource.createPixelMap().then(async (pixelMap: image.PixelMap) => {
       // Create a Filter instance.
       let headFilter = effectKit.createEffect(pixelMap);
@@ -661,10 +661,10 @@ import { image } from '@kit.ImageKit';
 import { effectKit } from '@kit.ArkGraphics2D';
 import { common } from '@kit.AbilityKit';
 // Pass the image data to be read.
-function imageColorFilter(imageData: ArrayBuffer): Promise<image.PixelMap> {
+function imageColorFilter(imageBuffer: ArrayBuffer): Promise<image.PixelMap> {
   return new Promise(async (resolve) => {
     // Create the image source.
-    let imageSource = image.createImageSource(imageData);
+    let imageSource = image.createImageSource(imageBuffer);
     await imageSource.createPixelMap().then(async (pixelMap: image.PixelMap) => {
       // Define the color matrix.
       let colorMatrix: Array<number> = [

@@ -47,7 +47,7 @@ struct Index {
       Text()
         .onClick(() => {
           try {
-            // Obtain the mouse pointer size.
+            // Obtain the mouse cursor size.
             pointer.getPointerSize((error: BusinessError, size: number) => {
               if (error) {
                 console.error(`Failed to get pointer size, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);

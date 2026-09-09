@@ -47,7 +47,7 @@ import { bundleManager } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 import { hilog } from '@kit.PerformanceAnalysisKit';
 
-// Replace alternateIconName with the name of the alternate icon to be set.
+// Replace alternateIconName with the name of the alternate icon to set.
 let alternateIconName: string = 'com.ohos.demo';
 
 try {

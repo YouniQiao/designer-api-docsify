@@ -37,6 +37,7 @@ Sets the pointer size. This API returns the result synchronously.
 
 ```TypeScript
 import { pointer } from '@kit.InputKit';
+import { BusinessError } from '@kit.BasicServicesKit';
 
 @Entry
 @Component

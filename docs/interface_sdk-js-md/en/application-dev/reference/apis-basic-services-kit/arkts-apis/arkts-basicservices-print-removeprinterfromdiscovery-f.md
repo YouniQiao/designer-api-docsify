@@ -45,10 +45,11 @@ Removes a printer from the printer discovery list. This API uses a promise to re
 import { print } from '@kit.BasicServicesKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
+// printer ID can be obtained from the on('printerChange') callback.
 let printerId : string = 'testPrinterId';
 print.removePrinterFromDiscovery(printerId).then(() => {
     console.info('removePrinterFromDiscovery success');
 }).catch((error: BusinessError) => {
-    console.error('removePrinterFromDiscovery error : ' + JSON.stringify(error));
+    console.error(`Failed to removePrinterFromDiscovery. Code: ${error.code}, message: ${error.message}`);
 })
 ```

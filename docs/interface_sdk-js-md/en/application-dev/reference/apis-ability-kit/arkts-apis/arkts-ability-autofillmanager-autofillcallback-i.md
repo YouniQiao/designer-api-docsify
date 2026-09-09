@@ -28,6 +28,11 @@ Called when auto fill request is failed to be handled.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
+**Examples**
+
+See autoFillManager.requestAutoFill.
+- simpleType:
+
 ## onSuccess
 
 ```TypeScript
@@ -43,3 +48,8 @@ Called when auto fill request is successfully handled.
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
+
+**Examples**
+
+See autoFillManager.requestAutoFill.
+- simpleType:

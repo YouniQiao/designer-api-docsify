@@ -43,9 +43,10 @@ Sets the parameters of the serial port. If this method is not called, the defaul
 ```TypeScript
 import { JSON } from '@kit.ArkTS';
 import { serialManager } from '@kit.BasicServicesKit';
+import { BusinessError } from '@kit.BasicServicesKit';
 
 // Obtain the serial port list.
-function setAttribute() {
+async function setAttributeExample() {
   let portList: serialManager.SerialPort[] = serialManager.getPortList();
   console.info('usbSerial portList: ' + JSON.stringify(portList));
   if (!portList || portList.length === 0) {
@@ -56,24 +57,23 @@ function setAttribute() {
 
   // Check whether the device can be accessed by the application.
   if (!serialManager.hasSerialRight(portId)) {
-    serialManager.requestSerialRight(portId).then(result => {
-      if (!result) {
-        // If the application does not have the access permission and the user does not grant the permission, the application exits.
-        console.error('user is not granted the operation permission');
-        return;
-      } else {
-        console.info('grant permission successfully');
-      }
-    });
+    let result = await serialManager.requestSerialRight(portId);
+    if (!result) {
+      // If the app does not have the access permission and the user does not grant the permission, the app exits.
+      console.error('user is not granted the operation permission');
+      return;
+    } else {
+      console.info('grant permission successfully');
+    }
   }
 
   // Open a serial port device.
   try {
-    serialManager.open(portId)
+    serialManager.open(portId);
     console.info('open usbSerial success, portId: ' + portId);
   } catch (error) {
-    console.error('open usbSerial error, ' + JSON.stringify(error));
-    return;
+    const err: BusinessError = error as BusinessError;
+    console.error(`Failed to open usbSerial. Code: ${err.code}, message: ${err.message}`);
   }
 
   // Set the serial port configuration.
@@ -83,11 +83,12 @@ function setAttribute() {
       dataBits: serialManager.DataBits.DATABIT_8,
       parity: serialManager.Parity.PARITY_NONE,
       stopBits: serialManager.StopBits.STOPBIT_1
-    }
+    };
     serialManager.setAttribute(portId, attribute);
     console.info('setAttribute usbSerial success, attribute: ' + JSON.stringify(attribute));
   } catch (error) {
-    console.error('setAttribute usbSerial error, ' + JSON.stringify(error));
+    const err: BusinessError = error as BusinessError;
+    console.error(`Failed to set attribute. Code: ${err.code}, message: ${err.message}`);
   }
 
   // Close the serial port device.
@@ -95,7 +96,8 @@ function setAttribute() {
     serialManager.close(portId);
     console.info('close usbSerial success, portId: ' + portId);
   } catch (error) {
-    console.error('close usbSerial error, ' + JSON.stringify(error));
+    const err: BusinessError = error as BusinessError;
+    console.error(`Failed to close usbSerial. Code: ${err.code}, message: ${err.message}`);
   }
 }
 ```

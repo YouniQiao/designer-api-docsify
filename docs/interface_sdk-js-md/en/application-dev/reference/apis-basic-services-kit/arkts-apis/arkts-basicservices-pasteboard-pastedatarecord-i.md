@@ -86,7 +86,7 @@ import { BusinessError } from '@kit.BasicServicesKit';
 let record: pasteboard.PasteDataRecord = pasteboard.createUriRecord('dataability:///com.example.myapplication1/user.txt');
 record.convertToText((err: BusinessError, data: string) => {
     if (err) {
-        console.error(`Failed to convert to text. Cause: ${err.message}`);
+        console.error(`Failed to convert to text. errorCode: ${err.code}, errorMessage: ${err.message}.`);
         return;
     }
     console.info(`Succeeded in converting to text. Data: ${data}`);
@@ -124,7 +124,7 @@ let record: pasteboard.PasteDataRecord = pasteboard.createUriRecord('dataability
 record.convertToText().then((data: string) => {
     console.info(`Succeeded in converting to text. Data: ${data}`);
 }).catch((err: BusinessError) => {
-    console.error(`Failed to convert to text. Cause: ${err.message}`);
+    console.error(`Failed to convert to text. errorCode: ${err.code}, errorMessage: ${err.message}.`);
 });
 ```
 
@@ -171,13 +171,13 @@ record.getData(pasteboard.MIMETYPE_TEXT_PLAIN).then((value: pasteboard.ValueType
     let textPlainContent = value as string;
     console.info('Success to get text/plain value. value is: ' + textPlainContent);
 }).catch((err: BusinessError) => {
-    console.error('Failed to get text/plain value. Cause: ' + err.message);
+    console.error(`Failed to get text/plain value. errorCode: ${err.code}, errorMessage: ${err.message}.`);
 });
 record.getData(pasteboard.MIMETYPE_TEXT_URI).then((value: pasteboard.ValueType) => {
     let uri = value as string;
     console.info('Success to get text/uri value. value is: ' + uri);
 }).catch((err: BusinessError) => {
-    console.error('Failed to get text/uri value. Cause: ' + err.message);
+    console.error(`Failed to get text/uri value. errorCode: ${err.code}, errorMessage: ${err.message}.`);
 });
 ```
 

@@ -42,15 +42,24 @@ Obtains a raw USB descriptor. If the USB service is abnormal, **undefined** may 
 **Examples**
 
 ```TypeScript
-function getRawDescriptor() {
+async function getRawDescriptor() {
   let devicesList: Array<usbManager.USBDevice> = usbManager.getDevices();
   if (!devicesList || devicesList.length == 0) {
     console.info(`device list is empty`);
     return;
   }
 
-  usbManager.requestRight(devicesList?.[0]?.name);
-  let devicepipe: usbManager.USBDevicePipe = usbManager.connectDevice(devicesList?.[0]);
-  let ret: Uint8Array = usbManager.getRawDescriptor(devicepipe);
+  let rightResult = await usbManager.requestRight(devicesList?.[0]?.name);
+  if (!rightResult) {
+    console.error(`request right failed`);
+    return;
+  }
+  let devicePipe: usbManager.USBDevicePipe = usbManager.connectDevice(devicesList?.[0]);
+  if (devicePipe == undefined) {
+    console.error(`connect device failed`);
+    return;
+  }
+  usbManager.getRawDescriptor(devicePipe);
+  usbManager.closePipe(devicePipe);
 }
 ```

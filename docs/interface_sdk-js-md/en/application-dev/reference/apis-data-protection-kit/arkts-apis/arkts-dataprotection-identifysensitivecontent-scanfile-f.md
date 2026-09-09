@@ -48,12 +48,13 @@ Identifies sensitive content in a specified file based on the configured policy 
 
 ```TypeScript
 import { identifySensitiveContent } from '@kit.DataProtectionKit';
+import { BusinessError } from '@kit.BasicServicesKit';
 
 // Define the physical file path to be scanned.
-let filePath = "/data/service/el2/100/hmdfs/account/files/Docs/Documents/test.txt";
+const filePath = '/data/service/el2/100/hmdfs/account/files/Docs/Documents/test.txt';
 
 // Configure the policy for sensitive content identification.
-let policies: Array<identifySensitiveContent.Policy> = [
+const policies: Array<identifySensitiveContent.Policy> = [
   {"sensitiveLabel":"name", "keywords":["name"], "regex":""},
   {"sensitiveLabel":"phone", "keywords":[], "regex":"phone"},
   {"sensitiveLabel":"address", "keywords":["address"], "regex":"xx City, xx Province"}
@@ -69,9 +70,9 @@ try {
     }
   }).catch((err: BusinessError) => {
     // Identification fails.
-    console.error(`Failed to scanFile. Code:${err.code}, message:${err.message}`);
-  })
+    console.error(`Failed to scanFile. Code: ${err.code}, message: ${err.message}`);
+  });
 } catch (err) {
-  console.error('error message', err.message);
+  console.error(`Failed to scanFile. Code: ${err.code}, message: ${err.message}`);
 }
 ```

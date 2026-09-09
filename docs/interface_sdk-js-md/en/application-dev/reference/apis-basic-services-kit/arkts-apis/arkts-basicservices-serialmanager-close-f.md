@@ -42,9 +42,10 @@ Closes the serial port device.
 ```TypeScript
 import { JSON } from '@kit.ArkTS';
 import { serialManager } from '@kit.BasicServicesKit';
+import { BusinessError } from '@kit.BasicServicesKit';
 
 // Obtain the serial port list.
-function close() {
+async function closeExample() {
   let portList: serialManager.SerialPort[] = serialManager.getPortList();
   console.info('usbSerial portList: ' + JSON.stringify(portList));
   if (!portList || portList.length === 0) {
@@ -55,32 +56,33 @@ function close() {
 
   // Check whether the device can be accessed by the application.
   if (!serialManager.hasSerialRight(portId)) {
-    serialManager.requestSerialRight(portId).then(result => {
-      if (!result) {
-        // If the application does not have the access permission and the user does not grant the permission, the application exits.
-        console.error('user is not granted the operation permission');
-        return;
-      } else {
-        console.info('grant permission successfully');
-      }
-    });
+    let result = await serialManager.requestSerialRight(portId);
+    if (!result) {
+      // If the app does not have the access permission and the user does not grant the permission, the app exits.
+      console.error('user is not granted the operation permission');
+      return;
+    } else {
+      console.info('grant permission successfully');
+    }
   }
 
   // Open a serial port device.
   try {
-    serialManager.open(portId)
+    serialManager.open(portId);
     console.info('open usbSerial success, portId: ' + portId);
   } catch (error) {
-    console.error('open usbSerial error, ' + JSON.stringify(error));
-    return;
+    const err: BusinessError = error as BusinessError;
+    console.error(`Failed to open usbSerial. Code: ${err.code}, message: ${err.message}`);
   }
+
 
   // Close the serial port device.
   try {
     serialManager.close(portId);
     console.info('close usbSerial success, portId: ' + portId);
   } catch (error) {
-    console.error('close usbSerial error, ' + JSON.stringify(error));
+    const err: BusinessError = error as BusinessError;
+    console.error(`Failed to close usbSerial. Code: ${err.code}, message: ${err.message}`);
   }
 }
 ```

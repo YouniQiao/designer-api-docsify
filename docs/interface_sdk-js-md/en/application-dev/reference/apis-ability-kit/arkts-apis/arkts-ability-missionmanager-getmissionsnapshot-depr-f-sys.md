@@ -37,18 +37,21 @@ Obtains the snapshot of a given mission. This API uses an asynchronous callback 
 
 ```TypeScript
 import missionManager from '@ohos.application.missionManager';
+import { BusinessError } from '@ohos.base';
 
 let testMissionId = 2;
 try {
+  // Obtain the mission snapshot.
   missionManager.getMissionSnapShot('', testMissionId, (err, data) => {
     if (err) {
-      console.error(`getMissionSnapShot failed: ${err.message}`);
+      console.error(`getMissionSnapShot failed. Code: ${err.code}, message: ${err.message}.`);
     } else {
-      console.info(`getMissionSnapShot successfully: ${JSON.stringify(data)}`);
+      console.info(`getMissionSnapShot successfully. Data: ${JSON.stringify(data)}`);
     }
   });
 } catch (err) {
-  console.error(`getMissionSnapShot failed: ${err.message}`);
+  let error = err as BusinessError;
+  console.error(`getMissionSnapShot sync failed. Code: ${error.code}, message: ${error.message}.`);
 }
 ```
 
@@ -94,6 +97,7 @@ import { BusinessError } from '@ohos.base';
 
 let testMissionId = 2;
 try {
+  // Obtain the mission snapshot.
   missionManager.getMissionSnapShot('', testMissionId).then((data) => {
     console.info(`getMissionSnapShot successfully. Data: ${JSON.stringify(data)}`);
   }).catch((error: BusinessError) => {

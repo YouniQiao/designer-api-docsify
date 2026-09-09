@@ -50,7 +50,7 @@ Checks whether the shared library is in use. This API uses a promise to return t
 import { appManager } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
-const bundleName = "this is a bundleName";
+const bundleName = 'com.example.myapplication';
 const versionCode = 1;
 
 appManager.isSharedBundleRunning(bundleName, versionCode).then((data) => {
@@ -99,7 +99,7 @@ Checks whether the shared library is in use. This API uses an asynchronous callb
 ```TypeScript
 import { appManager } from '@kit.AbilityKit';
 
-const bundleName = "this is a bundleName";
+const bundleName = 'com.example.myapplication';
 const versionCode = 1;
 
 appManager.isSharedBundleRunning(bundleName, versionCode, (err, data) => {

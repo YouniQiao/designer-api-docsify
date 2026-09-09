@@ -52,13 +52,14 @@ Add a printer to cups.
 import { print } from '@kit.BasicServicesKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
-let printerUri : string = "testPrinterUri";
-let printerName : string = "testPrinterName";
-let printerMake : string = "testPrinterMake";
+// Obtain printerUri from PrinterInformation returned by the discoverUsbPrinters API.
+let printerUri : string = 'testPrinterUri';
+let printerName : string = 'testPrinterName';
+let printerMake : string = 'testPrinterMake';
 
 print.addPrinterToCups(printerUri, printerName, printerMake).then((result: boolean) => {
     console.info('addPrinterToCups success' + JSON.stringify(result));
 }).catch((error: BusinessError) => {
-    console.error('addPrinterToCups error : ' + JSON.stringify(error));
-})
+    console.error(`Failed to add printer to cups. Code: ${error.code}, message: ${error.message}`);
+});
 ```

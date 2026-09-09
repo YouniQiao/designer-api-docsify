@@ -47,3 +47,15 @@ Creates the context for a module. The [resourceManager.Configuration](../../apis
 | --- | --- |
 | [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
 | [16000021](../errorcode-ability.md#16000021-module-name-does-not-exist) | The module does not exist. |
+
+**Examples**
+
+```TypeScript
+import { AbilityConstant, UIAbility, application, Want } from '@kit.AbilityKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    let moduleContext = application.createModuleContextSync(this.context, 'entry');
+  }
+}
+```

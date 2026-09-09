@@ -76,10 +76,11 @@ let wantAgentInfo: wantAgent.WantAgentInfo = {
 };
 
 // getWantAgent callback.
-function getWantAgentCallback(err: BusinessError, data: WantAgent) {
+let getWantAgentCallback = (err: BusinessError, data: WantAgent) => {
   if (err) {
-    console.info(`getWantAgent failed, code: ${err.code}, message: ${err.message}`);
+    console.error(`getWantAgent failed, code: ${err.code}, message: ${err.message}`);
   } else {
+    // Create the WantAgent successfully and save the returned WantAgent object.
     wantAgentData = data;
   }
   // trigger callback
@@ -91,6 +92,7 @@ function getWantAgentCallback(err: BusinessError, data: WantAgent) {
     }
   }
   try {
+    // Call the trigger API to trigger the WantAgent instance to perform the specified operation.
     wantAgent.trigger(wantAgentData, triggerInfo, triggerCallback);
   } catch (err) {
     let code = (err as BusinessError).code;
@@ -100,6 +102,7 @@ function getWantAgentCallback(err: BusinessError, data: WantAgent) {
 }
 
 try {
+  // Call the getWantAgent API to create a WantAgent object.
   wantAgent.getWantAgent(wantAgentInfo, getWantAgentCallback);
 } catch (err) {
   let code = (err as BusinessError).code;

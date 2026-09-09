@@ -46,7 +46,7 @@ Connects to the USB device based on the device information returned by **getDevi
 **Examples**
 
 ```TypeScript
-function connectDevice() {
+async function connectDevice() {
   let devicesList: Array<usbManager.USBDevice> = usbManager.getDevices();
   if (!devicesList || devicesList.length == 0) {
     console.info(`device list is empty`);
@@ -54,8 +54,17 @@ function connectDevice() {
   }
 
   let device: usbManager.USBDevice = devicesList?.[0];
-  usbManager.requestRight(device.name);
-  let devicepipe: usbManager.USBDevicePipe = usbManager.connectDevice(device);
-  console.info(`devicepipe = ${devicepipe}`);
+  let rightResult = await usbManager.requestRight(device.name);
+  if (!rightResult) {
+    console.error(`request right failed`);
+    return;
+  }
+  let devicePipe: usbManager.USBDevicePipe = usbManager.connectDevice(device);
+  if (devicePipe == undefined) {
+    console.error(`connect device failed`);
+    return;
+  }
+  console.info(`devicePipe = ${devicePipe}`);
+  usbManager.closePipe(devicePipe);
 }
 ```

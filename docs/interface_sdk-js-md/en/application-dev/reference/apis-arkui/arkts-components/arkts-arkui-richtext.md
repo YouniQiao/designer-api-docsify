@@ -101,7 +101,7 @@ struct RichTextComponent {
 }
 ```
 
-The following is an example of loading a link with the hash (#) route through the resources protocol in Webview.
+Load through the resource protocol, which applies to the Webview loading links with "#" routes.
 When $rawfile is used to load a URL contains a number sign (#), the content following the number sign is treated as a fragment. To avoid this issue, you can use the resource://rawfile/ protocol prefix instead. If the URL contains a number sign (#), the content following the number sign is treated as an anchor (fragment).
 
 ```TypeScript

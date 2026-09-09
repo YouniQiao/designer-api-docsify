@@ -35,14 +35,18 @@ Closes the accessory file descriptor. You need to call [usbManager.openAccessory
 **Examples**
 
 ```TypeScript
-import { hilog } from '@kit.PerformanceAnalysisKit';
-try {
-  let accList: usbManager.USBAccessory[] = usbManager.getAccessoryList()
-  let flag = usbManager.requestAccessoryRight(accList?.[0])
-  let handle = usbManager.openAccessory(accList?.[0])
-  usbManager.closeAccessory(handle)
-  hilog.info(0, 'testTag ui', `closeAccessory success`)
-} catch (error) {
-  hilog.error(0, 'testTag ui', `closeAccessory error ${error.code}, message is ${error.message}`)
+async function closeAccessory() {
+  try {
+    let accList: usbManager.USBAccessory[] = usbManager.getAccessoryList();
+    let flag = await usbManager.requestAccessoryRight(accList?.[0]);
+    if (!flag) {
+      return;
+    }
+    let handle = usbManager.openAccessory(accList?.[0]);
+    usbManager.closeAccessory(handle);
+    console.info(`closeAccessory success`);
+  } catch (error) {
+    console.error(`closeAccessory error ${error.code}, message is ${error.message}`);
+  }
 }
 ```

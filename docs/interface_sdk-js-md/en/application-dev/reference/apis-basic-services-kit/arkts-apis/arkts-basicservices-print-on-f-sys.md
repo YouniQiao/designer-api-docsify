@@ -50,7 +50,7 @@ print.on('printerStateChange', (state: print.PrinterState, info: print.PrinterIn
         console.info('on printer state changed, state : ' + JSON.stringify(state));
         console.info('on printer state changed, info : ' + JSON.stringify(info));
     }
-})
+});
 ```
 
 
@@ -92,7 +92,7 @@ import { print } from '@kit.BasicServicesKit';
 
 print.on('jobStateChange', (state: print.PrintJobState, job: print.PrintJob) => {
     console.info('onJobStateChange, state : ' + JSON.stringify(state) + ', job : ' + JSON.stringify(job));
-})
+});
 ```
 
 
@@ -134,5 +134,5 @@ import { print } from '@kit.BasicServicesKit';
 
 print.on('extInfoChange', (extensionId: string, info: string) => {
     console.info('onExtInfoChange, extensionId : ' + JSON.stringify(extensionId) + ', info : ' + JSON.stringify(info));
-})
+});
 ```

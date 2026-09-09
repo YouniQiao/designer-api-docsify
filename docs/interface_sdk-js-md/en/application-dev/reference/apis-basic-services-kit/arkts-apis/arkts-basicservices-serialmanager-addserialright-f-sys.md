@@ -45,11 +45,11 @@ Adds the permission to an application for accessing the serial port device. seri
 ```TypeScript
 import { bundleManager } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
-import { JSON } from '@kit.ArkTS';
 import { serialManager } from '@kit.BasicServicesKit';
 
-// Obtain the serial port list.
+
 function addSerialRight() {
+  // Obtain the serial port list.
   let portList: serialManager.SerialPort[] = serialManager.getPortList();
   console.info('portList: ', JSON.stringify(portList));
   if (portList === undefined || portList.length === 0) {
@@ -58,19 +58,21 @@ function addSerialRight() {
   }
 
   let portId: number = portList[0].portId;
-  // Add permissions to the serial port.
-  let bundleFlags = bundleManager.BundleFlag.GET_BUNDLE_INFO_DEFAULT;
+  let bundleFlags = bundleManager.BundleFlag.GET_BUNDLE_INFO_WITH_APPLICATION;
+
   bundleManager.getBundleInfoForSelf(bundleFlags).then((bundleInfo) => {
     console.info('getBundleInfoForSelf successfully. Data: %{public}s', JSON.stringify(bundleInfo));
     let tokenId = bundleInfo.appInfo.accessTokenId;
     try {
+      // Add the permission to the serial port.
       serialManager.addSerialRight(tokenId, portId);
       console.info('addSerialRight success, portId: ' + portId);
     } catch (error) {
-      console.error('addSerialRight error, ' + JSON.stringify(error));
+      const err: BusinessError = error as BusinessError;
+      console.error(`Failed to add serial right. Code: ${err.code}, message: ${err.message}`);
     }
-  }).catch((err : BusinessError) => {
-    console.error('getBundleInfoForSelf failed');
+  }).catch((error: BusinessError) => {
+    console.error(`Failed to get bundle info for self. Code: ${error.code}, message: ${error.message}`);
   });
 }
 ```

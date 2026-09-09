@@ -50,7 +50,7 @@ Defines the constructor of TextArea.
 
 ## Examples
 
-This example shows how to set and obtain the caret position using [controller](arkts-arkui-textareacontroller-c.md), available since API version 8.
+Since API version 8, this example implements the setting and obtaining of the cursor position through [controller](arkts-arkui-textareacontroller-c.md).
 
 ```TypeScript
 // xxx.ets
@@ -83,7 +83,7 @@ struct TextAreaExample {
         .backgroundColor('#007DFF')
         .margin(15)
         .onClick(() => {
-          // Move the caret to after the first entered character.
+          // Set the cursor position after the first character.
           this.controller.caretPosition(1);
         })
       Button('Get CaretOffset')
@@ -97,7 +97,7 @@ struct TextAreaExample {
 }
 ```
 
-This example demonstrates how to implement the character counter functionality using the [maxLength](#maxlength10) and [showCounter](#showcounter10) attributes, both available since API version 10.
+Since API version 10, this example implements the counter feature through the [maxLength](#maxlength10) and [showCounter](#showcounter10) attributes.
 
 ```TypeScript
 // xxx.ets
@@ -122,10 +122,10 @@ struct TextAreaExample {
         .fontColor('#182431')
         .backgroundColor('#FFFFFF')
         .maxLength(4)
+        // The counter displays the number of characters currently entered by the user over the maximum character limit. The maximum character limit is set through the maxLength() API.
+        // The character counter is displayed when the number of characters currently entered by the user reaches 50% (thresholdPercentage) of the maximum character limit.
+        // When the user sets highlightBorder to false, the red border is disabled. If this parameter is not set, the default value is true.
         .showCounter(true, { thresholdPercentage: 50, highlightBorder: true })
-          // The character counter is in this format: Number of characters that have been entered/Maximum number of characters allowed, which is specified by maxLength().
-          // The character counter is displayed when the number of characters that have been entered is greater than the maximum number of characters multiplied by 50% (threshold percentage).
-          // When highlightBorder is set to false, the text box border does not turn red when the input exceeds the maximum character limit. The default value is true.
         .onChange((value: string) => {
           this.text = value;
         })
@@ -134,8 +134,8 @@ struct TextAreaExample {
 }
 ```
 
-This example implements a custom keyboard using the [customKeyboard](#customkeyboard10) attribute (available since API version 10) to set the input parameter type in value to [CustomBuilder](ts-types.md#custombuilder8) and ComponentContent.
-Since API version 22, ComponentContent is added to the input parameter type of [customKeyboard](#customkeyboard10).
+This example uses the [customKeyboard](#customkeyboard10) attribute (available since API version 10) to set the input parameter type in value to [CustomBuilder](ts-types.md#custombuilder8) and ComponentContent, respectively, thereby implementing a custom keyboard.
+Since API version 22, the [customKeyboard](#customkeyboard10) attribute supports the input parameter type ComponentContent.
 
 ```TypeScript
 // xxx.ets
@@ -154,7 +154,7 @@ function CustomKeyboardBuilder(builderParams: BuilderParams) {
   Column() {
     Row() {
       Button('x').onClick(() => {
-        // Disable the custom keyboard.
+        // Close the custom keyboard.
         builderParams.controller.stopEditing();
       }).margin(10)
     }
@@ -200,7 +200,7 @@ struct TextAreaExample {
 }
 ```
 
-This example shows how to use the [enterKeyType](#enterkeytype11) attribute, which is supported since API version 11, to dynamically change the effect of the Enter key on the soft keyboard.
+Since API version 11, this example uses the [enterKeyType](#enterkeytype11) attribute to dynamically switch the Enter key type of the input method.
 
 ```TypeScript
 // xxx.ets
@@ -215,14 +215,14 @@ struct TextAreaExample {
 
   build() {
     Column({ space: 20 }) {
-      TextArea({ placeholder: 'Enter user name', text: this.text })
+      TextArea({ placeholder: 'Please enter the username', text: this.text })
         .width(380)
         .enterKeyType(this.enterTypes[this.index])
         .onChange((value: string) => {
           this.text = value;
         })
         .onSubmit((enterKey: EnterKeyType) => {
-          console.info("trigger area onSubmit" + enterKey);
+          console.info('trigger area onSubmit' + enterKey);
         })
       Button('Change EnterKeyType').onClick(() => {
         this.index = (this.index + 1) % this.enterTypes.length;
@@ -233,7 +233,7 @@ struct TextAreaExample {
 }
 ```
 
-This example demonstrates the effects of different text wrapping rules using the [wordBreak](#wordbreak12) attribute, available since API version 12.
+Since API version 12, this example uses the [wordBreak](#wordbreak12) attribute to implement the effects of TextArea under different line break rules.
 
 ```TypeScript
 // xxx.ets
@@ -242,28 +242,28 @@ This example demonstrates the effects of different text wrapping rules using the
 struct TextAreaExample {
   build() {
     Column() {
-      Text("WordBreakType as NORMAL").fontSize(16).fontColor(0xFF0000)
+      Text('Style with wordBreak set to NORMAL:').fontSize(16).fontColor(0xFF0000)
       TextArea({
         text: 'This is set wordBreak to WordBreak text Taumatawhakatangihangakoauauotamateaturipukakapikimaungahoronukupokaiwhenuakitanatahu.'
       })
         .fontSize(16)
         .border({ width: 1 })
         .wordBreak(WordBreak.NORMAL)
-      Text("WordBreakType as BREAK_ALL").fontSize(16).fontColor(0xFF0000)
+      Text('English text, style with wordBreak set to BREAK_ALL:').fontSize(16).fontColor(0xFF0000)
       TextArea({
         text: 'This is set wordBreak to WordBreak text Taumatawhakatangihangakoauauotamateaturipukakapikimaungahoronukupokaiwhenuakitanatahu.'
       })
         .fontSize(16)
         .border({ width: 1 })
         .wordBreak(WordBreak.BREAK_ALL)
-      Text("WordBreakType as BREAK_ALL, Chinese Text").fontSize(16).fontColor(0xFF0000)
+      Text('Chinese text, style with wordBreak set to BREAK_ALL:').fontSize(16).fontColor(0xFF0000)
       TextArea({
-        text: '多行文本输入框组件，当输入的文本内容超过组件宽度时会自动换行显示。\n高度未设置时，组件无默认高度，自适应内容高度。宽度未设置时，默认撑满最大宽度。'
+        text: 'A multi-line text input component. When the entered text content exceeds the component width, it automatically wraps to a new line. \n When the height is not set, the component has no default height and adapts its height to the content. When the width is not set, it fills the maximum width by default.'
       })
         .fontSize(16)
         .border({ width: 1 })
         .wordBreak(WordBreak.BREAK_ALL)
-      Text("WordBreakType as BREAK_WORD").fontSize(16).fontColor(0xFF0000)
+      Text('Style with wordBreak set to BREAK_WORD:').fontSize(16).fontColor(0xFF0000)
       TextArea({
         text: 'This is set wordBreak to WordBreak text Taumatawhakatangihangakoauauotamateaturipukakapikimaungahoronukupokaiwhenuakitanatahu.'
       })
@@ -275,7 +275,7 @@ struct TextAreaExample {
 }
 ```
 
-This example showcases various text styles by using the [lineHeight](#lineheight12), [letterSpacing](#letterspacing12), and [decoration](#decoration12) attributes, which are supported since API version 12.
+Since API version 12, this example demonstrates text effects in different styles through the [lineHeight](#lineheight12), [letterSpacing](#letterspacing12), and [decoration](#decoration12) attributes.
 
 ```TypeScript
 // xxx.ets
@@ -319,7 +319,7 @@ struct TextAreaExample {
 }
 ```
 
-This example demonstrates how to display text with various typographic features using the [fontFeature](#fontfeature12) attribute, available since API version 12.
+Since API version 12, this example uses the [fontFeature](#fontfeature12) attribute to implement the display effect of text under different font features.
 
 ```TypeScript
 // xxx.ets
@@ -334,19 +334,19 @@ struct TextAreaExample {
       TextArea({ text: this.text1 })
         .fontSize(20)
         .margin({ top: 200 })
-        .fontFeature("\"ss01\" on")
+        .fontFeature('"ss01" on')
       TextArea({ text: this.text2 })
         .margin({ top: 10 })
         .fontSize(20)
-        .fontFeature("\"ss01\" off")
+        .fontFeature('"ss01" off')
     }
-    .width("90%")
-    .margin("5%")
+    .width('90%')
+    .margin('5%')
   }
 }
 ```
 
-This example implements the custom keyboard avoidance effect by configuring the [KeyboardOptions](ts-basic-components-richeditor.md#keyboardoptions12) API (available since API version 12) through the [customKeyboard](#customkeyboard10) attribute (available since API version 10).
+This example uses the [customKeyboard](#customkeyboard10) (available since API version 10) attribute to configure the [KeyboardOptions](ts-basic-components-richeditor.md#keyboardoptions12) (available since API version 12) interface to implement custom keyboard avoidance.
 
 ```TypeScript
 // xxx.ets
@@ -354,18 +354,17 @@ This example implements the custom keyboard avoidance effect by configuring the 
 @Component
 struct TextAreaExample {
   controller: TextAreaController = new TextAreaController();
-  @State inputValue: string = "";
+  @State inputValue: string = '';
   @State height1: string | number = '80%';
-  @State height2: number = 100;
   @State supportAvoidance: boolean = true;
 
-  // Create a custom keyboard component.
+  // Custom keyboard component
   @Builder
   CustomKeyboardBuilder() {
     Column() {
       Row() {
         Button('x').onClick(() => {
-          // Disable the custom keyboard.
+          // Close the custom keyboard.
           this.controller.stopEditing();
         }).margin(10)
       }
@@ -373,7 +372,7 @@ struct TextAreaExample {
       Grid() {
         ForEach([1, 2, 3, 4, 5, 6, 7, 8, 9, '*', 0, '#'], (item: number | string) => {
           GridItem() {
-            Button(item + "")
+            Button(item + '')
               .width(110).onClick(() => {
               this.inputValue += item;
             })
@@ -386,22 +385,22 @@ struct TextAreaExample {
   build() {
     Column() {
       Row() {
-        Button("20%")
+        Button('20%')
           .fontSize(24)
           .onClick(() => {
-            this.height1 = "20%";
+            this.height1 = '20%';
           })
-        Button("80%")
+        Button('80%')
           .fontSize(24)
           .margin({ left: 20 })
           .onClick(() => {
-            this.height1 = "80%";
+            this.height1 = '80%';
           })
       }
       .justifyContent(FlexAlign.Center)
       .alignItems(VerticalAlign.Bottom)
       .height(this.height1)
-      .width("100%")
+      .width('100%')
       .padding({ bottom: 50 })
 
       TextArea({ controller: this.controller, text: this.inputValue })// Bind the custom keyboard.
@@ -414,7 +413,7 @@ struct TextAreaExample {
 }
 ```
 
-This example shows how to implement adaptive font sizing for text through the [minFontSize](#minfontsize12), [maxFontSize](#maxfontsize12), and [heightAdaptivePolicy](#heightadaptivepolicy12) attributes, available since API version 12.
+Since API version 12, this example demonstrates the effect of auto-adaptive font size through the [minFontSize](#minfontsize12), [maxFontSize](#maxfontsize12), and [heightAdaptivePolicy](#heightadaptivepolicy12) attributes.
 
 ```TypeScript
 // xxx.ets
@@ -451,7 +450,7 @@ struct TextAreaExample {
 }
 ```
 
-This example demonstrates the display effect of text under different line spacing settings through the [lineSpacing](#linespacing12) attribute, available since API version 12. The onlyBetweenLines property in [LineSpacingOptions](ts-text-common.md#linespacingoptions20) (available since API version 20) controls whether line spacing applies only between lines.
+Since API version 12, this example uses the [lineSpacing](#linespacing12) attribute to show how text is displayed under different line spacing. In addition, by configuring the onlyBetweenLines attribute (since API version 20) in [LineSpacingOptions](ts-text-common.md#linespacingoptions20), you can set whether the line spacing of text takes effect only between lines.
 
 ```TypeScript
 // xxx.ets
@@ -488,7 +487,7 @@ struct TextAreaExample {
 }
 ```
 
-This example illustrates how to implement the autofill feature for text input using the [contentType](#contenttype12) and [enableAutoFill](#enableautofill12) attributes, available since API version 12.
+Since API version 12, this example implements text auto-fill through the [contentType](#contenttype12) and [enableAutoFill](#enableautofill12) attributes.
 
 ```TypeScript
 // xxx.ets
@@ -499,7 +498,7 @@ struct TextAreaExample {
 
   build() {
     Column() {
-      // Email address autofill.
+      // Email address auto-fill type.
       TextArea({ placeholder: 'input your email...' })
         .width('95%')
         .height(40)
@@ -507,7 +506,7 @@ struct TextAreaExample {
         .contentType(ContentType.EMAIL_ADDRESS)
         .enableAutoFill(true)
         .maxLength(20)
-      // Full street address autofill.
+      // Street address auto-fill type.
       TextArea({ placeholder: 'input your street address...' })
         .width('95%')
         .height(40)
@@ -520,7 +519,7 @@ struct TextAreaExample {
 }
 ```
 
-This example demonstrates the effects of different line break rules using the [lineBreakStrategy](#linebreakstrategy12) attribute, available since API version 12.
+Since API version 12, this example uses the [lineBreakStrategy](#linebreakstrategy12) attribute to implement the effects of TextArea under different line breaking rules.
 
 ```TypeScript
 // xxx.ets
@@ -528,9 +527,9 @@ This example demonstrates the effects of different line break rules using the [l
 @Component
 struct TextAreaExample {
   @State message1: string =
-    "They can be classified as built-in components–those directly provided by the ArkUI framework and custom components – those defined by developers" +
-      "The built-in components include buttons radio buttonsprogress indicators and text You can set the rendering effect of these components in method chaining mode," +
-      "page components are divided into independent UI units to implement independent creation development and reuse of different units on pages making pages more engineering-oriented.";
+    'They can be classified as built-in components–those directly provided by the ArkUI framework and custom components – those defined by developers' +
+      'The built-in components include buttons radio buttonsprogress indicators and text You can set the rendering effect of these components in method chaining mode,' +
+      'page components are divided into independent UI units to implement independent creation development and reuse of different units on pages making pages more engineering-oriented.';
   @State lineBreakStrategyIndex: number = 0;
   @State lineBreakStrategy: LineBreakStrategy[] =
     [LineBreakStrategy.GREEDY, LineBreakStrategy.HIGH_QUALITY, LineBreakStrategy.BALANCED];
@@ -546,7 +545,7 @@ struct TextAreaExample {
         .width('100%')
         .lineBreakStrategy(this.lineBreakStrategy[this.lineBreakStrategyIndex])
       Row() {
-        Button('Current lineBreakStrategy value: ' + this.lineBreakStrategyStr[this.lineBreakStrategyIndex]).onClick(() => {
+        Button('Current lineBreakStrategy mode:' + this.lineBreakStrategyStr[this.lineBreakStrategyIndex]).onClick(() => {
           this.lineBreakStrategyIndex++;
           if (this.lineBreakStrategyIndex > (this.lineBreakStrategyStr.length - 1)) {
             this.lineBreakStrategyIndex = 0;
@@ -558,25 +557,25 @@ struct TextAreaExample {
 }
 ```
 
-This example showcases the implementation of insert and delete operations using the [onWillInsert](#onwillinsert12), [onDidInsert](#ondidinsert12), [onWillDelete](#onwilldelete12), and [onDidDelete](#ondiddelete12) APIs, available since API version 12.
+Since API version 12, this example implements the insert and delete functions through the [onWillInsert](#onwillinsert12), [onDidInsert](#ondidinsert12), [onWillDelete](#onwilldelete12), and [onDidDelete](#ondiddelete12) APIs.
 
 ```TypeScript
 // xxx.ets
 @Entry
 @Component
 struct TextAreaExample {
-  @State insertValue: string = "";
-  @State deleteValue: string = "";
+  @State insertValue: string = '';
+  @State deleteValue: string = '';
   @State insertOffset: number = 0;
   @State deleteOffset: number = 0;
   @State deleteDirection: number = 0;
-  @State currentValue_1: string = "";
-  @State currentValue_2: string = "";
+  @State currentValue_1: string = '';
+  @State currentValue_2: string = '';
 
   build() {
     Row() {
       Column() {
-        TextArea({ text: "Insert callbacks" })
+        TextArea({ text: 'TextArea supports inserting callback text' })
           .width(300)
           .height(60)
           .onWillInsert((info: InsertValue) => {
@@ -587,14 +586,14 @@ struct TextAreaExample {
             this.insertOffset = info.insertOffset;
           })
           .onWillChange((info: EditableTextChangeValue) => {
-            this.currentValue_1 = info.content
-            return true
+            this.currentValue_1 = info.content;
+            return true;
           })
 
-        Text("insertValue:" + this.insertValue + "  insertOffset:" + this.insertOffset).height(30)
-        Text("currentValue_1:" + this.currentValue_1).height(30)
+        Text('insertValue:' + this.insertValue + '  insertOffset:' + this.insertOffset).height(30)
+        Text('currentValue_1:' + this.currentValue_1).height(30)
 
-        TextArea({ text: "Delete callbacks" })
+        TextArea({ text: 'TextArea supports deleting callback text b' })
           .width(300)
           .height(60)
           .onWillDelete((info: DeleteValue) => {
@@ -607,13 +606,13 @@ struct TextAreaExample {
             this.deleteDirection = info.direction;
           })
           .onWillChange((info: EditableTextChangeValue) => {
-            this.currentValue_2 = info.content
-            return true
+            this.currentValue_2 = info.content;
+            return true;
           })
 
-        Text("deleteValue:" + this.deleteValue + "  deleteOffset:" + this.deleteOffset).height(30)
-        Text("deleteDirection:" + (this.deleteDirection == 0 ? "BACKWARD" : "FORWARD")).height(30)
-        Text("currentValue_2:" + this.currentValue_2).height(30)
+        Text('deleteValue:' + this.deleteValue + '  deleteOffset:' + this.deleteOffset).height(30)
+        Text('deleteDirection:' + (this.deleteDirection == 0 ? 'BACKWARD' : 'FORWARD')).height(30)
+        Text('currentValue_2:' + this.currentValue_2).height(30)
 
       }.width('100%')
     }
@@ -622,7 +621,7 @@ struct TextAreaExample {
 }
 ```
 
-This example implements custom menu extension items for text using the [editMenuOptions](#editmenuoptions12) API (available since API version 12), allowing configuration of text content, icons, and callbacks. Menu data can also be configured through the [onPrepareMenu](ts-text-common.md#properties-1) callback (available since API version 20).
+Since API version 12, this example uses the [editMenuOptions](#editmenuoptions12) API to set the text content, icon, and callback of custom menu extension items. In addition, menu data can be set in the [onPrepareMenu](ts-text-common.md#properties-1) callback (since API version 20).
 
 ```TypeScript
 // xxx.ets
@@ -632,7 +631,7 @@ struct TextAreaExample {
   @State text: string = 'TextArea editMenuOptions';
   @State endIndex: number = 0;
   onCreateMenu = (menuItems: Array<TextMenuItem>) => {
-    // Replace $r('app.media.startIcon') with the image resource file you use.
+    // Replace $r('app.media.startIcon') with the image resource file required by the developer.
     let item1: TextMenuItem = {
       content: 'create1',
       icon: $r('app.media.startIcon'),
@@ -646,33 +645,33 @@ struct TextAreaExample {
     // TextMenuItemId.autoFill is supported since API version 23.
     let targetIndex = menuItems.findIndex(item => item.id.equals(TextMenuItemId.autoFill));
     if (targetIndex !== -1) {
-      menuItems.splice(targetIndex, 1); // Delete an element at the target index.
+      menuItems.splice(targetIndex, 1); // Delete one element from the target index.
     }
     menuItems.push(item1);
     menuItems.unshift(item2);
     return menuItems;
   }
   onMenuItemClick = (menuItem: TextMenuItem, textRange: TextRange) => {
-    if (menuItem.id.equals(TextMenuItemId.of("create2"))) {
-      console.info("Intercept id: create2 start:" + textRange.start + "; end:" + textRange.end);
+    if (menuItem.id.equals(TextMenuItemId.of('create2'))) {
+      console.info('Intercept id: create2 start:' + textRange.start + '; end:' + textRange.end);
       return true;
     }
-    if (menuItem.id.equals(TextMenuItemId.of("prepare1"))) {
-      console.info("Intercept id: prepare1 start:" + textRange.start + "; end:" + textRange.end);
+    if (menuItem.id.equals(TextMenuItemId.of('prepare1'))) {
+      console.info('Intercept id: prepare1 start:' + textRange.start + '; end:' + textRange.end);
       return true;
     }
     if (menuItem.id.equals(TextMenuItemId.COPY)) {
-      console.info("Intercept COPY start:" + textRange.start + "; end:" + textRange.end);
+      console.info('Intercept COPY start:' + textRange.start + '; end:' + textRange.end);
       return true;
     }
     if (menuItem.id.equals(TextMenuItemId.SELECT_ALL)) {
-      console.info("Do not intercept SELECT_ALL start:" + textRange.start + "; end:" + textRange.end);
+      console.info('Do not intercept SELECT_ALL start:' + textRange.start + '; end:' + textRange.end);
       return false;
     }
     return false;
   }
   onPrepareMenu = (menuItems: Array<TextMenuItem>) => {
-    // Replace $r('app.media.startIcon') with the image resource file you use.
+    // Replace $r('app.media.startIcon') with the image resource file required by the developer.
     let item1: TextMenuItem = {
       content: 'prepare1_' + this.endIndex,
       icon: $r('app.media.startIcon'),
@@ -698,17 +697,17 @@ struct TextAreaExample {
           this.endIndex = selectionEnd;
         })
     }
-    .width("90%")
-    .margin("5%")
+    .width('90%')
+    .margin('5%')
   }
 }
 ```
 
-This example demonstrates text ellipsis for overflow content and ellipsis position adjustment using the [textOverflow](#textoverflow12), [ellipsisMode](#ellipsismode18), and [maxLines](#maxlines10) attributes. The MULTILINE_START and MULTILINE_CENTER types are used to implement ellipsis at the start and middle positions for both single-line and multi-line text scenarios.
-The [maxLines](#maxlines10) attribute can be used to set the maximum number of lines to display, available since API version 10.
-The [textOverflow](#textoverflow12) attribute can be used to set the display mode for overflow text, available since API version 12.
-The [ellipsisMode](#ellipsismode18) attribute can be used to set the ellipsis position, available since API version 18.
-The MULTILINE_START and MULTILINE_CENTER enums are added to [EllipsisMode](ts-appendix-enums.md#ellipsismode11) since API version 24.
+This example uses the [textOverflow](#textoverflow12), [ellipsisMode](#ellipsismode18), and [maxLines](#maxlines10) attributes to demonstrate the effect of truncating overlong text and adjusting the ellipsis position. Through the MULTILINE_START and MULTILINE_CENTER types, it implements the effect of placing the ellipsis at the beginning and in the middle of a line in single-line and multi-line text scenarios.
+Since API version 10, the [maxLines](#maxlines10) attribute is used to set the maximum number of lines for text display.
+Since API version 12, the [textOverflow](#textoverflow12) attribute is used to set how text is displayed when it is overlong.
+Since API version 18, the [ellipsisMode](#ellipsismode18) attribute is used to set the ellipsis position.
+Since API version 24, [EllipsisMode](ts-appendix-enums.md#ellipsismode11) has added the MULTILINE_START and MULTILINE_CENTER enums.
 
 ```TypeScript
 // xxx.ets
@@ -716,10 +715,10 @@ The MULTILINE_START and MULTILINE_CENTER enums are added to [EllipsisMode](ts-ap
 @Component
 struct EllipsisModeExample {
   @State textIndex: number = 0;
-  @State text: string = "As the sun begins to set, casting a warm golden hue across the sky," +
-    "the world seems to slow down and breathe a sigh of relief. The sky is painted with hues of orange, " +
-    " pink, and lavender, creating a breath taking tapestry that stretches as far as the eye can see." +
-    "The air is filled with the sweet scent of blooming flowers, mingling with the earthy aroma of freshly turned soil.";
+  @State text: string = 'As the sun begins to set, casting a warm golden hue across the sky,' +
+    'the world seems to slow down and breathe a sigh of relief. The sky is painted with hues of orange, ' +
+    ' pink, and lavender, creating a breath taking tapestry that stretches as far as the eye can see.' +
+    'The air is filled with the sweet scent of blooming flowers, mingling with the earthy aroma of freshly turned soil.';
   @State ellipsisModeIndex: number = 0;
   @State ellipsisMode: (EllipsisMode | undefined | null)[] =
     [EllipsisMode.START, EllipsisMode.END, EllipsisMode.CENTER, EllipsisMode.MULTILINE_START,
@@ -746,25 +745,25 @@ struct EllipsisModeExample {
         .fontSize(30)
         .margin(30)
 
-      Button('ellipsisMode Value: ' + this.ellipsisModeStr[this.ellipsisModeIndex]).onClick(() => {
+      Button('Change ellipsisMode mode:' + this.ellipsisModeStr[this.ellipsisModeIndex]).onClick(() => {
         this.ellipsisModeIndex++;
         if (this.ellipsisModeIndex > (this.ellipsisModeStr.length - 1)) {
           this.ellipsisModeIndex = 0;
         }
       }).fontSize(20)
-      Button('textOverflow Value: ' + this.textOverflowStr[this.textOverflowIndex]).onClick(() => {
+      Button('Change textOverflow mode:' + this.textOverflowStr[this.textOverflowIndex]).onClick(() => {
         this.textOverflowIndex++;
         if (this.textOverflowIndex > (this.textOverflowStr.length - 1)) {
           this.textOverflowIndex = 0;
         }
       }).fontSize(20)
-      Button('maxLines Value: ' + this.maxLinesStr[this.maxLinesIndex]).onClick(() => {
+      Button('Change maxLines size:' + this.maxLinesStr[this.maxLinesIndex]).onClick(() => {
         this.maxLinesIndex++;
         if (this.maxLinesIndex > (this.maxLinesStr.length - 1)) {
           this.maxLinesIndex = 0;
         }
       }).fontSize(20)
-      Button('Style Value: ' + this.styleAreaStr[this.styleAreaIndex]).onClick(() => {
+      Button('Change Style Size:' + this.styleAreaStr[this.styleAreaIndex]).onClick(() => {
         this.styleAreaIndex++;
         if (this.styleAreaIndex > (this.styleAreaStr.length - 1)) {
           this.styleAreaIndex = 0;
@@ -775,7 +774,8 @@ struct EllipsisModeExample {
 }
 ```
 
-This example demonstrates how to listen for text selection menu actions using [onCopy](#oncopy8), [onCut](#oncut8), and [onPaste](#onpaste) APIs. It shows how to intercept system paste functionality and implement custom paste behavior. In addition, the example uses [maxFontScale](#maxfontscale18) and [minFontScale](#minfontscale18) attributes to configure font scaling limits.
+This example uses [onCopy](#oncopy8), [onCut](#oncut8), [onPaste](#onpaste), [onWillCopy](#onwillcopy), and [onWillCut](#onwillcut) to demonstrate how to listen for the copy, cut, and paste buttons in the text selection menu, how to block the system paste function and implement a custom paste capability, how to block the system copy function, and how to block the system cut function. In addition, the [maxFontScale](#maxfontscale18) and [minFontScale](#minfontscale18) attributes can be used to set the maximum and minimum font scale factors of the text.
+Since API version 26.0.0, the [onWillCopy](#onwillcopy) and [onWillCut](#onwillcut) APIs are added.
 
 ```TypeScript
 // xxx.ets
@@ -799,7 +799,7 @@ struct TextAreaExample {
         .fontStyle(FontStyle.Italic)
         .fontWeight(FontWeight.Bold)
         .fontFamily('HarmonyOS Sans')
-        .inputFilter('[a-zA-Z]+', (value) => { // Only alphabetic input is allowed.
+        .inputFilter('[a-zA-Z]+', (value) => { // Allow only letters.
           console.error(`unsupported char ${value}`);
         })
         .copyOption(CopyOptions.LocalDevice)
@@ -814,7 +814,7 @@ struct TextAreaExample {
         .maxFontScale(2)
         .enablePreviewText(true)
         .enableHapticFeedback(true)
-        .stopBackPress(false)// Delegate back press to other components.
+        .stopBackPress(false)// Hand over the back key to other components.
         .width(336)
         .height(56)
         .margin(20)
@@ -825,11 +825,21 @@ struct TextAreaExample {
         .onCopy((value) => {
           console.info(`copy ${value}`);
         })
+        // Support onWillCopy since API version 26.0.0.
+        .onWillCopy((value: string) => {
+          console.info(`on will copy ${value}`);
+          return false;
+        })
         .onCut((value) => {
           console.info(`cut ${value}`);
         })
+        // Support onWillCut since API version 26.0.0.
+        .onWillCut((value: string) => {
+          console.info(`on will cut ${value}`);
+          return false;
+        })
         .onPaste((value, event) => {
-          // Prevent the default system paste behavior and implement custom logic.
+          // Block the system paste function. Developers can implement it on their own.
           if (event.preventDefault) {
             event.preventDefault();
           }
@@ -847,13 +857,13 @@ struct TextAreaExample {
 }
 ```
 
-This example demonstrates how to set the minimum and maximum font scale factors using [minFontScale](#minfontscale18) and [maxFontScale](#maxfontscale18), available since API version 18. (This example uses system APIs. The application type needs to be set to a system application. For details, see the [Available APIs](../../../reference/development-intro-api.md#available-apis) of HarmonyAppProvision.)
+Since API version 18, this example uses [minFontScale](#minfontscale18) and [maxFontScale](#maxfontscale18) to set the minimum and maximum font display range (this example uses system APIs, so the application type must be changed to a system application; for details, see [Available APIs](../../../reference/development-intro-api.md#available-apis)).
 
 ```TypeScript
-// Enable application font scaling to follow system settings.
-// Create a new directory named profile in the following path: AppScope/resources/base.
-// Inside the newly created profile directory, create a file named configuration.json.
-// Add the following code to the configuration.json file:
+// Enable the application to scale with the system.
+// Create the profile folder in AppScope/resources/base.
+// Create the configuration.json file in AppScope/resources/base/profile.
+// Add the following code to AppScope/resources/base/profile/configuration.json.
 {
   "configuration": {
     "fontSizeScale": "followSystem",
@@ -863,7 +873,7 @@ This example demonstrates how to set the minimum and maximum font scale factors 
 ```
 
 ```TypeScript
-// Modify the app.json5 file in AppScope as follows:
+// Modify the following code in AppScope/app.json5.
 {
   "app": {
     "bundleName": "com.example.myapplication",
@@ -892,14 +902,13 @@ struct TextAreaExample {
   // Set the font size.
   async setFontScale(scale: number): Promise<void> {
     let configInit: Configuration = {
-      language: 'zh-Ch',
-      fontSizeScale: scale,
+      fontSizeScale: scale
     };
-    // Update system font scaling.
-    // Add the ohos.permission.UPDATE_CONFIGURATION permission to the requestPermissions field in the module.json5 file of the project.
+    // Update the configuration - font size, and call the system API to update the font configuration.
+    // Configure the ohos.permission.UPDATE_CONFIGURATION permission in the requestPermissions field of the module.json5 file in the project.
     abilityManager.updateConfiguration(configInit, (err: BusinessError) => {
       if (err) {
-        console.error(`updateConfiguration fail, err: ${JSON.stringify(err)}`);
+        console.error(`Failed to updateConfiguration. Code: ${err.code}, message: ${err.message}`);
       } else {
         this.currentFontSizeScale = scale;
         console.info('updateConfiguration success.');
@@ -910,15 +919,15 @@ struct TextAreaExample {
   build() {
     Column() {
       Column({ space: 30 }) {
-        Text("Configure the minimum and maximum font scale factors using minFontScale and maxFontScale.")
+        Text('Adjust the maximum and minimum font scale factors for text display through minFontScale and maxFontScale.')
         TextArea({
           placeholder: 'The text area can hold an unlimited amount of text. input your word...',
-          text: 'Use minFontScale and maxFontScale to adjust the maximum and minimum font scale factors for text display.'
+          text: 'Adjust the maximum and minimum font scale factors for text display through minFontScale and maxFontScale.'
         })
-          .minFontScale(this.minFontScale)// Set the minimum font scale factor. If the parameter is set to undefined, the default scale factor is used.
-          .maxFontScale(this.maxFontScale) // Set the maximum font scale factor. If the parameter is set to undefined, the default scale factor is used.
+          .minFontScale(this.minFontScale)// Set the minimum font scale factor. If the parameter is undefined, the system default scale factor is used.
+          .maxFontScale(this.maxFontScale) // Set the maximum font scale factor. If the parameter is undefined, the system default scale factor is used.
       }.width('100%')
-
+      // The following buttons are used only to adjust the font scale factor and are not shown in the sample figure.
       Column() {
         Row() {
           Button('1x').onClick(() => {
@@ -943,7 +952,7 @@ struct TextAreaExample {
 }
 ```
 
-This example demonstrates how to set text selection for a specified region and the display/hide strategy of the menu using the [setTextSelection](#settextselection10) API, available since API version 10.
+Since API version 10, this example uses [setTextSelection](#settextselection10) to show how to set the text content of a selected area and the menu visibility policy.
 
 ```TypeScript
 // xxx.ets
@@ -980,7 +989,8 @@ struct TextAreaExample {
 }
 ```
 
-This example demonstrates how to set the stroke width and color for text using the [strokeWidth](#strokewidth20) and [strokeColor](#strokecolor20) attributes, available since API version 20.
+Since API version 20, this example sets the stroke width and color of text through the [strokeWidth](#strokewidth20) and [strokeColor](#strokecolor20) attributes.
+Since API version 26.0.0, the [strokeJoinStyle](#strokejoinstyle) API is added to set the text stroke join style.
 
 ```TypeScript
 // xxx.ets
@@ -1012,6 +1022,7 @@ struct TextAreaExample {
           .borderWidth(1)
           .fontSize(40)
           .strokeWidth(LengthMetrics.px(3.0))
+          .strokeJoinStyle(StrokeJoinStyle.MITER_JOIN)
           .strokeColor(Color.Red)
       }.height('90%')
     }
@@ -1021,7 +1032,7 @@ struct TextAreaExample {
 }
 ```
 
-This example shows how to configure automatic spacing between Chinese and Western characters using the [enableAutoSpacing](#enableautospacing20) attribute, available since API version 20.
+Since API version 20, this example sets auto spacing between Chinese and Western text through the [enableAutoSpacing](#enableautospacing20) attribute.
 
 ```TypeScript
 // xxx.ets
@@ -1031,11 +1042,11 @@ struct TextAreaExample {
   build() {
     Row() {
       Column() {
-        Text('Automatic spacing: Enabled').margin(5)
-        TextArea({text: '中文Text'})
+        Text('Enable auto spacing between Chinese and Western text').margin(5)
+        TextArea({text: 'Chinese and Western Auto Spacing'})
           .enableAutoSpacing(true)
-        Text('Automatic spacing: Disabled').margin(5)
-        TextArea({text: '中文Text'})
+        Text('Disable auto spacing between Chinese and Western text').margin(5)
+        TextArea({text: 'Chinese and Western Auto Spacing'})
           .enableAutoSpacing(false)
       }.height('100%')
     }
@@ -1044,7 +1055,7 @@ struct TextAreaExample {
 }
 ```
 
-This example shows how to set the maximum number of lines using the [maxLines](#maxlines20) attribute, available since API version 20. The text becomes scrollable when the maximum number of lines is exceeded.
+Since API version 20, this example uses the [maxLines](#maxlines20) attribute to set the maximum number of lines to display. When the content exceeds the maximum number of lines, it can be scrolled.
 
 ```TypeScript
 // xxx.ets
@@ -1069,7 +1080,7 @@ struct TextAreaExample {
 }
 ```
 
-This example shows how to set the minimum number of lines using the [minLines](#minlines20) attribute, available since API version 20.
+Since API version 20, this example sets the minimum number of lines to display through the [minLines](#minlines20) attribute.
 
 ```TypeScript
 // xxx.ets
@@ -1094,7 +1105,7 @@ struct Index {
 }
 ```
 
-This example demonstrates how to set the normal and overflow colors of the character counter using the counterTextColor and counterTextOverflowColor parameters (available since API version 22) of the [showCounter](#showcounter10) attribute.
+Since API version 22, this example uses the counterTextColor and counterTextOverflowColor of [showCounter](#showcounter10) to set the character count color and the overflow character color.
 
 ```TypeScript
 import { ColorMetrics } from '@kit.ArkUI';
@@ -1132,7 +1143,7 @@ struct TextAreaExample {
 }
 ```
 
-This example demonstrates how to set the color of the scrollbar using the [scrollBarColor](#scrollbarcolor22) attribute, available since API version 22.
+Since API version 22, this example sets the scrollbar color through the [scrollBarColor](#scrollbarcolor22)22 attribute.
 
 ```TypeScript
 // xxx.ets
@@ -1144,7 +1155,7 @@ struct Index {
   build() {
       Column() {
         TextArea({
-          text: "Hello World TextArea\nHello World TextArea\nHello World TextArea\nHello World TextArea",
+          text: 'Hello World TextArea\nHello World TextArea\nHello World TextArea\nHello World TextArea',
           placeholder: 'Type to text area...',
           controller: this.controller
         })
@@ -1157,7 +1168,7 @@ struct Index {
           .barState(BarState.On)
           .scrollBarColor(undefined)
         TextArea({
-          text: "Hello World TextArea\nHello World TextArea\nHello World TextArea\nHello World TextArea",
+          text: 'Hello World TextArea\nHello World TextArea\nHello World TextArea\nHello World TextArea',
           placeholder: 'Type to text area...',
           controller: this.controller
         })
@@ -1170,7 +1181,7 @@ struct Index {
           .barState(BarState.On)
           .scrollBarColor(ColorMetrics.resourceColor(Color.Orange))
         TextArea({
-          text: "Hello World TextArea\nHello World TextArea\nHello World TextArea\nHello World TextArea",
+          text: 'Hello World TextArea\nHello World TextArea\nHello World TextArea\nHello World TextArea',
           placeholder: 'Type to text area...',
           controller: this.controller
         })
@@ -1188,8 +1199,8 @@ struct Index {
 }
 ```
 
-This example demonstrates how to set the placeholder rich text style using the [setStyledPlaceholder](ts-universal-attributes-text-style.md#setstyledplaceholder22) API, available since API version 22.
-The base text supports multiple languages, and start and length values vary by language. This example implements rich text styling on Chinese text.
+Since API version 22, this example sets the placeholder rich text style through the [setStyledPlaceholder](ts-universal-attributes-text-style.md#setstyledplaceholder22) API.
+The original text supports multiple languages. For content in different languages, the style start index subscript start and length may differ. The following uses Chinese as an example to set the rich text style.
 
 ```TypeScript
 // xxx.ets
@@ -1199,7 +1210,7 @@ import { LengthMetrics } from '@kit.ArkUI';
 @Component
 struct TextAreaExample {
   styledString: MutableStyledString =
-    new MutableStyledString("段落标题\n正文第一段\n正文第二段indent 40 vp\n正文第三段textAlign居中对齐",
+    new MutableStyledString('Paragraph title \n Body text paragraph 1 \n Body text paragraph 2 indent 40 vp\n Body text paragraph 3 textAlign center-aligned',
       [
         {
           start: 0,
@@ -1241,7 +1252,7 @@ struct TextAreaExample {
   build() {
     Scroll() {
       Column() {
-        Text("TextArea placeholder富文本")
+        Text('TextArea placeholder rich text')
           .fontSize(8)
         TextArea({ controller: this.controller })
           .width(200)
@@ -1254,7 +1265,7 @@ struct TextAreaExample {
 }
 ```
 
-This example demonstrates how to set input method extension information using the setExtraConfig method of [IMEClient](ts-text-common.md#imeclient20), available since API version 22.
+Since API version 22, this example uses [IMEClient](ts-text-common.md#imeclient20) to set the IME extension information through setExtraConfig.
 
 ```TypeScript
 // xxx.ets
@@ -1263,12 +1274,12 @@ This example demonstrates how to set input method extension information using th
 struct TextAreaExample {
   build() {
     Column() {
-      TextArea({ text: 'Execute the onWillAttachIME callback before starting the input method.'})
+      TextArea({ text: 'Execute the onWillAttachIME callback before the input method is pulled up' })
         .onWillAttachIME((client: IMEClient) => {
           client.setExtraConfig({
             customSettings: {
-              name: "TextArea", // Custom property
-              id: client.nodeId // Custom property
+              name: 'TextArea', // Custom attribute
+              id: client.nodeId // Custom attribute
             }
           })
         })
@@ -1277,32 +1288,51 @@ struct TextAreaExample {
 }
 ```
 
-This example demonstrates how to set leading punctuation compression using the [compressLeadingPunctuation](#compressleadingpunctuation23) API. If a punctuation mark with a leading space appears at the start of a line, the punctuation mark will be compressed to the left boundary.
-The compressLeadingPunctuation API is supported since API version 23.
+This example uses the [compressLeadingPunctuation](#compressleadingpunctuation23) API to set leading punctuation compression, and the [punctuationOverflow](#punctuationoverflow) API to set trailing punctuation overhang.
+When a punctuation mark with spacing on its left is at the beginning of a line, the spacing is compressed directly to the left boundary.
+After the text wraps automatically, if the remaining content (including the punctuation mark) can fit into the previous line, the punctuation overhang takes effect.
+Since API version 23, the compressLeadingPunctuation API is added.
+Since API version 26.0.0, the punctuationOverflow API is added.
 
 ```TypeScript
-// xxx.ets
 @Entry
 @Component
-struct Index {
+struct PunctuationDemo {
+  @State compressLeadingPunctuation: boolean = false;
+  @State punctuationOverflow: boolean = false;
+  @State text: string = '「0123456789！\n『0123456789：\n（0123456789；\n《0123456789）\n〈0123456789】';
+
   build() {
-    Column(){
-      TextArea({ text: "\u300CLeading punctuation compression enabled" })
-        .compressLeadingPunctuation(true)
-        .margin(5)
-        .fontSize(30)
-        .width("90%")
-      TextArea({ text: "\u300CLeading punctuation compression disabled" })
-        .compressLeadingPunctuation(false)
-        .fontSize(30)
-        .width("90%")
-    }
+    Column() {
+      TextArea({ text: this.text })
+        .compressLeadingPunctuation(this.compressLeadingPunctuation)
+        .punctuationOverflow(this.punctuationOverflow)
+        .fontSize('20fp')
+        .align(Alignment.Center)
+        .height('35%')
+        .width('50%')
+
+      Column() {
+        Button('Enable leading punctuation compression').onClick(() => {
+          this.compressLeadingPunctuation = true;
+        }).margin(5)
+        Button('Disable leading punctuation compression').onClick(() => {
+          this.compressLeadingPunctuation = false;
+        }).margin(5)
+        Button('Enable trailing punctuation overhang').onClick(() => {
+          this.punctuationOverflow = true;
+        }).margin(5)
+        Button('Disable trailing punctuation overhang').onClick(() => {
+          this.punctuationOverflow = false;
+        }).margin(5)
+      }
+    }.width('100%').padding(20)
   }
 }
 ```
 
-This example uses the [includeFontPadding](#includefontpadding23) API to add the spacing of the first and last lines and the [fallbackLineSpacing](#fallbacklinespacing23) API to set adaptive line spacing.
-The [includeFontPadding](#includefontpadding23) and [fallbackLineSpacing](#fallbacklinespacing23) APIs are supported since API version 23.
+This example uses the [includeFontPadding](#includefontpadding23) API to increase the spacing of the first and last lines, and the [fallbackLineSpacing](#fallbacklinespacing23) API to set adaptive line spacing.
+Since API version 23, the [includeFontPadding](#includefontpadding23) and [fallbackLineSpacing](#fallbacklinespacing23) APIs are added.
 
 ```TypeScript
 // xxx.ets
@@ -1319,7 +1349,7 @@ struct Index {
     Column() {
       TextArea({
         text: this.displayText,
-        placeholder:'Enter'
+        placeholder: 'Please enter content...'
       })
         .includeFontPadding(this.include)
         .fallbackLineSpacing(this.fallback)
@@ -1332,14 +1362,14 @@ struct Index {
 
       Scroll() {
         Column() {
-          // --- Buttons related to IncludeFontPadding ---
+          // --- Buttons related to includeFontPadding ---
           Button('Set includePadding: ' + this.include)
             .onClick(() => {
               this.include = this.include === false ? true : false;
             })
             .margin({ bottom: 10 })
 
-          // --- Button related to FallbackLineSpacing ---
+          // --- Buttons related to fallbackLineSpacing ---
           Button('Set fallbackLineSpacing: ' + this.fallback)
             .onClick(() => {
               this.fallback = this.fallback === false ? true : false;
@@ -1363,8 +1393,8 @@ struct Index {
 }
 ```
 
-This example demonstrates how to set the drag preview style for text being dragged using the [selectedDragPreviewStyle](#selecteddragpreviewstyle23) API.
-The selectedDragPreviewStyle API is supported since API version 23.
+This example uses the [selectedDragPreviewStyle](#selecteddragpreviewstyle23) API to set the backplate style during text dragging.
+Since API version 23, the selectedDragPreviewStyle API is added.
 
 ```TypeScript
 @Entry
@@ -1385,8 +1415,8 @@ struct TextAreaTest {
 }
 ```
 
-This example demonstrates how to delete the last character in a text box using the [deleteBackward](ts-universal-attributes-text-style.md#deletebackward23) API.
-The [deleteBackward](ts-universal-attributes-text-style.md#deletebackward23) API is added since API version 23.
+This example calls the [deleteBackward](ts-universal-attributes-text-style.md#deletebackward23) API to delete the last character in the text box.
+Since API version 23, the [deleteBackward](ts-universal-attributes-text-style.md#deletebackward23) API is added.
 
 ```TypeScript
 @Entry
@@ -1396,7 +1426,7 @@ struct Page {
 
   build() {
     Column() {
-      TextArea({ text: 'Deletebackward example', controller: this.controller})
+      TextArea({ text: 'TextArea Deletebackward example', controller: this.controller })
       Button('Delete backward')
         .onClick(() => {
           this.controller.deleteBackward();
@@ -1406,8 +1436,8 @@ struct Page {
 }
 ```
 
-This example demonstrates how to set the text layout direction using the [textDirection](#textdirection23) API.
-The textDirection API is supported since API version 23.
+This example uses [textDirection](#textdirection23) to set the text direction.
+The textDirection API is available since API version 23.
 
 ```TypeScript
 // xxx.ets
@@ -1418,7 +1448,7 @@ struct TextAreaExample {
 
   build() {
     Column() {
-      Text('TextArea text direction: RTL, component layout direction: default')
+      Text('TextArea text direction RTL, layout direction default')
         .fontSize(12).width('90%')
       TextArea({ text: this.text })
         .width(336)
@@ -1428,7 +1458,7 @@ struct TextAreaExample {
         .textDirection(TextDirection.RTL)
         .showCounter(true)
         .maxLength(50)
-      Text('TextArea text direction: RTL, component layout direction: default, horizontal alignment: LEFT')
+      Text('TextArea text direction RTL, layout direction default, text horizontal alignment LEFT')
         .fontSize(12).width('90%')
       TextArea({ text: this.text })
         .width(336)
@@ -1439,7 +1469,7 @@ struct TextAreaExample {
         .textAlign(TextAlign.LEFT)
         .showCounter(true)
         .maxLength(50)
-      Text('TextArea text direction: LTR, component layout direction: Rtl')
+      Text('TextArea text direction LTR, layout direction Rtl')
         .fontSize(12).width('90%')
       TextArea({ text: this.text })
         .width(336)
@@ -1455,8 +1485,8 @@ struct TextAreaExample {
 }
 ```
 
-This example demonstrates how to scroll the text in a specified range to the visible area using the [scrollToVisible](./ts-universal-attributes-text-style.md#scrolltovisible23) API.
-The scrollToVisible API is added since API version 23.
+This example uses [scrollToVisible](./ts-universal-attributes-text-style.md#scrolltovisible23) to scroll text outside the visible area into the visible area.
+Since API version 23, the scrollToVisible API is added.
 
 ```TypeScript
 // xxx.ets
@@ -1471,8 +1501,8 @@ struct TextAreaExample {
       TextArea({ text: this.text, controller: this.controller })
         .width(336)
         .height(150)
-      Button("Scroll Text to Visible Area").onClick(()=> {
-        this.controller.scrollToVisible({ start: 110, end: 115 })
+      Button('Scroll text to the visible area').onClick(() => {
+        this.controller.scrollToVisible({ start: 110, end: 115 });
       })
     }.width('100%').height('100%').backgroundColor('#F1F3F5')
   }
@@ -1480,6 +1510,158 @@ struct TextAreaExample {
   aboutToAppear(): void {
     for (let i = 0; i < 5; i++) {
       this.text += this.text
+    }
+  }
+}
+```
+
+This example sets horizontal scrolling through [horizontalScrolling](#horizontalscrolling24).
+Since API version 24, the horizontalScrolling API is added.
+
+```TypeScript
+// xxx.ets
+@Entry
+@Component
+struct Index {
+  @State message: string = `Hello World Hello World Hello World Hello World Hello World\n
+Hello World Hello World Hello World Hello World Hello World\n
+Hello World Hello World Hello World Hello World Hello World\n
+Hello World Hello World Hello World Hello World Hello World\n
+Hello World Hello World Hello World Hello World Hello World\n
+Hello World Hello World Hello World Hello World Hello World\n
+Hello World Hello World Hello World Hello World Hello World\n
+Hello World Hello World Hello World Hello World Hello World\n
+`
+
+  build() {
+    Column() {
+      TextArea({ text: this.message })
+        .horizontalScrolling(true)
+        .width('200vp')
+        .height('150vp')
+    }
+    .height('100%')
+    .width('100%')
+  }
+}
+```
+
+This example uses the [orphanCharOptimization](#orphancharoptimization) API to enable orphan character optimization, ensuring that no orphan character appears on the last line of a paragraph.
+Since API version 26.0.0, the orphanCharOptimization API is added.
+
+```TypeScript
+// xxx.ets
+@Entry
+@Component
+struct TextExample {
+  @State text: string = 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaatextaaaaaaaaaaaaa';
+
+  build() {
+    Column({ space: 3 }) {
+      Text('TextArea does not enable orphan character optimization')
+        .fontSize(12).width('90%').margin(5)
+      TextArea({ text: this.text })
+        .fontSize(20)
+        .width('408')
+        .borderWidth(1)
+      Text('TextArea enables orphan character optimization')
+        .fontSize(12).width('90%').margin(5)
+      TextArea({ text: this.text })
+        .fontSize(20)
+        .width('408')
+        .borderWidth(1)
+        .orphanCharOptimization(true)
+    }
+    .width('100%')
+    .height('100%')
+  }
+}
+```
+
+This example uses the [shaderStyle](#shaderstyle) API to apply a shader effect to the text in the TextArea component.
+Since API version 26.0.0, the shaderStyle API is added.
+
+```TypeScript
+@Entry
+@Component
+struct ShaderColorStyle {
+  @State message: string = 'Hello World';
+  @State linearGradientOptions1: LinearGradientOptions =
+    {
+      angle: 45,
+      colors: [[Color.Red, 0.0], [Color.Blue, 0.3], [Color.Green, 0.5]]
+    };
+  @State linearGradientOptions2: LinearGradientOptions =
+    {
+      direction: GradientDirection.LeftTop,
+      colors: [[Color.Red, 0.0], [Color.Blue, 0.3], [Color.Green, 0.5]],
+      repeating: true,
+    };
+  @State radialGradientOptions: RadialGradientOptions =
+    {
+      center: [50, 50],
+      radius: 20,
+      colors: [[Color.Red, 0.0], [Color.Blue, 0.3], [Color.Green, 0.5]],
+      repeating: true,
+    };
+  @State colorShaderStyle: ColorShaderStyle =
+    {
+      color: Color.Blue
+    };
+  build() {
+    Column({ space: 5 }) {
+      Text('Linear gradient with an angle of 45°').fontSize(18).width('90%')
+        .margin({ top: 40, left: 40 })
+      TextArea({ text: this.message })
+        .fontSize(20)
+        .width('80%')
+        .height(40)
+        .shaderStyle(this.linearGradientOptions1)
+      Text('Linear gradient with direction LeftTop').fontSize(18).width('90%')
+        .margin({ top: 40, left: 40 })
+      TextArea({ text: this.message })
+        .fontSize(20)
+        .width('80%')
+        .height(40)
+        .shaderStyle(this.linearGradientOptions2)
+      Text('Radial gradient').fontSize(18).width('90%')
+        .margin({ top: 40, left: 40 })
+      TextArea({ text: this.message })
+        .fontSize(20)
+        .width('80%')
+        .height(40)
+        .shaderStyle(this.radialGradientOptions)
+      Text('Solid color').fontSize(18).width('90%')
+        .margin({ top: 40, left: 40 })
+      TextArea({ text: this.message })
+        .fontSize(20)
+        .width('80%')
+        .height(40)
+        .shaderStyle(this.colorShaderStyle)
+    }
+  }
+}
+```
+
+This example configures the AI menu for text selection through [enableSelectedDataDetector](#enableselecteddatadetector22).
+Since API version 22, enableSelectedDataDetector is added.
+
+```TypeScript
+@Entry
+@Component
+struct Demo36 {
+  exampleText: string = 'Example URL: www.example.com';
+
+  build() {
+    Column() {
+      Row() {
+        TextArea({ text: this.exampleText })
+          .copyOption(CopyOptions.LocalDevice)
+          .enableSelectedDataDetector(true)
+          .border({ width: 1, color: Color.Black })
+          .height(300)
+          .margin(10)
+      }
     }
   }
 }

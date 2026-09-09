@@ -31,6 +31,7 @@ Terminates this ability. This API uses an asynchronous callback to return the re
 ```TypeScript
 import { featureAbility } from '@kit.AbilityKit';
 
+// Stop the current Ability.
 featureAbility.terminateSelf(
   (error) => {
     console.error(`error: ${JSON.stringify(error)}`);
@@ -65,6 +66,7 @@ Terminates this ability. This API uses a promise to return the result.
 import { featureAbility } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
+// Stop the current Ability.
 featureAbility.terminateSelf().then(() => {
   console.info('==========================>terminateSelf=======================>');
 }).catch((error: BusinessError) => {

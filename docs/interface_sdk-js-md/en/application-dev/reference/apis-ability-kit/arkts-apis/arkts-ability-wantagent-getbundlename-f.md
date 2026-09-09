@@ -73,10 +73,11 @@ let wantAgentInfo: wantAgent.WantAgentInfo = {
 };
 
 // getWantAgent callback.
-function getWantAgentCallback(err: BusinessError, data: WantAgent) {
+let getWantAgentCallback = (err: BusinessError, data: WantAgent) => {
   if (err) {
     console.error(`getWantAgent failed, code: ${JSON.stringify(err.code)}, message: ${JSON.stringify(err.message)}`);
   } else {
+    // Create the WantAgent successfully and save the returned WantAgent object.
     wantAgentData = data;
   }
   // getBundleName callback.
@@ -88,6 +89,7 @@ function getWantAgentCallback(err: BusinessError, data: WantAgent) {
     }
   }
   try {
+    // Call the getBundleName API to obtain the package name of the WantAgent instance.
     wantAgent.getBundleName(wantAgentData, getBundleNameCallback);
   } catch (err) {
     console.error(`getBundleName failed! ${err.code} ${err.message}`);
@@ -95,6 +97,7 @@ function getWantAgentCallback(err: BusinessError, data: WantAgent) {
 }
 
 try {
+  // Call the getWantAgent API to create a WantAgent object.
   wantAgent.getWantAgent(wantAgentInfo, getWantAgentCallback);
 } catch (err) {
   console.error(`getWantAgent failed! ${err.code} ${err.message}`);
@@ -174,16 +177,18 @@ let wantAgentInfo: wantAgent.WantAgentInfo = {
 };
 
 // getWantAgent callback.
-function getWantAgentCallback(err: BusinessError, data: WantAgent) {
+let getWantAgentCallback = (err: BusinessError, data: WantAgent) => {
   if (err) {
     console.error(`getWantAgent failed, code: ${JSON.stringify(err.code)}, message: ${JSON.stringify(err.message)}`);
   } else {
+    // Create the WantAgent successfully and save the returned WantAgent object.
     wantAgentData = data;
   }
   try {
-    wantAgent.getBundleName(wantAgentData).then((data)=>{
+    // Obtain the bundle name of the WantAgent instance using Promise.
+    wantAgent.getBundleName(wantAgentData).then((data) => {
       console.info(`getBundleName ok! ${JSON.stringify(data)}`);
-    }).catch((err: BusinessError)=>{
+    }).catch((err: BusinessError) => {
       console.error(`getBundleName failed! ${err.code} ${err.message}`);
     });
   } catch(err){
@@ -191,6 +196,7 @@ function getWantAgentCallback(err: BusinessError, data: WantAgent) {
   }
 }
 try {
+  // Call the getWantAgent API to create a WantAgent object.
   wantAgent.getWantAgent(wantAgentInfo, getWantAgentCallback);
 } catch(err) {
   console.error(`getWantAgent failed! ${err.code} ${err.message}`);

@@ -40,11 +40,12 @@ Obtains the ID attached to the end of a given URI.
 
 ```TypeScript
 import { dataUriUtils } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
 
 try {
   let id = dataUriUtils.getId('com.example.dataUriUtils/1221');
   console.info(`get id: ${id}`);
-} catch(err) {
-  console.error(`get id err ,check the uri ${err}`);
+} catch (err) {
+  console.error(`get id err, code: ${JSON.stringify((err as BusinessError).code)}, msg: ${JSON.stringify((err as BusinessError).message)}`);
 }
 ```

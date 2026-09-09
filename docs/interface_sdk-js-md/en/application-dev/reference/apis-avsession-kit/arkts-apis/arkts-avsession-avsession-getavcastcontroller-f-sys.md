@@ -52,16 +52,20 @@ struct Index {
   build() {
     Column() {
       Text(this.message)
-        .onClick(() => {
-          let currentAVSession: avSession.AVSession | undefined = undefined;
-          let tag = "createNewSession";
-          let context = this.getUIContext().getHostContext() as Context;
-          let sessionId: string = ""; // Used as an input parameter of subsequent functions.
+        .onClick(async () => {
+          // Obtain the descriptors of all sessions in the system.
+          let descriptors = await AVSessionManager.getAllSessionDescriptors();
+          if (descriptors.length === 0) {
+            console.error(`No session in system, can not create controller.`);
+            return;
+          }
+          // Obtain the session ID of the target session to create a controller.
+          let sessionId = descriptors[0].sessionId;
 
           let avCastController: avSession.AVCastController;
           avSession.getAVCastController(sessionId, (avcontroller: avSession.AVCastController) => {
-              avCastController = avcontroller;
-              console.info('Succeeded in getting AV cast controller.');
+            avCastController = avcontroller;
+            console.info('Succeeded in getting AV cast controller.');
           });
         })
     }
@@ -123,11 +127,15 @@ struct Index {
   build() {
     Column() {
       Text(this.message)
-        .onClick(() => {
-          let currentAVSession: avSession.AVSession | undefined = undefined;
-          let tag = "createNewSession";
-          let context = this.getUIContext().getHostContext() as Context;
-          let sessionId: string = ""; // Used as an input parameter of subsequent functions.
+        .onClick(async () => {
+          // Obtain the descriptors of all sessions in the system.
+          let descriptors = await AVSessionManager.getAllSessionDescriptors();
+          if (descriptors.length === 0) {
+            console.error(`No session in system, can not create controller.`);
+            return;
+          }
+          // Obtain the session ID of the target session to create a controller.
+          let sessionId = descriptors[0].sessionId;
 
           let avCastController: avSession.AVCastController;
           avSession.getAVCastController(sessionId).then((avcontroller: avSession.AVCastController) => {

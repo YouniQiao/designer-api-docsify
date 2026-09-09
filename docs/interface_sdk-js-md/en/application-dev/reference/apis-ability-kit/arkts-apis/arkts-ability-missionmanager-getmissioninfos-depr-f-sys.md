@@ -38,6 +38,7 @@ Obtains information about all missions. This API uses an asynchronous callback t
 ```TypeScript
 import missionManager from '@ohos.application.missionManager';
 
+// Obtain all mission information.
 missionManager.getMissionInfos('', 10, (error, missions) => {
   if (error.code) {
     console.error(`getMissionInfos failed, error.code: ${error.code}, error.message: ${error.message}`);
@@ -89,6 +90,7 @@ import missionManager from '@ohos.application.missionManager';
 import { BusinessError } from '@ohos.base';
 
 try {
+  // Obtain all mission information.
   missionManager.getMissionInfos('', 10).then((data) => {
     console.info(`getMissionInfos successfully. Data: ${JSON.stringify(data)}`);
   }).catch((error: BusinessError) => {

@@ -56,7 +56,7 @@ When this API is used with components that come with the caching mechanism, such
 
 ## Examples
 
-This example demonstrates how to control the state of a group of check boxes to achieve a "select all" or "deselect all" effect.
+This example demonstrates how to control the select-all or deselect-all state of a check box group.
 
 ```TypeScript
 // xxx.ets
@@ -66,18 +66,18 @@ struct CheckboxExample {
   build() {
     Scroll() {
       Column() {
-        // Select All button
+        // Check box group
         Flex({ justifyContent: FlexAlign.Start, alignItems: ItemAlign.Center }) {
           CheckboxGroup({ group: 'checkboxGroup' })
             .checkboxShape(CheckBoxShape.ROUNDED_SQUARE)
             .selectedColor('#007DFF')
             .onChange((itemName: CheckboxGroupResult) => {
-              console.info("checkbox group content" + JSON.stringify(itemName));
+              console.info('checkbox group content' + JSON.stringify(itemName));
             })
           Text('Select All').fontSize(14).lineHeight(20).fontColor('#182431').fontWeight(500)
         }
 
-        // Option 1
+        // Check box 1
         Flex({ justifyContent: FlexAlign.Start, alignItems: ItemAlign.Center }) {
           Checkbox({ name: 'checkbox1', group: 'checkboxGroup' })
             .selectedColor('#007DFF')
@@ -88,7 +88,7 @@ struct CheckboxExample {
           Text('Checkbox1').fontSize(14).lineHeight(20).fontColor('#182431').fontWeight(500)
         }.margin({ left: 36 })
 
-        // Option 2
+        // Check box 2
         Flex({ justifyContent: FlexAlign.Start, alignItems: ItemAlign.Center }) {
           Checkbox({ name: 'checkbox2', group: 'checkboxGroup' })
             .selectedColor('#007DFF')
@@ -99,7 +99,7 @@ struct CheckboxExample {
           Text('Checkbox2').fontSize(14).lineHeight(20).fontColor('#182431').fontWeight(500)
         }.margin({ left: 36 })
 
-        // Option 3
+        // Check box 3
         Flex({ justifyContent: FlexAlign.Start, alignItems: ItemAlign.Center }) {
           Checkbox({ name: 'checkbox3', group: 'checkboxGroup' })
             .selectedColor('#007DFF')
@@ -115,7 +115,7 @@ struct CheckboxExample {
 }
 ```
 
-This example shows how to customize the check mark style for a check box group by configuring the mark attribute.
+This example shows how to customize the check mark style of a check box group by setting the mark attribute of CheckboxGroup.
 
 ```TypeScript
 // xxx.ets
@@ -131,10 +131,10 @@ struct Index {
             .checkboxShape(CheckBoxShape.ROUNDED_SQUARE)
             .selectedColor(Color.Orange)
             .onChange((itemName: CheckboxGroupResult) => {
-              console.info("checkbox group content" + JSON.stringify(itemName));
+              console.info('checkbox group content' + JSON.stringify(itemName));
             })
             .mark({
-              strokeColor:Color.Black,
+              strokeColor: Color.Black,
               size: 40,
               strokeWidth: 5
             })
@@ -148,10 +148,10 @@ struct Index {
             .selectedColor(0x39a2db)
             .shape(CheckBoxShape.ROUNDED_SQUARE)
             .onChange((value: boolean) => {
-              console.info('Checkbox1 change is'+ value);
+              console.info('Checkbox1 change is' + value);
             })
             .mark({
-              strokeColor:Color.Black,
+              strokeColor: Color.Black,
               size: 50,
               strokeWidth: 5
             })
@@ -190,7 +190,8 @@ struct Index {
 }
 ```
 
-This example demonstrates how to customize checkbox group appearances using [contentModifier](#contentmodifier21), available since API version 21. It implements a pentagonal custom checkbox group with the following visual rules:- Fully selected: A red triangle appears inside the pentagon, and the label displays "fully selected".- Partially selected: The triangle turns blue, and the label displays "partially selected".- Unselected: The triangle disappears entirely, and the label displays "unselected".
+This example demonstrates how to customize the style of a check box group through the [contentModifier](#contentmodifier21) attribute. The custom style implements a pentagonal check box group. If all check boxes are selected, a red triangle pattern is displayed inside and the title displays "fully selected"; if some are selected, the triangle pattern turns blue and the title displays "partially selected"; if none are selected, the triangle pattern is hidden and the title displays "unselected".
+The contentModifier attribute is supported since API version 21.
 
 ```TypeScript
 // xxx.ets
@@ -219,7 +220,7 @@ function buildCheckboxgroup(config: CheckBoxGroupConfiguration) {
         .fillOpacity(0)
         .strokeWidth(3)
         .onClick(() => {
-          console.info('checkboxgroup status ', statusString[config.status])
+          console.info('checkboxGroup status ', statusString[config.status])
           if (config.status === SelectStatus.All ||  config.status === SelectStatus.Part) {
             config.triggerChange(false);
             console.info('checkboxgroup not selected')
@@ -269,7 +270,7 @@ struct Index {
 
   build() {
     Column({ space: 100 }) {
-      CheckboxGroup({  group: 'checkboxGroup' })
+      CheckboxGroup({ group: 'checkboxGroup' })
          .contentModifier(new MyCheckboxGroupStyle(Color.Red))
         .onChange((itemName: CheckboxGroupResult) => {
           console.info(" CheckboxGroup onChange: " + JSON.stringify(itemName));
@@ -306,7 +307,7 @@ struct Index {
 }
 ```
 
-This example demonstrates select-all implementation for check boxes used with caching components like List, handling items not yet created during initial rendering.
+This example demonstrates how to manually control the selected state of the check box that has not been created when used with components that support caching, such as List.
 
 ```TypeScript
 class BasicDataSource implements IDataSource {
@@ -442,7 +443,7 @@ struct MyComponent {
         LazyForEach(this.data, (item: checkboxItemData, index: number) => {
           ListItem() {
             Row() {
-              Checkbox({ name: `checkbox-${item}` })
+              Checkbox({ name: `${item.itemName}` })
                 .select(item.isCheck)
                 .onChange((value: boolean) => {
                   this.data.operateItem(value, index)

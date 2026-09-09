@@ -41,6 +41,7 @@ Sets the system hotkey shield status.
 
 ```TypeScript
 import { inputConsumer } from '@kit.InputKit';
+import { BusinessError } from '@kit.BasicServicesKit';
 
 @Entry
 @Component
@@ -51,10 +52,11 @@ struct Index {
         .onClick(() => {
           let FACTORY_MODE = 0;
           try {
-            inputConsumer.setShieldStatus(FACTORY_MODE,true);
-            console.info(`set shield status success`);
+            // Set the blocking status.
+            inputConsumer.setShieldStatus(FACTORY_MODE, true);
+            console.info(`Succeeded in setting shield status.`);
           } catch (error) {
-            console.error(`set shield status failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
+            console.error(`Failed to set shield status, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
           }
         })
     }

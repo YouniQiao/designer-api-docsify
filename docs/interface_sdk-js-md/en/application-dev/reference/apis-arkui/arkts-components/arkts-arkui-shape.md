@@ -81,9 +81,9 @@ struct ShapeExample {
   build() {
     Column({ space: 10 }) {
       Text('basic').fontSize(11).fontColor(0xCCCCCC).width(320)
-      // Draw a 300 × 50 rectangle with strokes at (-2, -2). The fill color is 0x317AF7, the stroke color is black, the stroke width is 4, the stroke dash array is 20, the offset is 10 to the left, the cap style is semi-circle, the join style is rounded, and anti-aliasing is enabled (default).
-      // Draw a 300 × 50 ellipse with strokes at (-2, 58). The fill color is 0x317AF7, the stroke color is black, the stroke width is 4, the stroke dash array is 20, the offset is 10 to the left, the cap style is semi-circle, the join style is rounded, and anti-aliasing is enabled (default).
-      // Draw a 300 × 10 straight line at (-2, 118). The fill color is 0x317AF7, the stroke color is black, the stroke width is 4, the stroke dash array is 20, the offset is 10 to the left, the cap style is semi-circle, the join style is rounded, and anti-aliasing is enabled (default).
+      // Draw a 300 × 50 rectangle with a stroke at the point (-2, -2) in Shape, with the color 0x317AF7, stroke color black, stroke width 4, stroke gap 20, offset to the left by 10, line cap style round, line join style round, and anti-aliasing (enabled by default).
+      // Draw a 300 × 50 ellipse with a stroke at the point (-2, 58) in Shape, with the color 0x317AF7, stroke color black, stroke width 4, stroke gap 20, offset to the left by 10, line cap style round, line join style round, and anti-aliasing (enabled by default).
+      // Draw a 300 × 10 straight line at the point (-2, 118) in Shape, with the color 0x317AF7, stroke color black, width 4, gap 20, offset to the left by 10, line cap style round, line join style round, and anti-aliasing (enabled by default).
       Shape() {
         Rect().width(300).height(50)
         Ellipse().width(300).height(50).offset({ x: 0, y: 60 })
@@ -138,7 +138,7 @@ struct ShapeExample {
       .strokeWidth(10)
 
       Text('path').fontSize(11).fontColor(0xCCCCCC).width(320)
-      // Draw a straight line at (0, -5). The fill color is 0xEE8443, the stroke width is 10, and the stroke dash array is 20.
+      // Draw a straight line at (0, -5). The color is 0xEE8443, the stroke width is 10, and the stroke dash array is 20.
       Shape() {
         Path().width(300).height(10).commands('M0 0 L900 0')
       }
@@ -154,7 +154,7 @@ struct ShapeExample {
       .strokeWidth(10)
       .strokeDashArray([20])
 
-      // Draw a straight line at (0, -5). The fill color is 0xEE8443, the stroke width is 10, the stroke dash array is 20, and the offset is 10 to the left.
+      // Draw a straight line at (0, -5). The color is 0xEE8443, the stroke width is 10, the stroke dash array is 20, and the offset is 10 to the left.
       Shape() {
         Path().width(300).height(10).commands('M0 0 L900 0')
       }
@@ -171,7 +171,7 @@ struct ShapeExample {
       .strokeDashArray([20])
       .strokeDashOffset(10)
 
-      // Draw a straight line at (0, -5). The fill color is 0xEE8443, the stroke width is 10, and the opacity is 0.5.
+      // Draw a straight line at (0, -5). The color is 0xEE8443, the stroke width is 10, and the opacity is 0.5.
       Shape() {
         Path().width(300).height(10).commands('M0 0 L900 0')
       }
@@ -187,7 +187,7 @@ struct ShapeExample {
       .strokeWidth(10)
       .strokeOpacity(0.5)
 
-      // Draw a straight line at (0, -5). The fill color is 0xEE8443, the stroke width is 10, the stroke dash array is 20, and the cap style is semi-circle.
+      // Draw a straight line at (0, -5). The color is 0xEE8443, the stroke width is 10, the stroke dash array is 20, and the cap style is semi-circle.
       Shape() {
         Path().width(300).height(10).commands('M0 0 L900 0')
       }
@@ -204,7 +204,7 @@ struct ShapeExample {
       .strokeDashArray([20])
       .strokeLineCap(LineCapStyle.Round)
 
-      // Draw a closed path at (-20, -5). The fill color is 0x317AF7, the stroke width is 10, the stroke color is 0xEE8443, and the join style is miter (default).
+      // Draw a closed path at (-20, -5). The fill color is 0x317AF7, the stroke width is 10, the color is 0xEE8443, and the join style is miter (default).
       Shape() {
         Path().width(200).height(60).commands('M0 0 L400 0 L400 150 Z')
       }
@@ -235,9 +235,9 @@ This example demonstrates how to draw shaps with different length types for attr
 struct ShapeTypeExample {
   build() {
     Column({ space: 10 }) {
-      // Draw a 300 × 50 rectangle with strokes at (-2, -2). The fill color is 0x317AF7, the stroke color is black, the stroke width is 4, the stroke dash array is 20, the offset is 10 to the left, the cap style is semi-circle, the join style is rounded, and anti-aliasing is enabled (default).
-      // Draw a 300 × 50 ellipse with strokes at (-2, 58). The fill color is 0x317AF7, the stroke color is black, the stroke width is 4, the stroke dash array is 20, the offset is 10 to the left, the cap style is semi-circle, the join style is rounded, and anti-aliasing is enabled (default).
-      // Draw a 300 × 10 straight line at (-2, 118). The fill color is 0x317AF7, the stroke color is black, the stroke width is 4, the stroke dash array is 20, the offset is 10 to the left, the cap style is semi-circle, the join style is rounded, and anti-aliasing is enabled (default).
+      // Draw a 300 × 50 rectangle with a stroke at point (-2, -2) in Shape, in orange, with a black stroke, stroke width 4, stroke gap 20, offset 10 to the left, line cap style round, line join style round, and anti-aliasing (enabled by default).
+      // Draw a 300 × 50 ellipse with a stroke at point (-2, 58) in Shape, in orange, with a black stroke, stroke width 4, stroke gap 20, offset 10 to the left, line cap style round, line join style round, and anti-aliasing (enabled by default).
+      // Draw a 300 × 10 straight line at point (-2, 118) in Shape, in orange, with a black stroke, width 4, gap 20, offset 10 to the left, line cap style round, line join style round, and anti-aliasing (enabled by default).
       Shape() {
         Rect().width('300').height('50')
         Ellipse().width(300).height(50).offset({ x: 0, y: 60 })
@@ -271,7 +271,7 @@ This example shows how to use attributeModifier to dynamically set the fill, fil
 // xxx.ets
 class MyShapeModifier implements AttributeModifier<ShapeAttribute> {
   applyNormalAttribute(instance: ShapeAttribute): void {
-    // Fill color: #707070; fill opacity: 0.5; stroke color: #2787D9; stroke dash array: [20, 15]; offset to left: 15; cap style: semi-circle; join style: miter; miter limit: 5; stroke opacity: 0.5; stroke width: 10; anti-aliasing enabled.
+    // Fill color: #707070; fill opacity: 0.5; color: #2787D9; stroke dash array: [20, 15]; offset to left: 15; cap style: semi-circle; join style: miter; miter limit: 5; stroke opacity: 0.5; stroke width: 10; anti-aliasing enabled.
     instance.fill("#707070")
     instance.fillOpacity(0.5)
     instance.stroke("#2787D9")
@@ -315,13 +315,16 @@ import { image } from '@kit.ImageKit';
 @Component
 struct Index {
   private context: OffscreenCanvasRenderingContext2D = new OffscreenCanvasRenderingContext2D(200, 200)
+  // The mesh array, whose length is (row + 1) × (column + 1) × 2, where every two elements represent the x and y coordinates of a mesh vertex.
   private meshArray: Array<number> = [0, 0, 50, 0, 410, 0, 0, 180, 50, 180, 410, 180, 0, 360, 50, 360, 410, 360]
   @State pixelMap: image.PixelMap | undefined = undefined
 
   aboutToAppear(): void {
     // Replace "resources/base/media/img.png" with the image resource file you use.
+    // Create an image bitmap and draw it to the offscreen canvas.
     let img: ImageBitmap = new ImageBitmap("resources/base/media/img.png")
     this.context.drawImage(img, 0, 0, 200, 200)
+    // Obtain the PixelMap object from the canvas for the Shape component.
     this.pixelMap = this.context.getPixelMap(0, 0, 200, 200)
   }
 

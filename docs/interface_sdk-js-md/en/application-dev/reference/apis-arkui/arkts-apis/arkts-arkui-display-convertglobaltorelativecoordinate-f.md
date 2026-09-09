@@ -52,7 +52,7 @@ let position: display.Position = {
 try {
   // Convert the global coordinates to relative coordinates.
   let relPos: display.RelativePosition = display.convertGlobalToRelativeCoordinate(position, 0);
-  console.info(`The relative coordinate is ${relPos.displayId}, ${relPos.position.x}, ${relPos.position.y}`)
+  console.info(`The relative coordinate is ${relPos.displayId}, ${relPos.position.x}, ${relPos.position.y}`);
 } catch (exception) {
   console.error(`Failed to convert the global coordinate to the relative coordinate. Code: ${exception.code}, message: ${exception.message}`);
 }

@@ -109,11 +109,11 @@ struct ButtonExample {
     Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Start, justifyContent: FlexAlign.SpaceBetween }) {
       Text('Normal button').fontSize(9).fontColor(0xCCCCCC)
       Flex({ alignItems: ItemAlign.Center, justifyContent: FlexAlign.SpaceBetween }) {
-        Button('OK', { type: ButtonType.Normal, stateEffect: true })
-          .borderRadius(8)
-          .backgroundColor(0x317aff)
-          .width(90)
-          .onClick(() => {
+        Button('OK', { type: ButtonType.Normal, stateEffect: true }) // Create a normal button and enable the pressed state effect.
+          .borderRadius(8) // Set the corner radius.
+          .backgroundColor(0x317aff) // Set the background color.
+          .width(90) // Set the button width.
+          .onClick(() => { // Set the button click event.
             console.info('ButtonType.Normal');
           })
         Button({ type: ButtonType.Normal, stateEffect: true }) {
@@ -162,7 +162,7 @@ This example uses if/else statements to control the display text of the button.
 // xxx.ets
 @Entry
 @Component
-struct SwipeGestureExample {
+struct ButtonRenderControlExample {
   @State count: number = 0;
 
   build() {
@@ -172,11 +172,11 @@ struct SwipeGestureExample {
         .onClick(() => {
           this.count++;
         })
-      if (this.count <= 0) {
+      if (this.count <= 0) { // Display the negative button when the value of count is less than or equal to 0.
         Button('count is negative').fontSize(30).height(50)
-      } else if (this.count % 2 === 0) {
+      } else if (this.count % 2 === 0) { // Display the even button when the value of count is an even number.
         Button('count is even').fontSize(30).height(50)
-      } else {
+      } else { // Display the odd button when the value of count is an odd number.
         Button('count is odd').fontSize(30).height(50)
       }
     }.height('100%').width('100%').justifyContent(FlexAlign.Center)
@@ -202,10 +202,10 @@ struct ButtonTestDemo {
           .width(this.widthShortSize)
           .height(100)
           .backgroundColor(0x317aff)
-          .labelStyle({ overflow: TextOverflow.Clip,
-            maxLines: 1,
-            minFontSize: 20,
-            maxFontSize: 20,
+          .labelStyle({ overflow: TextOverflow.Clip, // Set the text overflow mode to clip.
+            maxLines: 1, // Set the maximum number of displayed lines to 1.
+            minFontSize: 20, // Set the minimum font size to 20.
+            maxFontSize: 20, // Set the maximum font size to 20.
             font: {
               size: 20,
               weight: FontWeight.Bolder,
@@ -233,9 +233,9 @@ struct ButtonExample {
     Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Start, justifyContent: FlexAlign.SpaceBetween }) {
       Text('Normal size button').fontSize(9).fontColor(0xCCCCCC)
       Flex({ alignItems: ItemAlign.Center, justifyContent: FlexAlign.SpaceBetween }) {
-        Button('Emphasized', { buttonStyle: ButtonStyleMode.EMPHASIZED });
-        Button('Normal', { buttonStyle: ButtonStyleMode.NORMAL });
-        Button('Textual', { buttonStyle: ButtonStyleMode.TEXTUAL });
+        Button('Emphasized', { buttonStyle: ButtonStyleMode.EMPHASIZED }); // Create an emphasized button.
+        Button('Normal', { buttonStyle: ButtonStyleMode.NORMAL }); // Create a normal button.
+        Button('Textual', { buttonStyle: ButtonStyleMode.TEXTUAL }); // Create a textual button.
       }
 
       Text('Small size button').fontSize(9).fontColor(0xCCCCCC)
@@ -306,9 +306,9 @@ class MyButtonStyle implements ContentModifier<ButtonConfiguration> {
 function buildButton1(config: ButtonConfiguration) {
   Column({ space: 30 }) {
     Text(config.enabled ? "enabled true" : "enabled false")
-    Text('Circle state' + (config.pressed? "(Pressed)" : "(Not pressed)"))
-    Text('X-coordinate of the click point:' + (config.enabled ? (config.contentModifier as MyButtonStyle).x : "0"))
-    Text('Y-coordinate of the click point:' + (config.enabled ? (config.contentModifier as MyButtonStyle).y : "0"))
+    Text('Circle state' + (config.pressed ? "(Pressed)" : "(Not pressed)"))
+    Text('X-coordinate of the click point: ' + (config.enabled ? (config.contentModifier as MyButtonStyle).x : "0"))
+    Text('Y-coordinate of the click point: ' + (config.enabled ? (config.contentModifier as MyButtonStyle).y : "0"))
     Circle({ width: 50, height: 50 })
       .fill(config.pressed ? (config.contentModifier as MyButtonStyle).selectedColor : Color.Black)
       .gesture(
@@ -324,8 +324,6 @@ struct ButtonExample {
   @State buttonEnabled: boolean = true;
   @State positionX: number = 0;
   @State positionY: number = 0;
-  @State state: boolean[] = [true, false];
-  @State index: number = 0;
 
   build() {
     Column() {
@@ -350,7 +348,7 @@ struct ButtonExample {
 }
 ```
 
-This example creates rounded rectangle buttons by configuring ButtonType.ROUNDED_RECTANGLE.
+This example demonstrates how to set a rounded rectangle button, and set its corner radius and the truncation effect of long text.
 
 ```TypeScript
 @Entry
@@ -361,7 +359,7 @@ struct ButtonExample {
       Text('Rounded rectangle button with rounded corners by default.').fontSize(9).fontColor(0xCCCCCC)
       Flex({ alignItems: ItemAlign.Center, justifyContent: FlexAlign.SpaceBetween }) {
         Button('Rounded rectangle')
-          .type(ButtonType.ROUNDED_RECTANGLE)
+          .type(ButtonType.ROUNDED_RECTANGLE) // Set the button type to rounded rectangle.
           .backgroundColor(0x317aff)
           .controlSize(ControlSize.NORMAL)
           .width(180)
@@ -400,11 +398,74 @@ struct Index {
       Button('helloWorld helloWorld helloWorld helloWorld helloWorld helloWorld')
         .width(200)
         .labelStyle({
-          textAlign: TextAlign.Center
+          textAlign: TextAlign.Center // Set the horizontal text alignment to center.
         })
     }
     .width('100%')
     .alignItems(HorizontalAlign.Center)
+  }
+}
+```
+
+This example shows how to use the universal attribute [systemMaterial](ts-universal-attributes-image-effect.md#systemmaterial) to set the system material of a component, so as to achieve the immersive light effect.
+The immersive light effect of a component is adaptively adjusted based on the device computing power and the immersive light effect set by the user in the system, without requiring your additional adaptation.
+Since API version 26.0.0, the systemMaterial attribute is added.
+
+```TypeScript
+import { uiMaterial } from '@kit.ArkUI';
+
+@Entry
+@Component
+struct Index {
+  @Builder
+  NavigationTitle() {
+    Column() {
+      Button('helloWorld')
+        .width(200)
+        .fontColor(Color.Black)
+        .systemMaterial(new uiMaterial.ImmersiveMaterial({
+          style: uiMaterial.ImmersiveStyle.THIN
+        }))
+        .backgroundColor('#7755bbff')
+    }
+    .width('100%')
+    .height('100%')
+  }
+
+  build() {
+    Column() {
+      Navigation() {
+        Row() {
+          Column()
+            .width('50%')
+            .height('100%')
+            .background(Color.White)
+
+          Column()
+            .width('50%')
+            .height('100%')
+            .background(Color.Black)
+        }
+        .height('100%')
+        .width('100%')
+        .margin({ top: 12, left: '10%' })
+      }
+      .title(this.NavigationTitle, {
+        systemMaterial: new uiMaterial.ImmersiveMaterial({
+          style: uiMaterial.ImmersiveStyle.ULTRA_THIN,
+          colorInvert: true,
+          interactive: true,
+          lightEffect: {}
+        }),
+        // systemMaterial is not associated with barStyle, but setting barStyle to STACK at the same time provides the best immersive effect.
+        barStyle: BarStyle.STACK
+      })
+      .hideTitleBar(false)
+      .titleMode(NavigationTitleMode.Free)
+      .onTitleModeChange((titleModel: NavigationTitleMode) => {
+        console.info('titleMode' + titleModel)
+      })
+    }
   }
 }
 ```

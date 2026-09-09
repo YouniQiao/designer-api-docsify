@@ -54,7 +54,7 @@ you are advised to create a placeholder for the data in the **onLazyLoading** me
 // The initial array provides the first 3 items (arr = ['No.0', 'No.1', 'No.2']), and lazy loading is enabled.
 List() {
   Repeat<string>(this.arr)
-    .each((obj: RepeatItem<string>) => { ListItem() { Text(obj.item) }})
+    .each((repeatItem: RepeatItem<string>) => { ListItem() { Text(repeatItem.item) }})
     .virtualScroll({ 
       onTotalCount: () => { return 100; },
       onLazyLoading: (index: number) => { this.arr[index] = `No.${index}`; }

@@ -49,7 +49,7 @@ Checks whether the application with the specified bundle name is running across 
 import { appManager } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
-let bundleName = "com.example.myapplication";
+let bundleName = 'com.example.myapplication';
 
 appManager.isApplicationRunning(bundleName).then((data) => {
   console.info(`The application running is: ${JSON.stringify(data)}`);
@@ -97,7 +97,7 @@ Checks whether the application with the specified bundle name is running across 
 import { appManager } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
-let bundleName = "com.example.myapplication";
+let bundleName = 'com.example.myapplication';
 
 try {
   appManager.isApplicationRunning(bundleName, (err, data) => {

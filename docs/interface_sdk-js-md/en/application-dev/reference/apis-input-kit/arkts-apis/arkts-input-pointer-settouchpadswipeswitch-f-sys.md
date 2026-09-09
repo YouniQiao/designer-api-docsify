@@ -48,7 +48,7 @@ struct Index {
       Text()
         .onClick(() => {
           try {
-            // Set the touchpad multi-finger swipe switch.
+            // Set the touchpad swipe switch.
             pointer.setTouchpadSwipeSwitch(true, (error: BusinessError) => {
               if (error) {
                 console.error(`Failed to set touchpad swipe switch, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);

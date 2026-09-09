@@ -48,10 +48,10 @@ import { Want } from '@kit.AbilityKit';
 struct Index {
   @State message: string = 'Message: ';
   private want: Want = {
-    bundleName: "com.example.uiextensiondemo",
-    abilityName: "ExampleUIExtensionAbility",
+    bundleName: 'com.example.uiextensiondemo',
+    abilityName: 'ExampleUIExtensionAbility',
     parameters: {
-      "ability.want.params.uiExtensionType": "sys/commonUI"
+      'ability.want.params.uiExtensionType': 'sys/commonUI'
     }
   }
 
@@ -127,28 +127,26 @@ struct Extension {
     this.extensionHostWindow?.on('avoidAreaChange', (info) => {
         console.info(`type = ${JSON.stringify(info.type)}, area = ${JSON.stringify(info.area)}`);
     });
-    let promise = this.extensionHostWindow?.hideNonSecureWindows(true);
-    promise?.then(()=> {
+    this.extensionHostWindow?.hideNonSecureWindows(true)?.then(() => {
       console.info(`Succeeded in hiding the non-secure windows.`);
-    }).catch((err: BusinessError)=> {
-      console.error(`Failed to hide the non-secure windows. Cause:${JSON.stringify(err)}`);
-    })
-    this.extensionHostWindow?.hidePrivacyContentForHost(true)?.then(() => {
-      console.info(`Successfully enabled privacy protection for non-system screenshots.`);
     }).catch((err: BusinessError) => {
-      console.error(`Failed enabled privacy protection for non-system screenshots. Cause:${JSON.stringify(err)}`);
-    })
+      console.error(`Failed to hide the non-secure windows. Code: ${err.code}, message: ${err.message}`);
+    });
+    this.extensionHostWindow?.hidePrivacyContentForHost(true)?.then(() => {
+      console.info(`Succeeded in enabling privacy protection for non-system screenshots.`);
+    }).catch((err: BusinessError) => {
+      console.error(`Failed to enable privacy protection for non-system screenshots. Code: ${err.code}, message: ${err.message}`);
+    });
   }
 
   aboutToDisappear(): void {
     this.extensionHostWindow?.off('windowSizeChange');
     this.extensionHostWindow?.off('avoidAreaChange');
-    let promise = this.extensionHostWindow?.hideNonSecureWindows(false);
-    promise?.then(()=> {
+    this.extensionHostWindow?.hideNonSecureWindows(false)?.then(() => {
       console.info(`Succeeded in showing the non-secure windows.`);
-    }).catch((err: BusinessError)=> {
-      console.error(`Failed to show the non-secure windows. Cause:${JSON.stringify(err)}`);
-    })
+    }).catch((err: BusinessError) => {
+      console.error(`Failed to show the non-secure windows. Code: ${err.code}, message: ${err.message}`);
+    });
   }
 
   build() {
@@ -156,47 +154,47 @@ struct Extension {
       Text(this.message)
         .fontSize(20)
         .fontWeight(FontWeight.Bold)
-      Button("Obtain Component Size").width('90%').margin({top: 5, bottom: 5}).fontSize(16).onClick(() => {
+      Button('Obtain Component Size').width('90%').margin({top: 5, bottom: 5}).fontSize(16).onClick(() => {
         let rect = this.extensionHostWindow?.properties.uiExtensionHostWindowProxyRect;
-        console.info(`Width, height, and position of the UIExtensionComponent: ${JSON.stringify(rect)}`);
+        console.info(`EmbeddedComponent position and size info: ${JSON.stringify(rect)}`);
       })
-      Button("Obtain Avoid Area Info").width('90%').margin({top: 5, bottom: 5}).fontSize(16).onClick(() => {
+      Button('Obtain System Avoid Area Info').width('90%').margin({top: 5, bottom: 5}).fontSize(16).onClick(() => {
         let avoidArea: window.AvoidArea | undefined = this.extensionHostWindow?.getWindowAvoidArea(window.AvoidAreaType.TYPE_SYSTEM);
-        console.info(`Avoid area: ${JSON.stringify(avoidArea)}`);
+        console.info(`System avoid area: ${JSON.stringify(avoidArea)}`);
       })
-      Button("Create Subwindow").width('90%').margin({top: 5, bottom: 5}).fontSize(16).onClick(() => {
+      Button('Create Subwindow').width('90%').margin({top: 5, bottom: 5}).fontSize(16).onClick(() => {
         let subWindowOpts: window.SubWindowOptions = {
-          'title': 'This is a subwindow',
+          title: 'This is a subwindow',
           decorEnabled: true
         };
         this.extensionHostWindow?.createSubWindowWithOptions('subWindowForHost', subWindowOpts)
           .then((subWindow: window.Window) => {
             this.subWindow = subWindow;
-            this.subWindow.loadContent('pages/Index', this.storage, (err, data) =>{
-              if (err && err.code != 0) {
+            this.subWindow.loadContent('pages/Index', this.storage, (err, data) => {
+              if (err && err.code) {
                 return;
               }
-              this.subWindow?.resize(300, 300, (err, data)=>{
-                if (err && err.code != 0) {
+              this.subWindow?.resize(300, 300, (err, data) => {
+                if (err && err.code) {
                   return;
                 }
-                this.subWindow?.moveWindowTo(100, 100, (err, data)=>{
-                  if (err && err.code != 0) {
+                this.subWindow?.moveWindowTo(100, 100, (err, data) => {
+                  if (err && err.code) {
                     return;
                   }
                   this.subWindow?.showWindow((err, data) => {
-                    if (err && err.code == 0) {
-                      console.info(`The subwindow has been shown!`);
+                    if (err && err.code) {
+                      console.error(`Failed to show the subwindow. Code: ${err.code}, message: ${err.message}`);
                     } else {
-                      console.error(`Failed to show the subwindow!`);
+                      console.info(`The subwindow has been shown!`);
                     }
                   });
                 });
               });
             });
           }).catch((error: BusinessError) => {
-            console.error(`Create subwindow failed: ${JSON.stringify(error)}`);
-          })
+            console.error(`Create subwindow failed. Code: ${error.code}, message: ${error.message}`);
+          });
       })
     }.width('100%').height('100%')
   }
@@ -209,6 +207,6 @@ Add an item to extensionAbilities in the module.json5 file of the sample applica
 {
   "name": "ExampleUIExtensionAbility",
   "srcEntry": "./ets/extensionAbility/ExampleUIExtensionAbility.ets",
-  "type": "sys/commonUI",
+  "type": "sys/commonUI"
 }
 ```

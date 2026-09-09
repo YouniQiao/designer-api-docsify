@@ -44,6 +44,6 @@ import { BusinessError } from '@kit.BasicServicesKit';
 print.queryAllActivePrintJobs().then((printJobs : print.PrintJob[]) => {
     console.info('queryAllActivePrintJobs success, data : ' + JSON.stringify(printJobs));
 }).catch((error: BusinessError) => {
-    console.error('queryAllActivePrintJobs failed, error : ' + JSON.stringify(error));
-})
+    console.error(`Failed to query all active print jobs. Code: ${error.code}, message: ${error.message}`);
+});
 ```

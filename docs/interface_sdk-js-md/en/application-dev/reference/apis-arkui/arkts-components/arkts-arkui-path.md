@@ -112,7 +112,7 @@ struct PathExample {
         Path()
           .width('250px')
           .height('310px')
-          .commands("M0 300 S100 0 240 300 Z")
+          .commands('M0 300 S100 0 240 300 Z')
           .fillOpacity(0)
           .stroke(Color.Black)
           .strokeWidth(3)

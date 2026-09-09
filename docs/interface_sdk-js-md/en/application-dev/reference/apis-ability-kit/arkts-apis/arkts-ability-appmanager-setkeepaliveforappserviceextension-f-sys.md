@@ -60,7 +60,7 @@ import { appManager } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 try {
-  let bundleName = "ohos.samples.keepaliveapp";
+  let bundleName = 'ohos.samples.keepaliveapp';
   appManager.setKeepAliveForAppServiceExtension(bundleName, true).then(() => {
     console.info(`setKeepAliveForAppServiceExtension success`);
   }).catch((err: BusinessError) => {

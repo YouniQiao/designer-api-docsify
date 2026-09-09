@@ -51,7 +51,7 @@ import { BusinessError } from '@kit.BasicServicesKit';
 
 async function createCsrTest() {
   let nameStr = '/CN=John Doe/OU=IT Department/O=ACME Inc./L=San Francisco/ST=California/C=US/CN=ALN C/CN=XTS';
-  let prikeyEnstr: string =
+  let priKeyEnstr: string =
     '-----BEGIN RSA PRIVATE KEY-----\n' +
       'Proc-Type: 4,ENCRYPTED\n' +
       'DEK-Info: AES-128-CBC,B5FFA3AEEE7176106FDDB0988B532F07\n\n' +
@@ -70,9 +70,9 @@ async function createCsrTest() {
       'd5Y4a6q13V4O5b73T5INmKl8rEbPGIw7WLR7BNj05QuzNcn5kA1aBFIJqsxQv46l\n' +
       '-----END RSA PRIVATE KEY-----\n';
   let priKeyInfo: cert.PrivateKeyInfo = {
-    key: prikeyEnstr,
+    key: priKeyEnstr,
     password: '123abc'
-  }
+  };
   let keyUsage: cert.CsrAttribute = {
     type: 'keyUsage',
     value: 'digitalSignature, keyEncipherment'
@@ -93,10 +93,10 @@ async function createCsrTest() {
       mdName: 'SHA256',
       outFormat: cert.EncodingBaseFormat.PEM,
       attributes: attribute
-    }
+    };
     try {
-      let csrStr = cert.generateCsr(priKeyInfo, conf)
-      console.info('generateCsr result: success, return str is ' + csrStr.toString())
+      let csrStr = cert.generateCsr(priKeyInfo, conf);
+      console.info('generateCsr result: success, return str is ' + csrStr.toString());
     } catch (error) {
       let e: BusinessError = error as BusinessError;
       console.error(`generateCsr failed, errCode: ${e.code}, errMsg: ${e.message}`);

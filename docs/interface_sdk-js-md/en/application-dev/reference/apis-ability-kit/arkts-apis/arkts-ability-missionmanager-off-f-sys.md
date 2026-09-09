@@ -71,6 +71,7 @@ let listener: missionManager.MissionListener = {
   }
 };
 
+// Index value of the listener, created by the system and assigned when the system mission state listener is registered.
 let listenerId = -1;
 let abilityWant: Want;
 let context: common.UIAbilityContext;
@@ -85,6 +86,7 @@ export default class EntryAbility extends UIAbility {
   onDestroy() {
     try {
       if (listenerId !== -1) {
+        // Unregister the system mission state listener.
         missionManager.off('mission', listenerId, (error: BusinessError) => {
           if (error) {
             console.error(`MissionManager.off failed, error code: ${error.code}, error msg: ${error.message}`);
@@ -105,6 +107,7 @@ export default class EntryAbility extends UIAbility {
     // The main window is created. Set a main page for this ability.
     console.info('[Demo] EntryAbility onWindowStageCreate');
     try {
+      // Register the system mission state listener.
       listenerId = missionManager.on('mission', listener);
     } catch (paramError) {
       let code = (paramError as BusinessError).code;
@@ -114,7 +117,7 @@ export default class EntryAbility extends UIAbility {
 
     windowStage.loadContent('pages/index', (err: BusinessError, data) => {
       if (err.code) {
-        console.error(`Failed to load the content. Cause: ${JSON.stringify(err)}`);
+        console.error(`Failed to load the content. Code: ${err.code}, message: ${err.message}`);
         return;
       }
       console.info(`Succeeded in loading the content. Data: ${JSON.stringify(data)}`);
@@ -209,7 +212,7 @@ export default class EntryAbility extends UIAbility {
     try {
       if (listenerId !== -1) {
         missionManager.off('mission', listenerId).catch((error: BusinessError) => {
-          console.error(`MissionManager.off failed, error code: ${error.code}, error msg: ${error.message}.`);
+          console.error(`MissionManager.off failed, Code: ${error.code}, message: ${error.message}.`);
         });
       }
     } catch (paramError) {
@@ -224,6 +227,7 @@ export default class EntryAbility extends UIAbility {
     // The main window is created. Set a main page for this ability.
     console.info('[Demo] EntryAbility onWindowStageCreate');
     try {
+      // Register System Mission State Listener
       listenerId = missionManager.on('mission', listener);
     } catch (paramError) {
       let code = (paramError as BusinessError).code;
@@ -233,7 +237,7 @@ export default class EntryAbility extends UIAbility {
 
     windowStage.loadContent('pages/index', (err: BusinessError, data) => {
       if (err.code) {
-        console.error(`Failed to load the content. Cause: ${JSON.stringify(err)}`);
+        console.error(`Failed to load the content. Code: ${err.code}, message: ${err.message}`);
         return;
       }
       console.info(`Succeeded in loading the content. Data: ${JSON.stringify(data)}`);
@@ -280,6 +284,90 @@ Deregisters a mission status listener. This API uses an asynchronous callback to
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [16300002](../errorcode-ability.md#16300002-nonexistent-mission-listener) | The specified mission listener does not exist. |
 
+**Examples**
+
+```TypeScript
+import { missionManager, UIAbility, AbilityConstant, common, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { window } from '@kit.ArkUI';
+import { image } from '@kit.ImageKit';
+
+let listener: missionManager.MissionListener = {
+  onMissionCreated: (missionEvent: number) => {
+    console.info('--------onMissionCreated-------');
+  },
+  onMissionDestroyed: (missionEvent: number) => {
+    console.info('--------onMissionDestroyed-------');
+  },
+  onMissionSnapshotChanged: (missionEvent: number) => {
+    console.info('--------onMissionSnapshotChanged-------');
+  },
+  onMissionMovedToFront: (missionEvent: number) => {
+    console.info('--------onMissionMovedToFront-------');
+  },
+  onMissionIconUpdated: (missionEvent: number, icon: image.PixelMap) => {
+    console.info('--------onMissionIconUpdated-------');
+  },
+  onMissionClosed: (missionEvent: number) => {
+    console.info('--------onMissionClosed-------');
+  },
+  onMissionLabelUpdated: (missionEvent: number) => {
+    console.info('--------onMissionLabelUpdated-------');
+  }
+};
+
+let listenerId = -1;
+let abilityWant: Want;
+let context: common.UIAbilityContext;
+
+export default class EntryAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam) {
+    console.info('[Demo] EntryAbility onCreate');
+    abilityWant = want;
+    context = this.context;
+  }
+
+  onDestroy() {
+    try {
+      if (listenerId !== -1) {
+        missionManager.off('missionEvent', listenerId, (error: BusinessError) => {
+          if (error) {
+            console.error(`MissionManager.off failed, error code: ${error.code}, error msg: ${error.message}`);
+            return;
+          }
+          console.info(`MissionManager.off success.`);
+        });
+      }
+    } catch (paramError) {
+      let code = (paramError as BusinessError).code;
+      let message = (paramError as BusinessError).message;
+      console.error(`error: ${code}, ${message} `);
+    }
+    console.info('[Demo] EntryAbility onDestroy');
+  }
+
+  onWindowStageCreate(windowStage: window.WindowStage) {
+    // Main window is created, set main page for this ability
+    console.info('[Demo] EntryAbility onWindowStageCreate');
+    try {
+      listenerId = missionManager.on('missionEvent', listener);
+    } catch (paramError) {
+      let code = (paramError as BusinessError).code;
+      let message = (paramError as BusinessError).message;
+      console.error(`error: ${code}, ${message} `);
+    }
+
+    windowStage.loadContent('pages/index', (err: BusinessError, data) => {
+      if (err.code) {
+        console.error(`Failed to load the content. Code: ${err.code}, message: ${err.message}`);
+        return;
+      }
+      console.info(`Succeeded in loading the content. Data: ${JSON.stringify(data)}`);
+    });
+  }
+}
+```
+
 
 ## off('missionEvent')
 
@@ -322,3 +410,83 @@ Unregisters a mission status listener. This API uses a promise to return the res
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [16300002](../errorcode-ability.md#16300002-nonexistent-mission-listener) | The specified mission listener does not exist. |
+
+**Examples**
+
+```TypeScript
+import { missionManager, UIAbility, AbilityConstant, common, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { window } from '@kit.ArkUI';
+import { image } from '@kit.ImageKit';
+
+let listener: missionManager.MissionListener = {
+  onMissionCreated: (missionEvent: number) => {
+    console.info('--------onMissionCreated-------');
+  },
+  onMissionDestroyed: (missionEvent: number) => {
+    console.info('--------onMissionDestroyed-------');
+  },
+  onMissionSnapshotChanged: (missionEvent: number) => {
+    console.info('--------onMissionSnapshotChanged-------');
+  },
+  onMissionMovedToFront: (missionEvent: number) => {
+    console.info('--------onMissionMovedToFront-------');
+  },
+  onMissionIconUpdated: (missionEvent: number, icon: image.PixelMap) => {
+    console.info('--------onMissionIconUpdated-------');
+  },
+  onMissionClosed: (missionEvent: number) => {
+    console.info('--------onMissionClosed-------');
+  },
+  onMissionLabelUpdated: (missionEvent: number) => {
+    console.info('--------onMissionLabelUpdated-------');
+  }
+};
+
+let listenerId = -1;
+let abilityWant: Want;
+let context: common.UIAbilityContext;
+
+export default class EntryAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam) {
+    console.info('[Demo] EntryAbility onCreate');
+    abilityWant = want;
+    context = this.context;
+  }
+
+  onDestroy() {
+    try {
+      if (listenerId !== -1) {
+        missionManager.off('missionEvent', listenerId).catch((error: BusinessError) => {
+          console.error(`MissionManager.off failed, Code: ${error.code}, message: ${error.message}.`);
+        });
+      }
+    } catch (paramError) {
+      let code = (paramError as BusinessError).code;
+      let message = (paramError as BusinessError).message;
+      console.error(`error: ${code}, ${message} `);
+    }
+    console.info('[Demo] EntryAbility onDestroy');
+  }
+
+  onWindowStageCreate(windowStage: window.WindowStage) {
+    // Main window is created, set main page for this ability
+    console.info('[Demo] EntryAbility onWindowStageCreate');
+    try {
+      listenerId = missionManager.on('missionEvent', listener);
+    } catch (paramError) {
+      let code = (paramError as BusinessError).code;
+      let message = (paramError as BusinessError).message;
+      console.error(`error: ${code}, ${message} `);
+    }
+
+    windowStage.loadContent('pages/index', (err: BusinessError, data) => {
+      if (err.code) {
+        console.error(`Failed to load the content. Code: ${err.code}, message: ${err.message}`);
+        return;
+      }
+      console.info(`Succeeded in loading the content. Data: ${JSON.stringify(data)}`);
+    });
+  }
+}
+```

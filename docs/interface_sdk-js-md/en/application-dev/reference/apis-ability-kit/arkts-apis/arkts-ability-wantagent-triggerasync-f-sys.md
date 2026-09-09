@@ -110,13 +110,13 @@ class MyAbility extends UIAbility {
           });
         } catch (err) {
           console.error(`triggerAsync failed! ${err.code} ${err.message}`);
-        }
-      });
-    } catch (err) {
-      let code = (err as BusinessError).code;
-      let msg = (err as BusinessError).message;
-      console.error(`getWantAgent failed, code: ${code}, message: ${msg}.`);
-    }
-  }
-}
+         }
+       });
+     } catch (err) {
+       let code = (err as BusinessError).code;
+       let msg = (err as BusinessError).message;
+       console.error(`getWantAgent failed, code: ${code}, message: ${msg}.`);
+     }
+   }
+ }
 ```

@@ -236,7 +236,7 @@ let encodingBlob: cert.EncodingBlob = {
   encodingFormat: cert.EncodingFormat.FORMAT_PEM
 };
 
-cert.createX509CertChain(encodingBlob, (err, certChain) => {
+cert.createX509CertChain(encodingBlob, (err, _certChain) => {
   if (err) {
     console.error(`createX509CertChain failed, errCode: ${err.code}, errMsg: ${err.message}`);
   } else {

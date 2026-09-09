@@ -110,3 +110,151 @@ import { BackPressActionProposal, BaseGestureHandlingProposal, ClickActionPropos
 | [OnOverlayBackPressCallback](arkts-arkui-onoverlaybackpresscallback-t.md) | Defines the callback type for intercepting a back-press event on an overlay. |
 | [PanListenerCallback](arkts-arkui-panlistenercallback-t.md) | Defines a callback for pan gesture events. |
 | [PointerStyle](arkts-arkui-pointerstyle-t.md) | Defines the pointer style. |
+
+## Examples
+
+The following example uses the [enableSmartTapAndSlideGestures](arkts-arkui-arkui-uicontext-smartgesturecontroller-c.md#enablesmarttapandslidegestures) API to enable and disable smart gestures, uses the [registerMonitor](arkts-arkui-arkui-uicontext-smartgesturecontroller-c.md#registermonitor), [unregisterMonitor](arkts-arkui-arkui-uicontext-smartgesturecontroller-c.md#unregistermonitor), and [clearMonitors](arkts-arkui-arkui-uicontext-smartgesturecontroller-c.md#clearmonitors) APIs to register, unregister, or clear listener callbacks for custom action handling, and uses [requestSelected](arkts-arkui-arkui-uicontext-smartgesturecontroller-c.md#requestselected) to select a component.
+Since API version 26.0.0, enableSmartTapAndSlideGestures, registerMonitor, unregisterMonitor, clearMonitors, requestSelected, and clearSelected are added.
+
+```TypeScript
+import {
+  BackPressActionProposal,
+  BaseGestureHandlingProposal,
+  ClickActionProposal,
+  GestureHandlingResolution,
+  NoneActionProposal,
+  PageSwitchActionProposal,
+  ScrollActionProposal,
+  SelectActionProposal
+} from '@kit.ArkUI';
+
+@Entry
+@Component
+struct SmartGestureControllerExample {
+  private controller = this.getUIContext().getSmartGestureController();
+  @State clickCount: number = 0;
+  @State hint: string = '';
+  // Customize a callback function.
+  private callback = (proposal: BaseGestureHandlingProposal): GestureHandlingResolution => {
+    // proposal.operateIntention indicates the underlying operation intent. The value can be TAP, SLIDE_FORWARD, or BACK_PRESS.
+    // proposal.action indicates the final action to be executed. The value can be NONE, SELECT, CLICK, PAGE_FORWARD, SCROLL_FORWARD, or BACK_PRESS.
+    this.hint = `Intent=${proposal.operateIntention}, Action=${proposal.action}`;
+
+    // Consume the current smart gesture, and then rewrite the default action handling based on proposal.action.
+    const resolution = new GestureHandlingResolution(true);
+
+    // Override the action to click.
+    if (proposal.action === SmartGestureAction.CLICK) {
+      const node = this.getUIContext().getFrameNodeById('target_button');
+      if (node) {
+        resolution.selectedProposal = new ClickActionProposal(node);
+      }
+    } else if (proposal.action === SmartGestureAction.SELECT) { // Override as the select action.
+      const node = this.getUIContext().getFrameNodeById('target_text');
+      if (node) {
+        resolution.selectedProposal = new SelectActionProposal(node);
+      }
+    } else if (proposal.action === SmartGestureAction.PAGE_FORWARD) { // Override as the page turning action.
+      const node = this.getUIContext().getFrameNodeById('scroll_area');
+      if (node) {
+        // pageCount: The value range is [0, +∞), in pages.
+        resolution.selectedProposal = new PageSwitchActionProposal(node, 1);
+      }
+    } else if (proposal.action === SmartGestureAction.SCROLL_FORWARD) { // Override as the scroll action.
+      const node = this.getUIContext().getFrameNodeById('scroll_area');
+      if (node) {
+        // distance: The value range is [0, +∞), in vp.
+        resolution.selectedProposal = new ScrollActionProposal(node, 180);
+      }
+    } else if (proposal.action === SmartGestureAction.NONE) { // Override as the empty action (no operation is performed).
+      resolution.selectedProposal = new NoneActionProposal();
+    } else if (proposal.action === SmartGestureAction.BACK_PRESS) { // Override as the back action.
+      resolution.selectedProposal = new BackPressActionProposal();
+    }
+
+    return resolution;
+  };
+
+  build() {
+    Scroll() {
+      Column({ space: 12 }) {
+        // Operation intent prompt.
+        Text(this.hint).fontSize(13).fontColor('#666')
+
+        // Target node: text
+        Text('Text component')
+          .id('target_text')
+          .fontSize(18)
+          .width('100%')
+          .padding(12)
+          .borderRadius(10)
+          .borderWidth(1)
+          .smartGestureShortcut({ action: GestureShortcut.PRIMARY, enabled: true, selectable: true })
+          .onClick(() => {
+            console.info('smartGesture click is triggered');
+          })
+
+        // Target node: button
+        Button(`Button Component/Click=${this.clickCount}`)
+          .id('target_button').width('100%')
+          .smartGestureShortcut({ action: GestureShortcut.PRIMARY, enabled: true, selectable: true })
+          .onClick(() => {
+            this.clickCount += 1;
+          })
+
+        // Target node: scrollable area
+        Scroll() {
+          Column({ space: 6 }) {
+            ForEach([0, 1, 2, 3], (item: number) => {
+              Text(`Scrollable content ${item}`).width('100%').padding(10).borderRadius(8)
+                .backgroundColor(item % 2 === 0 ? '#f6f8fa' : '#ffffff')
+            })
+          }.width('100%')
+        }
+        .id('scroll_area').height(120)
+
+        Divider()
+
+        // requestSelected/clearSelected
+        Text('Selection control').fontWeight(FontWeight.Bold).fontSize(16)
+        Row({ space: 8 }) {
+          Button('Select').layoutWeight(1)
+            .onClick(() => this.controller.requestSelected('target_button'))
+          Button('Select Text').layoutWeight(1)
+            .onClick(() => this.controller.requestSelected('target_text'))
+          Button('Clear Selection').layoutWeight(1)
+            .onClick(() => this.controller.clearSelected())
+        }.width('100%')
+
+        // registerMonitor/unregisterMonitor/clearMonitors
+        Text('Monitor control').fontWeight(FontWeight.Bold).fontSize(16)
+        Row({ space: 8 }) {
+          Button('Register').layoutWeight(1)
+            .onClick(() => this.controller.registerMonitor(this.callback))
+          Button('Unregister').layoutWeight(1)
+            .onClick(() => this.controller.unregisterMonitor(this.callback))
+          Button('Clear').layoutWeight(1)
+            .onClick(() => this.controller.clearMonitors())
+        }.width('100%')
+
+        // enableSmartTapAndSlideGestures
+        Row({ space: 8 }) {
+          Button('Enable Gesture').layoutWeight(1)
+            .onClick(() => this.controller.enableSmartTapAndSlideGestures(true))
+          Button('Disable Gesture').layoutWeight(1)
+            .onClick(() => this.controller.enableSmartTapAndSlideGestures(false))
+        }.width('100%')
+      }.width('100%')
+    }
+    .layoutWeight(1)
+    .onAppear(() => {
+      this.controller.enableSmartTapAndSlideGestures(true);
+      this.controller.registerMonitor(this.callback);
+    })
+    .width('100%')
+    .height('100%')
+    .padding(12)
+    .backgroundColor('#f1f3f5')
+  }
+}
+```

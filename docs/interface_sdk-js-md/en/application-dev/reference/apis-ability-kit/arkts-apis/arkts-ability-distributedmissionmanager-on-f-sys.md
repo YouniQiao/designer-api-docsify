@@ -44,10 +44,11 @@ Subscribes to continuation state change events of the current mission.
 import { distributedMissionManager } from '@kit.AbilityKit';
 
   try {
+    // Register a listener for mission continuation state change events.
     distributedMissionManager.on('continueStateChange', (data) => {
       console.info("continueStateChange on:" + JSON.stringify(data));
     });
   } catch (error) {
-    console.error("continueStateChange err: " + JSON.stringify(error));
+    console.error(`continueStateChange failed. Code: ${error.code}, message: ${error.message}`);
   }
 ```

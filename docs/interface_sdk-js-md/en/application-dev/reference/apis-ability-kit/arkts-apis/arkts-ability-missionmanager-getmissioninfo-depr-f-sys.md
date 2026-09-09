@@ -40,6 +40,7 @@ import missionManager from '@ohos.application.missionManager';
 
 let missionId: number = 0;
 
+// Obtain information about the specified mission.
 missionManager.getMissionInfo('', missionId, (error, mission) => {
   if (error.code) {
     console.error(`getMissionInfo failed, error.code: ${error.code}, error.message: ${error.message}`);
@@ -97,6 +98,7 @@ import { BusinessError } from '@ohos.base';
 
 let testMissionId = 1;
 try {
+  // Obtain information about the specified mission.
   missionManager.getMissionInfo('', testMissionId).then((data) => {
     console.info(`getMissionInfo successfully. Data: ${JSON.stringify(data)}`);
   }).catch((error: BusinessError) => {

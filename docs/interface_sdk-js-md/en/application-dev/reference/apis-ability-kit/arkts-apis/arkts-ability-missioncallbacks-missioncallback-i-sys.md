@@ -33,18 +33,22 @@ Called by system when mission changed.
 ```TypeScript
 import { distributedMissionManager } from '@kit.AbilityKit';
 
+// Register the mission listener.
 distributedMissionManager.registerMissionListener(
   {
     deviceId: '123456'
   },
   {
+    // Callback invoked when the mission changes, receiving the device ID.
     notifyMissionsChanged: (deviceId: string) => {
       console.info(`notifyMissionsChanged deviceId: ${JSON.stringify(deviceId)}`);
     },
+    // Callback invoked when the snapshot changes, receiving the device ID and mission ID.
     notifySnapshot: (deviceId: string, mission: number) => {
       console.info(`notifySnapshot deviceId: ${JSON.stringify(deviceId)}`);
       console.info(`notifySnapshot mission: ${JSON.stringify(mission)}`);
     },
+    // Callback invoked when the network is disconnected, receiving the device ID and network status.
     notifyNetDisconnect: (deviceId: string, state: number) => {
       console.info(`notifyNetDisconnect deviceId: ${JSON.stringify(deviceId)}`);
       console.info(`notifyNetDisconnect state: ${JSON.stringify(state)}`);
@@ -76,18 +80,22 @@ Called by system when network disconnect.
 ```TypeScript
 import { distributedMissionManager } from '@kit.AbilityKit';
 
+// Register the mission listener.
 distributedMissionManager.registerMissionListener(
   {
     deviceId: '123456'
   },
   {
+    // Callback invoked when the mission changes, receiving the device ID.
     notifyMissionsChanged: (deviceId: string) => {
       console.info(`notifyMissionsChanged deviceId: ${JSON.stringify(deviceId)}`);
     },
+    // Callback invoked when the snapshot changes, receiving the device ID and mission ID.
     notifySnapshot: (deviceId: string, mission: number) => {
       console.info(`notifySnapshot deviceId: ${JSON.stringify(deviceId)}`);
       console.info(`notifySnapshot mission: ${JSON.stringify(mission)}`);
     },
+    // Callback invoked when the network is disconnected, receiving the device ID and network status.
     notifyNetDisconnect: (deviceId: string, state: number) => {
       console.info(`notifyNetDisconnect deviceId: ${JSON.stringify(deviceId)}`);
       console.info(`notifyNetDisconnect state: ${JSON.stringify(state)}`);
@@ -119,18 +127,22 @@ Called by system when snapshot changed.
 ```TypeScript
 import { distributedMissionManager } from '@kit.AbilityKit';
 
+// Register the mission listener.
 distributedMissionManager.registerMissionListener(
   {
     deviceId: '123456'
   },
   {
+    // Callback invoked when the mission changes, receiving the device ID.
     notifyMissionsChanged: (deviceId: string) => {
       console.info(`notifyMissionsChanged deviceId: ${JSON.stringify(deviceId)}`);
     },
+    // Callback invoked when the snapshot changes, receiving the device ID and mission ID.
     notifySnapshot: (deviceId: string, mission: number) => {
       console.info(`notifySnapshot deviceId: ${JSON.stringify(deviceId)}`);
       console.info(`notifySnapshot mission: ${JSON.stringify(mission)}`);
     },
+    // Callback invoked when the network is disconnected, receiving the device ID and network status.
     notifyNetDisconnect: (deviceId: string, state: number) => {
       console.info(`notifyNetDisconnect deviceId: ${JSON.stringify(deviceId)}`);
       console.info(`notifyNetDisconnect state: ${JSON.stringify(state)}`);

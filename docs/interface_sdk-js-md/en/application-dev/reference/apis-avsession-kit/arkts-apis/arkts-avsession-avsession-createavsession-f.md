@@ -55,6 +55,10 @@ struct Index {
           let sessionId: string;  // Used as an input parameter of subsequent functions.
 
           avSession.createAVSession(context, tag, "audio", async (err:BusinessError, data: avSession.AVSession) => {
+              if (err) {
+                console.error(`Failed to create AV session, error code: ${err.code}, error message: ${err.message}`);
+                return;
+              }
               currentAVSession = data;
               sessionId = currentAVSession.sessionId;
               console.info(`Succeeded in creating AV session, sessionId: ${sessionId}`);

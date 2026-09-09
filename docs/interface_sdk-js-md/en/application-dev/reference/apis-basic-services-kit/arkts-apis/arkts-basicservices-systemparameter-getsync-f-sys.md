@@ -41,9 +41,9 @@ Obtains a value of the specified key.
 
 ```TypeScript
 try {
-    let info: string = systemParameter.getSync("const.ohos.apiversion");
-    console.info(JSON.stringify(info));
-} catch(e) {
-    console.error("getSync unexpected error: " + e);
+  let info: string = systemParameter.getSync('const.ohos.apiversion');
+  console.info(JSON.stringify(info));
+} catch (e) {
+  console.error('getSync unexpected error: ' + e);
 }
 ```

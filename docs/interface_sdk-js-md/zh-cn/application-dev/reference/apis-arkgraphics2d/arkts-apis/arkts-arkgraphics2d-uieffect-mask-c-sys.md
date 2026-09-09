@@ -45,6 +45,33 @@ static createBinocularMask(radiusX: number, radiusY: number, gap: number, softne
 | --- | --- |
 | [Mask](arkts-arkgraphics2d-uieffect-mask-c-sys.md) | 带有双目蒙版效果的 Mask 实例。 |
 
+**示例**
+
+```TypeScript
+import { uiEffect } from '@kit.ArkGraphics2D';
+
+@Entry
+@Component
+struct Index {
+  private myFilter: uiEffect.Filter = uiEffect.createFilter()
+    .maskDispersion(uiEffect.Mask.createBinocularMask(0.28, 0.48, 0.52, 0.20), 1.0, [0.026, 0.0],
+      [0.0, 0.0],
+      [-0.026, 0.0])
+
+  build() {
+    Stack() {
+      Image($r('app.media.BG_00001'))
+      Stack() {
+
+      }
+      .width('100%')
+      .height('100%')
+      .backgroundFilter(this.myFilter)
+    }
+  }
+}
+```
+
 ## createFractalGlassMask
 
 ```TypeScript
@@ -77,6 +104,36 @@ static createFractalGlassMask(glassNum: number, glassStrength: number, glassSoft
 | 类型 | 说明 |
 | --- | --- |
 | [Mask](arkts-arkgraphics2d-uieffect-mask-c-sys.md) | 带有分形玻璃蒙版效果的 Mask 实例。 |
+
+**示例**
+
+```TypeScript
+import { image } from '@kit.ImageKit';
+import { uiEffect } from '@kit.ArkGraphics2D';
+
+@Entry
+@Component
+struct Index {
+  private getPixelMap(): image.PixelMap | undefined {
+    return this.getUIContext().getHostContext()?.resourceManager.getDrawableDescriptor($r('app.media.mask').id)?.getPixelMap();
+  }
+
+  private myFilter: uiEffect.Filter = uiEffect.createFilter()
+    .displacementDistort(uiEffect.Mask.createFractalGlassMask(20.0, 1.5, 0.005, true, this.getPixelMap()), [1.0, 0.0])
+
+  build() {
+    Stack() {
+      Image($r('app.media.BG_00000'))
+      Stack() {
+
+      }
+      .width('100%')
+      .height('100%')
+      .backgroundFilter(this.myFilter)
+    }
+  }
+}
+```
 
 ## createPixelMapMask
 
@@ -407,6 +464,73 @@ static createSweepRefractionMask(param: SweepRefractionParam,
 | --- | --- |
 | [Mask](arkts-arkgraphics2d-uieffect-mask-c-sys.md) | 返回带有扫光折射效果的 Mask。 |
 
+**示例**
+
+```TypeScript
+import { uiEffect, common2D } from '@kit.ArkGraphics2D';
+
+// 构建色散颜色：RGB三通道各3个stop
+let chromaColors: uiEffect.Color[] = [
+  { red: 0.8, green: 0, blue: 0, alpha: 1 },
+  { red: 0.8, green: 0, blue: 0, alpha: 1 },
+  { red: 0.8, green: 0, blue: 0, alpha: 1 },
+  { red: 0, green: 0.8, blue: 0, alpha: 1 },
+  { red: 0, green: 0.8, blue: 0, alpha: 1 },
+  { red: 0, green: 0.8, blue: 0, alpha: 1 },
+  { red: 0, green: 0, blue: 0.8, alpha: 1 },
+  { red: 0, green: 0, blue: 0.8, alpha: 1 },
+  { red: 0, green: 0, blue: 0.8, alpha: 1 },
+];
+
+// 构建颜色位置：每个通道3个stop，分别对应环的起止和中间位置
+let chromaPositions: common2D.Point[] = [];
+for (let g = 0; g < 3; g++) {
+  chromaPositions.push({ x: 0, y: 0 });
+  chromaPositions.push({ x: 0.5, y: 0.5 });
+  chromaPositions.push({ x: 1, y: 1 });
+}
+
+// 创建扫光折射遮罩
+let mask = uiEffect.Mask.createSweepRefractionMask(
+  {
+    maskRadius: 0.0,
+    edgeThickness: 100.0,
+    refractAmount: 0.2,
+    rippleWidth: 0.5,
+    sweepOffset: 0.25,
+    chromaDelta: 0.1
+  },
+  {
+    shapeType: uiEffect.PrismShapeType.ROUNDED_RECT,
+    cornerRadius: 0.12,
+    prismWidth: 1.0,
+    prismHeight: 1.0,
+    sweepCenterX: 0.0,
+    sweepCenterY: 0.0
+  }
+);
+
+@Entry
+@Component
+struct SweepRefractionExample {
+  build() {
+    Column() {
+      Row() {}
+        .width('100%').height('100%')
+        .hitTestBehavior(HitTestMode.None)
+        .visualEffect(uiEffect.createEffect()
+          .colorGradient(chromaColors, chromaPositions,
+            [10.0, 10.0, 10.0, 10.0, 10.0, 10.0, 10.0, 10.0, 10.0],
+            mask))
+        .blendMode(BlendMode.SRC_OVER)
+    }
+    .width(342).height(137)
+    .borderRadius(16).clip(true)
+    .backgroundColor('#0A0A14')
+  }
+}
+```
+
 ## createUseEffectMask
 
 ```TypeScript
@@ -524,6 +648,47 @@ static createWarpedRingMask(ringParam: WarpedRingParam): Mask
 | 类型 | 说明 |
 | --- | --- |
 | [Mask](arkts-arkgraphics2d-uieffect-mask-c-sys.md) | 返回带有扭曲光环蒙版效果的 Mask。 |
+
+**示例**
+
+```TypeScript
+import { uiEffect } from '@kit.ArkGraphics2D';
+
+// params that control the shape of the Mask
+let param: uiEffect.WarpedRingParam = {
+  radius: 0.5,
+  baseHalfWidth: 0.02,
+  widthVariation: 0.4,
+  rotateAngle: 0.0,
+  rotate3DProgress: 0.0,
+  noiseEvolution: 1.0
+};
+
+// the Mask that defines the shape to be extracted from the color gradient or other effects
+let exampleMask: uiEffect.Mask = uiEffect.Mask.createWarpedRingMask(param);
+
+@Entry
+@Component
+struct example {
+  build() {
+    RelativeContainer() {
+      Stack() {
+        Column()
+          .width(200)
+          .height(200)
+          .visualEffect(
+            uiEffect.createEffect().colorGradient(
+              [ { red:1.0, green:0.5, blue:0.75, alpha:1.0 } ],
+              [ { x:1.0, y:0.5 } ],
+              [ 1.0 ],
+              exampleMask
+            )
+          )
+      }
+    }
+  }
+}
+```
 
 ## createWaveGradientMask
 

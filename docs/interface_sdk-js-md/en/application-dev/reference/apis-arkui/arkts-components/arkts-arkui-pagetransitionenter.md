@@ -66,25 +66,25 @@ Invoked on a per-frame basis until the entrance animation is complete, with the 
 
 ## Examples
 
-Method 1: Configure different entrance and exit animations based on different transition types.
+Custom method 1: Configure different exit and entrance animations through different exit/entrance types.
 
 ```TypeScript
 // Index.ets
 @Entry
 @Component
 struct Index {
-  @State scale1: number = 1;
-  @State opacity1: number = 1;
+  @State pageScale: number = 1;
+  @State pageOpacity: number = 1;
 
   build() {
     Column() {
       // Replace $r("app.media.transition_image1") with the image resource file you use.
-      Image($r("app.media.transition_image1")).width('100%').height('100%')
+      Image($r('app.media.transition_image1')).width('100%').height('100%')
     }
     .width('100%')
     .height('100%')
-    .scale({ x: this.scale1 })
-    .opacity(this.opacity1)
+    .scale({ x: this.pageScale })
+    .opacity(this.pageOpacity)
     .onClick(() => {
       this.getUIContext().getRouter().pushUrl({ url: 'pages/Page1' });
     })
@@ -94,15 +94,15 @@ struct Index {
     PageTransitionEnter({ duration: 1200, curve: Curve.Linear })
       .onEnter((type: RouteType, progress: number) => {
         if (type == RouteType.Push || type == RouteType.Pop) {
-          this.scale1 = progress;
-          this.opacity1 = progress;
+          this.pageScale = progress;
+          this.pageOpacity = progress;
         }
       })
     PageTransitionExit({ duration: 1200, curve: Curve.Ease })
       .onExit((type: RouteType, progress: number) => {
         if (type == RouteType.Push) {
-          this.scale1 = 1 - progress;
-          this.opacity1 = 1 - progress;
+          this.pageScale = 1 - progress;
+          this.pageOpacity = 1 - progress;
         }
       })
   }
@@ -114,8 +114,8 @@ struct Index {
 @Entry
 @Component
 struct Page1 {
-  @State scale2: number = 1;
-  @State opacity2: number = 1;
+  @State pageScale: number = 1;
+  @State pageOpacity: number = 1;
 
   build() {
     Column() {
@@ -124,8 +124,8 @@ struct Page1 {
     }
     .width('100%')
     .height('100%')
-    .scale({ x: this.scale2 })
-    .opacity(this.opacity2)
+    .scale({ x: this.pageScale })
+    .opacity(this.pageOpacity)
     .onClick(() => {
       this.getUIContext().getRouter().pushUrl({ url: 'pages/Index' });
     })
@@ -135,15 +135,15 @@ struct Page1 {
     PageTransitionEnter({ duration: 1200, curve: Curve.Linear })
       .onEnter((type: RouteType, progress: number) => {
         if (type == RouteType.Push || type == RouteType.Pop) {
-          this.scale2 = progress;
+          this.pageScale = progress;
         }
-        this.opacity2 = progress;
+        this.pageOpacity = progress;
       })
     PageTransitionExit({ duration: 1200, curve: Curve.Ease })
       .onExit((type: RouteType, progress: number) => {
         if (type == RouteType.Pop) {
-          this.scale2 = 1 - progress;
-          this.opacity2 = 1 - progress;
+          this.pageScale = 1 - progress;
+          this.pageOpacity = 1 - progress;
         }
       })
   }
@@ -168,12 +168,12 @@ struct Index {
     })
   }
 
-  // Use the default effects provided by the system, such as translation, scaling, and opacity.
+  // Use the default effects provided by the system (translation, scaling, opacity, etc.).
   pageTransition() {
-    // Set the duration of the entrance animation to 1200 ms, in the purpose of matching the duration of the exit animation of the other page.
+    // Set the duration of the entrance animation to 1200 ms, to match the duration of the exit animation of the other page.
     PageTransitionEnter({ duration: 1200 })
       .slide(SlideEffect.Left)
-    // Set the duration of the exit animation to 1000 ms, in the purpose of matching the duration of the entrance animation of the other page.
+    // Set the duration of the exit animation to 1000 ms, to match the duration of the entrance animation of the other page.
     PageTransitionExit({ duration: 1000 })
       .translate({ x: 100.0, y: 100.0 })
       .opacity(0)
@@ -196,12 +196,12 @@ struct Page1 {
     })
   }
 
-  // Use the default effects provided by the system, such as translation, scaling, and opacity.
+  // Custom method 2: use the various default effects provided by the system (translation, scaling, opacity, etc.).
   pageTransition() {
-    // Set the duration of the entrance animation to 1000 ms, in the purpose of matching the duration of the exit animation of the other page.
+    // Set the duration of the entrance animation to 1000 ms, to match the duration of the exit animation of the other page.
     PageTransitionEnter({ duration: 1000 })
       .slide(SlideEffect.Left)
-    // Set the duration of the exit animation to 1200 ms, in the purpose of matching the duration of the entrance animation of the other page.
+    // Set the duration of the exit animation to 1200 ms, to match the duration of the entrance animation of the other page.
     PageTransitionExit({ duration: 1200 })
       .translate({ x: 100.0, y: 100.0 })
       .opacity(0)
@@ -216,8 +216,8 @@ Method 1: Configure the various entrance and exit translation effects provided, 
 @Entry
 @Component
 struct Index {
-  @State scale1: number = 1;
-  @State opacity1: number = 1;
+  @State pageScale: number = 1;
+  @State pageOpacity: number = 1;
 
   build() {
     Column() {
@@ -233,21 +233,21 @@ struct Index {
         .fontSize(36)
         .textAlign(TextAlign.Center)
     }
-    .scale({ x: this.scale1 })
-    .opacity(this.opacity1)
+    .scale({ x: this.pageScale })
+    .opacity(this.pageOpacity)
     .height("100%")
     .width("100%")
     .justifyContent(FlexAlign.Center)
   }
 
-  // Method 2: Use the default effects provided by the system, such as translation, scaling, and opacity.
+  // Custom method 2: use the various default effects provided by the system (translation, scaling, opacity, etc.).
   pageTransition() {
     // Set the entrance animation.
     PageTransitionEnter({ duration: 200 })
       .slide(SlideEffect.START)
     // Set the exit animation.
     PageTransitionExit({ delay: 100 })
-      .slide(SlideEffect.START) //Left
+      .slide(SlideEffect.START) // Left
   }
 }
 ```
@@ -257,8 +257,8 @@ struct Index {
 @Entry
 @Component
 struct Page1 {
-  @State scale1: number = 1;
-  @State opacity1: number = 1;
+  @State pageScale: number = 1;
+  @State pageOpacity: number = 1;
 
   build() {
     Column() {
@@ -274,19 +274,19 @@ struct Page1 {
         .fontSize(36)
         .textAlign(TextAlign.Center)
     }
-    .scale({ x: this.scale1 })
-    .opacity(this.opacity1)
+    .scale({ x: this.pageScale })
+    .opacity(this.pageOpacity)
     .height("100%")
     .width("100%")
     .justifyContent(FlexAlign.Center)
   }
 
-  // Method 2: Use the default effects provided by the system, such as translation, scaling, and opacity.
+  // Custom method 2: use the multiple default effects provided by the system (translation, scaling, opacity, etc.).
   pageTransition() {
     PageTransitionEnter({ duration: 200 })
-      .slide(SlideEffect.END) //Right
+      .slide(SlideEffect.END) // Right
     PageTransitionExit({ delay: 100 })
-      .slide(SlideEffect.END) //Right
+      .slide(SlideEffect.END)
   }
 }
 ```
@@ -299,8 +299,8 @@ Customization method 2: Use the system's default entrance and exit effects, with
 @Entry
 @Component
 struct Index {
-  @State scale1: number = 1;
-  @State opacity1: number = 1;
+  @State pageScale: number = 1;
+  @State pageOpacity: number = 1;
 
   build() {
     Column() {
@@ -313,8 +313,8 @@ struct Index {
         .height(60)
         .fontSize(36)
     }
-    .scale({ x: this.scale1 })
-    .opacity(this.opacity1)
+    .scale({ x: this.pageScale })
+    .opacity(this.pageOpacity)
     .height("100%")
     .width("100%")
     .justifyContent(FlexAlign.Center)
@@ -327,8 +327,8 @@ struct Index {
 @Entry
 @Component
 struct Page1 {
-  @State scale1: number = 1;
-  @State opacity1: number = 1;
+  @State pageScale: number = 1;
+  @State pageOpacity: number = 1;
 
   build() {
     Column() {
@@ -341,8 +341,8 @@ struct Page1 {
         .height(60)
         .fontSize(36)
     }
-    .scale({ x: this.scale1 })
-    .opacity(this.opacity1)
+    .scale({ x: this.pageScale })
+    .opacity(this.pageOpacity)
     .height("100%")
     .width("100%")
     .justifyContent(FlexAlign.Center)

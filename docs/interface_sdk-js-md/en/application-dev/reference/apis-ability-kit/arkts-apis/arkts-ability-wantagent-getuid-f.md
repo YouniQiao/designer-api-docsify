@@ -73,10 +73,11 @@ let wantAgentInfo: wantAgent.WantAgentInfo = {
 };
 
 // getWantAgent callback.
-function getWantAgentCallback(err: BusinessError, data: WantAgent) {
+let getWantAgentCallback = (err: BusinessError, data: WantAgent) => {
   if (err) {
     console.error(`getWantAgent failed, code: ${err.code}, message: ${err.message}.`);
   } else {
+    // Create the WantAgent successfully and save the returned WantAgent object.
     wantAgentData = data;
   }
   // getUid callback.
@@ -88,6 +89,7 @@ function getWantAgentCallback(err: BusinessError, data: WantAgent) {
     }
   }
   try {
+    // Call the getUid API to obtain the UID of the application to which the WantAgent instance belongs.
     wantAgent.getUid(wantAgentData, getUidCallback);
   } catch (err) {
     let code = (err as BusinessError).code;
@@ -97,6 +99,7 @@ function getWantAgentCallback(err: BusinessError, data: WantAgent) {
 }
 
 try {
+  // Call the getWantAgent API to create a WantAgent object.
   wantAgent.getWantAgent(wantAgentInfo, getWantAgentCallback);
 } catch (err) {
   let code = (err as BusinessError).code;
@@ -178,13 +181,15 @@ let wantAgentInfo: wantAgent.WantAgentInfo = {
 };
 
 // getWantAgent callback.
-function getWantAgentCallback(err: BusinessError, data: WantAgent) {
+let getWantAgentCallback = (err: BusinessError, data: WantAgent) => {
   if (err) {
     console.error(`getWantAgent failed, err code: ${err.code}, err msg: ${err.message}.`);
   } else {
+    // Create the WantAgent successfully and save the returned WantAgent object.
     wantAgentData = data;
   }
   try {
+    // Obtain the UID of the application to which the WantAgent instance belongs by using Promise.
     wantAgent.getUid(wantAgentData).then((data) => {
       console.info(`getUid ok, data: ${JSON.stringify(data)}.`);
     }).catch((err: BusinessError) => {
@@ -198,6 +203,7 @@ function getWantAgentCallback(err: BusinessError, data: WantAgent) {
 }
 
 try {
+  // Call the getWantAgent API to create a WantAgent object.
   wantAgent.getWantAgent(wantAgentInfo, getWantAgentCallback);
 } catch (err) {
   let code = (err as BusinessError).code;

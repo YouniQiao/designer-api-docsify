@@ -45,11 +45,12 @@ import { distributedMissionManager } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 try {
+  // Unregister task state listening.
   distributedMissionManager.unRegisterMissionListener(
     { deviceId: "" },
     (error: BusinessError) => {
       if (error) {
-          console.error('unRegisterMissionListener failed, cause: ' + JSON.stringify(error));
+          console.error(`unRegisterMissionListener failed. Code: ${error.code}, message: ${error.message}`);
           return;
       }
       console.info('unRegisterMissionListener finished');
@@ -107,8 +108,8 @@ try {
   distributedMissionManager.unRegisterMissionListener({deviceId: ""}).then(() => {
     console.info('unRegisterMissionListener finished successfully');
   }).catch((error: BusinessError) => {
-      console.error('unRegisterMissionListener failed, cause: ' + JSON.stringify(error));
-  })
+      console.error(`unRegisterMissionListener failed. Code: ${error.code}, message: ${error.message}`);
+  });
 } catch (error) {
     console.error('unRegisterMissionListener failed, cause: ' + JSON.stringify(error));
 }

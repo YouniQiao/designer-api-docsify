@@ -150,6 +150,7 @@ struct Index {
 
       Row() {
         Button("Update Style: Bold").onClick(() => {
+          // Update the style of the selected text to make the font bold.
           this.controller.updateSpanStyle({
             start: this.start,
             end: this.end,
@@ -161,18 +162,19 @@ struct Index {
         })
         Button("Obtain Selection").onClick(() => {
           this.content = "";
+          // Obtain the span information within the selected range.
           this.controller.getSpans({
             start: this.start,
             end: this.end
           }).forEach(item => {
-            if(typeof(item as RichEditorImageSpanResult)['imageStyle'] != 'undefined'){
+            if (typeof(item as RichEditorImageSpanResult)['imageStyle'] != 'undefined') {
               this.content += (item as RichEditorImageSpanResult).valueResourceStr;
               this.content += "\n";
             } else {
-              if(typeof(item as RichEditorTextSpanResult)['symbolSpanStyle'] != 'undefined') {
+              if (typeof(item as RichEditorTextSpanResult)['symbolSpanStyle'] != 'undefined') {
                 this.content += (item as RichEditorTextSpanResult).symbolSpanStyle?.fontSize;
                 this.content += "\n";
-              }else {
+              } else {
                 this.content += (item as RichEditorTextSpanResult).value;
                 this.content += "\n";
               }
@@ -180,6 +182,7 @@ struct Index {
           })
         })
         Button("Delete Selection").onClick(() => {
+          // Delete the text and image content within the selected range.
           this.controller.deleteSpans({
             start: this.start,
             end: this.end
@@ -205,7 +208,7 @@ struct Index {
                   fontSize: 30
                 }
               })
-            this.controller.addSymbolSpan($r("sys.symbol.ohos_trash"),
+            this.controller.addSymbolSpan($r('sys.symbol.ohos_trash'),
               {
                 style:
                 {
@@ -315,7 +318,7 @@ struct RichEditorExample {
                   fontColor: Color.Orange,
                   fontSize: 30
                 }
-              })
+              });
             })
           }
         })
@@ -325,7 +328,7 @@ struct RichEditorExample {
 
   build() {
     Column() {
-      RichEditor({ controller: this.controller })// Bind the custom keyboard.
+      RichEditor({ controller: this.controller }) // Bind the custom keyboard.
         .customKeyboard(this.CustomKeyboardBuilder())
         .border({ width: 1 })
         .borderWidth(1)
@@ -353,7 +356,7 @@ export interface SelectionMenuTheme {
   expandedOptionPadding: number;
   defaultMenuWidth: number;
   imageFillColor: Resource;
-  backGroundColor: Resource;
+  backgroundColor: Resource;
   iconBorderRadius: Resource;
   containerBorderRadius: Resource;
   cutIcon: Resource;
@@ -376,17 +379,17 @@ export const defaultTheme: SelectionMenuTheme = {
   expandedOptionPadding: 3,
   defaultMenuWidth: 256,
   imageFillColor: $r('sys.color.ohos_id_color_primary'),
-  backGroundColor: $r('sys.color.ohos_id_color_dialog_bg'),
+  backgroundColor: $r('sys.color.ohos_id_color_dialog_bg'),
   iconBorderRadius: $r('sys.float.ohos_id_corner_radius_default_m'),
   containerBorderRadius: $r('sys.float.ohos_id_corner_radius_card'),
-  cutIcon: $r("sys.media.ohos_ic_public_cut"),
-  copyIcon: $r("sys.media.ohos_ic_public_copy"),
-  pasteIcon: $r("sys.media.ohos_ic_public_paste"),
-  selectAllIcon: $r("sys.media.ohos_ic_public_select_all"),
-  shareIcon: $r("sys.media.ohos_ic_public_share"),
-  translateIcon: $r("sys.media.ohos_ic_public_translate_c2e"),
-  searchIcon: $r("sys.media.ohos_ic_public_search_filled"),
-  arrowDownIcon: $r("sys.media.ohos_ic_public_arrow_down"),
+  cutIcon: $r('sys.media.ohos_ic_public_cut'),
+  copyIcon: $r('sys.media.ohos_ic_public_copy'),
+  pasteIcon: $r('sys.media.ohos_ic_public_paste'),
+  selectAllIcon: $r('sys.media.ohos_ic_public_select_all'),
+  shareIcon: $r('sys.media.ohos_ic_public_share'),
+  translateIcon: $r('sys.media.ohos_ic_public_translate_c2e'),
+  searchIcon: $r('sys.media.ohos_ic_public_search_filled'),
+  arrowDownIcon: $r('sys.media.ohos_ic_public_arrow_down'),
   iconPanelShadowStyle: ShadowStyle.OUTER_DEFAULT_MD,
   iconFocusBorderColor: $r('sys.color.ohos_id_color_focused_outline')
 }
@@ -395,7 +398,7 @@ export const defaultTheme: SelectionMenuTheme = {
 @Component
 struct SelectionMenu {
   @State message: string = 'Hello World';
-  @State textSize: number = 40;
+  @State textStyleConfigtSize: number = 40;
   @State sliderShow: boolean = false;
   @State start: number = -1;
   @State end: number = -1;
@@ -403,10 +406,10 @@ struct SelectionMenu {
   controller: RichEditorController = new RichEditorController();
   options: RichEditorOptions = { controller: this.controller };
   // Replace $r('app.media.startIcon') with the image resource file you use.
-  private iconArr: Array<Resource> =
+  private icons: Array<Resource> =
     [$r('app.media.startIcon'), $r('app.media.startIcon'), $r('app.media.startIcon'),
     $r('app.media.startIcon'), $r('app.media.startIcon')];
-  @State iconBgColor: ResourceColor[] = new Array(this.iconArr.length).fill(this.colorTransparent);
+  @State iconBgColor: ResourceColor[] = new Array(this.icons.length).fill(this.colorTransparent);
   @State pasteEnable: boolean = false;
   @State visibilityValue: Visibility = Visibility.Visible;
   @State textStyle: RichEditorTextStyle = {};
@@ -426,15 +429,15 @@ struct SelectionMenu {
         }
       }
     }
-    let sysBoard = pasteboard.getSystemPasteboard()
+    let sysBoard = pasteboard.getSystemPasteboard();
     try {
       if (sysBoard && sysBoard.hasDataSync()) {
-        this.pasteEnable = true
+        this.pasteEnable = true;
       } else {
-        this.pasteEnable = false
+        this.pasteEnable = false;
       }
     } catch (err) {
-      console.error('Failed to check the PasteData. Cause:' + err.message)
+      console.error(`Failed to check the PasteData. Code: ${err.code}, message: ${err.message}`);
     }
   }
 
@@ -452,6 +455,7 @@ struct SelectionMenu {
             this.start = value.selection[0];
             this.end = value.selection[1];
           })
+          // Bind a custom selection menu triggered by long press to a Span of the TEXT type.
           .bindSelectionMenu(RichEditorSpanType.TEXT, this.panel, ResponseType.LongPress, { onDisappear: () => {
             this.sliderShow = false;
           }})
@@ -472,7 +476,8 @@ struct SelectionMenu {
     }.height('100%')
   }
 
-  PushDataToPasteboard(richEditorSelection: RichEditorSelection) {
+  // Write the text and style information of the selected content to the clipboard so that the style can be restored when pasting.
+  pushDataToPasteboard(richEditorSelection: RichEditorSelection) {
     let sysBoard = pasteboard.getSystemPasteboard();
     let pasteData = pasteboard.createData(pasteboard.MIMETYPE_TEXT_PLAIN, '');
     if (richEditorSelection.spans && richEditorSelection.spans.length > 0) {
@@ -484,7 +489,7 @@ struct SelectionMenu {
           let style = span.textStyle;
           let data = pasteboard.createRecord(pasteboard.MIMETYPE_TEXT_PLAIN, span.value.substring(span.offsetInSpan[0], span.offsetInSpan[1]));
           let prop = pasteData.getProperty();
-          let temp: Record<string, Object> = {
+          let fontStyleRecord: Record<string, Object> = {
             'color': style.fontColor,
             'size': style.fontSize,
             'style': style.fontStyle,
@@ -493,9 +498,9 @@ struct SelectionMenu {
             'decorationType': style.decoration.type,
             'decorationColor': style.decoration.color
           };
-          prop.additions[i] = temp;
-          pasteData.addRecord(data)
-          pasteData.setProperty(prop)
+          prop.additions[i] = fontStyleRecord;
+          pasteData.addRecord(data);
+          pasteData.setProperty(prop);
         }
       }
     }
@@ -504,11 +509,12 @@ struct SelectionMenu {
       console.info('SelectionMenu copy option, Succeeded in setting PasteData.');
       this.pasteEnable = true;
     }).catch((err: BusinessError) => {
-      console.error('SelectionMenu copy option, Failed to set PasteData. Cause:' + err.message);
+      console.error(`SelectionMenu copy option, Failed to set PasteData. Code: ${err.code}, message: ${err.message}`);
     })
   }
 
-  PopDataFromPasteboard(richEditorSelection: RichEditorSelection) {
+  // Read the content and style information from the clipboard, restore the style, and insert it into the component.
+  popDataFromPasteboard(richEditorSelection: RichEditorSelection) {
     let start = richEditorSelection.selection[0];
     let end = richEditorSelection.selection[1];
     if (start == end && this.controller) {
@@ -524,7 +530,7 @@ struct SelectionMenu {
       let count = data.getRecordCount();
       for (let i = 0; i < count; i++) {
         const element = data.getRecord(i);
-        let tex: RichEditorTextStyle = {
+        let textStyleConfig: RichEditorTextStyle = {
           fontSize: 16,
           fontColor: Color.Black,
           fontWeight: FontWeight.Normal,
@@ -533,48 +539,48 @@ struct SelectionMenu {
           decoration: { type: TextDecorationType.None, color: "#FF000000", style: TextDecorationStyle.SOLID }
         }
         if (data.getProperty() && data.getProperty().additions[i]) {
-          const tmp = data.getProperty().additions[i] as Record<string, Object | undefined>;
-          if (tmp.color) {
-            tex.fontColor = tmp.color as ResourceColor;
+          const styleAddition = data.getProperty().additions[i] as Record<string, Object | undefined>;
+          if (styleAddition.color) {
+            textStyleConfig.fontColor = styleAddition.color as ResourceColor;
           }
-          if (tmp.size) {
-            tex.fontSize = tmp.size as Length | number;
+          if (styleAddition.size) {
+            textStyleConfig.fontSize = styleAddition.size as Length | number;
           }
-          if (tmp.style) {
-            tex.fontStyle = tmp.style as FontStyle;
+          if (styleAddition.style) {
+            textStyleConfig.fontStyle = styleAddition.style as FontStyle;
           }
-          if (tmp.weight) {
-            tex.fontWeight = tmp.weight as number | FontWeight | string;
+          if (styleAddition.weight) {
+            textStyleConfig.fontWeight = styleAddition.weight as number | FontWeight | string;
           }
-          if (tmp.fontFamily) {
-            tex.fontFamily = tmp.fontFamily as ResourceStr;
+          if (styleAddition.fontFamily) {
+            textStyleConfig.fontFamily = styleAddition.fontFamily as ResourceStr;
           }
-          if (tmp.decorationType && tex.decoration) {
-            tex.decoration.type = tmp.decorationType as TextDecorationType;
+          if (styleAddition.decorationType && textStyleConfig.decoration) {
+            textStyleConfig.decoration.type = styleAddition.decorationType as TextDecorationType;
           }
-          if (tmp.decorationColor && tex.decoration) {
-            tex.decoration.color = tmp.decorationColor as ResourceColor;
+          if (styleAddition.decorationColor && textStyleConfig.decoration) {
+            textStyleConfig.decoration.color = styleAddition.decorationColor as ResourceColor;
           }
-          if (tex.decoration) {
-            tex.decoration = { type: tex.decoration.type, color: tex.decoration.color };
+          if (textStyleConfig.decoration) {
+            textStyleConfig.decoration = { type: textStyleConfig.decoration.type, color: textStyleConfig.decoration.color };
           }
         }
         if (element && element.plainText && element.mimeType === pasteboard.MIMETYPE_TEXT_PLAIN && this.controller) {
           this.controller.addTextSpan(element.plainText,
             {
-              style: tex,
+              style: textStyleConfig,
               offset: start + moveOffset
             }
-          )
+          );
           moveOffset += element.plainText.length;
         }
       }
       if (this.controller) {
-        this.controller.setCaretOffset(start + moveOffset)
-        this.controller.closeSelectionMenu()
+        this.controller.setCaretOffset(start + moveOffset);
+        this.controller.closeSelectionMenu();
       }
       if (start != end && this.controller) {
-        this.controller.deleteSpans({ start: start + moveOffset, end: end + moveOffset })
+        this.controller.deleteSpans({ start: start + moveOffset, end: end + moveOffset });
       }
     })
   }
@@ -591,10 +597,11 @@ struct SelectionMenu {
     }.width(256)
   }
 
+  // Icon panel: the five icons correspond to bold toggle (0), italic toggle (1), underline toggle (2), font size slider (3), and color toggle (4).
   @Builder iconPanel() {
     Column() {
       Row({ space: 2 }) {
-        ForEach(this.iconArr, (item:Resource, index ?: number) => {
+        ForEach(this.icons, (item:Resource, index ?: number) => {
           Flex({ justifyContent: FlexAlign.Center, alignItems: ItemAlign.Center }) {
             Image(item).fillColor(this.theme.imageFillColor).width(24).height(24).focusable(true).draggable(false)
           }
@@ -711,7 +718,7 @@ struct SelectionMenu {
             }
           })
           .onTouch((event?: TouchEvent | undefined) => {
-            if(event != undefined){
+            if (event != undefined) {
               if (event.type === TouchType.Down) {
                 this.iconBgColor[index as number] = $r('sys.color.ohos_id_color_click_effect');
               }
@@ -724,7 +731,7 @@ struct SelectionMenu {
             this.iconBgColor.forEach((icon:ResourceColor, index1) => {
               this.iconBgColor[index1] = this.colorTransparent;
             })
-            if(isHover != undefined) {
+            if (isHover != undefined) {
               this.iconBgColor[index as number] = $r('sys.color.ohos_id_color_hover');
             }
           })
@@ -737,7 +744,7 @@ struct SelectionMenu {
     .padding(this.theme.expandedOptionPadding)
     .borderRadius(this.theme.containerBorderRadius)
     .margin({ bottom: this.theme.menuSpacing })
-    .backgroundColor(this.theme.backGroundColor)
+    .backgroundColor(this.theme.backgroundColor)
     .shadow(this.theme.iconPanelShadowStyle)
   }
 
@@ -750,10 +757,10 @@ struct SelectionMenu {
             MenuItem({ startIcon: this.theme.cutIcon, content: "Cut", labelInfo: "Ctrl+X" })
               .onClick(() => {
                 if (!this.controller) {
-                  return
+                  return;
                 }
                 let richEditorSelection = this.controller.getSelection();
-                this.PushDataToPasteboard(richEditorSelection);
+                this.pushDataToPasteboard(richEditorSelection);
                 this.controller.deleteSpans({
                   start: richEditorSelection.selection[0],
                   end: richEditorSelection.selection[1]
@@ -765,7 +772,7 @@ struct SelectionMenu {
                   return;
                 }
                 let richEditorSelection = this.controller.getSelection();
-                this.PushDataToPasteboard(richEditorSelection)
+                this.pushDataToPasteboard(richEditorSelection)
                 this.controller.closeSelectionMenu()
               })
             MenuItem({ startIcon: this.theme.pasteIcon, content: "Paste", labelInfo: "Ctrl+V" })
@@ -775,7 +782,7 @@ struct SelectionMenu {
                   return;
                 }
                 let richEditorSelection = this.controller.getSelection();
-                this.PopDataFromPasteboard(richEditorSelection)
+                this.popDataFromPasteboard(richEditorSelection)
               })
             MenuItem({ startIcon: this.theme.selectAllIcon, content: "Select all", labelInfo: "Ctrl+A" })
               .visibility(this.visibilityValue)
@@ -820,30 +827,30 @@ struct SelectionMenu {
     Column() {
       Flex({ justifyContent: FlexAlign.SpaceBetween, alignItems: ItemAlign.Center }) {
         Text('A').fontSize(15)
-        Slider({ value: this.textSize, step: 10, style: SliderStyle.InSet })
+        Slider({ value: this.textStyleConfigtSize, step: 10, style: SliderStyle.InSet })
           .width(210)
           .onChange((value: number, mode: SliderChangeMode) => {
             if (this.controller) {
               let selection = this.controller.getSelection();
               if (mode == SliderChangeMode.End) {
-                if (this.textSize == undefined) {
-                  this.textSize = 0;
+                if (this.textStyleConfigtSize == undefined) {
+                  this.textStyleConfigtSize = 0;
                 }
                 let spans = selection.spans;
                 spans.forEach((item: RichEditorTextSpanResult | RichEditorImageSpanResult, index) => {
                   if (typeof (item as RichEditorTextSpanResult)['textStyle'] != 'undefined') {
-                    this.textSize = Math.max(this.textSize, (item as RichEditorTextSpanResult).textStyle.fontSize);
+                    this.textStyleConfigtSize = Math.max(this.textStyleConfigtSize, (item as RichEditorTextSpanResult).textStyle.fontSize);
                   }
                 })
               }
               if (mode == SliderChangeMode.Moving || mode == SliderChangeMode.Click) {
                 this.start = selection.selection[0];
                 this.end = selection.selection[1];
-                this.textSize = value;
+                this.textStyleConfigtSize = value;
                 this.controller.updateSpanStyle({
                   start: this.start,
                   end: this.end,
-                  textStyle: { fontSize: this.textSize }
+                  textStyle: { fontSize: this.textStyleConfigtSize }
                 })
               }
             }
@@ -873,8 +880,6 @@ struct Index {
   private end: number = -1;
   @State message: string = "[-1, -1]";
   @State content: string = "";
-  @State paddingVal: number = 5;
-  @State borderRad: number = 4;
 
   build() {
     Column() {
@@ -911,7 +916,7 @@ struct Index {
                   margin: undefined
                 }
               }
-            })
+            });
           })
 
         Button("updateSpanStyle2")
@@ -931,7 +936,7 @@ struct Index {
                   margin: { left: '30px', top: '20px', right: '20px', bottom: '20px' }
                 }
               }
-            })
+            });
           })
 
         Button("updateSpanStyle3")
@@ -951,7 +956,7 @@ struct Index {
                   margin: '-10px'
                 }
               }
-            })
+            });
           })
       }
       .borderWidth(1)
@@ -972,7 +977,7 @@ struct Index {
                   margin: '40px'
                 }
               }
-            })
+            });
           })
 
         Button('addImageSpan2')
@@ -988,7 +993,7 @@ struct Index {
                   margin: undefined
                 }
               }
-            })
+            });
           })
 
         Button('addImageSpan3')
@@ -1123,6 +1128,7 @@ struct Index {
       Column() {
         RichEditor(this.options)
           .onReady(() => {
+            // Bind tap and long-press gesture callbacks to the text span.
             this.controller.addTextSpan('Area1\n', {
               style:
               {
@@ -1131,9 +1137,11 @@ struct Index {
               },
               gesture:
               {
+                // Update the text identifier when tapped.
                 onClick: () => {
                   this.textFlag = "Area1 is onClick.";
                 },
+                // Update the text identifier when long-pressed.
                 onLongPress: () => {
                   this.textFlag = "Area1 is onLongPress.";
                 }
@@ -1148,9 +1156,11 @@ struct Index {
               },
               gesture:
               {
+                // Update the text identifier when tapped.
                 onClick: () => {
                   this.textFlag = "Area2 is onClick.";
                 },
+                // Update the text identifier when long-pressed.
                 onLongPress: () => {
                   this.textFlag = "Area2 is onLongPress.";
                 }
@@ -1216,8 +1226,8 @@ struct Index {
               textVerticalAlign: TextVerticalAlign.BASELINE,
               leadingMargin: 16
             }
-          })
-          this.controller.addTextSpan("0123456789")
+          });
+          this.controller.addTextSpan("0123456789");
         })
         .width("80%")
         .height("30%")
@@ -1226,11 +1236,12 @@ struct Index {
 
       Column({ space: 5 }) {
         Button("Align Left").onClick(() => {
+          // Set the paragraph text to left alignment.
           this.controller.updateParagraphStyle({ start: -1, end: -1,
             style: {
               textAlign: TextAlign.Start
             }
-          })
+          });
         })
 
         Button("Align Right").onClick(() => {
@@ -1238,7 +1249,7 @@ struct Index {
             style: {
               textAlign: TextAlign.End
             }
-          })
+          });
         })
 
         Button("Align Center").onClick(() => {
@@ -1246,15 +1257,15 @@ struct Index {
             style: {
               textAlign: TextAlign.Center
             }
-          })
+          });
         })
 
-        Button("Apply Paragraph Spacing (50)").onClick (() => {
+        Button("Apply Paragraph Spacing (50)").onClick(() => {
           this.controller.updateParagraphStyle({ start: -1, end: -1,
             style: {
               paragraphSpacing: 50
             }
-          })
+          });
         })
         Divider()
         Button("getParagraphs").onClick(() => {
@@ -1268,7 +1279,7 @@ struct Index {
               fontColor: Color.Brown,
               fontSize: 20
             }
-          })
+          });
         })
 
         Button("UpdateSpanStyle2").onClick(() => {
@@ -1277,7 +1288,7 @@ struct Index {
               fontColor: Color.Green,
               fontSize: 30
             }
-          })
+          });
         })
       }
     }
@@ -1290,13 +1301,13 @@ This example demonstrates how to update the preset text style using the [setTypi
 ```TypeScript
 // xxx.ets
 
-const canvasWidth = 1000;
-const canvasHeight = 100;
-const Indentation = 40;
+const CANVAS_WIDTH = 1000;
+const CANVAS_HEIGHT = 100;
+const INDENTATION = 40;
 class LeadingMarginCreator {
   private settings: RenderingContextSettings = new RenderingContextSettings(true);
-  private offscreenCanvas: OffscreenCanvas = new OffscreenCanvas(canvasWidth, canvasHeight);
-  private offContext: OffscreenCanvasRenderingContext2D = this.offscreenCanvas.getContext("2d", this.settings);
+  private offscreenCanvas: OffscreenCanvas = new OffscreenCanvas(CANVAS_WIDTH, CANVAS_HEIGHT);
+  private offscreenContext: OffscreenCanvasRenderingContext2D = this.offscreenCanvas.getContext("2d", this.settings);
   public static instance: LeadingMarginCreator = new LeadingMarginCreator();
 
   // Obtain the font size level, which ranges from 0 to 4.
@@ -1329,38 +1340,39 @@ class LeadingMarginCreator {
 
     return fontSizeLevel;
   }
-  // Obtain the font size level, which ranges from 0 to 4.
-  public getmarginLevel(Width: number) {
-    let marginlevel: number = 1;
+
+  // Obtain the margin ratio level.
+  public getMarginLevel(Width: number) {
+    let marginLevel: number = 1;
     if (Width == 40) {
-      marginlevel = 2.0;
+      marginLevel = 2.0;
     } else if (Width == 80) {
-      marginlevel = 1.0;
+      marginLevel = 1.0;
     } else if (Width == 120) {
-      marginlevel = 2/3;
+      marginLevel = 2 / 3;
     } else if (Width == 160) {
-      marginlevel = 0.5;
+      marginLevel = 0.5;
     } else if (Width == 200) {
-      marginlevel = 0.4;
+      marginLevel = 0.4;
     }
-    return marginlevel;
+    return marginLevel;
   }
 
   public genStrMark(fontSize: number, str: string): PixelMap {
-    this.offContext = this.offscreenCanvas.getContext("2d", this.settings);
-    this.clearCanvas()
-    this.offContext.font = fontSize + 'vp sans-serif';
-    this.offContext.fillText(str + '.', 0, fontSize * 0.9)
-    return this.offContext.getPixelMap(0, 0, fontSize * (str.length + 1) / 1.75, fontSize)
+    this.offscreenContext = this.offscreenCanvas.getContext("2d", this.settings);
+    this.clearCanvas();
+    this.offscreenContext.font = fontSize + 'vp sans-serif';
+    this.offscreenContext.fillText(str + '.', 0, fontSize * 0.9);
+    return this.offscreenContext.getPixelMap(0, 0, fontSize * (str.length + 1) / 1.75, fontSize);
   }
 
   public genSquareMark(fontSize: number): PixelMap {
-    this.offContext = this.offscreenCanvas.getContext("2d", this.settings);
-    this.clearCanvas()
+    this.offscreenContext = this.offscreenCanvas.getContext("2d", this.settings);
+    this.clearCanvas();
     const coordinate = fontSize * (1 - 1 / 1.5) / 2;
     const sideLength = fontSize / 1.5;
-    this.offContext.fillRect(coordinate, coordinate, sideLength, sideLength)
-    return this.offContext.getPixelMap(0, 0, fontSize, fontSize)
+    this.offscreenContext.fillRect(coordinate, coordinate, sideLength, sideLength);
+    return this.offscreenContext.getPixelMap(0, 0, fontSize, fontSize);
   }
 
   // Generate a circle symbol.
@@ -1368,20 +1380,20 @@ class LeadingMarginCreator {
     const indentLevel = level ?? 1;
     const offsetLevel = [22, 28, 32, 34, 38];
     const fontSizeLevel = this.getFontSizeLevel(fontSize);
-    const marginlevel = this.getmarginLevel(width);
-    const newCanvas = new OffscreenCanvas(canvasWidth, canvasHeight);
+    const marginLevel = this.getMarginLevel(width);
+    const newCanvas = new OffscreenCanvas(CANVAS_WIDTH, CANVAS_HEIGHT);
     const newOffContext: OffscreenCanvasRenderingContext2D = newCanvas.getContext("2d", this.settings);
     const centerCoordinate = 50;
     const radius = 10;
-    this.clearCanvas()
-    newOffContext.ellipse(100 * (indentLevel + 1) - centerCoordinate * marginlevel, offsetLevel[fontSizeLevel], radius * marginlevel, radius, 0, 0, 2 * Math.PI)
+    this.clearCanvas();
+    newOffContext.ellipse(100 * (indentLevel + 1) - centerCoordinate * marginLevel, offsetLevel[fontSizeLevel], radius * marginLevel, radius, 0, 0, 2 * Math.PI);
     newOffContext.fillStyle = '66FF0000';
-    newOffContext.fill()
-    return newOffContext.getPixelMap(0, 0, 100 + 100 * indentLevel, 100)
+    newOffContext.fill();
+    return newOffContext.getPixelMap(0, 0, 100 + 100 * indentLevel, 100);
   }
 
   private clearCanvas() {
-    this.offContext.clearRect(0, 0, canvasWidth, canvasHeight)
+    this.offscreenContext.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
   }
 }
 
@@ -1392,8 +1404,8 @@ struct Index {
   options: RichEditorOptions = { controller: this.controller };
   private leadingMarkCreatorInstance = LeadingMarginCreator.instance;
   private fontNameRawFile: string = 'MiSans-Bold';
-  @State fs: number = 30;
-  @State cl: number = Color.Black;
+  @State fontSize: number = 30;
+
   private leftMargin: Dimension = 0;
   private richEditorTextStyle: RichEditorTextStyle = {};
 
@@ -1401,7 +1413,7 @@ struct Index {
     this.getUIContext().getFont().registerFont({
       familyName: 'MiSans-Bold',
       familySrc: '/font/MiSans-Bold.ttf'
-    })
+    });
   }
 
   build() {
@@ -1420,7 +1432,7 @@ struct Index {
                   fontStyle: FontStyle.Italic,
                   decoration: { type: TextDecorationType.Underline, color: Color.Green }
                 }
-              })
+              });
 
             this.controller.addTextSpan("abcdefg",
               {
@@ -1433,7 +1445,7 @@ struct Index {
                   fontStyle: FontStyle.Normal,
                   decoration: { type: TextDecorationType.Overline, color: 'rgba(169, 26, 246, 0.50)' }
                 }
-              })
+              });
           })
           .borderWidth(1)
           .borderColor(Color.Green)
@@ -1452,7 +1464,7 @@ struct Index {
                   fontSize: 50,
                   fontStyle: FontStyle.Italic,
                   decoration: { type: TextDecorationType.Underline, color: Color.Green }
-                })
+                });
             })
 
           Button('setTypingStyle2')
@@ -1466,7 +1478,7 @@ struct Index {
                   fontSize: '30',
                   fontStyle: FontStyle.Normal,
                   decoration: { type: TextDecorationType.Overline, color: 'rgba(169, 26, 246, 0.50)' }
-                })
+                });
             })
         }
         Divider()
@@ -1479,7 +1491,7 @@ struct Index {
           Button("Increase List Indent").onClick(() => {
             let margin = Number(this.leftMargin);
             if (margin < 200) {
-              margin += Indentation;
+              margin += INDENTATION;
               this.leftMargin = margin;
             }
             this.controller.updateParagraphStyle({
@@ -1491,13 +1503,13 @@ struct Index {
                   size: [margin, 40]
                 }
               }
-            })
+            });
           })
 
           Button("Decrease List Indent").onClick(() => {
             let margin = Number(this.leftMargin);
             if (margin > 0) {
-              margin -= Indentation;
+              margin -= INDENTATION;
               this.leftMargin = margin;
             }
             this.controller.updateParagraphStyle({
@@ -1509,7 +1521,7 @@ struct Index {
                   size: [margin, 40]
                 }
               }
-            })
+            });
           })
         }
         Divider()
@@ -1517,7 +1529,7 @@ struct Index {
           Button("Increase Paragraph Indent").onClick(() => {
             let margin = Number(this.leftMargin);
             if (margin < 200) {
-              margin += Indentation;
+              margin += INDENTATION;
               this.leftMargin = margin;
             }
             this.controller.updateParagraphStyle({
@@ -1526,13 +1538,13 @@ struct Index {
               style: {
                 leadingMargin: margin
               }
-            })
+            });
           })
 
           Button("Decrease Paragraph Indent").onClick(() => {
-            let margin = Number(this.leftMargin)
+            let margin = Number(this.leftMargin);
             if (margin > 0) {
-              margin -= Indentation;
+              margin -= INDENTATION;
               this.leftMargin = margin;
             }
             this.controller.updateParagraphStyle({
@@ -1541,7 +1553,7 @@ struct Index {
               style: {
                 leadingMargin: margin
               }
-            })
+            });
           })
         }
       }.borderWidth(1).borderColor(Color.Red)
@@ -1550,7 +1562,7 @@ struct Index {
 }
 ```
 
-This example demonstrates how to set text weight and shadow using the [updateParagraphStyle](arkts-arkui-richeditorcontroller-c.md#updateparagraphstyle) API.
+Sets the font weight and shadow of the text through the [updateSpanStyle](arkts-arkui-richeditorcontroller-c.md#updatespanstyle) API.
 
 ```TypeScript
 @Entry
@@ -1596,7 +1608,7 @@ struct Index {
               fontWeight: FontWeight.Bolder,
               textShadow: this.textShadows
             }
-          })
+          });
         })
       }
       .borderWidth(1)
@@ -1614,7 +1626,7 @@ struct Index {
                   fontSize: 30,
                   textShadow: { radius: 10, color: Color.Blue, offsetX: 10, offsetY: 0 }
                 }
-              })
+              });
           })
           .borderWidth(1)
           .borderColor(Color.Green)
@@ -1652,9 +1664,9 @@ struct Index {
   private end: number = 4;
   @State message: string = "[-1, -1]";
   @State content: string = "";
-  private my_offset: number | undefined = undefined;
-  private my_builder: CustomBuilder = undefined;
-  @BuilderParam my_builder2:() => void = placeholderBuilder2;
+  private myOffset: number | undefined = undefined;
+  private myBuilder: CustomBuilder = undefined;
+  @BuilderParam myBuilder2:() => void = placeholderBuilder2;
 
   @Builder
   placeholderBuilder() {
@@ -1675,7 +1687,7 @@ struct Index {
     Column() {
       Column({ space: 5 }) {
         Text('direction:Row').fontSize(9).fontColor(0xCCCCCC).width('90%')
-        Flex({ direction: FlexDirection.Row }) { // Child components are laid out along the main axis in row order.
+        Flex({ direction: FlexDirection.Row }) { // Child components are laid out in a row along the main axis of the container.
           Text('1').width('20%').height(50).backgroundColor(0xF5DEB3)
           Text('1').width('20%').height(50).backgroundColor(0xD2B48C)
           Text('1').width('20%').height(50).backgroundColor(0xF5DEB3)
@@ -1687,7 +1699,7 @@ struct Index {
         .backgroundColor(0xAFEEEE)
 
         Text('direction:RowReverse').fontSize(9).fontColor(0xCCCCCC).width('90%')
-        Flex({ direction: FlexDirection.RowReverse }) { // Child components are laid out along the main axis in reverse row order.
+        Flex({ direction: FlexDirection.RowReverse }) { // Child components are laid out in a reverse row along the main axis of the container.
           Text('1').width('20%').height(50).backgroundColor(0xF5DEB3)
           Text('1').width('20%').height(50).backgroundColor(0xD2B48C)
           Text('1').width('20%').height(50).backgroundColor(0xF5DEB3)
@@ -1699,7 +1711,7 @@ struct Index {
         .backgroundColor(0xAFEEEE)
 
         Text('direction:Column').fontSize(9).fontColor(0xCCCCCC).width('90%')
-        Flex({ direction: FlexDirection.Column }) { // Child components are laid out along the main axis in column order.
+        Flex({ direction: FlexDirection.Column }) { // Child components are laid out in a column along the main axis of the container.
           Text('1').width('20%').height(40).backgroundColor(0xF5DEB3)
           Text('1').width('20%').height(40).backgroundColor(0xD2B48C)
           Text('1').width('20%').height(40).backgroundColor(0xF5DEB3)
@@ -1711,7 +1723,7 @@ struct Index {
         .backgroundColor(0xAFEEEE)
 
         Text('direction:ColumnReverse').fontSize(9).fontColor(0xCCCCCC).width('90%')
-        Flex({ direction: FlexDirection.ColumnReverse }) { // Child components are laid out along the main axis in reverse column order.
+        Flex({ direction: FlexDirection.ColumnReverse }) { // Child components are laid out in a reverse column along the main axis of the container.
           Text('1').width('20%').height(40).backgroundColor(0xF5DEB3)
           Text('1').width('20%').height(40).backgroundColor(0xD2B48C)
           Text('1').width('20%').height(40).backgroundColor(0xF5DEB3)
@@ -1724,17 +1736,6 @@ struct Index {
       }.width('100%').margin({ top: 5 })
     }.width('100%')
   }
-
-  @Builder
-  MyMenu() {
-    Menu() {
-      // Replace $r('app.media.startIcon') with the image resource file you use.
-      MenuItem({ startIcon: $r('app.media.startIcon'), content: "Menu item 1" })
-      MenuItem({ startIcon: $r('app.media.startIcon'), content: "Menu item 2" })
-        .enabled(false)
-    }
-  }
-
   build() {
     Column() {
       Column() {
@@ -1765,11 +1766,11 @@ struct Index {
             if (typeof (item as RichEditorImageSpanResult)['imageStyle'] != 'undefined') {
               if ((item as RichEditorImageSpanResult).valueResourceStr == "") {
                 console.info("builder span index " + (item as RichEditorImageSpanResult).spanPosition.spanIndex + ", range : " + (item as RichEditorImageSpanResult).offsetInSpan[0] + ", " +
-                  (item as RichEditorImageSpanResult).offsetInSpan[1] + ", size : " + (item as RichEditorImageSpanResult).imageStyle[0] + ", " + (item as RichEditorImageSpanResult).imageStyle[1])
+                  (item as RichEditorImageSpanResult).offsetInSpan[1] + ", size : " + (item as RichEditorImageSpanResult).imageStyle[0] + ", " + (item as RichEditorImageSpanResult).imageStyle[1]);
               } else {
                 console.info("image span " + (item as RichEditorImageSpanResult).valueResourceStr + ", index : " + (item as RichEditorImageSpanResult).spanPosition.spanIndex + ", range: " +
                   (item as RichEditorImageSpanResult).offsetInSpan[0] + ", " + (item as RichEditorImageSpanResult).offsetInSpan[1] + ", size : " +
-                  (item as RichEditorImageSpanResult).imageStyle.size[0] + ", " + (item as RichEditorImageSpanResult).imageStyle.size[1])
+                  (item as RichEditorImageSpanResult).imageStyle.size[0] + ", " + (item as RichEditorImageSpanResult).imageStyle.size[1]);
               }
             } else {
               this.content += (item as RichEditorTextSpanResult).value;
@@ -1786,11 +1787,11 @@ struct Index {
             if (typeof (item as RichEditorImageSpanResult)['imageStyle'] != 'undefined') {
               if ((item as RichEditorImageSpanResult).valueResourceStr == "") {
                 console.info("builder span index " + (item as RichEditorImageSpanResult).spanPosition.spanIndex + ", range : " + (item as RichEditorImageSpanResult).offsetInSpan[0] + ", " +
-                  (item as RichEditorImageSpanResult).offsetInSpan[1] + ", size : " + (item as RichEditorImageSpanResult).imageStyle[0] + ", " + (item as RichEditorImageSpanResult).imageStyle[1])
+                  (item as RichEditorImageSpanResult).offsetInSpan[1] + ", size : " + (item as RichEditorImageSpanResult).imageStyle[0] + ", " + (item as RichEditorImageSpanResult).imageStyle[1]);
               } else {
                 console.info("image span " + (item as RichEditorImageSpanResult).valueResourceStr + ", index : " + (item as RichEditorImageSpanResult).spanPosition.spanIndex + ", range: " +
                   (item as RichEditorImageSpanResult).offsetInSpan[0] + ", " + (item as RichEditorImageSpanResult).offsetInSpan[1] + ", size : " +
-                  (item as RichEditorImageSpanResult).imageStyle.size[0] + ", " + (item as RichEditorImageSpanResult).imageStyle.size[1])
+                  (item as RichEditorImageSpanResult).imageStyle.size[0] + ", " + (item as RichEditorImageSpanResult).imageStyle.size[1]);
               }
             } else {
               this.content += (item as RichEditorTextSpanResult).value;
@@ -1803,7 +1804,7 @@ struct Index {
           this.controller.deleteSpans({
             start: this.start,
             end: this.end
-          })
+          });
         })
       }
       .borderWidth(1)
@@ -1821,7 +1822,7 @@ struct Index {
                   fontColor: Color.Orange,
                   fontSize: 30
                 }
-              })
+              });
             // Replace $r('app.media.startIcon') with the image resource file you use.
             this.controller.addImageSpan($r('app.media.startIcon'),
               {
@@ -1829,7 +1830,7 @@ struct Index {
                 {
                   size: ["57px", "57px"]
                 }
-              })
+              });
           })
           .onSelect((value: RichEditorSelection) => {
             this.start = value.selection[0];
@@ -1861,11 +1862,11 @@ struct Index {
               if (typeof (item as RichEditorImageSpanResult)['imageStyle'] != 'undefined') {
                 if ((item as RichEditorImageSpanResult).valueResourceStr == "") {
                   console.info("builder span index " + (item as RichEditorImageSpanResult).spanPosition.spanIndex + ", range : " + (item as RichEditorImageSpanResult).offsetInSpan[0] + ", " +
-                  (item as RichEditorImageSpanResult).offsetInSpan[1] + ", size : " + (item as RichEditorImageSpanResult).imageStyle[0] + ", " + (item as RichEditorImageSpanResult).imageStyle[1])
+                  (item as RichEditorImageSpanResult).offsetInSpan[1] + ", size : " + (item as RichEditorImageSpanResult).imageStyle[0] + ", " + (item as RichEditorImageSpanResult).imageStyle[1]);
                 } else {
                   console.info("image span " + (item as RichEditorImageSpanResult).valueResourceStr + ", index : " + (item as RichEditorImageSpanResult).spanPosition.spanIndex + ", range: " +
                   (item as RichEditorImageSpanResult).offsetInSpan[0] + ", " + (item as RichEditorImageSpanResult).offsetInSpan[1] + ", size : " +
-                  (item as RichEditorImageSpanResult).imageStyle.size[0] + ", " + (item as RichEditorImageSpanResult).imageStyle.size[1])
+                  (item as RichEditorImageSpanResult).imageStyle.size[0] + ", " + (item as RichEditorImageSpanResult).imageStyle.size[1]);
                 }
               } else {
                 console.info("delete text: " + (item as RichEditorTextSpanResult).value);
@@ -1880,9 +1881,9 @@ struct Index {
 
         Button("add span")
           .onClick(() => {
-            let num = this.controller.addBuilderSpan(this.my_builder, 
+            let num = this.controller.addBuilderSpan(this.myBuilder,
               { 
-                offset: this.my_offset, 
+                offset: this.myOffset,
                 accessibilitySpanOptions: { accessibilityText:"hello", accessibilityDescription:"world", accessibilityLevel:"yes" } 
               });
             console.info('addBuilderSpan return ' + num);
@@ -1904,22 +1905,22 @@ struct Index {
           })
         Row() {
           Button('builder1').onClick(() => {
-            this.my_builder = () => {
+            this.myBuilder = () => {
               this.placeholderBuilder()
             };
           })
           Button('builder2').onClick(() => {
-            this.my_builder = () => {
-              this.my_builder2()
+            this.myBuilder = () => {
+              this.myBuilder2()
             };
           })
           Button('builder3').onClick(() => {
-            this.my_builder = () => {
+            this.myBuilder = () => {
               this.placeholderBuilder3()
             };
           })
           Button('builder4').onClick(() => {
-            this.my_builder = () => {
+            this.myBuilder = () => {
               this.placeholderBuilder4()
             };
           })
@@ -1946,17 +1947,17 @@ class BuilderObject {
   id?: string
 
   constructor(content: string, type: string, imageUri?: string, id?: string) {
-    this.content = content
-    this.imageUri = imageUri
-    this.type = type
-    this.id = id
+    this.content = content;
+    this.imageUri = imageUri;
+    this.type = type;
+    this.id = id;
   }
 }
 
 @Entry
 @Component
 struct Index {
-  controller: RichEditorController = new RichEditorController()
+  controller: RichEditorController = new RichEditorController();
   option: RichEditorOptions = { controller: this.controller }
   @State content: string = "";
   @State start: number = 0;
@@ -1988,7 +1989,7 @@ struct Index {
         .height(16)
         .id(builder.id)
         .onClick((event: ClickEvent) => {
-          this.deleteChipBuilder(event.target.id)
+          this.deleteChipBuilder(event.target.id);
         })
     }
     .width('auto')
@@ -2008,7 +2009,7 @@ struct Index {
       console.info(TAG, "delete chipBuilder error");
       return
     }
-    let deleteRange: number[] = this.getTargetBuilderSpanRange(builderId)
+    let deleteRange: number[] = this.getTargetBuilderSpanRange(builderId);
     if (deleteRange.length == 0) {
       console.error(TAG, "getTargetBuilderSpanRange failed" + builderId);
       return
@@ -2022,19 +2023,19 @@ struct Index {
   private getTargetBuilderSpanRange(builderId: string): number[] {
     let allSpans = this.controller.getSpans();
     let result: number[] = [];
-    let chitBuilderIndex = 0;
+    let chipBuilderIndex = 0;
     for (let spanIndex = 0; spanIndex < allSpans.length; spanIndex++) {
       if (!this.isBuilderSpanResult(allSpans[spanIndex])) {
         continue;
       }
-      if (this.builderArray.length <= chitBuilderIndex) {
+      if (this.builderArray.length <= chipBuilderIndex) {
         break;
       }
-      if (this.builderArray[chitBuilderIndex].id === builderId) {
+      if (this.builderArray[chipBuilderIndex].id === builderId) {
         result = allSpans[spanIndex].spanPosition.spanRange;
         break;
       }
-      chitBuilderIndex++;
+      chipBuilderIndex++;
     }
     return result;
   }
@@ -2046,7 +2047,7 @@ struct Index {
   private isBuilderSpanResult(item: RichEditorImageSpanResult | RichEditorTextSpanResult): boolean {
     return typeof (item as RichEditorImageSpanResult)['imageStyle'] != 'undefined'
       && ((item as RichEditorImageSpanResult).valueResourceStr == " "
-        || (item as RichEditorImageSpanResult).valueResourceStr == "");
+      || (item as RichEditorImageSpanResult).valueResourceStr == "");
   }
 
   build() {
@@ -2179,7 +2180,7 @@ struct Index {
                   fontColor: Color.Orange,
                   fontSize: 30
                 }
-              })
+              });
           })
           .aboutToDelete((value: RichEditorDeleteValue) => {
             console.info(TAG, "aboutToDelete = " + JSON.stringify(value));
@@ -2233,7 +2234,7 @@ struct Index {
         }
         let builderIndex = (allSpans[j] as RichEditorImageSpanResult).spanPosition.spanIndex
         if (builderIndex == aboutToDeleteBuilderIndex) {
-          this.indicesToRemove.push(needRemoveIndex)
+          this.indicesToRemove.push(needRemoveIndex);
           break;
         }
         needRemoveIndex++;
@@ -2289,7 +2290,6 @@ struct TextExample7 {
   @State email: string = '***@example.com';
   @State address: string = 'XX (province) XX (city) XX (district) XXXX';
   @State enableDataDetector: boolean = true;
-  @State enablePreviewText: boolean = false;
   @State types: TextDataDetectorType[] = [];
 
   build() {
@@ -2303,33 +2303,34 @@ struct TextExample7 {
                 {
                   fontSize: 30
                 }
-              })
+              });
             this.controller.addTextSpan('URL:' + this.url + '\n',
               {
                 style:
                 {
                   fontSize: 30
                 }
-              })
+              });
             this.controller.addTextSpan('Email:' + this.email + '\n',
               {
                 style:
                 {
                   fontSize: 30
                 }
-              })
+              });
             this.controller.addTextSpan('Address:' + this.address,
               {
                 style:
                 {
                   fontSize: 30
                 }
-              })
+              });
           })
           .copyOptions(CopyOptions.InApp)
+          // Enable text special entity recognition.
           .enableDataDetector(this.enableDataDetector)
+          // Configure the text recognition type and the recognition result update callback.
           .dataDetectorConfig({types : this.types, onDetectResultUpdate: (result: string)=>{}})
-          .enablePreviewText(this.enablePreviewText)
           .borderWidth(1)
           .padding(10)
           .width('100%')
@@ -2340,7 +2341,7 @@ struct TextExample7 {
 }
 ```
 
-This example shows how to set the caret and selection handle color using the [caretColor](#caretcolor12) attribute and the text selection background color using the [selectedBackgroundColor](#selectedbackgroundcolor12) attribute.
+Sets the cursor and handle colors of the input box through the [caretColor](#caretcolor12) attribute, and sets the highlight color of selected text through the [selectedBackgroundColor](#selectedbackgroundcolor12) attribute.
 
 ```TypeScript
 @Entry
@@ -2364,8 +2365,8 @@ struct RichEditorDemo {
         .width("100%")
         .border({ width: 1, radius: 5 })
         .key('RichEditor')
-        .caretColor(this.color) // Caret color.
-        .selectedBackgroundColor(this.color) // Background color of the selected content.
+        .caretColor(this.color) // Cursor color
+        .selectedBackgroundColor(this.color) // Selected background color
         .margin({ top: 50 })
     }
     .width('100%')
@@ -2383,57 +2384,57 @@ struct RichEditorDemo03 {
   options: RichEditorOptions = { controller: this.controller };
   @State start: number = -1;
   @State end: number = -1;
-  @State LH:number = 50;
-  @State LS:number = 20;
+  @State lineHeight:number = 50;
+  @State letterSpacing:number = 20;
 
   build() {
     Column() {
-      Scroll(){
-        Column(){
+      Scroll() {
+        Column() {
           Row() {
             Button("Line Height ++").onClick(()=>{
-              this.LH = this.LH + 5;
+              this.lineHeight = this.lineHeight + 5;
               this.controller.updateSpanStyle({
                 start: this.start,
                 end: this.end,
                 textStyle:
                 {
-                  lineHeight: this.LH
+                  lineHeight: this.lineHeight
                 }
-              })
+              });
             })
             Button("Line Height --").onClick(()=>{
-              this.LH = this.LH - 5;
+              this.lineHeight = this.lineHeight - 5;
               this.controller.updateSpanStyle({
                 start: this.start,
                 end: this.end,
                 textStyle:
                 {
-                  lineHeight: this.LH
+                  lineHeight: this.lineHeight
                 }
-              })
+              });
             })
             Button("Letter Spacing ++").onClick(()=>{
-              this.LS = this.LS + 5
+              this.letterSpacing = this.letterSpacing + 5
               this.controller.updateSpanStyle({
                 start: this.start,
                 end: this.end,
                 textStyle:
                 {
-                  letterSpacing: this.LS
+                  letterSpacing: this.letterSpacing
                 }
-              })
+              });
             })
             Button("Letter Spacing --").onClick(()=>{
-              this.LS = this.LS - 5
+              this.letterSpacing = this.letterSpacing - 5
               this.controller.updateSpanStyle({
                 start: this.start,
                 end: this.end,
                 textStyle:
                 {
-                  letterSpacing: this.LS
+                  letterSpacing: this.letterSpacing
                 }
-              })
+              });
             })
           }
         }
@@ -2443,10 +2444,10 @@ struct RichEditorDemo03 {
       .height("20%")
       .margin({top: 20})
 
-      Scroll(){
+      Scroll() {
         Column() {
-          Text("LineHeight:" + this.LH).width("100%")
-          Text("LetterSpacing:" + this.LS).width("100%")
+          Text("LineHeight:" + this.lineHeight).width("100%")
+          Text("LetterSpacing:" + this.letterSpacing).width("100%")
         }
       }
       .borderWidth(1)
@@ -2464,20 +2465,20 @@ struct RichEditorDemo03 {
                 {
                   fontColor: Color.Orange,
                   fontSize: 30,
-                  lineHeight: this.LH,
-                  letterSpacing: this.LS
+                  lineHeight: this.lineHeight,
+                  letterSpacing: this.letterSpacing
                 }
-              })
+              });
             this.controller.addTextSpan("6789",
               {
                 style:
                 {
                   fontColor: Color.Black,
                   fontSize: 30,
-                  lineHeight: this.LH,
-                  letterSpacing: this.LS
+                  lineHeight: this.lineHeight,
+                  letterSpacing: this.letterSpacing
                 }
-              })
+              });
           })
           .borderWidth(1)
           .borderColor(Color.Green)
@@ -2506,10 +2507,12 @@ struct RichEditorDemo {
     Column({ space: 2 }) {
       RichEditor(this.options)
         .onReady(() => {
-          this.controller.addTextSpan('RichEditor preventDefault')
+          this.controller.addTextSpan('RichEditor preventDefault');
         })
+        // Customize the paste event to block the system default paste behavior.
         .onPaste((event?: PasteEvent) => {
           if (event != undefined && event.preventDefault) {
+            // Block the system default paste operation.
             event.preventDefault();
           }
         })
@@ -2522,7 +2525,8 @@ struct RichEditorDemo {
 }
 ```
 
-This example demonstrates how to set text feature effects using the [addTextSpan](arkts-arkui-richeditorcontroller-c.md#addtextspan) API and the [fontFeature](arkts-arkui-richeditortextstyle-i.md) attribute. This example sets the FontFeature attribute to ss01, which changes the digit "0" from its original oval shape to a shape with rounded corners.
+This example sets the font feature effect ([fontFeature](arkts-arkui-richeditortextstyle-i.md)) through the [addTextSpan](arkts-arkui-richeditorcontroller-c.md#addtextspan) API. When the FontFeature attribute with the "ss01" feature is added, the number "0" changes from the original oval shape to a shape with rounded corners. In addition, the stroke join style of the text is set through the strokeJoinStyle API of [RichEditorTextStyle](arkts-arkui-richeditortextstyle-i.md).
+Since API version 26.0.0, the strokeJoinStyle API is added to [RichEditorTextStyle](arkts-arkui-richeditortextstyle-i.md).
 
 ```TypeScript
 @Entry
@@ -2543,15 +2547,16 @@ struct RichEditorExample {
                 {
                   fontSize: 30
                 }
-              })
+              });
             this.controller.addTextSpan('This is ss01 on :' + '0000' + '\n',
               {
                 style:
                 {
                   fontSize: 30,
-                  fontFeature: "\"ss01\" 1"
+                  fontFeature: "\"ss01\" 1",
+                  strokeJoinStyle: StrokeJoinStyle.MITER_JOIN
                 }
-              })
+              });
           })
           .copyOptions(CopyOptions.InApp)
           .enableDataDetector(this.enableDataDetector)
@@ -2574,8 +2579,8 @@ This example shows how to bind a custom keyboard using the [customKeyboard](#cus
 @Component
 struct RichEditorExample {
   controller: RichEditorController = new RichEditorController();
-  @State height1: string | number = '80%';
-  @State height2: number = 100;
+  @State keyboardHeight: string | number = '80%';
+
   @State supportAvoidance: boolean = true;
 
   // Create a custom keyboard component.
@@ -2583,14 +2588,14 @@ struct RichEditorExample {
   CustomKeyboardBuilder() {
     Column() {
       Row() {
-        Button('Add Emoticon').onClick(() => {
+        Button('Add Sticker Pack').onClick(() => {
           this.controller.addTextSpan("\uD83D\uDE0A",
             {
               style:
               {
                 fontColor: Color.Orange
               }
-            })
+            });
         })
       }
 
@@ -2605,8 +2610,8 @@ struct RichEditorExample {
                   fontColor: Color.Orange,
                   fontSize: 30
                 }
-              })
-              this.controller.setCaretOffset(this.controller.getCaretOffset() + item.toString().length)
+              });
+              this.controller.setCaretOffset(this.controller.getCaretOffset() + item.toString().length);
             })
           }
         })
@@ -2620,22 +2625,22 @@ struct RichEditorExample {
         Button("20%")
           .fontSize(24)
           .onClick(() => {
-            this.height1 = "20%";
+            this.keyboardHeight = "20%";
           })
         Button("80%")
           .fontSize(24)
           .margin({ left: 20 })
           .onClick(() => {
-            this.height1 = "80%";
+            this.keyboardHeight = "80%";
           })
       }
       .justifyContent(FlexAlign.Center)
       .alignItems(VerticalAlign.Bottom)
-      .height(this.height1)
+      .height(this.keyboardHeight)
       .width("100%")
       .padding({ bottom: 50 })
 
-      RichEditor({ controller: this.controller })// Bind the custom keyboard.
+      RichEditor({ controller: this.controller }) // Bind the custom keyboard.
         .customKeyboard(this.CustomKeyboardBuilder(), { supportAvoidance: this.supportAvoidance })
         .margin(10)
         .border({ width: 1 })
@@ -2652,15 +2657,15 @@ This example demonstrates how to obtain the current editing state of the rich te
 ```TypeScript
 @Entry
 @Component
-struct RichEditor_onEditingChange {
+struct RichEditorOnEditingChange {
   controller: RichEditorController = new RichEditorController();
   @State controllerIsEditing: boolean = false;
-  @Builder
 
   build() {
     Column() {
       Row() {
         Button("View isEditing() Value:").onClick(() => {
+          // Obtain the current editing state of the rich text.
           this.controllerIsEditing = this.controller.isEditing();
         })
           .padding(5)
@@ -2690,15 +2695,25 @@ This example shows how to add the [onWillChange](#onwillchange12) event to the c
 @Component
 struct RichEditorExample {
   controller: RichEditorController = new RichEditorController();
+  scroll: Scroller = new Scroller();
+  @State logContent: string = '';
+
   build() {
     Column() {
+      Scroll(this.scroll) {
+        Text(this.logContent).fontSize(15)
+      }
+      .height(300)
+      .scrollable(ScrollDirection.FREE)
+      .border({ color: Color.Red, width: 1 })
+
       RichEditor({ controller: this.controller })
-        .height(200)
+        .height(50)
         .borderWidth(1)
         .borderColor(Color.Red)
         .width("100%")
         .onReady(() => {
-          this.controller.addTextSpan('TestWord', { style: { fontColor: Color.Orange, fontSize: 30 } })
+          this.controller.addTextSpan('Test text TestWord', { style: { fontColor: Color.Orange, fontSize: 30 } });
           this.controller.updateSpanStyle({
             start: -1,
             end: -1,
@@ -2706,61 +2721,68 @@ struct RichEditorExample {
             {
               fontWeight: FontWeight.Bolder
             }
-          })
+          });
         })
         .onWillChange((value: RichEditorChangeValue) => {
-          console.info('Test log: onWillChange');
-          console.info('rangeBefore: ' + JSON.stringify(value.rangeBefore));
-          console.info('print replacedSpans');
-          value.replacedSpans.forEach((item: RichEditorTextSpanResult) => {
-            console.info('spanPosition:' + JSON.stringify(item.spanPosition));
-            console.info('value:' + item.value);
-            console.info('textStyle:' + JSON.stringify(item.textStyle));
-            console.info('offsetInSpan:' + item.offsetInSpan);
-            console.info('valueResource:' + item.valueResource);
-            console.info('paragraphStyle:' + JSON.stringify(item.paragraphStyle));
-          })
-          console.info('print replacedImageSpans');
+          this.logContent += '\nTest log: onWillChange';
+          this.logContent += '\n  rangeBefore: ' + JSON.stringify(value.rangeBefore);
+          this.logContent += '\n  print replacedSpans';
+          value.replacedSpans.forEach((item: RichEditorTextSpanResult, index: number) => {
+            this.logContent += '\n    spanPosition:' + JSON.stringify(item.spanPosition);
+            this.logContent += '\n    value:' + item.value;
+            this.logContent += '\n    textStyle:' + JSON.stringify(item.textStyle);
+            this.logContent += '\n    offsetInSpan:' + item.offsetInSpan;
+            this.logContent += '\n    valueResource:' + item.valueResource;
+            this.logContent += '\n    paragraphStyle:' + JSON.stringify(item.paragraphStyle);
+          });
+          this.logContent += '\n  print replacedImageSpans';
           value.replacedImageSpans.forEach((item: RichEditorImageSpanResult) => {
-            console.info('spanPosition:' + JSON.stringify(item.spanPosition));
-            console.info('valuePixelMap:' + JSON.stringify(item.valuePixelMap));
-            console.info('valueResourceStr:' + item.valueResourceStr);
-            console.info('imageStyle:' + JSON.stringify(item.imageStyle));
-            console.info('offsetInSpan:' + item.offsetInSpan);
-          })
-          console.info('print replacedSymbolSpans');
+            this.logContent += '\n    spanPosition:' + JSON.stringify(item.spanPosition);
+            this.logContent += '\n    valuePixelMap:' + JSON.stringify(item.valuePixelMap);
+            this.logContent += '\n    valueResourceStr:' + item.valueResourceStr;
+            this.logContent += '\n    imageStyle:' + JSON.stringify(item.imageStyle);
+            this.logContent += '\n    offsetInSpan:' + item.offsetInSpan;
+          });
+          this.logContent += '\n  print replacedSymbolSpans';
           value.replacedSymbolSpans.forEach((item: RichEditorTextSpanResult) => {
-            console.info('spanPosition:' + JSON.stringify(item.spanPosition));
-            console.info('value:' + item.value);
-            console.info('offsetInSpan:' + item.offsetInSpan);
-            console.info('symbolSpanStyle:' + JSON.stringify(item.symbolSpanStyle));
-            console.info('valueResource:' + item.valueResource);
-            console.info('paragraphStyle:' + JSON.stringify(item.paragraphStyle));
-          })
+            this.logContent += '\n    spanPosition:' + JSON.stringify(item.spanPosition);
+            this.logContent += '\n    value:' + item.value;
+            this.logContent += '\n    offsetInSpan:' + item.offsetInSpan;
+            this.logContent += '\n    symbolSpanStyle:' + JSON.stringify(item.symbolSpanStyle);
+            this.logContent += '\n    valueResource:' + item.valueResource;
+            this.logContent += '\n    paragraphStyle:' + JSON.stringify(item.paragraphStyle);
+          });
+          this.logContent += '\n  ===========================================';
           return true;
         })
         .onDidChange((rangeBefore: TextRange, rangeAfter: TextRange) => {
-          console.info('Test log: onDidChange');
-          console.info('rangeBefore:' + JSON.stringify(rangeBefore));
-          console.info('rangeAfter:' + JSON.stringify(rangeAfter));
+          this.logContent += '\nTest log: onDidChange';
+          this.logContent += '\n  rangeBefore: ' + JSON.stringify(rangeBefore);
+          this.logContent += '\n  rangeAfter: ' + JSON.stringify(rangeAfter);
+          this.logContent += '\n  ===========================================';
+          setTimeout(() => {
+            this.scroll.scrollEdge(Edge.Bottom);
+          }, 100);
         })
-        .onCut((event:CutEvent) => {
-          event.preventDefault!()
+        .onCut((event: CutEvent) => {
+          event.preventDefault?.();
           console.info('Test log: onCut');
         })
-        .onCopy((event:CopyEvent) => {
-          event.preventDefault!()
+        .onCopy((event: CopyEvent) => {
+          event.preventDefault!();
           console.info('Test log: onCopy');
         })
-        .onPaste(()=>{
+        .onPaste(() => {
           console.info('Test log: onPaste');
         })
+
       Text('Test text Hello')
         .lineHeight(50)
         .fontSize(24)
         .draggable(true)
-        .onDragStart(()=>{})
-      TextInput({text:'Test text NiHao'})
+        .onDragStart(() => {
+        })
+      TextInput({ text: 'Test text NiHao' })
         .draggable(true)
         .margin(20)
     }
@@ -2779,7 +2801,7 @@ struct SoftKeyboardEnterTypeExample {
     build() {
     Column() {
       Button("Stop Editing").onClick(()=>{
-        this.controller.stopEditing()
+        this.controller.stopEditing();
       })
       RichEditor({ controller: this.controller })
         .margin(10)
@@ -2791,8 +2813,8 @@ struct SoftKeyboardEnterTypeExample {
         .enterKeyType(EnterKeyType.Search)
         .onSubmit((enterKey: EnterKeyType, event: SubmitEvent) => {
           console.info("trigger richeditor onsubmit" + enterKey);
-          this.controller.addTextSpan(" type["+ enterKey +"] triggered")
-          event.keepEditableState()
+          this.controller.addTextSpan(" type["+ enterKey +"] triggered");
+          event.keepEditableState();
         })
     }.height("100%").justifyContent(FlexAlign.Center)
   }
@@ -2829,7 +2851,7 @@ struct LineBreakStrategyExample {
         .height(300)
         .margin({bottom:20})
         .draggable(false)
-      Column(){
+      Column() {
         Text('linebreak value: ' + this.attributeValue).fontSize(20).fontColor(Color.Black)
       }.margin({bottom: 10})
       Column({ space: 10 }) {
@@ -2838,34 +2860,34 @@ struct LineBreakStrategyExample {
             style: {
               lineBreakStrategy: LineBreakStrategy.GREEDY
             }
-          })
+          });
         })
         Button("Set LineBreakStrategy to HIGH_QUALITY").onClick(() => {
           this.controller.updateParagraphStyle({ start: -1, end: -1,
             style: {
               lineBreakStrategy: LineBreakStrategy.HIGH_QUALITY
             }
-          })
+          });
         })
         Button("Set LineBreakStrategy to BALANCED").onClick(() => {
           this.controller.updateParagraphStyle({ start: -1, end: -1,
             style: {
               lineBreakStrategy: LineBreakStrategy.BALANCED
             }
-          })
+          });
         })
         Divider()
-        Row(){
+        Row() {
           Button("Get LineBreakStrategy Value").onClick(() => {
             this.spanParagraphs = this.controller.getParagraphs({ start: -1, end: -1 });
             console.info("RichEditor getParagraphs:" + JSON.stringify(this.spanParagraphs));
             this.spanParagraphs.forEach(item => {
-              if(typeof(item as RichEditorParagraphResult)['style'] != 'undefined'){
+              if (typeof(item as RichEditorParagraphResult)['style'] != 'undefined') {
                 this.attributeValue = "";
                 console.info('lineBreakStrategy:'+ JSON.stringify((item as RichEditorParagraphResult)['style']));
                 this.attributeValue += this.lineBreakOptionStr[Number((item as RichEditorParagraphResult)['style'].lineBreakStrategy)];
               }
-            })
+            });
           })
         }
       }
@@ -2883,7 +2905,6 @@ import { LengthMetrics } from '@kit.ArkUI'
 @Entry
 @Component
 struct Index {
-  stringLength: number = 0;
   @State selection: string = "";
   @State content: string = "";
   @State range: string = "";
@@ -2897,23 +2918,23 @@ struct Index {
     fontColor: Color.Green,
     fontSize: LengthMetrics.vp(30),
     fontStyle: FontStyle.Normal
-  })
-  fontStyle1: TextStyle = new TextStyle({ fontColor: Color.Blue });
-  fontStyle2: TextStyle = new TextStyle({
+  });
+  blueTextStyle: TextStyle = new TextStyle({ fontColor: Color.Blue });
+  orangeItalicTextStyle: TextStyle = new TextStyle({
     fontWeight: FontWeight.Bolder,
     fontFamily: 'Arial',
     fontColor: Color.Orange,
     fontSize: LengthMetrics.vp(30),
     fontStyle: FontStyle.Italic
-  })
+  });
 
-  controller1: RichEditorController = new RichEditorController();
-  options1: RichEditorOptions = { controller: this.controller1 };
+  secondaryController: RichEditorController = new RichEditorController();
+  secondaryOptions: RichEditorOptions = { controller: this.secondaryController };
   // Create a styled string object.
   mutableStyledString: MutableStyledString = new MutableStyledString("Initial styled string",
-    [{ start: 0, length: 5, styledKey: StyledStringKey.FONT, styledValue: this.fontStyle1 }]);
+    [{ start: 0, length: 5, styledKey: StyledStringKey.FONT, styledValue: this.blueTextStyle }]);
   styledString: StyledString = new StyledString("Styled string to insert",
-    [{ start: 2, length: 4, styledKey: StyledStringKey.FONT, styledValue: this.fontStyle2 }]);
+    [{ start: 2, length: 4, styledKey: StyledStringKey.FONT, styledValue: this.orangeItalicTextStyle }]);
   controller: RichEditorStyledStringController = new RichEditorStyledStringController();
   options: RichEditorStyledStringOptions = {controller: this.controller};
   // Text content change callback
@@ -2968,9 +2989,9 @@ struct Index {
         .height("20%")
         .width("100%")
 
-      RichEditor(this.options1)
+      RichEditor(this.secondaryOptions)
         .onReady(() => {
-        this.controller1.addTextSpan("Convert the text into a styled string.");
+        this.secondaryController.addTextSpan("Convert this text into a styled string");
       })
         .height("10%")
         .width("100%")
@@ -2992,18 +3013,18 @@ struct Index {
               }));
               // Obtain the styled string displayed in the component.
               this.richEditorStyledString = this.controller.getStyledString();
-              this.richEditorStyledString.appendStyledString(imageStyledString)
+              this.richEditorStyledString.appendStyledString(imageStyledString);
               // Apply the styled string after the image is inserted to the component.
-              this.controller.setStyledString(this.richEditorStyledString)
-              this.controller.setCaretOffset(this.richEditorStyledString.length)
+              this.controller.setStyledString(this.richEditorStyledString);
+              this.controller.setCaretOffset(this.richEditorStyledString.length);
           })
-          Button("Insert Text").onClick () => {
+          Button("Insert Text").onClick(() => {
             // Obtain the styled string displayed in the component.
             this.richEditorStyledString = this.controller.getStyledString();
-            this.richEditorStyledString.appendStyledString(this.styledString)
+            this.richEditorStyledString.appendStyledString(this.styledString);
             // Apply the styled string after the text is inserted to the component.
-            this.controller.setStyledString(this.richEditorStyledString)
-            this.controller.setCaretOffset(this.richEditorStyledString.length)
+            this.controller.setStyledString(this.richEditorStyledString);
+            this.controller.setCaretOffset(this.richEditorStyledString.length);
           })
           Button("Delete Selection").onClick(() => {
             // Obtain the selection range.
@@ -3015,9 +3036,9 @@ struct Index {
             }
             // Obtain the styled string displayed in the component.
             this.richEditorStyledString = this.controller.getStyledString();
-            this.richEditorStyledString.removeString(start, end - start)
+            this.richEditorStyledString.removeString(start, end - start);
             // Apply the styled string after the content is deleted to the component.
-            this.controller.setStyledString(this.richEditorStyledString)
+            this.controller.setStyledString(this.richEditorStyledString);
           })
         }
         Row({space:2}) {
@@ -3050,19 +3071,19 @@ struct Index {
               length: end - start,
               styledKey: StyledStringKey.FONT,
               styledValue: this.textStyle
-            })
+            });
             // Apply the updated styled string to the component.
-            this.controller.setStyledString(this.richEditorStyledString)
-          })
+            this.controller.setStyledString(this.richEditorStyledString);
+          });
         }
-        Row({space:2}){
+        Row({space:2}) {
           // Convert a styled string into a span.
           Button("Call fromStyledString").onClick(() => {
-            this.controller1.addTextSpan("Call fromStyledString: " +JSON.stringify(this.controller1.fromStyledString(this.mutableStyledString)))
+            this.secondaryController.addTextSpan("Call fromStyledString:" +JSON.stringify(this.secondaryController.fromStyledString(this.mutableStyledString)));
           })
           // Convert the component content within the given range to a styled string.
           Button("Call toStyledString").onClick(() => {
-            this.controller.setStyledString(this.controller1.toStyledString({start:0,end:13}))
+            this.controller.setStyledString(this.secondaryController.toStyledString({start:0,end:13}));
           })
         }
     }
@@ -3075,7 +3096,7 @@ This example shows how to obtain layout information using the [getLayoutManager]
 ```TypeScript
 @Entry
 @Component
-export struct Index {
+struct Index {
   @State lineCount: string = ""
   @State glyphPositionAtCoordinate: string = ""
   @State lineMetrics: string = ""
@@ -3095,7 +3116,7 @@ export struct Index {
           .borderColor(Color.Red)
           .borderWidth(1)
           .onReady(() => {
-            this.controller.addTextSpan(this.textStr)
+            this.controller.addTextSpan(this.textStr);
           })
           .onAreaChange(() => {
             let layoutManager = this.controller.getLayoutManager();
@@ -3156,9 +3177,9 @@ struct RichEditorExample {
       // TextMenuItemId.autoFill is supported since API version 23.
       TextMenuItemId.autoFill
     ]
-    const items = menuItems.filter(item => !idsToFilter.some(id => id.equals(item.id)))
+    const items = menuItems.filter(item => !idsToFilter.some(id => id.equals(item.id)));
     // Replace $r('app.media.startIcon') with the image resource file you use.
-    let item1: TextMenuItem = {
+    let createMenuOption1: TextMenuItem = {
       content: 'create1',
       icon: $r('app.media.startIcon'),
       id: TextMenuItemId.of('create1'),
@@ -3168,7 +3189,7 @@ struct RichEditorExample {
       id: TextMenuItemId.of('create2'),
       icon: $r('app.media.startIcon'),
     };
-    items.push(item1);
+    items.push(createMenuOption1);
     items.unshift(item2);
     return items;
   }
@@ -3211,7 +3232,7 @@ struct RichEditorExample {
     Column() {
       RichEditor(this.options)
         .onReady(() => {
-          this.controller.addTextSpan("RichEditor editMenuOptions")
+          this.controller.addTextSpan("RichEditor editMenuOptions");
         })
         .editMenuOptions(this.editMenuOptions)
         .onSelectionChange((range: RichEditorRange) => {
@@ -3229,7 +3250,7 @@ struct RichEditorExample {
 }
 ```
 
-This example shows how to set common attributes for the component. This includes the following:- Set the scrollbar display mode using [barState](#barstate13) (available since API version 18). - Configure whether the soft keyboard is automatically displayed when the component gains focus via non‑click triggers, using [enableKeyboardOnFocus](#enablekeyboardonfocus12). - Enable or disable haptic feedback for the component using [enableHapticFeedback](#enablehapticfeedback13). - Obtain preview text information using [getPreviewText](#getpreviewtext12). - Specify whether to prevent the back button press from being propagated to other components or apps, using [stopBackPress](#stopbackpress18).This example shows how to set the scrollbar color of the RichEditor component using the [scrollBarColor](#scrollbarcolor21) attribute, available since API version 21.
+Since API version 18, this example uses the [barState](#barstate13) attribute to set the display mode of the component scrollbar. It uses the [enableKeyboardOnFocus](#enablekeyboardonfocus12) attribute to set whether to proactively pull up the soft keyboard when the component gains focus by means other than tapping. It uses the [enableHapticFeedback](#enablehapticfeedback13) attribute to set whether the component supports haptic feedback. It uses the [getPreviewText](#getpreviewtext12) API to obtain the preview text of the component. It uses the [stopBackPress](#stopbackpress18) attribute to set whether to prevent the back key from being passed to other components or the application side.Since API version 21, this example uses the [scrollBarColor](#scrollbarcolor21) attribute to set the scrollbar color of the RichEditor component.
 
 ```TypeScript
 // xxx.ets
@@ -3238,17 +3259,17 @@ import { ColorMetrics } from '@kit.ArkUI';
 
 @Entry
 @Component
-struct RichEditor_example {
+struct RichEditorExample {
   controller: RichEditorController = new RichEditorController();
   options: RichEditorOptions = { controller: this.controller };
 
-  controller1: RichEditorController = new RichEditorController();
-  options1: RichEditorOptions = { controller: this.controller1 };
+  secondaryController: RichEditorController = new RichEditorController();
+  secondaryOptions: RichEditorOptions = { controller: this.secondaryController };
 
-  @State e: boolean = true;
-  @State bs_num: number = 0;
-  @State bs: (BarState | undefined)[] = [BarState.Auto, BarState.On, BarState.Off, undefined];
-  @State bs_string: string[] = ["Auto", "On", "Off", "undefined"];
+  @State isEnabled: boolean = true;
+  @State barStateIndex: number = 0;
+  @State barStates: (BarState | undefined)[] = [BarState.Auto, BarState.On, BarState.Off, undefined];
+  @State barStateStrings: string[] = ["Auto", "On", "Off", "undefined"];
 
   build() {
     Column({space: 3}) {
@@ -3262,7 +3283,7 @@ struct RichEditor_example {
           });
         })
         .onDidIMEInput((value: TextRange) => {
-          this.controller1.addTextSpan("\n" + "onDidIMEInput callback triggered. Input range: (" + value.start + "," + value.end + ")", {
+          this.secondaryController.addTextSpan("\n" + "The onDidIMEInput callback is triggered. The input range of the current input method is: (" + value.start + "," + value.end + ")", {
             style: {
               fontColor: Color.Gray,
               fontSize: 10
@@ -3270,7 +3291,7 @@ struct RichEditor_example {
           });
         })
         .onSelectionChange((value: RichEditorRange) => {
-          this.controller1.addTextSpan("\n" + "onSelectionChange callback triggered. Input range: (" + value.start + "," + value.end + ")", {
+          this.secondaryController.addTextSpan("\n" + "The onSelectionChange callback is triggered. The start range information is: (" + value.start + "," + value.end + ")", {
             style: {
               fontColor: Color.Gray,
               fontSize: 10
@@ -3280,36 +3301,36 @@ struct RichEditor_example {
         .width(300)
         .height(100)
         .margin(20)
-        .barState(this.bs[this.bs_num])
-        .enableKeyboardOnFocus(this.e)
+        .barState(this.barStates[this.barStateIndex])
+        .enableKeyboardOnFocus(this.isEnabled)
         .enableHapticFeedback(true)
         .stopBackPress(false)
         .scrollBarColor(ColorMetrics.resourceColor("#2787D9"));
 
-      RichEditor(this.options1).width(300)
+      RichEditor(this.secondaryOptions).width(300)
 
-      Button('Set barState to ' + this.bs_string[this.bs_num])
+      Button('Set barState to: ' + this.barStateStrings[this.barStateIndex])
         .height(30)
         .fontSize(13)
         .onClick(() => {
-          this.bs_num++;
-          if (this.bs_num > (this.bs.length - 1)) {
-            this.bs_num = 0;
+          this.barStateIndex++;
+          if (this.barStateIndex > (this.barStates.length - 1)) {
+            this.barStateIndex = 0;
           }
         })
 
-      Button('Set enableKeyboardOnFocus to ' + this.e)
+      Button('Set enableKeyboardOnFocus to: ' + this.isEnabled)
         .height(30)
         .fontSize(13)
         .onClick(() => {
-          this.e = !this.e;
+          this.isEnabled = !this.isEnabled;
         })
 
       Button('Get Preview Text')
         .height(30)
         .fontSize(13)
         .onClick(() => {
-          this.controller1.addTextSpan("\nObtained preview text: " + JSON.stringify(this.controller.getPreviewText()))
+          this.secondaryController.addTextSpan("\nObtain the preview text:" + JSON.stringify(this.controller.getPreviewText()));
         })
     }
   }
@@ -3332,7 +3353,7 @@ struct Index {
       Button('get caret rect')
         .onClick(() => {
           let rectCaret = this.controller.getCaretRect();
-          if(rectCaret == undefined) {
+          if (rectCaret == undefined) {
             this.caretRect = 'undefined';
           } else {
             this.caretRect = 'X: ' + rectCaret.x + '\nY: ' + rectCaret.y
@@ -3393,13 +3414,8 @@ struct RichEditorExample {
   @State maxLineList: (number | undefined)[] = [2, 6, undefined];
   @State maxLineIndex: number = 0;
   @State maxLineStringList: (string)[] = ["2", "6", "undefined"];
-  richEditorStyledString: MutableStyledString = new MutableStyledString("");
   controller1: RichEditorController = new RichEditorController();
-  controller2: TextInputController = new TextInputController();
   controller3: RichEditorController = new RichEditorController();
-  controller4: RichEditorStyledStringController = new RichEditorStyledStringController();
-  controller: RichEditorController = new RichEditorController();
-  option: RichEditorOptions = { controller: this.controller };
 
   build() {
     Column() {
@@ -3481,14 +3497,14 @@ struct RichEditorExample {
         Button("Add Example Url").onClick(() => {
           this.controller.addTextSpan("Example URL", {
             urlStyle: { url: "https://www.example.com" }
-          })
+          });
         })
         Button("Clear Url").onClick(() => {
           this.controller.updateSpanStyle({
             start: 0,
             textStyle: {},
             urlStyle: { url: "" }
-          })
+          });
         })
       }
 
@@ -3519,7 +3535,7 @@ struct StyledUndo {
     Column() {
       Column() {
         Row({space:2}) {
-          Button("Insert Text").onClick () => {
+          Button("Insert Text").onClick(() => {
             this.controller.addTextSpan("Insert text",
               {
                 style:
@@ -3527,7 +3543,7 @@ struct StyledUndo {
                   fontColor: Color.Orange,
                   fontSize: 32
                 }
-              })
+              });
           })
           Button("Insert Image").onClick () => {
             // Replace $r('app.media.startIcon') with the image resource file you use.
@@ -3573,7 +3589,7 @@ struct StyledUndo {
               this.controller.deleteSpans({
                 start: this.start,
                 end: this.end
-              })
+              });
             }
           })
         }
@@ -3614,7 +3630,7 @@ struct StyledUndo {
                   fontColor: Color.Orange,
                   fontSize: 32
                 }
-              })
+              });
             this.controller.addSymbolSpan($r("sys.symbol.ohos_trash"),
               {
                 style:
@@ -3644,19 +3660,19 @@ This example demonstrates how to set the preset paragraph style using the [setTy
 @Entry
 @Component
 struct RichEditorExample {
-  controller: RichEditorController = new RichEditorController()
+  controller: RichEditorController = new RichEditorController();
   options: RichEditorOptions = { controller: this.controller }
-  ssController: RichEditorStyledStringController = new RichEditorStyledStringController()
-  ssOptions: RichEditorStyledStringOptions = { controller: this.ssController }
+  styledStringController: RichEditorStyledStringController = new RichEditorStyledStringController();
+  styledStringOptions: RichEditorStyledStringOptions = { controller: this.styledStringController }
   contentChangedListener: StyledStringChangedListener = {
     onWillChange: (value: StyledStringChangeValue) => {
       let range = '[ ' + value.range.start + ' , ' + value.range.end + ' ]';
       let replaceString = value.replacementString.getString();
       console.info('styledString, onWillChange, range=' + range);
       console.info('styledString, onWillChange, replaceString=' + replaceString);
-      let styles: Array<SpanStyle> = []
+      let styles: Array<SpanStyle> = [];
       if (replaceString.length != 0) {
-        styles = value.replacementString.getStyles(0, replaceString.length, StyledStringKey.PARAGRAPH_STYLE)
+        styles = value.replacementString.getStyles(0, replaceString.length, StyledStringKey.PARAGRAPH_STYLE);
       }
       styles.forEach((style) => {
         let value = style.styledValue
@@ -3671,7 +3687,7 @@ struct RichEditorExample {
             + ', paragraphSpacing=' + JSON.stringify(paraStyle.paragraphSpacing)
           );
         }
-      })
+      });
       return true;
     }
   }
@@ -3685,8 +3701,8 @@ struct RichEditorExample {
           let paragraphStyle: RichEditorParagraphStyle = {
             textAlign: TextAlign.Center
           }
-          this.controller.setTypingParagraphStyle(paragraphStyle)
-          this.ssController.setTypingParagraphStyle(paragraphStyle)
+          this.controller.setTypingParagraphStyle(paragraphStyle);
+          this.styledStringController.setTypingParagraphStyle(paragraphStyle);
         })
         // Set the preset paragraph style to left alignment with indentation.
         Button('setStyle2').onClick(() => {
@@ -3694,13 +3710,13 @@ struct RichEditorExample {
             textAlign: TextAlign.Start,
             leadingMargin: 80
           }
-          this.controller.setTypingParagraphStyle(paragraphStyle)
-          this.ssController.setTypingParagraphStyle(paragraphStyle)
+          this.controller.setTypingParagraphStyle(paragraphStyle);
+          this.styledStringController.setTypingParagraphStyle(paragraphStyle);
         })
         // Clear the preset paragraph style.
         Button('clearParaStyle').onClick(() => {
-          this.controller.setTypingParagraphStyle(undefined)
-          this.ssController.setTypingParagraphStyle(undefined)
+          this.controller.setTypingParagraphStyle(undefined);
+          this.styledStringController.setTypingParagraphStyle(undefined);
         })
       }
 
@@ -3711,17 +3727,17 @@ struct RichEditorExample {
             .width('100%')
             .border({ width: 1, color: Color.Blue })
             .onWillChange((value: RichEditorChangeValue) => {
-              console.info('controller, onWillChange, rangeBefore=' + JSON.stringify(value.rangeBefore))
+              console.info('controller, onWillChange, rangeBefore=' + JSON.stringify(value.rangeBefore));
               value.replacedSpans.forEach((item: RichEditorTextSpanResult) => {
-                console.info('controller, onWillChange, replacedTextSpans=' + JSON.stringify(item))
-              })
+                console.info('controller, onWillChange, replacedTextSpans=' + JSON.stringify(item));
+              });
               return true
             })
-          RichEditor(this.ssOptions)
+          RichEditor(this.styledStringOptions)
             .height('25%')
             .width('100%')
             .onReady(() => {
-              this.ssController.onContentChanged(this.contentChangedListener);
+              this.styledStringController.onContentChanged(this.contentChangedListener);
             })
         }
       }
@@ -3755,7 +3771,7 @@ struct Index {
                 thicknessScale: 2
               }
             }
-          })
+          });
         })
 
       // Set RichEditor for multiple text decorations.
@@ -3773,7 +3789,7 @@ struct Index {
                 thicknessScale: 8
               }
             }
-          })
+          });
         })
 
       Button('Update Decoration Scale to 4')
@@ -3795,7 +3811,7 @@ struct Index {
       Button('Add Multi-Decoration Text')
         .fontSize(20)
         .onClick(() => {
-          let mutString: MutableStyledString = new MutableStyledString('Set multiple text decorations for RichEditor.', [
+          let mutableString: MutableStyledString = new MutableStyledString('Set multiple decoration lines for rich text', [
             {
               start: 0,
               length: 9,
@@ -3844,8 +3860,8 @@ struct Index {
                 }
               )
             },
-          ])
-          this.styledStringController.setStyledString(mutString);
+          ]);
+          this.styledStringController.setStyledString(mutableString);
         })
     }
     .height('100%')
@@ -3870,7 +3886,7 @@ struct AutoSpacing {
     Column() {
       Column() {
         Row({ space: 2 }) {
-          Button ("Insert Chinese & Western Text").onClick (() ==> {
+          Button("Insert Chinese & Western Text").onClick(() => {
             this.controller.addTextSpan("Add a text span",
               {
                 style:
@@ -3878,9 +3894,9 @@ struct AutoSpacing {
                   fontColor: Color.Orange,
                   fontSize: 20
                 }
-              })
+              });
           })
-          Button("Insert Image").onClick () => {
+          Button("Insert Image").onClick(() => {
             // Replace $r('app.media.startIcon') with the image resource file you use.
             this.controller.addImageSpan($r('app.media.startIcon'),
               {
@@ -3939,7 +3955,7 @@ struct AutoSpacing {
                   fontColor: Color.Orange,
                   fontSize: 20
                 }
-              })
+              });
             this.controller.addSymbolSpan($r("sys.symbol.ohos_trash"),
               {
                 style:
@@ -3964,17 +3980,17 @@ This example demonstrates how to configure the AI menu for text selection using 
 ```TypeScript
 @Entry
 @Component
-struct Demo32 {
+struct SelectedDataDetectorDemo {
   controller: RichEditorController = new RichEditorController();
   textSpanOptions: RichEditorTextSpanOptions = { style: { fontSize: 20 } };
-  exampleText: string ='Example website: www.example.com';
+  exampleText: string = 'Example website: www.example.com';
 
   build() {
     Column() {
       Row() {
         RichEditor({ controller: this.controller })
           .onReady(() => {
-            this.controller.addTextSpan(this.exampleText, this.textSpanOptions)
+            this.controller.addTextSpan(this.exampleText, this.textSpanOptions);
           })
           .copyOptions(CopyOptions.LocalDevice)
           .enableSelectedDataDetector(true)
@@ -3999,10 +4015,10 @@ struct SetOnWillAttachIME {
 
   build() {
     Column() {
-     Text(this.message)
-       .fontSize(24)
-       .width("100%")
-       .textAlign(TextAlign.Center)
+      Text(this.message)
+        .fontSize(24)
+        .width("100%")
+        .textAlign(TextAlign.Center)
       RichEditor(this.options)
         .onReady(() => {
           this.controller.addTextSpan("RichEditor component",
@@ -4012,7 +4028,7 @@ struct SetOnWillAttachIME {
                 fontColor: Color.Orange,
                 fontSize: 30
               }
-            })
+            });
         })
         .onWillAttachIME((value:IMEClient) => {
           // Pass a custom message to the input method.
@@ -4057,7 +4073,7 @@ struct RichEditorExample {
         .fontSize(16)
         .onClick(() => {
           // Call deleteBackward to delete the character.
-          this.controller.deleteBackward()
+          this.controller.deleteBackward();
         })
     }
     .padding(10)
@@ -4078,12 +4094,12 @@ struct RichEditorExample {
         .width("100%")
         .onReady(() => {
           // Set the initial text for testing.
-          this.controller.addTextSpan ('Click DELETE to test the deletion function', {
+          this.controller.addTextSpan('Click DELETE to test the deletion function', {
             style: {
               fontColor: Color.Black,
               fontSize: 16
             }
-          })
+          });
         })
     }.margin(90)
   }
@@ -4115,7 +4131,7 @@ struct RichEditorExample {
               paragraphStyle: {
                 textAlign: TextAlign.Start,
               }
-            })
+            });
           this.controller.addTextSpan('བོད་ཀྱི་སྐད་ཡིག་ནི་བོད་མིའི་རྒྱུན་ལྡན་པའི་སྐད་ཡིག་དང་།\n འཇིག་རྟེན་གྱི་ཆོས་ལུགས་དང་རྒྱུན་ལྡན་པའི་ཆོས་ལུགས་ཀྱི་དོན་ཚན་གྱི་སྐད་ཡིག་རེད།',
             {
               style: {
@@ -4125,7 +4141,7 @@ struct RichEditorExample {
               paragraphStyle: {
                 textAlign: TextAlign.Start,
               }
-            })
+            });
         })
         .width("100%")
         .height("35%")
@@ -4134,16 +4150,16 @@ struct RichEditorExample {
         .includeFontPadding(this.includeFontPadding)
         .fallbackLineSpacing(this.fallbackLineSpacing)
       Row() {
-        Button ('Enable Adaptive Line Spacing')
+        Button('Enable Adaptive Line Spacing')
           .onClick(() => {
-            this.fallbackLineSpacing = true
+            this.fallbackLineSpacing = true;
           })
           .width("45%")
           .height("10%")
           .margin({ right: 10 })
-        Button ('Disable Adaptive Line Spacing')
+        Button('Disable Adaptive Line Spacing')
           .onClick(() => {
-            this.fallbackLineSpacing = false
+            this.fallbackLineSpacing = false;
           })
           .width("45%")
           .height("10%")
@@ -4152,16 +4168,16 @@ struct RichEditorExample {
       .margin({ top: 20 })
 
       Row() {
-        Button ('Enable Font Padding')
+        Button('Enable Font Padding')
           .onClick(() => {
-            this.includeFontPadding = true
+            this.includeFontPadding = true;
           })
           .width("45%")
           .height("10%")
           .margin({ right: 10 })
         Button ('Disable Font Padding')
           .onClick(() => {
-            this.includeFontPadding = false
+            this.includeFontPadding = false;
           })
           .width("45%")
           .height("10%")
@@ -4173,41 +4189,49 @@ struct RichEditorExample {
 }
 ```
 
-This example demonstrates how to compress punctuation at the beginning of a line using the [compressLeadingPunctuation](#compressleadingpunctuation23) attribute.
-The compressLeadingPunctuation attribute is added since API version 23.
+This example uses [compressLeadingPunctuation](#compressleadingpunctuation23) to set leading punctuation compression, and [punctuationOverflow](#punctuationoverflow) to set trailing punctuation hanging.
+After the text wraps automatically, the remaining content (including punctuation) must fit into the previous line for punctuation hanging to take effect.
+Since API version 23, the compressLeadingPunctuation API is added.
+Since API version 26.0.0, the punctuationOverflow API is added.
 
 ```TypeScript
 @Entry
 @Component
-struct CompressLeadingPunctuationDemo {
+struct PunctuationDemo {
   controller: RichEditorController = new RichEditorController();
-  options: RichEditorOptions = { controller: this.controller };
-
+  textSpanOptions: RichEditorTextSpanOptions = { style: { fontSize: '20fp' } };
   @State compressLeadingPunctuation: boolean = false;
-  @State text: string = '「0123456789\n『0123456789\n（0123456789\n《0123456789\n〈0123456789\n【0123456789\n〖0123456789\n〔0123456789\n［0123456789\n｛0123456789';
+  @State punctuationOverflow: boolean = false;
+  @State text: string = '「0123456789！\n『0123456789：\n（0123456789；\n《0123456789）\n〈0123456789】\n【0123456789、\n〖0123456789。\n〔0123456789﹑\n［0123456789〞\n｛0123456789';
 
   build() {
     Column() {
-      RichEditor(this.options)
+      RichEditor({ controller: this.controller })
         .onReady(() => {
-          this.controller.addTextSpan(this.text)
+          this.controller.addTextSpan(this.text, this.textSpanOptions);
         })
         .compressLeadingPunctuation(this.compressLeadingPunctuation)
-        .borderWidth(1)
-        .borderColor(Color.Green)
+        .punctuationOverflow(this.punctuationOverflow)
+        .border({ width: 1, color: Color.Black })
         .align(Alignment.Center)
-        .height("30%")
-        .width("50%")
+        .height('35%')
+        .width('50%')
 
       Column() {
-        Button("Enable Leading Punctuation Compression").onClick(() => {
-          this.compressLeadingPunctuation = true
-        }).margin({ top: 10 })
-        Button ("Disable Leading Punctuation Compression").onClick (() => {
-          this.compressLeadingPunctuation = false
-        }).margin({ top: 10 })
+        Button('Enable Leading Punctuation Compression').onClick(() => {
+          this.compressLeadingPunctuation = true;
+        }).margin(5)
+        Button('Disable Leading Punctuation Compression').onClick(() => {
+          this.compressLeadingPunctuation = false;
+        }).margin(5)
+        Button('Enable line-end punctuation hanging').onClick(() => {
+          this.punctuationOverflow = true;
+        }).margin(5)
+        Button('Disable line-end punctuation hanging').onClick(() => {
+          this.punctuationOverflow = false;
+        }).margin(5)
       }
-    }.width("100%").padding(20)
+    }.width('100%').padding(20)
   }
 }
 ```
@@ -4226,7 +4250,7 @@ struct RichEditorDemo {
     Column({ space: 2 }) {
       RichEditor(this.options)
         .onReady(() => {
-          this.controller.addTextSpan('RichEditor selectedDragPreviewStyle')
+          this.controller.addTextSpan('RichEditor selectedDragPreviewStyle');
         })
         .borderWidth(1)
         .borderColor(Color.Green)
@@ -4256,7 +4280,7 @@ struct SingleLineDemo {
       Row() {
         RichEditor({ controller: this.controller })
           .onReady(() => {
-            this.controller.addTextSpan(this.exampleText, this.textSpanOptions)
+            this.controller.addTextSpan(this.exampleText, this.textSpanOptions);
           })
           .singleLine(this.enableSingleLine)
           .border({ width: 1, color: Color.Black })
@@ -4264,10 +4288,10 @@ struct SingleLineDemo {
       }
       Row() {
         Button('Apply Single-Line Mode').onClick((event: ClickEvent) => {
-          this.enableSingleLine = true
+          this.enableSingleLine = true;
         }).margin(5)
         Button('Apply Multi-Line Mode').onClick((event: ClickEvent) => {
-          this.enableSingleLine = false
+          this.enableSingleLine = false;
         }).margin(5)
       }
     }
@@ -4328,7 +4352,7 @@ struct RichEditorExample {
 
   aboutToAppear() {
     this.styledString.appendStyledString(this.imageStyledString);
-    this.controller.setStyledPlaceholder(this.styledString)
+    this.controller.setStyledPlaceholder(this.styledString);
   }
 
   build() {
@@ -4350,7 +4374,7 @@ struct RichEditorExample {
 }
 ```
 
-This example demonstrates how to use the [orphanCharOptimization](#orphancharoptimization) API to enable/disable orphan character optimization, ensuring no orphan character appears in the last line of a paragraph.
+This example uses the [orphanCharOptimization](#orphancharoptimization) API to enable orphan character optimization, ensuring that no orphan character appears on the last line of a paragraph.
 The orphanCharOptimization API is supported since API version 26.0.0.
 
 ```TypeScript
@@ -4369,7 +4393,7 @@ struct RichEditorDemo {
         .fontSize(12).width('90%')
       RichEditor({ controller: this.controller1 })
         .onReady(() => {
-          this.controller1.addTextSpan(this.text, this.textSpanOptions)
+          this.controller1.addTextSpan(this.text, this.textSpanOptions);
         })
         .orphanCharOptimization(true)
         .width(430)
@@ -4382,7 +4406,7 @@ struct RichEditorDemo {
 
       RichEditor({ controller: this.controller2 })
         .onReady(() => {
-          this.controller2.addTextSpan(this.text, this.textSpanOptions)
+          this.controller2.addTextSpan(this.text, this.textSpanOptions);
         })
         .orphanCharOptimization(false)
         .width(430)
@@ -4404,7 +4428,7 @@ The horizontalScrolling API is added since API version 26.0.0.
 struct HorizontalScrollDemo {
   controller: RichEditorController = new RichEditorController();
   textSpanOptions: RichEditorTextSpanOptions = { style: { fontSize: 30 } };
-  exampleText: string = 'This is an ultra-long sample text.\nThis is an ultra-long sample text.';
+  exampleText: string = 'This is a very long sample text\n';
   @State enableHorizontalScroll: boolean = false;
 
   build() {
@@ -4412,7 +4436,7 @@ struct HorizontalScrollDemo {
       Row() {
         RichEditor({ controller: this.controller })
           .onReady(() => {
-            this.controller.addTextSpan(this.exampleText, this.textSpanOptions)
+            this.controller.addTextSpan(this.exampleText, this.textSpanOptions);
           })
           .width('220vp')
           .height('160vp')
@@ -4429,6 +4453,201 @@ struct HorizontalScrollDemo {
         }).margin(5)
       }
     }
+  }
+}
+```
+
+This example implements a text shader effect through the shaderStyle API in [RichEditorParagraphStyle](arkts-arkui-richeditorparagraphstyle-i.md).
+Since API version 26.0.0, RichEditorParagraphStyle adds the shaderStyle API.
+
+```TypeScript
+@Entry
+@Component
+struct ShaderColorStyle {
+  @State message: string = 'Hello World';
+  @State linearGradientOptions1: LinearGradientOptions =
+    {
+      angle: 45,
+      colors: [[Color.Red, 0.0], [Color.Blue, 0.3], [Color.Green, 0.5]]
+    };
+  @State linearGradientOptions2: LinearGradientOptions =
+    {
+      direction: GradientDirection.LeftTop,
+      colors: [[Color.Red, 0.0], [Color.Blue, 0.3], [Color.Green, 0.5]],
+      repeating: true,
+    };
+  @State radialGradientOptions: RadialGradientOptions =
+    {
+      center: [50, 50],
+      radius: 20,
+      colors: [[Color.Red, 0.0], [Color.Blue, 0.3], [Color.Green, 0.5]],
+      repeating: true,
+    };
+  @State colorShaderStyle: ColorShaderStyle =
+    {
+      color: Color.Blue
+    };
+  controller: RichEditorController = new RichEditorController();
+  options: RichEditorOptions = { controller: this.controller };
+  secondaryController: RichEditorController = new RichEditorController();
+  secondaryOptions: RichEditorOptions = { controller: this.secondaryController };
+  controller2: RichEditorController = new RichEditorController();
+  options2: RichEditorOptions = { controller: this.controller2 };
+  controller3: RichEditorController = new RichEditorController();
+  options3: RichEditorOptions = { controller: this.controller3 };
+
+  build() {
+    Column({ space: 5 }) {
+      Text('Linear gradient at a 45° angle').fontSize(18).width('90%')
+        .margin({ top: 40, left: 40 })
+      RichEditor(this.options)
+        .width('80%')
+        .margin({ top: 10 })
+        .onReady(() => {
+          this.controller.addTextSpan(this.message, { paragraphStyle: { shaderStyle: this.linearGradientOptions1 } });
+          let spans: Array<RichEditorImageSpanResult | RichEditorTextSpanResult> =
+            this.controller.getSpans();
+          if (spans.length > 0 && (spans[0] as RichEditorTextSpanResult).paragraphStyle) {
+            let shaderStyle: ShaderStyle | undefined =
+              (spans[0] as RichEditorTextSpanResult).paragraphStyle?.shaderStyle;
+            if (!shaderStyle) {
+              return;
+            }
+            if (typeof (shaderStyle as ColorShaderStyle)['color'] != 'undefined') {
+              console.info(' color shaderStyle : ' + JSON.stringify(shaderStyle));
+            } else if (typeof (shaderStyle as RadialGradientStyle)['options']['center'] != 'undefined') {
+              console.info(' radial gradient shaderStyle : ' + JSON.stringify(shaderStyle));
+            } else if (typeof (shaderStyle as LinearGradientStyle)['options']['colors'] != 'undefined') {
+              console.info(' linear gradient shaderStyle : ' + JSON.stringify(shaderStyle));
+            }
+          }
+        }).borderWidth(1)
+      Text('Linear gradient with direction LeftTop').fontSize(18).width('90%')
+        .margin({ top: 40, left: 40 })
+      RichEditor(this.secondaryOptions)
+        .width('80%')
+        .margin({ top: 10 })
+        .borderWidth(1)
+        .onReady(() => {
+          this.secondaryController.addTextSpan(this.message,
+            { paragraphStyle: { shaderStyle: this.linearGradientOptions2 } });
+        })
+      Text('Radial gradient').fontSize(18).width('90%')
+        .margin({ top: 40, left: 40 })
+      RichEditor(this.options2)
+        .width('80%')
+        .margin({ top: 10 })
+        .borderWidth(1)
+        .onReady(() => {
+          this.controller2.addTextSpan(this.message, { paragraphStyle: { shaderStyle: this.radialGradientOptions } });
+        })
+      Text('Solid color').fontSize(18).width('90%')
+        .margin({ top: 40, left: 40 })
+      RichEditor(this.options3)
+        .width('80%')
+        .margin({ top: 10 })
+        .borderWidth(1)
+        .onReady(() => {
+          this.controller3.addTextSpan(this.message, { paragraphStyle: { shaderStyle: this.colorShaderStyle } });
+        })
+    }
+  }
+}
+```
+
+This example uses [scrollToVisible](#scrolltovisible) to scroll text outside the visible area into the visible area.
+Since API version 26.0.0, the scrollToVisible API is added.
+
+```TypeScript
+@Entry
+@Component
+struct ScrollToVisibleDemo {
+  controller: RichEditorController = new RichEditorController();
+  textSpanOptions: RichEditorTextSpanOptions = { style: { fontSize: 30 } };
+  exampleText: string = 'First paragraph of sample text\nSecond paragraph of sample text\nThird paragraph of sample text\nFourth paragraph of sample text' +
+    '\nFifth paragraph of sample text\nSixth paragraph of sample text\nSeventh paragraph of sample text\nEighth paragraph of sample text';
+
+  build() {
+    Column() {
+      RichEditor({ controller: this.controller })
+        .onReady(() => {
+          this.controller.addTextSpan(this.exampleText, this.textSpanOptions);
+        })
+        .width('250vp')
+        .height('150vp')
+        .border({ width: 1, color: Color.Black })
+        .margin(10)
+      Button('Scroll the first paragraph of text into view').onClick((event: ClickEvent) => {
+        this.controller.scrollToVisible({start: 0, end: 7});
+      }).margin(5)
+      Button('Scroll the last paragraph of text into view').onClick((event: ClickEvent) => {
+        this.controller.scrollToVisible({start: 64, end: 71});
+      }).margin(5)
+    }
+  }
+}
+```
+
+This example stretches an image in different directions by setting the resizable attribute of [RichEditorImageSpanStyle](arkts-arkui-richeditorimagespanstyle-i.md).
+Since API version 26.1.0, the resizable attribute is added to RichEditorImageSpanStyle.
+
+```TypeScript
+@Entry
+@Component
+struct RichEditorResizablePage {
+  controller: RichEditorController = new RichEditorController();
+  options: RichEditorOptions = { controller: this.controller };
+
+  build() {
+    Column({ space: 20 }) {
+      Text('RichEditor resizable Demo')
+        .fontSize(28)
+        .fontWeight(FontWeight.Bold)
+
+      RichEditor(this.options)
+        .onReady(() => {
+          this.controller.addTextSpan('Original image\n', {
+            style: {
+              fontColor: Color.Black,
+              fontSize: 28
+            }
+          });
+          this.controller.addImageSpan($r('app.media.landscape'), {
+            imageStyle: {
+              size: [260, 260],
+            }
+          });
+          this.controller.addTextSpan('\nResizable stretching effect of ImageSpan in RichEditor\n', {
+            style: {
+              fontColor: Color.Black,
+              fontSize: 28
+            }
+          });
+          this.controller.addImageSpan($r('app.media.landscape'), {
+            imageStyle: {
+              size: [260, 260],
+              resizable: {
+                slice: {
+                  left: '200px',
+                  top: '200px',
+                  right: '20px',
+                  bottom: '20px'
+                }
+              }
+            }
+          });
+
+        })
+        .width('90%')
+        .borderWidth(1)
+        .borderColor('#cccccc')
+        .borderRadius(8)
+        .padding(10)
+    }
+    .width('100%')
+    .height('100%')
+    .padding(20)
+    .alignItems(HorizontalAlign.Center)
   }
 }
 ```

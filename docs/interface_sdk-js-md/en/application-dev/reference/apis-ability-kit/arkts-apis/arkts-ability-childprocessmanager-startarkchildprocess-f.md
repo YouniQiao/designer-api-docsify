@@ -58,7 +58,7 @@ Starts an [ArkTS child process](../../../application-models/ability-terminology.
 Sample code for the child process:
 
 ```TypeScript
-// Create the child process class DemoProcess.ets in src/main/ets/process of module1.
+// Create the DemoProcess.ets child process class under src/main/ets/process of the module1 module:
 // module1/src/main/ets/process/DemoProcess.ets
 import { ChildProcess, ChildProcessArgs } from '@kit.AbilityKit';
 
@@ -75,7 +75,7 @@ export default class DemoProcess extends ChildProcess {
 Sample code for the main process is provided below. For details about how to obtain the context in the example, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
 ```TypeScript
-// Call childProcessManager.startArkChildProcess to start the child process.
+// Use the childProcessManager.startArkChildProcess method to start a child process:
 // module1/src/main/ets/tool/Tool.ets
 import { common, ChildProcessArgs, ChildProcessOptions, childProcessManager } from '@kit.AbilityKit';
 import { fileIo } from '@kit.CoreFileKit';
@@ -108,13 +108,13 @@ struct Index {
               };
               childProcessManager.startArkChildProcess("module1/ets/process/DemoProcess.ets", args, options)
                 .then((pid) => {
-                  console.info(`startChildProcess success, pid: ${pid}`);
+                  console.info(`startArkChildProcess success, pid: ${pid}`);
                 })
                 .catch((err: BusinessError) => {
-                  console.error(`startChildProcess business error, errorCode: ${err.code}, errorMsg:${err.message}`);
+                  console.error(`startArkChildProcess business error, errorCode: ${err.code}, errorMsg:${err.message}`);
                 })
-            } catch (err) {
-              console.error(`startChildProcess error, errorCode: ${err.code}, errorMsg:${err.message}`);
+            } catch (err: BusinessError) {
+              console.error(`startArkChildProcess error, errorCode: ${err.code}, errorMsg:${err.message}`);
             }
           });
       }

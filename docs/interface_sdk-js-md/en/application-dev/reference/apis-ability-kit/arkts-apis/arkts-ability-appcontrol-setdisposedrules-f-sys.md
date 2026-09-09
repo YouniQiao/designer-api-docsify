@@ -62,7 +62,8 @@ let rule: appControl.DisposedRule = {
   elementList: [
     elementName
   ],
-  priority: 100
+  priority: 100,
+  pageJump: appControl.PageJumpMode.PAGE_JUMP_WINDOW_SHOW
 };
 
 let disposedRuleConfiguration: appControl.DisposedRuleConfiguration = {

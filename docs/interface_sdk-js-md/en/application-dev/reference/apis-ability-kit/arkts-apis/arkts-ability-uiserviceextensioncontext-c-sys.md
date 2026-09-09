@@ -79,20 +79,26 @@ import { hilog } from '@kit.PerformanceAnalysisKit';
 const TAG: string = '[Page_ServiceExtensionAbility]';
 const DOMAIN_NUMBER: number = 0xFF00;
 
-let connectionId: number;
+// The connectionId must be obtained from the return value of the connectServiceExtensionAbility API and saved.
+let connectionId: number = 0; // Example value. Use the connection ID returned by connectServiceExtensionAbility in practice.
+// Set the information about the background service Ability to connect.
 let want: Want = {
   deviceId: '',
   bundleName: 'com.samples.stagemodelabilitydevelop',
   abilityName: 'ServiceExtAbility'
-};
+  };
 
+// Set the connection option callbacks.
 let options: common.ConnectOptions = {
+  // Callback invoked when the connection is successful.
   onConnect(elementName, remote: rpc.IRemoteObject): void {
     hilog.info(DOMAIN_NUMBER, TAG, 'onConnect callback');
   },
+  // Callback invoked when the connection is disconnected.
   onDisconnect(elementName): void {
     hilog.info(DOMAIN_NUMBER, TAG, 'onDisconnect callback');
   },
+  // Callback invoked when the connection fails.
   onFailed(code: number): void {
     hilog.info(DOMAIN_NUMBER, TAG, `onFailed callback, ${code}`);
   }
@@ -110,7 +116,7 @@ struct Page_UIServiceExtensionAbility {
           .onClick(() => {
             let context: common.UIServiceExtensionContext =
               this.getUIContext().getHostContext() as common.UIServiceExtensionContext;
-            // The ID returned after the connection is set up must be saved. The ID will be used for disconnection.
+            // Save the ID returned after a successful connection for subsequent disconnection.
             connectionId = context.connectServiceExtensionAbility(want, options);
             // The background service is connected.
             this.getUIContext().getPromptAction().showToast({
@@ -172,7 +178,8 @@ import { BusinessError } from '@kit.BasicServicesKit';
 const TAG: string = '[Page_ServiceExtensionAbility]';
 const DOMAIN_NUMBER: number = 0xFF00;
 
-let connectionId: number;
+// Obtain and save connectionId from the return value of the connectServiceExtensionAbility API.
+let connectionId: number = 0; // Example value. Use the connection ID returned by connectServiceExtensionAbility in actual scenarios.
 
 @Entry
 @Component
@@ -270,10 +277,12 @@ import { BusinessError } from '@kit.BasicServicesKit';
 
 class UIEntryAbility extends UIServiceExtensionAbility {
   onCreate() {
+    // Set the Want parameter for starting the Ability.
     let want: Want = {
       bundleName: 'com.example.myapp',
       abilityName: 'MyAbility'
     };
+    // Set the startup option parameter.
     let options: StartOptions = {
       windowMode: 0,
     };
@@ -363,7 +372,7 @@ struct SubIndex {
               'email': [encodeURI('xxx@example.com'),
                 encodeURI('xxx@example.com')], // Email address of the recipient. Multiple values are separated by commas (,). The array content is URL-encoded using the **encodeURI()** method.
               'cc': [encodeURI('xxx@example.com'),
-                encodeURI('xxx@example.com')], // Email address of the CC recipient. Multiple values are separated by commas (,). The array content is URL-encoded using the **encodeURI()** method.
+                encodeURI('xxx@example.com')], // Email addresses of the CC recipients, separated by commas. Use the encodeURI() method to URL-encode the array content.
               'bcc': [encodeURI('xxx@example.com'),
                 encodeURI('xxx@example.com')], // Email address of the BCC recipient. Multiple values are separated by commas (,). The array content is URL-encoded using the **encodeURI()** method.
               'subject': encodeURI('Email subject'), // Email subject. The content is URL encoded using encodeURI().
@@ -372,7 +381,9 @@ struct SubIndex {
                 encodeURI ('attachment uri2') ], // Attachment URI. Multiple values are separated by commas (,). The array content is URL-encoded using the encodeURI() method.
               'ability.want.params.uriPermissionFlag': 1
             };
+            // Define the callback object for the startup result.
             let abilityStartCallback: common.AbilityStartCallback = {
+              // Handle the error callback for startup failure.
               onError: (code: number, name: string, message: string) => {
                 console.error(TAG + `code: ${code}  name:${name}  message:${message}`);
               }
@@ -430,6 +441,7 @@ import { BusinessError } from '@kit.BasicServicesKit';
 
 class UIEntryAbility extends UIServiceExtensionAbility {
   onCreate() {
+    // Destroy the UIServiceExtension.
     this.context.terminateSelf().then(() => {
       // Carry out normal service processing.
       console.info('terminateSelf succeed');

@@ -92,7 +92,7 @@ cert.createX509Crl(encodingBlob, (error, x509Crl) => {
     console.error(`createX509Crl failed, errCode: ${error.code}, errMsg: ${error.message}`);
   } else {
     console.info('createX509Crl result: success.');
-    x509Crl.getEncoded((error, data) => {
+    x509Crl.getEncoded((error, _data) => {
       if (error) {
         console.error(`getEncoded failed, errCode: ${error.code}, errMsg: ${error.message}`);
       } else {
@@ -172,7 +172,7 @@ let encodingBlob: cert.EncodingBlob = {
 
 cert.createX509Crl(encodingBlob).then(x509Crl => {
   console.info('createX509Crl result: success.');
-  x509Crl.getEncoded().then(result => {
+  x509Crl.getEncoded().then(_result => {
     console.info('getEncoded result: success.');
   }).catch((error: BusinessError) => {
     console.error(`getEncoded failed, errCode: ${error.code}, errMsg: ${error.message}`);
@@ -255,6 +255,7 @@ cert.createX509Crl(encodingBlob, (error, x509Crl) => {
     console.info('createX509Crl result: success.');
     try {
       let issuerName = x509Crl.getIssuerName();
+      console.info('issuerName = ' + issuerName.data);
     } catch (err) {
       let e: BusinessError = err as BusinessError;
       console.error(`getIssuerName failed, errCode: ${e.code}, errMsg: ${e.message}`);
@@ -336,6 +337,7 @@ cert.createX509Crl(encodingBlob, (error, x509Crl) => {
     console.info('createX509Crl result: success.');
     try {
       let lastUpdate = x509Crl.getLastUpdate();
+      console.info('lastUpdate = ' + lastUpdate);
     } catch (err) {
       let e: BusinessError = err as BusinessError;
       console.error(`getLastUpdate failed, errCode: ${e.code}, errMsg: ${e.message}`);
@@ -417,6 +419,7 @@ cert.createX509Crl(encodingBlob, (error, x509Crl) => {
     console.info('createX509Crl result: success.');
     try {
       let nextUpdate = x509Crl.getNextUpdate();
+      console.info('nextUpdate = ' + nextUpdate);
     } catch (err) {
       let e: BusinessError = err as BusinessError;
       console.error(`getNextUpdate failed, errCode: ${e.code}, errMsg: ${e.message}`);
@@ -504,7 +507,7 @@ cert.createX509Crl(encodingBlob, (error, x509Crl) => {
     console.info('createX509Crl result: success.');
     let serialNumber = 1000;
     try {
-      let entry = x509Crl.getRevokedCert(serialNumber);
+      x509Crl.getRevokedCert(serialNumber);
     } catch (error) {
       let e: BusinessError = error as BusinessError;
       console.error(`getRevokedCert failed, errCode: ${e.code}, errMsg: ${e.message}`);
@@ -584,7 +587,7 @@ cert.createX509Crl(encodingBlob, (error, x509Crl) => {
     console.error(`createX509Crl failed, errCode: ${error.code}, errMsg: ${error.message}`);
   } else {
     console.info('createX509Crl result: success.');
-    x509Crl.getRevokedCerts((error, array) => {
+    x509Crl.getRevokedCerts((error, _array) => {
       if (error) {
         console.error(`getRevokedCerts failed, errCode: ${error.code}, errMsg: ${error.message}`);
       } else {
@@ -663,7 +666,7 @@ let encodingBlob: cert.EncodingBlob = {
 
 cert.createX509Crl(encodingBlob).then(x509Crl => {
   console.info('createX509Crl result: success.');
-  x509Crl.getRevokedCerts().then(array => {
+  x509Crl.getRevokedCerts().then(_array => {
     console.info('getRevokedCerts result: success.');
   }).catch((error: BusinessError) => {
     console.error(`getRevokedCerts failed, errCode: ${error.code}, errMsg: ${error.message}`);
@@ -784,7 +787,7 @@ cert.createX509Crl(encodingBlob, (error, x509Crl) => {
     // Create an X.509 certificate object.
     cert.createX509Cert(certEncodingBlob).then((x509Cert) => {
       try {
-        let entry = x509Crl.getRevokedCertWithCert(x509Cert);
+        x509Crl.getRevokedCertWithCert(x509Cert);
         console.info('getRevokedCertWithCert result: success.');
       } catch (error) {
         let e: BusinessError = error as BusinessError;
@@ -792,7 +795,7 @@ cert.createX509Crl(encodingBlob, (error, x509Crl) => {
       }
     }).catch((error: BusinessError) => {
       console.error(`createX509Cert failed, errCode: ${error.code}, errMsg: ${error.message}`);
-    })
+    });
   }
 });
 ```
@@ -870,6 +873,7 @@ cert.createX509Crl(encodingBlob, (error, x509Crl) => {
     console.info('createX509Crl result: success.');
     try {
       let signature = x509Crl.getSignature();
+      console.info('signature = ' + signature.data);
     } catch (err) {
       let e: BusinessError = err as BusinessError;
       console.error(`getSignature failed, errCode: ${e.code}, errMsg: ${e.message}`);
@@ -951,6 +955,7 @@ cert.createX509Crl(encodingBlob, (error, x509Crl) => {
     console.info('createX509Crl result: success.');
     try {
       let sigAlgName = x509Crl.getSignatureAlgName();
+      console.info('sigAlgName = ' + sigAlgName);
     } catch (err) {
       let e: BusinessError = err as BusinessError;
       console.error(`getSignatureAlgName failed, errCode: ${e.code}, errMsg: ${e.message}`);
@@ -1032,6 +1037,7 @@ cert.createX509Crl(encodingBlob, (error, x509Crl) => {
     console.info('createX509Crl result: success.');
     try {
       let sigAlgOid = x509Crl.getSignatureAlgOid();
+      console.info('sigAlgOid = ' + sigAlgOid);
     } catch (err) {
       let e: BusinessError = err as BusinessError;
       console.error(`getSignatureAlgOid failed, errCode: ${e.code}, errMsg: ${e.message}`);
@@ -1114,6 +1120,7 @@ cert.createX509Crl(encodingBlob, (error, x509Crl) => {
     console.info('createX509Crl result: success.');
     try {
       let sigAlgParams = x509Crl.getSignatureAlgParams();
+      console.info('sigAlgParams = ' + sigAlgParams.data);
     } catch (err) {
       let e: BusinessError = err as BusinessError;
       console.error(`getSignatureAlgParams failed, errCode: ${e.code}, errMsg: ${e.message}`);
@@ -1195,6 +1202,7 @@ cert.createX509Crl(encodingBlob, (error, x509Crl) => {
     console.info('createX509Crl result: success.');
     try {
       let tbsInfo = x509Crl.getTbsInfo();
+      console.info('tbsInfo = ' + tbsInfo.data);
     } catch (error) {
       let e: BusinessError = error as BusinessError;
       console.error(`getTbsInfo failed, errCode: ${e.code}, errMsg: ${e.message}`);
@@ -1266,6 +1274,7 @@ cert.createX509Crl(encodingBlob, (error, x509Crl) => {
   } else {
     console.info('createX509Crl result: success.');
     let type = x509Crl.getType();
+    console.info('type = ' + type);
   }
 });
 ```
@@ -1333,6 +1342,7 @@ cert.createX509Crl(encodingBlob, (error, x509Crl) => {
   } else {
     console.info('createX509Crl result: success.');
     let version = x509Crl.getVersion();
+    console.info('version = ' + version);
   }
 });
 ```
@@ -1435,6 +1445,7 @@ cert.createX509Crl(encodingBlob, (error, x509Crl) => {
       } else {
         try {
           let revokedFlag = x509Crl.isRevoked(x509Cert);
+          console.info('revokedFlag = ' + revokedFlag);
         } catch (error) {
           let e: BusinessError = error as BusinessError;
           console.error(`isRevoked failed, errCode: ${e.code}, errMsg: ${e.message}`);
@@ -1579,25 +1590,25 @@ cert.createX509Crl(encodingBlob, (error, x509Crl) => {
       let keyGenerator = cryptoFramework.createAsyKeyGenerator('RSA1024|PRIMES_3');
       console.info('createAsyKeyGenerator result: success.');
       let priEncodingBlob: cryptoFramework.DataBlob = {
-        data: priKeyData,
+        data: priKeyData
       };
       let pubEncodingBlob: cryptoFramework.DataBlob = {
-        data: pubKeyData,
+        data: pubKeyData
       };
       keyGenerator.convertKey(pubEncodingBlob, priEncodingBlob, (e, keyPair) => {
         if (e) {
           console.error(`convert key failed, errCode: ${e.code}, errMsg: ${e.message}`);
         } else {
           console.info('convert key result: success.');
-          x509Crl.verify(keyPair.pubKey, (err, data) => {
+          x509Crl.verify(keyPair.pubKey, (err, _data) => {
             if (err) {
               console.error(`verify failed, errCode: ${err.code}, errMsg: ${err.message}`);
-            } else  {
+            } else {
               console.info('verify result: success.');
             }
           });
         }
-      })
+      });
     } catch (error) {
       let e: BusinessError = error as BusinessError;
       console.error(`get pubKey failed, errCode: ${e.code}, errMsg: ${e.message}`);
@@ -1650,7 +1661,7 @@ Verifies the signature of the X.509 CRL. The RSA algorithm is supported. This AP
 
 ```TypeScript
 import { cert } from '@kit.DeviceCertificateKit';
-import { cryptoFramework } from '@kit.CryptoArchitectureKit'
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 // Convert the string into a Uint8Array.
@@ -1743,14 +1754,14 @@ cert.createX509Crl(encodingBlob).then(x509Crl => {
     let keyGenerator = cryptoFramework.createAsyKeyGenerator('RSA1024|PRIMES_3');
     console.info('createAsyKeyGenerator result: success.');
     let priEncodingBlob: cryptoFramework.DataBlob = {
-      data: priKeyData,
+      data: priKeyData
     };
     let pubEncodingBlob: cryptoFramework.DataBlob = {
-      data: pubKeyData,
+      data: pubKeyData
     };
     keyGenerator.convertKey(pubEncodingBlob, priEncodingBlob).then((keyPair) => {
       console.info('convert key result: success.');
-      x509Crl.verify(keyPair.pubKey).then(result => {
+      x509Crl.verify(keyPair.pubKey).then(_result => {
         console.info('verify result: success.');
       }).catch((error: BusinessError) => {
         console.error(`verify failed, errCode: ${error.code}, errMsg: ${error.message}`);

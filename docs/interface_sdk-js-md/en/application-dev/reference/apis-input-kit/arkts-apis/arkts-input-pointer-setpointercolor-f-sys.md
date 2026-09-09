@@ -52,7 +52,7 @@ struct Index {
       Text()
         .onClick(() => {
           try {
-            // Set the mouse pointer color.
+            // Set the mouse cursor color.
             pointer.setPointerColor(0xF6C800, (error: BusinessError) => {
               if (error) {
                 console.error(`Failed to set pointer color, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);

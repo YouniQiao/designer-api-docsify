@@ -1551,7 +1551,7 @@ on(type: 'error', callback: ErrorCallback): void
 | [5400104](../errorcode-media.md#5400104-操作超时) | Time out. |
 | [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. |
 | [5400106](../errorcode-media.md#5400106-不支持的规格) | Unsupported format. |
-| [5411001](../errorcode-media.md#5411001-解析或链接服务端地址错误) | IO can not find host.<br>**适用版本：** 14+ |
+| [5411001](../errorcode-media.md#5411001-解析或连接服务端地址错误) | IO can not find host.<br>**适用版本：** 14+ |
 | [5411002](../errorcode-media.md#5411002-网络连接超时) | IO connection timeout.<br>**适用版本：** 14+ |
 | [5411003](../errorcode-media.md#5411003-网络异常导致的数据或链路异常) | IO network abnormal.<br>**适用版本：** 14+ |
 | [5411004](../errorcode-media.md#5411004-网络被禁用) | IO network unavailable.<br>**适用版本：** 14+ |

@@ -45,6 +45,25 @@ Obtains information about the running processes. This API uses a promise to retu
 | [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 
+**Examples**
+
+```TypeScript
+import { UIAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class MyAbility extends UIAbility {
+  onForeground() {
+    // Obtain the ApplicationContext instance.
+    let applicationContext = this.context.getApplicationContext();
+    applicationContext.getProcessRunningInformation().then((data) => {
+      console.info(`The process running information is: ${JSON.stringify(data)}`);
+    }).catch((error: BusinessError) => {
+      console.error(`error code: ${error.code}, error msg: ${error.message}`);
+    });
+  }
+}
+```
+
 ## getProcessRunningInformation
 
 ```TypeScript
@@ -77,6 +96,26 @@ Obtains information about the running processes. This API uses an asynchronous c
 | --- | --- |
 | [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
+
+**Examples**
+
+```TypeScript
+import { UIAbility } from '@kit.AbilityKit';
+
+export default class MyAbility extends UIAbility {
+  onForeground() {
+    // Obtain the ApplicationContext instance.
+    let applicationContext = this.context.getApplicationContext();
+    applicationContext.getProcessRunningInformation((err, data) => {
+      if (err) {
+        console.error(`getProcessRunningInformation failed, err: ${JSON.stringify(err)}`);
+      } else {
+        console.info(`The process running information is: ${JSON.stringify(data)}`);
+      }
+    })
+  }
+}
+```
 
 ## preloadUIExtensionAbility
 
@@ -137,28 +176,31 @@ import { BusinessError } from '@kit.BasicServicesKit';
 
 export default class EntryAbility extends UIAbility {
   onCreate() {
+    // Construct the want parameter for preloading the UIExtensionAbility.
     let want: Want = {
       bundleName: 'com.ohos.uiextensionprovider',
       abilityName: 'UIExtensionProvider',
       moduleName: 'entry',
       parameters: {
-        // The value must be the same as the value of type in the module.json5 file of the UIExtensionAbility.
+        // Consistent with the "type" field configuration of the UIExtensionAbility in module.json5.
         'ability.want.params.uiExtensionType': 'sys/commonUI'
       }
     };
     try {
+      // Obtain the ApplicationContext instance.
       let applicationContext = this.context.getApplicationContext();
+      // Preload the UIExtensionAbility.
       applicationContext.preloadUIExtensionAbility(want)
         .then(() => {
-          // Carry out normal service processing.
+          // Handle the preload success.
           console.info('preloadUIExtensionAbility succeed');
         })
         .catch((err: BusinessError) => {
-          // Process service logic errors.
+          // Handle the preload failure.
           console.error('preloadUIExtensionAbility failed');
         });
     } catch (err) {
-      // Process input parameter errors.
+      // Handle the input parameter error exception.
       let code = (err as BusinessError).code;
       let message = (err as BusinessError).message;
       console.error(`preloadUIExtensionAbility failed. code: ${code}, msg: ${message}`);
@@ -201,6 +243,64 @@ Registers a listener to monitor the ability lifecycle of the application. This A
 | --- | --- |
 | number | ID of the callback registered. This ID is used to unregister the corresponding callback in [ApplicationContext.unregisterAbilityLifecycleCallback]{ |
 
+**Examples**
+
+```TypeScript
+import { UIAbility, AbilityLifecycleCallback } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let lifecycleId: number;
+
+export default class EntryAbility extends UIAbility {
+  onCreate() {
+    console.info('MyAbility onCreate');
+    let AbilityLifecycleCallback: AbilityLifecycleCallback = {
+      onAbilityCreate(ability) {
+        console.info(`AbilityLifecycleCallback onAbilityCreate ability: ${ability}`);
+      },
+      onWindowStageCreate(ability, windowStage) {
+        console.info(`AbilityLifecycleCallback onWindowStageCreate ability: ${ability}`);
+        console.info(`AbilityLifecycleCallback onWindowStageCreate windowStage: ${windowStage}`);
+      },
+      onWindowStageActive(ability, windowStage) {
+        console.info(`AbilityLifecycleCallback onWindowStageActive ability: ${ability}`);
+        console.info(`AbilityLifecycleCallback onWindowStageActive windowStage: ${windowStage}`);
+      },
+      onWindowStageInactive(ability, windowStage) {
+        console.info(`AbilityLifecycleCallback onWindowStageInactive ability: ${ability}`);
+        console.info(`AbilityLifecycleCallback onWindowStageInactive windowStage: ${windowStage}`);
+      },
+      onWindowStageDestroy(ability, windowStage) {
+        console.info(`AbilityLifecycleCallback onWindowStageDestroy ability: ${ability}`);
+        console.info(`AbilityLifecycleCallback onWindowStageDestroy windowStage: ${windowStage}`);
+      },
+      onAbilityDestroy(ability) {
+        console.info(`AbilityLifecycleCallback onAbilityDestroy ability: ${ability}`);
+      },
+      onAbilityForeground(ability) {
+        console.info(`AbilityLifecycleCallback onAbilityForeground ability: ${ability}`);
+      },
+      onAbilityBackground(ability) {
+        console.info(`AbilityLifecycleCallback onAbilityBackground ability: ${ability}`);
+      },
+      onAbilityContinue(ability) {
+        console.info(`AbilityLifecycleCallback onAbilityContinue ability: ${ability}`);
+      }
+    }
+    // 1. Obtain the applicationContext through the context attribute.
+    // Obtain the ApplicationContext instance.
+    let applicationContext = this.context.getApplicationContext();
+    try {
+      // 2. Register a listener for the in-application lifecycle through applicationContext.
+      lifecycleId = applicationContext.registerAbilityLifecycleCallback(AbilityLifecycleCallback);
+    } catch (paramError) {
+      console.error(`error code: ${(paramError as BusinessError).code}, error msg: ${(paramError as BusinessError).message}`);
+    }
+    console.info(`registerAbilityLifecycleCallback lifecycleId: ${lifecycleId}`);
+  }
+}
+```
+
 ## registerEnvironmentCallback
 
 ```TypeScript
@@ -233,6 +333,39 @@ Register environment callback.
 | --- | --- |
 | number | ID of the callback registered. This ID is used to unregister the corresponding callback in [ApplicationContext.unregisterEnvironmentCallback]{ |
 
+**Examples**
+
+```TypeScript
+import { UIAbility, EnvironmentCallback } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let callbackId: number;
+
+export default class EntryAbility extends UIAbility {
+  onCreate() {
+    console.info('MyAbility onCreate')
+    let environmentCallback: EnvironmentCallback = {
+      onConfigurationUpdated(config) {
+        console.info(`onConfigurationUpdated config: ${JSON.stringify(config)}`);
+      },
+      onMemoryLevel(level) {
+        console.info(`onMemoryLevel level: ${level}`);
+      }
+    };
+    // 1. Obtain the applicationContext.
+    // Obtain the ApplicationContext instance.
+    let applicationContext = this.context.getApplicationContext();
+    try {
+      // 2. Register a listener for system environment changes through the applicationContext.
+      callbackId = applicationContext.registerEnvironmentCallback(environmentCallback);
+    } catch (paramError) {
+      console.error(`error code: ${(paramError as BusinessError).code}, error msg: ${(paramError as BusinessError).message}`);
+    }
+    console.info(`registerEnvironmentCallback callbackId: ${callbackId}`);
+  }
+}
+```
+
 ## unregisterAbilityLifecycleCallback
 
 ```TypeScript
@@ -261,6 +394,34 @@ Unregisters the listener that monitors the ability lifecycle of the application.
 | --- | --- | --- | --- |
 | callbackId | number | Yes | ID returned when the [ApplicationContext.registerAbilityLifecycleCallback](#registerabilitylifecyclecallback) |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the ID of the registered listener. |
+
+**Examples**
+
+```TypeScript
+import { UIAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let lifecycleId: number;
+
+export default class EntryAbility extends UIAbility {
+  onDestroy() {
+    // Obtain the ApplicationContext instance.
+    let applicationContext = this.context.getApplicationContext();
+    console.info(`stage applicationContext: ${applicationContext}`);
+    try {
+      applicationContext.unregisterAbilityLifecycleCallback(lifecycleId, (error, data) => {
+        if (error) {
+          console.error(`unregisterAbilityLifecycleCallback fail, err: ${JSON.stringify(error)}`);
+        } else {
+          console.info(`unregisterAbilityLifecycleCallback success, data: ${JSON.stringify(data)}`);
+        }
+      });
+    } catch (paramError) {
+      console.error(`error code: ${(paramError as BusinessError).code}, error message: ${(paramError as BusinessError).message}`);
+    }
+  }
+}
+```
 
 ## unregisterAbilityLifecycleCallback
 
@@ -302,6 +463,28 @@ Unregisters a listener for the lifecycle of a UIAbility within the application. 
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
 
+**Examples**
+
+```TypeScript
+import { UIAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let lifecycleId: number;
+
+export default class MyAbility extends UIAbility {
+  onDestroy() {
+    // Obtain the ApplicationContext instance.
+    let applicationContext = this.context.getApplicationContext();
+    console.info(`stage applicationContext: ${applicationContext}`);
+    try {
+      applicationContext.unregisterAbilityLifecycleCallback(lifecycleId);
+    } catch (paramError) {
+      console.error(`error code: ${(paramError as BusinessError).code}, error msg: ${(paramError as BusinessError).message}`);
+    }
+  }
+}
+```
+
 ## unregisterEnvironmentCallback
 
 ```TypeScript
@@ -328,6 +511,33 @@ Unregisters the listener for system environment changes. This API uses an asynch
 | --- | --- | --- | --- |
 | callbackId | number | Yes | ID returned when the [ApplicationContext.registerEnvironmentCallback](#registerenvironmentcallback) |
 | envcallback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the ID of the registered listener. |
+
+**Examples**
+
+```TypeScript
+import { UIAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let callbackId: number;
+
+export default class EntryAbility extends UIAbility {
+  onDestroy() {
+    // Obtain the ApplicationContext instance.
+    let applicationContext = this.context.getApplicationContext();
+    try {
+      applicationContext.unregisterEnvironmentCallback(callbackId, (error, data) => {
+        if (error) {
+          console.error(`unregisterEnvironmentCallback fail, err: ${JSON.stringify(error)}`);
+        } else {
+          console.info(`unregisterEnvironmentCallback success, data: ${JSON.stringify(data)}`);
+        }
+      });
+    } catch (paramError) {
+      console.error(`error code: ${(paramError as BusinessError).code}, error msg: ${(paramError as BusinessError).message}`);
+    }
+  }
+}
+```
 
 ## unregisterEnvironmentCallback
 
@@ -366,3 +576,24 @@ Unregisters the listener for system environment changes. This API uses a promise
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+
+**Examples**
+
+```TypeScript
+import { UIAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let callbackId: number;
+
+export default class MyAbility extends UIAbility {
+  onDestroy() {
+    // Obtain the ApplicationContext instance.
+    let applicationContext = this.context.getApplicationContext();
+    try {
+      applicationContext.unregisterEnvironmentCallback(callbackId);
+    } catch (paramError) {
+      console.error(`error: ${(paramError as BusinessError).code}, ${(paramError as BusinessError).message}`);
+    }
+  }
+}
+```

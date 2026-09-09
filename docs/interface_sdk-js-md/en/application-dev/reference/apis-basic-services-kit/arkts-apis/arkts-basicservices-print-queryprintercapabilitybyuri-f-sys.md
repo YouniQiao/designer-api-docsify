@@ -51,11 +51,12 @@ Query printer capabilityies by printer uri.
 import { print } from '@kit.BasicServicesKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
-let printerUri : string = "testPrinterUri";
-let printerId : string = "testPrinterId";
+// Obtain printerUri from PrinterInformation returned by the discoverUsbPrinters API.
+let printerUri : string = 'testPrinterUri';
+let printerId : string = 'testPrinterId';
 print.queryPrinterCapabilityByUri(printerUri, printerId).then((capabilities: print.PrinterCapabilities) => {
     console.info('queryPrinterCapabilityByUri success' + JSON.stringify(capabilities));
 }).catch((error: BusinessError) => {
-    console.error('queryPrinterCapabilityByUri error : ' + JSON.stringify(error));
-})
+    console.error(`Failed to query printer capability by uri. Code: ${error.code}, message: ${error.message}`);
+});
 ```

@@ -50,13 +50,14 @@ import { JSON } from '@kit.ArkTS';
 import { serialManager } from '@kit.BasicServicesKit';
 
 // Obtain the serial port list.
-function hasSerialRight() {
+function hasSerialRightExample() {
   let portList: serialManager.SerialPort[] = serialManager.getPortList();
-  console.info('portList: ', JSON.stringify(portList));
+  console.info('portList: ' + JSON.stringify(portList));
   if (!portList || portList.length === 0) {
     console.error('portList is empty');
     return;
   }
+  let portId: number = portList[0].portId;
 
   // Check whether the device can be accessed by the application.
   if (serialManager.hasSerialRight(portId)) {

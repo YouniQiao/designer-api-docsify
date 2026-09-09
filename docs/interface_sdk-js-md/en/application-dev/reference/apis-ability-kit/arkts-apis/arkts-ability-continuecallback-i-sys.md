@@ -32,21 +32,25 @@ Called by system when continue mission done.
 import { distributedMissionManager } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
+// Call the continueMission method to initiate mission migration.
 distributedMissionManager.continueMission(
   {
-    srcDeviceId: '123',
-    dstDeviceId: '456',
-    missionId: 123,
+    srcDeviceId: '123', // Source device ID, obtained through APIs such as deviceManager.
+    dstDeviceId: '456', // Target device ID, obtained through APIs such as deviceManager.
+    missionId: 123, // Mission ID, obtained through distributedMissionManager or returned by other APIs.
     wantParam: {
-      'key': 'value'
+      'key': 'value' // Migration data.
     }
   },
   {
+    // Callback invoked when the migration is complete to receive the migration result.
     onContinueDone(result: number) {
       console.info(`onContinueDone, result: ${JSON.stringify(result)}`);
     }
   }, (error: BusinessError) => {
-  if (error && error.code) {
+  // Callback for error handling.
+  // Check whether there is an error and the error code.
+  if (error) {
     console.error(`continueMission failed, error.code: ${error.code}, error.message: ${error.message}`);
   }
   console.info(`continueMission finished`);

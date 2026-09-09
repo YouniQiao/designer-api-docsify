@@ -44,7 +44,6 @@ const TAG: string = '[MigrationAbility]';
 const DOMAIN_NUMBER: number = 0xFF00;
 
 export default class MigrationAbility extends UIAbility {
-    storage : LocalStorage = new LocalStorage();
 
     onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
         hilog.info(DOMAIN_NUMBER, TAG, '%{public}s', 'Ability onCreate');
@@ -53,18 +52,18 @@ export default class MigrationAbility extends UIAbility {
         if (launchParam.launchReason === AbilityConstant.LaunchReason.PREPARE_CONTINUATION) {
             // Register the callback to obtain the quick start result.
             try {
-              continueManager.on("prepareContinue", this.context, (err, continueResultInfo) => {
+              continueManager.on('prepareContinue', this.context, (err, continueResultInfo) => {
                 if (err.code != 0) {
-                  console.error('register failed, cause: ' + JSON.stringify(err));
+                  hilog.error(DOMAIN_NUMBER, TAG, 'register failed, cause: %{public}s', JSON.stringify(err));
                   return;
                 }
-                console.info('register finished, ' + JSON.stringify(continueResultInfo));
+                hilog.info(DOMAIN_NUMBER, TAG, 'register finished, %{public}s', JSON.stringify(continueResultInfo));
               });
             } catch (e) {
-              console.error('register failed, cause: ' + JSON.stringify(e));
+              hilog.error(DOMAIN_NUMBER, TAG, 'register failed, cause: %{public}s', JSON.stringify(e));
             }
-            // If the application data to migrate is large, add a loading screen here (for example, displaying "loading" on the screen).
-            // Handle issues related to custom redirection and timing.
+            // If the migration data is large, add a loading page here (displaying a loading indicator, etc.).
+            // Handle custom application redirection, timing, and other issues.
             // ...
         }
     }

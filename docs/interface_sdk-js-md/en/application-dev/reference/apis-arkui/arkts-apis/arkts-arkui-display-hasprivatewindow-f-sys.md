@@ -50,19 +50,16 @@ try {
   // Obtain the default Display object.
   displayClass = display.getDefaultDisplaySync();
 
-  let ret: boolean | undefined = undefined;
+  let hasPrivateWindow: boolean = false;
   try {
     // Check whether there is a privacy window on the default display.
-    ret = display.hasPrivateWindow(displayClass.id);
+    hasPrivateWindow = display.hasPrivateWindow(displayClass.id);
   } catch (exception) {
     console.error(`Failed to check has privateWindow or not. Code: ${exception.code}, message: ${exception.message}`);
   }
-  if (ret == undefined) {
-    console.error('Failed to check has privateWindow or not.');
-  }
-  if (ret) {
+  if (hasPrivateWindow) {
     console.info('There has privateWindow.');
-  } else if (!ret) {
+  } else if (!hasPrivateWindow) {
     console.info('There has no privateWindow.');
   }
 } catch (exception) {

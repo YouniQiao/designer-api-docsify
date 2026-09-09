@@ -45,7 +45,7 @@ Converts a SendableContext object to an AbilityStageContext object.
 Context passed by the main thread:
 
 ```TypeScript
-import { UIAbility, sendableContextManager } from '@kit.AbilityKit';
+import { AbilityStage, sendableContextManager } from '@kit.AbilityKit';
 import { hilog } from '@kit.PerformanceAnalysisKit';
 import { worker } from '@kit.ArkTS';
 
@@ -60,7 +60,7 @@ export class SendableObject {
   contextName: string;
 }
 
-export default class EntryAbility extends UIAbility {
+export default class MyAbilityStage extends AbilityStage {
   worker: worker.ThreadWorker = new worker.ThreadWorker('entry/ets/workers/Worker.ets');
 
   onCreate(): void {
@@ -74,7 +74,8 @@ export default class EntryAbility extends UIAbility {
       hilog.info(0x0000, 'testTag', '%{public}s', 'AbilityStage post message');
       this.worker.postMessageWithSharedSendable(object);
     } catch (error) {
-      hilog.error(0x0000, 'testTag', 'convertFromContext failed %{public}s', JSON.stringify(error));
+      hilog.error(
+        0x0000, 'testTag', `convertFromContext failed, error code: ${error.code}, error msg: ${error.message}`);
     }
   }
 }
@@ -110,16 +111,17 @@ workerPort.onmessage = (e: MessageEvents) => {
       // Obtain the sandbox path after obtaining the Context object.
       hilog.info(0x0000, 'testTag', 'worker context.databaseDir: %{public}s', context.databaseDir);
     } catch (error) {
-      hilog.error(0x0000, 'testTag', 'convertToAbilityStageContext failed %{public}s', JSON.stringify(error));
+      hilog.error(0x0000,
+        'testTag', `convertToAbilityStageContext failed, error code: ${error.code}, error msg: ${error.message}`);
     }
   }
 }
 
 workerPort.onmessageerror = (e: MessageEvents) => {
-  hilog.info(0x0000, 'testTag', '%{public}s', 'onmessageerror');
+  hilog.error(0x0000, 'testTag', '%{public}s', 'onmessageerror');
 }
 
 workerPort.onerror = (e: ErrorEvent) => {
-  hilog.info(0x0000, 'testTag', '%{public}s', 'onerror');
+  hilog.error(0x0000, 'testTag', '%{public}s', 'onerror');
 }
 ```

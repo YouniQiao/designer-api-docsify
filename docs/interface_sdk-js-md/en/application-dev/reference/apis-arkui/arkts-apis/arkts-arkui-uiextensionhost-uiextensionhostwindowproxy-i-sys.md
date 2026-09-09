@@ -70,31 +70,31 @@ export default class EntryAbility extends UIExtensionAbility {
     // Create a subwindow.
     extensionHostWindow.createSubWindowWithOptions('subWindowForHost', subWindowOpts)
       .then((subWindow: window.Window) => {
-        subWindow.setUIContent('pages/Index', (err, data) =>{
-          if (err && err.code != 0) {
+        subWindow.setUIContent('pages/Index', (err, data) => {
+          if (err && err.code) {
             return;
           }
-          subWindow?.resize(300, 300, (err, data)=>{
-            if (err && err.code != 0) {
+          subWindow?.resize(300, 300, (err, data) => {
+            if (err && err.code) {
               return;
             }
-            subWindow?.moveWindowTo(100, 100, (err, data)=>{
-              if (err && err.code != 0) {
+            subWindow?.moveWindowTo(100, 100, (err, data) => {
+              if (err && err.code) {
                 return;
               }
               subWindow?.showWindow((err, data) => {
-                if (err && err.code == 0) {
-                  console.info(`The subwindow has been shown!`);
+                if (err && err.code) {
+                  console.error(`Failed to show the subwindow. Code: ${err.code}, message: ${err.message}`);
                 } else {
-                  console.error(`Failed to show the subwindow!`);
+                  console.info(`The subwindow has been shown!`);
                 }
               });
             });
           });
         });
       }).catch((error: BusinessError) => {
-        console.error(`Create subwindow failed: ${JSON.stringify(error)}`);
-      })
+        console.error(`Create subwindow failed. Code: ${error.code}, message: ${error.message}`);
+      });
   }
 }
 ```
@@ -156,31 +156,31 @@ export default class EntryAbility extends UIExtensionAbility {
     // Create a subwindow.
     extensionHostWindow.createSubWindowWithOptions('subWindowForHost', subWindowConfig, true)
       .then((subWindow: window.Window) => {
-        subWindow.setUIContent('pages/Index', (err, data) =>{
-          if (err && err.code != 0) {
+        subWindow.setUIContent('pages/Index', (err, data) => {
+          if (err && err.code) {
             return;
           }
-          subWindow?.resize(300, 300, (err, data)=>{
-            if (err && err.code != 0) {
+          subWindow?.resize(300, 300, (err, data) => {
+            if (err && err.code) {
               return;
             }
-            subWindow?.moveWindowTo(100, 100, (err, data)=>{
-              if (err && err.code != 0) {
+            subWindow?.moveWindowTo(100, 100, (err, data) => {
+              if (err && err.code) {
                 return;
               }
               subWindow?.showWindow((err, data) => {
-                if (err && err.code == 0) {
-                  console.info(`The subwindow has been shown!`);
+                if (err && err.code) {
+                  console.error(`Failed to show the subwindow. Code: ${err.code}, message: ${err.message}`);
                 } else {
-                  console.error(`Failed to show the subwindow!`);
+                  console.info(`The subwindow has been shown!`);
                 }
               });
             });
           });
         });
       }).catch((error: BusinessError) => {
-        console.error(`Create subwindow failed: ${JSON.stringify(error)}`);
-      })
+        console.error(`Create subwindow failed. Code: ${error.code}, message: ${error.message}`);
+      });
   }
 }
 ```
@@ -304,21 +304,21 @@ import { BusinessError } from '@kit.BasicServicesKit';
 export default class EntryAbility extends UIExtensionAbility {
   onSessionCreate(want: Want, session: UIExtensionContentSession) {
     const extensionHostWindow = session.getUIExtensionHostWindowProxy();
-    // Hide insecure windows.
-    extensionHostWindow.hideNonSecureWindows(true).then(()=> {
+    // Hide non-secure windows.
+    extensionHostWindow.hideNonSecureWindows(true).then(() => {
       console.info(`Succeeded in hiding the non-secure windows.`);
-    }).catch((err: BusinessError)=> {
-      console.error(`Failed to hide the non-secure windows. Cause:${JSON.stringify(err)}`);
-    })
+    }).catch((err: BusinessError) => {
+      console.error(`Failed to hide the non-secure windows. Code: ${err.code}, message: ${err.message}`);
+    });
   }
   onSessionDestroy(session: UIExtensionContentSession) {
     const extensionHostWindow = session.getUIExtensionHostWindowProxy();
-    // Unhide insecure windows.
-    extensionHostWindow.hideNonSecureWindows(false).then(()=> {
+    // Unhide non-secure windows.
+    extensionHostWindow.hideNonSecureWindows(false).then(() => {
       console.info(`Succeeded in showing the non-secure windows.`);
-    }).catch((err: BusinessError)=> {
-      console.error(`Failed to show the non-secure windows. Cause:${JSON.stringify(err)}`);
-    })
+    }).catch((err: BusinessError) => {
+      console.error(`Failed to show the non-secure windows. Code: ${err.code}, message: ${err.message}`);
+    });
   }
 }
 ```
@@ -378,10 +378,10 @@ export default class EntryAbility extends UIExtensionAbility {
     const extensionHostWindow = session.getUIExtensionHostWindowProxy();
     // Enable privacy protection for screenshots.
     extensionHostWindow.hidePrivacyContentForHost(true).then(() => {
-      console.info(`Successfully enabled privacy protection for non-system screenshots.`);
+      console.info(`Succeeded in enabling privacy protection for non-system screenshots.`);
     }).catch((err: BusinessError) => {
-      console.error(`Failed enabled privacy protection for non-system screenshots. Cause:${JSON.stringify(err)}`);
-    })
+      console.error(`Failed to enable privacy protection for non-system screenshots. Code: ${err.code}, message: ${err.message}`);
+    });
   }
 }
 ```
@@ -625,8 +625,8 @@ export default class EntryAbility extends UIExtensionAbility {
     extensionHostWindow.setWaterMarkFlag(true).then(() => {
       console.info(`Succeeded in setting water mark flag of window.`);
     }).catch((err: BusinessError) => {
-      console.error(`Failed to setting water mark flag of window. Cause:${JSON.stringify(err)}`);
-    })
+      console.error(`Failed to set water mark flag of window. Code: ${err.code}, message: ${err.message}`);
+    });
   }
   onSessionDestroy(session: UIExtensionContentSession) {
     const extensionHostWindow = session.getUIExtensionHostWindowProxy();
@@ -634,8 +634,8 @@ export default class EntryAbility extends UIExtensionAbility {
     extensionHostWindow.setWaterMarkFlag(false).then(() => {
       console.info(`Succeeded in deleting water mark flag of window.`);
     }).catch((err: BusinessError) => {
-      console.error(`Failed to deleting water mark flag of window. Cause:${JSON.stringify(err)}`);
-    })
+      console.error(`Failed to delete water mark flag of window. Code: ${err.code}, message: ${err.message}`);
+    });
   }
 }
 ```

@@ -46,7 +46,7 @@ import { bundleManager } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 import { hilog } from '@kit.PerformanceAnalysisKit';
 
-// Replace the bundle name with the actual one.
+// Replace it with the actual bundle name.
 let bundleName: string = 'com.ohos.demo';
 
 try {

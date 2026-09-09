@@ -53,9 +53,10 @@ Writes data to the serial port device asynchronously. The length of data written
 import { JSON } from '@kit.ArkTS';
 import { buffer } from '@kit.ArkTS';
 import { serialManager } from '@kit.BasicServicesKit';
+import { BusinessError } from '@kit.BasicServicesKit';
 
 // Obtain the serial port list.
-function write() {
+async function writeExample() {
   let portList: serialManager.SerialPort[] = serialManager.getPortList();
   console.info('usbSerial portList: ' + JSON.stringify(portList));
   if (!portList || portList.length === 0) {
@@ -66,39 +67,44 @@ function write() {
 
   // Check whether the device can be accessed by the application.
   if (!serialManager.hasSerialRight(portId)) {
-    serialManager.requestSerialRight(portId).then(result => {
-      if (!result) {
-        // If the application does not have the access permission and the user does not grant the permission, the application exits.
-        console.error('user is not granted the operation permission');
-        return;
-      } else {
-        console.info('grant permission successfully');
-      }
-    });
+    let result = await serialManager.requestSerialRight(portId);
+    if (!result) {
+      // If the app does not have the access permission and the user does not grant the permission, the app exits.
+      console.error('user is not granted the operation permission');
+      return;
+    } else {
+      console.info('grant permission successfully');
+    }
   }
 
   // Open a serial port device.
   try {
-    serialManager.open(portId)
+    serialManager.open(portId);
     console.info('open usbSerial success, portId: ' + portId);
   } catch (error) {
-    console.error('open usbSerial error, ' + JSON.stringify(error));
+    const err: BusinessError = error as BusinessError;
+    console.error(`Failed to open usbSerial. Code: ${err.code}, message: ${err.message}`);
   }
 
   // Write data asynchronously.
-  let writeBuffer: Uint8Array = new Uint8Array(buffer.from('Hello World', 'utf-8').buffer)
-  serialManager.write(portId, writeBuffer, 2000).then((size: number) => {
-    console.info('write usbSerial success, writeBuffer: ' + writeBuffer.toString());
-  }).catch((error: Error) => {
-    console.error('write usbSerial error, ' + JSON.stringify(error));
-  })
+  try {
+    let writeBuffer: Uint8Array = new Uint8Array(buffer.from('Hello World', 'utf-8').buffer);
+    let size: number = await serialManager.write(portId, writeBuffer, 2000);
+    if (size > 0) {
+      console.info('write usbSerial success, writeBuffer: ' + writeBuffer.toString());
+    }
+  } catch (error) {
+    const err: BusinessError = error as BusinessError;
+    console.error(`Failed to write usbSerial. Code: ${err.code}, message: ${err.message}`);
+  }
 
   // Close the serial port device.
   try {
     serialManager.close(portId);
     console.info('close usbSerial success, portId: ' + portId);
   } catch (error) {
-    console.error('close usbSerial error, ' + JSON.stringify(error));
+    const err: BusinessError = error as BusinessError;
+    console.error(`Failed to close usbSerial. Code: ${err.code}, message: ${err.message}`);
   }
 }
 ```

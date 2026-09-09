@@ -32,21 +32,6 @@ Obtains information about the bundles contained in a HAP file. This API uses an 
 
 ```TypeScript
 import bundle from '@ohos.bundle';
-import { BusinessError } from '@ohos.base';
-
-let hapFilePath: string = "/data/storage/el2/base/test.hap";
-let bundleFlags: number = 0;
-
-bundle.getBundleArchiveInfo(hapFilePath, bundleFlags)
-  .then((data) => {
-    console.info('Operation successful. Data: ' + JSON.stringify(data));
-  }).catch((error: BusinessError) => {
-    console.error('Operation failed. Cause: ' + JSON.stringify(error));
-  })
-```
-
-```TypeScript
-import bundle from '@ohos.bundle';
 
 let hapFilePath: string = "/data/storage/el2/base/test.hap";
 let bundleFlags: number = 0;
@@ -90,4 +75,17 @@ Obtains information about the bundles contained in a HAP file. This API uses a p
 
 **Examples**
 
-See [getBundleArchiveInfo](#getbundlearchiveinfo)
+```TypeScript
+import bundle from '@ohos.bundle';
+import { BusinessError } from '@ohos.base';
+
+let hapFilePath: string = "/data/storage/el2/base/test.hap";
+let bundleFlags: number = 0;
+
+bundle.getBundleArchiveInfo(hapFilePath, bundleFlags)
+  .then((data) => {
+    console.info('Operation successful. Data: ' + JSON.stringify(data));
+  }).catch((error: BusinessError) => {
+    console.error('Operation failed. Cause: ' + JSON.stringify(error));
+  })
+```

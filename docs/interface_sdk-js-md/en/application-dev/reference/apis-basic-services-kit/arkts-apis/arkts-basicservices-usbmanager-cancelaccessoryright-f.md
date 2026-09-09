@@ -37,13 +37,17 @@ Cancels the permission of the current application to access USB accessories. You
 **Examples**
 
 ```TypeScript
-import { hilog } from '@kit.PerformanceAnalysisKit';
-try {
-  let accList: usbManager.USBAccessory[] = usbManager.getAccessoryList()
-  let flag = usbManager.requestAccessoryRight(accList?.[0])
-  usbManager.cancelAccessoryRight(accList?.[0])
-  hilog.info(0, 'testTag ui', `cancelAccessoryRight success`)
-} catch (error) {
-  hilog.error(0, 'testTag ui', `cancelAccessoryRight error ${error.code}, message is ${error.message}`)
+async function cancelAccessoryRight() {
+  try {
+    let accList: usbManager.USBAccessory[] = usbManager.getAccessoryList();
+    let flag = await usbManager.requestAccessoryRight(accList?.[0]);
+    if (!flag) {
+      return;
+    }
+    usbManager.cancelAccessoryRight(accList?.[0]);
+    console.info(`cancelAccessoryRight success`);
+  } catch (error) {
+    console.error(`cancelAccessoryRight error ${error.code}, message is ${error.message}`);
+  }
 }
 ```

@@ -51,9 +51,10 @@ import { AbilityConstant, UIAbility, Want, dialogRequest } from '@kit.AbilityKit
 export default class EntryAbility extends UIAbility {
   onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
     try {
+      // Obtain the RequestInfo of the requester.
       let requestInfo = dialogRequest.getRequestInfo(want);
     } catch (err) {
-      console.error(`getRequestInfo err= ${JSON.stringify(err)}`);
+      console.error(`Failed to getRequestInfo. Code: ${err.code}, message: ${err.message}`);
     }
   }
 }

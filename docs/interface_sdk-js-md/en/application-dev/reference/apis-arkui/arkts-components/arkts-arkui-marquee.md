@@ -40,7 +40,8 @@ Creates a marquee.
 
 ## Examples
 
-This example shows the dynamic updating of a marquee's content by setting parameters such as start, step, loop, fromStart, src, and [marqueeUpdateStrategy](#marqueeupdatestrategy12).
+This example demonstrates the running effect when the marquee content is dynamically updated, mainly involving the settings of the start, step, loop, fromStart, and src attributes, as well as the [marqueeUpdateStrategy](#marqueeupdatestrategy12) attribute.
+Since API version 23, the [MarqueeOptions](#marqueeoptions18) adds the spacing and delay attributes.
 
 ```TypeScript
 import { LengthMetrics } from '@kit.ArkUI';
@@ -57,12 +58,12 @@ struct MarqueeExample {
   private loop: number = Number.POSITIVE_INFINITY;
   controller: TextClockController = new TextClockController();
 
-  convert2time(value: number): string {
+  convertToTime(value: number): string {
     let date = new Date(Number(value + '000'));
     let hours = date.getHours().toString().padStart(2, '0');
     let minutes = date.getMinutes().toString().padStart(2, '0');
     let seconds = date.getSeconds().toString().padStart(2, '0');
-    return hours + ":" + minutes + ":" + seconds;
+    return hours + ':' + minutes + ':' + seconds;
   }
 
   build() {
@@ -72,7 +73,9 @@ struct MarqueeExample {
         step: this.step,
         loop: this.loop,
         fromStart: this.fromStart,
-        src: this.marqueeText + this.src
+        src: this.marqueeText + this.src,
+        spacing: LengthMetrics.vp(300), // Since API version 23, add the spacing attribute.
+        delay: 0, // Since API version 23, add the delay attribute.
       })
         .marqueeUpdateStrategy(MarqueeUpdateStrategy.PRESERVE_POSITION)
         .width('300vp')
@@ -95,7 +98,7 @@ struct MarqueeExample {
         })
       Button('Start')
         .onClick(() => {
-          this.start = true
+          this.start = true;
           // Start the text clock.
           this.controller.start();
         })
@@ -107,13 +110,85 @@ struct MarqueeExample {
       TextClock({ timeZoneOffset: -8, controller: this.controller })
         .format('hms')
         .onDateChange((value: number) => {
-          this.src = this.convert2time(value);
+          this.src = this.convertToTime(value);
         })
         .margin('20vp')
         .fontSize('30fp')
     }
     .width('100%')
     .height('100%')
+  }
+}
+```
+
+This example changes the marquee state to trigger the onStop callback. After the callback is triggered, the value of the stop counter numberStop increases by 1.
+Since API version 26.0.0, the [onStop](#onstop) API is added.
+
+```TypeScript
+// xxx.ets
+@Entry
+@Component
+struct MarqueeStop4 {
+  @State change: boolean = true;
+  @State scrollDirection: string = 'Forward scrolling';
+  @State marqueeText: string =
+    'This is the text with the text overflow set marquee This is the text with the text overflow set marquee This is the text with the text overflow set marquee';
+  @State numberStart: number = 0;
+  @State numberBounce: number = 0;
+  @State numberStop: number = 0;
+
+  build() {
+    Scroll() {
+      Column() {
+        Row() {
+          Column() {
+            Text('Start')
+            Text(this.numberStart.toString())
+          }.margin(10)
+
+          Column() {
+            Text('Bounce')
+            Text(this.numberBounce.toString())
+          }.margin(10)
+
+          Column() {
+            Text('Stop')
+            Text(this.numberStop.toString())
+          }.margin(10)
+        }.margin(20)
+
+        Marquee({
+          start: true,
+          step: 6,
+          loop: 1,
+          fromStart: this.change,
+          src: this.marqueeText
+        })
+          .marqueeUpdateStrategy(MarqueeUpdateStrategy.DEFAULT)
+          .margin(20)
+          .onStart(() => {
+            // 'Status received: START';
+            this.numberStart++;
+          })
+          .onBounce(() => {
+            // 'Status received: BOUNCE';
+            this.numberBounce++;
+          })
+          .onStop(() => {
+            // 'Status received: STOP';
+            this.numberStop++;
+          })
+        Button(this.scrollDirection.toString()).onClick(() => {
+          if (this.change) {
+            this.change = false;
+            this.scrollDirection = 'Backward scrolling';
+          } else {
+            this.change = true;
+            this.scrollDirection = 'Forward scrolling';
+          }
+        }).margin(20)
+      }.height(600).width('100%').padding({ left: 35, right: 35, top: 35 })
+    }
   }
 }
 ```

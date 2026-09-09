@@ -33,6 +33,7 @@ import { featureAbility } from '@kit.AbilityKit';
 import { window } from '@kit.ArkUI';
 import { BusinessError } from '@kit.BasicServicesKit';
 
+// Obtain the window corresponding to the current Ability.
 featureAbility.getWindow((error: BusinessError, data: window.Window) => {
   if (error && error.code !== 0) {
     console.error(`getWindow fail, error: ${JSON.stringify(error)}`);
@@ -70,6 +71,7 @@ import { featureAbility } from '@kit.AbilityKit';
 import { window } from '@kit.ArkUI';
 import { BusinessError } from '@kit.BasicServicesKit';
 
+// Get the window corresponding to the current Ability.
 featureAbility.getWindow().then((data: window.Window) => {
   console.info(`getWindow success, data: ${typeof(data)}`);
 }).catch((error: BusinessError)=>{

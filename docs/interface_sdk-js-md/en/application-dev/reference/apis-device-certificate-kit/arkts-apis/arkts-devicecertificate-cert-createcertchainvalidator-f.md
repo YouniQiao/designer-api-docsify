@@ -49,7 +49,7 @@ import { cert } from '@kit.DeviceCertificateKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 try {
-  let validator = cert.createCertChainValidator('PKIX');
+  cert.createCertChainValidator('PKIX');
 } catch (error) {
   let e: BusinessError = error as BusinessError;
   console.error(`createCertChainValidator failed, errCode: ${e.code}, errMsg: ${e.message}`);

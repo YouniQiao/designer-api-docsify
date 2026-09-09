@@ -47,8 +47,12 @@ struct Index {
       Text()
         .onClick(() => {
           try {
-            // Obtain the touchpad multi-finger swipe switch state.
+            // Obtain the touchpad pinch swipe state.
             pointer.getTouchpadSwipeSwitch((error: BusinessError, state: boolean) => {
+              if (error) {
+                console.error(`Failed to get touchpad swipe switch, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+                return;
+              }
               console.info(`Succeeded in getting touchpad swipe switch, state: ${JSON.stringify(state)}.`);
             });
           } catch (error) {

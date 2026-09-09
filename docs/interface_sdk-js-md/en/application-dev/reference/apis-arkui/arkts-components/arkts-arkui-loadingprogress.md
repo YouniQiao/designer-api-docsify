@@ -42,7 +42,7 @@ Creates a loading progress component.
 
 ## Examples
 
-This example demonstrates how to set the color of the loading progress animation using the [color](#color) attribute.
+This example uses the [color](#color) API to set the color of the loading progress bar.
 
 ```TypeScript
 // xxx.ets
@@ -60,7 +60,7 @@ struct LoadingProgressExample {
 }
 ```
 
-This example demonstrates how to customize the content area using the [contentModifier](#contentmodifier12) API and how to toggle the display of the LoadingProgress component using the [enableLoading](#enableloading10) API.
+This example uses the [contentModifier](#contentmodifier12) API to customize the content area, and demonstrates how to toggle the display of the custom content based on the [enableLoading](#enableloading10) property of [LoadingProgressConfiguration](arkts-arkui-loadingprogressconfiguration-i.md).
 
 ```TypeScript
 // xxx.ets
@@ -80,9 +80,7 @@ class MyLoadingProgressStyle implements ContentModifier<LoadingProgressConfigura
   }
 }
 
-let arr1: string[] =
-  ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19'];
-let arr2: string[] = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
+let arr: string[] = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
 
 @Builder
 function buildLoadingProgress(config: LoadingProgressConfiguration) {
@@ -143,7 +141,7 @@ function buildLoadingProgress(config: LoadingProgressConfiguration) {
 
     Column() {
       List({ space: 20, initialIndex: 0 }) {
-        ForEach(arr2, (item: string) => {
+        ForEach(arr, (item: string) => {
           ListItem() {
             Text((config.contentModifier as MyLoadingProgressStyle).enableLoading ? '' + item : Number(item) * 2 + '')
               .width('100%')
@@ -179,9 +177,7 @@ function buildLoadingProgress(config: LoadingProgressConfiguration) {
 @Component
 struct LoadingProgressDemoExample {
   @State loadingProgressList: (boolean | undefined | null)[] = [undefined, true, null, false];
-  @State widthList: (number | string)[] = ['110%', 220, '40%', 80];
   @State loadingProgressIndex: number = 0;
-  @State clickFlag: number = 0;
   scroller: Scroller = new Scroller();
 
   build() {
@@ -197,8 +193,7 @@ struct LoadingProgressDemoExample {
         }.width('100%').margin({ top: 5 })
       }.height('85%')
 
-      Button('Switch config.enableloading').onClick(() => {
-        this.clickFlag++;
+      Button('Click to toggle config.enableLoading').onClick(() => {
         this.loadingProgressIndex = (this.loadingProgressIndex + 1) % this.loadingProgressList.length;
         console.info('enableLoading:' + this.loadingProgressList[this.loadingProgressIndex]);
       }).margin(20)

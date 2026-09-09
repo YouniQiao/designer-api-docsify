@@ -47,7 +47,7 @@ import { BusinessError } from '@kit.BasicServicesKit';
 try {
   missionManager.getMissionInfos("", 10, (error: BusinessError, missionInfos: Array<missionManager.MissionInfo>) => {
     if (error.code) {
-      console.error(`getMissionInfos failed, error code: ${error.code}, error msg: ${error.message}.`);
+      console.error(`getMissionInfos failed, Code: ${error.code}, message: ${error.message}.`);
       return;
     }
     if (missionInfos.length < 1) {
@@ -60,9 +60,10 @@ try {
         toShows.push(missionInfo.missionId);
       }
     }
+    // Move the specified missions to the foreground in batches.
     missionManager.moveMissionsToForeground(toShows, (err: BusinessError, data: void) => {
       if (err) {
-        console.error(`moveMissionsToForeground failed: ${err.message}`);
+        console.error(`moveMissionsToForeground failed. Code: ${err.code}, message: ${err.message}.`);
       } else {
         console.info(`moveMissionsToForeground successfully: ${JSON.stringify(data)}`);
       }
@@ -118,7 +119,7 @@ import { BusinessError } from '@kit.BasicServicesKit';
 try {
   missionManager.getMissionInfos("", 10, (error: BusinessError, missionInfos: Array<missionManager.MissionInfo>) => {
     if (error.code) {
-      console.error(`getMissionInfos failed, error code: ${error.code}, error msg: ${error.message}.`);
+      console.error(`getMissionInfos failed, Code: ${error.code}, message: ${error.message}.`);
       return;
     }
     if (missionInfos.length < 1) {
@@ -131,9 +132,10 @@ try {
         toShows.push(missionInfo.missionId);
       }
     }
+    // Move the specified missions to the foreground in batches, and move the first mission to the top.
     missionManager.moveMissionsToForeground(toShows, toShows[0], (err: BusinessError, data: void) => {
       if (err) {
-        console.error(`moveMissionsToForeground failed: ${err.message}`);
+        console.error(`moveMissionsToForeground failed. Code: ${err.code}, message: ${err.message}.`);
       } else {
         console.info(`moveMissionsToForeground successfully`);
       }

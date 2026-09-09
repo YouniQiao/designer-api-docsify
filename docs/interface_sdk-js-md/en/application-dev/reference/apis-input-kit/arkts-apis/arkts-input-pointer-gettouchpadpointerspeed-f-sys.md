@@ -47,7 +47,7 @@ struct Index {
       Text()
         .onClick(() => {
           try {
-            // Obtain the touchpad pointer speed.
+            // Obtain the touchpad cursor speed.
             pointer.getTouchpadPointerSpeed((error: BusinessError, speed: number) => {
               if (error) {
                 console.error(`Failed to get touchpad pointer speed, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);

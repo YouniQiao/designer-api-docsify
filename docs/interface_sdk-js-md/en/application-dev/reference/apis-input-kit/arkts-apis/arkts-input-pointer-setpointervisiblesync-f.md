@@ -34,6 +34,7 @@ Sets whether the mouse pointer is visible in the current window. This API return
 
 ```TypeScript
 import { pointer } from '@kit.InputKit';
+import { BusinessError } from '@kit.BasicServicesKit';
 
 @Entry
 @Component

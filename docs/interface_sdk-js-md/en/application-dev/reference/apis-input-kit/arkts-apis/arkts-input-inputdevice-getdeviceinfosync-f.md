@@ -40,6 +40,7 @@ Obtains information about the specified input device.
 
 ```TypeScript
 import { inputDevice } from '@kit.InputKit';
+import { BusinessError } from '@kit.BasicServicesKit';
 
 @Entry
 @Component

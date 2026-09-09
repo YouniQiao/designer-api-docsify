@@ -47,3 +47,32 @@ Bind input devices to a display group. Only external USB and Bluetooth mice, tou
 | [3900001](../errorcode-inputdevice.md#3900001-device-not-exist) | The specified input device does not exist. |
 | [3900004](../errorcode-inputdevice.md#3900004-specified-display-does-not-exist) | The specified display does not exist. |
 | [3900005](../errorcode-inputdevice.md#3900005-unsupported-input-device) | Unsupported input device. |
+
+**Examples**
+
+```TypeScript
+import { inputDevice } from '@kit.InputKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct Index {
+  build() {
+    RelativeContainer() {
+      Text()
+        .onClick(() => {
+          try {
+            // Bind the input device with ID 1 to the display with ID 0.
+            inputDevice.bindToDisplay(1, 0).then(() => {
+              console.info(`Succeeded in binding input device to display.`);
+            }).catch((error: BusinessError) => {
+              console.error(`Failed to bind input device to display, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+            })
+          } catch (error) {
+            console.error(`Failed to bind input device to display, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+          }
+        })
+    }
+  }
+}
+```

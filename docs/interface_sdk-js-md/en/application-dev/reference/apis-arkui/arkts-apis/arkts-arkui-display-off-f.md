@@ -36,11 +36,13 @@ Unsubscribes from display changes.
 **Examples**
 
 ```TypeScript
+import { Callback } from '@kit.BasicServicesKit';
+
 // Unregister all the callbacks that have been registered through on().
 display.off('remove');
 
 let callback: Callback<number> = (data: number) => {
-  console.info(`Succeeded in unregistering the callback for display remove. Data: ${data}`)
+  console.info(`Succeeded in unregistering the callback for display remove. Data: ${data}`);
 };
 // Unregister the specified callback.
 display.off('remove', callback);
@@ -142,6 +144,8 @@ Unsubscribes from fold status change events of the foldable device.
 **Examples**
 
 ```TypeScript
+import { Callback } from '@kit.BasicServicesKit';
+
 // Unregister all the callbacks that have been registered through on().
 display.off('foldStatusChange');
 
@@ -323,6 +327,6 @@ let callback: display.BrightnessCallback<number, display.BrightnessInfo> = (id: 
 try {
   display.off('brightnessInfoChange', callback);
 } catch (error) {
-  console.error(`Failed to unregister brightnessInfoChange listener. Code ${error.code}, message: ${error.message}`);
+  console.error(`Failed to unregister brightnessInfoChange listener. Code: ${error.code}, message: ${error.message}`);
 }
 ```

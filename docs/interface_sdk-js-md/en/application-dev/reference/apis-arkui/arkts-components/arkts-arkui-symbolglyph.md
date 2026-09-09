@@ -58,21 +58,21 @@ struct Index {
     Column() {
       Row() {
         Column() {
-          Text("Light")
+          Text('Light')
           SymbolGlyph($r('sys.symbol.ohos_trash'))
             .fontWeight(FontWeight.Lighter)
             .fontSize(96)
         }
 
         Column() {
-          Text("Normal")
+          Text('Normal')
           SymbolGlyph($r('sys.symbol.ohos_trash'))
             .fontWeight(FontWeight.Normal)
             .fontSize(96)
         }
 
         Column() {
-          Text("Bold")
+          Text('Bold')
           SymbolGlyph($r('sys.symbol.ohos_trash'))
             .fontWeight(FontWeight.Bold)
             .fontSize(96)
@@ -81,7 +81,7 @@ struct Index {
 
       Row() {
         Column() {
-          Text("Single-color mode")
+          Text('Monochrome')
           SymbolGlyph($r('sys.symbol.ohos_folder_badge_plus'))
             .fontSize(96)
             .renderingStrategy(SymbolRenderingStrategy.SINGLE)
@@ -89,7 +89,7 @@ struct Index {
         }
 
         Column() {
-          Text("Multi-color mode")
+          Text('Multicolor')
           SymbolGlyph($r('sys.symbol.ohos_folder_badge_plus'))
             .fontSize(96)
             .renderingStrategy(SymbolRenderingStrategy.MULTIPLE_COLOR)
@@ -97,7 +97,7 @@ struct Index {
         }
 
         Column() {
-          Text ("Layered mode")
+          Text('Layered')
           SymbolGlyph($r('sys.symbol.ohos_folder_badge_plus'))
             .fontSize(96)
             .renderingStrategy(SymbolRenderingStrategy.MULTIPLE_OPACITY)
@@ -107,21 +107,21 @@ struct Index {
 
       Row() {
         Column() {
-          Text("No effect")
+          Text('No animation')
           SymbolGlyph($r('sys.symbol.ohos_wifi'))
             .fontSize(96)
             .effectStrategy(SymbolEffectStrategy.NONE)
         }
 
         Column() {
-          Text("Overall scale effect")
+          Text('Overall scale animation')
           SymbolGlyph($r('sys.symbol.ohos_wifi'))
             .fontSize(96)
             .effectStrategy(SymbolEffectStrategy.SCALE)
         }
 
         Column() {
-          Text("Hierarchical effect")
+          Text('Hierarchical animation')
           SymbolGlyph($r('sys.symbol.ohos_wifi'))
             .fontSize(96)
             .effectStrategy(SymbolEffectStrategy.HIERARCHICAL)
@@ -132,7 +132,7 @@ struct Index {
 }
 ```
 
-This example demonstrates various symbol effects using the [symbolEffect](#symboleffect12) attribute (available since API version 12) and shadow effects with [symbolShadow](arkts-arkui-symbolglyph-attribute.md#symbolshadow) (available since API version 20).
+Starting from API version 12, this example uses the [symbolEffect](#symboleffect12) attribute to demonstrate the effects of various animations and the shadow effect combined with [symbolShadow](arkts-arkui-symbolglyph-attribute.md#symbolshadow) (starting from API version 20). Among them, disabling animations and quick replacement animations require API version 20 or later.
 
 ```TypeScript
 // xxx.ets
@@ -143,7 +143,7 @@ struct Index {
   @State triggerValueReplace: number = 0;
   @State triggerValueReplace1: number = 0;
   @State triggerValueReplace2: number = 0;
-  @State renderMode: number = 1;
+  @State renderMode: SymbolRenderingStrategy = SymbolRenderingStrategy.MULTIPLE_COLOR;
 
   replaceFlag: boolean = true;
   replaceFlag1: boolean = true;
@@ -160,7 +160,7 @@ struct Index {
     Column() {
       Row() {
         Column() {
-          Text("Variable color effect")
+          Text('Variable color animation')
           SymbolGlyph($r('sys.symbol.ohos_wifi'))
             .fontSize(96)
             .symbolEffect(new HierarchicalSymbolEffect(EffectFillStyle.ITERATIVE), this.isActive)
@@ -171,7 +171,7 @@ struct Index {
         }
         .margin({ right: 20 })
         Column() {
-          Text("Replacement effect")
+          Text('Replacement animation')
           SymbolGlyph(this.replaceFlag ? $r('sys.symbol.checkmark_circle') : $r('sys.symbol.repeat_1'))
             .fontSize(96)
             .symbolEffect(new ReplaceSymbolEffect(EffectScope.WHOLE), this.triggerValueReplace)
@@ -186,7 +186,7 @@ struct Index {
 
       Row() {
         Column() {
-          Text("Slash overlay")
+          Text('Disabled animation')
           SymbolGlyph(this.replaceFlag1 ? $r('sys.symbol.eye_slash') : $r('sys.symbol.eye'))
             .fontSize(96)
             .renderingStrategy(this.renderMode)
@@ -199,7 +199,7 @@ struct Index {
         }
         .margin({ right: 20 })
         Column() {
-          Text("Cross-fade transition")
+          Text('Fast replacement animation')
           SymbolGlyph(this.replaceFlag2 ? $r('sys.symbol.checkmark_circle') : $r('sys.symbol.repeat_1'))
             .fontSize(96)
             .symbolEffect(new ReplaceSymbolEffect(EffectScope.WHOLE, ReplaceEffectType.CROSS_FADE), this.triggerValueReplace2)
@@ -211,7 +211,7 @@ struct Index {
         }
         .margin({ right: 20 })
         Column() {
-          Text("Shadow effect")
+          Text('Shadow capability')
           SymbolGlyph($r('sys.symbol.ohos_wifi'))
             .fontSize(96)
             .symbolEffect(new HierarchicalSymbolEffect(EffectFillStyle.ITERATIVE), this.isActive)
@@ -232,13 +232,12 @@ struct Index {
 }
 ```
 
-This example demonstrates how to apply gradient colors to SymbolGlyph components using the [shaderStyle](#shaderstyle20) API, available since API version 20.
+Starting from API version 20, this example uses the [shaderStyle](#shaderstyle20) interface to implement the function of displaying the SymbolGlyph component as a gradient color.
 
 ```TypeScript
 @Entry
 @Component
 struct Index {
-  @State message: string = 'Hello World';
 
   linearGradientOptions1: LinearGradientOptions = {
     angle: 45,
@@ -252,8 +251,8 @@ struct Index {
   };
 
   radialGradientOptions: RadialGradientOptions = {
-    center: ["50%", "50%"],
-    radius: "20%",
+    center: ['50%', '50%'],
+    radius: '20%',
     colors: [[Color.Red, 0.0], [Color.Blue, 0.3], [Color.Green, 0.5]],
     repeating: true,
   };
@@ -365,6 +364,111 @@ struct Index {
       left: 20,
       top: 50
     })
+  }
+}
+```
+
+This example passes a ColorMetrics type parameter through the [fontColor](#fontcolor-1) attribute to set the color of the SymbolGlyph component.
+Starting from API version 26.0.0, [fontColor](#fontcolor-1) is newly supported.
+
+```TypeScript
+// xxx.ets
+import { ColorMetrics } from '@kit.ArkUI';
+
+@Entry
+@Component
+struct Index {
+  blueColor: ColorMetrics[] = [ColorMetrics.resourceColor(Color.Blue)];
+  greenColor: ColorMetrics[] = [ColorMetrics.numeric(0x00FF00)];
+  blackColor: ColorMetrics[] = [ColorMetrics.rgba(0, 0, 0, 1.0)];
+
+  build() {
+    Column() {
+      Row({ space: 20 }) {
+        Column() {
+          Text('resourceColor blue')
+          SymbolGlyph($r('sys.symbol.ohos_folder_badge_plus'))
+            .fontSize(96)
+            .renderingStrategy(SymbolRenderingStrategy.SINGLE)
+            .fontColor(this.blueColor)
+        }
+
+        Column() {
+          Text('numeric green')
+          SymbolGlyph($r('sys.symbol.ohos_folder_badge_plus'))
+            .fontSize(96)
+            .renderingStrategy(SymbolRenderingStrategy.SINGLE)
+            .fontColor(this.greenColor)
+        }
+
+        Column() {
+          Text('rgba black')
+          SymbolGlyph($r('sys.symbol.ohos_folder_badge_plus'))
+            .fontSize(96)
+            .renderingStrategy(SymbolRenderingStrategy.SINGLE)
+            .fontColor(this.blackColor)
+        }
+      }.width('100%')
+    }.width('100%')
+  }
+}
+```
+
+This example uses the [fontWeight](#fontweight-1) attribute to demonstrate the effects of different font weight configurations of SymbolGlyph: the first row of symbol glyphs shows the effects of setting the font weight values to 220 and 660 respectively after enabling variable font weight; the second row of symbol glyphs shows the effects of setting the font weight to follow and not follow the automatic update of the device's system font weight level after setting the device's system font weight to bold.
+Since API version 26.0.0, the [fontWeight](#fontweight-1) attribute is added.
+
+```TypeScript
+// xxx.ets
+@Entry
+@Component
+struct Index {
+  build() {
+    Column() {
+      Row() {
+        Column() {
+          Text('font weight: 220')
+          // ohos_trash is a system preset trash can symbol.
+          SymbolGlyph($r('sys.symbol.ohos_trash'))
+            .fontWeight(220, { enableVariableFontWeight: true })
+            .fontSize(96)
+        }
+        Column() {
+          Text('            ')
+        }
+        Column() {
+          Text('font weight: 660')
+          // ohos_trash is a system preset trash can symbol.
+          SymbolGlyph($r('sys.symbol.ohos_trash'))
+            .fontWeight(660, { enableVariableFontWeight: true })
+            .fontSize(96)
+        }
+      }
+      Row() {
+        Text('    ')
+      }
+      Row() {
+        Text('After set system text weight: Bold')
+      }
+      Row() {
+        Column() {
+          Text('device category: true')
+          // ohos_trash is a system preset trash can symbol.
+          SymbolGlyph($r('sys.symbol.ohos_trash'))
+            .fontWeight(FontWeight.Normal, { enableDeviceFontWeightCategory: true })
+            .fontSize(96)
+        }
+        Column() {
+          Text('    ')
+        }
+        Column() {
+          Text('device category: false')
+          // ohos_trash is a system preset trash can symbol.
+          SymbolGlyph($r('sys.symbol.ohos_trash'))
+            .fontWeight(FontWeight.Normal, { enableDeviceFontWeightCategory: false })
+            .fontSize(96)
+        }
+      }
+    }
   }
 }
 ```

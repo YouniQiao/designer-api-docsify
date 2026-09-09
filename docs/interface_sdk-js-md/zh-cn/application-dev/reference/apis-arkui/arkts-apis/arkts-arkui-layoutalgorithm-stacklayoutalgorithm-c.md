@@ -39,6 +39,11 @@ constructor(option?: StackLayoutAlgorithmOptions)
 | --- | --- | --- | --- |
 | option | [StackLayoutAlgorithmOptions](arkts-arkui-layoutalgorithm-stacklayoutalgorithmoptions-i.md) | 否 | 堆叠布局算法的构造入参，设置九宫格对齐格式。 |
 
+**示例**
+
+请参考DynamicLayout组件[示例2（切换布局算法）](../arkui-ts/ts-container-dynamiclayout.md#示例2切换布局算法)。
+- simpleType:
+
 ## alignContent
 
 ```TypeScript

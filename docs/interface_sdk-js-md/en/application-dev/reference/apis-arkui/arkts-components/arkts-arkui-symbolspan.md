@@ -49,7 +49,7 @@ struct Index {
     Column() {
       Row() {
         Column() {
-          Text("Light")
+          Text('Light')
           Text() {
             SymbolSpan($r('sys.symbol.ohos_trash'))
               .fontWeight(FontWeight.Lighter)
@@ -58,7 +58,7 @@ struct Index {
         }
 
         Column() {
-          Text("Normal")
+          Text('Normal')
           Text() {
             SymbolSpan($r('sys.symbol.ohos_trash'))
               .fontWeight(FontWeight.Normal)
@@ -67,7 +67,7 @@ struct Index {
         }
 
         Column() {
-          Text("Bold")
+          Text('Bold')
           Text() {
             SymbolSpan($r('sys.symbol.ohos_trash'))
               .fontWeight(FontWeight.Bold)
@@ -78,7 +78,7 @@ struct Index {
 
       Row() {
         Column() {
-          Text("Monochrome")
+          Text('Monochrome')
           Text() {
             SymbolSpan($r('sys.symbol.ohos_folder_badge_plus'))
               .fontSize(96)
@@ -88,7 +88,7 @@ struct Index {
         }
 
         Column() {
-          Text("Multicolor")
+          Text('Multicolor')
           Text() {
             SymbolSpan($r('sys.symbol.ohos_folder_badge_plus'))
               .fontSize(96)
@@ -98,7 +98,7 @@ struct Index {
         }
 
         Column() {
-          Text("Multilayer")
+          Text('Layered')
           Text() {
             SymbolSpan($r('sys.symbol.ohos_folder_badge_plus'))
               .fontSize(96)
@@ -110,7 +110,7 @@ struct Index {
 
       Row() {
         Column() {
-          Text("No effect")
+          Text('No effect')
           Text() {
             SymbolSpan($r('sys.symbol.ohos_wifi'))
               .fontSize(96)
@@ -119,7 +119,7 @@ struct Index {
         }
 
         Column() {
-          Text("Overall scale effect")
+          Text('Whole scaling effect')
           Text() {
             SymbolSpan($r('sys.symbol.ohos_wifi'))
               .fontSize(96)
@@ -128,7 +128,7 @@ struct Index {
         }
 
         Column() {
-          Text("Hierarchical effect")
+          Text('Hierarchical effect')
           Text() {
             SymbolSpan($r('sys.symbol.ohos_wifi'))
               .fontSize(96)
@@ -150,7 +150,7 @@ import { SymbolSpanModifier } from '@kit.ArkUI';
 @Component
 struct Index {
   @State modifier: SymbolSpanModifier =
-    new SymbolSpanModifier($r("sys.symbol.ohos_wifi")).fontColor([Color.Blue]).fontSize(100);
+    new SymbolSpanModifier($r('sys.symbol.ohos_wifi')).fontColor([Color.Blue]).fontSize(100);
 
   build() {
     Row() {
@@ -167,6 +167,73 @@ struct Index {
       .width('100%')
     }
     .height('100%')
+  }
+}
+```
+
+This example uses the [fontWeight](#fontweight-1) attribute to demonstrate the effects of different font weight configurations of SymbolSpan: the first row of small icon symbols shows the effects of setting the font weight values to 220 and 660 respectively after enabling variable font weight; the second row of small icon symbols shows the effects of setting whether to follow the device's system font weight level for automatic update, after the device's system font weight is set to bold.
+Since API version 26.0.0, the [fontWeight](#fontweight-1) attribute is added.
+
+```TypeScript
+// xxx.ets
+@Entry
+@Component
+struct Index {
+  build() {
+    Column() {
+      Row() {
+        Column() {
+          Text('font weight: 220')
+          Text() {
+            // ohos_trash is a system preset trash can symbol.
+            SymbolSpan($r('sys.symbol.ohos_trash'))
+              .fontWeight(220, { enableVariableFontWeight: true })
+              .fontSize(96)
+          }
+        }
+        Column() {
+          Text('            ')
+        }
+        Column() {
+          Text('font weight: 660')
+          Text() {
+            // ohos_trash is a system preset trash can symbol.
+            SymbolSpan($r('sys.symbol.ohos_trash'))
+              .fontWeight(660, { enableVariableFontWeight: true })
+              .fontSize(96)
+          }
+        }
+      }
+      Row() {
+        Text('    ')
+      }
+      Row() {
+        Text('After set system text weight: Bold')
+      }
+      Row() {
+        Column() {
+          Text('device category: true')
+          Text() {
+            // ohos_trash is a system preset trash can symbol.
+            SymbolSpan($r('sys.symbol.ohos_trash'))
+              .fontWeight(FontWeight.Normal, { enableDeviceFontWeightCategory: true })
+              .fontSize(96)
+          }
+        }
+        Column() {
+          Text('    ')
+        }
+        Column() {
+          Text('device category: false')
+          Text() {
+            // ohos_trash is a system preset trash can symbol.
+            SymbolSpan($r('sys.symbol.ohos_trash'))
+              .fontWeight(FontWeight.Normal, { enableDeviceFontWeightCategory: false })
+              .fontSize(96)
+          }
+        }
+      }
+    }
   }
 }
 ```

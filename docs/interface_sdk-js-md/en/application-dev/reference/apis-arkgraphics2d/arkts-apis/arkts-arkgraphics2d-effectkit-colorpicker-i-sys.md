@@ -39,8 +39,8 @@ Discriminates the light and dark degree of the picture. When the light and dark 
 **Examples**
 
 ```TypeScript
-import { image } from "@kit.ImageKit";
-import { effectKit } from "@kit.ArkGraphics2D";
+import { image } from '@kit.ImageKit';
+import { effectKit } from '@kit.ArkGraphics2D';
 
 const color = new ArrayBuffer(96);
 let opts: image.InitializationOptions = {
@@ -60,7 +60,7 @@ image.createPixelMap(color, opts).then((pixelMap) => {
       let pictureLightDegree: effectKit.PictureLightDegree = colorPicker.discriminatePictureLightDegree();
       console.info('The color light degree of the image is ' + pictureLightDegree);
     }
-  })
+  });
 });
 ```
 
@@ -95,8 +95,8 @@ Obtains the proportion of fully transparent pixels with alpha=0 in the image.
 **Examples**
 
 ```TypeScript
-import { image } from "@kit.ImageKit";
-import { effectKit } from "@kit.ArkGraphics2D";
+import { image } from '@kit.ImageKit';
+import { effectKit } from '@kit.ArkGraphics2D';
 
 const color = new ArrayBuffer(96);
 let opts: image.InitializationOptions = {
@@ -116,7 +116,7 @@ image.createPixelMap(color, opts).then((pixelMap) => {
         let percentage: number = colorPicker.getAlphaZeroTransparentProportion();
       console.info('Get proportion of fully transparent pixels: ' + percentage);
     }
-  })
+  });
 });
 ```
 
@@ -151,8 +151,8 @@ Obtains the complexity degree of the image. When the complexity degree cannot be
 **Examples**
 
 ```TypeScript
-import { image } from "@kit.ImageKit";
-import { effectKit } from "@kit.ArkGraphics2D";
+import { image } from '@kit.ImageKit';
+import { effectKit } from '@kit.ArkGraphics2D';
 
 const color = new ArrayBuffer(96);
 let opts: image.InitializationOptions = {
@@ -172,7 +172,7 @@ image.createPixelMap(color, opts).then((pixelMap) => {
       let complexityDegree: effectKit.PictureComplexityDegree = colorPicker.getComplexityDegree();
       console.info('The complexity degree of the image is ' + complexityDegree);
     }
-  })
+  });
 });
 ```
 
@@ -203,18 +203,18 @@ Generates a stronger immersion color that merges with the background color and i
 **Examples**
 
 ```TypeScript
-import { image } from "@kit.ImageKit";
-import { effectKit } from "@kit.ArkGraphics2D";
+import { image } from '@kit.ImageKit';
+import { effectKit } from '@kit.ArkGraphics2D';
 
 const color = new ArrayBuffer(96);
-let opts : image.InitializationOptions = {
+let opts: image.InitializationOptions = {
   editable: true,
   pixelFormat: 3,
   size: {
     height: 4,
     width: 6
   }
-}
+};
 image.createPixelMap(color, opts).then((pixelMap) => {
   effectKit.createColorPicker(pixelMap, (error, colorPicker) => {
     if (error) {
@@ -224,7 +224,7 @@ image.createPixelMap(color, opts).then((pixelMap) => {
       let color = colorPicker.getDeepenImmersionColor();
       console.info('get deepen immersion color =' + color);
     }
-  })
+  });
 });
 ```
 
@@ -255,18 +255,18 @@ Generates an immersive background color that creates an immersive visual effect,
 **Examples**
 
 ```TypeScript
-import { image } from "@kit.ImageKit";
-import { effectKit } from "@kit.ArkGraphics2D";
+import { image } from '@kit.ImageKit';
+import { effectKit } from '@kit.ArkGraphics2D';
 
 const color = new ArrayBuffer(96);
-let opts : image.InitializationOptions = {
+let opts: image.InitializationOptions = {
   editable: true,
   pixelFormat: 3,
   size: {
     height: 4,
     width: 6
   }
-}
+};
 image.createPixelMap(color, opts).then((pixelMap) => {
   effectKit.createColorPicker(pixelMap, (error, colorPicker) => {
     if (error) {
@@ -307,18 +307,18 @@ Generates an immersive foreground color that creates an immersive visual effect 
 **Examples**
 
 ```TypeScript
-import { image } from "@kit.ImageKit";
-import { effectKit } from "@kit.ArkGraphics2D";
+import { image } from '@kit.ImageKit';
+import { effectKit } from '@kit.ArkGraphics2D';
 
 const color = new ArrayBuffer(96);
-let opts : image.InitializationOptions = {
+let opts: image.InitializationOptions = {
   editable: true,
   pixelFormat: 3,
   size: {
     height: 4,
     width: 6
   }
-}
+};
 image.createPixelMap(color, opts).then((pixelMap) => {
   effectKit.createColorPicker(pixelMap, (error, colorPicker) => {
     if (error) {
@@ -328,7 +328,7 @@ image.createPixelMap(color, opts).then((pixelMap) => {
       let color = colorPicker.getImmersiveForegroundColor();
       console.info('get immersive foreground color =' + color);
     }
-  })
+  });
 });
 ```
 
@@ -359,18 +359,18 @@ Obtains the Morandi shadow color from the dominant color of the image and writes
 **Examples**
 
 ```TypeScript
-import { image } from "@kit.ImageKit";
-import { effectKit } from "@kit.ArkGraphics2D";
+import { image } from '@kit.ImageKit';
+import { effectKit } from '@kit.ArkGraphics2D';
 
 const color = new ArrayBuffer(96);
-let opts : image.InitializationOptions = {
+let opts: image.InitializationOptions = {
   editable: true,
   pixelFormat: 3,
   size: {
     height: 4,
     width: 6
   }
-}
+};
 image.createPixelMap(color, opts).then((pixelMap) => {
   effectKit.createColorPicker(pixelMap, (error, colorPicker) => {
     if (error) {
@@ -380,7 +380,7 @@ image.createPixelMap(color, opts).then((pixelMap) => {
       let color = colorPicker.getMorandiShadowColor();
       console.info('get Morandi shadow color =' + color);
     }
-  })
+  });
 });
 ```
 
@@ -411,18 +411,18 @@ Generates a reverse color based on the image brightness discrimination result, a
 **Examples**
 
 ```TypeScript
-import { image } from "@kit.ImageKit";
-import { effectKit } from "@kit.ArkGraphics2D";
+import { image } from '@kit.ImageKit';
+import { effectKit } from '@kit.ArkGraphics2D';
 
 const color = new ArrayBuffer(96);
-let opts : image.InitializationOptions = {
+let opts: image.InitializationOptions = {
   editable: true,
   pixelFormat: 3,
   size: {
     height: 4,
     width: 6
   }
-}
+};
 image.createPixelMap(color, opts).then((pixelMap) => {
   effectKit.createColorPicker(pixelMap, (error, colorPicker) => {
     if (error) {
@@ -432,7 +432,7 @@ image.createPixelMap(color, opts).then((pixelMap) => {
       let color = colorPicker.getReverseColor();
       console.info('get reverse color =' + color);
     }
-  })
+  });
 });
 ```
 
@@ -467,8 +467,8 @@ Obtains the shade degree of the image. When the shade degree cannot be determine
 **Examples**
 
 ```TypeScript
-import { image } from "@kit.ImageKit";
-import { effectKit } from "@kit.ArkGraphics2D";
+import { image } from '@kit.ImageKit';
+import { effectKit } from '@kit.ArkGraphics2D';
 
 const color = new ArrayBuffer(96);
 let opts: image.InitializationOptions = {
@@ -488,7 +488,7 @@ image.createPixelMap(color, opts).then((pixelMap) => {
       let shadeDegree: effectKit.PictureShadeDegree = colorPicker.getShadeDegree();
       console.info('The shade degree of the image is ' + shadeDegree);
     }
-  })
+  });
 });
 ```
 
@@ -529,8 +529,8 @@ Synchronously returns the top proportion colors and their corresponding percenta
 **Examples**
 
 ```TypeScript
-import { image } from "@kit.ImageKit";
-import { effectKit } from "@kit.ArkGraphics2D";
+import { image } from '@kit.ImageKit';
+import { effectKit } from '@kit.ArkGraphics2D';
 
 const color = new ArrayBuffer(96);
 let opts: image.InitializationOptions = {
@@ -552,6 +552,6 @@ image.createPixelMap(color, opts).then((pixelMap) => {
         console.info('get top proportion colors and percentages: color ' + key + ', percentage ' + value);
       })
     }
-  })
+  });
 });
 ```

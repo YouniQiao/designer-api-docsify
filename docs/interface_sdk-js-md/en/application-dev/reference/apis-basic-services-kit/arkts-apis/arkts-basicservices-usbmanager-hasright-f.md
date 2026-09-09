@@ -40,7 +40,7 @@ Checks whether the application has the permission to access the device. Checks w
 **Examples**
 
 ```TypeScript
-function hasRight(): boolean {
+async function hasRight(): Promise<boolean> {
   let devicesList: Array<usbManager.USBDevice> = usbManager.getDevices();
   if (!devicesList || devicesList.length == 0) {
     console.info(`device list is empty`);
@@ -48,7 +48,7 @@ function hasRight(): boolean {
   }
 
   let device: usbManager.USBDevice = devicesList?.[0];
-  usbManager.requestRight(device.name);
+  await usbManager.requestRight(device.name);
   let right: boolean = usbManager.hasRight(device.name);
   console.info(`${right}`);
   return right;

@@ -390,7 +390,7 @@ This example shows how to customize the content area of the gauge using the [con
 
 ```TypeScript
 // xxx.ets
-// The example implements the customization of the gauge's content area using a Builder, utilizing a circular chart, buttons, and text boxes. When the increase button is clicked, the indicator will shift to the right; conversely, when the decrease button is clicked, the indicator will shift to the left.
+// This example implements a Gauge component that uses a Builder to customize the content area, and uses a ring chart component, buttons, and text components. When the increase button is clicked, the ring chart pointer moves to the right; conversely, when the decrease button is clicked, the ring chart pointer moves to the left.
 @Builder
 function buildGauge(config: GaugeConfiguration) {
   Column({ space: 30 }) {
@@ -420,19 +420,19 @@ class MyGaugeStyle implements ContentModifier<GaugeConfiguration> {
   max: number = 0
 
   constructor(value: number, min: number, max: number) {
-    this.value = value
-    this.min = min
-    this.max = max
+    this.value = value;
+    this.min = min;
+    this.max = max;
   }
 
   applyContent(): WrappedBuilder<[GaugeConfiguration]> {
-    return wrapBuilder(buildGauge)
+    return wrapBuilder(buildGauge);
   }
 }
 
 @Entry
 @Component
-struct refreshExample {
+struct RefreshExample {
   @State gaugeValue: number = 20
   @State gaugeMin: number = 0
   @State gaugeMax: number = 100
@@ -450,12 +450,12 @@ struct refreshExample {
         Row({ space: 20 }) {
           Button('Increase').onClick(() => {
             if (this.gaugeValue < this.gaugeMax) {
-              this.gaugeValue += 1
+              this.gaugeValue += 1;
             }
           })
           Button('Decrease').onClick(() => {
             if (this.gaugeValue > this.gaugeMin) {
-              this.gaugeValue -= 1
+              this.gaugeValue -= 1;
             }
           })
         }
@@ -465,7 +465,7 @@ struct refreshExample {
 }
 ```
 
-This example illustrates how to secure sensitive information using the [privacySensitive](#privacysensitive12) attribute. Note that the display requires widget framework support.
+This example shows how to call the [privacySensitive](#privacysensitive12) API. The actual privacy hiding effect requires support from the card framework.
 
 ```TypeScript
 @Entry

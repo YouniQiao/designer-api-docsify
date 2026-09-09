@@ -298,10 +298,11 @@ struct ImageExample2 {
           'size': { height: 100, width: 100 }
         }
         imgSource.createPixelMap(options).then((pixelMap: PixelMap) => {
-          console.error('image createPixelMap success');
+          console.info('image createPixelMap success');
           this.pixelMapImg = pixelMap;
           imgSource.release();
-        }).catch(() => {
+        }).catch((err: BusinessError) => {
+          console.error(`Failed to create pixel map. Code: ${err.code}, message: ${err.message}`);
           imgSource.release();
         })
       }
@@ -434,11 +435,11 @@ struct ImageExample4 {
   private async getPixmapFromMedia(resource: Resource) {
     let unit8Array = await this.getUIContext().getHostContext()?.resourceManager?.getMediaContent(resource.id);
     let imageSource = image.createImageSource(unit8Array?.buffer.slice(0, unit8Array.buffer.byteLength));
-    let createPixelMap: image.PixelMap = await imageSource.createPixelMap({
+    let pixelMap: image.PixelMap = await imageSource.createPixelMap({
       desiredPixelFormat: image.PixelMapFormat.RGBA_8888
     });
     await imageSource.release();
-    return createPixelMap;
+    return pixelMap;
   }
 }
 ```
@@ -574,6 +575,7 @@ struct ImageExample {
         Image(this.animated)
           .width('500px').height('500px')
           .onFinish(() => {
+            // When the image source of the Image component is an AnimatedDrawableDescriptor object, the onFinish callback is not invoked.
             console.info('finish');
           })
       }.height('50%')
@@ -604,11 +606,11 @@ struct ImageExample {
   private async getPixmapFromMedia(resource: Resource) {
     let unit8Array = await this.getUIContext().getHostContext()?.resourceManager?.getMediaContent(resource.id);
     let imageSource = image.createImageSource(unit8Array?.buffer.slice(0, unit8Array.buffer.byteLength));
-    let createPixelMap: image.PixelMap = await imageSource.createPixelMap({
+    let pixelMap: image.PixelMap = await imageSource.createPixelMap({
       desiredPixelFormat: image.PixelMapFormat.RGBA_8888
     });
     await imageSource.release();
-    return createPixelMap;
+    return pixelMap;
   }
 
   private async getPixelMaps() {
@@ -932,13 +934,12 @@ struct Test {
 }
 ```
 
-This example uses the [sourceSize](ts-basic-components-image.md#sourcesize) API to customize the image decoding size.
+This example customizes the decoding size of the image through the [sourceSize](#sourcesize) API.
 
 ```TypeScript
 @Entry
 @Component
 struct Index {
-  @State borderRadiusValue: number = 10;
   build() {
     Column() {
       // Replace $r('app.media.sky') with the image resource file you use.
@@ -962,13 +963,12 @@ struct Index {
 }
 ```
 
-This example uses the [renderMode](ts-basic-components-image.md#rendermode) API to set the image rendering mode to grayscale.
+This example sets the image rendering mode to black-and-white through the [renderMode](#rendermode) API.
 
 ```TypeScript
 @Entry
 @Component
 struct Index {
-  @State borderRadiusValue: number = 10;
   build() {
     Column() {
       // Replace $r('app.media.sky') with the image resource file you use.
@@ -985,13 +985,12 @@ struct Index {
 }
 ```
 
-This example uses the [objectRepeat](ts-basic-components-image.md#objectrepeat) API to repeat the image along the vertical axis.
+This example repeatedly draws the image along the vertical axis through the [objectRepeat](arkts-arkui-image-attribute.md#objectrepeat) API.
 
 ```TypeScript
 @Entry
 @Component
 struct Index {
-  @State borderRadiusValue: number = 10;
   build() {
     Column() {
       // Replace $r('app.media.sky') with the image resource file you use.
@@ -1082,6 +1081,7 @@ struct Index {
         // After the image information is obtained successfully, print the HDR status.
         console.info(TAG, 'imageInfo.isHdr:' + imageInfo.isHdr);
       }
+      imageSource.release();
     } else {
       console.error(TAG, 'Failed to obtain the image buffer.');
     }
@@ -1509,7 +1509,7 @@ struct ImageExample {
 }
 ```
 
-This example demonstrates how to display specified images during image loading and when image loading fails by setting the [alt](#alt22) attribute.
+This example demonstrates how to set the [alt](#alt22) attribute to display a specified image during the image loading process and when image loading fails.
 
 ```TypeScript
 @Entry
@@ -1557,7 +1557,7 @@ struct Index {
         .height(100)
         .width(100)
         .onError((e)=>{
-          console.info("DownLoadErrorInfo : " + JSON.stringify(e?.downloadInfo))
+          console.error(`DownloadErrorInfo: ${JSON.stringify(e?.downloadInfo)}`)
         })
     }
     .height('100%')

@@ -53,7 +53,7 @@ import { BusinessError } from '@kit.BasicServicesKit';
 struct Index {
   build() {
     RelativeContainer() {
-      Button("setMouseScrollDirection")
+      Button('setMouseScrollDirection')
         .onClick(() => {
           try {
             // Set the mouse scroll direction.

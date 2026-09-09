@@ -47,7 +47,7 @@ struct Index {
       Text()
         .onClick(() => {
           try {
-            // Obtain the touchpad pinch switch state.
+            // Obtain the touchpad pinch switch.
             pointer.getTouchpadPinchSwitch((error: BusinessError, state: boolean) => {
               if (error) {
                 console.error(`Failed to get touchpad pinch switch, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);

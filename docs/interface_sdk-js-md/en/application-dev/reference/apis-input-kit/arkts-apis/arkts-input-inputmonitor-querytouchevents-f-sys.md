@@ -44,7 +44,7 @@ Queries recent touchscreen input events. A maximum of 100 events can be queried.
 **Examples**
 
 ```TypeScript
-import { inputMonitor, TouchEvent } from '@kit.InputKit'
+import { inputMonitor, TouchEvent } from '@kit.InputKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 try {

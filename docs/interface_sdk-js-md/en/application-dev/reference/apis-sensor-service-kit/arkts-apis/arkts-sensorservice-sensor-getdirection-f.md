@@ -84,9 +84,9 @@ import { BusinessError } from '@kit.BasicServicesKit';
 
 const promise = sensor.getDirection([1, 0, 0, 0, 1, 0, 0, 0, 1]);
 promise.then((data: Array<number>) => {
-  console.info('Succeeded in getting sensor_getAltitude_Promise', data);
+  console.info('Succeeded in getting sensor_getDirection_Promise', data);
   for (let i = 1; i < data.length; i++) {
-    console.info("Succeeded in getting sensor_getDirection_promise" + data[i]);
+    console.info('Succeeded in getting sensor_getDirection_promise' + data[i]);
   }
 }).catch((err: BusinessError) => {
   console.error(`Failed to get promise.`);

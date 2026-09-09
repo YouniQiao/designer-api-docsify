@@ -47,8 +47,12 @@ struct Index {
       Text()
         .onClick(() => {
           try {
-            // Obtain the touchpad right-click menu type.
+            // Obtain the touchpad right-click type.
             pointer.getTouchpadRightClickType((error: BusinessError, type: pointer.RightClickType) => {
+              if (error) {
+                console.error(`Failed to get touchpad right click type, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+                return;
+              }
               console.info(`Succeeded in getting touchpad right click type, type: ${JSON.stringify(type)}.`);
             });
           } catch (error) {

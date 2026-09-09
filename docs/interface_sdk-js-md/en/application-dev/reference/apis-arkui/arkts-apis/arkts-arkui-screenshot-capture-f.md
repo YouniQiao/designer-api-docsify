@@ -55,7 +55,7 @@ import { image } from '@kit.ImageKit';
 
 // Set screenshot parameters and specify the screen whose displayId is 0.
 let captureOption: screenshot.CaptureOption = {
-  "displayId": 0
+  displayId: 0
 };
 try {
   // Call the capture API to obtain a full-screen screenshot.

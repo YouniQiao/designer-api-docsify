@@ -52,7 +52,7 @@ Sets the list of applications controlled by enterprise DLP. This API uses a prom
 import { dlpPermission } from '@kit.DataProtectionKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
-let appList: Array<string> = ["appId1", "appId2"];
+let appList: Array<string> = ['appId1', 'appId2'];
 let userId: number = 100;
 dlpPermission.setControlledAppLists(appList, userId).then(() => {
   console.info("Successfully set controlled appLists.");

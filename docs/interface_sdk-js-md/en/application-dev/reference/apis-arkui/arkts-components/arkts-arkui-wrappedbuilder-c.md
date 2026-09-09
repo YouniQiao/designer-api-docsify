@@ -55,9 +55,11 @@ constructor(builder: (...args: Args) => void)
 
 ```TypeScript
 @Builder
-function MyBuilder(value: string, size: number) {
+function myBuilder(value: string, size: number) {
   Text(value)
     .fontSize(size)
 }
-let builderVar: WrappedBuilder<[string, number]> = new WrappedBuilder<[string, number]>(MyBuilder);
+
+// Use WrappedBuilder to wrap myBuilder.
+let builderVar: WrappedBuilder<[string, number]> = new WrappedBuilder<[string, number]>(myBuilder);
 ```

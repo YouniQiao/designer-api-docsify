@@ -2274,3 +2274,52 @@ struct TailIndentsExample {
   }
 }
 ```
+
+该示例通过设置ImageAttachment中的resizable属性，对图片不同方向进行拉伸。
+从API版本26.1.0开始，ImageAttachment接口新增resizable属性。
+
+```TypeScript
+@Entry
+@Component
+struct StyledStringResizablePage {
+  controller: TextController = new TextController();
+  build() {
+    Column({ space: 20 }) {
+      Text('StyledString resizable Demo')
+        .fontSize(28)
+        .fontWeight(FontWeight.Bold)
+
+      Text(undefined, { controller: this.controller })
+        .width('90%')
+        .margin({ top: 10 })
+        .fontSize(28)
+        .onAppear(() => {
+          let mutableStyledString2: MutableStyledString = new MutableStyledString(new ImageAttachment({
+            resourceValue: $r('app.media.landscape'),
+            size: { width: 260, height: 260 },
+            resizable: {
+              slice: {
+                left: '200px',
+                top: '200px',
+                right: '20px',
+                bottom: '20px'
+              }
+            }
+          }));
+          let mutableStyledString: MutableStyledString = new MutableStyledString(new ImageAttachment({
+            resourceValue: $r('app.media.landscape'),
+            size: { width: 260, height: 260 },
+          }));
+          mutableStyledString.insertString(0, "原图\n")
+          mutableStyledString.insertString(mutableStyledString.length, "\n设置Resizable后\n")
+          mutableStyledString.appendStyledString(mutableStyledString2);
+          this.controller.setStyledString(mutableStyledString);
+        })
+    }
+    .width('100%')
+    .height('100%')
+    .padding(20)
+    .alignItems(HorizontalAlign.Center)
+  }
+}
+```

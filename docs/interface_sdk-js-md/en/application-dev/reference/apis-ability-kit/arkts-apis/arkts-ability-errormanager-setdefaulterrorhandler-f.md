@@ -50,15 +50,15 @@ import { process } from '@kit.ArkTS';
 
 let oldHandler: errorManager.ErrorHandler;
 const errorHandler: errorManager.ErrorHandler = (reason: Error) => {
-    // Customize the errorHandler logic.
-    console.info('[Handler]  Uncaught exception handler invoked.');
-    if (oldHandler) {
-        oldHandler(reason);
-    } else {
-        // You are advised to add a null check. If the value is null, use a synchronous exit approach.
-        const processManager = new process.ProcessManager();
-        processManager.exit(0);
-    }
+  // Custom errorHandler implementation logic.
+  console.info('[Handler] Uncaught exception handler invoked.');
+  if (oldHandler) {
+      oldHandler(reason);
+  } else {
+      // Add a null check. If the value is null, exit synchronously.
+      const processManager = new process.ProcessManager();
+      processManager.exit(0);
+  }
 };
 oldHandler = errorManager.setDefaultErrorHandler(errorHandler);
 ```

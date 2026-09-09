@@ -61,14 +61,14 @@ struct CheckboxExample {
         .selectedColor(0xed6f21)
         .shape(CheckBoxShape.CIRCLE)
         .onChange((value: boolean) => {
-          console.info('Checkbox1 change is' + value);
+          console.info('Checkbox1 change is ' + value);
         })
       Checkbox({ name: 'checkbox2', group: 'checkboxGroup' })
         .select(false)
         .selectedColor(0x39a2db)
         .shape(CheckBoxShape.ROUNDED_SQUARE)
         .onChange((value: boolean) => {
-          console.info('Checkbox2 change is' + value);
+          console.info('Checkbox2 change is ' + value);
         })
     }
   }
@@ -91,10 +91,10 @@ struct Index {
             .selectedColor(0x39a2db)
             .shape(CheckBoxShape.ROUNDED_SQUARE)
             .onChange((value: boolean) => {
-              console.info('Checkbox1 change is'+ value);
+              console.info('Checkbox1 change is ' + value);
             })
             .mark({
-              strokeColor:Color.Black,
+              strokeColor: Color.Black,
               size: 50,
               strokeWidth: 5
             })
@@ -108,7 +108,7 @@ struct Index {
             .selectedColor(0x39a2db)
             .shape(CheckBoxShape.ROUNDED_SQUARE)
             .onChange((value: boolean) => {
-              console.info('Checkbox2 change is' + value);
+              console.info('Checkbox2 change is ' + value);
             })
             .width(30)
             .height(30)
@@ -122,7 +122,7 @@ struct Index {
 }
 ```
 
-This example demonstrates how to implement a custom check box using [contentModifier](#contentmodifier12). This check box comes in the custom pentagon style. When selected, the check box shows a red triangle pattern inside, and the title displays the word "Selected;" when deselected, the check box hides the red triangle pattern inside, and the title displays the word "Unselected."
+This example demonstrates how to implement a custom check box style using the [contentModifier](#contentmodifier12) attribute, which implements a pentagon-shaped check box. When the check box is selected, a red triangle pattern is displayed inside and the title shows "Selected"; when the check box is deselected, the red triangle pattern is hidden and the title shows "Unselected".
 
 ```TypeScript
 // xxx.ets
@@ -152,9 +152,9 @@ function buildCheckbox(config: CheckBoxConfiguration) {
         .strokeWidth(3)
         .onClick(() => {
           if (config.selected) {
-            config.triggerChange(false);
+            config.triggerChange(false); // Trigger the change on the check box selected state and set the state to unselected.
           } else {
-            config.triggerChange(true);
+            config.triggerChange(true); // Trigger the change on the check box selected state and set the state to selected.
           }
         })
         .opacity(config.enabled ? 1 : 0.1)
@@ -192,7 +192,7 @@ struct Index {
       Checkbox({ name: 'Check box status', group: 'checkboxGroup' })
         .contentModifier(new MyCheckboxStyle(Color.Red))
         .onChange((value: boolean) => {
-          console.info('Checkbox change is' + value);
+          console.info('Checkbox change is ' + value);
         }).enabled(this.checkboxEnabled)
 
       Row() {
@@ -219,7 +219,7 @@ struct CheckboxExample {
   @Builder
   indicatorBuilder(value: number) {
     Column(){
-      Text(value > 99 ? '99+': value.toString())
+      Text(value > 99 ? '99+' : value.toString())
         .textAlign(TextAlign.Center)
         .fontSize(value > 99 ?  '16vp': '20vp')
         .fontWeight(FontWeight.Medium)
@@ -230,13 +230,13 @@ struct CheckboxExample {
     Row() {
       Column() {
         Flex({ justifyContent: FlexAlign.Center, alignItems: ItemAlign.Center}) {
-          Checkbox({ name: 'checkbox1', group: 'checkboxGroup', indicatorBuilder:()=>{this.indicatorBuilder(9)}})
+          Checkbox({ name: 'checkbox1', group: 'checkboxGroup', indicatorBuilder: () => this.indicatorBuilder(9)})
             .shape(CheckBoxShape.CIRCLE)
             .onChange((value: boolean) => {
-              console.info('Checkbox1 change is'+ value);
+              console.info('Checkbox1 change is ' + value);
             })
             .mark({
-              strokeColor:Color.Black,
+              strokeColor: Color.Black,
               size: 50,
               strokeWidth: 5
             })
@@ -245,10 +245,10 @@ struct CheckboxExample {
           Text('Checkbox1').fontSize(20)
         }.padding(15)
         Flex({ justifyContent: FlexAlign.Center, alignItems: ItemAlign.Center }) {
-          Checkbox({ name: 'checkbox2', group: 'checkboxGroup', indicatorBuilder:()=>{this.indicatorBuilder(100)}})
+          Checkbox({ name: 'checkbox2', group: 'checkboxGroup', indicatorBuilder: () => this.indicatorBuilder(100)})
             .shape(CheckBoxShape.ROUNDED_SQUARE)
             .onChange((value: boolean) => {
-              console.info('Checkbox2 change is' + value);
+              console.info('Checkbox2 change is ' + value);
             })
             .width(30)
             .height(30)
@@ -301,7 +301,7 @@ struct CheckboxExample {
                 .selectedColor('#007DFF')
                 .shape(CheckBoxShape.ROUNDED_SQUARE)
                 .onChange((value: boolean) => {
-                  console.info('Checkbox' + item + 'change is' + value);
+                  console.info('Checkbox ' + item + ' change is ' + value);
                 })
                 .margin({ left: 20 })
               Text('Checkbox' + item)
@@ -336,7 +336,7 @@ struct CheckboxExample {
                 .selectedColor('#007DFF')
                 .shape(CheckBoxShape.ROUNDED_SQUARE)
                 .onChange((value: boolean) => {
-                  console.info('Checkbox' + item + 'change is' + value);
+                  console.info('Checkbox ' + item + ' change is ' + value);
                 })
                 .margin({ left: 20 })
               Text('Checkbox' + item)
@@ -371,7 +371,7 @@ struct CheckboxExample {
                 .selectedColor('#007DFF')
                 .shape(CheckBoxShape.ROUNDED_SQUARE)
                 .onChange((value: boolean) => {
-                  console.info('Checkbox' + item + 'change is' + value);
+                  console.info('Checkbox ' + item + ' change is ' + value);
                 })
                 .margin({ left: 20 })
               Text('Checkbox' + item)
@@ -385,7 +385,7 @@ struct CheckboxExample {
         }
       }.margin({ bottom: 15 })
 
-      // Global Select All button
+      // Select All button.
       Flex({ justifyContent: FlexAlign.Start, alignItems: ItemAlign.Center }) {
         Row() {
           CheckboxGroup({ group: 'checkboxGroup' })
@@ -405,7 +405,7 @@ struct CheckboxExample {
         }
       }.margin({ bottom: 15 })
 
-      // Obtain the selection information.
+      // Obtain the selected information.
       Button('get selected info')
         .margin({ top: 10 })
         .onClick(() => {
@@ -435,15 +435,11 @@ struct Index {
   @State selectedList: number[] = [];
   @State image: Resource[] =
     // Replace $r('app.media.xxx') with the image resource file you use.
-    [$r("app.media.imageOne"), $r('app.media.imageTwo'), $r('app.media.imageThree'), $r('app.media.imageFour')];
+    [$r('app.media.imageOne'), $r('app.media.imageTwo'), $r('app.media.imageThree'), $r('app.media.imageFour')];
   private selectedState: SelectedState = SelectedState.None;
   private componentUtils: ComponentUtils = this.getUIContext().getComponentUtils();
   private listScroller: ListScroller = new ListScroller();
   private currentOffsetY: number = 0;
-
-  onChange() {
-    console.info('change successful');
-  }
 
   getSpeed(fingerY: number, edge: number) {
     return 150 * 150 * (fingerY - edge) / 2000 / Math.abs(fingerY - edge);
@@ -467,6 +463,7 @@ struct Index {
     return this.selectedEnd;
   }
   
+  // Update the selected photo list in batches based on the start and end range of the selected state.
   onSelectedEndChange() {
     let start: number = -1;
     let end: number = -1;
@@ -493,6 +490,7 @@ struct Index {
     this.selectedList = this.selectedPhotos.convertToArray();
   }
 
+  // Control automatic scrolling of the list based on the finger position.
   scroll(fingerY: number) {
     if (fingerY > 700 && !this.listScroller.isAtEnd()) {
       this.listScroller.scrollBy(0, this.getSpeed(fingerY, 700));
@@ -623,8 +621,8 @@ struct Index {
 }
 
 enum SelectedState {
-  None,
-  Selected,
-  Remove
+  None, // Default state.
+  Selected, // Selected state. Add selected items when swiping.
+  Remove // Remove state. Remove selected items when swiping.
 }
 ```

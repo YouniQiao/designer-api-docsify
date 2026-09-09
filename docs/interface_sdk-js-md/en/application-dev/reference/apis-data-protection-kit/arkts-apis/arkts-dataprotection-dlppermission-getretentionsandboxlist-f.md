@@ -91,7 +91,7 @@ This API is used to query the sandbox retention information of a specified appli
 ```TypeScript
 import { dlpPermission } from '@kit.DataProtectionKit';
 
-dlpPermission.getRetentionSandboxList("bundleName", (err, sandboxList) => {
+dlpPermission.getRetentionSandboxList('bundleName', (err, sandboxList) => {
   if (err) {
     console.error(`Failed to get retention sandbox list. Code: ${err.code}, message: ${err.message}`);
   } else {
@@ -138,7 +138,7 @@ import { dlpPermission } from '@kit.DataProtectionKit';
 
 dlpPermission.getRetentionSandboxList((err, retentionSandboxList) => {
   if (err) {
-    console.error('getRetentionSandboxList error,', err.code, err.message);
+    console.error(`Failed to get retention sandbox list. Code: ${err.code}, message: ${err.message}`);
   } else {
     console.info('retentionSandboxList', JSON.stringify(retentionSandboxList));
   }

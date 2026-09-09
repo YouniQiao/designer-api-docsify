@@ -68,13 +68,13 @@ try {
     },
     (error: BusinessError) => {
       if (error) {
-        console.error('registerMissionListener failed, cause: ' + JSON.stringify(error));
+        console.error(`Failed to register mission listener. Code: ${error.code}, message: ${error.message}`);
         return;
       }
       console.info('registerMissionListener finished');
     });
-} catch (error) {
-  console.error('registerMissionListener failed, cause: ' + JSON.stringify(error));
+   } catch (error) {
+  console.error(`Failed to register mission listener. Code: ${error.code}, message: ${error.message}`);
 }
 ```
 
@@ -126,7 +126,7 @@ import { BusinessError } from '@kit.BasicServicesKit';
 // Implement a callback function.
 function NotifyMissionsChanged(deviceId: string): void {
   console.info('NotifyMissionsChanged deviceId ' + JSON.stringify(deviceId));
-}
+ }
 function NotifySnapshot(deviceId: string, missionId: number): void {
   console.info('NotifySnapshot deviceId ' + JSON.stringify(deviceId));
   console.info('NotifySnapshot missionId ' + JSON.stringify(missionId));

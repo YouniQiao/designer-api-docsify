@@ -36,18 +36,21 @@ Locks a given mission. This API uses an asynchronous callback to return the resu
 
 ```TypeScript
 import missionManager from '@ohos.application.missionManager';
+import { BusinessError } from '@ohos.base';
 
 let testMissionId = 2;
 try {
+  // Lock the specified mission.
   missionManager.lockMission(testMissionId, (err, data) => {
     if (err) {
-      console.error(`lockMission failed: ${err.message}`);
+      console.error(`lockMission failed. Code: ${err.code}, message: ${err.message}.`);
     } else {
-      console.info(`lockMission successfully: ${JSON.stringify(data)}`);
+      console.info(`lockMission successfully. Data: ${JSON.stringify(data)}`);
     }
   });
 } catch (err) {
-  console.error(`lockMission failed: ${err.message}`);
+  let error = err as BusinessError;
+  console.error(`lockMission sync failed. Code: ${error.code}, message: ${error.message}.`);
 }
 ```
 
@@ -92,12 +95,14 @@ import { BusinessError } from '@ohos.base';
 
 let testMissionId = 2;
 try {
+  // Lock the specified mission.
   missionManager.lockMission(testMissionId).then((data) => {
     console.info(`lockMission successfully. Data: ${JSON.stringify(data)}`);
   }).catch((error: BusinessError) => {
-    console.error(`lockMission failed. Cause: ${error.message}`);
+    console.error(`lockMission failed. Code: ${error.code}, message: ${error.message}.`);
   });
 } catch (error) {
-  console.error(`lockMission failed. Cause: ${error.message}`);
+  let err = error as BusinessError;
+  console.error(`lockMission sync failed. Code: ${err.code}, message: ${err.message}.`);
 }
 ```

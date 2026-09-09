@@ -55,8 +55,8 @@ export default class HWPrintExtension extends PrintExtensionAbility {
     onRequestPreview(jobInfo: print.PrintJob): string {
         console.info('onRequestPreview enter');
         // ...
-        let tmp : string = '';
-        return tmp;
+        let previewResult: string = '';
+        return previewResult;
     }
 }
 ```

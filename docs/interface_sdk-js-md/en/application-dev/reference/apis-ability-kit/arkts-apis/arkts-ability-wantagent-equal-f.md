@@ -73,10 +73,11 @@ let wantAgentInfo: wantAgent.WantAgentInfo = {
 };
 
 // getWantAgent callback.
-function getWantAgentCallback(err: BusinessError, data: WantAgent) {
+let getWantAgentCallback = (err: BusinessError, data: WantAgent) => {
   if (err) {
     console.error(`getWantAgent failed, code: ${JSON.stringify(err.code)}, message: ${JSON.stringify(err.message)}`);
   } else {
+    // Create the WantAgent successfully and save the returned WantAgent object.
     wantAgent1 = data;
     wantAgent2 = data;
   }
@@ -89,6 +90,7 @@ function getWantAgentCallback(err: BusinessError, data: WantAgent) {
     }
   }
   try {
+    // Call the equal API to determine whether two WantAgent instances are equal.
     wantAgent.equal(wantAgent1, wantAgent2, equalCallback);
   } catch (err) {
     console.error(`equal failed! ${(err as BusinessError).code} ${(err as BusinessError).message}`);
@@ -96,6 +98,7 @@ function getWantAgentCallback(err: BusinessError, data: WantAgent) {
 }
 
 try {
+  // Call the getWantAgent API to create a WantAgent object.
   wantAgent.getWantAgent(wantAgentInfo, getWantAgentCallback);
 } catch (err) {
   console.error(`getWantAgent failed! ${(err as BusinessError).code} ${(err as BusinessError).message}`);
@@ -175,25 +178,28 @@ let wantAgentInfo: wantAgent.WantAgentInfo = {
 };
 
 // getWantAgent callback.
-function getWantAgentCallback(err: BusinessError, data: WantAgent) {
+let getWantAgentCallback = (err: BusinessError, data: WantAgent) => {
   if (err) {
     console.error(`getWantAgent failed, code: ${JSON.stringify(err.code)}, message: ${JSON.stringify(err.message)}`);
   } else {
+    // Create the WantAgent successfully and save the returned WantAgent object.
     wantAgent1 = data;
     wantAgent2 = data;
   }
   try {
+    // Use Promise to determine whether two WantAgent instances are equal.
     wantAgent.equal(wantAgent1, wantAgent2).then((data) => {
       console.info(`equal ok! ${JSON.stringify(data)}`);
     }).catch((err: BusinessError) => {
-      console.error(`equal failed! ${err.code} ${err.message}`);
-    })
+    console.error(`equal failed! ${err.code} ${err.message}`);
+  });
   } catch (err) {
     console.error(`equal failed! ${(err as BusinessError).code} ${(err as BusinessError).message}`);
   }
 }
 
 try {
+  // Call the getWantAgent API to create a WantAgent object.
   wantAgent.getWantAgent(wantAgentInfo, getWantAgentCallback);
 } catch (err) {
   console.error(`getWantAgent failed! ${(err as BusinessError).code} ${(err as BusinessError).message}`);

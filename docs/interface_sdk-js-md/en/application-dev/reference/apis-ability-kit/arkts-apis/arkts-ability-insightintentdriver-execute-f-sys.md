@@ -82,7 +82,7 @@ import { insightIntentDriver, insightIntent } from '@kit.AbilityKit';
         }
         hilog.info(0x0000, 'testTag', 'execute insight intent return %{public}d', data.code);
         hilog.info(0x0000, 'testTag', 'execute insight intent result %{public}s', JSON.stringify(data.result));
-      })
+      });
     } catch (error) {
       hilog.error(0x0000, 'testTag', 'execute insight intent error caught %{public}s', JSON.stringify(error));
     }

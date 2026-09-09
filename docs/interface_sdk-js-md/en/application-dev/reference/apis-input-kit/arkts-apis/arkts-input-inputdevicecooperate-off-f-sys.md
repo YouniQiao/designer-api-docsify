@@ -42,6 +42,7 @@ Deregisters the listener for screen hopping status changes. This API uses an asy
 
 ```TypeScript
 import { inputDeviceCooperate } from '@kit.InputKit';
+import { BusinessError } from '@kit.BasicServicesKit';
 
 @Entry
 @Component
@@ -51,13 +52,16 @@ struct Index {
       Text()
         .onClick(() => {
           // Unregister a single callback.
-          let callbackOn = (msg: object) => {
-            console.info(`Succeeded in monitoring cooperation, msg: ${JSON.stringify(msg)}.`);
-            return false;
-          }
+          let callbackOn = (error: BusinessError | undefined, data: { deviceDescriptor: string, eventMsg: EventMsg }) => {
+            if (error) {
+              console.error(`Failed to monitor cooperation, Code: ${error.code}, message: ${error.message}.`);
+              return;
+            }
+            console.info(`Succeeded in monitoring cooperation, data: ${JSON.stringify(data)}.`);
+          };
           try {
             inputDeviceCooperate.on('cooperation', callbackOn);
-            inputDeviceCooperate.off("cooperation", callbackOn);
+            inputDeviceCooperate.off('cooperation', callbackOn);
           } catch (error) {
             console.error(`Failed to unregister callback function, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
           }
@@ -69,6 +73,7 @@ struct Index {
 
 ```TypeScript
 import { inputDeviceCooperate } from '@kit.InputKit';
+import { BusinessError } from '@kit.BasicServicesKit';
 
 @Entry
 @Component
@@ -78,13 +83,16 @@ struct Index {
       Text()
         .onClick(() => {
           // Unregister all callbacks.
-          let callback = (msg: object) => {
-            console.info(`Succeeded in monitoring cooperation, msg: ${JSON.stringify(msg)}.`);
-            return false;
-          }
+          let callback = (error: BusinessError | undefined, data: { deviceDescriptor: string, eventMsg: EventMsg }) => {
+            if (error) {
+              console.error(`Failed to monitor cooperation, Code: ${error.code}, message: ${error.message}.`);
+              return;
+            }
+            console.info(`Succeeded in monitoring cooperation, data: ${JSON.stringify(data)}.`);
+          };
           try {
             inputDeviceCooperate.on('cooperation', callback);
-            inputDeviceCooperate.off("cooperation");
+            inputDeviceCooperate.off('cooperation');
           } catch (error) {
             console.error(`Failed to unregister callback function, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
           }

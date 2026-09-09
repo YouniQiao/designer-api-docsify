@@ -56,7 +56,7 @@ Defines the constructor of Line component.
 
 ## Examples
 
-This example demonstrates how to use startPoint, endPoint, fillOpacity, stroke, strokeDashArray, and strokeDashOffset to set the start point, end point, opacity, stroke color, stroke dashes, and stroke offset of a line.
+This example draws the start point, end point, opacity, line color, line width, stroke gap, and drawing start point of the line through the startPoint, endPoint, strokeOpacity, stroke, strokeWidth, strokeDashArray, and strokeDashOffset attributes, respectively.
 
 ```TypeScript
 // xxx.ets
@@ -73,6 +73,7 @@ struct LineExample {
         .endPoint([50, 100])
         .stroke(Color.Black)
         .backgroundColor('#F5F5F5')
+      // Set the start point to (50, 50), the end point to (150, 150), the line width to 5, the line color to orange, and the line opacity to 0.5.
       Line()
         .width(200)
         .height(150)
@@ -93,7 +94,7 @@ struct LineExample {
         .strokeDashArray([10, 3])
         .strokeDashOffset(5)
         .backgroundColor('#F5F5F5')
-      // If the coordinates of a point are beyond the width and height range of the <Line> component, the line will exceed the drawing area.
+      // When the coordinate values exceed the width and height range of the Line component, the line is drawn outside the component drawing area. Set the dashed line mode: dash length 10, gap length 3.
       Line()
         .width(50)
         .height(50)
@@ -108,7 +109,7 @@ struct LineExample {
 }
 ```
 
-This example demonstrates how to use strokeLineCap to set the stroke cap style of a line.
+This example draws the cap style of the line through the strokeLineCap attribute.
 
 ```TypeScript
 // xxx.ets
@@ -153,7 +154,7 @@ struct LineExample1 {
 }
 ```
 
-This example demonstrates how to set the stroke dashes of the line using the strokeDashArray attribute.
+This example draws the stroke gaps through the strokeDashArray attribute.
 
 ```TypeScript
 // xxx.ets
@@ -219,7 +220,7 @@ This example demonstrates how to draw a line using different length types of the
 struct LineTypeExample {
   build() {
     Column({ space: 10 }) {
-      // Draw a line whose start point is (0,0), end point is (150,150), and border width is 10 in the 200 × 200 area.
+      // Draw a line with a width of 10 in a 200 × 200 area, with the start point at (0,0) and the end point at (150,150).
       Line({ width: '200', height: '200' })// Use the string type.
         .startPoint([0, 0])
         .endPoint([150, 150])
@@ -227,7 +228,7 @@ struct LineTypeExample {
         .strokeWidth(10)
         .backgroundColor('#F5F5F5')
         .margin(10)
-      // Draw a line whose start point is (0, 50), end point is (150, 150), and border width is 10 in the 200 × 200 area.
+      // Draw a line with a width of 10 in a 200 × 200 area, with the start point at (0,50) and the end point at (150,150).
       Line({ width: 200, height: 200 })// Use the number type.
         .startPoint([0, 50])
         .endPoint([150, 150])
@@ -235,7 +236,7 @@ struct LineTypeExample {
         .strokeWidth(10)
         .backgroundColor('#F5F5F5')
         .margin(10)
-      // Draw a line whose start point is (0, 100), end point is (150, 150), and border width is 10 in the 200 × 200 area.
+      // Draw a line with a width of 10 in a 200 × 200 area, with the start point at (0,100) and the end point at (150,150).
       Line({ width: $r('app.string.LineWidth'), height: $r('app.string.LineHeight') })// Use the Resource type, which needs to be customized.
         .startPoint([0, 100])
         .endPoint([150, 150])
@@ -254,12 +255,12 @@ This example shows how to use attributeModifier to dynamically set the startPoin
 // xxx.ets
 class MyLineModifier implements AttributeModifier<LineAttribute> {
   applyNormalAttribute(instance: LineAttribute): void {
-    // Start point: (10, 10); end point: (120, 10); stroke color: #2787D9; stroke dash array: [20]; offset to left: 15; cap style: semi-circle; stroke opacity: 0.5; stroke width: 10; anti-aliasing enabled.
+    // A line from the start point (10, 10) to the end point (120, 10), with line color #2787D9, stroke gap [20], dash offset 15, round line cap style, line opacity 0.5, line width 10, and anti-aliasing enabled.
     instance.startPoint([10, 10])
     instance.endPoint([120, 10])
-    instance.stroke("#2787D9")
+    instance.stroke('#2787D9')
     instance.strokeDashArray([20])
-    instance.strokeDashOffset("15")
+    instance.strokeDashOffset('15')
     instance.strokeLineCap(LineCapStyle.Round)
     instance.strokeOpacity(0.5)
     instance.strokeWidth(10)

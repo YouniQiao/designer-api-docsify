@@ -37,6 +37,7 @@ Unsubscribes from application shortcut key change events. This API uses an async
 
 ```TypeScript
 import { inputConsumer } from '@kit.InputKit';
+import { BusinessError } from '@kit.BasicServicesKit';
 
 @Entry
 @Component
@@ -50,13 +51,13 @@ struct Index {
           // Disable listening for a single callback.
           let hotkeyCallback = (hotkeyOptions: inputConsumer.HotkeyOptions) => {
             console.info(`Succeeded in consuming hotkey, hotkeyOptions: ${JSON.stringify(hotkeyOptions)}.`);
-          }
+          };
           let hotkeyOption: inputConsumer.HotkeyOptions = { preKeys: [leftCtrlKey], finalKey: zKey, isRepeat: true };
           try {
             // Subscribe to shortcut key change events.
-            inputConsumer.on("hotkeyChange", hotkeyOption, hotkeyCallback);
+            inputConsumer.on('hotkeyChange', hotkeyOption, hotkeyCallback);
             // Unsubscribe from shortcut key change events.
-            inputConsumer.off("hotkeyChange", hotkeyOption, hotkeyCallback);
+            inputConsumer.off('hotkeyChange', hotkeyOption, hotkeyCallback);
             console.info(`Succeeded in unsubscribing.`);
           } catch (error) {
             console.error(`Failed to unsubscribe, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
@@ -69,6 +70,7 @@ struct Index {
 
 ```TypeScript
 import { inputConsumer } from '@kit.InputKit';
+import { BusinessError } from '@kit.BasicServicesKit';
 
 @Entry
 @Component
@@ -82,13 +84,13 @@ struct Index {
           // Disable listening for all callbacks.
           let hotkeyCallback = (hotkeyOptions: inputConsumer.HotkeyOptions) => {
             console.info(`Succeeded in consuming hotkey, hotkeyOptions: ${JSON.stringify(hotkeyOptions)}.`);
-          }
+          };
           let hotkeyOption: inputConsumer.HotkeyOptions = { preKeys: [leftCtrlKey], finalKey: zKey, isRepeat: true };
           try {
             // Subscribe to shortcut key change events.
-            inputConsumer.on("hotkeyChange", hotkeyOption, hotkeyCallback);
+            inputConsumer.on('hotkeyChange', hotkeyOption, hotkeyCallback);
             // Unsubscribe from shortcut key change events.
-            inputConsumer.off("hotkeyChange", hotkeyOption);
+            inputConsumer.off('hotkeyChange', hotkeyOption);
             console.info(`Succeeded in unsubscribing.`);
           } catch (error) {
             console.error(`Failed to unsubscribe, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
@@ -130,6 +132,7 @@ Unsubscribes from key press events. This API uses an asynchronous callback to re
 
 ```TypeScript
 import { inputConsumer, KeyEvent } from '@kit.InputKit';
+import { BusinessError } from '@kit.BasicServicesKit';
 
 @Entry
 @Component
@@ -147,13 +150,13 @@ struct Index {
             }
             let callback = (event: KeyEvent) => {
               console.info(`Succeeded in unsubscribing ${JSON.stringify(event)}.`);
-            }
+            };
             // Subscribe to key press events.
             inputConsumer.on('keyPressed', options, callback);
             // Unsubscribe from key press events.
             inputConsumer.off('keyPressed', callback);
             // Disable listening for all callbacks.
-            inputConsumer.off("keyPressed");
+            inputConsumer.off('keyPressed');
           } catch (error) {
             console.error(`Failed to unsubscribe, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
           }

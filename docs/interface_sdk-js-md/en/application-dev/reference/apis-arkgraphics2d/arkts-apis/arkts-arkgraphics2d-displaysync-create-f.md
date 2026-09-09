@@ -27,5 +27,6 @@ Creates a **DisplaySync** object, through which you can set the frame rate of th
 **Examples**
 
 ```TypeScript
+// Create a DisplaySync object.
 let backDisplaySync: displaySync.DisplaySync = displaySync.create();
 ```

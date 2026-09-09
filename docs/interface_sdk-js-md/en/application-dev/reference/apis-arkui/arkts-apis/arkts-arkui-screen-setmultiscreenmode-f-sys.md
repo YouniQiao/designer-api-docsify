@@ -54,7 +54,7 @@ let secondaryScreenId: number = 12; // Secondary screen ID.
 let screenMode: screen.MultiScreenMode = screen.MultiScreenMode.SCREEN_MIRROR;
 // Set the display mode of the secondary screen to mirror mode.
 screen.setMultiScreenMode(primaryScreenId, secondaryScreenId, screenMode).then(() => {
-  console.info('Succeeded in setting multi screen mode. Data: ');
+  console.info('Succeeded in setting multi screen mode.');
 }).catch((err: BusinessError) => {
   console.error(`Failed to set multi screen mode. Code: ${err.code}, message: ${err.message}`);
 });

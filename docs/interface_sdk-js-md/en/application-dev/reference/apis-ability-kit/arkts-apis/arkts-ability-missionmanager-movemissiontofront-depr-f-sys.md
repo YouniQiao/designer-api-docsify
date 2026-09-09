@@ -36,9 +36,11 @@ Switches a given mission to the foreground. This API uses an asynchronous callba
 
 ```TypeScript
 import missionManager from '@ohos.application.missionManager';
+import { BusinessError } from '@ohos.base';
 
 let testMissionId = 2;
 try {
+  // Switch the specified mission to the foreground.
   missionManager.moveMissionToFront(testMissionId, (err, data) => {
     if (err) {
       console.error(`moveMissionToFront failed: ${err.message}`);
@@ -47,7 +49,8 @@ try {
     }
   });
 } catch (err) {
-  console.error(`moveMissionToFront failed: ${err.message}`);
+  let error = err as BusinessError;
+  console.error(`moveMissionToFront failed. Code: ${error.code}, message: ${error.message}.`);
 }
 ```
 
@@ -84,18 +87,21 @@ Switches a given mission to the foreground, with the startup parameters for the 
 
 ```TypeScript
 import missionManager from '@ohos.application.missionManager';
+import { BusinessError } from '@ohos.base';
 
 let testMissionId = 2;
 try {
+  // Switch the specified mission to the foreground and specify the window mode.
   missionManager.moveMissionToFront(testMissionId, { windowMode: 101 }, (err, data) => {
     if (err) {
-      console.error(`moveMissionToFront failed: ${err.message}`);
+      console.error(`moveMissionToFront failed. Code: ${err.code}, message: ${err.message}.`);
     } else {
-      console.info(`moveMissionToFront successfully: ${JSON.stringify(data)}`);
+      console.info(`moveMissionToFront successfully. Data: ${JSON.stringify(data)}`);
     }
   });
 } catch (err) {
-  console.error(`moveMissionToFront failed: ${err.message}`);
+  let error = err as BusinessError;
+  console.error(`moveMissionToFront sync failed. Code: ${error.code}, message: ${error.message}.`);
 }
 ```
 
@@ -141,6 +147,7 @@ import { BusinessError } from '@ohos.base';
 
 let testMissionId = 2;
 try {
+  // Switch the specified mission to the foreground.
   missionManager.moveMissionToFront(testMissionId).then((data) => {
     console.info(`moveMissionToFront successfully. Data: ${JSON.stringify(data)}`);
   }).catch((error: BusinessError) => {

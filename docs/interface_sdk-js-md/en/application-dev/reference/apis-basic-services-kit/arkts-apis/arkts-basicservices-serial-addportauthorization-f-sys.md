@@ -47,14 +47,14 @@ Adds the permission for applications to access the serial port. This API is open
 **Examples**
 
 ```TypeScript
-import { serial } from "@kit.BasicServicesKit";
-
-// Add the serial port access permission (available only to system applications).
+import {BusinessError} from '@kit.BasicServicesKit';
+// Add the serial port access permission.
+// The token ID needs to be obtained using the bundleManager.getBundleInfoForSelf API. The value here is only an example.
 let tokenId: string = '123456';
 let deviceId: string = '/dev/ttyUSB0';
 serial.addPortAuthorization(tokenId, deviceId).then(() => {
   console.info('addPortAuthorization success');
-}).catch((error: Error) => {
-  console.error(`addPortAuthorization error: ${JSON.stringify(error)}`);
+}).catch((error: BusinessError) => {
+  console.error(`Failed to addPortAuthorization. Code: ${error.code}, message: ${error.message}`);
 });
 ```

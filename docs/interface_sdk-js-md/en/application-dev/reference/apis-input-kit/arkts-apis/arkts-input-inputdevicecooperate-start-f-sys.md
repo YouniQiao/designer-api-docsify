@@ -54,7 +54,7 @@ struct Index {
     RelativeContainer() {
       Text()
         .onClick(() => {
-          const sinkDeviceDescriptor = "descriptor";
+          const sinkDeviceDescriptor = 'descriptor';
           let srcInputDeviceId = 0;
           try {
             inputDeviceCooperate.start(sinkDeviceDescriptor, srcInputDeviceId, (error: BusinessError) => {
@@ -127,7 +127,7 @@ struct Index {
     RelativeContainer() {
       Text()
         .onClick(() => {
-          const sinkDeviceDescriptor = "descriptor";
+          const sinkDeviceDescriptor = 'descriptor';
           const srcInputDeviceId = 0;
           inputDeviceCooperate.start(sinkDeviceDescriptor, srcInputDeviceId).then(() => {
             console.info(`Succeeded in starting keyboard mouse crossing.`);

@@ -61,7 +61,7 @@ struct SpanExample {
       }.width('100%').textAlign(TextAlign.Center)
 
       Text() {
-        // Replace $r('app.media.app_icon') with the image resource file you use.
+        // Replace $r('app.media.app_icon') with the actual image resource file.
         ImageSpan($r('app.media.app_icon'))
           .width('200px')
           .height('200px')
@@ -105,13 +105,13 @@ struct Index {
     Row() {
       Column() {
         Text() {
-          // Replace $r('app.media.sky') with the image resource file you use.
+          // Replace $r('app.media.sky') with the actual image resource file.
           ImageSpan($r('app.media.sky'))
             .width('60vp')
             .height('60vp')
             .verticalAlign(ImageSpanAlignment.CENTER)
             .borderRadius(20)
-            .textBackgroundStyle({ color: '#7F007DFF', radius: "5vp" })
+            .textBackgroundStyle({ color: '#7F007DFF', radius: '5vp' })
         }
       }.width('100%')
     }.height('100%')
@@ -126,7 +126,7 @@ This example demonstrates how to add load success and load error events to the I
 @Entry
 @Component
 struct Index {
-  // Replace $r('app.media.app_icon') with the image resource file you use.
+  // Replace $r('app.media.app_icon') with the actual image resource file.
   @State src: ResourceStr = $r('app.media.app_icon');
 
   build() {
@@ -135,10 +135,10 @@ struct Index {
         ImageSpan(this.src)
           .width(100).height(100)
           .onError((err) => {
-            console.info("onError: " + err.message);
+            console.error(`Failed to load image. Code: ${err.error?.code}, message: ${err.message}`);
           })
           .onComplete((event) => {
-            console.info("onComplete: " + event.loadingStatus);
+            console.info('onComplete: ' + event.loadingStatus);
           })
       }
     }.width('100%').height('100%')
@@ -155,24 +155,24 @@ import { drawing } from '@kit.ArkGraphics2D';
 @Entry
 @Component
 struct SpanExample {
-  private ColorFilterMatrix: number[] = [0.239, 0, 0, 0, 0, 0, 0.616, 0, 0, 0, 0, 0, 0.706, 0, 0, 0, 0, 0, 1, 0];
-  @State DrawingColorFilterFirst: ColorFilter | undefined = new ColorFilter(this.ColorFilterMatrix);
+  private colorFilterMatrix: number[] = [0.239, 0, 0, 0, 0, 0, 0.616, 0, 0, 0, 0, 0, 0.706, 0, 0, 0, 0, 0, 1, 0];
+  @State drawingColorFilterFirst: ColorFilter | undefined = new ColorFilter(this.colorFilterMatrix);
 
   build() {
     Row() {
       Column({ space: 10 }) {
-        // Use a ColorFilter object to apply a color filter to the image.
+        // Create a ColorFilter object to set a color filter for the image.
         Text() {
-          // Replace $r('app.media.sky') with the image resource file you use.
+          // Replace $r('app.media.sky') with the actual image resource file.
           ImageSpan($r('app.media.sky'))
             .width('60vp')
             .height('60vp')
-            .colorFilter(this.DrawingColorFilterFirst)
+            .colorFilter(this.drawingColorFilterFirst)
         }
 
-        // Create a color filter using the drawing.ColorFilter API.
+        // Set a color filter for the image through drawing.ColorFilter.
         Text() {
-          // Replace $r('app.media.sky') with the image resource file you use.
+          // Replace $r('app.media.sky') with the actual image resource file.
           ImageSpan($r('app.media.sky'))
             .width('60vp')
             .height('60vp')
@@ -189,7 +189,8 @@ struct SpanExample {
 }
 ```
 
-This example demonstrates how to use the [alt](#alt12) attribute to display a placeholder image in the ImageSpan component while loading a network image, available since API version 12.
+Since API version 12, this example uses the [alt](#alt12) attribute to demonstrate the placeholder image effect when ImageSpan loads a network image.
+When using a network image, you need to request the ohos.permission.INTERNET permission. For details about how to request the permission, see [Declaring Permissions](../../../security/AccessToken/declare-permissions.md).
 
 ```TypeScript
 // xxx.ets
@@ -204,29 +205,33 @@ struct SpanExample {
 
   httpRequest() {
     // Enter an image URL.
-    http.createHttp().request("https://www.example.com/xxx.png", (error: BusinessError, data: http.HttpResponse) => {
+    http.createHttp().request('https://www.example.com/xxx.png', (error: BusinessError, data: http.HttpResponse) => {
       if (error) {
         console.error(`http request failed with. Code: ${error.code}, message: ${error.message}`);
       } else {
-        console.info(`http request success.`);
+        console.info('http request success');
         let imageData: ArrayBuffer = data.result as ArrayBuffer;
         let imageSource: image.ImageSource = image.createImageSource(imageData);
 
-        class tmp {
+        class ImageSize {
           height: number = 100;
           width: number = 100;
         }
 
-        let option: Record<string, number | boolean | tmp> = {
+        let option: Record<string, number | boolean | ImageSize> = {
           'alphaType': 0, // Alpha type.
           'editable': false, // Whether the image is editable.
           'pixelFormat': 3, // Pixel format.
           'scaleMode': 1, // Scale mode.
           'size': { height: 100, width: 100 }
         };
-        // Image size.
+        // Create a PixelMap through ImageSource.
         imageSource.createPixelMap(option).then((pixelMap: PixelMap) => {
+          console.info('image createPixelMap success');
           this.imageAlt = pixelMap;
+          imageSource.release();
+        }).catch(() => {
+          imageSource.release();
         })
       }
     })
@@ -234,7 +239,7 @@ struct SpanExample {
 
   build() {
     Column() {
-      Button("Get Network Image")
+      Button('Obtain network image')
         .onClick(() => {
           this.httpRequest();
         })
@@ -252,7 +257,7 @@ struct SpanExample {
 }
 ```
 
-This example shows how to enable enhanced SVG usability capabilities through the [SVG tag parsing enhancement feature](ts-image-svg2-capabilities.md#improved-svg-usability) by configuring the [supportSvg2](#supportsvg222) attribute, available since API version 22.
+Since API version 22, this example sets the [supportSvg2](#supportsvg222) attribute to enable the [improved SVG usability](ts-image-svg2-capabilities.md#improved-svg-usability) of the [Enhanced SVG Tag Parsing](ts-image-svg2-capabilities.md).
 
 ```TypeScript
 import { drawing } from '@kit.ArkGraphics2D';
@@ -263,18 +268,18 @@ struct Index {
     Row() {
       Column() {
         Text('Styled string with supportSvg2: false')
-        // Replace $r("app.media.ice") with the image resource file you use.
+        // Replace $r('app.media.ice') with the actual image resource file.
         Text() {
-          ImageSpan($r("app.media.ice"))
+          ImageSpan($r('app.media.ice'))
             .width(50)
             .height(50)
             .colorFilter(drawing.ColorFilter.createBlendModeColorFilter(
               drawing.Tool.makeColorFromResourceColor(Color.Blue), drawing.BlendMode.SRC_IN))
         }
         Text('Styled string with supportSvg2: true')
-        // Replace $r("app.media.ice") with the image resource file you use.
+        // Replace $r('app.media.ice') with the actual image resource file.
         Text() {
-          ImageSpan($r("app.media.ice"))
+          ImageSpan($r('app.media.ice'))
             .width(50)
             .height(50)
             .supportSvg2(true)
@@ -285,6 +290,56 @@ struct Index {
       .width('100%')
     }
     .height('100%')
+  }
+}
+```
+
+This example uses the slice option of the [resizable](#resizable) attribute to stretch the ImageSpan image in different directions.
+Since API version 26.1.0, the resizable attribute is added.
+
+```TypeScript
+@Entry
+@Component
+struct ImageSpanResizablePage {
+  build() {
+    Column({ space: 20 }) {
+      Text('ImageSpan resizable Demo')
+        .fontSize(28)
+        .fontWeight(FontWeight.Bold)
+
+      Text('Use Text + ImageSpan and set the slice attribute of resizable to implement nine-grid stretching:')
+        .fontSize(28)
+        .fontColor('#666666')
+        .width('90%')
+
+      Text() {
+        Span('Original image\n')
+          .fontSize(28)
+        ImageSpan($r('app.media.landscape'))
+          .width(200)
+          .height(200)
+        Span('\nAfter setting Resizable\n')
+          .fontSize(28)
+        ImageSpan($r('app.media.landscape'))
+          .width(260)
+          .height(260)
+          .resizable({
+            slice: {
+              left: '200px',
+              top: '200px',
+              right: '20px',
+              bottom: '20px'
+            }
+          })
+      }
+      .width('90%')
+      .textAlign(TextAlign.Center)
+      .margin({ top: 10 })
+    }
+    .width('100%')
+    .height('100%')
+    .padding(20)
+    .alignItems(HorizontalAlign.Center)
   }
 }
 ```

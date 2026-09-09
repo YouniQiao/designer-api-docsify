@@ -66,7 +66,7 @@ let testCapability : print.PrinterCapabilities = {
 };
 
 let printerInformation : print.PrinterInformation = {
-    printerId : 'testPrinterId',
+    printerId : 'testPrinterId', // printer ID can be obtained from the on('printerChange') callback.
     printerName : 'testPrinterName',
     printerStatus : 0,
     description : 'testDesc',
@@ -78,6 +78,6 @@ let printerInformation : print.PrinterInformation = {
 print.updatePrinterInformation(printerInformation).then(() => {
     console.info('updatePrinterInformation success');
 }).catch((error: BusinessError) => {
-    console.error('updatePrinterInformation error : ' + JSON.stringify(error));
+    console.error(`Failed to updatePrinterInformation. Code: ${error.code}, message: ${error.message}`);
 })
 ```

@@ -38,6 +38,7 @@ Stop current cast and disconnect device connection.
 **Examples**
 
 ```TypeScript
+let sessionId = 'xxx'; // Obtain the session ID after creating a session using avSession.createAVSession.
 let myToken: avSession.SessionToken = {
   sessionId: sessionId,
 }
@@ -84,6 +85,7 @@ Stop current cast and disconnect device connection.
 **Examples**
 
 ```TypeScript
+let sessionId = 'xxx'; // Obtain the session ID after creating a session using avSession.createAVSession.
 let myToken: avSession.SessionToken = {
   sessionId: sessionId,
 }

@@ -77,7 +77,7 @@ struct TimePickerExample {
       .onChange((value: TimePickerResult) => {
         if (value.hour >= 0) {
           this.selectedTime.setHours(value.hour, value.minute);
-          console.info('select current date is: ' + JSON.stringify(value));
+          console.info('select current time is: ' + JSON.stringify(value));
         }
       })
   }
@@ -138,8 +138,8 @@ struct TimePickerExample {
         .dateTimeOptions({ hour: "numeric", minute: "2-digit", second: "2-digit" })
         .onChange((value: TimePickerResult) => {
           if (value.hour >= 0) {
-            this.selectedTime.setHours(value.hour, value.minute);
-            console.info('select current date is: ' + JSON.stringify(value));
+            this.selectedTime.setHours(value.hour, value.minute, value.second);
+            console.info('select current time is: ' + JSON.stringify(value));
           }
         })
     }.width('100%')
@@ -166,7 +166,7 @@ struct TimePickerExample {
         .onChange((value: TimePickerResult) => {
           if (value.hour >= 0) {
             this.selectedTime.setHours(value.hour, value.minute);
-            console.info('select current date is: ' + JSON.stringify(value));
+            console.info('select current time is: ' + JSON.stringify(value));
           }
         })
 
@@ -204,7 +204,7 @@ struct TimePickerExample {
         .onChange((value: TimePickerResult) => {
           if (value.hour >= 0) {
             this.selectedTime.setHours(value.hour, value.minute);
-            console.info('select current date is: ' + JSON.stringify(value));
+            console.info('select current time is: ' + JSON.stringify(value));
           }
         })
     }.width('100%')
@@ -231,8 +231,8 @@ struct TimePickerExample {
         .dateTimeOptions({ hour: "numeric", minute: "2-digit", second: "2-digit" })
         .onChange((value: TimePickerResult) => {
           if (value.hour >= 0) {
-            this.selectedTime.setHours(value.hour, value.minute);
-            console.info('select current date is: ' + JSON.stringify(value));
+            this.selectedTime.setHours(value.hour, value.minute, value.second);
+            console.info('select current time is: ' + JSON.stringify(value));
           }
         })
     }.width('100%')
@@ -240,7 +240,7 @@ struct TimePickerExample {
 }
 ```
 
-This example demonstrates how to enable the AM/PM indicator to automatically switch based on the hour value in 12-hour format using [enableCascade](#enablecascade18) and [loop](#loop11).
+This example uses [enableCascade](#enablecascade18) and [loop](#loop11) to implement the linkage of AM/PM following the time in the 12-hour format.
 The enableCascade API is added since API version 18.
 
 ```TypeScript
@@ -255,12 +255,13 @@ struct TimePickerExample {
       TimePicker({
         selected: this.selectedTime,
       })
+        .useMilitaryTime(false)
         .enableCascade(true)
         .loop(true)
         .onChange((value: TimePickerResult) => {
           if (value.hour >= 0) {
             this.selectedTime.setHours(value.hour, value.minute);
-            console.info('select current date is: ' + JSON.stringify(value));
+          console.info('select current time is: ' + JSON.stringify(value));
           }
         })
     }.width('100%')

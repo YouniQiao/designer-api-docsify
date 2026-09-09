@@ -51,10 +51,10 @@ let mainScreenId: number = 0; // Main screen ID.
 let mirrorScreenIds: Array<number> = [1, 2, 3]; // ID array of mirrored screens.
 // Rectangle on the main screen to be mirrored.
 let mainScreenRegion: screen.Rect = {
-  left : 0,
-  top : 0,
-  width : 1920,
-  height : 1080
+  left: 0,
+  top: 0,
+  width: 1920,
+  height: 1080
 };
 // Set a rectangle on the screen to mirror mode.
 screen.makeMirrorWithRegion(mainScreenId, mirrorScreenIds, mainScreenRegion).then((data: number) => {

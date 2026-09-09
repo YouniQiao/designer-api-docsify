@@ -76,7 +76,7 @@ import { ServiceExtensionAbility, Want, common } from '@kit.AbilityKit';
 import { rpc } from '@kit.IPCKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
-let commRemote: rpc.IRemoteObject; // Release the instance when the connection is disconnected.
+let commRemote: rpc.IRemoteObject | null; // Release when disconnecting.
 
 class EntryAbility extends ServiceExtensionAbility {
   onCreate() {
@@ -176,7 +176,7 @@ import { ServiceExtensionAbility, Want, common } from '@kit.AbilityKit';
 import { rpc } from '@kit.IPCKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
-let commRemote: rpc.IRemoteObject; // Release the instance when the connection is disconnected.
+let commRemote: rpc.IRemoteObject | null; // Release it when disconnecting.
 
 class EntryAbility extends ServiceExtensionAbility {
   onCreate() {
@@ -185,6 +185,7 @@ class EntryAbility extends ServiceExtensionAbility {
       bundleName: 'com.example.myapplication',
       abilityName: 'EntryAbility'
     };
+    // accountId is the system account ID, which can be obtained through the getOsAccountLocalId API. Here 100 is used as an example.
     let accountId = 100;
     let options: common.ConnectOptions = {
       onConnect(elementName, remote) {
@@ -394,7 +395,7 @@ Starts an atomic service based on an application ID. This API uses a promise to 
 **Examples**
 
 ```TypeScript
-import { ServiceExtensionAbility, AtomicServiceOptions } from '@kit.AbilityKit';
+import { ServiceExtensionAbility, Want, AtomicServiceOptions } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 export default class ServiceExtension extends ServiceExtensionAbility {
@@ -829,6 +830,49 @@ Before starting the UIExtensionAbility, ensure that the focused application has 
 | [201](../../errorcode-universal.md#201-permission-denied) | The application does not have permission to call the interface. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not system-app, can not use system-api. |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. Possible causes: 1.Connect to system service failed; 2.Send restart message to system service failed; 3.System service failed to communicate with dependency module. 4.The logical screen corresponding to the specified accountId is not in the foreground. |
+
+**Examples**
+
+```TypeScript
+import { ServiceExtensionAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class ServiceExtension extends ServiceExtensionAbility {
+  onCreate(want: Want) {
+    let pullUIExtWant: Want = {
+      bundleName: 'com.example.myapplication',
+      abilityName: 'UIExtAbility',
+      moduleName: 'entry_test',
+      parameters: {
+        'bundleName': 'com.example.myapplication',
+        // Same as the type configured for com.example.myapplication.UIExtAbility.
+        'ability.want.params.uiExtensionType': 'sys/commonUI'
+      }
+    };
+    // Account ID description:
+    // 1. Fixed value 100 in the example.
+    // 2. You can call the system account management API getForegroundOsAccountLocalId(displayId: number) to obtain the ID of the foreground system account running on the specified logical display.
+    let accountId = 100;
+
+    try {
+      this.context.requestModalUIExtensionWithAccount(pullUIExtWant, accountId)
+        .then(() => {
+          // Execute normal service logic.
+          console.info('requestModalUIExtensionWithAccount succeed');
+        })
+        .catch((err: BusinessError) => {
+          // Handle service logic errors.
+          console.error(`requestModalUIExtensionWithAccount failed, code is ${err.code}, message is ${err.message}`);
+        });
+    } catch (err) {
+      // Handle input parameter errors.
+      let code = (err as BusinessError).code;
+      let message = (err as BusinessError).message;
+      console.error(`requestModalUIExtensionWithAccount failed, code is ${code}, message is ${message}`);
+    }
+  }
+}
+```
 
 ## startAbility
 
@@ -1774,6 +1818,7 @@ class EntryAbility extends ServiceExtensionAbility {
       bundleName: 'com.example.myapplication',
       abilityName: 'EntryAbility'
     };
+    // accountId is the system account ID, which can be obtained via the getOsAccountLocalId API. Here 100 is used as an example.
     let accountId = 100;
     let options: StartOptions = {
       windowMode: 0
@@ -1879,6 +1924,7 @@ class EntryAbility extends ServiceExtensionAbility {
       bundleName: 'com.example.myapplication',
       abilityName: 'EntryAbility'
     };
+    // accountId is the system account ID, which can be obtained through the getOsAccountLocalId API. 100 is used as an example here.
     let accountId = 100;
     let options: StartOptions = {
       windowMode: 0
@@ -2409,6 +2455,7 @@ class EntryAbility extends ServiceExtensionAbility {
       bundleName: 'com.example.myapplication',
       abilityName: 'EntryAbility'
     };
+    // accountId is the system account ID, which can be obtained through the getOsAccountLocalId API. Here 100 is used as an example.
     let accountId = 100;
 
     try {
@@ -2500,6 +2547,7 @@ class EntryAbility extends ServiceExtensionAbility {
       bundleName: 'com.example.myapplication',
       abilityName: 'EntryAbility'
     };
+    // accountId is the system account ID, which can be obtained through the getOsAccountLocalId API. Here 100 is used as an example.
     let accountId = 100;
 
     try {
@@ -2896,6 +2944,7 @@ class EntryAbility extends ServiceExtensionAbility {
       bundleName: 'com.example.myapplication',
       abilityName: 'EntryAbility'
     };
+    // accountId is the system account ID, which can be obtained through the getOsAccountLocalId API. 100 is used as an example here.
     let accountId = 100;
 
     try {
@@ -2980,6 +3029,7 @@ class EntryAbility extends ServiceExtensionAbility {
       bundleName: 'com.example.myapplication',
       abilityName: 'EntryAbility'
     };
+    // accountId is the system account ID, which can be obtained through the getOsAccountLocalId API. 100 is used as an example here.
     let accountId = 100;
 
     try {

@@ -40,6 +40,19 @@ Obtains information about the running processes of the current application. This
 | --- | --- |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. Possible causes: 1. Connect to system service failed; |
 
+**Examples**
+
+```TypeScript
+import appManager from '@ohos.application.appManager';
+import { BusinessError } from '@ohos.base';
+
+appManager.getProcessRunningInfos().then((data) => {
+  console.info(`The process running infos is: ${JSON.stringify(data)}`);
+}).catch((error: BusinessError) => {
+  console.error(`error: ${JSON.stringify(error)}`);
+});
+```
+
 
 ## getProcessRunningInfos
 
@@ -75,3 +88,17 @@ Obtains information about the running processes of the current application. This
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. Possible causes: 1. Connect to system service failed; |
+
+**Examples**
+
+```TypeScript
+import appManager from '@ohos.application.appManager';
+
+appManager.getProcessRunningInfos((error, data) => {
+  if (error && error.code !== 0) {
+    console.error(`getProcessRunningInfos fail, error: ${JSON.stringify(error)}`);
+  } else {
+    console.info(`getProcessRunningInfos success, data: ${JSON.stringify(data)}`);
+  }
+});
+```

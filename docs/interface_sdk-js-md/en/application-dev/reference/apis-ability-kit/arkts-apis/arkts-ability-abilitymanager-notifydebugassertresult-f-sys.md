@@ -58,6 +58,7 @@ export default class UiExtAbility extends UIExtensionAbility {
     if (want.parameters) {
       sessionId = want.parameters[wantConstant.Params.ASSERT_FAULT_SESSION_ID] as string;
     }
+    // Set the user operation status to terminated.
     let status = abilityManager.UserStatus.ASSERT_TERMINATE;
     abilityManager.notifyDebugAssertResult(sessionId, status).then(() => {
       console.info('notifyDebugAssertResult success.');

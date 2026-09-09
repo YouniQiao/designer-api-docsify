@@ -47,8 +47,8 @@ import { dlpPermission } from '@kit.DataProtectionKit';
 
 dlpPermission.getDLPGatheringPolicy().then((gatheringPolicy: dlpPermission.GatheringPolicyType) => {
   console.info('gatheringPolicy: ', JSON.stringify(gatheringPolicy));
-}).catch((error: BusinessError)=> {
-  console.error(error.message);
+}).catch((error: BusinessError) => {
+  console.error(`Failed to get DLPGatheringPolicy. Code: ${error.code}, message: ${error.message}`);
 }); // Obtain the sandbox gathering policy.
 ```
 
@@ -95,7 +95,7 @@ import { dlpPermission } from '@kit.DataProtectionKit';
 
 dlpPermission.getDLPGatheringPolicy((err, gatheringPolicy) => {
   if (err) {
-    console.error('getDLPGatheringPolicy error,', err.code, err.message);
+    console.error(`Failed to get DLPGatheringPolicy. Code: ${err.code}, message: ${err.message}`);
   } else {
     console.info('gatheringPolicy: ', JSON.stringify(gatheringPolicy));
   }

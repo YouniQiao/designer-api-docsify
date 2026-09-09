@@ -141,16 +141,19 @@ class MyAutoFillExtensionAbility extends AutoFillExtensionAbility {
     hilog.info(0x0000, 'testTag', 'fill requestCallback: %{public}s', JSON.stringify(callback));
     hilog.info(0x0000, 'testTag', 'get request viewData: %{public}s', JSON.stringify(request.viewData));
     try {
+      // Define the local storage data.
       let localStorageData: Record<string, UIExtensionContentSession | string | autoFillManager.FillRequestCallback |
       autoFillManager.ViewData | common.AutoFillExtensionContext> = {
         'session': session,
         'message': 'AutoFill Page',
-        'fillCallback': callback,
+        'saveCallback': callback,
         'viewData': request.viewData,
         'context': this.context
       };
+      // Create a local storage instance for passing data between pages.
       let storage_fill = new LocalStorage(localStorageData);
       if (session) {
+        // Load the auto-save page.
         session.loadContent('pages/SelectorList', storage_fill);
       } else {
         hilog.error(0x0000, 'testTag', '%{public}s', 'session is null');
@@ -227,6 +230,7 @@ class MyAutoFillExtensionAbility extends AutoFillExtensionAbility {
                 callback : autoFillManager.SaveRequestCallback) {
     hilog.info(0x0000, 'testTag', '%{public}s', 'onSaveRequest');
     try {
+      // Define the local storage data.
       let localStorageData: Record<string, UIExtensionContentSession | string | autoFillManager.SaveRequestCallback |
       autoFillManager.ViewData | common.AutoFillExtensionContext> = {
         'session': session,
@@ -235,8 +239,10 @@ class MyAutoFillExtensionAbility extends AutoFillExtensionAbility {
         'viewData': request.viewData,
         'context': this.context,
       };
+      // Create the local storage instance to pass data between pages.
       let storage_save = new LocalStorage(localStorageData);
       if (session) {
+        // Load the auto-save page.
         session.loadContent('pages/SavePage', storage_save);
       } else {
         hilog.error(0x0000, 'testTag', '%{public}s', 'session is null');

@@ -597,6 +597,35 @@ haloBloom(tintColor: Color, bloomFactor: number, glowExposure: number): Filter
 | --- | --- |
 | [Filter](arkts-arkgraphics2d-uieffect-filter-i.md) | 返回附加了光晕泛光效果的 Filter。 |
 
+**示例**
+
+```TypeScript
+import { uiEffect } from '@kit.ArkGraphics2D';
+
+@Entry
+@Component
+struct example {
+  @State tintColor: uiEffect.Color = { red: 1.0, green: 0.0, blue: 0.75, alpha: 1.0 };
+  @State bloomFactor: number = 0.5;
+  @State glowExposure: number = 0.5;
+
+  build() {
+    RelativeContainer() {
+      Stack() {
+        Image($r("app.media.startIcon"))
+          .width(200)
+          .height(200)
+          .foregroundFilter(uiEffect.createFilter().haloBloom(
+            this.tintColor,
+            this.bloomFactor,
+            this.glowExposure
+          ))
+      }
+    }
+  }
+}
+```
+
 ## heatDistortion
 
 ```TypeScript
@@ -950,6 +979,35 @@ spinBlur(center: common2D.Point, angle: number, samples: number): Filter
 | 类型 | 说明 |
 | --- | --- |
 | [Filter](arkts-arkgraphics2d-uieffect-filter-i.md) | 返回附加了旋转模糊效果的 Filter。 |
+
+**示例**
+
+```TypeScript
+import { common2D, uiEffect } from '@kit.ArkGraphics2D';
+
+@Entry
+@Component
+struct example {
+  @State center: common2D.Point = { x: 0.5, y: 0.5 };
+  @State angle: number = 1.5; // in radians
+  @State samples: number = 32;
+
+  build() {
+    RelativeContainer() {
+      Stack() {
+        Image($r("app.media.startIcon"))
+          .width(200)
+          .height(200)
+          .foregroundFilter(uiEffect.createFilter().spinBlur(
+            this.center,
+            this.angle,
+            this.samples
+          ))
+      }
+    }
+  }
+}
+```
 
 ## variableRadiusBlur
 

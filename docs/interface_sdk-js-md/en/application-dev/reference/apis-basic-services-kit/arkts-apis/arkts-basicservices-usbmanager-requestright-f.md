@@ -40,6 +40,7 @@ Requests the temporary device access permission for the application. This API us
 **Examples**
 
 ```TypeScript
+import {BusinessError} from '@kit.BasicServicesKit';
 function requestRight() {
   let devicesList: Array<usbManager.USBDevice> = usbManager.getDevices();
   if (!devicesList || devicesList.length == 0) {
@@ -51,7 +52,7 @@ function requestRight() {
   usbManager.requestRight(device.name).then(ret => {
     console.info(`requestRight = ${ret}`);
   }).catch((error: BusinessError) => {
-    console.error(`requestRight failed : ${error}`);
+    console.error(`Failed to request right. Code: ${error.code}, message: ${error.message}`);
   });
 }
 ```

@@ -31,6 +31,7 @@ Obtains the application context.
 ```TypeScript
 import { featureAbility } from '@kit.AbilityKit';
 
+// Get the application context.
 let context = featureAbility.getContext();
 context.getBundleName((error, data) => {
   if (error && error.code !== 0) {

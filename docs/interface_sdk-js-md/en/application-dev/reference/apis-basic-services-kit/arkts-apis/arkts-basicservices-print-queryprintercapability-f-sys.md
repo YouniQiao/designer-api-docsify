@@ -44,13 +44,13 @@ import { print } from '@kit.BasicServicesKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let printerId: string = 'printerId_32';
-print.queryPrinterCapability(printerId, (err: BusinessError) => {
-    if (err) {
-        console.error('failed to query Printer Capability because : ' + JSON.stringify(err));
+print.queryPrinterCapability(printerId, (error: BusinessError) => {
+    if (error) {
+        console.error(`Failed to query printer capability. Code: ${error.code}, message: ${error.message}`);
     } else {
         console.info('start query Printer Capability success');
     }
-})
+});
 ```
 
 
@@ -100,6 +100,6 @@ let printerId: string = 'printerId_32';
 print.queryPrinterCapability(printerId).then(() => {
     console.info('start query Printer success');
 }).catch((error: BusinessError) => {
-    console.error('failed to query Printer Capability because : ' + JSON.stringify(error));
-})
+    console.error(`Failed to query printer capability. Code: ${error.code}, message: ${error.message}`);
+});
 ```

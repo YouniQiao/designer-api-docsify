@@ -133,12 +133,12 @@ async function buildX509CertChain() {
       validationParameters: {
         date: '20240812080000Z',
         certCRLs: [certCrlCollection],
-        trustAnchors: [{ CACert: caCert }, { CACert: caCert }],
+        trustAnchors: [{ CACert: caCert }, { CACert: caCert }]
       }
-    }
+    };
     let certChainBuildResult = await cert.buildX509CertChain(param);
-    console.info("cert issuer name: " + certChainBuildResult.validationResult.entityCert.getIssuerName().data)
-    console.info("ca subject name: " + certChainBuildResult.validationResult.trustAnchor.CACert?.getSubjectName().data)
+    console.info('cert issuer name: ' + certChainBuildResult.validationResult.entityCert.getIssuerName().data);
+    console.info('ca subject name: ' + certChainBuildResult.validationResult.trustAnchor.CACert?.getSubjectName().data);
   } catch (error) {
     let e: BusinessError = error as BusinessError;
     console.error(`createX509CertChain failed, errCode: ${e.code}, errMsg: ${e.message}`);

@@ -41,7 +41,7 @@ contact.queryGroups((err: BusinessError, data) => {
     console.error(`Failed to query Groups. Code: ${err.code}, message: ${err.message}`);
     return;
   }
-  console.info(`Succeeded in querying Groups.. data->${JSON.stringify(data)}`);
+  console.info(`Succeeded in querying Groups. data->${JSON.stringify(data)}`);
 });
 ```
 

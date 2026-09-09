@@ -42,6 +42,7 @@ Cancels listening for global touchscreen input events. This API uses an asynchro
 ```TypeScript
 import { inputMonitor } from '@kit.InputKit';
 import { TouchEvent } from '@kit.InputKit';
+import { BusinessError } from '@kit.BasicServicesKit';
 
 @Entry
 @Component
@@ -73,6 +74,7 @@ struct Index {
 ```TypeScript
 import { inputMonitor } from '@kit.InputKit';
 import { TouchEvent } from '@kit.InputKit';
+import { BusinessError } from '@kit.BasicServicesKit';
 
 @Entry
 @Component
@@ -138,6 +140,7 @@ Disables listening for global mouse events. This API uses an asynchronous callba
 ```TypeScript
 import { inputMonitor } from '@kit.InputKit';
 import { MouseEvent } from '@kit.InputKit';
+import { BusinessError } from '@kit.BasicServicesKit';
 
 @Entry
 @Component
@@ -169,6 +172,7 @@ struct Index {
 ```TypeScript
 import { inputMonitor } from '@kit.InputKit';
 import { MouseEvent } from '@kit.InputKit';
+import { BusinessError } from '@kit.BasicServicesKit';
 
 @Entry
 @Component
@@ -234,6 +238,7 @@ Disables listening for global touchpad pinch events. This API uses an asynchrono
 ```TypeScript
 import { inputMonitor } from '@kit.InputKit';
 import { Pinch } from '@kit.InputKit';
+import { BusinessError } from '@kit.BasicServicesKit';
 
 @Entry
 @Component
@@ -265,6 +270,7 @@ struct Index {
 ```TypeScript
 import { inputMonitor } from '@kit.InputKit';
 import { Pinch } from '@kit.InputKit';
+import { BusinessError } from '@kit.BasicServicesKit';
 
 @Entry
 @Component
@@ -331,6 +337,7 @@ Disables listening for global touchpad pinch events. This API uses an asynchrono
 ```TypeScript
 import { inputMonitor } from '@kit.InputKit';
 import { Pinch } from '@kit.InputKit';
+import { BusinessError } from '@kit.BasicServicesKit';
 
 @Entry
 @Component
@@ -362,6 +369,7 @@ struct Index {
 ```TypeScript
 import { inputMonitor } from '@kit.InputKit';
 import { Pinch } from '@kit.InputKit';
+import { BusinessError } from '@kit.BasicServicesKit';
 
 @Entry
 @Component
@@ -428,6 +436,7 @@ Disables listening for rotation events of the touchpad. This API uses an asynchr
 ```TypeScript
 import { inputMonitor } from '@kit.InputKit';
 import { Rotate } from '@kit.InputKit';
+import { BusinessError } from '@kit.BasicServicesKit';
 
 @Entry
 @Component
@@ -459,6 +468,7 @@ struct Index {
 ```TypeScript
 import { inputMonitor } from '@kit.InputKit';
 import { Rotate } from '@kit.InputKit';
+import { BusinessError } from '@kit.BasicServicesKit';
 
 @Entry
 @Component
@@ -524,6 +534,7 @@ Disables listening for three-finger swipe events. This API uses an asynchronous 
 ```TypeScript
 import { inputMonitor } from '@kit.InputKit';
 import { ThreeFingersSwipe } from '@kit.InputKit';
+import { BusinessError } from '@kit.BasicServicesKit';
 
 @Entry
 @Component
@@ -541,7 +552,7 @@ struct Index {
             // Subscribe to Three-Finger Swipe Event
             inputMonitor.on('threeFingersSwipe', callback);
             // Unsubscribe from Three-Finger Swipe Event
-            inputMonitor.off("threeFingersSwipe", callback);
+            inputMonitor.off('threeFingersSwipe', callback);
             console.info(`Succeeded in turning off monitor.`);
           } catch (error) {
             console.error(`Failed to cancel monitor three fingers swipe, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
@@ -555,6 +566,7 @@ struct Index {
 ```TypeScript
 import { inputMonitor } from '@kit.InputKit';
 import { ThreeFingersSwipe } from '@kit.InputKit';
+import { BusinessError } from '@kit.BasicServicesKit';
 
 @Entry
 @Component
@@ -570,9 +582,9 @@ struct Index {
           };
           try {
             // Subscribe to Three-Finger Swipe Events
-            inputMonitor.on("threeFingersSwipe", callback);
+            inputMonitor.on('threeFingersSwipe', callback);
             // Unsubscribe from Three-Finger Swipe Events
-            inputMonitor.off("threeFingersSwipe");
+            inputMonitor.off('threeFingersSwipe');
             console.info(`Succeeded in turning off monitor.`);
           } catch (error) {
             console.error(`Failed to cancel monitor three fingers swipe, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
@@ -620,6 +632,7 @@ Disables listening for four-finger swipe events. This API uses an asynchronous c
 ```TypeScript
 import { inputMonitor } from '@kit.InputKit';
 import { FourFingersSwipe } from '@kit.InputKit';
+import { BusinessError } from '@kit.BasicServicesKit';
 
 @Entry
 @Component
@@ -651,6 +664,7 @@ struct Index {
 ```TypeScript
 import { inputMonitor } from '@kit.InputKit';
 import { FourFingersSwipe } from '@kit.InputKit';
+import { BusinessError } from '@kit.BasicServicesKit';
 
 @Entry
 @Component
@@ -716,6 +730,7 @@ Disables listening for three-finger tap events. This API uses an asynchronous ca
 ```TypeScript
 import { inputMonitor } from '@kit.InputKit';
 import { ThreeFingersTap } from '@kit.InputKit';
+import { BusinessError } from '@kit.BasicServicesKit';
 
 @Entry
 @Component
@@ -733,7 +748,7 @@ struct Index {
             // Subscribe to three-finger tap event
             inputMonitor.on('threeFingersTap', callback);
             // Unsubscribe from three-finger tap event
-            inputMonitor.off("threeFingersTap", callback);
+            inputMonitor.off('threeFingersTap', callback);
             console.info(`Succeeded in turning off monitor.`);
           } catch (error) {
             console.error(`Failed to cancel monitor three fingers tap, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
@@ -747,6 +762,7 @@ struct Index {
 ```TypeScript
 import { inputMonitor } from '@kit.InputKit';
 import { ThreeFingersTap } from '@kit.InputKit';
+import { BusinessError } from '@kit.BasicServicesKit';
 
 @Entry
 @Component
@@ -764,7 +780,7 @@ struct Index {
             // Subscribe to three-finger tap event
             inputMonitor.on('threeFingersTap', callback);
             // Unsubscribe from three-finger tap event
-            inputMonitor.off("threeFingersTap");
+            inputMonitor.off('threeFingersTap');
             console.info(`Succeeded in turning off monitor.`);
           } catch (error) {
             console.error(`Failed to cancel monitor three fingers tap, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
@@ -812,6 +828,7 @@ Disables listening for fingerprint gesture input events. This API uses an asynch
 ```TypeScript
 import { inputMonitor } from '@kit.InputKit';
 import { FingerprintEvent } from '@kit.InputKit';
+import { BusinessError } from '@kit.BasicServicesKit';
 
 @Entry
 @Component
@@ -829,7 +846,7 @@ struct Index {
             // Subscribe to Fingerprint Events
             inputMonitor.on('fingerprint', callback);
             // Unsubscribe from Fingerprint Events
-            inputMonitor.off("fingerprint", callback);
+            inputMonitor.off('fingerprint', callback);
             console.info(`Succeeded in turning off monitor.`);
           } catch (error) {
             console.error(`Failed to cancel monitor finger print event, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
@@ -843,6 +860,7 @@ struct Index {
 ```TypeScript
 import { inputMonitor } from '@kit.InputKit';
 import { FingerprintEvent } from '@kit.InputKit';
+import { BusinessError } from '@kit.BasicServicesKit';
 
 @Entry
 @Component
@@ -860,7 +878,7 @@ struct Index {
             // Subscribe to Fingerprint Events
             inputMonitor.on('fingerprint', callback);
             // Unsubscribe from Fingerprint Events
-            inputMonitor.off("fingerprint");
+            inputMonitor.off('fingerprint');
             console.info(`Succeeded in turning off monitor.`);
           } catch (error) {
             console.error(`Failed to cancel monitor finger print event, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
@@ -907,6 +925,7 @@ Cancels listening for inward swipe events. This API uses an asynchronous callbac
 
 ```TypeScript
 import { inputMonitor, SwipeInward } from '@kit.InputKit';
+import { BusinessError } from '@kit.BasicServicesKit';
 
 @Entry
 @Component
@@ -924,7 +943,7 @@ build() {
           // Subscribe to Swipe Inward Event
           inputMonitor.on('swipeInward', callback);
           // Unsubscribe from Swipe Inward Event
-          inputMonitor.off("swipeInward", callback);
+          inputMonitor.off('swipeInward', callback);
           console.info(`Succeeded in turning off monitor.`);
         } catch (error) {
           console.error(`Failed to cancel monitor swipe inward, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
@@ -937,6 +956,7 @@ build() {
 
 ```TypeScript
 import { inputMonitor, SwipeInward } from '@kit.InputKit';
+import { BusinessError } from '@kit.BasicServicesKit';
 
 @Entry
 @Component
@@ -954,7 +974,7 @@ build() {
           // Subscribe to Swipe Inward Event
           inputMonitor.on('swipeInward', callback);
           // Unsubscribe from Swipe Inward Event
-          inputMonitor.off("swipeInward");
+          inputMonitor.off('swipeInward');
           console.info(`Succeeded in turning off monitor.`);
         } catch (error) {
           console.error(`Failed to cancel monitor swipe inward, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
@@ -1003,6 +1023,7 @@ Disables listening for touchscreen swipe events. This API uses an asynchronous c
 ```TypeScript
 import { inputMonitor } from '@kit.InputKit';
 import { TouchGestureEvent } from '@kit.InputKit';
+import { BusinessError } from '@kit.BasicServicesKit';
 
 @Entry
 @Component
@@ -1033,6 +1054,7 @@ struct Index {
 ```TypeScript
 import { inputMonitor } from '@kit.InputKit';
 import { TouchGestureEvent } from '@kit.InputKit';
+import { BusinessError } from '@kit.BasicServicesKit';
 
 @Entry
 @Component
@@ -1097,6 +1119,7 @@ Disables listening for touchscreen pinch events. This API uses an asynchronous c
 ```TypeScript
 import { inputMonitor } from '@kit.InputKit';
 import { TouchGestureEvent } from '@kit.InputKit';
+import { BusinessError } from '@kit.BasicServicesKit';
 
 @Entry
 @Component
@@ -1114,7 +1137,7 @@ struct Index {
             // Subscribe to Touchscreen Pinch Event
             inputMonitor.on('touchscreenPinch', fingers, callback);
             // Unsubscribe from Touchscreen Pinch Event
-            inputMonitor.off("touchscreenPinch", fingers, callback);
+            inputMonitor.off('touchscreenPinch', fingers, callback);
           } catch (error) {
             console.error(`Failed to cancel monitor touch screen pinch, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
           }
@@ -1127,6 +1150,7 @@ struct Index {
 ```TypeScript
 import { inputMonitor } from '@kit.InputKit';
 import { TouchGestureEvent } from '@kit.InputKit';
+import { BusinessError } from '@kit.BasicServicesKit';
 
 @Entry
 @Component
@@ -1143,7 +1167,7 @@ struct Index {
               console.info(`Succeeded in monitoring on ${JSON.stringify(event)}.`);
             });
             // Unsubscribe from Touchscreen Pinch Event
-            inputMonitor.off("touchscreenPinch", fingers);
+            inputMonitor.off('touchscreenPinch', fingers);
           } catch (error) {
             console.error(`Failed to cancel monitor touch screen pinch, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
           }
@@ -1189,6 +1213,7 @@ Cancels listening for the press and release events of the specified key, which c
 
 ```TypeScript
 import { inputMonitor, KeyEvent, KeyCode } from '@kit.InputKit';
+import { BusinessError } from '@kit.BasicServicesKit';
 
 @Entry
 @Component
@@ -1206,7 +1231,7 @@ struct Index {
             // Subscribe to Key Press Event
             inputMonitor.on('keyPressed', keys, callback);
             // Unsubscribe from Key Press Event
-            inputMonitor.off("keyPressed", callback);
+            inputMonitor.off('keyPressed', callback);
           } catch (error) {
             console.error(`Failed to cancel monitor key pressed, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
           }
@@ -1218,6 +1243,7 @@ struct Index {
 
 ```TypeScript
 import { inputMonitor, KeyEvent, KeyCode } from '@kit.InputKit';
+import { BusinessError } from '@kit.BasicServicesKit';
 
 @Entry
 @Component
@@ -1234,7 +1260,7 @@ struct Index {
               console.info(`Succeeded in monitoring on ${JSON.stringify(event)}.`);
             });
             // Unsubscribe from Key Press Events
-            inputMonitor.off("keyPressed");
+            inputMonitor.off('keyPressed');
           } catch (error) {
             console.error(`Failed to cancel monitor key pressed, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
           }

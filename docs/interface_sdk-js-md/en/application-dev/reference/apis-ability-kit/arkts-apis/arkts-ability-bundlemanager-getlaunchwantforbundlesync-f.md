@@ -49,7 +49,7 @@ Obtains the Want used to launch the bundle based on the given bundle name and us
 **Examples**
 
 ```TypeScript
-// The sample API contains the userId parameter. Obtain the Want parameter required for starting an application of a specified user.
+// The sample API contains the userId parameter and obtains the Want parameter required for starting an application under a specified user.
 import { bundleManager } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 import { hilog } from '@kit.PerformanceAnalysisKit';
@@ -68,7 +68,7 @@ try {
 ```
 
 ```TypeScript
-// The sample API does not contain the userId parameter. Obtain the Want parameter required for starting an application of the current user.
+// The sample API does not contain the userId parameter and obtains the Want parameter required for starting an application under the current user.
 import { bundleManager } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 import { hilog } from '@kit.PerformanceAnalysisKit';

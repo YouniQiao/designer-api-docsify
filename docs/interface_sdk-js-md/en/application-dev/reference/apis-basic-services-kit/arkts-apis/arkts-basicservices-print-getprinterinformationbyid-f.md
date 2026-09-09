@@ -45,10 +45,11 @@ Obtains printer information based on the printer ID. This API uses a promise to 
 import { print } from '@kit.BasicServicesKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
+// printer ID can be obtained from the on('printerChange') callback.
 let printerId : string = 'testPrinterId';
 print.getPrinterInformationById(printerId).then((printerInformation : print.PrinterInformation) => {
     console.info('getPrinterInformationById data : ' + JSON.stringify(printerInformation));
 }).catch((error: BusinessError) => {
-    console.error('getPrinterInformationById error : ' + JSON.stringify(error));
+    console.error(`Failed to getPrinterInformationById. Code: ${error.code}, message: ${error.message}`);
 })
 ```

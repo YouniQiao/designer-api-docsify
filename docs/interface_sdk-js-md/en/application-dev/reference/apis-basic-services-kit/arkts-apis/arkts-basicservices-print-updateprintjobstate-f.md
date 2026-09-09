@@ -46,12 +46,13 @@ Updates the print job state. This API uses an asynchronous callback to return th
 import { print } from '@kit.BasicServicesKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
+// Obtain the job ID from the onStartPrintJob callback of the PrintExtensionAbility.
 let jobId : string = 'jobId';
 let state : print.PrintJobState = print.PrintJobState.PRINT_JOB_PREPARE;
 let subState : print.PrintJobSubState = print.PrintJobSubState.PRINT_JOB_COMPLETED_SUCCESS;
-print.updatePrintJobState(jobId, state, subState, (err: BusinessError) => {
-    if (err) {
-        console.error('updatePrintJobState failed, because : ' + JSON.stringify(err));
+print.updatePrintJobState(jobId, state, subState, (error: BusinessError) => {
+    if (error) {
+        console.error(`Failed to updatePrintJobState. Code: ${error.code}, message: ${error.message}`);
     } else {
         console.info('updatePrintJobState success');
     }
@@ -103,12 +104,13 @@ Updates the print job state. This API uses a promise to return the result.
 import { print } from '@kit.BasicServicesKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
+// Obtain the job ID from the onStartPrintJob callback of the PrintExtensionAbility.
 let jobId : string = 'jobId';
 let state : print.PrintJobState = print.PrintJobState.PRINT_JOB_PREPARE;
 let subState : print.PrintJobSubState = print.PrintJobSubState.PRINT_JOB_COMPLETED_SUCCESS;
 print.updatePrintJobState(jobId, state, subState).then(() => {
     console.info('update print job state success');
 }).catch((error: BusinessError) => {
-    console.error('update print job state error : ' + JSON.stringify(error));
+    console.error(`Failed to updatePrintJobState. Code: ${error.code}, message: ${error.message}`);
 })
 ```

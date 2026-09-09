@@ -43,7 +43,7 @@ Checks whether the specified WantAgent is local.
 **Examples**
 
 ```TypeScript
-import { wantAgent } from '@kit.AbilityKit';
+import { wantAgent, Want } from '@kit.AbilityKit';
 import type { WantAgent } from '@kit.AbilityKit';
 
 // Declare a wantAgent object.
@@ -78,6 +78,7 @@ let localWantAgentInfo: wantAgent.LocalWantAgentInfo = {
 // Create a WantAgent object and check whether it is local.
 try {
   wantAgentData = wantAgent.createLocalWantAgent(localWantAgentInfo);
+  // Check whether the WantAgent instance is a local instance.
   let isLocal: boolean = wantAgent.isLocalWantAgent(wantAgentData);
 } catch (err) {
   console.error('call isLocalWantAgent failed');

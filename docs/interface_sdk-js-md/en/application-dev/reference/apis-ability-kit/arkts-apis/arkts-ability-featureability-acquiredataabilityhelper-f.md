@@ -45,6 +45,7 @@ Obtains a dataAbilityHelper object.
 ```TypeScript
 import { featureAbility } from '@kit.AbilityKit';
 
+// Obtain the dataAbilityHelper object.
 let dataAbilityHelper = featureAbility.acquireDataAbilityHelper(
   'dataability:///com.example.DataAbility'
 );

@@ -50,9 +50,10 @@ import { AbilityConstant, UIAbility, Want, dialogRequest } from '@kit.AbilityKit
 export default class EntryAbility extends UIAbility {
   onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
     try {
+      // Obtain the RequestCallback of the requester.
       let requestCallback = dialogRequest.getRequestCallback(want);
-    } catch(err) {
-      console.error(`getRequestInfo err= ${JSON.stringify(err)}`);
+    } catch (err) {
+      console.error(`Failed to getRequestCallback. Code: ${err.code}, message: ${err.message}`);
     }
   }
 }

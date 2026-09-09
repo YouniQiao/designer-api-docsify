@@ -43,6 +43,7 @@ Registers a listener to observe the mission status.
 import missionManager from '@ohos.application.missionManager';
 
 console.info('registerMissionListener');
+// Register a system mission status listener.
 let listenerId = missionManager.registerMissionListener({
   onMissionCreated: (mission) => {
     console.info('--------onMissionCreated-------');

@@ -86,10 +86,10 @@ const promise = sensor.createRotationMatrix([0.20046076, 0.21907, 0.73978853, 0.
 promise.then((data: Array<number>) => {
   console.info('Succeeded in getting createRotationMatrix_promise');
   for (let i = 0; i < data.length; i++) {
-    console.info("data[" + i + "]: " + data[i]);
+    console.info('data[' + i + ']: ' + data[i]);
   }
 }).catch((reason: BusinessError) => {
-  console.info("Succeeded in getting promise::catch", reason);
+  console.info('Succeeded in getting promise::catch', reason);
 })
 ```
 
@@ -190,10 +190,10 @@ const promise = sensor.createRotationMatrix([0.20046076, 0.21907, 0.73978853, 0.
 promise.then((data: Array<number>) => {
   console.info('Succeeded in getting createRotationMatrix_promise');
   for (let i = 0; i < data.length; i++) {
-    console.info("data[" + i + "]: " + data[i]);
+    console.info('data[' + i + ']: ' + data[i]);
   }
 }).catch((reason: BusinessError) => {
-  console.info("Succeeded in getting promise::catch", reason);
+  console.info('Succeeded in getting promise::catch', reason);
 })
 ```
 

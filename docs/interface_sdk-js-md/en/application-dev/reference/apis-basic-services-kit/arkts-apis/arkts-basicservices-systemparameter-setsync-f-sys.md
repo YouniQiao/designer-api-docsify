@@ -34,9 +34,11 @@ Sets a value for the specified key.
 **Examples**
 
 ```TypeScript
+import { BusinessError } from '@ohos.base';
+
 try {
-    systemParameter.setSync("test.parameter.key", "default");
-} catch(e) {
-    console.error("set unexpected error: " + e);
+  systemParameter.setSync('test.parameter.key', 'default');
+} catch (e) {
+  console.error(`Failed to set system parameter. Code: ${(e as BusinessError).code}, message: ${(e as BusinessError).message}`);
 }
 ```

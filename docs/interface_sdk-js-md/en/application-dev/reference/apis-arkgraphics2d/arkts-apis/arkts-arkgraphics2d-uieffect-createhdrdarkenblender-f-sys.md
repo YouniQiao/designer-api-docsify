@@ -39,11 +39,11 @@ Creates an HdrDarkenBlender instance for HDR layer darken blending effect.
 **Examples**
 
 ```TypeScript
-import { uiEffect } from '@kit.ArkGraphics2D'
+import { uiEffect } from '@kit.ArkGraphics2D';
 
 // Create an HDR darken blender instance.
-let blender : uiEffect.HdrDarkenBlender = 
-  uiEffect.createHdrDarkenBlender(1.3, [0.299, 0.587, 0.114])
+let blender: uiEffect.HdrDarkenBlender =
+  uiEffect.createHdrDarkenBlender(1.3, [0.299, 0.587, 0.114]);
 
 @Entry
 @Component
@@ -51,10 +51,10 @@ struct Example {
   build() { 
     RelativeContainer() { 
       Stack(){ 
-          Text("TextWord") 
-          Image($r("app.media.screenshot")) 
-            .width("100%") 
-            .height("100%") 
+          Text('TextWord')
+          Image($r('app.media.screenshot'))
+            .width('100%')
+            .height('100%')
             .advancedBlendMode(blender) 
       } 
     } 

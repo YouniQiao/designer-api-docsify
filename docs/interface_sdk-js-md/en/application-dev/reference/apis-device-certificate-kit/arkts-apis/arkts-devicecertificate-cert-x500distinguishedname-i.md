@@ -53,10 +53,11 @@ async function getEncoded() {
       .then((data) => {
         console.info('createX500DistinguishedName result: success.');
         let encodingBlobData = data.getEncoded();
+        console.info('encodingBlobData = ' + encodingBlobData.data);
       })
       .catch((err: BusinessError) => {
         console.error(`createX500DistinguishedName failed, errCode: ${err.code}, errMsg: ${err.message}`);
-      })
+      });
   } catch (error) {
     let e: BusinessError = error as BusinessError;
     console.error(`createX500DistinguishedName failed, errCode: ${e.code}, errMsg: ${e.message}`);
@@ -111,7 +112,7 @@ async function getName() {
       })
       .catch((err: BusinessError) => {
         console.error(`createX500DistinguishedName failed, errCode: ${err.code}, errMsg: ${err.message}`);
-      })
+      });
   } catch (error) {
     let e: BusinessError = error as BusinessError;
     console.error(`createX500DistinguishedName failed, errCode: ${e.code}, errMsg: ${e.message}`);
@@ -170,7 +171,7 @@ async function getName() {
       })
       .catch((err: BusinessError) => {
         console.error(`createX500DistinguishedName failed, errCode: ${err.code}, errMsg: ${err.message}`);
-      })
+      });
   } catch (error) {
     let e: BusinessError = error as BusinessError;
     console.error(`createX500DistinguishedName failed, errCode: ${e.code}, errMsg: ${e.message}`);
@@ -229,7 +230,7 @@ async function getName() {
       })
       .catch((err: BusinessError) => {
         console.error(`createX500DistinguishedName failed, errCode: ${err.code}, errMsg: ${err.message}`);
-      })
+      });
   } catch (error) {
     let e: BusinessError = error as BusinessError;
     console.error(`createX500DistinguishedName failed, errCode: ${e.code}, errMsg: ${e.message}`);
@@ -291,7 +292,7 @@ async function getName() {
       })
       .catch((err: BusinessError) => {
         console.error(`createX500DistinguishedName failed, errCode: ${err.code}, errMsg: ${err.message}`);
-      })
+      });
   } catch (error) {
     let e: BusinessError = error as BusinessError;
     console.error(`createX500DistinguishedName failed, errCode: ${e.code}, errMsg: ${e.message}`);

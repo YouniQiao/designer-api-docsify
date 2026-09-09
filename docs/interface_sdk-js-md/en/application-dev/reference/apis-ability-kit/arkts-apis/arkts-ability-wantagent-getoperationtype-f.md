@@ -74,10 +74,11 @@ let wantAgentInfo: wantAgent.WantAgentInfo = {
 };
 
 // getWantAgent callback.
-function getWantAgentCallback(err: BusinessError, data: WantAgent) {
+let getWantAgentCallback = (err: BusinessError, data: WantAgent) => {
   if (err) {
     console.error(`getWantAgent failed, code: ${JSON.stringify(err.code)}, message: ${JSON.stringify(err.message)}`);
   } else {
+    // Create the WantAgent successfully and save the returned WantAgent object.
     wantAgentData = data;
   }
   // getOperationTypeCallback callback
@@ -89,6 +90,7 @@ function getWantAgentCallback(err: BusinessError, data: WantAgent) {
     }
   }
   try {
+    // Call the getOperationType API to obtain the operation type of the WantAgent instance.
     wantAgent.getOperationType(wantAgentData, getOperationTypeCallback);
   } catch (err) {
     console.error(`getOperationTypeCallback failed! ${(err as BusinessError).code} ${(err as BusinessError).message}`);
@@ -96,6 +98,7 @@ function getWantAgentCallback(err: BusinessError, data: WantAgent) {
 }
 
 try {
+  // Call the getWantAgent API to create a WantAgent object.
   wantAgent.getWantAgent(wantAgentInfo, getWantAgentCallback);
 } catch (err) {
   console.error(`getWantAgent failed! ${(err as BusinessError).code} ${(err as BusinessError).message}`);
@@ -176,13 +179,15 @@ let wantAgentInfo: wantAgent.WantAgentInfo = {
 };
 
 // getWantAgent callback.
-function getWantAgentCallback(err: BusinessError, data: WantAgent) {
+let getWantAgentCallback = (err: BusinessError, data: WantAgent) => {
   if (err) {
     console.error(`getWantAgent failed, code: ${JSON.stringify(err.code)}, message: ${JSON.stringify(err.message)}`);
   } else {
+    // Create the WantAgent successfully and save the returned WantAgent object.
     wantAgentData = data;
   }
   try {
+    // Obtain the operation type of the WantAgent instance using Promise.
     wantAgent.getOperationType(wantAgentData).then((data) => {
       console.info(`getOperationType ok! ${JSON.stringify(data)}`);
     }).catch((err: BusinessError) => {
@@ -194,6 +199,7 @@ function getWantAgentCallback(err: BusinessError, data: WantAgent) {
 }
 
 try {
+  // Call the getWantAgent API to create a WantAgent object.
   wantAgent.getWantAgent(wantAgentInfo, getWantAgentCallback);
 } catch (err) {
   console.error(`getWantAgent failed! ${(err as BusinessError).code} ${(err as BusinessError).message}`);

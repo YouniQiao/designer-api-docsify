@@ -51,6 +51,7 @@ let connectId = featureAbility.connectAbility(
   },
 );
 
+// Disconnect from the ServiceAbility.
 featureAbility.disconnectAbility(connectId, (error) => {
   if (error && error.code !== 0) {
     console.error(`disconnectAbility fail, connectId: ${connectId}, error: ${JSON.stringify(error)}`);
@@ -112,6 +113,7 @@ let connectId = featureAbility.connectAbility(
   },
 );
 
+// Disconnect from the ServiceAbility.
 featureAbility.disconnectAbility(connectId).then(() => {
   console.info('disconnectAbility success');
 }).catch((error: BusinessError)=>{

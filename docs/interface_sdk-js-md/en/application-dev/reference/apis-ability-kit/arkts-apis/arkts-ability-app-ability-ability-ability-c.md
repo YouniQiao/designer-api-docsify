@@ -88,6 +88,7 @@ Called when the available memory of the entire device changes to a specified lev
 import { UIAbility, AbilityConstant } from '@kit.AbilityKit';
 
 class MyUIAbility extends UIAbility {
+  // Receive the system memory level change callback.
   onMemoryLevel(level: AbilityConstant.MemoryLevel) {
     console.info(`onMemoryLevel, level: ${JSON.stringify(level)}`);
   }

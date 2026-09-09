@@ -47,13 +47,15 @@ import { hilog } from '@kit.PerformanceAnalysisKit';
 
 export default class EntryAbility extends UIAbility {
   onWindowStageCreate(windowStage: window.WindowStage): void {
-    // Main window is created. Set a main page for this ability.
+    // Main window is created, set main page for this ability
     hilog.info(0x0000, 'testTag', '%{public}s', 'Ability onWindowStageCreate');
+    // Create a local storage instance.
     let localStorageData: Record<string, string | common.UIAbilityContext> = {
       'message': "AutoFill Page",
       'context': this.context,
     };
     let storage = new LocalStorage(localStorageData);
+    // Load the page content.
     windowStage.loadContent('pages/Index', storage, (err, data) => {
       if (err && err.code) {
         hilog.error(0x0000, 'testTag', 'Failed to load the content. Cause: %{public}s', JSON.stringify(err) ?? '');
@@ -61,15 +63,15 @@ export default class EntryAbility extends UIAbility {
       }
       // Obtain the main window.
       windowStage.getMainWindow((err: BusinessError, data: window.Window) => {
-        let errCode: number = err?.code;
-        if (errCode) {
+        if (err?.code) {
           console.error('Failed to obtain the main window. Cause: ' + JSON.stringify(err));
           return;
         }
         console.info('Succeeded in obtaining the main window. Data: ' + JSON.stringify(data));
-        // get UIContext instance.
+        // Obtain the UIContext instance.
         let uiContext: UIContext = windowStage.getMainWindowSync().getUIContext();
-        PersistentStorage.persistProp("uiContext", uiContext);
+        // Store the UIContext in AppStorage for access by other pages.
+        AppStorage.setOrCreate("uiContext", uiContext);
       })
       hilog.info(0x0000, 'testTag', 'Succeeded in loading the content. Data: %{public}s', JSON.stringify(data) ?? '');
     });
@@ -83,38 +85,54 @@ import { autoFillManager } from '@kit.AbilityKit';
 import { UIContext } from '@kit.ArkUI';
 import { BusinessError } from '@kit.BasicServicesKit';
 
+let uiContext = AppStorage.get<UIContext>('uiContext');
+// Define the AutoSave callback.
+let callback: autoFillManager.AutoSaveCallback = {
+  onSuccess: () => {
+    console.info(`save request on success.`);
+  },
+  onFailure: () => {
+    console.error(`save request on failure.`);
+  }
+};
+
 @Entry
 @Component
 struct Index {
+  @State userName: string = "";
+  @State password: string = "";
+  // Obtain the current UIContext instance.
+  private uiContext: UIContext = this.getUIContext();
   build() {
-    Row() {
-      Column() {
-        Text('Hello World')
-          .fontSize(50)
-          .fontWeight(FontWeight.Bold)
+    GridRow({ gutter: { y: 20 } }) {
+      GridCol({ span: 20 }) {
+        TextInput({ placeholder: 'Enter userName', text: this.userName })
+          .type(InputType.USER_NAME)
+          .width('90%')
+          .onChange((value: string) => {
+            this.userName = value
+          })
       }
-
-      Button('requestAutoSave')
-        .onClick(() => {
-          let uiContext = AppStorage.get<UIContext>("uiContext");
-          console.info("uiContext: ", JSON.stringify(uiContext));
-          try {
-            // Initiate an auto-save request.
-            autoFillManager.requestAutoSave(uiContext, {
-              onSuccess: () => {
-                console.info(`save request on success.`);
-              },
-              onFailure: () => {
-                console.error(`save request on failure.`);
-              }
-            });
-          } catch (error) {
-            console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
-          }
-        })
-        .width('100%')
+      GridCol({ span: 20 }) {
+        TextInput({ placeholder: 'Enter password', text: this.password })
+          .type(InputType.Password)
+          .width('90%')
+          .onChange((value: string) => {
+            this.password = value
+          })
+      }
+      GridCol({ span: 20 }) {
+        Button('requestAutoSave')
+          .onClick(() => {
+            try {
+              // Initiate the save request.
+              autoFillManager.requestAutoSave(this.uiContext, callback);
+            } catch (error) {
+              console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
+            }
+          })
+      }
     }
-    .height('100%')
   }
 }
 ```
@@ -152,4 +170,81 @@ Trigger an auto save request.
 
 **Examples**
 
-See [requestAutoSave](#requestautosave)
+```TypeScript
+// Index.ets
+import { autoFillManager } from '@kit.AbilityKit';
+import { UIContext } from '@kit.ArkUI';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Configure request based on the actual project.
+let request: autoFillManager.SaveRequest = {
+  viewData: {
+    bundleName: "com.example.testBundleName",
+    pageUrl: "testPageUrl",
+    pageNodeInfos: [
+      {
+        id: 1,
+        autoFillType: autoFillManager.AutoFillType.USER_NAME,
+        value: "testValue1",
+        placeholder: "testPlaceholder1",
+        rect: {
+          left: 1,
+          top: 1,
+          width: 1,
+          height: 1,
+        },
+        isFocus: false
+      },
+      {
+        id: 2,
+        autoFillType: autoFillManager.AutoFillType.PASSWORD,
+        value: "testValue2",
+        placeholder: "testPlaceholder2",
+        rect: {
+          left: 1,
+          top: 1,
+          width: 1,
+          height: 1,
+        },
+        isFocus: false
+      }
+    ],
+    pageRect: {
+      left: 1,
+      top: 1,
+      width: 1,
+      height: 1
+    }
+  }
+}
+// Define the AutoSave callback.
+let callback: autoFillManager.AutoSaveCallback = {
+  onSuccess: () => {
+    console.info(`save request on success.`);
+  },
+  onFailure: () => {
+    console.error(`save request on failure.`);
+  }
+};
+
+@Entry
+@Component
+struct Index {
+  private uiContext: UIContext = this.getUIContext();
+  build() {
+    GridRow({ gutter: { y: 20 } }) {
+      GridCol({ span: 20 }) {
+        Button('requestAutoSave')
+          .onClick(() => {
+            try {
+              // Initiate the save request.
+              autoFillManager.requestAutoSave(this.uiContext, request, callback);
+            } catch (error) {
+              console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
+            }
+          })
+      }
+    }
+  }
+}
+```

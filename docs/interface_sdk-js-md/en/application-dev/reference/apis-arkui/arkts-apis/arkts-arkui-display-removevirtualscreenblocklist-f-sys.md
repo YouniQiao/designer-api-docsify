@@ -44,6 +44,7 @@ Removes windows from the list of windows that are not allowed to be displayed du
 **Examples**
 
 ```TypeScript
+import { UIAbility } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 import { display, window } from '@kit.ArkUI';
 
@@ -58,16 +59,15 @@ export default class EntryAbility extends UIAbility {
     let promise = display.addVirtualScreenBlocklist(windowIds);
     promise.then(() => {
       console.info('Succeeded in adding virtual screen blocklist.');
+      // Remove the window from the screen casting blocklist.
+      promise = display.removeVirtualScreenBlocklist(windowIds);
+      promise.then(() => {
+        console.info('Succeeded in removing virtual screen blocklist.');
+      }).catch((err: BusinessError) => {
+        console.error(`Failed to remove virtual screen blocklist. Code: ${err.code}, message: ${err.message}`);
+      });
     }).catch((err: BusinessError) => {
       console.error(`Failed to add virtual screen blocklist. Code: ${err.code}, message: ${err.message}`);
-    });
-
-    // Remove windows from the list of windows that are not allowed to be displayed during casting.
-    promise = display.removeVirtualScreenBlocklist(windowIds);
-    promise.then(() => {
-      console.info('Succeeded in removing virtual screen blocklist.');
-    }).catch((err: BusinessError) => {
-      console.error(`Failed to remove virtual screen blocklist. Code: ${err.code}, message: ${err.message}`);
     });
   }
 }

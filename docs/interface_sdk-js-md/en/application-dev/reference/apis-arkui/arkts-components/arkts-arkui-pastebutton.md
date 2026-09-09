@@ -100,7 +100,7 @@ struct Index {
   build() {
     Row() {
       Column({ space: 10 }) {
-        // Create a default SaveButton component with an icon, text, and background.
+        // Create a default PasteButton component with an icon, text, and background.
         PasteButton().onClick(this.handlePasteButtonClick)
         // Whether an element is contained depends on whether the parameter corresponding to the element is specified. If buttonType is not passed in, the button uses the ButtonType.Capsule settings.
         PasteButton({ icon: PasteIconStyle.LINES })

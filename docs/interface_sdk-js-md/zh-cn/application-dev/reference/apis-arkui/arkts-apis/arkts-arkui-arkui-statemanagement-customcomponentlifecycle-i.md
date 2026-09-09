@@ -58,6 +58,29 @@ getCurrentState函数用于获取自定义组件当前的生命周期状态。�
 | --- | --- |
 | [CustomComponentLifecycleState](arkts-arkui-arkui-statemanagement-customcomponentlifecyclestate-e.md) | 自定义组件当前的生命周期状态。 |
 
+**示例**
+
+```TypeScript
+import { UIUtils, ComponentBuilt } from '@kit.ArkUI';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+@Entry
+@Component
+struct Index {
+  @ComponentBuilt
+  myBuilt() {
+    // CustomComponentLifecycle.getCurrentState用于获得自定义组件当前的生命周期状态
+    hilog.info(0x0000, 'testTag', 'Index Lifecycle is %{public}d', UIUtils.getLifecycle(this).getCurrentState());
+  }
+  build() {
+    Column() {
+      Text(`HelloWorld`)
+    }
+    .height('100%')
+    .width('100%')
+  }
+}
+```
+
 ## removeObserver
 
 ```TypeScript

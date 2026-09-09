@@ -42,6 +42,7 @@ Injects keys (including single keys and combination keys).
 
 ```TypeScript
 import { inputEventClient } from '@kit.InputKit';
+import { BusinessError } from '@kit.BasicServicesKit';
 
 @Entry
 @Component
@@ -56,7 +57,7 @@ struct Index {
               keyCode: 2,
               keyDownDuration: 0,
               isIntercepted: false
-            }
+            };
             // Inject Event
             inputEventClient.injectEvent({ KeyEvent: backKeyDown });
 

@@ -43,3 +43,31 @@ Generates an authorization package for the controlled device. This function gene
 | [24010001](../errorcode-abilityToolAccessCtrl-sys.md#24010001-system-service-abnormal) | Service is abnormal. Possible cause: IPC failed. |
 | [24010002](../errorcode-abilityToolAccessCtrl-sys.md#24010002-internal-service-error) | Common internal error. Possible cause: dependent service unavailable, resource access failure, etc. |
 | [24010003](../errorcode-abilityToolAccessCtrl-sys.md#24010003-environment-error) | The account is not logged in, network is unavailable, timeout, etc. |
+
+**Examples**
+
+```TypeScript
+import { abilityToolAccessCtrl } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let permissionQuery: Array<abilityToolAccessCtrl.PermissionQuery> = [{
+  operationInfo: [{
+    operationType: abilityToolAccessCtrl.OperationType.CLI,
+    info: {
+      cliCmdName: 'ohos-displayManager',
+      subCliCmdName: 'set-brightness'
+    }
+  }],
+  needTicket: true,
+  remoteInfo: {
+    role: abilityToolAccessCtrl.Role.CONTROLLER,
+    remoteId: 'device123',
+    domainId: 'domain456'
+  }
+}];
+abilityToolAccessCtrl.generateControlledDevicePackage(permissionQuery).then((data: Array<abilityToolAccessCtrl.RemoteAuthPackage>) => {
+  console.info('generateControlledDevicePackage success, data: ' + JSON.stringify(data));
+}).catch((err: BusinessError): void => {
+  console.error(`generateControlledDevicePackage fail, code: ${err.code}, message: ${err.message}`);
+});
+```

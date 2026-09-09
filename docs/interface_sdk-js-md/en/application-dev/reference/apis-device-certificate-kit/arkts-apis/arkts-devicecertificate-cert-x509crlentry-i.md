@@ -67,7 +67,7 @@ let crlData = '-----BEGIN X509 CRL-----\n' +
   'J1LaNwiL+gDxI9rMQmlhsUGJmPIPdRs9uYyI+f854lsWYisD2PUEpn3DbEvzwYeQ\n' +
   '5SqQoPDoM+YfZZa23hoTLsu52toXobP74sf/9K501p/+8hm4ROMLBoRT86GQKY6g\n' +
   'eavsH0Q3\n' +
-  '-----END X509 CRL-----\n'
+  '-----END X509 CRL-----\n';
 
 let encodingBlob: cert.EncodingBlob = {
   data: stringToUint8Array(crlData),
@@ -85,12 +85,13 @@ cert.createX509CRL(encodingBlob, (err, x509CRL) => {
       let serialNumber = BigInt(1000);
       let crlEntry = x509CRL.getRevokedCert(serialNumber);
       let issuer = crlEntry.getCertIssuer();
+      console.info('issuer = ' + issuer.data);
     } catch (error) {
       let e: BusinessError = error as BusinessError;
       console.error(`getRevokedCert or getCertIssuer failed, errCode: ${e.code}, errMsg: ${e.message}`);
     }
   }
-})
+});
 ```
 
 ## getCertIssuer
@@ -176,7 +177,7 @@ cert.createX509CRL(encodingBlob, (err, x509CRL) => {
       console.error(`getRevokedCert or getCertIssuer failed, errCode: ${e.code}, errMsg: ${e.message}`);
     }
   }
-})
+});
 ```
 
 ## getCertIssuerX500DistinguishedName
@@ -229,7 +230,7 @@ let crlData = '-----BEGIN X509 CRL-----\n' +
   'J1LaNwiL+gDxI9rMQmlhsUGJmPIPdRs9uYyI+f854lsWYisD2PUEpn3DbEvzwYeQ\n' +
   '5SqQoPDoM+YfZZa23hoTLsu52toXobP74sf/9K501p/+8hm4ROMLBoRT86GQKY6g\n' +
   'eavsH0Q3\n' +
-  '-----END X509 CRL-----\n'
+  '-----END X509 CRL-----\n';
 
 let encodingBlob: cert.EncodingBlob = {
   data: stringToUint8Array(crlData),
@@ -242,7 +243,7 @@ async function certGetCertIssuerX500DistinguishedName() {
   try {
     x509Crl = await cert.createX509CRL(encodingBlob);
     console.info('createX509CRL result: success.');
-    let name = x509Crl.getRevokedCert(BigInt(1000)).getCertIssuerX500DistinguishedName();
+    x509Crl.getRevokedCert(BigInt(1000)).getCertIssuerX500DistinguishedName();
   } catch (error) {
     let e: BusinessError = error as BusinessError;
     console.error(`createX509CRL failed, errCode: ${e.code}, errMsg: ${e.message}`);
@@ -301,7 +302,7 @@ let crlData = '-----BEGIN X509 CRL-----\n' +
   'J1LaNwiL+gDxI9rMQmlhsUGJmPIPdRs9uYyI+f854lsWYisD2PUEpn3DbEvzwYeQ\n' +
   '5SqQoPDoM+YfZZa23hoTLsu52toXobP74sf/9K501p/+8hm4ROMLBoRT86GQKY6g\n' +
   'eavsH0Q3\n' +
-  '-----END X509 CRL-----\n'
+  '-----END X509 CRL-----\n';
 
 let encodingBlob: cert.EncodingBlob = {
   data: stringToUint8Array(crlData),
@@ -318,7 +319,7 @@ cert.createX509CRL(encodingBlob, (err, x509CRL) => {
     try {
       let serialNumber = BigInt(1000);
       let crlEntry = x509CRL.getRevokedCert(serialNumber);
-      crlEntry.getEncoded((error, data) => {
+      crlEntry.getEncoded((error, _data) => {
         if (error) {
           console.error(`getEncoded failed, errCode: ${error.code}, errMsg: ${error.message}`);
         } else {
@@ -330,7 +331,7 @@ cert.createX509CRL(encodingBlob, (err, x509CRL) => {
       console.error(`getRevokedCert failed, errCode: ${e.code}, errMsg: ${e.message}`);
     }
   }
-})
+});
 ```
 
 ## getEncoded
@@ -384,7 +385,7 @@ let crlData = '-----BEGIN X509 CRL-----\n' +
   'J1LaNwiL+gDxI9rMQmlhsUGJmPIPdRs9uYyI+f854lsWYisD2PUEpn3DbEvzwYeQ\n' +
   '5SqQoPDoM+YfZZa23hoTLsu52toXobP74sf/9K501p/+8hm4ROMLBoRT86GQKY6g\n' +
   'eavsH0Q3\n' +
-  '-----END X509 CRL-----\n'
+  '-----END X509 CRL-----\n';
 
 let encodingBlob: cert.EncodingBlob = {
   data: stringToUint8Array(crlData),
@@ -401,7 +402,7 @@ cert.createX509CRL(encodingBlob, (err, x509CRL) => {
     try {
       let serialNumber = BigInt(1000);
       let crlEntry = x509CRL.getRevokedCert(serialNumber);
-      crlEntry.getEncoded().then(result => {
+      crlEntry.getEncoded().then(_result => {
         console.info('getEncoded result: success.');
       }).catch((error: BusinessError) => {
         console.error(`getEncoded failed, errCode: ${error.code}, errMsg: ${error.message}`);
@@ -411,7 +412,7 @@ cert.createX509CRL(encodingBlob, (err, x509CRL) => {
       console.error(`getRevokedCert failed, errCode: ${e.code}, errMsg: ${e.message}`);
     }
   }
-})
+});
 ```
 
 ## getExtensions
@@ -485,12 +486,13 @@ cert.createX509CRL(encodingBlob, (err, x509CRL) => {
       let serialNumber = BigInt(4);
       let crlEntry = x509CRL.getRevokedCert(serialNumber);
       let extensions = crlEntry.getExtensions();
+      console.info('extensions = ' + extensions.data);
     } catch (error) {
       let e: BusinessError = error as BusinessError;
       console.error(`getRevokedCert or getExtensions failed, errCode: ${e.code}, errMsg: ${e.message}`);
     }
   }
-})
+});
 ```
 
 ## getExtensionsObject
@@ -623,7 +625,7 @@ async function certGetExtensionsObject() {
   try {
     x509Crl = await cert.createX509CRL(encodingBlob);
     console.info('createX509CRL result: success.');
-    let object = x509Crl.getRevokedCert(BigInt('14091103387070223745671018446433705560')).getExtensionsObject();
+    x509Crl.getRevokedCert(BigInt('14091103387070223745671018446433705560')).getExtensionsObject();
   } catch (error) {
     let e: BusinessError = error as BusinessError;
     console.error(`createX509CRL failed, errCode: ${e.code}, errMsg: ${e.message}`);
@@ -681,7 +683,7 @@ let crlData = '-----BEGIN X509 CRL-----\n' +
   'J1LaNwiL+gDxI9rMQmlhsUGJmPIPdRs9uYyI+f854lsWYisD2PUEpn3DbEvzwYeQ\n' +
   '5SqQoPDoM+YfZZa23hoTLsu52toXobP74sf/9K501p/+8hm4ROMLBoRT86GQKY6g\n' +
   'eavsH0Q3\n' +
-  '-----END X509 CRL-----\n'
+  '-----END X509 CRL-----\n';
 
 let encodingBlob: cert.EncodingBlob = {
   data: stringToUint8Array(crlData),
@@ -699,12 +701,13 @@ cert.createX509CRL(encodingBlob, (err, x509CRL) => {
       let serialNumber = BigInt(1000);
       let crlEntry = x509CRL.getRevokedCert(serialNumber);
       let date = crlEntry.getRevocationDate();
+      console.info('date = ' + date);
     } catch (error) {
       let e: BusinessError = error as BusinessError;
       console.error(`getRevokedCert or getRevocationDate failed, errCode: ${e.code}, errMsg: ${e.message}`);
     }
   }
-})
+});
 ```
 
 ## getSerialNumber
@@ -757,7 +760,7 @@ let crlData = '-----BEGIN X509 CRL-----\n' +
   'J1LaNwiL+gDxI9rMQmlhsUGJmPIPdRs9uYyI+f854lsWYisD2PUEpn3DbEvzwYeQ\n' +
   '5SqQoPDoM+YfZZa23hoTLsu52toXobP74sf/9K501p/+8hm4ROMLBoRT86GQKY6g\n' +
   'eavsH0Q3\n' +
-  '-----END X509 CRL-----\n'
+  '-----END X509 CRL-----\n';
 
 let encodingBlob: cert.EncodingBlob = {
   data: stringToUint8Array(crlData),
@@ -775,12 +778,13 @@ cert.createX509CRL(encodingBlob, (err, x509CRL) => {
       let serialNumber = BigInt(1000);
       let crlEntry = x509CRL.getRevokedCert(serialNumber);
       serialNumber = crlEntry.getSerialNumber();
+      console.info('serialNumber = ' + serialNumber);
     } catch (error) {
       let e: BusinessError = error as BusinessError;
       console.error(`getRevokedCert or getSerialNumber failed, errCode: ${e.code}, errMsg: ${e.message}`);
     }
   }
-})
+});
 ```
 
 ## hasExtensions
@@ -833,7 +837,7 @@ let crlData = '-----BEGIN X509 CRL-----\n' +
   'J1LaNwiL+gDxI9rMQmlhsUGJmPIPdRs9uYyI+f854lsWYisD2PUEpn3DbEvzwYeQ\n' +
   '5SqQoPDoM+YfZZa23hoTLsu52toXobP74sf/9K501p/+8hm4ROMLBoRT86GQKY6g\n' +
   'eavsH0Q3\n' +
-  '-----END X509 CRL-----\n'
+  '-----END X509 CRL-----\n';
 
 let encodingBlob: cert.EncodingBlob = {
   data: stringToUint8Array(crlData),
@@ -851,12 +855,13 @@ cert.createX509CRL(encodingBlob, (err, x509CRL) => {
       let serialNumber = BigInt(1000);
       let crlEntry = x509CRL.getRevokedCert(serialNumber);
       let hasExtensions = crlEntry.hasExtensions();
+      console.info('hasExtensions = ' + hasExtensions);
     } catch (error) {
       let e: BusinessError = error as BusinessError;
       console.error(`getRevokedCert or hasExtensions failed, errCode: ${e.code}, errMsg: ${e.message}`);
     }
   }
-})
+});
 ```
 
 ## hashCode
@@ -909,7 +914,7 @@ let crlData = '-----BEGIN X509 CRL-----\n' +
   'J1LaNwiL+gDxI9rMQmlhsUGJmPIPdRs9uYyI+f854lsWYisD2PUEpn3DbEvzwYeQ\n' +
   '5SqQoPDoM+YfZZa23hoTLsu52toXobP74sf/9K501p/+8hm4ROMLBoRT86GQKY6g\n' +
   'eavsH0Q3\n' +
-  '-----END X509 CRL-----\n'
+  '-----END X509 CRL-----\n';
 
 let encodingBlob: cert.EncodingBlob = {
   data: stringToUint8Array(crlData),
@@ -980,7 +985,7 @@ let crlData = '-----BEGIN X509 CRL-----\n' +
   'J1LaNwiL+gDxI9rMQmlhsUGJmPIPdRs9uYyI+f854lsWYisD2PUEpn3DbEvzwYeQ\n' +
   '5SqQoPDoM+YfZZa23hoTLsu52toXobP74sf/9K501p/+8hm4ROMLBoRT86GQKY6g\n' +
   'eavsH0Q3\n' +
-  '-----END X509 CRL-----\n'
+  '-----END X509 CRL-----\n';
 
 let encodingBlob: cert.EncodingBlob = {
   data: stringToUint8Array(crlData),

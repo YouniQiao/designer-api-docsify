@@ -42,10 +42,11 @@ Connects to a printer by printer ID. This API uses an asynchronous callback to r
 import { print } from '@kit.BasicServicesKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
+// printer ID can be obtained from the on('printerChange') callback.
 let printerId: string = 'printerId_32';
-print.connectPrinter(printerId, (err: BusinessError) => {
-    if (err) {
-        console.error('failed to connect Printer because : ' + JSON.stringify(err));
+print.connectPrinter(printerId, (error: BusinessError) => {
+    if (error) {
+        console.error(`Failed to connectPrinter. Code: ${error.code}, message: ${error.message}`);
     } else {
         console.info('start connect Printer success');
     }
@@ -94,10 +95,11 @@ Connects to a printer by printer ID. This API uses a promise to return the resul
 import { print } from '@kit.BasicServicesKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
+// printer ID can be obtained from the on('printerChange') callback.
 let printerId: string = 'printerId_32';
 print.connectPrinter(printerId).then(() => {
     console.info('start connect Printer success');
 }).catch((error: BusinessError) => {
-    console.error('failed to connect Printer because : ' + JSON.stringify(error));
+    console.error(`Failed to connectPrinter. Code: ${error.code}, message: ${error.message}`);
 })
 ```

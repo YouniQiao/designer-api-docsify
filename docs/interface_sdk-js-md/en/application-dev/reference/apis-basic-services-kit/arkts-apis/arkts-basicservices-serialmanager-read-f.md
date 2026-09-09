@@ -52,9 +52,10 @@ Reads data from the serial port device asynchronously. This API uses a promise t
 ```TypeScript
 import { JSON } from '@kit.ArkTS';
 import { serialManager } from '@kit.BasicServicesKit';
+import { BusinessError } from '@kit.BasicServicesKit';
 
 // Obtain the serial port list.
-function read() {
+async function readExample() {
   let portList: serialManager.SerialPort[] = serialManager.getPortList();
   console.info('usbSerial portList: ' + JSON.stringify(portList));
   if (!portList || portList.length === 0) {
@@ -65,39 +66,44 @@ function read() {
 
   // Check whether the device can be accessed by the application.
   if (!serialManager.hasSerialRight(portId)) {
-    serialManager.requestSerialRight(portId).then(result => {
-      if (!result) {
-        // If the application does not have the access permission and the user does not grant the permission, the application exits.
-        console.error('user is not granted the operation permission');
-        return;
-      } else {
-        console.info('grant permission successfully');
-      }
-    });
+    let result = await serialManager.requestSerialRight(portId);
+    if (!result) {
+      // If the app does not have the access permission and the user does not grant the permission, the app exits.
+      console.error('user is not granted the operation permission');
+      return;
+    } else {
+      console.info('grant permission successfully');
+    }
   }
 
   // Open a serial port device.
   try {
-    serialManager.open(portId)
+    serialManager.open(portId);
     console.info('open usbSerial success, portId: ' + portId);
   } catch (error) {
-    console.error('open usbSerial error, ' + JSON.stringify(error));
+    const err: BusinessError = error as BusinessError;
+    console.error(`Failed to open usbSerial. Code: ${err.code}, message: ${err.message}`);
   }
 
   // Read data asynchronously.
-  let readBuffer: Uint8Array = new Uint8Array(64);
-  serialManager.read(portId, readBuffer, 2000).then((size: number) => {
-    console.info('read usbSerial success, readBuffer: ' + readBuffer.toString());
-  }).catch((error: Error) => {
-    console.error('read usbSerial error, ' + JSON.stringify(error));
-  })
+  try {
+    let readBuffer: Uint8Array = new Uint8Array(64);
+    let size: number = await serialManager.read(portId, readBuffer, 2000);
+    if (size > 0) {
+      console.info('read usbSerial success, readBuffer: ' + readBuffer.toString());
+    }
+  } catch (error) {
+    const err: BusinessError = error as BusinessError;
+    console.error(`Failed to read usbSerial. Code: ${err.code}, message: ${err.message}`);
+  }
 
   // Close the serial port device.
   try {
     serialManager.close(portId);
     console.info('close usbSerial success, portId: ' + portId);
   } catch (error) {
-    console.error('close usbSerial error, ' + JSON.stringify(error));
+    const err: BusinessError = error as BusinessError;
+    console.error(`Failed to close usbSerial. Code: ${err.code}, message: ${err.message}`);
   }
 }
 ```

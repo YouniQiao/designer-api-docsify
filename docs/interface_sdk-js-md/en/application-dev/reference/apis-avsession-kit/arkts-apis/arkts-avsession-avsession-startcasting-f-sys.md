@@ -43,6 +43,7 @@ Cast resource to remote device.
 **Examples**
 
 ```TypeScript
+let sessionId = 'xxx'; // Obtain the session ID after creating a session using avSession.createAVSession.
 let myToken: avSession.SessionToken = {
   sessionId: sessionId,
 }
@@ -101,6 +102,7 @@ Cast resource to remote device.
 **Examples**
 
 ```TypeScript
+let sessionId = 'xxx'; // Obtain the session ID after creating a session using avSession.createAVSession.
 let myToken: avSession.SessionToken = {
   sessionId: sessionId,
 }

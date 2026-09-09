@@ -45,35 +45,39 @@ Performs control transfer. This API uses a promise to return the result.
 **Examples**
 
 ```TypeScript
-class PARA {
-  request: number = 0
-  reqType: usbManager.USBControlRequestType = 0
-  target: usbManager.USBRequestTargetType = 0
-  value: number = 0
-  index: number = 0
-  data: Uint8Array = new Uint8Array()
-}
-
-let param: PARA = {
+import {BusinessError} from '@kit.BasicServicesKit';
+let param: usbManager.USBControlParams = {
   request: 0x06,
   reqType: 0x80,
-  target:0,
+  target: 0,
   value: 0x01 << 8 | 0,
   index: 0,
   data: new Uint8Array(18)
 };
 
-function controlTransfer() {
+async function controlTransfer() {
   let devicesList: Array<usbManager.USBDevice> = usbManager.getDevices();
   if (!devicesList || devicesList.length == 0) {
     console.info(`device list is empty`);
     return;
   }
 
-  usbManager.requestRight(devicesList[0].name);
-  let devicepipe: usbManager.USBDevicePipe = usbManager.connectDevice(devicesList[0]);
-  usbManager.controlTransfer(devicepipe, param).then((ret: number) => {
-  console.info(`controlTransfer = ${ret}`);
-  })
+  let rightResult = await usbManager.requestRight(devicesList[0].name);
+  if (!rightResult) {
+    console.error(`request right failed`);
+    return;
+  }
+  let devicePipe: usbManager.USBDevicePipe = usbManager.connectDevice(devicesList[0]);
+  if (devicePipe == undefined) {
+    console.error(`connect device failed`);
+    return;
+  }
+  usbManager.controlTransfer(devicePipe, param).then((ret: number) => {
+    console.info(`controlTransfer = ${ret}`);
+  }).catch((error: BusinessError) => {
+    console.error(`Failed to transfer. Code: ${error.code}, message: ${error.message}`);
+  }).finally(() => {
+    usbManager.closePipe(devicePipe);
+  });
 }
 ```

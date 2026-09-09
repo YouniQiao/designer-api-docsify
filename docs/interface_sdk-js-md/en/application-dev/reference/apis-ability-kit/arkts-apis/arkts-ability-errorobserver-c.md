@@ -33,8 +33,8 @@ import { errorManager } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let observer: errorManager.ErrorObserver = {
-  onUnhandledException(errorMsg) {
-    console.error('onUnhandledException, errorMsg: ', errorMsg);
+  onUnhandledException(errObject) {
+    console.error('onUnhandledException, errObject: ', errObject);
   },
   onException(errorObj) {
     console.error('onException, name: ', errorObj.name);
@@ -79,8 +79,8 @@ import { errorManager } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let observer: errorManager.ErrorObserver = {
-  onUnhandledException(errorMsg) {
-    console.error('onUnhandledException, errorMsg: ', errorMsg);
+  onUnhandledException(errMsg) {
+    console.error('onUnhandledException, errMsg: ', errMsg);
   }
 };
 

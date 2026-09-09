@@ -58,7 +58,7 @@ Finishes the crypto operation, encrypts or decrypts the input data, and then fee
 
 **Examples**
 
-For more encryption and decryption examples, see [Encryption and Decryption with an AES Symmetric Key (GCM Mode)](../../../security/CryptoArchitectureKit/crypto-aes-sym-encrypt-decrypt-gcm.md).
+For more encryption and decryption examples, see Using an AES Symmetric Key (GCM Mode) for Encryption and Decryption).
 
 ```TypeScript
 import { cryptoFramework } from '@kit.CryptoArchitectureKit';
@@ -108,7 +108,7 @@ function cipherByCallback() {
 }
 ```
 
-For more encryption and decryption examples, see [Encryption and Decryption with an AES Symmetric Key (GCM Mode)](../../../security/CryptoArchitectureKit/crypto-aes-sym-encrypt-decrypt-gcm.md).
+In addition, for more encryption and decryption examples, see Using an AES Symmetric Key (GCM Mode) for Encryption and Decryption.
 
 ```TypeScript
 import { cryptoFramework } from '@kit.CryptoArchitectureKit';
@@ -218,7 +218,7 @@ of **update()** and **doFinal()** throughout the process will yield the complete
 
 **Examples**
 
-For more encryption and decryption examples, see [Encryption and Decryption with an AES Symmetric Key (GCM Mode)](../../../security/CryptoArchitectureKit/crypto-aes-sym-encrypt-decrypt-gcm.md).
+For more encryption and decryption examples, see Using an AES Symmetric Key (GCM Mode) for Encryption and Decryption).
 
 ```TypeScript
 import { cryptoFramework } from '@kit.CryptoArchitectureKit';
@@ -308,7 +308,7 @@ Finishes the crypto operation, encrypts or decrypts the input data, and then fee
 
 **Examples**
 
-For more encryption and decryption examples, see [Encryption and Decryption with an AES Symmetric Key (GCM Mode)](../../../security/CryptoArchitectureKit/crypto-aes-sym-encrypt-decrypt-gcm.md).
+For more encryption and decryption examples, see Using an AES Symmetric Key (GCM Mode) for Encryption and Decryption).
 
 ```TypeScript
 import { cryptoFramework } from '@kit.CryptoArchitectureKit';
@@ -358,7 +358,7 @@ function cipherByCallback() {
 }
 ```
 
-For more encryption and decryption examples, see [Encryption and Decryption with an AES Symmetric Key (GCM Mode)](../../../security/CryptoArchitectureKit/crypto-aes-sym-encrypt-decrypt-gcm.md).
+In addition, for more encryption and decryption examples, see Using an AES Symmetric Key (GCM Mode) for Encryption and Decryption.
 
 ```TypeScript
 import { cryptoFramework } from '@kit.CryptoArchitectureKit';
@@ -480,7 +480,7 @@ of **update()** and **doFinal()** throughout the process will yield the complete
 
 **Examples**
 
-For more encryption and decryption examples, see [Encryption and Decryption with an AES Symmetric Key (GCM Mode)](../../../security/CryptoArchitectureKit/crypto-aes-sym-encrypt-decrypt-gcm.md).
+In addition, for more encryption and decryption examples, see Using an AES Symmetric Key (GCM Mode) for Encryption and Decryption.
 
 ```TypeScript
 import { cryptoFramework } from '@kit.CryptoArchitectureKit';
@@ -582,7 +582,7 @@ See **NOTE：**in [doFinal()](#dofinal) for other precautions.
 
 **Examples**
 
-For more encryption and decryption examples, see [Encryption and Decryption with an AES Symmetric Key (GCM Mode)](../../../security/CryptoArchitectureKit/crypto-aes-sym-encrypt-decrypt-gcm.md).
+In addition, for more encryption and decryption examples, see Using an AES Symmetric Key (GCM Mode) for Encryption and Decryption.
 
 ```TypeScript
 import { cryptoFramework } from '@kit.CryptoArchitectureKit';

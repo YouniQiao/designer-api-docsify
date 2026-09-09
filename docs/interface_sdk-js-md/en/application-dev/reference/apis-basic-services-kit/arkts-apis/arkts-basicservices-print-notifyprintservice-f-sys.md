@@ -46,13 +46,13 @@ import { print } from '@kit.BasicServicesKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let jobId : string = '1';
-print.notifyPrintService(jobId, 'spooler_closed_for_started', (err: BusinessError) => {
-    if (err) {
-        console.error('notifyPrintService failed, because : ' + JSON.stringify(err));
+print.notifyPrintService(jobId, 'spooler_closed_for_started', (error: BusinessError) => {
+    if (error) {
+        console.error(`Failed to notify print service. Code: ${error.code}, message: ${error.message}`);
     } else {
         console.info('notifyPrintService success');
     }
-})
+});
 ```
 
 
@@ -104,6 +104,6 @@ let jobId : string = '1';
 print.notifyPrintService(jobId, 'spooler_closed_for_started').then(() => {
     console.info('notifyPrintService success');
 }).catch((error: BusinessError) => {
-    console.error('notifyPrintService error : ' + JSON.stringify(error));
-})
+    console.error(`Failed to notify print service. Code: ${error.code}, message: ${error.message}`);
+});
 ```

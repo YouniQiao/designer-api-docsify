@@ -208,7 +208,7 @@ Register Session service death callback, notifying the application to clean up r
 
 ```TypeScript
 avSession.on('sessionServiceDie', () => {
-  console.info('on sessionServiceDie  : session is  Died ');
+  console.info('on sessionServiceDie : session is dead ');
 });
 ```
 

@@ -45,17 +45,22 @@ Obtains the accessory handle and opens the accessory file descriptor. Then, the 
 **Examples**
 
 ```TypeScript
-import { hilog } from '@kit.PerformanceAnalysisKit';
 import { fileIo } from '@kit.CoreFileKit';
-try {
-  let accList: usbManager.USBAccessory[] = usbManager.getAccessoryList()
-  let flag = usbManager.requestAccessoryRight(accList?.[0])
-  let handle = usbManager.openAccessory(accList?.[0])
-  hilog.info(0, 'testTag ui', `openAccessory success`)
-  let arrayBuffer = new ArrayBuffer(4096);
-  let readLength = fileIo.readSync(handle.accessoryFd, arrayBuffer, {offset: 0, length: 4096});
-  hilog.info(0, 'testTag ui', 'readSync ret: ' + readLength.toString(10));
-} catch (error) {
-  hilog.error(0, 'testTag ui', `openAccessory error ${error.code}, message is ${error.message}`)
+async function openAccessory() {
+  try {
+    let accList: usbManager.USBAccessory[] = usbManager.getAccessoryList();
+    let flag = await usbManager.requestAccessoryRight(accList?.[0]);
+    if (!flag) {
+      return;
+    }
+    let handle = usbManager.openAccessory(accList?.[0]);
+    console.info(`openAccessory success`);
+    let arrayBuffer = new ArrayBuffer(4096);
+    let readLength = fileIo.readSync(handle.accessoryFd, arrayBuffer, {offset: 0, length: 4096});
+    console.info('readSync ret: ' + readLength.toString(10));
+    usbManager.closeAccessory(handle);
+  } catch (error) {
+    console.error(`openAccessory error ${error.code}, message is ${error.message}`);
+  }
 }
 ```

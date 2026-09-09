@@ -58,14 +58,14 @@ import { insightIntentDriver } from '@kit.AbilityKit';
     try {
       let bundleName = "com.example.intent"; // Use the actual bundle name.
       let moduleName = "entry"; // Use the actual module name.
-      let intentName = "play"; // Use the actual intent name.
+      let intentName = "PlayMusic"; // Modify it to the actual intent name.
       insightIntentDriver.getInsightIntentInfoByIntentName(
         bundleName, moduleName, intentName, insightIntentDriver.GetInsightIntentFlag.GET_FULL_INSIGHT_INTENT | insightIntentDriver.GetInsightIntentFlag.GET_ENTITY_INFO)
       .then((data) => {
         hilog.info(0x0000, 'testTag', 'getInsightIntentInfoByIntentName return %{public}s', JSON.stringify(data));
       }).catch((err: BusinessError) => {
-        hilog.info(0x0000, 'testTag', 'getInsightIntentInfoByIntentName errCode: %{public}d', err.code);
-        hilog.info(0x0000, 'testTag', 'getInsightIntentInfoByIntentName errMessage: %{public}s', err.message);
+        hilog.error(0x0000, 'testTag', 'getInsightIntentInfoByIntentName errCode: %{public}d', err.code);
+        hilog.error(0x0000, 'testTag', 'getInsightIntentInfoByIntentName errMessage: %{public}s', err.message);
       });
     } catch (error) {
       hilog.error(0x0000, 'testTag', 'getInsightIntentInfoByIntentName error caught %{public}s', JSON.stringify(error));

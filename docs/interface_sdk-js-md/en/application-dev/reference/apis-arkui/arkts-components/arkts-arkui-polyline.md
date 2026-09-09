@@ -56,7 +56,7 @@ Defines the constructor of Polyline component.
 
 ## Examples
 
-This example demonstrates how to use points, fillOpacity, stroke, strokeLineJoin, and strokeLineCap to draw a polyline with specific coordinates, opacity, stroke colors, corner styles, and endpoint styles.
+This example draws the passing coordinates, opacity, stroke color, stroke width, join style, and endpoint style of the polyline through the points, fillOpacity, stroke, strokeWidth, strokeLineJoin, and strokeLineCap attributes, respectively.
 
 ```TypeScript
 // xxx.ets

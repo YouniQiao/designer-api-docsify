@@ -98,7 +98,7 @@ struct RectExample {
           .stroke(Color.Transparent)
       }.width('100%').margin({ top: 10 })
 
-      // Draw a 90% × 50 rectangle, with the width and height of its rounded corners as follows: 40 for the upper left rounded corner, 20 for the upper right rounded corner, 40 for the lower right rounded corner, and 20 for the lower left rounded corner.
+      // Draw a 90% × 80 rectangle, with rounded corner width and height of 40 for the top-left corner, 20 for the top-right corner, 40 for the bottom-right corner, and 20 for the bottom-left corner.
       Rect({ width: '90%', height: 80 })
         .radius([[40, 40], [20, 20], [40, 40], [20, 20]])
         .fill(Color.Pink)
@@ -107,7 +107,7 @@ struct RectExample {
 }
 ```
 
-This example demonstrates how to use the universal attributes [linearGradient](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-gradient-color.md#lineargradient18) and [clipShape](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-sharp-clipping.md#clipshape18) to draw a gradient rectangle.
+This example uses the universal attributes [linearGradient](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-gradient-color.md#lineargradient18) and [clipShape](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-sharp-clipping.md#clipshape18) to draw a rectangle with a gradient color.
 The universal attributes linearGradient and clipShape are supported since API version 18.
 
 ```TypeScript
@@ -130,7 +130,7 @@ struct RectExample {
         .height(100)
         // Set the color of the fill area. To display the gradient color of the background, set .fillOpacity(0.0).
         .fill(Color.Pink)
-        // Set the radius of the chamfer to 40.
+        // Set the rounded corner to 40.
         .radius(40)
         .stroke(Color.Black)
         // Set the gradient color. It takes effect only for a 100 × 100 rectangular area. The boundary of the gradient color does not contain chamfers.
@@ -160,7 +160,7 @@ struct RectExample {
         .fillOpacity(0)
         .stroke(Color.Red)
         .strokeWidth(3)
-      // Draw a 200 × 50 rectangle, with the width and height of its rounded corners being 80 and 20, respectively.
+      // Use the Resource type to obtain the size and rounded corner parameters from the resource file to draw a rectangle.
       Rect({
         width: $r('app.string.RectWidth'), // Use the Resource type, which needs to be customized.
         height: $r('app.string.RectHeight'),
@@ -180,7 +180,7 @@ This example shows how to use attributeModifier to dynamically set the fill, fil
 // xxx.ets
 class MyRectModifier implements AttributeModifier<RectAttribute> {
   applyNormalAttribute(instance: RectAttribute): void {
-    // Fill color: #707070; fill opacity: 0.5; stroke color: #2787D9; stroke dash array: [20]; offset to left: 15; cap style: semi-circle; join style: miter; miter limit: 5; stroke opacity: 0.5; stroke width: 10; anti-aliasing enabled.
+    // Fill with color #707070, fill opacity 0.5, stroke color #2787D9, stroke dash length and gap length both 20, offset 15 to the left, line cap style round, line join style miter, miter limit 5, stroke opacity 0.5, stroke width 10, and anti-aliasing enabled.
     instance.fill("#707070")
     instance.fillOpacity(0.5)
     instance.stroke("#2787D9")

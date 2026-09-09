@@ -108,6 +108,37 @@ Creates a data URL that contains a representation of an image. This API involves
 | --- | --- |
 | string | Image URL. |
 
+**Examples**
+
+```TypeScript
+// xxx.ets
+@Entry
+@Component
+struct ToDataURL {
+  private settings: RenderingContextSettings = new RenderingContextSettings(true);
+  private context: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings);
+  private offCanvas: OffscreenCanvas = new OffscreenCanvas(100, 100);
+  @State dataURL: string = "";
+
+  build() {
+    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
+      Canvas(this.context)
+        .width(100)
+        .height(100)
+        .onReady(() => {
+          let offContext = this.offCanvas.getContext("2d", this.settings)
+          offContext.fillRect(0, 0, 100, 100)
+          this.dataURL = offContext.toDataURL()
+        })
+      Text(this.dataURL)
+    }
+    .width('100%')
+    .height('100%')
+    .backgroundColor('#ffff00')
+  }
+}
+```
+
 ## transferToImageBitmap
 
 ```TypeScript
@@ -129,3 +160,40 @@ Creates an **ImageBitmap** object from the most recently rendered image of the o
 | Type | Description |
 | --- | --- |
 | [ImageBitmap](arkts-arkui-imagebitmap-c.md) | Pixel data rendered on the offscreen canvas. |
+
+**Examples**
+
+```TypeScript
+// xxx.ets
+@Entry
+@Component
+struct PutImageData {
+  private settings: RenderingContextSettings = new RenderingContextSettings(true);
+  private context: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings);
+  private offCanvas: OffscreenCanvas = new OffscreenCanvas(600, 600);
+
+  build() {
+    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
+      Canvas(this.context)
+        .width('100%')
+        .height('100%')
+        .backgroundColor('rgb(213,213,213)')
+        .onReady(() => {
+          let offContext = this.offCanvas.getContext("2d", this.settings)
+          let imageData = offContext.createImageData(100, 100)
+          for (let i = 0; i < imageData.data.length; i += 4) {
+            imageData.data[i + 0] = 112
+            imageData.data[i + 1] = 112
+            imageData.data[i + 2] = 112
+            imageData.data[i + 3] = 255
+          }
+          offContext.putImageData(imageData, 10, 10)
+          let image = this.offCanvas.transferToImageBitmap()
+          this.context.transferFromImageBitmap(image)
+        })
+    }
+    .width('100%')
+    .height('100%')
+  }
+}
+```

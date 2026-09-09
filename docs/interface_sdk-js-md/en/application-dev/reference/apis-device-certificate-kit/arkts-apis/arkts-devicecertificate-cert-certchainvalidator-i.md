@@ -110,15 +110,15 @@ let caPem = '-----BEGIN CERTIFICATE-----\n' +
 let certPemData = stringToUint8Array(certPem);
 let caPemData = stringToUint8Array(caPem);
 
-let certPemDataLenData = new Uint8Array(new Uint16Array([certPemData.length]).buffer)
-let caPemDataLenData = new Uint8Array(new Uint16Array([caPemData.length]).buffer)
+let certPemDataLenData = new Uint8Array(new Uint16Array([certPemData.length]).buffer);
+let caPemDataLenData = new Uint8Array(new Uint16Array([caPemData.length]).buffer);
 
 let certChainBuff =
-  new Uint8Array(certPemDataLenData.length + certPemData.length + caPemDataLenData.length + caPemData.length)
-certChainBuff.set(certPemDataLenData)
-certChainBuff.set(certPemData, certPemDataLenData.length)
-certChainBuff.set(caPemDataLenData, certPemDataLenData.length + certPemData.length)
-certChainBuff.set(caPemData, certPemDataLenData.length + certPemData.length + caPemDataLenData.length)
+  new Uint8Array(certPemDataLenData.length + certPemData.length + caPemDataLenData.length + caPemData.length);
+certChainBuff.set(certPemDataLenData);
+certChainBuff.set(certPemData, certPemDataLenData.length);
+certChainBuff.set(caPemDataLenData, certPemDataLenData.length + certPemData.length);
+certChainBuff.set(caPemData, certPemDataLenData.length + certPemData.length + caPemDataLenData.length);
 
 let certChainData: cert.CertChainData = {
   data: certChainBuff,
@@ -130,7 +130,7 @@ let certChainData: cert.CertChainData = {
 
 try {
   let validator = cert.createCertChainValidator('PKIX');
-  validator.validate(certChainData, (error, data) => {
+  validator.validate(certChainData, (error, _data) => {
     if (error) {
       console.error(`validate failed, errCode: ${error.code}, errMsg: ${error.message}`);
     } else {
@@ -246,15 +246,15 @@ let caPem = '-----BEGIN CERTIFICATE-----\n' +
 let certPemData = stringToUint8Array(certPem);
 let caPemData = stringToUint8Array(caPem);
 
-let certPemDataLenData = new Uint8Array(new Uint16Array([certPemData.length]).buffer)
-let caPemDataLenData = new Uint8Array(new Uint16Array([caPemData.length]).buffer)
+let certPemDataLenData = new Uint8Array(new Uint16Array([certPemData.length]).buffer);
+let caPemDataLenData = new Uint8Array(new Uint16Array([caPemData.length]).buffer);
 
 let certChainBuff =
-  new Uint8Array(certPemDataLenData.length + certPemData.length + caPemDataLenData.length + caPemData.length)
-certChainBuff.set(certPemDataLenData)
-certChainBuff.set(certPemData, certPemDataLenData.length)
-certChainBuff.set(caPemDataLenData, certPemDataLenData.length + certPemData.length)
-certChainBuff.set(caPemData, certPemDataLenData.length + certPemData.length + caPemDataLenData.length)
+  new Uint8Array(certPemDataLenData.length + certPemData.length + caPemDataLenData.length + caPemData.length);
+certChainBuff.set(certPemDataLenData);
+certChainBuff.set(certPemData, certPemDataLenData.length);
+certChainBuff.set(caPemDataLenData, certPemDataLenData.length + certPemData.length);
+certChainBuff.set(caPemData, certPemDataLenData.length + certPemData.length + caPemDataLenData.length);
 
 let certChainData: cert.CertChainData = {
   data: certChainBuff,
@@ -266,7 +266,7 @@ let certChainData: cert.CertChainData = {
 
 try {
   let validator = cert.createCertChainValidator('PKIX');
-  validator.validate(certChainData).then(result => {
+  validator.validate(certChainData).then(_result => {
     console.info('validate result: success.');
   }).catch((error: BusinessError) => {
     console.error(`validate failed, errCode: ${error.code}, errMsg: ${error.message}`);

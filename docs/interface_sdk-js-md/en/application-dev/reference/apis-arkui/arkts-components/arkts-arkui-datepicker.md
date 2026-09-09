@@ -130,7 +130,7 @@ struct DatePickerExample {
 
   build() {
     Column() {
-      Button('Switch Calendar')
+      Button('Switch Gregorian/Lunar Calendar')
         .margin({ top: 30, bottom: 30 })
         .onClick(() => {
           this.isLunar = !this.isLunar;
@@ -139,7 +139,7 @@ struct DatePickerExample {
         start: new Date('1970-1-1'),
         end: new Date('2100-1-1'),
         selected: this.selectedDate,
-        mode:this.datePickerModeList[this.datePickerModeIndex]
+        mode: this.datePickerModeList[this.datePickerModeIndex]
       })
         .lunar(this.isLunar)
         .onDateChange((value: Date) => {
@@ -150,7 +150,7 @@ struct DatePickerExample {
       Button('mode :' + this.datePickerModeIndex).margin({ top: 20 })
         .onClick(() => {
           this.datePickerModeIndex++;
-          if(this.datePickerModeIndex >= this.datePickerModeList.length){
+          if (this.datePickerModeIndex >= this.datePickerModeList.length) {
             this.datePickerModeIndex = 0;
           }
         })
@@ -172,8 +172,6 @@ struct DatePickerExample {
   build() {
     Column() {
       DatePicker({
-        start: new Date("2000-1-1"),
-        end: new Date("2100-12-31"),
         selected: this.selectedDate,
       })
         .canLoop(this.isLoop)
@@ -183,7 +181,7 @@ struct DatePickerExample {
 
       Row() {
         Text('Cyclic scrolling').fontSize(20)
-        Toggle({ type: ToggleType.Switch, isOn: true })
+        Toggle({ type: ToggleType.Switch, isOn: this.isLoop })
           .onChange((isOn: boolean) => {
             this.isLoop = isOn;
           })

@@ -753,7 +753,7 @@ let newSize: window.Size = {
 let templateProperty: floatView.TemplateProperty = {
   templateType: floatView.FloatViewTemplateType.HORIZONTAL_BAR,
   size: newSize
-}
+};
 try {
   // Switch the template of the float view and change the window size.
   this.floatViewController?.switchTemplate(templateProperty).then(() => {

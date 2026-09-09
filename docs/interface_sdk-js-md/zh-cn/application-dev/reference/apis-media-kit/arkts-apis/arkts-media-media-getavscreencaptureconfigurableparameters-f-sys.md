@@ -12,7 +12,7 @@ import { media } from '@kit.MediaKit';
 function getAVScreenCaptureConfigurableParameters(sessionId: number): Promise<string>
 ```
 
-get Configurations which user can changes from AVScreenCapture server
+从服务器获取用户可更改的系统隐私保护和应用隐私保护配置。使用Promise异步回调。
 
 **起始版本：** 20
 
@@ -24,13 +24,13 @@ get Configurations which user can changes from AVScreenCapture server
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| sessionId | number | 是 | The AVScreenCapture server session ID. |
+| sessionId | number | 是 | AVScreenCapture服务会话Id，由AVScreenCapture拉起隐私弹窗时传给应用。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;string&gt; | Returns a configurable configuration item string. |
+| Promise&lt;string&gt; | Promise对象，返回系统隐私保护和应用隐私保护状态，失败时返回空字符串。 |
 
 **错误码：**
 

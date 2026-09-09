@@ -65,24 +65,26 @@ Grants the URI permission to an application. If the call is successful, the appl
 import { uriPermissionManager, wantConstant } from '@kit.AbilityKit';
 import { fileIo, fileUri } from '@kit.CoreFileKit';
 
-let targetBundleName = 'com.example.test_case1'
+let targetBundleName = 'com.example.test_case1';
 let path = 'file://com.example.test_case1/data/storage/el2/base/haps/entry_test/files/newDir';
+// Create the directory.
 fileIo.mkdir(path, (err) => {
   if (err) {
     console.error(`mkdir failed, err code: ${err.code}, err msg: ${err.message}.`);
-  } else {
-    console.info(`mkdir success.`);
+    return;
   }
+  console.info(`mkdir success.`);
+  let uri = fileUri.getUriFromPath(path);
+  // Grant the URI permission to the specified application.
+  uriPermissionManager.grantUriPermission(uri, wantConstant.Flags.FLAG_AUTH_READ_URI_PERMISSION, targetBundleName,
+    (error) => {
+      if (error && error.code !== 0) {
+        console.error(`grantUriPermission failed, err code: ${error.code}, err msg: ${error.message}.`);
+        return;
+      }
+      console.info(`grantUriPermission success.`);
+    });
 });
-let uri = fileUri.getUriFromPath(path);
-uriPermissionManager.grantUriPermission(uri, wantConstant.Flags.FLAG_AUTH_READ_URI_PERMISSION, targetBundleName,
-  (error) => {
-    if (error && error.code !== 0) {
-      console.error(`grantUriPermission failed, err code: ${error.code}, err msg: ${error.message}.`);
-      return;
-    }
-    console.info(`grantUriPermission success.`);
-  });
 ```
 
 
@@ -149,19 +151,21 @@ import { BusinessError } from '@kit.BasicServicesKit';
 let targetBundleName = 'com.example.test_case1'
 let path = 'file://com.example.test_case1/data/storage/el2/base/haps/entry_test/files/newDir';
 
+// Create the directory.
 fileIo.mkdir(path, (err) => {
   if (err) {
     console.error(`mkdir failed, err code: ${err.code}, err msg: ${err.message}.`);
-  } else {
-    console.info(`mkdir succeed.`);
+    return;
   }
-});
-let uri = fileUri.getUriFromPath(path);
-uriPermissionManager.grantUriPermission(uri, wantConstant.Flags.FLAG_AUTH_READ_URI_PERMISSION, targetBundleName)
-  .then((data) => {
-    console.info(`Verification succeeded, data: ${JSON.stringify(data)}.`);
-  }).catch((err: BusinessError) => {
-  console.error(`Verification failed, err code: ${err.code}, err msg: ${err.message}.`);
+  console.info(`mkdir success.`);
+  let uri = fileUri.getUriFromPath(path);
+  // Grant the URI to the specified application.
+  uriPermissionManager.grantUriPermission(uri, wantConstant.Flags.FLAG_AUTH_READ_URI_PERMISSION, targetBundleName)
+    .then((data) => {
+      console.info(`grantUriPermission succeeded, data: ${JSON.stringify(data)}.`);
+    }).catch((err: BusinessError) => {
+    console.error(`grantUriPermission failed, err code: ${err.code}, err msg: ${err.message}.`);
+  });
 });
 ```
 
@@ -239,7 +243,7 @@ export default class EntryAbility extends UIAbility {
     let targetBundleName: string = 'com.example.demo1';
     let filePath: string = this.context.filesDir + "/test.txt";
     let uri: string = fileUri.getUriFromPath(filePath);
-    // grant uri permission to main application
+    // Grant the URI permission to the main application.
     try {
       let appCloneIndex: number = 0;
       uriPermissionManager.grantUriPermission(uri, wantConstant.Flags.FLAG_AUTH_READ_URI_PERMISSION, targetBundleName,
@@ -253,7 +257,7 @@ export default class EntryAbility extends UIAbility {
       console.error(`grantUriPermission failed. error: ${JSON.stringify(error)}.`);
     }
 
-    // grant uri permission to clone application
+    // Grant the URI permission to the clone application.
     try {
       let appCloneIndex: number = 1;
       uriPermissionManager.grantUriPermission(uri, wantConstant.Flags.FLAG_AUTH_READ_URI_PERMISSION, targetBundleName,

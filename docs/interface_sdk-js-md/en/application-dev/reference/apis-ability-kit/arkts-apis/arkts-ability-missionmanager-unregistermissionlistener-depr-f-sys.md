@@ -36,6 +36,7 @@ Unregisters a mission status listener. This API uses an asynchronous callback to
 
 ```TypeScript
 import missionManager from '@ohos.application.missionManager';
+import { BusinessError } from '@ohos.base';
 
 console.info('registerMissionListener');
 let listenerId = missionManager.registerMissionListener({
@@ -62,8 +63,10 @@ let listenerId = missionManager.registerMissionListener({
   }
 });
 
+// Unregister a system mission status listener.
 missionManager.unregisterMissionListener(listenerId, (error) => {
-  console.error(`unregisterMissionListener fail, error: ${JSON.stringify(error)}`);
+  let err = error as BusinessError;
+  console.error(`unregisterMissionListener failed. Code: ${err.code}, message: ${err.message}.`);
 });
 ```
 
@@ -131,11 +134,12 @@ let listenerId = missionManager.registerMissionListener({
   }
 });
 
+// Unregister the system mission status listener.
 missionManager.unregisterMissionListener(listenerId)
   .then(() => {
     console.info(`UnregisterMissionListener success.`)
   })
   .catch((error: BusinessError) => {
-    console.error(`UnregisterMissionListener fail, error: ${JSON.stringify(error)}.`);
+    console.error(`unregisterMissionListener failed. Code: ${error.code}, message: ${error.message}.`);
   });
 ```

@@ -46,7 +46,7 @@ Clears the system pasteboard. This API uses an asynchronous callback to return t
 const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteboard();
 systemPasteboard.clear((err, data) => {
     if (err) {
-        console.error(`Failed to clear the PasteData. Cause: ${err.message}`);
+        console.error(`Failed to clear the PasteData. errorCode: ${err.code}, errorMessage: ${err.message}.`);
         return;
     }
     console.info('Succeeded in clearing the PasteData.');
@@ -84,7 +84,7 @@ const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteb
 systemPasteboard.clear().then((data) => {
     console.info('Succeeded in clearing the PasteData.');
 }).catch((err: BusinessError) => {
-    console.error(`Failed to clear the PasteData. Cause: ${err.message}`);
+    console.error(`Failed to clear the PasteData. errorCode: ${err.code}, errorMessage: ${err.message}.`);
 });
 ```
 
@@ -122,7 +122,7 @@ const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteb
 // Clear the system pasteboard content.
 systemPasteboard.clearData((err, data) => {
     if (err) {
-        console.error(`Failed to clear the pasteboard. Cause: ${err.message}`);
+        console.error(`Failed to clear the pasteboard. errorCode: ${err.code}, errorMessage: ${err.message}.`);
         return;
     }
     console.info('Succeeded in clearing the pasteboard.');
@@ -158,7 +158,7 @@ const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteb
 systemPasteboard.clearData().then((data: void) => {
     console.info('Succeeded in clearing the pasteboard.');
 }).catch((err: BusinessError) => {
-    console.error(`Failed to clear the pasteboard. Cause: ${err.message}`);
+    console.error(`Failed to clear the pasteboard. errorCode: ${err.code}, errorMessage: ${err.message}.`);
 });
 ```
 
@@ -190,7 +190,7 @@ try {
     systemPasteboard.clearDataSync();
     console.info('Succeeded in clearing the pasteboard.');
 } catch (err) {
-    console.error('Failed to clear the pasteboard. Cause: ' + err.message);
+    console.error(`Failed to clear the pasteboard. errorCode: ${err.code}, errorMessage: ${err.message}.`);
 };
 ```
 
@@ -233,13 +233,13 @@ const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteb
 let patterns: Array<pasteboard.Pattern> = [pasteboard.Pattern.URL, pasteboard.Pattern.EMAIL_ADDRESS];
 
 systemPasteboard.detectPatterns(patterns).then((data: Array<pasteboard.Pattern>) => {
-    if (patterns.sort().join('')==data.sort().join('')) {
+    if (patterns.sort().join('') == data.sort().join('')) {
       console.info('All needed patterns detected, next get data');
       try {
         let result: pasteboard.PasteData = systemPasteboard.getDataSync();
         console.info('Succeeded in getting PasteData.');
       } catch (err) {
-        console.error('Failed to get PasteData. Cause:' + err.message);
+        console.error(`Failed to get PasteData. errorCode: ${err.code}, errorMessage: ${err.message}.`);
       };
     } else {
       console.info("Not all needed patterns detected, no need to get data.");
@@ -277,7 +277,7 @@ try {
     let result : number = systemPasteboard.getChangeCount();
     console.info(`Succeeded in getting the ChangeCount. Result: ${result}`);
 } catch (err) {
-    console.error(`Failed to get the ChangeCount. Cause: ${err.message}`);
+    console.error(`Failed to get the ChangeCount. errorCode: ${err.code}, errorMessage: ${err.message}.`);
 };
 ```
 
@@ -325,7 +325,7 @@ const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteb
 // Read the system clipboard content.
 systemPasteboard.getData((err: BusinessError, pasteData: pasteboard.PasteData) => {
     if (err) {
-        console.error('Failed to get PasteData. Cause: ' + err.message);
+        console.error(`Failed to get PasteData. errorCode: ${err.code}, errorMessage: ${err.message}.`);
         return;
     }
     // Obtain the plain text content from the pasteboard.
@@ -378,7 +378,7 @@ systemPasteboard.getData().then((pasteData: pasteboard.PasteData) => {
     // Obtain the plain text content from the pasteboard.
     let text: string = pasteData.getPrimaryText();
 }).catch((err: BusinessError) => {
-    console.error('Failed to get PasteData. Cause: ' + err.message);
+    console.error(`Failed to get PasteData. errorCode: ${err.code}, errorMessage: ${err.message}.`);
 });
 ```
 
@@ -416,7 +416,7 @@ try {
     let result: string = systemPasteboard.getDataSource();
     console.info(`Succeeded in getting DataSource. Result: ${result}`);
 } catch (err) { 
-    console.error('Failed to get DataSource. Cause: ' + err.message);
+    console.error(`Failed to get DataSource. errorCode: ${err.code}, errorMessage: ${err.message}.`);
 };
 ```
 
@@ -463,7 +463,7 @@ try {
     let result: pasteboard.PasteData = systemPasteboard.getDataSync();
     console.info('Succeeded in getting PasteData.');
 } catch (err) {
-    console.error('Failed to get PasteData. Cause:' + err.message);
+    console.error(`Failed to get PasteData. errorCode: ${err.code}, errorMessage: ${err.message}.`);
 };
 ```
 
@@ -528,7 +528,7 @@ struct PasteboardTest {
               let systemPasteboard = pasteboard.getSystemPasteboard();
               await systemPasteboard.setData(pasteData);
               let progressListenerInfo = (progress: pasteboard.ProgressInfo) => {
-                console.info('progressListener success, progress:' + progress.progress);
+                console.info(`progressListener success, progress: ${progress.progress}`);
               };
               let destPath: string = '/data/storage/el2/base/files/';
               let destUri : string = fileUri.getUriFromPath(destPath);
@@ -541,7 +541,7 @@ struct PasteboardTest {
               systemPasteboard.getDataWithProgress(params).then((pasteData: pasteboard.PasteData) => {
                 console.info('getDataWithProgress success');
               }).catch((err: BusinessError) => {
-                console.error('Failed to get PasteData. Cause: ' + err.message);
+                console.error(`Failed to get PasteData. CerrorCode: ${err.code}, errorMessage: ${err.message}.`);
               })
           })
         }
@@ -580,7 +580,7 @@ const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteb
 systemPasteboard.getMimeTypes().then((data: Array<string>) => {
     console.info('Succeeded in getting mimeTypes. mimeTypes: ' + data.sort().join(','));
 }).catch((err: BusinessError) => {
-    console.error('Failed to get mimeTypes. Cause: ' + err.message);
+    console.error(`Failed to get mimeTypes. errorCode: ${err.code}, errorMessage: ${err.message}.`);
 });
 ```
 
@@ -622,7 +622,7 @@ const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteb
 // Read the system clipboard content.
 systemPasteboard.getPasteData((err: BusinessError, pasteData: pasteboard.PasteData) => {
     if (err) {
-        console.error('Failed to get PasteData. Cause: ' + err.message);
+        console.error(`Failed to get PasteData. errorCode: ${err.code}, errorMessage: ${err.message}.`);
         return;
     }
     // Obtain the plain text content from the pasteboard.
@@ -664,7 +664,7 @@ systemPasteboard.getPasteData().then((pasteData: pasteboard.PasteData) => {
     // Obtain the plain text content from the pasteboard.
     let text: string = pasteData.getPrimaryText();
 }).catch((err: BusinessError) => {
-    console.error('Failed to get PasteData. Cause: ' + err.message);
+    console.error(`Failed to get PasteData. errorCode: ${err.code}, errorMessage: ${err.message}.`);
 });
 ```
 
@@ -715,7 +715,7 @@ systemPasteboard.getUnifiedData().then((data) => {
         }
     }
 }).catch((err: BusinessError) => {
-    console.error('Failed to get UnifiedData. Cause: ' + err.message);
+    console.error(`Failed to get UnifiedData. errorCode: ${err.code}, errorMessage: ${err.message}.`);
 });
 ```
 
@@ -760,7 +760,7 @@ try {
     let result: unifiedDataChannel.UnifiedData = systemPasteboard.getUnifiedDataSync();
     console.info('Succeeded in getting UnifiedData.');
 } catch (err) {
-    console.error('Failed to get UnifiedData. Cause:' + err.message);
+    console.error(`Failed to get UnifiedData. errorCode: ${err.code}, errorMessage: ${err.message}.`);
 };
 ```
 
@@ -798,7 +798,7 @@ import { BusinessError } from '@kit.BasicServicesKit';
 const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteboard();
 systemPasteboard.hasData((err: BusinessError, data: boolean) => {
     if (err) {
-        console.error(`Failed to check the PasteData. Cause: ${err.message}`);
+        console.error(`Failed to check the PasteData. errorCode: ${err.code}, errorMessage: ${err.message}.`);
         return;
     }
     console.info(`Succeeded in checking the PasteData. Data: ${data}`);
@@ -834,7 +834,7 @@ const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteb
 systemPasteboard.hasData().then((data: boolean) => {
     console.info(`Succeeded in checking the PasteData. Data: ${data}`);
 }).catch((err: BusinessError) => {
-    console.error(`Failed to check the PasteData. Cause: ${err.message}`);
+    console.error(`Failed to check the PasteData. errorCode: ${err.code}, errorMessage: ${err.message}.`);
 });
 ```
 
@@ -872,7 +872,7 @@ try {
     let result: boolean = systemPasteboard.hasDataSync();
     console.info(`Succeeded in checking the PasteData. Result: ${result}`);
 } catch (err) {
-    console.error('Failed to check the PasteData. Cause: ' + err.message);
+    console.error(`Failed to check the PasteData. errorCode: ${err.code}, errorMessage: ${err.message}.`);
 };
 ```
 
@@ -917,7 +917,7 @@ try {
     let result: boolean = systemPasteboard.hasDataType(pasteboard.MIMETYPE_TEXT_PLAIN);
     console.info(`Succeeded in checking the DataType. Result: ${result}`);
 } catch (err) {
-    console.error('Failed to check the DataType. Cause: ' + err.message);
+    console.error(`Failed to check the DataType. errorCode: ${err.code}, errorMessage: ${err.message}.`);
 };
 ```
 
@@ -957,7 +957,7 @@ import { BusinessError } from '@kit.BasicServicesKit';
 const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteboard();
 systemPasteboard.hasPasteData((err: BusinessError, data: boolean) => {
     if (err) {
-        console.error(`Failed to check the PasteData. Cause: ${err.message}`);
+        console.error(`Failed to check the PasteData. errorCode: ${err.code}, errorMessage: ${err.message}.`);
         return;
     }
     console.info(`Succeeded in checking the PasteData. Data: ${data}`);
@@ -995,7 +995,7 @@ const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteb
 systemPasteboard.hasPasteData().then((data: boolean) => {
     console.info(`Succeeded in checking the PasteData. Data: ${data}`);
 }).catch((err: BusinessError) => {
-    console.error(`Failed to check the PasteData. Cause: ${err.message}`);
+    console.error(`Failed to check the PasteData. errorCode: ${err.code}, errorMessage: ${err.message}.`);
 });
 ```
 
@@ -1062,7 +1062,7 @@ try {
     let result: boolean = systemPasteboard.isRemoteData();
     console.info(`Succeeded in checking the RemoteData. Result: ${result}`);
 } catch (err) {
-    console.error('Failed to check the RemoteData. Cause: ' + err.message);
+    console.error(`Failed to check the RemoteData. errorCode: ${err.code}, errorMessage: ${err.message}.`);
 };
 ```
 
@@ -1100,7 +1100,7 @@ const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteb
 let listener = () => {
     console.info('The system pasteboard has changed.');
 };
-// Subscribe to the pasteboard content change event.
+// Unsubscribe from the pasteboard content change event.
 systemPasteboard.off('update', listener);
 ```
 
@@ -1315,7 +1315,7 @@ const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteb
 // Write data to the system pasteboard.
 systemPasteboard.setData(pasteData, (err, data) => {
     if (err) {
-        console.error('Failed to set PasteData. Cause: ' + err.message);
+        console.error(`Failed to set PasteData. errorCode: ${err.code}, errorMessage: ${err.message}.`);
         return;
     }
     console.info('Succeeded in setting PasteData.');
@@ -1369,7 +1369,7 @@ const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteb
 systemPasteboard.setData(pasteData).then((data: void) => {
     console.info('Succeeded in setting PasteData.');
 }).catch((err: BusinessError) => {
-    console.error('Failed to set PasteData. Cause: ' + err.message);
+    console.error(`Failed to set PasteData. errorCode: ${err.code}, errorMessage: ${err.message}.`);
 });
 ```
 
@@ -1409,7 +1409,7 @@ try {
     systemPasteboard.setDataSync(pasteData);
     console.info('Succeeded in setting PasteData.');
 } catch (err) {
-    console.error('Failed to set PasteData. Cause:' + err.message);
+    console.error(`Failed to set PasteData. errorCode: ${err.code}, errorMessage: ${err.message}.`);
 };
 ```
 
@@ -1449,7 +1449,7 @@ let pasteData: pasteboard.PasteData = pasteboard.createPlainTextData('content');
 const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteboard();
 systemPasteboard.setPasteData(pasteData, (err, data) => {
     if (err) {
-        console.error('Failed to set PasteData. Cause: ' + err.message);
+        console.error(`Failed to set PasteData. errorCode: ${err.code}, errorMessage: ${err.message}.`);
         return;
     }
     console.info('Succeeded in setting PasteData.');
@@ -1494,7 +1494,7 @@ const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteb
 systemPasteboard.setPasteData(pasteData).then((data: void) => {
     console.info('Succeeded in setting PasteData.');
 }).catch((err: BusinessError) => {
-    console.error('Failed to set PasteData. Cause: ' + err.message);
+    console.error(`Failed to set PasteData. errorCode: ${err.code}, errorMessage: ${err.message}.`);
 });
 ```
 
@@ -1555,7 +1555,7 @@ const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteb
 systemPasteboard.setUnifiedData(data).then((data: void) => {
     console.info('Succeeded in setting UnifiedData.');
 }).catch((err: BusinessError) => {
-    console.error('Failed to setUnifiedData. Cause: ' + err.message);
+    console.error(`Failed to setUnifiedData. errorCode: ${err.code}, errorMessage: ${err.message}.`);
 });
 ```
 
@@ -1612,6 +1612,6 @@ try {
     systemPasteboard.setUnifiedDataSync(plainTextData);
     console.info('Succeeded in setting UnifiedData.');
 } catch (err) {
-    console.error('Failed to set UnifiedData. Cause:' + err.message);
+    console.error(`Failed to set UnifiedData. errorCode: ${err.code}, errorMessage: ${err.message}.`);
 };
 ```

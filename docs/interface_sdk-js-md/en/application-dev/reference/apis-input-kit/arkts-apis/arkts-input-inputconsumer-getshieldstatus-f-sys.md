@@ -46,6 +46,7 @@ Obtains the system hotkey shield status.
 
 ```TypeScript
 import { inputConsumer } from '@kit.InputKit';
+import { BusinessError } from '@kit.BasicServicesKit';
 
 @Entry
 @Component
@@ -56,10 +57,10 @@ struct Index {
         .onClick(() => {
           try {
             let FACTORY_MODE = 0;
-            let shieldstatusResult:Boolean =  inputConsumer.getShieldStatus(FACTORY_MODE);
-            console.info(` get shield status result:${JSON.stringify(shieldstatusResult)}`);
+            let shieldStatusResult: boolean = inputConsumer.getShieldStatus(FACTORY_MODE);
+            console.info(`Succeeded in getting shield status, result: ${JSON.stringify(shieldStatusResult)}.`);
           } catch (error) {
-            console.error(`Failed to get shield status, error: ${JSON.stringify(error, [`code`, `message`])}`);
+            console.error(`Failed to get shield status, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
           }
         })
     }

@@ -34,18 +34,21 @@ Clears all unlocked missions. This API uses an asynchronous callback to return t
 **Examples**
 
 ```TypeScript
-import missionManager from '@ohos.application.missionManager'
+import missionManager from '@ohos.application.missionManager';
+import { BusinessError } from '@ohos.base';
 
 try {
+  // Clear all unlocked missions.
   missionManager.clearAllMissions(err => {
     if (err) {
-      console.error('clearAllMissions failed: ${err.message}');
+      console.error(`clearAllMissions failed: ${err.message}`);
     } else {
       console.info('clearAllMissions successfully.');
     }
   });
 } catch (err) {
-  console.error('clearAllMissions failed: ${err.message}');
+  let error = err as BusinessError;
+  console.error(`clearAllMissions sync failed. Code: ${error.code}, message: ${error.message}.`);
 }
 ```
 
@@ -83,12 +86,14 @@ import missionManager from '@ohos.application.missionManager';
 import { BusinessError } from '@ohos.base';
 
 try {
+  // Clear all unlocked missions.
   missionManager.clearAllMissions().then((data) => {
     console.info(`clearAllMissions successfully. Data: ${JSON.stringify(data)}`);
   }).catch((err: BusinessError) => {
-    console.error(`clearAllMissions failed: ${err.message}`);
+    console.error(`clearAllMissions failed. Code: ${err.code}, message: ${err.message}.`);
   });
 } catch (err) {
-  console.error(`clearAllMissions failed: ${err.message}`);
+  let error = err as BusinessError;
+  console.error(`clearAllMissions sync failed. Code: ${error.code}, message: ${error.message}.`);
 }
 ```

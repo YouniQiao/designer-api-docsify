@@ -52,6 +52,7 @@ media.createAVRecorder().then((avRecorder) => {
     console.info('Succeeded in getting input surface.');
     surfaceID = surfaceId;
     if (surfaceID) {
+      // Obtain the avCastController instance through avSession.getAVCastController.
       avCastController.setDisplaySurface(surfaceID, () => {
           console.info('Succeeded in setting display surface.');
       });
@@ -105,6 +106,7 @@ media.createAVRecorder().then((avRecorder) => {
     console.info('Succeeded in getting input surface.');
     surfaceID = surfaceId;
     if (surfaceID) {
+      // Obtain the avCastController instance through avSession.getAVCastController.
       avCastController.setDisplaySurface(surfaceID).then(() => {
         console.info('Succeeded in setting display surface.');
       });

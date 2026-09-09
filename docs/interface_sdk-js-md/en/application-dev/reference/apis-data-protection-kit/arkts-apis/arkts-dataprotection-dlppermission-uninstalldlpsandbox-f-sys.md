@@ -118,12 +118,12 @@ dlpPermission.installDLPSandbox('com.ohos.note', dlpPermission.DLPFileAccess.REA
   console.info('dlpSandboxInfo: ', JSON.stringify(dlpSandboxInfo));
   dlpPermission.uninstallDLPSandbox('com.ohos.note', 100, dlpSandboxInfo.appIndex, (err, res) => {
     if (err) {
-      console.error('uninstallDLPSandbox error,', err.code, err.message);
+      console.error(`Failed to uninstall DLPSandbox. Code: ${err.code}, message: ${err.message}`); 
     } else {
       console.info('res', JSON.stringify(res));
     }
   }); // Uninstall a DLP sandbox.
 }).catch((error: BusinessError)=> {
-  console.error(error.message);
+  console.error(`Failed to install or uninstall DLPSandbox. Code: ${error.code}, message: ${error.message}`);
 }); // Uninstall the DLP sandbox that has been installed.
 ```

@@ -64,7 +64,7 @@ struct Index {
               hilog.info(0x0000, 'testTag', '%{public}s', 'enterKioskMode success');
             })
             .catch((error: BusinessError) => {
-              hilog.error(0x0000, 'testTag', '%{public}s', `enterKioskMode failed:${JSON.stringify(error)}`);
+              hilog.error(0x0000, 'testTag', '%{public}s', `enterKioskMode failed. Code: ${error.code}, message: ${error.message}`);
             });
         })
     }

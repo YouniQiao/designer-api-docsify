@@ -43,14 +43,15 @@ Sets a value of the specified key. This API uses an asynchronous callback to ret
 import { BusinessError } from '@kit.BasicServicesKit';
 
 try {
-    systemParameterEnhance.set("test.parameter.key", "testValue", (err: BusinessError, data: void) => {
-    if (err == undefined) {
-        console.info("set test.parameter.key value success :" + data)
+  systemParameterEnhance.set('test.parameter.key', 'testValue', (err: BusinessError, data: void) => {
+    if (err) {
+      console.error(`Failed to set test.parameter.key value. Code: ${err.code}, message: ${err.message}`);
     } else {
-        console.error("set test.parameter.key value err:" + err.code)
-    }});
-} catch(e) {
-    console.error("set unexpected error: " + e);
+      console.info('set test.parameter.key value success');
+    }
+  });
+} catch (e) {
+  console.error('set unexpected error: ' + e);
 }
 ```
 
@@ -97,13 +98,13 @@ Sets a value of the specified key. This API uses a promise to return the result.
 import { BusinessError } from '@kit.BasicServicesKit';
 
 try {
-    let p: Promise<void>  = systemParameterEnhance.set("test.parameter.key", "testValue");
-    p.then((value: void) => {
-        console.info("set test.parameter.key success: " + value);
-    }).catch((err: BusinessError) => {
-        console.error(" set test.parameter.key error: " + err.code);
-    });
-} catch(e) {
-    console.error("set unexpected error: " + e);
+  let promise: Promise<void> = systemParameterEnhance.set('test.parameter.key', 'testValue');
+  promise.then((value: void) => {
+    console.info('set test.parameter.key success: ' + value);
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to set test.parameter.key. Code: ${err.code}, message: ${err.message}`);
+  });
+} catch (e) {
+  console.error('set unexpected error: ' + e);
 }
 ```

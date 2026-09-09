@@ -72,7 +72,7 @@ function stringToUint8Array(str: string): Uint8Array {
   return new Uint8Array(arr);
 }
 
-function testcreateCmsGenerator() {
+function testCreateCmsGenerator() {
   let certEncodingBlob: cert.EncodingBlob = {
     data: stringToUint8Array(certData),
     // Assign a value based on the encodingData format. FORMAT_PEM and FORMAT_DER are supported.
@@ -84,8 +84,8 @@ function testcreateCmsGenerator() {
     } else {
         try {
           let cmsContentType = cert.CmsContentType.SIGNED_DATA;
-          let cmsGenerator = cert.createCmsGenerator(cmsContentType);
-          console.info('testcreateCmsGenerator createCmsGenerator result: success.');
+          cert.createCmsGenerator(cmsContentType);
+          console.info('testCreateCmsGenerator createCmsGenerator result: success.');
         } catch (err) {
           let e: BusinessError = err as BusinessError;
           console.error(`createCmsGenerator failed, errCode: ${e.code}, errMsg: ${e.message}`);

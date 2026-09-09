@@ -47,7 +47,7 @@ Start an application for media playback.
 **Examples**
 
 ```TypeScript
-import { audio } from '@kit.AudioKit';
+import { avSession } from '@kit.AVSessionKit';
 
 avSession.startAVPlayback("com.example.myapplication", "121278").then(() => {
   console.info('Succeeded in starting AV playback.');

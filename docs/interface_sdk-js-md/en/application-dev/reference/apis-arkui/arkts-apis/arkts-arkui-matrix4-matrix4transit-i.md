@@ -96,11 +96,12 @@ Copies this matrix object.
 // xxx.ets
 import { matrix4 } from '@kit.ArkUI';
 
+let matrix1 = matrix4.identity().scale({ x: 1.5 });
+let matrix2 = matrix1.copy().translate({ x: 200 });
+
 @Entry
 @Component
 struct Test {
-  private matrix1 = matrix4.identity().scale({ x: 1.5 });
-  private matrix2 = this.matrix1.copy().translate({ x: 200 });
   imageSize: Length = '300px';
 
   build() {
@@ -113,12 +114,12 @@ struct Test {
       Image($r("app.media.testImage"))
         .width(this.imageSize)
         .height(this.imageSize)
-        .transform(this.matrix1)
+        .transform(matrix1)
       // Replace $r("app.media.testImage") with the image resource file you use.
       Image($r("app.media.testImage"))
         .width(this.imageSize)
         .height(this.imageSize)
-        .transform(this.matrix2)
+        .transform(matrix2)
     }.alignItems(HorizontalAlign.Center)
     .height('100%').width('100%')
     .justifyContent(FlexAlign.Center)
@@ -434,9 +435,9 @@ import { matrix4 } from '@kit.ArkUI';
 @Component
 struct Test {
   private originPoint: number[] = [50, 50];
-  private matrix_1 = matrix4.identity().translate({ x: 150, y: -50 });
-  private transformPoint = this.matrix_1.transformPoint([this.originPoint[0], this.originPoint[1]]);
-  private matrix_2 = matrix4.identity().translate({ x: this.transformPoint[0], y: this.transformPoint[1] });
+  private matrix1 = matrix4.identity().translate({ x: 150, y: -50 });
+  private transformPoint = this.matrix1.transformPoint([this.originPoint[0], this.originPoint[1]]);
+  private matrix2 = matrix4.identity().translate({ x: this.transformPoint[0], y: this.transformPoint[1] });
 
   build() {
     Column() {
@@ -455,7 +456,7 @@ struct Test {
         .width('600px')
         .height('300px')
         .margin({ top: 50 })
-        .transform(this.matrix_2)
+        .transform(this.matrix2)
     }.width('100%').padding(50)
   }
 }

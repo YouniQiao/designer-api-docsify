@@ -53,3 +53,61 @@ Obtains shortcut info by bundleName, moduleName, abilityName, userId and appInde
 | [17700004](../errorcode-bundle.md#17700004-user-id-does-not-exist) | The specified user id is not found. |
 | [17700026](../errorcode-bundle.md#17700026-bundle-disabled) | The specified bundle is disabled. |
 | [17700061](../errorcode-bundle.md#17700061-appindex-for-a-clone-is-invalid) | The specified app index is invalid. |
+
+**Examples**
+
+```TypeScript
+import { shortcutManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Replace with the actual bundleName, moduleName, abilityName, userId, and appIndex to query.
+const bundleName = 'com.example.myapplication';
+const moduleName = 'application';
+const abilityName = 'ApplicationAbility';
+let userId = 100;
+let appIndex = 0;
+
+try {
+  let shortcutInfos: Array<shortcutManager.ShortcutInfo> = shortcutManager.getShortcutInfoByAbility(bundleName, moduleName, abilityName, userId, appIndex);
+  console.info('getShortcutInfoByAbility shortcutInfos is' + JSON.stringify(shortcutInfos));
+} catch (err) {
+  console.error(`getShortcutInfoByAbility errData is errCode:${(err as BusinessError).code}  message:${(err as BusinessError).message}`);
+}
+```
+
+```TypeScript
+// Do not pass the optional parameter appIndex.
+import { shortcutManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Replace with the actual bundleName, moduleName, abilityName, and userId to query.
+const bundleName = 'com.example.myapplication';
+const moduleName = 'application';
+const abilityName = 'ApplicationAbility';
+let userId = 100;
+
+try {
+  let shortcutInfos: Array<shortcutManager.ShortcutInfo> = shortcutManager.getShortcutInfoByAbility(bundleName, moduleName, abilityName, userId);
+  console.info('getShortcutInfoByAbility shortcutInfos is' + JSON.stringify(shortcutInfos));
+} catch (err) {
+  console.error(`getShortcutInfoByAbility errData is errCode:${(err as BusinessError).code}  message:${(err as BusinessError).message}`);
+}
+```
+
+```TypeScript
+// Do not pass the optional parameters userId and appIndex.
+import { shortcutManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Replace with the actual bundleName, moduleName, and abilityName to query.
+const bundleName = 'com.example.myapplication';
+const moduleName = 'application';
+const abilityName = 'ApplicationAbility';
+
+try {
+  let shortcutInfos: Array<shortcutManager.ShortcutInfo> = shortcutManager.getShortcutInfoByAbility(bundleName, moduleName, abilityName);
+  console.info('getShortcutInfoByAbility shortcutInfos is' + JSON.stringify(shortcutInfos));
+} catch (err) {
+  console.error(`getShortcutInfoByAbility errData is errCode:${(err as BusinessError).code}  message:${(err as BusinessError).message}`);
+}
+```

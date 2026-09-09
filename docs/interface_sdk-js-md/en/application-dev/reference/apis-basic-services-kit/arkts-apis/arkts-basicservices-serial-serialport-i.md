@@ -42,13 +42,13 @@ Closes the serial port device. This API returns the result asynchronously throug
 **Examples**
 
 ```TypeScript
-import { serial } from "@kit.BasicServicesKit";
-
+// Import BusinessError from @kit.BasicServicesKit.
+// port is a serial port object, which needs to be obtained through serial.getSerialPortList().
 // Close the serial port device.
 port.close().then(() => {
   console.info('close success');
-}).catch((error: Error) => {
-  console.error(`close error: ${JSON.stringify(error)}`);
+}).catch((error: BusinessError) => {
+  console.error(`Failed to close serial port. Code: ${error.code}, message: ${error.message}`);
 });
 ```
 
@@ -83,13 +83,13 @@ Waits until all write requests are complete. This API returns the result asynchr
 **Examples**
 
 ```TypeScript
-import { serial } from "@kit.BasicServicesKit";
-
+// Import BusinessError from @kit.BasicServicesKit.
+// port is a serial port object, which needs to be obtained through serial.getSerialPortList().
 // Wait until all write requests are complete.
 port.drain().then(() => {
   console.info('drain success');
-}).catch((error: Error) => {
-  console.error(`drain error: ${JSON.stringify(error)}`);
+}).catch((error: BusinessError) => {
+  console.error(`Failed to drain serial port. Code: ${error.code}, message: ${error.message}`);
 });
 ```
 
@@ -124,13 +124,13 @@ Flushes the serial port buffer. This API returns the result asynchronously throu
 **Examples**
 
 ```TypeScript
-import { serial } from "@kit.BasicServicesKit";
-
+// Import BusinessError from @kit.BasicServicesKit.
+// port is a serial port object, which needs to be obtained through serial.getSerialPortList().
 // Flush the serial port buffer.
 port.flush().then(() => {
   console.info('flush success');
-}).catch((error: Error) => {
-  console.error(`flush error: ${JSON.stringify(error)}`);
+}).catch((error: BusinessError) => {
+  console.error(`Failed to flush serial port. Code: ${error.code}, message: ${error.message}`);
 });
 ```
 
@@ -165,13 +165,13 @@ Obtains the CTS signal status. This API returns the result asynchronously throug
 **Examples**
 
 ```TypeScript
-import { serial } from "@kit.BasicServicesKit";
-
+// Import BusinessError from @kit.BasicServicesKit.
+// port is a serial port object, which needs to be obtained through serial.getSerialPortList().
 // Obtain the CTS signal status.
 port.getCts().then((cts: boolean) => {
   console.info('getCts success, cts: ' + cts);
-}).catch((error: Error) => {
-  console.error(`getCts error: ${JSON.stringify(error)}`);
+}).catch((error: BusinessError) => {
+  console.error(`Failed to get CTS. Code: ${error.code}, message: ${error.message}`);
 });
 ```
 
@@ -206,13 +206,13 @@ Obtains the DSR signal status. This API returns the result asynchronously throug
 **Examples**
 
 ```TypeScript
-import { serial } from "@kit.BasicServicesKit";
-
+// Import BusinessError from @kit.BasicServicesKit.
+// port is a serial port object, which needs to be obtained through serial.getSerialPortList().
 // Obtain the DSR signal status.
 port.getDsr().then((dsr: boolean) => {
   console.info('getDsr success, dsr: ' + dsr);
-}).catch((error: Error) => {
-  console.error(`getDsr error: ${JSON.stringify(error)}`);
+}).catch((error: BusinessError) => {
+  console.error(`Failed to get DSR. Code: ${error.code}, message: ${error.message}`);
 });
 ```
 
@@ -246,8 +246,7 @@ Cancels listening for data receiving events on the serial port.
 **Examples**
 
 ```TypeScript
-import { serial } from "@kit.BasicServicesKit";
-
+// port is a serial port object, which needs to be obtained through serial.getSerialPortList().
 // Cancel listening for data receiving events on the serial port.
 port.offDataRead();
 
@@ -288,8 +287,7 @@ This command is used to cancel the monitoring of the USB virtual serial port dis
 **Examples**
 
 ```TypeScript
-import { serial } from "@kit.BasicServicesKit";
-
+// port is a serial port object, which needs to be obtained through serial.getSerialPortList().
 // Unsubscribe from serial port disconnection events.
 port.offDisconnect();
 
@@ -331,8 +329,7 @@ Listens for data received by the serial port. This API uses an asynchronous call
 **Examples**
 
 ```TypeScript
-import { serial } from "@kit.BasicServicesKit";
-
+// port is a serial port object, which needs to be obtained through serial.getSerialPortList().
 // Listen for data receiving events on the serial port.
 port.onDataRead((data: Uint8Array) => {
   console.info(`onDataRead, length: ${data.length}`);
@@ -369,8 +366,7 @@ This interface is used to listen to the disconnection event of the USB virtual s
 **Examples**
 
 ```TypeScript
-import { serial } from "@kit.BasicServicesKit";
-
+// port is a serial port object, which needs to be obtained through serial.getSerialPortList().
 // Subscribe to serial port disconnection events.
 port.onDisconnect(() => {
   console.info('serial port disconnected');
@@ -416,8 +412,7 @@ Enables the port. This API returns the result asynchronously through a promise.
 **Examples**
 
 ```TypeScript
-import { serial } from "@kit.BasicServicesKit";
-
+// Import BusinessError from @kit.BasicServicesKit.
 // Obtain the serial port list and open the first serial port.
 serial.getSerialPortList().then(async (portList: serial.SerialPort[]) => {
   if (portList.length === 0) {
@@ -433,8 +428,10 @@ serial.getSerialPortList().then(async (portList: serial.SerialPort[]) => {
   };
   await port.open(config);
   console.info('open success');
-}).catch((error: Error) => {
-  console.error(`error: ${JSON.stringify(error)}`);
+  // Call port.close() to release resources after the serial port is used.
+  await port.close();
+}).catch((error: BusinessError) => {
+  console.error(`Failed to open serial port. Code: ${error.code}, message: ${error.message}`);
 });
 ```
 
@@ -469,13 +466,13 @@ Sends a BRK signal. This API returns the result asynchronously through a promise
 **Examples**
 
 ```TypeScript
-import { serial } from "@kit.BasicServicesKit";
-
+// Import BusinessError from @kit.BasicServicesKit.
+// port is a serial port object, which needs to be obtained through serial.getSerialPortList().
 // Send a BRK signal.
 port.sendBrk().then(() => {
   console.info('sendBrk success');
-}).catch((error: Error) => {
-  console.error(`sendBrk error: ${JSON.stringify(error)}`);
+}).catch((error: BusinessError) => {
+  console.error(`Failed to send BRK. Code: ${error.code}, message: ${error.message}`);
 });
 ```
 
@@ -516,13 +513,13 @@ Sets the DTR signal status. Use Promise asynchronous callbacks.
 **Examples**
 
 ```TypeScript
-import { serial } from "@kit.BasicServicesKit";
-
+// Import BusinessError from @kit.BasicServicesKit.
+// port is a serial port object, which needs to be obtained through serial.getSerialPortList().
 // Set the DTR signal.
 port.setDtr(true).then(() => {
   console.info('setDtr success');
-}).catch((error: Error) => {
-  console.error(`setDtr error: ${JSON.stringify(error)}`);
+}).catch((error: BusinessError) => {
+  console.error(`Failed to set DTR. Code: ${error.code}, message: ${error.message}`);
 });
 ```
 
@@ -563,13 +560,13 @@ Sets the RTS signal. This API returns the result asynchronously through a promis
 **Examples**
 
 ```TypeScript
-import { serial } from "@kit.BasicServicesKit";
-
+// Import BusinessError from @kit.BasicServicesKit.
+// port is a serial port object, which needs to be obtained through serial.getSerialPortList().
 // Set the RTS signal.
 port.setRts(true).then(() => {
   console.info('setRts success');
-}).catch((error: Error) => {
-  console.error(`setRts error: ${JSON.stringify(error)}`);
+}).catch((error: BusinessError) => {
+  console.error(`Failed to set RTS. Code: ${error.code}, message: ${error.message}`);
 });
 ```
 
@@ -613,15 +610,15 @@ Sends data. This API returns the result asynchronously through a promise.
 **Examples**
 
 ```TypeScript
-import { buffer } from '@kit.ArkTS';
-import { serial } from "@kit.BasicServicesKit";
-
+// Import buffer from @kit.ArkTS.
+// Import BusinessError from @kit.BasicServicesKit.
+// port is a serial port object, which needs to be obtained through serial.getSerialPortList().
 // Write data to a serial port device.
 let writeData: Uint8Array = new Uint8Array(buffer.from('Hello World', 'utf-8').buffer);
 port.write(writeData, 2000).then((size: number) => {
   console.info('write success, size: ' + size);
-}).catch((error: Error) => {
-  console.error(`write error: ${JSON.stringify(error)}`);
+}).catch((error: BusinessError) => {
+  console.error(`Failed to write to serial port. Code: ${error.code}, message: ${error.message}`);
 });
 ```
 

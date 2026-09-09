@@ -71,6 +71,7 @@ cert.createCertExtension(encodingBlob, (error, certExt) => {
     console.info('createCertExtension result: success.');
     try {
       let res = certExt.checkCA();
+      console.info('res = ' + res);
     } catch (err) {
       let e: BusinessError = err as BusinessError;
       console.error(`ext checkCA failed, errCode: ${e.code}, errMsg: ${e.message}`);
@@ -139,6 +140,7 @@ cert.createCertExtension(encodingBlob, (error, certExt) => {
     console.info('createCertExtension result: success.');
     try {
       let extEncodedBlob = certExt.getEncoded();
+      console.info('extEncodedBlob = ' + extEncodedBlob.data);
     } catch (err) {
       let e: BusinessError = err as BusinessError;
       console.error(`ext getEncoded failed, errCode: ${e.code}, errMsg: ${e.message}`);
@@ -216,9 +218,10 @@ cert.createCertExtension(encodingBlob, (error, certExt) => {
     let oid = new Uint8Array([0x32, 0x2e, 0x35, 0x2e, 0x32, 0x39, 0x2e, 0x31, 0x35]);
     let oidBlob: cert.DataBlob = {
       data: oid
-    }
+    };
     try {
       let entry = certExt.getEntry(cert.ExtensionEntryType.EXTENSION_ENTRY_TYPE_ENTRY, oidBlob);
+      console.info('entry = ' + entry.data);
     } catch (err) {
       let e: BusinessError = err as BusinessError;
       console.error(`ext getEntry failed, errCode: ${e.code}, errMsg: ${e.message}`);
@@ -294,6 +297,7 @@ cert.createCertExtension(encodingBlob, (error, certExt) => {
     console.info('createCertExtension result: success.');
     try {
       let oidList = certExt.getOidList(cert.ExtensionOidType.EXTENSION_OID_TYPE_ALL);
+      console.info('oidList = ' + oidList.data);
     } catch (err) {
       let e: BusinessError = err as BusinessError;
       console.error(`ext getOidList failed, errCode: ${e.code}, errMsg: ${e.message}`);
@@ -354,7 +358,7 @@ let encodingBlob: cert.EncodingBlob = {
 
 cert.createCertExtension(encodingBlob).then((extensionObj) => {
   console.info('createCertExtension result: success.');
-  const result = extensionObj.hasUnsupportedCriticalExtension()
+  const result = extensionObj.hasUnsupportedCriticalExtension();
   console.info('has unsupported critical extension result =' + result);
 }).catch((err: BusinessError) => {
   console.error(`createCertExtension failed, errCode: ${err.code}, errMsg: ${err.message}`);

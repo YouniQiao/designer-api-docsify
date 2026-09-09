@@ -183,9 +183,9 @@ The following is an example of saving data using a synchronous API during applic
 import { UIAbility, AbilityConstant } from '@kit.AbilityKit';
 
 export default class MyUIAbility extends UIAbility {
-  onContinue(wantParams: Record<string, Object>) {
+  onContinue(wantParam: Record<string, Object>) {
     console.info('onContinue');
-    wantParams['myData'] = 'my1234567';
+    wantParam['myData'] = 'my1234567'; // Save the business data to be migrated.
     return AbilityConstant.OnContinueResult.AGREE;
   }
 }
@@ -207,6 +207,7 @@ export default class MyUIAbility extends UIAbility {
 
   async onContinue(wantParams: Record<string, Object>) {
     console.info('onContinue');
+    // Save the data to be migrated asynchronously.
     return this.setWant(wantParams).then(() => {
       return AbilityConstant.OnContinueResult.AGREE;
     });
@@ -343,7 +344,7 @@ export default class MyUIAbility extends UIAbility {
   // ...
   onForeground(): void {
     let audioStreamInfo: audio.AudioStreamInfo = {
-      samplingRate: audio.AudioSamplingRate.SAMPLE_RATE_48000, // Sampling rate.
+      samplingRate: audio.AudioSamplingRate.SAMPLE_RATE_48000, // Sampling rate, in Hz.
       channels: audio.AudioChannel.CHANNEL_2, // Channel.
       sampleFormat: audio.AudioSampleFormat.SAMPLE_FORMAT_S16LE, // Sampling format.
       encodingType: audio.AudioEncodingType.ENCODING_TYPE_RAW // Encoding format.
@@ -562,22 +563,22 @@ export default class EntryAbility extends UIAbility {
     // Define a pre-termination operation,
     // for example, starting another UIAbility and performing asynchronous termination based on the startup result.
     let want: Want = {
-      bundleName: "com.example.myapplication",
-      moduleName: "entry",
-      abilityName: "SecondAbility"
+      bundleName: 'com.example.myapplication',
+      moduleName: 'entry',
+      abilityName: 'SecondAbility'
     }
     this.context.startAbilityForResult(want)
       .then((result) => {
         // Obtain the startup result and terminate the current UIAbility when resultCode in the return value is 0.
         console.info('startAbilityForResult success, resultCode is ' + result.resultCode);
-        if (result.resultCode === 0) {
-          this.context.terminateSelf();
+        if (result && result.resultCode === 0) {
+          this.context.terminateSelf(); // Close the current UIAbility.
         }
       }).catch((err: BusinessError) => {
       // Exception handling.
       console.error('startAbilityForResult failed, err:' + JSON.stringify(err));
       this.context.terminateSelf();
-    })
+    });
 
     return true; // The pre-termination operation is defined. The value true means that the UIAbility termination process is canceled.
   }
@@ -683,7 +684,7 @@ import { UIAbility, AbilityConstant } from '@kit.AbilityKit';
 export default class MyUIAbility extends UIAbility {
   onSaveState(reason: AbilityConstant.StateType, wantParam: Record<string, Object>) {
     console.info('onSaveState');
-    wantParam['myData'] = 'my1234567';
+    wantParam['myData'] = 'my1234567'; // Save the state data of the UIAbility for fault recovery.
     return AbilityConstant.OnSaveResult.RECOVERY_AGREE;
   }
 }
@@ -724,7 +725,7 @@ This API must be used with [appRecovery](arkts-app-ability-apprecovery.md). When
 import { UIAbility, AbilityConstant } from '@kit.AbilityKit';
 
 class MyUIAbility extends UIAbility {
-  async onSaveStateAsync(reason: AbilityConstant.StateType,
+  async onSaveStateAsync(stateType: AbilityConstant.StateType,
     wantParam: Record<string, Object>): Promise<AbilityConstant.OnSaveResult> {
     await new Promise<string>((res, rej) => {
       setTimeout(res, 1000); // Execute the operation after 1 second.
@@ -800,7 +801,7 @@ export default class MyUIAbility extends UIAbility {
       "int_data": 100,
       "str_data": "strValue",
     };
-    // Record the application fault information.
+    // Write the tracing application fault information.
     hiAppEvent.write({
       domain: "test_domain",
       name: "test_event",

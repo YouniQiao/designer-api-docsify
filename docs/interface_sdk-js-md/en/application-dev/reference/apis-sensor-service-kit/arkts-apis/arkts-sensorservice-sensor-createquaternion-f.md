@@ -86,7 +86,7 @@ const promise = sensor.createQuaternion([0.20046076, 0.21907, 0.73978853, 0.6037
 promise.then((data: Array<number>) => {
   console.info('Succeeded in getting createQuaternion_promise');
   for (let i = 0; i < data.length; i++) {
-    console.info("data[" + i + "]: " + data[i]);
+    console.info('data[' + i + ']: ' + data[i]);
   }
 }).catch((err: BusinessError) => {
   console.error(`Failed to get promise.`);

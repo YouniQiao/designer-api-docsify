@@ -152,7 +152,7 @@ Custom drawing consists of five layers: Behind, Content, Front, Foreground, and 
 // test.ets
 import { drawing } from '@kit.ArkGraphics2D';
 
-class MyForegroundDrawModifier extends DrawModifier {
+class MyOverlayDrawModifier extends DrawModifier {
   public scaleX: number = 3;
   public scaleY: number = 3;
   uiContext: UIContext;
@@ -162,7 +162,7 @@ class MyForegroundDrawModifier extends DrawModifier {
     this.uiContext = uiContext;
   }
 
-  // Override the drawOverlay method to customize the foreground drawing of overlay.
+  // Override the drawOverlay method to implement custom drawing of the overlay layer.
   drawOverlay(context: DrawContext): void {
     const brush = new drawing.Brush();
     brush.setColor({
@@ -186,8 +186,8 @@ class MyForegroundDrawModifier extends DrawModifier {
 @Entry
 @Component
 struct DrawModifierExample {
-  // Instantiate the foreground drawing class of the overlay, passing the UIContext instance.
-  private overlayModifier: MyForegroundDrawModifier = new MyForegroundDrawModifier(this.getUIContext());
+  // Instantiate the class for the custom drawing overlay layer and pass in the UIContext instance.
+  private overlayModifier: MyOverlayDrawModifier = new MyOverlayDrawModifier(this.getUIContext());
 
   build() {
     Column() {
@@ -201,7 +201,7 @@ struct DrawModifierExample {
     .width(280)
     .height(300)
     .backgroundColor(0x87CEEB)
-    // Apply custom foreground drawing by passing the DrawModifier instance.
+    // Call this API and pass in the class instance of the custom drawing overlay layer to implement the custom drawing overlay layer.
     .drawModifier(this.overlayModifier)
   }
 }

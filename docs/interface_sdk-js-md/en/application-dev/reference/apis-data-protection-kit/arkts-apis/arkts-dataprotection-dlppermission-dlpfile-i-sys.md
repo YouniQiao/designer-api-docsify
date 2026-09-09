@@ -65,7 +65,7 @@ import { dlpPermission } from '@kit.DataProtectionKit';
 import { fileIo } from '@kit.CoreFileKit';
 import { bundleManager } from '@kit.AbilityKit';
 
-async function ExampleFunction() {
+async function exampleFunction() {
   let uri = 'file://docs/storage/Users/currentUser/Desktop/test.txt.dlp';
   let file: number | undefined = undefined;
   let bundleFlags = bundleManager.BundleFlag.GET_BUNDLE_INFO_WITH_SIGNATURE_INFO;
@@ -87,7 +87,7 @@ async function ExampleFunction() {
   }
 }
 
-ExampleFunction();
+exampleFunction();
 ```
 
 ## addDLPLinkFile
@@ -152,7 +152,7 @@ async function ExampleFunction() {
   dlpFile = await dlpPermission.openDLPFile(file, appId); // Open a DLP file.
   dlpFile.addDLPLinkFile('test.txt.dlp.link', async (err, res) => {
     if (err) {
-      console.error('addDLPLinkFile error,', err.code, err.message);
+      console.error(`Failed to add DLPLinkFile. Code: ${err.code}, message: ${err.message}`);
     } else {
       console.info('res', JSON.stringify(res));
     }
@@ -301,7 +301,7 @@ async function ExampleFunction() {
   dlpFile = await dlpPermission.openDLPFile(file, appId); // Open a DLP file.
   dlpFile.closeDLPFile((err, res) => {// Close the DLP file.
     if (err) {
-      console.error('closeDLPFile error,', err.code, err.message);
+      console.error(`Failed to close DLPFile. Code: ${err.code}, message: ${err.message}`);
     } else {
       console.info('res', JSON.stringify(res));
     }
@@ -452,7 +452,7 @@ async function ExampleFunction() {
   await dlpFile.addDLPLinkFile('test.txt.dlp.link'); // Add a link file.
   dlpFile.deleteDLPLinkFile('test.txt.dlp.link', async (err, res) => { // Delete a link file.
     if (err) {
-      console.error('deleteDLPLinkFile error,', err.code, err.message);
+      console.error(`Failed to delete DLPLinkFile. Code: ${err.code}, message: ${err.message}`);
     } else {
       console.info('res', JSON.stringify(res));
     }
@@ -616,7 +616,7 @@ async function ExampleFunction() {
   dlpFile = await dlpPermission.openDLPFile(file, appId); // Open a DLP file.
   dlpFile.recoverDLPFile(destFile, async (err, res) => { // Recover the plaintext of a DLP file.
     if (err) {
-      console.error('recoverDLPFile error,', err.code, err.message);
+      console.error(`Failed to recover DLPFile. Code: ${err.code}, message: ${err.message}`);
     } else {
       console.info('res', JSON.stringify(res));
     }
@@ -768,7 +768,7 @@ async function ExampleFunction() {
   await dlpFile.stopFuseLink(); // Stop the read and write on the link file.
   dlpFile.replaceDLPLinkFile('test_new.txt.dlp.link', async (err, res) => { // Replace a link file.
     if (err) {
-      console.error('replaceDLPLinkFile error,', err.code, err.message);
+      console.error(`Failed to replace DLPLinkFile. Code: ${err.code}, message: ${err.message}`);
     } else {
       console.info('res', JSON.stringify(res));
       await dlpFile?.resumeFuseLink(); // Resume the read and write on the link file.
@@ -915,7 +915,7 @@ async function ExampleFunction() {
   await dlpFile.stopFuseLink(); // Stop the read and write on the link file.
   dlpFile.resumeFuseLink(async (err, res) => {
     if (err) {
-      console.error('resumeFuseLink error,', err.code, err.message);
+      console.error(`Failed to resume FuseLink. Code: ${err.code}, message: ${err.message}`);
     } else {
       console.info('res', JSON.stringify(res));
     }
@@ -1058,7 +1058,7 @@ async function ExampleFunction() {
   await dlpFile.addDLPLinkFile('test.txt.dlp.link'); // Add a link file.
   dlpFile.stopFuseLink(async (err, res) => {
     if (err) {
-      console.error('stopFuseLink error,', err.code, err.message);
+      console.error(`Failed to stop FuseLink. Code: ${err.code}, message: ${err.message}`);
     } else {
       console.info('res', JSON.stringify(res));
     }

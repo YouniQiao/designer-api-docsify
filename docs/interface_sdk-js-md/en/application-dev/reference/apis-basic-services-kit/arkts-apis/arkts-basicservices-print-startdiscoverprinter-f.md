@@ -46,9 +46,9 @@ import { BusinessError } from '@kit.BasicServicesKit';
 let extensionList: string[] = [];
 // Specify the bundle name of your applications to load required print extension abilities during printer discovery.
 // let extensionList: string[] = ['com.myapplication.test'];
-print.startDiscoverPrinter(extensionList, (err: BusinessError) => {
-    if (err) {
-        console.error('failed to start Discover Printer because : ' + JSON.stringify(err));
+print.startDiscoverPrinter(extensionList, (error: BusinessError) => {
+    if (error) {
+        console.error(`Failed to startDiscoverPrinter. Code: ${error.code}, message: ${error.message}`);
     } else {
         console.info('start Discover Printer success');
     }
@@ -104,6 +104,6 @@ let extensionList: string[] = [];
 print.startDiscoverPrinter(extensionList).then(() => {
     console.info('start Discovery success');
 }).catch((error: BusinessError) => {
-    console.error('failed to start Discovery because : ' + JSON.stringify(error));
+    console.error(`Failed to startDiscoverPrinter. Code: ${error.code}, message: ${error.message}`);
 })
 ```

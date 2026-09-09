@@ -53,6 +53,11 @@ Customizes the position of the child component to be arranged. When the position
 | self | [FrameNode](arkts-arkui-framenode-c.md) | Yes | Entity node of the dynamic layout component in the component tree. |
 | position | [Position](arkts-arkui-position-t.md) | Yes | Position information used in layout of the dynamic layout component. |
 
+**Examples**
+
+For details, see [Example 1: Implementing Waterfall Layout Using a Custom Layout Algorithm](../arkui-ts/ts-container-dynamiclayout.md#example-1-implementing-waterfall-layout-using-a-custom-layout-algorithm).
+- simpleType:
+
 ## onMeasure
 
 ```TypeScript

@@ -58,13 +58,13 @@ import { hilog } from '@kit.PerformanceAnalysisKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 try {
-  let bundleName = "ohos.samples.processcache";
+  let bundleName = 'ohos.samples.processcache';
   appManager.getSupportedProcessCachePids(bundleName).then((pids: Array<number>) => {
       hilog.info(0x0000, 'testTag', `pids: ${JSON.stringify(pids)}`);
     }).catch((err: BusinessError) => {
       hilog.error(0x0000, 'testTag', `get pids error, code: ${err.code}, msg:${err.message}`);
     })
 } catch (err) {
-  hilog.error(0x0000, 'testTag', `get pids error, code: ${err.code}, msg:${err.message}`);
+  hilog.error(0x0000, 'testTag', `get pids error, code: ${(err as BusinessError).code}, msg:${(err as BusinessError).message}`);
 }
 ```

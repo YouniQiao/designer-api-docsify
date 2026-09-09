@@ -39,23 +39,23 @@ Obtains the device information.
 ArkTS example:
 
 ```TypeScript
+interface DeviceData {
+  brand: string;
+}
+
 export default class Page {
   getInfo() {
-    interface DeviceData {
-      brand: string;
-    }
-
     try {
       Device.getInfo({
         success: (data: DeviceData) => {
-          console.info('Device information obtained successfully. Device brand:' + data.brand);
+          console.info(`Device information obtained successfully. Device brand: ${data.brand}`);
         },
-        fail: (data: string, code: number) => {
-          console.info('Failed to obtain device information. Error code:' + code + '; Error information: ' + data);
+        fail: (data: any, code: number) => {
+          console.error(`Failed to obtain device information. Code: ${code}, message: ${data}`);
         },
       });
     } catch (error) {
-      console.error('Device information API is not supported');
+      console.error('Failed to call device information API:', error);
     }
   }
 }
@@ -72,7 +72,7 @@ JS example:
 ```
 
 ```TypeScript
-/*xxx.css*/
+/* xxx.css */
 .container {
     display: flex;
     flex-direction: column;
@@ -111,30 +111,30 @@ JS example:
 ```
 
 ```TypeScript
-//xxx.js
+// xxx.js
 import Device from '@system.device';
 
 export default {
-    data: {
-        brandInfo: 'Click the button to get device brand'
-    },
-    
-    getDeviceInfo() {
-        try {
-            Device.getInfo({
-                success: (data) => {
-                    console.info('Device information obtained successfully. Device brand:' + data.brand);
-                    this.brandInfo = 'Device brand: ' + data.brand;
-                },
-                fail: (data, code) => {
-                    console.info('Failed to obtain device information. Error code:' + code + '; Error information: ' + data);
-                    this.brandInfo = 'Failed to obtain, error code: ' + code;
-                },
-            });
-        } catch (error) {
-            console.error('Device information API is not supported');
-            this.brandInfo = 'Current device does not support this API';
-        }
+  data: {
+    brandInfo: 'Click the button to get device brand'
+  },
+  
+  getDeviceInfo() {
+    try {
+      Device.getInfo({
+        success: (data) => {
+          console.info(`Device information obtained successfully. Device brand: ${data.brand}`);
+          this.brandInfo = 'Device brand: ' + data.brand;
+        },
+        fail: (data, code) => {
+          console.error(`Failed to obtain device information. Code: ${code}, message: ${data}`);
+          this.brandInfo = 'Failed to obtain, error code: ' + code;
+        },
+      });
+    } catch (error) {
+      console.error('Failed to call device information API:', error);
+      this.brandInfo = 'Current device does not support this API';
     }
+  }
 }
 ```

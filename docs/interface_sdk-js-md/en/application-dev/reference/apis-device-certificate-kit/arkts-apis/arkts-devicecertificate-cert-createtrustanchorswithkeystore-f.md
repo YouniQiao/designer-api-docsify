@@ -160,7 +160,7 @@ try {
     console.info('createTrustAnchorsWithKeyStore result: success, number of the result = ' + data.length);
   }).catch((err: BusinessError) => {
     console.error(`createTrustAnchorsWithKeyStore failed: errCode: ${err.code}, errMsg: ${err.message}`);
-  })
+  });
 } catch (error) {
   console.error(`createTrustAnchorsWithKeyStore failed: errCode: ${error.code}, errMsg: ${error.message}`);
 }

@@ -56,6 +56,7 @@ import { BusinessError } from '@kit.BasicServicesKit';
 export default class EntryAbility extends EmbeddableUIAbility {
   onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
     try {
+      // Restart the current atomic service.
       abilityManager.restartSelfAtomicService(this.context);
     } catch (e) {
       console.error(`restartSelfAtomicService error: ${JSON.stringify(e as BusinessError)}`);

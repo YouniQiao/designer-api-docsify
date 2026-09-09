@@ -60,7 +60,7 @@ let encodingBlob: cert.EncodingBlob = {
   encodingFormat: cert.EncodingFormat.FORMAT_DER
 };
 
-cert.createCertExtension(encodingBlob, (error, certExt) => {
+cert.createCertExtension(encodingBlob, (error, _certExt) => {
   if (error) {
     console.error(`createCertExtension failed, errCode: ${error.code}, errMsg: ${error.message}`);
   } else {
@@ -130,7 +130,7 @@ let encodingBlob: cert.EncodingBlob = {
   encodingFormat: cert.EncodingFormat.FORMAT_DER
 };
 
-cert.createCertExtension(encodingBlob).then(certExt => {
+cert.createCertExtension(encodingBlob).then(_certExt => {
   console.info('createCertExtension result: success.');
 }).catch((error: BusinessError) => {
   console.error(`createCertExtension failed, errCode: ${error.code}, errMsg: ${error.message}`);

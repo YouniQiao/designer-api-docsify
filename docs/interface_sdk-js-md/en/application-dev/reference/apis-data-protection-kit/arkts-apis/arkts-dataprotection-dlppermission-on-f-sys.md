@@ -50,6 +50,6 @@ The DLP management application needs to track the creation and destruction statu
 import { dlpPermission } from '@kit.DataProtectionKit';
 
 dlpPermission.on('uninstallDLPSandbox', (info: dlpPermission.DLPSandboxState) => {
-  console.info('uninstallDLPSandbox event', info.appIndex, info.bundleName)
+  console.info('uninstallDLPSandbox event', info.appIndex, info.bundleName);
 }); // Subscribe to the DLP sandbox application uninstall event.
 ```

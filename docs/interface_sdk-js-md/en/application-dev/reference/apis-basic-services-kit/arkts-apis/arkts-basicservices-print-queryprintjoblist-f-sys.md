@@ -41,13 +41,13 @@ Queries all print jobs. This API uses an asynchronous callback to return the res
 import { print } from '@kit.BasicServicesKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
-print.queryPrintJobList((err: BusinessError, printJobs : print.PrintJob[]) => {
-    if (err) {
-        console.error('queryPrintJobList failed, because : ' + JSON.stringify(err));
+print.queryPrintJobList((error: BusinessError, printJobs : print.PrintJob[]) => {
+    if (error) {
+        console.error(`Failed to query print job list. Code: ${error.code}, message: ${error.message}`);
     } else {
         console.info('queryPrintJobList success, data : ' + JSON.stringify(printJobs));
     }
-})
+});
 ```
 
 
@@ -89,6 +89,6 @@ import { BusinessError } from '@kit.BasicServicesKit';
 print.queryPrintJobList().then((printJobs : print.PrintJob[]) => {
     console.info('queryPrintJobList success, data : ' + JSON.stringify(printJobs));
 }).catch((error: BusinessError) => {
-    console.error('queryPrintJobList failed, error : ' + JSON.stringify(error));
-})
+    console.error(`Failed to query print job list. Code: ${error.code}, message: ${error.message}`);
+});
 ```

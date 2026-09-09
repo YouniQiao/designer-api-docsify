@@ -118,7 +118,7 @@ struct ImageAnimatorExample {
 }
 ```
 
-This example demonstrates how to play an animation using the ImageAnimator component with images of the PixelMap type.
+This example shows how to use the ImageAnimator component to play the PixelMap animation
 
 ```TypeScript
 // xxx.ets
@@ -134,13 +134,13 @@ struct ImageAnimatorExample {
   @State images: Array<ImageFrameInfo> = [];
 
   async aboutToAppear() {
-    // Replace $r('app.media.1') with the image resource file you use.
+    // Replace $r('app.media.1') with the image resource file required by the developer.
     this.imagePixelMap.push(await this.getPixmapFromMedia($r('app.media.1')));
-    // Replace $r('app.media.2') with the image resource file you use.
+    // Replace $r('app.media.2') with the image resource file required by the developer.
     this.imagePixelMap.push(await this.getPixmapFromMedia($r('app.media.2')));
-    // Replace $r('app.media.3') with the image resource file you use.
+    // Replace $r('app.media.3') with the image resource file required by the developer.
     this.imagePixelMap.push(await this.getPixmapFromMedia($r('app.media.3')));
-    // Replace $r('app.media.4') with the image resource file you use.
+    // Replace $r('app.media.4') with the image resource file required by the developer.
     this.imagePixelMap.push(await this.getPixmapFromMedia($r('app.media.4')));
     this.images.push({ src: this.imagePixelMap[0] });
     this.images.push({ src: this.imagePixelMap[1] });
@@ -181,10 +181,10 @@ struct ImageAnimatorExample {
           this.state = AnimationStatus.Running;
         }).margin(5)
         Button('pause').width(100).padding(5).onClick(() => {
-          this.state = AnimationStatus.Paused; // Display the image of the current frame.
+          this.state = AnimationStatus.Paused; // Display the current frame image.
         }).margin(5)
         Button('stop').width(100).padding(5).onClick(() => {
-          this.state = AnimationStatus.Stopped; // Display the image of the initial frame.
+          this.state = AnimationStatus.Stopped; // Display the start frame image of the animation.
         }).margin(5)
       }
 
@@ -196,20 +196,27 @@ struct ImageAnimatorExample {
           this.iterations = 1;
         }).margin(5)
         Button('infinite').width(100).padding(5).onClick(() => {
-          this.iterations = -1; // The animation is played for an unlimited number of times.
+          this.iterations = -1; // Play in an infinite loop.
         }).margin(5)
       }
     }.width('100%').height('100%')
   }
 
   private async getPixmapFromMedia(resource: Resource) {
-    let unit8Array = await this.getUIContext().getHostContext()?.resourceManager?.getMediaContent(resource.id);
-    let imageSource = image.createImageSource(unit8Array?.buffer.slice(0, unit8Array.buffer.byteLength));
-    let createPixelMap: image.PixelMap = await imageSource.createPixelMap({
-      desiredPixelFormat: image.PixelMapFormat.RGBA_8888
-    });
-    await imageSource.release();
-    return createPixelMap;
+    // Obtain the content data of the resource file.
+    let uint8Array = await this.getUIContext().getHostContext()?.resourceManager?.getMediaContent(resource.id);
+    // Create an image source based on the binary data.
+    let imageSource = image.createImageSource(uint8Array?.buffer.slice(0, uint8Array.buffer.byteLength));
+    try {
+      // Create a PixelMap object from the image source, with the pixel format set to RGBA_8888.
+      let createPixelMap: image.PixelMap = await imageSource.createPixelMap({
+        desiredPixelFormat: image.PixelMapFormat.RGBA_8888
+      });
+      return createPixelMap;
+    } finally {
+      // Release the image source resource.
+      await imageSource.release();
+    }
   }
 }
 ```
@@ -234,19 +241,19 @@ struct ImageAnimatorAutoPauseTest {
           ImageAnimator()
             .images([
               {
-                // Replace $r('app.media.Clouds') with the image resource file you use.
+                // Replace $r('app.media.Clouds') with the image resource file required by the developer.
                 src: $r('app.media.Clouds')
               },
               {
-                // Replace $r('app.media.landscape') with the image resource file you use.
+                // Replace $r('app.media.landscape') with the image resource file required by the developer.
                 src: $r('app.media.landscape')
               },
               {
-                // Replace $r('app.media.sky') with the image resource file you use.
+                // Replace $r('app.media.sky') with the image resource file required by the developer.
                 src: $r('app.media.sky')
               },
               {
-                // Replace $r('app.media.mountain') with the image resource file you use.
+                // Replace $r('app.media.mountain') with the image resource file required by the developer.
                 src: $r('app.media.mountain')
               }
             ])
@@ -287,13 +294,13 @@ struct ImageAnimatorAutoPauseTest {
               .fontSize(16)
               .textAlign(TextAlign.Center)
               .margin({ top: 10 })
-          }, (item: string) => item)
+          }, (item: number) => item.toString())
         }.width('100%')
       }
-      .scrollable(ScrollDirection.Vertical) // The scrollbar scrolls in the vertical direction.
-      .scrollBar(BarState.On) // The scrollbar is always displayed.
-      .scrollBarColor(Color.Gray) // The scrollbar color is gray.
-      .scrollBarWidth(10) // The scrollbar width is 10.
+      .scrollable(ScrollDirection.Vertical) // Scroll direction: vertical.
+      .scrollBar(BarState.On) // Keep the scroll bar always displayed.
+      .scrollBarColor(Color.Gray) // Scroll bar color.
+      .scrollBarWidth(10) // Scroll bar width.
       .friction(0.6)
       .edgeEffect(EdgeEffect.None)
       .onWillScroll((xOffset: number, yOffset: number, scrollState: ScrollState) => {

@@ -39,6 +39,7 @@ Disables listening for system hotkey change events. This API uses an asynchronou
 
 ```TypeScript
 import { inputConsumer } from '@kit.InputKit';
+import { BusinessError } from '@kit.BasicServicesKit';
 
 @Entry
 @Component
@@ -51,15 +52,17 @@ struct Index {
           let tabKey = 2049;
           // Disable listening for a single callback.
           let callback = (keyOptions: inputConsumer.KeyOptions) => {
-            console.info(`keyOptions: ${JSON.stringify(keyOptions)}`);
-          }
+            console.info(`Succeeded in consuming key, keyOptions: ${JSON.stringify(keyOptions)}.`);
+          };
           let keyOption: inputConsumer.KeyOptions = {preKeys: [leftAltKey], finalKey: tabKey, isFinalKeyDown: true, finalKeyDownDuration: 0};
           try {
-            inputConsumer.on("key", keyOption, callback);
-            inputConsumer.off("key", keyOption, callback);
-            console.info(`Unsubscribe success`);
+            // Subscribe to the key event.
+            inputConsumer.on('key', keyOption, callback);
+            // Unsubscribe from the key event.
+            inputConsumer.off('key', keyOption, callback);
+            console.info(`Succeeded in unsubscribing.`);
           } catch (error) {
-            console.error(`Execute failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
+            console.error(`Failed to unsubscribe, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
           }
         })
     }
@@ -69,6 +72,7 @@ struct Index {
 
 ```TypeScript
 import { inputConsumer } from '@kit.InputKit';
+import { BusinessError } from '@kit.BasicServicesKit';
 
 @Entry
 @Component
@@ -81,15 +85,17 @@ struct Index {
           let tabKey = 2049;
           // Disable listening for all callbacks.
           let callback = (keyOptions: inputConsumer.KeyOptions) => {
-            console.info(`keyOptions: ${JSON.stringify(keyOptions)}`);
-          }
+            console.info(`Succeeded in consuming key, keyOptions: ${JSON.stringify(keyOptions)}.`);
+          };
           let keyOption: inputConsumer.KeyOptions = {preKeys: [leftAltKey], finalKey: tabKey, isFinalKeyDown: true, finalKeyDownDuration: 0};
           try {
-            inputConsumer.on("key", keyOption, callback);
-            inputConsumer.off("key", keyOption);
-            console.info(`Unsubscribe success`);
+            // Subscribe to the key event.
+            inputConsumer.on('key', keyOption, callback);
+            // Unsubscribe from the key event.
+            inputConsumer.off('key', keyOption);
+            console.info(`Succeeded in unsubscribing.`);
           } catch (error) {
-            console.error(`Execute failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
+            console.error(`Failed to unsubscribe, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
           }
         })
     }

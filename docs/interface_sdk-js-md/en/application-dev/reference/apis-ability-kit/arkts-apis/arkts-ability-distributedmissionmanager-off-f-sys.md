@@ -44,10 +44,11 @@ Unsubscribes from continuation state change events of the current mission.
 import { distributedMissionManager } from '@kit.AbilityKit';
 
   try {
+    // Unregister listening for mission continuation state change events.
     distributedMissionManager.off('continueStateChange', (data) => {
       console.info("continueStateChange off:" + JSON.stringify(data));
     });
   } catch (err) {
-    console.error("continueStateChange err: " + JSON.stringify(err));
+    console.error(`continueStateChange failed. Code: ${err.code}, message: ${err.message}`);
   }
 ```

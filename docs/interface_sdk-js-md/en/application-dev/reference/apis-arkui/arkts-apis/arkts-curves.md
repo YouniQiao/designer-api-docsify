@@ -82,6 +82,7 @@ struct ImageComponent {
         .backgroundColor(Color.Red)
         .onClick(() => {
           let curve = curves.cubicBezierCurve(0.25, 0.1, 0.25, 1.0);
+          // Use the Bezier curve interpolation to calculate the width and height of the animation in the intermediate state.
           this.widthSize = curve.interpolate(0.5) * this.widthSize;
           this.heightSize = curve.interpolate(0.5) * this.heightSize;
         })

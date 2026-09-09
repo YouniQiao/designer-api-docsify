@@ -47,3 +47,23 @@ function getDefaultApplicationCandidates(type: ApplicationType, abilityFlags: nu
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Possible causes: 1. The hardware does not support the capability; 2. The chip does not support the capability; 3. A dependent service feature is not supported. |
 | [17700004](../errorcode-bundle.md#17700004-指定的用户不存在) | The specified user ID is not found. |
 | [17700025](../errorcode-bundle.md#17700025-输入的type无效) | The specified type is invalid. |
+
+**示例**
+
+```TypeScript
+import { defaultAppManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+defaultAppManager.getDefaultApplicationCandidates(defaultAppManager.ApplicationType.BROWSER, 0).then((data) => {
+  console.info('Operation successful. Data: ' + JSON.stringify(data));
+}).catch((error: BusinessError) => {
+  console.error('Operation failed. Cause: ' + JSON.stringify(error));
+});
+
+let userId = 100;
+defaultAppManager.getDefaultApplicationCandidates(defaultAppManager.ApplicationType.BROWSER, 0, userId).then((data) => {
+  console.info('Operation successful. Data: ' + JSON.stringify(data));
+}).catch((error: BusinessError) => {
+  console.error('Operation failed. Cause: ' + JSON.stringify(error));
+});
+```

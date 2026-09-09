@@ -82,6 +82,34 @@ off(type: 'discoveryStop', callback?: Callback<DiscoveryEventInfo>): void
 | type | 'discoveryStop' | 是 | 取消订阅的事件'discoveryStop'。discoveryStop：停止搜索局域网内的MDNS服务事件。 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DiscoveryEventInfo](arkts-network-mdns-discoveryeventinfo-i.md)&gt; | 否 | MDNS服务的信息和事件错误信息。可以指定传入on中的callback取消对应的订阅，也可以不指定callback清空所有订阅。<br>**适用版本：** 11 |
 
+**示例**
+
+> 说明：
+> 
+> 在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需在页面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
+
+```TypeScript
+import { mdns } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// 参考mdns.createDiscoveryService。
+let context: common.UIAbilityContext = this.getUIContext().getHostContext() as common.UIAbilityContext;
+let serviceType = "_print._tcp";
+let discoveryService = mdns.createDiscoveryService(context, serviceType);
+discoveryService.startSearchingMDNS();
+
+discoveryService.on('discoveryStop', (data: mdns.DiscoveryEventInfo) => {
+  console.info(JSON.stringify(data));
+});
+
+discoveryService.stopSearchingMDNS();
+
+discoveryService.off('discoveryStop', (data: mdns.DiscoveryEventInfo) => {
+  console.info(JSON.stringify(data));
+});
+```
+
 ## off('serviceFound')
 
 ```TypeScript

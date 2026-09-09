@@ -41,6 +41,11 @@ Constructs the horizontal linear layout algorithm class.
 | --- | --- | --- | --- |
 | option | [RowLayoutAlgorithmOptions](arkts-arkui-layoutalgorithm-rowlayoutalgorithmoptions-i.md) | No | Input parameters for constructing the horizontal linear layout algorithm, which are used to set the spacing, main axis alignment method, cross axis alignment method, and main axis arrangement direction of the layout algorithm. |
 
+**Examples**
+
+For details, see [Example 2: Switching the Layout Algorithm](../arkui-ts/ts-container-dynamiclayout.md#example-2-switching-the-layout-algorithm).
+- simpleType:
+
 ## alignItems
 
 ```TypeScript

@@ -34,13 +34,15 @@ Unsubscribes from change events of each frame.
 **Examples**
 
 ```TypeScript
+// Define the callback function.
 let callback = (frameInfo: displaySync.IntervalInfo) => {
     console.info("DisplaySync", 'TimeStamp:' + frameInfo.timestamp + ' TargetTimeStamp: ' + frameInfo.targetTimestamp);
 }
 
+// Register the callback function.
 backDisplaySync?.on("frame", callback)
 
-// Unsubscribe from the event.
+// Unregister the callback function.
 backDisplaySync?.off("frame", callback)
 ```
 
@@ -66,12 +68,16 @@ Subscribes to change events of each frame.
 **Examples**
 
 ```TypeScript
+// Define the callback function.
 let callback = (frameInfo: displaySync.IntervalInfo) => {
     console.info("DisplaySync", 'TimeStamp:' + frameInfo.timestamp + ' TargetTimeStamp: ' + frameInfo.targetTimestamp);
 }
 
-// Subscribe to the event.
+// Register the callback function.
 backDisplaySync?.on("frame", callback)
+
+// Enable the callback function.
+backDisplaySync?.start()
 ```
 
 ## setExpectedFrameRateRange
@@ -101,14 +107,18 @@ Sets the expected frame rate range.
 **Examples**
 
 ```TypeScript
-let range : ExpectedFrameRateRange = {
-  expected: 10,
-  min:0,
-  max:120
+// Define the expected frame rate range.
+let range: ExpectedFrameRateRange = {
+  expected: 10, // Expected frame rate
+  min: 0, // Minimum frame rate
+  max: 120 // Maximum frame rate
 };
 
-// Set the expected frame rate range.
+// Set the expected frame rate range for DisplaySync.
 backDisplaySync?.setExpectedFrameRateRange(range)
+
+// Apply the expected frame rate range.
+backDisplaySync?.start()
 ```
 
 ## start
@@ -126,27 +136,30 @@ Starts callback for each frame.
 **Examples**
 
 ```TypeScript
-let range : ExpectedFrameRateRange = {
-  expected: 10,
-  min:0,
-  max:120
+// Define the expected frame rate range.
+let range: ExpectedFrameRateRange = {
+  expected: 10, // expected frame rate
+  min: 0, // minimum frame rate
+  max: 120 // maximum frame rate
 };
-
+// Set the expected frame rate range of DisplaySync.
 backDisplaySync?.setExpectedFrameRateRange(range)
 
+// Define the callback function.
 let callback = (frameInfo: displaySync.IntervalInfo) => {
     console.info("DisplaySync", 'TimeStamp:' + frameInfo.timestamp + ' TargetTimeStamp: ' + frameInfo.targetTimestamp);
 }
 
+// Register the callback function.
 backDisplaySync?.on("frame", callback)
 
-// Start callback for each frame.
+// Apply the expected frame rate range and start the per-frame callback.
 backDisplaySync?.start()
 ```
 
 > NOTE
 > 
-> The start() API associates a DisplaySync object with a UI instance and window. If the start operation is performed on a non-UI page or in an asynchronous callback, the context of the current UI may not be obtained, causing the API call to fail and consequently the subscription function to fail.Therefore, you can use [runScopedTask](../apis-arkui/arkts-apis-uicontext-uicontext.md#runscopedtask) of UIContext to specify the UI context for executing the start() API.
+> The start() API associates the DisplaySync object with a UI context and window. If [start](#start) is called on a non-UI page or in an asynchronous callback, an incorrect UI context may be obtained, causing the [start](#start) function to work abnormally. As a result, the callback function cannot be executed and the expected frame rate range cannot take effect.In this case, you can use [runScopedTask](../apis-arkui/arkts-apis-uicontext-uicontext.md#runscopedtask) to specify the UI context and ensure that [start](#start) is executed in the correct context.
 
 ```TypeScript
 import { displaySync } from '@kit.ArkGraphics2D';
@@ -189,24 +202,29 @@ Stops callback for each frame.
 **Examples**
 
 ```TypeScript
-let range : ExpectedFrameRateRange = {
-  expected: 10,
-  min:0,
-  max:120
+// Define the expected frame rate range.
+let range: ExpectedFrameRateRange = {
+  expected: 10, // Expected frame rate.
+  min: 0, // Minimum frame rate.
+  max: 120 // Maximum frame rate.
 };
 
+// Set the expected frame rate range of DisplaySync.
 backDisplaySync?.setExpectedFrameRateRange(range)
 
+// Define the callback function.
 let callback = (frameInfo: displaySync.IntervalInfo) => {
     console.info("DisplaySync", 'TimeStamp:' + frameInfo.timestamp + ' TargetTimeStamp: ' + frameInfo.targetTimestamp);
 }
 
+// Register the callback function.
 backDisplaySync?.on("frame", callback)
 
+// Apply the expected frame rate range and start the per-frame callback.
 backDisplaySync?.start()
 
 // ...
 
-// Stop callback for each frame.
+// Stop applying the expected frame rate range and stop the per-frame callback.
 backDisplaySync?.stop()
 ```

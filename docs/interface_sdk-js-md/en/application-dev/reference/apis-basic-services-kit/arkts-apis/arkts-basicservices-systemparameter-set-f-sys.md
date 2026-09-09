@@ -38,14 +38,15 @@ Sets a value for the specified key. This API uses an asynchronous callback to re
 import { BusinessError } from '@ohos.base';
 
 try {
-    systemParameter.set("test.parameter.key", "testValue",  (err: BusinessError, data: void) =>{
-    if (err == undefined) {
-        console.info("set test.parameter.key value success :" + data)
+  systemParameter.set('test.parameter.key', 'testValue', (err: BusinessError, data: void) => {
+    if (err) {
+      console.error(`Failed to set system parameter. Code: ${err.code}, message: ${err.message}`);
     } else {
-        console.error("set test.parameter.key value err:" + err.code)
-    }});
-} catch(e) {
-    console.error("set unexpected error: " + e);
+      console.info('set test.parameter.key value success');
+    }
+  });
+} catch (e) {
+  console.error('set unexpected error: ' + e);
 }
 ```
 
@@ -87,13 +88,13 @@ Sets a value for the specified key. This API uses a promise to return the result
 import { BusinessError } from '@ohos.base';
 
 try {
-    let p: Promise<void> = systemParameter.set("test.parameter.key", "testValue");
-    p.then((value: void) => {
-        console.info("set test.parameter.key success: " + value);
-    }).catch((err: BusinessError) => {
-        console.error(" set test.parameter.key error: " + err.code);
-    });
-} catch(e) {
-    console.error("set unexpected error: " + e);
+  let setPromise: Promise<void> = systemParameter.set('test.parameter.key', 'testValue');
+  setPromise.then(() => {
+    console.info('set test.parameter.key success');
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to set system parameter. Code: ${err.code}, message: ${err.message}`);
+  });
+} catch (e) {
+  console.error('set unexpected error: ' + e);
 }
 ```

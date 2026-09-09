@@ -54,7 +54,7 @@ Starts a [native child process](../../../application-models/ability-terminology.
 
 **Examples**
 
-Sample code for the child process is provided below. For details, see Native Child Process Development (C/C++) - Creating a Native Child Process That Supports Pass-by-Parameter.
+For details about the child process, see Child Process Development Guide (ArkTS) - Creating a Native Child Process That Supports Parameter Passing:
 
 ```TypeScript
 #include <AbilityKit/native_child_process.h>
@@ -68,7 +68,7 @@ extern "C" {
  */
 void Main(NativeChildProcess_Args args)
 {
-    // Obtain the input entryPrams.
+    // Obtain the passed-in entryParams.
     char *entryParams = args.entryParams;
     // Obtain the input FD list, corresponding to args.fds in ChildProcessArgs.
     NativeChildProcess_Fd *current = args.fdList.head;
@@ -86,7 +86,7 @@ Sample code for the main process is provided below. For details about how to obt
 
 ```TypeScript
 // Main process:
-// Call childProcessManager.startNativeChildProcess to start the child process.
+// Use the childProcessManager.startNativeChildProcess method to start a child process:
 import { common, ChildProcessArgs, ChildProcessOptions, childProcessManager } from '@kit.AbilityKit';
 import { fileIo } from '@kit.CoreFileKit';
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -116,13 +116,13 @@ struct Index {
               };
               childProcessManager.startNativeChildProcess("libentry.so:Main", args, options)
                 .then((pid) => {
-                  console.info(`startChildProcess success, pid: ${pid}`);
+                  console.info(`startNativeChildProcess success, pid: ${pid}`);
                 })
                 .catch((err: BusinessError) => {
-                  console.error(`startChildProcess business error, errorCode: ${err.code}, errorMsg:${err.message}`);
+                  console.error(`startNativeChildProcess business error, errorCode: ${err.code}, errorMsg:${err.message}`);
                 })
-            } catch (err) {
-              console.error(`startChildProcess error, errorCode: ${err.code}, errorMsg:${err.message}`);
+            } catch (err: BusinessError) {
+              console.error(`startNativeChildProcess error, errorCode: ${err.code}, errorMsg:${err.message}`);
             }
           });
       }

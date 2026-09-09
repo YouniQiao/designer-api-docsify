@@ -51,7 +51,7 @@ struct Index {
     RelativeContainer() {
       Text()
         .onClick(() => {
-          let deviceDescriptor = "descriptor";
+          let deviceDescriptor = 'descriptor';
           try {
             inputDeviceCooperate.getState(deviceDescriptor, (error: BusinessError, data: object) => {
               if (error) {
@@ -120,7 +120,7 @@ struct Index {
     RelativeContainer() {
       Text()
         .onClick(() => {
-          let deviceDescriptor = "descriptor";
+          let deviceDescriptor = 'descriptor';
           inputDeviceCooperate.getState(deviceDescriptor).then((data: object) => {
             console.info(`Succeeded in getting the status, data: ${JSON.stringify(data)}.`);
           }).catch((error: BusinessError) => {

@@ -31,6 +31,7 @@ Obtains the Want corresponding to the ability to start. This API uses an asynchr
 ```TypeScript
 import { featureAbility } from '@kit.AbilityKit';
 
+// Obtain the Want corresponding to the Ability to be started.
 featureAbility.getWant((error, data) => {
   if (error && error.code !== 0) {
     console.error(`getWant fail, error: ${JSON.stringify(error)}`);
@@ -66,6 +67,7 @@ Obtains the Want corresponding to the ability to start. This API uses a promise 
 ```TypeScript
 import { featureAbility } from '@kit.AbilityKit';
 
+// Obtain the Want corresponding to the Ability to be started.
 featureAbility.getWant().then((data) => {
   console.info(`getWant data: ${JSON.stringify(data)}`);
 });

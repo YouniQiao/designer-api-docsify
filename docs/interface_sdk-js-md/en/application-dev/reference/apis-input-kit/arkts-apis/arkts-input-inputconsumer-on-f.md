@@ -39,6 +39,7 @@ Subscribes to application shortcut key change events. This API obtains combinati
 
 ```TypeScript
 import { inputConsumer } from '@kit.InputKit';
+import { BusinessError } from '@kit.BasicServicesKit';
 
 @Entry
 @Component
@@ -56,10 +57,10 @@ struct Index {
           };
           let hotkeyCallback = (hotkeyOptions: inputConsumer.HotkeyOptions) => {
             console.info(`Succeeded in consuming hotkey, hotkeyOptions: ${JSON.stringify(hotkeyOptions)}.`);
-          }
+          };
           try {
             // Subscribe to shortcut key change events.
-            inputConsumer.on("hotkeyChange", hotkeyOptions, hotkeyCallback);
+            inputConsumer.on('hotkeyChange', hotkeyOptions, hotkeyCallback);
           } catch (error) {
             console.error(`Failed to Subscribe hot key, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
           }
@@ -103,6 +104,7 @@ If the API call is successful, the system's default response to the key event wi
 
 ```TypeScript
 import { inputConsumer, KeyEvent } from '@kit.InputKit';
+import { BusinessError } from '@kit.BasicServicesKit';
 
 @Entry
 @Component

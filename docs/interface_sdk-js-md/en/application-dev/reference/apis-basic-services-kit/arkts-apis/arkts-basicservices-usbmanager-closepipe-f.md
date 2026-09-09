@@ -44,16 +44,24 @@ Closes a USB device pipe.
 **Examples**
 
 ```TypeScript
-function closePipe() {
+async function closePipe() {
   let devicesList: Array<usbManager.USBDevice> = usbManager.getDevices();
   if (!devicesList || devicesList.length == 0) {
     console.info(`device list is empty`);
     return;
   }
 
-  usbManager.requestRight(devicesList?.[0]?.name);
-  let devicepipe: usbManager.USBDevicePipe = usbManager.connectDevice(devicesList?.[0]);
-  let ret: number = usbManager.closePipe(devicepipe);
+  let rightResult = await usbManager.requestRight(devicesList?.[0]?.name);
+  if (!rightResult) {
+    console.error(`request right failed`);
+    return;
+  }
+  let devicePipe: usbManager.USBDevicePipe = usbManager.connectDevice(devicesList?.[0]);
+  if (devicePipe == undefined) {
+    console.error(`connect device failed`);
+    return;
+  }
+  let ret: number = usbManager.closePipe(devicePipe);
   console.info(`closePipe = ${ret}`);
 }
 ```

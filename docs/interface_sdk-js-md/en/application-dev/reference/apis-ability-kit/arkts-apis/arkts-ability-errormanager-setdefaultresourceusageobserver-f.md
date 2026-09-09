@@ -39,3 +39,24 @@ Set the default resource usage observer. You can use it to implement chain calls
 | Error Code ID | Error Message |
 | --- | --- |
 | [16000205](../errorcode-ability.md#16000205-api-not-called-in-main-thread) | The API is not called on the main thread. |
+
+**Examples**
+
+```TypeScript
+import { errorManager } from '@kit.AbilityKit';
+import { process } from '@kit.ArkTS';
+
+let oldObserver: errorManager.ResourceUsageObserver;
+const resourceUsageObserver: errorManager.ResourceUsageObserver = (resourceType, resourceSize, detailInfo) => {
+  // Implement the custom resourceUsageObserver logic.
+  console.info('[Observer] Resource usage observer.');
+  if (oldObserver) {
+    oldObserver(resourceType, resourceSize, detailInfo);
+  } else {
+    // Add a null check. If the value is null, exit synchronously.
+    const processManager = new process.ProcessManager();
+    processManager.exit(0);
+  }
+};
+oldObserver = errorManager.setDefaultResourceUsageObserver(resourceUsageObserver);
+```

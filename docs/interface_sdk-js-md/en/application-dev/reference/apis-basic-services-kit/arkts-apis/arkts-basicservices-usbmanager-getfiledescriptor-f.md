@@ -40,18 +40,26 @@ Obtains a file descriptor.
 **Examples**
 
 ```TypeScript
-function getFileDescriptor() {
+async function getFileDescriptor() {
   let devicesList: Array<usbManager.USBDevice> = usbManager.getDevices();
   if (!devicesList || devicesList.length == 0) {
     console.info(`device list is empty`);
     return;
   }
 
-  usbManager.requestRight(devicesList?.[0]?.name);
-  let devicepipe: usbManager.USBDevicePipe = usbManager.connectDevice(devicesList?.[0]);
-  let ret: number = usbManager.getFileDescriptor(devicepipe);
+  let rightResult = await usbManager.requestRight(devicesList?.[0]?.name);
+  if (!rightResult) {
+    console.error(`request right failed`);
+    return;
+  }
+  let devicePipe: usbManager.USBDevicePipe = usbManager.connectDevice(devicesList?.[0]);
+  if (devicePipe == undefined) {
+    console.error(`connect device failed`);
+    return;
+  }
+  let ret: number = usbManager.getFileDescriptor(devicePipe);
   console.info(`getFileDescriptor = ${ret}`);
-  let closeRet: number = usbManager.closePipe(devicepipe);
+  let closeRet: number = usbManager.closePipe(devicePipe);
   console.info(`closePipe = ${closeRet}`);
 }
 ```

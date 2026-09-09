@@ -41,8 +41,8 @@ Starts NearLink scanning. This API uses a promise to return the result. You need
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported because the chip does not support it. |
-| [36100003](../../apis-avsession-kit/errorcode-nearlink-service.md#36100003-nearlink-disabled) | NearLink disabled. |
-| [36100040](../../apis-avsession-kit/errorcode-nearlink-service.md#36100040-integer-out-of-range) | Integer out of range. |
-| [36100041](../../apis-avsession-kit/errorcode-nearlink-service.md#36100041-invalid-url) | Invalid address. |
-| [36100042](../../apis-avsession-kit/errorcode-nearlink-service.md#36100042-empty-array) | Empty array. |
-| [36100099](../../apis-avsession-kit/errorcode-nearlink-service.md#36100099-operation-failed) | Operation failed. |
+| [36100003](../errorcode-nearlink-service.md#36100003-nearlink-disabled) | NearLink disabled. |
+| [36100040](../errorcode-nearlink-service.md#36100040-integer-out-of-range) | Integer out of range. |
+| [36100041](../errorcode-nearlink-service.md#36100041-invalid-url) | Invalid address. |
+| [36100042](../errorcode-nearlink-service.md#36100042-empty-array) | Empty array. |
+| [36100099](../errorcode-nearlink-service.md#36100099-operation-failed) | Operation failed. |

@@ -43,7 +43,7 @@ Defines the constructor of video component.
 
 ## Examples
 
-This example covers the basic features of video playback, including how to manage the control bar, use preview images, handle autoplay, adjust the playback speed, respond to keyboard shortcuts (since API version 15, [enableShortcutKey](arkts-arkui-video-attribute.md#enableshortcutkey) can be used for enabling keyboard shortcut response), and operate the controller for playback control. Additionally, it demonstrates how to implement first frame display (since API version 18, [posterOptions](#posteroptions18) can be used for setting first frame display options). Since API version 21, posterOptions supports configuring transition animation effects for video preview image content changes through the contentTransitionEffect parameter of [PosterOptions](#posteroptions18). along with related state callbacks.
+The basic usage includes: control bar, preview image, autoplay, playback speed, keyboard shortcut response (since API version 15, you can set the component to respond to keyboard shortcuts through [enableShortcutKey](arkts-arkui-video-attribute.md#enableshortcutkey)), controller (start playback, pause playback, stop playback, reset the video player, seek, etc.), first-frame display (since API version 18, you can set the first-frame display options of video playback through [posterOptions](#posteroptions18). Since API version 21, posterOptions supports setting the transition animation effect when the preview image content of the current video changes through the contentTransitionEffect parameter of [PosterOptions](#posteroptions18).), and some state callback methods.
 
 ```TypeScript
 // xxx.ets
@@ -67,7 +67,10 @@ struct VideoCreateComponent {
         previewUri: this.previewUri, // Set the preview image.
         currentProgressRate: this.curRate, // Set the playback speed.
         controller: this.controller,
-        posterOptions: { showFirstFrame: this.showFirstFrame, contentTransitionEffect: ContentTransitionEffect.OPACITY } // Disable the first frame display and set the preview image fade-in and fade-out animation.
+        posterOptions: {
+          showFirstFrame: this.showFirstFrame,
+          contentTransitionEffect: ContentTransitionEffect.OPACITY
+        } // Disable first-frame display, and set the fade-in/fade-out animation of the preview image.
       })
         .width('100%')
         .height(600)
@@ -84,34 +87,34 @@ struct VideoCreateComponent {
           console.info('onFinish');
         })
         .onError(() => {
-          console.info('onError');
+          console.error('onError');
         })
         .onStop(() => {
           console.info('onStop');
         })
         .onPrepared((e?: DurationObject) => {
           if (e != undefined) {
-            console.info('onPrepared is ' + e.duration);
+            console.info(`onPrepared is ${e.duration}`);
           }
         })
         .onSeeking((e?: TimeObject) => {
           if (e != undefined) {
-            console.info('onSeeking is ' + e.time);
+            console.info(`onSeeking is ${e.time}`);
           }
         })
         .onSeeked((e?: TimeObject) => {
           if (e != undefined) {
-            console.info('onSeeked is ' + e.time);
+            console.info(`onSeeked is ${e.time}`);
           }
         })
         .onUpdate((e?: TimeObject) => {
           if (e != undefined) {
-            console.info('onUpdate is ' + e.time);
+            console.info(`onUpdate is ${e.time}`);
           }
         })
         .onFullscreenChange((e?: FullscreenObject) => {
           if (e != undefined) {
-            console.info('onFullscreenChange is ' + e.fullscreen);
+            console.info(`onFullscreenChange is ${e.fullscreen}`);
           }
         })
 
@@ -139,7 +142,7 @@ struct VideoCreateComponent {
           this.controller.stop(); // Stop playback.
         }).margin(2)
         Button('reset').onClick(() => {
-          this.controller.reset(); // Reset the AVPlayer instance.
+          this.controller.reset(); // Reset the video player.
         }).margin(2)
         Button('setTime').onClick(() => {
           this.controller.setCurrentTime(10, SeekMode.Accurate); // Seek to the 10s position of the video.
@@ -222,7 +225,7 @@ struct ImageAnalyzerExample {
           this.controller.pause(); // Pause playback.
         }).margin(5)
         Button('getTypes').onClick(() => {
-            this.aiController.getImageAnalyzerSupportTypes();
+          this.aiController.getImageAnalyzerSupportTypes();
         }).margin(5)
       }
     }
@@ -239,7 +242,7 @@ import { unifiedDataChannel, uniformTypeDescriptor } from '@kit.ArkData';
 @Entry
 @Component
 struct Index {
-  // Replace $rawfile('video1.mp4') with the image resource file you use.
+  // Replace $rawfile('video1.mp4') with the video resource file you use.
   @State videoSrc: Resource | string = $rawfile('video1.mp4');
   private controller: VideoController = new VideoController();
 
@@ -334,7 +337,6 @@ struct VideoErrorComponent {
   @State videoSrc: string = "video.mp4"; // Enter an invalid video resource path.
   @State isAutoPlay: boolean = false;
   @State showControls: boolean = true;
-  @State showFirstFrame: boolean = false;
   controller: VideoController = new VideoController();
   @State errorMessage: string = '';
 
@@ -364,7 +366,7 @@ struct VideoErrorComponent {
 }
 ```
 
-The following example demonstrates how to use attributeModifier to dynamically set the attributes and methods of the Video component, including AI image analysis features and playback event methods.
+The following example demonstrates how to use attributeModifier to dynamically set the enableAnalyzer and analyzerConfig attributes and the onStart, onPause, onFinish, onError, onStop, onPrepared, onSeeking, onSeeked, onUpdate, and onFullscreenChange methods of the Video component.
 
 ```TypeScript
 // xxx.ets
@@ -386,34 +388,34 @@ class MyVideoModifier implements AttributeModifier<VideoAttribute> {
       console.info('video: onFinish');
     })
     instance.onError((err) => {
-      console.error('video: onError is code = ' + err.code + ', message = ' + err.message);
+      console.error(`video: onError is code = ${err.code}, message = ${err.message}`);
     })
     instance.onStop(() => {
       console.info('video: onStop');
     })
     instance.onPrepared((e?: DurationObject) => {
       if (e != undefined) {
-        console.info('video: onPrepared is ' + e.duration);
+        console.info(`video: onPrepared is ${e.duration}`);
       }
     })
     instance.onSeeking((e?: TimeObject) => {
       if (e != undefined) {
-        console.info('video: onSeeking is ' + e.time);
+        console.info(`video: onSeeking is ${e.time}`);
       }
     })
     instance.onSeeked((e?: TimeObject) => {
       if (e != undefined) {
-        console.info('video: onSeeked is ' + e.time);
+        console.info(`video: onSeeked is ${e.time}`);
       }
     })
     instance.onUpdate((e?: TimeObject) => {
       if (e != undefined) {
-        console.info('video: onUpdate is ' + e.time);
+        console.info(`video: onUpdate is ${e.time}`);
       }
     })
     instance.onFullscreenChange((e?: FullscreenObject) => {
       if (e != undefined) {
-        console.info('video: onFullscreenChange is ' + e.fullscreen);
+        console.info(`video: onFullscreenChange is ${e.fullscreen}`);
       }
     })
   }
@@ -422,7 +424,7 @@ class MyVideoModifier implements AttributeModifier<VideoAttribute> {
 @Entry
 @Component
 struct VideoModifierDemo {
-  // Replace $rawfile('video.mp4') with the image resource file you use.
+  // Replace $rawfile('video.mp4') with the video resource file you use.
   @State videoSrc: Resource = $rawfile('video.mp4');
   @State curRate: PlaybackSpeed = PlaybackSpeed.Speed_Forward_1_00_X;
   @State isAutoPlay: boolean = false;
@@ -453,7 +455,7 @@ struct VideoModifierDemo {
           this.controller.stop(); // Stop playback.
         }).margin(2)
         Button('reset').onClick(() => {
-          this.controller.reset(); // Reset the AVPlayer instance.
+          this.controller.reset(); // Reset the video player.
         }).margin(2)
       }
 
@@ -479,5 +481,109 @@ interface TimeObject {
 
 interface FullscreenObject {
   fullscreen: boolean;
+}
+```
+
+This example demonstrates the usage of the [start](#start-1), [pause](#pause-1), [stop](#stop-1), and [reset](#reset) APIs of VideoControllerAsync, and obtains the command execution status through promise-based asynchronous callbacks.
+Since API version 26.0.0, the VideoControllerAsync controller and the [start](#start-1), [pause](#pause-1), [stop](#stop-1), and [reset](#reset) APIs are added.
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct VideoControllerAsyncExample {
+  @State videoSrc: Resource = $rawfile('video1.mp4');// Replace with the video resource file required by the developer.
+  controller: VideoControllerAsync = new VideoControllerAsync();
+
+  build() {
+    Column() {
+      Video({
+        src: this.videoSrc,
+        controllerAsync: this.controller,
+      })
+        .width('100%')
+        .height(600)
+        .onStart(() => {
+          console.info('onStart');
+        })
+        .onPause(() => {
+          console.info('onPause');
+        })
+        .onFinish(() => {
+          console.info('onFinish');
+        })
+        .onError(() => {
+          console.error('onError');
+        })
+        .onStop(() => {
+          console.info('onStop');
+        })
+        .onPrepared((e?: PreparedInfo) => {
+          if (e != undefined) {
+            console.info(`onPrepared is ${e.duration}`);
+          }
+        })
+        .onSeeking((e?: PlaybackInfo) => {
+          if (e != undefined) {
+            console.info(`onSeeking is ${e.time}`);
+          }
+        })
+        .onSeeked((e?: PlaybackInfo) => {
+          if (e != undefined) {
+            console.info(`onSeeked is ${e.time}`);
+          }
+        })
+        .onUpdate((e?: PlaybackInfo) => {
+          if (e != undefined) {
+            console.info(`onUpdate is ${e.time}`);
+          }
+        })
+        .onFullscreenChange((e?: FullscreenInfo) => {
+          if (e != undefined) {
+            console.info(`onFullscreenChange is ${e.fullscreen}`);
+          }
+        })
+
+      Row() {
+        Button('start').onClick(() => {
+          this.controller.start() // Start playback. Returns a Promise<void>.
+            .then(() => { // You can use then to wait for successful execution.
+              console.info('start success')
+            })
+            .catch((err: BusinessError) => { // Use catch to handle the failure scenario.
+              console.info(`start failed: ${err.message}`)
+            })
+        }).margin(2)
+        Button('pause').onClick(() => {
+          this.controller.pause() // Pause playback.
+            .then(() => {
+              console.info('pause success')
+            })
+            .catch((err: BusinessError) => {
+              console.info(`pause failed: ${err.message}`)
+            })
+        }).margin(2)
+        Button('stop').onClick(() => {
+          this.controller.stop() // Stop playback.
+            .then(() => {
+              console.info('stop success')
+            })
+            .catch((err: BusinessError) => {
+              console.info(`stop failed: ${err.message}`)
+            })
+        }).margin(2)
+        Button('reset').onClick(() => {
+          this.controller.reset() // Reset the video player.
+            .then(() => {
+              console.info('reset success')
+            })
+            .catch((err: BusinessError) => {
+              console.info(`reset failed: ${err.message}`)
+            })
+        }).margin(2)
+      }
+    }
+  }
 }
 ```

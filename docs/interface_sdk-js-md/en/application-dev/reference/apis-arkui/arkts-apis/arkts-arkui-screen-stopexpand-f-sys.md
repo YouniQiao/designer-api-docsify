@@ -42,6 +42,7 @@ Stops extended mode. This API uses an asynchronous callback to return the result
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
+// Obtain the screen ID through getAllScreens().
 let expandScreenIds: Array<number> = [1, 2, 3]; // ID array of extended screens.
 // Stop the extend mode.
 screen.stopExpand(expandScreenIds, (err: BusinessError) => {

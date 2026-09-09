@@ -50,15 +50,15 @@ import { BusinessError } from '@kit.BasicServicesKit';
 
 // Obtain the screen ID using getAllScreens().
 let mainScreenOptions: screen.MultiScreenPositionOptions = {
-  id: 0, // Main screen ID.
-  startX : 0,
-  startY : 0
+  id: 0,  // Main screen ID
+  startX: 0,
+  startY: 0
 }; // Position of the main screen.
 
 let secondaryScreenOptions: screen.MultiScreenPositionOptions = {
-  id : 12,  // Secondary screen ID.
-  startX : 1000,
-  startY : 1000
+  id: 12,  // Secondary screen ID
+  startX: 1000,
+  startY: 1000
 }; // Position of the secondary screen.
 
 // Set the positions of the main and secondary screens.

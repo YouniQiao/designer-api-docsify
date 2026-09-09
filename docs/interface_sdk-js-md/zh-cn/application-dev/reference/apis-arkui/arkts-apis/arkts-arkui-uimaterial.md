@@ -175,3 +175,362 @@ struct Index {
   }
 }
 ```
+
+本示例介绍如何将沉浸式材质的[ImmersiveMaterial](arkts-arkui-uimaterial-immersivematerial-c.md)对象通过[systemMaterial](../arkui-ts/ts-universal-attributes-image-effect.md#systemmaterial)属性设置给组件。
+从API版本26.0.0开始，新增ImmersiveMaterial对象和systemMaterial属性。
+
+```TypeScript
+import { uiMaterial } from '@kit.ArkUI';
+
+@Entry
+@Component
+struct SystemMaterialPage {
+  @State currentStyle: uiMaterial.ImmersiveStyle = uiMaterial.ImmersiveStyle.ULTRA_THIN;
+  private styles: uiMaterial.ImmersiveStyle[] = [
+    uiMaterial.ImmersiveStyle.ULTRA_THIN,
+    uiMaterial.ImmersiveStyle.THIN,
+    uiMaterial.ImmersiveStyle.REGULAR,
+    uiMaterial.ImmersiveStyle.THICK,
+    uiMaterial.ImmersiveStyle.ULTRA_THICK,
+  ];
+
+  build() {
+    Column() {
+      Tabs({ barPosition: BarPosition.End }) {
+        TabContent() {
+          // $r('app.media.invert')需要替换为开发者所需的图像资源文件
+          Image($r('app.media.invert'))
+            .width('100%')
+            .height('100%')
+            .objectFit(ImageFit.Cover)
+        }.tabBar(new BottomTabBarStyle($r('sys.media.ohos_icon_mask_svg'), 'ULTRA_THIN')
+          .labelStyle({ selectedColor: $r('sys.color.brand'), unselectedColor: $r('sys.color.font_primary') })
+          .iconStyle({ selectedColor: $r('sys.color.brand'), unselectedColor: $r('sys.color.font_primary') })
+        )
+
+        TabContent() {
+          Image($r('app.media.invert'))
+            .width('100%')
+            .height('100%')
+            .objectFit(ImageFit.Cover)
+        }.tabBar(new BottomTabBarStyle($r('sys.media.ohos_icon_mask_svg'), 'THIN')
+          .labelStyle({ selectedColor: $r('sys.color.brand'), unselectedColor: $r('sys.color.font_primary') })
+          .iconStyle({ selectedColor: $r('sys.color.brand'), unselectedColor: $r('sys.color.font_primary') })
+        )
+
+        TabContent() {
+          Image($r('app.media.invert'))
+            .width('100%')
+            .height('100%')
+            .objectFit(ImageFit.Cover)
+        }.tabBar(new BottomTabBarStyle($r('sys.media.ohos_icon_mask_svg'), 'REGULAR')
+          .labelStyle({ selectedColor: $r('sys.color.brand'), unselectedColor: $r('sys.color.font_primary') })
+          .iconStyle({ selectedColor: $r('sys.color.brand'), unselectedColor: $r('sys.color.font_primary') })
+        )
+
+        TabContent() {
+          Image($r('app.media.invert'))
+            .width('100%')
+            .height('100%')
+            .objectFit(ImageFit.Cover)
+        }.tabBar(new BottomTabBarStyle($r('sys.media.ohos_icon_mask_svg'), 'THICK')
+          .labelStyle({ selectedColor: $r('sys.color.brand'), unselectedColor: $r('sys.color.font_primary') })
+          .iconStyle({ selectedColor: $r('sys.color.brand'), unselectedColor: $r('sys.color.font_primary') })
+        )
+
+        TabContent() {
+          Image($r('app.media.invert'))
+            .width('100%')
+            .height('100%')
+            .objectFit(ImageFit.Cover)
+        }.tabBar(new BottomTabBarStyle($r('sys.media.ohos_icon_mask_svg'), 'ULTRA_THICK')
+          .labelStyle({ selectedColor: $r('sys.color.brand'), unselectedColor: $r('sys.color.font_primary') })
+          .iconStyle({ selectedColor: $r('sys.color.brand'), unselectedColor: $r('sys.color.font_primary') })
+        )
+      }
+      .barFloatingStyle({
+        systemMaterial: new uiMaterial.ImmersiveMaterial({
+          style: this.currentStyle,
+        }),
+        maskColor: Color.Transparent,
+      })
+      .barOverlap(true)
+      .onChange((index: number) => {
+        this.currentStyle = this.styles[index];
+      })
+      .barWidth(500)
+      .height('100%')
+    }
+    .width('100%')
+    .height('100%')
+  }
+}
+```
+
+本示例介绍如何通过[uiMaterial.getMaterialInfo](arkts-arkui-uimaterial-getmaterialinfo-f.md)获取当前应用的材质配置信息，并根据配置状态使用empty关闭特定组件的沉浸式系统材质效果。
+从API版本26.0.0开始，新增uiMaterial.getMaterialInfo方法和empty方法。
+首先在[module.json5](../../../quick-start/module-configuration-file.md)文件中配置开关信息，需注意只有在entry类型的module中配置才会生效。
+
+```TypeScript
+{
+  "module": {
+    // ···
+    "type": "entry", // 需注意只有在entry类型的module中配置才会生效。
+    // ···
+    "metadata": [{
+      "name": "ohos.arkui.UIMaterial.state",
+      "value": "enable"
+    }],
+    // ···
+  }
+}
+```
+
+然后按照如下内容编写示例代码。
+
+```TypeScript
+import { uiMaterial } from '@kit.ArkUI';
+
+@Entry
+@Component
+struct MaterialInfoPage {
+  // 获取材质配置信息
+  private info: uiMaterial.MaterialInfo = uiMaterial.getMaterialInfo();
+
+  build() {
+    Column() {
+      Column({ space: 20 }) {
+        Column() {
+          Text(`MaterialState: ${this.info.state}`)
+            .fontSize(16)
+          Text(`MaterialType: ${this.info.type}`)
+            .fontSize(16)
+        }
+        .backgroundColor(Color.White)
+        .padding(15)
+
+        // 根据状态决定组件行为
+        if (this.info.state === uiMaterial.MaterialState.ENABLE) {
+          // Toggle组件默认开启沉浸式系统材质
+          Toggle({ type: ToggleType.Switch })
+            .width(100)
+            .height(50)
+          // 单独关闭Toggle组件的沉浸式系统材质
+          Toggle({ type: ToggleType.Switch })
+            .width(100)
+            .height(50)
+            .systemMaterial(uiMaterial.Material.empty)
+        }
+      }
+      .width('100%')
+      .height('100%')
+      .justifyContent(FlexAlign.Center)
+      // $r('app.media.img')需要替换为开发者所需的图像资源文件
+      .backgroundImage($r('app.media.img'))
+
+    }.width('100%').height('100%')
+  }
+}
+```
+
+本示例介绍如何通过[ImmersiveOptions](arkts-arkui-uimaterial-immersiveoptions-i.md)中的interactive接口使组件实现交互形变效果。
+从API版本26.0.0开始，新增interactive接口。
+
+```TypeScript
+import { uiMaterial } from '@kit.ArkUI';
+
+@Entry
+@Component
+struct Index {
+  build() {
+    Column() {
+      Tabs({ barPosition: BarPosition.End }) {
+        TabContent() {
+          // $r('app.media.invert')需要替换为开发者所需的图像资源文件。
+          Image($r('app.media.invert'))
+            .width('100%')
+            .height('100%')
+        }.tabBar(new BottomTabBarStyle($r('sys.media.ohos_icon_mask_svg'), 'tab1')
+          .labelStyle({ selectedColor: $r('sys.color.brand'), unselectedColor: $r('sys.color.font_primary') })
+          .iconStyle({ selectedColor: $r('sys.color.brand'), unselectedColor: $r('sys.color.font_primary') })
+        )
+      }
+      .barFloatingStyle({
+        systemMaterial: new uiMaterial.ImmersiveMaterial({
+          style: uiMaterial.ImmersiveStyle.ULTRA_THIN,
+          // 开启交互形变效果
+          interactive: true,
+        }),
+        maskColor: Color.Transparent,
+      })
+      .barOverlap(true)
+      .height('100%')
+    }
+    .width('100%')
+    .height('100%')
+  }
+}
+```
+
+本示例介绍如何通过[ImmersiveOptions](arkts-arkui-uimaterial-immersiveoptions-i.md)中的lightEffect接口使组件实现光感交互反馈效果。
+从API版本26.0.0开始，新增lightEffect接口。
+
+```TypeScript
+// xxx.ets
+import { uiMaterial } from '@kit.ArkUI';
+
+@Styles
+function systemMaterialStyle() {
+  .margin(5)
+  .width(70)
+  .height(70)
+  .borderRadius(50)
+}
+
+@Entry
+@Component
+struct NavigationTitleMaterialDemo {
+  @State myMaterial: uiMaterial.ImmersiveMaterial = new uiMaterial.ImmersiveMaterial({
+    style: uiMaterial.ImmersiveStyle.ULTRA_THIN,
+    interactive: true,
+    lightEffect: {},
+  });
+
+  @Builder
+  CustomMenuBuilder() {
+    Stack() {
+      Row() {
+        Text('Title')
+          .fontSize(30)
+          .fontColor(Color.White)
+          .margin({ right: 50 })
+
+        Column() {
+        }
+        .systemMaterialStyle()
+        .systemMaterial(this.myMaterial)
+
+        Column() {
+        }
+        .systemMaterialStyle()
+        .systemMaterial(this.myMaterial)
+
+        Column() {
+        }
+        .systemMaterialStyle()
+        .systemMaterial(this.myMaterial)
+      }
+      .justifyContent(FlexAlign.End)
+    }
+    .width('100%')
+    .height(100)
+  }
+
+  build() {
+    Stack() {
+      // $r('app.media.invert')需要替换为开发者所需的图像资源文件
+      Image($r('app.media.invert'))
+      Navigation() {
+        // 页面内容
+      }
+      .title(this.CustomMenuBuilder())
+    }
+    .width('100%')
+    .height('100%')
+  }
+}
+```
+
+本示例介绍如何通过[uiMaterial.getGlobalMaterialLevel](arkts-arkui-uimaterial-getglobalmateriallevel-f.md)获取设备的材质等级，并通过[uiMaterial.isImmersiveMaterialSupported](arkts-arkui-uimaterial-isimmersivematerialsupported-f.md)判断设备是否支持沉浸式材质，据此决定是否为组件设置沉浸式材质。通过此种适配方式，应用可以在支持和不支持沉浸式材质的不同设备上复用同一套代码，在不支持沉浸式材质的设备上自动降级为普通样式，无需为不同设备编写不同代码。
+从API版本26.0.0开始，新增getGlobalMaterialLevel和isImmersiveMaterialSupported方法。
+
+```TypeScript
+// xxx.ets
+import { uiMaterial } from '@kit.ArkUI';
+
+@Styles
+function systemMaterialStyle() {
+  .margin(5)
+  .width(70)
+  .height(70)
+  .borderRadius(50)
+}
+
+@Entry
+@Component
+struct NavigationTitleMaterialDemo {
+  private materialLevel: uiMaterial.MaterialLevel = uiMaterial.getGlobalMaterialLevel(); // 材质档位由设备决定，应用运行后不会改变
+  private isSupported: boolean = uiMaterial.isImmersiveMaterialSupported(); // 是否支持沉浸式材质由设备决定，应用运行后不会改变
+
+  @Builder
+  CustomMenuBuilder() {
+    Stack() {
+      Row() {
+        Text('Title')
+          .fontSize(30)
+          .fontColor(Color.White)
+          .margin({ right: 50 })
+
+        Column() {
+        }
+        .systemMaterialStyle()
+        .backgroundColor(this.isSupported ? Color.Transparent :
+          '#f2f1f3f5') // 背景色写到systemMaterial之前，在支持沉浸式材质的低算力设备上，沉浸式材质中包含的背景色效果最终生效
+        // 在支持沉浸式材质的设备上，设置透明的背景色和沉浸式材质，沉浸式材质后设置生效；在不支持沉浸式材质的设备上，设置'#f2f1f3f5'的背景色和undefined的无材质效果，'#f2f1f3f5'的背景色属性生效
+        .systemMaterial(this.isSupported ? new uiMaterial.ImmersiveMaterial({
+          style: uiMaterial.ImmersiveStyle.REGULAR,
+        }) : undefined)
+
+        Column() {
+        }
+        .systemMaterialStyle()
+        .backgroundColor(this.isSupported ? Color.Transparent :
+          $r('sys.color.comp_background_emphasize')) // 背景色写到systemMaterial之前，在支持沉浸式材质的低算力设备上，沉浸式材质中包含的背景色效果最终生效
+        // 在支持沉浸式材质的设备上，设置透明的背景色和带赋色的沉浸式材质，带赋色的沉浸式材质后设置生效；在不支持沉浸式材质的设备上，设置资源值的背景色和undefined的无材质效果，资源值的背景色属性生效
+        .systemMaterial(this.isSupported ? new uiMaterial.ImmersiveMaterial({
+          style: uiMaterial.ImmersiveStyle.REGULAR,
+          materialColor: $r('sys.color.comp_background_emphasize'),
+        }) : undefined)
+
+        Column() {
+        }
+        .systemMaterialStyle()
+        .backgroundColor($r('sys.color.comp_background_emphasize')) // 背景色写到systemMaterial之前，在支持沉浸式材质的低算力设备上，沉浸式材质中包含的背景色效果最终生效
+        // 在支持沉浸式材质的设备上，如果是高算力或中算力设备，后设置的沉浸式材质会清除背景色效果为透明色，使用材质效果；如果是低算力设备，后设置的沉浸式材质中包含的背景色效果覆盖了backgroundColor属性的效果，使用材质颜色
+        // 在不支持沉浸式材质的设备上，设置systemMaterial无作用，资源值的背景色属性生效
+        .systemMaterial(new uiMaterial.ImmersiveMaterial({
+          style: uiMaterial.ImmersiveStyle.REGULAR,
+          materialColor: $r('sys.color.comp_background_emphasize')
+        }))
+      }
+      .justifyContent(FlexAlign.End)
+    }
+    .backgroundColor('#99000000')
+    .width('100%')
+    .height(100)
+  }
+
+  build() {
+    Stack() {
+      // $r('app.media.invert')需要替换为开发者所需的图像资源文件
+      Image($r('app.media.invert'))
+
+      Navigation() {
+        Column() {
+          Text(`MaterialLevel: ${this.materialLevel}`)
+            .fontSize(16)
+
+          Text(`IsImmersiveMaterialSupported: ${this.isSupported}`)
+            .fontSize(16)
+        }
+        .backgroundColor(Color.White)
+        .margin({ top: 100 })
+        .padding(15)
+      }
+      .title(this.CustomMenuBuilder())
+    }
+    .width('100%')
+    .height('100%')
+  }
+}
+```

@@ -1015,6 +1015,25 @@ on(type: 'serviceDie', callback: Callback<{}>): void
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified type is greater than 255. |
 
+**示例**
+
+```TypeScript
+import { distributedDeviceManager } from '@kit.DistributedServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  // 创建设备管理实例
+  let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
+  // 注册设备管理服务死亡回调
+  dmInstance.on('serviceDie', () => {
+    console.info('serviceDie on');
+  });
+} catch (err) {
+  let error: BusinessError = err as BusinessError;
+  console.error(`Failed to register service die callback. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
 ## startDiscovering
 
 ```TypeScript

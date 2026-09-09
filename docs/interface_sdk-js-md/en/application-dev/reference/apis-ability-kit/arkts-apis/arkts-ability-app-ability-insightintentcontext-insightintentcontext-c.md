@@ -46,6 +46,7 @@ Sets the return mode of the intent execution result. This API is applicable to i
 import { InsightIntentExecutor, insightIntent } from '@kit.AbilityKit';
 import { window } from '@kit.ArkUI';
 import { hilog } from '@kit.PerformanceAnalysisKit';
+import { BusinessError } from '@kit.BasicServicesKit';
 
 export default class InsightIntentExecutorUI extends InsightIntentExecutor {
   onExecuteInUIAbilityForegroundMode(name: string, param: Record<string, Object>,
@@ -62,9 +63,8 @@ export default class InsightIntentExecutorUI extends InsightIntentExecutor {
     try {
       this.context.setReturnModeForUIAbilityForeground(insightIntent.ReturnMode.FUNCTION);
     } catch (error) {
-      let code = (error as BusinessError).code;
-      let msg = (error as BusinessError).message;
-      console.error(`testTag setReturnModeForUIAbilityForeground fail, error code: ${code}, err msg: ${msg}.`);
+      const err: BusinessError = error as BusinessError;
+      console.error(`Failed to setReturnModeForUIAbilityForeground. Code: ${err.code}, message: ${err.message}`);
     }
 
     let localStorageData: Record<string, number> = {
@@ -116,6 +116,7 @@ Sets the return mode of the intent execution result. This API is applicable to i
 ```TypeScript
 import { InsightIntentExecutor, insightIntent, UIExtensionContentSession } from '@kit.AbilityKit';
 import { hilog } from '@kit.PerformanceAnalysisKit';
+import { BusinessError } from '@kit.BasicServicesKit';
 
 export default class InsightIntentExecutorUI extends InsightIntentExecutor {
   onExecuteInUIExtensionAbility(name: string, param: Record<string, Object>,
@@ -144,9 +145,8 @@ export default class InsightIntentExecutorUI extends InsightIntentExecutor {
       storage.setOrCreate('session', pageLoader);
       pageLoader.loadContent('pages/UIExtensionPage', storage);
     } catch (err) {
-      let code = (err as BusinessError).code;
-      let msg = (err as BusinessError).message;
-      console.info(`testTag loadContent error code: ${code}, error msg: ${msg}.`);
+      const error: BusinessError = err as BusinessError;
+      console.error(`Failed to loadContent. Code: ${error.code}, message: ${error.message}`);
     }
     return result;
   }
@@ -202,12 +202,13 @@ Starts a UIAbility. This API can only be used to start UIAbility components with
 import { InsightIntentExecutor, insightIntent, Want } from '@kit.AbilityKit';
 import { window } from '@kit.ArkUI';
 import { hilog } from '@kit.PerformanceAnalysisKit';
+import { BusinessError } from '@kit.BasicServicesKit';
 
 export default class IntentExecutorImpl extends InsightIntentExecutor {
   onExecuteInUIAbilityForegroundMode(name: string, param: Record<string, Object>,
     pageLoader: window.WindowStage): insightIntent.ExecuteResult {
     let want: Want = {
-      bundleName: 'com.ohos.intentExecuteDemo',
+      bundleName: 'com.ohos.intentExecuteDemo', // This is only an example. Replace it with the actual bundle name in real development.
       moduleName: 'entry',
       abilityName: 'AnotherAbility',
     };
@@ -221,7 +222,8 @@ export default class IntentExecutorImpl extends InsightIntentExecutor {
         }
       })
     } catch (error) {
-      hilog.error(0x0000, 'testTag', 'Start ability error caught %{public}s', JSON.stringify(error));
+      const err: BusinessError = error as BusinessError;
+      console.error(`Failed to start ability. Code: ${err.code}, message: ${err.message}`);
     }
 
     let result: insightIntent.ExecuteResult = {
@@ -289,12 +291,13 @@ Starts a UIAbility. This API can only be used to start UIAbility components with
 import { InsightIntentExecutor, insightIntent, Want } from '@kit.AbilityKit';
 import { window } from '@kit.ArkUI';
 import { hilog } from '@kit.PerformanceAnalysisKit';
+import { BusinessError } from '@kit.BasicServicesKit';
 
 export default class IntentExecutorImpl extends InsightIntentExecutor {
   async onExecuteInUIAbilityForegroundMode(name: string, param: Record<string, Object>,
     pageLoader: window.WindowStage): Promise<insightIntent.ExecuteResult> {
     let want: Want = {
-      bundleName: 'com.ohos.intentExecuteDemo',
+      bundleName: 'com.ohos.intentExecuteDemo', // This is only an example. In actual use, developers need to replace it with the real bundle name.
       moduleName: 'entry',
       abilityName: 'AnotherAbility',
     };
@@ -303,7 +306,8 @@ export default class IntentExecutorImpl extends InsightIntentExecutor {
       await this.context.startAbility(want);
       hilog.info(0x0000, 'testTag', '%{public}s', 'Start ability finished');
     } catch (error) {
-      hilog.error(0x0000, 'testTag', 'Start ability error caught %{public}s', JSON.stringify(error));
+      const err: BusinessError = error as BusinessError;
+      console.error(`Failed to start ability. Code: ${err.code}, message: ${err.message}`);
     }
 
     let result: insightIntent.ExecuteResult = {

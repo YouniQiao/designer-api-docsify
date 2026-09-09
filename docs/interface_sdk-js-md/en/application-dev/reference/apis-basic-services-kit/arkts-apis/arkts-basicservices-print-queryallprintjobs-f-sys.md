@@ -45,13 +45,13 @@ Queries all print jobs. This API uses an asynchronous callback to return the res
 import { print } from '@kit.BasicServicesKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
-print.queryAllPrintJobs((err: BusinessError) => {
-    if (err) {
-        console.error('queryAllPrintJobs failed, because : ' + JSON.stringify(err));
+print.queryAllPrintJobs((error: BusinessError) => {
+    if (error) {
+        console.error(`Failed to query all print jobs. Code: ${error.code}, message: ${error.message}`);
     } else {
         console.info('queryAllPrintJobs success');
     }
-})
+});
 ```
 
 ```TypeScript
@@ -61,8 +61,8 @@ import { BusinessError } from '@kit.BasicServicesKit';
 print.queryAllPrintJobs().then(() => {
     console.info('queryAllPrintJobs success');
 }).catch((error: BusinessError) => {
-    console.error('queryAllPrintJobs failed, error : ' + JSON.stringify(error));
-})
+    console.error(`Failed to query all print jobs. Code: ${error.code}, message: ${error.message}`);
+});
 ```
 
 

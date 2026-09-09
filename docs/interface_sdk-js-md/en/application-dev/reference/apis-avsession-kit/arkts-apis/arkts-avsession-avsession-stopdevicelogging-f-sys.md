@@ -38,6 +38,6 @@ Stop the current device written even the discovery is ongoing.
 
 ```TypeScript
 avSession.stopDeviceLogging().then(() => {
-  console.info('Succeeded in stopping casting.');
+  console.info('Succeeded in stopping device logging.');
 });
 ```

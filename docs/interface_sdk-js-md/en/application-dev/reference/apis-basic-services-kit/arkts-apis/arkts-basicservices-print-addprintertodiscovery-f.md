@@ -46,7 +46,7 @@ import { print } from '@kit.BasicServicesKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let printerInformation : print.PrinterInformation = {
-    printerId : 'testPrinterId',
+    printerId : 'testPrinterId', // printer ID can be obtained from the on('printerChange') callback.
     printerName : 'testPrinterName',
     printerStatus : 0,
     description : 'testDesc',
@@ -57,6 +57,6 @@ let printerInformation : print.PrinterInformation = {
 print.addPrinterToDiscovery(printerInformation).then(() => {
     console.info('addPrinterToDiscovery success');
 }).catch((error: BusinessError) => {
-    console.error('addPrinterToDiscovery error : ' + JSON.stringify(error));
+    console.error(`Failed to addPrinterToDiscovery. Code: ${error.code}, message: ${error.message}`);
 })
 ```

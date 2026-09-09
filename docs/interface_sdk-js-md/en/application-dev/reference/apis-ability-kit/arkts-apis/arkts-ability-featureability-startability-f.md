@@ -37,6 +37,7 @@ Starts an ability. This API uses an asynchronous callback to return the result.
 ```TypeScript
 import { featureAbility, wantConstant } from '@kit.AbilityKit';
 
+// Start a new Ability.
 featureAbility.startAbility(
   {
     want:
@@ -99,6 +100,7 @@ Starts an ability. This API uses a promise to return the result.
 ```TypeScript
 import { featureAbility, wantConstant } from '@kit.AbilityKit';
 
+// Start a new Ability.
 featureAbility.startAbility(
   {
     want:

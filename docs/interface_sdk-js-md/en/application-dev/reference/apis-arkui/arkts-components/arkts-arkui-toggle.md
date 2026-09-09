@@ -154,8 +154,11 @@ This example shows how to implement a custom toggle style. The toggle button swi
 
 ```TypeScript
 // xxx.ets
+// Custom Switch style modifier that implements the ContentModifier API to customize the Toggle content area.
 class MySwitchStyle implements ContentModifier<ToggleConfiguration> {
+  // Background color when the switch is on.
   selectedColor: Color = Color.White;
+  // Text displayed on the button.
   lamp: string = 'string';
 
   constructor(selectedColor: Color, lamp: string) {
@@ -191,6 +194,7 @@ function buildSwitch(config: ToggleConfiguration) {
 struct Index {
   build() {
     Column({ space: 50 }) {
+      // Use the custom style modifier to customize the Toggle content, and listen for state changes through onChange.
       Toggle({ type: ToggleType.Switch })
         .enabled(true)
         .contentModifier(new MySwitchStyle(Color.Yellow, 'light'))
@@ -198,6 +202,43 @@ struct Index {
           console.info('Switch Log:' + isOn);
         })
     }.height('100%').width('100%')
+  }
+}
+```
+
+This example shows the effect comparison of the Switch type of the Toggle component before and after the immersive light effect is enabled, including the effects of not setting the system material, setting undefined, setting the system material, and setting the system material together with [switchPointColor](arkts-arkui-toggle-attribute.md#switchpointcolor) to set the point light source color. The example uses the universal attribute [systemMaterial](ts-universal-attributes-image-effect.md#systemmaterial) API to implement the immersive light effect.
+The immersive light effect of the component is adaptively adjusted based on the device computing power and the immersive light effect set by the user in the system, and no additional adaptation is required by developers.
+Since API version 26.0.0, the systemMaterial attribute is added.
+> NOTE
+> 
+> The actual display effect of the system material is related to the computing power tier of the device. The same code produces different display effects on devices of different computing power tiers, and a simplified material effect is displayed on low-computing-power devices. The computing power tier is automatically divided and managed by the system based on the hardware capabilities of the device. Applications do not need to be aware of it or perform additional settings. The system automatically adapts the material display effect based on the computing power tier of the current device.
+
+```TypeScript
+import { uiMaterial } from '@kit.ArkUI';
+
+// xxx.ets
+@Entry
+@Component
+struct ToggleMaterialTest {
+  build() {
+    Column({ space: 10 }) {
+      // Do not set the system material API, and there is no immersive light effect.
+      Toggle({ type: ToggleType.Switch, isOn: true })
+
+      // Set systemMaterial to undefined to restore the effect without immersive light.
+      Toggle({ type: ToggleType.Switch, isOn: true })
+        .systemMaterial(undefined)
+
+      // Set the system material to enable the immersive light effect (the systemMaterial parameter is arbitrary and serves only as the system material switch; the component-side fixed parameters are ultimately used), with a white point light source by default (the color is the default value of switchPointColor).
+      Toggle({ type: ToggleType.Switch, isOn: true })
+        .systemMaterial(new uiMaterial.Material())
+
+      // Set the system material to enable the immersive light effect (the systemMaterial parameter is arbitrary and serves only as the system material switch; the component-side fixed parameters are ultimately used), with the point light color following the switchPointColor setting.
+      Toggle({ type: ToggleType.Switch, isOn: true })
+        .systemMaterial(new uiMaterial.Material())
+        .switchPointColor(Color.Red)
+    }
+    .width('100%')
   }
 }
 ```

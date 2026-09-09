@@ -47,7 +47,9 @@ import { BusinessError } from '@kit.BasicServicesKit';
 
 // Use try catch to capture possible exceptions.
 try {
+  // Subscribe to acceleration sensor data.
   sensor.on(sensor.SensorId.ACCELEROMETER, (data: sensor.AccelerometerResponse) => {
+    // Output the X, Y, and Z coordinate components.
     console.info('Succeeded in invoking on. X-coordinate component: ' + data.x);
     console.info('Succeeded in invoking on. Y-coordinate component: ' + data.y);
     console.info('Succeeded in invoking on. Z-coordinate component: ' + data.z);
@@ -101,7 +103,9 @@ import { BusinessError } from '@kit.BasicServicesKit';
 
 // Use try catch to capture possible exceptions.
 try {
+  // Subscribe to uncalibrated acceleration sensor data.
   sensor.on(sensor.SensorId.ACCELEROMETER_UNCALIBRATED, (data: sensor.AccelerometerUncalibratedResponse) => {
+    // Output the X, Y, and Z coordinate components and offset values.
     console.info('Succeeded in invoking on. X-coordinate component: ' + data.x);
     console.info('Succeeded in invoking on. Y-coordinate component: ' + data.y);
     console.info('Succeeded in invoking on. Z-coordinate component: ' + data.z);
@@ -154,7 +158,9 @@ import { BusinessError } from '@kit.BasicServicesKit';
 
 // Use try catch to capture possible exceptions.
 try {
+  // Subscribe to ambient light sensor data.
   sensor.on(sensor.SensorId.AMBIENT_LIGHT, (data: sensor.LightResponse) => {
+    // Output the ambient light intensity.
     console.info('Succeeded in getting the ambient light intensity: ' + data.intensity);
   }, { interval: 100000000 });
   setTimeout(() => {
@@ -203,7 +209,9 @@ import { BusinessError } from '@kit.BasicServicesKit';
 
 // Use try catch to capture possible exceptions.
 try {
+  // Subscribe to data of the ambient temperature sensor.
   sensor.on(sensor.SensorId.AMBIENT_TEMPERATURE, (data: sensor.AmbientTemperatureResponse) => {
+    // Output the temperature value.
     console.info('Succeeded in invoking on. Temperature: ' + data.temperature);
   }, { interval: 100000000 });
   setTimeout(() => {
@@ -251,7 +259,9 @@ import { BusinessError } from '@kit.BasicServicesKit';
 
 // Use try catch to capture possible exceptions.
 try {
+  // Subscribe to data of the barometer sensor.
   sensor.on(sensor.SensorId.BAROMETER, (data: sensor.BarometerResponse) => {
+    // Output the atmospheric pressure value.
     console.info('Succeeded in invoking on. Atmospheric pressure: ' + data.pressure);
   }, { interval: 100000000 });
   setTimeout(() => {
@@ -300,7 +310,9 @@ import { BusinessError } from '@kit.BasicServicesKit';
 
 // Use try catch to capture possible exceptions.
 try {
+  // Subscribe to data of the gravity sensor.
   sensor.on(sensor.SensorId.GRAVITY, (data: sensor.GravityResponse) => {
+    // Output the X, Y, and Z coordinate components.
     console.info('Succeeded in invoking on. X-coordinate component: ' + data.x);
     console.info('Succeeded in invoking on. Y-coordinate component: ' + data.y);
     console.info('Succeeded in invoking on. Z-coordinate component: ' + data.z);
@@ -356,7 +368,9 @@ import { BusinessError } from '@kit.BasicServicesKit';
 
 // Use try catch to capture possible exceptions.
 try {
+  // Subscribe to data of the calibrated gyroscope sensor.
   sensor.on(sensor.SensorId.GYROSCOPE, (data: sensor.GyroscopeResponse) => {
+    // Output the X, Y, and Z coordinate components.
     console.info('Succeeded in invoking on. X-coordinate component: ' + data.x);
     console.info('Succeeded in invoking on. Y-coordinate component: ' + data.y);
     console.info('Succeeded in invoking on. Z-coordinate component: ' + data.z);
@@ -410,7 +424,9 @@ import { BusinessError } from '@kit.BasicServicesKit';
 
 // Use try catch to capture possible exceptions.
 try {
+  // Subscribe to data of the uncalibrated gyroscope sensor.
   sensor.on(sensor.SensorId.GYROSCOPE_UNCALIBRATED, (data: sensor.GyroscopeUncalibratedResponse) => {
+    // Output the X, Y, and Z coordinate components and offset values.
     console.info('Succeeded in invoking on. X-coordinate component: ' + data.x);
     console.info('Succeeded in invoking on. Y-coordinate component: ' + data.y);
     console.info('Succeeded in invoking on. Z-coordinate component: ' + data.z);
@@ -463,7 +479,9 @@ import { BusinessError } from '@kit.BasicServicesKit';
 
 // Use try catch to capture possible exceptions.
 try {
+  // Subscribe to data of the Hall effect sensor.
   sensor.on(sensor.SensorId.HALL, (data: sensor.HallResponse) => {
+    // Output the Hall effect sensor status.
     console.info('Succeeded in invoking on. Hall status: ' + data.status);
   }, { interval: 100000000 });
   setTimeout(() => {
@@ -515,7 +533,9 @@ import { BusinessError } from '@kit.BasicServicesKit';
 
 // Use try catch to capture possible exceptions.
 try {
+  // Subscribe to heart rate sensor data.
   sensor.on(sensor.SensorId.HEART_RATE, (data: sensor.HeartRateResponse) => {
+    // Output the heart rate value.
     console.info('Succeeded in invoking on. Heart rate: ' + data.heartRate);
   }, { interval: 100000000 });
   setTimeout(() => {
@@ -564,7 +584,9 @@ import { BusinessError } from '@kit.BasicServicesKit';
 
 // Use try catch to capture possible exceptions.
 try {
+  // Subscribe to humidity sensor data.
   sensor.on(sensor.SensorId.HUMIDITY, (data: sensor.HumidityResponse) => {
+    // Output the humidity value.
     console.info('Succeeded in invoking on. Humidity: ' + data.humidity);
   }, { interval: 100000000 });
   setTimeout(() => {
@@ -616,7 +638,9 @@ import { BusinessError } from '@kit.BasicServicesKit';
 
 // Use try catch to capture possible exceptions.
 try {
+  // Subscribe to data of the linear acceleration sensor.
   sensor.on(sensor.SensorId.LINEAR_ACCELEROMETER, (data: sensor.LinearAccelerometerResponse) => {
+    // Output the X, Y, and Z coordinate components.
     console.info('Succeeded in invoking on. X-coordinate component: ' + data.x);
     console.info('Succeeded in invoking on. Y-coordinate component: ' + data.y);
     console.info('Succeeded in invoking on. Z-coordinate component: ' + data.z);
@@ -667,7 +691,9 @@ import { BusinessError } from '@kit.BasicServicesKit';
 
 // Use try catch to capture possible exceptions.
 try {
+  // Subscribe to data of the magnetic field sensor.
   sensor.on(sensor.SensorId.MAGNETIC_FIELD, (data: sensor.MagneticFieldResponse) => {
+    // Output the X, Y, and Z coordinate components.
     console.info('Succeeded in invoking on. X-coordinate component: ' + data.x);
     console.info('Succeeded in invoking on. Y-coordinate component: ' + data.y);
     console.info('Succeeded in invoking on. Z-coordinate component: ' + data.z);
@@ -718,7 +744,9 @@ import { BusinessError } from '@kit.BasicServicesKit';
 
 // Use try catch to capture possible exceptions.
 try {
+  // Subscribe to data of the uncalibrated magnetic field sensor.
   sensor.on(sensor.SensorId.MAGNETIC_FIELD_UNCALIBRATED, (data: sensor.MagneticFieldUncalibratedResponse) => {
+    // Output the X, Y, and Z coordinate components and offset values.
     console.info('Succeeded in invoking on. X-coordinate component: ' + data.x);
     console.info('Succeeded in invoking on. Y-coordinate component: ' + data.y);
     console.info('Succeeded in invoking on. Z-coordinate component: ' + data.z);
@@ -780,7 +808,9 @@ import { BusinessError } from '@kit.BasicServicesKit';
 
 // Use try catch to capture possible exceptions.
 try {
+  // Subscribe to data of the orientation sensor.
   sensor.on(sensor.SensorId.ORIENTATION, (data: sensor.OrientationResponse) => {
+    // Output the angles at which the device rotates around the Z, X, and Y axes.
     console.info('Succeeded in the device rotating at an angle around the Z axis: ' + data.alpha);
     console.info('Succeeded in the device rotating at an angle around the X axis: ' + data.beta);
     console.info('Succeeded in the device rotating at an angle around the Y axis: ' + data.gamma);
@@ -833,7 +863,9 @@ import { BusinessError } from '@kit.BasicServicesKit';
 
 // Use try catch to capture possible exceptions.
 try {
+  // Subscribe to data of the pedometer sensor.
   sensor.on(sensor.SensorId.PEDOMETER, (data: sensor.PedometerResponse) => {
+    // Output the step count.
     console.info('Succeeded in invoking on. Step count: ' + data.steps);
   }, { interval: 100000000 });
   setTimeout(() => {
@@ -885,7 +917,9 @@ import { BusinessError } from '@kit.BasicServicesKit';
 
 // Use try catch to capture possible exceptions.
 try {
+  // Subscribe to data of the pedometer detection sensor.
   sensor.on(sensor.SensorId.PEDOMETER_DETECTION, (data: sensor.PedometerDetectionResponse) => {
+    // Output the scalar value of the step count.
     console.info('Succeeded in invoking on. Pedometer scalar: ' + data.scalar);
   }, { interval: 100000000 });
   setTimeout(() => {
@@ -933,7 +967,9 @@ import { BusinessError } from '@kit.BasicServicesKit';
 
 // Use try catch to capture possible exceptions.
 try {
+  // Subscribe to data of the proximity sensor.
   sensor.on(sensor.SensorId.PROXIMITY, (data: sensor.ProximityResponse) => {
+    // Output the distance value.
     console.info('Succeeded in invoking on. Distance: ' + data.distance);
   }, { interval: 100000000 });
   setTimeout(() => {
@@ -1132,7 +1168,9 @@ import { BusinessError } from '@kit.BasicServicesKit';
 
 // Use try catch to capture possible exceptions.
 try {
+  // Subscribe to the fusion pressure sensor data.
   sensor.on(sensor.SensorId.FUSION_PRESSURE, (data: sensor.FusionPressureResponse) => {
+    // Output the fused pressure value.
     console.info('Succeeded in invoking on. fusionPressure: ' + data.fusionPressure);
   }, { interval: 100000000 });
   setTimeout(() => {

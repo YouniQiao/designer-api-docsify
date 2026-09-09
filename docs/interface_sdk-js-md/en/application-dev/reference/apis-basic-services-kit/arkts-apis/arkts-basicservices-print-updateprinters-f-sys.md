@@ -52,13 +52,13 @@ let printerInfo : print.PrinterInfo = {
     capability : undefined,
     options : 'opt'
 };
-print.updatePrinters([printerInfo], (err: BusinessError) => {
-    if (err) {
-        console.error('updatePrinters failed, because : ' + JSON.stringify(err));
+print.updatePrinters([printerInfo], (error: BusinessError) => {
+    if (error) {
+        console.error(`Failed to update printers. Code: ${error.code}, message: ${error.message}`);
     } else {
         console.info('updatePrinters success');
     }
-})
+});
 ```
 
 
@@ -116,6 +116,6 @@ let printerInfo : print.PrinterInfo = {
 print.updatePrinters([printerInfo]).then(() => {
     console.info('update printers success');
 }).catch((error: BusinessError) => {
-    console.error('update printers error : ' + JSON.stringify(error));
-})
+    console.error(`Failed to update printers. Code: ${error.code}, message: ${error.message}`);
+});
 ```

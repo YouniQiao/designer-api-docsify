@@ -41,3 +41,52 @@
 | Name | Description |
 | --- | --- |
 | [Repeat](arkts-arkui-repeat-con.md) | Defines Repeat Component, and Add More Array Type. |
+
+## Examples
+
+In the following example, the automatic memory optimization strategy is used through the memoryOptimizationStrategy attribute of [VirtualScrollOptions](arkts-arkui-virtualscrolloptions-i.md). Click the Scroll button to make the list jump, and the old nodes enter the cache pool. When the application goes to the background, the cache is cleared. When the application returns to the foreground, the cache is restored.
+Since API version 26.0.0, VirtualScrollOptions adds the memoryOptimizationStrategy attribute.
+
+```TypeScript
+@ComponentV2
+struct ChildComponent {
+  aboutToAppear() {
+    console.info('ChildComponent aboutToAppear');
+  }
+  aboutToDisappear() {
+    console.info('ChildComponent aboutToDisappear');
+  }
+  build() {
+    Text('ChildComponent')
+  }
+}
+
+@Entry
+@ComponentV2
+struct MemoryOptimizeDemo {
+  @Local data: Array<number> = [];
+  private scroller: Scroller = new Scroller();
+  aboutToAppear() {
+    for (let i = 0; i < 100; i++) {
+      this.data.push(i);
+    }
+  }
+  build() {
+    Column() {
+      Button('Scroll').onClick(() => { // Click the button to trigger list scrolling, and the old components enter the cache pool.
+        this.scroller.scrollToIndex(30);
+      })
+      List({ scroller: this.scroller }) {
+        Repeat<number>(this.data)
+          .each((repeatItem: RepeatItem<number>) => {
+            ListItem() {
+              ChildComponent()
+            }
+          })
+          .virtualScroll({ memoryOptimizationStrategy: RepeatMemOptStrategy.ENABLE_AUTO_CACHE_OPTIMIZATION }) // Use the automatic memory optimization strategy.
+      }
+      .cachedCount(5)
+    }
+  }
+}
+```

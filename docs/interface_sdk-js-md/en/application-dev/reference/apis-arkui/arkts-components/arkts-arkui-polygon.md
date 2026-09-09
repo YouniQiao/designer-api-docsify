@@ -57,7 +57,7 @@ Defines the constructor of Polygon component.
 
 ## Examples
 
-This example demonstrates how to use points, fill, fillOpacity, and stroke to draw polygons with specific coordinates, fill colors, opacity, and stroke colors.
+This example draws the vertex coordinates, fill color, fill opacity, border color, and border width of the polygon through the points, fill, fillOpacity, stroke, and strokeWidth attributes, respectively.
 
 ```TypeScript
 // xxx.ets

@@ -31,6 +31,7 @@ Checks whether the main window of this ability has the focus. This API uses an a
 ```TypeScript
 import { featureAbility } from '@kit.AbilityKit';
 
+// Check whether the main window of the Ability has window focus.
 featureAbility.hasWindowFocus((error, data) => {
   if (error && error.code !== 0) {
     console.error(`hasWindowFocus fail, error: ${JSON.stringify(error)}`);
@@ -66,6 +67,7 @@ Checks whether the main window of this ability has the focus. This API uses a pr
 ```TypeScript
 import { featureAbility } from '@kit.AbilityKit';
 
+// Check whether the main window of the Ability has window focus.
 featureAbility.hasWindowFocus().then((data) => {
   console.info(`hasWindowFocus data: ${JSON.stringify(data)}`);
 });

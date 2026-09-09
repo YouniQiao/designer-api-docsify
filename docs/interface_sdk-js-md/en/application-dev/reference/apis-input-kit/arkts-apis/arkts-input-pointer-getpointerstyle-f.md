@@ -47,7 +47,7 @@ struct Index {
         .onClick(() => {
           // Obtains the most recent window in the application.
           window.getLastWindow(this.getUIContext().getHostContext(), (error: BusinessError, win: window.Window) => {
-            if (error.code) {
+            if (error) {
               console.error(`Failed to obtain the top window, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
               return;
             }
@@ -59,6 +59,10 @@ struct Index {
             try {
               // Obtains the mouse pointer style.
               pointer.getPointerStyle(windowId, (error: BusinessError, style: pointer.PointerStyle) => {
+                if (error) {
+                  console.error(`Failed to get pointer style, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+                  return;
+                }
                 console.info(`Succeeded in getting pointer style, style: ${JSON.stringify(style)}.`);
               });
             } catch (error) {

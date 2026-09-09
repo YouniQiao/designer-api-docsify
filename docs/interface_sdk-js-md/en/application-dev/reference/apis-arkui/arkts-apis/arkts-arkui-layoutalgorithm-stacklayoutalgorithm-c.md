@@ -41,6 +41,11 @@ Constructs the stack layout algorithm class.
 | --- | --- | --- | --- |
 | option | [StackLayoutAlgorithmOptions](arkts-arkui-layoutalgorithm-stacklayoutalgorithmoptions-i.md) | No | Input parameters for constructing the stack layout algorithm, which are used to set the nine-box grid alignment mode. |
 
+**Examples**
+
+For details, see [Example 2: Switching the Layout Algorithm](../arkui-ts/ts-container-dynamiclayout.md#example-2-switching-the-layout-algorithm).
+- simpleType:
+
 ## alignContent
 
 ```TypeScript

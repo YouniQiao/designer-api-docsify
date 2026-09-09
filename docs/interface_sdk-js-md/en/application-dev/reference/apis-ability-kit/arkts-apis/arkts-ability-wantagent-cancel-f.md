@@ -73,10 +73,11 @@ let wantAgentInfo: wantAgent.WantAgentInfo = {
 };
 
 // getWantAgent callback.
-function getWantAgentCallback(err: BusinessError, data: WantAgent) {
+let getWantAgentCallback = (err: BusinessError, data: WantAgent) => {
   if (err) {
     console.error(`getWantAgent failed, err code: ${err.code}, err msg: ${err.message}.`);
   } else {
+    // Create the WantAgent successfully and save the returned WantAgent object.
     wantAgentData = data;
   }
   // cancel callback.
@@ -84,10 +85,11 @@ function getWantAgentCallback(err: BusinessError, data: WantAgent) {
     if (err) {
       console.error(`cancel failed, err code: ${err.code}, err msg: ${err.message}.`);
     } else {
-      console.info(`cancel sucecss.`);
+      console.info(`cancel success.`);
     }
   }
   try {
+    // Call the cancel API to cancel the WantAgent instance.
     wantAgent.cancel(wantAgentData, cancelCallback);
   } catch (err) {
     let code = (err as BusinessError).code;
@@ -97,6 +99,7 @@ function getWantAgentCallback(err: BusinessError, data: WantAgent) {
 }
 
 try {
+  // Call the getWantAgent API to create a WantAgent object.
   wantAgent.getWantAgent(wantAgentInfo, getWantAgentCallback);
 } catch (err) {
   let code = (err as BusinessError).code;
@@ -178,13 +181,15 @@ let wantAgentInfo: wantAgent.WantAgentInfo = {
 };
 
 // getWantAgent callback.
-function getWantAgentCallback(err: BusinessError, data: WantAgent) {
+let getWantAgentCallback = (err: BusinessError, data: WantAgent) => {
   if (err) {
     console.error(`getWantAgent failed, err code: ${err.code}, err msg: ${err.message}.`);
   } else {
+    // Create the WantAgent successfully and save the returned WantAgent object.
     wantAgentData = data;
   }
   try {
+    // Cancel the WantAgent instance using Promise.
     wantAgent.cancel(wantAgentData).then((data) => {
       console.info('cancel success.');
     }).catch((err: BusinessError) => {
@@ -198,6 +203,7 @@ function getWantAgentCallback(err: BusinessError, data: WantAgent) {
 }
 
 try {
+  // Call getWantAgent to create a WantAgent object.
   wantAgent.getWantAgent(wantAgentInfo, getWantAgentCallback);
 } catch (err) {
   let code = (err as BusinessError).code;

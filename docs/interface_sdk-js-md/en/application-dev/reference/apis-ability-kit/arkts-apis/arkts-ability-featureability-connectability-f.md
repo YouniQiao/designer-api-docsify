@@ -47,6 +47,7 @@ Connects this ability to a ServiceAbility.
 import { featureAbility } from '@kit.AbilityKit';
 import { rpc } from '@kit.IPCKit';
 
+// Connect ServiceAbility.
 let connectId = featureAbility.connectAbility(
   {
     deviceId: '',

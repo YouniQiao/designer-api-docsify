@@ -42,7 +42,7 @@ function offReadingScreenPermissionListener(callback?: Callback<ReadingScreenPer
 **示例**
 
 ```TypeScript
-import onScreen from "@ohos.multimodalAwareness.onScreen";
+import { onScreen } from '@kit.MultimodalAwarenessKit';
 try {
   onScreen.offReadingScreenPermissionListener();
   console.info(`offReadingScreenPermissionListener succeeded.`);

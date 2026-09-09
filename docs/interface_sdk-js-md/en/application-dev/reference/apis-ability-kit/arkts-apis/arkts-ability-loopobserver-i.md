@@ -37,5 +37,5 @@ let observer: errorManager.LoopObserver = {
   }
 };
 
-errorManager.on("loopObserver", 1, observer);
+errorManager.on('loopObserver', 1, observer);
 ```

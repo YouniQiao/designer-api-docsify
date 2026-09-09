@@ -54,7 +54,7 @@ Creates a radio button.
 
 ## Examples
 
-This example demonstrates how to set checkedBackgroundColor to customize the background color of a radio button.
+This example customizes the background color of the radio button by configuring checkedBackgroundColor.
 
 ```TypeScript
 // xxx.ets
@@ -104,7 +104,7 @@ struct RadioExample {
 }
 ```
 
-This example shows how to customize the appearance of a radio button when it is selected by configuring indicatorType and indicatorBuilder.
+This example customizes the selected style by configuring indicatorType and indicatorBuilder.
 
 ```TypeScript
 // xxx.ets
@@ -114,7 +114,7 @@ struct RadioExample {
   @Builder 
   indicatorBuilder() {
     // Replace $r('app.media.star') with the image resource file you use.
-    Image($r("app.media.star"))
+    Image($r('app.media.star'))
   }
   build() {
     Flex({ direction: FlexDirection.Row, justifyContent: FlexAlign.Center, alignItems: ItemAlign.Center }) {
@@ -186,9 +186,9 @@ function buildRadio(config: RadioConfiguration) {
       .backgroundColor('#2787D9')
       .onClick(() => {
         if (config.checked) {
-          config.triggerChange(false);
+          config.triggerChange(false); // Trigger the radio button selected state change and set it to unselected.
         } else {
-          config.triggerChange(true);
+          config.triggerChange(true); // Trigger the radio button selected state change and set it to selected.
         }
       })
   }
@@ -196,7 +196,7 @@ function buildRadio(config: RadioConfiguration) {
 
 @Entry
 @Component
-struct refreshExample {
+struct RadioExample {
   build() {
     Column({ space: 50 }) {
       Row() {

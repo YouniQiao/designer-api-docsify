@@ -36,3 +36,19 @@ Obtains the information about the child processes of the current application. Th
 | Error Code ID | Error Message |
 | --- | --- |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Connect to system service failed. |
+
+**Examples**
+
+```TypeScript
+import { childProcessManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+childProcessManager.getChildProcessInfos().then((data) => {
+  console.info(`getChildProcessInfos success, count: ${data.length}`);
+  for (let info of data) {
+    console.info(`pid: ${info.pid}, parentPid: ${info.parentPid}, processName: ${info.processName}`);
+  }
+}).catch((err: BusinessError) => {
+  console.error(`getChildProcessInfos failed, code: ${err.code}, msg: ${err.message}`);
+});
+```

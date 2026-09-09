@@ -44,6 +44,6 @@ import { BusinessError } from '@kit.BasicServicesKit';
 print.discoverUsbPrinters().then((printers : print.PrinterInformation[]) => {
     console.info('discoverUsbPrinters data : ' + JSON.stringify(printers));
 }).catch((error: BusinessError) => {
-    console.error('discoverUsbPrinters error : ' + JSON.stringify(error));
-})
+    console.error(`Failed to discover USB printers. Code: ${error.code}, message: ${error.message}`);
+});
 ```

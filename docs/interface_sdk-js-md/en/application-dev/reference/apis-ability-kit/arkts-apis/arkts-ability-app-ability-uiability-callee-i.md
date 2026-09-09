@@ -51,6 +51,7 @@ export default class MainUIAbility extends UIAbility {
   onCreate(want: Want, launchParam: AbilityConstant.LaunchParam) {
     console.info('Callee onCreate is called');
     try {
+      // Unregister the message listener.
       this.callee.off(method);
     } catch (error) {
       console.error(`Callee.off catch error, error.code: ${error.code}, error.message: ${error.message}`);
@@ -121,9 +122,11 @@ class MyMessageAble implements rpc.Parcelable {
 
 let method = 'call_Function';
 
+// Define the message processing callback function on the Callee side.
 function funcCallBack(pdata: rpc.MessageSequence) {
   let msg = new MyMessageAble('test', '');
   pdata.readParcelable(msg);
+  // Return the processing result to the Caller.
   return new MyMessageAble('test1', 'Callee test');
 }
 
@@ -131,6 +134,7 @@ export default class MainUIAbility extends UIAbility {
   onCreate(want: Want, launchParam: AbilityConstant.LaunchParam) {
     console.info('Callee onCreate is called');
     try {
+      // Register a message listener. The callback is triggered when the Caller sends the specified method name.
       this.callee.on(method, funcCallBack);
     } catch (error) {
       console.error(`Callee.on catch error, error.code: ${error.code}, error.message: ${error.message}`);

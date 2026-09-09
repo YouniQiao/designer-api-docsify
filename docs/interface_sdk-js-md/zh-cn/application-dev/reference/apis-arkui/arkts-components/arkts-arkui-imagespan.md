@@ -293,3 +293,53 @@ struct Index {
   }
 }
 ```
+
+该示例通过[resizable](#resizable)属性的slice选项，对ImageSpan图片不同方向进行拉伸。
+从API版本26.1.0开始，新增resizable属性。
+
+```TypeScript
+@Entry
+@Component
+struct ImageSpanResizablePage {
+  build() {
+    Column({ space: 20 }) {
+      Text('ImageSpan resizable Demo')
+        .fontSize(28)
+        .fontWeight(FontWeight.Bold)
+
+      Text('使用 Text + ImageSpan，设置 resizable 的 slice 属性实现九宫格拉伸：')
+        .fontSize(28)
+        .fontColor('#666666')
+        .width('90%')
+
+      Text() {
+        Span('原图\n')
+          .fontSize(28)
+        ImageSpan($r('app.media.landscape'))
+          .width(200)
+          .height(200)
+        Span('\n设置Resizable后\n')
+          .fontSize(28)
+        ImageSpan($r('app.media.landscape'))
+          .width(260)
+          .height(260)
+          .resizable({
+            slice: {
+              left: '200px',
+              top: '200px',
+              right: '20px',
+              bottom: '20px'
+            }
+          })
+      }
+      .width('90%')
+      .textAlign(TextAlign.Center)
+      .margin({ top: 10 })
+    }
+    .width('100%')
+    .height('100%')
+    .padding(20)
+    .alignItems(HorizontalAlign.Center)
+  }
+}
+```

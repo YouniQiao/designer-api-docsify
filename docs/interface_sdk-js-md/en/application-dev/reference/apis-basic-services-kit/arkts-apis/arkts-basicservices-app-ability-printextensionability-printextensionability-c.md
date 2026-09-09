@@ -43,7 +43,7 @@ Called once to remove the print job has been started.
 ```TypeScript
 import { print, PrintExtensionAbility } from '@kit.BasicServicesKit';
 
-export default class HWPrintExtension extends PrintExtensionAbility {
+export default class CustomPrintExtension extends PrintExtensionAbility {
     onCancelPrintJob(jobInfo: print.PrintJob): void {
         console.info('onCancelPrintJob, jobId is: ' + jobInfo.jobId);
         // ...
@@ -76,7 +76,7 @@ Called once to connect to the specific printer.
 ```TypeScript
 import { PrintExtensionAbility } from '@kit.BasicServicesKit';
 
-export default class HWPrintExtension extends PrintExtensionAbility {
+export default class CustomPrintExtension extends PrintExtensionAbility {
     onConnectPrinter(printerId: number): void {
         console.info('onConnectPrinter enter');
         // ...
@@ -110,7 +110,7 @@ Called once to initialize the extensionAbility.
 import { PrintExtensionAbility } from '@kit.BasicServicesKit';
 import { Want } from '@kit.AbilityKit';
 
-export default class HWPrintExtension extends PrintExtensionAbility {
+export default class CustomPrintExtension extends PrintExtensionAbility {
     onCreate(want: Want): void {
         console.info('onCreate');
         // ...
@@ -137,7 +137,7 @@ Called once to finalize the extensionAbility.
 ```TypeScript
 import { PrintExtensionAbility } from '@kit.BasicServicesKit';
 
-export default class HWPrintExtension extends PrintExtensionAbility {
+export default class CustomPrintExtension extends PrintExtensionAbility {
     onDestroy(): void {
         console.info('onDestroy');
     }
@@ -169,7 +169,7 @@ Called once to disconnect to the specific printer.
 ```TypeScript
 import { PrintExtensionAbility } from '@kit.BasicServicesKit';
 
-export default class HWPrintExtension extends PrintExtensionAbility {
+export default class CustomPrintExtension extends PrintExtensionAbility {
     onDisconnectPrinter(printerId: number): void {
         console.info('onDisconnectPrinter enter');
         // ...
@@ -214,16 +214,16 @@ Called once to request the printer's capabilities.
 ```TypeScript
 import { print, PrintExtensionAbility } from '@kit.BasicServicesKit';
 
-export default class HWPrintExtension extends PrintExtensionAbility {
+export default class CustomPrintExtension extends PrintExtensionAbility {
     onRequestPrinterCapability(printerId: number): print.PrinterCapability {
         console.info('onRequestPrinterCapability enter');
         // ...
-        let tmp : print.PrinterCapability = {
-            colorMode : 1,
-            duplexMode : 1,
-            pageSize : []
+        const printerCapability: print.PrinterCapability = {
+            colorMode: 1,
+            duplexMode: 1,
+            pageSize: []
         };
-        return tmp;
+        return printerCapability;
     }
 }
 ```
@@ -247,7 +247,7 @@ Called once to start to discover the printers connected with the device.
 ```TypeScript
 import { PrintExtensionAbility } from '@kit.BasicServicesKit';
 
-export default class HWPrintExtension extends PrintExtensionAbility {
+export default class CustomPrintExtension extends PrintExtensionAbility {
     onStartDiscoverPrinter(): void {
         console.info('onStartDiscoverPrinter enter');
         // ...
@@ -286,7 +286,7 @@ Called once to start print job.
 ```TypeScript
 import { print, PrintExtensionAbility } from '@kit.BasicServicesKit';
 
-export default class HWPrintExtension extends PrintExtensionAbility {
+export default class CustomPrintExtension extends PrintExtensionAbility {
     onStartPrintJob(jobInfo: print.PrintJob): void {
         console.info('onStartPrintJob, jobId is: ' + jobInfo.jobId);
         // ...
@@ -313,7 +313,7 @@ Called once to stop discovering the printer.
 ```TypeScript
 import { PrintExtensionAbility } from '@kit.BasicServicesKit';
 
-export default class HWPrintExtension extends PrintExtensionAbility {
+export default class CustomPrintExtension extends PrintExtensionAbility {
     onStopDiscoverPrinter(): void {
         console.info('onStopDiscoverPrinter enter');
         // ...

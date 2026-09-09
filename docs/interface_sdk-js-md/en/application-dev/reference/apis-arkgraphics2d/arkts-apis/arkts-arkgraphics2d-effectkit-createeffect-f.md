@@ -43,7 +43,7 @@ import { effectKit } from '@kit.ArkGraphics2D';
 // Create a buffer for the image effect.
 const colorBuffer = new ArrayBuffer(96);
 // Set the image initialization options.
-let opts : image.InitializationOptions = {
+let opts: image.InitializationOptions = {
   editable: true,
   pixelFormat: 3,
   size: {

@@ -141,7 +141,7 @@ let screenClass: screen.Screen | null = null;
 // Obtain all screen objects.
 let promise: Promise<Array<screen.Screen>> = screen.getAllScreens();
 promise.then((data: Array<screen.Screen>) => {
-  if(data.length > 0){
+  if (data.length > 0) {
     screenClass = data[0];
   }
   console.info(`Succeeded in getting all screens. Data: ${JSON.stringify(data)}`);
@@ -195,7 +195,7 @@ let screenClass: screen.Screen | null = null;
 // Obtain all screen objects.
 let promise: Promise<Array<screen.Screen>> = screen.getAllScreens(true);
 promise.then((data: Array<screen.Screen>) => {
-  if(data.length > 0){
+  if (data.length > 0) {
     screenClass = data[0];
   }
   console.info(`Succeeded in getting all screens. Data: ${JSON.stringify(data)}`);

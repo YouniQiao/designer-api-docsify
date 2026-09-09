@@ -106,7 +106,7 @@ This example shows how to use attributeModifier to dynamically set the fill, fil
 // xxx.ets
 class MyCircleModifier implements AttributeModifier<CircleAttribute> {
   applyNormalAttribute(instance: CircleAttribute): void {
-    // Fill color: #707070; fill opacity: 0.5; stroke color: #2787D9; stroke dash array: [20]; offset to left: 15; cap style: semi-circle; stroke opacity: 0.5; stroke width: 10; anti-aliasing enabled.
+    // Set the fill color to #707070, fill opacity to 0.5, stroke color to #2787D9, dash pattern to [20], dash offset to 15, line cap style to round, stroke opacity to 0.5, stroke width to 10, and enable anti-aliasing.
     instance.fill("#707070")
     instance.fillOpacity(0.5)
     instance.stroke("#2787D9")
@@ -130,6 +130,44 @@ struct CircleModifierDemo {
         .attributeModifier(this.modifier)
         .offset({ x: 20, y: 20 })
     }
+  }
+}
+```
+
+You can use ColorMetrics to set HDR colors for the Circle component, achieving a brightness effect beyond the normal display range. The [fill](#fill) API is used to set the color of the fill area, and the [stroke](#stroke) API is used to set the stroke color. In the following example, the left side uses an HDR warm gold fill and an ice blue stroke (with a brightness multiplier greater than 1.0), while the right side uses ordinary SDR colors as a comparison. On an HDR-capable screen, the left side is noticeably brighter and more vivid than the right side.
+Since API version 26.0.0, the Circle component-specific [fill](#fill) and [stroke](#stroke) APIs are added, which support passing the ColorMetrics type to achieve the HDR brightening effect.
+
+```TypeScript
+// xxx.ets
+import { ColorMetrics } from '@kit.ArkUI';
+
+@Entry
+@Component
+struct CircleHDRDemo {
+  build() {
+    Column({ space: 30 }) {
+      Row({ space: 60 }) {
+        // HDR fill and stroke: Color component values can exceed 1.0, and the portion exceeding 1.0 is used to represent highlights beyond the normal screen brightness range.
+        Column({ space: 8 }) {
+          Circle()
+            .width(120).height(120).strokeWidth(6)
+            .fill(ColorMetrics.createHDRColor(ColorSpace.BT2020, 2.5, 1.2, 0.0, 1)) // Highlight warm gold
+            .stroke(ColorMetrics.createHDRColor(ColorSpace.BT2020, 0.0, 0.8, 2.5, 1)) // Highlight ice blue
+          Text('HDR').fontColor(Color.White).fontSize(14)
+        }
+
+        // SDR fill and stroke: Color component values range from 0.0 to 1.0, which is the conventional standard dynamic range color display.
+        Column({ space: 8 }) {
+          Circle()
+            .width(120).height(120).strokeWidth(6)
+            .fill('#ffc800') // Normal golden yellow
+            .stroke('#0066ff') // Normal dark blue
+          Text('SDR').fontColor(Color.White).fontSize(14)
+        }
+      }
+    }
+    .width('100%').height('100%')
+    .justifyContent(FlexAlign.Center)
   }
 }
 ```

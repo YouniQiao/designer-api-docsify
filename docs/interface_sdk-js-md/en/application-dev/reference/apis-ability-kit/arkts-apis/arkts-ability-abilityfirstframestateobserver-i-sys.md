@@ -34,6 +34,7 @@ Called when the first frame of the ability is rendered.
 import { appManager } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
+// Create an Ability first frame drawing state listener object.
 let observer: appManager.AbilityFirstFrameStateObserver = {
   onAbilityFirstFrameDrawn(data: appManager.AbilityFirstFrameStateData) {
     console.info(`onAbilityFirstFrameDrawn success, abilityFirstFrameStateData: ${data}.`);
@@ -41,6 +42,7 @@ let observer: appManager.AbilityFirstFrameStateObserver = {
 };
 
 try {
+  // Register the listener for the Ability first frame drawing completion event.
   appManager.on('abilityFirstFrameState', observer);
 } catch (e) {
   let code = (e as BusinessError).code;

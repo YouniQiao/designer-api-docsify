@@ -44,6 +44,7 @@ Adds windows to the list of windows that are not allowed to be displayed during 
 **Examples**
 
 ```TypeScript
+import { UIAbility } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 import { display, window } from '@kit.ArkUI';
 

@@ -56,6 +56,6 @@ let preferences : print.PrinterPreferences = {
 print.setPrinterPreferences(printerId, preferences).then(() => {
     console.info('setPrinterPreferences success');
 }).catch((error: BusinessError) => {
-    console.error('setPrinterPreferences error : ' + JSON.stringify(error));
-})
+    console.error(`Failed to set printer preferences. Code: ${error.code}, message: ${error.message}`);
+});
 ```

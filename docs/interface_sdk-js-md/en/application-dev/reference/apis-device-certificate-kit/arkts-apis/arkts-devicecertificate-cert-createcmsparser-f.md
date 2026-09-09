@@ -102,7 +102,7 @@ function stringToUint8Array(str: string): Uint8Array {
   let arr: Array<number> = [];
   for (let i = 0, j = str.length; i < j; i++) {
     arr.push(str.charCodeAt(i));
-  };
+  }
   return new Uint8Array(arr);
 }
 
@@ -123,7 +123,7 @@ async function testCmsVerifyTest() {
     let x509CertRoot: cert.X509Cert = await createX509Cert(ECC_256_PUB_ROOT_CERT);
     let cms: cert.CmsGenerator = cert.createCmsGenerator(cert.CmsContentType.SIGNED_DATA);
     let signerConfig: cert.CmsSignerConfig = {
-      mdName: 'SHA256',
+      mdName: 'SHA256'
     };
     let keyInfo: cert.PrivateKeyInfo = {
       key: ECC_256_PRI_ENTRY_KEY
@@ -134,7 +134,7 @@ async function testCmsVerifyTest() {
     cms.addSigner(x509CertEntry, keyInfo, signerConfig);
     let signData = cms.doFinalSync(plainText, option);
     let config: cert.CmsVerificationConfig = {
-      trustCerts: [x509CertRoot, x509CertInter],
+      trustCerts: [x509CertRoot, x509CertInter]
     };
     let verify: cert.CmsParser = cert.createCmsParser();
     await verify.setRawData(signData, cert.CmsFormat.PEM);

@@ -387,6 +387,15 @@ function testSetVerifySpec() {
 }
 ```
 
+```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+
+function testSetVerifySpec() {
+  let verifier = cryptoFramework.createVerify('ML-DSA');
+  verifier.setVerifySpec(cryptoFramework.SignSpecItem.ML_DSA_MU_BOOL, false);
+}
+```
+
 ## setVerifySpec
 
 ```TypeScript
@@ -435,15 +444,6 @@ function testSetVerifySpec() {
   let verifier = cryptoFramework.createVerify('RSA2048|PSS|SHA256|MGF1_SHA256');
   let setN = 20;
   verifier.setVerifySpec(cryptoFramework.SignSpecItem.PSS_SALT_LEN_NUM, setN);
-}
-```
-
-```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
-
-function testSetVerifySpec() {
-  let verifier = cryptoFramework.createVerify('ML-DSA');
-  verifier.setVerifySpec(cryptoFramework.SignSpecItem.ML_DSA_MU_BOOL, false);
 }
 ```
 
@@ -853,7 +853,7 @@ Verifies the signature. This API returns the verification result synchronously.
 
 **Examples**
 
-For more examples of signing and signature verification, see [Signing and Signature Verification with an RSA Key Pair (PKCS1 Mode)](../../../security/CryptoArchitectureKit/crypto-rsa-sign-sig-verify-pkcs1.md).
+For more examples of signing and signature verification, see Signing and Signature Verification with an RSA Key Pair (PKCS1 Mode).
 
 ```TypeScript
 import { cryptoFramework } from '@kit.CryptoArchitectureKit';
@@ -925,7 +925,7 @@ function verifyByCallback() {
 }
 ```
 
-For more examples, see [Signing and Signature Verification with an RSA Key Pair](../../../security/CryptoArchitectureKit/crypto-rsa-sign-sig-verify-pkcs1.md).
+For more examples, see Signing and Signature Verification with an RSA Key Pair.
 
 ```TypeScript
 import { cryptoFramework } from '@kit.CryptoArchitectureKit';
@@ -999,7 +999,7 @@ async function verifyByPromise() {
 }
 ```
 
-For more examples of signing and signature verification, see [Signing and Signature Verification with an RSA Key Pair (PKCS1 Mode)](../../../security/CryptoArchitectureKit/crypto-rsa-sign-sig-verify-pkcs1.md).
+For more examples of signing and signature verification, see Signing and Signature Verification with an RSA Key Pair (PKCS1 Mode).
 
 ```TypeScript
 import { cryptoFramework } from '@kit.CryptoArchitectureKit';

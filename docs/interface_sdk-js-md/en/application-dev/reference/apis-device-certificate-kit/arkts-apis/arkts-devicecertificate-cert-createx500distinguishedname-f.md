@@ -66,12 +66,12 @@ let nameStr = '/CN=John Doe/OU=IT Department/O=ACME Inc./L=San Francisco/ST=Cali
 async function createX500DistinguishedName() {
   try {
     cert.createX500DistinguishedName(nameStr)
-      .then((data) => {
+      .then((_data) => {
         console.info('createX500DistinguishedName result: success.');
       })
       .catch((err: BusinessError) => {
         console.error(`createX500DistinguishedName failed, errCode: ${err.code}, errMsg: ${err.message}`);
-      })
+      });
   } catch (error) {
     let e: BusinessError = error as BusinessError;
     console.error(`createX500DistinguishedName failed, errCode: ${e.code}, errMsg: ${e.message}`);
@@ -134,12 +134,12 @@ let nameDer =
 async function createX500DistinguishedName() {
   try {
     cert.createX500DistinguishedName(nameDer)
-      .then((data) => {
+      .then((_data) => {
         console.info('createX500DistinguishedName result: success.');
       })
       .catch((err: BusinessError) => {
         console.error(`createX500DistinguishedName failed, errCode: ${err.code}, errMsg: ${err.message}`);
-      })
+      });
   } catch (error) {
     let e: BusinessError = error as BusinessError;
     console.error(`createX500DistinguishedName failed, errCode: ${e.code}, errMsg: ${e.message}`);

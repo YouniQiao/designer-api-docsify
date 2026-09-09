@@ -36,15 +36,17 @@ Called when the auto-startup setting of an application component is canceled.
 import { autoStartupManager, common } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
+// Define the auto-startup callback object.
 let autoStartupCallback: common.AutoStartupCallback = {
-  onAutoStartupOn(data: common.AutoStartupInfo) {
-    console.info(`autostartupmanager onAutoStartupOn, data: ${JSON.stringify(data)}.`);
+  onAutoStartupOn(info: common.AutoStartupInfo) {
+    console.info(`autostartupmanager onAutoStartupOn, info: ${JSON.stringify(info)}.`);
   },
-  onAutoStartupOff(data: common.AutoStartupInfo) {
-    console.info(`autostartupmanager onAutoStartupOff, data: ${JSON.stringify(data)}.`);
+  onAutoStartupOff(info: common.AutoStartupInfo) {
+    console.info(`autostartupmanager onAutoStartupOff, info: ${JSON.stringify(info)}.`);
   }
-}
+};
 
+// Subscribe to the system auto-startup event.
 try {
   autoStartupManager.on('systemAutoStartup', autoStartupCallback);
 } catch (err) {
@@ -82,15 +84,17 @@ Called when auto-startup is set for an application component.
 import { autoStartupManager, common } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
+// Define the auto-startup callback object.
 let autoStartupCallback: common.AutoStartupCallback = {
-  onAutoStartupOn(data: common.AutoStartupInfo) {
-    console.info(`autostartupmanager onAutoStartupOn, data: ${JSON.stringify(data)}.`);
+  onAutoStartupOn(info: common.AutoStartupInfo) {
+    console.info(`autostartupmanager onAutoStartupOn, info: ${JSON.stringify(info)}.`);
   },
-  onAutoStartupOff(data: common.AutoStartupInfo) {
-    console.info(`autostartupmanager onAutoStartupOff, data: ${JSON.stringify(data)}.`);
+  onAutoStartupOff(info: common.AutoStartupInfo) {
+    console.info(`autostartupmanager onAutoStartupOff, info: ${JSON.stringify(info)}.`);
   }
-}
+};
 
+// Subscribe to the system auto-startup event.
 try {
   autoStartupManager.on('systemAutoStartup', autoStartupCallback);
 } catch (err) {

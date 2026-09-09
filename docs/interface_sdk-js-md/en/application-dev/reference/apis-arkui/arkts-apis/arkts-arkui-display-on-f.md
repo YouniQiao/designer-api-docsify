@@ -193,6 +193,10 @@ Subscribes to folding angle change events of the foldable device. Note that ther
 ```TypeScript
 import { Callback } from '@kit.BasicServicesKit';
 
+/**
+ * The callback parameter used for subscription must be passed as an object.
+ * If an anonymous function is used for registration, a new underlying object is created each time the function is called, causing memory leakage.
+ */
 let callback: Callback<Array<number>> = (angles: Array<number>) => {
   console.info('Listening fold angles length: ' + angles.length);
 };
@@ -326,6 +330,6 @@ let callback: display.BrightnessCallback<number, display.BrightnessInfo> = (id: 
 try {
   display.on('brightnessInfoChange', callback);
 } catch (error) {
-  console.error(`Failed to register brightnessInfoChange listener. Code ${error.code}, message: ${error.message}`);
+  console.error(`Failed to register brightnessInfoChange listener. Code: ${error.code}, message: ${error.message}`);
 }
 ```

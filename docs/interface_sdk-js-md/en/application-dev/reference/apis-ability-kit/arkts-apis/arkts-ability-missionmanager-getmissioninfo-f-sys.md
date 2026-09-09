@@ -46,6 +46,7 @@ import { BusinessError } from '@kit.BasicServicesKit';
 
 let testMissionId = 1;
 
+// Get all mission information.
 missionManager.getMissionInfos('', 10)
   .then((allMissions: Array<missionManager.MissionInfo>) => {
     try {
@@ -72,7 +73,7 @@ missionManager.getMissionInfos('', 10)
     }
   })
   .catch((error: BusinessError) => {
-    console.error(`getMissionInfos failed, error code: ${error.code}, error msg: ${error.message}.`);
+    console.error(`getMissionInfos failed, Code: ${error.code}, message: ${error.message}.`);
   });
 ```
 
@@ -128,10 +129,10 @@ try {
       console.info(`getMissionInfo successfully. Data: ${JSON.stringify(data)}`);
     })
     .catch((error: BusinessError) => {
-      console.error(`getMissionInfo failed. Cause: ${error.message}`);
+      console.error(`getMissionInfo failed. Code: ${error.code}, message: ${error.message}`);
     });
 } catch (error) {
   let err: BusinessError = error as BusinessError;
-  console.error(`getMissionInfo failed. Cause: ${err.message}`);
+  console.error(`getMissionInfo failed. Code: ${err.code}, message: ${err.message}`);
 }
 ```

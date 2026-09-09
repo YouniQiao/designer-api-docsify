@@ -124,12 +124,15 @@ Obtains an **XComponent** node instance on the native side, and registers the li
 
 ## Examples
 
-This example shows how to use the enableAnalyzer attribute to enable the AI image analyzer. You can use XComponentController to start or stop AI analysis on images.
+This example shows how to use the enableAnalyzer attribute to enable image AI analysis. You can use XComponentController to start or stop image AI analysis.
+> NOTE
+> 
+> For details about the specific implementation of the drawing logic in this example (the implementation of functions related to nativeRender), see [ArkTS XComponent Sample](https://gitcode.com/openharmony/applications_app_samples/tree/master/code/DocsSample/ArkUISample/ArkTSXComponent).
 
 ```TypeScript
 // xxx.ets
 import { BusinessError } from '@kit.BasicServicesKit';
-import nativeRender from 'libnativerender.so';// Your own .so file implementation (see above for details).
+import nativeRender from 'libnativerender.so'; // The .so file implemented by the developer. For details, see the description above.
 
 class CustomXComponentController extends XComponentController {
   onSurfaceCreated(surfaceId: string): void {
@@ -138,7 +141,7 @@ class CustomXComponentController extends XComponentController {
   }
 
   onSurfaceChanged(surfaceId: string, rect: SurfaceRect): void {
-    console.info(`onSurfaceChanged surfaceId: ${surfaceId}, rect: ${JSON.stringify(rect)}}`);
+    console.info(`onSurfaceChanged surfaceId: ${surfaceId}, rect: ${JSON.stringify(rect)}`);
     nativeRender.ChangeSurface(BigInt(surfaceId), rect.surfaceWidth, rect.surfaceHeight);
   }
 
@@ -191,8 +194,9 @@ struct XComponentExample {
           let surfaceId = this.xComponentController.getXComponentSurfaceId();
           nativeRender.ChangeColor(BigInt(surfaceId));
           let hasChangeColor: boolean = false;
-          if (nativeRender.GetXComponentStatus(BigInt(surfaceId))) {
-            hasChangeColor = nativeRender.GetXComponentStatus(BigInt(surfaceId)).hasChangeColor;
+          let status = nativeRender.GetXComponentStatus(BigInt(surfaceId));
+          if (status) {
+            hasChangeColor = status.hasChangeColor;
           }
           if (hasChangeColor) {
             this.currentStatus = "change color";
@@ -209,7 +213,7 @@ struct XComponentExample {
                 console.info("analysis complete");
               })
               .catch((error: BusinessError) => {
-                console.error("error code: " + error.code);
+                console.error(`Failed to start image analyzer. Code: ${error.code}, message: ${error.message}`);
               })
           })
           .margin(2)
@@ -226,14 +230,14 @@ struct XComponentExample {
         Button('Draw Star')
           .fontSize('16fp')
           .fontWeight(500)
-          .margin({ bottom: 24 })
           .onClick(() => {
             let surfaceId = this.xComponentController.getXComponentSurfaceId();
             console.info(`surface rect is ${this.xComponentController.getXComponentSurfaceRect()}`);
             nativeRender.DrawPattern(BigInt(surfaceId));
             let hasDraw: boolean = false;
-            if (nativeRender.GetXComponentStatus(BigInt(surfaceId))) {
-              hasDraw = nativeRender.GetXComponentStatus(BigInt(surfaceId)).hasDraw;
+            let status = nativeRender.GetXComponentStatus(BigInt(surfaceId));
+            if (status) {
+              hasDraw = status.hasDraw;
             }
             if (hasDraw) {
               this.currentStatus = "draw star";
@@ -242,12 +246,15 @@ struct XComponentExample {
           .margin(2)
       }.justifyContent(FlexAlign.Center)
     }
-    .width("100%")
+    .width('100%')
   }
 }
 ```
 
-This example shows how to use setXComponentSurfaceRotation to lock the surface orientation during screen rotation so that the surface does not rotate with the screen.
+Uses setXComponentSurfaceRotation to lock the Surface orientation during screen rotation so that it does not rotate with the screen.
+> NOTE
+> 
+> For details about the implementation of the drawing logic in this example (the function implementation related to nativeRender), see [ArkTS XComponent Sample](https://gitcode.com/openharmony/applications_app_samples/tree/master/code/DocsSample/ArkUISample/ArkTSXComponent).
 
 ```TypeScript
 // xxx.ets
@@ -260,7 +267,7 @@ class MyXComponentController extends XComponentController {
   }
 
   onSurfaceChanged(surfaceId: string, rect: SurfaceRect): void {
-    console.info(`onSurfaceChanged surfaceId: ${surfaceId}, rect: ${JSON.stringify(rect)}}`);
+    console.info(`onSurfaceChanged surfaceId: ${surfaceId}, rect: ${JSON.stringify(rect)}`);
     nativeRender.ChangeSurface(BigInt(surfaceId), rect.surfaceWidth, rect.surfaceHeight);
   }
 
@@ -274,8 +281,8 @@ class MyXComponentController extends XComponentController {
 @Component
 struct Index {
   @State isLock: boolean = true;
-  @State xc_width: number = 500;
-  @State xc_height: number = 700;
+  @State xcWidth: number = 500;
+  @State xcHeight: number = 700;
   myXComponentController: XComponentController = new MyXComponentController();
 
   build() {
@@ -291,8 +298,8 @@ struct Index {
           console.info("Surface getXComponentSurfaceRotation lock = " +
           this.myXComponentController.getXComponentSurfaceRotation().lock);
         })
-        .width(this.xc_width)
-        .height(this.xc_height)
+        .width(this.xcWidth)
+        .height(this.xcHeight)
       Button("Draw")
         .onClick(() => {
           let surfaceId = this.myXComponentController.getXComponentSurfaceId();
@@ -303,7 +310,7 @@ struct Index {
 }
 ```
 
-From API version 20, this example demonstrates how to return a canvas object by calling [lockCanvas](arkts-arkui-xcomponentcontroller-c.md#lockcanvas), call the corresponding drawing API via the canvas object, and then call [unlockCanvasAndPost](arkts-arkui-xcomponentcontroller-c.md#unlockcanvasandpost) to draw content on the XComponent.
+From API version 20, this example returns a canvas object by calling [lockCanvas](arkts-arkui-xcomponentcontroller-c.md#lockcanvas), calls the corresponding drawing API via the canvas object, and then calls [unlockCanvasAndPost](arkts-arkui-xcomponentcontroller-c.md#unlockcanvasandpost) to draw content on the XComponent.
 
 ```TypeScript
 // xxx.ets
@@ -323,7 +330,7 @@ struct Index {
         .onLoad(() => {
           this.mCanvas = this.xcController.lockCanvas();
           if (this.mCanvas) {
-            this.mCanvas.drawColor(255, 240, 250, 255); // Before each drawing operation, the entire XComponent area must be fully redrawn. This API can be used to achieve this.
+            this.mCanvas.drawColor(255, 240, 250, 255); // The entire XComponent area must be completely redrawn before each drawing. You can call this method to implement it.
             const brush = new drawing.Brush(); // Create a brush object.
             brush.setColor({ // Set the color of the brush.
               alpha: 255,
@@ -349,12 +356,11 @@ struct Index {
 }
 ```
 
-From API version 20, building upon Example 3, the setXComponentSurfaceRect API is called to set the surface area to achieve an immersive effect.
+From API version 20, the setXComponentSurfaceRect API is called to set the surface display area to achieve the immersive effect.
 
 ```TypeScript
 // xxx.ets
-import { drawing } from '@kit.ArkGraphics2D';
-import { display } from '@kit.ArkUI'
+import { display } from '@kit.ArkUI';
 @Entry
 @Component
 struct Index {
@@ -368,21 +374,21 @@ struct Index {
       this.screenWidth = displayClass.width;
       this.screenHeight = displayClass.height;
     } catch (error) {
-      console.error(`Failure code: ${error.code}, message: ${error.message}`);
+      console.error(`Failed to get default display. Code: ${error.code}, message: ${error.message}`);
     }
   }
 
   build() {
     Column() {
       XComponent({ type: XComponentType.SURFACE, controller: this.xcController })
-        .width("100%")
-        .height("100%")
+        .width('100%')
+        .height('100%')
         .onLoad(() => {
           // Set the surface size. If the size is too large, the drawing time may be long.
           this.xcController.setXComponentSurfaceRect({surfaceWidth: this.screenWidth, surfaceHeight: this.screenHeight, offsetX: 0, offsetY: 0});
           this.mCanvas = this.xcController.lockCanvas();
           if (this.mCanvas) {
-            this.mCanvas.drawColor(255, 39, 135, 217); // Before each drawing operation, the entire XComponent area must be fully redrawn. This API can be used to achieve this.
+            this.mCanvas.drawColor(255, 39, 135, 217); // This method must be called to redraw the entire XComponent area before each drawing.
             this.xcController.unlockCanvasAndPost(this.mCanvas);
           }
         })
@@ -394,20 +400,23 @@ struct Index {
 }
 ```
 
-In API version 22 and later versions, this example calls the [setXComponentSurfaceConfig](arkts-arkui-xcomponentcontroller-c.md#setxcomponentsurfaceconfig) API to set whether the surface held by the XComponent is treated as opaque during rendering.
+From API version 22, this example calls the [setXComponentSurfaceConfig](arkts-arkui-xcomponentcontroller-c.md#setxcomponentsurfaceconfig) API to set whether the surface held by the XComponent is considered opaque during rendering.
+> NOTE
+> 
+> For details about the implementation of the drawing logic in this example (the function implementation related to nativeRender), see [ArkTS XComponent Sample](https://gitcode.com/openharmony/applications_app_samples/tree/master/code/DocsSample/ArkUISample/ArkTSXComponent).
 
 ```TypeScript
 // xxx.ets
-import nativeRender from 'libnativerender.so'; // Your own .so file implementation (see above for details).
+import nativeRender from 'libnativerender.so'; // So file implemented by the developer. For details, see the preceding note.
 
 // Override XComponentController to set lifecycle callbacks.
-class MyXComponentController extends XComponentController{
+class MyXComponentController extends XComponentController {
   onSurfaceCreated(surfaceId: string): void {
     console.info(`onSurfaceCreated surfaceId: ${surfaceId}`);
     nativeRender.SetSurfaceId(BigInt(surfaceId));
   }
   onSurfaceChanged(surfaceId: string, rect: SurfaceRect): void {
-    console.info(`onSurfaceChanged surfaceId: ${surfaceId}, rect: ${JSON.stringify(rect)}}`);
+    console.info(`onSurfaceChanged surfaceId: ${surfaceId}, rect: ${JSON.stringify(rect)}`);
     // Call ChangeSurface to draw content in onSurfaceChanged.
     nativeRender.ChangeSurface(BigInt(surfaceId), rect.surfaceWidth, rect.surfaceHeight);
   }
@@ -444,8 +453,9 @@ struct Index {
         let surfaceId = this.xComponentController.getXComponentSurfaceId();
         nativeRender.ChangeColor(BigInt(surfaceId));
         let hasChangeColor: boolean = false;
-        if (nativeRender.GetXComponentStatus(BigInt(surfaceId))) {
-          hasChangeColor = nativeRender.GetXComponentStatus(BigInt(surfaceId)).hasChangeColor;
+        let status = nativeRender.GetXComponentStatus(BigInt(surfaceId));
+        if (status) {
+          hasChangeColor = status.hasChangeColor;
         }
         if (hasChangeColor) {
           this.currentStatus = "change color";
@@ -467,8 +477,9 @@ struct Index {
             let surfaceId = this.xComponentController.getXComponentSurfaceId();
             nativeRender.DrawPattern(BigInt(surfaceId));
             let hasDraw: boolean = false;
-            if (nativeRender.GetXComponentStatus(BigInt(surfaceId))) {
-              hasDraw = nativeRender.GetXComponentStatus(BigInt(surfaceId)).hasDraw;
+            let status = nativeRender.GetXComponentStatus(BigInt(surfaceId));
+            if (status) {
+              hasDraw = status.hasDraw;
             }
             if (hasDraw) {
               this.currentStatus = "draw star";

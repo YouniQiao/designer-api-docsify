@@ -45,6 +45,7 @@ import { distributedMissionManager } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 try {
+  // Start synchronization of the mission list of the remote device.
   distributedMissionManager.startSyncRemoteMissions(
     {
       deviceId: "",
@@ -53,13 +54,13 @@ try {
     },
     (error: BusinessError) => {
       if (error) {
-        console.error('startSyncRemoteMissions failed, cause: ' + JSON.stringify(error));
+        console.error(`startSyncRemoteMissions failed. Code: ${error.code}, message: ${error.message}`);
         return;
       }
       console.info('startSyncRemoteMissions finished');}
   )
 } catch (error) {
-  console.error('startSyncRemoteMissions failed, cause: ' + JSON.stringify(error));
+  console.error(`startSyncRemoteMissions failed. Code: ${error.code}, message: ${error.message}`);
 }
 ```
 
@@ -117,9 +118,9 @@ try {
   ).then(() => {
       console.info('startSyncRemoteMissions finished successfully');
     }).catch((error: BusinessError) => {
-    console.error('startSyncRemoteMissions failed, cause: ' + JSON.stringify(error));
-  })
+    console.error(`startSyncRemoteMissions failed. Code: ${error.code}, message: ${error.message}`);
+  });
 } catch (error) {
-  console.error('startSyncRemoteMissions failed, cause: ' + JSON.stringify(error));
+  console.error(`startSyncRemoteMissions failed. Code: ${error.code}, message: ${error.message}`);
 }
 ```

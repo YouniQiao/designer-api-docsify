@@ -67,7 +67,6 @@ struct PatternLockExample {
         .pathColor('#707070')
         .backgroundColor('#F5F5F5')
         .regularColor(Color.Black)
-        .skipUnselectedPoint(false)
         .autoReset(true)
         .onDotConnect((index: number) => {
           console.info('onDotConnect index: ' + index);
@@ -77,7 +76,7 @@ struct PatternLockExample {
 }
 ```
 
-This example demonstrates how to use the [sideLength](arkts-arkui-patternlock-attribute.md#sidelength) attribute to set the grid size, how to use the [circleRadius](arkts-arkui-patternlock-attribute.md#circleradius) attribute to set the grid dot style, and how to use the [onPatternComplete](arkts-arkui-patternlock-attribute.md#onpatterncomplete) attribute to set the callback for password input.
+This example uses the [sideLength](arkts-arkui-patternlock-attribute.md#sidelength) attribute to set the size of the nine-grid, the [circleRadius](arkts-arkui-patternlock-attribute.md#circleradius) attribute to set the radius of the dots in the grid, and the [onPatternComplete](arkts-arkui-patternlock-attribute.md#onpatterncomplete) attribute to set the callback invoked when password input is complete.
 When the user completes the password input, different responses are given based on the input:- If the password length is less than 5, a message is displayed to prompt the user to re-enter the password.- After the first input, a message is displayed to prompt the user to enter the password again.- After the second input, the system checks whether the two inputs match. If they match, a message is displayed to indicate that the password setup is successful; otherwise, the user is prompted to re-enter the password.
 The user can click Reset PatternLock to reset the password lock.
 
@@ -89,7 +88,7 @@ import { LengthUnit } from '@kit.ArkUI';
 @Component
 struct PatternLockExample {
   @State passwords: number[] = [];
-  @State message: string = 'please input password!';
+  @State message: string = 'Please input password';
   private patternLockController: PatternLockController = new PatternLockController();
 
   build() {
@@ -115,7 +114,7 @@ struct PatternLockExample {
         .onPatternComplete((input: Array<number>) => {
           // If the length of the entered password is less than 5, the system prompts the user to enter the password again.
           if (input.length < 5) {
-            this.message = 'The password length needs to be greater than 5, please enter again.';
+            this.message = 'The password length needs to be at least 5, please enter again.';
             return;
           }
           // Check whether the password length is greater than 0.

@@ -44,7 +44,7 @@ Unregisters the observer used to listen for application start or exit events.
 import { appManager } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
-let observer_: appManager.AppForegroundStateObserver | undefined;
+let savedObserver: appManager.AppForegroundStateObserver | undefined;
 // 1. Register an observer to listen for application start or exit events.
 let observer: appManager.AppForegroundStateObserver = {
   onAppStateChanged(appStateData: appManager.AppStateData) {
@@ -55,7 +55,7 @@ let observer: appManager.AppForegroundStateObserver = {
 try {
   appManager.on('appForegroundState', observer);
   // Save the observer object.
-  observer_ = observer;
+  savedObserver = observer;
 } catch (paramError) {
   let code = (paramError as BusinessError).code;
   let message = (paramError as BusinessError).message;
@@ -64,7 +64,7 @@ try {
 
 // 2. Deregister the observer.
 try {
-  appManager.off('appForegroundState',  observer_);
+  appManager.off('appForegroundState',  savedObserver);
 } catch (paramError) {
   let code = (paramError as BusinessError).code;
   let message = (paramError as BusinessError).message;
@@ -113,7 +113,7 @@ import { BusinessError } from '@kit.BasicServicesKit';
 
 let abilityFirstFrameStateObserverForAll: appManager.AbilityFirstFrameStateObserver = {
   onAbilityFirstFrameDrawn(abilityStateData: appManager.AbilityFirstFrameStateData) {
-    console.info("abilityFirstFrame: ", JSON.stringify(abilityStateData));
+    console.info('abilityFirstFrame: ', JSON.stringify(abilityStateData));
   }
 };
 

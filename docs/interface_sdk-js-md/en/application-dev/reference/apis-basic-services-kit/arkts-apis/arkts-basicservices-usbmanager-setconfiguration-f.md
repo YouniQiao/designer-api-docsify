@@ -41,7 +41,7 @@ Sets the device configuration.
 **Examples**
 
 ```TypeScript
-function setConfiguration() {
+async function setConfiguration() {
   let devicesList: Array<usbManager.USBDevice> = usbManager.getDevices();
   if (!devicesList || devicesList.length == 0) {
     console.info(`device list is empty`);
@@ -49,10 +49,19 @@ function setConfiguration() {
   }
 
   let device: usbManager.USBDevice = devicesList?.[0];
-  usbManager.requestRight(device.name);
-  let devicepipe: usbManager.USBDevicePipe = usbManager.connectDevice(device);
+  let rightResult = await usbManager.requestRight(device.name);
+  if (!rightResult) {
+    console.error(`request right failed`);
+    return;
+  }
+  let devicePipe: usbManager.USBDevicePipe = usbManager.connectDevice(device);
+  if (devicePipe == undefined) {
+    console.error(`connect device failed`);
+    return;
+  }
   let config: usbManager.USBConfiguration = device.configs?.[0];
-  let ret: number= usbManager.setConfiguration(devicepipe, config);
+  let ret: number = usbManager.setConfiguration(devicePipe, config);
   console.info(`setConfiguration = ${ret}`);
+  usbManager.closePipe(devicePipe);
 }
 ```

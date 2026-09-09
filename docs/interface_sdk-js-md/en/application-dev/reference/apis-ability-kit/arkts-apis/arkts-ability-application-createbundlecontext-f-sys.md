@@ -63,11 +63,11 @@ export default class EntryAbility extends UIAbility {
   onCreate() {
     let moduleContext: common.Context;
     try {
-      application.createBundleContext(this.context, 'bundlename').then((data: Context)=>{
+      application.createBundleContext(this.context, 'bundlename').then((data: common.Context)=>{
         moduleContext = data;
         console.info('createBundleContext success!');
       }).catch((error : BusinessError)=>{
-        console.error(`createBundleContext failed, error.code: ${(error as BusinessError).code}, error.message: ${(error as BusinessError).message}`);
+        console.error(`createBundleContext failed, error.code: ${error.code}, error.message: ${error.message}`);
       })
     } catch (error) {
       console.error(`createBundleContext failed, error.code: ${(error as BusinessError).code}, error.message: ${(error as BusinessError).message}`);

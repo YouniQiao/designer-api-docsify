@@ -30,7 +30,7 @@
 
 ## Examples
 
-This example demonstrates how to create a SaveButton component and set its security component attributes.
+Sets the basic attributes of SecurityComponent to create a save control.
 
 ```TypeScript
 @Entry
@@ -39,7 +39,7 @@ struct Index {
   build() {
     Row() {
       Column({ space: 5 }) {
-        // Generate a save button and set its SecurityComponent attributes.
+        // Create a save control and set its SecurityComponent attributes.
         SaveButton()
           .fontSize(35)
           .fontColor(Color.White)
@@ -59,13 +59,13 @@ struct Index {
           })
           .textIconSpace(20)
           .backgroundColor(0x3282f6)
-        // Generate a save button and set its fixed width and height.
+        // Create a save control and set its fixed width and height.
         SaveButton().size({ width: 200, height: 100 })
-        // Generate a save button, set its fixed width and height, and set the icon and text to be left-aligned.
+        // Create a save control, set its fixed width and height, and align the icon and text to the left.
         SaveButton()
           .size({ width: 200, height: 100 })
           .align(Alignment.Start)
-        // Generate a save button of the Normal type and set the four corner radii respectively.
+        // Create a save control of the Normal type and set its four corner radii separately.
         SaveButton({ icon: SaveIconStyle.FULL_FILLED, text: SaveDescription.DOWNLOAD, buttonType: ButtonType.Normal })
           .size({ width: 150, height: 80 })
           .borderRadius({
@@ -74,7 +74,7 @@ struct Index {
             bottomRight: 30,
             bottomLeft: 35
           })
-        // Generate a save button and set the maximum width constraint.
+        // Create a save control and set its maximum width constraint.
         SaveButton().constraintSize({ maxWidth: 60 })
       }.width('100%')
     }.height('100%')
@@ -82,7 +82,7 @@ struct Index {
 }
 ```
 
-This example demonstrates how to use the container and components within the container as anchors for layout.
+Use the container and the components inside the container as anchors for layout.
 
 ```TypeScript
 @Entry
@@ -91,7 +91,7 @@ struct Index {
   build() {
     Row() {
       RelativeContainer() {
-        // Use the container as the anchor, position it at the top-left corner, and set an ID for other components to reference.
+        // Use the container as the anchor to position the control at the upper left corner, and set an ID for other components to reference.
         SaveButton({ icon: SaveIconStyle.FULL_FILLED, text: SaveDescription.DOWNLOAD, buttonType: ButtonType.Normal })
           .width(100)
           .height(100)
@@ -102,7 +102,7 @@ struct Index {
           })
           .id('row1')
 
-        // Use the container as the anchor, position it at the top-right corner, and set an ID for other components to reference.
+        // Use the container as the anchor to position the control at the upper right corner, and set an ID for other components to reference.
         SaveButton({ icon: SaveIconStyle.FULL_FILLED, text: SaveDescription.DOWNLOAD, buttonType: ButtonType.Normal })
           .width(100)
           .height(100)
@@ -113,7 +113,7 @@ struct Index {
           })
           .id('row2')
 
-        // Use row1 and row2 as anchors and place the component between and below the two rows.
+        // Use row1 and row2 as anchors to position the control between and below them.
         SaveButton({ icon: SaveIconStyle.FULL_FILLED, text: SaveDescription.DOWNLOAD, buttonType: ButtonType.Normal })
           .height(100)
           .backgroundColor('#0A59F7')
@@ -124,7 +124,7 @@ struct Index {
           })
           .id('row3')
 
-        // Use row3, the container, and row1 as anchors to constrain the component's layout range in the bottom-left area.
+        // Use row3, the container, and row1 as anchors to constrain the layout range of the control in the lower left area.
         SaveButton({ icon: SaveIconStyle.FULL_FILLED, text: SaveDescription.DOWNLOAD, buttonType: ButtonType.Normal })
           .backgroundColor('#2CA9E0')
           .alignRules({
@@ -135,7 +135,7 @@ struct Index {
           })
           .id('row4')
 
-        // Use row3, row2, and the container as anchors to constrain the component's layout range in the bottom-right area.
+        // Use row3, row2, and the container as anchors to constrain the layout range of the control in the lower right area.
         SaveButton({ icon: SaveIconStyle.FULL_FILLED, text: SaveDescription.DOWNLOAD, buttonType: ButtonType.Normal })
           .backgroundColor('#30C9F7')
           .alignRules({
@@ -155,7 +155,7 @@ struct Index {
 }
 ```
 
-This example demonstrates how to implement text height adaptation of the security component.
+The security control text height is adaptive.
 
 ```TypeScript
 @Entry
@@ -167,13 +167,13 @@ struct Index {
         Column({ space: 10 }) {
           Column({ space: 10 }) {
             Row() {
-              Text('FontSize = 20. Example: ').fontSize(20)
-              Text('Quick Save Image').fontSize(20).fontColor(Color.Blue)
+              Text('FontSize = 20, legend:').fontSize(20)
+              Text('Quickly save image').fontSize(20).fontColor(Color.Blue)
             }.width('100%')
 
             Row() {
-              Text('FontSize = 10. Example: ').fontSize(20)
-              Text('Quick Save Image').fontSize(10).fontColor(Color.Blue)
+              Text('FontSize = 10, legend:').fontSize(20)
+              Text('Quickly save image').fontSize(10).fontColor(Color.Blue)
             }.width('100%')
           }.width('100%')
 
@@ -187,10 +187,10 @@ struct Index {
             Column() {
               Column({ space: 10 }) {
                 Row() {
-                  Text('No adaptive adjustment')
+                  Text('No adaptive adjustment required')
                 }.width('90%')
 
-                // The text can be fully displayed in the current layout without adjustment.
+                // The current layout can display the text completely without adjustment, so no adaptive adjustment is required.
                 SaveButton({
                   text: SaveDescription.QUICK_SAVE_TO_GALLERY, buttonType: ButtonType.Normal
                 })
@@ -211,7 +211,7 @@ struct Index {
                   Text('Reduce font size first')
                 }.width('90%')
 
-                // The text cannot be fully displayed in the current layout. Reduce the font size first so that the text can be displayed in one line.
+                // The current layout cannot display the text completely. Reduce fontSize first so that the text can be displayed in one line.
                 SaveButton({
                   text: SaveDescription.QUICK_SAVE_TO_GALLERY, buttonType: ButtonType.Normal
                 })
@@ -229,11 +229,11 @@ struct Index {
             Column() {
               Column({ space: 10 }) {
                 Row() {
-                  Text('Reduce font size first, then wrap text')
+                  Text('Reduce font size first, then wrap')
                 }.width('90%')
 
-                // The text cannot be fully displayed in the current layout. Reduce the font size first. If the text still cannot be fully displayed after the font size is reduced, use maxLines to wrap lines.
-                // The height is automatically adjusted to ensure that the text can be fully displayed.
+                // The current layout cannot display the text completely. Reduce fontSize first. If the text still cannot be displayed completely, use the maxLines attribute to wrap the layout.
+                // Since the height is insufficient to display the text completely, automatically adjust the height so that the text is displayed completely.
                 SaveButton({
                   text: SaveDescription.QUICK_SAVE_TO_GALLERY, buttonType: ButtonType.Normal
                 })
@@ -251,12 +251,12 @@ struct Index {
             Column() {
               Column({ space: 10 }) {
                 Row() {
-                  Text('Reduce font size + wrap text, text is truncated')
+                  Text('Reduce font size + wrap, text truncated')
                 }.width('90%')
 
-                // The text cannot be fully displayed in the current layout. Reduce the font size first. If the text still cannot be fully displayed after the font size is reduced, use maxLines to wrap lines.
-                //The maxLines attribute is set to 3, and only three lines can be displayed. Therefore, the text is truncated.
-                // The height is automatically adjusted to ensure that the text can be fully displayed.
+                // The current layout cannot display the text completely. Reduce fontSize first; if the text still cannot be displayed completely, try using the maxLines attribute for line wrapping.
+                // Since the maxLines attribute is 3, only three lines can be displayed, so the text is truncated.
+                // Since the height is insufficient for complete display, the height is automatically adjusted to display the text completely.
                 SaveButton({
                   text: SaveDescription.QUICK_SAVE_TO_GALLERY, buttonType: ButtonType.Normal
                 })
@@ -282,10 +282,10 @@ struct Index {
             Column() {
               Column({ space: 10 }) {
                 Row() {
-                  Text('No adaptive adjustment')
+                  Text('No adaptive adjustment required')
                 }.width('90%')
 
-                // The text can be fully displayed in the current layout without adjustment.
+                // The current layout can display the text completely without adjustment, so no adaptive adjustment is required.
                 SaveButton({
                   text: SaveDescription.QUICK_SAVE_TO_GALLERY, buttonType: ButtonType.Normal
                 })
@@ -306,8 +306,8 @@ struct Index {
                   Text('Wrap first')
                 }.width('90%')
 
-                // The text cannot be fully displayed in the current layout. Use the maxlines attribute first to wrap text.
-                // The height is automatically adjusted to ensure that the text can be fully displayed.
+                // The current layout cannot display the text completely. Use the maxLines attribute for line wrapping first; after wrapping, the text can be displayed completely.
+                // Since the height is insufficient for complete display, the height is automatically adjusted to display the text completely.
                 SaveButton({
                   text: SaveDescription.QUICK_SAVE_TO_GALLERY, buttonType: ButtonType.Normal
                 })
@@ -328,8 +328,8 @@ struct Index {
                   Text('Wrap first, then reduce font size')
                 }.width('90%')
 
-                // The text cannot be fully displayed in the current layout. Use the maxlines attribute first to wrap text. After wrapping, the text still cannot be fully displayed. Reduce the font size and the text can be fully displayed.
-                // The height is automatically adjusted to ensure that the text can be completely displayed.
+                // The current layout cannot fully display the text. Prefer the maxLines attribute for line wrapping. If the text still cannot be fully displayed after wrapping, reduce fontSize to attempt layout, and the text can be fully displayed after the font size is reduced.
+                // Because the height is insufficient for full display, the height is automatically adjusted so that the text is fully displayed.
                 SaveButton({
                   text: SaveDescription.QUICK_SAVE_TO_GALLERY, buttonType: ButtonType.Normal
                 })
@@ -347,12 +347,12 @@ struct Index {
             Column() {
               Column({ space: 10 }) {
                 Row() {
-                  Text('Wrap lines and reduce font size, yet text remains truncated')
+                  Text('Line wrap + reduced font size, text truncated')
                 }.width('90%')
 
-                // The text cannot be fully displayed in the current layout. Use the maxlines attribute first to wrap text. After wrapping, the text still cannot be fully displayed. Reduce the font size to attempt to change the layout.
-                //The minFontSize attribute is set to 10, and only one character can be displayed. Therefore, the text is truncated.
-                // The height is automatically adjusted to ensure that the text can be completely displayed.
+                // The current layout cannot fully display the text. Prefer the maxLines attribute for line wrapping. If the text still cannot be fully displayed after wrapping, reduce fontSize to attempt layout.
+                // Because the minFontSize attribute is 10, only one character can be displayed per line, so the text is truncated.
+                // Because the height is insufficient for full display, the height is automatically adjusted so that the text is fully displayed.
                 SaveButton({
                   text: SaveDescription.QUICK_SAVE_TO_GALLERY, buttonType: ButtonType.Normal
                 })
@@ -379,10 +379,10 @@ struct Index {
             Column() {
               Column({ space: 10 }) {
                 Row() {
-                  Text('No adaptive adjustment')
+                  Text('No adaptive adjustment required')
                 }.width('90%')
 
-                // The text can be fully displayed in the current layout without adjustment.
+                // The current layout can fully display the text without adjustment, so no adaptive adjustment of the text is required.
                 SaveButton({
                   text: SaveDescription.QUICK_SAVE_TO_GALLERY, buttonType: ButtonType.Normal
                 })
@@ -400,10 +400,10 @@ struct Index {
             Column() {
               Column({ space: 10 }) {
                 Row() {
-                  Text('Keep layout constraints unchanged; reduce font size first')
+                  Text('Keep the layout constraints unchanged and prefer reducing the font size')
                 }.width('90%')
 
-                // The text cannot be fully displayed in the current layout. Reduce the font size first so that the text can be displayed in one line.
+                // The current layout cannot fully display the text. Prefer reducing fontSize, and the text can be displayed in one line after the reduction.
                 SaveButton({
                   text: SaveDescription.QUICK_SAVE_TO_GALLERY, buttonType: ButtonType.Normal
                 })
@@ -421,11 +421,11 @@ struct Index {
             Column() {
               Column({ space: 10 }) {
                 Row() {
-                  Text('Keep layout constraints unchanged; reduce font size first, then wrap lines')
+                  Text('Keep the layout constraints unchanged, reduce the font size first, and then wrap the text.')
                 }.width('90%')
 
-                // The text cannot be fully displayed in the current layout. Reduce the font size first. If the text still cannot be fully displayed after the font size is reduced, use maxLines to wrap lines. The text can be fully displayed now.
-                // In LAYOUT_CONSTRAINT_FIRST mode, the height of the security component does not support adaptive adjustment.
+                // If the current layout cannot fully display the text, reduce fontSize first. If the text still cannot be fully displayed after the reduction, use the maxLines attribute to wrap the text. After the layout, the text can be fully displayed.
+                // In LAYOUT_CONSTRAINT_FIRST mode, the height of the security control does not support adaptive adjustment.
                 SaveButton({
                   text: SaveDescription.QUICK_SAVE_TO_GALLERY, buttonType: ButtonType.Normal
                 })
@@ -443,11 +443,11 @@ struct Index {
             Column() {
               Column({ space: 10 }) {
                 Row() {
-                  Text(`Insufficient maxLines\nText truncated`)
+                  Text(`Maxlines is insufficient \n the text is truncated`)
                 }.width('90%')
 
-                //The text cannot be fully displayed in the current layout. Reduce the font size first. After reduction, it still cannot be fully displayed. Because the component can only display one line for the height, the text is truncated.
-                // In LAYOUT_CONSTRAINT_FIRST mode, the height of the security component does not support adaptive adjustment.
+                // If the current layout cannot fully display the text, reduce fontSize first. If the text still cannot be fully displayed after the reduction, the text is truncated because height can display only one line.
+                // In LAYOUT_CONSTRAINT_FIRST mode, the height of the security control does not support adaptive adjustment.
                 SaveButton({
                   text: SaveDescription.QUICK_SAVE_TO_GALLERY, buttonType: ButtonType.Normal
                 })
@@ -465,11 +465,11 @@ struct Index {
             Column() {
               Column({ space: 10 }) {
                 Row() {
-                  Text(`Insufficient height\nText truncated`)
+                  Text(`Insufficient height \n the text is truncated`)
                 }.width('90%')
 
-                // The text cannot be fully displayed in the current layout. Reduce the font size first. After reduction, it still cannot be fully displayed. Because the component can only display one line for the height, the text is truncated.
-                // In LAYOUT_CONSTRAINT_FIRST mode, the height of the security component does not support adaptive adjustment.
+                // If the current layout cannot fully display the text, reduce fontSize first. If the text still cannot be fully displayed after the reduction, the text is truncated because height can display only one line.
+                // In LAYOUT_CONSTRAINT_FIRST mode, the height of the security control does not support adaptive adjustment.
                 SaveButton({
                   text: SaveDescription.QUICK_SAVE_TO_GALLERY, buttonType: ButtonType.Normal
                 })
@@ -492,7 +492,7 @@ struct Index {
 }
 ```
 
-This example demonstrates how to set the style of the system focus box for the security component.
+Sets the system focus box style of the security control.
 
 ```TypeScript
 import { ColorMetrics, LengthMetrics } from '@kit.ArkUI';
@@ -504,14 +504,14 @@ struct Index {
     Row() {
       Column({ space: 30 }) {
         Column({ space: 15 }) {
-          Text('Default security component (focusBox unset)')
-          // Leave focusBox unset to use the system default focus box style.
+          Text('Default security control without the focusBox attribute set')
+          // Do not set the focusBox attribute; use the system default focus box style.
           SaveButton()
         }
 
         Column({ space: 15 }) {
-          Text('Black focus box tightly fitted to the security component')
-          // Set margin to 0 to attach the focus box flush to the component; set stroke color to black.
+          Text('Black focus box close to the security control')
+          // Set margin to 0 so that the focus box is close to the control, and set strokeColor to black.
           SaveButton()
             .focusBox({
               margin: new LengthMetrics(0),
@@ -520,8 +520,8 @@ struct Index {
         }
 
         Column({ space: 15 }) {
-          Text('Red focus box larger than the security component')
-          // Set margin to 10 vp, stroke color to red, and stroke width to 10 px.
+          Text('Larger red focus box')
+          // Set margin to 10vp, strokeColor to red, and strokeWidth to 10px.
           SaveButton()
             .focusBox({
               margin: new LengthMetrics(10),
@@ -531,8 +531,8 @@ struct Index {
         }
 
         Column({ space: 15 }) {
-          Text('Rectangular security component')
-          // Set a custom focus box for the Normal type component. The focus box renders along the rectangular outer outline of component.
+          Text('Rectangular security control')
+          // Set a custom focus box for the Normal type control. The focus box is displayed along the outer contour of the rectangular control.
           SaveButton({ icon: SaveIconStyle.FULL_FILLED, text: SaveDescription.DOWNLOAD, buttonType: ButtonType.Normal })
             .focusBox({
               margin: new LengthMetrics(10),
@@ -542,8 +542,8 @@ struct Index {
         }
 
         Column({ space: 15 }) {
-          Text('Circular security component')
-          // Set a custom focus box for a Circle type component. The focus box renders along the circular outer outline of component.
+          Text('Circular security control')
+          // Set a custom focus frame for the Circle-type control. The focus frame is displayed along the outer contour of the circular control.
           SaveButton({ icon: SaveIconStyle.FULL_FILLED, text: SaveDescription.DOWNLOAD, buttonType: ButtonType.Circle })
             .focusBox({
               margin: new LengthMetrics(10),
@@ -559,7 +559,7 @@ struct Index {
 }
 ```
 
-This example demonstrates how to set whether the security component supports adaptive text height and related behavior in screen reader mode.
+Sets whether the security control supports adaptive actual text height and the related behavior in screen reader mode.
 
 ```TypeScript
 @Entry
@@ -568,28 +568,28 @@ struct Index {
   build() {
     Row() {
       Column({ space: 10 }) {
-        // Set fallbackLineSpacing of the save button to true.
+        // Set fallbackLineSpacing of the save control to true.
         SaveButton()
           .fallbackLineSpacing(true)
           .id('btn1')
 
-        // Set the save button as the initial focus for the screen reader on the page.
+        // Set the save control as the initial focus for screen reading on the page.
         SaveButton()
           .accessibilityDefaultFocus(true)
           .id('btn2')
 
-        // Specify btn1 as the next focus after this save button during screen reader navigation.
+        // Specify btn1 as the next focus of the save control during screen reader swipe focus traversal.
         SaveButton()
           .accessibilityDefaultFocus(true)
           .id('btn3')
           .accessibilityNextFocusId('btn1')
 
-        // Specify the accessibility component type of this save button as null.
+        // Specify the accessibility component type of the save control as null.
         SaveButton()
           .accessibilityRole(SecurityComponentRoleType.ROLE_NONE)
           .id('btn4')
 
-        // Set the accessibility description of this save button.
+        // Specify the accessibility component description of the save control as test text.
         SaveButton()
           .accessibilityDescription("test text for description")
           .id('btn5')

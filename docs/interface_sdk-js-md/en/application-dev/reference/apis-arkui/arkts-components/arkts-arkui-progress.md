@@ -124,7 +124,7 @@ This example demonstrates how to set attributes of a ring progress indicator usi
 @Component
 struct ProgressExample {
   private gradientColor: LinearGradient = new LinearGradient([{ color: Color.Yellow, offset: 0.5 },
-    { color: Color.Orange, offset: 1.0 }])
+    { color: Color.Orange, offset: 1.0 }]);
 
   build() {
     Column({ space: 15 }) {
@@ -286,7 +286,6 @@ function myProgress(config: ProgressConfiguration) {
 struct Index {
   @State currentValue: number = 0;
   modifier = new MyProgressModifier('rgb(39, 135, 217)');
-  @State myModifier: (MyProgressModifier | undefined) = this.modifier;
 
   build() {
     Column() {
@@ -378,22 +377,22 @@ This example demonstrates how to implement the gradient color of the linear prog
 @Entry
 @Component
 struct ProgressExample {
-  private gradientColor: LinearGradient = new LinearGradient([{ color: "#87BDF9", offset: 0.5 },
-    { color: "#3662F0", offset: 1.0 }])
-  public gradientColor2: LinearGradient = new LinearGradient([{ color: "#A5A5AF", offset: 0.5 }, 
-    { color: "#67666C", offset: 1.0 }])
+  private linearGradientColor: LinearGradient = new LinearGradient([{ color: "#87BDF9", offset: 0.5 },
+    { color: "#3662F0", offset: 1.0 }]);
+  public capsuleGradientColor: LinearGradient = new LinearGradient([{ color: "#A5A5AF", offset: 0.5 }, 
+    { color: "#67666C", offset: 1.0 }]);
 
   build() {
     Column({ space: 15 }) {
       Text('Linear: ').fontSize(9).fontColor(0xCCCCCC).width('90%')
       Progress({ value: 70, total: 100, type: ProgressType.Linear })
         .width(100).style({ strokeWidth: 20 })
-        .color(this.gradientColor)
+        .color(this.linearGradientColor)
 
       Text('Capsule: ').fontSize(9).fontColor(0xCCCCCC).width('90%')
       Progress({ value: 50, total: 100, type: ProgressType.Capsule })
         .width(120).style({ strokeWidth: 40 })
-        .color(this.gradientColor2)
+        .color(this.capsuleGradientColor)
     }.width('100%').padding({ top: 5 })
   }
 }

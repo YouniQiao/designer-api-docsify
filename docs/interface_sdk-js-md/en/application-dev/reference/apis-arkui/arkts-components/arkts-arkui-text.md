@@ -1619,7 +1619,7 @@ struct StyledStringAppend {
     new ParagraphStyle({ textAlign: TextAlign.Start, textIndent: LengthMetrics.vp(20) });
   // Line height style.
   lineHeightStyle: LineHeightStyle = new LineHeightStyle(new LengthMetrics(30));
-  str: string = 'Example of paragraph cache for a style string'
+  str: string = 'Example of paragraph cache for a styled string'
   styledString1: MutableStyledString = new MutableStyledString(this.str, [{
     start: 0,
     length: this.str.length,

@@ -47,7 +47,7 @@ Adds a Bezier curve deformation effect to the component. This effect achieves pr
 **Examples**
 
 ```TypeScript
-import { common2D, uiEffect } from '@kit.ArkGraphics2D'
+import { common2D, uiEffect } from '@kit.ArkGraphics2D';
 
 @Entry
 @Component
@@ -56,7 +56,7 @@ struct BezierWarpExample {
     { x: 0, y: 0 }, { x: 1 / 3, y: 0 }, { x: 2 / 3, y: 0 }, // top edge
     { x: 0.5, y: 0 }, { x: 0.5, y: 1 / 3 }, { x: 1, y: 2 / 3 }, // right edge
     { x: 1, y: 1 }, { x: 2 / 3, y: 1 }, { x: 1 / 3, y: 1 }, // bottom edge
-    { x: 0, y: 1 }, { x: 0, y: 2 / 3 }, { x: 0, y: 1 / 3 }] // left edge
+    { x: 0, y: 1 }, { x: 0, y: 2 / 3 }, { x: 0, y: 1 / 3 }]; // left edge
 
   build() {
     Column() {
@@ -121,12 +121,12 @@ struct BlurBubblesRiseExample {
     let resourceMgr = context.resourceManager;
     resourceMgr?.getMediaContent($r('app.media.drawBlurMask').id)
       .then((val: Uint8Array) => {
-        let buffer: ArrayBuffer = val.buffer.slice(0, val.buffer.byteLength)
+        let buffer: ArrayBuffer = val.buffer.slice(0, val.buffer.byteLength);
         let imageSource: image.ImageSource = image.createImageSource(buffer);
         imageSource.createPixelMap().then((pixelmap: image.PixelMap) => {
           this.maskImage = pixelmap as PixelMap;
-        })
-      })
+        });
+      });
   }
 
   build() {
@@ -187,7 +187,7 @@ Adds a color gradient effect to the component content.
 **Examples**
 
 ```TypeScript
-import { common2D, uiEffect } from '@kit.ArkGraphics2D'
+import { common2D, uiEffect } from '@kit.ArkGraphics2D';
 
 @Entry
 @Component
@@ -195,19 +195,20 @@ struct ColorGradientExample {
   @State gradientColors: Array<uiEffect.Color> = [
     {red: 1.0, green: 0.8, blue: 0.5, alpha: 0.8},
     {red: 1.0, green: 1.5, blue: 0.5, alpha: 1.0}
-  ]
+  ];
 
   @State gradientPositions: Array<common2D.Point> = [
     {x: 0.2, y: 0.2},
-    {x: 0.8, y: 0.6}]
+    {x: 0.8, y: 0.6}
+  ];
 
-  @State gradientStrengths: Array<number> = [0.3, 0.3]
+  @State gradientStrengths: Array<number> = [0.3, 0.3];
 
   build() {
     Column() {
       Row()
-        .width("100%")
-        .height("100%")
+        .width('100%')
+        .height('100%')
         // Add a color gradient effect to the component content.
         .backgroundFilter(uiEffect.createFilter().colorGradient(this.gradientColors, this.gradientPositions, this.gradientStrengths))
     }
@@ -254,21 +255,21 @@ Adds a 3D lighting effect to the component content.
 **Examples**
 
 ```TypeScript
-import { common2D, uiEffect } from '@kit.ArkGraphics2D'
+import { common2D, uiEffect } from '@kit.ArkGraphics2D';
 
 @Entry
 @Component
 struct Index {
   @State contentLightPosition: common2D.Point3d = {
     x: 0, y: 0, z: 2
-  }
+  };
   @State contentLightColor: common2D.Color = {
     red: 1,
     green: 1,
     blue: 1,
     alpha: 1
-  }
-  @State lightIntensity: number = 1
+  };
+  @State lightIntensity: number = 1;
 
   build() {
     Column() {
@@ -330,23 +331,23 @@ Provides a Mask-based and directional light lighting effect for the component co
 **Examples**
 
 ```TypeScript
-import { uiEffect, common2D } from "@kit.ArkGraphics2D";
+import { uiEffect, common2D } from '@kit.ArkGraphics2D';
 
 @Entry
 @Component
 struct Index {
-  @State rippleMaskCenter: common2D.Point = {x:0.5, y:0.5}
-  @State rippleMaskRadius: number = 0.0
-  @State rippleMaskWidth: number = 0.0
-  @State color: Color = Color.Transparent
+  @State rippleMaskCenter: common2D.Point = {x:0.5, y:0.5};
+  @State rippleMaskRadius: number = 0.0;
+  @State rippleMaskWidth: number = 0.0;
+  @State color: Color = Color.Transparent;
 
   build() {
     Column() {
       RelativeContainer() {
-        Image($r("app.media.back")).width("100%").height("100%")
+        Image($r('app.media.back')).width('100%').height('100%')
         Stack()
-          .width("100%")
-          .height("100%")
+          .width('100%')
+          .height('100%')
           .backgroundColor(this.color)
           // Provide a lighting effect based on mask and parallel light for the component content.
           .backgroundFilter(uiEffect.createFilter()
@@ -401,19 +402,19 @@ Adds a distortion effect to the component content.
 **Examples**
 
 ```TypeScript
-import { uiEffect } from '@kit.ArkGraphics2D'
+import { uiEffect } from '@kit.ArkGraphics2D';
 
 @Entry
 @Component
 struct DisplacementDistortExample {
-  @State distortMask: uiEffect.Mask = uiEffect.Mask.createRippleMask({x: 0.5, y: 0.5}, 0.2, 0.3, 0.0)
+  @State distortMask: uiEffect.Mask = uiEffect.Mask.createRippleMask({x: 0.5, y: 0.5}, 0.2, 0.3, 0.0);
   
   build() {
     Stack() {
       Image($rawfile('test.png'))
       Row()  
-        .width("100%")
-        .height("100%")
+        .width('100%')
+        .height('100%')
         // Add a distortion effect to the component content.
         .backgroundFilter(uiEffect.createFilter().displacementDistort(this.distortMask, [5.0, 5.0]))
     }
@@ -457,8 +458,8 @@ Adds a lens distortion effect to the component.
 
 ```TypeScript
 // Add the lens distortion effect to the component.
-let filter = uiEffect.createFilter()
-filter.distort(-0.5)
+let filter = uiEffect.createFilter();
+filter.distort(-0.5);
 ```
 
 ## edgeLight
@@ -499,21 +500,21 @@ Detects edges of the component content and adds an edge highlight effect. This e
 **Examples**
 
 ```TypeScript
-import { uiEffect } from '@kit.ArkGraphics2D'
+import { uiEffect } from '@kit.ArkGraphics2D';
 
 @Entry
 @Component
 struct EdgeLightExample {
-  @State edgeLightColor: uiEffect.Color = {red: 0.0, green: 1.0, blue: 0.0, alpha: 1.0}
+  @State edgeLightColor: uiEffect.Color = {red: 0.0, green: 1.0, blue: 0.0, alpha: 1.0};
   
-  @State edgeLightMask: uiEffect.Mask = uiEffect.Mask.createRippleMask({x: 0.5, y: 0.5}, 0.2, 0.5, 0.5)
+  @State edgeLightMask: uiEffect.Mask = uiEffect.Mask.createRippleMask({x: 0.5, y: 0.5}, 0.2, 0.5, 0.5);
   
   build() {
     Stack() {
       Image($rawfile('test.png'))
       Row()  
-        .width("100%")
-        .height("100%")
+        .width('100%')
+        .height('100%')
         // Detect edges for the component content and add an edge highlighting effect.
         .backgroundFilter(uiEffect.createFilter().edgeLight(1.0, this.edgeLightColor, this.edgeLightMask, false))
     }
@@ -558,8 +559,8 @@ Adds a fly-in or fly-out deformation effect to the component. Typical applicatio
 
 ```TypeScript
 // Add the fly in/out transformation effect to the component.
-let filter = uiEffect.createFilter()
-filter.flyInFlyOutEffect(0.5, uiEffect.FlyMode.TOP)
+let filter = uiEffect.createFilter();
+filter.flyInFlyOutEffect(0.5, uiEffect.FlyMode.TOP);
 ```
 
 ## haloBloom
@@ -696,25 +697,25 @@ Adds a dispersion effect controlled by a displacement map to the component conte
 **Examples**
 
 ```TypeScript
-import {image} from '@kit.ImageKit'
-import {common2D, uiEffect} from '@kit.ArkGraphics2D'
-import {common} from '@kit.AbilityKit'
+import {image} from '@kit.ImageKit';
+import {common2D, uiEffect} from '@kit.ArkGraphics2D';
+import {common} from '@kit.AbilityKit';
 
 @Entry
 @Component
 struct MaskDispersion {
-  @State pixelMap: PixelMap | null = null
-  @State src: common2D.Rect = { left: 0, top: 0, right: 1.0, bottom: 1.0 }
-  @State dst: common2D.Rect = { left: 0, top: 0, right: 1.0, bottom: 1.0 }
-  @State fillColor: uiEffect.Color = { red: 0, green: 0, blue: 0, alpha: 0 }
+  @State pixelMap: PixelMap | null = null;
+  @State src: common2D.Rect = { left: 0, top: 0, right: 1.0, bottom: 1.0 };
+  @State dst: common2D.Rect = { left: 0, top: 0, right: 1.0, bottom: 1.0 };
+  @State fillColor: uiEffect.Color = { red: 0, green: 0, blue: 0, alpha: 0 };
 
   onPageShow(): void {
-    let context = this.getUIContext().getHostContext() as common.UIAbilityContext
-    context.resourceManager.getMediaByName("mask_alpha").then(val => {
-      let buffer = val.buffer.slice(0, val.buffer.byteLength)
+    let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+    context.resourceManager.getMediaByName('mask_alpha').then(val => {
+      let buffer = val.buffer.slice(0, val.buffer.byteLength);
       let imageSource = image.createImageSource(buffer);
       imageSource.createPixelMap().then(pixelMap => {
-        this.pixelMap = pixelMap
+        this.pixelMap = pixelMap;
       })
     })
   }
@@ -782,23 +783,23 @@ It is not recommended to use this effect during screen size changes, such as scr
 **Examples**
 
 ```TypeScript
-import { uiEffect, common2D } from "@kit.ArkGraphics2D";
+import { uiEffect, common2D } from '@kit.ArkGraphics2D';
 
 @Entry
 @Component
 struct Index {
-  context = this.getUIContext()
-  @State alpha: number = 0
-  @State enterNewPage:boolean = false
-  @State rippleMaskCenter: common2D.Point = {x:0.5, y:0.5}
-  @State rippleMaskRadius: number = 0.1
+  context = this.getUIContext();
+  @State alpha: number = 0;
+  @State enterNewPage:boolean = false;
+  @State rippleMaskCenter: common2D.Point = {x:0.5, y:0.5};
+  @State rippleMaskRadius: number = 0.1;
   build() {
     Stack() {
       // Page before the transition.
-      Image($r("app.media.before")).width("100%").height("100%")
+      Image($r('app.media.before')).width('100%').height('100%')
         if (this.enterNewPage) {
           // Page after the transition.
-          Column().width("100%").height("100%").backgroundImage($r("app.media.after"))
+          Column().width('100%').height('100%').backgroundImage($r('app.media.after'))
             // Provide a mask-based transition effect for the component content.
             .backgroundFilter(uiEffect.createFilter()
               .maskTransition(
@@ -806,19 +807,19 @@ struct Index {
                 this.alpha))
             .onAppear(() => {
               this.context.animateTo({ duration: 1000 }, () => {
-                this.rippleMaskRadius = 1.3
+                this.rippleMaskRadius = 1.3;
               })
               this.context.animateTo({ duration: 800 }, () => {
-                this.alpha = 1
+                this.alpha = 1;
               })
             })
         }
     }.borderWidth(2)
     .onClick(()=>{
-      this.enterNewPage=!this.enterNewPage;
+      this.enterNewPage = !this.enterNewPage;
       if (this.enterNewPage) {
-        this.alpha=0;
-        this.rippleMaskRadius=0.1;
+        this.alpha = 0;
+        this.rippleMaskRadius = 0.1;
       }
     })
   }
@@ -856,8 +857,8 @@ Adds a pixel stretch effect to the component.
 
 ```TypeScript
 // Add the edge pixel extension effect to the component.
-let filter = uiEffect.createFilter()
-filter.pixelStretch([0.2, 0.2, 0.2, 0.2], uiEffect.TileMode.CLAMP)
+let filter = uiEffect.createFilter();
+filter.pixelStretch([0.2, 0.2, 0.2, 0.2], uiEffect.TileMode.CLAMP);
 ```
 
 ## radiusGradientBlur
@@ -896,14 +897,14 @@ Adds a radius linear gradient blur effect to the component content.
 **Examples**
 
 ```TypeScript
-import { uiEffect } from '@kit.ArkGraphics2D'
+import { uiEffect } from '@kit.ArkGraphics2D';
 
 @Entry
 @Component
 struct RadiusGradientBlurExample {
-  @State blurRadiusExample: number = 64
+  @State blurRadiusExample: number = 64;
   @State linearGradientBlurOptionsExample: LinearGradientBlurOptions =
-    {fractionStops: [[0.0, 0.0], [1.0, 1.0]], direction: GradientDirection.Bottom}
+    {fractionStops: [[0.0, 0.0], [1.0, 1.0]], direction: GradientDirection.Bottom};
 
   build() {
     Column() {
@@ -991,7 +992,7 @@ import { uiEffect } from '@kit.ArkGraphics2D';
 @Entry
 @Component
 struct VariableRadiusBlurExample {
-  @State blurMask: uiEffect.Mask = uiEffect.Mask.createRippleMask({x: 0.5, y: 0.5}, 0.2, 0.1)
+  @State blurMask: uiEffect.Mask = uiEffect.Mask.createRippleMask({x: 0.5, y: 0.5}, 0.2, 0.1);
 
   build() {
     Stack() {
@@ -1046,6 +1047,6 @@ Adds a water ripple effect to the component.
 
 ```TypeScript
 // Add the water ripple effect to the component.
-let filter = uiEffect.createFilter()
-filter.waterRipple(0.5, 2, 0.5, 0.5, uiEffect.WaterRippleMode.SMALL2SMALL)
+let filter = uiEffect.createFilter();
+filter.waterRipple(0.5, 2, 0.5, 0.5, uiEffect.WaterRippleMode.SMALL2SMALL);
 ```

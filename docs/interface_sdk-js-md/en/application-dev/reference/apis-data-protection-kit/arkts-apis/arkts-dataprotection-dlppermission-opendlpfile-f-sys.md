@@ -155,7 +155,7 @@ appId = data.signatureInfo.appId; // The app ID is obtained from the application
 file = fileIo.openSync(uri).fd; // The FD is obtained by opening a file.
 dlpPermission.openDLPFile(file, appId, async (err, res) => { // Open a DLP file.
   if (err) {
-    console.error('openDLPFile error,', err.code, err.message);
+    console.error(`Failed to open DLPFile. Code: ${err.code}, message: ${err.message}`);
   } else {
     console.info('res', JSON.stringify(res));
   }

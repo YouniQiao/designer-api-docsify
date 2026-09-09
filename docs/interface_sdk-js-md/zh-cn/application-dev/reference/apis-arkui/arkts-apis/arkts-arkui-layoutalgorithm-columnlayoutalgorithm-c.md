@@ -39,6 +39,11 @@ constructor(option?: ColumnLayoutAlgorithmOptions)
 | --- | --- | --- | --- |
 | option | [ColumnLayoutAlgorithmOptions](arkts-arkui-layoutalgorithm-columnlayoutalgorithmoptions-i.md) | 否 | 垂直方向线性布局算法的构造入参，设置布局算法的间距、主轴对齐方式、交叉轴对齐方式及主轴排列方向。 |
 
+**示例**
+
+请参考DynamicLayout组件[示例2（切换布局算法）](../arkui-ts/ts-container-dynamiclayout.md#示例2切换布局算法)。
+- simpleType:
+
 ## alignItems
 
 ```TypeScript

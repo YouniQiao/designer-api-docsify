@@ -52,7 +52,7 @@ Select(options: Array<SelectOption>)
 
 ## Examples
 
-This example demonstrates how to create a drop-down menu by configuring [SelectOption](arkts-arkui-selectoption-i.md) and how to implement menu avoidance using the [avoidance](arkts-arkui-select-attribute.md#avoidance) attribute, available since API version 19.
+This example implements a dropdown menu by configuring [SelectOption](arkts-arkui-selectoption-i.md), and sets the [avoidance](arkts-arkui-select-attribute.md#avoidance) attribute to implement the menu avoidance mode since API version 19.
 
 ```TypeScript
 // xxx.ets
@@ -66,7 +66,7 @@ struct SelectExample {
 
   build() {
     Column() {
-      // Replace $r('app.media.selection') with the image resource file you use.
+      // $r('app.media.selection') needs to be replaced with the image resource file required by the developer.
       Select([{ value: 'aaa', icon: $r("app.media.selection") },
         { value: 'bbb', icon: $r("app.media.selection") },
         { value: 'ccc', icon: $r("app.media.selection") },
@@ -83,27 +83,27 @@ struct SelectExample {
         .optionWidth(200)
         .optionHeight(300)
         /**
-         * Callback triggered when a drop-down menu option is selected.
-         * index: subscript of the selected option.
-         * text: text of the selected option (optional).
+         * Callback invoked when a dropdown option is selected.
+         * index: index of the selected item.
+         * text: text of the selected item (optional parameter).
          */
         .onSelect((index: number, text?: string | undefined) => {
           console.info('Select:' + index);
-          // Update the state for the selected index.
+          // Update the selected index state.
           this.index = index;
-          // Update the text displayed in the selection box if the text value exists.
+          // If text exists, update the text displayed in the selection box.
           if (text) {
             this.text = text;
           }
         })
-        // Overlay the target component when there is no sufficient space below the component.
+        // When there is not enough space below the component, cover the target component.
         .avoidance(AvoidanceMode.COVER_TARGET);
     }.width('100%')
   }
 }
 ```
 
-This example demonstrates how to create a drop-down menu with symbol icons in the Select component and implement menu avoidance using the [avoidance](arkts-arkui-select-attribute.md#avoidance) attribute, available since API version 19.
+This example implements a Select component whose dropdown menu images are Symbols, and implements the menu avoidance mode by setting the [avoidance](arkts-arkui-select-attribute.md#avoidance) attribute since API version 19.
 
 ```TypeScript
 // xxx.ets
@@ -141,34 +141,34 @@ struct SelectExample {
         .arrowPosition(this.arrowPosition)
         .menuAlign(MenuAlignType.START, { dx: 0, dy: 0 })
         /**
-         * Callback triggered when a drop-down menu option is selected.
-         * index: subscript of the selected option.
-         * text: text of the selected option (optional).
+         * Callback for selecting a dropdown item
+         * index: index of the selected item
+         * text: text of the selected item (optional parameter)
          */
         .onSelect((index: number, text?: string | undefined) => {
           console.info('Select:' + index);
-          // Update the state for the selected index.
+          // Update the selected index state.
           this.index = index;
           if (text) {
             this.text = text;
           }
         })
-        // Overlay the target component when there is no sufficient space below the component.
+        // Cover the target component when there is insufficient space below the component.
         .avoidance(AvoidanceMode.COVER_TARGET);
     }.width('100%')
   }
 }
 ```
 
-This example implements a custom drop-down menu, each option of which consists of text + symbol + blank area + text + drawn triangle. After a menu option is clicked, the text content of the menu option is displayed.
+This example implements a Select component with custom dropdown menu options. The custom dropdown menu option style is "text + Symbol image + blank spacing + text + drawn triangle". After a menu option is clicked, the Select component displays the text content of the menu option.
 
 ```TypeScript
 import { SymbolGlyphModifier } from '@kit.ArkUI';
 
 /**
- * Custom content modifier for drop-down menu options
- * Implement the standard ContentModifier to replace the default item layout of the drop-down panel.
- * Allow custom text to be appended at the end of each menu item.
+ * Custom dropdown menu item content modifier
+ * Implements the standard ContentModifier interface to replace the default Item layout of the Select dropdown panel
+ * Allows custom text to be passed in to display additional text at the end of the menu item
  */
 class MyMenuItemContentModifier implements ContentModifier<MenuItemConfiguration> {
   modifierText: string = "";
@@ -183,26 +183,26 @@ class MyMenuItemContentModifier implements ContentModifier<MenuItemConfiguration
 }
 
 /**
- * UI builder for custom drop-down menu items
- * Fully override the menu item layout: text on the left side, icon, custom text, and outlined triangular shape.
- * @param configuration Configuration object for menu items, containing value, index, icon, custom content modifier and other related data.
+ * Custom Select dropdown menu item UI builder
+ * Completely rewrites the MenuItem layout: left text + icon + custom text + triangle border graphic
+ * @param configuration Select internal menu item configuration object, containing information such as value, index, icon, and custom modifier
  */
 @Builder
 function MenuItemBuilder(configuration: MenuItemConfiguration) {
   Row() {
     Text(configuration.value)
     Blank()
-    // Render the system vector symbol icon first.
+    // Prioritize rendering the system vector Symbol icon.
     if (configuration.symbolIcon) {
       SymbolGlyph().attributeModifier(configuration.symbolIcon).fontSize(24)
     } else if (configuration.icon) {
       Image(configuration.icon).size({ width: 24, height: 24 })
     }
     Blank(30)
-    // Retrieve and display the suffix text passed by the custom content modifier.
+    // Read and display the trailing text passed in by the custom modifier.
     Text((configuration.contentModifier as MyMenuItemContentModifier).modifierText)
     Blank(30)
-    // Draw a custom triangular path shape with only a stroke and no fill color.
+    // Draw a custom triangle path with stroke only and no fill.
     Path()
       .width('100px')
       .height('150px')
@@ -229,7 +229,7 @@ struct SelectExample {
   build() {
     Column() {
       Row() {
-        // Replace $r('app.media.icon') with the image resource file you use.
+        // $r('app.media.icon') needs to be replaced with the image resource file required by the developer.
         Select([{ value: 'item1', icon: $r('app.media.icon'), symbolIcon: this.symbolModifier1 },
           { value: 'item1', icon: $r('app.media.icon'), symbolIcon: this.symbolModifier2 }])
           .value(this.text)
@@ -237,7 +237,7 @@ struct SelectExample {
             console.info('Select index:' + index);
             console.info('Select text:' + text);
           })
-          // Bind the custom menu item modifier to replace the default layout of the drop-down panel.
+          // Bind the custom menu item modifier to replace the default layout of the dropdown panel.
           .menuItemContentModifier(new MyMenuItemContentModifier("Content Modifier"))
 
       }.alignItems(VerticalAlign.Center).height('50%')
@@ -246,7 +246,7 @@ struct SelectExample {
 }
 ```
 
-This example uses DividerOptions to create a divider-style drop-down menu and implements menu avoidance using the [avoidance](arkts-arkui-select-attribute.md#avoidance) attribute, available since API version 19.
+This example implements a dropdown menu with a divider style by configuring the DividerOptions type of divider, and implements the menu avoidance mode by setting the [avoidance](arkts-arkui-select-attribute.md#avoidance) attribute since API version 19.
 
 ```TypeScript
 // xxx.ets
@@ -259,7 +259,7 @@ struct SelectExample {
 
   build() {
     Column() {
-      // Replace $r('app.media.icon') with the image resource file you use.
+      // $r('app.media.icon') needs to be replaced with the image resource file required by the developer.
       Select([{ value: 'aaa', icon: $r("app.media.icon") },
         { value: 'bbb', icon: $r("app.media.icon") },
         { value: 'ccc', icon: $r("app.media.icon") },
@@ -275,9 +275,9 @@ struct SelectExample {
         .optionWidth(200)
         .optionHeight(300)
         /**
-         * Custom configuration for dividers between drop-down options
-         * strokeWidth: width of the divider.
-         * color: color of the divider.
+         * Custom configuration of the divider between dropdown options.
+         * strokeWidth: divider thickness.
+         * color: divider color.
          * startMargin/endMargin: left and right margins of the divider.
          */
         .divider({
@@ -299,7 +299,7 @@ struct SelectExample {
 }
 ```
 
-This example sets the divider attribute to null to remove dividers, and implements menu avoidance using the [avoidance](arkts-arkui-select-attribute.md#avoidance) attribute, available since API version 19.
+This example implements a dropdown menu without dividers by setting divider to null, and implements the menu avoidance mode by setting the [avoidance](arkts-arkui-select-attribute.md#avoidance) attribute since API version 19.
 
 ```TypeScript
 // xxx.ets
@@ -312,7 +312,7 @@ struct SelectExample {
 
   build() {
     Column() {
-      // Replace $r('app.media.icon') with the image resource file you use.
+      // $r('app.media.icon') needs to be replaced with the image resource file required by the developer.
       Select([{ value: 'aaa', icon: $r("app.media.icon") },
         { value: 'bbb', icon: $r("app.media.icon") },
         { value: 'ccc', icon: $r("app.media.icon") },
@@ -327,7 +327,7 @@ struct SelectExample {
         .menuAlign(MenuAlignType.START, { dx: 0, dy: 0 })
         .optionWidth(200)
         .optionHeight(300)
-        // Pass null to divider to hide dividers between options.
+        // Pass null to divider to hide the dividers between options.
         .divider(null)
         .onSelect((index: number, text?: string | undefined) => {
           console.info('Select:' + index);
@@ -342,14 +342,14 @@ struct SelectExample {
 }
 ```
 
-This example illustrates how to configure the text and arrow styles of the Select component using the [textModifier](#textmodifier20) and [arrowModifier](arkts-arkui-select-attribute.md#arrowmodifier) attributes, available since API version 20.
+Since API version 20, this example sets the text and arrow styles through the [textModifier](#textmodifier20) and [arrowModifier](arkts-arkui-select-attribute.md#arrowmodifier) attributes.
 
 ```TypeScript
 import { TextModifier, SymbolGlyphModifier } from "@kit.ArkUI";
 
 /**
- * Use TextModifier to control the text display style of the selection box.
- * Use SymbolGlyphModifier to customize the size and color of the drop-down arrow icon on the right.
+ * Use TextModifier to uniformly control the text style displayed in the selection box.
+ * Use SymbolGlyphModifier to customize the size and color of the dropdown arrow icon on the right.
  */
 @Entry
 @Component
@@ -369,7 +369,7 @@ struct SelectExample {
       .fontWeight(FontWeight.Medium)
       .textOverflow({overflow:TextOverflow.Clip})
 
-    // Initialize the style of the drop-down arrow icon.
+    // Initialize the style of the dropdown arrow icon.
     this.symbolGlyphModifier
       .fontSize(25)
       .fontColor(['#999999'])
@@ -378,7 +378,7 @@ struct SelectExample {
   build() {
     Column() {
       Select([
-        // Replace $r('app.media.startIcon') with the image resource file you use.
+        // $r('app.media.startIcon') needs to be replaced with the image resource file required by the developer.
         { value: 'A very long option text that should be truncated nicely'.repeat(3), icon: $r("app.media.startIcon") },
         { value: 'Option B', icon: $r("app.media.startIcon") },
         { value: 'Option C', icon: $r("app.media.startIcon") },
@@ -386,9 +386,9 @@ struct SelectExample {
       ])
         .selected(this.index)
         .value(this.text)
-        // Bind a custom text modifier to control the text style.
+        // Bind the custom text modifier to uniformly control the text style.
         .textModifier(this.textModifier)
-        // Bind a modifier to customize the drop-down arrow.
+        // Bind the modifier to customize the dropdown arrow.
         .arrowModifier(this.symbolGlyphModifier)
         .onSelect((index: number, text?: string) => {
           console.info('Select:' + index);
@@ -413,13 +413,13 @@ struct SelectExample {
 }
 ```
 
-This example demonstrates how to use the [optionTextModifier](arkts-arkui-select-attribute.md#optiontextmodifier) and [selectedOptionTextModifier](arkts-arkui-select-attribute.md#selectedoptiontextmodifier) attributes to set text styles for unselected and selected drop-down menu options, available since API version 20.
+Since API version 20, this example uses the [optionTextModifier](arkts-arkui-select-attribute.md#optiontextmodifier) and [selectedOptionTextModifier](arkts-arkui-select-attribute.md#selectedoptiontextmodifier) attributes to set the text styles of selected and unselected items in the dropdown menu.
 
 ```TypeScript
 import { TextModifier } from "@kit.ArkUI";
 
 /**
- * Use two separate TextModifier instances to individually control the text styles of regular options and selected options in the drop-down panel.
+ * Use two independent TextModifier objects to control the styles of [normal option text] and [selected option text] in the dropdown panel respectively.
  */
 @Entry
 @Component
@@ -429,7 +429,7 @@ struct SelectExample {
   optionTextModifier: TextModifier = new TextModifier();
   selectedOptionTextModifier: TextModifier = new TextModifier();
   aboutToAppear(): void {
-    // Initialize the text style for regular drop-down options.
+    // Initialize the text style of normal dropdown options.
     this.optionTextModifier
       .maxLines(1)
       .fontSize(16)
@@ -438,7 +438,7 @@ struct SelectExample {
       .fontWeight(FontWeight.Normal)
       .width(200)
 
-    // Initialize the text style for selected drop-down options (highlighted).
+    // Initialize the text style of the selected dropdown option (highlighted for distinction).
     this.selectedOptionTextModifier
       .maxLines(1)
       .fontSize(18)
@@ -451,7 +451,7 @@ struct SelectExample {
   build() {
     Column() {
       Select([
-        // Replace $r('app.media.startIcon') with the image resource file you use.
+        // $r('app.media.startIcon') needs to be replaced with the image resource file required by the developer.
         { value: 'A very long option text that should be truncated nicely'.repeat(3), icon: $r("app.media.startIcon") },
         { value: 'Option B', icon: $r("app.media.startIcon") },
         { value: 'Option C', icon: $r("app.media.startIcon") },
@@ -466,9 +466,9 @@ struct SelectExample {
             this.text = text;
           }
         })
-        // Bind the text modifier for regular option text.
+        // Bind the text modifier of normal options.
         .optionTextModifier(this.optionTextModifier)
-        // Bind the text modifier for selected option text to implement highlighted styles for selected items.
+        // Bind the text modifier of the selected option to implement the highlighted differentiated style for the selected item.
         .selectedOptionTextModifier(this.selectedOptionTextModifier)
         .margin({ top: 20,left:30 })
         .borderRadius(12)
@@ -486,7 +486,7 @@ struct SelectExample {
 }
 ```
 
-This example shows how to set the divider mode by configuring the mode property of [DividerStyleOptions](ts-types.md#dividerstyleoptions12), supported since API version 19.
+Since API version 19, this example sets the divider mode by configuring the mode attribute of [DividerStyleOptions](ts-types.md#dividerstyleoptions12).
 
 ```TypeScript
 import { LengthMetrics } from '@kit.ArkUI'
@@ -497,11 +497,11 @@ struct Index {
   build() {
     RelativeContainer() {
       Select([{ value: "SelectItem" }, { value: "SelectItem" }, { value: "SelectItem" },])
-        .value("Select")
+        .value("Please select")
         /**
-         * Complete style customization for dividers between drop-down options
-         * strokeWidth: width of the divider. The unit is vp, which is used for consistent adaptation across different screens.
-         * color: light gray.
+         * Customize the complete style of the dropdown option divider.
+         * strokeWidth: divider thickness, using the vp unit to adapt to different screens.
+         * color: light gray color of the divider.
          * mode: EMBEDDED_IN_MENU embedded mode.
          */
         .dividerStyle({
@@ -516,7 +516,7 @@ struct Index {
 }
 ```
 
-This example shows how to set the outline style of the drop-down menu using the width and color properties of menuOutline, supported since API version 20.
+Since API version 20, this example sets the outline style of the dropdown menu by configuring the width and color attributes of menuOutline.
 
 ```TypeScript
 // xxx.ets
@@ -544,9 +544,9 @@ struct SelectExample {
         .optionWidth(200)
         .optionHeight(300)
         /**
-         * Outline style configuration for the drop-down menu
-         * width: outline width set to 5 vp.
-         * color: outline color set to blue.
+         * Dropdown menu outline style configuration.
+         * width: border thickness 5vp.
+         * color: border color blue.
          */
         .menuOutline({
           width: '5vp',
@@ -567,16 +567,16 @@ struct SelectExample {
 }
 ```
 
-This example demonstrates how to configure the drop-down menu to avoid the soft keyboard and customize the minimum distance for avoiding the soft keyboard by calling the [keyboardAvoidMode](#keyboardavoidmode23) and [minKeyboardAvoidDistance](#minkeyboardavoiddistance23) APIs.
-The keyboardAvoidMode and minKeyboardAvoidDistance APIs are added since API version 23.
+This example calls the [keyboardAvoidMode](#keyboardavoidmode23) and [minKeyboardAvoidDistance](#minkeyboardavoiddistance23) APIs to make the dropdown menu avoid the soft keyboard and customize the minimum distance for avoiding the soft keyboard.
+Since API version 23, the keyboardAvoidMode and minKeyboardAvoidDistance APIs are added.
 
 ```TypeScript
 import { inputMethod } from '@kit.IMEKit';
 import { LengthMetrics } from '@kit.ArkUI';
 
 /**
- * Sample demonstrating the Select drop-down component with automatic input method attachment
- * Configure the keyboard avoidance policy for the pop-up menu, triggering input method attachment with a 2-second delay upon the click of the drop-down box.
+ * Example page for the Select dropdown component + automatic input method mounting
+ * Configure the popup menu keyboard avoidance policy, and click the dropdown box to actively mount the input method after a 2-second delay
  */
 @Entry
 @Component
@@ -602,9 +602,9 @@ struct Index {
           center: { anchor: '__container__', align: VerticalAlign.Center },
           middle: { anchor: '__container__', align: HorizontalAlign.Center },
         })
-        // Set the soft keyboard avoidance mode to translate and resize the popup menu to prevent occlusion by the keyboard.
+        // Soft keyboard popup avoidance mode: translate and resize the dropdown popup to avoid being covered by the keyboard
         .keyboardAvoidMode(MenuKeyboardAvoidMode.TRANSLATE_AND_RESIZE)
-        // Set the minimum reserved distance of 20 vp between the popup menu and the soft keyboard.
+        // Minimum reserved distance of 20vp between the popup and the soft keyboard
         .minKeyboardAvoidDistance(LengthMetrics.vp(20))
         .onClick(() => {
           setTimeout(() => {
@@ -617,10 +617,10 @@ struct Index {
   }
 
   /**
-   * This is an asynchronous method to attach and listen to the input method.
-   * 1. Proactively request focus for the page with Index.
-   * 2. Verify the validity of the input method controller instance.
-   * 3. Attach the input method by configuring the text input type and search enter key.
+   * Mount the input method listener, an asynchronous method
+   * 1. Actively set focus on the page Index identifier
+   * 2. Verify the validity of the input method controller instance
+   * 3. Mount the input method, and configure the text input type and the search enter key
    */
   async attachAndListener() {
     focusControl.requestFocus('Index')
@@ -631,8 +631,8 @@ struct Index {
     try {
       await this.inputController.attach(true, {
         inputAttribute: {
-          textInputType: inputMethod.TextInputType.TEXT, // Regular text input type.
-          enterKeyType: inputMethod.EnterKeyType.SEARCH // Search enter key.
+          textInputType: inputMethod.TextInputType.TEXT, // Normal text input type
+          enterKeyType: inputMethod.EnterKeyType.SEARCH // The enter key displays the search text
         }
       })
     } catch (err) {
@@ -642,7 +642,8 @@ struct Index {
 }
 ```
 
-This example uses the [menuSystemMaterial](arkts-arkui-select-attribute.md#menusystemmaterial) API to apply the system material effect to the drop-down menu, and the [SystemUiMaterial](ts-universal-attributes-image-effect.md#systemuimaterial) API to apply the system material effect to the Select component.
+This example calls the [menuSystemMaterial](arkts-arkui-select-attribute.md#menusystemmaterial) API to set the system material of the dropdown menu to achieve the immersive light effect, and calls the [SystemUiMaterial](ts-universal-attributes-image-effect.md#systemuimaterial) API to set the system material of the Select component to achieve the immersive light effect.
+The immersive light effect of the component is adaptively adjusted based on the device computing power and the immersive light effect set by the user in the system, and no additional adaptation is required by the developer.
 Since API version 26.0.0, the menuSystemMaterial API is added.
 
 ```TypeScript
@@ -660,21 +661,21 @@ struct Index {
         { value: 'SelectOption' }])
         .value('Click Show Options')
         /**
-         * Configure immersive frosted material for the selection box.
-         * ULTRA_THIN: ultra-thin translucent frosted effect with high transparency, making underlying content more visible.
+         * Configure the immersive frosted material of the selection box itself.
+         * ULTRA_THIN: ultra-thin and transparent frosted material with high transparency, making the underlying image more visible.
          */
         .systemMaterial(new uiMaterial.ImmersiveMaterial({
             style: uiMaterial.ImmersiveStyle.ULTRA_THIN
           }))
         /**
-         * Configure immersive frosted material for the drop-down panel.
-         * THICK: thick frosted effect with lower transparency and stronger occlusion.
+         * Configure the immersive frosted material of the dropdown pop-up panel.
+         * THICK: thick frosted material with lower transparency and a stronger occlusion effect.
          */
         .menuSystemMaterial(new uiMaterial.ImmersiveMaterial({
             style: uiMaterial.ImmersiveStyle.THICK
           }))
     }
-    // Replace $r('app.media.img') with the image resource file you use.
+    // $r('app.media.img') needs to be replaced with the image resource file required by the developer.
     .backgroundImage($r('app.media.img'))
   }
 }

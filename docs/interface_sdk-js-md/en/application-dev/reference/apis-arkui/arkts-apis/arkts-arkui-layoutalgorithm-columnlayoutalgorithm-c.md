@@ -41,6 +41,11 @@ Constructs the vertical linear layout algorithm class.
 | --- | --- | --- | --- |
 | option | [ColumnLayoutAlgorithmOptions](arkts-arkui-layoutalgorithm-columnlayoutalgorithmoptions-i.md) | No | Input parameters for constructing the vertical linear layout algorithm, which are used to set the spacing, main axis alignment method, cross axis alignment method, and main axis arrangement direction of the layout algorithm. |
 
+**Examples**
+
+For details, see [Example 2: Switching the Layout Algorithm](../arkui-ts/ts-container-dynamiclayout.md#example-2-switching-the-layout-algorithm).
+- simpleType:
+
 ## alignItems
 
 ```TypeScript

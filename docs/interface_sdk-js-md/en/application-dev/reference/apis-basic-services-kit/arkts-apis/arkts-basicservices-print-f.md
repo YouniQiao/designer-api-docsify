@@ -47,9 +47,9 @@ import { fileUri } from '@kit.CoreFileKit';
 
 // Pass in the URIs of the files.
 let filePath = '/data/storage/el2/base/haps/entry/files/test.pdf';
-print.print([fileUri.getUriFromPath(filePath)], (err: BusinessError, printTask: print.PrintTask) => {
-    if (err) {
-        console.error('print err ' + JSON.stringify(err));
+print.print([fileUri.getUriFromPath(filePath)], (error: BusinessError, printTask: print.PrintTask) => {
+    if (error) {
+        console.error(`Failed to print. Code: ${error.code}, message: ${error.message}`);
     } else {
         printTask.on('succeed', () => {
             console.info('print state is succeed');
@@ -112,7 +112,7 @@ print.print([fileUri.getUriFromPath(filePath)]).then((printTask: print.PrintTask
     })
     // ...
 }).catch((error: BusinessError) => {
-    console.error('print err ' + JSON.stringify(error));
+    console.error(`Failed to print. Code: ${error.code}, message: ${error.message}`);
 })
 ```
 
@@ -162,9 +162,9 @@ struct Index {
                 Button("Print").width('90%').height(50).onClick(() => {
                     let filePath = '/data/storage/el2/base/haps/entry/files/test.pdf';
                     let context = this.getUIContext().getHostContext();
-                    print.print([fileUri.getUriFromPath(filePath)], context, (err: BusinessError, printTask: print.PrintTask) => {
-                        if (err) {
-                            console.error('print err ' + JSON.stringify(err));
+                    print.print([fileUri.getUriFromPath(filePath)], context, (error: BusinessError, printTask: print.PrintTask) => {
+                        if (error) {
+                            console.error(`Failed to print. Code: ${error.code}, message: ${error.message}`);
                         } else {
                             printTask.on('succeed', () => {
                                 console.info('print state is succeed');
@@ -240,7 +240,7 @@ struct Index {
                         })
                         // ...
                     }).catch((error: BusinessError) => {
-                        console.error('print err ' + JSON.stringify(error));
+                        console.error(`Failed to print. Code: ${error.code}, message: ${error.message}`);
                     })
                 })
             }
@@ -306,8 +306,9 @@ struct Index {
         Scroll() {
             Column({ space: 10 }) {
                 Button("Print").width('90%').height(50).onClick(() => {
-                    let jobName : string = "jobName";
-                    let printAdapter : print.PrintDocumentAdapter | null = null;
+                    let jobName : string = 'jobName';
+                    // The PrintDocumentAdapter API needs to be implemented for printAdapter. The following is a simple example for reference.
+                    let printAdapter : print.PrintDocumentAdapter = new MyPrintDocumentAdapter();
                     let printAttributes : print.PrintAttributes = {
                         copyNumber: 1,
                         pageRange: {
@@ -319,7 +320,7 @@ struct Index {
                         directionMode: print.PrintDirectionMode.DIRECTION_MODE_AUTO,
                         colorMode: print.PrintColorMode.COLOR_MODE_MONOCHROME,
                         duplexMode: print.PrintDuplexMode.DUPLEX_MODE_NONE
-                    }
+                    };
                     let context = this.getUIContext().getHostContext();
 
                     print.print(jobName, printAdapter, printAttributes, context).then((printTask: print.PrintTask) => {
@@ -328,7 +329,7 @@ struct Index {
                         })
                         // ...
                     }).catch((error: BusinessError) => {
-                        console.error('print err ' + JSON.stringify(error));
+                        console.error(`Failed to print. Code: ${error.code}, message: ${error.message}`);
                     })
                 })
             }
@@ -337,6 +338,26 @@ struct Index {
             .width('100%')
         }
         .height('100%')
+    }
+}
+
+class MyPrintDocumentAdapter implements print.PrintDocumentAdapter {
+    onStartLayoutWrite(jobId: string, oldAttrs: print.PrintAttributes, newAttrs: print.PrintAttributes, fd: number,
+        writeResultCallback: (jobId: string, writeResult: print.PrintFileCreationState) => void) {
+        writeResultCallback(jobId, print.PrintFileCreationState.PRINT_FILE_CREATED);
+    }
+    onJobStateChanged(jobId: string, state: print.PrintDocumentAdapterState) {
+        if (state === print.PrintDocumentAdapterState.PREVIEW_DESTROY) {
+            console.info('PREVIEW_DESTROY');
+        } else if (state === print.PrintDocumentAdapterState.PRINT_TASK_SUCCEED) {
+            console.info('PRINT_TASK_SUCCEED');
+        } else if (state === print.PrintDocumentAdapterState.PRINT_TASK_FAIL) {
+            console.info('PRINT_TASK_FAIL');
+        } else if (state === print.PrintDocumentAdapterState.PRINT_TASK_CANCEL) {
+            console.info('PRINT_TASK_CANCEL');
+        } else if (state === print.PrintDocumentAdapterState.PRINT_TASK_BLOCK) {
+            console.info('PRINT_TASK_BLOCK');
+        }
     }
 }
 ```

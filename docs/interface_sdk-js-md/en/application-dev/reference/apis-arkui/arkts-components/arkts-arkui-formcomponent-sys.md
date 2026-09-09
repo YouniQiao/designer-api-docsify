@@ -44,6 +44,7 @@ Set a new value of form info.
 
 ## Examples
 
+Widget example
 This example creates a 2 x 2 widget and registers event callbacks.
 
 ```TypeScript

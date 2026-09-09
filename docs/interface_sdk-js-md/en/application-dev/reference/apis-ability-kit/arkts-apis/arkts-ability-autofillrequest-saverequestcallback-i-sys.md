@@ -72,6 +72,7 @@ import { hilog } from '@kit.PerformanceAnalysisKit';
 @Component
 struct SavePage {
   storage: LocalStorage | undefined = this.getUIContext().getSharedLocalStorage();
+  // Pass saveCallback into LocalStorage via the onSaveRequest callback of AutoFillExtensionAbility.
   saveCallback: autoFillManager.SaveRequestCallback | undefined =
     this.storage?.get<autoFillManager.SaveRequestCallback>('saveCallback');
 
@@ -164,6 +165,7 @@ import { hilog } from '@kit.PerformanceAnalysisKit';
 @Component
 struct SavePage {
   storage: LocalStorage | undefined = this.getUIContext().getSharedLocalStorage();
+  // Pass saveCallback into LocalStorage via the onSaveRequest callback of AutoFillExtensionAbility.
   saveCallback: autoFillManager.SaveRequestCallback | undefined =
     this.storage?.get<autoFillManager.SaveRequestCallback>('saveCallback');
 

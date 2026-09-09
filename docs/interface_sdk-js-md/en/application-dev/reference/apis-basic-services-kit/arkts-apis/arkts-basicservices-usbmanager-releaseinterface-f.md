@@ -47,7 +47,7 @@ Releases the claimed communication interface.
 **Examples**
 
 ```TypeScript
-function releaseInterface() {
+async function releaseInterface() {
   let devicesList: Array<usbManager.USBDevice> = usbManager.getDevices();
   if (!devicesList || devicesList.length == 0) {
     console.info(`device list is empty`);
@@ -55,11 +55,25 @@ function releaseInterface() {
   }
 
   let device: usbManager.USBDevice = devicesList?.[0];
-  usbManager.requestRight(device.name);
-  let devicepipe: usbManager.USBDevicePipe = usbManager.connectDevice(device);
+  let rightResult = await usbManager.requestRight(device.name);
+  if (!rightResult) {
+    console.error(`request right failed`);
+    return;
+  }
+  let devicePipe: usbManager.USBDevicePipe = usbManager.connectDevice(device);
+  if (devicePipe == undefined) {
+    console.error(`connect device failed`);
+    return;
+  }
   let interfaces: usbManager.USBInterface = device.configs?.[0]?.interfaces?.[0];
-  let ret: number = usbManager.claimInterface(devicepipe, interfaces);
-  ret = usbManager.releaseInterface(devicepipe, interfaces);
+  let ret: number = usbManager.claimInterface(devicePipe, interfaces);
+  if (ret !== 0) {
+    console.error(`claim interface failed`);
+    usbManager.closePipe(devicePipe);
+    return;
+  }
+  ret = usbManager.releaseInterface(devicePipe, interfaces);
   console.info(`releaseInterface = ${ret}`);
+  usbManager.closePipe(devicePipe);
 }
 ```
