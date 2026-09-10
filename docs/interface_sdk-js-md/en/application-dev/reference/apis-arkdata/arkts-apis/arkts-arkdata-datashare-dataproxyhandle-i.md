@@ -194,9 +194,9 @@ Obtains all multi-value data under a specified URI. Only the publisher and the a
 | Error Code ID | Error Message |
 | --- | --- |
 | [15700000](../errorcode-datashare.md#15700000-internal-error) | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
-| [15700011](../errorcode-datashare.md#15700011-uri-not-exist) | The URI does not exist. |
+| [15700011](../errorcode-datashare.md#15700011-uri-does-not-exist) | The URI does not exist. |
 | [15700014](../errorcode-datashare.md#15700014-incorrect-parameters-for-shared-configuration) | The parameter format is incorrect or the value range is invalid. |
-| 15700015 | No permission to access the data specified by the URI. |
+| [15700015](../errorcode-datashare.md#15700015-access-uri-permission-error) | No permission to access the data specified by the URI. |
 
 **Examples**
 
@@ -451,9 +451,9 @@ Puts a value into the published data. This operation can be performed only on mu
 | Error Code ID | Error Message |
 | --- | --- |
 | [15700000](../errorcode-datashare.md#15700000-internal-error) | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
-| [15700011](../errorcode-datashare.md#15700011-uri-not-exist) | The URI does not exist. |
+| [15700011](../errorcode-datashare.md#15700011-uri-does-not-exist) | The URI does not exist. |
 | [15700014](../errorcode-datashare.md#15700014-incorrect-parameters-for-shared-configuration) | The parameter format is incorrect or the value range is invalid. |
-| 15700015 | No permission to access the data specified by the URI. |
+| [15700015](../errorcode-datashare.md#15700015-access-uri-permission-error) | No permission to access the data specified by the URI. |
 
 **Examples**
 
@@ -519,9 +519,9 @@ Removes the value corresponding to the key. This operation can be performed only
 | Error Code ID | Error Message |
 | --- | --- |
 | [15700000](../errorcode-datashare.md#15700000-internal-error) | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
-| [15700011](../errorcode-datashare.md#15700011-uri-not-exist) | The URI does not exist. |
+| [15700011](../errorcode-datashare.md#15700011-uri-does-not-exist) | The URI does not exist. |
 | [15700014](../errorcode-datashare.md#15700014-incorrect-parameters-for-shared-configuration) | The parameter format is incorrect or the value range is invalid. |
-| 15700015 | No permission to access the data specified by the URI. |
+| [15700015](../errorcode-datashare.md#15700015-access-uri-permission-error) | No permission to access the data specified by the URI. |
 
 **Examples**
 

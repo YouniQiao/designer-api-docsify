@@ -18,24 +18,19 @@ Defines the common types for the native module.
 
 | 名称 | typedef关键字 | 描述 |
 | -- | -- | -- |
-| [ArkUI_PickerIndicatorBackground](capi-arkui-nativemodule-arkui-pickerindicatorbackground.md) | ArkUI_PickerIndicatorBackground | Style parameters of background indicator. |
-| [ArkUI_PickerIndicatorDivider](capi-arkui-nativemodule-arkui-pickerindicatordivider.md) | ArkUI_PickerIndicatorDivider | Style parameters of divider indicator. |
-| [ARKUI_TextPickerRangeContent](capi-arkui-nativemodule-arkui-textpickerrangecontent.md) | ARKUI_TextPickerRangeContent | Defines the input structure of the single-column text picker with image resources. |
-| [ARKUI_TextPickerCascadeRangeContent](capi-arkui-nativemodule-arkui-textpickercascaderangecontent.md) | ARKUI_TextPickerCascadeRangeContent | Defines the input structure of the interconnected multi-column text picker. |
 | [ArkUI_ColorStop](capi-arkui-nativemodule-arkui-colorstop.md) | ArkUI_ColorStop | 定义渐变色结构，用于配置组件的渐变效果，支持通过颜色数组与位置数组组合定义多种渐变样式。 |
 | [ArkUI_TranslationOptions](capi-arkui-nativemodule-arkui-translationoptions.md) | ArkUI_TranslationOptions | Defines the translation options for component transition. |
 | [ArkUI_ScaleOptions](capi-arkui-nativemodule-arkui-scaleoptions.md) | ArkUI_ScaleOptions | Defines the scaling options for component transition. |
 | [ArkUI_RotationOptions](capi-arkui-nativemodule-arkui-rotationoptions.md) | ArkUI_RotationOptions | Defines the rotation options for component transition. |
 | [ArkUI_NativeDialog](capi-arkui-nativemodule-arkui-nativedialog.md) | - | Defines the custom dialog box controller of ArkUI on the native side. |
 | [ArkUI_NativeDialog*](capi-arkui-nativemodule-arkui-nativedialog8h.md) | ArkUI_NativeDialogHandle | Defines the pointer to the custom dialog box controller of ArkUI on the native side. |
-| [ArkUI_GestureCollectInterceptInfo](capi-arkui-nativemodule-arkui-gesturecollectinterceptinfo.md) | ArkUI_GestureCollectInterceptInfo | Defines information about gesture collection interception. |
-| [ArkUI_PickerIndicatorStyle](capi-arkui-nativemodule-arkui-pickerindicatorstyle.md) | ArkUI_PickerIndicatorStyle | Definition of indicator style. |
+| [ArkUI_GestureCollectInterceptInfo](capi-arkui-nativemodule-arkui-gesturecollectinterceptinfo.md) | ArkUI_GestureCollectInterceptInfo | 定义手势收集拦截信息。在触摸测试收集手势的过程中，该类型用于向拦截回调提供响应链中的手势识别器和触摸识别器，并承载回调设置的手势收集干预结果。相关接口请参见{@link native_gesture.h}中的手势收集拦截接口说明。 |
 | [ArkUI_SwiperIndicator](capi-arkui-nativemodule-arkui-swiperindicator.md) | ArkUI_SwiperIndicator | Defines the navigation indicator style for the swiper. |
 | [ArkUI_SwiperDigitIndicator](capi-arkui-nativemodule-arkui-swiperdigitindicator.md) | ArkUI_SwiperDigitIndicator | Defines the digital indicator style for the swiper. |
 | [ArkUI_SwiperArrowStyle](capi-arkui-nativemodule-arkui-swiperarrowstyle.md) | ArkUI_SwiperArrowStyle | Defines the arrow style for the swiper. |
 | [ArkUI_ImageAnimatorFrameInfo](capi-arkui-nativemodule-arkui-imageanimatorframeinfo.md) | ArkUI_ImageAnimatorFrameInfo | Defines the image frame. |
-| [ArkUI_AccessibilityState](capi-arkui-nativemodule-arkui-accessibilitystate.md) | ArkUI_AccessibilityState | Defines the accessibility state for the component. |
-| [ArkUI_AccessibilityValue](capi-arkui-nativemodule-arkui-accessibilityvalue.md) | ArkUI_AccessibilityValue | Defines the accessibility value for the component. |
+| [ArkUI_AccessibilityState](capi-arkui-nativemodule-arkui-accessibilitystate.md) | ArkUI_AccessibilityState | 定义组件的无障碍状态，用于描述组件的选中、勾选、禁用等无障碍状态信息，适用于无障碍服务读取和交互的场景，方便无障碍用户获取组件当前状态。 |
+| [ArkUI_AccessibilityValue](capi-arkui-nativemodule-arkui-accessibilityvalue.md) | ArkUI_AccessibilityValue | 定义组件的无障碍信息值，用于描述组件的无障碍状态，如范围类组件的最小值、最大值、当前值以及文本描述等，适用于需要向无障碍服务提供组件当前状态信息的场景。 |
 | [ArkUI_CustomProperty](capi-arkui-nativemodule-arkui-customproperty.md) | ArkUI_CustomProperty | 定义表示组件自定义属性的 ArkUI_CustomProperty 结构体。 通过相关接口，可以为 ArkUI 组件添加、移除和获取自定义属性，以及获取自定义属性的字符串值。 |
 | [ArkUI_HostWindowInfo](capi-arkui-nativemodule-arkui-hostwindowinfo.md) | ArkUI_HostWindowInfo | 定义窗口属性的HostWindowInfo类信息。 |
 | [ArkUI_ActiveChildrenInfo](capi-arkui-nativemodule-arkui-activechildreninfo.md) | ArkUI_ActiveChildrenInfo | 定义ArkUI_ActiveChildrenInfo结构体，用于保存内部活跃状态为true的FrameNode子节点信息，支持查询子节点数量和按下标获取子节点。该结构体实例由OH_ArkUI_NodeUtils_GetActiveChildrenInfo生成，使用完毕后必须调用OH_ArkUI_ActiveChildrenInfo_Destroy销毁。 |
@@ -47,7 +42,7 @@ Defines the common types for the native module.
 | [ArkUI_Matrix4](capi-arkui-nativemodule-arkui-matrix4.md) | ArkUI_Matrix4 | Defines the matrix4 object. |
 | [ArkUI_SelectedDragPreviewStyle](capi-arkui-nativemodule-arkui-selecteddragpreviewstyle.md) | ArkUI_SelectedDragPreviewStyle | 定义选中状态下文本拖拽预览样式，适用于需要在文本拖拽过程中展示选中状态预览效果的场景，可提升用户的拖拽交互体验。 |
 | [ArkUI_SystemFontStyleEvent](capi-arkui-nativemodule-arkui-systemfontstyleevent.md) | ArkUI_SystemFontStyleEvent | 系统字体样式变更事件定义，用于在系统字体大小或字体粗细发生变化时，向已注册的系统字体样式变更回调传递事件信息。 |
-| [ArkUI_ContentTransitionEffect](capi-arkui-nativemodule-arkui-contenttransitioneffect.md) | ArkUI_ContentTransitionEffect | Set the types and parameters related to content transition effects. |
+| [ArkUI_ContentTransitionEffect](capi-arkui-nativemodule-arkui-contenttransitioneffect.md) | ArkUI_ContentTransitionEffect | 设置与内容转场效果相关的类型和参数。 |
 | [OH_ArkUI_ShadowOptions](capi-arkui-nativemodule-oh-arkui-shadowoptions.md) | OH_ArkUI_ShadowOptions | 定义阴影选项。 |
 | [ArkUI_MotionPathOptions](capi-arkui-nativemodule-arkui-motionpathoptions.md) | ArkUI_MotionPathOptions | Defines the motion path options for path animation. |
 | [ArkUI_Matrix4ScaleOptions](capi-arkui-nativemodule-arkui-matrix4scaleoptions.md) | ArkUI_Matrix4ScaleOptions | Defines the scale options for matrix scaling. |
@@ -60,14 +55,10 @@ Defines the common types for the native module.
 
 | 名称 | typedef关键字 | 描述 |
 | -- | -- | -- |
-| [ArkUI_PickerIndicatorType](#arkui_pickerindicatortype) | ArkUI_PickerIndicatorType | Enumerates the selected indicator type of picker. |
 | [ArkUI_Alignment](#arkui_alignment) | ArkUI_Alignment | Enumerates the alignment modes. |
-| [ArkUI_ImageRepeat](#arkui_imagerepeat) | ArkUI_ImageRepeat | Enumerates the image repeat patterns. |
 | [ArkUI_XComponentType](#arkui_xcomponenttype) | ArkUI_XComponentType | Enumerates the types of the <b><XComponent></b> component. |
 | [ArkUI_CopyOptions](#arkui_copyoptions) | ArkUI_CopyOptions | Enumerates the text copy and paste modes. |
 | [ArkUI_ShadowType](#arkui_shadowtype) | ArkUI_ShadowType | Enumerates the shadow types. |
-| [ArkUI_DatePickerMode](#arkui_datepickermode) | ArkUI_DatePickerMode | Enumerates the modes of the date picker. |
-| [ArkUI_TextPickerRangeType](#arkui_textpickerrangetype) | ArkUI_TextPickerRangeType | Enumerates the types of the text picker. |
 | [ArkUI_FocusWrapMode](#arkui_focuswrapmode) | ArkUI_FocusWrapMode | Enumerates the focus wrap mode of components. |
 | [ArkUI_ItemFillPolicy](#arkui_itemfillpolicy) | ArkUI_ItemFillPolicy | Specifies the number of columns for different responsive breakpoint specifications. |
 | [ArkUI_Axis](#arkui_axis) | ArkUI_Axis | Enumerates the scroll directions for the <b><List></b> component. |
@@ -80,7 +71,6 @@ Defines the common types for the native module.
 | [ArkUI_SwiperAnimationMode](#arkui_swiperanimationmode) | ArkUI_SwiperAnimationMode | Enumerates the animation modes for {@link NODE_SWIPER_INDEX}. |
 | [ArkUI_AccessibilityMode](#arkui_accessibilitymode) | ArkUI_AccessibilityMode | Enumerates the accessibility modes. |
 | [ArkUI_AnimationPlayMode](#arkui_animationplaymode) | ArkUI_AnimationPlayMode | Enumerates the animation playback modes. |
-| [ArkUI_ImageSize](#arkui_imagesize) | ArkUI_ImageSize | Defines the image size. |
 | [ArkUI_AdaptiveColor](#arkui_adaptivecolor) | ArkUI_AdaptiveColor | Enumerates the adaptive color modes. |
 | [ArkUI_ColorMode](#arkui_colormode) | ArkUI_ColorMode | Enumerates the color modes. |
 | [ArkUI_SystemColorMode](#arkui_systemcolormode) | ArkUI_SystemColorMode | Enumerates the system color modes. |
@@ -88,10 +78,6 @@ Defines the common types for the native module.
 | [ArkUI_BlurStyleActivePolicy](#arkui_blurstyleactivepolicy) | ArkUI_BlurStyleActivePolicy | Enumerates the activation policies for the background blur effect. |
 | [ArkUI_VerticalAlignment](#arkui_verticalalignment) | ArkUI_VerticalAlignment | Enumerates the vertical alignment modes. |
 | [ArkUI_HorizontalAlignment](#arkui_horizontalalignment) | ArkUI_HorizontalAlignment | Enumerates the alignment mode in the horizontal direction. |
-| [ArkUI_ObjectFit](#arkui_objectfit) | ArkUI_ObjectFit | Defines how the image is resized to fit its container.ImageSpanAlignment |
-| [ArkUI_ImageInterpolation](#arkui_imageinterpolation) | ArkUI_ImageInterpolation | Enumerates the image interpolation effect. |
-| [ArkUI_DynamicRangeMode](#arkui_dynamicrangemode) | ArkUI_DynamicRangeMode | Enumerates the image dynamic range mode. |
-| [ArkUI_ImageRotateOrientation](#arkui_imagerotateorientation) | ArkUI_ImageRotateOrientation | Enumerates the image rotate orientation. |
 | [ArkUI_BlendMode](#arkui_blendmode) | ArkUI_BlendMode | Enumerates the blend modes. |
 | [ArkUI_Direction](#arkui_direction) | ArkUI_Direction | Enumerates the modes in which components are laid out along the main axis of the container. |
 | [ArkUI_ItemAlignment](#arkui_itemalignment) | ArkUI_ItemAlignment | Enumerates the modes in which components are laid out along the cross axis of the container. |
@@ -99,12 +85,10 @@ Defines the common types for the native module.
 | [ArkUI_FlexAlignment](#arkui_flexalignment) | ArkUI_FlexAlignment | Enumerates the vertical alignment modes. |
 | [ArkUI_FlexDirection](#arkui_flexdirection) | ArkUI_FlexDirection | Enumerates the directions of the main axis in the flex container. |
 | [ArkUI_FlexWrap](#arkui_flexwrap) | ArkUI_FlexWrap | Defines whether the flex container has a single line or multiple lines. |
-| [ArkUI_CalendarAlignment](#arkui_calendaralignment) | ArkUI_CalendarAlignment | Enumerates the alignment modes between the calendar picker and the entry component. |
 | [ArkUI_MaskType](#arkui_masktype) | ArkUI_MaskType | Enumerates the mask types. |
 | [ArkUI_ClipType](#arkui_cliptype) | ArkUI_ClipType | Enumerates the clipping region types. |
 | [ArkUI_ShapeType](#arkui_shapetype) | ArkUI_ShapeType | Enumerates the custom shapes. |
 | [ArkUI_LinearGradientDirection](#arkui_lineargradientdirection) | ArkUI_LinearGradientDirection | Enumerates the gradient directions. |
-| [ArkUI_ImageRenderMode](#arkui_imagerendermode) | ArkUI_ImageRenderMode | Enumerates the image rendering modes. |
 | [ArkUI_TransitionEdge](#arkui_transitionedge) | ArkUI_TransitionEdge | Enumerates the slide-in and slide-out positions of the component from the screen edge during transition. |
 | [ArkUI_BlendApplyType](#arkui_blendapplytype) | ArkUI_BlendApplyType | Defines how the specified blend mode is applied. |
 | [ArkUI_FinishCallbackType](#arkui_finishcallbacktype) | ArkUI_FinishCallbackType | Enumerates the animation onFinish callback types. |
@@ -244,7 +228,7 @@ Defines the common types for the native module.
 | [ArkUI_BarrierDirection OH_ArkUI_BarrierOption_GetDirection(ArkUI_BarrierOption* barrierStyle, int32_t index)](#oh_arkui_barrieroption_getdirection) | Gets the direction of the barrier. |
 | [const char* OH_ArkUI_BarrierOption_GetReferencedId(ArkUI_BarrierOption* barrierStyle, int32_t index, int32_t referencedIndex)](#oh_arkui_barrieroption_getreferencedid) | Get the dependent components of the barrier. |
 | [int32_t OH_ArkUI_BarrierOption_GetReferencedIdSize(ArkUI_BarrierOption* barrierStyle, int32_t index)](#oh_arkui_barrieroption_getreferencedidsize) | Gets the number of dependent components of the barrier. |
-| [ArkUI_ContentTransitionEffect* OH_ArkUI_ContentTransitionEffect_Create(int32_t type)](#oh_arkui_contenttransitioneffect_create) | creates content switching animation effects. |
+| [ArkUI_ContentTransitionEffect* OH_ArkUI_ContentTransitionEffect_Create(int32_t type)](#oh_arkui_contenttransitioneffect_create) | 创建内容切换动画效果。 |
 | [ArkUI_AlignmentRuleOption* OH_ArkUI_AlignmentRuleOption_Create()](#oh_arkui_alignmentruleoption_create) | creates alignment rule information for subcomponents in relative containers. |
 | [void OH_ArkUI_AlignmentRuleOption_Dispose(ArkUI_AlignmentRuleOption* option)](#oh_arkui_alignmentruleoption_dispose) | Destroys the alignment rule information of subcomponents in relative containers. |
 | [void OH_ArkUI_AlignmentRuleOption_SetStart(ArkUI_AlignmentRuleOption* option, const char* id, ArkUI_HorizontalAlignment alignment)](#oh_arkui_alignmentruleoption_setstart) | Set the start alignment parameter. |
@@ -317,14 +301,6 @@ Defines the common types for the native module.
 | [void OH_ArkUI_CrossLanguageOption_Destroy(ArkUI_CrossLanguageOption* option)](#oh_arkui_crosslanguageoption_destroy) | 销毁跨语言配置项实例。 |
 | [void OH_ArkUI_CrossLanguageOption_SetAttributeSettingStatus(ArkUI_CrossLanguageOption* option, bool enabled)](#oh_arkui_crosslanguageoption_setattributesettingstatus) | 设置配置项中是否允许跨语言修改属性。 |
 | [bool OH_ArkUI_CrossLanguageOption_GetAttributeSettingStatus(ArkUI_CrossLanguageOption* option)](#oh_arkui_crosslanguageoption_getattributesettingstatus) | 获取配置项中是否允许跨语言修改属性。 |
-| [ArkUI_TextPickerRangeContentArray* OH_ArkUI_TextPickerRangeContentArray_Create(int32_t length)](#oh_arkui_textpickerrangecontentarray_create) | Creates a TextPickerRangeContent instance. |
-| [void OH_ArkUI_TextPickerRangeContentArray_SetIconAtIndex(ArkUI_TextPickerRangeContentArray* handle, char* icon, int32_t index)](#oh_arkui_textpickerrangecontentarray_seticonatindex) | Sets the icon resource path or URI for one item in an {@link ArkUI_TextPickerRangeContentArray}. |
-| [void OH_ArkUI_TextPickerRangeContentArray_SetTextAtIndex(ArkUI_TextPickerRangeContentArray* handle, char* text, int32_t index)](#oh_arkui_textpickerrangecontentarray_settextatindex) | Sets the display text for one item in an {@link ArkUI_TextPickerRangeContentArray}. |
-| [void OH_ArkUI_TextPickerRangeContentArray_Destroy(ArkUI_TextPickerRangeContentArray* handle)](#oh_arkui_textpickerrangecontentarray_destroy) | Releases an {@link ArkUI_TextPickerRangeContentArray} created by[OH_ArkUI_TextPickerRangeContentArray_Create](capi-native-type-h.md#oh_arkui_textpickerrangecontentarray_create). |
-| [ArkUI_TextCascadePickerRangeContentArray* OH_ArkUI_TextCascadePickerRangeContentArray_Create(int32_t length)](#oh_arkui_textcascadepickerrangecontentarray_create) | Allocates one column level of an interconnected (cascade) TextPicker range. Use with range type[ARKUI_TEXTPICKER_RANGETYPE_CASCADE_RANGE_CONTENT](capi-native-type-h.md#arkui_textpickerrangetype). The returned pointer addresses a contiguous arrayof sibling nodes; each node may carry display text and an optional next-level range from[OH_ArkUI_TextCascadePickerRangeContentArray_SetChildAtIndex](capi-native-type-h.md#oh_arkui_textcascadepickerrangecontentarray_setchildatindex). |
-| [void OH_ArkUI_TextCascadePickerRangeContentArray_SetTextAtIndex(ArkUI_TextCascadePickerRangeContentArray* handle, char* text, int32_t index)](#oh_arkui_textcascadepickerrangecontentarray_settextatindex) | Sets the display text for one sibling node on a cascade TextPicker level. |
-| [void OH_ArkUI_TextCascadePickerRangeContentArray_SetChildAtIndex(ArkUI_TextCascadePickerRangeContentArray* handle, ArkUI_TextCascadePickerRangeContentArray* child, int32_t index)](#oh_arkui_textcascadepickerrangecontentarray_setchildatindex) | Sets the childs info of items in a multi text picker ranges. |
-| [void OH_ArkUI_TextCascadePickerRangeContentArray_Destroy(ArkUI_TextCascadePickerRangeContentArray* handle)](#oh_arkui_textcascadepickerrangecontentarray_destroy) | Releases a cascade range level allocated with [OH_ArkUI_TextCascadePickerRangeContentArray_Create](capi-native-type-h.md#oh_arkui_textcascadepickerrangecontentarray_create). |
 | [ArkUI_EmbeddedComponentOption* OH_ArkUI_EmbeddedComponentOption_Create()](#oh_arkui_embeddedcomponentoption_create) | Create an object for the EmbeddedComponent option. |
 | [void OH_ArkUI_EmbeddedComponentOption_Dispose(ArkUI_EmbeddedComponentOption* option)](#oh_arkui_embeddedcomponentoption_dispose) | Destroy the object by EmbeddedComponent option. |
 | [void OH_ArkUI_EmbeddedComponentOption_SetOnError(ArkUI_EmbeddedComponentOption* option, void (\*callback)(int32_t code, const char* name, const char* message))](#oh_arkui_embeddedcomponentoption_setonerror) | Set the onError of EmbeddedComponent. |
@@ -510,8 +486,6 @@ Defines the common types for the native module.
 | [ArkUI_ErrorCode OH_ArkUI_TextEditorStyledStringController_SetStyledString(const OH_ArkUI_TextEditorStyledStringController* controller, const ArkUI_StyledString_Descriptor* descriptor)](#oh_arkui_texteditorstyledstringcontroller_setstyledstring) | 通过属性字符串控制器设置显示的属性字符串。 |
 | [ArkUI_ErrorCode OH_ArkUI_TextEditorStyledStringController_GetStyledString(const OH_ArkUI_TextEditorStyledStringController* controller, ArkUI_StyledString_Descriptor* descriptor)](#oh_arkui_texteditorstyledstringcontroller_getstyledstring) | 通过属性字符串控制器获取显示的属性字符串。 |
 | [ArkUI_ErrorCode OH_ArkUI_TextEditorStyledStringController_SetStyledPlaceholder(const OH_ArkUI_TextEditorStyledStringController* controller, const ArkUI_StyledString_Descriptor* descriptor)](#oh_arkui_texteditorstyledstringcontroller_setstyledplaceholder) | 通过属性字符串控制器设置属性字符串样式的提示文本。 |
-| [ArkUI_PickerIndicatorStyle* OH_ArkUI_PickerIndicatorStyle_Create(ArkUI_PickerIndicatorType type)](#oh_arkui_pickerindicatorstyle_create) | Create the ArkUI_PickerIndicatorStyle instance. |
-| [void OH_ArkUI_PickerIndicatorStyle_Dispose(ArkUI_PickerIndicatorStyle* style)](#oh_arkui_pickerindicatorstyle_dispose) | Destroy the ArkUI_PickerIndicatorStyle instance. |
 | [ArkUI_ErrorCode OH_ArkUI_PickerIndicatorStyle_ConfigureBackground(ArkUI_PickerIndicatorStyle* style, ArkUI_PickerIndicatorBackground* background)](#oh_arkui_pickerindicatorstyle_configurebackground) | Set the parameters of background style. |
 | [ArkUI_ErrorCode OH_ArkUI_PickerIndicatorStyle_ConfigureDivider(ArkUI_PickerIndicatorStyle* style, ArkUI_PickerIndicatorDivider* divider)](#oh_arkui_pickerindicatorstyle_configuredivider) | Set the parameters of divider style. |
 | [ArkUI_Matrix4ScaleOptions* OH_ArkUI_Matrix4ScaleOptions_Create()](#oh_arkui_matrix4scaleoptions_create) | Create an object of ArkUI_Matrix4ScaleOptions.In the newly created options, the default values for the scaling coefficients in the x, y and z directionsare 1, and the default values for centerX, centerY are 0. |
@@ -588,23 +562,6 @@ Defines the common types for the native module.
 
 ## 枚举类型说明
 
-### ArkUI_PickerIndicatorType
-
-```c
-enum ArkUI_PickerIndicatorType
-```
-
-**描述：**
-
-Enumerates the selected indicator type of picker.
-
-**起始版本：** 23
-
-| 枚举项 | 描述 |
-| -- | -- |
-| ARKUI_PICKER_INDICATOR_BACKGROUND = 0 | background. |
-| ARKUI_PICKER_INDICATOR_DIVIDER = 1 | divider. |
-
 ### ArkUI_Alignment
 
 ```c
@@ -628,25 +585,6 @@ Enumerates the alignment modes.
 | ARKUI_ALIGNMENT_BOTTOM_START | Bottom start. |
 | ARKUI_ALIGNMENT_BOTTOM | Horizontally centered on the bottom. |
 | ARKUI_ALIGNMENT_BOTTOM_END | Bottom end. |
-
-### ArkUI_ImageRepeat
-
-```c
-enum ArkUI_ImageRepeat
-```
-
-**描述：**
-
-Enumerates the image repeat patterns.
-
-**起始版本：** 12
-
-| 枚举项 | 描述 |
-| -- | -- |
-| ARKUI_IMAGE_REPEAT_NONE = 0 | The image is not repeatedly drawn. |
-| ARKUI_IMAGE_REPEAT_X | The image is repeatedly drawn only along the x-axis. |
-| ARKUI_IMAGE_REPEAT_Y | The image is repeatedly drawn only along the y-axis. |
-| ARKUI_IMAGE_REPEAT_XY | The image is repeatedly drawn along both axes. |
 
 ### ArkUI_XComponentType
 
@@ -700,43 +638,6 @@ Enumerates the shadow types.
 | -- | -- |
 | ARKUI_SHADOW_TYPE_COLOR = 0 | Color. |
 | ARKUI_SHADOW_TYPE_BLUR | Blur. |
-
-### ArkUI_DatePickerMode
-
-```c
-enum ArkUI_DatePickerMode
-```
-
-**描述：**
-
-Enumerates the modes of the date picker.
-
-**起始版本：** 18
-
-| 枚举项 | 描述 |
-| -- | -- |
-| ARKUI_DATEPICKER_MODE_DATE = 0 | A mode that displays the date in months, days of month, and years. |
-| ARKUI_DATEPICKER_YEAR_AND_MONTH = 1 | A mode that displays the date in months and years. |
-| ARKUI_DATEPICKER_MONTH_AND_DAY = 2 | A mode that displays the date in months and days of the month. |
-
-### ArkUI_TextPickerRangeType
-
-```c
-enum ArkUI_TextPickerRangeType
-```
-
-**描述：**
-
-Enumerates the types of the text picker.
-
-**起始版本：** 12
-
-| 枚举项 | 描述 |
-| -- | -- |
-| ARKUI_TEXTPICKER_RANGETYPE_SINGLE = 0 | Single-column text picker. |
-| ARKUI_TEXTPICKER_RANGETYPE_MULTI | Multi-column text picker. |
-| ARKUI_TEXTPICKER_RANGETYPE_RANGE_CONTENT | Single-column text picker with image resources. |
-| ARKUI_TEXTPICKER_RANGETYPE_CASCADE_RANGE_CONTENT | Interconnected multi-column text picker. |
 
 ### ArkUI_FocusWrapMode
 
@@ -966,24 +867,6 @@ Enumerates the animation playback modes.
 | ARKUI_ANIMATION_PLAY_MODE_ALTERNATE | The animation is played normally for an odd number of times (1, 3, 5...) and reversely for an even number |
 | ARKUI_ANIMATION_PLAY_MODE_ALTERNATE_REVERSE | The animation is played reversely for an odd number of times (1, 3, 5...) and normally for an even number |
 
-### ArkUI_ImageSize
-
-```c
-enum ArkUI_ImageSize
-```
-
-**描述：**
-
-Defines the image size.
-
-**起始版本：** 12
-
-| 枚举项 | 描述 |
-| -- | -- |
-| ARKUI_IMAGE_SIZE_AUTO = 0 | The original image aspect ratio is retained. |
-| ARKUI_IMAGE_SIZE_COVER | The image is scaled with its aspect ratio retained for both sides to be greater than or equal |
-| ARKUI_IMAGE_SIZE_CONTAIN | The image is scaled with its aspect ratio retained for the content to be completely displayed within the display |
-
 ### ArkUI_AdaptiveColor
 
 ```c
@@ -1117,98 +1000,6 @@ Enumerates the alignment mode in the horizontal direction.
 | ARKUI_HORIZONTAL_ALIGNMENT_START = 0 | Aligned with the start edge in the same direction as the language in use. |
 | ARKUI_HORIZONTAL_ALIGNMENT_CENTER | Center aligned. This is the default alignment mode. |
 | ARKUI_HORIZONTAL_ALIGNMENT_END | Aligned with the end edge in the same direction as the language in use. |
-
-### ArkUI_ObjectFit
-
-```c
-enum ArkUI_ObjectFit
-```
-
-**描述：**
-
-Defines how the image is resized to fit its container.ImageSpanAlignment
-
-**起始版本：** 12
-
-| 枚举项 | 描述 |
-| -- | -- |
-| ARKUI_OBJECT_FIT_CONTAIN = 0 | The image is scaled with its aspect ratio retained for the content to be completely displayed within the |
-| ARKUI_OBJECT_FIT_COVER | The image is scaled with its aspect ratio retained for both sides to be greater than or equal to the |
-| ARKUI_OBJECT_FIT_AUTO | The image is scaled automatically to fit the display area. |
-| ARKUI_OBJECT_FIT_FILL | The image is scaled to fill the display area, and its aspect ratio is not retained. |
-| ARKUI_OBJECT_FIT_SCALE_DOWN | The image content is displayed with its aspect ratio retained. The size is smaller than or equal to the |
-| ARKUI_OBJECT_FIT_NONE | The original size is retained. |
-| ARKUI_OBJECT_FIT_NONE_AND_ALIGN_TOP_START | Not resized, the image is aligned with the start edge of the top of the container. |
-| ARKUI_OBJECT_FIT_NONE_AND_ALIGN_TOP | Not resized, the image is horizontally centered at the top of the container. |
-| ARKUI_OBJECT_FIT_NONE_AND_ALIGN_TOP_END | Not resized, the image is aligned with the end edge at the top of the container. |
-| ARKUI_OBJECT_FIT_NONE_AND_ALIGN_START | Not resized, the image is vertically centered on the start edge of the container. |
-| ARKUI_OBJECT_FIT_NONE_AND_ALIGN_CENTER | Not resized, the image is horizontally and vertically centered in the container. |
-| ARKUI_OBJECT_FIT_NONE_AND_ALIGN_END | Not resized, the image is vertically centered on the end edge of the container. |
-| ARKUI_OBJECT_FIT_NONE_AND_ALIGN_BOTTOM_START | Not resized, the image is aligned with the start edge at the bottom of the container. |
-| ARKUI_OBJECT_FIT_NONE_AND_ALIGN_BOTTOM | Not resized, the image is horizontally centered at the bottom of the container. |
-| ARKUI_OBJECT_FIT_NONE_AND_ALIGN_BOTTOM_END | Not resized, the image is aligned with the end edge at the bottom of the container. |
-| ARKUI_OBJECT_FIT_NONE_MATRIX |  |
-
-### ArkUI_ImageInterpolation
-
-```c
-enum ArkUI_ImageInterpolation
-```
-
-**描述：**
-
-Enumerates the image interpolation effect.
-
-**起始版本：** 12
-
-| 枚举项 | 描述 |
-| -- | -- |
-| ARKUI_IMAGE_INTERPOLATION_NONE = 0 | No image interpolation. |
-| ARKUI_IMAGE_INTERPOLATION_LOW | Low quality interpolation. |
-| ARKUI_IMAGE_INTERPOLATION_MEDIUM | Medium quality interpolation. |
-| ARKUI_IMAGE_INTERPOLATION_HIGH | High quality interpolation. This mode produces scaled images of the highest possible quality. |
-
-### ArkUI_DynamicRangeMode
-
-```c
-enum ArkUI_DynamicRangeMode
-```
-
-**描述：**
-
-Enumerates the image dynamic range mode.
-
-**起始版本：** 21
-
-| 枚举项 | 描述 |
-| -- | -- |
-| ARKUI_DYNAMIC_RANGE_MODE_HIGH = 0 | high dynamic range mode. |
-| ARKUI_DYNAMIC_RANGE_MODE_CONSTRAINT | constraint dynamic range mode. |
-| ARKUI_DYNAMIC_RANGE_MODE_STANDARD | standard dynamic range mode. |
-
-### ArkUI_ImageRotateOrientation
-
-```c
-enum ArkUI_ImageRotateOrientation
-```
-
-**描述：**
-
-Enumerates the image rotate orientation.
-
-**起始版本：** 21
-
-| 枚举项 | 描述 |
-| -- | -- |
-| ARKUI_ORIENTATION_AUTO = 0 | Use EXIF metadata for display orientation, with support for rotation and mirroring. |
-| ARKUI_ORIENTATION_UP | Display original pixel data without transformation. |
-| ARKUI_ORIENTATION_RIGHT | Display the image after rotating it 90 degrees clockwise. |
-| ARKUI_ORIENTATION_DOWN | Display the image after rotating it 180 degrees clockwise. |
-| ARKUI_ORIENTATION_LEFT | Display the image after rotating it 270 degrees clockwise. |
-| ARKUI_ORIENTATION_UP_MIRRORED | Display the image after flipping it horizontally. |
-| ARKUI_ORIENTATION_RIGHT_MIRRORED | Display the image after flipping it horizontally and then rotating it 90 degrees clockwise. |
-| ARKUI_ORIENTATION_DOWN_MIRRORED | Display the image after flipping it vertically. |
-| ARKUI_ORIENTATION_LEFT_MIRRORED | Display the image after flipping it horizontally and then rotating it 270 degrees clockwise. |
 
 ### ArkUI_BlendMode
 
@@ -1370,24 +1161,6 @@ Defines whether the flex container has a single line or multiple lines.
 | ARKUI_FLEX_WRAP_WRAP | The child components in the flex container are arranged in multiple lines, and they may overflow. |
 | ARKUI_FLEX_WRAP_WRAP_REVERSE | The child components in the flex container are reversely arranged in multiple lines, and they may overflow. |
 
-### ArkUI_CalendarAlignment
-
-```c
-enum ArkUI_CalendarAlignment
-```
-
-**描述：**
-
-Enumerates the alignment modes between the calendar picker and the entry component.
-
-**起始版本：** 12
-
-| 枚举项 | 描述 |
-| -- | -- |
-| ARKUI_CALENDAR_ALIGNMENT_START = 0 | Left aligned. |
-| ARKUI_CALENDAR_ALIGNMENT_CENTER | Center aligned. |
-| ARKUI_CALENDAR_ALIGNMENT_END | Right aligned. |
-
 ### ArkUI_MaskType
 
 ```c
@@ -1470,23 +1243,6 @@ Enumerates the gradient directions.
 | ARKUI_LINEAR_GRADIENT_DIRECTION_RIGHT_BOTTOM | From upper left to lower right. |
 | ARKUI_LINEAR_GRADIENT_DIRECTION_NONE | No gradient. |
 | ARKUI_LINEAR_GRADIENT_DIRECTION_CUSTOM | Custom direction. |
-
-### ArkUI_ImageRenderMode
-
-```c
-enum ArkUI_ImageRenderMode
-```
-
-**描述：**
-
-Enumerates the image rendering modes.
-
-**起始版本：** 12
-
-| 枚举项 | 描述 |
-| -- | -- |
-| ARKUI_IMAGE_RENDER_MODE_ORIGINAL = 0 | Render image pixels as they are in the original source image. |
-| ARKUI_IMAGE_RENDER_MODE_TEMPLATE | Render image pixels to create a monochrome template image. |
 
 ### ArkUI_TransitionEdge
 
@@ -4358,7 +4114,7 @@ ArkUI_ContentTransitionEffect* OH_ArkUI_ContentTransitionEffect_Create(int32_t t
 
 **描述：**
 
-creates content switching animation effects.
+创建内容切换动画效果。
 
 **起始版本：** 21
 
@@ -4366,13 +4122,13 @@ creates content switching animation effects.
 
 | 参数项 | 描述 |
 | -- | -- |
-| int32_t type | content transition type: 0-identity, 1-opacity. |
+| int32_t type | 内容转场类型：0-identity，1-opacity。 |
 
 **返回：**
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ContentTransitionEffect*](capi-arkui-nativemodule-arkui-contenttransitioneffect.md) | content transition effect. |
+| [ArkUI_ContentTransitionEffect*](capi-arkui-nativemodule-arkui-contenttransitioneffect.md) | 内容转场效果。 |
 
 ### OH_ArkUI_AlignmentRuleOption_Create()
 
@@ -5916,190 +5672,6 @@ bool OH_ArkUI_CrossLanguageOption_GetAttributeSettingStatus(ArkUI_CrossLanguageO
 | 类型 | 说明 |
 | -- | -- |
 | bool | 是否允许跨语言修改属性。true表示允许跨语言修改属性，false表示不允许跨语言修改属性。 |
-
-### OH_ArkUI_TextPickerRangeContentArray_Create()
-
-```c
-ArkUI_TextPickerRangeContentArray* OH_ArkUI_TextPickerRangeContentArray_Create(int32_t length)
-```
-
-**描述：**
-
-Creates a TextPickerRangeContent instance.
-
-**起始版本：** 19
-
-**参数：**
-
-| 参数项 | 描述 |
-| -- | -- |
-| int32_t length | The length of the picker array. Value range: [1, +∞). |
-
-**返回：**
-
-| 类型 | 说明 |
-| -- | -- |
-| ArkUI_TextPickerRangeContentArray* | Returns a pointer to the created instance on success. Initialize each item of the array          as a null pointer;call [OH_ArkUI_TextPickerRangeContentArray_SetIconAtIndex](capi-native-type-h.md#oh_arkui_textpickerrangecontentarray_seticonatindex) and/or          [OH_ArkUI_TextPickerRangeContentArray_SetTextAtIndex](capi-native-type-h.md#oh_arkui_textpickerrangecontentarray_settextatindex) for each index as needed.          Returns <b>nullptr</b> if <b>length</b> is not in <b>[1, +∞)</b>.          When the object is no longer used, release it with [OH_ArkUI_TextPickerRangeContentArray_Destroy](capi-native-type-h.md#oh_arkui_textpickerrangecontentarray_destroy). |
-
-### OH_ArkUI_TextPickerRangeContentArray_SetIconAtIndex()
-
-```c
-void OH_ArkUI_TextPickerRangeContentArray_SetIconAtIndex(ArkUI_TextPickerRangeContentArray* handle, char* icon, int32_t index)
-```
-
-**描述：**
-
-Sets the icon resource path or URI for one item in an {@link ArkUI_TextPickerRangeContentArray}.
-
-> **说明：**
->
-> If an icon was already set at <b>index</b>, the previous buffer is released before assigning the new value.
-
-**起始版本：** 19
-
-**参数：**
-
-| 参数项 | 描述 |
-| -- | -- |
-| ArkUI_TextPickerRangeContentArray* handle | Pointer returned by [OH_ArkUI_TextPickerRangeContentArray_Create](capi-native-type-h.md#oh_arkui_textpickerrangecontentarray_create). If <b>nullptr</b>, thisfunction has no effect. |
-| char* icon | Null-terminated C string for the icon (path or URI). The content is copied into the array; the callerkeeps ownership of <b>icon</b>. If <b>nullptr</b>, this function has no effect. |
-| int32_t index | Index of the item to set. Valid values are greater than or equal to <b>0</b> and less than the<b>length</b> argument passed to [OH_ArkUI_TextPickerRangeContentArray_Create](capi-native-type-h.md#oh_arkui_textpickerrangecontentarray_create). Otherwise this functiondoes nothing. |
-
-### OH_ArkUI_TextPickerRangeContentArray_SetTextAtIndex()
-
-```c
-void OH_ArkUI_TextPickerRangeContentArray_SetTextAtIndex(ArkUI_TextPickerRangeContentArray* handle, char* text, int32_t index)
-```
-
-**描述：**
-
-Sets the display text for one item in an {@link ArkUI_TextPickerRangeContentArray}.
-
-> **说明：**
->
-> If text was already set at <b>index</b>, the previous buffer is released before assigning the new value.
-
-**起始版本：** 19
-
-**参数：**
-
-| 参数项 | 描述 |
-| -- | -- |
-| ArkUI_TextPickerRangeContentArray* handle | Pointer returned by [OH_ArkUI_TextPickerRangeContentArray_Create](capi-native-type-h.md#oh_arkui_textpickerrangecontentarray_create). If <b>nullptr</b>, thisfunction has no effect. |
-| char* text | Null-terminated C string shown for the item. The content is copied into the array; the caller keepsownership of <b>text</b>. If <b>nullptr</b>, this function has no effect. |
-| int32_t index | Index of the item to set. Valid values are greater than or equal to <b>0</b> and less than the<b>length</b> argument passed to [OH_ArkUI_TextPickerRangeContentArray_Create](capi-native-type-h.md#oh_arkui_textpickerrangecontentarray_create). Otherwise this functiondoes nothing. |
-
-### OH_ArkUI_TextPickerRangeContentArray_Destroy()
-
-```c
-void OH_ArkUI_TextPickerRangeContentArray_Destroy(ArkUI_TextPickerRangeContentArray* handle)
-```
-
-**描述：**
-
-Releases an {@link ArkUI_TextPickerRangeContentArray} created by[OH_ArkUI_TextPickerRangeContentArray_Create](capi-native-type-h.md#oh_arkui_textpickerrangecontentarray_create).
-
-> **说明：**
->
-> After this call, <b>handle</b> must not be used. Do not pass pointers that were not returned by [OH_ArkUI_TextPickerRangeContentArray_Create](capi-native-type-h.md#oh_arkui_textpickerrangecontentarray_create).
-
-**起始版本：** 19
-
-**参数：**
-
-| 参数项 | 描述 |
-| -- | -- |
-| ArkUI_TextPickerRangeContentArray* handle | Instance to destroy. If <b>nullptr</b>, this function has no effect. |
-
-### OH_ArkUI_TextCascadePickerRangeContentArray_Create()
-
-```c
-ArkUI_TextCascadePickerRangeContentArray* OH_ArkUI_TextCascadePickerRangeContentArray_Create(int32_t length)
-```
-
-**描述：**
-
-Allocates one column level of an interconnected (cascade) TextPicker range. Use with range type[ARKUI_TEXTPICKER_RANGETYPE_CASCADE_RANGE_CONTENT](capi-native-type-h.md#arkui_textpickerrangetype). The returned pointer addresses a contiguous arrayof sibling nodes; each node may carry display text and an optional next-level range from[OH_ArkUI_TextCascadePickerRangeContentArray_SetChildAtIndex](capi-native-type-h.md#oh_arkui_textcascadepickerrangecontentarray_setchildatindex).
-
-**起始版本：** 19
-
-**参数：**
-
-| 参数项 | 描述 |
-| -- | -- |
-| int32_t length | Number of sibling entries on this column. Value range: <b>[1, +∞)</b>. |
-
-**返回：**
-
-| 类型 | 说明 |
-| -- | -- |
-| ArkUI_TextCascadePickerRangeContentArray* | Returns a pointer to the first sibling node when <b>length</b> is in <b>[1, +∞)</b>; returns <b>nullptr</b>          otherwise. The sibling count used for bounds checks equals <b>length</b>. |
-
-### OH_ArkUI_TextCascadePickerRangeContentArray_SetTextAtIndex()
-
-```c
-void OH_ArkUI_TextCascadePickerRangeContentArray_SetTextAtIndex(ArkUI_TextCascadePickerRangeContentArray* handle, char* text, int32_t index)
-```
-
-**描述：**
-
-Sets the display text for one sibling node on a cascade TextPicker level.
-
-> **说明：**
->
-> If text was already set at <b>index</b>, the previous buffer is released before assigning the new value.
-
-**起始版本：** 19
-
-**参数：**
-
-| 参数项 | 描述 |
-| -- | -- |
-| ArkUI_TextCascadePickerRangeContentArray* handle | Pointer returned by [OH_ArkUI_TextCascadePickerRangeContentArray_Create](capi-native-type-h.md#oh_arkui_textcascadepickerrangecontentarray_create). If <b>nullptr</b>,this function has no effect. |
-| char* text | Null-terminated C string. The content is copied; the caller keeps ownership of <b>text</b>. If<b>nullptr</b>, this function has no effect. |
-| int32_t index | Index of the sibling to set. Valid values are greater than or equal to <b>0</b> and less than the<b>length</b> argument passed to [OH_ArkUI_TextCascadePickerRangeContentArray_Create](capi-native-type-h.md#oh_arkui_textcascadepickerrangecontentarray_create). Otherwise thisfunction does nothing. |
-
-### OH_ArkUI_TextCascadePickerRangeContentArray_SetChildAtIndex()
-
-```c
-void OH_ArkUI_TextCascadePickerRangeContentArray_SetChildAtIndex(ArkUI_TextCascadePickerRangeContentArray* handle, ArkUI_TextCascadePickerRangeContentArray* child, int32_t index)
-```
-
-**描述：**
-
-Sets the childs info of items in a multi text picker ranges.
-
-**起始版本：** 19
-
-**参数：**
-
-| 参数项 | 描述 |
-| -- | -- |
-| ArkUI_TextCascadePickerRangeContentArray* handle | Pointer returned by [OH_ArkUI_TextCascadePickerRangeContentArray_Create](capi-native-type-h.md#oh_arkui_textcascadepickerrangecontentarray_create). If <b>nullptr</b>,this function has no effect. |
-| ArkUI_TextCascadePickerRangeContentArray* child | Pointer returned by [OH_ArkUI_TextCascadePickerRangeContentArray_Create](capi-native-type-h.md#oh_arkui_textcascadepickerrangecontentarray_create) for the child column.If <b>nullptr</b>, this function has no effect. If a subtree already exists at <b>index</b>, it is destroyedwith [OH_ArkUI_TextCascadePickerRangeContentArray_Destroy](capi-native-type-h.md#oh_arkui_textcascadepickerrangecontentarray_destroy) before the new <b>child</b> is stored.While <b>child</b> stays attached under the parent, the caller must not call[OH_ArkUI_TextCascadePickerRangeContentArray_Destroy](capi-native-type-h.md#oh_arkui_textcascadepickerrangecontentarray_destroy) on <b>child</b>. |
-| int32_t index | Index of the sibling that owns the subtree. Valid values are greater than or equal to <b>0</b> and lessthan the <b>length</b> argument passed to [OH_ArkUI_TextCascadePickerRangeContentArray_Create](capi-native-type-h.md#oh_arkui_textcascadepickerrangecontentarray_create).Otherwise this function does nothing. |
-
-### OH_ArkUI_TextCascadePickerRangeContentArray_Destroy()
-
-```c
-void OH_ArkUI_TextCascadePickerRangeContentArray_Destroy(ArkUI_TextCascadePickerRangeContentArray* handle)
-```
-
-**描述：**
-
-Releases a cascade range level allocated with [OH_ArkUI_TextCascadePickerRangeContentArray_Create](capi-native-type-h.md#oh_arkui_textcascadepickerrangecontentarray_create).
-
-> **说明：**
->
-> Do not call [OH_ArkUI_TextCascadePickerRangeContentArray_Destroy](capi-native-type-h.md#oh_arkui_textcascadepickerrangecontentarray_destroy) on a <b>child</b> while it is still stored in a parent's {@code children}.
-
-**起始版本：** 19
-
-**参数：**
-
-| 参数项 | 描述 |
-| -- | -- |
-| ArkUI_TextCascadePickerRangeContentArray* handle | Instance to destroy. If <b>nullptr</b>, this function has no effect. |
 
 ### OH_ArkUI_EmbeddedComponentOption_Create()
 
@@ -10614,48 +10186,6 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorStyledStringController_SetStyledPlaceholder(c
 | -- | -- |
 | [ArkUI_ErrorCode](capi-native-type-h.md#arkui_errorcode) | 返回结果码。      <br>若操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode)。      <br>若参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode)。 |
 
-### OH_ArkUI_PickerIndicatorStyle_Create()
-
-```c
-ArkUI_PickerIndicatorStyle* OH_ArkUI_PickerIndicatorStyle_Create(ArkUI_PickerIndicatorType type)
-```
-
-**描述：**
-
-Create the ArkUI_PickerIndicatorStyle instance.
-
-**起始版本：** 23
-
-**参数：**
-
-| 参数项 | 描述 |
-| -- | -- |
-| [ArkUI_PickerIndicatorType](capi-native-type-h.md#arkui_pickerindicatortype) type | The picker selection indicator enumeration type. |
-
-**返回：**
-
-| 类型 | 说明 |
-| -- | -- |
-| [ArkUI_PickerIndicatorStyle*](capi-arkui-nativemodule-arkui-pickerindicatorstyle.md) | ArkUI_PickerIndicatorStyle instance. If the instance returns a null pointer,          it indicates creation failure, and the reason for the failure may be that the address space is full or          the type not supported. |
-
-### OH_ArkUI_PickerIndicatorStyle_Dispose()
-
-```c
-void OH_ArkUI_PickerIndicatorStyle_Dispose(ArkUI_PickerIndicatorStyle* style)
-```
-
-**描述：**
-
-Destroy the ArkUI_PickerIndicatorStyle instance.
-
-**起始版本：** 23
-
-**参数：**
-
-| 参数项 | 描述 |
-| -- | -- |
-| [ArkUI_PickerIndicatorStyle](capi-arkui-nativemodule-arkui-pickerindicatorstyle.md)* style | The ArkUI_PickerIndicatorStyle instance to be destroyed. |
-
 ### OH_ArkUI_PickerIndicatorStyle_ConfigureBackground()
 
 ```c
@@ -10672,14 +10202,14 @@ Set the parameters of background style.
 
 | 参数项 | 描述 |
 | -- | -- |
-| [ArkUI_PickerIndicatorStyle](capi-arkui-nativemodule-arkui-pickerindicatorstyle.md)* style | The ArkUI_PickerIndicatorStyle instance. |
-| [ArkUI_PickerIndicatorBackground](capi-arkui-nativemodule-arkui-pickerindicatorbackground.md)* background | The parameters of background style. |
+| ArkUI_PickerIndicatorStyle* style | The ArkUI_PickerIndicatorStyle instance. |
+| ArkUI_PickerIndicatorBackground* background | The parameters of background style. |
 
 **返回：**
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-native-type-h.md#arkui_errorcode) | Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode) if success.         Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode) The parameters set need to be consistent with         the type of the created instance. If they are not consistent, this error code will be returned.         This interface only takes effect when the type is "background". |
+| [ArkUI_ErrorCode](capi-native-type-h.md#arkui_errorcode) | Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode) if success.          Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode) The parameters set need to be consistent with          the type of the created instance. If they are not consistent, this error code will be returned.          This interface only takes effect when the type is "background". |
 
 ### OH_ArkUI_PickerIndicatorStyle_ConfigureDivider()
 
@@ -10697,8 +10227,8 @@ Set the parameters of divider style.
 
 | 参数项 | 描述 |
 | -- | -- |
-| [ArkUI_PickerIndicatorStyle](capi-arkui-nativemodule-arkui-pickerindicatorstyle.md)* style | The ArkUI_PickerIndicatorStyle instance. |
-| [ArkUI_PickerIndicatorDivider](capi-arkui-nativemodule-arkui-pickerindicatordivider.md)* divider | The parameters of divider style. |
+| ArkUI_PickerIndicatorStyle* style | The ArkUI_PickerIndicatorStyle instance. |
+| ArkUI_PickerIndicatorDivider* divider | The parameters of divider style. |
 
 **返回：**
 

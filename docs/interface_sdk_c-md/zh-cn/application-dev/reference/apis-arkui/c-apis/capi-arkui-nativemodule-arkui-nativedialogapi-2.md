@@ -6,7 +6,7 @@ typedef struct ArkUI_NativeDialogAPI_2 {...} ArkUI_NativeDialogAPI_2
 
 ## 概述
 
-ArkUI提供的Native侧自定义弹窗接口集合。
+ArkUI提供的Native侧自定义弹窗接口集合，用于在Native层创建和管理自定义弹窗，支持设置弹窗避让键盘距离、显示层级、层级节点id和嵌入式弹窗蒙层显示区域等功能，适用于需要精细化控制弹窗行为的场景。
 
 **起始版本：** 15
 
@@ -46,7 +46,7 @@ int32_t (*setKeyboardAvoidDistance)(ArkUI_NativeDialogHandle handle, float dista
 
 > **说明：**
 >
-> This method must be called before the <b>show</b> method.
+> setKeyboardAvoidDistance方法需要在调用show方法之前调用。
 
 **起始版本：** 15
 
@@ -55,7 +55,7 @@ int32_t (*setKeyboardAvoidDistance)(ArkUI_NativeDialogHandle handle, float dista
 | 参数项 | 描述 |
 | -- | -- |
 | ArkUI_NativeDialogHandle handle | 指向自定义弹窗控制器的指针。 |
-|  float distance | 避让键盘的距离，单位为vp。 |
+|  float distance | 弹窗与键盘之间保持的避让距离，单位由unit参数指定。 |
 |  ArkUI_LengthMetricUnit unit | 避让距离的单位，参数类型{@link ArkUI_LengthMetricUnit}。 |
 
 **返回：**
@@ -76,7 +76,7 @@ int32_t (*setLevelMode)(ArkUI_NativeDialogHandle handle, ArkUI_LevelMode levelMo
 
 > **说明：**
 >
-> This method must be called before the <b>show</b> method.
+> setLevelMode方法需要在调用show方法之前调用；若需配合setLevelUniqueId使用，则需要在调用setLevelUniqueId方法之后调用。
 
 **起始版本：** 15
 
@@ -105,7 +105,7 @@ int32_t (*setLevelUniqueId)(ArkUI_NativeDialogHandle handle, int32_t uniqueId)
 
 > **说明：**
 >
-> This method must be called before the <b>setLevelMode</b> method.
+> setLevelUniqueId方法需要在调用setLevelMode方法之前调用，且需要在调用show方法之前调用。
 
 **起始版本：** 15
 
@@ -134,7 +134,7 @@ int32_t (*setImmersiveMode)(ArkUI_NativeDialogHandle handle, ArkUI_ImmersiveMode
 
 > **说明：**
 >
-> This method must be called before the <b>show</b> method.
+> setImmersiveMode方法需要在调用show方法之前调用。
 
 **起始版本：** 15
 

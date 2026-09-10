@@ -1,6 +1,6 @@
 # ArkTS API<!--arkts-camerakit-->
 
-- [@ohos.multimedia.camera(AutoDeviceSwitch)](arkts-multimedia-camera.md)
+- [@ohos.multimedia.camera(Camera Management)](arkts-multimedia-camera.md)
   - [getCameraManager](arkts-camera-camera-getcameramanager-f.md)
   <!--Del-->
   - [EffectSuggestionStatus(system api)](arkts-camera-camera-effectsuggestionstatus-c-sys.md)<!--DelEnd-->

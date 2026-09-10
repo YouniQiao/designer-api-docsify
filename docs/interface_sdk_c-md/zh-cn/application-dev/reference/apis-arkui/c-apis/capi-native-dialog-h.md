@@ -19,10 +19,10 @@
 | 名称 | typedef关键字 | 描述 |
 | -- | -- | -- |
 | [ArkUI_NativeDialogAPI_1](capi-arkui-nativemodule-arkui-nativedialogapi-1.md) | ArkUI_NativeDialogAPI_1 | ArkUI提供的Native侧自定义弹窗接口集合。 |
-| [ArkUI_NativeDialogAPI_2](capi-arkui-nativemodule-arkui-nativedialogapi-2.md) | ArkUI_NativeDialogAPI_2 | ArkUI提供的Native侧自定义弹窗接口集合。 |
-| [ArkUI_NativeDialogAPI_3](capi-arkui-nativemodule-arkui-nativedialogapi-3.md) | ArkUI_NativeDialogAPI_3 | ArkUI提供的Native侧自定义弹窗接口集合。 |
+| [ArkUI_NativeDialogAPI_2](capi-arkui-nativemodule-arkui-nativedialogapi-2.md) | ArkUI_NativeDialogAPI_2 | ArkUI提供的Native侧自定义弹窗接口集合，用于在Native层创建和管理自定义弹窗，支持设置弹窗避让键盘距离、显示层级、层级节点id和嵌入式弹窗蒙层显示区域等功能，适用于需要精细化控制弹窗行为的场景。 |
+| [ArkUI_NativeDialogAPI_3](capi-arkui-nativemodule-arkui-nativedialogapi-3.md) | ArkUI_NativeDialogAPI_3 | ArkUI提供的Native侧自定义弹窗接口集合，支持设置边框样式、尺寸、背景效果、键盘避让模式、焦点管理等能力，用于在Native层精细控制自定义弹窗的外观样式和交互行为，适用于需要高度定制化弹窗UI的场景。 |
 | [ArkUI_DialogDismissEvent](capi-arkui-nativemodule-arkui-dialogdismissevent.md) | ArkUI_DialogDismissEvent | 定义弹窗关闭事件对象。 |
-| [ArkUI_CustomDialogOptions](capi-arkui-nativemodule-arkui-customdialogoptions.md) | ArkUI_CustomDialogOptions | 定义自定义弹窗的内容对象。 |
+| [ArkUI_CustomDialogOptions](capi-arkui-nativemodule-arkui-customdialogoptions.md) | ArkUI_CustomDialogOptions | 定义自定义弹窗的选项对象。该对象不暴露任何成员字段，开发者通过 [ArkUI_NativeModule](capi-arkui-nativemodule.md) 中以 `OH_ArkUI_CustomDialog_Set` 为前缀的接口（如设置背景、圆角、阴影、模糊、位置、模态等）配置弹窗属性，再调用 `OH_ArkUI_CustomDialog_OpenDialog` 打开弹窗。 |
 
 ### 枚举
 
@@ -38,13 +38,13 @@
 
 | 名称 | typedef关键字 | 描述 |
 | -- | -- | -- |
-| [typedef bool (\*ArkUI_OnWillDismissEvent)(int32_t reason)](#arkui_onwilldismissevent) | ArkUI_OnWillDismissEvent | Invoked when the dialog box is closed. |
+| [typedef bool (\*ArkUI_OnWillDismissEvent)(int32_t reason)](#arkui_onwilldismissevent) | ArkUI_OnWillDismissEvent | 弹窗关闭的回调函数。 |
 | [void OH_ArkUI_DialogDismissEvent_SetShouldBlockDismiss(ArkUI_DialogDismissEvent* event, bool shouldBlockDismiss)](#oh_arkui_dialogdismissevent_setshouldblockdismiss) | - | 设置是否需要屏蔽系统关闭弹窗行为，true表示屏蔽系统行为，不关闭弹窗，false表示不屏蔽。 |
 | [void* OH_ArkUI_DialogDismissEvent_GetUserData(ArkUI_DialogDismissEvent* event)](#oh_arkui_dialogdismissevent_getuserdata) | - | 获取弹窗关闭事件对象中的用户自定义数据指针。 |
 | [int32_t OH_ArkUI_DialogDismissEvent_GetDismissReason(ArkUI_DialogDismissEvent* event)](#oh_arkui_dialogdismissevent_getdismissreason) | - | 获取交互式关闭事件指针中的关闭原因。 |
 | [int32_t OH_ArkUI_CustomDialog_OpenDialog(ArkUI_CustomDialogOptions* options, void (\*callback)(int32_t dialogId))](#oh_arkui_customdialog_opendialog) | - | 弹出自定义弹窗。 |
-| [typedef void (\*ArkUI_OpenDialogCallback)(int32_t errorCode, int32_t dialogId, void* userData)](#arkui_opendialogcallback) | ArkUI_OpenDialogCallback | Callback function when the dialog is displayed. |
-| [void OH_ArkUI_CustomDialog_OpenDialogWithCallback(ArkUI_CustomDialogOptions* options, void* userData, ArkUI_OpenDialogCallback callback)](#oh_arkui_customdialog_opendialogwithcallback) | - | Displays a custom dialog box. |
+| [typedef void (\*ArkUI_OpenDialogCallback)(int32_t errorCode, int32_t dialogId, void* userData)](#arkui_opendialogcallback) | ArkUI_OpenDialogCallback | 弹窗显示时的回调函数。 |
+| [void OH_ArkUI_CustomDialog_OpenDialogWithCallback(ArkUI_CustomDialogOptions* options, void* userData, ArkUI_OpenDialogCallback callback)](#oh_arkui_customdialog_opendialogwithcallback) | - | 弹出自定义弹窗。 |
 | [int32_t OH_ArkUI_CustomDialog_UpdateDialog(ArkUI_CustomDialogOptions* options, void (\*callback)(int32_t dialogId))](#oh_arkui_customdialog_updatedialog) | - | 更新自定义弹窗。 |
 | [int32_t OH_ArkUI_CustomDialog_CloseDialog(int32_t dialogId)](#oh_arkui_customdialog_closedialog) | - | 关闭自定义弹窗。 |
 | [ArkUI_CustomDialogOptions* OH_ArkUI_CustomDialog_CreateOptions(ArkUI_NodeHandle content)](#oh_arkui_customdialog_createoptions) | - | 创建自定义弹窗配置。 |
@@ -188,7 +188,7 @@ typedef bool (*ArkUI_OnWillDismissEvent)(int32_t reason)
 
 **描述：**
 
-Invoked when the dialog box is closed.
+弹窗关闭的回调函数。
 
 **起始版本：** 12
 
@@ -276,7 +276,7 @@ int32_t OH_ArkUI_CustomDialog_OpenDialog(ArkUI_CustomDialogOptions* options, voi
 | 参数项 | 描述 |
 | -- | -- |
 | rkUI_CustomDialogOptions\* options | 弹窗参数。 |
-| void (\*callback)(int32_t dialogId) | Callback to be invoked when the custom dialog box displays. |
+| void (\*callback)(int32_t dialogId) | 开启弹窗的回调，返回弹窗ID。 |
 
 **返回：**
 
@@ -292,7 +292,7 @@ typedef void (*ArkUI_OpenDialogCallback)(int32_t errorCode, int32_t dialogId, vo
 
 **描述：**
 
-Callback function when the dialog is displayed.
+弹窗显示时的回调函数。
 
 **起始版本：** 26.1.0
 
@@ -300,9 +300,9 @@ Callback function when the dialog is displayed.
 
 | 参数项 | 描述 |
 | -- | -- |
-| int32_t errorCode | the error code.{@link ARKUI_ERROR_CODE_NO_ERROR} The operation is successful.{@link ARKUI_ERROR_CODE_PARAM_INVALID} A parameter error occurs.{@link ARKUI_ERROR_CODE_DIALOG_CANNOT_BE_OPENED_BY_MODAL_UEC_WINDOW} The dialog cannot be opened by the modal UEC window. |
-| int32_t dialogId | Dialog id. Returns -1 when the dialog cannot be displayed. |
-| void\* userData | Indicates the pointer to the custom data. |
+| int32_t errorCode | 打开弹窗的操作结果。{@link ARKUI_ERROR_CODE_NO_ERROR} 操作成功。{@link ARKUI_ERROR_CODE_PARAM_INVALID}  函数参数异常。{@link ARKUI_ERROR_CODE_DIALOG_NODE_MOUNT_FAILURE} 由于节点挂载失败，弹窗无法打开。{@link ARKUI_ERROR_CODE_DIALOG_SUBWINDOW_CREATE_FAILURE} 由于子窗口创建失败，弹窗无法打开。 |
+| int32_t dialogId | 弹窗ID。当弹窗无法显示时返回-1。 |
+| void\* userData | 表示指向自定义数据的指针。 |
 
 ### OH_ArkUI_CustomDialog_OpenDialogWithCallback()
 
@@ -312,7 +312,7 @@ void OH_ArkUI_CustomDialog_OpenDialogWithCallback(ArkUI_CustomDialogOptions* opt
 
 **描述：**
 
-Displays a custom dialog box.
+弹出自定义弹窗。
 
 **起始版本：** 26.1.0
 
@@ -320,9 +320,9 @@ Displays a custom dialog box.
 
 | 参数项 | 描述 |
 | -- | -- |
-| [ArkUI_CustomDialogOptions](capi-arkui-nativemodule-arkui-customdialogoptions.md)* options | Dialog box parameters. |
-| void* userData | Indicates the pointer to the custom data. |
-| [ArkUI_OpenDialogCallback](capi-native-dialog-h.md#arkui_opendialogcallback) callback | Callback function when the dialog is displayed. |
+| [ArkUI_CustomDialogOptions](capi-arkui-nativemodule-arkui-customdialogoptions.md)* options |  弹窗参数。 |
+| void* userData | 表示指向自定义数据的指针。 |
+| [ArkUI_OpenDialogCallback](capi-native-dialog-h.md#arkui_opendialogcallback) callback | 弹窗显示时的回调，返回入参为错误码和弹窗ID。 |
 
 ### OH_ArkUI_CustomDialog_UpdateDialog()
 
@@ -341,7 +341,7 @@ int32_t OH_ArkUI_CustomDialog_UpdateDialog(ArkUI_CustomDialogOptions* options, v
 | 参数项 | 描述 |
 | -- | -- |
 | rkUI_CustomDialogOptions\* options | 弹窗参数。 |
-| void (\*callback)(int32_t dialogId) | Callback to be invoked when the custom dialog box updates. |
+| void (\*callback)(int32_t dialogId) | 更新弹窗的回调，返回弹窗ID。 |
 
 **返回：**
 
@@ -427,7 +427,7 @@ int32_t OH_ArkUI_CustomDialog_SetLevelMode(ArkUI_CustomDialogOptions* options, A
 
 > **说明：**
 >
-> This method must be called before the <b>OH_ArkUI_CustomDialog_OpenDialog</b> method.
+> 本方法需要在调用<b>OH_ArkUI_CustomDialog_OpenDialog</b>方法之前调用。
 
 **起始版本：** 19
 
@@ -481,7 +481,7 @@ int32_t OH_ArkUI_CustomDialog_SetImmersiveMode(ArkUI_CustomDialogOptions* option
 
 > **说明：**
 >
-> This method must be called before the <b>OH_ArkUI_CustomDialog_OpenDialog</b> method.
+> 本方法需要在调用<b>OH_ArkUI_CustomDialog_OpenDialog</b>方法之前调用。
 
 **起始版本：** 19
 
@@ -877,7 +877,7 @@ int32_t OH_ArkUI_CustomDialog_SetDisplayModeInSubWindow(ArkUI_CustomDialogOption
 
 > **说明：**
 >
-> This method takes effect only when the dialog box is displayed in a subwindow.
+> 本方法需要在调用<b>OH_ArkUI_CustomDialog_OpenDialog</b>方法之前调用。<br> 本方法仅在弹窗通过<b>OH_ArkUI_CustomDialog_SetSubwindowMode</b>设置为子窗口显示时生效。
 
 **起始版本：** 26.0.0
 
@@ -1005,6 +1005,10 @@ int32_t OH_ArkUI_CustomDialog_RegisterOnWillDismissCallback(ArkUI_CustomDialogOp
 
 注册系统关闭自定义弹窗的监听事件。
 
+> **说明：**
+>
+> 本方法需要在调用<b>OH_ArkUI_CustomDialog_OpenDialog</b>方法之前调用。
+
 **起始版本：** 19
 
 **参数：**
@@ -1013,7 +1017,7 @@ int32_t OH_ArkUI_CustomDialog_RegisterOnWillDismissCallback(ArkUI_CustomDialogOp
 | -- | -- |
 | rkUI_CustomDialogOptions\* options | 弹窗参数。 |
 | void\* userData | 用户自定义数据指针。 |
-| void (\*callback)(ArkUI_DialogDismissEvent\* event) | Callback for the dismissal event of the custom dialog box. |
+| void (\*callback)(ArkUI_DialogDismissEvent\* event) | 监听自定义弹窗关闭的回调事件。<br> - event: 回调函数的入参，捕获关闭原因。 |
 
 **返回：**
 
@@ -1039,7 +1043,7 @@ int32_t OH_ArkUI_CustomDialog_RegisterOnWillAppearCallback(ArkUI_CustomDialogOpt
 | -- | -- |
 | rkUI_CustomDialogOptions\* options | 弹窗参数。 |
 | void\* userData | 用户自定义数据指针。 |
-| void (\*callback)(void\* userData) | Callback to be invoked when the dialog box is about to appear. |
+| void (\*callback)(void\* userData) |  弹窗显示动效前的事件回调。入参userData为用户自定义数据。 |
 
 **返回：**
 
@@ -1065,7 +1069,7 @@ int32_t OH_ArkUI_CustomDialog_RegisterOnDidAppearCallback(ArkUI_CustomDialogOpti
 | -- | -- |
 | rkUI_CustomDialogOptions\* options | 弹窗参数。 |
 | void\* userData | 用户自定义数据指针。 |
-| void (\*callback)(void\* userData) | Callback to be invoked when the custom dialog box appears. |
+| void (\*callback)(void\* userData) | 弹窗弹出后的事件回调。入参userData为用户自定义数据。 |
 
 **返回：**
 
@@ -1091,7 +1095,7 @@ int32_t OH_ArkUI_CustomDialog_RegisterOnWillDisappearCallback(ArkUI_CustomDialog
 | -- | -- |
 | rkUI_CustomDialogOptions\* options | 弹窗参数。 |
 | void\* userData | 用户自定义数据指针。 |
-| void (\*callback)(void\* userData) | Callback to be invoked when the dialog box is about to disappear. |
+| void (\*callback)(void\* userData) | 弹窗退出动效前的事件回调。入参userData为用户自定义数据。 |
 
 **返回：**
 
@@ -1117,7 +1121,7 @@ int32_t OH_ArkUI_CustomDialog_RegisterOnDidDisappearCallback(ArkUI_CustomDialogO
 | -- | -- |
 | rkUI_CustomDialogOptions\* options | 弹窗参数。 |
 | void\* userData | 用户自定义数据指针。 |
-| void (\*callback)(void\* userData) | Callback to be invoked when the custom dialog box disappears. |
+| void (\*callback)(void\* userData) | 弹窗消失时的事件回调。入参userData为用户自定义数据。 |
 
 **返回：**
 

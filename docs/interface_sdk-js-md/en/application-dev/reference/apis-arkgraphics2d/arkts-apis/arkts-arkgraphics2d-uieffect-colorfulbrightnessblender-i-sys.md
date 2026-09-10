@@ -1,6 +1,6 @@
 # ColorfulBrightnessBlender (System API)
 
-Colorful brightness darken blender, used to add a colorful brightness darken effect to a specified component. Before calling ColorfulBrightnessBlender, you need to first create a ColorfulBrightnessBlender instance through createColorfulBrightnessBlender.
+Hue-preserving brightening and darkening blender, used to add the brightening and darkening effect to a specified component. This effect preserves hue by reconstructing it channel by channel when brightening or darkening the foreground, and can enhance saturation to avoid the desaturation issue of common brightening/darkening; it also uses a luma difference threshold to ensure the contrast between the foreground and background. Before calling ColorfulBrightnessBlender, you need to first create a ColorfulBrightnessBlender instance through createColorfulBrightnessBlender.
 
 **Since:** 26.1.0
 
@@ -20,7 +20,7 @@ import { uiEffect } from '@kit.ArkGraphics2D';
 brightnessBlenderParam: BrightnessBlenderParam
 ```
 
-Regular parameters for the colorful brightness darken effect. For details, see BrightnessBlenderParam.
+Regular parameters for brightening and darkening, used to configure basic properties such as brightness mapping and saturation curves.
 
 **Type:** [BrightnessBlenderParam](arkts-arkgraphics2d-graphics-uieffect-brightnessblenderparam-i-sys.md)
 
@@ -40,7 +40,7 @@ Regular parameters for the colorful brightness darken effect. For details, see B
 options?: ColorfulBrightnessBlenderOptions
 ```
 
-Enhanced parameters for the colorful brightness darken effect. For details, see ColorfulBrightnessBlenderOptions.
+Enhanced parameters for brightening and darkening, used to control the brightening/darkening direction, color enhancement strength, readability threshold, and HDR switch.
 
 **Type:** [ColorfulBrightnessBlenderOptions](arkts-arkgraphics2d-uieffect-colorfulbrightnessblenderoptions-i-sys.md)
 

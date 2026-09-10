@@ -130,7 +130,7 @@ Enumerates the result codes used in the ASSET APIs.
 | Enum item | Description |
 | -- | -- |
 | ASSET_SUCCESS = 0 | The operation is successful. |
-| ASSET_PERMISSION_DENIED = 201 | The caller does not have the required permission. |
+| ASSET_PERMISSION_DENIED = 201 | Permission verification failed. The application does not have the permission required to call the API. |
 | ASSET_INVALID_ARGUMENT = 401 | The parameter is invalid. |
 | ASSET_SERVICE_UNAVAILABLE = 24000001 | The asset store service is unavailable. |
 | ASSET_NOT_FOUND = 24000002 | The asset is not found. |

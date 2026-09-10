@@ -1,4 +1,4 @@
-# @ohos.arkui.node
+# @ohos.arkui.node(自定义节点)
 
 ## 导入模块
 

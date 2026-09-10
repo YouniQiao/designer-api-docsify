@@ -2,7 +2,7 @@
 
 ## 概述
 
-LowPowerVideoSink子模块提供低功耗视频输出的变量、属性和函数。
+LowPowerVideoSink子模块为低功耗播放视频组件提供变量、属性和函数。
 
 **起始版本：** 20
 

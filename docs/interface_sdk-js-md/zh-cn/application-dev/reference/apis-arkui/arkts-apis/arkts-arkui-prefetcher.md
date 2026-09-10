@@ -1,4 +1,4 @@
-# @ohos.arkui.Prefetcher(Prefetching)
+# @ohos.arkui.Prefetcher(内容预取)
 
 ## 导入模块
 

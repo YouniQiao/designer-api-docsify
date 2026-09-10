@@ -408,8 +408,10 @@ onRemoteMessageRequest(
 sendMessageRequest请求的响应处理函数，服务端在该函数里同步或异步地处理请求，回复结果。
 
 > **说明：**
-> &gt;开发者应优先选择重写onRemoteMessageRequest方法，其中可以自由实现同步和异步的消息处理。
-> &gt;开发者同时重写onRemoteRequest和onRemoteMessageRequest方法时，仅onRemoteMessageRequest方法生效。
+> 
+> 开发者应优先选择重写onRemoteMessageRequest方法，其中可以自由实现同步和异步的消息处理。
+> 
+> 开发者同时重写onRemoteRequest和onRemoteMessageRequest方法时，仅onRemoteMessageRequest方法生效。
 
 **起始版本：** 9
 

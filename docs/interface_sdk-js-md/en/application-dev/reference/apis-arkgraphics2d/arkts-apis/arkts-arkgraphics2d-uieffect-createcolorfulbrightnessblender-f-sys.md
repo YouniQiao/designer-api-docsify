@@ -13,7 +13,7 @@ function createColorfulBrightnessBlender(brightnessBlenderParam: BrightnessBlend
     options?: ColorfulBrightnessBlenderOptions): ColorfulBrightnessBlender
 ```
 
-Creates a ColorfulBrightnessBlender instance for adding a colorful brightness darken effect to a component.
+Creates a ColorfulBrightnessBlender instance to add a hue-preserving brightening and darkening effect to a component. This effect preserves hue by reconstructing it channel by channel when brightening or darkening the foreground, and can enhance saturation to avoid the desaturation issue of common brightening/darkening.
 
 **Since:** 26.1.0
 
@@ -29,11 +29,11 @@ Creates a ColorfulBrightnessBlender instance for adding a colorful brightness da
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| brightnessBlenderParam | [BrightnessBlenderParam](arkts-arkgraphics2d-graphics-uieffect-brightnessblenderparam-i-sys.md) | Yes | Regular parameters for the colorful brightness darken effect. |
-| options | [ColorfulBrightnessBlenderOptions](arkts-arkgraphics2d-uieffect-colorfulbrightnessblenderoptions-i-sys.md) | No | Enhanced parameters for the colorful brightness darken effect. |
+| brightnessBlenderParam | [BrightnessBlenderParam](arkts-arkgraphics2d-graphics-uieffect-brightnessblenderparam-i-sys.md) | Yes | Regular parameters for brightening and darkening, used to configure basic properties such as brightness mapping and saturation curves. |
+| options | [ColorfulBrightnessBlenderOptions](arkts-arkgraphics2d-uieffect-colorfulbrightnessblenderoptions-i-sys.md) | No | Enhanced parameters for brightening and darkening, used to control the brightening/darkening direction, color enhancement strength, readability threshold, and HDR switch. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ColorfulBrightnessBlender](arkts-arkgraphics2d-uieffect-colorfulbrightnessblender-i-sys.md) | Returns the colorful brightness darken blender. |
+| [ColorfulBrightnessBlender](arkts-arkgraphics2d-uieffect-colorfulbrightnessblender-i-sys.md) | Returns the hue-preserving brightening and darkening blender. |

@@ -26,6 +26,7 @@ This file defines the APIs for the cloud disk management module.
 | [CloudDisk_ResultList](capi-clouddisk-clouddisk-resultlist.md) | CloudDisk_ResultList | A struct that encapsulates the file sync result. It includes the absolute path of the file, sync result, andsync state or failure cause. |
 | [CloudDisk_DisplayNameInfo](capi-clouddisk-clouddisk-displaynameinfo.md) | CloudDisk_DisplayNameInfo | A struct that encapsulates the display name of the sync root path. |
 | [CloudDisk_SyncFolder](capi-clouddisk-clouddisk-syncfolder.md) | CloudDisk_SyncFolder | A struct that encapsulates the sync root property information. |
+| [OH_CloudDisk_SyncFolderEx](capi-clouddisk-oh-clouddisk-syncfolderex.md) | OH_CloudDisk_SyncFolderEx | Defines the sync folder of cloud disk with placeholder support.The version field must be set to a valid version macro (e.g.{@link OH_CLOUD_DISK_SYNC_FOLDER_EX_VERSION_1}) before passing thisstructure to any API. The runtime uses version to determine whichfields are valid; fields introduced in a later version are ignoredwhen a lower version is specified. |
 | [OH_CloudDisk_PlaceholderInfo](capi-clouddisk-oh-clouddisk-placeholderinfo.md) | OH_CloudDisk_PlaceholderInfo | Metadata information for the placeholder file. |
 
 ### Enum
@@ -36,6 +37,12 @@ This file defines the APIs for the cloud disk management module.
 | [CloudDisk_OperationType](#clouddisk_operationtype) | CloudDisk_OperationType | Enumerates the file change types. |
 | [CloudDisk_ErrorReason](#clouddisk_errorreason) | CloudDisk_ErrorReason | Enumerates the file sync failure causes. |
 | [CloudDisk_SyncFolderState](#clouddisk_syncfolderstate) | CloudDisk_SyncFolderState | Enumerates the sync root path states. |
+
+### Macro
+
+| Name | Description |
+| -- | -- |
+| OH_CLOUD_DISK_SYNC_FOLDER_EX_VERSION_1 1 | Indicates the version 1 of OH_CloudDisk_SyncFolderEx.When the structure is extended, a new version macro will be defined.The runtime uses the version field to determine which fields are valid.<br>**Since**: 26.1.0 |
 
 ### Function
 
@@ -56,6 +63,8 @@ This file defines the APIs for the cloud disk management module.
 | [CloudDisk_ErrorCode OH_CloudDisk_IsPlaceholderFile(const CloudDisk_SyncFolderPath syncFolderPath, const CloudDisk_PathInfo relativePathInfo, bool *isPlaceholder)](#oh_clouddisk_isplaceholderfile) | Checks whether a file in a sync folder is a placeholder file. |
 | [CloudDisk_ErrorCode OH_CloudDisk_ConvertPlaceholderToFile(const CloudDisk_SyncFolderPath syncFolderPath, const CloudDisk_PathInfo relativePathInfo)](#oh_clouddisk_convertplaceholdertofile) | Converts a placeholder file to a 0-byte normal file. |
 | [CloudDisk_ErrorCode OH_CloudDisk_UpdatePlaceholder(const CloudDisk_SyncFolderPath syncFolderPath, const CloudDisk_PathInfo relativePathInfo, const OH_CloudDisk_PlaceholderInfo placeholderInfo)](#oh_clouddisk_updateplaceholder) | Updates file metadata (supports placeholder and normal files). |
+| [CloudDisk_ErrorCode OH_CloudDisk_RegisterSyncFolderEx(const OH_CloudDisk_SyncFolderEx *syncFolder)](#oh_clouddisk_registersyncfolderex) | Registers a sync folder with placeholder support info. |
+| [CloudDisk_ErrorCode OH_CloudDisk_GetSyncFoldersEx(OH_CloudDisk_SyncFolderEx **syncFolders, size_t *count)](#oh_clouddisk_getsyncfoldersex) | Gets the sync folders with placeholder support info. |
 
 ## Enum type description
 
@@ -523,5 +532,54 @@ Updates file metadata (supports placeholder and normal files).
 | Type | Description |
 | -- | -- |
 | CloudDisk_ErrorCode | Returns {@link CLOUD_DISK_OK} if the API is called successfully;      <br>returns {@link CloudDisk_ErrorCode} otherwise. |
+
+### OH_CloudDisk_RegisterSyncFolderEx()
+
+```c
+CloudDisk_ErrorCode OH_CloudDisk_RegisterSyncFolderEx(const OH_CloudDisk_SyncFolderEx *syncFolder)
+```
+
+**Description**
+
+Registers a sync folder with placeholder support info.
+
+**Since**: 26.1.0
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| [const OH_CloudDisk_SyncFolderEx](capi-clouddisk-oh-clouddisk-syncfolderex.md) *syncFolder | [in] Indicates the sync folder with placeholder support. |
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| CloudDisk_ErrorCode | Returns {@link CLOUD_DISK_OK} if the operation is successful;      <br> returns an error code defined in {@link CloudDisk_ErrorCode} otherwise. |
+
+### OH_CloudDisk_GetSyncFoldersEx()
+
+```c
+CloudDisk_ErrorCode OH_CloudDisk_GetSyncFoldersEx(OH_CloudDisk_SyncFolderEx **syncFolders, size_t *count)
+```
+
+**Description**
+
+Gets the sync folders with placeholder support info.
+
+**Since**: 26.1.0
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| [OH_CloudDisk_SyncFolderEx](capi-clouddisk-oh-clouddisk-syncfolderex.md) **syncFolders | [out] Output parameter.<br> Returns the array of [OH_CloudDisk_SyncFolderEx](capi-clouddisk-oh-clouddisk-syncfolderex.md) to store the sync folders. |
+| size_t *count | [out] Output parameter. Returns the number of sync folders. |
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| CloudDisk_ErrorCode | Returns {@link CLOUD_DISK_OK} if the operation is successful;      <br> returns an error code defined in {@link CloudDisk_ErrorCode} otherwise. |
 
 

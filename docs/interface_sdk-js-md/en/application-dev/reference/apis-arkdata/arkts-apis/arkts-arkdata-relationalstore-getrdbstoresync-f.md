@@ -37,7 +37,7 @@ Obtains a RDB store. You can set parameters of the RDB store as required. This i
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [14800001](../errorcode-data-rdb.md#14800001-invalid-arguments) | Invalid args. |
+| [14800001](../errorcode-data-rdb.md#14800001-invalid-parameter) | Invalid args. |
 | [14800010](../errorcode-data-rdb.md#14800010-invalid-database-path) | Invalid database path. |
 | [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) | The current operation failed because the database is corrupted. |
 | [14801001](../errorcode-data-rdb.md#14801001-stage-model-required) | The operation is supported in the stage model only. |

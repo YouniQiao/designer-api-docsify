@@ -54,7 +54,7 @@ int32_t OH_Asset_Add(const Asset_Attr *attributes, uint32_t attrCnt)
 
 | 类型 | 说明 |
 | -- | -- |
-| int32_t | {@link ASSET_SUCCESS} 0 - 操作成功。      {@link ASSET_PERMISSION_DENIED} 201 - 调用者没有权限。      {@link ASSET_INVALID_ARGUMENT} 401 - 参数错误。可能原因：          1. 必选参数未指定。          2. 参数类型错误。          3. 参数校验失败。      {@link ASSET_SERVICE_UNAVAILABLE} 24000001 - 关键资产服务不可用。      {@link ASSET_DUPLICATED} 24000003 - 关键资产已存在。      {@link ASSET_STATUS_MISMATCH} 24000005 - 锁屏状态不匹配。      {@link ASSET_OUT_OF_MEMORY} 24000006 - 系统内存不足。      {@link ASSET_DATA_CORRUPTED} 24000007 - 关键资产损坏。      {@link ASSET_DATABASE_ERROR} 24000008 - 数据库操作失败。      {@link ASSET_CRYPTO_ERROR} 24000009 - 算法库操作失败。      {@link ASSET_IPC_ERROR} 24000010 - 进程通信错误。      {@link ASSET_BMS_ERROR} 24000011 - 包管理服务异常。      {@link ASSET_ACCOUNT_ERROR} 24000012 - 账号系统服务异常。      {@link ASSET_ACCESS_TOKEN_ERROR} 24000013 - 访问控制服务异常。      {@link ASSET_FILE_OPERATION_ERROR} 24000014 - 文件操作失败。      {@link ASSET_GET_SYSTEM_TIME_ERROR} 24000015 - 获取系统时间失败。 |
+| int32_t | {@link ASSET_SUCCESS} 0 - 操作成功。      {@link ASSET_PERMISSION_DENIED} 201 - 权限校验失败，应用无权限使用该API，需要申请权限。      {@link ASSET_INVALID_ARGUMENT} 401 - 参数错误。可能原因：          1. 必选参数未指定。          2. 参数类型错误。          3. 参数校验失败。      {@link ASSET_SERVICE_UNAVAILABLE} 24000001 - 关键资产服务不可用。      {@link ASSET_DUPLICATED} 24000003 - 关键资产已存在。      {@link ASSET_STATUS_MISMATCH} 24000005 - 锁屏状态不匹配。      {@link ASSET_OUT_OF_MEMORY} 24000006 - 系统内存不足。      {@link ASSET_DATA_CORRUPTED} 24000007 - 关键资产损坏。      {@link ASSET_DATABASE_ERROR} 24000008 - 数据库操作失败。      {@link ASSET_CRYPTO_ERROR} 24000009 - 算法库操作失败。      {@link ASSET_IPC_ERROR} 24000010 - 进程通信错误。      {@link ASSET_BMS_ERROR} 24000011 - 包管理服务异常。      {@link ASSET_ACCOUNT_ERROR} 24000012 - 账号系统服务异常。      {@link ASSET_ACCESS_TOKEN_ERROR} 24000013 - 访问控制服务异常。      {@link ASSET_FILE_OPERATION_ERROR} 24000014 - 文件操作失败。      {@link ASSET_GET_SYSTEM_TIME_ERROR} 24000015 - 获取系统时间失败。 |
 
 ### OH_Asset_Remove()
 
@@ -79,7 +79,7 @@ int32_t OH_Asset_Remove(const Asset_Attr *query, uint32_t queryCnt)
 
 | 类型 | 说明 |
 | -- | -- |
-| int32_t | {@link ASSET_SUCCESS} 0 - 操作成功。      {@link ASSET_INVALID_ARGUMENT} 401 - 参数错误。可能原因：          1. 参数类型错误。          2. 参数校验失败。      {@link ASSET_SERVICE_UNAVAILABLE} 24000001 - 关键资产服务不可用。      {@link ASSET_NOT_FOUND} 24000002 - 未找到关键资产。      {@link ASSET_OUT_OF_MEMORY} 24000006 - 系统内存不足。      {@link ASSET_DATA_CORRUPTED} 24000007 - 关键资产损坏。      {@link ASSET_DATABASE_ERROR} 24000008 - 数据库操作失败。      {@link ASSET_IPC_ERROR} 24000010 - 进程通信错误。      {@link ASSET_BMS_ERROR} 24000011 - 包管理服务异常。      {@link ASSET_ACCOUNT_ERROR} 24000012 - 账号系统服务异常。      {@link ASSET_ACCESS_TOKEN_ERROR} 24000013 - 访问控制服务异常。      {@link ASSET_GET_SYSTEM_TIME_ERROR} 24000015 - 获取系统时间失败。 |
+| int32_t | {@link ASSET_SUCCESS} 0 - 操作成功。      {@link ASSET_INVALID_ARGUMENT} 401 - 参数错误。可能原因：          1. 必选参数未指定。          2. 参数类型错误。          3. 参数校验失败。      {@link ASSET_SERVICE_UNAVAILABLE} 24000001 - 关键资产服务不可用。      {@link ASSET_NOT_FOUND} 24000002 - 未找到关键资产。      {@link ASSET_OUT_OF_MEMORY} 24000006 - 系统内存不足。      {@link ASSET_DATA_CORRUPTED} 24000007 - 关键资产损坏。      {@link ASSET_DATABASE_ERROR} 24000008 - 数据库操作失败。      {@link ASSET_IPC_ERROR} 24000010 - 进程通信错误。      {@link ASSET_BMS_ERROR} 24000011 - 包管理服务异常。      {@link ASSET_ACCOUNT_ERROR} 24000012 - 账号系统服务异常。      {@link ASSET_ACCESS_TOKEN_ERROR} 24000013 - 访问控制服务异常。      {@link ASSET_GET_SYSTEM_TIME_ERROR} 24000015 - 获取系统时间失败。 |
 
 ### OH_Asset_Update()
 
@@ -132,7 +132,7 @@ int32_t OH_Asset_PreQuery(const Asset_Attr *query, uint32_t queryCnt, Asset_Blob
 
 | 类型 | 说明 |
 | -- | -- |
-| int32_t | {@link ASSET_SUCCESS} 0 - 操作成功。      {@link ASSET_INVALID_ARGUMENT} 401 - 参数错误。可能原因：          1. 参数类型错误。          2. 参数校验失败。      {@link ASSET_SERVICE_UNAVAILABLE} 24000001 - 关键资产服务不可用。      {@link ASSET_NOT_FOUND} 24000002 - 未找到关键资产。      {@link ASSET_STATUS_MISMATCH} 24000005 - 锁屏状态不匹配。      {@link ASSET_OUT_OF_MEMORY} 24000006 - 系统内存不足。      {@link ASSET_DATA_CORRUPTED} 24000007 - 关键资产损坏。      {@link ASSET_DATABASE_ERROR} 24000008 - 数据库操作失败。      {@link ASSET_CRYPTO_ERROR} 24000009 - 算法库操作失败。      {@link ASSET_IPC_ERROR} 24000010 - 进程通信错误。      {@link ASSET_BMS_ERROR} 24000011 - 包管理服务异常。      {@link ASSET_ACCOUNT_ERROR} 24000012 - 账号系统服务异常。      {@link ASSET_ACCESS_TOKEN_ERROR} 24000013 - 访问控制服务异常。      {@link ASSET_LIMIT_EXCEEDED} 24000016 - 缓存数量超限。      {@link ASSET_UNSUPPORTED} 24000017 - 该子功能不支持。 |
+| int32_t | {@link ASSET_SUCCESS} 0 - 操作成功。      {@link ASSET_INVALID_ARGUMENT} 401 - 参数错误。可能原因：          1. 必选参数未指定。          2. 参数类型错误。          3. 参数校验失败。      {@link ASSET_SERVICE_UNAVAILABLE} 24000001 - 关键资产服务不可用。      {@link ASSET_NOT_FOUND} 24000002 - 未找到关键资产。      {@link ASSET_STATUS_MISMATCH} 24000005 - 锁屏状态不匹配。      {@link ASSET_OUT_OF_MEMORY} 24000006 - 系统内存不足。      {@link ASSET_DATA_CORRUPTED} 24000007 - 关键资产损坏。      {@link ASSET_DATABASE_ERROR} 24000008 - 数据库操作失败。      {@link ASSET_CRYPTO_ERROR} 24000009 - 算法库操作失败。      {@link ASSET_IPC_ERROR} 24000010 - 进程通信错误。      {@link ASSET_BMS_ERROR} 24000011 - 包管理服务异常。      {@link ASSET_ACCOUNT_ERROR} 24000012 - 账号系统服务异常。      {@link ASSET_ACCESS_TOKEN_ERROR} 24000013 - 访问控制服务异常。      {@link ASSET_LIMIT_EXCEEDED} 24000016 - 缓存数量超限。      {@link ASSET_UNSUPPORTED} 24000017 - 该子功能不支持。 |
 
 ### OH_Asset_Query()
 
@@ -158,7 +158,7 @@ int32_t OH_Asset_Query(const Asset_Attr *query, uint32_t queryCnt, Asset_ResultS
 
 | 类型 | 说明 |
 | -- | -- |
-| int32_t | {@link ASSET_SUCCESS} 0 - 操作成功。      {@link ASSET_INVALID_ARGUMENT} 401 - 参数错误。可能原因：          1. 参数类型错误。          2. 参数校验失败。      {@link ASSET_SERVICE_UNAVAILABLE} 24000001 - 关键资产服务不可用。      {@link ASSET_NOT_FOUND} 24000002 - 未找到关键资产。      {@link ASSET_ACCESS_DENIED} 24000004 - 访问被拒绝。      {@link ASSET_STATUS_MISMATCH} 24000005 - 锁屏状态不匹配。      {@link ASSET_OUT_OF_MEMORY} 24000006 - 系统内存不足。      {@link ASSET_DATA_CORRUPTED} 24000007 - 关键资产损坏。      {@link ASSET_DATABASE_ERROR} 24000008 - 数据库操作失败。      {@link ASSET_CRYPTO_ERROR} 24000009 - 算法库操作失败。      {@link ASSET_IPC_ERROR} 24000010 - 进程通信错误。      {@link ASSET_BMS_ERROR} 24000011 - 包管理服务异常。      {@link ASSET_ACCOUNT_ERROR} 24000012 - 账号系统服务异常。      {@link ASSET_ACCESS_TOKEN_ERROR} 24000013 - 访问控制服务异常。      {@link ASSET_UNSUPPORTED} 24000017 - 该子功能不支持。 |
+| int32_t | {@link ASSET_SUCCESS} 0 - 操作成功。      {@link ASSET_INVALID_ARGUMENT} 401 - 参数错误。可能原因：          1. 必选参数未指定。          2. 参数类型错误。          3. 参数校验失败。      {@link ASSET_SERVICE_UNAVAILABLE} 24000001 - 关键资产服务不可用。      {@link ASSET_NOT_FOUND} 24000002 - 未找到关键资产。      {@link ASSET_ACCESS_DENIED} 24000004 - 访问被拒绝。      {@link ASSET_STATUS_MISMATCH} 24000005 - 锁屏状态不匹配。      {@link ASSET_OUT_OF_MEMORY} 24000006 - 系统内存不足。      {@link ASSET_DATA_CORRUPTED} 24000007 - 关键资产损坏。      {@link ASSET_DATABASE_ERROR} 24000008 - 数据库操作失败。      {@link ASSET_CRYPTO_ERROR} 24000009 - 算法库操作失败。      {@link ASSET_IPC_ERROR} 24000010 - 进程通信错误。      {@link ASSET_BMS_ERROR} 24000011 - 包管理服务异常。      {@link ASSET_ACCOUNT_ERROR} 24000012 - 账号系统服务异常。      {@link ASSET_ACCESS_TOKEN_ERROR} 24000013 - 访问控制服务异常。      {@link ASSET_UNSUPPORTED} 24000017 - 该子功能不支持。 |
 
 ### OH_Asset_PostQuery()
 

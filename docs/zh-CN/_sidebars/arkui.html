@@ -779,7 +779,7 @@
 <li><a href="#/interface_sdk-js-md/zh-cn/application-dev/reference/apis-arkui/arkts-apis/arkts-arkui-inspector-componentobserver-i.md">ComponentObserver</a></li>
 </ul>
 </details></li>
-<li><a href="#/interface_sdk-js-md/zh-cn/application-dev/reference/apis-arkui/arkts-apis/arkts-arkui-node.md">@ohos.arkui.node</a></li>
+<li><a href="#/interface_sdk-js-md/zh-cn/application-dev/reference/apis-arkui/arkts-apis/arkts-arkui-node.md">@ohos.arkui.node(自定义节点)</a></li>
 <li class="has-children"><details>
 <summary>@ohos.arkui.observer <a href="#/interface_sdk-js-md/zh-cn/application-dev/reference/apis-arkui/arkts-apis/arkts-arkui-observer.md" class="tree-nav" onclick="event.stopPropagation()" title="Open page">↗</a></summary>
 <ul class="tree-l2">
@@ -813,7 +813,7 @@
 </ul>
 </details></li>
 <li class="has-children"><details>
-<summary>@ohos.arkui.Prefetcher(Prefetching) <a href="#/interface_sdk-js-md/zh-cn/application-dev/reference/apis-arkui/arkts-apis/arkts-arkui-prefetcher.md" class="tree-nav" onclick="event.stopPropagation()" title="Open page">↗</a></summary>
+<summary>@ohos.arkui.Prefetcher(内容预取) <a href="#/interface_sdk-js-md/zh-cn/application-dev/reference/apis-arkui/arkts-apis/arkts-arkui-prefetcher.md" class="tree-nav" onclick="event.stopPropagation()" title="Open page">↗</a></summary>
 <ul class="tree-l2">
 <li><a href="#/interface_sdk-js-md/zh-cn/application-dev/reference/apis-arkui/arkts-apis/arkts-arkui-arkui-prefetcher-basicprefetcher-c.md">BasicPrefetcher</a></li>
 <li><a href="#/interface_sdk-js-md/zh-cn/application-dev/reference/apis-arkui/arkts-apis/arkts-arkui-arkui-prefetcher-idatasourceprefetching-i.md">IDataSourcePrefetching</a></li>
@@ -2629,14 +2629,9 @@
 <li><a href="#/interface_sdk_c-md/zh-cn/application-dev/reference/apis-arkui/c-apis/capi-arkui-rendernodeutils-arkui-rendernodemaskoption.md">ArkUI_RenderNodeMaskOption</a></li>
 <li><a href="#/interface_sdk_c-md/zh-cn/application-dev/reference/apis-arkui/c-apis/capi-arkui-rendernodeutils-arkui-rendernodeclipoption.md">ArkUI_RenderNodeClipOption</a></li>
 <li><a href="#/interface_sdk_c-md/zh-cn/application-dev/reference/apis-arkui/c-apis/capi-arkui-rendernodeutils-arkui-renderblurstyleoption.md">ArkUI_RenderBlurStyleOption</a></li>
-<li><a href="#/interface_sdk_c-md/zh-cn/application-dev/reference/apis-arkui/c-apis/capi-arkui-nativemodule-arkui-pickerindicatorbackground.md">ArkUI_PickerIndicatorBackground</a></li>
-<li><a href="#/interface_sdk_c-md/zh-cn/application-dev/reference/apis-arkui/c-apis/capi-arkui-nativemodule-arkui-pickerindicatordivider.md">ArkUI_PickerIndicatorDivider</a></li>
-<li><a href="#/interface_sdk_c-md/zh-cn/application-dev/reference/apis-arkui/c-apis/capi-arkui-nativemodule-arkui-textpickerrangecontent.md">ARKUI_TextPickerRangeContent</a></li>
-<li><a href="#/interface_sdk_c-md/zh-cn/application-dev/reference/apis-arkui/c-apis/capi-arkui-nativemodule-arkui-textpickercascaderangecontent.md">ARKUI_TextPickerCascadeRangeContent</a></li>
 <li><a href="#/interface_sdk_c-md/zh-cn/application-dev/reference/apis-arkui/c-apis/capi-arkui-nativemodule-arkui-colorstop.md">ArkUI_ColorStop</a></li>
 <li><a href="#/interface_sdk_c-md/zh-cn/application-dev/reference/apis-arkui/c-apis/capi-arkui-nativemodule-arkui-nativedialog.md">ArkUI_NativeDialog</a></li>
 <li><a href="#/interface_sdk_c-md/zh-cn/application-dev/reference/apis-arkui/c-apis/capi-arkui-nativemodule-arkui-nativedialog8h.md">ArkUI_NativeDialog*</a></li>
-<li><a href="#/interface_sdk_c-md/zh-cn/application-dev/reference/apis-arkui/c-apis/capi-arkui-nativemodule-arkui-pickerindicatorstyle.md">ArkUI_PickerIndicatorStyle</a></li>
 <li><a href="#/interface_sdk_c-md/zh-cn/application-dev/reference/apis-arkui/c-apis/capi-arkui-nativemodule-arkui-swiperindicator.md">ArkUI_SwiperIndicator</a></li>
 <li><a href="#/interface_sdk_c-md/zh-cn/application-dev/reference/apis-arkui/c-apis/capi-arkui-nativemodule-arkui-swiperdigitindicator.md">ArkUI_SwiperDigitIndicator</a></li>
 <li><a href="#/interface_sdk_c-md/zh-cn/application-dev/reference/apis-arkui/c-apis/capi-arkui-nativemodule-arkui-swiperarrowstyle.md">ArkUI_SwiperArrowStyle</a></li>
@@ -2747,6 +2742,11 @@
 <li><a href="#/interface_sdk_c-md/zh-cn/application-dev/reference/apis-arkui/c-apis/capi-arkui-nativemodule-oh-arkui-fontweightconfigs.md">OH_ArkUI_FontWeightConfigs</a></li>
 <li><a href="#/interface_sdk_c-md/zh-cn/application-dev/reference/apis-arkui/c-apis/capi-arkui-nativemodule-oh-arkui-fontconfigs.md">OH_ArkUI_FontConfigs</a></li>
 <li><a href="#/interface_sdk_c-md/zh-cn/application-dev/reference/apis-arkui/c-apis/capi-arkui-nativemodule-oh-arkui-nativemodule-linespacingoptions.md">OH_ArkUI_NativeModule_LineSpacingOptions</a></li>
+<li><a href="#/interface_sdk_c-md/zh-cn/application-dev/reference/apis-arkui/c-apis/capi-arkui-nativemodule-arkui-textpickerrangecontent.md">ARKUI_TextPickerRangeContent</a></li>
+<li><a href="#/interface_sdk_c-md/zh-cn/application-dev/reference/apis-arkui/c-apis/capi-arkui-nativemodule-arkui-textpickercascaderangecontent.md">ARKUI_TextPickerCascadeRangeContent</a></li>
+<li><a href="#/interface_sdk_c-md/zh-cn/application-dev/reference/apis-arkui/c-apis/capi-arkui-nativemodule-arkui-pickerindicatorbackground.md">ArkUI_PickerIndicatorBackground</a></li>
+<li><a href="#/interface_sdk_c-md/zh-cn/application-dev/reference/apis-arkui/c-apis/capi-arkui-nativemodule-arkui-pickerindicatordivider.md">ArkUI_PickerIndicatorDivider</a></li>
+<li><a href="#/interface_sdk_c-md/zh-cn/application-dev/reference/apis-arkui/c-apis/capi-arkui-nativemodule-arkui-pickerindicatorstyle.md">ArkUI_PickerIndicatorStyle</a></li>
 <li><a href="#/interface_sdk_c-md/zh-cn/application-dev/reference/apis-arkui/c-apis/capi-arkui-nativemodule-arkui-textpickerrangecontentarray.md">ArkUI_TextPickerRangeContentArray</a></li>
 <li><a href="#/interface_sdk_c-md/zh-cn/application-dev/reference/apis-arkui/c-apis/capi-arkui-nativemodule-arkui-textcascadepickerrangecontentarray.md">ArkUI_TextCascadePickerRangeContentArray</a></li>
 </ul>

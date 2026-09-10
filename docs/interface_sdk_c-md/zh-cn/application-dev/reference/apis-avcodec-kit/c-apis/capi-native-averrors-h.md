@@ -34,22 +34,20 @@ enum OH_AVErrCode
 
 媒体框架错误码。
 
-**系统能力：** SystemCapability.Multimedia.Media.Core
-
 **起始版本：** 9
 
 | 枚举项 | 描述 |
 | -- | -- |
-| AV_ERR_OK = 0 | 操作成功。 |
-| AV_ERR_NO_MEMORY = 1 | 无内存。 |
-| AV_ERR_OPERATE_NOT_PERMIT = 2 | 操作不允许。 |
-| AV_ERR_INVALID_VAL = 3 | 无效值。 |
-| AV_ERR_IO = 4 | IO错误。 |
-| AV_ERR_TIMEOUT = 5 | 超时错误。 |
-| AV_ERR_UNKNOWN = 6 | 未知错误。 |
-| AV_ERR_SERVICE_DIED = 7 | 服务死亡。 |
-| AV_ERR_INVALID_STATE = 8 | 当前状态不支持此操作。 |
-| AV_ERR_UNSUPPORT = 9 | 未支持的接口。 |
+| AV_ERR_OK = 0 |  |
+| AV_ERR_NO_MEMORY = 1 |  |
+| AV_ERR_OPERATE_NOT_PERMIT = 2 |  |
+| AV_ERR_INVALID_VAL = 3 |  |
+| AV_ERR_IO = 4 |  |
+| AV_ERR_TIMEOUT = 5 |  |
+| AV_ERR_UNKNOWN = 6 |  |
+| AV_ERR_SERVICE_DIED = 7 |  |
+| AV_ERR_INVALID_STATE = 8 |  |
+| AV_ERR_UNSUPPORT = 9 |  |
 | AV_ERR_INPUT_DATA_ERROR = 10 |  输入数据错误。<br>**起始版本：** 12 |
 | AV_ERR_UNSUPPORTED_FORMAT = 11 |  不支持的格式。<br>**起始版本：** 18 |
 | AV_ERR_EXTEND_START = 100 | 扩展错误码初始值。 |

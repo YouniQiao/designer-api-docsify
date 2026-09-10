@@ -2,7 +2,7 @@
 
 ## 概述
 
-Defines a set of CustomSpan enum and interface.
+定义CustomSpan相关的结构体和接口，用于实现自定义绘制Span的精确尺寸测量、布局排版和绘制效果。支持开发者在富文本编辑器、聊天应用、文档应用等场景中实现图文混排、表情内嵌、自定义标记等功能，提供灵活的自定义绘制Span能力，帮助开发者提升开发效率，实现更丰富的文本排版效果。
 
 **库：** libace_ndk.z.so
 

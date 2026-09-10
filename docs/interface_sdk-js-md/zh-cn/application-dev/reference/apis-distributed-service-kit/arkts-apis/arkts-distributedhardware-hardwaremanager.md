@@ -1,4 +1,4 @@
-# @ohos.distributedHardware.hardwareManager
+# @ohos.distributedHardware.hardwareManager(分布式硬件管理)
 
 分布式硬件管理模块提供控制分布式硬件的能力，包括暂停、恢复和停止被控端分布式硬件业务。
 

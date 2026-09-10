@@ -2,7 +2,7 @@
 
 ## 概述
 
-定义了媒体AVRecorder的结构体、枚举和回调函数。
+定义AVRecorder的结构体、枚举和回调函数类型。
 
 **引用文件：** <multimedia/player_framework/avrecorder_base.h>
 
@@ -159,11 +159,11 @@ AVRecorder状态，用于表示录制器在生命周期中的不同阶段，不�
 | -- | -- |
 | AVRECORDER_IDLE = 0 | 空闲状态，为AVRecorder实例创建后的默认初始状态。此时可以调用{@link OH_AVRecorder_Prepare}接口设置录制参数，进入AVRECORDER_PREPARED状态。 |
 | AVRECORDER_PREPARED = 1 | 准备状态。参数设置完成，此时可以调用{@link OH_AVRecorder_Start}接口开始录制，进入AVRECORDER_STARTED状态。 |
-| AVRECORDER_STARTED = 2 | 启动状态。正在录制，此时可以调用{@link OH_AVRecorder_Pause}接口暂停录制，进入AVRECORDER_PAUSED状态。也可以调用{@link OH_AVRecorder_Stop}接口结束录制，进入AVRECORDER_STOPPED状态。 |
-| AVRECORDER_PAUSED = 3 | 暂停状态。此时可以调用{@link OH_AVRecorder_Resume}接口继续录制，进入AVRECORDER_STARTED状态。也可以调用{@link OH_AVRecorder_Stop}接口结束录制，进入AVRECORDER_STOPPED状态。 |
+| AVRECORDER_STARTED = 2 | 启动状态。正在录制，此时可以调用{@link OH_AVRecorder_Pause}接口暂停录制，进入AVRECORDER_PAUSED状态。<br>也可以调用{@link OH_AVRecorder_Stop}接口结束录制，进入AVRECORDER_STOPPED状态。 |
+| AVRECORDER_PAUSED = 3 | 暂停状态。此时可以调用{@link OH_AVRecorder_Resume}接口继续录制，进入AVRECORDER_STARTED状态。<br>也可以调用{@link OH_AVRecorder_Stop}接口结束录制，进入AVRECORDER_STOPPED状态。 |
 | AVRECORDER_STOPPED = 4 | 停止状态。此时可以调用{@link OH_AVRecorder_Prepare}接口设置录制参数，重新进入AVRECORDER_PREPARED状态。 |
 | AVRECORDER_RELEASED = 5 | 释放状态。录制资源释放，此时不能再进行任何操作。在任何其他状态下，均可以通过调用{@link OH_AVRecorder_Release}接口进入AVRECORDER_RELEASED状态。 |
-| AVRECORDER_ERROR = 6 | 错误状态。当AVRecorder实例发生不可逆错误，会转换至该状态。在AVRECORDER_ERROR状态时，不能再进行录制相关操作，用户需要调用{@link OH_AVRecorder_Reset}接口重置AVRecorder实例，或者调用{@link OH_AVRecorder_Release}接口释放资源。 |
+| AVRECORDER_ERROR = 6 | 错误状态。当AVRecorder实例发生不可逆错误，会转换至该状态。<br>在AVRECORDER_ERROR状态时，不能再进行录制相关操作，用户需要调用{@link OH_AVRecorder_Reset}接口重置AVRecorder实例，或者调用{@link OH_AVRecorder_Release}接口释放资源。 |
 
 ### OH_AVRecorder_StateChangeReason
 

@@ -2,7 +2,9 @@
 
 ## 概述
 
-Declares the APIs for Transient task management.
+提供短时任务申请、查询、取消功能。短时任务允许应用在后台获得有限的时间延长以完成关键操作。系统为每个应用分配每日配额限制，超时前通过回调通知应用，超时后系统会挂起应用。
+
+**引用文件：** <transient_task/transient_task_api.h>
 
 **库：** libtransient_task.so
 
@@ -49,7 +51,7 @@ int32_t OH_BackgroundTaskManager_RequestSuspendDelay(const char* reason, Transie
 
 | 类型 | 说明 |
 | -- | -- |
-| int32_t | 返回0，表示申请成功。      返回401，表示入参错误。      返回9800002，表示Parcel读写操作失败。      返回9800003，表示IPC通信失败。      返回9800004，表示系统服务失败。      返回9900001，表示短时任务客户端信息校验失败。      返回9900002，表示短时任务服务端校验失败。      错误码的具体信息请参考{@link TransientTask_ErrorCode}。 |
+| int32_t | 返回0，表示申请成功。      <br>返回401，表示入参错误。      <br>返回9800002，表示Parcel读写操作失败。      <br>返回9800003，表示IPC通信失败。      <br>返回9800004，表示系统服务失败。      <br>返回9900001，表示短时任务客户端信息校验失败。      <br>返回9900002，表示短时任务服务端校验失败。      <br>错误码的具体信息请参考[TransientTask_ErrorCode](capi-transient-task-type-h.md#transienttask_errorcode)。 |
 
 ### OH_BackgroundTaskManager_GetRemainingDelayTime()
 
@@ -67,14 +69,14 @@ int32_t OH_BackgroundTaskManager_GetRemainingDelayTime(int32_t requestId, int32_
 
 | 参数项 | 描述 |
 | -- | -- |
-| int32_t requestId | 短时任务的请求ID。 |
+| int32_t requestId | 短时任务的请求ID。为[OH_BackgroundTaskManager_RequestSuspendDelay][OH_BackgroundTaskManager_RequestSuspendDelay](capi-transient-task-api-h.md#oh_backgroundtaskmanager_requestsuspenddelay)成功返回的requestId。 |
 | int32_t *delayTime | 短时任务的剩余时间，单位：ms。 |
 
 **返回：**
 
 | 类型 | 说明 |
 | -- | -- |
-| int32_t | 返回0，表示查询成功。      返回401，表示入参错误。      返回9800002，表示Parcel读写操作失败。      返回9800003，表示IPC通信失败。      返回9800004，表示系统服务失败。      返回9900001，表示短时任务客户端信息校验失败。      返回9900002，表示短时任务服务端校验失败。      错误码的具体信息请参考{@link TransientTask_ErrorCode}。 |
+| int32_t | 返回0，表示查询成功。      <br>返回401，表示入参错误。      <br>返回9800002，表示Parcel读写操作失败。      <br>返回9800003，表示IPC通信失败。      <br>返回9800004，表示系统服务失败。      <br>返回9900001，表示短时任务客户端信息校验失败。      <br>返回9900002，表示短时任务服务端校验失败。      <br>错误码的具体信息请参考[TransientTask_ErrorCode](capi-transient-task-type-h.md#transienttask_errorcode)。 |
 
 ### OH_BackgroundTaskManager_CancelSuspendDelay()
 
@@ -92,13 +94,13 @@ int32_t OH_BackgroundTaskManager_CancelSuspendDelay(int32_t requestId)
 
 | 参数项 | 描述 |
 | -- | -- |
-| int32_t requestId | 短时任务的请求ID。 |
+| int32_t requestId | 短时任务的请求ID。为[OH_BackgroundTaskManager_RequestSuspendDelay][OH_BackgroundTaskManager_RequestSuspendDelay](capi-transient-task-api-h.md#oh_backgroundtaskmanager_requestsuspenddelay)成功返回的requestId。 |
 
 **返回：**
 
 | 类型 | 说明 |
 | -- | -- |
-| int32_t | 返回0，表示取消成功。      返回401，表示入参错误。      返回9800002，表示Parcel读写操作失败。      返回9800003，表示IPC通信失败。      返回9800004，表示系统服务失败。      返回9900001，表示短时任务客户端信息校验失败。      返回9900002，表示短时任务服务端校验失败。      错误码的具体信息请参考{@link TransientTask_ErrorCode}。 |
+| int32_t | 返回0，表示取消成功。      <br>返回401，表示入参错误。      <br>返回9800002，表示Parcel读写操作失败。      <br>返回9800003，表示IPC通信失败。      <br>返回9800004，表示系统服务失败。      <br>返回9900001，表示短时任务客户端信息校验失败。      <br>返回9900002，表示短时任务服务端校验失败。      <br>错误码的具体信息请参考[TransientTask_ErrorCode](capi-transient-task-type-h.md#transienttask_errorcode)。 |
 
 ### OH_BackgroundTaskManager_GetTransientTaskInfo()
 
@@ -116,12 +118,12 @@ int32_t OH_BackgroundTaskManager_GetTransientTaskInfo(TransientTask_TransientTas
 
 | 参数项 | 描述 |
 | -- | -- |
-| TransientTask_TransientTaskInfo *transientTaskInfo | 所有短时任务信息，具体请参考{@link TransientTask_TransientTaskInfo}。 |
+| TransientTask_TransientTaskInfo *transientTaskInfo | 所有短时任务信息，具体请参考[TransientTask_TransientTaskInfo](capi-transienttask-transienttask-transienttaskinfo.md)。 |
 
 **返回：**
 
 | 类型 | 说明 |
 | -- | -- |
-| int32_t | 返回0，表示获取成功。      返回9900001，表示短时任务客户端信息校验失败。      返回9900003，表示Parcel读写操作失败。      返回9900004，表示系统服务失败。      错误码的具体信息请参考{@link TransientTask_ErrorCode}。 |
+| int32_t | 返回0，表示获取成功。      <br>返回9900001，表示短时任务客户端信息校验失败。      <br>返回9900003，表示Parcel读写操作失败。      <br>返回9900004，表示系统服务失败。      <br>错误码的具体信息请参考[TransientTask_ErrorCode](capi-transient-task-type-h.md#transienttask_errorcode)。 |
 
 

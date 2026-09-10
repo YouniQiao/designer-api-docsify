@@ -55,11 +55,11 @@
 | [OH_AVSCREEN_CAPTURE_ErrCode OH_AVScreenCapture_GetDisplayIdSelected(OH_AVScreenCapture_UserSelectionInfo *selection, uint64_t* displayId)](#oh_avscreencapture_getdisplayidselected) | 获取确认页面，用户选择录制的屏幕ID。在{@link OH_AVScreenCapture_OnUserSelected}回调中使用，selection指针在回调结束后销毁。 |
 | [OH_AVScreenCapture_CaptureStrategy* OH_AVScreenCapture_CreateCaptureStrategy(void)](#oh_avscreencapture_createcapturestrategy) | 创建录屏策略对象。<br>用于配置录屏的各项策略参数。可以通过StrategyFor*系列接口设置跟随旋转、通话时保持录屏、B帧编码、Picker弹出等策略配置。<br>使用完成后需调用[OH_AVScreenCapture_ReleaseCaptureStrategy](capi-native-avscreen-capture-h.md#oh_avscreencapture_releasecapturestrategy)释放。 |
 | [OH_AVSCREEN_CAPTURE_ErrCode OH_AVScreenCapture_ReleaseCaptureStrategy(OH_AVScreenCapture_CaptureStrategy* strategy)](#oh_avscreencapture_releasecapturestrategy) | 释放录屏策略对象。<br>与[OH_AVScreenCapture_CreateCaptureStrategy](capi-native-avscreen-capture-h.md#oh_avscreencapture_createcapturestrategy)配对使用，用于释放创建的CaptureStrategy实例。 |
-| [OH_AVSCREEN_CAPTURE_ErrCode OH_AVScreenCapture_SetCaptureStrategy( struct OH_AVScreenCapture *capture, OH_AVScreenCapture_CaptureStrategy *strategy){}](#oh_avscreencapture_setcapturestrategy) | 为OH_AVScreenCapture实例设置捕获策略。<br>该接口应在录屏启动之前被调用。 |
+| [OH_AVSCREEN_CAPTURE_ErrCode OH_AVScreenCapture_SetCaptureStrategy( struct OH_AVScreenCapture *capture, OH_AVScreenCapture_CaptureStrategy *strategy)](#oh_avscreencapture_setcapturestrategy) | 为OH_AVScreenCapture实例设置捕获策略。<br>该接口应在录屏启动之前被调用。 |
 | [OH_AVSCREEN_CAPTURE_ErrCode OH_AVScreenCapture_StrategyForKeepCaptureDuringCall( OH_AVScreenCapture_CaptureStrategy *strategy, bool value)](#oh_avscreencapture_strategyforkeepcaptureduringcall) | 设置蜂窝通话时是否保持录屏。<br>value设置为true时并且录屏时接听蜂窝通话的过程中，出于隐私要求，双方通话的声音（本地麦克风和对方说话声音）不会被录制，其他系统音录制正常。电话挂断之后，录屏框架恢复麦克风录制。注意，如果挂断电话时录屏应用在后台运行，麦克风录制会启动失败，原因是音频模块不允许后台应用启动麦克风录制。 |
 | [OH_AVSCREEN_CAPTURE_ErrCode OH_AVScreenCapture_StrategyForPrivacyMaskMode( OH_AVScreenCapture_CaptureStrategy *strategy, int32_t value)](#oh_avscreencapture_strategyforprivacymaskmode) | 设置隐私窗口屏蔽模式。<br>全屏屏蔽模式（value=0）适用于对隐私保护要求严格的场景，如金融类应用录制时一旦出现隐私窗口则整个画面屏蔽；隐私窗口屏蔽模式（value=1）适用于仅需屏蔽隐私窗口区域、其余内容仍可正常录制的场景。 |
 | [OH_AVSCREEN_CAPTURE_ErrCode OH_AVScreenCapture_StrategyForBFramesEncoding( OH_AVScreenCapture_CaptureStrategy *strategy, bool value)](#oh_avscreencapture_strategyforbframesencoding) | 向CaptureStrategy实例设置是否使能B帧编码，用于减小录制文件的大小。<br>B帧视频编码相关的约束和限制可以参考文档B帧视频编码约束和限制。如果当前不符合B帧视频编码的约束和限制，则正常录制不含B帧的视频，不会返回错误。<br> |
-| [OH_AVSCREEN_CAPTURE_ErrCode OH_AVScreenCapture_StrategyForCanvasFollowRotation( OH_AVScreenCapture_CaptureStrategy *strategy, bool value)](#oh_avscreencapture_strategyforcanvasfollowrotation) | 设置屏幕录屏自动跟随旋转配置。设为true，表示跟随屏幕旋转，并在横竖屏旋转后，自动调换虚拟屏尺寸，确保输出画面及时跟随旋转。<br>设置是否自动跟随旋转配置后，在旋转通知后，无需再手动调用[OH_AVScreenCapture_ResizeCanvas](capi-native-avscreen-capture-h.md#oh_avscreencapture_resizecanvas)接口。 |
+| [OH_AVSCREEN_CAPTURE_ErrCode OH_AVScreenCapture_StrategyForCanvasFollowRotation( OH_AVScreenCapture_CaptureStrategy *strategy, bool value)](#oh_avscreencapture_strategyforcanvasfollowrotation) | 设置屏幕录屏自动跟随旋转配置。设为true，表示跟随屏幕旋转，并在横竖屏旋转后，自动调换虚拟屏尺寸，确保输出画面及时跟随旋转。<br>设置是否自动跟随旋转配置后，在屏幕旋转事件发生后，无需再手动调用[OH_AVScreenCapture_ResizeCanvas](capi-native-avscreen-capture-h.md#oh_avscreencapture_resizecanvas)接口。 |
 | [OH_AVSCREEN_CAPTURE_ErrCode OH_AVScreenCapture_StrategyForPickerPopUp( OH_AVScreenCapture_CaptureStrategy *strategy, bool value)](#oh_avscreencapture_strategyforpickerpopup) | 设置是否弹出屏幕捕获Picker界面。Picker是录屏源选择界面，用户可以在其中选择要录制的屏幕或窗口。<br>适用场景：需要用户交互选择录制源（如多屏环境下选择屏幕）时弹出Picker；应用已明确指定录制源或无需用户干预时可关闭Picker自动录制。 |
 | [OH_AVSCREEN_CAPTURE_ErrCode OH_AVScreenCapture_StrategyForFillMode( OH_AVScreenCapture_CaptureStrategy *strategy, OH_AVScreenCapture_FillMode mode)](#oh_avscreencapture_strategyforfillmode) | 设置捕获图像在目标区域的填充模式。<br>当捕获的图像尺寸与目标输出区域不一致时，通过填充模式决定图像在目标区域中的显示方式。适用于录屏画面与输出尺寸不匹配时需要指定画面适配方式的场景，如视频会议中保持画面比例不拉伸、游戏录制中拉伸填充全屏等。详见{@link OH_AVScreenCapture_FillMode}。 |
 | [OH_AVSCREEN_CAPTURE_ErrCode OH_AVScreenCapture_SetDisplayCallback(struct OH_AVScreenCapture *capture, OH_AVScreenCapture_OnDisplaySelected callback, void *userData)](#oh_avscreencapture_setdisplaycallback) | 设置获取录屏屏幕ID的回调。在开始录制前调用。<br>当系统存在多个屏幕时，录屏启动过程中将通过该回调通知应用用户选择录制的屏幕ID，以便应用确定录屏目标屏幕。 |
@@ -934,7 +934,7 @@ OH_AVSCREEN_CAPTURE_ErrCode OH_AVScreenCapture_ReleaseCaptureStrategy(OH_AVScree
 ### OH_AVScreenCapture_SetCaptureStrategy()
 
 ```c
-OH_AVSCREEN_CAPTURE_ErrCode OH_AVScreenCapture_SetCaptureStrategy( struct OH_AVScreenCapture *capture, OH_AVScreenCapture_CaptureStrategy *strategy){}
+OH_AVSCREEN_CAPTURE_ErrCode OH_AVScreenCapture_SetCaptureStrategy( struct OH_AVScreenCapture *capture, OH_AVScreenCapture_CaptureStrategy *strategy)
 ```
 
 **描述：**
@@ -948,7 +948,7 @@ OH_AVSCREEN_CAPTURE_ErrCode OH_AVScreenCapture_SetCaptureStrategy( struct OH_AVS
 | 参数项 | 描述 |
 | -- | -- |
 | struct OH_AVScreenCapture *capture | 指向OH_AVScreenCapture实例的指针。 |
-| strategy | 指向捕获策略对象的指针。 |
+| OH_AVScreenCapture_CaptureStrategy *strategy | 指向捕获策略对象的指针。 |
 
 **返回：**
 
@@ -1039,7 +1039,7 @@ OH_AVSCREEN_CAPTURE_ErrCode OH_AVScreenCapture_StrategyForCanvasFollowRotation( 
 
 **描述：**
 
-设置屏幕录屏自动跟随旋转配置。设为true，表示跟随屏幕旋转，并在横竖屏旋转后，自动调换虚拟屏尺寸，确保输出画面及时跟随旋转。<br>设置是否自动跟随旋转配置后，在旋转通知后，无需再手动调用[OH_AVScreenCapture_ResizeCanvas](capi-native-avscreen-capture-h.md#oh_avscreencapture_resizecanvas)接口。
+设置屏幕录屏自动跟随旋转配置。设为true，表示跟随屏幕旋转，并在横竖屏旋转后，自动调换虚拟屏尺寸，确保输出画面及时跟随旋转。<br>设置是否自动跟随旋转配置后，在屏幕旋转事件发生后，无需再手动调用[OH_AVScreenCapture_ResizeCanvas](capi-native-avscreen-capture-h.md#oh_avscreencapture_resizecanvas)接口。
 
 **起始版本：** 20
 

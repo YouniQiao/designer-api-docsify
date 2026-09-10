@@ -1088,6 +1088,8 @@
   <!--Del-->
   - [getAllAppProvisionInfo(system api)](arkts-ability-bundlemanager-getallappprovisioninfo-f-sys.md)<!--DelEnd-->
   <!--Del-->
+  - [getAllAppProvisionInfoInDevice(system api)](arkts-ability-bundlemanager-getallappprovisioninfoindevice-f-sys.md)<!--DelEnd-->
+  <!--Del-->
   - [getAllBundleCacheSize(system api)](arkts-ability-bundlemanager-getallbundlecachesize-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [getAllBundleInfo(system api)](arkts-ability-bundlemanager-getallbundleinfo-f-sys.md)<!--DelEnd-->
@@ -1120,6 +1122,8 @@
   - [getApplicationLabel](arkts-ability-bundlemanager-getapplicationlabel-f.md)
   <!--Del-->
   - [getAppProvisionInfo(system api)](arkts-ability-bundlemanager-getappprovisioninfo-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [getAppProvisionInfoInDevice(system api)](arkts-ability-bundlemanager-getappprovisioninfoindevice-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [getAppProvisionInfoSync(system api)](arkts-ability-bundlemanager-getappprovisioninfosync-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -1198,6 +1202,8 @@
   - [setAbilityFileTypesForSelf(system api)](arkts-ability-bundlemanager-setabilityfiletypesforself-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [setAdditionalInfo(system api)](arkts-ability-bundlemanager-setadditionalinfo-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [setAdditionalInfoByIndex(system api)](arkts-ability-bundlemanager-setadditionalinfobyindex-f-sys.md)<!--DelEnd-->
   - [setAlternateIcon](arkts-ability-bundlemanager-setalternateicon-f.md)
   <!--Del-->
   - [setAppClonePreference(system api)](arkts-ability-bundlemanager-setappclonepreference-f-sys.md)<!--DelEnd-->

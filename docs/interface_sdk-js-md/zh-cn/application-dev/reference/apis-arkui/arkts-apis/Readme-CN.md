@@ -541,7 +541,7 @@
 - [@ohos.arkui.inspector(布局回调)](arkts-arkui-inspector.md)
   - [createComponentObserver](arkts-arkui-inspector-createcomponentobserver-f.md)
   - [ComponentObserver](arkts-arkui-inspector-componentobserver-i.md)
-- [@ohos.arkui.node](arkts-arkui-node.md)
+- [@ohos.arkui.node(自定义节点)](arkts-arkui-node.md)
 - [@ohos.arkui.observer](arkts-arkui-observer.md)
   - [off](arkts-arkui-uiobserver-off-f.md)
   - [on](arkts-arkui-uiobserver-on-f.md)
@@ -572,7 +572,7 @@
   - [ActionType(系统接口)](arkts-arkui-performancemonitor-actiontype-e-sys.md)<!--DelEnd-->
   <!--Del-->
   - [SourceType(系统接口)](arkts-arkui-performancemonitor-sourcetype-e-sys.md)<!--DelEnd-->
-- [@ohos.arkui.Prefetcher(Prefetching)](arkts-arkui-prefetcher.md)
+- [@ohos.arkui.Prefetcher(内容预取)](arkts-arkui-prefetcher.md)
   - [BasicPrefetcher](arkts-arkui-arkui-prefetcher-basicprefetcher-c.md)
   - [IDataSourcePrefetching](arkts-arkui-arkui-prefetcher-idatasourceprefetching-i.md)
   - [IPrefetcher](arkts-arkui-arkui-prefetcher-iprefetcher-i.md)

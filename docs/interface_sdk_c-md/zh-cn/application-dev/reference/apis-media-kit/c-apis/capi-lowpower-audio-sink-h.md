@@ -44,7 +44,7 @@
 | [OH_AVErrCode OH_LowPowerAudioSinkCallback_SetInterruptListener(OH_LowPowerAudioSinkCallback* callback, OH_LowPowerAudioSink_OnInterrupted onInterrupted, void* userData)](#oh_lowpoweraudiosinkcallback_setinterruptlistener) | 为LowPowerAudioSinkCallback设置音频焦点打断监听。 |
 | [OH_AVErrCode OH_LowPowerAudioSinkCallback_SetDeviceChangeListener(OH_LowPowerAudioSinkCallback* callback, OH_LowPowerAudioSink_OnDeviceChanged onDeviceChanged, void* userData)](#oh_lowpoweraudiosinkcallback_setdevicechangelistener) | 为LowPowerAudioSinkCallback设置音频设备切换监听。 |
 | [OH_AVErrCode OH_LowPowerAudioSinkCallback_SetEosListener(OH_LowPowerAudioSinkCallback *callback, OH_LowPowerAudioSink_OnEos onEos, void* userData)](#oh_lowpoweraudiosinkcallback_seteoslistener) | 为LowPowerAudioSinkCallback设置播放完成监听。 |
-| [OH_AVErrCode OH_LowPowerAudioSink_SetLoudnessGain(OH_LowPowerAudioSink* sink, float loudnessGain)](#oh_lowpoweraudiosink_setloudnessgain) | 为LowPowerAudioSink设置播放响度。 |
+| [OH_AVErrCode OH_LowPowerAudioSink_SetLoudnessGain(OH_LowPowerAudioSink* sink, float loudnessGain)](#oh_lowpoweraudiosink_setloudnessgain) | 为LowPowerAudioSink设置播放响度。需要在[OH_LowPowerAudioSink_Prepare](capi-lowpower-audio-sink-h.md#oh_lowpoweraudiosink_prepare)后调用。 |
 
 ## 函数说明
 
@@ -64,7 +64,7 @@ OH_LowPowerAudioSink* OH_LowPowerAudioSink_CreateByMime(const char* mime)
 
 | 参数项 | 描述 |
 | -- | -- |
-| const char* mime | 音频解码器MIME类型，取值范围请参考{@link AVCODEC_MIME_TYPE} |
+| const char* mime | 音频解码器MIME类型，取值范围请参考{@link OH_AVCODEC_MIMETYPE} |
 
 **返回：**
 
@@ -95,7 +95,7 @@ OH_AVErrCode OH_LowPowerAudioSink_Configure(OH_LowPowerAudioSink* sink, const OH
 
 | 类型 | 说明 |
 | -- | -- |
-| OH_AVErrCode | AV_ERR_OK：执行成功。  AV_ERR_INVALID_VAL：参数为nullptr或参数非法。  AV_ERR_UNSUPPORT：不支持的格式。  AV_ERR_SERVICE_DIED：媒体服务端已销毁。  AV_ERR_OPERATE_NOT_PERMIT：操作不支持。 |
+| OH_AVErrCode | AV_ERR_OK：执行成功。<br>  AV_ERR_INVALID_VAL：参数为nullptr或参数非法。<br>  AV_ERR_UNSUPPORT：不支持的格式。<br>  AV_ERR_SERVICE_DIED：媒体服务端已销毁。<br>  AV_ERR_OPERATE_NOT_PERMIT：操作不支持。 |
 
 ### OH_LowPowerAudioSink_SetParameter()
 
@@ -114,13 +114,13 @@ OH_AVErrCode OH_LowPowerAudioSink_SetParameter(OH_LowPowerAudioSink* sink, const
 | 参数项 | 描述 |
 | -- | -- |
 | OH_LowPowerAudioSink* sink | 指向OH_LowPowerAudioSink实例的指针。 |
-| const OH_AVFormat* format | 指向OH_AVFormat的指针，为LowPowerAudioSink设置的参数 |
+| const OH_AVFormat* format | 指向OH_AVFormat的指针，为LowPowerAudioSink设置的参数。 |
 
 **返回：**
 
 | 类型 | 说明 |
 | -- | -- |
-| OH_AVErrCode | AV_ERR_OK：执行成功。  AV_ERR_INVALID_VAL：参数为nullptr或参数非法。  AV_ERR_UNSUPPORT：不支持的格式。  AV_ERR_SERVICE_DIED：媒体服务端已销毁。  AV_ERR_OPERATE_NOT_PERMIT：操作不支持。 |
+| OH_AVErrCode | AV_ERR_OK：执行成功。<br>  AV_ERR_INVALID_VAL：参数为nullptr或参数非法。<br>  AV_ERR_UNSUPPORT：不支持的格式。<br>  AV_ERR_SERVICE_DIED：媒体服务端已销毁。<br>  AV_ERR_OPERATE_NOT_PERMIT：操作不支持。 |
 
 ### OH_LowPowerAudioSink_GetParameter()
 
@@ -145,7 +145,7 @@ OH_AVErrCode OH_LowPowerAudioSink_GetParameter(OH_LowPowerAudioSink* sink, OH_AV
 
 | 类型 | 说明 |
 | -- | -- |
-| OH_AVErrCode | AV_ERR_OK：执行成功。  AV_ERR_INVALID_VAL：参数为nullptr或参数非法。  AV_ERR_OPERATE_NOT_PERMIT：操作不支持。 |
+| OH_AVErrCode | AV_ERR_OK：执行成功。<br>  AV_ERR_INVALID_VAL：参数为nullptr或参数非法。<br>  AV_ERR_OPERATE_NOT_PERMIT：操作不支持。 |
 
 ### OH_LowPowerAudioSink_Prepare()
 
@@ -169,7 +169,7 @@ OH_AVErrCode OH_LowPowerAudioSink_Prepare(OH_LowPowerAudioSink* sink)
 
 | 类型 | 说明 |
 | -- | -- |
-| OH_AVErrCode | AV_ERR_OK：执行成功。  AV_ERR_INVALID_VAL：参数为nullptr或参数非法。  AV_ERR_UNSUPPORT：不支持的格式。  AV_ERR_SERVICE_DIED：媒体服务端已销毁。  AV_ERR_OPERATE_NOT_PERMIT：操作不支持。 |
+| OH_AVErrCode | AV_ERR_OK：执行成功。<br>  AV_ERR_INVALID_VAL：参数为nullptr或参数非法。<br>  AV_ERR_UNSUPPORT：不支持的格式。<br>  AV_ERR_SERVICE_DIED：媒体服务端已销毁。<br>  AV_ERR_OPERATE_NOT_PERMIT：操作不支持。 |
 
 ### OH_LowPowerAudioSink_Start()
 
@@ -193,7 +193,7 @@ OH_AVErrCode OH_LowPowerAudioSink_Start(OH_LowPowerAudioSink* sink)
 
 | 类型 | 说明 |
 | -- | -- |
-| OH_AVErrCode | AV_ERR_OK：执行成功。  AV_ERR_INVALID_VAL：参数为nullptr或参数非法。  AV_ERR_UNSUPPORT：不支持的格式。  AV_ERR_SERVICE_DIED：媒体服务端已销毁。  AV_ERR_OPERATE_NOT_PERMIT：操作不支持。 |
+| OH_AVErrCode | AV_ERR_OK：执行成功。<br>  AV_ERR_INVALID_VAL：参数为nullptr或参数非法。<br>  AV_ERR_UNSUPPORT：不支持的格式。<br>  AV_ERR_SERVICE_DIED：媒体服务端已销毁。<br>  AV_ERR_OPERATE_NOT_PERMIT：操作不支持。 |
 
 ### OH_LowPowerAudioSink_Pause()
 
@@ -217,7 +217,7 @@ OH_AVErrCode OH_LowPowerAudioSink_Pause(OH_LowPowerAudioSink* sink)
 
 | 类型 | 说明 |
 | -- | -- |
-| OH_AVErrCode | AV_ERR_OK：执行成功。  AV_ERR_INVALID_VAL：参数为nullptr或参数非法。  AV_ERR_SERVICE_DIED：媒体服务端已销毁。  AV_ERR_OPERATE_NOT_PERMIT：操作不支持。 |
+| OH_AVErrCode | AV_ERR_OK：执行成功。<br>  AV_ERR_INVALID_VAL：参数为nullptr或参数非法。<br>  AV_ERR_SERVICE_DIED：媒体服务端已销毁。<br>  AV_ERR_OPERATE_NOT_PERMIT：操作不支持。 |
 
 ### OH_LowPowerAudioSink_Resume()
 
@@ -241,7 +241,7 @@ OH_AVErrCode OH_LowPowerAudioSink_Resume(OH_LowPowerAudioSink* sink)
 
 | 类型 | 说明 |
 | -- | -- |
-| OH_AVErrCode | AV_ERR_OK：执行成功。  AV_ERR_INVALID_VAL：参数为nullptr或参数非法。  AV_ERR_SERVICE_DIED：媒体服务端已销毁。  AV_ERR_OPERATE_NOT_PERMIT：操作不支持。 |
+| OH_AVErrCode | AV_ERR_OK：执行成功。<br>  AV_ERR_INVALID_VAL：参数为nullptr或参数非法。<br>  AV_ERR_SERVICE_DIED：媒体服务端已销毁。<br>  AV_ERR_OPERATE_NOT_PERMIT：操作不支持。 |
 
 ### OH_LowPowerAudioSink_Flush()
 
@@ -265,7 +265,7 @@ OH_AVErrCode OH_LowPowerAudioSink_Flush(OH_LowPowerAudioSink* sink)
 
 | 类型 | 说明 |
 | -- | -- |
-| OH_AVErrCode | AV_ERR_OK：执行成功。  AV_ERR_INVALID_VAL：参数为nullptr或参数非法。  AV_ERR_SERVICE_DIED：媒体服务端已销毁。  AV_ERR_OPERATE_NOT_PERMIT：操作不支持。 |
+| OH_AVErrCode | AV_ERR_OK：执行成功。<br>  AV_ERR_INVALID_VAL：参数为nullptr或参数非法。<br>  AV_ERR_SERVICE_DIED：媒体服务端已销毁。<br>  AV_ERR_OPERATE_NOT_PERMIT：操作不支持。 |
 
 ### OH_LowPowerAudioSink_Stop()
 
@@ -289,7 +289,7 @@ OH_AVErrCode OH_LowPowerAudioSink_Stop(OH_LowPowerAudioSink* sink)
 
 | 类型 | 说明 |
 | -- | -- |
-| OH_AVErrCode | AV_ERR_OK：执行成功。  AV_ERR_INVALID_VAL：参数为nullptr或参数非法。  AV_ERR_SERVICE_DIED：媒体服务端已销毁。  AV_ERR_OPERATE_NOT_PERMIT：操作不支持。 |
+| OH_AVErrCode | AV_ERR_OK：执行成功。<br>  AV_ERR_INVALID_VAL：参数为nullptr或参数非法。<br>  AV_ERR_SERVICE_DIED：媒体服务端已销毁。<br>  AV_ERR_OPERATE_NOT_PERMIT：操作不支持。 |
 
 ### OH_LowPowerAudioSink_Reset()
 
@@ -313,7 +313,7 @@ OH_AVErrCode OH_LowPowerAudioSink_Reset(OH_LowPowerAudioSink* sink)
 
 | 类型 | 说明 |
 | -- | -- |
-| OH_AVErrCode | AV_ERR_OK：执行成功。  AV_ERR_INVALID_VAL：参数为nullptr或参数非法。  AV_ERR_SERVICE_DIED：媒体服务端已销毁。  AV_ERR_OPERATE_NOT_PERMIT：操作不支持。 |
+| OH_AVErrCode | AV_ERR_OK：执行成功。<br>  AV_ERR_INVALID_VAL：参数为nullptr或参数非法。<br>  AV_ERR_SERVICE_DIED：媒体服务端已销毁。<br>  AV_ERR_OPERATE_NOT_PERMIT：操作不支持。 |
 
 ### OH_LowPowerAudioSink_Destroy()
 
@@ -337,7 +337,7 @@ OH_AVErrCode OH_LowPowerAudioSink_Destroy(OH_LowPowerAudioSink* sink)
 
 | 类型 | 说明 |
 | -- | -- |
-| OH_AVErrCode | AV_ERR_OK：执行成功。  AV_ERR_INVALID_VAL：参数为nullptr或参数非法。  AV_ERR_SERVICE_DIED：媒体服务端已销毁。  AV_ERR_OPERATE_NOT_PERMIT：操作不支持。 |
+| OH_AVErrCode | AV_ERR_OK：执行成功。<br>  AV_ERR_INVALID_VAL：参数为nullptr或参数非法。<br>  AV_ERR_SERVICE_DIED：媒体服务端已销毁。<br>  AV_ERR_OPERATE_NOT_PERMIT：操作不支持。 |
 
 ### OH_LowPowerAudioSink_SetVolume()
 
@@ -362,7 +362,7 @@ OH_AVErrCode OH_LowPowerAudioSink_SetVolume(OH_LowPowerAudioSink* sink, const fl
 
 | 类型 | 说明 |
 | -- | -- |
-| OH_AVErrCode | AV_ERR_OK：执行成功。  AV_ERR_INVALID_VAL：参数为nullptr或参数非法。  AV_ERR_SERVICE_DIED：媒体服务端已销毁。  AV_ERR_OPERATE_NOT_PERMIT：操作不支持。 |
+| OH_AVErrCode | AV_ERR_OK：执行成功。<br>  AV_ERR_INVALID_VAL：参数为nullptr或参数非法。<br>  AV_ERR_SERVICE_DIED：媒体服务端已销毁。<br>  AV_ERR_OPERATE_NOT_PERMIT：操作不支持。 |
 
 ### OH_LowPowerAudioSink_SetPlaybackSpeed()
 
@@ -387,7 +387,7 @@ OH_AVErrCode OH_LowPowerAudioSink_SetPlaybackSpeed(OH_LowPowerAudioSink* sink, c
 
 | 类型 | 说明 |
 | -- | -- |
-| OH_AVErrCode | AV_ERR_OK：执行成功。  AV_ERR_INVALID_VAL：参数为nullptr或参数非法。  AV_ERR_SERVICE_DIED：媒体服务端已销毁。  AV_ERR_OPERATE_NOT_PERMIT：操作不支持。 |
+| OH_AVErrCode | AV_ERR_OK：执行成功。<br>  AV_ERR_INVALID_VAL：参数为nullptr或参数非法。<br>  AV_ERR_SERVICE_DIED：媒体服务端已销毁。<br>  AV_ERR_OPERATE_NOT_PERMIT：操作不支持。 |
 
 ### OH_LowPowerAudioSink_ReturnSamples()
 
@@ -412,7 +412,7 @@ OH_AVErrCode OH_LowPowerAudioSink_ReturnSamples(OH_LowPowerAudioSink* sink, OH_A
 
 | 类型 | 说明 |
 | -- | -- |
-| OH_AVErrCode | AV_ERR_OK：执行成功。  AV_ERR_INVALID_VAL：参数为nullptr或参数非法。  AV_ERR_SERVICE_DIED：媒体服务端已销毁。  AV_ERR_OPERATE_NOT_PERMIT：操作不支持。 |
+| OH_AVErrCode | AV_ERR_OK：执行成功。<br>  AV_ERR_INVALID_VAL：参数为nullptr或参数非法。<br>  AV_ERR_SERVICE_DIED：媒体服务端已销毁。<br>  AV_ERR_OPERATE_NOT_PERMIT：操作不支持。 |
 
 ### OH_LowPowerAudioSink_RegisterCallback()
 
@@ -437,7 +437,7 @@ OH_AVErrCode OH_LowPowerAudioSink_RegisterCallback(OH_LowPowerAudioSink* sink, O
 
 | 类型 | 说明 |
 | -- | -- |
-| OH_AVErrCode | AV_ERR_OK：执行成功。  AV_ERR_INVALID_VAL：参数为nullptr或参数非法。  AV_ERR_SERVICE_DIED：媒体服务端已销毁。  AV_ERR_OPERATE_NOT_PERMIT：操作不支持。 |
+| OH_AVErrCode | AV_ERR_OK：执行成功。<br>  AV_ERR_INVALID_VAL：参数为nullptr或参数非法。<br>  AV_ERR_SERVICE_DIED：媒体服务端已销毁。<br>  AV_ERR_OPERATE_NOT_PERMIT：操作不支持。 |
 
 ### OH_LowPowerAudioSinkCallback_Create()
 
@@ -479,7 +479,7 @@ OH_AVErrCode OH_LowPowerAudioSinkCallback_Destroy(OH_LowPowerAudioSinkCallback* 
 
 | 类型 | 说明 |
 | -- | -- |
-| OH_AVErrCode | AV_ERR_OK：执行成功。  AV_ERR_INVALID_VAL：参数为nullptr或参数非法。 |
+| OH_AVErrCode | AV_ERR_OK：执行成功。<br>  AV_ERR_INVALID_VAL：参数为nullptr或参数非法。 |
 
 ### OH_LowPowerAudioSinkCallback_SetPositionUpdateListener()
 
@@ -505,7 +505,7 @@ OH_AVErrCode OH_LowPowerAudioSinkCallback_SetPositionUpdateListener(OH_LowPowerA
 
 | 类型 | 说明 |
 | -- | -- |
-| OH_AVErrCode | AV_ERR_OK：执行成功。  AV_ERR_INVALID_VAL：参数为nullptr或参数非法。  AV_ERR_OPERATE_NOT_PERMIT：操作不支持。 |
+| OH_AVErrCode | AV_ERR_OK：执行成功。<br>  AV_ERR_INVALID_VAL：参数为nullptr或参数非法。<br>  AV_ERR_OPERATE_NOT_PERMIT：操作不支持。 |
 
 ### OH_LowPowerAudioSinkCallback_SetDataNeededListener()
 
@@ -531,7 +531,7 @@ OH_AVErrCode OH_LowPowerAudioSinkCallback_SetDataNeededListener(OH_LowPowerAudio
 
 | 类型 | 说明 |
 | -- | -- |
-| OH_AVErrCode | AV_ERR_OK：执行成功。  AV_ERR_INVALID_VAL：参数为nullptr或参数非法。  AV_ERR_OPERATE_NOT_PERMIT：操作不支持。 |
+| OH_AVErrCode | AV_ERR_OK：执行成功。<br>  AV_ERR_INVALID_VAL：参数为nullptr或参数非法。<br>  AV_ERR_OPERATE_NOT_PERMIT：操作不支持。 |
 
 ### OH_LowPowerAudioSinkCallback_SetErrorListener()
 
@@ -557,7 +557,7 @@ OH_AVErrCode OH_LowPowerAudioSinkCallback_SetErrorListener(OH_LowPowerAudioSinkC
 
 | 类型 | 说明 |
 | -- | -- |
-| OH_AVErrCode | AV_ERR_OK：执行成功。  AV_ERR_INVALID_VAL：参数为nullptr或参数非法。  AV_ERR_OPERATE_NOT_PERMIT：操作不支持。 |
+| OH_AVErrCode | AV_ERR_OK：执行成功。<br>  AV_ERR_INVALID_VAL：参数为nullptr或参数非法。<br>  AV_ERR_OPERATE_NOT_PERMIT：操作不支持。 |
 
 ### OH_LowPowerAudioSinkCallback_SetInterruptListener()
 
@@ -583,7 +583,7 @@ OH_AVErrCode OH_LowPowerAudioSinkCallback_SetInterruptListener(OH_LowPowerAudioS
 
 | 类型 | 说明 |
 | -- | -- |
-| OH_AVErrCode | AV_ERR_OK：执行成功。  AV_ERR_INVALID_VAL：参数为nullptr或参数非法。  AV_ERR_OPERATE_NOT_PERMIT：操作不支持。 |
+| OH_AVErrCode | AV_ERR_OK：执行成功。<br>  AV_ERR_INVALID_VAL：参数为nullptr或参数非法。<br>  AV_ERR_OPERATE_NOT_PERMIT：操作不支持。 |
 
 ### OH_LowPowerAudioSinkCallback_SetDeviceChangeListener()
 
@@ -609,7 +609,7 @@ OH_AVErrCode OH_LowPowerAudioSinkCallback_SetDeviceChangeListener(OH_LowPowerAud
 
 | 类型 | 说明 |
 | -- | -- |
-| OH_AVErrCode | AV_ERR_OK：执行成功。  AV_ERR_INVALID_VAL：参数为nullptr或参数非法。  AV_ERR_OPERATE_NOT_PERMIT：操作不支持。 |
+| OH_AVErrCode | AV_ERR_OK：执行成功。<br>  AV_ERR_INVALID_VAL：参数为nullptr或参数非法。<br>  AV_ERR_OPERATE_NOT_PERMIT：操作不支持。 |
 
 ### OH_LowPowerAudioSinkCallback_SetEosListener()
 
@@ -635,7 +635,7 @@ OH_AVErrCode OH_LowPowerAudioSinkCallback_SetEosListener(OH_LowPowerAudioSinkCal
 
 | 类型 | 说明 |
 | -- | -- |
-| OH_AVErrCode | AV_ERR_OK：执行成功。  AV_ERR_INVALID_VAL：参数为nullptr或参数非法。  AV_ERR_OPERATE_NOT_PERMIT：操作不支持。 |
+| OH_AVErrCode | AV_ERR_OK：执行成功。<br>  AV_ERR_INVALID_VAL：参数为nullptr或参数非法。<br>  AV_ERR_OPERATE_NOT_PERMIT：操作不支持。 |
 
 ### OH_LowPowerAudioSink_SetLoudnessGain()
 
@@ -645,7 +645,7 @@ OH_AVErrCode OH_LowPowerAudioSink_SetLoudnessGain(OH_LowPowerAudioSink* sink, fl
 
 **描述：**
 
-为LowPowerAudioSink设置播放响度。
+为LowPowerAudioSink设置播放响度。需要在[OH_LowPowerAudioSink_Prepare](capi-lowpower-audio-sink-h.md#oh_lowpoweraudiosink_prepare)后调用。
 
 **起始版本：** 21
 
@@ -653,13 +653,13 @@ OH_AVErrCode OH_LowPowerAudioSink_SetLoudnessGain(OH_LowPowerAudioSink* sink, fl
 
 | 参数项 | 描述 |
 | -- | -- |
-| OH_LowPowerAudioSink* sink | Pointer to an OH_LowPowerAudioSink instance. |
+| OH_LowPowerAudioSink* sink | 指向OH_LowPowerAudioSink实例的指针。 |
 | float loudnessGain | 响度值，取值范围[-90.0, 24.0]。默认值为0.0dB。 |
 
 **返回：**
 
 | 类型 | 说明 |
 | -- | -- |
-| OH_AVErrCode | AV_ERR_OK：执行成功。  AV_ERR_INVALID_VAL：参数为nullptr或参数非法。  AV_ERR_SERVICE_DIED：媒体服务端已销毁。 |
+| OH_AVErrCode | AV_ERR_OK：执行成功。<br>  AV_ERR_INVALID_VAL：参数为nullptr或参数非法。<br>  AV_ERR_SERVICE_DIED：媒体服务端已销毁。 |
 
 

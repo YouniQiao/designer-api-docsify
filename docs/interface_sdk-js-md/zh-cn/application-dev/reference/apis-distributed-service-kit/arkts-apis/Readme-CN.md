@@ -96,7 +96,7 @@
   <!--Del-->
   - [SubscribeCap(系统接口)](arkts-distributedservice-devicemanager-subscribecap-e-sys.md)<!--DelEnd-->
 <!--Del-->
-- [@ohos.distributedHardware.hardwareManager](arkts-distributedhardware-hardwaremanager.md)<!--DelEnd-->
+- [@ohos.distributedHardware.hardwareManager(分布式硬件管理)](arkts-distributedhardware-hardwaremanager.md)<!--DelEnd-->
   <!--Del-->
   - [pauseDistributedHardware(系统接口)](arkts-distributedservice-hardwaremanager-pausedistributedhardware-f-sys.md)<!--DelEnd-->
   <!--Del-->

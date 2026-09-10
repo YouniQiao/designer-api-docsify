@@ -1,4 +1,4 @@
-# @ohos.arkui.node
+# @ohos.arkui.node(Custom Node)
 
 ## Modules to Import
 

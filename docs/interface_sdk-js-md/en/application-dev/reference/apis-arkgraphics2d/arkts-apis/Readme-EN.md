@@ -32,7 +32,7 @@
   - [Point](arkts-arkgraphics2d-common2d-point-i.md)
   - [Point3d](arkts-arkgraphics2d-common2d-point3d-i.md)
   - [Rect](arkts-arkgraphics2d-common2d-rect-i.md)
-- [@ohos.graphics.displaySync](arkts-graphics-displaysync.md)
+- [@ohos.graphics.displaySync(Variable Frame Rate)](arkts-graphics-displaysync.md)
   - [create](arkts-arkgraphics2d-displaysync-create-f.md)
   - [DisplaySync](arkts-arkgraphics2d-displaysync-displaysync-i.md)
   - [IntervalInfo](arkts-arkgraphics2d-displaysync-intervalinfo-i.md)

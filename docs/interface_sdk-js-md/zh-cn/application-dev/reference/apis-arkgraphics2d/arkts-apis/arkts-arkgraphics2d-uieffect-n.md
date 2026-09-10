@@ -32,7 +32,7 @@ import { uiEffect } from '@kit.ArkGraphics2D';
 | [createBrightnessBlender](arkts-arkgraphics2d-uieffect-createbrightnessblender-f-sys.md) | 创建BrightnessBlender实例用于给组件添加提亮效果。 |
 | [createHdrBrightnessBlender](arkts-arkgraphics2d-uieffect-createhdrbrightnessblender-f-sys.md) | 创建HdrBrightnessBlender实例用于给组件添加支持HDR的提亮效果。 |
 | [createHdrDarkenBlender](arkts-arkgraphics2d-uieffect-createhdrdarkenblender-f-sys.md) | 创建HdrDarkenBlender实例用于HDR图层的压暗混合效果。 |
-| [createColorfulBrightnessBlender](arkts-arkgraphics2d-uieffect-createcolorfulbrightnessblender-f-sys.md) | 创建ColorfulBrightnessBlender实例用于给组件添加彩色提亮压暗效果。 |
+| [createColorfulBrightnessBlender](arkts-arkgraphics2d-uieffect-createcolorfulbrightnessblender-f-sys.md) | 创建ColorfulBrightnessBlender实例，用于给组件添加基于保持色相的提亮压暗效果。该效果在对前景提亮或压暗时通过逐通道重建保持色相、并可增强饱和度，避免普通提亮压暗的去色问题。 |
 <!--DelEnd-->
 
 <!--Del-->
@@ -64,8 +64,8 @@ import { uiEffect } from '@kit.ArkGraphics2D';
 | [BrightnessBlender](arkts-arkgraphics2d-uieffect-brightnessblender-i-sys.md) | 提亮混合器，用于将提亮效果添加到指定的组件上。在调用BrightnessBlender前，需要先通过createBrightnessBlender创建一个BrightnessBlender实例。 |
 | [HdrBrightnessBlender](arkts-arkgraphics2d-uieffect-hdrbrightnessblender-i-sys.md) | 支持HDR的提亮混合器（继承自BrightnessBlender），用于将提亮效果添加到指定的组件上。在调用HdrBrightnessBlender前，需要先通过createHdrBrightnessBlender创建一个HdrBrightnessBlender实例。该混合器参数可参考BrightnessBlender。 |
 | [HdrDarkenBlender](arkts-arkgraphics2d-uieffect-hdrdarkenblender-i-sys.md) | 支持HDR的压暗混合器，用于将压暗效果添加到指定的组件上。在调用HdrDarkenBlender前，需要先通过createHdrDarkenBlender创建一个HdrDarkenBlender实例。 |
-| [ColorfulBrightnessBlenderOptions](arkts-arkgraphics2d-uieffect-colorfulbrightnessblenderoptions-i-sys.md) | ColorfulBrightnessBlenderOptions的参数列表，用于配置彩色提亮压暗效果的各项属性，包括前景压暗权重、提亮压暗强度、亮度差阈值和hdr开关参数。 |
-| [ColorfulBrightnessBlender](arkts-arkgraphics2d-uieffect-colorfulbrightnessblender-i-sys.md) | 彩色提亮压暗混合器，用于将提亮效果添加到指定的组件上。在调用ColorfulBrightnessBlender前，需要先通过createColorfulBrightnessBlender创建一个ColorfulBrightnessBlender实例。 |
+| [ColorfulBrightnessBlenderOptions](arkts-arkgraphics2d-uieffect-colorfulbrightnessblenderoptions-i-sys.md) | 基于保持色相的提亮压暗混合器的可选增强配置项，作为createColorfulBrightnessBlender的options参数传入。它在常规参数BrightnessBlenderParam之外，可进一步针对提亮或压暗方向、色彩增强强度、输入色彩影响度、与背景的对比度以及HDR开关进行精细调整，不传时各项采用默认值。 |
+| [ColorfulBrightnessBlender](arkts-arkgraphics2d-uieffect-colorfulbrightnessblender-i-sys.md) | 基于保持色相的提亮压暗混合器，用于将该提亮压暗效果添加到指定的组件上。该效果在对前景提亮或压暗时通过逐通道重建保持色相、并可增强饱和度，避免普通提亮压暗的去色问题；同时依据亮度差阈值保证前景与背景的对比度。在调用ColorfulBrightnessBlender前，需要先通过createColorfulBrightnessBlender创建一个ColorfulBrightnessBlender实例。 |
 | [Color](arkts-arkgraphics2d-uieffect-color-i-sys.md) | RGBA格式的颜色描述。 |
 | [SweepRefractionParam](arkts-arkgraphics2d-uieffect-sweeprefractionparam-i-sys.md) | 创建 SweepRefractionMask 的必选参数。 |
 | [SweepRefractionMaskOptions](arkts-arkgraphics2d-uieffect-sweeprefractionmaskoptions-i-sys.md) | 创建 SweepRefractionMask 的可选参数。 |

@@ -96,7 +96,7 @@
   <!--Del-->
   - [SubscribeCap(system api)](arkts-distributedservice-devicemanager-subscribecap-e-sys.md)<!--DelEnd-->
 <!--Del-->
-- [@ohos.distributedHardware.hardwareManager](arkts-distributedhardware-hardwaremanager.md)<!--DelEnd-->
+- [@ohos.distributedHardware.hardwareManager(Distributed Hardware Manager)](arkts-distributedhardware-hardwaremanager.md)<!--DelEnd-->
   <!--Del-->
   - [pauseDistributedHardware(system api)](arkts-distributedservice-hardwaremanager-pausedistributedhardware-f-sys.md)<!--DelEnd-->
   <!--Del-->

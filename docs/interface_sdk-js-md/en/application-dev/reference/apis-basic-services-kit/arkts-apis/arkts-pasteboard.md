@@ -1,4 +1,4 @@
-# @ohos.pasteboard
+# @ohos.pasteboard(Pasteboard)
 
 This module provides the capabilities of managing the system pasteboard to support the copy and paste functions. You can use the APIs of this module to operate pasteboard content of the plain text, HTML, URI, Want, PixelMap, and other types.
 

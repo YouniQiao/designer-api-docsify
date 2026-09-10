@@ -2,7 +2,7 @@
 
 ## 概述
 
-LowPowerAudioSink子模块提供低功耗音频输出的变量、属性和函数。
+LowPowerAudioSink子模块为低功耗播放音频组件提供变量、属性和函数。
 
 **起始版本：** 20
 

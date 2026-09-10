@@ -130,7 +130,7 @@ ASSET APIs使用的结果码。
 | 枚举项 | 描述 |
 | -- | -- |
 | ASSET_SUCCESS = 0 | 表示操作成功。 |
-| ASSET_PERMISSION_DENIED = 201 | 表示调用者没有权限。 |
+| ASSET_PERMISSION_DENIED = 201 | 表示权限校验失败，应用无权限使用该API，需要申请权限。 |
 | ASSET_INVALID_ARGUMENT = 401 | 表示参数错误。 |
 | ASSET_SERVICE_UNAVAILABLE = 24000001 | 表示关键资产服务不可用。 |
 | ASSET_NOT_FOUND = 24000002 | 表示未找到关键资产。 |

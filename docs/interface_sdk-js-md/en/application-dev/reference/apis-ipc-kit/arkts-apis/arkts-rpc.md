@@ -1,6 +1,8 @@
-# @ohos.rpc
+# @ohos.rpc(RPC)
 
 The **RPC** module implements communication between processes, including inter-process communication (IPC) on a single device and remote procedure call (RPC) between processes on difference devices. IPC is implemented based on the Binder driver, and RPC is based on the DSoftBus driver.
+
+This module supports return of error codes since API version 9.
 
 **Since:** 7
 

@@ -36,6 +36,7 @@
 | [AbilityRuntime_ErrorCode OH_AbilityRuntime_StartSelfUIAbilityWithPidResult(AbilityBase_Want *want, AbilityRuntime_StartOptions *options, int32_t *targetPid)](#oh_abilityruntime_startselfuiabilitywithpidresult) | 通过StartOptions启动当前应用的UIAbility，并获取目标UIAbility的进程号。<br>接口不能在应用主线程调用，但可以在应用创建的{@link ChildProcess}的主线程中调用。<br>如果在应用的主线程中调用，会返回ABILITY_RUNTIME_ERROR_CODE_MAIN_THREAD_NOT_SUPPORTED错误码。 |
 | [AbilityRuntime_ErrorCode OH_AbilityRuntime_ApplicationContextGetLogFileDir(char* buffer, const int32_t bufferSize, int32_t* writeLength)](#oh_abilityruntime_applicationcontextgetlogfiledir) | 获取本应用的应用级的日志文件目录。 |
 | [AbilityRuntime_ErrorCode OH_AbilityRuntime_ApplicationContextNotifyPageChanged(const char* targetPageName, int32_t targetPageNameLength, int32_t windowId)](#oh_abilityruntime_applicationcontextnotifypagechanged) | 该接口仅支持三方框架调用。三方框架每次切换页面时，将目标页面信息（包含目标页面路径、目标页面路径长度、目标页面对应的窗口ID）通知给系统。系统可按产品策略调整/恢复页面。适用于三方框架页面导航追踪、页面状态同步、系统级页面优化等场景。 |
+| [AbilityRuntime_ErrorCode OH_AbilityRuntime_AcquireUIAbilityChildProcessInfos(OH_AbilityRuntime_ChildProcessInfosHandle* infos, uint32_t* count)](#oh_abilityruntime_acquireuiabilitychildprocessinfos) | 获取当前应用的UIAbility子进程信息。包括使用ProcessMode.NEW_PROCESS_ATTACH_TO_PARENT通过startAbility创建的子进程。 |
 
 ## 函数说明
 
@@ -508,5 +509,30 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_ApplicationContextNotifyPageChanged(c
 | 类型 | 说明 |
 | -- | -- |
 | AbilityRuntime_ErrorCode | 返回执行结果。      <br>ABILITY_RUNTIME_ERROR_CODE_NO_ERROR - 操作成功。      <br>ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID - 入参targetPageName为空或者windowId无效。      <br>ABILITY_RUNTIME_ERROR_CODE_INTERNAL - 内部错误。 |
+
+### OH_AbilityRuntime_AcquireUIAbilityChildProcessInfos()
+
+```c
+AbilityRuntime_ErrorCode OH_AbilityRuntime_AcquireUIAbilityChildProcessInfos(OH_AbilityRuntime_ChildProcessInfosHandle* infos, uint32_t* count)
+```
+
+**描述：**
+
+获取当前应用的UIAbility子进程信息。包括使用ProcessMode.NEW_PROCESS_ATTACH_TO_PARENT通过startAbility创建的子进程。
+
+**起始版本：** 26.1.0
+
+**参数：**
+
+| 参数项 | 描述 |
+| -- | -- |
+| OH_AbilityRuntime_ChildProcessInfosHandle* infos | 输出参数，指向子进程信息集合的指针。不能为nullptr。当不存在子进程时，将指针**infos**的解引用值设置为nullptr。 |
+| uint32_t* count | 输出参数，返回子进程的个数。不能是nullptr。 |
+
+**返回：**
+
+| 类型 | 说明 |
+| -- | -- |
+| AbilityRuntime_ErrorCode | <ul>  <li>{@link_RUNTIME_ERROR_CODE_NO_ERROR}如果调用成功则返回</li>  <li>{@link_RUNTIME_ERROR_CODE_PARAM_INVALID}如果提供的参数无效。</li>  <li>{@link_RUNTIME_ERROR_CODE_INTERNAL}如果发生内部错误</li> |
 
 

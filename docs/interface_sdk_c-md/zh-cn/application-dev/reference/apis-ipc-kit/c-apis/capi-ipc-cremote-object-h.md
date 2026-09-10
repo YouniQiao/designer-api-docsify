@@ -4,7 +4,7 @@
 
 提供远端对象创建、销毁、数据发送、远端对象死亡状态监听等功能的C接口，适用于IPC（Inter-Process Communication，进程间通信）和RPC（Remote Procedure Call，远程过程调用）通信场景。
 
-**引用文件：** <IPCKit/ipc_cparcel.h>
+**引用文件：** <IPCKit/ipc_cremote_object.h>
 
 **库：** libipc_capi.so
 

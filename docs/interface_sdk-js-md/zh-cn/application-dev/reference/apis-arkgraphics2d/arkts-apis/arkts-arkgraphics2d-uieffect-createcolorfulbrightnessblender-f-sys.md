@@ -13,7 +13,7 @@ function createColorfulBrightnessBlender(brightnessBlenderParam: BrightnessBlend
     options?: ColorfulBrightnessBlenderOptions): ColorfulBrightnessBlender
 ```
 
-创建ColorfulBrightnessBlender实例用于给组件添加彩色提亮压暗效果。
+创建ColorfulBrightnessBlender实例，用于给组件添加基于保持色相的提亮压暗效果。该效果在对前景提亮或压暗时通过逐通道重建保持色相、并可增强饱和度，避免普通提亮压暗的去色问题。
 
 **起始版本：** 26.1.0
 
@@ -29,14 +29,14 @@ function createColorfulBrightnessBlender(brightnessBlenderParam: BrightnessBlend
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| brightnessBlenderParam | [BrightnessBlenderParam](arkts-arkgraphics2d-graphics-uieffect-brightnessblenderparam-i-sys.md) | 是 | 实现彩色提亮压暗效果的常规参数。 |
-| options | [ColorfulBrightnessBlenderOptions](arkts-arkgraphics2d-uieffect-colorfulbrightnessblenderoptions-i-sys.md) | 否 | 实现彩色提亮压暗效果的增强参数。 |
+| brightnessBlenderParam | [BrightnessBlenderParam](arkts-arkgraphics2d-graphics-uieffect-brightnessblenderparam-i-sys.md) | 是 | 提亮压暗的常规参数，用于配置亮度映射、饱和度曲线等基础属性。 |
+| options | [ColorfulBrightnessBlenderOptions](arkts-arkgraphics2d-uieffect-colorfulbrightnessblenderoptions-i-sys.md) | 否 | 提亮压暗的增强参数，用于控制提亮压暗方向、色彩增强强度、可读性阈值及HDR开关。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [ColorfulBrightnessBlender](arkts-arkgraphics2d-uieffect-colorfulbrightnessblender-i-sys.md) | 返回具有彩色提亮压暗效果的混合器。 |
+| [ColorfulBrightnessBlender](arkts-arkgraphics2d-uieffect-colorfulbrightnessblender-i-sys.md) | 返回基于保持色相的提亮压暗混合器。 |
 
 **示例**
 

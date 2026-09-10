@@ -6,7 +6,7 @@ typedef struct ArkUI_NativeDialogAPI_3 {...} ArkUI_NativeDialogAPI_3
 
 ## 概述
 
-ArkUI提供的Native侧自定义弹窗接口集合。
+ArkUI提供的Native侧自定义弹窗接口集合，支持设置边框样式、尺寸、背景效果、键盘避让模式、焦点管理等能力，用于在Native层精细控制自定义弹窗的外观样式和交互行为，适用于需要高度定制化弹窗UI的场景。
 
 **起始版本：** 19
 
@@ -39,7 +39,7 @@ ArkUI提供的Native侧自定义弹窗接口集合。
 | [int32_t (\*setWidth)(ArkUI_NativeDialogHandle handle, float width, ArkUI_LengthMetricUnit unit)](#setwidth) | 设置自定义弹窗的背板宽度。 |
 | [int32_t (\*setHeight)(ArkUI_NativeDialogHandle handle, float height, ArkUI_LengthMetricUnit unit)](#setheight) | 设置自定义弹窗的背板高度。 |
 | [int32_t (\*setShadow)(ArkUI_NativeDialogHandle handle, ArkUI_ShadowStyle shadow)](#setshadow) | 设置自定义弹窗的背板阴影。 |
-| [int32_t (\*setCustomShadow)(ArkUI_NativeDialogHandle handle, const ArkUI_AttributeItem* customShadow)](#setcustomshadow) | 设置自定义弹窗的背板阴影。 |
+| [int32_t (\*setCustomShadow)(ArkUI_NativeDialogHandle handle, const ArkUI_AttributeItem* customShadow)](#setcustomshadow) | 设置自定义弹窗的背板自定义阴影。 |
 | [int32_t (\*setBackgroundBlurStyle)(ArkUI_NativeDialogHandle handle, ArkUI_BlurStyle blurStyle)](#setbackgroundblurstyle) | 设置自定义弹窗的背板模糊材质。 |
 | [int32_t (\*setKeyboardAvoidMode)(ArkUI_NativeDialogHandle handle, ArkUI_KeyboardAvoidMode keyboardAvoidMode)](#setkeyboardavoidmode) | 设置自定义弹窗避让键盘模式。 |
 | [int32_t (\*enableHoverMode)(ArkUI_NativeDialogHandle handle, bool enableHoverMode)](#enablehovermode) | 设置自定义弹窗是否响应悬停态。 |
@@ -62,7 +62,7 @@ int32_t (*setLevelOrder)(ArkUI_NativeDialogHandle handle, double levelOrder)
 
 > **说明：**
 >
-> This method must be called before the <b>show</b> method.
+> setLevelOrder方法需要在调用show之前调用。
 
 **起始版本：** 19
 
@@ -195,7 +195,7 @@ int32_t (*setBorderWidth)(ArkUI_NativeDialogHandle handle, float top, float righ
 
 > **说明：**
 >
-> This method must be called before the <b>show</b> method.
+> setBorderWidth方法需要在调用show之前调用。
 
 **起始版本：** 19
 
@@ -228,7 +228,7 @@ int32_t (*setBorderColor)(ArkUI_NativeDialogHandle handle, uint32_t top, uint32_
 
 > **说明：**
 >
-> This method must be called before the <b>show</b> method.
+> setBorderColor方法需要在调用show之前调用。
 
 **起始版本：** 19
 
@@ -260,7 +260,7 @@ int32_t (*setBorderStyle)(ArkUI_NativeDialogHandle handle, int32_t top, int32_t 
 
 > **说明：**
 >
-> This method must be called before the <b>show</b> method.
+> setBorderStyle方法需要在调用show之前调用。
 
 **起始版本：** 19
 
@@ -292,7 +292,7 @@ int32_t (*setWidth)(ArkUI_NativeDialogHandle handle, float width, ArkUI_LengthMe
 
 > **说明：**
 >
-> This method must be called before the <b>show</b> method.
+> setWidth方法需要在调用show之前调用。
 
 **起始版本：** 19
 
@@ -322,7 +322,7 @@ int32_t (*setHeight)(ArkUI_NativeDialogHandle handle, float height, ArkUI_Length
 
 > **说明：**
 >
-> This method must be called before the <b>show</b> method.
+> setHeight方法需要在调用show之前调用。
 
 **起始版本：** 19
 
@@ -352,7 +352,7 @@ int32_t (*setShadow)(ArkUI_NativeDialogHandle handle, ArkUI_ShadowStyle shadow)
 
 > **说明：**
 >
-> This method must be called before the <b>show</b> method.
+> setShadow方法需要在调用show之前调用。
 
 **起始版本：** 19
 
@@ -377,11 +377,11 @@ int32_t (*setCustomShadow)(ArkUI_NativeDialogHandle handle, const ArkUI_Attribut
 
 **描述：**
 
-设置自定义弹窗的背板阴影。
+设置自定义弹窗的背板自定义阴影。
 
 > **说明：**
 >
-> This method must be called before the <b>show</b> method.
+> setCustomShadow方法需要在调用show之前调用。
 
 **起始版本：** 19
 
@@ -410,7 +410,7 @@ int32_t (*setBackgroundBlurStyle)(ArkUI_NativeDialogHandle handle, ArkUI_BlurSty
 
 > **说明：**
 >
-> This method must be called before the <b>show</b> method.
+> setBackgroundBlurStyle方法需要在调用show之前调用。
 
 **起始版本：** 19
 
@@ -439,7 +439,7 @@ int32_t (*setKeyboardAvoidMode)(ArkUI_NativeDialogHandle handle, ArkUI_KeyboardA
 
 > **说明：**
 >
-> This method must be called before the <b>show</b> method.
+> setKeyboardAvoidMode方法需要在调用show之前调用。
 
 **起始版本：** 19
 
@@ -468,7 +468,7 @@ int32_t (*enableHoverMode)(ArkUI_NativeDialogHandle handle, bool enableHoverMode
 
 > **说明：**
 >
-> This method must be called before the <b>show</b> method.
+> enableHoverMode方法需要在调用show之前调用。
 
 **起始版本：** 19
 
@@ -497,7 +497,7 @@ int32_t (*setHoverModeArea)(ArkUI_NativeDialogHandle handle, ArkUI_HoverModeArea
 
 > **说明：**
 >
-> This method must be called before the <b>show</b> method.
+> setHoverModeArea方法需要在调用show之前调用。
 
 **起始版本：** 19
 
@@ -523,6 +523,10 @@ int32_t (*setFocusable)(ArkUI_NativeDialogHandle handle, bool focusable)
 **描述：**
 
 设置自定义弹窗是否获取焦点。
+
+> **说明：**
+>
+> setFocusable方法需要在调用show之前调用。
 
 **起始版本：** 19
 
@@ -551,7 +555,7 @@ int32_t (*setBackgroundBlurStyleOptions)(ArkUI_NativeDialogHandle handle, const 
 
 > **说明：**
 >
-> This method must be called before the <b>show</b> method.
+> setBackgroundBlurStyleOptions方法需要在调用show之前调用。
 
 **起始版本：** 19
 
@@ -580,7 +584,7 @@ int32_t (*setBackgroundEffect)(ArkUI_NativeDialogHandle handle, const ArkUI_Attr
 
 > **说明：**
 >
-> This method must be called before the <b>show</b> method.
+> setBackgroundEffect方法需要在调用show之前调用。
 
 **起始版本：** 19
 

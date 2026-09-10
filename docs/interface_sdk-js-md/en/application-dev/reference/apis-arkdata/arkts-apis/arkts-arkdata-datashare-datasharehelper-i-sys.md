@@ -46,7 +46,7 @@ In silent scenarios, the total size of the **uri**, **subscriberId**, and **temp
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
-| [15700011](../errorcode-datashare.md#15700011-uri-not-exist) | The URI is not exist. |
+| [15700011](../errorcode-datashare.md#15700011-uri-does-not-exist) | The URI is not exist. |
 | [15700013](../errorcode-datashare.md#15700013-datasharehelper-instance-closed) | The DataShareHelper instance is already closed.<br>**Applicable version:** 12 and later |
 
 **Examples**
@@ -490,7 +490,7 @@ In silent scenarios, the total size of the **uri** and **subscriberId** paramete
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
-| [15700011](../errorcode-datashare.md#15700011-uri-not-exist) | The URI is not exist. |
+| [15700011](../errorcode-datashare.md#15700011-uri-does-not-exist) | The URI is not exist. |
 | [15700013](../errorcode-datashare.md#15700013-datasharehelper-instance-closed) | The DataShareHelper instance is already closed.<br>**Applicable version:** 12 and later |
 
 **Examples**

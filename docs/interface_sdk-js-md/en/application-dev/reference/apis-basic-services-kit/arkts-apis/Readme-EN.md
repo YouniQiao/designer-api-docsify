@@ -358,7 +358,7 @@
 - [@ohos.intelligentScene](arkts-intelligentscene.md)
   - [isDoNotDisturbEnabled](arkts-basicservices-intelligentscene-isdonotdisturbenabled-f.md)
   - [isNotifyAllowedInDoNotDisturb](arkts-basicservices-intelligentscene-isnotifyallowedindonotdisturb-f.md)
-- [@ohos.pasteboard](arkts-pasteboard.md)
+- [@ohos.pasteboard(Pasteboard)](arkts-pasteboard.md)
   - [createData](arkts-basicservices-pasteboard-createdata-f.md)
   - [createHtmlData](arkts-basicservices-pasteboard-createhtmldata-f.md)
   - [createHtmlTextRecord](arkts-basicservices-pasteboard-createhtmltextrecord-f.md)

@@ -26,17 +26,17 @@
 | [ArkUI_ErrorCode OH_ArkUI_GetNavigationId(ArkUI_NodeHandle node, char* buffer, int32_t bufferSize, int32_t* writeLength)](#oh_arkui_getnavigationid) | 获取当前节点所在的{@link Navigation}组件的ID。 |
 | [ArkUI_ErrorCode OH_ArkUI_GetNavDestinationName(ArkUI_NodeHandle node, char* buffer, int32_t bufferSize, int32_t* writeLength)](#oh_arkui_getnavdestinationname) | 获取当前节点所在的{@link NavDestination}组件的名称。 |
 | [ArkUI_ErrorCode OH_ArkUI_GetNavStackLength(ArkUI_NodeHandle node, int32_t* length)](#oh_arkui_getnavstacklength) | 获取当前节点所在的Navigation栈的长度。 |
-| [ArkUI_ErrorCode OH_ArkUI_GetNavDestinationNameByIndex(ArkUI_NodeHandle node, int32_t index, char* buffer, int32_t bufferSize, int32_t* writeLength)](#oh_arkui_getnavdestinationnamebyindex) | Based on the given index value, obtain the page name of the corresponding positionin the navigation stack where the node is located.Index values are counted from 0, with 0 being the bottom of the stack. |
+| [ArkUI_ErrorCode OH_ArkUI_GetNavDestinationNameByIndex(ArkUI_NodeHandle node, int32_t index, char* buffer, int32_t bufferSize, int32_t* writeLength)](#oh_arkui_getnavdestinationnamebyindex) | 根据给定索引值，获取当前节点所在的Navigation栈中的页面名称。索引值从0开始计数，0为栈底。 |
 | [ArkUI_ErrorCode OH_ArkUI_GetNavDestinationId(ArkUI_NodeHandle node, char* buffer, int32_t bufferSize, int32_t* writeLength)](#oh_arkui_getnavdestinationid) | 获取当前节点所在的NavDestination组件的ID。 |
 | [ArkUI_ErrorCode OH_ArkUI_GetNavDestinationState(ArkUI_NodeHandle node, ArkUI_NavDestinationState* state)](#oh_arkui_getnavdestinationstate) | 获取当前节点所在的NavDestination组件的状态。 |
-| [ArkUI_ErrorCode OH_ArkUI_GetNavDestinationIndex(ArkUI_NodeHandle node, int32_t* index)](#oh_arkui_getnavdestinationindex) | Obtain the index of the NavDestination component on the Navigation stack where the node is located. |
-| [napi_value OH_ArkUI_GetNavDestinationParam(ArkUI_NodeHandle node)](#oh_arkui_getnavdestinationparam) | Obtain the parameters of the NavDestination component where the node is located. |
-| [ArkUI_ErrorCode OH_ArkUI_GetRouterPageIndex(ArkUI_NodeHandle node, int32_t* index)](#oh_arkui_getrouterpageindex) | Obtain the index of the page where the node resides in the Router page stack. |
-| [ArkUI_ErrorCode OH_ArkUI_GetRouterPageName(ArkUI_NodeHandle node, char* buffer, int32_t bufferSize, int32_t* writeLength)](#oh_arkui_getrouterpagename) | Obtain the name of the page where the node is located. |
-| [ArkUI_ErrorCode OH_ArkUI_GetRouterPagePath(ArkUI_NodeHandle node, char* buffer, int32_t bufferSize, int32_t* writeLength)](#oh_arkui_getrouterpagepath) | Obtain the path of the page where the node is located. |
-| [ArkUI_ErrorCode OH_ArkUI_GetRouterPageState(ArkUI_NodeHandle node, ArkUI_RouterPageState* state)](#oh_arkui_getrouterpagestate) | Obtain the state of the page where the node is located. |
+| [ArkUI_ErrorCode OH_ArkUI_GetNavDestinationIndex(ArkUI_NodeHandle node, int32_t* index)](#oh_arkui_getnavdestinationindex) | 获取当前节点所在的NavDestination组件在页面栈中的索引。 |
+| [napi_value OH_ArkUI_GetNavDestinationParam(ArkUI_NodeHandle node)](#oh_arkui_getnavdestinationparam) | 获取当前节点所在的NavDestination组件的参数。 |
+| [ArkUI_ErrorCode OH_ArkUI_GetRouterPageIndex(ArkUI_NodeHandle node, int32_t* index)](#oh_arkui_getrouterpageindex) | 获取当前节点所在{@link Router}页面栈中的索引。 |
+| [ArkUI_ErrorCode OH_ArkUI_GetRouterPageName(ArkUI_NodeHandle node, char* buffer, int32_t bufferSize, int32_t* writeLength)](#oh_arkui_getrouterpagename) | 获取当前节点所在Router页面的名称。 |
+| [ArkUI_ErrorCode OH_ArkUI_GetRouterPagePath(ArkUI_NodeHandle node, char* buffer, int32_t bufferSize, int32_t* writeLength)](#oh_arkui_getrouterpagepath) | 获取当前节点所在Router页面的路径。 |
+| [ArkUI_ErrorCode OH_ArkUI_GetRouterPageState(ArkUI_NodeHandle node, ArkUI_RouterPageState* state)](#oh_arkui_getrouterpagestate) | 获取当前节点所在Router页面的状态。 |
 | [ArkUI_ErrorCode OH_ArkUI_GetRouterPageId(ArkUI_NodeHandle node, char* buffer, int32_t bufferSize, int32_t* writeLength)](#oh_arkui_getrouterpageid) | 获取当前节点所在Router页面的ID。 |
-| [int32_t OH_ArkUI_PostFrameCallback(ArkUI_ContextHandle uiContext, void* userData, void (\*callback)(uint64_t nanoTimestamp, uint32_t frameCount, void* userData))](#oh_arkui_postframecallback) | Register a callback to be executed when rendering in the next frame. Cannot be called onthe non-UI thread. Checking for non-UI thread calls will abort. |
+| [int32_t OH_ArkUI_PostFrameCallback(ArkUI_ContextHandle uiContext, void* userData, void (\*callback)(uint64_t nanoTimestamp, uint32_t frameCount, void* userData))](#oh_arkui_postframecallback) | 注册一个回调函数，以便在下一帧渲染时执行，适用于Native侧在下一帧执行界面刷新或渲染相关任务的场景。不允许在非UI线程调用；如果检查到在非UI线程调用，程序会主动中止。 |
 | [int32_t OH_ArkUI_PostIdleCallback(ArkUI_ContextHandle uiContext, void* userData, void (\*callback)(uint64_t nanoTimeLeft, uint32_t frameCount, void* userData))](#oh_arkui_postidlecallback) | 注册一个回调函数，在下一帧渲染结束后如果距离下一帧到来剩余时间大于1ms时，该回调函数将被执行；如果剩余时间小于1ms时，回调函数将被顺延至当某个下一帧的剩余时间大于1ms时再执行。如果当前没有下一帧，将自动请求下一帧。 |
 | [ArkUI_ErrorCode OH_ArkUI_InitModuleForArkTSEnv(napi_env env)](#oh_arkui_initmoduleforarktsenv) | 初始化指定上下文环境的ArkUI相关接口。该函数禁止在非UI线程中调用，否则程序将主动abort。 |
 | [void OH_ArkUI_NotifyArkTSEnvDestroy(napi_env env)](#oh_arkui_notifyarktsenvdestroy) | 通知指定的上下文环境已销毁。该函数禁止在非UI线程中调用，否则程序将主动abort。 |
@@ -260,7 +260,7 @@ ArkUI_ErrorCode OH_ArkUI_GetNavDestinationNameByIndex(ArkUI_NodeHandle node, int
 
 **描述：**
 
-Based on the given index value, obtain the page name of the corresponding positionin the navigation stack where the node is located.Index values are counted from 0, with 0 being the bottom of the stack.
+根据给定索引值，获取当前节点所在的Navigation栈中的页面名称。索引值从0开始计数，0为栈底。
 
 **起始版本：** 12
 
@@ -268,17 +268,17 @@ Based on the given index value, obtain the page name of the corresponding positi
 
 | 参数项 | 描述 |
 | -- | -- |
-| ArkUI_NodeHandle node | The node. |
-| int32_t index | The index of the NavDestination in the stack is queried. |
-| char* buffer | The buffer to which NavDestination index writes to the memory,memory space needs to be allocated by the developer. |
-| int32_t bufferSize | The buffer size |
-| int32_t* writeLength | Indicates the string length actually written to the bufferwhen returning {@link ARKUI_ERROR_CODE_NO_ERROR}.Indicates the minimum buffer size that can accommodate the targetwhen {@link ARKUI_ERROR_CODE_BUFFER_SIZE_ERROR} is returned. |
+| ArkUI_NodeHandle node | 指定的节点。 |
+| int32_t index | 被查询NavDestination在栈中的索引。 |
+| char* buffer | 缓冲区，被查询页面的名称写入该内存区域。 |
+| int32_t bufferSize | 缓冲区大小。 |
+| int32_t* writeLength | 在返回ARKUI_ERROR_CODE_NO_ERROR时表示实际写入到缓冲区的字符串长度。<br>在返回ARKUI_ERROR_CODE_BUFFER_SIZE_ERROR时表示可以容纳目标的最小缓冲区大小。 |
 
 **返回：**
 
 | 类型 | 说明 |
 | -- | -- |
-| ArkUI_ErrorCode | The error code.          {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.          {@link ARKUI_ERROR_CODE_PARAM_INVALID} if the node, buffer or writeLength is null.          {@link ARKUI_ERROR_CODE_NODE_INDEX_INVALID} if index is an invalid value.          {@link ARKUI_ERROR_CODE_GET_INFO_FAILED} if query information failed,          this may be because the node is not in Navigation.          {@link ARKUI_ERROR_CODE_BUFFER_SIZE_ERROR} If the buffer size is less than the minimum buffer size. |
+| ArkUI_ErrorCode | 错误码。          {@link ARKUI_ERROR_CODE_NO_ERROR} 成功。          {@link ARKUI_ERROR_CODE_PARAM_INVALID} if the node, buffer or writeLength is null.          {@link ARKUI_ERROR_CODE_NODE_INDEX_INVALID} index为非法值。          {@link ARKUI_ERROR_CODE_GET_INFO_FAILED} 查询信息失败，可能因为当前节点未挂载在页面下。          {@link ARKUI_ERROR_CODE_BUFFER_SIZE_ERROR} 给定的buffer size小于可以容纳目标的最小缓冲区大小。 |
 
 ### OH_ArkUI_GetNavDestinationId()
 
@@ -340,7 +340,7 @@ ArkUI_ErrorCode OH_ArkUI_GetNavDestinationIndex(ArkUI_NodeHandle node, int32_t* 
 
 **描述：**
 
-Obtain the index of the NavDestination component on the Navigation stack where the node is located.
+获取当前节点所在的NavDestination组件在页面栈中的索引。
 
 **起始版本：** 12
 
@@ -348,14 +348,14 @@ Obtain the index of the NavDestination component on the Navigation stack where t
 
 | 参数项 | 描述 |
 | -- | -- |
-| ArkUI_NodeHandle node | The node. |
-| int32_t* index | Index value, counted from 0. |
+| ArkUI_NodeHandle node | 指定的节点。 |
+| int32_t* index | 索引值，从0开始计数。 |
 
 **返回：**
 
 | 类型 | 说明 |
 | -- | -- |
-| ArkUI_ErrorCode | The error code.          {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.          {@link ARKUI_ERROR_CODE_PARAM_INVALID} if the node or index is null.          {@link ARKUI_ERROR_CODE_GET_INFO_FAILED} if query information failed,          this may be because the node is not in Navigation. |
+| ArkUI_ErrorCode | 错误码。      <br>{@link ARKUI_ERROR_CODE_NO_ERROR} 成功。      <br>{@link ARKUI_ERROR_CODE_PARAM_INVALID} 函数参数异常。      <br>{@link ARKUI_ERROR_CODE_GET_INFO_FAILED} 查询信息失败，可能因为当前节点未挂载在页面下。 |
 
 ### OH_ArkUI_GetNavDestinationParam()
 
@@ -365,7 +365,7 @@ napi_value OH_ArkUI_GetNavDestinationParam(ArkUI_NodeHandle node)
 
 **描述：**
 
-Obtain the parameters of the NavDestination component where the node is located.
+获取当前节点所在的NavDestination组件的参数。
 
 **起始版本：** 12
 
@@ -373,13 +373,13 @@ Obtain the parameters of the NavDestination component where the node is located.
 
 | 参数项 | 描述 |
 | -- | -- |
-| ArkUI_NodeHandle node | The node. |
+| ArkUI_NodeHandle node | 指定的节点。 |
 
 **返回：**
 
 | 类型 | 说明 |
 | -- | -- |
-| napi_value | The parameters.          If a null pointer is returned, it may be because the node is empty or the parameters does not exist. |
+| napi_value | 参数对象。如返回为空，则说明参数不存在或指定的节点为空。 |
 
 ### OH_ArkUI_GetRouterPageIndex()
 
@@ -389,7 +389,7 @@ ArkUI_ErrorCode OH_ArkUI_GetRouterPageIndex(ArkUI_NodeHandle node, int32_t* inde
 
 **描述：**
 
-Obtain the index of the page where the node resides in the Router page stack.
+获取当前节点所在{@link Router}页面栈中的索引。
 
 **起始版本：** 12
 
@@ -397,14 +397,14 @@ Obtain the index of the page where the node resides in the Router page stack.
 
 | 参数项 | 描述 |
 | -- | -- |
-| ArkUI_NodeHandle node | The node. |
-| int32_t* index | Index value, counted from 1. |
+| ArkUI_NodeHandle node | 指定的节点。 |
+| int32_t* index | 索引值，从1开始计数。 |
 
 **返回：**
 
 | 类型 | 说明 |
 | -- | -- |
-| ArkUI_ErrorCode | The error code.          {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.          {@link ARKUI_ERROR_CODE_PARAM_INVALID} if the node or index is null.          {@link ARKUI_ERROR_CODE_GET_INFO_FAILED} if query information failed,          this may be because the node is not in RouterPage. |
+| ArkUI_ErrorCode | 错误码。      <br>{@link ARKUI_ERROR_CODE_NO_ERROR} 成功。      <br>{@link ARKUI_ERROR_CODE_PARAM_INVALID} 指定的节点或传递的索引异常。      <br>{@link ARKUI_ERROR_CODE_GET_INFO_FAILED} 查询信息失败，可能因为当前节点未挂载在页面下。 |
 
 ### OH_ArkUI_GetRouterPageName()
 
@@ -414,7 +414,7 @@ ArkUI_ErrorCode OH_ArkUI_GetRouterPageName(ArkUI_NodeHandle node, char* buffer, 
 
 **描述：**
 
-Obtain the name of the page where the node is located.
+获取当前节点所在Router页面的名称。
 
 **起始版本：** 12
 
@@ -422,16 +422,16 @@ Obtain the name of the page where the node is located.
 
 | 参数项 | 描述 |
 | -- | -- |
-| ArkUI_NodeHandle node | The node. |
-| char* buffer | The buffer to which page name writes to the memory,memory space needs to be allocated by the developer. |
-| int32_t bufferSize | The buffer size |
-| int32_t* writeLength | Indicates the string length actually written to the bufferwhen returning {@link ARKUI_ERROR_CODE_NO_ERROR}.Indicates the minimum buffer size that can accommodate the targetwhen {@link ARKUI_ERROR_CODE_BUFFER_SIZE_ERROR} is returned. |
+| ArkUI_NodeHandle node | 指定的节点。 |
+| char* buffer | 缓冲区，页面名称写入该内存区域。 |
+| int32_t bufferSize | 缓冲区大小。 |
+| int32_t* writeLength | 在返回{@link ARKUI_ERROR_CODE_NO_ERROR}时表示实际写入到缓冲区的字符串长度。<br>在返回{@link ARKUI_ERROR_CODE_BUFFER_SIZE_ERROR}时表示可以容纳目标的最小缓冲区大小。 |
 
 **返回：**
 
 | 类型 | 说明 |
 | -- | -- |
-| ArkUI_ErrorCode | The error code.          {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.          {@link ARKUI_ERROR_CODE_PARAM_INVALID} if the node, buffer or writeLength is null.          {@link ARKUI_ERROR_CODE_GET_INFO_FAILED} if query information failed,          this may be because the node is not in RouterPage.          {@link ARKUI_ERROR_CODE_BUFFER_SIZE_ERROR} If the buffer size is less than the minimum buffer size. |
+| ArkUI_ErrorCode | 错误码。      <br>{@link ARKUI_ERROR_CODE_NO_ERROR} 成功。      <br>{@link ARKUI_ERROR_CODE_PARAM_INVALID} 函数参数异常。      <br>{@link ARKUI_ERROR_CODE_GET_INFO_FAILED} 查询信息失败。      <br>{@link ARKUI_ERROR_CODE_BUFFER_SIZE_ERROR} 给定的buffer size小于可以容纳目标的最小缓冲区大小。 |
 
 ### OH_ArkUI_GetRouterPagePath()
 
@@ -441,7 +441,7 @@ ArkUI_ErrorCode OH_ArkUI_GetRouterPagePath(ArkUI_NodeHandle node, char* buffer, 
 
 **描述：**
 
-Obtain the path of the page where the node is located.
+获取当前节点所在Router页面的路径。
 
 **起始版本：** 12
 
@@ -449,16 +449,16 @@ Obtain the path of the page where the node is located.
 
 | 参数项 | 描述 |
 | -- | -- |
-| ArkUI_NodeHandle node | The node. |
-| char* buffer | The buffer to which page path writes to the memory,memory space needs to be allocated by the developer. |
-| int32_t bufferSize | The buffer size |
-| int32_t* writeLength | Indicates the string length actually written to the bufferwhen returning {@link ARKUI_ERROR_CODE_NO_ERROR}.Indicates the minimum buffer size that can accommodate the targetwhen {@link ARKUI_ERROR_CODE_BUFFER_SIZE_ERROR} is returned. |
+| ArkUI_NodeHandle node | 指定的节点。 |
+| char* buffer | 缓冲区，页面路径写入该内存区域。 |
+| int32_t bufferSize | 缓冲区大小。 |
+| int32_t* writeLength | 在返回{@link ARKUI_ERROR_CODE_NO_ERROR}时表示实际写入到缓冲区的字符串长度。<br>在返回{@link ARKUI_ERROR_CODE_BUFFER_SIZE_ERROR}时表示可以容纳目标的最小缓冲区大小。 |
 
 **返回：**
 
 | 类型 | 说明 |
 | -- | -- |
-| ArkUI_ErrorCode | The error code.          {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.          {@link ARKUI_ERROR_CODE_PARAM_INVALID} if the node, buffer or writeLength is null.          {@link ARKUI_ERROR_CODE_GET_INFO_FAILED} if query information failed,          this may be because the node is not in RouterPage.          {@link ARKUI_ERROR_CODE_BUFFER_SIZE_ERROR} If the buffer size is less than the minimum buffer size. |
+| ArkUI_ErrorCode | 错误码。      <br>{@link ARKUI_ERROR_CODE_NO_ERROR} 成功。      <br>{@link ARKUI_ERROR_CODE_PARAM_INVALID} 函数参数异常。      <br>{@link ARKUI_ERROR_CODE_GET_INFO_FAILED} 查询信息失败。      <br>{@link ARKUI_ERROR_CODE_BUFFER_SIZE_ERROR} 给定的buffer size小于可以容纳目标的最小缓冲区大小。 |
 
 ### OH_ArkUI_GetRouterPageState()
 
@@ -468,7 +468,7 @@ ArkUI_ErrorCode OH_ArkUI_GetRouterPageState(ArkUI_NodeHandle node, ArkUI_RouterP
 
 **描述：**
 
-Obtain the state of the page where the node is located.
+获取当前节点所在Router页面的状态。
 
 **起始版本：** 12
 
@@ -476,14 +476,14 @@ Obtain the state of the page where the node is located.
 
 | 参数项 | 描述 |
 | -- | -- |
-| ArkUI_NodeHandle node | The node. |
-| ArkUI_RouterPageState* state | The state value of the page is written back to this parameter. |
+| ArkUI_NodeHandle node | 指定的节点。 |
+| ArkUI_RouterPageState* state | Router页面的状态值写回该参数中。 |
 
 **返回：**
 
 | 类型 | 说明 |
 | -- | -- |
-| ArkUI_ErrorCode | The error code.          {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.          {@link ARKUI_ERROR_CODE_PARAM_INVALID} if the node or state is null.          {@link ARKUI_ERROR_CODE_GET_INFO_FAILED} if query information failed,          this may be because the node is not in RouterPage. |
+| ArkUI_ErrorCode | 错误码。      <br>{@link ARKUI_ERROR_CODE_NO_ERROR} 成功。      <br>{@link ARKUI_ERROR_CODE_PARAM_INVALID} 函数参数异常。      <br>{@link ARKUI_ERROR_CODE_GET_INFO_FAILED} 查询信息失败。 |
 
 ### OH_ArkUI_GetRouterPageId()
 
@@ -520,7 +520,7 @@ int32_t OH_ArkUI_PostFrameCallback(ArkUI_ContextHandle uiContext, void* userData
 
 **描述：**
 
-Register a callback to be executed when rendering in the next frame. Cannot be called onthe non-UI thread. Checking for non-UI thread calls will abort.
+注册一个回调函数，以便在下一帧渲染时执行，适用于Native侧在下一帧执行界面刷新或渲染相关任务的场景。不允许在非UI线程调用；如果检查到在非UI线程调用，程序会主动中止。
 
 **起始版本：** 18
 
@@ -528,17 +528,17 @@ Register a callback to be executed when rendering in the next frame. Cannot be c
 
 | 参数项 | 描述 |
 | -- | -- |
-| rkUI_ContextHandle uiContext | ArkUI_ContextHandle. |
-| void\* userData | Indicates the custom data to be saved. |
-| void (\*callback)(uint64_t nanoTimestamp | Custom callback function. |
-| void (\*callback)(uint64_t nanoTimestamp | Timestamp of frame signal. |
-| uint32_t frameCount | Frame count. |
+| rkUI_ContextHandle uiContext | {@link UIContext}对象指针，用以绑定实例。 |
+| void\* userData | 自定义事件参数，当事件触发时在回调参数中携带回来。 |
+| void (\*callback)(uint64_t nanoTimestamp | 自定义回调函数，用于在下一帧渲染时执行。 |
+| void (\*callback)(uint64_t nanoTimestamp | 帧信号的时间戳。 |
+| uint32_t frameCount | 帧号。 |
 
 **返回：**
 
 | 类型 | 说明 |
 | -- | -- |
-| int32_t | Returns the result code.          Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.          Returns {@link ARKUI_ERROR_CODE_CAPI_INIT_ERROR} if the CAPI init error.          Returns {@link ARKUI_ERROR_CODE_UI_CONTEXT_INVALID} if the uiContext is invalid.          Returns {@link ARKUI_ERROR_CODE_CALLBACK_INVALID} if the callback function is invalid. |
+| int32_t | 错误码。      <br>{@link ARKUI_ERROR_CODE_NO_ERROR} 成功。      <br>{@link ARKUI_ERROR_CODE_CAPI_INIT_ERROR} CAPI初始化错误，请确认ArkUI Native接口运行环境已完成初始化后重试。      <br>{@link ARKUI_ERROR_CODE_UI_CONTEXT_INVALID} uiContext对象无效，请检查uiContext是否为空或是否来自有效的UIContext对象。      <br>{@link ARKUI_ERROR_CODE_CALLBACK_INVALID} 回调函数无效，请检查callback是否为空。 |
 
 ### OH_ArkUI_PostIdleCallback()
 

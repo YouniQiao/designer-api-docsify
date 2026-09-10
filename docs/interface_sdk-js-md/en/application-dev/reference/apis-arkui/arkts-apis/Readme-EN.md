@@ -610,7 +610,7 @@
   - [PartialResultType(system api)](arkts-arkui-imagegeneration-partialresulttype-e-sys.md)<!--DelEnd-->
 - [@ohos.arkui.layoutAlgorithm](arkts-arkui-layoutalgorithm.md)
 - [@ohos.arkui.lazyLayoutAlgorithm](arkts-arkui-lazylayoutalgorithm.md)
-- [@ohos.arkui.node](arkts-arkui-node.md)
+- [@ohos.arkui.node(Custom Node)](arkts-arkui-node.md)
 - [@ohos.arkui.observer](arkts-arkui-observer.md)
   - [off](arkts-arkui-uiobserver-off-f.md)
   - [on](arkts-arkui-uiobserver-on-f.md)

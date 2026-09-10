@@ -29,7 +29,7 @@
 | -- | -- |
 | [OH_AVErrCode OH_AVSamplesBuffer_AppendOneBuffer(OH_AVSamplesBuffer *samplesBuffer, OH_AVBuffer *avBuffer)](#oh_avsamplesbuffer_appendonebuffer) | 将一个OH_AVBuffer中的数据添加到OH_AVSamplesBuffer实例中。 |
 | [int32_t OH_AVSamplesBuffer_GetRemainedCapacity(OH_AVSamplesBuffer *samplesBuffer)](#oh_avsamplesbuffer_getremainedcapacity) | 获取OH_AVSamplesBuffer实例的剩余可使用容量。 |
-| [OH_LowPowerAVSink_Capability *OH_LowPowerAVSink_GetCapability()](#oh_lowpoweravsink_getcapability) | 获取LPP播放器能力。该函数的主要作用是获取当前低功耗播放器所支持的功能和媒体格式。通过调用此函数，可以了解设备在音频或视频处理方面的支持能力，例如支持的编码格式、解码格式、码率范围等。 |
+| [OH_LowPowerAVSink_Capability *OH_LowPowerAVSink_GetCapability()](#oh_lowpoweravsink_getcapability) | 获取LPP播放器能力。该函数的主要作用是获取当前低功耗播放器所支持的功能和媒体格式。<br>通过调用此函数，可以了解设备在音频或视频处理方面的支持能力，例如支持的编码格式、解码格式、码率范围等。 |
 
 ## 函数说明
 
@@ -56,7 +56,7 @@ OH_AVErrCode OH_AVSamplesBuffer_AppendOneBuffer(OH_AVSamplesBuffer *samplesBuffe
 
 | 类型 | 说明 |
 | -- | -- |
-| OH_AVErrCode | AV_ERR_OK：执行成功。  AV_ERR_INVALID_VAL：参数为nullptr或参数非法。  AV_ERR_NO_MEMORY：OH_AVSamplesBuffer没有足够的剩余容量来追加一个OH_AVBuffer。  AV_ERR_UNKNOWN：未知错误。 |
+| OH_AVErrCode | AV_ERR_OK：执行成功。<br>  AV_ERR_INVALID_VAL：参数为nullptr或参数非法。<br>  AV_ERR_NO_MEMORY：OH_AVSamplesBuffer没有足够的剩余容量来追加一个OH_AVBuffer。<br>  AV_ERR_UNKNOWN：未知错误。 |
 
 ### OH_AVSamplesBuffer_GetRemainedCapacity()
 
@@ -90,7 +90,7 @@ OH_LowPowerAVSink_Capability *OH_LowPowerAVSink_GetCapability()
 
 **描述：**
 
-获取LPP播放器能力。该函数的主要作用是获取当前低功耗播放器所支持的功能和媒体格式。通过调用此函数，可以了解设备在音频或视频处理方面的支持能力，例如支持的编码格式、解码格式、码率范围等。
+获取LPP播放器能力。该函数的主要作用是获取当前低功耗播放器所支持的功能和媒体格式。<br>通过调用此函数，可以了解设备在音频或视频处理方面的支持能力，例如支持的编码格式、解码格式、码率范围等。
 
 **起始版本：** 21
 
@@ -98,6 +98,6 @@ OH_LowPowerAVSink_Capability *OH_LowPowerAVSink_GetCapability()
 
 | 类型 | 说明 |
 | -- | -- |
-| [OH_LowPowerAVSink_Capability *](capi-avsinkbase-oh-lowpoweravsink-capability.md) | OH_LowPowerAVSink_Capability：支持LPP播放器。  nullptr：不支持Lpp播放器或者获取失败。 |
+| [OH_LowPowerAVSink_Capability *](capi-avsinkbase-oh-lowpoweravsink-capability.md) | OH_LowPowerAVSink_Capability：支持LPP播放器。<br>  nullptr：不支持LPP播放器或者获取失败。 |
 
 

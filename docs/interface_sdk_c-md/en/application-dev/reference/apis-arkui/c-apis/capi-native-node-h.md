@@ -176,6 +176,7 @@ Provides type definitions for <b>NativeNode</b> APIs.
 | [ArkUI_GestureCollectInterceptInfo* OH_ArkUI_NodeEvent_GetGestureCollectInterceptInfo(ArkUI_NodeEvent* nodeEvent)](#oh_arkui_nodeevent_getgesturecollectinterceptinfo) | - | Obtains the <b>ArkUI_GestureCollectInterceptInfo</b> object from a specified <b>ArkUI_NodeEvent</b> object. |
 | [ArkUI_ErrorCode OH_ArkUI_NativeModule_SetChildMountPolicy(ArkUI_NodeHandle node, OH_ArkUI_NodeMountPolicy policy)](#oh_arkui_nativemodule_setchildmountpolicy) | - | Set the subnode mounting policy of the target node. |
 | [ArkUI_ErrorCode OH_ArkUI_NativeModule_GetChildMountPolicy(ArkUI_NodeHandle node, OH_ArkUI_NodeMountPolicy* policy)](#oh_arkui_nativemodule_getchildmountpolicy) | - | Get the current child mount policy of the specified node. |
+| [ArkUI_ErrorCode OH_ArkUI_NodeUtils_SetUiDvsyncSwitch(ArkUI_ContextHandle context, bool enable)](#oh_arkui_nodeutils_setuidvsyncswitch) | - | Set UI Dvsync switch. Calling this function on a non-UI thread will abort. |
 
 ## Enum type description
 
@@ -802,7 +803,7 @@ Defines the ArkUI style attributes that can be set on the native side.
 | NODE_SWIPER_AUTO_FILL | Defines the minimum main axis size of child element for swiper to works out the display count.This attribute can be set, reset, and obtained as required through APIs.**Format of the {@link ArkUI_AttributeItem} parameter for setting the attribute:<ul><li>.value[0].f32: minimum main axis size of the child element, Unit: vp.</li><li>.value[1]?.i32: whether to turn pages by group. The value <b>0</b> means to turn pages by child element,and <b>1</b> means to turn pages by group. The default value is <b>0</b>.</li></ul>**Format of the return value {@link ArkUI_AttributeItem}:<ul><li>.value[0].f32: minimum main axis size of the child element, Unit: vp.</li><li>.value[1].i32: whether to turn pages by group.</li></ul><br>**Since**: 19 |
 | NODE_SWIPER_MAINTAIN_VISIBLE_CONTENT_POSITION = 1001023 | Sets whether to maintain the visible content's position when data is inserted or deleted outsidethe display area of the <b>Swiper</b> component.**Format of the {@link ArkUI_AttributeItem} parameter for setting the attribute:<ul><li>.value[0].i32: whether to maintain the visible content's position when data is inserted or deleted outsidethe display area of the <b>Swiper</b> component. The value <b>0</b> means not to maintain the visible content'sposition, and <b>1</b> means the opposite. The default value is <b>0</b>.</li></ul>**Format of the return value {@link ArkUI_AttributeItem}:<ul><li>.value[0].i32: whether to maintain the visible content's position when data is inserted or deleted outsidethe display area of the <b>Swiper</b> component. The value <b>0</b> means not to maintain the visible content'sposition, and <b>1</b> means the opposite. The default value is <b>0</b>.</li></ul><br>**Since**: 20 |
 | NODE_SWIPER_ITEMFILLPOLICY = 1001024 | Specifies the responsive column layout policy for the <b>Swiper</b> component.This attribute can be set, reset, and obtained as required through APIs.**Format of the {@link ArkUI_AttributeItem} parameter for setting the attribute:<ul><li>.value[0].i32: number of columns at different breakpoint specifications.The data type is {@link ArkUI_ItemFillPolicy}.</li><li>.value[1]?.i32: whether to paginate by group. The value <b>0</b> means to paginate by individual childelements, and <b>1</b> means to paginate by groups of child elements displayed within the viewport.The default value is <b>0</b>.</li></ul>**Format of the return value {@link ArkUI_AttributeItem}:<ul><li>.value[0].i32: number of columns at different breakpoint specifications.The data type is {@link ArkUI_ItemFillPolicy}.</li><li>.value[1].i32: whether to paginate by group.</li></ul><br>**Since**: 22 |
-| NODE_LIST_ITEM_SWIPE_ACTION = MAX_NODE_SCOPE_NUM * ARKUI_NODE_LIST_ITEM | @brief: Set the delineation component of the ListItem, supporting property settings, property resets, andproperty acquisition interfaces.**Format of the {@link ArkUI_AttributeItem} parameter for setting the attribute:<ul><li>.object: Construct using the {@link ArkUI_ListitemSwipeActionOption} object.</li></ul>**Format of the return value {@link ArkUI_AttributeItem}:<ul><li>.object: Construct using the {@link ArkUI_ListitemSwipeActionOption} object.</li></ul> |
+| NODE_LIST_ITEM_SWIPE_ACTION = MAX_NODE_SCOPE_NUM * ARKUI_NODE_LIST_ITEM | Set the delineation component of the ListItem, supporting property settings, property resets, andproperty acquisition interfaces.**Format of the {@link ArkUI_AttributeItem} parameter for setting the attribute:<ul><li>.object: Construct using the {@link ArkUI_ListitemSwipeActionOption} object.</li></ul>**Format of the return value {@link ArkUI_AttributeItem}:<ul><li>.object: Construct using the {@link ArkUI_ListitemSwipeActionOption} object.</li></ul> |
 | NODE_LIST_ITEM_GROUP_SET_HEADER = MAX_NODE_SCOPE_NUM * ARKUI_NODE_LIST_ITEM_GROUP | Defines the header of the list item group.This attribute can be set, reset, and obtained as required through APIs.**Format of the {@link ArkUI_AttributeItem} parameter for setting the attribute:<ul><li>.object: {@link ArkUI_NodeHandle} object to be used as the header of the list item group.</li></ul>**Format of the return value {@link ArkUI_AttributeItem}:<ul><li>.object: {@link ArkUI_NodeHandle} object to be used as the header of the list item group.</li></ul> |
 | NODE_LIST_ITEM_GROUP_SET_FOOTER | Defines the footer of the list item group. This attribute can be set, reset, and obtained asrequired through APIs.**Format of the {@link ArkUI_AttributeItem} parameter for setting the attribute:<ul><li>.object: {@link ArkUI_NodeHandle} object to be used as the footer of the list item group.</li></ul>**Format of the return value {@link ArkUI_AttributeItem}:<ul><li>.object: {@link ArkUI_NodeHandle} object to be used as the footer of the list item group.</li></ul> |
 | NODE_LIST_ITEM_GROUP_SET_DIVIDER | Defines the style of the divider for the list items. This attribute can be set, reset, and obtainedas required through APIs.**Format of the {@link ArkUI_AttributeItem} parameter for setting the attribute:<ul><li>.value[0].u32: color of the divider, in 0xARGB format.</li><li>.value[1].f32: stroke width of the divider, in vp.</li><li>.value[2].f32: distance between the divider and the start of the list, in vp.</li><li>.value[3].f32: distance between the divider and the end of the list, in vp.</li></ul>**Format of the return value {@link ArkUI_AttributeItem}:<ul><li>.value[0].u32: color of the divider, in 0xARGB format.</li><li>.value[1].f32: stroke width of the divider, in vp.</li><li>.value[2].f32: distance between the divider and the start of the list, in vp.</li><li>.value[3].f32: distance between the divider and the end of the list, in vp.</li></ul> |
@@ -4208,5 +4209,30 @@ Get the current child mount policy of the specified node.
 | Type | Description |
 | -- | -- |
 | ArkUI_ErrorCode | Error code.      <ul><li>{@link ARKUI_ERROR_CODE_NO_ERROR} Success.      </li><li>{@link ARKUI_ERROR_CODE_PARAM_INVALID} Function parameter exception.      </li><li>{@link ARKUI_ERROR_CODE_CAPI_INIT_ERROR} if CAPI init error.</li></ul> |
+
+### OH_ArkUI_NodeUtils_SetUiDvsyncSwitch()
+
+```c
+ArkUI_ErrorCode OH_ArkUI_NodeUtils_SetUiDvsyncSwitch(ArkUI_ContextHandle context, bool enable)
+```
+
+**Description**
+
+Set UI Dvsync switch. Calling this function on a non-UI thread will abort.
+
+**Since**: 26.1.0
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| ArkUI_ContextHandle context | [in] Pointer to ArkUI_ContextHandle. |
+| bool enable | [in] whether enable Dvsync. |
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| ArkUI_ErrorCode | Error code.           <ul><li>{@link ARKUI_ERROR_CODE_NO_ERROR} Success.           </li><li>{@link ARKUI_ERROR_CODE_CAPI_INIT_ERROR} if CAPI init error.           </li><li>{@link ARKUI_ERROR_CODE_PARAM_INVALID} Function parameter exception.</li></ul> |
 
 

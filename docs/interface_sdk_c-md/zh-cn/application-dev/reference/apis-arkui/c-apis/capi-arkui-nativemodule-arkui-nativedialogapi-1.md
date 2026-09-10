@@ -21,12 +21,12 @@ ArkUI提供的Native侧自定义弹窗接口集合。
 | 名称 | 描述 |
 | -- | -- |
 | [ArkUI_NativeDialogHandle (\*create)()](#create) | 创建自定义弹窗并返回指向自定义弹窗的指针。 |
-| [void (\*dispose)(ArkUI_NativeDialogHandle handle)](#dispose) | 销毁自定义弹窗。<br>\| 参数项 \| 描述 \|\|------------------------------------------------------------------------------------\| -- \|\| {@link ArkUI_NativeDialogHandle} handle \| 指向自定义弹窗控制器的指针。 \| |
+| [void (\*dispose)(ArkUI_NativeDialogHandle handle)](#dispose) | 销毁自定义弹窗。与create配对使用，用于释放create创建的弹窗资源。调用后handle会被释放，不能再继续使用该handle，如需再次使用弹窗，需要重新调用create创建。 |
 | [int32_t (\*setContent)(ArkUI_NativeDialogHandle handle, ArkUI_NodeHandle content)](#setcontent) | 挂载自定义弹窗内容。 |
 | [int32_t (\*removeContent)(ArkUI_NativeDialogHandle handle)](#removecontent) | 卸载自定义弹窗内容。 |
 | [int32_t (\*setContentAlignment)(ArkUI_NativeDialogHandle handle, int32_t alignment, float offsetX, float offsetY)](#setcontentalignment) | 设置自定义弹窗对齐方式。 |
 | [int32_t (\*resetContentAlignment)(ArkUI_NativeDialogHandle handle)](#resetcontentalignment) | 重置setContentAlignment方法设置的属性，使用系统默认的对齐方式，默认值：ARKUI_ALIGNMENT_TOP_START，参考{@link ArkUI_Alignment}。 |
-| [int32_t (\*setModalMode)(ArkUI_NativeDialogHandle handle, bool isModal)](#setmodalmode) | 设置自定义弹窗是否开启模态样式的弹窗。 |
+| [int32_t (\*setModalMode)(ArkUI_NativeDialogHandle handle, bool isModal)](#setmodalmode) | 设置自定义弹窗是否开启模态窗口模式。 |
 | [int32_t (\*setAutoCancel)(ArkUI_NativeDialogHandle handle, bool autoCancel)](#setautocancel) | 设置自定义弹窗是否允许通过点击遮罩层退出。 |
 | [int32_t (\*setMask)(ArkUI_NativeDialogHandle handle, uint32_t maskColor, const ArkUI_Rect* maskRect)](#setmask) | 设置自定义弹窗遮罩属性。 |
 | [int32_t (\*setBackgroundColor)(ArkUI_NativeDialogHandle handle, uint32_t backgroundColor)](#setbackgroundcolor) | 设置弹窗背景色。 |
@@ -53,7 +53,7 @@ ArkUI_NativeDialogHandle (*create)()
 
 > **说明：**
 >
-> This method must be called before the <b>show</b> method.
+> create方法需要在调用show方法之前调用。
 
 **返回：**
 
@@ -69,13 +69,13 @@ void (*dispose)(ArkUI_NativeDialogHandle handle)
 
 **描述：**
 
-销毁自定义弹窗。<br>\| 参数项 \| 描述 \|\|------------------------------------------------------------------------------------\| -- \|\| {@link ArkUI_NativeDialogHandle} handle \| 指向自定义弹窗控制器的指针。 \|
+销毁自定义弹窗。与create配对使用，用于释放create创建的弹窗资源。调用后handle会被释放，不能再继续使用该handle，如需再次使用弹窗，需要重新调用create创建。
 
 **参数：**
 
 | 参数项 | 描述 |
 | -- | -- |
-| ArkUI_NativeDialogHandle handle | Indicates the pointer to the custom dialog box controller. |
+| ArkUI_NativeDialogHandle handle | 指向自定义弹窗控制器的指针。 |
 
 ### setContent()
 
@@ -89,7 +89,7 @@ int32_t (*setContent)(ArkUI_NativeDialogHandle handle, ArkUI_NodeHandle content)
 
 > **说明：**
 >
-> This method must be called before the <b>show</b> method.
+> setContent方法需要在调用show方法之前调用。
 
 **参数：**
 
@@ -116,7 +116,7 @@ int32_t (*removeContent)(ArkUI_NativeDialogHandle handle)
 
 > **说明：**
 >
-> This method must be called before the <b>show</b> method.
+> removeContent方法需要在调用show方法之前调用。
 
 **参数：**
 
@@ -142,7 +142,7 @@ int32_t (*setContentAlignment)(ArkUI_NativeDialogHandle handle, int32_t alignmen
 
 > **说明：**
 >
-> This method must be called before the <b>show</b> method.
+> setContentAlignment方法需要在调用show方法之前调用。
 
 **参数：**
 
@@ -171,7 +171,7 @@ int32_t (*resetContentAlignment)(ArkUI_NativeDialogHandle handle)
 
 > **说明：**
 >
-> This method must be called before the <b>show</b> method.
+> resetContentAlignment方法需要在调用show方法之前调用。
 
 **参数：**
 
@@ -193,11 +193,11 @@ int32_t (*setModalMode)(ArkUI_NativeDialogHandle handle, bool isModal)
 
 **描述：**
 
-设置自定义弹窗是否开启模态样式的弹窗。
+设置自定义弹窗是否开启模态窗口模式。
 
 > **说明：**
 >
-> This method must be called before the <b>show</b> method.
+> setModalMode方法需要在调用show方法之前调用。
 
 **参数：**
 
@@ -224,7 +224,7 @@ int32_t (*setAutoCancel)(ArkUI_NativeDialogHandle handle, bool autoCancel)
 
 > **说明：**
 >
-> This method must be called before the <b>show</b> method.
+> setAutoCancel方法需要在调用show方法之前调用。
 
 **参数：**
 
@@ -251,7 +251,7 @@ int32_t (*setMask)(ArkUI_NativeDialogHandle handle, uint32_t maskColor, const Ar
 
 > **说明：**
 >
-> This method must be called before the <b>show</b> method.
+> setMask方法需要在调用show方法之前调用。
 
 **参数：**
 
@@ -279,7 +279,7 @@ int32_t (*setBackgroundColor)(ArkUI_NativeDialogHandle handle, uint32_t backgrou
 
 > **说明：**
 >
-> This method must be called before the <b>show</b> method.
+> setBackgroundColor方法需要在调用show方法之前调用。
 
 **参数：**
 
@@ -306,7 +306,7 @@ int32_t (*setCornerRadius)(ArkUI_NativeDialogHandle handle, float topLeft, float
 
 > **说明：**
 >
-> This method must be called before the <b>show</b> method.
+> setCornerRadius方法需要在调用show方法之前调用。
 
 **参数：**
 
@@ -336,7 +336,7 @@ int32_t (*setGridColumnCount)(ArkUI_NativeDialogHandle handle, int32_t gridCount
 
 > **说明：**
 >
-> This method must be called before the <b>show</b> method.
+> setGridColumnCount方法需要在调用show方法之前调用。
 
 **参数：**
 
@@ -363,7 +363,7 @@ int32_t (*enableCustomStyle)(ArkUI_NativeDialogHandle handle, bool enableCustomS
 
 > **说明：**
 >
-> This method must be called before the <b>show</b> method.
+> enableCustomStyle方法需要在调用show方法之前调用。
 
 **参数：**
 
@@ -390,7 +390,7 @@ int32_t (*enableCustomAnimation)(ArkUI_NativeDialogHandle handle, bool enableCus
 
 > **说明：**
 >
-> This method must be called before the <b>show</b> method.
+> enableCustomAnimation方法需要在调用show方法之前调用。
 
 **参数：**
 
@@ -417,7 +417,7 @@ int32_t (*registerOnWillDismiss)(ArkUI_NativeDialogHandle handle, ArkUI_OnWillDi
 
 > **说明：**
 >
-> This method must be called before the <b>show</b> method.
+> registerOnWillDismiss方法需要在调用show方法之前调用。
 
 **参数：**
 
