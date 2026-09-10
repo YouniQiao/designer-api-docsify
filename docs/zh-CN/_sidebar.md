@@ -37,7 +37,7 @@
 - [Kernel Enhance Kit (10)](interface_sdk_c-md/zh-cn/application-dev/reference/apis-kernel-enhance-kit/c-apis/capi-memory.md)
 - [Localization Kit (143)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-localization-kit/arkts-apis/arkts-fontmanager.md)
 - [Location Kit (167)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-location-kit/arkts-apis/arkts-app-ability-fenceextensionability.md)
-- [Mdm Kit (432)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-mdm-kit/arkts-apis/arkts-enterprise-accountmanager.md)
+- [Mdm Kit (439)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-mdm-kit/arkts-apis/arkts-enterprise-accountmanager.md)
 - [Mechanic Kit (63)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-mechanic-kit/arkts-apis/arkts-distributedhardware-mechanicmanager.md)
 - [Media Kit (243)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-media-kit/arkts-apis/arkts-multimedia-media.md)
 - [Media Library Kit (237)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-media-library-kit/arkts-apis/arkts-file-photoaccesshelper.md)

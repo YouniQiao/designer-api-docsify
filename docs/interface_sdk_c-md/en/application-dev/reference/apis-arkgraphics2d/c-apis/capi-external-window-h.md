@@ -119,6 +119,7 @@ Indicates the operation code in the function OH_NativeWindow_NativeWindowHandleO
 | SET_HDR_WHITE_POINT_BRIGHTNESS |  |
 | SET_SDR_WHITE_POINT_BRIGHTNESS |  |
 | SET_DESIRED_PRESENT_TIMESTAMP = 24 |  |
+| OH_NATIVEWINDOW_SET_DMABUFFER_NAME = 25 |  |
 
 ### OHScalingMode
 

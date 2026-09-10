@@ -52,6 +52,7 @@
 | [int32_t OH_NativeBuffer_ReadFromParcel(OHIPCParcel* parcel, OH_NativeBuffer** buffer)](#oh_nativebuffer_readfromparcel) | 从IPC序列化对象中读取OH_NativeBuffer对象。<br> 本接口将会创建一个OH_NativeBuffer，当OH_NativeBuffer对象使用完，开发者需要与OH_NativeBuffer_Unreference接口配合使用，否则会存在内存泄漏。<br> 本接口为非线程安全类型接口。 |
 | [int32_t OH_NativeBuffer_IsSupported(OH_NativeBuffer_Config config, bool* isSupported)](#oh_nativebuffer_issupported) | 检查系统是否支持传入的OH_NativeBuffer_Config配置信息。<br> 本接口为非线程安全类型接口。 |
 | [int32_t OH_NativeBuffer_MapAndGetConfig(OH_NativeBuffer* buffer, void** virAddr, OH_NativeBuffer_Config* config)](#oh_nativebuffer_mapandgetconfig) | 将OH_NativeBuffer对应的多通道ION内存映射到进程空间，并获取OH_NativeBuffer对应的OH_NativeBuffer_Config。<br> 本接口为非线程安全类型接口。 |
+| [int32_t OH_NativeBuffer_SetDmaBufferName(OH_NativeBuffer *buffer, const char *name)](#oh_nativebuffer_setdmabuffername) | 设置OH_NativeBuffer的DMA buffer名称。<br> |
 
 ## 枚举类型说明
 
@@ -71,18 +72,14 @@ OH_NativeBuffer的用途。
 
 | 枚举项 | 描述 |
 | -- | -- |
-| NATIVEBUFFER_USAGE_CPU_WRITE = (1ULL << 1),       /// < CPU可写 */ |  |
-| NATIVEBUFFER_USAGE_MEM_DMA = (1ULL << 3),         /// < 直接内存访问缓冲区 */ |  |
-| /** |  |
+| NATIVEBUFFER_USAGE_CPU_READ = (1ULL << 0) | CPU可读 |
+| NATIVEBUFFER_USAGE_CPU_WRITE = (1ULL << 1) | CPU可写 |
+| NATIVEBUFFER_USAGE_MEM_DMA = (1ULL << 3) | 直接内存访问缓冲区 |
 | NATIVEBUFFER_USAGE_MEM_MMZ_CACHE = (1ULL << 5) |  |
-| NATIVEBUFFER_USAGE_HW_RENDER = (1ULL << 8),       /// < GPU可写 */ |  |
-| /** |  |
-| NATIVEBUFFER_USAGE_HW_TEXTURE = (1ULL << 9),      /// < GPU可读 */ |  |
-| /** |  |
-| NATIVEBUFFER_USAGE_CPU_READ_OFTEN = (1ULL << 16), /// < CPU可直接映射 */ |  |
-| /** |  |
-| NATIVEBUFFER_USAGE_ALIGNMENT_512 = (1ULL << 18),  /// < 512字节对齐 */ |  |
-| } OH_NativeBuffer_Usage; |  |
+| NATIVEBUFFER_USAGE_HW_RENDER = (1ULL << 8) |  |
+| NATIVEBUFFER_USAGE_HW_TEXTURE = (1ULL << 9) |  |
+| NATIVEBUFFER_USAGE_CPU_READ_OFTEN = (1ULL << 16) |  |
+| NATIVEBUFFER_USAGE_ALIGNMENT_512 = (1ULL << 18) |  |
 
 ### OH_NativeBuffer_ColorGamut
 
@@ -100,17 +97,17 @@ OH_NativeBuffer的色域。
 
 | 枚举项 | 描述 |
 | -- | -- |
-| NATIVEBUFFER_COLOR_GAMUT_STANDARD_BT601 = 1,    /**< Standard BT601色域格式 */ | NATIVEBUFFER_COLOR_GAMUT_NATIVE = 0,            /**< 默认色域格式 |
-| NATIVEBUFFER_COLOR_GAMUT_STANDARD_BT709 = 2,    /**< Standard BT709色域格式 */ | NATIVEBUFFER_COLOR_GAMUT_STANDARD_BT601 = 1,    /**< Standard BT601色域格式 |
-| NATIVEBUFFER_COLOR_GAMUT_DCI_P3 = 3,            /**< DCI P3色域格式 */ | NATIVEBUFFER_COLOR_GAMUT_STANDARD_BT709 = 2,    /**< Standard BT709色域格式 |
-| NATIVEBUFFER_COLOR_GAMUT_SRGB = 4,              /**< SRGB色域格式 */ | NATIVEBUFFER_COLOR_GAMUT_DCI_P3 = 3,            /**< DCI P3色域格式 |
-| NATIVEBUFFER_COLOR_GAMUT_ADOBE_RGB = 5,         /**< Adobe RGB色域格式 */ | NATIVEBUFFER_COLOR_GAMUT_SRGB = 4,              /**< SRGB色域格式 |
-| NATIVEBUFFER_COLOR_GAMUT_DISPLAY_P3 = 6,        /**< Display P3色域格式 */ | NATIVEBUFFER_COLOR_GAMUT_ADOBE_RGB = 5,         /**< Adobe RGB色域格式 |
-| NATIVEBUFFER_COLOR_GAMUT_BT2020 = 7,            /**< BT2020色域格式 */ | NATIVEBUFFER_COLOR_GAMUT_DISPLAY_P3 = 6,        /**< Display P3色域格式 |
-| NATIVEBUFFER_COLOR_GAMUT_BT2100_PQ = 8,         /**< BT2100 PQ色域格式 */ | NATIVEBUFFER_COLOR_GAMUT_BT2020 = 7,            /**< BT2020色域格式 |
-| NATIVEBUFFER_COLOR_GAMUT_BT2100_HLG = 9,        /**< BT2100 HLG色域格式 */ | NATIVEBUFFER_COLOR_GAMUT_BT2100_PQ = 8,         /**< BT2100 PQ色域格式 |
-| NATIVEBUFFER_COLOR_GAMUT_DISPLAY_BT2020 = 10,   /**< Display BT2020色域格式 */ | NATIVEBUFFER_COLOR_GAMUT_BT2100_HLG = 9,        /**< BT2100 HLG色域格式 |
-| } OH_NativeBuffer_ColorGamut; | NATIVEBUFFER_COLOR_GAMUT_DISPLAY_BT2020 = 10,   /**< Display BT2020色域格式 |
+| NATIVEBUFFER_COLOR_GAMUT_NATIVE = 0 | 默认色域格式 |
+| NATIVEBUFFER_COLOR_GAMUT_STANDARD_BT601 = 1 | Standard BT601色域格式 |
+| NATIVEBUFFER_COLOR_GAMUT_STANDARD_BT709 = 2 | Standard BT709色域格式 |
+| NATIVEBUFFER_COLOR_GAMUT_DCI_P3 = 3 | DCI P3色域格式 |
+| NATIVEBUFFER_COLOR_GAMUT_SRGB = 4 | SRGB色域格式 |
+| NATIVEBUFFER_COLOR_GAMUT_ADOBE_RGB = 5 | Adobe RGB色域格式 |
+| NATIVEBUFFER_COLOR_GAMUT_DISPLAY_P3 = 6 | Display P3色域格式 |
+| NATIVEBUFFER_COLOR_GAMUT_BT2020 = 7 | BT2020色域格式 |
+| NATIVEBUFFER_COLOR_GAMUT_BT2100_PQ = 8 | BT2100 PQ色域格式 |
+| NATIVEBUFFER_COLOR_GAMUT_BT2100_HLG = 9 | BT2100 HLG色域格式 |
+| NATIVEBUFFER_COLOR_GAMUT_DISPLAY_BT2020 = 10 | Display BT2020色域格式 |
 
 
 ## 函数说明
@@ -596,5 +593,32 @@ int32_t OH_NativeBuffer_MapAndGetConfig(OH_NativeBuffer* buffer, void** virAddr,
 | 类型 | 说明 |
 | -- | -- |
 | int32_t | 执行成功时返回NATIVE_ERROR_OK。\n  buffer、virAddr或config为空指针时返回NATIVE_ERROR_INVALID_ARGUMENTS。\n  映射失败时返回NATIVE_ERROR_UNKNOWN。\n  其他返回值可参考OHNativeErrorCode。 |
+
+### OH_NativeBuffer_SetDmaBufferName()
+
+```c
+int32_t OH_NativeBuffer_SetDmaBufferName(OH_NativeBuffer *buffer, const char *name)
+```
+
+**描述：**
+
+设置OH_NativeBuffer的DMA buffer名称。<br>
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeBuffer
+
+**起始版本：** 26.1.0
+
+**参数：**
+
+| 参数项 | 描述 |
+| -- | -- |
+| OH_NativeBuffer *buffer | 一个指向OH_NativeBuffer的结构体实例的指针。 |
+| const char *name | 传入的DMA buffer名称字符串。名称必须以字母开头，只能包含字母或数字，且长度不超过64字节。 |
+
+**返回：**
+
+| 类型 | 说明 |
+| -- | -- |
+| int32_t | 执行成功时返回NATIVE_ERROR_OK。\n  buffer为空指针或name非法时返回NATIVE_ERROR_INVALID_ARGUMENTS。\n  其他返回值可参考OHNativeErrorCode。 |
 
 

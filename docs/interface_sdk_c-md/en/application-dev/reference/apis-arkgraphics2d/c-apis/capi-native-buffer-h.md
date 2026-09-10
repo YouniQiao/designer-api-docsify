@@ -52,6 +52,7 @@ Defines the functions for obtaining and using a native buffer.
 | [int32_t OH_NativeBuffer_ReadFromParcel(OHIPCParcel* parcel, OH_NativeBuffer** buffer)](#oh_nativebuffer_readfromparcel) | Deserialize data from the serialized <b>OHIPCParcel</b> object and rebuild <b>OH_NativeBuffer</b> object.This interface will cause an increase in the reference count of the <b>OH_NativeBuffer</b> instance.This interface needs to be used in conjunction with <b>OH_NativeBuffer_Unreference</b>,<br> otherwise memory leaks will occur.This interface is a non-thread-safe type interface. |
 | [int32_t OH_NativeBuffer_IsSupported(OH_NativeBuffer_Config config, bool* isSupported)](#oh_nativebuffer_issupported) | Check whether the system supports the <b>NativeBufferConfig</b>.<br> This interface is a non-thread-safe type interface. |
 | [int32_t OH_NativeBuffer_MapAndGetConfig(OH_NativeBuffer* buffer, void** virAddr, OH_NativeBuffer_Config* config)](#oh_nativebuffer_mapandgetconfig) | Provide direct cpu access to the <b>OH_NativeBuffer</b> in the process's address space,<br> and return a <b>NativeBufferConfig<b> of the <b>OH_NativeBuffer</b>.This interface is a non-thread-safe type interface. |
+| [int32_t OH_NativeBuffer_SetDmaBufferName(OH_NativeBuffer *buffer, const char *name)](#oh_nativebuffer_setdmabuffername) | Set the dma buffer name of the OH_NativeBuffer. |
 
 ## Enum type description
 
@@ -71,18 +72,14 @@ Indicates the usage of a native buffer.
 
 | Enum item | Description |
 | -- | -- |
-| NATIVEBUFFER_USAGE_CPU_WRITE = (1ULL << 1),       /// < CPU write memory */ |  |
-| NATIVEBUFFER_USAGE_MEM_DMA = (1ULL << 3),         /// < Direct memory access (DMA) buffer */ |  |
-| /** |  |
+| NATIVEBUFFER_USAGE_CPU_READ = (1ULL << 0) | CPU read buffer |
+| NATIVEBUFFER_USAGE_CPU_WRITE = (1ULL << 1) | CPU write memory |
+| NATIVEBUFFER_USAGE_MEM_DMA = (1ULL << 3) | Direct memory access (DMA) buffer |
 | NATIVEBUFFER_USAGE_MEM_MMZ_CACHE = (1ULL << 5) |  |
-| NATIVEBUFFER_USAGE_HW_RENDER = (1ULL << 8),       /// < For GPU write case */ |  |
-| /** |  |
-| NATIVEBUFFER_USAGE_HW_TEXTURE = (1ULL << 9),      /// < For GPU read case */ |  |
-| /** |  |
-| NATIVEBUFFER_USAGE_CPU_READ_OFTEN = (1ULL << 16), /// < Often be mapped for direct CPU reads */ |  |
-| /** |  |
-| NATIVEBUFFER_USAGE_ALIGNMENT_512 = (1ULL << 18),  /// < 512 bytes alignment */ |  |
-| } OH_NativeBuffer_Usage; |  |
+| NATIVEBUFFER_USAGE_HW_RENDER = (1ULL << 8) |  |
+| NATIVEBUFFER_USAGE_HW_TEXTURE = (1ULL << 9) |  |
+| NATIVEBUFFER_USAGE_CPU_READ_OFTEN = (1ULL << 16) |  |
+| NATIVEBUFFER_USAGE_ALIGNMENT_512 = (1ULL << 18) |  |
 
 ### OH_NativeBuffer_ColorGamut
 
@@ -100,17 +97,17 @@ Indicates the color gamut of a native buffer.
 
 | Enum item | Description |
 | -- | -- |
-| NATIVEBUFFER_COLOR_GAMUT_STANDARD_BT601 = 1,    /**< Standard BT601 */ | NATIVEBUFFER_COLOR_GAMUT_NATIVE = 0,            /**< Native or default |
-| NATIVEBUFFER_COLOR_GAMUT_STANDARD_BT709 = 2,    /**< Standard BT709 */ | NATIVEBUFFER_COLOR_GAMUT_STANDARD_BT601 = 1,    /**< Standard BT601 |
-| NATIVEBUFFER_COLOR_GAMUT_DCI_P3 = 3,            /**< DCI P3 */ | NATIVEBUFFER_COLOR_GAMUT_STANDARD_BT709 = 2,    /**< Standard BT709 |
-| NATIVEBUFFER_COLOR_GAMUT_SRGB = 4,              /**< SRGB */ | NATIVEBUFFER_COLOR_GAMUT_DCI_P3 = 3,            /**< DCI P3 |
-| NATIVEBUFFER_COLOR_GAMUT_ADOBE_RGB = 5,         /**< Adobe RGB */ | NATIVEBUFFER_COLOR_GAMUT_SRGB = 4,              /**< SRGB |
-| NATIVEBUFFER_COLOR_GAMUT_DISPLAY_P3 = 6,        /**< Display P3 */ | NATIVEBUFFER_COLOR_GAMUT_ADOBE_RGB = 5,         /**< Adobe RGB |
-| NATIVEBUFFER_COLOR_GAMUT_BT2020 = 7,            /**< BT2020 */ | NATIVEBUFFER_COLOR_GAMUT_DISPLAY_P3 = 6,        /**< Display P3 |
-| NATIVEBUFFER_COLOR_GAMUT_BT2100_PQ = 8,         /**< BT2100 PQ */ | NATIVEBUFFER_COLOR_GAMUT_BT2020 = 7,            /**< BT2020 |
-| NATIVEBUFFER_COLOR_GAMUT_BT2100_HLG = 9,        /**< BT2100 HLG */ | NATIVEBUFFER_COLOR_GAMUT_BT2100_PQ = 8,         /**< BT2100 PQ |
-| NATIVEBUFFER_COLOR_GAMUT_DISPLAY_BT2020 = 10,   /**< Display BT2020 */ | NATIVEBUFFER_COLOR_GAMUT_BT2100_HLG = 9,        /**< BT2100 HLG |
-| } OH_NativeBuffer_ColorGamut; | NATIVEBUFFER_COLOR_GAMUT_DISPLAY_BT2020 = 10,   /**< Display BT2020 |
+| NATIVEBUFFER_COLOR_GAMUT_NATIVE = 0 | Native or default |
+| NATIVEBUFFER_COLOR_GAMUT_STANDARD_BT601 = 1 | Standard BT601 |
+| NATIVEBUFFER_COLOR_GAMUT_STANDARD_BT709 = 2 | Standard BT709 |
+| NATIVEBUFFER_COLOR_GAMUT_DCI_P3 = 3 | DCI P3 |
+| NATIVEBUFFER_COLOR_GAMUT_SRGB = 4 | SRGB |
+| NATIVEBUFFER_COLOR_GAMUT_ADOBE_RGB = 5 | Adobe RGB |
+| NATIVEBUFFER_COLOR_GAMUT_DISPLAY_P3 = 6 | Display P3 |
+| NATIVEBUFFER_COLOR_GAMUT_BT2020 = 7 | BT2020 |
+| NATIVEBUFFER_COLOR_GAMUT_BT2100_PQ = 8 | BT2100 PQ |
+| NATIVEBUFFER_COLOR_GAMUT_BT2100_HLG = 9 | BT2100 HLG |
+| NATIVEBUFFER_COLOR_GAMUT_DISPLAY_BT2020 = 10 | Display BT2020 |
 
 
 ## Function description
@@ -596,5 +593,32 @@ Provide direct cpu access to the <b>OH_NativeBuffer</b> in the process's address
 | Type | Description |
 | -- | -- |
 | int32_t | {@link NATIVE_ERROR_OK} 0 - Success.  {@link NATIVE_ERROR_INVALID_ARGUMENTS} 40001000 - buffer or virAddr or config is NULL or invalid fenceFd.  {@link NATIVE_ERROR_UNKNOWN} 50002000 - map failed. |
+
+### OH_NativeBuffer_SetDmaBufferName()
+
+```c
+int32_t OH_NativeBuffer_SetDmaBufferName(OH_NativeBuffer *buffer, const char *name)
+```
+
+**Description**
+
+Set the dma buffer name of the OH_NativeBuffer.
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeBuffer
+
+**Since**: 26.1.0
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| OH_NativeBuffer *buffer | Indicates the pointer to a <b>OH_NativeBuffer</b> instance. |
+| const char *name | Indicates the dma buffer name string. The name must start with a letter, only containletters or digits, and be no longer than 64 bytes. |
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| int32_t | {@link NATIVE_ERROR_OK} 0 - Success.      {@link NATIVE_ERROR_INVALID_ARGUMENTS} 40001000 - buffer is NULL or name invalid. |
 
 

@@ -36,7 +36,7 @@ SEMI_TRANSPARENT = 1
 
 背景色backgroundColor：浅色模式为"#f2f1f3f5"，深色模式为"#f2303131"。
 
-边框颜色borderColor为theme.colors.compForegroundPrimary的[token](../../../ui/theme_skinning.md#系统缺省token色值)值以10%透明度（alpha值）进行混合叠加。
+边框颜色borderColor为theme.colors.compForegroundPrimary的token值以10%透明度（alpha值）进行混合叠加。
 
 边框宽度borderWidth为1vp。
 

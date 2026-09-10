@@ -127,24 +127,24 @@ OH_NativeBuffer格式的枚举。
 | NATIVEBUFFER_PIXEL_FMT_CLUT8 = 0 |  |
 | NATIVEBUFFER_PIXEL_FMT_CLUT1 |  |
 | NATIVEBUFFER_PIXEL_FMT_CLUT4 |  |
-| NATIVEBUFFER_PIXEL_FMT_RGBA_5658,                 /// < RGBA5658格式。 */ |  |
-| NATIVEBUFFER_PIXEL_FMT_RGBX_4444,                 /// < RGBX4444格式。 */ |  |
-| NATIVEBUFFER_PIXEL_FMT_RGBA_4444,                 /// < RGBA4444格式。 */ |  |
-| NATIVEBUFFER_PIXEL_FMT_RGB_444,                   /// < RGB444格式。 */ |  |
-| NATIVEBUFFER_PIXEL_FMT_RGBX_5551,                 /// < RGBX5551格式。 */ |  |
-| NATIVEBUFFER_PIXEL_FMT_RGBA_5551,                 /// < RGBA5551格式。 */ |  |
-| NATIVEBUFFER_PIXEL_FMT_RGB_555,                   /// < RGB555格式。 */ |  |
-| NATIVEBUFFER_PIXEL_FMT_RGBX_8888,                 /// < RGBX8888格式。 */ |  |
-| NATIVEBUFFER_PIXEL_FMT_RGBA_8888,                 /// < RGBA8888格式。 */ |  |
-| NATIVEBUFFER_PIXEL_FMT_RGB_888,                   /// < RGB888格式。 */ |  |
-| NATIVEBUFFER_PIXEL_FMT_BGR_565,                   /// < BGR565格式。 */ |  |
-| NATIVEBUFFER_PIXEL_FMT_BGRX_4444,                 /// < BGRX4444格式。 */ |  |
-| NATIVEBUFFER_PIXEL_FMT_BGRA_4444,                 /// < BGRA4444格式。 */ |  |
-| NATIVEBUFFER_PIXEL_FMT_BGRX_5551,                 /// < BGRX5551格式。 */ |  |
-| NATIVEBUFFER_PIXEL_FMT_BGRA_5551,                 /// < BGRA5551格式。 */ |  |
-| NATIVEBUFFER_PIXEL_FMT_BGRX_8888,                 /// < BGRX8888格式。 */ |  |
-| NATIVEBUFFER_PIXEL_FMT_BGRA_8888,                 /// < BGRA8888格式。 */ |  |
-| /** |  |
+| NATIVEBUFFER_PIXEL_FMT_RGB_565 = 3 | RGB565格式。 |
+| NATIVEBUFFER_PIXEL_FMT_RGBA_5658 | RGBA5658格式。 |
+| NATIVEBUFFER_PIXEL_FMT_RGBX_4444 | RGBX4444格式。 |
+| NATIVEBUFFER_PIXEL_FMT_RGBA_4444 | RGBA4444格式。 |
+| NATIVEBUFFER_PIXEL_FMT_RGB_444 | RGB444格式。 |
+| NATIVEBUFFER_PIXEL_FMT_RGBX_5551 | RGBX5551格式。 |
+| NATIVEBUFFER_PIXEL_FMT_RGBA_5551 | RGBA5551格式。 |
+| NATIVEBUFFER_PIXEL_FMT_RGB_555 | RGB555格式。 |
+| NATIVEBUFFER_PIXEL_FMT_RGBX_8888 | RGBX8888格式。 |
+| NATIVEBUFFER_PIXEL_FMT_RGBA_8888 | RGBA8888格式。 |
+| NATIVEBUFFER_PIXEL_FMT_RGB_888 | RGB888格式。 |
+| NATIVEBUFFER_PIXEL_FMT_BGR_565 | BGR565格式。 |
+| NATIVEBUFFER_PIXEL_FMT_BGRX_4444 | BGRX4444格式。 |
+| NATIVEBUFFER_PIXEL_FMT_BGRA_4444 | BGRA4444格式。 |
+| NATIVEBUFFER_PIXEL_FMT_BGRX_5551 | BGRX5551格式。 |
+| NATIVEBUFFER_PIXEL_FMT_BGRA_5551 | BGRA5551格式。 |
+| NATIVEBUFFER_PIXEL_FMT_BGRX_8888 | BGRX8888格式。 |
+| NATIVEBUFFER_PIXEL_FMT_BGRA_8888 | BGRA8888格式。 |
 | NATIVEBUFFER_PIXEL_FMT_YUV_422_I |  |
 | NATIVEBUFFER_PIXEL_FMT_YCBCR_422_SP |  |
 | NATIVEBUFFER_PIXEL_FMT_YCRCB_422_SP |  |
@@ -167,7 +167,7 @@ OH_NativeBuffer格式的枚举。
 | NATIVEBUFFER_PIXEL_FMT_Y8 = 40 |  |
 | NATIVEBUFFER_PIXEL_FMT_Y16 = 41 |  |
 | NATIVEBUFFER_PIXEL_FMT_VENDER_MASK = 0X7FFF0000 |  |
-| } OH_NativeBuffer_Format; |  |
+| } OH_NativeBuffer_Format; | NATIVEBUFFER_PIXEL_FMT_BUTT = 0X7FFFFFFF          /** 无效格式 |
 
 ### OH_NativeBuffer_TransformType
 
@@ -185,18 +185,18 @@ OH_NativeBuffer转换类型的枚举。
 
 | 枚举项 | 描述 |
 | -- | -- |
-| NATIVEBUFFER_ROTATE_90,               /**< 旋转90度 */ | NATIVEBUFFER_ROTATE_NONE = 0,         /**< 不旋转 |
-| NATIVEBUFFER_ROTATE_180,              /**< 旋转180度 */ | NATIVEBUFFER_ROTATE_90,               /**< 旋转90度 |
-| NATIVEBUFFER_ROTATE_270,              /**< 旋转270度 */ | NATIVEBUFFER_ROTATE_180,              /**< 旋转180度 |
-| NATIVEBUFFER_FLIP_H,                  /**< 水平翻转 */ | NATIVEBUFFER_ROTATE_270,              /**< 旋转270度 |
-| NATIVEBUFFER_FLIP_V,                  /**< 垂直翻转 */ | NATIVEBUFFER_FLIP_H,                  /**< 水平翻转 |
-| NATIVEBUFFER_FLIP_H_ROT90,            /**< 水平翻转并旋转90度 */ | NATIVEBUFFER_FLIP_V,                  /**< 垂直翻转 |
-| NATIVEBUFFER_FLIP_V_ROT90,            /**< 垂直翻转并旋转90度 */ | NATIVEBUFFER_FLIP_H_ROT90,            /**< 水平翻转并旋转90度 |
-| NATIVEBUFFER_FLIP_H_ROT180,           /**< 水平翻转并旋转180度 */ | NATIVEBUFFER_FLIP_V_ROT90,            /**< 垂直翻转并旋转90度 |
-| NATIVEBUFFER_FLIP_V_ROT180,           /**< 垂直翻转并旋转180度 */ | NATIVEBUFFER_FLIP_H_ROT180,           /**< 水平翻转并旋转180度 |
-| NATIVEBUFFER_FLIP_H_ROT270,           /**< 水平翻转并旋转270度 */ | NATIVEBUFFER_FLIP_V_ROT180,           /**< 垂直翻转并旋转180度 |
-| NATIVEBUFFER_FLIP_V_ROT270,           /**< 垂直翻转并旋转270度 */ | NATIVEBUFFER_FLIP_H_ROT270,           /**< 水平翻转并旋转270度 |
-| } OH_NativeBuffer_TransformType; | NATIVEBUFFER_FLIP_V_ROT270,           /**< 垂直翻转并旋转270度 |
+| NATIVEBUFFER_ROTATE_NONE = 0 | 不旋转 |
+| NATIVEBUFFER_ROTATE_90 | 旋转90度 |
+| NATIVEBUFFER_ROTATE_180 | 旋转180度 |
+| NATIVEBUFFER_ROTATE_270 | 旋转270度 |
+| NATIVEBUFFER_FLIP_H | 水平翻转 |
+| NATIVEBUFFER_FLIP_V | 垂直翻转 |
+| NATIVEBUFFER_FLIP_H_ROT90 | 水平翻转并旋转90度 |
+| NATIVEBUFFER_FLIP_V_ROT90 | 垂直翻转并旋转90度 |
+| NATIVEBUFFER_FLIP_H_ROT180 | 水平翻转并旋转180度 |
+| NATIVEBUFFER_FLIP_V_ROT180 | 垂直翻转并旋转180度 |
+| NATIVEBUFFER_FLIP_H_ROT270 | 水平翻转并旋转270度 |
+| NATIVEBUFFER_FLIP_V_ROT270 | 垂直翻转并旋转270度 |
 
 ### OH_NativeBuffer_VideoDimensionType
 
